@@ -12,37 +12,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c10821f7e71c928fa749c2b85bd076cb9af6d04a
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 96dd03d8aebb8860d5a16c8d08bb35dd8a7d8b48
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402413"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065800"
 ---
 # <a name="alignof-and-alignas-c"></a>alignof a alignas (C++)
-**Alignas** je specifikátor typu portable, C++ standardní způsob, jak určit vlastní zarovnání proměnné a uživatelsky definované typy. **Alignof** operátor je také standardní, přenosný způsob, jak získat zarovnání zadaného typu nebo proměnné.  
-  
-## <a name="example"></a>Příklad  
- Můžete použít **alignas** ve třídě, nárazové nebo union, nebo u jednotlivých členů. Když více **alignas** specifikátory vyskytují, kompilátor zvolí nejpřísnější jeden, (ta největší hodnotou).  
-  
-```cpp  
+
+**Alignas** je specifikátor typu portable, C++ standardní způsob, jak určit vlastní zarovnání proměnné a uživatelsky definované typy. **Alignof** operátor je také standardní, přenosný způsob, jak získat zarovnání zadaného typu nebo proměnné.
+
+## <a name="example"></a>Příklad
+
+Můžete použít **alignas** ve třídě, nárazové nebo union, nebo u jednotlivých členů. Když více **alignas** specifikátory vyskytují, kompilátor zvolí nejpřísnější jeden, (ta největší hodnotou).
+
+```cpp
 // alignas_alignof.cpp
 // compile with: cl /EHsc alignas_alignof.cpp
 #include <iostream>
 
-struct alignas(16) Bar  
-{      
-    int i;       // 4 bytes  
-    int n;      // 4 bytes  
-    alignas(4) char arr[3];  
-    short s;          // 2 bytes  
-};  
+struct alignas(16) Bar
+{
+    int i;       // 4 bytes
+    int n;      // 4 bytes
+    alignas(4) char arr[3];
+    short s;          // 2 bytes
+};
 
 int main()
-{  
-    std::cout << alignof(Bar) << std::endl; // output: 16  
-}  
-```  
-  
-## <a name="see-also"></a>Viz také:  
- [Zarovnání](../cpp/alignment-cpp-declarations.md)
+{
+    std::cout << alignof(Bar) << std::endl; // output: 16
+}
+```
+
+## <a name="see-also"></a>Viz také:
+
+[Zarovnání](../cpp/alignment-cpp-declarations.md)

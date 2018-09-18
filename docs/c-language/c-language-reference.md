@@ -1,5 +1,5 @@
 ---
-title: Referenční dokumentace jazyka C | Microsoft Docs
+title: Referenční dokumentace jazyka C | Dokumentace Microsoftu
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -19,25 +19,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df262ab37c8b7e565a947819c2340c310711fa0c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cde4759b6148894a0ca963a7266355c5939c3051
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381184"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063200"
 ---
 # <a name="c-language-reference"></a>Referenční dokumentace jazyka C
-*Referenční dokumentace jazyka C* programovacího jazyka C popisuje, jak jsou implementované v Microsoft C. Knihy organizace je založena na standardní ANSI C (někdy označované jako kompilátorem C89) s další materiály pro rozšíření Microsoft pro standardní ANSI C.  
-  
--   [Organizace referenční dokumentace jazyka C](../c-language/organization-of-the-c-language-reference.md)  
-  
-Pro odkaz na další informace o C++ a preprocesor najdete v části:  
-  
--   [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)  
-  
--   [Referenční dokumentace preprocesoru](../preprocessor/c-cpp-preprocessor-reference.md)  
-  
-Možnosti kompilátoru a linkeru jsou dokumentovány v článku [odkaz sestavení C/C++](../build/reference/c-cpp-building-reference.md).  
-  
-## <a name="see-also"></a>Viz také  
-[Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)   
+
+*Referenční dokumentace jazyka C* popisuje programovací jazyk C, jak je implementován v Microsoft C. V organizace knihy je založena na standardu ANSI C (někdy označované jako C89) s dalšími informacemi o rozšíření standardu ANSI c společnosti Microsoft.
+
+- [Organizace referenční dokumentace jazyka C](../c-language/organization-of-the-c-language-reference.md)
+
+Další referenční materiál o jazyce C++ a preprocesoru naleznete v tématu:
+
+- [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)
+
+- [Referenční dokumentace preprocesoru](../preprocessor/c-cpp-preprocessor-reference.md)
+
+Možnosti kompilátoru a propojovacího programu jsou dokumentovány v článku [Reference sestavení C/C++](../build/reference/c-cpp-building-reference.md).
+
+## <a name="see-also"></a>Viz také
+
+[Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)

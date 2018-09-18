@@ -1,5 +1,5 @@
 ---
-title: C3645 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3645 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a711f37e3ab54de5e3cfad77b82fbd603edfaf6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d310ab3a9a4bd0b31b9e6295a93a571a54f585b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263824"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068907"
 ---
-# <a name="compiler-error-c3645"></a>C3645 chyby kompilátoru
-'function': __clrcall nelze použít na funkce, zkompilované na nativní kód  
-  
- Přítomnost některé klíčová slova ve funkci způsobí, že funkce, která má být zkompilovány v nativním režimu.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3645.  
-  
-```  
-// C3645.cpp  
-// compile with: /clr /c  
-#pragma unmanaged   
-int __clrcall dog() {}   // C3645  
+# <a name="compiler-error-c3645"></a>Chyba kompilátoru C3645
+
+'function': __clrcall nejde používat pro funkce zkompilované do nativního kódu
+
+Přítomnost některých klíčových slov ve funkci způsobí, že funkce, který má být zkompilována pro nativní.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3645.
+
+```
+// C3645.cpp
+// compile with: /clr /c
+#pragma unmanaged
+int __clrcall dog() {}   // C3645
 ```

@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1055d60d95292d3585bccf64c56962d62d4ea48e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: c176e77a1704e3311d8c814d1c1b530b9f94f1ec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680552"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070051"
 ---
 # <a name="c-runtime-error-r6025"></a>Chyba modulu Runtime R6025 C
-volání čistě virtuální funkce  
-  
+
+volání čistě virtuální funkce
+
 > [!NOTE]
->  Pokud k této chybě dojde při spuštění aplikace, aplikace se vypnout, protože má vnitřní problém. Nejčastější příčinou této chyby je chyba v aplikaci nebo poškozená instalace.  
->   
->  Zkuste chybu odstranit pomocí tohoto postupu:  
->   
->  -   Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte program.  
-> -   Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.  
-> -   Vyhledat aktualizovanou verzi aplikace. Pokud se problém nevyřeší, obraťte se na dodavatele aplikace.  
-  
- **Informace pro programátory**  
-  
- Žádný objekt po vytvoření instance, pro zpracování volání čistě virtuální funkce.  
-  
- Tato chyba je způsobena volání virtuální funkce v abstraktní základní třída přes ukazatel, který je vytvořen pomocí přetypování na typ odvozené třídy, ale je ukazatelem na základní třídu. Tato situace může nastat při přetypování z: **void** <strong>\*</strong> na ukazatel na třídu při **void** <strong>\*</strong> byl vytvořené během procesu vytváření základní třídy.  
-  
+>  Pokud k této chybě dojde při spuštění aplikace, aplikace se vypnout, protože má vnitřní problém. Nejčastější příčinou této chyby je chyba v aplikaci nebo poškozená instalace.
+>
+>  Zkuste chybu odstranit pomocí tohoto postupu:
+>
+>  -   Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte program.
+> -   Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.
+> -   Vyhledat aktualizovanou verzi aplikace. Pokud se problém nevyřeší, obraťte se na dodavatele aplikace.
+
+**Informace pro programátory**
+
+Žádný objekt po vytvoření instance, pro zpracování volání čistě virtuální funkce.
+
+Tato chyba je způsobena volání virtuální funkce v abstraktní základní třída přes ukazatel, který je vytvořen pomocí přetypování na typ odvozené třídy, ale je ukazatelem na základní třídu. Tato situace může nastat při přetypování z: **void** <strong>\*</strong> na ukazatel na třídu při **void** <strong>\*</strong> byl vytvořené během procesu vytváření základní třídy.
+

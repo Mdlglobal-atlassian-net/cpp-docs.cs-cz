@@ -1,5 +1,5 @@
 ---
-title: C3555 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3555 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd5c40ae2be3473c0a06d12662c811edc93db2c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1db56676ef9d737fab97a5b2826e1b0fe43bc3c6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258415"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069648"
 ---
-# <a name="compiler-error-c3555"></a>C3555 chyby kompilátoru
-  
-> nesprávný argument 'decltype.  
-  
- Argument `decltype(` *výraz* `)` specifikátor typu není platný výraz.  
-  
+# <a name="compiler-error-c3555"></a>Chyba kompilátoru C3555
+
+> nesprávný argument pro decltype "–"
+
+Argument `decltype(` *výraz* `)` specifikátor typu není platný výraz.
+
 > [!NOTE]
->  C3555 není může dojít. Pokud kompilátor vydává C3555, je to pravděpodobně vzhledem k tomu, že došlo k chybě vnitřní kompilátoru.  
-  
-## <a name="see-also"></a>Viz také  
-  
- [C3556 chyby kompilátoru](../../error-messages/compiler-errors-2/compiler-error-c3556.md)   
- [Závažná chyba C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)
+>  C3555 není mohou se vyskytnout. Pokud kompilátor vydá C3555, je to pravděpodobně protože došlo k chybě vnitřního kompilátoru.
+
+## <a name="see-also"></a>Viz také
+
+[Chyba kompilátoru C3556](../../error-messages/compiler-errors-2/compiler-error-c3556.md)<br/>
+[Závažná chyba C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)

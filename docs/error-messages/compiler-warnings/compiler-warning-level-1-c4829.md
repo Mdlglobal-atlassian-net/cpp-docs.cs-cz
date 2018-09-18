@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4829 | Microsoft Docs
+title: Upozornění (úroveň 1) C4829 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c27ca268a3c873474cd4ed79a2b843642087c34
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f4210e8074360d5b3d5e5ca84e0326caf3303136
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286536"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065035"
 ---
-# <a name="compiler-warning-level-1-c4829"></a>C4829 kompilátoru upozornění (úroveň 1)
-Může být nesprávné parametry hlavní funkce. Vezměte v úvahu ' intmain (Platform::Array\<Platform::String ^ > ^ argv –).  
-  
- Určité funkce, jako jsou hlavní, nelze zpracovat referenční parametry typu. Při kompilaci bude úspěšné, bude výsledný obraz pravděpodobně nejde spustit.  
-  
- Následující ukázka generuje C4829:  
-  
-```  
-// C4829.cpp  
-// compile by using: cl /EHsc /ZW /W4 /c C4829.cpp  
-int main(Platform::String ^ s) {}   // C4829  
-  
+# <a name="compiler-warning-level-1-c4829"></a>Kompilátor upozornění (úroveň 1) C4829
+
+Potenciálně nesprávné parametry pro funkci main. Vezměte v úvahu "intmain (Platform::Array\<Platform::String ^ > ^ argv).
+
+Určité funkce, jako je hlavní, nejde vytvořit odkaz na parametry typu. Během kompilace se nezdaří, bude výsledkem obraz pravděpodobně není poběží.
+
+Následující ukázka generuje C4829:
+
+```
+// C4829.cpp
+// compile by using: cl /EHsc /ZW /W4 /c C4829.cpp
+int main(Platform::String ^ s) {}   // C4829
+
 ```

@@ -1,5 +1,5 @@
 ---
-title: Chyba sestavení projektu PRJ0034 | Microsoft Docs
+title: Chyba sestavení projektu PRJ0034 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a65ca2c53ba2801f861471c66f7e1f2ec8766345
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b271875173bf0e55d94989d60a1c8f7aaf408b2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319075"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065579"
 ---
 # <a name="project-build-error-prj0034"></a>Chyba sestavení projektu PRJ0034
-Vlastnost 'Další závislosti, pro vlastní úrovni projektu sestavení krok obsažené 'makro, který je vyhodnocen 'macro_expansion'.  
-  
- Vlastní krok sestavení na projektu obsahuje chybu v jeho dalších závislost pravděpodobně z důvodu problému vyhodnocení makra. Tato chyba může také znamená, že je cesta chybně vytvořen, a to obsahující znaky, nebo kombinace znaků, které jsou neplatné v cestě k souboru.  
-  
- Pokud chcete tuto chybu vyřešit, opravte makro nebo odstraňte specifikace cesty. Vyhodnotí cesta je absolutní cestu z adresáře projektu.
+
+Vlastnost "Additional Dependencies" vlastního na úrovni projektu sestavení krok obsažené "makra" která je vyhodnocena na "macro_expansion".
+
+Vlastní krok sestavení na projektu obsahovala chybu v jeho další závislosti, pravděpodobně z důvodu problému vyhodnocení makra. Tato chyba může také znamenat, že cesta je chybně vytvořený kód, obsahující znaky nebo kombinace znaků, které jsou neplatné v cestě k souboru.
+
+Chcete-li tuto chybu vyřešit, opravte makro nebo odstraňte specifikaci cesty. Vyhodnocená cesta je absolutní cesta z adresáře projektu.

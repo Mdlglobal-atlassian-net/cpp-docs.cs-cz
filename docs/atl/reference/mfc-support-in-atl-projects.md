@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb6a3c5bae4d973ba74155ab018ebea69b0e2b93
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f3853bbe90757563f6c7dc2c9003ed7c5f2a98dc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751397"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065436"
 ---
 # <a name="mfc-support-in-atl-projects"></a>Podpora MFC v projektech ATL
 
@@ -29,40 +29,40 @@ Pokud vyberete **podpora knihovny MFC** Průvodce projektem ATL do projektu dekl
 
 Tato možnost je dostupná bez atributové ATL DLL pouze pro projekty.
 
-```  
-class CProjNameApp : public CWinApp  
-{  
+```
+class CProjNameApp : public CWinApp
+{
 public:  
 
 // Overrides  
     virtual BOOL InitInstance();
 virtual int ExitInstance();
-DECLARE_MESSAGE_MAP() 
+DECLARE_MESSAGE_MAP()
 };  
 
-BEGIN_MESSAGE_MAP(CProjNameApp, CWinApp)  
+BEGIN_MESSAGE_MAP(CProjNameApp, CWinApp)
 END_MESSAGE_MAP()  
 
 CProjNameApp theApp;  
 
-BOOL CProjNameApp::InitInstance()  
+BOOL CProjNameApp::InitInstance()
 {  
     return CWinApp::InitInstance();
 
 }  
 
-int CProjNameApp::ExitInstance()  
+int CProjNameApp::ExitInstance()
 {  
     return CWinApp::ExitInstance();
 
-}  
+}
 ```
 
 Můžete zobrazit třídu objektu aplikace a její `InitInstance` a `ExitInstance` funkce v zobrazení tříd.
 
 ## <a name="see-also"></a>Viz také
 
-[Přidání třídy](../../ide/adding-a-class-visual-cpp.md)   
-[Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)   
+[Přidání třídy](../../ide/adding-a-class-visual-cpp.md)<br/>
+[Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)<br/>
 [Výchozí konfigurace projektu ATL](../../atl/reference/default-atl-project-configurations.md)
 

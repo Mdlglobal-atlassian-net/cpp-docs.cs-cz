@@ -1,5 +1,5 @@
 ---
-title: C3068 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3068 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f378a60c79defed4fb1738515ca5b65b2851056
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdea26e204032c27f00639ee46a928c7bf084a4e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256552"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035616"
 ---
-# <a name="compiler-error-c3068"></a>C3068 chyby kompilátoru
-'function': 'holé' funkce nesmí obsahovat objekty, které by vyžadovaly unwinding, pokud došlo k výjimce C++  
-  
- Kompilátor nebylo možné provést na uvolnění zásobníku [holé](../../cpp/naked-cpp.md) funkce, která došlo k výjimce, protože dočasný objekt byl vytvořen v funkci a zpracovávání výjimek v jazyce C++ ([/EHsc](../../build/reference/eh-exception-handling-model.md)) byl zadán.  
-  
- Pokud chcete tuto chybu vyřešit, proveďte alespoň jednu z následujících:  
-  
--   Nejde kompilovat s /EHsc.  
-  
--   Neoznačujte funkce jako `naked`.  
-  
--   Nevytvářejte dočasný objekt ve funkci.  
-  
- Pokud funkci vytvoří dočasný objekt v zásobníku, pokud funkce vyvolá výjimku, a pokud je povoleno zpracovávání výjimek v jazyce C++, kompilátor bude vyčištění zásobníku Pokud je vyvolána výjimka.  
-  
- Pokud je vyvolána výjimka, kompilátoru generovaného kódu, názvem prologu a epilogu, které nejsou součástí holé funkce, je spustit pro funkci.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3068:  
-  
-```  
-// C3068.cpp  
-// compile with: /EHsc  
-// processor: x86  
-class A {  
-public:  
-   A(){}  
-   ~A(){}  
-};  
-  
-void b(A){}  
-  
-__declspec(naked) void c() {  
-   b(A());   // C3068   
-};  
+# <a name="compiler-error-c3068"></a>Chyba kompilátoru C3068
+
+'function': funkci naked' nemůže obsahovat objekty, které by vyžadovaly vrácení zpět, pokud došlo k výjimce C++
+
+Nebylo možné provést, v odvíjení zásobníku kompilátoru [naked](../../cpp/naked-cpp.md) funkce, která byla vyvolána výjimka, protože byl vytvořen dočasný objekt funkce a zpracování výjimek jazyka C++ ([/EHsc](../../build/reference/eh-exception-handling-model.md)) byl zadán.
+
+Chcete-li vyřešit tuto chybu, proveďte splnit aspoň jednu z následujících akcí:
+
+- Nejde zkompilovat/EHsc.
+
+- Neoznačujte funkce jako `naked`.
+
+- Nevytvářejte dočasný objekt ve funkci.
+
+Pokud funkce vytvoří dočasný objekt v zásobníku, pokud funkce vyvolá výjimku, a pokud je povoleno zpracování výjimek jazyka C++, kompilátor vyčistí zásobník Pokud dojde k výjimce.
+
+Když je vyvolána výjimka, kompilátor vygeneruje kód, volá se, kódu prologu a epilogu, které nejsou součástí neviditelné funkce, je provedena pro funkci.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3068:
+
+```
+// C3068.cpp
+// compile with: /EHsc
+// processor: x86
+class A {
+public:
+   A(){}
+   ~A(){}
+};
+
+void b(A){}
+
+__declspec(naked) void c() {
+   b(A());   // C3068
+};
 ```

@@ -33,12 +33,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53a37083335c42d8042167e737b68ccad517fa00
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 0fa2c3b421aa0aa60194f8ed949c023d78b70c2d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756347"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070283"
 ---
 # <a name="csimplemap-class"></a>Csimplemap – třída
 
@@ -47,19 +47,19 @@ Tato třída poskytuje podporu pro jednoduché mapování pole.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class TKey, class TVal, class TEqual = CSimpleMapEqualHelper<TKey, TVal>>  
+template <class TKey, class TVal, class TEqual = CSimpleMapEqualHelper<TKey, TVal>>
 class CSimpleMap
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*TKey*  
+*TKey*<br/>
 Typ klíče prvku.
 
-*TVal*  
+*TVal*<br/>
 Typ elementu hodnota.
 
-*TEqual*  
+*TEqual*<br/>
 Objekt vlastností definující test rovnosti pro prvky typu `T`.
 
 ## <a name="members"></a>Členové
@@ -124,10 +124,10 @@ BOOL Add(const TKey& key, const TVal& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Klíč
 
-*Val*  
+*Val*<br/>
 Přidružená hodnota.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -188,7 +188,7 @@ int FindKey(const TKey& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Klíč k vyhledání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -205,7 +205,7 @@ int FindVal(const TVal& val) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Val*  
+*Val*<br/>
 Hodnota, pro který chcete vyhledat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -222,7 +222,7 @@ TKey& GetKeyAt(int nIndex) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nIndex*  
+*nIndex*<br/>
 Index klíče k vrácení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -255,7 +255,7 @@ TVal& GetValueAt(int nIndex) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nIndex*  
+*nIndex*<br/>
 Index vrácenou hodnotu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -276,7 +276,7 @@ TVal Lookup(const TKey& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Klíč
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -293,7 +293,7 @@ BOOL Remove(const TKey& key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Klíč
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -322,7 +322,7 @@ BOOL RemoveAt(int nIndex);
 
 ### <a name="parameters"></a>Parametry
 
-*nIndex*  
+*nIndex*<br/>
 Index klíč a hodnotu přiřazenou k odebrání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -339,7 +339,7 @@ TKey ReverseLookup(const TVal& val) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Val*  
+*Val*<br/>
 Hodnota
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -356,10 +356,10 @@ BOOL SetAt(const TKey& key, const TVal& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Klíč
 
-*Val*  
+*Val*<br/>
 Nová hodnota pro přiřazení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -379,13 +379,13 @@ BOOL SetAtIndex(
 
 ### <a name="parameters"></a>Parametry
 
-*nIndex*  
+*nIndex*<br/>
 Index, odkazující na klíč a hodnotu párování, díky kterému změnit.
 
-*Klíč*  
+*Klíč*<br/>
 Nový klíč.
 
-*Val*  
+*Val*<br/>
 Nová hodnota.
 
 ### <a name="return-value"></a>Návratová hodnota

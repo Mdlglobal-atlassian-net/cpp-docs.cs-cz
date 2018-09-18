@@ -1,5 +1,5 @@
 ---
-title: CXX0044 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0044 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7499c970396ce907a79fa5a666dd7dc1ab1e8c3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34adab6500683d8b78a4ce9c990eaf04c143e424
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297892"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064708"
 ---
 # <a name="expression-evaluator-error-cxx0044"></a>Chyba při vyhodnocování výrazu CXX0044
-vyžaduje použití _based(void) ukazatele: > – operátor  
-  
- Ukazatel na základě `void` nelze použít přímo. Musí tvořit dokončení ukazatel pomocí **: >** operátor.  
-  
- Tato chyba je stejný jako CAN0044.
+
+vyžaduje použití ukazatele _based(void): > – operátor
+
+Ukazatel na základě `void` nelze použít přímo. Musí tvořit kompletní ukazatele pomocí **: >** operátor.
+
+Tato chyba se shoduje s CAN0044.

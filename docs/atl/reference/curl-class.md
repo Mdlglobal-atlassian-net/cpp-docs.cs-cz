@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02453ae14ab6e8cd4a75a9f2d8725ce69e2b7f02
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: f0ab7906961936239ac564137d0760e6d64de9de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895289"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068211"
 ---
 # <a name="curl-class"></a>CUrl – třída
 
@@ -154,7 +154,7 @@ inline BOOL Canonicalize(DWORD dwFlags = 0) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dwFlags*  
+*dwFlags*<br/>
 Příznaky, které řídí převodu do kanonického tvaru. Pokud nejsou zadány žádné příznaky (*dwFlags* = 0), metoda převede všechny problematické znaky a meta pořadí (jako například \\., \.., a \\...) dostala mimo pořadí. *dwFlags* může být jedna z následujících hodnot:
 
 - ATL_URL_BROWSER_MODE: Kódování nebo dekódování znaků za "#" nebo "" a neodebere prázdný znak po "". Pokud tato hodnota není zadaná, je zakódovaný celou adresu URL a odebrat koncové prázdné znaky.
@@ -195,10 +195,10 @@ BOOL CrackUrl(LPCTSTR lpszUrl, DWORD dwFlags = 0) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpszUrl*  
+*lpszUrl*<br/>
 Adresa URL.
 
-*dwFlags*  
+*dwFlags*<br/>
 Zadejte ATL_URL_DECODE nebo ATL_URL_ESCAPE převést všechny řídicí znaky v *lpszUrl* na skutečné hodnoty po analýze. (Před Visual C++ 2005 ATL_URL_DECODE převést všechny řídicí znaky před dokončením analýzy.)
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -218,13 +218,13 @@ inline BOOL CreateUrl(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszUrl*  
+*lpszUrl*<br/>
 Vyrovnávací paměti řetězce pro uložení kompletního řetězce adresy URL.
 
-*pdwMaxLength*  
+*pdwMaxLength*<br/>
 Maximální délka *lpszUrl* vyrovnávací paměti pro řetězec.
 
-*dwFlags*  
+*dwFlags*<br/>
 Zadejte ATL_URL_ESCAPE převést všechny řídicí znaky v *lpszUrl* na skutečné hodnoty.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -256,7 +256,7 @@ CUrl(const CUrl& urlThat) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*urlThat*  
+*urlThat*<br/>
 `CUrl` Objektu, který chcete zkopírovat do vytvořit adresu URL.
 
 ##  <a name="dtor"></a>  CUrl:: ~ CUrl
@@ -457,7 +457,7 @@ CUrl& operator= (const CUrl& urlThat) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*urlThat*  
+*urlThat*<br/>
 `CUrl` Objektu, který chcete zkopírovat do aktuálního objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -474,7 +474,7 @@ inline BOOL SetExtraInfo(LPCTSTR lpszInfo) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpszInfo*  
+*lpszInfo*<br/>
 Řetězec obsahující další informace, včetně v adrese URL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -491,7 +491,7 @@ inline BOOL SetHostName(LPCTSTR lpszHost) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpszHost*  
+*lpszHost*<br/>
 Název hostitele.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -508,7 +508,7 @@ inline BOOL SetPassword(LPCTSTR lpszPass) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpszPass*  
+*lpszPass*<br/>
 Heslo.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -525,7 +525,7 @@ inline BOOL SetPortNumber(ATL_URL_PORT nPrt) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nPrt*  
+*nPrt*<br/>
 Číslo portu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -542,7 +542,7 @@ inline BOOL SetScheme(ATL_URL_SCHEME nScheme) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nScheme*  
+*nScheme*<br/>
 Jeden z [ATL_URL_SCHEME](atl-url-scheme-enum.md) hodnoty pro schéma.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -563,7 +563,7 @@ inline BOOL SetSchemeName(LPCTSTR lpszSchm) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpszSchm*  
+*lpszSchm*<br/>
 Název schématu adresy URL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -584,7 +584,7 @@ inline BOOL SetUrlPath(LPCTSTR lpszPath) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpszPath*  
+*lpszPath*<br/>
 Cesta adresy URL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -601,7 +601,7 @@ inline BOOL SetUserName(LPCTSTR lpszUser) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpszUser*  
+*lpszUser*<br/>
 Uživatelské jméno
 
 ### <a name="return-value"></a>Návratová hodnota

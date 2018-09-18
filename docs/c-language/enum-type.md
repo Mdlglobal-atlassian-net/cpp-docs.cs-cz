@@ -1,5 +1,5 @@
 ---
-title: enum – typ | Microsoft Docs
+title: enum – typ | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 521143207c9ecc873cfea1f857b6849a787500eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e4e2419ff6b333eabb896ff4c3a059d80d2c2bd6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382754"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069193"
 ---
 # <a name="enum-type"></a>enum – typ
-**ANSI 3.5.2.2** typ celé číslo má představovat hodnoty pro výčtový typ.  
-  
- Proměnná deklarovaná jako `enum` je typu `int`.  
-  
-## <a name="see-also"></a>Viz také  
- [Struktury, sjednocení, výčty a bitová pole](../c-language/structures-unions-enumerations-and-bit-fields.md)
+
+**ANSI 3.5.2.2** celočíselný typ zvolený k vyjádření hodnot typu výčtu
+
+Proměnná deklarovaná jako `enum` je typu `int`.
+
+## <a name="see-also"></a>Viz také
+
+[Struktury, sjednocení, výčty a bitová pole](../c-language/structures-unions-enumerations-and-bit-fields.md)

@@ -1,5 +1,5 @@
 ---
-title: C2790 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2790 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11f1c90fed93666fad7513e2b4186a5baa2aa406
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc2c6b238fab7e42c0754e613b62756a86a5bb31
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232814"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069570"
 ---
-# <a name="compiler-error-c2790"></a>C2790 chyby kompilátoru
-'super: Toto klíčové slovo lze použít pouze v hlavní funkce člena třídy  
-  
- Tato chybová zpráva se zobrazí, pokud uživatel někdy pokusí používá klíčové slovo [super](../../cpp/super.md) mimo kontext členské funkce.  
-  
- Následující ukázka generuje C2790:  
-  
-```  
-// C2790.cpp  
-void f() {  
-   __super::g();   // C2790  
-}  
+# <a name="compiler-error-c2790"></a>Chyba kompilátoru C2790
+
+"super: Toto klíčové slovo jde použít jenom v těle funkce člena třídy
+
+Tato chybová zpráva se zobrazí, pokud uživatel někdy pokusí pomocí klíčového slova [mimořádně](../../cpp/super.md) mimo kontext členskou funkci.
+
+Následující ukázka generuje C2790:
+
+```
+// C2790.cpp
+void f() {
+   __super::g();   // C2790
+}
 ```

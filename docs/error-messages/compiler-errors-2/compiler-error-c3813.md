@@ -1,5 +1,5 @@
 ---
-title: C3813 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3813 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e947b281c90c4d2ace83971f1de972c29bde72ac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8984feb5b657c26d2137eb9a3c648f1bcf442bf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273104"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066268"
 ---
-# <a name="compiler-error-c3813"></a>C3813 chyby kompilátoru
-deklarace vlastnosti se může vyskytovat pouze v rámci definice spravované nebo WinRT typu  
-  
-A [vlastnost](../../dotnet/how-to-use-properties-in-cpp-cli.md) lze deklarovat pouze v rámci spravované nebo prostředí Windows Runtime typu. Nepodporuje nativní typy `property` – klíčové slovo.  
-  
-## <a name="example"></a>Příklad  
-Následující ukázka generuje C3813 a ukazuje, jak to opravit:  
-  
-```cpp  
-// C3813.cpp  
-// compile by using: cl /c /clr C3813.cpp  
-class A  
-{  
-   property int Int; // C3813  
-};  
-  
-ref class B  
-{  
-   property int Int; // OK - declared within managed type  
-};  
+# <a name="compiler-error-c3813"></a>Chyba kompilátoru C3813
+
+deklarace vlastnosti se může objevit jedině v definici spravované nebo typ WinRT
+
+A [vlastnost](../../dotnet/how-to-use-properties-in-cpp-cli.md) lze deklarovat pouze v rámci spravované nebo prostředí Windows Runtime typu. Nativní typy se nepodporují `property` – klíčové slovo.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3813 a ukazuje, jak ho opravit:
+
+```cpp
+// C3813.cpp
+// compile by using: cl /c /clr C3813.cpp
+class A
+{
+   property int Int; // C3813
+};
+
+ref class B
+{
+   property int Int; // OK - declared within managed type
+};
 ```

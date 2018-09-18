@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d90a3f4b2cbacb3071dcd552fd88f6cb11bb5d43
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 08200320e30816ac45e6c91a14dc41508430cfae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131839"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069115"
 ---
 # <a name="constructors-c"></a>Konstruktory (C++)
 
@@ -88,7 +88,7 @@ Pomocí seznamu intializer členů je upřednostňované nad přiřazením hodno
     {}
 ```
 
-Identifikátor musí odkazovat na člen třídy; je inicializován s hodnotou argumentu. Argument může být jeden z parametrů konstruktoru, volání funkce nebo [std::initializer_list\<T >](../standard-library/initializer-list-class.md). 
+Identifikátor musí odkazovat na člen třídy; je inicializován s hodnotou argumentu. Argument může být jeden z parametrů konstruktoru, volání funkce nebo [std::initializer_list\<T >](../standard-library/initializer-list-class.md).
 
 **Const** členy a členy typu odkazu musí být inicializován v seznamu inicializátorů členů.
 
@@ -96,7 +96,7 @@ Volání konstruktorů parametrizované základní třídy je třeba v seznamu i
 
 ## <a name="default_constructors"></a> Výchozí konstruktory
 
- *Výchozí konstruktory* obvykle mít žádné parametry, ale mohou mít parametry s výchozími hodnotami.
+*Výchozí konstruktory* obvykle mít žádné parametry, ale mohou mít parametry s výchozími hodnotami.
 
 ```cpp
 class Box {
@@ -216,6 +216,7 @@ Objekt můžete zabránit v kopírování definováním kopírovací konstruktor
 Chyba pokusu o zkopírování objekt vytváří *C2280: Pokus o odkazování na odstraněnou funkci*.
 
 ## <a name="move_constructors"></a> Konstruktory přesunutí
+
 A *konstruktor přesunu* je zvláštní členská funkce, který přesouvá vlastnictví existujícího objektu data do nové proměnné bez kopírování původní data. Bere odkaz rvalue jako svůj první parametr a žádné další parametry musí mít výchozí hodnoty. Přesun konstruktorů může významně zvýšit efektivitu vašeho programu při předávání za velké objekty. Konstruktor přesunu bere odkaz rvalue jako svůj první parametr. Všechny ostatní parametry musí mít výchozí hodnoty.
 
 ```cpp

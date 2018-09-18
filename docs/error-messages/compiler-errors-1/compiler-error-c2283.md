@@ -1,5 +1,5 @@
 ---
-title: C2283 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2283 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb602d1fa330876820cc7e1fe75fcfe7b736b81e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c90c355a1c2ecd19ccd7b2fc25e75f53d4f9414
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170853"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070116"
 ---
-# <a name="compiler-error-c2283"></a>C2283 chyby kompilátoru
-"identifikátor": pure specifikátor nebo abstraktní override – specifikátor není povoleno na nepojmenované – struktura  
-  
- Členské funkce nepojmenované třídu nebo strukturu je deklarovaný s čistě specifikátor, což není povoleno.  
-  
- Následující ukázka generuje C2283:  
-  
-```  
-// C2283.cpp  
-// compile with: /c  
-struct {  
-   virtual void func() = 0;   // C2283  
-};  
-struct T {  
-   virtual void func() = 0;   // OK  
-};  
+# <a name="compiler-error-c2283"></a>Chyba kompilátoru C2283
+
+'identifier': specifikátor pure nebo abstract override není povolený pro nepojmenované struktury
+
+Členská funkce Nepojmenovaná třída nebo struktura je deklarována s specifikátor pure, což není povoleno.
+
+Následující ukázka generuje C2283:
+
+```
+// C2283.cpp
+// compile with: /c
+struct {
+   virtual void func() = 0;   // C2283
+};
+struct T {
+   virtual void func() = 0;   // OK
+};
 ```

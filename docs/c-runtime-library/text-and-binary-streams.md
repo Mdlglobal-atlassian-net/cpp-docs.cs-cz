@@ -1,5 +1,5 @@
 ---
-title: Textové a binární proudy | Microsoft Docs
+title: Textové a binární proudy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,35 +15,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e91881f738c1b6411179c4f8e10e30f69e7b8667
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 106e02de80c3132846d7b88161637a37f74a59ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410928"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068634"
 ---
 # <a name="text-and-binary-streams"></a>Textové a binární proudy
-Datový proud s text se skládá z jednoho nebo více řádků textu, které je možné zapsat do zobrazení se text orientované tak, aby mohly být čteny. Při čtení z datového proudu textu, program přečte `NL` (každý na jednom řádku) na konci každého řádku. Při zápisu do proudu textu, zapíše program `NL` signál konec řádku. Tak, aby odpovídaly odlišné konvence mezi cílové prostředí pro představující text v souborech, můžete změnit funkce knihovny počet a reprezentace znaků přenesené mezi program a text datového proudu.  
-  
- Proto umístění v rámci datového proudu text je omezený. Můžete získat aktuální indikátoru pozice souboru voláním [fgetpos –](../c-runtime-library/reference/fgetpos.md) nebo [ftell –](../c-runtime-library/reference/ftell-ftelli64.md). Datový proud s text můžete umístit na pozici získat tímto způsobem, nebo na začátku nebo na konec datového proudu, voláním [fsetpos –](../c-runtime-library/reference/fsetpos.md) nebo [fseek](../c-runtime-library/reference/fseek-fseeki64.md). Všechny ostatní změny pozice nemusí být kvalitně podporována.  
-  
- Pro maximální přenositelnost nesmí program zápisu:  
-  
--   Prázdné soubory.  
-  
--   Mezery na konci řádku.  
-  
--   Částečné řádky (Díky vynechání `NL` na konci souboru).  
-  
--   jiné znaky než tisknutelná znaky, NL, a `HT` (vodorovné karta).  
-  
- Pokud budete postupovat podle těchto pravidel, posloupnost znaků, které číst z datového proudu text (buď jako bajt nebo vícebajtové znaky) bude odpovídat posloupnost znaků, který jste napsali do proudu textu, když vytvoříte soubor. Funkce knihovny, jinak můžete odebrat soubor, který vytvoříte, pokud je soubor prázdný, když zavřete ho. Nebo můžete změnit ani odstranit znaky, které zapisovat do souboru.  
-  
- Binární datový proud se skládá z jedné nebo více bajtů libovolné informace. Můžete napsat s hodnotou uloženou v libovolný objekt k binárnímu proudu (orientované bajtů) a čtení přesně co byla uložená v objektu, když ho napsal. Funkce knihovny nijak nemění bajtů, které můžete přenést mezi program a binárního datového proudu. Libovolný počet null bajtů se však můžete připojit k souboru, který můžete psát pomocí binárního datového proudu. Program musí řešit tyto další null bajtů na konci všechny binární datový proud.  
-  
- Umístění v rámci binární datový proud je proto dobře definované, s výjimkou umístění relativně k konec datového proudu. Můžete získat a změnit aktuální indikátoru pozice souboru je stejný jako u datového proudu textu. Kromě toho používá posunutí [ftell –](../c-runtime-library/reference/ftell-ftelli64.md) a [fseek](../c-runtime-library/reference/fseek-fseeki64.md) počet bajtů od začátku datového proudu (což je nula bajtů), takže celé číslo aritmetické na tyto posuny poskytuje předvídatelný výsledky.  
-  
- Tok bajtů zpracovává soubor jako pořadí bajtů. V rámci programu do datového proudu vypadá jako stejnou sekvenci bajtů, s výjimkou případné změny popsané výše.  
-  
-## <a name="see-also"></a>Viz také  
- [Soubory a proudy](../c-runtime-library/files-and-streams.md)
+
+Textového datového proudu se skládá z jednoho nebo více řádků textu, který je možné zapisovat na zobrazení orientovaný text tak, že budou moct přečíst. Při čtení z textového datového proudu, program přečte `NL` (nový řádek) na konci každého řádku. Při zápisu do proudu textu, program zapíše `NL` který signalizuje, že konec řádku. Tak, aby odpovídaly různý konvence mezi cílových prostředí pro vyjádření text v souborech, můžete změnit funkce knihovny číslo a reprezentace znaků přenášet mezi aplikací a textového datového proudu.
+
+Umístění v rámci textového datového proudu je proto omezena. Aktuální indikátor pozice v souboru lze získat voláním [fgetpos](../c-runtime-library/reference/fgetpos.md) nebo [ftell –](../c-runtime-library/reference/ftell-ftelli64.md). Textového datového proudu můžete umístit na pozici získat tímto způsobem, nebo na začátku nebo konci datového proudu, voláním [fsetpos](../c-runtime-library/reference/fsetpos.md) nebo [fseek](../c-runtime-library/reference/fseek-fseeki64.md). Změna umístění nemusí být také podporován.
+
+Pro zajištění maximální přenositelnosti by neměl napsat program:
+
+- Prázdné soubory.
+
+- Znaky mezery na konci řádku.
+
+- Částečné řádky (vynecháním `NL` na konci souboru).
+
+- jiné znaky než tisknutelné znaky, NL, a `HT` (horizontální tabelátor).
+
+Pokud budete postupovat podle těchto pravidel, posloupnost znaků, které čtení z textového datového proudu (buď jako bajt nebo vícebajtové znaky) bude odpovídat posloupnost znaků, který jste napsali textového datového proudu při vytváření souboru. Funkce knihovny v opačném případě můžete odebrat soubor, který vytvoříte, je-li soubor je prázdný, pokud ho zavřete. Nebo můžete změnit ani odstranit znaků, které můžete zapisovat do souboru.
+
+Binární datový proud se skládá z jednoho nebo více bajtů libovolné informace. Můžete napsat hodnotu uloženou v objektu libovolného k binárnímu proudu (byte objektově orientovaný) a číst přesně co byla uložena v objektu při jste napsali. Funkce knihovny nemění bajtů, které přenášejí mezi aplikací a do binárního datového proudu. Libovolný počet bajty s hodnotou null, však může připojit k souboru, který píšete do binárního datového proudu. Program musí řešit tyto další bajty s hodnotou null na konci binární datový proud.
+
+Umístění v rámci binárnímu datovému proudu je proto dobře definované, s výjimkou umístění vzhledem k konce datového proudu. Můžete získat a změnit aktuální indikátor pozice v souboru je stejný jako u textového datového proudu. Kromě toho používá posunutí [ftell –](../c-runtime-library/reference/ftell-ftelli64.md) a [fseek](../c-runtime-library/reference/fseek-fseeki64.md) počet bajtů od začátku datového proudu (což je nula bajtů), takže vrací celé číslo aritmetické na tyto hodnoty posunu předvídatelné výsledky.
+
+Datový proud bajtů zpracovává soubor jako sekvence bajtů. V rámci programu datového proudu vypadá jako stejnou sekvenci bajtů, s výjimkou případné změny, které je popsáno výše.
+
+## <a name="see-also"></a>Viz také
+
+[Soubory a proudy](../c-runtime-library/files-and-streams.md)

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e837e15f934e53f7b1d06a94efb4a320f2e8407
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 48303c6115ac1d2314e3038556b8f98330a6182e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757891"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062667"
 ---
 # <a name="cwintraitsor-class"></a>Cwintraitsor – třída
 
@@ -45,10 +45,10 @@ class CWinTraitsOR
 
 #### <a name="parameters"></a>Parametry
 
-*t_dwStyle*  
+*t_dwStyle*<br/>
 Výchozí styly oken.
 
-*t_dwExStyle*  
+*t_dwExStyle*<br/>
 Rozšířené styly oken ve výchozím nastavení.
 
 ## <a name="members"></a>Členové
@@ -82,7 +82,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*dwStyle*  
+*dwStyle*<br/>
 Stylů použitých pro vytvoření okna.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -99,7 +99,7 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*dwExStyle*  
+*dwExStyle*<br/>
 Rozšířené stylů použitých pro vytvoření okna.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -108,6 +108,6 @@ Rozšířené styly, které jsou předány v kombinaci *dwExStyle* a těch, kter
 
 ## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../../atl/atl-class-overview.md)   
+[Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [Principy vlastností okna](../../atl/understanding-window-traits.md)
 

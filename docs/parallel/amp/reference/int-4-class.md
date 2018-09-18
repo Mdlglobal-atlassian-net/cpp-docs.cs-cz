@@ -1,5 +1,5 @@
 ---
-title: int_4 – třída | Microsoft Docs
+title: int_4 – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -278,15 +278,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9aca5b2b68daffac59ad77e5b2a4c4fb81e756a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a29ce2e9ec7b8401e2b9aaf499eabb5c0ceea2b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694482"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066177"
 ---
 # <a name="int4-class"></a>int_4 – třída
-Představuje krátký vektoru čtyři celých čísel.  
+Představuje krátký vektor čtyř celých čísel.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -296,7 +296,7 @@ class int_4;
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
@@ -306,7 +306,7 @@ class int_4;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[int_4 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky s 0.|  
+|[int_4 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -458,7 +458,7 @@ class int_4;
 |int_4::operator%=||  
 |int_4::operator&=||  
 |int_4::operator*=||  
-|/ int_4::Operator = – operátor||  
+|int_4::Operator / =||  
 |int_4::operator^=||  
 |int_4::operator&#124;=||  
 |int_4::operator~||  
@@ -473,7 +473,7 @@ class int_4;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[Size – konstanta](#int_4__size)||  
+|[velikost – konstanta](#int_4__size)||  
   
 ### <a name="public-data-members"></a>Veřejné datové členy  
   
@@ -616,9 +616,9 @@ class int_4;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a> int_4 
+##  <a name="ctor"></a> int_4 – 
 
- Výchozí konstruktor, inicializuje všechny prvky s 0.  
+ Výchozí konstruktor, inicializuje všechny prvky na 0.  
   
 ```  
 int_4() restrict(amp,
@@ -669,23 +669,23 @@ explicit inline int_4(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_V0`  
- Hodnota k chybě při inicializaci element 0.  
+*_V0*<br/>
+Hodnota inicializace prvek 0.  
   
- `_V1`  
- Hodnota k chybě při inicializaci prvek 1.  
+*_V1*<br/>
+Hodnota inicializace element 1.  
   
- `_V2`  
- Hodnota k chybě při inicializaci element 2.  
+*_V2*<br/>
+Hodnota inicializace elementu 2.  
   
- `_V3`  
- Hodnota k chybě při inicializaci element 3.  
+*_V3*<br/>
+Hodnota inicializace element 3.  
   
- `_V`  
- Hodnota pro inicializaci.  
+*_V*<br/>
+Hodnota inicializace.  
   
- `_Other`  
- Objekt použitý k chybě při inicializaci.  
+*Ji_né*<br/>
+Objekt použitý k inicializaci.  
   
 ##  <a name="int_4__size"></a> Velikost 
 

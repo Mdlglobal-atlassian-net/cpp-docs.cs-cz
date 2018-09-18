@@ -1,5 +1,5 @@
 ---
-title: C3500 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3500 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87d0bf7b7d7b773d89c9b5b6b1dd8e3b0eee4c86
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 996f13939f4c317424a8c577e2b3dc0ec8178c7d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248580"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069622"
 ---
-# <a name="compiler-error-c3500"></a>C3500 chyby kompilátoru
-Neplatný atribut ProgID 'progid.  
-  
- Byl zadán neplatný identifikátor progid s `#import` příkaz. Zkontrolujte registru systému Windows k zajištění, že zadáváte platné progid.
+# <a name="compiler-error-c3500"></a>Chyba kompilátoru C3500
+
+Neplatné ProgID "progid.
+
+Byl zadán neplatný identifikátor progid `#import` příkazu. Zkontrolujte, zda registru Windows k zajištění, že zadáváte platné progid.

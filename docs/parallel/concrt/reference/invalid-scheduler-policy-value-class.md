@@ -1,5 +1,5 @@
 ---
-title: invalid_scheduler_policy_value – třída | Microsoft Docs
+title: invalid_scheduler_policy_value – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec11d7ebc7d2c074344e9651a7c548fe1ad01943
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ae46d9f9de26e80a97d4ea2e9a692caec3445c75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689724"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068153"
 ---
 # <a name="invalidschedulerpolicyvalue-class"></a>invalid_scheduler_policy_value – třída
-Tato třída popisuje výjimka vyvolaná při zásad klíč `SchedulerPolicy` je nastavena na neplatnou hodnotu pro tento klíč.  
+Tato třída popisuje výjimku vyvolanou při klíč zásady `SchedulerPolicy` objektu je nastavena na neplatnou hodnotu pro daný klíč.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,7 +38,7 @@ class invalid_scheduler_policy_value : public std::exception;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[invalid_scheduler_policy_value] (invalid-scheduler-policy-thread-specification-class.md#ctor|Přetíženo. Vytvoří `invalid_scheduler_policy_value` objektu.|  
+|[invalid_scheduler_policy_value –] (invalid-scheduler-policy-thread-specification-class.md#ctor|Přetíženo. Vytvoří `invalid_scheduler_policy_value` objektu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `exception`  
@@ -51,7 +51,7 @@ class invalid_scheduler_policy_value : public std::exception;
  **Namespace:** souběžnosti  
   
     
-##  <a name="ctor"></a> invalid_scheduler_policy_value 
+##  <a name="ctor"></a> invalid_scheduler_policy_value – 
 
  Vytvoří `invalid_scheduler_policy_value` objektu.  
   
@@ -62,10 +62,10 @@ invalid_scheduler_policy_value() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Popisný zpráva o chybě.  
+*_TEXT*<br/>
+Popisná zpráva chyby.  
   
 
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)   
+ [souběžnost Namespace](concurrency-namespace.md)   
  [SchedulerPolicy – třída](schedulerpolicy-class.md)

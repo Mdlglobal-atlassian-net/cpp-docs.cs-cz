@@ -1,5 +1,5 @@
 ---
-title: C2550 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2550 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d215f708513fd7313e0ff82f5b8853b1e00835af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd132184a993f27ec04a913cfef2aed07f8bd4a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228011"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062511"
 ---
-# <a name="compiler-error-c2550"></a>C2550 chyby kompilátoru
-"identifikátor": konstruktor inicializační seznamy jsou povoleny pouze na definice – konstruktor  
-  
- Seznam inicializátoru základní třída se používá v definici funkce, která není konstruktor.  
-  
- Následující ukázka generuje C2550:  
-  
-```  
-// C2550.cpp  
-// compile with: /c  
-class C {  
-public:  
-   C();  
-};  
-  
-class D : public C {  
-public:  
-   D();  
-   void func();  
-};  
-  
-void D::func() : C() {}  // C2550  
-D::D() : C() {}   // OK  
+# <a name="compiler-error-c2550"></a>Chyba kompilátoru C2550
+
+'identifier': seznamy inicializátorů konstruktorů jsou povolené jenom pro definice konstruktorů
+
+Seznam inicializátorů základní třída se používá v definici funkce, která není konstruktorem.
+
+Následující ukázka generuje C2550:
+
+```
+// C2550.cpp
+// compile with: /c
+class C {
+public:
+   C();
+};
+
+class D : public C {
+public:
+   D();
+   void func();
+};
+
+void D::func() : C() {}  // C2550
+D::D() : C() {}   // OK
 ```

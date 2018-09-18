@@ -1,5 +1,5 @@
 ---
-title: Upozornění linkerů Lnk4254 | Microsoft Docs
+title: Upozornění Linkerů LNK4254 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb57882ab4269c06a53ed73fed2a9d6caf2f2c85
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f2ef421cbfa87ecab8a27dfa796eaa4eaacf7b70
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316891"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064643"
 ---
 # <a name="linker-tools-warning-lnk4254"></a>Upozornění linkerů LNK4254
-část 'sekci 1' (posun) sloučí sekci "2" (posun) s různé atributy  
-  
- Obsah jeden oddíl byly sloučeny do jiné, ale liší se atributy dvě části. Váš program mohou poskytovat neočekávané výsledky. Například data, která jste chtěli číst pouze nyní pravděpodobně v oddílu s možností zápisu.  
-  
- Chcete-li vyřešit LNK4254, změnit nebo odebrat požadavek sloučení.  
-  
- Pokud je cílem x86 počítače a cíle systém Windows CE (ARM, MIPS, architekturu SH4 a Flash) s Visual C++. Část CRT je jen pro čtení. Pokud váš kód závisí na předchozí chování (. CRT oddíly jsou pro čtení i zápis), může docházet k neočekávanému chování.  
-  
- Další informace najdete v tématu,  
-  
--   [/MERGE (sloučení oddílů)](../../build/reference/merge-combine-sections.md)  
-  
--   [comment (C/C++)](../../preprocessor/comment-c-cpp.md)  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje LNK4254.  
-  
-```  
-// LNK4254.cpp  
-// compile with: /W1 /link /WX  
-// LNK4254 expected  
-#pragma comment(linker, "/merge:.data=.text")  
-int main() {}  
+
+část sekci "1" (posun) sloučena sekci "2" (posun) s rozdílnými atributy
+
+Obsah jeden oddíl byly sloučeny do jiné, ale atributy ze dvou částí se liší. Váš program může mít neočekávané výsledky. Například data, která chcete načíst pouze nyní v pravděpodobně oddíl s možností zápisu.
+
+Chcete-li vyřešit LNK4254, změnit nebo odebrat požadavek sloučení.
+
+Při cílení na x86 počítače a cíle Windows CE (ARM, MIPS, architekturu SH4 a Thumb) v jazyce Visual C++. Oddíl CRT je jen pro čtení. Pokud váš kód závisí na předchozím chování (. Oddíly CRT jsou r/w), může docházet k neočekávanému chování.
+
+Další informace najdete v tématu,
+
+- [/MERGE (sloučení oddílů)](../../build/reference/merge-combine-sections.md)
+
+- [comment (C/C++)](../../preprocessor/comment-c-cpp.md)
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje LNK4254.
+
+```
+// LNK4254.cpp
+// compile with: /W1 /link /WX
+// LNK4254 expected
+#pragma comment(linker, "/merge:.data=.text")
+int main() {}
 ```

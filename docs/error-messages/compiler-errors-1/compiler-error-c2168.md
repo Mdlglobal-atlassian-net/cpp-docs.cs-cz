@@ -1,5 +1,5 @@
 ---
-title: C2168 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2168 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 313a07ba10275f4e9abed9442e3a8a82995d9577
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06cb491974d6a13e5690401092222f0832313018
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165984"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066131"
 ---
-# <a name="compiler-error-c2168"></a>C2168 chyby kompilátoru
-'function': moc málo skutečné parametry pro vnitřní funkce  
-  
- Odkaz na `intrinsic` funkce obsahuje příliš málo parametry.
+# <a name="compiler-error-c2168"></a>Chyba kompilátoru C2168
+
+'function': moc malý počet skutečných parametrů pro vnitřní funkci
+
+Odkaz na `intrinsic` funkce má moc malý počet parametrů.

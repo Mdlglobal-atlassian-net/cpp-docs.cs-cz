@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bc13eb70dd2efc479cef7185ee0cdfa147ec507
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 69411a727c3f590e9a45a46ecb4ea2eb0eab05c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408039"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029465"
 ---
 # <a name="c-bit-fields"></a>Bitová pole jazyka C++
 
@@ -38,7 +38,7 @@ Třídy a struktury mohou obsahovat členy, které zabírají méně úložného
 > [!NOTE]
 > Nepojmenované bitové pole šířky 0 vynutí zarovnání dalšího bitového pole na další **typ** hranice, ve kterém **typ** je typ člena.
 
- Následující příklad deklaruje strukturu, která obsahuje bitová pole:
+Následující příklad deklaruje strukturu, která obsahuje bitová pole:
 
 ```cpp
 // bit_fields1.cpp
@@ -94,4 +94,5 @@ V následujícím seznamu jsou uvedeny chybné operace u bitových polí:
 - Inicializace non -**const** odkazu pomocí bitového pole.
 
 ## <a name="see-also"></a>Viz také:
- [Třídy a struktury](../cpp/classes-and-structs-cpp.md)
+
+[Třídy a struktury](../cpp/classes-and-structs-cpp.md)

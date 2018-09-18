@@ -1,5 +1,5 @@
 ---
-title: C3085 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3085 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57c85908d808243be8e6edce27ea22c18b4941f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bbe3cd1b5c3aab71b38bca694df28fdf5b079474
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247237"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033300"
 ---
-# <a name="compiler-error-c3085"></a>C3085 chyby kompilátoru
-'konstruktor': konstruktor nemůže být '– klíčové slovo'  
-  
- Konstruktor byla deklarována nesprávně. V tématu [přepsat specifikátory](../../windows/override-specifiers-cpp-component-extensions.md) Další informace.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3085.  
-  
-```  
-// C3085.cpp  
-// compile with: /c /clr  
-ref struct S {  
-   S() abstract;   // C3085  
-   S(S%) abstract;   // C3085  
-};  
-  
-ref struct T {  
-   T() sealed {}   // C3085  
-   T(T%) sealed {}   // C3085  
-};  
+# <a name="compiler-error-c3085"></a>Chyba kompilátoru C3085
+
+"konstruktoru": konstruktor nemůže být "– klíčové slovo.
+
+Konstruktor byl deklarován nesprávně. Zobrazit [specifikátory přepisu](../../windows/override-specifiers-cpp-component-extensions.md) Další informace.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3085.
+
+```
+// C3085.cpp
+// compile with: /c /clr
+ref struct S {
+   S() abstract;   // C3085
+   S(S%) abstract;   // C3085
+};
+
+ref struct T {
+   T() sealed {}   // C3085
+   T(T%) sealed {}   // C3085
+};
 ```

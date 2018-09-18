@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1010 | Microsoft Docs
+title: Závažná chyba C1010 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf8af35b28cfa02bd2723ff3c78db04a27cc39ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5ae762c15c96ed7c12a20d2070d22cdc556667ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198492"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064084"
 ---
 # <a name="fatal-error-c1010"></a>Závažná chyba C1010
-Neočekávaný konec souboru při hledání předkompilovaných hlaviček. Nezapomněli jste přidat ' #include se ke zdroji?  
-  
- Vložené soubory zadaným [/Yu](../../build/reference/yu-use-precompiled-header-file.md) není uveden ve zdrojovém souboru.  Tato možnost je povolená ve výchozím nastavení většina typy projektů Visual C++ a "stdafx.h" je výchozí zahrnout soubor určený touto tuto možnost.  
-  
- V prostředí Visual Studio použijte jednu z následujících metod Chcete-li vyřešit tuto chybu:  
-  
--   Pokud nepoužijete předkompilovaných hlaviček v projektu, nastavte **vytvoření/použití předkompilovaných hlaviček** vlastnost zdrojové soubory k **není použití předkompilovaných hlaviček**. Pokud chcete nastavit tuto možnost kompilátoru, postupujte takto:  
-  
-    1.  V podokně Průzkumník řešení projektu klikněte pravým tlačítkem na název projektu a pak klikněte na tlačítko **vlastnosti**.  
-  
-    2.  V levém podokně klikněte **C/C++** složky.  
-  
-    3.  Klikněte **předkompilovaných hlaviček** uzlu.  
-  
-    4.  V pravém podokně klikněte na **vytvoření nebo použití předkompilovaných hlaviček**a potom klikněte na **není použití předkompilovaných hlaviček**.  
-  
--   Ujistěte se, že máte není nechtěně odstranit, přejmenovat nebo odebrat záhlaví souboru (ve výchozím nastavení, stdafx.h) z aktuálního projektu. Tento soubor také musí být součástí před jakýkoli jiný kód ve zdrojových souborech pomocí **#include "stdafx.h"**. (Tento soubor hlaviček je zadán jako **vytvořit nebo použít PCH prostřednictvím soubor** vlastnosti projektu)
+
+Neočekávaný konec souboru při hledání předkompilované hlavičky. Nezapomněli jste přidat ' #include název "ke zdroji?
+
+Zadaný soubor include [/Yu](../../build/reference/yu-use-precompiled-header-file.md) není uveden ve zdrojovém souboru.  Tato možnost je povolená ve výchozím nastavení ve většině typů projektu Visual C++ a "stdafx.h" je výchozí zahrnout soubor určený parametrem tuto možnost.
+
+V prostředí Visual Studio použijte jednu z následujících metod pro vyřešení této chyby:
+
+- Pokud nepoužijete předkompilovaných hlaviček v projektu, nastavte **vytvořit/použít předkompilovanou hlavičku** vlastnost zdrojové soubory pro **není použití předkompilovaných hlaviček**. Nastavení této možnosti kompilátoru, postupujte podle těchto kroků:
+
+   1. V podokně Průzkumník řešení projektu, klikněte pravým tlačítkem na název projektu a pak klikněte na tlačítko **vlastnosti**.
+
+   1. V levém podokně klikněte **C/C++** složky.
+
+   1. Klikněte na tlačítko **předkompilované hlavičky** uzlu.
+
+   1. V pravém podokně klikněte na tlačítko **vytvoření a použití předkompilovaných hlaviček**a potom klikněte na tlačítko **není použití předkompilovaných hlaviček**.
+
+- Ujistěte se, že máte nikoli neúmyslně odstranit, přejmenovat nebo odebrat soubor hlaviček (ve výchozím nastavení, stdafx.h) z aktuálního projektu. Tento soubor se také musí být součástí než jakýkoli jiný kód ve zdrojových souborech pomocí **#include "stdafx.h"**. (Tento soubor hlavičky je zadán jako **vytvořit/použít PCH prostřednictvím souboru** vlastnosti projektu)

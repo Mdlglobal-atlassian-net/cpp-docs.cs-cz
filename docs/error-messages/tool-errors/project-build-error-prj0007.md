@@ -1,5 +1,5 @@
 ---
-title: Chyba sestavení projektu PRJ0007 | Microsoft Docs
+title: Chyba sestavení projektu PRJ0007 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 288c86797d481719a594b061d6942923fe2230ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d944f444eb424339b4c214de1bb160e0545a3e35
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317762"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068088"
 ---
 # <a name="project-build-error-prj0007"></a>Chyba sestavení projektu PRJ0007
-Nelze vytvořit adresář' výstupní adresář".  
-  
- Visual C++ se nezdařilo vytvoření výstupního adresáře. Možné důvody patří:  
-  
--   Do adresáře, ve kterém je výstupního adresáře. Chcete-li vytvořit je jen pro čtení.  
-  
--   Počítač je nedostatek místa na disku.  
-  
--   Zadali jste neplatná cesta adresáře.  
-  
--   Oprávnění uživatele nestačí k vytvoření adresáře.
+
+Nelze vytvořit výstupní adresář 'directory'.
+
+Visual C++ se nepodařilo vytvořit výstupní adresář. Mezi možné důvody patří:
+
+- Adresář, ve kterém bylo vytvořit výstupní adresář je jen pro čtení.
+
+- Počítač je nedostatek místa na disku.
+
+- Zadali jste neplatná cesta k adresáři.
+
+- Uživatelská oprávnění nejsou dostatečná pro vytvoření adresáře.

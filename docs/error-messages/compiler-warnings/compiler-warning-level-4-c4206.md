@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4206 | Microsoft Docs
+title: Upozornění (úroveň 4) C4206 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6db7069f9d1ad242f0c79f8c6f490f4632162e6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 746fbc4c8752afcd9d02b9985373d669c3aacc5f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293891"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048653"
 ---
-# <a name="compiler-warning-level-4-c4206"></a>C4206 kompilátoru upozornění (úroveň 4)
-**nestandardní rozšíření používané: překlad jednotka je prázdná**  
-  
- Soubor byl po předzpracování prázdný.  
-  
- Toto rozšíření zabránit se přenosný na jiné kompilátory kódu. Vygeneruje se chyba pod kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) a platí jenom pro zdrojový kód C.
+# <a name="compiler-warning-level-4-c4206"></a>Kompilátor upozornění (úroveň 4) C4206
+
+**používá se nestandardní rozšíření: Překladová jednotka je prázdná**
+
+Po předběžném zpracování byl prázdný soubor.
+
+Toto rozšíření může zakázat kódu přenositelnost na jiné kompilátory. Dojde k chybě v části kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) a platí jenom pro zdrojový kód jazyka C.

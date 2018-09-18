@@ -1,7 +1,7 @@
 ---
 title: Projekty CMake v jazyce Visual C++ | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 04/28/2018
+ms.date: 09/17/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0e7852ad3fbd88b815aea8266bafc2879494d8a
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: c107fff98a322664ba38e0b57be59c743b464df8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900664"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060353"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Projekty CMake v jazyce Visual C++
 
@@ -64,7 +64,7 @@ Můžete otevřít složek, které neobsahují libovolný počet projekty CMake.
 
 ## <a name="import-an-existing-cache"></a>Importovat stávající mezipaměti
 
-Při importu stávajícího souboru CMakeCache.txt Visual Studio automaticky extrahuje vlastní proměnné a předem naplněných souboru CMakeSettings.json na jejich základě vytvoří. Původní mezipaměti není žádným způsobem upravit a je stále možné z příkazového řádku nebo pomocí libovolné nástrojů nebo integrovaného vývojového prostředí byla použita k jeho vygenerování. Nový soubor CMakeSettings.json je umístěn společně s projektu kořenový soubor CMakeLists.txt. Visual Studio vygeneruje nové mezipaměti na základě souboru nastavení.  
+Při importu stávajícího souboru CMakeCache.txt sady Visual Studio automaticky vybere vlastní proměnné a vytvoří předem naplněných [CMakeSettings.json](#cmake_settings) na jejich základě souboru. Původní mezipaměti není žádným způsobem upravit a je stále možné z příkazového řádku nebo pomocí libovolné nástrojů nebo integrovaného vývojového prostředí byla použita k jeho vygenerování. Nový soubor CMakeSettings.json je umístěn společně s projektu kořenový soubor CMakeLists.txt. Visual Studio vygeneruje nové mezipaměti na základě souboru nastavení.  
 
 
 **Visual Studio 2017 verze 15.7 nebo novější**: mezipaměť automatické generování v můžete přepsat **nástroje | Možnosti | CMake | Obecné** dialogového okna.
@@ -218,11 +218,27 @@ Protože Ninja je určená pro rychlé sestavení rychlosti místo flexibilitu a
 Chcete-li zadat generátoru Visual Studio, otevřete CMakeSettings.json v hlavní nabídce výběrem **CMake | Změnit nastavení CMake**. Odstraňte "Ninja" a zadejte "V". Tím se aktivuje technologii IntelliSense, která vám umožní vybrat generátor, který chcete.
 
 1. **buildRoot**: mapuje **-DCMAKE_BINARY_DIR** přepnutí a určuje, kde se vytvoří mezipaměť CMake. Pokud složka neexistuje, vytvoří se.
-1. **proměnné**: obsahuje dvojice název hodnota proměnné CMake, které budou získat předány jako **-D**_název_**=**_hodnotu_ do programu CMake. Pokyny k sestavení projektu CMake zadání přidání všech proměnných přímo do souboru mezipaměti CMake, se doporučuje jste je přidali tady místo.
+1. **proměnné**: obsahuje dvojice název hodnota proměnné CMake, které budou získat předány jako **-D**_název_**=**_hodnotu_ do programu CMake. Pokyny k sestavení projektu CMake zadání přidání všech proměnných přímo do souboru mezipaměti CMake, se doporučuje jste je přidali tady místo. Následující příklad ukazuje, jak určit dvojice název hodnota:
+
+```json
+
+"variables": [
+    {
+      "name": "CMAKE_CXX_COMPILER",
+      "value": "C:/Program Files (x86)/Microsoft Visual Studio/157/Enterprise/VC/Tools/MSVC/14.14.26428/bin/HostX86/x86/cl.exe"
+    },
+    {
+      "name": "CMAKE_C_COMPILER",
+      "value": "C:/Program Files (x86)/Microsoft Visual Studio/157/Enterprise/VC/Tools/MSVC/14.14.26428/bin/HostX86/x86/cl.exe"
+    }
+  ]
+
+```
+
 1. **cmakeCommandArgs**: Určuje žádné další přepínače, které chcete předat CMake.exe.
-1. **výběru typu konfigurace**: definuje typ konfigurace sestavení pro vybraný generátor. Aktuálně podporované hodnoty jsou "Debug", "MinSizeRel", "Verze" a "RelWithDebInfo".
-1. **ctestCommandArgs**: Určuje další přepínače, které mají být předány do programu CTest při spouštění testů.
-1. **buildCommandArgs**: Určuje další přepínače k předání do základního sestavovací systém. Například předávání - v, při použití generátor Ninja vynutí Ninja výstup příkazové řádky.
+2. **výběru typu konfigurace**: definuje typ konfigurace sestavení pro vybraný generátor. Aktuálně podporované hodnoty jsou "Debug", "MinSizeRel", "Verze" a "RelWithDebInfo".
+3. **ctestCommandArgs**: Určuje další přepínače, které mají být předány do programu CTest při spouštění testů.
+4. **buildCommandArgs**: Určuje další přepínače k předání do základního sestavovací systém. Například předávání - v, při použití generátor Ninja vynutí Ninja výstup příkazové řádky.
 
 ### <a name="environment-variables"></a>Proměnné prostředí
 

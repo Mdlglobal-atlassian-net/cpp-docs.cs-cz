@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk1302 | Microsoft Docs
+title: Chyba Linkerů LNK1302 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6aa84a411f91303c84acb44e2e6c0ab3d975e19f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dc85b37d58e12602c02c2207c1f38bda9344e59
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299416"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045507"
 ---
 # <a name="linker-tools-error-lnk1302"></a>Chyba linkerů LNK1302
-podporují pouze propojování bezpečné .netmodules; Nelze vytvořit odkaz .netmodule souboru  
-  
- .netmodule (Kompilovat s **/LN**) byla předána uživatelské pokus o vyvolání MSIL propojování linkeru.  Modul C++ je platný pro MSIL propojování, pokud je kompilován s **/CLR: safe**.  
-  
- Opravit tuto chybu, kompilovat s **/CLR: safe** povolit MSIL propojování nebo předat **/CLR** nebo **/CLR: pure** souboru .obj linkeru místo modulu.  
-  
- Další informace naleznete v tématu  
-  
--   [/LN (vytvoření modulu MSIL)](../../build/reference/ln-create-msil-module.md)  
-  
--   [Soubory .netmodule jako vstup linkeru](../../build/reference/netmodule-files-as-linker-input.md)
+
+podporuje jenom propojování zabezpečených modulů .NET. nedá se propojit soubor .netmodule
+
+.Netmodule (zkompilovaná **/LN**) byl předán linkeru uživatel pokus o vyvolání jazyka MSIL propojování.  Modulu jazyka C++ je platný pro jazyk MSIL propojení, pokud je kompilován **/CLR: safe**.
+
+Chcete-li opravit tuto chybu, proveďte kompilaci s **/CLR: safe** na povolit propojování na jazyk MSIL, nebo předejte **/CLR** nebo **/CLR: pure** souboru .obj linkeru místo modulu.
+
+Další informace naleznete v tématu
+
+- [/LN (vytvoření modulu MSIL)](../../build/reference/ln-create-msil-module.md)
+
+- [Soubory .netmodule jako vstup linkeru](../../build/reference/netmodule-files-as-linker-input.md)

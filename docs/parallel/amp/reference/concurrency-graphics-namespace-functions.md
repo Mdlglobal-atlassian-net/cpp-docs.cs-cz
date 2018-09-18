@@ -1,5 +1,5 @@
 ---
-title: Funkce obor názvů Concurrency::Graphics | Microsoft Docs
+title: Funkce oboru názvů Concurrency::Graphics | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,20 +13,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fc00f1754358eca0d6e90d484153b79c0a67130
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6a31a205a90480ae91740ecaf859f411c331bd69
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687046"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037966"
 ---
-# <a name="concurrencygraphics-namespace-functions"></a>Funkce obor názvů Concurrency::Graphics
+# <a name="concurrencygraphics-namespace-functions"></a>Funkce oboru názvů Concurrency::Graphics
 |||  
 |-|-|  
-|[Kopírování](#copy)|[copy_async](#copy_async)|  
+|[kopírování](#copy)|[copy_async](#copy_async)|  
   
 ##  <a name="copy"></a>  copy – funkce (Namespace Concurrency::graphics)  
- Zkopíruje texture zdrojové do cílové vyrovnávací paměti, nebo zkopíruje zdrojová vyrovnávací paměť do cílové vyrovnávací paměti. Obecná forma tato funkce je `copy(src, dest)`.  
+ Zkopíruje zdrojovou texturu do cílové vyrovnávací paměti, nebo zkopíruje zdrojovou vyrovnávací paměť do cílové vyrovnávací paměti. Obecný tvar této funkce je `copy(src, dest)`.  
   
 ```  
 template <
@@ -132,47 +132,47 @@ void copy (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Copy_extent`  
- Rozsah texture oddílu, který má být zkopírovány.  
+*_Copy_extent*<br/>
+Rozsah oddílu textury ke kopírování.  
   
- `_Dst`  
- Objekt, který se má zkopírovat do.  
+*_Dst*<br/>
+Objekt, který chcete zkopírovat do.  
   
- `_Dst_byte_size`  
- Počet bajtů v cíli.  
+*_Dst_byte_size*<br/>
+Počet bajtů v cíli.  
   
- `_Dst_type`  
- Typ cílového objektu.  
+*_Dst_type*<br/>
+Typ cílového objektu.  
   
- `_Dst_offset`  
- Posun do cílové, kdy má být zahájeno kopírování.  
+*_Dst_offset*<br/>
+Posun na požadované místo, kam chcete začít kopírovat.  
   
- `InputIterator`  
- Typ vstupu interator.  
+*InputIterator*<br/>
+Typ vstupního iterátoru.  
   
- `OutputIterator`  
- Typ iterator výstup.  
+*OutputIterator*<br/>
+Typ výstupního iterátoru.  
   
- `_Src`  
- Chcete-li objekt pro kopírování.  
+*_Src*<br/>
+Kopírovaný objekt.  
   
- `_Src_byte_size`  
- Počet bajtů ve zdroji.  
+*_Src_byte_size*<br/>
+Počet bajtů ve zdroji.  
   
- `_Src_type`  
- Typ objektu zdroje.  
+*_Src_type*<br/>
+Typ zdrojového objektu.  
   
- `_Src_offset`  
- Posun do zdroj, ze kterého má být zahájeno kopírování.  
+*_Src_offset*<br/>
+Posun do zdroje, ze kterého chcete začít kopírovat.  
   
- `first`  
- Začátek iterator do kontejneru zdroje.  
+*první*<br/>
+Počáteční iterátor do zdrojového kontejneru.  
   
- `last`  
- Koncová iterator do kontejneru zdroje.  
+*poslední*<br/>
+Koncový iterátor do zdrojového kontejneru.  
   
 ##  <a name="copy_async"></a>  copy_async – funkce (Namespace Concurrency::graphics)  
- Asynchronně zkopíruje texture zdrojové do cílové vyrovnávací paměti, nebo zkopíruje zdrojová vyrovnávací paměť do cílové vyrovnávací paměti a vrátí [completion_future](completion-future-class.md) objekt, který může být čekali na. Data nelze kopírovat, pokud kód běží na akcelerátoru. Obecná forma tato funkce je `copy(src, dest)`.  
+ Asynchronně zkopíruje zdrojovou texturu do cílové vyrovnávací paměti, nebo zkopíruje zdrojovou vyrovnávací paměť do cílové vyrovnávací paměti a vrátí [completion_future](completion-future-class.md) objekt, který lze čekat. Data nelze kopírovat, pokud je kód spuštěn na akcelerátoru. Obecný tvar této funkce je `copy(src, dest)`.  
   
 ```  
 template<
@@ -274,44 +274,44 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Copy_extent`  
- Rozsah texture oddílu, který má být zkopírovány.  
+*_Copy_extent*<br/>
+Rozsah oddílu textury ke kopírování.  
   
- `_Dst`  
- Objekt, který se má zkopírovat do.  
+*_Dst*<br/>
+Objekt, který chcete zkopírovat do.  
   
- `_Dst_byte_size`  
- Počet bajtů v cíli.  
+*_Dst_byte_size*<br/>
+Počet bajtů v cíli.  
   
- `_Dst_type`  
- Typ cílového objektu.  
+*_Dst_type*<br/>
+Typ cílového objektu.  
   
- `_Dst_offset`  
- Posun do cílové, kdy má být zahájeno kopírování.  
+*_Dst_offset*<br/>
+Posun na požadované místo, kam chcete začít kopírovat.  
   
- `InputIterator`  
- Typ vstupu interator.  
+*InputIterator*<br/>
+Typ vstupního iterátoru.  
   
- `OutputIterator`  
- Typ iterator výstup.  
+*OutputIterator*<br/>
+Typ výstupního iterátoru.  
   
- `_Src`  
- Chcete-li objekt pro kopírování.  
+*_Src*<br/>
+Kopírovaný objekt.  
   
- `_Src_byte_size`  
- Počet bajtů ve zdroji.  
+*_Src_byte_size*<br/>
+Počet bajtů ve zdroji.  
   
- `_Src_type`  
- Typ objektu zdroje.  
+*_Src_type*<br/>
+Typ zdrojového objektu.  
   
- `_Src_offset`  
- Posun do zdroj, ze kterého má být zahájeno kopírování.  
+*_Src_offset*<br/>
+Posun do zdroje, ze kterého chcete začít kopírovat.  
   
- `first`  
- Začátek iterator do kontejneru zdroje.  
+*první*<br/>
+Počáteční iterátor do zdrojového kontejneru.  
   
- `last`  
- Koncová iterator do kontejneru zdroje.  
+*poslední*<br/>
+Koncový iterátor do zdrojového kontejneru.  
 
 ## <a name="requirements"></a>Požadavky  
  **Záhlaví:** amp_graphics.h  

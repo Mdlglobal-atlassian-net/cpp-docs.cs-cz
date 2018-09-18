@@ -1,5 +1,5 @@
 ---
-title: C2706 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2706 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92f64ddab93fb6815e3ff7a98ac39a842042bfeb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 560edb9953d4f7c751f4ab4102fd544fb09bb86d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232643"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066008"
 ---
-# <a name="compiler-error-c2706"></a>C2706 chyby kompilátoru
-Neplatný __except bez odpovídajícího \__try (chybějící '}' v \__try bloku?)  
-  
- Pravé složené závorce pro kompilátor nebyl nalezen `__try` bloku.  
-  
- Následující ukázka generuje C2706:  
-  
-```  
-// C2706.cpp  
-int main() {  
-   __try {  
-      void f();  
-   // C2706  } missing here  
-   __except(GetExceptionCode() == 0x0) {  
-   }  
-}  
+# <a name="compiler-error-c2706"></a>Chyba kompilátoru C2706
+
+Neplatná možnost __except bez odpovídající \__try (chybějící '}' v \__try bloku?)
+
+Kompilátor nenalezl pravé složené závorky pro `__try` bloku.
+
+Následující ukázka generuje C2706:
+
+```
+// C2706.cpp
+int main() {
+   __try {
+      void f();
+   // C2706  } missing here
+   __except(GetExceptionCode() == 0x0) {
+   }
+}
 ```

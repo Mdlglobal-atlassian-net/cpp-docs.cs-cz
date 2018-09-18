@@ -1,5 +1,5 @@
 ---
-title: Zkrácení textových souborů | Microsoft Docs
+title: Zkrácení textových souborů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 837361ce7116deb0b425e380959de3acb6dafa57
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ed3d760989d131ecdc2491d0b1952e657949fb03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385573"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065670"
 ---
 # <a name="truncation-of-text-files"></a>Zkrácení textových souborů
-**ANSI 4.9.3** jestli způsobí, že zápis na datový proud s text přidružený soubor k oříznutí nad rámec tohoto bodu  
-  
- Zápis do textového datového proudu nezkrátí soubor za daným bodem.  
-  
-## <a name="see-also"></a>Viz také  
- [Funkce knihovny](../c-language/library-functions.md)
+
+**ANSI 4.9.3** Určuje, zda zápis textového datového proudu způsobí přidruženého souboru za daným bodem oříznutí
+
+Zápis do textového datového proudu nezkrátí soubor za daným bodem.
+
+## <a name="see-also"></a>Viz také
+
+[Funkce knihovny](../c-language/library-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: Chyba příkazového řádku D8036 | Microsoft Docs
+title: Chyba příkazového řádku D8036 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f121310318cbb91b1f983ec240b42d5d9ea34b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9c533ada388f876443021fbf159320f171a07a5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299959"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041841"
 ---
 # <a name="command-line-error-d8036"></a>Chyba příkazového řádku D8036
-'/ možnost' nelze použít s více zdrojových souborů  
-  
- Tyto možnosti kompilátoru nelze použít s více zdrojových souborů:  
-  
--   Název sestavení souboru výpis (nebo DM)  
-  
--   Přejmenujte soubor objektu (nebo Fo)  
-  
--   Vytvoření zdroje informace o prohlížeči bez lokální proměnné (/ Fr)  
-  
--   Vytvoření prohlížeče informace o zdroji, který zahrnuje lokální proměnné (/ FR)
+
+'/ možnost' nelze použít s více zdrojových souborů
+
+Tyto možnosti kompilátoru nelze použít s více zdrojovými soubory:
+
+- Název sestavení souboru výpisu (/ Fa)
+
+- Přejmenovat soubor objektů (/ Fo)
+
+- Vytvoření zdrojové informace o prohlížeči bez lokální proměnné (/ Fr)
+
+- Vytvoření prohlížeče informace o zdroji, který obsahuje místní proměnné (/ FR)

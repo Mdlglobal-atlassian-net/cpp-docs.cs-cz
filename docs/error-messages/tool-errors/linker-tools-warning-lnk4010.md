@@ -1,5 +1,5 @@
 ---
-title: Upozornění linkerů Lnk4010 | Microsoft Docs
+title: Upozornění Linkerů LNK4010 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 266e377a917fe3ce9ae7bae228134f49384e15cb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e214f603c31c72533d81a140023363880532191c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302669"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068064"
 ---
 # <a name="linker-tools-warning-lnk4010"></a>Upozornění linkerů LNK4010
-Neplatný subsystému číslo číslo verze; Výchozí verze subsystému předpokládá, že  
-  
- Můžete zadat verzi pro subsystém obrázku ([/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)). Každý subsystém má požadavek na minimální verzi. Pokud zadaná verze je nižší než minimální, dojde k toto upozornění a linkeru právě použije výchozí subsystému.
+
+Neplatné číslo verze subsystému číslo; předpokládá se výchozí verze subsystému
+
+Můžete určit verzi podsystému na obrázku ([/Subsystem](../../build/reference/subsystem-specify-subsystem.md)). Každý subsystém má požadavek na minimální verzi. Pokud je nižší než minimální zadaná verze, dojde k toto upozornění a propojovací program použije jenom subsystému výchozí.

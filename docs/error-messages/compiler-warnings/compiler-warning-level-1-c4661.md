@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4661 | Microsoft Docs
+title: Upozornění (úroveň 1) C4661 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce88913a29dd9ec3f9d5d2e78c3e52ad3ead54fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1823e23f3afc432982d0d68eee3fe080fe52d719
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33280946"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045754"
 ---
-# <a name="compiler-warning-level-1-c4661"></a>C4661 kompilátoru upozornění (úroveň 1)
-"identifikátor": zadaná pro žádost o vytvoření instance šablony explicitní žádný vhodný definice  
-  
- Není definována členem třídy šablony.  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// C4661.cpp  
-// compile with: /W1 /LD  
-template<class T> class MyClass {  
-public:  
-   void i();   // declaration but not definition  
-};  
-template MyClass< int >;  // C4661  
+# <a name="compiler-warning-level-1-c4661"></a>Kompilátor upozornění (úroveň 1) C4661
+
+'identifier': zadaná pro šablony explicitní vytváření instancí požadavek žádná vhodná definice
+
+Člen třídy šablony není definován.
+
+## <a name="example"></a>Příklad
+
+```
+// C4661.cpp
+// compile with: /W1 /LD
+template<class T> class MyClass {
+public:
+   void i();   // declaration but not definition
+};
+template MyClass< int >;  // C4661
 ```

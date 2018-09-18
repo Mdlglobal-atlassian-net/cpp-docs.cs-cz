@@ -1,5 +1,5 @@
 ---
-title: Upozornění nástroje NMAKE U4006 | Microsoft Docs
+title: Upozornění nástroje NMAKE U4006 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1dbb5032e49c0522fed1127a68cc27fe9135f777
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5526ba4578895f401ddc2fb177539bc025ca364f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327824"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063252"
 ---
 # <a name="nmake-warning-u4006"></a>Upozornění nástroje NMAKE U4006
-speciální makra není definovaná: 'makra.  
-  
- Název daného speciální makra není definován a rozšíří na hodnotu nothing.
+
+speciální makro undefined: "makro"
+
+Název dané speciální makra není definována a se rozbaluje prázdné.

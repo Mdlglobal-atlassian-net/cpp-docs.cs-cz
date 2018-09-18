@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4038 | Microsoft Docs
+title: Upozornění (úroveň 1) C4038 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 215486cb1db0c56a458571abe3a528b65db799df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8663c0a222ff9a20bca04a497dcdd6ceb1d99d06
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271944"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067815"
 ---
-# <a name="compiler-warning-level-1-c4038"></a>C4038 kompilátoru upozornění (úroveň 1)
-"modifikátor": modifikátor neplatný vedlejším – třída  
-  
- Tento modifikátor nelze použít pro třídy s **dllimport** nebo [dllexport](../../cpp/dllexport-dllimport.md) atributy.
+# <a name="compiler-warning-level-1-c4038"></a>Kompilátor upozornění (úroveň 1) C4038
+
+'modifikátor': Neplatný okolí Modifikátor třídy
+
+Tento modifikátor nelze použít u tříd s **dllimport** nebo [dllexport](../../cpp/dllexport-dllimport.md) atributy.

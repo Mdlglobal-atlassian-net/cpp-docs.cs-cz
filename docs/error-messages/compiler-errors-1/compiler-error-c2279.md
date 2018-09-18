@@ -1,5 +1,5 @@
 ---
-title: C2279 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2279 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1eb468ccf5d099745c5d4a30eaec2f38f015a58
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d1b194476e6400618045324a14c9e4781f9ec8f0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172274"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067945"
 ---
-# <a name="compiler-error-c2279"></a>C2279 chyby kompilátoru
-specifikace výjimek se nemůže vyskytovat v deklaraci – typedef  
-  
- V části **/Za**, [specifikace výjimek](../../cpp/exception-specifications-throw-cpp.md) v deklaraci typedef nejsou povoleny.  
-  
- Následující ukázka generuje C2279:  
-  
-```  
-// C2279.cpp  
-// compile with: /Za /c  
-typedef int (*xy)() throw(...);   // C2279  
-typedef int (*xyz)();   // OK  
+# <a name="compiler-error-c2279"></a>Chyba kompilátoru C2279
+
+Specifikace výjimky se nemůže vyskytovat v deklaraci typedef.
+
+V části **/Za**, [specifikace výjimek](../../cpp/exception-specifications-throw-cpp.md) nejsou povolené v deklaraci typedef.
+
+Následující ukázka generuje C2279:
+
+```
+// C2279.cpp
+// compile with: /Za /c
+typedef int (*xy)() throw(...);   // C2279
+typedef int (*xyz)();   // OK
 ```

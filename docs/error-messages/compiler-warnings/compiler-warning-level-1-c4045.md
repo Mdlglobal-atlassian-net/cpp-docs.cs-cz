@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4045 | Microsoft Docs
+title: Upozornění (úroveň 1) C4045 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 088783c97651926ed215506816e4f2db87b51563
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 94d7005fc1e3a48ff7f49c6eb1c462c814dcf107
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271925"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048081"
 ---
-# <a name="compiler-warning-level-1-c4045"></a>C4045 kompilátoru upozornění (úroveň 1)
-"pole": pole hranice přetečení  
-  
- Pole má příliš mnoho inicializátory. Inicializátory další se ignorují.  
-  
- Ujistěte se, že inicializátory a elementy pole shodují v množství.
+# <a name="compiler-warning-level-1-c4045"></a>Kompilátor upozornění (úroveň 1) C4045
+
+"pole": přetečení hranic pole
+
+Pole má moc velký počet inicializátorů. Nadbytečné inicializátory se ignorují.
+
+Ujistěte se, že prvky pole a inicializátory shodovat ve velikosti a množství.

@@ -1,5 +1,5 @@
 ---
-title: C2140 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2140 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1634e2a61ed9ee22bdfde619f8710226b74e48a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3fc0bd6fd0a43b8071a9872c9c1a598b57e090c3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169683"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065397"
 ---
-# <a name="compiler-error-c2140"></a>C2140 chyby kompilátoru
-'type': typ, který je závislý na parametr obecného typu není povolen jako argument pro kompilátoru vnitřního typu znak 'znak.  
-  
- Neplatný specifikátor typu byl předán typ znak.  
-  
- Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](../../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2140.  
-  
-```  
-// C2140.cpp  
-// compile with: /clr /c  
-template <class T>  
-  
-struct is_polymorphic {  
-   static const bool value = __is_polymorphic(T);  
-};  
-  
-class x {};  
-  
-generic <class T>  
-ref class C {  
-   void f() {  
-      System::Console::WriteLine(__is_polymorphic(T));   // C2140  
-      System::Console::WriteLine(is_polymorphic<T>::value);   // C2140  
-  
-      System::Console::WriteLine(__is_polymorphic(x));   // OK  
-      System::Console::WriteLine(is_polymorphic<x>::value);   // OK  
-   }  
-};  
+# <a name="compiler-error-c2140"></a>Chyba kompilátoru C2140
+
+'type': typ, který je závislý na parametru obecného typu není povolený jako argument vlastnosti kompilátoru vnitřního typu 'vlastnosti'
+
+Vlastnost typu byl předán neplatná specifikace typu.
+
+Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](../../windows/compiler-support-for-type-traits-cpp-component-extensions.md).
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2140.
+
+```
+// C2140.cpp
+// compile with: /clr /c
+template <class T>
+
+struct is_polymorphic {
+   static const bool value = __is_polymorphic(T);
+};
+
+class x {};
+
+generic <class T>
+ref class C {
+   void f() {
+      System::Console::WriteLine(__is_polymorphic(T));   // C2140
+      System::Console::WriteLine(is_polymorphic<T>::value);   // C2140
+
+      System::Console::WriteLine(__is_polymorphic(x));   // OK
+      System::Console::WriteLine(is_polymorphic<x>::value);   // OK
+   }
+};
 ```

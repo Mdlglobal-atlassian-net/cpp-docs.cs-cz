@@ -18,21 +18,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1dca3cc2d51f0e165e9b17d9fe630752a427590f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 05cfcb59100f1778b0266636fb3930fd9489e917
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339153"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067074"
 ---
 # <a name="fetching-data"></a>Načítání dat
+
 Po otevření zdroje dat, relace a rozhraní objektu sady řádků, můžete načíst data. V závislosti na typu přístupový objekt, který používáte můžete potřebovat pro vytvoření vazby sloupce.  
   
 ### <a name="to-fetch-data"></a>K načtení dat  
   
-1.  Otevřete v sadě řádků pomocí odpovídající **otevřít** příkazu.  
+1. Otevřete v sadě řádků pomocí odpovídající **otevřít** příkazu.  
   
-2.  Pokud používáte `CManualAccessor`, vytvořit vazbu výstupní sloupce, pokud jste tak již neučinili. Chcete-li vytvořit vazbu sloupce, zavolejte `GetColumnInfo`a pak vytvořte přístupový objekt s vazbami, jak je znázorněno v následujícím příkladu:  
+1. Pokud používáte `CManualAccessor`, vytvořit vazbu výstupní sloupce, pokud jste tak již neučinili. Chcete-li vytvořit vazbu sloupce, zavolejte `GetColumnInfo`a pak vytvořte přístupový objekt s vazbami, jak je znázorněno v následujícím příkladu:  
   
     ```cpp  
     // From the DBViewer Sample CDBTreeView::OnQueryEdit  
@@ -49,7 +50,7 @@ Po otevření zdroje dat, relace a rozhraní objektu sady řádků, můžete na�
     rs.Bind();  
     ```  
   
-3.  Zápis `while` smyčky, aby se načetla data. Ve smyčce, volání `MoveNext` předem kurzor a otestovat návratová hodnota S_OK, jak je znázorněno v následujícím příkladu:  
+1. Zápis `while` smyčky, aby se načetla data. Ve smyčce, volání `MoveNext` předem kurzor a otestovat návratová hodnota S_OK, jak je znázorněno v následujícím příkladu:  
   
     ```cpp  
     while (rs.MoveNext() == S_OK)  
@@ -59,7 +60,7 @@ Po otevření zdroje dat, relace a rozhraní objektu sady řádků, můžete na�
     }  
     ```  
   
-4.  V rámci `while` smyčky, můžete načíst data podle typu přístupového objektu.  
+1. V rámci `while` smyčky, můžete načíst data podle typu přístupového objektu.  
   
     -   Pokud používáte [CAccessor](../../data/oledb/caccessor-class.md) třídy, měli byste mít záznam uživatele, který obsahuje datové členy. Dostanete svá data pomocí těchto datových členů, jak je znázorněno v následujícím příkladu:  
   
@@ -101,4 +102,5 @@ Po otevření zdroje dat, relace a rozhraní objektu sady řádků, můžete na�
         ```  
   
 ## <a name="see-also"></a>Viz také  
- [Práce s šablonami příjemců OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[Práce s šablonami příjemců OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 849e7ced8889cb46195946cca68243c37e1299a2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f2a6ab9e03a44f48acca9b949193ceec85eb3ef6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760120"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063109"
 ---
 # <a name="cheapptrbase-class"></a>Cheapptrbase – třída
 
@@ -40,16 +40,16 @@ Tato třída je základem pro několik tříd haldy inteligentního ukazatele.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T, class Allocator = CCRTAllocator>  
+template <class T, class Allocator = CCRTAllocator>
 class CHeapPtrBase
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ objektu ukládaly na haldě.
 
-*Allocator –*  
+*Allocator –*<br/>
 Třída přidělení paměti pro použití. Ve výchozím nastavení se rutiny CRT používají k přidělují a uvolňují paměť.
 
 ## <a name="members"></a>Členové
@@ -102,7 +102,7 @@ bool AllocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nBytes*  
+*nBytes*<br/>
 Počet bajtů paměti k přidělení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -123,7 +123,7 @@ void Attach(T* pData) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pData*  
+*pData*<br/>
 `CHeapPtrBase` Objektu bude převzít vlastnictví tohoto ukazatele.
 
 ### <a name="remarks"></a>Poznámky
@@ -216,7 +216,7 @@ Operátor volání metody ve třídě, na které odkazují `CHeapPtrBase` objekt
 
 Operátor přetypování.
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -234,7 +234,7 @@ bool ReallocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nBytes*  
+*nBytes*<br/>
 Nové množství paměti k přidělení v bajtech.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -243,6 +243,6 @@ Vrátí hodnotu PRAVDA, pokud úspěšně je paměť přidělená, false jinak.
 
 ## <a name="see-also"></a>Viz také
 
-[Cheapptr – třída](../../atl/reference/cheapptr-class.md)   
-[Ccomheapptr – třída](../../atl/reference/ccomheapptr-class.md)   
+[CHeapPtr – třída](../../atl/reference/cheapptr-class.md)<br/>
+[CComHeapPtr – třída](../../atl/reference/ccomheapptr-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

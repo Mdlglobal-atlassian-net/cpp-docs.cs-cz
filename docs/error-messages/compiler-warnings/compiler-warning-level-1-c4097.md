@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4097 | Microsoft Docs
+title: Upozornění (úroveň 1) C4097 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bc91f29d7d6544b2b9f0bfcf84ca5b043b74fe2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 93202696c06a38682da95947ac068b2d90e177ec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272045"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062680"
 ---
-# <a name="compiler-warning-level-1-c4097"></a>C4097 kompilátoru upozornění (úroveň 1)
-Parametr – Direktiva pragma jako "obnovení" nebo "vypnuto"  
-  
- Pragma byla předána neplatná hodnota.  
-  
- Následující ukázka generuje C4097:  
-  
-```  
-// C4097.cpp  
-// compile with: /W1  
-#pragma runtime_checks("",test)   // C4097  
-// try the following line instead  
-// #pragma runtime_checks("",off)  
-  
-int main() {  
-}  
+# <a name="compiler-warning-level-1-c4097"></a>Kompilátor upozornění (úroveň 1) C4097
+
+byl očekáván parametr pragma bude mít "obnovit" nebo hodnotu off.
+
+Pragma byla předána neplatná hodnota.
+
+Následující ukázka generuje C4097:
+
+```
+// C4097.cpp
+// compile with: /W1
+#pragma runtime_checks("",test)   // C4097
+// try the following line instead
+// #pragma runtime_checks("",off)
+
+int main() {
+}
 ```

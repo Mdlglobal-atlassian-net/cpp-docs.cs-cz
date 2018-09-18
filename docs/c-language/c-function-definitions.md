@@ -22,14 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 265dfe599d4c3586b350787baab5977562326991
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cbfc7e7bd6a3f2ef727a0cc259f222afad0ab555
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757679"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055231"
 ---
 # <a name="c-function-definitions"></a>Definice funkcí jazyka C
+
 Definice funkce určuje název funkce, typy a počet parametrů, které se očekává, že pro příjem a její typ vrácené hodnoty. Definice funkce také obsahuje tělo funkce s deklarací své místní proměnné a příkazy, které určují, co funkce dělá.
 
 ## <a name="syntax"></a>Syntaxe
@@ -62,8 +63,8 @@ Prototyp parametry jsou:
 &nbsp;&nbsp;&nbsp;&nbsp;*ukazatel*<sub>optimalizované</sub> *direct-declarator*
 
 *přímé declarator*: /\* deklarátorem funkce \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator***(***seznam parametrů typu***)**  / \* deklarátor nový styl       \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator***(***seznam identifikátorů*<sub>optimalizované</sub> **)**  / \* Obsolete – vizuální styl deklarátor     \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator***(***seznam parametrů typu***)**  / \* deklarátor nový styl \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator***(***seznam identifikátorů*<sub>optimalizované</sub> **)**  / \* Obsolete – vizuální styl deklarátor \*/
 
 Seznam parametrů v definici používá tuto syntaxi:
 
@@ -73,7 +74,7 @@ Seznam parametrů v definici používá tuto syntaxi:
 
 *Seznam parametrů*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarace parametru*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Seznam parametrů* **,***deklarace parametru* 
+&nbsp;&nbsp;&nbsp;&nbsp;*Seznam parametrů* **,***deklarace parametru*
 
 *deklarace parametru*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*specifikátory deklarace* *deklarátorů*<br/>
@@ -83,7 +84,7 @@ Seznam parametrů v definici funkce starého typu používá tuto syntaxi:
 
 *Seznam identifikátorů*: /\* používané funkce zastaralé definice a deklarace \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Seznam identifikátorů* **,***identifikátor* 
+&nbsp;&nbsp;&nbsp;&nbsp;*Seznam identifikátorů* **,***identifikátor*
 
 Syntaxe pro tělo funkce je:
 
@@ -103,4 +104,5 @@ A *deklarace* v *seznam deklarací* ve funkci nemůže obsahovat definice *stora
 V částech [atributy funkce](../c-language/function-attributes.md), [třídu úložiště](../c-language/storage-class.md), [návratový typ](../c-language/return-type.md), [parametry](../c-language/parameters.md), a [tělo funkce](../c-language/function-body.md) součástí definice funkce podrobně popisují.
 
 ## <a name="see-also"></a>Viz také
+
 [Funkce](../c-language/functions-c.md)

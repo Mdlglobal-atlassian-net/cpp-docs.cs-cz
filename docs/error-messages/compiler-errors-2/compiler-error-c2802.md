@@ -1,5 +1,5 @@
 ---
-title: C2802 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2802 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe069b93c8dc6bb098927925e93f10cec2dbc4c3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95b4f64aad9cb14151ca6128bedebcd15ece17ed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236654"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061250"
 ---
-# <a name="compiler-error-c2802"></a>C2802 chyby kompilátoru
-statický člen 'operátor operátor' nemá žádné formální parametry  
-  
- Operátor deklarovaná `static` – členská funkce musí mít minimálně jeden parametr.  
-  
- Následující ukázka generuje C2802:  
-  
-```  
-// C2802.cpp  
-// compile with: /clr /c  
-ref class A {  
-   static operator+ ();   // C2802  
-   static operator+ (A^, A^);   // OK  
-};  
+# <a name="compiler-error-c2802"></a>Chyba kompilátoru C2802
+
+statický člen 'operátor operator' nemá žádné formální parametry.
+
+Operátor deklarován `static` členská funkce musí mít nejmíň jeden parametr.
+
+Následující ukázka generuje C2802:
+
+```
+// C2802.cpp
+// compile with: /clr /c
+ref class A {
+   static operator+ ();   // C2802
+   static operator+ (A^, A^);   // OK
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: Řídicí sekvence | Microsoft Docs
+title: Řídicí sekvence | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,53 +40,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cd58f7418e2e6a2ca7592c345c5d71729cf8324
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 58691bbd4a078056599363028433788d529b266e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388825"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068595"
 ---
 # <a name="escape-sequences"></a>Řídicí sekvence
-Znak kombinace skládající se z zpětné lomítko (**\\**) následuje písmeno, nebo kombinací číslic se nazývají "řídicích sekvencí." Pro zapsání znaku nového řádku, jednoduchých uvozovek nebo určitých jiných znaků ve znakových konstantách, je nutné použít řídicí sekvence. Řídicí sekvence je považována za jeden znak, a proto je platná jako znaková konstanta.  
-  
- Řídicí sekvence se obvykle používají k určení akce, jako například návrat na začátek řádku a pohyb tabelátoru na terminálech a tiskárnách. Používají se také zajistit literálu reprezentace netisknutelné znaky a znaky, které obvykle mají zvláštní význam, jako je například dvojité uvozovky (**"**). V následující tabulce jsou uvedeny řídicí sekvence ANSI a co představují.  
-  
- Všimněte si, že znaky otazníku předcházet zpětné lomítko (**\\?**) určuje literálu otazník v případech, kde je sekvence znaků by dojít k nesprávné interpretaci jako trigraph. V tématu [trigraph](../c-language/trigraphs.md) Další informace.  
-  
-### <a name="escape-sequences"></a>Řídicí sekvence  
-  
-|Řídicí sekvence|Představuje|  
-|---------------------|----------------|  
-|**\a**|Zvonek (alarm)|  
-|**\b**|Backspace|  
-|**\f**|Formfeed|  
-|**\n**|Nový řádek|  
-|**\r**|Návrat na začátek řádku|  
-|**\t**|Horizontální tabulátor|  
-|**\v**|Vertikální tabulátor|  
-|**\\'**|Jednoduché uvozovky|  
-|**\\"**|Dvojité uvozovky|  
-|**\\\\**|Zpětné lomítko|  
-|**\\?**|Literální znak otazníku|  
-|**\\** *ooo*|Znak ASCII v osmičkové soustavě|  
-|**\x** *hh*|Znak ASCII v šestnáctkové soustavě|  
-|**\x** *hhhh*|Znak Unicode v šestnáctkovém zápisu, pokud je tato řídicí sekvence použita v širokoznaké konstantě nebo literálu řetězce kódování Unicode.<br /><br /> Například `WCHAR f = L'\x4e00'` nebo `WCHAR b[] = L"The Chinese character for one is \x4e00"`.|  
-  
- **Konkrétní Microsoft**  
-  
- Pokud zpětné lomítko předchází znaku, který není uveden v tabulce, kompilátor zpracovává nedefinovaný znak jako znak samotný. Například `\c` je považován za `c`.  
-  
- **Konkrétní Microsoft END**  
-  
- Řídicí sekvence umožňují odeslat negrafické řídicí znaky na zobrazovací zařízení. Například znak ESC (**\033**) se často používá jako první znak řízení zabezpečení pro Terminálové nebo tiskárny. Některé řídicí sekvence jsou specifické pro zařízení. Pro instanci svislého – karta a formfeed řídicích sekvencí (**\v** a **\f**) neovlivní výstupu obrazovky, ale budou provádět operace odpovídající tiskárny.  
-  
- Můžete také zpětné lomítko (**\\**) jako znak pokračování. Když znak nového řádku (ekvivalentní stisknutí klávesy RETURN) okamžitě následuje lomítko, kompilátor ignoruje zpětné lomítko a znak nového řádku a považuje nový řádek za součást předchozího řádku. To je užitečné především pro definice preprocesoru delší než jeden řádek. Příklad:  
-  
-```  
-#define assert(exp) \  
-( (exp) ? (void) 0:_assert( #exp, __FILE__, __LINE__ ) )  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Konstanty znaků jazyka C](../c-language/c-character-constants.md)
+
+Kombinace znaků obsahující zpětné lomítko (**\\**) následované písmenem nebo kombinací číslic se nazývají "řídicí sekvence". Pro zapsání znaku nového řádku, jednoduchých uvozovek nebo určitých jiných znaků ve znakových konstantách, je nutné použít řídicí sekvence. Řídicí sekvence je považována za jeden znak, a proto je platná jako znaková konstanta.
+
+Řídicí sekvence se obvykle používají k určení akce, jako například návrat na začátek řádku a pohyb tabelátoru na terminálech a tiskárnách. Také se používají pro literální reprezentaci netisknutelných znaků a znaků, které mají obvykle zvláštní význam, jako je například dvojité uvozovky (**"**). V následující tabulce jsou uvedeny řídicí sekvence ANSI a co představují.
+
+Všimněte si, že otazníku předchází znak zpětného lomítka (**\\?**) určuje literálu otazníku v případech, kde by být posloupnost znaků špatně interpretována jako Triplet. Zobrazit [Trigraphs](../c-language/trigraphs.md) Další informace.
+
+### <a name="escape-sequences"></a>Řídicí sekvence
+
+|Řídicí sekvence|Představuje|
+|---------------------|----------------|
+|**\a**|Zvonek (alarm)|
+|**\b**|Backspace|
+|**\f**|Formfeed|
+|**\n**|Nový řádek|
+|**\r**|Návrat na začátek řádku|
+|**\t**|Horizontální tabulátor|
+|**\v**|Vertikální tabulátor|
+|**\\'**|Jednoduché uvozovky|
+|**\\"**|Dvojité uvozovky|
+|**\\\\**|Zpětné lomítko|
+|**\\?**|Literální znak otazníku|
+|**\\** *ooo*|Znak ASCII v osmičkové soustavě|
+|**\x** *hh*|Znak ASCII v šestnáctkové soustavě|
+|**\x** *hhhh*|Znak Unicode v šestnáctkovém zápisu, pokud je tato řídicí sekvence použita v širokoznaké konstantě nebo literálu řetězce kódování Unicode.<br /><br /> Například `WCHAR f = L'\x4e00'` nebo `WCHAR b[] = L"The Chinese character for one is \x4e00"`.|
+
+**Specifické pro Microsoft**
+
+Pokud zpětné lomítko předchází znaku, který není uveden v tabulce, kompilátor zpracovává nedefinovaný znak jako znak samotný. Například `\c` je považován za `c`.
+
+**Specifické pro END Microsoft**
+
+Řídicí sekvence umožňují odeslat negrafické řídicí znaky na zobrazovací zařízení. Například znak ESC (**\033**) se často používá jako první znak ovládacího příkazu pro terminál nebo tiskárnu. Některé řídicí sekvence jsou specifické pro zařízení. Například vertikálního tabelátoru a formfeed řídicí sekvence (**\v** a **\f**) nemají vliv na výstup obrazovky, ale provádějí příslušné operace při tisku.
+
+Můžete také použít zpětné lomítko (**\\**) jako znak pro pokračování. Když znak nového řádku (ekvivalentní stisknutí klávesy RETURN) okamžitě následuje lomítko, kompilátor ignoruje zpětné lomítko a znak nového řádku a považuje nový řádek za součást předchozího řádku. To je užitečné především pro definice preprocesoru delší než jeden řádek. Příklad:
+
+```
+#define assert(exp) \
+( (exp) ? (void) 0:_assert( #exp, __FILE__, __LINE__ ) )
+```
+
+## <a name="see-also"></a>Viz také
+
+[Konstanty znaků jazyka C](../c-language/c-character-constants.md)

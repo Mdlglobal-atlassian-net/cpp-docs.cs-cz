@@ -1,5 +1,5 @@
 ---
-title: HUGE_VAL –, _HUGE – | Microsoft Docs
+title: HUGE_VAL _HUGE | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,24 +24,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2d763b8c5379223ddacb8077c463efa0b91acfa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a9917d614261afaffe28ea92f913799c429a9611
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390502"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060717"
 ---
 # <a name="hugeval-huge"></a>HUGE_VAL, _HUGE
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-#include <math.h>  
-  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- `HUGE_VAL` je největší reprezentovat dvojitou hodnotu. Tato hodnota je vrácený mnoho běhu matematické funkce, když dojde k chybě. Pro některé funkce-`HUGE_VAL` je vrácen. `HUGE_VAL` je definován jako `_HUGE`, ale běhu matematické funkce vrátit `HUGE_VAL`. Byste měli použít také `HUGE_VAL` ve vašem kódu konzistence.  
-  
-## <a name="see-also"></a>Viz také  
- [Globální konstanty](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntaxe
+
+```
+
+#include <math.h>
+
+```
+
+## <a name="remarks"></a>Poznámky
+
+`HUGE_VAL` je největší reprezentovatelné dvojitou hodnotu. Mnoho za běhu matematické funkce vrátí tuto hodnotu při výskytu chyby. Pro některé funkce-`HUGE_VAL` je vrácena. `HUGE_VAL` je definován jako `_HUGE`, ale za běhu matematické funkce vrátit `HUGE_VAL`. Také byste měli použít `HUGE_VAL` ve vašem kódu pro zajištění konzistence.
+
+## <a name="see-also"></a>Viz také
+
+[Globální konstanty](../c-runtime-library/global-constants.md)

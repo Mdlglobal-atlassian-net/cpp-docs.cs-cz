@@ -1,5 +1,5 @@
 ---
-title: C2534 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2534 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bae52374e09852ffb68c5807353155d9928924eb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2febeeeb3b6c0e394070339f2310a22c1326ab5c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228236"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049030"
 ---
-# <a name="compiler-error-c2534"></a>C2534 chyby kompilátoru
-"identifikátor": konstruktor nemůže vrátit hodnotu  
-  
- Konstruktor nemůže vrátit hodnotu nebo obsahovat návratový typ (není i `void` návratový typ).  
-  
- Tato chyba může být stanovena odebráním `return` příkaz z definice konstruktor.  
-  
- Následující ukázka generuje C2534:  
-  
-```  
-// C2534.cpp  
-class A {  
-public:  
-   int i;  
-   A() { return i; }   // C2534  
-};  
+# <a name="compiler-error-c2534"></a>Chyba kompilátoru C2534
+
+'identifier': konstruktor nemůže vracet hodnotu.
+
+Konstruktor nemůže vracet hodnotu nebo mít návratový typ (včetně `void` návratový typ).
+
+Tato chyba může být stanovena odebráním `return` příkaz z definice konstruktoru.
+
+Následující ukázka generuje C2534:
+
+```
+// C2534.cpp
+class A {
+public:
+   int i;
+   A() { return i; }   // C2534
+};
 ```

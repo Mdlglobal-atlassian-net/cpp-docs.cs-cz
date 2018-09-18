@@ -1,5 +1,5 @@
 ---
-title: C3397 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3397 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a79718726f6d98e486dd286a48f11973c4fe237
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80db76886b4de529b75fd402a70af7c9fa2a892c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253436"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064071"
 ---
-# <a name="compiler-error-c3397"></a>C3397 chyby kompilátoru
-Inicializace agregace není povolen ve výchozí argumenty  
-  
- Pole byla deklarována nesprávně.  V tématu [pole](../../windows/arrays-cpp-component-extensions.md) Další informace.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C3397.  
-  
-```  
-// C3397.cpp  
-// compile with: /clr  
-// /clr /c  
-void Func(array<int> ^p = gcnew array<int> { 1, 2, 3 });   // C3397  
-void Func2(array<int> ^p = gcnew array<int> (3));   // OK  
-  
-int main() {  
-   array<int> ^p = gcnew array<int> { 1, 2, 3};   // OK  
-}  
+# <a name="compiler-error-c3397"></a>Chyba kompilátoru C3397
+
+Inicializace agregace není povolena ve výchozích argumentů
+
+Pole je deklarován nesprávně.  Zobrazit [pole](../../windows/arrays-cpp-component-extensions.md) Další informace.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C3397.
+
+```
+// C3397.cpp
+// compile with: /clr
+// /clr /c
+void Func(array<int> ^p = gcnew array<int> { 1, 2, 3 });   // C3397
+void Func2(array<int> ^p = gcnew array<int> (3));   // OK
+
+int main() {
+   array<int> ^p = gcnew array<int> { 1, 2, 3};   // OK
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: C2833 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2833 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff066510292690bc940f18ab8d63605eb8627308
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53360c1eaf81ad407589fbdb125d9e6fe017708e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244107"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070168"
 ---
-# <a name="compiler-error-c2833"></a>C2833 chyby kompilátoru
-'operátor operátor' není rozpoznaný operátor nebo typ  
-  
- Slovo `operator` musí následovat operátor, který chcete přepsat, nebo typu, který chcete převést.  
-  
- Seznam operátory, které lze definovat v spravovaného typu, najdete v části [uživatelem definované operátory](../../dotnet/user-defined-operators-cpp-cli.md).  
-  
- Následující ukázka generuje C2833:  
-  
-```  
-// C2833.cpp  
-// compile with: /c  
-class A {};  
-  
-void operator ::* ();   // C2833  
-void operator :: ();   // OK  
+# <a name="compiler-error-c2833"></a>Chyba kompilátoru C2833
+
+'operator operátor' není rozpoznaná jako operátor nebo typ.
+
+Slovo `operator` musí být následován znakem, který chcete přepsat operátor nebo typ, který chcete převést.
+
+Seznam operátorů, které definujete v spravovaného typu, najdete v části [uživatelsky definované operátory](../../dotnet/user-defined-operators-cpp-cli.md).
+
+Následující ukázka generuje C2833:
+
+```
+// C2833.cpp
+// compile with: /c
+class A {};
+
+void operator ::* ();   // C2833
+void operator :: ();   // OK
 ```

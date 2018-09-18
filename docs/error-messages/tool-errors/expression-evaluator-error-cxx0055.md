@@ -1,5 +1,5 @@
 ---
-title: CXX0055 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0055 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dce01ecbc6913c844cadcf2d3f761cfe815f68a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ee5fc5467e656bd811c89f78ecf7d36f6df1b54
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301525"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066377"
 ---
 # <a name="expression-evaluator-error-cxx0055"></a>Chyba při vyhodnocování výrazu CXX0055
-nejednoznačný symbol v context – operátor  
-  
- Symbol v kontextu operátoru (**{}**) označuje více než jeden symbol v programu.  
-  
- Operátor řešení rozsahu (`::`) může být schopni vyřešit nejednoznačnosti.  
-  
- Tato chyba je stejný jako CAN0055.
+
+nejednoznačný symbol v kontextovém operátoru
+
+Symbol v kontextovém operátoru (**{}**) uvedené více než jeden symbol v programu.
+
+Operátor rozlišení oboru (`::`) pravděpodobně možné vyřešit nejednoznačnost.
+
+Tato chyba se shoduje s CAN0055.

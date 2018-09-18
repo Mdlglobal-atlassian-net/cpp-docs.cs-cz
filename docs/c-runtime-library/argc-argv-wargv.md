@@ -1,5 +1,5 @@
 ---
-title: __argc, __argv, __wargv | Microsoft Docs
+title: __argc __argv, __wargv | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,44 +27,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d5d9762f02a06e697ce164910755431e8a59009
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fada373439f331ffc0db6af0972c77a92d6d5f57
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390209"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062030"
 ---
-# <a name="argc-argv-wargv"></a>__argc, __argv, __wargv
-`__argc` – Globální proměnná je počet argumentů příkazového řádku předaný do programu. `__argv` ukazatel na pole znaková jeden nebo více byte znakové řetězce, které obsahují argumenty program a `__wargv` je ukazatel na pole široká charakterová řetězců, které obsahují argumenty programu. Tyto globální proměnné zadejte argumenty, které mají `main` nebo `wmain`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-extern int __argc;  
-extern char ** __argv;  
-extern wchar_t ** __wargv;  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- V programu, který používá `main` funkce, `__argc` a `__argv` jsou inicializovány při spuštění programu pomocí příkazového řádku, který se používá ke spuštění programu. Příkazový řádek je analyzován do jednotlivých argumenty a rozbaleny zástupné znaky. Počet argumentů je přiřazena k `__argc` argument řetězce mají při přidělování v haldě a ukazatel na pole argumentů je přiřazena k `__argv`. V programu zkompilovat použít široké znaky a `wmain` funkce, argumenty, které jsou analyzovány a zástupné znaky jsou rozšířit jako řetězce široká charakterová a ukazatel na pole řetězců. argument je přiřazena k `__wargv`.  
-  
- Pro přenosné kód, doporučujeme, abyste použili argumenty předávané `main` získat argumenty příkazového řádku v programu.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu  
-  
-|Rutina Tchar.h|_UNICODE není definován|_UNICODE definováno|  
-|---------------------|---------------------------|-----------------------|  
-|`__targv`|`__argv`|`__wargv`|  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Globální proměnná|Požadovaný hlavičkový soubor|  
-|---------------------|---------------------|  
-|`__argc`, `__argv`, `__wargv`|\<stdlib.h >, \<cstdlib – > (C++)|  
-  
- `__argc`, `__argv`, a `__wargv` jsou rozšíření Microsoft. Informace o kompatibilitě, najdete v části [kompatibility](../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Globální proměnné](../c-runtime-library/global-variables.md)   
- [hlavní: spuštění programu](../cpp/main-program-startup.md)   
- [Použití funkce wmain namísto main](../cpp/using-wmain-instead-of-main.md)
+# <a name="argc-argv-wargv"></a>__argc __argv, __wargv
+
+`__argc` Počet argumentů příkazového řádku předané do programu je globální proměnná. `__argv` ukazatel na pole řetězců jedním jednobajtového znaku nebo více byte znaků, které obsahují argumenty programu a `__wargv` je ukazatel na pole řetězce širokého znaku obsahující argumenty programu. Tyto globální proměnné poskytují argumenty, které mají `main` nebo `wmain`.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+extern int __argc;
+extern char ** __argv;
+extern wchar_t ** __wargv;
+```
+
+## <a name="remarks"></a>Poznámky
+
+V programu v jazyce, který používá `main` funkci `__argc` a `__argv` jsou inicializovány při spuštění programu pomocí příkazového řádku, který se používá ke spuštění programu. Příkazový řádek je analyzován do jednotlivé argumenty a zástupné znaky jsou rozbaleny. Počet argumentů je přiřazena k `__argc` argument řetězce jsou přidělený k haldě a ukazatel na pole argumentů je přiřazena k `__argv`. V programu kompilovaného použití širokých znaků a `wmain` funkce, argumenty jsou analyzovány a zástupné znaky jsou rozbaleny jako řetězce širokého znaku a ukazatel na pole řetězců argument je přiřazena k `__wargv`.
+
+Přenositelný kód, doporučujeme použít argumenty předané `main` získat argumenty příkazového řádku ve svém programu.
+
+### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
+
+|Rutina Tchar.h|_UNICODE nedefinovaná.|_UNICODE definováno|
+|---------------------|---------------------------|-----------------------|
+|`__targv`|`__argv`|`__wargv`|
+
+## <a name="requirements"></a>Požadavky
+
+|Globální proměnná|Požadovaný hlavičkový soubor|
+|---------------------|---------------------|
+|`__argc`, `__argv`, `__wargv`|\<stdlib.h >, \<cstdlib – > (C++)|
+
+`__argc`, `__argv`, a `__wargv` jsou rozšíření společnosti Microsoft. Informace o kompatibilitě naleznete v tématu [kompatibility](../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Viz také
+
+[Globální proměnné](../c-runtime-library/global-variables.md)<br/>
+[main: spuštění programu](../cpp/main-program-startup.md)<br/>
+[Použití funkce wmain namísto main](../cpp/using-wmain-instead-of-main.md)

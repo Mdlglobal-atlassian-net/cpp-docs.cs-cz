@@ -1,5 +1,5 @@
 ---
-title: C2026 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2026 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6b2952daa8cc7b3642cca5ba278990fde7d1ebe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 055ac47d036a1027817aa6b3433bfe0e2e88570e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167662"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019546"
 ---
-# <a name="compiler-error-c2026"></a>C2026 chyby kompilátoru
-řetězec je příliš velký, koncové znaky zkrácen.  
-  
- Řetězec byl delší než limit 16380 jednobajtové znaky.  
-  
- Před přiléhající řetězce se zřetězených řetězec nesmí být delší než 16380 jednobajtové znaky.  
-  
- Řetězec znaků Unicode o polovinu této délky by také vygeneroval tuto chybu.  
-  
- Pokud máte definovány takto řetězec, generuje C2026:  
-  
-```  
-char sz[] =  
-"\  
-imagine a really, really \  
-long string here\  
-";  
-```  
-  
- Vám může jej rozdělte následujícím způsobem:  
-  
-```  
-char sz[] =  
-"\  
-imagine a really, really "  
-"long string here\  
-";  
-```  
-  
- Můžete k uložení mimořádně velký textové literály (32 kB nebo více) ve vlastní prostředek nebo externí soubor. V tématu [vytvoření nového vlastního prostředku nebo prostředku dat](../../windows/creating-a-new-custom-or-data-resource.md) Další informace.
+# <a name="compiler-error-c2026"></a>Chyba kompilátoru C2026
+
+řetězec je moc velký, koncové znaky se oříznou
+
+Řetězec je delší než limit 16380 jednobajtové znaky.
+
+Před sousední řetězců jsou zřetězeny nemůže být delší než 16380 jednobajtové znaky řetězce.
+
+Řetězec znaků Unicode přibližně polovina této délky také vygeneruje tuto chybu.
+
+Pokud máte řetězec definovaná následujícím způsobem, generuje C2026:
+
+```
+char sz[] =
+"\
+imagine a really, really \
+long string here\
+";
+```
+
+Vám může jej rozdělte následujícím způsobem:
+
+```
+char sz[] =
+"\
+imagine a really, really "
+"long string here\
+";
+```
+
+Můžete ukládat mimořádně velkou řetězcových literálů (32 kB nebo déle) ve vlastní prostředek nebo externí soubor. Zobrazit [vytvoření nového vlastního prostředku nebo prostředku dat](../../windows/creating-a-new-custom-or-data-resource.md) Další informace.

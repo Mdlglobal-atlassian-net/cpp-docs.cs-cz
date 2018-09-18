@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5254adbf533a30da65349f2f8aadd100b8776d7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ef670aca60b2e3156ea70480a1dafc315ae60624
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755547"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061471"
 ---
 # <a name="do-while-statement-c"></a>do-while – příkaz (C)
 
@@ -30,8 +30,7 @@ ms.locfileid: "43755547"
 
 ## <a name="syntax"></a>Syntaxe
 
-*příkaz iterace*:  
-&nbsp;&nbsp;&nbsp;&nbsp;**proveďte***příkaz***během (***výraz***);**
+*příkaz iterace*: &nbsp; &nbsp; &nbsp; &nbsp; **proveďte***příkaz***během (** *výraz***);** 
 
 *Výraz* v *proveďte – zatímco* vyhodnotí po provedení tělo smyčky. Tělo smyčky, proto je vždy alespoň jednou spuštěn.
 
@@ -47,10 +46,10 @@ Toto je příklad *proveďte – zatímco* – příkaz:
 
 ```C
 do
-{  
-    y = f( x );  
-    x--;  
-} while ( x > 0 );  
+{
+    y = f( x );
+    x--;
+} while ( x > 0 );
 ```
 
 V tomto *proveďte – zatímco* prohlášení, dva příkazy `y = f( x );` a `x--;` jsou spouštěny, bez ohledu na počáteční hodnotu `x`. Potom `x > 0` vyhodnocena. Pokud `x` je větší než 0, je tělo příkazu spustit znovu a `x > 0` je již znovu. Tělo příkazu je proveden opakovaně tak dlouho, dokud `x` zůstane větší než 0. Provádění *proveďte – zatímco* příkaz skončí, když `x` stane 0 nebo záporná. Tělo smyčky je provedena alespoň jednou.

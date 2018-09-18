@@ -1,5 +1,5 @@
 ---
-title: C2356 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2356 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9dfb13f388c6c40c6c1853ab8e87b2e39edbc1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8dfad1703b36e1cd995207d35b99b323c883f828
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195201"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065410"
 ---
-# <a name="compiler-error-c2356"></a>C2356 chyby kompilátoru
-Inicializace segment nesmí změnit během jednotky překladu  
-  
- Možné příčiny:  
-  
--   `#pragma init_seg` před sebou segment inicializace kódu  
-  
--   `#pragma init_seg` před jiným `#pragma init_seg`  
-  
- Vyřešit, přesunete na začátek modul kód inicializace segmentu. Pokud musí být inicializován více oblastí, přesuňte je oddělit moduly.  
-  
- Následující ukázka generuje C2356:  
-  
-```  
-// C2356.cpp  
-#pragma warning(disable : 4075)  
-  
-int __cdecl myexit(void (__cdecl *)());  
-int __cdecl myexit2(void (__cdecl *)());  
-  
-#pragma init_seg(".mine$m",myexit)  
-#pragma init_seg(".mine$m",myexit2)   // C2356  
+# <a name="compiler-error-c2356"></a>Chyba kompilátoru C2356
+
+segment inicializace nesmí změnit průběhu překladové jednotky.
+
+Možné příčiny:
+
+- `#pragma init_seg` předchází segmentu inicializační kód
+
+- `#pragma init_seg` před jiným `#pragma init_seg`
+
+Pokud chcete vyřešit, přesun segmentu inicializační kód na začátek modulu. Pokud musí být inicializován více oblastí, přesuňte je do samostatných modulů.
+
+Následující ukázka generuje C2356:
+
+```
+// C2356.cpp
+#pragma warning(disable : 4075)
+
+int __cdecl myexit(void (__cdecl *)());
+int __cdecl myexit2(void (__cdecl *)());
+
+#pragma init_seg(".mine$m",myexit)
+#pragma init_seg(".mine$m",myexit2)   // C2356
 ```

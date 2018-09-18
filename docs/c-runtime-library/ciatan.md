@@ -1,5 +1,5 @@
 ---
-title: _Ciatan – | Microsoft Docs
+title: _CIatan | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,30 +29,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51fd6f5f6ec662ca2332e2dc57cbd88efaf85ab4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4db2c96f175691586d3fd4b4c0383d26ac4171d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387762"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069440"
 ---
 # <a name="ciatan"></a>_CIatan
-Vypočítá Arkus tangens nejvyšší hodnotu v zásobníku.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void __cdecl _CIatan();  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Tato verze `atan` funkce má specializované konvence volání, která funguje s technologií kompilátoru. Ji urychluje spuštění, protože kopie brání generován a pomáhá s přidělení registru.  
-  
- Výsledná hodnota se posune do horní části zásobníku.  
-  
-## <a name="requirements"></a>Požadavky  
- **Platforma:** x86  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace funkcí abecedně](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [atan, atanf, atanl, atan2, atan2f, atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)
+
+Vypočítá arkustangens výrazu nejvyšší hodnotu v zásobníku.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void __cdecl _CIatan();
+```
+
+## <a name="remarks"></a>Poznámky
+
+Tato verze `atan` funkce má specializované konvence volání, které kompilátor rozpozná. Urychluje provádění, protože kopie zabraňuje generovaných a pomáhá při přidělení registru.
+
+Výsledná hodnota je vloženy do horní části zásobníku.
+
+## <a name="requirements"></a>Požadavky
+ **Platforma:** x86
+
+## <a name="see-also"></a>Viz také
+
+[Abecední seznam odkazů na funkce](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[atan, atanf, atanl, atan2, atan2f, atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)

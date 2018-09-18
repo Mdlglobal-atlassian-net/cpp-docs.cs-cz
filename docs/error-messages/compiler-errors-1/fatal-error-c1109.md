@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1109 | Microsoft Docs
+title: Závažná chyba C1109 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b68513b497b97c78d31264a565dadc9b1fe95a98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b8e7c80ca3a184135da3784e7744ae1528517a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227871"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070688"
 ---
 # <a name="fatal-error-c1109"></a>Závažná chyba C1109
-Nelze najít, vstupní bod, v knihovně DLL, knihovny dll.  
-  
- Vstupní bod v [odloženým načtením DLL](../../build/reference/linker-support-for-delay-loaded-dlls.md) požadavku kompilátor nebyl nalezen.
+
+nepovedlo se najít "vstupní bod" v knihovně DLL 'dll'
+
+Vstupní bod v [odloženě zaváděné knihovny DLL](../../build/reference/linker-support-for-delay-loaded-dlls.md) vyžaduje kompilátor nebyl nalezen.

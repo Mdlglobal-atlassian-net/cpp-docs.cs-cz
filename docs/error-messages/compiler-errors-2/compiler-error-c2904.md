@@ -1,5 +1,5 @@
 ---
-title: C2904 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2904 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 003f907cd82abb5d3aa2ce8502074cc39d16699b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76f305ccab68a5b0d59cb3d4246b51fed61c6bf7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245812"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061562"
 ---
-# <a name="compiler-error-c2904"></a>C2904 chyby kompilátoru
-"identifikátor": název se již používá pro šablonu v aktuálním oboru  
-  
- Zkontrolujte kód pro duplicitní názvy.  
-  
- Následující ukázka generuje C2904:  
-  
-```  
-// C2904.cpp  
-// compile with: /c  
-void X();  // X is declared as a function  
-template<class T> class X{};  // C2904  
+# <a name="compiler-error-c2904"></a>Chyba kompilátoru C2904
+
+'identifier': název se už používá pro šablonu v aktuálním rozsahu.
+
+Zkontrolujte kód pro duplicitní názvy.
+
+Následující ukázka generuje C2904:
+
+```
+// C2904.cpp
+// compile with: /c
+void X();  // X is declared as a function
+template<class T> class X{};  // C2904
 ```

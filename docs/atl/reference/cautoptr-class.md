@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a312ca8aa7afe39a301607e6b091341adbb89bc4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c3066f4586d34c4742cc03511d7f8739b642ccbd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761079"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066242"
 ---
 # <a name="cautoptr-class"></a>Cautoptr – třída
 
@@ -39,13 +39,13 @@ Tato třída reprezentuje objekt inteligentního ukazatele.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <typename T>  
+template <typename T>
 class CAutoPtr
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ ukazatele.
 
 ## <a name="members"></a>Členové
@@ -109,7 +109,7 @@ void Attach(T* p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 `CAutoPtr` Objektu bude převzít vlastnictví tohoto ukazatele.
 
 ### <a name="remarks"></a>Poznámky
@@ -133,16 +133,16 @@ explicit CAutoPtr(T* p) throw();
 template<typename TSrc>
 CAutoPtr(CAutoPtr<TSrc>& p) throw();
 
-template<> 
+template<>
 CAutoPtr(CAutoPtr<T>& p) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Stávajícího ukazatele.
 
-*TSrc*  
+*TSrc*<br/>
 Typ spravované jiným `CAutoPtr`, která slouží k inicializaci aktuální objekt.
 
 ### <a name="remarks"></a>Poznámky
@@ -223,10 +223,10 @@ CAutoPtr<T>& operator= (CAutoPtr<TSrc>& p);
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Ukazatel.
 
-*TSrc*  
+*TSrc*<br/>
 Typ třídy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -265,7 +265,7 @@ Podívejte se na příklad v [CAutoPtr přehled](../../atl/reference/cautoptr-cl
 
 Operátor přetypování.
 
-```  
+```
 operator T* () const throw();
 ```
 
@@ -279,6 +279,6 @@ Podívejte se na příklad v [CAutoPtr přehled](../../atl/reference/cautoptr-cl
 
 ## <a name="see-also"></a>Viz také
 
-[Cheapptr – třída](../../atl/reference/cheapptr-class.md)   
-[Cautovectorptr – třída](../../atl/reference/cautovectorptr-class.md)   
+[CHeapPtr – třída](../../atl/reference/cheapptr-class.md)<br/>
+[CAutoVectorPtr – třída](../../atl/reference/cautovectorptr-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

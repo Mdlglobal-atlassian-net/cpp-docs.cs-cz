@@ -16,62 +16,65 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0a9e4db3e1fcbd24358d6dedd2d4ada80672c2a
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 37804aed04f998c6762cdbbc7012ae10c19a2529
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406543"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066816"
 ---
 # <a name="cdecl"></a>__cdecl
-**Specifické pro Microsoft**  
-  
- **__cdecl** je výchozí konvencí volání programů jazyka C a C++. Vzhledem k tomu, že je zásobník vyčištěn volajícím, můžete provádět `vararg` funkce. **__Cdecl** konvence volání vytvoří větší spustitelné soubory než [__stdcall](../cpp/stdcall.md), protože vyžaduje, aby každé volání funkce obsahovalo kód pro vyčištění zásobníku. Následující seznam ukazuje implementaci této konvence volání.  
-  
-|Prvek|Implementace|  
-|-------------|--------------------|  
-|Pořadí předávání argumentů|Zprava doleva.|  
-|Odpovědnost za údržbu zásobníku|Volání funkce vezme argumenty ze zásobníku (POP).|  
-|Konvence pro vzhled názvu|Znak podtržítka (_) je předponou názvů, kromě případů, kdy \__cdecl funkce, které používají C-linkage jsou exportovány.|  
-|Konvence pro posunutí|Neprovádí se žádné posunutí.|  
-  
+
+**Specifické pro Microsoft**
+
+**__cdecl** je výchozí konvencí volání programů jazyka C a C++. Vzhledem k tomu, že je zásobník vyčištěn volajícím, můžete provádět `vararg` funkce. **__Cdecl** konvence volání vytvoří větší spustitelné soubory než [__stdcall](../cpp/stdcall.md), protože vyžaduje, aby každé volání funkce obsahovalo kód pro vyčištění zásobníku. Následující seznam ukazuje implementaci této konvence volání.
+
+|Prvek|Implementace|
+|-------------|--------------------|
+|Pořadí předávání argumentů|Zprava doleva.|
+|Odpovědnost za údržbu zásobníku|Volání funkce vezme argumenty ze zásobníku (POP).|
+|Konvence pro vzhled názvu|Znak podtržítka (_) je předponou názvů, kromě případů, kdy \__cdecl funkce, které používají C-linkage jsou exportovány.|
+|Konvence pro posunutí|Neprovádí se žádné posunutí.|
+
 > [!NOTE]
->  Související informace naleznete v tématu [dekorované názvy](../build/reference/decorated-names.md).  
-  
- Místo **__cdecl** modifikátor před proměnnou nebo název funkce. Protože konvence pojmenování a volání jazyka C jsou standardem, jediný případ je nutné použít **__cdecl** x86 kód je Pokud jste určili `/Gv` (vectorcall), `/Gz` (stdcall) nebo `/Gr` (fastcall) – možnost kompilátoru. [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md) vynutí – možnost kompilátoru **__cdecl** konvence volání.  
-  
- Na ARM a x64 procesory, **__cdecl** přijme, ale obvykle ignoruje kompilátor. Podle konvence pro procesory ARM a x64 jsou argumenty předávány v registrech vždy, když je to možné, a následné argumenty jsou předávány na zásobníku. V x64 kódu, použijte **__cdecl** přepsání **/Gv** – možnost kompilátoru a použijte výchozí x64 konvenci volání.  
-  
- U funkcí nestatické třídy platí, že je-li funkce definovaná mimo řádek, modifikátor konvence volání není nutné určit na definici mimo řádek. To znamená, že pro členské nestatické metody třídy se konvence volání zadaná během deklarace přejme během definice. Při této definici třídy:  
-  
-```cpp  
-struct CMyClass {  
-   void __cdecl mymethod();  
-};  
-```  
-  
- toto:  
-  
-```cpp  
-void CMyClass::mymethod() { return; }  
-```  
-  
- je ekvivalentem tohoto:  
-  
-```cpp  
-void __cdecl CMyClass::mymethod() { return; }  
-```  
-  
-## <a name="example"></a>Příklad  
- V následujícím příkladu je kompilátor nastaven na použití názvů C a konvencí pro volání `system` funkce.  
-  
-```cpp  
-// Example of the __cdecl keyword on function  
-int __cdecl system(const char *);  
-// Example of the __cdecl keyword on function pointer  
-typedef BOOL (__cdecl *funcname_ptr)(void * arg1, const char * arg2, DWORD flags, ...);  
-```  
-  
-## <a name="see-also"></a>Viz také:  
- [Konvence předávání a pojmenování argumentů](../cpp/argument-passing-and-naming-conventions.md)   
- [Klíčová slova](../cpp/keywords-cpp.md)
+>  Související informace naleznete v tématu [dekorované názvy](../build/reference/decorated-names.md).
+
+Místo **__cdecl** modifikátor před proměnnou nebo název funkce. Protože konvence pojmenování a volání jazyka C jsou standardem, jediný případ je nutné použít **__cdecl** x86 kód je Pokud jste určili `/Gv` (vectorcall), `/Gz` (stdcall) nebo `/Gr` (fastcall) – možnost kompilátoru. [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md) vynutí – možnost kompilátoru **__cdecl** konvence volání.
+
+Na ARM a x64 procesory, **__cdecl** přijme, ale obvykle ignoruje kompilátor. Podle konvence pro procesory ARM a x64 jsou argumenty předávány v registrech vždy, když je to možné, a následné argumenty jsou předávány na zásobníku. V x64 kódu, použijte **__cdecl** přepsání **/Gv** – možnost kompilátoru a použijte výchozí x64 konvenci volání.
+
+U funkcí nestatické třídy platí, že je-li funkce definovaná mimo řádek, modifikátor konvence volání není nutné určit na definici mimo řádek. To znamená, že pro členské nestatické metody třídy se konvence volání zadaná během deklarace přejme během definice. Při této definici třídy:
+
+```cpp
+struct CMyClass {
+   void __cdecl mymethod();
+};
+```
+
+toto:
+
+```cpp
+void CMyClass::mymethod() { return; }
+```
+
+je ekvivalentem tohoto:
+
+```cpp
+void __cdecl CMyClass::mymethod() { return; }
+```
+
+## <a name="example"></a>Příklad
+
+V následujícím příkladu je kompilátor nastaven na použití názvů C a konvencí pro volání `system` funkce.
+
+```cpp
+// Example of the __cdecl keyword on function
+int __cdecl system(const char *);
+// Example of the __cdecl keyword on function pointer
+typedef BOOL (__cdecl *funcname_ptr)(void * arg1, const char * arg2, DWORD flags, ...);
+```
+
+## <a name="see-also"></a>Viz také:
+
+[Konvence předávání a pojmenování argumentů](../cpp/argument-passing-and-naming-conventions.md)<br/>
+[Klíčová slova](../cpp/keywords-cpp.md)

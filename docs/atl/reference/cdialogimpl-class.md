@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1780a4f77cce4812ebdb03ebc89936da0dc0d5d0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ba47b7f78e372f05a851d2180590bbc68a8c61ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767052"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068432"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl – třída
 
@@ -51,10 +51,10 @@ template <class T,
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Vaše třída odvozena od `CDialogImpl`.
 
-*Tčíslice*  
+*Tčíslice*<br/>
 Základní třídy novou třídu. Výchozí základní třída je [cwindow –](../../atl/reference/cwindow-class.md).
 
 ## <a name="members"></a>Členové
@@ -113,7 +113,7 @@ kde `MyDlg` je **krátký název** zadali v průvodci **názvy** stránky.
 
 Vytvoří nemodální dialogové okno.
 
-```  
+```
 HWND Create(
     HWND hWndParent,  
     LPARAM dwInitParam = NULL );  
@@ -121,18 +121,17 @@ HWND Create(
 HWND Create(
     HWND hWndParent,  
     RECT&, 
-    LPARAM dwInitParam = NULL); 
+    LPARAM dwInitParam = NULL);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Popisovač nadřazenému oknu.
 
-**Rect – &** *rect*  
-[in] A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura určující velikost a umístění dialogového okna.
+**Rect – &** *rect* [in] A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura určující velikost a umístění dialogového okna.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Určuje hodnotu pro předání do dialogového okna aplikace *lParam* parametr nezavěsíte zprávu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -173,16 +172,16 @@ static LRESULT CALLBACK DialogProc(
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 [in] Popisovač do dialogového okna.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Zpráva odeslaná do dialogového okna.
 
-*wParam*  
+*wParam*<br/>
 [in] Další informace specifické pro zprávy.
 
-*lParam*  
+*lParam*<br/>
 [in] Další informace specifické pro zprávy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -199,18 +198,18 @@ Můžete přepsat `DialogProc` jiný mechanismus pro zpracování zpráv.
 
 Vytvoří modální dialogové okno.
 
-```   
+```
 INT_PTR DoModal(  
     HWND hWndParent = ::GetActiveWindow(),   
-    LPARAM dwInitParam = NULL); 
+    LPARAM dwInitParam = NULL);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Popisovač nadřazenému oknu. Výchozí hodnota je vrácená hodnota [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) funkci Win32.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Určuje hodnotu pro předání do dialogového okna aplikace *lParam* parametr nezavěsíte zprávu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -227,13 +226,13 @@ Vytvoří nemodální dialogové okno, voláním [vytvořit](#create).
 
 Zničí modální dialogové okno.
 
-```   
-BOOL EndDialog(int nRetCode); 
+```
+BOOL EndDialog(int nRetCode);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nRetCode*  
+*nRetCode*<br/>
 [in] Hodnota, která má být vrácen [CDialogImpl::DoModal](#domodal).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -251,8 +250,8 @@ Hodnota TRUE, pokud jeho zničení dialogových oken; v opačném případě hod
 
 Vrátí `DialogProc`, aktuální proceduru dialogového okna pole.
 
-```   
-virtual WNDPROC GetDialogProc(); 
+```
+virtual WNDPROC GetDialogProc();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -267,13 +266,13 @@ Potlačí tuto metodu za účelem proceduru dialogového okna nahradit svojí vl
 
 Převede (map) – dialogové okno jednotek zadané obdélník na obrazovku jednotek (v pixelech).
 
-```   
-BOOL MapDialogRect(LPRECT lpRect); 
+```
+BOOL MapDialogRect(LPRECT lpRect);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*  
+*lprect –*<br/>
 Odkazuje na `CRect` objektu nebo [RECT](../../mfc/reference/rect-structure1.md) struktura, která má obdržet souřadnice klienta, který obklopuje oblast aktualizace aktualizace.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -288,13 +287,13 @@ Funkce nahrazuje souřadnice v zadaném `RECT` struktury pomocí převedený sou
 
 Volá se po přijetí poslední zprávy (obvykle `WM_NCDESTROY`).
 
-```   
-virtual void OnFinalMessage(HWND hWnd); 
+```
+virtual void OnFinalMessage(HWND hWnd);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 [in] Popisovač okna zničen.
 
 ### <a name="remarks"></a>Poznámky
@@ -305,26 +304,26 @@ Všimněte si, že pokud chcete automaticky odstranit objekt při odstraňován�
 
 Volána pouze jednou, při přijetí první zprávu zpracovat zprávy odeslané do dialogového okna.
 
-```   
+```
 static LRESULT CALLBACK StartDialogProc(
     HWND hWnd,  
     UINT uMsg,  
     WPARAM wParam,  
-    LPARAM lParam); 
+    LPARAM lParam);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 [in] Popisovač do dialogového okna.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Zpráva odeslaná do dialogového okna.
 
-*wParam*  
+*wParam*<br/>
 [in] Další informace specifické pro zprávy.
 
-*lParam*  
+*lParam*<br/>
 [in] Další informace specifické pro zprávy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -337,5 +336,5 @@ Po počáteční volání `StartDialogProc`, `DialogProc` není nastaven jako pr
 
 ## <a name="see-also"></a>Viz také
 
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

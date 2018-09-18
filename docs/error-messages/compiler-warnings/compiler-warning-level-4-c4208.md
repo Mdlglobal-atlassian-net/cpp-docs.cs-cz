@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4208 | Microsoft Docs
+title: Upozornění (úroveň 4) C4208 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b61f8b0a6a0ac61982bee79abb81f083d40a48f1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ee87ad1d43b20c4d0a72b877b05b1ba4c084a1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292360"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064618"
 ---
-# <a name="compiler-warning-level-4-c4208"></a>C4208 kompilátoru upozornění (úroveň 4)
-nestandardní rozšíření používané: odstranění [exp] - exp vyhodnocen ale ignorovat  
-  
- Pomocí rozšíření Microsoft (/Ze), můžete odstranit pomocí hodnoty v závorkách s pole [delete – operátor](../../cpp/delete-operator-cpp.md). Hodnota se ignoruje.  
-  
-```  
-// C4208.cpp  
-// compile with: /W4  
-int main()  
-{  
-   int * MyArray = new int[18];  
-   delete [18] MyArray;      // C4208  
-   MyArray = new int[18];  
-   delete [] MyArray;        // ok  
-}  
-```  
-  
- Tyto hodnoty jsou neplatné v části kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+# <a name="compiler-warning-level-4-c4208"></a>Kompilátor upozornění (úroveň 4) C4208
+
+používá se nestandardní rozšíření: delete [exp] - exp vyhodnotí, ale ignoruje
+
+Pomocí rozšíření společnosti Microsoft (/Ze), můžete odstranit pole pomocí hodnoty v závorkách se [operátor delete](../../cpp/delete-operator-cpp.md). Hodnota je ignorována.
+
+```
+// C4208.cpp
+// compile with: /W4
+int main()
+{
+   int * MyArray = new int[18];
+   delete [18] MyArray;      // C4208
+   MyArray = new int[18];
+   delete [] MyArray;        // ok
+}
+```
+
+Tyto hodnoty nejsou platné v rámci kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

@@ -17,26 +17,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc853ce15a8c7cfdbe67a3469f33189e89e55c3b
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: c38ff10368ff31cfd9da435e117c6619735b6274
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403336"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070493"
 ---
 # <a name="bstrtlength"></a>_bstr_t::length
-**Specifické pro Microsoft**  
-  
- Vrátí počet znaků v proměnné `_bstr_t`, bez ukončujícího znaku null, zapouzdřené proměnné `BSTR`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-unsigned int length ( ) const throw( );  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- **Specifické pro END Microsoft**  
-  
-## <a name="see-also"></a>Viz také:  
- [_bstr_t – třída](../cpp/bstr-t-class.md)
+
+**Specifické pro Microsoft**
+
+Vrátí počet znaků v proměnné `_bstr_t`, bez ukončujícího znaku null, zapouzdřené proměnné `BSTR`.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+unsigned int length ( ) const throw( );
+```
+
+## <a name="remarks"></a>Poznámky
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také:
+
+[_bstr_t – třída](../cpp/bstr-t-class.md)

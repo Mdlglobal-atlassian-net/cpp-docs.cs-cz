@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk2019 | Microsoft Docs
+title: Chyba Linkerů LNK2019 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/15/2017
 ms.technology:
@@ -17,108 +17,108 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4323e5f8357da046db7a9403d7c575dfdde566b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 679d322f6d5ebcf8e56d1691d18e634bb34a2bb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301902"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067542"
 ---
 # <a name="linker-tools-error-lnk2019"></a>Chyba linkerů LNK2019
 
-nerozpoznané externí symbol '*symbol*'odkazovaný ve funkci'*funkce*.
+Nerozpoznaný externí symbol "*symbol*'odkazovaný ve funkci'*funkce*.
 
-Zkompilovaný kód pro *funkce* díky odkaz nebo volání *symbol*, ale tento symbol není definován v některé z knihovny nebo zadané linkeru soubory objektu.
+Zkompilovaný kód pro *funkce* díky odkazu nebo volání *symbol*, ale tento symbol není definovaný v některém z knihovny nebo objektových souborů zadaný v linkeru.
 
-Tato chybová zpráva je následován závažná chyba [LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md). Je nutné opravit chyby všechny LNK2001 a LNK2019 opravit chyby LNK1120.
+Tato chybová zpráva je následována závažná chyba [LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md). Je nutné opravit všechny LNK2001 a LNK2019 chyby opravit chyby LNK1120.
 
 ## <a name="possible-causes"></a>Možné příčiny
 
-Existuje mnoho způsobů, jak tato chyba, ale všechny z nich zahrnuje odkaz na funkce nebo proměnná, která nelze linkeru *vyřešit*, nebo najít definici. Symbol není možné určit kompilátor *deklarovaný*, ale není při není *definované*, protože definice může být v různých zdrojového souboru nebo knihovny. Pokud symbol je uvedené, ale nikdy definované, linkeru vygeneruje chybu nerozpoznané externí symbol.
+Existuje mnoho způsobů, jak se tato chyba, ale všechny z nich zahrnuje odkaz na funkci nebo proměnnou, která linker nemůže *vyřešit*, nebo si najděte definici. Kompilátor může identifikovat při symbol nemá *deklarované*, ale ne když není *definované*, protože definice může být v odlišném zdrojovém souboru nebo knihovny. Pokud symbol je uvedené, ale nikdy definovaný, linker generuje chybu nerozpoznaný externí symbol.
 
-Zde jsou některé běžné problémy, které způsobí LNK2019:
+Tady jsou některé běžné problémy, které způsobují LNK2019:
 
-### <a name="the-object-file-or-library-that-contains-the-definition-of-the-symbol-is-not-linked"></a>Není propojený objektu souboru nebo knihovny, která obsahuje definice symbolu
+### <a name="the-object-file-or-library-that-contains-the-definition-of-the-symbol-is-not-linked"></a>Není propojený soubor objektu nebo knihovny, který obsahuje definici symbolu
 
-V sadě Visual Studio ověřte, zda zdrojový soubor, který obsahuje definici je vytvořen a propojené v rámci vašeho projektu. Na příkazovém řádku ověřte, že zdrojový soubor, který obsahuje definici zkompilován a bude výsledný soubor objekt je součástí seznam souborů k propojení.
+V sadě Visual Studio ověřte, že zdrojový soubor, který obsahuje definici vytvořené a propojí jako součást vašeho projektu. Na příkazovém řádku ověřte, že zdrojový soubor, který obsahuje definici je zkompilován a výsledný soubor objektu je součástí seznamu souborů určených k propojení.
 
-### <a name="the-declaration-of-the-symbol-is-not-spelled-the-same-as-the-definition-of-the-symbol"></a>Deklarace symbolu není napsaný stejná jako definice symbolu
+### <a name="the-declaration-of-the-symbol-is-not-spelled-the-same-as-the-definition-of-the-symbol"></a>Deklarace symbolu není zadána stejná jako definice symbolu
 
-Ověřte správné pravopis a velká písmena se používá v deklaraci a definice a kdekoli je symbol použít nebo názvem.
+Zkontrolujte pravopis a velká písmena se používá v deklarace a definice a všude, kde je symbol použít nebo názvem.
 
-### <a name="a-function-is-used-but-the-type-or-number-of-the-parameters-do-not-match-the-function-definition"></a>Funkce se používá, ale typ nebo počet parametrů neodpovídají v definici funkce
+### <a name="a-function-is-used-but-the-type-or-number-of-the-parameters-do-not-match-the-function-definition"></a>Funkce se používá, ale tento typ nebo počet parametrů se neshodují definice funkce
 
-Deklarace funkce musí odpovídat definici. Ověřte, že volání funkce odpovídá deklaraci a deklaraci odpovídají definici. Kód, který vyvolá šablony funkce musí mít také odpovídající deklarace funkce šablon, které obsahují stejné parametry šablony jako definice. Příklad neshodě deklarace šablony najdete v ukázkové LNK2019e.cpp v části Příklady.
+Deklarace funkce musí odpovídat definici. Ověřte, že volání funkce odpovídá deklaraci a že deklarace odpovídá definici. Kód, který vyvolá funkce šablony musí také mít odpovídající deklarace funkce šablon, které zahrnují stejné parametry šablony jako definice. Příklad neshodě deklarace šablony najdete v ukázce LNK2019e.cpp v části Příklady.
 
-### <a name="a-function-or-variable-is-declared-but-not-defined"></a>Funkce nebo proměnná je deklarován, ale není definován
+### <a name="a-function-or-variable-is-declared-but-not-defined"></a>Funkce nebo proměnná je deklarovaná, ale není definovaný.
 
-To obvykle znamená deklaraci existuje v záhlaví souboru, ale žádné odpovídající definice je implementována. Členské funkce nebo členy statických dat musí obsahovat implementace modulu pro výběr třídy oboru. Příklad, naleznete v části [chybějící tělo funkce nebo proměnná](../../error-messages/tool-errors/missing-function-body-or-variable.md).
+To obvykle znamená, že deklarace existuje v hlavičkovém souboru, ale je implementována žádná odpovídající definice. Pro členské funkce ani statické datové členy implementace uvést výběr oboru třídy. Příklad najdete v tématu [chybí tělo funkce nebo proměnná](../../error-messages/tool-errors/missing-function-body-or-variable.md).
 
-### <a name="the-calling-convention-is-different-between-the-function-declaration-and-the-function-definition"></a>Konvence volání se liší funkce deklarace a definice funkce
+### <a name="the-calling-convention-is-different-between-the-function-declaration-and-the-function-definition"></a>Konvence volání se liší mezi funkce deklarace a definice funkce
 
-Konvence volání ([__cdecl](../../cpp/cdecl.md), [__stdcall](../../cpp/stdcall.md), [__fastcall](../../cpp/fastcall.md), nebo [__vectorcall](../../cpp/vectorcall.md)) jsou zakódovány jako součást upravený název. Ověřte, že konvence volání je stejný.
+Konvence volání ([__cdecl](../../cpp/cdecl.md), [__stdcall](../../cpp/stdcall.md), [__fastcall](../../cpp/fastcall.md), nebo [__vectorcall](../../cpp/vectorcall.md)) jsou zakódovány jako součást upravený název. Ověřte, zda konvence volání je stejný.
 
-### <a name="a-symbol-is-defined-in-a-c-file-but-declared-without-using-extern-c-in-a-c-file"></a>Symbol je definována v souboru C, ale deklarovaný bez používání příkazu extern "C" v souboru jazyka C++
+### <a name="a-symbol-is-defined-in-a-c-file-but-declared-without-using-extern-c-in-a-c-file"></a>Symbol definovaný v souboru jazyka C, ale deklarovaný bez používání příkazu extern "C" v souboru jazyka C++
 
-Symboly definované v souboru, který se zkompiluje jako C mají různé dekorované názvy než symboly deklarován v souboru C++, pokud nechcete použít [extern "C"](../../cpp/using-extern-to-specify-linkage.md) modifikátor. Ověřte, že deklaraci odpovídá propojení kompilace pro každý symbol. Podobně, pokud symbol definujete v C++ soubor, který se použije v programu C +, použijte `extern "C"` v definici.
+Symboly definované v souboru, který je zkompilován jako C mají různé dekorované názvy než symboly, které jsou deklarovány v souboru jazyka C++, pokud nechcete použít [extern "C"](../../cpp/using-extern-to-specify-linkage.md) modifikátor. Zkontrolujte, zda deklarace odpovídá propojení kompilace pro každý symbol. Podobně pokud definici symbolu v souboru jazyka C++, který se použije programu jazyka C, použijte `extern "C"` v definici.
 
-### <a name="a-symbol-is-defined-as-static-and-then-later-referenced-outside-the-file"></a>Symbol je definován jako statické a pak později odkazuje mimo soubor
+### <a name="a-symbol-is-defined-as-static-and-then-later-referenced-outside-the-file"></a>Symbol je definován jako statické a později odkazovat mimo soubor
 
-V jazyce C++, na rozdíl od C [globální konstanty](../../error-messages/tool-errors/global-constants-in-cpp.md) mít `static` propojení. Chcete-li získat obejít toto omezení, můžete zahrnout `const` inicializacích v hlavičce souboru a zahrnout této hlavičky do sada souborů, nebo můžete nastavit proměnnou nekonstantní a použít konstantní odkaz k přístupu.
+V jazyce C++, na rozdíl od jazyka C [globální konstanty](../../error-messages/tool-errors/global-constants-in-cpp.md) mají `static` propojení. Chcete-li získat vyhnout uvedeným potížím, můžete zahrnout `const` inicializace v záhlaví souborů a součástí této hlavičky souborů .cpp, nebo můžete provést nekonstantní proměnnou a používat konstantní odkaz k němu přistupovat.
 
-### <a name="a-static-member-of-a-class-is-not-defined"></a>Není definován statický člen třídy
+### <a name="a-static-member-of-a-class-is-not-defined"></a>Není definovaný statický člen třídy
 
-Statická třída člen musí mít jedinečné definice nebo nesplňují jedna definice pravidla. Statická třída člena, který nemůže být definována vložením musí být definovány do jednoho zdrojového souboru pomocí jeho plně kvalifikovaný název. Pokud není definován vůbec, generuje linkeru LNK2019.
+Statická třída člen musí mít jedinečné definice nebo ji bude porušovat jednu definici pravidla. Statické třídy člena, který nemůže být definována vložením musí být definován v jednom zdrojovém souboru pomocí jeho plně kvalifikovaný název. Pokud není definován vůbec, linker generuje LNK2019.
 
-### <a name="a-build-dependency-is-only-defined-as-a-project-dependency-in-the-solution"></a>Závislost sestavení je definována pouze v projektu závislosti na řešení
+### <a name="a-build-dependency-is-only-defined-as-a-project-dependency-in-the-solution"></a>Závislost sestavení je definována pouze jako závislost projektu v řešení
 
-V dřívějších verzích sady Visual Studio byla tato úroveň závislosti dostatečná. Od verze sady Visual Studio 2010, ale Visual Studio vyžaduje [odkaz na projekt na projekt](/visualstudio/ide/managing-references-in-a-project). Pokud projekt nemá odkaz na projekt na projekt, může se zobrazit tato chyba linkeru. Přidejte odkaz projekt na projekt a opravte ji.
+V dřívějších verzích sady Visual Studio byla dostatečná tento stupeň závislosti. Od verze Visual Studio 2010, ale Visual Studio vyžaduje [odkaz typu projekt projekt](/visualstudio/ide/managing-references-in-a-project). Pokud váš projekt nemá odkaz typu projekt projekt, může se zobrazit tato chyba linkeru. Přidáte odkaz typu projekt projekt ho opravit.
 
-### <a name="you-build-a-console-application-by-using-settings-for-a-windows-application"></a>Vytvoření konzolové aplikace s použitím nastavení pro aplikaci systému Windows
+### <a name="you-build-a-console-application-by-using-settings-for-a-windows-application"></a>Vytvoření konzolové aplikace pomocí nastavení pro aplikace Windows
 
-Pokud je tato chybová zpráva podobná **nerozpoznané externí symbol WinMain odkazovaný ve funkci** *Název_funkce*, odkaz pomocí **/SUBSYSTEM:CONSOLE** místo **/SUBSYSTEM:WINDOWS**. Další informace o tomto nastavení a pokyny o tom, jak tuto vlastnost nastavit v sadě Visual Studio, najdete v části [/SUBSYSTEM (zadat subsystém)](../../build/reference/subsystem-specify-subsystem.md).
+Pokud se chybová zpráva podobá **nerozpoznaný externí symbol WinMain odkazovaný ve funkci** *Název_funkce*, propojení s použitím **/Subsystem: Console** místo **/Subsystem: Windows**. Další informace o tomto nastavení a pokyny o tom, jak tuto vlastnost nastavit v sadě Visual Studio, najdete v části [/Subsystem (určení subsystému)](../../build/reference/subsystem-specify-subsystem.md).
 
-### <a name="you-attempt-to-link-64-bit-libraries-to-32-bit-code-or-32-bit-libraries-to-64-bit-code"></a>Pokusíte se do knihovny 64-bit propojit 32bitový kód nebo knihovny 32-bit do 64bitového kódu
+### <a name="you-attempt-to-link-64-bit-libraries-to-32-bit-code-or-32-bit-libraries-to-64-bit-code"></a>Při pokusu o propojení knihoven 64-bit 32bitového kódu nebo knihovny 32-bit do 64bitového kódu
 
-Soubory objektů propojené kódu a knihovny musí být zkompilovány pro stejnou architekturu jako váš kód. Ověřte, že v knihovnách odkazy projektu kompilované pro stejnou architekturu jako projektu. Zajistěte, aby [/Libpath](../../build/reference/libpath-additional-libpath.md) nebo **další adresáře knihovny** cesta možnost používají body linkeru do knihoven vytvořené pro správnou architekturu.
+Knihovny a soubory objektů propojené kódu musí být zkompilovaná pro stejnou architekturu jako svůj kód. Ověřte, že knihovny odkazy projektu jsou zkompilovány pro stejnou architekturu jako váš projekt. Ujistěte se, [/Libpath](../../build/reference/libpath-additional-libpath.md) nebo **další adresáře knihoven** cesta možnost používat bodů linkeru pro knihovny, které jsou vytvořené pro správnou architekturu.
 
-### <a name="you-use-different-compiler-options-for-function-inlining-in-different-source-files"></a>Pomocí možnosti různých kompilátoru pro vkládání funkcí v jiných zdrojových souborů
+### <a name="you-use-different-compiler-options-for-function-inlining-in-different-source-files"></a>Použijte jiné parametry kompilátoru pro vkládání funkcí v jiných zdrojových souborů
 
-Pomocí vložená funkce definované v souborech sada a kombinování funkce vložené – možnosti kompilátoru v jiných zdrojových souborů může způsobit LNK2019. Další informace najdete v tématu [problémy vložené funkce](../../error-messages/tool-errors/function-inlining-problems.md).
+Použití vložených funkcí definovaných v souborech .cpp a kombinování funkce vložené možnosti kompilátoru v jiných zdrojových souborů může způsobit LNK2019. Další informace najdete v tématu [problémy vkládání funkcí](../../error-messages/tool-errors/function-inlining-problems.md).
 
-### <a name="you-use-automatic-variables-outside-their-scope"></a>Použít automatické proměnné mimo jejich oboru
+### <a name="you-use-automatic-variables-outside-their-scope"></a>Použít automatické proměnné mimo jejich rozsah
 
-Automatické proměnné (rozsah funkce) lze použít pouze v rámci oboru této funkce. Tyto proměnné nelze deklarovat `extern` a použít v jiné zdrojové soubory. Příklad, naleznete v části [automatické proměnné (rozsah funkce)](../../error-messages/tool-errors/automatic-function-scope-variables.md).
+Automatické proměnné (rozsah funkce) jde použít jenom v rozsahu dané funkce. Tyto proměnné nelze použít deklaraci `extern` a použít v jiných zdrojových souborech. Příklad najdete v tématu [automatické proměnné (rozsah funkce)](../../error-messages/tool-errors/automatic-function-scope-variables.md).
 
-### <a name="you-call-instrinsic-functions-or-pass-argument-types-to-intrinsic-functions-that-are-not-supported-on-your-target-architecture"></a>Volání funkce instrinsic nebo předat vnitřní funkce, které nejsou podporovány ve vaší cílové architektury typy argumentů
+### <a name="you-call-instrinsic-functions-or-pass-argument-types-to-intrinsic-functions-that-are-not-supported-on-your-target-architecture"></a>Volání funkcí instrinsic nebo předejte typy argumentů pro vnitřní funkce, které nejsou podporovány na Cílová architektura
 
-Například, pokud použijete AVX2 vnitřní, ale nezadávejte žádné [/ARCH:AVX2](../../build/reference/arch-x86.md) – možnost kompilátoru, kompilátor předpokládá, že se vnitřní externí funkce. Kompilátor místo aby generovala vložené instrukce, vygeneruje volání na symbol externí se stejným názvem jako vnitřní. Když linkeru se pokusí najít definice této funkce chybí, vygeneruje LNK2019. Ověřte, zda pouze pomocí vnitřní objekty a typy podporované ve vaší cílové architektury.
+Například, pokud použijete AVX2 vnitřní, ale není zadán [/arch: avx2](../../build/reference/arch-x86.md) – možnost kompilátoru, kompilátor předpokládá, že je vnitřní externí funkce. Místo aby generovala vložené instrukce, kompilátor vygeneruje volání externích symbolů se stejným názvem jako vnitřní objekt. Linker se pokusí vyhledat definice této funkce chybí, vygeneruje LNK2019. Ověřte, zda pouze pomocí vnitřní objekty a typů podporovaných Cílová architektura.
 
 ### <a name="you-mix-code-that-uses-native-wchart-with-code-that-doesnt"></a>Kombinovat kód, který používá nativní wchar\_t s kódem, který není
 
-C++ jazyk shoda práci, kterou bylo provedeno v aplikaci Visual C++ 2005 provedené `wchar_t` nativního typu ve výchozím nastavení. Je nutné použít [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) – možnost kompilátoru pro generování kódu, které jsou kompatibilní s soubory knihovny a objekt zkompilovat pomocí starší verze aplikace Visual C++. Pokud sestavili jsme všechny soubory pomocí stejné **/Zc:wchar\_t** nastavení, typ odkazy nemusí odkazující na typy kompatibilní. Ověřte, že `wchar_t` typy v všechny soubory knihovny a objekt jsou kompatibilní, buď tím, že aktualizuje typy, které se používají, nebo pomocí konzistentní **/Zc:** nastavení při kompilaci.
+C++ language prací, které bylo provedeno v aplikaci Visual C++ 2005 provedené `wchar_t` nativní typ ve výchozím nastavení. Je nutné použít [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) – možnost kompilátoru generovat kód kompatibilní s knihoven a objektů soubory kompilované pomocí starší verze jazyka Visual C++. Pokud se všechny soubory již byly zkompilovány pomocí stejného **/Zc:wchar\_t** nastavením odkazy nemusí odpovídat nekompatibilní typy. Ověřte, že `wchar_t` typy ve všech souborech knihoven a objektů jsou kompatibilní, aktualizace typů, které se používají, nebo pomocí konzistentní **/Zc: wchar_t** nastavení při kompilaci.
 
-## <a name="third-party-library-issues-and-vcpkg"></a>Knihovna třetích stran problémy a Vcpkg
+## <a name="third-party-library-issues-and-vcpkg"></a>Problémy knihovny třetí strany a Vcpkg
 
-Pokud se zobrazí tato chyba, když se pokoušíte nakonfigurovat jako součást buildu knihovnu třetích stran, zvažte použití [Vcpkg](../../vcpkg.md), Visual C++ Package Manager k instalaci a sestavení knihovny. Vcpkg podporuje velkou a rostoucí [seznam knihoven jiných výrobců](https://github.com/Microsoft/vcpkg/tree/master/ports)a nastaví vlastnosti konfigurace a závislosti v rámci projektu požadované pro úspěšné sestavení. Další informace najdete v tématu související [Visual C++ Blog](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/) post.
+Pokud tato chyba se zobrazí, když se pokoušíte nakonfigurovat knihovny třetích stran jako součást vašeho sestavení, zvažte použití [Vcpkg](../../vcpkg.md), Visual C++ balíček správce k instalaci a vytvoření knihovny. Vcpkg podporuje jejichž [seznam knihoven třetích stran](https://github.com/Microsoft/vcpkg/tree/master/ports)a nastaví vlastnosti konfigurace a závislosti, které vyžaduje pro úspěšné sestavení jako součást vašeho projektu. Další informace najdete v tématu související [blogu Visual C++](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/) příspěvku.
 
 ## <a name="diagnosis-tools"></a>Nástroje pro diagnostiku
 
-Může být obtížné zjistit, proč linkeru nelze nalézt definici konkrétní symbol. Často problém je, že nebyly zahrnuty kód, který obsahuje definici v buildu nebo sestavení, který jste vytvořili různé možnosti dekorované názvy externí symbolů. Je několik nástrojů a možnosti, které vám mohou pomoci diagnostikovat chyby LNK2019.
+Může být obtížné zjistit, proč linker nemůže najít definice určitého symbolu. Problém je často, že jste nezahrnuli kód, který obsahuje definici v sestavení nebo sestavení, které jste vytvořili různé možnosti dekorované názvy pro externích symbolů. Existuje několik nástrojů a možností, které vám pomohou diagnostikovat chyby LNK2019.
 
-- [/VERBOSE](../../build/reference/verbose-print-progress-messages.md) – možnost linkeru vám pomohou určit, které soubory jsou odkazy na linkeru. Můžete ověřit, zda je soubor, který obsahuje definici symbolu součástí buildu.
+- [/VERBOSE](../../build/reference/verbose-print-progress-messages.md) – možnost linkeru vám pomohou určit, které soubory linkeru odkazy. Můžete ověřit, zda je sestavení součástí souboru, který obsahuje definici symbolu.
 
-- [/EXPORTUJE](../../build/reference/dash-exports.md) a [/symboly](../../build/reference/symbols.md) možnosti **DUMPBIN** nástroj může pomoci zjistit, které značky jsou definovány v vaše soubory .dll a objekt nebo knihovny. Ověřte, že exportovaný dekorované názvy odpovídají dekorované názvy linkeru vyhledávání.
+- [/EXPORTUJE](../../build/reference/dash-exports.md) a [/symboly](../../build/reference/symbols.md) možnosti, které **DUMPBIN** nástroje vám můžou pomoct odhalit symboly, které jsou definovány v souborech DLL a objektů nebo knihoven. Ověřte, že exportovaný dekorované názvy neshoduje s dekorované názvy propojovací program vyhledá.
 
-- **UNDNAME** nástroj lze zobrazit ekvivalentní upraveného externí symbol pro upravený název.
+- **UNDNAME** nástroje lze zobrazit ekvivalentní nedekorovaných externí symbol pro upravený název.
 
 ## <a name="examples"></a>Příklady
 
-Tady je několik příkladů kódu, který způsobuje chybu LNK2019 spolu s informacemi o tom, jak chybu opravit.
+Tady je několik příkladů kódu, který způsobí chybu LNK2019, spolu s informacemi o tom, jak chybu opravit.
 
-### <a name="a-symbol-is-declared-but-not-defined"></a>Symbol je deklarován, ale není definován
+### <a name="a-symbol-is-declared-but-not-defined"></a>Symbol je deklarovaná, ale není definovaný.
 
-V tomto příkladu je deklarován externí proměnné ale není definován:
+V tomto příkladu je externí proměnná deklarovaná, ale není definována:
 
 ```cpp
 // LNK2019.cpp
@@ -130,7 +130,7 @@ int main() {
 }
 ```
 
-Zde je další příklad, kde jsou funkce a proměnné deklarovány jako `extern` , ale je k dispozici žádné definice:
+Tady je další příklad, ve kterém jsou deklarovány proměnné a funkce jako `extern` ale Azure nenabízí žádnou definici:
 
 ```cpp
 // LNK2019c.cpp
@@ -145,11 +145,11 @@ void f() {
 int main() {}
 ```
 
-Pokud `i` a `g` jsou definovány v jednom z soubory obsažené v sestavení linkeru generuje LNK2019. Chyby lze vyřešit včetně souboru zdrojového kódu, která obsahuje definice jako součást kompilace. Alternativně můžete předat soubory .obj nebo .lib soubory, které obsahují definice, které linkeru.
+Není-li `i` a `g` jsou definovány v jednom z soubory obsažené v sestavení, linker generuje LNK2019. Opravte chyby zahrnutím souboru se zdrojovým kódem, který obsahuje definice jako část kompilace. Alternativně můžete předat soubory .obj nebo .lib soubory, které obsahují definice do propojovacího programu.
 
-### <a name="a-static-data-member-is-declared-but-not-defined"></a>Člen statických dat je deklarovaný, ale není definován
+### <a name="a-static-data-member-is-declared-but-not-defined"></a>Statický datový člen je deklarovaná, ale není definovaný.
 
-LNK2019 může dojít také při členem statických dat je deklarovaný, ale není definován. Následující ukázka generuje LNK2019 a ukazuje, jak ji odstranit.
+LNK2019 může dojít také při statický datový člen je deklarovaná, ale není definovaný. Následující ukázka generuje LNK2019 a ukazuje, jak ho opravit.
 
 ```cpp
 // LNK2019b.cpp
@@ -168,9 +168,9 @@ int main() {
 }
 ```
 
-### <a name="declaration-parameters-do-not-match-definition"></a>Parametry prohlášení neodpovídají žádné definice
+### <a name="declaration-parameters-do-not-match-definition"></a>Deklarace parametrů se neshodují definice
 
-Kód, který vyvolá šablony funkce musí mít odpovídající deklarace funkce šablon. Deklarace musí obsahovat stejné parametry šablony jako definice. Následující ukázka generuje LNK2019 na uživatelem definované operátor a ukazuje, jak ji odstranit.
+Kód, který vyvolá funkce šablony musí mít odpovídající deklarace šablony funkcí. Deklarace musí obsahovat stejné parametry šablony jako definice. Následující ukázka generuje LNK2019 na uživatelem definovaný operátor a ukazuje, jak ho opravit.
 
 ```cpp
 // LNK2019e.cpp
@@ -179,7 +179,7 @@ Kód, který vyvolá šablony funkce musí mít odpovídající deklarace funkce
 #include <iostream>
 using namespace std;
 
-template<class T> class 
+template<class T> class
 Test {
    // The operator<< declaration does not match the definition below:
    friend ostream& operator<<(ostream&, Test&);
@@ -198,9 +198,9 @@ int main() {
 }
 ```
 
-### <a name="inconsistent-wchart-type-definitions"></a>Definice typů nekonzistentní wchar_t
+### <a name="inconsistent-wchart-type-definitions"></a>Definice typu wchar_t nekonzistentní
 
-Tato ukázka vytvoří knihovnu DLL, kterou má exportu, který používá `WCHAR`, který přeloží na `wchar_t`.
+Tato ukázka vytvoří knihovnu DLL, která má export, který používá `WCHAR`, která se přeloží na `wchar_t`.
 
 ```cpp
 // LNK2019g.cpp
@@ -210,7 +210,7 @@ Tato ukázka vytvoří knihovnu DLL, kterou má exportu, který používá `WCHA
 __declspec(dllexport) void func(WCHAR*) {}
 ```
 
-Další vzorek používá knihovnu DLL v předchozí ukázce a generuje LNK2019, protože typy bez znaménka krátké * a WCHAR\* nejsou stejné.
+Další ukázka používá knihovnu DLL v předchozí ukázce a vygeneruje LNK2019, protože typy unsigned short * a WCHAR\* nejsou stejné.
 
 ```cpp
 // LNK2019h.cpp
@@ -223,9 +223,9 @@ int main() {
 }
 ```
 
- Chcete-li tuto chybu opravit, změňte `unsigned short` k `wchar_t` nebo `WCHAR`, nebo zkompilovat LNK2019g.cpp pomocí **/Zc:wchar_t-**.
+Chcete-li tuto chybu vyřešit, změňte `unsigned short` k `wchar_t` nebo `WCHAR`, nebo kompilací LNK2019g.cpp pomocí **/Zc:wchar_t-**.
 
 ## <a name="additional-resources"></a>Další zdroje
 
-Další informace o možných příčinách a řešení pro LNK2001, najdete v článku na Stack Overflow otázku [co je externí symbol chybu nedefinované odkaz nebo nepřeložené a jak ji opravit?](http://stackoverflow.com/q/12573816/2002113).
+Další informace o možných příčinách a řešení pro LNK2001 viz otázka na Stack Overflow [co se o chybu nedefinované odkaz/nerozpoznaných externích symbolů a jak ho mám opravit?](http://stackoverflow.com/q/12573816/2002113).
 

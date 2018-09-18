@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c3e29c3eed99c95ee92841413ceaca6e17e8565
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 277951a5425a75c9769c5a2c4104421303f677c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755059"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065332"
 ---
 # <a name="ccomobjectstack-class"></a>Ccomobjectstack – třída
 
@@ -36,13 +36,13 @@ Tato třída se vytvoří dočasný objekt modelu COM a poskytuje základní imp
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class  Base>  
+template <class  Base>
 class CComObjectStack : public Base
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*základ*  
+*základ*<br/>
 Vaše třída odvozena od [ccomobjectroot –](../../atl/reference/ccomobjectroot-class.md) nebo [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak dobře jako z jiných rozhraní, které chcete podporovat na objekt.
 
 ## <a name="members"></a>Členové
@@ -170,7 +170,7 @@ V režimu ladění, volá `_ASSERTE`.
 
 ## <a name="see-also"></a>Viz také
 
-[CComAggObject – třída](../../atl/reference/ccomaggobject-class.md)   
-[CComObject – třída](../../atl/reference/ccomobject-class.md)   
-[Ccomobjectglobal – třída](../../atl/reference/ccomobjectglobal-class.md)   
+[CComAggObject – třída](../../atl/reference/ccomaggobject-class.md)<br/>
+[CComObject – třída](../../atl/reference/ccomobject-class.md)<br/>
+[CComObjectGlobal – třída](../../atl/reference/ccomobjectglobal-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: C2702 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2702 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 813833b5c3aeb7da0651fecb879ac12ca0713d13
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cbec8fe50c87cfc609cad5098779bc22ddae84cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234642"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061230"
 ---
-# <a name="compiler-error-c2702"></a>C2702 chyby kompilátoru
-__except se nemůže nacházet v bloku ukončení  
-  
- Obslužné rutiny výjimek (`__try`/`__except`) nelze vnořit `__finally` bloku.  
-  
- Následující ukázka generuje C2702:  
-  
-```  
-// C2702.cpp  
-// processor: x86 IPF  
-int Counter;  
-int main() {  
-   __try {}  
-   __finally {  
-      __try {}   // C2702  
-      __except( Counter ) {}   // C2702  
-   }  
-}  
+# <a name="compiler-error-c2702"></a>Chyba kompilátoru C2702
+
+možnost __except nemůže být v ukončovacím bloku.
+
+Obslužné rutiny výjimek (`__try`/`__except`) nemůže být vnořena v `__finally` bloku.
+
+Následující ukázka generuje C2702:
+
+```
+// C2702.cpp
+// processor: x86 IPF
+int Counter;
+int main() {
+   __try {}
+   __finally {
+      __try {}   // C2702
+      __except( Counter ) {}   // C2702
+   }
+}
 ```

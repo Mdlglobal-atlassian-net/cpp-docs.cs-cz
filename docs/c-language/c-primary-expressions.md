@@ -1,5 +1,5 @@
 ---
-title: Primární výrazy jazyka C | Microsoft Docs
+title: Primární výrazy jazyka C | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,30 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 688e62cc82446a2e52dc1b75a439881a4f2d8eed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 276e82a7768520c6a75c87cb49fcb26ce1f01253
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381428"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066463"
 ---
 # <a name="c-primary-expressions"></a>Primární výrazy jazyka C
-Operandy ve výrazech se nazývají "primární výrazy."  
-  
-## <a name="syntax"></a>Syntaxe  
- *primární výraz*:  
- *Identifikátor*  
-  
- *Konstantní*  
-  
- *řetězcový literál*  
-  
- **(***výraz***)**   
-  
- *výraz*:  
- *assignment-expression*  
-  
- *výraz***,***přiřazení – výraz*   
-  
-## <a name="see-also"></a>Viz také  
- [Operandy a výrazy](../c-language/operands-and-expressions.md)
+
+Operandů ve výrazech se nazývají "primární výrazy."
+
+## <a name="syntax"></a>Syntaxe
+
+*primární výraz*: *identifikátor*
+
+*Konstanty*
+
+*řetězcový literál*
+
+**(***výraz***)** 
+
+*výraz*: *výrazu přiřazení*
+
+*výraz***,***výrazu přiřazení* 
+
+## <a name="see-also"></a>Viz také
+
+[Operandy a výrazy](../c-language/operands-and-expressions.md)

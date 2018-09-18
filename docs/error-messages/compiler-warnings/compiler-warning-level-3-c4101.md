@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 3) upozornění C4101 | Microsoft Docs
+title: Upozornění (úroveň 3) C4101 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,49 +16,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 973b966e4b589cb35ffc92da9031779b14d448e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1549a327329d438cb30bd6908e07419eb1b6bc1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291112"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060834"
 ---
-# <a name="compiler-warning-level-3-c4101"></a>C4101 kompilátoru upozornění (úroveň 3)
-"identifikátor": neregistrované místní proměnné  
-  
- Místní proměnné se nikdy nepoužívá. Toto upozornění se budou provedeny v zřejmé situaci:  
-  
-```  
-// C4101a.cpp  
-// compile with: /W3  
-int main() {  
-int i;   // C4101  
-}  
-```  
-  
- Ale toto upozornění se také stane, když volání **statické** funkce člena prostřednictvím instance třídy:  
-  
-```  
-// C4101b.cpp  
-// compile with:  /W3  
-struct S {  
-   static int func()  
-   {  
-      return 1;  
-   }  
-};  
-  
-int main() {  
-   S si;   // C4101, si is never used  
-   int y = si.func();  
-   return y;  
-}  
-```  
-  
- V takovém případě kompilátor používá informace o `si` pro přístup k **statické** funkce, ale instanci třídy není potřebných k volání **statické** funkce; proto upozornění. Chcete-li vyřešit toto upozornění, vám může:  
-  
--   Přidejte konstruktor, ve kterém by kompilátor používat instanci `si` ve volání `func`.  
-  
--   Odeberte **statické** – klíčové slovo z definice `func`.  
-  
--   Volání **statické** funkce explicitně: `int y = S::func();`.
+# <a name="compiler-warning-level-3-c4101"></a>Kompilátor upozornění (úroveň 3) C4101
+
+'identifier': neodkazovaná lokální proměnná
+
+Lokální proměnné se nikdy nepoužívá. Toto upozornění se generují v zřejmé situace:
+
+```
+// C4101a.cpp
+// compile with: /W3
+int main() {
+int i;   // C4101
+}
+```
+
+Nicméně toto upozornění se vrátí taky při volání metody **statické** funkce člena prostřednictvím instance třídy:
+
+```
+// C4101b.cpp
+// compile with:  /W3
+struct S {
+   static int func()
+   {
+      return 1;
+   }
+};
+
+int main() {
+   S si;   // C4101, si is never used
+   int y = si.func();
+   return y;
+}
+```
+
+V takovém případě kompilátor používá informace o `si` přístup **statické** funkce, ale instance třídy není potřeba volat **statické** funkce; proto upozornění. Pokud chcete vyřešit toto upozornění, můžete:
+
+- Přidejte konstruktor, ve kterém by kompilátor použít instanci `si` ve volání `func`.
+
+- Odeberte **statické** – klíčové slovo z definice `func`.
+
+- Volání **statické** funkce explicitně: `int y = S::func();`.

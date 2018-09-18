@@ -1,5 +1,5 @@
 ---
-title: Upozornění linkerů Lnk4217 | Microsoft Docs
+title: Upozornění Linkerů LNK4217 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 625f3a1b8a67f198b1cb4ca37bd1350229ec20db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c650eddd8078419f63df48cc91705d2e86eb5c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300573"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067973"
 ---
 # <a name="linker-tools-warning-lnk4217"></a>Upozornění linkerů LNK4217
-místně definované symbol symbol importovat ve funkci 'function'.  
-  
- [deklarace __declspec(dllimport)](../../cpp/dllexport-dllimport.md) byl zadán pro symbol, i když symbol je definován místně. Odeberte `__declspec` modifikátor vyřešit toto upozornění.  
-  
- `symbol` je název symbol, který je definován v rámci bitovou kopii. `function` je funkce, která je import symbolu.  
-  
- Toto upozornění se nezobrazí, když zkompilujete pomocí možnosti [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
- LNK4217 může také nastat, pokud se pokusíte propojení dvou moduly společně, když místo toho by měla zkompilujete druhý modul s knihovnou import modulu první.  
-  
-```  
-// LNK4217.cpp  
-// compile with: /LD  
-#include "windows.h"  
-__declspec(dllexport) void func(unsigned short*) {}  
-```  
-  
- A pak  
-  
-```  
-// LNK4217b.cpp  
-// compile with: /c  
-#include "windows.h"  
-__declspec(dllexport) void func(unsigned short*) {}  
-```  
-  
- Při pokusu o propojení těchto dvou modulů mít za následek LNK4217, zkompilovat druhý ukázkový s knihovnou import vzorku první vyřešit.
+
+lokálně definovaný symbol 'symbol' funkce 'function' byla naimportována
+
+[__declspec(dllimport)](../../cpp/dllexport-dllimport.md) byl zadán pro symbol, i když je definován symbol místně. Odeberte `__declspec` modifikátor, chcete-li vyřešit tato upozornění.
+
+`symbol` je název symbolu, který je definován v obrázku. `function` je funkce, která importuje symbolu.
+
+Toto upozornění se nezobrazí při kompilaci pomocí volby [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).
+
+LNK4217 může také dojít, pokud při pokusu o propojení dvou modulů, když místo toho byste měli kompilovat druhý modul s importovanou knihovnou modulu první.
+
+```
+// LNK4217.cpp
+// compile with: /LD
+#include "windows.h"
+__declspec(dllexport) void func(unsigned short*) {}
+```
+
+a pak,
+
+```
+// LNK4217b.cpp
+// compile with: /c
+#include "windows.h"
+__declspec(dllexport) void func(unsigned short*) {}
+```
+
+Pokus o propojení těchto dvou modulů za následek LNK4217, kompilace druhý vzorek s importovanou knihovnou první ukázkové řešení.

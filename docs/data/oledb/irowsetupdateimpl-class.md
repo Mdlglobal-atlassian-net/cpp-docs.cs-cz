@@ -63,14 +63,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5dcaa42242410c2823388c7004a0c0a7d1991f59
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 67510ada7af557877f427d757200a48c0df95fe9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464922"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054113"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl – třída
+
 Šablony technologie OLE DB provádění [IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\)) rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe
@@ -93,23 +94,25 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *T*  
- Třída odvozená z `IRowsetUpdateImpl`.  
+
+*T*<br/>
+Třída odvozená z `IRowsetUpdateImpl`.  
   
- *Úložiště*  
- Záznam uživatele.  
+*Úložiště*<br/>
+Záznam uživatele.  
   
- *UpdateArray*  
- Pole obsahující data uložená v mezipaměti pro aktualizaci v sadě řádků.  
+*UpdateArray*<br/>
+Pole obsahující data uložená v mezipaměti pro aktualizaci v sadě řádků.  
   
- *RowClass*  
- Jednotka pro ukládání `HROW`.  
+*RowClass*<br/>
+Jednotka pro ukládání `HROW`.  
   
- *MapClass*  
- Jednotky úložiště pro všechny popisovačů řádků uchovávat zprostředkovatelem.  
+*MapClass*<br/>
+Jednotky úložiště pro všechny popisovačů řádků uchovávat zprostředkovatelem.  
 
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atldb.h  
+
+**Záhlaví:** atldb.h  
   
 ## <a name="members"></a>Členové  
   
@@ -142,20 +145,22 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 |[m_mapCachedData](#mapcacheddata)|Obsahuje původní data pro odložené operaci.|  
   
 ## <a name="remarks"></a>Poznámky  
- Nejprve byste si a porozuměli jim v dokumentaci k [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)), protože všechno, co je popsáno zde platí i zde. Doporučujeme přečíst kapitola 6 *OLE DB referenční informace pro programátory* o nastavení data.  
+
+Nejprve byste si a porozuměli jim v dokumentaci k [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)), protože všechno, co je popsáno zde platí i zde. Doporučujeme přečíst kapitola 6 *OLE DB referenční informace pro programátory* o nastavení data.  
   
- `IRowsetUpdateImpl` implementuje rozhraní OLE DB `IRowsetUpdate` rozhraní, která umožňuje uživatelům zpoždění přenosu změn provedených s `IRowsetChange` do zdroje dat a vrátit zpět změny před samotným přenosem.  
+`IRowsetUpdateImpl` implementuje rozhraní OLE DB `IRowsetUpdate` rozhraní, která umožňuje uživatelům zpoždění přenosu změn provedených s `IRowsetChange` do zdroje dat a vrátit zpět změny před samotným přenosem.  
   
 > [!IMPORTANT]
 >  Důrazně doporučujeme, abyste si přečetli následující dokumentace před pokusem o implementaci poskytovatele:  
   
--   [Vytvoření aktualizovatelného zprostředkovatele](../../data/oledb/creating-an-updatable-provider.md)  
+- [Vytvoření aktualizovatelného zprostředkovatele](../../data/oledb/creating-an-updatable-provider.md)  
   
--   Kapitola 6 *odkaz programátora technologie OLE DB*  
+- Kapitola 6 *odkaz programátora technologie OLE DB*  
   
--   Také naleznete v tématu Jak `RUpdateRowset` třída se používá [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) vzorku  
+- Také naleznete v tématu Jak `RUpdateRowset` třída se používá [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) vzorku  
 
 ## <a name="setdata"></a> IRowsetUpdateImpl::SetData
+
 Nastaví hodnoty dat v jedné nebo více sloupců.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -167,12 +172,15 @@ STDMETHOD (SetData )(HROW hRow,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+
+Zobrazit [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="remarks"></a>Poznámky  
- Přepíše tuto metodu [IRowsetChangeImpl::SetData](../../data/oledb/irowsetchangeimpl-setdata.md) metoda ale zahrnuje ukládání do mezipaměti původní data tak, aby povolovala okamžité nebo odložené zpracování operace.
+
+Přepíše tuto metodu [IRowsetChangeImpl::SetData](../../data/oledb/irowsetchangeimpl-setdata.md) metoda ale zahrnuje ukládání do mezipaměti původní data tak, aby povolovala okamžité nebo odložené zpracování operace.
 
 ## <a name="getoriginaldata"></a> IRowsetUpdateImpl::GetOriginalData
+
 Získá data naposledy předány nebo získané ze zdroje dat, ignoruje se čekající změny.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -184,9 +192,11 @@ STDMETHOD (GetOriginalData )(HROW hRow,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobrazit [IRowsetUpdate::GetOriginalData](/previous-versions/windows/desktop/ms709947\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.   
+
+Zobrazit [IRowsetUpdate::GetOriginalData](/previous-versions/windows/desktop/ms709947\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.   
 
 ## <a name="getpendingrows"></a> IRowsetUpdateImpl::GetPendingRows
+
 Vrátí seznam hodnot řádků s čekajícími změnami.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -200,15 +210,18 @@ STDMETHOD (GetPendingRows )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *hReserved*  
- [in] Odpovídá *hChapter* parametr [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\)).  
+
+*hReserved*<br/>
+[in] Odpovídá *hChapter* parametr [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\)).  
   
- Další parametry, naleznete v tématu [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.  
+Další parametry, naleznete v tématu [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.  
   
 ### <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.  
+
+Další informace najdete v tématu [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.  
 
 ## <a name="getrowstatus"></a> IRowsetUpdateImpl::GetRowStatus
+
 Vrátí stav zadaných řádků.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -221,12 +234,14 @@ STDMETHOD (GetRowStatus )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *hReserved*  
- [in] Odpovídá *hChapter* parametr [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377\(v=vs.85\)).  
+
+*hReserved*<br/>
+[in] Odpovídá *hChapter* parametr [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377\(v=vs.85\)).  
   
- Další parametry, naleznete v tématu [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.  
+Další parametry, naleznete v tématu [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.  
 
 ## <a name="undo"></a> IRowsetUpdateImpl::Undo
+
 Zruší všechny změny řádku od posledního načtení nebo aktualizace.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -241,18 +256,20 @@ STDMETHOD (Undo )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *hReserved*  
- [in] Odpovídá *hChapter* parametr [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)).  
+
+*hReserved*<br/>
+[in] Odpovídá *hChapter* parametr [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)).  
   
- *pcRowsUndone*  
- [out] Odpovídá *pcRows* parametr [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)).  
+*pcRowsUndone*<br/>
+[out] Odpovídá *pcRows* parametr [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)).  
   
- *prgRowsUndone*  
- [in] Odpovídá *prgRows* parametr [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)).  
+*prgRowsUndone*<br/>
+[in] Odpovídá *prgRows* parametr [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)).  
   
- Další parametry, naleznete v tématu [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)) v *OLE DB referenční informace pro programátory*. 
+Další parametry, naleznete v tématu [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)) v *OLE DB referenční informace pro programátory*. 
 
 ## <a name="update"></a> IRowsetUpdateImpl::Update
+
 Odesílá všechny změny provedené od posledního načtení nebo aktualizace řádku.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -267,15 +284,18 @@ STDMETHOD (Update )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *hReserved*  
- [in] Odpovídá *hChapter* parametr [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709\(v=vs.85\)).  
+
+*hReserved*<br/>
+[in] Odpovídá *hChapter* parametr [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709\(v=vs.85\)).  
   
- Další parametry, naleznete v tématu [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.  
+Další parametry, naleznete v tématu [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.  
   
 ### <a name="remarks"></a>Poznámky  
- Změny se přenáší pomocí volání [IRowsetChangeImpl::FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md). Spotřebitel musí volat [CRowset::Update](../../data/oledb/crowset-update.md) se změny projevily. Nastavte *prgRowstatus* na odpovídající hodnotu jak je popsáno v [stavy řádků](/previous-versions/windows/desktop/ms722752\(v=vs.85\)) v *OLE DB referenční informace pro programátory*. 
+
+Změny se přenáší pomocí volání [IRowsetChangeImpl::FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md). Spotřebitel musí volat [CRowset::Update](../../data/oledb/crowset-update.md) se změny projevily. Nastavte *prgRowstatus* na odpovídající hodnotu jak je popsáno v [stavy řádků](/previous-versions/windows/desktop/ms722752\(v=vs.85\)) v *OLE DB referenční informace pro programátory*. 
   
 ## <a name="isupdateallowed"></a> IRowsetUpdateImpl::IsUpdateAllowed
+
 Potlačí tuto metodu ke kontrole integrity a tak dále před aktualizací zabezpečení.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -287,19 +307,22 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Stav*  
- [in] Stav čekající operace na řádky.  
+
+*Stav*<br/>
+[in] Stav čekající operace na řádky.  
   
- *hRowUpdate*  
- [in] Popisovač pro řádky, které chce uživatel aktualizovat.  
+*hRowUpdate*<br/>
+[in] Popisovač pro řádky, které chce uživatel aktualizovat.  
   
- *pRowStatus*  
- [out] Vrátí stav pro uživatele.  
+*pRowStatus*<br/>
+[out] Vrátí stav pro uživatele.  
   
 ### <a name="remarks"></a>Poznámky  
- Pokud zjistíte, že má být povolený aktualizace, vrátí hodnotu S_OK; v opačném případě vrátí E_FAIL. Pokud povolíte aktualizaci, musíte také nastavit `DBROWSTATUS` v [IRowsetUpdateImpl::Update](../../data/oledb/irowsetupdateimpl-update.md) na odpovídající [řádek stavu](/previous-versions/windows/desktop/ms722752\(v=vs.85\)).  
+
+Pokud zjistíte, že má být povolený aktualizace, vrátí hodnotu S_OK; v opačném případě vrátí E_FAIL. Pokud povolíte aktualizaci, musíte také nastavit `DBROWSTATUS` v [IRowsetUpdateImpl::Update](../../data/oledb/irowsetupdateimpl-update.md) na odpovídající [řádek stavu](/previous-versions/windows/desktop/ms722752\(v=vs.85\)).  
 
 ## <a name="mapcacheddata"></a> IRowsetUpdateImpl::m_mapCachedData
+
 Mapa obsahuje původní data pro odložené operaci.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -313,13 +336,15 @@ m_mapCachedData;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *hRow*  
- Popisovač řádků pro data.  
+
+*hRow*<br/>
+Popisovač řádků pro data.  
   
- *pData*  
- Ukazatel na data ukládat do mezipaměti. Data jsou typu *úložiště* (třída uživatelského záznamu). Zobrazit *úložiště* argumentem šablony [IRowsetUpdateImpl – třída](../../data/oledb/irowsetupdateimpl-class.md).  
+*pData*<br/>
+Ukazatel na data ukládat do mezipaměti. Data jsou typu *úložiště* (třída uživatelského záznamu). Zobrazit *úložiště* argumentem šablony [IRowsetUpdateImpl – třída](../../data/oledb/irowsetupdateimpl-class.md).  
 
 ## <a name="see-also"></a>Viz také  
- [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
- [Vytvoření aktualizovatelného zprostředkovatele](../../data/oledb/creating-an-updatable-provider.md)
+
+[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[Vytvoření aktualizovatelného zprostředkovatele](../../data/oledb/creating-an-updatable-provider.md)

@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4358 | Microsoft Docs
+title: Upozornění (úroveň 1) C4358 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,51 +16,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f051673f56bfa66d7cd373b6917a9754c5ffd46a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ac1e9740f8e6129b4d3c71ad10f8c5a48f801c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282555"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054204"
 ---
-# <a name="compiler-warning-level-1-c4358"></a>C4358 kompilátoru upozornění (úroveň 1)
-'operátor': vrátí typ kombinované Delegáti není void; Vrácená hodnota není definován  
-  
- Dva delegáti byly kombinaci a není vrácené hodnoty void. Pokud se kombinuje dvě delegáti s není void návratové hodnoty, kompilátor nebude možné dělat správné přiřazení, když se používá návratovou hodnotu delegáta.  
-  
- Následující ukázka generuje C4358:  
-  
-```  
-// C4358.cpp  
-// compile with: /clr /W1  
-delegate int D();  
-delegate void E();  
-  
-ref class X {  
-   int i;  
-public:  
-   X(int ii) : i(ii) {}  
-   int f() {  
-      return i;  
-   }  
-};  
-  
-ref class Y {  
-   int i;  
-public:  
-   Y() {}  
-   void g() {}  
-};  
-  
-int main() {  
-   D^ d = gcnew D(gcnew X(1), &X::f);  
-   D^ d2 = gcnew D(gcnew X(2), &X::f);  
-  
-   d += d2;   // C4358  
-   int j = d();   // return value indeterminate  
-  
-   E^ e = gcnew E(gcnew Y, &Y::g);  
-   E^ e2 = gcnew E(gcnew Y, &Y::g);  
-   e += e2;   // OK  
-}  
+# <a name="compiler-warning-level-1-c4358"></a>Kompilátor upozornění (úroveň 1) C4358
+
+'operator': návratový typ kombinovaných delegátů není void; Vrácená hodnota není definována
+
+Byly sloučeny dvou delegátů a návratová hodnota není typu void. Pokud se zkombinuje dva delegáty s neprázdným návratovým hodnotám, kompilátor nebude možné udělat správné přiřazení, pokud se používá na návratový typ delegáta.
+
+Následující ukázka generuje C4358:
+
+```
+// C4358.cpp
+// compile with: /clr /W1
+delegate int D();
+delegate void E();
+
+ref class X {
+   int i;
+public:
+   X(int ii) : i(ii) {}
+   int f() {
+      return i;
+   }
+};
+
+ref class Y {
+   int i;
+public:
+   Y() {}
+   void g() {}
+};
+
+int main() {
+   D^ d = gcnew D(gcnew X(1), &X::f);
+   D^ d2 = gcnew D(gcnew X(2), &X::f);
+
+   d += d2;   // C4358
+   int j = d();   // return value indeterminate
+
+   E^ e = gcnew E(gcnew Y, &Y::g);
+   E^ e2 = gcnew E(gcnew Y, &Y::g);
+   e += e2;   // OK
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4207 | Microsoft Docs
+title: Upozornění (úroveň 4) C4207 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e5ed69cfcbaa71a6bb0093944aab7de2f516cc3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a5aa7f364eb8f60d680dde4c252b9c84e258cda0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297638"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068829"
 ---
-# <a name="compiler-warning-level-4-c4207"></a>C4207 kompilátoru upozornění (úroveň 4)
-nestandardní rozšíření používané: rozšířené inicializátoru formuláře  
-  
- Rozšíření Microsoft (/Ze), bude možné inicializovat nenastavenou velikostí pole `char` pomocí řetězce v rámci složené závorky.  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// C4207.c  
-// compile with: /W4  
-char c[] = { 'a', 'b', "cdefg" }; // C4207  
-  
-int main()  
-{  
-}  
-```  
-  
- Takové inicializacích jsou neplatné v části kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+# <a name="compiler-warning-level-4-c4207"></a>Kompilátor upozornění (úroveň 4) C4207
+
+používá se nestandardní rozšíření: Rozšířená podoba inicializátoru
+
+S rozšířeními společnosti Microsoft (/Ze), můžete inicializovat pole nesetříděné podle velikosti `char` pomocí řetězce v závorkách.
+
+## <a name="example"></a>Příklad
+
+```
+// C4207.c
+// compile with: /W4
+char c[] = { 'a', 'b', "cdefg" }; // C4207
+
+int main()
+{
+}
+```
+
+Tyto inicializace jsou neplatné pod kompatibility ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

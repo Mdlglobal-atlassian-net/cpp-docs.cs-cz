@@ -1,5 +1,5 @@
 ---
-title: C2577 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2577 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af4fb6d5a2d7621df1b11e9040ca7dd4f5551289
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d9a2b09fc9b8b15c4fc21f5eb537f18f5d3b03e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232048"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065813"
 ---
-# <a name="compiler-error-c2577"></a>C2577 chyby kompilátoru
-"člen": destruktor/finalizační metodu nemůže mít typ vrácené hodnoty.  
-  
- Destruktor nebo finalizační metodu nemůže vrátit hodnotu `void` nebo jiné. Odeberte `return` příkaz z definice destruktor.  
-  
-## <a name="example"></a>Příklad  
- Následující ukázka generuje C2577.  
-  
-```  
-// C2577.cpp  
-// compile with: /c  
-class A {  
-public:  
-   A() {}  
-   ~A(){  
-      return 0;   // C2577  
-   }  
-};  
+# <a name="compiler-error-c2577"></a>Chyba kompilátoru C2577
+
+'member': destruktor nebo finalizační metoda nemůže mít návratový typ.
+
+Destruktor nebo finalizační metoda nemůže vrátit hodnotu `void` nebo jakéhokoli jiného typu. Odeberte `return` příkaz z definice destruktor.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2577.
+
+```
+// C2577.cpp
+// compile with: /c
+class A {
+public:
+   A() {}
+   ~A(){
+      return 0;   // C2577
+   }
+};
 ```

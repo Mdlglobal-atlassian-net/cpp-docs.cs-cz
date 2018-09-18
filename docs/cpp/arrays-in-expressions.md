@@ -15,26 +15,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b792bc02cf620cbd961830a99e35ae0c61898fed
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 34f8a45dfa9de9a5a48e13cb6a38f667e5963f2d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408692"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068543"
 ---
 # <a name="arrays-in-expressions"></a>Pole ve výrazech
-Když identifikátor typu pole objeví ve výrazu jiné než `sizeof`, adresy (**&**), nebo inicializace odkazu, je převeden na ukazatel na první prvek pole. Příklad:  
-  
-```cpp 
-char szError1[] = "Error: Disk drive not ready.";  
-char *psz = szError1;  
-```  
-  
- Ukazatel `psz` odkazuje na první prvek pole `szError1`. Všimněte si, že pole, narozdíl od ukazatelů, nejsou upravitelné l-hodnoty. Proto je následující přiřazení neplatné:  
-  
-```cpp 
-szError1 = psz;  
-```  
-  
-## <a name="see-also"></a>Viz také:  
- [Pole](../cpp/arrays-cpp.md)
+
+Když identifikátor typu pole objeví ve výrazu jiné než `sizeof`, adresy (**&**), nebo inicializace odkazu, je převeden na ukazatel na první prvek pole. Příklad:
+
+```cpp
+char szError1[] = "Error: Disk drive not ready.";
+char *psz = szError1;
+```
+
+Ukazatel `psz` odkazuje na první prvek pole `szError1`. Všimněte si, že pole, narozdíl od ukazatelů, nejsou upravitelné l-hodnoty. Proto je následující přiřazení neplatné:
+
+```cpp
+szError1 = psz;
+```
+
+## <a name="see-also"></a>Viz také:
+
+[Pole](../cpp/arrays-cpp.md)

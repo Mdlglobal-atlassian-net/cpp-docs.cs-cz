@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4566 | Microsoft Docs
+title: Upozornění (úroveň 1) C4566 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8044df3a37e54585f7f3b495b99314e258934f1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c25ff9d2a4c915570a28752d11778983f2cf2fc3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284222"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049173"
 ---
-# <a name="compiler-warning-level-1-c4566"></a>C4566 kompilátoru upozornění (úroveň 1)
-znak reprezentována universal znak name "char" není možné vyjádřit v aktuální znakové stránky (stránky)  
-  
- Ne každý znak Unicode může být reprezentován ve vaší aktuální znaková stránka ANSI.  
-  
- Úzké řetězce (jeden bajt znaků) se převedou na vícebajtové znaky, zatímco nejsou široké řetězce (dva bajtové znaky).  
-  
- Následující ukázka generuje C4566:  
-  
-```  
-// C4566.cpp  
-// compile with: /W1  
-int main() {  
-   char c1 = '\u03a0';   // C4566  
-   char c2 = '\u0642';   // C4566  
-  
-   wchar_t c3 = L'\u03a0';   // OK  
-   wchar_t c4 = L'\u0642';   // OK  
-}  
+# <a name="compiler-warning-level-1-c4566"></a>Kompilátor upozornění (úroveň 1) C4566
+
+znak reprezentován universal-character-name 'char' nemůže být reprezentovaný v aktuální znakové stránce (stránky)
+
+Každý znak Unicode lze znázornit v aktuální znakové stránce ANSI.
+
+Úzký řetězce (jeden bajtové znaků), jsou převedeny na vícebajtové znaky vzhledem k tomu jsou velké řetězce (dvoubajtové znaky) není.
+
+Následující ukázka generuje C4566:
+
+```
+// C4566.cpp
+// compile with: /W1
+int main() {
+   char c1 = '\u03a0';   // C4566
+   char c2 = '\u0642';   // C4566
+
+   wchar_t c3 = L'\u03a0';   // OK
+   wchar_t c4 = L'\u0642';   // OK
+}
 ```

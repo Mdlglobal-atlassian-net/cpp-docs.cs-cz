@@ -1,5 +1,5 @@
 ---
-title: Chyba sestavení projektu PRJ0008 | Microsoft Docs
+title: Chyba sestavení projektu PRJ0008 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4011a27b7e6707f9c9b4e3ed386306b00f2792cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d7c24634a845423de590228af01cb9f4779e37ab
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317642"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062784"
 ---
 # <a name="project-build-error-prj0008"></a>Chyba sestavení projektu PRJ0008
-Soubor 'file' se nepodařilo odstranit.  
-  
- **Ujistěte se, zda soubor není otevřen jiným procesem a není chráněna proti zápisu.**  
-  
- Při opětovném sestavení nebo vyčistit, Visual C++ odstraní všechny známé zprostředkující a výstupní soubory pro sestavení, a také všechny soubory, které splňují specifikace zástupného znaku v **rozšíření k odstranění na vyčištění** vlastnost [obecné Stránka vlastností nastavení konfigurace](../../ide/general-property-page-project.md).  
-  
- Tato chyba se zobrazí, pokud není možné odstranit soubor Visual C++. Chcete-li vyřešit chyby, ujistěte se, souboru a jeho adresáře nelze zapisovat pro uživatele provádějícího sestavení.
+
+Soubor 'file' se nepodařilo odstranit.
+
+**Ujistěte se, že soubor není otevřen jiným procesem a že není chráněn proti zápisu.**
+
+Během opětovné sestavení nebo vyčištění, odstraní všechny známé pomocných a výstupních souborů pro sestavení, stejně jako všechny soubory, které splňují na určení zástupných znaků ve Visual C++ **přípony odstraňované při čištění** vlastnost [obecné Stránka pro konfiguraci nastavení vlastností](../../ide/general-property-page-project.md).
+
+Tato chyba se zobrazí, pokud není možné odstranit soubor jazyka Visual C++. Chcete-li vyřešit chybu, možnit souboru a jeho adresář pro uživatele provádějícího sestavení.

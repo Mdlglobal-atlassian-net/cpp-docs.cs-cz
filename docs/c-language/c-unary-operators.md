@@ -1,5 +1,5 @@
 ---
-title: Unární operátory jazyka C | Microsoft Docs
+title: Unární operátory jazyka C | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,32 +15,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d307ee359bd9eb1bfee0e33615f4906646ff22de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ee0f818cca1e7569d3ba6cb53524f2bbc4f12e28
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381236"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062771"
 ---
 # <a name="c-unary-operators"></a>Unární operátory jazyka C
-Unární operátory zobrazí před jejich operand a přidružit zprava doleva.  
-  
-## <a name="syntax"></a>Syntaxe  
- *Unární výraz*:  
- *operátory – výraz*  
-  
- **++**  *Unární výraz*  
-  
- `--`  *Unární výraz*  
-  
- *Unární operátor přetypování – výraz*  
-  
- **sizeof –***unární výraz*   
-  
- **sizeof (***název typu***)**   
-  
- *Unární operátor*: jeden z  
- **& \* + -** `~` **!**  
-  
-## <a name="see-also"></a>Viz také  
- [Operátory jazyka C](../c-language/c-operators.md)
+
+Unární operátory vyskytovat před jejich operand a přidružte zprava doleva.
+
+## <a name="syntax"></a>Syntaxe
+
+*Unární výraz*: *postfix-expression*
+
+**++**  *Unární výraz*
+
+`--`  *Unární výraz*
+
+*Unární operátor přetypování – výraz*
+
+**operátor sizeof:***unární výraz* 
+
+**sizeof (***název typu***)** 
+
+*Unární operátor*: jeden z  **&  \* + -** `~` **!**
+
+## <a name="see-also"></a>Viz také
+
+[Operátory jazyka C](../c-language/c-operators.md)

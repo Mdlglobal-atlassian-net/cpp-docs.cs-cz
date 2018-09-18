@@ -1,5 +1,5 @@
 ---
-title: Chyba sestavení projektu PRJ0009 | Microsoft Docs
+title: Chyba sestavení projektu PRJ0009 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5692ec643f5e3fe1adebf68048a6c435ab05d6f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: efeb110823e801dd86a503a7069c4898f400769e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318451"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057181"
 ---
 # <a name="project-build-error-prj0009"></a>Chyba sestavení projektu PRJ0009
-Sestavení protokolu nelze otevřít pro zápis.  
-  
- **Ujistěte se, zda soubor není otevřen jiným procesem a není chráněna proti zápisu.**  
-  
- Po nastavení **sestavení protokolování** vlastnost **Ano** a provádění sestavení nebo opětovném sestavení, Visual C++ se nepodařilo otevřít protokolu sestavení ve výhradním režimu.  
-  
- Zkontrolujte **sestavení protokolování** nastavení otevřením **možnosti** dialogové okno (na **nástroje** nabídky, klikněte na tlačítko **možnosti** příkaz) a potom Výběr **VC ++ sestavení** v **projekty** složky. Soubor sestavení je volána BuildLog.htm a je zapsán do zprostředkující directory $(IntDir).  
-  
- Možné důvody této chyby:  
-  
--   Jsou spuštěné dva procesy Visual c++ a pokusu o vytvoření stejnou konfiguraci stejného projektu v obou současně.  
-  
--   Soubor protokolu sestavení je otevřen v procesu, který uzamkne soubor.  
-  
--   Uživatel nemá oprávnění k vytvoření souboru.  
-  
--   Aktuální uživatel nemá oprávnění k zápisu do souboru BuildLog.htm.
+
+Vytvoření protokolu nelze otevřít pro zápis.
+
+**Ujistěte se, že soubor není otevřen jiným procesem a že není chráněn proti zápisu.**
+
+Po nastavení **sestavení protokolování** vlastnost **Ano** a provádění sestavení nebo opětovné sestavení, Visual C++ se nepodařilo otevřít protokol sestavení ve výhradním režimu.
+
+Zkontrolujte **sestavení protokolování** nastavení tak, že otevřete **možnosti** dialogové okno (na **nástroje** nabídky, klikněte na tlačítko **možnosti** příkaz) a pak Výběr **sestavení VC ++** v **projekty** složky. Soubor sestavení se nazývá BuildLog.htm a je zapsaný $ zprostředkující adresář (IntDir).
+
+Možné důvody této chyby:
+
+- Jsou spuštěné dva procesy jazyka Visual C++ a chcete současně vytvořit stejnou konfiguraci stejného projektu v obou.
+
+- Soubor protokolu sestavení je otevřený v procesu, který uzamkne soubor.
+
+- Uživatel nemá oprávnění k vytvoření souboru.
+
+- Aktuální uživatel nemá oprávnění k zápisu do souboru BuildLog.htm.

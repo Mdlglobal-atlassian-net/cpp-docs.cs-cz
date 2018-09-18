@@ -1,5 +1,5 @@
 ---
-title: C3056 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3056 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,44 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52ec97865a1aa9c8b6da9b109bf100eb62824a9d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0495bc9c31df3aa3ff47ef860e8e47ea6f7c2248
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249164"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063577"
 ---
-# <a name="compiler-error-c3056"></a>C3056 chyby kompilátoru
-'symbol': symbol není ve stejném oboru s 'threadprivate' – direktiva  
-  
- Symbol použitý v [threadprivate](../../parallel/openmp/reference/threadprivate.md) klauzule musí být ve stejném oboru jako `threadprivate` klauzule.  
-  
- Následující ukázka generuje C3056:  
-  
-```  
-// C3056.cpp  
-// compile with: /openmp  
-int x, y;  
-void test() {  
-   #pragma omp threadprivate(x, y)   // C3056  
-   #pragma omp parallel copyin(x, y)  
-   {  
-      x = y;  
-   }  
-}  
-```  
-  
- Možná řešení:  
-  
-```  
-// C3056b.cpp  
-// compile with: /openmp /LD  
-int x, y;  
-#pragma omp threadprivate(x, y)  
-void test() {  
-   #pragma omp parallel copyin(x, y)  
-   {  
-      x = y;  
-   }  
-}  
+# <a name="compiler-error-c3056"></a>Chyba kompilátoru C3056
+
+'symbol': symbol není ve stejném oboru jako direktiva threadprivate.
+
+Symbol použitý v [threadprivate](../../parallel/openmp/reference/threadprivate.md) klauzule musí být ve stejném oboru jako `threadprivate` klauzuli.
+
+Následující ukázka generuje C3056:
+
+```
+// C3056.cpp
+// compile with: /openmp
+int x, y;
+void test() {
+   #pragma omp threadprivate(x, y)   // C3056
+   #pragma omp parallel copyin(x, y)
+   {
+      x = y;
+   }
+}
+```
+
+Možná řešení:
+
+```
+// C3056b.cpp
+// compile with: /openmp /LD
+int x, y;
+#pragma omp threadprivate(x, y)
+void test() {
+   #pragma omp parallel copyin(x, y)
+   {
+      x = y;
+   }
+}
 ```

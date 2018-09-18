@@ -1,5 +1,5 @@
 ---
-title: C3744 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3744 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f96b8445c343bdd4f606157e692c4d6ce262e369
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d644a621fc6d8e460e1b97e5baec360de8662365
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265880"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063720"
 ---
-# <a name="compiler-error-c3744"></a>C3744 chyby kompilátoru
-__unhook musí mít aspoň 3 argumenty pro spravované události  
-  
- [__Unhook](../../cpp/unhook.md) funkce vyžaduje tři parametry při použití v programu, který je zkompilovaném pro spravovaných rozšíření jazyka C++.  
-  
- `__hook` a `__unhook` nejsou kompatibilní s programováním/CLR. Místo toho použijte += a-= operátory.  
-  
- C3744 je dostupný, pomocí možnosti zastaralé kompilátoru pouze **/clr:oldSyntax**.  
+# <a name="compiler-error-c3744"></a>Chyba kompilátoru C3744
+
+__unhook musí mít aspoň 3 argumenty pro spravované události.
+
+[__Unhook](../../cpp/unhook.md) funkce musí mít tři parametry při použití v programu, který je kompilován pro spravované rozšíření jazyka C++.
+
+`__hook` a `__unhook` nejsou kompatibilní s/CLR programování. Místo toho použijte operátory += a-=.
+
+C3744 dosažitelný pouze pomocí možnosti kompilátoru zastaralé **oldSyntax**.

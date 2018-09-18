@@ -1,5 +1,5 @@
 ---
-title: Chyba sestavení projektu PRJ0027 | Microsoft Docs
+title: Chyba sestavení projektu PRJ0027 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a1c25f87913de312ca766b05edbac39f7191ff0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c642c678c7db29b9826449731f07ad90bc865294
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318984"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062056"
 ---
 # <a name="project-build-error-prj0027"></a>Chyba sestavení projektu PRJ0027
-Zprávy protokolu Unicode "obsah" obsahuje obsah, který nebylo možné přeložit na uživatele ANSI znakovou stránku.  
-  
- Obvykle pouze zobrazí se toto upozornění ve spojení s chybami při vytváření soubory batch nebo odpovědi.  
-  
- Řešením této chyby je aktualizovat obsah sestavení protokolu použití ANSI nebo na počítač nainstalujte znakovou stránku a nastavte jej jako výchozí systémové nastavení.
+
+Zpráva protokolu Unicode "obsah" obsahuje obsah, který se nepodařilo přeložit na znakovou stránku ANSI uživatele.
+
+Obvykle bude pouze zobrazí toto upozornění ve spojení s chybami při vytváření souborů služby batch a/nebo odpovědí.
+
+Řešení této chyby je aktualizovat obsah do protokolu sestavení použití ANSI nebo k instalaci na znakovou stránku ve vašem počítači a nastavte jej jako výchozí systémové hodnoty.

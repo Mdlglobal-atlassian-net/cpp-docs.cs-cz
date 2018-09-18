@@ -1,5 +1,5 @@
 ---
-title: C3004 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3004 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c03f9b609bfa7f60794a120488315680e5f6df2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d9ccca52b5977c5d709b79dbc6351b5a94605849
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243584"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068792"
 ---
-# <a name="compiler-error-c3004"></a>C3004 chyby kompilátoru
-'klauzule': klauzule není platný na "směrnice" OpenMP – direktiva  
-  
- Klauzule OpenMP byl použit na direktivu, pro který není povolené.  
-  
- Následující ukázka generuje C3004:  
-  
-```  
-// C3004.c  
-// compile with: /openmp  
-int main()  
-{  
-   int x, y, z;  
-  
-   // Shared clause not allowed for 'single' directive.  
-   #pragma omp single shared(x, y)   // C3004  
-  
-   x = y;  
-}  
+# <a name="compiler-error-c3004"></a>Chyba kompilátoru C3004
+
+'klauzule': není platný "direktiva" direktivy OpenMP – klauzule
+
+OpenMP – klauzule byl použit v direktivě, pro který není povolen.
+
+Následující ukázka generuje C3004:
+
+```
+// C3004.c
+// compile with: /openmp
+int main()
+{
+   int x, y, z;
+
+   // Shared clause not allowed for 'single' directive.
+   #pragma omp single shared(x, y)   // C3004
+
+   x = y;
+}
 ```

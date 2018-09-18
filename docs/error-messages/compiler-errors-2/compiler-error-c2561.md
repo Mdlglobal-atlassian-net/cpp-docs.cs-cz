@@ -1,5 +1,5 @@
 ---
-title: C2561 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2561 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f8ece9a3d9347a5179844cbfca3425870c25e2f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8611af23ab884a853fc751ae82c636753993495b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230900"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070701"
 ---
-# <a name="compiler-error-c2561"></a>C2561 chyby kompilátoru
-"identifikátor": funkce musí vrátit hodnotu  
-  
- Funkce byla deklarována jako vrací hodnotu, ale neobsahuje definici funkce `return` příkaz.  
-  
- Tato chyba může být způsobeno prototypu nesprávná funkce:  
-  
-1.  Pokud funkce nevrací hodnotu, deklarovat s návratovým typem funkce [void](../../cpp/void-cpp.md).  
-  
-2.  Zkontrolujte, jestli všechny možné větve funkce vrátí hodnotu typu deklarován v prototypu.  
-  
-3.  Funkce C++ obsahující vložené sestavení rutiny, které ukládají návratovou hodnotu v `AX` registrace může být nutné příkaz return. Zkopírujte hodnotu v `AX` dočasné proměnné a vrátí tuto proměnnou z funkce.  
-  
- Následující ukázka generuje C2561:  
-  
-```  
-// C2561.cpp  
-int Test(int x) {  
-   if (x) {  
-      return;   // C2561  
-      // try the following line instead  
-      // return 1;  
-   }  
-   return 0;  
-}  
-  
-int main() {  
-   Test(1);  
-}  
+# <a name="compiler-error-c2561"></a>Chyba kompilátoru C2561
+
+'identifier': funkce musí vracet hodnotu
+
+Funkce byla deklarována jako návratová hodnota, ale neobsahuje definici funkce `return` příkazu.
+
+Tuto chybu může způsobovat nesprávné funkci prototyp:
+
+1. Pokud funkce nevrací hodnotu, deklarujte funkci s návratovým typem [void](../../cpp/void-cpp.md).
+
+1. Zkontrolujte, že všechny možné větve funkce vrátí hodnotu typu deklarované v prototypu.
+
+1. Funkce jazyka C++ obsahující vložené sestavení rutin, které uložení návratové hodnoty v `AX` registrace může být nutné příkaz return. Zkopírujte hodnotu v `AX` k dočasné proměnné a tuto proměnnou vrácení z funkce.
+
+Následující ukázka generuje C2561:
+
+```
+// C2561.cpp
+int Test(int x) {
+   if (x) {
+      return;   // C2561
+      // try the following line instead
+      // return 1;
+   }
+   return 0;
+}
+
+int main() {
+   Test(1);
+}
 ```

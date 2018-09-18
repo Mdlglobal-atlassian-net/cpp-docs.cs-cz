@@ -1,5 +1,5 @@
 ---
-title: C2017 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2017 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 019c166b1945bee26c11115000fae3c2f3f99968
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f547501ab399165fe256f0dc3d0423b3569c05e7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172550"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062199"
 ---
-# <a name="compiler-error-c2017"></a>C2017 chyby kompilátoru
-Neplatná řídicí sekvence  
-  
- Řídicí sekvence, jako je například \t, zobrazí se mimo znak nebo řetězec konstantní.  
-  
- Následující ukázka generuje C2017:  
-  
-```  
-// C2017.cpp  
-int main() {  
-   char test1='a'\n;   // C2017  
-   char test2='a\n';   // ok  
-}  
-```  
-  
- C2017 může dojít, když se používá operátor stringize s řetězců, které obsahují řídicí sekvence.  
-  
- Následující ukázka generuje C2017:  
-  
-```  
-// C2017b.cpp  
-#define TestDfn(x) AfxMessageBox(#x)  
-TestDfn(CString("\\") + CString(".h\"\n\n"));   // C2017  
+# <a name="compiler-error-c2017"></a>Chyba kompilátoru C2017
+
+Neplatná řídicí sekvence
+
+Sekvence escape, jako je například \t, se zobrazí vně znak nebo řetězec konstanty.
+
+Následující ukázka generuje C2017:
+
+```
+// C2017.cpp
+int main() {
+   char test1='a'\n;   // C2017
+   char test2='a\n';   // ok
+}
+```
+
+C2017 může dojít, když stringize operátor se používá s řetězců, které obsahují řídicí sekvence.
+
+Následující ukázka generuje C2017:
+
+```
+// C2017b.cpp
+#define TestDfn(x) AfxMessageBox(#x)
+TestDfn(CString("\\") + CString(".h\"\n\n"));   // C2017
 ```

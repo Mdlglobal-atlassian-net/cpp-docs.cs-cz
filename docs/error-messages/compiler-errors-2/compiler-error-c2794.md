@@ -1,5 +1,5 @@
 ---
-title: C2794 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2794 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cee2ce072f3dfe106434443ba28047cf7b58284
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c81e8dcfde2a24c4a827406c3e499c12e891b2f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237389"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068010"
 ---
-# <a name="compiler-error-c2794"></a>C2794 chyby kompilátoru
-'function': není členem žádné přímý nebo nepřímý základní třídě 'class'.  
-  
- Pokusili jste se použít [super](../../cpp/super.md) volat funkci neexistující člen.  
-  
- Následující ukázka generuje C2794  
-  
-```  
-// C2794.cpp  
-struct B {  
-   void mf();  
-};  
-  
-struct D : B {  
-   void mf() {  
-      __super::f();  // C2794  
-   }  
-};  
+# <a name="compiler-error-c2794"></a>Chyba kompilátoru C2794
+
+'function': není člen žádné přímé ani nepřímé základní třídy 'class'
+
+Pokusili jste se použít [mimořádně](../../cpp/super.md) volat neexistující členská funkce.
+
+Následující ukázka generuje C2794
+
+```
+// C2794.cpp
+struct B {
+   void mf();
+};
+
+struct D : B {
+   void mf() {
+      __super::f();  // C2794
+   }
+};
 ```

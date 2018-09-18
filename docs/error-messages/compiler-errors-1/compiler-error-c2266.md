@@ -1,5 +1,5 @@
 ---
-title: C2266 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2266 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cada178ed73ff9388b5f86d5d20220b375971e3c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c6f28741d5ae090a497ce3ebc3a56f68fc87e1b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167998"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067353"
 ---
-# <a name="compiler-error-c2266"></a>C2266 chyby kompilátoru
-"identifikátor": referenční dokumentace k poli ohraničené nekonstantní je neplatný  
-  
- Odkaz je deklarovaný pro pole s nonconstant, vázána. Pole musí mít konstantní hranice.
+# <a name="compiler-error-c2266"></a>Chyba kompilátoru C2266
+
+'identifier': odkaz na nekonstantní vázané pole je neplatné
+
+Odkaz je deklarován pro pole s nonconstant vázána. Pole musí mít konstantní hranice.

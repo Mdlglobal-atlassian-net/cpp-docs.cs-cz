@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 715fcc37c41251b0a42fd6508f8a358758105a1f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 47cd4cc765459acc6270c64b6cc37fe328f36757
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680192"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069414"
 ---
 # <a name="tiledindex-class"></a>tiled_index – třída
 Poskytuje index do [tiled_extent](tiled-extent-class.md) objektu. Tato třída obsahuje vlastnosti pro přístup k prvkům vzhledem k místnímu původu bloku a ke globálnímu původu. Další informace o prostorech vedle sebe, naleznete v tématu [pomocí dlaždice](../../../parallel/amp/using-tiles.md).  
@@ -62,14 +62,14 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_Dim0`  
- Délka nejvýznamnějšího rozměru.  
+*_Dim0*<br/>
+Délka nejvýznamnějšího rozměru.  
   
- `_Dim1`  
- Délka druhého nejvýznamnějšího rozměru další úplně.  
+*_Dim1*<br/>
+Délka druhého nejvýznamnějšího rozměru další úplně.  
   
- `_Dim2`  
- Velikost nejméně významného rozměru.  
+*_Dim2*<br/>
+Velikost nejméně významného rozměru.  
   
 ## <a name="members"></a>Členové  
   
@@ -140,23 +140,23 @@ tiled_index(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_Global`  
- Globální [index](index-class.md) vytvořeného `tiled_index`.  
+*_Global*<br/>
+Globální [index](index-class.md) vytvořeného `tiled_index`.  
   
- `_Local`  
- Místní [index](index-class.md) vytvořeného `tiled_index`  
+*_Místní*<br/>
+Místní [index](index-class.md) vytvořeného `tiled_index`  
   
- `_Tile`  
- Na dlaždici [index](index-class.md) vytvořeného `tiled_index`  
+*_Tile*<br/>
+Na dlaždici [index](index-class.md) vytvořeného `tiled_index`  
   
- `_Tile_origin`  
- Původu dlaždice [index](index-class.md) vytvořeného `tiled_index`  
+*_Tile_origin*<br/>
+Původu dlaždice [index](index-class.md) vytvořeného `tiled_index`  
   
- `_Barrier`  
- [Tile_barrier](tile-barrier-class.md) vytvořeného `tiled_index`.  
+*_Barrier*<br/>
+[Tile_barrier](tile-barrier-class.md) vytvořeného `tiled_index`.  
   
- `_Other`  
- `tile_index` Objekt ke zkopírování do vytvořeného `tiled_index`.  
+*Ji_né*<br/>
+`tile_index` Objekt ke zkopírování do vytvořeného `tiled_index`.  
   
 ## <a name="overloads"></a>Přetížení  
   

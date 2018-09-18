@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4006 | Microsoft Docs
+title: Upozornění (úroveň 1) C4006 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b6cb37e383f4bfb9dd7f070344141b49ddf4f54
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 35987244498b95dfee6f285f100237c3d3a361ea
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276471"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037038"
 ---
-# <a name="compiler-warning-level-1-c4006"></a>C4006 kompilátoru upozornění (úroveň 1)
-\#undef byl očekáván identifikátor  
-  
- `#undef` – Direktiva nezadali identifikátor k nedefinované. Direktiva je ignorován. Chcete-li vyřešit upozornění, nezapomeňte zadat identifikátor. Následující ukázka generuje C4006:  
-  
-```  
-// C4006.cpp  
-// compile with: /W1  
-#undef   // C4006  
-  
-// try..  
-// #undef TEST  
-  
-int main() {  
-}  
+# <a name="compiler-warning-level-1-c4006"></a>Kompilátor upozornění (úroveň 1) C4006
+
+\#undef byl očekáván identifikátor
+
+`#undef` – Direktiva neurčil identifikátor definice. Direktiva se ignoruje. Chcete-li vyřešit upozornění, je potřeba zadat identifikátor. Následující ukázka generuje C4006:
+
+```
+// C4006.cpp
+// compile with: /W1
+#undef   // C4006
+
+// try..
+// #undef TEST
+
+int main() {
+}
 ```

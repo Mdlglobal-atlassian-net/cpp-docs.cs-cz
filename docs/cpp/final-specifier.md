@@ -16,59 +16,63 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f28ae7b7cb8bdcf335757c58d5e744974f4c7cad
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e382bd75a734b205389b83455e3ab020f54ca6d3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405954"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066229"
 ---
 # <a name="final-specifier"></a>final – specifikátor
-Můžete použít **konečné** – klíčové slovo pro označení virtuálních funkcí, které nelze přepsat v odvozené třídě. Lze jej také použít k označení tříd, ze kterých nelze dědit.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-function-declaration final;  
-class class-name final base-classes  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- **poslední** je kontextový a má zvláštní význam, jen když se používá po deklaraci funkce nebo názvu třídy, jinak, to není rezervované klíčové slovo.  
-  
- Když **konečné** se používá v deklaracích třídy `base-classes` volitelnou částí deklarace.  
-  
-## <a name="example"></a>Příklad  
- V následujícím příkladu **konečné** – klíčové slovo k určení toho, že virtuální funkci nelze přepsat.  
-  
-```cpp  
-class BaseClass  
-{  
-    virtual void func() final;  
-};  
-  
-class DerivedClass: public BaseClass  
-{  
-    virtual void func(); // compiler error: attempting to   
-                         // override a final function  
-};  
-```  
-  
- Informace o tom, jak určit, že můžete členské funkce přepsat, naleznete v tématu [specifikátor override](../cpp/override-specifier.md).  
-  
- Následující příklad používá **konečné** – klíčové slovo k určení, zda třídu nelze zdědit.  
-  
-```cpp  
-class BaseClass final   
-{  
-};  
-  
-class DerivedClass: public BaseClass // compiler error: BaseClass is   
-                                     // marked as non-inheritable  
-{  
-};  
-```  
-  
-## <a name="see-also"></a>Viz také:  
- [klíčová slova](../cpp/keywords-cpp.md)   
- [override – specifikátor](../cpp/override-specifier.md)
+
+Můžete použít **konečné** – klíčové slovo pro označení virtuálních funkcí, které nelze přepsat v odvozené třídě. Lze jej také použít k označení tříd, ze kterých nelze dědit.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+function-declaration final;
+class class-name final base-classes
+```
+
+## <a name="remarks"></a>Poznámky
+
+**poslední** je kontextový a má zvláštní význam, jen když se používá po deklaraci funkce nebo názvu třídy, jinak, to není rezervované klíčové slovo.
+
+Když **konečné** se používá v deklaracích třídy `base-classes` volitelnou částí deklarace.
+
+## <a name="example"></a>Příklad
+
+V následujícím příkladu **konečné** – klíčové slovo k určení toho, že virtuální funkci nelze přepsat.
+
+```cpp
+class BaseClass
+{
+    virtual void func() final;
+};
+
+class DerivedClass: public BaseClass
+{
+    virtual void func(); // compiler error: attempting to
+                         // override a final function
+};
+```
+
+Informace o tom, jak určit, že můžete členské funkce přepsat, naleznete v tématu [specifikátor override](../cpp/override-specifier.md).
+
+Následující příklad používá **konečné** – klíčové slovo k určení, zda třídu nelze zdědit.
+
+```cpp
+class BaseClass final
+{
+};
+
+class DerivedClass: public BaseClass // compiler error: BaseClass is
+                                     // marked as non-inheritable
+{
+};
+```
+
+## <a name="see-also"></a>Viz také:
+
+[Klíčová slova](../cpp/keywords-cpp.md)<br/>
+[override – specifikátor](../cpp/override-specifier.md)

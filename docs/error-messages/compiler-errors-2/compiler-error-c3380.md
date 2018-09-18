@@ -1,5 +1,5 @@
 ---
-title: C3380 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3380 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 315031946f9a89f53097e4c2371286fba213f698
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e35c4edaf24aacbd7eb9938a1dea2c470d32caae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252445"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062589"
 ---
-# <a name="compiler-error-c3380"></a>C3380 chyby kompilátoru
-'class': Neplatné sestavení přístup specifikátor - pouze 'veřejné' nebo 'privátní, jsou povolené.  
-  
- Při použití spravovaných třídě nebo struktuře, [veřejné](../../cpp/public-cpp.md) a [privátní](../../cpp/private-cpp.md) klíčová slova označuje, zda se třída zveřejní prostřednictvím metadata sestavení. Pouze `public` nebo `private` můžete použít pro třídu v programu kompilovat s [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
- `ref` a `value` klíčová slova, pokud se používá s [/CLR](../../build/reference/clr-common-language-runtime-compilation.md), znamenat, že třída je spravované (viz [třídy a struktury](../../windows/classes-and-structs-cpp-component-extensions.md)).  
-  
- Následující ukázka generuje C3380:  
-  
-```  
-// C3380_2.cpp  
-// compile with: /clr  
-protected ref class A {   // C3380  
-// try the following line instead  
-// ref class A {  
-public:  
-   static int i = 9;  
-};  
-  
-int main() {  
-   A^ myA = gcnew A;  
-   System::Console::WriteLine(myA->i);  
-}  
-```  
+# <a name="compiler-error-c3380"></a>Chyba kompilátoru C3380
+
+'class': Neplatné sestavení přístup specifikátor - 'public' nebo 'private' jsou povolené jenom
+
+Při použití u spravované třídy nebo struktury, [veřejné](../../cpp/public-cpp.md) a [privátní](../../cpp/private-cpp.md) klíčová slova označuje, zda třída bude vystavená prostřednictvím metadata sestavení. Pouze `public` nebo `private` lze použít na třídu v programu kompilovaného s [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).
+
+`ref` a `value` klíčová slova, při použití s [/CLR](../../build/reference/clr-common-language-runtime-compilation.md), označení, že třída je spravovaná (naleznete v tématu [třídy a struktury](../../windows/classes-and-structs-cpp-component-extensions.md)).
+
+Následující ukázka generuje C3380:
+
+```
+// C3380_2.cpp
+// compile with: /clr
+protected ref class A {   // C3380
+// try the following line instead
+// ref class A {
+public:
+   static int i = 9;
+};
+
+int main() {
+   A^ myA = gcnew A;
+   System::Console::WriteLine(myA->i);
+}
+```

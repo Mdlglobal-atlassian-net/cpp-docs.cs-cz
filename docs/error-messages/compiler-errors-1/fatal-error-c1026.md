@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1026 | Microsoft Docs
+title: Závažná chyba C1026 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c034d45b7f8b222471094f4580902ae1b8dc66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db9167383df48dad274ef8941defaa53f51d3bfa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198102"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068985"
 ---
 # <a name="fatal-error-c1026"></a>Závažná chyba C1026
-přetečení zásobníku analyzátoru, program příliš složitý  
-  
- Místo požadované analyzovat program způsobila přetečení zásobníku kompilátoru.  
-  
- Snížení složitosti výrazy podle:  
-  
--   Snížení vnoření v `for` a `switch` příkazy. Uveďte hlubšímu vnořené příkazy v samostatné funkce.  
-  
--   Rozdělení dlouho výrazů, které zahrnují operátory čárkou nebo volání funkce.
+
+přetečení zásobníku analyzátoru. program je moc složitý
+
+Místo vyžadovaný pro analýzu program způsobila přetečení zásobníku kompilátoru.
+
+Zjednodušte výrazů podle:
+
+- Snížení úrovně vnoření v `for` a `switch` příkazy. Umístěte hlouběji vnořené příkazy do samostatné funkce.
+
+- Rozdělení dlouhé výrazy zahrnující operátory čárkou nebo volání funkce.

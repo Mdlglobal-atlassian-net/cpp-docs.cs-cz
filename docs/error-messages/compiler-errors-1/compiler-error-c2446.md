@@ -1,5 +1,5 @@
 ---
-title: C2446 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2446 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0274aaf606d039cc4dcf4482f5d8ea1e3ef8e86d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7eeeab46bd7ed5be5b820d1740dd4ff8d377633a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196659"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062797"
 ---
-# <a name="compiler-error-c2446"></a>C2446 chyby kompilátoru
-'operátor': žádný převod z 'type1' do 'type2'.  
-  
- Nelze převést do kompilátoru `type1` k `type2`. Převod nemusí mít smysl, protože narušuje sémantiku C/C++.
+# <a name="compiler-error-c2446"></a>Chyba kompilátoru C2446
+
+'operator': převod z 'type1' na 'type2'
+
+Kompilátor nelze převést `type1` k `type2`. Převod nemusí mít smysl, protože porušuje sémantiku jazyka C/C++.

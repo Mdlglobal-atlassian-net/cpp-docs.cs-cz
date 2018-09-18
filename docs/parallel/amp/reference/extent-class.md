@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8399eed2c047c10a0a78b1cd944dba7b2d1da97e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 59600343a06a2c3c0d4f5b55efadaa09c43452d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102101"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067698"
 ---
 # <a name="extent-class-c-amp"></a>extent – třída (C++ AMP)
 Představuje vektor *N* celočíselných hodnot určujících hranice *N*-rozměrného prostoru s počátkem 0. Hodnoty ve vektoru jsou seřazeny od nejvýznamnější po nejméně významnou.
@@ -40,7 +40,7 @@ class extent;
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Rank`  
+*_Rank*<br/>
 Řád objektu `extent` objektu.
 
 ## <a name="requirements"></a>Požadavky
@@ -102,7 +102,7 @@ bool contains(const index<rank>& _Index) const restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Index`  
+*_Index*<br/>
 `index` Hodnotu k testování.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -124,22 +124,22 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Array`  
+*_Pole*<br/>
 Pole `_Rank` celých čísel, která se používá k vytvoření nového `extent` objektu.
 
-`_I`  
+*_I*<br/>
 Délka rozsahu.
 
-`_I0`  
+*_I0*<br/>
 Délka nejvýznamnějšího rozměru.
 
-`_I1`  
+*_I1*<br/>
 Délka další na nejvýznamnější dimenze.
 
-`_I2`  
+*_I2*<br/>
 Velikost nejméně významného rozměru.
 
-`_Other`  
+*Ji_né*<br/>
 `extent` Objekt, kterému nové `extent` objektu je založen.
 
 ## <a name="remarks"></a>Poznámky
@@ -158,7 +158,7 @@ extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Rhs`  
+*_Rhs*<br/>
 Číslo, které chcete najít zbytek z.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -175,7 +175,7 @@ extent<_Rank>& operator*=(int _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Rhs`  
+*_Rhs*<br/>
 Násobené číslo.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -192,7 +192,7 @@ extent<_Rank> operator+(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Rhs`  
+*_Rhs*<br/>
 `index` Objekt, který obsahuje prvky pro přidání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -225,7 +225,7 @@ extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Rhs`  
+*_Rhs*<br/>
 Číslo, index nebo rozsah má přidat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -242,7 +242,7 @@ extent<_Rank> operator-(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Rhs`  
+*_Rhs*<br/>
 `index` Objekt, který obsahuje prvky pro odečtení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -273,7 +273,7 @@ extent<_Rank>& operator/=(int _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Rhs`  
+*_Rhs*<br/>
 Číslo, které má dělit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -292,7 +292,7 @@ extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Rhs`  
+*_Rhs*<br/>
 Odečítané číslo.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -309,7 +309,7 @@ extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Other`  
+*Ji_né*<br/>
 `extent` Objektu, který chcete kopírovat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -326,7 +326,7 @@ int& operator[](unsigned int _Index) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Index`  
+*_Index*<br/>
 Celé číslo od 0 do řádu mínus 1.
 
 ### <a name="return-value"></a>Návratová hodnota

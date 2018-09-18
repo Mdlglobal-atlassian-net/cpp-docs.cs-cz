@@ -1,5 +1,5 @@
 ---
-title: Chyba příkazového řádku D8027 | Microsoft Docs
+title: Chyba příkazového řádku D8027 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc93edb939001a1e1bed5d3f7a4113e8483e81dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8234835d3bb0545c8a72bf35cfb55b2e18bc7da2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296117"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070376"
 ---
 # <a name="command-line-error-d8027"></a>Chyba příkazového řádku D8027
-nelze provést, součásti.  
-  
- Kompilátor nemůže spustit součást dané kompilátoru nebo linkeru.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit kontrolou následující možné příčiny  
-  
-1.  Není dostatek paměti pro načtení komponentu. Pokud je NMAKE vyvolána kompilátor, spusťte kompilátoru mimo souboru pravidel.  
-  
-2.  V aktuálním operačním systému nelze spustit komponentu. Zkontrolujte, zda body cesty spustitelné soubory vhodné pro váš operační systém.  
-  
-3.  Součást byla poškozena. Překopírovat komponentu z disků distribuce, pomocí instalačního programu.  
-  
-4.  Možnost byl nesprávně zadán. Příklad:  
-  
-    ```  
-    cl /B1 file1.c  
+
+nelze spustit "součást"
+
+Kompilátor nemůže spustit komponentu daného kompilátoru nebo linkeru.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+
+1. Načíst součást není dostatek paměti. Pokud NMAKE vyvolá kompilátor spuštění kompilátoru mimo souboru pravidel.
+
+1. Aktuální operační systém se nepovedlo spustit komponentu. Ujistěte se, že body cesty pro spustitelné soubory pro váš operační systém.
+
+1. Komponenta byla poškozena. Překopírovat komponentu z disků distribuce pomocí instalačního programu.
+
+1. Možnost byl nesprávně zadán. Příklad:
+
+    ```
+    cl /B1 file1.c
     ```

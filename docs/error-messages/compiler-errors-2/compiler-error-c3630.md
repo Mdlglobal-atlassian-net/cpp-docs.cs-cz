@@ -1,5 +1,5 @@
 ---
-title: C3630 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3630 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8e38e06f2a32e9a95421ac113cdd0b5f1371334
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53d7b895c25a847e8abe1b9db11b8b413d3342d0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265204"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066112"
 ---
-# <a name="compiler-error-c3630"></a>C3630 chyby kompilátoru
-Chyba při zpracování tokenu (token)  
-  
- Nebylo možné zpracovat token ve zdrojovém kódu.
+# <a name="compiler-error-c3630"></a>Chyba kompilátoru C3630
+
+Chyba při zpracování token "token"
+
+Token ve zdrojovém kódu nebylo možné zpracovat.

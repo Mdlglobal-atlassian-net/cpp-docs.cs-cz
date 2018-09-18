@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bfd0715acd7eb18c4ccc83d496a1e9a98084fdf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8a58338d980db5acd8f41c71e23c37c1700a0761
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757946"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055114"
 ---
 # <a name="initializing-aggregate-types"></a>Inicializace typů agregace
 
@@ -32,12 +32,12 @@ ms.locfileid: "43757946"
 ## <a name="syntax"></a>Syntaxe
 
 *Inicializátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{***seznam inicializátorů***}** / * pro inicializace agregace     \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{***seznam inicializátorů***,}** 
+&nbsp;&nbsp;&nbsp;&nbsp;**{***seznam inicializátorů***}** / * pro inicializace agregace \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{***seznam inicializátorů***,}**
 
 *seznam inicializátorů*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Inicializátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*seznam inicializátorů***,***inicializátor* 
+&nbsp;&nbsp;&nbsp;&nbsp;*seznam inicializátorů***,***inicializátor*
 
 *Seznam inicializátorů* je seznam inicializátorů oddělený čárkami. Každý inicializátor v seznamu je konstantní výraz nebo seznamem inicializátorů. Proto mohou být vnořené seznamy inicializátorů. Tento formulář je užitečné pro inicializace agregace členů agregační typ, jak ukazují příklady v této části. Ale pokud inicializátor pro automatickému identifikátoru je jediný výraz, se nemusí být konstantní výraz; pouze musí mít příslušného typu pro přiřazení k identifikátoru.
 
@@ -109,13 +109,13 @@ triplet nlist[2][3] =
 
 V tomto příkladu `nlist` je deklarován jako 2 3 pole struktur, každá struktura s tři členy. Řádek 1 inicializace přiřadí první řádek hodnot `nlist`, následujícím způsobem:
 
-1.  První levou složenou závorku na řádek 1 signalizuje kompilátoru, že inicializace prvního člena agregační `nlist` (to znamená `nlist[0]`) je začátek.
+1. První levou složenou závorku na řádek 1 signalizuje kompilátoru, že inicializace prvního člena agregační `nlist` (to znamená `nlist[0]`) je začátek.
 
-2.  Druhý levou složenou závorku označuje, že inicializace prvního člena agregační `nlist[0]` (to znamená, že struktura v `nlist[0][0]`) je začátek.
+1. Druhý levou složenou závorku označuje, že inicializace prvního člena agregační `nlist[0]` (to znamená, že struktura v `nlist[0][0]`) je začátek.
 
-3.  Inicializace struktury končí první pravou složenou závorku `nlist[0][0]`; další levou složenou závorku spuštění inicializace `nlist[0][1]`.
+1. Inicializace struktury končí první pravou složenou závorku `nlist[0][0]`; další levou složenou závorku spuštění inicializace `nlist[0][1]`.
 
-4.  Proces bude pokračovat až do konce řádku, kde končí pravou složenou závorku správné inicializace `nlist[0]`.
+1. Proces bude pokračovat až do konce řádku, kde končí pravou složenou závorku správné inicializace `nlist[0]`.
 
 Řádek 2 přiřadí hodnoty do druhého řádku `nlist` podobným způsobem. Všimněte si, že se vyžadují vnější sady složené závorky uzavírající inicializátory řádky 1 a 2. Následující konstrukce, která vynechává vnější závorky, způsobí chybu:
 

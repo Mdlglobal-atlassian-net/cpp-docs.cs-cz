@@ -1,5 +1,5 @@
 ---
-title: Formáty času data 32bitového systému Windows | Microsoft Docs
+title: Formáty data a času Windows 32-bit | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41a415b2601db1e7fc755903145d6dd2b6293ed9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 55eca447de7818f749628505a4c4f2fa6eb0dcd2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387457"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061109"
 ---
 # <a name="32-bit-windows-timedate-formats"></a>Formáty času a data 32bitového systému Windows
-Datum a čas souboru jsou uloženy jednotlivě, pomocí znaménka jako bitových polí. Datum a čas souboru plní následujícím způsobem:  
-  
-### <a name="time"></a>Čas  
-  
-|Bit pozice:|0   1   2   3   4|5 6 7 8 9 A|B C D E F|  
-|-------------------|-----------------------|---------------------------|-----------------------|  
-|Délka:|5|6|5|  
-|Obsah:|hodiny|minuty|zvýší na 2 sekundy|  
-|Rozsah hodnot:|0-23|0-59|0-29 ve 2-druhé intervaly|  
-  
-### <a name="date"></a>Datum  
-  
-|Bit pozice:|0   1   2   3   4   5   6|7 8 9 A|B C D E F|  
-|-------------------|-------------------------------|-------------------|-----------------------|  
-|Délka:|7|4|5|  
-|Obsah:|Rok|Měsíc|Den|  
-|Rozsah hodnot:|0-119|1-12|1-31|  
-||(relativní vůči 1980)|||  
-  
-## <a name="see-also"></a>Viz také  
- [Globální konstanty](../c-runtime-library/global-constants.md)
+
+Datum a čas souboru jsou uloženy jednotlivě, pomocí jako bitová pole celých čísel bez znaménka. Datum a čas souboru jsou zkomprimována následujícím způsobem:
+
+### <a name="time"></a>čas
+
+|Bitová pozice:|0   1   2   3   4|5 6 7 8 9 A|B C D E F|
+|-------------------|-----------------------|---------------------------|-----------------------|
+|Délka:|5|6|5|
+|Obsah:|hodiny|minuty|zvýší na 2 sekundy|
+|Rozsah hodnot:|0-23|0-59|0 – 29 v 2-druhá intervaly|
+
+### <a name="date"></a>Datum
+
+|Bitová pozice:|0   1   2   3   4   5   6|7 8 9 A|B C D E F|
+|-------------------|-------------------------------|-------------------|-----------------------|
+|Délka:|7|4|5|
+|Obsah:|Rok|Měsíc|den|
+|Rozsah hodnot:|0-119|1-12|1-31|
+||(relativní vůči adresáři 1980)|||
+
+## <a name="see-also"></a>Viz také
+
+[Globální konstanty](../c-runtime-library/global-constants.md)

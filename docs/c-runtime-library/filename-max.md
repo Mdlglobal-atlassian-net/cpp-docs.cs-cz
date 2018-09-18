@@ -1,5 +1,5 @@
 ---
-title: FILENAME_MAX – | Microsoft Docs
+title: FILENAME_MAX | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70edb3e7d8cf774a052837e62bdfc92e9981ba63
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f725e0f121e628a1cb8d28ca425d17abccfb397d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387567"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038636"
 ---
 # <a name="filenamemax"></a>FILENAME_MAX
-Maximální povolenou délku `filename` řetězec velikost vyrovnávací paměti.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-#include <stdio.h>  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Omezení pole cesty](../c-runtime-library/path-field-limits.md)   
- [Globální konstanty](../c-runtime-library/global-constants.md)
+
+Pro maximální povolenou délku `filename` řetězec velikost vyrovnávací paměti.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+#include <stdio.h>
+```
+
+## <a name="see-also"></a>Viz také
+
+[Omezení pole cesty](../c-runtime-library/path-field-limits.md)<br/>
+[Globální konstanty](../c-runtime-library/global-constants.md)

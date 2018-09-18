@@ -1,5 +1,5 @@
 ---
-title: C2571 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2571 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96dea582cf5d1211d57eac94a7f70458a51542ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 30cc078251d0511da77e08690db275a788973ffb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230764"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067932"
 ---
-# <a name="compiler-error-c2571"></a>C2571 chyby kompilátoru
-'function': virtuální funkce nelze v union, union.  
-  
- Spojení je deklarovaný s virtuální funkce. Virtuální funkce pouze ve třídě nebo struktuře můžou deklarovat.  Možná řešení:  
-  
-1.  Změňte sjednocení na třídu nebo strukturu.  
-  
-2.  Ujistěte se, funkce nevirtuální.  
-  
- Následující ukázka generuje C2571:  
-  
-```  
-// C2571.cpp  
-// compile with: /c  
-union A {  
-   virtual void func1();   // C2571  
-   void func2();   // OK  
-};  
+# <a name="compiler-error-c2571"></a>Chyba kompilátoru C2571
+
+'function': virtuální funkce nemůže být sjednocení "sjednocení.
+
+Sjednocení je deklarován s virtuální funkcí. Je možné deklarovat pouze ve třídě nebo struktuře virtuální funkce.  Možná řešení:
+
+1. Změňte sjednocení na třídu nebo strukturu.
+
+1. Ujistěte se, funkce nevirtuální.
+
+Následující ukázka generuje C2571:
+
+```
+// C2571.cpp
+// compile with: /c
+union A {
+   virtual void func1();   // C2571
+   void func2();   // OK
+};
 ```

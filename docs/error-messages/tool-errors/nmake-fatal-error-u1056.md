@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba nástroje NMAKE U1056 | Microsoft Docs
+title: Závažná chyba nástroje NMAKE U1056 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19890e290c98fd9602d755ad35f9d47204bd6c24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e0a83c62bedf995708d5e99fee19f05696d05c2d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316553"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065689"
 ---
 # <a name="nmake-fatal-error-u1056"></a>Závažná chyba nástroje NMAKE U1056
-Nelze najít procesor příkazů  
-  
- Procesor příkazů nebyla na v zadané cestě **COMSPEC** nebo **cesta** proměnné prostředí.  
-  
- NMAKE používá COMMAND.COM nebo CMD. EXE jako procesor příkazů při provádění příkazů. Hledá procesor příkazů nejprve v cestě nastavit **COMSPEC**. Pokud **COMSPEC** neexistuje, hledání NMAKE adresáře zadaný v **CESTU**.
+
+Nelze najít procesor příkazů.
+
+Příkaz procesoru nebyla v cestě zadané v **COMSPEC** nebo **cesta** proměnné prostředí.
+
+NMAKE používá COMMAND.COM nebo CMD. Soubor EXE jako příkazový procesor při provádění příkazů. Vyhledá procesor příkazu nejprve v cestě, nastavte **COMSPEC**. Pokud **COMSPEC** buď neexistuje, NMAKE prohledávání adresáře podle **cesta**.

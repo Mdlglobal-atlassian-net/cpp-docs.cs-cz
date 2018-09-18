@@ -1,5 +1,5 @@
 ---
-title: Referenční dokumentace běhové knihovny jazyka C | Microsoft Docs
+title: Referenční dokumentace běhové knihovny jazyka C | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,41 +18,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd77ef1b9a8d81c15420c097ad0f2226d864a24d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9be5b7665b84a26492d7cfc33141206e380eb020
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389261"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064331"
 ---
 # <a name="c-run-time-library-reference"></a>Referenční dokumentace běhové knihovny jazyka C
 
-Běhové knihovny Microsoft obsahuje rutiny pro programování pro operační systém Microsoft Windows. Tyto rutiny automatizovat mnoho běžných programovacích úloh, které nejsou k dispozici jazyky C a C++.
+Běhové knihovny Microsoft poskytuje rutiny pro programování pro operační systém Microsoft Windows. Tyto rutiny automatizují mnoho běžných programovacích úloh, které nejsou součástí jazyků C a C++.
 
- Ukázkové aplikace jsou součástí jednotlivých referenční témata pro většinu rutin v knihovně.
+Ukázkové aplikace jsou zahrnuté v jednotlivých referenční témata pro většinu rutin v knihovně.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
- [Běhové knihovny jazyka C](../c-runtime-library/crt-library-features.md) popisuje soubory .lib, které tvoří běhové knihovny jazyka C.
+[C Run-Time Libraries](../c-runtime-library/crt-library-features.md) popisuje soubory .lib, které tvoří knihovny jazyka C za běhu.
 
- [Univerzální C runtime rutiny podle kategorie](../c-runtime-library/run-time-routines-by-category.md) obsahuje odkazy na běhové knihovny podle kategorie.
+[Universal C runtime rutiny podle kategorie](../c-runtime-library/run-time-routines-by-category.md) obsahuje odkazy na knihovny run-time podle kategorie.
 
- [Globální proměnné a standardní typy](../c-runtime-library/global-variables-and-standard-types.md) obsahuje odkazy na globální proměnné a standardní typy poskytované běhové knihovny.
+[Globální proměnné a standardní typy](../c-runtime-library/global-variables-and-standard-types.md) obsahuje odkazy na globální proměnné a standardní typy poskytované knihovny run-time.
 
- [Globální konstanty](../c-runtime-library/global-constants.md) obsahuje odkazy na globální konstanty definované běhové knihovny.
+[Globální konstanty](../c-runtime-library/global-constants.md) obsahuje odkazy na globální konstanty definované pomocí knihovny run-time.
 
- [Abecedně řazená referenční dokumentace funkce](../c-runtime-library/reference/crt-alphabetical-function-reference.md) poskytuje tabulku obsah vstupním bodem do abecední seznam všech funkcí běhové knihovny jazyka C.
+[Abecední odkazy funkcí](../c-runtime-library/reference/crt-alphabetical-function-reference.md) poskytuje obsah vstupní bod do abecední seznam všech funkcí běhové knihovny jazyka C.
 
- [Mapování obecného textu](../c-runtime-library/generic-text-mappings.md) obsahuje odkazy na mapování obecného textu, které jsou definované v souboru Tchar.h.
+[Mapování obecného textu](../c-runtime-library/generic-text-mappings.md) obsahuje odkazy na mapování obecného textu, které jsou definovány v souboru Tchar.h.
 
- [Jazyk a řetězce zemí/oblastí](../c-runtime-library/locale-names-languages-and-country-region-strings.md) popisuje postup použití `setlocale` funkce pro nastavení jazyka a řetězce zemí/oblastí.
+[Jazyka a země/Region Strings](../c-runtime-library/locale-names-languages-and-country-region-strings.md) popisuje způsob použití `setlocale` funkce pro nastavení jazyka a země/Region strings.
 
 ## <a name="related-sections"></a>Související oddíly
 
- [Rutiny ladění](../c-runtime-library/debug-routines.md) obsahuje odkazy na ladicí verze rutiny běhové knihovny.
+[Rutiny ladění](../c-runtime-library/debug-routines.md) obsahuje odkazy na ladicí verze knihovny run-time rutiny.
 
- [Kontrola chyb za běhu](../c-runtime-library/run-time-error-checking.md) obsahuje odkazy na funkce, které podporují Kontrola chyb za běhu.
+[Kontrola chyb za běhu](../c-runtime-library/run-time-error-checking.md) obsahuje odkazy na funkce, které podporují kontroly chyb za běhu.
 
- [Chování běhové knihovny jazyka Visual C++ a knihovny DLL](../build/run-time-library-behavior.md) popisuje vstupní bod a spuštění kód použitý pro knihovnu DLL.
+[Knihovny DLL a chování běhové knihovny jazyka Visual C++](../build/run-time-library-behavior.md) popisuje vstupní bod a při spuštění kód použitý pro knihovnu DLL.
 
- [Ladění](/visualstudio/debugger/debugging-in-visual-studio) obsahuje odkazy na používání ladicího programu sady Visual Studio k opravě logických chyb v aplikaci nebo uložené procedury.
+[Ladění](/visualstudio/debugger/debugging-in-visual-studio) poskytuje odkazy na popis využití ladicího programu sady Visual Studio k opravě logických chyb v aplikaci nebo uložených procedur.

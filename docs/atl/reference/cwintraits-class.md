@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72c5ddc9d49488aa4609249cbbdc7842e188cc34
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fb6ee8cd591c4a5b5a4a3701c6974849f9e3238f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760874"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069389"
 ---
 # <a name="cwintraits-class"></a>Cwintraits – třída
 
@@ -45,10 +45,10 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
 
 #### <a name="parameters"></a>Parametry
 
-*t_dwStyle*  
+*t_dwStyle*<br/>
 Výchozí styly standardní okno.
 
-*t_dwExStyle*  
+*t_dwExStyle*<br/>
 Rozšířené styly oken ve výchozím nastavení.
 
 ## <a name="members"></a>Členové
@@ -68,14 +68,17 @@ Tuto šablonu použít, pokud chcete zadat výchozí styly oken, které budou po
 
 Knihovna ATL poskytuje tři předdefinované specializace této šablony pro běžně používané kombinací styly oken:
 
-`CControlWinTraits`  
-Navržené pro standardní ovládací prvek okno. Jsou použity následující standardní styly: WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN a WS_CLIPSIBLINGS. Neexistují žádné rozšířené styly.
+- `CControlWinTraits`  
 
-`CFrameWinTraits`  
-Navržené pro standardní rámce okna. Zahrnují standardní stylů použitých: WS_OVERLAPPEDWINDOW WS_CLIPCHILDREN a WS_CLIPSIBLINGS. Rozšířené styly využívané zahrnují: WS_EX_APPWINDOW a WS_EX_WINDOWEDGE.
+   Navržené pro standardní ovládací prvek okno. Jsou použity následující standardní styly: WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN a WS_CLIPSIBLINGS. Neexistují žádné rozšířené styly.
 
-`CMDIChildWinTraits`  
-Navržené pro standardní podřízené okno MDI. Zahrnují standardní stylů použitých: WS_OVERLAPPEDWINDOW WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN a WS_CLIPSIBLINGS. Rozšířené styly využívané zahrnují: WS_EX_MDICHILD.
+- `CFrameWinTraits`  
+
+   Navržené pro standardní rámce okna. Zahrnují standardní stylů použitých: WS_OVERLAPPEDWINDOW WS_CLIPCHILDREN a WS_CLIPSIBLINGS. Rozšířené styly využívané zahrnují: WS_EX_APPWINDOW a WS_EX_WINDOWEDGE.
+
+- `CMDIChildWinTraits`  
+
+   Navržené pro standardní podřízené okno MDI. Zahrnují standardní stylů použitých: WS_OVERLAPPEDWINDOW WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN a WS_CLIPSIBLINGS. Rozšířené styly využívané zahrnují: WS_EX_MDICHILD.
 
 Pokud chcete mít jistotu, že určité styly jsou nastavené pro všechny instance třídy okna při umožňující nastavit na základě jednotlivé instance i jiné styly použijte [cwintraitsor –](../../atl/reference/cwintraitsor-class.md) místo.
 
@@ -93,7 +96,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*dwStyle*  
+*dwStyle*<br/>
 Standardní stylů použitých pro vytvoření okna. Pokud *dwStyle* je 0, hodnoty šablony stylů (`t_dwStyle`) jsou vráceny. Pokud *dwStyle* nenulové, *dwStyle* je vrácena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -110,7 +113,7 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*dwExStyle*  
+*dwExStyle*<br/>
 Rozšířené stylů použitých pro vytvoření okna. Pokud *dwExStyle* je 0, hodnoty šablony stylů (`t_dwExStyle`) jsou vráceny. Pokud *dwExStyle* nenulové, *dwExStyle* je vrácena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -119,5 +122,5 @@ Rozšířené styly oken objektu.
 
 ## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../../atl/atl-class-overview.md)   
+[Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [Principy vlastností okna](../../atl/understanding-window-traits.md)

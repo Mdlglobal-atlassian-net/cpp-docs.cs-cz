@@ -30,34 +30,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcc842ef134d5f61cf634debe9dd16449b48bbb8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 84ca3e752f91a058b0b344b5862f2ea7e45bcf48
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724019"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064898"
 ---
 # <a name="unlock"></a>_unlock
-Uvolní zámek více vláken.  
-  
+
+Uvolní zámek více vláken.
+
 > [!IMPORTANT]
->  Tato funkce je zastaralá. Od v sadě Visual Studio 2015, není k dispozici v CRT.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void __cdecl _unlock(  
-   int locknum  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+>  Tato funkce je zastaralá. Od v sadě Visual Studio 2015, není k dispozici v CRT.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void __cdecl _unlock(
+   int locknum
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
 *locknum*<br/>
-[in] Identifikátor zámek k uvolnění.  
-  
-## <a name="requirements"></a>Požadavky  
- **Zdroj:** mlock.c  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace funkcí abecedně](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [_lock](../c-runtime-library/lock.md)
+[in] Identifikátor zámek k uvolnění.
+
+## <a name="requirements"></a>Požadavky
+ **Zdroj:** mlock.c
+
+## <a name="see-also"></a>Viz také
+
+[Abecední seznam odkazů na funkce](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[_lock](../c-runtime-library/lock.md)

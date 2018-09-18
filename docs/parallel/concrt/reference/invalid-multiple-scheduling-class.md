@@ -1,5 +1,5 @@
 ---
-title: invalid_multiple_scheduling – třída | Microsoft Docs
+title: invalid_multiple_scheduling – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73f693c884542b93431a77e914d210f76721c5a0
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3cc4e3b2a23dd5c617b70a7a4b992323a0e963f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686159"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067337"
 ---
 # <a name="invalidmultiplescheduling-class"></a>invalid_multiple_scheduling – třída
-Tato třída popisuje výjimka vyvolaná při `task_handle` objekt je naplánované vícekrát používá `run` metodu `task_group` nebo `structured_task_group` objektu bez použité volání buď `wait` nebo `run_and_wait` metody.  
+Tato třída popisuje výjimku vyvolána, když `task_handle` objekt je naplánované vícekrát pomocí `run` metodu `task_group` nebo `structured_task_group` objekt bez opětovné volání na buď `wait` nebo `run_and_wait` metody.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,7 +52,7 @@ class invalid_multiple_scheduling : public std::exception;
   
  **Namespace:** souběžnosti  
   
-##  <a name="ctor"></a> invalid_multiple_scheduling 
+##  <a name="ctor"></a> invalid_multiple_scheduling – 
 
  Vytvoří `invalid_multiple_scheduling` objektu.  
   
@@ -63,14 +63,14 @@ invalid_multiple_scheduling() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Popisný zpráva o chybě.  
+*_TEXT*<br/>
+Popisná zpráva chyby.  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)   
+ [souběžnost Namespace](concurrency-namespace.md)   
  [task_handle – třída](task-handle-class.md)   
  [task_group – třída](task-group-class.md)   
- [Spustit](task-group-class.md)   
+ [Spuštění](task-group-class.md)   
  [Počkej](task-group-class.md)   
  [run_and_wait –](task-group-class.md)   
  [structured_task_group – třída](structured-task-group-class.md)

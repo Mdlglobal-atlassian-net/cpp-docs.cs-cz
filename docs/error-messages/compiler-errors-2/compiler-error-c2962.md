@@ -1,5 +1,5 @@
 ---
-title: C2962 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2962 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ad776236f950c94a1790cee5834b31fa4039d42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68291ba1e3f7226e047af8fb6807ff1aca42d0a7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241334"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049966"
 ---
-# <a name="compiler-error-c2962"></a>C2962 chyby kompilátoru
-Chyba syntaxe: "tokenu": očekává definice funkce člena třídy šablony na konec s '}'  
-  
- Token způsobila chybu syntaxe v deklaraci šablony.  
-  
- Tato chyba může být způsobeno neodpovídající oddělovače
+# <a name="compiler-error-c2962"></a>Chyba kompilátoru C2962
+
+Chyba syntaxe: "token": byl očekáván definice třídy šablony členské funkce bude končit '}'
+
+Token, který způsobil chybu syntaxe v deklaraci šablony.
+
+Tato chyba může být způsobeno neshodné oddělovače

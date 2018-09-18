@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1941f08d13fb8aef9b5b281ce4b2bc1c61bf98fe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 70ba26e5893b21393a3466ae7cf1c6cea43b81ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766584"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070155"
 ---
 # <a name="ccomptrbase-class"></a>Ccomptrbase – třída
 
@@ -41,13 +41,13 @@ Tato třída poskytuje základ pro inteligentní ukazatel tříd pomocí rutiny 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <class T>  
+template <class T>
 class CComPtrBase
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ objektu, který může odkazovat inteligentního ukazatele.
 
 ## <a name="members"></a>Členové
@@ -111,13 +111,13 @@ HRESULT Advise(
 
 ### <a name="parameters"></a>Parametry
 
-*pUnk*  
+*pUnk*<br/>
 Ukazatel na straně klienta `IUnknown`.
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 Identifikátor GUID je spojovací bod. Obvykle je to stejné jako odchozí rozhraní spravuje spojovací bod.
 
-*pdw*  
+*pdw*<br/>
 Ukazatel na soubor cookie, který jednoznačně identifikuje připojení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -138,7 +138,7 @@ void Attach(T* p2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*P2*  
+*P2*<br/>
 `CComPtrBase` Objektu bude převzít vlastnictví tohoto ukazatele.
 
 ### <a name="remarks"></a>Poznámky
@@ -175,16 +175,16 @@ HRESULT CoCreateInstance(
 
 ### <a name="parameters"></a>Parametry
 
-*szProgID*  
+*szProgID*<br/>
 Ukazatel na identifikátor ProgID, použít k obnovení identifikátor CLSID.
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 Pokud má hodnotu NULL, označuje, že se objekt vytváří jako součást agregace. Pokud není NULL, je ukazatel na agregovaný objekt `IUnknown` rozhraní (řízení `IUnknown`).
 
-*dwClsContext*  
+*dwClsContext*<br/>
 Kontext, ve kterém se spustí kód, který spravuje nově vytvořený objekt.
 
-*rclsid*  
+*rclsid*<br/>
 CLSID asociované s daty a kód, který se použije k vytvoření objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -207,7 +207,7 @@ HRESULT CopyTo(T** ppT) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*ppT*  
+*ppT*<br/>
 Adresa proměnné, které se zobrazí `CComPtrBase` ukazatele.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -246,7 +246,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pOther*  
+*pOther*<br/>
 `IUnknown *` k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -301,7 +301,7 @@ bool operator== (T* pT) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*PT*  
+*PT*<br/>
 Ukazatel na objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -334,7 +334,7 @@ bool operator<(T* pT) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*PT*  
+*PT*<br/>
 Ukazatel na objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -345,7 +345,7 @@ Vrátí hodnotu PRAVDA, pokud ukazatel spravuje aktuální objekt je menší ne�
 
 Operátor přetypování.
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -376,10 +376,10 @@ template <class Q> HRESULT QueryInterface(Q
 
 ### <a name="parameters"></a>Parametry
 
-*Q*  
+*Q*<br/>
 Typ objektu, jehož ukazatel rozhraní je povinný.
 
-*str*  
+*str*<br/>
 Adresa výstupní proměnné, která přijímá ukazatel požadované rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -414,7 +414,7 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*punkParent*  
+*punkParent*<br/>
 Ukazatel `IUnknown` rozhraní nadřazeného prvku.
 
 ### <a name="return-value"></a>Návratová hodnota

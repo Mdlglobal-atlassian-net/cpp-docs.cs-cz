@@ -1,5 +1,5 @@
 ---
-title: CXX0006 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0006 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 636708042b2291e4edd295baa0da1ffb57dde4ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c44f950955db71e2f81873513a9052e345799d4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300238"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070259"
 ---
 # <a name="expression-evaluator-error-cxx0006"></a>Chyba při vyhodnocování výrazu CXX0006
-Chybí levé závorky  
-  
- Nevyváženou závorkách nebyly nalezeny ve výrazu. Znovu zadejte výraz s vyrovnáváním závorek.  
-  
- Tato chyba je stejný jako CAN0006.
+
+chybějící levá závorka
+
+Nenašly se nevyváženou závorky ve výrazu. Znovu zadejte výraz s vyvážené závorky.
+
+Tato chyba se shoduje s CAN0006.

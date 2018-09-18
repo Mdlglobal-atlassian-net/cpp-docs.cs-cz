@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f5e71fbf1a24a38b0a18e70ce7d0fa044ad4ec5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: db7903dccfd851bb4bf76f1990424f887686d344
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767875"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070103"
 ---
 # <a name="cacl-class"></a>Cacl – třída
 
@@ -161,7 +161,7 @@ CAcl(const CAcl& rhs) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 Existující objekt `CAcl`.
 
 ### <a name="remarks"></a>Poznámky
@@ -206,16 +206,16 @@ void GetAclEntries(
 
 ### <a name="parameters"></a>Parametry
 
-*pSids*  
+*pSids*<br/>
 Ukazatel na pole [identifikační číslo volané stanice](../../atl/reference/csid-class.md) objekty.
 
-*pAccessMasks*  
+*pAccessMasks*<br/>
 Masky přístupu.
 
-*pAceTypes*  
+*pAceTypes*<br/>
 Typy vstupu (ACE) řízení přístupu.
 
-*pAceFlags*  
+*pAceFlags*<br/>
 Příznaky ACE.
 
 ### <a name="remarks"></a>Poznámky
@@ -243,25 +243,25 @@ void GetAclEntry(
 
 ### <a name="parameters"></a>Parametry
 
-*nIndex*  
+*nIndex*<br/>
 Index k položce seznamu ACL k načtení.
 
-*psid má*  
+*psid má*<br/>
 [Identifikační číslo volané stanice](../../atl/reference/csid-class.md) objektu, pro kterou platí položce seznamu ACL.
 
-*pMask*  
+*pMask*<br/>
 Maska určující oprávnění udělit nebo odepřít přístup.
 
-*pType*  
+*pType*<br/>
 Typu položky ACE.
 
-*pFlags*  
+*pFlags*<br/>
 Příznaky ACE.
 
-*pObjectType*  
+*pObjectType*<br/>
 Typ objektu. Tím se nastaví na GUID_NULL Pokud není zadán typ objektu v ACE nebo pokud je položka řízení přístupu není objektu ACE.
 
-*pInheritedObjectType*  
+*pInheritedObjectType*<br/>
 Typ zděděných objektů. Tím se nastaví na GUID_NULL Pokud není zadaný typ zděděných objektů v této položky řízení přístupu, nebo pokud ACE není objektu ACE.
 
 ### <a name="remarks"></a>Poznámky
@@ -322,7 +322,7 @@ Vrátí TRUE, pokud `CAcl` objekt má hodnotu NULL, hodnota FALSE v opačném p�
 
 Přetypování `CAcl` objektu `ACL` struktury (seznamu řízení přístupu).
 
-```  
+```
 operator const ACL *() const throw(...);
 ```
 
@@ -340,7 +340,7 @@ CAcl& operator= (const CAcl& rhs) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 `CAcl` Přiřadit existující objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -357,7 +357,7 @@ void RemoveAce(UINT nIndex) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nIndex*  
+*nIndex*<br/>
 Index položky ACE odebrat.
 
 ### <a name="remarks"></a>Poznámky
@@ -374,7 +374,7 @@ bool RemoveAces(const CSid& rSid) throw(...)
 
 ### <a name="parameters"></a>Parametry
 
-*rSid*  
+*rSid*<br/>
 Odkaz na `CSid` objektu.
 
 ##  <a name="setempty"></a>  CAcl::SetEmpty
@@ -403,5 +403,5 @@ void SetNull() throw();
 
 ## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../../atl/atl-class-overview.md)   
+[Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: C3200 chyby kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3200 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6aa34ea006b06138290417387bd393589b630aa4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77be23b92d5237d2fa65557bdf36de31cd27d9d3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251304"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062634"
 ---
-# <a name="compiler-error-c3200"></a>C3200 chyby kompilátoru
-'šablony': Neplatný šablony argument pro parametr šablony "parametr" očekává šablonu – třída  
-  
- Neplatný argument. byl předán šablona třídy. Šablona třídy očekává jako parametr šablony. V následujícím příkladu volání `Y<int, int> aY` vygeneruje C3200. První parametr musí být šablonu, jako například `Y<X, int> aY`.  
-  
-```  
-// C3200.cpp  
-template<typename T>  
-class X  
-{  
-};  
-  
-template<template<typename U> class T1, typename T2>  
-class Y  
-{  
-};  
-  
-int main()  
-{  
-   Y<int, int> y;   // C3200  
-}  
+# <a name="compiler-error-c3200"></a>Chyba kompilátoru C3200
+
+"Šablona": Neplatný argument šablony pro parametr šablony "parametr", očekávala se šablona třídy
+
+Neplatný argument předaný do šablony třídy. Šablona třídy šablony očekává jako parametr. V následujícím příkladu volání `Y<int, int> aY` vygeneruje C3200. První parametr musí být šablony, jako například `Y<X, int> aY`.
+
+```
+// C3200.cpp
+template<typename T>
+class X
+{
+};
+
+template<template<typename U> class T1, typename T2>
+class Y
+{
+};
+
+int main()
+{
+   Y<int, int> y;   // C3200
+}
 ```

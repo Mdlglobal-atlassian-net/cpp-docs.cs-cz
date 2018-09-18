@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 545f38058871d81196150e127c1814b304b6ab56
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c0261964f2e9c33f8a594a83e1b19c1db7be614
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767852"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069232"
 ---
 # <a name="iworkerthreadclient-interface"></a>Iworkerthreadclient – rozhraní
 
@@ -66,7 +66,7 @@ HRESULT CloseHandle(HANDLE  hHandle);
 
 ### <a name="parameters"></a>Parametry
 
-*hHandle*  
+*hHandle*<br/>
 Obslužná rutina bude uzavřen.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -93,10 +93,10 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 
 ### <a name="parameters"></a>Parametry
 
-*dwParam*  
+*dwParam*<br/>
 Tento parametr.
 
-*hObject*  
+*hObject*<br/>
 Obslužná rutina, která má být signalizovány.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -115,5 +115,5 @@ Následující kód ukazuje jednoduchý provádění `IWorkerThreadClient::Execu
 
 ## <a name="see-also"></a>Viz také
 
-[Třídy](../../atl/reference/atl-classes.md)   
+[Třídy](../../atl/reference/atl-classes.md)<br/>
 [CWorkerThread – třída](../../atl/reference/cworkerthread-class.md)

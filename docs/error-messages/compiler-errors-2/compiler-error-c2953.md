@@ -1,5 +1,5 @@
 ---
-title: C2953 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2953 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 403ebce4fdb8b3ff8cf014c27cfc6ec988a1a897
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1a22bfce625001c4e8130fa9ab7a9954d0cb0fd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245107"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068777"
 ---
-# <a name="compiler-error-c2953"></a>C2953 chyby kompilátoru
-"identifikátor": již byla definována šablona třídy  
-  
- Zkontrolujte zdrojový soubor a zahrnout soubory pro jiné definice.  
-  
- Následující ukázka generuje C2953:  
-  
-```  
-// C2953.cpp  
-// compile with: /c  
-template <class T>  class A {};  
-template <class T>  class A {};   // C2953  
-template <class T>  class B {};   // OK  
+# <a name="compiler-error-c2953"></a>Chyba kompilátoru C2953
+
+'identifier': Šablona tříd už je definovaný
+
+Zkontrolujte zdrojový soubor a zahrnout soubory pro jiné definice.
+
+Následující ukázka generuje C2953:
+
+```
+// C2953.cpp
+// compile with: /c
+template <class T>  class A {};
+template <class T>  class A {};   // C2953
+template <class T>  class B {};   // OK
 ```

@@ -19,31 +19,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42fc4bd5186ade5efaa9c4fa8e9f567f37509039
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 4ab1e4f83025dcc3e4bc65274746e0617cf31b5b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42464538"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065020"
 ---
 # <a name="varianttdetach"></a>_variant_t::Detach
-**Specifické pro Microsoft**  
-  
- Odpojí zapouzdřeného `VARIANT` objektu z tohoto `_variant_t` objektu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-VARIANT Detach( );  
-```  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Zapouzdřený objekt `VARIANT`.  
-  
-## <a name="remarks"></a>Poznámky  
- Extrahuje a vrátí zapouzdřený objekt `VARIANT`, následně smaže `_variant_t` objekt bez došlo k jeho zničení. Tato členská funkce odebere `VARIANT` ze zapouzdření a nastaví `VARTYPE` tohoto `_variant_t` objekt VT_EMPTY. Je na vás, abyste uvolnili vrácený `VARIANT` voláním [VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear) funkce.  
-  
- **Specifické pro END Microsoft**  
-  
-## <a name="see-also"></a>Viz také:  
- [_variant_t – třída](../cpp/variant-t-class.md)
+
+**Specifické pro Microsoft**
+
+Odpojí zapouzdřeného `VARIANT` objektu z tohoto `_variant_t` objektu.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+VARIANT Detach( );
+```
+
+## <a name="return-value"></a>Návratová hodnota
+
+Zapouzdřený objekt `VARIANT`.
+
+## <a name="remarks"></a>Poznámky
+
+Extrahuje a vrátí zapouzdřený objekt `VARIANT`, následně smaže `_variant_t` objekt bez došlo k jeho zničení. Tato členská funkce odebere `VARIANT` ze zapouzdření a nastaví `VARTYPE` tohoto `_variant_t` objekt VT_EMPTY. Je na vás, abyste uvolnili vrácený `VARIANT` voláním [VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear) funkce.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také:
+
+[_variant_t – třída](../cpp/variant-t-class.md)

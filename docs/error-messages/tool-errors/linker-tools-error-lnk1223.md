@@ -1,5 +1,5 @@
 ---
-title: Chyba linkerů Lnk1223 | Microsoft Docs
+title: Chyba Linkerů LNK1223 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e50d29af6ac563fadd3a52e5b1d3d15201289083
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8639919c74559829367108b36d62594e2a83a91a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298649"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067978"
 ---
 # <a name="linker-tools-error-lnk1223"></a>Chyba linkerů LNK1223
-Neplatný nebo poškozený soubor: soubor obsahuje neplatný .pdata příspěvky  
-  
- Pro RISC platformy, které používají pdata tato chyba nastane, pokud kompilátor vygenerované .pdata oddíl s neseřazené položky.  
-  
- Chcete-li tento problém vyřešit, zkuste kompilování bez [/GL (optimalizace celého programu)](../../error-messages/tool-errors/linker-tools-error-lnk1223.md) povolena. Prázdný funkce těla může také způsobit tuto chybu v některých případech.
+
+soubor je neplatný nebo poškozený: soubor obsahuje neplatný .pdata příspěvky
+
+Pro RISC platformy, které používají pdata tato chyba nastane, pokud kompilátor generované .pdata oddílu s seřazená položky.
+
+Chcete-li vyřešit tento problém, pokuste se zkompilovat bez [/GL (optimalizace celého programu)](../../error-messages/tool-errors/linker-tools-error-lnk1223.md) povolena. Prázdných těl funkcí může také v některých případech způsobit k této chybě.

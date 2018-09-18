@@ -1,5 +1,5 @@
 ---
-title: C3719 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3719 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,74 +16,75 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a399b9ccdb8aefe9e566172c4dc2b566e4fa3ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 04761008bd7dcdfa9ecb8dc1d6c24be4a67a6360
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277904"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047860"
 ---
-# <a name="compiler-error-c3719"></a>C3719 chyby kompilátoru
-"rozhraní": zdroje na základě událostí rozhraní lze použít pouze pro události COM  
-  
- Můžete deklarovat rozhraní v kontextu jiných COM.  
-  
- Následující ukázka generuje C3719:  
-  
-```  
-// C3719a.cpp  
-#define _ATL_ATTRIBUTES 1  
-#include "atlbase.h"  
-#include "atlcom.h"  
-  
-[module(name="MyLibrary", version="1.2", helpfile="MyHelpFile")];  
-  
-[object]  
-__interface I {  
-   HRESULT func1();  
-};  
-  
-[event_source(native), coclass]  
-struct A {  
-   __event __interface I;   // C3719  
-  
-   // try the following line instead  
-   // __event func2();  
-};  
-  
-int main() {  
-}  
-```  
-  
- Chcete-li tuto chybu opravit, použít [objekt](../../windows/object-cpp.md), [třída typu coclass](../../windows/coclass.md), [event_source –](../../windows/event-source.md), a [event_receiver –](../../windows/event-receiver.md) správně atributy, aby se třídy, ve kterých jsou pomocí třídy rozhraní COM. Příklad:  
-  
-```  
-// C3719b.cpp  
-#define _ATL_ATTRIBUTES 1  
-#include <atlbase.h>  
-#include <atlcom.h>  
-  
-[module(name="xx")];  
-[object, uuid("00000000-0000-0000-0000-000000000001")]  
-__interface I {  
-   HRESULT f();  
-};  
-  
-[coclass, event_source(com) , uuid("00000000-0000-0000-0000-000000000002")]  
-struct MyStruct {  
-   __event __interface I;  
-};  
-  
-[event_receiver(com)]  
-struct MyStruct2 {  
-   void f() {  
-   }  
-   MyStruct2(I* pB) {  
-      __hook(&I::f, pB, &MyStruct2::f);  
-   }  
-};  
-  
-int main()  
-{  
-}  
+# <a name="compiler-error-c3719"></a>Chyba kompilátoru C3719
+
+'rozhraní': zdroj událostí na základě rozhraní jde použít jenom pro události COM
+
+Můžete deklarovat v kontextu jiných COM rozhraní.
+
+Následující ukázka generuje C3719:
+
+```
+// C3719a.cpp
+#define _ATL_ATTRIBUTES 1
+#include "atlbase.h"
+#include "atlcom.h"
+
+[module(name="MyLibrary", version="1.2", helpfile="MyHelpFile")];
+
+[object]
+__interface I {
+   HRESULT func1();
+};
+
+[event_source(native), coclass]
+struct A {
+   __event __interface I;   // C3719
+
+   // try the following line instead
+   // __event func2();
+};
+
+int main() {
+}
+```
+
+Chcete-li tuto chybu vyřešit, použijte [objekt](../../windows/object-cpp.md), [coclass](../../windows/coclass.md), [event_source](../../windows/event-source.md), a [event_receiver](../../windows/event-receiver.md) atributy odpovídajícím způsobem, aby třídy, ve kterých jsou pomocí tříd rozhraní modelu COM. Příklad:
+
+```
+// C3719b.cpp
+#define _ATL_ATTRIBUTES 1
+#include <atlbase.h>
+#include <atlcom.h>
+
+[module(name="xx")];
+[object, uuid("00000000-0000-0000-0000-000000000001")]
+__interface I {
+   HRESULT f();
+};
+
+[coclass, event_source(com) , uuid("00000000-0000-0000-0000-000000000002")]
+struct MyStruct {
+   __event __interface I;
+};
+
+[event_receiver(com)]
+struct MyStruct2 {
+   void f() {
+   }
+   MyStruct2(I* pB) {
+      __hook(&I::f, pB, &MyStruct2::f);
+   }
+};
+
+int main()
+{
+}
 ```

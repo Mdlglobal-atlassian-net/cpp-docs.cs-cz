@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5144a11f0b035822e6f729692569e5e861c44dcc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 281b767151726f695e23c4cf2b2df26f8690c5c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758307"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063993"
 ---
 # <a name="atl-support-for-dhtml-controls"></a>ATL – podpora pro ovládací prvky DHTML
 
@@ -41,26 +41,26 @@ Ovládacího prvku ATL DHTML můžete zobrazit v prohlížeči nebo jiném konte
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Identifikace prvků projektu správy zdrojového kódu DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md)  
+[Identifikace prvků projektu správy zdrojového kódu DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md)<br/>
 Popisuje prvky DHTML řízení projektu.
 
-[Volání kódu C++ z DHTML](../atl/calling-cpp-code-from-dhtml.md)  
+[Volání kódu C++ z DHTML](../atl/calling-cpp-code-from-dhtml.md)<br/>
 Poskytuje příklad volání kódu C++ z DHTML ovládacího prvku.
 
-[Vytváření ovládacího prvku ATL DHTML](../atl/creating-an-atl-dhtml-control.md)  
+[Vytváření ovládacího prvku ATL DHTML](../atl/creating-an-atl-dhtml-control.md)<br/>
 Seznam kroků pro vytvoření ovládacího prvku DHTML.
 
-[Testování ovládacího prvku ATL DHTML](../atl/testing-the-atl-dhtml-control.md)  
+[Testování ovládacího prvku ATL DHTML](../atl/testing-the-atl-dhtml-control.md)<br/>
 Ukazuje, jak vytvářet a testovat počáteční projekt ovládací prvek DHTML.
 
-[Změna ovládacího prvku ATL DHTML](../atl/modifying-the-atl-dhtml-control.md)  
+[Změna ovládacího prvku ATL DHTML](../atl/modifying-the-atl-dhtml-control.md)<br/>
 Ukazuje, jak přidat některé funkce do ovládacího prvku.
 
-[Testování ovládacího prvku ATL DHTML upravený](../atl/testing-the-modified-atl-dhtml-control.md)  
+[Testování ovládacího prvku ATL DHTML upravený](../atl/testing-the-modified-atl-dhtml-control.md)<br/>
 Ukazuje, jak vytvářet a testovat přidané funkce ovládacího prvku.
 
 ## <a name="related-sections"></a>Související oddíly
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Obsahuje odkazy na koncepční témata o tom, jak programovat pomocí knihovnu Active Template Library.
 

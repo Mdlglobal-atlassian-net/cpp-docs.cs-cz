@@ -15,14 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9a9011912b0c187d9aa9e75dd9e484c4688e3c0
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 9dd92d321f0452c24de04fb94427aa2499677155
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405906"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064818"
 ---
 # <a name="lexical-conventions"></a>Lexikální pravidla
+
 Tato část představuje základní prvky programu C++. Tyto prvky nazývané „lexikální prvky“ nebo „tokeny“ použijete k sestavení příkazů, definic, deklarací a podobných funkcí, které se používají k vytvoření kompletních programů. V této části jsou popsány následující lexikální prvky:
 
 - [Přehled překladu souboru](overview-of-file-translation.md)
@@ -45,5 +46,6 @@ Tato část představuje základní prvky programu C++. Tyto prvky nazývané �
 - [Uživateli definované literály](../cpp/user-defined-literals-cpp.md)
 
 ## <a name="see-also"></a>Viz také:
- [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)  
- [Program a propojení](program-and-linkage-cpp.md)
+
+[Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
+[Program a propojení](program-and-linkage-cpp.md)

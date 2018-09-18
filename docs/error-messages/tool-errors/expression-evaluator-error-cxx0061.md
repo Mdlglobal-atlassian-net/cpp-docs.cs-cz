@@ -1,5 +1,5 @@
 ---
-title: CXX0061 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0061 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67e5edff0556b5105a57d3cb8de1c644959d65a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 13f6954ce13c1a4b52b6d52e5f381f8732cc7b1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315604"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047379"
 ---
 # <a name="expression-evaluator-error-cxx0061"></a>Chyba při vyhodnocování výrazu CXX0061
-Funkce hloubky vnoření překročen  
-  
- Výraz obsahuje funkci větší než omezení hloubky vnoření. Upravte výraz ke snížení hloubky vnoření.  
-  
- Tato chyba je stejný jako CAN0061.
+
+Hloubka vnoření funkce překročena
+
+Výraz obsahuje funkci větší než limit hloubky vnoření. Upravte výraz, který má snížit hloubka vnoření.
+
+Tato chyba se shoduje s CAN0061.

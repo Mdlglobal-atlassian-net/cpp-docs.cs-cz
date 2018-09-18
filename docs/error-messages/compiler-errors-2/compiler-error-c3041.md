@@ -1,5 +1,5 @@
 ---
-title: C3041 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3041 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 766536426a0b183299d5028d90197fd058fb6126
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cc19c13804eefe88b20542d4eb8c9bc8ead101e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247624"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066918"
 ---
-# <a name="compiler-error-c3041"></a>C3041 chyby kompilátoru
-'příkaz var': proměnné v klauzuli 'copyprivate' musí být privátní v uzavření do kontextu  
-  
- Předaný proměnné [copyprivate](../../parallel/openmp/reference/copyprivate.md) nelze sdílet v nadřazených kontextu.  
-  
- Následující ukázka generuje C3041:  
-  
-```  
-// C3041.cpp  
-// compile with: /openmp /c  
-#include "omp.h"  
-double d;  
-int main() {  
-   #pragma omp parallel shared(d)  
-   // try the following line instead  
-   // #pragma omp parallel private(d)  
-   {  
-      // or don't make d copyprivate  
-      #pragma omp single copyprivate(d)   // C3041  
-      {  
-      }  
-   }  
-}  
+# <a name="compiler-error-c3041"></a>Chyba kompilátoru C3041
+
+'příkaz var': Proměnná v klauzuli 'copyprivate' musí být v kontextu privátní
+
+Proměnné předána [copyprivate](../../parallel/openmp/reference/copyprivate.md) nelze sdílet v rámci nadřazené.
+
+Následující ukázka generuje C3041:
+
+```
+// C3041.cpp
+// compile with: /openmp /c
+#include "omp.h"
+double d;
+int main() {
+   #pragma omp parallel shared(d)
+   // try the following line instead
+   // #pragma omp parallel private(d)
+   {
+      // or don't make d copyprivate
+      #pragma omp single copyprivate(d)   // C3041
+      {
+      }
+   }
+}
 ```

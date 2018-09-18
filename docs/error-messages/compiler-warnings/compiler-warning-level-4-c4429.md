@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4429 | Microsoft Docs
+title: Upozornění (úroveň 4) C4429 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00d4812fb1eefdd4364376288f063a6bf8b5dddf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 19e10806ffa601caa4212b5e5f98b823ec8941d0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293712"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049218"
 ---
-# <a name="compiler-warning-level-4-c4429"></a>C4429 kompilátoru upozornění (úroveň 4)
-možné neúplný nebo nesprávně vytvořený universal znak name  
-  
- Kompilátor zjištěna posloupnost znaků, který může být nesprávně vytvořené universal znak název. Název universal znak je `\u` následované čtyři šestnáctkových číslic, nebo `\U` následuje osm hexadecimálních číslic.  
-  
- Následující ukázka generuje C4429:  
-  
-```  
-// C4429.cpp  
-// compile with: /W4 /WX  
-int \ug0e4 = 0;   // C4429  
-// Try the following line instead:  
-// int \u00e4 = 0;   // OK, a well-formed universal character name.  
+# <a name="compiler-warning-level-4-c4429"></a>Kompilátor upozornění (úroveň 4) C4429
+
+je to možné neúplný nebo nesprávně vytvořený universal-character-name
+
+Kompilátor zjistil sekvenci znaků, která může být chybně vytvořený univerzální název znaku. Univerzální název znaku je `\u` za nímž následuje čtyř číslic v šestnáctkové soustavě, nebo `\U` za nímž následuje osm číslic v šestnáctkové soustavě.
+
+Následující ukázka generuje C4429:
+
+```
+// C4429.cpp
+// compile with: /W4 /WX
+int \ug0e4 = 0;   // C4429
+// Try the following line instead:
+// int \u00e4 = 0;   // OK, a well-formed universal character name.
 ```

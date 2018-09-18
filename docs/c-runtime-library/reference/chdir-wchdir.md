@@ -1,5 +1,5 @@
 ---
-title: _chdir –, _wchdir – | Microsoft Docs
+title: _chdir – _wchdir – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -42,12 +42,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b81ace9c9fe5cf21d93f7e7dd4a8b5f2f2c5d726
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 73abd8ef0ca29ee9e7f2312cc44a8178fc464261
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451547"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064627"
 ---
 # <a name="chdir-wchdir"></a>_chdir, _wchdir
 
@@ -66,24 +66,24 @@ int _wchdir(
 
 ### <a name="parameters"></a>Parametry
 
-*adresář*<br/>
-Cesta nové pracovní adresář.
+*DirName*<br/>
+Cesta nového pracovního adresáře.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Tyto funkce vrátit hodnotu 0, pokud bylo úspěšné. Vrácená hodnota -1 označuje selhání. Pokud zadaná cesta nebyla nalezena, **errno** je nastaven na **enoent –**. Pokud *adresář* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **errno** je nastaven na **einval –** a funkce vrátí hodnotu -1.
+Tyto funkce vrátí hodnotu 0, pokud je úspěšná. Návratová hodnota-1 označuje chybu. Pokud zadaná cesta nebyla nalezena, **errno** je nastavena na **ENOENT**. Pokud *dirname* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **errno** je nastavena na **EINVAL** a funkce vrátí hodnotu -1.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Chdir –** funkce změní aktuální pracovní adresář na adresář zadaný *adresář*. *Adresář* parametr musí odkazovat na existující adresář. Tuto funkci můžete změnit aktuální pracovní adresář na žádné jednotky. Jestliže se v nové písmeno jednotky *adresář*, je také změnit výchozí písmeno jednotky. Například pokud A je výchozí písmeno jednotky a \BIN je aktuální pracovní adresář, následující volání změny aktuální pracovní adresář pro jednotky C: a vytváří C jako nový výchozí jednotce:
+**_Chdir –** funkce změní aktuální pracovní adresář na adresář zadaný *dirname*. *Dirname* parametr musí odkazovat na existující adresář. Tuto funkci můžete změnit aktuální pracovní adresář v jakékoli jednotce. Pokud nový písmeno jednotky je zadán v *dirname*, se také změní výchozí písmeno jednotky. Například pokud je výchozí písmeno jednotky a je aktuálním pracovním adresáři \BIN, následující volání změní aktuální pracovní adresář pro jednotku C a C se zavádí jako nové výchozí jednotka:
 
 ```C
 _chdir("c:\temp");
 ```
 
-Při použití volitelné lomítka (**&#92;**) v cestách, je nutné umístit dvě zpětná lomítka (**&#92;&#92;**) v C řetězcový literál představují jeden zpětné lomítko ( **&#92;**).
+Při použití volitelných lomítka (**&#92;**) v cestách, je nutné umístit dvě zpětná lomítka (**&#92;&#92;**) v literálu C k reprezentaci jedno zpětné lomítko ( **&#92;**).
 
-**_wchdir –** je verze široká charakterová **_chdir –**; *adresář* argument **_wchdir –** je široká charakterová řetězec. **_wchdir –** a **_chdir –** chovat jinak shodně.
+**_wchdir –** je verze širokého znaku **_chdir –**; *dirname* argument **_wchdir –** je širokoznaký řetězec. **_wchdir –** a **_chdir –** se jinak chovají stejně.
 
 ### <a name="generic-text-routine-mapping"></a>Mapování obecného textu rutiny:
 
@@ -93,12 +93,12 @@ Při použití volitelné lomítka (**&#92;**) v cestách, je nutné umístit dv
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
 |**_chdir**|\<Direct.h >|\<errno.h>|
 |**_wchdir**|\<Direct.h > nebo \<wchar.h >|\<errno.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -137,10 +137,10 @@ int main( int argc, char *argv[] )
 ```
 
 ```Output
- Volume in drive C has no label.
- Volume Serial Number is 2018-08A1
+Volume in drive C has no label.
+Volume Serial Number is 2018-08A1
 
- Directory of c:\windows
+Directory of c:\windows
 
 08/29/2002  04:00 AM         1,004,032 explorer.exe
 12/17/2002  04:43 PM            10,752 hh.exe
@@ -159,7 +159,7 @@ int main( int argc, char *argv[] )
                0 Dir(s)  67,326,029,824 bytes free
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ovládací prvek adresáře](../../c-runtime-library/directory-control.md)<br/>
 [_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>

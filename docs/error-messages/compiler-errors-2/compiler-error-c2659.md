@@ -1,5 +1,5 @@
 ---
-title: C2659 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2659 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,47 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b01afeaaa82ed772f5d812f36b3de0aac24679a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a658bc000ab0f7194e4806133b949ee0f7cf9ff9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232219"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062940"
 ---
-# <a name="compiler-error-c2659"></a>C2659 chyby kompilátoru
-Operátor: funkce jako levý operand  
-  
- Funkce byla na levé straně zadaného operátoru. Nejčastější příčinou této chyby je, že kompilátor analyzoval identifikátor na levé straně operátoru jako funkci, ale vývojář chtěl, aby to byla proměnná. Další informace najdete v tématu Wikipedia článku [nejvíce vexing analýzy](http://en.wikipedia.org/wiki/Most_vexing_parse). Tento příklad ukazuje deklaraci funkce a definici proměnné, které lze snadno zaměnit:  
-  
-```  
-// C2659a.cpp  
-// Compile using: cl /W4 /EHsc C2659a.cpp  
-#include <string>  
-using namespace std;  
-  
-int main()   
-{  
-   string string1(); // string1 is a function returning string  
-   string string2{}; // string2 is a string initialized to empty   
-  
-   string1 = "String 1"; // C2659  
-   string2 = "String 2";  
-}  
-```  
-  
- Chcete-li tento problém vyřešit, změňte deklaraci identifikátoru tak, aby nebyl analyzován jako deklarace funkce.  
-  
- Chyba C2659 se může zobrazit také v případě, že funkce má typ, který nelze použít ve výrazu na levé straně zadaného operátoru. Tento příklad vygeneruje chybu C2659, když kód funkci přiřadí ukazatel na funkci:  
-  
-```  
-// C2659b.cpp  
-// Compile using: cl /W4 /EHsc C2659b.cpp  
-int func0(void) { return 42; }  
-int (*func1)(void);  
-  
-int main()  
-{  
-   func1 = func0;  
-   func0 = func1; // C2659  
-}  
+# <a name="compiler-error-c2659"></a>Chyba kompilátoru C2659
+
+Operátor: funkce jako levý operand
+
+Funkce byla na levé straně zadaného operátoru. Nejčastější příčinou této chyby je, že kompilátor analyzoval identifikátor na levé straně operátoru jako funkci, ale vývojář chtěl, aby to byla proměnná. Další informace najdete v tématu Wikipedia článku [nejobtížnějších analýzy](http://en.wikipedia.org/wiki/Most_vexing_parse). Tento příklad ukazuje deklaraci funkce a definici proměnné, které lze snadno zaměnit:
+
+```
+// C2659a.cpp
+// Compile using: cl /W4 /EHsc C2659a.cpp
+#include <string>
+using namespace std;
+
+int main()
+{
+   string string1(); // string1 is a function returning string
+   string string2{}; // string2 is a string initialized to empty
+
+   string1 = "String 1"; // C2659
+   string2 = "String 2";
+}
+```
+
+Chcete-li tento problém vyřešit, změňte deklaraci identifikátoru tak, aby nebyl analyzován jako deklarace funkce.
+
+Chyba C2659 se může zobrazit také v případě, že funkce má typ, který nelze použít ve výrazu na levé straně zadaného operátoru. Tento příklad vygeneruje chybu C2659, když kód funkci přiřadí ukazatel na funkci:
+
+```
+// C2659b.cpp
+// Compile using: cl /W4 /EHsc C2659b.cpp
+int func0(void) { return 42; }
+int (*func1)(void);
+
+int main()
+{
+   func1 = func0;
+   func0 = func1; // C2659
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: C2223 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2223 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 330786ca92becb5132194e5e25104bdaaa58c129
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0ca3cd091b349536046b0ead8e52805db3dff9b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168812"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067650"
 ---
-# <a name="compiler-error-c2223"></a>C2223 chyby kompilátoru
-Struktura nebo sjednocení musí odkazovat nalevo od '-> identifikátor.  
-  
- Operand nalevo od `->` není ukazatel na třídy, struktury nebo union.  
-  
- Tato chyba může být způsobeno levý operand, který je definován proměnné (proto zadejte `int`).
+# <a name="compiler-error-c2223"></a>Chyba kompilátoru C2223
+
+vlevo-> identifikátor musí ukazovat na strukturu/sjednocení
+
+Operand nalevo od `->` není ukazatel na třídu, strukturu nebo sjednocení.
+
+Tato chyba může být způsobeno levý operand, který je na nedefinovanou proměnnou (tedy zadejte `int`).

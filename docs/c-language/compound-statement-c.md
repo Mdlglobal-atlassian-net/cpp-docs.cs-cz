@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e13f09defccb0aeb3d4ec47cf7cf1678deaee6dd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 11197f19047b0058f5401b9419f0f353c44c91d6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767800"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063618"
 ---
 # <a name="compound-statement-c"></a>Složený příkaz (C)
 
@@ -61,4 +61,5 @@ if ( i > 0 )
 V tomto příkladu Pokud `i` je větší než 0, všechny příkazy uvnitř složeného příkazu jsou provedeny v pořadí.
 
 ## <a name="see-also"></a>Viz také
+
 [Příkazy](../c-language/statements-c.md)

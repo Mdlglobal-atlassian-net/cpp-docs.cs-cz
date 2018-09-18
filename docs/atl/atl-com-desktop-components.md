@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b16f2fd1a82d6199f1e035b06f8c0598810f0dfd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eadbcd138bd9fc73835938b8ff59d694ede152b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752158"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065618"
 ---
 # <a name="atl-com-desktop-components"></a>COM desktopové komponenty ATL
 
@@ -28,37 +28,37 @@ ATL – referenční dokumentace dokumenty aktivní šablony knihovny (ATL), sad
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Přehled třídy ATL](../atl/atl-class-overview.md)  
+[Přehled třídy ATL](../atl/atl-class-overview.md)<br/>
 Obsahuje odkazy na a stručný popis ATL – třídy uspořádané podle kategorie.
 
-[Třídy a struktury ATL](../atl/reference/atl-classes.md)  
+[Třídy a struktury ATL](../atl/reference/atl-classes.md)<br/>
 Poskytuje referenční materiál o třídách a strukturách, které jsou uspořádány podle abecedy.
 
-[Funkce ATL](../atl/reference/atl-functions.md)  
+[Funkce ATL](../atl/reference/atl-functions.md)<br/>
 Poskytuje referenční materiál pro globální funkce, které jsou uspořádány podle abecedy. Obsahuje témata uspořádání funkce do kategorií.
 
-[Globální proměnné ATL](../atl/reference/atl-global-variables.md)  
+[Globální proměnné ATL](../atl/reference/atl-global-variables.md)<br/>
 Poskytuje referenční materiál pro globální proměnné, které jsou uspořádány podle abecedy.
 
-[Makra ATL](../atl/reference/atl-macros.md)  
+[Makra ATL](../atl/reference/atl-macros.md)<br/>
 Poskytuje referenční materiál makra uspořádány podle abecedy. Obsahuje témata uspořádání makra do kategorií.
 
-[Definice Typedef ATL](../atl/reference/atl-typedefs.md)  
+[Definice Typedef ATL](../atl/reference/atl-typedefs.md)<br/>
 Poskytuje referenční materiál o funkce typedefs uspořádány podle abecedy
 
-[Archetyp pracovního procesu](../atl/reference/worker-archetype.md)  
+[Archetyp pracovního procesu](../atl/reference/worker-archetype.md)<br/>
 Obsahuje odkazy na archetyp pracovního ATL procesu.
 
 ## <a name="related-sections"></a>Související oddíly
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Obsahuje témata o tom, jak programovat pomocí aktivní šablony knihovny (ATL).
 
-[ATL – tutoriál](../atl/active-template-library-atl-tutorial.md)  
+[ATL – tutoriál](../atl/active-template-library-atl-tutorial.md)<br/>
 Vás provede vytvořením ovládacího prvku a ukazuje některé ATL – principy vytváření v procesu.
 
-[Ukázky knihovny ATL](../visual-cpp-samples.md)  
+[Ukázky knihovny ATL](../visual-cpp-samples.md)<br/>
 Ukázkový kód, který ukazuje způsob použití knihovny ATL pro zápis objektů COM.
 
-[Šablony OLE DB](../data/oledb/ole-db-templates.md)  
+[Šablony OLE DB](../data/oledb/ole-db-templates.md)<br/>
 Poskytuje referenční materiál pro spotřebitele a zprostředkovatele šablony technologie OLE DB sady tříd šablon, které implementují mnoho běžně používaných rozhraní OLE DB.  

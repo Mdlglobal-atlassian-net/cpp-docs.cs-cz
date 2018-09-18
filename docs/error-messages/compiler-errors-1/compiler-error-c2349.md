@@ -1,5 +1,5 @@
 ---
-title: C2349 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2349 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92fa04f4ee943908d65e5cf6ac0b65cdad6bb62f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3677426b00b07ae7281657c5ada7d17cc4418f35
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222264"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070753"
 ---
-# <a name="compiler-error-c2349"></a>C2349 chyby kompilátoru
-'function' nelze kompilovat, jako spravované: 'důvodu'; použití nespravovaného #pragma  
-  
- Další informace najdete v části [upozornění kompilátoru (úroveň 1 a 3) C4793](../../error-messages/compiler-warnings/compiler-warning-level-1-and-3-c4793.md).
+# <a name="compiler-error-c2349"></a>Chyba kompilátoru C2349
+
+'function' nejde zkompilovat jako spravovaný: 'z důvodu'; Použijte #pragma unmanaged
+
+Další informace najdete v části [upozornění kompilátoru (úroveň 1 a 3) C4793](../../error-messages/compiler-warnings/compiler-warning-level-1-and-3-c4793.md).

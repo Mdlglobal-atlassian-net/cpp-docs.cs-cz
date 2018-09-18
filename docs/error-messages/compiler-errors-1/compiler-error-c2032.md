@@ -1,5 +1,5 @@
 ---
-title: C2032 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2032 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1db268222f3b9f7ca6f9ce297680866185e6661d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ab02ca695ec94f25054e3490232b782a46a53a4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167213"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064006"
 ---
-# <a name="compiler-error-c2032"></a>C2032 chyby kompilátoru
-"identifikátor": funkce nesmí být členem struktura/sjednocení 'structorunion.  
-  
- Struktura nebo union obsahuje členské funkce, která je povolena v jazyce C++, ale není v C. Chcete-li vyřešit chyby, kompilovat jako programu C++ nebo odeberte – členská funkce.  
-  
- Následující ukázka generuje C2032:  
-  
-```  
-// C2032.c  
-struct z {  
-   int i;  
-   void func();   // C2032  
-};  
-```  
-  
- Možná řešení:  
-  
-```  
-// C2032b.c  
-// compile with: /c  
-struct z {  
-   int i;  
-};  
+# <a name="compiler-error-c2032"></a>Chyba kompilátoru C2032
+
+'identifier': funkce nemůže být členem struktury nebo sjednocení "structorunion.
+
+Struktura nebo sjednocení má členská funkce, který je povolen v jazyce C++, ale ne v C. Chcete-li vyřešit chybu, zkompiluje kód jako programu v jazyce C++ nebo odeberte členskou funkci.
+
+Následující ukázka generuje C2032:
+
+```
+// C2032.c
+struct z {
+   int i;
+   void func();   // C2032
+};
+```
+
+Možná řešení:
+
+```
+// C2032b.c
+// compile with: /c
+struct z {
+   int i;
+};
 ```

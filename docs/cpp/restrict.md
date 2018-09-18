@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3eb361d0b92a3977547388ebfd612915431ec98
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 955c3574358d59d23b644a31e42ee91ce6ce76eb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463678"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068335"
 ---
 # <a name="restrict"></a>restrict
 
@@ -32,21 +32,21 @@ Při použití u deklarace funkce nebo definice, která vrací typ ukazatele, **
 
 ## <a name="syntax"></a>Syntaxe
 
-> **__declspec(restrict)** *pointer_return_type* *function*();  
-  
+> **__declspec(restrict)** *pointer_return_type* *function*();
+
 ## <a name="remarks"></a>Poznámky
 
 Kompilátor šíří **__declspec(restrict)**. Například CRT `malloc` má funkce **__declspec(restrict)** dekorace a proto kompilátor předpokládá, že ukazatele inicializované do umístění v paměti podle `malloc` nejsou také alias podle dříve existující ukazatele.
 
-Kompilátor nekontroluje, vrácený ukazatel není ve skutečnosti vytvořen alias. Je odpovědností vývojáře zajistit, aby programátor nevytvořil alias ukazatel označené **omezit __declspec** modifikátor.  
-  
+Kompilátor nekontroluje, vrácený ukazatel není ve skutečnosti vytvořen alias. Je odpovědností vývojáře zajistit, aby programátor nevytvořil alias ukazatel označené **omezit __declspec** modifikátor.
+
 Podobné sémantiky proměnných naleznete v tématu [kvalifikátor __restrict](../cpp/extension-restrict.md).
- 
+
 Jinou anotaci, která se vztahuje pouze na aliasing v rámci funkce, najdete v části [__declspec(noalias)](../cpp/noalias.md).
-  
-Informace o tom, **omezit** – klíčové slovo, který je součástí C++ AMP, naleznete v tématu [omezení (C++ AMP)](../cpp/restrict-cpp-amp.md).  
- 
-## <a name="example"></a>Příklad  
+
+Informace o tom, **omezit** – klíčové slovo, který je součástí C++ AMP, naleznete v tématu [omezení (C++ AMP)](../cpp/restrict-cpp-amp.md).
+
+## <a name="example"></a>Příklad
 
 Následující příklad ukazuje použití **__declspec(restrict)**.
 
@@ -122,6 +122,7 @@ int main()
 **Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také:
- [Klíčová slova](../cpp/keywords-cpp.md)  
- [__declspec](../cpp/declspec.md)  
- [__declspec(noalias)](../cpp/noalias.md)  
+
+[Klíčová slova](../cpp/keywords-cpp.md)<br/>
+[__declspec](../cpp/declspec.md)<br/>
+[__declspec(noalias)](../cpp/noalias.md)

@@ -1,5 +1,5 @@
 ---
-title: Upozornění linkerů Lnk4001 | Microsoft Docs
+title: Upozornění Linkerů LNK4001 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acf65c00c5c039769a05e009dcfe46ea42633ac4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f684e85233c4df777a53f03f07936137c425946e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300355"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070416"
 ---
 # <a name="linker-tools-warning-lnk4001"></a>Upozornění linkerů LNK4001
-žádné soubory objekt zadané; použít knihovny  
-  
- Soubory .lib jeden nebo více, ale ne soubory .obj, byl předán linkeru.  
-  
- Protože linkeru není mít přístup k informacím v souboru .lib, která bude mít přístup k souboru .obj, toto upozornění označuje, že budete mít k explicitnímu zadání dalších možností linkeru. Například možná budete muset zadat [/MACHINE](../../build/reference/machine-specify-target-platform.md), [/OUT](../../build/reference/out-output-file-name.md), nebo [/Entry](../../build/reference/entry-entry-point-symbol.md) možnosti.
+
+jste; žádné soubory objektů použily se knihovny.
+
+Jeden nebo více souborů .lib, ale ne soubory .obj byl předán linkeru.
+
+Protože propojovací program není schopen získat přístup k informacím v .lib soubor, který je schopen získat přístup v souboru .obj, toto upozornění signalizuje, že je nutné explicitně zadat další možnosti linkeru. Například budete muset zadat [/MACHINE](../../build/reference/machine-specify-target-platform.md), [/OUT](../../build/reference/out-output-file-name.md), nebo [/Entry](../../build/reference/entry-entry-point-symbol.md) možnosti.

@@ -1,5 +1,5 @@
 ---
-title: invalid_oversubscribe_operation – třída | Microsoft Docs
+title: invalid_oversubscribe_operation – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 612a5658e0ef678253ec493f23b71cc564288904
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1b4e1eaf4bfca27ef22af103a5696ca2a34265d6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689513"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069181"
 ---
 # <a name="invalidoversubscribeoperation-class"></a>invalid_oversubscribe_operation – třída
-Tato třída popisuje výjimka vyvolaná při `Context::Oversubscribe` metoda je volána s `_BeginOversubscription` parametr nastaven na `false` bez předchozího volání `Context::Oversubscribe` metoda s `_BeginOversubscription` parametr nastaven na `true`.  
+Tato třída popisuje výjimku vyvolána, když `Context::Oversubscribe` metoda je volána `_BeginOversubscription` parametr nastaven na `false` bez předchozího volání `Context::Oversubscribe` metodu s `_BeginOversubscription` parametr nastaven na `true`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,7 +52,7 @@ class invalid_oversubscribe_operation : public std::exception;
   
  **Namespace:** souběžnosti  
   
-##  <a name="ctor"></a> invalid_oversubscribe_operation 
+##  <a name="ctor"></a> invalid_oversubscribe_operation – 
 
  Vytvoří `invalid_oversubscribe_operation` objektu.  
   
@@ -64,8 +64,8 @@ invalid_oversubscribe_operation() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Popisný zpráva o chybě.  
+*_TEXT*<br/>
+Popisná zpráva chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [concurrency – obor názvů](concurrency-namespace.md)

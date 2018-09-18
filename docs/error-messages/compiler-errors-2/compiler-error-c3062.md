@@ -1,5 +1,5 @@
 ---
-title: C3062 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3062 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da507511cb5f091d5d9432bbfeb36951e3f43c6f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95f2e58cada0b1b825fb0f065b461db6350de9fc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250563"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067165"
 ---
-# <a name="compiler-error-c3062"></a>C3062 chyby kompilátoru
-'výčtu': enumerátor vyžaduje hodnotu, protože základní typ je "typ"  
-  
- Můžete zadat základní typ pro výčet. Některé typy ale vyžadují, abyste hodnoty přiřadit každý enumerátor.  
-  
- Další informace o výčty najdete v tématu [výčet tříd](../../windows/enum-class-cpp-component-extensions.md).  
-  
- Následující ukázka generuje C3062:  
-  
-```  
-// C3062.cpp  
-// compile with: /clr  
-  
-enum class MyEnum : bool { a };   // C3062  
-enum class MyEnum2 : bool { a = true};   // OK  
+# <a name="compiler-error-c3062"></a>Chyba kompilátoru C3062
+
+"výčet": enumerátor vyžaduje hodnotu, protože základní typ je 'type'
+
+Můžete určit nadřízený typ výčtu. Nicméně některé typy vyžadují, abyste přiřadit hodnoty pro každý čítač.
+
+Další informace o výčtech naleznete v tématu [výčet tříd](../../windows/enum-class-cpp-component-extensions.md).
+
+Následující ukázka generuje C3062:
+
+```
+// C3062.cpp
+// compile with: /clr
+
+enum class MyEnum : bool { a };   // C3062
+enum class MyEnum2 : bool { a = true};   // OK
 ```

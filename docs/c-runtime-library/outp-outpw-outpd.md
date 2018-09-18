@@ -1,5 +1,5 @@
 ---
-title: _outp – _outpw –, _outpd – | Microsoft Docs
+title: _outp – _outpw –, _outpd – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -43,68 +43,73 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 140b53fd90d393f2629dda6573d994635b96f417
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 604fe4a5fd3daa2cfef7698cd044c7edc56232b2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391506"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069635"
 ---
 # <a name="outp-outpw-outpd"></a>_outp, _outpw, _outpd
-Výstupy na port, bajtů (`_outp`), slova (`_outpw`), nebo slovo, double (`_outpd`).  
-  
+
+Výstupy, na portu, byte (`_outp`), word (`_outpw`), nebo double word (`_outpd`).
+
 > [!IMPORTANT]
->  Tyto funkce jsou zastaralé. Od verze sady Visual Studio 2015, nejsou k dispozici v CRT.  
-  
+>  Tyto funkce jsou zastaralé. Od v sadě Visual Studio 2015, nejsou k dispozici v CRT.
+
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-      int _outp(  
-unsigned short port,  
-int databyte   
-);  
-unsigned short _outpw(  
-unsigned short port,  
-unsigned short dataword   
-);  
-unsigned long _outpd(  
-unsigned short port,  
-unsigned long dataword   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *port*  
- Číslo portu.  
-  
- *databyte dataword*  
- Výstup hodnoty.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Funkce vrátí výstupní data. Neexistuje žádný návratový chyby.  
-  
-## <a name="remarks"></a>Poznámky  
- `_outp`, `_outpw`, A `_outpd` funkce zápis bajtů, slovo a dvojitou slova, v uvedeném pořadí, do zadané výstupní port. *Port* argument může být jakékoli celé číslo bez znaménka v rozsahu 0 – 65 535; *databyte* může být jakékoli celé číslo v rozsahu 0 – 255; a *dataword* může být libovolná hodnota v rozsahu celé číslo, celé číslo bez znaménka krátký a dlouhý číslo bez znaménka, v uvedeném pořadí.  
-  
- Protože tyto funkce zapisovat přímo k portu vstupně-výstupních operací, nelze použít v uživatelském kódu. Informace o používání vstupně-výstupních portů v těchto operačních systémů vyhledejte na webu MSDN "Sériové komunikace v Win32".  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`_outp`|\<conio.h >|  
-|`_outpw`|\<conio.h >|  
-|`_outpd`|\<conio.h >|  
-  
- Další informace o kompatibilitě, najdete v části [kompatibility](../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Knihovny  
- Všechny verze [běhové knihovny jazyka C](../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Viz také  
- [I/O konzoly a portu](../c-runtime-library/console-and-port-i-o.md)   
- [_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)
+>  Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```
+
+      int _outp(
+unsigned short port,
+int databyte
+);
+unsigned short _outpw(
+unsigned short port,
+unsigned short dataword
+);
+unsigned long _outpd(
+unsigned short port,
+unsigned long dataword
+);
+```
+
+#### <a name="parameters"></a>Parametry
+*Port*<br/>
+Číslo portu.
+
+*databyte dataword*<br/>
+Výstupní hodnoty.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Funkce vrací datový výstup. Není vrácena žádná chyba.
+
+## <a name="remarks"></a>Poznámky
+
+`_outp`, `_outpw`, A `_outpd` funkce zapisují byte, word a double word, resp. do zadaného výstupního portu. *Port* argument může být libovolné celé číslo bez znaménka v rozsahu 0 – 65 535; *databyte* může být libovolné celé číslo v rozsahu 0 – 255 a *dataword* může být libovolná hodnota v rozsahu celého čísla, krátké celé číslo bez znaménka a celé číslo bez znaménka dlouhý, v uvedeném pořadí.
+
+Vzhledem k tomu, že tyto funkce zapisují přímo do portu I/O, nemohou být použity v uživatelském kódu. Informace o použití I/O portů v těchto operačních systémů vyhledání "Sériové komunikace ve Win32" na webu MSDN.
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|`_outp`|\<conio.h >|
+|`_outpw`|\<conio.h >|
+|`_outpd`|\<conio.h >|
+
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Knihovny
+
+Všechny verze [běhových knihoven C](../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Viz také
+
+[I/O konzoly a portu](../c-runtime-library/console-and-port-i-o.md)<br/>
+[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)

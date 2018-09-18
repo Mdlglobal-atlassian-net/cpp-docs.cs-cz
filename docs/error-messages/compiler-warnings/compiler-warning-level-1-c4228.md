@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4228 | Microsoft Docs
+title: Upozornění (úroveň 1) C4228 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 023bf60930a53b6bd881680caebb78c151406df4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dab568ef6622bfa10f0e10566ec92dfaee71d22c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276787"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047951"
 ---
-# <a name="compiler-warning-level-1-c4228"></a>C4228 kompilátoru upozornění (úroveň 1)
-nestandardní rozšíření používané: kvalifikátory za desetinnou čárkou v seznamu deklarátor jsou ignorovány.  
-  
- Použití kvalifikátory jako **const** nebo `volatile` čárkou při deklarování proměnných po rozšíření Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// C4228.cpp  
-// compile with: /W1  
-int j, const i = 0;  // C4228  
-int k;  
-int const m = 0;  // ok  
-int main()  
-{  
-}  
+# <a name="compiler-warning-level-1-c4228"></a>Kompilátor upozornění (úroveň 1) C4228
+
+používá se nestandardní rozšíření: kvalifikátory za čárkou v seznamu deklarátorů se ignorují.
+
+Použití kvalifikátorů, jako jsou **const** nebo `volatile` po čárkou při deklaraci proměnné je rozšířením společnosti Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).
+
+## <a name="example"></a>Příklad
+
+```
+// C4228.cpp
+// compile with: /W1
+int j, const i = 0;  // C4228
+int k;
+int const m = 0;  // ok
+int main()
+{
+}
 ```

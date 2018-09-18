@@ -1,5 +1,5 @@
 ---
-title: C2738 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2738 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f056d8f38c36011e2b9025283e46164fe53061fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 78dad09ba06e3f78007125508aa11de1a76101a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236726"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066612"
 ---
-# <a name="compiler-error-c2738"></a>C2738 chyby kompilátoru
-"prohlášení": je nejednoznačné, nebo není členem skupiny "typ"  
-  
- Funkce byla deklarována nesprávně.  
-  
- Následující ukázka generuje C2738:  
-  
-```  
-// C2738.cpp  
-struct A {  
-   template <class T> operator T*();  
-   // template <class T> operator T();  
-};  
-  
-template <>  
-A::operator int() {   // C2738  
-  
-// try the following line instead  
-// A::operator int*() {  
-  
-// or use the commented member declaration  
-  
-   return 0;  
-}  
+# <a name="compiler-error-c2738"></a>Chyba kompilátoru C2738
+
+"deklarace": je nejednoznačný nebo není členem 'type'
+
+Funkci byl deklarován nesprávně.
+
+Následující ukázka generuje C2738:
+
+```
+// C2738.cpp
+struct A {
+   template <class T> operator T*();
+   // template <class T> operator T();
+};
+
+template <>
+A::operator int() {   // C2738
+
+// try the following line instead
+// A::operator int*() {
+
+// or use the commented member declaration
+
+   return 0;
+}
 ```

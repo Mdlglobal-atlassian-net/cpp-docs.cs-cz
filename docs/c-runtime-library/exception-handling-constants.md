@@ -1,5 +1,5 @@
 ---
-title: Konstanty zpracování výjimek | Microsoft Docs
+title: Konstanty zpracování výjimek | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47f23fd421d5108648d88c9eeda83c255f9861dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6cc17e429c0750b9f0cc8d9eb24bc94adf00484e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388224"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070597"
 ---
 # <a name="exception-handling-constants"></a>Konstanty zpracování výjimek
-Konstanta `EXCEPTION_CONTINUE_SEARCH`, `EXCEPTION_CONTINUE_EXECUTION`, nebo `EXCEPTION_EXECUTE_HANDLER` je vrácena, pokud dojde k výjimce během zpracování chráněného oddílu **zkuste – s výjimkou** příkaz. Návratová hodnota určuje, jak je výjimka ošetřena. Další informace najdete v tématu [zkuste-except – příkaz](../cpp/try-except-statement.md) v *referenční příručka jazyka C++*.  
-  
-## <a name="see-also"></a>Viz také  
- [Globální konstanty](../c-runtime-library/global-constants.md)
+
+Konstanta `EXCEPTION_CONTINUE_SEARCH`, `EXCEPTION_CONTINUE_EXECUTION`, nebo `EXCEPTION_EXECUTE_HANDLER` je vrácena, když dojde k výjimce za běhu chráněné části **zkuste – s výjimkou** příkazu. Návratová hodnota určuje, jak je výjimka ošetřena. Další informace najdete v tématu [zkuste-except – příkaz](../cpp/try-except-statement.md) v *referenční dokumentace jazyka C++*.
+
+## <a name="see-also"></a>Viz také
+
+[Globální konstanty](../c-runtime-library/global-constants.md)

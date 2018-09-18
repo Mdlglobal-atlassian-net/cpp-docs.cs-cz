@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1020 | Microsoft Docs
+title: Závažná chyba C1020 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c70727b5e0d83b03099b637e0f768f65d271b05
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ab0da342e575c0af452ec70d1759fe34188db9a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224636"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066866"
 ---
 # <a name="fatal-error-c1020"></a>Závažná chyba C1020
-neočekávané #endif  
-  
- `#endif` – Direktiva má neexistuje odpovídající `#if`, `#ifdef`, nebo `#ifndef` – direktiva. Být opravdu každý `#endif` má odpovídající direktivu.  
-  
- Následující ukázka generuje C1020:  
-  
-```  
-// C1020.cpp  
-#endif     // C1020  
-```  
-  
- Možná řešení:  
-  
-```  
-// C1020b.cpp  
-// compile with: /c  
-#if 1  
-#endif  
+
+neočekávané #endif
+
+`#endif` – Direktiva nemá odpovídající `#if`, `#ifdef`, nebo `#ifndef` směrnice. Být, že každý `#endif` má odpovídající směrnice.
+
+Následující ukázka generuje C1020:
+
+```
+// C1020.cpp
+#endif     // C1020
+```
+
+Možná řešení:
+
+```
+// C1020b.cpp
+// compile with: /c
+#if 1
+#endif
 ```

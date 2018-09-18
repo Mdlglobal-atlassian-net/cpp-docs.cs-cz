@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43053702b18355c0422a9fc87ac77e0a4ad75b82
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ddcf0b266b9e305c209bd6b471d44e320f774851
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335539"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061952"
 ---
 # <a name="cmapstringtoptr-class"></a>Cmapstringtoptr – třída
 Podporuje mapy ukazatelů typu void označenými pomocí `CString` objekty.  
@@ -63,15 +63,11 @@ class CMapStringToPtr : public CObject
 ## <a name="members"></a>Členové  
  Členské funkce `CMapStringToPtr` jsou podobné jako u členských funkcí třídy [cmapstringtoob –](../../mfc/reference/cmapstringtoob-class.md). Z důvodu podobnosti, můžete použít `CMapStringToOb` referenční dokumentaci pro konkrétní členské funkce. Po zobrazení `CObject` ukazatele jako parametr funkce nebo návratová hodnota, nahraďte ukazatel na **void**.  
   
- `BOOL CMapStringToOb::Lookup( const char* <key>,`  
-  
- `CObject*& <rValue> ) const;`  
+ `BOOL CMapStringToOb::Lookup( const char* <key>, CObject*& <rValue> ) const;`  
   
  například se přeloží na  
   
- `BOOL CMapStringToPtr::Lookup( LPCTSTR <key>, void*& <rValue> )`  
-  
- `const;`  
+ `BOOL CMapStringToPtr::Lookup( LPCTSTR <key>, void*& <rValue> ) const;`  
   
 ### <a name="public-constructors"></a>Veřejné konstruktory  
   

@@ -1,5 +1,5 @@
 ---
-title: ___mb_cur_max_func, ___mb_cur_max_l_func, __p___mb_cur_max, __mb_cur_max | Microsoft Docs
+title: ___mb_cur_max_func ___mb_cur_max_l_func, __p___mb_cur_max __mb_cur_max | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,44 +36,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ea2a6d07a6664b74abaa1513a39f8f908f72fa1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7eb9682a648f8e302a620e3c2e0dc1631abf7945
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389683"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068270"
 ---
-# <a name="mbcurmaxfunc-mbcurmaxlfunc-pmbcurmax-mbcurmax"></a>___mb_cur_max_func, ___mb_cur_max_l_func, __p___mb_cur_max, __mb_cur_max
-Vnitřní funkce CRT. Načte maximální počet bajtů v vícebajtových znaků pro zadané nebo aktuální národní prostředí.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-int ___mb_cur_max_func(void);  
-int ___mb_cur_max_l_func(_locale_t locale);  
-int * __p___mb_cur_max(void);  
-#define __mb_cur_max (___mb_cur_max_func())  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- locale  
- Struktura národního prostředí načíst výsledky z. Pokud má hodnotu null, použije se aktuální národní prostředí vlákna.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Maximální počet bajtů v vícebajtových znaků pro aktuální národní prostředí vlákna nebo zadaný národní prostředí.  
-  
-## <a name="remarks"></a>Poznámky  
- Toto je interní funkce, která CRT používá k načtení aktuální hodnota [mb_cur_max –](../c-runtime-library/mb-cur-max.md) makro z lokální úložiště vláken. Doporučujeme vám, že používáte `MB_CUR_MAX` makro ve vašem kódu pro přenositelnost.  
-  
- `__mb_cur_max` Makro je pohodlný způsob, jak `___mb_cur_max_func()` funkce. `__p___mb_cur_max` Je definována funkce pro kompatibilitu s Visual C++ 5.0 a starší verze.  
-  
- CRT – vnitřní funkce jsou specifické pro implementaci a mohou podléhat změnám jednotlivých verzí. Nedoporučujeme jejich použití v kódu.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Rutina|Požadovaný hlavičkový soubor|  
-|-------------|---------------------|  
-|`___mb_cur_max_func`, `___mb_cur_max_l_func`, `__p___mb_cur_max`|\<ctype.h >, \<stdlib.h >|  
-  
-## <a name="see-also"></a>Viz také  
- [MB_CUR_MAX](../c-runtime-library/mb-cur-max.md)
+# <a name="mbcurmaxfunc-mbcurmaxlfunc-pmbcurmax-mbcurmax"></a>___mb_cur_max_func ___mb_cur_max_l_func, __p___mb_cur_max, __mb_cur_max
+
+Vnitřní funkce CRT. Získá maximální počet bajtů ve vícebajtové znakové pro aktuálního nebo zadaného národního prostředí.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+int ___mb_cur_max_func(void);
+int ___mb_cur_max_l_func(_locale_t locale);
+int * __p___mb_cur_max(void);
+#define __mb_cur_max (___mb_cur_max_func())
+```
+
+#### <a name="parameters"></a>Parametry
+
+Struktura národní prostředí načíst výsledky z národního prostředí. Pokud je tato hodnota null, použije se aktuální národní prostředí pro vlákno.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Maximální počet bajtů ve vícebajtové znakové pro aktuální národní prostředí pro vlákno nebo zadanému národnímu prostředí.
+
+## <a name="remarks"></a>Poznámky
+
+Toto je vnitřní funkce, která CRT používá k načtení aktuální hodnota [MB_CUR_MAX](../c-runtime-library/mb-cur-max.md) – makro z úložiště thread local. Doporučujeme použít `MB_CUR_MAX` – makro ve vašem kódu pro přenositelnost.
+
+`__mb_cur_max` – Makro je pohodlný způsob, jak volat `___mb_cur_max_func()` funkce. `__p___mb_cur_max` Funkce je definována pro kompatibilitu s Visual C++ 5.0 a starších verzí.
+
+Vnitřní funkce CRT jsou specifický pro implementaci a může změnit jednotlivých vydání. Nedoporučujeme jejich použití ve vašem kódu.
+
+## <a name="requirements"></a>Požadavky
+
+|Rutina|Požadovaný hlavičkový soubor|
+|-------------|---------------------|
+|`___mb_cur_max_func`, `___mb_cur_max_l_func`, `__p___mb_cur_max`|\<ctype.h >, \<stdlib.h >|
+
+## <a name="see-also"></a>Viz také
+
+[MB_CUR_MAX](../c-runtime-library/mb-cur-max.md)

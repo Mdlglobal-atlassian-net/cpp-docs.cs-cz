@@ -1,5 +1,5 @@
 ---
-title: com::PTR – třída | Microsoft Docs
+title: com::PTR – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 27adaa2d91bac38c587ee7e4ec9c805c102d4883
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3cd5b4115d50f9e2db9b1e3dc8a03818e2c8252f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33108270"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066724"
 ---
 # <a name="comptr-class"></a>com::ptr – třída
-Obálka pro objekt COM, který lze použít jako člena třídy CLR.  Obálku automatizuje správu životního cyklu objektu COM, při jeho destruktoru uvolnění všechny vlastní odkazuje na objekt. Podobá se [CComPtr třída](../atl/reference/ccomptr-class.md).  
+Obálka pro objekt modelu COM, který může sloužit jako člen třídy CLR.  Obálka kanál také automatizuje správu životního cyklu objektu COM, uvolňuje všechny vlastněné odkazů na objekt, když jeho destruktoru je volána. Obdobná [CComPtr – třída](../atl/reference/ccomptr-class.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,18 +38,18 @@ ref class ptr;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_interface_type`  
- Rozhraní COM.  
+*_interface_type*<br/>
+Rozhraní COM.  
   
 ## <a name="remarks"></a>Poznámky  
- A `com::ptr` lze také jako proměnnou a místní funkce pro zjednodušení různé úlohy COM a automatizovat správu životního cyklu.  
+ A `com::ptr` lze také jako funkce místní proměnnou ke zjednodušení různé úlohy COM a automatizují správu životního cyklu.  
   
- A `com::ptr` nelze použít přímo jako parametr funkce; použít [sledování Reference – operátor](../windows/tracking-reference-operator-cpp-component-extensions.md) nebo [operátor popisovače objektu (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) místo.  
+ A `com::ptr` nelze použít přímo jako parametr funkce; použijte [Tracking Reference Operator](../windows/tracking-reference-operator-cpp-component-extensions.md) nebo [operátor popisovače objektu (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) místo.  
   
- A `com::ptr` nemůže být vrácen přímo z funkce; místo toho použijte popisovač.  
+ A `com::ptr` nemůže být vráceny přímo z funkce; místo toho použijte popisovač.  
   
 ## <a name="example"></a>Příklad  
- Tento příklad implementuje CLR třídu, která využívá `com::ptr` zabalit jeho privátního člena `IXMLDOMDocument` objektu.  Veřejné metody třídy výsledků volání v volání do uzavřeného `IXMLDOMDocument` objektu.  Ukázka vytvoří instance dokumentu XML, vyplní s některé jednoduché XML a nemá zjednodušené procházení uzly ve stromu dokumentu Analyzovaná tisknout XML do konzoly.  
+ V tomto příkladu implementuje třídu CLR, která se používá `com::ptr` zabalit její privátní člen `IXMLDOMDocument` objektu.  Volání veřejné metody tříd výsledky ve volání do uzavřeného `IXMLDOMDocument` objektu.  Ukázka vytvoří instanci dokumentu XML, vyplní některé jednoduché XML a nemá zjednodušené procházení uzlů ve stromu analyzovaný dokumentu a vytisknout XML do konzoly.  
   
 ```  
 // comptr.cpp  

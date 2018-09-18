@@ -1,5 +1,5 @@
 ---
-title: Konstanty matematické chyby | Microsoft Docs
+title: Konstanty matematické chyby | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -33,36 +33,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb491e8073acf2af525814b595ce79365df0fa1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63da23d30b12859c79427432bce38e1156e190de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389036"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063330"
 ---
 # <a name="math-error-constants"></a>Konstanty matematické chyby
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-#include <math.h>  
-  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Matematické rutiny běhové knihovny můžete vygenerovat konstanty matematické chyby.  
-  
- Typy výjimek definované v MATEMATICKÉ odpovídají tyto chyby popsané následujícím způsobem. H a jsou vrácené `_matherr` funkce při matematické chyby.  
-  
-|Konstanta|Význam|  
-|--------------|-------------|  
-|`_DOMAIN`|Argument funkce je mimo doménu funkce.|  
-|`_OVERFLOW`|Výsledek je příliš velký a nelze v návratového typu funkce.|  
-|`_PLOSS`|Částečné ztrátě násobek došlo k chybě.|  
-|`_SING`|Argument singularity: argument funkce má neplatnou hodnotu. (Například hodnota 0 je předaná do funkce, který vyžaduje nenulovou hodnotu.)|  
-|`_TLOSS`|Celkový počet ztrátě násobek došlo k chybě.|  
-|`_UNDERFLOW`|Výsledkem je, a nelze je příliš malá.|  
-  
-## <a name="see-also"></a>Viz také  
- [_matherr](../c-runtime-library/reference/matherr.md)   
- [Globální konstanty](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Syntaxe
+
+```
+
+#include <math.h>
+
+```
+
+## <a name="remarks"></a>Poznámky
+
+Matematické rutiny knihovny run-time může generovat konstanty matematické chyby.
+
+Tyto chyby, následujícím způsobem popsané odpovídají typy výjimek, které jsou definované v MATEMATICE. H a jsou vrácené `_matherr` fungovat v případě, že dojde k chybě matematické.
+
+|Konstanta|Význam|
+|--------------|-------------|
+|`_DOMAIN`|Argument funkce je mimo doménu funkce.|
+|`_OVERFLOW`|Výsledek je příliš velký, aby se dala vyjádřit v návratovém typu funkce.|
+|`_PLOSS`|Došlo k částečné ztrátě významu.|
+|`_SING`|Argument singularity: argument funkce má neplatnou hodnotu. (Například, hodnota 0 předána funkci, která vyžaduje nenulovou hodnotu.)|
+|`_TLOSS`|Celkový počet ke ztrátě významu došlo k chybě.|
+|`_UNDERFLOW`|Výsledek je příliš malá, aby se dala vyjádřit.|
+
+## <a name="see-also"></a>Viz také
+
+[_matherr](../c-runtime-library/reference/matherr.md)<br/>
+[Globální konstanty](../c-runtime-library/global-constants.md)

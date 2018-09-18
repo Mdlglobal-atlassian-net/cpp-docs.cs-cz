@@ -1,5 +1,5 @@
 ---
-title: C3488 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3488 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,68 +16,72 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1f872e308c5c80e806ed13d94cd46fb27cdbd47
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 15e1a21781eed96ee3a2a1430da8e43013393912
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257241"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061786"
 ---
-# <a name="compiler-error-c3488"></a>C3488 chyby kompilátoru
-'příkaz var' není povolená, pokud je výchozí režim zachycení odkazem  
-  
- Pokud určíte, že je výchozí režim zachycení pro výraz lambda odkazem, nemůžete předat proměnné s odkazem na klauzuli zachycení tohoto výrazu.  
-  
-### <a name="to-correct-this-error"></a>Oprava této chyby  
-  
--   Proměnná explicitně nepředávejte pro klauzuli zachycení nebo  
-  
--   Nezadávejte odkazem jako výchozí režim zachycení, nebo  
-  
--   Zadejte-hodnota jako výchozí režim zachycení, nebo  
-  
--   Předejte proměnnou hodnotou klauzuli zachycení. (Toto může změnit chování výrazu lambda.)  
-  
-## <a name="example"></a>Příklad  
- Následující příklad vytvoří C3488, protože odkaz na proměnnou `n` se zobrazí v klauzuli zachycení výrazu lambda, jejíž výchozí režim je odkazem:  
-  
-```  
-// C3488a.cpp  
-  
-int main()  
-{  
-   int n = 5;  
-   [&, &n]() { return n; } (); // C3488  
-}  
-```  
-  
-## <a name="example"></a>Příklad  
- Následující příklad ukazuje na C3488 čtyři možná řešení:  
-  
-```  
-// C3488b.cpp  
-  
-int main()  
-{  
-   int n = 5;  
-  
-   // Possible resolution 1:  
-   // Do not explicitly pass &n to the capture clause.  
-   [&]() { return n; } ();  
-  
-   // Possible resolution 2:  
-   // Do not specify by-reference as the default capture mode.  
-   [&n]() { return n; } ();  
-  
-   // Possible resolution 3:  
-   // Specify by-value as the default capture mode.  
-   [=, &n]() { return n; } ();  
-  
-   // Possible resolution 4:  
-   // Pass n by value to the capture clause.  
-   [n]() { return n; } ();  
-}  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Výrazy lambda](../../cpp/lambda-expressions-in-cpp.md)
+# <a name="compiler-error-c3488"></a>Chyba kompilátoru C3488
+
+'příkaz var' není povolený, pokud výchozí režim sběru je podle odkazu
+
+Pokud určíte, že výchozí režim sběru pro výraz lambda je podle odkazu, nelze předat proměnnou s odkazem na klauzuli capture výrazu Tento výraz.
+
+### <a name="to-correct-this-error"></a>Oprava této chyby
+
+- Proměnné explicitně nepředávejte klauzuli zachycení, nebo
+
+- Nezadávejte výchozí režim sběru dat podle odkazu nebo
+
+- Zadejte podle hodnoty jako výchozí režim sběru dat, nebo
+
+- Předejte klauzule zachycení proměnné podle hodnoty. (To může změnit chování část výrazu lambda.)
+
+## <a name="example"></a>Příklad
+
+Následující příklad generuje C3488, protože odkaz na proměnnou `n` se zobrazí v klauzuli capture výrazu lambda výraz, jehož výchozí režim je podle odkazu:
+
+```
+// C3488a.cpp
+
+int main()
+{
+   int n = 5;
+   [&, &n]() { return n; } (); // C3488
+}
+```
+
+## <a name="example"></a>Příklad
+
+Následující příklad ukazuje na C3488 čtyři možná řešení:
+
+```
+// C3488b.cpp
+
+int main()
+{
+   int n = 5;
+
+   // Possible resolution 1:
+   // Do not explicitly pass &n to the capture clause.
+   [&]() { return n; } ();
+
+   // Possible resolution 2:
+   // Do not specify by-reference as the default capture mode.
+   [&n]() { return n; } ();
+
+   // Possible resolution 3:
+   // Specify by-value as the default capture mode.
+   [=, &n]() { return n; } ();
+
+   // Possible resolution 4:
+   // Pass n by value to the capture clause.
+   [n]() { return n; } ();
+}
+```
+
+## <a name="see-also"></a>Viz také
+
+[Výrazy lambda](../../cpp/lambda-expressions-in-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Upozornění (úroveň 1) C4730 kompilátoru | Microsoft Docs
+title: Upozornění kompilátoru (úroveň 1) C4730 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 467d9fd04e2fef78d480fc4db1417b6e4c8d5641
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d740e1574d4cc538a27471c07795b7c95dd17565
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33285470"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070451"
 ---
 # <a name="compiler-warning-level-1-c4730"></a>Upozornění kompilátoru (úroveň 1) C4730
-"hlavní": kombinování _m64 a plovoucí bodu výrazy může vést k nesprávným kódem  
-  
- Používá funkci [__m64](../../cpp/m64.md) a **float**/**dvojité** typy. Protože MMX a zaregistruje se s plovoucí desetinnou čárkou sdílí stejný fyzický zaregistrovat místa (nelze používat současně s), pomocí `__m64` a **float**/**dvojité** typy ve stejné funkce může způsobit poškození dat, což může způsobit výjimku.  
-  
- Bezpečně používat `__m64` typy a typy s plovoucí desetinnou čárkou v stejnou funkci, každý instrukce, který používá jeden z typů musí být odděleny **_m_empty()** (pro MMX) nebo **_m_femms()** (pro 3DNow!) vnitřní funkce.  
-  
- Následující ukázka generuje C4730:  
-  
-```  
-// C4730.cpp  
-// compile with: /W1  
-// processor: x86  
-#include "mmintrin.h"  
-  
-void func(double)  
-{  
-}  
-  
-int main(__m64 a, __m64 b)  
-{  
-   __m64 m;  
-   double f;  
-   f = 1.0;  
-   m = _m_paddb(a, b);  
-   // uncomment the next line to resolve C4730  
-   // _m_empty();  
-   func(f * 3.0);   // C4730  
-}  
+
+"hlavní": směšování výrazů _m64 a plovoucí desetinná čárka výrazy mohou způsobit nesprávný kód
+
+Funkce používá [__m64](../../cpp/m64.md) a **float**/**double** typy. Protože MMX a s plovoucí desetinnou čárkou registrů sdílet stejný fyzický prostor registru (nelze použít současně), pomocí `__m64` a **float**/**double** typů ve stejném funkce může způsobit poškození dat, což může způsobit výjimku.
+
+Bezpečně používat `__m64` typy a typy s plovoucí desetinnou čárkou ve stejné funkci každou instrukci, která používá jeden z typů musí být odděleny **_m_empty()** (pro MMX) nebo **_m_femms()** (pro 3DNow!) vnitřní.
+
+Následující ukázka generuje C4730:
+
+```
+// C4730.cpp
+// compile with: /W1
+// processor: x86
+#include "mmintrin.h"
+
+void func(double)
+{
+}
+
+int main(__m64 a, __m64 b)
+{
+   __m64 m;
+   double f;
+   f = 1.0;
+   m = _m_paddb(a, b);
+   // uncomment the next line to resolve C4730
+   // _m_empty();
+   func(f * 3.0);   // C4730
+}
 ```

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 223d781e879f2d1c3a35fce00e788a42247299eb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8369afbbf423f85df0e38f7f2979b3b7e48f8591
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760094"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067919"
 ---
 # <a name="cstringrefelementtraits-class"></a>Cstringrefelementtraits – třída
 
@@ -34,13 +34,13 @@ Tato třída poskytuje statické funkce související se ukládají v objektech 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-template <typename T>  
+template <typename T>
 class CStringRefElementTraits : public CElementTraitsBase<T>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ dat uložených v kolekci.
 
 ## <a name="members"></a>Členové
@@ -79,10 +79,10 @@ static bool CompareElements(INARGTYPE element1, INARGTYPE element2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*element1*  
+*element1*<br/>
 První řetězec elementu.
 
-*element2*  
+*element2*<br/>
 Druhý řetězec elementu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -99,10 +99,10 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Str1*  
+*Str1*<br/>
 První řetězec elementu.
 
-*řetězci Str2*  
+*řetězci Str2*<br/>
 Druhý řetězec elementu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -119,7 +119,7 @@ static ULONG Hash(INARGTYPE str) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*str*  
+*str*<br/>
 Element řetězce.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -128,5 +128,5 @@ Vrátí hodnotu hash pomocí obsahu řetězce.
 
 ## <a name="see-also"></a>Viz také
 
-[Celementtraitsbase – třída](../../atl/reference/celementtraitsbase-class.md)   
+[CElementTraitsBase – třída](../../atl/reference/celementtraitsbase-class.md)<br/>
 [Přehled tříd](../../atl/atl-class-overview.md)

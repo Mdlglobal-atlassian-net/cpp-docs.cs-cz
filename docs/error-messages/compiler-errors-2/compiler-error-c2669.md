@@ -1,5 +1,5 @@
 ---
-title: C2669 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2669 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 642d2dd99c93b5af021503ffbb4975d1ff3c0db4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 04363816e69dd560acc0497128f13d92c9878005
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233403"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050694"
 ---
-# <a name="compiler-error-c2669"></a>C2669 chyby kompilátoru
-Členská funkce není povoleno v anonymní sjednocení  
-  
-[Anonymní sjednocení](../../cpp/unions.md#anonymous_unions) nemůže mít členské funkce.  
-  
-## <a name="example"></a>Příklad  
-Následující ukázka generuje C2669:  
-  
-```cpp  
-// C2669.cpp  
-struct X {  
-   union {  
-      int i;  
-      void f() {   // C2669, remove function  
-         i = 0;   
-      }  
-   };  
-};  
-```  
-  
+# <a name="compiler-error-c2669"></a>Chyba kompilátoru C2669
+
+Členská funkce není v anonymním sjednocení povolená.
+
+[Anonymní sjednocení](../../cpp/unions.md#anonymous_unions) nemůžou mít členské funkce.
+
+## <a name="example"></a>Příklad
+
+Následující ukázka generuje C2669:
+
+```cpp
+// C2669.cpp
+struct X {
+   union {
+      int i;
+      void f() {   // C2669, remove function
+         i = 0;
+      }
+   };
+};
+```

@@ -1,5 +1,5 @@
 ---
-title: C2135 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2135 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8029738e18af87b8c6a9f3e6ee9d9d2e3f6a46f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4945753bec1ab8d315c8f8028bf10513dcb21c1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168474"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070065"
 ---
-# <a name="compiler-error-c2135"></a>C2135 chyby kompilátoru
-'bit operátor': operace neplatná bitová pole  
-  
- Address-of – operátor (`&`) nelze použít pro pole verze.  
-  
- Následující ukázka generuje C2135:  
-  
-```  
-// C2135.cpp  
-struct S {  
-   int i : 1;  
-};  
-  
-struct T {  
-   int j;  
-};  
-int main() {  
-   &S::i;   // C2135 address of a bit field  
-   &T::j;   // OK  
-}  
+# <a name="compiler-error-c2135"></a>Chyba kompilátoru C2135
+
+'bit operator': Neplatná operace bitového pole
+
+Operátor address-of (`&`) nejde použít u bitové pole.
+
+Následující ukázka generuje C2135:
+
+```
+// C2135.cpp
+struct S {
+   int i : 1;
+};
+
+struct T {
+   int j;
+};
+int main() {
+   &S::i;   // C2135 address of a bit field
+   &T::j;   // OK
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4324 | Microsoft Docs
+title: Upozornění (úroveň 4) C4324 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c34d2fb963be790cfd28f08dd4339fa8ac200c6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2499aa7c674e3bd1bece14c39b09f9863d6bb783
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298974"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064786"
 ---
-# <a name="compiler-warning-level-4-c4324"></a>C4324 kompilátoru upozornění (úroveň 4)
-'struct_name': struktura se vyplní důsledku __declspec(align())  
-  
- Odsazení byla přidána na konci strukturou, protože jste zadali [__declspec(align)](../../cpp/align-cpp.md) hodnotu.  
-  
- Například následující kód generuje C4324:  
-  
-```  
-// C4324.cpp  
-// compile with: /W4  
-struct __declspec(align(32)) A  
-{  
-   char a;  
-};   // C4324  
-  
-int main()  
-{  
-}  
+# <a name="compiler-warning-level-4-c4324"></a>Kompilátor upozornění (úroveň 4) C4324
+
+'struct_name': struktury byla, aby bylo vytvořeno z důvodu __declspec(align())
+
+Odsazení byla přidána na konci struktury, protože jste zadali [__declspec(align)](../../cpp/align-cpp.md) hodnotu.
+
+Například následující kód vygeneruje C4324:
+
+```
+// C4324.cpp
+// compile with: /W4
+struct __declspec(align(32)) A
+{
+   char a;
+};   // C4324
+
+int main()
+{
+}
 ```

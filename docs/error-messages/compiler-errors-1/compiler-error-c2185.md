@@ -1,5 +1,5 @@
 ---
-title: C2185 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2185 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 078860f39ff75c9475678a95adabfdc8ba1a91c7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29d7fd5a94122de9950ea6bcec3888a70b743c74
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172142"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063941"
 ---
-# <a name="compiler-error-c2185"></a>C2185 chyby kompilátoru
-"identifikátor": Neplatná na základě přidělení  
-  
- Registrace proměnná nebo proměnná automatické (místní) je deklarovaná `__based`. Lze deklarovat pouze globální proměnné `__based`.
+# <a name="compiler-error-c2185"></a>Chyba kompilátoru C2185
+
+'identifier': neplatné přidělování based
+
+Je deklarován na proměnné registru nebo automaticky (místní) proměnnou `__based`. Lze deklarovat pouze globální proměnné `__based`.

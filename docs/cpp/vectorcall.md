@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 463f005388a066776d7db8b1701850e08888de76
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 335f81a204ec91361c51f7573e58b61fad91f97b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895094"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061705"
 ---
 # <a name="vectorcall"></a>__vectorcall
 
@@ -46,7 +46,7 @@ typedef struct {
    __m256 y;
    __m256 z;
 } hva3;    // 3 element HVA type on __m256
-```  
+```
 
 Deklarace vašich funkcí explicitně s **__vectorcall** – klíčové slovo v záhlaví souborů, aby bylo možné samostatně zkompilovat kód k propojení bez chyb. Funkce musí být prototypem pomocí **__vectorcall**a nelze použít `vararg` seznam argumentů s proměnnou délkou.
 
@@ -60,25 +60,25 @@ Pro nestatické třídy členské funkce je-li funkce definovaná mimo řádek, 
 struct MyClass {
    void __vectorcall mymethod();
 };
-```  
+```
 
 toto:
 
 ```cpp
 void MyClass::mymethod() { return; }
-```  
+```
 
 je ekvivalentem tohoto:
 
 ```cpp
 void __vectorcall MyClass::mymethod() { return; }
-```  
+```
 
 **__Vectorcall** modifikátor konvence volání při musí být zadán ukazatel **__vectorcall** funkce se vytvoří. Následující příklad vytvoří **– typedef** ukazatele na **__vectorcall** funkce, která přebírá čtyři **double** argumenty a vrátí **__m256**hodnotu:
 
 ```cpp
 typedef __m256 (__vectorcall * vcfnptr)(double, double, double, double);
-```  
+```
 
 ## <a name="vectorcall-convention-on-x64"></a>konvence __vectorcall na x64
 
@@ -167,7 +167,7 @@ hva4 __vectorcall example6(hva2 a, hva4 b, __m256 c, hva2 d) {
    return b;
 }
 
-int __cdecl main( void )  
+int __cdecl main( void )
 {
    hva4 h4;
    hva2 h2;
@@ -188,7 +188,7 @@ int __cdecl main( void )
    i = example5(1, h2, 3, h4, 5);
    h4 = example6(h2, h4, c, h2);
 }
-```  
+```
 
 ## <a name="vectorcall-convention-on-x86"></a>konvence __vectorcall na x86
 
@@ -273,7 +273,7 @@ hva4 __vectorcall example6(hva2 a, hva4 b, __m256 c, hva2 d) {
    return b;
 }
 
-int __cdecl main( void )  
+int __cdecl main( void )
 {
    hva4 h4;
    hva2 h2;
@@ -294,11 +294,11 @@ int __cdecl main( void )
    i = example5(1, h2, 3, h4, 5);
    h4 = example6(h2, h4, c, h2);
 }
-```  
+```
 
 **Specifické pro end Microsoft**
 
 ## <a name="see-also"></a>Viz také:
 
-[Konvence předávání a pojmenování argumentů](../cpp/argument-passing-and-naming-conventions.md)   
+[Konvence předávání a pojmenování argumentů](../cpp/argument-passing-and-naming-conventions.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)

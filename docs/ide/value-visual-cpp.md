@@ -1,5 +1,5 @@
 ---
-title: '&lt;Hodnota&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;Hodnota&gt; (Visual C++) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e78c8ace8b482baa29fbabaf102a8a1bccadd06
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 0a194e45fd79ae59dc91abb21a9fb038d3ec4008
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325393"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041685"
 ---
 # <a name="ltvaluegt-visual-c"></a>&lt;Hodnota&gt; (Visual C++)
-\<Hodnotu > značka umožňuje popisují vlastnosti a přístupových metod vlastností. Všimněte si, že pokud přidáte vlastnost s kódem průvodce v integrovaném vývojovém prostředí sady Visual Studio, přidá [ \<souhrnné >](../ide/summary-visual-cpp.md) značky pro novou vlastnost. Měli byste pak přidat ručně \<hodnotu > značka, které popisují hodnotu, která představuje vlastnost.  
+\<Hodnota > značky umožňuje popisují vlastnosti a metody. Mějte na paměti, že při přidání vlastnosti s kódem průvodce v integrovaném vývojovém prostředí sady Visual Studio přidá [ \<summary >](../ide/summary-visual-cpp.md) značky pro novou vlastnost. Měli byste pak ručně přidat \<hodnota > značka, které popisují hodnotu, která představuje vlastnost.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,8 +35,8 @@ ms.locfileid: "33325393"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `property-description`  
- Popis pro vlastnost.  
+*Popis vlastnosti*<br/>
+Popis pro vlastnost.  
   
 ## <a name="remarks"></a>Poznámky  
  Kompilovat s [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.  

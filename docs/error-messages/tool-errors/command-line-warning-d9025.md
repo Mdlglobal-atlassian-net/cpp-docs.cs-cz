@@ -1,5 +1,5 @@
 ---
-title: Upozornění příkazového řádku D9025 | Microsoft Docs
+title: Upozornění příkazového řádku D9025 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3875a2cbd065fd5ad887267bcc80748fa9845d0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 822d1ac0cc1e6b3e728d43b816e7a0a15eee9958
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298847"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063690"
 ---
 # <a name="command-line-warning-d9025"></a>Upozornění příkazového řádku D9025
-přepsání možnost ' 1' s 'option2.  
-  
- *Možnost 1* možnost byla zadána, ale pak se přepsat *option2*. *Option2* možnost byl použit.  
-  
- Pokud dvě možnosti zadat direktivy odporuje nebo nekompatibilní, se používá direktiva určená nebo obsažená v možnost nejvíce vpravo na příkazovém řádku.  
-  
- Je-li získat toto upozornění, když kompilujete z vývojového prostředí a nejste jisti, kde jsou konfliktní možnosti pocházejících z, zvažte následující:  
-  
--   Možnost lze zadat v kódu nebo v nastavení projektu projektu. Pokud si prohlédnete kompilátoru [stránky vlastností příkazového řádku](../../ide/command-line-property-pages.md) a pokud se zobrazí na konfliktní možnosti v **všechny možnosti** pole možnosti jsou nastavena na stránkách vlastností projektu, jinak, možnosti jsou nastavené ve zdrojovém kódu.  
-  
-     Pokud možnosti jsou nastavené na stránkách vlastností projektu, podívejte se na stránce preprocesoru vlastnost kompilátoru (s uzel projektu vybraného v Průzkumníkovi řešení).  Pokud nevidíte možnost nastavit existuje, zkontrolujte nastavení stránky preprocesoru vlastnost pro každý soubor zdrojový kód (v Průzkumníkovi řešení), zajistěte, aby nebyla přidána existuje.  
-  
-     Pokud jsou nastavení v kódu může být nastavena v kódu nebo v záhlaví systému windows.  Mohou zkuste vytvořit soubor předběžně zpracované ([/P](../../build/reference/p-preprocess-to-a-file.md)) a vyhledejte symbolu.
+
+přepsání "možnost1" s "možnost2.
+
+*Možnost1* možnost byla zadána, ale pak se přepsat *možnost2*. *Možnost2* byla použita možnost.
+
+Pokud dvě možnosti zadat direktivy odporuje nebo nekompatibilní, je použít direktiva určená nebo v možnost nejvíce vpravo na příkazovém řádku.
+
+Je-li získat toto upozornění při kompilaci z vývojového prostředí a nejste jisti, odkud jsou konfliktní možnosti, zvažte následující:
+
+- Možnost se dá nastavit v kódu nebo v nastavení projektu projekt. Když se podíváte na kompilátoru [stránky vlastností příkazového řádku](../../ide/command-line-property-pages.md) a pokud se zobrazí konfliktní možnosti v **všechny možnosti** pole a možnosti jsou nastaveny na stránkách vlastností projektu, jinak, možnosti jsou nastavené ve zdrojovém kódu.
+
+     Pokud jsou možnosti v stránky vlastností projektu, podívejte se na stránku vlastností preprocesoru kompilátoru (s uzlem projektu vybraného v Průzkumníkovi řešení).  Pokud nevidíte možnost nastavit existuje, zkontrolujte nastavení stránky preprocesoru vlastnost pro každý soubor zdrojového kódu (v Průzkumníku řešení), ujistěte se, že tam není přidaný existuje.
+
+     Možnosti jsou nastavené v kódu může být nastavena v kódu nebo v hlavičky systému windows.  Můžete vyzkoušet vytvoření předzpracovaného souboru ([/P](../../build/reference/p-preprocess-to-a-file.md)) a vyhledejte symbol.

@@ -1,5 +1,5 @@
 ---
-title: _CRTDBG_MAP_ALLOC – | Microsoft Docs
+title: _CRTDBG_MAP_ALLOC | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 855b057223d7bdd69d7275e8c2acc0dd72bc256c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0c48095acceefa4bb4852dab18d35284492e7ba0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386476"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069398"
 ---
 # <a name="crtdbgmapalloc"></a>_CRTDBG_MAP_ALLOC
-Když **_crtdbg_map_alloc –** příznak je definována v ladicí verze aplikace, základní verzi funkce hald přímo jsou namapované na jejich ladicí verze. Příznak se používá v Crtdbg.h udělat mapování. Tento příznak je k dispozici pouze při [_DEBUG –](../c-runtime-library/debug.md) příznak byla definována v aplikaci.  
-  
- Další informace o použití ladicí verze versus základní verze funkce haldy najdete v tématu [pomocí ladění verze Versus základní verze](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
-  
-## <a name="see-also"></a>Viz také  
- [Příznaky řízení](../c-runtime-library/control-flags.md)
+
+Když **_CRTDBG_MAP_ALLOC** příznak je definován v ladicí verzi aplikace, základní verze funkcí haldy se mapují přímo na jejich ladicí verze. Příznak se používá v souboru Crtdbg.h provést mapování. Tento příznak je k dispozici pouze pokud [_DEBUG](../c-runtime-library/debug.md) příznak je definována v aplikaci.
+
+Další informace o používání verze ladění a základní verze funkcí haldy najdete v tématu [pomocí ladění verze oproti the základní verze](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
+
+## <a name="see-also"></a>Viz také
+
+[Příznaky řízení](../c-runtime-library/control-flags.md)

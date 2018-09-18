@@ -16,57 +16,59 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6403e9a40adcac5cd9a4dc1a3fbe8a1028d11f99
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1e20106795fbef536ae288649818a254a5688b82
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692802"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064149"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Práce s šablonami příjemců OLE DB
+
 Následující témata obsahují příklady, jak používat šablony příjemce technologie OLE DB v běžných scénářů:  
   
--   [Zjednodušení přístupu k datům s použitím atributů databáze](../../data/oledb/simplifying-data-access-with-database-attributes.md)  
+- [Zjednodušení přístupu k datům s použitím atributů databáze](../../data/oledb/simplifying-data-access-with-database-attributes.md)  
   
--   [Datové členy stavu pole v přístupových objektech generovaných průvodcem](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)  
+- [Datové členy stavu pole v přístupových objektech generovaných průvodcem](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)  
   
--   [Procházení jednoduché sady řádků](../../data/oledb/traversing-a-simple-rowset.md)  
+- [Procházení jednoduché sady řádků](../../data/oledb/traversing-a-simple-rowset.md)  
   
--   [Zadání parametrizovaného dotazu](../../data/oledb/issuing-a-parameterized-query.md)  
+- [Zadání parametrizovaného dotazu](../../data/oledb/issuing-a-parameterized-query.md)  
   
--   [Načítání dat](../../data/oledb/fetching-data.md)  
+- [Načítání dat](../../data/oledb/fetching-data.md)  
   
--   [Aktualizace sad řádků](../../data/oledb/updating-rowsets.md)  
+- [Aktualizace sad řádků](../../data/oledb/updating-rowsets.md)  
   
--   [Použití uložených procedur](../../data/oledb/using-stored-procedures.md)  
+- [Použití uložených procedur](../../data/oledb/using-stored-procedures.md)  
   
--   [Použití přístupových objektů](../../data/oledb/using-accessors.md)  
+- [Použití přístupových objektů](../../data/oledb/using-accessors.md)  
   
--   [Získávání metadat pomocí sad řádků schématu](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)  
+- [Získávání metadat pomocí sad řádků schématu](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)  
   
--   [Podpora transakcí v prostředí OLE DB](../../data/oledb/supporting-transactions-in-ole-db.md)  
+- [Podpora transakcí v prostředí OLE DB](../../data/oledb/supporting-transactions-in-ole-db.md)  
   
--   [Použití zobrazení záznamů OLE DB](../../data/oledb/using-ole-db-record-views.md)  
+- [Použití zobrazení záznamů OLE DB](../../data/oledb/using-ole-db-record-views.md)  
   
--   [Použití existující sady záznamů ADO](../../data/oledb/using-an-existing-ado-recordset.md)  
+- [Použití existující sady záznamů ADO](../../data/oledb/using-an-existing-ado-recordset.md)  
   
--   [Aktualizace sloupce, pokud jiná tabulka obsahuje odkaz na řádek](../../data/oledb/updating-a-column-when-another-table-contains-a-reference-to-the-row.md)  
+- [Aktualizace sloupce, pokud jiná tabulka obsahuje odkaz na řádek](../../data/oledb/updating-a-column-when-another-table-contains-a-reference-to-the-row.md)  
   
--   [Použití záložek](../../data/oledb/using-bookmarks.md)  
+- [Použití záložek](../../data/oledb/using-bookmarks.md)  
   
--   [Načtení objektu BLOB](../../data/oledb/retrieving-a-blob.md)  
+- [Načtení objektu BLOB](../../data/oledb/retrieving-a-blob.md)  
   
--   [Příjem oznámení](../../data/oledb/receiving-notifications.md)  
+- [Příjem oznámení](../../data/oledb/receiving-notifications.md)  
   
- Příklad vytvoření a implementace příjemce technologie OLE DB najdete v tématu [vytvoření jednoduchého příjemce](../../data/oledb/creating-an-ole-db-consumer.md).  
+Příklad vytvoření a implementace příjemce technologie OLE DB najdete v tématu [vytvoření jednoduchého příjemce](../../data/oledb/creating-an-ole-db-consumer.md).  
   
- Můžete také najít příklady použití šablony příjemce technologie OLE DB v následující ukázky:  
+Můžete také najít příklady použití šablony příjemce technologie OLE DB v následující ukázky:  
   
--   [CatDB](https://github.com/Microsoft/VCSamples)  
+- [CatDB](https://github.com/Microsoft/VCSamples)  
   
--   [DBViewer](https://github.com/Microsoft/VCSamples)  
+- [DBViewer](https://github.com/Microsoft/VCSamples)  
   
--   [MultiRead](https://github.com/Microsoft/VCSamples)  
+- [MultiRead](https://github.com/Microsoft/VCSamples)  
   
 ## <a name="see-also"></a>Viz také  
- [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)
+
+[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)

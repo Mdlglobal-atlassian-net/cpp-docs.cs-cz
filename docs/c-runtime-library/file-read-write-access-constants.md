@@ -20,25 +20,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc0b7c9a2d8707d8a1939a47d4fae2ec896e4d2b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4977b1bf8342e0643b83b0b65a53048c4af91a7c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700527"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063408"
 ---
 # <a name="file-readwrite-access-constants"></a>Konstanty přístupu pro čtení a zápis do souboru
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-#include <stdio.h>  
-```  
-  
-## <a name="remarks"></a>Poznámky  
 
-Tyto konstanty zadejte typ přístupu ("a", "r" nebo "w") požadované pro soubor. Oba [režim překladu](../c-runtime-library/file-translation-constants.md) ("b" nebo "t") a [potvrzení na disku režimu](../c-runtime-library/commit-to-disk-constants.md) ("c" nebo "n") je možné zadat při typ přístupu.  
-  
-Typy přístup jsou popsané v této tabulce:  
+## <a name="syntax"></a>Syntaxe
+
+```
+#include <stdio.h>
+```
+
+## <a name="remarks"></a>Poznámky
+
+Tyto konstanty zadejte typ přístupu ("a", "r" nebo "w") požadované pro soubor. Oba [režim překladu](../c-runtime-library/file-translation-constants.md) ("b" nebo "t") a [potvrzení na disku režimu](../c-runtime-library/commit-to-disk-constants.md) ("c" nebo "n") je možné zadat při typ přístupu.
+
+Typy přístup jsou popsané v této tabulce:
 
 |Typ přístupu.|Popis|
 |----------|----------------|
@@ -49,12 +50,13 @@ Typy přístup jsou popsané v této tabulce:
 |**"w +"**|Otevře prázdný soubor pro čtení i zápis. Pokud daný soubor existuje, jeho obsah zničen.|
 |**"a +"**|Stejné jako **"a"** , ale také umožňuje čtení.|
 
-Pokud je zadán do "r +", "w +" nebo "a +" typu, budou moct čtení i zápis (Tento soubor říká, že je otevřen pro "úpravy"). Ale při přepínání mezi čtení a zápis, musí existovat podílející `fflush`, `fsetpos`, `fseek`, nebo `rewind` operace. Aktuální pozici, je možné zadat pro `fsetpos` nebo `fseek` operace.  
-  
-## <a name="see-also"></a>Viz také  
- [_fdopen – _wfdopen –](../c-runtime-library/reference/fdopen-wfdopen.md)   
- [fopen _wfopen –](../c-runtime-library/reference/fopen-wfopen.md)   
- [freopen, _wfreopen](../c-runtime-library/reference/freopen-wfreopen.md)   
- [_fsopen – _wfsopen –](../c-runtime-library/reference/fsopen-wfsopen.md)   
- [_popen – _wpopen –](../c-runtime-library/reference/popen-wpopen.md)   
- [Globální konstanty](../c-runtime-library/global-constants.md)
+Pokud je zadán do "r +", "w +" nebo "a +" typu, budou moct čtení i zápis (Tento soubor říká, že je otevřen pro "úpravy"). Ale při přepínání mezi čtení a zápis, musí existovat podílející `fflush`, `fsetpos`, `fseek`, nebo `rewind` operace. Aktuální pozici, je možné zadat pro `fsetpos` nebo `fseek` operace.
+
+## <a name="see-also"></a>Viz také
+
+[_fdopen, _wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)<br/>
+[fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md)<br/>
+[freopen, _wfreopen](../c-runtime-library/reference/freopen-wfreopen.md)<br/>
+[_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)<br/>
+[_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md)<br/>
+[Globální konstanty](../c-runtime-library/global-constants.md)

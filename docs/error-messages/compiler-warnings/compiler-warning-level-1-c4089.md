@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4089 | Microsoft Docs
+title: Upozornění (úroveň 1) C4089 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 713d22baa84cc612509b71b74ee7fba054ff8c25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a321745e539a6e34ae04a80cefc15100c925d52f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277043"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066580"
 ---
-# <a name="compiler-warning-level-1-c4089"></a>C4089 kompilátoru upozornění (úroveň 1)
-'function': různé typy v skutečný parametr "číslo" formální parametr "číslo"  
-  
- Odpovídající formální a aktuální parametry mají různé typy. Skutečný parametr se předává beze změny. Funkce vrhá skutečný parametr pro typ zadaný v definici funkce.
+# <a name="compiler-warning-level-1-c4089"></a>Kompilátor upozornění (úroveň 1) C4089
+
+'function': různé typy ve skutečném parametru 'number', formální parametr 'number'
+
+Odpovídající formální a skutečné parametry mají různé typy. Skutečný parametr předána beze změny. Funkce přetypování skutečný parametr pro typ zadaný v definici funkce.

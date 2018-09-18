@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4042 | Microsoft Docs
+title: Upozornění (úroveň 1) C4042 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcc4123c18eb9765841a5f6b54446cd064407700
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5bef2071cf31123b5b172df2651c0d6a6d87d4fc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278382"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067467"
 ---
-# <a name="compiler-warning-level-1-c4042"></a>C4042 kompilátoru upozornění (úroveň 1)
-"identifikátor": má chybný úložiště – třída  
-  
- Zadané úložiště třídy nelze použít s identifikátorem v tomto kontextu. Kompilátor místo toho používá výchozí třídu úložiště:  
-  
--   `extern`, pokud *identifikátor* je funkce.  
-  
--   **Automatické**, pokud *identifikátor* je formální parametr nebo místní proměnné.  
-  
--   Třídy žádné úložiště, pokud *identifikátor* je globální proměnné.  
-  
- Toto upozornění může být způsobeno zadáním třídy úložiště než **zaregistrovat** v deklaraci parametrů.  
-  
- Následující ukázka generuje C4042  
-  
-```  
-// C4042.cpp  
-// compile with: /W1 /LD  
-int func2( __declspec( thread ) int tls_i )    // C4042  
-// try the following line instead  
-// int func2( int tls_i )  
-{  
-   return tls_i;  
-}  
+# <a name="compiler-warning-level-1-c4042"></a>Kompilátor upozornění (úroveň 1) C4042
+
+'identifier': má špatnou třídu úložiště
+
+Zadané úložiště třídy nelze použít s identifikátorem v tomto kontextu. Kompilátor používá místo toho bude výchozí třída úložiště:
+
+- `extern`, pokud *identifikátor* je funkce.
+
+- **Automatické**, pokud *identifikátor* je formální parametr nebo lokální proměnné.
+
+- Třída žádné úložiště, pokud *identifikátor* je globální proměnné.
+
+Toto upozornění může být způsobeno určující třídu úložiště než **zaregistrovat** v deklaraci parametru.
+
+Následující ukázka generuje C4042
+
+```
+// C4042.cpp
+// compile with: /W1 /LD
+int func2( __declspec( thread ) int tls_i )    // C4042
+// try the following line instead
+// int func2( int tls_i )
+{
+   return tls_i;
+}
 ```

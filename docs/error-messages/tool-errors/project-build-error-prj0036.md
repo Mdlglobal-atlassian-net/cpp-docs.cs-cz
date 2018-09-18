@@ -1,5 +1,5 @@
 ---
-title: Chyba sestavení projektu PRJ0036 | Microsoft Docs
+title: Chyba sestavení projektu PRJ0036 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55ca9c282cbf36111bbc6b5d4316745508ccbb0c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 32b73fb8d86ff537912218ea35089382a93aec4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317346"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065189"
 ---
 # <a name="project-build-error-prj0036"></a>Chyba sestavení projektu PRJ0036
-Vlastnost 'Další soubory, pro nástroj pro nasazení webu obsahuje neplatnou položku.  
-  
- Vlastnost další soubory na stránce vlastností nasazení webu obsahuje chybu, pravděpodobně z důvodu problému vyhodnocení makra. Tato chyba může také znamená, že je cesta chybně vytvořen, a to obsahující znaky, nebo kombinace znaků, které jsou neplatné v cestě k souboru.  
-  
- Pokud chcete tuto chybu vyřešit, opravte makro nebo odstraňte specifikace cesty. Vyhodnotí cesta je absolutní cestu z adresáře projektu.  
-  
- Tato chyba může znamenat také jeden ze souborů odkazuje neexistuje.
+
+Vlastnost "Additional Files" pro nástroj pro nasazení webu obsahovala neplatný záznam.
+
+Vlastnost další soubory na stránce vlastností nasazení webu obsahuje chybu, pravděpodobně z důvodu problému vyhodnocení makra. Tato chyba může také znamenat, že cesta je chybně vytvořený kód, obsahující znaky nebo kombinace znaků, které jsou neplatné v cestě k souboru.
+
+Chcete-li tuto chybu vyřešit, opravte makro nebo odstraňte specifikaci cesty. Vyhodnocená cesta je absolutní cesta z adresáře projektu.
+
+Tato chyba může znamenat také, že jeden z odkazované soubory neexistuje.

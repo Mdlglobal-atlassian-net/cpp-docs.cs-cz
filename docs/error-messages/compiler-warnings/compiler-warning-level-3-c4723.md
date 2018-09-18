@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 3) upozornění C4723 | Microsoft Docs
+title: Upozornění (úroveň 3) C4723 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c5f91bbdc60ab1901c4afe4d5bea9f3258692ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ca6715e26705632dc3187cb6db7deed8636cd82
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296611"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033144"
 ---
-# <a name="compiler-warning-level-3-c4723"></a>C4723 kompilátoru upozornění (úroveň 3)
-potenciální dělení hodnotou 0  
-  
- Druhý operand v rámci operace dělení vyhodnotit na hodnotu nula v době kompilace poskytující nedefinované výsledky.  
-  
- Jenom při použití se objeví toto upozornění [/Og](../../build/reference/og-global-optimizations.md) nebo optimalizace možnost, která znamená /Og.  
-  
- Kompilátor mohlo vygenerováno nulové operand.
+# <a name="compiler-warning-level-3-c4723"></a>Kompilátor upozornění (úroveň 3) C4723
+
+potenciální dělení 0
+
+Druhý operand v operaci dělení vyhodnocen na hodnotu nula v době kompilace, poskytující nedefinované výsledky.
+
+Jenom při použití se objeví toto upozornění [/og](../../build/reference/og-global-optimizations.md) nebo možnost optimalizace, která zahrnuje/og.
+
+Kompilátor může vygenerovat žádný operand.

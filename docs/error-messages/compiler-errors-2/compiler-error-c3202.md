@@ -1,5 +1,5 @@
 ---
-title: C3202 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3202 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6f7f059173e88bf9e76dde3f8448de218400a31
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 254843386943b677be6df2c1ab7f1da56265e1d8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246888"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070289"
 ---
-# <a name="compiler-error-c3202"></a>C3202 chyby kompilátoru
-"název arg": neplatné výchozí argument pro parametr šablony "parametr" očekává šablonu – třída  
-  
- Je předán neplatný výchozí argument pro parametr šablony.  
-  
- Následující ukázka generuje C3202:  
-  
-```  
-// C3202.cpp  
-template<typename T>  
-class X  
-{  
-};  
-  
-class Z  
-{  
-};  
-  
-template<template<typename U> class T1 = Z, typename T2> // C3202  
-class Y  
-{  
-};  
+# <a name="compiler-error-c3202"></a>Chyba kompilátoru C3202
+
+"arg name": Neplatný výchozí argument pro parametr šablony "parametr", očekávala se šablona třídy
+
+Předaný neplatný výchozí argument pro parametr šablony.
+
+Následující ukázka generuje C3202:
+
+```
+// C3202.cpp
+template<typename T>
+class X
+{
+};
+
+class Z
+{
+};
+
+template<template<typename U> class T1 = Z, typename T2> // C3202
+class Y
+{
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: C2163 chyby kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2163 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14cbb110cf226a0a36a121ac9aa1901782357b04
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 974488a2f587c2fde02dd74baf64a98a7590e9b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168084"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066556"
 ---
-# <a name="compiler-error-c2163"></a>C2163 chyby kompilátoru
-'function': není k dispozici jako vnitřní funkce  
-  
- `intrinsic` Nebo `function` – Direktiva pragma jsou uvedené funkce není k dispozici ve vnitřní formuláře. Například určité vnitřní objekty nejsou k dispozici, když kompilujete program, který používá programování/CLR.
+# <a name="compiler-error-c2163"></a>Chyba kompilátoru C2163
+
+'function': není dostupné jako vnitřní funkce
+
+`intrinsic` Nebo `function` – Direktiva pragma uvádí není k dispozici v podobě vnitřní funkci. Například některé vnitřní objekty nejsou k dispozici, při kompilaci programu, který používá programování/CLR.

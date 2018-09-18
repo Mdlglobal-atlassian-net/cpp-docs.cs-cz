@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1383 | Microsoft Docs
+title: Závažná chyba C1383 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae5e16959597e16f25320778be4d4b45ca5950e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 98f6fe881b2cdc46d4d2848d6faf850381f54c7b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226971"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062186"
 ---
 # <a name="fatal-error-c1383"></a>Závažná chyba C1383
-– možnost kompilátoru /GL není kompatibilní s nainstalovanou verzí common language runtime  
-  
- C1383 dojde, pokud používáte předchozí verzi modulu CLR s novější kompilátoru a když kompilujete s **/CLR** a **/GL.**  
-  
- Pokud chcete vyřešit, buď nepoužívejte **/GL** s **/CLR** nebo nainstalujte verzi modulu CLR, který se dodává s vaší kompilátoru.  
-  
- Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) a [/GL (optimalizace celého programu)](../../build/reference/gl-whole-program-optimization.md).
+
+– možnost kompilátoru /GL je nekompatibilní s nainstalovanou verzí modulu common language runtime
+
+C1383 nastane, pokud používáte předchozí verzi modulu common language runtime s novější kompilátorem a při kompilaci s **/CLR** a   **/GL.**
+
+Pokud chcete vyřešit, buď nepoužívejte **/GL** s **/CLR** nebo nainstalovat verzi common language runtime, dodávané s kompilátoru.
+
+Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) a [/GL (optimalizace celého programu)](../../build/reference/gl-whole-program-optimization.md).

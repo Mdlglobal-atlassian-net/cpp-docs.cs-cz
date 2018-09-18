@@ -1,5 +1,5 @@
 ---
-title: Upozornění linkerů Lnk4071 | Microsoft Docs
+title: Upozornění Linkerů LNK4071 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cb0d4b8d78eb8c7cf1812abb1a7981c605f2c4e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d11247c823a93604359b4cab6995b694bcf5a2f3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299897"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064664"
 ---
 # <a name="linker-tools-warning-lnk4071"></a>Upozornění linkerů LNK4071
-nelze přírůstkově propojit na následující odkazy  
-  
- ODKAZ nalezeno několik definic pro jeden nebo více symboly, ale [/FORCE](../../build/reference/force-force-file-output.md) nebo **/FORCE:MULTIPLE** byla použita k vytvoření výstupního souboru bez ohledu na chyby. ODKAZ odstranit soubor přírůstkové stavu (.ilk).
+
+nedá se propojit přírůstkově u následných odkazů
+
+ODKAZ nalezeno více definic pro jeden nebo víc symbolů, ale [/FORCE](../../build/reference/force-force-file-output.md) nebo **/FORCE:MULTIPLE** byla použita k vytvoření výstupní soubor bez ohledu na chyby. ODKAZ odstranit soubor stavu přírůstků (propojení.ilk).

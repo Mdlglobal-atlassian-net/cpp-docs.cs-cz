@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4411 | Microsoft Docs
+title: Upozornění (úroveň 1) C4411 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb2a826103bd7055a9655c75b82a58fcf53b1d42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eff4520c86332b3d547568fd643debdcdb61bf45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278155"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060821"
 ---
-# <a name="compiler-warning-level-1-c4411"></a>C4411 kompilátoru upozornění (úroveň 1)
-"identifikátor": symbol přeloží na přestavění registrace  
-  
- Identifikátor je místní symbol, který přeloží na přestavění registrace a proto mohou být použity na operand s jiným symbolem.
+# <a name="compiler-warning-level-1-c4411"></a>Kompilátor upozornění (úroveň 1) C4411
+
+'identifier': symbol se překládá na registr přesunutí
+
+Identifikátor je místní symbol, který se překládá na registr přesunutí a můžou se proto používat s operandem s jiným symbolem.

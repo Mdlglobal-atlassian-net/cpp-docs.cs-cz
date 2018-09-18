@@ -1,5 +1,5 @@
 ---
-title: unsupported_feature – třída | Microsoft Docs
+title: unsupported_feature – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ccc811e3459fe668b6a8dbd255007cb60bf0cf1
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7472e8fa8932983569ad9e2a9c1fe6cdfc9318b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696133"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059677"
 ---
 # <a name="unsupportedfeature-class"></a>unsupported_feature – třída
-Výjimka, která se vyvolá, když se používá nepodporované funkce.  
+Výjimka, která je vyvolána při použití nepodporované funkce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,7 +40,7 @@ class unsupported_feature : public runtime_exception;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[unsupported_feature – konstruktor](#ctor)|Vytvoří novou instanci třídy `unsupported_feature` výjimka.|  
+|[unsupported_feature – konstruktor](#ctor)|Vytvoří novou instanci třídy `unsupported_feature` výjimky.|  
 
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
@@ -50,9 +50,9 @@ class unsupported_feature : public runtime_exception;
   
  `unsupported_feature`  
   
-## <a name="unsupported_feature__ctor"></a> unsupported_feature 
+## <a name="unsupported_feature__ctor"></a> unsupported_feature – 
 
-  Vytvoří novou instanci třídy unsupported_feature výjimka.  
+  Sestaví novou instanci výjimky unsupported_feature.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -64,8 +64,8 @@ unsupported_feature() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Popis chyby.  
+*_TEXT*<br/>
+Popis chyby.  
   
 ### <a name="return-value"></a>Návratová hodnota  
  `unsupported_feature` Objektu.  

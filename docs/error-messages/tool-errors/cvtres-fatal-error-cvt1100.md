@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba nástroje CVTRES CVT1100 | Microsoft Docs
+title: Závažná chyba nástroje CVTRES CVT1100 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32085c4c37c82567eb78f46b52bcc4a6c41daae5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18a5508301c54637fb34a751c8f1c4e307e47d50
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302656"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068959"
 ---
 # <a name="cvtres-fatal-error-cvt1100"></a>Závažná chyba nástroje CVTRES CVT1100
-duplicitní prostředků – typ: typ, název: název, jazyk: jazyk, příznaky: příznaky, velikost: velikost  
-  
- Daný prostředek byl zadán více než jednou.  
-  
- Může se tato chyba, pokud linkeru vytváří knihovny typů a nezadali jste [/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md) a prostředků ve vašem projektu už používá 1. V takovém případě zadejte /TLBID a zadejte jiné číslo až 65535.
+
+duplicitní prostředek – typu: typ, název: název, jazyk: jazyk, příznaky: příznaky, size: velikost
+
+Daný prostředek byl zadán více než jednou.
+
+Této chybě může dojít, pokud linker vytváří knihovnu typů a nezadali jste [/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md) a prostředků v projektu již používá 1. V takovém případě zadejte /TLBID a zadejte jiné číslo až 65535.

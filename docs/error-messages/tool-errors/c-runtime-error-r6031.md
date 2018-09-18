@@ -1,5 +1,5 @@
 ---
-title: Chyba v běhu R6031 C | Microsoft Docs
+title: Chyba modulu Runtime R6031 C | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66d75fb0095b1de0fe1572d8c946823a89791740
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83dbcdc433ea731e6ddf0765b4b3a55d5707f429
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33303943"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059495"
 ---
-# <a name="c-runtime-error-r6031"></a>R6031 Chyba za běhu C
-Pokus o inicializaci CRT více než jednou. To znamená chyb v aplikaci.  
-  
+# <a name="c-runtime-error-r6031"></a>Chyba modulu Runtime R6031 C
+
+Pokus o inicializaci CRT více než jednou. To znamená chybu ve vaší aplikaci.
+
 > [!NOTE]
->  Pokud narazíte na tato chybová zpráva při spuštění aplikace, aplikace se vypnout, protože má internímu problému. To může být způsobeno chyb v aplikaci, nebo chyby v rozšíření nebo rozšíření, které aplikace používá.  
->   
->  Zkuste chybu odstranit pomocí tohoto postupu:  
->   
->  -   Použití **aplikace a funkce** nebo **programy a funkce** stránky v **ovládací panely** opravit nebo znovu nainstalovat program.  
-> -   Použití **aplikace a funkce** nebo **programy a funkce** stránky v **ovládací panely** odebrat, opravit nebo znovu nainstalovat všechny programy rozšíření nebo rozšíření používané aplikace.  
-> -   Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.  
-> -   Kontrola aktualizovaná verze aplikace. Pokud potíže potrvají, obraťte se na dodavatele aplikace.  
-  
- **Informace pro programátory v jazyce**  
-  
- Tato Diagnostika Určuje, že byly během zámek zavaděče spouštění MSIL pokyny. Další informace najdete v tématu [inicializace smíšených sestavení](../../dotnet/initialization-of-mixed-assemblies.md).
+>  Pokud k této chybě dojde při spuštění aplikace, aplikace se vypnout, protože má vnitřní problém. To může být způsobeno chyb v aplikaci, nebo chybu v doplňku nebo rozšíření, které aplikace používá.
+>
+>  Zkuste chybu odstranit pomocí tohoto postupu:
+>
+>  -   Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte program.
+> -   Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** odebrat, opravte nebo přeinstalujte všechny doplněk nebo rozšíření programy, které aplikace používá.
+> -   Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.
+> -   Vyhledat aktualizovanou verzi aplikace. Pokud se problém nevyřeší, obraťte se na dodavatele aplikace.
+
+**Informace pro programátory**
+
+Tato Diagnostika Určuje, že byly během zámek zavaděče spouštění instrukcí jazyka MSIL. Další informace najdete v tématu [inicializace smíšených sestavení](../../dotnet/initialization-of-mixed-assemblies.md).

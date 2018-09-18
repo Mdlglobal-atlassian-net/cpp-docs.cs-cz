@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98fb1c50b6bdd46cc6cf0efe7739e8ada60f3274
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9acbb55f09df3912ff61a54557cb013e86c48834
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762632"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036628"
 ---
 # <a name="ctokenprivileges-class"></a>Ctokenprivileges – třída
 
@@ -98,19 +98,19 @@ Přístupový token se používá k popisu různých zabezpečení oprávněníc
 Přidá jednu nebo více oprávnění `CTokenPrivileges` objekt tokenu přístupu.
 
 ```
-bool Add(LPCTSTR pszPrivilege, bool bEnable) throw(...);  
+bool Add(LPCTSTR pszPrivilege, bool bEnable) throw(...);
 void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 Ukazatel na řetězec zakončený hodnotou null, který určuje název oprávnění, jak jsou definovány v WINNT. Soubor hlaviček H.
 
-*bEnable*  
+*bEnable*<br/>
 Při hodnotě true je oprávnění povoleno. Pokud má hodnotu false, oprávnění je zakázaná.
 
-*rPrivileges*  
+*rPrivileges*<br/>
 Odkaz [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) struktury. Oprávnění a atributy jsou zkopírovány z této struktury a přidán do `CTokenPrivileges` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -123,16 +123,16 @@ Konstruktor
 
 ```
 CTokenPrivileges() throw();
-CTokenPrivileges(const CTokenPrivileges& rhs) throw(... );  
+CTokenPrivileges(const CTokenPrivileges& rhs) throw(... );
 CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 `CTokenPrivileges` Objektu, který chcete přiřadit nový objekt.
 
-*rPrivileges*  
+*rPrivileges*<br/>
 [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) struktura přiřazena novému `CTokenPrivileges` objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -161,7 +161,7 @@ bool Delete(LPCTSTR pszPrivilege) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 Ukazatel na řetězec zakončený hodnotou null, který určuje název oprávnění, jak jsou definovány v WINNT. Soubor hlaviček H. Například může tento parametr zadejte konstanta SE_SECURITY_NAME nebo její odpovídající řetězec "SeSecurityPrivilege."
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -194,7 +194,7 @@ void GetDisplayNames(CNames* pDisplayNames) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pDisplayNames*  
+*pDisplayNames*<br/>
 Ukazatel na pole `CString` objekty. `CNames` je definován jako definice typu: `CTokenPrivileges::CAtlArray<CString>`.
 
 ### <a name="remarks"></a>Poznámky
@@ -239,10 +239,10 @@ void GetLuidsAndAttributes(
 
 ### <a name="parameters"></a>Parametry
 
-*pPrivileges*  
+*pPrivileges*<br/>
 Ukazatel na pole [LUID](/windows/desktop/api/winnt/ns-winnt-_luid) objekty. `CLUIDArray` definice typu je definován jako `CAtlArray<LUID> CLUIDArray`.
 
-*pAttributes*  
+*pAttributes*<br/>
 Ukazatel na pole objektů typu DWORD. Pokud je tento parametr vynechán nebo mít hodnotu NULL, nejsou načíst atributy. `CAttributes` definice typu je definován jako `CAtlArray <DWORD> CAttributes`.
 
 ### <a name="remarks"></a>Poznámky
@@ -261,10 +261,10 @@ void GetNamesAndAttributes(
 
 ### <a name="parameters"></a>Parametry
 
-*pNames*  
+*pNames*<br/>
 Ukazatel na pole `CString` objekty. `CNames` definice typu je definován jako `CAtlArray <CString> CNames`.
 
-*pAttributes*  
+*pAttributes*<br/>
 Ukazatel na pole objektů typu DWORD. Pokud je tento parametr vynechán nebo mít hodnotu NULL, nejsou načíst atributy. `CAttributes` definice typu je definován jako `CAtlArray <DWORD> CAttributes`.
 
 ### <a name="remarks"></a>Poznámky
@@ -297,10 +297,10 @@ bool LookupPrivilege(
 
 ### <a name="parameters"></a>Parametry
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 Ukazatel na řetězec zakončený hodnotou null, který určuje název oprávnění, jak jsou definovány v WINNT. Soubor hlaviček H. Například může tento parametr zadejte konstanta SE_SECURITY_NAME nebo její odpovídající řetězec "SeSecurityPrivilege."
 
-*pdwAttributes*  
+*pdwAttributes*<br/>
 Ukazovat na proměnnou, která přijímá atributy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -312,16 +312,16 @@ Vrátí hodnotu PRAVDA, pokud je atribut úspěšně načteny, false v opačném
 Operátor přiřazení.
 
 ```
-CTokenPrivileges& operator= (const TOKEN_PRIVILEGES& rPrivileges) throw(...);  
+CTokenPrivileges& operator= (const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*rPrivileges*  
+*rPrivileges*<br/>
 [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) struktura přiřadit `CTokenPrivileges` objektu.
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 `CTokenPrivileges` Objektu, který chcete přiřadit k objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -332,7 +332,7 @@ Vrátí aktualizovaný `CTokenPrivileges` objektu.
 
 Přetypování na ukazatel na hodnotu `TOKEN_PRIVILEGES` struktury.
 
-```  
+```
 operator const TOKEN_PRIVILEGES *() const throw(...);
 ```
 
@@ -342,9 +342,9 @@ Přetypování na ukazatel na hodnotu [TOKEN_PRIVILEGES](/windows/desktop/api/wi
 
 ## <a name="see-also"></a>Viz také
 
-[Ukázka zabezpečení](../../visual-cpp-samples.md)   
-[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)   
-[LUID](/windows/desktop/api/winnt/ns-winnt-_luid)   
-[LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)   
-[Přehled tříd](../../atl/atl-class-overview.md)   
+[Ukázka zabezpečení](../../visual-cpp-samples.md)<br/>
+[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)<br/>
+[LUID](/windows/desktop/api/winnt/ns-winnt-_luid)<br/>
+[LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)<br/>
+[Přehled tříd](../../atl/atl-class-overview.md)<br/>
 [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)

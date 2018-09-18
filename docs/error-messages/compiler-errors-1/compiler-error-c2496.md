@@ -1,5 +1,5 @@
 ---
-title: C2496 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2496 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f0c6a15d1e994f563ac1539838a699745475f76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 04e9e9a58c3ad64010aaffda2378f5b79cccbb67
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225512"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062901"
 ---
-# <a name="compiler-error-c2496"></a>C2496 chyby kompilátoru
-"identifikátor": 'selectany' lze použít pouze pro datové položky s externí propojení  
-  
- [Selectany](../../cpp/selectany.md) atribut lze použít pouze pro položky externě viditelné a globální data.  
-  
- Následující ukázka generuje C2496:  
-  
-```  
-// C2496.cpp  
-// compile with: /c  
-__declspec(selectany) int x1 = 1;  
-const __declspec(selectany) int x2 = 2;   // C2496  
-static __declspec(selectany) int x6 = 6;   // C2496  
-  
-extern const __declspec(selectany) int x3 = 3;  
-  
-__declspec(selectany) int x4;  
-  
-// dynamic initialization of x5  
-int f();  
-__declspec(selectany) int x5 = f();  
-  
-extern const int x7;  
-// OK - redeclaration of x7 that is extern  
-const __declspec(selectany) int x7 = 7;  
+# <a name="compiler-error-c2496"></a>Chyba kompilátoru C2496
+
+'identifier': "selectany" jde použít jedině pro položky dat s externí vazbou.
+
+[Selectany](../../cpp/selectany.md) atribut lze použít pouze pro externě viditelný a globální datové položky.
+
+Následující ukázka generuje C2496:
+
+```
+// C2496.cpp
+// compile with: /c
+__declspec(selectany) int x1 = 1;
+const __declspec(selectany) int x2 = 2;   // C2496
+static __declspec(selectany) int x6 = 6;   // C2496
+
+extern const __declspec(selectany) int x3 = 3;
+
+__declspec(selectany) int x4;
+
+// dynamic initialization of x5
+int f();
+__declspec(selectany) int x5 = f();
+
+extern const int x7;
+// OK - redeclaration of x7 that is extern
+const __declspec(selectany) int x7 = 7;
 ```

@@ -1,5 +1,5 @@
 ---
-title: C3902 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3902 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0430ab95ae4884c420a3f7153fbbbbc4f7931675
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5998c0836f3adfbf047cc7259b032258a584f272
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278194"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070038"
 ---
-# <a name="compiler-error-c3902"></a>C3902 chyby kompilátoru
-"objekt": "typ" musí být typu poslední parametr  
-  
- Typ poslední parametr alespoň jednu metodu set musí odpovídat typ vlastnosti. Další informace najdete v tématu [vlastnost](../../windows/property-cpp-component-extensions.md).  
-  
- Následující ukázka generuje C3902:  
-  
-```  
-// C3902.cpp  
-// compile with: /clr /c  
-using namespace System;  
-ref class X {  
-   property String ^Name {  
-      void set(int);   // C3902  
-      // try the following line instead  
-      // void set(String^){}  
-   }  
-  
-   property double values[int,int] {  
-      void set(int, int, float);   // C3902  
-      // try the following line instead  
-      // void set(int, int, double){}  
-   }  
-};  
+# <a name="compiler-error-c3902"></a>Chyba kompilátoru C3902
+
+'přístupového objektu': typ posledního parametru musí být 'type'
+
+Typ posledního parametru alespoň jednu metodu set musí odpovídat typu vlastnosti. Další informace najdete v tématu [vlastnost](../../windows/property-cpp-component-extensions.md).
+
+Následující ukázka generuje C3902:
+
+```
+// C3902.cpp
+// compile with: /clr /c
+using namespace System;
+ref class X {
+   property String ^Name {
+      void set(int);   // C3902
+      // try the following line instead
+      // void set(String^){}
+   }
+
+   property double values[int,int] {
+      void set(int, int, float);   // C3902
+      // try the following line instead
+      // void set(int, int, double){}
+   }
+};
 ```
