@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c21ce766ed809a93ccf617ab1f76c438ac5be829
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a4a62f6e569e123b9612e922e2d7c70787371afc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465109"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136176"
 ---
 # <a name="context-class"></a>Context – třída
 Představuje abstrakci pro kontext spuštění.  
@@ -210,8 +210,8 @@ void operator delete(void* _PObject);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PObject`  
- Ukazatel na objekt, který má být odstraněna.  
+*_PObject*<br/>
+Ukazatel na objekt, který má být odstraněna.  
   
 ##  <a name="oversubscribe"></a> Přidělit nadměrnému počtu procesů 
 
@@ -222,8 +222,8 @@ static void __cdecl Oversubscribe(bool _BeginOversubscription);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_BeginOversubscription`  
- Pokud `true`, jako ukazatel toho, že další virtuální procesor přidaly po dobu trvání překryvného odběru. Pokud `false`, jako ukazatel toho, že by měla končit překryvného odběru a by se měly odebrat dříve přidanými virtuálního procesoru.  
+*_BeginOversubscription*<br/>
+Pokud `true`, jako ukazatel toho, že další virtuální procesor přidaly po dobu trvání překryvného odběru. Pokud `false`, jako ukazatel toho, že by měla končit překryvného odběru a by se měly odebrat dříve přidanými virtuálního procesoru.  
   
 ##  <a name="schedulegroupid"></a> ScheduleGroupId 
 

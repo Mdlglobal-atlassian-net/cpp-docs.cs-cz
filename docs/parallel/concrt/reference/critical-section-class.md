@@ -1,5 +1,5 @@
 ---
-title: critical_section – třída | Microsoft Docs
+title: critical_section – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0287c74155e7b4fe827bb015b43cfca3384f3b1
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cbffd14bdde45c3d6124eb5f982b90c92f64f47c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693559"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136215"
 ---
 # <a name="criticalsection-class"></a>critical_section – třída
-Mutex nejsou vícenásobně přístupné, což je explicitně vědět Concurrency Runtime.  
+Bez reentrant objektu mutex, na které je explicitně vědoma souběžnosti modulu runtime.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +42,7 @@ class critical_section;
   
 ## <a name="members"></a>Členové  
   
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
+### <a name="public-typedefs"></a>Veřejné definice TypeDef  
   
 |Název|Popis|  
 |----------|-----------------|  
@@ -52,27 +52,27 @@ class critical_section;
   
 |Název|Popis|  
 |----------|-----------------|  
-|[critical_section::scoped_lock – třída](#critical_section__scoped_lock_class)|Obálku výjimka bezpečné RAII pro `critical_section` objektu.|  
+|[critical_section::scoped_lock – třída](#critical_section__scoped_lock_class)|Výjimka Obálka bezpečné RAII pro `critical_section` objektu.|  
   
 ### <a name="public-constructors"></a>Veřejné konstruktory  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[critical_section](#ctor)|Vytvoří novou část důležité.|  
-|[~ critical_section – destruktor](#dtor)|Zničí kritická sekce.|  
+|[critical_section](#ctor)|Vytvoří nový kritický oddíl.|  
+|[~ critical_section – destruktor](#dtor)|Zničí kritický oddíl.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
 |Název|Popis|  
 |----------|-----------------|  
-|[lock](#lock)|Získá tato část důležité.|  
-|[native_handle –](#native_handle)|Pokud existuje, vrátí platformy konkrétní nativní popisovač.|  
+|[lock](#lock)|Získá tento kritický oddíl.|  
+|[native_handle –](#native_handle)|Pokud takové existuje, vrátí platformu konkrétní nativní popisovač.|  
 |[try_lock](#try_lock)|Pokusí se získat zámek bez blokování.|  
-|[try_lock_for](#try_lock_for)|Pokusí se získat zámek bez pro konkrétní počet milisekund blokování.|  
-|[odemknutí](#unlock)|Odemkne kritická sekce.|  
+|[try_lock_for](#try_lock_for)|Pokusí se získat zámek bez blokování pro určitý počet milisekund.|  
+|[Odemknutí](#unlock)|Odemkne důležité části.|  
   
 ## <a name="remarks"></a>Poznámky  
- Další informace najdete v tématu [synchronizační datové struktury](../../../parallel/concrt/synchronization-data-structures.md).  
+ Další informace najdete v tématu [synchronizačních datových struktur](../../../parallel/concrt/synchronization-data-structures.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
  `critical_section`  
@@ -82,54 +82,54 @@ class critical_section;
   
  **Namespace:** souběžnosti  
   
-##  <a name="ctor"></a> critical_section 
+##  <a name="ctor"></a> critical_section – 
 
- Vytvoří novou část důležité.  
+ Vytvoří nový kritický oddíl.  
   
 ```
 critical_section();
 ```  
   
-##  <a name="dtor"></a> ~ critical_section 
+##  <a name="dtor"></a> ~ critical_section – 
 
- Zničí kritická sekce.  
+ Zničí kritický oddíl.  
   
 ```
 ~critical_section();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Očekává se, že zámek trvá už při spuštění destruktoru. Povolení části kritické destruct s zámek stále uchovávat výsledky v nedefinované chování.  
+ Očekává se, že zámek už mezipaměť není při spuštění destruktoru. Povolení kritický oddíl k destrukci s uzamčením stále uchovávat výsledky nedefinované chování.  
   
 ##  <a name="lock"></a> Zámek 
 
- Získá tato část důležité.  
+ Získá tento kritický oddíl.  
   
 ```
 void lock();
 ```  
   
 ### <a name="remarks"></a>Poznámky  
- Je často bezpečnější využívat [scoped_lock](#critical_section__scoped_lock_class) konstrukce k získání a uvolněte `critical_section` objekt v výjimku bezpečným způsobem.  
+ Často je bezpečnější používat [scoped_lock](#critical_section__scoped_lock_class) konstrukce pro získání a uvolnění `critical_section` objektu v výjimku bezpečným způsobem.  
   
- Pokud zámek již držené volání kontextu [improper_lock](improper-lock-class.md) dojde k výjimce.  
+ Pokud volání kontextu již drží zámek [improper_lock –](improper-lock-class.md) , bude vyvolána výjimka.  
   
 ##  <a name="native_handle"></a> native_handle – 
 
- Pokud existuje, vrátí platformy konkrétní nativní popisovač.  
+ Pokud takové existuje, vrátí platformu konkrétní nativní popisovač.  
   
 ```
 native_handle_type native_handle();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Odkaz na části důležité.  
+ Odkaz na kritický oddíl.  
   
 ### <a name="remarks"></a>Poznámky  
- A `critical_section` objekt není spojen s konkrétní nativní popisovač platformu pro operační systém Windows. Metoda jednoduše vrátí odkaz na odkaz sám na sebe.  
+ A `critical_section` objektu není přidružen k platformě konkrétní nativní popisovač pro operační systém Windows. Metoda jednoduše vrací odkaz na objekt samotný.  
   
 ##  <a name="critical_section__scoped_lock_class"></a>  critical_section::scoped_lock – třída  
- Obálku výjimka bezpečné RAII pro `critical_section` objektu.  
+ Výjimka Obálka bezpečné RAII pro `critical_section` objektu.  
   
 ```
 class scoped_lock;
@@ -137,19 +137,19 @@ class scoped_lock;
   
 ##  <a name="critical_section__scoped_lock_ctor"></a> scoped_lock::scoped_lock 
 
- Vytvoří `scoped_lock` objektů a získá `critical_section` objekt předaná `_Critical_section` parametr. Pokud kritická sekce trvá jiné vlákno, toto volání se zablokuje.  
+ Vytvoří `scoped_lock` objektu a získá `critical_section` objekt předaný `_Critical_section` parametr. Pokud je kritický oddíl načtený v jiném vlákně, zablokuje se toto volání.  
   
 ```
 explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Critical_section`  
- Kritická sekce se uzamknout.  
+*_Critical_section*<br/>
+Kritická sekce uzamknout.  
   
-##  <a name="critical_section__scoped_lock_dtor"></a> scoped_lock –:: ~ scoped_lock – 
+##  <a name="critical_section__scoped_lock_dtor"></a> scoped_lock:: ~ scoped_lock 
 
- Zničí `scoped_lock` objektu a uvolní kritická sekce zadaný v jeho konstruktoru.  
+ Odstraní `scoped_lock` objektu a uvolní kritický oddíl zadaný v konstruktoru.  
   
 ```
 ~scoped_lock();
@@ -164,31 +164,31 @@ bool try_lock();
 ```  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud se získal zámek, hodnota `true`, jinak hodnota `false`.  
+ Pokud byl získán zámek, hodnota `true`; v opačném případě hodnota `false`.  
   
 ##  <a name="try_lock_for"></a> try_lock_for – 
 
- Pokusí se získat zámek bez pro konkrétní počet milisekund blokování.  
+ Pokusí se získat zámek bez blokování pro určitý počet milisekund.  
   
 ```
 bool try_lock_for(unsigned int _Timeout);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Timeout`  
- Počet milisekund čekání před vypršením časového limitu.  
+*_Vypršení časového limitu*<br/>
+Počet milisekund čekání před vypršením časového limitu.  
   
 ### <a name="return-value"></a>Návratová hodnota  
- Pokud se získal zámek, hodnota `true`, jinak hodnota `false`.  
+ Pokud byl získán zámek, hodnota `true`; v opačném případě hodnota `false`.  
   
-##  <a name="unlock"></a> odemknutí 
+##  <a name="unlock"></a> Odemknutí 
 
- Odemkne kritická sekce.  
+ Odemkne důležité části.  
   
 ```
 void unlock();
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)   
+ [souběžnost Namespace](concurrency-namespace.md)   
  [reader_writer_lock – třída](reader-writer-lock-class.md)

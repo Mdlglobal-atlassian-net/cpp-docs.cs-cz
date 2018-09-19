@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db46ca389272674da215801c0da83f38e7a3ef2b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a0200f15ab7a5c97699165a34d52ec6ce1f239e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703882"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136332"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Cmfcribbonbaseelement – třída
 `CMFCRibbonBaseElement` Třída je základní třída pro všechny elementy, které můžete přidat [pás](../../mfc/reference/cmfcribbonbar-class.md). Příklady prvků pásu karet pás karet tlačítka, zaškrtávací políčka a pásu karet se seznamem.  
@@ -568,12 +568,11 @@ virtual void DrawImage(
  Ve výchozím nastavení tato metoda nemá žádný účinek. Potlačí tuto metodu v odvozené třídy za účelem vykreslení obrázku pro prvek pásu karet.  
   
  V následující tabulce jsou uvedeny možné hodnoty pro *typ* parametr:  
-  
- `RibbonImageLarge`  
- Velká velikost obrázku velikosti 32 x 32 pixelů.  
-  
- `RibbonImageSmall`  
- Malá velikost obrázku velikosti 16 x 16 pixelů.  
+
+|||
+|-|-|
+| `RibbonImageLarge`  | Velká velikost obrázku velikosti 32 x 32 pixelů.  |
+| `RibbonImageSmall`  | Malá velikost obrázku velikosti 16 x 16 pixelů.  |
   
 ##  <a name="find"></a>  CMFCRibbonBaseElement::Find  
  Vrátí zadaný ukazatel odkazuje na aktuální objekt.  

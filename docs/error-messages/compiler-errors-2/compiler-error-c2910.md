@@ -1,5 +1,5 @@
 ---
-title: C2910 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2910 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,71 +16,72 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fec2baafae0647964a56afaed3286140f8b9f759
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d726fffa61ed80352626df7a6f89467c420152bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242712"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136124"
 ---
-# <a name="compiler-error-c2910"></a>C2910 chyby kompilátoru
-'function': nelze explicitně specializuje  
-  
- Kompilátor zjistil pokus o explicitně specialize funkce dvakrát.  
-  
- Následující ukázka generuje C2910:  
-  
-```  
-// C2910.cpp  
-// compile with: /c  
-template <class T>  
-struct S;  
-  
-template <> struct S<int> { void f() {} };  
-template <> void S<int>::f() {}   // C2910 delete this specialization  
-```  
-  
- C2910 lze vygenerovat také pokud se pokusíte explicitně specialize členem bez šablony. To znamená můžete pouze explicitně specialize šablonu funkce.  
-  
- Následující ukázka generuje C2910:  
-  
-```  
-// C2910b.cpp  
-// compile with: /c  
-template <class T> struct A {  
-   A(T* p);  
-};  
-  
-template <> struct A<void> {  
-   A(void* p);  
-};  
-  
-template <class T>  
-inline A<T>::A(T* p) {}  
-  
-template <> A<void>::A(void* p){}   // C2910  
-// try the following line instead  
-// A<void>::A(void* p){}  
-```  
-  
- Tato chyba bude vygenerována také v důsledku kompilátoru shoda práci, kterou bylo provedeno v sadě Visual Studio .NET 2003:.  
-  
- Pro kód bude v verze Visual C++ pro Visual Studio .NET 2003 a sady Visual Studio .NET, odeberte `template <>`.  
-  
- Následující ukázka generuje C2910:  
-  
-```  
-// C2910c.cpp  
-// compile with: /c  
-template <class T> class A {  
-   void f();  
-};  
-  
-template <> class A<int> {  
-   void f();  
-};  
-  
-template <> void A<int>::f() {}   // C2910  
-// try the following line instead  
-// void A<int>::f(){}   // OK  
+# <a name="compiler-error-c2910"></a>Chyba kompilátoru C2910
+
+'function': nemůže být explicitně specializovaný.
+
+Kompilátor zjistil pokus o explicitně specializovat funkce dvakrát.
+
+Následující ukázka generuje C2910:
+
+```
+// C2910.cpp
+// compile with: /c
+template <class T>
+struct S;
+
+template <> struct S<int> { void f() {} };
+template <> void S<int>::f() {}   // C2910 delete this specialization
+```
+
+C2910 můžete také generovány, pokud se pokusíte explicitně specializovat nešablonové člena. To znamená můžete pouze explicitně specializovat šablonu funkce.
+
+Následující ukázka generuje C2910:
+
+```
+// C2910b.cpp
+// compile with: /c
+template <class T> struct A {
+   A(T* p);
+};
+
+template <> struct A<void> {
+   A(void* p);
+};
+
+template <class T>
+inline A<T>::A(T* p) {}
+
+template <> A<void>::A(void* p){}   // C2910
+// try the following line instead
+// A<void>::A(void* p){}
+```
+
+K této chybě také se vygeneruje jako výsledek kompilátoru prací, které bylo provedeno v aplikaci Visual Studio .NET 2003:.
+
+Pro kód bude platit ve Visual Studio .NET 2003 a Visual Studio .NET verzí jazyka Visual C++, odeberte `template <>`.
+
+Následující ukázka generuje C2910:
+
+```
+// C2910c.cpp
+// compile with: /c
+template <class T> class A {
+   void f();
+};
+
+template <> class A<int> {
+   void f();
+};
+
+template <> void A<int>::f() {}   // C2910
+// try the following line instead
+// void A<int>::f(){}   // OK
 ```

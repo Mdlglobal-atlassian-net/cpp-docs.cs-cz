@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef417232d62c664b4943a2198ae351a5c443b089
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8fc187cea874d16522955dcd46c2ceac34d29098
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763744"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136156"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Makra ladění a hlášení chyb
 
@@ -97,7 +97,7 @@ ATLASSERT(booleanExpression);
 
 ### <a name="parameters"></a>Parametry
 
-*booleanExpression*  
+*booleanExpression*<br/>
 Výraz (včetně odkazů), který se vyhodnotí na nenulovou hodnotu nebo 0.
 
 ### <a name="remarks"></a>Poznámky
@@ -119,10 +119,10 @@ ATLENSURE_THROW(booleanExpression, hr);
 
 ### <a name="parameters"></a>Parametry
 
-*booleanExpression*  
+*booleanExpression*<br/>
 Určuje logický výraz, který má být testována.
 
-*hr*  
+*hr*<br/>
 Určuje kód chyby se vraťte.
 
 ### <a name="remarks"></a>Poznámky
@@ -155,7 +155,7 @@ ATLTRACENOTIMPL(funcname);
 
 ### <a name="parameters"></a>Parametry
 
-*FuncName*  
+*FuncName*<br/>
 [in] Řetězec obsahující název funkce, která není implementována.
 
 ### <a name="remarks"></a>Poznámky
@@ -185,16 +185,16 @@ ATLTRACE(
 
 ### <a name="parameters"></a>Parametry
 
-*exp*  
+*exp*<br/>
 [in] Řetězec a proměnné pro odeslání v okně Výstup Visual C++ nebo jakékoliv aplikace, která zachycuje tyto zprávy.
 
-*Kategorie*  
+*Kategorie*<br/>
 [in] Typ události nebo metody, na kterém do sestavy. Viz poznámky pro seznam kategorií.
 
-*úroveň*  
+*úroveň*<br/>
 [in] Úroveň trasování pro sestavu. Viz poznámky podrobnosti.
 
-*lpszFormat*  
+*lpszFormat*<br/>
 [in] Formátovaný řetězec, který chcete odeslat do zařízení s výpisem paměti.
 
 ### <a name="remarks"></a>Poznámky
@@ -216,16 +216,16 @@ ATLTRACE2(
 
 ### <a name="parameters"></a>Parametry
 
-*exp*  
+*exp*<br/>
 [in] Řetězec, který se má poslat v okně Výstup Visual C++ nebo jakékoliv aplikace, která zachycuje tyto zprávy.
 
-*Kategorie*  
+*Kategorie*<br/>
 [in] Typ události nebo metody, na kterém do sestavy. Viz poznámky pro seznam kategorií.
 
-*úroveň*  
+*úroveň*<br/>
 [in] Úroveň trasování pro sestavu. Viz poznámky podrobnosti.
 
-*lpszFormat*  
+*lpszFormat*<br/>
 [in] `printf`-Stylu formátovací řetězec použitý k vytvoření řetězce odesílání do zařízení s výpisem paměti.
 
 ### <a name="remarks"></a>Poznámky
@@ -295,5 +295,5 @@ ATLTRACE a ATLTRACE2 mají stejné chování, zůstane ATLTRACE z důvodu zpětn
 
 ## <a name="see-also"></a>Viz také
 
-[Makra](../../atl/reference/atl-macros.md)   
+[Makra](../../atl/reference/atl-macros.md)<br/>
 [Globální funkce ladění a hlášení chyb](../../atl/reference/debugging-and-error-reporting-global-functions.md)

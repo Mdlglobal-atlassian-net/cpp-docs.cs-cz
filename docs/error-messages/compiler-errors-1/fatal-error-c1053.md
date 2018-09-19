@@ -1,5 +1,5 @@
 ---
-title: Závažná chyba C1053 | Microsoft Docs
+title: Závažná chyba C1053 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da0db5c678b257e3039644627e958bd67b8e4e0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe111f84a5ebf056cb0a806e90cb660060bbf3b4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226396"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135916"
 ---
 # <a name="fatal-error-c1053"></a>Závažná chyba C1053
-'\<identifikátor >': příliš velký – funkce  
-  
- Funkce je příliš velký pro kompilaci.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li odstranit pomocí následující možná řešení  
-  
-1.  Zkuste kompilování bez optimalizace.  
-  
-2.  Funkce rozdělení na menší funkce.  
-  
-3.  Snížit počet volání na vložené funkce.
+
+"\<identifikátor >': funkce je příliš velká
+
+Funkce je příliš velký pro kompilaci.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li vyřešit pomocí následujících možná řešení
+
+1. Pokuste se zkompilovat bez optimalizace.
+
+1. Funkce rozdělte na menší funkce.
+
+1. Omezte volání vložených funkcí.

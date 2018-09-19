@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4157 | Microsoft Docs
+title: Upozornění (úroveň 1) C4157 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8808f7b384deeed9a0ea1c6e780c7167d2098b53
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4722c260c0c5cb8e50b45dbabe546749f50c51e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273673"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136191"
 ---
-# <a name="compiler-warning-level-1-c4157"></a>C4157 kompilátoru upozornění (úroveň 1)
-Direktiva pragma byl ignorován kompilátorem C  
-  
- Rozpozná pouze C++ compiler **init_seg()**.
+# <a name="compiler-warning-level-1-c4157"></a>Kompilátor upozornění (úroveň 1) C4157
+
+Kompilátor jazyka C ignoroval direktivu pragma
+
+Kompilátor jazyka C++ rozpoznává **init_seg()**.

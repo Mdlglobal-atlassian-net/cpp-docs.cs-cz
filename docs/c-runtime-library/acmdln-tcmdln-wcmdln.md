@@ -1,5 +1,5 @@
 ---
-title: _acmdln – _tcmdln –, _wcmdln – | Microsoft Docs
+title: _acmdln – _tcmdln –, _wcmdln – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,30 +32,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 141e261af618cc6058a2a731b70e824582be303b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c9dd8af9b55ab022277737f2349b27eb257810f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386492"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135864"
 ---
 # <a name="acmdln-tcmdln-wcmdln"></a>_acmdln, _tcmdln, _wcmdln
-Interní CRT globální proměnné. Příkazový řádek.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-char * _acmdln;  
-wchar_t * _wcmdln;  
-  
-#ifdef WPRFLAG  
-   #define _tcmdln _wcmdln  
-#else  
-   #define _tcmdln _acmdln  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Tyto interní proměnné CRT ukládat dokončení příkazového řádku. Jsou přístupné exportovaný symboly pro CRT, ale nejsou určeny pro použití v kódu. `_acmdln` ukládá data jako řetězec znaků. `_wcmdln` ukládá data jako řetězec znaků široké. `_tcmdln` může být definováno jako buď `_acmdln` nebo `_wcmdln`podle toho, která je vhodné.  
-  
-## <a name="see-also"></a>Viz také  
- [Globální proměnné](../c-runtime-library/global-variables.md)
+
+Interní globální proměnné CRT. Příkazový řádek.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+char * _acmdln;
+wchar_t * _wcmdln;
+
+#ifdef WPRFLAG
+   #define _tcmdln _wcmdln
+#else
+   #define _tcmdln _acmdln
+```
+
+## <a name="remarks"></a>Poznámky
+
+Tyto interní proměnné CRT ukládání úplný příkazový řádek. Jsou přístupné na exportované symboly pro CRT, ale nejsou určeny pro použití ve vašem kódu. `_acmdln` ukládá data jako řetězec znaků. `_wcmdln` ukládá data jako řetězec širokých znaků. `_tcmdln` může být definována buď jako `_acmdln` nebo `_wcmdln`podle toho, které je vhodné.
+
+## <a name="see-also"></a>Viz také
+
+[Globální proměnné](../c-runtime-library/global-variables.md)

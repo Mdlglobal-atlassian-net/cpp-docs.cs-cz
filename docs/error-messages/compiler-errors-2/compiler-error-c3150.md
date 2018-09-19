@@ -1,5 +1,5 @@
 ---
-title: C3150 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3150 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 102e663976f202f92dbf396eef608a254281d29b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b5fb5febbfc4b5803f6c3f72e04e2421a3fea0e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247012"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136267"
 ---
-# <a name="compiler-error-c3150"></a>C3150 chyby kompilátoru
-'element': 'atribut' lze použít pouze ke třídě, rozhraní, pole nebo ukazatele  
-  
-`__gc` můžete použít pouze na třídu, rozhraní nebo pole.  
-  
- C3150 je dostupný, pomocí možnosti zastaralé kompilátoru pouze **/clr:oldSyntax**.  
+# <a name="compiler-error-c3150"></a>Chyba kompilátoru C3150
+
+"element": "atribut" může používat jedině pro třídy, rozhraní, pole nebo ukazatel
+
+`__gc` jde použít jenom ve třídě, rozhraní nebo pole.
+
+C3150 dosažitelný pouze pomocí možnosti kompilátoru zastaralé **oldSyntax**.

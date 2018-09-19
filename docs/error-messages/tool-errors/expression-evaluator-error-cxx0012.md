@@ -1,5 +1,5 @@
 ---
-title: CXX0012 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0012 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7043eaf6654670935301c1f49ba88aed5745a96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 024811c13fb27cb2da88bdddc9965d8a124e341a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297027"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135903"
 ---
 # <a name="expression-evaluator-error-cxx0012"></a>Chyba při vyhodnocování výrazu CXX0012
-chybějící levá složená závorka  
-  
- Výraz obsahuje nevyváženou složených závorek. Znovu zadejte výraz s vyrovnáváním složené závorky.  
-  
- Tato chyba je stejný jako CAN0012.
+
+Chybí levá složená závorka
+
+Výraz obsahuje nevyváženou složenou závorku. Znovu zadejte výraz s vyvážené složených závorek.
+
+Tato chyba se shoduje s CAN0012.

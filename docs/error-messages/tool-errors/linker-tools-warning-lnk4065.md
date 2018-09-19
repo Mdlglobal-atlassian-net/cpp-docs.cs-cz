@@ -1,5 +1,5 @@
 ---
-title: Upozornění linkerů Lnk4065 | Microsoft Docs
+title: Upozornění Linkerů LNK4065 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbe8b1500ac5dc2f066052fbfe11ea65eb59193f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 98de30e7514c515d50751fab73533912e33da30e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299081"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135976"
 ---
 # <a name="linker-tools-warning-lnk4065"></a>Upozornění linkerů LNK4065
-nelze seřadit 'function'; Ignorovat  
-  
- Jako zabalené funkce nebyla zkompilovat danou funkci. Znovu zkompiluje pomocí [/Gy](../../build/reference/gy-enable-function-level-linking.md).
+
+'function' nelze seřadit; Ignorovat
+
+Danou funkci nebyl zkompilován jako zabalené funkce. Znovu zkompilovat pomocí [/Gy](../../build/reference/gy-enable-function-level-linking.md).

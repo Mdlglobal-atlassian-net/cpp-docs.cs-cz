@@ -1,5 +1,5 @@
 ---
-title: C2421 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2421 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f52545e38207eda1ea941e100a23876e326c2a6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d35b3249be3805d2f4898c4a8007aaa5f849ca4f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195172"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135942"
 ---
-# <a name="compiler-error-c2421"></a>C2421 chyby kompilátoru
-PTR – operátor použít s registrace v 'kontextu.  
-  
- `PTR` Operátor nelze použít s `register` operand.
+# <a name="compiler-error-c2421"></a>Chyba kompilátoru C2421
+
+Operátor PTR použít s registrem "context"
+
+`PTR` Operátor nelze použít s `register` operand.

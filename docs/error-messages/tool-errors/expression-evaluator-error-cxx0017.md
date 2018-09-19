@@ -1,5 +1,5 @@
 ---
-title: CXX0017 Chyba vyhodnocování výrazu | Microsoft Docs
+title: Vyhodnocování výrazu CXX0017 chyba | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7540dc701ffa6e0acb3d2661e1196e5f4552d2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 431071137fb3f5b1b276327ee7d21f323ac24c5b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300742"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136234"
 ---
 # <a name="expression-evaluator-error-cxx0017"></a>Chyba při vyhodnocování výrazu CXX0017
-nebyl nalezen – symbol  
-  
- Symbol zadaný ve výrazu nebyl nalezen.  
-  
- Možnou příčinou této chyby je případu Neshoda v názvu symbolu. Protože C a C++ se malá a velká písmena jazyků, musí být uvedeny názvu symbolu v případě přesné, ve kterém je definovaný ve zdroji.  
-  
- Této chybě může dojít při pokusu o přiřazení typu proměnné, aby bylo možné sledovat proměnnou během ladění. `typedef` Deklaruje nový název typu, ale nedefinuje nového typu. Typecast pokus v ladicím programu vyžaduje název určitého typu.  
-  
- Tato chyba je stejný jako CAN0017.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li odstranit pomocí následující možná řešení  
-  
-1.  Zkontrolujte, zda že je symbol je již deklarována okamžiku v programu, kde se používá.  
-  
-2.  Použít název skutečný typ přetypovat proměnné v ladicím programu, ne `typedef`-definovaný název.
+
+symbol se nenašel
+
+Zadaný ve výrazu symbol se nenašel.
+
+Jednou z možných příčin této chyby se neshoda velikosti písmen v názvu symbolu. Protože C a C++ jsou malá a velká písmena jazyky, musí být název symbolu uvedené v rozlišovat velikost písmen, ve kterém je definován ve zdroji.
+
+Této chybě může dojít při pokusu o zadání proměnné, aby bylo možné sledovat proměnné během ladění. `typedef` Deklaruje nový název pro typ, ale nedefinuje nového typu. Typecast v ladicí program se pokusil vyžaduje název určitého typu.
+
+Tato chyba se shoduje s CAN0017.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li vyřešit pomocí následujících možná řešení
+
+1. Ujistěte se, že symbol je už deklarovaný v místě v programu, ve kterém se používá.
+
+1. Použít název. skutečný typ pro přetypování proměnné v ladicím programu, spíše než `typedef`-definovaný název.

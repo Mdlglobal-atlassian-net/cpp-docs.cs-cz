@@ -1,5 +1,5 @@
 ---
-title: Kompilátoru (úroveň 3) upozornění C4724 | Microsoft Docs
+title: Upozornění (úroveň 3) C4724 kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 351a859dc557e862ee4c22b3a78f8de289bdb053
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31c65f3ab2dd5e9bfb5c1acd9f183892feebea56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295266"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135881"
 ---
-# <a name="compiler-warning-level-3-c4724"></a>C4724 kompilátoru upozornění (úroveň 3)
-potenciální mod hodnotou 0  
-  
- Druhý operand v rámci operace zbývající vyhodnotit na hodnotu nula v době kompilace poskytující nedefinované výsledky.
+# <a name="compiler-warning-level-3-c4724"></a>Kompilátor upozornění (úroveň 3) C4724
+
+potenciální dělení se zbytkem 0
+
+Druhý operand v rámci operace zbývající vyhodnocen na hodnotu nula v době kompilace, poskytující nedefinované výsledky.

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656ede7c36fae4619cd356421a302b142a08ff19
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 352f3e5ebd9606cc355ea9af65739c3e17894298
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761885"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136293"
 ---
 # <a name="composite-control-macros"></a>Makra složených ovládacích prvků
 
@@ -34,7 +34,7 @@ Tato makra definují mapy jímek událostí a položek.
 |[BEGIN_SINK_MAP](#begin_sink_map)|Označuje začátek toho, na mapě událostí jímky složeného ovládacího prvku.|
 |[END_SINK_MAP](#end_sink_map)|Označuje konec toho, na mapě událostí jímky složeného ovládacího prvku.|
 |[SINK_ENTRY](#sink_entry)|Položka k mapě událostí jímky.|
-|[SINK_ENTRY_EX](#sink_entry_ex)|Položka mapy jímky událostí s dalším parametrem.| 
+|[SINK_ENTRY_EX](#sink_entry_ex)|Položka mapy jímky událostí s dalším parametrem.|
 |[SINK_ENTRY_EX_P](#sink_entry_ex)| (Visual Studio 2017) Podobně jako SINK_ENTRY_EX s tím rozdílem, že bere ukazatel na iid.|
 |[SINK_ENTRY_INFO](#sink_entry_info)|Položka mapy jímky událostí s informacemi o ručně zadaný typ pro použití s [idispeventsimpleimpl –](../../atl/reference/idispeventsimpleimpl-class.md).|
 |[SINK_ENTRY_INFO_P](#sink_entry_info)| (Visual Studio 2017) Podobně jako SINK_ENTRY_INFO s tím rozdílem, že bere ukazatel na iid.|
@@ -53,7 +53,7 @@ BEGIN_SINK_MAP(_class)
 
 ### <a name="parameters"></a>Parametry
 
-*_třídy*  
+*_třídy*<br/>
 [in] Určuje ovládací prvek.
 
 ### <a name="example"></a>Příklad
@@ -90,13 +90,13 @@ SINK_ENTRY( id, dispid, fn )
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] Určuje ovládací prvek.
 
-*identifikátor DISPID*  
+*identifikátor DISPID*<br/>
 [in] Identifikuje zadané události.
 
-*fn*  
+*fn*<br/>
 [in] Název funkce obslužné rutiny události. Musíte použít tuto funkci `_stdcall` konvence volání a mít podpis stylům dispinterface.
 
 ### <a name="example"></a>Příklad
@@ -118,19 +118,19 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] Určuje ovládací prvek.
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Určuje rozhraní odbavení.  
 
-*piid*  
+*piid*<br/>
 [in] Ukazatel na rozhraní odbavení.
 
-*identifikátor DISPID*  
+*identifikátor DISPID*<br/>
 [in] Identifikuje zadané události.
 
-*fn*  
+*fn*<br/>
 [in] Název funkce obslužné rutiny události. Musíte použít tuto funkci `_stdcall` konvence volání a mít podpis stylům dispinterface.
 
 ### <a name="example"></a>Příklad
@@ -152,22 +152,22 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] Celé číslo bez znaménka určující zdroj události. Tato hodnota musí odpovídat *nID* šablony parametr použitý v souvisejících článcích [idispeventsimpleimpl –](../../atl/reference/idispeventsimpleimpl-class.md) základní třídy.
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 [in] Identifikátor IID, který identifikuje rozhraní odbavení.  
 
-*piid*  
+*piid*<br/>
 [in] Ukazatel na IID, který identifikuje rozhraní odbavení.
 
-*identifikátor DISPID*  
+*identifikátor DISPID*<br/>
 [in] Identifikátor DISPID identifikace zadané události.
 
-*fn*  
+*fn*<br/>
 [in] Název funkce obslužné rutiny události. Musíte použít tuto funkci `_stdcall` konvence volání a mít podpis stylům dispinterface.
 
-*Informace o*  
+*Informace o*<br/>
 [in] Zadejte informace pro funkce obslužné rutiny události. Informace o tomto typu je k dispozici ve formě ukazatel na `_ATL_FUNC_INFO` struktury. CC_CDECL je jedinou možností, které jsou podporované ve Windows CE pro DEFINICI pole `_ATL_FUNC_INFO` struktury. Jakákoli jiná hodnota není podporován tedy nedefinované chování.
 
 ### <a name="remarks"></a>Poznámky
@@ -176,5 +176,5 @@ První čtyři – makro parametry jsou stejné jako u [SINK_ENTRY_EX](#sink_ent
 
 ## <a name="see-also"></a>Viz také
 
-[Makra](../../atl/reference/atl-macros.md)   
+[Makra](../../atl/reference/atl-macros.md)<br/>
 [Globální funkce složených ovládacích prvků](../../atl/reference/composite-control-global-functions.md)
