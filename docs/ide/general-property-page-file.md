@@ -1,5 +1,5 @@
 ---
-title: Obecná stránka vlastností (soubor) | Microsoft Docs
+title: Obecná stránka vlastností (soubor) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,30 +15,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 523ac16a647116f4d18da7e516adb4f0e6bb7fc4
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 8ad4689c15e14ba0bbac61c8c3b28148536b9057
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "33324032"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715465"
 ---
 # <a name="general-property-page-file"></a>Obecná stránka vlastností (soubor)
 
-Když je vybrán soubor v **Průzkumníku řešení**, **Obecné** stránka vlastností v rámci **vlastnosti konfigurace** uzel obsahuje následující vlastnosti:
+Když je vybrán soubor v **Průzkumníka řešení**, **Obecné** stránka vlastností **vlastnosti konfigurace** uzel obsahuje následující vlastnosti:
 
-**Vyloučit ze sestavení**  
-Určuje, zda soubor musí být v sestavení pro aktuální konfiguraci.
+- **Vyloučit ze sestavení**
 
-Programový přístup, najdete v tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>.
+   Určuje, zda soubor by měl být v sestavení pro aktuální konfiguraci.
 
-**Nástroj**  
-Nástroj, který bude použit k vytvoření tohoto souboru. V tématu [zadání nástroje sestavení vlastní](../ide/specifying-custom-build-tools.md) Další informace.
+   Programový přístup k této vlastnosti, najdete v článku <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>.
 
-Programový přístup, najdete v tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>.
+- **Nástroj**
 
-Informace o tom, jak získat přístup **Obecné** stránka vlastností v rámci **vlastnosti konfigurace** uzlu, najdete v části [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).
+   Nástroj, který se použije k vytvoření tohoto souboru. Zobrazit [zadání Custom Build Tools](../ide/specifying-custom-build-tools.md) Další informace.
 
-Projekty jiný systém než Windows, najdete v části [odkazu na stránku vlastností C++ Linux](../linux/prop-pages-linux.md)<!-- or [C++ Cross Platform Property Page Reference](../linux/prop-pages-linux.md)-->.
+   Programový přístup k této vlastnosti, najdete v článku <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>.
+
+Informace o tom, jak získat přístup **Obecné** stránka vlastností **vlastnosti konfigurace** uzlu, naleznete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).
+
+Projekty bez Windows, naleznete v tématu [odkaz na stránku vlastností Linux C++](../linux/prop-pages-linux.md)<!-- or [C++ Cross Platform Property Page Reference](../linux/prop-pages-linux.md)-->.
 
 ## <a name="see-also"></a>Viz také:
 
