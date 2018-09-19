@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5903cebe5de87ab528dbcfe1769047b7b7ace3ef
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d5840fc7e4623ee6163b3caf1a43eff358a152e6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761911"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039033"
 ---
 # <a name="iunknown"></a>IUnknown
 
@@ -30,6 +30,6 @@ ms.locfileid: "43761911"
 
 ## <a name="see-also"></a>Viz také
 
-[Úvod do modelu COM](../atl/introduction-to-com.md)   
+[Úvod do modelu COM](../atl/introduction-to-com.md)<br/>
 [IUnknown a Interface dědičnosti](/windows/desktop/com/iunknown-and-interface-inheritance)
 

@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58d18a6b5eae55373be9ddc71a4d856547bf420c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3a816d10a0cb9665938e77ae8c649464b7b6768c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758427"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108479"
 ---
 # <a name="cbindstatuscallback-class"></a>Cbindstatuscallback – třída
 
@@ -57,17 +57,17 @@ Tato třída implementuje `IBindStatusCallback` rozhraní.
 
 ```
 template <class T,
-    int nBindFlags = BINDF_ASYNCHRONOUS | BINDF_ASYNCSTORAGE | BINDF_GETNEWESTVERSION | BINDF_NOWRITECACHE>  
+    int nBindFlags = BINDF_ASYNCHRONOUS | BINDF_ASYNCSTORAGE | BINDF_GETNEWESTVERSION | BINDF_NOWRITECACHE>
 class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx <T ::_ThreadModel::ThreadModelNoCS>,
     public IBindStatusCallbackImpl<T>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Vaši třídu obsahující funkci, která bude volána, jako jsou data přijata.
 
-*nBindFlags*  
+*nBindFlags*<br/>
 Určuje příznaky vazby, které jsou vráceny pomocí [GetBindInfo](#getbindinfo). Výchozí implementace nastaví vazbu byla asynchronní, načte nejnovější verze datového objektu a neukládá načtená data v mezipaměti disku.
 
 ## <a name="members"></a>Členové
@@ -162,7 +162,7 @@ Uvolní všechny přidělené prostředky.
 Vytvoří `CBindStatusCallback` objektu a volání `StartAsyncDownload` spustit stahovat data asynchronně ze zadané adresy URL.
 
 ```
-static HRESULT Download(  
+static HRESULT Download(
     T* pT,
     ATL_PDATAAVAILABLE pFunc,
     BSTR bstrURL,
@@ -172,21 +172,21 @@ static HRESULT Download(
 
 ### <a name="parameters"></a>Parametry
 
-*PT*  
+*PT*<br/>
 [in] Ukazatel na objekt žádosti o přenos dat asynchronní. `CBindStatusCallback` Objektu je založena na tento objekt třídy.
 
-*pFunc*  
+*pFunc*<br/>
 [in] Ukazatel na funkci, která bude přijímat data, která je pro čtení. Funkce je členem třídy objektu typu `T`. Zobrazit [StartAsyncDownload](#startasyncdownload) pro syntaxe a příkladu.
 
-*bstrURL*  
+*bstrURL*<br/>
 [in] Adresa URL k získání dat z. Může být libovolný platný název adresy URL nebo souboru. Nemůže mít hodnotu NULL. Příklad:
 
 `CComBSTR mybstr =_T("http://somesite/data.htm")`
 
-*pUnkContainer*  
+*pUnkContainer*<br/>
 [in] `IUnknown` Kontejneru. Ve výchozím nastavení s hodnotou NULL.
 
-*bRelative*  
+*bRelative*<br/>
 [in] Příznak označující, zda je relativní nebo absolutní adresu URL. FALSE ve výchozím nastavení, což znamená, adresa URL je absolutní.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -209,7 +209,7 @@ STDMETHOD(GetBindInfo)(
 
 ### <a name="parameters"></a>Parametry
 
-*pgrfBSCF*  
+*pgrfBSCF*<br/>
 [out] Ukazatel na BINDF hodnot výčtu označující, jak by měl nastat operace připojení. Ve výchozím nastavení s použitím následujících hodnot výčtu:
 
 BINDF_ASYNCHRONOUS asynchronní stahování.
@@ -220,7 +220,7 @@ BINDF_GETNEWESTVERSION operace připojení, načtěte nejnovější verze data.
 
 BINDF_NOWRITECACHE, které by neměly ukládat operaci bind načíst data v mezipaměti disku.
 
-*pbindinfo*  
+*pbindinfo*<br/>
 [out v] Ukazatel `BINDINFO` struktury poskytuje další informace o jak chce, aby objekt vázání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -241,7 +241,7 @@ STDMETHOD(GetPriority)(LONG* pnPriority);
 
 ### <a name="parameters"></a>Parametry
 
-*pnPriority*  
+*pnPriority*<br/>
 [out] Adresa **dlouhé** proměnné, která v případě úspěchu, obdrží prioritu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -284,12 +284,12 @@ ATL_PDATAAVAILABLE m_pFunc;
 
 Funkce odkazované `m_pFunc` je členem třídy objektu a má následující syntaxi:
 
-```  
-void Function_Name(  
-   CBindStatusCallback<T>* pbsc,  
-   BYTE* pBytes,  
-   DWORD dwSize  
-   );  
+```
+void Function_Name(
+   CBindStatusCallback<T>* pbsc,
+   BYTE* pBytes,
+   DWORD dwSize
+   );
 ```
 
 ##  <a name="m_pt"></a>  CBindStatusCallback::m_pT
@@ -357,7 +357,7 @@ Inicializováno v `OnDataAvailable` z `STGMEDIUM` struktury, když příznak BCS
 Volání asynchronní moniker poskytnuté systémem `OnDataAvailable` poskytující data do objektu, protože je k dispozici.
 
 ```
-STDMETHOD(  
+STDMETHOD(
     OnDataAvailable)(DWORD grfBSCF,
     DWORD dwSize,
     FORMATETC* /* pformatetc */,
@@ -366,16 +366,16 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*grfBSCF*  
+*grfBSCF*<br/>
 [in] Hodnota výčtu BSCF. Jeden nebo více z následujících akcí: BSCF_FIRSTDATANOTIFICATION, BSCF_INTERMEDIARYDATANOTIFICATION nebo BSCF_LASTDATANOTIFICATION.
 
-*dwSize*  
+*dwSize*<br/>
 [in] Souhrnně za (v bajtech) k dispozici od začátku vazby data. Může být nula, která znamená, že objem dat se nevztahuje nebo, že bez ohledu na konkrétní začal být k dispozici.
 
-*pformatetc*  
+*pformatetc*<br/>
 [in] Ukazatel [FORMATETC](/windows/desktop/com/the-formatetc-structure) strukturu, která obsahuje formát dat k dispozici. Pokud neexistuje žádný format, může být CF_NULL.
 
-*pstgmed*  
+*pstgmed*<br/>
 [in] Ukazatel [STGMEDIUM](/windows/desktop/com/the-stgmedium-structure) struktura, která uchovává skutečná data, která je teď k dispozici.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -396,7 +396,7 @@ STDMETHOD(OnLowResource)(DWORD /* dwReserved */);
 
 ### <a name="parameters"></a>Parametry
 
-*dwReserved*  
+*dwReserved*<br/>
 Vyhrazená.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -413,10 +413,10 @@ STDMETHOD(OnObjectAvailable)(REFID /* riid */, IUnknown* /* punk */);
 
 ### <a name="parameters"></a>Parametry
 
-*riid*  
+*riid*<br/>
 Identifikátor rozhraní požadované rozhraní. Nevyužité.
 
-*punk*  
+*punk*<br/>
 Adresa rozhraní IUnknown. Nevyužité.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -437,16 +437,16 @@ STDMETHOD(OnProgress)(
 
 ### <a name="parameters"></a>Parametry
 
-*ulProgress*  
+*ulProgress*<br/>
 Dlouhé celé číslo bez znaménka. Nevyužité.
 
-*ulProgressMax*  
+*ulProgressMax*<br/>
 Dlouhé celé číslo bez znaménka nepoužitý.
 
-*ulStatusCode*  
+*ulStatusCode*<br/>
 Dlouhé celé číslo bez znaménka. Nevyužité.
 
-*szStatusText*  
+*szStatusText*<br/>
 Adresa řetězcovou hodnotu. Nevyužité.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -463,10 +463,10 @@ STDMETHOD(OnStartBinding)(DWORD /* dwReserved */, IBinding* pBinding);
 
 ### <a name="parameters"></a>Parametry
 
-*dwReserved*  
+*dwReserved*<br/>
 Vyhrazeno pro budoucí použití.
 
-*pBinding*  
+*pBinding*<br/>
 [in] Adresa rozhraní IBinding aktuální vazby operace. To nemůže být NULL. Klient by měl zavolá funkci AddRef pro tento ukazatel zachovávat odkaz na objekt binding.
 
 ##  <a name="onstopbinding"></a>  CBindStatusCallback::OnStopBinding
@@ -479,11 +479,11 @@ STDMETHOD(OnStopBinding)(HRESULT hresult, LPCWSTR /* szError */);
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnota HRESULT*  
+*Hodnota HRESULT*<br/>
 Stavový kód vrácený ze operace připojení.
 
-szStatusText  
-Adresa řetězcovou hodnotu nepoužitý.
+*szError*<br/>
+Adresa řetězcovou hodnotu. Nevyužité.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -494,7 +494,7 @@ Je voláno poskytnuté systémem asynchronní moniker označuje konec operace p�
 Začne stahovat data asynchronně ze zadané adresy URL.
 
 ```
-HRESULT StartAsyncDownload(  
+HRESULT StartAsyncDownload(
     T* pT,
     ATL_PDATAAVAILABLE pFunc,
     BSTR bstrURL,
@@ -504,21 +504,21 @@ HRESULT StartAsyncDownload(
 
 ### <a name="parameters"></a>Parametry
 
-*PT*  
+*PT*<br/>
 [in] Ukazatel na objekt žádosti o přenos dat asynchronní. `CBindStatusCallback` Objektu je založena na tento objekt třídy.
 
-*pFunc*  
+*pFunc*<br/>
 [in] Ukazatel na funkci, která přijímá data, který je čten. Funkce je členem třídy objektu typu `T`. Zobrazit **poznámky** pro syntaxe a příkladu.
 
-*bstrURL*  
+*bstrURL*<br/>
 [in] Adresa URL k získání dat z. Může být libovolný platný název adresy URL nebo souboru. Nemůže mít hodnotu NULL. Příklad:
 
 `CComBSTR mybstr =_T("http://somesite/data.htm")`
 
-*pUnkContainer*  
+*pUnkContainer*<br/>
 [in] `IUnknown` Kontejneru. Ve výchozím nastavení s hodnotou NULL.
 
-*bRelative*  
+*bRelative*<br/>
 [in] Příznak označující, zda je relativní nebo absolutní adresu URL. FALSE ve výchozím nastavení, což znamená, adresa URL je absolutní.
 
 ### <a name="return-value"></a>Návratová hodnota

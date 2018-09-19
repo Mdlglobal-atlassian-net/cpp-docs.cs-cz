@@ -1,5 +1,5 @@
 ---
-title: C3912 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3912 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9a5f392500b47771c6f19cc38d2fa2b5e679935
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26ffa49a6b54769db5b24d91ffcaf72579a6e458
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272692"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115252"
 ---
-# <a name="compiler-error-c3912"></a>C3912 chyby kompilátoru
-'událost': typ události musí být typu delegáta  
-  
- Událost byla deklarována, ale neměla správný typ.  
-  
- Další informace najdete v tématu [událostí](../../windows/event-cpp-component-extensions.md).  
-  
- Následující ukázka generuje C3912:  
-  
-```  
-// C3912.cpp  
-// compile with: /clr  
-delegate void H();  
-ref class X {  
-   event int Ev;   // C3912  
-   event H^ Ev2;   // OK  
-};  
+# <a name="compiler-error-c3912"></a>Chyba kompilátoru C3912
+
+'událost': typ události musí být typu delegáta
+
+Události byla deklarovaná, ale nemá správný typ.
+
+Další informace najdete v tématu [události](../../windows/event-cpp-component-extensions.md).
+
+Následující ukázka generuje C3912:
+
+```
+// C3912.cpp
+// compile with: /clr
+delegate void H();
+ref class X {
+   event int Ev;   // C3912
+   event H^ Ev2;   // OK
+};
 ```

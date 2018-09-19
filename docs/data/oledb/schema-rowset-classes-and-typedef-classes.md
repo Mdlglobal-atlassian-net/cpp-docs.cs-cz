@@ -1083,21 +1083,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 25a68bb459122ea83d9be2491cb5fadaaf8a00c0
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 1496fa844106b78e2a5dc735fad0cc33923aea53
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465326"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035757"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Třídy sady řádků schématu a definiční třídy typů
+
 Schéma je kolekce databázové objekty, které jsou ve vlastnictví nebo byly vytvořeny podle konkrétního uživatele. Katalog může obsahovat jeden nebo více schémat, ale musí vždy obsahovat schéma volá INFORMATION_SCHEMA, který obsahuje zobrazení a domén informace schématu. Informace o schématu v OLE DB jsou načítány s použitím předdefinované sady řádků schématu a obsahuje typy, tabulky, sloupce, indexy, zobrazení, kontrolní výrazy a omezení, statistiky, znakových sad, řazení a domén.  
   
- Sady řádků schématu jsou předdefinované sady řádků představující metadat. Sady řádků schématu se obecně používají v dynamické programování, kde není struktura databáze v době kompilace znám. Tyto sady řádků schématu můžete použít k získání informací o databázi v době běhu.  
+Sady řádků schématu jsou předdefinované sady řádků představující metadat. Sady řádků schématu se obecně používají v dynamické programování, kde není struktura databáze v době kompilace znám. Tyto sady řádků schématu můžete použít k získání informací o databázi v době běhu.  
   
- Pomocí třídy definice typedef pro vytvoření instance sady řádků schématu. Odpovídající definice typedef a třídy sady řádků schématu jsou uvedeny níže. Je nutné volat [CRestrictions::Open](../../data/oledb/crestrictions-open.md) po vytvoření instance sady řádků schématu. Tato metoda vrátí sadu výsledků dotazu na základě omezení, které zadáte. Zobrazit [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) informace o omezení sloupce spojené s každou sada řádků schématu.  
+Pomocí třídy definice typedef pro vytvoření instance sady řádků schématu. Odpovídající definice typedef a třídy sady řádků schématu jsou uvedeny níže. Je nutné volat [CRestrictions::Open](../../data/oledb/crestrictions-open.md) po vytvoření instance sady řádků schématu. Tato metoda vrátí sadu výsledků dotazu na základě omezení, které zadáte. Zobrazit [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) informace o omezení sloupce spojené s každou sada řádků schématu.  
   
- Následující tabulka zobrazuje každou OLE DB sada řádků schématu a odpovídající šablony technologie OLE DB – třída definice typedef a informace o třídě.  
+Následující tabulka zobrazuje každou OLE DB sada řádků schématu a odpovídající šablony technologie OLE DB – třída definice typedef a informace o třídě.  
   
 |Sada řádků schématu technologie OLE DB|– Třída definice TypeDef|Informace o třídě|  
 |--------------------------|-------------------|----------------|  
@@ -1133,14 +1134,16 @@ Schéma je kolekce databázové objekty, které jsou ve vlastnictví nebo byly v
 |[VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727\(v=vs.85\))|[CViewTableUsage](#viewtable)|[Cviewtableinfo –](#viewtable)|  
   
 ## <a name="assertion"></a> CAssertions, CAssertionInfo
+
 Call – třída definice typedef `CAssertions` implementovat své třídy parametru `CAssertionInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje kontrolní výrazy definovány v katalogu, které jsou vlastníkem daného uživatele.  
+Tato třída identifikuje kontrolní výrazy definovány v katalogu, které jsou vlastníkem daného uživatele.  
   
- V následující tabulce jsou uvedeny datové členy třídy pro `CAssertionInfo` a jejich odpovídající OLE DB sloupce. V tématu [kontrolních výrazů řádků](/previous-versions/windows/desktop/ms719776\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy pro `CAssertionInfo` a jejich odpovídající OLE DB sloupce. V tématu [kontrolních výrazů řádků](/previous-versions/windows/desktop/ms719776\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1152,14 +1155,16 @@ Call – třída definice typedef `CAssertions` implementovat své třídy param
 |m_szDescription|POPIS|  
 
 ## <a name="catalog"></a> CCatalogs, CCatalogInfo
+
 Call – třída definice typedef `CCatalogs` implementovat své třídy parametru `CCatalogInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje fyzické atributy přidružené k přístupný ze správce databáze katalogů.  
+Tato třída identifikuje fyzické atributy přidružené k přístupný ze správce databáze katalogů.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [KATALOGY řádků](/previous-versions/windows/desktop/ms721241\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [KATALOGY řádků](/previous-versions/windows/desktop/ms721241\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1167,14 +1172,16 @@ Call – třída definice typedef `CCatalogs` implementovat své třídy paramet
 |m_szDescription|POPIS|  
 
 ## <a name="characterset"></a> CCharacterSets, CCharacterSetInfo
+
 Call – třída definice typedef `CCharacterSets` implementovat své třídy parametru `CCharacterSetInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje znakových sad, definované v katalogu, které jsou přístupné pro daného uživatele.  
+Tato třída identifikuje znakových sad, definované v katalogu, které jsou přístupné pro daného uživatele.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [CHARACTER_SETS řádků](/previous-versions/windows/desktop/ms722638\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [CHARACTER_SETS řádků](/previous-versions/windows/desktop/ms722638\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1188,14 +1195,16 @@ Call – třída definice typedef `CCharacterSets` implementovat své třídy pa
 |m_szCollateName|DEFAULT_COLLATE_NAME|  
 
 ## <a name="checkconstraint"></a> CCheckConstraints, CCheckConstraintInfo
+
 Call – třída definice typedef `CCheckConstraints` implementovat své třídy parametru `CCheckConstraintInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje omezení check, definované v katalogu, které jsou vlastníkem daného uživatele. Omezení check určuje hodnoty dat nebo formáty, které jsou přípustné v jedné nebo více sloupců v tabulce.  
+Tato třída identifikuje omezení check, definované v katalogu, které jsou vlastníkem daného uživatele. Omezení check určuje hodnoty dat nebo formáty, které jsou přípustné v jedné nebo více sloupců v tabulce.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [CHECK_CONSTRAINTS řádků](/previous-versions/windows/desktop/ms712845\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [CHECK_CONSTRAINTS řádků](/previous-versions/windows/desktop/ms712845\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1206,14 +1215,16 @@ Call – třída definice typedef `CCheckConstraints` implementovat své třídy
 |m_szDescription|POPIS|  
 
 ## <a name="collation"></a> CCollations, CCollationInfo
+
 Call – třída definice typedef `CCollations` implementovat své třídy parametru `CCollationInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje znak kolace, definované v katalogu, které jsou přístupné pro daného uživatele.  
+Tato třída identifikuje znak kolace, definované v katalogu, které jsou přístupné pro daného uživatele.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [KOLACE řádků](/previous-versions/windows/desktop/ms715783\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [KOLACE řádků](/previous-versions/windows/desktop/ms715783\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1226,14 +1237,16 @@ Call – třída definice typedef `CCollations` implementovat své třídy param
 |m_szPadAttribute|PAD_ATTRIBUTE|  
 
 ## <a name="columndomainusage"></a> CColumnDomainUsage, CColumnDomainUsageInfo
+
 Call – třída definice typedef `CColumnDomainUsage` implementovat své třídy parametru `CColumnDomainUsageInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje sloupce definované v katalogu, které jsou závislé na doméně definované v katalogu a vlastníkem daného uživatele.  
+Tato třída identifikuje sloupce definované v katalogu, které jsou závislé na doméně definované v katalogu a vlastníkem daného uživatele.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [COLUMN_DOMAIN_USAGE řádků](/previous-versions/windows/desktop/ms711240\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [COLUMN_DOMAIN_USAGE řádků](/previous-versions/windows/desktop/ms711240\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1248,14 +1261,16 @@ Call – třída definice typedef `CColumnDomainUsage` implementovat své tříd
 |m_nColumnPropID|COLUMN_PROPID|  
 
 ## <a name="columnprivilege"></a> CColumnPrivileges, CColumnPrivilegeInfo
+
 Call – třída definice typedef `CColumnPrivileges` implementovat své třídy parametru `CColumnPrivilegeInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída určuje oprávnění na sloupce tabulky definované v katalogu, které jsou k dispozici nebo udělená daným uživatelem.  
+Tato třída určuje oprávnění na sloupce tabulky definované v katalogu, které jsou k dispozici nebo udělená daným uživatelem.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [COLUMN_PRIVILEGES řádků](/previous-versions/windows/desktop/ms715800\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [COLUMN_PRIVILEGES řádků](/previous-versions/windows/desktop/ms715800\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1271,14 +1286,16 @@ Call – třída definice typedef `CColumnPrivileges` implementovat své třídy
 |m_bIsGrantable|IS_GRANTABLE|  
 
 ## <a name="columns"></a> CColumns, CColumnsInfo
+
 Call – třída definice typedef `CColumns` implementovat své třídy parametru `CColumnsInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje sloupce tabulky definované v katalogu, které jsou přístupné pro daného uživatele.  
+Tato třída identifikuje sloupce tabulky definované v katalogu, které jsou přístupné pro daného uživatele.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. Zobrazit [sady řádků sloupců](/previous-versions/windows/desktop/ms723052\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. Zobrazit [sady řádků sloupců](/previous-versions/windows/desktop/ms723052\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1312,14 +1329,16 @@ Call – třída definice typedef `CColumns` implementovat své třídy parametr
 |m_szDescription|POPIS|  
   
 ## <a name="constraintcolumnusage"></a> CConstraintColumnUsage, CConstraintColumnUsageInfo
+
 Call – třída definice typedef `CConstraintColumnUsage` implementovat své třídy parametru `CConstraintColumnUsageInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje sloupce používané referenční omezení, unikátních omezení, omezení check a kontrolní výrazy, definované v katalogu a vlastníkem daného uživatele.  
+Tato třída identifikuje sloupce používané referenční omezení, unikátních omezení, omezení check a kontrolní výrazy, definované v katalogu a vlastníkem daného uživatele.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [CONSTRAINT_COLUMN_USAGE řádků](/previous-versions/windows/desktop/ms724522\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [CONSTRAINT_COLUMN_USAGE řádků](/previous-versions/windows/desktop/ms724522\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1334,14 +1353,16 @@ Call – třída definice typedef `CConstraintColumnUsage` implementovat své t�
 |m_szConstraintName|CONSTRAINT_NAME|  
 
 ## <a name="constrainttableusage"></a> CConstraintTableUsage, CConstraintTableUsageInfo
+
 Call – třída definice typedef `CConstraintTableUsage` implementovat své třídy parametru `CConstraintTableUsageInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje tabulky používají referenční omezení, unikátních omezení, omezení check a kontrolní výrazy, definované v katalogu a vlastníkem daného uživatele.  
+Tato třída identifikuje tabulky používají referenční omezení, unikátních omezení, omezení check a kontrolní výrazy, definované v katalogu a vlastníkem daného uživatele.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [CONSTRAINT_TABLE_USAGE řádků](/previous-versions/windows/desktop/ms724522\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [CONSTRAINT_TABLE_USAGE řádků](/previous-versions/windows/desktop/ms724522\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1353,14 +1374,16 @@ Call – třída definice typedef `CConstraintTableUsage` implementovat své tř
 |m_szConstraintName|CONSTRAINT_NAME|  
 
 ## <a name="foreignkeys"></a> CForeignKeys, CForeignKeysInfo
+
 Call – třída definice typedef `CForeignKeys` implementovat své třídy parametru `CForeignKeysInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje sloupce cizích klíčů definované daným uživatelem v katalogu.  
+Tato třída identifikuje sloupce cizích klíčů definované daným uživatelem v katalogu.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [FOREIGN_KEYS řádků](/previous-versions/windows/desktop/ms711276\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [FOREIGN_KEYS řádků](/previous-versions/windows/desktop/ms711276\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1381,14 +1404,16 @@ Call – třída definice typedef `CForeignKeys` implementovat své třídy para
 |m_szDeleteRule|DELETE_RULE|  
 
 ## <a name="index"></a> CIndexes, CIndexInfo
+
 Call – třída definice typedef `CIndexes` implementovat své třídy parametru `CIndexInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje indexy, definované v katalogu, které jsou vlastníkem daného uživatele.  
+Tato třída identifikuje indexy, definované v katalogu, které jsou vlastníkem daného uživatele.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [indexy řádků](/previous-versions/windows/desktop/ms709712\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [indexy řádků](/previous-versions/windows/desktop/ms709712\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1418,14 +1443,16 @@ Call – třída definice typedef `CIndexes` implementovat své třídy parametr
 |m_szFilterCondition|FILTER_CONDITION|  
   
 ## <a name="keycolumn"></a> CKeyColumns, CKeyColumnInfo
+
 Call – třída definice typedef `CKeyColumns` implementovat své třídy parametru `CKeyColumnInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje sloupce definované v katalogu, které jsou omezeny daného uživatele jako klíče.  
+Tato třída identifikuje sloupce definované v katalogu, které jsou omezeny daného uživatele jako klíče.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [KEY_COLUMN_USAGE řádků](/previous-versions/windows/desktop/ms712990\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [KEY_COLUMN_USAGE řádků](/previous-versions/windows/desktop/ms712990\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1441,14 +1468,16 @@ Call – třída definice typedef `CKeyColumns` implementovat své třídy param
 |m_nOrdinalPosition|ORDINAL_POSITION|  
 
 ## <a name="primarykey"></a> CPrimaryKeys, CPrimaryKeyInfo
+
 Call – třída definice typedef `CPrimaryKeys` implementovat své třídy parametru `CPrimaryKeyInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje sloupce primárních klíčů definované daným uživatelem v katalogu.  
+Tato třída identifikuje sloupce primárních klíčů definované daným uživatelem v katalogu.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [PRIMARY_KEYS řádků](/previous-versions/windows/desktop/ms714362\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [PRIMARY_KEYS řádků](/previous-versions/windows/desktop/ms714362\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1461,14 +1490,16 @@ Call – třída definice typedef `CPrimaryKeys` implementovat své třídy para
 |m_nOrdinal|POŘADÍ|  
 
 ## <a name="procedurecolumn"></a> CProcedureColumns, CProcedureColumnInfo
+
 Call – třída definice typedef `CProcedureColumns` implementovat své třídy parametru `CProcedureColumnInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída vrátí informace o sloupcích sady řádků vrácených postupy.  
+Tato třída vrátí informace o sloupcích sady řádků vrácených postupy.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [PROCEDURE_COLUMNS řádků](/previous-versions/windows/desktop/ms723092\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [PROCEDURE_COLUMNS řádků](/previous-versions/windows/desktop/ms723092\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1490,14 +1521,16 @@ Call – třída definice typedef `CProcedureColumns` implementovat své třídy
 |m_szDescription|POPIS|  
 
 ## <a name="procedureparam"></a> CProcedureParameters CProcedureParamInfo
+
 Call – třída definice typedef `CProcedureParameters` implementovat své třídy parametru `CProcedureParamInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída vrátí informace o parametry a návratové kódy z postupů.  
+Tato třída vrátí informace o parametry a návratové kódy z postupů.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [PROCEDURE_PARAMETERS řádků](/previous-versions/windows/desktop/ms713623\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [PROCEDURE_PARAMETERS řádků](/previous-versions/windows/desktop/ms713623\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1518,14 +1551,16 @@ Call – třída definice typedef `CProcedureParameters` implementovat své tř�
 |m_szDescription|POPIS|  
 
 ## <a name="procedure"></a> CProcedures, CProcedureInfo
+
 Call – třída definice typedef `CProcedures` implementovat své třídy parametru `CProcedureInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje postupy definované v katalogu, které jsou vlastníkem daného uživatele.  
+Tato třída identifikuje postupy definované v katalogu, které jsou vlastníkem daného uživatele.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [řádků PROCEDUR](/previous-versions/windows/desktop/ms724021\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [řádků PROCEDUR](/previous-versions/windows/desktop/ms724021\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1537,14 +1572,16 @@ Call – třída definice typedef `CProcedures` implementovat své třídy param
 |m_szDescription|POPIS|  
 
 ## <a name="provider"></a> CProviderTypes, CProviderInfo
+
 Call – třída definice typedef `CProviderTypes` implementovat své třídy parametru `CProviderInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje (základní) datové typy podporované poskytovatelem dat.  
+Tato třída identifikuje (základní) datové typy podporované poskytovatelem dat.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [PROVIDER_TYPES řádků](/previous-versions/windows/desktop/ms709785\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [PROVIDER_TYPES řádků](/previous-versions/windows/desktop/ms709785\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1570,14 +1607,16 @@ Call – třída definice typedef `CProviderTypes` implementovat své třídy pa
 |m_bBestMatch|BEST_MATCH|  
 
 ## <a name="referentialconstraint"></a> CReferentialConstraints, CReferentialConstraintInfo
+
 Call – třída definice typedef `CReferentialConstraints` implementovat své třídy parametru `CReferentialConstraintInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje referenční omezení, definované v katalogu, které jsou vlastníkem daného uživatele.  
+Tato třída identifikuje referenční omezení, definované v katalogu, které jsou vlastníkem daného uživatele.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [REFERENTIAL_CONSTRAINTS řádků](/previous-versions/windows/desktop/ms719737\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [REFERENTIAL_CONSTRAINTS řádků](/previous-versions/windows/desktop/ms719737\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1593,14 +1632,16 @@ Call – třída definice typedef `CReferentialConstraints` implementovat své t
 |m_szDescription|POPIS|  
 
 ## <a name="schemata"></a> CSchemata, CSchemataInfo
+
 Call – třída definice typedef `CSchemata` implementovat své třídy parametru `CSchemataInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje schémata, které jsou vlastníkem daného uživatele.  
+Tato třída identifikuje schémata, které jsou vlastníkem daného uživatele.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [SCHÉMAT řádků](/previous-versions/windows/desktop/ms716887\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [SCHÉMAT řádků](/previous-versions/windows/desktop/ms716887\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1612,14 +1653,16 @@ Call – třída definice typedef `CSchemata` implementovat své třídy paramet
 |m_szCharName|DEFAULT_CHARACTER_SET_NAME|  
 
 ## <a name="sqllanguage"></a> CSQLLanguages, CSQLLanguageInfo
+
 Call – třída definice typedef `CSQLLanguages` implementovat své třídy parametru `CSQLLanguageInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje úrovně shoda, možnosti a dialekty podporované zpracování dat SQL – implementace definované v katalogu.  
+Tato třída identifikuje úrovně shoda, možnosti a dialekty podporované zpracování dat SQL – implementace definované v katalogu.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [SQL_LANGUAGES řádků](/previous-versions/windows/desktop/ms714374\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [SQL_LANGUAGES řádků](/previous-versions/windows/desktop/ms714374\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1632,14 +1675,16 @@ Call – třída definice typedef `CSQLLanguages` implementovat své třídy par
 |m_szProgrammingLanguage|SQL_LANGUAGE_PROGRAMMING_LANGUAGE|  
 
 ## <a name="statistic"></a> CStatistics, CStatisticInfo
+
 Call – třída definice typedef `CStatistics` implementovat své třídy parametru `CStatisticInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje statistiky, definované v katalogu, které jsou vlastněny daného uživatele.  
+Tato třída identifikuje statistiky, definované v katalogu, které jsou vlastněny daného uživatele.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [statistiky řádků](/previous-versions/windows/desktop/ms715957\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [statistiky řádků](/previous-versions/windows/desktop/ms715957\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1649,14 +1694,16 @@ Call – třída definice typedef `CStatistics` implementovat své třídy param
 |m_nCardinality|KARDINALITA|  
 
 ## <a name="tableconstraint"></a> CTableConstraints, CTableConstraintInfo
+
 Call – třída definice typedef `CTableConstraints` implementovat své třídy parametru `CTableConstraintInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje tabulky omezení, definovaná v katalogu, které jsou vlastníkem daného uživatele.  
+Tato třída identifikuje tabulky omezení, definovaná v katalogu, které jsou vlastníkem daného uživatele.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [TABLE_CONSTRAINTS řádků](/previous-versions/windows/desktop/ms715921\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [TABLE_CONSTRAINTS řádků](/previous-versions/windows/desktop/ms715921\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1672,14 +1719,16 @@ Call – třída definice typedef `CTableConstraints` implementovat své třídy
 |m_szDescription|POPIS|  
 
 ## <a name="tableprivilege"></a> CTablePrivileges, CTablePrivilegeInfo
+
 Call – třída definice typedef `CTablePrivileges` implementovat své třídy parametru `CTablePrivilegeInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje tabulky definované v katalogu, které jsou přístupné pro daného uživatele.  
+Tato třída identifikuje tabulky definované v katalogu, které jsou přístupné pro daného uživatele.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [TABLE_PRIVILEGES řádků](/previous-versions/windows/desktop/ms725428\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [TABLE_PRIVILEGES řádků](/previous-versions/windows/desktop/ms725428\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1692,14 +1741,16 @@ Call – třída definice typedef `CTablePrivileges` implementovat své třídy 
 |m_bIsGrantable|IS_GRANTABLE|  
 
 ## <a name="table"></a> CTables, CTableInfo
+
 Call – třída definice typedef `CTables` implementovat své třídy parametru `CTableInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída určuje oprávnění na tabulek definovaných v katalogu, které jsou k dispozici nebo poskytované daného uživatele.  
+Tato třída určuje oprávnění na tabulek definovaných v katalogu, které jsou k dispozici nebo poskytované daného uživatele.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. Zobrazit [řádků tabulky](/previous-versions/windows/desktop/ms716980\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. Zobrazit [řádků tabulky](/previous-versions/windows/desktop/ms716980\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1711,14 +1762,16 @@ Call – třída definice typedef `CTables` implementovat své třídy parametru
 |m_szDescription|POPIS|  
 
 ## <a name="translation"></a> CTranslations, CTranslationInfo
+
 Call – třída definice typedef `CTranslations` implementovat své třídy parametru `CTranslationInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje znak překladů definovaném v katalogu, které jsou přístupné pro daného uživatele.  
+Tato třída identifikuje znak překladů definovaném v katalogu, které jsou přístupné pro daného uživatele.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [PŘEKLADY řádků](/previous-versions/windows/desktop/ms725365\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [PŘEKLADY řádků](/previous-versions/windows/desktop/ms725365\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1733,14 +1786,16 @@ Call – třída definice typedef `CTranslations` implementovat své třídy par
 |m_szTargetName|TARGET_CHARACTER_SET_NAME|  
 
 ## <a name="usageprivilege"></a> CUsagePrivileges, CUsagePrivilegeInfo
+
 Call – třída definice typedef `CUsagePrivileges` implementovat své třídy parametru `CUsagePrivilegeInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje využití oprávnění na objekty definované v katalogu, které jsou k dispozici nebo poskytované daného uživatele.  
+Tato třída identifikuje využití oprávnění na objekty definované v katalogu, které jsou k dispozici nebo poskytované daného uživatele.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [USAGE_PRIVILEGES řádků](/previous-versions/windows/desktop/ms722743\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [USAGE_PRIVILEGES řádků](/previous-versions/windows/desktop/ms722743\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1754,14 +1809,16 @@ Call – třída definice typedef `CUsagePrivileges` implementovat své třídy 
 |m_bIsGrantable|IS_GRANTABLE|  
 
 ## <a name="viewcolumn"></a> CViewColumnUsage, CViewColumnInfo
+
 Call – třída definice typedef `CViewColumnUsage` implementovat své třídy parametru `CViewColumnInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje sloupce v zobrazení tabulek definovaných v katalogu, která daný uživatel vlastní, jsou závislé.  
+Tato třída identifikuje sloupce v zobrazení tabulek definovaných v katalogu, která daný uživatel vlastní, jsou závislé.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [VIEW_COLUMN_USAGE řádků](/previous-versions/windows/desktop/ms714896\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [VIEW_COLUMN_USAGE řádků](/previous-versions/windows/desktop/ms714896\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1776,14 +1833,16 @@ Call – třída definice typedef `CViewColumnUsage` implementovat své třídy 
 |m_nColumnPropID|COLUMN_PROPID|  
 
 ## <a name="view"></a> CViews, CViewInfo
+
 Call – třída definice typedef `CViews` implementovat své třídy parametru `CViewInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje tabulky v zobrazení tabulek definovaných v katalogu, která daný uživatel vlastní, jsou závislé.  
+Tato třída identifikuje tabulky v zobrazení tabulek definovaných v katalogu, která daný uživatel vlastní, jsou závislé.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. Zobrazit [zobrazení řádků](/previous-versions/windows/desktop/ms723122\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. Zobrazit [zobrazení řádků](/previous-versions/windows/desktop/ms723122\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1796,14 +1855,16 @@ Call – třída definice typedef `CViews` implementovat své třídy parametru 
 |m_szDescription|POPIS|  
 
 ## <a name="viewtable"></a> CViewTableUsage, CViewTableInfo
+
 Call – třída definice typedef `CViewTableUsage` implementovat své třídy parametru `CViewTableInfo`.  
   
 ### <a name="remarks"></a>Poznámky  
- Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
+
+Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pro další informace o použití definiční třídy typů.  
   
- Tato třída identifikuje zobrazení tabulky, definované v katalogu, které jsou přístupné pro daného uživatele.  
+Tato třída identifikuje zobrazení tabulky, definované v katalogu, které jsou přístupné pro daného uživatele.  
   
- V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [VIEW_TABLE_USAGE řádků](/previous-versions/windows/desktop/ms719727\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [VIEW_TABLE_USAGE řádků](/previous-versions/windows/desktop/ms719727\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.  
   
 |Datové členy|Sloupce OLE DB|  
 |------------------|--------------------|  
@@ -1815,7 +1876,9 @@ Call – třída definice typedef `CViewTableUsage` implementovat své třídy p
 |m_szTableName|TABLE_NAME|  
 
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** atldbsch.h  
+
+**Záhlaví:** atldbsch.h  
   
 ## <a name="see-also"></a>Viz také  
- [CRestrictions – třída](../../data/oledb/crestrictions-class.md)
+
+[CRestrictions – třída](../../data/oledb/crestrictions-class.md)

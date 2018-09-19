@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1dfc9c50503fcd277f34e8f5dfc4a630d888eebf
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 4cc44672fe30af8b6521b617228fb70b88e61f83
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318268"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040934"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Specifikace výjimek (throw, noexcept) (C++)
 
-Specifikace výjimek jsou funkce jazyka C++, které označují programátora záměr o typy výjimek, které můžete rozšířit pomocí funkce. Můžete určit, že funkce může nebo nemusí výjimku ukončit pomocí *specifikace výjimky*. Kompilátor tyto informace můžete použít k optimalizaci volání funkce a ukončení programu, pokud neočekávanou výjimku řídící funkce. 
+Specifikace výjimek jsou funkce jazyka C++, které označují programátora záměr o typy výjimek, které můžete rozšířit pomocí funkce. Můžete určit, že funkce může nebo nemusí výjimku ukončit pomocí *specifikace výjimky*. Kompilátor tyto informace můžete použít k optimalizaci volání funkce a ukončení programu, pokud neočekávanou výjimku řídící funkce.
 
 Před C ++ 17 se dva typy specifikace výjimky. *Noexcept specifikace* byla nová v C ++ 11. Určuje, zda sada potenciální výjimky, které může uniknout funkce je prázdný. *Specifikace dynamických výjimek*, nebo `throw(optional_type_list)` specifikace, bylo zastaralé v C ++ 11 a odstraněno v C ++ 17, s výjimkou `throw()`, což je alias pro `noexcept(true)`. Tato specifikace výjimky je navržená k poskytuje souhrnné informace o jaké výjimky mohou být vyvolány ve funkci, ale v praxi byl nalezen jako problematické. Jeden specifikace dynamických výjimek, který být částečně užitečné byla Nepodmíněný `throw()` specifikace. Například deklarace funkce:
 
@@ -138,5 +138,6 @@ in handler
 ```
 
 ## <a name="see-also"></a>Viz také:
- [try, throw a catch – příkazy (C++)](../cpp/try-throw-and-catch-statements-cpp.md)  
- [Zpracovávání výjimek v jazyce C++](../cpp/cpp-exception-handling.md)
+
+[try, throw a catch – příkazy (C++)](../cpp/try-throw-and-catch-statements-cpp.md)<br/>
+[Zpracovávání výjimek v jazyce C++](../cpp/cpp-exception-handling.md)
