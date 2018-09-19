@@ -1,5 +1,5 @@
 ---
-title: 2.7.2.5 výchozí | Microsoft Docs
+title: 2.7.2.5 výchozí | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,41 +12,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c054c7f0ac7d1d73768d84613524afc979fecaa5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 047110fe80d15d0ff3d979eeec8abf3e42dc35f1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695873"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401560"
 ---
 # <a name="2725-default"></a>2.7.2.5 default
-**Výchozí** klauzule umožňuje uživateli ovlivnit atributy sdílení dat proměnných. Syntaxe **výchozí** klauzule vypadá takto:  
-  
-```  
-default(shared | none)  
-```  
-  
- Určení **default(shared)** je ekvivalentní explicitně výpis každou aktuálně viditelné proměnnou v **sdílené** klauzule, pokud je **threadprivate** nebo **cons**`t`-kvalifikovaný. Bez explicitního **výchozí** klauzule, výchozí chování je stejné jako v případě **default(shared)** byly zadány.  
-  
- Určení **default(none)** vyžaduje, že aspoň jeden z následujících musí být pro každý odkaz na proměnnou v lexikální rozsah paralelní konstrukce na hodnotu true:  
-  
--   Proměnná je explicitně uvedena v klauzuli atribut sdílení dat konstruktor, který obsahuje odkaz na.  
-  
--   Proměnná je deklarované v rámci paralelní konstrukce.  
-  
--   Proměnná je **threadprivate**.  
-  
--   Má proměnná **const**-kvalifikovaný typ.  
-  
--   Proměnná je řídicí proměnná smyčky pro **pro** smyčky, který následuje **pro** nebo **paralelní pro** směrnice a odkaz na proměnnou se zobrazí uvnitř smyčky .  
-  
- Zadání proměnné na **firstprivate**, **lastprivate**, nebo **snížení** klauzule závorkách – direktiva způsobí implicitní odkaz na proměnnou uzavření kontext. Implicitní odkazu si také vztahují požadavky uvedené výše.  
-  
- Jediným **výchozí** může být zadána klauzule na **paralelní** – direktiva.  
-  
- Výchozí proměnná atributů pro sdílení dat lze přepsat pomocí **privátní**, **firstprivate**, **lastprivate**, **snížení**, a **sdílené** klauzule, jak je ukázáno v následujícím příkladu:  
-  
-```  
-#pragma  omp  parallel  for  default(shared)  firstprivate(i)\  
-   private(x)  private(r)  lastprivate(i)  
+
+**Výchozí** klauzule umožňuje uživateli ovlivňují atributy sdílení dat z proměnných. Syntaxe **výchozí** klauzule vypadá takto:
+
+```
+default(shared | none)
+```
+
+Určení **default(shared)** odpovídá explicitně uvedete seznam jednotlivých aktuálně viditelné proměnné v **sdílené** klauzule, pokud se nejedná **threadprivate** nebo **nevýhody**`t`-kvalifikovaný. Chybí explicitní **výchozí** klauzule, výchozí chování je stejné jako if **default(shared)** byly zadány.
+
+Určení **default(none)** vyžaduje, aby aspoň jeden z následujících musí mít hodnotu true pro každý odkaz na proměnnou v lexikálním rozsahu paralelní konstrukce:
+
+- Proměnná je explicitně uvedená v klauzuli data-sharing atribut konstruktoru, který obsahuje odkaz na.
+
+- Proměnná je deklarována v rámci paralelní konstrukce.
+
+- Proměnná je **threadprivate**.
+
+- Obsahuje proměnnou **const**-kvalifikovaný typ.
+
+- Proměnná je řídicí proměnná smyčky pro **pro** smyčku, která bezprostředně následuje po **pro** nebo **paralelní pro** směrnice a reference proměnné se zobrazí uvnitř smyčka .
+
+Určení proměnné na **firstprivate**, **lastprivate**, nebo **snížení** klauzule uzavřené směrnice způsobí, že implicitní odkaz na proměnnou v značka kontext. Tyto odkazy jsou implicitní jsou také v souladu s požadavky uvedené výše.
+
+Pouze jeden **výchozí** může být zadána klauzule na **paralelní** směrnice.
+
+Sdílení dat atribut lze přepsat pomocí výchozí proměnné **privátní**, **firstprivate**, **lastprivate**, **snížení**, a **sdílené** klauzule, jak je ukázáno v následujícím příkladu:
+
+```
+#pragma  omp  parallel  for  default(shared)  firstprivate(i)\
+   private(x)  private(r)  lastprivate(i)
 ```

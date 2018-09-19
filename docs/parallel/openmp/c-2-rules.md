@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb83b35a03608e272e9af67159b61e5dbf4e1ec6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c5845a9125bb32254fc0c03b03e9b6076a086d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755018"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404771"
 ---
 # <a name="c2-rules"></a>C.2 Pravidla
+
 Zápis je popsaný v části 6.1 standardu C. Tento dodatek gramatiky ukazuje rozšíření pro základní jazyk gramatiky direktivy OpenMP – C a C++.
 
 **/\* v jazyce C++ (ISO/IEC 14882:1998) \*/**

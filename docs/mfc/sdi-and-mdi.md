@@ -1,5 +1,5 @@
 ---
-title: SDI a MDI | Microsoft Docs
+title: Rozhraní SDI a knihovna MDI | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db63efe8d7e2622610bb56f5e6885b72b705093b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8189af7939bfca0fd206fa72892098e373444879
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385801"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401443"
 ---
 # <a name="sdi-and-mdi"></a>Rozhraní SDI a knihovna MDI
-MFC usnadňuje práci s jedním dokumentu (SDI rozhraní) a rozhraní více dokumentů (MDI) aplikace.  
-  
- Aplikace SDI povolit pouze jeden okně s rámečkem otevřít dokument najednou. Aplikace MDI povolit více dokumentů, oken s rámečkem otevřené ve stejné instanci aplikace. Aplikace MDI má období v rámci které více MDI podřízená okna, které jsou okna s rámečkem sami, můžou být otevřené, každý obsahující samostatný dokument. V některých aplikacích může být podřízená okna různých typů, například windows graf a tabulku windows. V takovém případě panelu nabídek můžete změnit, jako jsou aktivované podřízených oken MDI různých typů.  
-  
+
+MFC usnadňuje práci s rozhraní jednoho dokumentu (SDI) a aplikace rozhraní více dokumentů (MDI).
+
+Pouze jeden dokument otevřít okno rámce aplikace SDI povolit najednou. Aplikace MDI povolit více dokumentů, oken s rámečkem otevřené ve stejné instanci aplikace. Aplikace MDI má okno podřízených oken, které jsou oken s rámečkem v samotné, lze otevřít v rámci které více MDI, každá obsahuje samostatný dokument. V některých aplikacích může být podřízená okna různých typů, jako je například windows graf a tabulka windows. V takovém případě nabídek můžete změnit, protože se aktivují podřízených oken MDI různých typů.
+
 > [!NOTE]
->  V systému Windows 95 a novější aplikace jsou běžně SDI protože operační systém přijal zobrazení "dokumentu-zarovnaný na střed".  
-  
- Další informace najdete v tématu [dokumenty, zobrazení a Framework](../mfc/documents-views-and-the-framework.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Použití tříd pro psaní aplikací pro Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)
+>  V části Windows 95 a později aplikace jsou obvykle SDI vzhledem k tomu, že operační systém přijala zobrazení "dokumentu střed".
+
+Další informace najdete v tématu [dokumenty, zobrazení a Framework](../mfc/documents-views-and-the-framework.md).
+
+## <a name="see-also"></a>Viz také
+
+[Použití tříd pro psaní aplikací pro Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)

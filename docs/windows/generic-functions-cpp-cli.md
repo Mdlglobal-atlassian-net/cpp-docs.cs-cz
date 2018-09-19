@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bc930fdc142dc7b044b4dbd60cfd459b7ce52aea
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b8c51b3468a636335a74b8a4206a6b533d3a200b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709140"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398856"
 ---
 # <a name="generic-functions-ccli"></a>Obecné funkce (C++/CLI)
 
@@ -63,28 +63,28 @@ return-type identifier<type-parameter identifier(s)>
 
 ### <a name="parameters"></a>Parametry
 
-*Atributy*  
+*Atributy*<br/>
 (Volitelné) Další informace o deklarativní. Další informace o atributu třídy a atributy naleznete v tématu atributy.
 
-*Modifikátory*  
+*Modifikátory*<br/>
 (Volitelné) Modifikátor pro funkce, jako je statická.  **virtuální** není povolená, protože virtuální metody nemusí být obecný.
 
-*Návratový typ*  
+*Návratový typ*<br/>
 Typ vrácený metodou Pokud je návratový typ void, vyžádáním žádnou návratovou hodnotu.
 
-*identifikátor*  
+*identifikátor*<br/>
 Název funkce.
 
-*parametr typu identifikátory*  
+*parametr typu identifikátory*<br/>
 Seznam identifikátorů oddělených čárkou.
 
-*formální parametry*  
+*formální parametry*<br/>
 (Volitelné) Seznam parametrů.
 
-*Typ parametru omezení klauzule*  
+*Typ parametru omezení klauzule*<br/>
 Toto určuje omezení na typy, které mohou používat jako argumenty typu a má podobu podle [omezení parametrů obecných typů (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).
 
-*tělo funkce*  
+*tělo funkce*<br/>
 Tělo metody, která mohou odkazovat na identifikátory parametr typu.
 
 ### <a name="remarks"></a>Poznámky
@@ -193,5 +193,5 @@ My function returned a string: Hello generic functions!
 
 ## <a name="see-also"></a>Viz také
 
-[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)  
+[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Obecné typy](../windows/generics-cpp-component-extensions.md)

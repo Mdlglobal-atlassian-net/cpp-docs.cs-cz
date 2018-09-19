@@ -1,5 +1,5 @@
 ---
-title: Tisk prostřednictvím kódu programu | Microsoft Docs
+title: Tisk prostřednictvím kódu programu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,66 +18,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbbc9792fcaec6713e13b4665568017bc5ce1bdc
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 527ecd89838702a3ec8a91c35e67c1c0cc26501e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930924"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397830"
 ---
 # <a name="programmatic-printing"></a>Tisk prostřednictvím kódu programu
-OLE poskytuje prostředky k jednoznačné identifikaci trvalé dokumentů (`GetClassFile`) a načíst je do jejich přidružených kódu (`CoCreateInstance`, `QueryInterface(IID_IPersistFile)`, `QueryInterface(IID_IPersistStorage)`, `IPersistFile::Load`, a `IPersistStorage::Load`). Další povolit tisk dokumentů, obsahování pro aktivní dokument (pomocí existujícímu návrhu OLE není součástí OLE 2.0 původně) představuje základ standardní tisk rozhraní, `IPrint`, obecně k dispozici prostřednictvím jakéhokoliv objektu, který může načíst trvalý stav typu dokumentu. Každé zobrazení aktivní dokument může volitelně podporovat `IPrint` rozhraní k poskytování těchto funkcí.  
-  
- `IPrint` Rozhraní je definován následujícím způsobem:  
-  
-```  
-interface IPrint : IUnknown  
-    {  
-    HRESULT SetInitialPageNum([in] LONG nFirstPage);  
-    HRESULT GetPageInfo(  
-        [out] LONG *pnFirstPage,  
-        [out] LONG *pcPages);  
-    HRESULT Print(  
-        [in] DWORD grfFlags,  
-        [in,out] DVTARGETDEVICE **pptd,  
-        [in,out] PAGESET ** ppPageSet,  
-        [in,out] STGMEDIUM **ppstgmOptions,  
-        [in] IContinueCallback* pCallback,  
-        [in] LONG nFirstPage,  
-        [out] LONG *pcPagesPrinted,  
-        [out] LONG *pnPageLast);  
-    };  
-```  
-  
- Klienty a kontejnery jednoduše používat `IPrint::Print` dáte pokyn, aby dokument Tisk samotné po tento dokument je načtena, zadání tisku příznaky ovládacích prvků, cílové zařízení, na stránkách tisknout a další možnosti. Klienta můžete také ovládat pokračování tisk přes rozhraní `IContinueCallback` (viz níže).  
-  
- Kromě toho `IPrint::SetInitialPageNum` podporuje možnost tisknout řadu dokumenty, jak ji číslování stránky bezproblémově, samozřejmě výhody pro kontejnery pro aktivní dokument jako vazby sady Office. `IPrint::GetPageInfo` Díky zobrazení informací o stránkování jednoduché tím, že volající načíst počáteční stránka číslo dříve předaný `SetInitialPageNum` (nebo dokumentu interní výchozí číslo první stránky) a počet stránek v dokumentu.  
-  
- Objektů, které podporují `IPrint` jsou v registru označené jako "Printable" klíč uložený v objektu CLSID:  
-  
- HKEY_CLASSES_ROOT\CLSID\\{...} \Printable  
-  
- `IPrint` Obvykle se implementuje na stejný objekt, který podporuje buď `IPersistFile` nebo `IPersistStorage`. Volající Poznámka: schopnost trvalý stav některé třídy tak, že vyhledá v registru pro klíč "Printable" Tisk prostřednictvím kódu programu. V současné době "Tisknutelná" udává podporu alespoň `IPrint`; dalších rozhraní může být definována v budoucnu který pak bude k dispozici prostřednictvím `QueryInterface` kde `IPrint` jednoduše představuje základní úroveň podpory.  
-  
- Během tisku postup můžete klienta nebo kontejner, který spustil tisk řídit, jestli by měly pokračovat tisku. Kontejner může například podporovat příkaz "Zastavit vytisknout", který by měl co nejdříve ukončit tiskové úlohy. Na podporu této možnosti, můžete klienta tisknutelná objektu implementovat podřízený objekt malé oznámení s rozhraním `IContinueCallback`:  
-  
-```  
-interface IContinueCallback : IUnknown  
-    {  
-    HRESULT FContinue(void);  
-    HRESULT FContinuePrinting(  
-        [in] LONG cPagesPrinted,  
-        [in] LONG nCurrentPage,  
-        [in] LPOLESTR pszPrintStatus);  
-    };  
-```  
-  
- Toto rozhraní umožňuje sloužit jako obecný pokračování funkci zpětného volání, která probíhá různé postupy pokračování v rozhraní API Win32 (například `AbortProc` pro tisk a `EnumMetafileProc` pro výčet metafile). Proto tento návrh rozhraní je užitečné v celé řadě časově náročné procesů.  
-  
- V případech nejvíce Obecné `IContinueCallback::FContinue` funkce pravidelně volá všechny zdlouhavý proces. Podřízený objekt vrátí S_OK budete v operaci pokračovat a S_FALSE zastavení procesu co nejdříve.  
-  
- `FContinue`, ale není použit v rámci `IPrint::Print`; místo toho tisk používá `IContinueCallback::FContinuePrint`. Jakýkoli tisk objekt by měly volat pravidelně `FContinuePrinting` předávání na počet stránek, které mají tisk přes, číslo stránky, tisku a další řetězec popisující stav tisku na klient může vybrat zobrazení pro uživatele (například "stránka 5 z 19").  
-  
-## <a name="see-also"></a>Viz také  
- [Kontejnery pro aktivní dokument](../mfc/active-document-containers.md)
+
+Poskytuje prostředky k jednoznačné identifikaci trvalé dokumenty OLE (`GetClassFile`) a načíst je do jejich přidružený kód (`CoCreateInstance`, `QueryInterface(IID_IPersistFile)`, `QueryInterface(IID_IPersistStorage)`, `IPersistFile::Load`, a `IPersistStorage::Load`). Další povolit tisk dokumentů, zahrnutí aktivního dokumentu (pomocí existující návrh OLE nejsou dodávané současně s OLE 2.0 původně) představuje základ standard tisk rozhraní, `IPrint`, všeobecně dostupná prostřednictvím libovolného objektu, který lze načíst trvalý stav typu dokumentu. Každé zobrazení aktivního dokumentu může volitelně podporovat `IPrint` rozhraní k poskytování těchto funkcí.
+
+`IPrint` Rozhraní je definovaná následujícím způsobem:
+
+```
+interface IPrint : IUnknown
+    {
+    HRESULT SetInitialPageNum([in] LONG nFirstPage);
+    HRESULT GetPageInfo(
+        [out] LONG *pnFirstPage,
+        [out] LONG *pcPages);
+    HRESULT Print(
+        [in] DWORD grfFlags,
+        [in,out] DVTARGETDEVICE **pptd,
+        [in,out] PAGESET ** ppPageSet,
+        [in,out] STGMEDIUM **ppstgmOptions,
+        [in] IContinueCallback* pCallback,
+        [in] LONG nFirstPage,
+        [out] LONG *pcPagesPrinted,
+        [out] LONG *pnPageLast);
+    };
+```
+
+Klienti a kontejnerů jednoduše použít `IPrint::Print` dáte pokyn, aby dokument, aby se vytiskl po načtení dokumentu zadání tisk příznaky ovládacích prvků, cílové zařízení, stránky, které vytisknout a další možnosti. Klienta můžete také řídit pokračování tisk přes rozhraní `IContinueCallback` (viz níže).
+
+Kromě toho `IPrint::SetInitialPageNum` podporuje schopnost vytisknou řadu dokumenty, jak ho číslování stránky bez problémů, samozřejmě výhoda pro kontejnery pro aktivní dokument jako modul vazby sady Office. `IPrint::GetPageInfo` Umožňuje zobrazit informace o stránkování jednoduché tím, že volající načíst počáteční stránky číslo dřív Bezproblémová `SetInitialPageNum` (nebo dokumentu interní výchozí počáteční číslo stránky) a počet stránek v dokumentu.
+
+Objekty, které podporují `IPrint` jsou označeny "Printable" klíč uložený v objektu CLSID v registru:
+
+HKEY_CLASSES_ROOT\CLSID\\{...} \Printable
+
+`IPrint` Obvykle se implementuje na stejný objekt, který podporuje buď `IPersistFile` nebo `IPersistStorage`. Volající mějte na paměti umožňuje trvalý stav některé třídy vyhledáváním v registru pro klíč "Printable" Tisk prostřednictvím kódu programu. V současné době "Tisknutelný" označuje podporu pro alespoň `IPrint`; jiná rozhraní lze definovat v budoucnu které pak budou k dispozici prostřednictvím `QueryInterface` kde `IPrint` jednoduše představuje základní úroveň podpory.
+
+Během tiskové postup můžete klienta nebo kontejner, který inicioval tisk řídit, jestli by měl tisku pokračovat. Kontejner může například podporovat příkaz "Stop Print", který by měla ukončit tisková úloha co nejdříve. Na podporu této možnosti, můžete klienta tisknutelný objekt implementovat objekt jímka malé oznámení pomocí rozhraní `IContinueCallback`:
+
+```
+interface IContinueCallback : IUnknown
+    {
+    HRESULT FContinue(void);
+    HRESULT FContinuePrinting(
+        [in] LONG cPagesPrinted,
+        [in] LONG nCurrentPage,
+        [in] LPOLESTR pszPrintStatus);
+    };
+```
+
+Toto rozhraní je navržena jako užitečné jako funkce zpětného volání obecných pokračování, které u něho různých postupů pokračování v rozhraní API systému Win32 (třeba `AbortProc` pro tisk a `EnumMetafileProc` pro výčet metafile). Proto tento návrh rozhraní je užitečné v celé řadě časově náročné procesy.
+
+V nejvíce obecný případech `IContinueCallback::FContinue` funkce pravidelně volá všechny časově náročný proces. Objekt jímky vrátí S_OK operace tak bude pokračovat a S_FALSE zastavit proces co nejdříve.
+
+`FContinue`, ale není použit v rámci `IPrint::Print`; místo toho používá tisk `IContinueCallback::FContinuePrint`. Libovolný objekt pro tisk pravidelně by měly volat `FContinuePrinting` předávání počet stránek, které mají tisk přes, číslo stránky, tisku a další řetězec popisující stav tisku na klienta můžete zobrazit uživateli (například "stránka 5 19").
+
+## <a name="see-also"></a>Viz také
+
+[Kontejnery pro aktivní dokument](../mfc/active-document-containers.md)
 

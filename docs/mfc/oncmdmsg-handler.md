@@ -1,5 +1,5 @@
 ---
-title: Oncmdmsg – obslužná rutina | Microsoft Docs
+title: Oncmdmsg – obslužná rutina | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,20 +20,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0657b05619a966ed171630d00adcd9303af7e18b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6691e4935d46b32bc8f433823888bb7f53a36890
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347026"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398830"
 ---
 # <a name="oncmdmsg-handler"></a>OnCmdMsg – obslužná rutina
-K dosažení směrování příkazů, každý příkaz cíl volá `OnCmdMsg` – členská funkce další příkaz cíle v pořadí. Příkaz cílem použití `OnCmdMsg` a určit, zda jejich zpracování příkazu směrovat na jiný cíl příkazu, pokud jejich nelze ho zpracovat.  
-  
- Každý příkaz cílové třídy mohou přepsat `OnCmdMsg` – členská funkce. Přepsání umožní každý – třída trasy příkazy na konkrétní Další cíl. Okno rámce, například vždy směruje příkazy na jeho aktuální podřízeného okna nebo zobrazení, jak je znázorněno v tabulce [standardních příkazů trasy](../mfc/command-routing.md).  
-  
- Výchozí hodnota `CCmdTarget` implementace `OnCmdMsg` používá k hledání funkce obslužné rutiny pro každou zprávu příkaz obdrží mapy zpráv příkaz cílové třídy – stejným způsobem, prohledají se standardní zprávy. Pokud se najde shoda, volá obslužnou rutinu. Vyhledávání map zpráv je vysvětleno v [jak rámci hledání mapy zpráv](../mfc/how-the-framework-searches-message-maps.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Jakým způsobem volá framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md)
+
+K provedení směrování příkazů, každý cíl příkazu volá `OnCmdMsg` členská funkce další příkaz cíle v sekvenci. Příkaz, zaměřuje použití `OnCmdMsg` a určit, jestli se dokáže zpracovat příkaz směrovat na jiný cíl příkazu, pokud se ji nejde zpracovat.
+
+Každý cíl příkazu třída může přepsat `OnCmdMsg` členskou funkci. Přepsání nechte každé třídy směrování příkazů konkrétní cílový Další. Okno rámce, například vždy směrovat příkazy na její aktuální podřízené okno nebo zobrazení, jak je znázorněno v tabulce [trasy standardní příkaz](../mfc/command-routing.md).
+
+Výchozí hodnota `CCmdTarget` provádění `OnCmdMsg` mapu zpráv příkaz cílové třídy používá k hledání pro obslužnou rutinu pro každý příkaz přijímá – stejným způsobem, že budou vyhledány standardní zprávy. Pokud se najde shodu, zavolá obslužnou rutinu. Vyhledávání map zpráv je podrobně [jak rámci vyhledávání mapy zpráv](../mfc/how-the-framework-searches-message-maps.md).
+
+## <a name="see-also"></a>Viz také
+
+[Jakým způsobem volá framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md)
 

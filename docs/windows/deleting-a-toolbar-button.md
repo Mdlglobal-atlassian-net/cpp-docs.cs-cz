@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce8b3bd682c7d4a0b019bf339e1fb543553bfc03
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ad1e420aa1ffe33cffb9649fdfbaca398540b2a3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318051"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397532"
 ---
 # <a name="deleting-a-toolbar-button-c"></a>Odstranění tlačítka panelu nástrojů (C++)
 
@@ -37,5 +37,5 @@ Knihovny MFC nebo ATL
 
 ## <a name="see-also"></a>Viz také
 
-[Vytváření, přesunutí a úprava tlačítek panelu nástrojů](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[Vytváření, přesunutí a úprava tlačítek panelu nástrojů](../windows/creating-moving-and-editing-toolbar-buttons.md)<br/>
 [Editor panelu nástrojů](../windows/toolbar-editor.md)

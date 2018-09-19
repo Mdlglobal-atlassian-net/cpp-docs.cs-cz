@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c13635f4b73ee34de11b8c18b0cdd9943b261a29
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6123f87abb9922a9736ac56f64d28e78887a0fdd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591182"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403568"
 ---
 # <a name="hstringreferencehstringreference-constructor"></a>HStringReference::HStringReference – konstruktor
 
@@ -41,16 +41,16 @@ HStringReference(HStringReference&& other) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*sizeDest*  
+*sizeDest*<br/>
 Parametr šablony, které určuje velikost cílové **HStringReference** vyrovnávací paměti.
 
-*str*  
+*str*<br/>
 Odkaz na řetězec širokých znaků.
 
-*Délka*  
+*Délka*<br/>
 Maximální délka *str* parametr vyrovnávací paměti pro použití v této operaci. Pokud *len* parametr není zadán, celý *str* parametr se používá. Pokud *len* je větší než *sizeDest*, *len* je nastavena na *sizeDest*-1.
 
-*Ostatní*  
+*Ostatní*<br/>
 Jiné **HStringReference** objektu.
 
 ## <a name="remarks"></a>Poznámky

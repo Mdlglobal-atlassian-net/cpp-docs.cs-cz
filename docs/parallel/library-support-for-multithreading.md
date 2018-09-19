@@ -15,18 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b433befdec72b000bc83d2087bc5eb15e2d00496
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: c0209688bcb8176963f28949b7faf90afb182ccd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131916"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398487"
 ---
 # <a name="library-support-for-multithreading"></a>Podpora knihovny pro multithreading
-Všechny verze CRT teď podporují více vláken s výjimkou nezamykací verze některých funkcí. Zobrazit [výkon vícevláknových knihoven](../c-runtime-library/multithreaded-libraries-performance.md) Další informace.  
-  
-Zobrazit [funkce knihovny CRT](../c-runtime-library/crt-library-features.md) pro další informace o verzích CRT.  
-  
-## <a name="see-also"></a>Viz také  
+
+Všechny verze CRT teď podporují více vláken s výjimkou nezamykací verze některých funkcí. Zobrazit [výkon vícevláknových knihoven](../c-runtime-library/multithreaded-libraries-performance.md) Další informace.
+
+Zobrazit [funkce knihovny CRT](../c-runtime-library/crt-library-features.md) pro další informace o verzích CRT.
+
+## <a name="see-also"></a>Viz také
 
 [Multithreading s použitím jazyka C a prostředí Win32](multithreading-with-c-and-win32.md)

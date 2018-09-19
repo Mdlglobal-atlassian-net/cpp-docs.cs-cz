@@ -1,5 +1,5 @@
 ---
-title: SYSTEMTIME – Struktura1 | Microsoft Docs
+title: SYSTEMTIME – Struktura1 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,63 +16,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97a0042adaa223fc5898c057f191f7b750fa230f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 79c7cec92550ad51b53242b44b3aee334be21f3f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372389"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397205"
 ---
 # <a name="systemtime-structure1"></a>SYSTEMTIME – Struktura1
-`SYSTEMTIME` Struktura představuje datum a čas pomocí jednotlivé členy pro měsíc, den, roku, den v týdnu, hodinu, minutu, sekundu a milisekundu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-typedef struct _SYSTEMTIME {  
-    WORD wYear;  
-    WORD wMonth;  
-    WORD wDayOfWeek;  
-    WORD wDay;  
-    WORD wHour;  
-    WORD wMinute;  
-    WORD wSecond;  
-    WORD wMilliseconds;  
-} SYSTEMTIME;  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *wYear*  
- Do aktuálního roku.  
-  
- *Přechodu*  
- V aktuálním měsíci; Leden je 1.  
-  
- *wDayOfWeek*  
- Aktuální den v týdnu; Neděle je 0, pondělí je 1 a tak dále.  
-  
- *wDay*  
- Aktuální den v měsíci.  
-  
- *wHour*  
- Do aktuální hodiny.  
-  
- *wMinute*  
- Do aktuální minuty.  
-  
- *wSecond*  
- Do aktuální sekundy.  
-  
- *wMilliseconds*  
- Aktuální milisekundu.  
-  
-## <a name="example"></a>Příklad  
- [!code-cpp[NVC_MFC_Utilities#39](../../mfc/codesnippet/cpp/systemtime-structure1_1.cpp)]  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** winbase.h  
-  
-## <a name="see-also"></a>Viz také  
- [Struktury, styly, zpětná volání a mapy zpráv](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CTime::CTime](../../atl-mfc-shared/reference/ctime-class.md#ctime)
+
+`SYSTEMTIME` Struktura představuje datum a čas pomocí jednotlivých členů pro měsíc, den, rok, den v týdnu, hodinu, minutu, sekundu a milisekundu.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+typedef struct _SYSTEMTIME {
+    WORD wYear;
+    WORD wMonth;
+    WORD wDayOfWeek;
+    WORD wDay;
+    WORD wHour;
+    WORD wMinute;
+    WORD wSecond;
+    WORD wMilliseconds;
+} SYSTEMTIME;
+```
+
+#### <a name="parameters"></a>Parametry
+
+*wYear*<br/>
+Do aktuálního roku.
+
+*Přechodu*<br/>
+Aktuální měsíc. 1 je leden.
+
+*wDayOfWeek*<br/>
+Aktuální den v týdnu; 0 je neděle, pondělí je 1 a tak dále.
+
+*wDay*<br/>
+Aktuální den v měsíci.
+
+*wHour*<br/>
+Aktuální hodinu.
+
+*wMinute*<br/>
+Do aktuální minuty.
+
+*wSecond*<br/>
+Aktuální sekunda.
+
+*wMilliseconds*<br/>
+Aktuální milisekunda.
+
+## <a name="example"></a>Příklad
+
+[!code-cpp[NVC_MFC_Utilities#39](../../mfc/codesnippet/cpp/systemtime-structure1_1.cpp)]
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** winbase.h
+
+## <a name="see-also"></a>Viz také
+
+[Struktury, styly, zpětná volání a mapy zpráv](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[CTime::CTime](../../atl-mfc-shared/reference/ctime-class.md#ctime)
 

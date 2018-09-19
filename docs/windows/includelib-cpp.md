@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 551ae176504e3bbbca034ca91894ef793ea268fd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5f15fcefe1a18156e4cbe8180138d7b6c1d944e2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584339"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398583"
 ---
 # <a name="includelib-c"></a>includelib (C++)
 
@@ -38,7 +38,7 @@ Způsobí, že soubor IDL nebo .h mají být zahrnuty v souboru generovaného ID
 
 ### <a name="parameters"></a>Parametry
 
-*name.IDL*  
+*name.IDL*<br/>
 Název souboru, který chcete zahrnout jako součást souboru generovaného IDL.
 
 ## <a name="remarks"></a>Poznámky
@@ -71,9 +71,9 @@ Další informace najdete v tématu [kontexty atributů](../windows/attribute-co
 
 ## <a name="see-also"></a>Viz také
 
-[IDL – atributy](../windows/idl-attributes.md)  
-[Samostatné atributy](../windows/stand-alone-attributes.md)  
-[import](../windows/import.md)  
-[importidl](../windows/importidl.md)  
-[Zahrnout](../windows/include-cpp.md)  
+[IDL – atributy](../windows/idl-attributes.md)<br/>
+[Samostatné atributy](../windows/stand-alone-attributes.md)<br/>
+[import](../windows/import.md)<br/>
+[importidl](../windows/importidl.md)<br/>
+[Zahrnout](../windows/include-cpp.md)<br/>
 [importlib](../windows/importlib.md)  

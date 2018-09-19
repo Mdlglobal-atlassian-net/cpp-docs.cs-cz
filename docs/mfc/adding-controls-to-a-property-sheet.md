@@ -1,5 +1,5 @@
 ---
-title: Přidání ovládacích prvků do seznamu vlastností | Microsoft Docs
+title: Přidání ovládacích prvků do seznamu vlastností | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8437fcdaa04ce7dd2b0a214e4bd3a63ca421d014
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0783571ed77d3d8dfaca69edf06330e62d8e98d0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341088"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398494"
 ---
 # <a name="adding-controls-to-a-property-sheet"></a>Přidání ovládacích prvků do seznamu vlastností
-Ve výchozím nastavení seznam vlastností přiděluje oblast okna pro stránky vlastností, pořadové číslo a tlačítka OK, zrušit a použít. (Nemodálního seznamu vlastností nemá OK, zrušte a použít tlačítka.) Další ovládací prvky můžete přidat do seznamu vlastností. Například lze přidat okno náhledu napravo od oblasti vlastnost stránky se uživateli zobrazí, co bude aktuální nastavení vypadat Pokud použijí pro externího objektu.  
-  
- Ovládací prvky můžete přidat do dialogového okna List vlastností v `OnCreate` obslužné rutiny. Další kontroly požadavků obvykle vyžaduje rozšíření velikost dialogového okna List vlastností. Po volání metody základní třídy **CPropertySheet::OnCreate**, volání [getwindowrect –](../mfc/reference/cwnd-class.md#getwindowrect) získat šířka a výška v okně List aktuálně přidělené vlastnosti, rozbalte obdélníku dimenzí a volání [MoveWindow](../mfc/reference/cwnd-class.md#movewindow) a změňte velikost okna List vlastností.  
-  
-## <a name="see-also"></a>Viz také  
- [Seznam vlastností](../mfc/property-sheets-mfc.md)   
- [CPropertyPage – třída](../mfc/reference/cpropertypage-class.md)   
- [CPropertySheet – třída](../mfc/reference/cpropertysheet-class.md)
+
+Ve výchozím nastavení seznam vlastností přiděluje oblasti okna stránky vlastností, pořadové číslo prvku a tlačítka OK, zrušit a použít. (Nemodálního seznamu vlastností se nemusí OK, zrušit a použijte tlačítka). Další ovládací prvky můžete přidat do seznamu vlastností. Můžete například přidat okno náhledu napravo od oblasti stránky vlastností se uživateli zobrazí, co aktuální nastavení může vypadat třeba pokud použité pro externí objekt.
+
+Můžete přidat ovládací prvky do dialogového okna vlastnosti listu v `OnCreate` obslužné rutiny. Narážely další ovládací prvky, obvykle vyžaduje rozšíření dialogové okno seznam vlastností. Po volání metody základní třídy **CPropertySheet::OnCreate**, volání [getwindowrect –](../mfc/reference/cwnd-class.md#getwindowrect) šířku a výšku okna List vlastností. aktuálně přidělené získáte rozbalte obdélníku dimenze a volání [MoveWindow](../mfc/reference/cwnd-class.md#movewindow) ke změně velikosti okna List vlastností.
+
+## <a name="see-also"></a>Viz také
+
+[Seznamy vlastností](../mfc/property-sheets-mfc.md)<br/>
+[CPropertyPage – třída](../mfc/reference/cpropertypage-class.md)<br/>
+[CPropertySheet – třída](../mfc/reference/cpropertysheet-class.md)
