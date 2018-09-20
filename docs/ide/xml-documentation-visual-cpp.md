@@ -1,5 +1,5 @@
 ---
-title: Dokumentace XML (Visual C++) | Microsoft Docs
+title: XML dokumentace (Visual C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d763a62edc2f21d8a7669e409c164906c440f1d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: de3df01d9e9bf5d63b4445956e4656687d0f4f2c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705631"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412285"
 ---
 # <a name="xml-documentation-visual-c"></a>XML dokumentace (Visual C++)
-V jazyce Visual C++ můžete přidat komentář ke zdrojovému kódu, který bude zpracován do souboru .xml. Tento soubor pak může být vstup proces, který vytvoří dokument pro třídy v kódu.  
-  
- V souboru kódu Visual C++ dokumentační komentáře XML musí být umístěn přímo před definici metody nebo typu. Komentáře můžete použít k naplnění dat tip IntelliSense QuickInfo v následujících scénářích:  
-  
-1.  Pokud je kód kompilována jako součást prostředí Windows Runtime s přidružený soubor .winmd  
-  
-2.  Pokud zdrojový kód je součástí aktuálního projektu  
-  
-3.  v knihovně, jehož typ deklarace a implementace jsou umístěny ve stejném souboru záhlaví  
-  
+
+V jazyce Visual C++ můžete přidat komentáře do zdrojového kódu, který se zpracuje do souboru .xml. Tento soubor pak může být vstup do procesu, který vytvoří dokumentaci pro třídy v kódu.
+
+V souboru kódu jazyka Visual C++ dokumentační komentáře XML musí být umístěné přímo před definici metody nebo typu. Komentáře lze použít k naplnění popisu dat rychlé informace technologie IntelliSense v následujících scénářích:
+
+1. Pokud kód je zkompilován jako součást prostředí Windows Runtime s související soubor winmd
+
+1. Pokud je zdrojový kód součástí aktuálního projektu
+
+1. v knihovně, jehož typ deklarace a implementaci jsou umístěné ve stejném souboru záhlaví
+
 > [!NOTE]
->  V aktuální verzi nebudou zpracovány komentáře kódu na šablony nebo nic obsahující typ šablony (například funkce trvá parametr jako šablonu). Přidávání takové komentářů způsobí nedefinované chování.  
-  
- Podrobné informace o vytváření souboru .xml s dokumentační komentáře naleznete v následujících tématech.  
-  
-|Informace o|Další informace naleznete v tématu|  
-|---------------------------|---------|  
-|Možnosti kompilátoru používat|[/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)|  
-|Značky, které můžete použít k poskytování běžně používané funkce v dokumentaci k|[Doporučené značky pro komentáře dokumentace](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)|  
-|ID řetězce, které vytváří kompilátor k identifikaci konstrukce v kódu|[Zpracování souboru XML](../ide/dot-xml-file-processing.md)|  
-|Postupy pro vymezení značky dokumentace|[Oddělovače pro dokumentační značky ve Visual C++](../ide/delimiters-for-visual-cpp-documentation-tags.md)|  
-|Generování souboru .xml z jednoho nebo více soubory.|[Referenční dokumentace nástroje XDCMake](../ide/xdcmake-reference.md)|  
-|Odkazy na informace o XML, protože má vztah k oblastech funkce sady Visual Studio|[XML v sadě Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)|  
-  
- Pokud potřebujete uvést speciální znaky XML do text komentáře dokumentace, musíte použít entity XML nebo oddílu CDATA.  
-  
-## <a name="see-also"></a>Viz také  
- [Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+>  V aktuální verzi nebudou zpracovány komentářích ke kódu v šablonách nebo nic obsahující typ šablony (například funkci s parametrem jako šablonu). Přidání komentářů do takové způsobí nedefinované chování.
+
+Podrobné informace o vytváření souboru XML s komentáře k dokumentaci naleznete v následujících tématech.
+
+|Informace o|Další informace naleznete v tématu|
+|---------------------------|---------|
+|Použití možnosti kompilátoru|[/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)|
+|Značky, které můžete použít k poskytování běžně používané funkce v dokumentaci|[Doporučené značky pro komentáře dokumentace](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)|
+|ID řetězce, které kompilátor vytvoří k identifikaci jaké konstrukty jsou ve vašem kódu|[Zpracování souboru XML](../ide/dot-xml-file-processing.md)|
+|Jak pro vymezení značky dokumentace|[Oddělovače pro dokumentační značky ve Visual C++](../ide/delimiters-for-visual-cpp-documentation-tags.md)|
+|Generuje se soubor XML z jednoho nebo více souborů .xdc.|[Referenční dokumentace nástroje XDCMake](../ide/xdcmake-reference.md)|
+|Odkazy na informace o XML, protože má vztah k oblasti funkcí sady Visual Studio|[XML v sadě Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)|
+
+Pokud potřebujete změnit speciální znaky XML na text komentáře dokumentace, musíte použít entity XML nebo oddíl CDATA.
+
+## <a name="see-also"></a>Viz také
+
+[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)

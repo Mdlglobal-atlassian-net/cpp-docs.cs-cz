@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c46f8391f39d65c84860f8c0ca62f69288d834c8
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 184e011e82f2bb367a9c573176bbea1f7ccc5f47
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44312633"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418018"
 ---
 # <a name="editing-graphical-resources-c-image-editor-for-icons"></a>Úprava grafických prostředků (C++ Editor obrázků pro ikony)
 
@@ -76,5 +76,5 @@ Informace o přidávání prostředků do spravovaných projektů, najdete v té
 
 ## <a name="see-also"></a>Viz také
 
-[Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Editor obrázků pro ikony](../windows/image-editor-for-icons.md)  

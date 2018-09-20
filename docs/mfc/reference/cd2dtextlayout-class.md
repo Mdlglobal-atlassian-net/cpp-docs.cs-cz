@@ -1,5 +1,5 @@
 ---
-title: Třída CD2DTextLayout | Microsoft Docs
+title: Cd2dtextlayout – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,241 +38,272 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: facfa4d9f98100666f267920cbd18c24ae516e72
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: a699744955088ad49c0e701166cf368695354fac
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951607"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402197"
 ---
-# <a name="cd2dtextlayout-class"></a>CD2DTextLayout – třída
-Obálka pro IDWriteTextLayout.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CD2DTextLayout : public CD2DResource;  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CD2DTextLayout::CD2DTextLayout](#cd2dtextlayout)|Vytvoří objekt CD2DTextLayout.|  
-|[CD2DTextLayout:: ~ CD2DTextLayout](#cd2dtextlayout__~cd2dtextlayout)|Destruktor. Voláno, když je zničen objektu D2D text rozložení.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CD2DTextLayout::Create](#create)|Vytvoří CD2DTextLayout. (Přepisuje [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
-|[CD2DTextLayout::Destroy](#destroy)|Zničí CD2DTextLayout objektu. (Přepisuje [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
-|[CD2DTextLayout::Get](#get)|Vrátí IDWriteTextLayout rozhraní|  
-|[CD2DTextLayout::GetFontFamilyName](#getfontfamilyname)|Zkopíruje název rodiny písem textu na zadané pozici.|  
-|[CD2DTextLayout::GetLocaleName](#getlocalename)|Získá název národního prostředí textu na zadané pozici.|  
-|[CD2DTextLayout::IsValid](#isvalid)|Ověří platnost prostředku (přepíše [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
-|[CD2DTextLayout::ReCreate](#recreate)|Znovu vytvoří CD2DTextLayout. (Přepisuje [CD2DResource::ReCreate](../../mfc/reference/cd2dresource-class.md#recreate).)|  
-|[CD2DTextLayout::SetFontFamilyName](#setfontfamilyname)|Nastaví název rodiny ukončené hodnotou null písmo pro text v rozsahu zadaný text|  
-|[CD2DTextLayout::SetLocaleName](#setlocalename)|Nastaví název národního prostředí pro text v rozsahu zadaný text.|  
-  
-### <a name="public-operators"></a>Veřejné operátory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CD2DTextLayout::Operator IDWriteTextLayout *](#operator_idwritetextlayout_star)|Vrátí IDWriteTextLayout rozhraní|  
-  
-### <a name="protected-data-members"></a>Chráněné datové členy  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CD2DTextLayout::m_pTextLayout](#m_ptextlayout)|Ukazatel IDWriteTextLayout.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
-  
- [CD2DTextLayout](../../mfc/reference/cd2dtextlayout-class.md)  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxrendertarget.h  
-  
-##  <a name="_dtorcd2dtextlayout"></a>  CD2DTextLayout:: ~ CD2DTextLayout  
- Destruktor. Voláno, když je zničen objektu D2D text rozložení.  
-  
-```  
+# <a name="cd2dtextlayout-class"></a>Cd2dtextlayout – třída
+
+Obálka pro IDWriteTextLayout.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CD2DTextLayout : public CD2DResource;
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[CD2DTextLayout::CD2DTextLayout](#cd2dtextlayout)|Vytvoří objekt cd2dtextlayout –.|
+|[Cd2dtextlayout –:: ~ cd2dtextlayout –](#cd2dtextlayout__~cd2dtextlayout)|Destruktor. Volá se, když se likviduje rozložení objektu D2D text.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CD2DTextLayout::Create](#create)|Vytvoří cd2dtextlayout –. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DTextLayout::Destroy](#destroy)|Odstraní objekt cd2dtextlayout –. (Přepíše [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
+|[CD2DTextLayout::Get](#get)|Vrátí IDWriteTextLayout rozhraní|
+|[CD2DTextLayout::GetFontFamilyName](#getfontfamilyname)|Zkopíruje název rodiny písem textu na zadané pozici.|
+|[CD2DTextLayout::GetLocaleName](#getlocalename)|Získá název národního prostředí text na konkrétní pozici.|
+|[CD2DTextLayout::IsValid](#isvalid)|Zkontroluje platnost prostředku (přepíše [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
+|[CD2DTextLayout::ReCreate](#recreate)|Znovu vytvoří cd2dtextlayout –. (Přepíše [CD2DResource::ReCreate](../../mfc/reference/cd2dresource-class.md#recreate).)|
+|[CD2DTextLayout::SetFontFamilyName](#setfontfamilyname)|Nastaví název typu zakončený hodnotou null písma pro text rozsahu zadaným textem|
+|[CD2DTextLayout::SetLocaleName](#setlocalename)|Nastaví název národního prostředí pro text rozsahu zadaným textem|
+
+### <a name="public-operators"></a>Veřejné operátory
+
+|Název|Popis|
+|----------|-----------------|
+|[CD2DTextLayout::Operator IDWriteTextLayout *](#operator_idwritetextlayout_star)|Vrátí IDWriteTextLayout rozhraní|
+
+### <a name="protected-data-members"></a>Chránění členové dat
+
+|Název|Popis|
+|----------|-----------------|
+|[CD2DTextLayout::m_pTextLayout](#m_ptextlayout)|Ukazatel IDWriteTextLayout.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[Třídy CObject](../../mfc/reference/cobject-class.md)
+
+[Cd2dresource –](../../mfc/reference/cd2dresource-class.md)
+
+[Cd2dtextlayout –](../../mfc/reference/cd2dtextlayout-class.md)
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxrendertarget.h
+
+##  <a name="_dtorcd2dtextlayout"></a>  Cd2dtextlayout –:: ~ cd2dtextlayout –
+
+Destruktor. Volá se, když se likviduje rozložení objektu D2D text.
+
+```
 virtual ~CD2DTextLayout();
-```  
-  
-##  <a name="cd2dtextlayout"></a>  CD2DTextLayout::CD2DTextLayout  
- Vytvoří objekt CD2DTextLayout.  
-  
-```  
+```
+
+##  <a name="cd2dtextlayout"></a>  CD2DTextLayout::CD2DTextLayout
+
+Vytvoří objekt cd2dtextlayout –.
+
+```
 CD2DTextLayout(
-    CRenderTarget* pParentTarget,  
-    const CString& strText,  
-    CD2DTextFormat& textFormat,  
-    const CD2DSizeF& sizeMax,  
+    CRenderTarget* pParentTarget,
+    const CString& strText,
+    CD2DTextFormat& textFormat,
+    const CD2DSizeF& sizeMax,
     BOOL bAutoDestroy = TRUE);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pParentTarget*  
- Ukazatel na cíl vykreslení.  
-  
- *strText*  
- CString objekt, který obsahuje řetězec, který má-li vytvořit nový objekt CD2DTextLayout z.  
-  
- *textFormat*  
- CString objekt, který obsahuje formát, který se vztahuje na řetězec.  
-  
- *sizeMax*  
- Velikost pole rozložení.  
-  
- *bAutoDestroy*  
- Označuje, že bude objekt zničí vlastník (pParentTarget).  
-  
-##  <a name="create"></a>  CD2DTextLayout::Create  
- Vytvoří CD2DTextLayout.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pParentTarget*<br/>
+Ukazatel na cíl vykreslování.
+
+*strText*<br/>
+CString – objekt, který obsahuje řetězec, který má-li vytvořit nový objekt cd2dtextlayout – z.
+
+*textFormat*<br/>
+CString – objekt, který obsahuje formát, který se použije na řetězec.
+
+*sizeMax*<br/>
+Velikost pole rozložení.
+
+*bAutoDestroy*<br/>
+Označuje, že bude objekt zničen. vlastník (pParentTarget).
+
+##  <a name="create"></a>  CD2DTextLayout::Create
+
+Vytvoří cd2dtextlayout –.
+
+```
 virtual HRESULT Create(CRenderTarget* */);
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Pokud metoda bude úspěšná, vrátí S_OK. Funkce HRESULT chybový kód.  
-  
-##  <a name="destroy"></a>  CD2DTextLayout::Destroy  
- Zničí CD2DTextLayout objektu.  
-  
-```  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pokud metoda uspěje, vrátí hodnotu S_OK. V opačném případě vrátí kód chyby HRESULT.
+
+##  <a name="destroy"></a>  CD2DTextLayout::Destroy
+
+Odstraní objekt cd2dtextlayout –.
+
+```
 virtual void Destroy();
-```  
-  
-##  <a name="get"></a>  CD2DTextLayout::Get  
- Vrátí IDWriteTextLayout rozhraní  
-  
-```  
+```
+
+##  <a name="get"></a>  CD2DTextLayout::Get
+
+Vrátí IDWriteTextLayout rozhraní
+
+```
 IDWriteTextLayout* Get();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na rozhraní IDWriteTextLayout nebo hodnota NULL, pokud objekt dosud není inicializován.  
-  
-##  <a name="getfontfamilyname"></a>  CD2DTextLayout::GetFontFamilyName  
- Zkopíruje název rodiny písem textu na zadané pozici.  
-  
-```  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Ukazatel na rozhraní IDWriteTextLayout nebo hodnota NULL, pokud objekt ještě není inicializován.
+
+##  <a name="getfontfamilyname"></a>  CD2DTextLayout::GetFontFamilyName
+
+Zkopíruje název rodiny písem textu na zadané pozici.
+
+```
 CString GetFontFamilyName(
-    UINT32 currentPosition,  
-    DWRITE_TEXT_RANGE* textRange = NULL) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *currentPosition*  
- Pozice text, který chcete prozkoumat.  
-  
- *rozsahu textRange*  
- Rozsah text, který má stejné formátování jako text na pozici určeného currentPosition. To znamená, že má spustit přesný formátování jako pozice zadána, včetně, ale bez omezení na název rodiny písem.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- CString objekt, který obsahuje aktuální název rodiny písem.  
-  
-##  <a name="getlocalename"></a>  CD2DTextLayout::GetLocaleName  
- Získá název národního prostředí textu na zadané pozici.  
-  
-```  
+    UINT32 currentPosition,
+    DWRITE_TEXT_RANGE* textRange = NULL) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*currentPosition*<br/>
+Umístění textu k prozkoumání.
+
+*TextRange*<br/>
+Rozsah textu, který má stejný formát jako text na pozici určené currentPosition. To znamená, že nemá přesné formátování jako pozice zadána, včetně, ale nikoli výhradně název rodiny písem.
+
+### <a name="return-value"></a>Návratová hodnota
+
+CString – objekt, který obsahuje aktuální název rodiny písem.
+
+##  <a name="getlocalename"></a>  CD2DTextLayout::GetLocaleName
+
+Získá název národního prostředí text na konkrétní pozici.
+
+```
 CString GetLocaleName(
-    UINT32 currentPosition,  
-    DWRITE_TEXT_RANGE* textRange = NULL) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *currentPosition*  
- Pozice text, který chcete zkontrolovat.  
-  
- *rozsahu textRange*  
- Rozsah text, který má stejné formátování jako text na pozici určeného currentPosition. To znamená, že má spustit přesný formátování jako pozice zadána, včetně bez omezení na název národního prostředí.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- CString objekt, který obsahuje název aktuální národní prostředí.  
-  
-##  <a name="isvalid"></a>  CD2DTextLayout::IsValid  
- Kontrola platnosti prostředků  
-  
-```  
-virtual BOOL IsValid() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud prostředek je platná. jinak hodnota FALSE.  
-  
-##  <a name="m_ptextlayout"></a>  CD2DTextLayout::m_pTextLayout  
- Ukazatel IDWriteTextLayout.  
-  
-```  
-IDWriteTextLayout* m_pTextLayout;  
-```  
-  
-##  <a name="operator_idwritetextlayout_star"></a>  CD2DTextLayout::Operator IDWriteTextLayout *  
- Vrátí IDWriteTextLayout rozhraní  
-  
-```  
+    UINT32 currentPosition,
+    DWRITE_TEXT_RANGE* textRange = NULL) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*currentPosition*<br/>
+Umístění textu ke kontrole.
+
+*TextRange*<br/>
+Rozsah textu, který má stejný formát jako text na pozici určené currentPosition. To znamená, že nemá přesné formátování jako pozice zadána, včetně, ale nikoli výhradně na název národního prostředí.
+
+### <a name="return-value"></a>Návratová hodnota
+
+CString – objekt, který obsahuje název aktuální národní prostředí.
+
+##  <a name="isvalid"></a>  CD2DTextLayout::IsValid
+
+Kontrola platnosti prostředků
+
+```
+virtual BOOL IsValid() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Hodnota TRUE, pokud prostředek je platná. v opačném případě FALSE.
+
+##  <a name="m_ptextlayout"></a>  CD2DTextLayout::m_pTextLayout
+
+Ukazatel IDWriteTextLayout.
+
+```
+IDWriteTextLayout* m_pTextLayout;
+```
+
+##  <a name="operator_idwritetextlayout_star"></a>  CD2DTextLayout::Operator IDWriteTextLayout *
+
+Vrátí IDWriteTextLayout rozhraní
+
+```
 operator IDWriteTextLayout*();
-```   
-  
-### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na rozhraní IDWriteTextLayout nebo hodnota NULL, pokud objekt dosud není inicializován.  
-  
-##  <a name="recreate"></a>  CD2DTextLayout::ReCreate  
- Znovu vytvoří CD2DTextLayout.  
-  
-```  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Ukazatel na rozhraní IDWriteTextLayout nebo hodnota NULL, pokud objekt ještě není inicializován.
+
+##  <a name="recreate"></a>  CD2DTextLayout::ReCreate
+
+Znovu vytvoří cd2dtextlayout –.
+
+```
 virtual HRESULT ReCreate(CRenderTarget* */);
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Pokud metoda bude úspěšná, vrátí S_OK. Funkce HRESULT chybový kód.  
-  
-##  <a name="setfontfamilyname"></a>  CD2DTextLayout::SetFontFamilyName  
- Nastaví název rodiny ukončené hodnotou null písmo pro text v rozsahu zadaný text  
-  
-```  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pokud metoda uspěje, vrátí hodnotu S_OK. V opačném případě vrátí kód chyby HRESULT.
+
+##  <a name="setfontfamilyname"></a>  CD2DTextLayout::SetFontFamilyName
+
+Nastaví název typu zakončený hodnotou null písma pro text rozsahu zadaným textem
+
+```
 BOOL SetFontFamilyName(
-    LPCWSTR pwzFontFamilyName,  
+    LPCWSTR pwzFontFamilyName,
     DWRITE_TEXT_RANGE textRange);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pwzFontFamilyName*  
- Název rodiny písem, která se vztahují na celou textového řetězce v rozsahu určeném rozsahu textRange  
-  
- *rozsahu textRange*  
- Rozsah text, pro kterou platí tato změna  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Pokud metoda bude úspěšná, vrátí hodnotu TRUE. Jinak vrátí hodnotu FALSE  
-  
-##  <a name="setlocalename"></a>  CD2DTextLayout::SetLocaleName  
- Nastaví název národního prostředí pro text v rozsahu zadaný text.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pwzFontFamilyName*<br/>
+Název rodiny písem, které platí pro celého textového řetězce v rozsahu určeném textRange
+
+*TextRange*<br/>
+Rozsah textu, do které tato změna se vztahuje
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pokud metoda uspěje, vrátí hodnotu TRUE. V opačném případě vrací FALSE
+
+##  <a name="setlocalename"></a>  CD2DTextLayout::SetLocaleName
+
+Nastaví název národního prostředí pro text rozsahu zadaným textem
+
+```
 BOOL SetLocaleName(
-    LPCWSTR pwzLocaleName,  
+    LPCWSTR pwzLocaleName,
     DWRITE_TEXT_RANGE textRange);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pwzLocaleName*  
- Název řetězce ukončené hodnotou null národní prostředí  
-  
- *rozsahu textRange*  
- Rozsah text, pro kterou platí tato změna  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Pokud metoda bude úspěšná, vrátí hodnotu TRUE. Jinak vrátí hodnotu FALSE  
-  
-## <a name="see-also"></a>Viz také  
- [Třídy](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*pwzLocaleName*<br/>
+Řetězec názvu národního prostředí zakončený hodnotou null
+
+*TextRange*<br/>
+Rozsah textu, do které tato změna se vztahuje
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pokud metoda uspěje, vrátí hodnotu TRUE. V opačném případě vrací FALSE
+
+## <a name="see-also"></a>Viz také
+
+[Třídy](../../mfc/reference/mfc-classes.md)

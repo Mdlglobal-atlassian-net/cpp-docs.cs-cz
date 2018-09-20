@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dbfcedd2bc17e21b94de46c63edd95bf58f576a7
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 836017dcec969db85a0725a49193d7b8e8a88875
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714444"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402847"
 ---
 # <a name="arrays-c-component-extensions"></a>Pole (přípony komponent C++)
 
@@ -65,16 +65,16 @@ První příklad syntaxe používá **ref nové** agregační – klíčové slo
 *Kvalifikátory*<br/>
 (Volitelné) Jeden nebo více těchto specifikátorů třídy úložiště: [proměnlivé](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statické](../cpp/static-members-cpp.md).
 
-*Typ pole*  
+*Typ pole*<br/>
 Typ proměnné pole. Platné typy jsou třídy Windows Runtime a základní typy, referenční třídy a struktury, hodnota třídy a struktury a nativními ukazateli (`type*`).
 
 *pořadí*<br/>
 (Volitelné) Počet rozměrů pole. Musí být 1.
 
-*identifikátor*  
+*identifikátor*<br/>
 Název proměnné pole.
 
-*typ inicializace*  
+*typ inicializace*<br/>
 Typ hodnoty, které inicializovat pole. Obvykle *typ pole* a *typ inicializace* jsou stejného typu. Však mohou být typy lišit, když existuje převod z *typ inicializace* k *typ pole*– například pokud *typ inicializace* je odvozen z *typ pole*.
 
 *Inicializace seznamu*<br/>
@@ -121,19 +121,19 @@ První příklad syntaxe používá **gcnew** – klíčové slovo pro přiděle
 *Kvalifikátory*<br/>
 (Volitelné) Jeden nebo více těchto specifikátorů třídy úložiště: [proměnlivé](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statické](../cpp/static-members-cpp.md).
 
-*Typ pole*  
+*Typ pole*<br/>
 Typ proměnné pole. Platné typy jsou třídy Windows Runtime a základní typy, referenční třídy a struktury, hodnota třídy a struktury, nativními ukazateli (`type*`) a nativní typy POD (obyčejná stará data).
 
 *pořadí*<br/>
 (Volitelné) Počet rozměrů pole. Výchozí hodnota je 1; maximální počet je 32. Každé dimenze pole je pole.
 
-*identifikátor*  
+*identifikátor*<br/>
 Název proměnné pole.
 
-*typ inicializace*  
+*typ inicializace*<br/>
 Typ hodnoty, které inicializovat pole. Obvykle *typ pole* a *typ inicializace* jsou stejného typu. Však mohou být typy lišit, když existuje převod z *typ inicializace* k *typ pole*– například pokud *typ inicializace* je odvozen z *typ pole*.
 
-*pořadí seznamu velikost*  
+*pořadí seznamu velikost*<br/>
 Čárkami oddělený seznam velikosti jednotlivých rozměrů pole. Případně pokud *inicializačního seznamu* parametr zadán, kompilátor může odvodit velikost každého rozměru a *řazení seznamu velikost* lze vynechat.
 
 *Inicializace seznamu*<br/>

@@ -1,5 +1,5 @@
 ---
-title: Interpretace vstupu uživatele prostřednictvím zobrazení | Microsoft Docs
+title: Interpretace vstupu uživatele prostřednictvím zobrazení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,36 +18,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f62d64ed9479f1d1003536f8c4944b53d04d696f
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 974324e296478f0ec36024d4427496d21255fbf7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931987"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421391"
 ---
 # <a name="interpreting-user-input-through-a-view"></a>Interpretace vstupu uživatele prostřednictvím zobrazení
-Jiné členské funkce zobrazení zpracovat a interpretovat všechny vstup uživatele. Obvykle nadefinujete obslužné rutiny zpráv členské funkce ve třídě zobrazení zpracování:  
-  
--   Windows [zprávy](../mfc/messages.md) generované akce myši a klávesnice.  
-  
--   [Příkazy](../mfc/user-interface-objects-and-command-ids.md) z nabídky, tlačítek panelu nástrojů a klávesy akcelerátoru.  
-  
- Tato obslužná rutina zpráv členské funkce interpretovat následující akce jako zadávání dat, výběr nebo úpravy, včetně přesun dat do a ze schránky:  
-  
--   Pohyb myši a kliknutí na nastavuje tažením a poklikáním  
-  
--   Stisknutí kláves  
-  
--   Příkazy nabídky  
-  
- Zprávy, které Windows zobrazení popisovačů závisí na potřebách vaší aplikace.  
-  
- [Zpracování a mapování témata zpráv](../mfc/message-handling-and-mapping.md) vysvětluje, jak přiřadit položek nabídky a jiné objekty uživatelského rozhraní pro příkazy a jak vytvořit vazbu mezi příkazy k funkcím obslužných rutin. [Zpracování a mapování témata zpráv](../mfc/message-handling-and-mapping.md) také vysvětluje, jak MFC směrování příkazů a odešle standardní zprávy Windows pro objekty, které obsahují obslužné rutiny pro ně.  
-  
- Například aplikace může být nutné implementovat přímé myši kreslení v zobrazení. Vzorovou Scribble ukazuje způsob zpracování zprávy WM_LBUTTONDOWN, WM_MOUSEMOVE a WM_LBUTTONUP v uvedeném pořadí chcete začít, pokračovat a ukončení kreslení úsek čáry. Na druhé straně může někdy musíte interpretovat kliknutí myši v zobrazení jako výběr. Vaše zobrazení `OnLButtonDown` obslužné rutiny funkce by určit, zda byl uživatel kreslení nebo výběr. Pokud vyberete, obslužná rutina by určit, zda byl kliknutím na možnost v rámci hranice některé objektu v zobrazení a pokud ano, změnit zobrazení zobrazíte objekt jako vybrané.  
-  
- Zobrazení může také zpracovat určité nabídky příkazy jako ty, v nabídce Upravit vyjmout, kopírovat, vložit nebo odstranit vybraná data použití schránky. Tato obslužná rutina by volat, některé člena schránky související funkce třídy `CWnd` k přenosu vybraných dat položky do nebo ze schránky.  
-  
-## <a name="see-also"></a>Viz také  
- [Použití zobrazení](../mfc/using-views.md)
+
+Další členské funkce zobrazení zpracování a interpretovat všechny uživatelský vstup. Obslužná rutina zprávy členské funkce se obvykle definují ve třídě zobrazení zpracování:
+
+- Windows [zprávy](../mfc/messages.md) generovaných událostmi myši a klávesnice.
+
+- [Příkazy](../mfc/user-interface-objects-and-command-ids.md) z nabídky, tlačítek panelu nástrojů a přístupové klávesy.
+
+Tyto členské funkce obslužná rutina zprávy interpretovat takto vstupu dat, výběr nebo úpravy, včetně přesun dat do a ze schránky:
+
+- Pohyb myši a klikne na tlačítko, přetáhne a poklikáním
+
+- Úhozy na klávesnici
+
+- Příkazy nabídky
+
+Zprávy, které Windows zobrazení popisovačů závisí na potřebách vaší aplikace.
+
+[Zpracování a mapování témata zpráv](../mfc/message-handling-and-mapping.md) vysvětluje, jak přiřadit položky nabídky a dalších objektů uživatelského rozhraní pro příkazy a o tom, k vytvoření vazby příkazu k funkcím obslužných rutin. [Zpracování a mapování témata zpráv](../mfc/message-handling-and-mapping.md) také vysvětluje, jak MFC směruje příkazy a odešle standardní zprávy Windows na objekty, které obsahují obslužné rutiny pro ně.
+
+Vaše aplikace například může být nutné implementovat přímým přístupem myši kreslení v zobrazení. Ukázky Scribble ukazuje, jak zpracovávat zprávy WM_LBUTTONDOWN wm_mousemove a a WM_LBUTTONUP v uvedeném pořadí chcete začít, pokračovat a ukončit vykreslování úsek čáry. Na druhé straně můžete někdy potřebovat k interpretaci kliknutí myší v zobrazení jako výběr. Vaše zobrazení `OnLButtonDown` funkci obslužné rutiny by určit, zda byl uživatel kreslení nebo výběru. Pokud vyberete, obslužnou rutinu by určit, zda byl kliknutí v mezích některý objekt v zobrazení a pokud ano, změnit zobrazení na Zobrazit jako vybraný objekt.
+
+Zobrazení může také zpracovávat určité příkazy nabídek, jako jsou ty z nabídky Úpravy na vyjmutí, kopírování, vložení nebo odstranění vybraných dat pomocí schránky. Tyto rutiny by volat některý člen schránky související funkce třídy `CWnd` přenést položka vybraná data do nebo ze schránky.
+
+## <a name="see-also"></a>Viz také
+
+[Použití zobrazení](../mfc/using-views.md)
 

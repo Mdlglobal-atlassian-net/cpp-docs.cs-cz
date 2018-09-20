@@ -1,5 +1,5 @@
 ---
-title: Třída CUserException | Microsoft Docs
+title: Cuserexception – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,45 +21,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1701f6894ba3b44205526c59bad7ef635c1bbbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71d2be1c00e518597a5d5121d7a53544bd29067f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369470"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419656"
 ---
-# <a name="cuserexception-class"></a>CUserException – třída
-Došlo k ukončení operace koncového uživatele.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CUserException : public CSimpleException  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Použít `CUserException` když chcete použít mechanismus výjimek throw/catch výjimky specifické pro aplikaci. "User" v názvu třídy jde interpretovat jako "Moje uživatele udělala něco výjimečných potřebuji ke zpracování."  
-  
- A `CUserException` je obvykle vyvolána po volání metody globální funkce `AfxMessageBox` upozorní uživatele, které operace se nezdařila. Když píšete obslužnou rutinu výjimky, ošetření výjimky speciálně, protože uživatel obvykle již byla oznámena selhání. Rozhraní, v některých případech vyvolá výjimku. Chcete-li throw `CUserException` sami, upozornit uživatele a pak zavolají globální funkce `AfxThrowUserException`.  
-  
- V následujícím příkladu funkci obsahující operace, které může dojít k selhání upozorní uživatele a vyvolá `CUserException`. Volání funkce zachytí výjimky a zpracovává speciálně:  
-  
- [!code-cpp[NVC_MFCExceptions#24](../../mfc/codesnippet/cpp/cuserexception-class_1.cpp)]  
-  
- Další informace o používání `CUserException`, najdete v článku [zpracování výjimek (MFC)](../../mfc/exception-handling-in-mfc.md).  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CException](../../mfc/reference/cexception-class.md)  
-  
- [CSimpleException](../../mfc/reference/csimpleexception-class.md)  
-  
- `CUserException`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxwin.h  
-  
-## <a name="see-also"></a>Viz také  
- [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [CException – třída](../../mfc/reference/cexception-class.md)
+# <a name="cuserexception-class"></a>Cuserexception – třída
+
+Vyvoláno ukončení operace koncového uživatele.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CUserException : public CSimpleException
+```
+
+## <a name="remarks"></a>Poznámky
+
+Použít `CUserException` Pokud chcete použít mechanismus výjimek throw nebo catch pro konkrétní aplikaci výjimky. "User" v názvu třídy může být interpretován jako "Moje uživatelské udělala něco výjimečných, že je potřeba zpracovat."
+
+A `CUserException` obvykle dojde po volání metody globální funkce `AfxMessageBox` upozornit uživatele, operace se nezdařila. Zápis obslužné rutiny výjimky, při zpracování výjimek speciálně, protože uživatel obvykle má už byly oznámeny chyby. Rozhraní vyvolá tuto výjimku v některých případech. Vyvolání `CUserException` sami, upozornit uživatele a potom voláním funkce globální `AfxThrowUserException`.
+
+V následujícím příkladu funkce, který obsahuje operace, které může selhat, zobrazí uživateli výstrahu a vyvolá výjimku `CUserException`. Volání funkce zachytí výjimku a to všechno zvládne speciálně:
+
+[!code-cpp[NVC_MFCExceptions#24](../../mfc/codesnippet/cpp/cuserexception-class_1.cpp)]
+
+Další informace o používání `CUserException`, najdete v článku [zpracování výjimek (MFC)](../../mfc/exception-handling-in-mfc.md).
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[Třídy CObject](../../mfc/reference/cobject-class.md)
+
+[Cexception –](../../mfc/reference/cexception-class.md)
+
+[Csimpleexception –](../../mfc/reference/csimpleexception-class.md)
+
+`CUserException`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxwin.h
+
+## <a name="see-also"></a>Viz také
+
+[Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
+[CException – třída](../../mfc/reference/cexception-class.md)

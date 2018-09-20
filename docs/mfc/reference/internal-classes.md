@@ -1,5 +1,5 @@
 ---
-title: Interní třídy | Microsoft Docs
+title: Interní třídy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -317,107 +317,109 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f7d1ef39a80ce8a06cef14ad227c7de54163644
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fc2a7d2d51a66742794d0a58da19e77463318fc7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372544"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411726"
 ---
 # <a name="internal-classes"></a>Interní třídy
-Následující třídy se používá interně v prostředí MFC. Pro úplnost Tato část popisuje tyto interní třídy, ale není určen pro použití přímo v kódu.  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
-  
-|Třída|Popis|  
-|-----------|-----------------|  
-|`CCommandManager Class`|`CCommandManager` Třída spravovat příkazů a jejich přidružení k bitové kopie.|  
-|`CDialogImpl Class (MFC)`|Poskytuje podrobné informace o nasazení na základě pole třídy dialogových oken, například `CDialogEx`.|  
-|`CDocumentAdapter Class`|Implementuje IDocument rozhraní požadované pro hledání a uspořádat obslužné rutiny.|  
-|`CFrameImpl Class`|`CFrameImpl` Třída zpracovává přizpůsobení panelu nástrojů pro následující třídy oken s rámečkem: [CFrameWndEx třída](../../mfc/reference/cframewndex-class.md), [CMDIFrameWndEx Class](../../mfc/reference/cmdiframewndex-class.md), a [COleIPFrameWndEx třída](../../mfc/reference/coleipframewndex-class.md).|  
-|`CFullScreenImpl Class`|Společné pro aplikace SDI a MDI funkce implementuje přes celou obrazovku.|  
-|`CMDIClientAreaWnd Class`|`CMDIClientAreaWnd` Třída je pomocná třída, která zjednodušuje implementace MDI karty a MDI – záložkami skupin.|  
-|`CMemDC Class`|Pomocná třída pro kontextu paměti zařízení. Kontext paměti zařízení podporuje mimo obrazovku kreslení.|  
-|`CMenuHash Class`|Přečte stav `CMFCToolBar` objekty z archivu nebo zapíše stav do archivu.|  
-|`CMenuImages Class`|Poskytuje funkce pro zobrazení předdefinované Image, jako jsou tlačítka Zavřít, maximalizovat tlačítka, přepínače a šipky.|  
-|`CMFCCaptionButtonEx Class`|Obsahuje neklientská oblast systému popisek tlačítek.|  
-|`CMFCCaptionMenuButton Class`|Představuje tlačítka s nabídkou, který je umístěný v oblasti záhlaví podokna úloh nebo nástrojů.|  
-|`CMFCColorPropertySheet Class`|Používá [CMFCColorDialog třída](../../mfc/reference/cmfccolordialog-class.md) zajistit dialogové okno.|  
-|`CMFCControlBarImpl Class`|Poskytuje podrobnosti implementace k řízení třídy založené na řádku, jako například `CMFCReBar` a `CMFCToolBar`.|  
-|`CMFCControlRenderer Class`|Pomocná třída, která zpracovává vykreslování obrázků.|  
-|`CMFCControlRendererInfo Class`|Pomocná třída pro parametry k předání `CMFCControlRenderer` třídy.|  
-|`CMFCCustomizeButton Class`|Podporuje příkazu nabídky nebo tlačítka panelu nástrojů, která se spouští dialogové okno Vlastní nastavení.|  
-|`CMFCCustomizeMenuButton Class`|Představuje jedno tlačítko v nabídce přizpůsobení.|  
-|`CMFCDropDownListBox Class`|Rozšiřuje funkce rozevíracího seznamu pole se seznamem pásu karet.|  
-|`CMFCMousePropertyPage Class`|Stránky vlastností, která umožňuje uživateli upravit chování myši.|  
-|`CMFCOutlookBarPaneAdapter Class`||  
-|`CMFCOutlookBarPaneButton Class`|Implementuje tlačítko, které přidá rozhraní `CMFCOutlookBarPane` objektu.|  
-|`CMFCOutlookBarPaneList Class`|Rozšiřuje `CMFCOutlookBarPane` třída zajistit vizuální styl aplikace Outlook.|  
-|`CMFCOutlookBarScrollButton Class`|Poskytuje posouvání funkce, které `CMFCOutlookBarTabCtrl` třídy.|  
-|`CMFCOutlookBarToolBar Class`|Implementuje panel nástrojů, který obsahuje vizuální styl Outlook 2003.|  
-|`CMFCPropertySheetCategoryInfo Class`|Představuje uzel v ovládacím prvku stromu.|  
-|`CMFCPropertySheetTabCtrl Class`|Rozšiřuje `CMFCTabCtrl` třída nakonfigurovánu list vlastností.|  
-|`CMFCProperySheetListBox Class`|Rozšiřuje `CListBox` třída nakonfigurovánu list vlastností.|  
-|`CMFCReBarState Class`||  
-|`CMFCRibbonCaptionButton Class`|Implementuje popisek tlačítka systému.|  
-|`CMFCRibbonCmdUI Class`|Aktualizace pásu karet panelu objekty podle potřeby, když je aplikace nečinnosti.|  
-|`CMFCRibbonCommandsListBox Class`||  
-|`CMFCRibbonDefaultPanelButton Class`||  
-|`CMFCRibbonGalleryIcon Class`|Představuje položku v `CMFCRibbonGallery` objektu.|  
-|`CMFCRibbonKeyboardCustomizeDialog Class`|Implementuje přizpůsobení dialogové okno klávesnice pro aplikace, které obsahují řádky pásu karet.|  
-|`CMFCRibbonKeyTip Class`|Implementuje místní okno, které zobrazí klíče tip pro pás karet.|  
-|`CMFCRibbonPanelMenu Class`||  
-|`CMFCRibbonPanelMenuBar Class`|Představuje rozbalovací nabídce panelu pásu karet.|  
-|`CMFCRibbonQuickAccessToolBar Class`|Implementuje panel nástrojů Rychlý přístup pro element pásu karet.|  
-|`CMFCRibbonRichEditCtrl Class`|Implementuje ovládací prvek úprav, který se nachází na panelu pásu karet.|  
-|`CMFCRibbonTab Class`|Představují karty na pásu karet panelu.|  
-|`CMFCShadowRenderer Class`||  
-|`CMFCShowAllButton Class`|Představuje tlačítka, který se nachází v dolní části místní nabídky, které zasahuje do zobrazení skrytých příkazů.|  
-|`CMFCStatusBarPaneInfo Class`|Popisuje obsah a vzhled `CMFCStatusBar` podokně.|  
-|`CMFCTabButton Class`|Rozšiřuje funkce tlačítko karta ovládací prvky karet.|  
-|`CMFCTabInfo Class`|Poskytuje informace o ovládacích prvcích karta na kartě.|  
-|`CMFCTasksPaneFrameWnd Class`|Spravuje vlastní popisek tlačítek panelu úloh.|  
-|`CMFCTasksPanePropertyPage Class`|Vztah mezi spravuje `CMFCTasksPane` objekt a jeho název.|  
-|`CMFCTasksPaneToolBar Class`|Implementuje navigační panel nástrojů, který se nachází v horní části `CMFCTasksPane` objektu.|  
-|`CMFCToolBarButtonsListButton Class`|Zobrazí seznam bitové kopie, které může uživatel vybrat během přizpůsobování v **vzhled tlačítka** dialogové okno.|  
-|`CMFCToolBarDateTimeCtrlImpl Class`|Implementuje zdroje přetažení pro `CMFCToolBar` objekty.|  
-|`CMFCToolBarDropSource Class`|Implementuje zdroje přetažení pro `CMFCToolBar` objekty.|  
-|`CMFCToolBarDropTarget Class`|Implementuje cíle přetažení pro `CMFCToolBar` objekty.|  
-|`CMFCToolBarEditCtrl Class`|Poskytuje funkce ovládacího prvku úprav `CMFCToolBarEditBoxButton` objekty.|  
-|`CMFCToolBarMenuButtonsButton Class`|Představuje popisek tlačítka systému, který se nachází na pravé straně řádku nabídek.|  
-|`CMFCToolBarNameDialog Class`|Představuje dialogu, který umožňuje uživateli zadat nový titulek panelu nástrojů.|  
-|`CMFCToolBarsCommandsListBox Class`|Představuje seznam, který obsahuje seznam příkazů panelu nástrojů.|  
-|`CMFCToolBarsCommandsPropertyPage Class`|Implementuje příkazy přizpůsobení na stránce vlastností.|  
-|`CMFCToolBarsKeyboardPropertyPage Class`||  
-|`CMFCToolBarsListCheckBox Class`|Zobrazí seznam panelů nástrojů na **panely nástrojů** stránky **přizpůsobit** dialogové okno.|  
-|`CMFCToolBarsListPropertyPage Class`|Představuje stránku vlastností, která zobrazuje seznam panelů nástrojů v **přizpůsobit** dialogové okno.|  
-|`CMFCToolBarsMenuPropertyPage Class`|Představuje stránku vlastností, která obsahuje možnosti přizpůsobení nabídky v **přizpůsobit** dialogové okno.|  
-|`CMFCToolBarsOptionsPropertyPage Class`|Představuje **možnosti** stránku **přizpůsobit** dialogové okno.|  
-|`CMFCToolBarSpinEditBoxButton Class`|Představuje číselníku, který je umístěný na textové pole.|  
-|`CMFCToolBarsToolsPropertyPage Class`|Představuje stránku vlastností, která umožňuje uživateli upravit uživatele nástroje.|  
-|`CMFCToolBarSystemMenuButton Class`|Implementuje tlačítko titulek systému, které rozhraní přidá na hlavním panelu nabídek, když uživatel maximalizuje podřízeného okna MDI.|  
-|`CMFCVisualManagerBitmapCache Class`|Spravuje `CMFCControlRenderer` objekty, které chcete-li zlepšit výkon operací na rastrové obrázky.|  
-|`CMultiDocTemplateEx Class`|Rozšiřuje `CMultiDocTemplate` třídy pro poskytnutí přístupu k nabídce ID prostředku.|  
-|`COleCntrFrameWndEx Class`||  
-|`COleDocIPFrameWndEx Class`|Poskytuje podporu OLE.|  
-|`COleServerDocEx Class`|Poskytuje operací na OLE – dokumenty na serveru.|  
-|`CPaneContainerGC Class`||  
-|`CPngImage Class`|Poskytuje přístup k prostředkům bitové kopie, které používají formát souboru .png.|  
-|`CPreviewViewEx Class`||  
-|`CRecentPaneContainerInfo Class`|Obsahuje předchozí stav ukotvení panelu.|  
-|`CRibbonCategoryScroll Class`|Implementuje tlačítko posuvníku, který se zobrazí, pokud nejsou že všechny elementy nevešla oblasti indikátoru pásu karet.|  
-|`CSmartDockingGroupGuide Class`|Představuje centrální element skupiny čipové ukotvení.|  
-|`CSmartDockingGroupGuidesManager Class`|Spravuje skupiny příručky čipové ukotvení.|  
-|`CSmartDockingGroupGuidesWnd Class`|Implementuje vrstev, obdélníkový okno, které používá rozhraní zobrazíte centrální skupinu ukotvení čipové příručky.|  
-|`CSmartDockingHighlighterWnd Class`|Implementuje poloprůhledné okno, které pokrývá oblasti, ke které se provedenou lze ukotvit podokně objekt, který je právě ukotven.|  
-|`CSmartDockingManager Class`|Poskytuje ukotvení čipové funkce, které `CDockingManager` objekty.|  
-|`CSmartDockingStandaloneGuide Class`|Implementuje průvodci čipové ukotvení.|  
-|`CSmartDockingStandaloneGuideWnd Class`|Implementuje vrstev, obdélníkový okno, které systém použije k zobrazení ukotvení čipové příručky.|  
-|`CTagManager Class`|`CTagManager` Třída slouží ke čtení hodnot, které jsou uložené ve formátu XML jako s příznakem.|  
-|`CVSListBoxBase Class`|Poskytuje základní funkce, které `CVSListBox` třídy.|  
-|`CVSListBoxEditCtrl Class`|Rozšiřuje ovládací prvek upravit standardní seznam zobrazením malé tlačítko, které se otevře dialogové okno.|  
-|`CVSToolsListBox Class`|Rozšiřuje ovládací prvek standardní seznam tím, že poskytuje další tlačítka pro přidání, odstranění a přesunutí položky v seznamu.|  
-  
-## <a name="see-also"></a>Viz také  
- [Desktopové aplikace knihovny MFC](../../mfc/mfc-desktop-applications.md)
+
+Následující třídy se používají interně v knihovně MFC. Pro úplnost Tato část popisuje tyto vnitřní třídy, ale nejsou určeny k použití přímo ve vašem kódu.
+
+## <a name="in-this-section"></a>V tomto oddílu
+
+|Třída|Popis|
+|-----------|-----------------|
+|`CCommandManager Class`|`CCommandManager` Třída spravuje příkazy a jejich přidružení k bitové kopie.|
+|`CDialogImpl Class (MFC)`|Poskytuje podrobnosti o implementaci na základě pole třídy dialogových oken, například `CDialogEx`.|
+|`CDocumentAdapter Class`|Implementuje objekt idocument získat rozhraní nezbytné pro hledání a uspořádat obslužné rutiny.|
+|`CFrameImpl Class`|`CFrameImpl` Třída zpracovává přizpůsobení panelu nástrojů pro následující třídy oken s rámečkem: [cframewndex – třída](../../mfc/reference/cframewndex-class.md), [CMDIFrameWndEx – třída](../../mfc/reference/cmdiframewndex-class.md), a [coleipframewndex–třída](../../mfc/reference/coleipframewndex-class.md).|
+|`CFullScreenImpl Class`|Implementuje funkce celé obrazovky společné aplikace SDI a knihovna MDI.|
+|`CMDIClientAreaWnd Class`|`CMDIClientAreaWnd` Třída je pomocná třída, která zjednodušuje provádění karet MDI a skupin s kartami MDI.|
+|`CMemDC Class`|Pomocná třída pro kontext zařízení paměti. Kontext zařízení paměti podporuje mimo obrazovku kreslení.|
+|`CMenuHash Class`|Přečte stav `CMFCToolBar` objektů z archivu nebo zapíše stav do archivu.|
+|`CMenuImages Class`|Poskytuje funkce pro zobrazení předdefinované Image, jako jsou tlačítka Zavřít, maximalizovat tlačítek, přepínacích tlačítek a šipky.|
+|`CMFCCaptionButtonEx Class`|Obsahuje neklientské oblasti systému titulek tlačítka.|
+|`CMFCCaptionMenuButton Class`|Představuje tlačítko nabídky, který je umístěný v oblasti Titulek podokna úloh nebo panelu nástrojů.|
+|`CMFCColorPropertySheet Class`|Používá [cmfccolordialog – třída](../../mfc/reference/cmfccolordialog-class.md) k poskytnutí dialogového okna s kartami.|
+|`CMFCControlBarImpl Class`|Poskytuje podrobnosti o implementaci řízení třídy založené na řádku, jako například `CMFCReBar` a `CMFCToolBar`.|
+|`CMFCControlRenderer Class`|Pomocná třída, která zpracovává vykreslování obrázků.|
+|`CMFCControlRendererInfo Class`|Pomocná třída pro předání parametrů do `CMFCControlRenderer` třídy.|
+|`CMFCCustomizeButton Class`|Podporuje příkaz nabídky nebo tlačítko panelu nástrojů, který se spustí dialogového okna vlastního nastavení.|
+|`CMFCCustomizeMenuButton Class`|Představuje jedno tlačítko na nabídku přizpůsobení.|
+|`CMFCDropDownListBox Class`|Poskytuje funkce pole rozevíracího seznamu na pásu karet se seznamem.|
+|`CMFCMousePropertyPage Class`|Stránky vlastností, která umožňuje uživateli upravit chování myši.|
+|`CMFCOutlookBarPaneAdapter Class`||
+|`CMFCOutlookBarPaneButton Class`|Implementuje tlačítko, které přidá rozhraní `CMFCOutlookBarPane` objektu.|
+|`CMFCOutlookBarPaneList Class`|Rozšiřuje `CMFCOutlookBarPane` třídy k poskytování vizuálního stylu aplikace Outlook.|
+|`CMFCOutlookBarScrollButton Class`|Poskytuje funkce umožňující posouvání, které `CMFCOutlookBarTabCtrl` třídy.|
+|`CMFCOutlookBarToolBar Class`|Implementuje panel nástrojů, který obsahuje vizuální styl Outlook 2003.|
+|`CMFCPropertySheetCategoryInfo Class`|Představuje uzel ve stromové struktuře.|
+|`CMFCPropertySheetTabCtrl Class`|Rozšiřuje `CMFCTabCtrl` třídy nakonfigurovánu list vlastností.|
+|`CMFCProperySheetListBox Class`|Rozšiřuje `CListBox` třídy nakonfigurovánu list vlastností.|
+|`CMFCReBarState Class`||
+|`CMFCRibbonCaptionButton Class`|Implementuje tlačítko titulek systému.|
+|`CMFCRibbonCmdUI Class`|Aktualizace pásu karet panelu objekty podle potřeby, když je aplikace nečinnosti.|
+|`CMFCRibbonCommandsListBox Class`||
+|`CMFCRibbonDefaultPanelButton Class`||
+|`CMFCRibbonGalleryIcon Class`|Představuje položku v `CMFCRibbonGallery` objektu.|
+|`CMFCRibbonKeyboardCustomizeDialog Class`|Implementuje klávesnice dialogového okna vlastního nastavení pro aplikace, které obsahují panely pásu karet.|
+|`CMFCRibbonKeyTip Class`|Implementuje automaticky otevírané okno zobrazující kláves pro panel pásu karet.|
+|`CMFCRibbonPanelMenu Class`||
+|`CMFCRibbonPanelMenuBar Class`|Představuje místní nabídek v panel pásu karet.|
+|`CMFCRibbonQuickAccessToolBar Class`|Implementuje panel nástrojů Rychlý přístup pro prvek pásu karet.|
+|`CMFCRibbonRichEditCtrl Class`|Implementuje ovládací prvek úprav, který se nachází na panel pásu karet.|
+|`CMFCRibbonTab Class`|Představují karty na pásu karet.|
+|`CMFCShadowRenderer Class`||
+|`CMFCShowAllButton Class`|Představuje tlačítko, které se nachází v dolní části, které zasahuje do zobrazit skryté příkazy místní nabídky.|
+|`CMFCStatusBarPaneInfo Class`|Popisuje obsah a vzhled `CMFCStatusBar` podokně.|
+|`CMFCTabButton Class`|Poskytuje funkce kartu tlačítka pro ovládací prvky karet.|
+|`CMFCTabInfo Class`|Poskytuje informace o ovládacích prvcích kartu na kartě.|
+|`CMFCTasksPaneFrameWnd Class`|Spravuje vlastní titulek tlačítka v podokně úlohy.|
+|`CMFCTasksPanePropertyPage Class`|Vztah mezi spravuje `CMFCTasksPane` objektu a jeho název.|
+|`CMFCTasksPaneToolBar Class`|Implementuje navigační panel nástrojů, který se nachází v horní části `CMFCTasksPane` objektu.|
+|`CMFCToolBarButtonsListButton Class`|Zobrazí seznam imagí, které může uživatel vybrat během přizpůsobování v **vzhled tlačítka** dialogové okno.|
+|`CMFCToolBarDateTimeCtrlImpl Class`|Implementuje zdroj přetažení pro `CMFCToolBar` objekty.|
+|`CMFCToolBarDropSource Class`|Implementuje zdroj přetažení pro `CMFCToolBar` objekty.|
+|`CMFCToolBarDropTarget Class`|Implementuje cíle přetažení pro `CMFCToolBar` objekty.|
+|`CMFCToolBarEditCtrl Class`|Poskytuje funkce ovládacího prvku pro úpravy k `CMFCToolBarEditBoxButton` objekty.|
+|`CMFCToolBarMenuButtonsButton Class`|Reprezentuje titulek tlačítka systému, který se nachází na pravé straně řádku nabídek.|
+|`CMFCToolBarNameDialog Class`|Představuje dialogové okno, které umožňuje uživateli zadat nový popisek nástrojů.|
+|`CMFCToolBarsCommandsListBox Class`|Představuje seznam, který obsahuje seznam příkazů panelu nástrojů.|
+|`CMFCToolBarsCommandsPropertyPage Class`|Implementuje příkazy vlastní nastavení na stránce vlastností.|
+|`CMFCToolBarsKeyboardPropertyPage Class`||
+|`CMFCToolBarsListCheckBox Class`|Zobrazí seznam panely nástrojů na **panely nástrojů** stránce **vlastní** dialogové okno.|
+|`CMFCToolBarsListPropertyPage Class`|Představuje stránku vlastností, která zobrazuje seznam panelů nástrojů v **vlastní** dialogové okno.|
+|`CMFCToolBarsMenuPropertyPage Class`|Představuje stránku vlastností, která obsahuje možnosti přizpůsobení nabídky v **vlastní** dialogové okno.|
+|`CMFCToolBarsOptionsPropertyPage Class`|Představuje **možnosti** stránku **vlastní** dialogové okno.|
+|`CMFCToolBarSpinEditBoxButton Class`|Představuje číselníku, který se nachází na textové pole.|
+|`CMFCToolBarsToolsPropertyPage Class`|Představuje stránku vlastností, která umožňuje uživateli upravit uživatelské nástroje.|
+|`CMFCToolBarSystemMenuButton Class`|Implementuje tlačítko titulek systému, které rozhraní přidá do hlavní nabídky panelu, když uživatel maximalizuje podřízené okno MDI.|
+|`CMFCVisualManagerBitmapCache Class`|Spravuje `CMFCControlRenderer` objektů můžete zvýšit výkon operací v rastrových obrázků.|
+|`CMultiDocTemplateEx Class`|Rozšiřuje `CMultiDocTemplate` třídy pro zajištění přístupu k ID nabídky prostředku.|
+|`COleCntrFrameWndEx Class`||
+|`COleDocIPFrameWndEx Class`|Poskytuje podporu technologie OLE.|
+|`COleServerDocEx Class`|Poskytuje operace na dokumenty OLE na serveru.|
+|`CPaneContainerGC Class`||
+|`CPngImage Class`|Poskytuje přístup k prostředkům bitové kopie, které používají formát souboru ve formátu PNG.|
+|`CPreviewViewEx Class`||
+|`CRecentPaneContainerInfo Class`|Obsahuje předchozí stav ukotvené podokno.|
+|`CRibbonCategoryScroll Class`|Implementuje tlačítko posouvání, který se zobrazí, když nejsou zobrazeny všechny elementy v oblasti panelu pásu karet.|
+|`CSmartDockingGroupGuide Class`|Představuje centrální prvek skupiny smart ukotvení.|
+|`CSmartDockingGroupGuidesManager Class`|Spravuje skupiny vodítka smart ukotvení.|
+|`CSmartDockingGroupGuidesWnd Class`|Implementuje vrstvami, neobdélníkových okno, které rozhraní framework používá k zobrazení centrální skupina ukotvení smart vodítka.|
+|`CSmartDockingHighlighterWnd Class`|Implementuje poloprůhledného okno, které pokrývá oblasti, ke které provedou ukotvitelné podokně objektu, který je právě ukotven.|
+|`CSmartDockingManager Class`|Poskytuje funkci smart ukotvení, která `CDockingManager` objekty.|
+|`CSmartDockingStandaloneGuide Class`|Implementuje dokování smart průvodce.|
+|`CSmartDockingStandaloneGuideWnd Class`|Implementuje vrstvami, neobdélníkových okno, které rozhraní framework používá k zobrazení ukotvení smart vodítka.|
+|`CTagManager Class`|`CTagManager` Třídy je určený ke čtení hodnoty, které jsou uložené ve formátu označený jako XML.|
+|`CVSListBoxBase Class`|Poskytuje základní funkce, které `CVSListBox` třídy.|
+|`CVSListBoxEditCtrl Class`|Rozšíří ovládací prvek úprav standardní seznam zobrazením malé tlačítko, které se otevře dialogové okno.|
+|`CVSToolsListBox Class`|Rozšíří ovládací prvek seznam standardních tím, že poskytuje další tlačítka pro přidání, odstranění a přesouvání položek v seznamu.|
+
+## <a name="see-also"></a>Viz také
+
+[Desktopové aplikace knihovny MFC](../../mfc/mfc-desktop-applications.md)
 

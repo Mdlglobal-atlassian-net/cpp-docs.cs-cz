@@ -463,14 +463,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d06bac8aef674472b817817fde4191f1d655365e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 575f21e03659f973a25b1ad2e7aae211f9dae187
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723226"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412103"
 ---
 # <a name="reference-concurrency-runtime"></a>Referenční dokumentace (Concurrency Runtime)
+
 Tato část obsahuje referenční informace k modulu Runtime souběžnosti.
 
 > [!Note]
@@ -478,7 +479,8 @@ Tato část obsahuje referenční informace k modulu Runtime souběžnosti.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[souběžnost Namespace](concurrency-namespace.md) obor názvů souběžnosti poskytuje třídy a funkce, které umožňují přístup k modulu Concurrency Runtime, souběžnému programovacímu rámci pro jazyk C++. Další informace najdete v tématu [Concurrency Runtime](../concurrency-runtime.md).
+[concurrency – obor názvů](concurrency-namespace.md)<br/>
+Obor názvů souběžnosti poskytuje třídy a funkce, které umožňují přístup k modulu Concurrency Runtime, souběžnému programovacímu rámci pro jazyk C++. Další informace najdete v tématu [Concurrency Runtime](../concurrency-runtime.md).
 
 [obor názvů std](std-namespace.md)
 

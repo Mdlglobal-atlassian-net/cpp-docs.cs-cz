@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 09390e25ffe06ce6702aef68d73c352e063a48ef
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3dbf6d861dd446745ba0cc3581c7e3e5511c01d3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716778"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409360"
 ---
 # <a name="generic-classes-ccli"></a>Obecné třídy (C++/CLI)
 
@@ -47,38 +47,38 @@ class-body
 
 Ve výše uvedené syntaxe se používají následující termíny:
 
-*Atributy*  
+*Atributy*<br/>
 (Volitelné) Další informace o deklarativní. Další informace o atributu třídy a atributy naleznete v tématu atributy.
 
-*klíč třídy*  
+*klíč třídy*<br/>
 Buď **třídy** nebo **typename**
 
 *Typ – parametr-identifikátory*, čárkami oddělený seznam identifikátorů určující názvy parametrů typu.
 
-*klauzule omezení*  
+*klauzule omezení*<br/>
 Seznam (nikoli oddělený čárkami) **kde** klauzule určující omezení pro parametry typu. Má podobu:
 
 > **kde** *identifikátor typu parametru* **:** *seznam omezení***...** 
 
-*seznam omezení*  
+*seznam omezení*<br/>
 *Třída nebo rozhraní*[`,` *...* ]
 
-*Modifikátory dostupnosti*  
+*Modifikátory dostupnosti*<br/>
 Modifikátory dostupnosti pro obecná třída. Prostředí Windows Runtime je jediný povolený modifikátor **privátní**. Pro modul common language runtime, jsou povolené modifikátory **privátní** a **veřejné**.
 
-*identifikátor*  
+*identifikátor*<br/>
 Název obecná třída libovolný platný identifikátor C++.
 
-*Modifikátory*  
+*Modifikátory*<br/>
 (Volitelné) Povolené modifikátory zahrnují **zapečetěné** a **abstraktní**.
 
-*Base-list*  
+*Base-list*<br/>
 Seznam obsahující jednu základní třídu a žádné implementovaná rozhraní, všechny oddělených čárkami.
 
-*Tělo třídy*  
+*Tělo třídy*<br/>
 Text třídu obsahující pole, členské funkce atd.
 
-*deklarátory*  
+*deklarátory*<br/>
 Deklarace proměnných tohoto typu. Příklad: `^` *identifikátor*[`,` ...]
 
 Je možné deklarovat obecné třídy takovéto (Všimněte si, že klíčové slovo **třídy** může být použita místo **typename**). V tomto příkladu `ItemType`, `KeyType` a `ValueType` jsou neznámé typy, které jsou uvedeny v místě, kde typ. `HashTable<int, int>` konstruovaný typ obecného typu je `HashTable<KeyType, ValueType>`. Počet různých sestavené typy lze zkonstruovat z jednoho obecného typu. Sestavené typy vytvořený z obecné třídy jsou zpracovány stejně jako jakýkoli jiný typ referenční třídy.

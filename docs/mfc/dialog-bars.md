@@ -1,5 +1,5 @@
 ---
-title: Dialogové pruhy | Microsoft Docs
+title: Dialogové pruhy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7c68ca2725d25b493003ad7d847176c7dd8d17d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ed0e773dda8a1a31a028a0b6c5e349b2e3655982
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348804"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401495"
 ---
 # <a name="dialog-bars"></a>Dialogové pruhy
-Panel dialogového okna je panel nástrojů, typ z [ovládacích pruhů](../mfc/control-bars.md) , může obsahovat jakýkoli typ ovládacího prvku. Protože má charakteristiky nemodální dialogového okna, [CDialogBar](../mfc/reference/cdialogbar-class.md) objekt poskytuje výkonnější panelu nástrojů.  
-  
- Existuje několik klíčových rozdílů mezi panelu nástrojů a `CDialogBar` objektu. A `CDialogBar` z prostředku šablony dialogového okna, které můžete vytvořit pomocí editoru dialogových oken Visual C++ a která může obsahovat jakýkoli typ ovládacího prvku systému Windows je vytvořen objekt. Uživatel může kartě z ovládacího prvku na ovládací prvek. A můžete určit zarovnání styl, chcete-li zarovnat dialogového pruhu s libovolnou část nadřazeného rámce okna nebo ponechejte na místě, pokud se změnila velikost nadřazené. Následující obrázek znázorňuje dialogového pruhu s různými ovládacích prvků.  
-  
- ![Panel dialogového okna VC](../mfc/media/vc378t1.gif "vc378t1")  
-Panel dialogového okna  
-  
- V ostatních ohledech práce `CDialogBar` objektu je podobné jako u dialogového okna bez režimu. Použití editoru dialogových oken pro návrh a vytvoření prostředku dialogového okna.  
-  
- Jedním z přednosti dialogové pruhy je, že obsahují ovládací prvky než tlačítka.  
-  
- I když je normální, že se vlastní dialogové okno odvozovat z `CDialog`, můžete nezískávají obvykle vlastní třída pro panel dialogového okna. Dialogové pruhy, jako jsou rozšíření pro hlavní okno a všechny zprávy oznámení ovládacího prvku panel dialogového okna, **BN_CLICKED** nebo **EN_CHANGE**, budou odeslány do nadřazené dialogového okna panelu Hlavní okno.  
-  
-## <a name="see-also"></a>Viz také  
- [Prvky uživatelského rozhraní](../mfc/user-interface-elements-mfc.md)   
- [Ukázka](../visual-cpp-samples.md)
+
+Panel dialogového okna je panel nástrojů, typ z [ovládací panel](../mfc/control-bars.md) , který může obsahovat libovolný druh ovládacího prvku. Protože ale mají i charakteristiky nemodálního dialogového okna, [CDialogBar](../mfc/reference/cdialogbar-class.md) objekt, který poskytuje výkonnější panelu nástrojů.
+
+Existuje několik klíčových rozdílů mezi panelu nástrojů a `CDialogBar` objektu. A `CDialogBar` objekt je vytvořen z prostředků šablony dialogového okna, které můžete vytvořit pomocí editoru dialogového okna Visual C++ a který může obsahovat jakýkoli typ ovládacího prvku Windows. Uživatel může kartu z ovládacího prvku na ovládací prvek. A můžete zadat na zarovnání styl, zarovnání dialogového pruhu s libovolnou část nadřazené okno rámce, nebo dokonce ponechte na místě, pokud je velikost nadřazené. Následující obrázek znázorňuje dialogového pruhu s širokou škálu ovládacích prvků.
+
+![Panel dialogového okna VC](../mfc/media/vc378t1.gif "vc378t1") panel dialogového okna
+
+V ostatních ohledech, práci s `CDialogBar` objektu je podobné jako u nemodální dialogové okno. Použití editoru dialogových oken pro návrh a vytvoření prostředku dialogového okna.
+
+Jednou z přednosti dialogové pruhy je, že obsahují ovládací prvky než tlačítka.
+
+I když je normální odvozovat vlastní třídy dialogového okna z `CDialog`, můžete neodvozuje obvykle vlastní třída pro panel dialogového okna. Dialogové pruhy jsou rozšíření pro hlavní okno a jakékoli zpráv s oznámením ovládacího prvku panel dialogového okna, jako je například **BN_CLICKED** nebo **EN_CHANGE**, odešlou se do nadřazené okno panelu hlavního okna.
+
+## <a name="see-also"></a>Viz také
+
+[Prvky uživatelského rozhraní](../mfc/user-interface-elements-mfc.md)<br/>
+[Ukázka](../visual-cpp-samples.md)
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20072a5196ce476cf178f7c6e1071bd495202062
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: a4350492921c59d4bda4ead37933e4c2242b7df9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42465206"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411154"
 ---
 # <a name="renamesearchnamespace"></a>rename_search_namespace
 **Specifické pro C++**  
@@ -44,5 +44,5 @@ Nový název oboru názvů.
   
 ## <a name="see-also"></a>Viz také  
  
-[atributů #import](../preprocessor/hash-import-attributes-cpp.md)   
+[atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

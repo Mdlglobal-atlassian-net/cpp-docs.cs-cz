@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b1ef298dbc8c15dddafedd74c83476663328d42f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a0f35bbe2bdc0d0c8d3500e6b157da542458b1fe
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602657"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421011"
 ---
 # <a name="comptrrefgetaddressof-method"></a>ComPtrRef::GetAddressOf – metoda
 
@@ -50,5 +50,5 @@ Načte adresu ukazatel rozhraní reprezentované aktuální **comptrref –** ob
 
 ## <a name="see-also"></a>Viz také
 
-[ComPtrRef – třída](../windows/comptrref-class.md)  
+[ComPtrRef – třída](../windows/comptrref-class.md)<br/>
 [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

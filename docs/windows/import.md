@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 78bfc20bd88aa9691c80483c8c315cd5305d7b96
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a9e2ee577c3285a7e4c3db2fb19d934417bbe26d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216588"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411557"
 ---
 # <a name="import"></a>import
 
@@ -38,7 +38,7 @@ Určuje jiný soubor .idl, .odl nebo záhlaví obsahující definice, kterou chc
 
 ### <a name="parameters"></a>Parametry
 
-*idl_file*  
+*idl_file*<br/>
 Název souboru IDL, který chcete importovat do knihovny typů aktuálního projektu.
 
 ## <a name="remarks"></a>Poznámky
@@ -86,9 +86,9 @@ Další informace najdete v tématu [kontexty atributů](../windows/attribute-co
 
 ## <a name="see-also"></a>Viz také
 
-[IDL – atributy](../windows/idl-attributes.md)  
-[Samostatné atributy](../windows/stand-alone-attributes.md)  
-[importidl](../windows/importidl.md)  
-[importlib](../windows/importlib.md)  
-[Zahrnout](../windows/include-cpp.md)  
+[IDL – atributy](../windows/idl-attributes.md)<br/>
+[Samostatné atributy](../windows/stand-alone-attributes.md)<br/>
+[importidl](../windows/importidl.md)<br/>
+[importlib](../windows/importlib.md)<br/>
+[Zahrnout](../windows/include-cpp.md)<br/>
 [includelib –](../windows/includelib-cpp.md)  

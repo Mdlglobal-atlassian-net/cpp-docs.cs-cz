@@ -1,5 +1,5 @@
 ---
-title: Inicializace a Uklízení dokumentů a zobrazení | Microsoft Docs
+title: Inicializace a Uklízení dokumentů a zobrazení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,43 +21,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f59dcfbdac4a2d5da732c5e7f8cfc78083bf843
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cdc1efa9d2284a48e4f906a326efcd62dd6c61b9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346360"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412948"
 ---
 # <a name="initializing-and-cleaning-up-documents-and-views"></a>Inicializace a uklízení dokumentů a zobrazení
-Pomocí následujících pokynů pro inicializace a Uklízení po dokumentů a zobrazení:  
-  
--   Rozhraní MFC framework inicializuje dokumentů a zobrazení; je-li inicializovat data, která přidáte do nich.  
-  
--   Rozhraní framework vyčistí jako dokumenty a zobrazení zavřete; musíte navrátit všechny paměti, které jste přidělili v haldě z v rámci členské funkce těchto dokumentů a zobrazení.  
-  
+
+Pomocí následujících pokynů pro inicializace a Uklízení po dokumentů a zobrazení:
+
+- Rozhraní MFC inicializuje dokumentů a zobrazení; můžete inicializovat všechna data, která přidáte do nich.
+
+- Rozhraní framework vyčistí jako dokumenty a zobrazeními zavřete; musí uvolnit paměť, která je přidělena v haldě z v rámci členských funkcí těchto dokumentů a zobrazení.
+
 > [!NOTE]
->  Odvolat tuto inicializace pro celou aplikaci se nejlépe provádí v přepsání z [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) funkce člena třídy `CWinApp`, a čištění pro celou aplikaci se nejlépe provádí v vaší přepsání `CWinApp`– členská funkce [ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance).  
-  
- Životní cyklus dokumentu (a její oken s rámečkem a zobrazení nebo zobrazení) MDI aplikace je následující:  
-  
-1.  Během dynamické vytváření volání konstruktoru dokumentu.  
-  
-2.  Pro každý nový dokument, dokument na [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) nebo [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) je volána.  
-  
-3.  Uživatel pracuje s dokumentem v celé jeho životnosti. Obvykle k tomu dojde, protože uživatel pracuje na dokument data prostřednictvím zobrazení, výběr a upravovat data. Zobrazení předá změny k dokumentu pro úložiště a aktualizaci dalšími zobrazeními. Během této doby může zpracovávat příkazy dokumentů a zobrazení.  
-  
-4.  Volání framework [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) k odstranění dat, které jsou specifické pro dokument.  
-  
-5.  Je volána destruktor dokumentu.  
-  
- V aplikaci SDI krok 1 provádí po prvním vytvoření dokumentu. Kroky 2 až 4 pak opakovaně se pokaždé, když je otevřen nový dokument. Nový dokument opětovně používá existující objekt dokumentu. Krok 5 se nakonec provádí při ukončení aplikace.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
-  
--   [Inicializace dokumentů a zobrazení](../mfc/initializing-documents-and-views.md)  
-  
--   [Uklízení dokumentů a zobrazení](../mfc/cleaning-up-documents-and-views.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Document/View – architektura](../mfc/document-view-architecture.md)
+>  Připomínáme, že inicializace pro celou aplikaci se nejlépe provádí v přepsání metody [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) členské funkce třídy `CWinApp`, a čištění pro celou aplikaci se nejlépe provádí v přepsání metody `CWinApp`členskou funkci [ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance).
+
+Životní cyklus dokumentu (a její okno rámce a zobrazení nebo zobrazení) v MDI aplikace vypadá takto:
+
+1. Během dynamické vytváření se nazývá konstruktor dokumentu.
+
+1. Pro každého nového dokumentu, dokument [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) nebo [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) je volána.
+
+1. Uživatel pracuje s dokumentem v průběhu svého životního cyklu. K tomu obvykle dochází, uživatel pracuje s daty dokumentu prostřednictvím zobrazení, výběru a úpravy dat. Zobrazení předává změny do dokumentu za úložiště a aktualizují ostatní zobrazení. Během této doby může zpracovávat příkazy dokumentů a zobrazení.
+
+1. Rámec volá [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) odstranit data specifická pro dokument.
+
+1. Dokumentu destruktoru je volána.
+
+V aplikaci SDI kroku 1 se provádí jednou při prvním vytvoření dokumentu. Kroky 2 až 4 potom opakovaně provádějí pokaždé, když je otevřen nový dokument. Nový dokument opětovně používá existující objekt dokumentu. Krok 5 nakonec je provedena při ukončení aplikace.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+
+- [Inicializace dokumentů a zobrazení](../mfc/initializing-documents-and-views.md)
+
+- [Uklízení dokumentů a zobrazení](../mfc/cleaning-up-documents-and-views.md)
+
+## <a name="see-also"></a>Viz také
+
+[Document/View – architektura](../mfc/document-view-architecture.md)
 

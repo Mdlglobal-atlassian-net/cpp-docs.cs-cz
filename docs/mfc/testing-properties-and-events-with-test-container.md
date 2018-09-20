@@ -1,5 +1,5 @@
 ---
-title: Testování vlastností a událostí pomocí testovacího kontejneru | Microsoft Docs
+title: Testování vlastností a událostí pomocí testovacího kontejneru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,50 +20,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbf2b7c26b7fc44a526381f4fb3e4dee5c94ba8d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e06f10114b896e2728e5a017281e54f75ce534e5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381033"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404628"
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>Testování vlastností a událostí pomocí testovacího kontejneru
-Aplikace – kontejner testů dodaný v jazyce Visual C++, je kontejneru ovládacího prvku ActiveX pro testování a ladění ovládacích prvků ActiveX. Kontejner testů umožňuje vývojáři řízení testování funkčnosti ovládacího prvku změnou jeho vlastnosti, vyvolání její metody a aktivuje její události. Kontejner testů můžete zobrazit protokoly oznámení datové vazby a také zajišťuje funkce pro testování trvalost funkce ovládacího prvku ActiveX: vlastnosti uložte do datového proudu nebo podúložiště, je znovu načíst a kontrolovat data uložená datového proudu. Tato část popisuje postup použití základní funkce – kontejner testů. Další informace, vyberte **pomoci** nabídky při spuštění – kontejner testů.  
-  
-### <a name="to-access-the-activex-control-test-container"></a>Pro přístup k kontejner testů ovládacích prvků ActiveX  
-  
-1.  Sestavení [TSTCON ukázka: kontejner testů ovládacích prvků ActiveX](../visual-cpp-samples.md).  
-  
-### <a name="to-test-your-activex-control"></a>K otestování ovládacího prvku ActiveX  
-  
-1.  Na **upravit** nabídky – kontejner testů, klikněte na tlačítko **vložit nový ovládací prvek**.  
-  
-2.  V **vložit ovládací prvek** pole, vyberte požadovaný ovládací prvek a klikněte na tlačítko **OK**. Ovládací prvek se zobrazí v kontejneru ovládacího prvku.  
-  
+
+Aplikace typu kontejner testu, dodávané v jazyce Visual C++ je kontejner ovládacího prvku ActiveX pro účely testování a ladění ovládacích prvků ActiveX. Kontejner testů umožňuje vývojářům ovládacího prvku k otestování funkce ovládacího prvku tak, že změníte jeho vlastnosti, volání metody a vyvolání jeho událostí. Kontejner testu můžete zobrazit protokoly oznámení pro vázání dat a také poskytuje funkce pro testování funkce trvalosti ovládacího prvku ActiveX: vlastnosti uložit do datového proudu nebo podúložiště, načítat je znovu a prozkoumejte data uložená datového proudu. Tato část popisuje, jak používat základní funkce kontejner testu. Další informace, vyberte **pomáhají** nabídky při spuštění kontejneru testů.
+
+### <a name="to-access-the-activex-control-test-container"></a>Pro přístup k kontejner testů ovládacích prvků ActiveX
+
+1. Sestavení [lze kontejner TSTCON vzorku: kontejner testů ovládacích prvků ActiveX](../visual-cpp-samples.md).
+
+### <a name="to-test-your-activex-control"></a>Testování ovládacího prvku ActiveX
+
+1. Na **upravit** nabídky kontejner testu, klikněte na tlačítko **vložte nový ovládací prvek**.
+
+1. V **vložit ovládací prvek** pole, vyberte požadovaný prvek a klikněte na tlačítko **OK**. Ovládací prvek se zobrazí v kontejneru ovládacího prvku.
+
     > [!NOTE]
-    >  Pokud vlastní ovládací prvek není uvedený v **vložit ovládací prvek** dialogové okno zkontrolujte, zda je její zaregistrovaný **registrovat ovládací prvky** příkaz **souboru** nabídky testu Kontejner.  
-  
- V tomto okamžiku můžete otestovat vlastnosti nebo události ovládacího prvku.  
-  
-#### <a name="to-test-properties"></a>K testování vlastnosti  
-  
-1.  Na **řízení** nabídky, klikněte na tlačítko **vyvolání metody**.  
-  
-2.  V **název metody** rozevíracího seznamu vyberte metodu propput – pro vlastnost, kterou chcete otestovat.  
-  
-3.  Upravit **hodnota parametru** nebo **typ parametru** a klikněte na **nastavit hodnotu** tlačítko.  
-  
-4.  Klikněte na tlačítko **Invoke** použít novou hodnotu do objektu.  
-  
-     Vlastnost nyní obsahuje novou hodnotu.  
-  
-#### <a name="to-test-events-and-specify-the-destination-of-event-information"></a>Chcete-li otestovat události a zadat cílové umístění informací o události.  
-  
-1.  Na **možnosti** nabídky, klikněte na tlačítko **protokolování**.  
-  
-2.  Zadejte cíl informací o události.  
-  
-## <a name="see-also"></a>Viz také  
- [Ovládací prvky MFC ActiveX](../mfc/mfc-activex-controls.md)   
- [Postupy: ladění ovládacího prvku ActiveX](/visualstudio/debugger/how-to-debug-an-activex-control)
+    >  Pokud váš ovládací prvek není uvedené v **vložit ovládací prvek** dialogové okno pole, ujistěte se, že jste ho zaregistrovali **registrovat ovládací prvky** z **souboru** nabídky testu Kontejner.
+
+V tomto okamžiku můžete otestovat, vlastnosti nebo události ovládacího prvku.
+
+#### <a name="to-test-properties"></a>K otestování vlastnosti
+
+1. Na **ovládací prvek** nabídky, klikněte na tlačítko **vyvolání metody**.
+
+1. V **název metody** rozevíracího seznamu vyberte metodu PropPut pro vlastnost, kterou potřebujete otestovat.
+
+1. Upravit **hodnota parametru** nebo **typ parametru** a klikněte na **nastavit hodnotu** tlačítko.
+
+1. Klikněte na tlačítko **Invoke** použít novou hodnotu do objektu.
+
+     Vlastnost nyní obsahuje novou hodnotu.
+
+#### <a name="to-test-events-and-specify-the-destination-of-event-information"></a>Testovat události a zadejte cílovou složku informací o události.
+
+1. Na **možnosti** nabídky, klikněte na tlačítko **protokolování**.
+
+1. Zadejte cílovou složku z informací o události.
+
+## <a name="see-also"></a>Viz také
+
+[MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)<br/>
+[Postupy: Ladění ovládacího prvku ActiveX](/visualstudio/debugger/how-to-debug-an-activex-control)
 

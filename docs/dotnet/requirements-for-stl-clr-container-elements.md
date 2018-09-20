@@ -1,5 +1,5 @@
 ---
-title: Požadavky na elementy kontejnerů STL/CLR | Microsoft Docs
+title: Požadavky na elementy kontejnerů STL/CLR | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 523b3e8d3f9c04a933f37032fcea670d75dafccf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcba36fdf280cef31efb9a84288475fcbb82b291
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33162433"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400418"
 ---
 # <a name="requirements-for-stlclr-container-elements"></a>Požadavky na elementy kontejnerů STL/CLR
-Všechny odkazové typy, které jsou vloženy do kontejnerů STL/CLR musí mít minimálně následující prvky:  
-  
--   Veřejné kopírovacího konstruktoru.  
-  
--   Operátor veřejné přiřazení.  
-  
--   Veřejné destruktor.  
-  
- Kromě toho asociativní kontejnery, jako [nastavit](../dotnet/set-stl-clr.md) a [mapy](../dotnet/map-stl-clr.md) musí mít veřejný relační operátor definované, což je `operator<` ve výchozím nastavení. Některé operace kontejnerům může také vyžadovat veřejný výchozí konstruktor a veřejné ekvivalenční operátor být definován.  
-  
- Jako odkazové typy, typy hodnot a obslužné rutiny, chcete-li typy, které se má být vložen do asociativní kontejneru musí mít operátor porovnání jako `operator<` definované. Požadavky na veřejné kopírovacího konstruktoru, operátor veřejné přiřazení a veřejné destruktor nejsou k dispozici pro typy hodnot nebo obslužné rutiny pro odkazové typy.  
-  
-## <a name="see-also"></a>Viz také  
- [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
+
+Všechny typy odkazů, které jsou vloženy do kontejnerů STL/CLR musí mít minimálně následující prvky:
+
+- Veřejné kopírovací konstruktor.
+
+- Operátor přiřazení veřejné.
+
+- Veřejným destruktorem.
+
+Kromě toho asociativní kontejnery, jako [nastavit](../dotnet/set-stl-clr.md) a [mapy](../dotnet/map-stl-clr.md) musí mít veřejný operátor porovnání definované, což je `operator<` ve výchozím nastavení. Některé operace s kontejnery může vyžadovat také veřejný výchozí konstruktor a veřejný operátor rovnocennosti definovat.
+
+Stejně jako typy odkazů, typy hodnot a popisovače odkazovat na typy, které mají být vloženy do asociativní kontejner musí mít operátor porovnání, jako `operator<` definované. Požadavky na veřejné kopírovacího konstruktoru, operátor přiřazení veřejné a veřejným destruktorem neexistují pro typy hodnot nebo popisovače referenční typy.
+
+## <a name="see-also"></a>Viz také
+
+[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)

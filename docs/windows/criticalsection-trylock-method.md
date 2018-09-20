@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 382dbdd2d0816d6ab0846acd0f8c164cd542114f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 44b4e251898ef6386d0642582af2c00881f7a181
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42575838"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408580"
 ---
 # <a name="criticalsectiontrylock-method"></a>CriticalSection::TryLock – metoda
 
@@ -40,7 +40,7 @@ static SyncLock TryLock(
 
 ### <a name="parameters"></a>Parametry
 
-*cs*  
+*cs*<br/>
 Kritický oddíl uživatelem zadaného objektu.
 
 ## <a name="return-value"></a>Návratová hodnota

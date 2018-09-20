@@ -18,47 +18,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26fb2637c5a92a430d72e496cabeb8f5749ccaa1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d21d33d1e90d7c4aac9ea833d0c5bd80f5172312
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711790"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416601"
 ---
 # <a name="readmsr"></a>__readmsr
-**Specifické pro Microsoft**  
-  
- Generuje `rdmsr` instrukce, který čte register specifické pro model určený `register` a vrátí jeho hodnotu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-__int64 __readmsr(   
-   int register   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+**Specifické pro Microsoft**
+
+Generuje `rdmsr` instrukce, který čte register specifické pro model určený `register` a vrátí jeho hodnotu.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+__int64 __readmsr( 
+   int register 
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
 *Registrace*<br/>
-[in] Model konkrétním registru ke čtení.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Hodnota do zadaného registru.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Vnitřní|Architektura|  
-|---------------|------------------|  
-|`__readmsr`|x86, x64|  
-  
- **Soubor hlaviček** \<intrin.h >  
-  
-## <a name="remarks"></a>Poznámky  
- Tato funkce je dostupná pouze v režimu jádra a rutina je dostupný jenom jako vnitřní.  
-  
- Další informace najdete v dokumentaci k AMD.  
-  
-**Specifické pro END Microsoft**  
-  
-## <a name="see-also"></a>Viz také  
- [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[in] Model konkrétním registru ke čtení.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Hodnota do zadaného registru.
+
+## <a name="requirements"></a>Požadavky
+
+|Vnitřní|Architektura|
+|---------------|------------------|
+|`__readmsr`|x86, x64|
+
+**Soubor hlaviček** \<intrin.h >
+
+## <a name="remarks"></a>Poznámky
+
+Tato funkce je dostupná pouze v režimu jádra a rutina je dostupný jenom jako vnitřní.
+
+Další informace najdete v dokumentaci k AMD.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také
+
+[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

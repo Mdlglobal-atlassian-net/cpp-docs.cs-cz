@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71a96e54c3182db3fa57798f962ae5565aeca812
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fa840b2fd6e143715c924d0f7ac67e78eb8306a4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752262"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417539"
 ---
 # <a name="csize-class"></a>Csize – třída
 
@@ -222,8 +222,8 @@ CSize operator-() const throw();
 
 ## <a name="see-also"></a>Viz také
 
-[Ukázky knihovny MFC MDI](../../visual-cpp-samples.md)   
-[Graf hierarchie](../../mfc/hierarchy-chart.md)   
-[Crect – třída](../../atl-mfc-shared/reference/crect-class.md)   
+[Ukázky knihovny MFC MDI](../../visual-cpp-samples.md)<br/>
+[Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
+[CRect – třída](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CPoint – třída](../../atl-mfc-shared/reference/cpoint-class.md)
 

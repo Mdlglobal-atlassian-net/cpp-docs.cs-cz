@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4691a3c3afd5b5dfeececc1244a0dc0d03b9b0d2
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 84000e25e9638699e5f2a521023c762b9c3c9a9e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313062"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411440"
 ---
 # <a name="adding-an-image-for-a-different-display-device-image-editor-for-icons"></a>Přidání obrázku pro zařízení s jiným zobrazením (editor obrázků pro ikony)
 
@@ -41,6 +41,6 @@ Informace o přidávání prostředků do spravovaných projektů, najdete v té
 
 ## <a name="see-also"></a>Viz také
 
-[Ikony a kurzory: prostředky obrázků pro zobrazovací zařízení](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
-[Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Ikony a kurzory: prostředky obrázků pro zobrazovací zařízení](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)<br/>
+[Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Ikony a kurzory: prostředky obrázků pro zobrazovací zařízení](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

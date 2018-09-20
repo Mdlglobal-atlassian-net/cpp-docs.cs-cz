@@ -1,5 +1,5 @@
 ---
-title: Nativní a interoperabilitě .NET | Microsoft Docs
+title: Nativní a vzájemná funkční spolupráce rozhraní .NET | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,26 +25,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cabd21f400b7c0c21faefdf2004dee9ae2cc64ac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6f62ff29ce104362d3057773e09a3cea1f69eed
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33134088"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420481"
 ---
 # <a name="native-and-net-interoperability"></a>Nativní funkce a vzájemná funkční spolupráce rozhraní .NET
-Visual C++ podporuje funkce interoperability umožňujících spravovanými a nespravovanými konstrukce existovat a spolupracovat v rámci stejného sestavení a to i ve stejném souboru. Podporuje malou podmnožinu tuto funkci, jako je například P/Invoke i jinými jazyky rozhraní .NET, ale většina podpory interoperability poskytované Visual C++ není k dispozici v dalších jazycích.  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
- [Smíšená (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md)  
- Popisuje generovaná sestavení s [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) – možnost kompilátoru obsahující obě spravovaných a nespravovaných funkcí.  
-  
- [Použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)  
- Popisuje, jak používat podporu třídy MFC Windows Forms k hostitelské ovládací prvky Windows Forms do aplikací MFC.  
-  
- [Volání nativních funkcí ze spravovaného kódu](../dotnet/calling-native-functions-from-managed-code.md)  
- Popisuje použití non - CLR knihovny DLL z aplikací .NET.  
-  
-## <a name="see-also"></a>Viz také  
 
+Jazyk Visual C++ podporuje interoperabilitu funkcí, které umožňují spravovaným a nespravovaným konstrukce existovat vedle sebe a spolupráci v rámci stejného sestavení a dokonce i ve stejném souboru. Podporuje malou podmnožinu této funkce, jako je například P/Invoke, a jinými jazyky rozhraní .NET, ale většina podpory interoperability poskytované Visual C++ není k dispozici v jiných jazycích.
+
+## <a name="in-this-section"></a>V tomto oddílu
+
+[Smíšená (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md)<br/>
+Popisuje sestavení vygenerované s [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) – možnost kompilátoru, které obsahují spravované a nespravované funkce.
+
+[Použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
+Tento článek popisuje způsob použití třídy pro podporu knihovny MFC Windows Forms k hostitelské ovládací prvky Windows Forms v rámci vašich aplikací knihovny MFC.
+
+[Volání nativních funkcí ze spravovaného kódu](../dotnet/calling-native-functions-from-managed-code.md)<br/>
+Popisuje, jak se dají používat non - CLR knihovny DLL z aplikací .NET.
+
+## <a name="see-also"></a>Viz také
 

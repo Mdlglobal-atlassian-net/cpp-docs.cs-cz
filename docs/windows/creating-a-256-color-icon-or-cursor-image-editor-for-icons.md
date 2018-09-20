@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 930a73f478b02d5aa7a16f262f98131dccba9f76
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1d6e3af00bfe906a1954f7fc1d2b0af1ea52945e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315923"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415912"
 ---
 # <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>Vytvoření ikony nebo kurzoru s 256 barvami (editor obrázků pro ikony)
 
@@ -51,6 +51,6 @@ Informace o přidávání prostředků do spravovaných projektů, najdete v té
 
 ## <a name="see-also"></a>Viz také
 
-[Používání palety s 256 barvami](../windows/using-the-256-color-palette-image-editor-for-icons.md)  
-[Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Používání palety s 256 barvami](../windows/using-the-256-color-palette-image-editor-for-icons.md)<br/>
+[Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Ikony a kurzory: prostředky obrázků pro zobrazovací zařízení](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

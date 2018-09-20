@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9753578de006ed46719d94d5861035ab77dbca6c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 90317405f09695c57c907e94306623d5b3e2386d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752249"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419957"
 ---
 # <a name="date-and-time"></a>Datum a čas
 
@@ -44,6 +44,6 @@ MFC podporuje několika různými způsoby práce s daty a časy. Zde jsou někt
 
 ## <a name="see-also"></a>Viz také
 
-[Koncepty](../mfc/mfc-concepts.md)   
+[Koncepty](../mfc/mfc-concepts.md)<br/>
 [Obecná témata MFC](../mfc/general-mfc-topics.md)
 

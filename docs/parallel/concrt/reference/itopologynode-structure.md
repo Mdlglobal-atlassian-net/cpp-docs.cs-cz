@@ -1,5 +1,5 @@
 ---
-title: Itopologynode – struktura | Microsoft Docs
+title: Itopologynode – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,102 +22,119 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c4168fbfbd2bf17ad8b8b752d2843c8f57b0f3f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: aa11b1e812135a164af841e6a14f81b956335e53
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692688"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398882"
 ---
 # <a name="itopologynode-structure"></a>ITopologyNode – struktura
-Rozhraní pro uzel topologie, jak jsou definovány pomocí Správce prostředků. Uzel obsahuje jeden nebo více prostředků provádění.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+Rozhraní pro uzel topologie definované správcem prostředků. Uzel obsahuje jeden nebo více spuštění prostředků.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 struct ITopologyNode;
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[Itopologynode::getexecutionresourcecount –](#getexecutionresourcecount)|Vrátí počet prostředků provádění seskupeny dohromady v rámci tohoto uzlu.|  
-|[Itopologynode::getfirstexecutionresource –](#getfirstexecutionresource)|Vrátí první provádění prostředku seskupené v rámci tohoto uzlu v pořadí výčtu.|  
-|[Itopologynode::getid –](#getid)|Vrátí správce prostředků jedinečný identifikátor pro tento uzel.|  
-|[Itopologynode::GetNext –](#getnext)|Vrátí rozhraní na další uzel topologie v pořadí výčtu.|  
-|[Itopologynode::getnumanode –](#getnumanode)|Vrátí Windows přiřadit číslo uzlu NUMA, do které patří tento uzel Maanger prostředků.|  
-  
-## <a name="remarks"></a>Poznámky  
- Toto rozhraní je obvykle využité vás topologii tohoto systému jako zjištěnými Resource Manager.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `ITopologyNode`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** concrtrm.h  
-  
- **Namespace:** souběžnosti  
-  
-##  <a name="getexecutionresourcecount"></a>  Itopologynode::getexecutionresourcecount – metoda  
- Vrátí počet prostředků provádění seskupeny dohromady v rámci tohoto uzlu.  
-  
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[Itopologynode::getexecutionresourcecount –](#getexecutionresourcecount)|Vrátí počet spuštění prostředků seskupí dohromady pod tímto uzlem.|
+|[Itopologynode::getfirstexecutionresource –](#getfirstexecutionresource)|Vrátí první spuštění prostředků seskupené pod tento uzel v pořadí výčtu.|
+|[Itopologynode::getid –](#getid)|Vrátí jedinečný identifikátor správce prostředků pro tento uzel.|
+|[Itopologynode::GetNext –](#getnext)|Vrátí rozhraní k dalšímu uzlu topologie v pořadí výčtu.|
+|[Itopologynode::getnumanode –](#getnumanode)|Číslo uzlu NUMA, ke kterému patří tento uzel zdrojů systémem přiřazené vrátí Windows.|
+
+## <a name="remarks"></a>Poznámky
+
+Toto rozhraní se obvykle používá pro vás topologii tohoto systému, jak pomocí Správce prostředků.
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`ITopologyNode`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** concrtrm.h
+
+**Namespace:** souběžnosti
+
+##  <a name="getexecutionresourcecount"></a>  Itopologynode::getexecutionresourcecount – metoda
+
+Vrátí počet spuštění prostředků seskupí dohromady pod tímto uzlem.
+
 ```
 virtual unsigned int GetExecutionResourceCount() const = 0;
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Počet prostředků provádění seskupeny v rámci tohoto uzlu.  
-  
-##  <a name="getfirstexecutionresource"></a>  Itopologynode::getfirstexecutionresource – metoda  
- Vrátí první provádění prostředku seskupené v rámci tohoto uzlu v pořadí výčtu.  
-  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Počet spuštění prostředků seskupí dohromady pod tímto uzlem.
+
+##  <a name="getfirstexecutionresource"></a>  Itopologynode::getfirstexecutionresource – metoda
+
+Vrátí první spuštění prostředků seskupené pod tento uzel v pořadí výčtu.
+
 ```
 virtual ITopologyExecutionResource *GetFirstExecutionResource() const = 0;
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Na první prostředek provádění seskupené v rámci tohoto uzlu v pořadí výčtu.  
-  
-##  <a name="getid"></a>  Itopologynode::getid – metoda  
- Vrátí správce prostředků jedinečný identifikátor pro tento uzel.  
-  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Na první prostředek provádění seskupené pod tento uzel v pořadí výčtu.
+
+##  <a name="getid"></a>  Itopologynode::getid – metoda
+
+Vrátí jedinečný identifikátor správce prostředků pro tento uzel.
+
 ```
 virtual unsigned int GetId() const = 0;
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Správce prostředků jedinečný identifikátor pro tento uzel.  
-  
-### <a name="remarks"></a>Poznámky  
- Concurrency Runtime představuje vláken hardwaru systému ve skupinách uzlů procesoru. Uzly jsou obvykle odvozená od hardwarovou topologii systému. Všechny procesory na konkrétní soketu nebo konkrétní uzel NUMA se například může patřit do stejného uzlu procesoru. Resource Manager přiřadí tyto uzly počínaje jedinečné identifikátory `0` včetně `nodeCount - 1`, kde `nodeCount` představuje celkový počet uzlů procesoru v systému.  
-  
- Počet uzlů můžete získat z funkce [getprocessornodecount –](concurrency-namespace-functions.md).  
-  
-##  <a name="getnext"></a>  Itopologynode::GetNext – metoda  
- Vrátí rozhraní na další uzel topologie v pořadí výčtu.  
-  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Správce prostředků jedinečný identifikátor pro tento uzel.
+
+### <a name="remarks"></a>Poznámky
+
+Modul Concurrency Runtime představuje hardwarových vláken v systému ve skupinách procesoru uzlů. Uzly jsou obvykle odvozena z hardwarovou topologii systému. Všechny procesory na soket zvláštní nebo konkrétní uzel NUMA může například patřit do stejného uzlu procesoru. Resource Manager přiřadí tyto uzly počínaje jedinečné identifikátory `0` včetně `nodeCount - 1`, kde `nodeCount` představuje celkový počet uzlů procesoru v systému.
+
+Počet uzlů, které se získají z funkce [getprocessornodecount –](concurrency-namespace-functions.md).
+
+##  <a name="getnext"></a>  Itopologynode::GetNext – metoda
+
+Vrátí rozhraní k dalšímu uzlu topologie v pořadí výčtu.
+
 ```
 virtual ITopologyNode *GetNext() const = 0;
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Rozhraní na další uzel v pořadí výčtu. Pokud v pořadí výčtu topologie systému nejsou žádné další uzly, tato metoda vrátí hodnotu `NULL`.  
-  
-##  <a name="getnumanode"></a>  Itopologynode::getnumanode – metoda  
- Vrátí Windows přiřadit číslo uzlu NUMA, do které patří tento uzel Maanger prostředků.  
-  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Rozhraní pro další uzel v pořadí výčtu. Pokud v pořadí výčtu topologie systému nejsou žádné další uzly, tato metoda vrátí hodnotu `NULL`.
+
+##  <a name="getnumanode"></a>  Itopologynode::getnumanode – metoda
+
+Číslo uzlu NUMA, ke kterému patří tento uzel zdrojů systémem přiřazené vrátí Windows.
+
 ```
 virtual unsigned long GetNumaNode() const = 0;
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Windows přiřadit číslo uzlu NUMA, do které patří tento uzel Resource Manager.  
-  
-### <a name="remarks"></a>Poznámky  
- Vlákno proxy systémem virtuálních procesorů kořenové patřící do tohoto uzlu bude mít spřažení s alespoň na úrovni uzlu NUMA pro uzel NUMA vrácená touto metodou.  
-  
-## <a name="see-also"></a>Viz také  
- [concurrency – obor názvů](concurrency-namespace.md)
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Číslo uzlu NUMA, ke kterému patří tento uzel správce prostředků přiřazené Windows.
+
+### <a name="remarks"></a>Poznámky
+
+Proxy vlákno spuštěné na kořenovém virtuálním procesoru patřícím do tohoto uzlu bude mít příbuznost alespoň na úrovni uzlu NUMA pro uzel NUMA vrácený touto metodou.
+
+## <a name="see-also"></a>Viz také
+
+[concurrency – obor názvů](concurrency-namespace.md)

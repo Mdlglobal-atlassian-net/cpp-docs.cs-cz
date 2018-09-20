@@ -1,5 +1,5 @@
 ---
-title: Třídy související s ovládacími prvky pro úpravy s formátováním | Microsoft Docs
+title: Třídy související s ovládacími prvky pro úpravy s formátováním | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,17 +22,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f428242ac84adaf36ea0263f8e193dfeca7d0609
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ee7b6400dcd5c91d054b31153c21008d5302bd0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341395"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401261"
 ---
 # <a name="classes-related-to-rich-edit-controls"></a>Třídy související s ovládacími prvky pro úpravy s formátováním
-[Cricheditview –](../mfc/reference/cricheditview-class.md), [CRichEditDoc](../mfc/reference/cricheditdoc-class.md), a [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md) třídy poskytují funkce ovládacího prvku RichEdit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) v kontextu na MFC document/view – architektura. `CRichEditView` udržuje textu a formátování vlastnosti textu. `CRichEditDoc` udržuje seznam položek OLE klienta, které jsou v zobrazení. `CRichEditCntrItem` poskytuje kontejner straně přístup k položce OLE klienta. Chcete-li upravit obsah `CRichEditView`, použijte [CRichEditView::GetRichEditCtrl](../mfc/reference/cricheditview-class.md#getricheditctrl) pro přístup k základní bohaté ovládacích prvků pro úpravy.  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+[Cricheditview –](../mfc/reference/cricheditview-class.md), [cricheditdoc –](../mfc/reference/cricheditdoc-class.md), a [cricheditcntritem –](../mfc/reference/cricheditcntritem-class.md) třídy poskytují funkce pro ovládací prvek RichEdit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) v rámci kontextu architektury dokumentu/zobrazení MFC. `CRichEditView` udržuje textu a formátování vlastnosti textu. `CRichEditDoc` udržuje seznam klientské položky OLE, které jsou v zobrazení. `CRichEditCntrItem` poskytuje kontejner straně přístup k klientskou položku OLE. Chcete-li změnit obsah `CRichEditView`, použijte [CRichEditView::GetRichEditCtrl](../mfc/reference/cricheditview-class.md#getricheditctrl) pro přístup k podkladovým pro úpravy s formátováním ovládacího prvku.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3670924bace1d76f02da816dc061616a4c39e199
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e46bcd45040ffb50ec8bbd10d8d583211d0a3316
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719209"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400494"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -38,7 +38,7 @@ Označuje, že třída podporuje agregaci.
 
 ### <a name="parameters"></a>Parametry
 
-*value*  
+*value*<br/>
 (Volitelné) Parametr označuje, kdy se dají agregovat objektu COM:
 
 - `never` Objekt COM nemůže být agregován.
@@ -94,7 +94,7 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](..
 
 ## <a name="see-also"></a>Viz také
 
-[IDL – atributy](../windows/idl-attributes.md)  
-[Atributy třídy](../windows/class-attributes.md)  
-[Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[IDL – atributy](../windows/idl-attributes.md)<br/>
+[Atributy třídy](../windows/class-attributes.md)<br/>
+[Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [Agregace](/windows/desktop/com/aggregation)  

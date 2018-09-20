@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 08347b4ccfa44d8645acc2bd5e96775bab4e7740
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: cd9ab28ccce14c5ac0975b7050588ee6524cfcc9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601493"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408346"
 ---
 # <a name="eventsource-class"></a>EventSource – třída
 
@@ -53,7 +53,7 @@ class EventSource;
 
 ### <a name="parameters"></a>Parametry
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 Rozhraní pro delegáta, který představuje obslužnou rutinu události.
 
 ## <a name="members"></a>Členové
@@ -104,10 +104,10 @@ HRESULT Add(
 
 ### <a name="parameters"></a>Parametry
 
-*delegateInterface*  
+*delegateInterface*<br/>
 Rozhraní pro objekt delegáta, který představuje obslužnou rutinu události.
 
-*Token*  
+*Token*<br/>
 Po dokončení této operace, popisovač, který představuje událost. Používat tento token parametru [Remove()](#remove) metoda zahodíte obslužné rutiny události.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -302,64 +302,64 @@ void InvokeAll(
 
 ### <a name="parameters"></a>Parametry
 
-*T0*  
+*T0*<br/>
 Typ argumentu ID nultého obslužné rutiny události.
 
-*T1*  
+*T1*<br/>
 Typ prvního argumentu obslužné rutiny události.
 
-*T2*  
+*T2*<br/>
 Typ druhého argumentu obslužné rutiny události.
 
-*T3*  
+*T3*<br/>
 Typ třetí argument obslužné rutiny události.
 
-*T4*  
+*T4*<br/>
 Typ čtvrtého argumentu obslužné rutiny události.
 
-*T5*  
+*T5*<br/>
 Typ pátého argumentu obslužné rutiny události.
 
-*T6*  
+*T6*<br/>
 Typ šestého argumentu obslužné rutiny události.
 
-*T7*  
+*T7*<br/>
 Typ sedmého argumentu obslužné rutiny události.
 
-*T8*  
+*T8*<br/>
 Typ osmého argumentu obslužné rutiny události.
 
-*T9*  
+*T9*<br/>
 Typ devátého argumentu obslužné rutiny události.
 
-*arg0*  
+*arg0*<br/>
 Argument obslužné rutiny události ID nultého.
 
-*arg1*  
+*arg1*<br/>
 První argument obslužné rutiny události.
 
-*arg2*  
+*arg2*<br/>
 Druhý argument obslužné rutiny události.
 
-*arg3*  
+*arg3*<br/>
 Třetí argument obslužné rutiny události.
 
-*arg4*  
+*arg4*<br/>
 Čtvrtý argument obslužné rutiny události.
 
-*arg5*  
+*arg5*<br/>
 Pátý argument obslužné rutiny události.
 
-*arg6*  
+*arg6*<br/>
 Šestý argument obslužné rutiny události.
 
-*arg7*  
+*arg7*<br/>
 Sedmého argumentu obslužné rutiny události.
 
-*arg8*  
+*arg8*<br/>
 Argument obslužné rutiny události osmého.
 
-*arg9*  
+*arg9*<br/>
 Devátého argumentu obslužné rutiny události.
 
 ## <a name="remove"></a>EventSource::Remove –
@@ -374,7 +374,7 @@ HRESULT Remove(
 
 ### <a name="parameters"></a>Parametry
 
-*Token*  
+*Token*<br/>
 Popisovač, který představuje obslužnou rutinu události. Tento token byl vrácen při registraci obslužné rutiny události byl [Add()](#add) metody.
 
 ### <a name="return-value"></a>Návratová hodnota

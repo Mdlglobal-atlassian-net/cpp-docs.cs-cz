@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3e0c8996823de35bbfd85d595556db933f34238a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 90a1b527d12e581c42fc9519e56d453f845e0b63
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599219"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419714"
 ---
 # <a name="modulegetclassobject-method"></a>Module::GetClassObject – metoda
 
@@ -31,7 +31,7 @@ Načte mezipaměť objekty pro vytváření tříd.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
- HRESULT GetClassObject(
+HRESULT GetClassObject(
    REFCLSID clsid,
    REFIID riid,
    _Deref_out_ void **ppv,
@@ -41,16 +41,16 @@ Načte mezipaměť objekty pro vytváření tříd.
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor CLSID*  
+*identifikátor CLSID*<br/>
 ID třídy.
 
-*riid*  
+*riid*<br/>
 ID rozhraní, které požadujete.
 
-*ppv*  
+*ppv*<br/>
 Ukazatel na vráceného objektu.
 
-*název_serveru*  
+*název_serveru*<br/>
 Název serveru, který je zadán buď `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx`, nebo `ActivatableClass` – makro; nebo **nullptr** získat výchozí název serveru.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -66,4 +66,5 @@ Tuto metodu lze používejte pouze pro model COM, nikoliv modul Windows Runtime.
 **Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Viz také
+
 [Module – třída](../windows/module-class.md)

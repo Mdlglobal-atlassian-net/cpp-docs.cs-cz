@@ -1,5 +1,5 @@
 ---
-title: Modální a nemodální dialogová okna | Microsoft Docs
+title: Modální a nemodální dialogová okna | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4f03d67e1eb9962f4303694db4850e800151404
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e355c3bcef9edb68e49903dafbf4719fe0aa925
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346558"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417524"
 ---
 # <a name="modal-and-modeless-dialog-boxes"></a>Modální a nemodální dialogová okna
-Třídu můžete použít [CDialog](../mfc/reference/cdialog-class.md) ke správě dva druhy dialogová okna:  
-  
--   *Modální dialogová okna*, které vyžadují, aby uživatel reagovat před pokračováním programu  
-  
--   *Nemodální dialogová okna*, který Zůstaňte na obrazovce a jsou k dispozici pro použití v každém okamžiku ale povolit další aktivity uživatele  
-  
- Úpravy prostředků a postupech pro vytvoření šablony dialogového okna jsou stejné pro modální a nemodální dialogová okna.  
-  
- Vytváření dialogového okna pro váš program vyžaduje následující kroky:  
-  
-1.  Použití [editoru dialogového okna](../windows/dialog-editor.md) návrh dialogové okno a vytvořit její prostředek šablony dialogového okna.  
-  
-2.  Vytvoření třídy dialogového okna.  
-  
-3.  Připojení [prostředku dialogového okna Ovládací prvky pro obslužné rutiny zpráv](../windows/adding-event-handlers-for-dialog-box-controls.md) ve třídě dialog.  
-  
-4.  Přidání členů data související s ovládacími prvky dialogových oken a k určení [výměna dialogových dat](../mfc/dialog-data-exchange.md) a [ověření dat dialogové okno](../mfc/dialog-data-validation.md) ovládacích prvků.  
-  
-## <a name="see-also"></a>Viz také  
- [Dialogová okna](../mfc/dialog-boxes.md)   
- [Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
+
+Můžete použít třídu [CDialog](../mfc/reference/cdialog-class.md) spravovat dva typy dialogová okna:
+
+- *Modální dialogová okna*, což vyžaduje, aby uživatel reagovat před pokračováním program
+
+- *Nemodální dialogová okna*, která zůstanou na obrazovce a jsou k dispozici pro použití v každém okamžiku ale povolit další aktivity uživatelů
+
+Úpravy prostředků a postupech pro vytvoření šablony dialogového okna je stejný pro modální a nemodální dialogová okna.
+
+Vytvoření dialogového okna pro váš program vyžaduje následující kroky:
+
+1. Použití [editoru dialogového okna](../windows/dialog-editor.md) navrhovat dialogových oken a vytvoření jeho prostředku šablony dialogového okna.
+
+1. Vytvoření třídy dialogového okna.
+
+1. Připojení [prostředku dialogového okna ovládacích prvků pro obslužné rutiny zpráv](../windows/adding-event-handlers-for-dialog-box-controls.md) ve třídě dialog.
+
+1. Přidejte datové členy související s ovládacími prvky v dialogovém okně a k určení [výměna dat dialogových oken](../mfc/dialog-data-exchange.md) a [ověřování dat dialogového okna](../mfc/dialog-data-validation.md) pro ovládací prvky.
+
+## <a name="see-also"></a>Viz také
+
+[Dialogová okna](../mfc/dialog-boxes.md)<br/>
+[Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
 

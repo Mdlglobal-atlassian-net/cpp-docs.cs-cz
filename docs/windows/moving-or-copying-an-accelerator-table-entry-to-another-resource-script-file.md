@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fcdb47348ff5e3c9e75df64608d246fc2e911ca7
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0d3f75ef8c2820c227716e3208ff2cded54d1fd7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315207"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414729"
 ---
 # <a name="moving-or-copying-an-accelerator-table-entry-to-another-resource-script-file-c"></a>Přesunutí nebo kopírování záznamu tabulky akcelerátorů do jiného souboru skriptu prostředků (C++)
 
@@ -51,5 +51,5 @@ Win32
 
 ## <a name="see-also"></a>Viz také
 
-[Úprava tabulek akcelerátorů](../windows/editing-accelerator-tables.md)  
+[Úprava tabulek akcelerátorů](../windows/editing-accelerator-tables.md)<br/>
 [Editor akcelerátorů](../windows/accelerator-editor.md)

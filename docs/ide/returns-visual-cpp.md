@@ -18,43 +18,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed871ee2148b6b731ab9354cd45c2e178b4d85a8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5020a93f8901593b01d19b118a20fd08fc7f9c1d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056076"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409204"
 ---
 # <a name="ltreturnsgt-visual-c"></a>&lt;Vrátí&gt; (Visual C++)
-\<Vrátí > značky byste měli použít ve komentář pro deklaraci metody k popisu návratovou hodnotu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-<returns>description</returns>  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+\<Vrátí > značky byste měli použít ve komentář pro deklaraci metody k popisu návratovou hodnotu.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+<returns>description</returns>
+```
+
+#### <a name="parameters"></a>Parametry
+
 *Popis*<br/>
-Popis návratovou hodnotu.  
-  
-## <a name="remarks"></a>Poznámky  
- Kompilovat s [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// xml_returns_tag.cpp  
-// compile with: /LD /clr /doc  
-// post-build command: xdcmake xml_returns_tag.dll  
-  
-/// Text for class MyClass.  
-public ref class MyClass {  
-public:  
-   /// <returns>Returns zero.</returns>  
-   int GetZero() { return 0; }  
-};  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Dokumentace XML](../ide/xml-documentation-visual-cpp.md)
+Popis návratovou hodnotu.
+
+## <a name="remarks"></a>Poznámky
+
+Kompilovat s [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.
+
+## <a name="example"></a>Příklad
+
+```
+// xml_returns_tag.cpp
+// compile with: /LD /clr /doc
+// post-build command: xdcmake xml_returns_tag.dll
+
+/// Text for class MyClass.
+public ref class MyClass {
+public:
+   /// <returns>Returns zero.</returns>
+   int GetZero() { return 0; }
+};
+```
+
+## <a name="see-also"></a>Viz také
+
+[Dokumentace XML](../ide/xml-documentation-visual-cpp.md)

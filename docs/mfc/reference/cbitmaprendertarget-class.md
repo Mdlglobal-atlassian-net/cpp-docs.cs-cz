@@ -1,5 +1,5 @@
 ---
-title: Třída CBitmapRenderTarget | Microsoft Docs
+title: Cbitmaprendertarget – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,129 +28,146 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0eece5c7ba74f523836ab5916b8817671dac287
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: ee70825711efd82ce451a0433a63d98d93850552
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956749"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417056"
 ---
-# <a name="cbitmaprendertarget-class"></a>CBitmapRenderTarget – třída
-Obálka pro ID2D1BitmapRenderTarget.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CBitmapRenderTarget : public CRenderTarget;  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CBitmapRenderTarget::CBitmapRenderTarget](#cbitmaprendertarget)|Vytvoří objekt CBitmapRenderTarget.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CBitmapRenderTarget::Attach](#attach)|Připojí existující vykreslení cílové rozhraní k objektu|  
-|[CBitmapRenderTarget::Detach](#detach)|Umožňuje odpojit vykreslení cílové rozhraní z objektu|  
-|[CBitmapRenderTarget::GetBitmap](#getbitmap)|Načte bitovou mapu pro tento cíl vykreslení. Vrácený rastrový obrázek slouží pro vykreslení operace.|  
-|[CBitmapRenderTarget::GetBitmapRenderTarget](#getbitmaprendertarget)|Vrátí ID2D1BitmapRenderTarget rozhraní|  
-  
-### <a name="public-operators"></a>Veřejné operátory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *](#operator_id2d1bitmaprendertarget_star)|Vrátí ID2D1BitmapRenderTarget rozhraní|  
-  
-### <a name="protected-data-members"></a>Chráněné datové členy  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CBitmapRenderTarget::m_pBitmapRenderTarget](#m_pbitmaprendertarget)|Ukazatel na objekt ID2D1BitmapRenderTarget.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CRenderTarget](../../mfc/reference/crendertarget-class.md)  
-  
- `CBitmapRenderTarget` 
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxrendertarget.h  
-  
-##  <a name="attach"></a>  CBitmapRenderTarget::Attach  
- Připojí existující vykreslení cílové rozhraní k objektu  
-  
-```  
+# <a name="cbitmaprendertarget-class"></a>Cbitmaprendertarget – třída
+
+Obálka pro ID2D1BitmapRenderTarget.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CBitmapRenderTarget : public CRenderTarget;
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[CBitmapRenderTarget::CBitmapRenderTarget](#cbitmaprendertarget)|Vytvoří objekt cbitmaprendertarget –.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CBitmapRenderTarget::Attach](#attach)|Bude k obrazci existující vykreslení rozhraní cílového objektu|
+|[CBitmapRenderTarget::Detach](#detach)|Odpojí vykreslování cílového rozhraní z objektu|
+|[CBitmapRenderTarget::GetBitmap](#getbitmap)|Načte rastrový obrázek pro tento cíl vykreslování. Vrácené rastrového obrázku je možné pro vykreslení operace.|
+|[CBitmapRenderTarget::GetBitmapRenderTarget](#getbitmaprendertarget)|Vrátí ID2D1BitmapRenderTarget rozhraní|
+
+### <a name="public-operators"></a>Veřejné operátory
+
+|Název|Popis|
+|----------|-----------------|
+|[CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *](#operator_id2d1bitmaprendertarget_star)|Vrátí ID2D1BitmapRenderTarget rozhraní|
+
+### <a name="protected-data-members"></a>Chránění členové dat
+
+|Název|Popis|
+|----------|-----------------|
+|[CBitmapRenderTarget::m_pBitmapRenderTarget](#m_pbitmaprendertarget)|Ukazatel na objekt ID2D1BitmapRenderTarget.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[Třídy CObject](../../mfc/reference/cobject-class.md)
+
+[Crendertarget –](../../mfc/reference/crendertarget-class.md)
+
+`CBitmapRenderTarget`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxrendertarget.h
+
+##  <a name="attach"></a>  CBitmapRenderTarget::Attach
+
+Bude k obrazci existující vykreslení rozhraní cílového objektu
+
+```
 void Attach(ID2D1BitmapRenderTarget* pTarget);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pTarget*  
- Existující vykreslení cílové rozhraní. Nemůže mít hodnotu NULL  
-  
-##  <a name="cbitmaprendertarget"></a>  CBitmapRenderTarget::CBitmapRenderTarget  
- Vytvoří objekt CBitmapRenderTarget.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pTarget*<br/>
+Existující rozhraní cíl vykreslování. Nesmí být NULL.
+
+##  <a name="cbitmaprendertarget"></a>  CBitmapRenderTarget::CBitmapRenderTarget
+
+Vytvoří objekt cbitmaprendertarget –.
+
+```
 CBitmapRenderTarget();
-```  
-  
-##  <a name="detach"></a>  CBitmapRenderTarget::Detach  
- Umožňuje odpojit vykreslení cílové rozhraní z objektu  
-  
-```  
+```
+
+##  <a name="detach"></a>  CBitmapRenderTarget::Detach
+
+Odpojí vykreslování cílového rozhraní z objektu
+
+```
 ID2D1BitmapRenderTarget* Detach();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na odpojit vykreslit cílové rozhraní.  
-  
-##  <a name="getbitmap"></a>  CBitmapRenderTarget::GetBitmap  
- Načte bitovou mapu pro tento cíl vykreslení. Vrácený rastrový obrázek slouží pro vykreslení operace.  
-  
-```  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Ukazatel na odpojeném vykreslení cílové rozhraní.
+
+##  <a name="getbitmap"></a>  CBitmapRenderTarget::GetBitmap
+
+Načte rastrový obrázek pro tento cíl vykreslování. Vrácené rastrového obrázku je možné pro vykreslení operace.
+
+```
 BOOL GetBitmap(CD2DBitmap& bitmap);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Rastrový obrázek*  
- Po návratu tato metoda obsahuje platný rastrový obrázek pro tento cíl vykreslení. Tento rastrový obrázek slouží pro vykreslení operace.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Pokud metoda bude úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.  
-  
-##  <a name="getbitmaprendertarget"></a>  CBitmapRenderTarget::GetBitmapRenderTarget  
- Vrátí ID2D1BitmapRenderTarget rozhraní  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*Rastrový obrázek*<br/>
+Po návratu metody obsahuje platný rastrový obrázek pro tento cíl vykreslování. Tento rastrový obrázek slouží pro vykreslení operace.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pokud metoda uspěje, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.
+
+##  <a name="getbitmaprendertarget"></a>  CBitmapRenderTarget::GetBitmapRenderTarget
+
+Vrátí ID2D1BitmapRenderTarget rozhraní
+
+```
 ID2D1BitmapRenderTarget* GetBitmapRenderTarget();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na rozhraní ID2D1BitmapRenderTarget nebo hodnota NULL, pokud objekt dosud není inicializován.  
-  
-##  <a name="m_pbitmaprendertarget"></a>  CBitmapRenderTarget::m_pBitmapRenderTarget  
- Ukazatel na objekt ID2D1BitmapRenderTarget.  
-  
-```  
-ID2D1BitmapRenderTarget* m_pBitmapRenderTarget;  
-```  
-  
-##  <a name="operator_id2d1bitmaprendertarget_star"></a>  CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *  
- Vrátí ID2D1BitmapRenderTarget rozhraní  
-  
-```  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Ukazatel na rozhraní ID2D1BitmapRenderTarget nebo hodnota NULL, pokud objekt ještě není inicializován.
+
+##  <a name="m_pbitmaprendertarget"></a>  CBitmapRenderTarget::m_pBitmapRenderTarget
+
+Ukazatel na objekt ID2D1BitmapRenderTarget.
+
+```
+ID2D1BitmapRenderTarget* m_pBitmapRenderTarget;
+```
+
+##  <a name="operator_id2d1bitmaprendertarget_star"></a>  CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *
+
+Vrátí ID2D1BitmapRenderTarget rozhraní
+
+```
 operator ID2D1BitmapRenderTarget*();
-```   
-  
-### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na rozhraní ID2D1BitmapRenderTarget nebo hodnota NULL, pokud objekt dosud není inicializován.  
-  
-## <a name="see-also"></a>Viz také  
- [Třídy](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Ukazatel na rozhraní ID2D1BitmapRenderTarget nebo hodnota NULL, pokud objekt ještě není inicializován.
+
+## <a name="see-also"></a>Viz také
+
+[Třídy](../../mfc/reference/mfc-classes.md)

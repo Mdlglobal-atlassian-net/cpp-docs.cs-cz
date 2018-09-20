@@ -18,33 +18,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58d2b1eaee54ac33e687d457830372f2bef06230
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 687203787bdab69751aabf0672fe1269974b3014
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718507"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399601"
 ---
 # <a name="managed-resources-property-page"></a>Stránka vlastností spravovaných zdrojů
-Povolí nastavení pro kompilátor prostředků.  
-  
- **Spravovaných prostředků** stránka vlastností obsahuje následující vlastnosti:  
-  
+
+Povolí nastavení pro kompilátor prostředků.
+
+**Spravovaných prostředků** stránka vlastností obsahuje následující vlastnosti:
+
 - **Logický název prostředku**
 
-   Určuje, *logický název* z vygenerované přechodového souboru .resources. Logický název je název používaný k načtení prostředku. Pokud není zadán žádný logický název, název souboru prostředku (RESX) se používá jako logický název.  
-  
+   Určuje, *logický název* z vygenerované přechodového souboru .resources. Logický název je název používaný k načtení prostředku. Pokud není zadán žádný logický název, název souboru prostředku (RESX) se používá jako logický název.
+
 - **Název výstupního souboru**
 
-   Určuje název konečného výstupního souboru, jež přispívají k souboru prostředku (RESX).  
-  
+   Určuje název konečného výstupního souboru, jež přispívají k souboru prostředku (RESX).
+
 - **Výchozí lokalizované prostředky**
 
-   Určuje, zda soubor daného .resx přispívá do výchozích prostředků nebo satelitní knihovna .dll.  
-  
-Informace o tom, jak získat přístup **spravovaných prostředků** stránky vlastností naleznete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Pomocí RC (RC příkazového řádku)](/windows/desktop/menurc/using-rc-the-rc-command-line-)   
- [Stránky vlastností](../ide/property-pages-visual-cpp.md)   
- [/ASSEMBLYRESOURCE (vložení spravovaného prostředku)](../build/reference/assemblyresource-embed-a-managed-resource.md)
+   Určuje, zda soubor daného .resx přispívá do výchozích prostředků nebo satelitní knihovna .dll.
+
+Informace o tom, jak získat přístup **spravovaných prostředků** stránky vlastností naleznete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).
+
+## <a name="see-also"></a>Viz také
+
+[Pomocí RC (RC příkazového řádku)](/windows/desktop/menurc/using-rc-the-rc-command-line-)<br>
+[Stránky vlastností](../ide/property-pages-visual-cpp.md)<br>
+[/ASSEMBLYRESOURCE (vložení spravovaného prostředku)](../build/reference/assemblyresource-embed-a-managed-resource.md)

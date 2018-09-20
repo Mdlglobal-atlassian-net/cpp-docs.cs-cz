@@ -1,5 +1,5 @@
 ---
-title: 'TN057: Lokalizace komponent MFC | Microsoft Docs'
+title: 'TN057: Lokalizace komponent MFC | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -23,31 +23,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec786277432ab1ce47614c3afac627733edc4985
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 8dcd3117d50d2d8905e5382cf226ba487c13a7c7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121154"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414209"
 ---
 # <a name="tn057-localization-of-mfc-components"></a>TN057: Lokalizace komponent MFC
 
 > [!NOTE]
-> Následující Technická poznámka nebyla aktualizována vzhledem k tomu, že byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata může být zastaralý nebo není správný. Nejnovější informace se doporučuje, vyhledejte téma týkající se v indexu online dokumentaci.
+> Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
 
-Tato poznámka popisuje některé návrhy a postupy, které můžete použít k lokalizaci příslušné součásti, pokud je aplikace nebo OLE řízení nebo knihovnu DLL, kterou používá MFC.
+Tato poznámka popisuje některé návrhy a postupy, které můžete použít k lokalizaci komponenty, pokud je aplikace nebo OLE řídit nebo knihovnu DLL, která používá knihovnu MFC.
 
 ## <a name="overview"></a>Přehled
 
-Skutečně existují dva problémy vyřešit, kdy lokalizace komponenty, která používá MFC. Nejprve je nutné lokalizovat vaše vlastní prostředky – řetězců, dialogová okna a další prostředky, které jsou specifické pro příslušné součásti. Většina komponenty vyvíjené v MFC také zahrnovat a používat počet prostředků, které jsou definované knihovnou MFC. Je nutné zadat lokalizované prostředky MFC také. Naštěstí několik jazyků jsou už poskytuje MFC sám sebe.
+Ve skutečnosti existují dva problémy vyřešit, kdy lokalizace komponenty, která používá knihovnu MFC. Nejprve musíte lokalizovat vaše vlastní prostředky – řetězců, dialogová okna a další prostředky, které jsou specifické pro vaše komponenta. Většina komponent, které jsou vytvořené pomocí knihovny MFC také zahrnout a používat celou řadu materiálů, které jsou definované knihovnou MFC. Je nutné zadat také lokalizované prostředky knihovny MFC. Naštěstí několik jazyků jsou již poskytuje knihovna MFC sama.
 
-Kromě toho příslušné součásti by měl připravte se na spuštění v jeho cílové prostředí (Evropského nebo DBCS povolené prostředí). Ve většině případů to závisí na vaší aplikace správně práce s nastavenou rozšířené znaky a zpracování řetězce s dvoubajtovými znaky. MFC, ve výchozím nastavení zapnutá, pro obě tyto prostředí tak, že je možné, že jeden po celém světě binární soubor, který se používá na všech platformách s právě různých prostředků zapojen během instalace.
+Kromě toho by měli být připraveni vaše komponenta spouštění v cílovém prostředí (prostředí Evropského nebo povolené znaky DBCS). Ve většině případů to závisí na vaší aplikaci správně nakládání s rozšířené sady znaků a zpracování řetězců s dvoubajtovými znaky. Knihovny MFC, ve výchozím nastavení zapnutá, u obou těchto prostředí tak, že je možné mít jeden po celém světě binární soubor, který se používá na všech platformách se právě různé prostředky, které jsou zapojené do elektrické zásuvky během instalace.
 
-## <a name="localizing-your-components-resources"></a>Lokalizace prostředků příslušné součásti
+## <a name="localizing-your-components-resources"></a>Lokalizace prostředků komponenty
 
-Lokalizace aplikací nebo knihovny DLL musí zahrnovat jednoduše nahrazení prostředků s prostředky, které splňují cílový jazyk. Pro vaše vlastní prostředky, to je relativně jednoduché: Upravit prostředky v editoru prostředků a sestavit aplikaci. Pokud váš kód je napsán správně, že bude obsahovat žádné řetězce nebo text, který chcete pro lokalizaci pevně do zdrojového kódu C++ - všechny lokalizace stačí jednoduše změnou prostředky. Ve skutečnosti můžete implementovat příslušné součásti tak, aby všechny lokalizované verze poskytuje i nezahrnuje sestavení původní kódu. Toto je složitější, ale je také vhodné a mechanismus zvolené pro MFC sám sebe. Je také možné lokalizovat aplikaci načítání souboru EXE nebo DLL do editoru prostředků a přímou úpravou prostředky. Při možný vyžaduje vyrovnání tyto změny pokaždé, když vytvoříte novou verzi vaší aplikace.
+Lokalizace aplikace nebo knihovna DLL by měly zahrnovat jednoduše nahrazení prostředků s prostředky, které odpovídají cílový jazyk. Pro vaše vlastní prostředky. to je poměrně jednoduchá: úprava prostředků v editoru prostředků a sestavení aplikace. Pokud váš kód je napsán správně, že bude obsahovat žádné řetězce nebo text, který chcete lokalizovat pevně zakódovaný do zdrojového kódu C++ – všechny lokalizace to provést úpravou jednoduše prostředky. Ve skutečnosti můžete implementovat vaše komponenta tak, aby všechny lokalizované verze poskytuje i nezahrnuje sestavení původního kódu. To je mnohem složitější, ale je také vhodné a mechanismu, který jste zvolili pro knihovna MFC sama. Také je možné lokalizovat aplikaci tak, že načítání souboru EXE nebo knihovny DLL do editoru prostředků a prostředky můžete upravovat přímo. Při nejbližším vyžaduje vyrovnání tyto změny pokaždé, když vytvoříte novou verzi vaší aplikace.
 
-Jeden způsob, jak zabránit, který se má najít všechny prostředky v samostatné knihovny DLL, někdy označuje jako satelitní knihovny DLL. Tento soubor DLL je pak načten dynamicky za běhu a prostředky jsou načteny z této knihovny DLL místo z hlavní modul s vašeho kódu. MFC přímo podporuje tuto metodu. Vezměte v úvahu aplikace s názvem Moje aplikace. EXE; může mít všechny jeho prostředky umístěný v knihovně DLL názvem MYRES. KNIHOVNY DLL. Do aplikace `InitInstance` by ji, proveďte následující kroky k načtení této knihovny DLL a způsobit MFC načíst prostředky z tohoto umístění:
+Jedním ze způsobů, aby se zabránilo, který je k vyhledání všech prostředků v samostatné knihovně DLL, říká se jim satelitní knihovny DLL. Tato knihovna DLL je pak načten dynamicky za běhu a prostředky jsou načteny z knihovny DLL místo z hlavní modul s vaším kódem. Knihovna MFC přímo podporuje tento přístup. Vezměte v úvahu aplikace s názvem MYAPP. SOUBOR EXE; může mít všechny její prostředky umístěné v knihovně DLL volána MYRES. KNIHOVNY DLL. V aplikaci prvku `InitInstance` by provedl následující příkaz pro načtení této knihovny DLL a způsobit, že MFC se načíst prostředky z tohoto umístění:
 
 ```cpp
 CMyApp::InitInstance()
@@ -63,26 +63,26 @@ CMyApp::InitInstance()
 }
 ```
 
-Od toho načte MFC z knihovny DLL místo z myapp.exe prostředky. Všechny prostředky, ale musí být součástí této knihovny DLL; MFC nebude hledat instance aplikace při hledání danému prostředku. Tento postup platí stejnou měrou i pro regulární MFC – knihovny DLL a také ovládacích prvků technologie OLE. Instalační program by zkopírujte příslušnou verzi MYRES. V závislosti na národní prostředí, které prostředků knihovny DLL přeje uživatele.
+MFC od té chvíle se bude načítat prostředky z knihovny DLL místo z myapp.exe. Všechny prostředky, musí však být k dispozici v této knihovně DLL; MFC nebude hledat instance aplikace při hledání daný prostředek. Tento postup se vztahuje stejnou měrou i na regulární knihovny DLL MFC také ovládacích prvků technologie OLE. Instalační program budou zkopírovány příslušnou verzi MYRES. Knihovny DLL v závislosti na národní prostředí, které prostředků chcete uživatele.
 
-Je poměrně snadné vytvoření prostředku pouze knihovny DLL. Vytvoření projektu knihovny DLL, přidejte vaše. RC souboru k němu a přidejte potřebné prostředky. Pokud máte existující projekt, který nepoužívá tato technika, můžete zkopírovat prostředky z daného projektu. Po přidání souboru prostředků do projektu, jste skoro připraveni sestavte projekt. Jediné, co musíte udělat, je nastavený linkeru možnosti, které zahrnují **/NOENTRY**. Tato hodnota informuje linkeru, má knihovna DLL žádný vstupní bod - vzhledem k tomu, že má žádný kód, nemá žádné vstupní bod.
+Je poměrně snadné vytvořit prostředek pouze knihovny DLL. Vytvoření projektu knihovny DLL, přidejte vaše. RC do něj a přidejte potřebné prostředky. Pokud máte existující projekt, který nepoužívá tato technika, můžete zkopírovat prostředky z tohoto projektu. Po přidání souborů prostředků do projektu, jste téměř připraveni k sestavení projektu. Jediné, co musíte udělat, je nastavte linker v případě možnosti, které zahrnují **NOENTRY**. Říká linkeru, že má knihovna DLL bez vstupního bodu – protože nemá žádný kód, nemá žádný vstupní bod.
 
 > [!NOTE]
-> Editor prostředků ve Visual C++ 4.0 a novější podporuje několik jazyků za. RC soubor. Proto může být velmi snadno se spravuje vaše lokalizace v jednom projektu. Preprocesor – direktivy generované editoru prostředků jsou ovládaná prostředky pro jednotlivé jazyky.
+> Editor prostředků Visual C++ 4.0 a novější podporuje více jazyků na. Soubor RC. Může být velmi snadná správa vašich lokalizace v jednom projektu. Prostředky pro každý jazyk řízeno pomocí direktivy preprocesoru generovaných editor prostředků.
 
-## <a name="using-the-provided-mfc-localized-resources"></a>Pomocí zadané MFC místní zdroje
+## <a name="using-the-provided-mfc-localized-resources"></a>Pomocí zadaného MFC lokalizované prostředky
 
-Všechny aplikace MFC, který můžete vytvořit opětovně používá dvě věci z rozhraní MFC: kód a prostředky. To znamená MFC má různé chybové zprávy, integrované dialogová okna a další prostředky, které jsou používány třídy MFC. Chcete-li zcela lokalizaci vaší aplikace, budete muset lokalizaci pouze prostředky aplikace, ale také prostředky, které pochází přímo z MFC. MFC poskytuje řadu různé jazykové soubory prostředků automaticky, takže pokud jazyk, který cílíte na jeden z jazyků, které již podporuje MFC, stačí a ujistěte se, že používáte tyto lokalizované prostředky.
+Všechny aplikace knihovny MFC, který jste vytvořili opětovně používá dvě věci z knihovny MFC: kód a prostředky. To znamená knihovna MFC má různé chybové zprávy, integrované dialogová okna a další prostředky, které používají třídy knihovny MFC. Pokud chcete úplně lokalizovat vaši aplikaci, je potřeba lokalizovat pouze prostředky vaší aplikace, ale také prostředky, které pocházejí přímo z knihovny MFC. Knihovna MFC poskytuje řadu různé jazykové soubory prostředků automaticky, tak, že pokud jazyk, který se zaměřujete na jeden z těchto jazyků, které již podporuje knihovny MFC, stejně musíte zajistit, aby že pomocí těchto lokalizovaných prostředků.
 
-Době psaní tohoto textu MFC podporuje čínština, němčina, španělština, francouzština, italština, japonština a korejština. Soubory, které obsahují tyto lokalizované verze jsou v MFC\INCLUDE\L.* ("L" je zkratka pro lokalizovaný) adresáře. Němčině soubory jsou v MFC\INCLUDE\L.DEU, např. Chcete-li způsobit, že aplikace pro použití těchto RC – soubory místo soubory nacházející se v MFC\INCLUDE, přidejte `/IC:\PROGRAM FILES\MICROSOFT VISUAL STUDIO .NET 2003\VC7\MFC\INCLUDE\L.DEU` do RC příkazového řádku (Toto je jenom jako příklad; by bylo potřeba nahradit národní prostředí volba, jakož i adresáři, do které jste nainstalovali Visual C ++).
+V době psaní tohoto návodu MFC podporuje čínština, němčina, španělština, francouzština, italština, japonština a korejštině. Soubory, které obsahují tyto lokalizované verze jsou v MFC\INCLUDE\L.* ("L" znamená lokalizovanou) adresáře. Německé soubory jsou v MFC\INCLUDE\L.DEU, např. Chcete-li způsobit, že aplikace k používání těchto souborů RC místo souborů umístěných v MFC\INCLUDE, přidejte `/IC:\PROGRAM FILES\MICROSOFT VISUAL STUDIO .NET 2003\VC7\MFC\INCLUDE\L.DEU` RC příkazový řádek (to je jenom pro příklad, bude muset nahradit vaším názvem národního prostředí volbou, jakož i adresáře, do kterého jste nainstalovali Visual C ++).
 
-Výše uvedené pokyny budou fungovat, pokud aplikace odkazuje staticky MFC. Většina aplikací propojit dynamicky (protože takové je výchozí objekty AppWizard). V tomto scénáři, ne jenom kód je dynamicky propojené - tak prostředků. V důsledku toho je možné lokalizovat vaše prostředky v aplikaci, ale prostředky implementace MFC bude stále načten z MFC7x.DLL (nebo novější) nebo z MFC7xLOC.DLL Pokud existuje. Můžete to dosahují ze dvou různých úhlů.
+Viz pokyny výše bude fungovat, pokud vaše aplikace staticky propojuje s knihovnou MFC. Většina aplikací propojit dynamicky (protože to je výchozí AppWizard). V tomto scénáři je nejen kódu dynamicky propojené – to jsou prostředky. V důsledku toho je možné lokalizovat prostředky ve vaší aplikaci, ale prostředky implementace MFC stále se načtou z MFC7x.DLL (nebo novější) nebo z MFC7xLOC.DLL Pokud existuje. Můžete to přistupovat ze dvou různých úhlů.
 
-Složitější přístup je k příjemce mezi lokalizované MFC7xLOC.DLLs (například MFC7xDEU na němčinu, MFC7xESP.DLL španělština, atd.) nebo novější verze a nainstalovat odpovídající MFC7xLOC.DLL do systémového adresáře, když uživatel nainstaluje aplikaci. To může být velmi složité pro vývojáře a koncový uživatel a jako takový se nedoporučuje. V tématu [Technická poznámka 56](../mfc/tn056-installation-of-localized-mfc-components.md) Další informace o tato technika a jeho upozornění.
+Složitější přístup je pro příjemce, jeden z lokalizované MFC7xLOC.DLLs (jako je například MFC7xDEU pro němčinu, MFC7xESP.DLL pro španělštinu, atd.) nebo novější verze a nainstalovat odpovídající MFC7xLOC.DLL do systémového adresáře, když uživatel nainstaluje aplikaci. To může být velmi složité pro vývojáře a rozhraní koncového uživatele a jako takové se nedoporučuje. Zobrazit [Technická poznámka 56](../mfc/tn056-installation-of-localized-mfc-components.md) pro další informace o této techniky a jeho upozornění.
 
-Nejjednodušší a nejbezpečnější způsob je zahrnout lokalizované MFC prostředky v aplikaci nebo DLL sám sebe (nebo její satelitní knihovny DLL, pokud ji používáte). Tím předejdete potížím instalace MFC7xLOC.DLL správně. V takovém případě použijte stejné pokyny pro statické případ výše uvedených (nastavení RC příkazového řádku správně tak, aby odkazoval na lokalizované prostředky), s výjimkou, že musíte také odebrat `/D_AFXDLL` definovat, který byl přidán objekty AppWizard. Když `/D_AFXDLL` je definován AFXRES. H (a další soubory MFC RC) nedefinují ve skutečnosti všechny prostředky (vzhledem k tomu, že bude být načtený z knihovny MFC DLL místo).
+Nejjednodušší a nejbezpečnější přístupu se zahrnou lokalizované prostředky knihovny MFC v aplikaci nebo knihovny DLL sebe (nebo jeho satelitní knihovny DLL, pokud použijete jeden). Tím se vyhnete problémy instalace MFC7xLOC.DLL správně. V takovém případě postupujte podle stejných pokynů jako pro statické případů uvedených (nastavení RC příkazového řádku správně tak, aby odkazoval na lokalizované prostředky), s výjimkou, že je potřeba taky odebrat `/D_AFXDLL` definovat, která byla přidána pomocí AppWizard. Když `/D_AFXDLL` je definován, AFXRES. H (a další soubory knihovny MFC RC) nemá definován ve skutečnosti všechny prostředky (protože, bude se získaných z knihovny DLL MFC místo).
 
 ## <a name="see-also"></a>Viz také:
 
-[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)  
-[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)  
+[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
+[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)

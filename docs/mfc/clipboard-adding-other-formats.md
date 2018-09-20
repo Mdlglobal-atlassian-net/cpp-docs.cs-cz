@@ -1,5 +1,5 @@
 ---
-title: 'Schránka: Přidání dalších formátů | Microsoft Docs'
+title: 'Schránka: Přidání dalších formátů | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,40 +19,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67004ac43193d47720626da241a8030ba396abdf
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 4f2a34228a6e6b0c0d4f1800142e657a462aa095
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36932015"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402002"
 ---
 # <a name="clipboard-adding-other-formats"></a>Schránka: Přidání dalších formátů
-Toto téma vysvětluje, jak rozšířit seznam podporovaných formátů, zejména pro podporu technologie OLE. Téma [schránka: kopírování a vložit Data](../mfc/clipboard-copying-and-pasting-data.md) popisuje minimální implementace potřebných k podpoře kopírování a vkládání ze schránky. Pokud je to všechny implementujete, jsou pouze formáty umístit do schránky **CF_METAFILEPICT**, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**a případně **CF_LINKSOURCE**. Většina aplikací potřebovat více formátů do schránky. než tyto tři.  
-  
-##  <a name="_core_registering_custom_formats"></a> Registrace vlastních formátů  
- Pokud chcete vytvořit vlastní formáty, postupujte stejným způsobem, který byste použili při registraci všechny vlastní formát schránky: předat název formát, který se **RegisterClipboardFormat** funkce a použít hodnoty jako ID formátu.  
-  
-##  <a name="_core_placing_formats_on_the_clipboard"></a> Formáty umístění do schránky  
- Chcete-li přidat více formátů těm, které jsou umístěny do schránky, je nutné přepsat `OnGetClipboardData` funkce třídy odvozené od buď `COleClientItem` nebo `COleServerItem` (v závislosti na tom, zda je nativní data, která mají být zkopírovány). V této funkci používejte následující postup.  
-  
-#### <a name="to-place-formats-on-the-clipboard"></a>Chcete-li formáty umístění do schránky  
-  
-1.  Vytvoření `COleDataSource` objektu.  
-  
-2.  Tento zdroj dat předat funkci, která přidá nativní datové formáty seznam podporovaných formátů voláním `COleDataSource::CacheGlobalData`.  
-  
-3.  Přidání standardní formáty voláním `COleDataSource::CacheGlobalData` pro každou standardní formát, které chcete podporovat.  
-  
- Tento postup slouží v aplikaci MFC OLE ukázka [HIERSVR](../visual-cpp-samples.md) (Prozkoumat `OnGetClipboardData` členské funkce **CServerItem** – třída). V této ukázce jediným rozdílem je, že třetí krok není implementována, protože HIERSVR nepodporuje žádné jiné standardní formáty.  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
-  
--   [Objekty a data zdroje dat OLE a uniform přenosu dat](../mfc/data-objects-and-data-sources-ole.md)  
-  
--   [OLE – přetažení](../mfc/drag-and-drop-ole.md)  
-  
--   [OLE](../mfc/ole-background.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Schránka: Použití mechanismu schránky OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+
+Toto téma vysvětluje, jak rozšířit seznam podporovaných formátů, zejména pro podporu technologie OLE. Téma [schránka: kopírování a vkládání dat](../mfc/clipboard-copying-and-pasting-data.md) popisuje minimální implementaci potřebných k podpoře zkopírováním a vložením ze schránky. Pokud je toto vše můžete implementovat, jsou pouze formáty umístili do schránky **CF_METAFILEPICT**, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**a případně **CF_LINKSOURCE**. Většina aplikací bude potřebovat další formáty do schránky. než tyto tři.
+
+##  <a name="_core_registering_custom_formats"></a> Registrace vlastních formátů
+
+Pokud chcete vytvořit vlastní formáty, postupujte stejným způsobem můžete využít při registraci libovolné vlastní formát schránky: předat název formát, který se **RegisterClipboardFormat** fungovat a její návratová hodnota jako ID formátu.
+
+##  <a name="_core_placing_formats_on_the_clipboard"></a> Formáty umístění do schránky
+
+Chcete-li přidat další formáty těm, které jsou umístěny do schránky, je nutné přepsat `OnGetClipboardData` funkce ve třídě odvozené z buď `COleClientItem` nebo `COleServerItem` (v závislosti na tom, zda je nativní data, která mají být zkopírovány). V této funkci by měl použít následující postup.
+
+#### <a name="to-place-formats-on-the-clipboard"></a>Formáty umístění do schránky
+
+1. Vytvoření `COleDataSource` objektu.
+
+1. Tento zdroj dat předat funkci, která přidá nativní datových formátů do seznamu podporovaných formátů voláním `COleDataSource::CacheGlobalData`.
+
+1. Přidání standardní formáty voláním `COleDataSource::CacheGlobalData` pro každé standardní formát, které chcete podporovat.
+
+Tento postup se používá v MFC OLE ukázkový program [HIERSVR](../visual-cpp-samples.md) (Prozkoumat `OnGetClipboardData` členskou funkci **CServerItem** třídy). V této ukázce jediným rozdílem je, daný krok tři není implementovat, protože HIERSVR podporuje žádné standardní formáty.
+
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+
+- [Objekty a data zdroje dat OLE a jednotné přenosu dat](../mfc/data-objects-and-data-sources-ole.md)
+
+- [OLE – přetažení](../mfc/drag-and-drop-ole.md)
+
+- [OLE](../mfc/ole-background.md)
+
+## <a name="see-also"></a>Viz také
+
+[Schránka: Použití mechanismu schránky OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
 

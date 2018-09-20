@@ -1,5 +1,5 @@
 ---
-title: 'OLE – pozadí: Implementace MFC | Microsoft Docs'
+title: 'OLE – pozadí: Implementace MFC | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,39 +24,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d77d603c198adad2ca2c827c355ff8f6808bff66
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 4d6fdd0fa05ec21151a28c516adcb224f5e9b0ec
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930323"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409828"
 ---
 # <a name="ole-background-mfc-implementation"></a>OLE – pozadí: Implementace MFC
-Kvůli velikost a složitost nezpracovaná OLE rozhraní API volání se přímo k psaní aplikací OLE může být časově velmi náročná. Cílem společnosti Microsoft Foundation Class Library implementace OLE je snížit objem práce, kterou je nutné provést pro psaní aplikací plně funkční, podporující OLE.  
-  
- Tento článek vysvětluje části OLE API, které nejsou implementované uvnitř MFC. Diskuse také vysvětluje, jak mapuje co je implementována do části OLE sady Windows SDK.  
-  
-##  <a name="_core_portions_of_ole_not_implemented_by_the_class_library"></a> Části OLE není implementováno knihovna tříd  
- V prostředí MFC nejsou přímo zadat několik rozhraní a funkcí OLE. Pokud chcete tyto funkce používají, můžete rozhraní OLE API volat přímo.  
-  
- Imoniker – rozhraní  
- `IMoniker` Rozhraní je implementováno modulem knihovny tříd (například `COleServerItem` třída), ale nebyla dříve vystavena programátorů. Další informace o tomto rozhraní najdete v části implementace technologie OLE Přezdívka v části OLE sady Windows SDK. Viz však také třída [CMonikerFile](../mfc/reference/cmonikerfile-class.md) a [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md).  
-  
- IUnknown a imarshal – rozhraní  
- `IUnknown` Rozhraní je implementováno modulem knihovny tříd, ale není vystavený programátorů. `IMarshal` Rozhraní není implementována knihovna tříd, ale se používá interně. Automatizační servery vyvíjené v knihovně tříd již mít zařazování možnosti, které jsou součástí.  
-  
- DOCFILES (složené soubory)  
- Složené soubory jsou částečně podporovány knihovny tříd. Žádná z funkcí, které přímo manipulovat s složené soubory nad rámec vytvoření jsou podporovány. MFC používá třídu `COleFileStream` pro podporu zpracování datových proudů s funkce standardní souboru. Další informace najdete v článku [kontejnery: složené soubory](../mfc/containers-compound-files.md).  
-  
- Servery v rámci procesu a objekt obslužné rutiny  
- Servery v rámci procesu a obslužné rutiny objektu povolit implementace visual úpravy dat nebo úplné objekty modelu COM (Component Object) v dynamické knihovně (DLL). K tomuto účelu můžete implementovat vaše knihovna DLL pomocí volání OLE API přímo. Ale pokud píšete serveru automatizace a váš server nemá žádné uživatelské rozhraní, můžete použít objekty AppWizard a nastavit váš server v rámci procesu kompletně umístit do knihovny DLL. Další informace o těchto tématech najdete v tématu [automatizační servery](../mfc/automation-servers.md).  
-  
+
+Kvůli velikosti a složitosti nezpracovaná OLE rozhraní API ho přímo pro psaní aplikací OLE volání může být časově velmi náročné. Cílem implementace knihovny Microsoft Foundation Class OLE je snížit množství práce, kterou musíte udělat pro psaní aplikací plně funkční, podporující OLE.
+
+Tento článek vysvětluje části OLE API, které nejsou implementované uvnitř knihovny MFC. Diskuse také vysvětluje, jak je implementován co mapuje na OLE část sady Windows SDK.
+
+##  <a name="_core_portions_of_ole_not_implemented_by_the_class_library"></a> Části OLE není implementované knihovny tříd
+
+Několik rozhraní a funkce OLE se neposkytují přímo v prostředí MFC. Pokud chcete používat tyto funkce, je možné volat rozhraní OLE API přímo.
+
+Imoniker – rozhraní `IMoniker` rozhraní je implementováno knihovnou tříd (například `COleServerItem` třídy), ale nebyla dříve byl zpřístupněn na programátorovi. Další informace o tomto rozhraní naleznete v tématu implementace technologie OLE Moniker OLE část sady Windows SDK. Nicméně viz také třída [cmonikerfile –](../mfc/reference/cmonikerfile-class.md) a [casyncmonikerfile –](../mfc/reference/casyncmonikerfile-class.md).
+
+IUnknown a rozhraní imarshal – `IUnknown` rozhraní je implementované knihovny tříd, ale není dostupné na programátorovi. `IMarshal` Rozhraní není implementováno pomocí knihovny tříd, ale používá se interně. Automatizační servery sestavený pomocí knihovny třídy již mít zařazování možností integrovaných.
+
+Knihovna tříd podporuje částečně složené soubory DOCFILES (složených souborů). Žádnou z funkcí, které přímo pracovat nad rámec vytváření složených souborů nejsou podporovány. Knihovna MFC používá třídy `COleFileStream` pro podporu zpracování datových proudů s využitím functions standardní soubor. Další informace najdete v článku [kontejnery: složené soubory](../mfc/containers-compound-files.md).
+
+Vnitroprocesové servery a obslužné rutiny objekt vnitroprocesové servery a objekt obslužné rutiny umožňují provádění vizuální úpravy dat nebo úplné objekty modelu COM (Component Object) v dynamická knihovna (DLL). K tomu je možné implementovat vaše knihovna DLL prostřednictvím přímého volání OLE API. Nicméně pokud píšete automatizační server a server nemá žádné uživatelské rozhraní, můžete použít AppWizard kompletně umístit do knihovny DLL a aby byl váš server v procesový server. Další informace o těchto tématech najdete v tématu [automatizační servery](../mfc/automation-servers.md).
+
 > [!TIP]
->  Nejjednodušší způsob, jak implementovat serveru automatizace je pro jeho umístění v knihovně DLL. MFC podporuje tuto metodu.  
-  
- Další informace o tom, jak třídy Microsoft Foundation OLE implementovat rozhraní OLE najdete v tématu MFC – technické poznámky [38](../mfc/tn038-mfc-ole-iunknown-implementation.md), [39](../mfc/tn039-mfc-ole-automation-implementation.md), a [40](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md).  
-  
-## <a name="see-also"></a>Viz také  
- [OLE – pozadí](../mfc/ole-background.md)   
- [OLE – pozadí: Strategie implementace](../mfc/ole-background-implementation-strategies.md)
+>  Nejjednodušší způsob, jak implementovat automatizačního serveru je umístit v knihovně DLL. MFC podporuje tento přístup.
+
+Další informace o způsobu implementace tříd Microsoft Foundation OLE rozhraní OLE, najdete v článku MFC – technické poznámky [38](../mfc/tn038-mfc-ole-iunknown-implementation.md), [39](../mfc/tn039-mfc-ole-automation-implementation.md), a [40](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md).
+
+## <a name="see-also"></a>Viz také
+
+[OLE – pozadí](../mfc/ole-background.md)<br/>
+[OLE – pozadí: Strategie implementace](../mfc/ole-background-implementation-strategies.md)
 

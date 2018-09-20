@@ -1,5 +1,5 @@
 ---
-title: 1.6 organizace | Microsoft Docs
+title: 1.6 organizace | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32ce5ecdcac09164c83d7124a1b1984a142e8e6c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b2c233a90acb0418afb51425bacb398832d5519d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686110"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410465"
 ---
 # <a name="16-organization"></a>1.6 Organizace
--   Knihovna RTL – funkce ([naleznete v kapitole 3](../../parallel/openmp/3-run-time-library-functions.md)).  
-  
--   Proměnné prostředí ([naleznete v kapitole 4](../../parallel/openmp/4-environment-variables.md)).  
-  
--   Chování definované implementací v OpenMP C/C++ ([v příloze E](../../parallel/openmp/e-implementation-defined-behaviors-in-openmp-c-cpp.md)).  
-  
--   Nové funkce v OpenMP C/C++ verze 2.0 ([najdete v příloze F](../../parallel/openmp/f-new-features-and-clarifications-in-version-2-0.md)).
+
+- Funkce knihovny run-time ([naleznete v kapitole 3](../../parallel/openmp/3-run-time-library-functions.md)).
+
+- Proměnné prostředí ([naleznete v kapitole 4](../../parallel/openmp/4-environment-variables.md)).
+
+- Chování definované implementací v OpenMP – C/C++ ([najdete v příloze E](../../parallel/openmp/e-implementation-defined-behaviors-in-openmp-c-cpp.md)).
+
+- Nové funkce ve verzi 2.0 OpenMP – C/C++ ([naleznete v tématu dodatku F](../../parallel/openmp/f-new-features-and-clarifications-in-version-2-0.md)).

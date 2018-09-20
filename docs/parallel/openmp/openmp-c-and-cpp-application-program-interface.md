@@ -1,5 +1,5 @@
 ---
-title: OpenMP C a C++ aplikací programu rozhraní | Microsoft Docs
+title: OpenMP – C a C++ Application Program Interface | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,22 +12,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ce032d740eab8af9bd35a248338210f521221db
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 0fca0391e4ba1feff52479017065e7b60f314ff0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687059"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413092"
 ---
 # <a name="openmp-c-and-c-application-program-interface"></a>OpenMP – rozhraní API pro jazyky C a C++
-Popisuje OpenMP C a C++ rozhraní API, jak je uvedeno ve specifikaci verze 2.0 z panelu zkontrolujte architektura OpenMP.  
-  
- Verze 2.0. března 2002  
-  
- Zkontrolujte panel autorským 1997-2002 OpenMP architektura.  
-  
- Kopírovat bez poplatku všechny nebo součást v tomto materiálu je povoleno, poskytuje OpenMP architektura zkontrolujte panel o autorských právech a zobrazí název tohoto dokumentu. Všimněte si je vzhledem k tomu, že kopírování je oprávnění OpenMP architektura zkontrolujte panel.  
-  
-## <a name="see-also"></a>Viz také  
- [OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md)   
- [Obsah](../../parallel/openmp/contents.md)
+
+OpenMP – C a C++ API, popisuje, jak je popsáno ve specifikaci verze 2.0 z Review Board OpenMP – architektura.
+
+Verze 2.0. března 2002
+
+Review Board o autorských právech 1997-2002 OpenMP architektury.
+
+Kopírovat bez poplatku za všechny nebo část tento materiál je povoleno, poskytuje o autorských právech OpenMP – architektura Review Board a zobrazí název tohoto dokumentu. Všimněte si, že je vzhledem k tomu, že kopírování je podle oprávnění z Review Board OpenMP – architektura.
+
+## <a name="see-also"></a>Viz také
+
+[OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md)<br/>
+[Obsah](../../parallel/openmp/contents.md)

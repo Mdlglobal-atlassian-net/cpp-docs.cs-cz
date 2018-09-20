@@ -1,5 +1,5 @@
 ---
-title: Řetězcový literál | Microsoft Docs
+title: Řetězcový literál | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,101 +16,103 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9ac847f67421802fe4d31f2d66b34128e4b24794
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 41f1996cd4f4caf24ac08d09b05e636cb09f7eed
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172405"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415262"
 ---
 # <a name="string-literal"></a>Řetězcový literál
-Zpracování textových literálů změnil ze spravovaných rozšíření jazyka C++ na Visual C++.  
-  
- V spravovaných rozšíření pro návrh jazyka C++, byl označen zahájením literálu řetězce s literál řetězce `S`. Příklad:  
-  
-```  
-String *ps1 = "hello";  
-String *ps2 = S"goodbye";  
-```  
-  
- Výkon režie mezi dvěma inicializacích jím být netriviální, jako následující soubor CIL ukazuje vyobrazení **ildasm**:  
-  
-```  
-// String *ps1 = "hello";  
-ldsflda    valuetype $ArrayType$0xd61117dd  
-     modopt([Microsoft.VisualC]Microsoft.VisualC.IsConstModifier)   
-     '?A0xbdde7aca.unnamed-global-0'  
-  
-newobj instance void [mscorlib]System.String::.ctor(int8*)  
-stloc.0  
-  
-// String *ps2 = S"goodbye";  
-ldstr      "goodbye"  
-stloc.0  
-```  
-  
- Znatelné úspory právě zapamatování (nebo learning) jako předpona řetězcového literálu, je pomocí `S`. V nové syntaxe zpracování textových literálů není provedena transparentní, určit podle kontextu použít. `S` Už je třeba zadat.  
-  
- Co o případy, ve kterých je potřeba explicitně nasměrovat kompilátor k jedné nebo druhé interpretaci? V těchto případech použijeme explicitní přetypování. Příklad:  
-  
-```  
-f( safe_cast<String^>("ABC") );  
-```  
-  
- Kromě toho nyní odpovídá řetězcový literál `String` pomocí jednoduchého převodu na rozdíl od standardní převod. Když to nemusí zvukových jako mnohem změní řešení sad přetížené funkce, mezi které patří `String` a `const char*` jako konkurenční formální parametry. Jednou přeložit na řešení `const char*` instance nyní je označeno jako dvojznačné. Příklad:  
-  
-```  
-ref struct R {  
-   void f(const char*);  
-   void f(String^);  
-};  
-  
-int main () {  
-   R r;  
-   // old syntax: f( const char* );  
-   // new syntax: error: ambiguous  
-   r.f("ABC");   
-}  
-```  
-  
- Proč je nějaký rozdíl? Od více než jednu instanci s názvem `f` existuje v rámci programu, to vyžaduje, aby algoritmus rozlišení přetížení funkce má být použita pro volání. Formální rozlišení přetížení funkce zahrnuje tři kroky.  
-  
-1.  Kolekce kandidátských funkcí. Kandidátských funkcí jsou tyto metody v rámci oboru, které lexikálně shodovat s názvem volanou funkci. Například od `f()` volání prostřednictvím instance `R`, všechny funkce s názvem `f` nejsou členem `R` (nebo její základní třída hierarchie) nejsou kandidátských funkcí. V našem příkladu jsou dvě funkce candidate. Toto jsou dva členské funkce z `R` s názvem `f`. V průběhu této fáze se volání nezdaří, pokud je sada funkcí candidate prázdná.  
-  
-2.  Sada přijatelná funkce z kandidátských funkcí. Vhodným funkce je ten, který lze vyvolat pomocí zadanou ve volání, získá počet argumentů a jejich typy argumentů. V našem příkladu jsou obě funkce candidate také vhodným funkce. Volání selže v průběhu této fáze, pokud sada přijatelná funkce je prázdný.  
-  
-3.  Vyberte funkce, která představuje nejlepší shodu volání. K tomu je potřeba hodnocením převodů, použitých k transformaci argumenty, které mají typ parametry použitelné funkce. Toto je poměrně jednoduché pomocí jediného parametru funkce; bude poněkud složitější, pokud existuje několik parametrů. V průběhu této fáze se volání nezdaří, pokud není nalezena žádná nejlepší shoda. To znamená pokud jsou nezbytné pro převod typu argument skutečný typ formálního parametru převody stejně vhodné. Volání je označeno jako dvojznačné.  
-  
- Ve spravovaných rozšíření rozlišení tohoto volání vyvolalo `const char*` instance jako nejlepší shodu. V nové syntaxe, převod potřeby tak, aby odpovídaly `"abc"` k `const char*` a `String^` jsou nyní ekvivalentní – to znamená, je stejně dobrý – a proto volání je označeno jako chybné – to znamená, jako nejednoznačný.  
-  
- To nám vede ke dvěma otázky:  
-  
--   Co je typ skutečného argumentu `"abc"`?  
-  
--   Jaký je algoritmus pro určení, kdy je lepší, než jiné jeden typ převodu?  
-  
- Typ řetězcový literál `"abc"` je `const char[4]` -Pamatujte si, že je literál implicitní null ukončující znak na konci každého řetězce.  
-  
- Algoritmus pro určení, kdy je lepší, než jiné jeden typ převodu zahrnuje umístění možných převodů typů v hierarchii. Zde je mé porozumění hierarchii – všechny tyto převody samozřejmě jsou implicitní. Pomocí zápisu explicitního přetypování přepíše hierarchii podobným způsobem, kulaté závorky přepsání obvyklé operátorů výrazu.  
-  
-1.  Nejlepší je přesnou shodu. Logicky pro argumentu přesně shodovat, se nemusí přesně shodovat s typem parametru; právě musí být dostatečně zavřít. Toto je klíčem k pochopení, co se děje v tomto příkladu a jak došlo ke změně jazyka.  
-  
-2.  U povýšení je lepší, než standardní převod. Například povýšení `short int` k `int` je lepší, než převod `int` do `double`.  
-  
-3.  Standardní převod je lepší, než převod zabalením. Například převod `int` do `double` je lepší, který zabalení `int` do `Object`.  
-  
-4.  Převod zabalením je lepší, než implicitní převod definovaný uživatelem. Například zabalení `int` do `Object` je lepší, než použití operátoru převodu `SmallInt` třídy hodnoty.  
-  
-5.  Implicitní převod definovaný uživatelem, je lepší, než žádný převod vůbec. Implicitní převod definovaný uživatelem je posledním únikem před chybou (s přímý přístup do paměti, že formální podpis může obsahovat pole parametrů nebo třemi tečkami na této pozici).  
-  
- Ano co to znamená, to znamená, že přesná shoda není nutně přesně odpovídající? Například `const char[4]` přesně neodpovídá buď `const char*` nebo `String^`, a zatím v našem příkladu nejednoznačnosti je mezi dvěma konfliktní přesné shody!  
-  
- Přesná shoda, jak se to stává, zahrnuje několik trivial převody. Existují čtyři triviální převody pod ISO-C++, který můžete použít a stále kvalifikaci jako přesnou shodu. Tři se označují jako lvalue transformace. Čtvrtý typ se nazývá převod kvalifikace. Tři transformace lvalue jsou považovány za lepší přesnou shodu než jeden vyžadují převod kvalifikace.  
-  
- Jednu formu transformace lvalue je převod nativní pole na ukazatel. Toto je postup při porovnávání `const char[4]` k `const char*`. Proto je shoda mezi `f("abc")` k `f(const char*)` je přesnou shodu. V dřívějších ztělesněních naše jazyk ve skutečnosti šlo nejlepší shodu.  
-  
- Kompilátor pro označení volání jako dvojznačného vyžaduje, aby převodu `const char[4]` k `String^` také být přesnou shodu prostřednictvím triviálního převodu. Toto je změna, která byla zavedena v nové verzi jazyka. A z tohoto důvodu volání je nyní označeno jako nejednoznačný.  
-  
-## <a name="see-also"></a>Viz také  
- [Obecné jazykové změny (C + +/ CLI)](../dotnet/general-language-changes-cpp-cli.md)   
- [Řetězec](../windows/string-cpp-component-extensions.md)
+
+Zpracování řetězcové literály se změnila od spravovaných rozšíření jazyka C++ na Visual C++.
+
+Ve spravovaných rozšíření pro návrh jazyka C++, byl označen zahájením literálu řetězce s spravované řetězcového literálu `S`. Příklad:
+
+```
+String *ps1 = "hello";
+String *ps2 = S"goodbye";
+```
+
+Výkon režii mezi dvěma inicializace se ukázalo netriviální, jako soubor CIL se NAČTE následující reprezentaci ukazuje, jak je vidět **ildasm**:
+
+```
+// String *ps1 = "hello";
+ldsflda    valuetype $ArrayType$0xd61117dd
+     modopt([Microsoft.VisualC]Microsoft.VisualC.IsConstModifier)
+     '?A0xbdde7aca.unnamed-global-0'
+
+newobj instance void [mscorlib]System.String::.ctor(int8*)
+stloc.0
+
+// String *ps2 = S"goodbye";
+ldstr      "goodbye"
+stloc.0
+```
+
+To je znatelné úspory pouze zapamatování (nebo learning) jako předpona řetězcový literál s `S`. V nové syntaxi zpracování řetězcové literály se provádí transparentní, určit podle kontextu použití. `S` Už musí být zadaná.
+
+A co případy, kdy budeme potřebovat explicitně směrovat kompilátor k interpretaci jedné nebo jiného? V těchto případech doporučujeme použít explicitní přetypování. Příklad:
+
+```
+f( safe_cast<String^>("ABC") );
+```
+
+Kromě toho teď odpovídá řetězcového literálu `String` pomocí jednoduchého převodu, nikoli standardní převod. Když to nemusí znít jako mnohem změní řešení sady přetížené funkce, mezi které patří `String` a `const char*` jako konkurenční formální parametry. Jednou přeložit na řešení `const char*` instance nyní je označeno jako dvojznačné. Příklad:
+
+```
+ref struct R {
+   void f(const char*);
+   void f(String^);
+};
+
+int main () {
+   R r;
+   // old syntax: f( const char* );
+   // new syntax: error: ambiguous
+   r.f("ABC"); 
+}
+```
+
+Proč je nějaký rozdíl? Od více než jednu instanci s názvem `f` existuje v rámci programu, k tomu je potřeba algoritmus pro použít pro volání rozlišení přetížení funkce. Formální rozlišení přetížení funkce zahrnuje tři kroky.
+
+1. Kolekce kandidátské funkce. Funkce Release candidate jsou tyto metody v rámci oboru, které lexikálně shodovat s názvem volanou funkci. Například od `f()` vyvolané prostřednictvím instance `R`, všechny pojmenované funkce `f` , které nejsou členem `R` (nebo její základní třídy hierarchie) nejsou kandidátské funkce. V našem příkladu jsou dva kandidátské funkce. Toto jsou dva členské funkce `R` s názvem `f`. Volání selže v průběhu této fáze, pokud je sada funkcí Release candidate prázdná.
+
+1. Sada přijatelné funkcí z kandidátské funkce. Přijatelné funkce je ten, který lze vyvolat pomocí zadaných ve volání, daný počet argumentů a jejich typy argumentů. V našem příkladu jsou obě funkce kandidáta také přijatelné funkce. Volání selže v průběhu této fáze, pokud je sada funkcí přijatelné prázdná.
+
+1. Vyberte funkce, která představuje nejlepší shodu volání. To se provádí hodnocení k transformaci argumenty, které mají typ přijatelné funkčních parametrů použitých převodů. To je poměrně jednoduché pomocí jediného parametru funkce; bude poněkud složitější, pokud existuje více parametrů. Volání selže v průběhu této fáze, pokud není nalezena žádná nejlepší shoda. To znamená pokud jsou stejně dobrým převody potřebné pro převod typu je skutečný argument typu formálního parametru. Volání je označeno jako dvojznačné.
+
+Ve spravovaných rozšíření na řešení tohoto volání vyvolat `const char*` instance jako nejlepší shoda. V nové syntaxi, převod nezbytné tak, aby odpovídaly `"abc"` k `const char*` a `String^` jsou teď rovnocenné – to znamená, stejně dobrým – a proto volání je označeno jako chybné – to znamená, jako dvojznačné.
+
+Důsledkem je nás dvě otázky:
+
+- Co je typ argumentu, `"abc"`?
+
+- Jaký je algoritmus pro určení, kdy je lepší než jiné jeden typ převodu?
+
+Typ řetězcového literálu `"abc"` je `const char[4]` – mějte na paměti, je implicitní null ukončující znak na konci každého řetězce literálu.
+
+Algoritmus pro určení, kdy je lepší než jiné jeden typ převodu zahrnuje umístění převody možných typů v hierarchii. Tady je Moje principy této hierarchii – všechny tyto převody samozřejmě jsou implicitní. Zápisem explicitní přetypování pomocí přepsání podobným způsobem, jakým hierarchie závorky přepíše prioritu obvykle operátor výrazu.
+
+1. Přesná shoda je nejvhodnější. Logicky pro argument přesně shodovat, nemusí přesně odpovídat typu parametru; právě musí být dostatečně blízko. Toto je klíčem k pochopení, co se děje v tomto příkladu a jak je změnit jazyk.
+
+1. V rámci propagační akce je lepší než standardní převod. Například zvýšení úrovně `short int` do `int` je lepší než převod `int` do `double`.
+
+1. Standardní převod je lepší než převod na uzavřené určení. Například převod `int` do `double` je lépe zabalení `int` do `Object`.
+
+1. Převod na uzavřené určení je lepší než implicitního uživatelem definovaného převodu. Například zabalení `int` do `Object` je lepší než použití operátoru převodu `SmallInt` hodnotu třídy.
+
+1. Implicitní převod definovaný uživatelem, je lepší než převod vůbec. Implicitní převod definovaný uživatelem je poslední ukončovací před chybou (s výstrahou, že formální podpis může obsahovat pole parametrů a tlačítko se třemi tečkami na této pozici).
+
+To co znamená říct, že přesná shoda není nutně přesně odpovídající? Například `const char[4]` přesně neodpovídá buď `const char*` nebo `String^`, a ještě je náš příklad Nejednoznačnost mezi dva konfliktní přesné shody.
+
+Přesná shoda, jakmile k ní dojde, obsahuje několik triviální převodů. Existují čtyři jednoduché převody podle ISO-C++, které mohou být použity a stále kvalifikovat jako přesnou shodu. Tři jsou označovány jako l-hodnoty transformace. Čtvrtý typ se nazývá převod kvalifikace. Tři transformace l-hodnoty jsou považovány za lépe přesná shoda než ta, vyžadují převod kvalifikace.
+
+Jednu formu l-hodnoty transformace je převod nativní pole na ukazatel. To je, co se účastní porovnávání `const char[4]` k `const char*`. Proto se shoda `f("abc")` k `f(const char*)` najít přesnou shodu. V dřívějších ztělesněních náš jazyk ve skutečnosti jednalo nejlepší shodu.
+
+Kompilátor, aby Příznak volání jako nejednoznačné, vyžaduje, aby převod `const char[4]` k `String^` také být přesnou shodou prostřednictvím jednoduchého dotazu převodu. Toto je změna, která byla zavedena v nové verzi jazyka. A to je důvod, proč volání je nyní označena jako dvojznačné.
+
+## <a name="see-also"></a>Viz také
+
+[Obecné jazykové změny (C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)<br/>
+[řetězec](../windows/string-cpp-component-extensions.md)

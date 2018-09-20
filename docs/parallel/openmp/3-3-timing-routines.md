@@ -1,5 +1,5 @@
 ---
-title: 3.3 rutiny časování | Microsoft Docs
+title: 3.3 rutiny časování | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,16 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3b8fc16e34124419362d5989131c2cf66df30b6
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 8c9eda9ac8f60e66c8c4168d734bcf4459b0b63e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694908"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403978"
 ---
 # <a name="33-timing-routines"></a>3.3 Rutiny časování
-Funkce popsané v této části podporují časovač přenosné wall – hodiny:  
-  
--   `omp_get_wtime` Funkce vrátí času uplynulá wall hodin.  
-  
--   `omp_get_wtick` Funkce vrátí sekund mezi následných počtu taktů.
+
+Funkce popsané v této části podporují přenosné plánovače časovače:
+
+- `omp_get_wtime` Funkce vrátí skutečný uplynulý čas.
+
+- `omp_get_wtick` Funkce vrátí sekund mezi po sobě jdoucích taktů.

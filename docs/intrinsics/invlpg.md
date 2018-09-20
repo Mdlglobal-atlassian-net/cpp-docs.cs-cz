@@ -18,44 +18,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ada416217be672da8f93c777b0b2a6e12684711
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 01a35d110c56bba6b89c5bf34dedec61bde90794
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703024"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403211"
 ---
 # <a name="invlpg"></a>__invlpg
-**Specifické pro Microsoft**  
-  
- Generuje x86 `invlpg` instrukce, což způsobí neplatnost vyrovnávací paměti Page Table Entry překladu (vyrovnávací paměti TLB) pro stránku související s pamětí, na které odkazuje `Address`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void __invlpg(  
-   void* Address  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+**Specifické pro Microsoft**
+
+Generuje x86 `invlpg` instrukce, což způsobí neplatnost vyrovnávací paměti Page Table Entry překladu (vyrovnávací paměti TLB) pro stránku související s pamětí, na které odkazuje `Address`.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void __invlpg(
+   void* Address
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
 *Adresa*<br/>
-[in] 64-bit adresa.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Vnitřní|Architektura|  
-|---------------|------------------|  
-|`__invlpg`|x86, x64|  
-  
- **Soubor hlaviček** \<intrin.h >  
-  
-## <a name="remarks"></a>Poznámky  
- Vnitřní objekt `__invlpg` vysílá Privilegovaná instrukce a je dostupná pouze v režimu jádra s úrovní oprávnění (PANELU) 0.  
-  
- Tato rutina je k dispozici pouze jako vnitřní objekt.  
-  
-**Specifické pro END Microsoft**  
-  
-## <a name="see-also"></a>Viz také  
- [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[in] 64-bit adresa.
+
+## <a name="requirements"></a>Požadavky
+
+|Vnitřní|Architektura|
+|---------------|------------------|
+|`__invlpg`|x86, x64|
+
+**Soubor hlaviček** \<intrin.h >
+
+## <a name="remarks"></a>Poznámky
+
+Vnitřní objekt `__invlpg` vysílá Privilegovaná instrukce a je dostupná pouze v režimu jádra s úrovní oprávnění (PANELU) 0.
+
+Tato rutina je k dispozici pouze jako vnitřní objekt.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také
+
+[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

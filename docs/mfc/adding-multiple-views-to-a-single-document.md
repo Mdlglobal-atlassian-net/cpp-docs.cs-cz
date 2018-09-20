@@ -1,5 +1,5 @@
 ---
-title: Přidání více zobrazení do jednoho dokumentu | Microsoft Docs
+title: Přidání více zobrazení do jednoho dokumentu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,90 +17,97 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c48f4525c01149840ca74eee249263eac27c24cf
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: cd2869bfe1f3feb17eeb8917ec5ba643ac7961a5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928698"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411960"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Přidání více zobrazení do jednoho dokumentu
-V aplikaci (SDI) rozhraní s jedním dokumentem vytvořené pomocí knihovny Microsoft Foundation Class (MFC) každý typ dokumentu je přidružený k typu jednoho zobrazení. V některých případech je třeba mít možnost přepnout aktuální zobrazení objektu na dokument s nové zobrazení.  
-  
+
+V aplikaci SDI (SDI) vytvořené pomocí knihovny Microsoft Foundation Class (MFC) je přidružený k typu jedno zobrazení každý typ dokumentu. V některých případech je třeba mít možnost přepnout aktuální zobrazení dokumentu pomocí nové zobrazení.
+
 > [!TIP]
->  Další postupy k implementaci více zobrazení pro jednotlivý dokument najdete v tématu [CDocument::AddView](../mfc/reference/cdocument-class.md#addview) a [SHROMAŽĎOVAT](../visual-cpp-samples.md) MFC ukázka.  
-  
- Tuto funkci můžete implementovat přidáním nové `CView`-odvozené třídy a další kód pro přepínání zobrazení dynamicky na existující aplikaci MFC.  
-  
- Kroky jsou následující:  
-  
--   [Upravit existující třída aplikace](#vcconmodifyexistingapplicationa1)  
-  
--   [Vytvořit a upravit nové třídy zobrazení](#vcconnewviewclassa2)  
-  
--   [Vytvořte a připojte nové zobrazení](#vcconattachnewviewa3)  
-  
--   [Implementace přepínání funkce](#vcconswitchingfunctiona4)  
-  
--   [Přidání podpory pro přepínání zobrazení](#vcconswitchingtheviewa5)  
-  
- Zbývající část tohoto tématu se předpokládá následující:  
-  
--   Název `CWinApp`-odvozené objekt `CMyWinApp`, a `CMyWinApp` definována a je definována v *MYWINAPP. H* a *MYWINAPP. CPP*.  
-  
--   `CNewView` je název nové `CView`-odvozené objekt, a `CNewView` definována a je definována v *NEWVIEW. H* a *NEWVIEW. CPP*.  
-  
-##  <a name="vcconmodifyexistingapplicationa1"></a> Upravit existující třída aplikace  
- Pro aplikaci pro přepínání mezi zobrazeními budete muset upravit třídy aplikace přidáním členské proměnné pro uložení zobrazení a způsob, jak je přepnout.  
-  
- Přidejte následující kód k prohlášení o `CMyWinApp` v *MYWINAPP. H*:  
-  
- [!code-cpp[NVC_MFCDocViewSDI#1](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_1.h)]  
-  
- Nové proměnné členů `m_pOldView` a `m_pNewView`, přejděte na aktuální zobrazení a nově vytvořený jeden. Metoda new (`SwitchView`) Přepíná zobrazení na žádost uživatele. Těla metody je popsána dále v tomto tématu v [implementovat funkce přepínání](#vcconswitchingfunctiona4).  
-  
- Poslední změny třída aplikace vyžaduje, včetně nový soubor hlaviček, který definuje zpráv systému Windows (**WM_INITIALUPDATE**), který se používá v přepínání funkce.  
-  
- Vložte následující řádek v části zahrnout *MYWINAPP. CPP*:  
-  
- [!code-cpp[NVC_MFCDocViewSDI#2](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_2.cpp)]  
-  
- Uložte změny a pokračovat k dalšímu kroku.  
-  
-##  <a name="vcconnewviewclassa2"></a> Vytvořit a upravit nové třídy zobrazení  
- Vytvoření nové třídy zobrazení je umožněno pomocí **novou třídu** příkaz k dispozici v zobrazení tříd. Pro tuto třídu Jediným požadavkem je, že odvozená z `CView`. Tato nová třída přidáte do aplikace. Konkrétní informace o přidání nové třídy do projektu najdete v tématu [přidání třídy](../ide/adding-a-class-visual-cpp.md).  
-  
- Po přidání třídu do projektu, budete muset změnit usnadnění některé členy třídy zobrazení.  
-  
- Upravit *NEWVIEW. H* změnou specifikátor přístup z **chráněné** k **veřejné** pro konstruktor a destruktor. To umožňuje třídě vytvořen a zničen dynamicky a upravit vzhled zobrazení, aby byl viditelný.  
-  
- Uložte změny a pokračovat k dalšímu kroku.  
-  
-##  <a name="vcconattachnewviewa3"></a> Vytvořte a připojte nové zobrazení  
- A vytvořte nové zobrazení, budete muset upravit `InitInstance` funkce třídě aplikace. Úpravy přidá nový kód, který vytvoří nový objekt zobrazení i pak inicializuje `m_pOldView` a `m_pNewView` s dvěma existující objekty zobrazení.  
-  
- Protože je v rámci vytvořit nové zobrazení `InitInstance` funkce, nových nebo stávajících zobrazení zachovat po dobu jeho existence aplikace. Ale aplikace může stejně snadno vytvořit nové zobrazení dynamicky.  
-  
- Vložte tento kód po volání `ProcessShellCommand`:  
-  
- [!code-cpp[NVC_MFCDocViewSDI#3](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_3.cpp)]  
-  
- Uložte změny a pokračovat k dalšímu kroku.  
-  
-##  <a name="vcconswitchingfunctiona4"></a> Implementace přepínání funkce  
- V předchozím kroku jste přidali kód, který je vytvořen a inicializován nový objekt zobrazení. Poslední hlavní část je implementovat metodu přepínání `SwitchView`.  
-  
- Na konci souboru implementace pro třídy vaší aplikace (*MYWINAPP. CPP*), přidejte následující definici metody:  
-  
- [!code-cpp[NVC_MFCDocViewSDI#4](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_4.cpp)]  
-  
- Uložte změny a pokračovat k dalšímu kroku.  
-  
-##  <a name="vcconswitchingtheviewa5"></a> Přidání podpory pro přepínání zobrazení  
- V posledním kroku, zahrnuje přidání kódu, který volá `SwitchView` metoda, když aplikace potřebuje pro přepínání mezi zobrazeními. To lze provést několika způsoby: Přidání nové položky nabídky k vyberte uživatele nebo přepnutí zobrazení interně při splnění určitých podmínek.  
-  
- Další informace o přidání nových položek nabídky a funkce obslužné rutiny příkazů najdete v tématu [obslužné rutiny pro příkazy a oznámení ovládacích prvků](../mfc/handlers-for-commands-and-control-notifications.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Document/View – architektura](../mfc/document-view-architecture.md)
+>  Další postupy při implementaci více zobrazení pro jednotlivý dokument najdete v tématu [CDocument::AddView](../mfc/reference/cdocument-class.md#addview) a [SHROMAŽĎOVAT](../visual-cpp-samples.md) vzorek MFC.
+
+Tuto funkci můžete implementovat přidáním nového `CView`-odvozené třídy a další kód pro přepínání zobrazení dynamicky k existující aplikaci MFC.
+
+Kroky jsou následující:
+
+- [Upravit existující třída aplikace](#vcconmodifyexistingapplicationa1)
+
+- [Vytvoření a úprava nové třídy zobrazení](#vcconnewviewclassa2)
+
+- [Vytvoření a připojení nového zobrazení](#vcconattachnewviewa3)
+
+- [Implementace přepínání – funkce](#vcconswitchingfunctiona4)
+
+- [Přidání podpory pro přepnutí zobrazení](#vcconswitchingtheviewa5)
+
+Zbývající část tohoto tématu se předpokládá následující:
+
+- Název `CWinApp`-odvozeného objektu je `CMyWinApp`, a `CMyWinApp` je deklarovány a definovány v *MYWINAPP. H* a *MYWINAPP. CPP*.
+
+- `CNewView` je název nového `CView`-odvozenému objektu, a `CNewView` je deklarovány a definovány v *NEWVIEW. H* a *NEWVIEW. CPP*.
+
+##  <a name="vcconmodifyexistingapplicationa1"></a> Upravit existující třída aplikace
+
+Pro aplikaci k přepínání mezi zobrazeními budete muset upravit přidáním členské proměnné k uložení zobrazení a způsob, jak je přepnout – třída aplikace.
+
+Přidejte následující kód k deklaraci `CMyWinApp` v *MYWINAPP. H*:
+
+[!code-cpp[NVC_MFCDocViewSDI#1](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_1.h)]
+
+Nové proměnné členů `m_pOldView` a `m_pNewView`, přejděte na aktuální zobrazení a tak nově vytvořený. Nové metody (`SwitchView`) Přepíná zobrazení při požadavku uživatele. Tělo metody je popsána dále v tomto tématu v [implementovat funkci přepínání](#vcconswitchingfunctiona4).
+
+Poslední změny – třída aplikace vyžaduje, včetně nový soubor hlaviček, který definuje zprávy Windows (**WM_INITIALUPDATE**), který se používá ve funkci přepínání.
+
+Vložte následující řádek v části zahrnout *MYWINAPP. CPP*:
+
+[!code-cpp[NVC_MFCDocViewSDI#2](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_2.cpp)]
+
+Uložte změny a pokračovat k dalšímu kroku.
+
+##  <a name="vcconnewviewclassa2"></a> Vytvoření a úprava nové třídy zobrazení
+
+Vytvoření nové třídy zobrazení je snadné pomocí **novou třídu** příkaz k dispozici v zobrazení tříd. Jediným požadavkem pro tuto třídu je, že se odvozuje od `CView`. Tato nová třída přidáte do aplikace. Konkrétní informace při přidání nové třídy do projektu, naleznete v tématu [přidání třídy](../ide/adding-a-class-visual-cpp.md).
+
+Po přidání třídy do projektu, budete muset změnit přístupnost některé členy třídy zobrazení.
+
+Upravit *NEWVIEW. H* změnou specifikátor přístupu z **chráněné** k **veřejné** pro konstruktor a destruktor. To umožňuje třídě vytvořeno a zničeno při dynamicky a upravit vzhled zobrazení dřív, než bude viditelné.
+
+Uložte změny a pokračovat k dalšímu kroku.
+
+##  <a name="vcconattachnewviewa3"></a> Vytvoření a připojení nového zobrazení
+
+Vytvoření a připojení nového zobrazení, budete muset upravit `InitInstance` funkce třídy aplikace. Úpravy přidá nový kód, který vytvoří nový objekt zobrazení i pak inicializuje `m_pOldView` a `m_pNewView` se dva existující objekty zobrazení.
+
+Protože je vytvořeno nové zobrazení v rámci `InitInstance` funkce, nové i stávající zobrazení zachovat po dobu životnosti aplikace. Ale aplikace stejně snadno vytvořit nové zobrazení dynamicky.
+
+Vložte tento kód po volání `ProcessShellCommand`:
+
+[!code-cpp[NVC_MFCDocViewSDI#3](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_3.cpp)]
+
+Uložte změny a pokračovat k dalšímu kroku.
+
+##  <a name="vcconswitchingfunctiona4"></a> Implementace přepínání – funkce
+
+V předchozím kroku přidáte kód, který je vytvořen a inicializován nový objekt zobrazení. Poslední hlavních součástí je implementovat metodu přepínání `SwitchView`.
+
+Na konci souboru implementace pro vaši aplikaci třídu (*MYWINAPP. CPP*), přidejte následující definici metody:
+
+[!code-cpp[NVC_MFCDocViewSDI#4](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_4.cpp)]
+
+Uložte změny a pokračovat k dalšímu kroku.
+
+##  <a name="vcconswitchingtheviewa5"></a> Přidání podpory pro přepnutí zobrazení
+
+Poslední krok zahrnuje přidání kódu, který volá `SwitchView` metodu, když aplikace potřebuje k přepínání mezi zobrazeními. To lze provést několika způsoby: Přidání nové položky nabídky pro uživatele k výběru nebo interně přepínání zobrazení při splnění určitých podmínek.
+
+Další informace o přidání nových položek nabídky a funkce obslužné rutiny příkazů najdete v tématu [obslužné rutiny pro příkazy a oznámení ovládacích prvků](../mfc/handlers-for-commands-and-control-notifications.md).
+
+## <a name="see-also"></a>Viz také
+
+[Document/View – architektura](../mfc/document-view-architecture.md)
 

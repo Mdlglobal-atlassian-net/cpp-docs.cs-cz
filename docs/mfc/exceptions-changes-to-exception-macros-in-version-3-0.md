@@ -1,5 +1,5 @@
 ---
-title: 'Výjimky: Změny maker pro výjimky ve verzi 3.0 | Microsoft Docs'
+title: 'Výjimky: Změny maker pro výjimky ve verzi 3.0 | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,56 +17,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c4e6c7744c3d5328985eee24e67ee1eb359fb3c
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 8829c018e51b81c0997092312e3e058d3086665b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931015"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417030"
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Výjimky: Změny maker pro výjimky ve verzi 3.0
-To je rozšířená.  
-  
- V prostředí MFC verze 3.0 a novějších byly změněny makra zpracování výjimek používat výjimky jazyka C++. Tento článek vysvětluje, jak tyto změny mohou ovlivnit chování existující kód, který používá makra.  
-  
- Tento článek obsahuje následující témata:  
-  
--   [Typy výjimek a CATCH – makro](#_core_exception_types_and_the_catch_macro)  
-  
--   [Znovu vyvolání výjimek](#_core_re.2d.throwing_exceptions)  
-  
-##  <a name="_core_exception_types_and_the_catch_macro"></a> Typy výjimek a CATCH – makro  
- V dřívějších verzích MFC **CATCH** makro použije k určení k výjimce typu MFC informace běhového typu; v výjimky typ je určen, jinými slovy, v lokalitě catch. S výjimky jazyka C++, ale v výjimky typ je vždy určen v lokalitě throw podle typu objektu výjimka, která je vyvolána výjimka. V případě výjimečných, kde typ má ukazatel na objekt výjimce dojde se liší od typ objektu výjimce dojde způsobí problémům s kompatibilitou.  
-  
- Následující příklad ilustruje důsledků tento rozdíl mezi MFC verze 3.0 a starší verze:  
-  
- [!code-cpp[NVC_MFCExceptions#1](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_1.cpp)]  
-  
- Tento kód se chová jinak ve verzi 3.0 protože ovládací prvek vždycky předá prvního **catch** blok s odpovídající deklarace výjimka. Výsledkem výrazu throw  
-  
- [!code-cpp[NVC_MFCExceptions#19](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]  
-  
- je vyvolána jako `CException*`, i když je sestavený jako `CCustomException`. **CATCH** makra v MFC – verze 2.5 a starší použije `CObject::IsKindOf` k testování typ za běhu. Protože výraz  
-  
- [!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]  
-  
- je nastavena hodnota true, první blok catch zachytí výjimky. Ve verzi 3.0, který používá výjimky jazyka C++ implementovat řadu makra zpracování výjimek, odpovídá vyvolané druhý blok catch `CException`.  
-  
- Kód takto neobvyklé. Obvykle se zobrazuje při výjimce objekt předaný jinou funkci, která přijímá obecný `CException*`, provádí zpracování "předběžné throw" a nakonec vyvolá výjimku.  
-  
- Chcete-li tento problém obejít, přesuňte výraz throw z funkce volání kódu a způsobí výjimku skutečný typ známé kompilátoru v době, kdy se vygeneruje výjimka.  
-  
-##  <a name="_core_re.2d.throwing_exceptions"></a> Znovu vyvolání výjimek  
- Blok catch nelze vyvolat stejné výjimky ukazatele, který ho zachycena.  
-  
- Například tento kód platné v předchozích verzích, ale bude mít neočekávané výsledky s verze 3.0:  
-  
- [!code-cpp[NVC_MFCExceptions#2](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_4.cpp)]  
-  
- Pomocí **THROW** ve catch bloku způsobí, že má ukazatel `e` odstranit, aby lokality vnější catch obdrží neplatný ukazatel. Použití **throw_last –** znovu vyvolat `e`.  
-  
- Další informace najdete v tématu [výjimkami: zachycení a odstraňování výjimek](../mfc/exceptions-catching-and-deleting-exceptions.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Zpracování výjimek](../mfc/exception-handling-in-mfc.md)
+
+Toto je rozšířená.
+
+Makra zpracování výjimek byly změněny v prostředí MFC verze 3.0 nebo novější, použití výjimek jazyka C++. Tento článek vysvětluje, jak tyto změny mohou ovlivnit chování existující kód, který používá makra.
+
+Tento článek obsahuje následující témata:
+
+- [Typy výjimek a CATCH – makro](#_core_exception_types_and_the_catch_macro)
+
+- [Opětovné generování výjimek](#_core_re.2d.throwing_exceptions)
+
+##  <a name="_core_exception_types_and_the_catch_macro"></a> Typy výjimek a CATCH – makro
+
+V dřívějších verzích knihovny MFC **CATCH** – makro používá k určení typu výjimky MFC informace běhového typu; je určen typ výjimky, jinými slovy, v lokalitě catch. Výjimky jazyka C++ ale typ této výjimky je vždy určuje v lokalitě throw podle typu objektu výjimky, která je vyvolána. To způsobí nekompatibility ve výjimečných případech, kde se liší od typu k této výjimce dojde objektu typu ukazatel na objekt k této výjimce dojde.
+
+Následující příklad ukazuje důsledkem tohoto rozdílu mezi MFC verze 3.0 a starší verze:
+
+[!code-cpp[NVC_MFCExceptions#1](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_1.cpp)]
+
+Tento kód se chová jinak než ve verzi 3.0 protože řízení se vždycky předá první **catch** blok s odpovídající deklaraci výjimky. Výsledek výraz throw
+
+[!code-cpp[NVC_MFCExceptions#19](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]
+
+je vyvolána jako `CException*`, i když je vytvořena jako `CCustomException`. **CATCH** makra v MFC – verze 2.5 a starší používá `CObject::IsKindOf` otestovat typ v době běhu. Vzhledem k tomu, výraz
+
+[!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]
+
+má hodnotu true, první blok catch zachytí výjimku. Ve verzi 3.0, která používá výjimky jazyka C++ k implementaci mnoha makra zpracování výjimek, odpovídá druhý bloku catch k této výjimce dojde `CException`.
+
+Kód tímto způsobem neobvyklé. To se obvykle zobrazí, když výjimka objekt je předán do jiné funkce, která přijímá obecný `CException*`, provádí zpracování "před vyvolání výjimky" a nakonec vyvolává výjimku.
+
+Chcete-li tento problém vyřešit, přesunout výraz throw z funkce do kódu volání a vyvolají výjimku skutečný typ pro kompilátor známým v době, kdy se vygeneruje výjimku.
+
+##  <a name="_core_re.2d.throwing_exceptions"></a> Opětovné generování výjimek
+
+Blok catch nejde aktivovat stejný ukazatel výjimka, která je zachycena.
+
+Například tento kód byl platný v předchozích verzích ale budou mít neočekávané výsledky verze 3.0 od:
+
+[!code-cpp[NVC_MFCExceptions#2](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_4.cpp)]
+
+Pomocí **THROW** v catch blok způsobí, že ukazatel `e` odstranit, aby lokality vnější catch obdrží neplatný ukazatel. Použití **THROW_LAST** pro opětovné vyvolání `e`.
+
+Další informace najdete v tématu [výjimky: výjimky zachycení a odstraňování](../mfc/exceptions-catching-and-deleting-exceptions.md).
+
+## <a name="see-also"></a>Viz také
+
+[Zpracování výjimek](../mfc/exception-handling-in-mfc.md)
 

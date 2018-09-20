@@ -1,5 +1,5 @@
 ---
-title: Obslužné rutiny pro oblasti Map zpráv | Microsoft Docs
+title: Obslužné rutiny pro oblasti Map zpráv | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,123 +32,129 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 896977da8ca57cc17a9fa3b7864e1744ee07f35d
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ca420ce09cae5bf7c11dcfb0ad384e0002bdc4b1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930820"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403567"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Obslužné rutiny pro oblasti map zpráv
-Tento článek vysvětluje způsob namapování řadu zprávy do jedné zprávy funkci obslužné rutiny (namísto mapování jednu zprávu na jenom jednu funkci).  
-  
- Existují situace, kdy je potřeba zpracovat více než jeden upozornění na zprávy nebo ovládací prvek stejným způsobem. V takových situacích můžete chtít mapovat všechny zprávy k jedné obslužné rutiny funkce. Oblasti map zpráv umožňují to udělat pro souvislý rozsah zprávy:  
-  
--   Můžete namapovat rozsahy ID příkazu pro:  
-  
-    -   Funkce obslužná rutina příkazu.  
-  
-    -   Funkce obslužné rutiny aktualizace příkaz.  
-  
--   Funkce obslužné rutiny zpráv můžete namapovat zprávy oznámení ovládacího prvku pro rozsah ID ovládacích prvků.  
-  
- Témata popsaná v tomto článku:  
-  
--   [Zápis položky map zpráv](#_core_writing_the_message.2d.map_entry)  
-  
--   [Deklarování obslužné rutiny](#_core_declaring_the_handler_function)  
-  
--   [Příklad pro rozsah identifikátory příkazů](#_core_example_for_a_range_of_command_ids)  
-  
--   [Příklad pro rozsah ID ovládacích prvků](#_core_example_for_a_range_of_control_ids)  
-  
-##  <a name="_core_writing_the_message.2d.map_entry"></a> Zápis položky Map zpráv  
- V. CPP soubor, přidejte mapování zpráv zadání, jak je znázorněno v následujícím příkladu:  
-  
- [!code-cpp[NVC_MFCMessageHandling#6](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_1.cpp)]  
-  
- Položka mapování zpráv se skládá z následujících položek:  
-  
--   Makra map zpráv rozsahu:  
-  
-    -   [ON_COMMAND_RANGE –](reference/message-map-macros-mfc.md#on_command_range)  
-  
-    -   [ON_UPDATE_COMMAND_UI_RANGE –](reference/message-map-macros-mfc.md#on_update_command_ui_range)  
-  
-    -   [ON_CONTROL_RANGE –](reference/message-map-macros-mfc.md#on_control_range)  
-  
--   Parametry pro makro:  
-  
-     První dva makra trvat tři parametry:  
-  
-    -   ID příkazu, který začíná rozsahu  
-  
-    -   ID příkazu, který končí rozsahu  
-  
-    -   Název obslužné rutiny zpráv  
-  
-     Rozsah ID příkazů musí být spojití.  
-  
-     Třetí makro `ON_CONTROL_RANGE`, provede další první parametr: oznámení ovládacího prvku zprávy, jako například **EN_CHANGE**.  
-  
-##  <a name="_core_declaring_the_handler_function"></a> Deklarování obslužné rutiny  
- Přidání vaší obslužné rutiny funkce deklarace v. Soubor H. Následující kód ukazuje, jak to může vypadat, jak je uvedeno níže:  
-  
- [!code-cpp[NVC_MFCMessageHandling#7](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_2.h)]  
-  
- Funkce obslužných rutin pro jeden příkazy obvykle trvat žádné parametry. S výjimkou funkcí obslužné rutiny aktualizace, funkce obslužné rutiny pro oblasti map zpráv vyžadují další parametr *nID*, typu **Celé_číslo**. Tento parametr je první parametr. Speciálním parametrem přizpůsobí ID navíc příkazu, který je potřeba k určení příkazu, na který se uživatel rozhodl ve skutečnosti.  
-  
- Další informace o požadavcích na parametr pro aktualizaci funkce obslužných rutin najdete v tématu [příklad pro určitý rozsah příkaz ID](#_core_example_for_a_range_of_command_ids).  
-  
-##  <a name="_core_example_for_a_range_of_command_ids"></a> Příklad pro příkaz rozsah ID  
- Když může použijete rozsahy jedním z příkladů je při zpracování příkazy, jako je příkaz zvětšení v ukázce MFC [HIERSVR](../visual-cpp-samples.md). Tento příkaz zvětší zobrazení, škálování mezi 25 % a 300 % jeho normální velikost. Třídy zobrazení na HIERSVR používá rozsah pro zpracování příkazy Zvětšení s položkou map zpráv tvaru toto:  
-  
- [!code-cpp[NVC_MFCMessageHandling#8](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_3.cpp)]  
-  
- Když píšete položka mapování zpráv, zadejte:  
-  
--   Dva identifikátory příkazů e-mailů, počáteční a koncové souvislý rozsah.  
-  
-     Tady jsou **ID_VIEW_ZOOM25** a **ID_VIEW_ZOOM300**.  
-  
--   Název obslužné rutiny pro příkazy.  
-  
-     Zde je `OnZoom`.  
-  
- Deklarace funkce by vypadat přibližně takto:  
-  
- [!code-cpp[NVC_MFCMessageHandling#9](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_4.h)]  
-  
- V případě funkce obslužné rutiny aktualizace je podobné a mohly být více široce užitečné. Je celkem běžné zápis `ON_UPDATE_COMMAND_UI` obslužné rutiny pro řadu příkazů a najít sami zápisu nebo ke kopírování, stejný kód opakovaně. Řešení je mapovat rozsah ID na jednu aktualizaci, obslužné rutiny funkce pomocí příkazu `ON_UPDATE_COMMAND_UI_RANGE` makro. Identifikátory příkazů musí tvořit souvislý rozsah. Příklad, naleznete v části `OnUpdateZoom` obslužné rutiny a jeho `ON_UPDATE_COMMAND_UI_RANGE` položku mapování zpráv v ukázkové HIERSVR třídy zobrazení.  
-  
- Aktualizovat funkce obslužných rutin pro jeden příkazy obvykle trvat jeden parametr *pCmdUI*, typu `CCmdUI*`. Na rozdíl od funkce obslužných rutin, obslužné rutiny funkce aktualizace pro oblasti map zpráv nevyžadují další parametr *nID*, typu **Celé_číslo**. ID příkazu, který je nutný k určení, který příkaz se uživatel rozhodl ve skutečnosti, je nalezena v `CCmdUI` objektu.  
-  
-##  <a name="_core_example_for_a_range_of_control_ids"></a> Příklad pro ID rozsahu ovládací prvek  
- Jiné zajímavé případ je mapování zpráv oznámení ovládacího prvku pro řadu ID ovládacích prvků k jedné obslužné rutině. Předpokládejme, že uživatel klepnutím na libovolné 10 tlačítek. Pro mapování všechny 10 tlačítka k jedné obslužné rutině, zadání map zpráv bude vypadat takto:  
-  
- [!code-cpp[NVC_MFCMessageHandling#10](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_5.cpp)]  
-  
- Při psaní `ON_CONTROL_RANGE` makro na mapě zprávu, zadejte:  
-  
--   Zpráva konkrétní oznámení ovládacího prvku.  
-  
-     Zde je **BN_CLICKED**.  
-  
--   Hodnoty ID řízení přidružené souvislý rozsah ovládacích prvků.  
-  
-     Tady jsou **IDC_BUTTON1** a **IDC_BUTTON10**.  
-  
--   Název obslužné rutiny zpráv.  
-  
-     Zde je `OnButtonClicked`.  
-  
- Když píšete obslužné rutiny, zadejte nadbytečné **Celé_číslo** parametr, jak je znázorněno v následující:  
-  
- [!code-cpp[NVC_MFCMessageHandling#11](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_6.cpp)]  
-  
- `OnButtonClicked` Obslužné rutiny pro jeden **BN_CLICKED** zpráva nepřijímá žádné parametry. Stejné obslužné rutiny pro řadu tlačítek má jednu **Celé_číslo**. Parametr navíc umožňuje identifikaci zodpovědný za generování ovládacího prvku konkrétní **BN_CLICKED** zprávy.  
-  
- Kód v příkladu je typické: převodu hodnoty předaný `int` v rámci rozsahu zprávu a potvrzující, že se jedná o tento případ. Potom může trvat několik různé akce v závislosti na tom, které se kliknutí na tlačítko.  
-  
-## <a name="see-also"></a>Viz také  
- [Deklarace funkcí obslužných rutin zpráv](../mfc/declaring-message-handler-functions.md)
+
+Tento článek vysvětluje, jak mapovat celou řadu zpráv jedna zpráva funkci obslužné rutiny (namísto mapování zpráv na jenom jednu funkci).
+
+Existují situace, kdy je potřeba zpracovávat více zpráv nebo ovládací prvek oznámení stejným způsobem. Za těchto okolností možná budete chtít mapovat všechny zprávy jedna obslužná rutina funkce. Oblasti map zpráv bylo možné provést pro souvislý rozsah zprávy:
+
+- Můžete mapovat rozsahy ID příkazů do:
+
+   - Funkce obslužné rutiny příkazu.
+
+   - Funkce obslužné rutiny příkazu update.
+
+- Zprávy s oznámením ovládacího prvku pro rozsah ID ovládacích prvků můžete namapovat na funkce obslužné rutiny zprávy.
+
+V tomto článku probíraná témata zahrnují:
+
+- [Zápis položky mapování zpráv](#_core_writing_the_message.2d.map_entry)
+
+- [Deklarace funkce obslužné rutiny](#_core_declaring_the_handler_function)
+
+- [Příklad pro rozsah ID příkazů](#_core_example_for_a_range_of_command_ids)
+
+- [Příklad pro rozsah ID ovládacího prvku](#_core_example_for_a_range_of_control_ids)
+
+##  <a name="_core_writing_the_message.2d.map_entry"></a> Zápis položky mapování zpráv
+
+V. CPP přidejte položky mapování zpráv, jak je znázorněno v následujícím příkladu:
+
+[!code-cpp[NVC_MFCMessageHandling#6](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_1.cpp)]
+
+Položka mapování zpráv se skládá z následujících položek:
+
+- Makra map zpráv rozsahu:
+
+   - [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range)
+
+   - [ON_UPDATE_COMMAND_UI_RANGE](reference/message-map-macros-mfc.md#on_update_command_ui_range)
+
+   - [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_control_range)
+
+- Parametry do makra:
+
+     První dvě makra mít tři parametry:
+
+   - ID příkazu, který se spustí rozsahu
+
+   - ID příkazu, který končí rozsahu
+
+   - Název obslužné rutiny zpráv
+
+     Rozsah ID příkazů musí být spojití.
+
+     Třetí makro `ON_CONTROL_RANGE`, přijímá další první parametr: zpráva oznámení ovládacího prvku, jako například **EN_CHANGE**.
+
+##  <a name="_core_declaring_the_handler_function"></a> Deklarace funkce obslužné rutiny
+
+Přidat vaše obslužná rutina deklarace funkce v. Soubor H. Následující kód ukazuje, jak to může vypadat, jak je znázorněno níže:
+
+[!code-cpp[NVC_MFCMessageHandling#7](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_2.h)]
+
+Funkce obslužné rutiny pro příkazy jeden obvykle nemít žádné parametry. S výjimkou funkce obslužné rutiny aktualizace, vyžadují funkce obslužné rutiny pro oblasti map zpráv speciálním parametrem *nID*, typu **UINT**. Tento parametr je první parametr. Speciálním parametrem obsáhne zvláštní příkaz spouštět ID k určení příkazu, na který uživatel vybral skutečně potřeba.
+
+Další informace o požadavcích na parametr funkce obslužné rutiny aktualizace najdete v tématu [příklad pro určitý rozsah příkaz ID](#_core_example_for_a_range_of_command_ids).
+
+##  <a name="_core_example_for_a_range_of_command_ids"></a> Příklad pro příkaz rozsah ID
+
+Při může být použití rozsahů, jedním z příkladů je při zpracování příkazů, jako jsou příkazu zvětšení v ukázce MFC [HIERSVR](../visual-cpp-samples.md). Tento příkaz zvětší nebo zmenší zobrazení měřítka až 300 % normální velikosti 25 %. Třída zobrazení HIERSVR společnosti používá rozsah zpracovává příkazy přiblížení s položkou mapování zpráv podobné to:
+
+[!code-cpp[NVC_MFCMessageHandling#8](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_3.cpp)]
+
+Při zápisu položky mapování zpráv, zadejte:
+
+- Dva identifikátory, počáteční a koncové souvislý rozsah příkazů.
+
+     Tady jsou **ID_VIEW_ZOOM25** a **ID_VIEW_ZOOM300**.
+
+- Název obslužné rutiny pro příkazy.
+
+     Tady je `OnZoom`.
+
+Deklarace funkce by vypadat přibližně takto:
+
+[!code-cpp[NVC_MFCMessageHandling#9](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_4.h)]
+
+Případ funkce obslužné rutiny aktualizace je podobná a mohly být více velmi užitečné. Je celkem běžné pro zápis `ON_UPDATE_COMMAND_UI` obslužné rutiny pro řadu příkazů a se hodit zápisu nebo ke kopírování, stejný kód pořád dokola. Řešení je mapovat celou řadu příkaz ID do jednoho aktualizovat pomocí funkce obslužné rutiny `ON_UPDATE_COMMAND_UI_RANGE` – makro. Identifikátory příkazů musí tvořit souvislý rozsah. Příklad najdete v tématu `OnUpdateZoom` obslužné rutiny a jeho `ON_UPDATE_COMMAND_UI_RANGE` položku mapování zpráv ve třídě zobrazení HIERSVR vzorku.
+
+Aktualizace funkcí obslužných rutin pro jeden příkazy vám normálně trvalo jediný parametr, *pCmdUI*, typu `CCmdUI*`. Na rozdíl od funkce obslužné rutiny aktualizace funkce obslužné rutiny pro oblasti map zpráv nevyžadují speciálním parametrem *nID*, typu **UINT**. ID příkazu, který je nutný k určení, které příkaz uživatele ve skutečnosti jste zvolili, je součástí `CCmdUI` objektu.
+
+##  <a name="_core_example_for_a_range_of_control_ids"></a> Příklad pro ID ovládacího prvku rozsahu
+
+Další možnost je zajímavé mapuje na jedna obslužná rutina zpráv s oznámením ovládacího prvku pro rozsah ID ovládacího prvku. Předpokládejme, že uživatel může získáte po kliknutí na 10 tlačítka. Pokud chcete namapovat všechny 10 tlačítka jednu obslužnou rutinu, vaší položky mapování zpráv bude vypadat takto:
+
+[!code-cpp[NVC_MFCMessageHandling#10](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_5.cpp)]
+
+Při psaní `ON_CONTROL_RANGE` – makro v mapě zpráv, zadejte:
+
+- Konkrétní oznámení ovládacího prvku zprávy.
+
+     Tady je **BN_CLICKED**.
+
+- ID ovládacího prvku hodnot spojené s souvislý rozsah ovládací prvky.
+
+     Tady jsou **IDC_BUTTON1** a **IDC_BUTTON10**.
+
+- Název obslužné rutiny zprávy.
+
+     Tady je `OnButtonClicked`.
+
+Při zápisu funkce obslužné rutiny, zadejte nadbytečné **UINT** parametru, jak je znázorněno v následujících tématech:
+
+[!code-cpp[NVC_MFCMessageHandling#11](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_6.cpp)]
+
+`OnButtonClicked` Obslužné rutiny pro jeden **BN_CLICKED** zpráva nemá žádné parametry. Stejnou obslužnou rutinu pro celou řadu tlačítek má jednu **UINT**. Parametr navíc umožňuje identifikaci konkrétní ovládací prvek zodpovědný za generování **BN_CLICKED** zprávy.
+
+Kód ukazuje příklad je typické: převod hodnoty předané do `int` v rámci oblasti zpráv a potvrzující, že se jedná o tento případ. Potom může trvat nějakou jinou akci v závislosti na tom, které došlo ke kliknutí na tlačítko.
+
+## <a name="see-also"></a>Viz také
+
+[Deklarace funkcí obslužných rutin zpráv](../mfc/declaring-message-handler-functions.md)

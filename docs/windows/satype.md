@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 462dba3caaef53e49203eab6d006ea59d7b23c0e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6562721cfdf1fb963a6af71e8a8665887fa4d4ae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590370"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413101"
 ---
 # <a name="satype"></a>satype
 
@@ -38,7 +38,7 @@ Určuje datový typ `SAFEARRAY` struktury.
 
 ### <a name="parameters"></a>Parametry
 
-*data_type*  
+*data_type*<br/>
 Datový typ `SAFEARRAY` datová struktura, která je předána jako parametr metody rozhraní.
 
 ## <a name="requirements"></a>Požadavky
@@ -74,7 +74,7 @@ __interface A {
 
 ## <a name="see-also"></a>Viz také
 
-[Atributy kompilátoru](../windows/compiler-attributes.md)  
-[Atributy parametru](../windows/parameter-attributes.md)  
-[Atributy metody](../windows/method-attributes.md)  
+[Atributy kompilátoru](../windows/compiler-attributes.md)<br/>
+[Atributy parametru](../windows/parameter-attributes.md)<br/>
+[Atributy metody](../windows/method-attributes.md)<br/>
 [id](../windows/id.md)  

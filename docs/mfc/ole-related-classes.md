@@ -1,5 +1,5 @@
 ---
-title: Třídy související s rozhraním OLE | Microsoft Docs
+title: Třídy související s rozhraním OLE | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: baa4ec3de21ce91e0d8723ad0e4debb39a26b3cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f43dadaa4aaefa677106710d1adbcdf0e60be59d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348512"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411310"
 ---
 # <a name="ole-related-classes"></a>Třídy související s rozhraním OLE
-Tyto třídy poskytují několik různých služeb, od výjimky do souboru vstup a výstup.  
-  
- [COleObjectFactory](../mfc/reference/coleobjectfactory-class.md)  
- Použít k vytvoření položky vyžádání z jiných kontejnerů. Tato třída slouží jako základní třída pro další specifické typy objektů Factory, včetně `COleTemplateServer`.  
-  
- [COleMessageFilter](../mfc/reference/colemessagefilter-class.md)  
- Používá ke správě souběžnosti s OLE Lightweight vzdálené procedury volání (LRPC).  
-  
- [COleStreamFile](../mfc/reference/colestreamfile-class.md)  
- Používá modelu COM `IStream` rozhraní zajistit `CFile` přístup k složené soubory. Tato třída (odvozený z `CFile`) umožňuje MFC serializace používání OLE strukturovaná úložiště.  
-  
- [Crecttracker –](../mfc/reference/crecttracker-class.md)  
- Použít pro povolení přesunutí, změny velikosti a přesměrování na místě položky.  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled třídy](../mfc/class-library-overview.md)
+
+Tyto třídy poskytují celou řadou různých služeb, od výjimky pro vstup a výstup souborů.
+
+[COleObjectFactory –](../mfc/reference/coleobjectfactory-class.md)<br/>
+Umožňuje vytvořit položky při požadavku na z jiných kontejnerů. Tato třída slouží jako základní třída pro konkrétnější typy objektů pro vytváření, včetně `COleTemplateServer`.
+
+[Colemessagefilter –](../mfc/reference/colemessagefilter-class.md)<br/>
+Použít ke správě souběžnosti s OLE Lightweight vzdálené procedury volání (LRPC).
+
+[Colestreamfile –](../mfc/reference/colestreamfile-class.md)<br/>
+Používá COM `IStream` rozhraní k poskytování `CFile` přístup k složené soubory. Tato třída (odvozený od `CFile`) umožňuje MFC serializace za účelem použití OLE strukturované úložiště.
+
+[Crecttracker –](../mfc/reference/crecttracker-class.md)<br/>
+Používá k přesunutí, změna velikosti a přesměrování na místě položek.
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../mfc/class-library-overview.md)
 

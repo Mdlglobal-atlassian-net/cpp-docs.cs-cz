@@ -1,28 +1,38 @@
 ---
 title: ClassFactory – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/13/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::ClassFactory
+- module/Microsoft::WRL::ClassFactory::AddRef
+- module/Microsoft::WRL::ClassFactory::ClassFactory
+- module/Microsoft::WRL::ClassFactory::LockServer
+- module/Microsoft::WRL::ClassFactory::QueryInterface
+- module/Microsoft::WRL::ClassFactory::Release
 dev_langs:
 - C++
 helpviewer_keywords:
-- ClassFactory class
+- Microsoft::WRL::ClassFactory class
+- Microsoft::WRL::ClassFactory::AddRef method
+- Microsoft::WRL::ClassFactory::ClassFactory, constructor
+- Microsoft::WRL::ClassFactory::LockServer method
+- Microsoft::WRL::ClassFactory::QueryInterface method
+- Microsoft::WRL::ClassFactory::Release method
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0f033fc20fac656e6b9fcfa9ac822099ea929d62
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bfaf95a477917fc417cfe3c296822233eca77c09
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611802"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413065"
 ---
 # <a name="classfactory-class"></a>ClassFactory – třída
 
@@ -48,18 +58,18 @@ class ClassFactory : public Details::RuntimeClass<
 
 ### <a name="parameters"></a>Parametry
 
-*I0*  
+*I0*<br/>
 ID nultého rozhraní.
 
-*I1*  
+*I1*<br/>
 První rozhraní.
 
-*I2*  
+*I2*<br/>
 Druhé síťové rozhraní.
 
 ## <a name="remarks"></a>Poznámky
 
-Využívat **ClassFactory –** poskytují implementace uživatelem definovaný objekt pro vytváření.
+Využívat `ClassFactory` poskytují implementace uživatelem definovaný objekt pro vytváření.
 
 Následující programovací model popisuje způsob použití [implementuje](../windows/implements-structure.md) struktura určit více než tři rozhraní na objekt pro vytváření tříd.
 
@@ -69,18 +79,18 @@ Následující programovací model popisuje způsob použití [implementuje](../
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
-|----------|-----------------|
-|[ClassFactory::ClassFactory – konstruktor](../windows/classfactory-classfactory-constructor.md)||
+Název                                        | Popis
+------------------------------------------- | -----------
+[ClassFactory::ClassFactory –](#classfactory) |
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
-|----------|-----------------|
-|[ClassFactory::AddRef – metoda](../windows/classfactory-addref-method.md)|Zvýší počet odkazů pro aktuální **ClassFactory –** objektu.|
-|[ClassFactory::LockServer – metoda](../windows/classfactory-lockserver-method.md)|Zvýší nebo sníží počet podkladových objektů, které jsou sledovány aktuální **ClassFactory –** objektu.|
-|[ClassFactory::QueryInterface – metoda](../windows/classfactory-queryinterface-method.md)|Načte ukazatel na rozhraní určené typem parametru.|
-|[ClassFactory::Release – metoda](../windows/classfactory-release-method.md)|Sníží počet odkaz pro aktuální **ClassFactory –** objektu.|
+Název                                            | Popis
+----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------
+[ClassFactory::addref –](#addref)                 | Zvýší počet odkazů pro aktuální `ClassFactory` objektu.
+[ClassFactory::lockserver –](#lockserver)         | Zvýší nebo sníží počet podkladových objektů, které jsou sledovány aktuální `ClassFactory` objektu.
+[ClassFactory::QueryInterface –](#queryinterface) | Načte ukazatel na rozhraní určené typem parametru.
+[ClassFactory::Release –](#release)               | Sníží počet odkaz pro aktuální `ClassFactory` objektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -110,7 +120,83 @@ Následující programovací model popisuje způsob použití [implementuje](../
 
 **Namespace:** Microsoft::WRL
 
-## <a name="see-also"></a>Viz také
+## <a name="addref"></a>ClassFactory::addref –
 
-[Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)  
-[RuntimeClassType – výčet](../windows/runtimeclasstype-enumeration.md)
+Zvýší počet odkazů pro aktuální `ClassFactory` objektu.
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   AddRef
+)();
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+S_OK v případě úspěchu; v opačném případě HRESULT s popisem chyby.
+
+## <a name="classfactory"></a>ClassFactory::ClassFactory –
+
+```cpp
+WRL_NOTHROW ClassFactory();
+```
+
+## <a name="lockserver"></a>ClassFactory::lockserver –
+
+Zvýší nebo sníží počet podkladových objektů, které jsou sledovány aktuální `ClassFactory` objektu.
+
+```cpp
+STDMETHOD(
+   LockServer
+)(BOOL fLock);
+```
+
+### <a name="parameters"></a>Parametry
+
+*hejna*<br/>
+`true` Chcete-li zvýšit počet sledovaných objektů. `false` se sníží počet sledovaných objektů.
+
+### <a name="return-value"></a>Návratová hodnota
+
+S_OK v případě úspěchu; v opačném případě E_FAIL.
+
+### <a name="remarks"></a>Poznámky
+
+`ClassFactory` uchovává informace o objekty v základní instance [modulu](../windows/module-class.md) třídy.
+
+## <a name="queryinterface"></a>ClassFactory::QueryInterface –
+
+Načte ukazatel na rozhraní určené typem parametru.
+
+```cpp
+STDMETHOD(
+   QueryInterface
+)(REFIID riid, _Deref_out_ void **ppvObject);
+```
+
+### <a name="parameters"></a>Parametry
+
+*riid*<br/>
+Identifikátor rozhraní.
+
+*ppvObject*<br/>
+Když tato operace dokončí, ukazatel na rozhraní určené typem parametru *riid*.
+
+### <a name="return-value"></a>Návratová hodnota
+
+S_OK v případě úspěchu; v opačném případě HRESULT s popisem chyby.
+
+## <a name="release"></a>ClassFactory::Release –
+
+Sníží počet odkaz pro aktuální `ClassFactory` objektu.
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   Release
+)();
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+S_OK v případě úspěchu; v opačném případě HRESULT s popisem chyby.

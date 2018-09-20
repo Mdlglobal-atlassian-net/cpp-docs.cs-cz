@@ -1,5 +1,5 @@
 ---
-title: Soukromé virtuální funkce | Microsoft Docs
+title: Soukromé virtuální funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,48 +18,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 97b4d7d9f47901fa69aa50bfc6f405355cf378b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0058d023268fa4d9ca5abe802ff45856e9855dc7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33162335"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418070"
 ---
 # <a name="private-virtual-functions"></a>Soukromé virtuální funkce
-Způsob, jakým soukromé virtuální funkce jsou zpracovány v odvozených třídách změnil ze spravovaných rozšíření jazyka C++ na Visual C++.  
-  
- Ve spravovaných rozšíření úroveň přístupu virtuální funkce neuvádělo její možnosti k přepsání v odvozené třídě. V nové syntaxe virtuální funkci nelze přepsat virtuální funkce základní třídy, která nemůže získat přístup. Příklad:  
-  
-```  
-__gc class MyBaseClass {  
-   // inaccessible to a derived class   
-   virtual void g();  
-};  
-  
-__gc class MyDerivedClass : public MyBaseClass {  
-public:  
-   // okay in Managed Extensions; g() overrides MyBaseClass::g()  
-   // error in new syntax; cannot override: MyBaseClass::g() is inaccessible  
-   void g();  
-};  
-```  
-  
- Neexistuje žádné skutečné mapování tohoto druhu návrhu na nové syntaxe. Uživatel jednoduše musí zpřístupnit členy základní třídy – to znamená, ne privátní. Zděděné metody nemusíte stejný přístup. V tomto příkladu je nejméně invazivní změnit nastavte člena MyBaseClass `protected`. Tímto způsobem obecné program přístup k metodě prostřednictvím MyBaseClass stále zakázán.  
-  
-```  
-ref class MyBaseClass {  
-protected:  
-   virtual void g();  
-};  
-  
-ref class MyDerivedClass : MyBaseClass {  
-public:  
-   virtual void g() override;  
-};  
-```  
-  
- Všimněte si, že neexistence explicitního `virtual` – klíčové slovo v základní třídě podle nové syntaxe, vygeneruje upozornění.  
-  
-## <a name="see-also"></a>Viz také  
- [Deklarace členů v rámci třídy nebo rozhraní (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- 
+
+Způsob, jakým jsou zpracovány soukromé virtuální funkce v odvozených třídách změnil ze spravovaného rozšíření jazyka C++ pro Visual C++.
+
+Úroveň přístupu virtuální funkce v spravovaného rozšíření neomezuje schopnosti přepsat v odvozené třídě. V nové syntaxi virtuální funkce nemůže přepsat virtuální funkce základní třídy nemůže získat přístup. Příklad:
+
+```
+__gc class MyBaseClass {
+   // inaccessible to a derived class
+   virtual void g();
+};
+
+__gc class MyDerivedClass : public MyBaseClass {
+public:
+   // okay in Managed Extensions; g() overrides MyBaseClass::g()
+   // error in new syntax; cannot override: MyBaseClass::g() is inaccessible
+   void g();
+};
+```
+
+Neexistuje žádné skutečné mapování tento druh návrh na novou syntaxi. Jeden má jednoduše zpřístupnit členy základní třídy – to znamená, veřejné. Zděděné metody nemusí mít stejný přístup. V tomto příkladu je nejméně invazivní změnit, aby člen MyBaseClass `protected`. Přístup k metodě prostřednictvím MyBaseClass obecné programu tímto způsobem je stále zakázaná.
+
+```
+ref class MyBaseClass {
+protected:
+   virtual void g();
+};
+
+ref class MyDerivedClass : MyBaseClass {
+public:
+   virtual void g() override;
+};
+```
+
+Všimněte si, že chybí explicitní `virtual` – klíčové slovo v základní třídě v nové syntaxi, vygeneruje upozornění.
+
+## <a name="see-also"></a>Viz také
+
+[Deklarace členů v rámci třídy nebo rozhraní (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)

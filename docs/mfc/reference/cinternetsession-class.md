@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83ff74a460c7cb34a50d0fbdf338eccc3da27f98
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a519d9b978f5b48377b1a85d52274cba35c9d075
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197436"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401800"
 ---
 # <a name="cinternetsession-class"></a>Cinternetsession – třída
 
@@ -115,7 +115,7 @@ Další informace o základní Internet programovacích úloh, najdete v článk
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)  
+[Třídy CObject](../../mfc/reference/cobject-class.md)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;`CInternetSession`
 
 ## <a name="requirements"></a>Požadavky
@@ -138,13 +138,13 @@ CInternetSession(
 
 ### <a name="parameters"></a>Parametry
 
-*pstrAgent*  
+*pstrAgent*<br/>
 Ukazatel na řetězec, který určuje název aplikace nebo entity volání funkcí Internetu (například "Microsoft internetovém prohlížeči"). Pokud *pstrAgent* má hodnotu NULL (výchozí), rámec volá funkci globální [afxgetappname –](application-information-and-management.md#afxgetappname), která vrací řetězec zakončený hodnotou null obsahující název aplikace. Některé protokoly použít tento řetězec k identifikaci vaší aplikace na server.
 
-*dwContext*  
+*dwContext*<br/>
 Identifikátor kontextu operace. *dwContext* identifikuje informace o stavu operace vracené [CInternetSession::OnStatusCallback](#onstatuscallback). Výchozí hodnota je nastavená na 1; Můžete však explicitně přiřadit konkrétní kontext ID operace. Objekt a veškerou práci, kterou provádí bude spojená s ID tohoto kontextu.
 
-*dwAccessType*  
+*dwAccessType*<br/>
 Typ přístupu vyžaduje. Následují platné hodnoty, může být zadána přesně jeden z nich:
 
 - INTERNET_OPEN_TYPE_PRECONFIG připojení pomocí předem nakonfigurovaných nastavení v registru. Tento typ přístupu je nastaven jako výchozí. Připojit přes proxy server je čas nastavit *dwAccessType* na tuto hodnotu; poté nastavíte registru odpovídajícím způsobem.
@@ -155,13 +155,13 @@ Typ přístupu vyžaduje. Následují platné hodnoty, může být zadána přes
 
 Informace o připojení s různými typy proxy serverů najdete v tématu [postup v typické aplikaci klienta FTP](../../mfc/steps-in-a-typical-ftp-client-application.md).
 
-*pstrProxyName*  
+*pstrProxyName*<br/>
 Název proxy upřednostňované CERN Pokud *dwAccessType* je nastaven jako INTERNET_OPEN_TYPE_PROXY. Výchozí hodnota je NULL.
 
-*pstrProxyBypass*  
+*pstrProxyBypass*<br/>
 Ukazatel na řetězec obsahující volitelný seznam adres serveru. Tyto adresy může obejít, při použití proxy serveru přístup. Pokud není zadána hodnota NULL, seznam obcházení bude číst z registru. Tento parametr má smysl pouze v případě *dwAccessType* je nastavena na INTERNET_OPEN_TYPE_PROXY.
 
-*dwFlags*  
+*dwFlags*<br/>
 Určuje různé možnosti ukládání do mezipaměti. Výchozí hodnota je nastavena na hodnotu 0. Možné hodnoty:
 
 - INTERNET_FLAG_DONT_CACHE Neukládat do mezipaměti dat, místně nebo v veškeré servery brány.
@@ -200,7 +200,7 @@ BOOL EnableStatusCallback(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bEnable*  
+*bEnable*<br/>
 Určuje, zda je povoleno zpětného volání. Výchozí hodnota je TRUE.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -255,16 +255,16 @@ static BOOL GetCookie(
 
 ### <a name="parameters"></a>Parametry
 
-*pstrUrl*  
+*pstrUrl*<br/>
 Ukazatel na řetězec obsahující adresu URL.
 
-*pstrCookieName*  
+*pstrCookieName*<br/>
 Ukazatel na řetězec obsahující název souboru cookie, chcete-li získat pro zadané adresy URL.
 
-*pstrCookieData*  
+*pstrCookieData*<br/>
 V první přetížení ukazatel na řetězec obsahující adresu vyrovnávací paměti, která přijímá data souborů cookie. Tato hodnota může být NULL. V druhé přetížení, odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) objektu pro příjem dat souboru cookie.
 
-*dwBufLen*  
+*dwBufLen*<br/>
 Proměnná, určení velikosti *pstrCookieData* vyrovnávací paměti. Pokud funkce uspěje, vyrovnávací paměti přijímá množství dat, které jsou zkopírovány do *pstrCookieData* vyrovnávací paměti. Pokud *pstrCookieData* má hodnotu NULL, tento parametr přijímá hodnotu, která určuje velikost vyrovnávací paměti, která je nezbytná pro zkopírování všech dat souboru cookie.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -291,10 +291,10 @@ static DWORD GetCookieLength(
 
 ### <a name="parameters"></a>Parametry
 
-*pstrUrl*  
+*pstrUrl*<br/>
 Ukazatel na řetězec obsahující adresu URL
 
-*pstrCookieName*  
+*pstrCookieName*<br/>
 Ukazatel na řetězec obsahující název souboru cookie.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -320,13 +320,13 @@ CFtpConnection* GetFtpConnection(
 
 ### <a name="parameters"></a>Parametry
 
-*pstrServer*  
+*pstrServer*<br/>
 Ukazatel na řetězec obsahující název serveru FTP.
 
-*pstrUserName*  
+*pstrUserName*<br/>
 Ukazatel na řetězec zakončený hodnotou null, který určuje jméno uživatele k přihlášení. Pokud má hodnotu NULL, výchozí hodnota je anonymous.
 
-*pstrPassword*  
+*pstrPassword*<br/>
 Ukazatel na řetězec zakončený hodnotou null, který určuje heslo pro použití k protokolování. Pokud mají oba *pstrPassword* a *pstrUserName* hodnotu Null, je výchozí heslo anonymní uživatelské jméno e-mailu. Pokud *pstrPassword* má hodnotu NULL (nebo prázdný řetězec), ale *pstrUserName* nemá hodnotu NULL, prázdné heslo se používá. Následující tabulka popisuje chování pro čtyři možných nastavení *pstrUserName* a *pstrPassword*:
 
 |*pstrUserName*|*pstrPassword*|Uživatelské jméno odeslané na FTP server|Heslo odeslaných na FTP server|
@@ -336,10 +336,10 @@ Ukazatel na řetězec zakončený hodnotou null, který určuje heslo pro použi
 |NULL|Řetězec NENULOVÉ|CHYBA|CHYBA||
 |Řetězec NENULOVÉ|Řetězec NENULOVÉ|*pstrUserName*|*pstrPassword*|
 
-*nPort*  
+*nPort*<br/>
 Číslo, které identifikuje port TCP/IP pro použití na serveru.
 
-*bPassive*  
+*bPassive*<br/>
 Určuje režim pasivní nebo aktivní pro tuto relaci serveru FTP. Pokud je nastavena na hodnotu TRUE, nastaví rozhraní API systému Win32 `dwFlag` k INTERNET_FLAG_PASSIVE.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -368,16 +368,16 @@ CGopherConnection* GetGopherConnection(
 
 ### <a name="parameters"></a>Parametry
 
-*pstrServer*  
+*pstrServer*<br/>
 Ukazatel na řetězec obsahující název gopher serveru.
 
-*pstrUserName*  
+*pstrUserName*<br/>
 Ukazatel na řetězec obsahující uživatelské jméno.
 
-*pstrPassword*  
+*pstrPassword*<br/>
 Ukazatel na řetězec obsahující přístupové heslo.
 
-*nPort*  
+*nPort*<br/>
 Číslo, které identifikuje port TCP/IP pro použití na serveru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -409,19 +409,19 @@ CHttpConnection* GetHttpConnection(
 
 ### <a name="parameters"></a>Parametry
 
-*pstrServer*  
+*pstrServer*<br/>
 Ukazatel na řetězec obsahující název serveru HTTP.
 
-*nPort*  
+*nPort*<br/>
 Číslo, které identifikuje port TCP/IP pro použití na serveru.
 
-*pstrUserName*  
+*pstrUserName*<br/>
 Ukazatel na řetězec obsahující uživatelské jméno.
 
-*pstrPassword*  
+*pstrPassword*<br/>
 Ukazatel na řetězec obsahující přístupové heslo.
 
-*dwFlags*  
+*dwFlags*<br/>
 Libovolnou kombinaci `INTERNET_FLAG_*` příznaky. Viz tabulka **poznámky** část [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) popis *dwFlags* hodnoty.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -446,16 +446,16 @@ virtual void OnStatusCallback(
 
 ### <a name="parameters"></a>Parametry
 
-*dwContext*  
+*dwContext*<br/>
 Hodnota kontextového poskytnuté aplikací.
 
-*dwInternetStatus*  
+*dwInternetStatus*<br/>
 Stavový kód, který označuje, proč je nastaven zpětného volání. Zobrazit **poznámky** pro tabulku možných hodnot.
 
-*lpvStatusInformation*  
+*lpvStatusInformation*<br/>
 Ukazatel do vyrovnávací paměti, který obsahuje informace, které jsou relevantní pro toto zpětné volání.
 
-*dwStatusInformationLength*  
+*dwStatusInformationLength*<br/>
 Velikost *lpvStatusInformation*.
 
 ### <a name="remarks"></a>Poznámky
@@ -484,7 +484,7 @@ Potlačí tuto členskou funkci tak, aby vyžadovala některé akce před spušt
 > [!NOTE]
 > Zpětná volání stav potřeba chránit stav vlákna. Pokud používáte knihovnu MFC ve sdílené knihovně, přidejte následující řádek na začátek přepsání:
 
- [!code-cpp[NVC_MFCHtmlHttp#8](../../mfc/reference/codesnippet/cpp/cinternetsession-class_1.cpp)]
+[!code-cpp[NVC_MFCHtmlHttp#8](../../mfc/reference/codesnippet/cpp/cinternetsession-class_1.cpp)]
 
 Další informace o asynchronních operací, najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md).
 
@@ -503,13 +503,13 @@ CStdioFile* OpenURL(
 
 ### <a name="parameters"></a>Parametry
 
-*pstrURL*  
+*pstrURL*<br/>
 Ukazatel na název adresy URL má začínat čtení. Pouze adresy URL začínající souborem:, ftp:, gopher:, nebo http: jsou podporovány. Vyhodnotí, pokud *pstrURL* má hodnotu NULL.
 
-*dwContext*  
+*dwContext*<br/>
 Hodnotu definovaného aplikací se dokončila s Vrácený popisovač ve zpětném volání.
 
-*dwFlags*  
+*dwFlags*<br/>
 Příznaky popisující, jak zpracovávat toto připojení. Zobrazit **poznámky** Další informace o platné příznaky. Platný příznaky jsou:
 
 - INTERNET_FLAG_TRANSFER_ASCII výchozí. Přeneste soubor jako ASCII text.
@@ -526,10 +526,10 @@ Příznaky popisující, jak zpracovávat toto připojení. Zobrazit **poznámky
 
 - INTERNET_FLAG_PASSIVE použít pro server FTP. Používá sémantiku pasivního protokolu FTP. Použít s [cinternetconnection –](../../mfc/reference/cinternetconnection-class.md) z `OpenURL`.
 
-*pstrHeaders*  
+*pstrHeaders*<br/>
 Ukazatel na řetězec obsahující hlavičky k odeslání na HTTP server.
 
-*dwHeadersLength*  
+*dwHeadersLength*<br/>
 Délka ve znacích, další záhlaví. Pokud je to L hodnota-1 a *pstrHeaders* je jiná než NULL, pak *pstrHeaders* se předpokládá, že nulovém ukončena a délka se počítá.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -574,13 +574,13 @@ static BOOL SetCookie(
 
 ### <a name="parameters"></a>Parametry
 
-*pstrUrl*  
+*pstrUrl*<br/>
 Ukazatel na řetězec zakončený hodnotou null, který určuje adresu URL, u které je třeba nastavit soubor cookie.
 
-*pstrCookieName*  
+*pstrCookieName*<br/>
 Ukazatel na řetězec obsahující název souboru cookie.
 
-*pstrCookieData*  
+*pstrCookieData*<br/>
 Ukazatel na řetězec obsahující aktuální řetězcovou data k přidružení s adresou URL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -611,19 +611,19 @@ BOOL SetOption(
 
 ### <a name="parameters"></a>Parametry
 
-*dwOption*  
+*dwOption*<br/>
 Internet možnost nastavit. Zobrazit [možnost příznaky](/windows/desktop/WinInet/option-flags) ve Windows SDKfor seznam dostupných možností.
 
-*lpBuffer.*  
+*lpBuffer.*<br/>
 Vyrovnávací paměť, která obsahuje nastavení možnosti.
 
-*dwBufferLength*  
+*dwBufferLength*<br/>
 Délka *lpBuffer* nebo velikost *dwValue*.
 
-*dwValue*  
+*dwValue*<br/>
 DWORD, který obsahuje nastavení možnosti.
 
-*dwFlags*  
+*dwFlags*<br/>
 Určuje různé možnosti ukládání do mezipaměti. Výchozí hodnota je nastavena na hodnotu 0. Možné hodnoty:
 
 - INTERNET_FLAG_DONT_CACHE Neukládat do mezipaměti dat, místně nebo v veškeré servery brány.
@@ -636,9 +636,9 @@ Pokud byla operace úspěšná, vrátí hodnotu true. Pokud došlo k chybě, vr�
 
 ## <a name="see-also"></a>Viz také
 
-[CObject – třída](../../mfc/reference/cobject-class.md)  
-[Graf hierarchie](../../mfc/hierarchy-chart.md)  
-[CInternetConnection – třída](../../mfc/reference/cinternetconnection-class.md)  
-[CHttpConnection – třída](../../mfc/reference/chttpconnection-class.md)  
-[CFtpConnection – třída](../../mfc/reference/cftpconnection-class.md)  
-[CGopherConnection – třída](../../mfc/reference/cgopherconnection-class.md)  
+[CObject – třída](../../mfc/reference/cobject-class.md)<br/>
+[Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
+[CInternetConnection – třída](../../mfc/reference/cinternetconnection-class.md)<br/>
+[CHttpConnection – třída](../../mfc/reference/chttpconnection-class.md)<br/>
+[CFtpConnection – třída](../../mfc/reference/cftpconnection-class.md)<br/>
+[CGopherConnection – třída](../../mfc/reference/cgopherconnection-class.md)

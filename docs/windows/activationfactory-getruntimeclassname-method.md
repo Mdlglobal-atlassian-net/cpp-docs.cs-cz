@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8847083fe134c36f506e7080772b1e5f0e2a873c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fbae13c6ce70533b8338d47893b6007a3032abab
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590179"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416302"
 ---
 # <a name="activationfactorygetruntimeclassname-method"></a>ActivationFactory::GetRuntimeClassName – metoda
 
@@ -38,7 +38,7 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*runtimeName*  
+*runtimeName*<br/>
 Když tato operace dokončí, popisovač pro řetězec, který obsahuje název třídy runtime objektu, který aktuální **activationfactory –** vytvoří instanci.
 
 ## <a name="return-value"></a>Návratová hodnota

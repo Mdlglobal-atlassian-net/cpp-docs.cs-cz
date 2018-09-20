@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1852e765ed859f95f6de5319a1e9d8fa364f7681
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: aff0c2e2600f7f0c300d1043c9844104fd70c4e4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207060"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415329"
 ---
 # <a name="lengthis"></a>length_is
 
@@ -38,7 +38,7 @@ Určuje počet elementů pole předávají.
 
 ### <a name="parameters"></a>Parametry
 
-*Výraz*  
+*Výraz*<br/>
 Jeden nebo více výrazů jazyka C. Prázdný argument sloty jsou povoleny.
 
 ## <a name="remarks"></a>Poznámky
@@ -64,10 +64,10 @@ Další informace najdete v tématu [kontexty atributů](../windows/attribute-co
 
 ## <a name="see-also"></a>Viz také
 
-[IDL – atributy](../windows/idl-attributes.md)  
-[Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Atributy parametru](../windows/parameter-attributes.md)  
-[first_is](../windows/first-is.md)  
-[max_is](../windows/max-is.md)  
-[last_is](../windows/last-is.md)  
+[IDL – atributy](../windows/idl-attributes.md)<br/>
+[Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[Atributy parametru](../windows/parameter-attributes.md)<br/>
+[first_is](../windows/first-is.md)<br/>
+[max_is](../windows/max-is.md)<br/>
+[last_is](../windows/last-is.md)<br/>
 [size_is](../windows/size-is.md)  

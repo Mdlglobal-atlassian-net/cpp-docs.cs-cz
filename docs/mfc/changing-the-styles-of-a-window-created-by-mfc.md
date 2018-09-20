@@ -31,60 +31,66 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d9d6ea09a1660a62203286c51bb848452f340e4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 98bcf57cc3a4697fc035fad73d8faf4e577a84b5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211946"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420115"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>Změna stylů okna vytvořeného rozhraním MFC
-V jeho verzi `WinMain` funkce MFC registruje několik tříd standardní okno za vás. Protože nemusíte normálně upravit MFC `WinMain`, že funkce poskytuje žádnou možnost, chcete-li změnit výchozí styly okna knihovny MFC. Tento článek vysvětluje, jak změnit styly takové registrované třídy okna v existující aplikaci.  
-  
-##  <a name="_core_changing_styles_in_a_new_mfc_application"></a> Změna stylů v nové aplikaci knihovny MFC  
- Pokud používáte Visual C++ 2.0 nebo novější, můžete změnit výchozí styly oken v aplikaci průvodce při vytváření vaší aplikace. Na stránce funkce uživatelského rozhraní aplikace průvodce můžete změnit styly pro hlavní okno rámce a podřízených oken MDI. Pro oba typy okně můžete zadat jeho tloušťky rámce (silný nebo dynamicky) a žádný z následujících akcí:  
-  
--   Určuje, zda má okno minimalizovat nebo maximalizovat ovládacích prvků.  
-  
--   Určuje, zda se zobrazí okno zpočátku minimalizované maximalizované, nebo ani jedna.  
-  
- Pro systém windows hlavního rámce můžete určit, zda má okno systémové nabídky. Pro podřízená okna MDI můžete určit, zda okno podporuje rozdělovač podokna.  
-  
-##  <a name="_core_changing_styles_in_an_existing_application"></a> Změna stylů v existující aplikaci  
- Pokud chcete změnit okno atributů v existující aplikaci, postupujte podle pokynů ve zbývající části tohoto článku.  
-  
- Chcete-li změnit výchozí atributy okno používá rozhraní framework aplikace vytvořené pomocí Průvodce aplikací, přepsat v okně [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) virtuální členskou funkci. `PreCreateWindow` umožňuje aplikaci získat přístup v procesu vytváření obvykle spravováno interně službou [CDocTemplate](../mfc/reference/cdoctemplate-class.md) třídy. Rámec volá `PreCreateWindow` pouze před vytvořením okna. Úpravou [soubor CREATESTRUCT](../mfc/reference/createstruct-structure.md) předané do `PreCreateWindow`, vaše aplikace může změnit atributy použité k vytvoření okna. Například Ujistěte se, že okno nepoužívá titulek, použijte následující bitová operace:  
-  
- [!code-cpp[NVC_MFCDocView#15](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_1.cpp)]  
-  
- [CTRLBARS](../visual-cpp-samples.md) ukázkové aplikaci ukazuje tento postup pro změnu atributů okna. V závislosti na tom, co vaše aplikace změní v `PreCreateWindow`, může být nutné volat implementaci základní třídy funkce.  
-  
- Následující diskuse zahrnuje případ SDI a [MDI případ](#_core_the_mdi_case).  
-  
-##  <a name="_core_the_sdi_case"></a> Případ SDI  
- V aplikaci rozhraní (SDI) jeden dokument, výchozí styl oken v rámci je kombinací **WS_OVERLAPPEDWINDOW** a **FWS_ADDTOTITLE** styly. **FWS_ADDTOTITLE** je specifické pro knihovny MFC styl, který dává pokyn rozhraní přidat název dokumentu na titulek okna. Změna atributů okna v aplikaci SDI, přepsat `PreCreateWindow` funkce ve třídě odvozené z `CFrameWnd` (který názvy Průvodce aplikací `CMainFrame`). Příklad:  
-  
- [!code-cpp[NVC_MFCDocViewSDI#11](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_2.cpp)]  
-  
- Tento kód vytvoří hlavní okno rámce bez tlačítka Minimalizovat a maximalizovat a proměnlivou velikostí ohraničení. V okně je zpočátku zarovnaný na střed na obrazovce.  
-  
-##  <a name="_core_the_mdi_case"></a> Případ MDI  
- O něco více práce je potřeba změnit styl okna podřízeného okna v aplikaci (MDI interface) více dokumentů. Ve výchozím nastavení, aplikace vytvořená pomocí Průvodce aplikace MDI používá výchozí [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) třídy definované v knihovně MFC. Chcete-li změnit styl okna podřízené okno MDI, musíte odvodit novou třídu z `CMDIChildWnd` a nahradit všechny odkazy na `CMDIChildWnd` ve vašem projektu s odkazy na novou třídu. Největší pravděpodobností pouze odkaz na `CMDIChildWnd` v aplikaci je umístěný ve vaší aplikaci `InitInstance` členskou funkci.  
-  
- Výchozí styl oken použijí v aplikaci MDI je kombinací **WS_CHILD**, **WS_OVERLAPPEDWINDOW**, a **FWS_ADDTOTITLE** styly. Změna atributů okna aplikace MDI podřízených oken, přepsat [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) funkce ve třídě odvozené z `CMDIChildWnd`. Příklad:  
-  
- [!code-cpp[NVC_MFCDocView#16](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_3.cpp)]  
-  
- Tento kód vytvoří podřízený formulář MDI windows bez tlačítko Maximalizovat.  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací  
-  
--   [Styly Windows](../mfc/reference/styles-used-by-mfc.md#window-styles)  
-  
--   [Styly oken s rámečkem](../mfc/frame-window-styles-cpp.md)  
-  
--   [Styly oken](https://msdn.microsoft.com/library/windows/desktop/ms632600)  
-  
-## <a name="see-also"></a>Viz také  
- [Styly oken s rámečkem](../mfc/frame-window-styles-cpp.md)
+
+V jeho verzi `WinMain` funkce MFC registruje několik tříd standardní okno za vás. Protože nemusíte normálně upravit MFC `WinMain`, že funkce poskytuje žádnou možnost, chcete-li změnit výchozí styly okna knihovny MFC. Tento článek vysvětluje, jak změnit styly takové registrované třídy okna v existující aplikaci.
+
+##  <a name="_core_changing_styles_in_a_new_mfc_application"></a> Změna stylů v nové aplikaci knihovny MFC
+
+Pokud používáte Visual C++ 2.0 nebo novější, můžete změnit výchozí styly oken v aplikaci průvodce při vytváření vaší aplikace. Na stránce funkce uživatelského rozhraní aplikace průvodce můžete změnit styly pro hlavní okno rámce a podřízených oken MDI. Pro oba typy okně můžete zadat jeho tloušťky rámce (silný nebo dynamicky) a žádný z následujících akcí:
+
+- Určuje, zda má okno minimalizovat nebo maximalizovat ovládacích prvků.
+
+- Určuje, zda se zobrazí okno zpočátku minimalizované maximalizované, nebo ani jedna.
+
+Pro systém windows hlavního rámce můžete určit, zda má okno systémové nabídky. Pro podřízená okna MDI můžete určit, zda okno podporuje rozdělovač podokna.
+
+##  <a name="_core_changing_styles_in_an_existing_application"></a> Změna stylů v existující aplikaci
+
+Pokud chcete změnit okno atributů v existující aplikaci, postupujte podle pokynů ve zbývající části tohoto článku.
+
+Chcete-li změnit výchozí atributy okno používá rozhraní framework aplikace vytvořené pomocí Průvodce aplikací, přepsat v okně [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) virtuální členskou funkci. `PreCreateWindow` umožňuje aplikaci získat přístup v procesu vytváření obvykle spravováno interně službou [CDocTemplate](../mfc/reference/cdoctemplate-class.md) třídy. Rámec volá `PreCreateWindow` pouze před vytvořením okna. Úpravou [soubor CREATESTRUCT](../mfc/reference/createstruct-structure.md) předané do `PreCreateWindow`, vaše aplikace může změnit atributy použité k vytvoření okna. Například Ujistěte se, že okno nepoužívá titulek, použijte následující bitová operace:
+
+[!code-cpp[NVC_MFCDocView#15](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_1.cpp)]
+
+[CTRLBARS](../visual-cpp-samples.md) ukázkové aplikaci ukazuje tento postup pro změnu atributů okna. V závislosti na tom, co vaše aplikace změní v `PreCreateWindow`, může být nutné volat implementaci základní třídy funkce.
+
+Následující diskuse zahrnuje případ SDI a [MDI případ](#_core_the_mdi_case).
+
+##  <a name="_core_the_sdi_case"></a> Případ SDI
+
+V aplikaci rozhraní (SDI) jeden dokument, výchozí styl oken v rámci je kombinací **WS_OVERLAPPEDWINDOW** a **FWS_ADDTOTITLE** styly. **FWS_ADDTOTITLE** je specifické pro knihovny MFC styl, který dává pokyn rozhraní přidat název dokumentu na titulek okna. Změna atributů okna v aplikaci SDI, přepsat `PreCreateWindow` funkce ve třídě odvozené z `CFrameWnd` (který názvy Průvodce aplikací `CMainFrame`). Příklad:
+
+[!code-cpp[NVC_MFCDocViewSDI#11](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_2.cpp)]
+
+Tento kód vytvoří hlavní okno rámce bez tlačítka Minimalizovat a maximalizovat a proměnlivou velikostí ohraničení. V okně je zpočátku zarovnaný na střed na obrazovce.
+
+##  <a name="_core_the_mdi_case"></a> Případ MDI
+
+O něco více práce je potřeba změnit styl okna podřízeného okna v aplikaci (MDI interface) více dokumentů. Ve výchozím nastavení, aplikace vytvořená pomocí Průvodce aplikace MDI používá výchozí [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) třídy definované v knihovně MFC. Chcete-li změnit styl okna podřízené okno MDI, musíte odvodit novou třídu z `CMDIChildWnd` a nahradit všechny odkazy na `CMDIChildWnd` ve vašem projektu s odkazy na novou třídu. Největší pravděpodobností pouze odkaz na `CMDIChildWnd` v aplikaci je umístěný ve vaší aplikaci `InitInstance` členskou funkci.
+
+Výchozí styl oken použijí v aplikaci MDI je kombinací **WS_CHILD**, **WS_OVERLAPPEDWINDOW**, a **FWS_ADDTOTITLE** styly. Změna atributů okna aplikace MDI podřízených oken, přepsat [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) funkce ve třídě odvozené z `CMDIChildWnd`. Příklad:
+
+[!code-cpp[NVC_MFCDocView#16](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_3.cpp)]
+
+Tento kód vytvoří podřízený formulář MDI windows bez tlačítko Maximalizovat.
+
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+
+- [Styly Windows](../mfc/reference/styles-used-by-mfc.md#window-styles)
+
+- [Styly oken s rámečkem](../mfc/frame-window-styles-cpp.md)
+
+- [Styly oken](https://msdn.microsoft.com/library/windows/desktop/ms632600)
+
+## <a name="see-also"></a>Viz také
+
+[Styly oken s rámečkem](../mfc/frame-window-styles-cpp.md)
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d979dc9005921ce1a760b2e61c4519ef852b7f84
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8edfcdc6881ef3d140a80113047722a62e5bd517
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709433"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420254"
 ---
 # <a name="qfasttranscendentals-force-fast-transcendentals"></a>/Qfast_transcendentals (Vynutit rychlé transcendentní objekty)
 
@@ -56,6 +56,6 @@ Tato možnost není kompatibilní s **/FP: strict**. Zobrazit [/fp (určení cho
 
 ## <a name="see-also"></a>Viz také
 
-[/Q – možnosti (operace nízké úrovně)](../../build/reference/q-options-low-level-operations.md)
-[– možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[/Q – možnosti (operace nízké úrovně)](../../build/reference/q-options-low-level-operations.md)<br/>
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

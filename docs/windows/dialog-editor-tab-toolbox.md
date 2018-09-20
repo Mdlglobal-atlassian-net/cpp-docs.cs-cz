@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fa16a2cf15d5004ff80dda3188d79ffcba72ec1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 4b6e05e654b66c2178b7dc6e772c95df89512d1d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316208"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399844"
 ---
 # <a name="dialog-editor-tab-toolbox-c"></a>Karta editoru dialogového okna, panel nástrojů (C++)
 
@@ -100,10 +100,10 @@ Win32
 
 ## <a name="see-also"></a>Viz také
 
-[Ovládací prvky](../mfc/controls-mfc.md)  
-[Třídy ovládacích prvků](../mfc/control-classes.md)  
-[Třídy dialogových oken](../mfc/dialog-box-classes.md)  
-[Styly posuvníku](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)  
-[Příklady ovládacích prvků pro úpravy s formátováním](../mfc/rich-edit-control-examples.md)  
-[Přidání obslužných rutin události pro ovládací prvky dialogového okna](../windows/adding-event-handlers-for-dialog-box-controls.md)  
+[Ovládací prvky](../mfc/controls-mfc.md)<br/>
+[Třídy ovládacích prvků](../mfc/control-classes.md)<br/>
+[Třídy dialogových oken](../mfc/dialog-box-classes.md)<br/>
+[Styly posuvníku](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)<br/>
+[Příklady ovládacích prvků pro úpravy s formátováním](../mfc/rich-edit-control-examples.md)<br/>
+[Přidání obslužných rutin události pro ovládací prvky dialogového okna](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [Ovládací prvky dialogových oken a typy proměnných](../ide/dialog-box-controls-and-variable-types.md)

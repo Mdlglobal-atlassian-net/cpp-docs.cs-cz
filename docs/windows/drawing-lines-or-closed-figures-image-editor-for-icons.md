@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c6c5652f61211ebd4d33de6f2dce07bd49b4f0a0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0ab40be4843b33e98daaf0f990e10544cb966a7d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313233"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404381"
 ---
 # <a name="drawing-lines-or-closed-figures-image-editor-for-icons"></a>Kreslení čar nebo uzavřených obrázků (editor obrázků pro ikony)
 
@@ -63,7 +63,7 @@ Informace o přidávání prostředků do spravovaných projektů, najdete v té
 
 ## <a name="see-also"></a>Viz také
 
-[Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)  
-[Úprava grafických prostředků](../windows/editing-graphical-resources-image-editor-for-icons.md)  
-[Editor obrázků pro ikony](../windows/image-editor-for-icons.md)  
+[Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[Úprava grafických prostředků](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
+[Editor obrázků pro ikony](../windows/image-editor-for-icons.md)<br/>
 [Práce s barvou](../windows/working-with-color-image-editor-for-icons.md)

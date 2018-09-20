@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 569770b548d4bb076bdfac83942def5684ebdf5e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fa72b6ec2983c0d7b9850578e743d03b7e3946e3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597294"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410855"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>Operátor popisovače objektu (^) (rozšíření komponent C++)
 
@@ -235,5 +235,5 @@ int main() {
 
 ## <a name="see-also"></a>Viz také
 
-[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)  
+[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Operátor sledovacího odkazu](../windows/tracking-reference-operator-cpp-component-extensions.md)

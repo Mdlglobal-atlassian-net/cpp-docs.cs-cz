@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e6734391e56f076f247bd8887a7fdb61142b3669
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: fa4d894fb3fc436abab84bfee11199f59bd66f78
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317859"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402392"
 ---
 # <a name="defining-member-variables-for-dialog-controls-c"></a>Definování členských proměnných pro ovládací prvky dialogového okna (C++)
 
@@ -55,11 +55,11 @@ MFC
 
 ## <a name="see-also"></a>Viz také
 
-[Mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md)  
-[Přidání funkce pomocí průvodců kódem](../ide/adding-functionality-with-code-wizards-cpp.md)  
-[Průvodce třídou MFC](../mfc/reference/mfc-class-wizard.md)  
-[Přidání třídy](../ide/adding-a-class-visual-cpp.md)  
-[Přidání členské funkce](../ide/adding-a-member-function-visual-cpp.md)  
-[Přidání členské proměnné](../ide/adding-a-member-variable-visual-cpp.md)  
-[Přepisování virtuální funkce](../ide/overriding-a-virtual-function-visual-cpp.md)  
+[Mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md)<br/>
+[Přidání funkce pomocí průvodců kódem](../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Průvodce třídou MFC](../mfc/reference/mfc-class-wizard.md)<br/>
+[Přidání třídy](../ide/adding-a-class-visual-cpp.md)<br/>
+[Přidání členské funkce](../ide/adding-a-member-function-visual-cpp.md)<br/>
+[Přidání členské proměnné](../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[Přepisování virtuální funkce](../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Popisovače zpráv knihovny MFC](../mfc/reference/adding-an-mfc-message-handler.md)

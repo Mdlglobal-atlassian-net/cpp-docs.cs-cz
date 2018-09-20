@@ -1,5 +1,5 @@
 ---
-title: Přizpůsobení klávesnice a myši | Microsoft Docs
+title: Přizpůsobení klávesnice a myši | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,66 +15,69 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fda670198dd9bd03a6d944ce4db70542926bf41
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ba05ddfd7f3b709813a6e5069d98277c6c0baa46
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931577"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402691"
 ---
 # <a name="keyboard-and-mouse-customization"></a>Přizpůsobení klávesnice a myši
-MFC umožňuje uživateli vaší aplikace k přizpůsobení jak zpracovává klávesnici a myš vstup. Uživatel může přizpůsobit vstup z klávesnice přiřazením klávesové zkratky příkazy. Uživatele můžete také upravit vstup myši vyberte příkaz, který se má provést při poklepání uvnitř windows konkrétní aplikace. Toto téma vysvětluje, jak přizpůsobit vstup pro vaši aplikaci.  
-  
- V **přizpůsobení** dialogové okno, uživatel může změnit vlastní ovládací prvky pro myši a klávesnice. K zobrazení tohoto dialogového okna, uživatel bodů **přizpůsobit** na **zobrazení** nabídce a poté klikne na tlačítko **panely nástrojů a stabilní umístění**. V dialogovém okně uživatel klikne, buď **klávesnice** kartě nebo **myši** kartě.  
-  
-## <a name="keyboard-customization"></a>Přizpůsobení klávesnice  
- Následující obrázek ukazuje **klávesnice** kartě **přizpůsobení** dialogové okno.  
-  
- ![V dialogovém okně Upravit na kartě klávesnice](../mfc/media/mfcnextkeyboardtab.png "mfcnextkeyboardtab")  
-Na kartě přizpůsobení klávesnice  
-  
- Uživatel pracuje se na kartě klávesnice, přiřadit jeden nebo více klávesové zkratky pro příkaz. Na levé straně na kartě jsou uvedeny dostupné příkazy. Uživatele můžete vybrat libovolný příkaz k dispozici v nabídce. Příkazy nabídky může být přidružen klávesové zkratky. Poté, co uživatel zadá nový zástupce odkazující **přiřadit** aktivuje tlačítko. Po kliknutí na toto tlačítko, aplikace vybraný příkaz přidruží tento zástupce.  
-  
- V pravém sloupci v seznamu jsou uvedeny všechny aktuálně přidělené klávesové zkratky. Uživatele můžete také vybrat jednotlivé klávesové zkratky a je odebrat nebo resetovat všechna mapování pro aplikaci.  
-  
- Pokud chcete podporovat toto vlastní nastavení v aplikaci, musíte vytvořit [CKeyboardManager](../mfc/reference/ckeyboardmanager-class.md) objektu. Chcete-li vytvořit `CKeyboardManager` objektu, zavolejte funkci [CWinAppEx::InitKeyboardManager](../mfc/reference/cwinappex-class.md#initkeyboardmanager). Tato metoda vytvoří a inicializuje manažera klávesnice. Pokud vytvoříte klávesnici správce ručně, stále musí volat `CWinAppEx::InitKeyboardManager` k chybě při inicializaci ho.  
-  
- Pokud použijete průvodce k vytvoření aplikace, průvodce se inicializace správce klávesnice. Po aplikaci inicializuje správce klávesnice, přidá rozhraní **klávesnice** kartu k **přizpůsobení** dialogové okno.  
-  
-## <a name="mouse-customization"></a>Přizpůsobení myši  
- Následující obrázek ukazuje **myši** kartě **přizpůsobení** dialogové okno.  
-  
- ![Karta myši v dialogovém okně Upravit](../mfc/media/mfcnextmousetab.png "mfcnextmousetab")  
-Karta přizpůsobení myši  
-  
- Uživatel pracuje se na této kartě přiřadit nabídky příkazu myš, dvakrát klikněte na akci. Uživatel vybere zobrazení z levé straně okna a potom pomocí ovládacích prvků na pravé straně příkaz přidružit akce poklikejte na soubor. Poté, co uživatel klikne na tlačítko **Zavřít**, aplikace provede příkaz přidružené vždy, když uživatel poklikáním kdekoli v zobrazení.  
-  
- Ve výchozím nastavení přizpůsobení myši není povoleno, když vytvoříte aplikaci pomocí průvodce.  
-  
-#### <a name="to-enable-mouse-customization"></a>Za účelem přizpůsobení myši  
-  
-1.  Inicializace [CMouseManager](../mfc/reference/cmousemanager-class.md) objekt voláním [CWinAppEx::InitMouseManager](../mfc/reference/cwinappex-class.md#initmousemanager).  
-  
-2.  Získání ukazatele na správce myši s použitím [CWinAppEx::GetMouseManager](../mfc/reference/cwinappex-class.md#getmousemanager).  
-  
-3.  Přidání zobrazení do správce myši s použitím [CMouseManager::AddView](../mfc/reference/cmousemanager-class.md#addview) metoda. To lze proveďte pro každé zobrazení, které chcete přidat do správce myši.  
-  
- Po aplikaci inicializuje správce myš, přidá rozhraní **myši** kartu k **přizpůsobit** dialogové okno. Pokud je nemůžete přidat žádné zobrazení, na kartě způsobí, že k neošetřené výjimce. Po vytvoření seznamu zobrazení, **myši** karta je k dispozici pro uživatele.  
-  
- Když přidáte nové zobrazení pro správce myš, můžete jí jedinečný identifikátor. Pokud chcete pro podporu myši přizpůsobení okna, je nutné zpracovat WM_LBUTTONDBLCLICK zprávu a volání [CWinAppEx::OnViewDoubleClick](../mfc/reference/cwinappex-class.md#onviewdoubleclick) funkce. Při volání této funkce je jeden z parametrů ID pro toto okno. Je zodpovědností programátorů ke sledování čísla ID a objekty s nimi spojených.  
-  
-## <a name="security-concerns"></a>Aspekty zabezpečení  
- Jak je popsáno v [uživatelem definované nástroje](../mfc/user-defined-tools.md), uživatele můžete přidružit uživatelem definované nástroje ID události poklikejte na soubor. Při poklepání zobrazení aplikace vyhledá uživatele nástroj, který odpovídá přidružené ID. Pokud aplikace najde odpovídající nástroj, provede nástroj. Pokud aplikace nemůže najít odpovídající nástroj, odešle wm_command – zprávy s ID zobrazení, který byl dvakrát kliknete.  
-  
- Přizpůsobené nastavení jsou uloženy v registru. Úpravou registru můžete nahradit útočník platné nástroj ID uživatele libovolný příkaz. Při poklepání zobrazení, zobrazení zpracuje příkaz, který útočník vysazeny. To může způsobit neočekávané a potenciálně nebezpečné chování.  
-  
- Kromě toho tento typ útoku obejít ochrana uživatelské rozhraní. Předpokládejme například, že aplikace má tisk zakázána. To znamená v jeho uživatelském rozhraní **tiskových** tlačítko a nabídky jsou k dispozici. Obvykle to brání aplikaci v tisku. Ale pokud útočník upravit registr, uživatel může nyní může odeslat příkaz pro tisk přímo poklepáním na zobrazení, obcházení prvky uživatelského rozhraní, které jsou k dispozici.  
-  
- Ochrana proti tento typ útoku, přidávání kódu do vaší aplikace obslužná rutina k ověření, že příkaz platná před jeho spuštěním. Nezávisí na uživatelské rozhraní zabránit příkaz odesílány do aplikace.  
-  
-## <a name="see-also"></a>Viz také  
- [Přizpůsobení pro prostředí MFC](../mfc/customization-for-mfc.md)   
- [CKeyboardManager – třída](../mfc/reference/ckeyboardmanager-class.md)   
- [CMouseManager – třída](../mfc/reference/cmousemanager-class.md)   
- [Vliv přizpůsobení na zabezpečení](../mfc/security-implications-of-customization.md)
+
+MFC umožňuje uživateli aplikace přizpůsobit, jak zpracovává klávesnice a myši. Uživatel může upravit vstup z klávesnice přiřazením klávesové zkratky pro příkazy. Uživatele můžete také upravit vstup myši tak, že vyberete příkaz, který má být spuštěn při poklepání uvnitř konkrétní windows aplikace. Toto téma vysvětluje, jak přizpůsobit vstup pro vaši aplikaci.
+
+V **přizpůsobení** dialogové okno, uživatel může změnit vlastní ovládací prvky pro myš a klávesnici. Chcete-li zobrazit toto dialogové okno, uživatel odkazuje na **vlastní** na **zobrazení** nabídky a pak klikne na tlačítko **panely nástrojů a ukotvení**. V dialogovém okně kliknutí buď **klávesnice** kartu nebo **myši** kartu.
+
+## <a name="keyboard-customization"></a>Přizpůsobení klávesnice
+
+Je vidět na následujícím obrázku **klávesnice** karty **přizpůsobení** dialogové okno.
+
+![Na kartě klávesnice v dialogovém okně přizpůsobení](../mfc/media/mfcnextkeyboardtab.png "mfcnextkeyboardtab") kartu přizpůsobení klávesnice
+
+Uživatel pracuje se na kartě klávesnice přiřazení jednoho nebo více klávesových zkratek k příkazu. Dostupné příkazy jsou uvedené na levé straně karty. Uživatel může vybrat všechny dostupné příkazy v nabídce. Jenom příkazy nabídky můžou být spojené s klávesové zkratky. Poté, co uživatel zadá nového zástupce **přiřadit** aktivuje tlačítko. Po kliknutí na toto tlačítko, přidruží aplikaci tato zkratka vybraný příkaz.
+
+V seznamu v pravém sloupci jsou uvedeny všechny aktuálně přiřazené klávesové zkratky. Uživatele můžete také vybrat jednotlivé klávesové zkratky a je odebrat nebo resetovat všechna mapování pro aplikaci.
+
+Pokud chcete zajistit podporu tohoto vlastního nastavení v aplikaci, musíte vytvořit [ckeyboardmanager –](../mfc/reference/ckeyboardmanager-class.md) objektu. Chcete-li vytvořit `CKeyboardManager` objektu, zavolejte funkci [CWinAppEx::InitKeyboardManager](../mfc/reference/cwinappex-class.md#initkeyboardmanager). Tato metoda vytvoří a inicializuje správce klávesnice. Pokud vytvoříte klávesnice správce ručně, můžete stále musí volat `CWinAppEx::InitKeyboardManager` inicializovat ji.
+
+Pokud použijete průvodce k vytvoření aplikace, průvodce se inicializace správce klávesnice. Po aplikaci inicializuje správce klávesnice, přidá rozhraní **klávesnice** záložku **přizpůsobení** dialogové okno.
+
+## <a name="mouse-customization"></a>Vlastní nastavení myši
+
+Je vidět na následujícím obrázku **myši** karty **přizpůsobení** dialogové okno.
+
+![Kartu Myš v dialogovém okně přizpůsobení](../mfc/media/mfcnextmousetab.png "mfcnextmousetab") myši přizpůsobení karty
+
+Uživatel pracuje se na této kartě přiřadit nabídky příkazu myši dvakrát klikněte na akci. Uživatel vybere zobrazení na levé straně okna a potom pomocí ovládacích prvků na pravé straně přidružit akce dvakrát klikněte na příkaz. Když uživatel klikne na tlačítko **Zavřít**, aplikace provede přidružený příkaz pokaždé, když uživatel poklepe kdekoli v zobrazení.
+
+Ve výchozím nastavení přizpůsobení myši není povoleno při vytváření aplikace s použitím průvodce.
+
+#### <a name="to-enable-mouse-customization"></a>Povolení přizpůsobení myši
+
+1. Inicializace [cmousemanager –](../mfc/reference/cmousemanager-class.md) objektu voláním [CWinAppEx::InitMouseManager](../mfc/reference/cwinappex-class.md#initmousemanager).
+
+1. Získat ukazatel myši manager pomocí [CWinAppEx::GetMouseManager](../mfc/reference/cwinappex-class.md#getmousemanager).
+
+1. Přidání zobrazení do správce myši s použitím [CMouseManager::AddView](../mfc/reference/cmousemanager-class.md#addview) metody. To lze proveďte pro každé zobrazení, které chcete přidat do správce myši.
+
+Po aplikaci inicializuje správce myši, přidá rozhraní **myši** záložku **vlastní** dialogové okno. Pokud nemůžete přidat žádné zobrazení, na kartě způsobí neošetřenou výjimku. Jakmile vytvoříte seznam zobrazení, **myši** karta je k dispozici pro uživatele.
+
+Při přidání nové zobrazení pro správce myši jí přiřadit jedinečné ID. Pokud chcete zajistit podporu myši přizpůsobení okna, je nutné zpracovat zprávu WM_LBUTTONDBLCLICK a volání [CWinAppEx::OnViewDoubleClick](../mfc/reference/cwinappex-class.md#onviewdoubleclick) funkce. Při volání této funkce je jeden z parametrů Identifikátor pro toto okno. Je odpovědností programátorovi, aby udržovat přehled o čísla ID a objekty, které jsou k nim má přiřazené.
+
+## <a name="security-concerns"></a>Zajištění zabezpečení
+
+Jak je popsáno v [uživatelem definované nástroje](../mfc/user-defined-tools.md), uživatel může přidružit k ID uživatelsky definovaného nástroje dvakrát klikněte na události. Když uživatel poklepe zobrazení, aplikace vyhledá uživatelský nástroj, který odpovídá přidružené ID. Pokud aplikace zjistí vhodný nástroj, spustí nástroj. Pokud aplikace nelze najít vhodný nástroj, odešle wm_command – zprávy s ID do zobrazení, která byla dvojitému kliknutí.
+
+Vlastní nastavení se ukládají v registru. Úpravou registru můžete nahradit útočník platné nástroj ID uživatele libovolný příkaz. Když uživatel poklepe zobrazení, zobrazení zpracuje příkaz, který útočník vysazeny. To může způsobit neočekávané a potenciálně nebezpečné chování.
+
+Kromě toho tento druh útoku může obejít ochranu uživatelského rozhraní. Například předpokládejme, že aplikace má tisk je zakázán. To znamená, že ve svém uživatelském rozhraní **tisk** nabídky a tlačítko nejsou k dispozici. Obvykle to zabrání aplikaci v tisku. Ale pokud útočník upravit registr, uživatel může nyní může odeslat příkaz pro tisk přímo dvojitým kliknutím zobrazení bez použití prvky uživatelského rozhraní, které jsou k dispozici.
+
+Pro ochranu proti tento druh útoku, přidejte kód pro vaše obslužná rutina příkazu aplikace ověřte, zda je příkazu platná před jeho provedením. Není závislý na uživatelské rozhraní pro příkazu zabrání v odesílání do aplikace.
+
+## <a name="see-also"></a>Viz také
+
+[Přizpůsobení pro prostředí MFC](../mfc/customization-for-mfc.md)<br/>
+[CKeyboardManager – třída](../mfc/reference/ckeyboardmanager-class.md)<br/>
+[CMouseManager – třída](../mfc/reference/cmousemanager-class.md)<br/>
+[Vliv přizpůsobení na zabezpečení](../mfc/security-implications-of-customization.md)
 

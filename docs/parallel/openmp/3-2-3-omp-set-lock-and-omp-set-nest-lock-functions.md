@@ -1,5 +1,5 @@
 ---
-title: 3.2.3 omp_set_lock a omp_set_nest_lock – funkce | Microsoft Docs
+title: 3.2.3 omp_set_lock a omp_set_nest_lock – Functions | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,22 +12,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba24e923051eb887db2a81c1d9765d31a4ef7b24
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 792b95baef2821bb693d9a90fc228d2b0c508e1f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689711"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420358"
 ---
 # <a name="323-ompsetlock-and-ompsetnestlock-functions"></a>3.2.3 omp_set_lock a omp_set_nest_lock – funkce
-Každá z těchto funkcí blokuje vlákno provádění funkce, dokud zadaný zámek je k dispozici a poté nastaví zámek. Jednoduché zámek je k dispozici, pokud je odemčený. Nestable zámek je k dispozici, pokud je odemčený, nebo pokud je již vlastněn vlákno provádění funkce. Formát vypadá takto:  
-  
-```  
-#include <omp.h>  
-void omp_set_lock(omp_lock_t *lock);  
-void omp_set_nest_lock(omp_nest_lock_t *lock);  
-```  
-  
- Na jednoduchý zámek argument `omp_set_lock` funkce musí odkazovat na proměnnou inicializovaného zámku. Vlákno provádění funkce uděleno vlastnictví zámku.  
-  
- Na nestable zámek argument `omp_set_nest_lock` funkce musí odkazovat na proměnnou inicializovaného zámku. Se zvýší počet vnoření a vlákno je povolen, nebo uchovává vlastnictví zámku.
+
+Každá z těchto funkcí blokuje vlákno provádění funkce, dokud se zadaný zámek je k dispozici a pak nastaví zámek. Jednoduchým zámkem je k dispozici, pokud je odemknuté. Vnořitelných zámek je k dispozici, pokud je odemčený, nebo pokud je již vlastněn vlákno provádění funkce. Formát je následujícím způsobem:
+
+```
+#include <omp.h>
+void omp_set_lock(omp_lock_t *lock);
+void omp_set_nest_lock(omp_nest_lock_t *lock);
+```
+
+Pro jednoduchým zámkem, že argument `omp_set_lock` funkce musí ukazovat na proměnnou inicializované zámku. Vlákna, které spouští funkci uděleno vlastnictví zámku.
+
+Pro zámkem, že argument `omp_set_nest_lock` funkce musí ukazovat na proměnnou inicializované zámku. Je zvýšen počet vnoření a vlákna je udělen nebo zůstane vlastnictví zámku.

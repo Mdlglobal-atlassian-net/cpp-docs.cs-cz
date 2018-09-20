@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73047962daf32eae6c01bb0ea6f6688a83e19402
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0539275a09a64e31a9ecad17cab899368701e353
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715530"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412209"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -46,31 +46,31 @@ function declaration
 
 ### <a name="parameters"></a>Parametry
 
-*Jméno*  
+*Jméno*<br/>
 Uživatelem definovaný název pro blok kódu, který se zobrazí v souboru IDL.
 
-*NázevSouboru*  
+*NázevSouboru*<br/>
 (Volitelné) Soubor .dll, který obsahuje exportu.
 
-*uuid*  
+*uuid*<br/>
 (Volitelné) Jedinečný identifikátor.
 
-*helpstring*  
+*helpstring*<br/>
 (Volitelné) Znakový řetězec používaný k popisu knihovny typů.
 
-*helpstringcontext*  
+*helpstringcontext*<br/>
 (Volitelné) ID tématu nápovědy HLP nebo CHM souboru.
 
-*helpcontext*  
+*helpcontext*<br/>
 (Volitelné) ID nápovědy pro tuto knihovnu typů.
 
-*hidden*  
+*hidden*<br/>
 (Volitelné) Parametr, který zabraňuje zobrazení knihovny. Zobrazit [skryté](/windows/desktop/Midl/hidden) atribut MIDL pro další informace.
 
-*restricted*  
+*restricted*<br/>
 (Volitelné) Členové knihovny nejde volat libovolně. Zobrazit [s omezeným přístupem](/windows/desktop/Midl/restricted) atribut MIDL pro další informace.
 
-*deklarace funkce*  
+*deklarace funkce*<br/>
 Funkce, která budou definovat.
 
 ## <a name="remarks"></a>Poznámky
@@ -111,6 +111,6 @@ Další informace najdete v tématu [kontexty atributů](../windows/attribute-co
 
 ## <a name="see-also"></a>Viz také
 
-[IDL – atributy](../windows/idl-attributes.md)  
-[Samostatné atributy](../windows/stand-alone-attributes.md)  
+[IDL – atributy](../windows/idl-attributes.md)<br/>
+[Samostatné atributy](../windows/stand-alone-attributes.md)<br/>
 [entry](../windows/entry.md)  

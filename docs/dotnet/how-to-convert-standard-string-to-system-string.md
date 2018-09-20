@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: převod standardního řetězce na typ System::String | Microsoft Docs'
+title: 'Postupy: převod standardního řetězce na typ System::String | Dokumentace Microsoftu'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -17,43 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4910ca322b71e8570aebd9196b106680454fd261
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0a715cb4e19e6cf8ec5c6339dbc755747396466c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33127832"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414638"
 ---
 # <a name="how-to-convert-standard-string-to-systemstring"></a>Postupy: Převod standardního řetězce na typ System::String
-Toto téma ukazuje, jak převést řetězec standardní knihovny C++ ([\<řetězec >](../standard-library/string.md)) k <xref:System.String>.  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// convert_standard_string_to_system_string.cpp  
-// compile with: /clr  
-#include <string>  
-#include <iostream>  
-using namespace System;  
-using namespace std;  
-  
-int main() {  
-   string str = "test";  
-   cout << str << endl;  
-   String^ str2 = gcnew String(str.c_str());  
-   Console::WriteLine(str2);  
-  
-   // alternatively  
-   String^ str3 = gcnew String(str.c_str());  
-   Console::WriteLine(str3);  
-}  
-```  
-  
-```Output  
-test  
-test  
-test  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+
+Toto téma ukazuje, jak převést řetězec standardní knihovny C++ ([\<řetězec >](../standard-library/string.md)) k <xref:System.String>.
+
+## <a name="example"></a>Příklad
+
+```
+// convert_standard_string_to_system_string.cpp
+// compile with: /clr
+#include <string>
+#include <iostream>
+using namespace System;
+using namespace std;
+
+int main() {
+   string str = "test";
+   cout << str << endl;
+   String^ str2 = gcnew String(str.c_str());
+   Console::WriteLine(str2);
+
+   // alternatively
+   String^ str3 = gcnew String(str.c_str());
+   Console::WriteLine(str3);
+}
+```
+
+```Output
+test
+test
+test
+```
+
+## <a name="see-also"></a>Viz také
+
+[Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

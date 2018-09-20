@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 85d0adfd03b6822b949523643aa97f7a7d8b088b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 020632ff17ade10e7fcb9cd46d245849189b6860
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607627"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416783"
 ---
 # <a name="synclockwithstatustsynclockwithstatust-constructor"></a>SyncLockWithStatusT::SyncLockWithStatusT – konstruktor
 
@@ -43,13 +43,13 @@ explicit SyncLockWithStatusT(
 
 ### <a name="parameters"></a>Parametry
 
-*Ostatní*  
+*Ostatní*<br/>
 Odkaz rvalue na jiný **synclockwithstatust –** objektu.
 
-*sync*  
+*sync*<br/>
 Odkaz na jiný **synclockwithstatust –** objektu.
 
-*Stav*  
+*Stav*<br/>
 Hodnota [status_ –](../windows/synclockwithstatust-status-data-member.md) datový člen třídy *jiných* parametr nebo *synchronizace* parametr.
 
 ## <a name="remarks"></a>Poznámky
@@ -66,5 +66,5 @@ První konstruktor inicializuje aktuální **synclockwithstatust –** objektu z
 
 ## <a name="see-also"></a>Viz také
 
-[SyncLockWithStatusT – třída](../windows/synclockwithstatust-class.md)  
+[SyncLockWithStatusT – třída](../windows/synclockwithstatust-class.md)<br/>
 [SyncLockWithStatusT::GetStatus – metoda](../windows/synclockwithstatust-getstatus-method.md)

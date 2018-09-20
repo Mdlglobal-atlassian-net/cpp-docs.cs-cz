@@ -1,5 +1,5 @@
 ---
-title: Faktory ovlivňující výkon u zprostředkovatelů komunikace (C++) | Microsoft Docs
+title: Faktory ovlivňující výkon u zprostředkovatelů komunikace (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,47 +19,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9223c52e4ef831a9a1ff657db1a0d7859dd6ce6c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ce27ac6e5194842ab0b9cf2237fbde1a1b636fba
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164047"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415990"
 ---
 # <a name="performance-considerations-for-interop-c"></a>Faktory ovlivňující výkon u zprostředkovatelů komunikace (C++)
-Toto téma obsahuje pokyny pro snížení účinku spravované nebo nespravované spolupráce přechody na výkon.  
-  
- Visual C++ podporuje stejné mechanismy spolupráce jako jinými jazyky rozhraní .NET, jako je například Visual Basic a C# (P/Invoke), ale také poskytuje spolupráce podpory, které jsou specifické pro aplikaci Visual C++ (C++ interop). Pro aplikace důležité pro výkon je důležité si uvědomit, vliv na výkon každé techniky vzájemné spolupráce.  
-  
- Bez ohledu na použitou techniku speciální sekvence přechodu, nazvané převody, je potřeba pokaždé, když spravovaná funkce volá nespravované naopak funkce a naopak. Tyto převody budou automaticky vloženy ve Visual C++ compiler, ale je důležité mít na paměti, že kumulativně, mohou být tyto přechody nákladné z hlediska výkonu.  
-  
-## <a name="reducing-transitions"></a>Snížení přechodů  
- Jedním ze způsobů vyhnout nebo je snížit náklady na převodů vzájemné spolupráce je refaktorovat rozhraní podílet na minimalizovat přechody spravované nebo nespravované. Výraznému zlepšení výkonu můžete provést pomocí cílení chatty rozhraní, které jsou ty, které se podílejí častých volání přes hranice spravované nebo nespravované. Spravované funkci, která volá nespravované funkce ve smyčce úzkou, je třeba vhodným kandidátem pro refaktoring. Pokud smyčky samotné je přesunuta do nespravovaných straně, nebo pokud spravovaná alternativa k se vytvoří nespravovaného volání (možná fronta dat na spravované straně a pak zařazování na nespravovaného rozhraní API najednou po smyčky), může být počtu přechodů snížit přihlášení ificantly.  
-  
-## <a name="pinvoke-vs-c-interop"></a>P/Invoke vs. interoperabilita C++  
- Pro jazyky rozhraní .NET, jako je Visual Basic a C# je předepsané metodu pro spolupráce s nativním součásti P/Invoke. Protože P/Invoke je podporovaný rozhraním .NET Framework, také Visual C++ ji podporuje, ale Visual C++ také poskytuje podporu vlastní vzájemná funkční spolupráce, který se označuje jako zprostředkovatele komunikace C++. Interoperabilita C++ je přes P/Invoke preferovaná, protože P/Invoke není bezpečnost typů. V důsledku toho jsou primárně hlášeny chyby za běhu, ale zprostředkovatele komunikace C++ má také výhody výkonu přes P/Invoke.  
-  
- Obě tyto metody vyžadují několik kroků k provedení spravované funkce volání nespravované funkce:  
-  
--   Argumenty pro volání funkce přeuspořádány z modulu CLR na nativní typy.  
-  
--   Je proveden převod se spravované na nespravované.  
-  
--   Nespravované funkce je volána (pomocí nativní verze argumenty).  
-  
--   Převodu z nespravovaného do spravovaného je spustit.  
-  
--   Návratový typ a všechny "out" nebo "v, out" argumenty jsou zařazeny z nativní na typy CLR.  
-  
- Převody spravované nebo nespravované jsou nezbytné pro práci na všech vzájemné funkční spolupráce, ale zařazování dat, která je požadována, závisí na souvisejících datových typech, podpis funkce a použití data.  
-  
- Zařazování dat, které se provádí zprostředkovatele komunikace C++ je nejjednodušší forma možných: parametry jsou jednoduše zkopírovány přes spravované nebo nespravované hranice bitové způsobem; není provedena žádná transformace. Pro P/Invoke, toto je pouze hodnotu true, pokud jsou všechny parametry jednoduché, přenositelné typy. Jinak, provede P/Invoke nepříliš robustní kroky pro každý spravovaný parametr převést na odpovídající nativní typ, a naopak v případě, že argumenty, které jsou označeny jako "out" nebo "v, out".  
-  
- Jinými slovy zprostředkovatele komunikace C++ používá metodu nejrychlejší možné zařazování dat, zatímco P/Invoke používá metodu nejvíce robustní. To znamená, že zprostředkovatele komunikace C++ (ve tvaru typickém pro jazyk C++) poskytuje optimální výkon ve výchozím nastavení a programátorů zodpovídá za adresách případech, kdy je toto chování není bezpečné nebo vhodné.  
-  
- Interoperabilita C++ proto vyžaduje, aby zařazování dat je třeba zadat explicitně, ale výhoda spočívá v tom, že je programátorů mohou rozhodnout, co je vhodné pro danou povaha data a jak se má použít. Kromě toho Přestože chování zařazování dat P/Invoke můžete změnit na míru určitý stupeň, zprostředkovatele komunikace C++ umožňuje dat – zařazování k přizpůsobení pro volání volání. To není možné pomocí P/Invoke.  
-  
- Další informace o zprostředkovatele komunikace C++ najdete v tématu [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Smíšená (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md)
+
+Toto téma obsahuje pokyny pro snižuje vliv na výkon za běhu spravovaného a nespravovaného spolupráce přechody.
+
+Jazyk Visual C++ podporuje stejné mechanismy spolupráce jako dalších jazycích .NET, například Visual Basic a C# (nespravovaného), ale přináší také spolupráce podpory, které jsou specifické pro Visual C++ (zprostředkovatele komunikace C++). Pro kritickém pro výkon aplikace je důležité si uvědomit důsledky výkon jednotlivých spolupráce techniky.
+
+Bez ohledu na to spolupráce techniku použít sekvence speciální přechodu, nazvané převody, jsou požadovány pokaždé, když spravované funkce volá nespravovaný versa funkce a naopak. Tyto převody jsou automaticky vložen kompilátorem jazyka Visual C++, ale je důležité si pamatovat, že kumulativně, můžou být tyto přechody náročné z hlediska výkonu.
+
+## <a name="reducing-transitions"></a>Omezení přechodů
+
+Jedním ze způsobů k zamezení nebo snížit náklady na vzájemné spolupráce převodní rutiny je refaktorovat používané, chcete-li minimalizovat spravovaného a nespravovaného přechody rozhraní. Výraznému zlepšení výkonu je možné provádět pomocí cílení chatty rozhraní, které jsou ty, které se podílejí častých volání přes hranice spravovaného a nespravovaného. Spravované funkce, která volá nespravovanou funkci v těsné smyčce, například je vhodným kandidátem pro refaktoring. Pokud je smyčka samotná se přesune do nespravované oblasti nebo pokud spravované alternativy k nespravovaného volání je vytvořen (možná fronta dat na straně spravované a jejich zařazování do nespravované rozhraní API najednou po smyčce), může být počet přechodů snižuje přihlašování ificantly.
+
+## <a name="pinvoke-vs-c-interop"></a>P/Invoke vs. interoperabilita C++
+
+Pro jazyky .NET, jako je například Visual Basic a C# je předepsané způsob spolupráce s nativními komponentami P/Invoke. Protože P/Invoke je podporovaný rozhraním .NET Framework, Visual C++ podporuje také, ale vlastní podporu interoperabilitu, která se označuje jako zprostředkovatele komunikace C++ poskytuje jazyk Visual C++. Zprostředkovatele komunikace C++ je upřednostňována před P/Invoke, protože deklarace P/Invoke není typově bezpečný. V důsledku toho jsou primárně hlášeny chyby za běhu, ale zprostředkovatele komunikace C++ má také výhody výkonu prostřednictvím P/Invoke.
+
+Obě tyto metody vyžadují několik věcí, která se provede při každém spravované funkce bude volat nespravovanou funkci:
+
+- Argumenty volání funkce jsou zařazeny z modulu CLR do nativních typů.
+
+- Spravované na nespravované převodní rutina se spustí.
+
+- Nespravovaná funkce je volána (pomocí nativní verze argumenty).
+
+- Je provedena převodu nespravovaného do spravovaného.
+
+- Návratový typ a jakékoli "out" nebo "v, out" argumenty jsou zařazovat z nativního pro typy CLR.
+
+Spravovaného a nespravovaného převody jsou nezbytné pro spolupráci s k práci, ale data zařazování, který je požadován závisí na datové typy, které jsou zapojené, podpis funkce a použití dat.
+
+Zařazování dat, které se provádí pomocí zprostředkovatele komunikace C++ je možné nejjednodušším: parametry jsou jednoduše zkopírovat přes hranice spravovaného a nespravovaného bitový způsobem; není provedena žádná transformace. Pro deklarace P/Invoke, toto je pouze hodnotu true, pokud všechny parametry jsou jednoduché, přenositelné typy. V opačném případě P/Invoke provádí nepříliš robustní kroky pro každý spravovaný parametr převést na odpovídající nativní typ, a naopak v případě, že argumenty jsou označeny jako "out" nebo "v, out".
+
+Jinými slovy zprostředkovatele komunikace C++ používá nejrychlejší možné metodu zařazování dat, zatímco používá nejrobustnější metoda P/Invoke. To znamená, že ve výchozím nastavení zprostředkovatele komunikace C++ (v podobě typické pro jazyk C++) poskytuje optimální výkon a adresování případy, ve kterém toto chování není bezpečné nebo vhodné zodpovídá programátor.
+
+Zprostředkovatele komunikace C++ proto vyžaduje, aby zařazování dat musí být zadaná explicitně, ale výhodou je, že je programátorovi mohou rozhodnout, co je vhodné, vzhledem k povaze dat a jak se má použít. Kromě toho Ačkoli chování zařazování dat P/Invoke lze upravovat při přizpůsobit tak, aby takovou úroveň důvěryhodnosti, zprostředkovatele komunikace C++ umožňuje přizpůsobit na základě volání za voláním zařazování dat. To není možné s P/Invoke.
+
+Další informace o zprostředkovatele komunikace C++, naleznete v tématu [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+
+## <a name="see-also"></a>Viz také
+
+[Smíšená (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md)

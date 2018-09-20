@@ -8,12 +8,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1091a28448aa6531aa909117e0284e19bbcc7cd8
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 4f53ee06b4d964307cdcc294e415f6e470eb176f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42464613"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401055"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Upgrade kódu na Universal CRT
 
@@ -51,8 +51,8 @@ Mnoho funkcí přidaná nebo aktualizovaná UCRT ke zlepšení ISO C99 shoda a �
   
 ## <a name="see-also"></a>Viz také  
 
-[Průvodce přenosem a upgradem Visual C++](visual-cpp-porting-and-upgrading-guide.md)  
-[Přehled potenciálních problémů s upgradem (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  
-[Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
-[Historie změn Visual C++ 2003–2015](visual-cpp-change-history-2003-2015.md)  
+[Průvodce přenosem a upgradem Visual C++](visual-cpp-porting-and-upgrading-guide.md)<br/>
+[Přehled potenciálních problémů s upgradem (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
+[Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Historie změn Visual C++ 2003–2015](visual-cpp-change-history-2003-2015.md)<br/>
 [Vylepšení shody C++ se sadou Visual Studio 2017](../cpp-conformance-improvements-2017.md)  

@@ -1,5 +1,5 @@
 ---
-title: 2.8 vazby direktiv | Microsoft Docs
+title: 2.8 vazby direktiv | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,22 +12,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02492b228b4bb47a800955f078a59ce680312a87
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: dc5b702b17e01bb8d4625a837abdb71086113e68
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689451"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415899"
 ---
 # <a name="28-directive-binding"></a>2.8 Vazby direktiv
-Dynamické vazby direktiv musí splňovat následující pravidla:  
-  
--   **Pro**, **části**, **jeden**, **hlavní**, a **bariéry** direktivy vytvořit vazbu dynamicky uzavření **paralelní**, pokud existuje, bez ohledu na hodnotu všech **Pokud** klauzuli, která může být na tomto – direktiva. Pokud se spouští bez paralelní oblast, direktivy provedení týmem tvořený jenom hlavní vlákno.  
-  
--   **Seřazené** – Direktiva sváže dynamicky nadřazených **pro**.  
-  
--   **Atomic** – direktiva vynucuje výhradní přístup k **atomic** direktivy v všechna vlákna, ne jenom týmem aktuální.  
-  
--   **Kritické** – direktiva vynucuje výhradní přístup k **kritické** direktivy v všechna vlákna, ne jenom týmem aktuální.  
-  
--   Direktivu můžete nikdy vázat na všechny – direktiva mimo na nejbližší dynamicky obklopuje **paralelní**.
+
+Dynamické vazby direktiv musí splňovat následující pravidla:
+
+- **Pro**, **oddíly**, **jeden**, **hlavní**, a **bariéry** direktivy Svázat dynamicky vnější **paralelní**, pokud existuje, bez ohledu na hodnotu kterékoli **Pokud** klauzuli, která může být k dispozici na náhradu této direktivy. Je-li žádné paralelní oblasti se aktuálně zpracovává, direktivy jsou spuštěny týmem, který se skládá z pouze hlavní vlákno.
+
+- **Seřazené** – direktiva vytvoří vazbu dynamicky uzavírající **pro**.
+
+- **Atomické** vynucuje směrnice výhradní přístup k **atomické** direktivy ve všech vláknech, nikoli pouze aktuální týmu.
+
+- **Kritické** vynucuje směrnice výhradní přístup k **kritické** direktivy ve všech vláknech, nikoli pouze aktuální týmu.
+
+- Direktivu nikdy navázat žádné směrnice mimo nejbližšímu dynamicky uzavírající **paralelní**.

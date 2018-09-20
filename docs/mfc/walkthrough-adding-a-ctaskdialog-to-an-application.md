@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Přidání objektu CTaskDialog do aplikace | Microsoft Docs'
+title: 'Návod: Přidání objektu CTaskDialog do aplikace | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -15,23 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0a3d93815a740be59960e6d3e0f9e9ed690923
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 0f803af896c1bb2a0e5f58e45f4ef9f588f4e66d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122951"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420477"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Návod: Přidání objektu CTaskDialog do aplikace
 
-Tento návod představuje [CTaskDialog třída](../mfc/reference/ctaskdialog-class.md) a ukazuje, jak přidat do vaší aplikace.
+Tento návod představuje [třídy CTaskDialog](../mfc/reference/ctaskdialog-class.md) , se dozvíte, jak je přidat do vaší aplikace.
 
-`CTaskDialog` Je dialogové okno úloh, který nahrazuje pole zpráv systému Windows v systému Windows Vista nebo novější. `CTaskDialog` Zlepšuje původní zprávou a přidá funkce. Pole zpráv systému Windows se pořád podporuje v sadě Visual Studio.
+`CTaskDialog` Je dialogové okno úloh, který nahrazuje okno zpráv Windows ve Windows Vista nebo novější. `CTaskDialog` Zlepšuje původní zprávou a přidá funkce. Okno zpráv Windows je stále podporována v sadě Visual Studio.
 
 > [!NOTE]
-> Verzích Windows starších než Windows Vista nepodporují `CTaskDialog`. Možnost v dialogovém okně alternativní musí programu, pokud chcete zobrazit zprávu pro uživatele, který spouští aplikaci ve starší verzi systému Windows. Můžete použít statickou metodu [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) k určení za běhu, zda počítač uživatele můžete zobrazit `CTaskDialog`. Kromě toho `CTaskDialog` je k dispozici pouze když je aplikace vytvořené s knihovnou kódování Unicode.
+> Verzích Windows starších než Windows Vista nepodporují `CTaskDialog`. Možnosti alternativní dialogového okna musí programu, pokud chcete zobrazit zprávu uživateli, který spouští vaši aplikaci na starší verzi Windows. Použijete statickou metodu [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) určit v době běhu, zda počítač uživatele můžete zobrazit `CTaskDialog`. Kromě toho `CTaskDialog` je k dispozici pouze při vytváření vaší aplikace s knihovnou kódování Unicode.
 
-`CTaskDialog` Podporuje několik volitelné prvky shromažďovat a zobrazovat informace. Například `CTaskDialog` může zobrazit příkaz odkazy, přizpůsobené tlačítka, přizpůsobené ikony a zápatí. `CTaskDialog` Také obsahuje několik metod, které vám umožní dotazování na stav dialogové okno úlohy, ve kterém lze určit, které volitelné prvky vybraného uživatele.
+`CTaskDialog` Podporuje několik volitelné prvky k shromáždění a zobrazení informací. Například `CTaskDialog` může zobrazit příkaz odkazy, přizpůsobené tlačítka, vlastní ikony a zápatí. `CTaskDialog` Také obsahuje několik metod, které umožňují dotazování na stav úloh dialogových oken k určení volitelné prvky uživatel vybral.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -41,19 +41,19 @@ K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - Windows Vista nebo novější
 
-## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>Nahrazení objektu CTaskDialog systému Windows se zprávou
+## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>Nahrazení objektu CTaskDialog okno se zprávou Windows
 
-Následující postup předvádí nejzákladnější použití `CTaskDialog`, což je nahradit pole zpráv systému Windows. Tento příklad také změní ikony přidružené dialogové okno úloh. Změna na ikonu umožňuje `CTaskDialog` vypadají stejně do pole zpráv systému Windows.
+Následující postup ukazuje základní použití `CTaskDialog`, který má nahradit okně se zprávou Windows. V tomto příkladu se také změní ikony přidružené k dialogové okno úloh. Změna ikony díky `CTaskDialog` zobrazí stejný jako v okně se zprávou Windows.
 
-### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>Chcete nahradit objektu CTaskDialog systému Windows se zprávou
+### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>Nahraďte zprávou Windows objektu CTaskDialog
 
-1. Vytvořte nový projekt aplikace knihovny MFC s výchozím nastavením. Volání *MyProject*.
+1. Vytvořte nový projekt aplikace knihovny MFC s výchozím nastavením. Pojmenujte ji *MyProject*.
 
-2. Použití **Průzkumníku řešení** k otevření souboru MyProject.cpp.
+2. Použití **Průzkumníka řešení** k otevření souboru MyProject.cpp.
 
-3. Přidat `#include "afxtaskdialog.h"` po seznam obsahuje.
+3. Přidat `#include "afxtaskdialog.h"` po seznam zahrnuje.
 
-4. Najít metodu `CMyProjectApp::InitInstance`. Vložte následující řádky kódu před `return TRUE;` příkaz. Tento kód vytvoří řetězce, které používáme buď do pole zpráv systému Windows nebo ve `CTaskDialog`.  
+4. Najít metodu `CMyProjectApp::InitInstance`. Vložte následující řádky kódu před `return TRUE;` příkazu. Tento kód vytvoří řetězce, které používáme v obou Windows okně se zprávou nebo v `CTaskDialog`.
 
     ```cpp
     CString message("My message to the user");
@@ -61,7 +61,7 @@ Následující postup předvádí nejzákladnější použití `CTaskDialog`, co
     CString emptyString;
     ```
 
-5. Přidejte následující kód po kód z kroku 4. Tento kód zaručuje, že počítač uživatele podporuje `CTaskDialog`. Pokud dialogu není podporován, zobrazí aplikace systému Windows se zprávou.
+5. Přidejte následující kód za kód z kroku 4. Tento kód zaručuje, že počítač uživatele podporuje `CTaskDialog`. Pokud dialogové okno není podporována, zobrazí aplikace Windows okno se zprávou.
 
     ```cpp
     if (CTaskDialog::IsSupported())
@@ -74,43 +74,43 @@ Následující postup předvádí nejzákladnější použití `CTaskDialog`, co
     }
     ```
 
-6. Vložte následující kód do závorek po `if` příkaz z kroku 5. Tento kód vytvoří `CTaskDialog`.
+6. Vložte následující kód mezi závorkami po `if` příkaz z kroku 5. Tento kód vytvoří `CTaskDialog`.
 
     ```cpp
     CTaskDialog taskDialog(message, emptyString, dialogTitle, TDCBF_OK_BUTTON);
     ```
 
-7. Na následujícím řádku přidejte následující kód. Tento kód nastaví ikona upozornění.
+7. Na dalším řádku přidejte následující kód. Tento kód nastaví na ikonu upozornění.
 
     ```cpp
     taskDialog.SetMainIcon(TD_WARNING_ICON);
     ```
 
-8. Na následujícím řádku přidejte následující kód. Tento kód zobrazí dialogové okno úloh.
+8. Na dalším řádku přidejte následující kód. Tento kód zobrazí dialogové okno úlohy.
 
     ```cpp
     taskDialog.DoModal();
     ```
 
-Krok 7 můžete vynechat, pokud nechcete, aby `CTaskDialog` zobrazíte ikonu stejné jako systému Windows se zprávou. Pokud není tento krok `CTaskDialog` nemá žádná ikona, pokud se aplikace zobrazí ho.
+Krok 7 můžete vynechat, pokud nechcete, aby `CTaskDialog` zobrazit ikonu stejné jako okně se zprávou Windows. Vynecháte-li tento krok `CTaskDialog` nemá žádná ikona, pokud aplikace zobrazí ji.
 
-Zkompilování a spuštění aplikace. Aplikace se zobrazí dialogové okno úloha po jeho spuštění.
+Kompilace a spuštění aplikace. Aplikace se zobrazí dialogové okno úloh po jeho spuštění.
 
-## <a name="adding-functionality-to-the-ctaskdialog"></a>Přidání funkcí do objektu CTaskDialog
+## <a name="adding-functionality-to-the-ctaskdialog"></a>Přidání funkce objektu CTaskDialog
 
-Následující postup ukazuje, jak přidat funkce `CTaskDialog` kterou jste vytvořili v předchozím postupu. Příklad kódu ukazuje, jak provádět konkrétní instrukce podle volby uživatele.
+Následující postup ukazuje, jak přidat funkce, které `CTaskDialog` , kterou jste vytvořili v předchozím postupu. Příklad kódu ukazuje, jak provést konkrétní pokyny na základě výběrů uživatele.
 
-### <a name="to-add-functionality-to-the-ctaskdialog"></a>Objektu CTaskDialog přidat další funkce
+### <a name="to-add-functionality-to-the-ctaskdialog"></a>Přidání funkčnosti do CTaskDialog
 
-1. Přejděte na **zobrazení prostředků**. Pokud nevidíte **zobrazení prostředků**, můžete otevřít z **zobrazení** nabídky.
+1. Přejděte **zobrazení prostředků**. Pokud nevidíte **zobrazení prostředků**, můžete otevřít z **zobrazení** nabídky.
 
-2. Rozbalte **zobrazení prostředků** dokud můžete vybrat **tabulky řetězců** složky. Rozbalte ho a dvakrát klikněte na **tabulky řetězců** položku.
+2. Rozbalte **zobrazení prostředků** mohli vybrat **tabulka řetězců** složky. Rozbalte ji a dvakrát klikněte **tabulka řetězců** položka.
 
-3. Přejděte k dolnímu okraji řetězec tabulku a přidat novou položku. Změnit ID na `TEMP_LINE1`. Nastavte popisek na **1 příkazového řádku**.
+3. Posunout na konec tabulky řetězců a přidat novou položku. ID se má změnit `TEMP_LINE1`. Nastavte popisek na **1 příkazového řádku**.
 
-4. Přidejte další novou položku. Změnit ID na `TEMP_LINE2`. Nastavte popisek na **příkazového řádku 2**.
+4. Přidejte další novou položku. ID se má změnit `TEMP_LINE2`. Nastavte popisek na **příkazový řádek 2**.
 
-5. Přejděte zpět do MyProject.cpp.
+5. Přejděte zpět na MyProject.cpp.
 
 6. Po `CString emptyString;`, přidejte následující kód:
 
@@ -120,7 +120,7 @@ Následující postup ukazuje, jak přidat funkce `CTaskDialog` kterou jste vytv
     CString expansionInfo("This is the additional information to the user,\nextended over two lines.");
     ```
 
-7. Najít `taskDialog.DoModal()` prohlášení a tento příkaz nahraďte následujícím kódem. Tento kód aktualizuje dialogové okno úloha a přidá nové ovládací prvky:
+7. Najít `taskDialog.DoModal()` příkaz a nahraďte následující kód, který tento příkaz. Tento kód aktualizuje dialogové okno úloha a přidá nové ovládací prvky:
 
     ```cpp
     taskDialog.SetMainInstruction(L"Warning");
@@ -133,7 +133,7 @@ Následující postup ukazuje, jak přidat funkce `CTaskDialog` kterou jste vytv
     taskDialog.SetVerificationCheckboxText(L"Remember your selection");
     ```
 
-8. Přidejte následující řádek kódu, který se zobrazí dialogové okno úloh pro uživatele a načte výběr uživatele:
+8. Přidejte následující řádek kódu, který zobrazí uživateli dialogové okno úloha a načte výběru uživatele:
 
     ```cpp
     INT_PTR result = taskDialog.DoModal();
@@ -171,9 +171,9 @@ Následující postup ukazuje, jak přidat funkce `CTaskDialog` kterou jste vytv
     }
     ```
 
-V kódu v kroku 9 Nahraďte komentáře, které začínají procesu, pokud se kód, který má být proveden za zadaných podmínek.
+V kódu v kroku 9 Nahraďte komentáře, které začínají IF procesu s kódem, který chcete spustit za zadaných podmínek.
 
-Zkompilování a spuštění aplikace. Aplikace zobrazí dialogové okno úloha, která využívá nové ovládací prvky a další informace.
+Kompilace a spuštění aplikace. Aplikace se zobrazí dialogové okno úloh, používající nové ovládací prvky a další informace.
 
 ## <a name="displaying-a-ctaskdialog-without-creating-a-ctaskdialog-object"></a>Zobrazení objektu CTaskDialog bez vytvoření objektu CTaskDialog
 
@@ -181,9 +181,9 @@ Následující postup ukazuje, jak zobrazit `CTaskDialog` bez vytvoření první
 
 ### <a name="to-display-a-ctaskdialog-without-creating-a-ctaskdialog-object"></a>Chcete-li zobrazit objektu CTaskDialog bez vytvoření objektu CTaskDialog
 
-1. Pokud není otevřený, otevřete soubor MyProject.cpp.
+1. Otevřete soubor MyProject.cpp, pokud není otevřen.
 
-2. Přejděte na pravou hranatou závorku pro `if (CTaskDialog::IsSupported())` příkaz.
+2. Přejděte na pravou hranatou závorku pro `if (CTaskDialog::IsSupported())` příkazu.
 
 3. Vložte následující kód bezprostředně před uzavírací závorku `if` – příkaz (před `else` bloku):
 
@@ -195,12 +195,12 @@ Následující postup ukazuje, jak zobrazit `CTaskDialog` bez vytvoření první
         TEMP_LINE2);
     ```
 
-Zkompilování a spuštění aplikace. Aplikace zobrazí dvě úlohy dialogových oken. První dialogové okno je z k přidání funkce do objektu CTaskDialog postupu; druhé dialogové okno je v posledním postupu.
+Kompilace a spuštění aplikace. Aplikace zobrazí dvě úlohy dialogových oknech. Dialogové okno první je z k přidání funkce k postupu CTaskDialog; Dialogové okno druhý je v posledním postupu.
 
-Tyto příklady ukazují není k dispozici možnosti pro `CTaskDialog`, ale měli vám pomůže začít. V tématu [CTaskDialog třída](../mfc/reference/ctaskdialog-class.md) úplný popis třídy.
+Tyto příklady ukazují není k dispozici možnosti pro `CTaskDialog`, ale by měly pomoci vám začít. Zobrazit [třídy CTaskDialog](../mfc/reference/ctaskdialog-class.md) úplný popis třídy.
 
 ## <a name="see-also"></a>Viz také:
 
-[Dialogová okna](../mfc/dialog-boxes.md)  
-[CTaskDialog – třída](../mfc/reference/ctaskdialog-class.md)  
-[CTaskDialog::CTaskDialog](../mfc/reference/ctaskdialog-class.md#ctaskdialog)  
+[Dialogová okna](../mfc/dialog-boxes.md)<br/>
+[CTaskDialog – třída](../mfc/reference/ctaskdialog-class.md)<br/>
+[CTaskDialog::CTaskDialog](../mfc/reference/ctaskdialog-class.md#ctaskdialog)

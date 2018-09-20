@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a73a822e3cf6daa9d9d7c3ebdabbcd4671fc5c7e
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: a8230cf66fd3cc8cdce017c07f05f58b381ebd14
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465028"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400910"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Průvodce přenosem: MFC Scribble
+
 Toto téma je první několik témat, které vám představí postup upgradu pro projekty Visual C++, které byly vytvořeny ve starších verzích sady Visual Studio do sady Visual Studio 2017. Tato témata zavést procesu upgradu podle příkladu, počínaje velmi jednoduchý projekt a přechod na ty o něco složitější. V tomto tématu se budeme pracovat prostřednictvím procesu upgradu ke konkrétnímu projektu knihovny MFC Scribble. Je vhodné jako základní informace o procesu upgradu pro projekty C++.  
   
 Jednotlivými verzemi sady Visual Studio zavádí možné nekompatibility, které může zkomplikovat přesunutí kódu ze starší verze sady Visual Studio na novější. Někdy jsou požadované změny v kódu, takže je nutné znovu zkompilovat a aktualizujte svůj kód a někdy jsou požadované změny v souborech projektu. Když otevřete projekt, který byl vytvořen pomocí předchozí verze sady Visual Studio, Visual Studio automaticky vás zeptá, zda aktualizovat projekt nebo řešení na nejnovější verzi. Tyto nástroje obvykle upgradovat jenom soubory projektu; Neprovádějte žádné změny zdrojového kódu.  
@@ -37,6 +38,7 @@ Nakonec jsme museli rozhodovat na konkrétní metody upgradu. Pro složitější
 Všimněte si, že můžete také spustit devenv do příkazového řádku pomocí `/Upgrade` možnost, namísto použití Průvodce pro upgrade projektů. Zobrazit [/upgrade (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe). Který může být užitečná při automatizaci procesu upgradu pro velký počet projektů.  
   
 ### <a name="step-1-converting-the-project-file"></a>Krok 1. Převádí se projektový soubor  
+
 Když otevřete starý soubor projektu v sadě Visual Studio 2017, Visual Studio nabízí převést soubor projektu na nejnovější verzi, která můžeme přijmout. Objevily se následující dialogové okno:  
   
 ![Zkontrolovat změny projektu a řešení](../porting/media/scribbleprojectupgrade.PNG "ScribbleProjectUpgrade")  
@@ -56,6 +58,7 @@ Visual Studio pak zobrazí sestavu migrace výpis všechny problémy s původní
 V tomto případě problémy se všechna upozornění a sady Visual Studio provedli odpovídající změny v souboru projektu. Rozdíl jde projektu je, že nástroj pro sestavení se změnil z vcbuild nástroji MSBuild. Tato změna byla poprvé zavedena v sadě Visual Studio 2010. Další změny patří některé změny uspořádání pořadí prvků v samotném souboru projektu. Žádné problémy nutná další pozornost pro tento jednoduchý projekt.  
   
 ### <a name="step-2-getting-it-to-build"></a>Krok 2. Načítání sestavení  
+
 Před sestavením, zkontrolujeme sada nástrojů platformy, abychom věděli, jaké verze kompilátoru používá systém projektu. V dialogovém okně Vlastnosti projektu v rámci **vlastnosti konfigurace**v **Obecné** kategorie, podívejte se **sada nástrojů platformy** vlastnost. Obsahuje verzi sady Visual Studio a čísla verze nástrojů platformy, které v tomto případě je v141 pro Visual Studio 2017 verze nástrojů. Pokud převedete projekt, který byl původně kompilován s Visual C++ 2010, 2012, 2013 nebo 2015, sada nástrojů se neaktualizuje automaticky do sady nástrojů Visual Studio 2017.   
   
 Přechod usnadní do kódování Unicode, otevřete vlastnosti projektu, v části **vlastnosti konfigurace**, zvolte **Obecné** části a vyhledejte **znaková sada** vlastnost. Změnit z **použít vícebajtovou znakovou sadu** k **použít znakovou sadu Unicode**. Účinkem této změny je to teď _UNICODE a UNICODE makra jsou definována a _MBCS není, což můžete ověřit v dialogovém okně Vlastnosti v části **C/C++** kategorií **příkazového řádku** vlastnost.  
@@ -72,18 +75,20 @@ Nyní sestavte řešení. V okně Výstup kompilátoru víme, že _WINNT32_WINNT
 _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)  
 ```  
   
- Toto je upozornění, ne o chybu a je velmi běžná v případě upgrade projektu Visual C++. Toto je makro, které definuje co nejnižší verze Windows, na kterém bude naši aplikaci spustili. Pokud jsme upozornění ignorovat, můžeme přijmout výchozí hodnotu _WIN32_WINNT_MAXVER, což znamená, že aktuální verzi Windows. Tabulka obsahující možné hodnoty, najdete v článku [pomocí hlavičky Windows](/windows/desktop/WinProg/using-the-windows-headers). Například můžeme nastavit jeho spuštění na libovolnou verzi systému Vista a vyšší.  
+Toto je upozornění, ne o chybu a je velmi běžná v případě upgrade projektu Visual C++. Toto je makro, které definuje co nejnižší verze Windows, na kterém bude naši aplikaci spustili. Pokud jsme upozornění ignorovat, můžeme přijmout výchozí hodnotu _WIN32_WINNT_MAXVER, což znamená, že aktuální verzi Windows. Tabulka obsahující možné hodnoty, najdete v článku [pomocí hlavičky Windows](/windows/desktop/WinProg/using-the-windows-headers). Například můžeme nastavit jeho spuštění na libovolnou verzi systému Vista a vyšší.  
   
-```  
+```cpp
 #define _WIN32_WINNT _WIN32_WINNT_VISTA  
 ```  
   
 Pokud tento kód použije části rozhraní Windows API, které nejsou k dispozici na na verzi Windows, kterou zadáte pomocí tohoto makra, měli byste vidět, který jako chybu kompilátoru. V případě Scribble kódu se nezobrazí žádná chyba.  
   
 ### <a name="step-3-testing-and-debugging"></a>Krok 3. Testování a ladění  
+
 Neexistuje žádné sady testů, který jsme právě spuštění aplikace a testovat jeho funkcí ručně přes uživatelské rozhraní. Nezjistily se žádné problémy.  
   
 ### <a name="step-4-improve-the-code"></a>Krok 4. K lepšímu kódu  
+
 Teď, když jste migrovali do sady Visual Studio 2017, můžete chtít provést nějaké změny, abyste mohli využívat nové funkce jazyka C++. Aktuální verze kompilátoru jazyka C++ je mnohem více splňující podmínky na standardní a předchozí verze C++, takže pokud budete mít paměti, aby nějaký kód změn kódu bezpečnější a větší přenositelnost na jiné kompilátory a operační systémy, měli byste zvážit některé vylepšení.  
   
 ## <a name="next-steps"></a>Další kroky  
@@ -92,5 +97,5 @@ Scribble byla aplikace pracovní plochy Windows malý a jednoduchý a se těžko
   
 ## <a name="see-also"></a>Viz také  
  
-[Přenos a upgrade: Příklady a případové studie](../porting/porting-and-upgrading-examples-and-case-studies.md)   
+[Přenos a upgrade: Příklady a případové studie](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Následující příklad: COM Spy](../porting/porting-guide-com-spy.md)

@@ -17,39 +17,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b430c0ac4a07ec9bc0a9315fb1ad8ca6563ee9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 378dd025b4db769645ca53a01504c195c1265ac6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693769"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410593"
 ---
 # <a name="svmclgi"></a>__svm_clgi
-**Specifické pro Microsoft**  
-  
- Vymaže příznak globální přerušení.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void __svm_clgi( void );  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- `__svm_clgi` Funkce je ekvivalentní volání `CLGI` strojové instrukce. Přerušení globální příznak určuje, jestli mikroprocesoru ignoruje, odloží nebo zpracovává přerušení z důvodu události, například dokončení vstupně-výstupních operací, výstraha teploty hardwaru nebo výjimka ladění.  
-  
- Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace vyhledejte dokument, "programátor architektury AMD64 ruční svazek 2: programování v systému," číslo 24593 revize 3.11, v dokumentu [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) lokality.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Vnitřní|Architektura|  
-|---------------|------------------|  
-|`__svm_clgi`|x86, x64|  
-  
- **Soubor hlaviček** \<intrin.h >  
-  
-**Specifické pro END Microsoft**  
-  
-## <a name="see-also"></a>Viz také  
- [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   
- [__svm_stgi](../intrinsics/svm-stgi.md)
+
+**Specifické pro Microsoft**
+
+Vymaže příznak globální přerušení.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void __svm_clgi( void );
+```
+
+## <a name="remarks"></a>Poznámky
+
+`__svm_clgi` Funkce je ekvivalentní volání `CLGI` strojové instrukce. Přerušení globální příznak určuje, jestli mikroprocesoru ignoruje, odloží nebo zpracovává přerušení z důvodu události, například dokončení vstupně-výstupních operací, výstraha teploty hardwaru nebo výjimka ladění.
+
+Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace vyhledejte dokument, "programátor architektury AMD64 ruční svazek 2: programování v systému," číslo 24593 revize 3.11, v dokumentu [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) lokality.
+
+## <a name="requirements"></a>Požadavky
+
+|Vnitřní|Architektura|
+|---------------|------------------|
+|`__svm_clgi`|x86, x64|
+
+**Soubor hlaviček** \<intrin.h >
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také
+
+[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
+[__svm_stgi](../intrinsics/svm-stgi.md)

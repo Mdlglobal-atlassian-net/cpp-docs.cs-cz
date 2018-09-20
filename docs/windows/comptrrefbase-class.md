@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d51bbad058766af6e5e2e75f17866403ba588cd3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3ca2cb8cdc748abcac61bd548491187095b71a3f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602697"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415314"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase – třída
 
@@ -39,7 +39,7 @@ class ComPtrRefBase;
 
 ### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 A [ComPtr\<T >](../windows/comptr-class.md) typ nebo z ní odvozené, nikoli pouze rozhraní, které jsou reprezentována **ComPtr**.
 
 ## <a name="remarks"></a>Poznámky

@@ -1,5 +1,5 @@
 ---
-title: Definování obslužné rutiny zpráv pro zrcadlené zprávy | Microsoft Docs
+title: Definování obslužné rutiny zpráv pro zrcadlené zprávy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,51 +17,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ed941816824c77f14a3364b06af0b3da171ee8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26345a95559000815ed7d2e2cc336892d619969b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373166"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413741"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>Definování obslužné rutiny zpráv pro zrcadlené zprávy
-Po vytvoření nové třídě ovládacího prvku MFC, můžete definovat obslužné rutiny zpráv pro ni. Zrcadlených zpráv umožňují vaší třídě zpracování vlastní zprávy před nadřízený objekt doručení zprávy. Můžete použít MFC [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) funkce k odesílání zpráv z ovládacího prvku do nadřazeného okna.  
-  
- Pomocí této funkce lze například vytvořit seznam, který bude překreslit, namísto spoléhání na nadřazeného okna udělat (vlastní vykreslování). Další informace o reflektované zprávy naleznete v tématu [zpracování Reflektovaných zpráv](../../mfc/handling-reflected-messages.md).  
-  
- Chcete-li vytvořit [ovládací prvek ActiveX](../../mfc/activex-controls-on-the-internet.md) s touto funkcí, musíte vytvořit projekt pro ovládací prvek ActiveX.  
-  
+
+Po vytvoření nové třídě ovládacího prvku knihovny MFC můžete definovat obslužné rutiny zpráv pro něj. Obslužné rutiny reflektovaných zpráv povolit třídy vašeho ovládacího prvku pro zpracování vlastní zprávy před doručení zprávy nadřazenou položkou. Můžete používat knihovnu MFC [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) funkce pro odesílání zpráv z ovládacího prvku do nadřazeného okna.
+
+Pomocí této funkce lze například vytvořit pole se seznamem, který bude svoje vlastní překreslení. spíše než spoléhání se na nadřazené okno provedete (vlastní vykreslování). Další informace o reflektované zprávy najdete v tématu [zpracování zprávy projeví](../../mfc/handling-reflected-messages.md).
+
+Vytvoření [ovládacího prvku ActiveX](../../mfc/activex-controls-on-the-internet.md) pomocí stejné funkce, musíte vytvořit projekt pro ovládací prvek ActiveX.
+
 > [!NOTE]
->  Nelze přidat zrcadlené zprávy (OCM_*zpráva*) pro prvku ActiveX řídit pomocí okna vlastností, jak je popsáno níže. Tyto zprávy je musí přidat ručně.  
-  
-### <a name="to-define-a-message-handler-for-a-reflected-message-from-the-properties-window"></a>Chcete-li definovat obslužné rutiny zpráv pro zrcadlené zprávy v okně Vlastnosti  
-  
-1.  Přidání ovládacího prvku, jako je například seznam, ovládacím prvkem matrice, panel nástrojů nebo ovládacím prvkem strom, do projektu MFC.  
-  
-2.  V zobrazení tříd klikněte na název třídy ovládacího prvku.  
-  
-3.  V [vlastnosti – okno](/visualstudio/ide/reference/properties-window), se zobrazí v názvu třídy ovládacího prvku **název třídy** seznamu.  
-  
-4.  Klikněte **zprávy** tlačítko zobrazení zpráv systému Windows, které chcete přidat do ovládacího prvku.  
-  
-5.  Projděte dolů seznam zpráv v okně vlastností, dokud neuvidíte záhlaví **Reflected**. Klepnout **kategorie** tlačítko a sbalit zobrazení najdete v článku **Reflected** záhlaví.  
-  
-6.  Vyberte zrcadlené zprávy, pro které chcete definovat obslužnou rutinu. Reflektované zprávy jsou označené symbolem rovná se (=).  
-  
-7.  Klikněte na buňky v pravém sloupci v okně vlastností zobrazíte navrhovaný název obslužné rutiny jako \<Přidat >*HandlerName*. (Například **= WM_CTLCOLOR –** navrhuje obslužné rutiny zpráv \<Přidat >**CtlColor**).  
-  
-8.  Klikněte na název navržené tak, aby přijímal. Obslužná rutina se přidá do projektu.  
-  
-     V pravém sloupci okna reflektované zprávy se zobrazují názvy obslužné rutiny zpráv, které jste přidali.  
-  
-9. Chcete-li upravit nebo odstranit obslužné rutiny zpráv, opakujte kroky 4 až 7. Klikněte na buňku obsahující název obslužné rutiny upravit nebo odstranit, a klikněte na příslušnou úlohu.  
-  
-## <a name="see-also"></a>Viz také  
- [Mapování zpráv do funkcí](../../mfc/reference/mapping-messages-to-functions.md)   
- [Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Přidání třídy](../../ide/adding-a-class-visual-cpp.md)   
- [Přidání členské funkce](../../ide/adding-a-member-function-visual-cpp.md)   
- [Přidání členské proměnné](../../ide/adding-a-member-variable-visual-cpp.md)   
- [Přepisování virtuální funkce](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Popisovač zpráv knihovny MFC](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [Navigace strukturou třídy](../../ide/navigating-the-class-structure-visual-cpp.md)
+>  Nelze přidat reflektovaných zpráv (OCM_*zpráva*) pro prvek ActiveX řídit pomocí okna vlastnosti, jak je popsáno níže. Tyto zprávy musí přidat ručně.
+
+### <a name="to-define-a-message-handler-for-a-reflected-message-from-the-properties-window"></a>Definování obslužné rutiny zpráv pro zrcadlené zprávy z okna Vlastnosti
+
+1. Přidejte ovládací prvek, jako je například seznam, ovládacím prvkem matrice, panelu nástrojů nebo ovládací prvek stromu do projektu knihovny MFC.
+
+1. V zobrazení tříd klikněte na název třídy vašeho ovládacího prvku.
+
+1. V [okno vlastností](/visualstudio/ide/reference/properties-window), název třídy ovládacího prvku se zobrazí v **název třídy** seznamu.
+
+1. Klikněte na tlačítko **zprávy** tlačítka pro zobrazení zpráv Windows k dispozici pro přidání do ovládacího prvku.
+
+1. Přejděte dolů seznam zpráv v okně Vlastnosti, dokud se nezobrazí záhlaví **Reflected**. Kliknout **kategorie** tlačítko a sbalit zobrazení, abyste viděli **Reflected** záhlaví.
+
+1. Vyberte zrcadlené zprávy, pro kterou chcete definovat obslužnou rutinu. Reflektované zprávy jsou označené rovnítko (=).
+
+1. Klikněte na buňku v pravém sloupci v okně Vlastnosti, chcete-li zobrazit navrhovaný název obslužné rutiny jako \<Přidat >*HandlerName*. (Například **= WM_CTLCOLOR –** obslužná rutina zprávy navrhuje \<Přidat >**CtlColor**).
+
+1. Klikněte na navrhovaný název tak, aby přijímal. Obslužná rutina se přidá do vašeho projektu.
+
+     V pravém sloupci reflektované zprávy okna se zobrazí názvy obslužných rutin zpráv, které jste přidali.
+
+9. Pokud chcete upravit nebo odstranit popisovač zpráv, opakujte kroky 4 až 7. Klikněte na buňku obsahující název obslužné rutiny na upravit nebo odstranit a klikněte na příslušnou úlohu.
+
+## <a name="see-also"></a>Viz také
+
+[Mapování zpráv na funkce](../../mfc/reference/mapping-messages-to-functions.md)<br/>
+[Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Přidání třídy](../../ide/adding-a-class-visual-cpp.md)<br/>
+[Přidání členské funkce](../../ide/adding-a-member-function-visual-cpp.md)<br/>
+[Přidání členské proměnné](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[Přepisování virtuální funkce](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Popisovače zpráv knihovny MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
+[Navigace strukturou třídy](../../ide/navigating-the-class-structure-visual-cpp.md)

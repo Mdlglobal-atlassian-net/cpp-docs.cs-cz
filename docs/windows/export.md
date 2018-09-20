@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5da3f03500ccaadb4cff3be0226592e36ed3160
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 97197779170c90d64ceb749e6cd1ec0ea30563a7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200886"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422126"
 ---
 # <a name="export"></a>export
 
@@ -74,5 +74,5 @@ Další informace najdete v tématu [kontexty atributů](../windows/attribute-co
 
 ## <a name="see-also"></a>Viz také
 
-[Atributy kompilátoru](../windows/compiler-attributes.md)  
+[Atributy kompilátoru](../windows/compiler-attributes.md)<br/>
 [Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)  

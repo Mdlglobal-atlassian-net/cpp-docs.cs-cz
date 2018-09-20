@@ -18,54 +18,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adc6467a66163eeef5916580181005cac1a0a4b6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c5a061ca3c7bb39d90608685e04b62da9b2e83fb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016934"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410413"
 ---
 # <a name="improperschedulerreference-class"></a>improper_scheduler_reference – třída
-Tato třída popisuje výjimku vyvolána, když `Reference` metoda je volána na `Scheduler` objekt, který se vypíná, z kontextu, který není součástí tohoto plánovače.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+Tato třída popisuje výjimku vyvolána, když `Reference` metoda je volána na `Scheduler` objekt, který se vypíná, z kontextu, který není součástí tohoto plánovače.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 class improper_scheduler_reference : public std::exception;
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[improper_scheduler_reference](#ctor)|Přetíženo. Vytvoří `improper_scheduler_reference` objektu.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `exception`  
-  
- `improper_scheduler_reference`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** concrt.h  
-  
- **Namespace:** souběžnosti  
-  
-##  <a name="ctor"></a> improper_scheduler_reference – 
+```
 
- Vytvoří `improper_scheduler_reference` objektu.  
-  
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[improper_scheduler_reference](#ctor)|Přetíženo. Vytvoří `improper_scheduler_reference` objektu.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`exception`
+
+`improper_scheduler_reference`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** concrt.h
+
+**Namespace:** souběžnosti
+
+##  <a name="ctor"></a> improper_scheduler_reference –
+
+Vytvoří `improper_scheduler_reference` objektu.
+
 ```
 explicit _CRTIMP improper_scheduler_reference(_In_z_ const char* _Message) throw();
 
 improper_scheduler_reference() throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *_TEXT*<br/>
-Popisná zpráva chyby.  
-  
-## <a name="see-also"></a>Viz také  
- [souběžnost Namespace](concurrency-namespace.md)   
- [Scheduler – třída](scheduler-class.md)
+Popisná zpráva chyby.
+
+## <a name="see-also"></a>Viz také
+
+[concurrency – obor názvů](concurrency-namespace.md)<br/>
+[Scheduler – třída](scheduler-class.md)
