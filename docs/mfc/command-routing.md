@@ -1,5 +1,5 @@
 ---
-title: Směrování příkazů | Microsoft Docs
+title: Směrování příkazů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,40 +18,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecb836f8fee1efab7f5f925c6ec3ce0f470d666b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 543b9e34c881285c295fb7ab7ee2107e36c99a9c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346279"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418317"
 ---
 # <a name="command-routing"></a>Směrování příkazů
-Vaše odpovědnosti při práci s příkazy je omezený na vytváření map zpráv spojení mezi příkazy a jejich funkce obslužné rutiny, pro kterou použijte okno Vlastnosti úlohy. Také musíte napsat většina obslužné rutiny příkazů.  
-  
- Zprávy Windows se obvykle odesílají do okna hlavního rámce, ale příkaz zprávy pak směrují na jiné objekty. Rozhraní framework směrování příkazů prostřednictvím standardní pořadí příkaz cílové objekty, z nichž jeden by měl být obslužná rutina příkazu. Každý příkaz cílový objekt ověří jeho mapy zpráv zobrazíte, pokud ho může zpracovávat příchozí zprávy.  
-  
- Různé třídy cíl příkazu zkontrolujte že mapy vlastní zpráv v různých časech. Obvykle třídu směruje příkaz k určitým objektům a umožnit jim první příležitosti v příkazu. Pokud žádná z těchto objektů zpracovává příkaz, původní třída zkontroluje vlastní mapy zpráv. Pak pokud ho nelze zadat obslužnou rutinu sám sebe, se může směrovat příkaz ještě další cíle příkazů. V tabulce [standardních příkazů trasy](#_core_standard_command_route) níže ukazuje, jak každý z třídy struktury toto pořadí. Obecné pořadí, ve kterém směruje příkaz cíl příkazu je:  
-  
-1.  K jeho aktuálně aktivních podřízených příkaz cílový objekt.  
-  
-2.  Na sebe sama.  
-  
-3.  Pro jiné cíle příkazů.  
-  
- Jak nákladné je tento mechanismus směrování porovnání vaší obslužné rutiny nemá v reakci na příkaz, náklady směrování je nízký. Berte v úvahu, že rozhraní generuje příkazy jenom v případě, že uživatel pracuje s objektem uživatelského rozhraní.  
-  
-### <a name="_core_standard_command_route"></a> Standardní příkaz trasy  
-  
-|Pokud objekt tohoto typu přijme příkaz. . .|Nabízí samostatně a další příkaz cílové objekty příležitosti pro zpracování příkazu v tomto pořadí:|  
-|----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|  
-|Rámec okna MDI (`CMDIFrameWnd`)|1.  Aktivní `CMDIChildWnd`<br />2.  Tato oken s rámečkem<br />3.  Aplikace (`CWinApp` objekt)|  
-|Rámec okna dokumentu (`CFrameWnd`, `CMDIChildWnd`)|1.  Aktivní zobrazení<br />2.  Tato oken s rámečkem<br />3.  Aplikace (`CWinApp` objekt)|  
-|Zobrazit|1.  Toto zobrazení<br />2.  Dokument připojený k zobrazení|  
-|Dokument|1.  Tento dokument<br />2.  Šablona dokumentu, které jsou připojené k dokumentu|  
-|Dialogové okno|1.  Toto dialogové okno<br />2.  Okno, které vlastní dialogových oken<br />3.  Aplikace (`CWinApp` objekt)|  
-  
- Kde číslované položky v druhém sloupci v předchozí tabulce zmínili jiné objekty, jako je například dokument, najdete v položce odpovídající z prvního sloupce. Například při čtení v druhém sloupci, zobrazení předává příkaz k jeho dokumentu, najdete v položce "Dokumentu" prvního sloupce podle další směrování.  
-  
-## <a name="see-also"></a>Viz také  
- [Jakým způsobem volá framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md)
+
+Vaše odpovědnosti v práci s příkazy je omezená na vytváření map zpráv spojení mezi příkazy a příslušným obslužným funkcím, úloh, pro který použijete v okně Vlastnosti. Také musíte napsat obslužné rutiny většinu příkazů.
+
+Windows se obvykle posílají do okna hlavního rámce, ale příkaz zprávy pak jsou směrovány na jiné objekty. Rozhraní framework směruje příkazů pomocí standardní posloupnost příkaz cílové objektů, z nichž jeden má mít obslužnou rutinu pro příkaz. Každý objekt cíl příkazu ověří jeho mapy zprávy zobrazíte, pokud může zpracovávat příchozí zprávy.
+
+Různé třídy cíl příkazu zkontrolujte že mapy vlastních zpráv v různých časech. Třída obvykle směruje příkazu k určitým objektům a umožnit jim první příležitosti v příkazu. Pokud žádná z těchto objektů zpracovává příkaz, původní třídy kontroluje svůj vlastní mapu zpráv. Potom pokud ho nelze zadat samotná obslužná rutina, se může směrovat příkaz ještě další cíle příkazů. V tabulce [trasy standardní příkaz](#_core_standard_command_route) níže ukazuje, jak každý z třídy struktury toto pořadí. Obecné pořadí, ve kterém směruje cíl příkazu příkazu je:
+
+1. Na cíl příkazu jeho aktuálně aktivní podřízený objekt.
+
+1. Na sebe sama.
+
+1. Pro další cíle příkazů.
+
+Jak nákladné je tento mechanismus směrování porovnání vaše obslužná rutina nemá v reakci na příkaz, je nízké náklady směrování. Berte v úvahu, že rozhraní framework generuje příkazy pouze v případě, že uživatel pracuje s objektem uživatelského rozhraní.
+
+### <a name="_core_standard_command_route"></a> Standardní příkaz trasy
+
+|Pokud objekt tohoto typu přijme příkaz. . .|Poskytuje samostatně a dalších objektů cíl příkazu příležitost dobře se zpracovat příkaz v tomto pořadí:|
+|----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+|Okno rámce MDI (`CMDIFrameWnd`)|1.  Aktivní `CMDIChildWnd`<br />2.  Toto okno rámce<br />3.  Aplikace (`CWinApp` objektu)|
+|Okna rámce dokumentu (`CFrameWnd`, `CMDIChildWnd`)|1.  Aktivní zobrazení<br />2.  Toto okno rámce<br />3.  Aplikace (`CWinApp` objektu)|
+|Zobrazit|1.  Toto zobrazení<br />2.  Dokument připojený k zobrazení|
+|Dokument|1.  Tento dokument<br />2.  Šablona dokumentu, které jsou připojené k dokumentu|
+|Dialogové okno|1.  Toto dialogové okno<br />2.  Okno, které vlastní dialogových oken<br />3.  Aplikace (`CWinApp` objektu)|
+
+Pokud zmíníte číslované položky ve druhém sloupci v předchozí tabulce jiné objekty, jako je například dokument, najdete v odpovídající položku v prvním sloupci. Například při čtení v druhém sloupci, že zobrazení předá příkazu, který bude jeho dokumentu, naleznete v příspěvku "Dokumentů" v prvním sloupci sledovat další směrování.
+
+## <a name="see-also"></a>Viz také
+
+[Jakým způsobem volá framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md)
 

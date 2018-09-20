@@ -1,5 +1,5 @@
 ---
-title: Stránky vlastností příkazového řádku | Microsoft Docs
+title: Stránky vlastností příkazového řádku | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 580c11d19a1d2ea5510390296a80589cce988f12
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 54a9f68c1cd750cd3d0e5c638d1ab101a8588a61
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327808"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416887"
 ---
 # <a name="command-line-property-pages"></a>Stránky vlastností příkazového řádku
-Většina složek stránky vlastností obsahovat **příkazového řádku** stránku vlastností. Tato stránka zobrazuje vlastnosti, které jsou nastavené ve složce. **Příkazového řádku** vlastnost stránka taky obsahuje **další možnosti** pole, kde můžete určit vlastnosti, které jsou platné pro nástroj, ale pro kterou neexistuje vlastnost ve složce.  
-  
- Všemi příkazy, které zadáte do textového pole bude předána do nástroje pro složku. Žádné ověření nebo kontroly bude provedeno v vstupní, ani bude k dispozici kontrola závislosti.  
-  
- Informace o tom, jak získat přístup **příkazového řádku** najdete v části stránky vlastností [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Stránky vlastností](../ide/property-pages-visual-cpp.md)   
- [Soubory .Lib jako vstup linkeru](../build/reference/dot-lib-files-as-linker-input.md)
+
+Obsahují většinu složek stránky vlastností **příkazového řádku** stránku vlastností. Tato stránka zobrazuje vlastnosti, které jsou nastavené ve složce. **Příkazového řádku** také obsahuje stránku vlastností **další možnosti** pole, ve kterém můžete zadat vlastnosti, které jsou platné pro nástroj, ale pro který není žádná vlastnost ve složce.
+
+Jakýkoli příkaz, který zadáte do textového pole se předává do nástroje pro složku. Žádné ověřování a kontroly se provede na vstupu ani bude kontrola závislosti.
+
+Informace o tom, jak získat přístup **příkazového řádku** stránky vlastností naleznete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).
+
+## <a name="see-also"></a>Viz také
+
+[Stránky vlastností](../ide/property-pages-visual-cpp.md)<br>
+[Soubory .Lib jako vstup linkeru](../build/reference/dot-lib-files-as-linker-input.md)
