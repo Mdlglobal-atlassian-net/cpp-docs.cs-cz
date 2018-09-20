@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9961eaa6529773e8d21d9c953242d1656a6a443
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 85439e191ac8676603c9d7fab8a41bb126e97b9e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211660"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398661"
 ---
 # <a name="working-with-project-properties"></a>Práce s vlastnostmi projektu
 
@@ -141,11 +141,11 @@ Uživatelem definované makro je uloženo v seznamu vlastností. Pokud váš pr
 
 ##### <a name="to-create-a-user-defined-macro"></a>Vytvoření uživatelem definovaného makra
 
-1.  V **Správce vlastností** okna (v řádku nabídek zvolte **zobrazení**, **Správce vlastností**), otevřete místní nabídku pro seznam vlastností (název má koncovku .user) a klikněte na tlačítko Vlastnosti. **Stránky vlastností** otevře se dialogové okno pro tento seznam vlastností.
+1. V **Správce vlastností** okna (v řádku nabídek zvolte **zobrazení**, **Správce vlastností**), otevřete místní nabídku pro seznam vlastností (název má koncovku .user) a klikněte na tlačítko Vlastnosti. **Stránky vlastností** otevře se dialogové okno pro tento seznam vlastností.
 
-2.  V levém podokně dialogového okna, vyberte **uživatelská makra**. V pravém podokně, vyberte **přidat makro** tlačítko Otevřít **přidat uživatelské makro** dialogové okno.
+1. V levém podokně dialogového okna, vyberte **uživatelská makra**. V pravém podokně, vyberte **přidat makro** tlačítko Otevřít **přidat uživatelské makro** dialogové okno.
 
-3.  V dialogovém okně zadejte název a hodnotu makra. Volitelně můžete vybrat **nastavit toto makro jako proměnnou prostředí v prostředí pro sestavení** zaškrtávací políčko.
+1. V dialogovém okně zadejte název a hodnotu makra. Volitelně můžete vybrat **nastavit toto makro jako proměnnou prostředí v prostředí pro sestavení** zaškrtávací políčko.
 
 ## <a name="property-editor"></a>Editor vlastností
 

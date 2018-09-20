@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcf0675b81d684fdf8b78e865bf754d45ef4888c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 43c460d45e0f1ce41cebd463bc3ba6b7f295d9ca
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752681"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411180"
 ---
 # <a name="cstrbuft-class"></a>Cstrbuft – třída
 
@@ -236,6 +236,6 @@ typedef CSimpleStringT<TCharType> StringType;
 
 ## <a name="see-also"></a>Viz také
 
-[Graf hierarchie](../../mfc/hierarchy-chart.md)   
+[Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Sdílené třídy ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

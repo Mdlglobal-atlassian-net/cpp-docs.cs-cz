@@ -16,97 +16,100 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11c3e0fc08f8c2e0f4df9ac20df6260f64618ee3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b9790d1bf5ba79792897b223a7021368e6e90502
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46029543"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412170"
 ---
 # <a name="ompinitnestlock"></a>omp_init_nest_lock
-Inicializuje zámek.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void omp_init_nest_lock(  
-   omp_nest_lock_t *lock  
-);  
-```  
-  
-### <a name="parameters"></a>Parametry 
-  
+
+Inicializuje zámek.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void omp_init_nest_lock(
+   omp_nest_lock_t *lock
+);
+```
+
+### <a name="parameters"></a>Parametry
+
 *lock*<br/>
-Proměnné typu [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md).  
-  
-## <a name="remarks"></a>Poznámky  
- Počáteční počet vnoření je nula.  
-  
- Další informace najdete v tématu [3.2.1 omp_init_lock a omp_init_nest_lock – funkce](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// omp_init_nest_lock.cpp  
-// compile with: /openmp  
-#include <stdio.h>  
-#include <omp.h>  
-  
-omp_nest_lock_t my_lock;  
-  
-void Test() {  
-   int tid = omp_get_thread_num( );  
-   omp_set_nest_lock(&my_lock);  
-   printf_s("Thread %d - starting nested locked region\n", tid);  
-   printf_s("Thread %d - ending nested locked region\n", tid);  
-   omp_unset_nest_lock(&my_lock);  
-}  
-  
-int main() {  
-   omp_init_nest_lock(&my_lock);  
-  
-   #pragma omp parallel num_threads(4)  
-   {  
-      int i, j;  
-  
-      for (i = 0; i < 5; ++i) {  
-         omp_set_nest_lock(&my_lock);  
-            if (i % 3)   
-               Test();  
-            omp_unset_nest_lock(&my_lock);  
-        }  
-    }  
-  
-    omp_destroy_nest_lock(&my_lock);  
-}  
-```  
-  
-```Output  
-Thread 0 - starting nested locked region  
-Thread 0 - ending nested locked region  
-Thread 0 - starting nested locked region  
-Thread 0 - ending nested locked region  
-Thread 3 - starting nested locked region  
-Thread 3 - ending nested locked region  
-Thread 3 - starting nested locked region  
-Thread 3 - ending nested locked region  
-Thread 3 - starting nested locked region  
-Thread 3 - ending nested locked region  
-Thread 2 - starting nested locked region  
-Thread 2 - ending nested locked region  
-Thread 2 - starting nested locked region  
-Thread 2 - ending nested locked region  
-Thread 2 - starting nested locked region  
-Thread 2 - ending nested locked region  
-Thread 1 - starting nested locked region  
-Thread 1 - ending nested locked region  
-Thread 1 - starting nested locked region  
-Thread 1 - ending nested locked region  
-Thread 1 - starting nested locked region  
-Thread 1 - ending nested locked region  
-Thread 0 - starting nested locked region  
-Thread 0 - ending nested locked region  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Funkce](../../../parallel/openmp/reference/openmp-functions.md)
+Proměnné typu [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md).
+
+## <a name="remarks"></a>Poznámky
+
+Počáteční počet vnoření je nula.
+
+Další informace najdete v tématu [3.2.1 omp_init_lock a omp_init_nest_lock – funkce](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).
+
+## <a name="example"></a>Příklad
+
+```
+// omp_init_nest_lock.cpp
+// compile with: /openmp
+#include <stdio.h>
+#include <omp.h>
+
+omp_nest_lock_t my_lock;
+
+void Test() {
+   int tid = omp_get_thread_num( );
+   omp_set_nest_lock(&my_lock);
+   printf_s("Thread %d - starting nested locked region\n", tid);
+   printf_s("Thread %d - ending nested locked region\n", tid);
+   omp_unset_nest_lock(&my_lock);
+}
+
+int main() {
+   omp_init_nest_lock(&my_lock);
+
+   #pragma omp parallel num_threads(4)
+   {
+      int i, j;
+
+      for (i = 0; i < 5; ++i) {
+         omp_set_nest_lock(&my_lock);
+            if (i % 3)
+               Test();
+            omp_unset_nest_lock(&my_lock);
+        }
+    }
+
+    omp_destroy_nest_lock(&my_lock);
+}
+```
+
+```Output
+Thread 0 - starting nested locked region
+Thread 0 - ending nested locked region
+Thread 0 - starting nested locked region
+Thread 0 - ending nested locked region
+Thread 3 - starting nested locked region
+Thread 3 - ending nested locked region
+Thread 3 - starting nested locked region
+Thread 3 - ending nested locked region
+Thread 3 - starting nested locked region
+Thread 3 - ending nested locked region
+Thread 2 - starting nested locked region
+Thread 2 - ending nested locked region
+Thread 2 - starting nested locked region
+Thread 2 - ending nested locked region
+Thread 2 - starting nested locked region
+Thread 2 - ending nested locked region
+Thread 1 - starting nested locked region
+Thread 1 - ending nested locked region
+Thread 1 - starting nested locked region
+Thread 1 - ending nested locked region
+Thread 1 - starting nested locked region
+Thread 1 - ending nested locked region
+Thread 0 - starting nested locked region
+Thread 0 - ending nested locked region
+```
+
+## <a name="see-also"></a>Viz také
+
+[Funkce](../../../parallel/openmp/reference/openmp-functions.md)

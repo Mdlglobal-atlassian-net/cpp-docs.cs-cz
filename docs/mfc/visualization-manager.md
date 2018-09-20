@@ -1,5 +1,5 @@
 ---
-title: Správce vizualizace | Microsoft Docs
+title: Správce vizualizace | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -14,40 +14,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 590c21c3a628af3d8e4c7fc3e5cb0330a0af439a
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: fce4b036c6a6ae3692353ae02e7d36eb5ddfd1e1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37123341"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398481"
 ---
 # <a name="visualization-manager"></a>Správce vizualizace
 
-Visual správce je objekt, který řídí vzhled aplikaci jako celek. Jako jednu třídu funguje, kde můžete ukládat všechny kód vykreslování pro aplikaci. Knihovny MFC zahrnuje několik visual správci. Můžete také vytvořit vlastní visual správce, pokud chcete vytvořit vlastní zobrazení pro vaši aplikaci. Následující obrázky znázorňují stejnou aplikaci, pokud jsou povolené různé visual správce:
+Správce vzhledu je objekt, který řídí vzhled aplikaci jako celek. Jako jednu třídu funguje, kde můžete ukládat výkresu kódu pro vaši aplikaci. Knihovna MFC obsahuje několik vizuální vedoucí. Můžete také vytvořit vlastní správce vzhledu, pokud chcete vytvořit vlastní zobrazení pro vaši aplikaci. Následující obrázky znázorňují tu samou aplikaci, pokud jsou povolené vizuální vedoucí jiné:
 
- ![Moje aplikace podle vykreslení CMFCVisualManagerWindows](../mfc/media/vmwindows.png "vmwindows") Moje aplikace, který používá správce visual CMFCVisualManagerWindows
+![Moje aplikace podle vykreslení CMFCVisualManagerWindows](../mfc/media/vmwindows.png "vmwindows") Moje aplikace, která používá správce vzhledu CMFCVisualManagerWindows –
 
- ![Moje aplikace podle vykreslení CMFCVisualManagerVS2005](../mfc/media/vmvs2005.png "vmvs2005") Moje aplikace, který používá správce visual CMFCVisualManagerVS2005
+![Moje aplikace podle vykreslení CMFCVisualManagerVS2005](../mfc/media/vmvs2005.png "vmvs2005") Moje aplikace, která používá správce vzhledu CMFCVisualManagerVS2005 –
 
- ![Moje aplikace podle vykreslení CMFCVisualManagerOfficeXP](../mfc/media/vmofficexp.png "vmofficexp") Moje aplikace, který používá správce visual CMFCVisualManagerOfficeXP
+![Moje aplikace podle vykreslení CMFCVisualManagerOfficeXP](../mfc/media/vmofficexp.png "vmofficexp") Moje aplikace, která používá správce vzhledu CMFCVisualManagerOfficeXP –
 
- ![Moje aplikace podle vykreslení CMFCVisualManagerOffice2003](../mfc/media/vmoffice2003.png "vmoffice2003") Moje aplikace, který používá správce visual CMFCVisualManagerOffice2003
+![Moje aplikace podle vykreslení cmfcvisualmanageroffice2003 –](../mfc/media/vmoffice2003.png "vmoffice2003") Moje aplikace, která používá správce vzhledu cmfcvisualmanageroffice2003 –
 
- ![Moje aplikace podle vykreslení CMFCVisualManagerOffice2007](../mfc/media/msoffice2007.png "msoffice2007") Moje aplikace, který používá správce visual CMFCVisualManagerOffice2007
+![Moje aplikace podle vykreslení cmfcvisualmanageroffice2007 –](../mfc/media/msoffice2007.png "msoffice2007") Moje aplikace, která používá správce vzhledu cmfcvisualmanageroffice2007 –
 
-Ve výchozím nastavení udržuje správce visual kreslení kód pro několik elementy grafického uživatelského rozhraní. Pokud chcete zadat vlastní elementy uživatelského rozhraní, budete muset přepsat související metody kreslení visual správce. Seznam těchto metod najdete v tématu [CMFCVisualManager třída](../mfc/reference/cmfcvisualmanager-class.md). Metody, které můžete přepsat poskytnout vlastní vzhled jsou všechny metody, které začínají `OnDraw`.
+Ve výchozím nastavení udržuje správce vzhledu kód pro vykreslování. pro více prvků grafického uživatelského rozhraní. Pokud chcete zadat vlastní elementy uživatelského rozhraní, budete muset přepsání metody související výkresu správce vzhledu. Seznam těchto metod najdete v tématu [cmfcvisualmanager – třída](../mfc/reference/cmfcvisualmanager-class.md). Metody, které můžete přepsat poskytnout vlastní vzhled jsou všechny metody, které začínají `OnDraw`.
 
-Aplikace může mít jen jeden `CMFCVisualManager` objektu. K získání ukazatele na visual správce pro vaši aplikaci, zavolejte statickou funkci [CMFCVisualManager::GetInstance](../mfc/reference/cmfcvisualmanager-class.md#getinstance). Protože dědí všechny visual správce `CMFCVisualManager`, `CMFCVisualManager::GetInstance` metoda se ukazatel na příslušné visual správce, i v případě, že vytvoříte vlastní visual správce.
+Vaše aplikace může mít pouze jeden `CMFCVisualManager` objektu. Získat ukazatel na správce vzhledu aplikace, zavolejte statickou funkci [CMFCVisualManager::GetInstance](../mfc/reference/cmfcvisualmanager-class.md#getinstance). Protože dědí všechny vizuální vedoucí `CMFCVisualManager`, `CMFCVisualManager::GetInstance` metoda se ukazatel na příslušné správce vzhledu, i v případě, že vytvoříte vlastní správce vzhledu.
 
-Pokud chcete vytvořit vlastní visual manager, musí být odvozeny od visual správce, který již existuje. Je odvozena od třídy pro výchozí `CMFCVisualManager`. Můžete však jiný visual manager pokud lépe podobá, co chcete použít pro vaše aplikace. Například, pokud jste chtěli použít `CMFCVisualManagerOffice2007` visual správce, ale chtěli pouze Změna vzhledu oddělovačů, může být vaše vlastní třídy z `CMFCVisualManagerOffice2007`. V tomto scénáři byste měli přepsat pouze metody pro kreslení oddělovačů.
+Pokud chcete vytvořit vlastní správce vzhledu, musí být odvozen z vizuálního správce, který již existuje. Je výchozí třídu odvodit z `CMFCVisualManager`. Můžete však použít jiný správce vzhledu pokud lépe vypadá podobně jako vhodné pro vaši aplikaci. Například, pokud jste chtěli `CMFCVisualManagerOffice2007` správce vzhledu, ale chtěli pouze Změna vzhledu oddělovače, můžou odvozovat vlastní třídu z `CMFCVisualManagerOffice2007`. V tomto scénáři byste měli přepsat pouze metody pro kreslení oddělovače.
 
-Existují dvě možné způsoby, jak používat konkrétní visual správce pro vaši aplikaci. Jedním ze způsobů je volání [CMFCVisualManager::SetDefaultManager](../mfc/reference/cmfcvisualmanager-class.md#setdefaultmanager) metoda a předejte jí odpovídající visual manager jako parametr. Následující příklad kódu ukazuje, jak byste použili `CMFCVisualManagerVS2005` visual manager pomocí této metody:
+Existují dva možné způsoby, jak použít konkrétní vizuálního správce pro vaši aplikaci. Jedním ze způsobů je zavolat [CMFCVisualManager::SetDefaultManager](../mfc/reference/cmfcvisualmanager-class.md#setdefaultmanager) a předáte odpovídající správce vzhledu jako parametr. Následující příklad kódu ukazuje, jak můžete využít `CMFCVisualManagerVS2005` správce vzhledu pomocí této metody:
 
 ```cpp
 CMFCVisualManager::SetDefaultManager (RUNTIME_CLASS (CMFCVisualManagerVS2005));
 ```
 
-Druhý způsob použití visual správce ve vaší aplikaci je vytvořit ručně. Aplikace pak bude používat tento nový visual správce pro všechny vykreslování. Ale vzhledem k tomu může být jen jeden `CMFCVisualManager` objektu na aplikaci, budete muset odstranit aktuální visual manager předtím, než vytvoříte nový. V následujícím příkladu `CMyVisualManager` je vlastní visual manager, který je odvozený od `CMFCVisualManager`. Následující metodu změní, jaké visual správce se používá k zobrazení vaší aplikace, v závislosti na index:
+Druhý způsob použití vizuálního správce ve vaší aplikaci je vytvořit ručně. Aplikace pak bude používat tento nový správce vzhledu pro vykreslení všech prvků. Ale vzhledem k tomu může dojít k pouze jednomu `CMFCVisualManager` objektu na aplikaci, bude mít odstranit aktuální správce vzhledu a teprve potom vytvořte novou. V následujícím příkladu `CMyVisualManager` je vlastní vizuálního správce, který je odvozen z `CMFCVisualManager`. Následující metody se změní, co správce vzhledu se používá k zobrazení vaší aplikace, v závislosti na indexu:
 
 ```cpp
 void CMyApp::SetSkin (int index)
@@ -59,7 +59,7 @@ void CMyApp::SetSkin (int index)
 
     switch (index)
     {
-    case DEFAULT_STYLE: 
+    case DEFAULT_STYLE:
         // The following statement creates a new CMFCVisualManager
         CMFCVisualManager::GetInstance();
         break;
@@ -79,5 +79,5 @@ void CMyApp::SetSkin (int index)
 
 ## <a name="see-also"></a>Viz také:
 
-[Prvky uživatelského rozhraní](../mfc/user-interface-elements-mfc.md)  
-[CMFCVisualManager – třída](../mfc/reference/cmfcvisualmanager-class.md)  
+[Prvky uživatelského rozhraní](../mfc/user-interface-elements-mfc.md)<br/>
+[CMFCVisualManager – třída](../mfc/reference/cmfcvisualmanager-class.md)

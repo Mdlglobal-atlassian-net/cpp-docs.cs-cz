@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1a5b91ce4ffdfd376e6fbc7fa704fc1ecc0dc45
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 839b0220497db7ff0355ea7ed3ab923126e3175e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613013"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420930"
 ---
 # <a name="comptrrefbaseoperator-iunknown-operator"></a>ComPtrRefBase::operator IUnknown** – operátor
 
@@ -48,5 +48,5 @@ Je vygenerován chybu, pokud aktuální **comptrrefbase –** není odvozen od `
 
 ## <a name="see-also"></a>Viz také
 
-[ComPtrRefBase – třída](../windows/comptrrefbase-class.md)  
+[ComPtrRefBase – třída](../windows/comptrrefbase-class.md)<br/>
 [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

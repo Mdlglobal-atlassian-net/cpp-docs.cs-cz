@@ -14,67 +14,69 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2394516773f428ae62fb9e8e39dd78dd790bebd
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 44d867f9bc33c56bf57f55d75a4f8babbbf70748
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46033911"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401755"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Oddělovače pro dokumentační značky ve Visual C++
-Použití dokumentační značky vyžaduje oddělovače, které označují kompilátoru kde Dokumentační komentář začíná a končí.  
-  
- Můžete použít následující typy oddělovače se značkami dokumentace XML:  
+
+Použití dokumentační značky vyžaduje oddělovače, které označují kompilátoru kde Dokumentační komentář začíná a končí.
+
+Můžete použít následující typy oddělovače se značkami dokumentace XML:
 |||
 |-|-|
 |`///`  | Toto je formulář, který je uvedeno v dokumentaci příklady a používá šablony projektů Visual C++.  |
 | `/** */`  | Jedná se o Víceřádkový oddělovače.  |
-  
-Existují některé formátování při použití pravidla `/** */` oddělovače:  
-  
--   Pro řádek, který obsahuje `/**` oddělovač, pokud zbytek řádku je prázdný znak řádku není zpracovávána pro poznámky. Pokud je první znak prázdným znakem, že znak bílého prostoru řádku je ignorován a zbytek řádku je zpracovat. V opačném případě celý text řádku po `/**` oddělovač zpracovávány jako součást komentář.  
-  
--   Pro řádek, který obsahuje `*/` oddělovač, pokud existuje jenom prázdné znaky až `*/` oddělovač, tento řádek se ignoruje. V opačném případě text na řádku až `*/` oddělovač zpracovávány jako součást komentář porovnávání vzorů podle pravidel popsaných v následující odrážky.  
-  
--   Pro řádky za ten, který začíná `/**` oddělovač, hledá kompilátor běžný vzor na začátku každého řádku, který se skládá z volitelné prázdné místo a hvězdičku (`*`) a po něm další volitelné prázdné znaky. Pokud kompilátor najde společnou sadu znaků na začátku každého řádku, bude ignorovat tento vzor pro všechny řádky za `/**` oddělovač, až po a pravděpodobně včetně řádek, který obsahuje `*/` oddělovač.  
-  
-Příklady:  
-  
--   Řádek, který začíná je jediná součást následující komentář, který se zpracuje `<summary>`. Následující dvě značky formáty vytvoří stejný komentáře:  
-  
-    ```  
-    /**  
-    <summary>text</summary>   
-    */  
-    /** <summary>text</summary> */  
-    ```  
-  
--   Kompilátor použije vzor " \* " na začátku druhé a třetí řádky ignorovat.  
-  
-    ```  
-    /**  
-     * <summary>  
-     *  text </summary>*/  
-    ```  
-  
--   Kompilátor najde žádný vzor v tento komentář, protože neexistuje žádný hvězdičku na druhém řádku. Proto se veškerý text na řádcích druhé a třetí až do `*/`, bude zpracována jako součást komentář.  
-  
-    ```  
-    /**  
-     * <summary>  
-       text </summary>*/  
-    ```  
-  
--   Kompilátor vyhledá žádný model v tento komentář dvou důvodů. Nejprve neexistuje žádný řádek, který začíná konzistentní počet mezer před hvězdičku. Za druhé pátý řádek začíná kartu, která se neshoduje s mezery. Proto veškerý text z druhého řádku až `*/` se zpracuje jako součást komentář.  
-  
-    ```  
-    /**  
-      * <summary>  
-      * text   
-     *  text2  
-       *  </summary>  
-    */  
-    ```  
-  
-## <a name="see-also"></a>Viz také  
- [Dokumentace XML](../ide/xml-documentation-visual-cpp.md)
+
+Existují některé formátování při použití pravidla `/** */` oddělovače:
+
+- Pro řádek, který obsahuje `/**` oddělovač, pokud zbytek řádku je prázdný znak řádku není zpracovávána pro poznámky. Pokud je první znak prázdným znakem, že znak bílého prostoru řádku je ignorován a zbytek řádku je zpracovat. V opačném případě celý text řádku po `/**` oddělovač zpracovávány jako součást komentář.
+
+- Pro řádek, který obsahuje `*/` oddělovač, pokud existuje jenom prázdné znaky až `*/` oddělovač, tento řádek se ignoruje. V opačném případě text na řádku až `*/` oddělovač zpracovávány jako součást komentář porovnávání vzorů podle pravidel popsaných v následující odrážky.
+
+- Pro řádky za ten, který začíná `/**` oddělovač, hledá kompilátor běžný vzor na začátku každého řádku, který se skládá z volitelné prázdné místo a hvězdičku (`*`) a po něm další volitelné prázdné znaky. Pokud kompilátor najde společnou sadu znaků na začátku každého řádku, bude ignorovat tento vzor pro všechny řádky za `/**` oddělovač, až po a pravděpodobně včetně řádek, který obsahuje `*/` oddělovač.
+
+Příklady:
+
+- Řádek, který začíná je jediná součást následující komentář, který se zpracuje `<summary>`. Následující dvě značky formáty vytvoří stejný komentáře:
+
+    ```cpp
+    /**
+    <summary>text</summary>
+    */
+    /** <summary>text</summary> */
+    ```
+
+- Kompilátor použije vzor " \* " na začátku druhé a třetí řádky ignorovat.
+
+    ```cpp
+    /**
+     * <summary>
+     *  text </summary>*/
+    ```
+
+- Kompilátor najde žádný vzor v tento komentář, protože neexistuje žádný hvězdičku na druhém řádku. Proto se veškerý text na řádcích druhé a třetí až do `*/`, bude zpracována jako součást komentář.
+
+    ```cpp
+    /**
+     * <summary>
+       text </summary>*/
+    ```
+
+- Kompilátor vyhledá žádný model v tento komentář dvou důvodů. Nejprve neexistuje žádný řádek, který začíná konzistentní počet mezer před hvězdičku. Za druhé pátý řádek začíná kartu, která se neshoduje s mezery. Proto veškerý text z druhého řádku až `*/` se zpracuje jako součást komentář.
+
+    ```cpp
+    /**
+      * <summary>
+      * text
+     *  text2
+       *  </summary>
+    */
+    ```
+
+## <a name="see-also"></a>Viz také
+
+[Dokumentace XML](../ide/xml-documentation-visual-cpp.md)

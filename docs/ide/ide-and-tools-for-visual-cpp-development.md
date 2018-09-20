@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df30bdea71a890eed25f546a53e7f329fa330762
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: d4e7742afd3fecc4dd115624da0c1650dc662004
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132017"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412519"
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>IDE a nástroje pro vývoj v jazyce Visual C++
 
@@ -29,7 +29,7 @@ Kromě sdílené nástroje v integrovaném vývojovém prostředí sady Visual S
 
 ## <a name="creating-a-solution-and-projects"></a>Vytváření řešení a projekty
 
-A *projektu* je v podstatě sadu souborů se zdrojovým kódem a prostředky, jako jsou obrázky nebo data souborů, které jsou integrované do spustitelného souboru. 
+A *projektu* je v podstatě sadu souborů se zdrojovým kódem a prostředky, jako jsou obrázky nebo data souborů, které jsou integrované do spustitelného souboru.
 
 Visual Studio 2015 poskytuje podporu pro projekty MSBuild. Můžete si stáhnout rozšíření sady Visual Studio pro jiné systémy sestavení, jako je například Qt nebo CMake.
 
@@ -119,7 +119,7 @@ Program můžete ladit stisknutím kombinace kláves **F5** při konfiguraci pro
 
 ## <a name="deploy-completed-applications"></a>Nasazení dokončené aplikace
 
-Nasazení aplikace pro UPW pro zákazníky přes Microsoft Store prostřednictvím **projektu** > **Store** nabídky. Nasazení CRT zpracovává automaticky na pozadí. Další informace najdete v tématu [Windows publikovat aplikace a hry](/windows/uwp/publish/). 
+Nasazení aplikace pro UPW pro zákazníky přes Microsoft Store prostřednictvím **projektu** > **Store** nabídky. Nasazení CRT zpracovává automaticky na pozadí. Další informace najdete v tématu [Windows publikovat aplikace a hry](/windows/uwp/publish/).
 
 Když nasadíte nativní aplikaci klasické pracovní plochy jazyka C++ do jiného počítače, je nutné nainstalovat vlastní aplikace a všechny soubory knihoven, na kterých aplikace závisí. Existují tři způsoby, jak nasadit univerzální C++ runtime (UCRT) s aplikací: Centrální nasazení, místní nasazení nebo statického propojení. Další informace najdete v tématu [nasazení desktopových aplikací](../ide/deploying-native-desktop-applications-visual-cpp.md).
 

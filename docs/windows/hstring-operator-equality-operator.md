@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed3a93ac964841028b252aa09a6b70c18ed202e9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dee6fd7b50d116264ea6b8b9a6b7bac3936e95cf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602985"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413715"
 ---
 # <a name="hstringoperator-operator"></a>HString::Operator== – operátor
 
@@ -52,10 +52,10 @@ inline bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*lhs*  
+*lhs*<br/>
 První parametr k porovnání. *LHS* může být **HString** nebo `HStringReference` objektu nebo popisovače HSTRING.
 
-*Zarovnání indirekce RHS*  
+*Zarovnání indirekce RHS*<br/>
 Druhý parametr k porovnání. *zarovnání indirekce rhs* může být **HString** nebo `HStringReference` objektu nebo popisovače HSTRING.
 
 ## <a name="return-value"></a>Návratová hodnota

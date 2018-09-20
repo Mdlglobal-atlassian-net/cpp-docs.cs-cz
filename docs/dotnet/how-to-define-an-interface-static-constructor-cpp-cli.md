@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: definice a používání statického konstruktoru (C + +/ CLI) | Microsoft Docs'
+title: 'Postupy: definice statického konstruktoru (C + +/ CLI) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,52 +17,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0c47efbf364f5ddacb7ce534b0dfd7853534acb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e2da339259efd77ea7992e63e6137a15017fdc31
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33127452"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402834"
 ---
 # <a name="how-to-define-an-interface-static-constructor-ccli"></a>Postupy: Definice a používání statického konstruktoru (C++/CLI)
-Statický konstruktor, který můžete použít k chybě při inicializaci členy statických dat může mít rozhraní.  Statický konstruktor bude volána alespoň jednou a bude volána před prvním členem statické rozhraní přistupuje.  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// mcppv2_interface_class2.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-interface struct MyInterface {  
-   static int i;  
-   static void Test() {  
-      Console::WriteLine(i);  
-   }  
-  
-   static MyInterface() {   
-      Console::WriteLine("in MyInterface static constructor");  
-      i = 99;  
-   }  
-};  
-  
-ref class MyClass : public MyInterface {};  
-  
-int main() {  
-   MyInterface::Test();  
-   MyClass::MyInterface::Test();  
-  
-   MyInterface ^ mi = gcnew MyClass;  
-   mi->Test();  
-}  
-```  
-  
-```Output  
-in MyInterface static constructor  
-99  
-99  
-99  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Třída rozhraní](../windows/interface-class-cpp-component-extensions.md)
+
+Rozhraní může mít statický konstruktor, který slouží k inicializaci statické datové členy.  Statický konstruktor zavolá se maximálně jednou a bude volána před prvním členem statických rozhraní přistupuje.
+
+## <a name="example"></a>Příklad
+
+```
+// mcppv2_interface_class2.cpp
+// compile with: /clr
+using namespace System;
+
+interface struct MyInterface {
+   static int i;
+   static void Test() {
+      Console::WriteLine(i);
+   }
+
+   static MyInterface() {
+      Console::WriteLine("in MyInterface static constructor");
+      i = 99;
+   }
+};
+
+ref class MyClass : public MyInterface {};
+
+int main() {
+   MyInterface::Test();
+   MyClass::MyInterface::Test();
+
+   MyInterface ^ mi = gcnew MyClass;
+   mi->Test();
+}
+```
+
+```Output
+in MyInterface static constructor
+99
+99
+99
+```
+
+## <a name="see-also"></a>Viz také
+
+[Třída rozhraní](../windows/interface-class-cpp-component-extensions.md)

@@ -1,5 +1,5 @@
 ---
-title: UICheckState – výčet | Microsoft Docs
+title: Uicheckstate – výčet | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 04/03/2017
 ms.technology:
@@ -16,30 +16,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11c326de6b30668265ff57de73021bcd526baa5c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc09dcb36d7d1ec1abd2f51fd13b6daadd74601f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375419"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403848"
 ---
 # <a name="uicheckstate-enumeration"></a>UICheckState – výčet
-Popisuje, zkontrolujte stav položku uživatelského rozhraní pro příkaz.  
-   
-### <a name="syntax"></a>Syntaxe   
-```  
-public enum class 
-{  
-   [DefaultValue(typeid<Microsoft::VisualC::MFC::UICheckState>, "Checked")]  
-   Unchecked,   
-   Checked,   
-   Indeterminate 
-};  
-```  
-   
-### <a name="remarks"></a>Poznámky  
- [ICommandUI::Check](icommandui-interface.md#check) tyto hodnoty používá k popisu stavu položku uživatelského rozhraní.    
- Další informace o používání Windows Forms najdete v tématu [pomocí uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
-   
-### <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxwinforms.h (definovanou v atlmfc\lib\mfcmifc80.dll sestavení)  
+Popisuje stavu zaškrtnutí položky uživatelského rozhraní pro příkaz.
+
+### <a name="syntax"></a>Syntaxe
+
+```
+public enum class
+{
+   [DefaultValue(typeid<Microsoft::VisualC::MFC::UICheckState>, "Checked")]
+   Unchecked,
+   Checked,
+   Indeterminate
+};
+```
+
+### <a name="remarks"></a>Poznámky
+
+[ICommandUI::Check](icommandui-interface.md#check) tyto hodnoty používá k popisu stavu položku uživatelského rozhraní.
+Další informace o používání formulářů Windows, naleznete v tématu [použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+
+### <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxwinforms.h (definované v sestavení atlmfc\lib\mfcmifc80.dll)

@@ -1,5 +1,5 @@
 ---
-title: Dokumenty, zobrazení a Framework | Microsoft Docs
+title: Dokumenty, zobrazení a Framework | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,52 +26,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a78c769a3c32f0293598ec6bd3c07788ea07b5
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 8213ac8d45b2981a7b945fb0af0a590cf7974a8a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929217"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402353"
 ---
 # <a name="documents-views-and-the-framework"></a>Dokumenty, zobrazení a framework
-Jádrem rozhraní MFC framework jsou koncepty dokumentů a zobrazení. Dokument je datový objekt, pomocí kterého uživatel pracuje v relaci úpravy. Je vytvořený **nový** nebo **otevřete** příkaz na **souboru** nabídky a je obvykle uložen v souboru. (Standardní MFC dokumenty, odvozené od třídy `CDocument`, se liší od aktivní dokumenty a složené dokumenty OLE.) Zobrazení je objekt okno, pomocí kterého uživatel pracuje s dokumentem.  
-  
- Objekty klíče v běžící aplikaci jsou:  
-  
--   Tento dokument nebo dokumenty.  
-  
-     Třídě dokumentů (odvozený z [CDocument](../mfc/reference/cdocument-class.md)) určuje data aplikace.  
-  
-     Pokud chcete v aplikaci OLE funkčnost, jsou odvozeny třídě dokumentu z [COleDocument](../mfc/reference/coledocument-class.md) nebo jeden z jejich odvozené třídy, v závislosti na typu funkce, které potřebujete.  
-  
--   Zobrazení nebo zobrazení.  
-  
-     Zobrazení třídy (odvozený z [CView](../mfc/reference/cview-class.md)) je uživatele "okno na data." Třídy zobrazení řídí, jak uživateli se zobrazí data vašeho dokumentu a komunikuje s ním. V některých případech můžete dokument obsahovat dat více zobrazení.  
-  
-     Pokud potřebujete posouvání, odvozena od [CScrollView](../mfc/reference/cscrollview-class.md). Pokud zobrazení obsahuje uživatelské rozhraní, které je nastíněny v prostředku šablony dialogového okna, odvozena od [CFormView](../mfc/reference/cformview-class.md). Jednoduchý text data, použijte nebo odvozena od [CEditView](../mfc/reference/ceditview-class.md). Pro aplikaci na základě formulářů přístup k datům, jako je například program zadávání dat, jsou odvozeny od [CRecordView](../mfc/reference/crecordview-class.md) (pro rozhraní ODBC). K dispozici jsou také třídy [CTreeView](../mfc/reference/ctreeview-class.md), [CListView](../mfc/reference/clistview-class.md), a [cricheditview –](../mfc/reference/cricheditview-class.md).  
-  
--   Okna s rámečkem  
-  
-     Zobrazení se zobrazí uvnitř "dokumentu rámce windows." V aplikaci SDI rámce okna dokumentu je také "hlavního okna rámce" pro aplikaci. V aplikaci MDI dokumentu windows jsou podřízená okna zobrazí uvnitř okno rámce. Třídě odvozené hlavní oken s rámečkem určuje stylů a dalších vlastností obsahující zobrazení okna s rámečkem. Pokud potřebujete k přizpůsobení okna s rámečkem, odvozena od [CFrameWnd](../mfc/reference/cframewnd-class.md) přizpůsobit rámce okna dokumentu pro aplikace SDI. Odvozena od [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) přizpůsobit hlavního rámce okna pro aplikace MDI. Také odvození třídy z [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) přizpůsobit jednotlivé odlišné typy oken MDI dokumentu rámečku, které podporuje vaše aplikace.  
-  
--   Dokument šablony nebo šablony  
-  
-     Šablona dokumentu orchestruje vytvářet dokumenty, zobrazení a oken s rámečkem. Třídy šablony dokumentu konkrétní, odvozené od třídy [CDocTemplate](../mfc/reference/cdoctemplate-class.md), vytváří a spravuje všechny otevřené dokumenty jednoho typu. Aplikace, které podporují víc než jeden typ dokumentu mít více šablon dokumentů. Použití třídy [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) pro aplikace SDI nebo použijte třídu [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) pro aplikace MDI.  
-  
--   Objekt aplikace  
-  
-     Třídě aplikace (získané z [CWinApp](../mfc/reference/cwinapp-class.md)) řídí všechny výše uvedené objekty a určuje chování aplikace, jako je například inicializace a čištění. Jedna aplikace a aplikace pouze objekt vytváří a spravuje šablony dokumentů pro libovolného dokumentu typy aplikace podporuje.  
-  
--   Objekty vláken  
-  
-     Pokud vaše aplikace vytvoří samostatných vláknech provádění – například provádět výpočty na pozadí – použijete třídy odvozené od třídy [CWinThread](../mfc/reference/cwinthread-class.md). [CWinApp](../mfc/reference/cwinapp-class.md) samotné je odvozený od `CWinThread` a představuje primární vlákno provádění (nebo proces hlavní) ve vaší aplikaci. Můžete také použít MFC v sekundární vláken.  
-  
- Ve spuštěné aplikaci tyto objekty spolupráce při reagovat na akce uživatele, spojuje příkazy a další zprávy. Objekt jednu aplikaci spravuje jednu nebo více šablon dokumentů. Každá šablona dokumentu vytváří a spravuje jeden nebo více dokumentů (v závislosti na tom, zda je aplikace SDI a MDI). Zobrazení a umožňuje pracovat s dokumentem prostřednictvím zobrazení nachází v okně s rámečkem uživatele. Následující obrázek znázorňuje vztahy mezi tyto objekty pro aplikace SDI.  
-  
- ![Objekty v běžící aplikaci SDI](../mfc/media/vc386v1.gif "vc386v1")  
-Objekty v běžící aplikaci SDI  
-  
- Zbývající část této rodině článků vysvětluje, jak framework nástroje, Průvodce aplikací knihovny MFC a editory prostředků vytvořit tyto objekty, jak pracují společně a jak je používat ve vaší programování. Dokumenty, zobrazení a oken s rámečkem jsou podrobněji popsána v [objekty oken](../mfc/window-objects.md) a [Document/View – architektura](../mfc/document-view-architecture.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Použití tříd pro psaní aplikací pro Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)
+
+V srdci rozhraní MFC jsou pojmy dokumentů a zobrazení. Dokument je datový objekt, se kterým uživatel pracuje v relaci úpravy. Je vytvořena **nový** nebo **otevřít** příkaz **souboru** nabídce a je obvykle uložen v souboru. (Standardní knihovna MFC dokumenty, odvozené od třídy `CDocument`, se liší od aktivní dokumenty a složené dokumenty OLE.) Zobrazení je objekt window, pomocí kterého uživatel pracuje s dokumentem.
+
+Jsou klíčové objekty v běžící aplikaci:
+
+- Dokument nebo dokumenty.
+
+     Dokumentové třídy (odvozený od [CDocument](../mfc/reference/cdocument-class.md)) určuje data vaší aplikace.
+
+     Pokud chcete ve své aplikaci funkce OLE, odvodit vaše dokumentové třídy z [coledocument –](../mfc/reference/coledocument-class.md) nebo jednu z odvozených tříd, v závislosti na typu funkce, které potřebujete.
+
+- Zobrazení nebo zobrazení.
+
+     Zobrazit třídu (odvozený od [CView](../mfc/reference/cview-class.md)) je uživatele "okno na data." Zobrazit třídu řídí, jak uživatel vidí dat váš dokument a s ním pracuje. V některých případech může být vhodné dokument má více zobrazení data.
+
+     Pokud potřebujete posouvání, jsou odvozeny z [cscrollview –](../mfc/reference/cscrollview-class.md). Pokud zobrazení obsahuje uživatelské rozhraní, které se zobrazuje ve prostředku šablony dialogového okna, jsou odvozeny z [CFormView](../mfc/reference/cformview-class.md). Pro jednoduché textových dat, použít nebo odvodit z [CEditView](../mfc/reference/ceditview-class.md). Pro aplikace založené na formulářích – přístup k datům, jako je například program zadávání dat, jsou odvozeny z [CRecordView](../mfc/reference/crecordview-class.md) (pro rozhraní ODBC). K dispozici jsou také třídy [CTreeView](../mfc/reference/ctreeview-class.md), [CListView](../mfc/reference/clistview-class.md), a [cricheditview –](../mfc/reference/cricheditview-class.md).
+
+- Oken s rámečkem
+
+     Zobrazení se zobrazí uvnitř "rámečkem v dokumentu." V aplikaci SDI okna rámce dokumentu je také "hlavní okno rámce" pro aplikaci. V aplikaci MDI okna dokumentu jsou podřízená okna zobrazena uvnitř okna hlavního rámce. Vaše třída odvozená hlavní okno rámce určuje stylů a další vlastnosti, které obsahují zobrazení oken s rámečkem. Pokud je potřeba upravit oken s rámečkem, jsou odvozeny z [CFrameWnd](../mfc/reference/cframewnd-class.md) přizpůsobení dokumentu okno rámce aplikace SDI. Jsou odvozeny z [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) přizpůsobení hlavní okno rámce pro aplikace MDI. Také odvodit třídu z [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) přizpůsobit každý jedinečných druh rámce okna dokumentu MDI, které vaše aplikace podporuje.
+
+- Šablona dokumentu nebo šablony
+
+     Šablona dokumentu orchestruje vytváření dokumenty, zobrazení a oken s rámečkem. Třída konkrétní šablonu dokumentu, odvozená od třídy [CDocTemplate](../mfc/reference/cdoctemplate-class.md), vytváří a spravuje všechny otevřené dokumenty jednoho typu. Aplikace, které podporují více než jeden typ dokumentu mají více šablon dokumentů. Použití třídy [csingledoctemplate –](../mfc/reference/csingledoctemplate-class.md) aplikace SDI nebo použití třídy [cmultidoctemplate –](../mfc/reference/cmultidoctemplate-class.md) pro aplikace MDI.
+
+- Objekt aplikace
+
+     Třída vaší aplikace (odvozený od [CWinApp](../mfc/reference/cwinapp-class.md)) ovládá všechny výše uvedené objekty a určuje chování aplikace, jako je například inicializace a vyčištění. Jedna aplikace a aplikaci pouze objekt vytváří a spravuje šablony dokumentů pro jakýkoliv dokument typy aplikace podporuje.
+
+- Objekty vláken
+
+     Pokud vaše aplikace vytváří samostatného vlákna provádění – například k provádění výpočtů na pozadí – použijete třídy odvozené od [CWinThread](../mfc/reference/cwinthread-class.md). [CWinApp](../mfc/reference/cwinapp-class.md) samotného je odvozen z `CWinThread` a představuje primární vlákno provádění (nebo hlavní proces) ve vaší aplikaci. Můžete také použít knihovnu MFC ve sekundárních vláken.
+
+Ve spuštěné aplikaci tyto objekty kooperativně reagovat na akce uživatele, jsou technologicky propojené, tak, že příkazy a další zprávy. Objekt jednu aplikaci spravuje jeden nebo více šablon dokumentů. Každé šablony dokumentu vytvoří a spravuje jeden nebo více dokumentů (v závislosti na tom, zda je aplikace SDI nebo MDI). Uživatel prohlíží a provádí úpravy dokumentu prostřednictvím zobrazení obsaženo uvnitř okna rámce. Následující obrázek znázorňuje vztahy mezi těmito objekty pro aplikace SDI.
+
+![Objekty v běžící aplikaci SDI](../mfc/media/vc386v1.gif "vc386v1") objektů v aplikaci SDI systémem
+
+Zbývající část Tato řada článků vysvětluje, jak rozhraní framework nástroje, Průvodce aplikací knihovny MFC a editory prostředků vytvořit tyto objekty, jak spolu fungují a jak využít váš programování v. Dokumenty, zobrazení a oken s rámečkem jsou popsány podrobněji [objekty oken](../mfc/window-objects.md) a [architekturu Document/View](../mfc/document-view-architecture.md).
+
+## <a name="see-also"></a>Viz také
+
+[Použití tříd pro psaní aplikací pro Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)

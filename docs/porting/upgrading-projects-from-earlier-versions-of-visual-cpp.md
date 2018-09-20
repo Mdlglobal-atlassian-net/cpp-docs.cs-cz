@@ -15,14 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed8a8ab088f3fbb10b5f477d125dbf3f2a7ac932
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 8091bbba7dcee344677c54a7944708679f2ff867
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42464905"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411843"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Upgradování projektů z dřívějších verzí aplikace Visual C++
+
 Ve většině případů můžete otevřít projekt, který byl vytvořen v dřívější verzi sady Visual Studio. Je ale nutné projekt v sadě Visual Studio upgradovat. Pokud tento upgradovaný projekt uložíte, nelze ho už pak otevřít v předchozí verzi.  
   
 > [!IMPORTANT]
@@ -44,7 +45,7 @@ Informace o tom, jak aktualizovat cílová verze Windows najdete v tématu [úpr
   
 ## <a name="see-also"></a>Viz také  
 
-[Změny systému sestavení](../build/build-system-changes.md)  
-[Co je nového v jazyce Visual c++ v sadě Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) 
-[2003 – 2015 historie změn Visual C++](../porting/visual-cpp-change-history-2003-2015.md)   
+[Změny systému sestavení](../build/build-system-changes.md)<br/>
+[Novinky v jazyce Visual C++ v sadě Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[Historie změn Visual C++ 2003–2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [Nestandardní chování](../cpp/nonstandard-behavior.md)

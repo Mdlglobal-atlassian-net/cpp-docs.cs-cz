@@ -1,5 +1,5 @@
 ---
-title: Kolekce | Microsoft Docs
+title: Kolekce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,100 +27,105 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beae5370c86bf0142b29f029778083f3042ae931
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b6f2fdeb02fbc5e57bbba58f685d21133841279
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345552"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412857"
 ---
 # <a name="collections"></a>Kolekce
-Knihovny Microsoft Foundation Class poskytuje třídy kolekcí ke správě skupin objektů. Tyto třídy jsou dvou typů:  
-  
--   [Třídy kolekce vytvořené z šablon C++](#_core_the_template_based_collection_classes)  
-  
--   [Třídy kolekce není vytvořené z šablon](#_core_the_collection_classes_not_based_on_templates)  
-  
+
+Knihovny Microsoft Foundation Class poskytuje třídy kolekcí ke správě skupin objektů. Tyto třídy jsou dvou typů:
+
+- [Třídy kolekcí vytvořené ze šablon jazyka C++](#_core_the_template_based_collection_classes)
+
+- [Nebyl vytvořen z šablony třídy kolekce](#_core_the_collection_classes_not_based_on_templates)
+
 > [!NOTE]
->  Pokud váš kód už používá třídy kolekce objektu bez šablony, můžete nadále používat. Pokud píšete nové třídy typově bezpečné kolekce pro vlastní typy dat, doporučujeme použít novější třídy na základě šablon.  
-  
-##  <a name="_core_collection_shapes"></a> Kolekce tvarů  
- Třídy kolekce je rozdělení, podle jeho "tvar" a typy jejích elementů. Tvar, který odkazuje na způsob objekty jsou uspořádány a uložených v kolekci. Knihovna MFC poskytuje tři základní kolekce tvarů: uvádí, polí a mapy (také označované jako slovník). Můžete si vybrat kolekci obrazec, který je nejvhodnější pro váš konkrétní programovací problém.  
-  
- Každá ze tří tvarů zadané kolekci je popsána stručně později v tomto tématu. Pokud chcete porovnat funkce tvarů vám pomohou rozhodnout, která je nejvhodnější pro váš program, najdete v části [doporučení pro výběr třídy kolekce](../mfc/recommendations-for-choosing-a-collection-class.md).  
-  
--   Seznam  
-  
-     List – třída poskytuje neindexované, seřazený seznam elementů, které jsou implementované jako dvakrát propojený seznam. Seznam obsahuje "head" a "tail" a přidávání nebo odebírání elementů z head nebo tail, nebo vložení nebo odstranění elementy uprostřed, je velmi rychle.  
-  
--   Pole  
-  
-     Array – třída poskytuje dynamicky velikostí, seřazené a indexované celé číslo pole objektů.  
-  
--   Mapy (také označované jako slovník)  
-  
-     Mapu je kolekce, která přidruží objekt hodnoty klíče objektu.  
-  
-##  <a name="_core_the_template_based_collection_classes"></a> Třídy kolekcí založených na šablonách  
- Nejjednodušší způsob, jak implementovat typově bezpečné kolekce, který obsahuje objekty libovolného typu, je použít jednu z tříd MFC na základě šablon. Příklady těchto tříd naleznete v ukázce MFC [SHROMAŽĎOVAT](../visual-cpp-samples.md).  
-  
- Následující tabulka uvádí třídy MFC založených na šablonách kolekce.  
-  
-### <a name="collection-template-classes"></a>Šablony třídy kolekce  
-  
-|Obsah kolekce|Pole|Seznamy|Mapy|  
-|-------------------------|------------|-----------|----------|  
-|Kolekce objektů typu|`CArray`|`CList`|`CMap`|  
-|Ukazatelé na objekty jakýkoli typ kolekce|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|  
-  
-##  <a name="_core_the_collection_classes_not_based_on_templates"></a> Třídy kolekce není založené na šablonách  
- Pokud už vaše aplikace používá MFC – třídy objektu bez šablony, můžete nadále používat. Pro nové kolekce, ale doporučujeme použít třídy na základě šablon. Následující tabulka uvádí třídy MFC kolekce, které nejsou založené na šablonách.  
-  
-### <a name="nontemplate-collection-classes"></a>Třídy kolekce objektu bez šablony  
-  
-|Pole|Seznamy|Mapy|  
-|------------|-----------|----------|  
-|`CObArray`|`CObList`|`CMapPtrToWord`|  
-|`CByteArray`|`CPtrList`|`CMapPtrToPtr`|  
-|`CDWordArray`|`CStringList`|`CMapStringToOb`|  
-|`CPtrArray`||`CMapStringToPtr`|  
-|`CStringArray`||`CMapStringToString`|  
-|`CWordArray`||`CMapWordToOb`|  
-|`CUIntArray`||`CMapWordToPtr`|  
-  
- Třídy vlastností z MFC kolekce tabulky v [doporučení pro výběr třídy kolekce](../mfc/recommendations-for-choosing-a-collection-class.md) popisuje třídy MFC kolekce z hlediska tyto charakteristiky (jiné než tvar):  
-  
--   Tom, zda třídu používá šablony jazyka C++  
-  
--   Tom, zda lze serializovat elementy uložené v kolekci  
-  
--   Jestli může být uložená v kolekci elementů zálohované pro diagnostiku  
-  
--   Jestli je kolekce bezpečného typu  
-  
-### <a name="what-do-you-want-to-do"></a>Co chcete udělat  
-  
-#### <a name="general-collection-class-tasks"></a>Třídy kolekce obecné úlohy  
-  
--   [Doporučení pro výběr třídy kolekce](../mfc/recommendations-for-choosing-a-collection-class.md)  
-  
--   [Postupy: Příprava typově bezpečné kolekce](../mfc/how-to-make-a-type-safe-collection.md)  
-  
--   [Vytváření kolekcí zásobníků a front](../mfc/creating-stack-and-queue-collections.md)  
-  
--   [CArray::Add](../mfc/reference/carray-class.md#add)  
-  
-#### <a name="template-based-collection-class-tasks"></a>Úlohy na základě šablon třídy kolekce  
-  
--   [Třídy založené na šablonách](../mfc/template-based-classes.md)  
-  
-#### <a name="accessing-the-members-of-a-collection-template-based-or-not"></a>Přístup ke členům kolekce (na základě šablon nebo ne)  
-  
--   [Přístup ke všem členům kolekce](../mfc/accessing-all-members-of-a-collection.md)  
-  
--   [Smazání všech objektů v kolekci CObject](../mfc/deleting-all-objects-in-a-cobject-collection.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Koncepty](../mfc/mfc-concepts.md)   
- [Obecná témata MFC](../mfc/general-mfc-topics.md)
+>  Pokud váš kód používá už objektu bez šablony třídy kolekcí, můžete pokračovat k jejich použití. Pokud píšete nový typově bezpečné kolekce tříd pro vlastní datové typy, doporučujeme použít novější třídy založené na šabloně.
+
+##  <a name="_core_collection_shapes"></a> Kolekce obrazce
+
+Třídy kolekce je charakterizovaná chyba tak, že jeho "tvar" a typy z jeho prvků. Tvar odkazuje na způsob, jak objekty jsou uspořádané a uložených v kolekci. Knihovna MFC poskytuje tři základní kolekci tvarů: seznam, pole a mapy (označované také jako slovníky). Můžete vybrat kolekci tvar, který je nejvhodnější pro váš konkrétní programovací problém.
+
+Každá ze tří tvarů zadané kolekci je popsána stručně dále v tomto tématu. Porovnejte funkce tvary, které vám pomohou rozhodnout, která je nejvhodnější pro aplikace, najdete v článku [doporučení pro výběr třídy kolekce](../mfc/recommendations-for-choosing-a-collection-class.md).
+
+- Seznam
+
+     Třídy seznamu poskytuje seřazený, neindexované seznam prvků, které jsou implementovány jako dvakrát propojený seznam. Seznam obsahuje "hlavní" a "funkce tail" a přidávání nebo odebírání elementů z hlavní nebo funkce tail, nebo vložení nebo odstranění prvků uprostřed, je velmi rychlá.
+
+- Pole
+
+     Třídy pole obsahuje dynamicky velikosti, seřazený a indexovat celé číslo pole objektů.
+
+- Mapa (označované také jako slovník)
+
+     Kolekce, která přidruží objekt hodnoty klíče objektu, je objekt map.
+
+##  <a name="_core_the_template_based_collection_classes"></a> Třídy kolekce založené na šablonách
+
+Nejjednodušší způsob, jak implementovat typově bezpečné kolekce, která obsahuje objekty z libovolného typu je použití jedné ze tříd knihovny MFC založené na šabloně. Příklady těchto tříd, najdete v ukázce MFC [SHROMAŽĎOVAT](../visual-cpp-samples.md).
+
+MFC – třídy kolekce založené na šablonách naleznete v následující tabulce.
+
+### <a name="collection-template-classes"></a>Šablona třídy kolekce
+
+|Obsah kolekce|Pole|Seznamy|Mapy|
+|-------------------------|------------|-----------|----------|
+|Kolekce objektů libovolného typu|`CArray`|`CList`|`CMap`|
+|Kolekce ukazatelů na objekty typu|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|
+
+##  <a name="_core_the_collection_classes_not_based_on_templates"></a> Třídy kolekcí není založené na šablonách
+
+Pokud už vaše aplikace používá třídy knihovny MFC objektu bez šablony, můžete pokračovat k jejich použití. Pro nové kolekce, ale doporučujeme použít třídy založené na šabloně. V následující tabulce jsou uvedeny třídy kolekcí MFC, které nejsou založené na šablonách.
+
+### <a name="nontemplate-collection-classes"></a>Třídy kolekcí objektu bez šablony
+
+|Pole|Seznamy|Mapy|
+|------------|-----------|----------|
+|`CObArray`|`CObList`|`CMapPtrToWord`|
+|`CByteArray`|`CPtrList`|`CMapPtrToPtr`|
+|`CDWordArray`|`CStringList`|`CMapStringToOb`|
+|`CPtrArray`||`CMapStringToPtr`|
+|`CStringArray`||`CMapStringToString`|
+|`CWordArray`||`CMapWordToOb`|
+|`CUIntArray`||`CMapWordToPtr`|
+
+Vlastnosti z třídy kolekcí MFC tabulku v [doporučení pro výběr třídy kolekce](../mfc/recommendations-for-choosing-a-collection-class.md) popisuje třídy kolekcí MFC z hlediska tyto vlastnosti (jiné než tvar):
+
+- Určuje, zda třída používá šablony jazyka C++
+
+- Určuje, zda lze serializovat prvků uložených v kolekci
+
+- Určuje, zda může být zálohované prvků uložených v kolekci pro diagnostiku
+
+- Určuje, zda kolekce je bezpečnost typů
+
+### <a name="what-do-you-want-to-do"></a>Co chcete udělat
+
+#### <a name="general-collection-class-tasks"></a>Obecné třídy kolekce úloh
+
+- [Doporučení pro výběr třídy kolekce](../mfc/recommendations-for-choosing-a-collection-class.md)
+
+- [Postupy: Příprava typově bezpečné kolekce](../mfc/how-to-make-a-type-safe-collection.md)
+
+- [Vytváření kolekcí zásobníků a front](../mfc/creating-stack-and-queue-collections.md)
+
+- [CArray::Add](../mfc/reference/carray-class.md#add)
+
+#### <a name="template-based-collection-class-tasks"></a>Úlohy založené na šablonách třídy kolekce
+
+- [Třídy založené na šablonách](../mfc/template-based-classes.md)
+
+#### <a name="accessing-the-members-of-a-collection-template-based-or-not"></a>Přístup k členům kolekce (založené na šablonách nebo ne)
+
+- [Přístup ke všem členům kolekce](../mfc/accessing-all-members-of-a-collection.md)
+
+- [Smazání všech objektů v kolekci CObject](../mfc/deleting-all-objects-in-a-cobject-collection.md)
+
+## <a name="see-also"></a>Viz také
+
+[Koncepty](../mfc/mfc-concepts.md)<br/>
+[Obecná témata MFC](../mfc/general-mfc-topics.md)
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abbe93f5359171c88134ff61759e9edc63db2451
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7cccebf6e1c6004a2416f4fdeb254369f9aa7b72
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610430"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410309"
 ---
 # <a name="moduleregistercomobject-method"></a>Module::RegisterCOMObject – metoda
 
@@ -42,19 +42,19 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 
 ### <a name="parameters"></a>Parametry
 
-*název_serveru*  
+*název_serveru*<br/>
 Plně kvalifikovaný název serveru.
 
-*CLSID*  
+*CLSID*<br/>
 Pole CLSID k registraci.
 
-*objekty pro vytváření*  
+*objekty pro vytváření*<br/>
 Pole rozhraní IUnknown objektů tříd, jejichž dostupnost je publikován.
 
-*Soubory cookie*  
+*Soubory cookie*<br/>
 Po dokončení operace, pole ukazatelů na hodnoty, které identifikují třídu objektů, které jste zaregistrovali. Tyto hodnoty se později použijí zrušit registraci.
 
-*Počet*  
+*Počet*<br/>
 Počet CLSID k registraci.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -74,4 +74,5 @@ Typ připojení k registrované objekty je určená kombinací aktuální *comfl
 **Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Viz také
+
 [Module – třída](../windows/module-class.md)

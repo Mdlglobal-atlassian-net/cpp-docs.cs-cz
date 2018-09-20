@@ -1,5 +1,5 @@
 ---
-title: Iumsthreadproxy – struktura | Microsoft Docs
+title: Iumsthreadproxy – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,97 +22,112 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbba2955adc14ef73a0ba9932756ace57c4136e6
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 573bee042788f03278abc78fbc541c933d693907
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688606"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417381"
 ---
 # <a name="iumsthreadproxy-structure"></a>IUMSThreadProxy – struktura
-Abstrakci pro vlákno provádění. Pokud chcete vašeho scheduleru udělit oprávnění uživatelského režimu které lze plánovat vláken (UMS), nastavte hodnotu pro element zásad plánovače `SchedulerKind` k `UmsThreadDefault`a implementovat `IUMSScheduler` rozhraní. UMS vláken jsou pouze podporované v operačních systémech 64bitové verze Windows 7 a vyšší.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+Abstrakce vlákna exekuce. Pokud má váš Plánovač udělit uživatelským režimem plánovatelná vlákna (UMS) nastavte hodnotu pro element zásad plánovače `SchedulerKind` k `UmsThreadDefault`a implementovat `IUMSScheduler` rozhraní. UMS vlákna jsou pouze podporované v 64bitových systémech s verzí Windows 7 a vyšší.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 struct IUMSThreadProxy : public IThreadProxy;
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[Iumsthreadproxy::entercriticalregion –](#entercriticalregion)|Voláno k zadání důležité oblasti. Když uvnitř důležité oblasti, nebude sledovat Plánovač asynchronní blokování operace, které dojít během oblasti. To znamená, že nebude znovu zadat Plánovač pro stránkování, pozastavení vláken, volání asynchronní procedur jádra (APCs) a tak dále, UMS vlákna.|  
-|[Iumsthreadproxy::enterhypercriticalregion –](#enterhypercriticalregion)|Voláno k zadání technologie hyper důležité oblasti. Když uvnitř technologie hyper důležité oblasti, nebude sledovat Plánovač žádné blokování operace, které dojít během oblasti. To znamená, že plánovač nebude znovu zadat pro blokování volání funkcí, pokusy o získání zámku chyb stránek, které bloku vláken pozastavení, volání asynchronní procedur jádra (APCs) a tak dále, pro UMS vláken.|  
-|[Iumsthreadproxy::exitcriticalregion –](#exitcriticalregion)|Volá, aby bylo možné ukončit důležité oblasti.|  
-|[Iumsthreadproxy::exithypercriticalregion –](#exithypercriticalregion)|Volá, aby bylo možné ukončit technologie hyper důležité oblasti.|  
-|[Iumsthreadproxy::getcriticalregiontype –](#getcriticalregiontype)|Vrátí jaký druh důležité oblasti proxy vlákno je v rámci. Protože technologie hyper důležité oblasti jsou nadmnožinou důležité oblasti, pokud je zadán kód důležité oblasti a pak technologie hyper důležité oblasti, `InsideHyperCriticalRegion` bude vrácen.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [IThreadProxy](ithreadproxy-structure.md)  
-  
- `IUMSThreadProxy`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** concrtrm.h  
-  
- **Namespace:** souběžnosti  
-  
-##  <a name="entercriticalregion"></a>  Iumsthreadproxy::entercriticalregion – metoda  
- Voláno k zadání důležité oblasti. Když uvnitř důležité oblasti, nebude sledovat Plánovač asynchronní blokování operace, které dojít během oblasti. To znamená, že nebude znovu zadat Plánovač pro stránkování, pozastavení vláken, volání asynchronní procedur jádra (APCs) a tak dále, UMS vlákna.  
-  
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[Iumsthreadproxy::entercriticalregion –](#entercriticalregion)|Volá se, aby bylo možné zadat důležité oblasti. Když uvnitř důležité oblasti, nebudou sledovat Plánovač asynchronní blokující operace, ke kterým dochází při oblast. To znamená, že nebude znovu zadat Plánovač pro stránkování, pozastavení vlákna, volá asynchronní procedury jádra (APCs) a tak dále, UMS vlákna.|
+|[Iumsthreadproxy::enterhypercriticalregion –](#enterhypercriticalregion)|Volá se, aby bylo možné zadat hyper důležité oblasti. Když uvnitř hyper důležité oblasti, nebude Plánovač sledovat všechny blokující operace, ke kterým dochází při oblast. To znamená, že plánovač nebude znovu zadat pro blokování volání funkcí, pokusy o získání zámku vlákna pozastavení, volání asynchronní procedury jádra (APCs), který blok, stránkování a tak dále, pro UMS vlákna.|
+|[Iumsthreadproxy::exitcriticalregion –](#exitcriticalregion)|Volá se, aby bylo možné ukončit důležité oblasti.|
+|[Iumsthreadproxy::exithypercriticalregion –](#exithypercriticalregion)|Volá se, aby bylo možné ukončit hyper důležité oblasti.|
+|[Iumsthreadproxy::getcriticalregiontype –](#getcriticalregiontype)|Vrátí druhu kritických proxy vlákna je v rámci oblasti. Protože hyper důležité oblasti jsou nadmnožina o důležitých oblastech, pokud je zadán kód důležité oblasti a pak hyper důležité oblasti, `InsideHyperCriticalRegion` bude vrácen.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[IThreadProxy](ithreadproxy-structure.md)
+
+`IUMSThreadProxy`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** concrtrm.h
+
+**Namespace:** souběžnosti
+
+##  <a name="entercriticalregion"></a>  Iumsthreadproxy::entercriticalregion – metoda
+
+Volá se, aby bylo možné zadat důležité oblasti. Když uvnitř důležité oblasti, nebudou sledovat Plánovač asynchronní blokující operace, ke kterým dochází při oblast. To znamená, že nebude znovu zadat Plánovač pro stránkování, pozastavení vlákna, volá asynchronní procedury jádra (APCs) a tak dále, UMS vlákna.
+
 ```
 virtual int EnterCriticalRegion() = 0;
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Nové hloubka důležité oblasti. Důležité oblasti jsou vícenásobné.  
-  
-##  <a name="enterhypercriticalregion"></a>  Iumsthreadproxy::enterhypercriticalregion – metoda  
- Voláno k zadání technologie hyper důležité oblasti. Když uvnitř technologie hyper důležité oblasti, nebude sledovat Plánovač žádné blokování operace, které dojít během oblasti. To znamená, že plánovač nebude znovu zadat pro blokování volání funkcí, pokusy o získání zámku chyb stránek, které bloku vláken pozastavení, volání asynchronní procedur jádra (APCs) a tak dále, pro UMS vláken.  
-  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Nová hloubka důležité oblasti. Důležité oblasti jsou vícenásobné.
+
+##  <a name="enterhypercriticalregion"></a>  Iumsthreadproxy::enterhypercriticalregion – metoda
+
+Volá se, aby bylo možné zadat hyper důležité oblasti. Když uvnitř hyper důležité oblasti, nebude Plánovač sledovat všechny blokující operace, ke kterým dochází při oblast. To znamená, že plánovač nebude znovu zadat pro blokování volání funkcí, pokusy o získání zámku vlákna pozastavení, volání asynchronní procedury jádra (APCs), který blok, stránkování a tak dále, pro UMS vlákna.
+
 ```
 virtual int EnterHyperCriticalRegion() = 0;
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Nové hloubka technologie hyper důležité oblasti. Technologie Hyper důležité oblasti jsou vícenásobné.  
-  
-### <a name="remarks"></a>Poznámky  
- Plánovač musí být neobvykle opatrní metody, který volá a co uzamkne ji získá v těchto oblastech. Pokud na zámku, která se nachází cokoli, co je zodpovědná za plánování plánovač bloky kódu v takové oblasti, může následovat vzájemného zablokování.  
-  
-##  <a name="exitcriticalregion"></a>  Iumsthreadproxy::exitcriticalregion – metoda  
- Volá, aby bylo možné ukončit důležité oblasti.  
-  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Nová hloubka hyper důležité oblasti. Hyper důležité oblasti jsou vícenásobné.
+
+### <a name="remarks"></a>Poznámky
+
+Plánovači musí být opatrní neobyčejně metody, které volá, a co uzamkne ji proti získá v těchto oblastech. Pokud na zámek, který se nachází použito cokoli, co scheduler je zodpovědná za plánování bloky kódu v těchto oblastech, může následovat zablokování.
+
+##  <a name="exitcriticalregion"></a>  Iumsthreadproxy::exitcriticalregion – metoda
+
+Volá se, aby bylo možné ukončit důležité oblasti.
+
 ```
 virtual int ExitCriticalRegion() = 0;
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Nové hloubka důležité oblasti. Důležité oblasti jsou vícenásobné.  
-  
-##  <a name="exithypercriticalregion"></a>  Iumsthreadproxy::exithypercriticalregion – metoda  
- Volá, aby bylo možné ukončit technologie hyper důležité oblasti.  
-  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Nová hloubka důležité oblasti. Důležité oblasti jsou vícenásobné.
+
+##  <a name="exithypercriticalregion"></a>  Iumsthreadproxy::exithypercriticalregion – metoda
+
+Volá se, aby bylo možné ukončit hyper důležité oblasti.
+
 ```
 virtual int ExitHyperCriticalRegion() = 0;
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Nové hloubka technologie hyper důležité oblasti. Technologie Hyper důležité oblasti jsou vícenásobné.  
-  
-##  <a name="getcriticalregiontype"></a>  Iumsthreadproxy::getcriticalregiontype – metoda  
- Vrátí jaký druh důležité oblasti proxy vlákno je v rámci. Protože technologie hyper důležité oblasti jsou nadmnožinou důležité oblasti, pokud je zadán kód důležité oblasti a pak technologie hyper důležité oblasti, `InsideHyperCriticalRegion` bude vrácen.  
-  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Nová hloubka hyper důležité oblasti. Hyper důležité oblasti jsou vícenásobné.
+
+##  <a name="getcriticalregiontype"></a>  Iumsthreadproxy::getcriticalregiontype – metoda
+
+Vrátí druhu kritických proxy vlákna je v rámci oblasti. Protože hyper důležité oblasti jsou nadmnožina o důležitých oblastech, pokud je zadán kód důležité oblasti a pak hyper důležité oblasti, `InsideHyperCriticalRegion` bude vrácen.
+
 ```
 virtual CriticalRegionType GetCriticalRegionType() const = 0;
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Typ důležité oblasti proxy vlákno je v rámci.  
-  
-## <a name="see-also"></a>Viz také  
- [Namespace souběžnosti](concurrency-namespace.md)   
- [IUMSScheduler – struktura](iumsscheduler-structure.md)
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Typ důležité oblasti proxy vlákna je v rámci.
+
+## <a name="see-also"></a>Viz také
+
+[concurrency – obor názvů](concurrency-namespace.md)<br/>
+[IUMSScheduler – struktura](iumsscheduler-structure.md)

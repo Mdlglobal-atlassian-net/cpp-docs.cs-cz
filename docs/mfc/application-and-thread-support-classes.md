@@ -1,5 +1,5 @@
 ---
-title: Aplikací a vláken podporují třídy | Microsoft Docs
+title: Aplikace a vlákna podpůrných tříd | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,62 +21,67 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9f3877cf85e369756b15d565af1481fd6d258df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ce9c799c8dbc2a98c7d45dfa9a2e444024c9a7a2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341307"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412314"
 ---
 # <a name="application-and-thread-support-classes"></a>Třídy pro podporu aplikací a vláken
-Každá aplikace má pouze jeden objekt aplikace; Tento objekt koordinuje jiných objektů nástroje spuštěným programem a je odvozený od `CWinApp`.  
-  
- Knihovna Microsoft Foundation Class (MFC) podporuje více vláken provádění v rámci aplikace. Všechny aplikace musí mít alespoň jedno vlákno; vlákno používané vaší `CWinApp` tento primární podproces je objekt.  
-  
- `CWinThread` zapouzdří část vláken funkcí operačního systému. Chcete-li pomocí více vláken jednodušší, MFC také poskytuje synchronizace objekt třídy k poskytnutí rozhraní C++ do Win32 synchronizačními objekty.  
-  
-## <a name="application-and-thread-classes"></a>Třídy aplikací a vláken  
- [CWinApp](../mfc/reference/cwinapp-class.md)  
- Zapouzdří kód inicializujte, spuštění a ukončení aplikace. Objekt vaše aplikace bude odvozovat z této třídy.  
-  
- [CWinThread](../mfc/reference/cwinthread-class.md)  
- Základní třída pro všechna vlákna. Použít přímo, nebo odvození třídy z `CWinThread` Pokud vaše vlákno provádí funkce uživatelského rozhraní. `CWinApp` je odvozený od `CWinThread`.  
-  
-## <a name="synchronization-object-classes"></a>Objekt třídy synchronizace  
- [CSyncObject](../mfc/reference/csyncobject-class.md)  
- Základní třída třídy objekt synchronizace.  
-  
- [CCriticalSection](../mfc/reference/ccriticalsection-class.md)  
- Třída synchronizace, která umožňuje pouze jedno vlákno v rámci jednoho procesu přístupu k objektu.  
-  
- [Prohlížení](../mfc/reference/csemaphore-class.md)  
- Třída synchronizace, která umožňuje od jedné do stanovený maximální počet souběžných přístupů k objektu.  
-  
- [CMutex](../mfc/reference/cmutex-class.md)  
- Třída synchronizace, která umožňuje pouze jedno vlákno v rámci libovolný počet procesů přístup k objektu.  
-  
- [CEvent](../mfc/reference/cevent-class.md)  
- Třída synchronizace, která upozorní aplikace, když došlo k události.  
-  
- [CSingleLock](../mfc/reference/csinglelock-class.md)  
- Použitý v členské funkce tříd bezpečného přístupu k uzamčení na jeden objekt synchronizace.  
-  
- [CMultiLock](../mfc/reference/cmultilock-class.md)  
- Použitý v členské funkce tříd vláken k uzamčení na jeden nebo více objektů synchronizace z pole objektů synchronizace.  
-  
-## <a name="related-classes"></a>Související třídy  
- [CCommandLineInfo](../mfc/reference/ccommandlineinfo-class.md)  
- Analyzuje příkazového řádku, pomocí kterého byl váš program spuštěn.  
-  
- [CWaitCursor](../mfc/reference/cwaitcursor-class.md)  
- Vloží kurzoru čekání na obrazovce. Použitá při náročná operace.  
-  
- [CDockState](../mfc/reference/cdockstate-class.md)  
- Zpracovává trvalé úložiště dat o stavu pro ovládací pruhy ukotvení.  
-  
- [CRecentFileList](../mfc/reference/crecentfilelist-class.md)  
- Udržuje naposledy použité seznamu souborů (naposledy použitých).  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled třídy](../mfc/class-library-overview.md)
+
+Každá aplikace má pouze jeden objekt aplikace; Tento objekt koordinuje ostatní objekty v běžící aplikaci a je odvozen z `CWinApp`.
+
+Knihovny Microsoft Foundation Class (MFC) podporuje více vláken, která v rámci aplikace. Všechny aplikace musí mít alespoň jednoho vlákna; vlákno, které používá vaše `CWinApp` toto primární vlákno je objekt.
+
+`CWinThread` zapouzdřuje část dělení na vlákna funkce operačního systému. Chcete-li používání více vláken jednodušší, MFC také poskytuje synchronizace objektu třídy, které poskytují rozhraní C++ Win32 synchronizace objektů.
+
+## <a name="application-and-thread-classes"></a>Třídy aplikací a vláken
+
+[CWinApp](../mfc/reference/cwinapp-class.md)<br/>
+Zapouzdřuje kód pro inicializaci, spuštění a ukončení aplikace. Aplikační objekt bude odvozovat z této třídy.
+
+[CWinThread](../mfc/reference/cwinthread-class.md)<br/>
+Základní třída pro všechna vlákna. Přímo použít nebo odvodit třídu z `CWinThread` Pokud vašeho vlákna provádí funkce uživatelského rozhraní. `CWinApp` je odvozen z `CWinThread`.
+
+## <a name="synchronization-object-classes"></a>Třídy synchronizace objektů
+
+[CSyncObject](../mfc/reference/csyncobject-class.md)<br/>
+Základní třída synchronizační objekt třídy.
+
+[CCriticalSection](../mfc/reference/ccriticalsection-class.md)<br/>
+Synchronizační třídu, která umožňuje pouze jedno vlákno v rámci jediného procesu, aby přístup k objektu.
+
+[CSemaphore –](../mfc/reference/csemaphore-class.md)<br/>
+Synchronizační třídu, která umožňuje od jedné do zadané maximální počet souběžných přístupů na objekt.
+
+[CMutex](../mfc/reference/cmutex-class.md)<br/>
+Synchronizační třídu, která umožňuje pouze jedno vlákno v rámci libovolný počet procesů pro přístup k objektu.
+
+[CEvent](../mfc/reference/cevent-class.md)<br/>
+Třída synchronizace, která upozorní aplikaci, když došlo k události.
+
+[CSingleLock](../mfc/reference/csinglelock-class.md)<br/>
+K uzamčení na jeden objekt synchronizace používají v členské funkce třídy bezpečné pro vlákna.
+
+[CMultiLock](../mfc/reference/cmultilock-class.md)<br/>
+Použít v členské funkce třídy bezpečné pro vlákna k uzamčení na jeden nebo více objektů synchronizace z pole synchronizace objektů.
+
+## <a name="related-classes"></a>Související třídy
+
+[Ccommandlineinfo –](../mfc/reference/ccommandlineinfo-class.md)<br/>
+Analyzuje příkazového řádku, se kterým byl program spuštěn.
+
+[Cwaitcursor –](../mfc/reference/cwaitcursor-class.md)<br/>
+Umístí kurzor pro čekání na obrazovce. Používá se při dlouhé operace.
+
+[Cdockstate –](../mfc/reference/cdockstate-class.md)<br/>
+Zpracovává ukotvení data o stavu pro ovládacích pruhů trvalého úložiště.
+
+[Crecentfilelist –](../mfc/reference/crecentfilelist-class.md)<br/>
+Uchovává poslední použitou seznam souborů (MRU).
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../mfc/class-library-overview.md)
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b599e5f25449dfef3b37d7811db572ee4299b241
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6bfd96962cebd4b94e9b1b50ca588ada9af69779
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719098"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418382"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -44,10 +44,10 @@ Přidruží zadaný členskou proměnnou vstupní nebo výstupní parametr a odd
 
 ### <a name="parameters"></a>Parametry
 
-*Pořadí*  
+*Pořadí*<br/>
 Číslo sloupce (DBCOLUMNINFO pořadí), který je odpovídající pole v dané sadě řádků, ke kterému chcete svázat data.
 
-*paramtype*  
+*paramtype*<br/>
 (Volitelné) Typ, který má nastavit pro parametr. Podporují pouze vstupně-výstupní typy parametrů, které podporují podkladovému zdroji dat. Typ je kombinace jedné nebo více hodnot DBPARAMIOENUM:
 
 - DBPARAMIO_INPUT vstupního parametru.
@@ -56,19 +56,19 @@ Přidruží zadaný členskou proměnnou vstupní nebo výstupní parametr a odd
 
 - DBPARAMIO_NOTPARAM přistupující objekt nemá žádné parametry. Nastavení `eParamIO` na tuto hodnotu v řádku přistupující objekty upozorňuje uživatele, že parametry budou ignorovány.
 
-*Hodnota DbType*  
+*Hodnota DbType*<br/>
 (Volitelné) OLE DB [indikátor typu](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) pro vstupní sloupec.
 
-*Přesnost*  
+*Přesnost*<br/>
 (Volitelné) Přesnost, který má být použit pro vstupní sloupec. Podrobnosti najdete v tématu Popis `bPrecision` elementu [DBBINDING struktura](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*Škálování*  
+*Škálování*<br/>
 (Volitelné) Škálování, která má být použit pro vstupní sloupec. Podrobnosti najdete v tématu Popis `bScale` elementu [DBBINDING struktura](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*Stav*  
+*Stav*<br/>
 (Volitelné) Členské proměnné používané pro udržení stavu daného sloupce. Stav označuje, zda je hodnota sloupce datovou hodnotu nebo jinou hodnotu, jako je NULL. Možné hodnoty najdete v části [stav](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.
 
-*Délka*  
+*Délka*<br/>
 (Volitelné) Členské proměnné používané pro udržení velikost sloupce v bajtech.
 
 ## <a name="remarks"></a>Poznámky

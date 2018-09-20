@@ -17,45 +17,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e879726f9ef3ad65dabd00056ddb859c72dd039e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ccd691edb9ee799c8585fb33cb6b837e2871fc36
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679564"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413964"
 ---
 # <a name="vmxvmptrst"></a>__vmx_vmptrst
-**Specifické pro Microsoft**  
-  
- Ukládá ukazatel na aktuální struktura řízení virtuálních počítačů (VMCS) na zadané adrese.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void __vmx_vmptrst(   
-   unsigned __int64 *VmcsPhysicalAddress   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- [in] *`VmcsPhysicalAddress`  
- Adresa aktuální ukazatel VMCS se mají ukládat.  
-  
-## <a name="remarks"></a>Poznámky  
- Ukazatel VMCS je 64-bit fyzickou adresu.  
-  
- `__vmx_vmptrst` Funkce je ekvivalentní volání `VMPTRST` strojové instrukce. Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace, hledání dokumentů "Intel Virtualization technické specifikace pro the architekturou IA-32 Intel," dokumentu C97063-002 čísla na [společnosti Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) lokality.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Vnitřní|Architektura|  
-|---------------|------------------|  
-|`__vmx_vmptrst`|x86, x64|  
-  
- **Soubor hlaviček** \<intrin.h >  
-  
-**Specifické pro END Microsoft**  
-  
-## <a name="see-also"></a>Viz také  
- [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   
- [__vmx_vmptrld](../intrinsics/vmx-vmptrld.md)
+
+**Specifické pro Microsoft**
+
+Ukládá ukazatel na aktuální struktura řízení virtuálních počítačů (VMCS) na zadané adrese.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void __vmx_vmptrst( 
+   unsigned __int64 *VmcsPhysicalAddress 
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
+[in] *`VmcsPhysicalAddress` adresu aktuální ukazatel VMCS se mají ukládat.
+
+## <a name="remarks"></a>Poznámky
+
+Ukazatel VMCS je 64-bit fyzickou adresu.
+
+`__vmx_vmptrst` Funkce je ekvivalentní volání `VMPTRST` strojové instrukce. Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace, hledání dokumentů "Intel Virtualization technické specifikace pro the architekturou IA-32 Intel," dokumentu C97063-002 čísla na [společnosti Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) lokality.
+
+## <a name="requirements"></a>Požadavky
+
+|Vnitřní|Architektura|
+|---------------|------------------|
+|`__vmx_vmptrst`|x86, x64|
+
+**Soubor hlaviček** \<intrin.h >
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také
+
+[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
+[__vmx_vmptrld](../intrinsics/vmx-vmptrld.md)

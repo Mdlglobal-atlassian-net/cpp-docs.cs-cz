@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0fc65d2aeab01de022e23d0645682800a7d555d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 88ddd3dd59000b629f6e72933b1a0b02cc582c89
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602362"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409868"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces – struktura
 
@@ -63,43 +63,43 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
 
 ### <a name="parameters"></a>Parametry
 
-*I0*  
+*I0*<br/>
 (Povinné) ID rozhraní: 0.
 
-*I1*  
+*I1*<br/>
 (Povinné) ID rozhraní: 1.
 
-*I2*  
+*I2*<br/>
 (Volitelné) Rozhraní s ID 2.
 
-*I3*  
+*I3*<br/>
 (Volitelné) ID rozhraní 3.
 
-*TYP I4*  
+*TYP I4*<br/>
 (Volitelné) ID rozhraní 4.
 
-*I5*  
+*I5*<br/>
 (Volitelné) ID rozhraní 5.
 
-*I6*  
+*I6*<br/>
 (Volitelné) ID rozhraní 6.
 
-*I7*  
+*I7*<br/>
 (Volitelné) Rozhraní ID 7.
 
-*I8*  
+*I8*<br/>
 (Volitelné) ID rozhraní 8.
 
-*I9*  
+*I9*<br/>
 (Volitelné) ID rozhraní 9.
 
-*DerivedType*  
+*DerivedType*<br/>
 Odvozeného typu.
 
-*BaseType*  
+*BaseType*<br/>
 Základní typ odvozeného typu.
 
-*hasImplements*  
+*hasImplements*<br/>
 Logická hodnota, že pokud **true**, znamená, že nemůžete použít [MixIn](../windows/mixin-structure.md) strukturu s třídou, která není odvozena od [implementuje](../windows/implements-structure.md) stucture.
 
 ## <a name="members"></a>Členové

@@ -1,5 +1,5 @@
 ---
-title: OpenMP – datové typy | Microsoft Docs
+title: OpenMP – datové typy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,22 +12,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f33666b35f45bb668ab135941a0d15297442408a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b41eaf7012c1d119071281f98177e4a4d841890b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690943"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410068"
 ---
 # <a name="openmp-data-types"></a>OpenMP – datové typy
-Obsahuje odkazy na datové typy používat v rozhraní API OpenMP.  
-  
- Visual C++ implementace standardní OpenMP zahrnuje následující typy dat.  
-  
-|Datový typ|Popis|  
-|---------------|-----------------|  
-|[omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md)|Typ, který obsahuje stav zámku, jestli je k dispozici zámek nebo pokud vlákno vlastní zámek.|  
-|[omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md)|Typ, který obsahuje jeden z následujících informací o zámek: jestli zámek je k dispozici, a identity vlákno, který je vlastníkem zámek a počet vnoření.|  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace knihoven](../../../parallel/openmp/reference/openmp-library-reference.md)
+
+Obsahuje odkazy na datové typy používané v rozhraní API OpenMP.
+
+Implementace jazyka Visual C++, OpenMP standard zahrnuje následující datové typy.
+
+|Datový typ|Popis|
+|---------------|-----------------|
+|[omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md)|Typ, který obsahuje stav zámku, určuje, zda je k dispozici zámek nebo pokud vlákno vlastníkem zámku.|
+|[omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md)|Typ, který obsahuje jeden z následujících částí informace o zámku: zda zámek je k dispozici a identitu vlákna, která vlastní zámek a počet vnoření.|
+
+## <a name="see-also"></a>Viz také
+
+[Referenční dokumentace knihoven](../../../parallel/openmp/reference/openmp-library-reference.md)

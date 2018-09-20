@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ada0997a03cefbec4bcc4faa26ad4eaf8c176ff2
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2ddf4f69c3c897c8f462554ce6a9db6b2a03408f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704884"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400577"
 ---
 # <a name="safeadd"></a>SafeAdd
 
@@ -71,7 +71,7 @@ Další informace o typech šablony T a U najdete v tématu [SafeInt – funkce]
 
 ## <a name="see-also"></a>Viz také
 
-[SafeInt – funkce](../windows/safeint-functions.md)  
-[SafeInt – knihovna](../windows/safeint-library.md)  
-[SafeInt – třída](../windows/safeint-class.md)  
+[SafeInt – funkce](../windows/safeint-functions.md)<br/>
+[SafeInt – knihovna](../windows/safeint-library.md)<br/>
+[SafeInt – třída](../windows/safeint-class.md)<br/>
 [SafeSubtract](../windows/safesubtract.md)

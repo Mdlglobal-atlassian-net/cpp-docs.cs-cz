@@ -1,5 +1,5 @@
 ---
-title: Vytváření dynamických objektů | Microsoft Docs
+title: Vytváření dynamických objektů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5763e3f0f3ee5a0e58ac20fe9f637e4f7e097999
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 19f6a895eb48b3ae1816edc45747c865e7e03b96
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346643"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420150"
 ---
 # <a name="dynamic-object-creation"></a>Vytváření dynamických objektů
-Tento článek vysvětluje, jak vytvořit objekt dynamicky za běhu. Postup používá run-time třída informace, jak je popsáno v článku [informace o třídě přístup k Run-Time](../mfc/accessing-run-time-class-information.md).  
-  
-#### <a name="to-dynamically-create-an-object-given-its-run-time-class"></a>Chcete-li dynamicky vytvořit objekt daný jeho run-time třída  
-  
-1.  Použít následující kód pro dynamicky vytvoření objektu pomocí `CreateObject` funkce `CRuntimeClass`. Všimněte si, že se při selhání, `CreateObject` vrátí **NULL** místo vyvolání k výjimce:  
-  
-     [!code-cpp[NVC_MFCCObjectSample#6](../mfc/codesnippet/cpp/dynamic-object-creation_1.cpp)]  
-  
-## <a name="see-also"></a>Viz také  
- [Použití objektů CObject](../mfc/using-cobject.md)
+
+Tento článek vysvětluje, jak vytvořit objekt dynamicky za běhu. Postup používá run-time třída informace, jak je popsáno v článku [přístup k informacím o třídě Run-Time](../mfc/accessing-run-time-class-information.md).
+
+#### <a name="to-dynamically-create-an-object-given-its-run-time-class"></a>Dynamicky se vytvářejí objekt dle jeho run-time třída
+
+1. Pomocí následujícího kódu dynamicky vytvořit objekt s použitím `CreateObject` funkce `CRuntimeClass`. Všimněte si, že při selhání, `CreateObject` vrátí **NULL** namísto vyvolání výjimky:
+
+     [!code-cpp[NVC_MFCCObjectSample#6](../mfc/codesnippet/cpp/dynamic-object-creation_1.cpp)]
+
+## <a name="see-also"></a>Viz také
+
+[Použití objektů CObject](../mfc/using-cobject.md)
 

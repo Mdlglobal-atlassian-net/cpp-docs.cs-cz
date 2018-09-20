@@ -1,5 +1,5 @@
 ---
-title: Třída CD2DGeometry | Microsoft Docs
+title: Cd2dgeometry – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -56,505 +56,561 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51e3c24464ff74ab262cd241dcdce68037d530f9
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 50ec35fd568031e7e30ee7412fcf078be1088906
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955099"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397088"
 ---
-# <a name="cd2dgeometry-class"></a>CD2DGeometry – třída
-Obálka pro ID2D1Geometry.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CD2DGeometry : public CD2DResource;  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CD2DGeometry::CD2DGeometry](#cd2dgeometry)|Vytvoří objekt CD2DGeometry.|  
-|[CD2DGeometry:: ~ CD2DGeometry](#_dtorcd2dgeometry)|Destruktor. Voláno, když je zničen geometrický objekt D2D.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CD2DGeometry::Attach](#attach)|Připojí existující prostředek rozhraní k objektu|  
-|[CD2DGeometry::CombineWithGeometry](#combinewithgeometry)|Kombinuje tento geometrie pomocí zadaná geometrie a výsledek je uložen ve ID2D1SimplifiedGeometrySink.|  
-|[CD2DGeometry::CompareWithGeometry](#comparewithgeometry)|Popisuje průnik mezi tato geometrie a zadaná geometrie. Porovnání se provádí pomocí zadané sloučení tolerance.|  
-|[CD2DGeometry::ComputeArea](#computearea)|Vypočítá oblasti geometrického útvaru. po jejím transformovat zadaný matice a průmětu pomocí zadané tolerance.|  
-|[CD2DGeometry::ComputeLength](#computelength)|Vypočítá délku geometrie, jako by byl každý segment unrolled na čáru.|  
-|[CD2DGeometry::ComputePointAtLength](#computepointatlength)|Vypočítá bod a tangens vektoru v zadané vzdálenosti podél geometrie po jejím transformovat zadaný matice a průmětu pomocí zadané tolerance.|  
-|[CD2DGeometry::Destroy](#destroy)|Zničí CD2DGeometry objektu. (Přepisuje [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
-|[CD2DGeometry::detach](#detach)|Umožňuje odpojit prostředek rozhraní z objektu|  
-|[CD2DGeometry::FillContainsPoint](#fillcontainspoint)|Určuje, zda oblasti sestavil geometrie by obsahovat zadaný bod zadané zadanou toleranci sloučení.|  
-|[CD2DGeometry::Get](#get)|Vrátí ID2D1Geometry rozhraní|  
-|[CD2DGeometry::GetBounds](#getbounds)||  
-|[CD2DGeometry::GetWidenedBounds](#getwidenedbounds)|Získá hranice geometrického útvaru. poté, co byla rozšířit zadaný tahu šířkou a stylu a transformovat zadaný matice.|  
-|[CD2DGeometry::IsValid](#isvalid)|Ověří platnost prostředku (přepíše [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
-|[CD2DGeometry::Outline](#outline)|Vypočítá obrys geometrie a zapíše výsledek ID2D1SimplifiedGeometrySink.|  
-|[CD2DGeometry::Simplify](#simplify)|Vytvoří zjednodušenou verzi geometry, který obsahuje pouze řádky a (volitelně) krychlový Bézierových křivek a zapíše výsledek ID2D1SimplifiedGeometrySink.|  
-|[CD2DGeometry::StrokeContainsPoint](#strokecontainspoint)|Určuje, zda geometrie tahu obsahuje zadaný bod daného sílu tahu zadaný, styl a transformace.|  
-|[CD2DGeometry::Tessellate](#tessellate)|Vytvoří sadu trojúhelníčky po směru hodinových ručiček vinutým, které zahrnují geometrie po byla transformována, pomocí zadané matice a průmětu pomocí zadané tolerance.|  
-|[CD2DGeometry::widen](#widen)|Rozšiřuje geometrie podle zadaného tahu a zapíše výsledek ID2D1SimplifiedGeometrySink po jejím transformovat zadaný matice a průmětu pomocí zadané tolerance.|  
-  
-### <a name="public-operators"></a>Veřejné operátory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CD2DGeometry::Operator ID2D1Geometry *](#operator_id2d1geometry_star)|Vrátí ID2D1Geometry rozhraní|  
-  
-### <a name="protected-data-members"></a>Chráněné datové členy  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CD2DGeometry::m_pGeometry](#m_pgeometry)|Ukazatel ID2D1Geometry.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
-  
- `CD2DGeometry`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxrendertarget.h  
-  
-##  <a name="_dtorcd2dgeometry"></a>  CD2DGeometry:: ~ CD2DGeometry  
- Destruktor. Voláno, když je zničen geometrický objekt D2D.  
-  
-```  
+# <a name="cd2dgeometry-class"></a>Cd2dgeometry – třída
+
+Obálka pro ID2D1Geometry.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CD2DGeometry : public CD2DResource;
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[CD2DGeometry::CD2DGeometry](#cd2dgeometry)|Vytvoří objekt cd2dgeometry –.|
+|[Cd2dgeometry –:: ~ cd2dgeometry –](#_dtorcd2dgeometry)|Destruktor. Volá se, když se likviduje geometrie objektu D2D.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CD2DGeometry::Attach](#attach)|Bude k obrazci existujících prostředků rozhraní pro objekt|
+|[CD2DGeometry::CombineWithGeometry](#combinewithgeometry)|Kombinuje tento geometrie pomocí zadaná geometrie a uloží výsledek v ID2D1SimplifiedGeometrySink.|
+|[CD2DGeometry::CompareWithGeometry](#comparewithgeometry)|Popisuje průnik mezi tato geometrie a zadaná geometrie. Porovnání je provedeno pomocí zadaného sloučení proti chybám.|
+|[CD2DGeometry::ComputeArea](#computearea)|Vypočítá oblasti geometrii byla určená matrix transformovat a sloučí pomocí zadanou toleranci.|
+|[CD2DGeometry::ComputeLength](#computelength)|Vypočítá délku geometrie, jako by byl každý segment rozbaleno do řádku.|
+|[CD2DGeometry::ComputePointAtLength](#computepointatlength)|Vypočítá vektoru bodu a tangens v zadané vzdálenosti podél geometrii byla určená matrix transformovat a sloučí pomocí zadanou toleranci.|
+|[CD2DGeometry::Destroy](#destroy)|Odstraní objekt cd2dgeometry –. (Přepíše [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
+|[CD2DGeometry::detach](#detach)|Odpojí prostředků rozhraní z objektu|
+|[CD2DGeometry::FillContainsPoint](#fillcontainspoint)|Označuje, zda oblasti sestavil geometrii bude obsahovat zadaný bodu zadanou toleranci sloučení.|
+|[CD2DGeometry::Get](#get)|Vrátí ID2D1Geometry rozhraní|
+|[CD2DGeometry::GetBounds](#getbounds)||
+|[CD2DGeometry::GetWidenedBounds](#getwidenedbounds)|Získá hranice geometrii poté, co byl rozšířit tak, že šířka tahu zadané a styl a transformovat určená matrix.|
+|[CD2DGeometry::IsValid](#isvalid)|Zkontroluje platnost prostředku (přepíše [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
+|[CD2DGeometry::Outline](#outline)|Vypočítá osnovy geometrie a zapíše výsledek do ID2D1SimplifiedGeometrySink.|
+|[CD2DGeometry::Simplify](#simplify)|Vytvoří zjednodušenou verzi geometrii, která obsahuje pouze řádky a (volitelně) kubické Bézierovy křivky a zapíše výsledek do ID2D1SimplifiedGeometrySink.|
+|[CD2DGeometry::StrokeContainsPoint](#strokecontainspoint)|Určuje, zda geometrie stroke obsahuje zadaný bod vzhledem k zadané tloušťka čáry, styl a transformace.|
+|[CD2DGeometry::Tessellate](#tessellate)|Vytvoří sadu po směru hodinových ručiček vinutým trojúhelníků, které zahrnují geometrii po byly transformovány, pomocí zadané matice a sloučí pomocí zadanou toleranci.|
+|[CD2DGeometry::widen](#widen)|Rozšiřuje geometrie pomocí zadaného tahů a zapíše výsledek do ID2D1SimplifiedGeometrySink byla určená matrix transformovat a sloučí pomocí zadanou toleranci.|
+
+### <a name="public-operators"></a>Veřejné operátory
+
+|Název|Popis|
+|----------|-----------------|
+|[CD2DGeometry::Operator ID2D1Geometry *](#operator_id2d1geometry_star)|Vrátí ID2D1Geometry rozhraní|
+
+### <a name="protected-data-members"></a>Chránění členové dat
+
+|Název|Popis|
+|----------|-----------------|
+|[CD2DGeometry::m_pGeometry](#m_pgeometry)|Ukazatel ID2D1Geometry.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[Třídy CObject](../../mfc/reference/cobject-class.md)
+
+[Cd2dresource –](../../mfc/reference/cd2dresource-class.md)
+
+`CD2DGeometry`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxrendertarget.h
+
+##  <a name="_dtorcd2dgeometry"></a>  Cd2dgeometry –:: ~ cd2dgeometry –
+
+Destruktor. Volá se, když se likviduje geometrie objektu D2D.
+
+```
 virtual ~CD2DGeometry();
-```  
-  
-##  <a name="attach"></a>  CD2DGeometry::Attach  
- Připojí existující prostředek rozhraní k objektu  
-  
-```  
+```
+
+##  <a name="attach"></a>  CD2DGeometry::Attach
+
+Bude k obrazci existujících prostředků rozhraní pro objekt
+
+```
 void Attach(ID2D1Geometry* pResource);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pResource*  
- Existující rozhraní prostředků. Nemůže mít hodnotu NULL  
-  
-##  <a name="cd2dgeometry"></a>  CD2DGeometry::CD2DGeometry  
- Vytvoří objekt CD2DGeometry.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pResource*<br/>
+Rozhraní existující prostředek. Nesmí být NULL.
+
+##  <a name="cd2dgeometry"></a>  CD2DGeometry::CD2DGeometry
+
+Vytvoří objekt cd2dgeometry –.
+
+```
 CD2DGeometry(
-    CRenderTarget* pParentTarget,  
+    CRenderTarget* pParentTarget,
     BOOL bAutoDestroy = TRUE);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pParentTarget*  
- Ukazatel na cíl vykreslení.  
-  
- *bAutoDestroy*  
- Označuje, že bude objekt zničí vlastník (pParentTarget).  
-  
-##  <a name="combinewithgeometry"></a>  CD2DGeometry::CombineWithGeometry  
- Kombinuje tento geometrie pomocí zadaná geometrie a výsledek je uložen ve ID2D1SimplifiedGeometrySink.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pParentTarget*<br/>
+Ukazatel na cíl vykreslování.
+
+*bAutoDestroy*<br/>
+Označuje, že bude objekt zničen. vlastník (pParentTarget).
+
+##  <a name="combinewithgeometry"></a>  CD2DGeometry::CombineWithGeometry
+
+Kombinuje tento geometrie pomocí zadaná geometrie a uloží výsledek v ID2D1SimplifiedGeometrySink.
+
+```
 BOOL CombineWithGeometry(
-    CD2DGeometry& inputGeometry,  
-    D2D1_COMBINE_MODE combineMode,  
-    const D2D1_MATRIX_3X2_F& inputGeometryTransform,  
-    ID2D1SimplifiedGeometrySink* geometrySink,  
-    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *inputGeometry*  
- Geometrie kombinovat s touto instancí.  
-  
- *combineMode*  
- Typ operaci combine k provedení.  
-  
- *inputGeometryTransform*  
- Transformace, které chcete použít pro inputGeometry před kombinování.  
-  
- *geometrySink*  
- Výsledek operaci combine.  
-  
- *flatteningTolerance*  
- Maximální rozsah na vzdálenost mezi body v polygonálních sblížení geometrie. Menší hodnoty poskytuje přesnější výsledky ale způsobit pomalejší provádění.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Pokud metoda bude úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.  
-  
-##  <a name="comparewithgeometry"></a>  CD2DGeometry::CompareWithGeometry  
- Popisuje průnik mezi tato geometrie a zadaná geometrie. Porovnání se provádí pomocí zadané sloučení tolerance.  
-  
-```  
+    CD2DGeometry& inputGeometry,
+    D2D1_COMBINE_MODE combineMode,
+    const D2D1_MATRIX_3X2_F& inputGeometryTransform,
+    ID2D1SimplifiedGeometrySink* geometrySink,
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*inputGeometry*<br/>
+Geometrie zkombinovat s touto instancí.
+
+*combineMode*<br/>
+Typ operace sloučení se má provést.
+
+*inputGeometryTransform*<br/>
+Transformací, která se má použít pro inputGeometry před kombinace.
+
+*geometrySink*<br/>
+Výsledek operace sloučení.
+
+*flatteningTolerance*<br/>
+Maximální rozsah vzdálenosti mezi body v mnohoúhelníkové aproximace geometrie. Nižší hodnoty přesnější výsledky však způsobit pomalejší spuštění.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pokud metoda uspěje, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.
+
+##  <a name="comparewithgeometry"></a>  CD2DGeometry::CompareWithGeometry
+
+Popisuje průnik mezi tato geometrie a zadaná geometrie. Porovnání je provedeno pomocí zadaného sloučení proti chybám.
+
+```
 D2D1_GEOMETRY_RELATION CompareWithGeometry(
-    CD2DGeometry& inputGeometry,  
-    const D2D1_MATRIX_3X2_F& inputGeometryTransform,  
-    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *inputGeometry*  
- Geometrie k testování.  
-  
- *inputGeometryTransform*  
- Transformace, které chcete použít pro inputGeometry.  
-  
- *flatteningTolerance*  
- Maximální rozsah na vzdálenost mezi body v polygonálních sblížení geometrie. Menší hodnoty poskytuje přesnější výsledky ale způsobit pomalejší provádění.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Pokud metoda bude úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.  
-  
-##  <a name="computearea"></a>  CD2DGeometry::ComputeArea  
- Vypočítá oblasti geometrického útvaru. po jejím transformovat zadaný matice a průmětu pomocí zadané tolerance.  
-  
-```  
+    CD2DGeometry& inputGeometry,
+    const D2D1_MATRIX_3X2_F& inputGeometryTransform,
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*inputGeometry*<br/>
+Geometrie k testování.
+
+*inputGeometryTransform*<br/>
+Transformací, která se má použít pro inputGeometry.
+
+*flatteningTolerance*<br/>
+Maximální rozsah vzdálenosti mezi body v mnohoúhelníkové aproximace geometrie. Nižší hodnoty přesnější výsledky však způsobit pomalejší spuštění.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pokud metoda uspěje, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.
+
+##  <a name="computearea"></a>  CD2DGeometry::ComputeArea
+
+Vypočítá oblasti geometrii byla určená matrix transformovat a sloučí pomocí zadanou toleranci.
+
+```
 BOOL ComputeArea(
-    const D2D1_MATRIX_3X2_F& worldTransform,  
-    FLOAT& area,  
-    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *worldTransform*  
- Transformace, které chcete použít pro tento geometrické obrazce před computing jeho oblasti.  
-  
- *oblasti*  
- Po návratu tato metoda obsahuje ukazatel na oblasti transformovaných, plochou verzi této geometrie. Musíte přidělit úložiště pro tento parametr.  
-  
- *flatteningTolerance*  
- Maximální rozsah na vzdálenost mezi body v polygonálních aproximace geometrického útvaru. Menší hodnoty poskytuje přesnější výsledky ale způsobit pomalejší provádění.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Pokud metoda bude úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.  
-  
-##  <a name="computelength"></a>  CD2DGeometry::ComputeLength  
- Vypočítá délku geometrie, jako by byl každý segment unrolled na čáru.  
-  
-```  
+    const D2D1_MATRIX_3X2_F& worldTransform,
+    FLOAT& area,
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*worldTransform*<br/>
+Transformací, která se má použít pro tento geometrie před jeho oblasti computingu.
+
+*Oblast*<br/>
+Po návratu metody obsahuje ukazatel na oblast transformovaná plochá verzi této geometry. Pro tento parametr, musíte přidělit úložiště.
+
+*flatteningTolerance*<br/>
+Maximální rozsah vzdálenosti mezi body v mnohoúhelníkové aproximace geometrii. Nižší hodnoty přesnější výsledky však způsobit pomalejší spuštění.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pokud metoda uspěje, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.
+
+##  <a name="computelength"></a>  CD2DGeometry::ComputeLength
+
+Vypočítá délku geometrie, jako by byl každý segment rozbaleno do řádku.
+
+```
 BOOL ComputeLength(
-    const D2D1_MATRIX_3X2_F& worldTransform,  
-    FLOAT& length,  
-    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *worldTransform*  
- Transformace, které chcete použít pro geometrie před výpočet jeho délka.  
-  
- *Délka*  
- Po návratu tato metoda obsahuje ukazatel na délku geometrického útvaru. Pro uzavřené geometrie délka obsahuje segment implicitní ukončovací. Musíte přidělit úložiště pro tento parametr.  
-  
- *flatteningTolerance*  
- Maximální rozsah na vzdálenost mezi body v polygonálních aproximace geometrického útvaru. Menší hodnoty poskytuje přesnější výsledky ale způsobit pomalejší provádění.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Pokud metoda bude úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.  
-  
-##  <a name="computepointatlength"></a>  CD2DGeometry::ComputePointAtLength  
- Vypočítá bod a tangens vektoru v zadané vzdálenosti podél geometrie po jejím transformovat zadaný matice a průmětu pomocí zadané tolerance.  
-  
-```  
+    const D2D1_MATRIX_3X2_F& worldTransform,
+    FLOAT& length,
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*worldTransform*<br/>
+Transformací, která se má použít pro geometrii před výpočtem jeho délky.
+
+*Délka*<br/>
+Po návratu metody obsahuje ukazatel na délku geometrii. Pro uzavřené geometrie délka zahrnuje segmentu implicitní pravou. Pro tento parametr, musíte přidělit úložiště.
+
+*flatteningTolerance*<br/>
+Maximální rozsah vzdálenosti mezi body v mnohoúhelníkové aproximace geometrii. Nižší hodnoty přesnější výsledky však způsobit pomalejší spuštění.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pokud metoda uspěje, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.
+
+##  <a name="computepointatlength"></a>  CD2DGeometry::ComputePointAtLength
+
+Vypočítá vektoru bodu a tangens v zadané vzdálenosti podél geometrii byla určená matrix transformovat a sloučí pomocí zadanou toleranci.
+
+```
 BOOL ComputePointAtLength(
-    FLOAT length,  
-    const D2D1_MATRIX_3X2_F& worldTransform,  
-    CD2DPointF& point,  
-    CD2DPointF& unitTangentVector,  
-    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Délka*  
- Vzdálenost podél geometrie bodu a tangens najít. Pokud tato vzdálenost menší pak 0, tato metoda vypočítá prvního bodu v geometrie. Pokud tato vzdálenost je větší než délka geometrie, tato metoda vypočítá posledního bodu v geometrie.  
-  
- *worldTransform*  
- Transformace, které chcete použít pro geometrie před výpočtem Zadaný bod a tangens.  
-  
- *Bod*  
- Umístění v zadané vzdálenosti podél geometrie. Pokud geometrie je prázdný, obsahuje tento bod NaN jako jeho x a y hodnoty.  
-  
- *unitTangentVector*  
- Po návratu tato metoda obsahuje ukazatel na tečný vektoru v zadané vzdálenosti podél geometrie. Pokud geometrie je prázdný, obsahuje tento vektoru NaN jako jeho x a y hodnoty. Musíte přidělit úložiště pro tento parametr.  
-  
- *flatteningTolerance*  
- Maximální rozsah na vzdálenost mezi body v polygonálních aproximace geometrického útvaru. Menší hodnoty poskytuje přesnější výsledky ale způsobit pomalejší provádění.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Pokud metoda bude úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.  
-  
-##  <a name="destroy"></a>  CD2DGeometry::Destroy  
- Zničí CD2DGeometry objektu.  
-  
-```  
+    FLOAT length,
+    const D2D1_MATRIX_3X2_F& worldTransform,
+    CD2DPointF& point,
+    CD2DPointF& unitTangentVector,
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*Délka*<br/>
+Vzdálenost podél geometrie bodu a tangens najít. Pokud tato vzdálenost je méně pak 0, tato metoda vypočítá prvním bodem geometrii. Pokud tato vzdálenost je větší než délka geometrii, tato metoda vypočítá posledního bodu v geometrii.
+
+*worldTransform*<br/>
+Transformací, která se má použít pro geometrii před výpočtem Zadaný bod a tangens.
+
+*Bod*<br/>
+Umístění v zadané vzdálenosti podél geometrii. Pokud geometrii je prázdný, obsahuje tento bod NaN jako jeho x a y hodnoty.
+
+*unitTangentVector*<br/>
+Po návratu metody obsahuje ukazatel na tečný vektoru v zadané vzdálenosti podél geometrii. Pokud geometrii je prázdný, tato vektor obsahuje NaN jako jeho x a y hodnoty. Pro tento parametr, musíte přidělit úložiště.
+
+*flatteningTolerance*<br/>
+Maximální rozsah vzdálenosti mezi body v mnohoúhelníkové aproximace geometrii. Nižší hodnoty přesnější výsledky však způsobit pomalejší spuštění.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pokud metoda uspěje, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.
+
+##  <a name="destroy"></a>  CD2DGeometry::Destroy
+
+Odstraní objekt cd2dgeometry –.
+
+```
 virtual void Destroy();
-```  
-  
-##  <a name="detach"></a>  CD2DGeometry::detach  
- Umožňuje odpojit prostředek rozhraní z objektu  
-  
-```  
+```
+
+##  <a name="detach"></a>  CD2DGeometry::detach
+
+Odpojí prostředků rozhraní z objektu
+
+```
 ID2D1Geometry* Detach();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Ukazatel rozhraní odpojit prostředků.  
-  
-##  <a name="fillcontainspoint"></a>  CD2DGeometry::FillContainsPoint  
- Určuje, zda oblasti sestavil geometrie by obsahovat zadaný bod zadané zadanou toleranci sloučení.  
-  
-```  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Ukazatel na rozhraní odpojit prostředek.
+
+##  <a name="fillcontainspoint"></a>  CD2DGeometry::FillContainsPoint
+
+Označuje, zda oblasti sestavil geometrii bude obsahovat zadaný bodu zadanou toleranci sloučení.
+
+```
 BOOL FillContainsPoint(
-    CD2DPointF point,  
-    const D2D1_MATRIX_3X2_F& worldTransform,  
-    BOOL* contains,  
-    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Bod*  
- Bod, který chcete otestovat.  
-  
- *worldTransform*  
- Transformace, které chcete použít pro geometrie před testování pro členství ve skupině.  
-  
- *Obsahuje*  
- Po návratu tato metoda obsahuje hodnotu bool, který má hodnotu TRUE, pokud oblasti sestavil geometrie obsahuje čárky. jinak hodnota FALSE. Musíte přidělit úložiště pro tento parametr.  
-  
- *flatteningTolerance*  
- Číselná přesnost, pomocí kterého přesné geometrickou cesty a cesty průnik se počítá. Chybějící výplně menší než tolerance body jsou považovány za stále uvnitř. Menší hodnoty poskytuje přesnější výsledky ale způsobit pomalejší provádění.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Pokud metoda bude úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.  
-  
-##  <a name="get"></a>  CD2DGeometry::Get  
- Vrátí ID2D1Geometry rozhraní  
-  
-```  
+    CD2DPointF point,
+    const D2D1_MATRIX_3X2_F& worldTransform,
+    BOOL* contains,
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*Bod*<br/>
+Bod k testování.
+
+*worldTransform*<br/>
+Transformací, která se má použít pro geometrii před testování pro členství ve skupině.
+
+*Obsahuje*<br/>
+Po návratu tato metoda obsahuje hodnotu typu bool, která je hodnota TRUE, pokud oblasti sestavil geometrii obsahuje bod; v opačném případě hodnota FALSE. Pro tento parametr, musíte přidělit úložiště.
+
+*flatteningTolerance*<br/>
+Číselná přesnost, pomocí kterého přesné geometrické cesty a cesty průnik se počítá. Chybí výplně o méně než tolerance body jsou stále považovány za uvnitř. Nižší hodnoty přesnější výsledky však způsobit pomalejší spuštění.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pokud metoda uspěje, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.
+
+##  <a name="get"></a>  CD2DGeometry::Get
+
+Vrátí ID2D1Geometry rozhraní
+
+```
 ID2D1Geometry* Get();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na rozhraní ID2D1Geometry nebo hodnota NULL, pokud objekt dosud není inicializován.  
-  
-##  <a name="getbounds"></a>  CD2DGeometry::GetBounds  
-  
-```   
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Ukazatel na rozhraní ID2D1Geometry nebo hodnota NULL, pokud objekt ještě není inicializován.
+
+##  <a name="getbounds"></a>  CD2DGeometry::GetBounds
+
+```
 BOOL GetBounds(
-const D2D1_MATRIX_3X2_F& worldTransform,  
-CD2DRectF& bounds) const; 
-```  
-  
-### <a name="parameters"></a>Parametry  
- *worldTransform*  
- *hranice*  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-##  <a name="getwidenedbounds"></a>  CD2DGeometry::GetWidenedBounds  
- Získá hranice geometrického útvaru. poté, co byla rozšířit zadaný tahu šířkou a stylu a transformovat zadaný matice.  
-  
-```  
+const D2D1_MATRIX_3X2_F& worldTransform,
+CD2DRectF& bounds) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*worldTransform*<br/>
+*Hranice*
+
+### <a name="return-value"></a>Návratová hodnota
+
+##  <a name="getwidenedbounds"></a>  CD2DGeometry::GetWidenedBounds
+
+Získá hranice geometrii poté, co byl rozšířit tak, že šířka tahu zadané a styl a transformovat určená matrix.
+
+```
 BOOL GetWidenedBounds(
-    FLOAT strokeWidth,  
-    ID2D1StrokeStyle* strokeStyle,  
-    const D2D1_MATRIX_3X2_F& worldTransform,  
-    CD2DRectF& bounds,  
-    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *strokeWidth*  
- Hodnota, o který rozšíří geometrie podle vytažení jeho outline.  
-  
- *strokeStyle*  
- Styl tahu, která rozšiřuje geometrie.  
-  
- *worldTransform*  
- Transformace použít geometrie po transformaci geometrie a po geometrie byla vytažený.  
-  
- *hranice*  
- Po návratu tato metoda obsahuje rozsah rozšířené geometrického útvaru. Musíte přidělit úložiště pro tento parametr.  
-  
- *flatteningTolerance*  
- Maximální rozsah na vzdálenost mezi body v polygonálních sblížení geometrie. Menší hodnoty poskytuje přesnější výsledky ale způsobit pomalejší provádění.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Pokud metoda bude úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.  
-  
-##  <a name="isvalid"></a>  CD2DGeometry::IsValid  
- Kontrola platnosti prostředků  
-  
-```  
-virtual BOOL IsValid() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud prostředek je platná. jinak hodnota FALSE.  
-  
-##  <a name="m_pgeometry"></a>  CD2DGeometry::m_pGeometry  
- Ukazatel ID2D1Geometry.  
-  
-```  
-ID2D1Geometry* m_pGeometry;  
-```  
-  
-##  <a name="operator_id2d1geometry_star"></a>  CD2DGeometry::Operator ID2D1Geometry *  
- Vrátí ID2D1Geometry rozhraní  
-  
-```  
+    FLOAT strokeWidth,
+    ID2D1StrokeStyle* strokeStyle,
+    const D2D1_MATRIX_3X2_F& worldTransform,
+    CD2DRectF& bounds,
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*strokeWidth*<br/>
+Rozsah, pomocí které se má rozšířit geometrii podle vytažení obrysu.
+
+*strokeStyle*<br/>
+Styl, který rozšiřuje geometrii stroke.
+
+*worldTransform*<br/>
+Transformaci, kterou chcete použít pro geometrii po transformaci geometrie a poté, co byl vytažený geometrii.
+
+*Hranice*<br/>
+Po návratu metody obsahuje hranice rozšířil geometry. Pro tento parametr, musíte přidělit úložiště.
+
+*flatteningTolerance*<br/>
+Maximální rozsah vzdálenosti mezi body v mnohoúhelníkové aproximace geometrie. Nižší hodnoty přesnější výsledky však způsobit pomalejší spuštění.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pokud metoda uspěje, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.
+
+##  <a name="isvalid"></a>  CD2DGeometry::IsValid
+
+Kontrola platnosti prostředků
+
+```
+virtual BOOL IsValid() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Hodnota TRUE, pokud prostředek je platná. v opačném případě FALSE.
+
+##  <a name="m_pgeometry"></a>  CD2DGeometry::m_pGeometry
+
+Ukazatel ID2D1Geometry.
+
+```
+ID2D1Geometry* m_pGeometry;
+```
+
+##  <a name="operator_id2d1geometry_star"></a>  CD2DGeometry::Operator ID2D1Geometry *
+
+Vrátí ID2D1Geometry rozhraní
+
+```
 operator ID2D1Geometry*();
-```   
-  
-### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na rozhraní ID2D1Geometry nebo hodnota NULL, pokud objekt dosud není inicializován.  
-  
-##  <a name="outline"></a>  CD2DGeometry::Outline  
- Vypočítá obrys geometrie a zapíše výsledek ID2D1SimplifiedGeometrySink.  
-  
-```  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Ukazatel na rozhraní ID2D1Geometry nebo hodnota NULL, pokud objekt ještě není inicializován.
+
+##  <a name="outline"></a>  CD2DGeometry::Outline
+
+Vypočítá osnovy geometrie a zapíše výsledek do ID2D1SimplifiedGeometrySink.
+
+```
 BOOL Outline(
-    const D2D1_MATRIX_3X2_F& worldTransform,  
-    ID2D1SimplifiedGeometrySink* geometrySink,  
-    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *worldTransform*  
- Transformace, které chcete použít pro obrys geometrie.  
-  
- *geometrySink*  
- ID2D1SimplifiedGeometrySink, ke kterému se připojí transformovaných obrys geometrie.  
-  
- *flatteningTolerance*  
- Maximální rozsah na vzdálenost mezi body v polygonálních aproximace geometrického útvaru. Menší hodnoty poskytuje přesnější výsledky ale způsobit pomalejší provádění.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Pokud metoda bude úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.  
-  
-##  <a name="simplify"></a>  CD2DGeometry::Simplify  
- Vytvoří zjednodušenou verzi geometry, který obsahuje pouze řádky a (volitelně) krychlový Bézierových křivek a zapíše výsledek ID2D1SimplifiedGeometrySink.  
-  
-```  
+    const D2D1_MATRIX_3X2_F& worldTransform,
+    ID2D1SimplifiedGeometrySink* geometrySink,
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*worldTransform*<br/>
+Transformací, která se má použít pro geometrie obrysu.
+
+*geometrySink*<br/>
+ID2D1SimplifiedGeometrySink, ke kterému je připojen geometrie transformovaný osnovy.
+
+*flatteningTolerance*<br/>
+Maximální rozsah vzdálenosti mezi body v mnohoúhelníkové aproximace geometrii. Nižší hodnoty přesnější výsledky však způsobit pomalejší spuštění.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pokud metoda uspěje, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.
+
+##  <a name="simplify"></a>  CD2DGeometry::Simplify
+
+Vytvoří zjednodušenou verzi geometrii, která obsahuje pouze řádky a (volitelně) kubické Bézierovy křivky a zapíše výsledek do ID2D1SimplifiedGeometrySink.
+
+```
 BOOL Simplify(
-    D2D1_GEOMETRY_SIMPLIFICATION_OPTION simplificationOption,  
-    const D2D1_MATRIX_3X2_F& worldTransform,  
-    ID2D1SimplifiedGeometrySink* geometrySink,  
-    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *simplificationOption*  
- Hodnota, která určuje, zda zjednodušené geometrie by měl obsahovat křivek.  
-  
- *worldTransform*  
- Transformace, které chcete použít pro zjednodušené geometrie.  
-  
- *geometrySink*  
- ID2D1SimplifiedGeometrySink, ke kterému se připojí zjednodušené geometrie.  
-  
- *flatteningTolerance*  
- Maximální rozsah na vzdálenost mezi body v polygonálních aproximace geometrického útvaru. Menší hodnoty poskytuje přesnější výsledky ale způsobit pomalejší provádění.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Pokud metoda bude úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.  
-  
-##  <a name="strokecontainspoint"></a>  CD2DGeometry::StrokeContainsPoint  
- Určuje, zda geometrie tahu obsahuje zadaný bod daného sílu tahu zadaný, styl a transformace.  
-  
-```  
+    D2D1_GEOMETRY_SIMPLIFICATION_OPTION simplificationOption,
+    const D2D1_MATRIX_3X2_F& worldTransform,
+    ID2D1SimplifiedGeometrySink* geometrySink,
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*simplificationOption*<br/>
+Hodnota, která určuje, jestli zjednodušené geometrie by měl obsahovat křivky.
+
+*worldTransform*<br/>
+Transformací, která se má použít pro zjednodušené geometry.
+
+*geometrySink*<br/>
+ID2D1SimplifiedGeometrySink, ke kterému je připojen zjednodušené geometry.
+
+*flatteningTolerance*<br/>
+Maximální rozsah vzdálenosti mezi body v mnohoúhelníkové aproximace geometrii. Nižší hodnoty přesnější výsledky však způsobit pomalejší spuštění.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pokud metoda uspěje, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.
+
+##  <a name="strokecontainspoint"></a>  CD2DGeometry::StrokeContainsPoint
+
+Určuje, zda geometrie stroke obsahuje zadaný bod vzhledem k zadané tloušťka čáry, styl a transformace.
+
+```
 BOOL StrokeContainsPoint(
-    CD2DPointF point,  
-    FLOAT strokeWidth,  
-    ID2D1StrokeStyle* strokeStyle,  
-    const D2D1_MATRIX_3X2_F& worldTransform,  
-    BOOL* contains,  
-    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Bod*  
- Bod, který chcete otestovat členství ve skupině.  
-  
- *strokeWidth*  
- Tloušťka tahu použít.  
-  
- *strokeStyle*  
- Styl tahu použít.  
-  
- *worldTransform*  
- Transformace, které chcete použít pro vytažené geometrie.  
-  
- *Obsahuje*  
- Po návratu tato metoda obsahuje logickou hodnotu nastavit na hodnotu TRUE, pokud geometrie tahu obsahuje zadaný bod; jinak hodnota FALSE. Musíte přidělit úložiště pro tento parametr.  
-  
- *flatteningTolerance*  
- Číselná přesnost, pomocí kterého přesné geometrickou cesty a cesty průnik se počítá. Chybějící tahu menší než tolerance body jsou považovány za stále uvnitř. Menší hodnoty poskytuje přesnější výsledky ale způsobit pomalejší provádění.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Pokud metoda bude úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.  
-  
-##  <a name="tessellate"></a>  CD2DGeometry::Tessellate  
- Vytvoří sadu trojúhelníčky po směru hodinových ručiček vinutým, které zahrnují geometrie po byla transformována, pomocí zadané matice a průmětu pomocí zadané tolerance.  
-  
-```  
+    CD2DPointF point,
+    FLOAT strokeWidth,
+    ID2D1StrokeStyle* strokeStyle,
+    const D2D1_MATRIX_3X2_F& worldTransform,
+    BOOL* contains,
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*Bod*<br/>
+Bod tak, aby test pro členství ve skupině.
+
+*strokeWidth*<br/>
+Tloušťka tahu použít.
+
+*strokeStyle*<br/>
+Styl stroke použít.
+
+*worldTransform*<br/>
+Transformací, která se má použít pro vytažené geometry.
+
+*Obsahuje*<br/>
+Po návratu tato metoda obsahuje hodnotu typu boolean nastavena na hodnotu TRUE, pokud geometrie stroke obsahuje zadaný bod; v opačném případě hodnota FALSE. Pro tento parametr, musíte přidělit úložiště.
+
+*flatteningTolerance*<br/>
+Číselná přesnost, pomocí kterého přesné geometrické cesty a cesty průnik se počítá. O méně než tolerance chybějících tahu bodů jsou stále považovány za uvnitř. Nižší hodnoty přesnější výsledky však způsobit pomalejší spuštění.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pokud metoda uspěje, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.
+
+##  <a name="tessellate"></a>  CD2DGeometry::Tessellate
+
+Vytvoří sadu po směru hodinových ručiček vinutým trojúhelníků, které zahrnují geometrii po byly transformovány, pomocí zadané matice a sloučí pomocí zadanou toleranci.
+
+```
 BOOL Tessellate(
-    const D2D1_MATRIX_3X2_F& worldTransform,  
-    ID2D1TessellationSink* tessellationSink,  
-    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *worldTransform*  
- Transformace, které chcete použít pro tento geometry, nebo hodnota NULL.  
-  
- *tessellationSink*  
- ID2D1TessellationSink, ke kterému teselace sestavy se připojí.  
-  
- *flatteningTolerance*  
- Maximální rozsah na vzdálenost mezi body v polygonálních aproximace geometrického útvaru. Menší hodnoty poskytuje přesnější výsledky ale způsobit pomalejší provádění.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Pokud metoda bude úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.  
-  
-##  <a name="widen"></a>  CD2DGeometry::widen  
- Rozšiřuje geometrie podle zadaného tahu a zapíše výsledek ID2D1SimplifiedGeometrySink po jejím transformovat zadaný matice a průmětu pomocí zadané tolerance.  
-  
-```  
+    const D2D1_MATRIX_3X2_F& worldTransform,
+    ID2D1TessellationSink* tessellationSink,
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*worldTransform*<br/>
+Transformací, která se má použít pro tento geometrie, nebo hodnota NULL.
+
+*tessellationSink*<br/>
+ID2D1TessellationSink, ke kterému teselace sestavy se připojí.
+
+*flatteningTolerance*<br/>
+Maximální rozsah vzdálenosti mezi body v mnohoúhelníkové aproximace geometrii. Nižší hodnoty přesnější výsledky však způsobit pomalejší spuštění.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pokud metoda uspěje, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.
+
+##  <a name="widen"></a>  CD2DGeometry::widen
+
+Rozšiřuje geometrie pomocí zadaného tahů a zapíše výsledek do ID2D1SimplifiedGeometrySink byla určená matrix transformovat a sloučí pomocí zadanou toleranci.
+
+```
 BOOL Widen(
-    FLOAT strokeWidth,  
-    ID2D1StrokeStyle* strokeStyle,  
-    const D2D1_MATRIX_3X2_F& worldTransform,  
-    ID2D1SimplifiedGeometrySink* geometrySink,  
-    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *strokeWidth*  
- Hodnota, o který rozšíří geometrie.  
-  
- *strokeStyle*  
- Styl tahu aplikovat na geometry, nebo hodnotu NULL.  
-  
- *worldTransform*  
- Transformace se použije k geometrie po rozšíření ho.  
-  
- *geometrySink*  
- ID2D1SimplifiedGeometrySink, ke kterému se připojí rozšířené geometrie.  
-  
- *flatteningTolerance*  
- Maximální rozsah na vzdálenost mezi body v polygonálních aproximace geometrického útvaru. Menší hodnoty poskytuje přesnější výsledky ale způsobit pomalejší provádění.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Pokud metoda bude úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.  
-  
-## <a name="see-also"></a>Viz také  
- [Třídy](../../mfc/reference/mfc-classes.md)
+    FLOAT strokeWidth,
+    ID2D1StrokeStyle* strokeStyle,
+    const D2D1_MATRIX_3X2_F& worldTransform,
+    ID2D1SimplifiedGeometrySink* geometrySink,
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*strokeWidth*<br/>
+Rozsah, pomocí které se má rozšířit geometrii.
+
+*strokeStyle*<br/>
+Styl stroke vyrovnat geometrie, nebo hodnota NULL.
+
+*worldTransform*<br/>
+Transformací, která se má použít pro geometrii po jeho rozšíření.
+
+*geometrySink*<br/>
+ID2D1SimplifiedGeometrySink, ke kterému se rozšířil geometrie připojí.
+
+*flatteningTolerance*<br/>
+Maximální rozsah vzdálenosti mezi body v mnohoúhelníkové aproximace geometrii. Nižší hodnoty přesnější výsledky však způsobit pomalejší spuštění.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pokud metoda uspěje, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.
+
+## <a name="see-also"></a>Viz také
+
+[Třídy](../../mfc/reference/mfc-classes.md)

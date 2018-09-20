@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 46e2a87515e2b129c31f68e31b3231eb1699e844
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 69f9d3eed4a357df38e2c62e2f49e33f579b952a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591105"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402795"
 ---
 # <a name="boolstructmember-data-member"></a>BoolStruct::Member – datový člen
 
@@ -46,5 +46,5 @@ Určuje, že [ComPtr](../windows/comptr-class.md) je nebo není, Správa doba ž
 
 ## <a name="see-also"></a>Viz také
 
-[BoolStruct – struktura](../windows/boolstruct-structure.md)  
+[BoolStruct – struktura](../windows/boolstruct-structure.md)<br/>
 [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

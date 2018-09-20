@@ -1,5 +1,5 @@
 ---
-title: 2.7.1 threadprivate – direktiva | Microsoft Docs
+title: 2.7.1 threadprivate – direktiva | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,70 +12,71 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9912ccbfa6f5773ec1e523245f75e675bb82244
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 31c9c70940b558d0b4cc3f77677665235417694d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692649"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398141"
 ---
 # <a name="271-threadprivate-directive"></a>2.7.1 threadprivate – direktiva
-`threadprivate` – Direktiva umožňuje pojmenované rozsah souboru, obor názvů nebo statický rozsah bloku proměnné zadané v *seznamu proměnné* privátní na vlákno. *Proměnná seznamu* je textový soubor s oddělovači seznam proměnných, které nemají typ neúplné. Syntaxe `threadprivate` – Direktiva vypadá takto:  
-  
-```  
-#pragma omp threadprivate(variable-list) new-line  
-```  
-  
- Každá kopie `threadprivate` proměnné je inicializován jednou, neurčené okamžiku v programu před první odkaz na tuto kopii a obvyklým způsobem (tj. jako hlavní kopii by jde inicializovat na sériové provádění programu). Všimněte si, že pokud objekt odkazuje explicitní inicializátor `threadprivate` proměnné a hodnotu objektu je upravena před první odkaz na kopii proměnnou a pak toto chování neurčená.  
-  
- Jako s soukromé proměnné, vlákno nesmí odkazovat na jiné vlákno kopii `threadprivate` objektu. Během sériové oblasti a hlavní oblasti programu odkazy bude hlavní vlákno kopii objektu.  
-  
- Po provedení první paralelní oblast, data v `threadprivate` objekty záruku, že k zachování jen pokud dynamická vláken mechanismus je zakázané, a pokud počet vláken, zůstane nezměněno pro všechny paralelní oblasti.  
-  
- Omezení, které mají `threadprivate` – direktiva jsou následující:  
-  
--   A `threadprivate` směrnice pro proměnné rozsah souboru nebo oboru názvů musí být uvedena mimo žádná definice nebo deklarace a musí předcházet lexikálně všechny odkazy na všechny proměnné ve svém seznamu.  
-  
--   Každou proměnnou v *seznamu proměnné* z `threadprivate` směrnice v souboru nebo oboru názvů oboru musí odkazovat na deklarace proměnné v oboru souboru nebo oboru názvů, který lexikálně předchází direktivu.  
-  
--   A `threadprivate` směrnice pro proměnné statický rozsah bloku musí být v rozsahu proměnné a není ve vnořených oboru. Direktiva lexikálně musí předcházet všechny odkazy na všechny proměnné ve svém seznamu.  
-  
--   Každou proměnnou v *seznamu proměnné* z `threadprivate` – direktiva v oboru bloku musí odkazovat na deklarace proměnné ve stejném oboru lexikálně předcházejícího direktivu. Deklarace proměnné, musíte použít statické – specifikátor třídy úložiště.  
-  
--   Jestliže se v proměnné `threadprivate` direktivy v jednotce jeden překladu, musí být zadaná v `threadprivate` direktivy v každou překlad jednotku, ve kterém je deklarovaná.  
-  
--   A `threadprivate` proměnné nesmí zobrazí všechny klauzulí s výjimkou `copyin`, `copyprivate`, `schedule`, `num_threads`, nebo **Pokud** klauzule.  
-  
--   Adresa `threadprivate` proměnné není konstantu adresu.  
-  
--   A `threadprivate` proměnná nesmí mít typ neúplné nebo typu odkazu.  
-  
--   A `threadprivate` proměnná s typu bez POD třídy, pokud je deklarovaný s inicializátoru explicitní, musí mít k přístupný, jednoznačným kopírovacího konstruktoru.  
-  
- Následující příklad ilustruje, jak úprava proměnné, která se zobrazí v inicializátoru může způsobit neurčené chování a také jak se vyhnout tomuto problému s použitím pomocného objektu a konstruktor copy.  
-  
-```  
-int x = 1;  
-T a(x);  
-const T b_aux(x); /* Capture value of x = 1 */  
-T b(b_aux);  
-#pragma omp threadprivate(a, b)  
-  
-void f(int n) {  
-   x++;  
-   #pragma omp parallel for  
-   /* In each thread:  
-   * Object a is constructed from x (with value 1 or 2?)  
-   * Object b is copy-constructed from b_aux  
-   */  
-   for (int i=0; i<n; i++) {  
-      g(a, b); /* Value of a is unspecified. */  
-   }  
-}  
-```  
-  
-## <a name="cross-references"></a>Křížové odkazy:  
-  
--   Dynamické vláken, najdete v části [části 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) na stránce 39.  
-  
--   `OMP_DYNAMIC` proměnné, naleznete v prostředí [části 4.3](../../parallel/openmp/4-3-omp-dynamic.md) na stránce 49.
+
+`threadprivate` – Direktiva vytvoří pojmenovaného rozsahu souboru, rozsahu oboru názvů nebo zadané v proměnné statického oboru bloku *seznamu proměnné* privátní ve vlákně. *seznamu proměnné* je čárkou oddělený seznam proměnných, které nemají neúplný typ. Syntaxe `threadprivate` direktivy je následující:
+
+```
+#pragma omp threadprivate(variable-list) new-line
+```
+
+Každá kopie `threadprivate` proměnná je inicializována jednou, neurčené okamžiku v programu před první odkaz na tuto kopii a obvyklým způsobem (tj. jako hlavní kopie by být inicializovány v sériové provádění programu). Všimněte si, že pokud je objekt odkazuje na explicitní inicializátoru `threadprivate` proměnné a hodnoty objektu se upraví před první odkaz na kopii proměnné a pak chování není zadána.
+
+Jak se žádné soukromé proměnné vlákno nesmí odkazovat na jiné vlákno kopii `threadprivate` objektu. Během sériových oblastech a hlavní oblasti program bude odkazy na hlavní podproces kopii objektu.
+
+Po provedení první paralelní oblasti, data v `threadprivate` objekty je zaručeno, že zachování pouze pokud dynamický vlákna mechanismus je zakázané, a pokud počet vláken zůstávají beze změn pro všechny paralelní oblasti.
+
+Omezení týkající `threadprivate` směrnice jsou následující:
+
+- A `threadprivate` směrnice pro proměnné s rozsahem souboru nebo rozsahu oboru názvů musí být uvedena mimo všechny definice nebo deklarace a musí předcházet lexikálně všechny odkazy na některé z proměnné ve svém seznamu.
+
+- Každou proměnnou v *seznamu proměnné* z `threadprivate` – direktiva v oboru souboru nebo oboru názvů musí odkazovat na deklaraci proměnné v oboru souboru nebo oboru názvů, který lexikálně předchází směrnice.
+
+- A `threadprivate` směrnice pro proměnné, statické rozsahu bloku musí být uvedena v oboru proměnné a nejsou ve vnořeném oboru. Direktiva lexikálně musí předcházet všechny odkazy na některé z proměnné ve svém seznamu.
+
+- Každou proměnnou v *seznamu proměnné* z `threadprivate` – direktiva v rozsahu bloku musí odkazovat na deklaraci proměnné ve stejném oboru, který předchází lexikálně směrnice. Deklarace proměnné musí používat specifikátor statickou třídu úložiště.
+
+- Je-li proměnná zadána v `threadprivate` direktiv v jednotce překladu. jeden, musí se zadat v `threadprivate` direktiv v každé jednotce překladu, ve kterém je deklarována.
+
+- A `threadprivate` proměnné nesmí objevit všechny klauzule except `copyin`, `copyprivate`, `schedule`, `num_threads`, nebo **Pokud** klauzuli.
+
+- Adresa `threadprivate` proměnná není konstantu adresu.
+
+- A `threadprivate` proměnná nesmí být neúplný typ nebo typ odkazu.
+
+- A `threadprivate` proměnná typu třídy než POD musí být přístupná a jednoznačná kopírovací konstruktor, pokud je deklarovaná s inicializátorem explicitní.
+
+Následující příklad ukazuje, jak úpravy, které se zobrazí v inicializátoru proměnné může způsobit neurčené chování a také jak se vyhnout tomuto problému s použitím pomocného objektu a konstruktor kopírování.
+
+```
+int x = 1;
+T a(x);
+const T b_aux(x); /* Capture value of x = 1 */
+T b(b_aux);
+#pragma omp threadprivate(a, b)
+
+void f(int n) {
+   x++;
+   #pragma omp parallel for
+   /* In each thread:
+   * Object a is constructed from x (with value 1 or 2?)
+   * Object b is copy-constructed from b_aux
+   */
+   for (int i=0; i<n; i++) {
+      g(a, b); /* Value of a is unspecified. */
+   }
+}
+```
+
+## <a name="cross-references"></a>Křížové odkazy:
+
+- Dynamické vlákna, naleznete v tématu [části 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) na stránce 39.
+
+- `OMP_DYNAMIC` Proměnná, viz prostředí [části 4.3](../../parallel/openmp/4-3-omp-dynamic.md) na stránce 49.

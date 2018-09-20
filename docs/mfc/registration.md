@@ -1,5 +1,5 @@
 ---
-title: Registrace | Microsoft Docs
+title: Registrace | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,51 +21,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d51589d9261d497c4c1f9185bd90b889e46eb34
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: e115edc4a7a276e04e886a0d7d324308dbe1c8ed
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930687"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399584"
 ---
 # <a name="registration"></a>Registrace
-Pokud chce uživatel OLE položku vložit do aplikace, uvede OLE typy objektů můžete vybrat ze seznamu. OLE získá tento seznam z registrační databáze systému, který obsahuje informace, které poskytuje všechny serverové aplikace. Když server registruje, položky, které se uloží do databáze systému registrace (registr) popisují každý typ objektu, který poskytne, soubor rozšíření a cestu sama na sebe, mimo jiné informace o.  
-  
- Rozhraní framework a OLE systému dynamické knihovny (DLL) použijte tuto registru Pokud chcete zjistit, jaké typy OLE – položky jsou k dispozici v systému. Systém OLE používat knihovny DLL i tato registru určit, jak spuštění serverové aplikace, když je aktivován propojený nebo vložený objekt.  
-  
- Tento článek popisuje, co každý server aplikace musí udělat, když je nainstalovaná a pokaždé, když se spustí.  
-  
- Podrobné informace o systémovou databázi registrace a formát souboru .reg používat k aktualizaci, najdete v článku *OLE referenční informace pro programátory*.  
-  
-##  <a name="_core_server_installation"></a> Instalace serveru  
- Při první instalaci aplikace server, se musí zaregistrovat všechny typy položek OLE, které podporuje. Můžete taky nechat serveru aktualizovat systémové databáze registrace pokaždé, když ji spustí jako samostatné aplikace. Díky tomu registrační databáze aktuální Pokud se přesune spustitelný soubor serveru.  
-  
+
+Když chce uživatel vložení položky OLE do aplikace, OLE zobrazí seznam typů objektů lze vybírat. OLE získá z registrační databázi systému, který obsahuje všechny serverové aplikace na základě informací poskytnutých tohoto seznamu. Když na server se zaregistruje, položky, které se umístí do systému registrační databázi (registr) popisují každý typ objektu, který poskytne, rozšíření a cesta na sebe sama, mimo jiné informace.
+
+Rozhraní framework a OLE systému dynamické knihovny (DLL) použít k určení, jaké typy položek OLE jsou dostupné v systému tohoto registru. OLE systému knihovny DLL také používají tento registr k určení způsobu spuštění serverové aplikace, když se aktivuje objekt propojené nebo vložené.
+
+Tento článek popisuje, co každý server aplikace je potřeba udělat, když je nainstalovaná a pokaždé, když je proveden.
+
+Podrobné informace o systémovou databázi registrace a formátu souboru .reg používat k aktualizaci, najdete v článku *OLE referenční informace pro programátory*.
+
+##  <a name="_core_server_installation"></a> Instalace serveru
+
+Při první instalaci serverové aplikace, měla by ho zaregistrovat všechny typy položek OLE, které podporuje. Můžete taky nechat serveru aktualizovat registraci databáze systému pokaždé, když je spuštěn jako samostatné aplikace. Tím zůstane registrační databázi aktuální Pokud se přesune na server spustitelný soubor.
+
 > [!NOTE]
->  Aplikace MFC generované průvodcem aplikace automaticky zaregistrovat při spuštění jako samostatné aplikace.  
-  
- Pokud chcete pro registraci aplikace během instalace, použijte RegEdit.exe program. Pokud zahrnete instalačního programu s vaší aplikací, mají instalační program spustit "RegEdit /S *appname*.reg". (Příznak /S Určuje tichou operace, tedy nezobrazuje dialogu reporting úspěšné dokončení příkazu.) Jinak vyzvat uživatele k spuštění RegEdit ručně.  
-  
+>  Aplikace MFC generované průvodcem knihovnou aplikace automaticky zaregistrovat při spuštění jako samostatné aplikace.
+
+Pokud chcete zaregistrovat aplikaci během instalace, použití RegEdit.exe programu. Pokud jste instalační program s vaší aplikací, mají instalační program spusťte "RegEdit /S *appname*.reg". (/S příznak určuje tichou operace, to znamená, nezobrazí dialogové okno úspěšné dokončení příkazu.) V opačném případě pokyny pro uživatele, chcete-li spustit program RegEdit ručně.
+
 > [!NOTE]
->  Soubor .reg vytvořený pomocí Průvodce aplikací neobsahuje úplnou cestu pro tento spustitelný soubor. Instalační program musí buď upravit soubor .reg zahrnout úplná cesta ke spustitelnému souboru nebo změnit proměnné prostředí PATH zahrnout instalační adresář.  
-  
- RegEdit sloučí obsah textový soubor .reg registrační databáze. Ověření databázi nebo ji opravit, pomocí Editoru registru. Postará neodstraňujte nezbytné položky OLE.  
-  
-##  <a name="_core_server_initialization"></a> Inicializace serveru  
- Když vytvoříte aplikaci server pomocí Průvodce aplikací, průvodce dokončí všechny úlohy inicializace pro vás automaticky. Tato část popisuje, co musíte udělat ručně zápisu serverová aplikace.  
-  
- Při spuštění aplikace server aplikace kontejneru OLE systémové knihovny DLL přidáním možnost "/ vnoření" na serveru příkazový řádek. Aplikace serveru chování se liší v závislosti na tom, jestli ho byl spuštěn kontejner, takže první věc, kterou by aplikace měla provést při jeho spuštění se kontrola "/ vnoření" nebo "-vkládání objektů" možnost na příkazovém řádku. Pokud existuje tento přepínač, načíst jinou sadu prostředků, které se zobrazí server jako aktivní buď místní nebo plně otevřít. Další informace najdete v tématu [nabídky a prostředky: serverové doplňky](../mfc/menus-and-resources-server-additions.md).  
-  
- Aplikace serveru by měly volat také jeho `CWinApp::RunEmbedded` funkce analyzovat příkazového řádku. Pokud vrátí nenulovou hodnotu, aplikace by neměla zobrazit její okno, protože byla spuštěna z aplikace kontejneru, nikoli jako samostatné aplikace. Tato funkce aktualizuje záznam serveru v systému registrační databáze a volání `RegisterAll` – členská funkce pro vás, provedení registrace instance.  
-  
- Během spouštění vaše serverová aplikace, je nutné zajistit, aby mohl vykonávat instance registrace. Registrace instance informuje OLE systémové knihovny DLL, že server je aktivní a připravené k přijímání požadavků z kontejnerů. Nepřidává žádné další položku k databázi registrace. Proveďte registraci instance serveru při volání `ConnectTemplate` – členská funkce definované `COleTemplateServer`. To připojí `CDocTemplate` do objektu `COleTemplateServer` objektu.  
-  
- `ConnectTemplate` Funkce přijímá tři parametry: serveru *CLSID*, ukazatel `CDocTemplate` objekt a příznak označující, zda server podporuje víc instancí. Miniserver musí být schopné podporovat více instancí, to znamená, musí být možné více instancí serveru můžou běžet současně, jednu pro každý kontejner. V důsledku toho předat **TRUE** pro tento příznak při spuštění miniserver.  
-  
- Pokud píšete miniserver, podle definice ho bude vždy spustit kontejner. Stále měli analyzovat příkazového řádku zkontrolujte možnost "/ vnoření". Absence této možnosti na příkazovém řádku znamená, že má uživatel pokusu o spuštění miniserver jako samostatné aplikace. Pokud k tomu dojde, registrace serveru u systémové databáze registrace a pak zobrazit okno se zprávou informující uživatele ke spuštění miniserver z kontejneru aplikace.  
-  
-## <a name="see-also"></a>Viz také  
- [OLE](../mfc/ole-in-mfc.md)   
- [Servery](../mfc/servers.md)   
- [CWinApp::RunAutomated](../mfc/reference/cwinapp-class.md#runautomated)   
- [CWinApp::RunEmbedded](../mfc/reference/cwinapp-class.md#runembedded)   
- [COleTemplateServer – třída](../mfc/reference/coletemplateserver-class.md)
+>  Soubor .reg vytvořený pomocí Průvodce aplikací neobsahuje úplnou cestu pro spustitelný soubor. Instalační program musí buď upravte soubor .reg zahrnout úplnou cestu ke spustitelnému souboru nebo upravit proměnné prostředí PATH zahrnout v instalačním adresáři.
+
+Příkaz RegEdit sloučí obsah textový soubor .reg registrační databázi. Chcete-li ověřit databázi nebo ji opravit pomocí Editoru registru. Snažte se vyhnout odstranění nezbytné položky OLE.
+
+##  <a name="_core_server_initialization"></a> Inicializace serveru
+
+Při vytvoření serverové aplikace pomocí Průvodce aplikací, průvodce dokončí všechny úlohy inicializace pro vás automaticky. Tato část popisuje, co musíte udělat, když zapíšete aplikaci server ručně.
+
+Když je aplikace typu kontejner pro spouštěn serverové aplikace, OLE systémové knihovny DLL přidejte přepínač "/ vkládání" na serveru příkazový řádek. Serverová aplikace chování se liší v závislosti na tom, jestli ho spustila kontejner, tedy první věc, kterou by aplikace měla provést při jeho spuštění vyhledat "/ vkládání" nebo "-obsažení" možnost na příkazovém řádku. Pokud tento přepínač existuje, načíst jinou sadu prostředků, které ukazují server jako aktivní buď místní nebo plně otevřete. Další informace najdete v tématu [nabídky a prostředky: serverové doplňky](../mfc/menus-and-resources-server-additions.md).
+
+Serverová aplikace byste také zavolat jeho `CWinApp::RunEmbedded` funkci parsování příkazového řádku. Pokud vrátí nenulovou hodnotu, aplikace by neměl zobrazit její okno, protože byl spuštěn z aplikace typu kontejner, ne jako samostatné aplikace. Tato funkce aktualizuje položku serveru v systému registrační databázi a volání `RegisterAll` členskou funkci za vás provádí registraci instance.
+
+Při spuštění vaší serverové aplikace, musíte zajistit, že můžete provádět registraci instance. Registraci instance informuje OLE systémové knihovny DLL, zda je server aktivní a připravena k přijímání požadavků z kontejnerů. Nepřidá položku do registrační databázi. Proveďte registraci instance serveru voláním `ConnectTemplate` členské funkce definované `COleTemplateServer`. To se připojí `CDocTemplate` objektu `COleTemplateServer` objektu.
+
+`ConnectTemplate` Funkce přijímá tři parametry: serveru *CLSID*, ukazatel `CDocTemplate` objektu a příznak označující, zda je server podporuje víc instancí. Miniserver musí být schopni poskytovat podporu více instancí, to znamená, musí být možné pro víc instancí serveru běžet současně, jeden pro každý kontejner. V důsledku toho předat **TRUE** pro tento příznak při spuštění miniserver.
+
+Pokud píšete miniserver, podle definice, které se spustí vždy kontejnerem. By se měly stále analyzovat příkazový řádek ke kontrole možnost "/ vkládání". Neexistence tuto možnost na příkazovém řádku znamená, že uživatel nepokusí spustit miniserver jako samostatné aplikace. Pokud k tomu dojde, server zaregistrujte registrační databázi systému a pak zobrazí okno se zprávou informující uživatele ke spuštění miniserver z aplikace typu kontejner.
+
+## <a name="see-also"></a>Viz také
+
+[OLE](../mfc/ole-in-mfc.md)<br/>
+[Servery](../mfc/servers.md)<br/>
+[CWinApp::RunAutomated](../mfc/reference/cwinapp-class.md#runautomated)<br/>
+[CWinApp::RunEmbedded](../mfc/reference/cwinapp-class.md#runembedded)<br/>
+[COleTemplateServer – třída](../mfc/reference/coletemplateserver-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Třída CFolderPickerDialog | Microsoft Docs
+title: Cfolderpickerdialog – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,85 +18,92 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ded586e6d8ad5252d73e0972424915d174b8b1f3
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: d80839fca18d62c5fa9a9432296777c546268c5b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956516"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411427"
 ---
-# <a name="cfolderpickerdialog-class"></a>CFolderPickerDialog – třída
-Třída CFolderPickerDialog implementuje CFileDialog v režimu výběr složky.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CFolderPickerDialog : public CFileDialog;  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CFolderPickerDialog:: ~ CFolderPickerDialog](#cfolderpickerdialog__~cfolderpickerdialog)|Destruktor.|  
-|[CFolderPickerDialog::CFolderPickerDialog](#cfolderpickerdialog)|Konstruktor|  
-  
-## <a name="remarks"></a>Poznámky  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
-  
- [CWnd](../../mfc/reference/cwnd-class.md)  
-  
- [CDialog](../../mfc/reference/cdialog-class.md)  
-  
- [CCommonDialog](../../mfc/reference/ccommondialog-class.md)  
-  
- [CFileDialog](../../mfc/reference/cfiledialog-class.md)  
-  
- `CFolderPickerDialog`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxdlgs.h  
-  
-##  <a name="cfolderpickerdialog"></a>  CFolderPickerDialog::CFolderPickerDialog  
- Konstruktor  
-  
-```  
+# <a name="cfolderpickerdialog-class"></a>Cfolderpickerdialog – třída
+
+Cfolderpickerdialog – třída implementuje CFileDialog v režimu pro výběr složky.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CFolderPickerDialog : public CFileDialog;
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[Cfolderpickerdialog –:: ~ cfolderpickerdialog –](#cfolderpickerdialog__~cfolderpickerdialog)|Destruktor.|
+|[CFolderPickerDialog::CFolderPickerDialog](#cfolderpickerdialog)|Konstruktor|
+
+## <a name="remarks"></a>Poznámky
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[Třídy CObject](../../mfc/reference/cobject-class.md)
+
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+
+[CWnd](../../mfc/reference/cwnd-class.md)
+
+[CDialog](../../mfc/reference/cdialog-class.md)
+
+[Ccommondialog –](../../mfc/reference/ccommondialog-class.md)
+
+[CFileDialog](../../mfc/reference/cfiledialog-class.md)
+
+`CFolderPickerDialog`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxdlgs.h
+
+##  <a name="cfolderpickerdialog"></a>  CFolderPickerDialog::CFolderPickerDialog
+
+Konstruktor
+
+```
 explicit CFolderPickerDialog(
-    LPCTSTR lpszFolder = NULL,  
-    DWORD dwFlags = 0,  
-    CWnd* pParentWnd = NULL,  
+    LPCTSTR lpszFolder = NULL,
+    DWORD dwFlags = 0,
+    CWnd* pParentWnd = NULL,
     DWORD dwSize = 0);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *lpszFolder*  
- Počáteční složka.  
-  
- *dwFlags*  
- Kombinace jeden nebo více příznaky, které vám umožní přizpůsobit dialogové okno.  
-  
- *pParentWnd*  
- Ukazatel na okno nadřazené nebo vlastníka objektu pole dialogového okna.  
-  
- *dwSize*  
- Velikost strukturu název otevřeného souboru.  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="_dtorcfolderpickerdialog"></a>  CFolderPickerDialog:: ~ CFolderPickerDialog  
- Destruktor.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*lpszFolder*<br/>
+Výchozí složka.
+
+*dwFlags*<br/>
+Kombinace jedné nebo více příznaků, které umožňují přizpůsobit dialogových oken.
+
+*pParentWnd*<br/>
+Ukazatel na okno nadřazené nebo vlastníka objektu pole dialogového okna.
+
+*dwSize*<br/>
+Velikost LPSTRFILE struktury.
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="_dtorcfolderpickerdialog"></a>  Cfolderpickerdialog –:: ~ cfolderpickerdialog –
+
+Destruktor.
+
+```
 virtual ~CFolderPickerDialog();
-```  
-  
-### <a name="remarks"></a>Poznámky  
-  
-## <a name="see-also"></a>Viz také  
- [Třídy](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="remarks"></a>Poznámky
+
+## <a name="see-also"></a>Viz také
+
+[Třídy](../../mfc/reference/mfc-classes.md)

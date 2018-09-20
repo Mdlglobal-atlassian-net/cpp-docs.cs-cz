@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: vytvoření uživatelského ovládacího prvku a hostitelské poskytování zobrazení MDI | Microsoft Docs'
+title: 'Postupy: vytvoření uživatelského ovládacího prvku a hostitelské poskytování zobrazení MDI | Dokumentace Microsoftu'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -16,99 +16,101 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 449f0026cd2d7603ceb190cc747138189313974f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eeeb02393e96e7afd2deed875465f6797d145b6e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33136480"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399809"
 ---
 # <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Postupy: Vytvoření uživatelského ovládacího prvku a hostitelské poskytování zobrazení MDI
-Následující postup popisuje vytvoření uživatelského ovládacího prvku rozhraní .NET Framework, vytváření uživatelského ovládacího prvku v knihovnu tříd ovládacího prvku (konkrétně knihovny ovládacích prvků Windows projekt) a pak kompilace projektu do sestavení. Ovládací prvek může být používán pak z aplikace MFC, která používá třídy odvozené od třídy [CView – třída](../mfc/reference/cview-class.md) a [CWinFormsView třída](../mfc/reference/cwinformsview-class.md).  
-  
- Informace o postupu při vytvoření uživatelského ovládacího prvku Windows Forms a vytváření knihovny tříd řízení najdete v tématu [postupy: vytváření uživatelských ovládacích prvků](/dotnet/framework/winforms/controls/how-to-author-composite-controls).  
-  
+
+Následující kroky ukazují, jak vytvořit uživatelský ovládací prvek rozhraní .NET Framework, ovládací prvek v knihovně tříd ovládacího prvku (konkrétně v projektu knihovny ovládacích prvků Windows) a poté zkompilovat projekt do sestavení. Ovládací prvek může být potom používán z aplikace knihovny MFC, která používá třídy odvozené z [CView Class](../mfc/reference/cview-class.md) a [CWinFormsView – třída](../mfc/reference/cwinformsview-class.md).
+
+Informace o tom, jak vytvořit uživatelský ovládací prvek Windows Forms a vytvořit knihovnu tříd ovládacího prvku, naleznete v tématu [postupy: vytváření uživatelských ovládacích prvků](/dotnet/framework/winforms/controls/how-to-author-composite-controls).
+
 > [!NOTE]
->  V některých případech nemusí ovládací prvky Windows Forms, jako je například ovládacího prvku mřížky třetích stran chovat spolehlivě, pokud hostované v aplikaci MFC. Doporučené řešení je umístit uživatelského ovládacího prvku Windows Forms v aplikaci MFC a umístěte ovládací prvek mřížky třetích stran v rámci uživatelského ovládacího prvku.  
-  
- Tento postup předpokládá, že jste vytvořili projekt Windows Forms – ovládací prvky knihovny s názvem WindowsFormsControlLibrary1, podle postupu v [postupy: vytvoření uživatelského ovládacího prvku a vložení v dialogovém okně](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).  
-  
-### <a name="to-create-the-mfc-host-application"></a>Chcete-li vytvořit hostitelskou aplikaci MFC  
-  
-1.  Vytvoření aplikace knihovny MFC projektu.  
-  
-     Na **soubor** nabídce vyberte možnost **nový**a potom klikněte na **projektu**. V **Visual C++** složky, vyberte **aplikace knihovny MFC**.  
-  
-     V **název** zadejte `MFC02` a změňte **řešení** nastavení **přidat do řešení**. Click **OK**.  
-  
-     V **Průvodce aplikací knihovny MFC**přijměte všechny výchozí hodnoty a pak klikněte na tlačítko **Dokončit**. Tím se vytvoří aplikace knihovny MFC rozhraní více dokumentů.  
-  
-2.  Konfigurace projektu pro podporu Common Language Runtime (CLR).  
-  
-     V **Průzkumníku řešení**, klikněte pravým tlačítkem myši `MFC01` uzel projektu a vyberte **vlastnosti** v místní nabídce. **Stránky vlastností** zobrazí se dialogové okno.  
-  
-     V části **vlastnosti konfigurace**, vyberte **Obecné**. V části **výchozí projekt** nastavte **podpory Common Language Runtime** k **Podpora Common Language Runtime (/ clr)**.  
-  
-     V části **vlastnosti konfigurace**, rozbalte položku **C/C++** a klikněte na tlačítko **Obecné** uzlu. Nastavit **ladění formátu informací** k **programu databáze (/Zi)**.  
-  
-     Klikněte **generování kódu** uzlu. Nastavit **povolit minimální opětovné sestavení** k **ne (/ Gm –)**. Nastavte také **základní kontroluje Runtime** k **výchozí**.  
-  
-     Klikněte na tlačítko **OK** proveďte změny.  
-  
-3.  V stdafx.h přidejte následující řádek:  
-  
-    ```  
-    #using <System.Windows.Forms.dll>  
-    ```  
-  
-4.  Přidáte odkaz na ovládací prvek .NET.  
-  
-     V **Průzkumníku řešení**, klikněte pravým tlačítkem myši `MFC02` uzel projektu a vyberte **přidat**, **odkazy**. V **stránka vlastností**, klikněte na tlačítko **přidat nový odkaz**, vyberte WindowsFormsControlLibrary1 (v části **projekty** kartě) a klikněte na tlačítko **OK** . Tento příkaz přidá odkaz ve formě [/FU](../build/reference/fu-name-forced-hash-using-file.md) tak, aby se kompilace programu – možnost kompilátoru; také zkopíruje WindowsFormsControlLibrary1.dll do `MFC02` adresáře projektu tak, aby se bude program spouštět.  
-  
-5.  Ve stdafx.h vyhledejte tento řádek:  
-  
-    ```  
-    #endif // _AFX_NO_AFXCMN_SUPPORT   
-    ```  
-  
-     Přidejte tyto řádky nad ním:  
-  
-    ```  
-    #include <afxwinforms.h>   // MFC Windows Forms support  
-    ```  
-  
-6.  Upravte zobrazení třídy tak, aby dědila z [CWinFormsView](../mfc/reference/cwinformsview-class.md).  
-  
-     V MFC02View.h nahraďte [CView](../mfc/reference/cview-class.md) s [CWinFormsView](../mfc/reference/cwinformsview-class.md) tak, aby se kód zobrazí takto:  
-  
-    ```  
-    class CMFC02View : public CWinFormsView  
-    {  
-    };  
-    ```  
-  
-     Pokud chcete přidat další zobrazení do vaší aplikace MDI, budete muset volat [CWinApp::AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) pro každý zobrazení, které vytvoříte.  
-  
-7.  Upravte soubor MFC02View.cpp změnit CView na CWinFormsView v IMPLEMENT_DYNCREATE – makro a mapy zpráv a nahradit stávající prázdný konstruktor s konstruktorem vidíte níže:  
-  
-    ```  
-    IMPLEMENT_DYNCREATE(CMFC02View, CWinFormsView)  
-  
-    CMFC02View::CMFC02View(): CWinFormsView(WindowsFormsControlLibrary1::UserControl1::typeid)   
-    {  
-    }  
-    BEGIN_MESSAGE_MAP(CMFC02View, CWinFormsView)  
-    //leave existing body as is  
-    END_MESSAGE_MAP()  
-    ```  
-  
-8.  Sestavte a spusťte projekt.  
-  
-     V **Průzkumníku řešení**, klikněte pravým tlačítkem na MFC02 a vyberte **nastavit jako spouštěný projekt**.  
-  
-     Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.  
-  
-     Na **ladění** nabídky, klikněte na tlačítko **spustit bez ladění**.  
-  
-## <a name="see-also"></a>Viz také  
- [Hostitelské poskytování uživatelského ovládacího prvku Windows Forms jako zobrazení MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)
+>  V některých případech se ovládací prvky Windows Forms, jako je například ovládací prvek mřížky jiného výrobce, pravděpodobně nebudou chovat spolehlivě když jsou hostované v aplikaci MFC. Doporučené řešení je umístit uživatelský ovládací prvek Windows Forms do aplikace knihovny MFC a umístit ovládací prvek mřížky jiného výrobce do uživatelského ovládacího prvku.
+
+Tento postup předpokládá, že jste vytvořili projekt Knihovna ovládacích prvků Windows Forms s názvem WindowsFormsControlLibrary1, podle postupu v [postupy: vytvoření uživatelského ovládacího prvku a hostitele v dialogovém okně](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
+
+### <a name="to-create-the-mfc-host-application"></a>Chcete-li vytvořit hostitelskou aplikaci knihovny MFC
+
+1. Vytvořte projekt aplikace knihovny MFC.
+
+     Na **souboru** nabídce vyberte možnost **nový**a potom klikněte na tlačítko **projektu**. V **Visual C++** složky, vyberte **aplikace knihovny MFC**.
+
+     V **název** zadejte `MFC02` a změnit **řešení** nastavení **přidat do řešení**. Klikněte na tlačítko **OK**.
+
+     V **Průvodce aplikací knihovny MFC**, přijměte všechny výchozí hodnoty a klikněte na **Dokončit**. Tím se vytvoří aplikace knihovny MFC s rozhraním více dokumentů.
+
+1. Konfigurace projektu pro podporu Common Language Runtime (CLR).
+
+     V **Průzkumníka řešení**, klikněte pravým tlačítkem myši `MFC01` uzel projektu a vyberte **vlastnosti** v místní nabídce. **Stránky vlastností** zobrazí se dialogové okno.
+
+     V části **vlastnosti konfigurace**vyberte **Obecné**. V části **výchozí nastavení projektu** nastavte **Common Language Runtime support** k **Common Language Runtime Support (/ clr)**.
+
+     V části **vlastnosti konfigurace**, rozbalte **C/C++** a klikněte na tlačítko **Obecné** uzlu. Nastavte **formát ladicích informací** k **Program Database (/Zi)**.
+
+     Klikněte na tlačítko **generování kódu** uzlu. Nastavte **povolit minimální opětovné sestavení** k **ne (/ Gm-)**. Nastavit také **Basic Runtime Checks** k **výchozí**.
+
+     Klikněte na tlačítko **OK** změny.
+
+1. Ve stdafx.h přidejte následující řádek:
+
+    ```
+    #using <System.Windows.Forms.dll>
+    ```
+
+1. Přidejte odkaz na ovládací prvek .NET.
+
+     V **Průzkumníka řešení**, klikněte pravým tlačítkem myši `MFC02` uzel projektu a vyberte **přidat**, **odkazy**. V **stránku vlastností**, klikněte na tlačítko **přidat nový odkaz**, vyberte WindowsFormsControlLibrary1 (v části **projekty** kartu) a klikněte na tlačítko **OK** . To přidá odkaz ve formuláři [/FU](../build/reference/fu-name-forced-hash-using-file.md) – možnost kompilátoru tak, že program bude kompilován; také zkopíruje WindowsFormsControlLibrary1.dll do `MFC02` adresáře projektu tak, aby se bude program spouštět.
+
+1. Ve stdafx.h vyhledejte tento řádek:
+
+    ```
+    #endif // _AFX_NO_AFXCMN_SUPPORT
+    ```
+
+     Přidejte tyto řádky nad něj:
+
+    ```
+    #include <afxwinforms.h>   // MFC Windows Forms support
+    ```
+
+1. Upravte zobrazení třídy tak, aby dědila z [CWinFormsView](../mfc/reference/cwinformsview-class.md).
+
+     V MFC02View.h nahraďte [CView](../mfc/reference/cview-class.md) s [CWinFormsView](../mfc/reference/cwinformsview-class.md) tak, aby kód se zobrazí takto:
+
+    ```
+    class CMFC02View : public CWinFormsView
+    {
+    };
+    ```
+
+     Pokud chcete přidat další zobrazení do vaší aplikace MDI, budete muset volat [CWinApp::AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) pro každé zobrazení, které vytvoříte.
+
+1. Upravte soubor MFC02View.cpp tak, že změníte CView na CWinFormsView v makru IMPLEMENT_DYNCREATE a mapování zpráv a nahradit stávající prázdný konstruktor za konstruktor uvedený níže:
+
+    ```
+    IMPLEMENT_DYNCREATE(CMFC02View, CWinFormsView)
+
+    CMFC02View::CMFC02View(): CWinFormsView(WindowsFormsControlLibrary1::UserControl1::typeid)
+    {
+    }
+    BEGIN_MESSAGE_MAP(CMFC02View, CWinFormsView)
+    //leave existing body as is
+    END_MESSAGE_MAP()
+    ```
+
+1. Sestavte a spusťte projekt.
+
+     V **Průzkumníka řešení**, pravým tlačítkem myši na MFC02 a vyberte **nastavit jako spouštěný projekt**.
+
+     Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
+
+     Na **ladění** nabídky, klikněte na tlačítko **spustit bez ladění**.
+
+## <a name="see-also"></a>Viz také
+
+[Hostitelské poskytování uživatelského ovládacího prvku Windows Forms jako zobrazení MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)

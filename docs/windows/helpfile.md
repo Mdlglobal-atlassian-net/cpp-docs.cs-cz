@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 424c6b642bba04a22ee4dedd59e38761260ac8eb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 66cd89c28ea01c3a75d0cb25aa6f96a234e379b2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221926"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418200"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -38,7 +38,7 @@ Nastaví název souboru nápovědy pro knihovnu typů.
 
 ### <a name="parameters"></a>Parametry
 
-*Název souboru*  
+*Název souboru*<br/>
 Název souboru, který obsahuje témata nápovědy.
 
 ## <a name="remarks"></a>Poznámky
@@ -64,10 +64,10 @@ Další informace najdete v tématu [kontexty atributů](../windows/attribute-co
 
 ## <a name="see-also"></a>Viz také
 
-[IDL – atributy](../windows/idl-attributes.md)  
-[Atributy rozhraní](../windows/interface-attributes.md)  
-[Atributy třídy](../windows/class-attributes.md)  
-[Atributy metody](../windows/method-attributes.md)  
-[Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[helpcontext](../windows/helpcontext.md)  
+[IDL – atributy](../windows/idl-attributes.md)<br/>
+[Atributy rozhraní](../windows/interface-attributes.md)<br/>
+[Atributy třídy](../windows/class-attributes.md)<br/>
+[Atributy metody](../windows/method-attributes.md)<br/>
+[Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[helpcontext](../windows/helpcontext.md)<br/>
 [helpstring](../windows/helpstring.md)  

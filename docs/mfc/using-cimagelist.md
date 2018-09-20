@@ -1,5 +1,5 @@
 ---
-title: Používání atributu CImageList | Microsoft Docs
+title: Používání atributu CImageList | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dd30b21b1ec635c6d5b5f2f5c6c6d9eb6fc3fa7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ebfcb8fbacd3c464fc3697fc15bad385c1547d4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385788"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420651"
 ---
 # <a name="using-cimagelist"></a>Používání atributu CImageList
-Seznam obrázků, reprezentována třída [CImageList](../mfc/reference/cimagelist-class.md), je kolekce stejnou velikost bitové kopie, z nichž každý lze odkazovat pomocí jeho index. Seznamy obrázků umožňují efektivně spravovat velké sady ikony nebo bitmapy. Obrázek seznamy není sami ovládací prvky, protože se nejedná o windows; však se používají s několika různých typů ovládacích prvků, včetně ovládacích prvcích seznam ([CListCtrl](../mfc/reference/clistctrl-class.md)), ovládací prvky stromové struktury ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) a kartě ovládacích prvků ([CTabCtrl](../mfc/reference/ctabctrl-class.md)).  
-  
- Všechny Image v seznamu obrázků jsou obsažené v jednom široké rastrový obrázek ve formátu obrazovky zařízení. Seznam obrázků může také zahrnovat černobílý rastrového obrázku, který obsahuje masek použitý k vykreslení obrázků transparentně (ikona styl). `CImageList` Poskytuje členské funkce, které vám umožní kreslení bitové kopie, vytvořit destroy seznamů obrázků, přidat, odebrat bitové kopie, nahradit Image, sloučení bitové kopie a přetáhněte bitové kopie.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
-  
--   [Typy seznamů obrázků](../mfc/types-of-image-lists.md)  
-  
--   [Použití seznamu obrázků](../mfc/using-an-image-list.md)  
-  
--   [Manipulace se seznamy obrázků](../mfc/manipulating-image-lists.md)  
-  
--   [Vykreslování obrázků ze seznamu obrázků](../mfc/drawing-images-from-an-image-list.md)  
-  
--   [Překryvy obrázků v seznamech obrázků](../mfc/image-overlays-in-image-lists.md)  
-  
--   [Přetahování obrázků ze seznamu obrázků](../mfc/dragging-images-from-an-image-list.md)  
-  
--   [Informace o obrázku v seznamech obrázků](../mfc/image-information-in-image-lists.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Seznam obrázků, reprezentovaný třídou [atributu CImageList](../mfc/reference/cimagelist-class.md), je kolekce obrazů stejné velikosti, z nichž každý lze odkazovat pomocí jeho indexu. Seznamy obrázků se používají k zajištění efektivní správy velkých sad ikony nebo rastrové obrázky. Seznamy obrázků představují samy o sobě ovládací prvky, protože se nejedná o systému windows. Nicméně se používají v několika různých typů ovládacích prvků, včetně ovládacích prvcích seznam ([CListCtrl](../mfc/reference/clistctrl-class.md)), stromové struktury ovládacích prvků ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) a kartě ovládacích prvků ([ctabctrl –](../mfc/reference/ctabctrl-class.md)).
+
+Všechny Image v seznamu obrázků jsou obsaženy v jedné široké rastrového obrázku ve formátu obrazovkovém zařízení. Seznam obrázků může také zahrnovat monochromatický rastrový obrázek, který obsahuje masky umožňuje transparentně vykreslení obrázků (styl ikon). `CImageList` Poskytuje členské funkce, které vám umožní vykreslení obrázků, vytvořit a zničit seznamy obrázků, přidat a odebíráním imagí, nahraďte Image, sloučit Image a přetáhněte obrázky.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+
+- [Typy seznamů obrázků](../mfc/types-of-image-lists.md)
+
+- [Použití seznamu obrázků](../mfc/using-an-image-list.md)
+
+- [Manipulace se seznamy obrázků](../mfc/manipulating-image-lists.md)
+
+- [Vykreslování obrázků ze seznamu obrázků](../mfc/drawing-images-from-an-image-list.md)
+
+- [Překryvy obrázků v seznamech obrázků](../mfc/image-overlays-in-image-lists.md)
+
+- [Přetahování obrázků ze seznamu obrázků](../mfc/dragging-images-from-an-image-list.md)
+
+- [Informace o obrázku v seznamech obrázků](../mfc/image-information-in-image-lists.md)
+
+## <a name="see-also"></a>Viz také
+
+[Ovládací prvky](../mfc/controls-mfc.md)
 

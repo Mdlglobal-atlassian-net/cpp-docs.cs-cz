@@ -1,5 +1,5 @@
 ---
-title: Použití seznamů obrázků v ovládacím prvku panel nástrojů | Microsoft Docs
+title: Použití seznamů obrázků v ovládacím prvku panel nástrojů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50e7cb936c55ced1f16a325a031dccd1edde7d06
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: c3604de0b3b24b638e549c6823ea6c95036543c1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951904"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401768"
 ---
 # <a name="using-image-lists-in-a-toolbar-control"></a>Použití seznamů obrázků v ovládacím prvku panel nástrojů
-Ve výchozím nastavení jsou obrázky používané tlačítek v ovládacím prvku panel nástrojů uloženy jako jeden rastrového obrázku. Však také můžete uložit tlačítko bitové kopie v sadě seznamů obrázků. Objekt ovládacího prvku panel nástrojů můžete použít až tři seznamy samostatnou bitovou kopii:  
-  
--   Povolit Image obsahuje seznam bitové kopie pro tlačítka panelu nástrojů, které jsou nyní zapnuta.  
-  
--   Zakázat Image obsahuje seznam bitové kopie pro tlačítka panelu nástrojů, které jsou aktuálně zakázány.  
-  
--   Zvýrazněná Image obsahuje seznam bitové kopie pro tlačítka panelu nástrojů, které jsou aktuálně vyznačené. Tento seznam bitové kopie se používá jenom v případě, že styl TBSTYLE_FLAT používá panelu nástrojů.  
-  
- Pokud je s přidružíte používají tyto seznamy obrázků ovládací prvek panelu nástrojů `CToolBarCtrl` objektu. Toto přidružení se provádí tak, že volání [CToolBarCtrl::SetImageList](../mfc/reference/ctoolbarctrl-class.md#setimagelist), [SetDisabledImageList](../mfc/reference/ctoolbarctrl-class.md#setdisabledimagelist), a [SetHotImageList](../mfc/reference/ctoolbarctrl-class.md#sethotimagelist).  
-  
- Ve výchozím nastavení používá MFC `CToolBar` třídu pro implementaci panely nástrojů rozhraní MFC aplikace. Ale `GetToolBarCtrl` – členská funkce slouží k načtení vložený `CToolBarCtrl` objektu. Potom můžete provést volání `CToolBarCtrl` členské funkce pomocí vráceného objektu.  
-  
- Následující příklad ukazuje tato technika přiřazením povolenu (`m_ToolBarImages`) a zakázané (`m_ToolBarDisabledImages`) seznamu bitové kopie `CToolBarCtrl` objektu (`m_ToolBarCtrl`).  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#35](../mfc/codesnippet/cpp/using-image-lists-in-a-toolbar-control_1.cpp)]  
-  
+
+Ve výchozím nastavení jsou uloženy obrázky používané v tlačítek v ovládacím prvku panel nástrojů jako jediné bitmapě. Ale můžete také ukládat obrázky tlačítek seznamů obrázků v sadě. Objekt ovládacího prvku panel nástrojů můžete použít až tři samostatná bitová kopie seznamy:
+
+- Povolené Image obsahuje seznam image pro tlačítka panelu nástrojů, které jsou aktuálně povoleny.
+
+- Zakázat Image obsahuje seznam obrázků pro tlačítka panelu nástrojů, které jsou aktuálně zakázány.
+
+- Zvýrazněný Image obsahuje seznam image pro tlačítka panelu nástrojů, které jsou aktuálně zvýrazněný. Tento seznam obrázků se používá pouze v případě, že používá TBSTYLE_FLAT styl panelu nástrojů.
+
+Když přiřadíte jim používají tyto seznamy obrázků ovládací prvek panelu nástrojů `CToolBarCtrl` objektu. Toto přidružení se provádí tak, že volání [CToolBarCtrl::SetImageList](../mfc/reference/ctoolbarctrl-class.md#setimagelist), [SetDisabledImageList](../mfc/reference/ctoolbarctrl-class.md#setdisabledimagelist), a [SetHotImageList](../mfc/reference/ctoolbarctrl-class.md#sethotimagelist).
+
+Ve výchozím nastavení, knihovna MFC používá `CToolBar` třídu pro implementaci panelů nástrojů aplikace knihovny MFC. Ale `GetToolBarCtrl` členskou funkci je možné načíst vložený `CToolBarCtrl` objektu. Potom může provést volání `CToolBarCtrl` členské funkce pomocí vráceného objektu.
+
+Následující příklad ukazuje tuto techniku přiřazením povolenu (`m_ToolBarImages`) a je zakázaný (`m_ToolBarDisabledImages`) seznamu obrázků `CToolBarCtrl` objektu (`m_ToolBarCtrl`).
+
+[!code-cpp[NVC_MFCControlLadenDialog#35](../mfc/codesnippet/cpp/using-image-lists-in-a-toolbar-control_1.cpp)]
+
 > [!NOTE]
->  Seznamy obrázků použité objektem nástrojů musí být trvalé objekty. Z toho důvodu jsou běžně datové členy třídy knihovny MFC; v tomto příkladu třída hlavního rámce okna.  
-  
- Jakmile jsou přidružené seznamů obrázků `CToolBarCtrl` objektu, rozhraní se automaticky zobrazí obrázek správné tlačítka.  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+>  Seznamy obrázků použité objektem nástrojů musí být trvalé objekty. Z tohoto důvodu jsou běžně datové členy třídy knihovny MFC; v tomto příkladu třída okna hlavního rámce.
+
+Jakmile jsou přidružené seznamy obrázků `CToolBarCtrl` objektu, automaticky zobrazí obrázek tlačítka správné rozhraní.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

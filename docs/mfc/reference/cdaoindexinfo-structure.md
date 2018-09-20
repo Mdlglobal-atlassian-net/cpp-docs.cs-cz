@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e797713c03cb13ff9f1206ec6cb8bc24a3c18589
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2cfeaada169addc01bc09893db0dedba2b7528d0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335893"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403107"
 ---
 # <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo – struktura
 
@@ -51,16 +51,16 @@ struct CDaoIndexInfo {
 
 ### <a name="parameters"></a>Parametry
 
-*m_strName*  
+*m_strName*<br/>
 Pole objektu jedinečné názvy. Podrobnosti naleznete v tématu "Název vlastnosti" v nápovědě k DAO.
 
-*m_pFieldInfos*  
+*m_pFieldInfos*<br/>
 Ukazatel na pole [cdaoindexfieldinfo –](../../mfc/reference/cdaoindexfieldinfo-structure.md) objekty označující pole, která tabledef nebo sady záznamů jsou klíčová pole v indexu. Každý objekt identifikuje jedno pole v indexu. Je výchozí index řazení vzestupně. Objekt indexu může mít jednoho nebo více polí představující klíče indexu pro každý záznam. Toto může být vzestupné řazení sestupně, nebo jejich kombinaci.
 
-*m_nFields*  
+*m_nFields*<br/>
 Počet polí, které jsou uložené v `m_pFieldInfos`.
 
-*m_bPrimary*  
+*m_bPrimary*<br/>
 Pokud primární vlastnost nastavena na hodnotu TRUE, index objekt představuje primární index. Primární index se skládá z jednoho nebo více polí, které jedinečně identifikují všechny záznamy v tabulce v předdefinovaném pořadí. Protože index pole musí být jedinečné, jedinečné vlastnosti objektu indexu je také nastavena na hodnotu TRUE v rozhraní DAO. Pokud primární index tvořen více než jedno pole, každé pole může obsahovat duplicitní hodnoty, ale kombinace hodnot z indexovaného pole musí být jedinečný. Primární index se skládá z klíče pro tabulku a obvykle obsahuje stejné pole jako primární klíč.
 
 Když nastavíte primární klíč u tabulky, primární klíč je automaticky definovaný jako primární index pro tabulku. Další informace najdete v tématech "Primární vlastnosti" a "Jedinečné vlastnosti" v nápovědě k DAO.
@@ -68,20 +68,20 @@ Když nastavíte primární klíč u tabulky, primární klíč je automaticky d
 > [!NOTE]
 > Může existovat, maximálně jeden primární index u tabulky.
 
-*m_bUnique*  
+*m_bUnique*<br/>
 Označuje, zda objekt index představuje jedinečný index pro tabulku. Pokud je tato vlastnost hodnotu TRUE, představuje objekt indexu, který je jedinečný index. Jedinečný index se skládá z jednoho nebo více polí, které logicky uspořádat všechny záznamy v tabulce v pořadí jedinečné, předdefinované. Pokud jedno pole obsahuje index, hodnoty v tomto poli musí být jedinečné pro celou tabulku. Pokud je index tvořen více než jedno pole, každé pole může obsahovat duplicitní hodnoty, ale kombinace hodnot z indexovaného pole musí být jedinečný.
 
 Pokud primární i jedinečné vlastnosti objektu indexu jsou nastavena na hodnotu TRUE, index je jedinečný a primární: jednoznačně identifikuje všechny záznamy v tabulce v předdefinované logické pořadí. Pokud je primární vlastnost nastavena na hodnotu FALSE, index je sekundární index. Sekundární indexy (klíče a nonkey) logicky uspořádat záznamy v předdefinovaném pořadí bez slouží jako identifikátor pro záznamy v tabulce.
 
 Další informace najdete v tématech "Primární vlastnosti" a "Jedinečné vlastnosti" v nápovědě k DAO.
 
-*m_bClustered*  
+*m_bClustered*<br/>
 Označuje, zda objekt index představuje clusterovaný index pro tabulku. Pokud je tato vlastnost hodnotu TRUE, index objekt představuje clusterovaný index; v ostatních případech tomu tak není. Clusterovaný index se skládá z jednoho nebo více nonkey polí, které, dohromady, uspořádat všechny záznamy v tabulce v předdefinovaném pořadí. Pomocí clusterovaného indexu data v tabulce doslova uložené v pořadí určeném clusterovaný index. Clusterovaný index poskytuje efektivní přístup k záznamům v tabulce. Další informace naleznete v tématu "Clusterovaný vlastnost" v nápovědě k DAO.
 
 > [!NOTE]
 > Skupinový vlastnost se ignoruje u databází, které používají databázovém stroji Microsoft Jet vzhledem k tomu, že databázový stroj nepodporuje Clusterované indexy.
 
-*m_bIgnoreNulls*  
+*m_bIgnoreNulls*<br/>
 Určuje, zda jsou položky index pro záznamy, jejichž hodnoty Null v jejich rejstřík polí. Pokud je tato vlastnost hodnotu TRUE, pole s hodnotami Null není nutné položka. Chcete-li vyhledávání záznamů rychleji pomocí pole, můžete definovat index pro pole. Je-li povolit položky Null v indexovaného pole a očekávají mnoho položek na hodnotu Null, můžete nastavit vlastnost u objektu indexu na hodnotu TRUE a snížit množství místa, které používá index. Nastavení vlastnosti Ignorovat hodnoty Null a nastavení požadovaná vlastnost společně určují, zda má záznam s hodnotou Null index položka, jak ukazuje následující tabulka.
 
 |Ignorovat hodnoty Null|Požadováno|Index pole s hodnotou Null|
@@ -92,16 +92,16 @@ Určuje, zda jsou položky index pro záznamy, jejichž hodnoty Null v jejich re
 
 Další informace naleznete v tématu "Vlastnost" v nápovědě k DAO.
 
-*m_bRequired*  
+*m_bRequired*<br/>
 Určuje, zda objekt DAO indexu vyžaduje nenulovou hodnotu. Pokud je tato vlastnost hodnotu TRUE, index objektu neumožňuje hodnotu Null. Další informace naleznete v tématu "Vyžaduje vlastnost" v nápovědě k DAO.
 
 > [!TIP]
 > Když nastavíte tuto vlastnost pro objekt index rozhraní DAO nebo objektu pole (obsažené tabledef, záznamů nebo objektu querydef), nastavit ji pro objekt, pole. Před inicializací objektu indexu se kontroluje platnost nastavení vlastností pro objekt typu pole.
 
-*m_bForeign*  
+*m_bForeign*<br/>
 Určuje, zda objekt index představuje cizího klíče v tabulce. Pokud je tato vlastnost hodnotu TRUE, představuje index cizího klíče v tabulce. Cizí klíč se skládá z jednoho nebo více polí v tabulce cizího, které jedinečně identifikují řádek v primární tabulce. Databázový stroj Microsoft Jet vytvoří objekt indexu pro tabulku cizího a nastaví vlastnost cizího, když vytvoříte vztah, který vynucuje referenční integritu. Další informace naleznete v tématu "Cizí vlastnost" v nápovědě k DAO.
 
-*m_lDistinctCount*  
+*m_lDistinctCount*<br/>
 Označuje počet jedinečných u objektu indexu, které jsou zahrnuty v související tabulce. Zkontrolujte vlastnost DistinctCount a zjistit počet jedinečných hodnot nebo klíče v indexu. Libovolná klávesa se bude počítat jenom jednou, i když může mít více výskytů typů tato hodnota povoluje duplicitní hodnoty indexu. Tyto informace jsou užitečné v aplikacích, které se pokouší o přístup k datům optimalizovat vyhodnocením index informace. Počet jedinečných hodnot, který se také nazývá Kardinalita objektu indexu. Vlastnost DistinctCount nebude v určitou dobu vždy odráží skutečný počet klíčů. Například změna způsobené odvolání transakce se neprojeví okamžitě ve vlastnosti DistinctCount. Další informace naleznete v tématu "DistinctCount vlastnost" v nápovědě k DAO.
 
 ## <a name="remarks"></a>Poznámky
@@ -120,5 +120,5 @@ Načte informace `GetIndexInfo` členské funkce objektu tabledef je uložen v `
 
 ## <a name="see-also"></a>Viz také:
 
-[Struktury, styly, zpětná volání a mapy zpráv](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)  
-[CDaoTableDef::GetIndexInfo](../../mfc/reference/cdaotabledef-class.md#getindexinfo)  
+[Struktury, styly, zpětná volání a mapy zpráv](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[CDaoTableDef::GetIndexInfo](../../mfc/reference/cdaotabledef-class.md#getindexinfo)

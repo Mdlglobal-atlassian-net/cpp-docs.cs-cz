@@ -1,5 +1,5 @@
 ---
-title: Použití starých panelů nástrojů | Microsoft Docs
+title: Použití starých panelů nástrojů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbf3b276aa7a229f7d0611ee2a289edc77ebf485
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ab5f743b2584733bc8d2bc1edf4c212ba40210f0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385119"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417602"
 ---
 # <a name="using-your-old-toolbars"></a>Použití starých panelů nástrojů
-Pokud jste použili k vytvoření vlastní panely nástrojů, novou implementací třídy předchozích verzí aplikace Visual C++ [ctoolbar –](../mfc/reference/ctoolbar-class.md) by mohla způsobovat problémy. Takže nemáte k uvolnění starých panelů nástrojů využívat nové funkce, staré implementace je nadále podporován.  
-  
- Ukázka DOCKTOOL nepoužívá starého panely nástrojů pouze nový styl panely nástrojů.  
-  
- Panely nástrojů starého nelze upravit pomocí panelu nástrojů editoru prostředků.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
-  
--   [Principy panelů nástrojů](../mfc/toolbar-fundamentals.md)  
-  
--   [Ukotvitelné a plovoucí panely nástrojů](../mfc/docking-and-floating-toolbars.md)  
-  
--   [Popisy tlačítek panelu nástrojů](../mfc/toolbar-tool-tips.md)  
-  
--   [Práce s ovládacím prvkem panel nástrojů](../mfc/working-with-the-toolbar-control.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Implementace panelu nástrojů v prostředí MFC](../mfc/mfc-toolbar-implementation.md)
+
+Pokud používáte předchozí verze aplikace Visual C++ k vytvoření vlastní panely nástrojů, novou implementaci třídy [ctoolbar –](../mfc/reference/ctoolbar-class.md) by mohla způsobovat problémy. Tak, že nemáte k dispozici uvolňovat starých panelů nástrojů, chcete-li používat nové funkce, je původní implementace stále podporována.
+
+Ukázka DOCKTOOL nepoužívá starého typu panely nástrojů pouze nový styl panely nástrojů.
+
+Panely nástrojů starého typu nelze upravovat pomocí editoru panelu nástrojů prostředků.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+
+- [Principy panelů nástrojů](../mfc/toolbar-fundamentals.md)
+
+- [Ukotvitelné a plovoucí panely nástrojů](../mfc/docking-and-floating-toolbars.md)
+
+- [Popisy tlačítek na panelu nástrojů](../mfc/toolbar-tool-tips.md)
+
+- [Práce s ovládacím prvkem panel nástrojů](../mfc/working-with-the-toolbar-control.md)
+
+## <a name="see-also"></a>Viz také
+
+[Implementace panelu nástrojů v prostředí MFC](../mfc/mfc-toolbar-implementation.md)
 

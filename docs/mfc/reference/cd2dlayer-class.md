@@ -1,5 +1,5 @@
 ---
-title: Třída CD2DLayer | Microsoft Docs
+title: Cd2dlayer – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,176 +34,200 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3a89cb258b7208346a76cd2a59eb8da40c38087
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 9d381ecaa2ac894ce7f393685e67909fea013cde
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950690"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400117"
 ---
-# <a name="cd2dlayer-class"></a>CD2DLayer – třída
-Obálka pro ID2D1Layer.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CD2DLayer : public CD2DResource;  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CD2DLayer::CD2DLayer](#cd2dlayer)|Vytvoří objekt CD2DLayer.|  
-|[CD2DLayer:: ~ CD2DLayer](#_dtorcd2dlayer)|Destruktor. Voláno, když je zničen objektu D2D vrstvy.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CD2DLayer::Attach](#attach)|Připojí existující prostředek rozhraní k objektu|  
-|[CD2DLayer::Create](#create)|Vytvoří CD2DLayer. (Přepisuje [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
-|[CD2DLayer::Destroy](#destroy)|Zničí CD2DLayer objektu. (Přepisuje [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
-|[CD2DLayer::detach](#detach)|Umožňuje odpojit prostředek rozhraní z objektu|  
-|[CD2DLayer::Get](#get)|Vrátí ID2D1Layer rozhraní|  
-|[CD2DLayer::GetSize](#getsize)|Vrátí velikost cíle vykreslení v pixelech nezávislé na zařízení|  
-|[CD2DLayer::IsValid](#isvalid)|Ověří platnost prostředku (přepíše [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
-  
-### <a name="public-operators"></a>Veřejné operátory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CD2DLayer::Operator ID2D1Layer *](#operator_id2d1layer_star)|Vrátí ID2D1Layer rozhraní|  
-  
-### <a name="protected-data-members"></a>Chráněné datové členy  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CD2DLayer::m_pLayer](#m_player)|Ukládá ukazatel na objekt ID2D1Layer.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
-  
- `CD2DLayer`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxrendertarget.h  
-  
-##  <a name="_dtorcd2dlayer"></a>  CD2DLayer:: ~ CD2DLayer  
- Destruktor. Voláno, když je zničen objektu D2D vrstvy.  
-  
-```  
+# <a name="cd2dlayer-class"></a>Cd2dlayer – třída
+
+Obálka pro ID2D1Layer.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CD2DLayer : public CD2DResource;
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[CD2DLayer::CD2DLayer](#cd2dlayer)|Vytvoří objekt cd2dlayer –.|
+|[Cd2dlayer –:: ~ cd2dlayer –](#_dtorcd2dlayer)|Destruktor. Volá se, když se likviduje vrstvy objektu D2D.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CD2DLayer::Attach](#attach)|Bude k obrazci existujících prostředků rozhraní pro objekt|
+|[CD2DLayer::Create](#create)|Vytvoří cd2dlayer –. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DLayer::Destroy](#destroy)|Odstraní objekt cd2dlayer –. (Přepíše [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
+|[CD2DLayer::detach](#detach)|Odpojí prostředků rozhraní z objektu|
+|[CD2DLayer::Get](#get)|Vrátí ID2D1Layer rozhraní|
+|[CD2DLayer::GetSize](#getsize)|Vrátí velikost cíle vykreslování v pixelech nezávislých na zařízení|
+|[CD2DLayer::IsValid](#isvalid)|Zkontroluje platnost prostředku (přepíše [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
+
+### <a name="public-operators"></a>Veřejné operátory
+
+|Název|Popis|
+|----------|-----------------|
+|[CD2DLayer::Operator ID2D1Layer *](#operator_id2d1layer_star)|Vrátí ID2D1Layer rozhraní|
+
+### <a name="protected-data-members"></a>Chránění členové dat
+
+|Název|Popis|
+|----------|-----------------|
+|[CD2DLayer::m_pLayer](#m_player)|Uchovává ukazatel na objekt ID2D1Layer.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[Třídy CObject](../../mfc/reference/cobject-class.md)
+
+[Cd2dresource –](../../mfc/reference/cd2dresource-class.md)
+
+`CD2DLayer`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxrendertarget.h
+
+##  <a name="_dtorcd2dlayer"></a>  Cd2dlayer –:: ~ cd2dlayer –
+
+Destruktor. Volá se, když se likviduje vrstvy objektu D2D.
+
+```
 virtual ~CD2DLayer();
-```  
-  
-##  <a name="attach"></a>  CD2DLayer::Attach  
- Připojí existující prostředek rozhraní k objektu  
-  
-```  
+```
+
+##  <a name="attach"></a>  CD2DLayer::Attach
+
+Bude k obrazci existujících prostředků rozhraní pro objekt
+
+```
 void Attach(ID2D1Layer* pResource);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pResource*  
- Existující rozhraní prostředků. Nemůže mít hodnotu NULL  
-  
-##  <a name="cd2dlayer"></a>  CD2DLayer::CD2DLayer  
- Vytvoří objekt CD2DLayer.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pResource*<br/>
+Rozhraní existující prostředek. Nesmí být NULL.
+
+##  <a name="cd2dlayer"></a>  CD2DLayer::CD2DLayer
+
+Vytvoří objekt cd2dlayer –.
+
+```
 CD2DLayer(
-    CRenderTarget* pParentTarget,  
+    CRenderTarget* pParentTarget,
     BOOL bAutoDestroy = TRUE);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pParentTarget*  
- Ukazatel na cíl vykreslení.  
-  
- *bAutoDestroy*  
- Označuje, že bude objekt zničí vlastník (pParentTarget).  
-  
-##  <a name="create"></a>  CD2DLayer::Create  
- Vytvoří CD2DLayer.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pParentTarget*<br/>
+Ukazatel na cíl vykreslování.
+
+*bAutoDestroy*<br/>
+Označuje, že bude objekt zničen. vlastník (pParentTarget).
+
+##  <a name="create"></a>  CD2DLayer::Create
+
+Vytvoří cd2dlayer –.
+
+```
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pRenderTarget*  
- Ukazatel na cíl vykreslení.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Pokud metoda bude úspěšná, vrátí S_OK. Funkce HRESULT chybový kód.  
-  
-##  <a name="destroy"></a>  CD2DLayer::Destroy  
- Zničí CD2DLayer objektu.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pRenderTarget*<br/>
+Ukazatel na cíl vykreslování.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pokud metoda uspěje, vrátí hodnotu S_OK. V opačném případě vrátí kód chyby HRESULT.
+
+##  <a name="destroy"></a>  CD2DLayer::Destroy
+
+Odstraní objekt cd2dlayer –.
+
+```
 virtual void Destroy();
-```  
-  
-##  <a name="detach"></a>  CD2DLayer::detach  
- Umožňuje odpojit prostředek rozhraní z objektu  
-  
-```  
+```
+
+##  <a name="detach"></a>  CD2DLayer::detach
+
+Odpojí prostředků rozhraní z objektu
+
+```
 ID2D1Layer* Detach();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Ukazatel rozhraní odpojit prostředků.  
-  
-##  <a name="get"></a>  CD2DLayer::Get  
- Vrátí ID2D1Layer rozhraní  
-  
-```  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Ukazatel na rozhraní odpojit prostředek.
+
+##  <a name="get"></a>  CD2DLayer::Get
+
+Vrátí ID2D1Layer rozhraní
+
+```
 ID2D1Layer* Get();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na rozhraní ID2D1Layer nebo hodnota NULL, pokud objekt dosud není inicializován.  
-  
-##  <a name="getsize"></a>  CD2DLayer::GetSize  
- Vrátí velikost cíle vykreslení v pixelech nezávislé na zařízení  
-  
-```  
-CD2DSizeF GetSize() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Aktuální velikost cíle vykreslení v pixelech nezávislé na zařízení  
-  
-##  <a name="isvalid"></a>  CD2DLayer::IsValid  
- Kontrola platnosti prostředků  
-  
-```  
-virtual BOOL IsValid() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud prostředek je platná. jinak hodnota FALSE.  
-  
-##  <a name="m_player"></a>  CD2DLayer::m_pLayer  
- Ukládá ukazatel na objekt ID2D1Layer.  
-  
-```  
-ID2D1Layer* m_pLayer;  
-```  
-  
-##  <a name="operator_id2d1layer_star"></a>  CD2DLayer::Operator ID2D1Layer *  
- Vrátí ID2D1Layer rozhraní  
-  
-```  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Ukazatel na rozhraní ID2D1Layer nebo hodnota NULL, pokud objekt ještě není inicializován.
+
+##  <a name="getsize"></a>  CD2DLayer::GetSize
+
+Vrátí velikost cíle vykreslování v pixelech nezávislých na zařízení
+
+```
+CD2DSizeF GetSize() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Aktuální velikost cíle vykreslování v pixelech nezávislých na zařízení
+
+##  <a name="isvalid"></a>  CD2DLayer::IsValid
+
+Kontrola platnosti prostředků
+
+```
+virtual BOOL IsValid() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Hodnota TRUE, pokud prostředek je platná. v opačném případě FALSE.
+
+##  <a name="m_player"></a>  CD2DLayer::m_pLayer
+
+Uchovává ukazatel na objekt ID2D1Layer.
+
+```
+ID2D1Layer* m_pLayer;
+```
+
+##  <a name="operator_id2d1layer_star"></a>  CD2DLayer::Operator ID2D1Layer *
+
+Vrátí ID2D1Layer rozhraní
+
+```
 operator ID2D1Layer* ();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na rozhraní ID2D1Layer nebo hodnota NULL, pokud objekt dosud není inicializován.  
-  
-## <a name="see-also"></a>Viz také  
- [Třídy](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Ukazatel na rozhraní ID2D1Layer nebo hodnota NULL, pokud objekt ještě není inicializován.
+
+## <a name="see-also"></a>Viz také
+
+[Třídy](../../mfc/reference/mfc-classes.md)

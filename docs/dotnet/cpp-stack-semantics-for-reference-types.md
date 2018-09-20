@@ -1,5 +1,5 @@
 ---
-title: C++ – sémantika zásobníku pro odkazové typy | Microsoft Docs
+title: C++ – sémantika zásobníku pro odkazové typy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,109 +15,113 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b3ed886d1bdeb4972122049854b5d288767aa5b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df14886daa04d4905502341ef345c3e3afa595ff
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111351"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410621"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>C++ – sémantika zásobníku pro odkazové typy
-Před Visual C++ 2005 instance typu odkaz může vytvářet pouze pomocí `new` haldě operátor, který vytvořil objekt na paměti. Je však nyní vytvořit instanci typu odkazu pomocí stejné syntaxe, které byste použili k vytvoření instance nativního typu v zásobníku. Ano, není potřeba použít [nové, gcnew ref](../windows/ref-new-gcnew-cpp-component-extensions.md) pro vytvoření objektu odkazového typu. A pokud objekt je mimo rozsah, kompilátor volání destruktoru objektu.  
-  
-## <a name="remarks"></a>Poznámky  
- Při vytváření instance typu odkaz pomocí sémantika zásobníku kompilátor interně vytvořit instanci v haldě shromážděných paměti (pomocí `gcnew`).  
-  
- Pokud podpis nebo návratový typ funkce zahrnuje instanci typu odkazu-hodnota, funkce budou označeny v metadatech jako, které vyžadují zvláštní zpracování (s modreq). Tato zvláštní zpracování je aktuálně k dispozici pouze klienti Visual C++; Další jazyky aktuálně nepodporují využívání funkce nebo data, která použít odkazové typy, které jsou vytvořené pomocí sémantika zásobníku.  
-  
- Jedním z důvodů používat `gcnew` (dynamické přidělování) místo zásobníku sémantiku by, pokud má tento typ žádné destruktor. Navíc pomocí odkazové typy, které jsou vytvořené pomocí sémantika zásobníku v signatury funkce nebude možné, pokud chcete, aby funkce pro jiné jazyky než Visual C++.  
-  
- Kompilátor nevygeneruje kopírovacího konstruktoru pro odkazového typu. Proto pokud definujete funkci, která používá typ odkazu-hodnota v podpis, je nutné zadat kopírovací konstruktor pro typ odkazu. Kopírovací konstruktor pro typ odkaz obsahuje podpis v následujícím formátu: `R(R%){}`.  
-  
- Kompilátor nevygeneruje výchozí operátor přiřazení pro odkazového typu. Operátor přiřazení umožňuje vytvořit objekt, který používá sémantika zásobníku a provést jeho inicializaci na existující objekt vytvořený sémantika zásobníku. Operátor přiřazení pro typ odkaz obsahuje podpis v následujícím formátu: `void operator=( R% ){}`.  
-  
- Pokud typ vašeho destruktor uvolní důležité prostředky a používáte sémantika zásobníku pro odkazové typy, není potřeba explicitně volání destruktoru (nebo volání `delete`). Další informace o destruktory v referenčních typech najdete v tématu [destruktory a finalizační metody v postupy: definování a používání tříd a struktur (C + +/ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
-  
- Operátor přiřazení generované kompilátorem bude postupovat podle obvyklé standardní C++ pravidla s těmito přídavky:  
-  
--   Nestatické data, která bude členy, jejichž typ je popisovač pro typ odkazu Nedávná zkopírovaný (zpracovány jako člena nestatické dat, jejichž typ je ukazatel).  
-  
--   Zkopíruje všechny nestatické datový člen, jejichž typ je typ hodnoty bude bez podstruktury.  
-  
--   Kteréhokoli člena nestatické dat, jejíž typ se o instanci typu odkazu se vyvolat volání konstruktoru kopie odkazového typu.  
-  
- Také poskytuje kompilátor `%` unární operátor převodu instance typu odkaz vytvořený sémantika zásobníku pro jeho zdrojovým typem popisovač.  
-  
- Následující odkazové typy nejsou k dispozici pro použití s sémantika zásobníku:  
-  
--   [delegate (rozšíření komponent C++)](../windows/delegate-cpp-component-extensions.md)  
-  
--   [Pole](../windows/arrays-cpp-component-extensions.md)  
-  
--   <xref:System.String>  
-  
-## <a name="example"></a>Příklad  
-  
-### <a name="description"></a>Popis  
- Následující příklad kódu ukazuje, jak deklarovat instance odkazové typy s sémantika zásobníku, jak operátor přiřazení a kopírování konstruktor funguje a jak k chybě při inicializaci sledovací odkaz s odkaz vytvořený sémantika zásobníku.  
-  
-### <a name="code"></a>Kód  
-  
-```  
-// stack_semantics_for_reference_types.cpp  
-// compile with: /clr  
-ref class R {  
-public:  
-   int i;  
-   R(){}  
-  
-   // assignment operator  
-   void operator=(R% r) {  
-      i = r.i;  
-   }  
-  
-   // copy constructor  
-   R(R% r) : i(r.i) {}  
-};  
-  
-void Test(R r) {}   // requires copy constructor  
-  
-int main() {  
-   R r1;  
-   r1.i = 98;  
-  
-   R r2(r1);   // requires copy constructor  
-   System::Console::WriteLine(r1.i);  
-   System::Console::WriteLine(r2.i);  
-  
-   // use % unary operator to convert instance using stack semantics  
-   // to its underlying handle  
-   R ^ r3 = %r1;  
-   System::Console::WriteLine(r3->i);  
-  
-   Test(r1);  
-  
-   R r4;  
-   R r5;  
-   r5.i = 13;  
-   r4 = r5;   // requires a user-defined assignment operator  
-   System::Console::WriteLine(r4.i);  
-  
-   // initialize tracking reference  
-   R % r6 = r4;  
-   System::Console::WriteLine(r6.i);  
-}  
-```  
-  
-### <a name="output"></a>Výstup  
-  
-```  
-98  
-98  
-98  
-13  
-13  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md)
+
+Před Visual C++ 2005, instanci typu odkazu může vytvořit pouze pomocí `new` haldě operátor, který vytvořil objekt na uvolňování paměti. Můžete však nyní vytvořit instanci typu odkazu pomocí stejné syntaxe, které můžete použít k vytvoření instance nativního typu v zásobníku. Proto není potřeba použít [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) pro vytvoření objektu typu odkazu. A když objekt dostane mimo rozsah, kompilátor vyvolá destruktor objektu.
+
+## <a name="remarks"></a>Poznámky
+
+Při vytváření instance typu odkazu pomocí – sémantika zásobníku kompilátoru interně vytvořit instanci na haldě uvolňování paměti (pomocí `gcnew`).
+
+Při podpisu nebo návratový typ funkce zahrnuje instanci typu odkazu podle hodnoty, funkce budou označeny v metadatech jako, které vyžadují zvláštní zpracování (s modreq). Tato zvláštní zpracování je nyní k dispozici pouze klienty jazyka Visual C++; Další jazyky momentálně nepodporují používání funkce nebo data, která použít odkazové typy vytvořené pomocí – sémantika zásobníku.
+
+Jedním z důvodů použití `gcnew` (dynamického přidělování) namísto zásobníku sémantiku by, pokud typ nemá žádný destruktor. Také pomocí odkazové typy vytvořené pomocí – sémantika zásobníku v signaturách funkce nebude možné, pokud chcete, aby vaše funkce, které mají zpracovávat jiné jazyky než Visual C++.
+
+Kompilátor nevygeneruje kopírovacího konstruktoru pro typ odkazu. Proto pokud definujete funkci, která se používá v podpisu typ odkazu podle hodnoty, je nutné definovat kopírovacího konstruktoru pro typ odkazu. Kopírovací konstruktor pro typ odkazu nemá podpis v následujícím formátu: `R(R%){}`.
+
+Kompilátor nevygeneruje výchozí operátor přiřazení pro typ odkazu. Operátor přiřazení můžete vytvořit objekt pomocí – sémantika zásobníku a inicializujte ji s existující objekt vytvořený pomocí – sémantika zásobníku. Operátor přiřazení pro typ odkazu nemá podpis v následujícím formátu: `void operator=( R% ){}`.
+
+Pokud váš typ destruktor uvolní důležitých prostředků a použít – sémantika zásobníku pro odkazové typy, není potřeba explicitně zavolat destruktor (nebo volat `delete`). Další informace o destruktorech v referenčních typech najdete v tématu [destruktory a finalizační metody v tom, jak: definice a používání tříd a struktur (C + +/ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+
+Operátor přiřazení vygenerované kompilátorem bude postupovat podle obvyklých pravidel C++ standard s těmito přídavky:
+
+- Jakékoli nestatické datové členy, jehož typ je popisovač pro typ odkazu budou Nedávná zkopírovaný (zpracovalo se jako nestatický datový člen, jehož typ je ukazatel).
+
+- Zkopíruje všechny nestatický datový člen, jehož typ je typ hodnoty budou bez podstruktury.
+
+- Žádný nestatický datový člen, jehož typ je instanci typu odkazu se vyvolá volání kopie konstruktoru typu odkazu.
+
+Kompilátor poskytuje také `%` unární operátor převodu instance typu odkazu, který je vytvořen pomocí – sémantika zásobníku na svůj podkladový typ popisovače.
+
+Následující typy odkazu nejsou k dispozici pro použití s – sémantika zásobníku:
+
+- [delegate (rozšíření komponent C++)](../windows/delegate-cpp-component-extensions.md)
+
+- [Pole](../windows/arrays-cpp-component-extensions.md)
+
+- <xref:System.String>
+
+## <a name="example"></a>Příklad
+
+### <a name="description"></a>Popis
+
+Následující příklad kódu ukazuje, jak deklarovat výskyty odkazové typy se sémantikou zásobníku, jak se operátor přiřazení a funguje konstruktor kopie a tom, jak inicializovat sledovací odkaz s odkazovým typem vytvořené pomocí – sémantika zásobníku.
+
+### <a name="code"></a>Kód
+
+```cpp
+// stack_semantics_for_reference_types.cpp
+// compile with: /clr
+ref class R {
+public:
+   int i;
+   R(){}
+
+   // assignment operator
+   void operator=(R% r) {
+      i = r.i;
+   }
+
+   // copy constructor
+   R(R% r) : i(r.i) {}
+};
+
+void Test(R r) {}   // requires copy constructor
+
+int main() {
+   R r1;
+   r1.i = 98;
+
+   R r2(r1);   // requires copy constructor
+   System::Console::WriteLine(r1.i);
+   System::Console::WriteLine(r2.i);
+
+   // use % unary operator to convert instance using stack semantics
+   // to its underlying handle
+   R ^ r3 = %r1;
+   System::Console::WriteLine(r3->i);
+
+   Test(r1);
+
+   R r4;
+   R r5;
+   r5.i = 13;
+   r4 = r5;   // requires a user-defined assignment operator
+   System::Console::WriteLine(r4.i);
+
+   // initialize tracking reference
+   R % r6 = r4;
+   System::Console::WriteLine(r6.i);
+}
+```
+
+### <a name="output"></a>Výstup
+
+```Output
+98
+98
+98
+13
+13
+```
+
+## <a name="see-also"></a>Viz také
+
+[Třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md)

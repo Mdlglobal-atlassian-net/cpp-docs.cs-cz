@@ -1,5 +1,5 @@
 ---
-title: Metody vytváření stavového řádku | Microsoft Docs
+title: Metody vytváření stavového řádku | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,27 +19,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0428bfc906ba6e8a1ecc7bd7c198327e8c31505
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 784cd7f5768b899388978e6715ff6ca071bf439e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346926"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397863"
 ---
 # <a name="methods-of-creating-a-status-bar"></a>Metody vytváření stavového řádku
-Poskytuje dvě třídy Vytvoření stavové řádky MFC: [cstatusbar –](../mfc/reference/cstatusbar-class.md) a [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) (který zabalí běžné ovládacího prvku Windows rozhraní API). `CStatusBar` obsahuje všechny funkce stavu panelu běžného ovládacího prvku, automaticky komunikuje se službou nabídek a panelů nástrojů a zpracovává mnoho vyžaduje obecná nastavení ovládacího prvku a struktury pro vás; ale vaše Výsledný spustitelný soubor obvykle bude větší než vytvořené pomocí `CStatusBarCtrl`.  
-  
- `CStatusBarCtrl` obvykle za následek menší spustitelný soubor a možná přednost `CStatusBarCtrl` Pokud nemáte v úmyslu integrovat do architektury MFC stavový řádek. Pokud budete chtít použít `CStatusBarCtrl` a integrovat stavový řádek do architektury MFC, je nutné provést další péči komunikovat řízení manipulace s knihovnou MFC řádek Stavový řádek. Tato komunikace není složité. je však další práci, kterou je potřeba, když používáte `CStatusBar`.  
-  
- Visual C++ nabízí dva způsoby, jak využít výhod stav ovládacích prvků běžné panelu.  
-  
--   Vytvořte na stavovém řádku pomocí `CStatusBar`a pak zavolají [CStatusBar::GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl) získat přístup k `CStatusBarCtrl` členské funkce.  
-  
--   Vytvořte na stavovém řádku pomocí [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)pro konstruktor.  
-  
- Buď metoda získáte přístup k členské funkce ovládacího panelu stavu. Při volání `CStatusBar::GetStatusBarCtrl`, vrátí odkaz na `CStatusBarCtrl` objekt, můžete použít buď sadu členské funkce. V tématu [cstatusbar –](../mfc/reference/cstatusbar-class.md) informace o vytváření a vytváření stavovém řádku pomocí `CStatusBar`.  
-  
-## <a name="see-also"></a>Viz také  
- [Použití třídy CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Knihovna MFC poskytuje dvě třídy k vytvoření stavových řádků: [cstatusbar –](../mfc/reference/cstatusbar-class.md) a [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) (která zabalí Windows běžný ovládací prvek rozhraní API). `CStatusBar` obsahuje všechny funkce nástroje na stavovém řádku běžný ovládací prvek automaticky komunikuje se službou nabídek a panelů nástrojů a zpracovává mnoho struktury a vyžaduje obecná nastavení ovládacího prvku pro vás. Avšak výsledný spustitelný soubor obvykle bude větší než vytvořený pomocí `CStatusBarCtrl`.
+
+`CStatusBarCtrl` obvykle za následek menší spustitelný soubor a možná dáte přednost použití `CStatusBarCtrl` Pokud nezamýšlíte integrovat architektury MFC stavový řádek. Pokud budete chtít použít `CStatusBarCtrl` a integrovat architektury MFC stavového řádku, je nutné provést dodatečnou pozornost komunikovat stavového řádku ovládací prvek manipulace s knihovnou MFC. Tato zpráva není složité. je však další práce, nebude potřeba při použití `CStatusBar`.
+
+Visual C++ poskytuje dva způsoby, jak využít výhod stavový panel běžný ovládací prvek.
+
+- Vytváření stavového řádku pomocí `CStatusBar`a pak vyvolejte [CStatusBar::GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl) získat přístup k `CStatusBarCtrl` členské funkce.
+
+- Vytváření stavového řádku pomocí [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)v konstruktoru.
+
+Některé z metod získáte přístup na členské funkce ovládacího panelu stavu. Při volání `CStatusBar::GetStatusBarCtrl`, vrátí odkaz na `CStatusBarCtrl` objektu, můžete použít buď sadu členské funkce. Zobrazit [cstatusbar –](../mfc/reference/cstatusbar-class.md) informace o vytváření a vytváření stavovém řádku pomocí `CStatusBar`.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

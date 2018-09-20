@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6db0aa5801a8eca896282b65e4d9f156e9b38318
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6f9c444861587e21724fe5f6aff545935fed6086
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212809"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420501"
 ---
 # <a name="property--c-component-extensions"></a>property (rozšíření komponent C++)
 
@@ -33,15 +33,15 @@ Deklaruje *vlastnost*, což je členská funkce, který se chová a je přístup
 
 Je možné deklarovat jedním z následujících typů vlastností.
 
-*jednoduché vlastnosti*  
+*jednoduché vlastnosti*<br/>
 Ve výchozím nastavení vytvoří *nastavení přístupového objektu* , který přiřazuje hodnotu vlastnosti *načtení přístupového objektu* , která načte hodnotu vlastnosti a vygenerovaný kompilátorem privátní datový člen, který obsahuje hodnotu vlastnosti.
 
-*Vlastnost bloku*  
+*Vlastnost bloku*<br/>
 Můžete tak vytvořit uživatelem definované get a/nebo přístupové objekty set. Vlastnost je čtení a zápisu, pokud mají oba get a přístupové objekty set jsou definované, pokud pouze přistupující objekt get je definována pouze pro čtení a jen pro zápis, pokud jen pro přistupující objekt set je definována.
 
 Musíte explicitně deklarovat datový člen tak, aby obsahovala hodnotu vlastnosti.
 
-*indexované vlastnosti*  
+*indexované vlastnosti*<br/>
 Vlastnost blok, který můžete použít k získání a nastavení hodnoty vlastnosti, které je zadána jedna nebo více indexů.
 
 Indexovaná vlastnost, která má buď můžete vytvořit uživatelem definované vlastnosti name nebo *výchozí* název vlastnosti. Název výchozí vlastnosti indexu je název třídy, ve kterém je definována vlastnost. Chcete-li deklarovat výchozí vlastnost, zadejte **výchozí** – klíčové slovo místo názvu vlastnosti.
@@ -71,27 +71,27 @@ property type default[index_list] {
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*  
+*Typ*<br/>
 Datový typ hodnoty vlastnosti a proto samotné vlastnosti.
 
-*%{Property_Name/*  
+*%{Property_Name/*<br/>
 Název vlastnosti
 
-*Modifikátor přístupu*  
+*Modifikátor přístupu*<br/>
 Kvalifikátor k přístupu. Jsou platné kvalifikátory **statické** a **virtuální**.
 
 Get nebo nemusí odsouhlasení přístupové objekty set **virtuální** kvalifikátor, ale musí shodnout na **statické** kvalifikátoru.
 
-*Modifikátor dědičnosti*  
+*Modifikátor dědičnosti*<br/>
 Dědičnosti kvalifikátoru. Jsou platné kvalifikátory **abstraktní** a **zapečetěné**.
 
-*index_list*  
+*index_list*<br/>
 Čárkami oddělený seznam jednoho nebo více indexů. Každý index se skládá z typ indexu a volitelný identifikátor, který lze použít v těle metody vlastností.
 
-*value*  
+*value*<br/>
 Hodnota určená k přiřazení vlastnosti v operaci set nebo načíst v operaci get.
 
-*property_body*  
+*property_body*<br/>
 Tělo metody vlastností přistupujícího objektu set nebo get. *Property_body* můžete použít *index_list* pro přístup k základní datový člen vlastnost, nebo jako parametry v uživatelem definované zpracování.
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
@@ -123,16 +123,16 @@ modifier property type default[index];
 
 ### <a name="parameters"></a>Parametry
 
-*Modifikátor*  
+*Modifikátor*<br/>
 Modifikátor, který lze použít v deklaraci vlastnosti nebo metody přístupového objektu get/set. Možné hodnoty jsou **statické** a **virtuální**.
 
-*Typ*  
+*Typ*<br/>
 Typ hodnoty, která je reprezentována vlastnost.
 
-*%{Property_Name/*  
+*%{Property_Name/*<br/>
 Parametry pro metodu raise; signatura delegáta se musí shodovat.
 
-*index_list*  
+*index_list*<br/>
 Čárkami oddělený seznam jednoho nebo více indexů, zadaný v hranatých závorkách (operátor dolního indexu, ([])). Pro každý index zadejte typ a volitelně identifikátor, který lze použít v těle metody vlastností.
 
 ### <a name="remarks"></a>Poznámky

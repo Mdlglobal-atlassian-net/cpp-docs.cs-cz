@@ -1,5 +1,5 @@
 ---
-title: 2.7.2.2 firstprivate | Microsoft Docs
+title: 2.7.2.2 firstprivate | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b8e44ca52ba1f76d5b3791a1d08301bf06e7eab
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 0d3e6ad966f4cf895da9374798f6c9a4079ccc2f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687397"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400962"
 ---
 # <a name="2722-firstprivate"></a>2.7.2.2 firstprivate
-**Firstprivate** klauzule poskytuje větší funkce poskytované službou **privátní** klauzule. Syntaxe **firstprivate** klauzule vypadá takto:  
-  
-```  
-firstprivate(variable-list)  
-```  
-  
- Proměnné zadané v *seznamu proměnné* mít **privátní** klauzule sémantikou, jak je popsáno v [části 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) na stránce 25. Inicializace nebo vytváření se stane, jako kdyby byly na vlákno, před provádění vlákna konstruktu provádí jednou. Pro **firstprivate** klauzule na paralelní konstrukce počáteční hodnota nového privátní objektu je hodnota původní objekt, který existuje bezprostředně před paralelní konstrukce pro vlákno, které se zaznamená. Pro **firstprivate** klauzule ve sdílení práce konstrukt počáteční hodnota nový soukromý objekt pro každý podproces, který spouští konstrukce sdílení práce je hodnota původní objekt, který existuje před bod v čase, stejného podprocesu zaznamená konstrukce sdílení práce. Kromě toho pro objekty C++ nový soukromý objekt pro každé vlákno je kopírování zkonstruován z původní objekt.  
-  
- Omezení, které mají **firstprivate** klauzule jsou následující:  
-  
--   Zadaný v proměnné **firstprivate** klauzule nesmí mít typ neúplné nebo typu odkazu.  
-  
--   Proměnná s typu třídy, který je zadaný jako **firstprivate** musí mít k přístupný, jednoznačným kopírovacího konstruktoru.  
-  
--   Proměnné, která jsou soukromá v rámci paralelní oblasti nebo která se zobrazují **snížení** klauzuli **paralelní** – direktiva nelze zadat v **firstprivate** klauzule na Direktiva sdílení práce, která se sváže s paralelní konstrukce.
+
+**Firstprivate** klauzule nabízí nadmnožinu funkcí poskytovaných **privátní** klauzuli. Syntaxe **firstprivate** klauzule vypadá takto:
+
+```
+firstprivate(variable-list)
+```
+
+Zadané v proměnné *seznamu proměnné* mají **privátní** klauzule sémantiku, jak je popsáno v [části 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) na stránce 25. Inicializace nebo konstrukce se stane, jako kdyby byly provést jednou na vlákno, před spuštěním podprocesu konstrukce. Pro **firstprivate** klauzuli paralelní konstrukce, počáteční hodnota nový privátní objekt je hodnota původního objektu, který existuje bezprostředně před paralelní konstrukce pro vlákno, které nalezne ho. Pro **firstprivate** je počáteční hodnota pro každé vlákno, které provádí konstruktoru work-sharing nový objekt privátní klauzule v konstruktoru work-sharing hodnota původního objektu, která existuje v čase před bodem, který stejném vlákně, zaznamená konstruktoru work-sharing. Kromě toho pro objekty C++, tento nový privátní objekt pro každé vlákno je vytvořený z původního objektu z kopie.
+
+Omezení týkající **firstprivate** klauzule jsou následující:
+
+- Zadané v proměnné **firstprivate** klauzule nesmí mít neúplný typ nebo typ odkazu.
+
+- Proměnná typu třídy, který je zadán jako **firstprivate** musí mít konstruktor kopie přístupná a jednoznačná.
+
+- Proměnné, které jsou v rámci paralelní oblasti privátní nebo které se objeví v **snížení** klauzuli **paralelní** směrnice nelze zadat v **firstprivate** klauzuli sdílení práce – direktiva s vazbou na paralelní konstrukce.

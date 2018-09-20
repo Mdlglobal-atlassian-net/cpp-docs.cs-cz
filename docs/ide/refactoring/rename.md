@@ -1,5 +1,5 @@
 ---
-title: Přejmenujte | Microsoft Docs
+title: Přejmenovat | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -10,42 +10,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a064527f6afcbf91be3fb4e51180be647c1f506
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 7a00eed341e0fc1ca8573e2f66744ea04055f259
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339810"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399200"
 ---
 # <a name="rename"></a>přejmenování
-**Co:** umožňuje přejmenovat identifikátory pro kód symboly, například pole, místní proměnné, metody, obory názvů, vlastnosti a typy.
+**Co:** slouží k přejmenování identifikátory pro symboly kódu, jako je například pole lokálních proměnných, metod, obory názvů, vlastností a typy.
 
-**Kdy:** chcete bezpečně něco přejmenovat bez nutnosti vyhledáte všechny instance a zkopírujte a vložte nový název.  
+**Kdy:** chcete bezpečně něco přejmenovat bez nutnosti vyhledáte všechny instance a kopírovat/vložit nový název.
 
-**Důvod:** kopírování a vkládání nový název napříč celý projekt by pravděpodobně vést k chybám.  Tento nástroj refaktoringu přesně provede přejmenování akce.
+**Důvod, proč:** zkopírujete a vložíte nový název přes celý projekt by pravděpodobně vést k chybám.  Tento nástroj refaktoringu přesně provede akci přejmenování.
 
-**Postupy:**
+**Jak:**
 
-1. Zvýrazněte nebo umístěte kurzor textu uvnitř položky k přejmenování:
+1. Zvýrazněte nebo umístěte kurzor textu uvnitř položky, která má být přejmenována:
 
    ![Zvýrazněný kód](images/rename_highlight.png)
 
 1. Dále proveďte jednu z následujících akcí:
    * **Klávesnice**
-     * Stiskněte klávesu **Ctrl + R**, pak **Ctrl + R**.  (Všimněte si, že klávesové zkratky se může lišit na základě na profilu, které jste vybrali.)
-   * **Myš**
+     * Stisknutím klávesy **Ctrl + R**, pak **Ctrl + R**.  (Všimněte si, že klávesová zkratka může být jiný platformě, na který profil vyberete.)
+   * **Myši**
      * Vyberte **Upravit > Refaktorovat > přejmenujte**.
-     * Klikněte pravým tlačítkem na kód a vyberte **přejmenovat**.
+     * Klikněte pravým tlačítkem na kód a vybrat **přejmenovat**.
 
-1. V **přejmenovat** okna, která se objeví, zadejte nový název pro vybranou položku a klikněte na tlačítko **Preview** tlačítko.  Změna **obor vyhledávání** Pokud potřebujete rozšířit nebo zúžit rozsah přejmenováním.
+1. V **přejmenovat** okna, která se otevře, zadejte nový název pro vybranou položku a klikněte **ve verzi Preview** tlačítko.  Změnit **obor vyhledávání** Pokud potřebujete rozšířit nebo zúžit rozsah přejmenování.
 
-   ![Dialogové okno Přejmenovat](images/rename_dialog.png)
+   ![Dialogové okno přejmenování](images/rename_dialog.png)
 
    > [!TIP]
-   > Ve verzi preview, můžete přeskočit kontrolou **přeskočit preview změny, pokud odkazy na všechny potvrzena** možnost.
+   > Verzi preview, můžete přeskočit kontrolou **přeskočit náhled změní, pokud jsou všechny odkazy potvrzené** možnost.
 
-1. Když **přejmenovat zobrazení náhledu změn -** zobrazí se okno, ujistěte se, že jste požádali změny se provádějí správně.  Pomocí zaškrtávacích políček k povolení nebo zakázání přejmenování libovolnou položku v horní polovině okna.
+1. Když **náhled změn – přejmenovat** zobrazí se okno, ujistěte se, že se změny se provádějí odpovídajícím způsobem.  K povolení nebo zakázání přejmenování libovolnou položku pomocí zaškrtávacích políček v horní části okna.
 
-   ![Přejmenujte preview](images/rename_preview.png)
+   ![Přejmenování ve verzi preview](images/rename_preview.png)
 
-1. Pokud se vše spokojeni, klikněte na tlačítko **použít** tlačítko a položka se přejmenuje ve zdrojovém kódu.
+1. Pokud vše vypadá v pořádku, klikněte na tlačítko **použít** tlačítko a položce se přejmenuje ve zdrojovém kódu.

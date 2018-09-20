@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f1390259838302a56e58397afa79fa8c458b939
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2da1b645e85542631ce3e656ccaebdfbccf01137
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710330"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397895"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Návod: Kompilace programu C na příkazovém řádku
 
@@ -169,7 +169,7 @@ Kompilátor Visual C++ C je obecně kompatibilní se standardem ISO C99, ale nen
 
 ## <a name="see-also"></a>Viz také:
 
-[Návod: Vytvoření programu ve standardním C++ (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)
-[referenční dokumentace jazyka C](../c-language/c-language-reference.md)<br/>
+[Návod: Vytvoření programu ve standardním C++ (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)<br/>
+[Referenční dokumentace jazyka C](../c-language/c-language-reference.md)<br/>
 [Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)<br/>
 [Kompatibilita](../c-runtime-library/compatibility.md)

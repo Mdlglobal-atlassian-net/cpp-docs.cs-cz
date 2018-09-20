@@ -1,5 +1,5 @@
 ---
-title: Použití ovládacích prvků strom | Microsoft Docs
+title: Použití ovládacích prvků strom | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,31 +15,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9cb5c8892583adac01ca883034b8c0af18595c9
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 1fc3efbf48a9005bf117c2dd7ab5f1bd01ed556d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954592"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403679"
 ---
 # <a name="using-tree-controls"></a>Použití ovládacích prvků strom
-Typické použití ovládacího prvku strom ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) se následující níže:  
-  
--   Ovládací prvek je vytvořen. Jestliže se ovládací prvek v poli šablony dialogového okna, nebo pokud používáte `CTreeView`, po vytvoření automatického při vytvoření dialogového nebo zobrazení. Pokud chcete vytvořit ovládací prvek stromu jako podřízeného okna Další okna, použijte [vytvořit](../mfc/reference/ctreectrl-class.md#create) – členská funkce.  
-  
--   Pokud chcete, aby vaše ovládací prvek stromu používat bitové kopie, nastavte seznamu obrázků voláním [SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist). Můžete také změnit odsazení voláním [SetIndent](../mfc/reference/ctreectrl-class.md#setindent). Vhodná doba na k tomu je v [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) (pro ovládací prvky v dialogových oknech) nebo [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) (pro zobrazení).  
-  
--   Ukládat data do ovládacího prvku voláním `CTreeCtrl`na [metody InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) funkce jednou pro každou položku dat. `InsertItem` Vrátí popisovač pro položku, kterou můžete použít k odkazování na ho později, například při přidání podřízené položky. Je vhodná doba k chybě při inicializaci dat v `OnInitDialog` (pro ovládací prvky v dialogových oknech) nebo `OnInitialUpdate` (pro zobrazení).  
-  
--   Jako uživatel pracuje s ovládacím prvkem, odešle různých zpráv s oznámením. Můžete zadat funkci pro zpracování jednotlivých zpráv, které chcete zpracovávat přidáním on_notify_reflect – makro mapy zpráv okno řízení nebo přidáním on_notify – makro do nadřazeného okna mapa zpráv. V tématu [zprávy s oznámením ovládacího prvku strom](../mfc/tree-control-notification-messages.md) dál v tomto tématu pro seznam možných oznámení.  
-  
--   Volání různé sady členské funkce pro nastavení hodnot pro ovládací prvek. Změny, které můžete provést zahrnují nastavení odsazení a změna text, image nebo data přidružená položce.  
-  
--   Zkontrolujte obsah ovládacího prvku pomocí různých funkcí Get. Také můžete procházet obsah ovládacího prvku strom s funkcemi, které vám umožní načíst popisovače nadřazených položek, děti a zadané položky na stejné úrovni. Můžete řadit i podřízené objekty daného konkrétním uzlu.  
-  
--   Když jste hotovi s ovládacím prvkem, zkontrolujte, zda že je správně zničena. Pokud ovládací prvek stromu je v dialogovém okně nebo pokud se jedná o zobrazení ho a `CTreeCtrl` objektu budou automaticky zničena. Pokud ne, musíte zajistit, aby obě ovládacího prvku a `CTreeCtrl` objekt jsou správně zničena.  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Typické použití ovládacího prvku strom ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) má následující tvar:
+
+- Ovládací prvek je vytvořen. Pokud je ovládací prvek podle šablony dialogového okna, nebo pokud používáte `CTreeView`, vytvoření je automatická, když se vytvoří dialogové okno nebo zobrazení. Pokud chcete vytvořit stromu ovládacího prvku jako podřízeného okna ostatní okna, použijte [vytvořit](../mfc/reference/ctreectrl-class.md#create) členskou funkci.
+
+- Pokud chcete vaše ovládacího prvku stromu, abyste mohli používat Image, nastavte seznam obrázků voláním [SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist). Můžete také změnit odsazení voláním [SetIndent](../mfc/reference/ctreectrl-class.md#setindent). Je vhodná doba k tomu v [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) (pro ovládací prvky v dialogových oknech) nebo [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) (pro zobrazení).
+
+- Ukládat data do ovládacího prvku pomocí volání `CTreeCtrl`společnosti [metody InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) funkce jednou pro každou datovou položku. `InsertItem` Vrátí popisovač do položky, které vám umožní si ji později, třeba při přidání podřízené položky. Je vhodná doba k inicializaci dat v `OnInitDialog` (pro ovládací prvky v dialogových oknech) nebo `OnInitialUpdate` (pro zobrazení).
+
+- Během interakce uživatele s ovládacím prvkem, odešle různé zprávy s oznámením. Můžete zadat funkce pro zpracování každé zprávy, které chcete zpracovat tak, že přidáte na on_notify_reflect – makro v mapování zprávy okno ovládacího prvku nebo tak, že přidáte ON_NOTIFY – makro mapování nadřazené okno zprávy. Zobrazit [zprávy s oznámením ovládacího prvku strom](../mfc/tree-control-notification-messages.md) dále v tomto tématu seznam možných oznámení.
+
+- Volejte různé členské funkce Set k nastavení hodnot pro ovládací prvek. Změna, kterou můžete zahrnout nastavení odsazení a změně text, image nebo data související s položkou.
+
+- Použijte různé funkce Get prozkoumat obsah ovládacího prvku. Můžete také procházet obsah ovládacího prvku stromu s funkcemi, které umožňují načtení popisovače nadřazené, podřízené položky a na stejné úrovni zadané položky. Dokonce můžete seřadit podřízené objekty daného konkrétní uzel.
+
+- Jakmile budete hotovi s ovládacím prvkem, ujistěte se, že je správně zničeny. Pokud je ovládací prvek stromu v dialogovém okně, nebo pokud se jedná o zobrazení ho a `CTreeCtrl` bude objekt zničen. automaticky. Pokud ne, musíte zajistit, aby oba ovládací prvek a `CTreeCtrl` objektu jsou správně zničeny.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

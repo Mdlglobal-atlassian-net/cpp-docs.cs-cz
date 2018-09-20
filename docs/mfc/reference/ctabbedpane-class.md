@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a73d5bb3ef67469ad1cc12b2a2c2757cf1ce137
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a2e61616ae6a481925bdb8b9b135f0a6a9fdfff7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712828"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407943"
 ---
 # <a name="ctabbedpane-class"></a>Ctabbedpane – třída
 
@@ -183,9 +183,9 @@ virtual BOOL DetachPane(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pBar*  
+[in] *pBar*
 
-[in] *bHide*  
+[in] *bHide*
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -225,9 +225,9 @@ virtual BOOL FloatTab(
 ### <a name="parameters"></a>Parametry
 
 *pBar*<br/>
-[in] [in] *nTabID*  
+[in] [in] *nTabID*
 *dockMethod*<br/>
-[in] [in] *bHide*  
+[in] [in] *bHide*
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -308,6 +308,7 @@ Tato hodnota je nutné nastavit před podokna s kartami se vytvořil.
 Výchozí hodnota je FALSE.
 
 ##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC
+
 Informace o třídě modulu runtime pro vlastní `CMFCTabCtrl`-odvozenému objektu.
 
 ```
@@ -351,8 +352,8 @@ Použití [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) povolit nebo za
 
 ## <a name="see-also"></a>Viz také
 
-[Graf hierarchie](../../mfc/hierarchy-chart.md)  
-[Třídy](../../mfc/reference/mfc-classes.md)  
-[CDockablePane – třída](../../mfc/reference/cdockablepane-class.md)  
-[CBaseTabbedPane – třída](../../mfc/reference/cbasetabbedpane-class.md)  
-[CMFCOutlookBar – třída](../../mfc/reference/cmfcoutlookbar-class.md)  
+[Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
+[Třídy](../../mfc/reference/mfc-classes.md)<br/>
+[CDockablePane – třída](../../mfc/reference/cdockablepane-class.md)<br/>
+[CBaseTabbedPane – třída](../../mfc/reference/cbasetabbedpane-class.md)<br/>
+[CMFCOutlookBar – třída](../../mfc/reference/cmfcoutlookbar-class.md)

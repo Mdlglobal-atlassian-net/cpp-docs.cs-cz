@@ -1,5 +1,5 @@
 ---
-title: Umístění položky v ovládacím prvku stromu | Microsoft Docs
+title: Umístění položky v ovládacím prvku strom | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7b7576786f456320a355920a7a9ef9e4935ab03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e24c21a8a44f09e9141b1763646d1a887bda158
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382148"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412090"
 ---
 # <a name="tree-control-item-position"></a>Umístění položky v ovládacím prvku strom
-Počáteční pozice položky je nastavena při přidání položky do ovládacího prvku strom ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) pomocí `InsertItem` – členská funkce. Volání funkce člen Určuje popisovač nadřazené položky a popisovač položky, po jejímž uplynutí má vložit novou položku. Druhý popisovač musí identifikovat podřízenou položku daného nadřazeného prvku nebo jedné z těchto hodnot: `TVI_FIRST`, `TVI_LAST`, nebo `TVI_SORT`.  
-  
- Když `TVI_FIRST` nebo `TVI_LAST` je zadán ovládací prvek stromu umístí novou položku na začátku nebo na konci daného nadřazené položky seznamu podřízené položky. Když `TVI_SORT` je zadán ovládací prvek stromu vloží novou položku do seznamu podřízené položky v abecedním pořadí na základě textu popisků položky.  
-  
- Nadřazené položky seznamu podřízené položky můžete vložit do abecedním pořadí voláním [SortChildren](../mfc/reference/ctreectrl-class.md#sortchildren) – členská funkce. Tato funkce obsahuje parametr, který určuje, zda všechny úrovně podřízené položky sestupném z daného nadřazené položky jsou také seřazené podle abecedy.  
-  
- [SortChildrenCB](../mfc/reference/ctreectrl-class.md#sortchildrencb) – členská funkce umožňuje řazení podřízené položky na základě kritérií, které definujete. Při volání této funkce zadejte funkci zpětné volání definované aplikací, která ovládací prvek stromu můžete volat vždy, když je relativní pořadí dva podřízené položky se rozhodla. Funkce zpětného volání přijímá dva 32-bit aplikace definované hodnoty pro položky porovnávané a třetí hodnota 32-bit, zadaný při volání metody `SortChildrenCB`.  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Počáteční pozici položky je nastavena, když je položka přidána do ovládacího prvku strom ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) s použitím `InsertItem` členskou funkci. Volání členské funkce Určuje popisovač nadřazené položky a popisovač předmětu, po jejímž uplynutí má být vložen nová položka. Druhý popisovač musí identifikovat podřízenou položku dané nadřazeného objektu nebo jednu z těchto hodnot: `TVI_FIRST`, `TVI_LAST`, nebo `TVI_SORT`.
+
+Když `TVI_FIRST` nebo `TVI_LAST` není zadán, umístí do ovládacího prvku stromu novou položku na začátku nebo konci daná nadřazená položka seznamu podřízených položek. Když `TVI_SORT` je zadán do ovládacího prvku stromu vloží novou položku do seznamu podřízených položek v abecedním pořadí podle textu položky popisky.
+
+Nadřazená položka seznamu podřízených položek můžete umístit do abecedy voláním [SortChildren](../mfc/reference/ctreectrl-class.md#sortchildren) členskou funkci. Tato funkce zahrnuje parametr, který určuje, zda všechny úrovně podřízené položky sestupně z daného nadřazené položky jsou také seřazené podle abecedy.
+
+[SortChildrenCB](../mfc/reference/ctreectrl-class.md#sortchildrencb) členská funkce umožňuje řazení podřízených položek na základě kritérií, které definujete. Při volání této funkce můžete specifikovat, stromové struktury můžete volat pokaždé, když relativního pořadí dvou podřízených položek musí být rozhodnuto funkci zpětného volání definované aplikací. Funkce zpětného volání přijímá dva 32-bit aplikace definované hodnoty pro položky, který se porovnává a třetí hodnota 32-bit, který zadáváte při volání `SortChildrenCB`.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

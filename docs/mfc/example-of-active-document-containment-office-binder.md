@@ -1,5 +1,5 @@
 ---
-title: 'Příklad zahrnutí aktivního dokumentu: modul vazby sady Office | Microsoft Docs'
+title: 'Příklad zahrnutí aktivního dokumentu: modul vazby sady Office | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,24 +19,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7e4f82840a4c5620762ad57b5b9fa8dd7e62d0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 757fb13ac93fdf26aec67d570ab097b353975604
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345957"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408541"
 ---
 # <a name="example-of-active-document-containment-office-binder"></a>Příklad zahrnutí aktivního dokumentu: modul vazby sady Office
-Microsoft Office Binder je příkladem kontejner. Aplikace Office Binder obsahuje dvě podokna primární, stejně jako kontejnery obvykle. V levém podokně obsahuje ikony, které odpovídají aktivní dokumenty v vazače. Je volána každý dokument *části* v rámci vazače. Vazač může například obsahovat dokumenty aplikace Word, PowerPoint soubory, tabulky aplikace Excel a tak dále.  
-  
- Kliknutím na ikonu v levém podokně aktivuje odpovídající aktivní dokument. V pravém podokně vazač pak zobrazí obsah aktuálně vybrané aktivní dokument.  
-  
- Pokud otevřete a aktivovat dokument aplikace Word v vazač, Word řádku nabídek a panelů nástrojů zobrazí v horní části rámečku zobrazení a můžete upravit obsah dokumentu pomocí žádný příkaz slovo nebo nástroj. Kombinace nabídek na vazač i Word. je však řádku nabídek. Protože vazač a Word **pomoci** slučování nabídek, obsah odpovídajících nabídek. Kontejnery pro aktivní dokument například vazby sady Office automaticky získávat **pomoci** nabídky slučování; Další informace najdete v tématu [pomoci slučování nabídek](../mfc/help-menu-merging.md).  
-  
- Když vyberete dokument active jiného typu aplikace, změny vazač rozhraní pro přizpůsobení, která typu aplikace aktivní dokument. Například pokud vazač obsahuje tabulky aplikace Excel, zjistíte, že nabídky v vazač změnit při výběru části tabulky aplikace Excel.  
-  
- Existují samozřejmě další možné typy kontejnery vedle vazače. Průzkumník souborů používá rozhraní typické duální podokně, ve kterém v levém podokně pomocí ovládacím prvkem strom zobrazí hierarchické seznamu adresářů v síti, nebo jednotku při pravý panel zobrazuje soubory obsažené v aktuálně vybraném adresáři. Internetové prohlížeče – typ kontejneru (například aplikace Microsoft Internet Explorer), nikoli pomocí rozhraní duální podokně, obvykle má jeden snímek a poskytuje navigační pomocí hypertextové odkazy.  
-  
-## <a name="see-also"></a>Viz také  
- [Zahrnutí aktivního dokumentu](../mfc/active-document-containment.md)
+
+Modul vazby sady Office Microsoft je příkladem kontejner pro aktivní dokument. Modul vazby sady Office zahrnuje dvě primární podokna, jako jsou kontejnery to obvykle děláte. Levé podokno obsahuje ikonami, které odpovídají aktivní dokumenty v vazače. Je volána každý dokument *části* v rámci vazače. Vazač může například obsahovat dokumentů aplikace Word, PowerPoint soubory, tabulky aplikace Excel a tak dále.
+
+Kliknutím na ikony v levém podokně aktivuje odpovídající aktivní dokument. Pravém podokně vazače zobrazí obsah aktuálně vybraného aktivního dokumentu.
+
+Pokud otevřete a aktivovat Wordový dokument v vazač, Word nabídek a panelů nástrojů se zobrazí v horní části zobrazení snímků a upravíte obsah dokumentu pomocí libovolného příkazu slova nebo nástroj. Ale nabídek je kombinací vazače společnosti i Wordu nabídek. Protože vazače a Word **pomáhají** slučování nabídek, obsah příslušné nabídky. Kontejnery pro aktivní dokument jako je například modul vazby sady Office automaticky poskytují **pomáhají** nabídky sloučení; Další informace najdete v tématu [slučování nabídek nápovědy](../mfc/help-menu-merging.md).
+
+Když vyberete aktivní dokument jiného typu aplikace, má vazač rozhraní změny, které aplikace typu aktivní dokument. Například pokud vazač obsahuje Excelové tabulky, si můžete všimnout, že nabídky vazače změnit při výběru oddíl tabulky aplikace Excel.
+
+Existují, samozřejmě, další možné typy kontejnerů vedle vazače. Průzkumník souborů používá rozhraní typické duální podokně ve kterém v levém podokně používá ovládací prvek stromu k zobrazení hierarchického seznamu adresářů v disku nebo sítě, v pravém podokně zobrazuje soubory obsažené v aktuálně vybraném adresáři. Internetové prohlížeče – typ kontejneru (např. Microsoft Internet Explorer), a ne pomocí podokna duální rozhraní, obvykle obsahuje jeden snímek a poskytuje navigace pomocí hypertextových odkazů.
+
+## <a name="see-also"></a>Viz také
+
+[Zahrnutí aktivního dokumentu](../mfc/active-document-containment.md)
 

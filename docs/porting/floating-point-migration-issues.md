@@ -12,14 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb8f7d4835fe50dba2cb7eb6d4e7cb6a54efdbba
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e204e8dcc0d846294393edf9bf73b86360b40de2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42466309"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421983"
 ---
 # <a name="floating-point-migration-issues"></a>Problémy migrace s plovoucí desetinnou čárkou  
+
   
 Někdy při upgradu projektů na novější verzi sady Visual Studio, můžete zjistit, že jste změnili výsledky určitých operací s plovoucí desetinnou čárkou. K tomu obvykle dojde pro jednu ze dvou důvodů: generování kódu změní této lepší využití dostupný procesor a opravy chyb nebo změny algoritmy používané v matematické funkce v knihovně modulu runtime jazyka C (CRT). Obecně platí nové výsledky jsou správné a v mezích určeného standard jazyka. Přečtěte si k podívejte se, co se změnilo, a pokud je důležité, jak získat stejné výsledky vašich funkcí je teď před.  
 
@@ -41,6 +42,6 @@ Ve většině případů s plovoucí desetinnou čárkou změny v nejnovější 
   
 ## <a name="see-also"></a>Viz také:  
   
-[Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
-[Přehled potenciálních problémů s upgradem (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  
+[Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Přehled potenciálních problémů s upgradem (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Historie změn Visual C++ 2003–2015](visual-cpp-change-history-2003-2015.md)  

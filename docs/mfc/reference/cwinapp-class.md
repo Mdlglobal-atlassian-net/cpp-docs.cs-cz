@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1236cbdaca396aa6d52d4e30095d9a0df5379142
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8a901b7bd102736bfbeec95a1afe8e44dc26ae3b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712033"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412174"
 ---
 # <a name="cwinapp-class"></a>CWinApp – třída
 
@@ -393,7 +393,7 @@ void AddDocTemplate(CDocTemplate* pTemplate);
 
 ### <a name="parameters"></a>Parametry
 
-*pTemplate*  
+*pTemplate*<br/>
 Ukazatel `CDocTemplate` mají být přidány.
 
 ### <a name="remarks"></a>Poznámky
@@ -414,7 +414,7 @@ virtual void AddToRecentFileList(LPCTSTR lpszPathName);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszPathName*  
+*lpszPathName*<br/>
 Cestu k souboru.
 
 ### <a name="remarks"></a>Poznámky
@@ -462,7 +462,7 @@ void CloseAllDocuments(BOOL bEndSession);
 
 ### <a name="parameters"></a>Parametry
 
-*bEndSession*  
+*bEndSession*<br/>
 Určuje, zda se ukončení relace Windows. Je hodnota TRUE, pokud se ukončení relace; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
@@ -479,7 +479,7 @@ BOOL CreatePrinterDC(CDC& dc);
 
 ### <a name="parameters"></a>Parametry
 
-*řadič domény*  
+*řadič domény*<br/>
 Odkaz na kontext zařízení tiskárny.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -502,7 +502,7 @@ CWinApp(LPCTSTR lpszAppName = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszAppName*  
+*lpszAppName*<br/>
 Řetězec zakončený hodnotou null, který obsahuje název aplikace, která používá Windows. Pokud tento argument nezadá, nebo má hodnotu NULL, `CWinApp` používá řetězec prostředku AFX_IDS_APP_TITLE nebo název spustitelného souboru.
 
 ### <a name="remarks"></a>Poznámky
@@ -526,13 +526,13 @@ LONG DelRegTree(
 
 ### <a name="parameters"></a>Parametry
 
-*hParentKey*  
+*hParentKey*<br/>
 Popisovač klíče registru.
 
-*strKeyName*  
+*strKeyName*<br/>
 Název klíče registru, která se má odstranit.
 
-*Druh*  
+*Druh*<br/>
 Ukazatel na objekt catltransactionmanager –.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -556,13 +556,13 @@ virtual int DoMessageBox(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszPrompt*  
+*lpszPrompt*<br/>
 Adresa textu v okně se zprávou.
 
-*nTyp*  
+*nTyp*<br/>
 Okno se zprávou [styl](../../mfc/reference/styles-used-by-mfc.md#message-box-styles).
 
-*nIDPrompt*  
+*nIDPrompt*<br/>
 Index tak, aby řetězec kontextové nápovědy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -585,7 +585,7 @@ virtual void DoWaitCursor(int nCode);
 
 ### <a name="parameters"></a>Parametry
 
-*nCode*  
+*nCode*<br/>
 Pokud tento parametr je 1, zobrazí se kurzor pro čekání. Pokud je 0, kurzor pro čekání se obnoví bez zvyšování počtu odkazů. Pokud hodnotu-1, kurzor pro čekání skončí.
 
 ### <a name="remarks"></a>Poznámky
@@ -614,10 +614,10 @@ BOOL EnableD2DSupport(
 
 ### <a name="parameters"></a>Parametry
 
-*d2dFactoryType*  
+*d2dFactoryType*<br/>
 Model vláken objektu pro vytváření D2D a prostředky, které vytvoří.
 
-*writeFactoryType*  
+*writeFactoryType*<br/>
 Hodnota, která určuje, zda bude objekt factory zápisu sdílené nebo izolovaný režim
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -660,7 +660,7 @@ BOOL EnableTaskbarInteraction(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bEnable*  
+*bEnable*<br/>
 Určuje, zda by měly být povolené (TRUE) interakci s hlavním Windows 7, nebo zakázaný (FALSE).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -767,7 +767,7 @@ HKEY GetAppRegistryKey(CAtlTransactionManager* pTM = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*Druh*  
+*Druh*<br/>
 Ukazatel `CAtlTransactionManager` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -834,7 +834,7 @@ CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*POS*  
+*POS*<br/>
 Odkaz na POZICI hodnotu vrácenou příkazem předchozí volání `GetNextDocTemplate` nebo [GetFirstDocTemplatePosition](#getfirstdoctemplateposition). Hodnota je aktualizovat na další pozici tohoto volání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -859,7 +859,7 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 
 ### <a name="parameters"></a>Parametry
 
-*pPrintDlg*  
+*pPrintDlg*<br/>
 Ukazatel [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) struktury.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -888,16 +888,16 @@ BOOL GetProfileBinary(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszSection*  
+*lpszSection*<br/>
 Odkazuje na řetězec zakončený hodnotou null, který určuje oddíl obsahující položku.
 
-*lpszEntry*  
+*lpszEntry*<br/>
 Odkazuje na řetězec zakončený hodnotou null, který obsahuje položku, jejíž hodnota má být načtena.
 
-*ppData*  
+*ppData*<br/>
 Odkazuje na ukazatel, který se zobrazí adresa data.
 
-*pBytes*  
+*pBytes*<br/>
 Odkazuje na UINT, který bude přijímat velikost dat (v bajtech).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -933,13 +933,13 @@ UINT GetProfileInt(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszSection*  
+*lpszSection*<br/>
 Odkazuje na řetězec zakončený hodnotou null, který určuje oddíl obsahující položku.
 
-*lpszEntry*  
+*lpszEntry*<br/>
 Odkazuje na řetězec zakončený hodnotou null, který obsahuje položku, jejíž hodnota má být načtena.
 
-*Nvýchozí*  
+*Nvýchozí*<br/>
 Určuje výchozí vrácenou hodnotu, pokud rozhraní položku nemůže najít.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -974,13 +974,13 @@ CString GetProfileString(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszSection*  
+*lpszSection*<br/>
 Odkazuje na řetězec zakončený hodnotou null, který určuje oddíl obsahující položku.
 
-*lpszEntry*  
+*lpszEntry*<br/>
 Odkazuje na řetězec zakončený hodnotou null, který obsahuje položky, jehož řetězec má být načtena. Tato hodnota nesmí být NULL.
 
-*lpszDefault*  
+*lpszDefault*<br/>
 Odkazuje na výchozí hodnotu řetězce pro danou položku, pokud položka nebyla nalezena v souboru inicializace.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1010,10 +1010,10 @@ HKEY GetSectionKey(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszSection*  
+*lpszSection*<br/>
 Název klíče získána.
 
-*Druh*  
+*Druh*<br/>
 Ukazatel `CAtlTransactionManager` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1042,10 +1042,10 @@ virtual void HtmlHelp(
 
 ### <a name="parameters"></a>Parametry
 
-*dwData*  
+*dwData*<br/>
 Určuje další data. Hodnota závisí na hodnotě *nCmd* parametru.
 
-*nCmd*  
+*nCmd*<br/>
 Určuje typ nápovědy požadavku. Seznam možných hodnot a jejich vliv *dwData* parametr, najdete v článku *uCommand* parametr je popsáno v o the HTMLHelp funkce rozhraní API v sadě Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
@@ -1105,10 +1105,10 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 
 ### <a name="parameters"></a>Parametry
 
-*lpszResourceName*  
+*lpszResourceName*<br/>
 Odkazuje na řetězec zakončený hodnotou null, který obsahuje název prostředku kurzoru. Můžete použít `CString` pro tento argument.
 
-*nIDResource*  
+*nIDResource*<br/>
 ID prostředku kurzoru. Seznam prostředků najdete v tématu [LoadCursor](/windows/desktop/api/winuser/nf-winuser-loadcursora) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1135,10 +1135,10 @@ HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource
 
 ### <a name="parameters"></a>Parametry
 
-*lpszResourceName*  
+*lpszResourceName*<br/>
 Odkazuje na řetězec zakončený hodnotou null, který obsahuje název prostředku ikony. Můžete také použít `CString` pro tento argument.
 
-*nIDResource*  
+*nIDResource*<br/>
 Identifikátor prostředku ikony.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1164,7 +1164,7 @@ HCURSOR LoadOEMCursor(UINT nIDCursor) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nIDCursor*  
+*nIDCursor*<br/>
 **OCR_** manifest konstantní identifikátor, který určuje předdefinované kurzoru Windows. Musíte mít `#define OEMRESOURCE` před `#include \<afxwin.h>` k získání přístupu k **OCR_** konstanty v systému WINDOWS. H.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1191,7 +1191,7 @@ HICON LoadOEMIcon(UINT nIDIcon) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nIDIcon*  
+*nIDIcon*<br/>
 **OIC_** manifest konstantní identifikátor, který určuje předdefinovanou ikonu Windows. Musíte mít `#define OEMRESOURCE` před `#include \<afxwin.h>` přístup **OIC_** konstanty v systému WINDOWS. H.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1212,7 +1212,7 @@ HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lpszCursorName*  
+*lpszCursorName*<br/>
 **IDC_** manifest konstantní identifikátor, který určuje předdefinované kurzoru Windows. Tyto identifikátory jsou definovány v systému WINDOWS. H. Následující seznam uvádí možné předem definovaných hodnot a význam pro *lpszCursorName*:
 
 - Kurzor IDC_ARROW Standardní šipka
@@ -1261,7 +1261,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lpszIconName*  
+*lpszIconName*<br/>
 Manifestu konstantní identifikátor, který určuje předdefinovanou ikonu Windows. Tyto identifikátory jsou definovány v systému WINDOWS. H. Seznam možných předem definovaných hodnot a jejich popisy najdete v tématu *lpIconName* parametr [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1282,7 +1282,7 @@ void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
 
 ### <a name="parameters"></a>Parametry
 
-*nMaxMRU*  
+*nMaxMRU*<br/>
 Počet naposledy použitých souborů ke sledování.
 
 ### <a name="remarks"></a>Poznámky
@@ -1558,7 +1558,7 @@ virtual BOOL OnDDECommand(LPTSTR lpszCommand);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszCommand*  
+*lpszCommand*<br/>
 Odkazuje na řetězec příkazu DDE přijatých aplikací.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1697,7 +1697,7 @@ virtual BOOL OnIdle(LONG lCount);
 
 ### <a name="parameters"></a>Parametry
 
-*lCount*  
+*lCount*<br/>
 Čítače se zvýší pokaždé, když `OnIdle` se volá, když aplikace zprávu fronta je prázdná. Toto je čítač nastaven na 0 pokaždé, když se zpracovává novou zprávu. Můžete použít *lCount* parametr k určení relativní časový úsek aplikace byl nečinný bez zpracování zprávy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1773,7 +1773,7 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 
 ### <a name="parameters"></a>Parametry
 
-*rCmdInfo*  
+*rCmdInfo*<br/>
 Odkaz na [ccommandlineinfo –](../../mfc/reference/ccommandlineinfo-class.md) objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -1802,7 +1802,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>Parametry
 
-*pMsg*  
+*pMsg*<br/>
 Ukazatel [MSG](../../mfc/reference/msg-structure1.md) struktura, která obsahuje zprávu zpracovat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1821,10 +1821,10 @@ virtual BOOL ProcessMessageFilter(
 
 ### <a name="parameters"></a>Parametry
 
-*kód*  
+*kód*<br/>
 Určuje kód zavěšení. Tato členská funkce kód používá k určení způsobu zpracování *lpMsg.*
 
-*lpMsg*  
+*lpMsg*<br/>
 Ukazatel Windows [MSG](../../mfc/reference/msg-structure1.md) struktury.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1847,7 +1847,7 @@ BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
 
 ### <a name="parameters"></a>Parametry
 
-*rCmdInfo*  
+*rCmdInfo*<br/>
 Odkaz na [ccommandlineinfo –](../../mfc/reference/ccommandlineinfo-class.md) objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1892,10 +1892,10 @@ virtual LRESULT ProcessWndProcException(
 
 ### <a name="parameters"></a>Parametry
 
-*e*  
+*e*<br/>
 Ukazatel na vydá nezachycenou výjimku.
 
-*pMsg*  
+*pMsg*<br/>
 A [MSG](../../mfc/reference/msg-structure1.md) strukturu, která obsahuje informace o zprávě systému windows, která způsobila rozhraní vyvolá výjimku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2127,13 +2127,13 @@ void SelectPrinter(
 
 ### <a name="parameters"></a>Parametry
 
-*hDevNames je*  
+*hDevNames je*<br/>
 Popisovač [DEVNAMES –](../../mfc/reference/devnames-structure.md) strukturu, která identifikuje ovladač, zařízení a výstupní port názvy konkrétní tiskárnu.
 
-*hDevMode*  
+*hDevMode*<br/>
 Popisovač [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) struktura, která určuje informace o inicializaci zařízení a prostředí tiskárny.
 
-*bFreeOld*  
+*bFreeOld*<br/>
 Uvolní dříve vybrané tiskárny.
 
 ### <a name="remarks"></a>Poznámky
@@ -2150,7 +2150,7 @@ void SetHelpMode(AFX_HELP_TYPE eHelpType);
 
 ### <a name="parameters"></a>Parametry
 
-*eHelpType*  
+*eHelpType*<br/>
 Určuje typ nápovědy k použití. Zobrazit [CWinApp::m_eHelpType](#m_ehelptype) Další informace.
 
 ### <a name="remarks"></a>Poznámky
@@ -2170,10 +2170,10 @@ void SetRegistryKey(UINT nIDRegistryKey);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszRegistryKey*  
+*lpszRegistryKey*<br/>
 Ukazatel na řetězec obsahující název klíče.
 
-*nIDRegistryKey*  
+*nIDRegistryKey*<br/>
 ID prostředku řetězců obsahující název klíče registru.
 
 ### <a name="remarks"></a>Poznámky
@@ -2266,10 +2266,10 @@ virtual void WinHelp(
 
 ### <a name="parameters"></a>Parametry
 
-*dwData*  
+*dwData*<br/>
 Určuje další data. Hodnota závisí na hodnotě *nCmd* parametru.
 
-*nCmd*  
+*nCmd*<br/>
 Určuje typ nápovědy požadavku. Seznam možných hodnot a jejich vliv *dwData* parametr, najdete v článku [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) funkce Windows.
 
 ### <a name="remarks"></a>Poznámky
@@ -2296,16 +2296,16 @@ BOOL WriteProfileBinary(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszSection*  
+*lpszSection*<br/>
 Odkazuje na řetězec zakončený hodnotou null, který určuje oddíl obsahující položku. Pokud oddíl neexistuje, vytvoří se. Název oddílu, je případ nezávislé; řetězec může být libovolnou kombinaci velkých a malých písmen.
 
-*lpszEntry*  
+*lpszEntry*<br/>
 Odkazuje na řetězec zakončený hodnotou null, který obsahuje položku, do kterého je hodnota má být proveden zápis. Pokud položka v zadaném oddílu neexistuje, vytvoří se.
 
-*pData*  
+*pData*<br/>
 Odkazuje na data, která mají být zapsána.
 
-*nBytes*  
+*nBytes*<br/>
 Obsahuje počet bajtů, které mají být zapsána.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2333,13 +2333,13 @@ BOOL WriteProfileInt(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszSection*  
+*lpszSection*<br/>
 Odkazuje na řetězec zakončený hodnotou null, který určuje oddíl obsahující položku. Pokud oddíl neexistuje, vytvoří se. Název oddílu, je případ nezávislé; řetězec může být libovolnou kombinaci velkých a malých písmen.
 
-*lpszEntry*  
+*lpszEntry*<br/>
 Odkazuje na řetězec zakončený hodnotou null, který obsahuje položku, do kterého je hodnota má být proveden zápis. Pokud položka v zadaném oddílu neexistuje, vytvoří se.
 
-*nHodnota*  
+*nHodnota*<br/>
 Obsahuje hodnotu, která má být proveden zápis.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2367,13 +2367,13 @@ BOOL WriteProfileString(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszSection*  
+*lpszSection*<br/>
 Odkazuje na řetězec zakončený hodnotou null, který určuje oddíl obsahující položku. Pokud oddíl neexistuje, vytvoří se. Název oddílu, je případ nezávislé; řetězec může být libovolnou kombinaci velkých a malých písmen.
 
-*lpszEntry*  
+*lpszEntry*<br/>
 Odkazuje na řetězec zakončený hodnotou null, který obsahuje položku, do kterého je hodnota má být proveden zápis. Pokud položka v zadaném oddílu neexistuje, vytvoří se. Pokud má parametr hodnotu NULL, v části určené *lpszSection* se odstraní.
 
-*lpszValue*  
+*lpszValue*<br/>
 Odkazuje na řetězec, který má být proveden zápis. Pokud má parametr hodnotu NULL, položka určená *lpszEntry* parametr je odstranit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2396,13 +2396,13 @@ void SetAppID(LPCTSTR lpcszAppID);
 
 ### <a name="parameters"></a>Parametry
 
-*lpcszAppID*  
+*lpcszAppID*<br/>
 Určuje ID modelu uživatele aplikace.
 
 ### <a name="remarks"></a>Poznámky
 
 ## <a name="see-also"></a>Viz také
 
-[CWinThread – třída](../../mfc/reference/cwinthread-class.md)  
-[Graf hierarchie](../../mfc/hierarchy-chart.md)  
-[Postupy: Přidání podpory správce restartování](../../mfc/how-to-add-restart-manager-support.md)  
+[CWinThread – třída](../../mfc/reference/cwinthread-class.md)<br/>
+[Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
+[Postupy: Přidání podpory správce restartování](../../mfc/how-to-add-restart-manager-support.md)

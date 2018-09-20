@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1ee7e6deeda17d2ac374b39edf70ab28fa1457fa
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 87fb8ece3e1897a3ba460403d273bd649784ad44
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603378"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400423"
 ---
 # <a name="moduleunregisterobjects-method"></a>Module::UnregisterObjects – metoda
 
@@ -38,10 +38,10 @@ HRESULT UnregisterObjects(
 
 ### <a name="parameters"></a>Parametry
 
-*Modul*  
+*Modul*<br/>
 Ukazatel na modul.
 
-*název_serveru*  
+*název_serveru*<br/>
 Kvalifikovaný název, který určuje podmnožinu objekty ovlivněné touto operací.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -55,4 +55,5 @@ Pokud je tato operace úspěšná; S_OK v opačném případě chybu HRESULT, kt
 **Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Viz také
+
 [Module – třída](../windows/module-class.md)

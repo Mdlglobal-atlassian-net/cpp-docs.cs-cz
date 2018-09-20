@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 468b38dac2082e47e94e4bd52af50d77327f5ef4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 977e04b923a99cab3eb42544de99c4fcee974e82
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590686"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408866"
 ---
 # <a name="comptrrefoperator-void-operator"></a>ComPtrRef::operator void\* \* – operátor
 
@@ -46,5 +46,5 @@ Odstraní aktuální **comptrref –** objektu, přetypování ukazatel na rozhr
 
 ## <a name="see-also"></a>Viz také
 
-[ComPtrRef – třída](../windows/comptrref-class.md)  
+[ComPtrRef – třída](../windows/comptrref-class.md)<br/>
 [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

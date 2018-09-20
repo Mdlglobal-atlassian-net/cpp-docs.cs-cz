@@ -1,5 +1,5 @@
 ---
-title: Nastavení režimu objektu CStatusBarCtrl | Microsoft Docs
+title: Nastavení režimu objektu CStatusBarCtrl | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,24 +21,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdad5073b3f566ad43d25258ca0b5e173f52fb57
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: b398fedb8637ae6ce539a876410222485054919b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956808"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409542"
 ---
 # <a name="setting-the-mode-of-a-cstatusbarctrl-object"></a>Nastavení režimu objektu CStatusBarCtrl
-Existují dva režimy pro `CStatusBarCtrl` objektu: jednoduché a nejednoduché. Ve většině případů budou mít ovládací prvek panelu Stav jedné nebo více částí, spolu s textem a případně ikonu nebo ikony. Toto je voláno nejednoduché režimu. Další informace o tomto režimu najdete v tématu [inicializace částí objektu CStatusBarCtrl](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md).  
-  
- Ale existují případy, kdy je potřeba jenom zobrazit na jednom řádku textu. Jednoduchý režim v takovém případě stačí pro vaše potřeby. Chcete-li změnit režim `CStatusBarCtrl` objektu na jednoduchý, ujistěte se, volání [setsimple –](../mfc/reference/cstatusbarctrl-class.md#setsimple) – členská funkce. Jakmile ovládacího prvku panel stav v stručném režimu, nastavení textu voláním `SetText` – členská funkce, jako hodnotu předávání 255 *nPane* parametr.  
-  
- Můžete použít [issimple –](../mfc/reference/cstatusbarctrl-class.md#issimple) funkce k určení jakém režimu `CStatusBarCtrl` objekt je v.  
-  
+
+Existují dva režimy pro `CStatusBarCtrl` objektu: jednoduché a nejednoduché. Ve většině případů bude mít ovládací prvek panelu Stav jednu nebo více částí, spolu s textem a možná ikonu nebo ikony. Tomu se říká nejednoduché režimu. Další informace o tomto režimu najdete v tématu [inicializace částí objektu CStatusBarCtrl](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md).
+
+Existují však případy, kdy je potřeba jenom zobrazí jeden řádek textu. Jednoduchý režim v takovém případě stačí pro vaše potřeby. Chcete-li změnit režim `CStatusBarCtrl` objektu na hodnotu simple, volání [setsimple –](../mfc/reference/cstatusbarctrl-class.md#setsimple) členskou funkci. Jakmile ovládací prvek panelu stavu v stručném režimu, nastavení textu voláním `SetText` členská funkce, jako hodnotu pro předání 255 *nPane* parametru.
+
+Můžete použít [issimple –](../mfc/reference/cstatusbarctrl-class.md#issimple) funkce k určení režimu `CStatusBarCtrl` objekt je v.
+
 > [!NOTE]
->  Pokud objekt panelu Stav se změní z hodnoty nonsimple na jednoduchý, nebo naopak, okamžitě bude překreslen okna a pokud jsou k dispozici žádné definované částí se automaticky obnoví.  
-  
-## <a name="see-also"></a>Viz také  
- [Použití třídy CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+>  Pokud se stav objektu panelu se mění z nonsimple na jednoduchý, nebo naopak, okamžitě překreslení okna a pokud je k dispozici žádné definované součásti se automaticky obnoví.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

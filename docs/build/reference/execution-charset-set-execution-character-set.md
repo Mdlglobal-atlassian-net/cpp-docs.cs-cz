@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cd7acf018930c013f477cf4c3a8b3260a8d53ec
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b5a2e2c690b9e827992ca79f861e40452c071d42
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714616"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420982"
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/ Execution-Charset (nastavení znakové sady spuštění)
 
@@ -66,6 +66,6 @@ Pokud chcete nastavit zdrojové znakové sady a znakové sady spuštění na UTF
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
-[/ Source-Charset (nastavení zdrojové znakové sady)](../../build/reference/source-charset-set-source-character-set.md)
-[/UTF-8 (nastavení zdrojové a spustitelné znakové sady UTF-8)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
- [ /Validate-Charset (ověření kompatibilních znaků)](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+[/source-charset (nastavení zdrojové znakové sady)](../../build/reference/source-charset-set-source-character-set.md)<br/>
+[/utf-8 (nastavení zdrojové znakové sady a spustitelné znakové sady na UTF-8)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)<br/>
+[/validate-charset (ověření kompatibilních znaků)](../../build/reference/validate-charset-validate-for-compatible-characters.md)

@@ -1,5 +1,5 @@
 ---
-title: CTreeCtrl vs. CTreeView | Microsoft Docs
+title: Porovnání atributů CTreeCtrl a. CTreeView | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,21 +20,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d71048b6f03f7f1b4400c0a88c178d1b97acdf2f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e8acaecbdfb99b8ae0b27023145a0ef6aee1f219
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342030"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399145"
 ---
-# <a name="ctreectrl-vs-ctreeview"></a>CTreeCtrl vs. CTreeView
-MFC poskytuje dvě třídy, které zapouzdření ovládací prvky stromů: [CTreeCtrl](../mfc/reference/ctreectrl-class.md) a [CTreeView](../mfc/reference/ctreeview-class.md). Každá třída je užitečná v různých situacích.  
-  
- Použití `CTreeCtrl` Pokud budete potřebovat prvku okno prostý podřízené; pro instanci v dialogovém okně. Zejména by chcete použít `CTreeCtrl` Pokud bude jiné podřízené ovládací prvky v okně jako typický dialogové okno.  
-  
- Použití `CTreeView` kdy se má ovládací prvek stromu tak, aby fungoval jako okno zobrazení v architektuře document/view i ovládacím prvkem strom. A `CTreeView` bude zabírat celého klienta oken s rámečkem nebo rozdělovače oken. Jej bude automaticky nastavena velikost při změně velikosti jeho nadřazeného okna a může zpracovat příkaz zprávy z nabídek, klávesy akcelerátoru a panelů nástrojů. Vzhledem k tomu, že ovládacím prvkem strom obsahuje data potřebná k zobrazení stromu, odpovídající objekt dokumentu nemusí být složité – můžete použít i [CDocument](../mfc/reference/cdocument-class.md) jako typ dokumentu v šabloně dokumentu.  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+# <a name="ctreectrl-vs-ctreeview"></a>Porovnání atributů CTreeCtrl a. CTreeView
+
+Knihovna MFC poskytuje dvě třídy, které provádí zapouzdření ovládacích prvků strom: [CTreeCtrl](../mfc/reference/ctreectrl-class.md) a [CTreeView](../mfc/reference/ctreeview-class.md). Každá třída je užitečná v různých situacích.
+
+Použití `CTreeCtrl` když potřebujete prostý podřízeného ovládacího prvku okno; například v dialogovém okně. Zejména je vhodné použít `CTreeCtrl` Pokud bude existovat jiné podřízené ovládací prvky v okně, stejně jako v typické dialogového okna.
+
+Použití `CTreeView` kdy má ovládací prvek stromové struktury tak, aby fungoval jako okno zobrazení v architektuře document/view – stejně jako ovládací prvek stromu. A `CTreeView` se využije celou klientskou oblast rámce okna nebo okno s rozdělovačem. To bude automaticky nastavena velikost při změně velikosti jeho nadřazenému oknu, a dokáže zpracovat příkaz zprávy z nabídky přístupové klávesy a panely nástrojů. Vzhledem k tomu, že ovládací prvek stromu obsahuje data potřebná k zobrazení stromu, odpovídající objekt dokumentu, nemusí být složité – může dokonce využít [CDocument](../mfc/reference/cdocument-class.md) jako typ dokumentu v šabloně dokumentu.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6116a1b27595c6400edfcb79daafb362fb7aec5f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 92ffcd9ecf292f07d78df75f75c8d1ce77a6cbfb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684488"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399779"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ v sadě Visual Studio
 
@@ -84,7 +84,8 @@ Informace o ukázkách kódu.
 [Integrované vývojové prostředí a nástroje pro vývoj](ide/ide-and-tools-for-visual-cpp-development.md).
 Tom, jak pomocí integrovaného vývojového prostředí sady Visual Studio můžete vytvářet projekty, pracovat s souborů se zdrojovým kódem, propojit s knihovnami, kompilace, ladění, vytvořit testy jednotek, provést statické analýzy, nasazení a další.
 
-[Kompilátory a Build Tools](build/building-c-cpp-programs.md) možnosti kompilátoru a linkeru C++ společnosti Microsoft, chybové zprávy, příkladech příkazového řádku, configurating pro různé platformy a referenční témata sestavení. 
+[Kompilátory a Build Tools](build/building-c-cpp-programs.md)<br/>
+Možnosti kompilátoru a linkeru C++ společnosti Microsoft, chybové zprávy, příkladech příkazového řádku, configurating pro různé platformy a sestavení referenčních témat. 
 
 ## <a name="write-applications-in-c"></a>Psaní aplikací v jazyce C++
 
@@ -94,9 +95,11 @@ Vyhledejte si pokyny a referenční obsah ve středisku pro vývojáře v oper
 [Desktopové aplikace (C++)](windows/desktop-applications-visual-cpp.md)<br/>
 Zjistěte, jak vytvořit tradiční nativních desktopových aplikací C++ pro Windows.
 
-[Programování v rozhraní .NET s C + +/ CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md) zjistěte, jak vytvořit knihovny DLL, které umožňuje interoperabilitu mezi nativním jazyce C++ a .NET programy napsané v jazycích, jako je C# nebo Visual Basic.
+[.NET – programování s C + +/ CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
+Zjistěte, jak vytvořit knihovny DLL, které umožňuje interoperabilitu mezi nativním jazyce C++ a .NET programy napsané v jazycích, jako je C# nebo Visual Basic.
 
-[Programování Linux](linux/index.md) použít IDE sady Visual Studio na kód a nasadit na vzdáleném počítači s Linuxem pro kompilaci pomocí GCC.
+[Programování v systému Linux](linux/index.md)<br/>
+Použijte Visual Studio IDE na kód a nasaďte na vzdáleném počítači s Linuxem pro kompilaci pomocí GCC.
 
 [Knihovny DLL v jazyce Visual C++](build/dlls-in-visual-cpp.md)<br/>
 Zjistěte, jak používat Win32 a knihovny ATL a MFC pro vytvoření DLL knihoven pracovní plochy Windows a jak kompilovat a registrovat vytvořené knihovny DLL.

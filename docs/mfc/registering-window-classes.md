@@ -1,5 +1,5 @@
 ---
-title: Registrace tříd oken | Microsoft Docs
+title: Registrace tříd oken | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,24 +24,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b2589db4d316d8421b0792e4a152e7fa390725f
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: dca6b7753ad3fd4024cadb899652336fa2f860b5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36927903"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403094"
 ---
 # <a name="registering-window-classes"></a>Registrace tříd oken
-Okno "třídy" v tradiční programování pro systém Windows definovat vlastnosti "třída" (ne C++ třídu) ze kterého můžete vytvořit libovolný počet systému windows. Tento typ třídy je šablony nebo model pro vytváření systému windows.  
-  
-## <a name="window-class-registration-in-traditional-programs-for-windows"></a>Registrace tříd oken v tradiční programy pro Windows  
- V tradiční programu pro systém Windows bez MFC, zpracovávat všechny zprávy do okna v jeho "okno postupu" nebo "`WndProc`." A `WndProc` je přidružen období prostřednictvím procesu "registrace tříd oken". Hlavní okno je zaregistrován v `WinMain` funkce, ale ostatní třídy systému windows se dají registrovat kdekoli v aplikaci. Registrace závisí na strukturu, která obsahuje odkazy `WndProc` fungovat společně s specifikace pro kurzor, štětec pozadí plochy a tak dále. Struktura je předán jako parametr, společně s název řetězce objektu třídy, v předchozí volání `RegisterClass` funkce. Registrace třídy proto může být sdílen více oken.  
-  
-## <a name="window-class-registration-in-mfc-programs"></a>Registrace tříd oken v aplikacích MFC  
- Většina činnost registrace třídy oken, se provádí automaticky v aplikaci MFC framework. Pokud používáte MFC, obvykle odvození třídy oken C++ z existující třídy knihovny pomocí normální syntaxe C++ pro dědičnosti tříd. Rozhraní framework dál používá tradiční "registrace třídy" a poskytuje několik standardní ty registrované pro vás v případě potřeby. Můžete registrovat další registrace třídy voláním [afxregisterwndclass –](../mfc/reference/application-information-and-management.md#afxregisterwndclass) globální funkce a následné předání registrované třídy `Create` členské funkce `CWnd`. Podle postupu popsaného tady, tradiční "registrace třída" v systému Windows je termín nelze zaměňovat s třídami C++.  
-  
- Další informace najdete v tématu [Technická poznámka 1](../mfc/tn001-window-class-registration.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Vytváření oken](../mfc/creating-windows.md)
+
+"Třídy okna" v tradiční programování pro Windows definovat vlastnosti "třída" (ne třídu jazyka C++) ze které lze vytvořit libovolný počet systému windows. Tento typ třídy je šablona nebo model pro vytváření oken.
+
+## <a name="window-class-registration-in-traditional-programs-for-windows"></a>Registrace tříd oken v tradičních aplikacích pro Windows
+
+Tradiční aplikace pro Windows bez knihovny MFC, zpracovávat všechny zprávy do okna v jeho "proceduru okna" nebo "`WndProc`." A `WndProc` souvisí s oknem prostřednictvím procesu "registrace tříd oken". Hlavní okno je registrován v `WinMain` funkce, ale jiné třídy windows mohou být registrovány kdekoli v aplikaci. Registrace závisí na strukturu, která obsahuje ukazatel `WndProc` fungovat společně s specifikace kurzoru štětec pozadí a tak dále. Struktura je předán jako parametr, spolu s názvem řetězec třídy v předchozím volání `RegisterClass` funkce. Registrace třídy proto může být sdílen více oken.
+
+## <a name="window-class-registration-in-mfc-programs"></a>Registrace tříd oken v aplikacích MFC
+
+Většina činnost registrace třídy okna naproti tomu je prováděno automaticky v rozhraní framework aplikace MFC. Pokud používáte knihovnu MFC, obvykle odvodit třídu okna C++ z existující třídy knihovny prostřednictvím normální syntaxe C++ dědičnost tříd. Rozhraní stále používá tradiční "registrace třídy" a poskytuje několik standardních ty, které jsou registrovány pro vás v případě potřeby. Můžete zaregistrovat další registraci třídy voláním [afxregisterwndclass –](../mfc/reference/application-information-and-management.md#afxregisterwndclass) globální funkce a následným předáním registrované třídy, která se `Create` členskou funkci `CWnd`. Podle postupu popsaného tady, tradiční "registrace třídy" ve Windows se by se zaměňovat s třídou C++.
+
+Další informace najdete v tématu [Technická poznámka 1](../mfc/tn001-window-class-registration.md).
+
+## <a name="see-also"></a>Viz také
+
+[Vytváření oken](../mfc/creating-windows.md)
 

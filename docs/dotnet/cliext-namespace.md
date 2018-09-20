@@ -1,5 +1,5 @@
 ---
-title: cliext – Namespace | Microsoft Docs
+title: cliext – Namespace | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 20c36b4e3326ef8010558b4b99729ec8643b5af5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07433d1abe9fae109ee7a7be90219ce726f22eeb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104149"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419084"
 ---
 # <a name="cliext-namespace"></a>cliext – obor názvů
-`cliext` Obor názvů obsahuje všechny typy knihovny STL/CLR. Seznam všech tyto typy a odkazy na další informace o typech STL/CLR, naleznete v části [referenční příručka knihovny STL/CLR](../dotnet/stl-clr-library-reference.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace knihoven STL/CLR](../dotnet/stl-clr-library-reference.md)
+
+`cliext` Obor názvů obsahuje všechny typy knihovny STL/CLR. Seznam všech těchto typů, a odkazy na další informace o typech STL/CLR naleznete v tématu [referenční dokumentace knihoven STL/CLR](../dotnet/stl-clr-library-reference.md).
+
+## <a name="see-also"></a>Viz také
+
+[Referenční dokumentace knihoven STL/CLR](../dotnet/stl-clr-library-reference.md)

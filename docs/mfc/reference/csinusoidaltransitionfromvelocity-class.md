@@ -1,5 +1,5 @@
 ---
-title: Třída CSinusoidalTransitionFromVelocity | Microsoft Docs
+title: Csinusoidaltransitionfromvelocity – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,101 +24,113 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9f5cc55adac2bf5900d9891635a025716b9c1f3
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: d69e3ed213d9ad207dbf664088598a7232d40a32
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078576"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401534"
 ---
-# <a name="csinusoidaltransitionfromvelocity-class"></a>CSinusoidalTransitionFromVelocity – třída
-Zapouzdří vlnovitě rychlosti přechodu, který má amplitudě, který je určen podle počáteční rychlosti proměnné animace.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CSinusoidalTransitionFromVelocity : public CBaseTransition;  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity](#csinusoidaltransitionfromvelocity)|Vytvoří objekt přechodu.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CSinusoidalTransitionFromVelocity::Create](#create)|Volá knihovně přechod k vytvoření objektu zapouzdřené přechod COM. (Přepisuje [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
-  
-### <a name="public-data-members"></a>Veřejné datové členy  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CSinusoidalTransitionFromVelocity::m_duration](#m_duration)|Doba trvání přechodu.|  
-|[CSinusoidalTransitionFromVelocity::m_period](#m_period)|Období kmitání vlnovitě wave v sekundách.|  
-  
-## <a name="remarks"></a>Poznámky  
- Hodnota proměnné animace oscillates kolem počáteční hodnota přes celou dobu trvání přechod vlnovitě rozsahu. Amplitudě kmitání je určen podle rychlosti proměnnou animace zahájení přechodu. Protože všechny přechody jsou automaticky vymazány, se doporučuje přidělené je pomocí operátoru nové. Obsah zapouzdřeného objektu IUIAnimationTransition COM vytvoří CAnimationController::AnimateGroup, dokud, pak je NULL. Po vytvoření tohoto objektu COM nemá žádný vliv, změna proměnné členů.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
-  
- [CSinusoidalTransitionFromVelocity](../../mfc/reference/csinusoidaltransitionfromvelocity-class.md)  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxanimationcontroller.h  
-  
-##  <a name="create"></a>  CSinusoidalTransitionFromVelocity::Create  
- Volá knihovně přechod k vytvoření objektu zapouzdřené přechod COM.  
-  
-```  
+# <a name="csinusoidaltransitionfromvelocity-class"></a>Csinusoidaltransitionfromvelocity – třída
+
+Zapouzdřuje přechod se sinusovou, který má amplitudu určenou počáteční rychlostí proměnné animace.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CSinusoidalTransitionFromVelocity : public CBaseTransition;
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity](#csinusoidaltransitionfromvelocity)|Vytvoří objekt přechodu.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CSinusoidalTransitionFromVelocity::Create](#create)|Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá. (Přepíše [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+
+### <a name="public-data-members"></a>Veřejné datové členy
+
+|Název|Popis|
+|----------|-----------------|
+|[CSinusoidalTransitionFromVelocity::m_duration](#m_duration)|Doba trvání přechodu.|
+|[CSinusoidalTransitionFromVelocity::m_period](#m_period)|Období oscilace sinusovým wave během několika sekund.|
+
+## <a name="remarks"></a>Poznámky
+
+Hodnota proměnné animace oscillates kolem počáteční hodnota za celou dobu trvání přechod se sinusovým rozsahem. Amplitudu oscilace je určena rychlostí proměnné animace po zahájení přechodu. Protože všechny přechody jsou automaticky vymazány, doporučuje se je přidělena pomocí operátoru nové. Zapouzdřený objekt IUIAnimationTransition COM je vytvořené CAnimationController::AnimateGroup, dokud je NULL. Změna členské proměnné po vytvoření tohoto objektu COM nemá žádný vliv.
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[Třídy CObject](../../mfc/reference/cobject-class.md)
+
+[Cbasetransition –](../../mfc/reference/cbasetransition-class.md)
+
+[Csinusoidaltransitionfromvelocity –](../../mfc/reference/csinusoidaltransitionfromvelocity-class.md)
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxanimationcontroller.h
+
+##  <a name="create"></a>  CSinusoidalTransitionFromVelocity::Create
+
+Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá.
+
+```
 virtual BOOL Create(
-    IUIAnimationTransitionLibrary* pLibrary,  
+    IUIAnimationTransitionLibrary* pLibrary,
     IUIAnimationTransitionFactory* \*not used*\);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pLibrary*  
- Ukazatel na přechod knihovny, která zodpovídá za vytvoření standardní přechodů.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud je přechod vytvořen úspěšně; jinak hodnota FALSE.  
-  
-##  <a name="csinusoidaltransitionfromvelocity"></a>  CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity  
- Vytvoří objekt přechodu.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pLibrary*<br/>
+Ukazatel na přechod knihovny, který je zodpovědný za vytváření standardní přechodů.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Hodnota TRUE, pokud úspěšně; vytvoření přechodu v opačném případě FALSE.
+
+##  <a name="csinusoidaltransitionfromvelocity"></a>  CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity
+
+Vytvoří objekt přechodu.
+
+```
 CSinusoidalTransitionFromVelocity(
-    UI_ANIMATION_SECONDS duration,  
+    UI_ANIMATION_SECONDS duration,
     UI_ANIMATION_SECONDS period);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Doba trvání*  
- Doba trvání přechodu.  
-  
- *Období*  
- Období kmitání vlnovitě wave v sekundách.  
-  
-##  <a name="m_duration"></a>  CSinusoidalTransitionFromVelocity::m_duration  
- Doba trvání přechodu.  
-  
-```  
-UI_ANIMATION_SECONDS m_duration;  
-```  
-  
-##  <a name="m_period"></a>  CSinusoidalTransitionFromVelocity::m_period  
- Období kmitání vlnovitě wave v sekundách.  
-  
-```  
-UI_ANIMATION_SECONDS m_period;  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Třídy](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*Doba trvání*<br/>
+Doba trvání přechodu.
+
+*Období*<br/>
+Období oscilace sinusovým wave během několika sekund.
+
+##  <a name="m_duration"></a>  CSinusoidalTransitionFromVelocity::m_duration
+
+Doba trvání přechodu.
+
+```
+UI_ANIMATION_SECONDS m_duration;
+```
+
+##  <a name="m_period"></a>  CSinusoidalTransitionFromVelocity::m_period
+
+Období oscilace sinusovým wave během několika sekund.
+
+```
+UI_ANIMATION_SECONDS m_period;
+```
+
+## <a name="see-also"></a>Viz také
+
+[Třídy](../../mfc/reference/mfc-classes.md)

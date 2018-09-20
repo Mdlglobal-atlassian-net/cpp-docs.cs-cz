@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: použití filtru bloku zpráv | Microsoft Docs'
+title: 'Postupy: použití filtru bloku zpráv | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,60 +15,67 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92de322142e56eb9907da2e19d350c3af9c8a7d9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b16dee4d0a3c5a6d09c1fd19006c832be400d5a4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688268"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411068"
 ---
 # <a name="how-to-use-a-message-block-filter"></a>Postupy: Použití filtru bloku zpráv
-Tento dokument ukazuje, jak používat funkce filtru pro povolení bloku asynchronní zpráva k přijetí nebo odmítnutí zprávu na základě datovou část zprávy.  
-  
- Když vytvoříte objekt bloku zpráv, jako [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md), [concurrency::call](../../parallel/concrt/reference/call-class.md), nebo [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md), můžete zadat *filtrovat funkce* který určuje, zda blok zprávu přijme nebo odmítne zprávy. Funkce filtru je užitečný způsob, jak zajistit, že blok zpráv přijímá jenom určité hodnoty.  
-  
- Funkce filtru jsou důležité, protože umožňují vám umožní připojit se bloky zpráv do formuláře *toku dat sítě*. Bloky zpráv v síti toku dat, řízení toku dat zpracováním pouze zprávy, které splňují určitá kritéria. Výsledky porovnejte s modelem tok řízení, které je řídí tok dat pomocí řídicí struktury například podmíněné příkazy, smyčky a tak dále.  
-  
- Tento dokument obsahuje základních příkladů použití filtru zpráv. Další příklady, které používají filtry zpráv a model toku dat pro připojení bloky zpráv najdete v tématu [návod: vytvoření agenta toku dat](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md) a [návod: vytváření sítě pro zpracování obrázků](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md) .  
-  
-## <a name="example"></a>Příklad  
- Vezměte v úvahu následující funkce `count_primes`, který ukazuje základní použití bloku zpráv, který nefiltruje příchozí zprávy. Blok zpráv připojí prvočísel k [std::vector](../../standard-library/vector-class.md) objektu. `count_primes` Funkce odešle několik čísla do bloku zpráv, obdrží hodnoty výstup z bloku zpráv a vytiskne tato čísla, která jsou prime ke konzole.  
-  
- [!code-cpp[concrt-primes-filter#1](../../parallel/concrt/codesnippet/cpp/how-to-use-a-message-block-filter_1.cpp)]  
-  
- `transformer` Objekt zpracovává všechny vstupní hodnoty; však vyžaduje pouze hodnoty, které jsou prime. I když se aplikace, může být napsaná tak, aby odesílatele zprávy odesílá pouze prvočísel, nemůže být známé vždy požadavky příjemce zprávy.  
-  
-## <a name="example"></a>Příklad  
- Následující funkce `count_primes_filter`, provádí stejnou úlohu, jako `count_primes` funkce. Ale `transformer` objektu v této verzi používá funkci filtru tak, aby přijímal pouze hodnoty, které jsou prime. Funkce, která provede akci pouze obdrží prvočísel; proto nemá k volání `is_prime` funkce.  
-  
- Protože `transformer` objekt přijímá pouze prvočísel, `transformer` samotného objektu mohou být uloženy prvočísel. Jinými slovy `transformer` objekt v tomto příkladu není potřeba přidat prime čísla, která `vector` objektu.  
-  
- [!code-cpp[concrt-primes-filter#2](../../parallel/concrt/codesnippet/cpp/how-to-use-a-message-block-filter_2.cpp)]  
-  
- `transformer` Objekt nyní zpracovává pouze hodnoty, které jsou prime. V předchozím příkladu `transformer` objekt zpracovává všechny zprávy. Předchozí příklad proto musí obdržet stejný počet zpráv, které odešle. Tento příklad používá výsledek [concurrency::send](reference/concurrency-namespace-functions.md#send) funkce k určení, kolik zpráv přijímat z `transformer` objektu. `send` Funkce vrátí `true` když vyrovnávací paměť zprávy přijme zprávu a `false` při vyrovnávací paměť zprávy odmítne zprávy. Počet pokusů, že vyrovnávací paměť zprávy přijímá zprávy proto odpovídá počet prvočísel.  
-  
-## <a name="example"></a>Příklad  
- Následující kód ukazuje kompletní příklad. V příkladu volá i `count_primes` funkce a `count_primes_filter` funkce.  
-  
- [!code-cpp[concrt-primes-filter#3](../../parallel/concrt/codesnippet/cpp/how-to-use-a-message-block-filter_3.cpp)]  
-  
-## <a name="compiling-the-code"></a>Probíhá kompilace kódu  
- Příklad kódu zkopírujte a vložte ji do projektu sady Visual Studio nebo ho vložte v souboru, který je pojmenován `primes-filter.cpp` a poté spusťte následující příkaz v okně příkazového řádku Visual Studia.  
-  
- **cl.exe /EHsc si mosty filter.cpp**  
-  
-## <a name="robust-programming"></a>Robustní programování  
- Funkce filtru může být funkce lambda, ukazatel na funkci nebo funkce objektu. Každé funkce filtru má jednu z následujících podob:  
-  
-```Output  
-bool (T)  
-bool (T const &)  
-```  
-  
- K vyloučení nepotřebných kopírování dat, použijte druhý formulář, jestliže se agregační typu, která se přenášejí hodnotou.  
-  
-## <a name="see-also"></a>Viz také  
- [Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md)   
- [Návod: Vytvoření agenta toku dat](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)   
- [Návod: Vytvoření sítě pro zpracování obrázků](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)   
- [transformer – třída](../../parallel/concrt/reference/transformer-class.md)
+
+Tento dokument ukazuje, jak používat funkce filtru pro povolení blok asynchronních zpráv přijmout nebo odmítnout zprávu na základě datovou část zprávy.
+
+Při vytváření objektu blok zpráv, jako [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md), [concurrency::call](../../parallel/concrt/reference/call-class.md), nebo [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md), můžete zadat *funkce filtrování* , který určuje, zda blok zpráv přijme nebo odmítne zprávy. Funkce filtru je užitečný způsob, jak zajistit, že blok zpráv přijme jenom konkrétní hodnoty.
+
+Funkce filtru jsou důležité, protože umožňují připojit blokům zpráv do formuláře *toku dat sítě*. Bloky zpráv v síti toku dat, řízení toku dat zpracováním pouze zprávy, které splňují určitá kritéria. Porovnejte to s modelem tok řízení, kde je řídit tok dat pomocí ovládacího prvku struktury, jako jsou podmíněné příkazy a smyčky a tak dále.
+
+Tento dokument poskytuje základní příklad použití filtru zpráv. Další příklady, které používají filtry zpráv a model toku dat pro připojení blokům zpráv, najdete v článku [návod: vytvoření agenta toku dat](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md) a [návod: vytvoření sítě pro zpracování obrázků](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md) .
+
+## <a name="example"></a>Příklad
+
+Vezměte v úvahu následující funkci `count_primes`, který ukazuje základní použití blok zpráv, který není filtrovat příchozí zprávy. Připojí prvočísel do bloku zpráv [std::vector](../../standard-library/vector-class.md) objektu. `count_primes` Funkce odešle několik čísel do bloku zpráv, přijímá výstupní hodnoty z bloku zpráv a vytiskne těchto čísel, které jsou prime do konzoly.
+
+[!code-cpp[concrt-primes-filter#1](../../parallel/concrt/codesnippet/cpp/how-to-use-a-message-block-filter_1.cpp)]
+
+`transformer` Objekt zpracovává všechny vstupní hodnoty, ale vyžaduje jenom hodnoty, které jsou primární. I když se aplikace může být napsaná tak, aby odesílatel odešle jenom prvočísel, nemůže být vždy známé požadavky příjemce zprávy.
+
+## <a name="example"></a>Příklad
+
+Následující funkce `count_primes_filter`, provádí stejnou úlohu, jako `count_primes` funkce. Ale `transformer` objekt v této verzi používá funkci filtru tak, aby přijímal pouze hodnoty, které jsou primární. Funkce, která provede akci přijímá pouze prvočísel; Proto se nemá volat `is_prime` funkce.
+
+Protože `transformer` objektu přijímá pouze prvočísel, `transformer` samotného objektu může obsahovat prvočísel. Jinými slovy `transformer` objekt v tomto příkladu není povinné pro přidání prvočísel k `vector` objektu.
+
+[!code-cpp[concrt-primes-filter#2](../../parallel/concrt/codesnippet/cpp/how-to-use-a-message-block-filter_2.cpp)]
+
+`transformer` Objekt nyní zpracovává jenom hodnoty, které jsou primární. V předchozím příkladu `transformer` objekt zpracovávat všechny zprávy. V předchozím příkladu proto musí být stejný počet zpráv, které se odešle. Tento příklad používá výsledek [concurrency::send](reference/concurrency-namespace-functions.md#send) funkce k určení, kolik zpráv pro příjem z `transformer` objektu. `send` Vrací funkce `true` když vyrovnávací paměti zpráv přijme zprávu a `false` při vyrovnávací paměti zpráv odmítne zprávy. Počet pokusů, vyrovnávací paměti zpráv přijímá zprávy proto odpovídá počtu prvočísel.
+
+## <a name="example"></a>Příklad
+
+Následující kód ukazuje kompletní příklad. Příklad volá i `count_primes` funkce a `count_primes_filter` funkce.
+
+[!code-cpp[concrt-primes-filter#3](../../parallel/concrt/codesnippet/cpp/how-to-use-a-message-block-filter_3.cpp)]
+
+## <a name="compiling-the-code"></a>Probíhá kompilace kódu
+
+Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `primes-filter.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
+
+**cl.exe/EHsc základen filter.cpp**
+
+## <a name="robust-programming"></a>Robustní programování
+
+Funkce filtru může být funkce lambda, ukazatele na funkci nebo objektu funkce. Každá funkce filtru má jednu z následujících forem:
+
+```Output
+bool (T)
+bool (T const &)
+```
+
+Chcete-li odstranit zbytečnému kopírování dat, používejte druhý formulář, pokud máte požadovaný typ agregace, která se přenášejí podle hodnoty.
+
+## <a name="see-also"></a>Viz také
+
+[Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md)<br/>
+[Postupy: Vytvoření agenta toku dat](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
+[Návod: Vytvoření sítě pro zpracování obrázků](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
+[transformer – třída](../../parallel/concrt/reference/transformer-class.md)

@@ -1,5 +1,5 @@
 ---
-title: 'TN039: MFC OLE – implementace automatizace | Microsoft Docs'
+title: 'TN039: MFC-OLE – implementace automatizace | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -20,37 +20,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dcc179b1481c4f1f6b6a0773bba792eefffae25
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 59eca912aab816f75ce8d585036f8f900c4f7bd3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122118"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399872"
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>TN039: MFC/OLE – implementace automatizace
 
 > [!NOTE]
-> Následující Technická poznámka nebyla aktualizována vzhledem k tomu, že byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata může být zastaralý nebo není správný. Nejnovější informace se doporučuje, vyhledejte téma týkající se v indexu online dokumentaci.
+> Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
 
-## <a name="overview-of-ole-idispatch-interface"></a>Přehled OLE IDispatch – rozhraní
+## <a name="overview-of-ole-idispatch-interface"></a>Přehled rozhraní IDispatch OLE
 
-`IDispatch` Rozhraní je prostředek, pomocí kterého aplikace vystavit metody a vlastnosti, které další aplikace, jako je například Visual BASIC nebo jiných jazyků, můžete provést pomocí funkcí aplikace. Je nejdůležitější část tohoto rozhraní `IDispatch::Invoke` funkce. MFC používá "mapy odesílání" k implementaci `IDispatch::Invoke`. Mapy odesílání poskytuje informace implementace MFC rozložení nebo "tvaru" z vaší `CCmdTarget`-odvozené třídy, tak, aby ho můžete přímo upravit vlastnosti objektu nebo volat členské funkce v rámci objektu vyhovět `IDispatch::Invoke` požadavky.
+`IDispatch` Rozhraní se prostředky, pomocí kterého aplikace zpřístupnit metody a vlastnosti, které můžete provést další aplikace, jako je například Visual BASIC nebo jiné jazyky, pomocí funkcí aplikace. Je nejdůležitější část tohoto rozhraní `IDispatch::Invoke` funkce. Knihovna MFC používá "mapy odeslání" pro implementaci `IDispatch::Invoke`. Mapa odbavení poskytuje informace o implementaci MFC na rozložení nebo "tvar" vaší `CCmdTarget`-odvozené třídy, takže ho můžete přímo pracovat s vlastností objektu, nebo volat členské funkce v rámci objektu splňovat `IDispatch::Invoke` požadavky.
 
-Ve většině případů ClassWizard a MFC spolupracovat a skrýt většinu podrobnosti o OLE – automatizace z programátorů aplikace. Programátorů soustřeďuje na funkce skutečného vystavit v aplikaci a nemá si dělat starosti základní vložení.
+Ve většině případů ClassWizard a MFC spolupracují, aby skrýt nejvíce podrobností OLE automation z programátor aplikace. Programátor se soustřeďuje na skutečná funkce k vystavení v aplikaci a nemá se starat o podkladové zajistí funkčnost systému.
 
-Existují případy, ale pokud je nezbytné zjistit, co MFC probíhá na pozadí. Tato poznámka vyřeší tom, jak rozhraní přiřadí **DISPID**s členské funkce a vlastnosti. Znalostní báze algoritmu MFC používá pro přiřazení **DISPID**s je potřeba, pouze když potřebujete vědět, ID, například při vytváření knihovnu"typ" pro objekty vaší aplikace.
+Existují případy, ale, kde je potřeba pochopit, co dělá MFC na pozadí. Tato poznámka bude zabývat přiřazování rozhraní **DISPID**s členské funkce a vlastnosti. Znalost algoritmus knihovna MFC používá pro přiřazení **DISPID**s je potřeba, pouze když budete potřebovat znát ID, jako je například při vytváření knihovny typů"" pro objekty vaší aplikace.
 
-## <a name="mfc-dispid-assignment"></a>Přiřazení MFC DISPID
+## <a name="mfc-dispid-assignment"></a>Přiřazení DISPID knihovny MFC
 
-I když se koncový uživatel automatizace (Visual Basic uživatel, např.), se zobrazí skutečné názvy automatizace povolené vlastnosti a metody v jejich kódu (například objektu vývoz. ShowWindow), provádění `IDispatch::Invoke` neobdrží skutečné názvy. Z důvodů optimalizace, obdrží **DISPID**, což je 32-bit "magic souboru cookie" popisující metody nebo vlastnosti, která je přístupná. Tyto **DISPID** hodnoty jsou vráceny z `IDispatch` implementace prostřednictvím jinou metodu, s názvem `IDispatch::GetIDsOfNames`. Automatizace aplikace klienta bude volat `GetIDsOfNames` po pro každý člen nebo vlastnost hodlá přístup a je do mezipaměti pro pozdější volání `IDispatch::Invoke`. Tímto způsobem je nákladné řetězec vyhledávání je možné pouze jednou za použití objektu místo jednou za `IDispatch::Invoke` volání.
+I když koncový uživatel automatizace (Visual Basic uživatele, například), se zobrazí skutečné názvy automatizace povolené vlastnostem a metodám v kódu (jako je například knihovna ShowWindow), provádění `IDispatch::Invoke` neobdrží skutečné názvy. Z důvodu optimalizace přijme **DISPID**, což je 32-bit "magic soubor cookie", který popisuje metody nebo vlastnosti, která je přístupná. Tyto **DISPID** hodnoty jsou vráceny z `IDispatch` implementaci prostřednictvím další metodu s názvem `IDispatch::GetIDsOfNames`. Aplikace klienta automatizace zavolá `GetIDsOfNames` jednou pro každého člena nebo vlastnost se chystá pro přístup k a mezipaměti pro pozdější volání `IDispatch::Invoke`. Tímto způsobem, vyhledávací řetězec nákladné stačí jednou za použití objektu, namísto jednou za `IDispatch::Invoke` volání.
 
-Určuje MFC **DISPID**s pro každý metod a vlastností podle dvě věci:
+Určuje MFC **DISPID**s pro jednotlivé metody a vlastnosti podle dvě věci:
 
-- Vzdálenost od začátku expediční mapy (1 relativní)
+- Vzdálenost od horní části mapy odeslání (1 relativní)
 
-- Vzdálenost od nejvíce odvozené třídy (0 relativní) mapy odesílání
+- Vzdálenost mapa odeslání mezi nejvíce odvozenou třídou (relativní 0)
 
-**DISPID** je rozdělena na dva oddíly. **LOWORD** z **DISPID** obsahuje první součást, vzdálenost od začátku expediční mapy. **HIWORD** obsahuje vzdálenost od nejvíce odvozené třídy. Příklad:
+**DISPID** je rozdělena na dva oddíly. **LOWORD** z **DISPID** obsahuje první součást, vzdálenost od horní části mapy odeslání. **HIWORD** obsahuje vzdálenost od nejvíce odvozené třídy. Příklad:
 
 ```cpp
 class CDispPoint : public CCmdTarget
@@ -81,18 +81,18 @@ BEGIN_DISPATCH_MAP(CDisp3DPoint, CDispPoint)
 END_DISPATCH_MAP()
 ```
 
-Jak vidíte, existují dvě třídy, které zveřejňují rozhraní automatizace OLE. Jedna z těchto tříd je odvozený z jiných a proto využívá funkce základní třídy, včetně část automatizace OLE ("x" a "y" vlastnosti v tomto případě).
+Jak je vidět, existují dvě třídy, které zveřejňují rozhraní automatizace OLE. Jedna z těchto tříd je odvozena od druhé a proto využívá funkce základní třídy, včetně součástí automatizace OLE ("x" a "y" vlastnosti v tomto případě).
 
-MFC vygeneruje **DISPID**s pro třídy CDispPoint následujícím způsobem:
+Bude generovat MFC **DISPID**s pro třídy CDispPoint následujícím způsobem:
 
 ```cpp
 property X    (DISPID)0x00000001
 property Y    (DISPID)0x00000002
 ```
 
-Vzhledem k tomu, že vlastnosti nejsou v základní třídě, **HIWORD** z **DISPID** je vždy nula (vzdálenost od nejvíce odvozené třídy pro CDispPoint je nulová).
+Protože vlastnosti nejsou v základní třídě, **HIWORD** z **DISPID** je vždy nula (vzdálenost od nejvíce odvozené třídy pro CDispPoint je nula).
 
-MFC vygeneruje **DISPID**s pro třídy CDisp3DPoint následujícím způsobem:
+Bude generovat MFC **DISPID**s pro třídy CDisp3DPoint následujícím způsobem:
 
 ```cpp
 property Z    (DISPID)0x00000001
@@ -100,18 +100,18 @@ property X    (DISPID)0x00010001
 property Y    (DISPID)0x00010002
 ```
 
-Je zadána vlastnost Z **DISPID** s nulou **HIWORD** vzhledem k tomu, že je definována ve třídě, která je vystavení vlastností CDisp3DPoint. Vzhledem k tomu, že vlastnosti X a Y jsou definovány v základní třídě, **HIWORD** z **DISPID** je 1, protože třída, ve kterém jsou definovány tyto vlastnosti je ve vzdálenosti jeden odvození od nejvíce odvozené třídy.
+Z vlastnosti je předána **DISPID** nulu na začátku **HIWORD** vzhledem k tomu, že je definován ve třídě, která vystavuje vlastnosti CDisp3DPoint. Protože vlastnosti X a Y jsou definovány v základní třídě, **HIWORD** z **DISPID** je 1, protože je třída, ve kterém jsou tyto vlastnosti definované ve vzdálenosti jeden odvození od nejvíce odvozené třídy.
 
 > [!NOTE]
-> **LOWORD** je vždy určen pozici v mapě, i pokud existuje položky v mapě s explicitní **DISPID** (Další informace naleznete na **_ID** verze `DISP_PROPERTY` a `DISP_FUNCTION` makra).
+> **LOWORD** je vždy určena podle pozice v objektu map, i v případě, že existují položky v objektu map s explicitní **DISPID** (Další informace naleznete na **_ID** verze `DISP_PROPERTY` a `DISP_FUNCTION` makra).
 
-## <a name="advanced-mfc-dispatch-map-features"></a>Pokročilé funkce mapy odesílání MFC
+## <a name="advanced-mfc-dispatch-map-features"></a>Pokročilé funkce mapy odbavení knihovny MFC
 
-Existuje mnoho dalších funkcí, které ClassWizard nepodporuje tato verze aplikace Visual C++. Podporuje ClassWizard `DISP_FUNCTION`, `DISP_PROPERTY`, a `DISP_PROPERTY_EX` která definují, metoda, vlastnost proměnné člena a vlastnost člena funkce get nebo nastavení, v uvedeném pořadí. Tyto možnosti jsou obvykle všechno, co je potřeba k vytvoření většina automatizační servery.
+Existuje mnoho dalších funkcí, které ClassWizard nepodporuje v této verzi aplikace Visual C++. Podporuje ClassWizard `DISP_FUNCTION`, `DISP_PROPERTY`, a `DISP_PROPERTY_EX` který definovat v uvedeném pořadí – metoda, vlastnost proměnné člena a get/set členských funkcí vlastností. Tyto možnosti jsou obvykle vše, co je potřeba k vytvoření většina automatizační servery.
 
-Následující další makra lze použít, pokud nejsou adekvátní makra ClassWizard podporována: `DISP_PROPERTY_NOTIFY`, a `DISP_PROPERTY_PARAM`.
+Následující další makra se dá použít při ClassWizard podporována makra nejsou adekvátní: `DISP_PROPERTY_NOTIFY`, a `DISP_PROPERTY_PARAM`.
 
-## <a name="disppropertynotify--macro-description"></a>Disp_property_notify – – Popis makro
+## <a name="disppropertynotify--macro-description"></a>DISP_PROPERTY_NOTIFY – Popis makro
 
 ```cpp
 DISP_PROPERTY_NOTIFY(
@@ -124,26 +124,26 @@ DISP_PROPERTY_NOTIFY(
 
 ### <a name="parameters"></a>Parametry
 
-*theClass*  
- Název třídy.
+*theClass*<br/>
+Název třídy.
 
-*pszName*  
- Externí název vlastnosti.
+*pszName*<br/>
+Externí název vlastnosti.
 
-*Členské jméno*  
- Název členské proměnné, ve kterém je uložený vlastnost.
+*Jméno*<br/>
+Název členské proměnné, ve kterém je uložené vlastnosti.
 
-*pfnAfterSet*  
- Název členské funkce k volání při změně vlastnosti.
+*pfnAfterSet*<br/>
+Název členská funkci volat, když je změněna vlastnost.
 
-*vtPropType*  
- Hodnota určující typ vlastnosti.
+*vtPropType*<br/>
+Hodnota určující typ vlastnosti.
 
 ### <a name="remarks"></a>Poznámky
 
-Toto makro mnohem je jako disp_property –, s tím rozdílem, že ho přijme další argument. Další argument *pfnAfterSet,* by měla být členské funkce, která nic a nepřijímá žádné parametry, void OnPropertyNotify()'. Bude volána **po** změnil členské proměnné.
+Toto makro je mnohem jako DISP_PROPERTY, s tím rozdílem, že přijímá další argument. Další argument *pfnAfterSet,* musí být členská funkce, která nic nespouští a nepřijímá žádné parametry "void OnPropertyNotify()". Bude volána **po** členská proměnná byla změněna.
 
-## <a name="disppropertyparam--macro-description"></a>Disp_property_param – – Popis makro
+## <a name="disppropertyparam--macro-description"></a>DISP_PROPERTY_PARAM – Popis makro
 
 ```cpp
 DISP_PROPERTY_PARAM(
@@ -157,40 +157,40 @@ DISP_PROPERTY_PARAM(
 
 ### <a name="parameters"></a>Parametry
 
-*theClass*  
- Název třídy.
+*theClass*<br/>
+Název třídy.
 
-*pszName*  
- Externí název vlastnosti.
+*pszName*<br/>
+Externí název vlastnosti.
 
-*memberGet*  
- Název členské funkce používá GET pro vlastnost.
+*memberGet*<br/>
+Název členské funkce použít k získání vlastnosti.
 
-*Sada členů*  
- Název členské funkce lze nastavit vlastnost.
+*Členů*<br/>
+Název členské funkce lze nastavit vlastnost.
 
-*vtPropType*  
- Hodnota určující typ vlastnosti.
+*vtPropType*<br/>
+Hodnota určující typ vlastnosti.
 
-*vtsParams*  
- Řetězec místa oddělené VTS_ pro jednotlivé parametry.
+*vtsParams*<br/>
+Řetězec místo oddělených VTS_ pro každý parametr.
 
 ### <a name="remarks"></a>Poznámky
 
-Jako disp_property_ex – makro mnohem tento makro definuje vlastnost přístupný pomocí samostatných Get a Set členské funkce. Toto makro, můžete však zadat seznam parametrů pro vlastnost. To je užitečné pro implementaci vlastnosti, které jsou indexované nebo parametry jiným způsobem. Parametry budou vždy umístěny nejprve, za nímž následuje novou hodnotu pro vlastnost. Příklad:
+Podobně jako DISP_PROPERTY_EX – makro toto makro definuje vlastnost s zvláštní členské funkce Get a Set. Toto makro, ale umožňuje určit seznam parametrů pro vlastnost. To je užitečné pro implementaci vlastnosti, které jsou indexována nebo parametrizované jiným způsobem. Parametry budou vždy umístěny nejprve, za nímž následuje novou hodnotu pro vlastnost. Příklad:
 
 ```cpp
 DISP_PROPERTY_PARAM(CMyObject, "item", GetItem, SetItem, VT_DISPATCH, VTS_I2 VTS_I2)
 ```
 
-by odpovídat k získání a nastavení členské funkce:
+odpovídá get i set členské funkce:
 
 ```cpp
 LPDISPATCH CMyObject::GetItem(short row, short col)
 void CMyObject::SetItem(short row, short col, LPDISPATCH newValue)
 ```
 
-## <a name="dispxxxxid--macro-descriptions"></a>DISP_XXXX_ID – Popisy makro
+## <a name="dispxxxxid--macro-descriptions"></a>DISP_XXXX_ID – Popisy makra
 
 ```cpp
 DISP_FUNCTION_ID(
@@ -232,33 +232,33 @@ DISP_PROPERTY_PARAM_ID(
 
 ### <a name="parameters"></a>Parametry
 
-*theClass*  
+*theClass*<br/>
 Název třídy.
 
-*pszName*  
+*pszName*<br/>
 Externí název vlastnosti.
 
-*dispID*  
-Opravené DISPID pro vlastnosti nebo metody.
+*identifikátor DISPID*<br/>
+Pevná hodnota DISPID pro vlastnosti nebo metody.
 
-*pfnGet*  
-Název členské funkce používá GET pro vlastnost.
+*pfnGet*<br/>
+Název členské funkce použít k získání vlastnosti.
 
-*pfnSet*  
+*pfnSet*<br/>
 Název členské funkce lze nastavit vlastnost.
 
-*Členské jméno*  
-Název členské proměnné pro mapování pro vlastnost
+*Jméno*<br/>
+Název členské proměnné pro mapování na vlastnost
 
-*vtPropType*  
+*vtPropType*<br/>
 Hodnota určující typ vlastnosti.
 
-*vtsParams*  
-Řetězec místa oddělené VTS_ pro jednotlivé parametry.
+*vtsParams*<br/>
+Řetězec místo oddělených VTS_ pro každý parametr.
 
 ### <a name="remarks"></a>Poznámky
 
-Tyto makra umožňují zadat **DISPID** místo MFC automaticky přiřadit jeden. Tato upřesňující makra mají stejné názvy s tím rozdílem, že ID je připojeným k názvu – makro (například **DISP_PROPERTY_ID**) a ID je dáno parametr pouze po zadaný *pszName* parametr. V tématu AFXDISP. H Další informace o těchto makra. **_ID** položky musí být umístěna na konci mapy odesílání. Ovlivňují automatického **DISPID** generování stejným způsobem jako jinou hodnotu než **_ID** by verzi makro ( **DISPID**s vyplývají z pozice). Příklad:
+Tato makra umožňují zadat **DISPID** místo MFC automaticky přiřadí. Mezi Tato upřesňující makra mají stejné názvy, s výjimkou tohoto ID se připojí název makra (třeba **DISP_PROPERTY_ID**) a ID se určuje podle parametru určeného hned za *pszName* parametr. Zobrazit AFXDISP. Další informace o těchto makrech H. **_ID** položky musí být umístěny na konci mapa odeslání. Bude mít vliv na automatické **DISPID** generování stejným způsobem jako non -**_ID** by verze makra ( **DISPID**s jsou určeny umístěním). Příklad:
 
 ```cpp
 BEGIN_DISPATCH_MAP(CDisp3DPoint, CCmdTarget)
@@ -276,11 +276,11 @@ property Y    (DISPID)0x00000002
 property Z    (DISPID)0x00000001
 ```
 
-Určení pevná **DISPID** je užitečná k zachování zpětné kompatibility na dříve existující rozhraní dispatch, nebo k implementaci určitých definovaná systémem metody nebo vlastnosti (obvykle označený jako záporné  **DISPID**, například **DISPID_NEWENUM** kolekce).
+Určení pevnou **DISPID** je užitečné pro zachování zpětné kompatibility na dříve existující rozhraní odbavení, jak implementovat určité vlastnosti nebo metody definovaná systémem (obvykle indikován záporné  **Identifikátor DISPID**, například **konstantu DISPID_NEWENUM** kolekce).
 
-## <a name="retrieving-the-idispatch-interface-for-a-coleclientitem"></a>Načítání IDispatch rozhraní pro COleClientItem
+## <a name="retrieving-the-idispatch-interface-for-a-coleclientitem"></a>Načítání rozhraní IDispatch pro COleClientItem
 
-Mnoho serverů, budou podporovat automatizace v rámci jejich dokumentu objekty, spolu s funkcí serveru OLE. Chcete-li získat přístup k tomuto rozhraní automatizace, je potřeba přístup přímo `COleClientItem::m_lpObject` členské proměnné. Následující kód načte `IDispatch` rozhraní pro objekt odvozené z `COleClientItem`. Pokud zjistíte, tato funkce nezbytné, může zahrnovat kód pod ve vaší aplikaci:
+Mnoho serverů bude podporovat automation v rámci své objekty dokumentu, spolu s funkcemi serveru OLE. Aby bylo možné získat přístup k tomuto rozhraní automatizace, je potřeba přímý přístup `COleClientItem::m_lpObject` členské proměnné. Následující kód načte `IDispatch` rozhraní pro objekt odvozený od `COleClientItem`. Pokud tuto funkci najít potřebné, můžete do aplikace zahrnout níže uvedený kód:
 
 ```cpp
 LPDISPATCH CMyClientItem::GetIDispatch()
@@ -319,9 +319,9 @@ LPDISPATCH CMyClientItem::GetIDispatch()
 }
 ```
 
-Rozhraní dispatch vrácená této funkce pak může použít přímo nebo připojený k `COleDispatchDriver` pro typově bezpečný přístup. Pokud ho používáte přímo, ujistěte se, že zavoláte jeho `Release` člen při prostřednictvím pomocí ukazatele ( `COleDispatchDriver` destruktor k tomu ve výchozím nastavení).
+Rozhraní odbavení vrácená z této funkce pak může použít přímo nebo připojené k `COleDispatchDriver` pro typově bezpečný přístup. Když ho používáte přímo, ujistěte se, že je potřeba volat jeho `Release` člen při přes ukazatel ( `COleDispatchDriver` destruktor se k tomu ve výchozím nastavení).
 
 ## <a name="see-also"></a>Viz také:
 
-[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)  
-[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)  
+[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
+[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)

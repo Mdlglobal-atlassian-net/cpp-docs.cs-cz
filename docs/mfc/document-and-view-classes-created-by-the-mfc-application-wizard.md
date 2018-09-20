@@ -1,5 +1,5 @@
 ---
-title: Dokumentů a zobrazení vytvořené průvodcem aplikací MFC – třídy | Microsoft Docs
+title: Dokumentů a zobrazení vytvořené průvodcem aplikací MFC tříd | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b83886784970492da0c5e2a335dbe08119ecaae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb1a1fc6c35bfb9589e827d798cb112640fa9b2f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349919"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417615"
 ---
 # <a name="document-and-view-classes-created-by-the-mfc-application-wizard"></a>Třídy dokumentů a zobrazení vytvořené průvodcem aplikací MFC
-Průvodce aplikací MFC vám dává začít na váš vývojový program vytvořením třídy kosterního dokumentů a zobrazení pro vás. Pak můžete [mapování příkazů a zpráv na tyto třídy](../mfc/reference/mapping-messages-to-functions.md) a zápis jejich členské funkce pomocí editoru Visual C++ zdrojového kódu.  
-  
- Třída dokumentu vytvořené průvodcem aplikací MFC je odvozená od třídy [CDocument](../mfc/reference/cdocument-class.md). Třídy zobrazení je odvozený od [CView](../mfc/reference/cview-class.md). Názvy, Průvodce aplikací poskytuje tyto třídy a soubory, které je obsahují jsou založené na název projektu zadejte v dialogovém okně Průvodce vytvořením aplikace. V Průvodci aplikací slouží ke změně výchozích názvů vygenerované třídy stránky.  
-  
- Některé aplikace může být nutné více než jednu třídu dokumentu, zobrazení nebo třída oken s rámečkem. Další informace najdete v tématu [více typů dokumentů, zobrazení a oken s rámečkem](../mfc/multiple-document-types-views-and-frame-windows.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Document/View – architektura](../mfc/document-view-architecture.md)
+
+Průvodce aplikací MFC poskytuje výhodu na vašem programu vytvořením třídy základní dokumentů a zobrazení za vás. Pak můžete [mapování příkazů a zpráv pro tyto třídy](../mfc/reference/mapping-messages-to-functions.md) a použít editor zdrojového kódu jazyka Visual C++ pro zápis jejich členské funkce.
+
+Třída dokumentu vytvořené průvodcem aplikací MFC je odvozená od třídy [CDocument](../mfc/reference/cdocument-class.md). Zobrazení třídy je odvozen z [CView](../mfc/reference/cview-class.md). Názvy, Průvodce aplikací poskytuje tyto třídy a soubory, které je obsahují jsou založeny na název projektu je zadat v dialogovém okně Průvodce aplikací. Stránka třídy generované v Průvodci aplikací slouží ke změně výchozích názvů.
+
+Některé aplikace může potřebovat víc než jedna třída dokumentu, zobrazení třídy nebo třídy oken s rámečkem. Další informace najdete v tématu [více typů dokumentů, zobrazení a rámečku Windows](../mfc/multiple-document-types-views-and-frame-windows.md).
+
+## <a name="see-also"></a>Viz také
+
+[Document/View – architektura](../mfc/document-view-architecture.md)
 

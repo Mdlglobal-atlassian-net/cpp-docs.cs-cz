@@ -1,5 +1,5 @@
 ---
-title: Vytvoření prostředku dialogového okna | Microsoft Docs
+title: Vytvoření prostředku dialogového okna | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,29 +19,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31011c9fffc87aa6bdac410009ad6170ad75eb5b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c68f8f48ec08446a9fca20524a8309b041607a92
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342082"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401586"
 ---
 # <a name="creating-the-dialog-resource"></a>Vytvoření prostředku dialogového okna
-Při návrhu [dialogové okno](../mfc/dialog-boxes.md) a vytvoření prostředku dialogového okna, budete používat [editoru dialogového okna](../windows/dialog-editor.md). V editoru dialogového okna můžete:  
-  
--   Upravte velikost a umístění, které vaše dialogové okno bude mít, když se objeví.  
-  
--   Různé typy ovládacích prvků z palety ovládací prvky přetažení je požadované místo v dialogovém okně.  
-  
--   Umístěte ovládací prvky s zarovnání textu na panelu nástrojů.  
-  
--   Otestujte vašem dialogovém okně tak, že simuluje vzhled a chování, které bude mít v programu. V testovacím režimu můžete upravit ovládací prvky dialogových oken zadáním textu v textových polích, kliknutím na tlačítka zámků a tak dále.  
-  
- Po dokončení, uloží se prostředek vaší šablony dialogového okna souboru skriptu prostředků vaší aplikace. Můžete ji později upravit v případě potřeby. Úplný popis toho, jak vytvářet a upravovat prostředky dialogu, najdete v článku [editoru dialogového okna](../windows/dialog-editor.md) témata. Tento postup se také používá k vytvoření šablony dialogového okna prostředky pro [CFormView](../mfc/reference/cformview-class.md) a [CRecordView](../mfc/reference/crecordview-class.md) třídy.  
-  
- Pokud vám vyhovuje vzhled dialogových oken, vytvoření třídy dialogového okna a mapování jeho zprávy, jak je popsáno v [vytvoření třídy dialogového okna s použitím průvodců kódem](../mfc/creating-a-dialog-class-with-code-wizards.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Dialogová okna](../mfc/dialog-boxes.md)   
- [Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
+
+K návrhu [dialogové okno](../mfc/dialog-boxes.md) a vytvoření prostředku dialogového okna, můžete použít [editoru dialogového okna](../windows/dialog-editor.md). V editoru dialogového okna můžete:
+
+- Upravte velikost a umístění, do kterého vaše dialogové okno bude mít, když se objeví.
+
+- Různé typy ovládacích prvků přetažením z palety ovládacích prvků a jejich umístění, kam je chcete v dialogovém okně.
+
+- Umístěte ovládací prvky s zarovnání tlačítka na panelu nástrojů.
+
+- Otestujte vašem dialogovém okně simulovali vzhled a chování, které bude mít ve svém programu. V režimu testu můžete manipulovat s ovládací prvky dialogových oken zadáním textu do textových polí, kliknutím na tlačítek a tak dále.
+
+Po dokončení, uloží se prostředek vaší šablony dialogového okna souboru skriptu prostředků vaší aplikace. Můžete upravit ho později podle potřeby. Úplný popis toho, jak vytvořit a upravit prostředky dialogového okna, najdete v článku [editoru dialogového okna](../windows/dialog-editor.md) témata. Tento postup slouží také k vytváření prostředků šablony dialogového okna pro [CFormView](../mfc/reference/cformview-class.md) a [CRecordView](../mfc/reference/crecordview-class.md) třídy.
+
+Když v dialogovém okně Vzhled vám vyhovuje, vytvoření třídy dialogového okna a namapujte jeho zprávy, jak je popsáno v [vytvoření třídy dialogového okna s použitím průvodců kódem](../mfc/creating-a-dialog-class-with-code-wizards.md).
+
+## <a name="see-also"></a>Viz také
+
+[Dialogová okna](../mfc/dialog-boxes.md)<br/>
+[Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
 

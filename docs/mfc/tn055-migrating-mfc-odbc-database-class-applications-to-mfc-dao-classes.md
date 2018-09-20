@@ -1,5 +1,5 @@
 ---
-title: 'TN055: Migrace aplikací databázové třídy MFC rozhraní ODBC do tříd MFC rozhraní DAO | Microsoft Docs'
+title: 'TN055: Migrace aplikací databázové třídy MFC rozhraní ODBC do tříd MFC rozhraní DAO | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 06/20/2018
 ms.technology:
@@ -24,55 +24,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d46150ee76219732d0895e818fa00c68dc588853
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 808f0f470e99b95502891552ade7b8c677dfdf17
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957387"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396828"
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: Migrace aplikací databázové třídy MFC rozhraní ODBC do tříd MFC rozhraní DAO
 
 > [!NOTE]
-> Prostředí Visual C++ a průvodců nepodporují rozhraní DAO (i když jsou zahrnuté třídy DAO a můžete je dál používat). Microsoft doporučuje používat [šablony technologie OLE DB](../data/oledb/ole-db-templates.md) nebo [rozhraní ODBC a MFC](../data/odbc/odbc-and-mfc.md) pro nové projekty. DAO byste měli používat jenom pro údržbu existujících aplikací.
+> Prostředí Visual C++ a Průvodce nepodporuje rozhraní DAO (i když jsou součástí třídy DAO a můžete stále použít). Microsoft doporučuje, abyste použili [šablony technologie OLE DB](../data/oledb/ole-db-templates.md) nebo [rozhraní ODBC a MFC](../data/odbc/odbc-and-mfc.md) pro nové projekty. DAO byste měli používat jenom v udržování existujících aplikací.
 
 ## <a name="overview"></a>Přehled
 
-V mnoha situacích může být žádoucí k migraci aplikace, které používají třídami databází MFC na rozhraní ODBC do tříd MFC rozhraní DAO databáze. Tato technická Poznámka podrobně většinu rozdíly mezi třídy knihovny MFC rozhraní ODBC a DAO. S rozdíly v úvahu by neměl být zbytečně složité aplikace migrovat z třídy rozhraní ODBC do tříd MFC v případě potřeby.
+V mnoha situacích může být vhodné k migraci aplikace, které používají třídy databází MFC rozhraní ODBC pro databázové třídy DAO knihovny MFC. Tato technická Poznámka podrobně popisuje většina rozdílů mezi třídy knihovny MFC rozhraní ODBC a DAO. S rozdíly v úvahu by neměly být příliš obtížné migrace aplikací ze třídy rozhraní ODBC do tříd MFC v případě potřeby.
 
 ## <a name="why-migrate-from-odbc-to-dao"></a>Proč migrovat z rozhraní ODBC do DAO
 
-Existuje řada důvodů, proč můžete chtít aplikace migrovat z databázové třídy rozhraní ODBC pro databázové třídy DAO, ale rozhodnutí není nutně jednoduchý nebo zřejmé. Jednou z věcí třeba vzít v úvahu je, můžete databázový stroj Microsoft Jet, který je používán DAO číst všechny zdroje dat ODBC, pro které máte ovladače ODBC. To může být efektivnější použít databázové třídy ODBC nebo volání rozhraní ODBC přímo sami, ale databázový stroj Microsoft Jet může číst dat ODBC.
+Existuje mnoho důvodů, proč může být vhodné k migraci aplikace z databázových tříd rozhraní ODBC pro databázové třídy DAO, ale rozhodnutí není nutně jednoduché nebo zřejmý. Jedna věc, kterou je potřeba mít na paměti, je, že databázový stroj Microsoft Jet, který používá rozhraní DAO může číst libovolný zdroj dat rozhraní ODBC, pro který máte ovladač rozhraní ODBC. Může být efektivnější použít databázové třídy ODBC nebo volat rozhraní ODBC přímo sami, ale databázový stroj Microsoft Jet může číst ODBC data.
 
-Některé jednoduché případů, které zajistit rozhodnutí rozhraní ODBC/DAO snadné. Například když potřebujete jenom přístup k datům ve formátu, který stroje Microsoft Jet může číst přímo (přístup k formátu, formátu aplikace Excel a tak dále) je zřejmé volba použít databázové třídy DAO.
+Případy jednoduchý usnadnění rozhraní ODBC a DAO rozhodnutí. Například když pouze potřebujete přístup k datům ve formátu, který stroj Microsoft Jet může číst přímo (přístup k formátu, formátu aplikace Excel a tak dále) je použít databázové třídy DAO jasnou volbou.
 
-Složitější případech nastat, pokud vaše data existuje na serveru nebo na celou řadu různých serverech. V takovém případě rozhodnutí o použití rozhraní ODBC databázové třídy nebo rozhraní DAO databázové třídy je obtížné. Pokud chcete provést věci jako heterogenní spojení (připojení dat ze serverů ve více formátů, jako SQL Server a Oracle), pak databázový stroj Microsoft Jet dojde ke spojení pro můžete místo vynucení lze provádět práce nezbytné, pokud jste použili databázi ODBC Třídy nebo názvem ODBC přímo. Pokud používáte ovladač ODBC, který podporuje kurzory ovladač, může být nejlepší volbou ODBC databázové třídy.
+Složitějších případech vzniknout, když vaše data existuje na serveru nebo na celé řadě různých serverech. V takovém případě rozhodnutí o použití rozhraní ODBC databázové třídy nebo rozhraní DAO databázové třídy je obtížné. Pokud chcete provádět věci jako heterogenní spojení (spojení dat ze serverů ve více formátech, jako jsou SQL Server a Oracle), pak bude databázový stroj Microsoft Jet provedením příkazu join je místo takže jste museli dělat potřebné práce, když jste použili databáze ODBC Třídy nebo názvem ODBC přímo. Pokud používáte ovladač rozhraní ODBC, který podporuje kurzory ovladač, může být nejlepší volbou ODBC databázové třídy.
 
-Volba může být složité, proto je vhodné k zápisu některé ukázkový kód pro testování výkonu různé metody, které jsou zadané zvláštními potřebami. Tento Technická poznámka předpokládá, že jste udělali rozhodnutí při migraci z databázové třídy rozhraní ODBC do DAO databázové třídy.
+Volba může být složité, proto je vhodné ukázky kódu pro testování výkonu různých metodám zvláštními potřebami. Tato technická Poznámka se předpokládá, že jste provedli rozhodnutí migrovat z databázových tříd rozhraní ODBC do DAO databázové třídy.
 
-## <a name="similarities-between-odbc-database-classes-and-mfc-dao-database-classes"></a>Podobnosti mezi databázové třídy rozhraní ODBC a databázové třídy MFC rozhraní DAO
+## <a name="similarities-between-odbc-database-classes-and-mfc-dao-database-classes"></a>Podobnosti mezi databázové třídy ODBC a databázové třídy MFC rozhraní DAO
 
-Původní návrh tříd MFC rozhraní ODBC bylo založeno na rozhraní DAO objektový model, který byl používán v aplikaci Microsoft Access a Microsoft Visual Basic. To znamená, že existuje mnoho běžných funkcí rozhraní ODBC a MFC rozhraní DAO tříd, které budou všechny uvedené v této části. Obecně platí s programovacími modely jsou stejné.
+Původní návrhu tříd knihovny MFC rozhraní ODBC byl založen na objektový model rozhraní DAO, který je v aplikaci Microsoft Access a Microsoft Visual Basic. To znamená, že existuje mnoho běžných funkcí rozhraní ODBC a DAO knihovny MFC tříd, které budou všechny být uvedené v této části. Obecně platí programovacími modely jsou stejné.
 
 Abyste měli na očích několik podobnosti:
 
-- Jak rozhraní ODBC a DAO třídy mají databázové objekty, které spravujete pomocí základního systému správy databáze (databázového systému).
+- Rozhraní ODBC a DAO – třídy mají databázové objekty, které spravujete pomocí základního systému správy databáze (DBMS).
 
-- Mají obě sady záznamů objekty, které představují sadu výsledků vrácená z tohoto databázového systému.
+- Obě mají záznamů objekty, které představují sadu výsledky vrácené z této DBMS.
 
-- Objekty databáze a sady záznamů rozhraní DAO mít členy, do třídy ODBC.
+- Objekty databáze a sady záznamů rozhraní DAO obsahovat členy, které jsou téměř shodné s ODBC – třídy.
 
-- S obě sady třídy se shoduje s výjimkou některé změny název objektu a člen kódem, který chcete načíst data. Změny se bude vyžadovat, ale obvykle probíhá změna přehledné názvu při přepnutí z třídy rozhraní ODBC do tříd rozhraní DAO.
+- Obě sady tříd kód k načtení dat je shodná s výjimkou některých změn názvů objektů a členů. Změny se bude vyžadovat, ale obvykle proces je jednoduchý název změnit, při přechodu z třídy rozhraní ODBC do DAO – třídy.
 
-V obou modelech například postup k načtení dat se vytvořit a otevřít databázový objekt, vytvořit a otevřít objekt sady záznamů a přejít (přesunout), ale data provádění nějaké operace.
+Například v obou modelech postup k načtení dat je vytvořit a otevřít databázový objekt, vytvořit a otevřít objekt sady záznamů a přejděte (přesunout), ale data provádění nějaké operace.
 
-## <a name="differences-between-odbc-and-dao-mfc-classes"></a>Rozdíly mezi třídy MFC rozhraní DAO a ODBC
+## <a name="differences-between-odbc-and-dao-mfc-classes"></a>Rozdíly mezi třídy knihovny MFC rozhraní DAO a ODBC
 
-Třídy DAO zahrnovat další objekty a širší metod, ale tato část podrobně popisuje pouze rozdíly v podobné třídy a funkce.
+DAO – třídy zahrnují více objektů a bohatší sadu metod, ale tato část podrobně popisuje pouze rozdíly v podobné třídy a funkce.
 
-Pravděpodobně nejobvyklejší rozdíly mezi třídami jsou změny názvu pro podobné třídy a globální funkce. V následujícím seznamu jsou změny názvu objektů, metod a globální funkce související s třídami databází:
+Pravděpodobně Nejobvyklejšími rozdíly mezi třídami se změny názvů pro podobné třídy a globální funkce. Následující seznam uvádí změny názvů objektů, metody a globální funkce, které jsou přidružené k databázové třídy:
 
-|Třída nebo funkce|Ekvivalent v tříd MFC rozhraní DAO|
+|Třída nebo funkce|Ekvivalent ve třídách knihovny MFC rozhraní DAO|
 |-----------------------|-----------------------------------|
 |`CDatabase`|`CDaoDatabase`|
 |`CDatabase::ExecuteSQL`|`CDaoDatabase::Execute`|
@@ -93,30 +93,30 @@ Pravděpodobně nejobvyklejší rozdíly mezi třídami jsou změny názvu pro p
 
 <sup>1</sup> `RFX_Date` funkce je založena na `CTime` a `TIMESTAMP_STRUCT`.
 
-Hlavní změny na funkce, které můžou ovlivnit vaše aplikace a vyžadují více než jednoduchý název změny jsou uvedeny níže.
+Hlavních změn funkcí, které můžou ovlivnit vaši aplikaci a vyžadovat více než jednoduchý název změny jsou uvedeny níže.
 
-- Konstanty a makra použít k určení typu otevřete takové věci, jako sada záznamů a záznamů otevřít panel Možnosti se změnily.
+- Konstanty a makra použitá k určení typu otevřete věci, jako je sada záznamů a záznamů možnosti byly změněny.
 
-   Třídy ODBC knihovny MFC potřebné k definování těchto možností prostřednictvím makra nebo výčet typů.
+   ODBC – třídy knihovny MFC zapotřebí k definování těchto možností prostřednictvím makra nebo vytvořit výčet typů.
 
-   Pomocí třídy DAO DAO poskytuje definici z těchto možností v záhlaví souboru (DBDAOINT. H). Proto je sada záznamů typu výčtové členem `CRecordset`, ale DAO je konstanta místo. Například byste použili **snímku** při zadávání typ `CRecordset` v rozhraní ODBC, ale **DB_OPEN_SNAPSHOT** při zadávání typ `CDaoRecordset`.
+   DAO – třídy DAO obsahuje definici z těchto možností v hlavičkovém souboru (DBDAOINT. H). Proto typ sady záznamů je člen výčtu `CRecordset`, ale s objektem DAO jej místo toho je konstanta. Například byste použili **snímku** při určování typu `CRecordset` v rozhraní ODBC, ale **DB_OPEN_SNAPSHOT** při určování typu `CDaoRecordset`.
 
-- Výchozí typ záznamů pro `CRecordset` je **snímku** při výchozí typ záznamů pro `CDaoRecordset` je **dynamická sada** (viz poznámka níže další problému, o snímky třídy rozhraní ODBC).
+- Výchozí typ sady záznamů pro `CRecordset` je **snímku** while výchozí typ sady záznamů pro `CDaoRecordset` je **dynamická sada** (viz poznámka níže pro další problém o snímcích třídy rozhraní ODBC).
 
-- ODBC `CRecordset` třída má možnost pro vytvoření typ dopředné sady záznamů. V `CDaoRecordset` třída, dopředné není typu sady záznamů, ale místo vlastnosti (nebo možnost) určitých typů sady záznamů.
+- Rozhraní ODBC `CRecordset` třída má možnost pro vytvoření typů záznamů s posouváním pouze vpřed. V `CDaoRecordset` třídy dopředné není typ sady záznamů, ale místo toho vlastnost (nebo možnost) určitého typu sady záznamů.
 
-- Připojení sada záznamů při otevírání `CRecordset` objekt znamenalo, že data sady záznamů by mohl přečíst a připojí. S `CDaoRecordset` objektu, možnost připojovacím oznámena znamená, že jsou data sady záznamů lze pouze připojí (a číst).
+- Připojení záznamů s posouváním pouze při otevírání `CRecordset` objekt znamenalo, že sady záznamů dat by mohl přečíst a připojí. S `CDaoRecordset` objektu, možnost nabízí jen možnost připojovat doslova znamená, že sady záznamů dat může být pouze připojen (a číst).
 
-- Funkce člena třídy rozhraní ODBC transakce jsou členy `CDatabase` a provádění akcí na úrovni databáze. V třídy DAO členské funkce transakce jsou členy vyšší úrovně třídy (`CDaoWorkspace`) a proto může ovlivnit více `CDaoDatabase` objekty sdílení ve stejném pracovním prostoru (transakce místa).
+- ODBC – třídy transakce členské funkce jsou členy `CDatabase` a reagovat na úrovni databáze. Ve třídách rozhraní DAO transakce členské funkce jsou členy třídy vyšší úrovni (`CDaoWorkspace`) a proto může mít vliv na více `CDaoDatabase` objekty, které sdílení stejného pracovního prostoru (místo transakce).
 
-- Třídy výjimek byl změněn. `CDBExceptions` jsou vyvolány v třídy rozhraní ODBC a `CDaoExceptions` v třídy DAO.
+- Třída výjimky se změnil. `CDBExceptions` jsou vyvolány v ODBC – třídy a `CDaoExceptions` tříd DAO.
 
-- `RFX_Date` používá `CTime` a `TIMESTAMP_STRUCT` objekty při `DFX_Date` používá `COleDateTime`. `COleDateTime` Je téměř shodná `CTime`, ale je založena na 8 bajtů OLE **datum** místo 4 bajtů **time_t** tak může uchovávat mnohem větší rozsah data.
+- `RFX_Date` používá `CTime` a `TIMESTAMP_STRUCT` objekty při `DFX_Date` používá `COleDateTime`. `COleDateTime` Je téměř shodná `CTime`, ale je založen na 8 bajtů OLE **datum** místo 4 bajty **time_t** tak může obsahovat mnohem většího rozsahu data.
 
    > [!NOTE]
-   > Rozhraní DAO (`CDaoRecordset`) snímky jsou jen pro čtení při ODBC (`CRecordset`) snímky mohou být v aktualizovatelné v závislosti na ovladače a použití knihovny kurzorů ODBC. Pokud používáte knihovna kurzorů `CRecordset` snímky jsou lze aktualizovat. Pokud používáte některou z plochy ovladač Pack 3.0 ovladače společnosti Microsoft bez knihovna kurzorů rozhraní ODBC `CRecordset` snímky jsou jen pro čtení. Pokud používáte jiný ovladač, podívejte se do dokumentace ovladače a zjistěte, zda snímků (`STATIC_CURSORS`) jsou jen pro čtení.
+   > Rozhraní DAO (`CDaoRecordset`) snímky jsou jen pro čtení při ODBC (`CRecordset`) snímků může být možné aktualizovat v závislosti na ovladač a použití knihovny kurzorů ODBC. Pokud používáte knihovna kurzorů rozhraní `CRecordset` snímky jsou aktualizovatelná. Pokud používáte některou ovladače Microsoft z Desktopu ovladač Pack 3.0 bez knihovna kurzorů rozhraní ODBC, `CRecordset` snímky jsou jen pro čtení. Pokud používáte jiný ovladač, vyhledejte v dokumentaci ovladače a zjistěte, jestli snímky (`STATIC_CURSORS`) jsou jen pro čtení.
 
 ## <a name="see-also"></a>Viz také:
 
-[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)  
-[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)  
+[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
+[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
