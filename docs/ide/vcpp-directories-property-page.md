@@ -1,5 +1,5 @@
 ---
-title: Stránka vlastností adresářů VC ++ | Microsoft Docs
+title: Stránka vlastností adresářů VC ++ | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 04/26/2018
 ms.technology:
@@ -23,91 +23,91 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3acaccff2e2764f4fd7f6f4815f5721f0ba845a3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 238f26e8955d4be676c3bf37f7cc8b2d842b3de9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33336079"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394435"
 ---
-# <a name="vc-directories-property-page-windows"></a>Stránka adresářů VC ++ vlastnost (Windows)
+# <a name="vc-directories-property-page-windows"></a>VC ++ Directories Property Page (Windows)
 
-Pomocí této stránky vlastností říct adresáře, které se má použít při sestavení projektu aktuálně vybrané sadě Visual Studio. Nastavení adresáře pro více projektů v řešení, použití vlastních vlastností způsobem popsaným v [vytváření konfigurace opakovaně použitelné vlastností](working-with-project-properties.md#bkmkPropertySheets).
+Pomocí této stránky vlastností říct adresáře, které se má použít při vytváření aktuálně vybraného projektu sady Visual Studio. Nastavení adresáře pro více projektů v řešení, použijte seznam vlastních vlastností, jak je popsáno v [vytváření opakovaně použitelných vlastností konfigurací](working-with-project-properties.md#bkmkPropertySheets).
 
-Linux verzi této stránce, naleznete v části [adresáře VC ++ (Linux C++)](../linux/prop-pages/directories-linux.md).   
+Verzi Linuxu na této stránce, najdete v části [adresáře VC ++ (Linux C++)](../linux/prop-pages/directories-linux.md).
 
-Abyste měli přístup **adresáře VC ++** stránky vlastností:
+Pro přístup **adresáře VC ++** stránky vlastností:
 
-1. Pokud **Průzkumníku řešení** okno není viditelný, pak v hlavní nabídce zvolte **zobrazení** > **Průzkumníku řešení**.
-1. Klikněte pravým tlačítkem na uzel projektu (není nejvyšší úrovně řešení) a zvolte **vlastnosti**.
-1. V levém podokně **stránky vlastností** dialogové okno, vyberte **vlastnosti konfigurace** > **adresáře VC ++**.  
+1. Pokud **Průzkumníka řešení** okno se nezobrazuje, pak v hlavní nabídce zvolte **zobrazení** > **Průzkumníku řešení**.
+1. Klikněte pravým tlačítkem na uzel projektu (nikoli řešení nejvyšší úrovně) a zvolte **vlastnosti**.
+1. V levém podokně **stránky vlastností** dialogu **vlastnosti konfigurace** > **adresáře VC ++**.
 
-Vlastnosti adresáře VC ++ se vztahují na projekt, ne uzlu nejvyšší úrovně řešení. Pokud se nezobrazí **adresáře VC ++** pod **vlastnosti konfigurace**, vyberte uzel projektu C++ v **Průzkumníku řešení** okno: 
+Adresáře VC ++ vlastnosti se vztahují k projektu, ne uzel nejvyšší úrovně řešení. Pokud nevidíte **adresáře VC ++** pod **vlastnosti konfigurace**, vyberte uzel projektu C++ ve **Průzkumníka řešení** okno:
 
-![Vyberte uzel projektu](media/vcppdir.png "vyberte uzel projektu zobrazíte vlastnosti adresáře VC ++")
+![Vyberte uzel projektu](media/vcppdir.png "vyberte uzel projektu můžete zobrazit vlastnosti adresáře VC ++")
 
-Všimněte si, že **adresáře VC ++** stránka vlastností pro různé platformy projekty vypadá jinak. Informace specifické pro projekty Linux C++ najdete v tématu [adresáře VC ++ (Linux C++)](../linux/prop-pages/directories-linux.md). 
- 
-Pokud nejste obeznámeni s *projektu vlastnosti* v sadě Visual Studio, může pro vás užitečné první čtení [práce s vlastnostmi projektu](working-with-project-properties.md). 
- 
-Výchozí nastavení pro **adresáře VC ++** vlastnosti závisí na typu projektu. Pro stolní projekty obsahují umístění nástroje C++ pro konkrétní sada nástrojů platformy a umístění sady Windows SDK. Můžete změnit **sada nástrojů platformy** a **verze sady Windows SDK** na **vlastnosti konfigurace** > **Obecné** stránka. 
+Všimněte si, že **adresáře VC ++** stránku vlastností pro multiplatformní projekty vypadá jinak. Informace specifické pro projekty C++ pro Linux najdete v tématu [adresáře VC ++ (Linux C++)](../linux/prop-pages/directories-linux.md).
+
+Pokud nejste obeznámeni s *vlastnosti projektu* v sadě Visual Studio, možná pro vás bude užitečné první čtení [práce s vlastnostmi projektu](working-with-project-properties.md).
+
+Výchozí nastavení pro **adresáře VC ++** vlastnosti závisí na typu projektu. Pro desktopové projekty obsahují umístění nástroje C++ pro konkrétní sadu nástrojů platformy a umístění sady Windows SDK. Můžete změnit **sada nástrojů platformy** a **verze sady Windows SDK** na **vlastnosti konfigurace** > **Obecné** stránka.
 
 Chcete-li zobrazit hodnoty pro všechny adresáře:
 
-1. Vyberte jednu z vlastností v **adresáře VC ++** stránky. Například vyberte **adresáře knihovny**.
-1. Klikněte na tlačítko šipky dolů na konci tohoto pole hodnotu vlastnosti.
+1. Vyberte jednu z vlastností v **adresáře VC ++** stránky. Například zvolte **adresáře knihoven**.
+1. Klikněte na tlačítko šipky dolů na konci pole hodnoty vlastnosti.
 1. V rozevírací nabídce vyberte **upravit**.
 
-![Upravit adresáře knihovny](media/vcppdir_libdir_edit.png "dialogové okno Upravit cesty knihoven")
+![Upravit adresáře knihoven](media/vcppdir_libdir_edit.png "dialogové okno Úprava cesty knihoven")
 
-Zobrazí dialogové okno takto: 
+Zobrazí dialogové okno takto:
 
-![Zobrazit adresáře knihovny](media/vcppdir_libdir.png "dialogové okno Přidat nebo odebrat cesty knihoven")
+![Zobrazit adresáře knihoven](media/vcppdir_libdir.png "dialogové okno pro přidání nebo odebrání cesty knihoven")
 
-Chcete-li zobrazit aktuální adresáře pomocí tohoto dialogového okna. Ale pokud chcete změnit nebo přidat adresář, je lepší použít **Správce vlastností** k vytvoření seznamu vlastností, nebo úpravě vlastností výchozí uživatel. Další informace najdete v tématu [vytváření konfigurace opakovaně použitelné vlastností](working-with-project-properties.md#bkmkPropertySheets).
+Použijte toto dialogové okno k zobrazení aktuálního adresáře. Pokud chcete změnit nebo přidat adresáře, je ale vhodnější použít **Správce vlastností** můžete vytvořit seznam vlastností nebo upravit výchozí uživatelský seznam vlastností. Další informace najdete v tématu [vytváření opakovaně použitelných vlastností konfigurací](working-with-project-properties.md#bkmkPropertySheets).
 
-Jako v příkladu nahoře, řadu zděděné cesty jsou uvedeny jako makra.  Chcete-li zkontrolovat aktuální hodnota makra, zvolte **makra** tlačítko v pravém dolním rohu dialogu. Všimněte si, že mnoho makra závisí na konfiguraci typu. Makro v sestavení ladicí verze může vyhodnotit jiné cestě než stejné makro v sestavení pro vydání. 
+Jak uvádíme výš, řadu zděděné cesty jsou uvedeny jako makra.  Chcete-li zkontrolovat aktuální hodnotu makra, zvolte **makra** tlačítko v pravém dolním rohu dialogového okna. Všimněte si, že mnoho makra závisí na konfiguraci typu. Makra v sestavení pro ladění může být vyhodnocen na jinou cestu než stejný – makro v sestavení pro vydání.
 
-Můžete hledat částečné nebo úplný odpovídá v textové pole. Následující obrázek znázorňuje všechny makra, které obsahují řetězec "WindowsSDK" a také ukazuje aktuální cestě, jehož výsledkem makro:
+Můžete hledat částečné nebo úplné shody do textového pole. Následující obrázek znázorňuje všechna makra, které obsahují řetězec "WindowsSDK" a také zobrazuje aktuální cestu, která se vyhodnotí jako makra:
 
-![Zobrazit hodnoty makro](media/vcppdir_libdir_macros.png "dialogové okno Upravit makra")
+![Zobrazit hodnoty makra](media/vcppdir_libdir_macros.png "dialogové okno Upravit makra")
 
-Poznámka: Naplnění seznamu během psaní. Nemáte stiskněte **Enter**.
+Poznámka: Naplnění seznamu při psaní. Není stiskněte **Enter**.
 
-Další informace o makra a proč byste měli používat místo pevně cest, kdykoli je to možné, najdete v části [práce s vlastnostmi projektu](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros). 
+Další informace o makra a proč byste měli používat namísto pevně zakódovaných cest, kdykoli je to možné, naleznete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros).
 
-Seznam běžně používané makra najdete v tématu [běžné makra pro příkazy sestavení a vlastnosti](https://docs.microsoft.com/en-us/cpp/ide/common-macros-for-build-commands-and-properties).
+Seznam běžně používaných maker naleznete v tématu [běžné Macros for Build Commands and Properties](https://docs.microsoft.com/en-us/cpp/ide/common-macros-for-build-commands-and-properties).
 
 Můžete definovat vlastní makra dvěma způsoby:
--   Nastavení proměnných prostředí v příkazovém řádku vývojáře. Všechny proměnné prostředí jsou považovány za MSBuild vlastnosti/makra.
--   Definice maker uživatele v souboru props. Další informace najdete v tématu [makra vlastností stránky](working-with-project-properties.md#bkmkPropertiesVersusMacros). 
+-   Nastavení proměnných prostředí v příkazovém řádku pro vývojáře. Všechny proměnné prostředí jsou považovány za MSBuild vlastnosti a makra.
+-   V souboru .props definujte uživatelská makra. Další informace najdete v tématu [makra stránky vlastností](working-with-project-properties.md#bkmkPropertiesVersusMacros).
 
-Další informace najdete v tématu tyto příspěvky blogu: [adresáře VC ++](http://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [zděděné vlastnosti a seznam vlastností](http://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx), a [Visual Studio 2010 C++ projektu průvodci upgradem](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx).  
-  
+Další informace najdete v tématu příspěvky na blogu: [adresáře VC ++](http://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [zděděné vlastnosti a seznamy vlastností](http://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx), a [Visual Studio 2010 C++ Průvodce upgradem projektu](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx).
+
 ## <a name="directory-types"></a>Typy adresářů
 
-Můžete zadat také další adresáře, a to následujícím způsobem.  
-  
-**Spustitelný soubor adresáře**<br/>
+Můžete zadat také další adresáře, a to následujícím způsobem.
+
+**Adresáře spustitelných souborů**<br/>
 Adresáře, ve kterých se mají vyhledávat spustitelné soubory. Odpovídá **cesta** proměnné prostředí.
 
-**Zahrnout adresáře**<br/>
+**Adresáře souborů k zahrnutí**<br/>
 Adresáře, ve kterých se mají vyhledávat vkládané soubory, na něž je odkazováno ze zdrojového kódu. Odpovídá **zahrnout** proměnné prostředí.
 
-**Referenční dokumentace adresáře**<br/>
- Adresáře, ve kterém se má hledat sestavení a soubory modulu (metadata), které jsou odkazované ve zdrojovém kódu pomocí [#using](../preprocessor/hash-using-directive-cpp.md) – direktiva. Odpovídá **LIBPATH** proměnné prostředí.
+**Adresáře odkazů**<br/>
+Adresáře, ve kterých chcete hledat sestavení a souborech modulů (metadata), které jsou odkazované ze zdrojového kódu pomocí [#using](../preprocessor/hash-using-directive-cpp.md) směrnice. Odpovídá **LIBPATH** proměnné prostředí.
 
-**Adresáře knihovny**<br/>
-Adresáře, ve kterých se mají vyhledávat soubory knihoven (.lib), včetně knihoven prostředí runtime. Odpovídá **LIB** proměnné prostředí. Toto nastavení se nevztahuje na soubory .obj; Chcete-li vytvořit odkaz na soubor .obj na **vlastnosti konfigurace** > **Linkeru** > **Obecné** stránka vlastností, vyberte  **Další závislosti knihovny** a pak zadejte relativní cesta k souboru. Další informace najdete v tématu [stránky vlastností Linkeru](../ide/linker-property-pages.md).
+**Adresáře knihoven**<br/>
+Adresáře, ve kterých se mají vyhledávat soubory knihoven (.lib), včetně knihoven prostředí runtime. Odpovídá **LIB** proměnné prostředí. Toto nastavení se nevztahuje na soubory. obj. pro propojení souboru .obj, na **vlastnosti konfigurace** > **Linkeru** > **Obecné** stránky vlastností, vyberte  **Další závislosti knihoven** a potom zadejte relativní cestu k souboru. Další informace najdete v tématu [stránky vlastností Linkeru](../ide/linker-property-pages.md).
 
-**Knihovna WinRT adresáře**<br/>
-Adresáře k vyhledání WinRT soubory knihovny pro použití v aplikacích pro univerzální platformu Windows (UWP). 
+**Adresáře knihoven WinRT**<br/>
+Adresáře pro vyhledávání souborů knihoven WinRT pro použití v aplikacích pro univerzální platformu Windows (UPW).
 
-**Zdrojové adresáře**<br/>
+**Adresáře zdrojových souborů**<br/>
 Adresáře, ve kterých se mají vyhledávat zdrojové soubory pro IntelliSense.
 
-**Vyloučit adresáře**<br/>
-Před každou kompilace Visual Studio dotazuje časové razítko všechny soubory k určení, zda všechny byla změněna od předchozí kompilace. Pokud váš projekt má velký stabilní knihovny, můžete potenciálně urychlit časy sestavení tak, že tyto adresáře vyloučíte z kontroly časové razítko.
+**Vyloučené adresáře**<br/>
+Visual Studio před každou kompilace dotazuje časové razítko u všech souborů k určení, zda všechny změněné od předchozího sestavení. Pokud váš projekt obsahuje velké stabilní knihovny, můžete potenciálně urychlit dobu sestavení podle těchto adresáře vyloučíte z kontroly časové razítko.
 
 ## <a name="sharing-the-settings"></a>Sdílení nastavení
 

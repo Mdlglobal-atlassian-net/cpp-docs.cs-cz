@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 597d4c2e6fa9904906c2971c3c442a9f26779834
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3f1616168829d488a0b0a899f1dd09f9b02700ee
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215075"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389340"
 ---
 # <a name="iidis"></a>iid_is
 
@@ -38,7 +38,7 @@ Určuje identifikátor IID rozhraní modelu COM, který ukazuje ukazatel rozhran
 
 ### <a name="parameters"></a>Parametry
 
-*Výraz*  
+*Výraz*<br/>
 Výraz jazyka C, který určuje IID rozhraní modelu COM na které odkazuje ukazatel rozhraní.
 
 ## <a name="remarks"></a>Poznámky
@@ -79,5 +79,5 @@ Další informace najdete v tématu [kontexty atributů](../windows/attribute-co
 
 ## <a name="see-also"></a>Viz také
 
-[IDL – atributy](../windows/idl-attributes.md)  
+[IDL – atributy](../windows/idl-attributes.md)<br/>
 [Atributy parametru](../windows/parameter-attributes.md)  

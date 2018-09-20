@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88cafb7796ba0dfd1e37902821872e860ddc4baf
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 39bb86206aec72d918df482ee1d01214b4fbb03b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592181"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381748"
 ---
 # <a name="moduleunregisterwinrtobject-method"></a>Module::UnregisterWinRTObject – metoda
 
@@ -39,7 +39,7 @@ virtual HRESULT UnregisterWinRTObject(
 
 ### <a name="parameters"></a>Parametry
 
-*Soubor cookie*  
+*Soubor cookie*<br/>
 Ukazatel na hodnotu, která identifikuje objektu třídy, jehož registrace je zrušené.
 
 ## <a name="requirements"></a>Požadavky
@@ -49,4 +49,5 @@ Ukazatel na hodnotu, která identifikuje objektu třídy, jehož registrace je z
 **Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Viz také
+
 [Module – třída](../windows/module-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Výjimek v jazyce C + +/ CLI | Microsoft Docs
+title: Výjimky v jazyce C + +/ CLI | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,23 +13,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c51e5b85c4e9e30655704e2941a99a90e9888941
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7853be282e3ba7ad05aaf16e53a443a77e8b5e33
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33113184"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387039"
 ---
 # <a name="exceptions-in-ccli"></a>Výjimky v prostředích C++/CLI
-Články v této části dokumentace vysvětlují zpracování výjimek v jazyce C + +/ CLI a jak se liší od standardní výjimek.  
-  
-## <a name="related-articles"></a>Související články  
-  
-|Název|Popis|  
-|-----------|-----------------|  
-|[Základní koncepty při práci se spravovanými výjimkami](../dotnet/basic-concepts-in-using-managed-exceptions.md)|Popisuje zpracování výjimek v spravovaných aplikací.|  
-|[Rozdíly v chování zpracování výjimek v režimu kompilace/CLR](../dotnet/differences-in-exception-handling-behavior-under-clr.md)|Popisuje rozdíly mezi standardní výjimek a zpracování výjimek v jazyce C + +/ CLI.|  
-|[finally](../dotnet/finally.md)|Popisuje `finally` blok, který se používá k vyčištění prostředků, které zůstaly po dojde k výjimce.|  
-|[Postupy: Zachycení výjimek v nativním kódu z prostředí MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)|Ukazuje, jak používat `__try` a `__except` pro zachycení výjimek v nativním kódu vyvolaných z prostředí MSIL.|  
-|[Postupy: Definování a instalace globální obslužné rutiny výjimek](../dotnet/how-to-define-and-install-a-global-exception-handler.md)|Demonstruje postup zachycení neošetřených výjimek.|  
-|[Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Nejvyšší úrovně článku .NET – programování v jazyce Visual C++ dokumentaci.|
+
+Články v této části dokumentace vysvětlují zpracování výjimek v jazyce C + +/ CLI a jak se liší od standardních výjimek.
+
+## <a name="related-articles"></a>Související články
+
+|Název|Popis|
+|-----------|-----------------|
+|[Základní koncepty při práci se spravovanými výjimkami](../dotnet/basic-concepts-in-using-managed-exceptions.md)|Tento článek popisuje zpracování výjimek v spravovaných aplikací.|
+|[Rozdíly v chování zpracování výjimek v/CLR](../dotnet/differences-in-exception-handling-behavior-under-clr.md)|Tento článek popisuje rozdíly mezi zpracování standardních výjimek a zpracování výjimek v jazyce C + +/ CLI.|
+|[finally](../dotnet/finally.md)|Popisuje `finally` blok, který se používá k vyčištění prostředků, které zůstaly po dojde k výjimce.|
+|[Postupy: Zachycení výjimek v nativním kódu z prostředí MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)|Ukazuje, jak používat `__try` a `__except` k zachycování výjimek v nativním kódu, které jsou vyvolány z prostředí MSIL.|
+|[Postupy: Definování a instalace globální obslužné rutiny výjimek](../dotnet/how-to-define-and-install-a-global-exception-handler.md)|Ukazuje, jak chcete zachytávat neošetřené výjimky.|
+|[Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Článek nejvyšší úrovně pro .NET – programování v dokumentaci k Visual C++.|

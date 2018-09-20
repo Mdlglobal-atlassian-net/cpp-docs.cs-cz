@@ -1,5 +1,5 @@
 ---
-title: Inicializační seznamy | Microsoft Docs
+title: Seznamy inicializátorů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6634b749480e5108548de0c8b53f8b09cc5a42c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 981f2737d370dc25ca4e7dc6c20947b3867a0c65
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33127949"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394605"
 ---
 # <a name="initializer-lists"></a>Inicializační seznamy
-Inicializační seznamy v konstruktorech se nyní nazývají před konstruktor základní třídy.  
-  
-## <a name="remarks"></a>Poznámky  
- Před Visual C++ 2005 byla volána konstruktor základní třídy před inicializačním seznam při kompilaci s spravovaných rozšíření jazyka C++. Teď když kompilujete s **/CLR**, inicializátoru seznamu jako první.  
-  
-## <a name="see-also"></a>Viz také  
- [Obecné jazykové změny (C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)
+
+Seznamy inicializátorů konstruktorů jsou nyní volána před konstruktor základní třídy.
+
+## <a name="remarks"></a>Poznámky
+
+Před Visual C++ 2005 byla volána konstruktor základní třídy před seznamem inicializátorů při kompilaci spravovaného rozšíření jazyka C++. Nyní při kompilaci s **/CLR**, seznamem inicializátorů je jako první.
+
+## <a name="see-also"></a>Viz také
+
+[Obecné jazykové změny (C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)

@@ -1,5 +1,5 @@
 ---
-title: Přidání členské funkce (Visual C++) | Microsoft Docs
+title: Přidání členské funkce (Visual C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c79f6eaebae0065a631b8ac31a7254cdc96080e9
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 41212e61144477eb05405e6df69b314f0f2cb37a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33324184"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389405"
 ---
 # <a name="adding-a-member-function-visual-c"></a>Přidání členské funkce (Visual C++)
-V **zobrazení tříd**, členské funkce můžete přidat všechny třídy. Když to uděláte, deklaraci se přidá do hlavičky souboru a stub – členská funkce text se přidá do souboru implementace třídy, který poté můžete upravit.  
-  
-### <a name="to-add-a-member-function-to-a-class"></a>Přidání členské funkce na třídu  
-  
-1.  V **zobrazení tříd**, rozbalte uzel projektu pro zobrazení třídy v projektu. (Chcete-li otevřít **zobrazení tříd**, na řádku nabídek zvolte **zobrazení**, **zobrazení tříd**.)  
-  
-2.  Otevřete místní nabídku pro třídu, kterou chcete přidat člena funkce, která se a potom zvolte **přidat**, **přidat funkci**.  
-  
-3.  Zadejte příslušné podrobnosti o – členská funkce. Další informace najdete v tématu [Průvodce přidáním členské funkce](../ide/add-member-function-wizard.md).  
-  
-4.  Vyberte **Dokončit** pro vygenerování kódu členské funkce.  
-  
-## <a name="see-also"></a>Viz také  
- [Přidání funkce pomocí průvodců kódem](../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Přidání třídy](../ide/adding-a-class-visual-cpp.md)   
- [Přidání členské proměnné](../ide/adding-a-member-variable-visual-cpp.md)   
- [Přepisování virtuální funkce](../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Popisovač zpráv knihovny MFC](../mfc/reference/adding-an-mfc-message-handler.md)   
- [Navigace strukturou třídy](../ide/navigating-the-class-structure-visual-cpp.md)
+
+V **zobrazení tříd**, můžete přidat členskou funkci na všechny třídy. Když toto provedete, deklarací se přidá do souboru hlaviček a těla členské funkce se zakázaným inzerováním se přidá do souboru implementace třídy, který poté můžete upravit.
+
+### <a name="to-add-a-member-function-to-a-class"></a>Chcete-li přidat členskou funkci na třídu
+
+1. V **zobrazení tříd**, rozbalte uzel projektu pro zobrazení tříd v projektu. (Chcete-li otevřít **zobrazení tříd**, na panelu nabídek zvolte **zobrazení**, **zobrazení tříd**.)
+
+1. Otevřete místní nabídku pro třídu, kterou chcete přidat členskou funkci, a klikněte na tlačítko **přidat**, **přidat funkci**.
+
+1. Poskytnout patřičné podrobné informace o členskou funkci. Další informace najdete v tématu [Průvodce přidáním členské funkce](../ide/add-member-function-wizard.md).
+
+1. Zvolte **Dokončit** pro vygenerování kódu členské funkce.
+
+## <a name="see-also"></a>Viz také
+
+[Přidání funkce pomocí průvodců kódem](../ide/adding-functionality-with-code-wizards-cpp.md)<br>
+[Přidání třídy](../ide/adding-a-class-visual-cpp.md)<br>
+[Přidání členské proměnné](../ide/adding-a-member-variable-visual-cpp.md)<br>
+[Přepisování virtuální funkce](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
+[Popisovače zpráv knihovny MFC](../mfc/reference/adding-an-mfc-message-handler.md)<br>
+[Navigace strukturou třídy](../ide/navigating-the-class-structure-visual-cpp.md)

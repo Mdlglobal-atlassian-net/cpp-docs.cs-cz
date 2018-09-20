@@ -130,868 +130,905 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec78ed92829f8a8ac33e796687f812dc7ad444a1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ba6c46871a74a1c90de94621a81e46d320388221
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701568"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388098"
 ---
 # <a name="cpanecontainer-class"></a>Cpanecontainer – třída
-`CPaneContainer` Třída je základní komponenta dokovacího modelu implementovaná pomocí knihovny MFC. Objekt této třídy ukládá ukazatele do dvou ukotvitelných podoken nebo dvou instancí `CPaneContainer.` také ukládá ukazatel k oddělovači, který odděluje podokna (nebo kontejnery). Díky vnořování kontejnerů uvnitř kontejnerů umožňuje rozhraní vytvořit binární strom, který představuje komplexní dokovací rozložení. Kořen binárního stromu je uložen v [cpanecontainermanager –](../../mfc/reference/cpanecontainermanager-class.md) objektu.  
 
- Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
- 
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CPaneContainer : public CObject    
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CPaneContainer::CPaneContainer](#cpanecontainer)|Výchozí konstruktor.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CPaneContainer::AddPane](#addpane)||  
-|[CPaneContainer::AddRef](#addref)||  
-|[CPaneContainer::AddSubPaneContainer](#addsubpanecontainer)||  
-|[CPaneContainer::CalcAvailablePaneSpace](#calcavailablepanespace)||  
-|[CPaneContainer::CalcAvailableSpace](#calcavailablespace)||  
-|[CPaneContainer::CalculateRecentSize](#calculaterecentsize)||  
-|[CPaneContainer::CheckPaneDividerVisibility](#checkpanedividervisibility)||  
-|[CPaneContainer::Copy](#copy)||  
-|[CPaneContainer::DeletePane](#deletepane)||  
-|[CPaneContainer::FindSubPaneContainer](#findsubpanecontainer)||  
-|[CPaneContainer::FindTabbedPane](#findtabbedpane)||  
-|[CPaneContainer::GetAssociatedSiblingPaneIDs](#getassociatedsiblingpaneids)||  
-|[CPaneContainer::GetLeftPane](#getleftpane)||  
-|[CPaneContainer::GetLeftPaneContainer](#getleftpanecontainer)||  
-|[CPaneContainer::GetMinSize](#getminsize)||  
-|[CPaneContainer::GetMinSizeLeft](#getminsizeleft)||  
-|[CPaneContainer::GetMinSizeRight](#getminsizeright)||  
-|[CPaneContainer::GetNodeCount](#getnodecount)||  
-|[CPaneContainer::GetPaneDivider](#getpanedivider)||  
-|[CPaneContainer::GetParentPaneContainer](#getparentpanecontainer)||  
-|[CPaneContainer::GetRecentPaneDividerRect](#getrecentpanedividerrect)||  
-|[CPaneContainer::GetRecentPaneDividerStyle](#getrecentpanedividerstyle)||  
-|[CPaneContainer::GetRecentPercent](#getrecentpercent)||  
-|[CPaneContainer::GetRefCount](#getrefcount)||  
-|[CPaneContainer::GetResizeStep](#getresizestep)||  
-|[CPaneContainer::GetRightPane](#getrightpane)||  
-|[CPaneContainer::GetRightPaneContainer](#getrightpanecontainer)||  
-|[CPaneContainer::GetTotalReferenceCount](#gettotalreferencecount)||  
-|[CPaneContainer::GetWindowRect](#getwindowrect)||  
-|[CPaneContainer::IsDisposed](#isdisposed)||  
-|[CPaneContainer::IsEmpty](#isempty)||  
-|[CPaneContainer::IsLeftPane](#isleftpane)||  
-|[CPaneContainer::IsLeftPaneContainer](#isleftpanecontainer)||  
-|[CPaneContainer::IsLeftPartEmpty](#isleftpartempty)||  
-|[CPaneContainer::IsRightPartEmpty](#isrightpartempty)||  
-|[CPaneContainer::IsVisible](#isvisible)||  
-|[CPaneContainer::Move](#move)||  
-|[CPaneContainer::OnDeleteHidePane](#ondeletehidepane)||  
-|[CPaneContainer::OnMoveInternalPaneDivider](#onmoveinternalpanedivider)||  
-|[CPaneContainer::OnShowPane](#onshowpane)||  
-|[CPaneContainer::Release](#release)||  
-|[CPaneContainer::ReleaseEmptyPaneContainer](#releaseemptypanecontainer)||  
-|[CPaneContainer::RemoveNonValidPanes](#removenonvalidpanes)||  
-|[CPaneContainer::RemovePane](#removepane)||  
-|[CPaneContainer::Resize](#resize)||  
-|[CPaneContainer::ResizePane](#resizepane)||  
-|[CPaneContainer::ResizePartOfPaneContainer](#resizepartofpanecontainer)||  
-|[CPaneContainer::Serialize](#serialize)|Čtení nebo zápis tento objekt z nebo do archivu. (Přepíše [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|  
-|[CPaneContainer::SetPane](#setpane)||  
-|[CPaneContainer::SetPaneContainer](#setpanecontainer)||  
-|[CPaneContainer::SetPaneDivider](#setpanedivider)||  
-|[CPaneContainer::SetParentPaneContainer](#setparentpanecontainer)||  
-|[CPaneContainer::SetRecentPercent](#setrecentpercent)||  
-|[CPaneContainer::SetUpByID](#setupbyid)||  
-|[CPaneContainer::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)||  
-|[CPaneContainer::StretchPaneContainer](#stretchpanecontainer)||  
-  
-### <a name="remarks"></a>Poznámky  
- `CPaneContainer` v rámci rozhraní jsou automaticky vytvořeny objekty.  
-  
-## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak vytvořit instanci `CPaneContainer` třídy. Tento fragment kódu je součástí [nastavit velikost podokna ukázka](../../visual-cpp-samples.md).  
-  
- [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_1.h)]  
-[!code-cpp[NVC_MFC_SetPaneSize#1](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_2.cpp)]  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [Třídy CObject](../../mfc/reference/cobject-class.md)  
-  
- [Cpanecontainer –](../../mfc/reference/cpanecontainer-class.md)  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxpanecontainer.h  
-  
-##  <a name="addpane"></a>  CPaneContainer::AddPane  
+`CPaneContainer` Třída je základní komponenta dokovacího modelu implementovaná pomocí knihovny MFC. Objekt této třídy ukládá ukazatele do dvou ukotvitelných podoken nebo dvou instancí `CPaneContainer.` také ukládá ukazatel k oddělovači, který odděluje podokna (nebo kontejnery). Díky vnořování kontejnerů uvnitř kontejnerů umožňuje rozhraní vytvořit binární strom, který představuje komplexní dokovací rozložení. Kořen binárního stromu je uložen v [cpanecontainermanager –](../../mfc/reference/cpanecontainermanager-class.md) objektu.
 
-  
-```  
+Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CPaneContainer : public CObject
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[CPaneContainer::CPaneContainer](#cpanecontainer)|Výchozí konstruktor.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CPaneContainer::AddPane](#addpane)||
+|[CPaneContainer::AddRef](#addref)||
+|[CPaneContainer::AddSubPaneContainer](#addsubpanecontainer)||
+|[CPaneContainer::CalcAvailablePaneSpace](#calcavailablepanespace)||
+|[CPaneContainer::CalcAvailableSpace](#calcavailablespace)||
+|[CPaneContainer::CalculateRecentSize](#calculaterecentsize)||
+|[CPaneContainer::CheckPaneDividerVisibility](#checkpanedividervisibility)||
+|[CPaneContainer::Copy](#copy)||
+|[CPaneContainer::DeletePane](#deletepane)||
+|[CPaneContainer::FindSubPaneContainer](#findsubpanecontainer)||
+|[CPaneContainer::FindTabbedPane](#findtabbedpane)||
+|[CPaneContainer::GetAssociatedSiblingPaneIDs](#getassociatedsiblingpaneids)||
+|[CPaneContainer::GetLeftPane](#getleftpane)||
+|[CPaneContainer::GetLeftPaneContainer](#getleftpanecontainer)||
+|[CPaneContainer::GetMinSize](#getminsize)||
+|[CPaneContainer::GetMinSizeLeft](#getminsizeleft)||
+|[CPaneContainer::GetMinSizeRight](#getminsizeright)||
+|[CPaneContainer::GetNodeCount](#getnodecount)||
+|[CPaneContainer::GetPaneDivider](#getpanedivider)||
+|[CPaneContainer::GetParentPaneContainer](#getparentpanecontainer)||
+|[CPaneContainer::GetRecentPaneDividerRect](#getrecentpanedividerrect)||
+|[CPaneContainer::GetRecentPaneDividerStyle](#getrecentpanedividerstyle)||
+|[CPaneContainer::GetRecentPercent](#getrecentpercent)||
+|[CPaneContainer::GetRefCount](#getrefcount)||
+|[CPaneContainer::GetResizeStep](#getresizestep)||
+|[CPaneContainer::GetRightPane](#getrightpane)||
+|[CPaneContainer::GetRightPaneContainer](#getrightpanecontainer)||
+|[CPaneContainer::GetTotalReferenceCount](#gettotalreferencecount)||
+|[CPaneContainer::GetWindowRect](#getwindowrect)||
+|[CPaneContainer::IsDisposed](#isdisposed)||
+|[CPaneContainer::IsEmpty](#isempty)||
+|[CPaneContainer::IsLeftPane](#isleftpane)||
+|[CPaneContainer::IsLeftPaneContainer](#isleftpanecontainer)||
+|[CPaneContainer::IsLeftPartEmpty](#isleftpartempty)||
+|[CPaneContainer::IsRightPartEmpty](#isrightpartempty)||
+|[CPaneContainer::IsVisible](#isvisible)||
+|[CPaneContainer::Move](#move)||
+|[CPaneContainer::OnDeleteHidePane](#ondeletehidepane)||
+|[CPaneContainer::OnMoveInternalPaneDivider](#onmoveinternalpanedivider)||
+|[CPaneContainer::OnShowPane](#onshowpane)||
+|[CPaneContainer::Release](#release)||
+|[CPaneContainer::ReleaseEmptyPaneContainer](#releaseemptypanecontainer)||
+|[CPaneContainer::RemoveNonValidPanes](#removenonvalidpanes)||
+|[CPaneContainer::RemovePane](#removepane)||
+|[CPaneContainer::Resize](#resize)||
+|[CPaneContainer::ResizePane](#resizepane)||
+|[CPaneContainer::ResizePartOfPaneContainer](#resizepartofpanecontainer)||
+|[CPaneContainer::Serialize](#serialize)|Čtení nebo zápis tento objekt z nebo do archivu. (Přepíše [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|
+|[CPaneContainer::SetPane](#setpane)||
+|[CPaneContainer::SetPaneContainer](#setpanecontainer)||
+|[CPaneContainer::SetPaneDivider](#setpanedivider)||
+|[CPaneContainer::SetParentPaneContainer](#setparentpanecontainer)||
+|[CPaneContainer::SetRecentPercent](#setrecentpercent)||
+|[CPaneContainer::SetUpByID](#setupbyid)||
+|[CPaneContainer::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)||
+|[CPaneContainer::StretchPaneContainer](#stretchpanecontainer)||
+
+### <a name="remarks"></a>Poznámky
+
+`CPaneContainer` v rámci rozhraní jsou automaticky vytvořeny objekty.
+
+## <a name="example"></a>Příklad
+
+Následující příklad ukazuje, jak vytvořit instanci `CPaneContainer` třídy. Tento fragment kódu je součástí [nastavit velikost podokna ukázka](../../visual-cpp-samples.md).
+
+[!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_1.h)]
+[!code-cpp[NVC_MFC_SetPaneSize#1](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_2.cpp)]
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[Třídy CObject](../../mfc/reference/cobject-class.md)
+
+[Cpanecontainer –](../../mfc/reference/cpanecontainer-class.md)
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxpanecontainer.h
+
+##  <a name="addpane"></a>  CPaneContainer::AddPane
+
+
+```
 CDockablePane* AddPane(CDockablePane* pBar);
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] *pBar*  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="addref"></a>  CPaneContainer::AddRef  
+```
 
-  
-```  
+### <a name="parameters"></a>Parametry
+
+[in] *pBar*
+
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="addref"></a>  CPaneContainer::AddRef
+
+
+```
 void AddRef();
-```  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="addsubpanecontainer"></a>  CPaneContainer::AddSubPaneContainer  
+```
 
-  
-```  
+### <a name="remarks"></a>Poznámky
+
+##  <a name="addsubpanecontainer"></a>  CPaneContainer::AddSubPaneContainer
+
+
+```
 BOOL AddSubPaneContainer(
-    CPaneContainer* pContainer,  
+    CPaneContainer* pContainer,
     BOOL bRightNodeNew);
-```  
-  
-### <a name="parameters"></a>Parametry  
-*pContainer*<br/>
-[in] [in] *bRightNodeNew*  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="calcavailablepanespace"></a>  CPaneContainer::CalcAvailablePaneSpace  
+```
 
-  
-```  
+### <a name="parameters"></a>Parametry
+
+*pContainer*<br/>
+[in] [in] *bRightNodeNew*
+
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="calcavailablepanespace"></a>  CPaneContainer::CalcAvailablePaneSpace
+
+
+```
 virtual int CalcAvailablePaneSpace(
-    int nRequiredOffset,  
-    CPane* pBar,  
-    CPaneContainer* pContainer,  
+    int nRequiredOffset,
+    CPane* pBar,
+    CPaneContainer* pContainer,
     BOOL bLeftBar);
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *nRequiredOffset*<br/>
-[in] [in] *pBar*  
+[in] [in] *pBar*
 *pContainer*<br/>
-[in] [in] *bLeftBar*  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="calcavailablespace"></a>  CPaneContainer::CalcAvailableSpace  
+[in] [in] *bLeftBar*
 
-  
-```  
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="calcavailablespace"></a>  CPaneContainer::CalcAvailableSpace
+
+
+```
 virtual CSize CalcAvailableSpace(
-    CSize sizeStretch,  
+    CSize sizeStretch,
     BOOL bLeftBar);
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *sizeStretch*<br/>
-[in] [in] *bLeftBar*  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="calculaterecentsize"></a>  CPaneContainer::CalculateRecentSize  
+[in] [in] *bLeftBar*
 
-  
-```  
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="calculaterecentsize"></a>  CPaneContainer::CalculateRecentSize
+
+
+```
 void CalculateRecentSize();
-```  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="checkpanedividervisibility"></a>  CPaneContainer::CheckPaneDividerVisibility  
+```
 
-  
-```  
+### <a name="remarks"></a>Poznámky
+
+##  <a name="checkpanedividervisibility"></a>  CPaneContainer::CheckPaneDividerVisibility
+
+
+```
 void CheckPaneDividerVisibility();
-```  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="copy"></a>  CPaneContainer::Copy  
+```
 
-  
-```  
+### <a name="remarks"></a>Poznámky
+
+##  <a name="copy"></a>  CPaneContainer::Copy
+
+
+```
 virtual CPaneContainer* Copy(CPaneContainer* pParentContainer);
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] *pParentContainer*  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="cpanecontainer"></a>  CPaneContainer::CPaneContainer  
+```
 
-  
-```  
+### <a name="parameters"></a>Parametry
+
+[in] *pParentContainer*
+
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="cpanecontainer"></a>  CPaneContainer::CPaneContainer
+
+
+```
 CPaneContainer(
-    CPaneContainerManager* pManager = NULL,  
-    CDockablePane* pLeftBar = NULL,  
-    CDockablePane* pRightBar = NULL,  
+    CPaneContainerManager* pManager = NULL,
+    CDockablePane* pLeftBar = NULL,
+    CDockablePane* pRightBar = NULL,
     CPaneDivider* pSlider = NULL);
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *pManager*<br/>
-[in] [in] *pLeftBar*  
+[in] [in] *pLeftBar*
 *pRightBar*<br/>
-[in] [in] *pSlider*  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="deletepane"></a>  CPaneContainer::DeletePane  
+[in] [in] *pSlider*
 
-  
-```  
+### <a name="remarks"></a>Poznámky
+
+##  <a name="deletepane"></a>  CPaneContainer::DeletePane
+
+
+```
 virtual void DeletePane(
-    CDockablePane* pBar,  
+    CDockablePane* pBar,
     BC_FIND_CRITERIA barType);
-```  
-  
-### <a name="parameters"></a>Parametry  
-*pBar*<br/>
-[in] [in] *barType*  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="findsubpanecontainer"></a>  CPaneContainer::FindSubPaneContainer  
+```
 
-  
-```  
+### <a name="parameters"></a>Parametry
+
+*pBar*<br/>
+[in] [in] *barType*
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="findsubpanecontainer"></a>  CPaneContainer::FindSubPaneContainer
+
+
+```
 CPaneContainer* FindSubPaneContainer(
-    const CObject* pObject,  
+    const CObject* pObject,
     BC_FIND_CRITERIA findCriteria);
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *odstraněný objekt*<br/>
-[in] [in] *kritéria hledání*  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="findtabbedpane"></a>  CPaneContainer::FindTabbedPane  
+[in] [in] *kritéria hledání*
 
-  
-```  
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="findtabbedpane"></a>  CPaneContainer::FindTabbedPane
+
+
+```
 CDockablePane* FindTabbedPane(UINT nID);
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] *nID*  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="getassociatedsiblingpaneids"></a>  CPaneContainer::GetAssociatedSiblingPaneIDs  
+```
 
-  
-```  
+### <a name="parameters"></a>Parametry
+
+[in] *nID*
+
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="getassociatedsiblingpaneids"></a>  CPaneContainer::GetAssociatedSiblingPaneIDs
+
+
+```
 CList<UINT, UINT>* GetAssociatedSiblingPaneIDs(CDockablePane* pBar);
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] *pBar*  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="getleftpane"></a>  CPaneContainer::GetLeftPane  
+```
 
-  
-```  
-const CDockablePane* GetLeftPane() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="getleftpanecontainer"></a>  CPaneContainer::GetLeftPaneContainer  
+### <a name="parameters"></a>Parametry
 
-  
-```  
-const CPaneContainer* GetLeftPaneContainer() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="getminsize"></a>  CPaneContainer::GetMinSize  
+[in] *pBar*
 
-  
-```  
-virtual void GetMinSize(CSize& size) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] *velikost*  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="getminsizeleft"></a>  CPaneContainer::GetMinSizeLeft  
+### <a name="return-value"></a>Návratová hodnota
 
-  
-```  
-virtual void GetMinSizeLeft(CSize& size) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] *velikost*  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="getminsizeright"></a>  CPaneContainer::GetMinSizeRight  
+### <a name="remarks"></a>Poznámky
 
-  
-```  
-virtual void GetMinSizeRight(CSize& size) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] *velikost*  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="getnodecount"></a>  CPaneContainer::GetNodeCount  
+##  <a name="getleftpane"></a>  CPaneContainer::GetLeftPane
 
-  
-```  
-int GetNodeCount() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="getpanedivider"></a>  CPaneContainer::GetPaneDivider  
 
-  
-```  
-const CPaneDivider* GetPaneDivider() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="getparentpanecontainer"></a>  CPaneContainer::GetParentPaneContainer  
+```
+const CDockablePane* GetLeftPane() const;
+```
 
-  
-```  
-CPaneContainer* GetParentPaneContainer() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="getrecentpanedividerrect"></a>  CPaneContainer::GetRecentPaneDividerRect  
+### <a name="return-value"></a>Návratová hodnota
 
-  
-```  
-CRect GetRecentPaneDividerRect() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="getrecentpanedividerstyle"></a>  CPaneContainer::GetRecentPaneDividerStyle  
+### <a name="remarks"></a>Poznámky
 
-  
-```  
-DWORD GetRecentPaneDividerStyle() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="getrecentpercent"></a>  CPaneContainer::GetRecentPercent  
+##  <a name="getleftpanecontainer"></a>  CPaneContainer::GetLeftPaneContainer
 
-  
-```  
+
+```
+const CPaneContainer* GetLeftPaneContainer() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="getminsize"></a>  CPaneContainer::GetMinSize
+
+
+```
+virtual void GetMinSize(CSize& size) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+[in] *velikost*
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="getminsizeleft"></a>  CPaneContainer::GetMinSizeLeft
+
+
+```
+virtual void GetMinSizeLeft(CSize& size) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+[in] *velikost*
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="getminsizeright"></a>  CPaneContainer::GetMinSizeRight
+
+
+```
+virtual void GetMinSizeRight(CSize& size) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+[in] *velikost*
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="getnodecount"></a>  CPaneContainer::GetNodeCount
+
+
+```
+int GetNodeCount() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="getpanedivider"></a>  CPaneContainer::GetPaneDivider
+
+
+```
+const CPaneDivider* GetPaneDivider() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="getparentpanecontainer"></a>  CPaneContainer::GetParentPaneContainer
+
+
+```
+CPaneContainer* GetParentPaneContainer() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="getrecentpanedividerrect"></a>  CPaneContainer::GetRecentPaneDividerRect
+
+
+```
+CRect GetRecentPaneDividerRect() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="getrecentpanedividerstyle"></a>  CPaneContainer::GetRecentPaneDividerStyle
+
+
+```
+DWORD GetRecentPaneDividerStyle() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="getrecentpercent"></a>  CPaneContainer::GetRecentPercent
+
+
+```
 int GetRecentPercent();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="getrefcount"></a>  CPaneContainer::GetRefCount  
+```
 
-  
-```  
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="getrefcount"></a>  CPaneContainer::GetRefCount
+
+
+```
 LONG GetRefCount();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="getresizestep"></a>  CPaneContainer::GetResizeStep  
+```
 
-  
-```  
-virtual int GetResizeStep() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="getrightpane"></a>  CPaneContainer::GetRightPane  
+### <a name="return-value"></a>Návratová hodnota
 
-  
-```  
-const CDockablePane* GetRightPane() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="getrightpanecontainer"></a>  CPaneContainer::GetRightPaneContainer  
+### <a name="remarks"></a>Poznámky
 
-  
-```  
-const CPaneContainer* GetRightPaneContainer() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="gettotalreferencecount"></a>  CPaneContainer::GetTotalReferenceCount  
+##  <a name="getresizestep"></a>  CPaneContainer::GetResizeStep
 
-  
-```  
-int GetTotalReferenceCount() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="getwindowrect"></a>  CPaneContainer::GetWindowRect  
 
-  
-```  
+```
+virtual int GetResizeStep() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="getrightpane"></a>  CPaneContainer::GetRightPane
+
+
+```
+const CDockablePane* GetRightPane() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="getrightpanecontainer"></a>  CPaneContainer::GetRightPaneContainer
+
+
+```
+const CPaneContainer* GetRightPaneContainer() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="gettotalreferencecount"></a>  CPaneContainer::GetTotalReferenceCount
+
+
+```
+int GetTotalReferenceCount() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="getwindowrect"></a>  CPaneContainer::GetWindowRect
+
+
+```
 virtual void GetWindowRect(
-    CRect& rect,  
-    BOOL bIgnoreVisibility = FALSE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
+    CRect& rect,
+    BOOL bIgnoreVisibility = FALSE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
 *Rect*<br/>
-[in] [in] *bIgnoreVisibility*  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="isdisposed"></a>  CPaneContainer::IsDisposed  
+[in] [in] *bIgnoreVisibility*
 
-  
-```  
-BOOL IsDisposed() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="isempty"></a>  CPaneContainer::IsEmpty  
+### <a name="remarks"></a>Poznámky
 
-  
-```  
-BOOL IsEmpty() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="isleftpane"></a>  CPaneContainer::IsLeftPane  
+##  <a name="isdisposed"></a>  CPaneContainer::IsDisposed
 
-  
-```  
-BOOL IsLeftPane(CDockablePane* pBar) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] *pBar*  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="isleftpanecontainer"></a>  CPaneContainer::IsLeftPaneContainer  
 
-  
-```  
-BOOL IsLeftPaneContainer() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="isleftpartempty"></a>  CPaneContainer::IsLeftPartEmpty  
+```
+BOOL IsDisposed() const;
+```
 
-  
-```  
-BOOL IsLeftPartEmpty(BOOL bCheckVisibility = FALSE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] *bCheckVisibility*  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="isrightpartempty"></a>  CPaneContainer::IsRightPartEmpty  
+### <a name="return-value"></a>Návratová hodnota
 
-  
-```  
-BOOL IsRightPartEmpty(BOOL bCheckVisibility = FALSE) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] *bCheckVisibility*  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="isvisible"></a>  CPaneContainer::IsVisible  
+### <a name="remarks"></a>Poznámky
 
-  
-```  
-BOOL IsVisible() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="move"></a>  CPaneContainer::Move  
+##  <a name="isempty"></a>  CPaneContainer::IsEmpty
 
-  
-```  
+
+```
+BOOL IsEmpty() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="isleftpane"></a>  CPaneContainer::IsLeftPane
+
+
+```
+BOOL IsLeftPane(CDockablePane* pBar) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+[in] *pBar*
+
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="isleftpanecontainer"></a>  CPaneContainer::IsLeftPaneContainer
+
+
+```
+BOOL IsLeftPaneContainer() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="isleftpartempty"></a>  CPaneContainer::IsLeftPartEmpty
+
+
+```
+BOOL IsLeftPartEmpty(BOOL bCheckVisibility = FALSE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+[in] *bCheckVisibility*
+
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="isrightpartempty"></a>  CPaneContainer::IsRightPartEmpty
+
+
+```
+BOOL IsRightPartEmpty(BOOL bCheckVisibility = FALSE) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+[in] *bCheckVisibility*
+
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="isvisible"></a>  CPaneContainer::IsVisible
+
+
+```
+BOOL IsVisible() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="move"></a>  CPaneContainer::Move
+
+
+```
 virtual void Move(CPoint ptNewLeftTop);
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] *ptNewLeftTop*  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="ondeletehidepane"></a>  CPaneContainer::OnDeleteHidePane  
+```
 
-  
-```  
+### <a name="parameters"></a>Parametry
+
+[in] *ptNewLeftTop*
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="ondeletehidepane"></a>  CPaneContainer::OnDeleteHidePane
+
+
+```
 void OnDeleteHidePane(
-    CDockablePane* pBar,  
+    CDockablePane* pBar,
     BOOL bHide);
-```  
-  
-### <a name="parameters"></a>Parametry  
-*pBar*<br/>
-[in] [in] *bHide*  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="onmoveinternalpanedivider"></a>  CPaneContainer::OnMoveInternalPaneDivider  
+```
 
-  
-```  
+### <a name="parameters"></a>Parametry
+
+*pBar*<br/>
+[in] [in] *bHide*
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="onmoveinternalpanedivider"></a>  CPaneContainer::OnMoveInternalPaneDivider
+
+
+```
 virtual int OnMoveInternalPaneDivider(
-    int nOffset,  
+    int nOffset,
     HDWP& hdwp);
-```  
-  
-### <a name="parameters"></a>Parametry  
-*nOffset*<br/>
-[in] [in] *hdwp*  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="onshowpane"></a>  CPaneContainer::OnShowPane  
+```
 
-  
-```  
+### <a name="parameters"></a>Parametry
+
+*nOffset*<br/>
+[in] [in] *hdwp*
+
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="onshowpane"></a>  CPaneContainer::OnShowPane
+
+
+```
 virtual void OnShowPane(
-    CDockablePane* pBar,  
+    CDockablePane* pBar,
     BOOL bShow);
-```  
-  
-### <a name="parameters"></a>Parametry  
-*pBar*<br/>
-[in] [in] *bShow*  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="release"></a>  CPaneContainer::Release  
+```
 
-  
-```  
+### <a name="parameters"></a>Parametry
+
+*pBar*<br/>
+[in] [in] *bShow*
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="release"></a>  CPaneContainer::Release
+
+
+```
 DWORD Release();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="releaseemptypanecontainer"></a>  CPaneContainer::ReleaseEmptyPaneContainer  
+```
 
-  
-```  
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="releaseemptypanecontainer"></a>  CPaneContainer::ReleaseEmptyPaneContainer
+
+
+```
 void ReleaseEmptyPaneContainer();
-```  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="removenonvalidpanes"></a>  CPaneContainer::RemoveNonValidPanes  
+```
 
-  
-```  
+### <a name="remarks"></a>Poznámky
+
+##  <a name="removenonvalidpanes"></a>  CPaneContainer::RemoveNonValidPanes
+
+
+```
 void RemoveNonValidPanes();
-```  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="removepane"></a>  CPaneContainer::RemovePane  
+```
 
-  
-```  
+### <a name="remarks"></a>Poznámky
+
+##  <a name="removepane"></a>  CPaneContainer::RemovePane
+
+
+```
 virtual void RemovePane(CDockablePane* pBar);
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] *pBar*  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="resize"></a>  CPaneContainer::Resize  
+```
 
-  
-```  
+### <a name="parameters"></a>Parametry
+
+[in] *pBar*
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="resize"></a>  CPaneContainer::Resize
+
+
+```
 virtual void Resize(
-    CRect rect,  
-    HDWP& hdwp,  
+    CRect rect,
+    HDWP& hdwp,
     BOOL bRedraw = FALSE);
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *Rect*<br/>
-[in] [in] *hdwp*  
- [in] *bRedraw*  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="resizepane"></a>  CPaneContainer::ResizePane  
+[in] [in] *hdwp* [in] *bRedraw*
 
-  
-```  
+### <a name="remarks"></a>Poznámky
+
+##  <a name="resizepane"></a>  CPaneContainer::ResizePane
+
+
+```
 virtual void ResizePane(
-    int nOffset,  
-    CPane* pBar,  
-    CPaneContainer* pContainer,  
-    BOOL bHorz,  
-    BOOL bLeftBar,  
+    int nOffset,
+    CPane* pBar,
+    CPaneContainer* pContainer,
+    BOOL bHorz,
+    BOOL bLeftBar,
     HDWP& hdwp);
-```  
-  
-### <a name="parameters"></a>Parametry  
-*nOffset*<br/>
-[in] [in] *pBar*  
-*pContainer*<br/>
-[in] [in] *bHorz*  
-*bLeftBar*<br/>
-[in] [in] *hdwp*  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="resizepartofpanecontainer"></a>  CPaneContainer::ResizePartOfPaneContainer  
+```
 
-  
-```  
+### <a name="parameters"></a>Parametry
+
+*nOffset*<br/>
+[in] [in] *pBar*
+*pContainer*<br/>
+[in] [in] *bHorz*
+*bLeftBar*<br/>
+[in] [in] *hdwp*
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="resizepartofpanecontainer"></a>  CPaneContainer::ResizePartOfPaneContainer
+
+
+```
 virtual void ResizePartOfPaneContainer(
-    int nOffset,  
-    BOOL bLeftPart,  
+    int nOffset,
+    BOOL bLeftPart,
     HDWP& hdwp);
-```  
-  
-### <a name="parameters"></a>Parametry  
-*nOffset*<br/>
-[in] [in] *bLeftPart*  
- [in] *hdwp*  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="serialize"></a>  CPaneContainer::Serialize  
+```
 
-  
-```  
+### <a name="parameters"></a>Parametry
+
+*nOffset*<br/>
+[in] [in] *bLeftPart* [in] *hdwp*
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="serialize"></a>  CPaneContainer::Serialize
+
+
+```
 void Serialize(CArchive& ar);
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] *ar*  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="setpane"></a>  CPaneContainer::SetPane  
+```
 
-  
-```  
+### <a name="parameters"></a>Parametry
+
+[in] *ar*
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="setpane"></a>  CPaneContainer::SetPane
+
+
+```
 void SetPane(
-    CDockablePane* pBar,  
+    CDockablePane* pBar,
     BOOL bLeft);
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *pBar*<br/>
-[in] [in] *bLeft*  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="setpanecontainer"></a>  CPaneContainer::SetPaneContainer  
+[in] [in] *bLeft*
 
-  
-```  
+### <a name="remarks"></a>Poznámky
+
+##  <a name="setpanecontainer"></a>  CPaneContainer::SetPaneContainer
+
+
+```
 void SetPaneContainer(
-    CPaneContainer* pContainer,  
+    CPaneContainer* pContainer,
     BOOL bLeft);
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *pContainer*<br/>
-[in] [in] *bLeft*  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="setpanedivider"></a>  CPaneContainer::SetPaneDivider  
+[in] [in] *bLeft*
 
-  
-```  
+### <a name="remarks"></a>Poznámky
+
+##  <a name="setpanedivider"></a>  CPaneContainer::SetPaneDivider
+
+
+```
 void SetPaneDivider(CPaneDivider* pSlider);
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] *pSlider*  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="setparentpanecontainer"></a>  CPaneContainer::SetParentPaneContainer  
+```
 
-  
-```  
+### <a name="parameters"></a>Parametry
+
+[in] *pSlider*
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="setparentpanecontainer"></a>  CPaneContainer::SetParentPaneContainer
+
+
+```
 void SetParentPaneContainer(CPaneContainer* p);
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] *p*  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="setrecentpercent"></a>  CPaneContainer::SetRecentPercent  
+```
 
-  
-```  
+### <a name="parameters"></a>Parametry
+
+[in] *p*
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="setrecentpercent"></a>  CPaneContainer::SetRecentPercent
+
+
+```
 void SetRecentPercent(int nRecentPercent);
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] *nRecentPercent*  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="setupbyid"></a>  CPaneContainer::SetUpByID  
+```
 
-  
-```  
+### <a name="parameters"></a>Parametry
+
+[in] *nRecentPercent*
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="setupbyid"></a>  CPaneContainer::SetUpByID
+
+
+```
 BOOL SetUpByID(
-    UINT nID,  
+    UINT nID,
     CDockablePane* pBar);
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *nID*<br/>
-[in] [in] *pBar*  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="storerecentdocksiteinfo"></a>  CPaneContainer::StoreRecentDockSiteInfo  
+[in] [in] *pBar*
 
-  
-```  
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="storerecentdocksiteinfo"></a>  CPaneContainer::StoreRecentDockSiteInfo
+
+
+```
 virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] *pBar*  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="stretchpanecontainer"></a>  CPaneContainer::StretchPaneContainer  
+```
 
-  
-```  
+### <a name="parameters"></a>Parametry
+
+[in] *pBar*
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="stretchpanecontainer"></a>  CPaneContainer::StretchPaneContainer
+
+
+```
 virtual int StretchPaneContainer(
-    int nOffset,  
-    BOOL bStretchHorz,  
-    BOOL bLeftBar,  
-    BOOL bMoveSlider,  
+    int nOffset,
+    BOOL bStretchHorz,
+    BOOL bLeftBar,
+    BOOL bMoveSlider,
     HDWP& hdwp);
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *nOffset*<br/>
-[in] [in] *bStretchHorz*  
+[in] [in] *bStretchHorz*
 *bLeftBar*<br/>
-[in] [in] *bMoveSlider*  
- [in] *hdwp*  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-## <a name="see-also"></a>Viz také  
- [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [Třídy](../../mfc/reference/mfc-classes.md)   
- [CObject – třída](../../mfc/reference/cobject-class.md)   
- [CPaneContainerManager – třída](../../mfc/reference/cpanecontainermanager-class.md)
+[in] [in] *bMoveSlider* [in] *hdwp*
+
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+## <a name="see-also"></a>Viz také
+
+[Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
+[Třídy](../../mfc/reference/mfc-classes.md)<br/>
+[CObject – třída](../../mfc/reference/cobject-class.md)<br/>
+[CPaneContainerManager – třída](../../mfc/reference/cpanecontainermanager-class.md)

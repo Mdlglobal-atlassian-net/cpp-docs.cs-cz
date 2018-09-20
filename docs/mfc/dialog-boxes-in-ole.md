@@ -1,5 +1,5 @@
 ---
-title: Dialogová okna v prostředí OLE | Microsoft Docs
+title: Dialogová okna v prostředí OLE | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,36 +20,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fe7f9b4b97fd17e73c3dd9f113a87d8f087b93c
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: eaa361a75843fb9f99e3378763a62cfaeeeb07c2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929660"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383620"
 ---
 # <a name="dialog-boxes-in-ole"></a>Dialogová okna v prostředí OLE
-Když uživatel spustí aplikaci OLE povolena, jsou časy, když aplikace potřebuje informace od uživatele, aby bylo možné provést operaci. Třídy MFC OLE poskytují několik dialogových oken získat požadované informace. Toto téma obsahuje seznam úloh zpracovávaných dialogových oken OLE a třídy, které jsou potřebné k zobrazování těchto dialogových oken. Informace o dialogových oknech OLE a struktury používané k přizpůsobení jejich chování najdete v tématu [odkaz knihovny MFC](../mfc/mfc-desktop-applications.md).  
-  
- *Insert – objekt*  
- Toto dialogové okno umožňuje uživatelům vložení nově vytvořený nebo stávající objekty do složeného dokumentu. Také umožňuje uživateli vybrat zobrazení položky jako ikonu a umožňuje změnit ikonu příkazového tlačítka. Toto dialogové okno zobrazí, když uživatel vybere objekt vložit z nabídky Úpravy. Použití [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md) třída k zobrazení tohoto dialogového okna. Všimněte si, že aplikace MDI nelze vložit do sebe sama. Aplikace, která je server/kontejner nelze vložit do sebe, pokud je aplikace SDI.  
-  
- *Vložte speciální*  
- Toto dialogové okno umožňuje uživateli řídit formát použitý při vkládání dat do složeného dokumentu. Uživatel může vybrat formát dat, jestli se má vložit nebo propojit data a jestli se mají zobrazit jako ikonu. Toto dialogové okno zobrazení, když uživatel vybere Vložit jinak v nabídce Upravit. Použití [COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md) třída k zobrazení tohoto dialogového okna.  
-  
- *Změnit ikonu*  
- Toto dialogové okno umožňuje uživateli vybrat, které, zobrazí se ikona představují propojené nebo vložené položky. Když uživatel vybere ikonu změnit z nabídky Úpravy nebo zvolí na tlačítko Změnit ikonu Vložit jinak nebo převést dialogových oken, zobrazí toto dialogové okno. Také zobrazte ji když uživatel otevře dialogové okno Vložit objekt a vybere zobrazit jako ikonu. Použití [COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md) třída k zobrazení tohoto dialogového okna.  
-  
- *Převést*  
- Toto dialogové okno umožňuje uživatelům změnit typ vložené nebo propojené položky. Například pokud vložených metasoubory v složeného dokumentu a později se chcete k úpravě embedded metafile použijte jiná aplikace, můžete dialogové okno Převést. Toto dialogové okno se obvykle zobrazují kliknutím *typ položky* objekt v nabídce Upravit a pak v nabídce kaskádových příkaz převést. Použití [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md) třída k zobrazení tohoto dialogového okna. Příklad, ukázku MFC OLE spustit [OCLIENT](../visual-cpp-samples.md).  
-  
- *Upravit nebo aktualizace odkazů*  
- Dialogové okno Upravit propojení umožňuje uživatelům změnit informace o zdroji propojeného objektu. Dialogové okno Aktualizovat odkazy ověřuje zdroje všechny propojené položky v dialogovém okně aktuální a v případě potřeby zobrazí dialogové okno Upravit propojení. Když uživatel vybere odkazy z nabídky Úpravy, zobrazte dialogové okno Upravit propojení. Při prvním otevření složené dokumentu je obvykle zobrazí dialogové okno Aktualizovat odkazy. Použijte buď [COleLinksDialog](../mfc/reference/colelinksdialog-class.md) nebo [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md) třídy, v závislosti na tom, které dialogové okno, které chcete zobrazit.  
-  
- *Server je zaneprázdněn nebo Server neodpovídá*  
- Když se uživatel pokusí o aktivaci položku a server je v současnosti nemůže žádost zpracovat, obvykle, protože je server používá jiný uživatel nebo úloha, zobrazí se dialogové okno Server zaneprázdněn. Pokud server nereaguje na požadavek na aktivaci vůbec, zobrazí se dialogové okno Server neodpovídá. Tyto dialogy zobrazují prostřednictvím `COleMessageFilter`, podle implementace rozhraní OLE `IMessageFilter`, a uživatele můžete rozhodnout, zda k pokusu o žádost o aktivaci opakujte. Použití [COleBusyDialog](../mfc/reference/colebusydialog-class.md) třída k zobrazení tohoto dialogového okna.  
-  
-## <a name="see-also"></a>Viz také  
- [Dialogová okna](../mfc/dialog-boxes.md)   
- [Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)   
- [OLE](../mfc/ole-in-mfc.md)
+
+Když uživatel spustí aplikaci povoleno OLE, jsou časy, kdy aplikace potřebuje informace od uživatele k provedení operace. Třídy MFC OLE poskytují celou řadou dialogová okna, jak získat požadované informace. Toto téma obsahuje seznam úkolů zpracovat dialogových oknech OLE a třídy potřebné k zobrazování těchto dialogových oken. Podrobnosti o dialogových oken OLE a konstrukce používané k úpravám jejich chování najdete v tématu [odkaz knihovny MFC](../mfc/mfc-desktop-applications.md).
+
+*Insert – objekt*<br/>
+Toto dialogové okno umožňuje uživateli vložení nově vytvořen nebo stávajících objektů do složeného dokumentu. Také umožňuje uživateli rozhodnout se, aby se zobrazila položka jako ikona a umožňuje změnit ikonu příkazové tlačítko. Zobrazte toto dialogové okno když uživatel vybere vložit objekt v nabídce Úpravy. Použití [coleinsertdialog –](../mfc/reference/coleinsertdialog-class.md) třídu dialogovému oknu. Všimněte si, že aplikace MDI nelze vložit do sebe sama. Aplikace, která je server/kontejner nelze vložit do sebe sama, pokud je aplikace SDI.
+
+*Vložit speciální*<br/>
+Toto dialogové okno umožňuje uživateli řídit formát používaný při vkládání dat do složeného dokumentu. Uživatel můžete zvolit, formát dat, jestli se má vložit nebo propojit data a, jestli se má zobrazit jako ikonu. Zobrazte toto dialogové okno když uživatel vybere Vložit jinak v nabídce Upravit. Použití [colepastespecialdialog –](../mfc/reference/colepastespecialdialog-class.md) třídu dialogovému oknu.
+
+*Změnit ikonu*<br/>
+Toto dialogové okno umožňuje uživateli vybrat, jaká ikona se zobrazí pro reprezentaci propojené nebo vložené položky. Zobrazte toto dialogové okno, když uživatel vybere ikonu změnit z nabídky Úpravy nebo vybere změnit ikonu tlačítka Vložit jinak nebo převést dialogových oknech. Také zobrazte jeho když uživatel otevře dialogové okno Vložit objekt a vybere zobrazit jako ikonu. Použití [colechangeicondialog –](../mfc/reference/colechangeicondialog-class.md) třídu dialogovému oknu.
+
+*Převést*<br/>
+Toto dialogové okno umožňuje uživateli změnit typ vložené nebo propojené položky. Například pokud s vloženými metasoubor ve složeném dokumentu a později budete chtít použít jinou aplikaci k úpravě vložený metasoubor, můžete použít dialogové okno Převést. Toto dialogové okno se obvykle zobrazí kliknutím *typ položky* objektu v nabídce Úpravy a potom v nabídce kaskádové příkaz převést. Použití [coleconvertdialog –](../mfc/reference/coleconvertdialog-class.md) třídu dialogovému oknu. Například spuštění ukázky MFC OLE [OCLIENT](../visual-cpp-samples.md).
+
+*Upravit odkazy nebo aktualizovat odkazy*<br/>
+Dialogové okno Upravit propojení umožňuje uživatelům změnit informace o zdroji propojeného objektu. Dialogové okno Aktualizovat odkazy ověří zdroje všechny propojené položky v aktuálním dialogovém okně a zobrazí dialogové okno úpravy odkazů v případě potřeby. Zobrazte dialogové okno Upravit odkazy, když se uživatel rozhodne odkazy z nabídky Úpravy. Zobrazí dialogové okno Aktualizovat odkazy se obvykle při prvním otevření složeného dokumentu. Použijte buď [colelinksdialog –](../mfc/reference/colelinksdialog-class.md) nebo [coleupdatedialog –](../mfc/reference/coleupdatedialog-class.md) třídy, v závislosti na tom, které dialogové okno, které chcete zobrazit.
+
+*Server je zaneprázdněn nebo Server neodpovídá*<br/>
+Když se uživatel pokusí o aktivaci položky a server je v současnosti nemůže žádost zpracovat, obvykle, protože server je používáno jiným uživatelem nebo úloh, zobrazí se dialogové okno Server je zaneprázdněn. Pokud server nereaguje na požadavek na aktivaci vůbec, zobrazí se dialogové okno Server neodpovídá. Tyto dialogy se zobrazují prostřednictvím `COleMessageFilter`závislosti na implementaci rozhraní OLE `IMessageFilter`, a může se rozhodnout, jestli se má opakovat žádost o aktivaci. Použití [colebusydialog –](../mfc/reference/colebusydialog-class.md) třídu dialogovému oknu.
+
+## <a name="see-also"></a>Viz také
+
+[Dialogová okna](../mfc/dialog-boxes.md)<br/>
+[Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[OLE](../mfc/ole-in-mfc.md)
 

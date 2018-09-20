@@ -1,5 +1,5 @@
 ---
-title: Přehled ovládacích prvků pro úpravy s formátováním | Microsoft Docs
+title: Přehled ovládacího prvku Rich Edit | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,26 +14,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 143fc93fb07d9ac7c4e803bbce426c114c02bfeb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7598449539fffdc2a8a4248fe02b29c83a2d2dfe
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349971"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387093"
 ---
 # <a name="overview-of-the-rich-edit-control"></a>Přehled ovládacích prvků pro úpravy s formátováním
+
 > [!IMPORTANT]
->  Pokud používáte ovládacího prvku RichEdit v dialogovém okně (bez ohledu na to, jestli je vaše aplikace SDI, MDI, nebo na základě dialogové okno), musí volat [afxinitrichedit –](../mfc/reference/application-information-and-management.md#afxinitrichedit) po před dialogové okno se zobrazí pole. Je typické pro volání této funkce se ve vašem programu `InitInstance` – členská funkce. Není nutné volat pokaždé, když je zobrazit dialogové okno, pouze při prvním spuštění. Není nutné volat `AfxInitRichEdit` při práci s `CRichEditView`.  
-  
- Ovládací prvky Rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) nabízí programovací rozhraní pro formátování textu. Aplikace musí implementovat však potřeba zpřístupnit operací formátování uživateli žádné uživatelské rozhraní komponenty. To znamená bohaté upravit podporuje ovládací prvek změna atributů znak nebo odstavce vybraného textu. Některé příklady znaku, který atributy jsou tučné, kurzíva, rodinu písem a velikost bodu. Příklady atributy odstavce: zarovnání, okraje a zarážek tabulátoru. Je však až poskytovat uživatelské rozhraní, jestli který tlačítka panelu nástrojů, položky nabídky nebo dialogové okno znak formátu. Existují také funkce dotazování ovládacího prvku RichEdit pro atributy aktuální výběr. Pomocí těchto funkcí zobrazte aktuální nastavení pro atributy, například nastavení zaškrtnutí na příkaz uživatelského rozhraní, pokud výběru formátování atribut tučné znaků.  
-  
- Další informace o znak a formátování odstavce, najdete v části [formátování znaků](../mfc/character-formatting-in-rich-edit-controls.md) a [formátování odstavce](../mfc/paragraph-formatting-in-rich-edit-controls.md) dál v tomto tématu.  
-  
- Bohaté upravit ovládací prvky podporu téměř všechny operace a zprávy s oznámením použít s ovládacími prvky pro úpravy víceřádkový. Ovládací prvky úprav proto, že již ovládacích prvcích pro úpravy použití lze snadno změnit používat bohaté aplikace. Další zprávy a oznámení umožňují aplikacím přístup k funkci jedinečné pro bohaté ovládací prvky. Informace o ovládacích prvcích pro úpravy najdete v tématu [CEdit](../mfc/reference/cedit-class.md).  
-  
- Další informace o oznámeních najdete v tématu [oznámení z ovládacího prvku upravit bohaté](../mfc/notifications-from-a-rich-edit-control.md) dál v tomto tématu.  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+>  Pokud používáte ovládacího prvku v dialogovém okně (bez ohledu na to, zda je vaše aplikace SDI MDI, nebo na základě dialogového okna), je nutné volat [afxinitrichedit –](../mfc/reference/application-information-and-management.md#afxinitrichedit) po před dialogového okna se zobrazí pole. Typické místo pro volání této funkce je ve svém programu `InitInstance` členskou funkci. Není nutné volat pokaždé, když dialogovém okně zobrazí jenom při prvním spuštění. Není nutné volat `AfxInitRichEdit` při práci s `CRichEditView`.
+
+Ovládací prvky pro úpravy s formátováním ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) poskytují programovací rozhraní pro formátování textu. Však musí aplikace implementovat součásti potřebné k zajištění operací formátování pro uživatele k dispozici žádné uživatelského rozhraní. To znamená získáte bohaté upravit ovládací prvek podporuje změna atributů znak nebo odstavce vybraného textu. Příklady znaků, které atributy jsou tučné, kurzíva, rodina písem a velikost v bodech. Příklady atributy odstavce: zarovnání, okrajů a tabulátoru. Je ale jenom na vás k poskytování uživatelského rozhraní, zda tlačítka na panelu nástrojů, položky nabídky nebo dialogové okno znak formátu. Existují také funkce k dotazování ovládací prvek RTF pro atributy aktuálního výběru. Pomocí těchto funkcí zobrazte aktuální nastavení pro atributy, například nastavení zaškrtávací políčko u příkazu uživatelského rozhraní, pokud výběr obsahuje atribut tučného písma formátování.
+
+Další informace o formátování znaků a odstavců najdete v tématu [formátování](../mfc/character-formatting-in-rich-edit-controls.md) a [formátování odstavce](../mfc/paragraph-formatting-in-rich-edit-controls.md) dále v tomto tématu.
+
+Pro úpravy s formátováním podpora ovládacích prvků téměř všechny operace a zprávy s oznámením použít s víceřádková textová pole. Ovládacích prvcích pro úpravy proto, že již ovládacích prvcích pro úpravy k použití můžete snadno změnit používat bohaté aplikace. Další zprávy a oznámení umožňují aplikacím přístup k funkci jedinečné pro bohaté ovládací prvky. Informace o ovládacích prvcích pro úpravy, naleznete v tématu [CEdit](../mfc/reference/cedit-class.md).
+
+Další informace o oznámeních najdete v tématu [oznámení z ovládacího prvku Rich upravit](../mfc/notifications-from-a-rich-edit-control.md) dále v tomto tématu.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

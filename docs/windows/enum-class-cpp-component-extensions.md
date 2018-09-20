@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 72c312bdec9248cdc38150163d914b2ac7036ab8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 993f0e190d87b140fba0008872d57f2a34b6a5cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711084"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377263"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum class (rozšíření komponent C++)
 
@@ -44,23 +44,23 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="parameters"></a>Parametry
 
-*Přístup*  
+*Přístup*<br/>
 Usnadnění výčet, který může být **veřejné** nebo **privátní**.
 
-*Identifikátor výčtu*  
+*Identifikátor výčtu*<br/>
 Název výčtu.
 
-*Základní typ*  
+*Základní typ*<br/>
 (Volitelné) Základní typ výčtu.
 
 (Volitelné. Pouze Windows Runtime) základní typ výčtu, který může být **bool**, **char**, `char16`, `int16`, `uint16`, **int**, `uint32`, `int64`, nebo `uint64`.
 
-*seznam výčtu*  
+*seznam výčtu*<br/>
 Čárkami oddělený seznam názvů enumerátor.
 
 Hodnota každého výčtu je konstantní výraz, který je buď definován implicitně kompilátorem, nebo explicitně zápisu, *enumerátor*`=`*konstantní výraz*. Ve výchozím nastavení hodnota první čítače výčtu je nula, pokud je implicitně definovaný. Hodnotu každé následné implicitně definovaný enumerátor je hodnota z předchozího výčtu + 1.
 
-*var*  
+*var*<br/>
 (Volitelné) Název proměnné typu výčtu.
 
 ### <a name="remarks"></a>Poznámky
@@ -92,19 +92,19 @@ accessenum structname [:type] { enumerator-list } var;
 
 ### <a name="parameters"></a>Parametry
 
-*Přístup*  
+*Přístup*<br/>
 Přístupnost člena výčtu. Může být buď **veřejné** nebo **privátní**.
 
-*seznam výčtu*  
+*seznam výčtu*<br/>
 Čárkou oddělený seznam identifikátorů (enumerátory) ve výčtu.
 
-*Jméno*  
+*Jméno*<br/>
 Název výčtu. Anonymní výčty spravované nejsou povoleny.
 
-*Typ*  
+*Typ*<br/>
 (Volitelné) Základní typ *identifikátory*. To může být libovolného skalárního typu, jako je například podepsaná nebo nepodepsaná verze z **int**, **krátký**, nebo **dlouhé**.  **BOOL** nebo **char** je také povolena.
 
-*var*  
+*var*<br/>
 (Volitelné) Název proměnné typu výčtu.
 
 ### <a name="remarks"></a>Poznámky

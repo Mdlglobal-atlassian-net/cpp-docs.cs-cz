@@ -1,5 +1,5 @@
 ---
-title: Proměnné rozsahu A.21 s klauzuli privátní | Microsoft Docs
+title: A.21 rozsah platnosti proměnných s klauzulí private | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ad2258da592bb68c5eae9e52e85e63a161a24b5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fa68f0ebb5857e3f093e1985bd5f20105bb925c1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690504"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392785"
 ---
 # <a name="a21---scoping-variables-with-the-private-clause"></a>A.21   Rozsah platnosti proměnných s klauzulí private
-Hodnoty `i` a `j` v následujícím příkladu nejsou definovaná na ukončení ze paralelní oblasti:  
-  
-```  
-int i, j;  
-i = 1;  
-j = 2;  
-#pragma omp parallel private(i) firstprivate(j)  
-{  
-  i = 3;  
-  j = j + 2;  
-}  
-printf_s("%d %d\n", i, j);  
-```  
-  
- Další informace o `private` klauzule, najdete v části [části 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) na stránce 25.
+
+Hodnoty `i` a `j` v následujícím příkladu jsou definovaná na ukončení paralelní oblasti:
+
+```
+int i, j;
+i = 1;
+j = 2;
+#pragma omp parallel private(i) firstprivate(j)
+{
+  i = 3;
+  j = j + 2;
+}
+printf_s("%d %d\n", i, j);
+```
+
+Další informace o `private` klauzule, naleznete v tématu [části 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) na stránce 25.

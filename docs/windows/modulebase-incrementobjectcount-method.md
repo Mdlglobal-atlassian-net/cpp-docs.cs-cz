@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f226018d1c3cae6dd3dbab34537d7ada50140a92
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b8ac3bcb256c4a54f3b967405e7f2c0699e715d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610289"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377159"
 ---
 # <a name="modulebaseincrementobjectcount-method"></a>ModuleBase::IncrementObjectCount – metoda
 
@@ -50,5 +50,5 @@ Při implementaci, zvýší počet objektů, které jsou sledovány v rámci mod
 
 ## <a name="see-also"></a>Viz také
 
-[ModuleBase – třída](../windows/modulebase-class.md)  
+[ModuleBase – třída](../windows/modulebase-class.md)<br/>
 [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

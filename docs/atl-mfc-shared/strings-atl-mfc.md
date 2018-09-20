@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a918866710575ecc091fcce4564a7617d28a102d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f0751b218fe540a49c2cf0efde1dcf8976f2ebf6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752772"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387312"
 ---
 # <a name="strings-atlmfc"></a>Řetězce (ATL/MFC)
 
@@ -44,18 +44,18 @@ Téměř všechny programy pracovat s řetězcovými daty. Visual C++ poskytuje 
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[CStringT – použití](../atl-mfc-shared/using-cstringt.md)  
+[CStringT – použití](../atl-mfc-shared/using-cstringt.md)<br/>
 Popisuje programování pomocí třídy šablony CStringT.
 
-[CString – použití](../atl-mfc-shared/using-cstring.md)  
+[CString – použití](../atl-mfc-shared/using-cstring.md)<br/>
 Popisuje programování pomocí CString, výchozí implementace CStringT.
 
 ## <a name="related-sections"></a>Související oddíly
 
-[Cstringt – přehled](../atl-mfc-shared/reference/cstringt-class.md)  
+[Cstringt – přehled](../atl-mfc-shared/reference/cstringt-class.md)<br/>
 Poskytuje referenční informace o sdílený `CStringT` třídy.
 
-[MFC – koncepce](../mfc/mfc-concepts.md)  
+[MFC – koncepce](../mfc/mfc-concepts.md)<br/>
 Obsahuje rámcové a úlohově zaměřená témata, které vám pomůžou programovat pomocí knihovny MFC.
 
 ## <a name="see-also"></a>Viz také

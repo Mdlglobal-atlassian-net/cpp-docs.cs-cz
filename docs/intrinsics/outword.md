@@ -17,46 +17,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd5abaccb4adc9e642458669535cff369d963cfd
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: eac50ba9c4c1b4bc14ebb847b283b5c2da11605e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712574"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388795"
 ---
 # <a name="outword"></a>__outword
-**Specifické pro Microsoft**  
-  
- Generuje `out` instrukce, která odesílá slovo `Data` portu vstupně-výstupní operace určené `Port`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void __outword(   
-   unsigned short Port,   
-   unsigned short Data   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+**Specifické pro Microsoft**
+
+Generuje `out` instrukce, která odesílá slovo `Data` portu vstupně-výstupní operace určené `Port`.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void __outword( 
+   unsigned short Port, 
+   unsigned short Data 
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
 *Port*<br/>
-[in] Port pro odesílání dat na.  
-  
+[in] Port pro odesílání dat na.
+
 *Data*<br/>
-[in] Data, která má být odeslána.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Vnitřní|Architektura|  
-|---------------|------------------|  
-|`__outword`|x86, x64|  
-  
- **Soubor hlaviček** \<intrin.h >  
-  
-## <a name="remarks"></a>Poznámky  
- Tato rutina je k dispozici pouze jako vnitřní objekt.  
-  
-**Specifické pro END Microsoft**  
-  
-## <a name="see-also"></a>Viz také  
- [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[in] Data, která má být odeslána.
+
+## <a name="requirements"></a>Požadavky
+
+|Vnitřní|Architektura|
+|---------------|------------------|
+|`__outword`|x86, x64|
+
+**Soubor hlaviček** \<intrin.h >
+
+## <a name="remarks"></a>Poznámky
+
+Tato rutina je k dispozici pouze jako vnitřní objekt.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také
+
+[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 775fbe39edc9478b1fce3afb39ee2bf1f6d5ed36
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0c7ebdf83730b661cbd855ba730da1abeee936c5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714308"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377068"
 ---
 # <a name="interface-class--c-component-extensions"></a>interface class (rozšíření komponent C++)
 
@@ -36,21 +36,21 @@ Deklaruje rozhraní.  Informace o nativní rozhraní, naleznete v tématu [__int
 ```cpp
 interface_access
 interface class
- name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
+name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*interface_access*  
+*interface_access*<br/>
 Usnadnění rozhraní mimo sestavení.  Možné hodnoty jsou **veřejné** a **privátní**.  **privátní** je výchozí nastavení. Vnořené rozhraní nemůže mít *interface_access* specifikátor.
 
-*Jméno*  
+*Jméno*<br/>
 Název rozhraní.
 
-*inherit_access*  
+*inherit_access*<br/>
 Přístupnost *base_interface*.  Pouze povoleno usnadnění pro základní rozhraní není **veřejné** (výchozí).
 
-*base_interface*  
+*base_interface*<br/>
 (Volitelné) Základní rozhraní pro rozhraní *název*.
 
 ### <a name="remarks"></a>Poznámky

@@ -32,24 +32,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abf907fe12f55b44e7f2e184b8752d2e09a326f8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8e0d0fde53cc7ffb885e8435fc82cbb899a3bc89
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071728"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389532"
 ---
 # <a name="array-class"></a>array – třída
+
 Představuje datový kontejner, který se používá k přesunutí dat na akcelerátor.
 
 ## <a name="syntax"></a>Syntaxe
 
-```  
+```
 template <typename value_type, int _Rank>
 friend class array;
-```  
+```
 
 #### <a name="parameters"></a>Parametry
+
 *value_type*<br/>
 Typ elementu data.
 
@@ -103,6 +105,7 @@ Typ elementu data.
 |[rozsah](#extent)|Vrátí rozsah, který definuje tvar objektu array.|
 
 ## <a name="remarks"></a>Poznámky
+
 Typ `array<T,N>` odpovídá hustému a běžné (nikoli roztřepenému) *N*-rozměrné pole, který je umístěný v určitém umístění, například akcelerátoru nebo procesoru. Datový typ prvků v poli je `T`, která musí být typu, který je kompatibilní s cílovým akcelerátorem. I když se přes řád je `N`, (z pole je určeno staticky a je součástí typu, rozsahu objektu array je určeno modulem runtime a je vyjádřeno pomocí třídy `extent<N>`.
 
 Pole může mít libovolný počet dimenzí, i když některé funkce jsou specializované pro `array` objekty s hodností jeden, dva a tři. Pokud vynecháte argument dimenze, výchozí hodnota je 1.
@@ -113,16 +116,18 @@ Pole jsou logicky považovány za hodnotové typy, protože když objekt array z
 
 `array<T,N>` Typ se používá v několika situacích:
 
--   Jako datový zásobník, který lze použít při výpočtech na akcelerátoru.
+- Jako datový zásobník, který lze použít při výpočtech na akcelerátoru.
 
--   Jako datový zásobník pro uložení paměti v procesoru hostitele (které je možné zkopírovat do a z jiných objektů Array).
+- Jako datový zásobník pro uložení paměti v procesoru hostitele (které je možné zkopírovat do a z jiných objektů Array).
 
--   Jako pracovní objekt, který slouží jako rychlý zprostředkovatel při kopiích v hostitele do zařízení.
+- Jako pracovní objekt, který slouží jako rychlý zprostředkovatel při kopiích v hostitele do zařízení.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
-`array`  
+
+`array`
 
 ## <a name="requirements"></a>Požadavky
+
 **Záhlaví:** amp.h
 
 **Namespace:** souběžnosti
@@ -131,54 +136,53 @@ Pole jsou logicky považovány za hodnotové typy, protože když objekt array z
 
 Odstraní `array` objektu.
 
-```  
+```
 ~array() restrict(cpu);
-```  
+```
 
 ##  <a name="accelerator_view"></a> accelerator_view
 
 Získá [accelerator_view](accelerator-view-class.md) objekt, který představuje umístění, kde je přidělena pole. Tato vlastnost je přístupná pouze na CPU.
 
-```  
+```
 __declspec(property(get= get_accelerator_view)) Concurrency::accelerator_view accelerator_view;
-```  
+```
 
 ##  <a name="ctor"></a> Pole
 
 Inicializuje novou instanci třídy [array – třída](array-class.md). Neexistuje žádný výchozí konstruktor pro `array<T,N>`. Všechny konstruktory jsou spouštěny pouze na CPU. Nelze je spustit na cíli Direct3D.
 
-```  
-explicit array(  
+```
+explicit array(
     const Concurrency::extent<_Rank>& _Extent) restrict(cpu);
 
-explicit array(  
+explicit array(
     int _E0) restrict(cpu);
 
-explicit array(  
+explicit array(
     int _E0,
     int _E1) restrict(cpu);
 
-explicit array(  
+explicit array(
     int _E0,
     int _E1,
     int _E2) restrict(cpu);
 
-array(  
+array(
     const Concurrency::extent<_Rank>& _Extent,
     Concurrency::accelerator_view _Av
     access_type _Cpu_access_type = access_type_auto) restrict(cpu);
 
-array(  
+array(
     int _E0,
     Concurrency::accelerator_view _Av
     access_type _Cpu_access_type = access_type_auto) restrict(cpu);
 
-array(  
+array(
     int _E0,
     int _E1,
     Concurrency::accelerator_view _Av
     access_type _Cpu_access_type = access_type_auto) restrict(cpu);
-
 
 array(
     int _E0,
@@ -187,23 +191,23 @@ array(
     Concurrency::accelerator_view _Av
     access_type _Cpu_access_type = access_type_auto) restrict(cpu);
 
-array(  
+array(
     const Concurrency::extent<_Rank>& _Extent,
     Concurrency::accelerator_view _Av,
     Concurrency::accelerator_view _Associated_Av) restrict(cpu);
 
-array(  
+array(
     int _E0,
     accelerator_view _Av,
     Concurrency::accelerator_view _Associated_Av) restrict(cpu);
 
-array(  
+array(
     int _E0,
     int _E1,
     Concurrency::accelerator_view _Av,
     Concurrency::accelerator_view _Associated_Av) restrict(cpu);
 
-array(  
+array(
     int _E0,
     int _E1,
     int _E2,
@@ -211,42 +215,42 @@ array(
     Concurrency::accelerator_view _Associated_Av) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     const Concurrency::extent<_Rank>& _Extent,
     _InputIterator _Src_first,
     _InputIterator _Src_last) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     const Concurrency::extent<_Rank>& _Extent,
     _InputIterator _Src_first) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     _InputIterator _Src_first,
     _InputIterator _Src_last) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     _InputIterator _Src_first) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     int _E1,
     _InputIterator _Src_first,
     _InputIterator _Src_last) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     int _E1,
     _InputIterator _Src_first) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     int _E1,
     int _E2,
@@ -254,14 +258,14 @@ array(
     _InputIterator _Src_last) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     int _E1,
     int _E2,
     _InputIterator _Src_first) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     const Concurrency::extent<_Rank>& _Extent,
     _InputIterator _Src_first,
     _InputIterator _Src_last,
@@ -269,14 +273,14 @@ array(
     access_type _Cpu_access_type = access_type_auto) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     const Concurrency::extent<_Rank>& _Extent,
     _InputIterator _Src_first,
     Concurrency::accelerator_view _Av
     access_type _Cpu_access_type = access_type_auto) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     _InputIterator _Src_first,
     _InputIterator _Src_last,
@@ -284,14 +288,14 @@ array(
     access_type _Cpu_access_type = access_type_auto) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     _InputIterator _Src_first,
     Concurrency::accelerator_view _Av
     access_type _Cpu_access_type = access_type_auto) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     int _E1,
     _InputIterator _Src_first,
@@ -308,7 +312,7 @@ array(
     access_type _Cpu_access_type = access_type_auto) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     int _E1,
     int _E2,
@@ -318,7 +322,7 @@ array(
     access_type _Cpu_access_type = access_type_auto) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     int _E1,
     int _E2,
@@ -327,7 +331,7 @@ array(
     access_type _Cpu_access_type = access_type_auto) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     const Concurrency::extent<_Rank>& _Extent,
     _InputIterator _Src_first,
     _InputIterator _Src_last,
@@ -335,14 +339,14 @@ array(
     Concurrency::accelerator_view _Associated_Av) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     const Concurrency::extent<_Rank>& _Extent,
     _InputIterator _Src_first,
     Concurrency::accelerator_view _Av,
     Concurrency::accelerator_view _Associated_Av) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     _InputIterator _Src_first,
     _InputIterator _Src_last,
@@ -350,27 +354,27 @@ array(
     Concurrency::accelerator_view _Associated_Av) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0, _InputIterator _Src_first,
     Concurrency::accelerator_view _Av,
     Concurrency::accelerator_view _Associated_Av) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     int _E1, _InputIterator _Src_first, _InputIterator _Src_last,
     Concurrency::accelerator_view _Av,
     Concurrency::accelerator_view _Associated_Av) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     int _E1, _InputIterator _Src_first,
     Concurrency::accelerator_view _Av,
     Concurrency::accelerator_view _Associated_Av) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     int _E1,
     int _E2, _InputIterator _Src_first, _InputIterator _Src_last,
@@ -378,17 +382,17 @@ array(
     Concurrency::accelerator_view _Associated_Av) restrict(cpu);
 
 template <typename _InputIterator>
-array(  
+array(
     int _E0,
     int _E1,
     int _E2, _InputIterator _Src_first,
     Concurrency::accelerator_view _Av,
     Concurrency::accelerator_view _Associated_Av) restrict(cpu);
 
-explicit array(  
+explicit array(
     const array_view<const value_type, _Rank>& _Src) restrict(cpu);
 
-array(  
+array(
     const array_view<const value_type, _Rank>& _Src,
     accelerator_view _Av
     access_type _Cpu_access_type = access_type_auto) restrict(cpu);
@@ -401,9 +405,10 @@ array(
 array(const array& _Other) restrict(cpu);
 
 array(array&& _Other) restrict(cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parametry
+
 *_Associated_Av*<br/>
 Objekt typu accelerator_view určující preferované cílové umístění pole.
 
@@ -450,23 +455,24 @@ Datový typ prvků, které jsou zkopírovány.
 
 Získá druhý [accelerator_view](accelerator-view-class.md) objekt, který je předán jako parametr při zavolání pracovního konstruktoru pro vytvoření instance `array` objektu.
 
-```  
+```
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;
-```  
+```
 
 ##  <a name="copy_to"></a> copy_to –
 
 Zkopíruje obsah `array` do jiného `array`.
 
-```  
+```
 void copy_to(
     array<value_type, _Rank>& _Dest) const ;
 
 void copy_to(
     array_view<value_type, _Rank>& _Dest) const ;
-```  
+```
 
 ### <a name="parameters"></a>Parametry
+
 *_Dest*<br/>
 [Array_view](array-view-class.md) do kterého chcete zkopírovat.
 
@@ -474,60 +480,63 @@ void copy_to(
 
 Získá access_type procesoru povolený pro toto pole.
 
-```  
+```
 __declspec(property(get= get_cpu_access_type)) access_type cpu_access_type;
-```  
+```
 
 ##  <a name="data"></a> Data
 
 Vrací ukazatel na nezpracovaná data `array`.
 
-```  
+```
 value_type* data() restrict(amp, cpu);
 
 const value_type* data() const restrict(amp, cpu);
-```  
+```
 
 ### <a name="return-value"></a>Návratová hodnota
+
 Ukazatel na nezpracovaná data objektu array.
 
 ##  <a name="extent"></a> rozsah
 
 Získá [rozsahu](extent-class.md) objekt, který definuje tvar `array`.
 
-```  
+```
 __declspec(property(get= get_extent)) Concurrency::extent<_Rank> extent;
-```  
+```
 
 ##  <a name="get_accelerator_view"></a> get_accelerator_view –
 
 Vrátí [accelerator_view](accelerator-view-class.md) objekt, který představuje umístění ve kterém `array` objektu je přiřazen. Tato vlastnost je přístupná pouze na CPU.
 
-```  
+```
 Concurrency::accelerator_view get_accelerator_view() const;
-```    
+```
 
 ### <a name="return-value"></a>Návratová hodnota
+
 `accelerator_view` Objekt, který představuje umístění ve kterém `array` objektu je přiřazen.
 
 ##  <a name="get_associated_accelerator_view"></a> get_associated_accelerator_view –
 
 Získá druhý [accelerator_view](accelerator-view-class.md) objekt, který je předán jako parametr při zavolání pracovního konstruktoru pro vytvoření instance `array` objektu.
 
-```  
+```
 Concurrency::accelerator_view get_associated_accelerator_view() const ;
-```  
+```
 
 ### <a name="return-value"></a>Návratová hodnota
+
 Druhá [accelerator_view](accelerator-view-class.md) předán objekt pracovního konstruktoru.
 
 ##  <a name="get_cpu_access_type"></a> get_cpu_access_type
 
 Vrátí access_type procesoru povolený pro toto pole.
 
-```  
+```
 access_type get_cpu_access_type() const restrict(cpu);
-```  
+```
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -535,33 +544,36 @@ access_type get_cpu_access_type() const restrict(cpu);
 
 Vrátí [rozsahu](extent-class.md) objektu `array`.
 
-```  
+```
 Concurrency::extent<_Rank> get_extent() const restrict(amp,cpu);
-```  
+```
 
 ### <a name="return-value"></a>Návratová hodnota
+
 `extent` Objektu `array`.
 
 ##  <a name="operator_vec"></a> operátor std::vector&lt;value_type&gt;
 
 Používá `copy(*this, vector)` implicitně převést pole na std::vector objektu.
 
-```  
+```
 operator std::vector<value_type>() const restrict(cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parametry
+
 *value_type*<br/>
 Datový typ prvků objektu vektoru.
 
 ### <a name="return-value"></a>Návratová hodnota
+
 Objekt typu `vector<T>` , který obsahuje kopii dat obsažených v poli.
 
-##  <a name="operator_call"></a> Operator() 
+##  <a name="operator_call"></a> Operator()
 
 Vrátí hodnotu prvku určeného parametry.
 
-```  
+```
 value_type& operator() (const index<_Rank>& _Index) restrict(amp,cpu);
 
 const value_type& operator() (const index<_Rank>& _Index) cons  t restrict(amp,cpu);
@@ -577,9 +589,10 @@ const value_type& operator() (int _I0, int _I1, int _I2) const restrict(amp,cpu)
 typename details::_Projection_result_type<value_type,_Rank>::_Result_type operator()(int _I) restrict(amp,cpu);
 
 typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type operator()(int _I) const restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parametry
+
 *_Index*<br/>
 Umístění elementu.
 
@@ -596,13 +609,14 @@ Nejméně významná komponenta počátku tohoto oddílu.
 Umístění elementu.
 
 ### <a name="return-value"></a>Návratová hodnota
+
 Hodnota prvku určeného parametry.
 
 ##  <a name="operator_at"></a> Operator [].
 
 Vrátí prvek, který je v zadaném indexu.
 
-```  
+```
 value_type& operator[](const index<_Rank>& _Index) restrict(amp,cpu);
 
 const value_type& operator[]
@@ -611,9 +625,10 @@ const value_type& operator[]
 typename details::_Projection_result_type<value_type,_Rank>::_Result_type operator[](int _i) restrict(amp,cpu);
 
 typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type operator[](int _i) const restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parametry
+
 *_Index*<br/>
 Index.
 
@@ -621,22 +636,24 @@ Index.
 Index.
 
 ### <a name="return-value"></a>Návratová hodnota
+
 Prvek, který je v zadaném indexu.
 
 ##  <a name="operator_eq"></a> operátor =
 
 Zkopíruje obsah zadaného `array` objektu.
 
-```  
+```
 array& operator= (const array& _Other) restrict(cpu);
 
 array& operator= (array&& _Other) restrict(cpu);
 
-array& operator= (  
+array& operator= (
     const array_view<const value_type, _Rank>& _Src) restrict(cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parametry
+
 *Ji_né*<br/>
 `array` Objektu, který chcete kopírovat.
 
@@ -644,27 +661,29 @@ array& operator= (
 `array` Objektu, který chcete kopírovat.
 
 ### <a name="return-value"></a>Návratová hodnota
+
 Odkaz na tento `array` objektu.
 
 ##  <a name="rank"></a> pořadí
 
 Udržuje řád objektu `array`.
 
-```  
+```
 static const int rank = _Rank;
-```  
+```
 ## <a name="reinterpret_as"></a> reinterpret_as –
 
 Opětovně interpretuje objekt array skrze jednorozměrný prvek array_view, který volitelně může mít typ jinou hodnotu než zdrojového pole.
 
 ### <a name="syntax"></a>Syntaxe
-``` 
+
+```
 template <typename _Value_type2>
 array_view<_Value_type2,1> reinterpret_as() restrict(amp,cpu);
 
 template <typename _Value_type2>
 array_view<const _Value_type2, 1> reinterpret_as() const restrict(amp,cpu);
-``` 
+```
 
 ### <a name="parameters"></a>Parametry
 
@@ -672,9 +691,11 @@ array_view<const _Value_type2, 1> reinterpret_as() const restrict(amp,cpu);
 Datový typ vrácená data.
 
 ### <a name="return-value"></a>Návratová hodnota
+
 Array_view nebo const objektu array_view, který je založen na poli, s typem elementu přetypovaným z T ElementType a řádem redukovaným z N na hodnotu 1.
 
 ### <a name="remarks"></a>Poznámky
+
 Někdy je vhodné zobrazit vícerozměrné pole jako by byl lineární jednorozměrné pole, může mít typ jinou hodnotu než zdrojového pole. Tuto metodu můžete použít k dosažení tohoto cíle.
 **Upozornění:** opětovná interpretace objektu array pomocí jiného typu hodnoty je potenciálně nebezpečná operace. Doporučujeme vám, že jste tuto funkci používat opatrně.
 
@@ -687,13 +708,13 @@ array<RGB,3>  a = ...;
 array_view<float,1> v = a.reinterpret_as<float>();
 
 assert(v.extent == 3*a.extent);
-```  
+```
 
 ##  <a name="section"></a> Oddíl
 
 Vrátí dílčí část objektu `array` nacházející se na zadaném umístění a volitelně, který se zadaným rozsahem.
 
-```  
+```
 array_view<value_type,_Rank> section(
     const Concurrency::index<_Rank>& _Section_origin,
     const Concurrency::extent<_Rank>& _Section_extent) restrict(amp,cpu);
@@ -749,9 +770,10 @@ array_view<const value_type,3> section(
     int _E0,
     int _E1,
     int _E2) const restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parametry
+
 *_E0*<br/>
 Nejvýznamnější komponenta rozsahu tohoto oddílu.
 
@@ -789,24 +811,25 @@ Nejméně významná komponenta počátku tohoto oddílu.
 Datový typ prvků, které jsou zkopírovány.
 
 ### <a name="return-value"></a>Návratová hodnota
+
 Vrátí dílčí část objektu `array` nacházející se na zadaném umístění a volitelně, který se zadaným rozsahem. Když pouze `index` objektu je zadán, obsahuje dílčí část všechny prvky přidružené k mřížce, které mají indexy větší než indexy prvků v `index` objektu.
 
 ##  <a name="view_as"></a> view_as –
 
 Opětovně interpretuje objekt toto pole jako [array_view](array-view-class.md) jiné hodnosti.
 
-```  
+```
 template <int _New_rank>
 array_view<value_type,_New_rank> view_as(
     const Concurrency::extent<_New_rank>& _View_extent) restrict(amp,cpu);
 
-
 template <int _New_rank>
 array_view<const value_type,_New_rank> view_as(
     const Concurrency::extent<_New_rank>& _View_extent) const restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parametry
+
 *_New_rank*<br/>
 Řád objektu `extent` objekt předán jako parametr.
 
@@ -817,7 +840,9 @@ Rozsah, který se používá pro tvorbu nového [array_view](array-view-class.md
 Datový typ prvků v původním `array` objektu a ve vráceném `array_view` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
+
 [Array_view](array-view-class.md) , který je vytvořen.
 
 ## <a name="see-also"></a>Viz také
+
 [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

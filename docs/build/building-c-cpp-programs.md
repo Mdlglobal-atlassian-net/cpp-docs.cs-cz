@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2792b49d7d3d3f107e39931ff62e6c4137c9c5ca
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3fd4bdeb73a2b2979a93a051c3ee490659b5248b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723265"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392503"
 ---
 # <a name="building-cc-programs"></a>Sestavování programů v jazyku C/C++
 
@@ -34,20 +34,28 @@ Můžete vytvářet projekty Visual C++ v sadě Visual Studio nebo na příkazov
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Sestavení projektů C++ v sadě Visual Studio](../ide/building-cpp-projects-in-visual-studio.md) popisuje, jak použít rozhraní IDE sady Visual Studio k vytvoření projektu jazyka C/C++.
+[Sestavení projektů C++ v sadě Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)<br/>
+Popisuje, jak použít rozhraní IDE sady Visual Studio k vytvoření projektu jazyka C/C++.
 
-[Sestavení kódu C/C++ v příkazovém řádku](../build/building-on-the-command-line.md) popisuje, jak pomocí příkazového řádku kompilátoru jazyka C/C++ a vytváření buildů, které jsou zahrnuty v sadě Visual Studio.
+[Sestavení kódu C/C++ na příkazovém řádku](../build/building-on-the-command-line.md)<br/>
+Popisuje, jak pomocí příkazového řádku kompilátoru jazyka C/C++ a vytváření buildů, které jsou zahrnuty v sadě Visual Studio.
 
-[Sestavení izolovaných aplikací C/C++ a sestavení vedle sebe](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md) popisuje model nasazení pro aplikace Windows Desktop, založené na představu o izolovaných aplikací a sestavení vedle sebe.
+[Sestavení izolovaných aplikací C/C++ a souběžných sestavení](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)<br/>
+Popisuje model nasazení pro aplikace Windows Desktop, založené na představu o izolovaných aplikací a sestavení vedle sebe.
 
-[Reference sestavení C/C++](../build/reference/c-cpp-building-reference.md) poskytuje odkazy na referenční články o program v jazyce C++, kompilátoru a možnosti propojovacího programu sestavení a různé nástroje pro vytváření.
+[Referenční zdroje k sestavení programu v jazyce C/C++](../build/reference/c-cpp-building-reference.md)<br/>
+Poskytuje odkazy na články, referenční informace o programu sestavení v jazyce C++, možnosti kompilátoru a propojovacího programu a různé nástroje pro vytváření.
 
-[Konfigurace Visual C++ pro 64bitové, x64 cíle](../build/configuring-programs-for-64-bit-visual-cpp.md) popisuje postup konfigurace sady Visual Studio a příkazový řádek použijte 64bitovou sadu nástrojů a cílit na 64bitové architektury a popisuje běžné problémy s migrací, pokud kód je přesunuta do 64-bit architektury.
+[Konfigurace Visual C++ pro 64bitové cíle x64](../build/configuring-programs-for-64-bit-visual-cpp.md)<br/>
+Popisuje postup konfigurace sady Visual Studio a příkazový řádek použijte 64bitovou sadu nástrojů a cílit na 64bitové architektury a pokud kód je přesunut do 64bitové architektury, tento článek popisuje běžné problémy s migrací.
 
-[Konfigurace Visual C++ pro procesory ARM](../build/configuring-programs-for-arm-processors-visual-cpp.md) popisuje konvence používají procesory ARM a popisuje běžné problémy s migrací při kódu se přesune na architektury ARM.
+[Konfigurace Visual C++ pro procesory ARM](../build/configuring-programs-for-arm-processors-visual-cpp.md)<br/>
+Popisuje konvence používají procesory ARM a popisuje běžné problémy s migrací při kódu se přesune na architektury ARM.
 
-[Konfigurace programů pro Windows XP](../build/configuring-programs-for-windows-xp.md) popisuje, jak nastavit sadu nástrojů platformy pro vývoj pro Windows XP cíl.
+[Konfigurace programů pro Windows XP](../build/configuring-programs-for-windows-xp.md)<br/>
+Popisuje, jak nastavit sadu nástrojů platformy pro vývoj pro Windows XP cíl.
 
 ## <a name="related-sections"></a>Související oddíly
 
-[Kompilování a sestavování](/visualstudio/ide/compiling-and-building-in-visual-studio) systému a nástroje sestavení sady Visual Studio popisuje.
+[Kompilace a sestavení](/visualstudio/ide/compiling-and-building-in-visual-studio)<br/>
+Popisuje nástroje a systém sestavení Visual Studio.

@@ -1,5 +1,5 @@
 ---
-title: Pomocí dlaždice | Microsoft Docs
+title: Používání dlaždic | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -12,34 +12,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c02b5d558ccf2c1353e96dd1990b6d4178457aa
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: df2f449cce01dc2d0903ff802ffb94914b68bceb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121946"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386261"
 ---
 # <a name="using-tiles"></a>Používání bloků
 
-Dlaždice můžete maximalizovat akcelerace vaší aplikace. Dlaždice rozdělí vláken na stejné obdélníková podmnožiny nebo *dlaždice*. Pokud používáte příslušné dlaždice velikost a algoritmus vedle sebe, můžete získat i další akcelerace z vašeho kódu C++ AMP. Základní součásti dlaždice jsou:
+Maximalizace rychlosti aplikace můžete použít dělení do bloků. Dělení do bloků rozděluje vlákna do rovnoměrných obdélníkových podmnožin nebo *dlaždice*. Pokud používáte vhodné velikosti bloku a algoritmu využívajícím bloky, můžete získat ještě větší zrychlení v kódu C++ AMP. Základní komponenty dělení do bloků jsou:
 
-- `tile_static` proměnné. Hlavní výhodou dlaždice je výkonnější z `tile_static` přístup. Přístup k datům v `tile_static` paměti může být výrazně rychlejší než přístup k datům v globálním prostoru (`array` nebo `array_view` objektů). Instance `tile_static` proměnné se vytvoří pro každou dlaždici, a všechna vlákna v dlaždici mají přístup k proměnné. V typické vedle sebe algoritmu data zkopírována do `tile_static` paměti jednou z globální paměti a potom k němu přistupovat mnohokrát z `tile_static` paměti.
+- `tile_static` proměnné. Hlavní výhodou dělení do bloků je výkonový zisk plynoucí z `tile_static` přístup. Přístup k datům v `tile_static` paměti může být výrazně rychlejší než přístup k datům v globálním prostoru (`array` nebo `array_view` objekty). Instance `tile_static` proměnné je vytvořena pro každou dlaždici a všechna vlákna v dlaždici mají k této proměnné přístup. V typickém algoritmu využívajícím bloky, se data zkopírovala do `tile_static` paměti jednou z globální paměti a pak k nim mnohokrát přistupováno z `tile_static` paměti.
 
-- [tile_barrier::wait – metoda](reference/tile-barrier-class.md#wait). Volání `tile_barrier::wait` pozastaví spuštění aktuální vlákno, dokud všechny podprocesy v dlaždici stejné nezobrazí volání `tile_barrier::wait`. Nebudete moct zaručit pořadí, který se spustí vláken v, pouze to, že žádné vláken v dlaždici, budou spuštěny po volání `tile_barrier::wait` dokud všechny podprocesy dosáhli volání. To znamená, že pomocí `tile_barrier::wait` metodu, můžete provádět úlohy na základě dlaždice dlaždice než základ vlákno podprocesu. Typické dlaždice algoritmus má kód pro inicializaci `tile_static` paměti pro celou dlaždici následuje volání `tile_barrer::wait`. Kód, který následuje `tile_barrier::wait` obsahuje výpočty, které vyžadují přístup ke všem `tile_static` hodnoty.
+- [tile_barrier::wait – metoda](reference/tile-barrier-class.md#wait). Volání `tile_barrier::wait` pozastaví provádění aktuálního vlákna, dokud všechna vlákna ve stejném bloku nedosáhnou volání `tile_barrier::wait`. Nelze zaručit pořadí spuštění vlákna, pouze že žádná vlákna v bloku nebude provádět příkazy po volání `tile_barrier::wait` dokud všechna vlákna nedosáhnout tohoto volání. To znamená, že pomocí `tile_barrier::wait` metodu, můžete provádět úkoly na základě dlaždice dlaždice spíše než vlákno po vlákně. Dělení do bloků typický algoritmus využívající dlaždice má kód `tile_static` paměti pro celou dlaždici následovanou voláním do `tile_barrer::wait`. Kód, který následuje `tile_barrier::wait` obsahuje výpočty, které vyžadují přístup ke všem `tile_static` hodnoty.
 
-- Místní a globální indexování. Máte přístup k index vlákno relativně k celý `array_view` nebo `array` objekt a index relativně k dlaždici. Pomocí místní indexu může usnadnit kódu ke čtení a ladění. Obvykle se používá pro přístup k místním indexování `tile_static` proměnné a globální indexování pro přístup k `array` a `array_view` proměnné.
+- Místní a globální indexování. Máte přístup k indexu vlákna relativnímu k celým `array_view` nebo `array` objektu a indexu relativnímu k dlaždici. Použití místního indexu může usnadnit kódu ke čtení a ladění. Obvykle použijete místní indexování pro přístup k `tile_static` proměnné a globální indexování pro přístup k `array` a `array_view` proměnné.
 
-- [tiled_extent – třída](../../parallel/amp/reference/tiled-extent-class.md) a [tiled_index – třída](../../parallel/amp/reference/tiled-index-class.md). Můžete použít `tiled_extent` objektu místo `extent` objekt v `parallel_for_each` volání. Můžete použít `tiled_index` objektu místo `index` objekt v `parallel_for_each` volání.
+- [tiled_extent – třída](../../parallel/amp/reference/tiled-extent-class.md) a [tiled_index – třída](../../parallel/amp/reference/tiled-index-class.md). Použijete `tiled_extent` místo objektu `extent` objekt `parallel_for_each` volání. Použijete `tiled_index` místo objektu `index` objekt `parallel_for_each` volání.
 
-Abyste mohli využívat rozložení vedle sebe, musí vaše algoritmus oddílu výpočetní doméně do dlaždice a poté zkopírujte data dlaždice do `tile_static` proměnných pro rychlejší přístup.
+Pro využití dělení do bloku musí algoritmus rozdělit výpočetní doménu do bloků a potom zkopírujte data dlaždice do `tile_static` proměnné pro rychlejší přístup.
 
-## <a name="example-of-global-tile-and-local-indices"></a>Příklad globální, dlaždice a místní indexů
+## <a name="example-of-global-tile-and-local-indices"></a>Příklad globálních, blokových a místní indexy
 
-Následující diagram představuje matici 8 x 9 dat, která jsou uspořádána ve 2 × 3 dlaždice.
+Následující diagram reprezentuje matici 8 x 9 data, která jsou uspořádána v dlaždicích 2 x 3.
 
-![8&#45;podle&#45;9 matice rozdělené do 2&#45;podle&#45;3 dlaždice](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")
+![8&#45;podle&#45;9 matice dělí 2&#45;podle&#45;3 dlaždice](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")
 
-Následující příklad zobrazí globální, dlaždice, a místní indexy tohoto rozložen formou dlaždic matice. `array_view` Objekt se vytvoří pomocí elementy typu `Description`. `Description` Obsahuje globální, dlaždice a místní indexy elementu v matici. Kód ve volání `parallel_for_each` nastaví hodnoty na globální, dlaždice a místní indexy jednotlivých prvků. Výstup zobrazuje hodnoty `Description` struktury.
+Následující příklad ukazuje globální, blokové a místní indexy této blokové matice. `array_view` Za použití prvků typu je vytvořen objekt `Description`. `Description` Udržuje globální, dlaždice a místní indexy prvků matice. Kód ve volání `parallel_for_each` nastaví hodnotu globálního, blokového a místního indexu každého prvku. Výstup zobrazuje hodnoty `Description` struktury.
 
 ```cpp
 #include <iostream>
@@ -73,11 +73,11 @@ void SetConsoleColor(int color) {
 // A helper function for formatting the output.
 void SetConsoleSize(int height, int width) {
     COORD coord;
-    
+
     coord.X = width;
     coord.Y = height;
     SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), coord);
-    
+
     SMALL_RECT* rect = new SMALL_RECT();
     rect->Left = 0;
     rect->Top = 0;
@@ -151,35 +151,35 @@ void main() {
 }
 ```
 
-Hlavní pracovní v příkladu je v definici `array_view` objekt a volání `parallel_for_each`.
+Hlavní práce ukázky spočívá v definici sady `array_view` objektu a volání `parallel_for_each`.
 
-1. Vektor `Description` struktury se zkopíruje do 8 x 9 `array_view` objektu.
+1. Vektor `Description` struktury je zkopírována do 8 x 9 `array_view` objektu.
 
-2. `parallel_for_each` Metoda je volána s `tiled_extent` objektu jako výpočetní doméně. `tiled_extent` Objekt se vytvoří při volání `extent::tile()` metodu `descriptions` proměnné. Parametry typu volání `extent::tile()`, `<2,3>`, zadejte, že jsou vytvořeny 2 × 3 dlaždice. Proto matice 8 x 9 je rozložen formou dlaždic do 12 dlaždice, čtyři řádky a tři sloupce.
+2. `parallel_for_each` Metoda je volána `tiled_extent` objektu jako výpočetní doménou. `tiled_extent` Objekt je vytvořen zavoláním `extent::tile()` metodu `descriptions` proměnné. Typové parametry volání `extent::tile()`, `<2,3>`, určete, zda budou vytvořeny bloky velikosti 2 x 3. Proto matice 8 x 9 je rozložen formou dlaždic do 12 bloků, čtyři řádky a tři sloupce.
 
-3. `parallel_for_each` Metoda je volána pomocí `tiled_index<2,3>` objektu (`t_idx`) jako index. Parametry typu indexu (`t_idx`) musí odpovídat parametrům typ výpočetní doméně (`descriptions.extent.tile< 2, 3>()`).
+3. `parallel_for_each` Metoda je volána za použití `tiled_index<2,3>` objektu (`t_idx`) jako index. Typové parametry indexu (`t_idx`) musí odpovídat typovým parametrům výpočetní domény (`descriptions.extent.tile< 2, 3>()`).
 
-4. Po provedení každé vlákno index `t_idx` vrátí informace, o které dlaždice vlákno se v (`tiled_index::tile` vlastnosti) a umístění vlákno v rámci dlaždice (`tiled_index::local` vlastnost).
+4. Při spuštění každého vlákna index `t_idx` vrátí informace o dlaždice vlákno je v (`tiled_index::tile` vlastnost) a umístění vlákna v dlaždici (`tiled_index::local` vlastnost).
 
-## <a name="tile-synchronizationtilestatic-and-tilebarrierwait"></a>Dlaždice synchronizace – tile_static a tile_barrier::wait –
+## <a name="tile-synchronizationtilestatic-and-tilebarrierwait"></a>Synchronizace – tile_static a tile_barrier::wait
 
-Předchozí příklad znázorňuje rozložení dlaždic a indexy, ale není sám o sobě velmi užitečné.  Dlaždice je užitečné, když jsou nedílnou součástí algoritmus a zneužití dlaždice `tile_static` proměnné. Vzhledem k tomu, že všechna vlákna v dlaždici mít přístup k `tile_static` proměnné, volání `tile_barrier::wait` slouží k synchronizaci přístup k `tile_static` proměnné. I když všechny podprocesy v dlaždici mají přístup k `tile_static` proměnné, neexistuje žádný zaručenou pořadí provádění vláken v dlaždici. Následující příklad ukazuje, jak používat `tile_static` proměnné a `tile_barrier::wait` metodu pro výpočet průměrná hodnota každou dlaždici. Zde jsou klíče k pochopení příkladu:
+Předchozí příklad ilustruje rozložení bloků a indexů, ale není sám o sobě velmi užitečné.  Dělení do bloků se stává užitečným, jsou nedílnou součástí algoritmu a využívají `tile_static` proměnné. Vzhledem k tomu, že všechna vlákna bloku mají přístup k `tile_static` proměnné, volání `tile_barrier::wait` se používají k synchronizaci přístupu k `tile_static` proměnné. Ačkoli všechna vlákna bloku mají přístup k `tile_static` proměnné, není zaručeno pořadí provádění vlákna v dlaždici. Následující příklad ukazuje, jak používat `tile_static` proměnné a `tile_barrier::wait` metodu pro výpočet průměrné hodnoty každého bloku. Zde jsou klíčové údaje pro pochopení tohoto příkladu:
 
-1. RawData je uložený v matici 8 x 8.
+1. Objekt rawData je uložen v matici 8 x 8.
 
-2. Velikost dlaždice je 2 x 2. Tím se vytvoří 4 x 4 mřížky dlaždic a průměry může být uložený v matice 4 x 4 pomocí `array` objektu. Nejsou k dispozici pouze omezený počet typů, které můžete zaznamenat odkazem v funkci AMP omezený. `array` Třída je jeden z nich.
+2. Velikost bloku je 2 x 2. Tím se vytvoří dlaždic mřížky 4 x 4 a průměry mohou být uloženy do matice 4 x 4 pomocí `array` objektu. Existuje pouze omezený počet typů, které lze zachytit odkazem ve funkci s omezením AMP. `array` Třída je jeden z nich.
 
-3. Velikost matice a velikost vzorku jsou definované za použití `#define` příkazy, protože typ parametry, které chcete `array`, `array_view`, `extent`, a `tiled_index` musí být konstantní hodnoty. Můžete také použít `const int static` deklarace. Další výhodou je je jednoduchá, chcete-li změnit velikost vzorku pro výpočet průměrné dlaždice více než 4 x 4.
+3. Velikost matice a velikost vzorku jsou definovány pomocí `#define` příkazy, protože typové parametry `array`, `array_view`, `extent`, a `tiled_index` musí být konstantní hodnoty. Můžete také použít `const int static` deklarace. Další výhodou je je jednoduché změnit velikost vzorku pro výpočet průměrné dlaždice více než 4 x 4.
 
-4. A `tile_static` 2 x 2 pole hodnot float je deklarovaný pro každou dlaždici. I když jsou deklaraci v kódové cestě pro každé vlákno, pouze jedno pole se vytvoří pro každou dlaždici v matici.
+4. A `tile_static` 2 x 2 pole hodnot s plovoucí desetinnou čárkou je deklarován pro každou dlaždici. Ačkoli je deklarace v kódové cestě pro každé vlákno, se vytvoří pouze jedno pole pro každý blok v matici.
 
-5. Je řádek kódu ke zkopírování hodnot v jednotlivých dlaždici `tile_static` pole. Pro každé vlákno po zkopírování hodnotu do pole, provádění ve vlákně zastaví z důvodu volání `tile_barrier::wait`.
+5. Je jeden řádek kódu a zkopírujte hodnoty v každém bloku do `tile_static` pole. Pro každé vlákno po zkopírování hodnoty do pole je spuštění vlákna pozastaveno kvůli volání `tile_barrier::wait`.
 
-6. Po dosažení všech vláken v dlaždici bariéry, lze vypočítat průměr. Vzhledem k tomu, že kód provede pro každé vlákno, není `if` příkaz pouze vypočítat průměr na jedno vlákno. Průměr je uložené v proměnné průměry. Bariéry je v podstatě konstruktor, který řídí výpočty pomocí dlaždice, podobně jako můžete použít `for` smyčky.
+6. Pokud všechna vlákna bloku dosáhnou této bariéry, lze vypočítat průměr. Jelikož se kód spouští pro každé vlákno, je `if` příkaz pouze výpočet průměru v jednom vlákně. Průměr je uložen v proměnné averages. Odbourejte překážky bránící je v podstatě konstrukci, která řídí výpočty po, podobně jako můžete použít `for` smyčky.
 
-7. Data v `averages` proměnné, protože se jedná `array` objektu, musí se zkopírovat zpět na hostitele. Tento příklad používá operátor převodu vektoru.
+7. Data v `averages` proměnné, protože se jedná `array` objektu, musí být zkopírována zpět k hostiteli. Tento příklad používá operátor převodu vektoru.
 
-8. V příkladu SAMPLESIZE, můžete změnit na 4 a kód provede správně bez další změny.
+8. V úplném příkladu lze změnit hodnotu SAMPLESIZE na 4 a kód se provede správně bez jakýchkoliv jiných změn.
 
 ```cpp
 #include <iostream>
@@ -262,7 +262,7 @@ int main() {
 
 ## <a name="race-conditions"></a>Konflikty časování
 
-Může to být tempting k vytvoření `tile_static` proměnné s názvem `total` a zvýšit tuto proměnnou pro každé vlákno takto:
+Může být lákavé vytvořit `tile_static` proměnnou s názvem `total` a zvyšovat ji pro každé vlákno následujícím způsobem:
 
 ```cpp
 // Do not do this.
@@ -273,7 +273,7 @@ t_idx.barrier.wait();
 averages(t_idx.tile[0],t_idx.tile[1]) /= (float) (SAMPLESIZE* SAMPLESIZE);
 ```
 
-První problém s tímto přístupem je, že `tile_static` proměnné nemůže mít inicializátory. Druhý problém je, že je na přiřazení časování `total`, protože všechny podprocesy v dlaždici mít přístup k proměnné seřazeny. Algoritmus, který má-li povolit pouze jedno vlákno k celkem v každé bariéry, jak ukazuje následující může programu. Toto řešení však není rozšiřitelný.
+Prvním problémem tohoto přístupu je, že `tile_static` proměnné nemůžou mít inicializátory. Druhý problém je, že je u přiřazování k časování `total`, protože všechna vlákna v dlaždici mají k této proměnné přístup bez určitého pořadí. Lze naprogramovat algoritmus tak povolit pouze jednomu vláknu přistupovat k hodnotě celkem u každé bariéry, jak je ukázáno dále. Toto řešení však není rozšiřitelné.
 
 ```cpp
 // Do not do this.
@@ -291,27 +291,27 @@ t_idx.barrier.wait();
 // etc.
 ```
 
-## <a name="memory-fences"></a>Ochranné paměti
+## <a name="memory-fences"></a>Ohrazení paměti
 
-Existují dva druhy paměti přístupů, které musí být synchronizovány – globální paměť přístup a `tile_static` přístup do paměti. A `concurrency::array` objekt přiděluje jenom globální paměť. A `concurrency::array_view` odkazovat globální paměť `tile_static` paměti, nebo obojí, v závislosti na tom, jak byl zkonstruován.  Existují dva typy paměti, která musí být synchronizovány:
+Existují dva typy přístupů k paměti, které musí být synchronizovány – přístup ke globální paměti a `tile_static` přístup do paměti. A `concurrency::array` objekt alokuje pouze globální paměť. A `concurrency::array_view` globální paměti, můžete odkazovat na `tile_static` nebo do obou v závislosti na způsobu jeho vytvoření.  Existují dva druhy paměti, která musí být synchronizovány:
 
 - globální paměť
 
 - `tile_static`
 
-A *paměti ochranná* zajišťuje, že paměť přístupů, které jsou k dispozici pro jiná vlákna v dlaždici přístup z více vláken a že paměť přístupů jsou spouštěny v pořadí, v programu. Aby, kompilátory a procesory není změnit pořadí čtení a zápisy napříč ochranná. V C++ AMP ochranná paměti vytvořené volání jednu z těchto metod:
+A *ohrazení paměti* zajišťuje, že jsou k dispozici pro ostatní vlákna v dlaždici vlákna přístupy k paměti a že paměti jsou provedeny podle pořadí programu. Aby toto bylo zajištěno, kompilátory a procesory nemění pořadí čtení a zápisu napříč ohrazením. V jazyce C++ AMP je ohrazení paměti vytvořen voláním jedné z těchto metod:
 
-- [tile_barrier::wait – metoda](reference/tile-barrier-class.md#wait): vytvoří ohraničení kolem obě globální a `tile_static` paměti.
+- [tile_barrier::wait – metoda](reference/tile-barrier-class.md#wait): vytvoří ohrazení kolem i globální a `tile_static` paměti.
 
-- [tile_barrier::wait_with_all_memory_fence – metoda](reference/tile-barrier-class.md#wait_with_all_memory_fence): vytvoří ohraničení kolem obě globální a `tile_static` paměti.
+- [tile_barrier::wait_with_all_memory_fence – metoda](reference/tile-barrier-class.md#wait_with_all_memory_fence): vytvoří ohrazení kolem i globální a `tile_static` paměti.
 
-- [tile_barrier::wait_with_global_memory_fence – metoda](reference/tile-barrier-class.md#wait_with_global_memory_fence): vytvoří ohraničení kolem pouze globální paměť.
+- [tile_barrier::wait_with_global_memory_fence – metoda](reference/tile-barrier-class.md#wait_with_global_memory_fence): vytvoří ohrazení pouze kolem globální paměti.
 
-- [tile_barrier::wait_with_tile_static_memory_fence – metoda](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): vytvoří ohraničení kolem pouze `tile_static` paměti.
+- [tile_barrier::wait_with_tile_static_memory_fence – metoda](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): vytvoří ohrazení pouze kolem `tile_static` paměti.
 
-Volání metody konkrétní ochranná, které vyžadují může zvýšit výkon vaší aplikace. Typ bariéry ovlivňuje, jak kompilátor a hardware změnit jeho pořadí příkazy. Například pokud použijete ochranná globální paměť, se vztahuje jenom na globální paměti přístupů a proto může změnit pořadí kompilátor a hardwaru čte a zapisuje `tile_static` proměnné na dvou stranách ochranná.
+Volání konkrétní požadovaného ohrazení může zvýšit výkon vaší aplikace. Typ bariéry ovlivňuje, jak kompilátor a hardware mění pořadí příkazů. Například pokud používáte ohrazení globální paměti, použije přístupy do globální paměti a proto se mohou změnit pořadí kompilátor a hardware čte a zapisuje do `tile_static` proměnné na obou stranách ohrazení.
 
-V následujícím příkladu, bariéry synchronizuje zápisy do `tileValues`, `tile_static` proměnné. V tomto příkladu `tile_barrier::wait_with_tile_static_memory_fence` nazývá místo `tile_barrier::wait`.
+V následujícím příkladu bariéra synchronizuje zápisy do `tileValues`, `tile_static` proměnné. V tomto příkladu `tile_barrier::wait_with_tile_static_memory_fence` se nazývá místo `tile_barrier::wait`.
 
 ```cpp
 // Using a tile_static memory fence.
@@ -341,5 +341,5 @@ parallel_for_each(matrix.extent.tile<SAMPLESIZE, SAMPLESIZE>(),
 
 ## <a name="see-also"></a>Viz také:
 
-[C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)  
-[tile_static Keyword](../../cpp/tile-static-keyword.md)  
+[C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
+[tile_static Keyword](../../cpp/tile-static-keyword.md)

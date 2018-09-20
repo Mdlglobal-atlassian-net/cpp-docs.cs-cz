@@ -1,5 +1,5 @@
 ---
-title: Vytvoření zobrazení dokumentu | Microsoft Docs
+title: Vytváření dokumentů a zobrazení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,28 +22,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894bb5a0b3a4c86d764fc6f4a0e4b9ae18422669
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 0deb187a6540af71a1dc72b730347374bc25f963
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931850"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423056"
 ---
 # <a name="documentview-creation"></a>Vytváření dokumentů/zobrazení
-Rozhraní framework poskytuje implementace **nový** a **otevřete** příkazy (mimo jiné) **souboru** nabídky. Vytvoření nového dokumentu a jeho přidružené zobrazení a oken s rámečkem je spolupráci úsilí mezi objekt aplikace, šablony dokumentu, nově vytvořený dokumentu a nově vytvořený rámce okna. Následující tabulka shrnuje, které objekty vytvořit co.  
-  
-### <a name="object-creators"></a>Tvůrci objektů  
-  
-|tvůrce|Vytvoří|  
-|-------------|-------------|  
-|Objekt aplikace|Šablony dokumentů|  
-|Šablony dokumentů|Dokument|  
-|Šablony dokumentů|Oken s rámečkem|  
-|Oken s rámečkem|Zobrazit|  
-  
-## <a name="see-also"></a>Viz také  
- [Šablony dokumentů a proces vytváření dokumentů/zobrazení](../mfc/document-templates-and-the-document-view-creation-process.md)   
- [Vytváření šablon dokumentů](../mfc/document-template-creation.md)   
- [Vztahy mezi objekty MFC](../mfc/relationships-among-mfc-objects.md)   
- [Vytváření nových dokumentů, oken a zobrazení](../mfc/creating-new-documents-windows-and-views.md)
+
+Architektura dodává implementace **nový** a **otevřít** příkazy (mimo jiné) na **souboru** nabídky. Vytvořit nový dokument a jeho přidružené zobrazení a okno rámce je kooperativní času mezi objekt aplikace, šablonu dokumentu, nově vytvořený dokument a nově vytvořený rámce okna. Následující tabulka shrnuje, které objekty vytvořit co.
+
+### <a name="object-creators"></a>Tvůrci objektů
+
+|tvůrce|Vytvoří|
+|-------------|-------------|
+|Objekt aplikace|Šablona dokumentu|
+|Šablona dokumentu|Dokument|
+|Šablona dokumentu|Okno rámce|
+|Okno rámce|Zobrazit|
+
+## <a name="see-also"></a>Viz také
+
+[Šablony dokumentů a proces vytváření dokumentů/zobrazení](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
+[Vytváření šablon dokumentů](../mfc/document-template-creation.md)<br/>
+[Vztahy mezi objekty MFC](../mfc/relationships-among-mfc-objects.md)<br/>
+[Vytváření nových dokumentů, oken a zobrazení](../mfc/creating-new-documents-windows-and-views.md)
 

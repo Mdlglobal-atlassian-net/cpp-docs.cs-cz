@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9b5250a730b0ce80cbbe9698b4b5e636a85986b6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 13ddef5b6bb83de16c72438e2b9f2bb3d4e8d635
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223183"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386350"
 ---
 # <a name="id"></a>id
 
@@ -38,7 +38,7 @@ Určuje *dispid* parametr pro členské funkce (vlastnost nebo metoda v rozhran�
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor DISPID*  
+*identifikátor DISPID*<br/>
 Identifikátor odeslání pro metody rozhraní.
 
 ## <a name="remarks"></a>Poznámky
@@ -64,9 +64,9 @@ Další informace najdete v tématu [kontexty atributů](../windows/attribute-co
 
 ## <a name="see-also"></a>Viz také
 
-[IDL – atributy](../windows/idl-attributes.md)  
-[Atributy metody](../windows/method-attributes.md)  
-[Atributy datového členu](../windows/data-member-attributes.md)  
-[defaultvalue](../windows/defaultvalue.md)  
-[in](../windows/in-cpp.md)  
+[IDL – atributy](../windows/idl-attributes.md)<br/>
+[Atributy metody](../windows/method-attributes.md)<br/>
+[Atributy datového členu](../windows/data-member-attributes.md)<br/>
+[defaultvalue](../windows/defaultvalue.md)<br/>
+[in](../windows/in-cpp.md)<br/>
 [out](../windows/out-cpp.md)  

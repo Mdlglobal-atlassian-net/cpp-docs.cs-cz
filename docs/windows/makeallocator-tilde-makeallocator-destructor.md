@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7115bd3ad6ef1a385b8c2a509f42316c9f8b69bc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5ba40aa98321956f19de30f5f4002cb788ff446e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607195"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46371989"
 ---
 # <a name="makeallocatormakeallocator-destructor"></a>MakeAllocator::~MakeAllocator – destruktor
 
@@ -48,5 +48,5 @@ V případě potřeby se tento destruktor odstraní také základní přidělen�
 
 ## <a name="see-also"></a>Viz také
 
-[MakeAllocator – třída](../windows/makeallocator-class.md)  
+[MakeAllocator – třída](../windows/makeallocator-class.md)<br/>
 [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

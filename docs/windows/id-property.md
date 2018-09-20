@@ -15,19 +15,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 89a6b3392491ad36a0b0c9d542ffac4738b7c0f6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: eb3f501a2653c4d25adb195e9de9abf082179f3a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605356"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421905"
 ---
 # <a name="id-property"></a>ID – vlastnost
+
 Vlastnost ID odkazuje na každého záznamu tabulky akcelerátorů v programovém kódu. Jedná se o hodnotu příkazu, který program se zobrazí, když uživatel stiskne klávesu akcelerátoru nebo kombinace kláves. Chcete-li akcelerátoru, stejně jako položku nabídky, ujistěte se, jejich ID stejné (Pokud je ID tabulky akcelerátorů stejné jako ID prostředku nabídky).
   
 ## <a name="requirements"></a>Požadavky
- Win32
+
+Win32
   
 ## <a name="see-also"></a>Viz také
- [Nastavení vlastností akcelerátoru](../windows/setting-accelerator-properties.md)  
- [Editor akcelerátorů](../windows/accelerator-editor.md)
+
+[Nastavení vlastností akcelerátoru](../windows/setting-accelerator-properties.md)<br/>
+[Editor akcelerátorů](../windows/accelerator-editor.md)

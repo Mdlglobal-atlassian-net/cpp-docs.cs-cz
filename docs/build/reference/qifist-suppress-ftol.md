@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d7c4bacec9da22e8c8ba9fd6330637a1fb25893
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4b32557507cbe74fc1fde3963a1375318c7ef1e0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714737"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448262"
 ---
 # <a name="qifist-suppress-ftol"></a>/QIfist (Potlačit _ftol)
 
@@ -75,6 +75,6 @@ Můžete použít [_control87 _controlfp, \__control87_2](../../c-runtime-librar
 
 ## <a name="see-also"></a>Viz také
 
-[/Q – možnosti (operace nízké úrovně)](../../build/reference/q-options-low-level-operations.md)
-[– možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[/Q – možnosti (operace nízké úrovně)](../../build/reference/q-options-low-level-operations.md)<br/>
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

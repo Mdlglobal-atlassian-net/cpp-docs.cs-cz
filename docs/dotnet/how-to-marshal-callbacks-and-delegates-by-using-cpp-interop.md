@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: zařazování zpětných volání a delegátů pomocí funkcí interoperability C++ | Microsoft Docs'
+title: 'Postupy: zařazování zpětných volání a delegátů pomocí funkcí interoperability C++ | Dokumentace Microsoftu'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -20,131 +20,135 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dd1b9a13ebcc9f416a2953f53c98231b7a0df3c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db3d4cf59aa3ec14e964d53a54afbe5a9fe0aecd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33132775"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381891"
 ---
 # <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Postupy: Zařazování zpětných volání a delegátů pomocí funkcí interoperability C++
-Toto téma ukazuje zařazování zpětných volání a delegátů (spravovaná verze zpětné volání) mezi spravovanými a nespravovanými kódu pomocí Visual C++.  
-  
- Následující příklady kódu používají [spravované, nespravované](../preprocessor/managed-unmanaged.md) direktivy jazyka #pragma k implementaci spravovaných a nespravovaných funkcí ve stejném souboru, ale funkce mohou být také definovány v samostatné soubory. Soubory obsahující pouze nespravovaná funkce nemusí být zkompilovány s [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
-  
-## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak nakonfigurovat nespravovaného rozhraní API pro aktivaci spravovaného delegáta. Je vytvořen spravovaný delegát a jednu z metod interoperability, <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, slouží k načtení základní vstupní bod pro delegáta. Tato adresa je pak předána nespravované funkci, která volá bez znalosti fakt, že je implementovaný jako spravované funkce.  
-  
- Všimněte si, že je možné, ale není nezbytné, aby se PIN kód delegáta pomocí [pin_ptr (C + +/ CLI)](../windows/pin-ptr-cpp-cli.md) zabránit, aby ji se znovu umístění nebo odstranění z modulem garbage collector. Je potřeba ochrany z předčasné uvolňování paměti, ale připnutí poskytuje větší ochranu, než je nezbytné, protože zabraňuje uvolňování, ale také zabraňuje přemístění.  
-  
- Pokud delegát je znovu nalézt uvolnění paměti, nebude to mít vliv podkladové zpětné volání, takže <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> se používá k přidání odkazu na delegáta, což přemístění delegáta, ale zabráněním vyřazení. Použití GCHandle namísto pin_ptr snižuje potenciální fragmentace spravované haldy.  
-  
-```  
-// MarshalDelegate1.cpp  
-// compile with: /clr  
-#include <iostream>  
-  
-using namespace System;  
-using namespace System::Runtime::InteropServices;  
-  
-#pragma unmanaged  
-  
-// Declare an unmanaged function type that takes two int arguments  
-// Note the use of __stdcall for compatibility with managed code  
-typedef int (__stdcall *ANSWERCB)(int, int);  
-  
-int TakesCallback(ANSWERCB fp, int n, int m) {  
-   printf_s("[unmanaged] got callback address, calling it...\n");  
-   return fp(n, m);  
-}  
-  
-#pragma managed  
-  
-public delegate int GetTheAnswerDelegate(int, int);  
-  
-int GetNumber(int n, int m) {  
-   Console::WriteLine("[managed] callback!");  
-   return n + m;  
-}  
-  
-int main() {  
-   GetTheAnswerDelegate^ fp = gcnew GetTheAnswerDelegate(GetNumber);  
-   GCHandle gch = GCHandle::Alloc(fp);  
-   IntPtr ip = Marshal::GetFunctionPointerForDelegate(fp);  
-   ANSWERCB cb = static_cast<ANSWERCB>(ip.ToPointer());  
-   Console::WriteLine("[managed] sending delegate as callback...");  
-  
-// force garbage collection cycle to prove  
-// that the delegate doesn't get disposed  
-   GC::Collect();  
-  
-   int answer = TakesCallback(cb, 243, 257);  
-  
-// release reference to delegate  
-   gch.Free();  
-}  
-```  
-  
-## <a name="example"></a>Příklad  
- V následujícím příkladu je podobně jako v předchozím příkladu, ale v takovém případě je poskytnutý ukazatel funkce ukládá nespravovaného rozhraní API, takže ji nelze vyvolat v každém okamžiku vyžadující, aby uvolňování potlačit libovolný dobu. V důsledku toho následující příklad používá globální instanci <xref:System.Runtime.InteropServices.GCHandle> aby delegát nebylo přemístěné, nezávisle na rozsahu funkce. Jak je popsáno v prvním příkladu, pomocí pin_ptr není nutný pro tyto příklady, ale v takovém případě by přesto fungovat, protože rozsah pin_ptr je omezený na jedné funkce.  
-  
-```  
-// MarshalDelegate2.cpp  
-// compile with: /clr   
-#include <iostream>  
-  
-using namespace System;  
-using namespace System::Runtime::InteropServices;  
-  
-#pragma unmanaged  
-  
-// Declare an unmanaged function type that takes two int arguments  
-// Note the use of __stdcall for compatibility with managed code  
-typedef int (__stdcall *ANSWERCB)(int, int);  
-static ANSWERCB cb;  
-  
-int TakesCallback(ANSWERCB fp, int n, int m) {  
-   cb = fp;  
-   if (cb) {  
-      printf_s("[unmanaged] got callback address (%d), calling it...\n", cb);  
-      return cb(n, m);  
-   }  
-   printf_s("[unmanaged] unregistering callback");  
-   return 0;  
-}  
-  
-#pragma managed  
-  
-public delegate int GetTheAnswerDelegate(int, int);  
-  
-int GetNumber(int n, int m) {  
-   Console::WriteLine("[managed] callback!");  
-   static int x = 0;  
-   ++x;  
-  
-   return n + m + x;  
-}  
-  
-static GCHandle gch;  
-  
-int main() {  
-   GetTheAnswerDelegate^ fp = gcnew GetTheAnswerDelegate(GetNumber);  
-  
-   gch = GCHandle::Alloc(fp);  
-  
-   IntPtr ip = Marshal::GetFunctionPointerForDelegate(fp);  
-   ANSWERCB cb = static_cast<ANSWERCB>(ip.ToPointer());  
-   Console::WriteLine("[managed] sending delegate as callback...");  
-  
-   int answer = TakesCallback(cb, 243, 257);  
-  
-   // possibly much later (in another function)...  
-  
-   Console::WriteLine("[managed] releasing callback mechanisms...");  
-   TakesCallback(0, 243, 257);  
-   gch.Free();  
-}  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+
+Toto téma ukazuje zařazování zpětných volání a delegátů (spravovaná verze zpětné volání) mezi spravovaným a nespravovaným kódem pomocí jazyka Visual C++.
+
+Následující příklady kódu používají [spravované, nespravované](../preprocessor/managed-unmanaged.md) direktivy #pragma implementace spravovaných a nespravovaných funkcí ve stejném souboru, ale funkce mohou být také definovány v samostatných souborech. Soubory, které obsahují pouze nespravované funkce nemusí být kompilována s [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
+
+## <a name="example"></a>Příklad
+
+Následující příklad ukazuje, jak nakonfigurovat nespravovaného rozhraní API pro spuštění spravovaného delegáta. Vytvořili spravovaných delegáta a jednu z metod interoperability <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, slouží k načtení základní vstupní bod pro delegáta. Tato adresa je pak předán nespravovanou funkci, která volá bez znalosti skutečnost, že je implementovaný jako spravované funkce.
+
+Všimněte si, že je to možné, ale není nezbytné, PIN kód delegáta pomocí [pin_ptr (C + +/ CLI)](../windows/pin-ptr-cpp-cli.md) zabránit, aby ji znovu umístěný nebo odstraněny pomocí systému uvolňování paměti. Ochrana před předčasné uvolňování paměti je potřeba, ale připnutí poskytuje větší ochranu než je nezbytné, protože brání kolekce, ale také zabraňuje přemístění.
+
+Pokud delegát je přemístěn podle kolekce uvolnění paměti, nebude to mít vliv podkladové zpětné volání, takže <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> se používá k přidání odkazu na delegáta, což přemístění delegáta, ale brání vyřazení. Popisovač GCHandle místo pin_ptr snižuje potenciální fragmentace spravované haldy.
+
+```
+// MarshalDelegate1.cpp
+// compile with: /clr
+#include <iostream>
+
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+#pragma unmanaged
+
+// Declare an unmanaged function type that takes two int arguments
+// Note the use of __stdcall for compatibility with managed code
+typedef int (__stdcall *ANSWERCB)(int, int);
+
+int TakesCallback(ANSWERCB fp, int n, int m) {
+   printf_s("[unmanaged] got callback address, calling it...\n");
+   return fp(n, m);
+}
+
+#pragma managed
+
+public delegate int GetTheAnswerDelegate(int, int);
+
+int GetNumber(int n, int m) {
+   Console::WriteLine("[managed] callback!");
+   return n + m;
+}
+
+int main() {
+   GetTheAnswerDelegate^ fp = gcnew GetTheAnswerDelegate(GetNumber);
+   GCHandle gch = GCHandle::Alloc(fp);
+   IntPtr ip = Marshal::GetFunctionPointerForDelegate(fp);
+   ANSWERCB cb = static_cast<ANSWERCB>(ip.ToPointer());
+   Console::WriteLine("[managed] sending delegate as callback...");
+
+// force garbage collection cycle to prove
+// that the delegate doesn't get disposed
+   GC::Collect();
+
+   int answer = TakesCallback(cb, 243, 257);
+
+// release reference to delegate
+   gch.Free();
+}
+```
+
+## <a name="example"></a>Příklad
+
+Následující příklad je podobný jako předchozí příklad, ale v tomto případě je poskytnutý ukazatel funkce se ukládá pomocí nespravovaného rozhraní API, tak může být vyvolán v každém okamžiku vyžadující, že uvolňování paměti potlačit u libovolné délky času. V důsledku toho následující příklad používá globální instanci <xref:System.Runtime.InteropServices.GCHandle> zabránit delegáta přemístění, nezávisle na rozsah funkce. Jak je popsáno v prvním příkladu, pomocí pin_ptr není nutný pro tyto příklady, ale v takovém případě nebude fungovat i přesto, jako rozsah pin_ptr je omezen na jedinou funkci.
+
+```
+// MarshalDelegate2.cpp
+// compile with: /clr
+#include <iostream>
+
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+#pragma unmanaged
+
+// Declare an unmanaged function type that takes two int arguments
+// Note the use of __stdcall for compatibility with managed code
+typedef int (__stdcall *ANSWERCB)(int, int);
+static ANSWERCB cb;
+
+int TakesCallback(ANSWERCB fp, int n, int m) {
+   cb = fp;
+   if (cb) {
+      printf_s("[unmanaged] got callback address (%d), calling it...\n", cb);
+      return cb(n, m);
+   }
+   printf_s("[unmanaged] unregistering callback");
+   return 0;
+}
+
+#pragma managed
+
+public delegate int GetTheAnswerDelegate(int, int);
+
+int GetNumber(int n, int m) {
+   Console::WriteLine("[managed] callback!");
+   static int x = 0;
+   ++x;
+
+   return n + m + x;
+}
+
+static GCHandle gch;
+
+int main() {
+   GetTheAnswerDelegate^ fp = gcnew GetTheAnswerDelegate(GetNumber);
+
+   gch = GCHandle::Alloc(fp);
+
+   IntPtr ip = Marshal::GetFunctionPointerForDelegate(fp);
+   ANSWERCB cb = static_cast<ANSWERCB>(ip.ToPointer());
+   Console::WriteLine("[managed] sending delegate as callback...");
+
+   int answer = TakesCallback(cb, 243, 257);
+
+   // possibly much later (in another function)...
+
+   Console::WriteLine("[managed] releasing callback mechanisms...");
+   TakesCallback(0, 243, 257);
+   gch.Free();
+}
+```
+
+## <a name="see-also"></a>Viz také
+
+[Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

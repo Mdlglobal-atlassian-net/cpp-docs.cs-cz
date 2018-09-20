@@ -1,5 +1,5 @@
 ---
-title: Implementace panelu nástrojů MFC | Microsoft Docs
+title: Implementace panelu nástrojů v prostředí MFC | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,88 +27,95 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d21bfa1dcc39e00de852203d05a2eae743b8a2f6
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: a95b5460ee28894d087d1896cbbac03cfb509166
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929223"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391199"
 ---
 # <a name="mfc-toolbar-implementation"></a>Implementace panelu nástrojů v prostředí MFC
-Panel nástrojů je [ovládacích pruhů](../mfc/control-bars.md) obsahující obrázky rastrový obrázek ovládacích prvků. Tyto Image můžete chovat jako tlačítek, zaškrtněte políčka nebo přepínače. Poskytuje třídy MFC [ctoolbar –](../mfc/reference/ctoolbar-class.md) ke správě panely nástrojů.  
-  
- Pokud ho povolíte, můžete uživatelům panely nástrojů rozhraní MFC ukotvení je hrany okno nebo "float" je kdekoli v okně aplikace. MFC nepodporuje upravitelných panelů nástrojů stejně jako ve vývojovém prostředí.  
-  
- MFC podporuje také popisy: malé automaticky otevíraná okna, které popisují tlačítka panelu nástrojů účel při umístit ukazatel myši nad tlačítko. Ve výchozím nastavení při stisknutí tlačítka panelu nástrojů, řetězec stav se zobrazí ve stavovém řádku (pokud existuje). "Překrýt podle" stavovém řádku aktualizace zobrazí řetězec stav, když myši je umístěn nad tlačítko bez stisknutím ji můžete aktivovat.  
-  
+
+Je panel nástrojů [ovládací panel](../mfc/control-bars.md) , který obsahuje bitmapové obrázky ovládacích prvků. Tyto Image se může chovat jako tlačítek, zaškrtněte políčka nebo přepínací tlačítka. Knihovna MFC poskytuje třídy [ctoolbar –](../mfc/reference/ctoolbar-class.md) ke správě panely nástrojů.
+
+Pokud ho povolíte, uživatelé panelů nástrojů MFC lze ukotvit k okraji okna nebo "float" je kdekoli v okně aplikace. MFC nepodporuje přizpůsobitelné panely nástrojů, jako ty ve vývojovém prostředí.
+
+Knihovna MFC také podporuje popisů tlačítek: malé automaticky otevíraná okna, které popisují účel tlačítko panelu nástrojů, když umístíte ukazatel myši nad tlačítkem. Ve výchozím nastavení když uživatel stiskne tlačítko panelu nástrojů, řetězec stavu se zobrazí ve stavovém řádku (pokud existuje). "Při psaní ve" stavového řádku aktualizace zobrazí řetězec stav, když ukazatel myši umístěn nad tlačítkem bez klávesy ho můžete aktivovat.
+
 > [!NOTE]
->  Od verze knihovny MFC verze 4.0 panely nástrojů a tipů nástrojů se implementují pomocí systému Windows 95 a novější funkce místo předchozí implementace, které jsou specifické pro MFC.  
-  
- Z důvodu zpětné kompatibility MFC uchovává starší implementace panelu nástrojů v třídě `COldToolBar`. Popisují dokumentaci pro starší verze knihovny MFC `COldToolBar` pod `CToolBar`.  
-  
- Vytvoření první panelu nástrojů v programu výběrem možnosti panelu nástrojů v Průvodci aplikací. Můžete také vytvořit další panely nástrojů.  
-  
- V tomto článku byly zavedeny následující text:  
-  
--   [Tlačítka panelu nástrojů](#_core_toolbar_buttons)  
-  
--   [Ukotvitelné a plovoucí panely nástrojů](#_core_docking_and_floating_toolbars)  
-  
--   [Panely nástrojů a tipů nástrojů](#_core_toolbars_and_tool_tips)  
-  
--   [Ctoolbar – a CToolBarCtrl třídy](#_core_the_ctoolbar_and_ctoolbarctrl_classes)  
-  
--   [Rastrového obrázku panelu nástrojů](#_core_the_toolbar_bitmap)  
-  
-##  <a name="_core_toolbar_buttons"></a> Tlačítka panelu nástrojů  
- Tlačítka na panelu nástrojů, jsou obdobou položky v nabídce. Oba typy objektů uživatelského rozhraní Generovat příkazy, které váš program zpracovává tím, že poskytuje funkce obslužných rutin. Často tlačítka panelu nástrojů duplicitní funkce příkazy nabídky, poskytuje alternativní uživatelské rozhraní ke stejné funkce. Takové duplikace uspořádána jednoduše tím, že položka nabídky a tlačítko stejným ID.  
-  
- Můžete nastavit tlačítek na panelu nástrojů zobrazí a chovat jako tlačítek, zaškrtněte políčka nebo přepínače. Další informace najdete v tématu třídy [ctoolbar –](../mfc/reference/ctoolbar-class.md).  
-  
-##  <a name="_core_docking_and_floating_toolbars"></a> Ukotvitelné a plovoucí panely nástrojů  
- Panelu nástrojů MFC můžete:  
-  
--   Zůstanou stojící na jedné straně jeho nadřazeného okna.  
-  
--   Přetáhnout a "ukotven" nebo připojen uživatel na žádné straně nebo stranách nadřazené okno, které zadáte.  
-  
--   "Obtékané" nebo odpojit z okna rámce v samostatném okně zkrácená rámečku, může uživatel přesunout ho na všechny vhodné poloze.  
-  
--   Změnit velikost při číslo s plovoucí čárkou.  
-  
- Další informace najdete v článku [stabilní umístění a plovoucí panely nástrojů](../mfc/docking-and-floating-toolbars.md).  
-  
-##  <a name="_core_toolbars_and_tool_tips"></a> Panely nástrojů a tipů nástrojů  
- Panely nástrojů rozhraní MFC lze také zobrazit "nástroj tipy" – windows jen nepatrnou místní obsahující krátký textový popis tlačítka panelu nástrojů účel. Jako uživatel přesune myši nad tlačítka panelu nástrojů, panel nástrojů tip objeví nabídka nápovědu. Další informace najdete v článku [tlačítek na panelu nástrojů nástroje](../mfc/toolbar-tool-tips.md).  
-  
-##  <a name="_core_the_ctoolbar_and_ctoolbarctrl_classes"></a> Ctoolbar – a třídy CToolBarCtrl  
- Spravovat panelů nástrojů vaší aplikace pomocí třídy [ctoolbar –](../mfc/reference/ctoolbar-class.md). Od verze knihovny MFC verze 4.0 `CToolBar` má byla reimplemented používat běžné prvku panel nástrojů dostupných v systému Windows 95 nebo novější a Windows NT 3.51 nebo novější verze.  
-  
- Tato opětovná implementace výsledkem menší MFC kód pro panely nástrojů, protože MFC umožňuje použití podporu operačního systému. Opětovná implementace také zlepšuje funkce. Můžete použít `CToolBar` členské funkce k manipulaci s panely nástrojů, nebo můžete získat odkaz na základní [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objektu a volat jeho členské funkce pro přizpůsobení panelu nástrojů a další funkce.  
-  
+>  Od verze knihovny MFC verze 4.0 panely nástrojů a popisy tlačítek jsou implementovány pomocí Windows 95 a novější funkce místo předchozích implementacích specifické pro knihovny MFC.
+
+Z důvodu zpětné kompatibility knihovny MFC uchovává starší implementace panelu nástrojů v třídě `COldToolBar`. Popis v dokumentaci pro starší verze knihovny MFC `COldToolBar` pod `CToolBar`.
+
+Vytvoření první nástrojů ve svém programu výběrem možnosti panelu nástrojů v Průvodci aplikací. Můžete také vytvořit další panely nástrojů.
+
+Následující jsou popsané v tomto článku:
+
+- [Tlačítka panelu nástrojů](#_core_toolbar_buttons)
+
+- [Ukotvitelné a plovoucí panely nástrojů](#_core_docking_and_floating_toolbars)
+
+- [Panely nástrojů a tipů nástrojů](#_core_toolbars_and_tool_tips)
+
+- [Ctoolbar – a ctoolbarctrl – třídy](#_core_the_ctoolbar_and_ctoolbarctrl_classes)
+
+- [Rastrový obrázek panelu nástrojů](#_core_the_toolbar_bitmap)
+
+##  <a name="_core_toolbar_buttons"></a> Tlačítka panelu nástrojů
+
+Tlačítka v panelu nástrojů jsou podobná položek v nabídce. Oba typy objektů uživatelského rozhraní Generovat příkazy, které váš program zpracovává tím, že poskytuje funkce obslužné rutiny. Často tlačítka na panelu nástrojů duplicitní funkce příkazy nabídek, poskytuje alternativní uživatelské rozhraní ke stejné funkce. Tato duplikace uspořádána jednoduše tak, že udělíte tlačítka a položka nabídky se stejným ID.
+
+Můžete vytvořit tlačítka na panelu nástrojů a chovají se jako tlačítek, zaškrtněte políčka nebo přepínací tlačítka. Další informace najdete v tématu třídy [ctoolbar –](../mfc/reference/ctoolbar-class.md).
+
+##  <a name="_core_docking_and_floating_toolbars"></a> Ukotvitelné a plovoucí panely nástrojů
+
+Panel nástrojů knihovny MFC můžete:
+
+- Zůstat na jedné straně nezašle nadřazenému oknu bez pohybu.
+
+- Kvůli usnadnění použití vypsány a "ukotven" nebo připojené uživatelem na straně nebo stranách nadřazené okno, které zadáte.
+
+- "Plovoucí" nebo odpojeno od okna rámce v samostatném okně okna s minirámcem, takže uživatel můžu pohybovat ji na všechny vhodné místo.
+
+- Změnit velikost při s plovoucí desetinnou čárkou.
+
+Další informace najdete v článku [ukotvení a plovoucí panely nástrojů](../mfc/docking-and-floating-toolbars.md).
+
+##  <a name="_core_toolbars_and_tool_tips"></a> Panely nástrojů a tipů nástrojů
+
+Panely nástrojů rozhraní MFC lze provést také k zobrazení "nástroj tipy" – malý zobrazována místní okna, který obsahuje krátký textový popis účelu tlačítko panelu nástrojů. Jak uživatel přesouvá ukazatel myši nad tlačítko panelu nástrojů, panel nástrojů tip otevře do nabídky Nápověda. Další informace najdete v článku [popisy tlačítek na panelu nástrojů](../mfc/toolbar-tool-tips.md).
+
+##  <a name="_core_the_ctoolbar_and_ctoolbarctrl_classes"></a> Ctoolbar – a třídy atributu CToolBarCtrl
+
+Správa panelů nástrojů vaší aplikace prostřednictvím třídy [ctoolbar –](../mfc/reference/ctoolbar-class.md). Od verze knihovny MFC verze 4.0 `CToolBar` byla reimplemented pro běžné ovládací prvek panelu nástrojů dostupných v části Windows 95 nebo novější a Windows NT verze 3.51, aktualizace nebo novější.
+
+Tato patřící třídě výsledků v menším množstvím kódu knihovny MFC pro panely nástrojů, protože knihovny MFC je použití podporovaných operačních systémech. Patřící třídě také zlepšuje funkce. Můžete použít `CToolBar` můžete členské funkce pro manipulaci s panely nástrojů, nebo získat odkaz na základní [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objektu a volat její členské funkce pro přizpůsobení panelu nástrojů a dalších funkcí.
+
 > [!TIP]
->  Pokud budete mít výraznou investovali do starší implementace MFC `CToolBar`, že podpora je stále k dispozici. Najdete v článku [pomocí vaše starých panelů nástrojů](../mfc/using-your-old-toolbars.md).  
-  
- Také naleznete v ukázce MFC Obecné [DOCKTOOL](../visual-cpp-samples.md).  
-  
-##  <a name="_core_the_toolbar_bitmap"></a> Rastrového obrázku panelu nástrojů  
- Jednou sestavený, `CToolBar` objekt vytvoří bitovou kopii nástrojů načtením jeden rastrový obrázek, který obsahuje jeden obrázek pro každé tlačítko. Vytvoří Průvodce standardním panelu nástrojů rastrového obrázku, kterou si můžete přizpůsobit s Visual C++ [editor panelu nástrojů](../windows/toolbar-editor.md).  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
-  
--   [Principy panelů nástrojů](../mfc/toolbar-fundamentals.md)  
-  
--   [Ukotvitelné a plovoucí panely nástrojů](../mfc/docking-and-floating-toolbars.md)  
-  
--   [Popisy tlačítek panelu nástrojů](../mfc/toolbar-tool-tips.md)  
-  
--   [Práce s ovládacím prvkem panel nástrojů](../mfc/working-with-the-toolbar-control.md)  
-  
--   [Použití starých panelů nástrojů](../mfc/using-your-old-toolbars.md)  
-  
--   [Ctoolbar –](../mfc/reference/ctoolbar-class.md) a [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) třídy  
-  
-## <a name="see-also"></a>Viz také  
- [Panely nástrojů](../mfc/toolbars.md)   
- [Editor panelu nástrojů](../windows/toolbar-editor.md)
+>  Pokud budete mít výrazně investovali do starší implementace MFC `CToolBar`, že je stále dostupná podpora. Přečtěte si článek [pomocí Your starých panelů nástrojů](../mfc/using-your-old-toolbars.md).
+
+Také najdete v ukázce MFC Obecné [DOCKTOOL](../visual-cpp-samples.md).
+
+##  <a name="_core_the_toolbar_bitmap"></a> Rastrový obrázek panelu nástrojů
+
+Jednou vytvořený `CToolBar` objekt vytvoří obrázek panelu nástrojů načtením jediné bitmapě, která obsahuje jednu image pro každé tlačítko. Průvodce aplikace vytvoří, kterou můžete přizpůsobit rastrový obrázek standardním panelu nástrojů s jazykem Visual C++ [panelu nástrojů editoru](../windows/toolbar-editor.md).
+
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+
+- [Principy panelů nástrojů](../mfc/toolbar-fundamentals.md)
+
+- [Ukotvitelné a plovoucí panely nástrojů](../mfc/docking-and-floating-toolbars.md)
+
+- [Popisy tlačítek na panelu nástrojů](../mfc/toolbar-tool-tips.md)
+
+- [Práce s ovládacím prvkem panel nástrojů](../mfc/working-with-the-toolbar-control.md)
+
+- [Použití starých panelů nástrojů](../mfc/using-your-old-toolbars.md)
+
+- [Ctoolbar –](../mfc/reference/ctoolbar-class.md) a [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) třídy
+
+## <a name="see-also"></a>Viz také
+
+[Panely nástrojů](../mfc/toolbars.md)<br/>
+[Editor panelu nástrojů](../windows/toolbar-editor.md)
 

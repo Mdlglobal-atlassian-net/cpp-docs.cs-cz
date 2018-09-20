@@ -1,5 +1,5 @@
 ---
-title: 1.4 dodržování předpisů | Microsoft Docs
+title: 1.4 dodržování předpisů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c1bde41491f456ff99b0cd0d1ccc8ab98508412
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1a332d8fb5de172c363c6f9c1bebba65d6fa0ff8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687228"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381813"
 ---
 # <a name="14-compliance"></a>1.4 Kompatibilita
-Implementace rozhraní API jazyka C/C++ OpenMP je *kompatibilní se standardem OpenMP* pokud ji rozpozná a zachová sémantika všechny elementy této specifikace, který je uveden v kapitolách 1, 2, 3, 4, a příloha C. přílohy A, B, D, E a F jsou pro informace pouze účely a nejsou součástí specifikace. Implementace, které zahrnují jenom podmnožinu rozhraní API nejsou kompatibilní se standardem OpenMP.  
-  
- OpenMP C a C++ API je rozšíření základní jazyk, který podporuje implementace. Pokud základní jazyk nepodporuje jazyk konstrukce nebo rozšíření, která se zobrazí v tomto dokumentu, implementace OpenMP není potřeba ho podporují.  
-  
- Všechny standardní funkce knihovny jazyka C a C++ a integrované funkce (to znamená, ve kterých má kompilátor specifické znalosti funkce) musí být bezpečné pro přístup z více vláken. Nesynchronizované použití funkcí vláken podle různých vláknech uvnitř paralelní oblast nevytváří nedefinované chování. Chování však nemusí být stejný jako sériové oblast. (Náhodné číslo funkce generování je příklad).  
-  
- Rozhraní API jazyka C/C++ OpenMP Určuje, že určité chování *definované implementací.* Vyhovující provedení OpenMP je potřeba definovat a zdokumentovat své chování v těchto případech. V tématu [příloha E](../../parallel/openmp/e-implementation-defined-behaviors-in-openmp-c-cpp.md), stránka 97 seznam chování definované implementací.
+
+Je implementace rozhraní API pro C/C++ OpenMP *CLS OpenMP* pokud rozpozná a zachovává sémantiku ze všech prvků této specifikace, který je uveden v kapitoly 1, 2, 3, 4, a dodatky C. dodatku A, B, D, E a F jsou určené pro informace mají jenom a nejsou součástí specifikace. Implementace, které zahrnují jenom podmnožinu rozhraní API nejsou kompatibilní s OpenMP.
+
+OpenMP – C a C++ API je rozšířením základní jazyk, který podporuje implementaci. Pokud základní jazyk nepodporuje konstrukce jazyka nebo rozšíření, které se zobrazí v tomto dokumentu, implementace OpenMP není vyžadována pro její podporu.
+
+Všechny standardní funkce knihovny C a C++ a předdefinované funkce (to znamená, funkce, které kompilátor nemá specifické znalosti) musí být bezpečné pro vlákna. Nesynchronizované použití těchto funkcí bezpečné pro vlákna v různých vláknech uvnitř paralelní oblasti nevytváří nedefinované chování. Chování však nemusí být stejný jako v sériových oblastech. (Náhodné číslo funkce generování je příklad).
+
+Rozhraní API jazyka C/C++ OpenMP – Určuje, že určité chování *definované implementací.* Vyhovující implementace OpenMP – je potřeba definovat a dokumentovat jeho chování v těchto případech. Zobrazit [příloha E](../../parallel/openmp/e-implementation-defined-behaviors-in-openmp-c-cpp.md), stránce 97 seznam chování definované implementací.

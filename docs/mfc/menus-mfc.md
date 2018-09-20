@@ -1,5 +1,5 @@
 ---
-title: Nabídky (MFC) | Microsoft Docs
+title: Nabídky (MFC) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 839b38a135f9f7ada413de757035370e009cfa57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 04b6aa92937ce2c7a0b94c5e5b796b0bf8581626
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346968"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385128"
 ---
 # <a name="menus-mfc"></a>Nabídky (MFC)
-MFC poskytuje dva elementy, aby vám pomohou při práci s nabídkami:  
-  
--   Třída [cmenu –](../mfc/reference/cmenu-class.md) pro manipulaci s vaším programem nabídky v době běhu. Použijte v dokumentaci k `CMenu` a vzorku, který se Naučte se používat `CMenu` efektivně.  
-  
--   Mechanismus pro aktualizaci nabídky a tlačítka panelu nástrojů: povolení nebo zakázání je za chodu, aby vyhovovala aktuální program podmínky.  
-  
- Také poskytuje Visual C++ [editor nabídek](../windows/menu-editor.md) pro vytváření a úpravy prostředků nabídky vašeho programu.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
-  
--   [Manipulace při spuštění programu objektů nabídky](../mfc/manipulating-menus-during-program-execution.md)  
-  
--   [Postup aktualizace objektů uživatelského rozhraní](../mfc/how-to-update-user-interface-objects.md)  
-  
--   [Ukázka](../mfc/menu-sample-list.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Prvky uživatelského rozhraní](../mfc/user-interface-elements-mfc.md)
+
+Knihovna MFC poskytuje dva prvky, které vám pomohou při práci s nabídkami:
+
+- Třída [cmenu –](../mfc/reference/cmenu-class.md) pro manipulaci s nabídek vaší aplikace v době běhu. Přečtěte si dokumentaci pro `CMenu` a ukázky pro další informace o použití `CMenu` efektivně.
+
+- Mechanismus pro aktualizaci nabídky a tlačítka panelu nástrojů: povolení nebo zakázání v reálném čase tak, aby odpovídala aktuální stav programu.
+
+Také poskytuje jazyk Visual C++ [editor nabídek](../windows/menu-editor.md) pro vytváření a úpravu prostředků nabídky váš program.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+
+- [Manipulace s objekty nabídky při spuštění programu](../mfc/manipulating-menus-during-program-execution.md)
+
+- [Postup aktualizace objektů uživatelského rozhraní](../mfc/how-to-update-user-interface-objects.md)
+
+- [Ukázka](../mfc/menu-sample-list.md)
+
+## <a name="see-also"></a>Viz také
+
+[Prvky uživatelského rozhraní](../mfc/user-interface-elements-mfc.md)

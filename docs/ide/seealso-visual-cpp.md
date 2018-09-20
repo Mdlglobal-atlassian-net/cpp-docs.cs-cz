@@ -18,61 +18,66 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9983ace79dd12b656f2dd9a1c5cb8887b0816c5b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 69cbf45ee37ff10f5b367bc3915647815b2ccd09
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46043999"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376470"
 ---
 # <a name="ltseealsogt-visual-c"></a>&lt;Viz také&gt; (Visual C++)
-\<Seealso > značky umožňuje zadat text, který chcete zobrazit v části Viz také. Použití [ \<naleznete v tématu >](../ide/see-visual-cpp.md) zadat odkaz v rámci textu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-<seealso cref="member"/>  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+\<Seealso > značky umožňuje zadat text, který chcete zobrazit v části Viz také. Použití [ \<naleznete v tématu >](../ide/see-visual-cpp.md) zadat odkaz v rámci textu.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+<seealso cref="member"/>
+```
+
+#### <a name="parameters"></a>Parametry
+
 *Člen*<br/>
-Odkaz na člena nebo na pole, které lze volat z prostředí aktuální kompilace.  Název uzavřete do jednoduchých nebo dvojitých uvozovek.  
-  
- Kompilátor kontroluje, zda daný prvek kódu existuje a odstraňuje `member` do názvu prvku ve výstupním souboru XML.  Kompilátor vyvolá upozornění, pokud se nenajde `member`.  
-  
- Informace o tom, jak vytvořit cref odkaz na obecný typ, naleznete v tématu [ \<naleznete v tématu >](../ide/see-visual-cpp.md).  
-  
-## <a name="remarks"></a>Poznámky  
- Kompilovat s [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.  
-  
- Zobrazit [ \<summary >](../ide/summary-visual-cpp.md) pro příklad použití \<seealso >.  
-  
- Kompilátor Visual C++ se pokusí přeložit odkazy cref v jednom průchodu přes komentáře k dokumentaci.  Proto pokud pomocí pravidel vyhledávání C++ symbol nebyl nalezen kompilátorem odkaz bude označen jako nevyřešené.  
-  
-## <a name="example"></a>Příklad  
- V následujícím příkladu odkazuje cref nevyřešeného symbolu. Komentář XML u cref k B::Test bude `<seealso cref="!:B::Test" />`, že je odkaz na A::Test ve správném formátu `<seealso cref="M:A.Test" />`.  
-  
-```  
-// xml_seealso_tag.cpp  
-// compile with: /LD /clr /doc  
-// post-build command: xdcmake xml_seealso_tag.dll  
-  
-/// Text for class A.  
-public ref struct A {  
-   /// <summary><seealso cref="A::Test"/>  
-   /// <seealso cref="B::Test"/>  
-   /// </summary>  
-   void MyMethod(int Int1) {}  
-  
-   /// text  
-   void Test() {}  
-};  
-  
-/// Text for class B.  
-public ref struct B {  
-   void Test() {}  
-};  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Dokumentace XML](../ide/xml-documentation-visual-cpp.md)
+Odkaz na člena nebo na pole, které lze volat z prostředí aktuální kompilace.  Název uzavřete do jednoduchých nebo dvojitých uvozovek.
+
+Kompilátor kontroluje, zda daný prvek kódu existuje a odstraňuje `member` do názvu prvku ve výstupním souboru XML.  Kompilátor vyvolá upozornění, pokud se nenajde `member`.
+
+Informace o tom, jak vytvořit cref odkaz na obecný typ, naleznete v tématu [ \<naleznete v tématu >](../ide/see-visual-cpp.md).
+
+## <a name="remarks"></a>Poznámky
+
+Kompilovat s [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.
+
+Zobrazit [ \<summary >](../ide/summary-visual-cpp.md) pro příklad použití \<seealso >.
+
+Kompilátor Visual C++ se pokusí přeložit odkazy cref v jednom průchodu přes komentáře k dokumentaci.  Proto pokud pomocí pravidel vyhledávání C++ symbol nebyl nalezen kompilátorem odkaz bude označen jako nevyřešené.
+
+## <a name="example"></a>Příklad
+
+V následujícím příkladu odkazuje cref nevyřešeného symbolu. Komentář XML u cref k B::Test bude `<seealso cref="!:B::Test" />`, že je odkaz na A::Test ve správném formátu `<seealso cref="M:A.Test" />`.
+
+```
+// xml_seealso_tag.cpp
+// compile with: /LD /clr /doc
+// post-build command: xdcmake xml_seealso_tag.dll
+
+/// Text for class A.
+public ref struct A {
+   /// <summary><seealso cref="A::Test"/>
+   /// <seealso cref="B::Test"/>
+   /// </summary>
+   void MyMethod(int Int1) {}
+
+   /// text
+   void Test() {}
+};
+
+/// Text for class B.
+public ref struct B {
+   void Test() {}
+};
+```
+
+## <a name="see-also"></a>Viz také
+
+[Dokumentace XML](../ide/xml-documentation-visual-cpp.md)

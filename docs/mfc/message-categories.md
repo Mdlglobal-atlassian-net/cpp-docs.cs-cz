@@ -1,5 +1,5 @@
 ---
-title: Kategorie zpráv | Microsoft Docs
+title: Kategorie zpráv | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,36 +20,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 051fe93ef689959b0a0beb2b1b0f213adc942446
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 3b1b8da6f6c1b94432d9cd4c91d88f6d844fbb27
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929644"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433046"
 ---
 # <a name="message-categories"></a>Kategorie zpráv
-Jaké zprávy napíšete obslužné rutiny pro existují tří kategorií:  
-  
-1.  zprávy Windows  
-  
-     To zahrnuje především zprávy, počínaje **WM_** předpona, s výjimkou wm_command –. Zprávy Windows zpracovává windows a zobrazení. Tyto zprávy mají často parametry, které jsou použité při určení způsobu zpracování zprávy.  
-  
-2.  Oznámení ovládacího prvku  
-  
-     To zahrnuje wm_command – zprávy oznámení z ovládacích prvků a dalších podřízená okna do své nadřazené windows. Například ovládací prvek upravit odešle nadřazené wm_command – zprávy obsahující kód EN_CHANGE oznámení ovládacího prvku, když uživatel má provést akce, která mohou být ovlivněny text v textovém poli. Okně obslužné rutiny pro zprávu odpoví na oznámení některé vhodným způsobem, jako je například načítání textu v ovládacím prvku.  
-  
-     Rozhraní framework směrování zpráv oznámení ovládacího prvku jako jiný **WM_** zprávy. Jedinou výjimkou je však zpráva oznámení ovládacího prvku BN_CLICKED poslal tlačítka, když uživatel klikne, je. Tato zpráva je zpracováván speciálně jako zprávou příkazu a směrovat jako ostatní příkazy.  
-  
-3.  Příkaz zprávy  
-  
-     To zahrnuje wm_command – zprávy oznámení z objektů uživatelského rozhraní: nabídky, tlačítek panelu nástrojů a klávesy akcelerátoru. Rozhraní framework zpracovává příkazy jinak než ostatní zprávy a může zpracovat pomocí další typy objektů, jak je popsáno v [cíle příkazů](../mfc/command-targets.md).  
-  
-##  <a name="_core_windows_messages_and_control.2d.notification_messages"></a> Zprávy Windows a zpráv s oznámením ovládacího prvku  
- Zprávy v kategoriích 1 a 2 – zpráv systému Windows a oznámení ovládacích prvků – jsou zpracovávány v systému windows: objekty třídy odvozené od třídy `CWnd`. To zahrnuje `CFrameWnd`, `CMDIFrameWnd`, `CMDIChildWnd`, `CView`, `CDialog`, a vlastní třídy odvozené od těchto základní třídy. Tyto objekty zapouzdřují `HWND`, popisovač pro okno systému Windows.  
-  
-##  <a name="_core_command_messages"></a> Příkaz zprávy  
- Zprávy v kategorii 3 – příkazy – může zpracovávat širší různé objekty: dokumenty, šablony dokumentů a objektu application kromě windows a zobrazení. Pokud příkaz přímo ovlivňuje některé konkrétní objekt, má smysl mít tento objekt zpracování příkazu. Příkaz Otevřít v nabídce Soubor je třeba logicky spojený s aplikací: aplikace otevře zadaný dokument po přijetí příkazu. Obslužná rutina pro příkaz otevřete tak je funkce člena třídy aplikace. Další informace o příkazech a jak se směrují na objekty najdete v tématu [jakým způsobem volá Framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Zprávy a příkazy v prostředí .NET Framework](../mfc/messages-and-commands-in-the-framework.md)
+
+Jaké typy zpráv, které při zápisu obslužných rutin pro existují tři hlavní kategorie:
+
+1. zprávy Windows
+
+     Jedná se především zpráv, počínaje **WM_** předponu, s výjimkou wm_command –. Zprávy Windows provádí služba systému windows a zobrazení. Tyto zprávy mají často parametry, které se používají při určování, jak zpracovat zprávy.
+
+1. Oznámení ovládacího prvku
+
+     To zahrnuje wm_command – zprávy oznámení z ovládacích prvků a jiných podřízených oken do své nadřazené windows. Například ovládací prvek úprav odešle svého nadřazeného objektu wm_command – zprávy obsahující kód EN_CHANGE oznámení ovládacího prvku, když uživatel má provést akce, která mohou být ovlivněny textu v textovém poli. V okně obslužné rutiny pro zprávy jsou reaguje na zprávy oznámení některé vhodným způsobem, jako je například načítání textu v ovládacím prvku.
+
+     Rozhraní framework směruje zprávy s oznámením ovládacího prvku jako jiné **WM_** zprávy. Jedinou výjimkou je však BN_CLICKED oznámení ovládacího prvku zprávy odeslané tlačítka, když uživatel klikne, je. Tato zpráva je speciálně jako zprávou příkazu zpracovány a směrovat stejně jako ostatní příkazy.
+
+1. Zprávy příkazů
+
+     Jedná se o wm_command – zprávy oznámení z objektů uživatelského rozhraní: nabídek, tlačítek panelu nástrojů a přístupové klávesy. Rozhraní framework zpracovává příkazy jinak než ostatní zprávy a je možné je zpracovávat pomocí další typy objektů, jak je vysvětleno v [cíle příkazů](../mfc/command-targets.md).
+
+##  <a name="_core_windows_messages_and_control.2d.notification_messages"></a> Zprávy Windows a zprávy s oznámením ovládacího prvku
+
+Zprávy do kategorií, 1 a 2 – Windows zprávy a oznámení ovládacích prvků – provádí služba systému windows: objekty třídy odvozené od třídy `CWnd`. Jedná se o `CFrameWnd`, `CMDIFrameWnd`, `CMDIChildWnd`, `CView`, `CDialog`, a vlastní třídy odvozené z těchto základních tříd. Tyto objekty zapouzdřují `HWND`, popisovač okna Windows.
+
+##  <a name="_core_command_messages"></a> Zprávy příkazů
+
+Zprávy v kategorii 3 – příkazy – mohou být zpracovány širší objektů: dokumenty, šablony dokumentů a objekt aplikace kromě systému windows a zobrazení. Příkaz přímo ovlivní Některé konkrétní objekt, je vhodné, aby tento objekt zpracování příkazu. Například otevřete příkaz v nabídce Soubor je logicky spojený s aplikací: aplikace se otevře zadaný dokument při přijetí příkazu. Proto je obslužnou rutinu pro příkaz Otevřít členské funkce třídy aplikace. Další informace o příkazech a jak se směrují do objektů naleznete v tématu [jakým způsobem volá Framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md).
+
+## <a name="see-also"></a>Viz také
+
+[Zprávy a příkazy v prostředí .NET Framework](../mfc/messages-and-commands-in-the-framework.md)
 

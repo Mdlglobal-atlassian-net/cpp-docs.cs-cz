@@ -1,5 +1,5 @@
 ---
-title: Soubory nápovědy (WinHelp) | Microsoft Docs
+title: Soubory nápovědy (WinHelp) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,33 +14,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 505506c7f3a14a73c6b0c859a70938fee3eed69e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 4b2b35376fa5e870396bd54af2ada2748dd92bd4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33331542"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372350"
 ---
 # <a name="help-files-winhelp"></a>Soubory nápovědy (WinHelp)
-Následující soubory jsou vytvořeny po přidání WinHelp typu nápovědy k aplikaci tak, že vyberete **Kontextová nápověda** zaškrtávací políčko a potom vyberete **WinHelp formátu** v [Upřesňující funkce](../mfc/reference/advanced-features-mfc-application-wizard.md) stránky Průvodce aplikací MFC.  
-  
-|Název souboru|Umístění adresáře|Umístění v Průzkumníku řešení|Popis|  
-|---------------|------------------------|--------------------------------|-----------------|  
-|*Projname*.hpj|*Projname*\hlp|Zdrojové soubory|Soubor nápovědy projektu používá kompilátoru nápovědu k vytvoření programu nebo soubor nápovědy ovládacího prvku.|  
-|*Projname*.rtf|*Projname*\hlp|Soubory nápovědy|Obsahuje informace o úpravách souboru HPJ a témata šablony, které můžete upravit.|  
-|*Projname*.cnt|*Projname*\hlp|Soubory nápovědy|Poskytuje struktury **obsah** okna nápovědy k systému Windows.|  
-|Makehelp.bat|*Projname*|Zdrojové soubory|Používá systém pro sestavení projektu nápovědy během kompilace projektu.|  
-|PRINT.RTF|*Projname*\hlp|Soubory nápovědy|Vytvoří, pokud projekt zahrnuje podporu tisku (výchozí). Popisuje příkazy pro tisk a dialogová okna.|  
-|*.bmp|*Projname*\hlp|Zdrojové soubory|Obsahovat bitových kopií pro jiné témata nápovědy.|  
-  
- Můžete přidat podporu nápovědy do projektu MFC ovládací prvek ActiveX výběrem **Generovat soubory nápovědy** v [nastavení aplikace](../mfc/reference/application-settings-mfc-activex-control-wizard.md) kartě Průvodce ovládacím prvkem ActiveX knihovny MFC. Následující soubory se přidají do projektu, když přidáte podporu nápovědy do ovládacího prvku ActiveX knihovny MFC:  
-  
-|Název souboru|Umístění adresáře|Umístění v Průzkumníku řešení|Popis|  
-|---------------|------------------------|--------------------------------|-----------------|  
-|*Projname*.hpj|*Projname*\hlp|Zdrojové soubory|Soubor projektu používá kompilátoru nápovědu k vytvoření programu nebo soubor nápovědy ovládacího prvku.|  
-|*Projname*.rtf|*Projname*\hlp|Projekt|Obsahuje informace o úpravách souboru HPJ a témata šablony, které můžete upravit.|  
-|Makehelp.bat|*Projname*|Zdrojové soubory|Používá systém pro sestavení projektu nápovědy během kompilace projektu.|  
-|Bullet.bmp|*Projname*|Zdrojové soubory|Používá standardní témata nápovědy k představují seznamy s odrážkami.|  
-  
-## <a name="see-also"></a>Viz také  
- [Typy souborů vytvořených pro projekty Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)
+
+Následující soubory jsou vytvořeny při přidání typu WinHelp nápovědy do vaší aplikace tak, že vyberete **kontextové nápovědy** zaškrtávací políčko a pak vyberete **WinHelp formátu** v [Rozšířené funkce](../mfc/reference/advanced-features-mfc-application-wizard.md) stránky Průvodce aplikací knihovny MFC.
+
+|Název souboru|Umístění adresáře|Umístění v Průzkumníku řešení|Popis|
+|---------------|------------------------|--------------------------------|-----------------|
+|*Projname*.hpj|*Název_projektu*\hlp|Zdrojové soubory|Soubor nápovědy projekt používá kompilátor nápovědy k vytvoření aplikace nebo souboru nápovědy ovládacího prvku.|
+|*Projname*.rtf|*Název_projektu*\hlp|Soubory nápovědy|Obsahuje informace o přizpůsobení souboru HPJ a šablony témata, které můžete upravovat.|
+|*Název_projektu*.cnt|*Název_projektu*\hlp|Soubory nápovědy|Poskytuje strukturu pro **obsah** okno v nápovědě k Windows.|
+|Makehelp.bat|*Projname*|Zdrojové soubory|Používá systém sestavení projektu nápovědy při kompilaci projektu.|
+|PRINT.RTF|*Název_projektu*\hlp|Soubory nápovědy|Vytvoří, pokud váš projekt zahrnuje podporu tisku (výchozí). Popisuje příkazy pro tisk a dialogových oknech.|
+|*.bmp|*Název_projektu*\hlp|Zdrojové soubory|Obsahují obrázky pro různé témata nápovědy.|
+
+Podporu nápovědy do projektu knihovny ovládací prvek ActiveX knihovny MFC lze přidat výběrem **Generovat soubory nápovědy** v [nastavení aplikace](../mfc/reference/application-settings-mfc-activex-control-wizard.md) kartu průvodce ovládací prvek ActiveX knihovny MFC. Následující soubory jsou přidány do projektu přidáte Nápověda a odborná pomoc pro ovládací prvek ActiveX knihovny MFC:
+
+|Název souboru|Umístění adresáře|Umístění v Průzkumníku řešení|Popis|
+|---------------|------------------------|--------------------------------|-----------------|
+|*Projname*.hpj|*Název_projektu*\hlp|Zdrojové soubory|Soubor projektu používá kompilátor nápovědy k vytvoření aplikace nebo souboru nápovědy ovládacího prvku.|
+|*Projname*.rtf|*Název_projektu*\hlp|Projekt|Obsahuje informace o přizpůsobení souboru HPJ a šablony témata, které můžete upravovat.|
+|Makehelp.bat|*Projname*|Zdrojové soubory|Používá systém sestavení projektu nápovědy při kompilaci projektu.|
+|Bullet.bmp|*Projname*|Zdrojové soubory|Používá standardní témata nápovědy k reprezentaci seznamy s odrážkami.|
+
+## <a name="see-also"></a>Viz také
+
+[Typy souborů vytvořených pro projekty Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)

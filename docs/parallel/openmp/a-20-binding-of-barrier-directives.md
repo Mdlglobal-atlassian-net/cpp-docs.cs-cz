@@ -1,5 +1,5 @@
 ---
-title: A.20 vazby direktiv bariéry | Microsoft Docs
+title: A.20 vazby direktiv barrier | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,47 +12,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1123ab0b4d406a613176dfcd50f459d089e45d9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 628920caa6a122230f42394cc757e3abdb1874cd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691405"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381306"
 ---
 # <a name="a20---binding-of-barrier-directives"></a>A.20   Vazby direktiv barrier
-Vazby direktiv pravidla pro volání **barrier** – direktiva vytvořit vazbu na nejbližší obklopuje `parallel` – direktiva. Další informace o vazby direktiv najdete v tématu [části 2.8](../../parallel/openmp/2-8-directive-binding.md) na stránce 32.  
-  
- V následujícím příkladu volání z *hlavní* k *sub2* kompatibilní protože **barrier** (v *sub3*) váže k oblasti paralelní v *sub2*. Volání z *hlavní* k *sub1* kompatibilní protože **barrier** váže k oblasti paralelní v podprogramu *sub2*.  Volání z *hlavní* k *sub3* kompatibilní protože **bariéry** nemá vazbu na libovolné paralelní oblasti a bude ignorována. Všimněte si také, že **barrier** synchronizuje pouze týmem vláken v oblasti nadřazených paralelní a ne všechny vláken vytvořené v *sub1*.  
-  
-```  
-int main()  
-{  
-    sub1(2);  
-    sub2(2);  
-    sub3(2);  
-}  
-  
-void sub1(int n)  
-{  
-    int i;  
-    #pragma omp parallel private(i) shared(n)  
-    {  
-        #pragma omp for  
-        for (i=0; i<n; i++)  
-            sub2(i);  
-    }  
-}  
-  
-void sub2(int k)  
-{  
-     #pragma omp parallel shared(k)  
-     sub3(k);  
-}  
-  
-void sub3(int n)  
-{  
-    work(n);  
-    #pragma omp barrier  
-    work(n);  
-}  
+
+Vazby direktiv pravidla pro volání **bariéry** směrnice vytvořit vazbu na nejbližší uzavírající `parallel` – direktiva. Další informace o vazby direktiv, naleznete v tématu [části 2.8](../../parallel/openmp/2-8-directive-binding.md) na stránce 32.
+
+V následujícím příkladu volání z *hlavní* k *sub2* je kompatibilní s protože **bariéry** (v *sub3*) vytvoří vazbu paralelní oblasti v *sub2*. Volání z *hlavní* k *sub1* je kompatibilní s protože **bariéry** váže k paralelní oblastí v podprogram *sub2*.  Volání z *hlavní* k *sub3* vyhovuje protože **bariéry** nemá vazbu v jakémkoli paralelní oblasti a je ignorován. Všimněte si také, **bariéry** synchronizuje pouze týmu vlákna v nadřazeném paralelní oblasti a ne všechna vlákna vytvořená v *sub1*.
+
+```
+int main()
+{
+    sub1(2);
+    sub2(2);
+    sub3(2);
+}
+
+void sub1(int n)
+{
+    int i;
+    #pragma omp parallel private(i) shared(n)
+    {
+        #pragma omp for
+        for (i=0; i<n; i++)
+            sub2(i);
+    }
+}
+
+void sub2(int k)
+{
+     #pragma omp parallel shared(k)
+     sub3(k);
+}
+
+void sub3(int n)
+{
+    work(n);
+    #pragma omp barrier
+    work(n);
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Mapy odesílání | Microsoft Docs
+title: Mapy odbavení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 06/20/2018
 ms.technology:
@@ -18,32 +18,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 107dba503c11d3810f75dcd4ee6e6f5af47008fc
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 3d22c94513e80c4f353de9e10588f219a2d3be92
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122977"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388066"
 ---
 # <a name="dispatch-maps"></a>Expediční mapy
 
-OLE – automatizace poskytuje způsobů, jak volat metody a pro přístup k vlastnostem napříč aplikacemi. Tento mechanismus poskytl knihovny Microsoft Foundation Class pro odeslání tyto požadavky je "mapy odesílání," což znamená, že názvy interních a externích objekt funkce a vlastnosti, jakož i datové typy vlastností sami nebo argumenty funkce.
+Automatizace OLE způsoby volání metod a získat přístup k vlastnostem napříč aplikacemi. Mechanismus poskytnutých knihovny Microsoft Foundation Class pro odesílání tyto žádosti je "Mapa odeslání,", která označuje interní a externí názvy objektů funkce a vlastnosti, jakož i datové typy vlastností sami nebo argumenty funkce.
 
 |Makra mapy odeslání|Popis|
 |-|-|
-|[DECLARE_DISPATCH_MAP –](#declare_dispatch_map)|Deklaruje, že mapy odesílání bude použit ke zveřejnění třídy a metody a vlastnosti (musí používat v deklaraci třídy).|
-|[BEGIN_DISPATCH_MAP –](#begin_dispatch_map)|Spustí definici expediční mapy.|
-|[END_DISPATCH_MAP –](#end_dispatch_map)|Ukončí definici expediční mapy.|
-|[DISP_FUNCTION –](#disp_function)|Používá se v mapě odesílání k definování funkce automatizace OLE.|
-|[DISP_PROPERTY –](#disp_property)|Definuje vlastnost automatizace OLE.|
-|[DISP_PROPERTY_EX –](#disp_property_ex)|Definuje vlastnost automatizace OLE a názvy funkce Get a Set.|
-|[DISP_PROPERTY_NOTIFY –](#disp_property_notify)|Definuje vlastnost automatizace OLE s oznámení.|
-|[DISP_PROPERTY_PARAM –](#disp_property_param)|Definuje vlastnosti automatizace OLE, která přebírá názvy a parametry funkce Get a Set.|
-|[DISP_DEFVALUE –](#disp_defvalue)|Díky existující vlastnost Výchozí hodnota objektu.|
+|[DECLARE_DISPATCH_MAP](#declare_dispatch_map)|Deklaruje, že mapa odeslání se použije k vystavení metody třídy a vlastnosti (musí se použít v deklaraci třídy).|
+|[BEGIN_DISPATCH_MAP](#begin_dispatch_map)|Spustí definice mapa odeslání.|
+|[END_DISPATCH_MAP](#end_dispatch_map)|Ukončí definici mapa odeslání.|
+|[DISP_FUNCTION](#disp_function)|Použít v objektu map odeslání definice funkce automatizace OLE.|
+|[DISP_PROPERTY](#disp_property)|Definuje vlastnost automatizace OLE.|
+|[DISP_PROPERTY_EX](#disp_property_ex)|Definuje vlastnost automatizace OLE a názvy funkce Get a Set.|
+|[DISP_PROPERTY_NOTIFY](#disp_property_notify)|Definuje vlastnost automatizace OLE s oznámením.|
+|[DISP_PROPERTY_PARAM](#disp_property_param)|Definuje vlastnosti automatizace OLE, který přebírá názvy a parametry funkce Get a Set.|
+|[DISP_DEFVALUE](#disp_defvalue)|Díky existující vlastnost výchozí hodnotu objektu.|
 
-## <a name="declare_dispatch_map"></a>  DECLARE_DISPATCH_MAP –
+## <a name="declare_dispatch_map"></a>  DECLARE_DISPATCH_MAP
 
-Pokud `CCmdTarget`-odvozené třídy v programu podporuje automatizace OLE, že třída musí poskytnout mapy odesílání vystavit její metody a vlastnosti.
+Pokud `CCmdTarget`-odvozené třídy ve svém programu podporuje automatizace OLE, že třída musí poskytovat mapa odeslání ke zveřejnění jejím metodám a vlastnostem.
 
 ```cpp
 DECLARE_DISPATCH_MAP()
@@ -51,12 +51,12 @@ DECLARE_DISPATCH_MAP()
 
 ### <a name="remarks"></a>Poznámky
 
-Použijte declare_dispatch_map – makro na konci deklarace třídy. Pak na. CPP soubor, který definuje členské funkce pro třídu, použijte begin_dispatch_map – makro. Potom zahrňte makro položky pro každý vlastní třídy zveřejněné metod a vlastností (disp_function – disp_property – a tak dále). Nakonec použijte end_dispatch_map – makro.
+Použití DECLARE_DISPATCH_MAP – makro na konec deklarace třídy. Potom v. Soubor CPP, který definuje členské funkce třídy, použijte BEGIN_DISPATCH_MAP – makro. Potom zahrnovat – makro položky pro každou z metod vystavených vaší třídy a vlastnosti (DISP_FUNCTION DISP_PROPERTY a tak dále). Nakonec použijte END_DISPATCH_MAP – makro.
 
 > [!NOTE]
-> Pokud je po declare_dispatch_map – deklarovat žádné členy, je nutné zadat nový typ přístupu ( **veřejné**, **privátní**, nebo **chráněné**) pro ně.
+> Pokud deklarujete po DECLARE_DISPATCH_MAP žádné členy, je nutné zadat nový typ přístupu ( **veřejné**, **privátní**, nebo **chráněné**) pro ně.
 
-Průvodce vytvořením aplikace a kód průvodců pomáhat při vytváření třídy automatizace a zachování expediční mapy. Další informace o expediční mapy, najdete v části [automatizační servery](../../mfc/automation-servers.md).
+Průvodci Průvodce aplikací a kódu pomáhají při vytváření třídy automatizace a zachování expediční mapy. Další informace o expediční mapy, naleznete v tématu [automatizační servery](../../mfc/automation-servers.md).
 
 ### <a name="example"></a>Příklad
 
@@ -66,9 +66,9 @@ Průvodce vytvořením aplikace a kód průvodců pomáhat při vytváření tř
 
 **Záhlaví:** afxwin.h
 
-## <a name="begin_dispatch_map"></a>  BEGIN_DISPATCH_MAP –
+## <a name="begin_dispatch_map"></a>  BEGIN_DISPATCH_MAP
 
-Deklaruje definici expediční mapy.
+Deklaruje definici mapy odeslání.
 
 ```cpp
 BEGIN_DISPATCH_MAP(theClass, baseClass)
@@ -76,23 +76,23 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 
 ### <a name="parameters"></a>Parametry
 
-*theClass*  
-Určuje název třídy, který vlastní toto odesílání mapování.
+*theClass*<br/>
+Určuje název třídy, která je vlastníkem této mapy odeslání.
 
-*baseclass –*  
+*baseClass*<br/>
 Určuje název základní třídy *theClass*.
 
 ### <a name="remarks"></a>Poznámky
 
-V souboru implementace (sada), který definuje členské funkce pro třídu začínat begin_dispatch_map – makro mapy odesílání, přidejte makro položky pro každý odesílání funkcí a vlastností a dokončení odesílání mapa s END_DISPATCH_ Makra MAPY.
+V souboru implementace (.cpp), který definuje členské funkce třídy mapa odeslání začínat BEGIN_DISPATCH_MAP – makro, přidat makro položky pro každý z odeslání funkce a vlastnosti a dokončete odeslání mapování END_DISPATCH_ Makra MAPY.
 
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxdisp.h
 
-## <a name="end_dispatch_map"></a>  END_DISPATCH_MAP –
+## <a name="end_dispatch_map"></a>  END_DISPATCH_MAP
 
-Ukončí definici expediční mapy.
+Ukončí definici mapy odeslání.
 
 ```cpp
 END_DISPATCH_MAP()
@@ -100,15 +100,15 @@ END_DISPATCH_MAP()
 
 ### <a name="remarks"></a>Poznámky
 
-Musíte ho použít ve spojení s begin_dispatch_map –.
+Je možné použít ve spojení s BEGIN_DISPATCH_MAP.
 
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxdisp.h
 
-## <a name="disp_function"></a>  DISP_FUNCTION –
+## <a name="disp_function"></a>  DISP_FUNCTION
 
-Definuje funkci automatizace OLE v mapě odesílání.
+Definuje funkci automatizace OLE v mapa odeslání.
 
 ```cpp
 DISP_FUNCTION(
@@ -121,24 +121,24 @@ DISP_FUNCTION(
 
 ### <a name="parameters"></a>Parametry
 
-*theClass*  
+*theClass*<br/>
 Název třídy.
 
-*pszName*  
+*pszName*<br/>
 Externí název funkce.
 
-*pfnMember*  
+*pfnMember*<br/>
 Název členské funkce.
 
-*vtRetVal*  
-Hodnota, zadat návratový typ funkce.
+*vtRetVal*<br/>
+Hodnota určující návratový typ funkce.
 
-*vtsParams*  
-Seznam jedné nebo více konstant určující seznam parametrů pro funkci oddělených mezerami.
+*vtsParams*<br/>
+Místo oddělený seznam jednoho nebo více konstant určující seznam parametrů funkce.
 
 ### <a name="remarks"></a>Poznámky
 
-*VtRetVal* argument je typu VARTYPE. Z následujících možných hodnot pro tento argument, která `VARENUM` výčtu:
+*VtRetVal* argument je typu VARTYPE. Následující možné hodnoty pro tento argument pocházejí ze `VARENUM` výčtu:
 
 |Symbol|Návratový typ|
 |------------|-----------------|
@@ -148,21 +148,21 @@ Seznam jedné nebo více konstant určující seznam parametrů pro funkci oddě
 |VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|CY|
-|VT_DATE –|DATUM|
+|VT_DATE|DATUM|
 |VT_BSTR|BSTR|
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
 |VT_BOOL|BOOL|
 |VT_VARIANT|VARIANT|
-|HODNOTA VT_UNKNOWN|LPUNKNOWN|
+|VT_UNKNOWN|LPUNKNOWN|
 
-*VtsParams* argument je seznam hodnot oddělených mezerami `VTS_*` konstanty. Jeden nebo více z těchto hodnot oddělených mezerami (ne čárkami) určuje seznam parametrů funkce. Například
+*VtsParams* argument je místo oddělený seznam hodnot z `VTS_*` konstanty. Jeden nebo více z těchto hodnot oddělených mezerami (ne čárky) určuje seznam parametrů funkce. Například
 
 [!code-cpp[NVC_MFCAutomation#14](../../mfc/codesnippet/cpp/dispatch-maps_2.cpp)]
 
-Určuje seznam obsahující krátké celé číslo následuje ukazatel na krátké celé číslo.
+Určuje seznam obsahující krátké celé číslo, za nímž následuje ukazatel na krátké celé číslo.
 
-`VTS_` Konstanty a jejich významy jsou následující:
+`VTS_` Konstanty a jejich význam, jsou následující:
 
 |Symbol|Typ parametru|
 |------------|--------------------|
@@ -170,17 +170,17 @@ Určuje seznam obsahující krátké celé číslo následuje ukazatel na krátk
 |VTS_I4|**long**|
 |VTS_R4|**float**|
 |VTS_R8|**double**|
-|VTS_CY|`const CY` nebo `CY*`|
+|VTS_CY|`const CY` Nebo `CY*`|
 |VTS_DATE|DATUM|
 |VTS_BSTR|LPCSTR|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_SCODE|SCODE|
 |VTS_BOOL|BOOL|
-|VTS_VARIANT|`const VARIANT*` nebo `VARIANT&`|
+|VTS_VARIANT|`const VARIANT*` Nebo `VARIANT&`|
 |VTS_UNKNOWN|LPUNKNOWN|
-|VTS_PI2|__krátký\*__|
-|VTS_PI4|__dlouhá\*__|
-|VTS_PR4|__plovoucí desetinná čárka\*__|
+|VTS_PI2|__krátké\*__|
+|VTS_PI4|__Long\*__|
+|VTS_PR4|__plovoucí desetinnou čárkou\*__|
 |VTS_PR8|__Double\*__|
 |VTS_PCY|`CY*`|
 |VTS_PDATE|`DATE*`|
@@ -190,15 +190,15 @@ Určuje seznam obsahující krátké celé číslo následuje ukazatel na krátk
 |VTS_PBOOL|`BOOL*`|
 |VTS_PVARIANT|`VARIANT*`|
 |VTS_PUNKNOWN|`LPUNKNOWN*`|
-|VTS_NONE|Žádné parametry|
+|VTS_NONE|Žádné parametry.|
 
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxdisp.h
 
-## <a name="disp_property"></a>  DISP_PROPERTY –
+## <a name="disp_property"></a>  DISP_PROPERTY
 
-Definuje vlastnost automatizace OLE v mapě odesílání.
+Definuje vlastnost automatizace OLE v mapa odeslání.
 
 ```cpp
 DISP_PROPERTY(
@@ -210,21 +210,21 @@ DISP_PROPERTY(
 
 ### <a name="parameters"></a>Parametry
 
-*theClass*  
+*theClass*<br/>
 Název třídy.
 
-*pszName*  
+*pszName*<br/>
 Externí název vlastnosti.
 
-*Členské jméno*  
-Název členské proměnné, ve kterém je uložený vlastnost.
+*Jméno*<br/>
+Název členské proměnné, ve kterém je uložené vlastnosti.
 
-*vtPropType*  
+*vtPropType*<br/>
 Hodnota určující typ vlastnosti.
 
 ### <a name="remarks"></a>Poznámky
 
-*VtPropType* argument je typu **VARTYPE**. Možné hodnoty pro tento argument jsou převzaty z výčtu VARENUM:
+*VtPropType* argument je typu **VARTYPE**. Možné hodnoty pro tento argument pocházejí ze výčet VARENUM:
 
 |Symbol|Typ vlastnosti|
 |------------|-----------------------|
@@ -233,23 +233,23 @@ Hodnota určující typ vlastnosti.
 |VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|CY|
-|VT_DATE –|DATUM|
+|VT_DATE|DATUM|
 |VT_BSTR|`CString`|
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
 |VT_BOOL|BOOL|
 |VT_VARIANT|VARIANT|
-|HODNOTA VT_UNKNOWN|LPUNKNOWN|
+|VT_UNKNOWN|LPUNKNOWN|
 
-Až se změní hodnota členské proměnné určeného vlastnosti externích klientských *memberName* změní; nejsou žádná oznámení změny.
+Při změně vlastností, je hodnota členské proměnné určené externího klienta *memberName* změní; neexistuje žádná upozornění na změnu.
 
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxdisp.h
 
-## <a name="disp_property_ex"></a>  DISP_PROPERTY_EX –
+## <a name="disp_property_ex"></a>  DISP_PROPERTY_EX
 
-Definuje vlastnosti automatizace OLE a název funkce, které slouží k získání a nastavení vlastnosti na hodnotu v mapě odesílání.
+Definuje vlastnosti automatizace OLE a služby název funkce, které slouží k získání a nastavení hodnoty vlastnosti v objektu map odeslání.
 
 ```cpp
 DISP_PROPERTY_EX(
@@ -262,34 +262,34 @@ DISP_PROPERTY_EX(
 
 ### <a name="parameters"></a>Parametry
 
-*theClass*  
+*theClass*<br/>
 Název třídy.
 
-*pszName*  
+*pszName*<br/>
 Externí název vlastnosti.
 
-*memberGet*  
-Název členské funkce používá GET pro vlastnost.
+*memberGet*<br/>
+Název členské funkce použít k získání vlastnosti.
 
-*Sada členů*  
+*Členů*<br/>
 Název členské funkce lze nastavit vlastnost.
 
-*vtPropType*  
+*vtPropType*<br/>
 Hodnota určující typ vlastnosti.
 
 ### <a name="remarks"></a>Poznámky
 
-*MemberGet* a *sada členů* funkce mají podpisy dáno *vtPropType* argument. *MemberGet* funkce nezadávaly žádné argumenty a vrátí hodnotu typu zadaném pomocí *vtPropType*. *Sada členů* funkce přebírá argument v typu zadaném pomocí *vtPropType* a nic.
+*MemberGet* a *členů* funkce mají podpisy, které jsou určeny *vtPropType* argument. *MemberGet* funkce nepřijímá žádné argumenty a vrátí hodnotu typu určeného *vtPropType*. *Členů* funkce přijímá argument tohoto typu určeného *vtPropType* a nic nespouští.
 
-*VtPropType* argument je typu VARTYPE. Možné hodnoty pro tento argument jsou převzaty z výčtu VARENUM. Seznam těchto hodnot, najdete v části poznámky pro *vtRetVal* parametr v [disp_function –](#disp_function). Všimněte si, že VT_EMPTY, uvedené v disp_function – poznámky, není povolen jako datový typ vlastnosti.
+*VtPropType* argument je typu VARTYPE. Možné hodnoty pro tento argument pocházejí ze výčet VARENUM. Seznam těchto hodnot najdete v tématu poznámky pro *vtRetVal* parametr [DISP_FUNCTION](#disp_function). Všimněte si, že VT_EMPTY uvedených v poznámkách DISP_FUNCTION není povolená jako datový typ vlastnosti.
 
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxdisp.h
 
-## <a name="disp_property_notify"></a>  DISP_PROPERTY_NOTIFY –
+## <a name="disp_property_notify"></a>  DISP_PROPERTY_NOTIFY
 
-Definuje vlastnost automatizace OLE s oznámení v mapě odesílání.
+Definuje vlastnost automatizace OLE s oznámením v mapa odeslání.
 
 ```cpp
 DISP_PROPERTY_NOTIFY(
@@ -302,26 +302,26 @@ DISP_PROPERTY_NOTIFY(
 
 ### <a name="parameters"></a>Parametry
 
-*theClass*  
+*theClass*<br/>
 Název třídy.
 
-*szExternalName*  
+*szExternalName*<br/>
 Externí název vlastnosti.
 
-*Členské jméno*  
-Název členské proměnné, ve kterém je uložený vlastnost.
+*Jméno*<br/>
+Název členské proměnné, ve kterém je uložené vlastnosti.
 
-*pfnAfterSet*  
+*pfnAfterSet*<br/>
 Název funkce oznámení pro *szExternalName*.
 
-*vtPropType*  
+*vtPropType*<br/>
 Hodnota určující typ vlastnosti.
 
 ### <a name="remarks"></a>Poznámky
 
-Na rozdíl od vlastnosti definované s disp_property –, bude vlastnost definovanou s disp_property_notify – automaticky volání funkce určeného *pfnAfterSet* při změně vlastnosti.
+Na rozdíl od vlastnosti definované s DISP_PROPERTY vlastnosti definované pomocí DISP_PROPERTY_NOTIFY automaticky zavolá funkci zadanou na základě *pfnAfterSet* když je změněna vlastnost.
 
-*VtPropType* argument je typu VARTYPE. Možné hodnoty pro tento argument jsou převzaty z výčtu VARENUM:
+*VtPropType* argument je typu VARTYPE. Možné hodnoty pro tento argument pocházejí ze výčet VARENUM:
 
 |Symbol|Typ vlastnosti|
 |------------|-----------------------|
@@ -330,21 +330,21 @@ Na rozdíl od vlastnosti definované s disp_property –, bude vlastnost definov
 |VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|CY|
-|VT_DATE –|DATUM|
+|VT_DATE|DATUM|
 |VT_BSTR|`CString`|
 |VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
 |VT_BOOL|BOOL|
 |VT_VARIANT|VARIANT|
-|HODNOTA VT_UNKNOWN|LPUNKNOWN|
+|VT_UNKNOWN|LPUNKNOWN|
 
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxdisp.h
 
-## <a name="disp_property_param"></a>  DISP_PROPERTY_PARAM –
+## <a name="disp_property_param"></a>  DISP_PROPERTY_PARAM
 
-Definuje vlastnost přístupný pomocí samostatné `Get` a `Set` členské funkce.
+Definuje vlastnost k němu přistupovat pomocí samostatného `Get` a `Set` členské funkce.
 
 ```cpp
 DISP_PROPERTY_PARAM(
@@ -358,35 +358,35 @@ DISP_PROPERTY_PARAM(
 
 ### <a name="parameters"></a>Parametry
 
-*theClass*  
+*theClass*<br/>
 Název třídy.
 
-*pszExternalName*  
+*pszExternalName*<br/>
 Externí název vlastnosti.
 
-*pfnGet*  
-Název členské funkce používá GET pro vlastnost.
+*pfnGet*<br/>
+Název členské funkce použít k získání vlastnosti.
 
-*pfnSet*  
+*pfnSet*<br/>
 Název členské funkce lze nastavit vlastnost.
 
-*vtPropType*  
+*vtPropType*<br/>
 Hodnota určující typ vlastnosti.
 
-*vtsParams*  
-Řetězec oddělených mezerami `VTS_*` typy variant parametr, jednu pro každý parametr.
+*vtsParams*<br/>
+Řetězec oddělených mezerami `VTS_*` typy parametr typu variant, jeden pro každý parametr.
 
 ### <a name="remarks"></a>Poznámky
 
-Na rozdíl od disp_property_ex – makro toto makro umožňuje určit seznam parametrů pro vlastnost. To je užitečné pro implementaci vlastnosti, které jsou indexované nebo parametry.
+Na rozdíl od DISP_PROPERTY_EX – makro toto makro umožňuje určit seznam parametrů pro vlastnost. To je užitečné pro implementaci vlastnosti, které jsou indexována nebo s parametry.
 
 ### <a name="example"></a>Příklad
 
-Vezměte v úvahu následující deklaraci get a nastavte členské funkce, které umožňují uživateli požadovat konkrétní řádků a sloupců při přístupu k vlastnosti:
+Zvažte následující deklaraci get a nastavte členské funkce, které uživateli umožňují požadovat konkrétní řádek a sloupec při přístupu k vlastnosti:
 
 [!code-cpp[NVC_MFCActiveXControl#9](../../mfc/codesnippet/cpp/dispatch-maps_3.h)]
 
-Tyto hodnoty odpovídají následující disp_property_param – makro v odesílání mapy ovládacího prvku:
+Tyto weby odpovídají na následující DISP_PROPERTY_PARAM – makro v mapování ovládacího prvku odeslání:
 
 [!code-cpp[NVC_MFCActiveXControl#10](../../mfc/codesnippet/cpp/dispatch-maps_4.cpp)]
 
@@ -394,7 +394,7 @@ Další příklad zvažte následující get a nastavte členské funkce:
 
 [!code-cpp[NVC_MFCActiveXControl#11](../../mfc/codesnippet/cpp/dispatch-maps_5.h)]
 
-Tyto hodnoty odpovídají následující disp_property_param – makro v odesílání mapy ovládacího prvku:
+Tyto weby odpovídají na následující DISP_PROPERTY_PARAM – makro v mapování ovládacího prvku odeslání:
 
 [!code-cpp[NVC_MFCActiveXControl#12](../../mfc/codesnippet/cpp/dispatch-maps_6.cpp)]
 
@@ -402,9 +402,9 @@ Tyto hodnoty odpovídají následující disp_property_param – makro v odesíl
 
 **Záhlaví:** afxdisp.h
 
-## <a name="disp_defvalue"></a>  DISP_DEFVALUE –
+## <a name="disp_defvalue"></a>  DISP_DEFVALUE
 
-Díky existující vlastnost Výchozí hodnota objektu.
+Díky existující vlastnost výchozí hodnotu objektu.
 
 ```cpp
 DISP_DEFVALUE(theClass, pszName)
@@ -412,17 +412,17 @@ DISP_DEFVALUE(theClass, pszName)
 
 ### <a name="parameters"></a>Parametry
 
-*theClass*  
+*theClass*<br/>
 Název třídy.
 
-*pszName*  
-Externí název vlastnosti, která představuje "hodnota" objektu.
+*pszName*<br/>
+Externí název vlastnosti, která představuje "value" objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí výchozí hodnotu můžete nastavit programování objektu automatizace jednodušší pro aplikace Visual Basic.
+Programování objektu automatizace jednodušší pro aplikace Visual Basic můžete nastavit s výchozí hodnotou.
 
-"Výchozí hodnota" objektu je vlastnost, která je načíst nebo nastavit odkaz na objekt neurčuje vlastnost nebo člen funkce.
+"Výchozí hodnota" objektu je vlastnost, která je načíst nebo nastavit, pokud odkaz na objekt neurčuje vlastnost nebo členským funkcím.
 
 ### <a name="requirements"></a>Požadavky
 
@@ -430,4 +430,4 @@ Pomocí výchozí hodnotu můžete nastavit programování objektu automatizace 
 
 ## <a name="see-also"></a>Viz také:
 
-[Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)  
+[Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)

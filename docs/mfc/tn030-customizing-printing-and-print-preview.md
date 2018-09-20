@@ -1,5 +1,5 @@
 ---
-title: 'TN030: Přizpůsobení tisku a tiskového náhledu | Microsoft Docs'
+title: 'TN030: Přizpůsobení tisku a tiskového náhledu | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -20,55 +20,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f67feaf03907cab836d83f4c6116ba1b2cbf32e7
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 8331bbde9cf749d3b86b8970543d7a3b46be90fa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121060"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381137"
 ---
 # <a name="tn030-customizing-printing-and-print-preview"></a>TN030: Přizpůsobení tisku a tiskového náhledu
 
 > [!NOTE]
-> Následující Technická poznámka nebyla aktualizována vzhledem k tomu, že byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata může být zastaralý nebo není správný. Nejnovější informace se doporučuje, vyhledejte téma týkající se v indexu online dokumentaci.
+> Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
 
-Tato poznámka popisuje proces přizpůsobení tisku a přehled tisku a účely procedury zpětného volání používané v `CView` a zpětného volání rutiny a členské funkce `CPreviewView`.
+Tato poznámka popisuje proces přizpůsobení tisku a tiskového náhledu a účely procedury zpětného volání používané v `CView` a zpětné volání rutiny a členské funkce `CPreviewView`.
 
 ## <a name="the-problem"></a>Problém
 
-MFC poskytuje kompletní řešení pro většinu tisk a náhled tisku potřebuje. Ve většině případů je potřeba mít moct tisk a náhled zobrazení málo další kód. Ale existují způsoby, jak optimalizovat tisk, které vyžadují významné úsilí ze strany vývojář a některé aplikace je nutné přidat konkrétní prvky rozhraní na režim náhledu tisku.
+Knihovna MFC poskytuje kompletní řešení pro většinu tisk a náhled tisku potřebuje. Ve většině případů je potřeba mít možnost Tisk a náhled zobrazení trochu další kód. Ale způsoby optimalizovat tisk, které vyžadují značné úsilí ze strany vývojáře a některých aplikací nutné přidat prvky konkrétní uživatelského rozhraní do režimu náhledu.
 
 ## <a name="efficient-printing"></a>Efektivní tisk
 
-Pokud aplikace MFC vytiskne pomocí standardních metod, Windows určí, že všechna volání výstupu grafického rozhraní zařízení (GDI) metafile v paměti. Když `EndPage` je volána, Windows hraje metafile jednou pro každý fyzický vzdálené správy, který tiskárny vyžaduje, aby jednu stránku vytisknout. Během této vykreslování GDI často dotazuje Abort postup k určení, pokud by měly pokračovat. Postup zrušení obvykle umožňuje zprávy, které mají být zpracovány, takže uživatel může přerušit tiskových úloh používajících Tisk dialogové okno.
+Když aplikace knihovny MFC vytiskne pomocí standardních metod, Windows určí, že všechna volání rozhraní grafického zařízení (GDI) výstup v paměti metasouboru. Když `EndPage` je volána, hraje Windows metafile jednou pro každé fyzické pásmo vyžadující tiskárny pro tisk jednu stránku. Během této vykreslování GDI často dotazuje postupu přerušit určilo, zda by měl pokračovat. Postup zrušení obvykle umožňuje zprávy zpracovat tak, aby uživatel se může přerušit tiskových úloh používajících dialogové okno Tisk.
 
-Bohužel se mohou zpomalit proces tisku. Pokud tisk ve vaší aplikaci musí být rychlejší než lze dosáhnout pomocí standardní techniky, musíte implementací ruční řazení do pásem.
+Bohužel to může zpomalit proces tisku. Pokud tisk ve vaší aplikaci musí být rychlejší, než lze dosáhnout pomocí standardní postup, musíte implementovat řazení do pásem ruční.
 
 ## <a name="print-banding"></a>Tisk řazení do pásem
 
-Chcete-li ručně vzdálené, je nutné znovu implementovat tiskové smyčky tak, aby `OnPrint` je volat vícekrát, na stránce (jednou za band). Tiskové smyčky je implementována ve `OnFilePrint` funkce v viewprnt.cpp. Ve vašem `CView`-odvozené třídy, přetížení tuto funkci tak, aby položku mapy zpráv pro zpracování tiskových příkazu volá tiskové funkce. Kopírování `OnFilePrint` rutiny a změňte tiskovou smyčky implementovat řazení do pásem. Pravděpodobně budete také chtít předat řazení do pásem rámeček tiskové funkce, takže můžete optimalizovat kreslení podle části tisku stránky.
+Aby bylo možné ručně pásmo, je nutné znovu implementovat smyčka tisku tak, aby `OnPrint` je volána více než jednou na jedné stránce (jednou za band). Tisk smyčky je implementována v `OnFilePrint` funkce v viewprnt.cpp. Ve vaší `CView`-odvozené třídy, přetížení této funkce tak, aby položku mapy zpráv pro zpracování tisku příkazu volá funkci tisku. Kopírovat `OnFilePrint` rutiny a změnit tisku smyčky implementovat řazení do pásem. Pravděpodobně budete chtít předat řazení do pásem obdélník tisk funkce, takže je možné optimalizovat podle části tištěnou stránku výkresu.
 
-Druhý, musíte často volat `QueryAbort` při vykreslování vzdálené správy. Jinak hodnota nebude zavolána proces přerušit a uživatel nebude možné zrušit tiskové úlohy.
+Za druhé, je nutné často volat `QueryAbort` při kreslení pásmo. V opačném případě nebude zavolána procedury Abort a uživatel bude schopen tiskovou úlohu zrušit.
 
-## <a name="print-preview-electronic-paper-with-user-interface"></a>Náhledu tisku: Elektronické dokumentu s uživatelským rozhraním
+## <a name="print-preview-electronic-paper-with-user-interface"></a>Náhled tisku: Elektronické dokument s uživatelským rozhraním
 
-Náhled, v podstatě pokusí změnit zobrazení do emulaci tiskárnu. Ve výchozím nastavení klientské oblasti hlavního okna se používá jedno nebo dvě stránky plně v rámci okna. Uživatel je schopen přiblížení oblast stránky zobrazíte podrobněji. S další podporu může uživatel i oprávnění k provádění úprav v režimu preview.
+Náhled, v podstatě se pokusí změnit zobrazení do emulaci tiskárnu. Ve výchozím nastavení klientské oblasti hlavního okna slouží k zobrazení jedné nebo dvou stránek plně v rámci okna. Uživatel je schopen přiblížení oblasti stránky a prohlédněte si ho podrobněji. S dodatečnou podporou může uživatel i oprávnění k provádění úprav v režimu náhledu.
 
 ## <a name="customizing-print-preview"></a>Přizpůsobení náhledu tisku
 
-Tato poznámka zabývá pouze jeden aspekt úprav náhledu tisku: Přidání uživatelského rozhraní na režim náhledu. Je možné, ostatní změny, ale tyto změny jsou mimo rozsah toto pojednání.
+Tato poznámka zabývá pouze jeden aspekt úpravy náhledu tisku: Přidání uživatelského rozhraní do režimu náhledu. Další změny, ale ta tyto změny jsou mimo rozsah této diskuse.
 
-## <a name="to-add-ui-to-the-preview-mode"></a>Chcete-li přidat uživatelského rozhraní na režim náhledu
+## <a name="to-add-ui-to-the-preview-mode"></a>Přidání uživatelského rozhraní do režimu náhledu
 
-1. Odvození třídy z zobrazení `CPreviewView`.
+1. Odvodit třídu zobrazení z `CPreviewView`.
 
 2. Přidejte obslužné rutiny příkazů pro funkce uživatelského rozhraní, které očekáváte.
 
-3. Pokud přidáváte visual aspekty do zobrazení, mají přednost před `OnDraw` a provádět výkresu po volání `CPreviewView::OnDraw`.
+3. Pokud přidáváte visual aspekty na obrazovce, má přednost před `OnDraw` a provádět výkresu po volání `CPreviewView::OnDraw`.
 
 ## <a name="onfileprintpreview"></a>OnFilePrintPreview
 
-Toto je obslužná rutina pro náhledu tisku. Jeho výchozí implementace je:
+Toto je obslužná rutina příkazu pro zobrazení náhledu tisku. Jeho výchozí implementace je:
 
 ```cpp
 void CView::OnFilePrintPreview()
@@ -92,28 +92,28 @@ void CView::OnFilePrintPreview()
 }
 ```
 
-`DoPrintPreview` bude skrýt podokno hlavní aplikace. Ovládací pruhy, jako je například stavový řádek uchovávání může být zadáním v pState ->*dwStates* člen (to je bitová maska a službu bits pro jednotlivé ovládací pruhy jsou definovány AFX_CONTROLBAR_MASK (AFX_IDW_MYBAR)). -> PState okno*nIDMainPane* okno, které budou automaticky skryté a reshown. `DoPrintPreview` potom vytvořte tlačítko panelu pro standardní uživatelské rozhraní Preview. V případě potřeby se speciální okno zpracování, například za účelem zobrazení nebo skrytí jiných windows, které je třeba provést před `DoPrintPreview` je volána.
+`DoPrintPreview` v hlavním podokně aplikace budou skrývat. Ovládací pruhy, jako je například stavového řádku, se můžou ukládat zadáním do pState ->*dwStates* člena (to je bitová maska a bity pro jednotlivé ovládací pruhy jsou definovány AFX_CONTROLBAR_MASK (AFX_IDW_MYBAR)). -> Okna pState*nIDMainPane* je okno, které budou automaticky skrytá a reshown. `DoPrintPreview` potom vytvoří panel tlačítek pro standardní uživatelské rozhraní ve verzi Preview. V případě potřeby se speciální okno zpracování, například za účelem skrýt nebo zobrazit ostatní okna, které by mělo být provedeno před `DoPrintPreview` je volána.
 
-Ve výchozím nastavení až se dokončí náhledu tisku, vrátí ovládací pruhy a stavy jejich původní hlavní podokno viditelné. V případě potřeby zvláštní zpracování by mělo být provedeno v přepsání `EndPrintPreview`. Pokud `DoPrintPreview` selže, zadejte také zvláštní zpracování.
+Ve výchozím nastavení až se dokončí náhledu tisku, vrátí ovládací pruhy do jejich původního stavu a v hlavním podokně na viditelný. V případě potřeby je zvláštní zacházení, je třeba jej provést v přepsání `EndPrintPreview`. Pokud `DoPrintPreview` selže, také poskytují zvláštní zpracování.
 
-DoPrintPreview je volán s:
+DoPrintPreview je volána pomocí:
 
-- ID prostředku šablony dialogového okna pro panel nástrojů preview.
+- ID prostředku šablony dialogového okna pro panel nástrojů ve verzi preview.
 
-- Ukazatel na zobrazení provádět Tisk náhledu tisku.
+- Ukazatel na zobrazení nedokázala náhledu tisku.
 
-- Run-time třída třídy zobrazení náhledu. To se dynamicky vytvoří DoPrintPreview.
+- Run-time třída třídy zobrazení ve verzi Preview. To dynamicky vytvoří se v DoPrintPreview.
 
-- CPrintPreviewState ukazatel. Všimněte si, že strukturu CPrintPreviewState (nebo odvozené struktury, pokud aplikace potřebuje další stav zachovaná) musí *není* vytvořit rámec. Tato struktura musí překonat, dokud se nazývá EndPrintPreview DoPrintPreview je nemodální.
+- CPrintPreviewState ukazatele. Všimněte si, že CPrintPreviewState strukturu (nebo odvozené struktury, pokud aplikace potřebuje více stavů zachovaný) musí *není* vytvořené v rámci. Tato struktura musí překonat, dokud se nazývá EndPrintPreview DoPrintPreview je nemodální.
 
   > [!NOTE]
-  > V případě potřeby samostatné zobrazení nebo zobrazení třídy pro podporu tisku ukazatel na tento objekt mají být předány jako druhý parametr.
+  > V případě potřeby oddělená zobrazení nebo zobrazení třídy pro podporu tisku ukazatel na tento objekt předat jako druhý parametr.
 
 ## <a name="endprintpreview"></a>EndPrintPreview
 
-Tomu se říká ukončit režim náhledu tisku. Často je vhodné přejít na stránku v dokumentu, který byl naposledy zobrazené v náhledu tisku. `EndPrintPreview` je pravděpodobné, aplikace k tomu. -> PInfo*m_nCurPage* člen je stránka, která se zobrazí poslední (nejvíce vlevo, pokud byly zobrazeny dvě stránky) a je ukazatel nápovědu, kde na stránku byl zúčastněné uživatele. Vzhledem k tomu, že strukturu zobrazení aplikace Neznámý do rozhraní, je nutné zadat kód, který chcete přesunout zvolený bod.
+Tomu se říká ukončení režimu náhledu. Často je třeba přejít na stránku v dokumentu, který byl naposledy zobrazených v náhledu tisku. `EndPrintPreview` je pravděpodobné, aplikace, které provedete. -> PInfo*m_nCurPage* člen stránku, která byla zobrazená naposledy (nejvíce vlevo, pokud se zobrazí dvě stránky) a pomocného parametru, kde na stránce uživatel se chtěli byste je ukazatel. Protože strukturu zobrazení vaší aplikace Neznámý rozhraní Framework, je nutné zadat kód, který přesunout na zvolený bod.
 
-Byste měli provádět většinu akcí před voláním `CView::EndPrintPreview`. Toto volání obrátí důsledky `DoPrintPreview` a odstraní pView primárního řadiče domény a pInfo.
+By měl provádět většinu akcí před voláním `CView::EndPrintPreview`. Toto volání obrátí účinek `DoPrintPreview` a odstraní pView primárního řadiče domény a pInfo.
 
 ```cpp
 // Any further cleanup should be done here.
@@ -122,19 +122,19 @@ CView::EndPrintPreview(pDC, pInfo, point, pView);
 
 ## <a name="cwinapponfileprintsetup"></a>CWinApp::OnFilePrintSetup
 
-Toto musí být mapován pro položku nabídky Nastavení tisku. Ve většině případů není potřeba přepsat implementace.
+Toto musí být mapována pro položku nabídky Nastavení tisku. Ve většině případů není nutné přepsat implementaci.
 
-## <a name="page-nomenclature"></a>Stránka klasifikace
+## <a name="page-nomenclature"></a>Terminologie stránce
 
-Dalším problémem je, že číslování stránek a pořadí. Pro aplikace typ jednoduchého textového procesoru jedná se o snadný problém. Většina systémů náhledu tisku předpokládá, že každé vytištěné stránce odpovídá jedné stránky v dokumentu.
+Dalším problémem je, že stránkování a pořadí. Pro aplikace typu jednoduchý textový procesor jedná se o jednoduchý problém. Většina systémů náhledu se předpokládá, že každý tištěném odpovídá jedné stránky v dokumentu.
 
-V pokusu o poskytují zobecněný řešení, jsou potřeba uvážit několik věcí. Představte si CAD systému. Uživatel má kreslení, které pokrývá několik E-velikost listů. Na E-velikosti (nebo menší, škálovat) stránkování by zapisovače, stejně jako jednoduchá. Ale na laserová tiskárna, tisk 16 A velikost stránky na list, co náhledu tisku vzít v úvahu "stránka"
+Při pokusu o poskytují generalizovaný řešení, je potřeba uvážit několik věcí. Představte si CAD systému. Uživatel nemá výkresu, která zahrnuje několik E-velikost listů. Na E-velikosti (nebo menší, škálování) zapisovače, stránkování bude podobat jednoduchý případ. Ale na laserová tiskárna, tisk 16 stránky A velikost na list, co náhledu tisku vezměte v úvahu "page"
 
-Jako úvodní odstavec stavy, náhled funguje jako tiskárnu. Proto se uživateli zobrazí, co by být probuzeny z konkrétní tiskárny, který je vybraný. Je zobrazení a určit, jaké tisku na každé stránce.
+Jak uvádí úvodní odstavec náhled funguje jako tiskárna. Proto uživateli se zobrazí, co by pocházejí z určité tiskárny, který je vybrán. Záleží zobrazení a určit, jaké image je vytištěna na každé stránce.
 
-Řetězec popisu stránky v `CPrintInfo` struktura poskytuje způsob zobrazení číslo stránky pro uživatele, pokud je to může být reprezentován jako jedno číslo na stránku (stejně jako "Stránka 1" nebo "stránky 1 – 2"). Tento řetězec používá výchozí implementaci `CPreviewView::OnDisplayPageNumber`. V případě potřeby jiným zobrazením může jeden virtuální funkci chcete zadat, například "Sheet1, A části B" přepsat.
+Řetězce popisu stránky v `CPrintInfo` struktura poskytuje způsob zobrazení číslo stránky na uživatele, pokud může být reprezentován jako jedno číslo na stránku (stejně jako v "Stránka 1" nebo "stránkách 1-2"). Tento řetězec se používá výchozí implementace `CPreviewView::OnDisplayPageNumber`. V případě potřeby jiným zobrazením jeden mohou přepsat tuto virtuální funkce poskytnout, například "List1, oddíly A, B".
 
 ## <a name="see-also"></a>Viz také:
 
-[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)  
-[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)  
+[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
+[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)

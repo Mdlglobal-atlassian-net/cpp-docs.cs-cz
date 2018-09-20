@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3409e0e2c1cac5f3934902523edd2653839989ed
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 46450142c0455dd4eb96f627abd077e478d96fea
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42575755"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383503"
 ---
 # <a name="moduleunregistercomobject-method"></a>Module::UnregisterCOMObject – metoda
 
@@ -39,13 +39,13 @@ virtual HRESULT UnregisterCOMObject(
 
 ### <a name="parameters"></a>Parametry
 
-*název_serveru*  
+*název_serveru*<br/>
 (Nepoužívané)
 
-*Soubory cookie*  
+*Soubory cookie*<br/>
 Pole ukazatelů na hodnoty, které identifikují objekty třídy pro odstranění registrace. Pole byl vytvořen [registercomobject –](../windows/module-registercomobject-method.md) metody.
 
-*Počet*  
+*Počet*<br/>
 Počet tříd se zrušit registraci.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -59,4 +59,5 @@ Pokud je tato operace úspěšná; S_OK v opačném případě chybu HRESULT, kt
 **Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Viz také
+
 [Module – třída](../windows/module-class.md)

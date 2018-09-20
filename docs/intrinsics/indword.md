@@ -18,45 +18,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c209036f6d606bfd25cf41e828eb6488a1d16036
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 554cccba1d45cf172645c46e00fdb20c19ea42d4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712527"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389600"
 ---
 # <a name="indword"></a>__indword
-**Specifické pro Microsoft**  
-  
- Načte data o jedno slovo double pomocí zadaný port `in` instrukce.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-unsigned long __indword(  
-   unsigned short Port  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+**Specifické pro Microsoft**
+
+Načte data o jedno slovo double pomocí zadaný port `in` instrukce.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+unsigned long __indword(
+   unsigned short Port
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
 *Port*<br/>
-[in] Port, který se má číst z.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Slovo čtení z portu.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Vnitřní|Architektura|  
-|---------------|------------------|  
-|`__indword`|x86, x64|  
-  
- **Soubor hlaviček** \<intrin.h >  
-  
-## <a name="remarks"></a>Poznámky  
- Tato rutina je k dispozici pouze jako vnitřní objekt.  
-  
-**Specifické pro END Microsoft**  
-  
-## <a name="see-also"></a>Viz také  
- [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[in] Port, který se má číst z.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Slovo čtení z portu.
+
+## <a name="requirements"></a>Požadavky
+
+|Vnitřní|Architektura|
+|---------------|------------------|
+|`__indword`|x86, x64|
+
+**Soubor hlaviček** \<intrin.h >
+
+## <a name="remarks"></a>Poznámky
+
+Tato rutina je k dispozici pouze jako vnitřní objekt.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také
+
+[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

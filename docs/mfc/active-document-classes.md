@@ -1,5 +1,5 @@
 ---
-title: Třídy aktivních dokumentů | Microsoft Docs
+title: Třídy aktivních dokumentů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0805e77e674a68d5fd81c8628407bcd77e164e07
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0cd4cce7f2e31e084224848f348dd4e5f408de67
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325913"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385362"
 ---
 # <a name="active-document-classes"></a>Třídy aktivních dokumentů
-Aktivní dokumenty mohou být zobrazeny v okně celého klientského webového prohlížeče, jako je například Internet Explorer 5.5, nebo v Active kontejneru, jako je například Microsoft Office vazač, který podporuje aktivní dokumenty.  
-  
- [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md)  
- Mapuje rozhraní aktivní dokument a inicializuje a aktivuje objekt aktivní dokument.  
-  
- [CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md)  
- Implementuje server OLE příkazy speciálně pro servery pro aktivní dokument.  
-  
- [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)  
- Obsahování pro aktivní dokument implementuje.  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled třídy](../mfc/class-library-overview.md)
+
+Aktivní dokumenty lze zobrazit v okně celého klientského prohlížeče, jako je například Internet Explorer 5.5, nebo v aktivní kontejner, jako je například modul vazby sady Office Microsoft, který podporuje aktivní dokumenty.
+
+[Cdocobjectserver –](../mfc/reference/cdocobjectserver-class.md)<br/>
+Mapy rozhraní aktivní dokument a inicializuje a aktivuje objekt aktivního dokumentu.
+
+[Cdocobjectserveritem –](../mfc/reference/cdocobjectserveritem-class.md)<br/>
+Implementuje příkazy OLE servere speciálně pro aktivní dokument servery.
+
+[Coledocobjectitem –](../mfc/reference/coledocobjectitem-class.md)<br/>
+Implementuje Active document containment.
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../mfc/class-library-overview.md)
 

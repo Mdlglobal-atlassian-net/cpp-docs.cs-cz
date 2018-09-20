@@ -1,5 +1,5 @@
 ---
-title: Převést literál Nezpracovaný řetězec | Microsoft Docs
+title: Převést na literál nezpracovaného řetězce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -10,33 +10,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b98825719e7b3c0d8eb760a2ec50644b5eddd54e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 75037ea542a5bd2160d9a89138b12f82867002a5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328406"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388443"
 ---
-# <a name="convert-to-raw-string-literal"></a>Převést na nezpracovaná řetězcový literál
-**Co:** umožňuje zapnout libovolný řetězec do C++ Nezpracovaný řetězec literálu.
+# <a name="convert-to-raw-string-literal"></a>Převést na literál nezpracovaného řetězce
+**Co:** umožňuje proměnit libovolný řetězec C++ nezpracovaný řetězcový literál.
 
-**Kdy:** řetězec s uvozovacími znaky znaky, které by neměly být zpracovány jako řídící znaky.
+**Kdy:** řetězec s řídicí znaky, které by neměly být zpracován jako řídicí znaky.
 
-**Důvod:** může dvojitou řídicí znaky, ale tento často vede k matoucí a nečitelné řetězce.  Pomocí nezpracovaná textové literály jednodušší řetězce ke čtení.
+**Důvod, proč:** může dvojitou řídicí znaky, ale to často vede k nepřehledný a nečitelné řetězce.  Pomocí nezpracované řetězcové literály řetězce velmi usnadňuje čtení.
 
-**Postupy:**
+**Jak:**
 
-1. Umístěte kurzor text nebo myš uvozený řetězec k převedení.
+1. Umístěte kurzor text nebo myši uvozený řetězec k převedení.
 
    ![Zvýrazněný kód](images/stringliteral_highlight.png)
 
 1. Dále proveďte jednu z následujících akcí:
    * **Klávesnice**
-     * Stiskněte klávesu **Ctrl +.** k aktivační události **rychlé akce a refaktoring** nabídku a vyberte **převést na nezpracovaná literálu řetězce** v místní nabídce.
-   * **Myš**
-     * Klikněte pravým tlačítkem na kód, vyberte **rychlé akce a refaktoring** nabídku a vyberte **převést na nezpracovaná literálu řetězce** v místní nabídce.
-     * Klikněte na tlačítko ![žárovek](images/bulb.png) ikonu, která se zobrazí v levým okrajem a vyberte **převést na nezpracovaná literálu řetězce** v místní nabídce.
+     * Stisknutím klávesy **Ctrl +.** aktivační událost **rychlé akce a Refaktoringy** nabídky a vybereme **převod na nezpracovaný řetězcový literál** v místní nabídce.
+   * **Myši**
+     * Klikněte pravým tlačítkem na kód, vyberte **rychlé akce a Refaktoringy** nabídky a vybereme **převod na nezpracovaný řetězcový literál** v místní nabídce.
+     * Klikněte na tlačítko ![žárovky](images/bulb.png) ikonu, která se zobrazí v levém okraji a vyberte **převod na nezpracovaný řetězcový literál** v místní nabídce.
 
-1. Řetězec se okamžitě převede na nezpracovaná řetězcový literál.  
+1. Řetězec se okamžitě převést na nezpracovaný řetězcový literál.
 
-   ![Nezpracovaná řetězec literálu výsledek](images/stringliteral_result.png)
+   ![Nezpracovaný řetězcový literál výsledek](images/stringliteral_result.png)

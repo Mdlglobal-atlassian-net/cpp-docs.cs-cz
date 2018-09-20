@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7a57cb6c72d7d444c345140f4a738a3d4a3232c0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 95c3d15414dbb312c60029a86707c1d32df56adc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315610"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405512"
 ---
 # <a name="default-control-events"></a>Výchozí události ovládacích prvků
 
@@ -63,9 +63,9 @@ Win32
 
 ## <a name="see-also"></a>Viz také
 
-[Definování členských proměnných pro ovládací prvky dialogového okna](../windows/defining-member-variables-for-dialog-controls.md)  
-[Typy zpráv přidružených k objektům uživatelského rozhraní](../mfc/reference/message-types-associated-with-user-interface-objects.md)  
-[Úpravy obslužné rutiny zpráv](../mfc/reference/editing-a-message-handler.md)  
-[Definování obslužné rutiny zpráv pro zrcadlené zprávy](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)  
-[Deklarace proměnné založené na nové třídě ovládacího prvku](../mfc/reference/declaring-a-variable-based-on-your-new-control-class.md)  
+[Definování členských proměnných pro ovládací prvky dialogového okna](../windows/defining-member-variables-for-dialog-controls.md)<br/>
+[Typy zpráv přidružených k objektům uživatelského rozhraní](../mfc/reference/message-types-associated-with-user-interface-objects.md)<br/>
+[Úpravy obslužné rutiny zpráv](../mfc/reference/editing-a-message-handler.md)<br/>
+[Definování obslužné rutiny zpráv pro zrcadlené zprávy](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)<br/>
+[Deklarace proměnné založené na nové třídě ovládacího prvku](../mfc/reference/declaring-a-variable-based-on-your-new-control-class.md)<br/>
 [Přepisování virtuální funkce](../ide/overriding-a-virtual-function-visual-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Zařazování řetězců pomocí služby PInvoke | Microsoft Docs'
+title: 'Postupy: Zařazování řetězců v kódu pomocí služby PInvoke | Dokumentace Microsoftu'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -18,72 +18,75 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1a377e7074e72693a1a63e392c64a6d60c5995b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d917228b1972715c291d84625cc684fc9de5b998
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33133204"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396373"
 ---
 # <a name="how-to-marshal-strings-using-pinvoke"></a>Postupy: Zařazení řetězců pomocí služby PInvoke
-Toto téma vysvětluje, jak nativních funkcí, které přijímají řetězce stylu jazyka C nelze volat pomocí řetězce typu System::String pomocí podpory volání nespravovaného kódu rozhraní .NET Framework. Programátoři jazyka Visual C++ se místo toho používají funkce interoperability C++ (Pokud je to možné), protože P/Invoke poskytuje malé kompilaci zpráv o chybách, není bezpečný a může být zdlouhavé pro implementaci. Pokud je jako knihovny DLL zabalené nespravovaného rozhraní API a zdrojový kód není k dispozici, pak P/Invoke je jedinou možností, ale jinak zobrazit [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
-  
- Spravovanými a nespravovanými řetězce jsou rozloženy odlišně v paměti, takže předají řetězce ze spravovaných do nespravovaných funkcí vyžaduje <xref:System.Runtime.InteropServices.MarshalAsAttribute> atribut kompilátoru vložit vyžaduje převod mechanismy pro zařazování řetězcových dat. správně a bezpečně.  
-  
- Stejně jako u funkce, které používají pouze vnitřní datové typy, <xref:System.Runtime.InteropServices.DllImportAttribute> deklarovat spravované vstupní body do nativních funkcí, ale--pro předávání řetězců--místo jako trvá stylu jazyka C řetězce, popisovač pro definování těchto vstupních bodů <xref:System.String> typu můžete místo toho použít. Tento parametr vyzve kompilátoru pro vložení kódu, který provede požadované převod. Pro každý argument funkce v nespravované funkci, která přebírá řetězec <xref:System.Runtime.InteropServices.MarshalAsAttribute> atribut slouží k označení, že objekt řetězec by měl být zařazen do nativní funkce jako řetězec stylu jazyka C.  
-  
-## <a name="example"></a>Příklad  
- Následující kód se skládá z nespravovaného a spravovaný modul. Nespravovaný modul je knihovna DLL, která definuje funkci nazvanou TakesAString, přijímající řetězec ANSI C-style ve formě char *. Spravovaný modul je aplikace příkazového řádku, která importuje funkci TakesAString, ale definuje jako přijetí spravovaného System.String místo char\*. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Atribut slouží k označení jak spravovaný řetězec by měl být zařazen při volání TakesAString.  
-  
-```  
-// TraditionalDll2.cpp  
-// compile with: /LD /EHsc  
-#include <windows.h>  
-#include <stdio.h>  
-#include <iostream>  
-  
-using namespace std;  
-  
-#define TRADITIONALDLL_EXPORTS  
-#ifdef TRADITIONALDLL_EXPORTS  
-#define TRADITIONALDLL_API __declspec(dllexport)  
-#else  
-#define TRADITIONALDLL_API __declspec(dllimport)  
-#endif  
-  
-extern "C" {  
-   TRADITIONALDLL_API void TakesAString(char*);  
-}  
-  
-void TakesAString(char* p) {  
-   printf_s("[unmanaged] %s\n", p);  
-}  
-```  
-  
-```  
-// MarshalString.cpp  
-// compile with: /clr  
-using namespace System;  
-using namespace System::Runtime::InteropServices;  
-  
-value struct TraditionalDLL  
-{  
-   [DllImport("TraditionalDLL2.dll")]  
-      static public void   
-      TakesAString([MarshalAs(UnmanagedType::LPStr)]String^);  
-};  
-  
-int main() {  
-   String^ s = gcnew String("sample string");  
-    Console::WriteLine("[managed] passing managed string to unmanaged function...");  
-   TraditionalDLL::TakesAString(s);  
-   Console::WriteLine("[managed] {0}", s);  
-}  
-```  
-  
- Tento postup způsobí, že kopii řetězec, který má být sestavený na nespravované haldě, změny provedené na řetězec pomocí nativní funkce se neprojeví v spravované kopie řetězce.  
-  
- Všimněte si, že žádná část knihovny DLL je vystaven do spravovaného kódu přes tradiční #include – direktiva. Ve skutečnosti knihovnu DLL přístupná pouze za běhu, takže problémy s funkcí importovány s `DllImport` nebudou zjištěna v době kompilace.  
-  
-## <a name="see-also"></a>Viz také  
- [Použití explicitního volání PInvoke v jazyce C++ (atribut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+
+Toto téma vysvětluje, jak nativní funkce, které přijímají řetězce ve stylu jazyka C lze volat pomocí řetězce CLR zadejte System::String s využitím podpory nástroje nespravovaného kódu rozhraní .NET Framework. Programátoři jazyka Visual C++ jsou ukončena. doporučujeme místo toho použijte funkce zprostředkovatele komunikace C++ (Pokud je to možné), protože deklarace P/Invoke obsahuje malý kompilace zpráv o chybách, není typově bezpečný a může být pracná k implementaci. Pokud nespravované rozhraní API je zabalený jako knihovnu DLL a zdrojový kód není k dispozici, pak P/Invoke je jedinou možností, ale jinak naleznete v tématu [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+
+Spravované a nespravované řetězce jsou stanoveny odlišně v paměti, takže předávání řetězce ze spravované na nespravované funkce vyžaduje <xref:System.Runtime.InteropServices.MarshalAsAttribute> atribut pokyn kompilátoru k vložení vyžaduje převod mechanismy pro zařazování dat řetězce správné a bezpečné.
+
+Stejně jako u funkce, které používají jenom typy vnitřních datových <xref:System.Runtime.InteropServices.DllImportAttribute> se používá k deklaraci spravovaný vstupní body do nativních funkcí, ale--při předávání řetězce – místo definování těchto vstupních bodů, aby přijímaly řetězců ve stylu C, popisovač <xref:System.String> typu je možné místo toho. Tento parametr vyzve kompilátoru k vložení kódu, který provede požadované převod. Pro každý argument funkce v nespravované funkci, která přebírá řetězec <xref:System.Runtime.InteropServices.MarshalAsAttribute> atribut má použít k označení, že na objekt řetězce by měl být zařazen do nativní funkce jako řetězec stylu C.
+
+## <a name="example"></a>Příklad
+
+Následující kód se skládá z nespravovaného a spravovaný modul. Nespravovaný modul je knihovnu DLL, která definuje funkci nazvanou TakesAString, který přijímá řetězec ANSI C-style ve formě char *. Spravovaný modul je aplikace příkazového řádku, který importuje TakesAString funkce, ale definuje, aby přijímaly spravované System.String místo typu char\*. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Atribut slouží k určení, jak by měly být zařazeny spravované řetězce při volání TakesAString.
+
+```
+// TraditionalDll2.cpp
+// compile with: /LD /EHsc
+#include <windows.h>
+#include <stdio.h>
+#include <iostream>
+
+using namespace std;
+
+#define TRADITIONALDLL_EXPORTS
+#ifdef TRADITIONALDLL_EXPORTS
+#define TRADITIONALDLL_API __declspec(dllexport)
+#else
+#define TRADITIONALDLL_API __declspec(dllimport)
+#endif
+
+extern "C" {
+   TRADITIONALDLL_API void TakesAString(char*);
+}
+
+void TakesAString(char* p) {
+   printf_s("[unmanaged] %s\n", p);
+}
+```
+
+```
+// MarshalString.cpp
+// compile with: /clr
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+value struct TraditionalDLL
+{
+   [DllImport("TraditionalDLL2.dll")]
+      static public void
+      TakesAString([MarshalAs(UnmanagedType::LPStr)]String^);
+};
+
+int main() {
+   String^ s = gcnew String("sample string");
+    Console::WriteLine("[managed] passing managed string to unmanaged function...");
+   TraditionalDLL::TakesAString(s);
+   Console::WriteLine("[managed] {0}", s);
+}
+```
+
+Tento postup způsobí, že kopie řetězec, který má být postavená na nespravované haldě, takže změny provedené na řetězec pomocí nativní funkce se neprojeví v spravovaného kopie řetězce.
+
+Všimněte si, že žádná část knihovny DLL je přístupný pro spravovaný kód prostřednictvím tradiční #include. Ve skutečnosti knihovny DLL přistupuje pouze za běhu, takže problémy s funkcí importovány pomocí `DllImport` nebudou zjištěna v době kompilace.
+
+## <a name="see-also"></a>Viz také
+
+[Použití explicitního volání PInvoke v jazyce C++ (atribut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

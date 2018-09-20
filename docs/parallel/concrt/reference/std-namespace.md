@@ -1,5 +1,5 @@
 ---
-title: – std Namespace | Microsoft Docs
+title: std Namespace | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,35 +14,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 910b2d73d04f44282ed0106092844307aed3ba67
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 534bb31e08194c8f78c0bd28f711c2e173731c35
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695704"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395268"
 ---
 # <a name="std-namespace"></a>std – obor názvů
-## <a name="syntax"></a>Syntaxe  
-  
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 namespace std;
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="functions"></a>Funkce  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[make_exception_ptr – funkce](make-exception-ptr-function.md)||  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** ppltasks.h  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční informace](reference-concurrency-runtime.md)
+```
 
+## <a name="members"></a>Členové
 
+### <a name="functions"></a>Funkce
 
+|Název|Popis|
+|----------|-----------------|
+|[make_exception_ptr – funkce](make-exception-ptr-function.md)||
 
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** ppltasks.h
+
+## <a name="see-also"></a>Viz také
+
+[Referenční informace](reference-concurrency-runtime.md)
 

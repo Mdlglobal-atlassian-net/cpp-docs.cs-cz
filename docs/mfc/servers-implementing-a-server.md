@@ -1,5 +1,5 @@
 ---
-title: 'Servery: Implementace serveru | Microsoft Docs'
+title: 'Servery: Implementace serveru | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,43 +15,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ea51d6cd811572d73b0de64072f3d335e2682fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d024c9468b06291ba93c4e404674925202fabcad
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381690"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406787"
 ---
 # <a name="servers-implementing-a-server"></a>Servery: Implementace serveru
-Tento článek vysvětluje kód, který vytvoří Průvodce aplikací MFC pro visual úpravy serverová aplikace. Pokud nepoužíváte aplikaci průvodce, tento článek obsahuje seznam oblastí, kde musíte napsat kód pro implementaci serverové aplikace.  
-  
- Pokud používáte Průvodce aplikace k vytvoření nové serverové aplikace, nabízí významné množství kódu pro konkrétní server za vás. Pokud přidáváte visual úpravy funkce serveru do existující aplikace, musí se duplicitní kód, který by před přidáním zbytek kód nezbytné serveru zadali v Průvodce vytvořením aplikace.  
-  
- Kód serveru, který poskytuje v Průvodce vytvořením aplikace, které patří do několika kategorií:  
-  
--   Definování prostředky serveru:  
-  
-    -   V nabídce prostředku používaného pro server je úpravy vložené položky v samostatném okně.  
-  
-    -   Nabídek a panelů nástrojů prostředky využívané server je aktivní na místě.  
-  
-     Další informace o těchto prostředků najdete v tématu [nabídky a prostředky: serverové doplňky](../mfc/menus-and-resources-server-additions.md).  
-  
--   Definování třídu položky odvozené z `COleServerItem`. Další informace o serveru položky v [servery: Server položky](../mfc/servers-server-items.md).  
-  
--   Změna základní třídu třídy pro dokument `COleServerDoc`. Další podrobnosti najdete v tématu [servery: implementace dokumentů serveru](../mfc/servers-implementing-server-documents.md).  
-  
--   Definování oken s rámečkem třídy odvozené od `COleIPFrameWnd`. Další podrobnosti najdete v tématu [servery: implementace oken s rámečkem na místě](../mfc/servers-implementing-in-place-frame-windows.md).  
-  
--   Vytvoření položka pro příslušnou aplikaci na server v databázi registrace Windows a registrace novou instanci serveru se systémem OLE. Informace v tomto tématu najdete v tématu [registrace](../mfc/registration.md).  
-  
--   Inicializace a spuštění aplikace serveru. Informace v tomto tématu najdete v tématu [registrace](../mfc/registration.md).  
-  
- Další informace najdete v tématu [COleServerItem](../mfc/reference/coleserveritem-class.md), [COleServerDoc](../mfc/reference/coleserverdoc-class.md), a [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md) v *knihovny tříd*.  
-  
-## <a name="see-also"></a>Viz také  
- [Servery](../mfc/servers.md)   
- [Kontejnery](../mfc/containers.md)   
- [Nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md)   
- [Registrace](../mfc/registration.md)
+
+Tento článek vysvětluje kód, který vytvoří Průvodce aplikací knihovny MFC pro vizuální úpravy serverové aplikace. Pokud nepoužíváte Průvodce aplikací, tento článek uvádí oblasti, kde je nutné napsat kód pro implementaci serverové aplikace.
+
+Pokud používáte Průvodce aplikací k vytvoření nové serverové aplikace, poskytuje značné množství kódu pro konkrétní server za vás. Pokud přidáváte vizuální úpravy funkce serveru do existující aplikace, musí mít kód, který by před přidáním zbytek kódu nezbytné serveru zadali Průvodce aplikací.
+
+Kód serveru, který obsahuje Průvodce aplikací spadá do několika kategorií:
+
+- Definování prostředků serveru:
+
+   - Prostředek nabídky, který se používá při serveru upravuje vloženou položku v samostatném okně.
+
+   - Prostředky nabídek a panelů nástrojů použít, pokud je na místě aktivní server.
+
+     Další informace o těchto prostředků najdete v tématu [nabídky a prostředky: serverové doplňky](../mfc/menus-and-resources-server-additions.md).
+
+- Definuje třídu položky odvozené z `COleServerItem`. Další podrobnosti o serverové položky, naleznete v tématu [servery: serverové položky](../mfc/servers-server-items.md).
+
+- Změna základní třídu třídy dokumentu má `COleServerDoc`. Další podrobnosti najdete v tématu [servery: implementace dokumentů serveru](../mfc/servers-implementing-server-documents.md).
+
+- Definování třídy rámec okno odvozené z `COleIPFrameWnd`. Další podrobnosti najdete v tématu [servery: implementace místní rámce Windows](../mfc/servers-implementing-in-place-frame-windows.md).
+
+- Vytvářet položku pro serverové aplikace v registrační databázi Windows a registrovat novou instanci serveru pomocí systému OLE. Informace v tomto tématu najdete v tématu [registrace](../mfc/registration.md).
+
+- Inicializace a spuštění aplikace. Informace v tomto tématu najdete v tématu [registrace](../mfc/registration.md).
+
+Další informace najdete v tématu [odvozenou třídu COleServerItem](../mfc/reference/coleserveritem-class.md), [coleserverdoc –](../mfc/reference/coleserverdoc-class.md), a [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md) v *knihovny tříd*.
+
+## <a name="see-also"></a>Viz také
+
+[Servery](../mfc/servers.md)<br/>
+[Kontejnery](../mfc/containers.md)<br/>
+[Nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md)<br/>
+[Registrace](../mfc/registration.md)
 

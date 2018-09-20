@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aea326149c9748ff480d523a1078f54ba733cb14
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 705b495e3f6d626a742fd1a63989c8cc658446a4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610417"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379658"
 ---
 # <a name="interfacetraitscancastto-method"></a>InterfaceTraits::CanCastTo – metoda
 
@@ -41,13 +41,13 @@ static __forceinline bool CanCastTo(
 
 ### <a name="parameters"></a>Parametry
 
-*ptr*  
+*ptr*<br/>
 Název ukazatele na typ.
 
-*riid*  
+*riid*<br/>
 ID rozhraní `Base`.
 
-*ppv*  
+*ppv*<br/>
 Pokud je tato operace úspěšná, *ppv* odkazuje na rozhraní určené typem `Base`. V opačném případě *ppv* je nastavena na **nullptr**.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -68,5 +68,5 @@ Další informace o `Base`, najdete v článku **veřejné definice TypeDef** t�
 
 ## <a name="see-also"></a>Viz také
 
-[InterfaceTraits – struktura](../windows/interfacetraits-structure.md)  
+[InterfaceTraits – struktura](../windows/interfacetraits-structure.md)<br/>
 [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

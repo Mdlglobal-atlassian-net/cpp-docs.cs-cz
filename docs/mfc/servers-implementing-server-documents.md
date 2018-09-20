@@ -1,5 +1,5 @@
 ---
-title: 'Servery: Implementace dokumentů serveru | Microsoft Docs'
+title: 'Servery: Implementace dokumentů serveru | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 273fd1e5afefb8a10b3e1ae8e3c2f81ccec05e7f
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: b62de2a1e6cba6ecbb29521518f5442ab002ddf3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950825"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381943"
 ---
 # <a name="servers-implementing-server-documents"></a>Servery: Implementace dokumentů serveru
-Tento článek vysvětluje kroky, které je nutné provést při úspěšně implementovat dokument na serveru, pokud jste nezadali možnost OLE serveru v Průvodci aplikací.  
-  
-#### <a name="to-define-a-server-document-class"></a>Chcete-li definovat dokumentové třídy serveru  
-  
-1.  Odvození třídě dokumentu z `COleServerDoc` místo `CDocument`.  
-  
-2.  Vytvoření položky serveru třídy odvozené od `COleServerItem`.  
-  
-3.  Implementace `OnGetEmbeddedItem` funkce člena třídy dokumentů serveru.  
-  
-     `OnGetEmbeddedItem` je volána, když uživatel aplikace kontejner vytvoří nebo upraví vložené položky. Měla by vrátit položku představující celý dokument. To by měla být objekt vaší `COleServerItem`-odvozené třídy.  
-  
-4.  Přepsání `Serialize` – členská funkce určená k serializaci obsah dokumentu. Není nutné k serializaci seznamu položky na serveru, pokud je používáte představující nativní data v dokumentu. Další informace najdete v tématu *implementace položky na serveru* v článku [servery: Server položky](../mfc/servers-server-items.md).  
-  
- Když je vytvořen dokument na serveru, rozhraní automaticky zaregistruje dokumentu se OLE systémové knihovny DLL. To umožňuje knihovny DLL pro identifikaci dokumenty na serveru.  
-  
- Další informace najdete v tématu [COleServerItem](../mfc/reference/coleserveritem-class.md) a [COleServerDoc](../mfc/reference/coleserverdoc-class.md) v *knihovny tříd*.  
-  
-## <a name="see-also"></a>Viz také  
- [Servery](../mfc/servers.md)   
- [Servery: Serverové položky](../mfc/servers-server-items.md)   
- [Servery: Implementace serveru](../mfc/servers-implementing-a-server.md)   
- [Servery: Implementace oken s rámečkem na místě](../mfc/servers-implementing-in-place-frame-windows.md)
+
+Tento článek popisuje kroky, které je třeba provést při úspěšně implementovat dokument na serveru, pokud jste nezadali možnost serveru OLE v Průvodci aplikací.
+
+#### <a name="to-define-a-server-document-class"></a>Chcete-li definovat dokumentové třídy serveru
+
+1. Odvodit vaše dokumentové třídy z `COleServerDoc` místo `CDocument`.
+
+1. Vytvořit položku server třídy odvozené od `COleServerItem`.
+
+1. Implementace `OnGetEmbeddedItem` členské funkce třídy dokumentu serveru.
+
+     `OnGetEmbeddedItem` je volána, když uživatel aplikace typu kontejner vytvoří nebo upraví vloženou položku. Měla by vrátit položku představující celý dokument. Měl by to být objekt vaše `COleServerItem`-odvozené třídy.
+
+1. Přepsat `Serialize` členskou funkci k serializaci obsahu dokumentu. Není nutné k serializaci seznam položek serveru, pokud je používáte k reprezentaci nativní data v dokumentu. Další informace najdete v tématu *implementace položky serveru* v článku [servery: serverové položky](../mfc/servers-server-items.md).
+
+Když se dokument na serveru, rozhraní automaticky zaregistruje dokumentu OLE systémové knihovny DLL. To umožňuje identifikovat dokumenty na serveru knihoven DLL.
+
+Další informace najdete v tématu [odvozenou třídu COleServerItem](../mfc/reference/coleserveritem-class.md) a [coleserverdoc –](../mfc/reference/coleserverdoc-class.md) v *knihovny tříd*.
+
+## <a name="see-also"></a>Viz také
+
+[Servery](../mfc/servers.md)<br/>
+[Servery: Serverové položky](../mfc/servers-server-items.md)<br/>
+[Servery: Implementace serveru](../mfc/servers-implementing-a-server.md)<br/>
+[Servery: Implementace oken s rámečkem na místě](../mfc/servers-implementing-in-place-frame-windows.md)
 

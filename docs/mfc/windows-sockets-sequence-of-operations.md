@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: Posloupnost operací | Microsoft Docs'
+title: 'Windows Sockets: Posloupnost operací | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,64 +18,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c27856b2bb6b843ce60404ea389c28082bf1dc5a
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 9667bf7359677d00b54023cb5542ffd7977baa02
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953942"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376045"
 ---
 # <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets: Posloupnost operací
-Tento článek ukazuje vedle sebe, posloupnost operací při soketu serveru a klienta soketu. Protože sockets používají `CArchive` objekty, jsou nutně [stream sockets](../mfc/windows-sockets-stream-sockets.md).  
-  
-## <a name="sequence-of-operations-for-a-stream-socket-communication"></a>Posloupnost operací při Soketovou komunikací datového proudu  
- Až do okamžiku vytváření `CSocketFile` objekt, je přesné (s několika rozdíly parametr) k následujícímu pořadí pro obě `CAsyncSocket` a `CSocket`. Od této chvíle sekvenci je určené výhradně pro `CSocket`. Následující tabulka znázorňuje pořadí operací pro nastavení komunikace mezi klientem a serverem.  
-  
-### <a name="setting-up-communication-between-a-server-and-a-client"></a>Nastavení komunikace mezi serverem a klientem  
-  
-|Server|Klient|  
-|------------|------------|  
-|`// construct a socket`<br /><br /> `CSocket sockSrvr;`|`// construct a socket`<br /><br /> `CSocket sockClient;`|  
-|`// create the SOCKET`<br /><br /> `sockSrvr.Create(nPort);`1,2|`// create the SOCKET`<br /><br /> `sockClient.Create( );`2|  
-|`// start listening`<br /><br /> `sockSrvr.Listen( );`||  
-||`// seek a connection`<br /><br /> `sockClient.Connect(strAddr, nPort);`3,4|  
-|`// construct a new, empty socket`<br /><br /> `CSocket sockRecv;`<br /><br /> `// accept connection`<br /><br /> `sockSrvr.Accept( sockRecv );` 5||  
-|`// construct file object`<br /><br /> `CSocketFile file(&sockRecv);`|`// construct file object`<br /><br /> `CSocketFile file(&sockClient);`|  
-|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> -nebo-<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - nebo obě-|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> -nebo-<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - nebo obě-|  
-|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> -nebo-<br /><br /> `arOut << dwValue;`6|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> -nebo-<br /><br /> `arOut << dwValue;`6|  
-  
- 1. Kde *nPort* je číslo portu. V tématu [Windows Sockets: porty a adresy soketů](../mfc/windows-sockets-ports-and-socket-addresses.md) podrobnosti o portech.  
-  
- 2. Na server musíte určit port, klienti mohou připojit. `Create` Volání někdy také určuje adresu. Na straně klienta použijte výchozí parametry, které požádejte MFC použít jakýkoli dostupný port.  
-  
- 3. Kde *nPort* je číslo portu a *strAddr* adresu počítače nebo adresu Internet Protocol (IP).  
-  
- 4. Adresy počítačů lze provést několika způsoby: "ftp.microsoft.com", "microsoft.com". IP adresy použijte formát "s tečkami číslo" "127.54.67.32". `Connect` Funkce zkontroluje, pokud je na adresu desítkovém číslo (i když nekontroluje zkontrolujte číslo je platný počítač v síti). Pokud ne, `Connect` předpokládá název počítače jednoho z jiných formulářů.  
-  
- 5. Při volání `Accept` na straně serveru, předáte odkaz na nový objekt soketu. Musíte nejprve vytvořit tento objekt, ale Nevolejte `Create` pro ni. Mějte na paměti, že pokud tento objekt soketu prochází oboru, zavře připojení. MFC připojí nový objekt, který má **SOKETU** zpracování. Můžete vytvořit soket v zásobníku, jak je znázorněno, nebo v haldě.  
-  
- 6. Archiv a soubor soketu se uzavřít, když se dostala mimo rozsah. Objekt soketu destruktor také voláním [Zavřít](../mfc/reference/casyncsocket-class.md#close) – členská funkce pro objekt soketu při objekt ocitne mimo rozsah, nebo je odstranit.  
-  
-## <a name="additional-notes-about-the-sequence"></a>Další poznámky o sekvenci  
- Posloupnost volání, které jsou uvedené v předchozí tabulce je pro datový proud soketu. Sokety datagramu, které jsou bez připojení, nevyžadují [CAsyncSocket::Connect](../mfc/reference/casyncsocket-class.md#connect), [naslouchání](../mfc/reference/casyncsocket-class.md#listen), a [přijmout](../mfc/reference/casyncsocket-class.md#accept) volání (i když můžete volitelně použít `Connect`). Místo toho pokud používáte třída `CAsyncSocket`, sokety datagramů používají `CAsyncSocket::SendTo` a `ReceiveFrom` členské funkce. (Pokud používáte `Connect` s datagram soketu a používáte `Send` a `Receive`.) Protože `CArchive` nefunguje s datagramy, nepoužívejte `CSocket` s archiv pokud datagram soketu.  
-  
- [CSocketFile](../mfc/reference/csocketfile-class.md) nepodporuje všechny `CFile`na funkce. `CFile` členy jako `Seek`, které žádný smysl pro komunikaci ve formě soketu, nejsou k dispozici. Z toho důvodu některé výchozí MFC `Serialize` funkce nejsou kompatibilní s `CSocketFile`. To platí hlavně z `CEditView` třídy. By se neměl pokoušet serializovat `CEditView` data prostřednictvím `CArchive` objekt připojený k `CSocketFile` pomocí `CEditView::SerializeRaw`; použít `CEditView::Serialize` místo (není zdokumentovaný). [SerializeRaw](../mfc/reference/ceditview-class.md#serializeraw) funkce očekává objektu soubor do mají funkce, jako například `Seek`, že `CSocketFile` nepodporuje.  
-  
- Další informace naleznete v tématu:  
-  
--   [Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md)  
-  
--   [Windows Sockets – Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
-  
--   [Windows Sockets: Porty a adresy soketů](../mfc/windows-sockets-ports-and-socket-addresses.md)  
-  
--   [Windows Sockets: Sokety streamu](../mfc/windows-sockets-stream-sockets.md)  
-  
--   [Windows Sockets: Sokety datagramů](../mfc/windows-sockets-datagram-sockets.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)   
- [CSocket – třída](../mfc/reference/csocket-class.md)   
- [CAsyncSocket::Create](../mfc/reference/casyncsocket-class.md#create)   
- [CAsyncSocket::Close](../mfc/reference/casyncsocket-class.md#close)
+
+Tento článek ukazuje vedle sebe, posloupnost operací při serverového soketu a klientského soketu. Protože sokety používají `CArchive` objekty, jsou nutně [sokety datového proudu](../mfc/windows-sockets-stream-sockets.md).
+
+## <a name="sequence-of-operations-for-a-stream-socket-communication"></a>Posloupnost operací při Soketovou komunikací Stream
+
+Až do okamžiku vytváření `CSocketFile` objekt, je přesné (s několika rozdíly parametr) k následujícímu pořadí pro obě `CAsyncSocket` a `CSocket`. Od této chvíle je sekvence určené výhradně pro `CSocket`. Následující tabulka znázorňuje posloupnost operací při nastavení komunikace mezi klientem a serverem.
+
+### <a name="setting-up-communication-between-a-server-and-a-client"></a>Nastavení komunikace mezi serverem a klientem
+
+|Server|Klient|
+|------------|------------|
+|`// construct a socket`<br /><br /> `CSocket sockSrvr;`|`// construct a socket`<br /><br /> `CSocket sockClient;`|
+|`// create the SOCKET`<br /><br /> `sockSrvr.Create(nPort);`1,2|`// create the SOCKET`<br /><br /> `sockClient.Create( );`2|
+|`// start listening`<br /><br /> `sockSrvr.Listen( );`||
+||`// seek a connection`<br /><br /> `sockClient.Connect(strAddr, nPort);`3,4|
+|`// construct a new, empty socket`<br /><br /> `CSocket sockRecv;`<br /><br /> `// accept connection`<br /><br /> `sockSrvr.Accept( sockRecv );` 5||
+|`// construct file object`<br /><br /> `CSocketFile file(&sockRecv);`|`// construct file object`<br /><br /> `CSocketFile file(&sockClient);`|
+|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> -nebo-<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - i -|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> -nebo-<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - i -|
+|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> -nebo-<br /><br /> `arOut << dwValue;`6|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> -nebo-<br /><br /> `arOut << dwValue;`6|
+
+1. Kde *nPort* je číslo portu. Zobrazit [rozhraní Windows Sockets: porty a adresy soketů](../mfc/windows-sockets-ports-and-socket-addresses.md) podrobnosti o portech.
+
+2. Server musí vždy zadejte port, klienti můžou připojit. `Create` Volání někdy také určuje adresu. Na straně klienta použijte výchozí parametry, které požádejte MFC používat jakýkoli dostupný port.
+
+3. Kde *nPort* je číslo portu a *strAddr* je počítač adresa nebo adresa Internet Protocol (IP).
+
+4. Adresy počítačů lze provést několika způsoby: "ftp.microsoft.com", "microsoft.com". IP adresy pomocí formuláře "tečkované číslo" "127.54.67.32". `Connect` – Funkce kontroluje, jestli je adresa desítkovým číslem (i když nekontroluje zkontrolujte číslo je platný počítač v síti). V opačném případě `Connect` předpokládá název počítače z jednoho z jiných forem.
+
+5. Při volání `Accept` na straně serveru, předáte odkaz na objekt soketu. Je nutné nejprve vytvořit tento objekt, ale Nevolejte `Create` pro něj. Mějte na paměti, která pokud je tento objekt soketu se odesílá z oboru, ukončí připojení. Nový objekt, který se připojí knihovny MFC **SOKETU** zpracovat. Můžete vytvořit soket v zásobníku, jak je znázorněno, nebo na haldě.
+
+6. Archiv a soubor soketu se zavřou, při mizení z rozsahu. Také volání destruktoru objekt soketu [Zavřít](../mfc/reference/casyncsocket-class.md#close) členskou funkci pro objekt soketu, když dostane mimo rozsah nebo odstranění objektu.
+
+## <a name="additional-notes-about-the-sequence"></a>Další poznámky o sekvence
+
+Sekvence volání je uvedeno v předchozí tabulce je pro datový proud soketu. Sokety datagramu, které jsou bez připojení, nevyžadují [CAsyncSocket::Connect](../mfc/reference/casyncsocket-class.md#connect), [naslouchání](../mfc/reference/casyncsocket-class.md#listen), a [přijmout](../mfc/reference/casyncsocket-class.md#accept) volání (i když můžete volitelně použít `Connect`). Místo toho pokud používáte třídu `CAsyncSocket`, datagram sockets – použití `CAsyncSocket::SendTo` a `ReceiveFrom` členské funkce. (Pokud používáte `Connect` v datagramu soketu, použijete `Send` a `Receive`.) Protože `CArchive` nefunguje s datagramů, nepoužívejte `CSocket` s archiv datagram při soketu.
+
+[Csocketfile –](../mfc/reference/csocketfile-class.md) nepodporuje všechny `CFile`vaší funkce. `CFile` členy jako `Seek`, které žádný smysl pro soketovou komunikací, nejsou k dispozici. Z tohoto důvodu některé výchozí knihovny MFC `Serialize` funkce nejsou kompatibilní s `CSocketFile`. To platí hlavně `CEditView` třídy. By se neměl pokoušet serializovat `CEditView` data prostřednictvím `CArchive` objekt připojen k `CSocketFile` pomocí `CEditView::SerializeRaw`; použijte `CEditView::Serialize` místo (není dokumentováno). [SerializeRaw](../mfc/reference/ceditview-class.md#serializeraw) funkce očekává, že soubor objektu má funkce, jako například `Seek`, který `CSocketFile` nepodporuje.
+
+Další informace naleznete v tématu:
+
+- [Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md)
+
+- [Windows Sockets – Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+
+- [Windows Sockets: Porty a adresy soketů](../mfc/windows-sockets-ports-and-socket-addresses.md)
+
+- [Windows Sockets: Sokety streamu](../mfc/windows-sockets-stream-sockets.md)
+
+- [Windows Sockets: Sokety datagramů](../mfc/windows-sockets-datagram-sockets.md)
+
+## <a name="see-also"></a>Viz také
+
+[Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)<br/>
+[CSocket – třída](../mfc/reference/csocket-class.md)<br/>
+[CAsyncSocket::Create](../mfc/reference/casyncsocket-class.md#create)<br/>
+[CAsyncSocket::Close](../mfc/reference/casyncsocket-class.md#close)
 

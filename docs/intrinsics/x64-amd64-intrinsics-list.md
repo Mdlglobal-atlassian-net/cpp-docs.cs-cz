@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eedbc29b5012c3a4355178d0fbd83aad81e9cb95
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 006b6ce67182b698a1f6d0bb5d87d8165fba9cde
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680409"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406864"
 ---
 # <a name="x64-amd64-intrinsics-list"></a>x64 (amd64) – seznam vnitřních objektů
 
@@ -1282,6 +1282,6 @@ Následující tabulka uvádí vnitřní objekty dostupné na x64 procesory. Tec
 
 ## <a name="see-also"></a>Viz také:
 
-[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)  
-[ARM – vnitřní prvky](../intrinsics/arm-intrinsics.md)  
-[x86 vnitřních objektů](../intrinsics/x86-intrinsics-list.md)    
+[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
+[ARM – vnitřní prvky](../intrinsics/arm-intrinsics.md)<br/>
+[x86 vnitřních objektů](../intrinsics/x86-intrinsics-list.md)

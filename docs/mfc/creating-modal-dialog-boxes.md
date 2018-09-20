@@ -1,5 +1,5 @@
 ---
-title: Vytváření modálních dialogových oken | Microsoft Docs
+title: Vytváření modálních dialogových oken | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a8bc947dbaf9cecc680f3cdbd8e6b429d2bcd5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3fcc449a376091c07a7fb26b81fe19752bc3bcd6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342426"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376641"
 ---
 # <a name="creating-modal-dialog-boxes"></a>Vytváření modálních dialogových oken
-Modální dialogové okno vytvořit, volání buď dvě veřejné konstruktory deklarované v [CDialog](../mfc/reference/cdialog-class.md). Pak zavolejte objektu dialogového okna [DoModal](../mfc/reference/cdialog-class.md#domodal) – členská funkce lze zobrazit dialogové okno a spravovat interakci s ním, dokud uživatel vybere OK nebo zrušit. Tato správu `DoModal` je díky modální dialogové okno. Pro modálních dialogových oken `DoModal` načte prostředku dialogového okna.  
-  
-## <a name="see-also"></a>Viz také  
- [Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
+
+Chcete-li vytvoření modálního dialogového okna, zavolejte buď dvě veřejné konstruktory deklarované v [CDialog](../mfc/reference/cdialog-class.md). V dalším kroku volání objektu dialogového okna [DoModal](../mfc/reference/cdialog-class.md#domodal) členské funkce k zobrazení dialogového okna a spravovat interakce s ním, dokud uživatel zvolí OK nebo zrušit. Tuto správu `DoModal` díky modální dialogové okno. Pro modální dialogová okna `DoModal` načte prostředku dialogového okna.
+
+## <a name="see-also"></a>Viz také
+
+[Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
 

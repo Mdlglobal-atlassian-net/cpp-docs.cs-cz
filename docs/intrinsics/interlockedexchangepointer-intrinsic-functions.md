@@ -30,78 +30,83 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa2aa8fb79a0590c437699bcf887f2a7e1c1bb21
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 881d8dbdb7563197beaea66c4c83d7dbc7921a3f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705013"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390939"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>Vnitřní funkce _InterlockedExchangePointer
-**Specifické pro Microsoft**  
-  
- Proveďte operaci atomické exchange, který zkopíruje adresu předanou jako druhý argument první a vrátí původní adresu první.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void * _InterlockedExchangePointer(  
-   void * volatile * Target,  
-   void * Value  
-);   
-void * _InterlockedExchangePointer_acq(  
-   void * volatile * Target,  
-   void * Value  
-);   
-void * _InterlockedExchangePointer_rel(  
-   void * volatile * Target,  
-   void * Value  
-);   
-void * _InterlockedExchangePointer_nf(  
-   void * volatile * Target,  
-   void * Value  
-);   
-void * _InterlockedExchangePointer_HLEAcquire(  
-   void * volatile * Target,  
-   void * Value  
-);   
-void * _InterlockedExchangePointer_HLERelease(  
-   void * volatile * Target,  
-   void * Value  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+**Specifické pro Microsoft**
+
+Proveďte operaci atomické exchange, který zkopíruje adresu předanou jako druhý argument první a vrátí původní adresu první.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void * _InterlockedExchangePointer(
+   void * volatile * Target,
+   void * Value
+);
+void * _InterlockedExchangePointer_acq(
+   void * volatile * Target,
+   void * Value
+);
+void * _InterlockedExchangePointer_rel(
+   void * volatile * Target,
+   void * Value
+);
+void * _InterlockedExchangePointer_nf(
+   void * volatile * Target,
+   void * Value
+);
+void * _InterlockedExchangePointer_HLEAcquire(
+   void * volatile * Target,
+   void * Value
+);
+void * _InterlockedExchangePointer_HLERelease(
+   void * volatile * Target,
+   void * Value
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
 *Cíl*<br/>
-[out v] Ukazatel na ukazatel na hodnotu k exchangi. Funkce nastaví hodnotu `Value` a vrátí původní hodnotu.  
-  
+[out v] Ukazatel na ukazatel na hodnotu k exchangi. Funkce nastaví hodnotu `Value` a vrátí původní hodnotu.
+
 *Hodnota*<br/>
-[in] Hodnota mají vyměnit s hodnotou odkazované `Target`.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Funkce vrátí počáteční hodnotu, na které odkazuje `Target`.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Vnitřní|Architektura|Záhlaví|  
-|---------------|------------------|------------|  
-|`_InterlockedExchangePointer`|x86, ARM, x64|\<intrin.h >|  
-|`_InterlockedExchangePointer_acq`, `_InterlockedExchangePointer_rel`, `_InterlockedExchangePointer_nf`|ARM|\<intrin.h >|  
-|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|x64 s podporou HLE|\<immintrin.h >|  
-  
- Na x86 architektury, `_InterlockedExchangePointer` je makro, které volá `_InterlockedExchange`.  
-  
-## <a name="remarks"></a>Poznámky  
- 64bitová verze systému parametry jsou 64 bitů a musí být zarovnány na hranice 64-bit; v opačném případě funkce selže. Parametry v 32bitové verzi systému, 32 bitů a musí být zarovnány na hranice 32-bit. Další informace najdete v tématu [zarovnat](../cpp/align-cpp.md).  
-  
- Na platformách ARM, pomocí vnitřní objekty s `_acq` a `_rel` přípony, pokud potřebujete získat a release sémantiky, jako například na začátku a konci kritický oddíl. Vnitřní s `_nf` jako překážku paměti nepostupuje příponu ("žádná ohrazení").  
-  
- Na platformách Intel, které podporují pokyny Elize zámek hardwaru (HLE), vnitřní objekty s `_HLEAcquire` a `_HLERelease` přípony zahrnují nápovědu pro procesor, který může zrychlit výkonu odstraněním kroku zámek zápisu v hardwaru. Pokud tyto vnitřní objekty jsou volány na platformách, které nepodporují HLE, doporučení se ignoruje.  
-  
- Tyto rutiny jsou dostupné jenom jako vnitřní funkce.  
-  
-**Specifické pro END Microsoft**  
-  
-## <a name="see-also"></a>Viz také  
- [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   
- [Konflikty s kompilátorem x86](../build/conflicts-with-the-x86-compiler.md)
+[in] Hodnota mají vyměnit s hodnotou odkazované `Target`.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Funkce vrátí počáteční hodnotu, na které odkazuje `Target`.
+
+## <a name="requirements"></a>Požadavky
+
+|Vnitřní|Architektura|Záhlaví|
+|---------------|------------------|------------|
+|`_InterlockedExchangePointer`|x86, ARM, x64|\<intrin.h >|
+|`_InterlockedExchangePointer_acq`, `_InterlockedExchangePointer_rel`, `_InterlockedExchangePointer_nf`|ARM|\<intrin.h >|
+|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|x64 s podporou HLE|\<immintrin.h >|
+
+Na x86 architektury, `_InterlockedExchangePointer` je makro, které volá `_InterlockedExchange`.
+
+## <a name="remarks"></a>Poznámky
+
+64bitová verze systému parametry jsou 64 bitů a musí být zarovnány na hranice 64-bit; v opačném případě funkce selže. Parametry v 32bitové verzi systému, 32 bitů a musí být zarovnány na hranice 32-bit. Další informace najdete v tématu [zarovnat](../cpp/align-cpp.md).
+
+Na platformách ARM, pomocí vnitřní objekty s `_acq` a `_rel` přípony, pokud potřebujete získat a release sémantiky, jako například na začátku a konci kritický oddíl. Vnitřní s `_nf` jako překážku paměti nepostupuje příponu ("žádná ohrazení").
+
+Na platformách Intel, které podporují pokyny Elize zámek hardwaru (HLE), vnitřní objekty s `_HLEAcquire` a `_HLERelease` přípony zahrnují nápovědu pro procesor, který může zrychlit výkonu odstraněním kroku zámek zápisu v hardwaru. Pokud tyto vnitřní objekty jsou volány na platformách, které nepodporují HLE, doporučení se ignoruje.
+
+Tyto rutiny jsou dostupné jenom jako vnitřní funkce.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také
+
+[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
+[Konflikty s kompilátorem x86](../build/conflicts-with-the-x86-compiler.md)

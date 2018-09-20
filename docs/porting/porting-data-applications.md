@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c20b9b6e8c1e96736485f302203156f627ef6794
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: bc789cb37b51f89022a83d1ba34bb67ae32a206e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42465209"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391589"
 ---
 # <a name="porting-data-applications"></a>Přenos datových aplikací
 V průběhu let Visual C++ poskytuje několik způsobů, jak pracovat s databází. V roce 2011 společnost Microsoft oznámila, že to je zarovnání na rozhraní ODBC jako preferované technologie pro přístup k systému SQL Server produkty z nativního kódu. ODBC je oborový standard, a pomocí něj získat maximální přenositelnost kódu nad velkým množstvím platforem a zdroje dat. Většinu produktů, které databáze SQL a NoSQL výrobky podpora rozhraní ODBC. Rozhraní ODBC můžete použít přímo pomocí volání rozhraní ODBC API nízké úrovně, nebo můžete použít obálkové třídy knihovny MFC rozhraní ODBC nebo knihovny třetích stran obálky C++. 
@@ -42,6 +42,6 @@ Další informace o historii technologií přístupu k datům v Microsoft Window
 
 ## <a name="see-also"></a>Viz také  
  
-[Přístup k datům v jazyce Visual C++](../data/data-access-in-cpp.md)  
-[Připojení k databázi Microsoft Open (ODBC)](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc)  
+[Přístup k datům v jazyce Visual C++](../data/data-access-in-cpp.md)<br/>
+[Připojení k databázi Microsoft Open (ODBC)](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc)<br/>
 [Data Access technologie podrobný popis](https://msdn.microsoft.com/library/ms810810.aspx)  

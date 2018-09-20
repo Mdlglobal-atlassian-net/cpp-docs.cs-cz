@@ -1,5 +1,5 @@
 ---
-title: Tisk | Microsoft Docs
+title: Tisk | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,53 +17,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7df782e3c30b9120fe7eb6728f1b622750d160f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e03e750941be02385ac4d5b7463d5b6f32997b6a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348224"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373945"
 ---
 # <a name="printing"></a>Tisk
-Microsoft Windows implementuje zobrazení nezávislé na zařízení. V prostředí MFC, to znamená, že stejné kreslení volání v `OnDraw` funkce člena třídy zobrazení jsou zodpovědní za kreslení na zobrazení a na jiných zařízení, jako jsou tiskárny. Náhledu tisku cílové zařízení je simulované tiskový výstup do zobrazení.  
-  
-##  <a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a> Vaše Role v tisku oproti Role rozhraní Framework  
- Zobrazení třídy má následující zodpovědnosti:  
-  
--   Informujte rozhraní, kolik stránek se v dokumentu.  
-  
--   Pokud budete vyzváni k zadané stránku vytisknout, kreslení část dokumentu.  
-  
--   Přidělte a navrátit písem, nebo jiné grafiky zařízení rozhraní GDI prostředky potřebné pro tisk.  
-  
--   V případě potřeby odesílat žádné řídicí kódy, které jsou potřebné ke změně režimu tiskárny před tiskem danou stránku, například, chcete-li změnit tisku orientaci na základě stránky.  
-  
- Rozhraní framework odpovědnosti jsou následující:  
-  
--   Zobrazení **tiskových** dialogové okno.  
-  
--   Vytvoření [CDC](../mfc/reference/cdc-class.md) objekt pro tiskárny.  
-  
--   Volání [zobrazující](../mfc/reference/cdc-class.md#startdoc) a [EndDoc](../mfc/reference/cdc-class.md#enddoc) členské funkce `CDC` objektu.  
-  
--   Opakovaně volání [StartPage](../mfc/reference/cdc-class.md#startpage) členské funkce `CDC` objektu, informujte třídy zobrazení stránky, která má být vytištěn a volání [EndPage](../mfc/reference/cdc-class.md#endpage) členské funkce `CDC` objektu.  
-  
--   Volání přepisovatelné funkce v zobrazení v příslušnou dobu.  
-  
- Následující články popisují, jak rozhraní podporuje tisku a přehled tisku:  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
-  
--   [Jak probíhá výchozí tisk](../mfc/how-default-printing-is-done.md)  
-  
--   [Vícestránkové dokumenty](../mfc/multipage-documents.md)  
-  
--   [Záhlaví a zápatí](../mfc/headers-and-footers.md)  
-  
--   [Přidělování prostředků GDI pro tisk](../mfc/allocating-gdi-resources.md)  
-  
--   [Náhled tisku](../mfc/print-preview-architecture.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Tisk a náhled tisku](../mfc/printing-and-print-preview.md)
+
+Microsoft Windows implementuje zobrazení nezávislých na zařízení. V knihovně MFC, to znamená, že stejné volání vykreslování, v `OnDraw` členské funkce třídy zobrazení jsou zodpovědné za vykreslování na displeji a na jiných zařízeních, jako jsou tiskárny. Pro náhled tisku cílové zařízení je simulované tiskový výstup na obrazovce.
+
+##  <a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a> Vaše Role v tisku a v rámci Role
+
+Zobrazit třídu má následující zodpovědnosti:
+
+- Informování rozhraní framework jsou počet stránek v dokumentu.
+
+- Když se zobrazí výzva k vytištění zadanou stránku, nakreslete část dokumentu.
+
+- Přidělit a uvolnit písem, nebo jiné grafické prostředky rozhraní GDI systému zařízení potřebné pro tisk.
+
+- V případě potřeby odesílat žádný řídicí kódy potřeba změnit režim tiskárny před tiskem danou stránku, například, chcete-li změnit orientaci tisk na základě na stránku.
+
+Odpovědnosti rozhraní framework jsou následující:
+
+- Zobrazení **tisk** dialogové okno.
+
+- Vytvoření [CDC](../mfc/reference/cdc-class.md) objektu tiskárny.
+
+- Volání [zobrazující](../mfc/reference/cdc-class.md#startdoc) a [EndDoc](../mfc/reference/cdc-class.md#enddoc) členských funkcí třídy `CDC` objektu.
+
+- Opakovaně volat [StartPage](../mfc/reference/cdc-class.md#startpage) členskou funkci `CDC` objektu, informujte třídu zobrazení na stránce, které by měl vytisknout a volat [EndPage](../mfc/reference/cdc-class.md#endpage) členskou funkci `CDC` objektu.
+
+- Volání přepisovatelné funkce v zobrazení ve vhodných chvílích.
+
+Následující články popisují, jak rozhraní framework podporuje tisku a tiskového náhledu:
+
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+
+- [Jak probíhá výchozí tisk](../mfc/how-default-printing-is-done.md)
+
+- [Vícestránkové dokumenty](../mfc/multipage-documents.md)
+
+- [Záhlaví a zápatí](../mfc/headers-and-footers.md)
+
+- [Přidělování prostředků GDI pro tisk](../mfc/allocating-gdi-resources.md)
+
+- [Náhled tisku](../mfc/print-preview-architecture.md)
+
+## <a name="see-also"></a>Viz také
+
+[Tisk a náhled tisku](../mfc/printing-and-print-preview.md)
 

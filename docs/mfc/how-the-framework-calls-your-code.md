@@ -1,5 +1,5 @@
 ---
-title: Jakým způsobem volá rámec váš kód | Microsoft Docs
+title: Jakým způsobem volá rámec váš kód | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,24 +22,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f746ce3c3d658ab1dccc098939410b52d91b1188
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68db9107a8d2d113e9118c9cf125acb2798edcd4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348176"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373867"
 ---
 # <a name="how-the-framework-calls-your-code"></a>Jakým způsobem volá rámec váš kód
-Je třeba pochopit o vztah mezi vašeho zdrojového kódu a kódu v rozhraní MFC framework. Při spuštění aplikace většinu toku řízení se nachází v rozhraní framework kódu. Rozhraní framework spravuje smyčce zpráv, který získá zprávy ze systému Windows se uživatel rozhodne příkazy a upravuje dat zobrazení. Události, které rozhraní může zpracovat samostatně nespoléhejte na váš kód vůbec. Například rozhraní znát postup zavřete okna a ukončete aplikaci v reakci na příkazy uživatele. Jako s tyto úlohy, používá rozhraní obslužné rutiny zpráv a virtuálních funkcí jazyka C++ tak, abyste získali příležitosti reagovat na tyto události také. Váš kód nejsou v ovládacím prvku, ale; rozhraní je.  
-  
- Pro události specifické pro aplikace volá rámec váš kód. Například když uživatel vybere příkaz nabídky, rozhraní směruje příkaz podél posloupnost objekty C++: aktuální okno zobrazení a rámečku, dokument přidružený k zobrazení, Šablona dokumentu dokumentu a objekt aplikace. Pokud některý z těchto objektů můžete zpracovat příkaz, nemá tedy volání funkce odpovídající popisovač zpráv. Pro všechny daný příkaz kódu volaného může být váš nebo může být rozhraní framework.  
-  
- Toto uspořádání je poněkud dobře známé pro programátory v jazyce se zkušenostmi s tradiční programování pro systém Windows nebo událostmi řízené programování.  
-  
- Příbuzná témata budou číst co rozhraní jak inicializuje a spustí aplikaci a potom vyčistí jako ukončí aplikaci. Bude také chápou, kde se vejde kód, který můžete psát.  
-  
- Další informace najdete v tématu [CWinApp – třída: třídy aplikace](../mfc/cwinapp-the-application-class.md) a [šablony dokumentů a proces tvorby Document/View](../mfc/document-templates-and-the-document-view-creation-process.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Sestavení na základě rozhraní .NET Framework](../mfc/building-on-the-framework.md)
+
+Je důležité porozumět vztahu mezi zdrojový kód a kód v rámci MFC. Po spuštění aplikace nachází většina tok řízení v kódu rozhraní framework. Rozhraní framework spravuje smyčky zpráv, který získá zprávy z Windows, protože uživatel vybere příkazy a úpravy dat v zobrazení. Události, které rozhraní dokáže zpracovat samostatně nespoléhejte na váš kód vůbec. Například rozhraní ví, jak zavřete okna a ukončete aplikaci, v reakci na uživatelských příkazů. Jak zpracovává tyto úlohy, využívá rozhraní obslužné rutiny zpráv a virtuálních funkcí jazyka C++, abychom zajistili příležitostí k těmto událostem a reakce. Váš kód je ale; není v ovládacím prvku rozhraní je.
+
+Pro události specifické pro aplikace volá rámec váš kód. Například když uživatel vybere příkaz nabídky, rozhraní směruje příkaz podél pořadí objektů jazyka C++: aktuální okno zobrazení a rámečku, dokument přidružený k zobrazení, Šablona dokumentu a objekt aplikace. Pokud některý z těchto objektů můžete zpracovat příkaz, je spuštění provedeno, volání funkce odpovídající obslužná rutina zprávy. Pro daný příkaz volání kódu může být té vaší nebo může být rozhraní framework.
+
+Toto uspořádání se trochu znají programátoři se zkušenostmi s tradiční programování pro Windows nebo událostmi řízené programování.
+
+Související témata bude číst co rozhraní jako se inicializuje a spustí aplikaci a poté vyčistí jako ukončení aplikace. Bude také pochopit, kde vejde kód, který píšete.
+
+Další informace najdete v tématu [CWinApp – třída: třída aplikace](../mfc/cwinapp-the-application-class.md) a [šablony dokumentů a proces vytváření dokumentů/zobrazení](../mfc/document-templates-and-the-document-view-creation-process.md).
+
+## <a name="see-also"></a>Viz také
+
+[Sestavení na základě rozhraní .NET Framework](../mfc/building-on-the-framework.md)
 

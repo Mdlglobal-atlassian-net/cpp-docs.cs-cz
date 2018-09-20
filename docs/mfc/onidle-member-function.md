@@ -1,5 +1,5 @@
 ---
-title: ONIDLE – členská funkce | Microsoft Docs
+title: ONIDLE – členská funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,22 +20,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbe912db448e424f18b6d72f6e148312c5940687
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b334a4561af40b69bc367ab5b1129afa8fb29ae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350364"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377291"
 ---
 # <a name="onidle-member-function"></a>OnIdle – členská funkce
-Při zpracování zprávy žádné Windows volá framework [CWinApp](../mfc/reference/cwinapp-class.md) – členská funkce [OnIdle](../mfc/reference/cwinapp-class.md#onidle) (popsaný v referenční příručka knihovny MFC).  
-  
- Přepsání `OnIdle` k provedení úlohy na pozadí. Výchozí verze aktualizace stavu objektů uživatelského rozhraní, jako jsou tlačítka panelu nástrojů a provádí čištění dočasné objekty vytvořené pomocí rozhraní v průběhu operace. Následující obrázek znázorňuje, jakým způsobem volá smyčce zpráv `OnIdle` Pokud nejsou žádné zprávy ve frontě.  
-  
- ![Zpráva smyčky proces](../mfc/media/vc387c1.gif "vc387c1")  
-Zpráva smyčky  
-  
- Další informace o co můžete dělat v nečinné smyčky najdete v tématu [zpracování nečinné smyčky](../mfc/idle-loop-processing.md).  
-  
-## <a name="see-also"></a>Viz také  
- [CWinApp – třída aplikace](../mfc/cwinapp-the-application-class.md)
+
+Při zpracování zprávy bez Windows se volá framework [CWinApp](../mfc/reference/cwinapp-class.md) členskou funkci [OnIdle](../mfc/reference/cwinapp-class.md#onidle) (podle Reference knihovny MFC).
+
+Přepsat `OnIdle` k provedení úlohy na pozadí. Výchozí verze aktualizace stavu objektů uživatelského rozhraní, jako jsou tlačítka na panelu nástrojů a provádí vyčištění dočasné objekty vytvořené v rámci rozhraní tím jeho operace. Následující obrázek znázorňuje, jakým způsobem volá smyčky zpráv `OnIdle` při nejsou žádné zprávy ve frontě.
+
+![Proces smyčky zpráv](../mfc/media/vc387c1.gif "vc387c1") The smyčky zpráv
+
+Další informace o tom, co můžete učinit nečinné smyčky, naleznete v tématu [zpracování nečinné smyčky](../mfc/idle-loop-processing.md).
+
+## <a name="see-also"></a>Viz také
+
+[CWinApp – třída aplikace](../mfc/cwinapp-the-application-class.md)

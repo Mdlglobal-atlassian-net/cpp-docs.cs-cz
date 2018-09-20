@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf6ca06ffbd3912ac3545bc3c014224412c01bc1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4bbb5c62fb53d1246c1b8cc282b4ee36f0fcf58e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221167"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377315"
 ---
 # <a name="aggregates"></a>aggregates
 
@@ -42,10 +42,10 @@ Označuje, že objekt agreguje objektu určeného parametrem identifikátor CLSI
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor CLSID*  
+*identifikátor CLSID*<br/>
 Určuje identifikátor CLSID agregovatelné objektu.
 
-*variable_name*  
+*variable_name*<br/>
 Název proměnné, která má být vložen. Tato proměnná obsahuje `IUnknown` objektu agregaci.
 
 ## <a name="remarks"></a>Poznámky
@@ -106,9 +106,9 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](..
 
 ## <a name="see-also"></a>Viz také
 
-[COM – atributy](../windows/com-attributes.md)  
-[Atributy třídy](../windows/class-attributes.md)  
-[Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Agregace](/windows/desktop/com/aggregation)  
-[Agregovatelné](/windows/desktop/Midl/aggregatable)  
+[COM – atributy](../windows/com-attributes.md)<br/>
+[Atributy třídy](../windows/class-attributes.md)<br/>
+[Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[Agregace](/windows/desktop/com/aggregation)<br/>
+[Agregovatelné](/windows/desktop/Midl/aggregatable)<br/>
 [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)  

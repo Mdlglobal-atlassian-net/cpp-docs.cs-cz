@@ -1,5 +1,5 @@
 ---
-title: Seznam vlastností (MFC) | Microsoft Docs
+title: Seznamy vlastností (MFC) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08252ed31ddcfc6a5ba7b785dad9787349caee71
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6668ab255cfd229d3a4977ec39e21f80187aebdd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351112"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383204"
 ---
 # <a name="property-sheets-mfc"></a>Seznamy vlastností (MFC)
-Tato řada článků vysvětluje, jak implementovat podporu pro seznam vlastností v aplikacích MFC. Seznam vlastností, také známé jako karta dialogového okna, poskytuje způsob, jak spravovat velké počty ovládacích prvků v dialogovém okně. Obsahuje seznam vlastností stránky vlastností, každý podle prostředku šablony samostatné dialogové okno. Můžete rozdělit vašem dialogovém ovládacích prvků do logických skupin a umístí každou skupinu vlastní stránky vlastností.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
-  
--   [Seznam vlastností a stránky vlastností](../mfc/property-sheets-and-property-pages-in-mfc.md)  
-  
--   [Použití seznamů vlastností v aplikaci](../mfc/using-property-sheets-in-your-application.md)  
-  
--   [Přidání ovládacích prvků do seznamu vlastností](../mfc/adding-controls-to-a-property-sheet.md) (na rozdíl od stránky vlastností)  
-  
--   [Výměna dat mezi vlastností a váš program](../mfc/exchanging-data.md)  
-  
--   [Vytvoření nemodálního seznamu vlastností](../mfc/creating-a-modeless-property-sheet.md)  
-  
--   [Ošetření tlačítka použít](../mfc/handling-the-apply-button.md)  
-  
--   [Seznamy vlastností jako průvodci](../mfc/property-sheets-as-wizards.md)  
-  
--   [Cpropertysheet – třída](../mfc/reference/cpropertysheet-class.md)  
-  
--   [CPropertyPage – třída](../mfc/reference/cpropertypage-class.md)  
-  
--   [Ukázka](../visual-cpp-samples.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Prvky uživatelského rozhraní](../mfc/user-interface-elements-mfc.md)
+
+Tato řada článků vysvětluje, jak implementovat podporu pro seznamy vlastností v aplikacích MFC. Seznam vlastností, také známé jako dialogové okno Karta, poskytuje způsob, jak spravovat velké počty prvků v dialogovém okně. Seznam vlastností obsahuje stránky vlastností, každý podle prostředku šablony samostatné dialogového okna. Můžete rozdělit do logických skupin ovládacích prvků dialogového okna pole a umístí každou skupinu svou vlastní stránku vlastností.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+
+- [Seznamy vlastností a stránky vlastností](../mfc/property-sheets-and-property-pages-in-mfc.md)
+
+- [Použití seznamů vlastností v aplikaci](../mfc/using-property-sheets-in-your-application.md)
+
+- [Přidání ovládacích prvků do seznamu vlastností](../mfc/adding-controls-to-a-property-sheet.md) (na rozdíl od stránky vlastností)
+
+- [Výměna dat mezi vlastností a programu](../mfc/exchanging-data.md)
+
+- [Vytvoření nemodálního seznamu vlastností](../mfc/creating-a-modeless-property-sheet.md)
+
+- [Ošetření tlačítka použít](../mfc/handling-the-apply-button.md)
+
+- [Seznamy vlastností jako průvodci](../mfc/property-sheets-as-wizards.md)
+
+- [Cpropertysheet – třída](../mfc/reference/cpropertysheet-class.md)
+
+- [CPropertyPage – třída](../mfc/reference/cpropertypage-class.md)
+
+- [Ukázka](../visual-cpp-samples.md)
+
+## <a name="see-also"></a>Viz také
+
+[Prvky uživatelského rozhraní](../mfc/user-interface-elements-mfc.md)

@@ -1,5 +1,5 @@
 ---
-title: Nastavení pro ovládací prvek panelu nástrojů | Microsoft Docs
+title: Nastavení pro ovládací prvek panelu nástrojů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03ff905b76ba4a215f6993c1bb0002dd1f87e06b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81631ba25f898e3740b82c0fab9d5af5da930117
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379704"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373350"
 ---
 # <a name="settings-for-the-toolbar-control"></a>Nastavení pro ovládací prvek panelu nástrojů
-Tlačítka na panelu nástrojů můžete zobrazit rastrový obrázek, řetězce nebo obojí. Ve výchozím nastavení je velikost bitové kopie hodnotu rozměry 16 podle 15 pixelů. Všechny tlačítka jsou stejné šířky, o výchozí 24 ve 22 pixelů. Panelu nástrojů výška je dáno výšku tlačítka a panelu nástrojů šířka je stejný jako šířku nadřazeného okna klientské oblasti také ve výchozím nastavení.  
-  
- Panel nástrojů může mít integrované funkce přizpůsobení, včetně dialogové okno Vlastní nastavení definované systému, které uživateli umožňují vložit, odstranit nebo přesunout tlačítka panelu nástrojů. Aplikace určuje, zda přizpůsobení funkcí jsou k dispozici pro uživatele a ovládací prvky v rozsahu, ke kterému se uživatel může přizpůsobit panelu nástrojů. Další informace o přizpůsobení panelu nástrojů najdete v tématu třídy [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) v *odkaz knihovny MFC*.  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Tlačítka na panelu nástrojů můžete zobrazit bitmapy, řetězce nebo obojí. Ve výchozím nastavení nastavena velikost obrázku rozměry 16 podle 15 pixelů. Všechna tlačítka se stejnou šířku výchozí 24 ve 22 pixelů. Výška panelu nástrojů je určeno Výška tlačítka a šířku panelu nástrojů je stejný jako šířka nadřazené okno klientské oblasti také ve výchozím nastavení.
+
+Panel nástrojů mají integrované funkce přizpůsobení, dialogového okna vlastního nastavení definované v systému, včetně, které uživateli umožňují vložit, odstranit nebo přeuspořádat tlačítka na panelu nástrojů. Aplikace určuje, zda funkce jsou k dispozici pro uživatele a ovládací prvky v rozsahu, do kterého může uživatel přizpůsobit panel nástrojů. Další informace o přizpůsobení panelu nástrojů, naleznete v tématu třídy [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) v *odkaz knihovny MFC*.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

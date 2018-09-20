@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1266097f9d548630459a3fb45ed75edb811deea
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: a35fc217b6600fd701dcc1750c327ffc7f241e8e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317339"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376652"
 ---
 # <a name="tn043-rfx-routines"></a>TN043: Rutiny RFX
 
@@ -170,5 +170,5 @@ Je potřeba volat `IsFieldType` na začátku funkce RFX a vrátit okamžitě, po
 
 ## <a name="see-also"></a>Viz také
 
-[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)  
-[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)  
+[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
+[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)

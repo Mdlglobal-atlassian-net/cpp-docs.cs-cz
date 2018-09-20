@@ -1,5 +1,5 @@
 ---
-title: Zpracování zpráv s oznámením v rozšířené pole se seznamem | Microsoft Docs
+title: Zpracování zpráv s oznámením v rozšířené pole se seznamem | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,33 +15,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 576735841748d0b99053d038f8d5f674d5692f00
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: a2ea37fb8724a6427e287f1ebef23344662dcb34
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930186"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382781"
 ---
 # <a name="processing-notification-messages-in-extended-combo-box-controls"></a>Zpracování zpráv s oznámením v ovládacích prvcích rozšířeného pole se seznamem
-Jak uživatelé pracují s pole rozšířeného pole se seznamem ovládacího prvku (`CComboBoxEx`) odešle zprávy s oznámením do nadřazeného okna, obvykle objekt zobrazení nebo dialogové okno. Tyto zprávy zpracování, pokud chcete, aby dělala něco v odpovědi. Například pokud uživatel aktivuje rozevíracím seznamu nebo klikne do ovládacího prvku textového pole, CBEN_BEGINEDIT odešle se oznámení.  
-  
- Okno Vlastnosti použijte pro přidání obslužné rutiny oznamovacích do nadřazené třídy pro ty zprávy, které chcete implementovat.  
-  
- Následující seznam popisuje různé oznámení zaslaná z ovládacího prvku rozšířené pole se seznamem pole.  
-  
--   CBEN_BEGINEDIT odeslat v případě, že uživatel aktivuje rozevíracím seznamu nebo klikne v ovládacím prvku textového pole.  
-  
--   CBEN_DELETEITEM posílají, když položka byla odstraněna.  
-  
--   CBEN_DRAGBEGIN posílají, když uživatel zahájí přetahování bitové kopie položku zobrazenou v části ovládací prvek pro úpravy.  
-  
--   CBEN_ENDEDIT posílají, když uživatel uzavřelo operace v rámci pole pro úpravy nebo má vybrané položky z ovládacího prvku rozevíracího seznamu.  
-  
--   CBEN_GETDISPINFO posílá načtení zobrazení informací o položka zpětného volání.  
-  
--   CBEN_INSERTITEM posílají, když byla vložena nové položky v ovládacím prvku.  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CComboBoxEx](../mfc/using-ccomboboxex.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Jak uživatelé komunikovat s poli rozšířené pole se seznamem, ovládací prvek (`CComboBoxEx`) odesílá zprávy s oznámením nezašle nadřazenému oknu, obvykle objekt zobrazení nebo dialogového okna. Tyto zprávy zpracovávají, pokud budete chtít udělat něco v odpovědi. Například když uživatel aktivuje rozevíracího seznamu nebo klikne do oblasti ovládacího prvku textového pole, CBEN_BEGINEDIT oznámení se posílá.
+
+Použijte okno Vlastnosti pro přidání obslužné rutiny oznamovacích do nadřazené třídu pro ty zprávy, které chcete implementovat.
+
+Následující seznam popisuje různé oznámení zaslaná z ovládacího prvku rozšířené pole se seznamem pole.
+
+- CBEN_BEGINEDIT posílají, když uživatel aktivuje rozevíracího seznamu nebo klikne do oblasti ovládacího prvku textového pole.
+
+- CBEN_DELETEITEM posílají, když se odstranil položku.
+
+- CBEN_DRAGBEGIN posílají, když uživatel zahájí přetahování obrázek položky zobrazené v části ovládacího prvku pro úpravy.
+
+- CBEN_ENDEDIT posílají, když uživatel uzavřel operace v rámci pole pro úpravy nebo má vybrat položku z ovládacího prvku rozevíracího seznamu.
+
+- CBEN_GETDISPINFO odeslané k načtení zobrazení informací o položka zpětného volání.
+
+- CBEN_INSERTITEM zasílat nová položka byla vložena do ovládacího prvku.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CComboBoxEx](../mfc/using-ccomboboxex.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

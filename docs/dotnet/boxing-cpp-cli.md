@@ -1,5 +1,5 @@
 ---
-title: Zabalení (C + +/ CLI) | Microsoft Docs
+title: Zabalení (C + +/ CLI) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,22 +13,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3b9898b4a640d2f3aa4e38ceb621521ffb301fed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c513b0148e2553440e02f9b0d255a0d5750e2d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33105888"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372509"
 ---
 # <a name="boxing-ccli"></a>Zabalení (C++/CLI)
-Zabalení je proces převodu typu hodnoty na typ `object` nebo k libovolnému typu rozhraní, které je implementované typ hodnoty. Pokud modul CLR (CLR) oknech typ hodnoty, se zabalí hodnotu v `System.Object` a uloží je na spravované haldě. Rozbalení extrahuje typ hodnoty z objektu. Zabalení je implicitní; Rozbalení je explicitní.  
-  
-## <a name="related-articles"></a>Související články  
-  
-|Název|Popis|  
-|-----------|-----------------|  
-|[Postupy: Explicitní žádost o zabalení](../dotnet/how-to-explicitly-request-boxing.md)|Popisuje, jak explicitní žádost o zabalení na proměnnou.|  
-|[Postupy: Vytváření typů hodnot pomocí výrazu gcnew s použitím implicitního zabalení](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)|Ukazuje, jak používat `gcnew` vytvoření zabalené hodnoty typu, který se může v haldě spravovaná, uvolňování paměti.|  
-|[Postupy: Rozbalení](../dotnet/how-to-unbox.md)|Ukazuje, jak unbox a upravte hodnotu.|  
-|[Standardní převody a implicitní zabalení](../dotnet/standard-conversions-and-implicit-boxing.md)|Ukazuje, že je standardní převod zvolen kompilátorem přes převodu, která vyžaduje zabalení.|  
-|[Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Nejvyšší úrovně článku .NET – programování v jazyce Visual C++ dokumentaci.|
+
+Zabalení je proces převodu typu hodnoty na typ `object` nebo na libovolný typ rozhraní implementovaný typ hodnoty. Když common language runtime (CLR) pole typu hodnoty, obtéká hodnotu v `System.Object` a uloží ji na spravované haldě. Rozbalení extrahuje typ hodnoty z objektu. Zabalení je implicitní; Rozbalení je explicitní.
+
+## <a name="related-articles"></a>Související články
+
+|Název|Popis|
+|-----------|-----------------|
+|[Postupy: Explicitní žádost o zabalení](../dotnet/how-to-explicitly-request-boxing.md)|Popisuje, jak explicitní žádost o zabalení u proměnné.|
+|[Postupy: Vytváření typů hodnot pomocí výrazu gcnew s použitím implicitního zabalení](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)|Ukazuje, jak používat `gcnew` vytvořit zabalený typ hodnoty, které lze umístit do spravované, uvolnění paměti haldy.|
+|[Postupy: Rozbalení](../dotnet/how-to-unbox.md)|Předvádí postup při rozbalení a třeba hodnotu změnit.|
+|[Standardní převody a implicitní zabalení](../dotnet/standard-conversions-and-implicit-boxing.md)|Ukazuje, že standardní převod je kompilátor zvolí přes převod, který vyžaduje přetypování pomocí boxingu.|
+|[Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Článek nejvyšší úrovně pro .NET – programování v dokumentaci k Visual C++.|

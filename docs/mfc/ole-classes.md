@@ -1,5 +1,5 @@
 ---
-title: OLE – třídy | Microsoft Docs
+title: OLE – třídy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,46 +19,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79fbf4ba0c176c495ca63a84bda04e0a4872c0c0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e31b6d8fb5a5e80d7ee3ce36a3323d3353f35d33
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343509"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377354"
 ---
 # <a name="ole-classes"></a>OLE – třídy
-Třídy OLE pracovat s další aplikace framework třídy k poskytování snadného přístupu k rozhraní API ActiveX poskytnutí programy snadný způsob, jak uživatelům poskytnout sílu ActiveX. Pomocí ActiveX, můžete:  
-  
--   Složené dokumenty, které umožní uživatelům vytvářet a upravovat dokumenty obsahující data vytvořená více aplikací, včetně textu, grafiky, tabulek, zvuku, nebo jiné typy dat vytvořte.  
-  
--   Vytváření objektů OLE, které může být vložen do složených dokumentů.  
-  
--   OLE – přetažení slouží ke kopírování dat mezi aplikacemi.  
-  
--   Použití automatizace k řízení jeden program s jinou.  
-  
--   Vytvořte ovládací prvky ActiveX a kontejnery ovládacích prvků ActiveX (dřív označovaných jako ovládací prvky OLE a kontejnery ovládacích prvků OLE, v uvedeném pořadí).  
-  
- Následující kategorie třídy podporují ovládací prvky ActiveX:  
-  
--   [OLE – třídy kontejnerů](../mfc/ole-container-classes.md)  
-  
--   [OLE – třídy serveru](../mfc/ole-server-classes.md)  
-  
--   [Přetahování v rozhraní OLE a třídy přenosu dat](../mfc/ole-drag-and-drop-and-data-transfer-classes.md)  
-  
--   [OLE – třídy společných dialogů](../mfc/ole-common-dialog-classes.md)  
-  
--   [OLE – třídy automatizace](../mfc/ole-automation-classes.md)  
-  
--   [OLE – třídy ovládacích prvků](../mfc/ole-control-classes.md)  
-  
--   [Třídy aktivních dokumentů](../mfc/active-document-classes.md)  
-  
--   [Třídy související s rozhraním OLE](../mfc/ole-related-classes.md)  
-  
- Pokud chcete zobrazit dědičnost třídy, použijte [graf hierarchie třídy](../mfc/hierarchy-chart.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled třídy](../mfc/class-library-overview.md)
+
+OLE – třídy pracovat jiné aplikace rozhraní tříd pro poskytování snadného přístupu k rozhraní API ActiveX programy poskytující snadný způsob, jak můžete svým uživatelům poskytnout sílu ActiveX. Pomocí ActiveX, můžete:
+
+- Vytváření složených dokumentů, které umožní uživatelům vytvářet a upravovat dokumenty, které obsahují data vytvořená více aplikací, včetně textu, grafiku, tabulky, zvukové, nebo jiné datové typy.
+
+- Vytvořte objekty OLE, které může být vložen do složených dokumentů.
+
+- Použití OLE – přetažení ke kopírování dat mezi aplikacemi.
+
+- Jeden program sebou pomocí automatizace.
+
+- Vytvoření ovládacích prvků ActiveX a kontejnery ovládacích prvků ActiveX (dříve se označovaly jako ovládací prvky OLE a kontejnery ovládacích prvků OLE, v uvedeném pořadí).
+
+Následující kategorie třídy podporují ovládací prvky ActiveX:
+
+- [OLE – třídy kontejnerů](../mfc/ole-container-classes.md)
+
+- [OLE – třídy serveru](../mfc/ole-server-classes.md)
+
+- [Přetahování v rozhraní OLE a třídy přenosu dat](../mfc/ole-drag-and-drop-and-data-transfer-classes.md)
+
+- [OLE – třídy společných dialogů](../mfc/ole-common-dialog-classes.md)
+
+- [OLE – třídy automatizace](../mfc/ole-automation-classes.md)
+
+- [OLE – třídy ovládacích prvků](../mfc/ole-control-classes.md)
+
+- [Třídy aktivních dokumentů](../mfc/active-document-classes.md)
+
+- [Třídy související s rozhraním OLE](../mfc/ole-related-classes.md)
+
+Dědičnost třídy zobrazíte pomocí [grafu hierarchie třídy](../mfc/hierarchy-chart.md).
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../mfc/class-library-overview.md)
 

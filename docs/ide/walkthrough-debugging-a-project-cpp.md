@@ -16,56 +16,57 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 914eb26384a32c9a81a153db04c10708eb42e652
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7fa9761abde1a740a9f5daea4933ac6f8b89af6f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056532"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381704"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>Návod: Ladění projektu (C++)
-V tomto návodu změníte program pro vyřešení problému, který jste zjistili při testování projektu.  
-  
-## <a name="prerequisites"></a>Požadavky  
-  
-- Tento názorný průvodce předpokládá, že chápete základy jazyka C++.  
-  
-- Dále předpokládá, že jste dokončili dříve související návody, které jsou uvedeny v [pomocí integrovaného vývojového prostředí sady Visual Studio pro vývoj v jazyce C++ Desktop](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
-  
-### <a name="to-fix-a-program-that-has-a-bug"></a>Chcete-li vyřešit program, který obsahuje chybu  
-  
-1. Chcete-li zjistit, co se stane, když je objekt `Cardgame` zničen, zobrazte destruktor třídy `Cardgame`.  
-  
-     V panelu nabídky zvolte **zobrazení** > **zobrazení tříd**.  
-  
-     V **zobrazení tříd** okna, rozbalte **hru** stromu projektu a vyberte **Cardgame** třídu členy třídy a metody.  
-  
-     Otevřete místní nabídku **~Cardgame(void)** destruktor a klikněte na tlačítko **přejít k definici**.  
-  
-1. Pro snížení proměnné `totalParticipants` při ukončení aplikace Cardgame přidejte následující kód mezi otevírací a uzavírací závorky destruktoru `Cardgame::~Cardgame`:  
-  
-     [!code-cpp[NVC_Walkthrough_Debugging_A_Project#110](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_1.cpp)]  
-  
-1. Soubor Cardgame.cpp by měl po změnách by vypadat takto:  
-  
-     [!code-cpp[NVC_Walkthrough_Debugging_A_Project#111](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_2.cpp)]  
-  
-1. V panelu nabídky zvolte **sestavení** > **sestavit řešení**.  
-  
-1. Po dokončení sestavení spusťte je v režimu ladění pomocí možnosti **ladění** > **spustit ladění** na řádku nabídek nebo kliknutím **F5** klíč. Program se pozastaví na k první zarážce.  
-  
-1. Chcete-li krokovat programem, v řádku nabídek zvolte **ladění** > **Krokovat s přeskočením**, nebo zvolte **F10** klíč.  
-  
-     Všimněte si, že po každém z nich `Cardgame` provede konstruktor, hodnota `totalParticipants` zvyšuje. Když `PlayGames` funkce vrátí, protože každému `Cardgame` instance dostane mimo rozsah a je odstraněna (a je zavolán destruktor), `totalParticipants` snižuje. Těsně před `return` je proveden příkaz `totalParticipants` rovná 0.  
-  
-1. Pokračujte v krokování programem, dokud se neukončí, nebo jej spusťte pomocí možnosti **ladění** > **spustit** na řádku nabídek nebo kliknutím **F5** klíč.  
-  
-## <a name="next-steps"></a>Další kroky  
 
-**Předchozí:** [návod: testování projektu (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/> 
+V tomto návodu změníte program pro vyřešení problému, který jste zjistili při testování projektu.
+
+## <a name="prerequisites"></a>Požadavky
+
+- Tento názorný průvodce předpokládá, že chápete základy jazyka C++.
+
+- Dále předpokládá, že jste dokončili dříve související návody, které jsou uvedeny v [pomocí integrovaného vývojového prostředí sady Visual Studio pro vývoj v jazyce C++ Desktop](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+
+### <a name="to-fix-a-program-that-has-a-bug"></a>Chcete-li vyřešit program, který obsahuje chybu
+
+1. Chcete-li zjistit, co se stane, když je objekt `Cardgame` zničen, zobrazte destruktor třídy `Cardgame`.
+
+   V panelu nabídky zvolte **zobrazení** > **zobrazení tříd**.
+
+   V **zobrazení tříd** okna, rozbalte **hru** stromu projektu a vyberte **Cardgame** třídu členy třídy a metody.
+
+   Otevřete místní nabídku **~Cardgame(void)** destruktor a klikněte na tlačítko **přejít k definici**.
+
+1. Pro snížení proměnné `totalParticipants` při ukončení aplikace Cardgame přidejte následující kód mezi otevírací a uzavírací závorky destruktoru `Cardgame::~Cardgame`:
+
+     [!code-cpp[NVC_Walkthrough_Debugging_A_Project#110](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_1.cpp)]
+
+1. Soubor Cardgame.cpp by měl po změnách by vypadat takto:
+
+     [!code-cpp[NVC_Walkthrough_Debugging_A_Project#111](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_2.cpp)]
+
+1. V panelu nabídky zvolte **sestavení** > **sestavit řešení**.
+
+1. Po dokončení sestavení spusťte je v režimu ladění pomocí možnosti **ladění** > **spustit ladění** na řádku nabídek nebo kliknutím **F5** klíč. Program se pozastaví na k první zarážce.
+
+1. Chcete-li krokovat programem, v řádku nabídek zvolte **ladění** > **Krokovat s přeskočením**, nebo zvolte **F10** klíč.
+
+   Všimněte si, že po každém z nich `Cardgame` provede konstruktor, hodnota `totalParticipants` zvyšuje. Když `PlayGames` funkce vrátí, protože každému `Cardgame` instance dostane mimo rozsah a je odstraněna (a je zavolán destruktor), `totalParticipants` snižuje. Těsně před `return` je proveden příkaz `totalParticipants` rovná 0.
+
+1. Pokračujte v krokování programem, dokud se neukončí, nebo jej spusťte pomocí možnosti **ladění** > **spustit** na řádku nabídek nebo kliknutím **F5** klíč.
+
+## <a name="next-steps"></a>Další kroky
+
+**Předchozí:** [návod: testování projektu (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
 **Další krok:** [návod: nasazení programu (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
-  
-## <a name="see-also"></a>Viz také  
+
+## <a name="see-also"></a>Viz také
 
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)<br/>

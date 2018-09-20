@@ -1,5 +1,5 @@
 ---
-title: 'PTR:: ~ ptr | Microsoft Docs'
+title: 'PTR:: ~ ptr | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,93 +21,98 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c3449adef6da61b7e671c8441ef4f1b51440fd96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3457bb4bda5e08de676488d6100795b5c04b61a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33160445"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399571"
 ---
 # <a name="ptrptr"></a>ptr::~ptr
-Destructs `com::ptr`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-~ptr();  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- O zničení `com::ptr` uvolní všechny odkazy na jeho vlastní k jeho objektu COM. Za předpokladu, že neexistují žádné další odkazy, které mají objekt COM, se odstraní objekt COM a uvolnit jeho paměť.  
-  
-## <a name="example"></a>Příklad  
- Tento příklad implementuje CLR třídu, která využívá `com::ptr` zabalit jeho privátního člena `IXMLDOMDocument` objektu.  V `main` funkce, dva `XmlDocument` destruktory objektu bude volána, když se dostala mimo rozsah `try` bloku, což vede k základní `com::ptr` destruktor volané, vydání všechny vlastní odkazy na modelu COM objekt.  
-  
-```  
-// comptr_dtor.cpp  
-// compile with: /clr /link msxml2.lib  
-#include <msxml2.h>  
-#include <msclr\com\ptr.h>  
-  
-#import <msxml3.dll> raw_interfaces_only  
-  
-using namespace System;  
-using namespace System::Runtime::InteropServices;  
-using namespace msclr;  
-  
-// a ref class that uses a com::ptr to contain an   
-// IXMLDOMDocument object  
-ref class XmlDocument {  
-public:  
-   // construct the internal com::ptr with a null interface  
-   // and use CreateInstance to fill it  
-   XmlDocument(String^ progid) {  
-      m_ptrDoc.CreateInstance(progid);     
-   }  
-  
-   // construct the internal com::ptr with a COM object  
-   XmlDocument(IXMLDOMDocument* pDoc) : m_ptrDoc(pDoc) {}  
-  
-   // note that the destructor will call the com::ptr destructor  
-   // and automatically release the reference to the COM object  
-  
-private:  
-   com::ptr<IXMLDOMDocument> m_ptrDoc;  
-};  
-  
-// use the ref class to handle an XML DOM Document object  
-int main() {  
-   IXMLDOMDocument* pDoc = NULL;  
-  
-   try {  
-      // create an XML DOM document object  
-      Marshal::ThrowExceptionForHR(CoCreateInstance(CLSID_DOMDocument30, NULL,   
-         CLSCTX_ALL, IID_IXMLDOMDocument, (void**)&pDoc));  
-      // construct the ref class with the COM object  
-      XmlDocument doc1(pDoc);  
-  
-      // or create the class from a progid string  
-      XmlDocument doc2("Msxml2.DOMDocument.3.0");  
-   }  
-   // doc1 and doc2 destructors are called when they go out of scope  
-   // and the internal com::ptr releases its reference to the COM object  
-   catch (Exception^ e) {  
-      Console::WriteLine(e);     
-   }  
-   finally {  
-      if (NULL != pDoc) {  
-         pDoc->Release();        
-      }  
-   }  
-}  
-```  
-  
-## <a name="requirements"></a>Požadavky  
- **Soubor hlaviček** \<msclr\com\ptr.h >  
-  
- **Namespace** msclr::com  
-  
-## <a name="see-also"></a>Viz také  
- [PTR – členové](../dotnet/ptr-members.md)   
- [PTR::PTR](../dotnet/ptr-ptr.md)   
- [ptr::CreateInstance](../dotnet/ptr-createinstance.md)
+
+Destructs `com::ptr`.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+~ptr();
+```
+
+## <a name="remarks"></a>Poznámky
+
+Při zlikvidování `com::ptr` uvolní všechny odkazy na vlastní k jeho objekt modelu COM. Za předpokladu, že neexistují žádné další odkazy, které jsou uložené na objekt modelu COM, odstraní objekt modelu COM a jeho paměť uvolněna.
+
+## <a name="example"></a>Příklad
+
+V tomto příkladu implementuje třídu CLR, která se používá `com::ptr` zabalit její privátní člen `IXMLDOMDocument` objektu.  V `main` funkce, dva `XmlDocument` destruktory objektů bude volána při mizení z rozsahu `try` blok, což vede k podkladovým `com::ptr` destruktoru je volána, uvolnění všechny vlastněné odkazy modelu COM objekt.
+
+```
+// comptr_dtor.cpp
+// compile with: /clr /link msxml2.lib
+#include <msxml2.h>
+#include <msclr\com\ptr.h>
+
+#import <msxml3.dll> raw_interfaces_only
+
+using namespace System;
+using namespace System::Runtime::InteropServices;
+using namespace msclr;
+
+// a ref class that uses a com::ptr to contain an
+// IXMLDOMDocument object
+ref class XmlDocument {
+public:
+   // construct the internal com::ptr with a null interface
+   // and use CreateInstance to fill it
+   XmlDocument(String^ progid) {
+      m_ptrDoc.CreateInstance(progid);
+   }
+
+   // construct the internal com::ptr with a COM object
+   XmlDocument(IXMLDOMDocument* pDoc) : m_ptrDoc(pDoc) {}
+
+   // note that the destructor will call the com::ptr destructor
+   // and automatically release the reference to the COM object
+
+private:
+   com::ptr<IXMLDOMDocument> m_ptrDoc;
+};
+
+// use the ref class to handle an XML DOM Document object
+int main() {
+   IXMLDOMDocument* pDoc = NULL;
+
+   try {
+      // create an XML DOM document object
+      Marshal::ThrowExceptionForHR(CoCreateInstance(CLSID_DOMDocument30, NULL,
+         CLSCTX_ALL, IID_IXMLDOMDocument, (void**)&pDoc));
+      // construct the ref class with the COM object
+      XmlDocument doc1(pDoc);
+
+      // or create the class from a progid string
+      XmlDocument doc2("Msxml2.DOMDocument.3.0");
+   }
+   // doc1 and doc2 destructors are called when they go out of scope
+   // and the internal com::ptr releases its reference to the COM object
+   catch (Exception^ e) {
+      Console::WriteLine(e);
+   }
+   finally {
+      if (NULL != pDoc) {
+         pDoc->Release();
+      }
+   }
+}
+```
+
+## <a name="requirements"></a>Požadavky
+
+**Soubor hlaviček** \<msclr\com\ptr.h >
+
+**Namespace** msclr::com
+
+## <a name="see-also"></a>Viz také
+
+[ptr – členy](../dotnet/ptr-members.md)<br/>
+[ptr::ptr](../dotnet/ptr-ptr.md)<br/>
+[ptr::CreateInstance](../dotnet/ptr-createinstance.md)

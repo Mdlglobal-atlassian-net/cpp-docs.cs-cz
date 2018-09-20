@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49fada071661bd647e012bfdfac2aeedabba68fa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 47afe841a2a8e4a1c41baf68dfd139a70b320c7d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206599"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394462"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
@@ -38,7 +38,7 @@ Určuje ID tématu nápovědy HLP nebo CHM souboru.
 
 ### <a name="parameters"></a>Parametry
 
-*contextID*  
+*contextID*<br/>
 Identifikátor kontextu 32-bit nápovědy v **pomáhají** souboru.
 
 ## <a name="remarks"></a>Poznámky
@@ -79,8 +79,8 @@ Další informace najdete v tématu [kontexty atributů](../windows/attribute-co
 
 ## <a name="see-also"></a>Viz také
 
-[IDL – atributy](../windows/idl-attributes.md)  
-[Atributy rozhraní](../windows/interface-attributes.md)  
-[Atributy třídy](../windows/class-attributes.md)  
-[Atributy metody](../windows/method-attributes.md)  
+[IDL – atributy](../windows/idl-attributes.md)<br/>
+[Atributy rozhraní](../windows/interface-attributes.md)<br/>
+[Atributy třídy](../windows/class-attributes.md)<br/>
+[Atributy metody](../windows/method-attributes.md)<br/>
 [Modul](../windows/module-cpp.md)  

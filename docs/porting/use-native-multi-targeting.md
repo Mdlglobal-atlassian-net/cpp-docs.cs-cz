@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb9d7b950e4c38ea53db6e459edfa1a179eb971d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 62404de4012bcd49888da527ae93ed1b2137a48a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42465210"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374142"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Pomocí nativního cílení na více platforem v sadě Visual Studio sestavení starých projektů
 
@@ -70,19 +70,11 @@ Po této změně Visual Studio 2008 kompilátor a knihovny se používají ke ge
 
 Můžete mít starý projektu Visual C++, který nemůžete nebo nechcete upgradovat, ale ne platformy verzi sady nástrojů, který odpovídá projektu. Získat sadu nástrojů, můžete v tomto případě nainstalovat Visual Studio edice Community zdarma nebo Express edition verze, které potřebujete. Všechny verze sady Visual Studio ze sady Visual Studio 2008 na nainstalovat kompilátoru, nástroje a knihovny, je potřeba cílit na tuto verzi v aktuální sadě Visual Studio. Vyhledejte Microsoft Download Center vyhledejte a stáhněte konkrétní verzi sady Visual Studio. Ujistěte se, že během instalace zvolíte možnosti instalace jazyka C++. Po dokončení instalace, spusťte tuto verzi sady Visual Studio nainstalovat všechny aktualizace. Také zkontrolujte, které mohou vyžadovat změny aktualizací Windows. Tento proces kontroly aktualizací může být nutné opakovat více než jednou. Chcete-li získat všechny aktualizace.
 
-Tady jsou některé soubory ke stažení sady Visual Studio, budete potřebovat:
-
-  - [Microsoft Visual Studio Community 2015](https://www.microsoft.com/download/details.aspx?id=48146)  
-  - [Microsoft Visual Studio Express 2013 for Windows Desktop s aktualizací Update 5](https://www.microsoft.com/download/details.aspx?id=48131)  
-  - [Microsoft Visual Studio Express 2012 for Windows Desktop](https://www.microsoft.com/download/details.aspx?id=34673)  
-  - [Visual Studio 2012 Update 5](https://www.microsoft.com/download/details.aspx?id=34673)  
-  - [Microsoft Visual C++ 2010 Express (Webová instalační služba)](https://download.microsoft.com/download/1/D/9/1D9A6C0E-FC89-43EE-9658-B9F0E3A76983/vc_web.exe)  
-  - [Microsoft Visual Studio 2010 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=23691)  
-  - [Microsoft Visual C++ 2008 Express s aktualizací SP1 (Webová instalační služba)](https://go.microsoft.com/?linkid=7729279)  
+Aktuálně k dispozici ke stažení, najdete v části [starší sadě Visual Studio software ke stažení](https://visualstudio.microsoft.com/vs/older-downloads/).
 
 Při instalaci těchto produktů **sada nástrojů platformy** vlastnost rozevírací seznam v **stránky vlastností** dialogové okno se automaticky aktualizuje a zobrazí dostupné sady nástrojů. Nejnovější verzi sady Visual Studio můžete nyní použít k sestavení projektů pro tyto starší verze sady nástrojů bez převodu nebo upgradu je.
 
 ## <a name="see-also"></a>Viz také
 
-[Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
+[Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Vylepšení shody C++ se sadou Visual Studio 2017](../cpp-conformance-improvements-2017.md)  

@@ -1,7 +1,7 @@
 ---
 title: Konfigurace projektu C++ Linux v sadě Visual Studio | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/18/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -14,12 +14,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: a66e2f6b6506d995859c89d9588b59056047220e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 17597ae7497288312b8ddcfcf53a77130fbbf2d8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713580"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383236"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurace projektu Linux
 
@@ -33,9 +33,11 @@ Toto téma popisuje postup konfigurace projektu C++ Linux v sadě Visual Studio.
 
 Ve výchozím nastavení je spustitelný soubor (.out) vytvořené nástrojem.  Vytvoří statickou nebo dynamickou knihovnu, nebo použít existující soubor pravidel, použijte **typ konfigurace** výběru.
 
+Další informace o možnosti na stránkách vlastností najdete v tématu [odkaz na stránku vlastností projektu Linux](prop-pages-linux.md).
+
 ## <a name="remote-settings"></a>Nastavení vzdáleného přístupu
 
-Chcete-li změnit nastavení vztahující se ke vzdálenému počítači Linux, nakonfigurujte vzdálené možnosti, které se zobrazují v **Obecné** nastavení:
+Chcete-li změnit nastavení vztahující se ke vzdálenému počítači Linux, nakonfigurujte vzdálené možnosti, které se zobrazují v [Obecné](prop-pages/general-linux.md) nastavení:
 
 - Chcete-li změnit cílový počítač s Linuxem, použijte **vzdálený počítač sestavení** položka.  To vám umožní vybrat jedno z připojení, které jste předtím vytvořili.  Chcete-li vytvořit nový záznam, přejděte prosím sem [připojení vzdáleného počítače Linux](connect-to-your-remote-linux-computer.md) části.
 
@@ -44,7 +46,7 @@ Chcete-li změnit nastavení vztahující se ke vzdálenému počítači Linux, 
 - **Vzdálený adresář projektu sestavení** je, kde bude vytvořen tohoto konkrétního projektu na vzdáleném počítači s Linuxem.  To bude ve výchozím nastavení **$(RemoteRootDir)/$(ProjectName)**, který se rozbalí a adresář s názvem po aktuální projekt pod kořenovým adresářem uvedené výše.
 
 > [!NOTE]
-> Ke změně výchozího jazyka C a kompilátory C++, nebo Linkeru a archivačního programu sloužící k sestavení projektu, použijte odpovídající položky v **C/C++ > Obecné** oddílu a **Linker > Obecné** oddílu.  To může být nastaven na použití určité verze GCC, nebo dokonce kompilátoru Clang, třeba.
+> Ke změně výchozího jazyka C a kompilátory C++, nebo Linkeru a archivačního programu sloužící k sestavení projektu, použijte odpovídající položky v **C/C++ > Obecné** oddílu a **Linker > Obecné** oddílu.  To může být nastaven na použití určité verze GCC, nebo dokonce kompilátoru Clang, třeba. Další informace najdete v části [vlastnosti C/C++ (Linux C++)](prop-pages/c-cpp-linux.md) a [vlastnosti Linkeru (Linux C++)](prop-pages/linker-linux.md).
 
 ## <a name="include-directories-and-intellisense-support"></a>Zahrnout adresáře a podporu technologie IntelliSense
 
@@ -99,8 +101,8 @@ Ke správě vaší mezipaměti hlaviček, přejděte na **nástroje > Možnosti,
 
 ## <a name="see-also"></a>Viz také
 
-[Práce s vlastnostmi projektu](../ide/working-with-project-properties.md)  
-[C++ obecné vlastnosti (Linux C++)](../linux/prop-pages/general-linux.md)  
-[Adresáře VC ++ (Linux C++)](../linux/prop-pages/directories-linux.md)  
-[Kopírovat projekt vlastností zdrojů (Linux C++)](../linux/prop-pages/copy-sources-project.md)  
+[Práce s vlastnostmi projektu](../ide/working-with-project-properties.md)<br/>
+[C++ obecné vlastnosti (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
+[Adresáře VC ++ (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
+[Kopírovat projekt vlastností zdrojů (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
 [Vytvořit událost vlastnosti (Linux C++)](../linux/prop-pages/build-events-linux.md)

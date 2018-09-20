@@ -1,5 +1,5 @@
 ---
-title: 2.7.2.3 lastprivate | Microsoft Docs
+title: 2.7.2.3 lastprivate | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08f331862d6e48b1c0882382285ddffa9699e79c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 25edca8391eb094691ef4fea3c360d351f979b43
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687339"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385960"
 ---
 # <a name="2723-lastprivate"></a>2.7.2.3 lastprivate
-`lastprivate` Klauzule poskytuje větší funkce poskytované službou `private` klauzule. Syntaxe `lastprivate` klauzule vypadá takto:  
-  
-```  
-lastprivate(variable-list)  
-```  
-  
- Proměnné zadané v *seznamu proměnné* mít `private` sémantiku klauzule. Když `lastprivate` klauzule se zobrazí na direktiva, která identifikuje konstrukce sdílení práce, hodnota jednotlivých `lastprivate` proměnné z postupně poslední iteraci smyčky přidružené nebo lexikálně poslední direktivu oddílu, je přiřazena k původní objekt proměnné. Proměnné, které nejsou přiřazenou hodnotu podle poslední iterace **pro** nebo **paralelní pro**, nebo lexikálně poslední část **části** nebo  **Parallel sections –** – direktiva, po konstruktu mít hodnoty neurčitou. Nepřiřazené podobjektů po konstruktu mít i hodnotu neurčitou.  
-  
- Omezení, které mají `lastprivate` klauzule jsou následující:  
-  
--   Všechna omezení pro `private` použít.  
-  
--   Proměnná s typu třídy, který je zadaný jako `lastprivate` musí mít operátor přiřazení přístupný, jednoznačným kopírování.  
-  
--   Proměnné, která jsou soukromá v rámci paralelní oblasti nebo která se zobrazují `reduction` klauzuli **paralelní** – direktiva nelze zadat v `lastprivate` klauzule ve sdílení práce direktiva, která se sváže s paralelní konstrukce.
+
+`lastprivate` Klauzule nabízí nadmnožinu funkcí poskytovaných `private` klauzuli. Syntaxe `lastprivate` klauzule vypadá takto:
+
+```
+lastprivate(variable-list)
+```
+
+Zadané v proměnné *seznamu proměnné* mají `private` klauzule sémantiku. Při `lastprivate` klauzule se zobrazí v direktivě, který identifikuje konstruktoru work-sharing, hodnotu každého `lastprivate` přiřadí proměnná z postupně poslední iterace přidružené smyčky nebo lexikálně poslední direktivu section proměnné původní objekt. Proměnné, které nejsou přiřazeny hodnoty podle poslední iterace **pro** nebo **paralelní pro**, nebo lexikálně poslední část **oddíly** nebo  **Parallel sections –** směrnice, mají neurčité hodnoty po vytvoření. Nepřiřazené podobjekty také mají neurčité hodnoty po vytvoření.
+
+Omezení týkající `lastprivate` klauzule jsou následující:
+
+- Všechna omezení pro `private` použít.
+
+- Proměnná typu třídy, který je zadán jako `lastprivate` musí mít operátor přiřazení kopie přístupná a jednoznačná.
+
+- Proměnné, které jsou v rámci paralelní oblasti privátní nebo které se objeví v `reduction` klauzuli **paralelní** směrnice nelze zadat v `lastprivate` klauzuli direktivy sdílení práce, s vazbou na paralelní konstrukce.

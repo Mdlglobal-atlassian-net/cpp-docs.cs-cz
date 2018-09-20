@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCPrintPreviewToolBar | Microsoft Docs
+title: Cmfcprintpreviewtoolbar – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,58 +15,62 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 243389caf874557fd6dfcda74f63e6c1447a28f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a800afa7496fb3fcea9e163fbd7d7c5cec7e95ce
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367461"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381800"
 ---
-# <a name="cmfcprintpreviewtoolbar-class"></a>CMFCPrintPreviewToolBar – třída
-Panelu nástrojů v náhledu tisku.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CMFCPrintPreviewToolBar : public CMFCToolBar  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|||  
-|-|-|  
-|Název|Popis|  
-|`CMFCPrintPreviewToolBar::~CMFCPrintPreviewToolBar`|Destruktor.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|||  
-|-|-|  
-|Název|Popis|  
-|`CMFCPrintPreviewToolBar::GetThisClass`|Používá rozhraní k získání ukazatele na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený tento typ třídy.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
-  
- [CWnd](../../mfc/reference/cwnd-class.md)  
-  
- [CBasePane](../../mfc/reference/cbasepane-class.md)  
-  
- [CPane](../../mfc/reference/cpane-class.md)  
-  
- [CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)  
-  
- [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)  
-  
- [CMFCPrintPreviewToolBar](../../mfc/reference/cmfcprintpreviewtoolbar-class.md)  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxpreviewviewex.h  
-  
-## <a name="see-also"></a>Viz také  
- [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [Třídy](../../mfc/reference/mfc-classes.md)
+# <a name="cmfcprintpreviewtoolbar-class"></a>Cmfcprintpreviewtoolbar – třída
+
+Panel nástrojů v náhledu tisku.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CMFCPrintPreviewToolBar : public CMFCToolBar
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|||
+|-|-|
+|Název|Popis|
+|`CMFCPrintPreviewToolBar::~CMFCPrintPreviewToolBar`|Destruktor.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|||
+|-|-|
+|Název|Popis|
+|`CMFCPrintPreviewToolBar::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[Třídy CObject](../../mfc/reference/cobject-class.md)
+
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+
+[CWnd](../../mfc/reference/cwnd-class.md)
+
+[CBasePane](../../mfc/reference/cbasepane-class.md)
+
+[CPane](../../mfc/reference/cpane-class.md)
+
+[Cmfcbasetoolbar –](../../mfc/reference/cmfcbasetoolbar-class.md)
+
+[Cmfctoolbar –](../../mfc/reference/cmfctoolbar-class.md)
+
+[Cmfcprintpreviewtoolbar –](../../mfc/reference/cmfcprintpreviewtoolbar-class.md)
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxpreviewviewex.h
+
+## <a name="see-also"></a>Viz také
+
+[Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
+[Třídy](../../mfc/reference/mfc-classes.md)

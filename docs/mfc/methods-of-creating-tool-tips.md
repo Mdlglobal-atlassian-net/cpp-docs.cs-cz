@@ -1,5 +1,5 @@
 ---
-title: Metody vytváření popisů tlačítek | Microsoft Docs
+title: Metody vytváření popisů tlačítek | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f6e7cbf8c6464afa90c52f9cd91dcdb55de767
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 16b96228bd2f101e30605e555dbbc75b0dff78c3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349529"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374010"
 ---
 # <a name="methods-of-creating-tool-tips"></a>Metody vytváření popisů tlačítek
-Knihovna MFC poskytuje tři třídy k vytváření a správě nástroj ovládací prvek tlačítka: [CWnd](../mfc/reference/cwnd-class.md), [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md), [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) a [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md). Nástroj tip členské funkce ve tyto třídy zabalit běžné ovládacího prvku Windows rozhraní API. Třída `CToolBarCtrl` a třída `CToolTipCtrl` jsou odvozeny od třídy `CWnd`.  
-  
- `CWnd` poskytuje čtyři členské funkce k vytváření a správě popisy: [EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips), [CancelToolTips](../mfc/reference/cwnd-class.md#canceltooltips), [FilterToolTipMessage](../mfc/reference/cwnd-class.md#filtertooltipmessage), a [ontoolhittest – ](../mfc/reference/cwnd-class.md#ontoolhittest). Najdete v těchto jednotlivých členských funkcí pro další informace o způsobu implementace popisy.  
-  
- Pokud vytvoříte nástrojů pomocí `CToolBarCtrl`, můžete implementovat popisy pro tohoto panelu nástrojů přímo pomocí následující členské funkce: [GetToolTips](../mfc/reference/ctoolbarctrl-class.md#gettooltips) a [SetToolTips](../mfc/reference/ctoolbarctrl-class.md#settooltips). Jednotlivými členy s těmito funkcemi a [zpracování oznámení popisů Tip](../mfc/handling-tool-tip-notifications.md) Další informace o způsobu implementace popisy.  
-  
- `CToolTipCtrl` Třída poskytuje funkce Windows ovládacího prvku běžné tip nástroj. Ovládací prvek popisek jednotný nástroj může poskytovat informace pro více než jeden nástroj. Nástroj je buď v časovém období, jako je například podřízeného okna nebo ovládací prvek nebo definované aplikací obdélníkovou oblast v rámci časového období klientské oblasti. [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md) třída odvozená z `CToolTipCtrl` a poskytuje další vizuální styly a funkce.  
-  
-## <a name="see-also"></a>Viz také  
- [Použití objektu CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Knihovna MFC poskytuje tři třídy můžete vytvořit a spravovat nástroj ovládací prvek popis tlačítka: [CWnd](../mfc/reference/cwnd-class.md), [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md), [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) a [cmfctooltipctrl –](../mfc/reference/cmfctooltipctrl-class.md). Nástroj tip členské funkce v těchto třídách zabalit Windows běžný ovládací prvek rozhraní API. Třída `CToolBarCtrl` a třída `CToolTipCtrl` jsou odvozeny z třídy `CWnd`.
+
+`CWnd` poskytuje čtyři členské funkce můžete vytvářet a spravovat popisů tlačítek: [EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips), [CancelToolTips](../mfc/reference/cwnd-class.md#canceltooltips), [FilterToolTipMessage](../mfc/reference/cwnd-class.md#filtertooltipmessage), a [ontoolhittest – ](../mfc/reference/cwnd-class.md#ontoolhittest). Podívat se na tyto funkce jednotliví členové pro další informace o způsobu implementace popisů tlačítek.
+
+Pokud vytvoříte pomocí nástrojů `CToolBarCtrl`, můžete implementovat popisů tlačítek pro tento panel nástrojů přímo pomocí následující členské funkce: [GetToolTips](../mfc/reference/ctoolbarctrl-class.md#gettooltips) a [SetToolTips](../mfc/reference/ctoolbarctrl-class.md#settooltips). Podívat se na tyto funkce jednotliví členové a [zpracování oznámení popisů Tip](../mfc/handling-tool-tip-notifications.md) Další informace o způsobu implementace popisů tlačítek.
+
+`CToolTipCtrl` Třída poskytuje funkce pro Windows běžné nástroje ovládacím prvkem popis tlačítka. Ovládacím prvkem popis tlačítka jediného nástroje může poskytnout informace pro více než jeden nástroj. Nástroj je buď okno, jako jsou podřízené okno ovládacího prvku nebo definované aplikací obdélníkovou oblast v rámci klientské oblasti okna. [Cmfctooltipctrl –](../mfc/reference/cmfctooltipctrl-class.md) třída odvozena z `CToolTipCtrl` a poskytuje další vizuální styly a funkce.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CToolTipCtrl](../mfc/using-ctooltipctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

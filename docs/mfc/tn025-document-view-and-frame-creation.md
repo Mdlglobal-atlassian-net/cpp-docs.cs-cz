@@ -1,5 +1,5 @@
 ---
-title: 'Tn025: vytvoření Dokumentu, zobrazení a rámečku | Microsoft Docs'
+title: 'Tn025: vytvoření Dokumentu, zobrazení a rámečku | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,62 +17,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97db14dcb8c0b8b5b71823cf39d6bf36f0d19f25
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 75530d8133806357dba7a30862095ea08bd022b9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956691"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422009"
 ---
 # <a name="tn025-document-view-and-frame-creation"></a>TN025: Vytvoření dokumentu, zobrazení a rámečku
+
 > [!NOTE]
->  Následující Technická poznámka nebyla aktualizována vzhledem k tomu, že byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata může být zastaralý nebo není správný. Nejnovější informace se doporučuje, vyhledejte téma týkající se v indexu online dokumentaci.  
-  
- Tato poznámka popisuje problémy vytváření a vlastnictví pro WinApps, DocTemplates, dokumentů, snímky a zobrazení.  
-  
-## <a name="winapp"></a>WinApp  
- Existuje `CWinApp` objektu v systému.  
-  
- Je staticky sestavený a inicializuje pomocí rozhraní framework interní implementace `WinMain`. Musí být odvozeny od `CWinApp` udělat nic užitečného (výjimka: MFC – rozšiřující knihovny DLL by neměl mít `CWinApp` instance – inicializace se provádí v `DllMain` místo).  
-  
- Ten `CWinApp` seznam šablon dokumentů, které vlastní objekt ( `CPtrList`). Je jeden nebo více šablona dokumentu na aplikaci. DocTemplates jsou obvykle načtený ze souboru prostředků (to znamená, pole řetězců) v `CWinApp::InitInstance`.  
-  
-```  
+>  Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
+
+Tato poznámka popisuje problémy s vytvořením a vlastnictví pro WinApps, DocTemplates, dokumentů, snímky a zobrazení.
+
+## <a name="winapp"></a>WinApp
+
+Existuje jedna `CWinApp` objektu v systému.
+
+Je staticky vytvořen a inicializován pomocí vnitřní implementace rozhraní framework `WinMain`. Musí být odvozen od `CWinApp` k dělat něco užitečného (výjimka: MFC – rozšiřující knihovny DLL by neměl mít `CWinApp` instance – inicializace se provádí v `DllMain` místo).
+
+Ten `CWinApp` objektu vlastní seznam šablon dokumentů ( `CPtrList`). Existuje jeden nebo více šablonu dokumentu na aplikaci. DocTemplates jsou obvykle načtena ze souboru prostředků (to znamená, že pole řetězců) v `CWinApp::InitInstance`.
+
+```
 pTemplate = new CDocTemplate(IDR_MYDOCUMENT, ...);
 
 AddDocTemplate(pTemplate);
-```  
-  
- Ten `CWinApp` objektu vlastní všechna okna s rámečkem v aplikaci. Hlavní okno rámce pro aplikace by měly být uložené v `CWinApp::m_pMainWnd`; obvykle nastavíte *m_pMainWnd* v `InitInstance` implementace Pokud necháte nebyly objekty AppWizard to pro vás udělal. Pro jednotlivý dokument (SDI rozhraní) Toto je jedna `CFrameWnd` sloužícím jako hlavního rámce okna aplikace a také pouze rámce okna dokumentu. Pro rozhraní více dokumentů (MDI) jde MDI rámce (třída `CMDIFrameWnd`) sloužícím jako rámec okna hlavní aplikace, který obsahuje všechny podřízené `CFrameWnd`s. Každý podřízeného okna je třídy `CMDIChildWnd` (odvozený z `CFrameWnd`) a slouží jako jeden z okna s rámečkem potenciálně mnoho dokumentu.  
-  
-## <a name="doctemplates"></a>DocTemplates  
- `CDocTemplate` Je creator a správce dokumentů. Vlastní dokumenty, které vytvoří. Pokud vaše aplikace používá přístup podle prostředků popsaných níže, nebude potřebovat k odvozování z `CDocTemplate`.  
-  
- Pro aplikace SDI třída `CSingleDocTemplate` uchovává informace o jeden dokument otevřít. Pro aplikace MDI třída `CMultiDocTemplate` udržuje seznam ( `CPtrList`) z všechny aktuálně otevřené dokumenty vytvořené z této šablony. `CDocTemplate::AddDocument` a `CDocTemplate::RemoveDocument` zadejte člena virtuální funkce pro přidání nebo odebrání dokumentu ze šablony. `CDocTemplate` je přítel z `CDocument` tak jsme můžete nastavit chráněného `CDocument::m_pDocTemplate` zpětný ukazatel odkazovat zpět do dokumentů šablony, která vytvořila dokumentu.  
-  
- `CWinApp` zpracovává výchozí `OnFileOpen` implementace, které pak odešle dotaz všech šablon dokumentů. Implementace zahrnuje hledá již otevřené dokumenty a při rozhodování o tom, co chcete-li otevřít nové dokumenty ve formátu.  
-  
- `CDocTemplate` spravuje vazby uživatelského rozhraní pro dokumenty a rámce.  
-  
- `CDocTemplate` zachová počet nepojmenované dokumenty.  
-  
-## <a name="cdocument"></a>CDocument  
- A `CDocument` je vlastněna `CDocTemplate`.  
-  
- Dokumenty mít seznam aktuálně otevřít zobrazení (odvozený z `CView`), jsou zobrazení dokumentu ( `CPtrList`).  
-  
- Dokumenty není vytvoření nebo odstranění zobrazení, ale jsou připojené k sobě navzájem po jejich vytvoření. Při uzavření dokumentu (to znamená, pomocí souboru nebo ukončení), všechny připojené zobrazení bude uzavřeno. Při zavření posledního zobrazení v dokumentu (to znamená, okno nebo ukončení) bude uzavřen dokumentu.  
-  
- `CDocument::AddView`, `RemoveView` Rozhraní slouží k udržování zobrazení seznamu. `CDocument` je přítel z `CView` tak jsme můžete nastavit `CView::m_pDocument` zpětný ukazatel.  
-  
-## <a name="cframewnd"></a>CFrameWnd  
- A `CFrameWnd` (také označované jako rámečkem) hraje roli stejné jako MFC 1.0, ale nyní `CFrameWnd` třída je určen k použití v mnoha případech bez odvozování novou třídu. Odvozené třídy `CMDIFrameWnd` a `CMDIChildWnd` také líp, jsou už implementované mnoho standardní příkazy.  
-  
- `CFrameWnd` Zodpovídá za vytvoření windows v klientské oblasti rámečku. Obvykle je jeden hlavní okno vyplnění klientské oblasti rámečku.  
-  
- Klientské oblasti pro okno s rámečkem MDI je vyplněn MDICLIENT řídit, která je zase nadřazeného všechny MDI – podřízená okna rámce. Okno s rámečkem SDI nebo okno s rámečkem podřízeného MDI, je klientské oblasti obvykle vyplněn `CView`-odvozené objektu okna. U `CSplitterWnd`, klientské oblasti zobrazení, naplní se `CSplitterWnd` objektu okna a `CView`-okno odvozené objekty (jeden na podokně rozdělení) jsou vytvořené jako podřízená okna z `CSplitterWnd`.  
-  
-## <a name="see-also"></a>Viz také  
- [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)   
- [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
+```
+
+Ten `CWinApp` objekt je vlastníkem všech oken s rámečkem v aplikaci. Hlavní okno rámce aplikace by měla být uložena v `CWinApp::m_pMainWnd`; obvykle nastavené *m_pMainWnd* v `InitInstance` implementace, pokud ještě necháte AppWizard udělal za vás. Pro rozhraní jednoho dokumentu (SDI). to je jedna `CFrameWnd` , který slouží jako hlavního rámce okna aplikace, stejně jako pouze okna rámce dokumentu. Pro rozhraní více dokumentů (MDI). to je rámce MDI (třída `CMDIFrameWnd`), který slouží jako hlavního rámce okna aplikace, která obsahuje všechny podřízené `CFrameWnd`s. Každé podřízené okno je třídy `CMDIChildWnd` (odvozený od `CFrameWnd`) a slouží jako jeden z potenciálně mnoha oken s rámečkem v dokumentu.
+
+## <a name="doctemplates"></a>DocTemplates
+
+`CDocTemplate` Je tvůrce a správce dokumentů. Vlastní dokumenty, které vytvoří. Pokud vaše aplikace používá přístup podle prostředků je popsáno níže, nebude nutné odvozovat z `CDocTemplate`.
+
+Pro třídu v aplikaci SDI `CSingleDocTemplate` uchovává informace o jeden dokument otevřít. Pro aplikace MDI, třída `CMultiDocTemplate` udržuje seznam ( `CPtrList`) všechny aktuálně otevřené dokumenty vytvořené z této šablony. `CDocTemplate::AddDocument` a `CDocTemplate::RemoveDocument` poskytují virtuální členské funkce při přidání nebo odebrání ze šablony dokumentu. `CDocTemplate` je přátelská `CDocument` tak můžete nastavíme chráněný `CDocument::m_pDocTemplate` zpětný ukazatel na přejděte zpět na šablonu dokumentu, který vytvořil dokument.
+
+`CWinApp` zpracovává výchozí `OnFileOpen` implementaci, což bude zase dotaz na všechny šablony dokumentu. Implementace zahrnuje hledají už otevřené dokumenty a rozhodování o tom, co chcete-li otevřít nové dokumenty v formátování.
+
+`CDocTemplate` spravuje vazbu uživatelského rozhraní pro dokumenty a snímků.
+
+`CDocTemplate` sleduje počet nepojmenované dokumenty.
+
+## <a name="cdocument"></a>CDocument
+
+A `CDocument` vlastní `CDocTemplate`.
+
+Dokumenty k dispozici seznam aktuálně otevřít zobrazení (odvozený od `CView`), který se zobrazuje dokument ( `CPtrList`).
+
+Dokumenty není vytvoření/odstranění zobrazení, ale jsou připojené k sobě navzájem po jejich vytvoření. Při zavření dokumentu (to znamená, až soubor/zavřít), všechny připojené zobrazení se zavře. Při zavření posledního zobrazení dokumentu (to znamená, okno nebo pravá) dokumentu se zavře.
+
+`CDocument::AddView`, `RemoveView` Rozhraní umožňuje udržovat seznam zobrazení. `CDocument` je přátelská `CView` tak jsme můžete nastavit `CView::m_pDocument` zpětný ukazatel.
+
+## <a name="cframewnd"></a>CFrameWnd
+
+A `CFrameWnd` (také označované jako rámce) hraje roli stejné jako v MFC 1.0, ale nyní `CFrameWnd` třídy je určen pro použití v mnoha případech bez odvození nové třídy. Odvozené třídy `CMDIFrameWnd` a `CMDIChildWnd` jsou taky vylepšené tak, aby se již implementují mnoho standardních příkazů.
+
+`CFrameWnd` Je zodpovědný za vytváření oken v klientské oblasti rámce. Obvykle je jeden hlavní okno vyplnění klientské oblasti rámce.
+
+Pro oknem rámce MDI klientské oblasti je vyplněna MDICLIENT ovládacího prvku, které se pak nadřazené všechna okna rámce MDI – podřízená. Pro oknem rámce SDI nebo oknem rámce MDI – podřízená je klientské oblasti obvykle vyplněna `CView`-odvozené objekt okna. V případě třídy `CSplitterWnd`, je vyplněna klientské oblasti zobrazení `CSplitterWnd` objekt okna a `CView`-okno odvozené objekty (jeden na podokno) jsou vytvořeny jako podřízeného okna `CSplitterWnd`.
+
+## <a name="see-also"></a>Viz také
+
+[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
+[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
 

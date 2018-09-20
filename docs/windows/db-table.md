@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e084a0f876d0b2598a5317e15057162c602474a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: aa64b7b4785f8865a372a256ecc5c9d3f8738dcb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717116"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385856"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -41,16 +41,16 @@ Otevře se tabulku OLE DB.
 
 #### <a name="parameters"></a>Parametry
 
-*db_table*  
+*db_table*<br/>
 Řetězec určující název databázové tabulky (například "produktů").
 
-*Jméno*  
+*Jméno*<br/>
 (Volitelné) Název popisovače, který slouží pro práci s tabulkou. Tento parametr musíte zadat, pokud se chcete vrátit více než jeden řádek výsledků. **db_table** generuje proměnné se zadaným *název* , který slouží k procházení řádků nebo spustit více dotazů akce.
 
-*source_name*  
+*source_name*<br/>
 (Volitelné) `CSession` Proměnnou nebo instance třídy, která má `db_source` atribut WebMethod na kterém příkaz spustí. Zobrazit [db_source](../windows/db-source.md).
 
-*Hodnota HRESULT*  
+*Hodnota HRESULT*<br/>
 (Volitelné) Určuje proměnné, která se zobrazí hodnota HRESULT tohoto databázového příkazu. Pokud proměnná neexistuje, ji budou automaticky vloženy atribut.
 
 ## <a name="remarks"></a>Poznámky

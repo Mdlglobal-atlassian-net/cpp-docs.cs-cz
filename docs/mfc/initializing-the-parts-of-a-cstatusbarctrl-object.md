@@ -1,5 +1,5 @@
 ---
-title: Inicializace částí objektu CStatusBarCtrl | Microsoft Docs
+title: Inicializace částí objektu CStatusBarCtrl | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,25 +22,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89cea1516924530f821003affd96e2848687882b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5fa5c4da3bb91983eceea739d42fae12e73b9b0f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344334"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406734"
 ---
 # <a name="initializing-the-parts-of-a-cstatusbarctrl-object"></a>Inicializace částí objektu CStatusBarCtrl
-Ve výchozím nastavení stavového řádku zobrazí informace o stavu pomocí samostatných podokna. Tyto podokna (také označované jako částí) může obsahovat textový řetězec, ikonu nebo obojí.  
-  
- Použití [SetParts](../mfc/reference/cstatusbarctrl-class.md#setparts) určit, kolik částí a délka, bude mít na stavovém řádku. Po vytvoření části stavového řádku provádět volání do [SetText –](../mfc/reference/cstatusbarctrl-class.md#settext) a [SetIcon](../mfc/reference/cstatusbarctrl-class.md#seticon) nastavit text nebo ikonu pro konkrétní součást na stavovém řádku. Jakmile části byla úspěšně nastavena, bude automaticky překreslen ovládacího prvku.  
-  
- Tento příklad inicializuje existující `CStatusBarCtrl` objektu (`m_StatusBarCtrl`) s čtyři podokna a poté nastaví ikonu (IDI_ICON1) a text v druhé části.  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#31](../mfc/codesnippet/cpp/initializing-the-parts-of-a-cstatusbarctrl-object_1.cpp)]  
-  
- Další informace o nastavení režimu `CStatusBarCtrl` objekt, který má jednoduchý, viz [nastavení režimu objektu CStatusBarCtrl](../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Použití třídy CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Ve výchozím nastavení ve stavovém řádku zobrazí informace o stavu pomocí samostatných podoken. Těchto podoken můžete vizualizaci (také označované jako částí) může obsahovat textový řetězec, ikona nebo obojí.
+
+Použití [SetParts](../mfc/reference/cstatusbarctrl-class.md#setparts) určit, kolik částí a délku, bude mít stavový řádek. Po vytvoření části stavový řádek provádět volání do [SetText –](../mfc/reference/cstatusbarctrl-class.md#settext) a [SetIcon](../mfc/reference/cstatusbarctrl-class.md#seticon) nastavit text nebo ikonu pro určitou část ve stavovém řádku. Po úspěšném nastavení části je automaticky překreslení ovládacího prvku.
+
+Následující příklad inicializuje existující `CStatusBarCtrl` objektu (`m_StatusBarCtrl`) pomocí čtyř podoken a v druhé části nastaví ikonu (IDI_ICON1) a nějakým textem.
+
+[!code-cpp[NVC_MFCControlLadenDialog#31](../mfc/codesnippet/cpp/initializing-the-parts-of-a-cstatusbarctrl-object_1.cpp)]
+
+Další informace o nastavení režimu `CStatusBarCtrl` objektu na jednoduchý, viz [nastavení režimu objektu CStatusBarCtrl](../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md).
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

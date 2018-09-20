@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e7f0f40ad5d01b647f1f3273dc9a55d7cfa7564
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 0496a1f76a763ae7c7a2e95c1b68fa08089e2c4f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42464436"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374023"
 ---
 # <a name="implementationonly"></a>implementation_only
 **Specifické pro C++**  
@@ -49,5 +49,5 @@ Pokud tento atribut je zadána, je obsah hlavičky tli v stejný obor názvů, j
   
 ## <a name="see-also"></a>Viz také  
  
-[atributů #import](../preprocessor/hash-import-attributes-cpp.md)   
+[atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

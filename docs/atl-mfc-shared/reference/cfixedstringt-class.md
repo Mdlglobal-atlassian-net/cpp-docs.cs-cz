@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 213bfd9dc5c07ad1b3ef811b9333cb12bf9c2b7a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b6ac44a9a27b5c3ad62279dc3065aa9e0aac5236
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755593"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378218"
 ---
 # <a name="cfixedstringt-class"></a>Cfixedstringt – třída
 
@@ -141,7 +141,7 @@ Je třeba si uvědomit, tato paměť výjimky může dojít při každém použi
 
 ## <a name="see-also"></a>Viz také
 
-[Cstringt – třída](../../atl-mfc-shared/reference/cstringt-class.md)   
-[Graf hierarchie](../../mfc/hierarchy-chart.md)   
+[CStringT – třída](../../atl-mfc-shared/reference/cstringt-class.md)<br/>
+[Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Sdílené třídy ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

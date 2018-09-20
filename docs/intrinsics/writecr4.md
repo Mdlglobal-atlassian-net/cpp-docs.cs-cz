@@ -16,42 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ab6941e891d75e06aaea1ca492a3c64e509b0f7
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fd03b9371c4026282ff9e01d16b937c73bc495ce
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711669"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390497"
 ---
 # <a name="writecr4"></a>__writecr4
-**Specifické pro Microsoft**  
-  
- Zapíše hodnotu `Data` CR4 registrace.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void writecr4(   
-   unsigned __int64 Data   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+**Specifické pro Microsoft**
+
+Zapíše hodnotu `Data` CR4 registrace.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void writecr4( 
+   unsigned __int64 Data 
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
 *Data*<br/>
-[in] Hodnota k zápisu do registru CR4.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Vnitřní|Architektura|  
-|---------------|------------------|  
-|`__writecr4`|x86, x64|  
-  
- **Soubor hlaviček** \<intrin.h >  
-  
-## <a name="remarks"></a>Poznámky  
- Tomto vnitřní je k dispozici pouze v režimu jádra a rutina je dostupný jenom jako vnitřní.  
-  
-**Specifické pro END Microsoft**  
-  
-## <a name="see-also"></a>Viz také  
- [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[in] Hodnota k zápisu do registru CR4.
+
+## <a name="requirements"></a>Požadavky
+
+|Vnitřní|Architektura|
+|---------------|------------------|
+|`__writecr4`|x86, x64|
+
+**Soubor hlaviček** \<intrin.h >
+
+## <a name="remarks"></a>Poznámky
+
+Tomto vnitřní je k dispozici pouze v režimu jádra a rutina je dostupný jenom jako vnitřní.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také
+
+[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

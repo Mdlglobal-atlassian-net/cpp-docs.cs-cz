@@ -17,101 +17,106 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e9ca899b7ad0f83faed4b8aefe318d2c62abb76
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d31210194f9b9f1c9808176cd7e5495df8da1ebb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704987"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395307"
 ---
 # <a name="segmentlimit"></a>__segmentlimit
-**Specifické pro Microsoft**  
-  
- Generuje `lsl` (mezní zatížení segmentu) instrukce.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-unsigned long __segmentlimit(   
-   unsigned long a   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+**Specifické pro Microsoft**
+
+Generuje `lsl` (mezní zatížení segmentu) instrukce.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+unsigned long __segmentlimit( 
+   unsigned long a 
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
 *a*<br/>
-[in] Konstanta, která určuje segment selektoru.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Limit segment selektoru segment určený `a`za předpokladu, že modulu pro výběr je platný a je viditelný na aktuální úrovni oprávnění.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Vnitřní|Architektura|  
-|---------------|------------------|  
-|`__segmentlimit`|x86, x64|  
-  
- **Soubor hlaviček** \<intrin.h >  
-  
-## <a name="remarks"></a>Poznámky  
- Pokud se limit počtu segmentů nelze načíst, tento pokyn selže. Při selhání tuto instrukci vymaže příznak ZF a návratová hodnota není definována.  
-  
- Tato rutina je k dispozici pouze jako vnitřní objekt.  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-#include <stdio.h>  
-  
-#ifdef _M_IX86  
-typedef unsigned int READETYPE;  
-#else  
-typedef unsigned __int64 READETYPE;  
-#endif  
-  
-#define EFLAGS_ZF      0x00000040  
-#define KGDT_R3_DATA    0x0020  
-#define RPL_MASK        0x3  
-  
-extern "C"  
-{  
-unsigned long __segmentlimit (unsigned long);  
-READETYPE __readeflags();  
-}  
-  
-#pragma intrinsic(__readeflags)  
-#pragma intrinsic(__segmentlimit)  
-  
-int main(void)  
-{  
-   const unsigned long initsl = 0xbaadbabe;  
-   READETYPE eflags = 0;  
-   unsigned long sl = initsl;  
-  
-   printf("Before: segment limit =0x%x eflags =0x%x\n", sl, eflags);  
-   sl = __segmentlimit(KGDT_R3_DATA + RPL_MASK);  
-  
-   eflags = __readeflags();  
-  
-   printf("After: segment limit =0x%x eflags =0x%x eflags.zf = %s\n", sl, eflags, (eflags & EFLAGS_ZF) ? "set" : "clear");  
-  
-   // If ZF is set, the call to lsl succeeded; if ZF is clear, the call failed.  
-   printf("%s\n", eflags & EFLAGS_ZF ? "Success!": "Fail!");  
-  
-   // You can verify the value of sl to make sure that the instruction wrote to it  
-   printf("sl was %s\n", (sl == initsl) ? "unchanged" : "changed");  
-  
-   return 0;  
-}  
-```  
-  
-```Output  
-Before: segment limit =0xbaadbabe eflags =0x0  
-After: segment limit =0xffffffff eflags =0x256 eflags.zf = set  
-Success!  
-sl was changed  
-```  
-  
-**Specifické pro END Microsoft**  
-  
-## <a name="see-also"></a>Viz také  
- [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+[in] Konstanta, která určuje segment selektoru.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Limit segment selektoru segment určený `a`za předpokladu, že modulu pro výběr je platný a je viditelný na aktuální úrovni oprávnění.
+
+## <a name="requirements"></a>Požadavky
+
+|Vnitřní|Architektura|
+|---------------|------------------|
+|`__segmentlimit`|x86, x64|
+
+**Soubor hlaviček** \<intrin.h >
+
+## <a name="remarks"></a>Poznámky
+
+Pokud se limit počtu segmentů nelze načíst, tento pokyn selže. Při selhání tuto instrukci vymaže příznak ZF a návratová hodnota není definována.
+
+Tato rutina je k dispozici pouze jako vnitřní objekt.
+
+## <a name="example"></a>Příklad
+
+```
+#include <stdio.h>
+
+#ifdef _M_IX86
+typedef unsigned int READETYPE;
+#else
+typedef unsigned __int64 READETYPE;
+#endif
+
+#define EFLAGS_ZF      0x00000040
+#define KGDT_R3_DATA    0x0020
+#define RPL_MASK        0x3
+
+extern "C"
+{
+unsigned long __segmentlimit (unsigned long);
+READETYPE __readeflags();
+}
+
+#pragma intrinsic(__readeflags)
+#pragma intrinsic(__segmentlimit)
+
+int main(void)
+{
+   const unsigned long initsl = 0xbaadbabe;
+   READETYPE eflags = 0;
+   unsigned long sl = initsl;
+
+   printf("Before: segment limit =0x%x eflags =0x%x\n", sl, eflags);
+   sl = __segmentlimit(KGDT_R3_DATA + RPL_MASK);
+
+   eflags = __readeflags();
+
+   printf("After: segment limit =0x%x eflags =0x%x eflags.zf = %s\n", sl, eflags, (eflags & EFLAGS_ZF) ? "set" : "clear");
+
+   // If ZF is set, the call to lsl succeeded; if ZF is clear, the call failed.
+   printf("%s\n", eflags & EFLAGS_ZF ? "Success!": "Fail!");
+
+   // You can verify the value of sl to make sure that the instruction wrote to it
+   printf("sl was %s\n", (sl == initsl) ? "unchanged" : "changed");
+
+   return 0;
+}
+```
+
+```Output
+Before: segment limit =0xbaadbabe eflags =0x0
+After: segment limit =0xffffffff eflags =0x256 eflags.zf = set
+Success!
+sl was changed
+```
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také
+
+[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

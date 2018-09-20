@@ -1,5 +1,5 @@
 ---
-title: 'Správa paměti: Přidělení haldy | Microsoft Docs'
+title: 'Správa paměti: Přidělení v haldě | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,20 +21,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7ef166201103b1544d0a36d82452b485af75418
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: cc158ceda21bfb04053bbc490a3333a76e2d7afe
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928606"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383808"
 ---
 # <a name="memory-management-heap-allocation"></a>Správa paměti: Přidělení haldy
-Halda je vyhrazená pro potřeby přidělení paměti programu. Je oblast kromě kód programu a zásobníku. Typické programy C použít funkce **malloc –** a **volné** a přidělit paměť haldy navrácení. Ladicí verze knihovny MFC poskytuje upravené verze předdefinované operátory jazyka C++ **nové** a **odstranit** a přidělit navrácení objekty v halda paměti.  
-  
- Při použití **nové** a **odstranit** místo **malloc –** a **volné**, budete moci využít výhod knihovny tříd Správa paměti ladění vylepšení, které mohou být užitečné při zjišťování nevracení paměti. Při vytváření váš program s prodejní verze knihovny MFC, standardní verze **nové** a **odstranit** operátory poskytovat účinný způsob alokace a zrušit přidělení paměti (prodejní verze knihovny MFC neposkytuje upravené verze těchto operátorů).  
-  
- Všimněte si, že je celková velikost objekty přidělené v haldě omezena pouze dostupné virtuální paměti systému.  
-  
-## <a name="see-also"></a>Viz také  
- [Správa paměti](../mfc/memory-management.md)
+
+Haldy je vyhrazený pro potřeby přidělování paměti programu. To je oblast kromě programového kódu a zásobníku. Typické programů jazyka C pomocí funkce **malloc** a **bezplatné** přidělit a uvolnit paměť haldy. Ladicí verze knihovny MFC poskytuje upravenou verzí integrované operátory C++ **nové** a **odstranit** přidělit a uvolnit objekty v paměti haldy.
+
+Při použití **nové** a **odstranit** místo **malloc** a **bezplatné**, budete moct využít výhod knihovny tříd Správa paměti ladění rozšíření, které mohou být užitečné při zjištění nevracení paměti. Při sestavení programu s prodejní verze knihovny MFC, standardní verze **nové** a **odstranit** operátory poskytovat účinný způsob, jak přidělit a uvolnit paměť (verzi knihovny MFC neposkytuje upravené verze těchto operátorů).
+
+Mějte na paměti, celková velikost objektů přidělených do je omezen pouze váš systém dostupná virtuální paměť.
+
+## <a name="see-also"></a>Viz také
+
+[Správa paměti](../mfc/memory-management.md)
 

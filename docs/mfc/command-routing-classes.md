@@ -1,5 +1,5 @@
 ---
-title: Třídy směrování příkazů | Microsoft Docs
+title: Příkaz směrování tříd | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3e05046ac6754dd585bb1fbf51420ef862af7be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b467a85aca4bb1d0405f9bbddee5cb5e4f5b790
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341959"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391531"
 ---
 # <a name="command-routing-classes"></a>Třídy směrování příkazů
-Jako uživatel pracuje s aplikací tak, že zvolíte nabídek nebo ovládací prvek panelu tlačítka myši, aplikace odesílá zprávy z objektu ovlivněných uživatelského rozhraní příslušný příkaz cílový objekt. Příkaz cílové třídy odvozené od `CCmdTarget` zahrnují [CWinApp](../mfc/reference/cwinapp-class.md), [CWnd](../mfc/reference/cwnd-class.md), [CDocTemplate](../mfc/reference/cdoctemplate-class.md), [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), a z nich odvozené třídy. Rozhraní framework podporuje automatické příkaz směrování, aby příkazy mohou být zpracováno nejvhodnější objektem v aplikaci aktuálně aktivní.  
-  
- Třída objektu `CCmdUI` předaný cílem příkazu update příkazu uživatelského rozhraní ([on_update_command_ui –](reference/message-map-macros-mfc.md#on_update_command_ui)) obslužné rutiny, která umožňuje aktualizovat stav uživatelského rozhraní pro konkrétní příkaz (za účelem kontroly nebo odeberte Kontrola z položky nabídky). Volání členských funkcí `CCmdUI` objekt, který chcete aktualizovat stav objektu uživatelského rozhraní. Tento proces je stejný, zda je objekt uživatelského rozhraní související s konkrétní příkaz položku nabídky nebo tlačítko nebo obojí.  
-  
- [CCmdTarget](../mfc/reference/ccmdtarget-class.md)  
- Slouží jako základní třída pro všechny třídy objektů, které může přijímat a reagovat na zprávy.  
-  
- [CCmdUI](../mfc/reference/ccmdui-class.md)  
- Poskytuje programovací rozhraní pro aktualizace objektů uživatelského rozhraní, například položky nabídky nebo ovládací prvek panelu tlačítek. Cílový objekt příkaz povolí, zakáže, kontroluje nebo vymaže objekt uživatelského rozhraní s tímto objektem.  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled třídy](../mfc/class-library-overview.md)
+
+Během interakce uživatele s aplikací výběrem nabídky nebo tlačítka ovládacích panelů pomocí myši aplikace odesílá zprávy z objektu ovlivněné uživatelského rozhraní na odpovídající objekt cíli příkazu. Cíl příkazu třídy odvozené z `CCmdTarget` zahrnují [CWinApp](../mfc/reference/cwinapp-class.md), [CWnd](../mfc/reference/cwnd-class.md), [CDocTemplate](../mfc/reference/cdoctemplate-class.md), [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), a z nich odvozené třídy. Rozhraní framework podporuje automatické příkaz směrování tak, aby příkazy mohou být zpracovány v aplikaci aktuálně aktivní nejvhodnější objektu.
+
+Objekt třídy `CCmdUI` je předán příkazu pro aktualizaci cíle příkazů uživatelského rozhraní ([ON_UPDATE_COMMAND_UI](reference/message-map-macros-mfc.md#on_update_command_ui)) obslužných rutin, aby bylo možné aktualizovat stav uživatelského rozhraní pro ke konkrétnímu příkazu (například pro kontrolu nebo odebrat Kontrola z položek nabídky). Volat členské funkce `CCmdUI` objektu k aktualizaci stavu objektů uživatelského rozhraní. Tento proces je stejný, zda je objekt uživatelského rozhraní, které jsou přidružené ke konkrétnímu příkazu. položka nabídky nebo tlačítko nebo obojí.
+
+[CCmdTarget](../mfc/reference/ccmdtarget-class.md)<br/>
+Slouží jako základní třída pro všechny třídy objektů, které může přijímat a reagovat na zprávy.
+
+[Ccmdui –](../mfc/reference/ccmdui-class.md)<br/>
+Poskytuje programové rozhraní pro aktualizace objektů uživatelského rozhraní, jako je například položky nabídky nebo tlačítka ovládacích panelů. Cílový objekt příkazu umožňuje, zakáže, zkontroluje nebo vymaže objekt uživatelského rozhraní s tímto objektem.
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../mfc/class-library-overview.md)
 

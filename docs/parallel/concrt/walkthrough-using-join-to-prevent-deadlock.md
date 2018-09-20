@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Použití metody join k zabránění vzájemnému zablokování | Microsoft Docs'
+title: 'Návod: Použití metody join k zabránění vzájemnému zablokování | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,143 +17,156 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5deb501cc05c2a771b6e14d5091b1baa95f2f622
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 45669b4838925ed671646ca1aad16a3fdbe6de77
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693338"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377276"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>Návod: Použití metody join k zabránění vzájemnému zablokování
-Toto téma používá nabízet filosofů problém pro ilustraci použití [concurrency::join](../../parallel/concrt/reference/join-class.md) třídy, aby zablokování v aplikaci. V aplikaci softwaru *zablokování* nastane, když minimálně dva procesy každý uložení prostředku a vzájemně čekat na jiný proces k uvolnění jiný prostředek.  
-  
- Nabízet filosofů problém je konkrétní příklad sadu obecné problémy, které mohou nastat při sadu prostředků je sdílen více souběžných procesů.  
-  
-## <a name="prerequisites"></a>Požadavky  
- Před spuštěním tohoto průvodce, přečtěte si následující témata:  
-  
-- [Asynchronní agenti](../../parallel/concrt/asynchronous-agents.md)  
-  
-- [Návod: Vytvoření aplikace založené na agentovi](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)  
-  
-- [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)  
-  
-- [Funkce pro předávání zpráv](../../parallel/concrt/message-passing-functions.md)  
-  
-- [Synchronizační datové struktury](../../parallel/concrt/synchronization-data-structures.md)  
-  
-##  <a name="top"></a> Oddíly  
- Tento názorný postup obsahuje následující části:  
-  
-- [Nabízet filosofů problém](#problem)  
-  
-- [Implementace Naïve](#deadlock)  
-  
-- [Použití metody join k zabránění vzájemnému zablokování](#solution)  
-  
-##  <a name="problem"></a> Nabízet filosofů problém  
- Nabízet problém filosofů ukazuje, jak dojde k zablokování v aplikaci. V tento problém pět filosofů nacházejí se na kulatého stolu. Každý filosofovi střídá myslím a pít. Každý filosofovi musí sdílet s sousedním na levé straně a druhý chopstick chopstick s sousedním vpravo. Následující obrázek znázorňuje tuto rozložení.  
-  
- ![Problém jídlo filosofů](../../parallel/concrt/media/dining_philosophersproblem.png "dining_philosophersproblem")  
-  
- Chcete-li eat, musí filosofovi podržte dvě chopsticks. Pokud každých filosofovi obsahuje pouze jednu chopstick a čeká na jiný, pak můžete eat žádné filosofovi a všechny omezují.  
-  
- [[Horní](#top)]  
-  
-##  <a name="deadlock"></a> Implementace Naïve  
- Následující příklad ukazuje implementaci naïve nabízet filosofů problému. `philosopher` Třída, která je odvozena z [concurrency::agent](../../parallel/concrt/reference/agent-class.md), umožňuje každý filosofovi tak, aby fungoval nezávisle. Tento příklad používá sdílené pole [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md) objekty, které chcete poskytnout každý `philosopher` objektu výhradní přístup k pár chopsticks.  
-  
- Chcete-li se týkají implementace na obrázku, `philosopher` třída reprezentuje jeden filosofovi. `int` Každý chopstick představuje proměnnou. `critical_section` Objekty sloužit jako držitelé, na kterých chopsticks rest. `run` Metoda simuluje dobu životnosti filosofovi. `think` Metoda simuluje v rámci přemýšlení a `eat` metoda simuluje v rámci pít.  
-  
- A `philosopher` objekt zamkne obě `critical_section` objekty k simulaci odebrání chopsticks z držitelé dříve, než se volá `eat` metoda. Po zavolání `eat`, `philosopher` objekt vrátí chopsticks držitelům podle nastavení `critical_section` objekty zpět do stavu odemknout.  
-  
- `pickup_chopsticks` Metoda ukazuje, kde můžete k zablokování. Pokud každých `philosopher` objekt získá přístup k mezi zámky, pak ne `philosopher` objekt můžete pokračovat, protože jiné zámek je řízena pomocí jiného `philosopher` objektu.  
-  
-## <a name="example"></a>Příklad  
-  
-### <a name="description"></a>Popis  
-  
-### <a name="code"></a>Kód  
- [!code-cpp[concrt-philosophers-deadlock#1](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_1.cpp)]  
-  
-## <a name="compiling-the-code"></a>Probíhá kompilace kódu  
- Příklad kódu zkopírujte a vložte ji do projektu sady Visual Studio nebo ho vložte v souboru, který je pojmenován `philosophers-deadlock.cpp` a poté spusťte následující příkaz v okně příkazového řádku Visual Studia.  
-  
- **cl.exe /EHsc filosofů deadlock.cpp**  
-  
- [[Horní](#top)]  
-  
-##  <a name="solution"></a> Použití metody join k zabránění vzájemnému zablokování  
- Tato část ukazuje způsob použití vyrovnávacích pamětí zpráv a funkce pro předávání zpráv omezit riziko vzájemného zablokování.  
-  
- Pro tento příklad starší tomu se týkají `philosopher` třída nahrazuje každý `critical_section` objekt pomocí [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) objektu a `join` objektu. `join` Objektu slouží jako arbiter poskytující chopsticks k filosofovi.  
-  
- Tento příklad používá `unbounded_buffer` třídy, protože když cíl obdrží zprávu od `unbounded_buffer` objektu zpráva je odebrána z fronty zpráv. To umožňuje `unbounded_buffer` objekt, který obsahuje zprávu, která označuje, že chopstick je k dispozici. `unbounded_buffer` Objekt, který obsahuje žádná zpráva označuje, jestli se používá chopstick.  
-  
- Tento příklad používá typu non-greedy `join` objekt, protože spojení typu non-greedy poskytuje každý `philosopher` objektu přístup k obou chopsticks pouze tehdy, když oba `unbounded_buffer` objekty obsahovat zprávu. Spojení typu greedy by nedošlo k zablokování, protože spojení typu greedy přijímá zprávy, jakmile budou k dispozici. Zablokování může dojít, pokud všechny typu greedy `join` objekty zobrazit jedna z zprávy však navždy počkejte dalších k dispozici.  
-  
- Další informace o spojení typu greedy a typu non-greedy a rozdíly mezi různé typy vyrovnávací paměti zpráv najdete v tématu [asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md).  
-  
-#### <a name="to-prevent-deadlock-in-this-example"></a>Jak v tomto příkladu zabránit zablokování  
-  
-1.  Odeberte následující kód z příkladu.  
-  
- [!code-cpp[concrt-philosophers-deadlock#2](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_2.cpp)]  
-  
-2.  Změnit typ `_left` a `_right` datových členů `philosopher` třídy k `unbounded_buffer`.  
-  
- [!code-cpp[concrt-philosophers-join#2](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_3.cpp)]  
-  
-3.  Změnit `philosopher` konstruktor provést `unbounded_buffer` objekty jako jeho parametry.  
-  
- [!code-cpp[concrt-philosophers-join#3](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_4.cpp)]  
-  
-4.  Změnit `pickup_chopsticks` metodu použít typu non-greedy `join` objekt pro příjem zpráv z vyrovnávací paměti zpráv pro obě chopsticks.  
-  
- [!code-cpp[concrt-philosophers-join#4](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_5.cpp)]  
-  
-5.  Změnit `putdown_chopsticks` metodu pro uvolnění přístup k chopsticks odesláním zprávy do vyrovnávacích pamětí zpráv pro obě chopsticks.  
-  
- [!code-cpp[concrt-philosophers-join#5](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_6.cpp)]  
-  
-6.  Změnit `run` metoda pro uložení výsledků `pickup_chopsticks` metoda a předávat tyto výsledky `putdown_chopsticks` metoda.  
-  
- [!code-cpp[concrt-philosophers-join#6](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_7.cpp)]  
-  
-7.  Upravit deklaraci `chopsticks` proměnné v `wmain` funkce, která má být pole `unbounded_buffer` objekty, že každý obsahovat jednu zprávu.  
-  
- [!code-cpp[concrt-philosophers-join#7](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_8.cpp)]  
-  
-## <a name="example"></a>Příklad  
-  
-### <a name="description"></a>Popis  
- Následující ukazuje dokončené příklad, který používá typu non-greedy `join` objekty omezit riziko vzájemného zablokování.  
-  
-### <a name="code"></a>Kód  
- [!code-cpp[concrt-philosophers-join#1](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_9.cpp)]  
-  
-### <a name="comments"></a>Komentáře  
- Tento příklad vytvoří následující výstup.  
-  
-```Output  
-aristotle ate 50 times.  
-descartes ate 50 times.  
-hobbes ate 50 times.  
-socrates ate 50 times.  
-plato ate 50 times.  
-```  
-  
-## <a name="compiling-the-code"></a>Probíhá kompilace kódu  
- Příklad kódu zkopírujte a vložte ji do projektu sady Visual Studio nebo ho vložte v souboru, který je pojmenován `philosophers-join.cpp` a poté spusťte následující příkaz v okně příkazového řádku Visual Studia.  
-  
- **cl.exe /EHsc filosofů join.cpp**  
-  
- [[Horní](#top)]  
-  
-## <a name="see-also"></a>Viz také  
- [Návody k Concurrency Runtime](../../parallel/concrt/concurrency-runtime-walkthroughs.md)   
- [Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md)   
- [Asynchronní agenti](../../parallel/concrt/asynchronous-agents.md)   
- [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)   
- [Funkce usnadnění](../../parallel/concrt/message-passing-functions.md)   
- [Synchronizační datové struktury](../../parallel/concrt/synchronization-data-structures.md)
+
+Toto téma používá problém obědvajících filozofů si ukážeme, jak používat [concurrency::join](../../parallel/concrt/reference/join-class.md) třídy, aby se zabránilo zablokování v aplikaci. V případě aplikace softwaru *zablokování* nastane, pokud dva nebo více procesů jednotlivých uložení prostředku a vzájemně počkat na jiný proces uvolnit jiný prostředek.
+
+Problém obědvajících filozofů je konkrétní příklad sady obecných problémů, které mohou nastat při sadu prostředků je sdílen mezi více souběžných procesů.
+
+## <a name="prerequisites"></a>Požadavky
+
+Před zahájením tohoto návodu, přečtěte si následující témata:
+
+- [Asynchronní agenti](../../parallel/concrt/asynchronous-agents.md)
+
+- [Návod: Vytvoření aplikace založené na agentovi](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
+
+- [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)
+
+- [Funkce pro předávání zpráv](../../parallel/concrt/message-passing-functions.md)
+
+- [Synchronizační datové struktury](../../parallel/concrt/synchronization-data-structures.md)
+
+##  <a name="top"></a> Oddíly
+
+Tento návod obsahuje následující části:
+
+- [Problém obědvajících Filozofů](#problem)
+
+- [Naivní implementace](#deadlock)
+
+- [Použití metody join k zabránění vzájemnému zablokování](#solution)
+
+##  <a name="problem"></a> Problém obědvajících Filozofů
+
+Problém obědvajících filozofů ukazuje, jak v aplikaci dojde k zablokování. V tomto problému pět filozofů sedí u kulatého stolu. Každý filosofovi střídá uvažujete a využít. Každý filosofovi musí nasdílet chopstick sousední vlevo a jinou chopstick s sousední vpravo. Následující obrázek znázorňuje toto rozložení.
+
+![Problém jídlo Filozofů](../../parallel/concrt/media/dining_philosophersproblem.png "dining_philosophersproblem")
+
+K jíst filosofovi musí mít dva chopsticks. Pokud každý filosofovi obsahuje pouze jednu chopstick a čeká na jiný, poté můžete bez filosofovi jíst a všechny nezablokuje.
+
+[[Horní](#top)]
+
+##  <a name="deadlock"></a> Naivní implementace
+
+Následující příklad ukazuje na naivní implementace problém obědvajících filozofů. `philosopher` Třída, která je odvozena z [concurrency::agent](../../parallel/concrt/reference/agent-class.md), umožňuje každý filosofovi jednali nezávisle. V příkladu se používá sdílené pole [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md) objekty dát `philosopher` exkluzivní přístup k pár chopsticks objektu.
+
+K implementaci na obrázku `philosopher` třída představuje jeden filosofovi. `int` Proměnná představuje každý chopstick. `critical_section` Objekty slouží jako zástupné znaky, na kterých chopsticks rest. `run` Metoda simuluje životnosti filosofovi. `think` Metoda simuluje act přemýšlení a `eat` metoda simuluje v rámci využít.
+
+A `philosopher` objekt uzamkne obě `critical_section` objekty pro simulaci odebrání chopsticks z zástupné znaky dříve, než se zavolá `eat` metoda. Po volání `eat`, `philosopher` objekt vrátí chopsticks držitelům tak, že nastavíte `critical_section` objektů zpět do stavu odemknout.
+
+`pickup_chopsticks` Metoda ukazuje, kde může dojít k zablokování. Pokud každý `philosopher` objektu získá přístup k jeden zámků a ne `philosopher` objekt může pokračovat, protože na uzamčení se řídí jiné `philosopher` objektu.
+
+## <a name="example"></a>Příklad
+
+### <a name="description"></a>Popis
+
+### <a name="code"></a>Kód
+
+[!code-cpp[concrt-philosophers-deadlock#1](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_1.cpp)]
+
+## <a name="compiling-the-code"></a>Probíhá kompilace kódu
+
+Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `philosophers-deadlock.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
+
+**cl.exe/EHsc filozofů deadlock.cpp**
+
+[[Horní](#top)]
+
+##  <a name="solution"></a> Použití metody join k zabránění vzájemnému zablokování
+
+Tato část ukazuje, jak můžete eliminovat riziko zablokování vyrovnávací paměti zpráv a funkce předávání zpráv.
+
+K propojení tohoto příkladu a dřívějších verzí `philosopher` třídy nahradí každou `critical_section` s použitím [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) objektu a `join` objektu. `join` Objekt slouží jako arbiter, která poskytuje chopsticks filosofovi.
+
+V tomto příkladu `unbounded_buffer` třídy, protože když cíl obdrží zprávu od `unbounded_buffer` objektu, zpráva se odebere z fronty zpráv. To umožňuje `unbounded_buffer` objekt, který obsahuje zprávu, která označuje, že chopstick je k dispozici. `unbounded_buffer` Objekt, který obsahuje žádná zpráva označuje, že chopstick používá.
+
+Tento příklad používá bez metody greedy `join` objektu, protože spojení typu non-greedy poskytuje každý `philosopher` objekt přístup k oběma chopsticks pouze tehdy, když oba `unbounded_buffer` objekty obsahují zprávu. Greedy spojení by zabránit zablokování, protože greedy spojení přijímá zprávy, jakmile budou k dispozici. Zablokování může dojít, pokud všechny greedy `join` objekty zobrazit jedna z zprávy, ale stále čekat pro jiné než bude k dispozici.
+
+Další informace o spojení s metodou greedy a bez metody greedy a rozdíly mezi různými typy vyrovnávací paměti zpráv najdete v tématu [asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md).
+
+#### <a name="to-prevent-deadlock-in-this-example"></a>Jak v tomto příkladu zabránit zablokování
+
+1. Odeberte z příkladu následující kód.
+
+[!code-cpp[concrt-philosophers-deadlock#2](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_2.cpp)]
+
+1. Změna typu `_left` a `_right` datové členy `philosopher` třídu `unbounded_buffer`.
+
+[!code-cpp[concrt-philosophers-join#2](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_3.cpp)]
+
+1. Upravit `philosopher` konstruktoru se `unbounded_buffer` objekty jako svoje parametry.
+
+[!code-cpp[concrt-philosophers-join#3](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_4.cpp)]
+
+1. Upravit `pickup_chopsticks` metodu použít bez metody greedy `join` objektu pro příjem zpráv z vyrovnávací paměti zpráv pro obě chopsticks.
+
+[!code-cpp[concrt-philosophers-join#4](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_5.cpp)]
+
+1. Upravit `putdown_chopsticks` metodu pro uvolnění přístup k chopsticks odesláním zprávy do vyrovnávací paměti zpráv pro obě chopsticks.
+
+[!code-cpp[concrt-philosophers-join#5](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_6.cpp)]
+
+1. Upravit `run` metodu pro ukládání výsledků `pickup_chopsticks` – metoda a předávat tyto výsledky `putdown_chopsticks` metody.
+
+[!code-cpp[concrt-philosophers-join#6](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_7.cpp)]
+
+1. Upravte deklaraci `chopsticks` proměnné v `wmain` funkci pole `unbounded_buffer` objekty, že každý obsahovat jednu zprávu.
+
+[!code-cpp[concrt-philosophers-join#7](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_8.cpp)]
+
+## <a name="example"></a>Příklad
+
+### <a name="description"></a>Popis
+
+Následuje ukázka dokončené příklad, který používá bez metody greedy `join` objekty riziko zablokování.
+
+### <a name="code"></a>Kód
+
+[!code-cpp[concrt-philosophers-join#1](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_9.cpp)]
+
+### <a name="comments"></a>Komentáře
+
+Tento příklad vytvoří následující výstup.
+
+```Output
+aristotle ate 50 times.
+descartes ate 50 times.
+hobbes ate 50 times.
+socrates ate 50 times.
+plato ate 50 times.
+```
+
+## <a name="compiling-the-code"></a>Probíhá kompilace kódu
+
+Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `philosophers-join.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
+
+**cl.exe/EHsc filozofů join.cpp**
+
+[[Horní](#top)]
+
+## <a name="see-also"></a>Viz také
+
+[Návody pro Concurrency Runtime](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
+[Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md)<br/>
+[Asynchronní agenti](../../parallel/concrt/asynchronous-agents.md)<br/>
+[Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
+[Funkce pro předávání zpráv](../../parallel/concrt/message-passing-functions.md)<br/>
+[Synchronizační datové struktury](../../parallel/concrt/synchronization-data-structures.md)

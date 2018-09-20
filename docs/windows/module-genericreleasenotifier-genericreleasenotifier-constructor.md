@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98bcc3d3fcaf7aea3b2632cacb1ff38eedb868b8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 23b13dc170748e1a605103624450c605b1975719
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612309"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391252"
 ---
 # <a name="modulegenericreleasenotifiergenericreleasenotifier-constructor"></a>Module::GenericReleaseNotifier::GenericReleaseNotifier – konstruktor
 
@@ -39,10 +39,10 @@ GenericReleaseNotifier(
 
 ### <a name="parameters"></a>Parametry
 
-*zpětné volání*  
+*zpětné volání*<br/>
 Výraz lambda, funktor nebo obslužná rutina události ukazatele na funkci, který lze vyvolat pomocí funkce operátoru závorky (`()`).
 
-*Vydání verze*  
+*Vydání verze*<br/>
 Zadejte **true** povolit volání základní [modulu:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) metody; v opačném případě zadejte **false**.
 
 ## <a name="requirements"></a>Požadavky

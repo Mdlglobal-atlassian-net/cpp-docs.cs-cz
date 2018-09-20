@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: určení specifických zásad plánovače | Microsoft Docs'
+title: 'Postupy: určení specifických zásad plánovače | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,49 +15,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 988540c19ab94e841e274637b581f0ce8031df13
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 578743fc9ffc6931e596a1b924282544f5ee9601
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685782"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435412"
 ---
 # <a name="how-to-specify-specific-scheduler-policies"></a>Postupy: Určení specifických zásad plánovače
-Zásady plánovače umožňuje řídit strategie používající Plánovač při správě úloh. Toto téma ukazuje, jak pomocí zásad plánovače můžete zvýšit prioritu vlákno úlohu, která se zobrazí indikátor průběhu ke konzole.  
-  
- Příklad, který používá zásady vlastní plánovače společně s asynchronních agentů, naleznete v části [postupy: vytváření agentů této zásady použít konkrétní plánovače](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).  
-  
-## <a name="example"></a>Příklad  
- Následující příklad provádí úlohy dvou paralelně. První úlohou vypočítá z n<sup>tý</sup> Fibonacciho číslo. V druhé úloze vytiskne indikátor průběhu ke konzole.  
-  
- První úlohou používá k výpočtu Fibonacciho číslo rekurzivní rozložením. To znamená že každý rekurzivně úloh vytvoří dílčí úkoly k výpočtu celkového výsledek. Úloha, která používá rekurzivní rozložením může používat všechny dostupné prostředky a tím omezují další úlohy. V tomto příkladu nemusí úloha, která se zobrazí indikátor průběhu dostat včas přístup k výpočetních prostředků.  
-  
- Pokud chcete zadat úloha, která se vytiskne průběh zpráva úloha dostatečný přístup k výpočetních prostředků, tento příklad používá kroky, které jsou popsané v [postupy: Správa Instance plánovače](../../parallel/concrt/how-to-manage-a-scheduler-instance.md) k vytvoření instance plánovače, který má vlastní zásady. Vlastní zásady určuje prioritu vlákno jako s nejvyšší prioritou.  
-  
- Tento příklad používá [concurrency::call](../../parallel/concrt/reference/call-class.md) a [concurrency::timer](../../parallel/concrt/reference/timer-class.md) tříd pro tisk indikátor průběhu. Tyto třídy mají verze jejich konstruktory, které provést odkaz na [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) objekt, který je plány. Příklad používá výchozí plánovač naplánovat úlohu, která vypočítá počet Fibonacciho a instance plánovače naplánovat úlohu, která se zobrazí indikátor průběhu.  
-  
- Tento příklad pro ilustraci výhody použití plánovače, který má vlastní zásady, provede úlohu celkový dvakrát. V příkladu nejprve používá výchozí plánovač k naplánování obě úlohy. V příkladu použije výchozí plánovač naplánovat úlohu první a Plánovač, který má vlastní zásady při plánování v druhé úloze.  
-  
- [!code-cpp[concrt-scheduler-policy#1](../../parallel/concrt/codesnippet/cpp/how-to-specify-specific-scheduler-policies_1.cpp)]  
-  
- Tento příklad vytvoří následující výstup.  
-  
-```Output  
-Default scheduler:  
-...........................................................................done  
-Scheduler that has a custom policy:  
-...........................................................................done  
-```  
-  
- I když obě sady úlohy vytvořila stejný výsledek, verzi, která používá vlastní zásadu umožňuje úloha, která se zobrazí indikátor průběhu spouštět se zvýšenými oprávněními důležitostí tak, aby se chová více responsively.  
-  
-## <a name="compiling-the-code"></a>Probíhá kompilace kódu  
- Příklad kódu zkopírujte a vložte ji do projektu sady Visual Studio nebo ho vložte v souboru, který je pojmenován `scheduler-policy.cpp` a poté spusťte následující příkaz v okně příkazového řádku Visual Studia.  
-  
- **cl.exe /EHsc scheduler-policy.cpp**  
-  
-## <a name="see-also"></a>Viz také  
- [Zásady plánovače](../../parallel/concrt/scheduler-policies.md)   
- [Postupy: Správa Instance plánovače](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)   
- [Postupy: Vytváření agentů využívajících specifické zásady plánovače](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
+
+Zásady plánovače umožňují ovládat strategie, Plánovač používá při správě úloh. Toto téma ukazuje, jak můžete zvýšit prioritu vlákna úkolu, který se zobrazí indikátor průběhu ke konzole zásadu plánovače.
+
+Příklad, který používá vlastní plánovač zásady spolu s asynchronních agentů, naleznete v tématu [postupy: vytváření agentů specifické zásady plánovače tohoto použití](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
+
+## <a name="example"></a>Příklad
+
+Následující příklad provede dvě úlohy paralelně. Vypočítá první úkol n<sup>th</sup> Fibonacciho číslo. Druhá úloha zobrazí indikátor průběhu do konzoly.
+
+První úkol používá k výpočtu Fibonacciho číslo rozložené rekurzivní. To znamená rekurzivně Každá úloha vytvoří dílčí úkoly k výpočtu celkový výsledek. Úkol, který používá rekurzivní rozložené může použít všechny dostupné prostředky a tím omezit jiné úlohy. V tomto příkladu nemusí dostat úloha, která se zobrazí indikátor průběhu včasný přístup k výpočetní prostředky.
+
+K poskytování úloha, která vytiskne průběh zprávy spravedlivé přístup k výpočetní prostředky, v tomto příkladu kroky, které jsou popsány v [postupy: Správa Instance plánovače](../../parallel/concrt/how-to-manage-a-scheduler-instance.md) k vytvoření instance plánovače, která má vlastní zásady. Vlastní zásada určuje priorita vlákna bude s nejvyšší prioritou.
+
+V tomto příkladu [concurrency::call](../../parallel/concrt/reference/call-class.md) a [concurrency::timer](../../parallel/concrt/reference/timer-class.md) tříd pro tisk indikátor průběhu. Tyto třídy mají verze jejich konstruktory, které využít odkaz [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) objektu, která plánuje je. Příklad používá výchozí scheduler k plánování úlohy, která vypočítá počet Fibonacciho a instance scheduler k plánování úlohy, která zobrazí indikátor průběhu.
+
+Pro ilustraci výhody použití, který má vlastní zásadu plánovače, provede v tomto příkladu celkové úlohu dvakrát. V prvním příkladu výchozím plánovačem naplánování úlohy i. Příklad poté použije výchozí plánovač prvního úkolu a Plánovač, který má vlastní zásady plánování druhý úkol.
+
+[!code-cpp[concrt-scheduler-policy#1](../../parallel/concrt/codesnippet/cpp/how-to-specify-specific-scheduler-policies_1.cpp)]
+
+Tento příklad vytvoří následující výstup.
+
+```Output
+Default scheduler:
+...........................................................................done
+Scheduler that has a custom policy:
+...........................................................................done
+```
+
+I když obě sady úkolů přinesou stejný výsledek, verzi, která používá vlastní zásady umožňuje úloha, která se zobrazí indikátor průběhu spuštění se zvýšenými oprávněními důležitostí tak, aby se chová více responzivně.
+
+## <a name="compiling-the-code"></a>Probíhá kompilace kódu
+
+Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `scheduler-policy.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
+
+**cl.exe/EHsc scheduler-policy.cpp**
+
+## <a name="see-also"></a>Viz také
+
+[Zásady plánovače](../../parallel/concrt/scheduler-policies.md)<br/>
+[Postupy: Správa instance plánovače](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>
+[Postupy: Vytváření agentů využívajících specifické zásady plánovače](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
 

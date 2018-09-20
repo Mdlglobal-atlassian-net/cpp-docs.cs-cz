@@ -1,5 +1,5 @@
 ---
-title: auto_gcroot::operator! | Microsoft Docs
+title: auto_gcroot::operator! | Dokumenty Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,59 +20,63 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 107ac80f84d949a96132a4fc05c90ad7a7e20fbc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1cba64c079b423a05ff5760a90e1b06d269a1a90
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103369"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381878"
 ---
 # <a name="autogcrootoperator"></a>auto_gcroot::operator!
-Operátor pro používání `auto_gcroot` podmíněného výrazu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-bool operator!() const;  
-```  
-  
-## <a name="return-value"></a>Návratová hodnota  
- `true` Pokud zabalená objektu je neplatný. `false` jinak.  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// msl_auto_gcroot_operator_not.cpp  
-// compile with: /clr  
-#include <msclr\auto_gcroot.h>  
-  
-using namespace System;  
-using namespace msclr;  
-  
-int main() {  
-   auto_gcroot<String^> s;  
-   if ( s ) Console::WriteLine( "s is valid" );  
-   if ( !s ) Console::WriteLine( "s is invalid" );  
-   s = "something";  
-   if ( s ) Console::WriteLine( "now s is valid" );  
-   if ( !s ) Console::WriteLine( "now s is invalid" );  
-   s.reset();  
-   if ( s ) Console::WriteLine( "now s is valid" );  
-   if ( !s ) Console::WriteLine( "now s is invalid" );  
-}  
-```  
-  
-```Output  
-s is invalid  
-now s is valid  
-now s is invalid  
-```  
-  
-## <a name="requirements"></a>Požadavky  
- **Soubor hlaviček** \<msclr\auto_gcroot.h >  
-  
- **Namespace** msclr –  
-  
-## <a name="see-also"></a>Viz také  
- [auto_gcroot – členové](../dotnet/auto-gcroot-members.md)   
- [auto_gcroot::operator bool](../dotnet/auto-gcroot-operator-bool.md)
+
+Operátor pro používání `auto_gcroot` v podmíněných výrazech.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+bool operator!() const;
+```
+
+## <a name="return-value"></a>Návratová hodnota
+
+`true` Pokud zabalená objekt je neplatný; `false` jinak.
+
+## <a name="example"></a>Příklad
+
+```
+// msl_auto_gcroot_operator_not.cpp
+// compile with: /clr
+#include <msclr\auto_gcroot.h>
+
+using namespace System;
+using namespace msclr;
+
+int main() {
+   auto_gcroot<String^> s;
+   if ( s ) Console::WriteLine( "s is valid" );
+   if ( !s ) Console::WriteLine( "s is invalid" );
+   s = "something";
+   if ( s ) Console::WriteLine( "now s is valid" );
+   if ( !s ) Console::WriteLine( "now s is invalid" );
+   s.reset();
+   if ( s ) Console::WriteLine( "now s is valid" );
+   if ( !s ) Console::WriteLine( "now s is invalid" );
+}
+```
+
+```Output
+s is invalid
+now s is valid
+now s is invalid
+```
+
+## <a name="requirements"></a>Požadavky
+
+**Soubor hlaviček** \<msclr\auto_gcroot.h >
+
+**Namespace** msclr –
+
+## <a name="see-also"></a>Viz také
+
+[auto_gcroot Members](../dotnet/auto-gcroot-members.md)<br/>
+[auto_gcroot::operator bool](../dotnet/auto-gcroot-operator-bool.md)

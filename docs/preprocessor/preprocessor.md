@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 980058c588e02751113b889d44cf0bb5f69066f1
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: b693d83872ca1c918c97e47f75c89f788748353c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42464435"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375900"
 ---
 # <a name="preprocessor"></a>Preprocesor
 Preprocesor je textový procesor, který pracuje s textem zdrojového souboru v rámci první fáze překladu. Preprocesor neanalyzuje zdrojový text, ale rozdělí jej na tokeny za účelem vyhledání volání maker. Ačkoli kompilátor obvykle vyvolá preprocesor v první fázi, pro zpracování textu bez kompilace lze preprocesor vyvolat také samostatně.  
@@ -48,5 +48,5 @@ Pojem „proměnná“ představuje jednoduchý datový objekt typu C. Pojem „
   
 ## <a name="see-also"></a>Viz také  
  
-[Reference preprocesoru C/C++](../preprocessor/c-cpp-preprocessor-reference.md)   
+[C/C++ – referenční dokumentace preprocesoru](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
 [Fáze posunutí](../preprocessor/phases-of-translation.md)

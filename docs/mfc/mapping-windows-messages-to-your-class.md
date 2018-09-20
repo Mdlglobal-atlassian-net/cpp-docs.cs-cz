@@ -1,5 +1,5 @@
 ---
-title: Mapování zpráv systému Windows na třídu | Microsoft Docs
+title: Mapování zpráv Windows na třídu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,27 +20,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 398888a858165197c6e35be791169a9311f3014b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3e5c51cfccfa360b7f677ca3a30b7a05e0d4a799
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346266"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374461"
 ---
 # <a name="mapping-windows-messages-to-your-class"></a>Mapování zpráv systému Windows na třídu
-Pokud potřebujete vašem dialogovém okně pro zpracování zpráv systému Windows, přepište funkce příslušnou obslužnou rutinu. Uděláte to tak, použijte okno Vlastnosti k [mapy zpráv](../mfc/reference/mapping-messages-to-functions.md) pro třídu dialog. Tím se zapíše položku mapy zpráv pro každou zprávu a přidá členské funkce obslužné rutiny zpráv pro třídu. Psaní kódu v obslužné rutiny zpráv používáte editor Visual C++ zdrojového kódu.  
-  
- Můžete také přepsat členské funkce [CDialog](../mfc/reference/cdialog-class.md) a jeho základních tříd, zejména [CWnd](../mfc/reference/cwnd-class.md).  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
-  
--   [Zpracování a mapování zpráv](../mfc/message-handling-and-mapping.md)  
-  
--   [Běžně přepisované členské funkce](../mfc/commonly-overridden-member-functions.md)  
-  
--   [Běžně přidávané členské funkce](../mfc/commonly-added-member-functions.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Dialogová okna](../mfc/dialog-boxes.md)   
- [Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
+
+Pokud potřebujete vašem dialogovém okně pro zpracování zpráv Windows, přepište odpovídající obslužná rutina funkce. Uděláte to tak, použijte okno Vlastnosti k [mapování zpráv](../mfc/reference/mapping-messages-to-functions.md) pro třídu dialog. To zapíše položku mapování zpráv pro každou zprávu a přidá popisovač zprávy členské funkce třídy. Editor zdrojového kódu jazyka Visual C++ můžete psát kód v obslužné rutiny zpráv.
+
+Můžete členské funkce také přepsat [CDialog](../mfc/reference/cdialog-class.md) a její základní třídy, zejména [CWnd](../mfc/reference/cwnd-class.md).
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+
+- [Zpracování a mapování zpráv](../mfc/message-handling-and-mapping.md)
+
+- [Běžně přepisované členské funkce](../mfc/commonly-overridden-member-functions.md)
+
+- [Běžně přidávané členské funkce](../mfc/commonly-added-member-functions.md)
+
+## <a name="see-also"></a>Viz také
+
+[Dialogová okna](../mfc/dialog-boxes.md)<br/>
+[Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
 

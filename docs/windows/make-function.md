@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dab76460dcbbb70f55dac864292ad9a6f1fca99
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a8b02b51dca4ae3712274b2b011c1967e5006637
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607817"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422399"
 ---
 # <a name="make-function"></a>Make – funkce
 
@@ -174,61 +174,61 @@ ComPtr<T> Make();
 
 ### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Uživatel zadal třídu, která dědí z `WRL::RuntimeClass`.
 
-*TArg1*  
+*TArg1*<br/>
 Typ argumentu 1, který je předán do třídy zadaného modulu runtime.
 
-*TArg2*  
+*TArg2*<br/>
 Typ argumentu 2, který je předán do třídy zadaného modulu runtime.
 
-*TArg3*  
+*TArg3*<br/>
 Typ argumentu 3, který je předán do třídy zadaného modulu runtime.
 
-*TArg4*  
+*TArg4*<br/>
 Typ argumentu 4, který je předán do třídy zadaného modulu runtime.
 
-*TArg5*  
+*TArg5*<br/>
 Typ argumentu 5, který je předán do třídy zadaného modulu runtime.
 
-*TArg6*  
+*TArg6*<br/>
 Typ argumentu 6, který je předán do třídy zadaného modulu runtime.
 
-*TArg7*  
+*TArg7*<br/>
 Typ argumentu 7, který je předán do třídy zadaného modulu runtime.
 
-*TArg8*  
+*TArg8*<br/>
 Typ argumentu 8, který je předán do třídy zadaného modulu runtime.
 
-*TArg9*  
+*TArg9*<br/>
 Typ argumentu 9, který je předán do třídy zadaného modulu runtime.
 
-*arg1*  
+*arg1*<br/>
 Argument 1, který je předán do třídy zadaného modulu runtime.
 
-*arg2*  
+*arg2*<br/>
 Argument 2, který je předán do třídy zadaného modulu runtime.
 
-*arg3*  
+*arg3*<br/>
 Argument 3, který je předán do třídy zadaného modulu runtime.
 
-*arg4*  
+*arg4*<br/>
 Argument 4, který je předán do třídy zadaného modulu runtime.
 
-*arg5*  
+*arg5*<br/>
 Argument 5, který je předán do třídy zadaného modulu runtime.
 
-*arg6*  
+*arg6*<br/>
 Argument 6, který je předán do třídy zadaného modulu runtime.
 
-*arg7*  
+*arg7*<br/>
 Argument 7, který je předán do třídy zadaného modulu runtime.
 
-*arg8*  
+*arg8*<br/>
 Argument 8, který je předán do třídy zadaného modulu runtime.
 
-*arg9*  
+*arg9*<br/>
 Argument 9, který je předán do třídy zadaného modulu runtime.
 
 ## <a name="return-value"></a>Návratová hodnota

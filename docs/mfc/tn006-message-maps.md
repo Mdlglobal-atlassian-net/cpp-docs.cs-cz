@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6faa29858e94c7d80d6039e35278b6a7ae263a85
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 69aecab15ffb1914dbc8a6a6ae15fca307bc77ef
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213974"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386246"
 ---
 # <a name="tn006-message-maps"></a>TN006: Mapy zpráv
 
@@ -87,7 +87,7 @@ Signatura standardní funkce je definována pro rozbalení parametry každé zpr
 > [!NOTE]
 > ClassWizard vyžaduje použití **afx_msg** – klíčové slovo v deklaracích zpráva mapování obslužné rutiny.
 
- Tyto funkce podpisy byly získány pomocí jednoduchého konvence. Název funkce vždy začíná `"On`". Následuje název zprávy Windows s "WM_" odebrat a první písmeno každého slova velké. Pořadí parametrů je *wParam* následovaný `LOWORD`(*lParam*) pak `HIWORD`(*lParam*). Nepoužité parametry nejsou předány. Všechny obslužné rutiny, které jsou zabaleny ve třídách knihovny MFC jsou převáděna na ukazatele na odpovídající objekty knihovny MFC. Následující příklad ukazuje, jak zpracovat zprávu WM_PAINT a způsobit, `CMyWnd::OnPaint` zavolání funkce:
+Tyto funkce podpisy byly získány pomocí jednoduchého konvence. Název funkce vždy začíná `"On`". Následuje název zprávy Windows s "WM_" odebrat a první písmeno každého slova velké. Pořadí parametrů je *wParam* následovaný `LOWORD`(*lParam*) pak `HIWORD`(*lParam*). Nepoužité parametry nejsou předány. Všechny obslužné rutiny, které jsou zabaleny ve třídách knihovny MFC jsou převáděna na ukazatele na odpovídající objekty knihovny MFC. Následující příklad ukazuje, jak zpracovat zprávu WM_PAINT a způsobit, `CMyWnd::OnPaint` zavolání funkce:
 
 ```cpp
 BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
@@ -97,7 +97,7 @@ BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
 END_MESSAGE_MAP()
 ```
 
- Tabulka mapy zpráv musí být definovány mimo obor všechny funkce nebo definice třídy. By neměl být umístit do bloku extern "C".
+Tabulka mapy zpráv musí být definovány mimo obor všechny funkce nebo definice třídy. By neměl být umístit do bloku extern "C".
 
 > [!NOTE]
 > ClassWizard slouží k úpravě položek mapy zpráv, ke kterým dochází mezi / / {{a / nebo}} komentář závorky.
@@ -223,7 +223,7 @@ Příklady z těchto forem:
     }
     ```
 
- Pokročilí uživatelé dokáže zpracovat celou řadu příkazů pomocí jednoho příkazu rutiny: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) nebo ON_COMMAND_RANGE_EX. Další informace o těchto makrech v dokumentaci produktu.
+Pokročilí uživatelé dokáže zpracovat celou řadu příkazů pomocí jednoho příkazu rutiny: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) nebo ON_COMMAND_RANGE_EX. Další informace o těchto makrech v dokumentaci produktu.
 
 > [!NOTE]
 > ClassWizard podporuje vytváření ON_COMMAND a ON_UPDATE_COMMAND_UI obslužné rutiny, ale nepodporuje vytváření ON_COMMAND_EX nebo ON_COMMAND_RANGE obslužné rutiny. Průvodce třídami však bude parsovat a umožňují procházet všechny varianty obslužná rutina příkazu čtyři.
@@ -251,5 +251,5 @@ Použití běžných ovládacích prvků Windows výkonnějšího [WM_NOTIFY](ht
 
 ## <a name="see-also"></a>Viz také:
 
-[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)  
-[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)  
+[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
+[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)

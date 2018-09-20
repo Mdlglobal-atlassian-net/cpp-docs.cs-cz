@@ -1,5 +1,5 @@
 ---
-title: 'Ovládací prvky MFC ActiveX: Vytvoření serveru automatizace | Microsoft Docs'
+title: 'MFC – ovládací prvky ActiveX: Vytvoření serveru automatizace | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 617d84b8603467da74b21be8c2bfb2e6cb418f7b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5fa8370bb02e71c457f7967d5cb6b508e743333e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346760"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373932"
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>MFC – ovládací prvky ActiveX: Vytvoření serveru automatizace
-Můžete vyvíjet ovládacího prvku ActiveX knihovny MFC jako serveru automatizace pro účely programově vložení tohoto ovládacího prvku v jiné aplikaci a volání metod v ovládacím prvku z aplikace. Takový ovládací prvek bude stále k dispozici pro hostování v kontejneru ovládacího prvku ActiveX.  
-  
-### <a name="to-create-a-control-as-an-automation-server"></a>Vytvoření ovládacího prvku jako serveru automatizace  
-  
-1.  [Vytvoření](../mfc/reference/mfc-activex-control-wizard.md) ovládacího prvku.  
-  
-2.  [Přidejte metody](../mfc/mfc-activex-controls-methods.md).  
-  
-3.  Přepsání [IsInvokeAllowed](../mfc/reference/colecontrol-class.md#isinvokeallowed). Další informace najdete v článku znalostní báze Knowledge Base Q146120.  
-  
-4.  Vytvoření ovládacího prvku.  
-  
-### <a name="to-programmatically-access-the-methods-in-an-automation-server"></a>Pro přístup programu ke metody v serveru automatizace  
-  
-1.  Vytvořit aplikaci, například, [MFC exe](../mfc/reference/mfc-application-wizard.md).  
-  
-2.  Na začátku `InitInstance` fungovat, přidejte následující řádek:  
-  
-     [!code-cpp[NVC_MFC_AxCont#17](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_1.cpp)]  
-  
-3.  V zobrazení tříd, klikněte pravým tlačítkem na uzel projektu a vyberte **přidat třídu z typelib** Import knihovny typů.  
-  
-     Soubory s .h přípony názvu souboru a sada se přidá do projektu.  
-  
-4.  V záhlaví souboru třídy, kde bude volat jednu nebo více metod v ovládacím prvku ActiveX, přidejte následující řádek: `#include filename.h`, kde název souboru je název souboru záhlaví, která byla vytvořena, když jste naimportovali knihovny typů.  
-  
-5.  Ve funkci, kde budou provedeny volání metody v ovládacím prvku ActiveX přidejte kód, který vytvoří objekt třídu obálky ovládacího prvku a vytvořit objekt ActiveX. Například následující kód MFC vytvoří `CCirc` ovládací prvek, získá vlastnost popisek a při kliknutí na tlačítko OK v dialogovém okně se zobrazí výsledek:  
-  
-     [!code-cpp[NVC_MFC_AxCont#18](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_2.cpp)]  
-  
- Pokud přidáte metody do ovládacího prvku ActiveX po použití v aplikaci, můžete začít používat nejnovější verzi ovládacího prvku v aplikaci tak, že odstraníte soubory, které byly vytvořeny při importu knihovny typů. Znovu proveďte importujte knihovny typů.  
-  
-## <a name="see-also"></a>Viz také  
- [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)
+
+Ovládací prvek ActiveX knihovny MFC můžete vyvíjet jako automatizační server za účelem programově vložení ovládacího prvku v jiné aplikaci a volání metod v ovládacím prvku z aplikace. Takový ovládací prvek bude stále k dispozici zajistit také jejich hostování v kontejneru ovládacího prvku ActiveX.
+
+### <a name="to-create-a-control-as-an-automation-server"></a>Vytvoření ovládacího prvku jako automatizační server
+
+1. [Vytvoření](../mfc/reference/mfc-activex-control-wizard.md) ovládacího prvku.
+
+1. [Přidejte metody](../mfc/mfc-activex-controls-methods.md).
+
+1. Přepsat [IsInvokeAllowed](../mfc/reference/colecontrol-class.md#isinvokeallowed). Další informace najdete v článku znalostní báze Knowledge Base Q146120.
+
+1. Vytvoření ovládacího prvku.
+
+### <a name="to-programmatically-access-the-methods-in-an-automation-server"></a>Chcete-li programově přístup k metodám v serveru automatizace
+
+1. Vytvoření aplikace, například, [MFC exe](../mfc/reference/mfc-application-wizard.md).
+
+1. Na začátku `InitInstance` funkci, přidejte následující řádek:
+
+     [!code-cpp[NVC_MFC_AxCont#17](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_1.cpp)]
+
+1. V zobrazení tříd klikněte pravým tlačítkem myši na uzel projektu a vyberte **přidáním tříd z knihovny typů** Import knihovny typů.
+
+     Soubory s .cpp a .h přípony názvu souboru se přidá do projektu.
+
+1. V souboru hlaviček třídy, ve kterém bude volat jeden nebo více metod v ovládacím prvku ActiveX, přidejte následující řádek: `#include filename.h`, kde název_souboru je název souboru hlaviček, který byl vytvořen při importu knihovny typů.
+
+1. Ve funkci, ve kterém bude provedeno volání metody v ovládacím prvku ActiveX přidejte kód, který vytvoří objekt ovládacího obálkovou třídu a vytvořit objekt ActiveX. Například následující kód knihovny MFC vytvoří `CCirc` ovládacího prvku, získá vlastnost Caption a výsledek se zobrazí po kliknutí na tlačítko OK v dialogovém okně:
+
+     [!code-cpp[NVC_MFC_AxCont#18](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_2.cpp)]
+
+Pokud chcete přidat metody do ovládacího prvku ActiveX po použití v aplikaci, můžete začít používat nejnovější verzi ovládacího prvku v aplikaci tak, že odstraníte soubory, které se vytvořily při importu knihovny typů. Importujte knihovny typů znovu.
+
+## <a name="see-also"></a>Viz také
+
+[MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)
 

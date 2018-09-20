@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2bbf6cb67973d7538aa7aea0d846cbadf030d585
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dc59b9c93cebb622f40881d961709079abcd9166
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590649"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388625"
 ---
 # <a name="eventtargetarrayeventtargetarray-constructor"></a>EventTargetArray::EventTargetArray – konstruktor
 
@@ -39,7 +39,7 @@ EventTargetArray(
 
 ### <a name="parameters"></a>Parametry
 
-*hr*  
+*hr*<br/>
 Po operacích tento konstruktor parametr *hr* označuje, zda přidělení pole bylo úspěšné nebo neúspěšné. V následující tabulce jsou uvedeny možné hodnoty pro *hr*.
 
 S_OK operace byla úspěšná.
@@ -48,7 +48,7 @@ Nepodařilo se přidělit paměť E_OUTOFMEMORY pro pole.
 
 Parametr S_FALSE *položky* je menší než nebo rovna nule.
 
-*Položky*  
+*Položky*<br/>
 Počet prvků pole pro přidělení.
 
 ## <a name="remarks"></a>Poznámky
@@ -65,5 +65,5 @@ Inicializuje novou instanci třídy **EventTargetArray** třídy.
 
 ## <a name="see-also"></a>Viz také
 
-[EventTargetArray – třída](../windows/eventtargetarray-class.md)  
+[EventTargetArray – třída](../windows/eventtargetarray-class.md)<br/>
 [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: Třída CD2DPathGeometry | Microsoft Docs
+title: Cd2dpathgeometry – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,169 +36,193 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b6d090d6ac85ecc6af36052c0c61fe74a1283c8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 80d4116d71eb92474675968e15846f109b7390f0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953740"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388846"
 ---
-# <a name="cd2dpathgeometry-class"></a>CD2DPathGeometry – třída
-Obálka pro ID2D1PathGeometry.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CD2DPathGeometry : public CD2DGeometry;  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CD2DPathGeometry::CD2DPathGeometry](#cd2dpathgeometry)|Vytvoří objekt CD2DPathGeometry.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CD2DPathGeometry::Attach](#attach)|Připojí existující prostředek rozhraní k objektu|  
-|[CD2DPathGeometry::Create](#create)|Vytvoří CD2DPathGeometry. (Přepisuje [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
-|[CD2DPathGeometry::Destroy](#destroy)|Zničí CD2DPathGeometry objektu. (Přepisuje [CD2DGeometry::Destroy](../../mfc/reference/cd2dgeometry-class.md#destroy).)|  
-|[CD2DPathGeometry::detach](#detach)|Umožňuje odpojit prostředek rozhraní z objektu|  
-|[CD2DPathGeometry::GetFigureCount](#getfigurecount)|Načte počet číslic v geometrické cestu.|  
-|[CD2DPathGeometry::GetSegmentCount](#getsegmentcount)|Načte počet segmentů v geometrické cestu.|  
-|[CD2DPathGeometry::Open](#open)|Načte podřízený geometry, který se používá k naplnění geometrie cestu s obrázky a segmentů.|  
-|[CD2DPathGeometry::Stream](#stream)|Zkopíruje obsah geometrického cestu do zadané ID2D1GeometrySink.|  
-  
-### <a name="protected-data-members"></a>Chráněné datové členy  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CD2DPathGeometry::m_pPathGeometry](#m_ppathgeometry)|Ukazatel ID2D1PathGeometry.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
-  
- [CD2DGeometry](../../mfc/reference/cd2dgeometry-class.md)  
-  
- `CD2DPathGeometry`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxrendertarget.h  
-  
-##  <a name="attach"></a>  CD2DPathGeometry::Attach  
- Připojí existující prostředek rozhraní k objektu  
-  
-```  
+# <a name="cd2dpathgeometry-class"></a>Cd2dpathgeometry – třída
+
+Obálka pro ID2D1PathGeometry.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CD2DPathGeometry : public CD2DGeometry;
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[CD2DPathGeometry::CD2DPathGeometry](#cd2dpathgeometry)|Vytvoří objekt cd2dpathgeometry –.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CD2DPathGeometry::Attach](#attach)|Bude k obrazci existujících prostředků rozhraní pro objekt|
+|[CD2DPathGeometry::Create](#create)|Vytvoří cd2dpathgeometry –. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DPathGeometry::Destroy](#destroy)|Odstraní objekt cd2dpathgeometry –. (Přepíše [CD2DGeometry::Destroy](../../mfc/reference/cd2dgeometry-class.md#destroy).)|
+|[CD2DPathGeometry::detach](#detach)|Odpojí prostředků rozhraní z objektu|
+|[CD2DPathGeometry::GetFigureCount](#getfigurecount)|Získá počet číslic v geometrické cesty.|
+|[CD2DPathGeometry::GetSegmentCount](#getsegmentcount)|Získá počet segmentů v cestě geometrii.|
+|[CD2DPathGeometry::Open](#open)|Načte jímka geometrii, která se používá k naplnění geometrie cestu s obrázky a segmentů.|
+|[CD2DPathGeometry::Stream](#stream)|Zkopíruje obsah geometrické cesty k zadané ID2D1GeometrySink.|
+
+### <a name="protected-data-members"></a>Chránění členové dat
+
+|Název|Popis|
+|----------|-----------------|
+|[CD2DPathGeometry::m_pPathGeometry](#m_ppathgeometry)|Ukazatel ID2D1PathGeometry.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[Třídy CObject](../../mfc/reference/cobject-class.md)
+
+[Cd2dresource –](../../mfc/reference/cd2dresource-class.md)
+
+[Cd2dgeometry –](../../mfc/reference/cd2dgeometry-class.md)
+
+`CD2DPathGeometry`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxrendertarget.h
+
+##  <a name="attach"></a>  CD2DPathGeometry::Attach
+
+Bude k obrazci existujících prostředků rozhraní pro objekt
+
+```
 void Attach(ID2D1PathGeometry* pResource);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pResource*  
- Existující rozhraní prostředků. Nemůže mít hodnotu NULL  
-  
-##  <a name="cd2dpathgeometry"></a>  CD2DPathGeometry::CD2DPathGeometry  
- Vytvoří objekt CD2DPathGeometry.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pResource*<br/>
+Rozhraní existující prostředek. Nesmí být NULL.
+
+##  <a name="cd2dpathgeometry"></a>  CD2DPathGeometry::CD2DPathGeometry
+
+Vytvoří objekt cd2dpathgeometry –.
+
+```
 CD2DPathGeometry(
-    CRenderTarget* pParentTarget,  
+    CRenderTarget* pParentTarget,
     BOOL bAutoDestroy = TRUE);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pParentTarget*  
- Ukazatel na cíl vykreslení.  
-  
- *bAutoDestroy*  
- Označuje, že bude objekt zničí vlastník (pParentTarget).  
-  
-##  <a name="create"></a>  CD2DPathGeometry::Create  
- Vytvoří CD2DPathGeometry.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pParentTarget*<br/>
+Ukazatel na cíl vykreslování.
+
+*bAutoDestroy*<br/>
+Označuje, že bude objekt zničen. vlastník (pParentTarget).
+
+##  <a name="create"></a>  CD2DPathGeometry::Create
+
+Vytvoří cd2dpathgeometry –.
+
+```
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pRenderTarget*  
- Ukazatel na cíl vykreslení.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Pokud metoda bude úspěšná, vrátí S_OK. Funkce HRESULT chybový kód.  
-  
-##  <a name="destroy"></a>  CD2DPathGeometry::Destroy  
- Zničí CD2DPathGeometry objektu.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pRenderTarget*<br/>
+Ukazatel na cíl vykreslování.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pokud metoda uspěje, vrátí hodnotu S_OK. V opačném případě vrátí kód chyby HRESULT.
+
+##  <a name="destroy"></a>  CD2DPathGeometry::Destroy
+
+Odstraní objekt cd2dpathgeometry –.
+
+```
 virtual void Destroy();
-```  
-  
-##  <a name="detach"></a>  CD2DPathGeometry::detach  
- Umožňuje odpojit prostředek rozhraní z objektu  
-  
-```  
+```
+
+##  <a name="detach"></a>  CD2DPathGeometry::detach
+
+Odpojí prostředků rozhraní z objektu
+
+```
 ID2D1PathGeometry* Detach();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Ukazatel rozhraní odpojit prostředků.  
-  
-##  <a name="getfigurecount"></a>  CD2DPathGeometry::GetFigureCount  
- Načte počet číslic v geometrické cestu.  
-  
-```  
-int GetFigureCount() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí počet číslic v geometrické cestu.  
-  
-##  <a name="getsegmentcount"></a>  CD2DPathGeometry::GetSegmentCount  
- Načte počet segmentů v geometrické cestu.  
-  
-```  
-int GetSegmentCount() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Vrátí počet segmentů v geometrické cestu.  
-  
-##  <a name="m_ppathgeometry"></a>  CD2DPathGeometry::m_pPathGeometry  
- Ukazatel ID2D1PathGeometry.  
-  
-```  
-ID2D1PathGeometry* m_pPathGeometry;  
-```  
-  
-##  <a name="open"></a>  CD2DPathGeometry::Open  
- Načte podřízený geometry, který se používá k naplnění geometrie cestu s obrázky a segmentů.  
-  
-```  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Ukazatel na rozhraní odpojit prostředek.
+
+##  <a name="getfigurecount"></a>  CD2DPathGeometry::GetFigureCount
+
+Získá počet číslic v geometrické cesty.
+
+```
+int GetFigureCount() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí počet číslic v geometrické cesty.
+
+##  <a name="getsegmentcount"></a>  CD2DPathGeometry::GetSegmentCount
+
+Získá počet segmentů v cestě geometrii.
+
+```
+int GetSegmentCount() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí počet segmentů v cestě geometrii.
+
+##  <a name="m_ppathgeometry"></a>  CD2DPathGeometry::m_pPathGeometry
+
+Ukazatel ID2D1PathGeometry.
+
+```
+ID2D1PathGeometry* m_pPathGeometry;
+```
+
+##  <a name="open"></a>  CD2DPathGeometry::Open
+
+Načte jímka geometrii, která se používá k naplnění geometrie cestu s obrázky a segmentů.
+
+```
 ID2D1GeometrySink* Open();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na ID2D1GeometrySink, který se používá k naplnění geometrie cestu s obrázky a segmentů.  
-  
-##  <a name="stream"></a>  CD2DPathGeometry::Stream  
- Zkopíruje obsah geometrického cestu do zadané ID2D1GeometrySink.  
-  
-```  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Ukazatel na ID2D1GeometrySink, který se používá k naplnění geometrie cestu s obrázky a segmentů.
+
+##  <a name="stream"></a>  CD2DPathGeometry::Stream
+
+Zkopíruje obsah geometrické cesty k zadané ID2D1GeometrySink.
+
+```
 BOOL Stream(ID2D1GeometrySink* geometrySink);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *geometrySink*  
- Podřízený, ke kterému se zkopírují geometrie Cesta obsahu. Úprava tento podřízený nezmění obsah geometrického této cesty.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Pokud metoda bude úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.  
-  
-## <a name="see-also"></a>Viz také  
- [Třídy](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*geometrySink*<br/>
+Jímky, ke které se zkopírují geometrie Cesta obsahu. Úprava této jímky nezmění obsah geometrie této cesty.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pokud metoda uspěje, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.
+
+## <a name="see-also"></a>Viz také
+
+[Třídy](../../mfc/reference/mfc-classes.md)

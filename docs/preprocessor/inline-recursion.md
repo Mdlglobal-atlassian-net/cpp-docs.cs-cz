@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 222cb7151d975219d0e92bd1270778586e89b4d3
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 2c22a9fa20e663a87d10dcb1e9ba154c921a5bf8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42466094"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391303"
 ---
 # <a name="inlinerecursion"></a>inline_recursion
 Řídí vložené rozšíření přímých nebo vzájemně rekurzivních volání funkce.  
@@ -42,6 +42,6 @@ Použití této direktivy pragma ovládacího prvku funkce označené jako [vlo�
   
 ## <a name="see-also"></a>Viz také  
  
-[Direktivy pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
-[inline_depth](../preprocessor/inline-depth.md)   
+[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
+[inline_depth](../preprocessor/inline-depth.md)<br/>
 [/Ob (rozbalení vložené funkce)](../build/reference/ob-inline-function-expansion.md)

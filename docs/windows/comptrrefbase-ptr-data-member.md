@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c80372070589e1a5c57d2ea08f80fea0467b5dc7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: edb3210eddf8e1633f46713af5fbe5d97a4c4b26
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596716"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419175"
 ---
 # <a name="comptrrefbaseptr-data-member"></a>ComPtrRefBase::ptr_ – datový člen
 
@@ -50,5 +50,5 @@ Ukazatel na typ zadaný v parametru aktuální šablony.
 
 ## <a name="see-also"></a>Viz také
 
-[ComPtrRefBase – třída](../windows/comptrrefbase-class.md)  
+[ComPtrRefBase – třída](../windows/comptrrefbase-class.md)<br/>
 [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

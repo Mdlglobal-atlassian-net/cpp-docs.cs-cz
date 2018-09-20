@@ -1,5 +1,5 @@
 ---
-title: Výchozí (OpenMP) | Microsoft Docs
+title: Výchozí (OpenMP) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc39951270138e9bd243172b289e7bd96190f14
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4ea32f473d96c8f48c6628d8f71212269bd6d345
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692318"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392606"
 ---
 # <a name="default-openmp"></a>default (OpenMP)
-Určuje chování bez ohledu na obor proměnné v paralelní oblasti.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-default(shared | none)  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- `shared`, který je v platnosti Pokud `default` není zadána klauzule, znamená, že všechny proměnné v paralelní oblasti, jako kdyby byly zadány s považovat [sdílené](../../../parallel/openmp/reference/shared-openmp.md) klauzule. `none` znamená, že všechny proměnné používané v paralelní oblasti, která nejsou obor s [privátní](../../../parallel/openmp/reference/private-openmp.md), [sdílené](../../../parallel/openmp/reference/shared-openmp.md), [snížení](../../../parallel/openmp/reference/reduction.md), [firstprivate](../../../parallel/openmp/reference/firstprivate.md), nebo [lastprivate](../../../parallel/openmp/reference/lastprivate.md) klauzule způsobí chybu kompilátoru.  
-  
- `default` platí pro následující direktivy:  
-  
--   [parallel](../../../parallel/openmp/reference/parallel.md)  
-  
--   [for](../../../parallel/openmp/reference/for-openmp.md)  
-  
--   [Oddíly](../../../parallel/openmp/reference/sections-openmp.md)  
-  
- Další informace najdete v tématu [2.7.2.5 výchozí](../../../parallel/openmp/2-7-2-5-default.md).  
-  
-## <a name="example"></a>Příklad  
- V tématu [privátní](../../../parallel/openmp/reference/private-openmp.md) příklad použití `default`.  
-  
-## <a name="see-also"></a>Viz také  
- [Klauzule](../../../parallel/openmp/reference/openmp-clauses.md)
+
+Určuje chování bez ohledu na obor proměnné v paralelní oblasti.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+default(shared | none)
+```
+
+## <a name="remarks"></a>Poznámky
+
+`shared`, což je v platnosti Pokud `default` není zadána klauzule, znamená to, že všechny proměnné v paralelní oblasti zpracovávány jako by to byly zadány s [sdílené](../../../parallel/openmp/reference/shared-openmp.md) klauzule. `none` znamená, že všechny proměnné, používat v paralelní oblasti, která nejsou obor [privátní](../../../parallel/openmp/reference/private-openmp.md), [sdílené](../../../parallel/openmp/reference/shared-openmp.md), [snížení](../../../parallel/openmp/reference/reduction.md), [firstprivate](../../../parallel/openmp/reference/firstprivate.md), nebo [lastprivate](../../../parallel/openmp/reference/lastprivate.md) klauzule způsobí chybu kompilátoru.
+
+`default` platí pro následující direktivy:
+
+- [parallel](../../../parallel/openmp/reference/parallel.md)
+
+- [for](../../../parallel/openmp/reference/for-openmp.md)
+
+- [Oddíly](../../../parallel/openmp/reference/sections-openmp.md)
+
+Další informace najdete v tématu [2.7.2.5 výchozí](../../../parallel/openmp/2-7-2-5-default.md).
+
+## <a name="example"></a>Příklad
+
+Zobrazit [privátní](../../../parallel/openmp/reference/private-openmp.md) pro příklad použití `default`.
+
+## <a name="see-also"></a>Viz také
+
+[Klauzule](../../../parallel/openmp/reference/openmp-clauses.md)

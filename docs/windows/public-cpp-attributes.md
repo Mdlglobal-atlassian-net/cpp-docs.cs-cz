@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52fb779173565eaa35eec37da80c93ba0610c14f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7bb350c5030773a4784d6f7b39c7269c2cab6cd7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199065"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378537"
 ---
 # <a name="public-c-attributes"></a>public (atributy C++)
 
@@ -71,5 +71,5 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](..
 
 ## <a name="see-also"></a>Viz také
 
-[IDL – atributy](../windows/idl-attributes.md)  
+[IDL – atributy](../windows/idl-attributes.md)<br/>
 [Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)  

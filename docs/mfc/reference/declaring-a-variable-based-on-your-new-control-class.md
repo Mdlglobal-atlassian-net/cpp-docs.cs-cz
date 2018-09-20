@@ -1,5 +1,5 @@
 ---
-title: Deklarace proměnné založené na nové třídě ovládacího prvku | Microsoft Docs
+title: Deklarace proměnné založené na nové třídě ovládacího prvku | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,46 +18,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 677006d441c940f478b3d23744d1057667307e1a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3cdf60f614b95c22b4b3c40b5528a7daf885bed
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370611"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388735"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>Deklarace proměnné založené na nové třídě ovládacího prvku
-Po vytvoření třídy knihovny MFC ovládací prvek, je možné deklarovat proměnné založené na něm. Zajistit kontextu pro nové proměnné musí otevřete editor dialogových oken a dialogových oken, ve které chcete použít vlastní opakovaně použitelné ovládací prvek upravit. Dialogové okno navíc musíte už mít třídu s ním spojená. Informace o použití editoru dialogových oken najdete v tématu [editoru dialogového okna](../../windows/dialog-editor.md).  
-  
-### <a name="to-declare-a-variable-based-on-your-reusable-class"></a>Deklarace proměnné založené na třídě opakovaně použitelné  
-  
-1.  Při úpravách dialogových oken, přetáhněte ovládací prvek stejného typu jako základní třída nový ovládací prvek z panelu ovládacích prvků na dialogové okno.  
-  
-2.  Umístěte ukazatel myši nad vynechaných ovládacího prvku.  
-  
-3.  Stiskněte klávesu CTRL a dvakrát klikněte na ovládací prvek.  
-  
-     [Přidat proměnnou člen](../../ide/add-member-variable-wizard.md) zobrazí se dialogové okno.  
-  
-4.  V **přístup** vyberte správný přístup pro ovládací prvek.  
-  
-5.  Klikněte **řídicí proměnná** zaškrtávací políčko.  
-  
-6.  V **název proměnné** pole, zadejte název.  
-  
-7.  V části **kategorie**, klikněte na tlačítko **řízení**.  
-  
-8.  V **ID ovládacího prvku** seznamu, vyberte ovládací prvek, který jste přidali. **Typ proměnné** seznam by měl zobrazit správný typ proměnné a **řízení typu** by měl zobrazovat typ správné ovládacího prvku.  
-  
-9. V **komentář** pole, jakýkoliv komentář, který se má zobrazit v kódu.  
-  
-10. Click **OK**.  
-  
-## <a name="see-also"></a>Viz také  
- [Mapování zpráv do funkcí](../../mfc/reference/mapping-messages-to-functions.md)   
- [Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Přidání třídy](../../ide/adding-a-class-visual-cpp.md)   
- [Přidání členské funkce](../../ide/adding-a-member-function-visual-cpp.md)   
- [Přidání členské proměnné](../../ide/adding-a-member-variable-visual-cpp.md)   
- [Přepisování virtuální funkce](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Popisovač zpráv knihovny MFC](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [Navigace strukturou třídy](../../ide/navigating-the-class-structure-visual-cpp.md)
+
+Po vytvoření třídy ovládacího prvku knihovny MFC, je možné deklarovat proměnnou na jejím základě. Pro poskytnutí kontextu pro nové proměnné, musíte otevřít editor dialogového okna a dialogových oken, ve které chcete použít opakovaně použitelné ovládací prvek upravit. Dialogové okno musí mít také již třídy s ním spojená. Informace o použití editoru dialogových oken, naleznete v tématu [editoru dialogového okna](../../windows/dialog-editor.md).
+
+### <a name="to-declare-a-variable-based-on-your-reusable-class"></a>Chcete-li deklarovat proměnné založené na opakovaně použitelné třídy
+
+1. Při úpravách dialogových oken, přetáhněte ovládací prvek stejného typu jako základní třída nového ovládacího prvku z panelu nástrojů ovládacích prvků do dialogových oken.
+
+1. Umístěte ukazatel myši nad vynechaných ovládací prvek.
+
+1. Stiskněte klávesu CTRL a poklepejte na ovládací prvek.
+
+     [Přidat členskou proměnnou](../../ide/add-member-variable-wizard.md) zobrazí se dialogové okno.
+
+1. V **přístup** vyberte správný přístup pro ovládací prvek.
+
+1. Klikněte na tlačítko **řídicí proměnná** zaškrtávací políčko.
+
+1. V **název proměnné** zadejte název.
+
+1. V části **kategorie**, klikněte na tlačítko **ovládací prvek**.
+
+1. V **ID ovládacího prvku** seznamu, vyberte ovládací prvek, který jste přidali. **Typ proměnné** seznam by měl zobrazit správný typ proměnné a **ovládací prvek typu** pole zobrazeno správný typ ovládacího prvku.
+
+9. V **komentář** přidejte všechny komentáře, které se mají zobrazit ve vašem kódu.
+
+10. Klikněte na tlačítko **OK**.
+
+## <a name="see-also"></a>Viz také
+
+[Mapování zpráv na funkce](../../mfc/reference/mapping-messages-to-functions.md)<br/>
+[Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Přidání třídy](../../ide/adding-a-class-visual-cpp.md)<br/>
+[Přidání členské funkce](../../ide/adding-a-member-function-visual-cpp.md)<br/>
+[Přidání členské proměnné](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[Přepisování virtuální funkce](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Popisovače zpráv knihovny MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
+[Navigace strukturou třídy](../../ide/navigating-the-class-structure-visual-cpp.md)

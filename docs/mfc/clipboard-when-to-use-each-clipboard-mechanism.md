@@ -1,5 +1,5 @@
 ---
-title: 'Schránka: Kdy používat jednotlivé mechanismy schránky | Microsoft Docs'
+title: 'Schránka: Kdy používat jednotlivé mechanismy schránky | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,28 +19,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2d7ab966eb0fcb5592f55a1b24f1558946dbd16
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18b8a772dd58cf9623d4076665e7859d191bb27e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341923"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379811"
 ---
 # <a name="clipboard-when-to-use-each-clipboard-mechanism"></a>Schránka: Kdy používat jednotlivé mechanismy schránky
-Tato pravidla v použití schránky:  
-  
--   Povolit nové funkce v budoucnu pomocí mechanismu schránky OLE. Standardní rozhraní API schránky se zachová, i když je mechanismu OLE budoucí přenosu dat.  
-  
--   Pokud píšete aplikaci OLE nebo jste, aby se některé funkce OLE, jako například přetažení, pomocí mechanismu schránky OLE.  
-  
--   Použití mechanismu schránky OLE poskytujete OLE – formáty.  
-  
-## <a name="what-do-you-want-to-do"></a>Co chcete udělat  
-  
--   [Použití mechanismu schránky OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
-  
--   [Použití mechanismu schránky systému Windows](../mfc/clipboard-using-the-windows-clipboard.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Schránka](../mfc/clipboard.md)
+
+Postupujte podle následujících pokynů v použití schránky:
+
+- Použití mechanismu schránky OLE umožňuje nové funkce v budoucnu. Zatímco standardní rozhraní API schránky se zachová, mechanismu OLE je budoucností datové přenosy.
+
+- Mechanismu schránky OLE použijte, pokud vytváříte aplikaci OLE nebo chcete některou z funkcí OLE, jako například přetažení.
+
+- Použití mechanismu schránky OLE, pokud poskytujete OLE – formáty.
+
+## <a name="what-do-you-want-to-do"></a>Co chcete udělat
+
+- [Použití mechanismu schránky OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+
+- [Použití mechanismu schránky Windows](../mfc/clipboard-using-the-windows-clipboard.md)
+
+## <a name="see-also"></a>Viz také
+
+[Schránka](../mfc/clipboard.md)
 

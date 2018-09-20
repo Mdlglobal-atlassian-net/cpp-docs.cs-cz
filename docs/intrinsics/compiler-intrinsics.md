@@ -1,5 +1,5 @@
 ---
-title: Vnitřní funkce kompilátoru | Microsoft Docs
+title: Vnitřní funkce kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,43 +17,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c05a2843e5daff980d1c84d4d3f2185ac361144d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a11efde9be7e990608277a242d7018f347df0ce
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339013"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383232"
 ---
 # <a name="compiler-intrinsics"></a>Vnitřní funkce kompilátoru
-Většina funkcí jsou obsaženy v knihovnách, ale některé funkce, které jsou integrované v (to znamená, vnitřní) pro kompilátor. Tyto jsou označovány jako vnitřní funkce nebo vnitřní funkce.  
-  
-## <a name="remarks"></a>Poznámky  
- Pokud je funkce vnitřní, kód pro tuto funkci je obvykle připojen, není zpomalován režií volání funkce a vysoce efektivní počítače pokyny pro vypuštění pro tuto funkci povolil. Vnitřní je často rychlejší než ekvivalentní vloženého sestavení, protože okně Optimalizace má integrovanou znalost tak, kolik – vnitřní prvky, takže některé optimalizace může být k dispozici, nejsou k dispozici při použití vloženého sestavení. Okně Optimalizace můžete také rozšířit vnitřní odlišně, jinak zarovnat vyrovnávací paměti nebo provádět další úpravy v závislosti na kontextu a argumentů volání.  
-  
- Použití vnitřní funkce ovlivňuje přenositelnost kódu, protože vnitřní funkce, které jsou k dispozici v jazyce Visual C++ nemusí být k dispozici, pokud kód je kompilovat s jinými kompilátory a vnitřní některé funkce, které můžou být dostupné pro některé cílové architektury nejsou k dispozici pro všechny architektury. Vnitřní funkce jsou však obvykle obecnější než vložené sestavení. Vnitřní objekty je nutné 64bitové architektury, kde se nepodporuje vložené sestavení.  
-  
- Vnitřní některé funkce, jako například `__assume` a `__ReadWriteBarrier`, zadejte informace pro kompilátor, které ovlivňují chování pro optimalizaci.  
-  
- Některé – vnitřní prvky jsou k dispozici pouze jako vnitřní objekty a některé jsou k dispozici jak v vnitřní implementace a funkce. Můžete určit, aby kompilátor používal vnitřní implementace v jednom ze dvou způsobů, v závislosti na tom, jestli chcete povolit jenom určité funkce, nebo chcete povolit všechny vnitřní funkce. První způsob je použití `#pragma intrinsic(` *vnitřní funkce název list*`)`. – Direktiva pragma slouží k určení vnitřní jedné nebo více vnitřní funkce oddělených čárkami. Druhý je použití [/Oi (Generovat vnitřní funkce)](../build/reference/oi-generate-intrinsic-functions.md) – možnost kompilátoru, která zpřístupňuje vnitřní všechny funkce na dané platformy. V části **/Oi**, použijte `#pragma function(` *vnitřní funkce název list* `)` vynutit volání funkce, který má být použit místo vnitřní. Pokud v dokumentaci pro konkrétní vnitřní zaznamená rutiny se pouze k dispozici jako vnitřní, pak bez ohledu na to, jestli se používá vnitřní implementace **/Oi** nebo `#pragma intrinsic` je zadán. Ve všech případech **/Oi** nebo `#pragma intrinsic` povoluje, ale bez vynucení, optimalizátor používat vnitřní. Pro optimalizaci stále můžete volat funkce.  
-  
- Funkce některé standardní knihovny jazyka C/C++ jsou k dispozici v vnitřní implementace na některé architektury. Při volání funkce CRT, pokud se používá vnitřní implementace **/Oi** je zadán v příkazovém řádku.  
-  
- Soubor hlaviček \<intrin.h >, je k dispozici, který deklaruje prototypy pro běžné vnitřní funkce. Vnitřní funkce specifické pro výrobce jsou k dispozici v \<immintrin.h > a \<ammintrin.h > soubory hlaviček. Kromě toho některé hlavičky Windows deklarovat funkce, které mapují na vnitřní kompilátor.  
-  
- Následující části uvádějí všechny vnitřní funkce, které jsou dostupné na různých architektury. Další informace o fungování vnitřní objekty na vaše konkrétní cílový procesoru naleznete v dokumentaci od výrobce odkaz.  
-  
--   [ARM – vnitřní prvky](../intrinsics/arm-intrinsics.md)  
-  
--   [x86 – seznam vnitřních objektů](../intrinsics/x86-intrinsics-list.md)  
-  
--   [x64 (amd64) – seznam vnitřních objektů](../intrinsics/x64-amd64-intrinsics-list.md)  
-  
--   [Vnitřní objekty dostupné ve všech architekturách](../intrinsics/intrinsics-available-on-all-architectures.md)  
-  
--   [Abecední seznam vnitřních funkcí](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace assembleru ARM](../assembler/arm/arm-assembler-reference.md)   
- [Microsoft Macro Assembler – referenční dokumentace](../assembler/masm/microsoft-macro-assembler-reference.md)   
- [Klíčová slova](../cpp/keywords-cpp.md)   
- [Referenční dokumentace knihovny CRT](../c-runtime-library/c-run-time-library-reference.md)
+
+Většina funkcí je obsažena v knihovnách, ale některé funkce jsou součástí (to znamená, vnitřní) kompilátoru. Tyto jsou označovány jako vnitřní funkce nebo vnitřní objekty.
+
+## <a name="remarks"></a>Poznámky
+
+Pokud je funkce vnitřní, kód pro tuto funkci je obvykle připojen vloženě, vyhne se tak režii volání funkce a vysoce efektivní strojové instrukce emitování pro tuto funkci povolil. Vnitřní objekt je často rychlejší než ekvivalentní vložené sestavení, protože Optimalizátor má integrované znalosti o tom, kolik vnitřní objekty se chovají, takže může být k dispozici některé optimalizace, které nejsou k dispozici při použití vložené sestavení. Optimalizátor může také, jinak rozbalit vnitřní objekt, jinak zarovnat vyrovnávací paměti nebo provést jiné úpravy v závislosti na kontextu a argumentech volání.
+
+Použití vnitřních objektů ovlivňuje přenositelnost kódu, protože vnitřní objekty, které jsou k dispozici v jazyce Visual C++ nemusí být k dispozici, pokud kód je kompilován jinými kompilátory a některé vnitřní objekty, které mohou být k dispozici pro některé cílové architektury nejsou k dispozici pro všechny architektury. Vnitřní objekty jsou však obvykle obecnější než vložené sestavení. Vnitřní objekty jsou nutné na 64bitové architektury, kde vložené sestavení není podporováno.
+
+Některé vnitřní objekty, jako například `__assume` a `__ReadWriteBarrier`, poskytují informace kompilátoru, který má vliv na chování optimalizačního.
+
+Některé vnitřní objekty jsou k dispozici pouze jako vnitřní a některé jsou dostupné ve funkci i vnitřní implementaci. Můžete dát pokyn kompilátoru, aby použil vnitřní implementace jedním ze dvou způsobů, v závislosti na tom, jestli chcete povolit pouze určité funkce nebo chcete povolit všechny vnitřní objekty. První způsob je použít `#pragma intrinsic(` *vnitřní funkce název seznamu*`)`. Direktivy pragma lze použít k určení jednoho vnitřní objektu nebo více vnitřních objektů, oddělených čárkami. Druhým je použití [/Oi (Generovat vnitřní funkce)](../build/reference/oi-generate-intrinsic-functions.md) – možnost kompilátoru, který zpřístupňuje všechny vnitřní objekty na dané platformě. V části **/Oi**, použijte `#pragma function(` *vnitřní funkce název seznamu* `)` k vynucení funkce volání, který se má použít namísto použití vnitřního objektu. Pokud v dokumentaci pro konkrétní vnitřní typ si všimne, že rutina je dostupný jenom jako vnitřní, pak bez ohledu na to, zda se použije vnitřní implementace **/Oi** nebo `#pragma intrinsic` určena. Ve všech případech **/Oi** nebo `#pragma intrinsic` umožňuje, ale nenutí Optimalizátor, aby použil vnitřní typy. Optimalizátor může stále volat funkci.
+
+Některé standardní funkce knihovny C/C++ jsou k dispozici při vnitřní implementaci v některých architekturách. Při volání funkce CRT, pokud se používá vnitřní implementace **/Oi** je zadán v příkazovém řádku.
+
+Soubor hlaviček \<intrin.h >, je k dispozici, který deklaruje prototypy pro vnitřní běžné funkce. Specifické pro výrobce vnitřní objekty jsou k dispozici v \<immintrin.h > a \<ammintrin.h > hlavičkové soubory. Některé hlavičky Windows navíc deklarují funkce, které mapovány na vnitřní kompilátor.
+
+V následujících částech všechny vnitřní objekty, které jsou k dispozici v různých architekturách. Další informace o tom, jak na konkrétní cílový procesor funguje uvnitř naleznete v dokumentaci od výrobce.
+
+- [ARM – vnitřní prvky](../intrinsics/arm-intrinsics.md)
+
+- [x86 – seznam vnitřních objektů](../intrinsics/x86-intrinsics-list.md)
+
+- [x64 (amd64) – seznam vnitřních objektů](../intrinsics/x64-amd64-intrinsics-list.md)
+
+- [Vnitřní objekty dostupné ve všech architekturách](../intrinsics/intrinsics-available-on-all-architectures.md)
+
+- [Abecední seznam vnitřních funkcí](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)
+
+## <a name="see-also"></a>Viz také
+
+[Referenční dokumentace assembleru ARM](../assembler/arm/arm-assembler-reference.md)<br/>
+[Microsoft Macro Assembler – referenční dokumentace](../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
+[Klíčová slova](../cpp/keywords-cpp.md)<br/>
+[Referenční dokumentace knihovny CRT](../c-runtime-library/c-run-time-library-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: Použití Neoříznutého kontextu zařízení | Microsoft Docs
+title: Použití Neoříznutého kontextu zařízení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,24 +14,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d4fcfbe8e8e7eb174f85ced03bec822b4968bde
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 479009865fe9fd226466059382456f403e90c18a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954332"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389587"
 ---
 # <a name="using-an-unclipped-device-context"></a>Použití neoříznutého kontextu zařízení
-Pokud jste si naprosto jisti, že vlastní ovládací prvek není malovat mimo jeho obdélníku klienta, můžete zaznamenat nárůst malé ale rozpoznat rychlost zakázáním volání `IntersectClipRect` , je provedené `COleControl`. Chcete-li to provést, odeberte *clipPaintDC* příznak ze sady příznaky vrácený [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Příklad:  
-  
- [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/using-an-unclipped-device-context_1.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#14](../mfc/codesnippet/cpp/using-an-unclipped-device-context_2.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/using-an-unclipped-device-context_3.cpp)]  
-  
- Kód, který chcete odebrat tento příznak vytváří automaticky, pokud jste vybrali **Neoříznutého kontextu zařízení** možnost [nastavení řízení](../mfc/reference/control-settings-mfc-activex-control-wizard.md) stránky, při vytváření vlastního ovládacího prvku pomocí Průvodce ovládacím prvkem ActiveX knihovny MFC.  
-  
- Pokud používáte aktivace bez oken, optimalizace nemá žádný vliv.  
-  
-## <a name="see-also"></a>Viz také  
- [MFC – ovládací prvky ActiveX: Optimalizace](../mfc/mfc-activex-controls-optimization.md)
+
+Pokud jste si naprosto jisti, že ovládací prvek není vykreslovat mimo jeho klientský obdélník, byste mohli realizovat zvýšení rychlosti malou, avšak zjistitelná zakázáním volání `IntersectClipRect` , který provádí `COleControl`. Chcete-li to provést, odeberte *clipPaintDC* příznak ze sady příznaků vrácený [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Příklad:
+
+[!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/using-an-unclipped-device-context_1.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#14](../mfc/codesnippet/cpp/using-an-unclipped-device-context_2.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/using-an-unclipped-device-context_3.cpp)]
+
+Pokud zvolíte možnost automaticky vytvořit kód můžete odebrat tento příznak **Neoříznutého kontextu zařízení** možnost [nastavení řízení](../mfc/reference/control-settings-mfc-activex-control-wizard.md) stránek, při vytváření ovládacího prvku pomocí průvodce ovládací prvek ActiveX knihovny MFC.
+
+Pokud používáte aktivace bez oken, tyto optimalizace nemá žádný vliv.
+
+## <a name="see-also"></a>Viz také
+
+[MFC – ovládací prvky ActiveX: Optimalizace](../mfc/mfc-activex-controls-optimization.md)
 

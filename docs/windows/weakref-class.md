@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f9b121b75e31fdd79313e36b9e1e19c1cf3200e
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 12fd66c7ff5a6f6fee7588aa7bd51ae2053ba7e8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691533"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386974"
 ---
 # <a name="weakref-class"></a>WeakRef – třída
 
@@ -141,10 +141,10 @@ HRESULT As(
 
 ### <a name="parameters"></a>Parametry
 
-*U*  
+*U*<br/>
 Identifikátor rozhraní.
 
-*ptr*  
+*ptr*<br/>
 Když tato operace dokončí, objekt, který představuje parametr *U*.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -176,10 +176,10 @@ HRESULT AsIID(
 
 ### <a name="parameters"></a>Parametry
 
-*riid*  
+*riid*<br/>
 Identifikátor rozhraní.
 
-*ptr*  
+*ptr*<br/>
 Když tato operace dokončí, objekt, který představuje parametr *riid*.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -220,13 +220,13 @@ HRESULT CopyTo(
 
 ### <a name="parameters"></a>Parametry
 
-*U*  
+*U*<br/>
 Ukazatel `IInspectable` rozhraní. Je vygenerován chybu, pokud *U* není odvozen od `IInspectable`.
 
-*riid*  
+*riid*<br/>
 Identifikátor rozhraní. Je vygenerován chybu, pokud *riid* není odvozen od `IWeakReference`.
 
-*ptr*  
+*ptr*<br/>
 Dvakrát nepřímé ukazatel na `IInspectable` nebo `IWeakReference`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -284,7 +284,7 @@ WeakRef(
 
 ### <a name="parameters"></a>Parametry
 
-*ptr*  
+*ptr*<br/>
 Ukazatel, odkaz nebo odkaz rvalue na existující objekt, který inicializuje aktuální `WeakRef` objektu.
 
 ### <a name="remarks"></a>Poznámky

@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9a454d067881a15f6d125430c304f4b5af71b5d1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 8dee099912b69d48b0ded4184dc68c14da1899fe
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314401"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391901"
 ---
 # <a name="toolbar-c-image-editor-for-icons"></a>Panel nástrojů (C++ Editor obrázků pro ikony)
 
@@ -57,6 +57,6 @@ Informace o přidávání prostředků do spravovaných projektů, najdete v té
 
 ## <a name="see-also"></a>Viz také
 
-[Zobrazení nebo skrytí panelu nástrojů](displaying-or-hiding-the-toolbar-image-editor-for-icons.md)  
-[Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Zobrazení nebo skrytí panelu nástrojů](displaying-or-hiding-the-toolbar-image-editor-for-icons.md)<br/>
+[Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Editor obrázků pro ikony](../windows/image-editor-for-icons.md)

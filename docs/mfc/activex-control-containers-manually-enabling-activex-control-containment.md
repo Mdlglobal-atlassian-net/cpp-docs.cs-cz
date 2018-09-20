@@ -16,35 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 845ad544b83f3f73c31eebd00218945c6028a622
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 010e5f58f1d72a33cbab44438f085b52e8fe4be8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45534973"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387767"
 ---
 # <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>ActiveX – kontejnery ovládacích prvků: Ruční povolení uzavření ovládacího prvku ActiveX
+
 Pokud jste nepovolili podporu ovládacích prvků ActiveX při generování aplikace pomocí Průvodce aplikací MFC, budete muset ručně přidat tuto podporu. Tento článek popisuje postup pro ruční přidání používání kontejnerů ovládacích prvků ActiveX do stávající aplikace kontejneru OLE. Pokud víte předem, který má podporu ovládacích prvků ActiveX v kontejneru OLE, najdete v článku [vytvoření kontejneru ovládacího prvku ActiveX prostředí MFC](../mfc/reference/creating-an-mfc-activex-control-container.md).
 
 >[!IMPORTANT]
-> ActiveX je starší technologie, která by neměla být používána při novém vývoji. Další informace o moderních technologií, které nahrazují ActiveX naleznete v tématu [ovládací prvky ActiveX](activex-controls.md).  
-  
+> ActiveX je starší technologie, která by neměla být používána při novém vývoji. Další informace o moderních technologií, které nahrazují ActiveX naleznete v tématu [ovládací prvky ActiveX](activex-controls.md).
+
 > [!NOTE]
->  Tento článek používá založené na dialogu ActiveX ovládací prvek kontejneru projekt s názvem kontejneru a vloženému ovládacímu prvku s názvem KR jako příklady v procedurách a kódu.  
-  
- Podpora ovládacích prvků ActiveX, je nutné přidat jeden řádek kódu do dvou souborů projektu.  
-  
--   Upravit hlavním dialogu `InitInstance` – funkce (nacházející se v KONTEJNERU. CPP) pomocí Průvodce aplikací knihovny MFC provedením volání do [AfxEnableControlContainer](reference/ole-initialization.md#afxenablecontrolcontainer), jako v následujícím příkladu:  
-  
-     [!code-cpp[NVC_MFCOleContainer#34](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_1.cpp)]  
-    [!code-cpp[NVC_MFCOleContainer#35](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_2.cpp)]  
-  
--   Přidejte do projektu STDAFX následující. H hlavičkový soubor:  
-  
-     [!code-cpp[NVC_MFCOleContainer#36](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_3.h)]  
-  
- Po dokončení těchto kroků znovu sestavit projekt kliknutím **sestavení** na **sestavení** nabídky.  
-  
-## <a name="see-also"></a>Viz také  
- [ActiveX – kontejnery ovládacích prvků](../mfc/activex-control-containers.md)
+>  Tento článek používá založené na dialogu ActiveX ovládací prvek kontejneru projekt s názvem kontejneru a vloženému ovládacímu prvku s názvem KR jako příklady v procedurách a kódu.
+
+Podpora ovládacích prvků ActiveX, je nutné přidat jeden řádek kódu do dvou souborů projektu.
+
+- Upravit hlavním dialogu `InitInstance` – funkce (nacházející se v KONTEJNERU. CPP) pomocí Průvodce aplikací knihovny MFC provedením volání do [AfxEnableControlContainer](reference/ole-initialization.md#afxenablecontrolcontainer), jako v následujícím příkladu:
+
+     [!code-cpp[NVC_MFCOleContainer#34](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_1.cpp)]
+    [!code-cpp[NVC_MFCOleContainer#35](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_2.cpp)]
+
+- Přidejte do projektu STDAFX následující. H hlavičkový soubor:
+
+     [!code-cpp[NVC_MFCOleContainer#36](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_3.h)]
+
+Po dokončení těchto kroků znovu sestavit projekt kliknutím **sestavení** na **sestavení** nabídky.
+
+## <a name="see-also"></a>Viz také
+
+[ActiveX – kontejnery ovládacích prvků](../mfc/activex-control-containers.md)
 

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Zařazování řetězců ANSI pomocí zprostředkovatele komunikace C++ | Microsoft Docs'
+title: 'Postupy: Zařazování řetězců ANSI pomocí zprostředkovatele komunikace C++ | Dokumentace Microsoftu'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -19,89 +19,93 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3690ca242b8c50c84c6eb4a8a7a437937268c6b9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4a1a0cd8b9da5812e404f70dc999dfaf1606666
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33129392"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383360"
 ---
 # <a name="how-to-marshal-ansi-strings-using-c-interop"></a>Postupy: Zařazování řetězců v kódu ANSI pomocí zprostředkovatele komunikace C++
-Toto téma ukazuje, jak mohou být řetězců v kódu ANSI předaným pomocí zprostředkovatele komunikace C++, ale rozhraní .NET Framework <xref:System.String> představuje řetězce ve formátu Unicode, takže převod na ANSI čeká na další krok. Spolupráce s jinými typy řetězců, najdete v následujících tématech:  
-  
--   [Postupy: Zařazování řetězců v kódu Unicode pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
-  
--   [Postupy: Zařazování řetězců modelu COM pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)  
-  
- Následující příklady kódu používají [spravované, nespravované](../preprocessor/managed-unmanaged.md) direktivy jazyka #pragma k implementaci spravovaných a nespravovaných funkcí ve stejném souboru, ale tyto funkce spolupracují stejným způsobem, pokud jsou definovány v samostatné soubory. Protože soubory obsahující pouze nespravovaná funkce nemusí být zkompilovány s [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md), mohou si zachovat jejich výkonnostní charakteristice.  
-  
-## <a name="example"></a>Příklad  
- Příklad ukazuje předávání řetězce ANSI ze spravované na nespravované funkce pomocí <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A>. Tato metoda se přidělí paměť na nespravované haldě a vrátí adresu po provedení převodu. To znamená, že není nutné žádné Připnutí, (protože paměť na haldě GC není předána nespravované funkci) a že IntPtr vrácená z <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> musí být explicitně uvolněn nebo únik paměti.  
-  
-```  
-// MarshalANSI1.cpp  
-// compile with: /clr  
-#include <iostream>  
-#include <stdio.h>  
-  
-using namespace std;  
-using namespace System;  
-using namespace System::Runtime::InteropServices;  
-  
-#pragma unmanaged  
-  
-void NativeTakesAString(const char* p) {  
-   printf_s("(native) received '%s'\n", p);  
-}  
-  
-#pragma managed  
-  
-int main() {  
-   String^ s = gcnew String("sample string");  
-   IntPtr ip = Marshal::StringToHGlobalAnsi(s);  
-   const char* str = static_cast<const char*>(ip.ToPointer());  
-  
-   Console::WriteLine("(managed) passing string...");  
-   NativeTakesAString( str );  
-  
-   Marshal::FreeHGlobal( ip );  
-}  
-```  
-  
-## <a name="example"></a>Příklad  
- Následující příklad ukazuje zařazování data požadovaná pro přístup k řetězec ANSI ve spravované funkci, která je volána metodou nespravované funkce. Spravovaná funkce obdržení nativní řetězce, můžete buď používat přímo nebo ji převést na řetězec spravované pomocí <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A> metoda, jak je vidět.  
-  
-```  
-// MarshalANSI2.cpp  
-// compile with: /clr  
-#include <iostream>  
-#include <vcclr.h>  
-  
-using namespace std;  
-  
-using namespace System;  
-using namespace System::Runtime::InteropServices;  
-  
-#pragma managed  
-  
-void ManagedStringFunc(char* s) {  
-   String^ ms = Marshal::PtrToStringAnsi(static_cast<IntPtr>(s));  
-   Console::WriteLine("(managed): received '{0}'", ms);  
-}  
-  
-#pragma unmanaged  
-  
-void NativeProvidesAString() {  
-   cout << "(native) calling managed func...\n";  
-   ManagedStringFunc("test string");  
-}  
-  
-#pragma managed  
-  
-int main() {  
-   NativeProvidesAString();  
-}  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+
+Toto téma ukazuje, jak mohou být řetězce ANSI předaným pomocí zprostředkovatele komunikace C++, ale rozhraní .NET Framework <xref:System.String> představuje řetězce ve formátu Unicode, takže je převod na ANSI přidat další krok. Spolupráce s jinými typy řetězce, naleznete v následujících tématech:
+
+- [Postupy: Zařazování řetězců v kódu Unicode pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
+
+- [Postupy: Zařazování řetězců modelu COM pomocí zprostředkovatele komunikace C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)
+
+Následující příklady kódu používají [spravované, nespravované](../preprocessor/managed-unmanaged.md) direktivy #pragma implementace spravovaných a nespravovaných funkcí ve stejném souboru, ale tyto funkce spolupracují stejným způsobem, pokud jsou definovány v samostatných souborech. Protože soubory, které obsahují pouze nespravované funkce nemusí být zkompilovány s [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md), mohou si zachovat jejich výkonnostní charakteristice.
+
+## <a name="example"></a>Příklad
+
+Příklad ukazuje předávání řetězce ANSI ze spravované na nespravované funkce pomocí <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A>. Tato metoda přidělí paměť v nespravované haldě a vrátí adresu, po provedení převodu. To znamená, že není nutné zakázat připínání, (protože paměti v haldě GC. není předána nespravovanou funkci) a že IntPtr vrácená <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> musí být explicitně uvolněn nebo únik paměti.
+
+```
+// MarshalANSI1.cpp
+// compile with: /clr
+#include <iostream>
+#include <stdio.h>
+
+using namespace std;
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+#pragma unmanaged
+
+void NativeTakesAString(const char* p) {
+   printf_s("(native) received '%s'\n", p);
+}
+
+#pragma managed
+
+int main() {
+   String^ s = gcnew String("sample string");
+   IntPtr ip = Marshal::StringToHGlobalAnsi(s);
+   const char* str = static_cast<const char*>(ip.ToPointer());
+
+   Console::WriteLine("(managed) passing string...");
+   NativeTakesAString( str );
+
+   Marshal::FreeHGlobal( ip );
+}
+```
+
+## <a name="example"></a>Příklad
+
+Následující příklad ukazuje zařazování dat, které se vyžadují pro přístup k řetězci ANSI ve spravované funkci, která je volána metodou nespravované funkci. Spravované funkce při přijetí nativní řetězec, můžete použít přímo nebo ho převést na spravované řetězce pomocí <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A> způsob, jak je znázorněno.
+
+```
+// MarshalANSI2.cpp
+// compile with: /clr
+#include <iostream>
+#include <vcclr.h>
+
+using namespace std;
+
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+#pragma managed
+
+void ManagedStringFunc(char* s) {
+   String^ ms = Marshal::PtrToStringAnsi(static_cast<IntPtr>(s));
+   Console::WriteLine("(managed): received '{0}'", ms);
+}
+
+#pragma unmanaged
+
+void NativeProvidesAString() {
+   cout << "(native) calling managed func...\n";
+   ManagedStringFunc("test string");
+}
+
+#pragma managed
+
+int main() {
+   NativeProvidesAString();
+}
+```
+
+## <a name="see-also"></a>Viz také
+
+[Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

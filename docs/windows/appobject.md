@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8de7bbfb2f00f5e1a909a83a5399e2d564747962
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: fafdb99296e19318f183b6c0893d9b4e91f0cd7b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213992"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422633"
 ---
 # <a name="appobject"></a>appobject
 
@@ -72,6 +72,6 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](..
 
 ## <a name="see-also"></a>Viz také
 
-[IDL – atributy](../windows/idl-attributes.md)  
-[Atributy třídy](../windows/class-attributes.md)  
+[IDL – atributy](../windows/idl-attributes.md)<br/>
+[Atributy třídy](../windows/class-attributes.md)<br/>
 [Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)  

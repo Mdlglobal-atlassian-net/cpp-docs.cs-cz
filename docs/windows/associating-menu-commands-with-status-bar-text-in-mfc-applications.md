@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16de276478485cb52b11b3f1bbb869c5b75d05a4
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 718766a8fc475f20bcbcc328973b38e486769d9c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316754"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389073"
 ---
 # <a name="associating-menu-commands-with-status-bar-text-in-mfc-applications"></a>Přiřazení příkazů nabídky k textu stavového řádku v aplikacích MFC
 
@@ -39,6 +39,6 @@ MFC
 
 ## <a name="see-also"></a>Viz také
 
-[Řetězce (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
-[Přidání komentářů k nabídce](../windows/adding-commands-to-a-menu.md)  
+[Řetězce (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+[Přidání komentářů k nabídce](../windows/adding-commands-to-a-menu.md)<br/>
 [Editor nabídek](../windows/menu-editor.md)

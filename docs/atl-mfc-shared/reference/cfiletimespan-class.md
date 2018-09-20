@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06a9f4275ff6acfcef7b7173fbfc6f9abf89b4f3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8c69a45ec56c5ee6f1c8d7a48be2cac2d158dc6e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766003"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381930"
 ---
 # <a name="cfiletimespan-class"></a>Cfiletimespan – třída
 
@@ -317,8 +317,8 @@ Nová hodnota pro časový interval v milisekundách.
 
 ## <a name="see-also"></a>Viz také
 
-[FILETIME –](https://msdn.microsoft.com/library/windows/desktop/ms724284)   
-[Cfiletime – třída](../../atl-mfc-shared/reference/cfiletime-class.md)   
-[Graf hierarchie](../../mfc/hierarchy-chart.md)   
+[FILETIME –](https://msdn.microsoft.com/library/windows/desktop/ms724284)<br/>
+[CFileTime – třída](../../atl-mfc-shared/reference/cfiletime-class.md)<br/>
+[Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Sdílené třídy ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

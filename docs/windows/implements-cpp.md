@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d21348d9c252fbcd3024ca6531671979d8834eb
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 138921cfb635125210e5f5bf9305c91243c4489c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605815"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387221"
 ---
 # <a name="implements-c"></a>implements (C++)
 
@@ -39,10 +39,10 @@ Určuje odesílajících rozhraních, které se musí být členy třídy typu I
 
 ### <a name="parameters"></a>Parametry
 
-*Rozhraní*  
+*Rozhraní*<br/>
 Čárkami oddělený seznam rozhraní, které budou členem třídy typu IDL coclass. Metoda Zkrácený tvar vlastností pro zadání jednoho rozhraní je **implementuje (** *interface_name* **)**.
 
-*odesílacích rozhraních*  
+*odesílacích rozhraních*<br/>
 Čárkami oddělený seznam dispinterface, která bude členem třídy typu IDL coclass. Je metoda Zkrácený tvar vlastností pro zadání jedné dispinterface **implementuje (odesílající rozhraní =** *dispinterface_name* **)**.
 
 ## <a name="remarks"></a>Poznámky
@@ -558,5 +558,5 @@ public:
 
 ## <a name="see-also"></a>Viz také
 
-[Atributy kompilátoru](../windows/compiler-attributes.md)  
+[Atributy kompilátoru](../windows/compiler-attributes.md)<br/>
 [Atributy třídy](../windows/class-attributes.md)  

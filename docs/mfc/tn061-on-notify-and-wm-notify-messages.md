@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d2f1259227fa8d27778dbf0e40b13f5460b7041
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2395cb7b1f3d719fd64494ee9b9c7c64ba222bac
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218782"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381826"
 ---
 # <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061: ON_NOTIFY a WM_NOTIFY – zprávy
 
@@ -104,14 +104,14 @@ ON_NOTIFY(wNotifyCode, id, memberFxn)
 
 kde parametry jsou:
 
-*funkci wNotifyCode*  
- Kód pro tuto zprávu zpracovat, jako je například LVN_KEYDOWN.
+*funkci wNotifyCode*<br/>
+Kód pro tuto zprávu zpracovat, jako je například LVN_KEYDOWN.
 
-*id*  
- Identifikátor podřízené ovládací prvek, pro které je odesláno oznámení.
+*id*<br/>
+Identifikátor podřízené ovládací prvek, pro které je odesláno oznámení.
 
-*memberFxn*  
- Členská funkce se volá, když toto oznámení se posílá.
+*memberFxn*<br/>
+Členská funkce se volá, když toto oznámení se posílá.
 
 Členská funkce musí být deklarován s následující prototyp:
 
@@ -121,11 +121,11 @@ afx_msg void memberFxn(NMHDR* pNotifyStruct, LRESULT* result);
 
 kde parametry jsou:
 
-*pNotifyStruct*  
- Ukazatel na strukturu oznámení, jak je popsáno výše v části.
+*pNotifyStruct*<br/>
+Ukazatel na strukturu oznámení, jak je popsáno výše v části.
 
-*výsledek*  
- Ukazatel na kód výsledku bude nastaven před vrácením.
+*výsledek*<br/>
+Ukazatel na kód výsledku bude nastaven před vrácením.
 
 ## <a name="example"></a>Příklad
 
@@ -141,7 +141,7 @@ V předchozím příkladu je funkce poskytované ClassWizard:
 void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
 {
     LV_KEYDOWN* pLVKeyDow = (LV_KEYDOWN*)pNMHDR;
-    
+
     // TODO: Add your control notification handler
     //       code here
 
@@ -167,17 +167,17 @@ ON_NOTIFY_RANGE(wNotifyCode, id, idLast, memberFxn)
 
 kde parametry jsou:
 
-*funkci wNotifyCode*  
- Kód pro tuto zprávu zpracovat, jako je například LVN_KEYDOWN.
+*funkci wNotifyCode*<br/>
+Kód pro tuto zprávu zpracovat, jako je například LVN_KEYDOWN.
 
-*id*  
- První identifikátor v souvislý rozsah identifikátory.
+*id*<br/>
+První identifikátor v souvislý rozsah identifikátory.
 
-*idLast*  
- Poslední identifikátoru souvislý rozsah identifikátory.
+*idLast*<br/>
+Poslední identifikátoru souvislý rozsah identifikátory.
 
-*memberFxn*  
- Členská funkce se volá, když toto oznámení se posílá.
+*memberFxn*<br/>
+Členská funkce se volá, když toto oznámení se posílá.
 
 Členská funkce musí být deklarován s následující prototyp:
 
@@ -187,14 +187,14 @@ afx_msg void memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
 
 kde parametry jsou:
 
-*id*  
- Identifikátor podřízeného ovládacího prvku, který poslat oznámení.
+*id*<br/>
+Identifikátor podřízeného ovládacího prvku, který poslat oznámení.
 
-*pNotifyStruct*  
- Ukazatel na strukturu oznámení, jak je popsáno výše.
+*pNotifyStruct*<br/>
+Ukazatel na strukturu oznámení, jak je popsáno výše.
 
-*výsledek*  
- Ukazatel na kód výsledku bude nastaven před vrácením.
+*výsledek*<br/>
+Ukazatel na kód výsledku bude nastaven před vrácením.
 
 ##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX – ON_NOTIFY_EX_RANGE –
 
@@ -221,5 +221,5 @@ Vaše funkce musí vracet **TRUE** Pokud zpráva oznámení byla zcela zpracová
 
 ## <a name="see-also"></a>Viz také:
 
-[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)  
-[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)  
+[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
+[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)

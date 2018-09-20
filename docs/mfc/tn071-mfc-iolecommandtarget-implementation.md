@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d8e029b1ffc4e17e55f2cb69405bb272b92e94e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6d8d4b0f740e69b57944cb35f2213ae0fd54b511
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221391"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386285"
 ---
 # <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071: MFC IOleCommandTarget – implementace
 
@@ -59,11 +59,11 @@ Toto makro přejde v deklaraci třídy (obvykle v souboru hlaviček) třídy, kt
 BEGIN_OLECMD_MAP(theClass, baseClass)
 ```
 
-*theClass*  
- Název třídy, která obsahuje mapu příkazu.
+*theClass*<br/>
+Název třídy, která obsahuje mapu příkazu.
 
-*baseClass*  
- Název třídy základní třídy, která obsahuje mapu příkazu.
+*baseClass*<br/>
+Název třídy základní třídy, která obsahuje mapu příkazu.
 
 Toto makro označuje začátek toho příkaz mapy. Použijte toto makro v souboru implementace pro třídu, která obsahuje mapu příkazu.
 
@@ -77,14 +77,14 @@ Toto makro označuje konec příkazu mapy. Použijte toto makro v souboru implem
 ON_OLECMD(pguid, olecmdid, id)
 ```
 
-*pguid*  
- Ukazatel na identifikátor GUID skupiny příkazů příkaz OLE. Tento parametr je **NULL** pro skupiny standardních příkazů OLE.
+*pguid*<br/>
+Ukazatel na identifikátor GUID skupiny příkazů příkaz OLE. Tento parametr je **NULL** pro skupiny standardních příkazů OLE.
 
-*olecmdid*  
- ID příkazu OLE příkazu má být volána.
+*olecmdid*<br/>
+ID příkazu OLE příkazu má být volána.
 
-*id*  
- ID wm_command – zprávy k odeslání do aplikace obsahující mapování příkazu, když uživatel vyvolá příkaz OLE.
+*id*<br/>
+ID wm_command – zprávy k odeslání do aplikace obsahující mapování příkazu, když uživatel vyvolá příkaz OLE.
 
 Použíjte ON_OLECMD – makro v mapě příkaz mohli přidat záznamy pro příkazy OLE, které chcete zpracovávat. Po přijetí jsou příkazy OLE, bude se převést na zadaný wm_command – zprávy a směrován přes mapu zpráv aplikace pomocí standardního směrování příkazů architektury MFC.
 
@@ -158,5 +158,5 @@ void CContainerCntrItem::DoOleCmd()
 
 ## <a name="see-also"></a>Viz také:
 
-[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)  
-[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)  
+[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
+[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)

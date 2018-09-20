@@ -1,5 +1,5 @@
 ---
-title: Aktualizace textu panelu stavového řádku | Microsoft Docs
+title: Aktualizace textu panelu stavového řádku | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,67 +21,69 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec085bcd519aa1694cb889a06ce9b1881e065514
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 8aa04fdee2b63f9d91d2bdd7dfd62100b3e32a2c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951483"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393318"
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>Aktualizace textu na panelu stavového řádku
-Tento článek vysvětluje, jak změnit text, který se zobrazí v podokně panelu aplikace MFC stavu. Stavový řádek – objektem okna třídy [cstatusbar –](../mfc/reference/cstatusbar-class.md) – obsahuje několik "podokna." Každý podokno je obdélníkovou oblast stavový řádek, který můžete použít k zobrazení informací. Například mnoho aplikace se zobrazí stav klávesy CAPS LOCK NUMLOCK a jiných klíčů ve nejvíce vpravo podokna. Aplikace se zobrazí také často informativní text v krajní levé podokno (0), někdy označuje jako "podokno zpráva". Například výchozí MFC stavového řádku používá v podokně zpráv pro zobrazení řetězec vysvětlením tlačítko nabídky aktuálně vybrané položky nebo na panelu nástrojů. Na obrázku v [stavové řádky](../mfc/status-bar-implementation-in-mfc.md) zobrazuje indikátor stavu z aplikace vytvořené – Průvodce aplikací knihovny MFC.  
-  
- Ve výchozím nastavení, nepovolí MFC `CStatusBar` podokně, když vytváří v podokně. Pokud chcete aktivovat podokno, musíte použít on_update_command_ui – makro pro každý podokně na stavovém řádku a aktualizovat podokna. Protože podokna Neodesílat wm_command – zprávy (nejsou jako tlačítka panelu nástrojů), musíte ručně zadat kód.  
-  
- Předpokládejme například, jeden podokno má `ID_INDICATOR_PAGE` jako jeho identifikátoru příkazu a který obsahuje aktuální číslo stránky v dokumentu. Následující postup popisuje, jak vytvořit nové podokno ve stavovém řádku.  
-  
-### <a name="to-make-a-new-pane"></a>Aby se nové podokno  
-  
-1.  Zadejte ID v podokně příkazu.  
-  
-     Na **zobrazení** nabídky, klikněte na tlačítko **zobrazení prostředků**. Klikněte pravým tlačítkem na zdroj projektu a klikněte na tlačítko **symboly prostředků**. V dialogovém okně symboly prostředků, klikněte na tlačítko `New`. Zadejte název příkazu ID: například `ID_INDICATOR_PAGE`. Zadejte hodnotu pro ID, nebo přijměte hodnota navrhovaná službou dialogové okno symboly prostředků. Například pro `ID_INDICATOR_PAGE`, přijměte výchozí hodnotu. Symboly prostředků dialogové okno zavřete.  
-  
-2.  Definujte výchozí řetězec k zobrazení v podokně.  
-  
-     K zobrazení prostředků otevřený, klikněte dvakrát na **řetězec tabulky** v okně, které jsou uvedeny typy prostředků pro vaši aplikaci. S **tabulky řetězců** editoru otevřete, zvolte **nový řetězec** z **vložit** nabídky. V okně Vlastnosti řetězce, vyberte ID do podokna příkazu (například `ID_INDICATOR_PAGE`) a zadejte výchozí hodnotu řetězce, jako je například "Stránka". Zavřete editor řetězce. (Potřebujete výchozí řetězec, aby se zabránilo chybě kompilátoru.)  
-  
-3.  Přidat podokno *indikátory* pole.  
-  
-     V souboru MAINFRM. CPP, vyhledejte *indikátory* pole. Toto pole obsahuje ID příkazu pro všechny indikátory stavového řádku v pořadí zleva doprava. V odpovídajícím bodě v poli, zadejte do podokna příkazu ID, jak je vidět tady pro `ID_INDICATOR_PAGE`:  
-  
-     [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]  
-  
- Doporučený způsob zobrazení textu v podokno je volání `SetText` funkce člena třídy `CCmdUI` v obslužná rutina funkci aktualizace pro podokně. Například můžete chtít nastavit proměnná typu integer *m_nPage* obsahující aktuální číslo stránky a použijte `SetText` nastavení textu v podokně na řetězec verzi toto číslo.  
-  
+
+Tento článek vysvětluje, jak změnit text, který se zobrazí panelu stavového řádku stav knihovny MFC. Stavový řádek – vytvoření objektu třídy okna [cstatusbar –](../mfc/reference/cstatusbar-class.md) – obsahuje několik "podokna." Každé podokno je obdélníkovou oblast, ve stavovém řádku, který můžete použít k zobrazení informací. Například mnoho aplikací zobrazit stav CAPS LOCK a NUM LOCK, další klíče v podoknech úplně vpravo. Aplikace také často zobrazit informativní text v podokně úplně vlevo (podokno 0), někdy označuje jako "podokně zpráv." Například výchozí knihovny MFC stavový řádek používá podokně zprávy pro zobrazení řetězce s vysvětlením, aktuálně vybraný položka nabídky nebo panelu nástrojů tlačítko. Obrázek v [stavové řádky](../mfc/status-bar-implementation-in-mfc.md) ukazuje stavový řádek z aplikace vytvoří Průvodce aplikací knihovny MFC.
+
+Ve výchozím nastavení, neumožňuje knihovny MFC `CStatusBar` podokně, když se vytvoří v podokně. Pokud chcete aktivovat na stavového řádku, musíte použít ON_UPDATE_COMMAND_UI – makro pro každé podokno ve stavovém řádku a aktualizace podokna. Protože podokna Neodesílat wm_command – zprávy (nejsou jako tlačítka na panelu nástrojů), je nutné zadat kód ručně.
+
+Předpokládejme například, že obsahuje jedno podokno `ID_INDICATOR_PAGE` i jeho identifikátor příkazu, který obsahuje aktuální číslo stránky v dokumentu. Následující postup popisuje, jak vytvořit nové podokno ve stavovém řádku.
+
+### <a name="to-make-a-new-pane"></a>Aby se nové podokno
+
+1. Definování v podokně ID příkazu.
+
+     Na **zobrazení** nabídky, klikněte na tlačítko **zobrazení prostředků**. Klikněte pravým tlačítkem na projekt prostředků a klikněte na tlačítko **symbolů prostředků**. V dialogovém okně symbolů prostředků klikněte na tlačítko `New`. Zadejte název ID příkazu: například `ID_INDICATOR_PAGE`. Zadejte hodnotu pro ID nebo přijmout hodnotu navrhovanou v dialogovém okně symbolů prostředků. Například pro `ID_INDICATOR_PAGE`, přijměte výchozí hodnotu. Symboly prostředků dialogové okno zavřete.
+
+1. Definujte výchozí řetězec k zobrazení v podokně.
+
+     Otevřít zobrazení prostředků, poklepejte na **tabulka řetězců** v okně, které jsou uvedeny typy prostředků pro vaši aplikaci. S **tabulka řetězců** editor otevřít, zvolte **nový řetězec** z **vložit** nabídky. V okně Vlastnosti řetězce vyberte ID do podokna příkazu (například `ID_INDICATOR_PAGE`) a zadejte výchozí hodnotu řetězce, jako je například "Stránky". Zavřete editor řetězců. (Budete potřebovat výchozí řetězec, aby se zabránilo chybu kompilátoru.)
+
+1. Přidat podokně tak, aby *indikátory* pole.
+
+     V souboru MAINFRM. CPP, vyhledejte *indikátory* pole. Toto pole obsahuje ID příkazu pro všechny indikátory stavového řádku v pořadí zleva doprava. V odpovídajícím bodě v poli zadejte ID do podokna příkazu, jak je znázorněno zde pro `ID_INDICATOR_PAGE`:
+
+     [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]
+
+Doporučeným způsobem zobrazování textu v podokně se má volat `SetText` členské funkce třídy `CCmdUI` ve funkci obslužné rutiny aktualizace podokna. Například můžete chtít nastavit proměnnou celého čísla *m_nPage* obsahující číslo aktuální stránky a použijte `SetText` nastavit text v podokně na řetězec verze tohoto čísla.
+
 > [!NOTE]
->  `SetText` Se doporučuje přístup. Je možné provést tuto úlohu na mírně nižší úrovni voláním `CStatusBar` – členská funkce `SetPaneText`. I tak je stále nutné obslužnou rutinu aktualizace. Bez takové obslužnou rutinu pro podokně MFC automaticky zakáže podokně mazání jeho obsah.  
-  
- Následující postup ukazuje, jak používat funkci obslužné rutiny aktualizace zobrazení textu v podokně.  
-  
-#### <a name="to-make-a-pane-display-text"></a>Chcete-li do podokna zobrazení textu  
-  
-1.  Přidejte obslužnou rutinu aktualizace příkazu pro příkaz.  
-  
-     Ručně přidejte prototypu pro obslužnou rutinu, jak je vidět tady pro `ID_INDICATOR_PAGE` (v MAINFRM. H):  
-  
-     [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]  
-  
-2.  Do odpovídajícího. CPP soubor, přidejte obslužné rutiny definice, jak je vidět tady pro `ID_INDICATOR_PAGE` (v MAINFRM. CPP):  
-  
-     [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]  
-  
-     Poslední tři řádky této rutiny se kód, který zobrazí text.  
-  
-3.  V mapě příslušná zpráva přidat on_update_command_ui – makro, jak je vidět tady pro `ID_INDICATOR_PAGE` (v MAINFRM. CPP):  
-  
-     [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]  
-  
- Jakmile definujete hodnotu *m_nPage* členské proměnné (třídy `CMainFrame`), tento postup způsobí, že se objeví v podokně během zpracování při nečinnosti stejným způsobem, že aplikace aktualizuje další indikátory číslo stránky. Pokud *m_nPage* změn, změny zobrazení během další nečinné smyčky.  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
-  
--   [Aktualizace objektů uživatelského rozhraní (postup aktualizace tlačítka panelu nástrojů a položek nabídky jako změnu podmínky programu)](../mfc/how-to-update-user-interface-objects.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Implementace stavového řádku v prostředí MFC](../mfc/status-bar-implementation-in-mfc.md)   
- [CStatusBar – třída](../mfc/reference/cstatusbar-class.md)
+>  `SetText` Přístup se doporučuje. Je možné provést tuto úlohu trochu nižší úrovni pomocí volání `CStatusBar` členskou funkci `SetPaneText`. I tak stále je nutné obslužnou rutinu aktualizace. Bez těchto obslužnou rutinu pro podokno MFC automaticky zakáže v podokně mazání jeho obsah.
+
+Následující postup ukazuje, jak používat funkci obslužné rutiny aktualizace k zobrazení textu v podokně.
+
+#### <a name="to-make-a-pane-display-text"></a>Chcete-li do podokna zobrazení textu
+
+1. Přidáte aktualizace obslužná rutina příkazu pro příkaz.
+
+     Ručně přidejte prototyp obslužné rutiny, jak je znázorněno zde pro `ID_INDICATOR_PAGE` (v MAINFRM. H):
+
+     [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]
+
+1. Do odpovídajícího. CPP přidejte obslužnou rutinu definice, jak je znázorněno zde pro `ID_INDICATOR_PAGE` (v MAINFRM. CPP):
+
+     [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]
+
+     Poslední tři řádky z této obslužné rutiny jsou kód, který zobrazí text.
+
+1. Na mapě odpovídající zprávu přidat ON_UPDATE_COMMAND_UI – makro, jak je znázorněno zde pro `ID_INDICATOR_PAGE` (v MAINFRM. CPP):
+
+     [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]
+
+Jakmile definujete hodnotu *m_nPage* členské proměnné (třídy `CMainFrame`), tento postup způsobí, že číslo stránky, v podokně se zobrazí během zpracování při nečinnosti stejným způsobem, že aplikace aktualizuje další indikátory. Pokud *m_nPage* změn, změny zobrazení během další nečinné smyčky.
+
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+
+- [Aktualizace objektů uživatelského rozhraní (jak aktualizovat tlačítka na panelu nástrojů a položky v nabídce jako změnit podmínky programu)](../mfc/how-to-update-user-interface-objects.md)
+
+## <a name="see-also"></a>Viz také
+
+[Implementace stavového řádku v prostředí MFC](../mfc/status-bar-implementation-in-mfc.md)<br/>
+[CStatusBar – třída](../mfc/reference/cstatusbar-class.md)

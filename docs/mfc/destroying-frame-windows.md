@@ -1,5 +1,5 @@
 ---
-title: Zničení oken s rámečkem | Microsoft Docs
+title: Zničení oken rámce Windows | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,24 +25,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81182c0e5633e19126d3036b5793de7658ad3d2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 742ea2fedff2e4f044e46242a4152c12855ab15e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343473"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396152"
 ---
 # <a name="destroying-frame-windows"></a>Zničení oken s rámečkem
-Rozhraní MFC framework spravovat odstraňování oken, jakož i vytváření pro tyto windows přidružené framework dokumentů a zobrazení. Pokud vytvoříte další windows, jste zodpovědní za jejich likvidace.  
-  
- V rozhraní framework, když uživatel nezavře okno rámce okna výchozí [při zavření](../mfc/reference/cwnd-class.md#onclose) volání obslužné rutiny [destroywindow –](../mfc/reference/cwnd-class.md#destroywindow). Poslední člen funkce volána, když je zničen období systému Windows je [onncdestroy –](../mfc/reference/cwnd-class.md#onncdestroy), na které se některé čištění, zavolá [výchozí](../mfc/reference/cwnd-class.md#default) člen funkce provést čištění Windows a nakonec volá funkce člena virtuální [postncdestroy –](../mfc/reference/cwnd-class.md#postncdestroy). [CFrameWnd](../mfc/reference/cframewnd-class.md) implementace `PostNcDestroy` odstraní objekt okno C++. Nikdy byste neměli používat C++ **odstranit** operátor v okně s rámečkem. Místo nich se používá `DestroyWindow`.  
-  
- Hlavní okno zavře, aplikace se zavře. Pokud existuje změní neuložené dokumenty, rozhraní zobrazí okno se zprávou požádat, pokud má být uložen v dokumentech a zajistí, že se příslušné dokumenty uloží v případě potřeby.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
-  
--   [Vytváření dokumentů, oken s rámečkem](../mfc/creating-document-frame-windows.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Použití oken s rámečkem](../mfc/using-frame-windows.md)
+
+Rozhraní MFC framework spravuje odstraňování oken, jakož i vytváření pro tato okna přidružené framework dokumentů a zobrazení. Pokud vytvoříte další okna, zodpovídáte za jejich zničení.
+
+V rozhraní, když uživatel zavře okno rámce okna. výchozí [při zavření](../mfc/reference/cwnd-class.md#onclose) volání obsluhy [destroywindow –](../mfc/reference/cwnd-class.md#destroywindow). Poslední členská funkce volána, když v okně Windows je zničen [onncdestroy –](../mfc/reference/cwnd-class.md#onncdestroy), která dělá to trochu pořádek volá [výchozí](../mfc/reference/cwnd-class.md#default) členské funkce, vyčistěte Windows a nakonec volá virtuální členská funkce [postncdestroy –](../mfc/reference/cwnd-class.md#postncdestroy). [CFrameWnd](../mfc/reference/cframewnd-class.md) provádění `PostNcDestroy` odstraní okno objekt jazyka C++. Nikdy byste neměli používat C++ **odstranit** operátor v okně rámce. Místo nich se používá `DestroyWindow`.
+
+Když hlavní okno se zavře, aplikace se zavře. Pokud upravované neuložené dokumenty, rozhraní zobrazí okno se zprávou požádat, pokud by měla uložit dokumenty a zajišťuje, že odpovídající dokumenty jsou uloženy v případě potřeby.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+
+- [Vytváření oken s rámečkem v dokumentu](../mfc/creating-document-frame-windows.md)
+
+## <a name="see-also"></a>Viz také
+
+[Použití oken s rámečkem](../mfc/using-frame-windows.md)
 

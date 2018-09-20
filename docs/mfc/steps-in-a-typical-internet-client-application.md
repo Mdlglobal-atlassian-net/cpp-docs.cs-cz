@@ -1,5 +1,5 @@
 ---
-title: Kroky v typické internetové klientské aplikace | Microsoft Docs
+title: Postup v typické internetové klientské aplikaci | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1c7a7053b8378ea62dc0291dba1b79b794dd099
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd3dde01d87fccd1d19d947a1069fa92675e6053
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381271"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390339"
 ---
 # <a name="steps-in-a-typical-internet-client-application"></a>Postup v typické internetové klientské aplikaci
-Následující tabulka uvádí kroky, že které může provádět v typické internetové klientské aplikaci.  
-  
-|Vaším cílem|Akce, které můžete provést|Účinek|  
-|---------------|----------------------|-------------|  
-|Zahájit relaci Internet.|Vytvoření [CInternetSession](../mfc/reference/cinternetsession-class.md) objektu.|Inicializuje WinInet a připojí k serveru.|  
-|Nastavte možnost dotazu Internet (časový limit nebo počet opakování, např.).|Použití [CInternetSession::SetOption](../mfc/reference/cinternetsession-class.md#setoption).|Vrátí hodnotu FALSE, pokud byla operace neúspěšná.|  
-|Vytvořte funkci zpětného volání k monitorování stavu relace.|Použití [CInternetSession::EnableStatusCallback](../mfc/reference/cinternetsession-class.md#enablestatuscallback).|Zpětné volání pro zakládá [CInternetSession::OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback). Přepsání `OnStatusCallback` vytvořit vlastní rutina zpětného volání.|  
-|Připojte k serveru Internet, intranetový server nebo místního souboru.|Použití [CInternetSession::OpenURL](../mfc/reference/cinternetsession-class.md#openurl).|Analyzuje adresu URL a otevře připojení k zadanému serveru. Vrátí [CStdioFile](../mfc/reference/cstdiofile-class.md) (Pokud předáte `OpenURL` názvu místního souboru). Toto je objekt, pomocí kterého můžete přistupovat k datům načíst ze serveru nebo souboru.|  
-|Čtení ze souboru.|Použití [CInternetFile::Read](../mfc/reference/cinternetfile-class.md#read).|Přečte zadaný počet bajtů pomocí vyrovnávací paměti, které zadáte.|  
-|Zpracování výjimek.|Použití [CInternetException](../mfc/reference/cinternetexception-class.md) třídy.|Zpracovává všechny běžné typy výjimek Internetu.|  
-|Ukončení relace Internetu.|Odstranění [CInternetSession](../mfc/reference/cinternetsession-class.md) objektu.|Automaticky vyčistí otevřených popisovačů souborů a připojení.|  
-  
-## <a name="see-also"></a>Viz také  
- [Win32 – internetová rozšíření (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
- [Požadavky na třídy internetových klientů](../mfc/prerequisites-for-internet-client-classes.md)   
- [Psaní internetových klientských aplikací pomocí tříd WinInet knihovny MFC](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+
+Následující tabulka uvádí kroky, že které může provádět v typické internetové klientské aplikaci.
+
+|Vaším cílem|Akce, které můžete provést|Účinek|
+|---------------|----------------------|-------------|
+|Zahájit relaci k Internetu.|Vytvoření [cinternetsession –](../mfc/reference/cinternetsession-class.md) objektu.|Inicializuje WinInet a připojí k serveru.|
+|Nastavte dotaz možnost Internet (časový limit nebo počet opakovaných pokusů u příkladu).|Použití [CInternetSession::SetOption](../mfc/reference/cinternetsession-class.md#setoption).|Vrátí hodnotu FALSE, pokud byla operace neúspěšná.|
+|Vytvoření funkce zpětného volání k monitorování stavu relace.|Použití [CInternetSession::EnableStatusCallback](../mfc/reference/cinternetsession-class.md#enablestatuscallback).|Vytvoří zpětné volání, aby [CInternetSession::OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback). Přepsat `OnStatusCallback` k vytvoření vlastní rutina zpětného volání.|
+|Připojení k serveru Internet, intranetový server nebo místní soubor.|Použití [CInternetSession::OpenURL](../mfc/reference/cinternetsession-class.md#openurl).|Analyzuje adresu URL a otevře připojení k zadanému serveru. Vrátí [cstdiofile –](../mfc/reference/cstdiofile-class.md) (Pokud předáte `OpenURL` název místního souboru). Jedná se o objekt, přes který přistupujete data načtená ze serveru nebo souboru.|
+|Čtení ze souboru.|Použití [CInternetFile::Read](../mfc/reference/cinternetfile-class.md#read).|Přečte zadaný počet bajtů pomocí vyrovnávací paměti, které zadáte.|
+|Zpracování výjimek.|Použití [cinternetexception –](../mfc/reference/cinternetexception-class.md) třídy.|Zpracovává všechny typy výjimek common Internet.|
+|Ukončení relace Internet.|Vyřazení [cinternetsession –](../mfc/reference/cinternetsession-class.md) objektu.|Automaticky vyčistí otevřené popisovače souborů a připojení.|
+
+## <a name="see-also"></a>Viz také
+
+[Win32 – internetová rozšíření (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
+[Požadavky na třídy internetových klientů](../mfc/prerequisites-for-internet-client-classes.md)<br/>
+[Psaní internetových klientských aplikací pomocí tříd WinInet knihovny MFC](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)

@@ -1,5 +1,5 @@
 ---
-title: Kontexty | Microsoft Docs
+title: Kontexty | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,70 +14,74 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a8297c8a7a779140f6464f39491e73950ddaeeb
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7be66658c9452fa97c1971ae6719dccb06dbd836
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696185"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378214"
 ---
 # <a name="contexts"></a>Kontexty
 
-Tento dokument popisuje roli kontextů v Concurrency Runtime. Podproces, který je připojen k plánovače se označuje jako *kontext spuštění*, nebo jenom *kontextu*. [Concurrency::wait](reference/concurrency-namespace-functions.md#wait) funkce a souběžnost::[třída kontextu](../../parallel/concrt/reference/context-class.md) vám umožňují řídit chování kontexty. Použití `wait` funkce pozastavit aktuální kontext po určitou dobu. Použití `Context` třídy, pokud potřebujete větší kontrolu nad při kontexty blokovat, odblokovat a poskytne nebo když chcete přidělit nadměrnému počtu procesů aktuální kontext.  
-  
+Tento dokument popisuje roli kontextech v modulu Runtime souběžnosti. Podproces, který je připojen k plánovače se označuje jako *kontextu spuštění*, nebo jen *kontextu*. [Concurrency::wait](reference/concurrency-namespace-functions.md#wait) funkce a souběžnost::[třídy kontextu](../../parallel/concrt/reference/context-class.md) vám umožňují řídit chování kontexty. Použití `wait` funkce pozastavení aktuální kontext pro určitou dobu. Použití `Context` třídy, když potřebujete větší kontrolu nad při kontexty blokovat, odblokovat a pozastavit nebo pokud chcete přidělit nadměrnému počtu procesů aktuálního kontextu.
+
 > [!TIP]
->  Concurrency Runtime poskytuje výchozí plánovač, a proto není nutné vytvořit ve vaší aplikaci. Protože Plánovač úloh umožňuje optimalizovat výkon aplikací, doporučujeme začínat [paralelní vzory knihovna PPL ()](../../parallel/concrt/parallel-patterns-library-ppl.md) nebo [knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md) Pokud jste nové do Concurrency Runtime.  
-  
-## <a name="the-wait-function"></a>Počkejte – funkce  
+>  Poskytuje výchozí plánovač Concurrency Runtime, a proto není nutné vytvořit ve vaší aplikaci. Vzhledem k tomu, že Plánovač úloh umožňuje optimalizovat výkon vašich aplikací, doporučujeme začít s [knihovna paralelních vzorů (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) nebo [asynchronní knihovnou agentů](../../parallel/concrt/asynchronous-agents-library.md) máte nového modulu runtime souběžnosti.
 
- [Concurrency::wait](reference/concurrency-namespace-functions.md#wait) funkce vypočítá spolupráce při provádění aktuální kontext pro zadaný počet milisekund. Modul runtime používá čas yield provést další úlohy. Po uplynutí zadané doby, modul runtime přeplánuje kontext pro spuštění. Proto `wait` funkce může pozastavit delší než hodnota zadaná pro aktuální kontext `milliseconds` parametr.  
-  
- Probíhá předání 0 (nula) `milliseconds` parametr způsobí, že modulu runtime pozastavit aktuální kontext, dokud všechny aktivní kontexty zadána možnost pro práci. Díky tomu můžete yield úloh pro všechny ostatní aktivní úlohy.  
-  
-### <a name="example"></a>Příklad  
- Pro příklad, který používá `wait` funkci, aby se yield aktuálního kontextu a proto umožňují jiných kontextech spustit, najdete v článku [postupy: použití skupin plánů vliv pořadí spouštění](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).  
-  
-## <a name="the-context-class"></a>Context – třída  
- Souběžnost::[třída kontextu](../../parallel/concrt/reference/context-class.md) poskytuje programovací abstrakci pro kontextu provádění a nabízí dvě důležité funkce: možnost spolupráce při blokování, odblokovat, a poskytne aktuální kontext a schopnost oversubscribe aktuálního kontextu.  
-  
-### <a name="cooperative-blocking"></a>Spolupráci blokování  
- `Context` Třída umožňuje blokovat nebo yield aktuálním kontextu spuštění. Blokování nebo je je užitečné, když aktuální kontext nemůže pokračovat, protože prostředek není k dispozici.  
-  
+## <a name="the-wait-function"></a>Wait – funkce
 
- [Concurrency::Context::Block](reference/context-class.md#block) metoda blokuje aktuálního kontextu. Kontext, který je blokovaný předá její zpracování prostředky tak, aby modul runtime můžete provádět další úlohy. [Concurrency::Context::Unblock](reference/context-class.md#unblock) metoda odblokuje blokované kontextu. `Context::Unblock` Musí být volána metoda z kontextu jiný než ten, který volá `Context::Block`. Modul runtime vyvolá [concurrency::context_self_unblock](../../parallel/concrt/reference/context-self-unblock-class.md) Pokud kontextu pokusí odblokovat sám sebe.  
-  
- Spolupráce při blokovat a odblokovat kontextu, obvykle zavoláte [concurrency::Context::CurrentContext](reference/context-class.md#currentcontext) načíst ukazatel `Context` objekt, který je spojen s aktuálním vláknem a uložit výsledek. Potom zavolejte `Context::Block` metoda blokování aktuálního kontextu. Později, volání `Context::Unblock` ze samostatné kontextu odblokovat kontext blokované.  
-  
- Každý pár volání musí odpovídat `Context::Block` a `Context::Unblock`. Modul runtime vyvolá [concurrency::context_unblock_unbalanced](../../parallel/concrt/reference/context-unblock-unbalanced-class.md) při `Context::Block` nebo `Context::Unblock` metoda je volána po sobě bez odpovídající volání jiné metody. Však není nutné volat `Context::Block` před voláním `Context::Unblock`. Například, pokud jeden kontext volání `Context::Unblock` před jiné volání kontextu `Context::Block` u stejného kontextu, zůstává odblokuje tohoto kontextu.  
-  
- [Concurrency::Context::Yield](reference/context-class.md#yield) metoda předá provádění, aby mohli provést další úlohy a následně přeplánovat kontext pro spuštění modulu runtime. Při volání `Context::Block` metoda, modul runtime není změnit plán kontextu.  
+[Concurrency::wait](reference/concurrency-namespace-functions.md#wait) kooperativně předá vykonávání aktuální kontext pro zadaný počet milisekund, funkce. Modul runtime používá k provádění další úloh čas yield. Po uplynutí zadané doby, modul runtime přeplánuje kontext spuštění. Proto `wait` funkce může pozastavit delší než hodnota zadaná pro aktuální kontext `milliseconds` parametr.
 
-  
-#### <a name="example"></a>Příklad  
- Pro příklad, který používá `Context::Block`, `Context::Unblock`, a `Context::Yield` metody k implementaci třídy semaforu pro spolupráci, najdete v části [postupy: použití třídy kontextu pro implementaci semaforu spolupráce](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).  
-  
-##### <a name="oversubscription"></a>Překryvný odběr  
- Výchozí plánovač vytváří stejný počet vláken, jsou k dispozici hardwaru vláken. Můžete použít *Překryvný odběr* vytvořit další vlákna vlákna daného hardwaru.  
-  
- Pro výpočetně náročné operace Překryvný odběr obvykle není škálovat, protože zavádí další režii. Ale pro úlohy, které mají vysokou velikost latence, například čtení dat z disku nebo ze síťového připojení, Překryvný odběr může zvýšit celkový efektivitu některých aplikací.  
-  
+Předejte 0 (nula) `milliseconds` parametr způsobí, že modul runtime pro dočasné pozastavení aktuálního kontextu, dokud všech ostatních kontextech aktivní jsou příležitost k provedení práce. To umožňuje pozastavit úlohu pro všechny ostatní aktivní úlohy.
+
+### <a name="example"></a>Příklad
+
+Příklad, který se používá `wait` funkce výnosu z aktuálního kontextu a tím umožní jiných kontextů provést, najdete v článku [postupy: použití skupin plánů vliv pořadí spouštění](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
+
+## <a name="the-context-class"></a>Třídy kontextu
+
+Souběžnost::[třídy kontextu](../../parallel/concrt/reference/context-class.md) poskytuje programovací abstrakce pro kontext spuštění a nabízí dvě důležité funkce: možnost spolupráce při blokovat, odblokovat a výnosu z aktuálního kontextu a možnost přidělit nadměrnému počtu procesů aktuálního kontextu.
+
+### <a name="cooperative-blocking"></a>Spolupráce blokování
+
+`Context` Třída umožňuje blokovat nebo pozastavit aktuální kontext spuštění. Blokování nebo získávání je užitečné při aktuálním kontextu nemůže pokračovat, protože prostředek není k dispozici.
+
+[Concurrency::Context::Block](reference/context-class.md#block) metoda blokuje aktuální kontext. Kontext, který je blokovaný provede jeho zpracování prostředků tak, aby modul runtime můžete provádět další úlohy. [Concurrency::Context::Unblock](reference/context-class.md#unblock) metoda odblokuje kontext blokované. `Context::Unblock` Metoda musí být volána v jiném kontextu než ten, který volá `Context::Block`. Modul runtime vyvolá [concurrency::context_self_unblock](../../parallel/concrt/reference/context-self-unblock-class.md) Pokud pokusí odblokovat samotný kontext.
+
+Spolupráce při blokovat a odblokovat kontextu, obvykle zavoláte [concurrency::Context::CurrentContext](reference/context-class.md#currentcontext) níž načítají ukazatel na `Context` objekt, který je spojen s aktuálním vláknem a uložit výsledek. Poté je zapotřebí zavolat `Context::Block` metoda blokování aktuálního kontextu. Později, volání `Context::Unblock` ze samostatné kontextu odblokujete kontextu blokované.
+
+Každý pár volání musí odpovídat `Context::Block` a `Context::Unblock`. Modul runtime vyvolá [concurrency::context_unblock_unbalanced](../../parallel/concrt/reference/context-unblock-unbalanced-class.md) při `Context::Block` nebo `Context::Unblock` metoda je volána po sobě jdoucích bez odpovídajícího volání jiné metody. Ale není potřeba volat `Context::Block` před voláním `Context::Unblock`. Například, pokud jeden kontext volání `Context::Unblock` před další volání kontextu `Context::Block` stejného kontextu, zůstane tento kontext odblokované.
+
+[Concurrency::Context::Yield](reference/context-class.md#yield) metoda předá vykonávání, tak, aby modul runtime můžete provádět další úlohy a následně přeplánovat kontext spuštění. Při volání `Context::Block` metody, modul runtime není přeplánovat kontextu.
+
+#### <a name="example"></a>Příklad
+
+Příklad, který se používá `Context::Block`, `Context::Unblock`, a `Context::Yield` metody k implementaci třídy semaforu pro spolupráci, viz [postupy: použití třídy kontextu pro implementaci semaforu kooperativní](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
+
+##### <a name="oversubscription"></a>Překryvný odběr
+
+Výchozí plánovač vytváří stejný počet vláken, jsou k dispozici hardwarových vláken. Můžete použít *překryvného odběru* vytvořit další vlákna pro daný hardware vlákno.
+
+Pro výpočetně náročných operací překryvného odběru obvykle nejsou adekvátní protože zavádí další režie. Ale pro úlohy, které mají vysoké množství latence, například čtení dat z disku nebo ze síťového připojení, překryvného odběru může zlepšit celkové efektivity některé aplikace.
+
 > [!NOTE]
->  Povolte Překryvný odběr pouze z vlákna, který byl vytvořen Concurrency Runtime. Překryvný odběr nemá žádný vliv, pokud je volána z vlákna, jež nebyla vytvořena modulem runtime (včetně hlavní vlákno).  
-  
- Chcete-li povolit Překryvný odběr v aktuálním kontextu, volejte [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) metoda s `_BeginOversubscription` parametr nastaven na `true`. Pokud povolíte Překryvný odběr na vlákno, které bylo vytvořeno pomocí Concurrency Runtime, budou modulu runtime vytvořit jeden další vlákno. Po všechny úlohy, které vyžadují dokončit Překryvný odběr, volání `Context::Oversubscribe` s `_BeginOversubscription` parametr nastaven na `false`.  
+>  Povolte překročení stanovených pouze z vlákna, které bylo vytvořeno pomocí modulu Runtime souběžnosti. Kompenzujte nemá žádný vliv, pokud se volá z vlákna, která nebyla vytvořena modulu runtime (včetně hlavní vlákno).
 
-  
- Můžete povolit Překryvný odběr vícekrát z aktuálního kontextu, ale je nutné jej vypnout stejný počet pokusů, které je v režimu. Překryvný odběr mohou být také vnořené; úloha, která je vytvořen jinou úlohou, který používá Překryvný odběr tedy můžete oversubscribe jeho kontextu. Ale pokud vnořené úlohy a její nadřazený patří do stejného kontextu pouze nejkrajnější volání `Context::Oversubscribe` způsobí, že vytvoření další vlákno.  
-  
+Chcete-li povolit překročení stanovených v aktuálním kontextu, zavolejte [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) metodu `_BeginOversubscription` parametr nastaven na `true`. Když povolíte překročení stanovených ve vlákně, které bylo vytvořeno pomocí modulu Runtime souběžnosti, způsobí, že modul runtime vytvořte jedno další vlákno. Za všechny úkoly, které vyžadují překryvného odběru dokončit, volání `Context::Oversubscribe` s `_BeginOversubscription` parametr nastaven na `false`.
+
+Můžete povolit překročení stanovených více než jednou z aktuálního kontextu, ale je nutné jej vypnout stejný počet případů, kdy ji povolit. Překryvný odběr také může být vnořena; To znamená úkol, který je vytvořen jinou úlohou, která používá překryvného odběru můžete také přidělit nadměrnému počtu procesů jeho kontextu. Nicméně pokud vnořená úloha a její nadřazené patří do stejného kontextu, pouze nejkrajnější volání `Context::Oversubscribe` způsobí vytvoření další vlákno.
+
 > [!NOTE]
->  Modul runtime vyvolá [concurrency::invalid_oversubscribe_operation](../../parallel/concrt/reference/invalid-oversubscribe-operation-class.md) Pokud Překryvný odběr je zakázána, než je povolený.  
-  
-###### <a name="example"></a>Příklad  
- Příklad, který používá Překryvný odběr kompenzace latence, která je způsobena čtení dat z připojení k síti, naleznete v části [postupy: použití Překryvný odběr pro posun latence](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
- [Postupy: použití skupin plánů k ovlivnění pořadí provádění](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)   
- [Postupy: použití třídy kontextu pro implementaci semaforu pro spolupráci](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)   
- [Postupy: Kompenzace latence vytvořením nadbytečného počtu vláken](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)
+>  Modul runtime vyvolá [concurrency::invalid_oversubscribe_operation](../../parallel/concrt/reference/invalid-oversubscribe-operation-class.md) Pokud více úloh než je zakázaná, předtím, než je povolené.
+
+###### <a name="example"></a>Příklad
+
+Příklad použití překryvného odběru latence, jež je způsobena čtení dat z připojení k síti, najdete v části [postupy: použití překryvného odběru na latenci posun](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+
+## <a name="see-also"></a>Viz také
+
+[Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
+[Postupy: Použití skupin plánů k ovlivnění pořadí provádění](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)<br/>
+[Postupy: Použití třídy kontextu pro implementaci semaforu pro spolupráci](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
+[Postupy: Kompenzace latence vytvořením nadbytečného počtu vláken](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)
 

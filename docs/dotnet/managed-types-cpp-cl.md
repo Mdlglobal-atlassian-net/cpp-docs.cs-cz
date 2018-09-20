@@ -1,5 +1,5 @@
 ---
-title: Spravované typy (C++-CL) | Microsoft Docs
+title: Spravované typy (c + +/ CL) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 42426c45f4b8caf3cd4cb61ee867470dc9ea639f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 382228b9e8364d90d7929b4633744071c5eb0c77
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33135856"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408028"
 ---
 # <a name="managed-types-ccl"></a>Spravované typy (C++/CL)
-Syntaxe deklarace spravované typy a vytváření a používání objektů z těchto typů výrazně upravíte ze spravovaných rozšíření jazyka C++ na Visual C++. K tomu bylo potřeba k podpoře jejich integrace v rámci systém typů ISO C++. Tyto změny jsou podrobně uvedeny v následující témata.  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
- [Deklarace spravovaného typu třídy](../dotnet/declaration-of-a-managed-class-type.md)  
- Popisuje, jak deklarovat spravovanou `class`, `struct`, nebo `interface`.  
-  
- [Deklarace objektu referenční třídy CLR](../dotnet/declaration-of-a-clr-reference-class-object.md)  
- Popisuje, jak deklarace objektu referenční třídy typu pomocí sledování popisovače.  
-  
- [Deklarace pole CLR](../dotnet/declaration-of-a-clr-array.md)  
- Vysvětluje, jak deklarace a inicializace pole.  
-  
- [Změny v pořadí inicializace konstruktoru](../dotnet/changes-in-constructor-initialization-order.md)  
- Popisuje klíčové změny v pořadí inicializace konstruktoru třídy.  
-  
- [Změny v sémantice destruktorů](../dotnet/changes-in-destructor-semantics.md)  
- Popisuje nedeterministické dokončení `Finalize` versus `Dispose`, důsledky pro referenční objekty a použití explicitního `Finalize`.  
-  
- **Poznámka:** diskuse o delegátech je odložena až do [Delegáti a události](../dotnet/delegates-and-events.md) s cílem je prezentovat se členy události v rámci třídy, obecné téma [deklarace členů v rámci třídy nebo rozhraní (C + +/ CLI) ](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md).  
-  
-## <a name="see-also"></a>Viz také  
- [C + +/ CLI migrace Úvod do](../dotnet/cpp-cli-migration-primer.md)   
- [Třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md)   
- [Pole](../windows/arrays-cpp-component-extensions.md)
+
+Syntaxe pro deklaraci spravovaných typů, vytváření a využívání tyto typy objektů výrazně upravíte ze spravovaného rozšíření jazyka C++ pro Visual C++. To bylo provedeno podporovat jejich integrace v rámci systému typů ISO C++. Tyto změny jsou uvedeny v podrobnosti v následujících oddílech.
+
+## <a name="in-this-section"></a>V tomto oddílu
+
+[Deklarace spravovaného typu třídy](../dotnet/declaration-of-a-managed-class-type.md)<br/>
+Popisuje, jak deklarovat spravovaný `class`, `struct`, nebo `interface`.
+
+[Deklarace objektu referenční třídy CLR](../dotnet/declaration-of-a-clr-reference-class-object.md)<br/>
+Popisuje, jak deklarovat objekt typu referenční třídy pomocí sledovací popisovač.
+
+[Deklarace pole CLR](../dotnet/declaration-of-a-clr-array.md)<br/>
+Vysvětluje, jak deklarovat a inicializovat pole.
+
+[Změny v pořadí inicializace konstruktoru](../dotnet/changes-in-constructor-initialization-order.md)<br/>
+Tento článek popisuje klíčové změny v pořadí inicializace konstruktoru třídy.
+
+[Změny v sémantice destruktorů](../dotnet/changes-in-destructor-semantics.md)<br/>
+Tento článek popisuje nedeterministické dokončení `Finalize` oproti `Dispose`, důsledky pro odkaz na objekty a použití explicitní `Finalize`.
+
+**Poznámka:** diskuse o delegátech je odložena až do [Delegáti a události](../dotnet/delegates-and-events.md) prezentovat je události v rámci třídy, obecnými tématy [deklarace členů v rámci třídy nebo rozhraní (C + +/ CLI) ](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md).
+
+## <a name="see-also"></a>Viz také
+
+[Základy migrace v jazyce C++/CLI](../dotnet/cpp-cli-migration-primer.md)<br/>
+[Třídy a struktury](../windows/classes-and-structs-cpp-component-extensions.md)<br/>
+[Pole](../windows/arrays-cpp-component-extensions.md)

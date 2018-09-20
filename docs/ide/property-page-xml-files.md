@@ -1,5 +1,5 @@
 ---
-title: Vlastnosti stránky XML pravidlo soubory | Microsoft Docs
+title: Soubory XML stránky pravidlo vlastností | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 04/27/2017
 ms.technology:
@@ -14,29 +14,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcee2c416fba6a959785826781aefd96b0d06d75
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 28751a1e672c7b5dfcefe5f24a9248c9ded5ad82
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339641"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383676"
 ---
 # <a name="property-page-xml-rule-files"></a>Soubory pravidlo XML stránky vlastností
-Soubory XML ve složce VCTargets jsou nakonfigurované na stránkách vlastností projektu v prostředí IDE. Přesnou cestu závisí na které edition(s) sady Visual Studio jsou nainstalované a jazyk produktu. Pro Visual Studio 2017 Enterprise Edition, v angličtině, cesta je `%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033`. Soubory XML popisují názvy pravidel, kategorie a jednotlivé vlastnosti, jejich datový typ, výchozí hodnoty, a způsob jejich zobrazení. Když nastavíte vlastnost v prostředí IDE, nová hodnota je uložena v souboru projektu.
 
-Jenom scénáře, ve kterých je potřeba pochopit, že jste do interní chodu tyto soubory a Visual Studio IDE (a) si chcete vytvořit vlastní stránka vlastností, nebo (b) chcete upravit vlastnosti projektu tak, že některé způsobem než prostřednictvím prostředí Visual Studio IDE. 
+Soubory XML ve složce VCTargets jsou nakonfigurované na stránkách vlastností projektu v integrovaném vývojovém prostředí. Přesnou cestu závisí na které edicím sady Visual Studio jsou nainstalované a jazyk produktu. Pro Visual Studio 2017 Enterprise Edition, v angličtině, že cesta je `%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033`. Soubory XML popisují názvy pravidel, kategorie a jednotlivé vlastnosti, jejich datový typ, výchozí hodnoty a jak mají být zobrazeny. Při nastavení vlastnosti v rozhraní IDE, nová hodnota je uložena v souboru projektu.
 
-Nejprve umožňuje otevření stránek vlastností pro projekt (klikněte pravým tlačítkem na uzel projektu v **Průzkumníku řešení** a vyberte možnost Vlastnosti):
-   
+Chcete vytvořit vlastní stránka vlastností pouze scénáře, ve kterých je potřeba pochopit, že jsou vnitřní fungování těchto souborů a integrovaném vývojovém prostředí sady Visual Studio (a), nebo (b) chcete upravit vlastnosti projektu tak, že některé prostředky jinak než pomocí integrovaného vývojového prostředí sady Visual Studio.
+
+Nejprve můžeme otevření stránek vlastností pro projekt (klikněte pravým tlačítkem na uzel projektu v **Průzkumníka řešení** a zvolit vlastnosti):
+
 ![Vlastnosti projektu Visual C++](media/cpp-property-page-2017.png)
 
-Každý uzel v rámci **vlastnosti konfigurace** se označuje jako pravidlo. Pravidlo někdy představuje jeden nástroje, jako je kompilátor, ale obecně výraz odkazuje na něco, co má vlastnosti, která spustí a který může vytvořit některé výstup. Každé pravidlo se naplní ze souboru xml ve složce VCTargets. Například C/C++ pravidlo, které se zobrazí nad nebude naplněn sadou 'cl.xml'.
+Každý uzel v rámci **vlastnosti konfigurace** nazývá pravidlo. Pravidlo někdy představuje jeden nástroje, jako je kompilátor, ale obecně výraz odkazuje na něco, co má vlastnosti, který se spustí a, který může vytvořit některé výstup. Každé pravidlo se naplní ze souboru xml ve složce VCTargets. Například pravidla C/C++, který je zobrazen výše je vyplněn "cl.xml".
 
-Jako v příkladu nahoře, každé pravidlo obsahuje sadu vlastností, které jsou uspořádány do kategorií. Každý dílčí uzel v části pravidla představuje kategorii. Například k optimalizaci uzlu pod C/C++ obsahuje všechny související optimalizace vlastnosti nástroj kompilátoru. Ve formátu mřížky v pravém podokně se vykreslují vlastnosti a jejich hodnoty sami.
+Jak uvádíme výš, každé pravidlo má sadu vlastností, které jsou uspořádány do kategorií. Každý dílčí uzlu pravidlo představuje kategorii. Například optimalizace uzlu C/C++ obsahuje všechny související optimalizace vlastnosti kompilátor. Ve formátu tabulky v pravém podokně jsou generovány vlastnosti a jejich samotné hodnoty.
 
-Cl.xml můžete otevřít v programu Poznámkový blok nebo editoru XML (viz snímku níže). Zobrazí se kořenový uzel s názvem pravidla, která má stejný seznam vlastnosti definované v něm, jak se zobrazí v uživatelském rozhraní, společně s další metadata.
+Cl.xml lze otevřít v programu Poznámkový blok nebo editoru XML (viz snímku níže). Zobrazí se kořenový uzel s názvem pravidla, která má stejný seznam vlastností definovaných v něm, jak se zobrazuje v uživatelském rozhraní spolu s další metadata.
 
-```xml  
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <!--Copyright, Microsoft Corporation, All rights reserved.-->
 <Rule Name="CL" PageTemplate="tool" DisplayName="C/C++" SwitchPrefix="/" Order="10" xmlns="http://schemas.microsoft.com/build/2009/properties" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
@@ -54,16 +55,17 @@ Cl.xml můžete otevřít v programu Poznámkový blok nebo editoru XML (viz sn�
     <Category Name="Command Line" DisplayName="Command Line" Subtype="CommandLine" />
   </Rule.Categories>
 ...
-``` 
+```
 
-Neexistuje jeden soubor XML odpovídající každý uzel v části Vlastnosti konfigurace na stránkách vlastností uživatelského rozhraní. Můžete přidat nebo odebrat pravidla v uživatelském rozhraní, včetně nebo odebráním umístění pro soubory odpovídající XML v projektu. Jedná se například jak Microsoft.CppBuild.targets (o jednu úroveň výš ze složky 1033) zahrnuje cl.xml:
+Existuje jeden soubor XML odpovídající na každý uzel v části Vlastnosti konfigurace na stránkách vlastností uživatelského rozhraní. Můžete přidat nebo odebrat pravidla v uživatelském rozhraní, včetně nebo odebráním umístění, kde se odpovídající soubory XML v projektu. Jedná se například jak Microsoft.CppBuild.targets (jednu úroveň výš ze složky 1033) zahrnuje cl.xml:
 
-```xml  
+```xml
 <PropertyPageSchema Condition="'$(ConfigurationType)' != 'Utility'" Include="$(VCTargetsPath)$(LangID)\cl.xml"/>
+```
 
-``` 
-Pokud jste pruhu cl.xml všechna data, budete mít s následující šablonou:
-```xml  
+Pokud jste odstranili cl.xml všechna data, skončíte se následující kostra:
+
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <Rule>
   <Rule.DataSource />
@@ -77,108 +79,111 @@ Pokud jste pruhu cl.xml všechna data, budete mít s následující šablonou:
   <StringProperty />
   <StringListProperty />
 </Rule>
-``` 
+```
 
-Následující část popisuje každou hlavní prvky a některé z metadat, které lze připojit k nim.
+Následující část popisuje každé hlavní prvky a některé metadata, která lze připojit k nim.
 
-1. **Pravidlo:** pravidlo je obecně kořenového uzlu v souboru xml; může mít mnoho atributů:
+1. **Pravidlo:** pravidel je obecně kořenového uzlu v xml souboru; může mít mnoho atributů:
 
-```xml    
-<Rule Name="CL" PageTemplate="tool" SwitchPrefix="/" Order="10"
-          xmlns="http://schemas.microsoft.com/build/2009/properties"
-          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-          xmlns:sys="clr-namespace:System;assembly=mscorlib">
-  <Rule.DisplayName>
-    <sys:String>C/C++</sys:String>
-  </Rule.DisplayName>
-```  
+    ```xml
+    <Rule Name="CL" PageTemplate="tool" SwitchPrefix="/" Order="10"
+              xmlns="http://schemas.microsoft.com/build/2009/properties"
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              xmlns:sys="clr-namespace:System;assembly=mscorlib">
+      <Rule.DisplayName>
+        <sys:String>C/C++</sys:String>
+      </Rule.DisplayName>
+    ```
 
-   a. **Název:** id pravidla je atribut Name. Musí se jednat o jedinečný mezi všechny vlastnosti stránky soubory xml pro projekt.
+   a. **Název:** atribut Name je id pro pravidlo. Musí být jedinečný mezi všechny vlastnosti stránky souborů xml pro projekt.
 
-   b. **PageTemplate:** hodnota tohoto atributu je používané uživatelského rozhraní vybrat z kolekce šablon uživatelského rozhraní. Šablonu "tool" vykreslí vlastností ve formátu standardní mřížky. Ostatní hodnoty v vytvořená pro tento atribut jsou "ladicí program" a "Obecné". Další informace najdete v ladění uzel a obecné uzel, v uvedeném pořadí, najdete v části formát uživatelského rozhraní vyplývající z zadání těchto hodnot. Uživatelské rozhraní pro šablony "ladicí program" stránka používá rozevíracího seznamu pro přepínání vlastnosti různých ladicí programy, zatímco "Obecné" šablony zobrazí kategorie jinou vlastnost vše na jedné stránce oproti s více uzly dílčí kategorie v rámci pravidlo uzel. Tento atribut je právě návrhu rozhraní; soubor xml je navržený jako uživatelského rozhraní, které jsou nezávislé. Různé uživatelského rozhraní může použít tento atribut pro jiné účely.
+   b. **PageTemplate:** je hodnota tohoto atributu můžete vybírat z kolekce šablon uživatelského rozhraní, které používá uživatelské rozhraní. Šablona "nástroje" vykreslí vlastnosti ve formátu standardní mřížky. Ostatní integrované hodnoty pro tento atribut se "ladění" a "generic". Naleznete v části ladění uzlu a uzel Obecné, najdete v článku formát uživatelského rozhraní, výsledkem zadání těchto hodnot. Šablona stránky "ladění" v uživatelském rozhraní používá rozevíracího seznamu přepínat mezi vlastnostmi rozdílné ladicí programy, že "generic" šablona zobrazuje různé vlastnosti kategorie vše na jedné stránky na rozdíl od s více uzly dílčí kategorie v části pravidla uzel. Tento atribut je návrh v uživatelském rozhraní; soubor xml byla navržena jako nezávislé uživatelského rozhraní. Různé uživatelské rozhraní může použít tento atribut pro různé účely.
 
-  c. **SwitchPrefix:** Toto je Předpona použitá v příkazovém řádku přepínače. Hodnota "/" by způsobilo přepínače, které vypadají/zi, / nologo, /W3 atd.
+   c. **SwitchPrefix:** Toto je Předpona použitá na příkazovém řádku přepínače. Hodnota "/" výsledkem by byla přepínače, které vypadají jako/zi/nologo, w3, atd.
 
-  d. **Pořadí:** to se označuje návrh na potenciální uživatelského rozhraní klienta na relativní umístění tohoto pravidla ve srovnání s jinými pravidly v systému.
+   d. **Pořadí:** jde návrh na potenciální zájemce uživatelského rozhraní klienta na relativní umístění toto pravidlo ve srovnání s jinými pravidly v systému.
 
-  e. **atribut xmlns:** jde standardní element XAML. Můžete zobrazit tři obory názvů uvedené. Tyto obory názvů pro deserializaci XAML odpovídají třídy, schéma a systému oboru názvů jazyka XAML, v uvedeném pořadí.
+   e. **atribut xmlns:** jedná se o standardní prvek XAML. Uvidíte tři obory názvů uvedené. Tyto weby odpovídají na obory názvů pro deserializaci XAML třídy, schéma a systém názvů XAML, v uvedeném pořadí.
 
-  f. **DisplayName:** Toto je název, který se zobrazí na stránce vlastností uživatelského rozhraní pro pravidlo uzel. Tato hodnota je lokalizované. Jsme vytvořili DisplayName jako podřízený element pravidla a nikoli jako atribut (např. název nebo SwitchPrefix) z důvodu vnitřní lokalizace požadavky na nástroj. Z hlediska XAML pro obě jsou ekvivalentní. Ano je možné vytvořit ji atribut přehlednost nebo necháte, protože se jedná.
+   f. **Zobrazovaný název:** jde o název, který se zobrazí na stránce vlastností uživatelského rozhraní pro pravidlo uzel. Tato hodnota je lokalizován. Vytvořili jsme DisplayName jako podřízený element pravidla, nikoli jako atribut (např. název nebo SwitchPrefix) z důvodu interní lokalizace požadavky na nástroj. Z pohledu na XAML obě jsou ekvivalentní. Ano můžete jenom si je atribut pro přehlednost nebo ji nechte, jak je.
 
-  g. **Zdroj dat:** to je velmi důležité vlastnost, která informuje systém projektu umístění, ze kterého by měla hodnotu vlastnosti číst z a zapisovat do a jeho seskupování (vysvětlení níže). Pro cl.xml jsou tyto hodnoty:
+   g. **Zdroj dat:** to je velmi důležité vlastnost, která informuje systém projektu, umístění, ze kterého by měla hodnotu vlastnosti čte a zapisuje do a jeho seskupování (vysvětleno níže). Pro cl.xml jsou tyto hodnoty:
 
-```xml  
-       <DataSource Persistence="ProjectFile" ItemType="ClCompile" Label="" HasConfigurationCondition="true" />
-```  
-   - `Persistence="ProjectFile` informuje o všech vlastnostech pro pravidlo, které mají být zapsána do souboru projektu systému projektu nebo soubor seznamu vlastností (v závislosti na uzlu byla použita k spawn – stránky vlastností). Možná hodnota je "UserFile", která hodnotu zapíše do souboru .uživatel.
+      ```xml
+      <DataSource Persistence="ProjectFile" ItemType="ClCompile" Label="" HasConfigurationCondition="true" />
+      ```
 
-   - `ItemType="ClCompile"` uvádí, že vlastnosti se uloží jako ItemDefinition metadata nebo metadata položky (k tomu jenom v případě, že byly stránek vlastností vytvořený z uzlu soubor v Průzkumníku řešení) tohoto typu položky. Pokud toto pole není nastavena, je vlastnost zapisují jako běžnou vlastností v PropertyGroup.
+   - `Persistence="ProjectFile` informuje systém projektu, který by měly být všechny vlastnosti pro pravidlo zapsány do souboru projektu nebo soubor seznamu vlastností (podle toho, která uzel byl použit na stránkách vlastností nejde vytvořit podřízený). Možná hodnota je "UserFile", která hodnotu zapíše do souboru .user.
 
-   - `Label=""` informuje, že při vlastnosti se zapisují jako `ItemDefinition` metadata, bude popisek nadřazené ItemDefinitionGroup prázdný (každý element MSBuild může mít štítek). Visual Studio 2017 používá s popiskem skupiny přejděte VCXPROJ souboru projektu. Všimněte si, zda mají skupiny, které obsahují většinu vlastností pravidla prázdný řetězec jako popisek.
+   - `ItemType="ClCompile"` říká, že vlastnosti se budou ukládat jako ItemDefinition metadaty nebo metadaty položky (druhá možnost pouze v případě, že byly stránky vlastností vytvořený z uzlu souboru v Průzkumníku řešení) tohoto typu položky. Pokud toto pole není nastavená, je vlastnost zapsán jako obecné vlastnosti v PropertyGroup.
 
-   - `HasConfigurationCondition="true"` říká systému projektu připojovat podmínku konfigurace na hodnotu tak, že bude platit pouze pro aktuální konfigurací projektu (podmínka může být umístěny do nadřazené skupiny nebo vlastní hodnota). Například otevření stránek vlastností projektu uzel a nastavte hodnotu vlastnosti **považovat upozornění jako chyby** pod **vlastnosti konfigurace > C/C++ Obecné** "Ano". Následující hodnota je zapsán do souboru projektu. Všimněte si, podmínku konfigurace připojené k nadřazené ItemDefinitionGroup.
+   - `Label=""` Označuje, že když vlastnosti se zapisují jako `ItemDefinition` metadat, bude popisek nadřazeného ItemDefinitionGroup – prázdný (každý prvek MSBuild může mít štítek). Visual Studio 2017 používá k procházení souboru .vcxproj projektu s popiskem skupiny. Všimněte si, že skupiny, které obsahují většinu vlastností pravidla prázdný řetězec jako popisek.
 
-```xml  
-     <ItemDefinitionGroup Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">
+   - `HasConfigurationCondition="true"` informuje systém projektu tak, aby se projeví pouze pro aktuální konfiguraci projektu (podmínka může být připojeno do nadřazené skupiny nebo vlastní hodnota) připojovat podmínky konfigurace se hodnotou. Například otevření stránek vlastností mimo uzel projektu a nastavte hodnotu vlastnosti **zpracovávat upozornění jako chyby** pod **vlastnosti konfigurace > C/C++ General** na "Ano". Následující hodnota zapsána do souboru projektu. Všimněte si, že podmínka konfigurace připojena k nadřazené ItemDefinitionGroup –.
+
+      ```xml
+      <ItemDefinitionGroup Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">
         <ClCompile>
-           <TreatWarningAsError>true</TreatWarningAsError>
+          <TreatWarningAsError>true</TreatWarningAsError>
         </ClCompile>
-     </ItemDefinitionGroup>
- ```
-   Pokud tato hodnota nastavená na stránce vlastností pro konkrétní soubor, jako je například stdafx.cpp, hodnota vlastnosti by byla zapsána v položce stdafx.cpp v souboru projektu jak je uvedeno níže. Všimněte si, jak podmínku konfigurace přímo připojené k metadata sám sebe.
+      </ItemDefinitionGroup>
+      ```
 
- ```xml  
-<ItemGroup>
-   <ClCompile Include="stdafx.cpp">
-      <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">true</TreatWarningAsError>
-   </ClCompile>
-</ItemGroup>
- ```
-   Jiný atribut **DataSource** nejsou uvedené výše je **PersistedName**. Tento atribut slouží k představovat vlastnost v souboru projektu s jiným názvem. Ve výchozím nastavení je tento atribut hodnotu vlastnosti **název**. 
+      Pokud tato hodnota byla nastavena na stránce vlastností pro konkrétní soubor, jako je například stdafx.cpp, hodnota vlastnosti by byla zapsána v položce stdafx.cpp v souboru projektu, jak je znázorněno níže. Všimněte si, jak Konfigurace podmínky je přímo připojený k samotné metadata.
 
-   Jednotlivé vlastnosti můžete přepsat nadřazené pravidlo DataSource. V takovém případě bude umístění pro tuto vlastnost hodnota liší od dalších vlastností v pravidle.
+      ```xml
+      <ItemGroup>
+        <ClCompile Include="stdafx.cpp">
+          <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">true</TreatWarningAsError>
+        </ClCompile>
+      </ItemGroup>
+      ```
 
-   h. Existují další atributy pravidlo například popis, SupportsFileBatching atd., které nejsou zobrazeny zde. Je možné získat úplnou sadu atributů, které se vztahuje na pravidlo nebo na jakýkoli další prvek procházení v dokumentaci pro tyto typy. Alternativně můžete zkontrolovat veřejné vlastnosti na typy v `Microsoft.Build.Framework.XamlTypes` oboru názvů v `Microsoft.Build.Framework .dll` sestavení.
+   Jiný atribut **DataSource** nejsou uvedené výše je **PersistedName**. Tento atribut slouží k reprezentaci vlastnost v souboru projektu pod jiným názvem. Ve výchozím nastavení je tento atribut nastaven na vlastnost **název**.
 
-   i. **DisplayName**, **PageTemplate**, a **pořadí** jsou vlastnosti související s uživatelského rozhraní, které se nacházejí v tomto jinak nezávislé uživatelského rozhraní datového modelu. Tyto vlastnosti jsou téměř určité má být používána žádné uživatelské rozhraní, které se používá k zobrazení stránky vlastností. **DisplayName** a **popis** jsou dvě vlastnosti, které se nacházejí na téměř všechny elementy v souboru xml. Jsou to jenom dva vlastnosti, které jsou lokalizované (lokalizace tyto řetězce bude podrobně novější post).
+   Jednotlivých vlastností mohou přepsat její nadřazené pravidlo DataSource. V takovém případě umístění pro hodnota této vlastnosti bude liší od dalších vlastností v pravidle.
 
-2.  **Kategorie:** pravidlo může mít více kategorií. Pořadí, ve kterém jsou uvedeny kategorie v souboru xml je návrh do rozhraní k zobrazení kategorií ve stejném pořadí. Například pořadí kategorií pod uzlem C/C++, jak je vidět v uživatelském rozhraní – Obecné, optimalizace, preprocesor,...  – je stejný jako tento v cl.xml. Ukázka kategorie vypadá takto:
+   h. Existují jiné atributy pravidla, třeba popis SupportsFileBatching, atd., které se tady nezobrazují. Nejde získat úplnou sadu atributů příslušné pravidlo nebo na libovolný element tak, že přejdete v dokumentaci pro tyto typy. Alternativně můžete prozkoumat veřejné vlastnosti na typy v `Microsoft.Build.Framework.XamlTypes` obor názvů v `Microsoft.Build.Framework .dll` sestavení.
 
-```xml  
- <Category Name="Optimization">
-    <Category.DisplayName>
+   i. **DisplayName**, **PageTemplate**, a **pořadí** jinak se vlastnosti související s Uživatelským rozhraním, které jsou k dispozici v tomto uživatelském rozhraní nezávislé na datový model. Tyto vlastnosti jsou téměř jistý využívat všechny uživatelské rozhraní, které slouží k zobrazení stránky vlastností. **DisplayName** a **popis** jsou dvě vlastnosti, které se nacházejí na téměř všechny prvky v souboru xml. A jedná se o pouze dvě vlastnosti, které byly lokalizovány (lokalizace tyto řetězce se podrobně novější příspěvek).
+
+1. **Kategorie:** pravidlo může mít více kategorií. Pořadí, ve kterém kategorie jsou uvedeny v souboru xml je návrh na uživatelské rozhraní pro zobrazení kategorií ve stejném pořadí. Například pořadí kategorií pod uzlem jazyka C/C++, jak je vidět v uživatelském rozhraní – Obecné, optimalizace, preprocesor,...  – je stejný jako tento v cl.xml. Ukázka kategorie vypadá takto:
+
+    ```xml
+    <Category Name="Optimization">
+      <Category.DisplayName>
         <sys:String>Optimization</sys:String>
-    </Category.DisplayName>
- </Category>
-```
-Výše uvedené fragment kódu ukazuje **název** a **DisplayName** atributy, které bylo popsané před. Ještě jednou, existují další atributy **kategorie** může mít nepoužívají výše. Můžete víte o nich přečíst v dokumentaci nebo tak, že prověří sestavení pomocí ildasm.exe.
+      </Category.DisplayName>
+    </Category>
+    ```
 
-3. **Vlastnosti:** Toto je maso souboru xml a obsahuje seznam všech vlastností v tomto pravidle. Každá vlastnost může být jeden z pěti možné typy uvedené v XAML kostru výše. Samozřejmě můžete mít jenom některé z těchto typů v souboru. Vlastnost má několik atributů, které aby ji bylo možné bohatě popsané. I objasníme pouze **StringProperty** sem. Zbývající jsou velmi podobné.
+   Výše uvedené fragment kódu ukazuje **název** a **DisplayName** atributy, které bylo popsané před. Ještě jednou, existují další atributy **kategorie** , který může mít nepoužívají výše. Můžete mít přehled o nich najdete v dokumentaci nebo prozkoumáním sestavení pomocí ildasm.exe.
 
-```xml  
-<StringProperty Subtype="file" Name="ObjectFileName" Category="Output Files" Switch="Fo">
-  <StringProperty.DisplayName>
-    <sys:String>Object File Name</sys:String>
-  </StringProperty.DisplayName>
-  <StringProperty.Description>
-    <sys:String>Specifies a name to override the default object file name; can be file or directory name.(/Fo[name])</sys:String>
-  </StringProperty.Description>
-</StringProperty>
-```
-Před doporučené většinu atributy v tomto fragmentu kódu. Nové jsou podtypem, kategorie a přepínače.
+1. **Vlastnosti:** Toto je maso souboru xml a obsahuje seznam všech vlastností v tomto pravidle. Každá vlastnost může být jeden z pěti možných typů uvedené výše zhruba XAML. Samozřejmě může mít pouze několik z těchto typů v souboru. Vlastnost má několik atributů, které mohla být popsány bohatě. Já zatím vysvětlím pouze **StringProperty** tady. Ostatní jsou velmi podobné.
 
-   a. **Podtyp** je k dispozici pouze pro atribut **StringProperty** a **StringListProperty**; nabízí kontextové informace. Například hodnota "soubor" označuje, že vlastnost představuje cestu k souboru. Tyto kontextové informace slouží k vylepšení úpravy prostředí tím, že poskytuje Průzkumník Windows jako vlastnosti editor, který umožňuje uživateli vybrat soubor vizuálně.
+    ```xml
+    <StringProperty Subtype="file" Name="ObjectFileName" Category="Output Files" Switch="Fo">
+      <StringProperty.DisplayName>
+        <sys:String>Object File Name</sys:String>
+      </StringProperty.DisplayName>
+      <StringProperty.Description>
+        <sys:String>Specifies a name to override the default object file name; can be file or directory name.(/Fo[name])</sys:String>
+      </StringProperty.Description>
+    </StringProperty>
+    ```
 
-   b. **Kategorie:** to deklaruje kategorie, pod kterým tato vlastnost spadá. Zkuste najít tuto vlastnost pod **výstupní soubory** kategorie v uživatelském rozhraní.
+   Před mají popsán většinu atributy v tomto fragmentu kódu. Nové značky jsou podtypem, kategorie a přepínač.
 
-   c. **Přepínač:** když pravidlo představuje nástroj – například nástroj kompilátoru v tomto případě – většinu vlastností pravidla jsou předány jako přepínače v nástroji spustitelný soubor v době sestavení. Hodnota tohoto atributu označuje přepínač literál, který se má použít. Vlastnost výše Určuje, že by měl být jeho přepínač **Fo**. V kombinaci s **SwitchPrefix** atributu v nadřazené pravidlo, tato vlastnost je předána ke spustitelnému souboru jako **/Fo "ladění\"**  (viditelné v příkazovém řádku pro C/C++ na stránce vlastností uživatelského rozhraní).
+   a. **Podtyp** je k dispozici pouze pro atribut **StringProperty** a **StringListProperty**; poskytuje kontextové informace. Například hodnota "file" označuje, že vlastnost představuje cestu k souboru. Tyto kontextové informace slouží k vylepšit možnosti úprav poskytnutím Průzkumník Windows jako vlastnosti editor, který umožňuje uživateli zvolit soubor vizuálně.
 
-   Ostatní atributy vlastnost patří:
+   b. **Kategorie:** to deklaruje kategorie, pod kterou spadá tuto vlastnost. Pokuste se najít této vlastnosti v části **výstupní soubory** kategorie v uživatelském rozhraní.
 
-   d. **Viditelný:** Pokud z nějakého důvodu nechcete, aby vaše vlastnost zobrazena v stránky vlastností (ale stále pravděpodobně k dispozici v době sestavení), nastavte tento atribut na hodnotu false.
+   c. **Přepínač:** když pravidlo představuje nástroj – nástroj kompilátoru v tomto případě – většinu vlastností tohoto pravidla jsou předány jako přepínače do nástroje spustitelný soubor během doby sestavení. Hodnota tohoto atributu označuje přepínač literál, který se má použít. Výše uvedené vlastnosti určuje, že by měl být jeho přepínač **Fo**. V kombinaci s **SwitchPrefix** atributu v nadřazené pravidlo, tato vlastnost předána do spustitelného souboru jako **/Fo "ladění\"**  (zobrazí se na příkazovém řádku pro C/C++ na stránce vlastností uživatelského rozhraní).
 
-   e. **Jen pro čtení:** Pokud byste chtěli poskytnout zobrazení jen pro čtení hodnoty této vlastnosti na stránkách vlastností, tento atribut nastavit na hodnotu true.
+   Ostatní atributy vlastnosti patří:
 
-   f. **IncludeInCommandLine:** některé vlastnosti nemusí být nutné mají být předány nástroj během okamžiku sestavení. Nastavení tohoto atributu na hodnotu false zabraňují předávány.
+   d. **Visible:** Pokud z nějakého důvodu nechcete, aby vaše vlastnost zobrazí na stránkách vlastností (ale je během doby sestavení pravděpodobně stále k dispozici), tento atribut nastavte na hodnotu false.
 
+   e. **Jen pro čtení:** Pokud chcete, abyste si mohli zobrazit jen pro čtení hodnoty této vlastnosti na stránkách vlastností, tento atribut nastavte na hodnotu true.
 
+   f. **IncludeInCommandLine:** některé vlastnosti nemusí být předán nástroj během doby sestavení. Tento atribut nastavíte na hodnotu false, nebudou moct z předávána.

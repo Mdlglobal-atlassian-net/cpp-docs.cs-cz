@@ -1,5 +1,5 @@
 ---
-title: Použití objektu CToolTipCtrl k vytvoření objektu CToolTipCtrl a manipulaci | Microsoft Docs
+title: Použití objektu CToolTipCtrl k vytvoření a manipulaci s objektu CToolTipCtrl | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f2143ea37cfe9448e43aacfa75622beab93d2fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 186972164496889b471ebfc11e19017129ad943b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382331"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378979"
 ---
 # <a name="using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object"></a>Použití objektu CToolTipCtrl k vytvoření objektu CToolTipCtrl a manipulaci s ním
-Tady je příklad [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) využití:  
-  
-### <a name="to-create-and-manipulate-a-ctooltipctrl"></a>K vytvoření a manipulaci CToolTipCtrl  
-  
-1.  Vytvořit `CToolTipCtrl` objektu.  
-  
-2.  Volání [vytvořit](../mfc/reference/ctooltipctrl-class.md#create) běžné prvkem popis tlačítka Windows a vytvořte jej do `CToolTipCtrl` objektu.  
-  
-3.  Volání [AddTool](../mfc/reference/ctooltipctrl-class.md#addtool) zaregistrovat nástroj s ovládacím prvkem popis tlačítka, informace uložené v popisu tlačítka se zobrazí, pokud se ukazatel na nástroj.  
-  
-4.  Volání [SetToolInfo](../mfc/reference/ctooltipctrl-class.md#settoolinfo) informace o popisku tlačítka udržuje pro nástroj.  
-  
-5.  Volání [SetToolRect](../mfc/reference/ctooltipctrl-class.md#settoolrect) nastavit nové ohraničující obdélník pro nástroj.  
-  
-6.  Volání [hitTest –](../mfc/reference/ctooltipctrl-class.md#hittest) otestovat bod k určení toho, jestli je v rámci ohraničující obdélník daný nástroj a pokud ano, načíst informace o nástroji.  
-  
-7.  Volání [GetToolCount](../mfc/reference/ctooltipctrl-class.md#gettoolcount) načíst počet nástroje registrované s ovládacím prvkem popis tlačítka.  
-  
-## <a name="see-also"></a>Viz také  
- [Použití objektu CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Tady je příklad [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) využití:
+
+### <a name="to-create-and-manipulate-a-ctooltipctrl"></a>K vytváření a manipulaci atributu CToolTipCtrl
+
+1. Vytvořit `CToolTipCtrl` objektu.
+
+1. Volání [vytvořit](../mfc/reference/ctooltipctrl-class.md#create) Windows nástroj běžné ovládacím prvkem popis tlačítka vytvořit a připojit ji k `CToolTipCtrl` objektu.
+
+1. Volání [AddTool](../mfc/reference/ctooltipctrl-class.md#addtool) zaregistrovat nástroj s ovládacím prvkem popis tlačítka nástroje tak, aby informace uložené v popisu tlačítka se zobrazí, když ukazatel zůstane na nástroj.
+
+1. Volání [SetToolInfo](../mfc/reference/ctooltipctrl-class.md#settoolinfo) nastavení informace, které udržuje popisku tlačítka pro nástroj.
+
+1. Volání [SetToolRect](../mfc/reference/ctooltipctrl-class.md#settoolrect) nastavit nové ohraničující rámeček pro nástroj.
+
+1. Volání [hitTest –](../mfc/reference/ctooltipctrl-class.md#hittest) otestovat bod k určení, zda je v rámci ohraničující obdélník daný nástroj a pokud ano, načíst informace o tomto nástroji.
+
+1. Volání [GetToolCount](../mfc/reference/ctooltipctrl-class.md#gettoolcount) načíst počet nástrojů pro registrovaný s ovládacím prvkem popis tlačítka nástroj.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CToolTipCtrl](../mfc/using-ctooltipctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

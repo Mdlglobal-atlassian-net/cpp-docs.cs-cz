@@ -1,5 +1,5 @@
 ---
-title: Win32 – internetová rozšíření (WinInet) | Microsoft Docs
+title: Win32 – internetová rozšíření (WinInet) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,47 +17,49 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32e4f236977884924e611eed45136a76c1ad6527
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 35d3805ee88cca048ac44dc15426cb35eb52bb5b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383958"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374759"
 ---
 # <a name="win32-internet-extensions-wininet"></a>Win32 – internetová rozšíření (WinInet)
-Internetových klientských aplikací je program, který přistupuje k informace ze zdroje dat síti (server), pomocí Internetové protokoly, jako je například gopher, FTP nebo HTTP. Internetových klientských aplikací může přístup k serveru, například načíst data, jako jsou počasí mapy, uložených ceny nebo novinách titulky. Klienta přes Internet můžete přístup k serveru přes síť externí (Internet) nebo k interní síti (někdy nazývané intranet).  
-  
- MFC zahrnuje Win32 – internetová rozšíření nebo WinInet, pro vytvoření internetových klientských aplikací. MFC zapouzdří tato rozšíření Internetu v sadě standardní, snadné použití třídy. WinInet klientskou aplikaci můžete napsat voláním funkce Win32 přímo nebo pomocí tříd WinInet knihovny MFC.  
-  
- Funkce Microsoft Win32 Internet (WinInet) vám pomůže při vytvoření Internetu nedílnou součástí všech aplikací. Nové funkce obsažené v WININET. Knihovny DLL, zjednodušit přístup k Internetu pomocí protokolu HTTP (Hypertext Transfer Protocol), FTP (File Transfer Protocol) a gopher.  
-  
- Následující témata popisují proces vytváření internetových klientských aplikací:  
-  
--   [Jak rozhraní WinInet usnadňuje tvorbu internetových klientských aplikací](../mfc/how-wininet-makes-it-easier-to-create-internet-client-applications.md)  
-  
--   [Jak prostředí MFC usnadňuje tvorbu internetových klientských aplikací](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)  
-  
--   [MFC – třídy pro tvorbu internetových klientských aplikací](../mfc/mfc-classes-for-creating-internet-client-applications.md)  
-  
--   [Požadavky na třídy internetových klientů](../mfc/prerequisites-for-internet-client-classes.md)  
-  
--   [Psaní internetových klientských aplikací pomocí tříd WinInet knihovny MFC](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)  
-  
- Kroky pro provádění úloh typické WinInet v následujících tématech:  
-  
--   [Postup v typické internetové klientské aplikaci](../mfc/steps-in-a-typical-internet-client-application.md)  
-  
--   [Postup v typické aplikaci klienta FTP](../mfc/steps-in-a-typical-ftp-client-application.md)  
-  
--   [Postup odstranění souboru v typické aplikaci klienta FTP](../mfc/steps-in-a-typical-ftp-client-application-to-delete-a-file.md)  
-  
--   [Postup v typické aplikaci klienta Gopher](../mfc/steps-in-a-typical-gopher-client-application.md)  
-  
--   [Postup v typické aplikaci klienta HTTP](../mfc/steps-in-a-typical-http-client-application.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Základy internetového programování MFC](../mfc/mfc-internet-programming-basics.md)   
- [WinInet – základy](../mfc/wininet-basics.md)
+
+Internetových klientských aplikací je program, který přistupuje k informacím ze zdroje dat sítě (server) pomocí Internetové protokoly, jako je například gopher, FTP nebo HTTP. Internetových klientských aplikací může být přístup k serveru pro načtení data, jako jsou mapy počasí, ceny akcií nebo titulky novinách, třeba. Internetový klient přístup k serveru přes externí síti (Internetu) nebo k interní síti (říká se jim intranet).
+
+Knihovny MFC zahrnuje Win32 – internetová rozšíření nebo rozhraní WinInet, pro vytváření internetových klientských aplikací. Knihovny MFC zapouzdřuje tyto – internetová rozšíření v sadě standardní, snadno použitelné třídy. Wininet – klientská aplikace můžete napsat voláním funkce Win32 přímo nebo pomocí tříd WinInet knihovny MFC.
+
+Funkce Microsoft Win32 Internet (WinInet) vám pomůže při vytváření Internetu nedílnou součástí jakékoli aplikace. Nové funkce obsažené v rozhraní WININET. Knihovny DLL, zjednodušit přístup k Internetu pomocí protokolu HTTP (Hypertext Transfer Protocol), FTP (File Transfer Protocol) a gopher.
+
+Následující témata popisují proces vytváření internetových klientských aplikací:
+
+- [Jak rozhraní WinInet usnadňuje tvorbu internetových klientských aplikací](../mfc/how-wininet-makes-it-easier-to-create-internet-client-applications.md)
+
+- [Jak prostředí MFC usnadňuje tvorbu internetových klientských aplikací](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)
+
+- [MFC – třídy pro tvorbu internetových klientských aplikací](../mfc/mfc-classes-for-creating-internet-client-applications.md)
+
+- [Požadavky na třídy internetových klientů](../mfc/prerequisites-for-internet-client-classes.md)
+
+- [Psaní internetových klientských aplikací pomocí tříd WinInet knihovny MFC](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+
+Kroky pro provádění typické úlohy rozhraní WinInet v následujících tématech:
+
+- [Postup v typické internetové klientské aplikaci](../mfc/steps-in-a-typical-internet-client-application.md)
+
+- [Postup v typické aplikaci klienta FTP](../mfc/steps-in-a-typical-ftp-client-application.md)
+
+- [Postup odstranění souboru v typické aplikaci klienta FTP](../mfc/steps-in-a-typical-ftp-client-application-to-delete-a-file.md)
+
+- [Postup v typické aplikaci klienta Gopher](../mfc/steps-in-a-typical-gopher-client-application.md)
+
+- [Postup v typické aplikaci klienta HTTP](../mfc/steps-in-a-typical-http-client-application.md)
+
+## <a name="see-also"></a>Viz také
+
+[Základy internetového programování v prostředí MFC](../mfc/mfc-internet-programming-basics.md)<br/>
+[WinInet – základy](../mfc/wininet-basics.md)
 
 
 

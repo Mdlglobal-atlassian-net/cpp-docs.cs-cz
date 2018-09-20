@@ -1,5 +1,5 @@
 ---
-title: Automatizační servery | Microsoft Docs
+title: Automatizační servery | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,49 +17,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 337d5a1ec25e8fc80cf867aecef0452b1d03fb2b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2cc163559b4946626e754b70a1b54d4fe20306c7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343941"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377615"
 ---
 # <a name="automation-servers"></a>Automatizační servery
-Automatizace umožňuje aplikaci k manipulaci s objekty, které jsou implementovány v jiné aplikaci, nebo je vystavit objekty, budou se dá upravit. Automatizační server je aplikace, která zveřejňuje programovatelný objekty (označovaný jako objekty automatizace) k ostatním aplikacím (nazývá [klienti automatizace](../mfc/automation-clients.md)). Automatizační servery se někdy označuje jako komponenty pro automatizaci.  
-  
- Vystavení objekty automatizace umožňuje klientům automatizovat některé postupy tak, že přímý přístup k objektům a zpřístupní funkce serveru. Vystavení objektů tímto způsobem je užitečné, když aplikace poskytují funkce, které jsou užitečné pro jiné aplikace. Například textový editor mohou být vystaveny jeho funkce pro kontrolu pravopisu tak, aby ho může použít jiné programy. Vystavení objektů proto umožňuje dodavatelům ke zlepšení funkce svých aplikacích pomocí připravených funkce jiných aplikací.  
-  
- Tyto objekty automatizace mají vlastnosti a metody jako jejich externí rozhraní. Vlastnosti jsou pojmenovaných atributů objektu automatizace. Vlastnosti jsou stejné jako datové členy třídy C++. Metody jsou funkce, které fungují na objekty automatizace. Metody jsou stejné jako veřejné členské funkce třídy C++.  
-  
+
+Automatizace umožňuje aplikaci k manipulaci s objekty, které jsou implementovány v jiné aplikaci, nebo ke zveřejnění objekty, lze manipulovat. Server služby Automation je aplikace, která zveřejňuje programovatelné objekty (označované jako objekty automatizace) k ostatním aplikacím (volá [klientům automatizace](../mfc/automation-clients.md)). Automatizační servery jsou někdy označovány jako součásti služby Automation.
+
+Zveřejnění objekty automatizace umožňuje klientům k automatizaci některých postupů přímým přístupem objekty a funkce serveru zpřístupňuje. Zveřejnění objekty tímto způsobem je vhodné v případě aplikace poskytují funkce, které jsou užitečné pro jiné aplikace. Například textový procesor může zveřejnit funkčnost kontrolu pravopisu, tak, aby mohou použít jiné programy. Vystavení objektů tak umožňuje dodavatelům zlepšit funkčnost svých aplikací s použitím předdefinované funkce jiných aplikací.
+
+Tyto objekty automatizace mají vlastnosti a metody jako jejich externí rozhraní. Vlastnosti jsou pojmenovaných atributů objektu automatizace. Vlastnosti jsou podobné datové členy třídy jazyka C++. Metody jsou funkce, které fungují na objekty automatizace. Metody jsou stejně jako veřejné členské funkce třídy jazyka C++.
+
 > [!NOTE]
->  I když jsou vlastnosti jako C++ datových členů, nejsou přímo přístupné. Zajistit transparentní přístup, nastavte pro přístup k nim interní proměnné v objektu automatizace dvojice get/set členských funkcí.  
-  
- Díky zpřístupnění funkcí aplikace pomocí běžných, dobře definované rozhraní, Automation umožňuje vytvářet aplikace v jednom Obecné programovací jazyk jako Microsoft Visual Basicu místo v různých, specifické pro aplikaci – makro jazyky.  
-  
-##  <a name="_core_support_for_automation_servers"></a> Podpora pro automatizační servery  
- Visual C++ a rozhraní MFC framework poskytuje rozsáhlou podporu pro automatizační servery. Jejich zpracování mnohem režie spojená při vytvoření serveru automatizace, abyste se mohli zaměřit vaše úsilí na funkci aplikace.  
-  
- Rozhraní framework hlavní mechanismus pro podporu automatizace je odesílání mapa sadu makra, která rozšíří na deklarace a volání, které jsou potřebné ke zveřejnění metod a vlastností pro OLE. Mapy odesílání typické vypadá takto:  
-  
- [!code-cpp[NVC_MFCAutomation#1](../mfc/codesnippet/cpp/automation-servers_1.cpp)]  
-  
- Vlastnosti – okno a zobrazení tříd usnadní zachování expediční mapy. Když přidáte nové metody nebo vlastnosti na třídu, Visual C++ přidá odpovídající `DISP_FUNCTION` nebo `DISP_PROPERTY` s parametry, která udává název třídy, externí i interní názvy metody nebo vlastnosti a datové typy.  
-  
- **Přidat třídu** dialogové okno zjednodušuje i deklaraci třídy automatizace a řízení operací a jejich vlastnosti. Při pomocí dialogové okno Přidat třídu do projektu přidejte třídu, zadejte její základní třída. Pokud základní třída umožňuje automatizace, dialogové okno Přidat třídu zobrazí ovládací prvky, které se používá k určení, zda nová třída musí podporovat automatizace, jestli je "OLE vytvořitelné" (to znamená, zda objekty třídy lze vytvářet na vyžádání z klienta COM) a externí název klienta COM k použití.  
-  
- **Přidat třídu** dialogové okno vytvoří deklaraci třídy, včetně příslušné makra pro OLE funkce zadali. Také přidá kostru kód pro implementaci třídy a členské funkce.  
-  
- Průvodce aplikací MFC usnadňuje získávání vaše serverová aplikace automatizace vypnout základů kroky. Pokud jste vybrali **automatizace** zaškrtnutí políčka **upřesňující funkce** stránky, Průvodce aplikací MFC přidá do vaší aplikace `InitInstance` funkce volání k registraci vaší automatizace požadován objekty a spusťte aplikaci jako serveru automatizace.  
-  
-### <a name="what-do-you-want-to-do"></a>Co chcete udělat  
-  
--   [Další informace o klienti automatizace](../mfc/automation-clients.md)  
-  
--   [Další informace o CCmdTarget – třída](../mfc/reference/ccmdtarget-class.md)  
-  
--   [Další informace o třídě COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Automatizace](../mfc/automation.md)   
- [MFC – průvodce aplikací](../mfc/reference/mfc-application-wizard.md)
+>  I když jsou vlastnosti jako C++ datové členy, nejsou přímo přístupné. Pokud chcete poskytnout transparentní přístup, nastavení pro přístup k nim interní proměnné v automatizační objekt s párem členské funkce get/set.
+
+Zveřejněním funkčnost aplikace přes běžné, dobře definovaných rozhraní automatizace díky tomu je možné vytvářet aplikace v jedné Obecné programovací jazyk jako je Microsoft Visual Basicu místo v různých, specifické pro aplikaci – makro jazyky.
+
+##  <a name="_core_support_for_automation_servers"></a> Podpora pro automatizační servery
+
+Visual C++ a rozhraní MFC framework poskytuje rozsáhlou podporu u automatizačních serverů. Velká část režiím zapojených při vytvoření serveru automatizace, abyste se mohli soustředit své úsilí na funkcích aplikace zpracovávají.
+
+V rámci hlavní mechanismus pro podporu automatizace je mapa odeslání, sadu makra, která rozšíří na deklarace a volání potřeba zpřístupnit metody a vlastnosti pro OLE. Mapa odeslání typické vypadá takto:
+
+[!code-cpp[NVC_MFCAutomation#1](../mfc/codesnippet/cpp/automation-servers_1.cpp)]
+
+V okně Vlastnosti a zobrazení tříd pomůcku pro zachování expediční mapy. Když přidáte novou metodu nebo vlastnost třídy, Visual C++ přidá odpovídající `DISP_FUNCTION` nebo `DISP_PROPERTY` makru s parametry určující název třídy, externí a interní názvy typů metodu nebo vlastnost a data.
+
+**Přidat třídu** dialogové okno zjednodušuje i deklaraci třídy automatizace a řízení jejich vlastností a operací. Při přidání třídy do projektu použijete dialogové okno Přidat třídu, zadejte její základní třídě. Pokud základní třída umožňuje automatizaci, zobrazí se dialogové okno Přidat třídu ovládací prvky, které se používá k určení, zda by měl novou třídu podporu automatizace, ať už jde o "OLE vytvořitelné" (to znamená, zda objekty třídy se dají vytvořit na žádosti od klientů modelu COM) a název externí klienti modelu COM, měli používat.
+
+**Přidat třídu** dialogové okno vytvoří deklaraci třídy, včetně makra vhodná pro OLE obsahuje jste zadali. Přidá také kostru kód pro implementaci členských funkcí vaší třídy.
+
+Průvodce aplikací MFC zjednodušuje kroky při získávání vaší aplikaci automatizačního serveru firmu. Pokud vyberete **automatizace** zaškrtnutí políčka **rozšířené funkce** stránce, Průvodce aplikací MFC přidá do vaší aplikace `InitInstance` volání požadovaných k registraci vaší automatizace funkcí objekty, a spusťte aplikaci jako server automatizace.
+
+### <a name="what-do-you-want-to-do"></a>Co chcete udělat
+
+- [Další informace o klientech služby Automation](../mfc/automation-clients.md)
+
+- [Další informace o CCmdTarget – třída](../mfc/reference/ccmdtarget-class.md)
+
+- [Další informace o třídě COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)
+
+## <a name="see-also"></a>Viz také
+
+[Automatizace](../mfc/automation.md)<br/>
+[MFC – průvodce aplikací](../mfc/reference/mfc-application-wizard.md)
 

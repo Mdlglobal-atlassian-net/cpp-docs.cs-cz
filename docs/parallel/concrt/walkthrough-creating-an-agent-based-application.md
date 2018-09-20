@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Vytvoření aplikace založené na agentovi | Microsoft Docs'
+title: 'Návod: Vytvoření aplikace založené na agentovi | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,182 +15,188 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78826bb9f00e77a80fb65dd3a3ceda7eedb38796
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 68c4b389bdd8f1121a59bce1a0ca8942f077e062
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692623"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377154"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Návod: Vytvoření aplikace založené na agentovi
-Toto téma popisuje, jak vytvořit základní aplikaci založené na agentovi. V tomto návodu vytvoříte agenta, který asynchronně čte data z textového souboru. Aplikace používá algoritmus kontrolního součtu Adler-32 vypočítat kontrolní součet obsah tohoto souboru.  
-  
-## <a name="prerequisites"></a>Požadavky  
- V následujících tématech k dokončení tohoto postupu je potřeba pochopit:  
-  
-- [Asynchronní agenti](../../parallel/concrt/asynchronous-agents.md)  
-  
-- [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)  
-  
-- [Funkce pro předávání zpráv](../../parallel/concrt/message-passing-functions.md)  
-  
-- [Synchronizační datové struktury](../../parallel/concrt/synchronization-data-structures.md)  
-  
-##  <a name="top"></a> Oddíly  
- Tento návod ukazuje, jak provádět následující úlohy:  
-  
-- [Vytvoření konzolové aplikace](#createapplication)  
-  
-- [Vytváření file_reader – třída](#createagentclass)  
-  
-- [V aplikaci pomocí file_reader – třída](#useagentclass)  
-  
-##  <a name="createapplication"></a> Vytvoření konzolové aplikace  
- V této části ukazuje, jak k vytvoření konzolové aplikace Visual C++, který odkazuje na soubory hlaviček, které bude program používat.  
-  
-#### <a name="to-create-a-visual-c-application-by-using-the-win32-console-application-wizard"></a>Vytvoření aplikace Visual C++ pomocí Průvodce konzolovou aplikací Win32  
-  
-1.  Na **soubor** nabídky, klikněte na tlačítko **nový**a potom klikněte na **projektu** zobrazíte **nový projekt** dialogové okno.  
-  
-2.  V **nový projekt** dialogové okno, vyberte **Visual C++** uzel v **typy projektů** podokně a potom vyberte **Konzolová aplikace Win32** v **šablony** podokně. Zadejte název projektu, například `BasicAgent`a potom klikněte na **OK** zobrazíte **konzoly Win32 – Průvodce aplikací**.  
-  
-3.  V **konzoly Win32 – Průvodce aplikací** dialogové okno, klikněte na tlačítko **Dokončit**.  
-  
-4.  V stdafx.h přidejte následující kód.  
-  
- [!code-cpp[concrt-basic-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_1.h)]  
-  
-     Agents.h soubor záhlaví obsahuje funkce [concurrency::agent](../../parallel/concrt/reference/agent-class.md) třídy.  
-  
-5.  Ověřte, že aplikace byl úspěšně vytvořen vytváření a jeho spuštěním. Vytvořit aplikaci, na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**. Pokud aplikace sestavení úspěšně, spusťte aplikaci kliknutím **spustit ladění** na **ladění** nabídky.  
-  
- [[Horní](#top)]  
-  
-##  <a name="createagentclass"></a> Vytváření file_reader – třída  
- V této části ukazuje, jak vytvořit `file_reader` třídy. Modul runtime naplánuje každého agenta pro práci v jeho vlastní kontextu. Proto můžete vytvořit agenta, který provede práci synchronně, ale komunikuje s jinými součástmi asynchronně. `file_reader` Třída čte data z daného vstupního souboru a odesílá data z tohoto souboru pro danou cílovou součásti.  
-  
-#### <a name="to-create-the-filereader-class"></a>Vytvoření třídy file_reader  
-  
-1.  Přidáte nový soubor záhlaví C++ do projektu. Chcete-li to provést, klikněte pravým tlačítkem **soubory hlaviček** uzlu v **Průzkumníku řešení**, klikněte na tlačítko **přidat**a potom klikněte na **novou položku**. V **šablony** podokně, vyberte **soubor (hlaviček)**. V **přidat novou položku** dialogové okno, typ `file_reader.h` v **název** pole a pak klikněte na **přidat**.  
-  
-2.  V file_reader.h přidejte následující kód.  
-  
- [!code-cpp[concrt-basic-agent#17](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_2.h)]  
-  
-3.  V file_reader.h, vytvořte třídu, která je s názvem `file_reader` která je odvozena od `agent`.  
-  
- [!code-cpp[concrt-basic-agent#2](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_3.h)]  
-  
-4.  Přidejte následující členy dat tak, aby `private` část vaší třídy.  
-  
- [!code-cpp[concrt-basic-agent#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_4.h)]  
-  
-     `_file_name` Člen je název souboru, který čte agenta z. `_target` Člen [concurrency::ITarget](../../parallel/concrt/reference/itarget-class.md) objektu, že agent zapíše obsah souboru. `_error` Člen obsahuje chyby, ke kterému dochází po dobu trvání agenta.  
-  
-5.  Přidejte následující kód pro `file_reader` pro konstruktory `public` části `file_reader` třídy.  
-  
- [!code-cpp[concrt-basic-agent#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_5.h)]  
-  
-     Každý přetížení konstruktoru nastaví `file_reader` datových členů. Druhý a třetí konstruktor přetížení umožňuje vaší aplikaci používat konkrétní scheduler s agenta. První přetížení používá výchozí plánovač s agenta.  
-  
-6.  Přidat `get_error` metoda do části veřejné `file_reader` třídy.  
-  
- [!code-cpp[concrt-basic-agent#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_6.h)]  
-  
-     `get_error` Metoda načte všechny chyby, ke kterému dochází po dobu trvání agenta.  
-  
 
-7.  Implementace [concurrency::agent::run](reference/agent-class.md#run) metoda v `protected` část vaší třídy.  
+Toto téma popisuje, jak vytvořit základní aplikaci založené na agentovi. V tomto podrobném návodu můžete vytvořit agenta, který asynchronně čte data z textového souboru. Aplikace používá algoritmus Adler 32 kontrolní součet vypočítat kontrolní součet obsah tohoto souboru.
 
-  
- [!code-cpp[concrt-basic-agent#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_7.h)]  
-  
-`run` Metoda soubor otevře a přečte data z něj. `run` Metoda používá výjimek pro zachycení všechny chyby, ke kterým došlo během zpracování souboru.  
-  
-   Pokaždé, když tato metoda čte data ze souboru, zavolá [concurrency::asend](reference/concurrency-namespace-functions.md#asend) funkce k odesílání dat do cílové vyrovnávací paměti. Jeho cílové vyrovnávací paměti jako upozornění na ukončení zpracování odešle prázdný řetězec.  
+## <a name="prerequisites"></a>Požadavky
 
-  
- Následující příklad ukazuje úplný obsahu file_reader.h.  
-  
- [!code-cpp[concrt-basic-agent#7](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_8.h)]  
-  
- [[Horní](#top)]  
-  
-##  <a name="useagentclass"></a> V aplikaci pomocí file_reader – třída  
- Tato část ukazuje způsob použití `file_reader` třídy ke čtení obsahu textového souboru. Také ukazuje, jak vytvořit [concurrency::call](../../parallel/concrt/reference/call-class.md) objekt, který obdrží tato data souborů a vypočítá jeho kontrolní součet Adler-32.  
-  
-#### <a name="to-use-the-filereader-class-in-your-application"></a>Použití třídy file_reader v aplikaci  
-  
-1.  V BasicAgent.cpp, přidejte následující `#include` příkaz.  
-  
- [!code-cpp[concrt-basic-agent#8](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_9.cpp)]  
-  
-2.  V BasicAgent.cpp, přidejte následující `using` direktivy.  
-  
- [!code-cpp[concrt-basic-agent#9](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_10.cpp)]  
-  
-3.  V `_tmain` fungovat, vytvořte [concurrency::event](../../parallel/concrt/reference/event-class.md) objekt, který označuje konec zpracování.  
-  
- [!code-cpp[concrt-basic-agent#10](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_11.cpp)]  
-  
-4.  Vytvoření `call` objekt, který aktualizuje kontrolního součtu, když obdrží data.  
-  
- [!code-cpp[concrt-basic-agent#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_12.cpp)]  
-  
-     To `call` také nastaví objekt `event` objektu, pokud obdrží prázdný řetězec signál konec zpracování.  
-  
-5.  Vytvoření `file_reader` objekt, který čte z test.txt soubor a zapíše obsah tohoto souboru do `call` objektu.  
-  
- [!code-cpp[concrt-basic-agent#12](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_13.cpp)]  
-  
-6.  Spuštění agenta a počkejte na její dokončení.  
-  
- [!code-cpp[concrt-basic-agent#13](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_14.cpp)]  
-  
-7.  Počkejte `call` objekt, který chcete zobrazit všechna data a dokončit.  
-  
- [!code-cpp[concrt-basic-agent#14](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_15.cpp)]  
-  
-8.  Zkontrolujte soubor čtečky chyby. Pokud nedošlo k žádné chybě, vypočítat daný konečným souhrnem Adler-32 a tisk do konzoly.  
-  
- [!code-cpp[concrt-basic-agent#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_16.cpp)]  
-  
- Následující příklad ukazuje dokončení BasicAgent.cpp soubor.  
-  
- [!code-cpp[concrt-basic-agent#16](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_17.cpp)]  
-  
- [[Horní](#top)]  
-  
-## <a name="sample-input"></a>Ukázkový vstup  
- Toto je ukázkový obsah text.txt vstupní soubor:  
-  
-```Output  
-The quick brown fox  
-jumps  
-over the lazy dog  
-```  
-  
-## <a name="sample-output"></a>Vzorový výstup  
- Při použití s ukázka vstupu, tento program vytvoří následující výstup:  
-  
-```Output  
-Adler-32 sum is fefb0d75  
-```  
-  
-## <a name="robust-programming"></a>Robustní programování  
- Pokud chcete zabránit souběžný přístup do datové členy, doporučujeme, abyste přidali metody, které provádějí práci `protected` nebo `private` část vaší třídy. Přidat pouze metody, které odesílat nebo přijímat zprávy do nebo z agenta tak, aby `public` část vaší třídy.  
-  
+V následujících tématech k dokončení tohoto názorného postupu musíte znát:
 
- Vždy volat [concurrency::agent:: provádí](reference/agent-class.md#done) metody pro přesun agenta do stavu dokončení. Obvykle tuto metodu lze volat před vrácením z `run` metoda.  
+- [Asynchronní agenti](../../parallel/concrt/asynchronous-agents.md)
 
-  
-## <a name="next-steps"></a>Další kroky  
- Dalším příkladem aplikace založené na agentovi, najdete v části [návod: použití metody join k zabránění vzájemnému zablokování](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md)   
- [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)   
- [Funkce usnadnění](../../parallel/concrt/message-passing-functions.md)   
- [Synchronizační datové struktury](../../parallel/concrt/synchronization-data-structures.md)   
- [Návod: Použití metody join k zabránění vzájemnému zablokování](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)
+- [Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)
+
+- [Funkce pro předávání zpráv](../../parallel/concrt/message-passing-functions.md)
+
+- [Synchronizační datové struktury](../../parallel/concrt/synchronization-data-structures.md)
+
+##  <a name="top"></a> Oddíly
+
+Tento návod ukazuje, jak provádět následující úlohy:
+
+- [Vytvoření konzolové aplikace](#createapplication)
+
+- [Vytvoření třídy file_reader](#createagentclass)
+
+- [Používání třídy file_reader v aplikaci](#useagentclass)
+
+##  <a name="createapplication"></a> Vytvoření konzolové aplikace
+
+Tato část ukazuje, jak vytvořit konzolovou aplikaci Visual C++, který odkazuje na soubory hlaviček, které budou používat program.
+
+#### <a name="to-create-a-visual-c-application-by-using-the-win32-console-application-wizard"></a>Vytvoření aplikace Visual C++ pomocí Průvodce konzolovou aplikací Win32
+
+1. Na **souboru** nabídky, klikněte na tlačítko **nový**a potom klikněte na tlačítko **projektu** zobrazíte **nový projekt** dialogové okno.
+
+1. V **nový projekt** dialogovém okně **Visual C++** uzlu **typy projektů** podokně a pak vyberte **Konzolová aplikace Win32** v **šablony** podokně. Zadejte název projektu, například `BasicAgent`a potom klikněte na tlačítko **OK** zobrazíte **Průvodce konzolovou aplikací Win32**.
+
+1. V **Průvodce konzolovou aplikací Win32** dialogové okno, klikněte na tlačítko **Dokončit**.
+
+1. Ve stdafx.h přidejte následující kód.
+
+[!code-cpp[concrt-basic-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_1.h)]
+
+     The header file agents.h contains the functionality of the [concurrency::agent](../../parallel/concrt/reference/agent-class.md) class.
+
+1. Ověřte, že aplikace úspěšně vytvořil sestavováním a spouštěním ho. Jak vytvořit aplikaci, na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**. Je-li aplikace sestavena úspěšně, spusťte aplikaci kliknutím **spustit ladění** na **ladění** nabídky.
+
+[[Horní](#top)]
+
+##  <a name="createagentclass"></a> Vytvoření třídy file_reader
+
+Tato část ukazuje, jak vytvořit `file_reader` třídy. Modul runtime naplánuje každého agenta a provádí práci ve vlastním kontextu. Proto můžete vytvořit agenta, který provádí práci synchronně, ale spolupracuje s ostatními součástmi asynchronně. `file_reader` Třída čte data z daného vstupního souboru a odesílá data z tohoto souboru pro danou cílovou komponenty.
+
+#### <a name="to-create-the-filereader-class"></a>Vytvoření třídy file_reader
+
+1. Přidejte do projektu nový soubor hlaviček jazyka C++. Uděláte to tak, klikněte pravým tlačítkem na **hlavičkové soubory** uzel v **Průzkumníku řešení**, klikněte na tlačítko **přidat**a potom klikněte na tlačítko **nová položka**. V **šablony** vyberte **soubor hlaviček (.h)**. V **přidat novou položku** dialogovém okně `file_reader.h` v **název** pole a potom klikněte na tlačítko **přidat**.
+
+1. V file_reader.h přidejte následující kód.
+
+[!code-cpp[concrt-basic-agent#17](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_2.h)]
+
+1. V file_reader.h, vytvořte třídu s názvem `file_reader` , která je odvozena z `agent`.
+
+[!code-cpp[concrt-basic-agent#2](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_3.h)]
+
+1. Přidejte následující datové členy do `private` část vaší třídy.
+
+[!code-cpp[concrt-basic-agent#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_4.h)]
+
+     The `_file_name` member is the file name that the agent reads from. The `_target` member is a [concurrency::ITarget](../../parallel/concrt/reference/itarget-class.md) object that the agent writes the contents of the file to. The `_error` member holds any error that occurs during the life of the agent.
+
+1. Přidejte následující kód pro `file_reader` konstruktory mají být `public` část `file_reader` třídy.
+
+[!code-cpp[concrt-basic-agent#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_5.h)]
+
+     Each constructor overload sets the `file_reader` data members. The second and third constructor overload enables your application to use a specific scheduler with your agent. The first overload uses the default scheduler with your agent.
+
+1. Přidat `get_error` metodu pro veřejnou část `file_reader` třídy.
+
+[!code-cpp[concrt-basic-agent#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_6.h)]
+
+     The `get_error` method retrieves any error that occurs during the life of the agent.
+
+1. Implementace [concurrency::agent::run](reference/agent-class.md#run) metodu `protected` část vaší třídy.
+
+[!code-cpp[concrt-basic-agent#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_7.h)]
+
+`run` Metoda otevře soubor a čte data z něj. `run` Metoda zachytit všechny chyby, k nimž došlo při zpracování souboru pomocí zpracování výjimek.
+
+   Pokaždé, když tato metoda načte data ze souboru, zavolá [concurrency::asend](reference/concurrency-namespace-functions.md#asend) funkce k odesílání dat do cílové vyrovnávací paměti. Prázdný řetězec odešle do její cílové vyrovnávací paměti pro označení konce zpracování.
+
+Následující příklad ukazuje kompletní obsah file_reader.h.
+
+[!code-cpp[concrt-basic-agent#7](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_8.h)]
+
+[[Horní](#top)]
+
+##  <a name="useagentclass"></a> Používání třídy file_reader v aplikaci
+
+Tato část ukazuje způsob použití `file_reader` třídy k načtení obsahu textového souboru. Také ukazuje, jak vytvořit [concurrency::call](../../parallel/concrt/reference/call-class.md) objekt, který obdrží tato data souborů a vypočítá jeho kontrolní součet Adler-32.
+
+#### <a name="to-use-the-filereader-class-in-your-application"></a>Použití třídy file_reader v aplikaci
+
+1. V souboru BasicAgent.cpp, přidejte následující `#include` příkazu.
+
+[!code-cpp[concrt-basic-agent#8](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_9.cpp)]
+
+1. V souboru BasicAgent.cpp, přidejte následující `using` direktivy.
+
+[!code-cpp[concrt-basic-agent#9](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_10.cpp)]
+
+1. V `_tmain` funkce, vytváření [concurrency::event](../../parallel/concrt/reference/event-class.md) objekt, který označuje konec zpracování.
+
+[!code-cpp[concrt-basic-agent#10](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_11.cpp)]
+
+1. Vytvoření `call` objekt, který aktualizuje kontrolního součtu, když přijme data.
+
+[!code-cpp[concrt-basic-agent#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_12.cpp)]
+
+     This `call` object also sets the `event` object when it receives the empty string to signal the end of processing.
+
+1. Vytvoření `file_reader` objekt, který čte ze souboru test.txt a zapíše obsah tohoto souboru do `call` objektu.
+
+[!code-cpp[concrt-basic-agent#12](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_13.cpp)]
+
+1. Spustit agenta a počkejte na dokončení.
+
+[!code-cpp[concrt-basic-agent#13](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_14.cpp)]
+
+1. Počkejte `call` objektu, který chcete zobrazit všechna data a dokončení.
+
+[!code-cpp[concrt-basic-agent#14](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_15.cpp)]
+
+1. Zkontrolujte soubor čtecí zařízení pro chyby. Pokud nedošlo k žádné chybě, vypočítat součet konečné Adler-32 a Tisk součtu do konzoly.
+
+[!code-cpp[concrt-basic-agent#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_16.cpp)]
+
+Následující příklad ukazuje kompletní soubor BasicAgent.cpp.
+
+[!code-cpp[concrt-basic-agent#16](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_17.cpp)]
+
+[[Horní](#top)]
+
+## <a name="sample-input"></a>Ukázkový vstup
+
+Toto je ukázkový obsah vstupního souboru text.txt:
+
+```Output
+The quick brown fox
+jumps
+over the lazy dog
+```
+
+## <a name="sample-output"></a>Vzorový výstup
+
+Při použití s ukázkový vstup, tento program vytvoří následující výstup:
+
+```Output
+Adler-32 sum is fefb0d75
+```
+
+## <a name="robust-programming"></a>Robustní programování
+
+Aby se zabránilo souběžný přístup k datové členy, doporučujeme přidat metody, které provádějí práci na `protected` nebo `private` část vaší třídy. Pouze přidat metody, které odesílání nebo příjmu zpráv do nebo z agenta tak, aby `public` část vaší třídy.
+
+Vždy volat [concurrency::agent:: provádí](reference/agent-class.md#done) metody pro přesun do dokončeného stavu agenta. Obvykle tuto metodu lze volat před vrácením z `run` metody.
+
+## <a name="next-steps"></a>Další kroky
+
+Další příklad aplikace založené na agentovi, naleznete v tématu [návod: použití metody join k zabránění vzájemnému zablokování](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
+
+## <a name="see-also"></a>Viz také
+
+[Knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md)<br/>
+[Asynchronní bloky zpráv](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
+[Funkce pro předávání zpráv](../../parallel/concrt/message-passing-functions.md)<br/>
+[Synchronizační datové struktury](../../parallel/concrt/synchronization-data-structures.md)<br/>
+[Návod: Použití metody join k zabránění vzájemnému zablokování](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)
 

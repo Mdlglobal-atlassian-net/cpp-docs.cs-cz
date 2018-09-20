@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 54699888fc2988dd9b4ccec2a57b6d9df0d4e79e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 335b22b015bf244e39d67781eae21b3c43328256
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314770"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379785"
 ---
 # <a name="attribute"></a>– atribut
 
@@ -43,13 +43,13 @@ Umožňuje vytvořit vlastní atribut.
 
 ### <a name="parameters"></a>Parametry
 
-*AllowOn*  
+*AllowOn*<br/>
 Určuje prvky jazyka, na které můžete použít vlastní atribut. Výchozí hodnota je `System::AttributeTargets::All` (viz [System::AttributeTargets](https://msdn.microsoft.com/library/system.attributetargets.aspx)).
 
-*AllowMultiple*  
+*AllowMultiple*<br/>
 Určuje, zda vlastní atribut můžete opakovaně použít pro konstrukci. Výchozí hodnota je FALSE.
 
-*Zděděné*  
+*Zděděné*<br/>
 Určuje, zda je atribut má být zděděna podtřídy. Kompilátor neposkytuje žádnou zvláštní podporu pro tuto funkci; úkolem atribut příjemců (`Reflection`, například) dodržovat tyto informace. Pokud *zděděné* má hodnotu TRUE, dědí atribut. Pokud *AllowMultiple* má hodnotu TRUE, atribut budou se hromadit na člena odvozené; Pokud *AllowMultiple* má hodnotu FALSE, atribut se přepsat (nebo nahradit) v dědičnosti. Pokud *zděděné* má hodnotu FALSE, nebude možné zdědit atribut. Výchozí hodnota je TRUE.
 
 ## <a name="remarks"></a>Poznámky

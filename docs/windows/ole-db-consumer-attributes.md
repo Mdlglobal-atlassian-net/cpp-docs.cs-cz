@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aebe1a48e037d2780f9b0c6443cbcba3e158677f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 07b129e2810b7b1310eb8988ca60fbd6e5dcad5a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318015"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391920"
 ---
 # <a name="ole-db-consumer-attributes"></a>Atributy příjemce technologie OLE DB
 Atributy příjemce technologie OLE DB vložit kód, na základě [OLE DB – šablony příjemce](../data/oledb/ole-db-consumer-templates-reference.md), chcete-li vytvořit pracovní technologie OLE DB příjemce, který provádí úlohy, jako je otevření tabulek, provádění příkazů a přístup k datům.
@@ -40,4 +40,5 @@ Atributy příjemce technologie OLE DB vložit kód, na základě [OLE DB – š
 |[db_table](../windows/db-table.md)|Otevře se tabulku OLE DB.|
   
 ## <a name="see-also"></a>Viz také
- [Atributy podle skupin](../windows/attributes-by-group.md)
+
+[Atributy podle skupin](../windows/attributes-by-group.md)

@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 434acbaa23826636a221deb77f1930283e43e9de
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d8a4278d89727f47e85d20809060fc8cef421998
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42465851"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427209"
 ---
 # <a name="porting-guide-com-spy"></a>Průvodce přenosem: COM Spy
+
 Toto téma je druhý v sérii článků, který znázorňuje proces upgradu na nejnovější verzi sady Visual Studio starší projekty Visual C++. Pomocí sady Visual Studio 2005 poslední kompilaci kódu příklad v tomto tématu.  
   
 ## <a name="comspy"></a>COMSpy  
@@ -175,6 +176,6 @@ To běžel bez problémů a s COM Spy zprovozněný a konfiguruje pro monitorov�
   
 ## <a name="see-also"></a>Viz také  
 
-[Přenos a upgrade: Příklady a případové studie](../porting/porting-and-upgrading-examples-and-case-studies.md)   
-[Následující příklad: Spy ++](../porting/porting-guide-spy-increment.md)   
+[Přenos a upgrade: Příklady a případové studie](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[Následující příklad: Spy ++](../porting/porting-guide-spy-increment.md)<br/>
 [Předchozí příklad: MFC Scribble](../porting/porting-guide-mfc-scribble.md)

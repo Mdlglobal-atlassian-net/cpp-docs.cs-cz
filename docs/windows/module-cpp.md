@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac443927c2dcbb00cc01dd3cd63a95441a4a1bf0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ea891ce5ee5c3570577edf7c2122b2cd39b5c64d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711798"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378556"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -52,7 +52,7 @@ Bloku knihovny definuje v souboru IDL.
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*  
+*Typ*<br/>
 (Volitelné) Může být jedna z následujících akcí:
 
 - `dll` Přidá se funkcí a tříd, které umožňují výslednou knihovnu DLL, aby fungoval jako server COM v procesu. Jedná se o výchozí hodnotu.
@@ -63,50 +63,50 @@ Bloku knihovny definuje v souboru IDL.
 
 - `unspecified` Zakáže injektáž kódu ATL související s atributem module: injektáž modulu ATL – třídy, globální instanci _AtlModule a vstupní bod funkce. Injektáž kódu ATL kvůli dalším atributům v projektu není zakázána.
 
-*Jméno*  
+*Jméno*<br/>
 (Volitelné) Název bloku knihovny.
 
-*Verze*  
+*Verze*<br/>
 (Volitelné) Číslo verze, kterou chcete přiřadit k bloku knihovny. Výchozí hodnota je 1.0.
 
-*uuid*  
+*uuid*<br/>
 Jedinečné ID pro knihovnu. Pokud tento parametr vynecháte, ID budou automaticky generovány pro knihovnu. Je nutné načíst *uuid* bloku knihovny, které vám pomůžou s použitím identifikátoru **__uuidof (** *NázevKnihovny* **)**.
 
-*lcid*  
+*lcid*<br/>
 Parametr lokalizace. Zobrazit [lcid](/windows/desktop/Midl/lcid) Další informace.
 
-*control*  
+*control*<br/>
 (Volitelné) Určuje, že jsou všechny třídy typu coclass v knihovně ovládací prvky.
 
-*helpstring*  
+*helpstring*<br/>
 Určuje knihovnu typů.
 
-*helpstringdll*  
+*helpstringdll*<br/>
 (Volitelné) Nastaví název souboru DLL pro použití k provádění vyhledávací řetězec dokumentu. Zobrazit [helpstringdll –](/windows/desktop/Midl/helpstringdll) pro další informace.
 
-*helpfile*  
+*helpfile*<br/>
 (Volitelné) Název **pomáhají** soubor pro knihovnu typů.
 
-*helpcontext*  
+*helpcontext*<br/>
 (Volitelné) **Pomáhají ID** pro tuto knihovnu typů.
 
-*helpstringcontext*  
+*helpstringcontext*<br/>
 (Volitelné) Zobrazit [helpstringcontext –](../windows/helpstringcontext.md) pro další informace.
 
-*hidden*  
+*hidden*<br/>
 (Volitelné) Zabrání zobrazení celou knihovnu. Toto použití je určena pro použití s ovládacími prvky. Hostitele je potřeba vytvořit nové knihovny typů, která obaluje ovládací prvek s rozšířených vlastností. Zobrazit [skryté](/windows/desktop/Midl/hidden) atribut MIDL pro další informace.
 
-*restricted*  
+*restricted*<br/>
 (Volitelné) Členové knihovny nejde volat libovolně. Zobrazit [s omezeným přístupem](/windows/desktop/Midl/restricted) atribut MIDL pro další informace.
 
-*Vlastní*  
+*Vlastní*<br/>
 (Volitelné) Jeden nebo více atributů; podobá se to [vlastní](../windows/custom-cpp.md) atribut. První parametr *vlastní* je identifikátor GUID atributu. Příklad:
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]
 ```
 
-*resource_name*  
+*resource_name*<br/>
 ID zdroje řetězce souboru .rgs použije k registraci knihovny DLL, spustitelný soubor, nebo že služba ID aplikace. Když v modulu je typ služby, tento argument se používá také k získání ID řetězec obsahující název služby.
 
 > [!NOTE]
@@ -188,13 +188,13 @@ Další informace najdete v tématu [kontexty atributů](../windows/attribute-co
 
 ## <a name="see-also"></a>Viz také
 
-[IDL – atributy](../windows/idl-attributes.md)  
-[Atributy třídy](../windows/class-attributes.md)  
-[Samostatné atributy](../windows/stand-alone-attributes.md)  
-[Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[usesgetlasterror](../windows/usesgetlasterror.md)  
-[Knihovna](/windows/desktop/Midl/library)  
-[helpcontext](../windows/helpcontext.md)  
-[helpstring](../windows/helpstring.md)  
-[helpfile](../windows/helpfile.md)  
+[IDL – atributy](../windows/idl-attributes.md)<br/>
+[Atributy třídy](../windows/class-attributes.md)<br/>
+[Samostatné atributy](../windows/stand-alone-attributes.md)<br/>
+[Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[usesgetlasterror](../windows/usesgetlasterror.md)<br/>
+[Knihovna](/windows/desktop/Midl/library)<br/>
+[helpcontext](../windows/helpcontext.md)<br/>
+[helpstring](../windows/helpstring.md)<br/>
+[helpfile](../windows/helpfile.md)<br/>
 [Verze](../windows/version-cpp.md)  

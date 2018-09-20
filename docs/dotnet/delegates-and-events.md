@@ -1,5 +1,5 @@
 ---
-title: Delegáti a události | Microsoft Docs
+title: Delegáti a události | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,118 +20,120 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 69e0ffcb9b9c48de152a383b4b9a3f6edbe99f42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26b67cdce8d52cba7d02f182f0582e20d0303c33
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33108323"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373279"
 ---
 # <a name="delegates-and-events"></a>Delegáti a události
-Způsob deklarace Delegáti a události změnil ze spravovaných rozšíření jazyka C++ na Visual C++.  
-  
- Dvojité podtržítko je již nepotřebujete, jak znázorňuje následující ukázka. Zde je ukázkový kód v spravovaných rozšíření:  
-  
-```  
-__delegate void ClickEventHandler(int, double);  
-__delegate void DblClickEventHandler(String*);  
-  
-__gc class EventSource {  
-   __event ClickEventHandler* OnClick;    
-   __event DblClickEventHandler* OnDblClick;    
-};  
-```  
-  
- Stejný kód v nové syntaxe vypadá takto:  
-  
-```  
-delegate void ClickEventHandler( int, double );  
-delegate void DblClickEventHandler( String^ );  
-  
-ref class EventSource {  
-   event ClickEventHandler^ OnClick;   
-   event DblClickEventHandler^ OnDblClick;   
-};  
-```  
-  
- Události (a delegáti) jsou odkazové typy, což je zrušte v nové syntaxe z důvodu použití hat (`^`).  Události podporují syntaxi explicitní deklarace i triviální formu uvedenou v předchozí kód. Ve formuláři explicitní uživatel zadá `add`, `raise`, a `remove` metody přidružený k události. (Jenom `add` a `remove` metody jsou požadovány; `raise` metoda je volitelný.)  
-  
- V části spravovaných rozšíření Pokud zadáte tyto metody, také nezadáte explicitní deklaraci události, ale musíte se rozhodnout na název pro událost, která není k dispozici. Každá metoda je zadána ve formátu `add_EventName`, `raise_EventName`, a `remove_EventName`, jako v následujícím příkladu převzat ze spravovaných rozšíření specifikace:  
-  
-```  
-// explicit implementations of add, remove, raise  
-public __delegate void f(int);  
-public __gc struct E {  
-   f* _E;  
-public:  
-   E() { _E = 0; }  
-  
-   __event void add_E1(f* d) { _E += d; }  
-  
-   static void Go() {  
-      E* pE = new E;  
-      pE->E1 += new f(pE, &E::handler);  
-      pE->E1(17);   
-      pE->E1 -= new f(pE, &E::handler);  
-      pE->E1(17);   
-   }  
-  
-private:  
-   __event void raise_E1(int i) {  
-      if (_E)  
-         _E(i);  
-   }  
-  
-protected:  
-   __event void remove_E1(f* d) {  
-      _E -= d;  
-   }  
-};  
-```  
-  
- Nové syntaxe zjednodušuje deklaraci, jak ukazuje následující překlad. Událost určuje dva nebo tři metody uzavřené v páru složené závorky a umístit ihned po deklaraci události a související delegáta typu, jak je vidět tady:  
-  
-```  
-public delegate void f( int );  
-public ref struct E {  
-private:  
-   f^ _E; // delegates are also reference types  
-  
-public:  
-   E() {  // note the replacement of 0 with nullptr!  
-      _E = nullptr;   
-   }  
-  
-   // the new aggregate syntax of an explicit event declaration  
-   event f^ E1 {  
-   public:  
-      void add( f^ d ) {  
-         _E += d;  
-      }  
-  
-   protected:  
-      void remove( f^ d ) {  
-         _E -= d;  
-      }  
-  
-   private:  
-      void raise( int i ) {  
-         if ( _E )  
-            _E( i );  
-      }  
-   }  
-  
-   static void Go() {  
-      E^ pE = gcnew E;  
-      pE->E1 += gcnew f( pE, &E::handler );  
-      pE->E1( 17 );   
-      pE->E1 -= gcnew f( pE, &E::handler );  
-      pE->E1( 17 );   
-   }  
-};  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Deklarace členů v rámci třídy nebo rozhraní (C + +/ CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [Delegát (rozšíření komponent C++)](../windows/delegate-cpp-component-extensions.md)   
- [event](../windows/event-cpp-component-extensions.md)
+
+Způsob, jak deklarovat Delegáti a události byl změněn z spravovaných rozšíření jazyka C++ na Visual C++.
+
+Dvojitým podtržítkem je už nepotřebujete, jak je znázorněno v následujícím příkladu. Zde je ukázkový kód v spravovaného rozšíření:
+
+```
+__delegate void ClickEventHandler(int, double);
+__delegate void DblClickEventHandler(String*);
+
+__gc class EventSource {
+   __event ClickEventHandler* OnClick;
+   __event DblClickEventHandler* OnDblClick;
+};
+```
+
+Stejný kód v Nová syntaxe vypadá takto:
+
+```
+delegate void ClickEventHandler( int, double );
+delegate void DblClickEventHandler( String^ );
+
+ref class EventSource {
+   event ClickEventHandler^ OnClick;
+   event DblClickEventHandler^ OnDblClick;
+};
+```
+
+Události (a delegátů) jsou typy odkazů, což je vymazat v nové syntaxi z důvodu použití stříšky (`^`).  Události podporují syntaxi explicitní deklarace a triviální formě uvedené v předchozím kódu. Ve formuláři explicitní uživatel zadá `add`, `raise`, a `remove` metody, které jsou přidružené k události. (Pouze `add` a `remove` metody jsou povinné; `raise` metoda je volitelný.)
+
+V rámci spravovaného rozšíření Pokud zadáte tyto metody, také nezadáte explicitní deklaraci události, ale musíte se rozhodnout na název události, která není k dispozici. Každá metoda je určena ve formě `add_EventName`, `raise_EventName`, a `remove_EventName`, jako v následujícím příkladu na základě specifikace spravovaného rozšíření:
+
+```
+// explicit implementations of add, remove, raise
+public __delegate void f(int);
+public __gc struct E {
+   f* _E;
+public:
+   E() { _E = 0; }
+
+   __event void add_E1(f* d) { _E += d; }
+
+   static void Go() {
+      E* pE = new E;
+      pE->E1 += new f(pE, &E::handler);
+      pE->E1(17);
+      pE->E1 -= new f(pE, &E::handler);
+      pE->E1(17);
+   }
+
+private:
+   __event void raise_E1(int i) {
+      if (_E)
+         _E(i);
+   }
+
+protected:
+   __event void remove_E1(f* d) {
+      _E -= d;
+   }
+};
+```
+
+Nová syntaxe zjednodušuje prohlášení, jak ukazuje následující překlad. Určuje události, dvě nebo tři metody uzavřen ve dvojici závorek a umístěné hned za deklaraci události a jeho přidruženého typu delegáta, jak je znázorněno zde:
+
+```
+public delegate void f( int );
+public ref struct E {
+private:
+   f^ _E; // delegates are also reference types
+
+public:
+   E() {  // note the replacement of 0 with nullptr!
+      _E = nullptr;
+   }
+
+   // the new aggregate syntax of an explicit event declaration
+   event f^ E1 {
+   public:
+      void add( f^ d ) {
+         _E += d;
+      }
+
+   protected:
+      void remove( f^ d ) {
+         _E -= d;
+      }
+
+   private:
+      void raise( int i ) {
+         if ( _E )
+            _E( i );
+      }
+   }
+
+   static void Go() {
+      E^ pE = gcnew E;
+      pE->E1 += gcnew f( pE, &E::handler );
+      pE->E1( 17 );
+      pE->E1 -= gcnew f( pE, &E::handler );
+      pE->E1( 17 );
+   }
+};
+```
+
+## <a name="see-also"></a>Viz také
+
+[Deklarace členů v rámci třídy nebo rozhraní (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)<br/>
+[delegate (rozšíření komponent C++)](../windows/delegate-cpp-component-extensions.md)<br/>
+[event](../windows/event-cpp-component-extensions.md)

@@ -1,5 +1,5 @@
 ---
-title: Zajištění podpory přetažení a přetažení u položek záhlaví | Microsoft Docs
+title: Zajištění podpory přetažení myší u položek záhlaví | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf21021e204a6caf298453bab42db2aedff409c
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: b2eaa5040d34a442868a8fa6cb9f2aae08b0a6f3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928417"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407696"
 ---
 # <a name="providing-drag-and-drop-support-for-header-items"></a>Zajištění podpory přetažení u položek záhlaví
-Kvůli zajištění podpory přetažení a přetažení u položek záhlaví, zadejte hds_dragdrop – styl. Podpory a přetažení u položek záhlaví dává uživateli možnost ke změně pořadí položek záhlaví ovládacího prvku záhlaví. Výchozí chování poskytuje poloprůhledných přetáhněte obrázek položky záhlaví přetažen a vizuální indikátor nové pozice, pokud hlavička položka byla vynechána.  
-  
- Jako s běžné funkce přetahování myší, můžete rozšířit výchozí chování a přetažení zpracování HDN_BEGINDRAG a HDN_ENDDRAG oznámení. Můžete také přizpůsobit vzhled obrázku přetáhněte přepsání [CHeaderCtrl::CreateDragImage](../mfc/reference/cheaderctrl-class.md#createdragimage) – členská funkce.  
-  
+
+K poskytování podpory a přetažení u položek záhlaví, zadejte hds_dragdrop – styl. Podpora a přetažení u položek záhlaví umožňuje uživateli změnit pořadí položek záhlaví ovládacího prvku záhlaví. Výchozí chování poskytuje poloprůhledných přetáhnout obrázek položky záhlaví jsou kvůli usnadnění použití vypsány a vizuální indikátor na nové pozici, pokud hlavička položka byla vynechána.
+
+Jako s běžnými funkcemi přetažení myší, můžete rozšířit výchozí chování a přetahování zpracováním HDN_BEGINDRAG a HDN_ENDDRAG oznámení. Můžete také upravit vzhled obrázku přetáhněte tak, že přepíšete [CHeaderCtrl::CreateDragImage](../mfc/reference/cheaderctrl-class.md#createdragimage) členskou funkci.
+
 > [!NOTE]
->  Pokud pro ovládací prvek embedded záhlaví v ovládacím prvku seznamu jsou zajištění podpory přetažení myší, naleznete v části rozšířený styl [změna stylů ovládacího prvku seznam](../mfc/changing-list-control-styles.md) tématu.  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CHeaderCtrl](../mfc/using-cheaderctrl.md)
+>  Pokud poskytujete podporu drag drop pro ovládací prvek vložený záhlaví v ovládacím prvku seznamu, naleznete v části Extended Style [změna stylů ovládacího prvku seznam](../mfc/changing-list-control-styles.md) tématu.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CHeaderCtrl](../mfc/using-cheaderctrl.md)
 

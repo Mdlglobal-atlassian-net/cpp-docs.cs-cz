@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90367a21d76fe7fe735d1174bc9b9d40900dec78
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 12d4fdd415ab37c9af0b0b34651e7cd2f00cf31b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600827"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405278"
 ---
 # <a name="creatormapfactorycreator-data-member"></a>CreatorMap::factoryCreator – datový člen
 
@@ -35,21 +35,21 @@ HRESULT (*factoryCreator)(
    unsigned int* currentflags,
    const CreatorMap* entry,
    REFIID iidClassFactory,
- IUnknown** factory);
+IUnknown** factory);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*currentflags*  
+*currentflags*<br/>
 Jeden z [runtimeclasstype –](../windows/runtimeclasstype-enumeration.md) enumerátory.
 
-*entry*  
+*entry*<br/>
 Creatormap –.
 
-*iidClassFactory*  
+*iidClassFactory*<br/>
 ID rozhraní objekt pro vytváření tříd.
 
-*objekt pro vytváření*  
+*objekt pro vytváření*<br/>
 Po dokončení operace, adresa objektu pro vytváření tříd.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -68,5 +68,5 @@ Vytvoří objekt pro vytváření pro zadaný creatormap –.
 
 ## <a name="see-also"></a>Viz také
 
-[CreatorMap – struktura](../windows/creatormap-structure.md)  
+[CreatorMap – struktura](../windows/creatormap-structure.md)<br/>
 [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

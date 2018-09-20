@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88f734cbcee303741858c933d1c3729720f0e76f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a5824b1e3ba050cf8c6d9c0f7b56231211f1f59a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710265"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377191"
 ---
 # <a name="safelessthan"></a>SafeLessThan
 
@@ -69,9 +69,9 @@ Další informace o typech šablon `T` a `U`, naleznete v tématu [SafeInt – f
 
 ## <a name="see-also"></a>Viz také
 
-[SafeInt – funkce](../windows/safeint-functions.md)  
-[SafeInt – knihovna](../windows/safeint-library.md)  
-[SafeInt – třída](../windows/safeint-class.md)  
-[SafeLessThanEquals](../windows/safelessthanequals.md)  
-[SafeGreaterThan](../windows/safegreaterthan.md)  
+[SafeInt – funkce](../windows/safeint-functions.md)<br/>
+[SafeInt – knihovna](../windows/safeint-library.md)<br/>
+[SafeInt – třída](../windows/safeint-class.md)<br/>
+[SafeLessThanEquals](../windows/safelessthanequals.md)<br/>
+[SafeGreaterThan](../windows/safegreaterthan.md)<br/>
 [SafeGreaterThanEquals](../windows/safegreaterthanequals.md)

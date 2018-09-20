@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88b83e475ad2452d55b4696bc9b5f1b8bc75a169
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 73e1f975aa0d9a03ffb0025573ec20615825b5b6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606656"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390233"
 ---
 # <a name="comptrrefoperator-interfacetype-operator"></a>ComPtrRef::operator InterfaceType** – operátor
 
@@ -46,5 +46,5 @@ Odstraní aktuální **comptrref –** objekt a vrátí ukazatel na ukazatel roz
 
 ## <a name="see-also"></a>Viz také
 
-[ComPtrRef – třída](../windows/comptrref-class.md)  
+[ComPtrRef – třída](../windows/comptrref-class.md)<br/>
 [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

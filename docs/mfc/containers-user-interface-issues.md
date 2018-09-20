@@ -1,5 +1,5 @@
 ---
-title: 'Kontejnery: Problémy uživatelského rozhraní | Microsoft Docs'
+title: 'Kontejnery: Problémy uživatelského rozhraní | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c683b7f9d021056b88bbddb43e7da085356755d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d0d47a9aa7547e12c77a0fe824f27336c9807d0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341186"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372376"
 ---
 # <a name="containers-user-interface-issues"></a>Kontejnery: Problémy uživatelského rozhraní
-Řadu funkcí, je nutné přidat k uživatelské rozhraní aplikace kontejnerů pro adekvátní správu propojené a vložené položky. Tyto funkce zahrnují změny na strukturu nabídky a k událostem, které aplikace zpracovává. Podrobné informace o nich najdete v následujících článcích:  
-  
-|Informace o|Další informace naleznete v tématu|  
-|------------------------|---------|  
-|Přidání do nabídky pro kontejnery|[Nabídky a prostředky: Kontejnerové doplňky](../mfc/menus-and-resources-container-additions.md)|  
-|Další prostředky pro kontejnery|[Nabídky a prostředky: Kontejnerové doplňky](../mfc/menus-and-resources-container-additions.md)|  
-|Malování propojené nebo vložené položky|[Ukázkový kontejner](../visual-cpp-samples.md)|  
-|Nové dialogových oken pro kontejnery|[Dialogová okna v prostředí OLE](../mfc/dialog-boxes-in-ole.md)|  
-  
-## <a name="see-also"></a>Viz také  
- [Kontejnery](../mfc/containers.md)   
- [Kontejnery: Pokročilé funkce](../mfc/containers-advanced-features.md)   
- [Nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md)
+
+Aplikace typu kontejner uživatelského rozhraní a odpovídajícím způsobem spravovat vložené a propojené položky je třeba přidat celou řadu funkcí. Tyto funkce zahrnují změny struktury nabídky a události, které aplikace zpracovává. Podrobné informace o nich najdete v následujících článcích:
+
+|Informace o|Další informace naleznete v tématu|
+|------------------------|---------|
+|Přidání do nabídky pro kontejnery|[Nabídky a prostředky: Kontejnerové doplňky](../mfc/menus-and-resources-container-additions.md)|
+|Další zdroje informací pro kontejnery|[Nabídky a prostředky: Kontejnerové doplňky](../mfc/menus-and-resources-container-additions.md)|
+|Malování propojené nebo vložené položky|[Ukázkový kontejner](../visual-cpp-samples.md)|
+|Dialogová okna nové pro kontejnery|[Dialogová okna v prostředí OLE](../mfc/dialog-boxes-in-ole.md)|
+
+## <a name="see-also"></a>Viz také
+
+[Kontejnery](../mfc/containers.md)<br/>
+[Kontejnery: Pokročilé funkce](../mfc/containers-advanced-features.md)<br/>
+[Nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md)
 

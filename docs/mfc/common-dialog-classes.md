@@ -1,5 +1,5 @@
 ---
-title: Třídy společných dialogů | Microsoft Docs
+title: Společné třídy dialogových oken | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,33 +21,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cb8a9bacf7414a5a2fff246d796c94a8a1598d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0a937ded9fe356627e36ad0262e749446553aa91
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342212"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379720"
 ---
 # <a name="common-dialog-classes"></a>Společné třídy dialogových oken
-Kromě třída [CDialog](../mfc/reference/cdialog-class.md), MFC poskytuje několik třídy odvozené od třídy `CDialog` zapouzdřují běžně používané dialogových oken, jak je znázorněno v následující tabulce. Dialogová okna zapouzdřené se používá označení "běžné dialogových oken" a jsou součástí Windows běžné dialogové okno knihovny (COMMDLG. KNIHOVNY DLL). Šablony dialogového okna prostředků a kód pro tyto třídy jsou uvedeny v systému Windows běžné dialogových oken, které jsou součástí systému Windows verze 3.1 nebo novější.  
-  
-### <a name="common-dialog-classes"></a>Společné třídy dialogových oken  
-  
-|Třídy odvozené dialogového okna|Účel|  
-|--------------------------|-------------|  
-|[CColorDialog](../mfc/reference/ccolordialog-class.md)|Umožňuje uživatele vyberte barvy.|  
-|[CFileDialog](../mfc/reference/cfiledialog-class.md)|Umožňuje uživateli vybrat filename otevřít nebo uložit.|  
-|[CFindReplaceDialog](../mfc/reference/cfindreplacedialog-class.md)|Umožňuje, aby uživatel zahájit najít nebo nahradit operace v textovém souboru.|  
-|[CFontDialog](../mfc/reference/cfontdialog-class.md)|Umožní uživateli zadat písmo.|  
-|[CPrintDialog](../mfc/reference/cprintdialog-class.md)|Umožní uživateli zadat informace pro tiskové úlohy.|  
-|[CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)|Dialogové okno Tisk systému Windows.|  
-  
- Další informace o společné třídy dialogových oken, najdete v části názvy jednotlivých tříd v *odkaz knihovny MFC*. MFC také poskytuje řadu standardního dialogového okna třídy používané pro OLE. Informace o těchto tříd naleznete v tématu základní třídy, [COleDialog](../mfc/reference/coledialog-class.md)v *odkaz knihovny MFC*.  
-  
- Tří tříd v prostředí MFC mají podobné dialogové okno Vlastnosti. Informace o třídách [CFormView](../mfc/reference/cformview-class.md), [CRecordView](../mfc/reference/crecordview-class.md), a [CDaoRecordView](../mfc/reference/cdaorecordview-class.md), najdete v tématu třídy v *odkaz knihovny MFC*. Informace o třídě [CDialogBar](../mfc/reference/cdialogbar-class.md), najdete v části [dialogové pruhy](../mfc/dialog-bars.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Dialogová okna](../mfc/dialog-boxes.md)   
- [Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)   
- [Dialogová okna v prostředí OLE](../mfc/dialog-boxes-in-ole.md)
+
+Kromě tříd [CDialog](../mfc/reference/cdialog-class.md), knihovna MFC poskytuje několik tříd odvozených z `CDialog` zapouzdřují běžně používané dialogových oknech, jak je znázorněno v následující tabulce. Dialogová okna zapouzdřené se nazývají "běžných dialogových oknech" a jsou součástí Windows běžné dialogového okna knihovny (COMMDLG. KNIHOVNY DLL). V dialogovém okně prostředky a kódu pro tyto třídy jsou k dispozici v Windows společná dialogová okna, které jsou součástí Windows verze 3.1 nebo novější.
+
+### <a name="common-dialog-classes"></a>Společné třídy dialogových oken
+
+|Třídy odvozené dialogového okna|Účel|
+|--------------------------|-------------|
+|[Ccolordialog –](../mfc/reference/ccolordialog-class.md)|Umožňuje výběr barev uživatelské.|
+|[CFileDialog](../mfc/reference/cfiledialog-class.md)|Umožňuje uživateli vybrat název souboru, chcete-li otevřít nebo uložit.|
+|[CFindReplaceDialog.](../mfc/reference/cfindreplacedialog-class.md)|Umožňuje uživatelům Zahájit hledání nebo nahradit operace do textového souboru.|
+|[Cfontdialog –](../mfc/reference/cfontdialog-class.md)|Umožňuje uživatelům určit písmo.|
+|[Cprintdialog –](../mfc/reference/cprintdialog-class.md)|Umožňuje uživatelům zadat informace pro tiskové úlohy.|
+|[CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)|Seznamem vlastností tisku Windows.|
+
+Další informace o společné třídy dialogových oken, zobrazit názvy jednotlivých tříd v *odkaz knihovny MFC*. Knihovna MFC poskytuje také řadu standardního dialogového okna třídy používané pro OLE. Informace o těchto tříd naleznete v tématu základní třídy, [coledialog –](../mfc/reference/coledialog-class.md)v *odkaz knihovny MFC*.
+
+Tři třídy v knihovně MFC mají podobné dialogové okno Vlastnosti. Informace o třídách [CFormView](../mfc/reference/cformview-class.md), [CRecordView](../mfc/reference/crecordview-class.md), a [CDaoRecordView](../mfc/reference/cdaorecordview-class.md), naleznete v tématu třídy v *odkaz knihovny MFC*. Informace o třídě [CDialogBar](../mfc/reference/cdialogbar-class.md), naleznete v tématu [dialogové pruhy](../mfc/dialog-bars.md).
+
+## <a name="see-also"></a>Viz také
+
+[Dialogová okna](../mfc/dialog-boxes.md)<br/>
+[Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[Dialogová okna v prostředí OLE](../mfc/dialog-boxes-in-ole.md)
 

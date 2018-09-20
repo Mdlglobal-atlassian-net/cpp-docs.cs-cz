@@ -1,5 +1,5 @@
 ---
-title: Třída CParabolicTransitionFromAcceleration | Microsoft Docs
+title: Cparabolictransitionfromacceleration – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,113 +26,126 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f54f600e9a98304f1113c6e9e22389f6c974a80
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 3e4db0932b2a2171e47c1b8e6c42a84fa100c9e9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078892"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389353"
 ---
-# <a name="cparabolictransitionfromacceleration-class"></a>CParabolicTransitionFromAcceleration – třída
-Zapouzdří parabolická akcelerace přechod.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CParabolicTransitionFromAcceleration : public CBaseTransition;  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration](#cparabolictransitionfromacceleration)|Vytvoří přechod parabolická akcelerace a inicializuje se zadanými parametry.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CParabolicTransitionFromAcceleration::Create](#create)|Volá knihovně přechod k vytvoření objektu zapouzdřené přechod COM. (Přepisuje [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
-  
-### <a name="public-data-members"></a>Veřejné datové členy  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CParabolicTransitionFromAcceleration::m_dblAcceleration](#m_dblacceleration)|Akcelerace proměnnou animace během přechodu.|  
-|[CParabolicTransitionFromAcceleration::m_dblFinalValue](#m_dblfinalvalue)|Hodnota proměnné animace na konci přechodu.|  
-|[CParabolicTransitionFromAcceleration::m_dblFinalVelocity](#m_dblfinalvelocity)|Rychlost animace proměnné na konci přechodu.|  
-  
-## <a name="remarks"></a>Poznámky  
- Během přechodu parabolická akcelerace hodnota proměnné animace změní z počáteční hodnota konečná hodnota končí zadanou rychlostí. Můžete řídit, jak rychle proměnnou dosáhne konečná hodnota zadáním zrychlení. Protože všechny přechody jsou automaticky vymazány, se doporučuje přidělené je pomocí operátoru nové. Obsah zapouzdřeného objektu IUIAnimationTransition COM vytvoří CAnimationController::AnimateGroup, dokud, pak je NULL. Po vytvoření tohoto objektu COM nemá žádný vliv, změna proměnné členů.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
-  
- [CParabolicTransitionFromAcceleration](../../mfc/reference/cparabolictransitionfromacceleration-class.md)  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxanimationcontroller.h  
-  
-##  <a name="cparabolictransitionfromacceleration"></a>  CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration  
- Vytvoří přechod parabolická akcelerace a inicializuje se zadanými parametry.  
-  
-```  
+# <a name="cparabolictransitionfromacceleration-class"></a>Cparabolictransitionfromacceleration – třída
+
+Zapouzdřuje přechod parabolickým.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CParabolicTransitionFromAcceleration : public CBaseTransition;
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration](#cparabolictransitionfromacceleration)|Parabolickým zrychlením vytvoří a inicializuje se zadanými parametry.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CParabolicTransitionFromAcceleration::Create](#create)|Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá. (Přepíše [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+
+### <a name="public-data-members"></a>Veřejné datové členy
+
+|Název|Popis|
+|----------|-----------------|
+|[CParabolicTransitionFromAcceleration::m_dblAcceleration](#m_dblacceleration)|Akcelerace proměnné animace během přechodu.|
+|[CParabolicTransitionFromAcceleration::m_dblFinalValue](#m_dblfinalvalue)|Hodnota proměnné animace na konci přechodu.|
+|[CParabolicTransitionFromAcceleration::m_dblFinalVelocity](#m_dblfinalvelocity)|Rychlost animace proměnné na konci přechodu.|
+
+## <a name="remarks"></a>Poznámky
+
+Během parabolickým zrychlením hodnoty proměnné animace změní z počáteční hodnotu na konečnou hodnotu končí zadanou rychlostí. Můžete řídit, jak rychle proměnné dosáhne konečnou hodnotu tak, že zadáte zrychlení. Protože všechny přechody jsou automaticky vymazány, doporučuje se je přidělena pomocí operátoru nové. Zapouzdřený objekt IUIAnimationTransition COM je vytvořené CAnimationController::AnimateGroup, dokud je NULL. Změna členské proměnné po vytvoření tohoto objektu COM nemá žádný vliv.
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[Třídy CObject](../../mfc/reference/cobject-class.md)
+
+[Cbasetransition –](../../mfc/reference/cbasetransition-class.md)
+
+[Cparabolictransitionfromacceleration –](../../mfc/reference/cparabolictransitionfromacceleration-class.md)
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxanimationcontroller.h
+
+##  <a name="cparabolictransitionfromacceleration"></a>  CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration
+
+Parabolickým zrychlením vytvoří a inicializuje se zadanými parametry.
+
+```
 CParabolicTransitionFromAcceleration(
-    DOUBLE dblFinalValue,  
-    DOUBLE dblFinalVelocity,  
+    DOUBLE dblFinalValue,
+    DOUBLE dblFinalVelocity,
     DOUBLE dblAcceleration);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *dblFinalValue*  
- Hodnota proměnné animace na konci přechodu.  
-  
- *dblFinalVelocity*  
- Rychlost animace proměnné na konci přechodu.  
-  
- *dblAcceleration*  
- Akcelerace proměnnou animace během přechodu.  
-  
-##  <a name="create"></a>  CParabolicTransitionFromAcceleration::Create  
- Volá knihovně přechod k vytvoření objektu zapouzdřené přechod COM.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*dblFinalValue*<br/>
+Hodnota proměnné animace na konci přechodu.
+
+*dblFinalVelocity*<br/>
+Rychlost animace proměnné na konci přechodu.
+
+*dblAcceleration*<br/>
+Akcelerace proměnné animace během přechodu.
+
+##  <a name="create"></a>  CParabolicTransitionFromAcceleration::Create
+
+Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá.
+
+```
 virtual BOOL Create(
-    IUIAnimationTransitionLibrary* pLibrary,  
+    IUIAnimationTransitionLibrary* pLibrary,
     IUIAnimationTransitionFactory* /* not used */);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pLibrary*  
- Ukazatel na přechod knihovny, která zodpovídá za vytvoření standardní přechodů.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud je přechod vytvořen úspěšně; jinak hodnota FALSE.  
-  
-##  <a name="m_dblacceleration"></a>  CParabolicTransitionFromAcceleration::m_dblAcceleration  
- Akcelerace proměnnou animace během přechodu.  
-  
-```  
-DOUBLE m_dblAcceleration;  
-```  
-  
-##  <a name="m_dblfinalvalue"></a>  CParabolicTransitionFromAcceleration::m_dblFinalValue  
- Hodnota proměnné animace na konci přechodu.  
-  
-```  
-DOUBLE m_dblFinalValue;  
-```  
-  
-##  <a name="m_dblfinalvelocity"></a>  CParabolicTransitionFromAcceleration::m_dblFinalVelocity  
- Rychlost animace proměnné na konci přechodu.  
-  
-```  
-DOUBLE m_dblFinalVelocity;  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Třídy](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*pLibrary*<br/>
+Ukazatel na přechod knihovny, který je zodpovědný za vytváření standardní přechodů.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Hodnota TRUE, pokud úspěšně; vytvoření přechodu v opačném případě FALSE.
+
+##  <a name="m_dblacceleration"></a>  CParabolicTransitionFromAcceleration::m_dblAcceleration
+
+Akcelerace proměnné animace během přechodu.
+
+```
+DOUBLE m_dblAcceleration;
+```
+
+##  <a name="m_dblfinalvalue"></a>  CParabolicTransitionFromAcceleration::m_dblFinalValue
+
+Hodnota proměnné animace na konci přechodu.
+
+```
+DOUBLE m_dblFinalValue;
+```
+
+##  <a name="m_dblfinalvelocity"></a>  CParabolicTransitionFromAcceleration::m_dblFinalVelocity
+
+Rychlost animace proměnné na konci přechodu.
+
+```
+DOUBLE m_dblFinalVelocity;
+```
+
+## <a name="see-also"></a>Viz také
+
+[Třídy](../../mfc/reference/mfc-classes.md)

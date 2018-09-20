@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32970c9d30e1804071190ee5a57c42fd4b6334af
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: c3964ce5257a6b2398571c9ed3ba5792b5bd9cca
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677248"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384478"
 ---
 # <a name="iidppvargshelper-function"></a>IID_PPV_ARGS_Helper – funkce
 
@@ -42,10 +42,10 @@ void** IID_PPV_ARGS_Helper(
 
 ### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ argumentu *pp*.
 
-*str*  
+*str*<br/>
 Dvakrát nepřímé ukazatel.
 
 ## <a name="return-value"></a>Návratová hodnota

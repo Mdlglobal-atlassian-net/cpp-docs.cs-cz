@@ -1,5 +1,5 @@
 ---
-title: 'Přetažení: implementace cíle přetažení | Microsoft Docs'
+title: 'Přetažení: implementace cíle přetažení | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33088477c579cbdfe48140b806c6376b520e470c
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: fae6a5ef0e25b0e81b21dce9069c599e59e1c431
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928915"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377745"
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>Přetažení: Implementace cíle přetažení
-Tento článek popisuje jak provádět cíle přetažení vaší aplikace. Implementace cíle přetažení trvá mírně další práci než implementace zdroje přetažení, ale je stále poměrně jednoduché. Tyto postupy se rovněž vztahují na aplikacích jiných než OLE.  
-  
-#### <a name="to-implement-a-drop-target"></a>Implementace cíle přetažení  
-  
-1.  Přidání členské proměnné do jednotlivých zobrazení v aplikaci, která mají být cíle přetažení. Tato proměnná člena musí být typu `COleDropTarget` nebo z něj odvozenou třídu.  
-  
-2.  Ze třídy zobrazení funkce, která zpracovává **WM_CREATE** zprávy (obvykle `OnCreate`), volání nové členské proměnné `Register` – členská funkce. `Revoke` bude volána automaticky za vás při zobrazení zničena.  
-  
-3.  Přepište následující funkce. Pokud chcete stejné chování v celé vaší aplikaci, přepište tyto funkce ve třídě zobrazení. Pokud chcete změnit chování v izolované případech nebo chcete povolit vyřazení na jinou hodnotu než`CView` přepsat tyto funkce v systému windows, vaše `COleDropTarget`-odvozené třídy.  
-  
-    |Přepsání|Chcete-li povolit|  
-    |--------------|--------------|  
-    |`OnDragEnter`|Vyřaďte operací v okně. Voláno, pokud nejprve do okna pole kurzor.|  
-    |`OnDragLeave`|Zvláštní chování při operaci přetažení opustí vybrané okno.|  
-    |`OnDragOver`|Vyřaďte operací v okně. Voláno, když ukazatel je přetažen napříč okna.|  
-    |`OnDrop`|Zpracování dat probíhá vyřazování na vybrané okno.|  
-    |`OnScrollBy`|Zvláštní chování při posouvání je nutné v okně cíl.|  
-  
- Najdete v článku MAINVIEW. CPP souboru, který je součástí ukázkové MFC OLE [OCLIENT](../visual-cpp-samples.md) příklad, jak tyto funkce fungují společně.  
-  
- Další informace naleznete v tématu:  
-  
--   [Implementace zdroje přemístění](../mfc/drag-and-drop-implementing-a-drop-source.md)  
-  
--   [Vytváření a zničení OLE datové objekty a zdroje dat](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
-  
--   [Manipulace s OLE datové objekty a zdroje dat](../mfc/data-objects-and-data-sources-manipulation.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Přetažení (OLE)](../mfc/drag-and-drop-ole.md)   
- [COleDropTarget – třída](../mfc/reference/coledroptarget-class.md)
+
+Tento článek popisuje, jak se vaše aplikace cíl přetažení. Implementace cíle přetažení trvá o něco více práce než implementace zdroje přemístění, ale je poměrně snadné. Tyto postupy platí také pro aplikacích jiných než OLE.
+
+#### <a name="to-implement-a-drop-target"></a>Implementace cíle přetažení
+
+1. Přidání členské proměnné do jednotlivých zobrazení v aplikaci, která mají být cíl přetažení. Tato členská proměnná musí být typu `COleDropTarget` nebo z něj odvozenou třídu.
+
+1. Z funkce Zobrazit třídu, která zpracovává **WM_CREATE** zprávy (obvykle `OnCreate`), volání nové členské proměnné `Register` členskou funkci. `Revoke` zavolá se automaticky za vás při zničení zobrazení.
+
+1. Přepište následující funkce. Pokud má stejné chování v rámci aplikace přepište tyto funkce ve třídě zobrazení. Pokud chcete změnit chování v ojedinělých případech nebo chcete povolit vyřazení na jinou hodnotu než`CView` přepsat tyto funkce v systému windows, vaše `COleDropTarget`-odvozené třídy.
+
+    |přepsání|Chcete-li povolit|
+    |--------------|--------------|
+    |`OnDragEnter`|Operace vyskytuje v okně vyřaďte. Volá se, když ukazatel poprvé vstoupí do okna.|
+    |`OnDragLeave`|Zvláštní chování při operaci přetažení opustí určené okno.|
+    |`OnDragOver`|Operace vyskytuje v okně vyřaďte. Volá se, když se ocitne kurzoru v okně.|
+    |`OnDrop`|Zpracování dat probíhá vyřazování do určené okno.|
+    |`OnScrollBy`|Zvláštní chování při posouvání je nezbytné v okně cíl.|
+
+Podívejte se MAINVIEW. CPP souboru, který je součástí ukázky MFC OLE [OCLIENT](../visual-cpp-samples.md) pro příklad, jak tyto funkce fungují společně.
+
+Další informace naleznete v tématu:
+
+- [Implementace zdroje přemístění](../mfc/drag-and-drop-implementing-a-drop-source.md)
+
+- [Vytváření a ničení OLE datové objekty a zdroje dat](../mfc/data-objects-and-data-sources-creation-and-destruction.md)
+
+- [Manipulace s OLE datové objekty a zdroje dat](../mfc/data-objects-and-data-sources-manipulation.md)
+
+## <a name="see-also"></a>Viz také
+
+[Přetažení (OLE)](../mfc/drag-and-drop-ole.md)<br/>
+[COleDropTarget – třída](../mfc/reference/coledroptarget-class.md)

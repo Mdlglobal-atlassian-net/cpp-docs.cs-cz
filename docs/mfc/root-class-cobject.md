@@ -1,5 +1,5 @@
 ---
-title: 'Kořenová třída: CObject | Microsoft Docs'
+title: 'Kořenová třída: CObject | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2398f1e775dfa8b9331a4abc0137207c85531aff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0804397888d64ac5b6cab9a60f9912b27358bc43
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385067"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373318"
 ---
 # <a name="root-class-cobject"></a>Kořenová třída: CObject
-Většina tříd v knihovně Microsoft Foundation Class (MFC) jsou odvozeny od jedné základní třídu v kořenovém adresáři hierarchie tříd. `CObject` poskytuje několik užitečné funkcí pro všechny třídy odvozené z něj, s velmi nízké režijní náklady. Další informace o `CObject` a jeho funkce, najdete v části [pomocí CObject](../mfc/using-cobject.md).  
-  
- [CObject](../mfc/reference/cobject-class.md)  
- Ultimate základní třída Většina tříd MFC. Podporuje serializaci dat a získání běhu informace o třídě.  
-  
- [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)  
- Struktura používaná k určení přesný třídy objektu v době běhu.  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled třídy](../mfc/class-library-overview.md)
+
+Většina tříd v knihovny Microsoft Foundation Class (MFC) jsou odvozeny z jediné základní třídy v kořenovém adresáři hierarchie tříd. `CObject` poskytuje několik užitečných funkcí pro všechny třídy odvozené z něj, s velmi nízkou režií. Další informace o `CObject` a možnosti, najdete v článku [použití objektů CObject](../mfc/using-cobject.md).
+
+[Třídy CObject](../mfc/reference/cobject-class.md)<br/>
+Ultimate základní třída Většina tříd knihovny MFC. Podporuje serializaci dat a získání běhových informací o třídu.
+
+[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)<br/>
+Struktura používá k určení přesně třídu objektu v době běhu.
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../mfc/class-library-overview.md)
 

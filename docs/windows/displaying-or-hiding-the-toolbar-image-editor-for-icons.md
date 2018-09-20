@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 360884c27e834f31badce0b02119203ee7877e4e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: d11fdea6e85bf542a00b497b311494ba6133e1d3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318925"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376587"
 ---
 # <a name="displaying-or-hiding-the-toolbar-c-image-editor-for-icons"></a>Zobrazení nebo skrytí panelu nástrojů (C++ Editor obrázků pro ikony)
 
@@ -43,6 +43,6 @@ Informace o přidávání prostředků do spravovaných projektů, najdete v té
 
 ## <a name="see-also"></a>Viz také
 
-[Okno barvy](../windows/colors-window-image-editor-for-icons.md)  
-[Panel nástrojů](../windows/toolbar-image-editor-for-icons.md)  
+[Okno barvy](../windows/colors-window-image-editor-for-icons.md)<br/>
+[Panel nástrojů](../windows/toolbar-image-editor-for-icons.md)<br/>
 [Editor obrázků pro ikony](../windows/image-editor-for-icons.md)

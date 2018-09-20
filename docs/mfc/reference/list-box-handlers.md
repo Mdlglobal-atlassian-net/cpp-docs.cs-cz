@@ -1,5 +1,5 @@
 ---
-title: Obslužné rutiny seznamu | Microsoft Docs
+title: Obslužné rutiny seznamu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,24 +25,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1725521fd710f70f36feb321d9bd019eeebb8116
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87edc4691c01da199540cb2dcb96c8ce2d34cb9b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369652"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383032"
 ---
 # <a name="list-box-handlers"></a>Obslužné rutiny seznamu
-Následující položky mapy nemají odpovídající funkce prototypu.  
-  
-|Položku mapování|Prototyp funkce|  
-|---------------|------------------------|  
-|ON_LBN_DBLCLK ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|  
-|ON_LBN_ERRSPACE ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|  
-|ON_LBN_KILLFOCUS ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|  
-|ON_LBN_SELCHANGE ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|  
-|ON_LBN_SETFOCUS ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|  
-  
-## <a name="see-also"></a>Viz také  
- [Mapy zpráv](../../mfc/reference/message-maps-mfc.md)
+
+Následující položky mapy nemají odpovídající prototypu funkce.
+
+|Položka mapování|Prototyp funkce|
+|---------------|------------------------|
+|ON_LBN_DBLCLK ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|
+|ON_LBN_ERRSPACE ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|
+|ON_LBN_KILLFOCUS ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|
+|ON_LBN_SELCHANGE ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|
+|ON_LBN_SETFOCUS ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|
+
+## <a name="see-also"></a>Viz také
+
+[Mapy zpráv](../../mfc/reference/message-maps-mfc.md)
 

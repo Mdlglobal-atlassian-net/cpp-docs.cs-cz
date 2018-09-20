@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2745ed1a17311f92fda6fc61743fed65882b952
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b7633c1fb695e99e7d653d2afd26014c2ffe9004
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601105"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381904"
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
 
@@ -54,16 +54,16 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 
 ### <a name="parameters"></a>Parametry
 
-*cv_qualifier*  
+*cv_qualifier*<br/>
 **Const** nebo **volatile** kvalifikátory.
 
-*Typ*  
+*Typ*<br/>
 Typ *inicializátor*.
 
-*var*  
+*var*<br/>
 Název **interior_ptr** proměnné.
 
-*Inicializátor*  
+*Inicializátor*<br/>
 Člen typu odkazu, element spravovaného pole nebo jakýkoli jiný objekt, který můžete přiřadit na nativní ukazatel.
 
 ### <a name="remarks"></a>Poznámky

@@ -18,82 +18,88 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2b7abb9cbc3f75c2b4f50f87a1bfdd818e6a3f8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7df892a3d3f038655f37b78fa88babb09d50df2d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707340"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373462"
 ---
 # <a name="csplitterwndex-class"></a>Třída CSplitterWndEx
 
 
 
-Představuje vlastní dělící okno.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CSplitterWndEx : public CSplitterWnd  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|`CSplitterWndEx::CSplitterWndEx`|Výchozí konstruktor.|  
-|`CSplitterWndEx::~CSplitterWndEx`|Destruktor.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Volá se rozhraním, chcete-li nakreslit okno s rozdělovačem. (Přepíše [CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|  
-  
-## <a name="remarks"></a>Poznámky  
- Přepsat `OnDrawSplitter` metodu za účelem přizpůsobení vzhledu součásti grafické okno s rozdělovačem.  
-  
- `CSplitterWndEx` Třída se používá spolu s [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox), a [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) metody, které jsou Správce vzhledu implementované. Způsobí vizuálního správce, chcete-li nakreslit rozděleného okna ve vaší aplikaci nahradit deklarace `CSplitterWnd` třídy s `CSplitterWndEx` třídy. Pro rámec okna aplikace rozdělovač okna třídy deklarované v CMainFrame – třída, která se nachází v mainfrm.h. Příklad najdete v tématu `OutlookDemo` ukázku v adresáři ukázky.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [Třídy CObject](cobject-class.md)  
-  
- [CCmdTarget](ccmdtarget-class.md)  
-  
- [CWnd](cwnd-class.md)  
-  
- [CSplitterWnd.](csplitterwnd-class.md)  
-   
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxsplitterwndex.h  
-  
-##  <a name="ondrawsplitter"></a>  CSplitterWndEx::OnDrawSplitter  
- Volá se rozhraním, chcete-li nakreslit okno s rozdělovačem.  
-  
-```  
-virtual void OnDrawSplitter(  
-   CDC* pDC,  
-   ESplitType nType,  
-   const CRect& rect   
-);  
-```  
-  
-### <a name="parameters"></a>Parametry  
+Představuje vlastní dělící okno.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CSplitterWndEx : public CSplitterWnd
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|`CSplitterWndEx::CSplitterWndEx`|Výchozí konstruktor.|
+|`CSplitterWndEx::~CSplitterWndEx`|Destruktor.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Volá se rozhraním, chcete-li nakreslit okno s rozdělovačem. (Přepíše [CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|
+
+## <a name="remarks"></a>Poznámky
+
+Přepsat `OnDrawSplitter` metodu za účelem přizpůsobení vzhledu součásti grafické okno s rozdělovačem.
+
+`CSplitterWndEx` Třída se používá spolu s [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox), a [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) metody, které jsou Správce vzhledu implementované. Způsobí vizuálního správce, chcete-li nakreslit rozděleného okna ve vaší aplikaci nahradit deklarace `CSplitterWnd` třídy s `CSplitterWndEx` třídy. Pro rámec okna aplikace rozdělovač okna třídy deklarované v CMainFrame – třída, která se nachází v mainfrm.h. Příklad najdete v tématu `OutlookDemo` ukázku v adresáři ukázky.
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[Třídy CObject](cobject-class.md)
+
+[CCmdTarget](ccmdtarget-class.md)
+
+[CWnd](cwnd-class.md)
+
+[CSplitterWnd.](csplitterwnd-class.md)
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxsplitterwndex.h
+
+##  <a name="ondrawsplitter"></a>  CSplitterWndEx::OnDrawSplitter
+
+Volá se rozhraním, chcete-li nakreslit okno s rozdělovačem.
+
+```
+virtual void OnDrawSplitter(
+   CDC* pDC,
+   ESplitType nType,
+   const CRect& rect
+);
+```
+
+### <a name="parameters"></a>Parametry
+
 *primární řadič domény*<br/>
-[in] Ukazatel na kontext zařízení. Pokud má parametr hodnotu NULL, rozhraní překreslí aktivní okno.  
-  
+[in] Ukazatel na kontext zařízení. Pokud má parametr hodnotu NULL, rozhraní překreslí aktivní okno.
+
 *nTyp*<br/>
-[in] Jeden z `CSplitterWnd::ESplitType` hodnot výčtu, která určuje prvku rozdělovač okna pro kreslení. Platné hodnoty jsou `splitBox`, `splitBar`, `splitIntersection`, a `splitBorder`.  
-  
+[in] Jeden z `CSplitterWnd::ESplitType` hodnot výčtu, která určuje prvku rozdělovač okna pro kreslení. Platné hodnoty jsou `splitBox`, `splitBar`, `splitIntersection`, a `splitBorder`.
+
 *Rect*<br/>
-[in] Ohraničující obdélník, který určuje rozměry a umístění pro vykreslení elementu zadané rozdělovací okna.  
-  
-### <a name="remarks"></a>Poznámky  
-  
-## <a name="see-also"></a>Viz také  
- [Graf hierarchie](../hierarchy-chart.md)   
- [Třídy](mfc-classes.md)   
- [CSplitterWnd – třída](csplitterwnd-class.md)   
- [CMFCVisualManager – třída](cmfcvisualmanager-class.md)
+[in] Ohraničující obdélník, který určuje rozměry a umístění pro vykreslení elementu zadané rozdělovací okna.
+
+### <a name="remarks"></a>Poznámky
+
+## <a name="see-also"></a>Viz také
+
+[Graf hierarchie](../hierarchy-chart.md)<br/>
+[Třídy](mfc-classes.md)<br/>
+[CSplitterWnd – třída](csplitterwnd-class.md)<br/>
+[CMFCVisualManager – třída](cmfcvisualmanager-class.md)

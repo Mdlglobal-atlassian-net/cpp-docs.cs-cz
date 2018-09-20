@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49024e903237160cc26a9c095cf9f313b43ccb6f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 12032318f898b2986b64d5cd8a1e611a31d1fc8c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600762"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372389"
 ---
 # <a name="raiseexception-function"></a>RaiseException – funkce
 
@@ -38,10 +38,10 @@ inline void __declspec(noreturn)   RaiseException(
 
 ### <a name="parameters"></a>Parametry
 
-*hr*  
+*hr*<br/>
 Kód výjimky výjimek vyvolaných; To znamená, HRESULT neúspěšnou operaci.
 
-*dwExceptionFlags*  
+*dwExceptionFlags*<br/>
 Příznak, který označuje výjimce (hodnota příznaku je nula), nebo noncontinuable výjimky (hodnota příznaku je nenulová). Výjimkou je ve výchozím nastavení, co vznikla nevykonatelná.
 
 ## <a name="remarks"></a>Poznámky

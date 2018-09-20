@@ -1,5 +1,5 @@
 ---
-title: Zobrazí třídy (Architektura) | Microsoft Docs
+title: Zobrazení tříd (Architektura) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,62 +19,66 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11bb3d9e551089a156d255f7b27fb55cbe87bdbe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 12987a7563b685018de64201d60d0447d3a5d4cc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383744"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393813"
 ---
 # <a name="view-classes-architecture"></a>Třídy zobrazení (architektura)
-`CView` a jejich odvozené třídy jsou podřízená okna, které představují klientské oblasti okně s rámečkem. Zobrazení zobrazit data a přijímat vstup pro dokument.  
-  
- Třídy zobrazení je přidružen dokumentové třídy a třídy oken s rámečkem pomocí objektu šablony dokumentu.  
-  
- [CView](../mfc/reference/cview-class.md)  
- Základní třída pro konkrétní aplikace zobrazení dat dokumentu. Zobrazení zobrazovat data a přijímají vstup uživatele, které chcete upravit, nebo vyberte data. Odvození třídy vaše zobrazení z `CView`.  
-  
- [CScrollView](../mfc/reference/cscrollview-class.md)  
- Základní třída pro zobrazení s možností posouvání. Odvození třídě zobrazení z `CScrollView` pro automatické posouvání.  
-  
-## <a name="form-and-record-views"></a>Formulář a zobrazení záznamů  
- Zobrazení formulářů jsou také posouvání zobrazení. Jsou založené na pole šablony dialogového okna.  
-  
- Zobrazení záznamů jsou odvozeny od zobrazení formulářů. Kromě pole šablony dialogového okna mají taky připojení k databázi.  
-  
- [Třídy CFormView](../mfc/reference/cformview-class.md)  
- Posuňte zobrazení, jejichž rozložení je definována v poli šablony dialogového okna. Odvození třídy z `CFormView` implementovat uživatelské rozhraní založené na pole šablony dialogového okna.  
-  
- [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)  
- Nabízí způsob zobrazení přímo připojený k objektu sady záznamů objekt DAO (Data Access). Jako všechna zobrazení formuláře `CDaoRecordView` je založená na šabloně dialogové okno pole.  
-  
- [CHtmlView](../mfc/reference/chtmlview-class.md)  
- Podporuje ovládací prvek pro procházení webu v rámci aplikace. Ovládací prvek podporuje dynamické HTML v prostředí MFC.  
-  
- [COLEDBRecordView](../mfc/reference/coledbrecordview-class.md)  
- Poskytuje podporu MFC OLE DB pro zobrazení formulářů.  
-  
- [CRecordView](../mfc/reference/crecordview-class.md)  
- Nabízí způsob zobrazení přímo připojený k objektu sady záznamů připojení ODBC (Open Database). Jako všechna zobrazení formuláře `CRecordView` je založená na šabloně dialogové okno pole.  
-  
-## <a name="control-views"></a>Zobrazení ovládacích prvků  
- Zobrazení ovládacích prvků zobrazení ovládacího prvku jako jejich zobrazení.  
-  
- [CCtrlView](../mfc/reference/cctrlview-class.md)  
- Základní třída pro všechna zobrazení související s ovládacími prvky systému Windows. Zobrazení založená na ovládací prvky jsou popsané níže.  
-  
- [CEditView](../mfc/reference/ceditview-class.md)  
- Zobrazení, který obsahuje standardní Windows ovládacích prvků pro úpravy (viz [CEdit](../mfc/reference/cedit-class.md)). Upravte úpravy textu podporu ovládací prvky, hledání, nahraďte a posouvání možnosti.  
-  
- [Cricheditview –](../mfc/reference/cricheditview-class.md)  
- Zobrazení, který obsahuje bohatou Windows ovládacích prvků pro úpravy (viz [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Kromě možností ovládacích prvků pro úpravy upravte bohaté ovládací prvky písma, barvy, formátování odstavce a vložené objekty OLE.  
-  
- [CListView](../mfc/reference/clistview-class.md)  
- Zobrazení, který obsahuje seznam ovládacího prvku Windows (viz [CListCtrl](../mfc/reference/clistctrl-class.md)). Ovládací prvek seznamu zobrazí ikony a řetězce v pravém podokně podobným způsobem v Průzkumníku souborů.  
-  
- [CTreeView](../mfc/reference/ctreeview-class.md)  
- Zobrazení, které obsahuje ovládacím prvkem strom systému Windows (viz [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Ovládací prvek stromu zobrazí ikony a řetězce, které jsou uspořádány do hierarchie v levém podokně podobným způsobem v Průzkumníku souborů.  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled třídy](../mfc/class-library-overview.md)
+
+`CView` a odvozené třídy jsou podřízených oken, které představují klientské oblasti okna rámce. Zobrazení zobrazit data a přijímat vstup pro dokument.
+
+Zobrazit třídu souvisí s dokumentové třídy a použití objektu šablony dokumentu třídy oken s rámečkem.
+
+[CView](../mfc/reference/cview-class.md)<br/>
+Základní třída pro zobrazení specifické pro aplikace z dat dokumentu. Zobrazení zobrazovat data a přijímat uživatelský vstup pro úpravy nebo vyberte data. Odvození třídy, které vaše zobrazení z `CView`.
+
+[Cscrollview –](../mfc/reference/cscrollview-class.md)<br/>
+Základní třída pro zobrazení s možností posouvání. Odvodit třídu vaše zobrazení z `CScrollView` pro automatické posouvání.
+
+## <a name="form-and-record-views"></a>Formuláře a zobrazení záznamů
+
+Zobrazení formuláře jsou také posouvání zobrazení. Jsou založeny na šablony dialogového okna.
+
+Zobrazení záznamů jsou odvozeny z zobrazení formuláře. Kromě šablony dialogového okna mají taky připojení k databázi.
+
+[CFormView](../mfc/reference/cformview-class.md)<br/>
+Posunout zobrazení, jejichž rozložení je definován v šabloně dialogu pole. Odvodit třídu z `CFormView` k implementaci uživatelského rozhraní založené na šablony dialogového okna.
+
+[CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
+Formulář obsahuje zobrazení přímo připojen k objektu sady záznamů objekt DAO (Data Access). Všechna zobrazení formulářů, jako jsou `CDaoRecordView` je založen na šabloně dialogu pole.
+
+[CHtmlView –](../mfc/reference/chtmlview-class.md)<br/>
+Podporuje ovládací prvek pro procházení webu v rámci aplikace. Ovládací prvek podporuje dynamické HTML v MFC.
+
+[COleDBRecordView –](../mfc/reference/coledbrecordview-class.md)<br/>
+Poskytuje podporu knihovny MFC OLE DB pro zobrazení formuláře.
+
+[CRecordView](../mfc/reference/crecordview-class.md)<br/>
+Formulář obsahuje zobrazení přímo připojen k objektu sady záznamů připojení ODBC (Open Database). Všechna zobrazení formulářů, jako jsou `CRecordView` je založen na šabloně dialogu pole.
+
+## <a name="control-views"></a>Zobrazení ovládacích prvků
+
+Ovládací prvek zobrazení ovládacího prvku jako jejich zobrazení.
+
+[Cctrlview –](../mfc/reference/cctrlview-class.md)<br/>
+Základní třída pro všechna zobrazení související s ovládacími prvky Windows. Zobrazení založená na ovládací prvky jsou popsané níže.
+
+[CEditView](../mfc/reference/ceditview-class.md)<br/>
+Zobrazení, která obsahuje standardní Windows ovládacích prvků pro úpravy (viz [CEdit](../mfc/reference/cedit-class.md)). Upravte úpravy textu podpora ovládacích prvků, vyhledávání, nahrazení a možností posouvání.
+
+[Cricheditview –](../mfc/reference/cricheditview-class.md)<br/>
+Zobrazení, které obsahuje Windows bohatých ovládacích prvků pro úpravy (viz [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Kromě funkcí textové pole pro úpravy s formátováním ovládací prvky písma, barvy, formátování odstavce a vložené objekty OLE.
+
+[CListView](../mfc/reference/clistview-class.md)<br/>
+Zobrazení, která obsahuje ovládací prvek seznamu Windows (viz [CListCtrl](../mfc/reference/clistctrl-class.md)). Ovládací prvek seznamu zobrazuje ikony a řetězce do pravého podokna podobným způsobem v Průzkumníku souborů.
+
+[CTreeView](../mfc/reference/ctreeview-class.md)<br/>
+Zobrazení, která obsahuje ovládací prvek stromu Windows (viz [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Ovládací prvek stromu se zobrazí ikony a řetězce, které jsou uspořádány do hierarchie do levého podokna podobným způsobem v Průzkumníku souborů.
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../mfc/class-library-overview.md)
 

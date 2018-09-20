@@ -1,5 +1,5 @@
 ---
-title: 2.5.1 parallel for – konstrukce | Microsoft Docs
+title: 2.5.1 parallel for – konstrukce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef2732c4f8713466d282346ea240bd3c41886ce0
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cfff3b0c17dd098b5d802af61a7ca1f81cb02845
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687150"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373958"
 ---
 # <a name="251-parallel-for-construct"></a>2.5.1 parallel for – konstrukce
-**Paralelní pro** – direktiva je zkratkou pro **paralelní** oblast, která obsahuje pouze jedinou **pro** – direktiva. Syntaxe **paralelní pro** – Direktiva vypadá takto:  
-  
-```  
-#pragma omp parallel for [clause[[,] clause] ...] new-linefor-loop  
-```  
-  
- Tato direktiva umožňuje všechny klauzulích **paralelní** – direktiva a **pro** direktivy, s výjimkou `nowait` klauzule identické významy a omezení. Sémantika jsou shodné s explicitním zadáním **paralelní** – direktiva bezprostředně následované **pro** – direktiva.  
-  
-## <a name="cross-references"></a>Křížové odkazy:  
-  
--   **paralelní** direktivy, viz [části 2.3](../../parallel/openmp/2-3-parallel-construct.md) na stránce 8.  
-  
--   **pro** direktivy, viz [části 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) na stránce 11.  
-  
--   Klauzule atributů pro data, najdete v části [2.7.2 klauzule atributů pro sdílení dat](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) na stránce 25.
+
+**Paralelní pro** – direktiva je zkratka pro **paralelní** oblast, která obsahuje pouze jeden **pro** směrnice. Syntaxe **paralelní pro** direktivy je následující:
+
+```
+#pragma omp parallel for [clause[[,] clause] ...] new-linefor-loop
+```
+
+Tato direktiva umožňuje všechny klauzule z **paralelní** směrnice a **pro** direktiv, s výjimkou `nowait` klauzule identické význam a omezení. Sémantika je shodné s explicitním zadáním **paralelní** směrnice okamžitě následovat **pro** – direktiva.
+
+## <a name="cross-references"></a>Křížové odkazy:
+
+- **paralelní** direktiv, viz [části 2.3](../../parallel/openmp/2-3-parallel-construct.md) na stránce 8.
+
+- **pro** direktiv, viz [části 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) na stránce 11.
+
+- Klauzule atributů pro data, najdete v článku [2.7.2 klauzule atributů pro sdílení dat](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) na stránce 25.

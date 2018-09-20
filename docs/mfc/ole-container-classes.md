@@ -1,5 +1,5 @@
 ---
-title: OLE – třídy kontejnerů | Microsoft Docs
+title: OLE – třídy kontejnerů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,42 +21,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f8214b2f40926cc4ab1471dce99ce5215362011
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: e17161340881bb53601bc04dce6f5e375f746b02
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930487"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404706"
 ---
 # <a name="ole-container-classes"></a>OLE – třídy kontejnerů
-Tyto třídy jsou používány – aplikace typu kontejner. Obě `COleLinkingDoc` a `COleDocument` spravovat kolekce `COleClientItem` objekty. Místo odvozování třídě dokumentu z `CDocument`, budete odvozena z `COleLinkingDoc` nebo `COleDocument`, v závislosti na tom, jestli mají podporu odkazy na objekty vložené v dokumentu.  
-  
- Použití `COleClientItem` objekt představující jednotlivé položky OLE odeslání dokumentu, který je vložený z jiného dokumentu nebo odkaz na další dokument.  
-  
- [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)  
- Podporuje obsahování pro aktivní dokument.  
-  
- [COleDocument](../mfc/reference/coledocument-class.md)  
- Použít pro implementaci složeného dokumentu, jakož i podpora základní kontejnerů. Slouží jako kontejner pro třídy odvozené od `CDocItem`. Tato třída slouží jako základní třída pro kontejner dokumenty a je základní třídou pro `COleServerDoc`.  
-  
- [COleLinkingDoc](../mfc/reference/colelinkingdoc-class.md)  
- Třída odvozená z `COleDocument` , poskytuje infrastrukturu pro propojení. Třídy dokumentů by měl být odvozen pro vaše aplikace kontejneru z této třídy místo z `COleDocument` Pokud chcete, aby podporovaly odkazy na vložené objekty.  
-  
- [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)  
- Udržuje seznam položek OLE klienta, které jsou v ovládacím prvku RichEdit. Použít s [cricheditview –](../mfc/reference/cricheditview-class.md) a [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md).  
-  
- [CDocItem](../mfc/reference/cdocitem-class.md)  
- Abstraktní základní třídu `COleClientItem` a `COleServerItem`. Objekty třídy odvozené od `CDocItem` představují částí dokumentů.  
-  
- [COleClientItem](../mfc/reference/coleclientitem-class.md)  
- Třída položek klienta, která představuje na straně klienta pro připojení k vložené nebo propojené položky OLE. Klientské položky odvozovat z této třídy.  
-  
- [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)  
- Poskytuje klientský přístup k OLE položky uložené v ovládacím prvku RichEdit při použití s `CRichEditView` a `CRichEditDoc`.  
-  
- [COleException](../mfc/reference/coleexception-class.md)  
- Výsledkem chyba ve zpracování OLE výjimku. Tato třída se používá kontejnery a servery.  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled třídy](../mfc/class-library-overview.md)
+
+Tyto třídy jsou používány aplikací typu kontejner. Obě `COleLinkingDoc` a `COleDocument` správu kolekcí `COleClientItem` objekty. Místo odvozování vaše dokumentové třídy z `CDocument`, bude odvozovat z `COleLinkingDoc` nebo `COleDocument`, v závislosti na tom, jestli potřebujete podporu pro odkazy na objekty vložené v dokumentu.
+
+Použití `COleClientItem` objekt představující položky OLE v dokumentu, který je vložen z jiného dokumentu nebo odkaz do jiného dokumentu.
+
+[Coledocobjectitem –](../mfc/reference/coledocobjectitem-class.md)<br/>
+Podporuje zahrnutí aktivního dokumentu.
+
+[Coledocument –](../mfc/reference/coledocument-class.md)<br/>
+Používá se pro implementaci složeného dokumentu, jakož i podpora základní kontejnerů. Slouží jako kontejner pro třídy odvozené z `CDocItem`. Tato třída slouží jako základní třída pro kontejner dokumentů a je základní třídou pro `COleServerDoc`.
+
+[Colelinkingdoc –](../mfc/reference/colelinkingdoc-class.md)<br/>
+Třída odvozená z `COleDocument` , který poskytuje infrastrukturu pro propojení. Třídy dokumentů by měl být odvozen pro vaše aplikace typu kontejner z této třídy místo z `COleDocument` Pokud chcete, aby podporovaly odkazy na vložené objekty.
+
+[Cricheditdoc –](../mfc/reference/cricheditdoc-class.md)<br/>
+Udržuje seznam klientské položky OLE, které jsou v ovládacím prvku RichEdit. Použít s [cricheditview –](../mfc/reference/cricheditview-class.md) a [cricheditcntritem –](../mfc/reference/cricheditcntritem-class.md).
+
+[Cdocitem –](../mfc/reference/cdocitem-class.md)<br/>
+Abstraktní základní třída `COleClientItem` a `COleServerItem`. Objekty tříd odvozených z `CDocItem` představují části dokumentů.
+
+[COleClientItem](../mfc/reference/coleclientitem-class.md)<br/>
+Třída klienta položky, který představuje na straně klienta pro připojení k vložené nebo propojené položky OLE. Klientské položky odvozovat z této třídy.
+
+[Cricheditcntritem –](../mfc/reference/cricheditcntritem-class.md)<br/>
+Poskytuje přístup na straně klienta OLE položky uložené v ovládacím prvku RichEdit, při použití s `CRichEditView` a `CRichEditDoc`.
+
+[Coleexception –](../mfc/reference/coleexception-class.md)<br/>
+Výjimka vyplývající z chyby ve zpracování OLE. Tato třída se používá tak, že kontejnery a servery.
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../mfc/class-library-overview.md)
 

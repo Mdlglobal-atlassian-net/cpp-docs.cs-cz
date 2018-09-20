@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c80bad11a13c454d8b4025e5cc0745514696a0f7
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: f70ef59ff43e7a8002ce312bd79702e465f52c74
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42466384"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385869"
 ---
 # <a name="fix-your-dependencies-on-library-internals"></a>Oprava závislostí u interních informací o knihovně
 
@@ -86,6 +86,6 @@ inline size_t fnv1a_hash_bytes(const unsigned char * first, size_t count) {
   
 ## <a name="see-also"></a>Viz také:  
   
-[Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
-[Přehled potenciálních problémů s upgradem (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  
+[Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Přehled potenciálních problémů s upgradem (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Upgrade kódu na Universal CRT](upgrade-your-code-to-the-universal-crt.md)  

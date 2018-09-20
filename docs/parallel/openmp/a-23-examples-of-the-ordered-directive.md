@@ -1,5 +1,5 @@
 ---
-title: Příklady A.23 seřazené – direktiva | Microsoft Docs
+title: A.23 příklady použití direktivy seřazený směrnice | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,54 +12,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37cc4ea9db8cbd1a7bf095e2bde0ae482053a584
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ec609a77e9bdc7cbdbb0822dfde0a88110ce0244
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692745"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405967"
 ---
 # <a name="a23---examples-of-the-ordered-directive"></a>A.23   Příklady použití direktivy ordered
-Je možné, že více seřazené oddílů s `for` zadaný `ordered` klauzule. V prvním příkladu je nekompatibilní, protože rozhraní API určuje následující:  
-  
- "Iterace smyčky pomocí `for` konstrukce nesmí provést stejný `ordered` direktivy více než jednou ale nesmí spuštění více než jeden `ordered` – direktiva." (Viz [část 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) na stránce 22)  
-  
- V tomto příkladu nekompatibilních spuštění všech iterací 2 seřazené částech:  
-  
-```  
-#pragma omp for ordered  
-for (i=0; i<n; i++)   
-{  
-    ...  
-    #pragma omp ordered  
-    { ... }  
-    ...  
-    #pragma omp ordered  
-    { ... }  
-    ...  
-}  
-```  
-  
- Ukazuje následující příklad kompatibilní `for` s více než jeden seřazené části:  
-  
-```  
-#pragma omp for ordered  
-for (i=0; i<n; i++)   
-{  
-    ...  
-    if (i <= 10)   
-    {  
-        ...  
-        #pragma omp ordered  
-        { ... }  
-    }  
-    ...  
-    (i > 10)   
-    {  
-        ...  
-        #pragma omp ordered  
-        { ... }  
-    }  
-    ...  
-}  
+
+Je možné mít víc seřazený oddíly se `for` zadaný `ordered` klauzuli. První příklad nedodržuje předpisy, protože rozhraní API určuje následující:
+
+"Iterace smyčky s `for` konstrukce nesmí spustit stejný `ordered` direktiv více než jednou a nesmí spuštění více než jedné `ordered` – direktiva." (Viz [části 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) na stránce 22)
+
+V tomto příkladu nedodržující předpisy spuštění všech iterací 2 seřazený oddílů:
+
+```
+#pragma omp for ordered
+for (i=0; i<n; i++)
+{
+    ...
+    #pragma omp ordered
+    { ... }
+    ...
+    #pragma omp ordered
+    { ... }
+    ...
+}
+```
+
+Následující příklad, který je kompatibilní `for` s více než jednu uspořádanou sekci:
+
+```
+#pragma omp for ordered
+for (i=0; i<n; i++)
+{
+    ...
+    if (i <= 10)
+    {
+        ...
+        #pragma omp ordered
+        { ... }
+    }
+    ...
+    (i > 10)
+    {
+        ...
+        #pragma omp ordered
+        { ... }
+    }
+    ...
+}
 ```

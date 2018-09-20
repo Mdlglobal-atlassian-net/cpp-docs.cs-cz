@@ -1,5 +1,5 @@
 ---
-title: Implementace pracovních oblastí v ovládacích prvcích seznam | Microsoft Docs
+title: Implementace pracovních oblastí v ovládacích prvcích seznam | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,37 +15,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44b92fbda7f00c761059a44b5bf9483e2dfac814
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fc245ef87343d9f33277e41c5c191ea713e21da0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347357"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383412"
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>Implementace pracovních oblastí v ovládacích prvcích seznam
-Ve výchozím nastavení uspořádá ovládací prvek seznamu všechny položky způsobem standardní mřížky. Ale je podporované jinou metodu, pracovních oblastí, které jsou uspořádány položky seznamu obdélníková skupiny. Obrázek ovládacího prvku seznam, který implementuje pracovní oblasti najdete pomocí zobrazení seznamu ovládacích prvků ve Windows SDK.  
-  
+
+Ve výchozím nastavení uspořádá ovládací prvek seznamu všechny položky v podobě standardní mřížky. Ale je podporované jinou metodou, pracovních oblastí, které uspořádá položky seznamu do obdélníkové skupin. Pro obrázek ovládacího prvku seznam, který implementuje pracovních prostorech naleznete v tématu pomocí zobrazení seznamu ovládacích prvků v sadě Windows SDK.
+
 > [!NOTE]
->  Pracovní oblasti jsou viditelné pouze v případě, že ovládacího prvku seznam je v režimu malé ikony nebo ikonu. Všechny aktuální pracovní oblasti se ale zachovají, pokud zobrazení je přepnuta do režimu sestavu nebo seznamu.  
-  
- Pracovní oblasti slouží k zobrazení prázdný ohraničení (v levé horní nebo napravo od položky) nebo způsobit vodorovného posuvníku, který se má zobrazit při za normálních okolností by existovat jeden. Další běžné využití je vytvoření více pracovní oblasti, ke kterým můžete přesunout položky nebo vyřadit. Pomocí této metody můžete vytvořit oblasti v rámci jednoho zobrazení, které mají různé významy. Uživatel pak může kategorizace položek tím, že je v jiné oblasti. Příkladem může být zobrazení systému souborů, který má oblast pro čtení a zápis souborů a jiné oblasti pro soubory jen pro čtení. Pokud soubor položky byly přesunuty do oblasti jen pro čtení, by automaticky stane jen pro čtení. Přesun souboru z oblasti jen pro čtení do oblasti pro čtení a zápis by zkontrolujte soubor pro čtení a zápis.  
-  
- `CListCtrl` poskytuje několik členské funkce pro vytváření a správa pracovních prostorech v ovládacím prvku vašeho seznamu. [GetWorkAreas](../mfc/reference/clistctrl-class.md#getworkareas) a [SetWorkAreas](../mfc/reference/clistctrl-class.md#setworkareas) načíst a nastavit pole `CRect` objekty (nebo `RECT` struktury), který uložit aktuální implementace pracovní oblasti pro vaše ovládací prvek seznamu. Kromě toho [GetNumberOfWorkAreas](../mfc/reference/clistctrl-class.md#getnumberofworkareas) načte aktuální počet pracovní oblasti pro vaše ovládací prvek seznamu (ve výchozím nastavení, nula).  
-  
-## <a name="items-and-working-areas"></a>Položek a pracovní oblasti  
- Když je vytvořen pracovní oblasti, položky, které jsou v pracovní oblasti se stanou členy ho. Podobně pokud položku přesunete do pracovní oblasti, stane se členem pracovní oblasti, ke kterému byl přesunut. Pokud položka není v rámci všechny pracovní plochy, automaticky stane členem první pracovní oblasti (index 0). Pokud chcete vytvořit položku a mít ji umístit do konkrétní pracovní oblasti, budete muset vytvořit položku a poté ho přesuňte do požadované pracovní oblasti s volání [SetItemPosition](../mfc/reference/clistctrl-class.md#setitemposition). Druhý následující příklad ukazuje tento postup.  
-  
- Následující příklad implementuje čtyři pracovní oblasti (`rcWorkAreas`), rovna velikosti s 10. pixelů celou ohraničení pro každý pracovní oblasti v ovládacím prvku seznam (`m_WorkAreaListCtrl`).  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#20](../mfc/codesnippet/cpp/implementing-working-areas-in-list-controls_1.cpp)]  
-  
- Volání [ApproximateViewRect](../mfc/reference/clistctrl-class.md#approximateviewrect) došlo ke zjištění odhadu celkový oblasti vyžadována k zobrazení všech položek v jedné oblasti. Tento odhad je poté rozdělen do čtyř oblastí a vyplní s 5. pixelů celou ohraničení.  
-  
- Další příklad přiřadí existující položky seznamu ke každé skupině (`rcWorkAreas`) a aktualizuje zobrazení ovládacího prvku (`m_WorkAreaListCtrl`) k dokončení účinek.  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#21](../mfc/codesnippet/cpp/implementing-working-areas-in-list-controls_2.cpp)]  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CListCtrl](../mfc/using-clistctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+>  Pracovní prostory jsou viditelné pouze v případě, že ovládací prvek seznamu je v režimu ikonu nebo ikonu. Všechny aktuální pracovní oblasti se ale zachovají, pokud zobrazení je přepnout do režimu sestavy nebo seznamu.
+
+Pracovní prostory slouží k zobrazení prázdný ohraničení (na levé straně, nahoru a napravo od položky), nebo způsobit vodorovný posuvník, který se má zobrazit při obvykle by existovat jeden. Další běžné použití je vytvoření několika pracovních prostorech, ke kterým položky přesunut nebo vyřadit. Pomocí této metody můžete vytvořit oblasti v rámci jednoho zobrazení, které mají různý význam. Uživatel pak může kategorizaci položky tak, že je v jiné oblasti. Příklad tohoto by zobrazení systému souborů, který má oblasti pro čtení a zápis souborů a jiné oblasti pro soubory jen pro čtení. Pokud soubor položky byly přesunuty do oblasti jen pro čtení, by automaticky budou jen pro čtení. Přesun souboru z oblasti jen pro čtení v oblasti čtení a zápisu s žádným soubor pro čtení a zápisu.
+
+`CListCtrl` poskytuje několik členské funkce pro vytváření a správu pracovních prostorech v ovládacím prvku seznamu. [GetWorkAreas](../mfc/reference/clistctrl-class.md#getworkareas) a [SetWorkAreas](../mfc/reference/clistctrl-class.md#setworkareas) načíst a nastavit pole `CRect` objekty (nebo `RECT` struktury), který uložit aktuální implementace pracovní oblasti pro ovládací prvek seznamu. Kromě toho [GetNumberOfWorkAreas](../mfc/reference/clistctrl-class.md#getnumberofworkareas) načte aktuální počet pracovních prostorech ovládacího prvku seznam (ve výchozím nastavení, nula).
+
+## <a name="items-and-working-areas"></a>Položky a pracovních oblastí
+
+Po vytvoření pracovní oblasti položky, které se nacházejí v pracovní oblasti stanou členy jeho. Podobně pokud položka se přesune do pracovní oblasti, stane se členem pracovní oblast, do které byl přesunut. Pokud položka neleží v všechny pracovní plochy, automaticky stane členem první pracovní oblasti (index 0). Pokud chcete vytvořit položku a jeho umístěné v konkrétní pracovní oblasti, budete muset vytvořit položku a poté ho přesuňte do požadované pracovní oblast pomocí volání [SetItemPosition](../mfc/reference/clistctrl-class.md#setitemposition). Druhý příklad ukazuje tento postup.
+
+Následující příklad implementuje čtyři pracovní oblasti (`rcWorkAreas`), stejnou velikost s 10 pixel celého ohraničení kolem každé pracovní oblasti v ovládacím prvku seznam (`m_WorkAreaListCtrl`).
+
+[!code-cpp[NVC_MFCControlLadenDialog#20](../mfc/codesnippet/cpp/implementing-working-areas-in-list-controls_1.cpp)]
+
+Volání [ApproximateViewRect](../mfc/reference/clistctrl-class.md#approximateviewrect) byl proveden k výpočtu odhadu oblasti celková vyžaduje k zobrazení všech položek v jedné oblasti. Tento odhad je poté rozdělen do čtyř oblastí a vyplní 5 pixelů celého ohraničení.
+
+Následující příklad přiřadí existující položky seznamu pro každou skupinu (`rcWorkAreas`) a aktualizuje zobrazení ovládacího prvku (`m_WorkAreaListCtrl`) k dokončení efekt.
+
+[!code-cpp[NVC_MFCControlLadenDialog#21](../mfc/codesnippet/cpp/implementing-working-areas-in-list-controls_2.cpp)]
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CListCtrl](../mfc/using-clistctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Použití ovládacího prvku klávesová zkratka | Microsoft Docs
+title: Použití ovládacího prvku horké | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,29 +15,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4442d45cffdae63600fa3a405e29a139b149175
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: be0d27016204724672c23f04fdee38f01b69e6a5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382941"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372287"
 ---
 # <a name="using-a-hot-key-control"></a>Použití ovládacího prvku klávesová zkratka
-Typické použití ovládacího prvku klávesová zkratka se následující níže:  
-  
--   Ovládací prvek je vytvořen. Pokud ovládací prvek je zadané v poli šablony dialogového okna, je vytvoření automaticky při vytvoření dialogové okno. (Byste měli mít [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) člena v vlastní třídy dialogového okna, která odpovídá za klíče ovládacího prvku.) Alternativně můžete použít [vytvořit](../mfc/reference/chotkeyctrl-class.md#create) – členská funkce vytvoření ovládacího prvku jako podřízeného okna časového období.  
-  
--   Pokud chcete nastavit výchozí hodnotu pro ovládací prvek, zavolejte [SetHotKey](../mfc/reference/chotkeyctrl-class.md#sethotkey) – členská funkce. Pokud chcete zakázat určité stavy shift, zavolejte [SetRules](../mfc/reference/chotkeyctrl-class.md#setrules). Pro ovládací prvky v dialogovém okně, je vhodná doba na k tomu v dialogových oken [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) funkce.  
-  
--   Uživatel pracuje s ovládacím prvkem stisknutím kombinace kláves aktivní prvku aktivního klíče má. Uživatel pak nějakým způsobem označuje, že tato úloha je dokončena, možná kliknutím na tlačítko v dialogu.  
-  
--   Pokud váš program je oznámeno, že uživatel vybral klávesové zkratky, měla by používat – členská funkce [GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey) načíst virtuální klíč a posunutí hodnoty stavu z ovládacího prvku aktivního klíče.  
-  
--   Jakmile budete vědět, co klíče vybraného uživatele, můžete nastavit klávesové zkratky pomocí jedné z metod popsaných v [nastavení klávesové zkratky](../mfc/setting-a-hot-key.md).  
-  
--   Pokud je aktivní klíče ovládací prvek v dialogovém okně, jeho a `CHotKeyCtrl` objektu budou automaticky zničena. Pokud ne, musíte zajistit, aby obě ovládacího prvku a `CHotKeyCtrl` objekt jsou správně zničena.  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Typické použití ovládacího prvku horké má následující formát, níže:
+
+- Ovládací prvek je vytvořen. Pokud ovládací prvek je zadané v šablony dialogového okna, je automatické vytváření, při vytváření dialogových oken. (Byste měli mít [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) člena v vlastní třídy dialogového okna, která odpovídá výměně klíčů ovládacího prvku.) Alternativně můžete použít [vytvořit](../mfc/reference/chotkeyctrl-class.md#create) členská funkce vytvoření ovládacího prvku jako podřízeného okna z jakékoli okno.
+
+- Pokud chcete nastavit výchozí hodnota pro ovládací prvek, zavolejte [SetHotKey](../mfc/reference/chotkeyctrl-class.md#sethotkey) členskou funkci. Pokud chcete zakázat určité stavy posunu, zavolejte [SetRules](../mfc/reference/chotkeyctrl-class.md#setrules). Pro ovládací prvky v dialogovém okně je vhodná doba k tomu v dialogových oken [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) funkce.
+
+- Uživatel pracuje s ovládacím prvkem stisknutím klávesové kombinace kláves při výměně klíče ovládací prvek má fokus. Uživatel pak nějakým způsobem znamená, že tento úkol je dokončen, případně kliknutím na tlačítko v dialogovém okně.
+
+- Když aplikaci zasláno oznámení, že uživatel vybral klávesové zkratky, měla by používat členskou funkci [GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey) načíst klíč a shift virtuální hodnoty stavu z ovládacího prvku výměně klíčů.
+
+- Jakmile budete vědět, co uživatel vybral klíče, můžete nastavit klávesovou zkratku pomocí jedné z metod popsaných v [nastavení klávesové zkratky](../mfc/setting-a-hot-key.md).
+
+- Při výměně klíče ovládacího prvku v dialogovém okně ho a `CHotKeyCtrl` bude objekt zničen. automaticky. Pokud ne, musíte zajistit, aby oba ovládací prvek a `CHotKeyCtrl` objektu jsou správně zničeny.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CHotKeyCtrl](../mfc/using-chotkeyctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

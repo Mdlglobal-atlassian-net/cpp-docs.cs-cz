@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 997b8bc01424b102551815f19ff9a487113e5f6b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e4aaef2cca5146291f7d3708a995a116768e0467
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601010"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382931"
 ---
 # <a name="registrationscript"></a>registration_script
 
@@ -38,7 +38,7 @@ Provede zadanou registraci vlastní skript.
 
 ### <a name="parameters"></a>Parametry
 
-*skript*  
+*skript*<br/>
 Úplná cesta k souboru registrace vlastní skript (.rgs). Hodnota **žádný**, jako například `script = "none"`, označuje, že coclass nemá žádné požadavky na registraci.
 
 ## <a name="remarks"></a>Poznámky
@@ -85,6 +85,6 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](..
 
 ## <a name="see-also"></a>Viz také
 
-[COM – atributy](../windows/com-attributes.md)  
-[Atributy třídy](../windows/class-attributes.md)  
+[COM – atributy](../windows/com-attributes.md)<br/>
+[Atributy třídy](../windows/class-attributes.md)<br/>
 [rdx](../windows/rdx.md)  

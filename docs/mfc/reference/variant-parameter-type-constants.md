@@ -45,53 +45,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d61930bda4560baaf628ce018cc0161527d9d07e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 64b68fb930c6de732e009a251c5e8363bace80ec
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885946"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374734"
 ---
 # <a name="variant-parameter-type-constants"></a>Konstanty variantních typů parametrů
-Toto téma obsahuje seznam nových konstanty, které označují typy parametr typu variant určený pro použití s OLE – třídy ovládacích prvků z knihovny Microsoft Foundation Class.  
-  
- Následuje seznam konstant třídy:  
-  
-##  <a name="_mfc_variant_data_constants"></a> Variant – konstanty dat  
-  
--   VTS_COLOR A 32bitové celé číslo představující hodnotu barvy RGB.  
-  
--   VTS_FONT A ukazatel `IFontDisp` rozhraní písmo objektu OLE.  
-  
--   Hodnota popisovače VTS_HANDLE A Windows.  
-  
--   VTS_PICTURE A ukazatel `IPictureDisp` rozhraní obrázek objektu OLE.  
-  
--   VTS_OPTEXCLUSIVE byla použita pro ovládací prvek, který je určen pro použití ve skupině ovládacích prvků, jako je například přepínačů hodnota A 16 bitů. Tento typ sdělí kontejneru, pokud jeden ovládací prvek ve skupině má hodnotu TRUE, všechny ostatní musí mít hodnotu FALSE.  
-  
--   VTS_TRISTATE A 16bitové celé číslo se znaménkem používají pro vlastnosti, které může mít jednu ze tří možných hodnot (vybrané, nezaškrtnuté, není k dispozici), například zaškrtávací políčko.  
-  
--   VTS_XPOS_HIMETRIC A 32bitové celé číslo bez znaménka představující pozici společně osu x v jednotkách HIMETRIC.  
-  
--   VTS_YPOS_HIMETRIC A 32bitové celé číslo bez znaménka představující umístění podél osy y v jednotkách HIMETRIC.  
-  
--   VTS_XPOS_PIXELS A 32bitové celé číslo bez znaménka představující pozici společně osu x v pixelech.  
-  
--   VTS_YPOS_PIXELS A 32bitové celé číslo bez znaménka představující umístění podél osy y v pixelech.  
-  
--   VTS_XSIZE_PIXELS A 32bitové celé číslo bez znaménka představující šířku objektu na obrazovce v pixelech.  
-  
--   VTS_YSIZE_PIXELS A 32bitové celé číslo bez znaménka představující výšku objektu na obrazovce v pixelech.  
-  
--   VTS_XSIZE_HIMETRIC A 32bitové celé číslo bez znaménka představující šířku objektu na obrazovce v jednotkách HIMETRIC.  
-  
--   VTS_YSIZE_HIMETRIC A 32bitové celé číslo bez znaménka představující výšku objektu na obrazovce v jednotkách HIMETRIC.  
-  
+
+Toto téma obsahuje seznam nových konstanty, které označují typy parametr typu variant určený pro použití s OLE – třídy ovládacích prvků z knihovny Microsoft Foundation Class.
+
+Následuje seznam konstant třídy:
+
+##  <a name="_mfc_variant_data_constants"></a> Variant – konstanty dat
+
+- VTS_COLOR A 32bitové celé číslo představující hodnotu barvy RGB.
+
+- VTS_FONT A ukazatel `IFontDisp` rozhraní písmo objektu OLE.
+
+- Hodnota popisovače VTS_HANDLE A Windows.
+
+- VTS_PICTURE A ukazatel `IPictureDisp` rozhraní obrázek objektu OLE.
+
+- VTS_OPTEXCLUSIVE byla použita pro ovládací prvek, který je určen pro použití ve skupině ovládacích prvků, jako je například přepínačů hodnota A 16 bitů. Tento typ sdělí kontejneru, pokud jeden ovládací prvek ve skupině má hodnotu TRUE, všechny ostatní musí mít hodnotu FALSE.
+
+- VTS_TRISTATE A 16bitové celé číslo se znaménkem používají pro vlastnosti, které může mít jednu ze tří možných hodnot (vybrané, nezaškrtnuté, není k dispozici), například zaškrtávací políčko.
+
+- VTS_XPOS_HIMETRIC A 32bitové celé číslo bez znaménka představující pozici společně osu x v jednotkách HIMETRIC.
+
+- VTS_YPOS_HIMETRIC A 32bitové celé číslo bez znaménka představující umístění podél osy y v jednotkách HIMETRIC.
+
+- VTS_XPOS_PIXELS A 32bitové celé číslo bez znaménka představující pozici společně osu x v pixelech.
+
+- VTS_YPOS_PIXELS A 32bitové celé číslo bez znaménka představující umístění podél osy y v pixelech.
+
+- VTS_XSIZE_PIXELS A 32bitové celé číslo bez znaménka představující šířku objektu na obrazovce v pixelech.
+
+- VTS_YSIZE_PIXELS A 32bitové celé číslo bez znaménka představující výšku objektu na obrazovce v pixelech.
+
+- VTS_XSIZE_HIMETRIC A 32bitové celé číslo bez znaménka představující šířku objektu na obrazovce v jednotkách HIMETRIC.
+
+- VTS_YSIZE_HIMETRIC A 32bitové celé číslo bez znaménka představující výšku objektu na obrazovce v jednotkách HIMETRIC.
+
     > [!NOTE]
-    >  Další varianty konstanty byly definovány pro všechny varianty typy, s výjimkou VTS_FONT a VTS_PICTURE, poskytující ukazatel na konstantu dat variant. Tyto konstanty jsou pojmenované pomocí VTS_P`constantname` konvence. Například VTS_PCOLOR je ukazatel na VTS_COLOR – konstanta.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxdisp.h  
-  
-## <a name="see-also"></a>Viz také  
- [Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)
+    >  Další varianty konstanty byly definovány pro všechny varianty typy, s výjimkou VTS_FONT a VTS_PICTURE, poskytující ukazatel na konstantu dat variant. Tyto konstanty jsou pojmenované pomocí VTS_P`constantname` konvence. Například VTS_PCOLOR je ukazatel na VTS_COLOR – konstanta.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxdisp.h
+
+## <a name="see-also"></a>Viz také
+
+[Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)

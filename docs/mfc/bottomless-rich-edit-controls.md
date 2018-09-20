@@ -16,23 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9e3115000b7b45d9b48a1ac0d274eb32c11f4d0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9ce3922bfd1a86864886057a4457627547fe85e0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218876"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373346"
 ---
 # <a name="bottomless-rich-edit-controls"></a>Neomezené ovládací prvky pro úpravy s formátováním
-Aplikace můžete změnit velikost ovládacího prvku ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) podle potřeby tak, aby se vždy stejnou velikost jako jeho obsah. Ovládací prvek RTF podporuje tuto funkci takzvané "neomezené" odesláním nezašle nadřazenému oknu [EN_REQUESTRESIZE](/windows/desktop/Controls/en-requestresize) oznámení při každé změně velikosti jejího obsahu.  
-  
- Při zpracování **EN_REQUESTRESIZE** zprávy oznámení, aplikace by měl změnit velikost ovládacího prvku s dimenzemi v zadaném [REQRESIZE](/windows/desktop/api/richedit/ns-richedit-_reqresize) struktury. Aplikace může také přesunout všechny informace v ovládacím prvku tak, aby vyhovovaly Změna ovládacího prvku na výšku. Chcete-li změnit velikost ovládacího prvku, můžete použít `CWnd` funkce [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos).  
-  
- Můžete vynutit neomezené ovládacího prvku k odeslání **EN_REQUESTRESIZE** zprávy oznámení pomocí [RequestResize](../mfc/reference/cricheditctrl-class.md#requestresize) členskou funkci. Tato zpráva se může hodit v [upravuje místně](../mfc/reference/cwnd-class.md#onsize) obslužné rutiny.  
-  
- Pro příjem **EN_REQUESTRESIZE** zpráv s oznámením, musíte povolit oznámení pomocí `SetEventMask` členskou funkci.  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Aplikace můžete změnit velikost ovládacího prvku ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) podle potřeby tak, aby se vždy stejnou velikost jako jeho obsah. Ovládací prvek RTF podporuje tuto funkci takzvané "neomezené" odesláním nezašle nadřazenému oknu [EN_REQUESTRESIZE](/windows/desktop/Controls/en-requestresize) oznámení při každé změně velikosti jejího obsahu.
+
+Při zpracování **EN_REQUESTRESIZE** zprávy oznámení, aplikace by měl změnit velikost ovládacího prvku s dimenzemi v zadaném [REQRESIZE](/windows/desktop/api/richedit/ns-richedit-_reqresize) struktury. Aplikace může také přesunout všechny informace v ovládacím prvku tak, aby vyhovovaly Změna ovládacího prvku na výšku. Chcete-li změnit velikost ovládacího prvku, můžete použít `CWnd` funkce [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos).
+
+Můžete vynutit neomezené ovládacího prvku k odeslání **EN_REQUESTRESIZE** zprávy oznámení pomocí [RequestResize](../mfc/reference/cricheditctrl-class.md#requestresize) členskou funkci. Tato zpráva se může hodit v [upravuje místně](../mfc/reference/cwnd-class.md#onsize) obslužné rutiny.
+
+Pro příjem **EN_REQUESTRESIZE** zpráv s oznámením, musíte povolit oznámení pomocí `SetEventMask` členskou funkci.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

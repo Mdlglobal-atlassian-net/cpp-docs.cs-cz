@@ -1,5 +1,5 @@
 ---
-title: ExitInstance – členská funkce | Microsoft Docs
+title: ExitInstance – členská funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 954d2248061ec571d9d2ba8804c1f7c97275cbfc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da411fbecdea0a1e7b8976ca119057204693a9bd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343496"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387858"
 ---
 # <a name="exitinstance-member-function"></a>ExitInstance – členská funkce
-[ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance) funkce člena třídy [CWinApp](../mfc/reference/cwinapp-class.md) nazývá pokaždé, když kopie aplikace ukončí, obvykle v důsledku opuštění aplikace uživatele.  
-  
- Přepsání `ExitInstance` Pokud potřebujete čištění zvláštní zpracování, např. tím uvolní prostředky rozhraní GDI grafiky zařízení nebo rušení přidělení paměti při spuštění programu. Čištění standardní položek, jako jsou dokumenty a zobrazení, ale poskytuje rozhraní, pomocí jiných přepisovatelné funkce pro provádění speciální čištění, které jsou specifické pro tyto objekty.  
-  
-## <a name="see-also"></a>Viz také  
- [CWinApp – třída aplikace](../mfc/cwinapp-the-application-class.md)
+
+[ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance) členské funkce třídy [CWinApp](../mfc/reference/cwinapp-class.md) je volána pokaždé, když kopii aplikace ukončí, obvykle v důsledku uživatele ukončování aplikace.
+
+Přepsat `ExitInstance` potřebujete zpracování zvláštního vyčištění, jako jsou například uvolnění prostředků grafiky zařízení (GDI) rozhraní nebo rušení přidělení paměti používá při provádění programu. Vyčištění standardních položek, jako jsou dokumenty a zobrazeními, ale poskytuje rozhraní, pomocí jiných přepisovatelné funkce pro provádění zvláštního vyčištění, které jsou specifické pro tyto objekty.
+
+## <a name="see-also"></a>Viz také
+
+[CWinApp – třída aplikace](../mfc/cwinapp-the-application-class.md)

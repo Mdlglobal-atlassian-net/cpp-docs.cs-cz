@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a35d65509de75e117bdbeef679618b8d49ef37a2
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6cbe2269bfe4a67ba4e8c6952980216fce92165f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711617"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448607"
 ---
 # <a name="cwnd-class"></a>Třída CWnd
 
@@ -1319,7 +1319,7 @@ virtual HRESULT accDoDefaultAction(VARIANT varChild);
 
 ### <a name="parameters"></a>Parametry
 
-*varChild*  
+*varChild*<br/>
 Určuje, zda je výchozí akce má být volána u objektu nebo jeden z podřízených elementů objektu. Tento parametr může být CHILDID_SELF (Chcete-li provést výchozí akci objektu.) nebo ID podřízeného objektu (k provedení výchozí akce jeden z podřízených elementů objektu).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1345,13 +1345,13 @@ virtual HRESULT accHitTest(
 
 ### <a name="parameters"></a>Parametry
 
-*xLeft*  
+*xLeft*<br/>
 Souřadnice X bodu k testování (v jednotkách obrazovky).
 
-*yTop*  
+*yTop*<br/>
 Souřadnice Y bodu k testování (v jednotkách obrazovky).
 
-*pvarChild*  
+*pvarChild*<br/>
 Přijímá informace, které identifikují objekt v místě určeném *xLeft* a *yTop*. Zobrazit *pvarID* v [IAccessible::accHitTest](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-acchittest) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1381,19 +1381,19 @@ virtual HRESULT accLocation(
 
 ### <a name="parameters"></a>Parametry
 
-*pxLeft*  
+*pxLeft*<br/>
 Přijímá souřadnice x levého horního rohu objektu (v jednotkách obrazovky).
 
-*pyTop*  
+*pyTop*<br/>
 Přijímá souřadnice y levého horního rohu objektu (v jednotkách obrazovky).
 
-*pcxWidth*  
+*pcxWidth*<br/>
 Přijímá šířka objektu (v jednotkách obrazovky).
 
-*pcyHeight*  
+*pcyHeight*<br/>
 Získá výšku objektu (v jednotkách obrazovky).
 
-*varChild*  
+*varChild*<br/>
 Určuje, zda je umístění, které se mají načíst objektu nebo jeden z podřízených elementů objektu. Tento parametr může být CHILDID_SELF (k získání informací o objekt) nebo ID podřízeného objektu (k získání informací o objektu podřízený element).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1419,13 +1419,13 @@ virtual HRESULT accNavigate(
 
 ### <a name="parameters"></a>Parametry
 
-*navDir*  
+*navDir*<br/>
 Určuje směr pro navigaci. Zobrazit *navDir* v [IAccessible::accNavigate](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-accnavigate) v sadě Windows SDK.
 
-*varStart*  
+*varStart*<br/>
 Určuje výchozí objekt. Zobrazit *varStart* v `IAccessible::accNavigate` v sadě Windows SDK.
 
-*pvarEndUpAt*  
+*pvarEndUpAt*<br/>
 Získá informace o cílový objekt uživatelského rozhraní. Zobrazit *pvarEnd* v `IAccessible::accNavigate` v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1452,10 +1452,10 @@ virtual HRESULT accSelect(
 
 ### <a name="parameters"></a>Parametry
 
-*flagsSelect*  
+*flagsSelect*<br/>
 Určuje, jak změnit aktuální výběr nebo aktivní. Zobrazit *flagsSelect* v [IAccessible::accSelect](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-accselect) v sadě Windows SDK.
 
-*varChild*  
+*varChild*<br/>
 Určuje objekt, který má být vybrán. Tento parametr může být CHILDID_SELF (Chcete-li vybrat samotný objekt) nebo ID podřízeného objektu (Chcete-li vybrat jeden z podřízených prvků objektu).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1482,10 +1482,10 @@ BOOL AnimateWindow(
 
 ### <a name="parameters"></a>Parametry
 
-*dwTime*  
+*dwTime*<br/>
 Určuje, jak dlouho trvá přehrávání animace, v milisekundách. Animace obvykle trvá 200 MS pro přehrávání.
 
-*dwFlags*  
+*dwFlags*<br/>
 Určuje typ animace. Úplný seznam možných hodnot najdete v tématu [AnimateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632669).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1528,7 +1528,7 @@ BOOL Attach(HWND hWndNew);
 
 ### <a name="parameters"></a>Parametry
 
-*hWndNew*  
+*hWndNew*<br/>
 Určuje popisovač okna Windows.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1563,7 +1563,7 @@ CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
 
 ### <a name="parameters"></a>Parametry
 
-*lpPaint*  
+*lpPaint*<br/>
 Odkazuje [paintstruct –](../../mfc/reference/paintstruct-structure.md) struktura, která je k přijetí informací o Malování.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1596,16 +1596,16 @@ void BindDefaultProperty(
 
 ### <a name="parameters"></a>Parametry
 
-*dwDispID*  
+*dwDispID*<br/>
 Určuje ovládací prvek vázaný na data, která má být svázána s ovládacím prvkem zdroj dat DISPID vlastnost.
 
-*vtProp*  
+*vtProp*<br/>
 Určuje typ vlastnosti, která má být vázaný – například VT_BSTR, VT_VARIANT a tak dále.
 
-*szFieldName*  
+*szFieldName*<br/>
 Určuje název sloupce v kurzoru poskytuje ovládací prvek zdroje dat, ke kterému bude vázán vlastnost.
 
-*pDSCWnd*  
+*pDSCWnd*<br/>
 Odkazuje na okno Ovládací prvek hostitele zdroj dat ke kterému bude vázán vlastnost. Volání `GetDlgItem` s ID prostředku řadiče domény hostitele okna pro načtení tohoto ukazatele.
 
 ### <a name="remarks"></a>Poznámky
@@ -1632,10 +1632,10 @@ void BindProperty(
 
 ### <a name="parameters"></a>Parametry
 
-*dwDispId*  
+*dwDispId*<br/>
 Určuje ovládací prvek vázaný na data, která má být svázána s ovládacím prvkem zdroj dat DISPID vlastnost.
 
-*pWndDSC*  
+*pWndDSC*<br/>
 Odkazuje na okno Ovládací prvek hostitele zdroj dat ke kterému bude vázán vlastnost. Volání `GetDlgItem` s ID prostředku řadiče domény hostitele okna pro načtení tohoto ukazatele.
 
 ### <a name="remarks"></a>Poznámky
@@ -1706,7 +1706,7 @@ static void PASCAL CancelToolTips(BOOL bKeys = FALSE);
 
 ### <a name="parameters"></a>Parametry
 
-*bKeys*  
+*bKeys*<br/>
 TRUE, pokud chcete zrušit popisy tlačítek, když je klíč stisknutí a nastavit text stavového řádku na výchozí hodnotu; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
@@ -1728,7 +1728,7 @@ void CenterWindow(CWnd* pAlternateOwner = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*pAlternateOwner*  
+*pAlternateOwner*<br/>
 Ukazatel na okno aplikace alternativní relativně k bude na střed (jiné než nadřazené okno).
 
 ### <a name="remarks"></a>Poznámky
@@ -1749,7 +1749,7 @@ BOOL ChangeClipboardChain(HWND hWndNext);
 
 ### <a name="parameters"></a>Parametry
 
-*hWndNext*  
+*hWndNext*<br/>
 Identifikuje okna, který následuje `CWnd` v řetězci prohlížeč schránky.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1768,10 +1768,10 @@ void CheckDlgButton(
 
 ### <a name="parameters"></a>Parametry
 
-*nIDButton*  
+*nIDButton*<br/>
 Určuje tlačítko Upravit.
 
-*nZkontrolujte*  
+*nZkontrolujte*<br/>
 Určuje akce má být provedena. Pokud *nZkontrolujte* nenulová, `CheckDlgButton` členská funkce umístí zaškrtávací políčko vedle tlačítka; Pokud je 0, je odebrána na značku zaškrtnutí. U tlačítek, tří stavů Pokud *nZkontrolujte* je 2, je neurčité, stav tlačítka.
 
 ### <a name="remarks"></a>Poznámky
@@ -1795,13 +1795,13 @@ void CheckRadioButton(
 
 ### <a name="parameters"></a>Parametry
 
-*nIDFirstButton*  
+*nIDFirstButton*<br/>
 Určuje identifikátor celé číslo od první přepínače ve skupině.
 
-*nIDLastButton*  
+*nIDLastButton*<br/>
 Určuje identifikátor celé číslo od poslední přepínače ve skupině.
 
-*nIDCheckButton*  
+*nIDCheckButton*<br/>
 Určuje identifikátor celé číslo od přepínače, která se má zkontrolovat.
 
 ### <a name="remarks"></a>Poznámky
@@ -1826,10 +1826,10 @@ CWnd* ChildWindowFromPoint(
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*  
+*Bod*<br/>
 Určuje souřadnice bodu klienta má být testována.
 
-*nflags*  
+*nflags*<br/>
 Určuje, které podřízená okna, chcete-li přeskočit. Tento parametr může být kombinací následujícího:
 
 |Hodnota|Význam|
@@ -1863,10 +1863,10 @@ void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) 
 
 ### <a name="parameters"></a>Parametry
 
-*lppoint –*  
+*lppoint –*<br/>
 Odkazuje [POINT – struktura](../../mfc/reference/point-structure1.md) nebo `CPoint` koordinuje objekt, který obsahuje klienta má být převeden.
 
-*lprect –*  
+*lprect –*<br/>
 Odkazuje [Rect – struktura](../../mfc/reference/rect-structure1.md) nebo `CRect` koordinuje objekt, který obsahuje klienta má být převeden.
 
 ### <a name="remarks"></a>Poznámky
@@ -1977,17 +1977,17 @@ virtual HRESULT CreateAccessibleProxy(
 
 ### <a name="parameters"></a>Parametry
 
-*wParam*  
+*wParam*<br/>
 Určuje objekt zpřístupněny pomocí proxy serveru Active Accessibility. Může být jedna z následujících hodnot
 
 |Hodnota|Význam|
 |-----------|-------------|
 |OBJID_CLIENT|Odkazuje na klientské oblasti okna.|
 
-*lParam*  
+*lParam*<br/>
 Poskytuje dodatečné informace závislé na zprávu.
 
-*pResult*  
+*pResult*<br/>
 Ukazatel na LRESULT, uchovávající kód výsledku.
 
 ### <a name="remarks"></a>Poznámky
@@ -2004,7 +2004,7 @@ void CreateCaret(CBitmap* pBitmap);
 
 ### <a name="parameters"></a>Parametry
 
-*pBitmap*  
+*pBitmap*<br/>
 Identifikuje rastrový obrázek, který definuje tvar blikajícího kurzoru.
 
 ### <a name="remarks"></a>Poznámky
@@ -2063,40 +2063,40 @@ BOOL CreateControl(
 
 ### <a name="parameters"></a>Parametry
 
-*pszClass*  
+*pszClass*<br/>
 Tento řetězec může obsahovat OLE "krátký název" (ProgID) pro třídu, například Circ3 –". Circ3Ctrl.1 ". Název musí odpovídat názvu stejné registrovaných ovládacího prvku. Alternativně řetězec může obsahovat řetězec formuláře s identifikátorem CLSID obsažené ve složených závorkách, například "{9DBAFCCF-592F-101B-85CE-00608CEC297B}". V obou případech `CreateControl` převede řetězec na odpovídající ID třídy.
 
-*pszWindowName*  
+*pszWindowName*<br/>
 Ukazatel na text, který se zobrazí v ovládacím prvku. Nastaví hodnotu vlastnosti ovládacího prvku popisek nebo Text (pokud existuje). Pokud má hodnotu NULL, titulek a Text ovládacího prvku se nezmění.
 
-*dwStyle*  
+*dwStyle*<br/>
 Styly Windows. Dostupné styly jsou uvedeny v části poznámky.
 
-*Rect*  
+*Rect*<br/>
 Určuje velikost a umístění ovládacího prvku. Může se jednat buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [Rect – struktura](../../mfc/reference/rect-structure1.md).
 
-*ppt*  
+*ppt*<br/>
 Odkazuje [POINT – struktura](../../mfc/reference/point-structure1.md) nebo `CPoint` objekt, který obsahuje levém horním rohu ovládacího prvku.
 
-*pSize*  
+*pSize*<br/>
 Odkazuje [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo `CSize` objekt, který obsahuje velikost ovládacího prvku
 
-*pParentWnd*  
+*pParentWnd*<br/>
 Určuje nadřazené okno ovládacího prvku. Nesmí být NULL.
 
-*nID*  
+*nID*<br/>
 Určuje ID ovládacího prvku.
 
-*pPersist*  
+*pPersist*<br/>
 Ukazatel [cfile –](../../mfc/reference/cfile-class.md) obsahující trvalý stav ovládacího prvku. Výchozí hodnota je NULL označující, že ovládací prvek se inicializuje bez obnovení stavu z jakékoli trvalého úložiště. Pokud není NULL, mělo by být ukazatel `CFile`-odvozenému objektu, který obsahuje ovládací prvek trvalá data ve formě datového proudu nebo úložiště. Tato data by byla uložena do předchozí aktivace klienta. `CFile` Může obsahovat další data, ale musí být ukazatel jeho čtení a zápis nastavení do prvního bajtu trvalá data v okamžiku volání `CreateControl`.
 
-*bStorage*  
+*bStorage*<br/>
 Určuje, zda data v *pPersist* by měl být interpretován jako IStorage nebo IStream data. Pokud data v *pPersist* je úložiště, *bStorage* by měla být nastavena na možnost PRAVDA. Pokud data v *pPersist* je datový proud, *bStorage* by měl mít hodnotu FALSE. Výchozí hodnota je FALSE.
 
-*bstrLicKey*  
+*bstrLicKey*<br/>
 Volitelné licenční klíče data. Tato data je potřeba jenom pro vytváření ovládacích prvků, které vyžadují za běhu licenční klíč. Pokud ovládací prvek podporuje licencování, je nutné zadat licenční klíč pro vytvoření ovládacího prvku na úspěšné. Výchozí hodnota je NULL.
 
-*identifikátor CLSID*  
+*identifikátor CLSID*<br/>
 Třída jedinečné ID ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2155,46 +2155,46 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>Parametry
 
-*dwExStyle*  
+*dwExStyle*<br/>
 Bitová kombinace hodnot (nebo) [rozšířené styly oken](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles); jinak hodnota NULL pro výchozí rozšířený styl okna.
 
-*lpszClassName*  
+*lpszClassName*<br/>
 Ukazatel na řetězec zakončený hodnotou null, který obsahuje název třídy okna registrované systému; nebo název třídy okna předdefinovaný systémový.
 
-*lpszWindowName*  
+*lpszWindowName*<br/>
 Ukazatel na řetězec zakončený hodnotou null, který obsahuje okno zobrazovaný název; v opačném případě hodnota NULL pro žádný časový interval pro zobrazovaný název.
 
-*dwStyle*  
+*dwStyle*<br/>
 Bitová kombinace hodnot (nebo) [styly oken](styles-used-by-mfc.md#window-styles); jinak hodnota NULL pro výchozí styl oken.
 
-*x*  
+*x*<br/>
 Počáteční vodorovné vzdálenost okna na levé straně obrazovky nebo nadřazeného okna.
 
-*y*  
+*y*<br/>
 Počáteční svislou vzdálenost okna od horního okraje obrazovky nebo nadřazeného okna.
 
-*nWidth*  
+*nWidth*<br/>
 Šířka v pixelech, okna.
 
-*nHeight*  
+*nHeight*<br/>
 Výška v pixelech, okna.
 
-*hwndParent*  
+*hwndParent*<br/>
 Pro podřízené okno popisovač do nadřazeného okna. v opačném případě popisovač nadřazenému oknu, pokud má okno vlastníka.
 
-*nIDorHMenu*  
+*nIDorHMenu*<br/>
 Pro podřízené okno ID časového; v opačném případě ID nabídky okna.
 
-*lpParam*  
+*lpParam*<br/>
 Ukazatel na uživatelská data, která je předána [CWnd::OnCreate](#oncreate) metodu *lpCreateParams* pole.
 
-*Rect*  
+*Rect*<br/>
 Velikost a umístění okna vzhledem k obrazovce nebo nadřazeného okna.
 
-*pParentWnd*  
+*pParentWnd*<br/>
 Pro podřízené okno, ukazatel na nadřazené okno; jinak, ukazatel na nadřazenému oknu, pokud má okno vlastníka.
 
-*nID*  
+*nID*<br/>
 Pro podřízené okno ID časového; v opačném případě ID nabídky okna.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2232,10 +2232,10 @@ void CreateGrayCaret(
 
 ### <a name="parameters"></a>Parametry
 
-*nWidth*  
+*nWidth*<br/>
 Určuje šířku znaku stříšky (v logických jednotkách). Pokud má parametr hodnotu 0, šířku nastavena na šířku okna hranice definovaná systémem.
 
-*nHeight*  
+*nHeight*<br/>
 Určuje výšku stříšky (v logických jednotkách). Pokud tento parametr je 0, výška nastavená na výšku okna hranice definovaná systémem.
 
 ### <a name="remarks"></a>Poznámky
@@ -2266,10 +2266,10 @@ void CreateSolidCaret(
 
 ### <a name="parameters"></a>Parametry
 
-*nWidth*  
+*nWidth*<br/>
 Určuje šířku znaku stříšky (v logických jednotkách). Pokud má parametr hodnotu 0, šířku nastavena na šířku okna hranice definovaná systémem.
 
-*nHeight*  
+*nHeight*<br/>
 Určuje výšku stříšky (v logických jednotkách). Pokud tento parametr je 0, výška nastavená na výšku okna hranice definovaná systémem.
 
 ### <a name="remarks"></a>Poznámky
@@ -2333,13 +2333,13 @@ virtual LRESULT DefWindowProc(
 
 ### <a name="parameters"></a>Parametry
 
-*message*  
+*message*<br/>
 Určuje zprávu Windows, která mají být zpracovány.
 
-*wParam*  
+*wParam*<br/>
 Určuje další informace, závislé na zprávu.
 
-*lParam*  
+*lParam*<br/>
 Určuje další informace, závislé na zprávu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2426,16 +2426,16 @@ int DlgDirList(
 
 ### <a name="parameters"></a>Parametry
 
-*lpPathSpec*  
+*lpPathSpec*<br/>
 Odkazuje na řetězec zakončený hodnotou null, který obsahuje cestu nebo název souboru. `DlgDirList` upraví tento řetězec, který by měl být dostatečně dlouhá, aby obsahují změny. Další informace najdete v části "Poznámky".
 
-*nIDListBox*  
+*nIDListBox*<br/>
 Určuje identifikátor používaného seznamu. Pokud *nIDListBox* je 0, `DlgDirList` předpokládá, že žádné pole se seznamem existuje a nepokusí tak, aby vyplnil jeden.
 
-*nIDStaticPath*  
+*nIDStaticPath*<br/>
 Určuje identifikátor ovládacího prvku statický text slouží k zobrazení aktuální jednotky a adresáře. Pokud *nIDStaticPath* je 0, `DlgDirList` předpokládá, že je k dispozici žádný takový ovládací prvek text.
 
-*nFileType*  
+*nFileType*<br/>
 Určuje atributy souborů, který se má zobrazit. Může být libovolnou kombinací těchto hodnot:
 
 - DDL_READWRITE čtení a zápis datových souborů bez dalších atributů.
@@ -2494,16 +2494,16 @@ int DlgDirListComboBox(
 
 ### <a name="parameters"></a>Parametry
 
-*lpPathSpec*  
+*lpPathSpec*<br/>
 Odkazuje na řetězec zakončený hodnotou null, který obsahuje cestu nebo název souboru. `DlgDirListComboBox` upraví tento řetězec, proto tato data nesmí být v podobě literálu. Naleznete v následující části "Poznámky".
 
-*nIDComboBox*  
+*nIDComboBox*<br/>
 Určuje identifikátor pole se seznamem v dialogovém okně. Pokud *nIDComboBox* je 0, `DlgDirListComboBox` předpokládá, že žádné pole se seznamem existuje a nepokusí tak, aby vyplnil jeden.
 
-*nIDStaticPath*  
+*nIDStaticPath*<br/>
 Určuje identifikátor ovládacího prvku statický text slouží k zobrazení aktuální jednotky a adresáře. Pokud *nIDStaticPath* je 0, `DlgDirListComboBox` předpokládá, že je k dispozici žádný takový ovládací prvek text.
 
-*nFileType*  
+*nFileType*<br/>
 Určuje atributy souborů DOS souborů, který se má zobrazit. Může být libovolnou kombinací těchto hodnot:
 
 - DDL_READWRITE čtení a zápis datových souborů bez dalších atributů.
@@ -2560,10 +2560,10 @@ BOOL DlgDirSelect(
 
 ### <a name="parameters"></a>Parametry
 
-*lpString*  
+*lpString*<br/>
 Body do vyrovnávací paměti, která se zobrazí aktuální výběr v seznamu.
 
-*nIDListBox*  
+*nIDListBox*<br/>
 Určuje celé číslo ID seznamu v dialogovém okně.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2592,10 +2592,10 @@ BOOL DlgDirSelectComboBox(
 
 ### <a name="parameters"></a>Parametry
 
-*lpString*  
+*lpString*<br/>
 Body do vyrovnávací paměti, která se zobrazí vybrané cesty.
 
-*nIDComboBox*  
+*nIDComboBox*<br/>
 Určuje celé číslo ID pole se seznamem v dialogovém okně.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2622,7 +2622,7 @@ virtual void DoDataExchange(CDataExchange* pDX);
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*  
+*pDX*<br/>
 Ukazatel `CDataExchange` objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -2649,7 +2649,7 @@ void DragAcceptFiles(BOOL bAccept = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*BAccept*  
+*BAccept*<br/>
 Příznak, který určuje, zda jsou přijímány Přetahované soubory.
 
 ### <a name="remarks"></a>Poznámky
@@ -2668,7 +2668,7 @@ BOOL DragDetect(POINT pt) const;
 
 ### <a name="parameters"></a>Parametry
 
-*PT*  
+*PT*<br/>
 Počáteční pozice myši, v souřadnicovém systému obrazovky. Funkce určuje souřadnice obdélník pomocí tohoto bodu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2694,13 +2694,13 @@ BOOL DrawAnimatedRects(
 
 ### <a name="parameters"></a>Parametry
 
-*idAni*  
+*idAni*<br/>
 Určuje typ animace. Pokud chcete zadat IDANI_CAPTION, titulek okna se animace od určené pozice *lprcFrom* na určené pozici *lprcTo*. Účinek se podobá minimalizovat nebo maximalizuje okno.
 
-*lprcFrom*  
+*lprcFrom*<br/>
 Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury zadat umístění a velikost ikony nebo minimalizované okno.
 
-*lprcTo*  
+*lprcTo*<br/>
 Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura určení umístění a velikost okna obnovené
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2724,13 +2724,13 @@ BOOL DrawCaption(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*  
+*primární řadič domény*<br/>
 Ukazatel na kontext zařízení. Funkce kreslení titulek okna v tomto kontextu zařízení.
 
-*lprc*  
+*lprc*<br/>
 Ukazatel na Rect – struktura, která určuje ohraničující rámeček pro titulek okna.
 
-*uFlags*  
+*uFlags*<br/>
 Určuje možnosti vykreslování. Úplný seznam hodnoty, najdete v části [DrawCaption](/windows/desktop/api/winuser/nf-winuser-drawcaption).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2779,7 +2779,7 @@ void EnableDynamicLayout(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bEnable*  
+*bEnable*<br/>
 TRUE, pokud chcete povolit dynamické rozložení; FALSE, pokud chcete zakázat dynamické rozložení.
 
 ### <a name="remarks"></a>Poznámky
@@ -2798,10 +2798,10 @@ void EnableD2DSupport(
 
 ### <a name="parameters"></a>Parametry
 
-*bEnable*  
+*bEnable*<br/>
 Určuje, zda chcete zapnout nebo vypnout podporu D2D.
 
-*bUseDCRenderTarget*  
+*bUseDCRenderTarget*<br/>
 Určuje, jestli se má použít v kontextu zařízení (DC) cíl, cdcrendertarget – vykreslování. Pokud má hodnotu FALSE, chwndrendertarget – se používá.
 
 ##  <a name="enablescrollbar"></a>  CWnd::EnableScrollBar
@@ -2816,7 +2816,7 @@ BOOL EnableScrollBar(
 
 ### <a name="parameters"></a>Parametry
 
-*nSBFlags*  
+*nSBFlags*<br/>
 Určuje typ posuvníku. Může mít jednu z následujících hodnot:
 
 - SB_BOTH povolí nebo zakáže šipky vodorovné a svislé posuvníky spojená s oknem.
@@ -2825,7 +2825,7 @@ Určuje typ posuvníku. Může mít jednu z následujících hodnot:
 
 - SB_VERT povolí nebo zakáže přidružené k šipky svislý posuvník v okně.
 
-*nArrowFlags*  
+*nArrowFlags*<br/>
 Určuje, zda jsou šipky posuvníku zapnutá nebo vypnutá a šipky, které jsou povolené nebo zakázané. Může mít jednu z následujících hodnot:
 
 - ESB_ENABLE_BOTH povolí obě šipek posuvníku panelu (výchozí).
@@ -2852,10 +2852,10 @@ void EnableScrollBarCtrl(
 
 ### <a name="parameters"></a>Parametry
 
-*nBar*  
+*nBar*<br/>
 Identifikátor posuvníku.
 
-*bEnable*  
+*bEnable*<br/>
 Určuje, zda posuvník má být povolena nebo zakázána.
 
 ### <a name="remarks"></a>Poznámky
@@ -2872,7 +2872,7 @@ BOOL EnableToolTips(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bEnable*  
+*bEnable*<br/>
 Určuje, zda je povoleno ovládacím prvkem popis tlačítka nástroj. Hodnota TRUE povolí ovládacího prvku; FALSE zakáže ovládací prvek.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2908,7 +2908,7 @@ BOOL EnableTrackingToolTips(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bEnable*  
+*bEnable*<br/>
 Určuje, zda sledování nástroje tipy jsou zapnutá nebo vypnutá. Pokud tento parametr má hodnotu TRUE, nástroj Sledování, které tipy bude povolené. Pokud tento parametr má hodnotu FALSE, nástroj Sledování, které tipy bude zakázán.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2929,7 +2929,7 @@ BOOL EnableWindow(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bEnable*  
+*bEnable*<br/>
 Určuje, zda je daný okno má být povolena nebo zakázána. Pokud tento parametr má hodnotu TRUE, povolí se v okně. Pokud má parametr hodnotu FALSE, v okně se deaktivuje.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2964,7 +2964,7 @@ virtual void EndModalLoop(int nResult);
 
 ### <a name="parameters"></a>Parametry
 
-*Nvýsledek*  
+*Nvýsledek*<br/>
 Obsahuje hodnotu, která má být vrácen volajícímu [RunModalLoop](#runmodalloop).
 
 ### <a name="remarks"></a>Poznámky
@@ -2989,7 +2989,7 @@ void EndPaint(LPPAINTSTRUCT lpPaint);
 
 ### <a name="parameters"></a>Parametry
 
-*lpPaint*  
+*lpPaint*<br/>
 Odkazuje [paintstruct –](../../mfc/reference/paintstruct-structure.md) struktura, která obsahuje informace o vykreslování pomocí [BeginPaint](#beginpaint) členskou funkci.
 
 ### <a name="remarks"></a>Poznámky
@@ -3013,10 +3013,10 @@ BOOL ExecuteDlgInit(LPVOID lpResource);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszResourceName*  
+*lpszResourceName*<br/>
 Ukazatel na řetězec zakončený hodnotou null se zadáním názvu prostředku.
 
-*lpResource*  
+*lpResource*<br/>
 Ukazatel na prostředek.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3037,7 +3037,7 @@ void FilterToolTipMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>Parametry
 
-*pMsg*  
+*pMsg*<br/>
 Ukazatel na zprávy tip nástroj.
 
 ### <a name="remarks"></a>Poznámky
@@ -3058,10 +3058,10 @@ static CWnd* PASCAL FindWindow(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszClassName*  
+*lpszClassName*<br/>
 Odkazuje na řetězec zakončený hodnotou null, který určuje název třídy okna ( `WNDCLASS` struktura). Pokud *lpClassName* má hodnotu NULL, všechny názvy tříd shodovat.
 
-*lpszWindowName*  
+*lpszWindowName*<br/>
 Odkazuje na řetězec zakončený hodnotou null, který určuje název okna (název okna). Pokud *lpWindowName* má hodnotu NULL, všechny názvy oken shodovat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3092,16 +3092,16 @@ static CWnd* FindWindowEx(
 
 ### <a name="parameters"></a>Parametry
 
-*hwndParent*  
+*hwndParent*<br/>
 Zpracování nadřazenému oknu, jehož podřízená okna se mají prohledat.
 
-*hwndChildAfter*  
+*hwndChildAfter*<br/>
 Zpracování na podřízené okno. Hledání začne s další podřízené okno v pořadí. Podřízené okno musí být přímé podřízené okno *hwndParent*, nejen potomků okna.
 
-*lpszClass*  
+*lpszClass*<br/>
 Ukazatel na řetězec zakončený hodnotou null, který určuje název třídy nebo formát atom třídy vytvořili podle předchozího volání [RegisterClass](https://msdn.microsoft.com/library/windows/desktop/ms633586) nebo [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587).
 
-*lpszWindow*  
+*lpszWindow*<br/>
 Ukazatel na řetězec zakončený hodnotou null, který určuje název okna (název okna). Pokud tento parametr hodnotu NULL, všechny názvy oken shodovat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3122,7 +3122,7 @@ BOOL FlashWindow(BOOL bInvert);
 
 ### <a name="parameters"></a>Parametry
 
-*bInvert*  
+*bInvert*<br/>
 Určuje, zda `CWnd` je rozsvítilo, nebo se vrátil do původního stavu. `CWnd` Je rozsvítilo z jednoho stavu do jiných Pokud *bInvert* má hodnotu TRUE. Pokud *bInvert* má hodnotu FALSE, v okně se vrátí do původního stavu (aktivní nebo neaktivní).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3156,13 +3156,13 @@ BOOL FlashWindowEx(
 
 ### <a name="parameters"></a>Parametry
 
-*dwFlags*  
+*dwFlags*<br/>
 Určuje stav flash. Úplný seznam hodnoty, najdete v článku [FLASHWINFO](/windows/desktop/api/winuser/ns-winuser-flashwinfo) struktury.
 
-*uCount*  
+*uCount*<br/>
 Určuje počet, kolikrát flash okna.
 
-*dwTimeout*  
+*dwTimeout*<br/>
 Určuje interval v milisekundách, za které se v okně rozsvítilo. Pokud *dwTimeout* je nula, funkce, která používá výchozí rychlost blikání kurzoru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3183,7 +3183,7 @@ static CWnd* PASCAL FromHandle(HWND hWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 HWND okna Windows.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3202,7 +3202,7 @@ static CWnd* PASCAL FromHandlePermanent(HWND hWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 HWND okna Windows.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3227,10 +3227,10 @@ virtual HRESULT get_accChild(
 
 ### <a name="parameters"></a>Parametry
 
-*varChild*  
+*varChild*<br/>
 Určuje podřízený jehož `IDispatch` rozhraní má být načtena.
 
-*ppdispChild*  
+*ppdispChild*<br/>
 Obdrží adresu podřízený objekt `IDispatch` rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3255,7 +3255,7 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
 
 ### <a name="parameters"></a>Parametry
 
-*pcountChildren*  
+*pcountChildren*<br/>
 Získá počet podřízených objektů.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3282,10 +3282,10 @@ virtual HRESULT get_accDefaultAction(
 
 ### <a name="parameters"></a>Parametry
 
-*varChild*  
+*varChild*<br/>
 Určuje, zda je výchozí akci, která se má načíst objektu nebo jeden z podřízených elementů objektu. Tento parametr může být CHILDID_SELF (k získání informací o objekt) nebo ID podřízeného objektu (k získání informací o objektu podřízený element).
 
-*pszDefaultAction*  
+*pszDefaultAction*<br/>
 Adresa, která přijímá lokalizovaný řetězec, který popisuje výchozí akce pro zadaný objekt nebo hodnota NULL, pokud tento objekt nemá žádné výchozí akce BSTR.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3312,10 +3312,10 @@ virtual HRESULT get_accDescription(
 
 ### <a name="parameters"></a>Parametry
 
-*varChild*  
+*varChild*<br/>
 Určuje, zda je popis, který se má načíst objektu nebo jeden z podřízených elementů objektu. Tento parametr může být CHILDID_SELF (k získání informací o objekt) nebo ID podřízeného objektu (k získání informací o objektu podřízený element).
 
-*pszDescription*  
+*pszDescription*<br/>
 Adresa, která přijímá lokalizovaný řetězec s popisem zadaný objekt BSTR, nebo hodnota NULL, pokud není pro tento objekt k dispozici žádný popis.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3340,7 +3340,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
 
 ### <a name="parameters"></a>Parametry
 
-*pvarChild*  
+*pvarChild*<br/>
 Získá informace o objektu, který má fokus. Zobrazit *pvarID* v [IAccessible::get_accFocus](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accfocus) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3367,10 +3367,10 @@ virtual HRESULT get_accHelp(
 
 ### <a name="parameters"></a>Parametry
 
-*varChild*  
+*varChild*<br/>
 Určuje, zda informace nápovědy k načtení objektu nebo jeden z podřízených elementů objektu. Tento parametr může být CHILDID_SELF (k získání informací o objekt) nebo ID podřízeného objektu (k získání informací o objektu podřízený element).
 
-*pszHelp*  
+*pszHelp*<br/>
 Adresa BSTR, která přijímá lokalizovaný řetězec obsahující informace nápovědy pro zadaný objekt nebo hodnota NULL, pokud nejsou dostupné žádné informace nápovědy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3398,13 +3398,13 @@ virtual HRESULT get_accHelpTopic(
 
 ### <a name="parameters"></a>Parametry
 
-*pszHelpFile*  
+*pszHelpFile*<br/>
 Adresa BSTR, která přijímá úplnou cestu `WinHelp` souboru spojené se zadaným objektem, pokud existuje.
 
-*varChild*  
+*varChild*<br/>
 Určuje, zda je téma nápovědy k načtení objektu nebo jeden z podřízených elementů objektu. Tento parametr může být CHILDID_SELF (k získání téma nápovědy pro objekt) nebo ID podřízeného objektu (k získání tématu nápovědy pro jeden z objektu podřízené prvky).
 
-*pidTopic*  
+*pidTopic*<br/>
 Identifikuje soubor téma nápovědy přidružené k zadanému objektu. Zobrazit *pidTopic* v [IAccessible::get_accHelpTopic](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_acchelptopic) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3431,10 +3431,10 @@ virtual HRESULT get_accKeyboardShortcut(
 
 ### <a name="parameters"></a>Parametry
 
-*varChild*  
+*varChild*<br/>
 Určuje, zda klávesové zkratky, které se mají načíst objektu nebo jeden z podřízených elementů objektu. Tento parametr může být CHILDID_SELF (k získání informací o objekt) nebo ID podřízeného objektu (k získání informací o objektu podřízený element).
 
-*pszKeyboardShortcut*  
+*pszKeyboardShortcut*<br/>
 Adresa BSTR, která přijímá lokalizovaný řetězec identifikující klávesové zkratky, nebo hodnota NULL, pokud žádné klávesové zkratky souvisí se zadaným objektem.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3461,10 +3461,10 @@ virtual HRESULT get_accName(
 
 ### <a name="parameters"></a>Parametry
 
-*varChild*  
+*varChild*<br/>
 Určuje, zda je název, který se má načíst objektu nebo jeden z podřízených elementů objektu. Tento parametr může být CHILDID_SELF (k získání informací o objekt) nebo ID podřízeného objektu (k získání informací o objektu podřízený element).
 
-*pszName*  
+*pszName*<br/>
 Adresa, která přijímá řetězec obsahující název zadaný objekt BSTR.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3489,7 +3489,7 @@ virtual HRESULT get_accParent(IDispatch** ppdispParent);
 
 ### <a name="parameters"></a>Parametry
 
-*ppdispParent*  
+*ppdispParent*<br/>
 Obdrží adresu nadřazený objekt `IDispatch` rozhraní. Proměnná je nastavena na hodnotu NULL, pokud neexistuje žádný nadřazený objekt nebo podřízený nemůže získat přístup k jeho nadřazený objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3516,10 +3516,10 @@ virtual HRESULT get_accRole(
 
 ### <a name="parameters"></a>Parametry
 
-*varChild*  
+*varChild*<br/>
 Určuje, zda se má načíst informace o rolích u objektu nebo jeden z podřízených elementů objektu. Tento parametr může být CHILDID_SELF (k získání informací o objekt) nebo ID podřízeného objektu (k získání informací o objektu podřízený element).
 
-*pvarRole*  
+*pvarRole*<br/>
 Získá informace o rolích. Zobrazit *pvarRole* v [IAccessible::get_accRole](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accrole) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3544,7 +3544,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 
 ### <a name="parameters"></a>Parametry
 
-*pvarChildren*  
+*pvarChildren*<br/>
 Získá informace o tom, které jsou podřízené objekty vybrány. Zobrazit *pvarChildren* v [IAccessible::get_accSelection](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accselection) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3571,10 +3571,10 @@ virtual HRESULT get_accState(
 
 ### <a name="parameters"></a>Parametry
 
-*varChild*  
+*varChild*<br/>
 Určuje, zda se má načíst informace o stavu objektu nebo jeden z podřízených elementů objektu. Tento parametr může být CHILDID_SELF (k získání informací o objekt) nebo ID podřízeného objektu (k získání informací o objektu podřízený element).
 
-*pvarState*  
+*pvarState*<br/>
 Získá informace o stavu daného objektu. Zobrazit *pvarState* v [IAccessible::get_accState](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accstate) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3601,10 +3601,10 @@ virtual HRESULT get_accValue(
 
 ### <a name="parameters"></a>Parametry
 
-*varChild*  
+*varChild*<br/>
 Určuje, zda informace o hodnotě, která se má načíst objektu nebo jeden z podřízených elementů objektu. Tento parametr může být CHILDID_SELF (k získání informací o objekt) nebo ID podřízeného objektu (k získání informací o objektu podřízený element).
 
-*pszValue*  
+*pszValue*<br/>
 Adresa BSTR, která přijímá lokalizovaný řetězec obsahující hodnotu aktuálního objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3645,7 +3645,7 @@ CWnd* GetAncestor(UINT gaFlags) const;
 
 ### <a name="parameters"></a>Parametry
 
-*gaFlags*  
+*gaFlags*<br/>
 Určuje nadřazený prvek, který se má načíst. Úplný seznam možných hodnot, naleznete v tématu [GetAncestor](https://msdn.microsoft.com/library/windows/desktop/ms633502).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3702,10 +3702,10 @@ int GetCheckedRadioButton(
 
 ### <a name="parameters"></a>Parametry
 
-*nIDFirstButton*  
+*nIDFirstButton*<br/>
 Určuje identifikátor celé číslo od první přepínače ve skupině.
 
-*nIDLastButton*  
+*nIDLastButton*<br/>
 Určuje identifikátor celé číslo od poslední přepínače ve skupině.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3722,7 +3722,7 @@ void GetClientRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*  
+*lprect –*<br/>
 Odkazuje [Rect – struktura](../../mfc/reference/rect-structure1.md) nebo `CRect` objektu získat souřadnice klienta. `left` a `top` členové budou 0. `right` a `bottom` bude obsahovat členy, šířku a výšku okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -3835,10 +3835,10 @@ CDC* GetDCEx(
 
 ### <a name="parameters"></a>Parametry
 
-*prgnClip*  
+*prgnClip*<br/>
 Identifikuje oblast ořezu, mohou být spojeny s viditelná oblast okna klienta.
 
-*příznaky*  
+*příznaky*<br/>
 Může mít jednu z následujících hodnot předvolby:
 
 - DCX_CACHE vrátí z mezipaměti namísto okno OWNDC nebo CLASSDC kontextu zařízení. Přepíše CS_OWNDC a CS_CLASSDC.
@@ -3901,10 +3901,10 @@ CWnd* GetDescendantWindow(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*  
+*nID*<br/>
 Určuje identifikátor ovládacího prvku nebo podřízená okna se má načíst.
 
-*bOnlyPerm*  
+*bOnlyPerm*<br/>
 Určuje, zda okno má být vrácen, může být dočasné. Pokud je hodnota TRUE, trvalé okno může být vrácena. Pokud má hodnotu FALSE, funkce může vrátit dočasné okno. Další informace o dočasné soubory systému windows naleznete v tématu [Technická poznámka 3](../../mfc/tn003-mapping-of-windows-handles-to-objects.md).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3965,10 +3965,10 @@ void GetDlgItem(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*  
+*nID*<br/>
 Určuje identifikátor ovládacího prvku nebo podřízená okna se má načíst.
 
-*phWnd*  
+*phWnd*<br/>
 Ukazatel na podřízené okno.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3998,13 +3998,13 @@ UINT GetDlgItemInt(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*  
+*nID*<br/>
 Určuje celé číslo identifikátor ovládacího prvku – dialogové okno Převést.
 
-*lpTrans*  
+*lpTrans*<br/>
 Odkazuje na logickou hodnotu, která má obdržet přeložené příznak.
 
-*bSigned*  
+*bSigned*<br/>
 Určuje, zda je podepsán hodnotu, která se má načíst.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4040,16 +4040,16 @@ int GetDlgItemText(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*  
+*nID*<br/>
 Určuje celé číslo identifikátor ovládacího prvku, jehož název má být načtena.
 
-*lpStr*  
+*lpStr*<br/>
 Odkazuje na vyrovnávací paměť pro název nebo text ovládacího prvku.
 
-*nMaxCount*  
+*nMaxCount*<br/>
 Určuje maximální délku (ve znacích) řetězce, které se mají zkopírovat do *lpStr*. Pokud je řetězec delší než *nMaxCount*, zkrátí se.
 
-*rString*  
+*rString*<br/>
 Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4166,7 +4166,7 @@ HICON GetIcon(BOOL bBigIcon) const;
 
 ### <a name="parameters"></a>Parametry
 
-*bBigIcon*  
+*bBigIcon*<br/>
 Určuje ikonu 32 pixelů při hodnotě TRUE; 32 pixelů Určuje 16 pixelů 16 pixelů ikonu, pokud je FALSE.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4185,11 +4185,11 @@ CWnd* GetLastActivePopup() const;
 
 Identifikuje poslední aktivní automaticky otevírané okno. Návratová hodnota bude vlastního okna, pokud jsou splněny následující podmínky:
 
--   V okně samotné byl nedávno aktivní.
+- V okně samotné byl nedávno aktivní.
 
--   V okně nevlastní žádné automaticky otevíraná okna.
+- V okně nevlastní žádné automaticky otevíraná okna.
 
--   Okno je okno nejvyšší úrovně nebo vlastníkem je jiný okna.
+- Okno je okno nejvyšší úrovně nebo vlastníkem je jiný okna.
 
 Ukazatel může být dočasné a neměl by být uložen pro pozdější použití.
 
@@ -4210,13 +4210,13 @@ BOOL GetLayeredWindowAttributes(
 
 ### <a name="parameters"></a>Parametry
 
-*pcrKey*  
+*pcrKey*<br/>
 Ukazatel na COLORREF hodnotu, která přijímá klávesu transparentnosti barva má být použit při vytváření vrstveného okno. Všechny pixely kresleno okna v této barvy bude průhledný. To může mít hodnotu NULL, pokud argument není nutná.
 
-*pbAlpha*  
+*pbAlpha*<br/>
 Ukazatel na BAJT, který přijímá hodnotu alfa používají k popisu krytí okně vrstvami. Pokud proměnná odkazuje *pbAlpha* je 0, v okně je dokonale transparentní. Pokud proměnná odkazuje *pbAlpha* je 255, v okně je skrytá. To může mít hodnotu NULL, pokud argument není nutná.
 
-*pdwFlags*  
+*pdwFlags*<br/>
 Ukazatel, který přijímá příznak vrstvení DWORD. To může mít hodnotu NULL, pokud argument není nutná. Úplný seznam možných hodnot, naleznete v tématu [GetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633508).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4262,13 +4262,13 @@ BOOL GetMenuBarInfo(
 
 ### <a name="parameters"></a>Parametry
 
-*idObject*  
+*idObject*<br/>
 Určuje objekt nabídky. Seznam možných hodnot najdete v tématu [GetMenuBarInfo](/windows/desktop/api/winuser/nf-winuser-getmenubarinfo).
 
-*idItem*  
+*idItem*<br/>
 Obsahuje položky, pro které chcete načíst informace. Pokud tento parametr je nula, funkce načte informace o nabídce samotný. Pokud tento parametr je 1, funkce načte informace o první položku v nabídce a tak dále.
 
-*pmbi*  
+*pmbi*<br/>
 Ukazatel [MENUBARINFO](/windows/desktop/api/winuser/ns-winuser-tagmenubarinfo) struktura, která přijímá informace.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4294,13 +4294,13 @@ COleControlSiteOrWnd* GetNextDlgGroupItem(
 
 ### <a name="parameters"></a>Parametry
 
-*pWndCtl*  
+*pWndCtl*<br/>
 Určuje ovládací prvek, který má být použit jako výchozí bod hledání.
 
-*bPrevious*  
+*bPrevious*<br/>
 Určuje, jak je funkce k vyhledání skupiny ovládacích prvků v dialogovém okně. Pokud je hodnota TRUE, funkce vyhledá předchozí ovládací prvek ve skupině; Pokud má hodnotu FALSE, hledá další ovládací prvek ve skupině.
 
-*pCurSiteOrWnd*  
+*pCurSiteOrWnd*<br/>
 Identifikuje `COleControlSiteOrWnd` ovládacího prvku. Další informace o `COleControlSiteOrWnd`, naleznete v tématu **poznámky**.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4340,13 +4340,13 @@ COleControlSiteOrWnd* GetNextDlgTabItem(
 
 ### <a name="parameters"></a>Parametry
 
-*pWndCtl*  
+*pWndCtl*<br/>
 Určuje ovládací prvek, který má být použit jako výchozí bod hledání.
 
-*pCurSiteOrWnd*  
+*pCurSiteOrWnd*<br/>
 Identifikuje `COleControlSiteOrWnd` ovládacího prvku. Další informace o `COleControlSiteOrWnd`, naleznete v tématu [CWnd::GetNextDlgGroupItem](#getnextdlggroupitem).
 
-*bPrevious*  
+*bPrevious*<br/>
 Určuje, jak je funkce k vyhledání dialogových oken. Pokud je hodnota TRUE, funkce vyhledá předchozí ovládací prvek v dialogovém okně. Pokud má hodnotu FALSE, hledá další ovládací prvek.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4367,7 +4367,7 @@ CWnd* GetNextWindow(UINT nFlag = GW_HWNDNEXT) const;
 
 ### <a name="parameters"></a>Parametry
 
-*načit*  
+*načit*<br/>
 Určuje, zda funkce vrací ukazatel na okno Další nebo předchozí okno. Může to být buď GW_HWNDNEXT, která vrátí okna, který následuje `CWnd` objekt v seznamu Správce oken nebo GW_HWNDPREV, která vrátí předchozí okno Správce oken seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4392,7 +4392,7 @@ COleControlSite* GetOleControlSite(UINT idControl) const;
 
 ### <a name="parameters"></a>Parametry
 
-*idControl*  
+*idControl*<br/>
 ID ovládacího prvku ActiveX.
 
 ##  <a name="getopenclipboardwindow"></a>  CWnd::GetOpenClipboardWindow
@@ -4488,13 +4488,13 @@ void GetProperty(
 
 ### <a name="parameters"></a>Parametry
 
-*dwDispID*  
+*dwDispID*<br/>
 Určuje vlastnost, která se má načíst.
 
-*vtProp*  
+*vtProp*<br/>
 Určuje typ vlastnosti, který se má načíst. Možné hodnoty najdete v části poznámky [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
-*pvProp*  
+*pvProp*<br/>
 Adresa proměnné, která bude, který obdrží hodnotu vlastnosti. Musí odpovídat typu určeného *vtProp*.
 
 ### <a name="remarks"></a>Poznámky
@@ -4546,10 +4546,10 @@ static CWnd* GetSafeOwner(
 
 ### <a name="parameters"></a>Parametry
 
-*pParent*  
+*pParent*<br/>
 Ukazatel na nadřazenou položku `CWnd` okna. Může mít hodnotu NULL.
 
-*pWndTop*  
+*pWndTop*<br/>
 Ukazatel, který je aktuálně v horní části okna. Může mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4573,7 +4573,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nBar*  
+*nBar*<br/>
 Určuje typ posuvníku. Tento parametr můžete provést jednu z následujících hodnot:
 
 - SB_HORZ načte pozici vodorovný posuvník.
@@ -4600,10 +4600,10 @@ BOOL GetScrollBarInfo(
 
 ### <a name="parameters"></a>Parametry
 
-*idObject*  
+*idObject*<br/>
 Určuje objekt nabídky. Seznam možných hodnot najdete v tématu [GetScrollBarInfo](/windows/desktop/api/winuser/nf-winuser-getscrollbarinfo).
 
-*psbi*  
+*psbi*<br/>
 Ukazatel [SCROLLBARINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollbarinfo) struktura, která přijímá informace.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4627,7 +4627,7 @@ BOOL GetScrollInfo(
 
 ### <a name="parameters"></a>Parametry
 
-*nBar*  
+*nBar*<br/>
 Určuje, zda posuvník ovládacího prvku nebo část oblasti myši v neklientské oblasti okna. Pokud je součástí neklientské oblasti *nBar* také určuje, zda posuvník nachází vodorovně, svisle, nebo obojí. Musí být jeden z následujících akcí:
 
 - SB_CTL načte parametry pro ovládací prvek posuvníku. `m_hWnd` Datový člen musí být popisovačem ovládací prvek posuvníku.
@@ -4636,10 +4636,10 @@ Určuje, zda posuvník ovládacího prvku nebo část oblasti myši v neklientsk
 
 - SB_VERT načte parametry v okně Standardní svislý posuvník.
 
-*lpScrollInfo*  
+*lpScrollInfo*<br/>
 Ukazatel [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) struktury. Zobrazit sady Windows SDK pro další informace o této struktury.
 
-*nMask*  
+*nMask*<br/>
 Určuje parametry panelu přejděte k načtení. Výchozí hodnota určuje kombinaci SIF_PAGE, SIF_POS, SIF_TRACKPOS a SIF_RANGE. Zobrazit `SCROLLINFO` Další informace o *nMask* hodnoty.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4664,7 +4664,7 @@ int GetScrollLimit(int nBar);
 
 ### <a name="parameters"></a>Parametry
 
-*nBar*  
+*nBar*<br/>
 Určuje typ posuvníku. Tento parametr můžete provést jednu z následujících hodnot:
 
 - SB_HORZ načte mez posuvníku vodorovný posuvník.
@@ -4685,7 +4685,7 @@ int GetScrollPos(int nBar) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nBar*  
+*nBar*<br/>
 Určuje posuvník prozkoumat. Tento parametr můžete provést jednu z následujících hodnot:
 
 - SB_HORZ načte pozici vodorovný posuvník.
@@ -4713,17 +4713,17 @@ void GetScrollRange(
 
 ### <a name="parameters"></a>Parametry
 
-*nBar*  
+*nBar*<br/>
 Určuje posuvník prozkoumat. Tento parametr můžete provést jednu z následujících hodnot:
 
 - SB_HORZ načte pozici vodorovný posuvník.
 
 - SB_VERT načte pozici svislý posuvník.
 
-*lpMinPos*  
+*lpMinPos*<br/>
 Odkazuje na celočíselnou proměnnou, která se zobrazí minimální pozici.
 
-*lpMaxPos*  
+*lpMaxPos*<br/>
 Odkazuje na celočíselnou proměnnou, která se zobrazí na nejvyšší pozici.
 
 ### <a name="remarks"></a>Poznámky
@@ -4754,7 +4754,7 @@ CMenu* GetSystemMenu(BOOL bRevert) const;
 
 ### <a name="parameters"></a>Parametry
 
-*bRevert*  
+*bRevert*<br/>
 Určuje akci, která se mají provést. Pokud *bRevert* má hodnotu FALSE, `GetSystemMenu` vrací popisovač do kopii nabídky ovládací prvek právě používán. Tato kopie je zpočátku stejný jako ovládací prvek nabídky, ale je možné upravit. Pokud *bRevert* má hodnotu TRUE, `GetSystemMenu` resetuje ovládací prvek nabídky zpět do výchozího stavu. Předchozí, případně upravit ovládací prvek nabídky, pokud existuje, je zničen. Návratová hodnota není definována v tomto případě.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4787,7 +4787,7 @@ BOOL GetTitleBarInfo(PTITLEBARINFO pti) const;
 
 ### <a name="parameters"></a>Parametry
 
-*PTI*  
+*PTI*<br/>
 Ukazatel [TITLEBARINFO](https://msdn.microsoft.com/library/windows/desktop/ms632608) struktura, která přijímá informace.
 
 ### <a name="remarks"></a>Poznámky
@@ -4876,12 +4876,12 @@ BOOL GetUpdateRect(
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*  
+*lprect –*<br/>
 Odkazuje `CRect` objektu nebo [Rect – struktura](../../mfc/reference/rect-structure1.md) , která má obdržet souřadnice klienta, který obklopuje oblast aktualizace aktualizace.
 
 Tento parametr nastavit na hodnotu NULL k určení, zda existuje určitá aktualizace oblast v rámci `CWnd`. Pokud *lprect –* má hodnotu NULL, `GetUpdateRect` členská funkce vrátí nenulovou hodnotu, pokud existuje určitá aktualizace oblast a 0, pokud jeden není. To poskytuje způsob, jak určit, zda je zprávu WM_PAINT výsledkem neplatnou oblast. Nenastavujte tento parametr na hodnotu NULL ve Windows verze 3.0 a starší.
 
-*bErase*  
+*bErase*<br/>
 Určuje, zda na pozadí v oblasti aktualizací se vymažou.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4912,10 +4912,10 @@ int GetUpdateRgn(
 
 ### <a name="parameters"></a>Parametry
 
-*pRgn*  
+*pRgn*<br/>
 Identifikuje oblast aktualizace.
 
-*bErase*  
+*bErase*<br/>
 Určuje, zda dojde k vymazání na pozadí a bude vykreslen neklientské oblasti podřízená okna. Pokud je hodnota FALSE, se provádí bez kreslení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4946,7 +4946,7 @@ CWnd* GetWindow(UINT nCmd) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nCmd*  
+*nCmd*<br/>
 Určuje vztah mezi `CWnd` a vrácené okna. Můžete provést jednu z následujících hodnot:
 
 - Identifikuje GW_CHILD `CWnd` první podřízené okno.
@@ -5025,7 +5025,7 @@ BOOL GetWindowInfo(PWINDOWINFO pwi) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pwi*  
+*pwi*<br/>
 Ukazatel [WINDOWINFO](https://msdn.microsoft.com/library/windows/desktop/ms632610) struktury.
 
 ### <a name="remarks"></a>Poznámky
@@ -5054,7 +5054,7 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT* lpwndpl) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lpwndpl*  
+*lpwndpl*<br/>
 Odkazuje `WINDOWPLACEMENT` struktura, která přijímá informace zobrazit stav a umístění.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -5075,7 +5075,7 @@ void GetWindowRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*  
+*lprect –*<br/>
 Odkazuje `CRect` objektu nebo [Rect – struktura](../../mfc/reference/rect-structure1.md) , který se zobrazí obrazovka souřadnice levého a pravého dolního rohu.
 
 ### <a name="remarks"></a>Poznámky
@@ -5092,7 +5092,7 @@ int GetWindowRgn(HRGN hRgn)const;
 
 ### <a name="parameters"></a>Parametry
 
-*hRgn*  
+*hRgn*<br/>
 Popisovač pro oblasti okna.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -5130,13 +5130,13 @@ void GetWindowText(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszStringBuf*  
+*lpszStringBuf*<br/>
 Body do vyrovnávací paměti, který je zkopírovaný řetězec názvu okna.
 
-*nMaxCount*  
+*nMaxCount*<br/>
 Určuje maximální počet znaků, které se mají zkopírovat do vyrovnávací paměti, včetně ukončujícího znaku null. Pokud řetězec je delší než počet znaků určených v *nMaxCount*, zkrátí se.
 
-*rString*  
+*rString*<br/>
 A [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který je zkopírovaný řetězec názvu okna.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -5202,13 +5202,13 @@ BOOL HiliteMenuItem(
 
 ### <a name="parameters"></a>Parametry
 
-*pMenu*  
+*pMenu*<br/>
 Identifikuje nejvyšší úrovně nabídky, která obsahuje položky, která má být zvýrazněn.
 
-*nIDHiliteItem*  
+*nIDHiliteItem*<br/>
 Určuje položku nabídky zvýrazní, závisí na hodnotě *nHilite* parametru.
 
-*nHilite*  
+*nHilite*<br/>
 Určuje, zda položka nabídky se zvýrazní nebo zvýraznění se odebere. Může se jednat kombinaci MF_HILITE nebo MF_UNHILITE MF_BYCOMMAND nebo MF_BYPOSITION. Hodnoty lze spojovat pomocí bitového operátoru OR. Tyto hodnoty mají následující význam:
 
 - Interpretuje MF_BYCOMMAND *nIDHiliteItem* jako ID položky nabídky (výchozí výklad).
@@ -5239,10 +5239,10 @@ virtual void HtmlHelp(
 
 ### <a name="parameters"></a>Parametry
 
-*dwData*  
+*dwData*<br/>
 Určuje další data. Hodnota závisí na hodnotě *nCmd* parametru.
 
-*nCmd*  
+*nCmd*<br/>
 Určuje typ nápovědy požadavku. Seznam možných hodnot a jejich vliv *dwData* parametr, najdete v článku *uCommand* parametr je popsáno v HTML Help Reference rozhraní API v sadě Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
@@ -5271,7 +5271,7 @@ void Invalidate(BOOL bErase = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bErase*  
+*bErase*<br/>
 Určuje, zda je na pozadí v rámci oblasti aktualizace jsou vymazány.
 
 ### <a name="remarks"></a>Poznámky
@@ -5298,10 +5298,10 @@ void InvalidateRect(
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*  
+*lprect –*<br/>
 Odkazuje na `CRect` objektu nebo [Rect – struktura](../../mfc/reference/rect-structure1.md) obdélníku (v souřadnice klienta), který obsahuje být přidán do oblasti aktualizace. Pokud *lprect –* má hodnotu NULL, celé oblasti klienta se přidá do oblasti.
 
-*bErase*  
+*bErase*<br/>
 Určuje, zda je na pozadí v rámci oblasti aktualizace jsou vymazány.
 
 ### <a name="remarks"></a>Poznámky
@@ -5324,10 +5324,10 @@ void InvalidateRgn(
 
 ### <a name="parameters"></a>Parametry
 
-*pRgn*  
+*pRgn*<br/>
 Ukazatel [CRgn](../../mfc/reference/crgn-class.md) objekt, který identifikuje oblasti, kterou chcete přidat do oblasti aktualizace. Oblast se předpokládá, že má souřadnice klienta. Pokud má parametr hodnotu NULL, celé oblasti klienta se přidá do oblasti aktualizace.
 
-*bErase*  
+*bErase*<br/>
 Určuje, zda je na pozadí v rámci oblasti aktualizace jsou vymazány.
 
 ### <a name="remarks"></a>Poznámky
@@ -5356,22 +5356,22 @@ void AFX_CDECL InvokeHelper(
 
 ### <a name="parameters"></a>Parametry
 
-*dwDispID*  
+*dwDispID*<br/>
 Určuje metodu nebo vlastnost má být volána.
 
-*wFlags*  
+*wFlags*<br/>
 Příznaky popisující kontext volání `IDispatch::Invoke`.
 
-*vtRet*  
+*vtRet*<br/>
 Určuje typ vrácené hodnoty. Možné hodnoty najdete v části poznámky [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
-*pvRet*  
+*pvRet*<br/>
 Adresa proměnné, která bude, který se zobrazí hodnota vlastnosti nebo návratovou hodnotu. Musí odpovídat typu určeného *vtRet*.
 
-*pbParamInfo*  
+*pbParamInfo*<br/>
 Ukazatel na řetězec zakončený hodnotou null bajtů určující typy parametrů za *pbParamInfo*. Možné hodnoty najdete v části poznámky `COleDispatchDriver::InvokeHelper`.
 
-*...*  
+*...*<br/>
 Proměnné seznam parametrů typů uvedených v *pbParamInfo*.
 
 ### <a name="remarks"></a>Poznámky
@@ -5395,7 +5395,7 @@ BOOL IsChild(const CWnd* pWnd) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pWnd*  
+*pWnd*<br/>
 Identifikuje okno má být testována.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -5428,7 +5428,7 @@ BOOL IsDialogMessage(LPMSG lpMsg);
 
 ### <a name="parameters"></a>Parametry
 
-*lpMsg*  
+*lpMsg*<br/>
 Odkazuje na [MSG](../../mfc/reference/msg-structure1.md) strukturu, která obsahuje zprávy, která se má zkontrolovat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -5453,7 +5453,7 @@ UINT IsDlgButtonChecked(int nIDButton) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nIDButton*  
+*nIDButton*<br/>
 Určuje celé číslo identifikátor ovládacího prvku tlačítko.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -5568,7 +5568,7 @@ BOOL KillTimer(UINT_PTR nIDEvent);
 
 ### <a name="parameters"></a>Parametry
 
-*nIDEvent*  
+*nIDEvent*<br/>
 Byla předána hodnota událost časovače [SetTimer](#settimer).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -5593,7 +5593,7 @@ BOOL LoadDynamicLayoutResource(LPCTSTR lpszResourceName);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszResourceName*  
+*lpszResourceName*<br/>
 Název prostředku, který obsahuje informace o požadované dynamického rozložení pro toto okno.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -5655,16 +5655,16 @@ void MapWindowPoints(
 
 ### <a name="parameters"></a>Parametry
 
-*pwndTo*  
+*pwndTo*<br/>
 Identifikuje v okně, ke kterému se převedou body. Pokud má parametr hodnotu NULL, tyto body se převedou na souřadnice obrazovky.
 
-*lprect –*  
+*lprect –*<br/>
 Určuje obdélníku, jehož body se má převést. První verze této funkce je k dispozici jenom pro Windows verze 3.1 nebo novější.
 
-*lppoint –*  
+*lppoint –*<br/>
 Ukazatel na pole [POINT – struktura](../../mfc/reference/point-structure1.md) , které obsahují sadu bodů má být převeden.
 
-*nCount*  
+*nCount*<br/>
 Určuje počet `POINT` struktury v poli odkazované *lppoint –*.
 
 ##  <a name="messagebox"></a>  CWnd::MessageBox
@@ -5680,13 +5680,13 @@ int MessageBox(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszText*  
+*lpszText*<br/>
 Odkazuje `CString` objektu nebo řetězec zakončený hodnotou null obsahující zprávu, která se zobrazí.
 
-*lpszCaption*  
+*lpszCaption*<br/>
 Odkazuje `CString` objektu nebo řetězec zakončený hodnotou null se použije pro titulek okno se zprávou. Pokud *lpszCaption* má hodnotu NULL, výchozí titulek "Chyba" se používá.
 
-*nTyp*  
+*nTyp*<br/>
 Určuje obsah a chování okna se zprávou.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -5723,13 +5723,13 @@ BOOL ModifyStyle(
 
 ### <a name="parameters"></a>Parametry
 
-*dwRemove*  
+*dwRemove*<br/>
 Určuje styly oken odeberou během úpravy stylu.
 
-*dwAdd*  
+*dwAdd*<br/>
 Určuje styly oken, které budou přidány během úpravy stylu.
 
-*nFlags*  
+*nFlags*<br/>
 Příznaky, které se mají předat [SetWindowPos](#setwindowpos), nebo nula, pokud `SetWindowPos` by neměla být volána. Výchozí hodnota je nula. Naleznete v části poznámky pro seznam přednastavených příznaků.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -5772,13 +5772,13 @@ BOOL ModifyStyleEx(
 
 ### <a name="parameters"></a>Parametry
 
-*dwRemove*  
+*dwRemove*<br/>
 Určuje rozšířený styly odeberou během úpravy stylu.
 
-*dwAdd*  
+*dwAdd*<br/>
 Určuje rozšířený stylů se dají přidat během úpravy stylu.
 
-*nFlags*  
+*nFlags*<br/>
 Příznaky, které se mají předat [SetWindowPos](#setwindowpos), nebo nula, pokud `SetWindowPos` by neměla být volána. Výchozí hodnota je nula. Naleznete v části poznámky pro seznam přednastavených příznaků.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -5825,22 +5825,22 @@ void MoveWindow(
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 Určuje novou pozici nalevo od hodnoty `CWnd`.
 
-*y*  
+*y*<br/>
 Určuje novou pozici vrcholu `CWnd`.
 
-*nWidth*  
+*nWidth*<br/>
 Určuje novou šířku `CWnd`.
 
-*nHeight*  
+*nHeight*<br/>
 Určuje novou výšku `CWnd`.
 
-*bRepaint*  
+*bRepaint*<br/>
 Určuje, zda `CWnd` má být překreslit. Při hodnotě TRUE se `CWnd` obdrží [WM_PAINT](/windows/desktop/gdi/wm-paint) zprávy v jeho [OnPaint](#onpaint) obslužné rutiny zpráv jako obvykle. Pokud má parametr hodnotu FALSE, žádné překreslení jakéhokoli druhu vyvolá. To platí pro klientské oblasti, do oblasti myši v neklientské oblasti (včetně pruhy nadpis a posunout) a žádné části odvozeného nadřazené okno zjištěných kvůli `CWnd`je přesunout. Pokud tento parametr hodnotu FALSE, aplikace musí explicitně zneplatnit nebo ho překreslit některé části `CWnd` a nadřazené okno, které musí být překreslení.
 
-*lprect –*  
+*lprect –*<br/>
 [Crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [Rect – struktura](../../mfc/reference/rect-structure1.md) , který určuje novou velikost a umístění.
 
 ### <a name="remarks"></a>Poznámky
@@ -5866,13 +5866,13 @@ void NotifyWinEvent(
 
 ### <a name="parameters"></a>Parametry
 
-*event*  
+*event*<br/>
 Určuje události, ke které došlo k chybě. Tato hodnota musí být jedna z [události konstanty](/windows/desktop/WinAuto/event-constants).
 
-*idObjectType*  
+*idObjectType*<br/>
 Určuje typ objektu, který událost vyvolal. Tato hodnota je jeden z předdefinovaných [objektu identifikátory](/windows/desktop/WinAuto/object-identifiers) nebo hodnotu ID vlastní objekt.
 
-*idObject*  
+*idObject*<br/>
 Označuje, zda byla událost vygenerována objekt nebo podřízený element objektu. Pokud je tato hodnota CHILDID_SELF, byla událost vygenerována pomocí samotného objektu. Pokud ne, tato hodnota je ID podřízeného prvku, který událost vyvolal.
 
 ### <a name="remarks"></a>Poznámky
@@ -5892,7 +5892,7 @@ afx_msg void OnActivate(
 
 ### <a name="parameters"></a>Parametry
 
-*nInformace*  
+*nInformace*<br/>
 Určuje, zda `CWnd` je se aktivuje nebo deaktivuje. Může být jeden z následujících hodnot:
 
 - V okně WA_INACTIVE je právě deaktivována.
@@ -5901,10 +5901,10 @@ Určuje, zda `CWnd` je se aktivuje nebo deaktivuje. Může být jeden z následu
 
 - WA_CLICKACTIVE okno se aktivuje pomocí kliknutí myší.
 
-*pWndOther*  
+*pWndOther*<br/>
 Ukazatel `CWnd` se aktivuje nebo deaktivuje. Ukazatel může mít hodnotu NULL a může být dočasné.
 
-*bMinimized*  
+*bMinimized*<br/>
 Určuje minimalizovaném stavu `CWnd` se aktivuje nebo deaktivuje. Hodnota TRUE označuje, že je minimalizované okno.
 
 Při hodnotě TRUE `CWnd` se aktivuje; v opačném případě deaktivuje.
@@ -5928,10 +5928,10 @@ afx_msg void OnActivateApp(
 
 ### <a name="parameters"></a>Parametry
 
-*bActive*  
+*bActive*<br/>
 Určuje, zda `CWnd` je se aktivuje nebo deaktivuje. Hodnota TRUE znamená, že `CWnd` se aktivuje. FALSE znamená, že `CWnd` je právě deaktivována.
 
-*dwThreadID*  
+*dwThreadID*<br/>
 Určuje hodnotu ID vlákna. Pokud *bActive* má hodnotu TRUE, *dwThreadID* identifikuje vlákna, která je vlastníkem `CWnd` právě deaktivována. Pokud *bActive* má hodnotu FALSE, *dwThreadID* identifikuje vlákna, která je vlastníkem `CWnd` aktivuje.
 
 ### <a name="remarks"></a>Poznámky
@@ -5952,13 +5952,13 @@ virtual BOOL OnAmbientProperty(
 
 ### <a name="parameters"></a>Parametry
 
-*pSite*  
+*pSite*<br/>
 Ukazatel na webu ovládacího prvku, který požaduje vedlejší vlastnost.
 
-*identifikátor DISPID*  
+*identifikátor DISPID*<br/>
 ID odbavení požadovaný vedlejší vlastnost.
 
-*pvar*  
+*pvar*<br/>
 Ukazatel na přidělenou volajícímu `VARIANT` struktury, přes který bude vrácena hodnota vedlejší vlastnost.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -6009,10 +6009,10 @@ afx_msg void OnAskCbFormatName(
 
 ### <a name="parameters"></a>Parametry
 
-*nMaxCount*  
+*nMaxCount*<br/>
 Určuje maximální počet bajtů, které mají kopírovat.
 
-*lpszString*  
+*lpszString*<br/>
 Body do vyrovnávací paměti, kde se uloží kopie název formátu.
 
 ### <a name="remarks"></a>Poznámky
@@ -6048,7 +6048,7 @@ afx_msg void OnCaptureChanged(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*pWnd*  
+*pWnd*<br/>
 Ukazatel na okno k získání zachycení myši
 
 ### <a name="remarks"></a>Poznámky
@@ -6072,10 +6072,10 @@ afx_msg void OnChangeCbChain(
 
 ### <a name="parameters"></a>Parametry
 
-*hWndRemove*  
+*hWndRemove*<br/>
 Určuje, který se odebírá z řetězu prohlížeč schránky popisovač okna.
 
-*hWndAfter*  
+*hWndAfter*<br/>
 Určuje, který následuje okno odebírán z řetězu prohlížeč schránky popisovač okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -6097,7 +6097,7 @@ afx_msg void OnChangeUIState(
 
 ### <a name="parameters"></a>Parametry
 
-*nAction*  
+*nAction*<br/>
 Určuje akci, která se mají provést. Může být jedna z následujících hodnot:
 
 - Element stavu UIS_CLEAR UI (určená *nUIElement*) by měl být skrytý.
@@ -6106,7 +6106,7 @@ Určuje akci, která se mají provést. Může být jedna z následujících hod
 
 - Element stavu UIS_SET UI (určená *nUIElement*) by měly být viditelné.
 
-*nUIElement*  
+*nUIElement*<br/>
 Určuje stav prvky uživatelského rozhraní, které jsou ovlivněné nebo styl ovládacího prvku. Může být jedna z následujících hodnot:
 
 - UISF_HIDEACCEL klávesové zkratky.
@@ -6132,13 +6132,13 @@ afx_msg void OnChar(
 
 ### <a name="parameters"></a>Parametry
 
-*nChar*  
+*nChar*<br/>
 Obsahuje hodnotu znaku kód klíče.
 
-*nRepCnt*  
+*nRepCnt*<br/>
 Obsahuje počet opakování, kolikrát stisk klávesy se opakuje, když uživatel ponechá stisknutou klávesu.
 
-*nFlags*  
+*nFlags*<br/>
 Obsahuje kontroly kódu, přechod klíče kódu, předchozí stav klíčů a kód kontextu, jak je znázorněno v následujícím seznamu:
 
 |Hodnota|Význam|
@@ -6175,13 +6175,13 @@ afx_msg int OnCharToItem(
 
 ### <a name="parameters"></a>Parametry
 
-*nChar*  
+*nChar*<br/>
 Určuje hodnotu klíče stisknuty uživatelem.
 
-*pListBox*  
+*pListBox*<br/>
 Určuje ukazatel na pole se seznamem. Může být dočasné.
 
-*nIndex*  
+*nIndex*<br/>
 Určuje aktuální pozici blikajícího kurzoru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -6215,16 +6215,16 @@ virtual BOOL OnChildNotify(
 
 ### <a name="parameters"></a>Parametry
 
-*message*  
+*message*<br/>
 Číslo zprávy Windows odeslány do nadřazeného okna.
 
-*wParam*  
+*wParam*<br/>
 *Wparam* spojený se zprávou.
 
-*lParam*  
+*lParam*<br/>
 *Lparam* spojený se zprávou.
 
-*pLResult*  
+*pLResult*<br/>
 Ukazatel na hodnotu má být vrácena z nadřazeného objektu proceduru okna. This – ukazatel budou mít hodnotu NULL, pokud je předpokládaná doba žádnou návratovou hodnotu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -6295,10 +6295,10 @@ virtual BOOL OnCommand(
 
 ### <a name="parameters"></a>Parametry
 
-*wParam*  
+*wParam*<br/>
 Nižší řád slova *wParam* identifikuje Identifikátor příkazu položku nabídky, ovládací prvek nebo akcelerátoru. Vyšší řád slova *wParam* Určuje zprávy oznámení, pokud má zpráva z ovládacího prvku. Pokud má zpráva z klávesové zkratky, vyšší řád slova je 1. Pokud má zpráva z nabídky, vyšší řád slova je 0.
 
-*lParam*  
+*lParam*<br/>
 Určuje ovládací prvek, který odešle zprávu, pokud má zpráva z ovládacího prvku. V opačném případě *lParam* je 0.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -6324,7 +6324,7 @@ afx_msg void OnCompacting(UINT nCpuTime);
 
 ### <a name="parameters"></a>Parametry
 
-*nCpuTime*  
+*nCpuTime*<br/>
 Určuje poměr momentálně stráveného Windows komprimaci paměti k času procesoru strávené prováděním dalších operací čas procesoru. Například 8000h představuje 50 procent procesoru čas strávený komprimaci paměti.
 
 ### <a name="remarks"></a>Poznámky
@@ -6348,10 +6348,10 @@ afx_msg int OnCompareItem(
 
 ### <a name="parameters"></a>Parametry
 
-*nIDCtl*  
+*nIDCtl*<br/>
 Identifikátor ovládacího prvku, který odeslal zprávu WM_COMPAREITEM.
 
-*lpCompareItemStruct*  
+*lpCompareItemStruct*<br/>
 Obsahuje dlouhým ukazatelem na [compareitemstruct –](../../mfc/reference/compareitemstruct-structure.md) datová struktura, která obsahuje identifikátory a poskytované aplikací dat pro dvě položky v poli se seznamem nebo seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -6402,10 +6402,10 @@ afx_msg void OnContextMenu(
 
 ### <a name="parameters"></a>Parametry
 
-*pWnd*  
+*pWnd*<br/>
 Popisovač okna, ve kterém klikněte pravým tlačítkem myši uživatel klikl na tlačítko myši. To může být podřízené okno příjem zprávy okna. Další informace o zpracování této zprávy najdete v části poznámky.
 
-*POS*  
+*POS*<br/>
 Klikněte na pozici kurzoru, v souřadnicovém systému obrazovky, v době myši.
 
 ### <a name="remarks"></a>Poznámky
@@ -6426,10 +6426,10 @@ afx_msg BOOL OnCopyData(
 
 ### <a name="parameters"></a>Parametry
 
-*pWnd*  
+*pWnd*<br/>
 Ukazatel `CWnd` objekt, který odesílá data.
 
-*pCopyDataStruct*  
+*pCopyDataStruct*<br/>
 Ukazatel [COPYDATASTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcopydatastruct) strukturu, která obsahuje data odesílají.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -6459,7 +6459,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 
 ### <a name="parameters"></a>Parametry
 
-*lpCreateStruct*  
+*lpCreateStruct*<br/>
 Odkazuje na [soubor CREATESTRUCT](../../mfc/reference/createstruct-structure.md) strukturu, která obsahuje informace o `CWnd` objekt vytváří.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -6490,13 +6490,13 @@ afx_msg HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*  
+*primární řadič domény*<br/>
 Obsahuje ukazatel na kontext zobrazení pro podřízené okno. Může být dočasné.
 
-*pWnd*  
+*pWnd*<br/>
 Obsahuje ukazatel na ovládací prvek s žádostí o barvu. Může být dočasné.
 
-*nCtlColor*  
+*nCtlColor*<br/>
 Obsahuje jednu z následujících hodnot určujících typ ovládacího prvku:
 
 - Ovládací prvek tlačítko CTLCOLOR_BTN
@@ -6547,13 +6547,13 @@ afx_msg void OnDeadChar(
 
 ### <a name="parameters"></a>Parametry
 
-*nChar*  
+*nChar*<br/>
 Určuje hodnotu znaku dead-key.
 
-*nRepCnt*  
+*nRepCnt*<br/>
 Určuje počet opakování.
 
-*nFlags*  
+*nFlags*<br/>
 Určuje kontroly kódu, přechod klíče kódu, předchozí stav klíčů a kód kontextu, jak je znázorněno v následujícím seznamu:
 
 |Hodnota|Popis|
@@ -6591,10 +6591,10 @@ afx_msg void OnDeleteItem(
 
 ### <a name="parameters"></a>Parametry
 
-*nIDCtl*  
+*nIDCtl*<br/>
 Identifikátor ovládacího prvku, který odeslal zprávu WM_DELETEITEM.
 
-*lpDeleteItemStruct*  
+*lpDeleteItemStruct*<br/>
 Určuje dlouhým ukazatelem na [deleteitemstruct –](../../mfc/reference/deleteitemstruct-structure.md) datová struktura, která obsahuje informace o odstraněných položek pole.
 
 ### <a name="remarks"></a>Poznámky
@@ -6640,10 +6640,10 @@ afx_msg BOOL OnDeviceChange(
 
 ### <a name="parameters"></a>Parametry
 
-*nEventType*  
+*nEventType*<br/>
 Typ události. V části poznámky popis dostupné hodnoty
 
-*dwData*  
+*dwData*<br/>
 Adresa struktury, která obsahuje data specifická pro událost. Její význam závisí na danou událost.
 
 ### <a name="remarks"></a>Poznámky
@@ -6683,7 +6683,7 @@ afx_msg void OnDevModeChange(LPTSTR lpDeviceName);
 
 ### <a name="parameters"></a>Parametry
 
-*lpDeviceName*  
+*lpDeviceName*<br/>
 Odkazuje na název zařízení zadané v souboru inicializace Windows, Windows. INI.
 
 ### <a name="remarks"></a>Poznámky
@@ -6724,19 +6724,19 @@ virtual void OnDrawIconicThumbnailOrLivePreview(
 
 ### <a name="parameters"></a>Parametry
 
-*řadič domény*  
+*řadič domény*<br/>
 Určuje kontext zařízení.
 
-*Rect*  
+*Rect*<br/>
 Určuje ohraničující obdélník oblasti pro vykreslení.
 
-*szRequiredThumbnailSize*  
+*szRequiredThumbnailSize*<br/>
 Určuje velikost cílové miniaturu. Pokud je třeba ji ignorovat *bIsThumbnail* je FALSE.
 
-*bIsThumbnail*  
+*bIsThumbnail*<br/>
 Určuje, zda tato metoda je volána pro ikonickým miniaturu nebo za verzi preview (Náhled).
 
-*bAlphaChannelSet*  
+*bAlphaChannelSet*<br/>
 [out] Nastavte na hodnotu TRUE, pokud vaše implementace inicializuje alfa kanál rastrový obrázek vybrané v *dc*.
 
 ### <a name="remarks"></a>Poznámky
@@ -6755,10 +6755,10 @@ afx_msg void OnDrawItem(
 
 ### <a name="parameters"></a>Parametry
 
-*nIDCtl*  
+*nIDCtl*<br/>
 Obsahuje identifikátor ovládacího prvku, který odeslal zprávu WM_DRAWITEM. Pokud tuto zprávu odeslal nabídky *nIDCtl* obsahuje 0.
 
-*lpDrawItemStruct*  
+*lpDrawItemStruct*<br/>
 Určuje dlouhým ukazatelem na `DRAWITEMSTRUCT` datová struktura, která obsahuje informace o položka, která má být vykreslena a typ kresby vyžaduje.
 
 ### <a name="remarks"></a>Poznámky
@@ -6782,7 +6782,7 @@ afx_msg void OnDropFiles(HDROP hDropInfo);
 
 ### <a name="parameters"></a>Parametry
 
-*hDropInfo*  
+*hDropInfo*<br/>
 Ukazatele na strukturu interní data, která popisuje přetažené soubory. Používá tento ovladač `DragFinish`, `DragQueryFile`, a `DragQueryPoint` funkce Windows k načtení informací o přetažené soubory.
 
 ### <a name="remarks"></a>Poznámky
@@ -6802,7 +6802,7 @@ afx_msg void OnEnable(BOOL bEnable);
 
 ### <a name="parameters"></a>Parametry
 
-*bEnable*  
+*bEnable*<br/>
 Určuje, zda `CWnd` objektu má povoleno nebo zakázáno. Tento parametr má hodnotu TRUE, pokud `CWnd` bylo povoleno; je FALSE, pokud `CWnd` byla zakázána.
 
 ### <a name="remarks"></a>Poznámky
@@ -6822,7 +6822,7 @@ afx_msg void OnEndSession(BOOL bEnding);
 
 ### <a name="parameters"></a>Parametry
 
-*Ohyb*  
+*Ohyb*<br/>
 Určuje, zda se ukončení relace. Je hodnota TRUE, pokud se ukončení relace; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
@@ -6848,14 +6848,14 @@ afx_msg void OnEnterIdle(
 
 ### <a name="parameters"></a>Parametry
 
-*nWhy*  
+*nWhy*<br/>
 Určuje, zda zpráva výsledek dialogového okna nebo nabídky zobrazené. Tento parametr může být jeden z následujících hodnot:
 
 - MSGF_DIALOGBOX systému je nečinný, protože se zobrazí dialogové okno.
 
 - MSGF_MENU systému je nečinný, protože se zobrazí nabídka.
 
-*pWho*  
+*pWho*<br/>
 Určuje ukazatel do dialogového okna (Pokud *nWhy* je MSGF_DIALOGBOX), nebo okno, které obsahuje v zobrazené nabídce (Pokud *nWhy* je MSGF_MENU). Tento ukazatel může být dočasné a neměl by být uložen pro pozdější použití.
 
 ### <a name="remarks"></a>Poznámky
@@ -6875,7 +6875,7 @@ afx_msg void OnEnterMenuLoop(BOOL bIsTrackPopupMenu);
 
 ### <a name="parameters"></a>Parametry
 
-*bIsTrackPopupMenu*  
+*bIsTrackPopupMenu*<br/>
 Určuje, zda je v nabídce zahrnutých v místní nabídce. Má nenulovou hodnotu, pokud je funkce úspěšná. jinak 0.
 
 ### <a name="remarks"></a>Poznámky
@@ -6910,7 +6910,7 @@ afx_msg BOOL OnEraseBkgnd(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*  
+*primární řadič domény*<br/>
 Určuje objekt kontextu zařízení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -6942,7 +6942,7 @@ afx_msg void OnExitMenuLoop(BOOL bIsTrackPopupMenu);
 
 ### <a name="parameters"></a>Parametry
 
-*bIsTrackPopupMenu*  
+*bIsTrackPopupMenu*<br/>
 Určuje, zda je zahrnutých v nabídce místní nabídky. Má nenulovou hodnotu, pokud je funkce úspěšná. jinak 0.
 
 ### <a name="remarks"></a>Poznámky
@@ -7031,7 +7031,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO* lpMMI);
 
 ### <a name="parameters"></a>Parametry
 
-*lpMMI*  
+*lpMMI*<br/>
 Odkazuje `MINMAXINFO` strukturu, která obsahuje informace o časové období je maximalizované, velikost a umístění a jeho sledování minimální a maximální velikost. Další informace o této struktuře naleznete v tématu [minmaxinfo –](../../mfc/reference/minmaxinfo-structure.md) struktury.
 
 ### <a name="remarks"></a>Poznámky
@@ -7089,7 +7089,7 @@ afx_msg BOOL OnHelpInfo(HELPINFO* lpHelpInfo);
 
 ### <a name="parameters"></a>Parametry
 
-*lpHelpInfo*  
+*lpHelpInfo*<br/>
 Ukazatel [HELPINFO](/windows/desktop/api/winuser/ns-winuser-taghelpinfo) strukturu, která obsahuje informace o položku nabídky, ovládací prvek, dialogové okno nebo okno, pro kterou je požadována nápovědy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -7151,7 +7151,7 @@ afx_msg void OnHScroll(
 
 ### <a name="parameters"></a>Parametry
 
-*nSBCode*  
+*nSBCode*<br/>
 Určuje, že kód posuvníku, která označuje, že uživatel je posouvání požadavku. Tento parametr může být jeden z následujících akcí:
 
 - SB_LEFT posuňte se úplně vlevo.
@@ -7172,10 +7172,10 @@ Určuje, že kód posuvníku, která označuje, že uživatel je posouvání po�
 
 - Přetáhněte SB_THUMBTRACK posuvníku na určené pozici. Je určená aktuální pozice *nPos* parametru.
 
-*nPos –*  
+*nPos –*<br/>
 Určuje pozici posuvníku, pokud je kód posuvníku SB_THUMBPOSITION nebo SB_THUMBTRACK; v opačném případě se nepoužívá. V závislosti na rozsahu počáteční posuvníku *nPos* může být záporný a by měl být přetypovat na **int** v případě potřeby.
 
-*pScrollBar*  
+*pScrollBar*<br/>
 Pokud se posouvání zpráva byla přijata z ovládacího prvku posuvníku, obsahuje ukazatel na ovládací prvek. Pokud uživatel klikne okno posuvníku, tento parametr má hodnotu NULL. Ukazatel může být dočasné a neměl by být uložen pro pozdější použití.
 
 ### <a name="remarks"></a>Poznámky
@@ -7204,10 +7204,10 @@ afx_msg void OnHScrollClipboard(
 
 ### <a name="parameters"></a>Parametry
 
-*pClipAppWnd*  
+*pClipAppWnd*<br/>
 Určuje ukazatel na okno Prohlížeč schránky. Ukazatel může být dočasné a neměl by být uložen pro pozdější použití.
 
-*nSBCode*  
+*nSBCode*<br/>
 Určuje jeden z následujících posuvníku kódů v nižší řád slova:
 
 - SB_BOTTOM přejít do pravého dolního rohu.
@@ -7226,7 +7226,7 @@ Určuje jeden z následujících posuvníku kódů v nižší řád slova:
 
 - Posuňte se SB_TOP vlevo nahoře.
 
-*nPos –*  
+*nPos –*<br/>
 Obsahuje pozice posuvníku – Pokud je kód posuvníku SB_THUMBPOSITION; v opačném případě se nepoužívá.
 
 ### <a name="remarks"></a>Poznámky
@@ -7246,7 +7246,7 @@ afx_msg void OnIconEraseBkgnd(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*  
+*primární řadič domény*<br/>
 Určuje objekt kontextu zařízení ikony. Může být dočasné a neměl by být uložen pro pozdější použití.
 
 ### <a name="remarks"></a>Poznámky
@@ -7268,7 +7268,7 @@ afx_msg void OnInitMenu(CMenu* pMenu);
 
 ### <a name="parameters"></a>Parametry
 
-*pMenu*  
+*pMenu*<br/>
 Určuje nabídku, která má být inicializován. Může být dočasné a neměl by být uložen pro pozdější použití.
 
 ### <a name="remarks"></a>Poznámky
@@ -7293,13 +7293,13 @@ afx_msg void OnInitMenuPopup(
 
 ### <a name="parameters"></a>Parametry
 
-*pPopupMenu*  
+*pPopupMenu*<br/>
 Určuje objekt nabídky rozbalovací nabídky. Může být dočasné a neměl by být uložen pro pozdější použití.
 
-*nIndex*  
+*nIndex*<br/>
 Určuje index místní nabídky v hlavní nabídce.
 
-*bSysMenu*  
+*bSysMenu*<br/>
 TRUE, pokud je rozbalovací nabídky ovládací prvek nabídky; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
@@ -7391,13 +7391,13 @@ afx_msg void OnKeyDown(
 
 ### <a name="parameters"></a>Parametry
 
-*nChar*  
+*nChar*<br/>
 Určuje virtuální kód zadaný klíč. Seznam kódů standardní virtuální klíče najdete v tématu winuser
 
-*nRepCnt*  
+*nRepCnt*<br/>
 (Počet pokusů, které stisknutí klávesy se opakuje v důsledku uživatele podržíte klávesu) počet opakování.
 
-*nFlags*  
+*nFlags*<br/>
 Určuje kontroly kódu, přechod klíče kódu, předchozí stav klíčů a kód kontextu, jak je znázorněno v následujícím seznamu:
 
 |Hodnota|Popis|
@@ -7436,13 +7436,13 @@ afx_msg void OnKeyUp(
 
 ### <a name="parameters"></a>Parametry
 
-*nChar*  
+*nChar*<br/>
 Určuje virtuální kód zadaný klíč. Seznam kódů standardní virtuální klíče najdete v tématu winuser
 
-*nRepCnt*  
+*nRepCnt*<br/>
 (Počet pokusů, které stisknutí klávesy se opakuje v důsledku uživatele podržíte klávesu) počet opakování.
 
-*nFlags*  
+*nFlags*<br/>
 Určuje kontroly kódu, přechod klíče kódu, předchozí stav klíčů a kód kontextu, jak je znázorněno v následujícím seznamu:
 
 |Hodnota|Popis|
@@ -7476,7 +7476,7 @@ afx_msg void OnKillFocus(CWnd* pNewWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*pNewWnd*  
+*pNewWnd*<br/>
 Určuje ukazatel na okno, který přijme zaměření pro vstup (může mít hodnotu NULL nebo může být dočasné).
 
 ### <a name="remarks"></a>Poznámky
@@ -7498,7 +7498,7 @@ afx_msg void OnLButtonDblClk(
 
 ### <a name="parameters"></a>Parametry
 
-*nFlags*  
+*nFlags*<br/>
 Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může být libovolnou kombinací těchto hodnot:
 
 - MK_CONTROL nastavte, pokud nepracuje klávesu CTRL.
@@ -7511,7 +7511,7 @@ Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může b�
 
 - MK_SHIFT nastavte, pokud klávesy SHIFT je mimo provoz.
 
-*Bod*  
+*Bod*<br/>
 Určuje x a y souřadnici kurzoru. Tyto souřadnice jsou vždy relativní k levém horním rohu okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -7533,7 +7533,7 @@ afx_msg void OnLButtonDown(
 
 ### <a name="parameters"></a>Parametry
 
-*nFlags*  
+*nFlags*<br/>
 Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může být libovolnou kombinací těchto hodnot:
 
 - MK_CONTROL nastavte, pokud nepracuje klávesu CTRL.
@@ -7546,7 +7546,7 @@ Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může b�
 
 - MK_SHIFT nastavte, pokud klávesy SHIFT je mimo provoz.
 
-*Bod*  
+*Bod*<br/>
 Určuje x a y souřadnici kurzoru. Tyto souřadnice jsou vždy relativní k levém horním rohu okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -7566,7 +7566,7 @@ afx_msg void OnLButtonUp(
 
 ### <a name="parameters"></a>Parametry
 
-*nFlags*  
+*nFlags*<br/>
 Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může být libovolnou kombinací těchto hodnot:
 
 - MK_CONTROL nastavte, pokud nepracuje klávesu CTRL.
@@ -7577,7 +7577,7 @@ Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může b�
 
 - MK_SHIFT nastavte, pokud klávesy SHIFT je mimo provoz.
 
-*Bod*  
+*Bod*<br/>
 Určuje x a y souřadnici kurzoru. Tyto souřadnice jsou vždy relativní k levém horním rohu okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -7597,7 +7597,7 @@ afx_msg void OnMButtonDblClk(
 
 ### <a name="parameters"></a>Parametry
 
-*nFlags*  
+*nFlags*<br/>
 Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může být libovolnou kombinací těchto hodnot:
 
 - MK_CONTROL nastavte, pokud nepracuje klávesu CTRL.
@@ -7610,7 +7610,7 @@ Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může b�
 
 - MK_SHIFT nastavte, pokud klávesy SHIFT je mimo provoz.
 
-*Bod*  
+*Bod*<br/>
 Určuje x a y souřadnici kurzoru. Tyto souřadnice jsou vždy relativní k levém horním rohu okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -7632,7 +7632,7 @@ afx_msg void OnMButtonDown(
 
 ### <a name="parameters"></a>Parametry
 
-*nFlags*  
+*nFlags*<br/>
 Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může být libovolnou kombinací těchto hodnot:
 
 - MK_CONTROL nastavte, pokud nepracuje klávesu CTRL.
@@ -7645,7 +7645,7 @@ Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může b�
 
 - MK_SHIFT nastavte, pokud klávesy SHIFT je mimo provoz.
 
-*Bod*  
+*Bod*<br/>
 Určuje x a y souřadnici kurzoru. Tyto souřadnice jsou vždy relativní k levém horním rohu okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -7665,7 +7665,7 @@ afx_msg void OnMButtonUp(
 
 ### <a name="parameters"></a>Parametry
 
-*nFlags*  
+*nFlags*<br/>
 Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může být libovolnou kombinací těchto hodnot:
 
 - MK_CONTROL nastavte, pokud nepracuje klávesu CTRL.
@@ -7676,7 +7676,7 @@ Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může b�
 
 - MK_SHIFT nastavte, pokud klávesy SHIFT je mimo provoz.
 
-*Bod*  
+*Bod*<br/>
 Určuje x a y souřadnici kurzoru. Tyto souřadnice jsou vždy relativní k levém horním rohu okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -7697,13 +7697,13 @@ afx_msg void OnMDIActivate(
 
 ### <a name="parameters"></a>Parametry
 
-*bActivate*  
+*bActivate*<br/>
 TRUE, pokud podřízený je právě aktivována a hodnotu FALSE, pokud je právě deaktivována.
 
-*pActivateWnd*  
+*pActivateWnd*<br/>
 Obsahuje ukazatel na podřízené okno MDI aktivaci. Když přijal podřízené okno MDI *pActivateWnd* obsahuje ukazatel na podřízené okno, které je aktivováno. Tento ukazatel může být dočasné a neměl by být uložen pro pozdější použití.
 
-*pDeactivateWnd*  
+*pDeactivateWnd*<br/>
 Obsahuje ukazatel na podřízené okno MDI právě deaktivována. Tento ukazatel může být dočasné a neměl by být uložen pro pozdější použití.
 
 ### <a name="remarks"></a>Poznámky
@@ -7724,10 +7724,10 @@ afx_msg void OnMeasureItem(
 
 ### <a name="parameters"></a>Parametry
 
-*nIDCtl*  
+*nIDCtl*<br/>
 ID ovládacího prvku.
 
-*lpMeasureItemStruct*  
+*lpMeasureItemStruct*<br/>
 Odkazuje [measureitemstruct –](../../mfc/reference/measureitemstruct-structure.md) datová struktura, která obsahuje dimenze ovládacím prvku vykresleném vlastníkem.
 
 ### <a name="remarks"></a>Poznámky
@@ -7758,13 +7758,13 @@ afx_msg LRESULT OnMenuChar(
 
 ### <a name="parameters"></a>Parametry
 
-*nChar*  
+*nChar*<br/>
 V závislosti na nastavení sestavení určuje ANSI nebo Unicode znak, který uživatel stiskl.
 
-*nFlags*  
+*nFlags*<br/>
 Obsahuje příznak MF_POPUP, pokud se nabídka rozbalovací nabídky. Pokud se nabídka ovládacího prvku nabídka obsahuje příznak MF_SYSMENU.
 
-*pMenu*  
+*pMenu*<br/>
 Obsahuje ukazatel na vybrané `CMenu`. Ukazatel může být dočasné a neměl by být uložen.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -7882,10 +7882,10 @@ afx_msg void OnMenuSelect(
 
 ### <a name="parameters"></a>Parametry
 
-*nItemID*  
+*nItemID*<br/>
 Identifikuje zvolené položky. Pokud je vybraná položka položku nabídky *nItemID* obsahuje ID položky nabídky. Pokud je vybraná položka obsahuje místní nabídku, *nItemID* obsahuje index rozbalovací nabídky a *hSysMenu* obsahuje popisovač hlavní nabídka (kliknutí na).
 
-*nFlags*  
+*nFlags*<br/>
 Obsahuje kombinaci následující příznaky nabídky:
 
 - Položka MF_BITMAP je rastrový obrázek.
@@ -7906,7 +7906,7 @@ Obsahuje kombinaci následující příznaky nabídky:
 
 - Položka MF_SYSMENU je obsažena v nabídce ovládacích prvků.
 
-*hSysMenu*  
+*hSysMenu*<br/>
 Pokud *nFlags* obsahuje MF_SYSMENU, identifikuje nabídky spojené s touto zprávou. Pokud *nFlags* obsahuje MF_POPUP, identifikuje popisovač v hlavní nabídce. Pokud *nFlags* obsahuje MF_SYSMENU ani MF_POPUP, se nepoužívá.
 
 ### <a name="remarks"></a>Poznámky
@@ -7929,13 +7929,13 @@ afx_msg int OnMouseActivate(
 
 ### <a name="parameters"></a>Parametry
 
-*pDesktopWnd*  
+*pDesktopWnd*<br/>
 Určuje ukazatel na nejvyšší úrovni nadřazené okno okna aktivuje. Ukazatel může být dočasné a neměl by být uložen.
 
-*nHitTest*  
+*nHitTest*<br/>
 Určuje, [spuštění testu](#onnchittest) předčíslí. Ověření pozice je test, který určuje umístění kurzoru.
 
-*message*  
+*message*<br/>
 Určuje číslo zprávy myši.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -8052,7 +8052,7 @@ afx_msg void OnMouseMove(
 
 ### <a name="parameters"></a>Parametry
 
-*nFlags*  
+*nFlags*<br/>
 Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může být libovolnou kombinací těchto hodnot:
 
 - MK_CONTROL nastavte, pokud nepracuje klávesu CTRL.
@@ -8065,7 +8065,7 @@ Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může b�
 
 - MK_SHIFT nastavte, pokud klávesy SHIFT je mimo provoz.
 
-*Bod*  
+*Bod*<br/>
 Určuje x a y souřadnici kurzoru. Tyto souřadnice jsou vždy relativní k levém horním rohu okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -8088,7 +8088,7 @@ afx_msg BOOL OnMouseWheel(
 
 ### <a name="parameters"></a>Parametry
 
-*nFlags*  
+*nFlags*<br/>
 Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může být libovolnou kombinací těchto hodnot:
 
 - MK_CONTROL nastavte, pokud nepracuje klávesu CTRL.
@@ -8101,10 +8101,10 @@ Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může b�
 
 - MK_SHIFT nastavte, pokud klávesy SHIFT je mimo provoz.
 
-*zDelta*  
+*zDelta*<br/>
 Určuje vzdálenost otočen. *ZDelta* hodnota je vyjádřena v násobky nebo divize WHEEL_DELTA, což je 120. Hodnotu menší než nula znamená otáčení zpět (směrem k uživateli) při hodnotu větší než nula znamená otáčení vpřed (od uživatele). Uživatel může vrátit tuto odpověď změnou nastavení kolečko myši softwaru. Viz poznámky pro další informace o tomto parametru.
 
-*PT*  
+*PT*<br/>
 Určuje x a y souřadnici kurzoru. Tyto souřadnice jsou vždy relativní k levého horního rohu obrazovky.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -8136,10 +8136,10 @@ afx_msg void OnMove(
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 Určuje nové umístění souřadnice x levého horního rohu oblasti klienta. Toto nové umístění je uveden v souřadnicovém systému obrazovky pro překrývající a automaticky otevíraná okna a nadřazené klienta souřadnice pro podřízená okna.
 
-*y*  
+*y*<br/>
 Určuje nové umístění, souřadnice y levého horního rohu oblasti klienta. Toto nové umístění je uveden v souřadnicovém systému obrazovky pro překrývající a automaticky otevíraná okna a nadřazené klienta souřadnice pro podřízená okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -8159,10 +8159,10 @@ afx_msg void OnMoving(
 
 ### <a name="parameters"></a>Parametry
 
-*nSide*  
+*nSide*<br/>
 K okraji okna přesunout.
 
-*lprect –*  
+*lprect –*<br/>
 Adresa [crect –](../../atl-mfc-shared/reference/crect-class.md) nebo [Rect – struktura](../../mfc/reference/rect-structure1.md) , která bude obsahovat souřadnice položky.
 
 ### <a name="remarks"></a>Poznámky
@@ -8180,7 +8180,7 @@ afx_msg BOOL OnNcActivate(BOOL bActive);
 
 ### <a name="parameters"></a>Parametry
 
-*bActive*  
+*bActive*<br/>
 Určuje, kdy záhlaví nebo ikonu potřeba změnit k označení stavu aktivní nebo neaktivní. *BActive* parametr má hodnotu TRUE, pokud aktivní popisek nebo ikonu je potřeba vykreslit. Hodnotu FALSE pro neaktivní popisek nebo ikonu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -8206,10 +8206,10 @@ afx_msg void OnNcCalcSize(
 
 ### <a name="parameters"></a>Parametry
 
-*bCalcValidRects*  
+*bCalcValidRects*<br/>
 Určuje, jestli aplikace měla určit, kterou část oblasti klienta obsahuje platné informace. Windows zkopíruje do zadané oblasti v rámci nové klientské oblasti platné informace. Pokud tento parametr má hodnotu TRUE, aplikace by měl určit, kterou část oblasti klienta je platný.
 
-*lpncsp*  
+*lpncsp*<br/>
 Odkazuje [nccalcsize_params –](../../mfc/reference/nccalcsize-params-structure.md) datová struktura, která obsahuje informace o aplikaci můžete použít k výpočtu novou velikost a umístění `CWnd` obdélník (včetně klientské oblasti, ohraničení, titulků, posuvníky a tak dále) .
 
 ### <a name="remarks"></a>Poznámky
@@ -8235,7 +8235,7 @@ afx_msg BOOL OnNcCreate(LPCREATESTRUCT lpCreateStruct);
 
 ### <a name="parameters"></a>Parametry
 
-*lpCreateStruct*  
+*lpCreateStruct*<br/>
 Odkazuje [soubor CREATESTRUCT](../../mfc/reference/createstruct-structure.md) datové struktury pro `CWnd`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -8271,7 +8271,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*  
+*Bod*<br/>
 Obsahuje souřadnic x a y-kurzoru. Tyto souřadnice jsou vždy souřadnice obrazovky.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -8295,10 +8295,10 @@ afx_msg void OnNcLButtonDblClk(
 
 ### <a name="parameters"></a>Parametry
 
-*nHitTest*  
+*nHitTest*<br/>
 Určuje, [kód pro spuštění testu](#onnchittest). Ověření pozice je test, který určuje umístění kurzoru.
 
-*Bod*  
+*Bod*<br/>
 Určuje `CPoint` objekt, který obsahuje x a y pozice kurzoru souřadnice obrazovky. Tyto souřadnice jsou vždy relativní k levého horního rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
@@ -8320,10 +8320,10 @@ afx_msg void OnNcLButtonDown(
 
 ### <a name="parameters"></a>Parametry
 
-*nHitTest*  
+*nHitTest*<br/>
 Určuje, [kód pro spuštění testu](#onnchittest). Ověření pozice je test, který určuje umístění kurzoru.
 
-*Bod*  
+*Bod*<br/>
 Určuje `CPoint` objekt, který obsahuje x a y pozice kurzoru souřadnice obrazovky. Tyto souřadnice jsou vždy relativní k levého horního rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
@@ -8345,10 +8345,10 @@ afx_msg void OnNcLButtonUp(
 
 ### <a name="parameters"></a>Parametry
 
-*nHitTest*  
+*nHitTest*<br/>
 Určuje, [kód pro spuštění testu](#onnchittest). Ověření pozice je test, který určuje umístění kurzoru.
 
-*Bod*  
+*Bod*<br/>
 Určuje `CPoint` objekt, který obsahuje x a y pozice kurzoru souřadnice obrazovky. Tyto souřadnice jsou vždy relativní k levého horního rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
@@ -8370,10 +8370,10 @@ afx_msg void OnNcMButtonDblClk(
 
 ### <a name="parameters"></a>Parametry
 
-*nHitTest*  
+*nHitTest*<br/>
 Určuje, [kód pro spuštění testu](#onnchittest). Ověření pozice je test, který určuje umístění kurzoru.
 
-*Bod*  
+*Bod*<br/>
 Určuje `CPoint` objekt, který obsahuje x a y pozice kurzoru souřadnice obrazovky. Tyto souřadnice jsou vždy relativní k levého horního rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
@@ -8393,10 +8393,10 @@ afx_msg void OnNcMButtonDown(
 
 ### <a name="parameters"></a>Parametry
 
-*nHitTest*  
+*nHitTest*<br/>
 Určuje, [kód pro spuštění testu](#onnchittest). Ověření pozice je test, který určuje umístění kurzoru.
 
-*Bod*  
+*Bod*<br/>
 Určuje `CPoint` objekt, který obsahuje x a y pozice kurzoru souřadnice obrazovky. Tyto souřadnice jsou vždy relativní k levého horního rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
@@ -8416,10 +8416,10 @@ afx_msg void OnNcMButtonUp(
 
 ### <a name="parameters"></a>Parametry
 
-*nHitTest*  
+*nHitTest*<br/>
 Určuje, [kód pro spuštění testu](#onnchittest). Ověření pozice je test, který určuje umístění kurzoru.
 
-*Bod*  
+*Bod*<br/>
 Určuje `CPoint` objekt, který obsahuje x a y pozice kurzoru souřadnice obrazovky. Tyto souřadnice jsou vždy relativní k levého horního rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
@@ -8478,10 +8478,10 @@ afx_msg void OnNcMouseMove(
 
 ### <a name="parameters"></a>Parametry
 
-*nHitTest*  
+*nHitTest*<br/>
 Určuje, [kód pro spuštění testu](#onnchittest). Ověření pozice je test, který určuje umístění kurzoru.
 
-*Bod*  
+*Bod*<br/>
 Určuje `CPoint` objekt, který obsahuje x a y pozice kurzoru souřadnice obrazovky. Tyto souřadnice jsou vždy relativní k levého horního rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
@@ -8517,10 +8517,10 @@ afx_msg void OnNcRButtonDblClk(
 
 ### <a name="parameters"></a>Parametry
 
-*nHitTest*  
+*nHitTest*<br/>
 Určuje, [kód pro spuštění testu](#onnchittest). Ověření pozice je test, který určuje umístění kurzoru.
 
-*Bod*  
+*Bod*<br/>
 Určuje `CPoint` objekt, který obsahuje x a y pozice kurzoru souřadnice obrazovky. Tyto souřadnice jsou vždy relativní k levého horního rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
@@ -8540,10 +8540,10 @@ afx_msg void OnNcRButtonDown(
 
 ### <a name="parameters"></a>Parametry
 
-*nHitTest*  
+*nHitTest*<br/>
 Určuje, [kód pro spuštění testu](#onnchittest). Ověření pozice je test, který určuje umístění kurzoru.
 
-*Bod*  
+*Bod*<br/>
 Určuje `CPoint` objekt, který obsahuje x a y pozice kurzoru souřadnice obrazovky. Tyto souřadnice jsou vždy relativní k levého horního rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
@@ -8563,10 +8563,10 @@ afx_msg void OnNcRButtonUp(
 
 ### <a name="parameters"></a>Parametry
 
-*nHitTest*  
+*nHitTest*<br/>
 Určuje, [kód pro spuštění testu](#onnchittest). Ověření pozice je test, který určuje umístění kurzoru.
 
-*Bod*  
+*Bod*<br/>
 Určuje `CPoint` objekt, který obsahuje x a y pozice kurzoru souřadnice obrazovky. Tyto souřadnice jsou vždy relativní k levého horního rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
@@ -8710,13 +8710,13 @@ virtual BOOL OnNotify(
 
 ### <a name="parameters"></a>Parametry
 
-*wParam*  
+*wParam*<br/>
 Určuje ovládací prvek, který odešle zprávu, pokud má zpráva z ovládacího prvku. V opačném případě *wParam* je 0.
 
-*lParam*  
+*lParam*<br/>
 Ukazatel na zprávu s oznámením (`NMHDR`) strukturu, která obsahuje kód upozornění a další informace. Pro některé zpráv s oznámením, tento parametr odkazuje na větší struktury, která má `NMHDR` strukturu jako jeho prvním členem.
 
-*pResult*  
+*pResult*<br/>
 Ukazatel na proměnnou LRESULT pro uložení kód výsledku, pokud se zpracovává zprávy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -8801,10 +8801,10 @@ afx_msg void OnPaintClipboard(
 
 ### <a name="parameters"></a>Parametry
 
-*pClipAppWnd*  
+*pClipAppWnd*<br/>
 Určuje ukazatel na okno aplikace schránky. Ukazatel může být dočasné a neměl by být uložen pro pozdější použití.
 
-*hPaintStruct*  
+*hPaintStruct*<br/>
 Identifikuje [paintstruct –](../../mfc/reference/paintstruct-structure.md) datová struktura, která definuje, jaká část oblasti klienta k vykreslení.
 
 ### <a name="remarks"></a>Poznámky
@@ -8826,7 +8826,7 @@ afx_msg void OnPaletteChanged(CWnd* pFocusWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*pFocusWnd*  
+*pFocusWnd*<br/>
 Určuje ukazatel do okna, která způsobila systémové palety, chcete-li změnit. Ukazatel může být dočasné a neměl by být uložen.
 
 ### <a name="remarks"></a>Poznámky
@@ -8850,7 +8850,7 @@ afx_msg void OnPaletteIsChanging(CWnd* pRealizeWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*pRealizeWnd*  
+*pRealizeWnd*<br/>
 Určuje okna, které se chystáte realizovat svoji logickou paletu.
 
 ### <a name="remarks"></a>Poznámky
@@ -8869,7 +8869,7 @@ afx_msg void OnParentNotify(
 
 ### <a name="parameters"></a>Parametry
 
-*message*  
+*message*<br/>
 Určuje událost, pro který obdrží oznámení nadřazený a identifikátor podřízené okno. Událost je nižší řád slova *zpráva*. Pokud je událost WM_CREATE nebo WM_DESTROY, vyšší řád slova *zpráva* je identifikátor podřízené okno; v opačném případě není definováno vyšší řád slova. Události (nižší řád slova *zpráva*) může být kterýkoli z těchto hodnot:
 
 - Vytváří se WM_CREATE podřízené okno.
@@ -8882,7 +8882,7 @@ Určuje událost, pro který obdrží oznámení nadřazený a identifikátor po
 
 - WM_RBUTTONDOWN uživatel má umístění ukazatele myši nad podřízené okno a klikli pravým tlačítkem myši.
 
-*lParam*  
+*lParam*<br/>
 Pokud událost (nižší řád slova) *zpráva* WM_CREATE nebo WM_DESTROY, *lParam* Určuje popisovač okna podřízeného okna. v opačném *lParam* obsahuje x a y souřadnice kurzor. Souřadnice x je v nižší řád slova a souřadnice y v vyšší řád slova.
 
 ### <a name="remarks"></a>Poznámky
@@ -9044,7 +9044,7 @@ afx_msg void OnRButtonDblClk(
 
 ### <a name="parameters"></a>Parametry
 
-*nFlags*  
+*nFlags*<br/>
 Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může být libovolnou kombinací těchto hodnot:
 
 - MK_CONTROL nastavte, pokud klávesy CTRL je mimo provoz.
@@ -9057,7 +9057,7 @@ Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může b�
 
 - MK_SHIFT nastavte, pokud klávesy SHIFT je mimo provoz.
 
-*Bod*  
+*Bod*<br/>
 Určuje x a y souřadnice kurzoru. Tyto souřadnice jsou vždy relativní k levém horním rohu okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -9079,7 +9079,7 @@ afx_msg void OnRButtonDown(
 
 ### <a name="parameters"></a>Parametry
 
-*nFlags*  
+*nFlags*<br/>
 Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může být libovolnou kombinací těchto hodnot:
 
 - MK_CONTROL nastavte, pokud klávesy CTRL je mimo provoz.
@@ -9092,7 +9092,7 @@ Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může b�
 
 - MK_SHIFT nastavte, pokud klávesy SHIFT je mimo provoz.
 
-*Bod*  
+*Bod*<br/>
 Určuje x a y souřadnice kurzoru. Tyto souřadnice jsou vždy relativní k levém horním rohu okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -9111,7 +9111,7 @@ afx_msg void OnRButtonUp(
 
 ### <a name="parameters"></a>Parametry
 
-*nFlags*  
+*nFlags*<br/>
 Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může být libovolnou kombinací těchto hodnot:
 
 - MK_CONTROL nastavte, pokud klávesy CTRL je mimo provoz.
@@ -9122,7 +9122,7 @@ Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může b�
 
 - MK_SHIFT nastavte, pokud klávesy SHIFT je mimo provoz.
 
-*Bod*  
+*Bod*<br/>
 Určuje x a y souřadnice kurzoru. Tyto souřadnice jsou vždy relativní k levém horním rohu okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -9141,10 +9141,10 @@ afx_msg LRESULT OnRegisteredMouseWheel(
 
 ### <a name="parameters"></a>Parametry
 
-*wParam*  
+*wParam*<br/>
 Vodorovná pozice ukazatele.
 
-*lParam*  
+*lParam*<br/>
 Svislá pozice ukazatele.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -9182,7 +9182,7 @@ afx_msg void OnRenderFormat(UINT nFormat);
 
 ### <a name="parameters"></a>Parametry
 
-*nFormat*  
+*nFormat*<br/>
 Určuje formát schránky.
 
 ### <a name="remarks"></a>Poznámky
@@ -9233,13 +9233,13 @@ afx_msg BOOL OnSetCursor(
 
 ### <a name="parameters"></a>Parametry
 
-*pWnd*  
+*pWnd*<br/>
 Určuje ukazatel na okno, obsahující kurzor. Ukazatel může být dočasné a neměl by být uložen pro pozdější použití.
 
-*nHitTest*  
+*nHitTest*<br/>
 Určuje, [spuštění testu](#onnchittest) předčíslí. Průchodů testů Určuje umístění kurzoru.
 
-*message*  
+*message*<br/>
 Určuje číslo zprávy myši.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -9269,7 +9269,7 @@ afx_msg void OnSetFocus(CWnd* pOldWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*pOldWnd*  
+*pOldWnd*<br/>
 Obsahuje `CWnd` objekt, který ztratí vstupní fokus (může mít hodnotu NULL). Ukazatel může být dočasné a neměl by být uložen pro pozdější použití.
 
 ### <a name="remarks"></a>Poznámky
@@ -9291,10 +9291,10 @@ afx_msg void OnSettingChange(
 
 ### <a name="parameters"></a>Parametry
 
-*uFlags*  
+*uFlags*<br/>
 Když systém odešle zprávu kvůli `SystemParametersInfo` volání, tento parametr je příznak, který určuje parametr systému, která byla změněna. Seznam hodnot najdete v tématu [SystemParametersInfo](https://msdn.microsoft.com/library/windows/desktop/ms724947) v sadě Windows SDK. Když aplikace odešle zprávu, tento parametr musí být 0.
 
-*lpszSection*  
+*lpszSection*<br/>
 Odkazuje na řetězec určující název oddílu, který se změnil. (Řetězec hranaté závorky, uzavřete název oddílu, který nezahrnuje.)
 
 ### <a name="remarks"></a>Poznámky
@@ -9303,9 +9303,9 @@ Aplikace by měli poslat zprávy se všem oknům nejvyšší úrovně, když zm�
 
 Zpráva ON_WM_SETTINGCHANGE je podobný zprávě ON_WM_WININICHANGE, s následující rozdíly:
 
--   Použijte ON_WM_SETTINGCHANGE při spuštění systému Windows NT 4.0 nebo novější, nebo v rámci Windows 95/98.
+- Použijte ON_WM_SETTINGCHANGE při spuštění systému Windows NT 4.0 nebo novější, nebo v rámci Windows 95/98.
 
--   Používejte ON_WININICHANGE systémem Windows NT 3.51, aktualizace nebo starší. Tato zpráva je nyní zastaralá.
+- Používejte ON_WININICHANGE systémem Windows NT 3.51, aktualizace nebo starší. Tato zpráva je nyní zastaralá.
 
 Byste měli mít jenom jednu z těchto maker v mapě zpráv. Napište program, který se dá použít pro Windows 95/98 a Windows NT 4.0, napíšeme obslužnou rutinu pro ON_WM_SETTINGCHANGE. V části Windows NT 3.51, aktualizace, vaše obslužná rutina zavolá `OnSettingChange` a *uFlags* a bude vždy nula.
 
@@ -9321,10 +9321,10 @@ afx_msg void OnShowWindow(
 
 ### <a name="parameters"></a>Parametry
 
-*bShow*  
+*bShow*<br/>
 Určuje, zda je zobrazeno okno. Je hodnota TRUE, pokud se zobrazuje v okně; Pokud okno se skrývá je FALSE.
 
-*nStatus*  
+*nStatus*<br/>
 Určuje stav okno zobrazeno. Je 0, pokud je zpráva odeslána z důvodu `ShowWindow` volání členské funkce; v opačném případě *nStatus* je jedním z následujících akcí:
 
 - Při zavírání okna SW_PARENTCLOSING nadřazené (odeslaná ikonickým) nebo automaticky otevírané okno se skrývá.
@@ -9351,7 +9351,7 @@ afx_msg void OnSize(
 
 ### <a name="parameters"></a>Parametry
 
-*nTyp*  
+*nTyp*<br/>
 Určuje typ změny velikosti požadovaný. Tento parametr může být jeden z následujících hodnot:
 
 - Okno SIZE_MAXIMIZED byla maximalizované.
@@ -9364,10 +9364,10 @@ Určuje typ změny velikosti požadovaný. Tento parametr může být jeden z n�
 
 - Všechny automaticky otevíraná okna je odeslána zpráva SIZE_MAXSHOW, když některá okna se obnovila na původní velikost.
 
-*CX*  
+*CX*<br/>
 Určuje šířku nové klientské oblasti.
 
-*CY*  
+*CY*<br/>
 Určuje výšku nové klientské oblasti.
 
 ### <a name="remarks"></a>Poznámky
@@ -9393,10 +9393,10 @@ afx_msg void OnSizeClipboard(
 
 ### <a name="parameters"></a>Parametry
 
-*pClipAppWnd*  
+*pClipAppWnd*<br/>
 Identifikuje okna aplikace schránky. Ukazatel může být dočasné a neměl by být uložen.
 
-*hRect*  
+*hRect*<br/>
 Určuje objekt globální paměti. Objekt paměti obsahuje RECT datová struktura, která určuje oblast pro vlastník schránky k vykreslení.
 
 ### <a name="remarks"></a>Poznámky
@@ -9420,10 +9420,10 @@ afx_msg void OnSizing(
 
 ### <a name="parameters"></a>Parametry
 
-*nSide*  
+*nSide*<br/>
 K okraji okna přesunout.
 
-*lprect –*  
+*lprect –*<br/>
 Adresa [crect –](../../atl-mfc-shared/reference/crect-class.md) nebo [Rect – struktura](../../mfc/reference/rect-structure1.md) , která bude obsahovat souřadnice položky.
 
 ### <a name="remarks"></a>Poznámky
@@ -9449,10 +9449,10 @@ afx_msg void OnSpoolerStatus(
 
 ### <a name="parameters"></a>Parametry
 
-*nStatus*  
+*nStatus*<br/>
 Určuje příznak SP_JOBSTATUS.
 
-*nJobs*  
+*nJobs*<br/>
 Určuje počet úloh ve frontě správce tisku zbývá.
 
 ### <a name="remarks"></a>Poznámky
@@ -9474,14 +9474,14 @@ afx_msg void OnStyleChanged(
 
 ### <a name="parameters"></a>Parametry
 
-*nStyleType*  
+*nStyleType*<br/>
 Určuje, zda v okně Rozšířené nebo aktivované styly změnily. Tento parametr může být kombinací následujícího:
 
 - Rozšířené styly oken na GWL_EXSTYLE byly změněny.
 
 - GWL_STYLE v okně aktivované styly změnily.
 
-*lpStyleStruct*  
+*lpStyleStruct*<br/>
 Odkazuje [STYLESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632607) strukturu, která obsahuje nové styly okna. Aplikace můžete zkontrolovat styly, ale nedá se změnit jejich.
 
 ### <a name="remarks"></a>Poznámky
@@ -9501,14 +9501,14 @@ afx_msg void OnStyleChanging(
 
 ### <a name="parameters"></a>Parametry
 
-*nStyleType*  
+*nStyleType*<br/>
 Určuje, zda v okně Rozšířené nebo aktivované styly změnily. Tento parametr může být kombinací následujícího:
 
 - Rozšířené styly oken na GWL_EXSTYLE byly změněny.
 
 - GWL_STYLE v okně aktivované styly změnily.
 
-*lpStyleStruct*  
+*lpStyleStruct*<br/>
 Odkazuje [STYLESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632607) strukturu, která obsahuje nové styly okna. Aplikace může zkoumat stylů a měnit.
 
 ### <a name="remarks"></a>Poznámky
@@ -9529,13 +9529,13 @@ afx_msg void OnSysChar(
 
 ### <a name="parameters"></a>Parametry
 
-*nChar*  
+*nChar*<br/>
 Určuje znak ASCII kód ovládacího prvku nabídka key.
 
-*nRepCnt*  
+*nRepCnt*<br/>
 Určuje počet opakování (počet pokusů, které stisknutí klávesy se opakuje v důsledku uživatele podržíte klávesu).
 
-*nFlags*  
+*nFlags*<br/>
 *NFlags* parametr může mít tyto hodnoty:
 
 |Hodnota|Význam|
@@ -9585,7 +9585,7 @@ afx_msg void OnSysCommand(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*  
+*nID*<br/>
 Určuje typ požadovaný příkaz systému. Tento parametr může být jedna z následujících hodnot:
 
 - Zavřít SC_CLOSE `CWnd` objektu.
@@ -9618,7 +9618,7 @@ Určuje typ požadovaný příkaz systému. Tento parametr může být jedna z n
 
 - SC_VSCROLL posunout svisle.
 
-*lParam*  
+*lParam*<br/>
 Pokud je zvolená příkazu nabídky ovládací prvek pomocí myši, *lParam* obsahuje souřadnice kurzoru. Nižší řád slova obsahuje souřadnice x a vyšší řád slova obsahuje souřadnice y. V opačném případě tento parametr se nepoužívá.
 
 - Aktivovat SC_HOTKEY okna přidružené klávesovou zkratku pro zadané aplikace. Nižší řád slova *lParam* identifikuje okno na aktivaci.
@@ -9653,13 +9653,13 @@ afx_msg void OnSysDeadChar(
 
 ### <a name="parameters"></a>Parametry
 
-*nChar*  
+*nChar*<br/>
 Určuje hodnotu znaku dead-key.
 
-*nRepCnt*  
+*nRepCnt*<br/>
 Určuje počet opakování.
 
-*nFlags*  
+*nFlags*<br/>
 Určuje kontroly kódu, přechod klíče kódu, předchozí stav klíčů a kód kontextu, jak je znázorněno v následujícím seznamu:
 
 |Hodnota|Význam|
@@ -9692,13 +9692,13 @@ afx_msg void OnSysKeyDown(
 
 ### <a name="parameters"></a>Parametry
 
-*nChar*  
+*nChar*<br/>
 Určuje virtuální kód je stisknuta klávesa. Seznam kódů standardní virtuální klíče najdete v tématu winuser
 
-*nRepCnt*  
+*nRepCnt*<br/>
 Určuje počet opakování.
 
-*nFlags*  
+*nFlags*<br/>
 Určuje kontroly kódu, přechod klíče kódu, předchozí stav klíčů a kód kontextu, jak je znázorněno v následujícím seznamu:
 
 |Hodnota|Význam|
@@ -9739,13 +9739,13 @@ afx_msg void OnSysKeyUp(
 
 ### <a name="parameters"></a>Parametry
 
-*nChar*  
+*nChar*<br/>
 Určuje virtuální kód je stisknuta klávesa. Seznam kódů standardní virtuální klíče najdete v tématu winuser
 
-*nRepCnt*  
+*nRepCnt*<br/>
 Určuje počet opakování.
 
-*nFlags*  
+*nFlags*<br/>
 Určuje kontroly kódu, přechod klíče kódu, předchozí stav klíčů a kód kontextu, jak je znázorněno v následujícím seznamu:
 
 |Hodnota|Význam|
@@ -9792,7 +9792,7 @@ afx_msg void OnTCard(
 
 ### <a name="parameters"></a>Parametry
 
-*idAction*  
+*idAction*<br/>
 Označuje, že má akce uživatele. Tento parametr může být jedna z těchto hodnot:
 
 - IDABORT uživatel kliknul na definovatelné tlačítko Přerušit.
@@ -9819,7 +9819,7 @@ Označuje, že má akce uživatele. Tento parametr může být jedna z těchto h
 
 - IDYES uživatel kliknul na definovatelné tlačítko Ano.
 
-*dwActionData*  
+*dwActionData*<br/>
 Pokud *idAction* určuje HELP_TCARD_DATA, tento parametr je long integer určené Autor nápovědy. V opačném případě tento parametr je nula.
 
 ### <a name="remarks"></a>Poznámky
@@ -9848,7 +9848,7 @@ afx_msg void OnTimer(UINT_PTR nIDEvent);
 
 ### <a name="parameters"></a>Parametry
 
-*nIDEvent*  
+*nIDEvent*<br/>
 Určuje identifikátor časovače.
 
 ### <a name="remarks"></a>Poznámky
@@ -9874,10 +9874,10 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*  
+*Bod*<br/>
 Určuje x a y souřadnici kurzoru. Tyto souřadnice jsou vždy relativní k levém horním rohu okna
 
-*pTI*  
+*pTI*<br/>
 Ukazatel [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) struktury. Ve výchozím nastavení jsou nastaveny následující hodnoty struktury:
 
 - *HWND*  =  `m_hWnd` popisovač okna
@@ -9916,16 +9916,16 @@ virtual BOOL OnTouchInput(
 
 ### <a name="parameters"></a>Parametry
 
-*PT*  
+*PT*<br/>
 Bod, kde má byla dotyku obrazovky (v souřadnicích klienta).
 
-*nInputNumber*  
+*nInputNumber*<br/>
 Počet dotykové ovládání.
 
-*nInputsCount*  
+*nInputsCount*<br/>
 Celkový počet vstupů dotykové ovládání.
 
-*pInput*  
+*pInput*<br/>
 Ukazatel na strukturu TOUCHINPUT.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -9946,10 +9946,10 @@ virtual BOOL OnTouchInputs(
 
 ### <a name="parameters"></a>Parametry
 
-*nInputsCount*  
+*nInputsCount*<br/>
 Celkový počet Windows touch vstupy.
 
-*pInputs*  
+*pInputs*<br/>
 Pole TOUCHINPUT.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -10020,7 +10020,7 @@ afx_msg void OnUpdateUIState(
 
 ### <a name="parameters"></a>Parametry
 
-*nAction*  
+*nAction*<br/>
 Určuje akci, která se má provést. Může být jedna z následujících hodnot:
 
 - Element stavu UIS_CLEAR UI (určená *nUIElement*) by měl být skrytý.
@@ -10029,7 +10029,7 @@ Určuje akci, která se má provést. Může být jedna z následujících hodno
 
 - Element stavu UIS_SET UI (určená *nUIElement*) by měly být viditelné.
 
-*nUIElement*  
+*nUIElement*<br/>
 Určuje stav prvky uživatelského rozhraní, které jsou ovlivněné nebo styl ovládacího prvku. Může být jedna z následujících hodnot:
 
 - UISF_HIDEACCEL klávesové zkratky.
@@ -10070,13 +10070,13 @@ afx_msg int OnVKeyToItem(
 
 ### <a name="parameters"></a>Parametry
 
-*nKey*  
+*nKey*<br/>
 Určuje kód klávesy, která uživatel stiskl virtuální. Seznam kódů standardní virtuální klíče najdete v tématu winuser
 
-*pListBox*  
+*pListBox*<br/>
 Určuje ukazatel na pole se seznamem. Ukazatel může být dočasné a neměl by být uložen pro pozdější použití.
 
-*nIndex*  
+*nIndex*<br/>
 Určuje aktuální pozici blikajícího kurzoru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -10103,7 +10103,7 @@ afx_msg void OnVScroll(
 
 ### <a name="parameters"></a>Parametry
 
-*nSBCode*  
+*nSBCode*<br/>
 Určuje, že kód posuvníku, která označuje, že uživatel je posouvání požadavku. Tento parametr může být jeden z následujících akcí:
 
 - SB_BOTTOM přejděte do dolní části.
@@ -10124,10 +10124,10 @@ Určuje, že kód posuvníku, která označuje, že uživatel je posouvání po�
 
 - SB_TOP posunout nahoru.
 
-*nPos –*  
+*nPos –*<br/>
 Obsahuje aktuální pozice posuvníku – Pokud je kód posuvníku SB_THUMBPOSITION nebo SB_THUMBTRACK; v opačném případě se nepoužívá. V závislosti na rozsahu počáteční posuvníku *nPos* může být záporný a by měl být přetypovat na **int** v případě potřeby.
 
-*pScrollBar*  
+*pScrollBar*<br/>
 Pokud se posouvání zpráva byla přijata z ovládacího prvku posuvníku, obsahuje ukazatel na ovládací prvek. Pokud uživatel klikne okno posuvníku, tento parametr má hodnotu NULL. Ukazatel může být dočasné a neměl by být uložen pro pozdější použití.
 
 ### <a name="remarks"></a>Poznámky
@@ -10152,10 +10152,10 @@ afx_msg void OnVScrollClipboard(
 
 ### <a name="parameters"></a>Parametry
 
-*pClipAppWnd*  
+*pClipAppWnd*<br/>
 Určuje ukazatel na okno Prohlížeč schránky. Ukazatel může být dočasné a neměl by být uložen pro pozdější použití.
 
-*nSBCode*  
+*nSBCode*<br/>
 Určuje jeden z následujících hodnot posuvníku:
 
 - SB_BOTTOM přejděte do dolní části.
@@ -10174,7 +10174,7 @@ Určuje jeden z následujících hodnot posuvníku:
 
 - SB_TOP posunout nahoru.
 
-*nPos –*  
+*nPos –*<br/>
 Obsahuje pozice posuvníku – Pokud je kód posuvníku SB_THUMBPOSITION; v opačném případě *nPos* se nepoužívá.
 
 ### <a name="remarks"></a>Poznámky
@@ -10215,7 +10215,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
 
 ### <a name="parameters"></a>Parametry
 
-*lpwndpos*  
+*lpwndpos*<br/>
 Odkazuje [windowpos –](../../mfc/reference/windowpos-structure1.md) datová struktura, která obsahuje informace o nové velikosti a pozice okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -10235,7 +10235,7 @@ afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
 
 ### <a name="parameters"></a>Parametry
 
-*lpwndpos*  
+*lpwndpos*<br/>
 Odkazuje `WINDOWPOS` datová struktura, která obsahuje informace o nové velikosti a pozice okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -10257,7 +10257,7 @@ afx_msg void OnWinIniChange(LPCTSTR lpszSection);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszSection*  
+*lpszSection*<br/>
 Odkazuje na řetězec určující název oddílu, který se změnil. (Řetězec hranaté závorky, uzavřete název oddílu, který nezahrnuje.)
 
 ### <a name="remarks"></a>Poznámky
@@ -10287,16 +10287,16 @@ virtual BOOL OnWndMsg(
 
 ### <a name="parameters"></a>Parametry
 
-*message*  
+*message*<br/>
 Určuje zprávu, která má být odeslána.
 
-*wParam*  
+*wParam*<br/>
 Určuje další informace, závislé na zprávu.
 
-*lParam*  
+*lParam*<br/>
 Určuje další informace, závislé na zprávu.
 
-*pResult*  
+*pResult*<br/>
 Návratová hodnota [WindowProc](#windowproc). Závisí na zprávy. může mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -10463,7 +10463,7 @@ BOOL operator!=(const CWnd& wnd) const;
 
 ### <a name="parameters"></a>Parametry
 
-*wnd*  
+*wnd*<br/>
 Odkaz na `CWnd` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -10480,7 +10480,7 @@ BOOL operator==(const CWnd& wnd) const;
 
 ### <a name="parameters"></a>Parametry
 
-*wnd*  
+*wnd*<br/>
 Odkaz na `CWnd` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -10497,7 +10497,7 @@ BOOL PaintWindowlessControls(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*  
+*primární řadič domény*<br/>
 Kontext zařízení, na kterém chcete-li nakreslit ovládací prvky bez oken.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -10517,13 +10517,13 @@ BOOL PostMessage(
 
 ### <a name="parameters"></a>Parametry
 
-*message*  
+*message*<br/>
 Určuje zprávu, která se má zveřejnit.
 
-*wParam*  
+*wParam*<br/>
 Určuje informace o dalších zpráv. Obsah tohoto parametru závisí na odeslání zprávy.
 
-*lParam*  
+*lParam*<br/>
 Určuje informace o dalších zpráv. Obsah tohoto parametru závisí na odeslání zprávy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -10562,7 +10562,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 
 ### <a name="parameters"></a>Parametry
 
-*cs*  
+*cs*<br/>
 A [soubor CREATESTRUCT](../../mfc/reference/createstruct-structure.md) struktury.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -10610,7 +10610,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>Parametry
 
-*pMsg*  
+*pMsg*<br/>
 Odkazuje [MSG](../../mfc/reference/msg-structure1.md) struktura, která obsahuje zprávu zpracovat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -10629,10 +10629,10 @@ void Print(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*  
+*primární řadič domény*<br/>
 Ukazatel na kontext zařízení.
 
-*dwFlags*  
+*dwFlags*<br/>
 Určuje možnosti vykreslování. Tento parametr může být jeden nebo více z těchto příznaků:
 
 - PRF_CHECKVISIBLE nakreslete okna pouze v případě, že je viditelná.
@@ -10651,17 +10651,17 @@ Určuje možnosti vykreslování. Tento parametr může být jeden nebo více z 
 
 [CWnd::DefWindowProc](#defwindowproc) funkce zpracovává tuto zprávu, podle které výkresu možnost zadat:
 
--   Pokud je zadán PRF_CHECKVISIBLE a v okně se nezobrazuje, neprovádějte žádnou akci.
+- Pokud je zadán PRF_CHECKVISIBLE a v okně se nezobrazuje, neprovádějte žádnou akci.
 
--   Pokud je zadán PRF_NONCLIENT, nakreslete neklientské oblasti v rámci dané zařízení.
+- Pokud je zadán PRF_NONCLIENT, nakreslete neklientské oblasti v rámci dané zařízení.
 
--   Pokud je zadán PRF_ERASEBKGND, odeslat v okně [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) zprávy.
+- Pokud je zadán PRF_ERASEBKGND, odeslat v okně [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) zprávy.
 
--   Pokud je zadán PRF_CLIENT, odeslat v okně [WM_PRINTCLIENT](/windows/desktop/gdi/wm-printclient) zprávy.
+- Pokud je zadán PRF_CLIENT, odeslat v okně [WM_PRINTCLIENT](/windows/desktop/gdi/wm-printclient) zprávy.
 
--   Pokud je nastavena PRF_CHILDREN, odeslat každý viditelné podřízené okno [WM_PRINT](/windows/desktop/gdi/wm-print) zprávy.
+- Pokud je nastavena PRF_CHILDREN, odeslat každý viditelné podřízené okno [WM_PRINT](/windows/desktop/gdi/wm-print) zprávy.
 
--   Pokud je nastavena PRF_OWNED, odešle zprávu WM_PRINT každé okno viditelné vlastnictví.
+- Pokud je nastavena PRF_OWNED, odešle zprávu WM_PRINT každé okno viditelné vlastnictví.
 
 ##  <a name="printclient"></a>  CWnd::PrintClient
 
@@ -10675,10 +10675,10 @@ void PrintClient(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*  
+*primární řadič domény*<br/>
 Ukazatel na kontext zařízení.
 
-*dwFlags*  
+*dwFlags*<br/>
 Určuje možnosti vykreslování. Tento parametr může být jeden nebo více z těchto příznaků:
 
 - PRF_CHECKVISIBLE nakreslete okna pouze v případě, že je viditelná.
@@ -10705,10 +10705,10 @@ BOOL PrintWindow(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*  
+*primární řadič domény*<br/>
 Ukazatel na kontext zařízení, který má být zobrazeny.
 
-*nFlags*  
+*nFlags*<br/>
 Určuje možnosti vykreslování. Seznam možných hodnot najdete v tématu [PrintWindow](/windows/desktop/api/winuser/nf-winuser-printwindow).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -10732,13 +10732,13 @@ BOOL RedrawWindow(
 
 ### <a name="parameters"></a>Parametry
 
-*lpRectUpdate*  
+*lpRectUpdate*<br/>
 Odkazuje [Rect – struktura](../../mfc/reference/rect-structure1.md) obsahující souřadnice obdélník aktualizace. Tento parametr se ignoruje, pokud *prgnUpdate* obsahuje oblast platný popisovač.
 
-*prgnUpdate*  
+*prgnUpdate*<br/>
 Identifikuje oblast aktualizace. Pokud mají oba *prgnUpdate* a *lpRectUpdate* hodnotu Null, celé oblasti klienta se přidá do oblasti aktualizace.
 
-*příznaky*  
+*příznaky*<br/>
 Zrušit platnost okna se používají následující příznaky:
 
 - RDW_ERASE způsobí, že v okně pro příjem [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) při překreslení v okně se zobrazí zpráva. Příznak RDW_INVALIDATE musí být zadaná také; v opačném případě RDW_ERASE nemá žádný vliv.
@@ -10793,16 +10793,16 @@ BOOL ReflectChildNotify(
 
 ### <a name="parameters"></a>Parametry
 
-*message*  
+*message*<br/>
 Určuje zprávu, která se projeví.
 
-*wParam*  
+*wParam*<br/>
 Určuje další informace, závislé na zprávu.
 
-*lParam*  
+*lParam*<br/>
 Určuje další informace, závislé na zprávu.
 
-*pResult*  
+*pResult*<br/>
 Výsledek generovaných podřízené okno, které má být vrácen se nadřazeným oknem. Může mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -10829,10 +10829,10 @@ static BOOL PASCAL ReflectLastMsg(
 
 ### <a name="parameters"></a>Parametry
 
-*hWndChild*  
+*hWndChild*<br/>
 Popisovač pro podřízené okno.
 
-*pResult*  
+*pResult*<br/>
 Výsledek generovaných podřízené okno, které má být vrácen se nadřazeným oknem. Může mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -10855,7 +10855,7 @@ int ReleaseDC(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*  
+*primární řadič domény*<br/>
 Určuje kontext zařízení uvolnit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -10884,16 +10884,16 @@ void RepositionBars(UINT nIDFirst,
 
 ### <a name="parameters"></a>Parametry
 
-*nIDFirst*  
+*nIDFirst*<br/>
 ID prvního v řadě ovládací pruhy pro změňte umístění a velikost.
 
-*nIDLast*  
+*nIDLast*<br/>
 ID poslední v šabloně celou řadu ovládacích panelů k změňte umístění a velikost.
 
-*nIDLeftOver*  
+*nIDLeftOver*<br/>
 Určuje ID stavového řádku, který vyplňuje zbývající část oblasti klienta.
 
-*načit*  
+*načit*<br/>
 Může mít jednu z následujících hodnot:
 
 - `CWnd::reposDefault` Provádí rozložení ovládacích panelů. *lpRectParam* se nepoužívá a může mít hodnotu NULL.
@@ -10902,13 +10902,13 @@ Může mít jednu z následujících hodnot:
 
 - `CWnd::reposExtra` Přidá hodnoty *lpRectParam* klientskou oblast *nIDLast* a také provádí rozložení.
 
-*lpRectParam*  
+*lpRectParam*<br/>
 Odkazuje [Rect – struktura](../../mfc/reference/rect-structure1.md); využití závisí na hodnotě *načit*.
 
-*lpRectClient*  
+*lpRectClient*<br/>
 Odkazuje [Rect – struktura](../../mfc/reference/rect-structure1.md) obsahující dostupné klientské oblasti. Pokud má hodnotu NULL, použije se klientské oblasti okna.
 
-*bStretch*  
+*bStretch*<br/>
 Určuje, zda panel by měl roztažen tak, aby velikost rámce.
 
 ### <a name="remarks"></a>Poznámky
@@ -10925,7 +10925,7 @@ int RunModalLoop(DWORD dwFlags = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*dwFlags*  
+*dwFlags*<br/>
 Určuje Windows zprávy k odeslání. Může být jedna z následujících hodnot:
 
 - Odeslání není MLF_NOIDLEMSG [WM_ENTERIDLE](/windows/desktop/dlgbox/wm-enteridle) zprávy na nadřazený prvek.
@@ -10952,10 +10952,10 @@ void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) 
 
 ### <a name="parameters"></a>Parametry
 
-*lppoint –*  
+*lppoint –*<br/>
 Odkazuje [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu nebo [POINT – struktura](../../mfc/reference/point-structure1.md) obsahující souřadnice obrazovky, který má být převeden.
 
-*lprect –*  
+*lprect –*<br/>
 Odkazuje [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [Rect – struktura](../../mfc/reference/rect-structure1.md) obsahující souřadnice obrazovky, který má být převeden.
 
 ### <a name="remarks"></a>Poznámky
@@ -10980,16 +10980,16 @@ void ScrollWindow(
 
 ### <a name="parameters"></a>Parametry
 
-*xAmount*  
+*xAmount*<br/>
 Určuje velikost v jednotkách, zařízení, které vodorovného posouvání. Tento parametr musí být záporná hodnota, přejděte na levé straně.
 
-*yAmount*  
+*yAmount*<br/>
 Určuje velikost v jednotkách, zařízení, které svislé posouvání. Tento parametr musí být záporná hodnota posunout nahoru.
 
-*lprect –*  
+*lprect –*<br/>
 Odkazuje na [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [Rect – struktura](../../mfc/reference/rect-structure1.md) , který určuje část oblasti klienta k posouvat. Pokud *lprect –* má hodnotu NULL, přešli celé oblasti klienta. Blikající kurzor přemístí, pokud kurzor obdélník protíná obdélník posuvníku.
 
-*lpClipRect*  
+*lpClipRect*<br/>
 Odkazuje `CRect` objektu nebo `RECT` struktura, která určuje obdélník oříznutí posouvat. Pouze služba bits uvnitř tohoto obdélníku jsou možnosti posouvat určitý objekt. I když jsou v to nebude mít vliv BITS mimo tento obdélník *lprect –* obdélník. Pokud *lpClipRect* má hodnotu NULL, žádný výstřižek se provádí na posuvníku obdélník.
 
 ### <a name="remarks"></a>Poznámky
@@ -11019,25 +11019,25 @@ int ScrollWindowEx(
 
 ### <a name="parameters"></a>Parametry
 
-*DX*  
+*DX*<br/>
 Určuje velikost v jednotkách, zařízení, které vodorovného posouvání. Tento parametr musí mít zápornou hodnotu stránku posunout, aby levé straně.
 
-*dy*  
+*dy*<br/>
 Určuje velikost v jednotkách, zařízení, které svislé posouvání. Tento parametr musí mít zápornou hodnotu Posun nahoru.
 
-*lpRectScroll*  
+*lpRectScroll*<br/>
 Odkazuje [Rect – struktura](../../mfc/reference/rect-structure1.md) , který určuje část oblasti klienta k posouvat. Pokud má parametr hodnotu NULL, je posunul celé oblasti klienta.
 
-*lpRectClip*  
+*lpRectClip*<br/>
 Odkazuje `RECT` struktura, která určuje obdélník oříznutí posouvat. Tato struktura má přednost před obdélník, který ukazuje *lpRectScroll*. Pouze služba bits uvnitř tohoto obdélníku jsou možnosti posouvat určitý objekt. I když jsou v to nebude mít vliv BITS mimo tento obdélník *lpRectScroll* obdélník. Pokud má parametr hodnotu NULL, žádný výstřižek se provádí na posuvníku obdélník.
 
-*prgnUpdate*  
+*prgnUpdate*<br/>
 Identifikuje oblast, která se mění pro uložení oblasti zneplatněny posouvání. Tento parametr může mít hodnotu NULL.
 
-*lpRectUpdate*  
+*lpRectUpdate*<br/>
 Odkazuje `RECT` struktura, která bude dostávat hranice obdélník zneplatněny posouvání. Tento parametr může mít hodnotu NULL.
 
-*příznaky*  
+*příznaky*<br/>
 Může mít jednu z následujících hodnot:
 
 - SW_ERASE-li zadána s SW_INVALIDATE, vymaže nově zneplatněné oblasti odesláním [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) zprávu do okna.
@@ -11072,7 +11072,7 @@ BOOL SendChildNotifyLastMsg(LRESULT* pResult = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*pResult*  
+*pResult*<br/>
 Výsledek generovaných podřízené okno, které má být vrácen se nadřazeným oknem.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -11099,16 +11099,16 @@ LRESULT SendDlgItemMessage(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*  
+*nID*<br/>
 Určuje identifikátor ovládacího prvku dialogu, který se zobrazí zpráva.
 
-*message*  
+*message*<br/>
 Určuje zprávu, která má být odeslána.
 
-*wParam*  
+*wParam*<br/>
 Určuje další informace, závislé na zprávu.
 
-*lParam*  
+*lParam*<br/>
 Určuje další informace, závislé na zprávu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -11138,13 +11138,13 @@ LRESULT SendMessage(
 
 ### <a name="parameters"></a>Parametry
 
-*message*  
+*message*<br/>
 Určuje zprávu, která má být odeslána.
 
-*wParam*  
+*wParam*<br/>
 Určuje další informace, závislé na zprávu.
 
-*lParam*  
+*lParam*<br/>
 Určuje další informace, závislé na zprávu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -11174,19 +11174,19 @@ void SendMessageToDescendants(
 
 ### <a name="parameters"></a>Parametry
 
-*message*  
+*message*<br/>
 Určuje zprávu, která má být odeslána.
 
-*wParam*  
+*wParam*<br/>
 Určuje další informace, závislé na zprávu.
 
-*lParam*  
+*lParam*<br/>
 Určuje další informace, závislé na zprávu.
 
-*bDeep*  
+*bDeep*<br/>
 Určuje úroveň, na který chcete vyhledat. Při hodnotě TRUE se rekurzivně prohledávat všechny podřízené objekty; Pokud má hodnotu FALSE, Hledat pouze přímé podřízené objekty.
 
-*bOnlyPerm*  
+*bOnlyPerm*<br/>
 Určuje, zda dočasné soubory systému windows bude přijímat zprávy. Při hodnotě TRUE se dočasné soubory systému windows může přijímat zprávy. Pokud má hodnotu FALSE, pouze trvalé windows zobrazí zpráva. Další informace o dočasné soubory systému windows naleznete v tématu [Technická poznámka 3](../../mfc/tn003-mapping-of-windows-handles-to-objects.md).
 
 ### <a name="remarks"></a>Poznámky
@@ -11212,13 +11212,13 @@ BOOL SendNotifyMessage(
 
 ### <a name="parameters"></a>Parametry
 
-*message*  
+*message*<br/>
 Určuje zprávu, která má být odeslána.
 
-*wParam*  
+*wParam*<br/>
 Určuje další informace, závislé na zprávu.
 
-*lParam*  
+*lParam*<br/>
 Určuje další informace, závislé na zprávu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -11275,7 +11275,7 @@ static void PASCAL SetCaretPos(POINT point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*  
+*Bod*<br/>
 Určuje novou x a y souřadnice (v souřadnicích klienta) blikajícího kurzoru.
 
 ### <a name="remarks"></a>Poznámky
@@ -11318,7 +11318,7 @@ int SetDlgCtrlID(int nID);
 
 ### <a name="parameters"></a>Parametry
 
-*nID*  
+*nID*<br/>
 Nová hodnota pro identifikátor ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -11342,13 +11342,13 @@ void SetDlgItemInt(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*  
+*nID*<br/>
 Určuje celé číslo ID ovládacího prvku na změnit.
 
-*nHodnota*  
+*nHodnota*<br/>
 Určuje hodnotu celého čísla sloužící ke generování textu položky.
 
-*bSigned*  
+*bSigned*<br/>
 Určuje, jestli je celočíselná hodnota podepsané nebo nepodepsané. Pokud tento parametr má hodnotu TRUE, *nHodnota* je podepsán. Pokud tento parametr má hodnotu TRUE a *nHodnota* je menší než 0, minus přihlášení je umístěn před první číslice v řetězci. Pokud tento parametr má hodnotu FALSE, *nHodnota* je bez znaménka.
 
 ### <a name="remarks"></a>Poznámky
@@ -11371,10 +11371,10 @@ void SetDlgItemText(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*  
+*nID*<br/>
 Určuje ovládací prvek, jejichž text je nastavit.
 
-*lpszString*  
+*lpszString*<br/>
 Odkazuje [CString](../../atl-mfc-shared/reference/cstringt-class.md) objektu nebo řetězec zakončený hodnotou null, který obsahuje text, který má být zkopírován do ovládacího prvku.
 
 ### <a name="remarks"></a>Poznámky
@@ -11437,10 +11437,10 @@ void SetFont(
 
 ### <a name="parameters"></a>Parametry
 
-*pFont*  
+*pFont*<br/>
 Ukazatel `CFont` objektu.
 
-*bRedraw*  
+*bRedraw*<br/>
 Hodnota TRUE pro okno překreslení hned po zpracování zprávy WM_SETFONT; v opačném případě FALSE.
 
 ### <a name="remarks"></a>Poznámky
@@ -11459,10 +11459,10 @@ HICON SetIcon(
 
 ### <a name="parameters"></a>Parametry
 
-*hIcon*  
+*hIcon*<br/>
 Popisovač na předchozí ikonu.
 
-*bBigIcon*  
+*bBigIcon*<br/>
 Určuje ikonu 32 pixelů při hodnotě TRUE; 32 pixelů Určuje 16 pixelů 16 pixelů ikonu, pokud je FALSE.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -11490,13 +11490,13 @@ BOOL SetLayeredWindowAttributes(
 
 ### <a name="parameters"></a>Parametry
 
-*crKey*  
+*crKey*<br/>
 Ukazatel na COLORREF hodnotu, která určuje průhlednost barevný kód má být použit při vytváření vrstveného okna. Všechny pixely kresleno okna v této barvy bude průhledný. Generovat COLORREF, použijte makro RGB.
 
-*bAlpha*  
+*bAlpha*<br/>
 Alfa používají k popisu krytí okně vrstvami. Další informace najdete v tématu `SourceConstantAlpha` člena [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-_blendfunction) struktury. Když *bAlpha* je 0, v okně je dokonale transparentní. Když *bAlpha* je 255, v okně je skrytá.
 
-*dwFlags*  
+*dwFlags*<br/>
 Určuje akci, kterou chcete provést. Tento parametr může být jeden nebo více z následujících hodnot. Seznam možných hodnot najdete v tématu [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -11517,7 +11517,7 @@ BOOL SetMenu(CMenu* pMenu);
 
 ### <a name="parameters"></a>Parametry
 
-*pMenu*  
+*pMenu*<br/>
 Identifikuje nová nabídka. Pokud má parametr hodnotu NULL, aktuální nabídky se odebere.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -11544,7 +11544,7 @@ void SetOwner(CWnd* pOwnerWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*pOwnerWnd*  
+*pOwnerWnd*<br/>
 Identifikuje nový vlastník objekt okna. Pokud má parametr hodnotu NULL, objekt okna nemá žádného vlastníka.
 
 ### <a name="remarks"></a>Poznámky
@@ -11565,7 +11565,7 @@ CWnd* SetParent(CWnd* pWndNewParent);
 
 ### <a name="parameters"></a>Parametry
 
-*pWndNewParent*  
+*pWndNewParent*<br/>
 Identifikuje nový nadřazeného okna.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -11588,13 +11588,13 @@ void AFX_CDECL SetProperty(
 
 ### <a name="parameters"></a>Parametry
 
-*dwDispID*  
+*dwDispID*<br/>
 Určuje vlastnost, která má být nastavena.
 
-*vtProp*  
+*vtProp*<br/>
 Určuje typ vlastnosti, která má být nastavena. Možné hodnoty najdete v části poznámky [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
-*...*  
+*...*<br/>
 Jeden parametr typu určeného *vtProp*.
 
 ### <a name="remarks"></a>Poznámky
@@ -11614,7 +11614,7 @@ void SetRedraw(BOOL bRedraw = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bRedraw*  
+*bRedraw*<br/>
 Určuje stav příznaku redraw. Pokud tento parametr má hodnotu TRUE, je nastaven příznak redraw; Pokud má hodnotu FALSE, se vymaže příznak.
 
 ### <a name="remarks"></a>Poznámky
@@ -11638,7 +11638,7 @@ BOOL SetScrollInfo(
 
 ### <a name="parameters"></a>Parametry
 
-*nBar*  
+*nBar*<br/>
 Určuje, zda posuvník ovládacího prvku nebo část oblasti myši v neklientské oblasti okna. Pokud je součástí neklientskou oblast, nBar také určuje, zda posuvník nachází vodorovně, svisle, nebo obojí. Musí být jeden z následujících akcí:
 
 - SB_CTL obsahuje parametry pro ovládací prvek posuvníku. `m_hWnd` Datový člen musí být popisovačem ovládací prvek posuvníku.
@@ -11647,10 +11647,10 @@ Určuje, zda posuvník ovládacího prvku nebo část oblasti myši v neklientsk
 
 - SB_VERT Určuje, jestli je toto okno svislý posuvník.
 
-*lpScrollInfo*  
+*lpScrollInfo*<br/>
 Ukazatel [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) struktury. Zobrazit sady Windows SDK pro další informace o této struktury.
 
-*bRedraw*  
+*bRedraw*<br/>
 Určuje, zda by se měl překreslit posuvníku, tak, aby odrážely novou pozici. Pokud *bRedraw* má hodnotu TRUE, překreslení posuvníku. Pokud je FALSE, není překreslení. Ve výchozím nastavení se překreslí posuvníku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -11679,17 +11679,17 @@ int SetScrollPos(
 
 ### <a name="parameters"></a>Parametry
 
-*nBar*  
+*nBar*<br/>
 Určuje posuvníku, která se má nastavit. Tento parametr může být jedna z následujících:
 
 - SB_HORZ nastaví pozice posuvníku v vodorovný posuvník v okně.
 
 - SB_VERT nastaví pozice posuvníku v svislý posuvník v okně.
 
-*nPos –*  
+*nPos –*<br/>
 Určuje novou polohu jezdce. Musí být v rozsahu posouvání.
 
-*bRedraw*  
+*bRedraw*<br/>
 Určuje, zda posuvník by měl překreslit tak, aby odrážely novou pozici posuvníku. Pokud tento parametr má hodnotu TRUE, je překreslit posuvníku; Pokud má hodnotu FALSE, není překreslit posuvníku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -11714,20 +11714,20 @@ void SetScrollRange(
 
 ### <a name="parameters"></a>Parametry
 
-*nBar*  
+*nBar*<br/>
 Určuje posuvníku, která se má nastavit. Tento parametr může být jeden z následujících hodnot:
 
 - SB_HORZ Nastaví rozsah vodorovný posuvník v okně.
 
 - SB_VERT Nastaví rozsah svislý posuvník v okně.
 
-*nMinPos*  
+*nMinPos*<br/>
 Určuje minimum pro posouvání pozici.
 
-*nMaxPos*  
+*nMaxPos*<br/>
 Určuje maximální posouvání pozici.
 
-*bRedraw*  
+*bRedraw*<br/>
 Určuje, zda by se měl překreslit posuvníku, tak, aby odrážely změny. Pokud *bRedraw* má hodnotu TRUE, překreslení posuvníku; Pokud je hodnota FALSE, není překreslení posuvníku.
 
 ### <a name="remarks"></a>Poznámky
@@ -11756,13 +11756,13 @@ UINT_PTR SetTimer(
 
 ### <a name="parameters"></a>Parametry
 
-*nIDEvent*  
+*nIDEvent*<br/>
 Určuje identifikátor nenulového časovače. Pokud je identifikátor časovače jedinečný, tato stejná hodnota je vrácený `SetTimer`. V opačném případě `SetTimer` Určuje novou jedinečnou hodnotu a vrátí ji. Pro okno časovače (který má funkci zpětného volání NULL) hodnota musí být jedinečná pouze v případě jiných časovačů oken, které jsou spojeny s aktuální okno. Pro zpětné volání časovače hodnota musí být jedinečná pro všechny časovače ve všech procesech. Při vytváření časovače zpětného volání je tedy pravděpodobnější, že vrácené hodnoty se mohou lišit od zadané hodnotě.
 
-*nElapse*  
+*nElapse*<br/>
 Určuje hodnotu časového limitu nebo interval v milisekundách.
 
-*lpfnTimer*  
+*lpfnTimer*<br/>
 Určuje adresu poskytované aplikací `TimerProc` funkce zpětného volání, která zpracovává [WM_TIMER](/windows/desktop/winmsg/wm-timer) zprávy. Pokud tento parametr hodnotu NULL, jsou umístěny do fronty zpráv aplikace a zpracovává zprávy WM_TIMER `CWnd` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -11799,7 +11799,7 @@ BOOL SetWindowContextHelpId(DWORD dwContextHelpId);
 
 ### <a name="parameters"></a>Parametry
 
-*dwContextHelpId*  
+*dwContextHelpId*<br/>
 Identifikátor kontextové nápovědy.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -11824,7 +11824,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT* lpwndpl);
 
 ### <a name="parameters"></a>Parametry
 
-*lpwndpl*  
+*lpwndpl*<br/>
 Odkazuje [windowplacement –](../../mfc/reference/windowplacement-structure.md) struktura, která určuje nové zobrazení stavu a umístění.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -11847,7 +11847,7 @@ BOOL SetWindowPos(
 
 ### <a name="parameters"></a>Parametry
 
-*pWndInsertAfter*  
+*pWndInsertAfter*<br/>
 Identifikuje `CWnd` objekt, který bude předcházet prvku (být větší než) to `CWnd` objektu v pořadí vykreslování. Tento parametr může být ukazatel `CWnd` nebo ukazatel na jedno z následujících hodnot:
 
 - `wndBottom` V okně umístí v dolní části pořadí vykreslování. Pokud tento `CWnd` je nejvrchnější okna okno ztratí svůj status nejvyššího; systém umístí okna v dolní části všech ostatních oken.
@@ -11860,19 +11860,19 @@ Identifikuje `CWnd` objekt, který bude předcházet prvku (být větší než) 
 
 Pro pravidla o tom, jak tento parametr použijte naleznete v části "Poznámky" tohoto tématu.
 
-*x*  
+*x*<br/>
 Určuje novou pozici levé části okna.
 
-*y*  
+*y*<br/>
 Určuje novou pozici horní části okna.
 
-*CX*  
+*CX*<br/>
 Určuje novou šířku okna.
 
-*CY*  
+*CY*<br/>
 Určuje nový výšku okna.
 
-*nFlags*  
+*nFlags*<br/>
 Určuje velikost a umístění možnosti. Tento parametr může být kombinací následujících příznaků:
 
 - SWP_DRAWFRAME nakreslí rámeček (definované při vytváření okna) kolem okna.
@@ -11917,9 +11917,9 @@ Nejvrchnější okna už nejsou nejvrchnější, pokud je přesunuta do dolní �
 
 Pokud se nezadá SWP_NOACTIVATE ani SWP_NOZORDER (to znamená, když aplikace požaduje, že okno být současně aktivovat a je umístěná v zadané pořadí vykreslování), je hodnota zadaná v *pWndInsertAfter* se používá pouze v v následujících případech:
 
--   Ani **& wndTopMost** ani **& wndNoTopMost** je zadán v *pWndInsertAfter* parametru.
+- Ani **& wndTopMost** ani **& wndNoTopMost** je zadán v *pWndInsertAfter* parametru.
 
--   Toto okno není aktivní okno.
+- Toto okno není aktivní okno.
 
 Aplikaci nelze aktivovat neaktivního okna bez také přináší na začátek pořadí vykreslování. Aplikace můžete změnit pořadí vykreslování aktivované okno bez omezení.
 
@@ -11949,10 +11949,10 @@ int SetWindowRgn(
 
 ### <a name="parameters"></a>Parametry
 
-*hRgn*  
+*hRgn*<br/>
 Popisovač do oblasti.
 
-*bRedraw*  
+*bRedraw*<br/>
 Při hodnotě TRUE se překreslí operačního systému v okně po nastavení oblasti; v ostatních případech tomu tak není. Obvykle nastavena *bRedraw* na hodnotu TRUE, pokud je okno viditelné. Pokud je nastavena na hodnotu TRUE, systém WM_WINDOWPOSCHANGING a WM_WINDOWPOSCHANGED zprávy odešle do okna.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -11975,7 +11975,7 @@ void SetWindowText(LPCTSTR lpszString);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszString*  
+*lpszString*<br/>
 Odkazuje [CString](../../atl-mfc-shared/reference/cstringt-class.md) objektu nebo řetězec zakončený hodnotou null se použije jako nový název nebo ovládací prvek text.
 
 ### <a name="remarks"></a>Poznámky
@@ -12020,7 +12020,7 @@ void ShowOwnedPopups(BOOL bShow = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bShow*  
+*bShow*<br/>
 Určuje, zda jsou automaticky otevíraná okna na zobrazený nebo skrytý. Pokud tento parametr má hodnotu TRUE, jsou uvedeny všechny skryté automaticky otevíraná okna. Pokud má parametr hodnotu FALSE, všechny viditelné automaticky otevíraná okna jsou skryté.
 
 ### <a name="example"></a>Příklad
@@ -12039,7 +12039,7 @@ void ShowScrollBar(
 
 ### <a name="parameters"></a>Parametry
 
-*nBar*  
+*nBar*<br/>
 Určuje, zda posuvník ovládacího prvku nebo část oblasti myši v neklientské oblasti okna. Pokud je součástí neklientské oblasti *nBar* také určuje, zda posuvník nachází vodorovně, svisle, nebo obojí. Musí být jeden z následujících akcí:
 
 - SB_BOTH Určuje vodorovný a svislý posuvníků okna.
@@ -12048,7 +12048,7 @@ Určuje, zda posuvník ovládacího prvku nebo část oblasti myši v neklientsk
 
 - SB_VERT Určuje, jestli je toto okno svislý posuvník.
 
-*bShow*  
+*bShow*<br/>
 Určuje, zda Windows zobrazí nebo skryje posuvníku. Pokud tento parametr má hodnotu TRUE, je zobrazen posuvník; v opačném případě je skrytý posuvníku.
 
 ### <a name="remarks"></a>Poznámky
@@ -12065,7 +12065,7 @@ BOOL ShowWindow(int nCmdShow);
 
 ### <a name="parameters"></a>Parametry
 
-*nCmdShow*  
+*nCmdShow*<br/>
 Určuje, jak `CWnd` je zobrazený. Musí být jeden z následujících hodnot:
 
 - SW_HIDE skrývá toto okno a předá do další okno aktivace.
@@ -12112,10 +12112,10 @@ BOOL SubclassDlgItem(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*  
+*nID*<br/>
 ID ovládacího prvku.
 
-*pParent*  
+*pParent*<br/>
 Nadřazeného ovládacího prvku (obvykle dialogovému oknu).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -12142,7 +12142,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 Popisovač okna.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -12200,7 +12200,7 @@ BOOL UpdateData(BOOL bSaveAndValidate = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bSaveAndValidate*  
+*bSaveAndValidate*<br/>
 Příznak označující, zda dialogové okno inicializace (FALSE) nebo data se načítají (TRUE).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -12223,10 +12223,10 @@ void UpdateDialogControls(
 
 ### <a name="parameters"></a>Parametry
 
-*pTarget*  
+*pTarget*<br/>
 Odkazuje na hlavní okno rámce aplikace a používá se pro směrování zpráv aktualizace.
 
-*bDisableIfNoHndler*  
+*bDisableIfNoHndler*<br/>
 Příznak, který označuje, zda ovládací prvek, který nemá žádná obslužná rutina aktualizace by měla automaticky zobrazí jako zakázané.
 
 ### <a name="remarks"></a>Poznámky
@@ -12253,34 +12253,34 @@ BOOL UpdateLayeredWindow(
 
 ### <a name="parameters"></a>Parametry
 
-*pDCDst*  
+*pDCDst*<br/>
 Ukazatel na kontext zařízení pro obrazovku. Používá se pro palety barev při aktualizaci obsah okna. Pokud *pDCDst* má hodnotu NULL, použije se výchozí palety.
 
 Pokud *pDCSrc* má hodnotu NULL, *pDCDst* musí mít hodnotu NULL.
 
-*pptDst*  
+*pptDst*<br/>
 Ukazatel `POINT` struktura zadání nové obrazovky pozici okna vrstvami. Pokud aktuální pozice není změněn, *pptDst* může mít hodnotu NULL.
 
-*psize*  
+*psize*<br/>
 Ukazatel `SIZE` struktura, která určuje novou velikost okna vrstvami. Pokud se mění velikost okna, *psize* může mít hodnotu NULL.
 
 Pokud *pDCSrc* má hodnotu NULL, *psize* musí mít hodnotu NULL.
 
-*pDCSrc*  
+*pDCSrc*<br/>
 Ukazatel na řadič domény na povrch, který definuje okno vrstvami. Pokud nejsou mění podobu a vizuální kontext okna, *pDCSrc* může mít hodnotu NULL.
 
-*pptSrc*  
+*pptSrc*<br/>
 Ukazatel `POINT` struktura, která určuje umístění vrstvy v kontextu zařízení.
 
 Pokud *pDCSrc* má hodnotu NULL, *pptSrc* by měl mít hodnotu NULL.
 
-*crKey*  
+*crKey*<br/>
 Ukazatel na COLORREF hodnotu, která určuje průhlednost barevný kód má být použit při vytváření vrstveného okna. Všechny pixely kresleno okna v této barvy bude průhledný. Generovat COLORREF, použijte makro RGB.
 
-*pblend*  
+*pblend*<br/>
 Ukazatel [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-_blendfunction) struktura, která určuje hodnotu průhlednosti pro použití při vytváření vrstveného okna.
 
-*dwFlags*  
+*dwFlags*<br/>
 Určuje akci, kterou chcete provést. Tento parametr může být jeden nebo více z následujících hodnot. Seznam možných hodnot najdete v tématu [UpdateLayeredWindow](https://msdn.microsoft.com/library/windows/desktop/ms633556).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -12317,7 +12317,7 @@ void ValidateRect(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*  
+*lprect –*<br/>
 Odkazuje [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [Rect – struktura](../../mfc/reference/rect-structure1.md) obsahující souřadnice klienta obdélníku odeberou z oblasti aktualizace. Pokud *lprect –* má hodnotu NULL, je ověřen celé okno.
 
 ### <a name="remarks"></a>Poznámky
@@ -12336,7 +12336,7 @@ void ValidateRgn(CRgn* pRgn);
 
 ### <a name="parameters"></a>Parametry
 
-*pRgn*  
+*pRgn*<br/>
 Ukazatel [CRgn](../../mfc/reference/crgn-class.md) objekt, který identifikuje oblast, která definuje oblast, která má být odebrán z oblasti aktualizace. Pokud tento parametr hodnotu NULL, odeberou se celé oblasti klienta.
 
 ### <a name="remarks"></a>Poznámky
@@ -12355,7 +12355,7 @@ static CWnd* PASCAL WindowFromPoint(POINT point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*  
+*Bod*<br/>
 Určuje [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu nebo [bodu](../../mfc/reference/point-structure1.md) datová struktura, která definuje bod, která se má zkontrolovat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -12379,13 +12379,13 @@ virtual LRESULT WindowProc(
 
 ### <a name="parameters"></a>Parametry
 
-*message*  
+*message*<br/>
 Určuje zprávu Windows, která mají být zpracovány.
 
-*wParam*  
+*wParam*<br/>
 Poskytuje další informace o se používají při zpracování zprávy. Hodnota parametru závisí na zprávu.
 
-*lParam*  
+*lParam*<br/>
 Poskytuje další informace o se používají při zpracování zprávy. Hodnota parametru závisí na zprávu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -12408,10 +12408,10 @@ virtual void WinHelp(
 
 ### <a name="parameters"></a>Parametry
 
-*dwData*  
+*dwData*<br/>
 Určuje další data. Hodnota závisí na hodnotě *nCmd* parametru.
 
-*nCmd*  
+*nCmd*<br/>
 Určuje typ nápovědy požadavku. Seznam možných hodnot a jejich vliv *dwData* parametr, najdete v článku [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) funkce Windows v sadě Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
@@ -12430,10 +12430,10 @@ BOOL RegisterTouchWindow(
 
 ### <a name="parameters"></a>Parametry
 
-*bRegister*  
+*bRegister*<br/>
 Hodnota TRUE označuje registr Windows podpora; dotykového ovládání FALSE v opačném případě.
 
-*ulFlags*  
+*ulFlags*<br/>
 Sadu bitových příznaků, které určují volitelné změny. V tomto poli může být 0 nebo jednu z následujících hodnot: TWF_FINETOUCH, TWF_WANTPALM.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -12454,7 +12454,7 @@ virtual void ResizeDynamicLayout();
 
 ## <a name="see-also"></a>Viz také
 
-[CCmdTarget – třída](../../mfc/reference/ccmdtarget-class.md)  
-[Graf hierarchie](../../mfc/hierarchy-chart.md)  
-[CFrameWnd – třída](../../mfc/reference/cframewnd-class.md)  
-[CView – třída](../../mfc/reference/cview-class.md)  
+[CCmdTarget – třída](../../mfc/reference/ccmdtarget-class.md)<br/>
+[Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
+[CFrameWnd – třída](../../mfc/reference/cframewnd-class.md)<br/>
+[CView – třída](../../mfc/reference/cview-class.md)

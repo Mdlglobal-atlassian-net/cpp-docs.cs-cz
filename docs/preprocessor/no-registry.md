@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105c2b0ee4d2648a1cc43d0baca9f30146184e78
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 8071fdf5e18542273dddfacecca913130e7bdea6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42464611"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381228"
 ---
 # <a name="noregistry"></a>no_registry
 **no_registry s: %** sděluje kompilátoru, aby v registru nevyhledával knihovny typů importované pomocí `#import`.  
@@ -48,5 +48,5 @@ Když `auto_search` není zadána, další `#import`s se dá vygenerovat pomocí
   
 ## <a name="see-also"></a>Viz také  
  
-[atributů #import](../preprocessor/hash-import-attributes-cpp.md)   
+[atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

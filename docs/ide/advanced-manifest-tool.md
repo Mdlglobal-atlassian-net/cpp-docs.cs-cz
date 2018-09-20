@@ -18,30 +18,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a86489e18220e674f48222ef1590b61d7c5defcf
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1e44ba6065658c085777ada39f75bd5fa1cdc2fb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716523"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382944"
 ---
 # <a name="advanced-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Upřesnit, Nástroj Manifest, vlastnosti konfigurace, &lt;Projectname&gt; dialogové okno stránky vlastností projektu
-Umožňuje určit rozšířené možnosti pro toto dialogové okno [Mt.exe](https://msdn.microsoft.com/library/aa375649).  
-  
- Pro přístup k této dialogové okno stránky vlastností, otevřete stránky vlastností projektu, nebo seznam vlastností. Rozbalte **Nástroj Manifest** pod uzlem **vlastnosti konfigurace**a pak vyberte **Upřesnit**.  
-  
+
+Umožňuje určit rozšířené možnosti pro toto dialogové okno [Mt.exe](https://msdn.microsoft.com/library/aa375649).
+
+Pro přístup k této dialogové okno stránky vlastností, otevřete stránky vlastností projektu, nebo seznam vlastností. Rozbalte **Nástroj Manifest** pod uzlem **vlastnosti konfigurace**a pak vyberte **Upřesnit**.
+
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
 
 - **Aktualizovat hodnoty hash souborů**
 
-   Používá k určení, že nástroj manifest vypočítá hodnoty hash souborů zadaných v hashupdate `<file>` elementy a aktualizujete-the-hash atributy s vypočtená hodnota.  
-  
+   Používá k určení, že nástroj manifest vypočítá hodnoty hash souborů zadaných v hashupdate `<file>` elementy a aktualizujete-the-hash atributy s vypočtená hodnota.
+
 - **Aktualizovat cestu hledání hodnoty hash souboru**
 
-   Určuje cestu hledání pro soubory, které jsou odkazovány v `<file>` elementy. Tato možnost také používá hashupdate.  
-  
-## <a name="see-also"></a>Viz také  
- [\<Soubor > – Element](/visualstudio/deployment/file-element-clickonce-application)   
- [ClickOnce – Manifest aplikace](/visualstudio/deployment/clickonce-application-manifest)   
- [Stránky vlastností nástroje manifest](../ide/manifest-tool-property-pages.md)   
- [Práce s vlastnostmi projektu](../ide/working-with-project-properties.md)   
+   Určuje cestu hledání pro soubory, které jsou odkazovány v `<file>` elementy. Tato možnost také používá hashupdate.
+
+## <a name="see-also"></a>Viz také
+
+[\<Soubor > – Element](/visualstudio/deployment/file-element-clickonce-application)<br>
+[ClickOnce – manifest aplikace ](/visualstudio/deployment/clickonce-application-manifest)<br>
+[Stránky vlastností nástroje manifest](../ide/manifest-tool-property-pages.md)<br>
+[Práce s vlastnostmi projektu](../ide/working-with-project-properties.md)

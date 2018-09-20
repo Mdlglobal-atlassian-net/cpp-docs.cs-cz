@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d160a042263f783b88c7ff2d9dfd03c46759079
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: fe7cad7fccabd7acc8af7ecf1f3711d5b0d636ce
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318808"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379187"
 ---
 # <a name="image-editor-for-icons"></a>Editor obrázků pro ikony
 
@@ -67,5 +67,5 @@ Informace o přidávání prostředků do spravovaných projektů, najdete v té
 
 ## <a name="see-also"></a>Viz také
 
-[Editory prostředků](../windows/resource-editors.md)  
+[Editory prostředků](../windows/resource-editors.md)<br/>
 [Ikony](https://msdn.microsoft.com/library/windows/desktop/ms646973.aspx)

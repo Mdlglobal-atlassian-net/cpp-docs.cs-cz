@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c375a10d1c8dadca643ac428422eb388c16cdae6
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2bda23b6847c08096b27516fcc955e4bf68c38ba
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313933"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385830"
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-c-image-editor-for-icons"></a>Nové &lt;zařízení&gt; typ dialogového okna obrázku zařízení (Editor obrázků pro ikony) (C++)
 
@@ -54,6 +54,6 @@ Otevře [dialogové okno vlastní obrázek](custom-image-dialog-box-image-editor
 
 ## <a name="see-also"></a>Viz také
 
-[Ikony a kurzory: prostředky obrázků pro zobrazovací zařízení](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
-[Nabídka obrázku](../windows/image-menu-image-editor-for-icons.md)  
+[Ikony a kurzory: prostředky obrázků pro zobrazovací zařízení](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)<br/>
+[Nabídka obrázku](../windows/image-menu-image-editor-for-icons.md)<br/>
 [Editor obrázků pro ikony](../windows/image-editor-for-icons.md)

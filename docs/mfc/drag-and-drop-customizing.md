@@ -1,5 +1,5 @@
 ---
-title: 'Přetažení: přizpůsobení | Microsoft Docs'
+title: 'Přetažení: přizpůsobení | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,29 +18,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59ec5a5a493106750fa7bb8c7ec31b8dbb011070
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7dd7e88d6843ec3d95538e482c6c05a3d853f4d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344240"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390760"
 ---
 # <a name="drag-and-drop-customizing"></a>Přetažení: Přizpůsobení
-Výchozí implementace funkce přetažení myší je dostatečné pro většinu aplikací. Některé aplikace však může vyžadovat, aby toto standardní chování změnit. Tento článek vysvětluje kroky potřebné k změnit toto výchozí nastavení. Kromě toho můžete použít tento postup k vytvoření aplikace, které nepodporují složené dokumenty jako rozevírací zdroje.  
-  
- Pokud jsou přizpůsobení standardní chování OLE přetahování myší, nebo máte aplikací jiných než OLE, musíte vytvořit `COleDataSource` objektu tak, aby obsahovala data. Když uživatel spustí operace přetahování myší, by měly volat kódu `DoDragDrop` funkce z tohoto objektu místo z jiné třídy, které podporují operací přetažení myší.  
-  
- Volitelně můžete vytvořit `COleDropSource` objekt řízení rozevíracího a některé jeho funkce v závislosti na typu chcete změnit chování přepsat. Tento objekt zdroj vynechání jsou předána do `COleDataSource::DoDragDrop` Chcete-li změnit výchozí chování těchto funkcí. Tyto různé možnosti Povolit značnou flexibilitu v tom, jak podporu operací přetažení myší v aplikaci. Další informace o zdrojích dat, najdete v článku [datové objekty a zdroje dat (OLE)](../mfc/data-objects-and-data-sources-ole.md).  
-  
- Chcete-li přizpůsobit operací přetažení myší následující funkce se dá přepsat:  
-  
-|přepsání|Chcete-li přizpůsobit|  
-|--------------|------------------|  
-|`OnBeginDrag`|Jak přetahování je zahájeno po zavolání metody `DoDragDrop`.|  
-|`GiveFeedback`|Vizuální zpětnou vazbu, například vzhled kurzor pro různé rozevírací výsledky.|  
-|`QueryContinueDrag`|Ukončení operací přetažení myší. Tato funkce umožňuje zkontrolovat klíče stavy modifikátor během operace přetažení.|  
-  
-## <a name="see-also"></a>Viz také  
- [Přetažení (OLE)](../mfc/drag-and-drop-ole.md)   
- [COleDropSource – třída](../mfc/reference/coledropsource-class.md)   
- [COleDataSource – třída](../mfc/reference/coledatasource-class.md)
+
+Výchozí implementace funkcí přetahování myší stačí pro většinu aplikací. Některé aplikace však může vyžadovat, aby byla změněna tento standardní chování. Tento článek vysvětluje postup, chcete-li změnit toto výchozí nastavení. Kromě toho můžete použít tuto techniku k vytvoření aplikace, které nepodporují složené dokumenty jako zdroj přetažení.
+
+Pokud se přizpůsobení standardní chování a přetahování OLE nebo už využíváte-OLE – aplikace, musíte vytvořit `COleDataSource` objekt obsahující data. Když uživatel spustí operaci přetažení myší, by měl váš kód volat `DoDragDrop` funkce z tohoto objektu namísto z jiné třídy, které podporují operace přetažení myší.
+
+Volitelně můžete vytvořit `COleDropSource` objektu na ovládací prvek rozevírací nabídku a některé jeho funkce v závislosti na typ chcete změnit chování přepsat. Tento objekt zdroje přemístění je pak předán `COleDataSource::DoDragDrop` Chcete-li změnit výchozí chování těchto funkcí. Těmito možnostmi umožní značnou flexibilitu při jak podporovat operace přetažení myší ve vaší aplikaci. Další informace o zdrojích dat najdete v článku [datové objekty a zdroje dat (OLE)](../mfc/data-objects-and-data-sources-ole.md).
+
+Následující funkce pro přizpůsobení operací přetažení myší, můžete přepsat:
+
+|přepsání|Chcete-li přizpůsobit|
+|--------------|------------------|
+|`OnBeginDrag`|Jak přetažení je zahájeno po zavolání `DoDragDrop`.|
+|`GiveFeedback`|Vizuální zpětnou vazbu, jako je například vzhled kurzoru pro jiné odkládací výsledky.|
+|`QueryContinueDrag`|Ukončení operace přetažení myší. Tato funkce umožňuje zkontrolovat stavy klíče modifikátor během operace přetažení.|
+
+## <a name="see-also"></a>Viz také
+
+[Přetažení (OLE)](../mfc/drag-and-drop-ole.md)<br/>
+[COleDropSource – třída](../mfc/reference/coledropsource-class.md)<br/>
+[COleDataSource – třída](../mfc/reference/coledatasource-class.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0082626926e711d5c8f122b10552328fac52a069
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 24b46a2872d0a4f235d06e3f34f7640995be300d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222950"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375317"
 ---
 # <a name="transmitas"></a>transmit_as
 
@@ -38,7 +38,7 @@ Instruuje kompilátor, aby přidružení uvedený typ, který manipulovat s klie
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*  
+*Typ*<br/>
 Určuje typ dat, která se přenášejí mezi klientem a serverem.
 
 ## <a name="remarks"></a>Poznámky
@@ -92,6 +92,6 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](..
 
 ## <a name="see-also"></a>Viz také
 
-[IDL – atributy](../windows/idl-attributes.md)  
-[Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[IDL – atributy](../windows/idl-attributes.md)<br/>
+[Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [export](../windows/export.md)  

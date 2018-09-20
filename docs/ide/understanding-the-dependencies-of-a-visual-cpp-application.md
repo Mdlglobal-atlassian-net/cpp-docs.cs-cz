@@ -1,5 +1,5 @@
 ---
-title: Principy závislostí v aplikaci Visual C++ | Microsoft Docs
+title: Principy závislostí v aplikacích Visual C++ | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,25 +21,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da2aadeba69a8be29627650ba6ef24516098a8e3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 7cdcc3af65f5a3a45b4a3549348a564a0cb0830e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33338780"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425116"
 ---
 # <a name="understanding-the-dependencies-of-a-visual-c-application"></a>Principy závislostí v aplikacích Visual C++
-Chcete-li zjistit, které knihovny jazyka Visual C++ aplikace závisí na, můžete zobrazit vlastnosti projektu. (V Průzkumníku řešení klikněte pravým tlačítkem na projekt a zvolte **vlastnosti** otevřete **stránky vlastností** dialogové okno.) Můžete použít také Prohlížeč závislostí (depends.exe), který vám poskytne komplexnější přehled o závislostech v projektu.  
-  
- V **stránky vlastností** dialogové okno, můžete zkontrolovat v části stránky **vlastnosti konfigurace** pochopit závislosti. Například, pokud používá projektu knihovny MFC a zvolíte **použití knihovny MFC**, **použití knihovny MFC ve sdílené knihovně DLL** na **vlastnosti konfigurace**, **obecné**  stránce aplikace za běhu závisí na MFC – knihovny DLL například mfc\<verze > .dll. Pokud vaše aplikace nepoužívá MFC, pokud si zvolíte, se může záviset na knihovny CRT **Runtime Library** hodnotu **Multi-threaded Debug DLL (/ MDd)** nebo **Multi-threaded DLL (/ MD)** na **vlastnosti konfigurace**, **C/C++**, **generování kódu** stránky.  
-  
- Komplexnější způsob jak určit, které knihovny DLL, které závisí aplikace na je k otevření aplikace použít závislost Walkera (depends.exe). Si můžete stáhnout nástroj z [Walkera závislostí](http://go.microsoft.com/fwlink/p/?LinkId=132640) webu.  
-  
- Pomocí depends.exe můžete zkontrolovat seznam knihoven DLL, které jsou propojeny s aplikace při načítání a seznam jeho DLL s odloženým načtením. Pokud chcete získat úplný seznam knihoven DLL, které jsou načtené dynamicky za běhu, můžete použít funkci profilování v depends.exe k testování aplikace, dokud si jisti, že byly využity všechny cesty kódu. Po ukončení relace profilování zobrazí depends.exe, které knihovny DLL byly načteny dynamicky za běhu.  
-  
- Při práci s nástrojem depends.exe je třeba si uvědomit, že knihovna DLL může mít závislost na jiné knihovně DLL nebo na konkrétní verzi knihovny DLL. Nástroj depends.exe můžete použít na vývojářském nebo cílovém počítači. Na vývojářském počítači vypíše nástroj depends.exe knihovny DLL, které jsou nutné k podpoře aplikace. Máte-li potíže se spuštěním aplikace v cílovém počítači, můžete na něj zkopírovat nástroj depends.exe a aplikaci pak otevřít v něm. Tak zjistíte, zda některá z požadovaných knihoven DLL nechybí nebo není nesprávná.  
-  
- Když víte, na kterých knihovnách DLL aplikace závisí, můžete určit knihovny, které je třeba distribuovat s aplikací při nasazování do jiného počítače. Ve většině případů nemusíte znovu distribuovat systémové knihovny DLL, ale možná budete muset znovu distribuovat knihovny DLL pro knihovny jazyka Visual C++. Další informace najdete v tématu [určení, které knihovny DLL znovu distribuovat](../ide/determining-which-dlls-to-redistribute.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Nasazení aplikací klasické pracovní plochy](../ide/deploying-native-desktop-applications-visual-cpp.md)
+
+Chcete-li zjistit, které knihovny Visual C++ aplikace závisí, můžete zobrazit vlastnosti projektu. (V Průzkumníku řešení klikněte pravým tlačítkem na projekt a zvolte **vlastnosti** otevřít **stránky vlastností** dialogové okno.) Můžete použít také Prohlížeč závislostí (depends.exe), který vám poskytne komplexnější přehled o závislostech v projektu.
+
+V **stránky vlastností** dialogovém okně můžete zkoumáním stránek v rámci **vlastnosti konfigurace** přehled o závislostech. Například, pokud váš projekt používá knihovny MFC a zvolíte **použít knihovnu MFC**, **použít knihovnu MFC ve sdílené knihovně DLL** na **vlastnosti konfigurace**, **obecné**  stránky, vaše aplikace v době běhu závisí na knihovnách MFC DLL například knihovny mfc\<verze > .dll. Pokud vaše aplikace nepoužívá knihovnu MFC, pokud se rozhodnete, ho může záviset na knihovně CRT **knihovny prostředí Runtime** hodnotu **Multi-threaded ladit knihovnu DLL (/ MDd)** nebo **Multi-threaded DLL (/ MD)** na **vlastnosti konfigurace**, **C/C++**, **generování kódu** stránky.
+
+Komplexnější způsob, jak určit, které knihovny DLL aplikace závisí na je použít prohlížeč závislostí (depends.exe) otevřete aplikaci. Můžete stáhnout nástroj ze [prohlížeč závislostí](http://go.microsoft.com/fwlink/p/?LinkId=132640) webu.
+
+Pomocí depends.exe můžete prohlížet seznam knihoven DLL, které jsou propojeny s aplikací v okamžiku načtení a seznam jeho odloženě zaváděné knihovny DLL. Pokud chcete získat úplný seznam knihoven DLL, které se načítají dynamicky za běhu, můžete použít funkce profilování v depends.exe aplikaci otestovat, dokud si jisti, že byly využity všechny cesty kódu. Po ukončení relace profilování depends.exe zobrazí, které knihovny DLL byly dynamicky načteny za běhu.
+
+Při práci s nástrojem depends.exe je třeba si uvědomit, že knihovna DLL může mít závislost na jiné knihovně DLL nebo na konkrétní verzi knihovny DLL. Nástroj depends.exe můžete použít na vývojářském nebo cílovém počítači. Na vývojářském počítači vypíše nástroj depends.exe knihovny DLL, které jsou nutné k podpoře aplikace. Máte-li potíže se spuštěním aplikace v cílovém počítači, můžete na něj zkopírovat nástroj depends.exe a aplikaci pak otevřít v něm. Tak zjistíte, zda některá z požadovaných knihoven DLL nechybí nebo není nesprávná.
+
+Když víte, na kterých knihovnách DLL aplikace závisí, můžete určit knihovny, které je třeba distribuovat s aplikací při nasazování do jiného počítače. Ve většině případů není nutné znovu distribuovat systémové knihovny DLL, ale možná budete muset distribuovat knihovny DLL pro knihovny Visual C++. Další informace najdete v tématu [Determining Which DLLs to Redistribute](../ide/determining-which-dlls-to-redistribute.md).
+
+## <a name="see-also"></a>Viz také
+
+[Nasazení aplikací klasické pracovní plochy](../ide/deploying-native-desktop-applications-visual-cpp.md)

@@ -39,12 +39,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3bc016367495be8cc10c09605e8018811bde5ca9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5dfe6622edcd8446b844b5d3d7c03d1fd5d0197c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118905"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379408"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass – třída
 
@@ -61,10 +61,10 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 
 ### <a name="parameters"></a>Parametry
 
-*classFlags*  
+*classFlags*<br/>
 Volitelný parametr. Kombinace jedné nebo více [runtimeclasstype –](../windows/runtimeclasstype-enumeration.md) hodnot výčtu. `__WRL_CONFIGURATION_LEGACY__` Makra lze definovat za účelem změnit výchozí hodnotu classFlags pro všechny třídy modulu runtime v projektu. Pokud definována, RuntimeClass instance jsou mimo agilní ve výchozím nastavení. Pokud není definován, RuntimeClass instance jsou agilní ve výchozím nastavení. Aby se zabránilo nejednoznačnosti vždy zadávat `Microsoft::WRL::FtmBase` v `TInterfaces` nebo `RuntimeClassType::InhibitFtmBase`. Poznámka: Pokud jsou obě používají objekt InhibitFtmBase a ftmbase – bude agile.
 
-*TInterfaces*  
+*TInterfaces*<br/>
 Seznam rozhraní objekt implementuje nad rámec `IUnknown`, `IInspectable` nebo jiných rozhraní řídí [runtimeclasstype –](../windows/runtimeclasstype-enumeration.md). Je také může seznam jiných tříd nelze odvodit z, zejména `Microsoft::WRL::FtmBase` vytvořit objekt agilní a způsobit, že k implementaci `IMarshal`.
 
 ## <a name="members"></a>Členové
@@ -152,10 +152,10 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*iidCount*  
+*iidCount*<br/>
 Pokud tato operace dokončí, celkový počet prvků v poli *IID*.
 
-*IID*  
+*IID*<br/>
 Když tato operace dokončí, ukazatel na pole ID rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -174,7 +174,7 @@ STDMETHOD( GetRuntimeClassName )(
 
 ### <a name="parameters"></a>Parametry
 
-*runtimeName*  
+*runtimeName*<br/>
 Po dokončení této operace, název třídy runtime.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -197,7 +197,7 @@ STDMETHOD(GetTrustLevel)(
 
 ### <a name="parameters"></a>Parametry
 
-*trustLvl*  
+*trustLvl*<br/>
 Když tato operace dokončí, aktuální úroveň důvěryhodnosti `RuntimeClass` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -220,7 +220,7 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*weakreference –*  
+*weakreference –*<br/>
 Když tato operace dokončí, ukazatel na objekt nestálý odkaz.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -253,10 +253,10 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*riid*  
+*riid*<br/>
 Identifikátor rozhraní.
 
-*ppvObject*  
+*ppvObject*<br/>
 Když tento opereation se dokončí, ukazatel na rozhraní určené typem *riid* parametru.
 
 ### <a name="return-value"></a>Návratová hodnota

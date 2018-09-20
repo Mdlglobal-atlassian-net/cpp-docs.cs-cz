@@ -34,191 +34,209 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ca3af6aba4c208672038de2ca663efdb2cc9d9a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: dc4a6ee892c70a53e28031ff8dd9ef874d252a86
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700931"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380869"
 ---
 # <a name="cmenutearoffmanager-class"></a>Cmenutearoffmanager – třída
-Spravuje odnímatelné nabídky. Odnímatelná nabídka je nabídka na panelu nabídek. Uživatel může odebrat odnímatelnou nabídku z řádku nabídek, způsobí odnímatelná nabídka uvolnění.  
-  
-   Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.  
-   
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CMenuTearOffManager : public CObject  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CMenuTearOffManager::CMenuTearOffManager](#cmenutearoffmanager)|Vytvoří `CMenuTearOffManager` objektu.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CMenuTearOffManager::Build](#build)||  
-|[CMenuTearOffManager::GetRegPath](#getregpath)||  
-|[CMenuTearOffManager::Initialize](#initialize)|Inicializuje `CMenuTearOffManager` objektu.|  
-|[CMenuTearOffManager::IsDynamicID](#isdynamicid)||  
-|[CMenuTearOffManager::Parse](#parse)||  
-|[CMenuTearOffManager::Reset](#reset)||  
-|[CMenuTearOffManager::SetInUse](#setinuse)||  
-|[CMenuTearOffManager::SetupTearOffMenus](#setuptearoffmenus)||  
-  
-## <a name="remarks"></a>Poznámky  
- Chcete-li použít odnímatelné nabídky ve vaší aplikaci, musíte mít `CMenuTearOffManager` objektu. Ve většině případů nebude vytvářet nebo inicializovat `CMenuTearOffManager` objektu přímo. To se udělá za vás při volání [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) funkce.  
-  
-## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak vytvořit a inicializovat `CMenuTearOffManager` objektu voláním `CWinAppEX::EnableTearOffMenus` metody. Tento fragment kódu je součástí [slovo panel vzorku](../../visual-cpp-samples.md).  
-  
- [!code-cpp[NVC_MFC_WordPad#12](../../mfc/reference/codesnippet/cpp/cmenutearoffmanager-class_1.cpp)]  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [Třídy CObject](../../mfc/reference/cobject-class.md)  
-  
- `CMenuTearOffManager`   
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxmenutearoffmanager.h  
-  
-##  <a name="build"></a>  CMenuTearOffManager::Build  
 
-  
-```  
+Spravuje odnímatelné nabídky. Odnímatelná nabídka je nabídka na panelu nabídek. Uživatel může odebrat odnímatelnou nabídku z řádku nabídek, způsobí odnímatelná nabídka uvolnění.
+
+   Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CMenuTearOffManager : public CObject
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[CMenuTearOffManager::CMenuTearOffManager](#cmenutearoffmanager)|Vytvoří `CMenuTearOffManager` objektu.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CMenuTearOffManager::Build](#build)||
+|[CMenuTearOffManager::GetRegPath](#getregpath)||
+|[CMenuTearOffManager::Initialize](#initialize)|Inicializuje `CMenuTearOffManager` objektu.|
+|[CMenuTearOffManager::IsDynamicID](#isdynamicid)||
+|[CMenuTearOffManager::Parse](#parse)||
+|[CMenuTearOffManager::Reset](#reset)||
+|[CMenuTearOffManager::SetInUse](#setinuse)||
+|[CMenuTearOffManager::SetupTearOffMenus](#setuptearoffmenus)||
+
+## <a name="remarks"></a>Poznámky
+
+Chcete-li použít odnímatelné nabídky ve vaší aplikaci, musíte mít `CMenuTearOffManager` objektu. Ve většině případů nebude vytvářet nebo inicializovat `CMenuTearOffManager` objektu přímo. To se udělá za vás při volání [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) funkce.
+
+## <a name="example"></a>Příklad
+
+Následující příklad ukazuje, jak vytvořit a inicializovat `CMenuTearOffManager` objektu voláním `CWinAppEX::EnableTearOffMenus` metody. Tento fragment kódu je součástí [slovo panel vzorku](../../visual-cpp-samples.md).
+
+[!code-cpp[NVC_MFC_WordPad#12](../../mfc/reference/codesnippet/cpp/cmenutearoffmanager-class_1.cpp)]
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[Třídy CObject](../../mfc/reference/cobject-class.md)
+
+`CMenuTearOffManager`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxmenutearoffmanager.h
+
+##  <a name="build"></a>  CMenuTearOffManager::Build
+
+
+```
 void Build(
-    UINT uiTearOffBarID,  
+    UINT uiTearOffBarID,
     CString& strText);
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *uiTearOffBarID*<br/>
-[in] [in] *strText*  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="cmenutearoffmanager"></a>  CMenuTearOffManager::CMenuTearOffManager  
- Vytvoří [cmenutearoffmanager –](../../mfc/reference/cmenutearoffmanager-class.md) objektu.  
-  
-```  
+[in] [in] *strText*
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="cmenutearoffmanager"></a>  CMenuTearOffManager::CMenuTearOffManager
+
+Vytvoří [cmenutearoffmanager –](../../mfc/reference/cmenutearoffmanager-class.md) objektu.
+
+```
 CMenuTearOffManager();
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Ve většině případů by neměl vytvářet `CMenuTearOffManager` ručně. Vytvoří rozhraní framework vaší aplikace `CMenuTearOffManager` objektu při volání [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus).  
-  
-##  <a name="getregpath"></a>  CMenuTearOffManager::GetRegPath  
+```
 
-  
-```  
-LPCTSTR GetRegPath() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="initialize"></a>  CMenuTearOffManager::Initialize  
- Inicializuje [cmenutearoffmanager –](../../mfc/reference/cmenutearoffmanager-class.md) objektu.  
-  
-```  
+### <a name="remarks"></a>Poznámky
+
+Ve většině případů by neměl vytvářet `CMenuTearOffManager` ručně. Vytvoří rozhraní framework vaší aplikace `CMenuTearOffManager` objektu při volání [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus).
+
+##  <a name="getregpath"></a>  CMenuTearOffManager::GetRegPath
+
+
+```
+LPCTSTR GetRegPath() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="initialize"></a>  CMenuTearOffManager::Initialize
+
+Inicializuje [cmenutearoffmanager –](../../mfc/reference/cmenutearoffmanager-class.md) objektu.
+
+```
 BOOL Initialize(
-    LPCTSTR lpszRegEntry,  
-    UINT uiTearOffMenuFirst,  
+    LPCTSTR lpszRegEntry,
+    UINT uiTearOffMenuFirst,
     UINT uiTearOffMenuLast);
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *lpszRegEntry*<br/>
-[in] Řetězec, který obsahuje cestu položky registru. Aplikace ukládá nastavení odtržených pruhy v této položky registru.  
-  
+[in] Řetězec, který obsahuje cestu položky registru. Aplikace ukládá nastavení odtržených pruhy v této položky registru.
+
 *uiTearOffMenuFirst*<br/>
-[in] ID prvního nabídky pro odnímatelnou nabídku.  
-  
+[in] ID prvního nabídky pro odnímatelnou nabídku.
+
 *uiTearOffMenuLast*<br/>
-[in] ID poslední nabídky pro odnímatelnou nabídku.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Nenulové, pokud je úspěšná. jinak 0.  
-  
-### <a name="remarks"></a>Poznámky  
- Rozsah ID nabídky z *uiTearOffMenuFirst* k *uiTearOffMenuLast* musí být průběžné intervalu. Interval definuje počet odnímatelné nabídky, které se mohou objevit ve stejnou dobu v aplikaci.  
-  
-##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID  
+[in] ID poslední nabídky pro odnímatelnou nabídku.
 
-  
-```  
-BOOL IsDynamicID(UINT uiID) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] *uiID*  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="parse"></a>  CMenuTearOffManager::Parse  
+### <a name="return-value"></a>Návratová hodnota
 
-  
-```  
+Nenulové, pokud je úspěšná. jinak 0.
+
+### <a name="remarks"></a>Poznámky
+
+Rozsah ID nabídky z *uiTearOffMenuFirst* k *uiTearOffMenuLast* musí být průběžné intervalu. Interval definuje počet odnímatelné nabídky, které se mohou objevit ve stejnou dobu v aplikaci.
+
+##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID
+
+
+```
+BOOL IsDynamicID(UINT uiID) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+[in] *uiID*
+
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="parse"></a>  CMenuTearOffManager::Parse
+
+
+```
 UINT Parse(CString& str);
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] *str*  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="reset"></a>  CMenuTearOffManager::Reset  
+```
 
-  
-```  
+### <a name="parameters"></a>Parametry
+
+[in] *str*
+
+### <a name="return-value"></a>Návratová hodnota
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="reset"></a>  CMenuTearOffManager::Reset
+
+
+```
 void Reset(HMENU hmenu);
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] *hmenu*  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="setinuse"></a>  CMenuTearOffManager::SetInUse  
+```
 
-  
-```  
+### <a name="parameters"></a>Parametry
+
+[in] *hmenu*
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="setinuse"></a>  CMenuTearOffManager::SetInUse
+
+
+```
 void SetInUse(
-    UINT uiCmdId,  
+    UINT uiCmdId,
     BOOL bUse = TRUE);
-```  
-  
-### <a name="parameters"></a>Parametry  
-*uiCmdId*<br/>
-[in] [in] *bUse*  
-  
-### <a name="remarks"></a>Poznámky  
-  
-##  <a name="setuptearoffmenus"></a>  CMenuTearOffManager::SetupTearOffMenus  
+```
 
-  
-```  
+### <a name="parameters"></a>Parametry
+
+*uiCmdId*<br/>
+[in] [in] *bUse*
+
+### <a name="remarks"></a>Poznámky
+
+##  <a name="setuptearoffmenus"></a>  CMenuTearOffManager::SetupTearOffMenus
+
+
+```
 void SetupTearOffMenus(HMENU hMenu);
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] *hMenu*  
-  
-### <a name="remarks"></a>Poznámky  
-  
-## <a name="see-also"></a>Viz také  
- [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [Třídy](../../mfc/reference/mfc-classes.md)   
- [CWinAppEx – třída](../../mfc/reference/cwinappex-class.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+[in] *hMenu*
+
+### <a name="remarks"></a>Poznámky
+
+## <a name="see-also"></a>Viz také
+
+[Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
+[Třídy](../../mfc/reference/mfc-classes.md)<br/>
+[CWinAppEx – třída](../../mfc/reference/cwinappex-class.md)

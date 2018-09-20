@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2872f1639a11d537dd79b878a166a3afb5fd8667
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 65794dafe5e45cbd4c0e2a7eb49c34377009deee
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719161"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392980"
 ---
 # <a name="safecast"></a>SafeCast
 
@@ -67,6 +67,6 @@ Další informace o typech šablony T a U najdete v tématu [SafeInt – funkce]
 
 ## <a name="see-also"></a>Viz také
 
-[SafeInt – funkce](../windows/safeint-functions.md)  
-[SafeInt – knihovna](../windows/safeint-library.md)  
+[SafeInt – funkce](../windows/safeint-functions.md)<br/>
+[SafeInt – knihovna](../windows/safeint-library.md)<br/>
 [SafeInt – třída](../windows/safeint-class.md)

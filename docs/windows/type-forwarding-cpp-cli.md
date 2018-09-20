@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d10c025c22523e6329f051fcfbe76988337992a2
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 806003e33e60b5146bdd722fa5248011cd4939c0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318145"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396544"
 ---
 # <a name="type-forwarding-ccli"></a>Předávání typů (C++/CLI)
 
@@ -51,10 +51,10 @@ Následující příklad kódu ukazuje, jak používat předávání typů.
 
 ### <a name="parameters"></a>Parametry
 
-*new*  
+*new*<br/>
 Sestavení, do kterého se přesunutí definice typu.
 
-*Typ*  
+*Typ*<br/>
 Typ, jejichž definice jsou přesunu do jiného sestavení.
 
 ### <a name="remarks"></a>Poznámky

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 848ea415d0638b6135c69cd14e442f45dab40237
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ec3ba8280ab481211d98c9dc5256c94e76e193e2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220358"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396440"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -39,10 +39,10 @@ Definuje metadata pro objekt v knihovně typů.
 
 ### <a name="parameters"></a>Parametry
 
-*uuid*  
+*uuid*<br/>
 Jedinečný identifikátor.
 
-*value*  
+*value*<br/>
 Hodnota, která můžou být přepnuté do hodnotu typu variant.
 
 ## <a name="remarks"></a>Poznámky
@@ -66,10 +66,10 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](..
 
 ## <a name="see-also"></a>Viz také
 
-[IDL – atributy](../windows/idl-attributes.md)  
-[Samostatné atributy](../windows/stand-alone-attributes.md)  
-[Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Atributy parametru](../windows/parameter-attributes.md)  
-[Atributy metody](../windows/method-attributes.md)  
-[Atributy třídy](../windows/class-attributes.md)  
+[IDL – atributy](../windows/idl-attributes.md)<br/>
+[Samostatné atributy](../windows/stand-alone-attributes.md)<br/>
+[Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[Atributy parametru](../windows/parameter-attributes.md)<br/>
+[Atributy metody](../windows/method-attributes.md)<br/>
+[Atributy třídy](../windows/class-attributes.md)<br/>
 [Atributy rozhraní](../windows/interface-attributes.md)  

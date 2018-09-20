@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fca1c097a01f34fb2cc708489338391dfced982f
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: b80c9c8ef371808fc98d0475afc00223b13194ea
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42465752"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384036"
 ---
 # <a name="preprocessor-operators"></a>Operátory preprocesoru
 Čtyři operátory specifické pro preprocesor se používají v souvislosti s direktivou `#define` (shrnutí každého viz následující seznam). V následujících třech částech jsou popsány operátory převádějící na řetězec, převádějící na znak a vkládající token. Informace o tom, `defined` operátoru, naleznete v tématu [#if, #elif, #else a #endif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).  
@@ -34,6 +34,6 @@ ms.locfileid: "42465752"
   
 ## <a name="see-also"></a>Viz také  
  
-[Preprocesor – direktivy](../preprocessor/preprocessor-directives.md)   
-[Předdefinovaná makra](../preprocessor/predefined-macros.md)   
+[Preprocesor – direktivy](../preprocessor/preprocessor-directives.md)<br/>
+[Předdefinovaná makra](../preprocessor/predefined-macros.md)<br/>
 [C/C++ – referenční dokumentace preprocesoru](../preprocessor/c-cpp-preprocessor-reference.md)

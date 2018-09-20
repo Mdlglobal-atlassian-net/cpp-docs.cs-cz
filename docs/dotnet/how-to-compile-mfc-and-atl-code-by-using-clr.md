@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: zkompilování MFC a knihovny ATL kód pomocí - clr | Microsoft Docs'
+title: 'Postupy: kompilace kódu MFC a ATL s použitím - clr | Dokumentace Microsoftu'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -23,69 +23,71 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b7412d69230bcb6375a042d6cf8e8f27a3d9eac9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c6079cd0371afa1b9a3ed32ba2cf67e1691d665
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33136064"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382801"
 ---
 # <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>Postupy: Kompilování kódu knihovny MFC a knihovny ATL s použitím přepínače /clr
-Toto téma popisuje způsob kompilace existující MFC a knihovna ATL programů, pro které modul Common Language Runtime.  
-  
-### <a name="to-compile-an-mfc-executable-or-regular-mfc-dll-by-using-clr"></a>MFC DLL MFC, spustitelný soubor nebo regulární zkompilovat pomocí/CLR  
-  
-1.  Klikněte pravým tlačítkem na projekt v **Průzkumníku řešení** a pak klikněte na **vlastnosti**.  
-  
-2.  V **vlastnosti projektu** dialogové okno pole, rozbalte uzel vedle **vlastnosti konfigurace** a vyberte **Obecné**. V pravém podokně v části **výchozí projekt**, nastavte **podpory Common Language Runtime** k **Podpora Common Language Runtime (/ clr)**.  
-  
-     V podokně stejné, ujistěte se, že **použití knihovny MFC** je nastaven na **použití knihovny MFC ve sdílené knihovně DLL**.  
-  
-3.  V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **Obecné**. Ujistěte se, že **Debug Information Format** je nastaven na **Program Database /Zi** (ne **/ZI**).  
-  
-4.  Vyberte **generování kódu** uzlu. Nastavit **povolit minimální opětovné sestavení** k **ne (/ Gm –)**. Nastavte také **základní kontroluje Runtime** k **výchozí**.  
-  
-5.  V části **vlastnosti konfigurace**, vyberte **C/C++** a potom **generování kódu**. Ujistěte se, že **Runtime Library** je nastaven na hodnotu **Multi-threaded Debug DLL (/ MDd)** nebo **Multi-threaded DLL (/ MD)**.  
-  
-6.  V Stdafx.h přidejte následující řádek.  
-  
-    ```  
-    #using <System.Windows.Forms.dll>  
-    ```  
-  
-### <a name="to-compile-an-mfc-extension-dll-by-using-clr"></a>Kompilace knihovnu DLL pomocí/CLR  
-  
-1.  Postupujte podle kroků v "A zkompilovat MFC spustitelný soubor nebo regulární knihovně MFC DLL pomocí/clr".  
-  
-2.  V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **předkompilovaných hlaviček**. Nastavit **vytvoření nebo použití předkompilovaných hlaviček** k **není použití předkompilovaných hlaviček**.  
-  
-     Jako alternativu v **Průzkumníku řešení**, klikněte pravým tlačítkem na Stdafx.cpp a pak klikněte na tlačítko **vlastnosti**. V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **Obecné**. Nastavit **kompilovat s podporou modul Common Language Runtime** k **modul Common Language Runtime bez podpory**.  
-  
-3.  Pro soubor, který obsahuje DllMain a nic zavolá, v **Průzkumníku řešení**, klikněte pravým tlačítkem na soubor a pak klikněte na tlačítko **vlastnosti**. V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **Obecné**. V pravém podokně v části **výchozí projekt**, nastavte **kompilovat s podporou modul Common Language Runtime** k **modul Common Language Runtime bez podpory**.  
-  
-### <a name="to-compile-an-atl-executable-by-using-clr"></a>Zkompilovat spustitelný soubor knihovny ATL s použitím/CLR  
-  
-1.  V **Průzkumníku řešení**, klikněte pravým tlačítkem na projekt a pak klikněte na tlačítko **vlastnosti**.  
-  
-2.  V **vlastnosti projektu** dialogové okno pole, rozbalte uzel vedle **vlastnosti konfigurace** a vyberte **Obecné**. V pravém podokně v části **výchozí projekt**, nastavte **podpory Common Language Runtime** k **Podpora Common Language Runtime (/ clr)**.  
-  
-3.  V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **Obecné**. Ujistěte se, že **Debug Information Format** je nastaven na **Program Database /Zi** (ne **/ZI**).  
-  
-4.  Vyberte **generování kódu** uzlu. Nastavit **povolit minimální opětovné sestavení** k **ne (/ Gm –)**. Nastavte také **základní kontroluje Runtime** k **výchozí**.  
-  
-5.  V části **vlastnosti konfigurace**, vyberte **C/C++** a potom **generování kódu**. Ujistěte se, že **Runtime Library** je nastaven na hodnotu **Multi-threaded Debug DLL (/ MDd)** nebo **Multi-threaded DLL (/ MD)**.  
-  
-6.  Pro každý MIDL generovaný soubor (soubory C), klikněte pravým tlačítkem na soubor v **Průzkumníku řešení** a pak klikněte na **vlastnosti**. V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **Obecné**. Nastavit **kompilovat s podporou modul Common Language Runtime** k **modul Common Language Runtime bez podpory**.  
-  
-### <a name="to-compile-an-atl-dll-by-using-clr"></a>Chcete-li zkompilovat ATL knihovny DLL pomocí/CLR  
-  
-1.  Postupujte podle kroků v části "ke kompilaci spustitelný soubor knihovny ATL s použitím/CLR".  
-  
-2.  V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **předkompilovaných hlaviček**. Nastavit **vytvoření nebo použití předkompilovaných hlaviček** k **není použití předkompilovaných hlaviček**.  
-  
-     Jako alternativu v **Průzkumníku řešení**, klikněte pravým tlačítkem na Stdafx.cpp a pak klikněte na tlačítko **vlastnosti**. V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **Obecné**. Nastavit **kompilovat s podporou modul Common Language Runtime** k **modul Common Language Runtime bez podpory**.  
-  
-3.  Pro soubor, který obsahuje DllMain a nic zavolá, v **Průzkumníku řešení**, klikněte pravým tlačítkem na soubor a pak klikněte na tlačítko **vlastnosti**. V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **Obecné**. V pravém podokně v části **výchozí projekt**, nastavte **kompilovat s podporou modul Common Language Runtime** k **modul Common Language Runtime bez podpory**.  
-  
-## <a name="see-also"></a>Viz také  
- [Smíšená (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md)
+
+Toto téma popisuje, jak kompilovat existující programy MFC a ATL cílit na modul Common Language Runtime.
+
+### <a name="to-compile-an-mfc-executable-or-regular-mfc-dll-by-using-clr"></a>Chcete-li zkompilovat MFC spustitelný soubor nebo běžné knihovny MFC DLL pomocí/CLR
+
+1. Klikněte pravým tlačítkem na projekt v **Průzkumníka řešení** a potom klikněte na tlačítko **vlastnosti**.
+
+1. V **vlastnosti projektu** dialogového okna rozbalte uzel vedle **vlastnosti konfigurace** a vyberte **Obecné**. V pravém podokně v části **výchozí nastavení projektu**, nastavte **Common Language Runtime support** k **Common Language Runtime Support (/ clr)**.
+
+     V podokně stejné, ujistěte se, že **použít knihovnu MFC** je nastavena na **použít knihovnu MFC ve sdílené knihovně DLL**.
+
+1. V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **Obecné**. Ujistěte se, že **formát informací o ladění** je nastavena na **databázi programu /Zi** (ne **/zi**).
+
+1. Vyberte **generování kódu** uzlu. Nastavte **povolit minimální opětovné sestavení** k **ne (/ Gm-)**. Nastavit také **Basic Runtime Checks** k **výchozí**.
+
+1. V části **vlastnosti konfigurace**vyberte **C/C++** a potom **generování kódu**. Ujistěte se, že **knihovny prostředí Runtime** je nastaven na hodnotu **Multi-threaded ladit knihovnu DLL (/ MDd)** nebo **Multi-threaded DLL (/ MD)**.
+
+1. Ve Stdafx.h přidejte následující řádek.
+
+    ```
+    #using <System.Windows.Forms.dll>
+    ```
+
+### <a name="to-compile-an-mfc-extension-dll-by-using-clr"></a>Chcete-li zkompilovat rozšiřující knihovny DLL MFC pomocí/CLR
+
+1. Postupujte podle kroků v "Ke kompilaci MFC spustitelný soubor nebo běžné knihovny MFC DLL pomocí/clr".
+
+1. V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **předkompilované hlavičky**. Nastavte **vytvoření a použití předkompilovaných hlaviček** k **bez použití předkompilovaných hlaviček**.
+
+     Jako alternativu v **Průzkumníka řešení**Stdafx.cpp pravým tlačítkem myši a potom klikněte na tlačítko **vlastnosti**. V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **Obecné**. Nastavte **kompilovat s podporou Common Language Runtime** k **ne Common Language Runtime support**.
+
+1. Pro soubor, který obsahuje funkce DllMain a veškerých kódů, které volá, v **Průzkumníka řešení**, klikněte pravým tlačítkem na soubor a potom klikněte na tlačítko **vlastnosti**. V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **Obecné**. V pravém podokně v části **výchozí nastavení projektu**, nastavte **kompilovat s podporou Common Language Runtime** k **ne Common Language Runtime support**.
+
+### <a name="to-compile-an-atl-executable-by-using-clr"></a>Chcete-li zkompilovat spustitelný soubor knihovny ATL s použitím/CLR
+
+1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt a potom klikněte na tlačítko **vlastnosti**.
+
+1. V **vlastnosti projektu** dialogového okna rozbalte uzel vedle **vlastnosti konfigurace** a vyberte **Obecné**. V pravém podokně v části **výchozí nastavení projektu**, nastavte **Common Language Runtime support** k **Common Language Runtime Support (/ clr)**.
+
+1. V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **Obecné**. Ujistěte se, že **formát informací o ladění** je nastavena na **databázi programu /Zi** (ne **/zi**).
+
+1. Vyberte **generování kódu** uzlu. Nastavte **povolit minimální opětovné sestavení** k **ne (/ Gm-)**. Nastavit také **Basic Runtime Checks** k **výchozí**.
+
+1. V části **vlastnosti konfigurace**vyberte **C/C++** a potom **generování kódu**. Ujistěte se, že **knihovny prostředí Runtime** je nastaven na hodnotu **Multi-threaded ladit knihovnu DLL (/ MDd)** nebo **Multi-threaded DLL (/ MD)**.
+
+1. Pro každý MIDL generovaný soubor (soubory jazyka C), klikněte pravým tlačítkem na soubor v **Průzkumníka řešení** a potom klikněte na tlačítko **vlastnosti**. V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **Obecné**. Nastavte **kompilovat s podporou Common Language Runtime** k **ne Common Language Runtime support**.
+
+### <a name="to-compile-an-atl-dll-by-using-clr"></a>Chcete-li zkompilovat ATL DLL pomocí/CLR
+
+1. Postupujte podle kroků v části "ke kompilaci spustitelný soubor knihovny ATL s použitím/CLR".
+
+1. V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **předkompilované hlavičky**. Nastavte **vytvoření a použití předkompilovaných hlaviček** k **bez použití předkompilovaných hlaviček**.
+
+     Jako alternativu v **Průzkumníka řešení**Stdafx.cpp pravým tlačítkem myši a potom klikněte na tlačítko **vlastnosti**. V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **Obecné**. Nastavte **kompilovat s podporou Common Language Runtime** k **ne Common Language Runtime support**.
+
+1. Pro soubor, který obsahuje funkce DllMain a veškerých kódů, které volá, v **Průzkumníka řešení**, klikněte pravým tlačítkem na soubor a potom klikněte na tlačítko **vlastnosti**. V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **Obecné**. V pravém podokně v části **výchozí nastavení projektu**, nastavte **kompilovat s podporou Common Language Runtime** k **ne Common Language Runtime support**.
+
+## <a name="see-also"></a>Viz také
+
+[Smíšená (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md)

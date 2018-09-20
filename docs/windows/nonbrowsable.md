@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7a888ac987e8928a0e9667f2011ef7afe3075ca
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e8527f2d35de6591bf49f0fd32cc0df64a059e02
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209050"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46371937"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 
@@ -69,5 +69,5 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](..
 
 ## <a name="see-also"></a>Viz také
 
-[IDL – atributy](../windows/idl-attributes.md)  
+[IDL – atributy](../windows/idl-attributes.md)<br/>
 [Atributy metody](../windows/method-attributes.md)  
