@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6be3ef7609819c34209a9b8959bfd883a836db04
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4d68cf6be3a512d478f4d7808ce321f18c0efd84
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716339"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422250"
 ---
 # <a name="general-property-page-project"></a>Obecná stránka vlastností (projekt)
 
@@ -127,7 +127,7 @@ Vlastnosti v oddíle Výchozí projektu představují výchozí vlastnosti, kter
       Zobrazí sadu nástrojů linkeru (kompilátor C/C++, MIDL, kompilátor prostředků, Linker, BSCMake, generátor Proxy webové služby XML, vlastní sestavení, události prebuild, prelink a postbuild).
 
    - **Dynamická knihovna (.dll)**
-   
+
       Zobrazí sadu nástrojů linkeru, určuje možnost/DLL linkeru a přidá definici _windll do CL.
 
    - **Soubor pravidel**
@@ -139,7 +139,7 @@ Vlastnosti v oddíle Výchozí projektu představují výchozí vlastnosti, kter
       Zobrazí sadu nástrojů librarian (stejné jako sadu nástrojů linkeru, s výjimkou nahrazení nástroje librarian pro linker a vynechání generátoru Proxy webové služby XML).
 
    - **Nástroj**
-   
+
       Zobrazí sadu nástrojů nástroje (MIDL, vlastní sestavení, události prebuild, postbuild).
 
    Programový přístup k této vlastnosti, najdete v článku <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>.
@@ -182,4 +182,4 @@ Vlastnosti v oddíle Výchozí projektu představují výchozí vlastnosti, kter
 
 ## <a name="see-also"></a>Viz také:
 
-[Stránky vlastností](../ide/property-pages-visual-cpp.md)  
+[Stránky vlastností](../ide/property-pages-visual-cpp.md)

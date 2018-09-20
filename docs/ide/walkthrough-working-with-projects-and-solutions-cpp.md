@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d33e01ff455e47a94356dab455e9a4628cc68178
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: abd65d209bf24fb9285937cc998bd82d5ef3cb4f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017771"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418161"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>Návod: Práce s projekty a řešeními (C++)
 
@@ -177,7 +177,7 @@ Přidání kódu do vaší aplikace, který kontroluje nových funkcí.
        return 0;
    }
    ```
-Tento kód přidá testovací funkci, `PlayGames`, zdrojový kód a volání v `main`. 
+Tento kód přidá testovací funkci, `PlayGames`, zdrojový kód a volání v `main`.
 
 ## <a name="build-and-run-your-app-project"></a>Sestavení a spuštění projektu aplikace
 
