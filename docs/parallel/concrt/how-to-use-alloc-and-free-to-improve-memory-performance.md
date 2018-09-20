@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: použití funkcí Alloc a Free ke zlepšení výkonu paměti | Microsoft Docs'
+title: 'Postupy: použití funkcí Alloc a Free ke zlepšení výkonu paměti | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,57 +15,62 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0be6fa309975663126331a7e38be0f2bea7dcf17
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 0ce828d15d68ade5ba24c3a010e76e3d702f9a83
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686042"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405868"
 ---
 # <a name="how-to-use-alloc-and-free-to-improve-memory-performance"></a>Postupy: Použití funkcí Alloc a Free ke zlepšení výkonu paměti
 
-Tento dokument ukazuje, jak používat [concurrency::Alloc](reference/concurrency-namespace-functions.md#alloc) a [concurrency::Free](reference/concurrency-namespace-functions.md#free) funkce ke zlepšení výkonu paměti. Porovná čas, který je potřeba obrátit prvků pole paralelně pro tři různé typy, zadejte každou `new` a `delete` operátory.  
+Tento dokument ukazuje způsob použití [concurrency::Alloc](reference/concurrency-namespace-functions.md#alloc) a [concurrency::Free](reference/concurrency-namespace-functions.md#free) funkce ke zlepšení výkonu paměti. Porovnává čas, který se vyžaduje zpětná prvky pole paralelně pro tři různé typy, které každý určuje `new` a `delete` operátory.
 
-  
- `Alloc` a `Free` funkce jsou velmi užitečné při volání i více vláken často `Alloc` a `Free`. Modul runtime obsahuje samostatné mezipaměť pro každé vlákno; modul runtime tedy spravuje paměti bez použití zámky nebo překážek paměti.  
-  
-## <a name="example"></a>Příklad  
- Následující příklad ukazuje tři typy, zadejte každou `new` a `delete` operátory. `new_delete` Třída používá na globální `new` a `delete` operátory, `malloc_free` třída používá C Runtime [malloc –](../../c-runtime-library/reference/malloc.md) a [volné](../../c-runtime-library/reference/free.md) funkce a `Alloc_Free` třída používá Concurrency Runtime `Alloc` a `Free` funkce.  
-  
- [!code-cpp[concrt-allocators#1](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_1.cpp)]  
-  
-## <a name="example"></a>Příklad  
- Následující příklad ukazuje `swap` a `reverse_array` funkce. `swap` Funkce výměny obsah pole na zadané indexy. Přidělí paměť z haldy pro dočasné proměnné. `reverse_array` Funkce vytvoří velké pole a vypočítá čas, který je potřeba obrátit tohoto pole několikrát paralelně.  
-  
- [!code-cpp[concrt-allocators#2](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_2.cpp)]  
-  
-## <a name="example"></a>Příklad  
- Následující příklad ukazuje `wmain` funkci, která vypočítá dobu, která je požadována pro `reverse_array` funkce tak, aby fungoval na `new_delete`, `malloc_free`, a `Alloc_Free` typy, z nichž každá používá jiné paměti přidělení schéma.  
-  
- [!code-cpp[concrt-allocators#3](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_3.cpp)]  
-  
-## <a name="example"></a>Příklad  
- Úplný příklad následuje.  
-  
- [!code-cpp[concrt-allocators#4](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_4.cpp)]  
-  
- Tento příklad vytvoří následující ukázkový výstup pro počítač, který se čtyřmi procesory.  
-  
-```Output  
-Took 2031 ms with new/delete.  
-Took 1672 ms with malloc/free.  
-Took 656 ms with Alloc/Free.  
-```  
-  
- V tomto příkladu typ, který používá `Alloc` a `Free` funkce poskytuje nejlepší výkon paměti, protože `Alloc` a `Free` funkce jsou optimalizované pro často přidělování a uvolnění bloky paměti z více vláken.  
-  
-## <a name="compiling-the-code"></a>Probíhá kompilace kódu  
- Příklad kódu zkopírujte a vložte ji do projektu sady Visual Studio nebo ho vložte v souboru, který je pojmenován `allocators.cpp` a poté spusťte následující příkaz v okně příkazového řádku Visual Studia.  
-  
- **cl.exe /EHsc allocators.cpp**  
-  
-## <a name="see-also"></a>Viz také  
- [Funkce správy paměti](../../parallel/concrt/memory-management-functions.md)   
- [ALLOC – funkce](reference/concurrency-namespace-functions.md#alloc)   
- [Free – funkce](reference/concurrency-namespace-functions.md#free)
+`Alloc` a `Free` funkce jsou nejužitečnější tehdy, když často volat více vláken, obě `Alloc` a `Free`. Modul runtime obsahuje samostatný mezipaměti pro každé vlákno; Proto se modul runtime spravuje paměť bez použití zámků nebo překážky paměti.
+
+## <a name="example"></a>Příklad
+
+Následující příklad ukazuje tři typy nichž každý určuje `new` a `delete` operátory. `new_delete` Třída používá globální `new` a `delete` operátory, `malloc_free` třída používá modul Runtime jazyka C [malloc](../../c-runtime-library/reference/malloc.md) a [bezplatné](../../c-runtime-library/reference/free.md) funkce a `Alloc_Free` třída používá modulu Runtime souběžnosti `Alloc` a `Free` funkce.
+
+[!code-cpp[concrt-allocators#1](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_1.cpp)]
+
+## <a name="example"></a>Příklad
+
+Následující příklad ukazuje `swap` a `reverse_array` funkce. `swap` Funkce vymění obsah pole na zadané indexy. Přidělí paměť ze haldy pro dočasné proměnné. `reverse_array` Funkce vytvoří velkého pole a vypočítá čas, který je potřeba reverse takové pole několikrát paralelně.
+
+[!code-cpp[concrt-allocators#2](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_2.cpp)]
+
+## <a name="example"></a>Příklad
+
+Následující příklad ukazuje `wmain` funkce, která vypočítá čas, který je třeba použít `reverse_array` funkce tak, aby fungoval na `new_delete`, `malloc_free`, a `Alloc_Free` typy, z nichž každá používá jiné paměťové přidělení schéma.
+
+[!code-cpp[concrt-allocators#3](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_3.cpp)]
+
+## <a name="example"></a>Příklad
+
+Následuje Úplný příklad.
+
+[!code-cpp[concrt-allocators#4](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_4.cpp)]
+
+Tento příklad vytvoří následující ukázkový výstup pro počítač, který má čtyři procesory.
+
+```Output
+Took 2031 ms with new/delete.
+Took 1672 ms with malloc/free.
+Took 656 ms with Alloc/Free.
+```
+
+V tomto příkladu typ, který používá `Alloc` a `Free` functions poskytuje nejlepší výkon, protože `Alloc` a `Free` funkce jsou optimalizované pro často přidělení a uvolnění bloky paměti z několika vlákna.
+
+## <a name="compiling-the-code"></a>Probíhá kompilace kódu
+
+Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `allocators.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
+
+**cl.exe/EHsc allocators.cpp**
+
+## <a name="see-also"></a>Viz také
+
+[Funkce správy paměti](../../parallel/concrt/memory-management-functions.md)<br/>
+[ALLOC – funkce](reference/concurrency-namespace-functions.md#alloc)<br/>
+[Free – funkce](reference/concurrency-namespace-functions.md#free)
 

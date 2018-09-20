@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 019e63009706fd5d0ab22044642449c5bce3c3a6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 84aded46176c1c286ce5270254a0455dfce39d5d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222378"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427872"
 ---
 # <a name="porting-guide-spy"></a>Průvodce přenosem: Spy++
+
 Tento přenos případovou studii – slouží k získáte představu o jaké typické přenosem projekt je jako typů problémů můžete setkat, a některé obecné tipy a triky pro účely řešení problémů s přenosem. Není má určené jako úplnou příručku k přenesení, protože funkce přenesení do projektu z velké části závisí na konkrétním kódu.  
   
 ## <a name="spy"></a>Spy++  
@@ -74,7 +75,7 @@ C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h
   
 Windows XP je již nejsou podporovány společností Microsoft, takže i v případě, že její nastavení jako cíle může v sadě Visual Studio 2015, by měl být překážkou podporu pro ně ve svých aplikacích a podporu uživatelé přijmout nové verze Windows.  
   
- Chyba zbavit, definujte WINVER aktualizací **vlastnosti projektu** nastavení na nejnižší verze Windows aktuálně chcete cílit. Najít tabulku s hodnotami pro různé verze Windows [tady](/windows/desktop/WinProg/using-the-windows-headers).  
+Chyba zbavit, definujte WINVER aktualizací **vlastnosti projektu** nastavení na nejnižší verze Windows aktuálně chcete cílit. Najít tabulku s hodnotami pro různé verze Windows [tady](/windows/desktop/WinProg/using-the-windows-headers).  
   
 Souboru stdafx.h obsahovala některé z těchto definice maker.  
   
@@ -551,7 +552,7 @@ wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
   
 _T – makro má vliv na provádění řetězec literálu kompilovat jako **char** řetězec nebo **wchar_t** řetězec, v závislosti na nastavení znakové sady MBCS a UNICODE. Chcete-li nahradit všechny řetězce _T v sadě Visual Studio, nejprve otevřete **rychlého nahrazení** (klávesnice: **Ctrl**+**F**) pole nebo **nahrazování v souborech**  (Klávesnice: **Ctrl**+**Shift**+**H**), klikněte na tlačítko **použijte regulární Výrazy** zaškrtávací políčko. Zadejte `((\".*?\")|('.+?'))` jako hledaný text a `_T($1)` jako náhradní text. Pokud už máte _T – makro kolem některé řetězce, tento postup přidá ho znovu a setkat i případy, kdy nechcete _T, jako je například při použití `#include`, takže je vhodné použít **nahradit další** spíše než  **Nahradit vše**.  
   
- Tato funkce [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa), je ve skutečnosti definovány v záhlaví Windows a v dokumentaci pro doporučí, že se nepoužívají, z důvodu přetečení vyrovnávací paměti je to možné. Není uvedena velikost pro `szTmp` vyrovnávací paměti, takže neexistuje žádný způsob, jak funkce, zkontrolujte, že vyrovnávací paměti může obsahovat všechna data, která má být zapsán do něj. Viz následující část o převodu na zabezpečení CRT, ve kterém jsme podobnými problémy opravit. Jsme skončila jeho nahrazením [_stprintf_s –](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).  
+Tato funkce [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa), je ve skutečnosti definovány v záhlaví Windows a v dokumentaci pro doporučí, že se nepoužívají, z důvodu přetečení vyrovnávací paměti je to možné. Není uvedena velikost pro `szTmp` vyrovnávací paměti, takže neexistuje žádný způsob, jak funkce, zkontrolujte, že vyrovnávací paměti může obsahovat všechna data, která má být zapsán do něj. Viz následující část o převodu na zabezpečení CRT, ve kterém jsme podobnými problémy opravit. Jsme skončila jeho nahrazením [_stprintf_s –](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).  
   
 Další běžnou chybou, který se zobrazí při převodu do kódování Unicode je to.  
   
@@ -680,5 +681,5 @@ Portování nástroje Spy ++ od původního kódu Visual C++ 6.0 na nejnovějš�
   
 ## <a name="see-also"></a>Viz také  
 
-[Přenos a upgrade: Příklady a případové studie](../porting/porting-and-upgrading-examples-and-case-studies.md)   
+[Přenos a upgrade: Příklady a případové studie](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Předchozí Případová studie: COM Spy](../porting/porting-guide-com-spy.md)

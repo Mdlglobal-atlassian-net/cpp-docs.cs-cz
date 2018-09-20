@@ -1,5 +1,5 @@
 ---
-title: Odvozené třídy oken | Microsoft Docs
+title: Odvozené třídy oken | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,54 +19,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eddc6c59190856d09eae75c6f4314c902740092f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2840a78844f42481389ba868b6ab1bc5713a2c0b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351490"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448009"
 ---
 # <a name="derived-window-classes"></a>Odvozené třídy oken
-Můžete vytvořit windows přímo z [CWnd](../mfc/reference/cwnd-class.md), nebo odvozovat nové okno z `CWnd`. Toto je, jak obvykle vytvoříte vlastní vlastní windows. Většina windows používá v rámci programu jsou však místo toho vytvářeny z jednoho z `CWnd`-odvozené třídy oken s rámečkem poskytl MFC.  
-  
-## <a name="frame-window-classes"></a>Třídy oken s rámečkem  
- [CFrameWnd](../mfc/reference/cframewnd-class.md)  
- Použít pro okna s rámečkem SDI, které rámce jednotlivý dokument a jeho zobrazení. Okně s rámečkem se hlavního rámce okna pro aplikace a okně s rámečkem v aktuálním dokumentu.  
-  
- [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)  
- Použít jako hlavní okno rámce pro aplikace MDI. Hlavní okno rámce je kontejner pro všechny oken MDI dokumentu a sdílí jeho řádku nabídek s nimi. Rámec okna MDI je okno nejvyšší úrovně, který se zobrazí na ploše.  
-  
- [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)  
- Použít pro jednotlivé dokumenty v hlavního rámce okna MDI otevřít. Každý dokument a jeho zobrazení se rámcová podle rámce okna MDI podřízené obsažený v hlavního rámce okna MDI. Podřízená okna MDI mnohem vypadá typické rámce okna, ale je obsažený v rámci okna aplikace MDI místo uložený na ploše. Podřízeného okna MDI však chybí řádku nabídek své vlastní a musejí sdílet panelu nabídek okna MDI rámce, který jej obsahuje.  
-  
- Další informace najdete v tématu [okna s rámečkem](../mfc/frame-windows.md).  
-  
-## <a name="other-window-classes-derived-from-cwnd"></a>Další okno třídy odvozené od CWnd  
- Kromě okna s rámečkem, několik dalších hlavních kategorií systému windows jsou odvozeny od `CWnd`:  
-  
- *Zobrazení*  
- Zobrazení jsou vytvořené pomocí `CWnd`-odvozené třídy [CView](../mfc/reference/cview-class.md) (nebo jeden z jejich odvozené třídy). Zobrazení je připojena k dokumentu a funguje jako zprostředkovatel mezi dokumentu a uživatele. Zobrazení je obvykle vyplní celé okno s rámečkem SDI nebo podřízené rámce okna MDI (nebo část se nevztahuje panelu nástrojů nebo stavového řádku klientské oblasti) klientské oblasti podřízeného okna (ne podřízeného MDI).  
-  
- *Dialogová okna*  
- Dialogová okna jsou vytvořené pomocí `CWnd`-odvozené třídy [CDialog](../mfc/reference/cdialog-class.md).  
-  
- *Formuláře*  
- Zobrazení formulářů na základě šablony dialogového okna prostředků, jako je například dialogových oken, jsou vytvořené pomocí třídy [CFormView](../mfc/reference/cformview-class.md), [CRecordView](../mfc/reference/crecordview-class.md), nebo [CDaoRecordView](../mfc/reference/cdaorecordview-class.md).  
-  
- *Ovládací prvky*  
- Ovládací prvky, např. tlačítka, seznamy a pole se seznamem jsou vytvořené pomocí jiných třídy odvozené od třídy `CWnd`. V tématu [řízení témata](../mfc/controls-mfc.md).  
-  
- *Ovládací pruhy*  
- Podřízená okna, které obsahují ovládací prvky. Mezi příklady patří panely nástrojů a stavové řádky. V tématu [ovládací pruhy](../mfc/control-bars.md).  
-  
-## <a name="window-class-hierarchy"></a>Hierarchie tříd oken  
- Odkazovat [graf hierarchie MFC](../mfc/hierarchy-chart.md) v *odkaz knihovny MFC*. Zobrazení jsou vysvětlené v [Document/View – architektura](../mfc/document-view-architecture.md). Dialogová okna jsou vysvětlené v [dialogová okna](../mfc/dialog-boxes.md).  
-  
-## <a name="creating-your-own-special-purpose-window-classes"></a>Vytvoření vlastní třídy speciální oken  
- Kromě třídy oken, poskytuje knihovna tříd může být nutné speciální podřízená okna. K vytvoření takového okna, vytvořit vlastní [CWnd](../mfc/reference/cwnd-class.md)-odvozené třídy a nastavit jej jako podřízeného okna rámečkem nebo zobrazení. Berte v úvahu, že rozhraní spravuje rozsah klientské oblasti rámce okna dokumentu. Většina klientské oblasti spravuje zobrazení, ale jiné windows, jako je třeba Správa řádky nebo vlastními vlastní windows, může sdílet prostor s zobrazení. Budete muset interakci s mechanismy ve třídách [CView](../mfc/reference/cview-class.md) a [ccontrolbar –](../mfc/reference/ccontrolbar-class.md) pro umístění podřízená okna v okně s rámečkem klientské oblasti.  
-  
- [Vytváření oken](../mfc/creating-windows.md) popisuje vytvoření okna objektů a jejich správa systému windows.  
-  
-## <a name="see-also"></a>Viz také  
- [Objekty oken](../mfc/window-objects.md)
+
+Můžete vytvářet okna přímo z [CWnd](../mfc/reference/cwnd-class.md), nebo odvozovat nové třídy okna z `CWnd`. Toto je takto obvykle vytváříte vlastní okna. Většina oken v rámci programu jsou však místo toho vytvářeny z jednoho z `CWnd`-odvozené třídy oken s rámečkem dodávané knihovnou MFC.
+
+## <a name="frame-window-classes"></a>Třídy oken s rámečkem
+
+[CFrameWnd](../mfc/reference/cframewnd-class.md)<br/>
+Používá se pro rámce windows SDI, která ohraničují jeden dokument a jeho zobrazení. Okno rámce je hlavní okno rámce aplikace i okno rámce aktuálního dokumentu.
+
+[CMDIFrameWnd –](../mfc/reference/cmdiframewnd-class.md)<br/>
+Použít jako hlavní okno rámce pro aplikace MDI. Hlavní okno rámce je kontejner pro všechna okna dokumentu MDI a sdílí s nimi jeho nabídky panelu. Okna rámce MDI je okno nejvyšší úrovně, který se zobrazí na ploše.
+
+[CMDIChildWnd –](../mfc/reference/cmdichildwnd-class.md)<br/>
+Používá se pro jednotlivé dokumenty otevřené v okna hlavního rámce MDI. Každý dokument a jeho zobrazení jsou orámovány podřízeným oknem rámce MDI obsažených hlavním okně rámce MDI. Podřízené okno MDI vypadá podobně jako typické okno rámce, ale je obsaženo uvnitř okna rámce MDI namísto na ploše. Podřízené okno MDI však nemá vlastní panel nabídek a musí sdílet panel nabídek okna rámce MDI, který jej obsahuje.
+
+Další informace najdete v tématu [rámce Windows](../mfc/frame-windows.md).
+
+## <a name="other-window-classes-derived-from-cwnd"></a>Další třídy Window odvozené z CWnd
+
+Kromě oken rámce jsou několik dalších hlavních kategorií oken odvozeno `CWnd`:
+
+*Zobrazení*<br/>
+Zobrazení jsou vytvářena pomocí `CWnd`-odvozené třídy [CView](../mfc/reference/cview-class.md) (nebo některé z odvozených tříd). Zobrazení je připojené k dokumentu a funguje jako prostředník mezi dokumentem a uživatelem. Zobrazení je podřízené okno (není podřízený formulář MDI), které obvykle vyplní klientské oblasti okna rámce aplikace SDI nebo okna podřízeného rámce MDI (nebo část oblasti klienta se nevztahuje panel nástrojů nebo stavového řádku).
+
+*Dialogová okna*<br/>
+Dialogová okna jsou vytvářena pomocí `CWnd`-odvozené třídy [CDialog](../mfc/reference/cdialog-class.md).
+
+*Formuláře*<br/>
+Zobrazení formuláře založená na dialogovém okně prostředky, jako například dialogová okna, jsou vytvořena pomocí tříd [CFormView](../mfc/reference/cformview-class.md), [CRecordView](../mfc/reference/crecordview-class.md), nebo [CDaoRecordView](../mfc/reference/cdaorecordview-class.md).
+
+*Ovládací prvky*<br/>
+Ovládací prvky jako tlačítka, seznamy a pole se seznamem jsou vytvořeny pomocí ostatních tříd odvozených z `CWnd`. Zobrazit [řídit témata](../mfc/controls-mfc.md).
+
+*Ovládací pruhy*<br/>
+Podřízená okna obsahující ovládací prvky. Příklady zahrnují panely nástrojů a stavové řádky. Zobrazit [ovládací pruhy](../mfc/control-bars.md).
+
+## <a name="window-class-hierarchy"></a>Hierarchie tříd oken
+
+Odkazovat [graf hierarchie MFC](../mfc/hierarchy-chart.md) v *odkaz knihovny MFC*. Zobrazení jsou vysvětlena v [architekturu Document/View](../mfc/document-view-architecture.md). Dialogová okna jsou vysvětlené v [dialogových oknech](../mfc/dialog-boxes.md).
+
+## <a name="creating-your-own-special-purpose-window-classes"></a>Vytvoření vlastní třídy oken se speciálním účelem
+
+Kromě tříd oken poskytovaných knihovnou tříd budete potřebovat speciální podřízená okna. Chcete-li vytvořit takové okno, vytvořte vlastní [CWnd](../mfc/reference/cwnd-class.md)-odvozené třídy a nastavte ji na podřízené okno snímku nebo zobrazení. Berte v úvahu, že rozhraní spravuje rozsah klientské oblasti okna rámce dokumentu. Většina klientské oblasti je spravována zobrazením, ale ostatní okna, jako jsou například ovládací panely nebo vlastní okna, mohou sdílet prostor se zobrazením. Možná budete muset pracovat s mechanismy ve třídách [CView](../mfc/reference/cview-class.md) a [ccontrolbar –](../mfc/reference/ccontrolbar-class.md) pro umístění podřízených oken v klientské oblasti okna rámce.
+
+[Vytvoření Windows](../mfc/creating-windows.md) popisuje vytvoření vytvoření objektů oken a oken, která spravují.
+
+## <a name="see-also"></a>Viz také
+
+[Objekty oken](../mfc/window-objects.md)
 

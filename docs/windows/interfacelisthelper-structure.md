@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b2336562abb82ae89bd2f6864d0678023a3ccf69
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 87516cf45a39602bea462b8e94f17d3ef64ad0eb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600525"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431616"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper – struktura
 
@@ -53,34 +53,34 @@ struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;
 
 ### <a name="parameters"></a>Parametry
 
-*T0*  
+*T0*<br/>
 Parametr šablony 0, což je povinné.
 
-*T1*  
+*T1*<br/>
 Parametr šablony 1, která ve výchozím nastavení není zadán.
 
-*T2*  
+*T2*<br/>
 Parametr šablony 2, která ve výchozím nastavení není zadán. Třetí parametr šablony.
 
-*T3*  
+*T3*<br/>
 Parametr šablony 3, která ve výchozím nastavení není zadán.
 
-*T4*  
+*T4*<br/>
 Parametr šablony 4, která ve výchozím nastavení není zadán.
 
-*T5*  
+*T5*<br/>
 Parametr šablony 5, která ve výchozím nastavení není zadán.
 
-*T6*  
+*T6*<br/>
 Parametr šablony 6, která ve výchozím nastavení není zadán.
 
-*T7*  
+*T7*<br/>
 Parametr šablony 7, která ve výchozím nastavení není zadán.
 
-*T8*  
+*T8*<br/>
 Parametr šablony 8, která ve výchozím nastavení není zadán.
 
-*T9*  
+*T9*<br/>
 Parametr šablony 9, která ve výchozím nastavení není zadán.
 
 ## <a name="remarks"></a>Poznámky

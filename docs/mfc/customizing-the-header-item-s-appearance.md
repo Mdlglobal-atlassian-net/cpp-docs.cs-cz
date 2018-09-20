@@ -16,33 +16,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3523feb14d49a0e275fd3024925287aa05521f4b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 61c0e3e26679b2b84e3ea18a8e1bb92722d73e22
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195515"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442900"
 ---
 # <a name="customizing-the-header-item39s-appearance"></a>Přizpůsobení položky záhlaví&#39;vzhled
-Tím, že nastavíte *dwStyle* parametr při prvním vytvoření ovládacího prvku záhlaví ([CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create)), můžete definovat vzhled a chování, hlavičce položky nebo hlavičky samotného ovládacího prvku.  
-  
- Tady je vzorkování styly, které můžete nastavit a jejich účel:  
-  
--   Chcete-li položka záhlaví vypadat jako pushbutton, použijte **HDS_BUTTONS** style.  
-  
-     Tento styl použijte, pokud chcete provádět akce v reakci na kliknutí myší na záhlaví položek, jako je například řazení dat podle konkrétního sloupce, jak je tomu v aplikaci Microsoft Outlook.  
-  
--   Položky hlavičky vzhled "hot sledování" Pokud je přes ně přesunut ukazatel myši, použijte **HDS_HOTTRACK** style.  
-  
-     Zvýraznění zobrazí 3D osnovy jak předává ukazatel myši na položku. v opačném případě plochý panelu.  
-  
--   Chcete-li označit, že by měl být skrytý ovládací prvek hlavičky, použijte **HDS_HIDDEN** style.  
-  
-     **HDS_HIDDEN** styl označuje, že ovládacího prvku záhlaví je určena pro použití jako datový zásobník a není vizuální ovládací prvek. Tento styl automaticky neskrývá ovládacího prvku, ale místo toho má vliv na chování `CHeaderCtrl::Layout`. Hodnota vrácená v *cy* člena `WINDOWPOS` struktura bude nula označující, že ovládací prvek by neměly být viditelné pro uživatele.  
-  
- Další informace o těchto vlastnostech najdete v tématu [položky](/windows/desktop/Controls/header-controls) v sadě Windows SDK. Informace o přidávání položek do ovládacího prvku záhlaví najdete v tématu [přidávání položek do ovládacího prvku záhlaví](../mfc/adding-items-to-the-header-control.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Tím, že nastavíte *dwStyle* parametr při prvním vytvoření ovládacího prvku záhlaví ([CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create)), můžete definovat vzhled a chování, hlavičce položky nebo hlavičky samotného ovládacího prvku.
+
+Tady je vzorkování styly, které můžete nastavit a jejich účel:
+
+- Chcete-li položka záhlaví vypadat jako pushbutton, použijte **HDS_BUTTONS** style.
+
+     Tento styl použijte, pokud chcete provádět akce v reakci na kliknutí myší na záhlaví položek, jako je například řazení dat podle konkrétního sloupce, jak je tomu v aplikaci Microsoft Outlook.
+
+- Položky hlavičky vzhled "hot sledování" Pokud je přes ně přesunut ukazatel myši, použijte **HDS_HOTTRACK** style.
+
+     Zvýraznění zobrazí 3D osnovy jak předává ukazatel myši na položku. v opačném případě plochý panelu.
+
+- Chcete-li označit, že by měl být skrytý ovládací prvek hlavičky, použijte **HDS_HIDDEN** style.
+
+     **HDS_HIDDEN** styl označuje, že ovládacího prvku záhlaví je určena pro použití jako datový zásobník a není vizuální ovládací prvek. Tento styl automaticky neskrývá ovládacího prvku, ale místo toho má vliv na chování `CHeaderCtrl::Layout`. Hodnota vrácená v *cy* člena `WINDOWPOS` struktura bude nula označující, že ovládací prvek by neměly být viditelné pro uživatele.
+
+Další informace o těchto vlastnostech najdete v tématu [položky](/windows/desktop/Controls/header-controls) v sadě Windows SDK. Informace o přidávání položek do ovládacího prvku záhlaví najdete v tématu [přidávání položek do ovládacího prvku záhlaví](../mfc/adding-items-to-the-header-control.md).
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

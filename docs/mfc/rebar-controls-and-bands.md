@@ -1,5 +1,5 @@
 ---
-title: Matrice – ovládací prvky a pruhy | Microsoft Docs
+title: Matrice – ovládací prvky a pruhy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,39 +15,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ae83c3e41ebabf62ad98211f3943af2b535c806
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 988b16bb58462b42b8d4412a821cfc3fac5b4878
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929504"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443979"
 ---
 # <a name="rebar-controls-and-bands"></a>Matrice – ovládací prvky a pruhy
-Hlavním účelem ovládacím prvkem matrice je tak, aby fungoval jako kontejner pro podřízená okna, běžné ovládací prvky dialogového okna, nabídek, panely nástrojů a tak dále. Toto omezení je podporován koncepci "vzdálené". Každé vzdálené matrice může obsahovat libovolnou kombinaci úchytu panelu, rastrový obrázek, text popisku a podřízeného okna.  
-  
- Třída `CReBarCtrl` má mnoho členské funkce, můžete použít k načtení a upravit informace o konkrétní matrice pásmo:  
-  
--   [GetBandCount](../mfc/reference/crebarctrl-class.md#getbandcount) načte počet aktuální pruhy v ovládacím prvku matrice.  
-  
--   [GetBandInfo](../mfc/reference/crebarctrl-class.md#getbandinfo) inicializuje **REBARBANDINFO** struktura informacemi ze zadané vzdálené správy. Neexistuje odpovídající [SetBandInfo](../mfc/reference/crebarctrl-class.md#setbandinfo) – členská funkce.  
-  
--   [GetRect –](../mfc/reference/crebarctrl-class.md#getrect) načte ohraničující obdélník zadaný vzdálené správy.  
-  
--   [GetRowCount](../mfc/reference/crebarctrl-class.md#getrowcount) načte počet vzdálené řádků v ovládacím prvku matrice.  
-  
--   [IDToIndex](../mfc/reference/crebarctrl-class.md#idtoindex) načte index zadaný vzdálené správy.  
-  
--   [GetBandBorders](../mfc/reference/crebarctrl-class.md#getbandborders) načte ohraničení pásmo.  
-  
- Kromě manipulaci několik členské funkce jsou k dispozici, které umožňují pracovat pruhy matrice konkrétní.  
-  
- [InsertBand](../mfc/reference/crebarctrl-class.md#insertband) a [DeleteBand](../mfc/reference/crebarctrl-class.md#deleteband) přidávat a odebírat pruhy matrice. [MinimizeBand](../mfc/reference/crebarctrl-class.md#minimizeband) a [MaximizeBand](../mfc/reference/crebarctrl-class.md#maximizeband) ovlivnit aktuální velikost konkrétní matrice vzdálené. [MoveBand](../mfc/reference/crebarctrl-class.md#moveband) změny index konkrétní matrice vzdálené. [ShowBand](../mfc/reference/crebarctrl-class.md#showband) zobrazí nebo skryje matrice vzdálené od uživatele.  
-  
- Následující příklad ukazuje, přidání panelu nástrojů (*m_wndToolBar*) do existujícího ovládacího prvku matrice (*m_wndReBar*). Vzdálené správy je popsán inicializace `rbi` strukturu a pak volání `InsertBand` – členská funkce:  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#27](../mfc/codesnippet/cpp/rebar-controls-and-bands_1.cpp)]  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CReBarCtrl](../mfc/using-crebarctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Hlavním účelem ovládacím prvkem matrice, je tak, aby fungoval jako kontejner pro podřízená okna, běžné ovládací prvky dialogového okna, nabídky, panely nástrojů a tak dále. Toto členství ve skupině podporuje koncept "vzdálené". Každé vzdálené matrice může obsahovat libovolnou kombinaci úchytu panelu, bitmapy, textový popisek a podřízené okno.
+
+Třída `CReBarCtrl` obsahuje mnoho funkcí členů, můžete použít k načtení a manipulaci s informace pro konkrétní matrice pásmo:
+
+- [GetBandCount](../mfc/reference/crebarctrl-class.md#getbandcount) zjišťuje číslo aktuální pruhy v ovládacím prvku matrice.
+
+- [GetBandInfo](../mfc/reference/crebarctrl-class.md#getbandinfo) inicializuje **REBARBANDINFO** struktura s informacemi ze zadaného obsluhy vzdálené správy. Neexistuje odpovídající [SetBandInfo](../mfc/reference/crebarctrl-class.md#setbandinfo) členskou funkci.
+
+- [GetRect –](../mfc/reference/crebarctrl-class.md#getrect) načte ohraničující obdélník zadané obsluhy vzdálené správy.
+
+- [GetRowCount](../mfc/reference/crebarctrl-class.md#getrowcount) zjišťuje počet vzdálené řádky v ovládacím prvku matrice.
+
+- [IDToIndex](../mfc/reference/crebarctrl-class.md#idtoindex) načte index zadaný obsluhy vzdálené správy.
+
+- [GetBandBorders](../mfc/reference/crebarctrl-class.md#getbandborders) načte ohraničení pásu.
+
+Kromě manipulaci několik členské funkce jsou k dispozici, které umožňují pracovat s pruhy matrice konkrétní.
+
+[InsertBand](../mfc/reference/crebarctrl-class.md#insertband) a [DeleteBand](../mfc/reference/crebarctrl-class.md#deleteband) přidávat a odebírat pruhy matrice. [MinimizeBand](../mfc/reference/crebarctrl-class.md#minimizeband) a [MaximizeBand](../mfc/reference/crebarctrl-class.md#maximizeband) vliv aktuální velikost svazku konkrétní matrice. [MoveBand](../mfc/reference/crebarctrl-class.md#moveband) změní index pásmo konkrétní matrice. [ShowBand](../mfc/reference/crebarctrl-class.md#showband) zobrazí nebo skryje pruhy matrice od uživatele.
+
+Následující příklad ukazuje přidání panelu nástrojů (*m_wndToolBar*) do existujícího ovládacího prvku matrice (*m_wndReBar*). Pásmo je popsán inicializace `rbi` strukturu a následným voláním `InsertBand` členské funkce:
+
+[!code-cpp[NVC_MFCControlLadenDialog#27](../mfc/codesnippet/cpp/rebar-controls-and-bands_1.cpp)]
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

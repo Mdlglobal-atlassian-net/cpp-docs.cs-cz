@@ -1,5 +1,5 @@
 ---
-title: 'TN051: A v budoucnu použití knihovny CTL3D | Microsoft Docs'
+title: 'TN051: Současné použití knihovny CTL3D teď a v budoucnu | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a19077bcba252d252418b6c3554c6172ed1aaa2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dfffe63e80160cab1c85ef19de321b361e1c26cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382269"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388638"
 ---
 # <a name="tn051-using-ctl3d-now-and-in-the-future"></a>TN051: Současné a budoucí použití knihovny CTL3D
-Technická poznámka, která dřív popsané knihovny CTL3D a rozhraní MFC, je nyní zastaralá. Efekt 3D pro ovládací prvky je automaticky implementované MFC.  
-  
-## <a name="see-also"></a>Viz také  
- [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)   
- [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
+
+Tato technická Poznámka jsme uvedli knihovny CTL3D a knihovny MFC, je nyní zastaralá. 3D efekt pro ovládací prvky je automaticky implementovaná pomocí knihovny MFC.
+
+## <a name="see-also"></a>Viz také
+
+[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
+[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
 

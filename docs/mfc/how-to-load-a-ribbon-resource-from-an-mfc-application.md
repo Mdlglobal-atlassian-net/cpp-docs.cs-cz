@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: načtení prostředku pásu karet z aplikace MFC | Microsoft Docs'
+title: 'Postupy: načtení prostředku pásu karet z aplikace knihovny MFC | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,38 +14,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b014e1725ae6c5043c051242a74e29338c3ef2d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1643989a96a9003847fb53de624bff12cd51cd88
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344188"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434286"
 ---
 # <a name="how-to-load-a-ribbon-resource-from-an-mfc-application"></a>Postupy: Načtení prostředku pásu karet z aplikace MFC
-Chcete-li použít prostředek pásu karet v aplikaci, upravte aplikaci k načtení prostředku pásu karet.  
-  
-### <a name="to-load-a-ribbon-resource"></a>Načtení prostředku pásu karet  
-  
-1.  Deklarovat `Ribbon Control` objekt v `CMainFrame` třídy.  
-  
- ```  
-    CMFCRibbonBar m_wndRibbonBar;   
- ```  
-  
-2.  V `CMainFrame::OnCreate`, vytvoření a inicializace ovládacího prvku pásu karet.  
-  
- ```  
-    if (!m_wndRibbonBar.Create (this))  
- {  
-    return -1;  
- }  
- 
-    if (!m_wndRibbonBar.LoadFromResource(IDR_RIBBON))  
- {  
-    return -1;  
- }  
- ```  
-  
-## <a name="see-also"></a>Viz také  
- [Návrhář pásu karet (MFC)](../mfc/ribbon-designer-mfc.md)
+
+Chcete-li použít prostředky pásu karet v aplikaci, přizpůsobit aplikaci pro načtení prostředku pásu karet.
+
+### <a name="to-load-a-ribbon-resource"></a>K načtení prostředku pásu karet
+
+1. Deklarovat `Ribbon Control` objekt `CMainFrame` třídy.
+
+```
+    CMFCRibbonBar m_wndRibbonBar;
+```
+
+1. V `CMainFrame::OnCreate`, vytvořit a inicializovat ovládací prvek pásu karet.
+
+```
+    if (!m_wndRibbonBar.Create (this))
+{
+    return -1;
+}
+
+    if (!m_wndRibbonBar.LoadFromResource(IDR_RIBBON))
+{
+    return -1;
+}
+```
+
+## <a name="see-also"></a>Viz také
+
+[Návrhář pásu karet (MFC)](../mfc/ribbon-designer-mfc.md)
 

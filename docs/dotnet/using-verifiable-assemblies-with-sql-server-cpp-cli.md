@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bbd42d3d51921ccab01dfdcaed9ad988e22ae9a8
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 2bb4adbb960f9d062cc8573c7ca0f7cd5dcd0426
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894703"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382216"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Použití ověřitelných sestavení se serverem SQL Server (C++/CLI)
 
@@ -42,19 +42,20 @@ K vytváření a načítání ověřitelných sestavení do systému SQL Server,
 CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH
   PERMISSION_SET <permissions>
 DROP ASSEMBLY <assemblyName>
-```  
+```
 
 Příkaz PERMISSION_SET určuje kontext zabezpečení a může mít hodnoty bez omezení, SAFE nebo EXTENDED.
 
 Kromě toho příkaz CREATE FUNCTION můžete vytvořit vazbu na názvy metod ve třídě:
 
 ```sql
-CREATE FUNCTION <FunctionName>(<FunctionParams>)  
+CREATE FUNCTION <FunctionName>(<FunctionParams>)
 RETURNS returnType
 [EXTERNAL NAME <AssemblyName>:<ClassName>::<StaticMethodName>]
-```  
+```
 
 ## <a name="example"></a>Příklad
+
 Následující skript SQL (například s názvem "MyScript.sql") načte sestavení do systému SQL Server a zpřístupňuje metodu pro třídu:
 
 ```sql
@@ -69,23 +70,23 @@ with permission_set safe
 -- Create function on assembly with no external access
 drop function GetQuoteNoEA
 go
-create function GetQuoteNoEA(@sym nvarchar(10))  
+create function GetQuoteNoEA(@sym nvarchar(10))
 returns real
 external name stockNoEA:StockQuotes::GetQuote
 go
 
 -- To call the function
-select dbo.GetQuoteNoEA('MSFT')  
+select dbo.GetQuoteNoEA('MSFT')
 go
-```  
+```
 
 Skripty SQL lze spustit interaktivně v analyzátoru dotazů SQL nebo na příkazovém řádku pomocí nástroje sqlcmd.exe. Následující příkazový řádek se připojí k MyServer, používá výchozí databázi, používá důvěryhodné připojení, vstupů MyScript.sql a výstup MyResult.txt.
 
 ```cmd
 sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
-```  
+```
 
 ## <a name="see-also"></a>Viz také
 
-[Postupy: migrace na/CLR: safe (C + +/ CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)   
+[Postupy: migrace na/CLR: safe (C + +/ CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)<br/>
 [Třídy a struktury](../cpp/classes-and-structs-cpp.md)

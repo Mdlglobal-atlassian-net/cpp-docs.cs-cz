@@ -1,5 +1,5 @@
 ---
-title: 'TN068: Provádění transakcí pomocí ovladače ODBC Microsoft Access 7 | Microsoft Docs'
+title: 'TN068: Provádění transakcí pomocí ovladače ODBC Microsoft Access 7 | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -18,41 +18,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b3db4c30eceb47d0f9169195fd131b4334d25cd
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 4006ee6953342fd55b644eeb2a8e8f30c1d80285
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122343"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395840"
 ---
 # <a name="tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver"></a>TN068: Provádění transakcí pomocí ovladače ODBC Microsoft Access 7
 
 > [!NOTE]
-> Následující Technická poznámka nebyla aktualizována vzhledem k tomu, že byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata může být zastaralý nebo není správný. Nejnovější informace se doporučuje, vyhledejte téma týkající se v indexu online dokumentaci.
+> Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
 
-Tato poznámka popisuje provádění transakcí, při použití databázové třídy MFC rozhraní ODBC a ovladač Microsoft Access 7.0 ODBC součástí Microsoft ODBC Desktop Driver Pack verze 3.0.
+Tato poznámka popisuje, jak k provádění transakcí, při použití databázové třídy MFC rozhraní ODBC a ovladači Microsoft Access 7.0 ODBC součástí Microsoft ODBC Desktop ovladač Pack verze 3.0.
 
 ## <a name="overview"></a>Přehled
 
-Pokud aplikace databáze provádí transakce, musí být opatrní při volání `CDatabase::BeginTrans` a `CRecordset::Open` ve správném pořadí ve vaší aplikaci. Ovladač Microsoft Access 7.0 používá databázový stroj Microsoft Jet a Jet vyžaduje, aby vaše aplikace není spustit transakci na všechny databáze, který má otevřít kurzor. Pro databázové třídy MFC rozhraní ODBC, otevřete kurzoru rovná otevřenou `CRecordset` objektu.
+Pokud vaše databáze aplikace provádí transakce, musíte být opatrní a volat `CDatabase::BeginTrans` a `CRecordset::Open` tak správné pořadí ve vaší aplikaci. Databázový stroj Microsoft Jet používá ovladač Microsoft Access 7.0 a Jet vyžaduje, že vaše aplikace není spustit transakci na všechny databáze, které se má otevřít kurzor. Pro databázové třídy MFC rozhraní ODBC, otevřít kurzor odpovídá otevřenou `CRecordset` objektu.
 
-Pokud otevřete sadu záznamů před voláním `BeginTrans`, nemusí zobrazit chybové zprávy. Ale všechny sady záznamů aktualizuje vaše aplikace má po volání stane trvalé `CRecordset::Update`, a aktualizace nebude vrácena voláním `Rollback`. K tomuto problému nedošlo, je třeba volat `BeginTrans` první a pak otevřete sadu záznamů.
+Pokud otevřete záznamů před zavoláním funkce `BeginTrans`, nezobrazí žádné chybové zprávy. Nicméně všechny sady záznamů aktualizuje vaše aplikace využívá trvalý po volání `CRecordset::Update`, a aktualizace nebudou vrácena zpět voláním `Rollback`. Chcete-li tomuto problému vyhnout, musíte volat `BeginTrans` první a pak otevřít sadu záznamů.
 
-MFC kontroluje ovladače funkce pro potvrzení a vrácení chování kurzoru. Třída `CDatabase` poskytuje dva členské funkce `GetCursorCommitBehavior` a `GetCursorRollbackBehavior`, pro ověření účinnosti jakékoli transakce na vaše otevřete `CRecordset` objektu. Ovladače Microsoft Access 7.0 ODBC, který se vrátí tyto funkce člen `SQL_CB_CLOSE` protože ovladače Access nepodporuje písmen a zachovávání kurzoru. Proto musí volat `CRecordset::Requery` následující `CommitTrans` nebo `Rollback` operaci.
+MFC zkontroluje funkci ovladače pro kurzor chování potvrzení změn a vrácení zpět. Třída `CDatabase` poskytuje dva členské funkce `GetCursorCommitBehavior` a `GetCursorRollbackBehavior`, účinnosti jakékoli transakce na vaše open `CRecordset` objektu. Pro ovladače Microsoft Access 7.0 ODBC tyto členské funkce vrátí `SQL_CB_CLOSE` protože přístup ovladač nepodporuje zachovávání s rozlišením kurzoru. Proto je nutné volat `CRecordset::Requery` následující `CommitTrans` nebo `Rollback` operace.
 
-Pokud potřebujete provést více transakcí, jedna po druhé, nelze volat `Requery` po první transakce a poté spusťte následující. Je třeba nejprve zavřít záznamů před dalším voláním `BeginTrans` za účelem splnění požadavků na Jet. Tato technická Poznámka popisuje dvě metody zpracování této situaci:
+Pokud je třeba provést více transakcí, jeden po druhém, nejde volat `Requery` po první transakce a poté spusťte další příkaz. Je nutné zavřít záznamů před dalším voláním `BeginTrans` splníte Jet pro požadavek. Tato technická Poznámka popisuje dva způsoby zpracování této situaci:
 
-- Uzavření sady záznamů po každém z nich `CommitTrans` nebo `Rollback` operaci.
+- Uzavření sady záznamů po každém z nich `CommitTrans` nebo `Rollback` operace.
 
-- Pomocí funkce rozhraní API ODBC `SQLFreeStmt`.
+- Pomocí funkce ODBC API `SQLFreeStmt`.
 
-## <a name="closing-the-recordset-after-each-committrans-or-rollback-operation"></a>Po každé CommitTrans nebo operaci vrácení zpět uzavření sady záznamů
+## <a name="closing-the-recordset-after-each-committrans-or-rollback-operation"></a>Po každé operaci vrácení zpět nebo CommitTrans uzavření sady záznamů
 
-Před zahájením transakce, zkontrolujte, zda že objekt sady záznamů je uzavřený. Po volání `BeginTrans`, volání sady záznamů `Open` – členská funkce. Zavřete sadu záznamů ihned po volání `CommitTrans` nebo `Rollback`. Všimněte si, že opakovaně otvírání a zavírání sady záznamů můžou způsobit snížení výkonu aplikace.
+Před spuštěním transakce, ujistěte se, že objekt sady záznamů je zavřené. Po volání `BeginTrans`, volání sady záznamů `Open` členskou funkci. Zavřete sadu záznamů ihned po volání `CommitTrans` nebo `Rollback`. Všimněte si, že opakovaného otevírání a zavírání záznamů může zpomalit výkon vaší aplikace.
 
 ## <a name="using-sqlfreestmt"></a>Pomocí SQLFreeStmt
 
-Můžete také použít funkce rozhraní API ODBC `SQLFreeStmt` explicitně zavřete kurzor po ukončení transakce. Chcete-li spustit jinou transakcí, volejte `BeginTrans` následuje `CRecordset::Requery`. Při volání metody `SQLFreeStmt`, je nutné zadat jako první parametr HSTMT sady záznamů a *SQL_CLOSE* jako druhý parametr. Tato metoda je rychlejší než zavřením a otevřením sada záznamů na začátku každé transakci. Následující kód ukazuje, jak implementovat tento postup:
+Můžete také použít – funkce rozhraní API ODBC `SQLFreeStmt` explicitně zavřít kurzor po ukončení transakce. Chcete-li spustit jinou transakci, zavolejte `BeginTrans` následovaný `CRecordset::Requery`. Při volání metody `SQLFreeStmt`, HSTMT sady záznamů je nutné zadat jako první parametr a *SQL_CLOSE* jako druhý parametr. Tato metoda je rychlejší než zavřením a otevřením sady záznamů na začátku každé transakci. Následující kód ukazuje, jak implementovat tento postup:
 
 ```cpp
 CMyDatabase db;
@@ -86,15 +86,15 @@ rs.Close();
 db.Close();
 ```
 
-Jiný způsob, jak implementovat tato technika je napsat nové funkce, `RequeryWithBeginTrans`, můžete volat před zahájením další transakci po potvrzení nebo vrácení změn první z nich. Zápis takové funkce, proveďte následující kroky:
+Dalším způsobem, jak implementovat tato technika se zapsat novou funkci, `RequeryWithBeginTrans`, které můžete volat a spusťte další transakce po potvrzení nebo vrácení zpět první z nich. Zapsat takové funkce, proveďte následující kroky:
 
-1. Zkopírujte kód pro `CRecordset::Requery( )` nové funkce.
+1. Zkopírujte kód pro `CRecordset::Requery( )` na tuto novou funkci.
 
-2. Přidejte následující řádek hned po volání `SQLFreeStmt`:
+2. Přidejte následující řádek bezprostředně po volání `SQLFreeStmt`:
 
    `m_pDatabase->BeginTrans( );`
 
-Nyní můžete volat tuto funkci mezi každý pár transakcí:
+Nyní můžete voláním této funkce mezi každý pár transakce:
 
 ```cpp
 // start transaction 1 and
@@ -119,9 +119,9 @@ db.CommitTrans();   // or Rollback()
 ```
 
 > [!NOTE]
-> Nepoužívejte tato technika, pokud potřebujete změnit proměnné členů sady záznamů *m_strFilter* nebo *m_strSort* mezi transakce. V takovém případě by měl zavřít sadu záznamů po každém z nich `CommitTrans` nebo `Rollback` operaci.
+> Nepoužívejte tento postup, pokud potřebujete změnit proměnné členů sady záznamů *m_strFilter* nebo *m_strSort* mezi transakcemi. V takovém případě by měla zavřít sadu záznamů po každém z nich `CommitTrans` nebo `Rollback` operace.
 
 ## <a name="see-also"></a>Viz také:
 
-[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)  
-[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)  
+[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
+[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)

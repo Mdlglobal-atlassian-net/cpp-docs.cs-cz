@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae03de851d7cf24d7322ff6f9e1f8610a584b376
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 05440f9d6a7f243432dfa118cf1e137d9c5428d2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606213"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429315"
 ---
 # <a name="comptrcomptr-constructor"></a>ComPtr::ComPtr – konstruktor
 
@@ -61,10 +61,10 @@ WRL_NOTHROW ComPtr(
 
 ### <a name="parameters"></a>Parametry
 
-*U*  
+*U*<br/>
 Typ *jiných* parametru.
 
-*Ostatní*  
+*Ostatní*<br/>
 Objekt typu *U*.
 
 ## <a name="return-value"></a>Návratová hodnota

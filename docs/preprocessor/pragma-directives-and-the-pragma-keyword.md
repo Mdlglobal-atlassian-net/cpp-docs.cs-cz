@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76a29a7ae4734e5d1f1930d5309163d1e1519aa4
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: f195a553c29c8a1cd0ef57f82c9f57a1f3672048
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42465471"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405291"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Direktivy Pragma a klíčové slovo __Pragma
 Direktivy pragma určují funkce kompilátoru nebo provozní specifické pro počítač. **__Pragma** – klíčové slovo, které jsou specifické pro kompilátor společnosti Microsoft, umožňuje kódovat direktivy pragma v rámci definice maker.  
@@ -117,6 +117,6 @@ return _hr; \
   
 ## <a name="see-also"></a>Viz také  
  
-[Reference preprocesoru C/C++](../preprocessor/c-cpp-preprocessor-reference.md)   
-[Pragmas jazyka C](../c-language/c-pragmas.md)   
+[C/C++ – referenční dokumentace preprocesoru](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
+[Pragmas jazyka C](../c-language/c-pragmas.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)

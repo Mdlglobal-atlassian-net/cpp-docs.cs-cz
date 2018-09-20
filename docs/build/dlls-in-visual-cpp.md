@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28be2caa3477eabc8b717b387c99d65585a9ef19
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4ea5026100239f00f03147e435ddd9555617f1dd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718052"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432708"
 ---
 # <a name="dlls-in-visual-c"></a>Knihovny DLL v jazyce Visual C++
 
@@ -71,46 +71,67 @@ Potenciální nevýhodou použití knihoven DLL je, že aplikace není samostatn
 
 Následující témata obsahují podrobné informace o tom, na program knihovny DLL v jazyce Visual C++.
 
-[Návod: Vytvoření a použití knihovny pro dynamické propojení (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md) popisuje, jak vytvořit a použít knihovnu DLL pomocí sady Visual Studio.
+[Návod: Vytvoření a použití dynamické knihovny DLL (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
+Popisuje, jak vytvořit a použít knihovnu DLL v sadě Visual Studio.
 
-[Druhy knihoven DLL](../build/kinds-of-dlls.md) poskytuje informace o různých typech knihoven DLL, které se dají.
+[Typy knihoven DLL](../build/kinds-of-dlls.md)<br/>
+Poskytuje informace o různých typech knihoven DLL, které lze vytvořit.
 
-[DLL – nejčastější dotazy](../build/dll-frequently-asked-questions.md) poskytuje odpovědi na nejčastější dotazy týkající se knihoven DLL.
+[Nejčastější dotazy ke knihovnám DLL](../build/dll-frequently-asked-questions.md)<br/>
+Poskytuje odpovědi na nejčastější dotazy týkající se knihoven DLL.
 
-[Propojení spustitelného souboru s knihovnou DLL](../build/linking-an-executable-to-a-dll.md) popisuje explicitní a implicitní propojení s knihovnou DLL.
+[Propojení spustitelného souboru s knihovnou DLL](../build/linking-an-executable-to-a-dll.md)<br/>
+Popisuje explicitní a implicitní propojení s knihovnou DLL.
 
-[Inicializace knihovny DLL](../build/run-time-library-behavior.md#initializing-a-dll) inicializační kód popisuje knihovny DLL, která musí být spuštěn při načtení knihovny DLL.
+[Inicializace knihovny DLL](../build/run-time-library-behavior.md#initializing-a-dll)<br/>
+Tento článek popisuje inicializační kód knihovny DLL, která musí být spuštěn při načtení knihovny DLL.
 
-[Knihovny DLL a chování běhové knihovny jazyka Visual C++](../build/run-time-library-behavior.md) popisuje, jak provádí spouštěcí sekvenci knihovny DLL knihovny run-time.
+[Knihovny DLL a chování běhové knihovny v jazyce Visual C++](../build/run-time-library-behavior.md)<br/>
+Popisuje, jakým způsobem provádí knihovna runtime spouštěcí sekvenci knihovny DLL.
 
-[LoadLibrary a AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md) popisuje použití **LoadLibrary** a `AfxLoadLibrary` pro explicitní propojení ke knihovně DLL za běhu.
+[LoadLibrary a AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)<br/>
+Popisuje použití **LoadLibrary** a `AfxLoadLibrary` pro explicitní propojení ke knihovně DLL za běhu.
 
-[GetProcAddress](../build/getprocaddress.md) popisuje použití **GetProcAddress** pro získání adresy exportované funkce v knihovně DLL.
+[GetProcAddress](../build/getprocaddress.md)<br/>
+Popisuje použití **GetProcAddress** pro získání adresy exportované funkce v knihovně DLL.
 
-[FreeLibrary a AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md) popisuje použití **FreeLibrary** a `AfxFreeLibrary` při modul knihovny DLL je už je nepotřebujete.
+[FreeLibrary a AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md)<br/>
+Popisuje použití **FreeLibrary** a `AfxFreeLibrary` při modul knihovny DLL je už je nepotřebujete.
 
-[Pořadí hledání knihoven DLL](/windows/desktop/Dlls/dynamic-link-library-search-order) popisuje vyhledávací cestu, operační systém Windows používá k nalezení knihovny DLL v systému.
+[Pořadí hledání knihoven DLL](/windows/desktop/Dlls/dynamic-link-library-search-order)<br/>
+Popisuje vyhledávací cestu, operační systém Windows používá k nalezení knihovny DLL v systému.
 
-[Stavy modulů regulární knihovny MFC DLL dynamicky propojené ke knihovně MFC](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md) popisuje stavy modulů běžné knihovny MFC DLL dynamicky propojené ke knihovně MFC.
+[Stavy modulů běžné knihovny MFC DLL dynamicky propojené do MFC](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)<br/>
+Popisuje stavy modulů běžné, které knihovny MFC DLL staticky propojené do MFC.
 
-[MFC – rozšiřující knihovny DLL](../build/extension-dlls-overview.md) vysvětluje DLL, které obvykle implementují opakovaně použitelné třídy odvozené z existujících tříd knihovny Microsoft Foundation Class.
+[MFC – rozšiřující knihovny DLL](../build/extension-dlls-overview.md)<br/>
+Popisuje knihovny DLL, které obvykle implementují opakovaně použitelné třídy odvozené z existujících tříd knihovny Microsoft Foundation Class.
 
-[Vytváření knihovny DLL Resource-Only](../build/creating-a-resource-only-dll.md) popisuje pouze prostředky knihovny DLL, která obsahuje prostředky, jako jsou ikony, bitmapy, řetězce a dialogová okna.
+[Vytvoření knihovny DLL obsahující jen prostředky](../build/creating-a-resource-only-dll.md)<br/>
+Popisuje knihovnu DLL, která obsahuje pouze prostředky jako ikony, bitmapy, řetězce a dialogová okna.
 
-[Lokalizované prostředky v aplikacích MFC: satelitní knihovny DLL](../build/localized-resources-in-mfc-applications-satellite-dlls.md) poskytuje rozšířenou podporu pro satelitní knihovny DLL, funkci, která pomáhá při vytváření aplikací lokalizovaných do více jazyků.
+[Lokalizované prostředky v aplikacích MFC: Satelitní knihovny DLL](../build/localized-resources-in-mfc-applications-satellite-dlls.md)<br/>
+Rozšiřuje podporu pro satelitní knihovny DLL, funkci, která pomáhá při vytváření aplikací lokalizovaných do více jazyků.
 
-[Import a export](../build/importing-and-exporting.md) popisuje import veřejných symbolů do aplikace nebo export funkcí z knihovny DLL
+[Import a export](../build/importing-and-exporting.md)<br/>
+Popisuje import veřejných symbolů do aplikace nebo export funkcí z knihovny DLL.
 
-[Aktivní technologie a knihovny DLL](../build/active-technology-and-dlls.md) umožňuje objektových serverů uvnitř knihovny DLL implementovat.
+[Aktivní technologie a knihovny DLL](../build/active-technology-and-dlls.md)<br/>
+Umožňuje objektových serverů uvnitř knihovny DLL implementovat.
 
-[Automatizace v knihovně DLL](../build/automation-in-a-dll.md) popisuje, co poskytuje možnost automatizace v průvodci knihovny MFC DLL.
+[Automatizace v knihovně DLL](../build/automation-in-a-dll.md)<br/>
+Popisuje, co nabízí možnost automatizace v průvodci knihovny MFC DLL.
 
-[Zásady vytváření názvů pro knihovny MFC DLL](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions) popisuje, jak se knihovny DLL a knihovny zahrnuté v MFC podle zásady strukturovaného vytváření názvů.
+[Zásady vytváření názvů pro knihovny MFC DLL](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)<br/>
+Popisuje, jak se knihovny DLL a knihovny zahrnuté v MFC drží zásady strukturovaného vytváření názvů.
 
-[Volání funkcí knihovny DLL z aplikací Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md) popisuje, jak volat funkce knihovny DLL z aplikací Visual Basic.
+[Volání funkcí knihovny DLL z aplikací Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md)<br/>
+Popisuje způsob, jak volat funkce knihovny DLL z aplikací Visual Basic.
 
 ## <a name="related-sections"></a>Související oddíly
 
-[Použití prostředí MFC jako součásti knihovny DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md) popisuje běžných knihovnách MFC DLL, které umožňují použít knihovnu MFC jako součást Windows dynamickou knihovnu.
+[Použití prostředí MFC jako součásti knihovny DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)<br/>
+Popisuje běžných knihovnách MFC DLL, které umožňují použít knihovnu MFC jako součást Windows dynamickou knihovnu.
 
-[DLL verze knihovny MFC](../mfc/tn033-dll-version-of-mfc.md) popisuje, jak můžete použít knihovny MFCxx.dll a MFCxxD.dll (kde x je číslo verze knihovny MFC) sdílené knihovny DLL s aplikací knihovny MFC a MFC – rozšiřující knihovny DLL.
+[DLL verze knihovny MFC](../mfc/tn033-dll-version-of-mfc.md)<br/>
+Popisuje, jak můžete použít knihovny MFCxx.dll a MFCxxD.dll (kde x je číslo verze knihovny MFC) sdílené knihovny DLL s aplikací knihovny MFC a MFC – rozšiřující knihovny DLL.

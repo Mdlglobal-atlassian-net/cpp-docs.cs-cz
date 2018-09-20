@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6dca289631f3289a7976b6dc3482770bf5f3fe7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9f755ee59c7f0b6e4ae9897535cdc536537ba32f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200615"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446503"
 ---
 # <a name="support-for-ansi"></a>Podpora standardu ANSI
-Většina tříd knihovny MFC a metody podporují znakovou sadu ANSI, i když rozhraní MFC jako celek, postupně se vyvíjejí směrem k podpoře pouze Unicode znakové sady. Z důvodu probíhající vylepšení ve Windows Vista a Windows běžné ovládací prvky verze 6.1 podpora pro několik ANSI třídy a metody je zastaralá.  Další informace najdete v tématu [zastaralé rozhraní API standardu ANSI](../mfc/deprecated-ansi-apis.md) a [podpora pro Unicode](../text/support-for-unicode.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Podpora pro Unicode](../text/support-for-unicode.md)   
- [Rozhraní API nepoužívané standardu ANSI](../mfc/deprecated-ansi-apis.md)   
- [Prostředí a verze běžných ovládacích prvků](https://msdn.microsoft.com/library/windows/desktop/bb776779)
+
+Většina tříd knihovny MFC a metody podporují znakovou sadu ANSI, i když rozhraní MFC jako celek, postupně se vyvíjejí směrem k podpoře pouze Unicode znakové sady. Z důvodu probíhající vylepšení ve Windows Vista a Windows běžné ovládací prvky verze 6.1 podpora pro několik ANSI třídy a metody je zastaralá.  Další informace najdete v tématu [zastaralé rozhraní API standardu ANSI](../mfc/deprecated-ansi-apis.md) a [podpora pro Unicode](../text/support-for-unicode.md).
+
+## <a name="see-also"></a>Viz také
+
+[Podpora pro Unicode](../text/support-for-unicode.md)<br/>
+[Zastaralá rozhraní API standardu ANSI](../mfc/deprecated-ansi-apis.md)<br/>
+[Prostředí a verze běžných ovládacích prvků](https://msdn.microsoft.com/library/windows/desktop/bb776779)

@@ -1,5 +1,5 @@
 ---
-title: Ovládací prvek seznamu a zobrazení seznamu | Microsoft Docs
+title: Ovládací prvek seznamu a zobrazení seznamu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,35 +18,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3279ae5edc02ec52ded065c4a45d18e3236802f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9925bd7188faa97ab5aa32dc2830dc6498726381
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345996"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436751"
 ---
 # <a name="list-control-and-list-view"></a>Ovládací prvek seznamu a zobrazení seznamu
-Pro usnadnění práce zapouzdří MFC ovládacího prvku seznam dvěma způsoby. Můžete použít ovládací prvky seznamu:  
-  
--   Přímo, vložením [CListCtrl](../mfc/reference/clistctrl-class.md) objekt ve třídě dialog.  
-  
--   Nepřímo, s použitím třídy [CListView](../mfc/reference/clistview-class.md).  
-  
- `CListView` umožňuje snadno integrovat ovládací prvek seznamu architektuře dokument/zobrazení MFC zapouzdřením ovládacího prvku mnohem jako [CEditView](../mfc/reference/ceditview-class.md) zapouzdří ovládací prvek upravit: ovládací prvek vyplní celé plochy zobrazení knihovny MFC. (Zobrazení *je* prvku přetypovat `CListView`.)  
-  
- A `CListView` objekt dědí z [CCtrlView](../mfc/reference/cctrlview-class.md) a jeho základní třídy a přidá členské funkce načíst základní ovládací prvek seznamu. Pomocí zobrazení členů pro práci s zobrazení jako zobrazení. Použití [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl) – členská funkce k získání přístupu k členské funkce ovládacího prvku seznam. Pomocí těchto členů na:  
-  
--   Přidat, odstranit nebo upravit "položky" v seznamu.  
-  
--   Nastavit nebo získat atributy ovládacího prvku seznam.  
-  
- Chcete-li získat odkaz na `CListCtrl` základní `CListView`, volání `GetListCtrl` z vaší třídy zobrazení seznamu:  
-  
- [!code-cpp[NVC_MFCListView#4](../atl/reference/codesnippet/cpp/list-control-and-list-view_1.cpp)]  
-  
- Toto téma popisuje oba způsoby použití ovládacího prvku seznam.  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CListCtrl](../mfc/using-clistctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Pro usnadnění práce knihovny MFC zapouzdřuje ovládacího prvku seznam dvěma způsoby. Můžete použít ovládací prvky seznamu:
+
+- Přímo, s využitím vkládání služby [CListCtrl](../mfc/reference/clistctrl-class.md) objekt ve třídě dialog.
+
+- Nepřímo pomocí třídy [CListView](../mfc/reference/clistview-class.md).
+
+`CListView` umožňuje snadno integrovat ovládací prvek seznamu architekturu document/view knihovny MFC, zapouzdření ovládací prvek velká jako [CEditView](../mfc/reference/ceditview-class.md) zapouzdřuje ovládacího prvku pro úpravy: ovládací prvek vyplní celou oblast povrchu zobrazení MFC. (Zobrazení *je* ovládací přetypovat na `CListView`.)
+
+A `CListView` objekt dědí z [cctrlview –](../mfc/reference/cctrlview-class.md) a její základní třídy a přidá členskou funkci načíst základní ovládací prvek seznamu. Zobrazit členy použijte pro práci se zobrazením v zobrazení. Použití [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl) členskou funkci získat přístup k členské funkce ovládacího prvku seznamu. Pomocí těchto členů na:
+
+- Přidat, odstranit nebo manipulaci s "položky" v seznamu.
+
+- Nastavit nebo získat atributy ovládacího prvku seznamu.
+
+K získání odkazu na `CListCtrl` základní `CListView`, volání `GetListCtrl` z vaší třídy zobrazení seznamu:
+
+[!code-cpp[NVC_MFCListView#4](../atl/reference/codesnippet/cpp/list-control-and-list-view_1.cpp)]
+
+Toto téma popisuje oba způsoby, jak pomocí ovládacího prvku seznamu.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CListCtrl](../mfc/using-clistctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

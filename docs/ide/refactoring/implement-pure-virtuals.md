@@ -1,5 +1,5 @@
 ---
-title: Implementace čistý Virtuals | Microsoft Docs
+title: 'Implementace čistě virtuálních funkcí: | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -10,32 +10,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afce516f2718a76658846ed4f992aeabff75330b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 234ae9a67bcbc60ea156fbacb5169d0bd1573a91
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328023"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442757"
 ---
-# <a name="implement-pure-virtuals"></a>Čistý Virtuals implementace
-**Co:** umožňuje okamžitě generování kódu potřebnou k implementaci všech čistý virtuální metody ve třídě. 
+# <a name="implement-pure-virtuals"></a>Implementace čistě virtuálních funkcí:
+**Co:** umožňuje okamžitě generování kódu nutné implementovat všechny čistě virtuální metody ve třídě.
 
-**Kdy:** chcete použít dědění ze třídy s čistě virtuální funkce.  
+**Kdy:** chcete dědit ze třídy s čistě virtuální funkce.
 
-**Důvod:** ručně může implementovat všechny čistý virtuální funkce jeden po druhém, ale tato funkce bude automaticky generovat všechny podpisy metoda.
+**Důvod, proč:** ručně může implementovat všechny čistě virtuální funkce jeden po druhém, ale tato funkce automaticky vygeneruje všechny podpisy metod.
 
-**Postupy:**
+**Jak:**
 
-1. Umístěte kurzor text nebo myši nad třídu, ve kterém chcete implementovat čistý virtuální funkce základní třídy.
+1. Umístěte ukazatel myši text nebo myši nad třídy, ve kterém chcete implementovat čistě virtuální funkce základní třídy.
 
    ![Zvýrazněný kód](images/virtuals_highlight.png)
 
 1. Dále proveďte jednu z následujících akcí:
    * **Klávesnice**
-     * Stiskněte klávesu **Ctrl +.** k aktivační události **rychlé akce a refaktoring** nabídku a vyberte **implementovat všechny čistý Virtuals pro třídu*ClassName*'** z kontextové nabídky, kde  *Název třídy* je název vybrané třídy.
-   * **Myš**
-     * Klikněte pravým tlačítkem a vyberte **rychlé akce a refaktoring** nabídku a vyberte **implementovat všechny čistý Virtuals pro třídu*ClassName*'** z kontextové nabídky, kde  *Název třídy* je název vybrané třídy.
+     * Stisknutím klávesy **Ctrl +.** aktivační událost **rychlé akce a Refaktoringy** nabídky a vybereme **implementovat všechny čistě virtuální funkce pro třídy*ClassName*"** v místní nabídce, kde  *ClassName* je název vybrané třídy.
+   * **Myši**
+     * Klikněte pravým tlačítkem a vyberte **rychlé akce a Refaktoringy** nabídky a vybereme **implementovat všechny čistě virtuální funkce pro třídy*ClassName*"** v místní nabídce, kde  *ClassName* je název vybrané třídy.
 
-1. Podpisy čistý virtuální metoda bude automaticky vytvořený, připraveno k implementaci.
+1. Podpisy čistě virtuální metody budou automaticky vytvořený a jestli je připravená k implementaci.
 
-   ![Implementace čistý Virtuals výsledek](images/virtuals_result.png)
+   ![Implementace čistě virtuálních funkcí: výsledek](images/virtuals_result.png)

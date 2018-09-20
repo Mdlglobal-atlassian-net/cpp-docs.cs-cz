@@ -14,58 +14,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95eed7834e46f6a42a363e8a8f8134945beb54fc
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7e989b6f2193142de8feb4124e365285957ee804
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465672"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439860"
 ---
 # <a name="deprecated-ansi-apis"></a>Zastaralá rozhraní API standardu ANSI
-Knihovny Microsoft Foundation Class (MFC) je migrace třídy a metody, které jsou založeny na znakové sady Unicode. V důsledku toho jsou zastaralé verze ANSI z několika metod knihovny MFC. Použijte Unicode verze těchto metod v budoucí aplikace.  
-  
- Od verze běžných ovládacích prvků Windows 6.1, která se dodává ve Windows Vista, jsou zastaralé následující metody ANSI.  
-  
-## <a name="cbutton-class"></a>CButton – třída  
-  
-```  
+
+Knihovny Microsoft Foundation Class (MFC) je migrace třídy a metody, které jsou založeny na znakové sady Unicode. V důsledku toho jsou zastaralé verze ANSI z několika metod knihovny MFC. Použijte Unicode verze těchto metod v budoucí aplikace.
+
+Od verze běžných ovládacích prvků Windows 6.1, která se dodává ve Windows Vista, jsou zastaralé následující metody ANSI.
+
+## <a name="cbutton-class"></a>CButton – třída
+
+```
 AFX_ANSI_DEPRECATED BOOL GetIdealSize(LPSIZE psize) const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist) const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL GetTextMargin(LPRECT pmargin) const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 
 AFX_ANSI_DEPRECATED BOOL SetTextMargin(LPRECT pmargin);
-```  
-  
-## <a name="ccomboboxex-class"></a>CComboBoxEx – třída  
-  
-```  
+```
+
+## <a name="ccomboboxex-class"></a>CComboBoxEx – třída
+
+```
 AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
-```  
-  
-## <a name="cedit-class"></a>Cedit – třída  
-  
-```  
+```
+
+## <a name="cedit-class"></a>Cedit – třída
+
+```
 AFX_ANSI_DEPRECATED BOOL GetCueBanner(LPWSTR lpszText,
     int cchText) const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL SetCueBanner(LPCWSTR lpszText,
     BOOL fDrawIfFocused = FALSE);
-```  
-  
-## <a name="clinkctrl-class"></a>Clinkctrl – třída  
- Celá třída je zastaralá.  
-  
-## <a name="clistctrl-class"></a>CListCtrl – třída  
-  
-```  
+```
+
+## <a name="clinkctrl-class"></a>Clinkctrl – třída
+
+Celá třída je zastaralá.
+
+## <a name="clistctrl-class"></a>CListCtrl – třída
+
+```
 AFX_ANSI_DEPRECATED void CancelEditLabel();
 
 AFX_ANSI_DEPRECATED int EnableGroupView(BOOL fEnable);
@@ -73,37 +75,37 @@ AFX_ANSI_DEPRECATED int EnableGroupView(BOOL fEnable);
 AFX_ANSI_DEPRECATED int GetGroupInfo(int iGroupId,
     PLVGROUP pgrp) const;
 
- 
+
 AFX_ANSI_DEPRECATED void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL GetInsertMark(LPLVINSERTMARK lvim) const;
 
- 
+
 AFX_ANSI_DEPRECATED COLORREF GetInsertMarkColor() const;
 
- 
+
 AFX_ANSI_DEPRECATED int GetInsertMarkRect(LPRECT pRect) const;
 
- 
+
 AFX_ANSI_DEPRECATED COLORREF GetOutlineColor() const;
 
- 
+
 AFX_ANSI_DEPRECATED UINT GetSelectedColumn() const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL GetTileInfo(PLVTILEINFO pti) const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL GetTileViewInfo(PLVTILEVIEWINFO ptvi) const;
 
- 
+
 AFX_ANSI_DEPRECATED DWORD GetView() const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL HasGroup(int iGroupId) const;
 
- 
+
 AFX_ANSI_DEPRECATED int InsertGroup(int index,
     PLVGROUP pgrp);
 
@@ -112,10 +114,10 @@ AFX_ANSI_DEPRECATED void InsertGroupSorted(PLVINSERTGROUPSORTED pStructInsert);
 AFX_ANSI_DEPRECATED int InsertMarkHitTest(LPPOINT pPoint,
     LPLVINSERTMARK lvim) const;
 
- 
+
 AFX_ANSI_DEPRECATED BOOL IsGroupViewEnabled() const;
 
- 
+
 AFX_ANSI_DEPRECATED void MoveGroup(int iGroupId,
     int toIndex);
 
@@ -149,34 +151,35 @@ AFX_ANSI_DEPRECATED DWORD SetView(int iView);
 
 AFX_ANSI_DEPRECATED BOOL SortGroups(PFNLVGROUPCOMPARE _pfnGroupCompare,
     LPVOID _plv);
-```  
-  
-## <a name="crebarctrl-class"></a>CReBarCtrl – třída  
-  
-```  
+```
+
+## <a name="crebarctrl-class"></a>CReBarCtrl – třída
+
+```
 AFX_ANSI_DEPRECATED void GetBandMargins(PMARGINS pMargins) const;
 
- 
+
 AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
-```  
-  
-## <a name="ctoolbarctrl-class"></a>CToolBarCtrl – třída  
-  
-```  
+```
+
+## <a name="ctoolbarctrl-class"></a>CToolBarCtrl – třída
+
+```
 AFX_ANSI_DEPRECATED void GetMetrics(LPTBMETRICS ptbm) const;
 
- 
+
 AFX_ANSI_DEPRECATED void SetMetrics(LPTBMETRICS ptbm);
 
 AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
-```  
-  
-## <a name="ctooltipctrl-class"></a>CToolTipCtrl – třída  
-  
-```  
+```
+
+## <a name="ctooltipctrl-class"></a>CToolTipCtrl – třída
+
+```
 AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Požadavky na sestavení pro běžné ovládací prvky systému Windows Vista](../mfc/build-requirements-for-windows-vista-common-controls.md)
+```
+
+## <a name="see-also"></a>Viz také
+
+[Požadavky na sestavení pro běžné ovládací prvky systému Windows Vista](../mfc/build-requirements-for-windows-vista-common-controls.md)
 

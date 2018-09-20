@@ -1,5 +1,5 @@
 ---
-title: 'Nabídky a prostředky: kontejnerové doplňky | Microsoft Docs'
+title: 'Nabídky a prostředky: kontejnerové doplňky | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,70 +26,75 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 437b80a0766a07b181a60743e79bdbaf32347de4
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 9fa5cef9d5796d86f65524dda3bce9e300788a09
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930542"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391108"
 ---
 # <a name="menus-and-resources-container-additions"></a>Nabídky a prostředky: Kontejnerové doplňky
-Tento článek vysvětluje změny, které je třeba provést v nabídkách a dalším prostředkům v aplikaci visual úpravy kontejneru.  
-  
- V kontejneru aplikace potřeba učinit dvou typů změn: změny se stávajícími prostředky pro podporu úpravy s náhledem OLE a přidání nové prostředky používané pro aktivace na místě. Používáte-li vytvořit aplikaci kontejneru v Průvodce vytvořením aplikace, můžete tyto kroky bude provedeno za vás, ale můžou vyžadovat některé přizpůsobení.  
-  
- Pokud použijete Průvodce aplikace, můžete se podívat na OCLIENT. RC, skript prostředků pro OCLIENT ukázkovou aplikaci, pokud chcete zobrazit, jak jsou implementované tyto změny. Viz ukázka MFC OLE [OCLIENT](../visual-cpp-samples.md).  
-  
- Témata popsaná v tomto článku:  
-  
--   [Přidání do nabídky kontejneru](#_core_container_menu_additions)  
-  
--   [Přidání tabulky akcelerátorů](#_core_container_application_accelerator_table_additions)  
-  
--   [Přidání tabulky řetězců](#_core_string_table_additions_for_container_applications)  
-  
-##  <a name="_core_container_menu_additions"></a> Přidání do nabídky kontejneru  
- Do nabídky upravit, je nutné přidat následující položky:  
-  
-|Položka|Účel|  
-|----------|-------------|  
-|**Vložit nový objekt**|Otevře dialogové okno Vložit objekt OLE vložit položku propojený nebo vložený do dokumentu.|  
-|**Vložit propojení**|Vloží odkaz na položku do schránky do dokumentu.|  
-|**Příkaz OLE**|Volá primární požadavek vybranou položku. Text této změny položky nabídky tak, aby odrážela primární požadavek vybrané položky.|  
-|**Odkazy**|Otevře dialogové okno OLE upravit odkazy změnit stávající propojené položky.|  
-  
- Kromě změn uvedené v tomto článku váš zdrojový soubor musí zahrnovat AFXOLECL. RC, který je nutný k provedení Microsoft Foundation Class Library. Vložit nový objekt je přidání pouze požadované nabídky. Lze přidat další položky, ale které jsou zde uvedeny jsou nejobvyklejší.  
-  
- Pokud chcete zajistit podporu aktivace na místě obsažených položek, je nutné vytvořit nové nabídky pro aplikaci kontejneru. Tato nabídka se skládá z stejné nabídka Soubor a používá, když jsou otevřené soubory, ale má dva oddělovače je umístěná mezi oběma místní nabídky okna. Tyto oddělovače jsou slouží k určení, kam položky (součást) (aplikace) by měl být jeho nabídky při aktivaci na místě. Další informace o této technice slučování nabídek najdete v tématu [nabídky a prostředky: sloučení nabídky](../mfc/menus-and-resources-menu-merging.md).  
-  
-##  <a name="_core_container_application_accelerator_table_additions"></a> Přidání tabulka akcelerátoru aplikace kontejneru  
- Malé změny prostředků tabulky akcelerátorů kontejnerové aplikace jsou nezbytné, pokud podporujete aktivace na místě. První změna umožňuje uživatelům stisknutím klávesy ESC (ESC) zrušit režimu úprav na místě. Přidejte následující položku v tabulce akcelerátorů hlavní:  
-  
-|ID|Key|Typ|  
-|--------|---------|----------|  
-|ID_CANCEL_EDIT_CNTR|VK_ESCAPE –|**VIRTKEY**|  
-  
- Druhý změnou je vytvořit novou tabulku akcelerátoru, která odpovídá nový prostředek nabídky, které jsou vytvořené pro aktivace na místě. Tato tabulka obsahuje záznamy pro nabídky soubor a okno kromě výše uvedených vk_escape – zadání. V následujícím příkladu je vytvořen aktivace na místě v ukázce MFC tabulka akcelerátoru [KONTEJNERU](../visual-cpp-samples.md):  
-  
-|ID|Key|Typ|  
-|--------|---------|----------|  
-|ID_FILE_NEW –|CTRL + N|**VIRTKEY**|  
-|ID_FILE_OPEN –|CTRL+O|**VIRTKEY**|  
-|ID_FILE_SAVE –|CTRL+S|**VIRTKEY**|  
-|ID_FILE_PRINT –|CTRL + P|**VIRTKEY**|  
-|ID_NEXT_PANE –|VK_F6|**VIRTKEY**|  
-|ID_PREV_PANE –|SHIFT + VK_F6|**VIRTKEY**|  
-|ID_CANCEL_EDIT_CNTR|VK_ESCAPE –|**VIRTKEY**|  
-  
-##  <a name="_core_string_table_additions_for_container_applications"></a> Přidání tabulky řetězec pro aplikace typu kontejner  
- Většinu změn do tabulek řetězců pro aplikace typu kontejner odpovídají položky další nabídky uvedený v [přidání do nabídky kontejneru](#_core_container_menu_additions). Si poskytují text zobrazený ve stavovém řádku při každé položky nabídky se zobrazí. Jako příklad uvádíme položky tabulky řetězců, které generuje Průvodce aplikace:  
-  
-|ID|String|  
-|--------|------------|  
-|IDP_OLE_INIT_FAILED –|Nepodařilo se inicializovat OLE. Ujistěte se, že jsou knihoven OLE správná verze.|  
-|IDP_FAILED_TO_CREATE –|Vytvoření objektu se nezdařilo. Ujistěte se, že objekt je zadána v registru systému.|  
-  
-## <a name="see-also"></a>Viz také  
- [Nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md)   
- [Nabídky a prostředky: Serverové doplňky](../mfc/menus-and-resources-server-additions.md)
+
+Tento článek vysvětluje změny, které je třeba provést, nabídky a jiné prostředky ve vizuální úpravy aplikace typu kontejner.
+
+V kontejneru aplikace potřeba provést dva druhy změny: změny stávajících prostředků, abyste podporují vizuální úpravy OLE a přidání nové prostředky používané pro aktivace na místě. Pokud používáte Průvodce aplikací k vytvoření aplikace v kontejneru, tyto kroky se provede za vás, ale vyžadují určité přizpůsobení.
+
+Pokud je velmi riskantní používat Průvodce aplikací, můžete se podívat na OCLIENT. RC, skript prostředků pro OCLIENT ukázkovou aplikaci, pokud chcete zobrazit, jak se implementují tyto změny. Najdete v ukázce MFC OLE [OCLIENT](../visual-cpp-samples.md).
+
+V tomto článku probíraná témata zahrnují:
+
+- [Přidání do nabídky kontejneru](#_core_container_menu_additions)
+
+- [Přidání tabulky akcelerátorů](#_core_container_application_accelerator_table_additions)
+
+- [Přidání tabulky řetězců](#_core_string_table_additions_for_container_applications)
+
+##  <a name="_core_container_menu_additions"></a> Přidání do nabídky kontejneru
+
+Do nabídky Úpravy je nutné přidat následující položky:
+
+|Položka|Účel|
+|----------|-------------|
+|**Vložit nový objekt**|Otevře dialogové okno vložení objektu OLE pro vložení propojené nebo vložené položky do dokumentu.|
+|**Vložit odkaz**|Vloží odkaz na položku do schránky do dokumentu.|
+|**OLE – příkaz**|Volá primárního operaci vybranou položku. Textové změny této nabídky položky tak, aby odrážely primárního operaci vybrané položky.|
+|**Odkazy**|Otevře dialogové okno úpravy odkazů OLE, chcete-li změnit existující propojené položky.|
+
+Kromě změny uvedené v tomto článku zdrojový soubor musí obsahovat AFXOLECL. RC, která je potřebná pro implementaci knihovny Microsoft Foundation Class. Vložit nový objekt je pouze požadovaná nabídky. Můžete přidat další položky, ale jsou zde uvedeny jsou nejčastěji používané.
+
+Pokud chcete, aby podporoval aktivaci na místě upravovat položky, je nutné vytvořit novou nabídku pro svou aplikaci typu kontejner. Tato nabídka se skládá z stejnou nabídku Soubor a použít, když jsou otevřené soubory, ale má dva oddělovače umístěná mezi oběma rozbalovací nabídky okna. Tyto oddělovače slouží k označení, kde položka serveru (součást) (aplikace) by měl umístit nabídky při aktivaci na místě. Další informace o této techniky slučování nabídek, naleznete v tématu [nabídky a prostředky: sloučení nabídky](../mfc/menus-and-resources-menu-merging.md).
+
+##  <a name="_core_container_application_accelerator_table_additions"></a> Přidání tabulky akcelerátoru aplikace kontejneru
+
+Malé změny aplikace typu kontejner prostředků tabulky akcelerátorů jsou nezbytné, pokud podporujete aktivace na místě. První změna umožňuje uživateli stisknout klávesu escape (ESC) pro zrušení režim úprav na místě. Přidejte následující položku do tabulky hlavní akcelerátoru:
+
+|ID|Key|Typ|
+|--------|---------|----------|
+|ID_CANCEL_EDIT_CNTR|VK_ESCAPE –|**VIRTKEY**|
+
+Druhý změnu je vytvoření nové tabulky akcelerátoru, která odpovídá na nový prostředek nabídky, které jsou vytvořené pro aktivace na místě. Tato tabulka obsahuje záznamy pro nabídky soubor a okno kromě výše uvedených vk_escape – zadání. V následujícím příkladu je tabulka akcelerátoru vytvořena pro aktivace na místě v ukázce MFC [KONTEJNERU](../visual-cpp-samples.md):
+
+|ID|Key|Typ|
+|--------|---------|----------|
+|ID_FILE_NEW –|CTRL + N|**VIRTKEY**|
+|ID_FILE_OPEN –|CTRL+O|**VIRTKEY**|
+|ID_FILE_SAVE –|CTRL+S|**VIRTKEY**|
+|ID_FILE_PRINT –|CTRL + P|**VIRTKEY**|
+|ID_NEXT_PANE –|VK_F6|**VIRTKEY**|
+|ID_PREV_PANE –|SHIFT + VK_F6|**VIRTKEY**|
+|ID_CANCEL_EDIT_CNTR|VK_ESCAPE –|**VIRTKEY**|
+
+##  <a name="_core_string_table_additions_for_container_applications"></a> Přidání tabulky řetězců pro aplikace typu kontejner
+
+Většina změn do tabulek řetězců pro aplikace typu kontejner odpovídají další položky nabídky podle [přidání do nabídky kontejneru](#_core_container_menu_additions). Text zobrazený ve stavovém řádku v případě každé položky nabídky se zobrazí dodávají. Jako příklad uvádíme položky tabulky řetězců, které generuje Průvodce aplikací:
+
+|ID|String|
+|--------|------------|
+|IDP_OLE_INIT_FAILED|Nepovedlo se inicializovat OLE. Ujistěte se, že jsou knihovny OLE správné verze.|
+|IDP_FAILED_TO_CREATE|Nepovedlo se vytvořit objekt. Ujistěte se, že se objekt zadal do systémového registru.|
+
+## <a name="see-also"></a>Viz také
+
+[Nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md)<br/>
+[Nabídky a prostředky: Serverové doplňky](../mfc/menus-and-resources-server-additions.md)
 

@@ -1,5 +1,5 @@
 ---
-title: 'Správa paměti: Bloky paměti umožňující změnu velikosti | Microsoft Docs'
+title: 'Správa paměti: Paměťové bloky umožňující změnu | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,19 +19,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba66fb3d85d716b18486ef08f7f2025e78d6cc57
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 92582e4255c88b9cc78368a635b27772f2e51a30
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929327"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443901"
 ---
 # <a name="memory-management-resizable-memory-blocks"></a>Správa paměti: Paměťové bloky umožňující změnu velikosti
-**Nové** a **odstranit** operátory, které jsou popsané v článku [Správa paměti: Příklady](../mfc/memory-management-examples.md), jsou vhodné pro přidělování a rušení přidělení bloků paměti pevné velikosti a objekty. Aplikace v některých případech může být nutné bloky paměti umožňující změnu velikosti. Musí používat standardní funkce běhové knihovny jazyka C [malloc –](../c-runtime-library/reference/malloc.md), [realloc –](../c-runtime-library/reference/realloc.md), a [volné](../c-runtime-library/reference/free.md) ke správě bloky paměti umožňující změnu velikosti v haldě.  
-  
+
+**Nové** a **odstranit** operátory popsané v článku [Správa paměti: Příklady](../mfc/memory-management-examples.md), jsou vhodné pro přidělování a rušení přidělení bloků paměti pevné velikosti a objekty. Vaše aplikace může v některých případech nutné bloky paměti umožňující změnu velikosti. Je nutné použít standardní funkce knihovny run-time jazyka C [malloc](../c-runtime-library/reference/malloc.md), [realloc](../c-runtime-library/reference/realloc.md), a [bezplatné](../c-runtime-library/reference/free.md) ke správě bloky paměti umožňující změnu velikosti na haldě.
+
 > [!IMPORTANT]
->  Kombinování **nové** a **odstranit** operátory s funkcí s možností změny velikosti přidělení paměti na stejný blok paměti bude mít za následek poškozená paměti v ladicí verze knihovny MFC. Neměli byste používat **realloc –** na blok paměti přidělené s **nové**. Stejně tak by neměl přidělit paměť blok s **nové** operátor a odstranit ji s **volné**, nebo použijte **odstranit** operátor na blok paměti přidělené s **malloc –**.  
-  
-## <a name="see-also"></a>Viz také  
- [Správa paměti: Přidělení haldy](../mfc/memory-management-heap-allocation.md)
+>  Kombinování **nové** a **odstranit** operátory s využitím functions přidělení paměti umožňující změnu velikosti ve stejném bloku paměti způsobí poškozená paměti v ladicí verzi knihovny MFC. Neměli byste používat **realloc** na blok paměti přidělené s **nové**. Podobně by neměl přidělení bloku paměti s **nové** operátor a odstraňte ho pomocí **bezplatné**, nebo použijte **odstranit** operátor na blok paměti s **malloc**.
+
+## <a name="see-also"></a>Viz také
+
+[Správa paměti: Přidělení haldy](../mfc/memory-management-heap-allocation.md)
 

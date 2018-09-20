@@ -1,5 +1,5 @@
 ---
-title: 2.3 parallel – konstrukce | Microsoft Docs
+title: 2.3 parallel – konstrukce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,96 +12,97 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 121454f6a98901a6c1b695a80c6ec774737b95e0
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4be5bdc40f69cfa0a326ffa6a7f8465e401cfd33
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692743"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448230"
 ---
 # <a name="23-parallel-construct"></a>2.3 parallel – konstrukce
-Následující direktiva definuje paralelní oblasti, která je oblasti program, který se má provádět více podprocesů paralelně. Toto je základní koncept, která se spouští paralelní provádění.  
-  
-```  
-#pragma omp parallel [clause[ [, ]clause] ...] new-line   structured-block  
-```  
-  
- *Klauzule* je jedním z následujících akcí:  
-  
- **Pokud (** *skalární výraz* **)**  
-  
- **privátní (** *seznamu proměnné* **)**  
-  
- **firstprivate (** *seznamu proměnné* **)**  
-  
- **Výchozí (sdílené &#124; none)**  
-  
- **sdílené (** *seznamu proměnné* **)**  
-  
- **copyin (** *seznamu proměnné* **)**  
-  
- **snížení (** *operátor* **:***seznamu proměnné* **)**  
-  
- **num_threads(** *integer-expression* **)**  
-  
- Když vlákno dojde paralelní konstrukce, tým vláken je vytvořen, pokud platí jedna z následujících případech:  
-  
--   Ne **Pokud** klauzule je k dispozici.  
-  
--   **Pokud** výraz vyhodnocen jako nenulová hodnota.  
-  
- Tento přístup z více vláken stane hlavní vlákno týmu s číslem vlákna 0, a všechna vlákna v týmu, včetně hlavní vlákno paralelně provádět oblasti. Pokud hodnota **Pokud** výraz rovná nule, je serializováno oblasti.  
-  
- Pokud chcete určit počet vláken, které jsou požadovány, bude považovat za následující pravidla v pořadí. Bude použito první pravidlo je splněna podmínka, jejíž:  
-  
-1.  Pokud **num_threads** klauzule je k dispozici, pak hodnota celočíselný výraz je počet vláken požadovaný.  
-  
-2.  Pokud **omp_set_num_threads –** byla volána funkce knihovny, pak hodnota argumentu v nedávno provedených volání je počet vláken požadovaný.  
-  
-3.  Pokud proměnná prostředí **OMP_NUM_THREADS** je definován, je počet vláken požadovanou hodnotu této proměnné prostředí.  
-  
-4.  Pokud žádná z výše uvedených metod používaly počet vláken požadovaný je definované implementací.  
-  
- Pokud **num_threads** nachází klauzule pak nahrazuje počet vláken požadoval **omp_set_num_threads –** funkce knihovny nebo **OMP_NUM_THREADS** proměnné prostředí pouze pro paralelní oblast bylo použito. Následné paralelní oblasti nemá vliv ho.  
-  
- Počet vláken, které se spouští paralelní oblasti se také závisí na tom, zda je povolena dynamické přizpůsobení počet vláken. Pokud je zakázána dynamické přizpůsobení, požadovaný počet vláken, spustí paralelní oblast. Pokud je povolené dynamické přizpůsobení požadovaný počet vláken, je maximální počet vláken, které může provést paralelní oblast.  
-  
- Pokud paralelní oblast je došlo při dynamické přizpůsobení počet vláken je zakázané a počet vláken, které jsou požadované pro paralelní oblast překračuje číslo, které můžete zadat běhu systému, je chování programu implementace definované. Implementace může například přerušení spuštění programu, nebo ho může serializovat paralelní oblast.  
-  
- **Omp_set_dynamic –** funkce knihovny a **OMP_DYNAMIC** proměnnou prostředí slouží k povolení a zákaz dynamické přizpůsobení počet vláken.  
-  
- Počet fyzických procesorů ve skutečnosti hostování vláken v každém okamžiku je definované implementací. Po vytvoření zůstává po dobu trvání této paralelní oblasti konstantní počet vláken v týmu. Lze změnit buď explicitně uživatelem, nebo automaticky v běhu systému z jedné oblasti paralelní do jiného.  
-  
- Příkazy obsažené v dynamické rozsah paralelní oblasti jsou spouštěny jednotlivými vlákny a každý podproces může provést cesta příkazy, které se liší od jiných vláken. Direktivy došlo mimo lexikální rozsah paralelní oblasti jsou označovány jako osamocený direktivy.  
-  
- Není předpokládané bariéry na konci paralelní oblast. Pouze hlavní vlákno týmu pokračuje v provádění na konci paralelní oblast.  
-  
- Pokud vlákna v týmu provádění paralelní oblast zaznamená jiné paralelní konstrukce, vytvoří nový tým a stává se k hlavnímu serveru tento nový tým. Ve výchozím nastavení se serializují paralelní vnořené oblasti. Ve výchozím nastavení, v důsledku toho je oblast paralelní vnořené provést týmem, který se skládá z jednoho vlákna. Nejspíš se změní výchozí chování můžete použít buď funkci runtime knihovny **omp_set_nested –** nebo proměnná prostředí **OMP_NESTED**. Počet vláken v týmu, které se spouští paralelní vnořené oblast je však definované implementací.  
-  
- Omezení **paralelní** – direktiva jsou následující:  
-  
--   Maximálně jeden **Pokud** klauzule lze zobrazit na direktivu.  
-  
--   Není zadáno, jestli na žádné straně důsledky uvnitř zda výraz nebo **num_threads** výraz dojít.  
-  
--   A **throw** provést uvnitř paralelní oblast musí způsobit provádění pokračovat v rámci dynamické rozsah na stejný blok strukturovaných a musí být zachycena ve stejném vlákně, která vrátila výjimku.  
-  
--   Jediným **num_threads** klauzule lze zobrazit na direktivu. **Num_threads** výraz vyhodnotí mimo kontext paralelní oblasti a musí být kladné celé číslo.  
-  
--   Pořadí vyhodnocení **Pokud** a **num_threads** klauzule není zadáno.  
-  
-## <a name="cross-references"></a>Křížové odkazy:  
-  
--   **privátní**, **firstprivate**, **výchozí**, **sdílené**, **copyin**, a **snížení**klauzule, najdete v části [části 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) na stránce 25.  
-  
--   **OMP_NUM_THREADS** proměnnou prostředí [části 4.2](../../parallel/openmp/4-2-omp-num-threads.md) na stránce 48.  
-  
--   **omp_set_dynamic –** funkce knihovny, najdete v části [části 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) na stránce 39.  
-  
--   **OMP_DYNAMIC** proměnné, naleznete v prostředí [části 4.3](../../parallel/openmp/4-3-omp-dynamic.md) na stránce 49.  
-  
--   **omp_set_nested –** funkce najdete v tématu [části 3.1.9](../../parallel/openmp/3-1-9-omp-set-nested-function.md) na stránce 40.  
-  
--   **OMP_NESTED** proměnné, naleznete v prostředí [části 4.4](../../parallel/openmp/4-4-omp-nested.md) na stránce 49.  
-  
--   **omp_set_num_threads –** funkce knihovny, najdete v části [bod 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) na stránce 36.
+
+Následující direktiva definuje paralelní oblasti, která je oblast programu, který má být vykonán paralelně několik vláken. Toto je základní koncept, který se spustí paralelní zpracování.
+
+```
+#pragma omp parallel [clause[ [, ]clause] ...] new-line   structured-block
+```
+
+*Klauzule* je jedním z následujících akcí:
+
+**Pokud (** *skalární výraz* **)**
+
+**privátní (** *seznamu proměnné* **)**
+
+**firstprivate (** *seznamu proměnné* **)**
+
+**Výchozí (sdílené &#124; none)**
+
+**sdílené (** *seznamu proměnné* **)**
+
+**copyin (** *seznamu proměnné* **)**
+
+**snížení (** *operátor* **:***seznamu proměnné* **)** 
+
+**num_threads(** *integer-expression* **)**
+
+Pokud vlákno narazí paralelní konstrukce, tým vláken se vytvoří, pokud je splněna jedna z následujících případech:
+
+- Ne **Pokud** je přítomna klauzule.
+
+- **Pokud** výraz vyhodnocen nenulovou hodnotu.
+
+Toto vlákno se stane hlavní vlákno tým s počtem vláken 0, a všechna vlákna v týmu, včetně hlavní vlákno paralelně spustit oblast. Pokud hodnota **Pokud** výraz je nula, je serializován v oblasti.
+
+Pokud chcete zjistit počet vláken, které jsou požadovány, tato pravidla se budou považovat za v pořadí. První pravidlo, jehož podmínka je splněna se použijí:
+
+1. Pokud **num_threads** je přítomna klauzule, pak hodnota celočíselný výraz je počet vláken požadovaný.
+
+1. Pokud **omp_set_num_threads –** byla volána funkce knihovny, pak je počet vláken požadované hodnoty argumentu v nedávno provedených volání.
+
+1. Pokud proměnná prostředí **OMP_NUM_THREADS** je definována hodnota této proměnné prostředí je počet vláken požadovaný.
+
+1. Pokud žádná z výše uvedených metod používaly počet vláken požadované je definován implementací.
+
+Pokud **num_threads** je přítomna klauzule pak nahrazuje počet vláken požadoval **omp_set_num_threads –** funkce knihovny nebo **OMP_NUM_THREADS** proměnné prostředí pouze pro paralelní oblasti, které bylo použito. Následné paralelních oblastí nejsou vliv.
+
+Počet vláken, které jsou spouštěny paralelní oblasti se také závisí na tom, zda je povolena dynamické úpravy počtu vláken. Pokud je zakázané dynamické úpravy, požadovaný počet vláken spustí paralelní oblasti. Pokud je povolené dynamické úpravy požadovaný počet vláken je maximální počet vláken, která se dá provádět paralelní oblasti.
+
+Pokud při dynamické úpravy počtu vláken je zakázané, a číslo, které můžete zadat za běhu systému překračuje počet vláken, které jsou požadované pro paralelní oblasti je zjištěna paralelní oblasti, je chování programu definované implementací. Implementace může například přerušit provádění programu, nebo ji může serializovat paralelní oblasti.
+
+**Omp_set_dynamic –** funkce knihovny a **OMP_DYNAMIC** proměnnou prostředí je možné povolit nebo zakázat dynamické úpravy počtu vláken.
+
+Počet fyzických procesorů ve skutečnosti hostování vlákna v daném okamžiku je definován implementací. Po vytvoření počet vláken v týmu konstantní po dobu trvání tohoto paralelní oblasti. Lze jej změnit buď explicitně uživatelem, nebo automaticky za běhu systému z jedné paralelní oblasti do jiného.
+
+Příkazy obsažené v dynamický rozsah paralelní oblasti jsou spouštěny jednotlivými vlákny a každé vlákno může spustit cestu příkazy, které se liší od jiných vláken. Došlo k mimo lexikální rozsah paralelní oblasti direktivy jsou označovány jako osamocený direktivy.
+
+Není k dispozici implicitní barrier na konci paralelní oblasti. Pouze hlavní vlákno tým pokračuje v provádění na konci paralelní oblasti.
+
+Pokud vlákno v tým provádí paralelní oblasti zaznamená jiné paralelní konstrukce, vytvoří nový tým a stane se hlavní tento nový tým. Ve výchozím nastavení jsou serializovat vnořený paralelních oblastí. Ve výchozím nastavení, proto vnořené paralelní oblasti provádí týmem, který se skládá z jednoho vlákna. Výchozí chování může změnit pomocí funkce knihovny prostředí runtime **omp_set_nested –** nebo proměnnou prostředí **OMP_NESTED**. Počet vláken v týmu, které jsou spuštěny paralelní vnořené oblasti je však definován implementací.
+
+Omezení **paralelní** směrnice jsou následující:
+
+- Maximálně jeden **Pokud** klauzule se může objevit v direktivě.
+
+- Neurčené Určuje, zda všechny na straně účinky uvnitř if je výraz nebo **num_threads** dojde k výraz.
+
+- A **throw** provést uvnitř paralelní oblasti musíte zajistit, aby v provádění pokračovat v rámci dynamický rozsah stejné strukturovaný blok, a musí být zachycena ve stejném vlákně, které vyvolalo výjimku.
+
+- Pouze jeden **num_threads** klauzule se může objevit v direktivě. **Num_threads** výraz je vyhodnocen mimo kontext paralelní oblasti a musí být kladná celočíselná hodnota.
+
+- Pořadí vyhodnocování **Pokud** a **num_threads** není zadána klauzule.
+
+## <a name="cross-references"></a>Křížové odkazy:
+
+- **privátní**, **firstprivate**, **výchozí**, **sdílené**, **copyin**, a **snížení**klauzule, naleznete v tématu [části 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) na stránce 25.
+
+- **OMP_NUM_THREADS** proměnnou prostředí [části 4.2](../../parallel/openmp/4-2-omp-num-threads.md) na stránce 48.
+
+- **omp_set_dynamic –** funkce knihovny, najdete v článku [části 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) na stránce 39.
+
+- **OMP_DYNAMIC** proměnné, viz prostředí [části 4.3](../../parallel/openmp/4-3-omp-dynamic.md) na stránce 49.
+
+- **omp_set_nested –** funkce naleznete v tématu [části 3.1.9](../../parallel/openmp/3-1-9-omp-set-nested-function.md) na stránce 40.
+
+- **OMP_NESTED** proměnné, viz prostředí [části 4.4](../../parallel/openmp/4-4-omp-nested.md) na stránce 49.
+
+- **omp_set_num_threads –** funkce knihovny, najdete v článku [části 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) na stránce 36.

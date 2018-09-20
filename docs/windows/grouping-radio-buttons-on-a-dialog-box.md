@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad05e9448af9148965ca2f0137d3e0d666d48871
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 5615756f8716ae1f4c73ccf98e2754b57f674216
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315389"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392957"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box-c"></a>Seskupení přepínačů v dialogovém okně (C++)
 
@@ -69,6 +69,6 @@ Win32
 
 ## <a name="see-also"></a>Viz také
 
-[Uspořádání ovládacích prvků v dialogových oknech](../windows/arrangement-of-controls-on-dialog-boxes.md)  
-[Ovládací prvky v dialogových oknech](../windows/controls-in-dialog-boxes.md)  
+[Uspořádání ovládacích prvků v dialogových oknech](../windows/arrangement-of-controls-on-dialog-boxes.md)<br/>
+[Ovládací prvky v dialogových oknech](../windows/controls-in-dialog-boxes.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)

@@ -1,5 +1,5 @@
 ---
-title: Snímače | Microsoft Docs
+title: Snímače | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,20 +21,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f0a0cc52e3a5150702af4acd293def38df758fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 414a7c19292e154af0b6365b766d865dca0a7dd3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381534"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439864"
 ---
 # <a name="trackers"></a>Snímače
-[Crecttracker –](../mfc/reference/crecttracker-class.md) třída poskytuje uživatelské rozhraní mezi obdélníkovou položek v aplikaci a uživatelů tím, že poskytuje celou řadu styly zobrazení. Tyto styly obsahují plný, šrafované nebo přerušovaný ohraničení; šrafované vzor, který obsahuje položky; a změňte velikost obslužných rutin, které může být umístěn na vnější nebo součástí ohraničení. Snímače se často používají ve spojení s OLE – položky, tedy odvozené objekty z `COleClientItem`. Sledovací modul obdélníků poskytnout vizuální upozornění na aktuální stav položky.  
-  
- Ukázka MFC OLE [OCLIENT](../visual-cpp-samples.md) ukazuje společné rozhraní pomocí snímačů a klientské položky OLE z hlediska kontejneru aplikace. Ukázka různými styly a dalo objektu sledovací modul najdete v tématu obecné ukázka MFC [sledovací modul](../visual-cpp-samples.md).  
-  
- Další informace o implementace snímačů ve vašich aplikacích OLE najdete v tématu [snímače: implementace snímačů ve vašem OLE aplikaci](../mfc/trackers-implementing-trackers-in-your-ole-application.md)  
-  
-## <a name="see-also"></a>Viz také  
- [OLE](../mfc/ole-in-mfc.md)   
- [COleClientItem – třída](../mfc/reference/coleclientitem-class.md)
+
+[Crecttracker –](../mfc/reference/crecttracker-class.md) třída poskytuje uživatelské rozhraní mezi obdélníkové položek v aplikaci a uživatele tím, že poskytuje širokou škálu styly zobrazení. Tyto styly zahrnují plnou, šrafované nebo přerušované ohraničení; šrafované vzor, který obsahuje položky; a úchyty pro změnu velikosti, které mohou být umístěny na vnější nebo uvnitř ohraničení. Snímače jsou často používá ve spojení s položky OLE, to znamená, že objekty odvozené z `COleClientItem`. Sledování obdélníky poskytují vizuální upozornění na aktuální stav položky.
+
+Ukázky knihovny MFC OLE [OCLIENT](../visual-cpp-samples.md) ukazuje obecné rozhraní pomocí analýzách a klientské položky OLE z hlediska aplikace typu kontejner. Ukázka různé styly a možnosti sledování objektu, najdete v ukázce MFC Obecné [sledování](../visual-cpp-samples.md).
+
+Další informace o implementace snímačů ve vašich aplikacích OLE, naleznete v tématu [snímače: implementace snímačů ve OLE aplikace](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
+
+## <a name="see-also"></a>Viz také
+
+[OLE](../mfc/ole-in-mfc.md)<br/>
+[COleClientItem – třída](../mfc/reference/coleclientitem-class.md)

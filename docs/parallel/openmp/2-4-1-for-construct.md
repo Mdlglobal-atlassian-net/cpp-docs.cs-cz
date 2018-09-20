@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac142c628f3c2bef0bc29a2ffd50df8a9efda400
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cb9a554d9141223be7a5f6bc741c86b8f03511e2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216534"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428538"
 ---
 # <a name="241-for-construct"></a>2.4.1 for – konstrukce
 
@@ -115,28 +115,28 @@ Na konci je implicitní bariéry **pro** vytvořit, není-li **nowait** není za
 
 Omezení **pro** směrnice jsou následující:
 
--   **Pro** smyčky musí být strukturovaný blok, a kromě toho nesmí být jeho spuštění ukončen **přerušení** příkazu.
+- **Pro** smyčky musí být strukturovaný blok, a kromě toho nesmí být jeho spuštění ukončen **přerušení** příkazu.
 
--   Hodnoty smyčky řídit výrazy **pro** smyčky přidružené **pro** direktiva musí být stejný pro všechny vlákna v týmu.
+- Hodnoty smyčky řídit výrazy **pro** smyčky přidružené **pro** direktiva musí být stejný pro všechny vlákna v týmu.
 
--   **Pro** proměnná iterace smyčky musí být typu celé číslo se znaménkem.
+- **Pro** proměnná iterace smyčky musí být typu celé číslo se znaménkem.
 
--   Pouze jeden **plán** klauzule se může objevit v **pro** směrnice.
+- Pouze jeden **plán** klauzule se může objevit v **pro** směrnice.
 
--   Pouze jeden **seřazené** klauzule se může objevit v **pro** směrnice.
+- Pouze jeden **seřazené** klauzule se může objevit v **pro** směrnice.
 
--   Pouze jeden **nowait** klauzule se může objevit v **pro** směrnice.
+- Pouze jeden **nowait** klauzule se může objevit v **pro** směrnice.
 
--   Je neurčená if nebo jak často se žádné vedlejší efekty v rámci *chunk_size*, *lb*, *b*, nebo *incr* výrazy dojít.
+- Je neurčená if nebo jak často se žádné vedlejší efekty v rámci *chunk_size*, *lb*, *b*, nebo *incr* výrazy dojít.
 
--   Hodnota *chunk_size* výraz musí být stejný pro všechny vlákna v týmu.
+- Hodnota *chunk_size* výraz musí být stejný pro všechny vlákna v týmu.
 
 ## <a name="cross-references"></a>Křížové odkazy:
 
--   **privátní**, **firstprivate**, **lastprivate**, a **snížení** klauzule, naleznete v tématu [části 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) na stránce 25.
+- **privátní**, **firstprivate**, **lastprivate**, a **snížení** klauzule, naleznete v tématu [části 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) na stránce 25.
 
--   **OMP_SCHEDULE** proměnné, viz prostředí [části 4.1](../../parallel/openmp/4-1-omp-schedule.md) na stránce 48.
+- **OMP_SCHEDULE** proměnné, viz prostředí [části 4.1](../../parallel/openmp/4-1-omp-schedule.md) na stránce 48.
 
--   **seřazené** vytvořit, přečtěte si téma [části 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) na stránce 22.
+- **seřazené** vytvořit, přečtěte si téma [části 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) na stránce 22.
 
--   [Příloha D](../../parallel/openmp/d-using-the-schedule-clause.md), stránce 93, poskytuje další informace o použití klauzule schedule.
+- [Příloha D](../../parallel/openmp/d-using-the-schedule-clause.md), stránce 93, poskytuje další informace o použití klauzule schedule.

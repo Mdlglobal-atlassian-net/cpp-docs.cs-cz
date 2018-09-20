@@ -1,5 +1,5 @@
 ---
-title: Souborové a databázové třídy | Microsoft Docs
+title: Souborové a databázové třídy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,26 +18,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 829cbcf659b1fbd6d7aa3899d7d26c4d87096f93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b03f248b2f5a142903801dd64e8a8f5845fff1db
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344945"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377740"
 ---
 # <a name="file-and-database-classes"></a>Souborové a databázové třídy
-Tyto třídy můžete ukládat informace do databáze nebo soubor na disku. Existují tři sady databázové třídy – OLE DB, rozhraní ODBC a DAO – které poskytují podobné funkce. Skupině OLE DB služby je implementovaná pomocí technologie OLE DB a funguje s šablonami příjemců OLE DB, skupině DAO je implementovaná pomocí datový objekt přístup a skupině ODBC je implementovaná pomocí otevřít připojení k databázi. Existují také sadu tříd pro manipulaci s standardní soubory, aktivní datové proudy a datových proudů HTML.  
-  
- Následující kategorie třídy podporovat trvalosti dat.  
-  
--   [Třídy I/O souborů](../mfc/file-i-o-classes.md)  
-  
--   [OLE DB – třídy](../mfc/ole-db-classes.md)  
-  
--   [DAO – třídy](../mfc/dao-classes.md)  
-  
--   [ODBC – třídy](../mfc/odbc-classes.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled třídy](../mfc/class-library-overview.md)
+
+Tyto třídy umožňují ukládání informací do databáze nebo soubor na disku. Existují tři páry databázové třídy – technologie OLE DB, ODBC a DAO –, který poskytuje podobné funkce. Skupina OLE DB je implementováno pomocí technologie OLE DB a funguje s šablonami příjemců OLE DB, rozhraní DAO skupiny je implementováno pomocí přístupu k objektu Data, a skupině ODBC je implementováno pomocí Open Database Connectivity. Existuje také sada tříd pro práci s standardní soubory, aktivní datové proudy a datových proudů HTML.
+
+Následující kategorie třídy podpora trvalosti dat.
+
+- [Třídy I/O souborů](../mfc/file-i-o-classes.md)
+
+- [OLE DB – třídy](../mfc/ole-db-classes.md)
+
+- [DAO – třídy](../mfc/dao-classes.md)
+
+- [ODBC – třídy](../mfc/odbc-classes.md)
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../mfc/class-library-overview.md)
 

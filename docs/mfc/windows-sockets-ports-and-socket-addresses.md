@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: Porty a adresy soketů | Microsoft Docs'
+title: 'Windows Sockets: Porty a adresy soketů | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,43 +20,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42ea9b8a39de8d36ecb621164d98e072a4041211
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f97bfa42e379f0806eb85e3f030465b2a181d01
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383984"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379659"
 ---
 # <a name="windows-sockets-ports-and-socket-addresses"></a>Windows Sockets: Porty a adresy soketů
-Tento článek vysvětluje podmínky "port" a "address" jako použít s Windows Sockets.  
-  
-##  <a name="_core_port"></a> port  
- Port identifikuje jedinečný proces, pro které je nutné zadat služby. V rámci tohoto portu je přidružené aplikace, která podporuje rozhraní Windows Sockets. Na nápad je jednoznačně identifikovat každou aplikaci Windows Sockets tak může mít více než jeden Windows Sockets aplikaci spuštěnou na počítači ve stejnou dobu.  
-  
- Některé porty jsou vyhrazené pro běžné služby jako FTP. Neměli byste pomocí těchto portů, pokud zadáte tento druh služby. Specifikace rozhraní Windows Sockets podrobné informace o těchto rezervovaným portům. Soubor rozhraní WINSOCK. H také uvádí je.  
-  
- Umožníte Knihovnu Windows Sockets vyberte použitelné port můžete předáte jako hodnota portu 0. MFC vybírá větší než 1 024 jednotek desetinnou hodnotu portu. Hodnota portu, který MFC vybrali voláním můžete načíst [CAsyncSocket::GetSockName](../mfc/reference/casyncsocket-class.md#getsockname) – členská funkce.  
-  
-##  <a name="_core_socket_address"></a> Adresy soketů  
- Každý objekt soketu souvisí s adresou Internet Protocol (IP) v síti. Adresa je obvykle název počítače, jako je například "ftp.microsoft.com", nebo desítkovém číslo, například "128.56.22.8".  
-  
- Při hledání vytvořit soket obvykle není potřeba zadejte vlastní adresu.  
-  
+
+Tento článek vysvětluje podmínky "portu" a "address" jako použít pomocí rozhraní Windows Sockets.
+
+##  <a name="_core_port"></a> Port
+
+Port identifikuje jedinečné proces, na kterém mohou být poskytnuty služby. V rámci tohoto portu je přidružený k aplikaci, která podporuje rozhraní Windows Sockets. Cílem je jednoznačně identifikovat každou aplikaci rozhraní Windows Sockets tak může mít více než jednu rozhraní Windows Sockets aplikaci spuštěnou na počítači ve stejnou dobu.
+
+Některé porty jsou vyhrazené pro běžné služby, jako je například FTP. Neměli byste pomocí těchto portů, pokud zadáváte tento druh služby. Specifikace rozhraní Windows Sockets obsahuje podrobnosti o těchto vyhrazené porty. Soubor rozhraní WINSOCK. H také uvádí je.
+
+Aby mohl Windows Sockets knihovny DLL vyberte použitelné port pro vás, předejte 0, jako hodnotu portu. MFC vybere větší než 1 024 Desítková hodnota portu. Můžete načíst hodnotu portu, který MFC vybrali voláním [CAsyncSocket::GetSockName](../mfc/reference/casyncsocket-class.md#getsockname) členskou funkci.
+
+##  <a name="_core_socket_address"></a> Adres soketu
+
+Každý objekt soketu souvisí adresou Internet Protocol (IP) v síti. Adresa je obvykle název počítače, jako je například "ftp.microsoft.com", nebo desítkovým číslem, například "128.56.22.8".
+
+Při hledání vytvořit soket, obvykle není potřeba zadat svou vlastní adresu.
+
 > [!NOTE]
->  Je možné, že váš počítač má několik síťových karet (nebo vaše aplikace může spustit jednou budete na takové počítači), každý představuje jinou síť. Pokud ano, budete muset uvést adresu k určení, které síťové karty, bude používat soketu. Toto je některé pokročilé využití a možné přenositelnost problém.  
-  
- Další informace naleznete v tématu:  
-  
--   [Windows Sockets – Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
-  
--   [Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md)  
-  
--   [Windows Sockets: Jak pracují sokety s archivy](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
-  
--   [Windows Sockets: Sokety streamu](../mfc/windows-sockets-stream-sockets.md)  
-  
--   [Windows Sockets: Sokety datagramů](../mfc/windows-sockets-datagram-sockets.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)
+>  Je možné, že váš počítač má několik síťových karet (nebo vaše aplikace mohla běžet někdy takový počítač), každý představující jinou síť. Pokud ano, je potřeba uvést adresu k určení, které síťové karty budou používat soketu. Toto je některé pokročilé využití a problém s přenositelností je to možné.
+
+Další informace naleznete v tématu:
+
+- [Windows Sockets – Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+
+- [Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md)
+
+- [Windows Sockets: Jak pracují sokety s archivy](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+
+- [Windows Sockets: Sokety streamu](../mfc/windows-sockets-stream-sockets.md)
+
+- [Windows Sockets: Sokety datagramů](../mfc/windows-sockets-datagram-sockets.md)
+
+## <a name="see-also"></a>Viz také
+
+[Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)
 

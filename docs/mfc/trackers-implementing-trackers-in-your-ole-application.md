@@ -1,5 +1,5 @@
 ---
-title: 'Snímače: Implementace snímačů ve vašich aplikacích OLE | Microsoft Docs'
+title: 'Snímače: Implementace snímačů ve vašich aplikacích OLE | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0936c760c9528e5ed4220c2a4c46a170b84041a8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26fe49a9932ded22dbc1f0d4600f57b1f0eb6f14
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381547"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441398"
 ---
 # <a name="trackers-implementing-trackers-in-your-ole-application"></a>Snímače: Implementace snímačů ve vašich aplikacích OLE
-Snímače nabízí grafické rozhraní, povolit uživatelům interakci s OLE klientské položky. Pomocí různých sledovací modul styly OLE klienta, které položky lze zobrazit pomocí šrafované ohraničení, změňte velikost obslužných rutin, nebo celou řadu jiných vizuálních efektů. Tento článek popisuje:  
-  
--   [Postup implementace sledování v kódu](../mfc/how-to-implement-tracking-in-your-code.md).  
-  
--   [Pružné čáry a snímače](../mfc/rubber-banding-and-trackers.md).  
-  
- Článek platí i pro použití s snímačů styly. Kromě toho má několik odkazů na ukázkové MFC OLE [OCLIENT](../visual-cpp-samples.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Snímače](../mfc/trackers.md)
+
+Snímače poskytuje grafické rozhraní pro povolení uživatelům interakci s klientské položky OLE. Pomocí různých sledování stylů OLE klienta, které položky můžete zobrazit pomocí šrafované ohraničení, velikost obslužné rutiny nebo celou řadu jiných vizuálních efektů. Tento článek popisuje:
+
+- [Implementace sledování v kódu](../mfc/how-to-implement-tracking-in-your-code.md).
+
+- [Pružné čáry a snímače](../mfc/rubber-banding-and-trackers.md).
+
+Tento článek obsahuje také použití styly s snímače. Kromě toho je několik odkazů na ukázky MFC OLE [OCLIENT](../visual-cpp-samples.md).
+
+## <a name="see-also"></a>Viz také
+
+[Snímače](../mfc/trackers.md)
 

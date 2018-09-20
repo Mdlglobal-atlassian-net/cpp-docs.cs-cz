@@ -1,5 +1,5 @@
 ---
-title: Nástroj tipy | Microsoft Docs
+title: Nástroj tipy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9eab52d09e9910cb4cce92d487c26fdb90d5647
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f9169f0548bb58ffa063f3b3e947f16e877758e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380575"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439988"
 ---
 # <a name="tool-tips"></a>Popisy tlačítek
-Postupy jsou jedinečné pro přidávání popisů tlačítek do ovládacích prvků obsažené v systému windows odvozené z třídy knihovny MFC [CFrameWnd](../mfc/reference/cframewnd-class.md) a systému windows není odvozen od `CFrameWnd`.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
- Popisy pro ovládací prvky v okně, které je:  
-  
--   [Popisy tlačítek panelu nástrojů (odvozené ze třídy CFrameWnd)](../mfc/toolbar-tool-tips.md)  
-  
--   [Popisy tlačítek v oknech neodvozených ze třídy CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Prvky uživatelského rozhraní](../mfc/user-interface-elements-mfc.md)
+
+Postupy se liší pro přidání popisů tlačítek na ovládacích prvcích obsažených v systému windows odvozených od třídy knihovny MFC [CFrameWnd](../mfc/reference/cframewnd-class.md) a systému windows není odvozeno od `CFrameWnd`.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+
+Popisy pro ovládací prvky v okně, který je:
+
+- [Popisy tlačítek panelu nástrojů (odvozen ze třídy CFrameWnd)](../mfc/toolbar-tool-tips.md)
+
+- [Popisy tlačítek v Windows neodvozených ze třídy CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+
+## <a name="see-also"></a>Viz také
+
+[Prvky uživatelského rozhraní](../mfc/user-interface-elements-mfc.md)

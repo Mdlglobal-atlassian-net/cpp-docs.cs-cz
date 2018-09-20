@@ -1,5 +1,5 @@
 ---
-title: Třída CBaseKeyFrame | Microsoft Docs
+title: Cbasekeyframe – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,146 +32,168 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3de348131dded63794e818d40c0ac5aeae910b03
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 7ad9ff4d61647ce84e9aefef99391be51bca467b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956704"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435152"
 ---
-# <a name="cbasekeyframe-class"></a>CBaseKeyFrame – třída
-Implementuje základních funkcí klíčový snímek.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CBaseKeyFrame : public CObject;  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CBaseKeyFrame::CBaseKeyFrame](#cbasekeyframe)|Vytvoří objekt klíčový snímek.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CBaseKeyFrame::AddToStoryboard](#addtostoryboard)|Přidá klíčový do scénáře.|  
-|[CBaseKeyFrame::GetAnimationKeyframe](#getanimationkeyframe)|Vrátí základní hodnotu klíčový snímek.|  
-|[CBaseKeyFrame::IsAdded](#isadded)|Určuje, zda je klíčový přidala do scénáře.|  
-|[CBaseKeyFrame::IsKeyframeAtOffset](#iskeyframeatoffset)|Určuje, zda klíčový snímek, který má být přidán do scénáře na posunu nebo po přechodu.|  
-  
-### <a name="protected-data-members"></a>Chráněné datové členy  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CBaseKeyFrame::m_bAdded](#m_badded)|Určuje, zda tento klíčový snímek byl přidán do scénáře.|  
-|[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|Určuje, zda tento klíčový snímek přidaly do scénáře v posun z jiné existující klíčový snímek, nebo na konci některé přechodu.|  
-|[CBaseKeyFrame::m_keyframe](#m_keyframe)|Představuje klíčový rozhraní API systému Windows animace. Když není inicializován klíčový je nastavena na předdefinované hodnotu UI_ANIMATION_KEYFRAME_STORYBOARD_START.|  
-  
-## <a name="remarks"></a>Poznámky  
- Zapouzdří UI_ANIMATION_KEYFRAME proměnné. Slouží jako základní třída pro žádnou implementaci klíčový snímek. Klíčový představuje časového okamžiku v rámci scénáře a slouží k určení počáteční a koncový čas přechody. Existují dva typy klíčových snímků - klíčové snímky přidány do scénáře na zadaném posunu (v čase) nebo přidat po zadaný přechod klíčových snímků. Vzhledem k tomu, že před spuštěním animace nemůže být známé dobami trvání některé přechody, skutečné hodnoty některých klíčových snímků jsou určeny pouze za běhu. Protože klíčových snímků může záviset na přechody, které mohou záviset na klíčových snímků, je důležité, aby se zabránilo nekonečná rekurze, které jsou při vytváření řetězů @keyframe, které určuje.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- `CBaseKeyFrame`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxanimationcontroller.h  
-  
-##  <a name="addtostoryboard"></a>  CBaseKeyFrame::AddToStoryboard  
- Přidá klíčový do scénáře.  
-  
-```  
+# <a name="cbasekeyframe-class"></a>Cbasekeyframe – třída
+
+Implementuje základní funkce keyframe.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CBaseKeyFrame : public CObject;
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[CBaseKeyFrame::CBaseKeyFrame](#cbasekeyframe)|Vytvoří objekt klíčový snímek.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CBaseKeyFrame::AddToStoryboard](#addtostoryboard)|Přidá klíčového snímku do scénáře.|
+|[CBaseKeyFrame::GetAnimationKeyframe](#getanimationkeyframe)|Vrátí zdrojovou hodnotu klíčového snímku.|
+|[CBaseKeyFrame::IsAdded](#isadded)|Určuje, zda klíčového snímku je přidaný do scénáře.|
+|[CBaseKeyFrame::IsKeyframeAtOffset](#iskeyframeatoffset)|Určuje, zda klíčový snímek, který má být přidána do scénáře na posunu nebo po přechodu.|
+
+### <a name="protected-data-members"></a>Chránění členové dat
+
+|Název|Popis|
+|----------|-----------------|
+|[CBaseKeyFrame::m_bAdded](#m_badded)|Určuje, zda tento klíčový snímek byl přidán do scénáře.|
+|[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|Určuje, zda tento klíčový snímek měla být přidána do scénáře na posunu od jiného existujícího klíčového snímku nebo na konci některých přechodu.|
+|[CBaseKeyFrame::m_keyframe](#m_keyframe)|Představuje klíčový snímek API animace Windows. Při klíčového snímku není inicializován nastavena na hodnotu předdefinované UI_ANIMATION_KEYFRAME_STORYBOARD_START.|
+
+## <a name="remarks"></a>Poznámky
+
+Zapouzdřuje UI_ANIMATION_KEYFRAME proměnné. Slouží jako základní třída pro žádnou implementaci klíčový snímek. Klíčový snímek představuje okamžik v čase v rámci scénáře a je možné zadat počáteční a koncový čas přechodů. Existují dva typy klíčových snímků – klíčové snímky přidány do scénáře v zadaném posunu (v čase) nebo snímky přidány po zadanou přechodu. Vzhledem k tomu, že před spuštěním animace nemůže být známé dob trvání některé přechodů, skutečné hodnoty některých klíčových snímků jsou určeny pouze za běhu. Klíčové snímky může záviset na přechody, které mohou záviset na klíčové snímky, proto je důležité, aby se zabránilo nekonečná rekurze při vytváření řetězů klíčový snímek.
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[Třídy CObject](../../mfc/reference/cobject-class.md)
+
+`CBaseKeyFrame`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxanimationcontroller.h
+
+##  <a name="addtostoryboard"></a>  CBaseKeyFrame::AddToStoryboard
+
+Přidá klíčového snímku do scénáře.
+
+```
 virtual BOOL AddToStoryboard(
-    IUIAnimationStoryboard* pStoryboard,  
+    IUIAnimationStoryboard* pStoryboard,
     BOOL bDeepAdd);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pStoryboard*  
- Ukazatel na scénář.  
-  
- *bDeepAdd*  
- Pokud tento parametr je TRUE a klíčový snímek, který chcete přidat, závisí na některé @keyframe, které určuje nebo přechod, tato metoda se pokusí přidat tento klíčový snímek nebo přechod do první scénáře.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud klíčový snímek byl přidán do scénáře úspěšně; jinak hodnota FALSE.  
-  
-### <a name="remarks"></a>Poznámky  
- Tato metoda je volána k přidat klíčový do scénáře.  
-  
-##  <a name="cbasekeyframe"></a>  CBaseKeyFrame::CBaseKeyFrame  
- Vytvoří objekt klíčový snímek.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pStoryboard*<br/>
+Ukazatel na scénáře.
+
+*bDeepAdd*<br/>
+Pokud tento parametr je PRAVDA a klíčový snímek přidávaný závisí na některých klíčového snímku nebo přechodu, tato metoda se pokusí přidat tento klíčový snímek nebo přechod na první scénáře.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Hodnota TRUE, pokud klíčový snímek byl přidán do scénáře úspěšně; v opačném případě FALSE.
+
+### <a name="remarks"></a>Poznámky
+
+Tato metoda je volána k přidání klíčového snímku do scénáře.
+
+##  <a name="cbasekeyframe"></a>  CBaseKeyFrame::CBaseKeyFrame
+
+Vytvoří objekt klíčový snímek.
+
+```
 CBaseKeyFrame();
-```  
-  
-##  <a name="getanimationkeyframe"></a>  CBaseKeyFrame::GetAnimationKeyframe  
- Vrátí základní hodnotu klíčový snímek.  
-  
-```  
-UI_ANIMATION_KEYFRAME GetAnimationKeyframe() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Klíčový aktuální. Výchozí hodnota je UI_ANIMATION_KEYFRAME_STORYBOARD_START.  
-  
-### <a name="remarks"></a>Poznámky  
- Toto je základní hodnotu @keyframe, které určuje přistupující objekt.  
-  
-##  <a name="isadded"></a>  CBaseKeyFrame::IsAdded  
- Určuje, zda je klíčový přidala do scénáře.  
-  
-```  
-BOOL IsAdded() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud klíčový se přidá do scénáře; otehrwise hodnotu FALSE.  
-  
-### <a name="remarks"></a>Poznámky  
- V základní třídě IsAdded vždy vrátí hodnotu TRUE, ale je přepsání v odvozené třídy.  
-  
-##  <a name="iskeyframeatoffset"></a>  CBaseKeyFrame::IsKeyframeAtOffset  
- Určuje, zda klíčový snímek, který má být přidán do scénáře na posunu nebo po přechodu.  
-  
-```  
-BOOL IsKeyframeAtOffset() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud klíčový snímek, který má být přidán do scénáře na některé zadaný posunu. FALSE, pokud klíčový snímek, který má být přidán do scénáře po některé přechodu.  
-  
-### <a name="remarks"></a>Poznámky  
- Určuje, zda klíčový snímek, který má být přidán do scénáře na posunu. Odvozené třídy musí být zadán posun nebo přechod.  
-  
-##  <a name="m_badded"></a>  CBaseKeyFrame::m_bAdded  
- Určuje, zda tento klíčový snímek byl přidán do scénáře.  
-  
-```  
-BOOL m_bAdded;  
-```  
-  
-##  <a name="m_biskeyframeatoffset"></a>  CBaseKeyFrame::m_bIsKeyframeAtOffset  
- Určuje, zda tento klíčový snímek přidaly do scénáře v posun z jiné existující klíčový snímek, nebo na konci některé přechodu.  
-  
-```  
-BOOL m_bIsKeyframeAtOffset;  
-```  
-  
-##  <a name="m_keyframe"></a>  CBaseKeyFrame::m_keyframe  
- Představuje klíčový rozhraní API systému Windows animace. Když není inicializován klíčový je nastavena na předdefinované hodnotu UI_ANIMATION_KEYFRAME_STORYBOARD_START.  
-  
-```  
-UI_ANIMATION_KEYFRAME m_keyframe;  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Třídy](../../mfc/reference/mfc-classes.md)
+```
+
+##  <a name="getanimationkeyframe"></a>  CBaseKeyFrame::GetAnimationKeyframe
+
+Vrátí zdrojovou hodnotu klíčového snímku.
+
+```
+UI_ANIMATION_KEYFRAME GetAnimationKeyframe() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Klíčový snímek aktuální. Výchozí hodnota je UI_ANIMATION_KEYFRAME_STORYBOARD_START.
+
+### <a name="remarks"></a>Poznámky
+
+Toto je přístupový objekt základní hodnota klíčového snímku.
+
+##  <a name="isadded"></a>  CBaseKeyFrame::IsAdded
+
+Určuje, zda klíčového snímku je přidaný do scénáře.
+
+```
+BOOL IsAdded() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Hodnota TRUE, pokud klíčový snímek je přidán do scénáře; otehrwise hodnotu FALSE.
+
+### <a name="remarks"></a>Poznámky
+
+V základní třídě IsAdded vždy vrátí hodnotu TRUE, ale je v odvozených třídách přepsána.
+
+##  <a name="iskeyframeatoffset"></a>  CBaseKeyFrame::IsKeyframeAtOffset
+
+Určuje, zda klíčový snímek, který má být přidána do scénáře na posunu nebo po přechodu.
+
+```
+BOOL IsKeyframeAtOffset() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Hodnota TRUE, pokud klíčový snímek, který má být přidán do scénáře na některé zadaného posunu. FALSE, pokud klíčový snímek, který má být přidán do scénáře po přechodu některé.
+
+### <a name="remarks"></a>Poznámky
+
+Určuje, zda klíčový snímek, který má být přidána do scénáře na posunu. Posun nebo přechodu potřeba uvést v odvozené třídě.
+
+##  <a name="m_badded"></a>  CBaseKeyFrame::m_bAdded
+
+Určuje, zda tento klíčový snímek byl přidán do scénáře.
+
+```
+BOOL m_bAdded;
+```
+
+##  <a name="m_biskeyframeatoffset"></a>  CBaseKeyFrame::m_bIsKeyframeAtOffset
+
+Určuje, zda tento klíčový snímek měla být přidána do scénáře na posunu od jiného existujícího klíčového snímku nebo na konci některých přechodu.
+
+```
+BOOL m_bIsKeyframeAtOffset;
+```
+
+##  <a name="m_keyframe"></a>  CBaseKeyFrame::m_keyframe
+
+Představuje klíčový snímek API animace Windows. Při klíčového snímku není inicializován nastavena na hodnotu předdefinované UI_ANIMATION_KEYFRAME_STORYBOARD_START.
+
+```
+UI_ANIMATION_KEYFRAME m_keyframe;
+```
+
+## <a name="see-also"></a>Viz také
+
+[Třídy](../../mfc/reference/mfc-classes.md)

@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6226b583b60bb458d75ba82ac1fd0b758028dca8
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: c1fc2d9f816e5487f5d89f9c429db85f2592731f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315493"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439533"
 ---
 # <a name="dialog-editor-c"></a>Editor dialogových oken (C++)
 
@@ -71,8 +71,8 @@ Win32
 
 ## <a name="see-also"></a>Viz také
 
-[Editory prostředků](../windows/resource-editors.md)  
-[Ovládací prvky](../mfc/controls-mfc.md)  
-[Třídy ovládacích prvků](../mfc/control-classes.md)  
-[Třídy dialogových oken](../mfc/dialog-box-classes.md)  
+[Editory prostředků](../windows/resource-editors.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)<br/>
+[Třídy ovládacích prvků](../mfc/control-classes.md)<br/>
+[Třídy dialogových oken](../mfc/dialog-box-classes.md)<br/>
 [Ovládací prvky dialogových oken a typy proměnných](../ide/dialog-box-controls-and-variable-types.md)

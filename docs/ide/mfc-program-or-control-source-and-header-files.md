@@ -1,5 +1,5 @@
 ---
-title: Program knihovny MFC nebo zdroj ovládacího prvku a soubory hlaviček | Microsoft Docs
+title: Program knihovny MFC nebo zdroj ovládacího prvku a soubory hlaviček | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,34 +14,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ab1ed04b9890fbed8de8b59354ab36d7be063e7
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 0cb9518f60db98bd590cecdffa09ee7d814241ac
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340226"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447905"
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>Program knihovny MFC nebo zdroj ovládacího prvku a soubory hlaviček
-Následující soubory se vytvoří při vytváření projektu knihovny MFC v sadě Visual Studio, v závislosti na možnosti, kterou jste vybrali pro projekt, který vytvoříte. Například projekt obsahuje *Projname*dlg.cpp a *Projname*dlg.h soubory pouze v případě, že vytvoříte třídu nebo na základě dialogovém okně projekt.  
-  
- Všechny tyto soubory jsou umístěny v *Projname* adresář a v složky (hlaviček soubory) nebo zdrojové soubory (soubory sada) složky v Průzkumníku řešení.  
-  
-|Název souboru|Popis|  
-|---------------|-----------------|  
-|*Projname*.h|Hlavní soubor pro program nebo DLL. Obsahuje všechny globální symboly a `#include` pro ostatní soubory hlaviček. Je odvozen `CPrjnameApp` třídy z `CWinApp` a deklaruje `InitInstance` – členská funkce. Pro ovládací prvek `CPrjnameApp` je třída odvozená z `COleControlModule`.|  
-|*Projname*sada|Zdrojový soubor hlavní aplikace. Vytvoří jeden objekt třídy `CPrjnameApp`, který je odvozen z `CWinApp`a přepíše `InitInstance` – členská funkce.<br /><br /> Pro spustitelné soubory `CPrjnameApp::InitInstance` provede několik věcí. Zaregistruje šablony dokumentů, které slouží jako propojení mezi dokumenty a zobrazeními; vytvoří okno rámce; a vytvoří prázdného dokumentu (nebo otevře dokument, pokud je zadaná jako argument příkazového řádku do aplikace).<br /><br /> Pro ovládací prvky ActiveX (dříve OLE) a knihoven DLL, `CProjNameApp::InitInstance` zaregistruje objekt factory ovládacího prvku s OLE voláním `COleObjectFactory::RegisterAll` a zavolá `AfxOLEInit`. Kromě toho – členská funkce `CProjNameApp::ExitInstance` slouží k uvolnění z paměti pomocí volání ovládacího prvku **AfxOleTerm**.<br /><br /> Tento soubor také zaregistruje a zrušení registrace ovládacího prvku v databázi registrace Windows implementací `DllRegisterServer` a `DllUnregisterServer` funkce.|  
-|*Projname*ctrl.h, *Projname*ctrl.cpp|Deklarace a implementovat `CProjnameCtrl` třídy. `CProjnameCtrl` je odvozený od `COleControl`, a kostru implementace některé členských funkcí inicializovat, kreslení a serializaci, které jsou definovány (načíst a uložte) ovládacího prvku. Rovněž jsou definovány zprávy, události a expediční mapy.|  
-|*Projname*dlg.cpp, *Projname*dlg.h|Vytvořit, pokud se rozhodnete dialogové aplikace. Soubory odvozují a implementovat třídu dialogové okno s názvem `CProjnameDlg`a obsahují kostru členů funkcí k inicializaci dialogové okno a provádějí výměna dialogových dat (DDX). Vlastní o třídy dialogového okna je také umístěna v těchto souborech místo v *Projname*sada.|  
-|Dlgproxy.cpp Dlgproxy.h|V dialogu založený program, implementaci a hlavičky souboru pro třídu proxy automatizace projektu pro hlavní dialogové okno. Používá se jen pokud jste vybrali podporu automatizace.|  
-|*Projname*doc.cpp, *Projname*doc.h|Odvození a implementovat třídu dokument s názvem `CProjnameDoc`a zahrnovat kostru členů funkcí k inicializaci dokumentu, serializaci (uložení a načtení) dokumentu a implementaci ladění diagnostiky.|  
-|*Projname*set.h/.cpp|Vytvoří, pokud vytvoříte program, který podporuje databázi a obsahuje třídu sady záznamů.|  
-|*Projname*view.cpp, *Projname*view.h|Odvodí a implementuje zobrazení třídy s názvem `CProjnameView`, který se používá k zobrazení a tisku dat dokumentu. `CProjnameView` Třída je odvozena z jedné z následujících tříd MFC:<br /><br /> -   [CEditView](../mfc/reference/ceditview-class.md)<br />-   [Třídy CFormView](../mfc/reference/cformview-class.md)<br />-   [CRecordView](../mfc/reference/crecordview-class.md)<br />-   [COleDBRecordView](../mfc/reference/coledbrecordview-class.md)<br />-   [CTreeView](../mfc/reference/ctreeview-class.md)<br />-   [CListView](../mfc/reference/clistview-class.md)<br />-   [Cricheditview –](../mfc/reference/cricheditview-class.md)<br />-   [CScrollView](../mfc/reference/cscrollview-class.md)<br />-   [CView](../mfc/reference/cview-class.md)<br />-   [CHTMLView](../mfc/reference/chtmlview-class.md)<br />-   [CHTMLEditView](../mfc/reference/chtmleditview-class.md)<br /><br /> Třídy zobrazení projektu obsahuje kostru členů funkcí k vykreslení zobrazení a implementaci ladění diagnostiky. Pokud jste povolili podporu pro tisk, pak map zpráv položky jsou přidány pro tisk, nastavení tisku a příkazy zpráv náhledu tisku. Tyto položky volání odpovídající členské funkce v základní třídě.|  
-|*Projname*PropPage.h, *Projname*PropPage.cpp|Deklarace a implementovat `CProjnamePropPage` třídy. `CProjnamePropPage` je odvozený od `COlePropertyPage` a kostry členské funkce, `DoDataExchange`, je určena k implementaci výměny dat a ověřování.|  
-|IPframe.cpp IPframe.h|Vytvoří, pokud je vybrána možnost Mini serveru nebo Full-Server v Průvodci aplikace **Možnosti automatizace** (krok 3 6). Soubory odvozují a implementaci třídy oken s rámečkem na místě, s názvem **CInPlaceFrame která v případě**, používá server je v místě aktivován kontejnerem programu.|  
-|Mainfrm.cpp Mainfrm.h|Odvození **CMainFrame** třída buď z [CFrameWnd](../mfc/reference/cframewnd-class.md) (pro aplikace SDI) nebo [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) (pro aplikace MDI). **CMainFrame** třída zpracovává vytvoření tlačítka panelu nástrojů a na stavovém řádku, pokud odpovídající možnosti jsou vybrány v Průvodci aplikace **možnosti aplikace** (krok 4 6). Informace o používání **CMainFrame**, najdete v části [třídy oken s rámečkem vytvořené průvodcem aplikací](../mfc/frame-window-classes-created-by-the-application-wizard.md).|  
-|Childfrm.cpp Childfrm.h|Odvození **CChildFrame** třídy z [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md). **CChildFrame** třída se používá pro okna s rámečkem MDI dokumentu. Pokud vyberete možnost MDI se vždy vytváří tyto soubory.|  
-  
-## <a name="see-also"></a>Viz také  
- [Typy souborů vytvořených pro projekty Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)   
- [Program knihovny ATL nebo zdroj ovládacího prvku a soubory hlaviček](../ide/atl-program-or-control-source-and-header-files.md)   
- [CLR – projekty](../ide/files-created-for-clr-projects.md)
+
+Následující soubory jsou vytvořeny při vytvoření projektu knihovny MFC v sadě Visual Studio, v závislosti na možnostech, které vyberete pro projekt, který vytvoříte. Například váš projekt obsahuje *název_projektu*dlg.cpp a *název_projektu*dlg.h soubory pouze v případě, že vytvoříte projekt založený na dialogové okno nebo třídy.
+
+Všechny tyto soubory jsou umístěny v *název_projektu* adresář a soubory hlaviček (.h souborů), složku nebo zdrojové soubory (.cpp) složku v Průzkumníku řešení.
+
+|Název souboru|Popis|
+|---------------|-----------------|
+|*Název_projektu*.h|Hlavní zahrnout soubor pro program nebo knihovnu DLL. Obsahuje všechny globální symboly a `#include` direktivy pro další hlavičkové soubory. Se odvozuje `CPrjnameApp` třídy z `CWinApp` a deklaruje `InitInstance` členskou funkci. Pro ovládací prvek `CPrjnameApp` je třída odvozena z `COleControlModule`.|
+|*Název_projektu*.cpp|Zdrojový soubor hlavního programu. Vytvoří jeden objekt třídy `CPrjnameApp`, který je odvozen z `CWinApp`a přepíše `InitInstance` členskou funkci.<br /><br /> Pro spustitelné soubory `CPrjnameApp::InitInstance` provádí několik operací. Registruje šablony dokumentů, které slouží jako propojení mezi dokumenty a zobrazeními; vytvoří hlavní okno rámce; Vytvoří prázdný dokument (nebo otevře dokument, pokud je zadaná jako argument příkazového řádku pro aplikaci).<br /><br /> Pro ovládací prvky ActiveX (dříve OLE) a knihoven DLL, `CProjNameApp::InitInstance` zaregistruje objekt factory ovládacího prvku OLE voláním `COleObjectFactory::RegisterAll` a zavolá `AfxOLEInit`. Kromě toho má členská funkce `CProjNameApp::ExitInstance` slouží k uvolnění z paměti pomocí volání do ovládacího prvku **AfxOleTerm**.<br /><br /> Tento soubor také zaregistruje a zruší registraci ovládacího prvku v registrační databázi Windows pomocí implementace `DllRegisterServer` a `DllUnregisterServer` funkce.|
+|*Název_projektu*ctrl.h, *název_projektu*ctrl.cpp|Deklaruje a implementuje `CProjnameCtrl` třídy. `CProjnameCtrl` je odvozen z `COleControl`, a kostru implementace z některých členských funkcí inicializovat, kreslit a serializaci, které jsou definovány (načtení a uložení) ovládacího prvku. Také jsou definovány zprávy, události a expediční mapy.|
+|*Název_projektu*dlg.cpp, *název_projektu*dlg.h|Vytvoří, pokud se rozhodnete aplikaci založené na dialogu. Soubory odvodit a implementovat dialogové třídy s názvem `CProjnameDlg`a zahrnovat kostru členské funkce pro inicializaci dialogového okna a provádět výměna dat dialogových oken (DDX). Vlastní o třídy dialogového okna je také umístěná v těchto souborech místo v *název_projektu*.cpp.|
+|Dlgproxy.cpp Dlgproxy.h|Do založené na dialogu program, provádění a záhlaví souboru projektu klientská automatizační třída proxy server pro hlavní dialog. Používá se pouze pokud jste vybrali podporu automatizace.|
+|*Název_projektu*doc.cpp, *název_projektu*doc.h|Odvodit a implementovat třídu dokumentu s názvem `CProjnameDoc`a zahrnovat kostru členské funkce, chcete-li inicializovat dokument, serializaci (Uložit a načíst) dokumentu a implementovat ladění a Diagnostika.|
+|*Název_projektu*set.h/.cpp|Vytvoří, pokud vytvoříte program, který podporuje databázi a obsahuje třídy sady záznamů.|
+|*Název_projektu*view.cpp, *název_projektu*view.h|Odvodit a implementovat třídu zobrazení s názvem `CProjnameView`, který se používá k zobrazení a tisku data dokumentu. `CProjnameView` Třídy je odvozen z jednoho z následujících tříd knihovny MFC:<br /><br /> -   [CEditView](../mfc/reference/ceditview-class.md)<br />-   [CFormView](../mfc/reference/cformview-class.md)<br />-   [CRecordView](../mfc/reference/crecordview-class.md)<br />-   [COleDBRecordView –](../mfc/reference/coledbrecordview-class.md)<br />-   [CTreeView](../mfc/reference/ctreeview-class.md)<br />-   [CListView](../mfc/reference/clistview-class.md)<br />-   [Cricheditview –](../mfc/reference/cricheditview-class.md)<br />-   [Cscrollview –](../mfc/reference/cscrollview-class.md)<br />-   [CView](../mfc/reference/cview-class.md)<br />-   [CHtmlView –](../mfc/reference/chtmlview-class.md)<br />-   [CHtmlEditView –](../mfc/reference/chtmleditview-class.md)<br /><br /> Zobrazit třídu v projektu obsahuje kostru členské funkce k vykreslení zobrazení a implementaci, ladění a Diagnostika. Pokud je povolena podpora pro tisk, pak položky mapování zpráv jsou přidány pro tisk, nastavení tisku a Tisk zprávy příkazů ve verzi preview. Tyto položky volat odpovídající člen funkce v základní třídě.|
+|*Název_projektu*PropPage.h, *název_projektu*PropPage.cpp|Deklaruje a implementuje `CProjnamePropPage` třídy. `CProjnamePropPage` je odvozen z `COlePropertyPage` a kostru členskou funkci, `DoDataExchange`, je k dispozici k implementaci výměny dat a ověřování.|
+|IPframe.cpp IPframe.h|Pokud je vybrána možnost Mini serveru nebo úplný Server v Průvodci aplikací **Možnosti automatizace** stránky (krok 3 ze 6). Soubory odvodit a implementovat třídu okna rámečkem na místě, s názvem **CInPlaceFrame která v případě**, používá server je na místě aktivoval program kontejneru.|
+|Mainfrm.cpp Mainfrm.h|Odvodit **CMainFrame** třídy buď z [CFrameWnd](../mfc/reference/cframewnd-class.md) (pro aplikace SDI) nebo [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) (pro aplikace MDI). **CMainFrame** třída zpracovává vytváření tlačítek panelu nástrojů a stavový řádek, pokud se vybere odpovídající možnosti v Průvodci aplikací **možnosti aplikace** stránky (krok 4 6). Informace o používání **CMainFrame**, naleznete v tématu [třídy oken s rámečkem vytvořené průvodcem aplikací](../mfc/frame-window-classes-created-by-the-application-wizard.md).|
+|Childfrm.cpp Childfrm.h|Odvodit **CChildFrame** třídy z [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md). **CChildFrame** třída se používá pro oken s rámečkem v dokumentu MDI. Tyto soubory jsou vytvořeny vždy, pokud vyberete možnost MDI.|
+
+## <a name="see-also"></a>Viz také
+
+[Typy souborů vytvořených pro projekty Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)<br>
+[Program knihovny ATL nebo zdroj ovládacího prvku a soubory hlaviček](../ide/atl-program-or-control-source-and-header-files.md)<br>
+[Projekty CLR](../ide/files-created-for-clr-projects.md)

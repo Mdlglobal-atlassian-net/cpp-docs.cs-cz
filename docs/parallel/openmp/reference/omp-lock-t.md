@@ -1,5 +1,5 @@
 ---
-title: omp_lock_t | Microsoft Docs
+title: omp_lock_t. | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f07ff7c9a0590bee90783c2f06dcb6ffdbcb42e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f109ae179c1fcb3393a41d6c0831b0faf69b1d77
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691260"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444226"
 ---
 # <a name="omplockt"></a>omp_lock_t
-Typ, který obsahuje stav zámku, jestli je k dispozici zámek nebo pokud vlákno vlastní zámek.  
-  
- Následující funkce použití **omp_lock_t**:  
-  
--   [omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md)  
-  
--   [omp_destroy_lock](../../../parallel/openmp/reference/omp-destroy-lock.md)  
-  
--   [omp_set_lock](../../../parallel/openmp/reference/omp-set-lock.md)  
-  
--   [omp_unset_lock](../../../parallel/openmp/reference/omp-unset-lock.md)  
-  
--   [omp_test_lock](../../../parallel/openmp/reference/omp-test-lock.md)  
-  
- Další informace najdete v tématu [3.2 funkce Zámek](../../../parallel/openmp/3-2-lock-functions.md).  
-  
-## <a name="example"></a>Příklad  
- V tématu [omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md) příklad použití **omp_lock_t**.  
-  
-## <a name="see-also"></a>Viz také  
- [Datové typy](../../../parallel/openmp/reference/openmp-data-types.md)
+
+Typ, který obsahuje stav zámku, určuje, zda je k dispozici zámek nebo pokud vlákno vlastníkem zámku.
+
+Tyto funkce použijte **omp_lock_t**:
+
+- [omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md)
+
+- [omp_destroy_lock](../../../parallel/openmp/reference/omp-destroy-lock.md)
+
+- [omp_set_lock](../../../parallel/openmp/reference/omp-set-lock.md)
+
+- [omp_unset_lock](../../../parallel/openmp/reference/omp-unset-lock.md)
+
+- [omp_test_lock](../../../parallel/openmp/reference/omp-test-lock.md)
+
+Další informace najdete v tématu [3.2 funkce zamykání](../../../parallel/openmp/3-2-lock-functions.md).
+
+## <a name="example"></a>Příklad
+
+Zobrazit [omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md) pro příklad použití **omp_lock_t**.
+
+## <a name="see-also"></a>Viz také
+
+[Datové typy](../../../parallel/openmp/reference/openmp-data-types.md)

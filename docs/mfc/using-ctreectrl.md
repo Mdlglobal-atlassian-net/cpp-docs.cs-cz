@@ -1,5 +1,5 @@
 ---
-title: Používání atributu CTreeCtrl | Microsoft Docs
+title: Používání atributu CTreeCtrl | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,46 +17,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6864cdee84b9ebd86a97a093e3db847f439e51b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 713bfee1ebd35ae5feb6311daed7371561b205e6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382216"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444629"
 ---
 # <a name="using-ctreectrl"></a>Používání atributu CTreeCtrl
-Ovládacím prvkem strom, reprezentována třída [CTreeCtrl](../mfc/reference/ctreectrl-class.md), je okno, které zobrazí hierarchické seznam položek, například záhlaví v dokumentu, položky v indexu, nebo soubory a adresáře na disku. Každá položka se skládá z štítek a volitelné rastrové bitovou kopii, a každá položka může mít seznam podřízených položek s ním spojená. Uživatel kliknutím na položku, můžete rozbalit nebo sbalit přidružené seznam podřízených položek. Stromu adresářů klikněte v levém podokně v Průzkumníku souborů je příkladem ovládacím prvkem strom.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
-  
--   [Porovnání atributů CTreeCtrl a CTreeView](../mfc/ctreectrl-vs-ctreeview.md)  
-  
--   [Použití ovládacích prvků strom](../mfc/using-tree-controls.md)  
-  
--   [Komunikace s ovládacím prvkem strom](../mfc/communicating-with-a-tree-control.md)  
-  
--   [Styly ovládacího prvku strom](../mfc/tree-control-styles.md)  
-  
--   [Nadřízené a podřízené položky ovládacího prvku strom](../mfc/tree-control-parent-and-child-items.md)  
-  
--   [Umístění položky v ovládacím prvku strom](../mfc/tree-control-item-position.md)  
-  
--   [Popisky položek ovládacího prvku strom](../mfc/tree-control-item-labels.md)  
-  
--   [Úpravy štítků ovládacích prvků strom](../mfc/tree-control-label-editing.md)  
-  
--   [Přehled stavů položek ovládacího prvku strom](../mfc/tree-control-item-states-overview.md)  
-  
--   [Seznamy obrázků v ovládacím prvku strom](../mfc/tree-control-image-lists.md)  
-  
--   [Výběr položek ovládacího prvku strom](../mfc/tree-control-item-selection.md)  
-  
--   [Operace přetažení u ovládacího prvku strom](../mfc/tree-control-drag-and-drop-operations.md)  
-  
--   [Informace o položkách ovládacího prvku strom](../mfc/tree-control-item-information.md)  
-  
--   [Zprávy s oznámením ovládacího prvku strom](../mfc/tree-control-notification-messages.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Ovládací prvek stromu, reprezentovaný třídou [CTreeCtrl](../mfc/reference/ctreectrl-class.md), je okno, které zobrazí hierarchické seznam položek, jako jsou záhlaví v dokumentu, záznamy v indexu, nebo soubory a adresáře na disku. Každé položky se skládá z popisku a volitelné rastrové obrázku a každá položka může mít seznam podřízených položek s ním spojená. Uživatel kliknutím na položku, můžete rozbalit nebo sbalit přidružený seznam podřízených položek. Ve stromu adresáře v levém podokně v Průzkumníku souborů je příkladem ovládacím prvkem strom.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+
+- [Porovnání atributů CTreeCtrl a CTreeView](../mfc/ctreectrl-vs-ctreeview.md)
+
+- [Použití ovládacích prvků strom](../mfc/using-tree-controls.md)
+
+- [Komunikace s ovládacím prvkem strom](../mfc/communicating-with-a-tree-control.md)
+
+- [Styly ovládacího prvku strom](../mfc/tree-control-styles.md)
+
+- [Nadřízené a podřízené položky ovládacího prvku strom](../mfc/tree-control-parent-and-child-items.md)
+
+- [Umístění položky v ovládacím prvku strom](../mfc/tree-control-item-position.md)
+
+- [Popisky položek ovládacího prvku strom](../mfc/tree-control-item-labels.md)
+
+- [Úpravy štítků ovládacích prvků strom](../mfc/tree-control-label-editing.md)
+
+- [Přehled stavů položek ovládacího prvku strom](../mfc/tree-control-item-states-overview.md)
+
+- [Seznamy obrázků v ovládacím prvku strom](../mfc/tree-control-image-lists.md)
+
+- [Výběr položek ovládacího prvku strom](../mfc/tree-control-item-selection.md)
+
+- [Operace přetažení u ovládacího prvku strom](../mfc/tree-control-drag-and-drop-operations.md)
+
+- [Informace o položkách ovládacího prvku strom](../mfc/tree-control-item-information.md)
+
+- [Zprávy s oznámením ovládacího prvku strom](../mfc/tree-control-notification-messages.md)
+
+## <a name="see-also"></a>Viz také
+
+[Ovládací prvky](../mfc/controls-mfc.md)
 

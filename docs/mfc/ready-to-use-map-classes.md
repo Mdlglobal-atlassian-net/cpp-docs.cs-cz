@@ -1,5 +1,5 @@
 ---
-title: Třídy Map připravené k použití | Microsoft Docs
+title: Hotové třídy Map připravené k použití | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,37 +18,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e52cdb6e72825bbb2d4824123837ce9630bcb1b3
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 5fe4a72a4237360f674fabdf0ac992d7fcbd1c68
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931707"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438662"
 ---
 # <a name="ready-to-use-map-classes"></a>Hotové třídy map připravené k použití
-Následující třídy jsou třídy map připravené k použití.  
-  
- [CMapPtrToPtr](../mfc/reference/cmapptrtoptr-class.md)  
- Používá **void** ukazatele jako klíče pro hledání jiných **void** ukazatele.  
-  
- [CMapPtrToWord](../mfc/reference/cmapptrtoword-class.md)  
- Používá **void** ukazatele jako klíče pro vyhledání data typu **WORD**.  
-  
- [CMapStringToOb](../mfc/reference/cmapstringtoob-class.md)  
- Používá `CString` objekty jako klíče pro vyhledání `CObject` ukazatele.  
-  
- [CMapStringToPtr](../mfc/reference/cmapstringtoptr-class.md)  
- Používá `CString` objekty jako klíče pro vyhledání **void** ukazatele.  
-  
- [CMapStringToString](../mfc/reference/cmapstringtostring-class.md)  
- Používá `CString` objekty jako klíče pro hledání jiných `CString` objekty.  
-  
- [CMapWordToOb](../mfc/reference/cmapwordtoob-class.md)  
- Používá data typu **WORD** najít `CObject` ukazatele.  
-  
- [CMapWordToPtr](../mfc/reference/cmapwordtoptr-class.md)  
- Používá data typu **WORD** najít **void** ukazatele.  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled třídy](../mfc/class-library-overview.md)
+
+Následující třídy jsou hotové třídy map připravené k použití.
+
+[CMapPtrToPtr](../mfc/reference/cmapptrtoptr-class.md)<br/>
+Používá **void** ukazatele jako klíče pro vyhledání dalších **void** ukazatele.
+
+[CMapPtrToWord](../mfc/reference/cmapptrtoword-class.md)<br/>
+Používá **void** ukazatele jako klíče pro vyhledání data typu **slovo**.
+
+[Cmapstringtoob –](../mfc/reference/cmapstringtoob-class.md)<br/>
+Používá `CString` objekty jako klíče pro vyhledání `CObject` ukazatele.
+
+[CMapStringToPtr](../mfc/reference/cmapstringtoptr-class.md)<br/>
+Používá `CString` objekty jako klíče pro vyhledání **void** ukazatele.
+
+[CMapStringToString](../mfc/reference/cmapstringtostring-class.md)<br/>
+Používá `CString` objekty jako klíče pro vyhledání dalších `CString` objekty.
+
+[CMapWordToOb](../mfc/reference/cmapwordtoob-class.md)<br/>
+Používá data typu **slovo** najít `CObject` ukazatele.
+
+[CMapWordToPtr](../mfc/reference/cmapwordtoptr-class.md)<br/>
+Používá data typu **slovo** najít **void** ukazatele.
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../mfc/class-library-overview.md)
 

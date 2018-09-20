@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92fd30b0b420080d33f9938bec4891ac80ac660d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 340323d2b540c74e600b76129edd360b73d0db23
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597075"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372133"
 ---
 # <a name="partial--c-component-extensions"></a>partial (rozšíření komponent C++)
 
@@ -53,10 +53,10 @@ class-key identifier {
 
 ### <a name="parameters"></a>Parametry
 
-*klíč třídy*  
+*klíč třídy*<br/>
 Klíčové slovo, který deklaruje třídy nebo struktury, která je podporována modulem Windows Runtime. Buď **třídy ref class**, **hodnotu třídy**, **ref struct**, nebo **hodnotu struktury**.
 
-*identifikátor*  
+*identifikátor*<br/>
 Název definovaný typ.
 
 ### <a name="remarks"></a>Poznámky

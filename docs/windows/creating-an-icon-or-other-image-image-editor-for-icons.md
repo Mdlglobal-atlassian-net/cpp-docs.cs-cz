@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 82479dab780fce677eeee84c4ccde880fe19d2bc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 43ba8086481ea2a8dde20d06b1dc143b297138f8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314908"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378303"
 ---
 # <a name="creating-an-icon-or-other-image-image-editor-for-icons"></a>Vytvoření ikony nebo jiného obrázku (editor obrázků pro ikony)
 
@@ -67,8 +67,8 @@ Informace o přidávání prostředků do spravovaných projektů, najdete v té
 
 ## <a name="see-also"></a>Viz také
 
-[Ikony a kurzory: prostředky obrázků pro zobrazovací zařízení](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
-[Převádění bitmap na panely nástrojů](../windows/converting-bitmaps-to-toolbars.md)  
-[Vytváření nových panelů nástrojů](../windows/creating-new-toolbars.md)  
-[Úprava grafických prostředků](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Ikony a kurzory: prostředky obrázků pro zobrazovací zařízení](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)<br/>
+[Převádění bitmap na panely nástrojů](../windows/converting-bitmaps-to-toolbars.md)<br/>
+[Vytváření nových panelů nástrojů](../windows/creating-new-toolbars.md)<br/>
+[Úprava grafických prostředků](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Editor obrázků pro ikony](../windows/image-editor-for-icons.md)

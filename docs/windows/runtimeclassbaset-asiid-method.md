@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b50466fc2c357c1d57fca272ff343cd56f3689c5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7092153e49fdb40fc32fb1cbee5bc2376080ff4e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604263"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391875"
 ---
 # <a name="runtimeclassbasetasiid-method"></a>RuntimeClassBaseT::AsIID – metoda
 
@@ -41,16 +41,16 @@ __forceinline static HRESULT AsIID(
 
 ### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ, který implementuje rozhraní ID určené parametrem *riid*.
 
-*Implementuje*  
+*Implementuje*<br/>
 Proměnné určené parametrem šablony typu *T*.
 
-*riid*  
+*riid*<br/>
 ID rozhraní, který se má načíst.
 
-*ppvObject*  
+*ppvObject*<br/>
 Pokud je tato operace úspěšná, ukazatel na ukazatel na rozhraní určené parametrem *riid*.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -69,5 +69,5 @@ Načte ukazatel na ID zadané rozhraní.
 
 ## <a name="see-also"></a>Viz také
 
-[RuntimeClassBaseT – struktura](../windows/runtimeclassbaset-structure.md)  
+[RuntimeClassBaseT – struktura](../windows/runtimeclassbaset-structure.md)<br/>
 [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

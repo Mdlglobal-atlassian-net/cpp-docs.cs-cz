@@ -1,5 +1,5 @@
 ---
-title: Správa podřízených oken MDI | Microsoft Docs
+title: Správa Windows MDI podřízené | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,29 +22,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58ddef11e56da760bbecaa47f03dfa6c57dfa3ed
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 45989b7c07d27db1d7b2cda68751bd6165ee5382
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929478"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428275"
 ---
 # <a name="managing-mdi-child-windows"></a>Správa podřízených oken MDI
-Okna s rámečkem hlavní MDI, (jeden na aplikaci) obsahovat speciální podřízeného okna názvem okno MDICLIENT. Okno MDICLIENT spravuje klientské oblasti hlavního okna rámce a sama má podřízená okna: okna dokumentu odvozen od `CMDIChildWnd`. Protože windows dokumentu okna s rámečkem sami (podřízených oken MDI), budou také obsahovat vlastní podřízené objekty. Ve všech těchto případech nadřazeného okna spravuje jeho podřízených systému windows a předá některé příkazy k nim.  
-  
- Okně s rámečkem v rámci okna aplikace MDI spravuje okno MDICLIENT přemístění ve spojení s ovládací pruhy. Okno MDICLIENT zase spravuje všechny MDI podřízená rámce okna. Následující obrázek znázorňuje vztah mezi rámce okna MDI, její okno MDICLIENT a okna s rámečkem dokumentu jeho podřízené.  
-  
- ![Podřízená okna v rámci okna aplikace MDI](../mfc/media/vc37gb1.gif "vc37gb1")  
-Okna s rámečkem MDI a podřízené položky  
-  
- Rámce okna MDI se také funguje ve spojení s aktuální podřízeného okna MDI, jestliže existuje. Rámec okna MDI deleguje příkaz zpráv podřízeného MDI, než se pokusí zpracovat sám sebe.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
-  
--   [Vytváření dokumentů, oken s rámečkem](../mfc/creating-document-frame-windows.md)  
-  
--   [Styly oken s rámečkem](../mfc/frame-window-styles-cpp.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Použití oken s rámečkem](../mfc/using-frame-windows.md)
+
+Okna hlavního rámce MDI, (jeden na aplikaci) obsahují speciální podřízeného okna okno MDICLIENT volána. Okno MDICLIENT spravuje klientské oblasti okna hlavního rámce a samotné má podřízená okna: okna dokumentů, odvozený z `CMDIChildWnd`. Protože okna dokumentu jsou oken s rámečkem v samotných (podřízených oken MDI), budou také obsahovat vlastní podřízené položky. Ve všech těchto případech nadřazené okno spravuje jeho podřízených oken a předává některé příkazy k nim.
+
+V okně rámce MDI spravuje oknem rámce okno MDICLIENT přemístění ve spojení s ovládací panely. Okno MDICLIENT zase slouží ke správě všech podřízených oken rámce MDI. Následující obrázek ukazuje vztah mezi okna rámce MDI, jeho okno MDICLIENT a jeho podřízených oken rámce dokumentu.
+
+![Podřízená okna v okně rámce MDI](../mfc/media/vc37gb1.gif "vc37gb1") rámce Windows MDI a podřízené položky
+
+Okna rámce MDI je také funguje ve spojení s aktuální podřízené okno MDI, pokud existuje. Okno rámce MDI deleguje příkaz zprávy do podřízeného MDI předtím, než se pokusí zpracovat samotný.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+
+- [Vytváření oken s rámečkem v dokumentu](../mfc/creating-document-frame-windows.md)
+
+- [Styly oken s rámečkem](../mfc/frame-window-styles-cpp.md)
+
+## <a name="see-also"></a>Viz také
+
+[Použití oken s rámečkem](../mfc/using-frame-windows.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Jaké jsou náklady na odvození třídy z objektu CObject? | Microsoft Docs
+title: Jaké jsou náklady na odvození třídy z objektu CObject? | Dokumenty Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ffff35cdef6cf2f730687334bbb56bc078371a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e41f9060ce24b89a0a7faae54ca6207c740475f3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381674"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443238"
 ---
 # <a name="what-does-it-cost-me-to-derive-a-class-from-cobject"></a>Jaké jsou náklady na odvození třídy z objektu CObject?
-Režijní náklady v odvozování z třídy [CObject](../mfc/reference/cobject-class.md) je minimální. Odvozené třídy dědí pouze čtyři virtuální funkce a jedinou [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) objektu.  
-  
-## <a name="see-also"></a>Viz také  
- [CObject – třída: Nejčastější dotazy](../mfc/cobject-class-frequently-asked-questions.md)
+
+Režie při odvozování od třídy [CObject](../mfc/reference/cobject-class.md) je minimální. Pouze čtyři virtuální funkce a jediného nastavení dědí odvozená třída [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) objektu.
+
+## <a name="see-also"></a>Viz také
+
+[CObject – třída: Nejčastější dotazy](../mfc/cobject-class-frequently-asked-questions.md)

@@ -1,5 +1,5 @@
 ---
-title: Třída CD2DPointF | Microsoft Docs
+title: Cd2dpointf – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,73 +18,81 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e23dbce668234fecc3162d52e0bbea6fb05a7b06
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: f36756579a07692f190e0ea919d6d82e3cb4128d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957270"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439845"
 ---
-# <a name="cd2dpointf-class"></a>CD2DPointF – třída
-Obálka pro `D2D1_POINT_2F`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CD2DPointF : public D2D1_POINT_2F;  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CD2DPointF::CD2DPointF](#cd2dpointf)|Přetíženo. Vytvoří `CD2DPointF` objektu z `D2D1_POINT_2F` objektu.|  
-  
-### <a name="public-operators"></a>Veřejné operátory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CD2DPointF::Operator CPoint](#operator_cpoint)|Převede `CD2DPointF` k `CPoint` objektu.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `D2D1_POINT_2F`  
-  
- `CD2DPointF`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxrendertarget.h  
-  
-##  <a name="cd2dpointf"></a>  CD2DPointF::CD2DPointF  
- Vytvoří objekt CD2DPointF z CPoint objektu.  
-  
-```  
-CD2DPointF(const CPoint& pt);    
-CD2DPointF(const D2D1_POINT_2F& pt);    
-CD2DPointF(const D2D1_POINT_2F* pt); 
+# <a name="cd2dpointf-class"></a>Cd2dpointf – třída
+
+Obálka pro `D2D1_POINT_2F`.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CD2DPointF : public D2D1_POINT_2F;
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[CD2DPointF::CD2DPointF](#cd2dpointf)|Přetíženo. Vytvoří `CD2DPointF` objektu z `D2D1_POINT_2F` objektu.|
+
+### <a name="public-operators"></a>Veřejné operátory
+
+|Název|Popis|
+|----------|-----------------|
+|[CD2DPointF::Operator CPoint](#operator_cpoint)|Převede `CD2DPointF` k `CPoint` objektu.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`D2D1_POINT_2F`
+
+`CD2DPointF`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxrendertarget.h
+
+##  <a name="cd2dpointf"></a>  CD2DPointF::CD2DPointF
+
+Vytvoří objekt cd2dpointf – z CPoint objektu.
+
+```
+CD2DPointF(const CPoint& pt);
+CD2DPointF(const D2D1_POINT_2F& pt);
+CD2DPointF(const D2D1_POINT_2F* pt);
 CD2DPointF(FLOAT fX = 0., FLOAT fY = 0.);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *PT*  
- zdrojový bod  
-  
- *fX*  
- Zdroj X  
-  
- *Určit*  
- Zdroj Y  
-  
-##  <a name="operator_cpoint"></a>  CD2DPointF::Operator CPoint  
- Převede CD2DPointF CPoint objektu.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*PT*<br/>
+zdrojový bod
+
+*fX*<br/>
+Zdroj X
+
+*FR*<br/>
+Zdroj Y
+
+##  <a name="operator_cpoint"></a>  CD2DPointF::Operator CPoint
+
+Převede cd2dpointf – CPoint objektu.
+
+```
 operator CPoint();
-```   
-  
-### <a name="return-value"></a>Návratová hodnota  
- Aktuální hodnota D2D bodu.  
-  
-## <a name="see-also"></a>Viz také  
- [Třídy](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Aktuální hodnota bodu D2D.
+
+## <a name="see-also"></a>Viz také
+
+[Třídy](../../mfc/reference/mfc-classes.md)

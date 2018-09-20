@@ -1,5 +1,5 @@
 ---
-title: 'Výjimky: Zkoumání obsahu výjimek | Microsoft Docs'
+title: 'Výjimky: Zkoumání obsahu výjimek | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,24 +19,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82c7453b92ce14fbbcd20ea0f9a8bd8a7a2b5b6d
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: f5fb0df0c16e9aea2f334b6c08f92a3bef4ea486
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36932231"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378381"
 ---
 # <a name="exceptions-examining-exception-contents"></a>Výjimky: Zkoumání obsahu výjimek
-I když **catch** bloku argument může být téměř jakoukoli datového typu, funkce MFC throw výjimky typy odvozené od třídy `CException`. K zachycení výjimek vyvolané funkce MFC, potom napíšete **catch** bloku, jehož argumentem je ukazatel na `CException` objekt (nebo objekt odvozené od `CException`, například `CMemoryException`). V závislosti na přesné typ výjimky můžete zkontrolovat data členů objekt výjimky a shromažďovat informace o konkrétní příčina výjimky.  
-  
- Například `CFileException` typ má `m_cause` datového člena, který obsahuje výčtový typ určující příčinou výjimky souboru. Některé příklady možné vrátit hodnoty jsou `CFileException::fileNotFound` a `CFileException::readOnly`.  
-  
- Následující příklad ukazuje, jak zkontrolovat obsah `CFileException`. Jiné typy výjimka může být prověřen podobně.  
-  
- [!code-cpp[NVC_MFCExceptions#13](../mfc/codesnippet/cpp/exceptions-examining-exception-contents_1.cpp)]  
-  
- Další informace najdete v tématu [výjimky: uvolnění objektů ve výjimkách](../mfc/exceptions-freeing-objects-in-exceptions.md) a [výjimkami: zachycení a odstraňování výjimek](../mfc/exceptions-catching-and-deleting-exceptions.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Zpracování výjimek](../mfc/exception-handling-in-mfc.md)
+
+I když **catch** bloku argument může být prakticky libovolného datového typu, funkce MFC vyvolat výjimky, které typy odvozené od třídy `CException`. Zachytit výjimku vyvolána pomocí funkcí knihovny MFC, potom napíšete **catch** bloku, jehož argumentem je ukazatel na `CException` objektu (nebo objektu odvozené z `CException`, jako `CMemoryException`). V závislosti na přesné typ výjimky můžete prozkoumat datové členy objektu výjimky k získání informací o konkrétní příčina výjimky.
+
+Například `CFileException` typ má `m_cause` datový člen, který obsahuje výčtový typ určující příčinu výjimku souborů. Příklady možných návratové hodnoty nejsou `CFileException::fileNotFound` a `CFileException::readOnly`.
+
+Následující příklad ukazuje, jak zkontrolovat obsah `CFileException`. Podobně se dají prozkoumat další typy výjimek.
+
+[!code-cpp[NVC_MFCExceptions#13](../mfc/codesnippet/cpp/exceptions-examining-exception-contents_1.cpp)]
+
+Další informace najdete v tématu [výjimky: uvolnění objektů ve výjimkách](../mfc/exceptions-freeing-objects-in-exceptions.md) a [výjimky: výjimky zachycení a odstraňování](../mfc/exceptions-catching-and-deleting-exceptions.md).
+
+## <a name="see-also"></a>Viz také
+
+[Zpracování výjimek](../mfc/exception-handling-in-mfc.md)
 

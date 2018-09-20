@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 36b438662fb42cdeeb894906753a38168208f5ae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 37e5db99d97bc65f1f4a75e2e56e1f0e719dd9ab
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218816"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427170"
 ---
 # <a name="uuid-c-attributes"></a>uuid (atributy C++)
 
@@ -38,7 +38,7 @@ Určuje jedinečné ID pro třídu nebo rozhraní.
 
 ### <a name="parameters"></a>Parametry
 
-*uuid*  
+*uuid*<br/>
 128-bit, jedinečný identifikátor.
 
 ## <a name="remarks"></a>Poznámky
@@ -70,8 +70,8 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](..
 
 ## <a name="see-also"></a>Viz také
 
-[IDL – atributy](../windows/idl-attributes.md)  
-[Atributy rozhraní](../windows/interface-attributes.md)  
-[Atributy třídy](../windows/class-attributes.md)  
-[Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[IDL – atributy](../windows/idl-attributes.md)<br/>
+[Atributy rozhraní](../windows/interface-attributes.md)<br/>
+[Atributy třídy](../windows/class-attributes.md)<br/>
+[Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [uuid](/windows/desktop/Midl/uuid)  

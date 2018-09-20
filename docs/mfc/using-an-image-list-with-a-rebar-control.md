@@ -1,5 +1,5 @@
 ---
-title: Použití seznamu obrázků s ovládacím prvkem matrice | Microsoft Docs
+title: Použití seznamu obrázků s ovládacím prvkem matrice | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,35 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1786c89f4ec9cf1c0908dac5d81858d5b2e6b7db
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 9ff524f1f29e4db2ac5bb4628064583f0fe7583e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950703"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372363"
 ---
 # <a name="using-an-image-list-with-a-rebar-control"></a>Použití seznamu obrázků s ovládacím prvkem matrice
-Každé vzdálené matrice může obsahovat mimo jiné, bitovou kopii ze seznamu přidruženou bitovou kopii. Následující postup popisuje nezbytné kroky pro zobrazení ve svazku matrice bitovou kopii.  
-  
-### <a name="to-display-images-in-a-rebar-band"></a>Pro zobrazení obrázků ve svazku matrice  
-  
-1.  Seznam obrázků připojit k vaší objekt ovládacího prvku matrice tím, že zavoláte na [SetImageList](../mfc/reference/crebarctrl-class.md#setimagelist), předávání ukazatel do existujícího seznamu bitové kopie.  
-  
-2.  Změnit **REBARBANDINFO** struktura přiřadit matrice vzdálené bitovou kopii:  
-  
-    -   Nastavte *fMask* člena `RBBIM_IMAGE`, zahrnout další příznaky podle potřeby pomocí bitový operátor OR.  
-  
-    -   Nastavte *iImage* člena do seznamu index bitové kopie bitové kopie, který se má zobrazit.  
-  
-3.  Inicializuje všechny zbývající členy data, jako je například velikost, text a popisovač okna obsažené podřízené nezbytné informace.  
-  
-4.  Vložit nový vzdálené správy (s bitovou kopii) pomocí volání [CReBarCtrl::InsertBand](../mfc/reference/crebarctrl-class.md#insertband), předejte **REBARBANDINFO** struktury.  
-  
- V následujícím příkladu se předpokládá, že existující objekt seznamu bitové kopie se dvě bitové kopie, se připojil k objekt ovládacího prvku matrice (`m_wndReBar`). Nové vzdálené matrice (definované `rbi`), který obsahuje bitovou kopii první, přidá se pomocí volání `InsertBand`:  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#28](../mfc/codesnippet/cpp/using-an-image-list-with-a-rebar-control_1.cpp)]  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CReBarCtrl](../mfc/using-crebarctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Každé vzdálené matrice může obsahovat mimo jiné bitové kopie ze seznamu obrázků přidružené. Následující postup podrobně popisuje nezbytné kroky pro zobrazení obrázku ve svazku matrice.
+
+### <a name="to-display-images-in-a-rebar-band"></a>K zobrazení obrázků v pruhy matrice
+
+1. Připojení seznamu obrázků na váš objekt ovládacího prvku matrice tím, že zavoláte na [SetImageList](../mfc/reference/crebarctrl-class.md#setimagelist), předání ukazatele na existující seznam obrázků.
+
+1. Upravit **REBARBANDINFO** struktura přiřadit pruhy matrice image:
+
+   - Nastavte *fMask* člen `RBBIM_IMAGE`, zahrňte další příznaky podle potřeby pomocí bitového operátoru OR.
+
+   - Nastavte *iImage* člena do seznamu index bitové kopie bitové kopie má být zobrazen.
+
+1. Inicializuje všechny zbývající datové členy, jako je například velikost, text a popisovač omezením podřízené okno, potřebné informace.
+
+1. Vložit nový mimo pásmo (s obrázkem) pomocí volání [CReBarCtrl::InsertBand](../mfc/reference/crebarctrl-class.md#insertband), předejte **REBARBANDINFO** struktury.
+
+V následujícím příkladu se předpokládá, že existující objekt seznamu obrázků s dvě bitové kopie byl připojen k objektu ovládacího prvku matrice (`m_wndReBar`). Nové vzdálené matrice (definované `rbi`), který obsahuje první image, je přidán voláním `InsertBand`:
+
+[!code-cpp[NVC_MFCControlLadenDialog#28](../mfc/codesnippet/cpp/using-an-image-list-with-a-rebar-control_1.cpp)]
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 54c370029b4e6fc90d1f210164de7d7ecb22f3a5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e279728ce1176dc6c65bc9fad7f3c881d8df96dd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595416"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441183"
 ---
 # <a name="comptrrefoperator-t-operator"></a>ComPtrRef::operator T* – operátor
 
@@ -46,5 +46,5 @@ Vrátí hodnotu [ptr_ –](../windows/comptrrefbase-ptr-data-member.md) datový 
 
 ## <a name="see-also"></a>Viz také
 
-[ComPtrRef – třída](../windows/comptrref-class.md)  
+[ComPtrRef – třída](../windows/comptrref-class.md)<br/>
 [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

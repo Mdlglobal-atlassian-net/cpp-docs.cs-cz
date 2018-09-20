@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Zařazování polí pomocí služby PInvoke | Microsoft Docs'
+title: 'Postupy: zařazení polí pomocí služby PInvoke | Dokumentace Microsoftu'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -18,74 +18,77 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 03e3cf184828c33c63c5252344eb0041640729cb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c07aba54f621011d2dd4831d7dfb6b536073fa9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33132528"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395684"
 ---
 # <a name="how-to-marshal-arrays-using-pinvoke"></a>Postupy: Zařazení polí pomocí služby PInvoke
-Toto téma vysvětluje, jak nativních funkcí, které přijímají řetězce stylu jazyka C je možné volat pomocí řetězce typu CLR <xref:System.String> pomocí podpory volání nespravovaného kódu rozhraní .NET Framework. Programátoři jazyka Visual C++ se místo toho používají funkce interoperability C++ (Pokud je to možné), protože P/Invoke poskytuje malé kompilaci zpráv o chybách, není bezpečný a může být zdlouhavé pro implementaci. Pokud je jako knihovny DLL zabalené nespravovaného rozhraní API a zdrojový kód není k dispozici, P/Invoke je jedinou možností (jinak, najdete v části [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)).  
-  
-## <a name="example"></a>Příklad  
- Protože nativní a spravovaná pole jsou rozloženy odlišně v paměti, předávání úspěšně přes spravované nebo nespravované hranice vyžaduje převod nebo zařazování. Toto téma ukazuje, jak pole položek jednoduchých (blitable) lze předat nativních funkcí ze spravovaného kódu.  
-  
- Jako spravovaných nebo nespravovaných dat zařazování obecně platí <xref:System.Runtime.InteropServices.DllImportAttribute> atribut se používá k vytvoření spravovaného vstupní bod pro každou nativní funkci, která bude použita. V případě funkcí, které přijímají polí jako argumentů <xref:System.Runtime.InteropServices.MarshalAsAttribute> atribut musíte použít také k určení pro kompilátor, jak budou data zařazována. V následujícím příkladu <xref:System.Runtime.InteropServices.UnmanagedType> výčtu slouží k označení, že spravované pole zařazeno jako pole ve stylu jazyka C.  
-  
- Následující kód se skládá z nespravovaného a spravovaný modul. Nespravovaný modul je knihovna DLL, která definuje funkci, která přijímá pole celých čísel. Druhý modul je spravovaná aplikace příkazového řádku, která importuje tuto funkci, ale definuje z hlediska spravovaného pole a používá <xref:System.Runtime.InteropServices.MarshalAsAttribute> atribut k určení, zda mají být převedeny pole při volání nativní pole.  
-  
- Spravovaný modul je kompilován s volbou/CLR.  
-  
-```cpp  
-// TraditionalDll4.cpp  
-// compile with: /LD /EHsc  
-#include <iostream>  
-  
-#define TRADITIONALDLL_EXPORTS  
-#ifdef TRADITIONALDLL_EXPORTS  
-#define TRADITIONALDLL_API __declspec(dllexport)  
-#else  
-#define TRADITIONALDLL_API __declspec(dllimport)  
-#endif  
-  
-extern "C" {  
-   TRADITIONALDLL_API void TakesAnArray(int len, int[]);  
-}  
-  
-void TakesAnArray(int len, int a[]) {  
-   printf_s("[unmanaged]\n");  
-   for (int i=0; i<len; i++)  
-      printf("%d = %d\n", i, a[i]);  
-}  
-```  
-  
-```cpp  
-// MarshalBlitArray.cpp  
-// compile with: /clr  
-using namespace System;  
-using namespace System::Runtime::InteropServices;  
-  
-value struct TraditionalDLL {  
-   [DllImport("TraditionalDLL4.dll")]  
-   static public void TakesAnArray(  
-   int len,[MarshalAs(UnmanagedType::LPArray)]array<int>^);  
-};  
-  
-int main() {  
-   array<int>^ b = gcnew array<int>(3);  
-   b[0] = 11;  
-   b[1] = 33;  
-   b[2] = 55;  
-   TraditionalDLL::TakesAnArray(3, b);  
-  
-   Console::WriteLine("[managed]");  
-   for (int i=0; i<3; i++)  
-      Console::WriteLine("{0} = {1}", i, b[i]);  
-}  
-```  
-  
- Všimněte si, že žádná část knihovny DLL je vystaven do spravovaného kódu přes tradiční #include – direktiva. Ve skutečnosti, protože knihovna DLL je přístup pouze za běhu, problémy s funkcemi, které se importovat s <xref:System.Runtime.InteropServices.DllImportAttribute> nebudou zjištěna v době kompilace.  
-  
-## <a name="see-also"></a>Viz také  
- [Použití explicitního volání PInvoke v jazyce C++ (atribut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+
+Toto téma vysvětluje, jak nativní funkce, které přijímají řetězce ve stylu jazyka C lze volat pomocí řetězce typu CLR <xref:System.String> s využitím podpory nástroje nespravovaného kódu rozhraní .NET Framework. Programátoři jazyka Visual C++ jsou ukončena. doporučujeme místo toho použijte funkce zprostředkovatele komunikace C++ (Pokud je to možné), protože deklarace P/Invoke obsahuje malý kompilace zpráv o chybách, není typově bezpečný a může být pracná k implementaci. Pokud není k dispozici zdrojový kód nespravované rozhraní API je zabalený jako knihovnu DLL, P/Invoke je jedinou možností (jinak, naleznete v tématu [pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)).
+
+## <a name="example"></a>Příklad
+
+Protože nativní a spravovaná pole jsou stanoveny odlišně v paměti, předávání úspěšně přes hranice spravovaného a nespravovaného vyžaduje převod nebo zařazování. Toto téma ukazuje, jak pole položek jednoduchých (blitable) může být předán nativních funkcí ze spravovaného kódu.
+
+Jak platí obecně, zařazování dat spravovaného a nespravovaného <xref:System.Runtime.InteropServices.DllImportAttribute> atribut se používá k vytvoření spravovaný vstupní bod pro každou nativní funkci, která se použije. V případě funkcí, které přijímají polí jako argumentů <xref:System.Runtime.InteropServices.MarshalAsAttribute> atribut je potřeba použít také k určení pro kompilátor, jak budou data zařadit. V následujícím příkladu <xref:System.Runtime.InteropServices.UnmanagedType> výčtu se používá k označení, že se zařadit spravovaného pole jako pole stylu C.
+
+Následující kód se skládá z nespravovaného a spravovaný modul. Nespravovaný modul je knihovnu DLL, která definuje funkci, která přijímá pole celých čísel. Druhý modul je spravované aplikace příkazového řádku, který importuje tuto funkci, ale definuje z hlediska spravovaného pole a používá <xref:System.Runtime.InteropServices.MarshalAsAttribute> atribut k určení, že pole mají být převedeny na nativní pole při volání.
+
+Spravovaného modulu je kompilována s parametrem/CLR.
+
+```cpp
+// TraditionalDll4.cpp
+// compile with: /LD /EHsc
+#include <iostream>
+
+#define TRADITIONALDLL_EXPORTS
+#ifdef TRADITIONALDLL_EXPORTS
+#define TRADITIONALDLL_API __declspec(dllexport)
+#else
+#define TRADITIONALDLL_API __declspec(dllimport)
+#endif
+
+extern "C" {
+   TRADITIONALDLL_API void TakesAnArray(int len, int[]);
+}
+
+void TakesAnArray(int len, int a[]) {
+   printf_s("[unmanaged]\n");
+   for (int i=0; i<len; i++)
+      printf("%d = %d\n", i, a[i]);
+}
+```
+
+```cpp
+// MarshalBlitArray.cpp
+// compile with: /clr
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+value struct TraditionalDLL {
+   [DllImport("TraditionalDLL4.dll")]
+   static public void TakesAnArray(
+   int len,[MarshalAs(UnmanagedType::LPArray)]array<int>^);
+};
+
+int main() {
+   array<int>^ b = gcnew array<int>(3);
+   b[0] = 11;
+   b[1] = 33;
+   b[2] = 55;
+   TraditionalDLL::TakesAnArray(3, b);
+
+   Console::WriteLine("[managed]");
+   for (int i=0; i<3; i++)
+      Console::WriteLine("{0} = {1}", i, b[i]);
+}
+```
+
+Všimněte si, že není žádná část knihovny DLL zpřístupněna spravovaného kódu pomocí tradiční #include. Ve skutečnosti, protože knihovna DLL je přístupná pouze za běhu, problémy s funkcemi, které se importují s <xref:System.Runtime.InteropServices.DllImportAttribute> nebudou zjištěna v době kompilace.
+
+## <a name="see-also"></a>Viz také
+
+[Použití explicitního volání PInvoke v jazyce C++ (atribut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: Sokety datagramů | Microsoft Docs'
+title: 'Windows Sockets: Sokety datagramů | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30ad7cab43301ae2cb7ebcb1fb4dfa850090955d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a63caa786ce5198fb902b8d48101507fb2b4113
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383939"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444211"
 ---
 # <a name="windows-sockets-datagram-sockets"></a>Windows Sockets: Sokety datagramů
-Tento článek popisuje sokety datagramu, jeden ze dvou typů soketu Windows, která je k dispozici. (Další typ je [datového proudu soketu](../mfc/windows-sockets-stream-sockets.md).)  
-  
- Sokety datagramu podporovat toku dat obousměrného, který není zaručena sekvencování nebo unduplicated. Datagramy také nemusí být spolehlivé; příchod volání můžou selhat. Datagram dat může dorazí mimo pořadí a může být duplicitní, ale záznamů hranice v datech se zachovají, tak dlouho, dokud záznamy jsou menší než omezení velikosti interní příjemce. Jste zodpovědní za správu sekvencování a spolehlivosti. (Spolehlivost obvykle nebyla narušena na místní sítě [LAN], ale méně tak dále WAN sítě [WAN], jako je Internet.)  
-  
- Datagramy jsou "bez připojení", který je žádné explicitní připojení; Odeslat zprávu datagram na zadaný soket a může přijímat zprávy ze zadané soketu.  
-  
- Příkladem datagram soketu je aplikace, která udržuje v síti, které jsou synchronizovány systémové hodiny. To ukazuje další schopností sokety datagramů v alespoň některá nastavení: vysílání zpráv velký počet síťových adres.  
-  
- Sokety datagramu jsou lepší, než sokety datového proudu pro data orientovaná na záznamy. Další informace o sokety datagramu najdete v rozhraní Windows Sockets specifikaci, k dispozici v sadě Windows SDK.  
-  
-## <a name="see-also"></a>Viz také  
- [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)   
- [Windows Sockets: Pozadí](../mfc/windows-sockets-background.md)
+
+Tento článek popisuje sokety datagramu, jeden ze dvou typů Windows Socket, která je k dispozici. (Je typ [stream soketu](../mfc/windows-sockets-stream-sockets.md).)
+
+Sokety datagramu podporují datový tok obousměrné není zaručeno, že k sekvencování nebo duplicitám. Datagramy také nemusí být spolehlivé; Neúspěšné dorazí. Data datagramu může do mimo pořadí a může být duplicitní, ale hranic záznamů v datech se zachovají, jako jsou menší než maximální velikost vnitřní příjemce záznamy. Jste odpovědní za správu o sekvencování a spolehlivost. (Spolehlivost spíše dobře na místní sítě [LAN], ale méně atd. celou oblast sítí WAN], jako je Internet).
+
+Datagramy jsou "bez připojení", to znamená, že je vytvořeno žádné explicitní spojení; Odešlete zprávu datagram zadané soketu a může přijímat zprávy ze zadaného soketu.
+
+Příklad datagram soketu je aplikace, která udržuje v síti synchronizované systémovými hodinami. To ukazuje další schopností sokety datagramu v alespoň nějaká nastavení: všesměrové vysílání zpráv do velkého počtu síťových adres.
+
+Sokety datagramu jsou lepší než sokety datového proudu pro data orientovaná na záznamy. Další informace o sokety datagramu najdete v tématu Specifikace rozhraní Windows Sockets k dispozici v sadě Windows SDK.
+
+## <a name="see-also"></a>Viz také
+
+[Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)<br/>
+[Windows Sockets: Pozadí](../mfc/windows-sockets-background.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Seznam ukázek dialogových oken | Microsoft Docs
+title: Seznam ukázek dialogových oken | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,54 +14,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0edef5dc0c97985ba81b28c9df5233a8a2da6933
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 320f595606789ce2a3726971dfa21d7a92ea2bb1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343605"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434021"
 ---
 # <a name="dialog-sample-list"></a>Seznam ukázek dialogových oken
-Viz následující ukázka programy, které ilustrují dialogových oken a seznam vlastností:  
-  
- *Ukázková aplikace MDI se dialogová okna*  
-  
--   [SCRIBBLE](../visual-cpp-samples.md)  
-  
- *Nemodální dialogové okno*  
-  
--   [NEMODÁLNÍ](../visual-cpp-samples.md)  
-  
- *Dialogové okno List vlastností (dialogové okno karty)*  
-  
--   [PROPDLG](../visual-cpp-samples.md)  
-  
--   [CMNCTRL1](../visual-cpp-samples.md)  
-  
--   [CMNCTRL2](../visual-cpp-samples.md)  
-  
- *Aplikace založené na dialogové okno*  
-  
--   [CMNCTRL1](../visual-cpp-samples.md)  
-  
--   [CMNCTRL2](../visual-cpp-samples.md)  
-  
- *Dialogové okno – Ovládací prvky*  
-  
--   [CMNCTRL1](../visual-cpp-samples.md)  
-  
--   [CMNCTRL2](../visual-cpp-samples.md)  
-  
--   [CTRLTEST](../visual-cpp-samples.md)  
-  
- *Zobrazení formulářů jako dialogové okno*  
-  
--   [VIEWEX](../visual-cpp-samples.md)  
-  
- *Šablony dialogového okna v paměti*  
-  
--   [DLGTEMPL](../visual-cpp-samples.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Dialogová okna](../mfc/dialog-boxes.md)
+
+Viz následující ukázkové programy, které ilustrují dialogová okna a seznamy vlastností:
+
+*MDI ukázkovou aplikaci pomocí dialogových oknech*
+
+- [SCRIBBLE](../visual-cpp-samples.md)
+
+*Nemodální dialogové okno*
+
+- [NEMODÁLNÍ](../visual-cpp-samples.md)
+
+*Dialogové okno seznam vlastností (karta dialogové okno)*
+
+- [PROPDLG](../visual-cpp-samples.md)
+
+- [CMNCTRL1](../visual-cpp-samples.md)
+
+- [CMNCTRL2](../visual-cpp-samples.md)
+
+*Aplikace založená na dialogové okno*
+
+- [CMNCTRL1](../visual-cpp-samples.md)
+
+- [CMNCTRL2](../visual-cpp-samples.md)
+
+*Ovládací prvky dialogového okna*
+
+- [CMNCTRL1](../visual-cpp-samples.md)
+
+- [CMNCTRL2](../visual-cpp-samples.md)
+
+- [CTRLTEST](../visual-cpp-samples.md)
+
+*Zobrazení formuláře jako dialogové okno*
+
+- [VIEWEX](../visual-cpp-samples.md)
+
+*Šablony dialogového okna v paměti*
+
+- [DLGTEMPL](../visual-cpp-samples.md)
+
+## <a name="see-also"></a>Viz také
+
+[Dialogová okna](../mfc/dialog-boxes.md)
 

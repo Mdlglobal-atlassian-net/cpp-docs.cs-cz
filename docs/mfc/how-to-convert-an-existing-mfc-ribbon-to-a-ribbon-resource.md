@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: převod existujícího pásu karet MFC na prostředek pásu karet | Microsoft Docs'
+title: 'Postupy: převod existujícího pásu karet MFC na prostředek pásu karet | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,46 +15,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2551709652df0e0c65b1b0b6b5085550044e9966
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 07ed60edf2b83810616e2ed58a92510d1d973ff0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928994"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378108"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>Postupy: Převod existujícího pásu karet MFC na prostředek pásu karet
-Pás karet prostředky jsou usnadňují vizualizaci, úpravě a udržovat než ručně programové pásů karet. Toto téma popisuje, jak převést ručně programové pásu karet v projektu knihovny MFC na prostředek pásu karet.  
-  
- Musí mít existující MFC projekt, který má kód, který používá třídy pásu karet MFC, například [CMFCRibbonBar Class](../mfc/reference/cmfcribbonbar-class.md).  
-  
-### <a name="to-convert-an-mfc-ribbon-to-a-ribbon-resource"></a>Převést pásu karet MFC na prostředek pásu karet  
-  
-1.  V sadě Visual Studio v existujícím projektu knihovny MFC otevření zdrojového souboru kde `CMFCRibbonBar` objekt je inicializován. Soubor je obvykle mainfrm.cpp. Přidejte následující kód po inicializaci kódu pro pás karet.  
-  
- ```  
+
+Prostředky z pásu karet se snadněji vizualizovat, změnit a udržovat než ručně kódovaný pásů karet. Toto téma popisuje, jak převést ručně kódovaný pás karet v projektu knihovny MFC na prostředek pásu karet.
+
+Musíte mít existující projekt knihovny MFC, která má kód, který používá třídy pásu karet MFC, například [CMFCRibbonBar – třída](../mfc/reference/cmfcribbonbar-class.md).
+
+### <a name="to-convert-an-mfc-ribbon-to-a-ribbon-resource"></a>Převést pásu karet MFC na prostředek pásu karet
+
+1. V sadě Visual Studio v existujícím projektu knihovny MFC, otevřete zdrojový soubor kde `CMFCRibbonBar` objekt je inicializován. Soubor je obvykle mainfrm.cpp. Přidejte následující kód za kód inicializace pro pás karet.
+
+```
     m_wndRibbonBar.SaveToXMLFile("RibbonOutput.xml");
 
- ```  
-  
-     Soubor uložte a zavřete.  
-  
-2.  Sestavení a spuštění aplikace MFC v poznámkovém bloku otevřete RibbonOutput.txt a zkopírujte její obsah.  
-  
-3.  V sadě Visual Studio na **projektu** nabídky, klikněte na tlačítko **přidat prostředek**. V **přidat prostředek** dialogové okno, vyberte **pásu karet** a pak klikněte na **nový**.  
-  
-     Visual Studio vytvoří prostředek pásu karet a otevře ji v zobrazení návrhu. ID prostředku pásu karet je IDR_RIBBON1, který se zobrazí v **zobrazení prostředků**. Na pásu karet je definována v souboru XML ribbon1.mfcribbon ms.  
-  
-4.  V sadě Visual Studio otevřete ribbon1.mfcribbon-ms, odstranit její obsah a vložte obsah RibbonOutput.txt, který jste zkopírovali dříve. Uložte a zavřete ribbon1.mfcribbon ms.  
-  
-5.  Znovu otevřít zdrojový soubor, kde je inicializovat objekt CMFCRibbonBar (obvykle mainfrm.cpp) a Odkomentujte existující kód pásu karet. Přidejte následující kód za kód, který je označeno jako komentář.  
-  
- ```  
+```
+
+     Save and close the file.
+
+1. Sestavení a spuštění aplikace knihovny MFC v poznámkovém bloku otevřete RibbonOutput.txt a zkopírujte jeho obsah.
+
+1. V sadě Visual Studio na **projektu** nabídky, klikněte na tlačítko **přidat prostředek**. V **přidat prostředek** dialogu **pásu karet** a potom klikněte na tlačítko **nový**.
+
+     Visual Studio vytvoří prostředek pásu karet a otevře v zobrazení návrhu. ID prostředku pásu karet je IDR_RIBBON1, který se zobrazí v **zobrazení prostředků**. Na pásu karet je definována v souboru XML ribbon1.mfcribbon ms.
+
+1. V sadě Visual Studio otevřete ribbon1.mfcribbon ms, odstraňte její obsah a vložte obsah RibbonOutput.txt, který jste si zkopírovali dříve. Uložte a zavřete ribbon1.mfcribbon ms.
+
+1. Znovu otevřete zdrojový soubor, ve kterém je inicializován CMFCRibbonBar – objekt (obvykle mainfrm.cpp) a Odkomentujte existující kód pásu karet. Přidejte následující kód za kód, který je označené jako komentář.
+
+```
     m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);
 
- ```  
-  
-6.  Sestavte projekt a spusťte program.  
-  
-## <a name="see-also"></a>Viz také  
- [Návrhář pásu karet (MFC)](../mfc/ribbon-designer-mfc.md)
+```
+
+1. Sestavte projekt a spusťte program.
+
+## <a name="see-also"></a>Viz také
+
+[Návrhář pásu karet (MFC)](../mfc/ribbon-designer-mfc.md)
 

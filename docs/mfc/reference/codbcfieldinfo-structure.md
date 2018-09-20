@@ -17,54 +17,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1723e93320129fae232bb850caa123d1638a37b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 797a229007be58ff3da3bb529c9e8f4a062c12b3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853079"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434307"
 ---
 # <a name="codbcfieldinfo-structure"></a>CODBCFieldInfo – struktura
-`CODBCFieldInfo` Struktura obsahuje informace o polích ve zdroji dat rozhraní ODBC.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-struct CODBCFieldInfo  
-{  
-    CString m_strName;  
-    SWORD m_nSQLType;  
-    UDWORD m_nPrecision;  
-    SWORD m_nScale;  
-    SWORD m_nNullability;  
-};  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *m_strName*  
- Název pole.  
-  
- *m_nSQLType*  
- SQL datový typ pole. To může být typem dat ODBC SQL nebo datový typ SQL specifické pro ovladač. Seznam platných typů dat ODBC SQL najdete v tématu "Datových typů SQL" v sadě Windows SDK. Informace o typech dat SQL specifické pro konkrétní ovladač najdete v dokumentaci ovladače.  
-  
- *m_nPrecision*  
- Maximální přesnost pole. Podrobnosti najdete v tématu "Přesnost, měřítko, délku a velikost zobrazení" v sadě Windows SDK.  
-  
- *m_nScale*  
- Škálování pole. Podrobnosti najdete v tématu "Přesnost, měřítko, délku a velikost zobrazení" v sadě Windows SDK.  
-  
- *m_nNullability*  
- Určuje, zda lze do pole zadat hodnotu Null. Může to být jedna ze dvou hodnot: SQL_NULLABLE Pokud do pole zadat hodnoty Null, nebo SQL_NO_NULLS Pokud pole nepřijímá hodnoty Null.  
-  
-## <a name="remarks"></a>Poznámky  
- Chcete-li tyto informace načíst, zavolejte [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo).  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxdb.h  
-  
-## <a name="see-also"></a>Viz také  
- [Struktury, styly, zpětná volání a mapy zpráv](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo)   
- [CRecordset::GetFieldValue](../../mfc/reference/crecordset-class.md#getfieldvalue)
+
+`CODBCFieldInfo` Struktura obsahuje informace o polích ve zdroji dat rozhraní ODBC.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+struct CODBCFieldInfo
+{
+    CString m_strName;
+    SWORD m_nSQLType;
+    UDWORD m_nPrecision;
+    SWORD m_nScale;
+    SWORD m_nNullability;
+};
+```
+
+#### <a name="parameters"></a>Parametry
+
+*m_strName*<br/>
+Název pole.
+
+*m_nSQLType*<br/>
+SQL datový typ pole. To může být typem dat ODBC SQL nebo datový typ SQL specifické pro ovladač. Seznam platných typů dat ODBC SQL najdete v tématu "Datových typů SQL" v sadě Windows SDK. Informace o typech dat SQL specifické pro konkrétní ovladač najdete v dokumentaci ovladače.
+
+*m_nPrecision*<br/>
+Maximální přesnost pole. Podrobnosti najdete v tématu "Přesnost, měřítko, délku a velikost zobrazení" v sadě Windows SDK.
+
+*m_nScale*<br/>
+Škálování pole. Podrobnosti najdete v tématu "Přesnost, měřítko, délku a velikost zobrazení" v sadě Windows SDK.
+
+*m_nNullability*<br/>
+Určuje, zda lze do pole zadat hodnotu Null. Může to být jedna ze dvou hodnot: SQL_NULLABLE Pokud do pole zadat hodnoty Null, nebo SQL_NO_NULLS Pokud pole nepřijímá hodnoty Null.
+
+## <a name="remarks"></a>Poznámky
+
+Chcete-li tyto informace načíst, zavolejte [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo).
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxdb.h
+
+## <a name="see-also"></a>Viz také
+
+[Struktury, styly, zpětná volání a mapy zpráv](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo)<br/>
+[CRecordset::GetFieldValue](../../mfc/reference/crecordset-class.md#getfieldvalue)
 
 

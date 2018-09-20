@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a39b4147bd997659f264b60fb1fc88956784bbaf
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: d72e37b8625480779620025dfd1e1eda1101b824
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318185"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430550"
 ---
 # <a name="working-with-resource-files"></a>Práce se zdrojovými soubory
 
@@ -39,24 +39,24 @@ Informace o přidávání prostředků do spravovaných projektů, najdete v té
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Soubory prostředků](../windows/resource-files-visual-studio.md)  
+[Soubory prostředků](../windows/resource-files-visual-studio.md)<br/>
 Popisuje soubory prostředků a jejich použití v aplikacích klasické pracovní plochy Windows. Obsahuje také odkazy na témata, která popisují způsob použití souborů prostředků.
 
-[Symboly: Identifikátory prostředků](../windows/symbols-resource-identifiers.md)  
+[Symboly: Identifikátory prostředků](../windows/symbols-resource-identifiers.md)<br/>
 Popisuje symboly a poskytuje informace o používání **symbolů prostředků** dialogové okno ke správě symbolů ve vašich projektech.
 
-[Editory prostředků](../windows/resource-editors.md)  
+[Editory prostředků](../windows/resource-editors.md)<br/>
 Popisuje editory prostředků k dispozici v sadě Visual Studio, typy prostředků je můžete upravit každé editoru a obsahuje odkazy na podrobné informace o používání každý editor.
 
 ## <a name="related-sections"></a>Související oddíly
 
-[Visual C++](../visual-cpp-in-visual-studio.md)  
+[Visual C++](../visual-cpp-in-visual-studio.md)<br/>
 Obsahuje odkazy na dokumentaci jazyka Visual C++.
 
-[Kontaktujte nás](/visualstudio/ide/talk-to-us)  
+[Kontaktujte nás](/visualstudio/ide/talk-to-us)<br/>
 Obsahuje odkazy na informace o používání sady dokumentace, kontaktovat podporu produktů a použití funkce pro usnadnění přístupu.
 
 ## <a name="see-also"></a>Viz také
 
-[Desktopové aplikace Windows](../windows/windows-desktop-applications-cpp.md)  
+[Desktopové aplikace Windows](../windows/windows-desktop-applications-cpp.md)<br/>
 [Nabídky a ostatní prostředky](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

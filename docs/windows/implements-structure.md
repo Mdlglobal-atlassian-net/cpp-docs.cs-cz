@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18616b1010dfe6a23861c512b1113c30fe5251ce
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 27a2cfaaf4ddb5ae58cdcd212b5fdcb7ded73bb0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535350"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434723"
 ---
 # <a name="implements-structure"></a>Implementuje strukturu
 
@@ -69,37 +69,37 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
 
 ### <a name="parameters"></a>Parametry
 
-*I0*  
+*I0*<br/>
 ID nultého rozhraní. (Povinné)
 
-*I1*  
+*I1*<br/>
 ID prvního rozhraní. (Volitelné)
 
-*I2*  
+*I2*<br/>
 Druhé ID rozhraní. (Volitelné)
 
-*I3*  
+*I3*<br/>
 ID třetího rozhraní. (Volitelné)
 
-*TYP I4*  
+*TYP I4*<br/>
 ID čtvrtého rozhraní. (Volitelné)
 
-*I5*  
+*I5*<br/>
 ID pátého rozhraní. (Volitelné)
 
-*I6*  
+*I6*<br/>
 ID šestého rozhraní. (Volitelné)
 
-*I7*  
+*I7*<br/>
 ID sedmého rozhraní. (Volitelné)
 
-*I8*  
+*I8*<br/>
 ID osmého rozhraní. (Volitelné)
 
-*I9*  
+*I9*<br/>
 ID devátého rozhraní. (Volitelné)
 
-*příznaky*  
+*příznaky*<br/>
 Konfigurace příznaky pro třídu. Jeden nebo více [runtimeclasstype –](../windows/runtimeclasstype-enumeration.md) výčty, které jsou určené v [runtimeclassflags –](../windows/runtimeclassflags-structure.md) struktury.
 
 ## <a name="remarks"></a>Poznámky
@@ -163,10 +163,10 @@ __forceinline HRESULT CanCastTo(
 
 ### <a name="parameters"></a>Parametry
 
-*riid*  
+*riid*<br/>
 Odkaz na identifikátor rozhraní.
 
-*ppv*  
+*ppv*<br/>
 Pokud úspěšná, ukazatel na rozhraní určené *riid*.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -206,10 +206,10 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>Parametry
 
-*index*  
+*index*<br/>
 Z nuly vycházející index určující počáteční prvek pole pro tuto operaci. Po dokončení této operace *index* zvyšuje o 1.
 
-*IID*  
+*IID*<br/>
 Pole typu IID.
 
 ### <a name="remarks"></a>Poznámky

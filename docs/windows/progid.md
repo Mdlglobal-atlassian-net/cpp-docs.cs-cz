@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c395a79cc9e0399000278af1a19916c2c83bb10
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 337972b9659ae32e2ea40e12d6301cc1f0c9aba7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209463"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407995"
 ---
 # <a name="progid"></a>progid
 
@@ -38,7 +38,7 @@ Určuje identifikátor pro objekt modelu COM ProgID.
 
 ### <a name="parameters"></a>Parametry
 
-*Jméno*  
+*Jméno*<br/>
 Identifikátor ProgID reprezentující objekt.
 
 ProgID prezentovat čitelná verze identifikátor třídy (CLSID) slouží k identifikaci objektů modelu COM a ActiveX.
@@ -74,7 +74,7 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](..
 
 ## <a name="see-also"></a>Viz také
 
-[IDL – atributy](../windows/idl-attributes.md)  
-[Atributy třídy](../windows/class-attributes.md)  
-[Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[IDL – atributy](../windows/idl-attributes.md)<br/>
+[Atributy třídy](../windows/class-attributes.md)<br/>
+[Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [Klíč progID](/windows/desktop/com/-progid--key)  

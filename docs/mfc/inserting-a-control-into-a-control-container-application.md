@@ -1,5 +1,5 @@
 ---
-title: 'Kontejnery ovládacích prvků ActiveX: Vložení ovládacího prvku do kontejnerové aplikace ovládacího prvku | Microsoft Docs'
+title: 'Kontejnery ovládacích prvků ActiveX: Vložení ovládacího prvku do kontejnerové aplikace ovládacího prvku | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,22 +15,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 716c045fc10b4dd5f3dede20a233d958e669bbd7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f025c9fa564bcd37c585db6ea5c5cd0f5be83e0d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346334"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432136"
 ---
 # <a name="activex-control-containers-inserting-a-control-into-a-control-container-application"></a>ActiveX – kontejnery ovládacích prvků: Vložení ovládacího prvku do kontejnerové aplikace ovládacího prvku
-Než se dostanete z aplikací kontejneru ovládacího prvku ActiveX k ovládacího prvku ActiveX, musíte přidat ovládací prvek ActiveX do kontejneru aplikace pomocí [vložit ovládací prvek ActiveX](../windows/insert-activex-control-dialog-box.md) dialogové okno.  
-  
- Přidání ovládacího prvku ActiveX do projektu kontejneru ovládacího prvku ActiveX naleznete v tématu [zobrazení a přidání ovládacích prvků ActiveX do dialogového okna](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
-  
- Jakmile přidáte ovládací prvek, je nutné přidat do třídy dialogového okna členské proměnné (of typ ovládacího prvku ActiveX). Další informace o tomto postupu najdete v tématu [přidání člena proměnné](../ide/adding-a-member-variable-visual-cpp.md).  
-  
- Po přidání členské proměnné třídu, označuje jako obálkovou třídu, je automaticky generují a přidávají do projektu. Tato třída se používá jako rozhraní mezi kontejneru ovládacího prvku a vloženému ovládacímu prvku.  
-  
-## <a name="see-also"></a>Viz také  
- [ActiveX – kontejnery ovládacích prvků](../mfc/activex-control-containers.md)
+
+Pro přístup k ovládacím prvku ActiveX z aplikace kontejneru ovládacího prvku ActiveX, musíte přidat ovládací prvek ActiveX do kontejneru pomocí aplikace [vložit ovládací prvek ActiveX](../windows/insert-activex-control-dialog-box.md) dialogové okno.
+
+Přidání ovládacího prvku ActiveX k projektu kontejneru ovládacího prvku ActiveX naleznete v tématu [zobrazení a přidání ovládacích prvků ActiveX do dialogového okna](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).
+
+Jakmile přidáte ovládací prvek, musíte přidat členské proměnné (typ ovládacího prvku ActiveX) do třídy dialogového okna. Další informace o tomto postupu najdete v tématu [přidání členské proměnné](../ide/adding-a-member-variable-visual-cpp.md).
+
+Po přidání členské proměnné třídy, označuje jako obálkovou třídu, je automaticky generují a přidávají do vašeho projektu. Tato třída se používá jako rozhraní mezi kontejnerem ovládacího prvku a vloženému ovládacímu prvku.
+
+## <a name="see-also"></a>Viz také
+
+[ActiveX – kontejnery ovládacích prvků](../mfc/activex-control-containers.md)
 

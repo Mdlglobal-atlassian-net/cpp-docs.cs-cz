@@ -1,5 +1,5 @@
 ---
-title: Seznam ukázek nabídek | Microsoft Docs
+title: Seznam ukázek nabídek | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,24 +14,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b9b1cc957dbc32978902d6efd072f032ae7508a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb28fb0b842cb551f3a53f126122b1ccddad4a75
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344305"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422022"
 ---
 # <a name="menu-sample-list"></a>Seznam ukázek nabídek
-Viz následující ukázka programy, které ilustrují vytváření, úpravy a aktualizace nabídky:  
-  
- *Ukázka MDI: Povolení a zákaz položek nabídky*  
-  
--   [SCRIBBLE](../visual-cpp-samples.md)  
-  
- *Dynamicky měnit nabídky*  
-  
--   [DYNAMENU](../visual-cpp-samples.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Nabídky](../mfc/menus-mfc.md)
+
+Viz následující ukázkové programy, které ilustrují vytváření, úpravu a aktualizaci nabídky:
+
+*Ukázky MDI: Povolení a zákaz položek nabídky*
+
+- [SCRIBBLE](../visual-cpp-samples.md)
+
+*Dynamicky měnit nabídky*
+
+- [DYNAMENU](../visual-cpp-samples.md)
+
+## <a name="see-also"></a>Viz také
+
+[Nabídky](../mfc/menus-mfc.md)
 

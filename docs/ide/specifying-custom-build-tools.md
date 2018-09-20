@@ -1,5 +1,5 @@
 ---
-title: Určení vlastního nástroje sestavení | Microsoft Docs
+title: Určení vlastního nástroje sestavení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 06/05/2018
 ms.technology:
@@ -25,70 +25,70 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a880d8cac05ea662feafa4c309f70bb91179fb2c
-ms.sourcegitcommit: 6784c1d5081dbe4d8119379647a34666328e1fdf
+ms.openlocfilehash: 9e04cd1d5599663c878d7e9b06d9b0bd05a76242
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34798928"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433900"
 ---
-# <a name="specify-custom-build-tools"></a>Zadejte vlastní sestavovací nástroje
+# <a name="specify-custom-build-tools"></a>Určení vlastních sestavovacích nástrojů
 
-A *vlastní sestavovací nástroje* systém sestavení poskytne informace, musí se vytvořit konkrétní vstupní soubory. Nástroj pro vlastní sestavení určuje příkaz ke spuštění, seznam vstupní soubory, seznam výstupní soubory, které jsou generovány příkazem a volitelný popis nástroje.
+A *vlastní nástroj sestavení* sestavovací systém poskytuje informace potřebné k sestavení konkrétní vstupní soubory. Pro vlastní nástroj sestavení určuje příkaz pro spuštění, seznam vstupních souborů, seznam výstupních souborů, které jsou generovány pomocí příkazu a volitelný popis tohoto nástroje.
 
-Obecné informace o vlastní sestavovací nástroje a vlastní kroky sestavení najdete v tématu [Principy vlastní kroky sestavení a události sestavení](../ide/understanding-custom-build-steps-and-build-events.md).
+Obecné informace o vlastních sestavovacích nástrojů a vlastní kroky sestavení, naleznete v tématu [Principy vlastní kroky sestavení a události sestavení](../ide/understanding-custom-build-steps-and-build-events.md).
 
-### <a name="to-specify-a-custom-build-tool"></a>Chcete-li určit vlastní sestavovací nástroje
+### <a name="to-specify-a-custom-build-tool"></a>K určení vlastních sestavovacích nástrojů
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Další informace najdete v tématu [nastavení vlastností projektu Visual C++](../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Další informace najdete v tématu [nastavení vlastností projektu Visual C++](../ide/working-with-project-properties.md).
 
-1. Zvolte **vlastnosti konfigurace** povolit **konfigurace** pole. V **konfigurace** vyberte konfigurace, pro který chcete určit vlastní sestavovací nástroje.
+1. Zvolte **vlastnosti konfigurace** povolit **konfigurace** pole. V **konfigurace** pole, vyberte položku konfigurace, pro kterou chcete určit pro vlastní nástroj sestavení.
 
-1. V **Průzkumníku**, vyberte vstupní soubor pro nástroj pro vlastní sestavení.
+1. V **Průzkumníka řešení**, výběr vstupního souboru pro vlastní nástroj sestavení.
 
-   Pokud **nástroj pro vlastní sestavení** složka nezobrazí, přípona souboru vybraný soubor je přidružen výchozí nástroj. Například výchozí nástroj pro soubory .c a sada je kompilátor. Přepsat výchozí nastavení nástroje v **vlastnosti konfigurace** uzlu v **Obecné** složky v **typ položky** vlastnost, zvolte **vlastní sestavení Nástroj**. Zvolte **použít** a **nástroj pro vlastní sestavení** uzel se zobrazí.
+   Pokud **nástroj Custom Build** složka nezobrazí, je přidružena k nástroji výchozí příponu souboru, který jste vybrali. Kompilátor je například výchozí nástroj pro soubory .c a .cpp. Chcete přepsat nástroj ve výchozím nastavení v **vlastnosti konfigurace** uzlu v **Obecné** složky v **typ položky** vlastnost, zvolte **vlastního sestavení Nástroj**. Zvolte **použít** a **nástroj Custom Build** uzel se zobrazí.
 
-1. V **vlastního nástroje sestavení** uzlu v **Obecné** složku, zadejte vlastnosti přidružené k vlastní sestavení nástroje:
+1. V **vlastní nástroj sestavení** uzlu v **Obecné** složce, zadejte vlastnosti přidružené k vlastní nástroj sestavení:
 
-   - V **Další závislosti**, zadejte jakékoli další soubory nad rámec jeden, pro který je definovaný vlastní sestavovací nástroje (soubor přidružený k vlastní sestavovací nástroje se vstupem pro nástroj implicitně považuje). Mít další vstupní soubory není požadavek pro nástroj pro vlastní sestavení. Pokud máte více než jeden další vstup, oddělte je středníky.
+   - V **Další závislosti**, zadejte jakékoli další soubory kromě pro který je definován vlastní nástroj sestavení (soubor přidružený k vlastní nástroj sestavení implicitně považuje vstup do nástroje). S dalšími vstupními soubory není vyžadována pro pro vlastní nástroj sestavení. Pokud máte více než jeden další vstup, oddělte je středníkem.
 
-      Pokud **Další závislosti** datum souboru je novější než vstupní soubor a pak je spustit nástroj pro vlastní sestavení. Pokud všechny z **Další závislosti** jsou starší než vstupní soubor soubory a vstupní soubor je starší než **výstupy** soubor vlastnost a poté nástroj pro vlastní sestavení není spuštěna.
+      Pokud **Další závislosti** datum souboru je novější než vstupní soubor a potom spusťte vlastní nástroj sestavení. Pokud všechny aplikace **Další závislosti** soubory jsou starší než vstupní soubor a vstupní soubor je starší než **výstupy** vlastnosti souboru a pak vlastní nástroj sestavení se nespouští.
 
-      Předpokládejme například, že máte vlastní sestavovací nástroje, který přebírá MyInput.x jako vstup a vygeneruje MyInput.cpp, a pak MyInput.x zahrne soubor hlaviček MyHeader.h. MyHeader.h můžete zadat jako vstupní závislost na MyInput.x a systém sestavení bude sestavovat MyInput.cpp, když je zastaralé s ohledem na MyInput.x nebo MyHeader.h.
+      Předpokládejme například, že máte pro vlastní nástroj sestavení, která přijímá jako vstup MyInput.x a generuje MyInput.cpp a že MyInput.x obsahuje soubor hlaviček, MyHeader.h. Můžete zadat MyHeader.h jako vstupní závislost na MyInput.x a systém sestavení sestaví MyInput.cpp, když je zastaralé s ohledem na MyInput.x nebo MyHeader.h.
 
-      Vstupní závislosti také zajistit, že vlastní sestavovací nástroje spouštěny v pořadí, které potřebujete, aby. V předchozím příkladu předpokládejme, že MyHeader.h je ve skutečnosti výstup vlastní sestavovací nástroje. Protože MyHeader.h je závislost na MyInput.x, systém sestavení nejprve vytvoří Myheader.h před spuštěním vlastní sestavovací nástroje na MyInput.x.
+      Vstupní závislosti můžete také zajistit, že v pořadí, ve kterém je budete potřebovat ke spuštění vlastních sestavovacích nástrojů. V předchozím příkladu předpokládejme, že MyHeader.h je ve skutečnosti výstup pro vlastní nástroj sestavení. Protože MyHeader.h, představuje závislost MyInput.x, systém sestavení sestaví před spuštěním vlastního nástroje sestavení na MyInput.x nejprve Myheader.h
 
-   - V **příkazového řádku**, jako kdyby byly ho zadat na příkazovém řádku zadejte příkaz. Zadejte platný příkaz nebo dávkového souboru a libovolný požadovaný vstupní nebo výstupní soubory. Zadejte **volání** dávky příkazu před název souboru batch zaručit, že jsou všechny následné příkazy provedeny.
+   - V **příkazového řádku**, jako kdyby byly jeho zadáním na příkazovém řádku zadejte příkaz. Zadejte platný příkaz nebo dávkový soubor a všechny povinné vstupní nebo výstupní soubory. Zadejte **volání** dávkového příkazu před název dávkového souboru zaručí, že jsou provedeny všechny následné příkazy.
 
-      Více vstupních a výstupních souborů může být zadáno symbolicky s makry MSBuild. Informace o tom, jak zadat umístění souborů nebo názvy sad souborů najdete v tématu [běžné makra pro příkazy sestavení a vlastnosti](../ide/common-macros-for-build-commands-and-properties.md).
+      Více vstupních a výstupních souborů lze symbolicky s makry MSBuild. Informace o tom, jak zadat umístění souborů nebo názvy sad souborů najdete v tématu [běžné Macros for Build Commands and Properties](../ide/common-macros-for-build-commands-and-properties.md).
 
-      Protože znak "%" je rezervován MSBuild, pokud zadáte proměnnou prostředí nahradit každý **%** znaku s **% 25** šestnáctková řídicí sekvence. Například nahradit **% WINDIR %** s **25WINDIR % 25**. MSBuild nahradí každý **% 25** pořadí se **%** znak před přistupuje k proměnné prostředí.
+      Protože znak '%' je vyhrazený nástroj MSBuild, pokud zadáte proměnnou prostředí nahraďte každé **%** řídicí znak s **% 25** šestnáctková řídicí sekvence. Nahraďte třeba **% WINDIR %** s **25WINDIR % 25**. Nástroj MSBuild nahradí každou **% 25** pořadí se **%** dříve, než přistupuje k proměnné prostředí.
 
-   - V **popis**, zadejte popisný zprávu o tomto nástroji vlastní sestavení. Zpráva tisku **výstup** okno, pokud systém sestavení zpracovává tento nástroj.
+   - V **popis**, zadejte popisný zprávu o tomto nástroji vlastního sestavení. Zprávy zobrazeny **výstup** okna, je-li tento nástroj zpracuje systém sestavení.
 
-   - V **výstupy**, zadejte název souboru výstupního souboru. Toto je požadovaná položka; bez hodnoty pro tuto vlastnost nebude spustit nástroj pro vlastní sestavení. Pokud nástroj pro vlastní sestavení má více než jeden výstup, soubor názvy oddělte středníkem.
+   - V **výstupy**, zadejte název výstupního souboru. To je požadovaná položka; bez hodnoty pro tuto vlastnost nebude spustit vlastní nástroj sestavení. Pokud pro vlastní nástroj sestavení má více než jeden výstup, názvech souborů oddělujte středníkem.
 
-      Název výstupního souboru, by měl být stejný jako jsou zadány v **příkazového řádku** vlastnost. Systém sestavení projektu se vyhledat soubor a zkontrolujte jeho data. Pokud výstupní soubor je starší než vstupní soubor nebo výstupní soubor nebyl nalezen, je spuštěn nástroj vlastní sestavení. Pokud všechny z **Další závislosti** jsou starší než vstupní soubor soubory a vstupní soubor je starší než v souboru určeném v **výstupy** vlastnost, nástroj pro vlastní sestavení není spuštěn.
+      Název výstupního souboru by měla být stejná jako je uveden v **příkazového řádku** vlastnost. Systém sestavení projektu vyhledejte soubor a zkontrolujte jeho data. Pokud výstupní soubor je starší než vstupní soubor nebo výstupního souboru nebyl nalezen, je spustit vlastní nástroj sestavení. Pokud všechny sady **Další závislosti** soubory jsou starší než vstupní soubor a vstupní soubor je starší než zadaný v souboru **výstupy** vlastnosti vlastního nástroje sestavení se nespouští.
 
-Pokud chcete systém sestavení pracovat na soubor výstup generovaný nástrojem vlastní sestavení, je třeba ručně přidat do projektu. Vlastní sestavovací nástroje aktualizuje soubor během sestavení.
+Pokud chcete, aby systém sestavení provozovat na výstupní soubor generované vlastním nástrojem sestavení, je třeba ručně přidat do projektu. Vlastní nástroj sestavení aktualizuje soubor během sestavení.
 
 ## <a name="example"></a>Příklad
 
-Předpokládejme, že chcete zahrnout do souboru s názvem parser.l ve vašem projektu. Máte lexikální analyzátor **lexer.exe**, na vaše cesta ke spustitelnému souboru. Chcete použít ke zpracování parser.l k vytvoření .c souboru, který má stejný název základní (parser.c).
+Předpokládejme, že chcete zahrnout do souboru s názvem parser.l ve vašem projektu. Máte na lexikální analyzátor **lexer.exe**, na vaše cesta ke spustitelnému souboru. Chcete použít ke zpracování parser.l a vytvořit soubor .c, který má stejný základní název (parser.c).
 
-Nejprve přidejte parser.l a parser.c do projektu. Pokud soubory ještě neexistují, přidejte odkaz na soubory. Vytvořit vlastní sestavovací nástroje pro parser.l a zadejte následující **příkazy** vlastnost:
+Nejprve přidejte parser.l a parser.c do projektu. Pokud soubor ještě neexistuje, přidejte odkaz na soubory. Vytvoření vlastního sestavení nástroj pro parser.l a zadejte následující v **příkazy** vlastnost:
 
-> **lexer %(FullPath). \%.C (název souboru)**
+> **lexeru %(FullPath). \%.C (název souboru)**
 
-Tento příkaz spustí lexikální analyzátor parser.l a výstupy parser.c do adresáře projektu.
+Tento příkaz spustí lexikální analyzátor parser.l a vypíše parser.c k adresáři projektu.
 
 V **výstupy** vlastnost, zadejte následující:
 
 > **. \%.C (název souboru)**
 
-Při sestavování projektu systém sestavení porovná časová razítka parser.l a parser.c. Pokud je novější parser.l nebo parser.c neexistuje, spustí systém sestavení hodnotu **příkazového řádku** vlastnost aby parser.c aktuální. Vzhledem k tomu, že parser.c se taky přidala do projektu, systém sestavení pak zkompiluje parser.c.
+Při sestavování projektu se porovnává sestavovací systém časová razítka parser.l a parser.c. Pokud je novější parser.l nebo parser.c neexistuje, systém sestavení spustí hodnotu **příkazového řádku** vlastnost parser.c byl aktuální. Protože parser.c se taky přidala do projektu, systém sestavení parser.c pak zkompiluje.
 
 ## <a name="see-also"></a>Viz také:
 
-[Běžná makra pro příkazy a vlastnosti sestavení](../ide/common-macros-for-build-commands-and-properties.md)  
-[Řešení potíží s přizpůsobením sestavení](../ide/troubleshooting-build-customizations.md)  
+[Běžná makra pro příkazy a vlastnosti sestavení](../ide/common-macros-for-build-commands-and-properties.md)<br>
+[Řešení potíží s přizpůsobením sestavení](../ide/troubleshooting-build-customizations.md)

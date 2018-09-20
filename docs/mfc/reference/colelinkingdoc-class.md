@@ -26,163 +26,184 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9116f736e0bf15ff5ea0594e09b2c044a87c9b78
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b957aa3129f3fedd4aaeecf9f70d6620dc7d5ede
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849350"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443472"
 ---
 # <a name="colelinkingdoc-class"></a>Colelinkingdoc – třída
-Základní třída pro kontejnerové dokumenty OLE, které podporují propojování na vložené položky, které obsahují.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class COleLinkingDoc : public COleDocument  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[COleLinkingDoc::COleLinkingDoc](#colelinkingdoc)|Vytvoří `COleLinkingDoc` objektu.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[COleLinkingDoc::Register](#register)|Registruje dokumentu OLE systémové knihovny DLL.|  
-|[COleLinkingDoc::Revoke](#revoke)|Odvolá registrace dokumentu.|  
-  
-### <a name="protected-methods"></a>Chráněné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[COleLinkingDoc::OnFindEmbeddedItem](#onfindembeddeditem)|Vyhledá určitou vloženou položku.|  
-|[COleLinkingDoc::OnGetLinkedItem](#ongetlinkeditem)|Vyhledá určitou propojenou položku.|  
-  
-## <a name="remarks"></a>Poznámky  
- Aplikace typu kontejner, který podporuje propojování vložené položky se nazývá "kontejner propojení". [OCLIENT](../../visual-cpp-samples.md) ukázkové aplikace je příkladem kontejner odkaz.  
-  
- Pokud je zdrojem propojená položka vložená položka v jiném dokumentu, obsahující dokumentu musí být načten v pořadí pro vloženou položku upravit. Z tohoto důvodu musí být schopni spustit jinou aplikací kontejneru, když chce uživatel upravit zdroj propojená položka kontejner odkaz. Aplikaci musíte taky použít [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) třídy tak, že může vytvářet dokumenty při spuštění prostřednictvím kódu programu.  
-  
- Chcete-li váš kontejner kontejner odkaz, odvodit vaše dokumentové třídy z `COleLinkingDoc` místo [coledocument –](../../mfc/reference/coledocument-class.md). Stejně jako u jiných kontejneru OLE je třeba navrhnout vaše třída pro ukládání aplikace nativní dat stejně jako vložené nebo propojené položky. Kromě toho je třeba navrhnout datové struktury pro ukládání dat nativní. Při definování `CDocItem`-odvozené třídy pro aplikace nativní data, můžete použít rozhraní definované `COleDocument` k uložení nativní data i OLE data.  
-  
- Chcete-li, aby vaše aplikace spustí jiný kontejner prostřednictvím kódu programu, deklarujte `COleTemplateServer` objektu jako člen vaší aplikace `CWinApp`-odvozené třídy:  
-  
- [!code-cpp[NVC_MFCOleContainer#23](../../mfc/codesnippet/cpp/colelinkingdoc-class_1.h)]  
-  
- V `InitInstance` členskou funkci vaše `CWinApp`-odvozené třídy, vytvořit šablonu dokumentu a zadejte vaše `COleLinkingDoc`-odvozené třídy jako třída dokumentu:  
-  
- [!code-cpp[NVC_MFCOleContainer#24](../../mfc/codesnippet/cpp/colelinkingdoc-class_2.cpp)]  
-  
- Připojení vaší `COleTemplateServer` objektu do dokumentu šablon voláním objektu `ConnectTemplate` členské funkce a zaregistrujte všechny třídy objektů OLE systému voláním `COleTemplateServer::RegisterAll`:  
-  
- [!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]  
-  
- Pro ukázku `CWinApp`-odvozené třídy definice a `InitInstance` funkce naleznete v tématu OCLIENT. H a OCLIENT. CPP v ukázce MFC [OCLIENT](../../visual-cpp-samples.md).  
-  
- Další informace o používání `COleLinkingDoc`, najdete v článcích [kontejnery: Implementace kontejneru](../../mfc/containers-implementing-a-container.md) a [kontejnery: pokročilé funkce](../../mfc/containers-advanced-features.md).  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [Třídy CObject](../../mfc/reference/cobject-class.md)  
-  
- [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
-  
- [CDocument](../../mfc/reference/cdocument-class.md)  
-  
- [Coledocument –](../../mfc/reference/coledocument-class.md)  
-  
- `COleLinkingDoc`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxole.h  
-  
-##  <a name="colelinkingdoc"></a>  COleLinkingDoc::COleLinkingDoc  
- Vytvoří `COleLinkingDoc` objekt bez zahájení komunikace se službou OLE systémové knihovny DLL.  
-  
-```  
+
+Základní třída pro kontejnerové dokumenty OLE, které podporují propojování na vložené položky, které obsahují.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class COleLinkingDoc : public COleDocument
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[COleLinkingDoc::COleLinkingDoc](#colelinkingdoc)|Vytvoří `COleLinkingDoc` objektu.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[COleLinkingDoc::Register](#register)|Registruje dokumentu OLE systémové knihovny DLL.|
+|[COleLinkingDoc::Revoke](#revoke)|Odvolá registrace dokumentu.|
+
+### <a name="protected-methods"></a>Chráněné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[COleLinkingDoc::OnFindEmbeddedItem](#onfindembeddeditem)|Vyhledá určitou vloženou položku.|
+|[COleLinkingDoc::OnGetLinkedItem](#ongetlinkeditem)|Vyhledá určitou propojenou položku.|
+
+## <a name="remarks"></a>Poznámky
+
+Aplikace typu kontejner, který podporuje propojování vložené položky se nazývá "kontejner propojení". [OCLIENT](../../visual-cpp-samples.md) ukázkové aplikace je příkladem kontejner odkaz.
+
+Pokud je zdrojem propojená položka vložená položka v jiném dokumentu, obsahující dokumentu musí být načten v pořadí pro vloženou položku upravit. Z tohoto důvodu musí být schopni spustit jinou aplikací kontejneru, když chce uživatel upravit zdroj propojená položka kontejner odkaz. Aplikaci musíte taky použít [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) třídy tak, že může vytvářet dokumenty při spuštění prostřednictvím kódu programu.
+
+Chcete-li váš kontejner kontejner odkaz, odvodit vaše dokumentové třídy z `COleLinkingDoc` místo [coledocument –](../../mfc/reference/coledocument-class.md). Stejně jako u jiných kontejneru OLE je třeba navrhnout vaše třída pro ukládání aplikace nativní dat stejně jako vložené nebo propojené položky. Kromě toho je třeba navrhnout datové struktury pro ukládání dat nativní. Při definování `CDocItem`-odvozené třídy pro aplikace nativní data, můžete použít rozhraní definované `COleDocument` k uložení nativní data i OLE data.
+
+Chcete-li, aby vaše aplikace spustí jiný kontejner prostřednictvím kódu programu, deklarujte `COleTemplateServer` objektu jako člen vaší aplikace `CWinApp`-odvozené třídy:
+
+[!code-cpp[NVC_MFCOleContainer#23](../../mfc/codesnippet/cpp/colelinkingdoc-class_1.h)]
+
+V `InitInstance` členskou funkci vaše `CWinApp`-odvozené třídy, vytvořit šablonu dokumentu a zadejte vaše `COleLinkingDoc`-odvozené třídy jako třída dokumentu:
+
+[!code-cpp[NVC_MFCOleContainer#24](../../mfc/codesnippet/cpp/colelinkingdoc-class_2.cpp)]
+
+Připojení vaší `COleTemplateServer` objektu do dokumentu šablon voláním objektu `ConnectTemplate` členské funkce a zaregistrujte všechny třídy objektů OLE systému voláním `COleTemplateServer::RegisterAll`:
+
+[!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]
+
+Pro ukázku `CWinApp`-odvozené třídy definice a `InitInstance` funkce naleznete v tématu OCLIENT. H a OCLIENT. CPP v ukázce MFC [OCLIENT](../../visual-cpp-samples.md).
+
+Další informace o používání `COleLinkingDoc`, najdete v článcích [kontejnery: Implementace kontejneru](../../mfc/containers-implementing-a-container.md) a [kontejnery: pokročilé funkce](../../mfc/containers-advanced-features.md).
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[Třídy CObject](../../mfc/reference/cobject-class.md)
+
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+
+[CDocument](../../mfc/reference/cdocument-class.md)
+
+[Coledocument –](../../mfc/reference/coledocument-class.md)
+
+`COleLinkingDoc`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxole.h
+
+##  <a name="colelinkingdoc"></a>  COleLinkingDoc::COleLinkingDoc
+
+Vytvoří `COleLinkingDoc` objekt bez zahájení komunikace se službou OLE systémové knihovny DLL.
+
+```
 COleLinkingDoc();
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Je třeba zavolat `Register` členskou funkci OLE informovat, že dokument je otevřen.  
-  
-##  <a name="onfindembeddeditem"></a>  COleLinkingDoc::OnFindEmbeddedItem  
- Volá se rozhraním, aby určilo, jestli dokument obsahuje vložené položky OLE se zadaným názvem.  
-  
-```  
+```
+
+### <a name="remarks"></a>Poznámky
+
+Je třeba zavolat `Register` členskou funkci OLE informovat, že dokument je otevřen.
+
+##  <a name="onfindembeddeditem"></a>  COleLinkingDoc::OnFindEmbeddedItem
+
+Volá se rozhraním, aby určilo, jestli dokument obsahuje vložené položky OLE se zadaným názvem.
+
+```
 virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *lpszItemName*  
- Ukazatel na název vložený požadované položky OLE.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na určenou položku; Hodnota NULL, pokud položka není nalezena.  
-  
-### <a name="remarks"></a>Poznámky  
- Výchozí implementace vyhledá seznam vložených položek pro položku se zadaným názvem (název porovnání je velká a malá písmena). Tato funkce přepište, pokud máte vlastní způsob ukládání nebo pojmenování vložené položky OLE.  
-  
-##  <a name="ongetlinkeditem"></a>  COleLinkingDoc::OnGetLinkedItem  
- Volá se rozhraním, chcete-li zkontrolovat, jestli dokument obsahuje odkazovaný server položku se zadaným názvem.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*lpszItemName*<br/>
+Ukazatel na název vložený požadované položky OLE.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Ukazatel na určenou položku; Hodnota NULL, pokud položka není nalezena.
+
+### <a name="remarks"></a>Poznámky
+
+Výchozí implementace vyhledá seznam vložených položek pro položku se zadaným názvem (název porovnání je velká a malá písmena). Tato funkce přepište, pokud máte vlastní způsob ukládání nebo pojmenování vložené položky OLE.
+
+##  <a name="ongetlinkeditem"></a>  COleLinkingDoc::OnGetLinkedItem
+
+Volá se rozhraním, chcete-li zkontrolovat, jestli dokument obsahuje odkazovaný server položku se zadaným názvem.
+
+```
 virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *lpszItemName*  
- Ukazatel na název propojené požadované položky OLE.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Ukazatel na určenou položku; Hodnota NULL, pokud položka není nalezena.  
-  
-### <a name="remarks"></a>Poznámky  
- Výchozí hodnota `COleLinkingDoc` implementace vždy vrátí hodnotu NULL. Tato funkce je přepsat v odvozené třídě `COleServerDoc` pro prohledání seznamu položek serveru OLE pro propojenou položku se zadaným názvem (název porovnání je velká a malá písmena). Tato funkce přepište, pokud jste implementovali vlastní způsob ukládání nebo načítání položek odkazovaný server.  
-  
-##  <a name="register"></a>  COleLinkingDoc::Register  
- Informuje o OLE systémové knihovny DLL, že dokument je otevřen.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*lpszItemName*<br/>
+Ukazatel na název propojené požadované položky OLE.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Ukazatel na určenou položku; Hodnota NULL, pokud položka není nalezena.
+
+### <a name="remarks"></a>Poznámky
+
+Výchozí hodnota `COleLinkingDoc` implementace vždy vrátí hodnotu NULL. Tato funkce je přepsat v odvozené třídě `COleServerDoc` pro prohledání seznamu položek serveru OLE pro propojenou položku se zadaným názvem (název porovnání je velká a malá písmena). Tato funkce přepište, pokud jste implementovali vlastní způsob ukládání nebo načítání položek odkazovaný server.
+
+##  <a name="register"></a>  COleLinkingDoc::Register
+
+Informuje o OLE systémové knihovny DLL, že dokument je otevřen.
+
+```
 BOOL Register(
-    COleObjectFactory* pFactory,  
+    COleObjectFactory* pFactory,
     LPCTSTR lpszPathName);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pFactory*  
- Ukazatel na objekt factory OLE (může mít hodnotu NULL).  
-  
- *lpszPathName*  
- Ukazatel na plně kvalifikovanou cestu dokumentu kontejneru.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Nenulové, pokud dokument je úspěšně zaregistrovaný; jinak 0.  
-  
-### <a name="remarks"></a>Poznámky  
- Voláním této funkce při vytváření nebo otevírání souboru s názvem k registraci dokumentu OLE systému knihovny DLL. Není nutné volat tuto funkci, pokud dokument představuje vloženou položku.  
-  
- Pokud používáte `COleTemplateServer` ve vaší aplikaci `Register` nazývá aplikací `COleLinkingDoc`vaší implementace `OnNewDocument`, `OnOpenDocument`, a `OnSaveDocument`.  
-  
-##  <a name="revoke"></a>  COleLinkingDoc::Revoke  
- Informuje o OLE systémové knihovny DLL, že dokument je už otevřené.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pFactory*<br/>
+Ukazatel na objekt factory OLE (může mít hodnotu NULL).
+
+*lpszPathName*<br/>
+Ukazatel na plně kvalifikovanou cestu dokumentu kontejneru.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Nenulové, pokud dokument je úspěšně zaregistrovaný; jinak 0.
+
+### <a name="remarks"></a>Poznámky
+
+Voláním této funkce při vytváření nebo otevírání souboru s názvem k registraci dokumentu OLE systému knihovny DLL. Není nutné volat tuto funkci, pokud dokument představuje vloženou položku.
+
+Pokud používáte `COleTemplateServer` ve vaší aplikaci `Register` nazývá aplikací `COleLinkingDoc`vaší implementace `OnNewDocument`, `OnOpenDocument`, a `OnSaveDocument`.
+
+##  <a name="revoke"></a>  COleLinkingDoc::Revoke
+
+Informuje o OLE systémové knihovny DLL, že dokument je už otevřené.
+
+```
 void Revoke();
-```  
-  
-### <a name="remarks"></a>Poznámky  
- Voláním této funkce zrušení registrace dokumentu OLE systémové knihovny DLL.  
-  
- Při zavírání souboru s názvem byste měli volat tuto funkci, ale obvykle není potřeba volat přímo. `Revoke` volá se pro vás od `COleLinkingDoc`vaší implementace `OnCloseDocument`, `OnNewDocument`, `OnOpenDocument`, a `OnSaveDocument`.  
-  
-## <a name="see-also"></a>Viz také  
- [Ukázky knihovny MFC OCLIENT](../../visual-cpp-samples.md)   
- [Coledocument – třída](../../mfc/reference/coledocument-class.md)   
- [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [CDocTemplate – třída](../../mfc/reference/cdoctemplate-class.md)
+```
+
+### <a name="remarks"></a>Poznámky
+
+Voláním této funkce zrušení registrace dokumentu OLE systémové knihovny DLL.
+
+Při zavírání souboru s názvem byste měli volat tuto funkci, ale obvykle není potřeba volat přímo. `Revoke` volá se pro vás od `COleLinkingDoc`vaší implementace `OnCloseDocument`, `OnNewDocument`, `OnOpenDocument`, a `OnSaveDocument`.
+
+## <a name="see-also"></a>Viz také
+
+[Ukázky knihovny MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[COleDocument – třída](../../mfc/reference/coledocument-class.md)<br/>
+[Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
+[CDocTemplate – třída](../../mfc/reference/cdoctemplate-class.md)

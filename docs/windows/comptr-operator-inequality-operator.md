@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4874121f22daa8e4a13bf7a1d332c9b8e3db60ba
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ce6e3357582abe94fdc538932e49e773c37f116b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42578104"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384688"
 ---
 # <a name="comptroperator-operator"></a>ComPtr::operator!= – operátor
 
@@ -47,10 +47,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*a*  
+*a*<br/>
 Odkaz na **ComPtr** objektu.
 
-*b*  
+*b*<br/>
 Odkaz na jiný **ComPtr** objektu.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -67,5 +67,5 @@ Druhý a třetí operátory yield **true** Pokud objekt *a* není roven **nullpt
 
 ## <a name="see-also"></a>Viz také
 
-[Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)  
+[Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)<br/>
 [ComPtr – třída](../windows/comptr-class.md)

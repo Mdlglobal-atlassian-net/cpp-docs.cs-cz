@@ -28,90 +28,95 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12935c6a735d72bb1eb25627c78d69f362073a90
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6916b746aac8bbd4b1008289ec2eacd3afaa5571
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724370"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447638"
 ---
 # <a name="interlockedbittestandreset-intrinsic-functions"></a>vnitřní funkce _interlockedbittestandreset
-**Specifické pro Microsoft**  
-  
- Generuje instrukce, která nastaví bit `b` adresy `a` na nulu a vrátí původní hodnotu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-unsigned char _interlockedbittestandreset(  
-   long *a,  
-   long b  
-);  
-unsigned char _interlockedbittestandreset_acq(  
-   long *a,  
-   long b  
-);  
-unsigned char _interlockedbittestandreset_HLEAcquire(  
-   long *a,  
-   long b  
-);  
-unsigned char _interlockedbittestandreset_HLERelease(  
-   long *a,  
-   long b  
-);  
-unsigned char _interlockedbittestandreset_nf(  
-   long *a,  
-   long b  
-);  
-unsigned char _interlockedbittestandreset_rel(  
-   long *a,  
-   long b  
-);   
-unsigned char _interlockedbittestandreset64(  
-   __int64 *a,  
-   __int64 b  
-);   
-unsigned char _interlockedbittestandreset64_HLEAcquire(  
-   __int64 *a,  
-   __int64 b  
-);  
-unsigned char _interlockedbittestandreset64_HLERelease(  
-   __int64 *a,  
-   __int64 b  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+**Specifické pro Microsoft**
+
+Generuje instrukce, která nastaví bit `b` adresy `a` na nulu a vrátí původní hodnotu.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+unsigned char _interlockedbittestandreset(
+   long *a,
+   long b
+);
+unsigned char _interlockedbittestandreset_acq(
+   long *a,
+   long b
+);
+unsigned char _interlockedbittestandreset_HLEAcquire(
+   long *a,
+   long b
+);
+unsigned char _interlockedbittestandreset_HLERelease(
+   long *a,
+   long b
+);
+unsigned char _interlockedbittestandreset_nf(
+   long *a,
+   long b
+);
+unsigned char _interlockedbittestandreset_rel(
+   long *a,
+   long b
+);
+unsigned char _interlockedbittestandreset64(
+   __int64 *a,
+   __int64 b
+);
+unsigned char _interlockedbittestandreset64_HLEAcquire(
+   __int64 *a,
+   __int64 b
+);
+unsigned char _interlockedbittestandreset64_HLERelease(
+   __int64 *a,
+   __int64 b
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
 *a*<br/>
-[in] Ukazatel paměti prozkoumat.  
-  
+[in] Ukazatel paměti prozkoumat.
+
 *b*<br/>
-[in] Bitová pozice pro testování.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Původní hodnota bit na určené pozici `b`.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Vnitřní|Architektura|Záhlaví|  
-|---------------|------------------|------------|  
-|`_interlockedbittestandreset`|x86, ARM, x64|\<intrin.h >|  
-|`_interlockedbittestandreset_acq`, `_interlockedbittestandreset_nf`, `_interlockedbittestandreset_rel`|ARM|\<intrin.h >|  
-|`_interlockedbittestandreset_HLEAcquire`, `_interlockedbittestandreset_HLERelease`|x86, x64|\<immintrin.h >|  
-|`_interlockedbittestandreset64`|x64|\<intrin.h >|  
-|`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|x64|\<immintrin.h >|  
-  
-## <a name="remarks"></a>Poznámky  
- Na x86 a x64 procesory, použijte tyto vnitřní objekty `lock btr` instrukce, která čte a nastaví zadané bit na hodnotu nula atomické operace.  
-  
- Na procesorech ARM, pomocí vnitřní objekty s `_acq` a `_rel` přípony pro získání a uvolnění sémantiky, jako například na začátku a konci kritický oddíl. Vnitřní objekty ARM pomocí `_nf` příponu ("žádná ohrazení") nefungují jako překážku paměti.  
-  
- Na procesorech Intel, které podporují pokyny Elize zámek hardwaru (HLE), vnitřní objekty s `_HLEAcquire` a `_HLERelease` přípony zahrnují nápovědu pro procesor, který může zrychlit výkonu odstraněním kroku zámek zápisu v hardwaru. Pokud tyto vnitřní objekty jsou volány u procesorů, které nepodporují HLE, doporučení se ignoruje.  
-  
- Tyto rutiny jsou dostupné jenom jako vnitřní funkce.  
-  
-**Specifické pro END Microsoft**  
-  
-## <a name="see-also"></a>Viz také  
- [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   
- [Konflikty s kompilátorem x86](../build/conflicts-with-the-x86-compiler.md)
+[in] Bitová pozice pro testování.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Původní hodnota bit na určené pozici `b`.
+
+## <a name="requirements"></a>Požadavky
+
+|Vnitřní|Architektura|Záhlaví|
+|---------------|------------------|------------|
+|`_interlockedbittestandreset`|x86, ARM, x64|\<intrin.h >|
+|`_interlockedbittestandreset_acq`, `_interlockedbittestandreset_nf`, `_interlockedbittestandreset_rel`|ARM|\<intrin.h >|
+|`_interlockedbittestandreset_HLEAcquire`, `_interlockedbittestandreset_HLERelease`|x86, x64|\<immintrin.h >|
+|`_interlockedbittestandreset64`|x64|\<intrin.h >|
+|`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|x64|\<immintrin.h >|
+
+## <a name="remarks"></a>Poznámky
+
+Na x86 a x64 procesory, použijte tyto vnitřní objekty `lock btr` instrukce, která čte a nastaví zadané bit na hodnotu nula atomické operace.
+
+Na procesorech ARM, pomocí vnitřní objekty s `_acq` a `_rel` přípony pro získání a uvolnění sémantiky, jako například na začátku a konci kritický oddíl. Vnitřní objekty ARM pomocí `_nf` příponu ("žádná ohrazení") nefungují jako překážku paměti.
+
+Na procesorech Intel, které podporují pokyny Elize zámek hardwaru (HLE), vnitřní objekty s `_HLEAcquire` a `_HLERelease` přípony zahrnují nápovědu pro procesor, který může zrychlit výkonu odstraněním kroku zámek zápisu v hardwaru. Pokud tyto vnitřní objekty jsou volány u procesorů, které nepodporují HLE, doporučení se ignoruje.
+
+Tyto rutiny jsou dostupné jenom jako vnitřní funkce.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také
+
+[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
+[Konflikty s kompilátorem x86](../build/conflicts-with-the-x86-compiler.md)

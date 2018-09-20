@@ -1,5 +1,5 @@
 ---
-title: Graf hierarchie | Microsoft Docs
+title: Graf hierarchie | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,29 +18,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f2e3661f2c0fee43a8e8b25b9cf90b105e84308
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50ad8fe96a1c18f45dbc118e29c73453f806f110
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345160"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376534"
 ---
 # <a name="hierarchy-chart"></a>Graf hierarchie
-Následující obrázek ilustruje třídy odvozené od třídy MFC `CObject`:  
-  
- ![Třídy odvozené z objektu CObject](../mfc/media/mfc_heirarchy_chart1of3.png "mfc_heirarchy_chart1of3")  
-  
- Následující obrázek ilustruje třídy odvozené od třídy MFC `CWnd` a `CCmdTarget`:  
-  
- ![Třídy odvozené od CCmdTarget nebo CWnd](../mfc/media/mfc_heirarchy_chart2of3.png "mfc_heirarchy_chart2of3")  
-  
- Následující obrázek ilustruje není odvozen od třídy MFC `CObject`:  
-  
- ![Třídy není odvozen z objektu CObject](../mfc/media/mfc_heirarchy_chart3of3.png "mfc_heirarchy_chart3of3")  
-  
- Dokončení grafu si můžete stáhnout z následujícího umístění: [MFC hierarchie grafy Stáhnout](https://aka.ms/hxgg8e).  
-  
-## <a name="see-also"></a>Viz také  
- [Kategorie grafů hierarchie](../mfc/hierarchy-chart-categories.md)   
- [Přehled třídy](../mfc/class-library-overview.md)
+
+Následující obrázek představuje třídy MFC odvozené od `CObject`:
+
+![Třídy odvozené z objektu CObject](../mfc/media/mfc_heirarchy_chart1of3.png "mfc_heirarchy_chart1of3")
+
+Následující obrázek představuje třídy MFC odvozené od `CWnd` a `CCmdTarget`:
+
+![Třídy odvozené z třídy CCmdTarget nebo CWnd](../mfc/media/mfc_heirarchy_chart2of3.png "mfc_heirarchy_chart2of3")
+
+Následující obrázek představuje třídy MFC neodvozené od `CObject`:
+
+![Třídy Neodvozených ze třídy CObject](../mfc/media/mfc_heirarchy_chart3of3.png "mfc_heirarchy_chart3of3")
+
+Celý diagram můžete stáhnout z následujícího umístění: [stáhnout grafech hierarchie MFC](https://aka.ms/hxgg8e).
+
+## <a name="see-also"></a>Viz také
+
+[Kategorie grafů hierarchie](../mfc/hierarchy-chart-categories.md)<br/>
+[Přehled tříd](../mfc/class-library-overview.md)
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eeaaedeb4c3806af888f36e62c8fa8e54c47eb46
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d5b50c57a80b2a9aca2681c3ade3c6d4fc3568e0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595691"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385986"
 ---
 # <a name="creatormapactivationid-data-member"></a>CreatorMap::activationId – datový člen
 
@@ -39,10 +39,10 @@ union {
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor CLSID*  
+*identifikátor CLSID*<br/>
 Identifikátor rozhraní.
 
-*getRuntimeName*  
+*getRuntimeName*<br/>
 Funkce, která načte název modulu runtime Windows objektu.
 
 ## <a name="remarks"></a>Poznámky
@@ -57,5 +57,5 @@ Představuje ID objektu, který je identifikován classic ID třídy modelu COM 
 
 ## <a name="see-also"></a>Viz také
 
-[CreatorMap – struktura](../windows/creatormap-structure.md)  
+[CreatorMap – struktura](../windows/creatormap-structure.md)<br/>
 [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

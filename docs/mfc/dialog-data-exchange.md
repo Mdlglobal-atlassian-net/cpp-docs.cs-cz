@@ -1,5 +1,5 @@
 ---
-title: Výměna dat dialogových oken | Microsoft Docs
+title: Výměna dat dialogových oken | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,37 +29,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2385efcef9949eab60b1542b2039e3ff2ac80e38
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ae80d7e74c44367b608329ee86633fef6cb510b6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930856"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405720"
 ---
 # <a name="dialog-data-exchange"></a>Výměna dat dialogových oken
-Pokud chcete použít tento mechanismus DDX, nastavíte počáteční hodnoty dialogového okna objektu členské proměnné, obvykle v vaší `OnInitDialog` obslužná rutina nebo konstruktor dialogové okno. Okamžitě předtím, než se zobrazí dialogové okno, v rámci DDX Frameworku přenese hodnoty členské proměnné ovládacích prvků v dialogovém okně jejich umístění při samotné se zobrazí dialogové okno v reakci na `DoModal` nebo `Create`. Výchozí implementaci `OnInitDialog` v `CDialog` volání `UpdateData` funkce člena třídy `CWnd` k chybě při inicializaci ovládacích prvků v dialogovém okně.  
-  
- Shodný mechanismus přenosu hodnoty z ovládacích prvků do proměnné členů když uživatel klikne na tlačítko OK (nebo vždy, když zavoláte `UpdateData` – členská funkce s argumentem **TRUE**). Mechanismus ověřování dat dialogu ověří všechny datové položky, pro které jste zadali ověřovacích pravidel.  
-  
- Následující obrázek ukazuje výměna dat dialogových oken.  
-  
- ![Výměna dat dialogových oken pole](../mfc/media/vc379d1.gif "vc379d1")  
-Výměna dat dialogových oken  
-  
- `UpdateData` funguje v obou směrech podle specifikace **BOOL** předán parametr. K provedení systému exchange, `UpdateData` nastaví `CDataExchange` objekt a volání vlastní třídy dialogového okna přepsat z `CDialog`na `DoDataExchange` – členská funkce. `DoDataExchange` argument typu trvá `CDataExchange`. `CDataExchange` Byl předán objekt `UpdateData` představuje kontext systému exchange, které definujete takové informace jako směr exchange.  
-  
- Při přepsání vy (nebo kód průvodce) `DoDataExchange`, zadejte volání funkce jedné DDX na každého člena dat (řízení). Jednotlivé funkce DDX umí vyměňovat data v obou směrech na základě kontextu poskytl `CDataExchange` argument předaný vaší `DoDataExchange` podle `UpdateData`.  
-  
- MFC poskytuje mnoho funkcí DDX pro různé druhy exchange. Následující příklad ukazuje `DoDataExchange` přepsání, ve které dvě DDX se nazývají funkce a jednu funkci DDV:  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#49](../mfc/codesnippet/cpp/dialog-data-exchange_1.cpp)]  
-  
- `DDX_` a `DDV_` mapování dat jsou řádky. Ukázka DDX a DDV funkce zobrazí jsou pro ovládací prvek zaškrtávací políčko a ovládací prvek textové pole, v uvedeném pořadí.  
-  
- Pokud uživatel zruší modální dialogové `OnCancel` – členská funkce ukončí dialogové okno a `DoModal` vrátí hodnotu **IDCANCEL**. V takovém případě žádná data se vyměňují mezi dialogové okno a objektu dialogového okna.  
-  
-## <a name="see-also"></a>Viz také  
- [Dialogové okno Data výměna a ověřování](../mfc/dialog-data-exchange-and-validation.md)   
- [Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)   
- [Ověřování dat dialogového okna](../mfc/dialog-data-validation.md)
+
+Pokud použijete mechanismus DDX, nastavíte počáteční hodnoty dialogového okna proměnné členů objektu, obvykle v vaše `OnInitDialog` obslužné rutiny nebo konstruktor dialogového okna. Bezprostředně před zobrazením dialogového okna, je v rámci DDX Frameworku přenese hodnoty proměnné členů k ovládacím prvkům v dialogovém okně, ve kterém se zobrazují při samotné se zobrazí dialogové okno v reakci na `DoModal` nebo `Create`. Výchozí implementace `OnInitDialog` v `CDialog` volání `UpdateData` členské funkce třídy `CWnd` inicializovat ovládací prvky v dialogovém okně.
+
+Stejný mechanismus přenáší hodnoty z ovládacích prvků do proměnné členů když uživatel klikne na tlačítko OK (nebo když voláte `UpdateData` členskou funkci s argumentem **TRUE**). Mechanismus ověřování dat dialogového okna ověří všechny datové položky, pro které jste zadali ověřovací pravidla.
+
+Následující obrázek znázorňuje výměna dat dialogových oken.
+
+![Výměna dat dialogových oken pole](../mfc/media/vc379d1.gif "vc379d1") výměna dat dialogových oken
+
+`UpdateData` funguje v obou směrech, jak jsou určené **BOOL** předán parametr. K provedení výměny `UpdateData` nastaví `CDataExchange` objektu a volání vlastní třídy dialogového okna přepsání `CDialog`společnosti `DoDataExchange` členskou funkci. `DoDataExchange` přebírá argument typu `CDataExchange`. `CDataExchange` Předán objekt `UpdateData` představuje místní exchange, definování takové informace jako směr exchange.
+
+Když jste (nebo Průvodce kódem) přepsat `DoDataExchange`, zadáte volání funkce jedné DDX na datový člen (řízení). Každá funkce DDX ví, jak vyměňovat data v obou směrech na základě kontextu poskytnutých `CDataExchange` argument předaný do vaší `DoDataExchange` podle `UpdateData`.
+
+Knihovna MFC poskytuje mnoho funkcí DDX pro různé druhy exchange. Následující příklad ukazuje `DoDataExchange` přepsání, ve které dvě DDX jsou volány funkce a DDV funkce:
+
+[!code-cpp[NVC_MFCControlLadenDialog#49](../mfc/codesnippet/cpp/dialog-data-exchange_1.cpp)]
+
+`DDX_` a `DDV_` řádky jsou data mapování. Ukázka DDX a DDV funkce uvedené jsou pro ovládací prvek zaškrtávací políčko a ovládací prvek textové pole.
+
+Pokud uživatel zruší modální dialogové okno, `OnCancel` členskou funkci ukončí dialogové okno a `DoModal` vrátí hodnotu **IDCANCEL**. V takovém případě žádná data se vyměňují mezi dialogových oken a objektu dialogového okna.
+
+## <a name="see-also"></a>Viz také
+
+[Výměna a ověřování dat dialogových oken](../mfc/dialog-data-exchange-and-validation.md)<br/>
+[Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[Ověřování dat dialogového okna](../mfc/dialog-data-validation.md)
 

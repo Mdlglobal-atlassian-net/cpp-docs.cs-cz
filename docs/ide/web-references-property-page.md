@@ -19,35 +19,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ff2a9ccec1dac6be41727b4a829bf4e63669f40
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 568dfc1b925254bec792138c59ff7f1b3e19cb28
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699644"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442068"
 ---
 # <a name="web-references-property-page"></a>Stránka vlastností webových odkazů
-**Webové odkazy** stránku vlastností určuje, jak budou generovány třídu proxy XML webové služby. Pokud chcete přidat webový odkaz na váš projekt se vygeneruje třídu proxy XML webové služby.  
-  
- **Webové odkazy** stránka vlastností obsahuje následující vlastnosti:  
-  
+
+**Webové odkazy** stránku vlastností určuje, jak budou generovány třídu proxy XML webové služby. Pokud chcete přidat webový odkaz na váš projekt se vygeneruje třídu proxy XML webové služby.
+
+**Webové odkazy** stránka vlastností obsahuje následující vlastnosti:
+
 - **Výstupní soubor**
 
-   Název souboru obsahujícího třídu proxy XML webové služby.  
-  
+   Název souboru obsahujícího třídu proxy XML webové služby.
+
 - **Potlačit úvodní nápis**
 
-   Nejsou zobrazeny na banner pro Web Services Description Language Tool (Wsdl.exe).  
-  
+   Nejsou zobrazeny na banner pro Web Services Description Language Tool (Wsdl.exe).
+
 - **Namespace**
 
-   Určuje název vygenerovaný webový proxy server.  
-  
+   Určuje název vygenerovaný webový proxy server.
+
 - **Další odkazy**
 
-   Určuje další knihovny DLL odkazuje proxy knihovny DLL.  
-  
-Informace o tom, jak získat přístup **webový odkaz** stránky vlastností naleznete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Stránky vlastností](../ide/property-pages-visual-cpp.md)
+   Určuje další knihovny DLL odkazuje proxy knihovny DLL.
+
+Informace o tom, jak získat přístup **webový odkaz** stránky vlastností naleznete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).
+
+## <a name="see-also"></a>Viz také
+
+[Stránky vlastností](../ide/property-pages-visual-cpp.md)

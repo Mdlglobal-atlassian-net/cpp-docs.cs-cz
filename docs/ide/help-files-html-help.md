@@ -1,5 +1,5 @@
 ---
-title: Soubory (Nápověda jazyka HTML) nápovědy | Microsoft Docs
+title: Soubory nápovědy (Nápověda jazyka HTML) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,25 +14,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d180fe4f9cf1baf26b27423ffda975bfe0fe85ba
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 04d3171f1bba6b803c68b7a3b753cc70825671bb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "33325072"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383542"
 ---
 # <a name="help-files-html-help"></a>Soubory nápovědy (Nápověda jazyka HTML)
-Následující soubory se vytvoří při přidání HTML – Nápověda typu nápovědy do aplikace tak, že vyberete **Kontextová nápověda** zaškrtávací políčko a potom vyberete **formát HTML – Nápověda** v [Upřesňující funkce](../mfc/reference/advanced-features-mfc-application-wizard.md) stránky Průvodce aplikací MFC.  
-  
-|Název souboru|Umístění adresáře|Umístění v Průzkumníku řešení|Popis|  
-|---------------|------------------------|--------------------------------|-----------------|  
-|*Projname*hhp|*Projname*\hlp|soubory nápovědy HTML|Soubor projektu nápovědy. Obsahuje data potřebná k zkompilovat soubory nápovědy do souboru .hxs nebo soubor CHM.|  
-|*Projname*.hhk|*Projname*\hlp|soubory nápovědy HTML|Obsahuje index témat nápovědy.|  
-|*Projname*.hhc|*Projname*\hlp|soubory nápovědy HTML|Obsah nápovědy projektu.|  
-|Makehtmlhelp.bat|*Projname*|Zdrojové soubory|Používá systém pro sestavení projektu nápovědy během kompilace projektu.|  
-|Afxcore.htm|*Projname*\hlp|Témata nápovědy HTML|Obsahuje standardní témata nápovědy pro standardní příkazy MFC a objektů na obrazovce. Přidáte vlastní témata nápovědy k tomuto souboru.|  
-|Afxprint.htm|*Projname*\hlp|Témata nápovědy HTML|Obsahuje témata nápovědy pro příkazy tisku.|  
-|*.jpg; \*.gif|*Projname*\hlp\Images|Zdrojové soubory|Obsahovat bitových kopií pro jiné témata nápovědy.|  
-  
-## <a name="see-also"></a>Viz také  
- [Typy souborů vytvořených pro projekty Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)
+
+Následující soubory jsou vytvořeny při přidání typu nápovědy HTML nápovědy do vaší aplikace tak, že vyberete **kontextové nápovědy** zaškrtávací políčko a pak vyberete **formát nápovědy HTML** v [Rozšířené funkce](../mfc/reference/advanced-features-mfc-application-wizard.md) stránky Průvodce aplikací knihovny MFC.
+
+|Název souboru|Umístění adresáře|Umístění v Průzkumníku řešení|Popis|
+|---------------|------------------------|--------------------------------|-----------------|
+|*Název_projektu*hhp|*Název_projektu*\hlp|soubory nápovědy HTML|Soubor projektu nápovědy. Obsahuje data potřebná pro kompilaci soubory nápovědy do souboru .hxs nebo soubor CHM.|
+|*Projname*.hhk|*Název_projektu*\hlp|soubory nápovědy HTML|Obsahuje index témat nápovědy.|
+|*Název_projektu*.hhc|*Název_projektu*\hlp|soubory nápovědy HTML|Obsah nápovědy projektu.|
+|Makehtmlhelp.bat|*Projname*|Zdrojové soubory|Používá systém sestavení projektu nápovědy při kompilaci projektu.|
+|Afxcore.htm|*Název_projektu*\hlp|Témata nápovědy HTML|Obsahuje standardní témata nápovědy pro standardní příkazy knihovny MFC a objektů na obrazovce. Přidáte vlastní témata nápovědy k tomuto souboru.|
+|Afxprint.htm|*Název_projektu*\hlp|Témata nápovědy HTML|Obsahuje témata nápovědy pro příkazy pro tisk.|
+|*.jpg; \*.gif|*Název_projektu*\hlp\Images|Zdrojové soubory|Obsahují obrázky pro různé témata nápovědy.|
+
+## <a name="see-also"></a>Viz také
+
+[Typy souborů vytvořených pro projekty Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)

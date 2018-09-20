@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab1f2c16f7329f455fbd1fea525b17c9cc433a36
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9487ba4e05a0094d852b0db0c9c39009c027dc9e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593152"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423738"
 ---
 # <a name="implementshelpercancastto-method"></a>ImplementsHelper::CanCastTo – metoda
 
@@ -44,13 +44,13 @@ HRESULT CanCastTo(
 
 ### <a name="parameters"></a>Parametry
 
-*riid*  
+*riid*<br/>
 Odkaz na identifikátor rozhraní.
 
-*ppv*  
+*ppv*<br/>
 Pokud je tato operace úspěšná, ukazatel na rozhraní určené *riid* nebo *iid*.
 
-*identifikátor IID*  
+*identifikátor IID*<br/>
 Odkaz na identifikátor rozhraní.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -69,5 +69,5 @@ Získá ukazatel na ID zadané rozhraní.
 
 ## <a name="see-also"></a>Viz také
 
-[ImplementsHelper – struktura](../windows/implementshelper-structure.md)  
+[ImplementsHelper – struktura](../windows/implementshelper-structure.md)<br/>
 [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

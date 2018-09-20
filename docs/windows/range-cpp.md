@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4f84684c5d8f8feb8595da628976c90a2593c96
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 80b8546e461930ac184e0f5b3ed2b34499cc8d3c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201348"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384219"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -39,10 +39,10 @@ Určuje rozsah povolených hodnot pro argumenty nebo pole, jejichž hodnoty jsou
 
 ### <a name="parameters"></a>Parametry
 
-*Nízká*  
+*Nízká*<br/>
 Hodnota nízkého rozsahu.
 
-*Vysoká*  
+*Vysoká*<br/>
 Hodnota vysokého rozsahu.
 
 ## <a name="remarks"></a>Poznámky
@@ -80,7 +80,7 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](..
 
 ## <a name="see-also"></a>Viz také
 
-[IDL – atributy](../windows/idl-attributes.md)  
-[Atributy metody](../windows/method-attributes.md)  
-[Atributy parametru](../windows/parameter-attributes.md)  
+[IDL – atributy](../windows/idl-attributes.md)<br/>
+[Atributy metody](../windows/method-attributes.md)<br/>
+[Atributy parametru](../windows/parameter-attributes.md)<br/>
 [Atributy datového členu](../windows/data-member-attributes.md)  

@@ -1,5 +1,5 @@
 ---
-title: 'Ovládací prvky MFC ActiveX: Přístup k vedlejším vlastnostem | Microsoft Docs'
+title: 'MFC – ovládací prvky ActiveX: Přístup k vedlejším vlastnostem | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,55 +15,57 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd3376e19d7780922102240ae1bfaa1b4eb89b2b
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 8aaa379513695f3cd39589a1009e3a157d957761
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931720"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407896"
 ---
 # <a name="mfc-activex-controls-accessing-ambient-properties"></a>MFC – ovládací prvky ActiveX: Přístup k vedlejším vlastnostem
-Tento článek popisuje, jak ovládacího prvku ActiveX má přístup k vedlejším vlastnostem svého kontejneru ovládacího prvku.  
-  
- Ovládací prvek můžete získat informace o jeho kontejneru přístup k vedlejším vlastnostem kontejneru. Tyto vlastnosti vystavit visual charakteristiky, jako je například barva pozadí kontejneru, aktuální písmo použité k kontejneru a provozní charakteristiky, jako jestli kontejneru je aktuálně v režimu uživatele nebo návrháře. Ovládací prvek lze přizpůsobit její vzhled a chování konkrétním kontejneru, ve kterém je integrovaný vedlejším vlastnostem. Však ovládacího prvku by nikdy Předpokládejme, že jeho kontejner bude podporovat všechny konkrétní vedlejším vlastnosti. Některé kontejnery ve skutečnosti nemusí podporovat všechny vedlejším vlastnostem vůbec. Chybí vedlejší vlastnost musí ovládacího prvku předpokládají přiměřené výchozí hodnotu.  
-  
- Pro přístup k vedlejším vlastnost, ujistěte se, volání [COleControl::GetAmbientProperty](../mfc/reference/colecontrol-class.md#getambientproperty). Tato funkce očekává ID odesílání pro vlastnost vedlejším jako první parametr (soubor OLECTL. Odesílání ID pro standardní sadu vedlejším vlastnostem definuje H).  
-  
- Parametry `GetAmbientProperty` funkce jsou odesílání ID, variant značku označující typ očekávaný vlastností a ukazatel na paměti, kde má být vrácen hodnota. Typ dat, na který odkazuje tento ukazatel se bude lišit v závislosti na typu variant značky. Funkce vrátí hodnotu **TRUE** Pokud kontejner podporuje vlastnost, jinak vrátí **FALSE**.  
-  
- Následující příklad kódu získá hodnotu vedlejším vlastnosti s názvem "Uživatelského režimu." Pokud je vlastnost nepodporuje kontejneru, výchozí hodnota je **TRUE** se předpokládá, že:  
-  
- [!code-cpp[NVC_MFC_AxUI#30](../mfc/codesnippet/cpp/mfc-activex-controls-accessing-ambient-properties_1.cpp)]  
-  
- Pro usnadnění vaší práce `COleControl` poskytuje pomocných funkcí, které přístup k mnoha běžně používané vedlejším vlastnostem a vracet vhodné výchozí nastavení vlastnosti nejsou k dispozici. Tyto pomocné funkce jsou následující:  
-  
--   [COleControl::AmbientBackColor](../mfc/reference/colecontrol-class.md#ambientbackcolor)  
-  
--   [AmbientDisplayName](../mfc/reference/colecontrol-class.md#ambientdisplayname)  
-  
--   [AmbientFont](../mfc/reference/colecontrol-class.md#ambientfont)  
-  
+
+Tento článek popisuje, jak ovládací prvek ActiveX lze získat přístup k vedlejším vlastnostem jeho kontejneru ovládacího prvku.
+
+Ovládací prvek můžete získat informace o jeho kontejneru přístup k vedlejším vlastnostem kontejneru. Tyto vlastnosti zpřístupnit vizuální vlastnosti, například barvu pozadí kontejneru, aktuální písmo použité kontejneru a provozních charakteristik, například, jestli je kontejner právě v uživatelském režimu nebo režimu návrháře. Ovládací prvek můžete přizpůsobit její vzhled a chování pro konkrétní kontejner, ve kterém se vloží vedlejším vlastnostem. Nicméně ovládací prvek by měl Nikdy nepředpokládejte, že její kontejner bude podporovat všechny konkrétní vedlejší vlastnost. Některé kontejnery ve skutečnosti nemusí podporovat všechny vedlejším vlastnostem vůbec. Chybí vlastnost ambient ovládací prvek by měl předpokládat rozumnou výchozí hodnotu.
+
+Pro přístup k vlastnosti ambient. Ujistěte se, volání [COleControl::GetAmbientProperty](../mfc/reference/colecontrol-class.md#getambientproperty). Tato funkce očekává, že dispatch ID pro vlastnost okolí jako první parametr (soubor OLECTL. Dispatch ID pro standardní sadu vedlejším vlastnostem definuje H).
+
+Parametry `GetAmbientProperty` funkce jsou Identifikátor odeslání variant značky označující očekávaný typ vlastnosti a ukazatel na paměť, kde má být vrácen hodnoty. Typ dat, na který odkazuje tento ukazatel se liší v závislosti na typu variant značky. Funkce vrátí **TRUE** Pokud kontejner podporuje vlastnost, v opačném případě vrátí **FALSE**.
+
+Následující příklad kódu získá hodnotu okolí vlastnosti s názvem "Přesměrovač." Pokud vlastnost není podporována v kontejneru, výchozí hodnota **TRUE** se předpokládá, že:
+
+[!code-cpp[NVC_MFC_AxUI#30](../mfc/codesnippet/cpp/mfc-activex-controls-accessing-ambient-properties_1.cpp)]
+
+Pro usnadnění práce `COleControl` poskytuje pomocné funkce, které přístup k mnoha běžně používaných vlastnosti prostředí a vracet vhodné výchozí nastavení vlastnosti nejsou k dispozici. Tyto pomocné funkce jsou následující:
+
+- [COleControl::AmbientBackColor](../mfc/reference/colecontrol-class.md#ambientbackcolor)
+
+- [AmbientDisplayName](../mfc/reference/colecontrol-class.md#ambientdisplayname)
+
+- [AmbientFont](../mfc/reference/colecontrol-class.md#ambientfont)
+
     > [!NOTE]
-    >  Volající musí volat `Release( )` na vrácený písmo.  
-  
--   [AmbientForeColor](../mfc/reference/colecontrol-class.md#ambientforecolor)  
-  
--   [AmbientLocaleID](../mfc/reference/colecontrol-class.md#ambientlocaleid)  
-  
--   [AmbientScaleUnits](../mfc/reference/colecontrol-class.md#ambientscaleunits)  
-  
--   [AmbientTextAlign](../mfc/reference/colecontrol-class.md#ambienttextalign)  
-  
--   [AmbientUserMode](../mfc/reference/colecontrol-class.md#ambientusermode)  
-  
--   [AmbientUIDead](../mfc/reference/colecontrol-class.md#ambientuidead)  
-  
--   [AmbientShowHatching](../mfc/reference/colecontrol-class.md#ambientshowhatching)  
-  
--   [AmbientShowGrabHandles](../mfc/reference/colecontrol-class.md#ambientshowgrabhandles)  
-  
- Pokud se změní hodnota vedlejším vlastnosti (prostřednictvím některé akce kontejneru), `OnAmbientPropertyChanged` členské funkce ovládacího prvku. Člen funkci pro zpracování toto oznámení přepište. Parametr pro `OnAmbientPropertyChanged` je odesílání ID ovlivněných vedlejší vlastnost. Hodnota toto ID odesílání může být DISPID_UNKNOWN, což znamená, že jeden nebo více vedlejším vlastnostem se změnila, ale není k dispozici informace o tom, které situace měla vliv na vlastnosti.  
-  
-## <a name="see-also"></a>Viz také  
- [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)
+    >  Volající musí volat `Release( )` na vrácené písma.
+
+- [AmbientForeColor](../mfc/reference/colecontrol-class.md#ambientforecolor)
+
+- [AmbientLocaleID](../mfc/reference/colecontrol-class.md#ambientlocaleid)
+
+- [AmbientScaleUnits](../mfc/reference/colecontrol-class.md#ambientscaleunits)
+
+- [AmbientTextAlign](../mfc/reference/colecontrol-class.md#ambienttextalign)
+
+- [AmbientUserMode](../mfc/reference/colecontrol-class.md#ambientusermode)
+
+- [AmbientUIDead](../mfc/reference/colecontrol-class.md#ambientuidead)
+
+- [AmbientShowHatching](../mfc/reference/colecontrol-class.md#ambientshowhatching)
+
+- [AmbientShowGrabHandles](../mfc/reference/colecontrol-class.md#ambientshowgrabhandles)
+
+Pokud se změní hodnotu k vlastnosti ambient. (přes určitou akci kontejneru), `OnAmbientPropertyChanged` volat členské funkce ovládacího prvku. Potlačí tuto členskou funkci pro zpracování takové oznámení. Parametr `OnAmbientPropertyChanged` je ID odbavení ovlivněné vedlejší vlastnost. Hodnota tuto hodnotu dispatch ID může být DISPID_UNKNOWN, což znamená, že došlo ke změně vlastnosti jednoho nebo více prostředí, ale není k dispozici informace o tom, které měla vliv na vlastnosti.
+
+## <a name="see-also"></a>Viz také
+
+[MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)
 

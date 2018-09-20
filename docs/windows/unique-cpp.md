@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 868dd67a6f1e3e9e2e7f12e32fd7b2d8f5cff419
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1b3e6d0193319539f37182dc675553229bb4377b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195276"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426429"
 ---
 # <a name="unique-c"></a>unique (C++)
 
@@ -57,6 +57,6 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](..
 
 ## <a name="see-also"></a>Viz také
 
-[IDL – atributy](../windows/idl-attributes.md)  
-[Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[IDL – atributy](../windows/idl-attributes.md)<br/>
+[Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [Atributy parametru](../windows/parameter-attributes.md)  

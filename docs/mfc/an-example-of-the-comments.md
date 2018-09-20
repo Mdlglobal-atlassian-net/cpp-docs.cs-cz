@@ -1,5 +1,5 @@
 ---
-title: Příklad komentářů | Microsoft Docs
+title: Příklad komentářů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4aa6e0f0b69964ac8cadc3518e0540f4e51545fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 681c927a7e0e7960cb483e21ed2ff1e2e4b3c5f5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340881"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442341"
 ---
 # <a name="an-example-of-the-comments"></a>Příklad komentářů
-Následující částečný seznam třída `CChildFrame` používá většina standardní komentáře, které využívá MFC při jeho tříd pokus dělit členy třídy způsobů, jak se používají:  
-  
- [!code-cpp[NVC_MFCListView#5](../atl/reference/codesnippet/cpp/an-example-of-the-comments_1.h)]  
-  
- Tyto komentáře konzistentně označte části deklarace třídy, které obsahují podobné typy členů tříd. Mějte na paměti, že jsou MFC konvence, není nastavena pravidla.  
-  
-## <a name="see-also"></a>Viz také  
- [Použití zdrojových souborů MFC](../mfc/using-the-mfc-source-files.md)   
- [Implementační komentář](../mfc/decrement-implementation-comment.md)   
- [/ Komentář ke konstruktorům](../mfc/decrement-constructors-comment.md)   
- [Komentář k atributům](../mfc/decrement-attributes-comment.md)   
- [Komentář k operacím](../mfc/decrement-operations-comment.md)   
- [Komentář k Přepisovatelným](../mfc/decrement-overridables-comment.md)
+
+Následující seznam částečné třídy `CChildFrame` používá většina standardních komentářů, které využívá MFC v jeho třídy členy třídy dělit způsoby, jak se používají:
+
+[!code-cpp[NVC_MFCListView#5](../atl/reference/codesnippet/cpp/an-example-of-the-comments_1.h)]
+
+Tyto komentáře konzistentně označte části deklarace třídy, které obsahují podobné typy členů třídy. Mějte na paměti, že jde o konvence knihovny MFC, není nastavení pravidel.
+
+## <a name="see-also"></a>Viz také
+
+[Použití zdrojových souborů MFC](../mfc/using-the-mfc-source-files.md)<br/>
+[/ / Implementační komentář](../mfc/decrement-implementation-comment.md)<br/>
+[/ Komentář ke konstruktorům](../mfc/decrement-constructors-comment.md)<br/>
+[Komentář k atributům](../mfc/decrement-attributes-comment.md)<br/>
+[Komentář k operacím](../mfc/decrement-operations-comment.md)<br/>
+[Komentář k Přepisovatelným](../mfc/decrement-overridables-comment.md)
 

@@ -1,5 +1,5 @@
 ---
-title: 'TN044: Podpora MFC pro znaky DBCS | Microsoft Docs'
+title: 'TN044: Podpora MFC pro znaky DBCS | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 280c008bf6d0f82149b382da2ca6e3d20cb28846
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 524e5dd86560afd660ebb2352b1c92111ddd72d5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380302"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442003"
 ---
 # <a name="tn044-mfc-support-for-dbcs"></a>TN044: Podpora MFC pro znaky DBCS
-Tato technická Poznámka popsané podpory v prostředí MFC "dvoubajtové znakové sady" nebo DBCS. Tato informace, jakož i informace o MFC je podpora pro UNICODE je teď dostupná v *knihovny tříd*.  
-  
-## <a name="see-also"></a>Viz také  
- [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)   
- [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
+
+Tato technická Poznámka popisuje podporu knihovny MFC "dvoubajtové znakové sady" nebo DBCS. Tato informace, jakož i informace o knihovně MFC, podpora kódování UNICODE je nyní k dispozici v *knihovny tříd*.
+
+## <a name="see-also"></a>Viz také
+
+[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
+[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
 

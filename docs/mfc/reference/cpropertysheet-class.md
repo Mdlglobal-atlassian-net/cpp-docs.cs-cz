@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2e9e13f7b5838cb13497dd874f7f0cf42f34e98
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6ec12275291321751c539d095c60fa9dabffa2b7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200143"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445175"
 ---
 # <a name="cpropertysheet-class"></a>Cpropertysheet – třída
 
@@ -181,7 +181,7 @@ void AddPage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parametry
 
-*Fyzická_stránka*  
+*Fyzická_stránka*<br/>
 Odkazuje na stránku chcete přidat do seznamu vlastností. Nemůže mít hodnotu NULL.
 
 ### <a name="remarks"></a>Poznámky
@@ -237,25 +237,25 @@ void Construct(
 
 ### <a name="parameters"></a>Parametry
 
-*nIDCaption*  
+*nIDCaption*<br/>
 ID popisku se použije pro seznam vlastností.
 
-*pParentWnd*  
+*pParentWnd*<br/>
 Ukazatel do nadřazeného okna vlastností. Pokud má hodnotu NULL, bude nadřazené okno hlavní okno aplikace.
 
-*iSelectPage*  
+*iSelectPage*<br/>
 Index, který bude zpočátku v horní části stránky. Výchozí hodnota je první stránka Přidat do listu.
 
-*pszCaption*  
+*pszCaption*<br/>
 Ukazatel na řetězec, který obsahuje popisek, který má být použit pro seznam vlastností. Nemůže mít hodnotu NULL.
 
-*hbmWatermark*  
+*hbmWatermark*<br/>
 Popisovač rastrový obrázek vodoznaku stránky vlastností.
 
-*hpalWatermark*  
+*hpalWatermark*<br/>
 Popisovač na paletě rastrový obrázek vodoznaku a/nebo rastrový obrázek záhlaví.
 
-*hbmHeader*  
+*hbmHeader*<br/>
 Popisovač rastrový obrázek záhlaví stránky vlastností.
 
 ### <a name="remarks"></a>Poznámky
@@ -312,25 +312,25 @@ CPropertySheet(
 
 ### <a name="parameters"></a>Parametry
 
-*nIDCaption*  
+*nIDCaption*<br/>
 ID popisku se použije pro seznam vlastností.
 
-*pParentWnd*  
+*pParentWnd*<br/>
 Body do nadřazeného okna vlastností. Pokud má hodnotu NULL, bude nadřazené okno hlavní okno aplikace.
 
-*iSelectPage*  
+*iSelectPage*<br/>
 Index, který bude zpočátku v horní části stránky. Výchozí hodnota je první stránka Přidat do listu.
 
-*pszCaption*  
+*pszCaption*<br/>
 Odkazuje na řetězec, který obsahuje popisek, který má být použit pro seznam vlastností. Nemůže mít hodnotu NULL.
 
-*hbmWatermark*  
+*hbmWatermark*<br/>
 Popisovač vlastností rastrového obrázku na pozadí.
 
-*hpalWatermark*  
+*hpalWatermark*<br/>
 Popisovač na paletě rastrový obrázek vodoznaku a/nebo rastrový obrázek záhlaví.
 
-*hbmHeader*  
+*hbmHeader*<br/>
 Popisovač rastrový obrázek záhlaví stránky vlastností.
 
 ### <a name="remarks"></a>Poznámky
@@ -357,13 +357,13 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 
 ### <a name="parameters"></a>Parametry
 
-*pParentWnd*  
+*pParentWnd*<br/>
 Body do nadřazeného okna. Pokud má hodnotu NULL, nadřazený prvek je ploše.
 
-*dwStyle*  
+*dwStyle*<br/>
 Styly oken pro seznam vlastností. Úplný seznam dostupných stylů, najdete v části [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*dwExStyle*  
+*dwExStyle*<br/>
 Rozšířené styly oken pro seznam vlastností. Úplný seznam dostupných stylů, najdete v části [rozšířené styly oken](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -445,7 +445,7 @@ void EnableStackedTabs(BOOL bStacked);
 
 ### <a name="parameters"></a>Parametry
 
-*bStacked*  
+*bStacked*<br/>
 Označuje, zda jsou povoleny skládaný karty v seznamu vlastností. Zakázat skládaný řádky značek nastavením *bStacked* na hodnotu FALSE.
 
 ### <a name="remarks"></a>Poznámky
@@ -468,7 +468,7 @@ void EndDialog(int nEndID);
 
 ### <a name="parameters"></a>Parametry
 
-*nEndID*  
+*nEndID*<br/>
 Identifikátor, který se použije jako návratovou hodnotu vlastností.
 
 ### <a name="remarks"></a>Poznámky
@@ -527,7 +527,7 @@ CPropertyPage* GetPage(int nPage) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nPage*  
+*nPage*<br/>
 Index požadovanou stránku začínajícím hodnotou 0. Musí být mezi 0 a menší než počet stránek v seznamu vlastností (včetně).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -564,7 +564,7 @@ int GetPageIndex(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parametry
 
-*Fyzická_stránka*  
+*Fyzická_stránka*<br/>
 Odkazuje na stránku s indexem nalezen. Nemůže mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -623,7 +623,7 @@ void MapDialogRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*  
+*lprect –*<br/>
 Odkazuje na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který obsahuje – dialogové okno koordinuje má být převeden.
 
 ### <a name="remarks"></a>Poznámky
@@ -664,7 +664,7 @@ void PressButton(int nButton);
 
 ### <a name="parameters"></a>Parametry
 
-*nButton*  
+*nButton*<br/>
 nButton: identifikuje tlačítko, aby se aktivovala. Tento parametr může být jeden z následujících hodnot:
 
 - PSBTN_BACK klikne na tlačítko Zpět.
@@ -702,10 +702,10 @@ void RemovePage(int nPage);
 
 ### <a name="parameters"></a>Parametry
 
-*Fyzická_stránka*  
+*Fyzická_stránka*<br/>
 Odkazuje na stránku, kde odeberou ze seznamu vlastností. Nemůže mít hodnotu NULL.
 
-*nPage*  
+*nPage*<br/>
 Index stránky k odebrání. Musí být mezi 0 a menší než počet stránek v seznamu vlastností (včetně).
 
 ### <a name="remarks"></a>Poznámky
@@ -723,10 +723,10 @@ BOOL SetActivePage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parametry
 
-*nPage*  
+*nPage*<br/>
 Index stránky lze nastavit. Musí být mezi 0 a menší než počet stránek v seznamu vlastností (včetně).
 
-*Fyzická_stránka*  
+*Fyzická_stránka*<br/>
 Odkazuje na stránku nastavení v seznamu vlastností. Nemůže být NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -751,7 +751,7 @@ void SetFinishText(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszText*  
+*lpszText*<br/>
 Odkazuje na text, který se zobrazí na příkazové tlačítko Dokončit.
 
 ### <a name="remarks"></a>Poznámky
@@ -774,10 +774,10 @@ void SetTitle(
 
 ### <a name="parameters"></a>Parametry
 
-*nStyle*  
+*nStyle*<br/>
 Určuje styl listu název vlastnosti. Styl musí nastavit na 0 nebo jako PSH_PROPTITLE. Pokud je styl nastavená jako PSH_PROPTITLE, slovo "Properties" se zobrazí po textem zadaným jako popisek. Například volání `SetTitle`("Simple", PSH_PROPTITLE) bude mít za následek titulek list vlastností "Jednoduchých vlastností."
 
-*lpszText*  
+*lpszText*<br/>
 Odkazuje na text, který se použije jako popisek v záhlaví okna vlastností.
 
 ### <a name="remarks"></a>Poznámky
@@ -798,7 +798,7 @@ void SetWizardButtons(DWORD dwFlags);
 
 ### <a name="parameters"></a>Parametry
 
-*dwFlags*  
+*dwFlags*<br/>
 Sada příznaků, které funkce a vzhled tlačítek průvodce přizpůsobit. Tento parametr může být kombinací následujícího:
 
 - Tlačítko Zpět PSWIZB_BACK
@@ -847,9 +847,9 @@ Volání `SetWizardMode` před voláním [DoModal](#domodal). Po zavolání `Set
 
 ## <a name="see-also"></a>Viz také
 
-[Ukázka CMNCTRL1 knihovny MFC](../../visual-cpp-samples.md)  
-[Ukázka CMNCTRL2 knihovny MFC](../../visual-cpp-samples.md)  
-[Ukázky knihovny MFC PROPDLG](../../visual-cpp-samples.md)  
-[Ukázky knihovny MFC SNAPVW](../../visual-cpp-samples.md)  
-[CWnd – třída](../../mfc/reference/cwnd-class.md)  
-[Graf hierarchie](../../mfc/hierarchy-chart.md)  
+[Ukázka CMNCTRL1 knihovny MFC](../../visual-cpp-samples.md)<br/>
+[Ukázka CMNCTRL2 knihovny MFC](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC PROPDLG](../../visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC SNAPVW](../../visual-cpp-samples.md)<br/>
+[CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
+[Graf hierarchie](../../mfc/hierarchy-chart.md)

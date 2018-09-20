@@ -16,21 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 254d7532b83a4f30c0029b2488bb0b2111cce31d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0c634f9eac562be2b22f79e6a71c3010e3ea3e24
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219394"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435230"
 ---
 # <a name="setting-a-hot-key"></a>Nastavení klávesové zkratky
-Aplikace můžete použít klávesovou zkratku na základě informací poskytnutých ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) ovládacího prvku v jednom ze dvou způsobů:  
-  
--   Nastavení globální klávesové zkratky pro aktivaci okno nonchild odesláním [WM_SETHOTKEY](/windows/desktop/inputdev/wm-sethotkey) zprávu do okna aktivaci.  
-  
--   Nastavení klávesové zkratky specifické pro vlákno voláním funkce Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309).  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Aplikace můžete použít klávesovou zkratku na základě informací poskytnutých ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) ovládacího prvku v jednom ze dvou způsobů:
+
+- Nastavení globální klávesové zkratky pro aktivaci okno nonchild odesláním [WM_SETHOTKEY](/windows/desktop/inputdev/wm-sethotkey) zprávu do okna aktivaci.
+
+- Nastavení klávesové zkratky specifické pro vlákno voláním funkce Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309).
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CHotKeyCtrl](../mfc/using-chotkeyctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

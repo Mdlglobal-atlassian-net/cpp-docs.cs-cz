@@ -21,19 +21,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b5160061233f9d0a474385bccd324333ed9549a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 132b2e069c42d1835d6736024fc4c609d313e544
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686284"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440703"
 ---
 # <a name="resources-property-pages"></a>Stránky vlastností prostředků
-Další informace o používání nástroje resource compiler, naleznete v tématu [pomocí RC (The RC příkazového řádku)](/windows/desktop/menurc/using-rc-the-rc-command-line-).  
-  
- Informace o tom, jak získat přístup **prostředky** stránky vlastností naleznete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).  
-  
- Chcete-li programově přístup k těmto vlastnostem, přečtěte si téma <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.  
-  
-## <a name="see-also"></a>Viz také  
- [Stránky vlastností](../ide/property-pages-visual-cpp.md)
+
+Další informace o používání nástroje resource compiler, naleznete v tématu [pomocí RC (The RC příkazového řádku)](/windows/desktop/menurc/using-rc-the-rc-command-line-).
+
+Informace o tom, jak získat přístup **prostředky** stránky vlastností naleznete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).
+
+Chcete-li programově přístup k těmto vlastnostem, přečtěte si téma <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.
+
+## <a name="see-also"></a>Viz také
+
+[Stránky vlastností](../ide/property-pages-visual-cpp.md)

@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 687fd4f4bd77043bd0b74c7bcc39fb6a496b60be
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: e8a1dcd96ab42f48c91bbed2057475fa412c8925
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601454"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432799"
 ---
 # <a name="ftmbase-class"></a>FtmBase – třída
 
@@ -106,7 +106,7 @@ static HRESULT CreateGlobalInterfaceTable(
 
 ### <a name="parameters"></a>Parametry
 
-*Git*  
+*Git*<br/>
 Když tato operace dokončí, ukazatel na globální tabulku rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -129,7 +129,7 @@ STDMETHODIMP DisconnectObject(
 
 ### <a name="parameters"></a>Parametry
 
-*dwReserved*  
+*dwReserved*<br/>
 Vyhrazeno pro budoucí použití; musí být nula.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -161,26 +161,26 @@ STDMETHODIMP GetMarshalSizeMax(
 
 ### <a name="parameters"></a>Parametry
 
-*riid*  
+*riid*<br/>
 Odkaz na identifikátor rozhraní zařadit.
 
-*PV*  
+*PV*<br/>
 Ukazatel rozhraní na zařadit; může mít hodnotu NULL.
 
-*dwDestContext*  
+*dwDestContext*<br/>
 Cílový kontext, kde má být sdružení daného rozhraní.
 
 Zadejte jednu nebo více hodnot výčtu MSHCTX.
 
 V současné době unmarshaling situace může nastat v jiném objektu apartment aktuálního procesu (MSHCTX_INPROC) nebo v jiném procesu ve stejném počítači jako aktuální proces (MSHCTX_LOCAL).
 
-*pvDestContext*  
+*pvDestContext*<br/>
 Vyhrazeno pro budoucí použití; musí mít hodnotu NULL.
 
-*mshlflags*  
+*mshlflags*<br/>
 Příznak označující, zda je data, která mají být zařazen do dají přenést zpátky do klienta procesu – typické případy – nebo zapisují do globální tabulky, kde se dá načíst pomocí více klientů. Zadejte jednu nebo více hodnot výčtu MSHLFLAGS.
 
-*pSize*  
+*pSize*<br/>
 Když tato operace dokončena, ukazatel na horní mez na množství dat k zápisu do streamu zařazování.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -204,23 +204,23 @@ STDMETHODIMP GetUnmarshalClass(
 
 ### <a name="parameters"></a>Parametry
 
-*riid*  
+*riid*<br/>
 Odkaz na identifikátor rozhraní zařadit.
 
-*PV*  
+*PV*<br/>
 Ukazatel rozhraní k zařadit; může mít hodnotu NULL, pokud volající nemá ukazatel na požadované rozhraní.
 
-*dwDestContext*  
+*dwDestContext*<br/>
 Cílový kontext, kde má být sdružení daného rozhraní.
 
 Zadejte jednu nebo více hodnot výčtu MSHCTX.
 
 Unmarshaling situace může nastat v jiném objektu apartment aktuálního procesu (MSHCTX_INPROC) nebo v jiném procesu ve stejném počítači jako aktuální proces (MSHCTX_LOCAL).
 
-*pvDestContext*  
+*pvDestContext*<br/>
 Vyhrazeno pro budoucí použití; musí mít hodnotu NULL.
 
-*mshlflags*  
+*mshlflags*<br/>
 Pokud tato operace dokončena, ukazatel na identifikátor CLSID se použije k vytvoření proxy serveru v procesu klienta.
 
 *pCid*
@@ -246,26 +246,26 @@ STDMETHODIMP MarshalInterface(
 
 ### <a name="parameters"></a>Parametry
 
-*pStm*  
+*pStm*<br/>
 Ukazatel na datový proud, které se použijí při zařazování.
 
-*riid*  
+*riid*<br/>
 Odkaz na identifikátor rozhraní zařadit. Toto rozhraní musí být odvozen od `IUnknown` rozhraní.
 
-*PV*  
+*PV*<br/>
 Ukazatel na ukazatel rozhraní k zařadit; může mít hodnotu NULL, pokud volající nemá ukazatel na požadované rozhraní.
 
-*dwDestContext*  
+*dwDestContext*<br/>
 Cílový kontext, kde má být sdružení daného rozhraní.
 
 Zadejte jednu nebo více hodnot výčtu MSHCTX.
 
 Unmarshaling situace může nastat v jiném objektu apartment aktuálního procesu (MSHCTX_INPROC) nebo v jiném procesu ve stejném počítači jako aktuální proces (MSHCTX_LOCAL).
 
-*pvDestContext*  
+*pvDestContext*<br/>
 Vyhrazeno pro budoucí použití; musí být nula.
 
-*mshlflags*  
+*mshlflags*<br/>
 Určuje, zda data, která mají být zařazen do dají přenést zpátky do klienta procesu – typické případy – nebo zapisují do globální tabulky, kde se dá načíst pomocí více klientů.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -298,7 +298,7 @@ STDMETHODIMP ReleaseMarshalData(
 
 ### <a name="parameters"></a>Parametry
 
-*pStm*  
+*pStm*<br/>
 Ukazatel na datový proud, který obsahuje datový paket, který se má zničit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -319,13 +319,13 @@ STDMETHODIMP UnmarshalInterface(
 
 ### <a name="parameters"></a>Parametry
 
-*pStm*  
+*pStm*<br/>
 Ukazatel na datový proud, ze kterého má být zrušeno ukazatel rozhraní.
 
-*riid*  
+*riid*<br/>
 Odkaz na identifikátor rozhraní bude zrušeno.
 
-*ppv*  
+*ppv*<br/>
 Když tato operace dokončí, adresu proměnné ukazatele, která přijímá ukazatel rozhraní požadovaný v *riid*. Pokud je tato operace úspěšná, **ppv* obsahuje požadované rozhraní ukazatel rozhraní, bude zrušeno.
 
 ### <a name="return-value"></a>Návratová hodnota

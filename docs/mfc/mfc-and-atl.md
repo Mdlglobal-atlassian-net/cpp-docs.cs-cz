@@ -1,5 +1,5 @@
 ---
-title: MFC a knihovna ATL | Microsoft Docs
+title: Knihovna MFC a ATL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 01/24/2018
 ms.technology:
@@ -12,28 +12,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 081414d3835a8a6efcc831b6c303b774361b743b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e6533738100f68c1133e21e0fc8c537e1cd7d270
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347731"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384257"
 ---
 # <a name="mfc-and-atl"></a>Rozhraní MFC a knihovna ATL
-Microsoft Foundation třídy (MFC), poskytují obálku objektově orientované C++ přes Win32 pro rychlý vývoj nativních aplikací klasické pracovní plochy. Aktivní šablony Library (ATL) je obálky knihovny, která usnadňuje vývoj COM a se velmi často používá pro vytváření ovládacích prvků ActiveX.  
-  
-Můžete vytvořit MFC nebo ATL programy s Visual Studio Community Edition nebo vyšší. Edice Express nepodporují MFC nebo ATL. 
 
-V sadě Visual Studio 2015 Visual C++ je volitelná součást a jsou volitelné dílčí součásti v jazyce Visual C++ MFC a knihovna ATL součásti. Pokud nevyberete těchto součástí při první instalaci sady Visual Studio, budete vyzváni k instalaci, je při prvním pokusu o vytvoření nebo otevření projektu knihovny MFC nebo ATL.  
+Microsoft Foundation Classes (MFC) poskytuje objektově orientovanou obálku C++ přes Win32 pro rychlý vývoj nativních aplikací klasické pracovní plochy. Aktivní šablony knihovny (ATL) je obálka knihovnu, která zjednodušuje vývoj COM a je používána pro vytváření ovládacích prvků ActiveX.
 
-Visual Studio 2017 a novější, MFC a knihovna ATL jsou volitelné dílčí součásti v části **vývoj aplikací s jazykem C++** úloh ve Visual Studio Instalační program. Můžete nainstalovat podporu ATL bez knihovny MFC nebo kombinaci Podpora MFC a knihovny ATL (MFC závisí na ATL). Další informace o pracovním zatížení a součásti najdete v tématu [nainstalovat Visual Studio 2017](/visualstudio/install/install-visual-studio).
-  
-## <a name="related-articles"></a>Související články  
-  
-|Název|Popis|  
-|-----------|-----------------|  
-|[Desktopové aplikace knihovny MFC](../mfc/mfc-desktop-applications.md)|Microsoft Foundation třídy poskytují dynamické objektově orientované obálku přes Win32 umožňující rychlý vývoj aplikací grafického uživatelského rozhraní v jazyce C++.|  
-|[Desktopové komponenty ATL objektů COM](../atl/atl-com-desktop-components.md)|ATL poskytuje šablony třídy a jiné použití vytvoří pro zjednodušení vytváření objektů COM v jazyce C++.|  
-|[ATL a MFC sdílené třídy](../atl-mfc-shared/atl-mfc-shared-classes.md)|Odkazuje pro [CStringT třída](../atl-mfc-shared/reference/cstringt-class.md) a jiné třídy, které jsou sdíleny MFC a ATL.|  
-|[Práce se zdrojovými soubory](../windows/working-with-resource-files.md)|Editor prostředků umožňuje upravit prostředkům uživatelského rozhraní, například řetězce, Image a dialogová okna.|  
-|[Visual C++](../visual-cpp-in-visual-studio.md)|Nadřazené téma pro veškerý obsah C++ v knihovně MSDN.|
+Můžete vytvořit programy MFC nebo ATL s Visual Studio Community Edition nebo vyšší. Edice Express nepodporuje MFC ani ATL.
+
+V sadě Visual Studio 2015 Visual C++ je volitelnou komponentou a komponent knihovny MFC a ATL jsou volitelné dílčí komponenty v jazyce Visual C++. Pokud nevyberete tyto součásti při první instalaci sady Visual Studio, budete vyzváni k instalaci je při prvním pokusu o vytvoření nebo otevření projektu knihovny MFC nebo ATL.
+
+V sadě Visual Studio 2017 a novější knihovny MFC a ATL jsou volitelné dílčí komponenty pod **vývoj desktopových aplikací pomocí C++** úlohy v aplikaci instalační program sady Visual Studio. Můžete nainstalovat podporu ATL bez knihovny MFC nebo knihovny MFC a ATL – podpora (MFC závisí na ATL) v kombinaci. Další informace o úlohách a komponentách najdete v tématu [instalace sady Visual Studio 2017](/visualstudio/install/install-visual-studio).
+
+## <a name="related-articles"></a>Související články
+
+|Název|Popis|
+|-----------|-----------------|
+|[Desktopové aplikace knihovny MFC](../mfc/mfc-desktop-applications.md)|Microsoft Foundation Classes poskytuje obálku dynamického zajišťování objektově orientované přes Win32, který umožňuje rychlý vývoj aplikací GUI v jazyce C++.|
+|[Desktopové komponenty ATL objektů COM](../atl/atl-com-desktop-components.md)|Knihovna ATL poskytuje šablony tříd a konstrukce pro zjednodušení vytváření objektů modelu COM v jazyce C++ jiné použití.|
+|[Sdílené třídy ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)|Odkazy [cstringt – třída](../atl-mfc-shared/reference/cstringt-class.md) a jiné třídy, které jsou sdílené mezi MFC a ATL.|
+|[Práce se zdrojovými soubory](../windows/working-with-resource-files.md)|Editor prostředků umožňuje upravovat prostředky uživatelského prostředí, jako jsou řetězce, obrázky a dialogových oknech.|
+|[Visual C++](../visual-cpp-in-visual-studio.md)|Nadřazené téma pro veškerý obsah jazyka C++ v knihovně MSDN.|

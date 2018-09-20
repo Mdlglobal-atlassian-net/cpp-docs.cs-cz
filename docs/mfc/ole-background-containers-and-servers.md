@@ -1,5 +1,5 @@
 ---
-title: 'OLE – pozadí: Kontejnery a servery | Microsoft Docs'
+title: 'OLE – pozadí: Kontejnery a servery | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,29 +24,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9f15ef532ba61a089f8adec9ed20f737c07eae2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23aa5e4c13e8049a2240462dab1c5b68bfb514f7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348544"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436933"
 ---
 # <a name="ole-background-containers-and-servers"></a>OLE – pozadí: Kontejnery a servery
-Aplikace kontejneru je aplikace, která může obsahovat vložené nebo propojené položky do svých vlastních dokumentů. Dokumenty spravuje aplikace kontejneru musí být schopný k uložení a zobrazení OLE dokumentu součásti a také data vytvořená pomocí vlastní aplikace. Aplikace kontejneru musí také umožňují uživatelům vložit nové položky nebo upravit existující položky tak, že aktivace serverové aplikace, pokud je to nezbytné. Požadavky uživatelského rozhraní aplikace kontejneru jsou uvedené v článku [kontejnery: problémy uživatelského rozhraní](../mfc/containers-user-interface-issues.md).  
-  
- Serverová aplikace nebo součásti aplikace je aplikace, která můžete vytvořit OLE dokumentu komponenty pro použití aplikace typu kontejner. Aplikace serveru obvykle podporují přetahování nebo kopírování svá data do schránky, tak, aby aplikace kontejneru můžete vložit data jako vložené nebo propojené položky. Aplikace může být kontejner i server.  
-  
- Většina serverů jsou samostatné aplikace nebo úplné serverů; jsou lze buď spustit jako samostatné aplikace nebo může být spuštěn aplikace kontejneru. Miniserver je zvláštním typem aplikace server, který může být spuštěn pouze kontejner. Není možné spustit jako samostatnou aplikaci. Servery Microsoft Draw a Microsoft Graph jsou příklady miniservers.  
-  
- Kontejnery a servery nekomunikují přímo. Místo toho komunikují prostřednictvím OLE systému dynamické knihovny (DLL). Tyto knihovny poskytují funkce, které volají kontejnery a servery a kontejnery a servery poskytují funkce zpětného volání, které volají knihovny DLL.  
-  
- Pomocí to znamená komunikace, kontejner není nutné znát podrobnosti implementace serverové aplikace. To umožňuje kontejner tak, aby přijímal položky vytvořené jakémukoli serveru, aniž by bylo nutné definovat typy serverů, se kterými můžete pracovat. Uživatel aplikace kontejneru v důsledku toho můžete využít výhod budoucí aplikace a datových formátů. Pokud jsou tyto nové aplikace OLE součásti, složeného dokumentu bude možné začlenit položky vytvořené pomocí těchto aplikací.  
-  
-## <a name="see-also"></a>Viz také  
- [OLE – pozadí](../mfc/ole-background.md)   
- [OLE – pozadí: Implementace MFC](../mfc/ole-background-mfc-implementation.md)   
- [Kontejnery](../mfc/containers.md)   
- [Servery](../mfc/servers.md)   
- [Kontejnery: Klientské položky](../mfc/containers-client-items.md)   
- [Servery: Serverové položky](../mfc/servers-server-items.md)
+
+Aplikace typu kontejner je aplikace, která můžete začlenit do vlastní dokumenty vložené nebo propojené položky. Dokumenty, které spravuje aplikace typu kontejner musí být schopen ukládat a zobrazovat součásti dokumentu OLE, jakož i data vytvořená systémem samotná aplikace. Aplikace typu kontejner musí také umožňují uživatelům vkládání nových položek nebo upravit existující položky aktivací serverové aplikace, pokud je to nezbytné. V článku jsou uvedené požadavky na uživatelské rozhraní aplikace typu kontejner [kontejnery: problémy uživatelského rozhraní](../mfc/containers-user-interface-issues.md).
+
+Serverová aplikace nebo součásti aplikace je aplikace, můžete vytvořit komponenty dokumentu OLE pro použití aplikací typu kontejner. Server aplikace obvykle podporují přetahování nebo tak, aby aplikace typu kontejner můžete vložit data jako vložené nebo propojené položky kopírování svá data do schránky. Aplikace může být kontejner a serverem.
+
+Většina serverů jsou samostatné aplikace nebo úplná serverů. jejich lze spustit buď jako samostatné aplikace nebo může být spuštěn aplikace typu kontejner. Miniserver je zvláštní druh serverovou aplikaci, která může být spuštěn pouze kontejner. Není možné spustit jako samostatnou aplikaci. Příklady miniservers jsou servery Microsoft Draw a Microsoft Graph.
+
+Kontejnery a servery nekomunikují přímo. Místo toho komunikují prostřednictvím OLE systému dynamické knihovny (DLL). Tyto knihovny DLL poskytují funkce, které volají kontejnery a servery a kontejnery a servery poskytují funkce zpětného volání, které volají knihovny DLL.
+
+Pomocí to znamená, že komunikace, kontejner není potřeba znát podrobnosti implementace serverová aplikace. To umožňuje kontejneru tak, aby přijímal položky vytvořené libovolný server, aniž byste museli definovat typy serverů, se kterými můžete pracovat. Uživatel aplikace typu kontejner v důsledku toho můžete využít výhod budoucí aplikace a datových formátů. Pokud tyto nové aplikace jsou komponenty OLE, pak bude mít k začlenění položek vytvořený těmito aplikacemi složeného dokumentu.
+
+## <a name="see-also"></a>Viz také
+
+[OLE – pozadí](../mfc/ole-background.md)<br/>
+[OLE – pozadí: Implementace MFC](../mfc/ole-background-mfc-implementation.md)<br/>
+[Kontejnery](../mfc/containers.md)<br/>
+[Servery](../mfc/servers.md)<br/>
+[Kontejnery: Klientské položky](../mfc/containers-client-items.md)<br/>
+[Servery: Serverové položky](../mfc/servers-server-items.md)
 

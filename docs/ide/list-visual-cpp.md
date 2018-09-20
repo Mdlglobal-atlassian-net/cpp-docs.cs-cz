@@ -18,63 +18,67 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15133673a33930222d5bf4c621c9ec9361e31f24
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2ac136ac009f9597c3773e210aaabf4adcb6b738
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46046404"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433243"
 ---
 # <a name="ltlistgt-visual-c"></a>&lt;seznam&gt; (Visual C++)
-\<Listheader – > blokování se používá k definování řádek záhlaví tabulky nebo definice seznamu. Při definování tabulku, stačí zadat položky pro výraz v záhlaví.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-<list type="bullet" | "number" | "table">  
-   <listheader>  
-      <term>term</term>  
-      <description>description</description>  
-   </listheader>  
-   <item>  
-      <term>term</term>  
-      <description>description</description>  
-   </item>  
-</list>  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+\<Listheader – > blokování se používá k definování řádek záhlaví tabulky nebo definice seznamu. Při definování tabulku, stačí zadat položky pro výraz v záhlaví.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+<list type="bullet" | "number" | "table">
+   <listheader>
+      <term>term</term>
+      <description>description</description>
+   </listheader>
+   <item>
+      <term>term</term>
+      <description>description</description>
+   </item>
+</list>
+```
+
+#### <a name="parameters"></a>Parametry
+
 *Termín*<br/>
-Termín, který chcete definovat, které budou určené v `description`.  
-  
+Termín, který chcete definovat, které budou určené v `description`.
+
 *Popis*<br/>
-Buď položku v odrážkami nebo číslovaný seznam nebo definici `term`.  
-  
-## <a name="remarks"></a>Poznámky  
- Každá položka v seznamu není zadán s \<položky > bloku. Při vytváření definice seznamu, budete muset zadat současně `term` a `description`. Ale pro tabulku, seznam s odrážkami nebo číslovaného seznamu, stačí zadat položku pro `description`.  
-  
- Seznam nebo tabulku můžete mít kolik \<položky > blokuje podle potřeby.  
-  
- Kompilovat s [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.  
-  
-## <a name="example"></a>Příklad  
-  
-```cpp  
-// xml_list_tag.cpp  
-// compile with: /doc /LD  
-// post-build command: xdcmake xml_list_tag.dll  
-/// <remarks>Here is an example of a bulleted list:  
-/// <list type="bullet">  
-/// <item>  
-/// <description>Item 1.</description>  
-/// </item>  
-/// <item>  
-/// <description>Item 2.</description>  
-/// </item>  
-/// </list>  
-/// </remarks>  
-class MyClass {};  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Dokumentace XML](../ide/xml-documentation-visual-cpp.md)
+Buď položku v odrážkami nebo číslovaný seznam nebo definici `term`.
+
+## <a name="remarks"></a>Poznámky
+
+Každá položka v seznamu není zadán s \<položky > bloku. Při vytváření definice seznamu, budete muset zadat současně `term` a `description`. Ale pro tabulku, seznam s odrážkami nebo číslovaného seznamu, stačí zadat položku pro `description`.
+
+Seznam nebo tabulku můžete mít kolik \<položky > blokuje podle potřeby.
+
+Kompilovat s [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.
+
+## <a name="example"></a>Příklad
+
+```cpp
+// xml_list_tag.cpp
+// compile with: /doc /LD
+// post-build command: xdcmake xml_list_tag.dll
+/// <remarks>Here is an example of a bulleted list:
+/// <list type="bullet">
+/// <item>
+/// <description>Item 1.</description>
+/// </item>
+/// <item>
+/// <description>Item 2.</description>
+/// </item>
+/// </list>
+/// </remarks>
+class MyClass {};
+```
+
+## <a name="see-also"></a>Viz také
+
+[Dokumentace XML](../ide/xml-documentation-visual-cpp.md)

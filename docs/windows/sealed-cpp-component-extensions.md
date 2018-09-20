@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9693e16695d7a8c755515b4dd5163e2688a1d29
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 134ee819edc0698c4ffa067d38b715968f22590f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611286"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439559"
 ---
 # <a name="sealed--c-component-extensions"></a>sealed (rozšíření komponent C++)
 
@@ -43,10 +43,10 @@ virtual return-type identifier() sealed {...};
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor*  
+*identifikátor*<br/>
 Název třídy nebo funkce.
 
-*Návratový typ*  
+*Návratový typ*<br/>
 Typ, který je vrácen funkce.
 
 ## <a name="remarks"></a>Poznámky

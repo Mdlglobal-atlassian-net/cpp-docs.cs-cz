@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6ca09463a2934db0097c09d6a4f928f108fd0760
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: cc933905cf4056d2be6c692728c621913687a6fa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316299"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425532"
 ---
 # <a name="new-toolbar-resource-dialog-box-c"></a>Nový panel nástrojů prostředek – dialogové okno (C++)
 
@@ -46,6 +46,6 @@ Knihovny MFC nebo ATL
 
 ## <a name="see-also"></a>Viz také
 
-[Vlastnosti tlačítka panelu nástrojů](../windows/toolbar-button-properties.md)  
-[Převádění bitmap na panely nástrojů](../windows/converting-bitmaps-to-toolbars.md)  
+[Vlastnosti tlačítka panelu nástrojů](../windows/toolbar-button-properties.md)<br/>
+[Převádění bitmap na panely nástrojů](../windows/converting-bitmaps-to-toolbars.md)<br/>
 [Editor panelu nástrojů](../windows/toolbar-editor.md)

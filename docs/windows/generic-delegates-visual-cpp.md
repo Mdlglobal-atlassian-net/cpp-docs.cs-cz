@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a9613dbc28b3e1f263133c15ae88d20294962e9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 94b6d94b59e1088501a22f44a219177b926dd02e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702530"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440872"
 ---
 # <a name="generic-delegates-visual-c"></a>Obecní delegáti (Visual C++)
 
@@ -39,25 +39,25 @@ generic < [class | typename] type-parameter-identifiers>
 
 ### <a name="parameters"></a>Parametry
 
-*Atributy*  
+*Atributy*<br/>
 (Volitelné) Další informace o deklarativní. Další informace o atributu třídy a atributy naleznete v tématu atributy.
 
-*Typ – parametr-identifikátory*  
+*Typ – parametr-identifikátory*<br/>
 Čárkou oddělený seznam identifikátorů pro parametry typu.
 
-*Typ parametru omezení klauzule*  
+*Typ parametru omezení klauzule*<br/>
 Má podobu podle [omezení parametrů obecných typů (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
 
-*Modifikátory dostupnosti*  
+*Modifikátory dostupnosti*<br/>
 (Volitelné) Modifikátory (třeba **veřejné**, **privátní**).
 
-*Typ výsledku*  
+*Typ výsledku*<br/>
 Návratový typ delegáta.
 
-*identifikátor*  
+*identifikátor*<br/>
 Název delegáta.
 
-*formální parametry*  
+*formální parametry*<br/>
 (Volitelné) Seznam parametrů delegáta.
 
 ## <a name="example"></a>Příklad

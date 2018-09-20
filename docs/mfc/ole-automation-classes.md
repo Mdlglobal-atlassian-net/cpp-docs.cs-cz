@@ -1,5 +1,5 @@
 ---
-title: OLE – třídy automatizace | Microsoft Docs
+title: OLE – třídy automatizace | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,22 +20,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8316030ba65796d0e9811ca35384c8a4a2a3afa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea35e51296b2fc528657c4dd9f9b9b76b84aae83
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342875"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391511"
 ---
 # <a name="ole-automation-classes"></a>OLE – třídy automatizace
-Tyto třídy podporovat klienty automatizace (aplikace, které řídí jiné aplikace). Automatizační servery (aplikace, které se dá nastavit podle dalších aplikací) jsou podporovány prostřednictvím [mapy odesílání](../mfc/reference/dispatch-maps.md).  
-  
- [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)  
- Používá k volání automatizační servery z vašeho klienta automatizace. Při přidávání třídu, tato třída se používá k vytváření tříd bezpečnost typů u automatizačních serverů, které poskytují knihovny typů.  
-  
- [COleDispatchException](../mfc/reference/coledispatchexception-class.md)  
- Výjimku vyplývající z chybu během automatizace OLE. Automatizace výjimky vyvolané automatizační servery a zachytila klienti automatizace.  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled třídy](../mfc/class-library-overview.md)
+
+Tyto třídy podporují klienti automatizace (aplikace, které řídí jiné aplikace). Automatizační servery (aplikace, které mohou být řízena jiné aplikace) jsou podporované prostřednictvím [mapy odbavení](../mfc/reference/dispatch-maps.md).
+
+[COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)<br/>
+Použít k volání automatizační servery ze svého klienta služby automation. Při přidání třídy, tato třída se používá k vytvoření typově bezpečné tříd u automatizačních serverů, které poskytují knihovnu typů.
+
+[Coledispatchexception –](../mfc/reference/coledispatchexception-class.md)<br/>
+Výjimka vyplývající z chybu během automatizace OLE. Automatizace výjimky jsou vyvolané automatizační servery a zachytit klientům automatizace.
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../mfc/class-library-overview.md)
 

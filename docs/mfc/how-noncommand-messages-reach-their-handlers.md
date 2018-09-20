@@ -1,5 +1,5 @@
 ---
-title: Jak se Nepříkazové zprávy svým obslužným | Microsoft Docs
+title: Jak se Nepříkazové zprávy jejich obslužné rutiny | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3999c74bf7a612acb998e7a044c12948d7679d9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5c38a1d4294993170cfeff64be6a83700fa7497
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343879"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373435"
 ---
 # <a name="how-noncommand-messages-reach-their-handlers"></a>Jak se nepříkazové zprávy dostanou k svým obslužným rutinám
-Na rozdíl od příkazů standardní zprávy Windows získat není směrován přes strukturu cíle, ale jsou obvykle zpracovávány okno, ke kterému Windows odešle zprávu. Okno může být okno rámce, podřízená okna MDI, standardního ovládacího prvku, dialogové okno, zobrazení nebo jiný druh podřízeného okna.  
-  
- Za běhu, jednotlivých období systému Windows je připojen k objektu okna (přímo nebo nepřímo odvozené z `CWnd`) má své vlastní přidružené zprávy mapy a obslužné rutiny funkce. Rozhraní používá zpráva mapy – jako u příkazu – k mapování příchozích zpráv na obslužné rutiny.  
-  
-## <a name="see-also"></a>Viz také  
- [Jakým způsobem volá framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md)
+
+Na rozdíl od příkazů standardní zprávy Windows získat nebyl směrován přes příkaz of řetězec cíle, ale jsou obvykle zpracovávány v okně Windows odešle zprávu. V okně může být hlavní okno rámce, podřízené okno MDI, standardního ovládacího prvku, dialogové okno, zobrazení nebo jiný typ podřízené okno.
+
+V době běhu, každé okno Windows připojené k objekt window (odvozený přímo nebo nepřímo z `CWnd`), který má svou vlastní mapy a obslužné rutiny funkce přidružené zprávy. Rozhraní používá mapu zpráv, jako u příkazu – k mapování příchozích zpráv pro obslužné rutiny.
+
+## <a name="see-also"></a>Viz také
+
+[Jakým způsobem volá framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md)
 

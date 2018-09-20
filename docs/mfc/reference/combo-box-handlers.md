@@ -1,5 +1,5 @@
 ---
-title: Obslužné rutiny pole se seznamem | Microsoft Docs
+title: Obslužné rutiny pole se seznamem | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -37,30 +37,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e1dcd48bfadcc4ed5a4b64fd0dcdee334c1f1b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5751fbdd4bff0cf3d42231ad00bef0c3483ccfb9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368070"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424258"
 ---
 # <a name="combo-box-handlers"></a>Obslužné rutiny pole se seznamem
-Následující položky mapy odpovídají prototypy funkcí.  
-  
-|Položku mapování|Prototyp funkce|  
-|---------------|------------------------|  
-|ON_CBN_CLOSEUP ( \<id >, \<memberFxn >)|(afx_msg void memberFxn)|  
-|ON_CBN_DBLCLK ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|  
-|ON_CBN_DROPDOWN ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|  
-|ON_CBN_EDITCHANGE ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|  
-|ON_CBN_EDITUPDATE ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|  
-|ON_CBN_ERRSPACE ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|  
-|ON_CBN_KILLFOCUS ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|  
-|ON_CBN_SELCHANGE ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|  
-|ON_CBN_SELENDCANCEL ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|  
-|ON_CBN_SELENDOK ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|  
-|ON_CBN_SETFOCUS ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|  
-  
-## <a name="see-also"></a>Viz také  
- [Mapy zpráv](../../mfc/reference/message-maps-mfc.md)
+
+Následující položky mapování odpovídají prototypy funkcí.
+
+|Položka mapování|Prototyp funkce|
+|---------------|------------------------|
+|ON_CBN_CLOSEUP ( \<id >, \<memberFxn >)|(afx_msg void memberFxn)|
+|ON_CBN_DBLCLK ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|
+|ON_CBN_DROPDOWN ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|
+|ON_CBN_EDITCHANGE ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|
+|ON_CBN_EDITUPDATE ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|
+|ON_CBN_ERRSPACE ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|
+|ON_CBN_KILLFOCUS ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|
+|ON_CBN_SELCHANGE ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|
+|ON_CBN_SELENDCANCEL ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|
+|ON_CBN_SELENDOK ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|
+|ON_CBN_SETFOCUS ( \<id >, \<memberFxn >)|afx_msg void memberFxn ();|
+
+## <a name="see-also"></a>Viz také
+
+[Mapy zpráv](../../mfc/reference/message-maps-mfc.md)
 

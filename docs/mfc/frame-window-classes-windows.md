@@ -1,5 +1,5 @@
 ---
-title: Třídy oken (Windows) s rámečkem | Microsoft Docs
+title: Snímků tříd oken (Windows) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43d6df0231f9d8d1d64d01bd12fa7209eb7b537d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: be63dd57900bbbe1691e132cd880d3da60caf4e5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345062"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431941"
 ---
 # <a name="frame-window-classes-windows"></a>Třídy oken s rámečkem (Windows)
-Okna s rámečkem jsou windows, které rámce aplikace nebo součást aplikace. Okna s rámečkem obvykle obsahovat jiné windows, jako je například zobrazení, panely nástrojů a stavové řádky. U `CMDIFrameWnd`, mohou obsahovat `CMDIChildWnd` objekty nepřímo.  
-  
- [CFrameWnd](../mfc/reference/cframewnd-class.md)  
- Základní třída pro aplikace SDI hlavního rámce okna. Také základní třídu pro všechny ostatní třídy oken s rámečkem.  
-  
- [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)  
- Základní třída pro aplikace MDI hlavního rámce okna.  
-  
- [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)  
- Základní třída pro aplikace MDI okna s rámečkem dokumentu.  
-  
- [CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md)  
- Okno půl výška rámečku, zpravidla se zobrazí kolem plovoucí panely nástrojů.  
-  
- [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)  
- Poskytuje okně s rámečkem pro zobrazení, pokud server dokumentu upravována na místě.  
-  
-## <a name="related-class"></a>Související – třída  
- Třída `CMenu` poskytuje rozhraní, pomocí kterého je možné získat přístup k vaší aplikace nabídky. Je vhodné pro dynamicky manipulace s nabídkami v době běhu; například při přidání nebo odstranění položek nabídky podle kontextu. I když nabídky se nejčastěji používají s okna s rámečkem, můžete se také použít s dialogových oken a dalších nonchild windows.  
-  
- [Cmenu –](../mfc/reference/cmenu-class.md)  
- Zapouzdří `HMENU` popisovač řádku nabídek a místní nabídky aplikace.  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled třídy](../mfc/class-library-overview.md)
+
+Okna s rámečkem jsou windows, která ohraničují aplikace nebo součást aplikace. Okna s rámečkem obvykle obsahují jiných oknech, jako je například zobrazení, panely nástrojů a stavové řádky. V případě třídy `CMDIFrameWnd`, mohou obsahovat `CMDIChildWnd` nepřímo objekty.
+
+[CFrameWnd](../mfc/reference/cframewnd-class.md)<br/>
+Základní třída pro okna hlavního rámce aplikace SDI. Také základní třída pro všechny ostatní třídy oken s rámečkem.
+
+[CMDIFrameWnd –](../mfc/reference/cmdiframewnd-class.md)<br/>
+Základní třída pro aplikace MDI hlavní okno rámce.
+
+[CMDIChildWnd –](../mfc/reference/cmdichildwnd-class.md)<br/>
+Základní třída pro aplikace MDI oken s rámečkem v dokumentu.
+
+[Cminiframewnd –](../mfc/reference/cminiframewnd-class.md)<br/>
+Okno rámce poloviční výšky obvykle viděné okolo plovoucích panelů nástrojů.
+
+[Coleipframewnd –](../mfc/reference/coleipframewnd-class.md)<br/>
+Pokud dokument na serveru je upravována v místě, poskytuje okno rámce pro zobrazení.
+
+## <a name="related-class"></a>Související třídy
+
+Třída `CMenu` poskytuje rozhraní, pomocí kterého je možné přistupovat k vaší aplikaci nabídky. Je užitečné pro manipulaci s nabídky dynamicky za běhu; například při přidání nebo odstranění položek nabídky podle kontextu. I když nabídky se nejčastěji používají s oken s rámečkem, můžete také používají se dialogová okna a dalších oknech nonchild.
+
+[Cmenu –](../mfc/reference/cmenu-class.md)<br/>
+Zapouzdřuje `HMENU` popisovač na řádku nabídek a místní nabídky aplikace.
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../mfc/class-library-overview.md)
 

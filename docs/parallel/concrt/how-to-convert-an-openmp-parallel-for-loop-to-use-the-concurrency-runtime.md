@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: převedení paralelní smyčky for na využití modulu Concurrency Runtime v OpenMP | Microsoft Docs'
+title: 'Postupy: převedení paralelní smyčky na využití modulu Concurrency Runtime OpenMP | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,50 +17,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93538e3188f0086039ecc0b681f936954d82ae97
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5295a7e38ef511cd2703961ffe8fe6f22faa74ae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687020"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407956"
 ---
 # <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>Postupy: Převedení paralelní smyčky for v OpenMP na využití modulu Concurrency Runtime
 
-Tento příklad ukazuje, jak převést základní smyčky, který používá OpenMP [paralelní](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) a [pro](../../parallel/openmp/reference/for-openmp.md) direktivy na využití modulu Concurrency Runtime [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmus.  
-  
-## <a name="example"></a>Příklad  
- Tento příklad používá k výpočtu počet prvočísel v matici náhodných hodnot OpenMP a Concurrency Runtime.  
-  
- [!code-cpp[concrt-openmp#1](../../parallel/concrt/codesnippet/cpp/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime_1.cpp)]  
-  
- Tento příklad vytvoří následující výstup.  
-  
-```Output  
-Using OpenMP...  
-found 107254 prime numbers.  
-Using the Concurrency Runtime...  
-found 107254 prime numbers.  
-```  
-  
- `parallel_for` Algoritmus a OpenMP 3.0 povolit pro index typ, který má být typ se znaménkem integrální nebo nepodepsaných integrálních typu. `parallel_for` Algoritmus také zajišťuje, že zadaný rozsah není přetečení typ se znaménkem. OpenMP verze 2.0 a 2.5 umožňují jenom pro typy podepsaný celočíselný index. OpenMP také neověřuje rozsahu index.  
-  
- Verze tohoto příkladu, který používá Concurrency Runtime také používá [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) objektu místě [atomic](../../parallel/openmp/reference/atomic.md) se zvýší hodnota čítače bez nutnosti – direktiva synchronizace.  
-  
- Další informace o `parallel_for` a dalších paralelní algoritmy najdete v tématu [paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md). Další informace o `combinable` třídy najdete v tématu [paralelní kontejnery a objekty](../../parallel/concrt/parallel-containers-and-objects.md).  
-  
-## <a name="example"></a>Příklad  
+Tento příklad ukazuje, jak převést základní smyčku, která se používá OpenMP [paralelní](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) a [pro](../../parallel/openmp/reference/for-openmp.md) direktivy na využití modulu Concurrency Runtime [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmus.
 
- Tento příklad upraví tak, aby fungoval na předchozímu [std::array](../../standard-library/array-class-stl.md) objekt místo v nativní pole. Protože verze OpenMP 2.0 a 2.5 povolit pro podepsané pouze v indexu integrální typy `parallel_for` konstrukce, iterátory nelze použít pro přístup k elementy kontejneru standardní knihovna C++ paralelně. Paralelní vzory knihovny (PPL) poskytuje [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmus, který provádí úlohy, paralelně na kontejner iterativní jako třeba standardní knihovna C++. Používá stejné logiky, která rozdělení oddílů, `parallel_for` algoritmus používá. `parallel_for_each` Algoritmus vypadá takto: standardní knihovna C++ [std::for_each](../../standard-library/algorithm-functions.md#for_each) algoritmus, vyjma toho, že `parallel_for_each` algoritmus provádí úkoly současně.  
-  
- [!code-cpp[concrt-openmp#10](../../parallel/concrt/codesnippet/cpp/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime_2.cpp)]  
-  
-## <a name="compiling-the-code"></a>Probíhá kompilace kódu  
- Příklad kódu zkopírujte a vložte ji do projektu sady Visual Studio nebo ho vložte v souboru, který je pojmenován `concrt-omp-count-primes.cpp` a poté spusťte následující příkaz v okně příkazového řádku Visual Studia.  
-  
- **concrt modulu cl.exe /EHsc/OpenMP – omp – počet primes.cpp**  
-  
-## <a name="see-also"></a>Viz také  
- [Migrace z OpenMP do Concurrency Runtime](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)   
- [Paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md)   
- [Paralelní kontejnery a objekty](../../parallel/concrt/parallel-containers-and-objects.md)
+## <a name="example"></a>Příklad
+
+Tento příklad používá OpenMP a modulu Runtime souběžnosti má vypočítat počet prvočísel v poli náhodné hodnoty.
+
+[!code-cpp[concrt-openmp#1](../../parallel/concrt/codesnippet/cpp/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime_1.cpp)]
+
+Tento příklad vytvoří následující výstup.
+
+```Output
+Using OpenMP...
+found 107254 prime numbers.
+Using the Concurrency Runtime...
+found 107254 prime numbers.
+```
+
+`parallel_for` Algoritmus a OpenMP 3.0 povolit pro typ indexu celočíselný typ se znaménkem nebo bez znaménka celočíselného typu. `parallel_for` Algoritmus také zajišťuje, že zadaný rozsah není přetečení typ se znaménkem. OpenMP – verze 2.0 nebo 2.5 povolit podepsané celočíselný index pouze pro typy. OpenMP také neověřuje rozsah indexů.
+
+Verze tohoto příkladu, který používá modulu Runtime souběžnosti, zabírá [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) objektu místo [atomické](../../parallel/openmp/reference/atomic.md) – direktiva se zvýší hodnota čítače bez nutnosti synchronizace.
+
+Další informace o `parallel_for` a jiné paralelní algoritmy, naleznete v tématu [paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md). Další informace o `combinable` najdete v tématu [paralelní kontejnery a objekty](../../parallel/concrt/parallel-containers-and-objects.md).
+
+## <a name="example"></a>Příklad
+
+Tento příklad upravuje předchozí tak, aby fungoval na [std::array](../../standard-library/array-class-stl.md) místo objektu na nativní pole. Protože verze OpenMP 2.0 nebo 2.5 povolit pro typy celočíselný index pouze v podepsané `parallel_for` konstrukce, iterátory nelze použít pro přístup k prvkům kontejneru standardní knihovny C++ paralelně. Poskytuje knihovna paralelních vzorů (PPL) [: concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmus, který provádí úkoly, paralelních, iterativní kontejneru jako je například těch, které poskytuje ve standardní knihovně jazyka C++. Používá stejnou logiku dělení, který `parallel_for` algoritmus používá. `parallel_for_each` Algoritmus vypadá podobně jako standardní knihovny C++ [std::for_each](../../standard-library/algorithm-functions.md#for_each) algoritmus, s výjimkou, že `parallel_for_each` algoritmus spustí úlohy současně.
+
+[!code-cpp[concrt-openmp#10](../../parallel/concrt/codesnippet/cpp/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime_2.cpp)]
+
+## <a name="compiling-the-code"></a>Probíhá kompilace kódu
+
+Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `concrt-omp-count-primes.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
+
+**concrt modulu cl.exe/EHsc/OpenMP – omp – počet primes.cpp**
+
+## <a name="see-also"></a>Viz také
+
+[Migrace z OpenMP do Concurrency Runtime](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
+[Paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md)<br/>
+[Paralelní kontejnery a objekty](../../parallel/concrt/parallel-containers-and-objects.md)
 

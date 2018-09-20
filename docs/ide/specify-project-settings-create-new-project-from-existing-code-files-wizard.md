@@ -16,76 +16,79 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a75bb6034c8f4c5a80bb64238c26ea599395ff96
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f86361bf947a5a6117c53ce2c92c40ef1abb7117
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705608"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387819"
 ---
 # <a name="specify-project-settings-create-new-project-from-existing-code-files-wizard"></a>Specifikace nastavení projektu, Průvodce vytvořením nového projektu z existujících souborů kódu
-Tato stránka Průvodce vytvoření nového projektu z existujících souborů kódu slouží k určení:  
-  
--   Prostředí pro sestavení pro nový projekt  
-  
--   Nastavení tak, aby odpovídaly konkrétní typ nové projekty ke generování sestavení  
-  
-## <a name="task-list"></a>Seznam úloh  
 
-[Postupy: Vytvoření projektu jazyka C++ z existujícího kódu](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
-  
-## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní  
+Tato stránka Průvodce vytvoření nového projektu z existujících souborů kódu slouží k určení:
+
+- Prostředí pro sestavení pro nový projekt
+
+- Nastavení tak, aby odpovídaly konkrétní typ nové projekty ke generování sestavení
+
+## <a name="task-list"></a>Seznam úloh
+
+[Postupy: Vytvoření projektu jazyka C++ z existujícího kódu](../ide/how-to-create-a-cpp-project-from-existing-code.md)
+
+## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
+
 - **Pomocí sady Visual Studio**
 
-   Určuje použití nástroje pro vytváření, které jsou zahrnuty v sadě Visual Studio pro vytváření nového projektu. Ve výchozím nastavení je vybraná tato možnost.  
-  
+   Určuje použití nástroje pro vytváření, které jsou zahrnuty v sadě Visual Studio pro vytváření nového projektu. Ve výchozím nastavení je vybraná tato možnost.
+
 - **Typ projektu**
 
-   Určuje typ projektu, který se bude generovat průvodce.  
-  
+   Určuje typ projektu, který se bude generovat průvodce.
+
 - **Projekt aplikace Windows**
 
-   Označuje, že průvodce bude generovat projekt spustitelné aplikace Windows. Tato možnost je k dispozici **typu projektu** rozevíracího seznamu.  
-  
+   Označuje, že průvodce bude generovat projekt spustitelné aplikace Windows. Tato možnost je k dispozici **typu projektu** rozevíracího seznamu.
+
 - **Projekt konzolové aplikace**
 
-   Označuje, že průvodce bude generovat projekt konzolové aplikace. Tato možnost je k dispozici **typu projektu** rozevíracího seznamu.  
-  
+   Označuje, že průvodce bude generovat projekt konzolové aplikace. Tato možnost je k dispozici **typu projektu** rozevíracího seznamu.
+
 - **Projekt dynamické knihovny (DLL)**
 
-   Označuje, že průvodce bude generovat projektu pro aplikaci prázdný DLL knihovny. Tato možnost je k dispozici **typu projektu** rozevíracího seznamu.  
-  
+   Označuje, že průvodce bude generovat projektu pro aplikaci prázdný DLL knihovny. Tato možnost je k dispozici **typu projektu** rozevíracího seznamu.
+
 - **Projekt statické knihovny (LIB)**
 
-   Označuje, že průvodce bude generovat projekt statické knihovny. Tato možnost je k dispozici **typu projektu** rozevíracího seznamu.  
-  
+   Označuje, že průvodce bude generovat projekt statické knihovny. Tato možnost je k dispozici **typu projektu** rozevíracího seznamu.
+
 - **Přidání podpory knihovny ATL**
 
-   Přidá podporu ATL do nového projektu.  
-  
+   Přidá podporu ATL do nového projektu.
+
 - **Přidat podporu knihovny MFC**
 
-   Přidá podporu knihovny MFC do nového projektu.  
-  
+   Přidá podporu knihovny MFC do nového projektu.
+
 - **Přidání podpory pro modul Common Language Runtime**
 
-   Přidá podporu pro nový projekt CLR programování.  
-  
+   Přidá podporu pro nový projekt CLR programování.
+
 - **Modul Common Language Runtime**
 
-   Určuje nový projekt, který má být zajištěn soulad funkce CLR.  
-  
+   Určuje nový projekt, který má být zajištěn soulad funkce CLR.
+
 - **Modul Common Language Runtime (stará syntaxe)**
 
-   Určuje nový projekt, který má být zajištěn soulad spravovaného rozšíření pro C++ syntaxi, což je programovací syntaxe CLR před Visual C++ 2005.  
-  
+   Určuje nový projekt, který má být zajištěn soulad spravovaného rozšíření pro C++ syntaxi, což je programovací syntaxe CLR před Visual C++ 2005.
+
 - **Použití externího sestavovacího systému**
 
-   Určuje použití nástroje sestavení, které nejsou zahrnuty v sadě Visual Studio pro vytváření nového projektu. Pokud je vybraná tato možnost, můžete určit příkazové řádky sestavení na **zadat konfigurační nastavení ladění** a **zadejte konfigurační nastavení vydání** stránky.  
-  
+   Určuje použití nástroje sestavení, které nejsou zahrnuty v sadě Visual Studio pro vytváření nového projektu. Pokud je vybraná tato možnost, můžete určit příkazové řádky sestavení na **zadat konfigurační nastavení ladění** a **zadejte konfigurační nastavení vydání** stránky.
+
    > [!NOTE]
-   > Když **použijte externí sestavovací systém** zaškrtnete políčko, rozhraní IDE nesestaví nový projekt, proto /D, / jsem, /FI, /AI nebo možnosti /FU je vyžadován pro kompilaci. Však musí tyto možnosti nastavit správně, aby IntelliSense fungovat správně.  
-  
-## <a name="see-also"></a>Viz také  
- [Specifikace konfigurace nastavení pro ladění, vytvořením nového projektu z existujících souborů kódu pomocí Průvodce](../ide/specify-debug-configuration-settings.md)   
- [Specifikace konfigurace nastavení pro vydání, Průvodce vytvoření nového projektu z existujících souborů kódu](../ide/specify-release-configuration.md)
+   > Když **použijte externí sestavovací systém** zaškrtnete políčko, rozhraní IDE nesestaví nový projekt, proto /D, / jsem, /FI, /AI nebo možnosti /FU je vyžadován pro kompilaci. Však musí tyto možnosti nastavit správně, aby IntelliSense fungovat správně.
+
+## <a name="see-also"></a>Viz také
+
+[Specifikace konfigurace nastavení pro ladění, Průvodce vytvořením nového projektu z existujících souborů kódu](../ide/specify-debug-configuration-settings.md)<br>
+[Specifikace konfigurace nastavení pro vydání, Průvodce vytvoření nového projektu z existujících souborů kódu](../ide/specify-release-configuration.md)
