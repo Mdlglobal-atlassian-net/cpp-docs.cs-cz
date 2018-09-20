@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: Stream Sockets | Microsoft Docs'
+title: 'Rozhraní Windows Sockets: Stream sokety | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5499395e517f056ffb224c22c888a3cc0382133
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87045d02238071170d776ff1675fb7283d1295bd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386103"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423855"
 ---
 # <a name="windows-sockets-stream-sockets"></a>Windows Sockets: Sokety datového proudu
-Tento článek popisuje sokety datového proudu, jeden ze dvou typů soketu Windows, která je k dispozici. (Další typ je [datagram soketu](../mfc/windows-sockets-datagram-sockets.md).)  
-  
- Sokety datového proudu přinášejí tok dat bez záznamů hranice: datového proudu bajtů, které mohou být obousměrné (aplikace je plně duplexní: může současně přenášet a přijímat prostřednictvím soket). Datové proudy můžete spoléhat k poskytování sekvencované, unduplicated data. ("Sekvencování" znamená, že pakety jsou dodávány v pořadí, odeslány. "Unduplicated" znamená získat konkrétní paket pouze jednou.) Záruku, že přijetí datového proudu zpráv a datových proudů se skvěle hodí pro zpracování velkých objemů dat.  
-  
- Síťová transportní vrstva může rozdělit nebo seskupení dat do paketů přiměřené velikosti. `CSocket` Třída bude zpracovávat balení a rozbalování za vás.  
-  
- Datové proudy, které jsou založené na explicitní připojení: soketu A žádosti o připojení k soketu B; Socket B přijme nebo odmítne požadavek na připojení.  
-  
- Telefonního hovoru poskytuje dobrou analogií pro datový proud. Za normálních podmínek přijímající strany slyší sdělení ve sdělení, bez duplikace nebo ke ztrátě pořadí. Sokety datového proudu jsou vhodné například pro implementace například protokolu FTP (File Transfer), což usnadňuje přenášení ASCII nebo binární soubory libovolné velikosti.  
-  
- Pokud data musí být zaručené doručení a pokud je velká velikost dat, je vhodnější sokety datagramů sokety datového proudu. Další informace o sokety datového proudu najdete v rozhraní Windows Sockets specifikaci. Specifikace je k dispozici v sadě Windows SDK.  
-  
- Sokety datového proudu pomocí může být vyšší než aplikace, které jsou navržené tak, aby použití soketu datagram pro všesměrové vysílání pro všechna přijímací sockets v síti, protože  
-  
--   Model všesměrového vysílání podléhá problémy se sítí záplavy (nebo "storm").  
-  
--   Model klient server přijata později je efektivnější.  
-  
--   Model datového proudu poskytuje přenos dat spolehlivé, kde datagram modelu neexistuje.  
-  
--   Poslední model využívá výhod umožňuje komunikaci mezi kódování Unicode a ANSI soketu aplikace třídy, které CArchive slouží pro třídu CSocket.  
-  
+
+Tento článek popisuje sokety datového proudu, jeden ze dvou typů Windows Socket, která je k dispozici. (Je typ [datagram soketu](../mfc/windows-sockets-datagram-sockets.md).)
+
+Sokety Stream zadejte pro tok dat bez hranic záznamů: datového proudu bajtů, které mohou být obousměrné (aplikace je plně duplexní: může současně přenášet a přijímat přes soket). Datové proudy lze dovolávat pro doručení sekvencované, zamezení duplicitám data. ("Správným seřazením" se rozumí, že pakety budou doručeny v pořadí odeslání. "Zamezení duplicitám" znamená získání konkrétního paketu pouze jednou.) Je zaručeno přijetí datového proudu zpráv a datových proudů se skvěle hodí pro zpracování velkých objemů dat.
+
+Síťová transportní vrstva může rozdělit nebo data seskupit do paketů rozumnou velikost. `CSocket` Třídy bude zpracovávat komprimaci a rozbalování za vás.
+
+Datové proudy jsou založeny na explicitní připojení: soketu A žádosti o připojení k soketu B; soket B přijme nebo odmítne žádost o připojení.
+
+Telefonní hovor poskytuje dobré přirovnání pro datový proud. Za normálních okolností přijímající straně slyší, třeba v pořadí, že to říkáte, bez duplikace nebo ztráty. Stream sockets jsou vhodné například pro implementace například protokol FTP (File Transfer), což usnadňuje přenášení ASCII nebo binární soubory libovolné velikosti.
+
+Stream sockets jsou upřednostňovány vůči sokety datagramu, kdy data musí být zaručené doručení a velikost dat je velká. Další informace o sokety datového proudu naleznete v tématu Specifikace rozhraní Windows Sockets. Specifikace je k dispozici v sadě Windows SDK.
+
+Použití sokety datového proudu, může být vyšší než aplikace navržena pro použití soketů datagramu pro všesměrové vysílání pro všechna přijímací sockets v síti, protože
+
+- Vysílání model je v souladu s problémy se sítí zahlcení (nebo "storm").
+
+- Model klient server přijata později je mnohem efektivnější.
+
+- Model služby stream poskytuje spolehlivý datový přenos, kde datagram model nemá.
+
+- Finálního modelu využívá umožňuje komunikaci mezi kódování Unicode a ANSI soketu aplikace třídy, které CArchive slouží k csocket – třída.
+
     > [!NOTE]
-    >  Při použití třídy `CSocket`, je nutné použít datový proud. Kontrolní výrazy MFC selže, pokud je zadat typ soketu jako **SOCK_DGRAM**.  
-  
-## <a name="see-also"></a>Viz také  
- [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)   
- [Windows Sockets: Pozadí](../mfc/windows-sockets-background.md)
+    >  Pokud použijete třídu `CSocket`, je nutné použít datový proud. MFC kontrolní výraz selže, pokud zadáte typ soketu jako **SOCK_DGRAM**.
+
+## <a name="see-also"></a>Viz také
+
+[Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)<br/>
+[Windows Sockets: Pozadí](../mfc/windows-sockets-background.md)
 

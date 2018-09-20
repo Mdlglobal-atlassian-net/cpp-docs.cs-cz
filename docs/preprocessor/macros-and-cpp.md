@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d81fb8f8f41a57fc2bd1a87c6726b92756bf26b5
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 58f3be857e0a77a62a5f2d4d1d0b650f02fd391b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42464899"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425519"
 ---
 # <a name="macros-and-c"></a>Makra a jazyk C++
 Jazyk C++ nabízí nové možnosti, z nichž některé nahrazují možnosti preprocesoru standardu ANSI C. Tyto nové možnosti zvyšují bezpečnost typů a předvídatelnost jazyka:  
@@ -39,5 +39,5 @@ Z důvodu zpětné kompatibility jsou v jazyce C++ společnosti Microsoft zachov
   
 ## <a name="see-also"></a>Viz také  
  
-[Předdefinovaná makra](../preprocessor/predefined-macros.md)   
+[Předdefinovaná makra](../preprocessor/predefined-macros.md)<br/>
 [Makra (C/C++)](../preprocessor/macros-c-cpp.md)

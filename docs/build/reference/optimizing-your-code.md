@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 180586f55ea57100286c3c598ac62eb83107d7c9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b715f3cc6bc505d9698484ad7c47b8262f2bc728
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714373"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444408"
 ---
 # <a name="optimizing-your-code"></a>Optimalizace kódu
 
@@ -33,11 +33,14 @@ Optimalizace spustitelný soubor, můžete dosáhnout rovnováhy mezi rychlostí
 
 Následující témata popisují některé optimalizace funkce v jazyce C/C++.
 
-[Optimalizace Pragmas a klíčových slov](../../build/reference/optimization-pragmas-and-keywords.md) seznam klíčová slova a pragmas, můžete použít ve vašem kódu pro zlepšení výkonu.
+[Direktivy pragma a klíčová slova pro optimalizaci](../../build/reference/optimization-pragmas-and-keywords.md)<br/>
+Seznam klíčová slova a pragmas, můžete použít ve vašem kódu pro zlepšení výkonu.
 
-[Možnosti kompilátoru seřazené podle kategorie](../../build/reference/compiler-options-listed-by-category.md) seznam **/O** – možnosti kompilátoru, které určují velikost rychlost nebo kód spuštění.
+[Možnosti kompilátoru uvedené podle kategorie](../../build/reference/compiler-options-listed-by-category.md)<br/>
+Seznam **/O** – možnosti kompilátoru, které určují velikost rychlost nebo kód spuštění.
 
-[Deklarátor odkazu hodnoty r: & &](../../cpp/rvalue-reference-declarator-amp-amp.md) odkazy Rvalue podporují implementaci *sémantiky přesunutí*. Pokud přesunutí sémantiky se používají k implementaci knihovny šablon, výkon aplikace, které používají tyto šablony může výrazně zlepšit.
+[Deklarátor odkazu r-hodnoty: &&](../../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
+Odkazy rvalue podporují implementaci *sémantiky přesunutí*. Pokud přesunutí sémantiky se používají k implementaci knihovny šablon, výkon aplikace, které používají tyto šablony může výrazně zlepšit.
 
 ### <a name="the-optimize-pragma"></a>Optimize – Direktiva pragma
 
@@ -59,9 +62,11 @@ Optimalizace programu pro rychlost paradoxically, může způsobit kód poběž�
 
 Následující témata popisují funkční programovací postupy.
 
-[Tipy pro zlepšení časově kritického kódu](../../build/reference/tips-for-improving-time-critical-code.md) lépe kódování techniky může přinést lepší výkon. Toto téma navrhuje kódování techniky, které vám umožňují Ujistěte se, že uspokojivě provádět náročné části kódu.
+[Tipy pro zlepšení časově kritického kódu](../../build/reference/tips-for-improving-time-critical-code.md)<br/>
+Lepší kódování techniky může přinést lepší výkon. Toto téma navrhuje kódování techniky, které vám umožňují Ujistěte se, že uspokojivě provádět náročné části kódu.
 
-[Doporučené postupy optimalizace](../../build/reference/optimization-best-practices.md) obsahuje obecné pokyny o optimálním optimalizovat výkon své aplikace.
+[Doporučené postupy optimalizace](../../build/reference/optimization-best-practices.md)<br/>
+Obsahuje obecné pokyny o optimálním optimalizovat výkon své aplikace.
 
 ## <a name="debugging-optimized-code"></a>Ladění optimalizovaného kódu
 

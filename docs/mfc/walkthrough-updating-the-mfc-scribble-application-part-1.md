@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce50d2c70107b4c88f223e32fdd8cc083df38840
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e2a780719e106c6045d1f80227045ab40607b336
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43685542"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426539"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Návod: Aktualizace aplikace MFC Scribble (část 1)
 
@@ -292,5 +292,5 @@ Změnili jste classic vzorek Scribble 1.0 MFC použití Návrháře pásu karet.
 
 ## <a name="see-also"></a>Viz také:
 
-[Návody](../mfc/walkthroughs-mfc.md)  
-[Návod: aktualizace aplikace MFC Scribble (část 2)] (.. / mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)  
+[Návody](../mfc/walkthroughs-mfc.md)<br/>
+[Návod: aktualizace aplikace MFC Scribble (část 2)] (.. / mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)

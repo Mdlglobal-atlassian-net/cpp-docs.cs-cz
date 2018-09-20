@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cba5aaaec3303d9cd3534ff86cb677219c9c81c7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 087ecf151b17c7c505b4b70d01913a44e113ad29
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42586781"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428678"
 ---
 # <a name="asyncbase-class"></a>AsyncBase – třída
 
@@ -47,13 +47,13 @@ class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Im
 
 ### <a name="parameters"></a>Parametry
 
-*TComplete*  
+*TComplete*<br/>
 Obslužná rutina události, která je volána po dokončení asynchronní operace.
 
-*TProgress*  
+*TProgress*<br/>
 Obslužná rutina události, která je volána při spuštěné asynchronní operace nahlásí aktuální průběh operace.
 
-*Hodnota resultType*  
+*Hodnota resultType*<br/>
 Jeden z [asyncresulttype –](../windows/asyncresulttype-enumeration.md) hodnot výčtu. Ve výchozím nastavení `SingleResult`.
 
 ## <a name="members"></a>Členové

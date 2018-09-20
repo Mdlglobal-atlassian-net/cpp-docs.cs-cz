@@ -1,5 +1,5 @@
 ---
-title: Manipulace nabídkami při spuštění programu | Microsoft Docs
+title: Manipulace nabídkami při spuštění programu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4979b75a7644ab747d1a32c14826a25678e276b6
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 93257b89645692885aba728f2dffa698152122db
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929757"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433709"
 ---
 # <a name="manipulating-menus-during-program-execution"></a>Manipulace s nabídkami během práce programu
-Použití třídy `CMenu` manipulace s nabídkami a položky nabídky za chodu. `CMenu` zapouzdří popisovač Windows HMENU a poskytuje členské funkce pro práci s nabídkami.  
-  
- Naleznete v přehledu třídy [cmenu –](../mfc/reference/cmenu-class.md) podrobnosti.  
-  
-## <a name="see-also"></a>Viz také  
- [Nabídky](../mfc/menus-mfc.md)
+
+Použití třídy `CMenu` manipulace s nabídkami a položky nabídky v reálném čase. `CMenu` zapouzdřuje popisovač Windows HMENU a poskytuje členské funkce pro práci s nabídkami.
+
+Naleznete v přehledu třídy [cmenu –](../mfc/reference/cmenu-class.md) podrobnosti.
+
+## <a name="see-also"></a>Viz také
+
+[Nabídky](../mfc/menus-mfc.md)
 

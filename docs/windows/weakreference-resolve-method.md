@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59e748ef68d78f9cb77eb335f5c5cd44e058f0d4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1e0873b366c84e89b23ddbaa6c64f6b484f921e0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601153"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446332"
 ---
 # <a name="weakreferenceresolve-method"></a>WeakReference::Resolve – metoda
 
@@ -39,10 +39,10 @@ STDMETHOD(Resolve)
 
 ### <a name="parameters"></a>Parametry
 
-*riid*  
+*riid*<br/>
 Identifikátor rozhraní.
 
-*ppvObject*  
+*ppvObject*<br/>
 Když tato operace dokončí, kopii aktuální silného odkazu, pokud je počet odkazů silné nenulové.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -65,5 +65,5 @@ Nastaví zadaný ukazatel na aktuální hodnotu silného odkazu, pokud je počet
 
 ## <a name="see-also"></a>Viz také
 
-[WeakReference – třída1](../windows/weakreference-class1.md)  
+[WeakReference – třída1](../windows/weakreference-class1.md)<br/>
 [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

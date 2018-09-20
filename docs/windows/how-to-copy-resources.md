@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cc0fc8f3177baa01742df84c926a3c6421aa9a16
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 05f4fbfba70b0c97341749fd7e71064487eef9a3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314573"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439897"
 ---
 # <a name="how-to-copy-resources-c"></a>Postupy: kopírování prostředků (C++)
 
@@ -74,6 +74,6 @@ Win32
 
 ## <a name="see-also"></a>Viz také
 
-[Postupy: Otevření souboru skriptu prostředků mimo projekt (samostatný)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)  
-[Soubory prostředků](../windows/resource-files-visual-studio.md)  
+[Postupy: Otevření souboru skriptu prostředků mimo projekt (samostatný)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)<br/>
+[Soubory prostředků](../windows/resource-files-visual-studio.md)<br/>
 [Editory prostředků](../windows/resource-editors.md)

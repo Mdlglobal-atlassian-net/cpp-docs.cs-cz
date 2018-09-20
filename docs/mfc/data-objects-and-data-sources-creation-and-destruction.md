@@ -1,5 +1,5 @@
 ---
-title: 'Datové objekty a zdroje dat: vytváření a likvidace | Microsoft Docs'
+title: 'Datové objekty a zdroje dat: vytváření a ničení | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,69 +25,75 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90143b919fde02a95df81d41845d8ecc671ced0d
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 4c14c6725b4ff93ed59e8d11c51ab4e50a4a6de4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931873"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432424"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Datové objekty a zdroje dat: Vytváření a likvidace
-Jak je popsáno v článku [datové objekty a zdroje dat (OLE)](../mfc/data-objects-and-data-sources-ole.md), datové objekty a zdroje dat představuje obou stranách datových přenosů. Tento článek vysvětluje, kdy se má vytvořit a odstraňte tyto objekty a zdroje k provedení vaší přenosů dat správně, včetně:  
-  
--   [Vytváření datových objektů](#_core_creating_data_objects)  
-  
--   [Zničení datových objektů](#_core_destroying_data_objects)  
-  
--   [Vytváření zdroje dat](#_core_creating_data_sources)  
-  
--   [Zničení zdroje dat](#_core_destroying_data_sources)  
-  
-##  <a name="_core_creating_data_objects"></a> Vytváření datových objektů  
- Datové objekty jsou používány cílové aplikaci – Klient nebo server. Objekt dat do cílové aplikace je jeden element end připojení mezi aplikací zdrojové a cílové aplikaci. Objekt dat do cílové aplikace se používá pro přístup k a interagovat s daty v datovém zdroji.  
-  
- Existují dvě běžné situace, kdy je potřeba na datový objekt. První situace je při přetažení data do vaší aplikace pomocí operace přetažení. V druhém případě je při vkládání nebo Vložit jinak výběru z nabídky Úpravy.  
-  
- V případě, že přetahování myší není potřeba vytvořit datový objekt. Ukazatele na existující objekt dat se předá vaší `OnDrop` funkce. Tento datový objekt se vytvoří rámcem v rámci operace přetahování myší a bude také zničí ho. To není vždy případě při vkládání se provádí jinou metodu. Další informace najdete v tématu [zničení datových objektů](#_core_destroying_data_objects).  
-  
- Pokud aplikace provádí vložení nebo speciální operaci vložení, měli byste vytvořit `COleDataObject` objekt a volání jeho `AttachClipboard` – členská funkce. Tento datový objekt přidruží data do schránky. Pak může použít tento datový objekt vložit funkci.  
-  
-##  <a name="_core_destroying_data_objects"></a> Zničení datových objektů  
- Pokud budete postupovat podle schématu popsané v [vytváření datových objektů](#_core_creating_data_objects), zničení datových objektů je trivial aspekt datových přenosů. Datový objekt, který byl vytvořen v Vložit funkci bude zničí MFC po návratu Vložit funkci.  
-  
- Pokud budete postupovat podle jiný způsob zpracování operace vkládání, zkontrolujte, zda že datový objekt je zrušen po dokončení operaci vložení. Dokud datový objekt zničení, nebude možné pro všechny aplikace úspěšně zkopírovat data do schránky.  
-  
-##  <a name="_core_creating_data_sources"></a> Vytváření zdroje dat  
- Zdroje dat jsou používány zdroj přenos dat, což může být klientovi nebo přenos dat na straně serveru. Zdroj dat v aplikaci zdroj je jeden element end připojení mezi aplikací zdrojové a cílové aplikaci. Objekt dat do cílové aplikace se používá k interakci s daty v datovém zdroji.  
-  
- Zdroje dat se vytvoří, když aplikace potřebuje ke kopírování dat do schránky. Typický scénář spustí takto:  
-  
-1.  Uživatel vybere některá data.  
-  
-2.  Uživatel vybere **kopie** (nebo **Vyjmout**) z **upravit** nabídky nebo zahájí operaci přetažení myší.  
-  
-3.  V závislosti na návrh programu, vytvoří aplikace buď `COleDataSource` objekt nebo objekt ze třídy odvozené od `COleDataSource`.  
-  
-4.  Vybrané, vloží se data do zdroje dat voláním jedna z funkcí v `COleDataSource::CacheData` nebo `COleDataSource::DelayRenderData` skupiny.  
-  
-5.  Volání aplikace `SetClipboard` – členská funkce (nebo `DoDragDrop` – členská funkce, pokud se jedná o operaci přetažení myší) patřící do objekt vytvořený v kroku 3.  
-  
-6.  Pokud je to **Vyjmout** operaci nebo `DoDragDrop` vrátí **DROPEFFECT_MOVE**, data vybrali v kroku 1 se odstraní z dokumentu.  
-  
- Tento scénář je implementováno modulem ukázky MFC OLE [OCLIENT](../visual-cpp-samples.md) a [HIERSVR](../visual-cpp-samples.md). Podívejte se na zdroj pro každou aplikaci `CView`-odvozené třídy pro všechny ale na `GetClipboardData` a `OnGetClipboardData` funkce. Tyto dvě funkce jsou buď `COleClientItem` nebo `COleServerItem`– implementace třídy odvozené. Tyto programy ukázka zadejte dobrým příkladem toho, jak implementovat tyto koncepty.  
-  
- Jeden další situace, ve kterém můžete chtít vytvořit `COleDataSource` objekt vyskytuje, chcete-li změnit výchozí chování operací přetažení myší. Další informace najdete v tématu [přetažení: přizpůsobení](../mfc/drag-and-drop-customizing.md) článku.  
-  
-##  <a name="_core_destroying_data_sources"></a> Zničení zdroje dat  
- Zdroje dat musí být zničený aktuálně zodpovědná za je aplikací. V situacích, kde ruční zdroje dat OLE, jako například volání [COleDataSource::DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop), je třeba volat `pDataSrc->InternalRelease`. Příklad:  
-  
- [!code-cpp[NVC_MFCListView#1](../atl/reference/codesnippet/cpp/data-objects-and-data-sources-creation-and-destruction_1.cpp)]  
-  
- Pokud jste ještě předávány zdroje dat OLE, pak jste zodpovědní za zničení, stejně jako u všech typické C++ objektů.  
-  
- Další informace najdete v tématu [přetažení](../mfc/drag-and-drop-ole.md), [schránky](../mfc/clipboard.md), a [manipulace s datové objekty a zdroje dat](../mfc/data-objects-and-data-sources-manipulation.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Datové objekty a zdroje dat (OLE)](../mfc/data-objects-and-data-sources-ole.md)   
- [COleDataObject – třída](../mfc/reference/coledataobject-class.md)   
- [COleDataSource – třída](../mfc/reference/coledatasource-class.md)
+
+Jak je popsáno v článku [datové objekty a zdroje dat (OLE)](../mfc/data-objects-and-data-sources-ole.md), datové objekty a zdroje dat představují obou stranách přenosu dat. Tento článek vysvětluje, kdy se má vytvořit a zničit tyto objekty a zdroje provádět datové přenosy správně, včetně:
+
+- [Vytváření datových objektů](#_core_creating_data_objects)
+
+- [Zničení datových objektů](#_core_destroying_data_objects)
+
+- [Vytváření zdroje dat](#_core_creating_data_sources)
+
+- [Zničení zdroje dat](#_core_destroying_data_sources)
+
+##  <a name="_core_creating_data_objects"></a> Vytváření datových objektů
+
+Datové objekty se používají podle cílové aplikace, klienta nebo serveru. Datový objekt v cílové aplikaci je jeden konec připojení mezi aplikací zdrojové a cílové aplikace. Datový objekt v cílové aplikaci se používají pro přístup k interakci s daty v datovém zdroji.
+
+Existují dva běžné situace, kdy je potřeba datový objekt. První situace je při přetažení dat ve vaší aplikaci pomocí přetažení. Druhá situace je při překopírování nebo vložení speciální výběru z nabídky upravit.
+
+V případě přetahování myší není potřeba vytvoření datového objektu. Ukazatel na existující objekt data se předají do vaší `OnDrop` funkce. Tento datový objekt se vytvoří v rámci rozhraní jako součást operace přetažení myší a také zničí jím. To není vždy případu při vkládání provádí jinou metodu. Další informace najdete v tématu [zničení datových objektů](#_core_destroying_data_objects).
+
+Pokud aplikace provádí vkládání nebo speciální operace vložení, měli byste vytvořit `COleDataObject` objektu a volání jeho `AttachClipboard` členskou funkci. Tento datový objekt přidruží data do schránky. Potom můžete tento datový objekt ve své funkci Vložit.
+
+##  <a name="_core_destroying_data_objects"></a> Zničení datových objektů
+
+Pokud budete postupovat podle schématu je popsáno v [vytváření datových objektů](#_core_creating_data_objects), zničení datových objektů je triviální aspekt datové přenosy. Datový objekt, který byl vytvořen ve své funkci Vložit zničí v prostředí MFC návratu Vložit funkci.
+
+Pokud budete postupovat podle jiný způsob zpracování operací vložení, zkontrolujte, zda že datový objekt je zničen po dokončení operace vložení. Dokud datový objekt je zničen, nebude možné pro každou aplikaci úspěšně zkopírovat data do schránky.
+
+##  <a name="_core_creating_data_sources"></a> Vytváření zdroje dat
+
+Zdroje dat jsou používány zdroji přenosu dat, který může být klient nebo přenosu dat na straně serveru. Zdroj dat ve zdrojové aplikaci je jeden konec připojení mezi aplikací zdrojové a cílové aplikace. Datový objekt v cílové aplikaci slouží k interakci s daty v datovém zdroji.
+
+Zdroje dat se vytvoří, když aplikace potřebuje ke kopírování dat do schránky. Typický scénář spustí takto:
+
+1. Uživatel vybere nějaká data.
+
+1. Uživatel vybere **kopírování** (nebo **Vyjmout**) z **upravit** nabídky nebo začne operace přetažení myší.
+
+1. V závislosti na návrhu aplikace, aplikace vytvoří buď `COleDataSource` objekt nebo objekt ze třídy odvozené z `COleDataSource`.
+
+1. Vybraná data je vložen do zdroje dat voláním jedné z funkcí v `COleDataSource::CacheData` nebo `COleDataSource::DelayRenderData` skupiny.
+
+1. Volání aplikace `SetClipboard` členskou funkci (nebo `DoDragDrop` členskou funkci, pokud se jedná o operaci přetažení myší) patřící do objekt vytvořený v kroku 3.
+
+1. Pokud se jedná **Vyjmout** operace nebo `DoDragDrop` vrátí **DROPEFFECT_MOVE**, vybrali v kroku 1, data se odstraní z dokumentu.
+
+Tento scénář je implementováno ukázky MFC OLE [OCLIENT](../visual-cpp-samples.md) a [HIERSVR](../visual-cpp-samples.md). Podívejte se na zdroje pro každou aplikaci `CView`-odvozené třídy pro všechny kromě na `GetClipboardData` a `OnGetClipboardData` funkce. Tyto dvě funkce jsou buď `COleClientItem` nebo `COleServerItem`– implementace třídy odvozené. Tyto ukázkové programy poskytují dobrý příklad toho, jak implementovat tyto koncepty.
+
+Jeden další situace, ve kterém můžete chtít vytvořit `COleDataSource` objekt nastane, pokud chcete upravit výchozí chování operace přetažení myší. Další informace najdete v tématu [přetažení: přizpůsobení](../mfc/drag-and-drop-customizing.md) článku.
+
+##  <a name="_core_destroying_data_sources"></a> Zničení zdroje dat
+
+Zdroje dat musí být zničený aktuálně za jejich aplikací. V situacích, kde předáte zdroje dat OLE, jako například volání [COleDataSource::DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop), je třeba volat `pDataSrc->InternalRelease`. Příklad:
+
+[!code-cpp[NVC_MFCListView#1](../atl/reference/codesnippet/cpp/data-objects-and-data-sources-creation-and-destruction_1.cpp)]
+
+Pokud zdroj dat dosud předán OLE, pak budete muset pro zničení, stejně jako u jakékoli typické objekt jazyka C++.
+
+Další informace najdete v tématu [přetažení](../mfc/drag-and-drop-ole.md), [schránky](../mfc/clipboard.md), a [manipulace s datové objekty a zdroje dat](../mfc/data-objects-and-data-sources-manipulation.md).
+
+## <a name="see-also"></a>Viz také
+
+[Datové objekty a zdroje dat (OLE)](../mfc/data-objects-and-data-sources-ole.md)<br/>
+[COleDataObject – třída](../mfc/reference/coledataobject-class.md)<br/>
+[COleDataSource – třída](../mfc/reference/coledatasource-class.md)

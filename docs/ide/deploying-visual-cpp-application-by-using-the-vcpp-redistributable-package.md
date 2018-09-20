@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 569c5c8adcb57ae92f111929efca544c76412a4b
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 2e213d5d91c229f7f07bc383f0a0158d85c05cf2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895276"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434502"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>Návod: Nasazení aplikace Visual C++ s použitím redistribuovatelného balíčku Visual C++
 
@@ -44,7 +44,7 @@ Tyto součásti k dokončení tohoto názorného postupu musíte mít:
     vcredist_x86.exe
     mkdir "C:\Program Files\MyMFCApplication"
     copy MyMFCApplication.exe "C:\Program Files\MyMFCApplication"
-    ```  
+    ```
 
 3. Vytvořte samorozbalovací soubor nastavení:
 
@@ -70,7 +70,7 @@ Tyto součásti k dokončení tohoto názorného postupu musíte mít:
 
    8. Na **spuštění instalačního programu** stránku, **nainstalovat Program** textové pole, zadejte následující příkazový řádek a klikněte na tlačítko **Další**.
 
-      **cmd.exe /c "setup.bat"**  
+      **cmd.exe /c "setup.bat"**
 
    9. Na **zobrazení okna** stránce **výchozí** a klikněte na tlačítko **Další**.
 

@@ -1,5 +1,5 @@
 ---
-title: Obslužná rutina ovládacího prvku obecné | Microsoft Docs
+title: Obslužná rutina ovládacího prvku obecné | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,20 +19,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae941e7a59fe673dea6068c6ca6df5feb94db239
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 060bda1de088f3e1e84791601f176097f764c412
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372927"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446423"
 ---
 # <a name="generic-control-handler"></a>Obecná obslužná rutina ovládacího prvku
-Následující položku mapování odpovídá prototyp funkce.  
-  
-|Položku mapování|Prototyp funkce|  
-|---------------|------------------------|  
-|On_control – ( \<wNotifyCode >, \<id >, \<memberFxn >)|afx_msg void memberFxn ();|  
-  
-## <a name="see-also"></a>Viz také  
- [Mapy zpráv](../../mfc/reference/message-maps-mfc.md)
+
+Následující položku mapování odpovídá k rychlému vytvoření prototypu funkce.
+
+|Položka mapování|Prototyp funkce|
+|---------------|------------------------|
+|ON_CONTROL ( \<funkci wNotifyCode >, \<id >, \<memberFxn >)|afx_msg void memberFxn ();|
+
+## <a name="see-also"></a>Viz také
+
+[Mapy zpráv](../../mfc/reference/message-maps-mfc.md)
 

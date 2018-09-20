@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b4f83d4d991b55ec7151db22a9b21424914bd04
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a4ed04c30eb71086f57cc9a782c320c06a301485
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590192"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405031"
 ---
 # <a name="support-for-unicode"></a>Podpora pro Unicode
 
@@ -67,5 +67,6 @@ Třída `CString` používá `_TCHAR` jako její základ a poskytuje konstruktor
 - [Další informace o mapování obecného textu pro přenositelnost šířky bajtu](../text/generic-text-mappings-in-tchar-h.md)
 
 ## <a name="see-also"></a>Viz také:
- [Text a řetězce](../text/text-and-strings-in-visual-cpp.md)  
- [Podpora použití funkce wmain](../text/support-for-using-wmain.md)  
+
+[Text a řetězce](../text/text-and-strings-in-visual-cpp.md)<br/>
+[Podpora použití funkce wmain](../text/support-for-using-wmain.md)

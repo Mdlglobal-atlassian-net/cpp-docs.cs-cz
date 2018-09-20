@@ -1,5 +1,5 @@
 ---
-title: Zabezpečení Internetu (C++) | Microsoft Docs
+title: Internetové zabezpečení (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,22 +23,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4454eceae2cc5f2e6b46510fe95889c664a568a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1f5beba4f9a33a5bd9ee93baae6176d3ea592d2e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348847"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445812"
 ---
 # <a name="internet-security-c"></a>Internetové zabezpečení (C++)
-Zabezpečení kódu je závažný problém pro vývojáře a pro uživatele internetových aplikací. Jsou rizika: škodlivý kód, kód, který byl porušen a kód z neznámé lokality nebo autoři.  
-  
- Existují dva základní přístupy k zabezpečení při vývoji pro Internet. První se označuje jako "sandboxing." V tomto přístupu aplikace omezen na konkrétní sadu rozhraní API a vyloučené z potenciálně nebezpečná ty, které jsou například kde může program zničí data v počítači uživatele vstupně-výstupní soubor. Druhá je implementovaná pomocí digitálních podpisů. Tento postup se označuje jako "shrinkwrap" pro Internet. Kód ověření a podepsaný pomocí privátní klíč a veřejného klíče technologie. Před spuštěním kódu je zajistit, že kódu je ze známé ověřené zdroje a že vzhledem k tomu, že byl podepsán nebyl změněn kód ověřit digitální podpis.  
-  
- V prvním případě důvěřujete, že aplikace nebude žádné zlé a důvěřujete počátek aplikace. Digitální podpisy za sekundu, se používají k ověření pravosti. Digitální podepisování je oborový standard používá k identifikaci a poskytují podrobné informace o vydavateli kódu. Jeho technologie je založena na standardech, včetně RSA a X.509. Prohlížeče obvykle umožňují uživatelům si vybrat, zda chtějí stáhnout a spustit kódem neznámého původu.  
-  
-  
-## <a name="see-also"></a>Viz také  
- [Úlohy internetového programování MFC](../mfc/mfc-internet-programming-tasks.md)   
- [Základy internetového programování v prostředí MFC](../mfc/mfc-internet-programming-basics.md)
+
+Bezpečnostní kód je závažný problém pro vývojáře a uživatele internetových aplikací. Existují rizika: škodlivý kód, kód, který bylo manipulováno a kód z neznámého nebo autoři.
+
+Existují dva základní přístupy k zabezpečení při vývoji pro Internet. První se nazývá "izolace (sandbox)." V takovém případě aplikaci omezit na konkrétní sadu rozhraní API a vyloučit z potenciálně nebezpečné ty, jako jsou například vstupně, kde může program zničí data v počítači uživatele. Druhá je implementováno pomocí digitálních podpisů. Tento postup se označuje jako "shrinkwrap" pro Internet. Kód je ověřený a podepsán pomocí klíčových technologií privátní klíč/public. Předtím, než je kód spuštěn, je ověřit digitální podpis, ujistěte se, že kód je ze známého ověřeného zdroje a kód nebyl byla změněna, protože byla podepsána.
+
+V prvním případě důvěřovat, že aplikace nebude provádět žádné a původu aplikace důvěřujete. V druhém digitální podpisy se používají k ověření pravosti. Digitální podpis je oborový standard lze identifikovat a zadat další informace o vydavateli kód. Technologie je založena na standardech, včetně RSA a X.509. Prohlížeče obvykle umožňují uživatelům si vybrat, zda chtějí stáhnout a spustit kód neznámého původu.
+
+
+## <a name="see-also"></a>Viz také
+
+[Úlohy internetového programování MFC](../mfc/mfc-internet-programming-tasks.md)<br/>
+[Základy internetového programování v prostředí MFC](../mfc/mfc-internet-programming-basics.md)
 

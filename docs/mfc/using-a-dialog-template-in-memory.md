@@ -1,5 +1,5 @@
 ---
-title: Použití šablony dialogového okna v paměti | Microsoft Docs
+title: Použití šablony dialogového okna v paměti | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10364cffa393c8f0968a4d7dffe40224b76ecf3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 649f3aecc79a0b05355b67b1d42cfd3cc2726f18
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381235"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430836"
 ---
 # <a name="using-a-dialog-template-in-memory"></a>Použití šablony dialogového okna v paměti
-Místo použití metody v [dialogové okno Vytvoření tabulky](../mfc/creating-a-dialog-class-with-code-wizards.md), můžete vytvořit buď typ dialogového okna nepřímo z šablony dialogového okna v paměti. Další informace najdete v tématu třídy [CDialog](../mfc/reference/cdialog-class.md) v *odkaz knihovny MFC*.  
-  
-## <a name="see-also"></a>Viz také  
- [Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
+
+Namísto použití metody uvedené v [dialogové okno Vytvoření tabulky](../mfc/creating-a-dialog-class-with-code-wizards.md), můžete vytvořit buď typ dialogového okna nepřímo ze šablony dialogového okna v paměti. Další informace najdete v tématu třídy [CDialog](../mfc/reference/cdialog-class.md) v *odkaz knihovny MFC*.
+
+## <a name="see-also"></a>Viz také
+
+[Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Soubory v prostředí MFC | Microsoft Docs
+title: Soubory v prostředí MFC | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,50 +24,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64a8df138ef0d581bcc93bf836ee0935a634983d
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: bfc36a6b1610df07201833ed13a1c6ebd0ae6f7b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930500"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444476"
 ---
 # <a name="files-in-mfc"></a>Soubory v prostředí MFC
-Třídy v Microsoft Foundation Class Library (MFC), [cfile –](../mfc/reference/cfile-class.md) zpracovává normální souborových vstupně-výstupních operací. Tato řada článků vysvětluje, jak otevřít a zavřete soubory a také pro čtení a zápisu dat do těchto souborů. Popisuje také operací se soubory stavu. Popis toho, jak používat funkce na základě objektů serializace MFC jako alternativní způsob čtení a zápis dat v souborech, najdete v článku [serializace](../mfc/serialization-in-mfc.md).  
-  
+
+Třídy v třídy knihovny MFC (Microsoft Foundation), [cfile –](../mfc/reference/cfile-class.md) zpracovává normální souborových vstupně-výstupních operací. Tato řada článků vysvětluje, jak otevřít a zavřít soubory a číst a zapisovat data k těmto souborům. Také popisuje stav operace se soubory. Popis toho, jak používat funkce serializace založenou na objektech knihovny MFC jako alternativní způsob čtení a zápis dat v souborech, najdete v článku [serializace](../mfc/serialization-in-mfc.md).
+
 > [!NOTE]
->  Při použití MFC `CDocument` objekty, systém provádí většinu práce serializace pro vás. Konkrétně rozhraní framework vytvoří a použije `CFile` objektu. Budete muset psát kód ve vaší přepsání `Serialize` funkce člena třídy `CDocument`.  
-  
- `CFile` Třída poskytuje rozhraní pro operace se pro obecné účely binární soubory. `CStdioFile` a `CMemFile` třídy odvozené od `CFile` a `CSharedFile` třída odvozená z `CMemFile` zadat více specializované souborové služby.  
-  
- Další informace o alternativních zpracování souboru MFC najdete v tématu [zpracování souborů](../c-runtime-library/file-handling.md) v *referenční dokumentace běhové knihovny*.  
-  
- Informace o odvozené `CFile` třídách naleznete v tématu [graf hierarchie MFC](../mfc/hierarchy-chart.md).  
-  
-## <a name="what-do-you-want-to-do"></a>Co chcete udělat  
- *Cfile – použití*  
-  
--   [Otevřete soubor s cfile –](../mfc/opening-files.md)  
-  
--   [Čtení a zápis do souboru s cfile –](../mfc/reading-and-writing-files.md)  
-  
--   [Zavřete soubor s cfile –](../mfc/closing-files.md)  
-  
--   [Stav přístupu k souboru s cfile –](../mfc/accessing-file-status.md)  
-  
- *Použití knihovny MFC serializace (objekt trvalost)*  
-  
--   [Vytvoření serializovatelné třídy](../mfc/serialization-making-a-serializable-class.md)  
-  
--   [Serializovat objekt prostřednictvím objektu CArchive](../mfc/serialization-serializing-an-object.md)  
-  
--   [Vytvoření objektu CArchive](../mfc/two-ways-to-create-a-carchive-object.md)  
-  
--   [Použít CArchive <\< a >> operátory](../mfc/using-the-carchive-output-and-input-operators.md)  
-  
--   [Ukládání a načítání objektů CObject a objekt odvozené třídy CObject prostřednictvím archivu](../mfc/storing-and-loading-cobjects-via-an-archive.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Koncepty](../mfc/mfc-concepts.md)   
- [Obecná témata MFC](../mfc/general-mfc-topics.md)   
- [CArchive – třída](../mfc/reference/carchive-class.md)   
- [CObject – třída](../mfc/reference/cobject-class.md)
+>  Při použití knihovny MFC `CDocument` objektů, rozhraní velkou část práce serializace udělá za vás. Zejména rozhraní vytváří a používá `CFile` objektu. Budete muset psát kód v přepsání metody `Serialize` členské funkce třídy `CDocument`.
+
+`CFile` Třída poskytuje rozhraní pro operace s binárními soubory pro obecné účely. `CStdioFile` a `CMemFile` třídy odvozené z `CFile` a `CSharedFile` třída odvozená z `CMemFile` zadat více specializované souborové služby.
+
+Další informace o alternativách do práce se soubory knihovny MFC naleznete v tématu [zpracování souborů](../c-runtime-library/file-handling.md) v *Run-Time Library Reference*.
+
+Informace o odvozených `CFile` třídy, najdete v článku [graf hierarchie MFC](../mfc/hierarchy-chart.md).
+
+## <a name="what-do-you-want-to-do"></a>Co chcete udělat
+
+*Cfile – použití*
+
+- [Otevřete soubor s cfile –](../mfc/opening-files.md)
+
+- [Čtení a zápis do souboru s cfile –](../mfc/reading-and-writing-files.md)
+
+- [Zavřete soubor s cfile –](../mfc/closing-files.md)
+
+- [Stav přístupu k souboru s cfile –](../mfc/accessing-file-status.md)
+
+*Použití knihovny MFC serializace (trvalost objektu)*
+
+- [Vytvořit serializovatelné třídy](../mfc/serialization-making-a-serializable-class.md)
+
+- [Serializace objektu prostřednictvím objektu CArchive](../mfc/serialization-serializing-an-object.md)
+
+- [Vytvoření objektu CArchive](../mfc/two-ways-to-create-a-carchive-object.md)
+
+- [Použít CArchive <\< a >> operátory](../mfc/using-the-carchive-output-and-input-operators.md)
+
+- [Store a načítání objektů CObject a objekty odvozené třídy CObject prostřednictvím archivu](../mfc/storing-and-loading-cobjects-via-an-archive.md)
+
+## <a name="see-also"></a>Viz také
+
+[Koncepty](../mfc/mfc-concepts.md)<br/>
+[Obecná témata MFC](../mfc/general-mfc-topics.md)<br/>
+[CArchive – třída](../mfc/reference/carchive-class.md)<br/>
+[CObject – třída](../mfc/reference/cobject-class.md)

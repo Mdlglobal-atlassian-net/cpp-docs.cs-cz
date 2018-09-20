@@ -1,5 +1,5 @@
 ---
-title: Windows Sockets – třídy | Microsoft Docs
+title: Windows Sockets – třídy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e370c8a5f9cb2fb42c3199dbc0d56b69d93dc35
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 893fa525b04376cde0e96f280c95e6bfd1243946
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382125"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439975"
 ---
 # <a name="windows-sockets-classes"></a>Windows Sockets – třídy
-Windows Sockets poskytují způsob nezávislý sítě pro komunikaci mezi dvěma počítači. Tyto sokety může být synchronní (váš program čeká, dokud probíhá komunikace) nebo asynchronní (váš program dál běží, zatímco se děje komunikace).  
-  
- [CAsyncSocket](../mfc/reference/casyncsocket-class.md)  
- Zapouzdří rozhraní API systému Windows Sockets v obálce dynamické.  
-  
- [CSocket](../mfc/reference/csocket-class.md)  
- Vyšší úrovni abstrakce odvozené z `CAsyncSocket`. Funguje synchronně.  
-  
- [CSocketFile](../mfc/reference/csocketfile-class.md)  
- Poskytuje `CFile` rozhraní Windows soketu.  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled třídy](../mfc/class-library-overview.md)
+
+Windows Sockets poskytují způsob protokol nezávislé sítě ke komunikaci mezi dvěma počítači. Může být synchronní tyto sokety (program čeká, dokud probíhá komunikace), nebo asynchronní (váš program bude pokračovat při komunikaci se děje).
+
+[CAsyncSocket](../mfc/reference/casyncsocket-class.md)<br/>
+Zapouzdřuje rozhraní Windows Sockets API v obálce dynamického zajišťování.
+
+[Csocket –](../mfc/reference/csocket-class.md)<br/>
+Vyšší úrovni abstrakce odvozený od `CAsyncSocket`. Pracuje synchronně.
+
+[Csocketfile –](../mfc/reference/csocketfile-class.md)<br/>
+Poskytuje `CFile` rozhraní Windows Socket.
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../mfc/class-library-overview.md)
 

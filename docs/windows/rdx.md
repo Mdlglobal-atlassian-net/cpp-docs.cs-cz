@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 00ef28954a686dac72c8b7f55b86c88313e74643
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 566b21c911ba99d19fb16b564d0748cfcfd1eb71
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719717"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435971"
 ---
 # <a name="rdx"></a>rdx
 
@@ -40,13 +40,13 @@ Vytvoří klíč registru nebo upraví stávající klíč registru.
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*  
+*Klíč*<br/>
 Název klíče, který má být vytvořen nebo otevřen.
 
-*Název hodnoty*  
+*Název hodnoty*<br/>
 (Volitelné) Určuje pole hodnoty nastavení. Pokud hodnota pole s tímto názvem již neexistuje v klíči, je přidána.
 
-*regtype*  
+*regtype*<br/>
 Typ přidávaný klíč registru. Může být jedna z následujících akcí: `text`, `dword`, `binary`, nebo `CString`.
 
 ## <a name="remarks"></a>Poznámky
@@ -93,5 +93,5 @@ public:
 
 ## <a name="see-also"></a>Viz také
 
-[COM – atributy](../windows/com-attributes.md)  
+[COM – atributy](../windows/com-attributes.md)<br/>
 [registration_script](../windows/registration-script.md)  

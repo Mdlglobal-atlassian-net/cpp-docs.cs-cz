@@ -1,5 +1,5 @@
 ---
-title: On_update_command_ui – makro | Microsoft Docs
+title: ON_UPDATE_COMMAND_UI – makro | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43caffe53be180221b4145a03df7cfc41c31828e
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 17111e24a63d527996eadd82c804e5147ad78552
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928635"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433462"
 ---
 # <a name="onupdatecommandui-macro"></a>ON_UPDATE_COMMAND_UI – makro
-Použití **vlastnosti** okno pro připojení objektu uživatelského rozhraní pro obslužnou rutinu aktualizace příkaz v příkazu cílový objekt. Bude automaticky připojit k on_update_command_ui – makro ID objektu uživatelské rozhraní a vytvořit obslužnou rutinu v objektu, která zpracuje aktualizaci. V tématu [mapování zpráv do funkcí](../mfc/reference/mapping-messages-to-functions.md) Další informace.  
-  
- Například pokud chcete aktualizovat příkaz Vymazat vše v nabídce Upravit vašeho programu, použijte **vlastnosti** okno Přidat položku mapování zpráv ve vybrané třídě deklaraci funkce pro obslužné rutiny aktualizace příkazů jmenuje `OnUpdateEditClearAll` ve třídě deklarace a šablonu prázdný funkce v souboru implementace třídy. Prototyp funkce vypadá takto:  
-  
- [!code-cpp[NVC_MFCDocView#2](../mfc/codesnippet/cpp/on-update-command-ui-macro_1.h)]  
-  
- Všechny rutiny, zobrazí funkce, jako **afx_msg** – klíčové slovo. Jako všechny obslužné rutiny aktualizace, jak dlouho trvá jeden argument, odkazy `CCmdUI` objektu.  
-  
-## <a name="see-also"></a>Viz také  
- [Postupy: Aktualizace objektů uživatelského rozhraní](../mfc/how-to-update-user-interface-objects.md)
+
+Použití **vlastnosti** okno pro připojení objektu uživatelského rozhraní pro obslužnou rutinu aktualizace příkazů v příkazu cílový objekt. Bude automaticky připojit ID objektu uživatelské rozhraní ON_UPDATE_COMMAND_UI – makro a vytvořte obslužnou rutinu v objektu, který bude zpracovávat aktualizace. Zobrazit [mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md) Další informace.
+
+Například pokud chcete vymazat všechny příkaz v nabídce Úpravy váš program aktualizovat, použijte **vlastnosti** se okno Přidat položku mapování zpráv ve třídě zvolené deklaraci funkce obslužné rutiny aktualizace příkazů `OnUpdateEditClearAll` ve třídě deklarace a šablonu funkce empty v souboru implementace třídy. Prototyp funkce vypadá takto:
+
+[!code-cpp[NVC_MFCDocView#2](../mfc/codesnippet/cpp/on-update-command-ui-macro_1.h)]
+
+Všechny obslužné rutiny, zobrazí se funkce, jako jsou **afx_msg** – klíčové slovo. Stejně jako všechny obslužné rutiny aktualizace, přijímá jeden argument, ukazatel `CCmdUI` objektu.
+
+## <a name="see-also"></a>Viz také
+
+[Postupy: Aktualizace objektů uživatelského rozhraní](../mfc/how-to-update-user-interface-objects.md)
 

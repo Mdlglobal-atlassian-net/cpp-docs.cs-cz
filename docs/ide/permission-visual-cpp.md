@@ -18,51 +18,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1dab2c803fee38662a638d056b35f79f8d5e8e9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3a5e9a6dd5b7e6399a0752981d0ea1e5add32405
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46096610"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437401"
 ---
 # <a name="ltpermissiongt-visual-c"></a>&lt;oprávnění&gt; (Visual C++)
-\<Oprávnění > značky umožňuje dokumentu přístup člena. <xref:System.Security.PermissionSet> Umožňuje určit přístup ke členu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-<permission cref="member">description</permission>  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+\<Oprávnění > značky umožňuje dokumentu přístup člena. <xref:System.Security.PermissionSet> Umožňuje určit přístup ke členu.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+<permission cref="member">description</permission>
+```
+
+#### <a name="parameters"></a>Parametry
+
 *Člen*<br/>
-Odkaz na člena nebo na pole, které lze volat z prostředí aktuální kompilace. Kompilátor kontroluje, zda daný prvek kódu existuje a přeloží `member` k názvu canonical prvku ve výstupním souboru XML.  Název uzavřete do jednoduchých nebo dvojitých uvozovek.  
-  
- Kompilátor vyvolá upozornění, pokud se nenajde `member`.  
-  
- Informace o tom, jak vytvořit cref odkaz na obecný typ, naleznete v tématu [ \<naleznete v tématu >](../ide/see-visual-cpp.md).  
-  
+Odkaz na člena nebo na pole, které lze volat z prostředí aktuální kompilace. Kompilátor kontroluje, zda daný prvek kódu existuje a přeloží `member` k názvu canonical prvku ve výstupním souboru XML.  Název uzavřete do jednoduchých nebo dvojitých uvozovek.
+
+Kompilátor vyvolá upozornění, pokud se nenajde `member`.
+
+Informace o tom, jak vytvořit cref odkaz na obecný typ, naleznete v tématu [ \<naleznete v tématu >](../ide/see-visual-cpp.md).
+
 *Popis*<br/>
-Popis přístup ke členu.  
-  
-## <a name="remarks"></a>Poznámky  
- Kompilovat s [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.  
-  
- Kompilátor Visual C++ se pokusí přeložit odkazy cref v jednom průchodu přes komentáře k dokumentaci.  Proto pokud pomocí pravidel vyhledávání C++ symbol nebyl nalezen kompilátorem odkaz bude označen jako nevyřešené. Zobrazit [ \<seealso >](../ide/seealso-visual-cpp.md) Další informace.  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// xml_permission_tag.cpp  
-// compile with: /clr /doc /LD  
-// post-build command: xdcmake xml_permission_tag.dll  
-using namespace System;  
-/// Text for class TestClass.  
-public ref class TestClass {  
-   /// <permission cref="System::Security::PermissionSet">Everyone can access this method.</permission>  
-   void Test() {}  
-};  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Dokumentace XML](../ide/xml-documentation-visual-cpp.md)
+Popis přístup ke členu.
+
+## <a name="remarks"></a>Poznámky
+
+Kompilovat s [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.
+
+Kompilátor Visual C++ se pokusí přeložit odkazy cref v jednom průchodu přes komentáře k dokumentaci.  Proto pokud pomocí pravidel vyhledávání C++ symbol nebyl nalezen kompilátorem odkaz bude označen jako nevyřešené. Zobrazit [ \<seealso >](../ide/seealso-visual-cpp.md) Další informace.
+
+## <a name="example"></a>Příklad
+
+```
+// xml_permission_tag.cpp
+// compile with: /clr /doc /LD
+// post-build command: xdcmake xml_permission_tag.dll
+using namespace System;
+/// Text for class TestClass.
+public ref class TestClass {
+   /// <permission cref="System::Security::PermissionSet">Everyone can access this method.</permission>
+   void Test() {}
+};
+```
+
+## <a name="see-also"></a>Viz také
+
+[Dokumentace XML](../ide/xml-documentation-visual-cpp.md)

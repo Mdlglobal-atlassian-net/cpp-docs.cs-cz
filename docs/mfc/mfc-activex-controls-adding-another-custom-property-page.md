@@ -1,5 +1,5 @@
 ---
-title: 'Ovládací prvky MFC ActiveX: Přidání další stránky přizpůsobených vlastností | Microsoft Docs'
+title: 'MFC – ovládací prvky ActiveX: Přidání další stránky přizpůsobených vlastností | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,105 +17,107 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9c3d9f4744ae01a7e251387bd342b77292d1c0d
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ce81436781a92c8d2c9156e1d1c02513c3816dc4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931606"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440053"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC – ovládací prvky ActiveX: Přidání další stránky přizpůsobených vlastností
-Ovládací prvek ActiveX v některých případech bude mít více vlastností než to bude přiměřeně vejde na jednu stránku vlastností. V takovém případě můžete přidat stránky vlastností do ovládacího prvku ActiveX k zobrazení těchto vlastností.  
-  
- Tento článek popisuje přidání nové stránky vlastností pro ovládací prvek ActiveX, který již má alespoň jednu stránku vlastností. Další informace o přidání uložených vlastností stránky (písma, obrázek nebo barvu), najdete v článku [MFC – ovládací prvky ActiveX: použití stránek vlastností Stock](../mfc/mfc-activex-controls-using-stock-property-pages.md).  
-  
- Následující postupy použijte rozhraní ovládacího prvku ActiveX ukázka vytvořené Průvodce ovládacím prvkem ActiveX. Názvy tříd a identifikátory proto jsou jedinečné pro tento příklad.  
-  
- Další informace o použití stránek vlastností v ovládacím prvku ActiveX najdete v následujících článcích:  
-  
--   [MFC – ovládací prvky ActiveX: Stránky vlastností](../mfc/mfc-activex-controls-property-pages.md)  
-  
--   [MFC – ovládací prvky ActiveX: Použití stránek uložených vlastností](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
-  
+
+Ovládací prvek ActiveX v některých případech bude mít více vlastností než rozumně vejde na jednu stránku vlastností. V takovém případě můžete přidat stránky vlastností do ovládacího prvku ActiveX k zobrazení těchto vlastností.
+
+Tento článek popisuje přidání nové stránky vlastností do ovládacího prvku ActiveX, který už má alespoň jednu stránku vlastností. Další informace o přidání uložených vlastností stránky (písma, obrázek nebo barva), najdete v článku [knihovny MFC – ovládací prvky ActiveX: použití stránek vlastností akcie](../mfc/mfc-activex-controls-using-stock-property-pages.md).
+
+Následující postupy používají ukázkové rozhraní ovládacího prvku ActiveX vytvořené průvodcem ovládacího prvku ActiveX. Proto jsou jedinečné pro tento příklad názvy tříd a identifikátory.
+
+Další informace o použití stránek vlastností v ovládacím prvku ActiveX najdete v následujících článcích:
+
+- [MFC – ovládací prvky ActiveX: Stránky vlastností](../mfc/mfc-activex-controls-property-pages.md)
+
+- [MFC – ovládací prvky ActiveX: Použití stránek uložených vlastností](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+
     > [!NOTE]
-    >  Důrazně doporučujeme tuto novou vlastnost, kterou stránky dodržovat velikost standard pro stránky vlastností ovládacího prvku ActiveX. Stránky uložených vlastností obrázků a barvu měr 250 × 62 jednotky dialogu (DLU). Stránka vlastností standardní písma je 250 x 110 dlu. Výchozí stránka vlastností vytvořené Průvodce ovládacím prvkem ActiveX používá standardní DLU 250 × 62.  
-  
-### <a name="to-insert-a-new-property-page-template-into-your-project"></a>Chcete-li vložit novou šablonu stránky vlastností do projektu  
-  
-1.  Pomocí řízení projektu otevřít otevřete zobrazení prostředků v pracovním prostoru projektu.  
-  
-2.  Klikněte pravým tlačítkem myši v zobrazení zdrojů otevřete místní nabídky a klikněte na tlačítko **přidat prostředek**.  
-  
-3.  Rozbalte **dialogové okno** uzel a vyberte možnost **IDD_OLE_PROPPAGE_SMALL**.  
-  
-4.  Klikněte na tlačítko **nový** pro daný prostředek přidejte do projektu.  
-  
-5.  Vyberte novou šablonu, vlastnost stránku aktualizujte okno vlastností.  
-  
-6.  Zadejte novou hodnotu **ID** vlastnost. Tento příklad používá **IDD_PROPPAGE_NEWPAGE**.  
-  
-7.  Klikněte na tlačítko **Uložit** na panelu nástrojů.  
-  
-### <a name="to-associate-the-new-template-with-a-class"></a>Chcete-li přidružit nové šablony s třídou  
-  
-1.  Otevřete zobrazení tříd.  
-  
-2.  Klikněte pravým tlačítkem myši v zobrazení tříd a místní nabídce.  
-  
-3.  V místní nabídce klikněte na **přidat** a pak klikněte na **přidat třídu**.  
-  
-     Tím se otevře [přidat třídu](../ide/add-class-dialog-box.md) dialogové okno.  
-  
-4.  Dvakrát klikněte **třídy knihovny MFC** šablony.  
-  
-5.  V **název třídy** pole [Průvodce třídou MFC](../mfc/reference/mfc-add-class-wizard.md), zadejte název nové třídy dialogového okna. (V tomto příkladu `CAddtlPropPage`.)  
-  
-6.  Pokud chcete změnit názvy souborů, klikněte na tlačítko **změnit**. Zadáním názvů pro implementaci a hlavičky souborů, nebo přijměte výchozí názvy.  
-  
-7.  V **základní třída** vyberte `COlePropertyPage`.  
-  
-8.  V **dialogové okno ID** vyberte **IDD_PROPPAGE_NEWPAGE**.  
-  
-9. Klikněte na tlačítko **Dokončit** třídu vytvořte.  
-  
- Povolit přístup k této nové stránky vlastností ovládacího prvku uživatele, proveďte následující změny do ovládacího prvku vlastnost stránky ID makro oddílu (nachází se v řídicím souboru implementace):  
-  
- [!code-cpp[NVC_MFC_AxUI#32](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_1.cpp)]  
-  
- Všimněte si, že musíte zvýšit druhý parametr begin_proppageids – makro (počet stránek vlastností) z 1 na 2.  
-  
- Musíte také upravit řídicí soubor implementace (. Záhlaví souboru CPP) (. H) soubor nové třídy stránky vlastností.  
-  
- Dalším krokem zahrnuje vytvoření dva nové prostředky řetězce, které vám poskytne název typu a popisek pro nové stránky vlastností.  
-  
-#### <a name="to-add-new-string-resources-to-a-property-page"></a>Přidání nových prostředků řetězec do stránky vlastností  
-  
-1.  Pomocí řízení projektu otevřít otevřete zobrazení prostředků.  
-  
-2.  Dvakrát klikněte **tabulky řetězců** složku a pak dvojitým kliknutím existující řetězec tabulky prostředků, do které chcete přidat řetězec.  
-  
-     Řetězec tabulka se otevře v okně.  
-  
-3.  Vyberte prázdný řádek na konec tabulky řetězec a zadejte text nebo popisek řetězce: například "Další stránka vlastností."  
-  
-     Tím se otevře **vlastnosti řetězce** stránky zobrazující **popisek** a **ID** polí. **Popisek** pole obsahuje řetězec, který jste zadali.  
-  
-4.  V **ID** pole, vyberte nebo zadejte ID pro řetězec. Po dokončení stiskněte klávesu Enter.  
-  
-     Tento příklad používá **IDS_SAMPLE_ADDPAGE** pro název typu nové stránky vlastností.  
-  
-5.  Zopakujte kroky 3 a 4 s využitím **IDS_SAMPLE_ADDPPG_CAPTION** pro ID a "Stránka další vlastnosti" titulek.  
-  
-6.  V. Soubor CPP nové třídy stránky vlastností (v tomto příkladu `CAddtlPropPage`) upravit `CAddtlPropPage::CAddtlPropPageFactory::UpdateRegistry` tak, aby je předaná IDS_SAMPLE_ADDPAGE [afxoleregisterpropertypageclass –](../mfc/reference/registering-ole-controls.md#afxoleregisterpropertypageclass), jako v následujícím příkladu:  
-  
-     [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]  
-  
-7.  Upravit konstruktoru `CAddtlPropPage` tak, aby předaný IDS_SAMPLE_ADDPPG_CAPTION `COlePropertyPage` konstruktoru, následujícím způsobem:  
-  
-     [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]  
-  
- Po provedení nezbytné úpravy znovu sestavte projekt a otestovat kontejneru použít k testování nové stránky vlastností. V tématu [testování vlastností a událostí pomocí Test kontejneru](../mfc/testing-properties-and-events-with-test-container.md) informace o tom, jak přístup kontejner testů.  
-  
-## <a name="see-also"></a>Viz také  
- [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)
+    >  Důrazně doporučujeme tuto novou vlastnost, kterou stránky dodržovat standardní pro stránky vlastností ovládacího prvku ActiveX velikost. Stránky uložených vlastností obrázků a barvu míru 250 × 62 jednotky dialogu (DLU). Na stránce vlastností standardní písmo je 250 x 110 dlu. Výchozí stránky vlastností vytvořené průvodcem ovládací prvek ActiveX používá 250 × 62 DLU standard.
+
+### <a name="to-insert-a-new-property-page-template-into-your-project"></a>Chcete-li vložit šablonu nové stránky vlastností do projektu
+
+1. Pomocí ovládacího prvku projektu otevřený otevřete zobrazení prostředků v pracovním prostoru projektu.
+
+1. Klikněte pravým tlačítkem v zobrazení prostředků, otevřete místní nabídku a klikněte na tlačítko **přidat prostředek**.
+
+1. Rozbalte **dialogové okno** uzel a vyberte možnost **IDD_OLE_PROPPAGE_SMALL**.
+
+1. Klikněte na tlačítko **nový** bude příslušný materiál přidán do projektu.
+
+1. Vyberte novou šablonu stránky vlastností aktualizovat v okně Vlastnosti.
+
+1. Zadejte novou hodnotu **ID** vlastnost. Tento příklad používá **IDD_PROPPAGE_NEWPAGE**.
+
+1. Klikněte na tlačítko **Uložit** na panelu nástrojů.
+
+### <a name="to-associate-the-new-template-with-a-class"></a>Chcete-li přidružit nové šablony s třídou
+
+1. Otevřete zobrazení tříd.
+
+1. Klikněte pravým tlačítkem v zobrazení tříd a otevřete místní nabídku.
+
+1. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat třídu**.
+
+     Tím se otevře [přidat třídu](../ide/add-class-dialog-box.md) dialogové okno.
+
+1. Dvakrát klikněte **třídy knihovny MFC** šablony.
+
+1. V **název třídy** pole [Průvodce třídami MFC](../mfc/reference/mfc-add-class-wizard.md), zadejte název nové třídy dialogového okna. (V tomto příkladu `CAddtlPropPage`.)
+
+1. Pokud chcete změnit názvy souborů, klikněte na tlačítko **změnit**. Zadejte názvy pro implementaci a hlavičkovými soubory, nebo přijměte výchozí názvy.
+
+1. V **základní třída** vyberte `COlePropertyPage`.
+
+1. V **ID dialogu** vyberte **IDD_PROPPAGE_NEWPAGE**.
+
+9. Klikněte na tlačítko **Dokončit** pro vytvoření třídy.
+
+Ovládacího prvku uživatelům umožnit přístup k této nové stránky vlastností, ovládacího prvku vlastnost ID – makro oddíl stránky (umístěný v souboru implementace ovládacího prvku) proveďte následující změny:
+
+[!code-cpp[NVC_MFC_AxUI#32](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_1.cpp)]
+
+Všimněte si, že musíte zvýšit druhý parametr BEGIN_PROPPAGEIDS – makro (počet stránek vlastností) od 1 do 2.
+
+Je také nutné upravit soubor implementace ovládacího prvku (. Zahrnout hlavičku souboru CPP) (. H) file nové třídy stránky vlastností.
+
+Dalším krokem zahrnuje vytvoření dvou nových prostředků řetězce, které vám poskytne zadejte název a titulek pro nové stránky vlastností.
+
+#### <a name="to-add-new-string-resources-to-a-property-page"></a>Přidání nové prostředky řetězců do stránky vlastností
+
+1. Pomocí ovládacího prvku projektu otevřený otevřete zobrazení prostředků.
+
+1. Dvakrát klikněte **tabulka řetězců** složku a potom dvakrát klikněte na existující řetězec tabulky prostředků, ke kterému chcete přidat řetězec.
+
+     Tabulka řetězců se otevře v okně.
+
+1. Vyberte prázdný řádek na konec tabulky řetězců a zadejte text nebo caption řetězce: například "Další stránka vlastností."
+
+     Tím se otevře **vlastnosti řetězce** stránka zobrazující **titulek** a **ID** polí. **Titulek** pole obsahuje řetězec, který jste zadali.
+
+1. V **ID** vyberte nebo zadejte ID řetězce. Jakmile skončíte, stiskněte klávesu Enter.
+
+     Tento příklad používá **IDS_SAMPLE_ADDPAGE** zadejte název nové stránky vlastností.
+
+1. Zopakujte kroky 3 a 4 s využitím **IDS_SAMPLE_ADDPPG_CAPTION** pro ID a "Stránka Další vlastnost" pro titulek.
+
+1. V. Soubor CPP nové třídy stránky vlastností (v tomto příkladu `CAddtlPropPage`) změnit `CAddtlPropPage::CAddtlPropPageFactory::UpdateRegistry` tak, aby je předaný odkazem na IDS_SAMPLE_ADDPAGE [afxoleregisterpropertypageclass –](../mfc/reference/registering-ole-controls.md#afxoleregisterpropertypageclass), jako v následujícím příkladu:
+
+     [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]
+
+1. Upravit konstruktoru `CAddtlPropPage` tak, aby je předán IDS_SAMPLE_ADDPPG_CAPTION `COlePropertyPage` konstruktoru, následujícím způsobem:
+
+     [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]
+
+Po provedení potřebné změny znovu sestavit projekt a použít kontejner testu otestovat nové stránky vlastností. Zobrazit [testování vlastností a událostí pomocí testování kontejneru](../mfc/testing-properties-and-events-with-test-container.md) informace o tom, jak získat přístup ke kontejneru testů.
+
+## <a name="see-also"></a>Viz také
+
+[MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)
 

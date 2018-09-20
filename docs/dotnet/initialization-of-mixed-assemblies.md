@@ -21,19 +21,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9004d62caa5368294a5a53e4e2587da05d1d495c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ba9f3143fb110b25f384e462e7dfcd69c0140802
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204539"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439572"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>Inicializace smíšených sestavení
 
 Vývojáři Windows musí být opatrně zámek zavaděče při spuštění kódu během `DllMain`. Existují však některé další důležité informace, které souvisejí při práci s C + +/ clr sestavení ve smíšeném režimu.
 
 Kód v rámci [DllMain](/windows/desktop/Dlls/dllmain) nesmí přístup k modulu CLR. To znamená, že `DllMain` by měla volat žádné spravované funkce, přímo nebo nepřímo; žádný spravovaný kód by měl být deklarován nebo implementované v `DllMain`; a žádná uvolnění paměti nebo automatické načítání knihovna má být provedena v rámci `DllMain` .
-  
+
 ## <a name="causes-of-loader-lock"></a>Příčiny zámek zavaděče
 
 Po zavedení služby na platformě .NET jsou dva odlišné mechanismy pro načítání modul spuštění (EXE nebo DLL): jeden pro Windows, který se používá pro nespravované moduly, a jeden pro .NET CLR Common Language Runtime (), která načte sestavení .NET. Smíšené problém načtení knihovny DLL se soustředí kolem zavaděč operačního systému Microsoft Windows.
@@ -130,7 +130,7 @@ Vzhledem k tomu může být stejná hlavička zahrnuté i souborů C++ s **/CLR*
 V zájmu usnadnění práce pro uživatele pracující s zámek zavaděče linker zvolí nativní implementaci přes spravované převedou s oběma. Tím se vyhnete výše uvedené problémy. Nicméně existují dvě výjimky z tohoto pravidla v této verzi z důvodu dvou nevyřešené problémy s kompilátor:
 
 - Volání je vložená funkce se prostřednictvím ukazatele globální statické funkce. Tento scénář je obzvláště důležité, protože jsou virtuální funkce volány prostřednictvím ukazatele na globální funkce. Například
-  
+
 ```cpp
 #include "definesmyObject.h"
 #include "definesclassC.h"
@@ -170,15 +170,15 @@ Vývojáři by k identifikaci konkrétní funkce jazyka MSIL, která byla volán
    Chcete-li to provést, otevřete **vlastnosti** mřížky pro spouštěný projekt v řešení. Vyberte **vlastnosti konfigurace** > **ladění**. Nastavte **typ ladicího programu** k **jenom nativní**.
 
 1. Spuštění ladicího programu (F5).
-  
+
 1. Když **/CLR** diagnostiky se vygeneruje, zvolte **opakujte** a klikněte na tlačítko **přerušit**.
-  
+
 1. Otevřete okno zásobníku volání. (Na řádku nabídek zvolte **ladění** > **Windows** > **zásobník volání**.) Je problematický `DllMain` nebo statický inicializátor se určuje podle zelenou šipku. Pokud problematický funkce není určena, následující kroky třeba ji najít.
 
 1. Otevřít **okamžité** okna (v řádku nabídek zvolte **ladění** > **Windows** > **okamžité**.)
 
 1. Typ knihovny sos.dll .load do **okamžité** okna pro načtení ladění služby SOS.
-  
+
 1. Typ! dumpstack do **okamžité** okno získat úplný seznam všech vnitřní **/CLR** zásobníku.
 
 1. Vyhledejte první instance (co nejblíž koncovým dolního okraje zásobníku) buď _cordllmain – (Pokud `DllMain` způsobí, že problém) nebo _VTableBootstrapThunkInitHelperStub nebo GetTargetForVTableEntry (Pokud je statický inicializátor způsobí, že problém). Položka zásobníku přímo pod toto volání není že implementovaná funkce, která se pokusila provést nastavený zámek zavaděče volání MSIL.

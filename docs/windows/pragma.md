@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f24c01c225cf971592083162fbebddd99700814
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2e6d5d832cd051c8e527b1d161158483d8fcaed1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209111"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428750"
 ---
 # <a name="pragma"></a>pragma
 
@@ -38,7 +38,7 @@ Zadaný řetězec vysílá do generovaného souboru bez použití uvozovek.
 
 ### <a name="parameters"></a>Parametry
 
-*pragma_statement*  
+*pragma_statement*<br/>
 Direktivy pragma, který chcete vrátit do generovaného souboru.
 
 ## <a name="remarks"></a>Poznámky
@@ -76,6 +76,6 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](..
 
 ## <a name="see-also"></a>Viz také
 
-[IDL – atributy](../windows/idl-attributes.md)  
-[Samostatné atributy](../windows/stand-alone-attributes.md)  
+[IDL – atributy](../windows/idl-attributes.md)<br/>
+[Samostatné atributy](../windows/stand-alone-attributes.md)<br/>
 [pack](../preprocessor/pack.md)  

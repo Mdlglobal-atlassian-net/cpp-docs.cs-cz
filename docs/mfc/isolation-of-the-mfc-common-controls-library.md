@@ -1,5 +1,5 @@
 ---
-title: Izolace MFC běžné ovládací prvky knihovny | Microsoft Docs
+title: Izolace knihovny MFC běžné ovládací prvky knihovny | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,21 +14,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 193a0ea527cda3819a585f5b7149c823a7eb8ef7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3189b2e3db594801fe417ca43867da7db2e18fd7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346812"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423777"
 ---
 # <a name="isolation-of-the-mfc-common-controls-library"></a>Izolace knihovny běžných ovládacích prvků MFC
-Běžné ovládací prvky knihovny je nyní izolovaná v rámci MFC, což jiné moduly (například uživatel knihovny DLL) do zadáním verze v jejich manifesty používají různé verze knihovny běžných ovládacích prvků.  
-  
- Aplikace MFC (nebo uživatelský kód volá MFC) volá rozhraní API prostřednictvím funkce obálky s názvem knihovnu běžných ovládacích prvků `Afx` *%{FunctionName/*, kde *%{FunctionName/* je název běžné Ovládací prvky rozhraní API. Tyto funkce obálky jsou definovány v afxcomctl32.h a afxcomctl32.inl.  
-  
- Můžete použít [afx_comctl32_if_exists –](reference/run-time-object-model-services.md#afx_comctl32_if_exists) a [afx_comctl32_if_exists2 –](reference/run-time-object-model-services.md#afx_comctl32_if_exists2) makra (definovaná v afxcomctl32.h) k určení, zda knihovny běžných ovládacích prvků implementuje určité API místo volání [GetProcAddress](../build/getprocaddress.md).  
-  
- Technicky je volat běžné ovládací prvky knihovny rozhraní API prostřednictvím obálkovou třídu, `CComCtlWrapper` (definovanou v afxcomctl32.h). `CComCtlWrapper` je také zodpovědná za načítání a uvolňování souboru Comctl32.dll. Stavu modulu MFC obsahuje ukazatel na instanci `CComCtlWrapper`. Můžete přistupovat pomocí třídy obálku `afxComCtlWrapper` makro.  
-  
- Všimněte si, že volání rozhraní API přímo běžné ovládací prvky (není pomocí funkce MFC obálky) z knihovny MFC aplikaci nebo uživatele DLL bude fungovat ve většině případů, protože aplikace knihovny MFC nebo uživatelské knihovny DLL je vázána na vyžádání v manifestu knihovny běžných ovládacích prvků). Samotný kód MFC má však používat obálky, protože MFC kód může být volána z knihoven DLL uživatele s různými verzemi knihovny běžných ovládacích prvků.
+
+Knihovny běžných ovládacích prvků nyní izolované v knihovně MFC, což různých modulů (jako je například uživatel knihovny DLL) pro používají různé verze knihovny běžných ovládacích prvků tak, že zadáte verze ve svých manifestech.
+
+Aplikace MFC (nebo uživatelský kód, volá se v prostředí MFC) provede volání do rozhraní API prostřednictvím funkce obálky s názvem knihovny běžných ovládacích prvků `Afx` *FunctionName*, kde *FunctionName* je běžný název Ovládací prvky rozhraní API. Tyto funkce obálky jsou definovány v afxcomctl32.h a afxcomctl32.inl.
+
+Můžete použít [AFX_COMCTL32_IF_EXISTS](reference/run-time-object-model-services.md#afx_comctl32_if_exists) a [AFX_COMCTL32_IF_EXISTS2](reference/run-time-object-model-services.md#afx_comctl32_if_exists2) makra (definovaná v afxcomctl32.h) k určení, zda knihovny běžných ovládacích prvků implementuje určitých rozhraní API namísto volání metody [GetProcAddress](../build/getprocaddress.md).
+
+Technicky vzato provádět volání do rozhraní API pro běžné ovládací prvky knihovny prostřednictvím obálkovou třídu `CComCtlWrapper` (definováno v afxcomctl32.h). `CComCtlWrapper` je také zodpovědná za načítání a uvolňování souboru Comctl32.dll. Stavu modulu MFC obsahuje ukazatel na instanci `CComCtlWrapper`. Můžete přistupovat pomocí třídy obálky `afxComCtlWrapper` – makro.
+
+Všimněte si, že volání rozhraní API přímo běžných ovládacích prvků (bez použití MFC – funkce obálky) z knihovny MFC aplikaci nebo uživatele knihovny DLL bude fungovat ve většině případů, protože aplikace knihovny MFC nebo uživatelské knihovny DLL je vázán na knihovny běžných ovládacích prvků požadovaný v jeho manifestu). Samotný kód knihovny MFC má však použít obálky, protože kód knihovny MFC může být volána z knihovny DLL uživatele s různými verzemi knihovny běžných ovládacích prvků.
 

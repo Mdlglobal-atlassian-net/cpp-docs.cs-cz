@@ -1,5 +1,5 @@
 ---
-title: 'TN016: Použití vícenásobné C++ dědičnosti MFC | Microsoft Docs'
+title: 'TN016: Použití knihovny MFC C++ vícenásobné dědičnosti | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -18,34 +18,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 059e239f549f8da79207e5ff6a485643252d6d6b
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 4c0ed5c1bc73f58bec1f9ad0d6a790fe3d3c0239
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37123354"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444681"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016: Použití vícenásobné dědičnosti jazyka C++ v prostředí MFC
 
-Tato poznámka popisuje, jak pomocí třídy Microsoft Foundation vícenásobná dědičnost (MI). Použití MI se nevyžaduje MFC. MI ještě není používáno ve všech tříd MFC a není nutné zapsat knihovny tříd.
+Tato poznámka popisuje, jak pomocí Microsoft Foundation Classes vícenásobná dědičnost (IU). Použití MI se nevyžaduje s knihovnou MFC. MI není použit v jakékoli třídy knihovny MFC a není nutné psát knihovny tříd.
 
-Následující další části popisují, jak MI ovlivňuje použití běžné MFC idioms a také které se vztahuje některá omezení MI. Některé z těchto omezení jsou obecná omezení C++. Ostatní jsou způsobené architektury MFC.
+Následující dílčí témata popisují, jak MI ovlivňuje použití společné idiomy MFC a také některé z těchto omezení MI pokrývající. Některé z těchto omezení jsou obecné C++ omezením. Ostatní jsou uložené architektury MFC.
 
-Na konci této technické poznámky najdete kompletní MFC aplikace, která používá MI.
+Na konci této Technická poznámka najdete kompletní aplikace knihovny MFC, která používá MI.
 
 ## <a name="cruntimeclass"></a>CRuntimeClass
 
-Trvalosti a mechanismy vytváření dynamických objektů MFC použití [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) struktura dat k jednoznačné identifikaci třídy. MFC přidružuje jednu z těchto struktur jednotlivé dynamické nebo serializovatelné třídy v aplikaci. Tyto struktury jsou inicializovány při spuštění aplikace s použitím speciální statické objektu typu `AFX_CLASSINIT`.
+Trvalost a mechanismy vytváření dynamických objektů použití knihovny MFC [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) datová struktura k jednoznačné identifikaci tříd. MFC jednu z těchto struktur přidruží každé dynamické a/nebo serializovatelné třídy ve vaší aplikaci. Tyto struktury jsou inicializovány při spuštění aplikace pomocí speciální statický objekt typu `AFX_CLASSINIT`.
 
-Aktuální implementace `CRuntimeClass` nepodporuje MI informací o typu modulu runtime. To neznamená, že MI nelze použít v aplikaci MFC. Při práci s objekty, které mají více než jedné základní třídy, ale bude mít určité odpovědnosti.
+Aktuální provádění `CRuntimeClass` nepodporuje MI informace typu za běhu. To neznamená, že MI nelze použít v aplikaci knihovny MFC. Při práci s objekty, které mají více než jedné základní třídy, ale bude mít některé odpovědnosti.
 
-[CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof) metoda nebude určit správně typ objektu má vícenásobné základní třídy. Proto nelze použít [CObject](../mfc/reference/cobject-class.md) jako virtuální základní třídy a všechny volání `CObject` členské funkce, jako [CObject::Serialize](../mfc/reference/cobject-class.md#serialize) a [novéCObject::operator](../mfc/reference/cobject-class.md#operator_new)musí mít obor kvalifikátory tak, že C++ můžete odstranit nejednoznačnost volání příslušné funkce. Používá-li program MI v rámci MFC, třídu, která obsahuje `CObject` základní třída musí být třída nejvíce vlevo v seznamu základní třídy.
+[CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof) metoda nebude nesprávně určí typ objektu má více základních tříd. Proto nelze použít [CObject](../mfc/reference/cobject-class.md) jako virtuální základní třídy a všechna volání `CObject` členské funkce, jako například [CObject::Serialize](../mfc/reference/cobject-class.md#serialize) a [novéCObject::operator](../mfc/reference/cobject-class.md#operator_new)musí mít Kvalifikátory oboru, takže tento C++ můžete odstranit nejednoznačnost voláním příslušné funkce. Pokud program používá MI v rámci MFC, třídy, který obsahuje `CObject` základní třída musí být třída nejvíce vlevo v seznamu základních tříd.
 
-Další možností je použít `dynamic_cast` operátor. Přetypování objekt se MI na jeden z jeho základních tříd vynutí kompilátoru použití funkcí v zadané základní třídě. Další informace najdete v tématu [dynamic_cast – operátor](../cpp/dynamic-cast-operator.md).
+Další možností je použít `dynamic_cast` operátor. Přetypování objekt se MI na jeden z jejích základních tříd vynutí kompilátoru použití funkcí v základní třídy zadané. Další informace najdete v tématu [dynamic_cast – operátor](../cpp/dynamic-cast-operator.md).
 
-## <a name="cobject---the-root-of-all-classes"></a>CObject – kořenovém všechny třídy
+## <a name="cobject---the-root-of-all-classes"></a>CObject – kořenový všechny třídy
 
-Všechny třídy významné odvozena od třídy přímo nebo nepřímo `CObject`. `CObject` neobsahuje žádná data člena, ale nemá některé výchozí funkce. Při použití MI bude obvykle dědění ze dvou nebo více `CObject`-odvozených třídách. Následující příklad ilustruje, jak můžete třídy dědí [CFrameWnd](../mfc/reference/cframewnd-class.md) a [CObList](../mfc/reference/coblist-class.md):
+Všechny důležité třídy odvodit přímo nebo nepřímo ze třídy `CObject`. `CObject` nemá obsahují některé výchozí funkce však není nutné všechna data členů. Při použití MI vám bude obvykle dědit ze dvou nebo více `CObject`-odvozené třídy. Následující příklad ukazuje, jak třída může dědit z [CFrameWnd](../mfc/reference/cframewnd-class.md) a [coblist –](../mfc/reference/coblist-class.md):
 
 ```cpp
 class CListWnd : public CFrameWnd, public CObList
@@ -55,15 +55,15 @@ class CListWnd : public CFrameWnd, public CObList
 CListWnd myListWnd;
 ```
 
-V takovém případě `CObject` je součástí dvakrát. To znamená, že budete potřebovat způsob k rozlišení všechny odkazy na `CObject` metody nebo operátory. **New – operátor** a [delete – operátor](../mfc/reference/cobject-class.md#operator_delete) jsou dva operátory, které musí jednoznačně rozlišit. Například následující kód způsobí chybu v době kompilace:
+V tomto případě `CObject` Přikládáme dvakrát. To znamená, že budete potřebovat způsob k rozlišení všechny odkazy na `CObject` operátory nebo metody. **Operátor new** a [operátor delete](../mfc/reference/cobject-class.md#operator_delete) jsou dva operátory, které musí být jednoznačně rozlišit. Další příklad – následující kód způsobí chybu v době kompilace:
 
 ```cpp
 myListWnd.Dump(afxDump); // compile time error, CFrameWnd::Dump or CObList::Dump
 ```
 
-## <a name="reimplementing-cobject-methods"></a>Reimplementing metody CObject
+## <a name="reimplementing-cobject-methods"></a>Reimplementing metody třídy CObject
 
-Když vytvoříte novou třídu, která má dva nebo více `CObject` odvozené třídy base měli přeimplementovat `CObject` metody, které chcete ostatním používat. Operátory **nové** a **odstranit** jsou povinné a [Dump](../mfc/reference/cobject-class.md#dump) se doporučuje. Následující příklad reimplements **nové** a **odstranit** operátory a `Dump` metoda:
+Při vytváření novou třídu, která má dvě nebo více `CObject` odvozené základní třídy, byste měli znovu implementovat `CObject` metody, které chcete používání jiným lidem. Operátory **nové** a **odstranit** jsou povinné a [vypsat](../mfc/reference/cobject-class.md#dump) se doporučuje. Následující příklad reimplements **nové** a **odstranit** operátory a `Dump` metody:
 
 ```cpp
 class CListWnd : public CFrameWnd, public CObList
@@ -86,15 +86,15 @@ public:
 };
 ```
 
-## <a name="virtual-inheritance-of-cobject"></a>Virtuální dědičnost CObject
+## <a name="virtual-inheritance-of-cobject"></a>Virtuální dědičnost třídy CObject
 
-Zdát, že prakticky dědění `CObject` by vyřešen nejednoznačnosti funkce, ale které se nevztahuje na případ. Vzhledem k tomu, že neexistují žádná data člena v `CObject`, není nutné virtuální dědičnost, aby se zabránilo více kopií dat člena třídy base. V prvním příkladu, která byla dříve, zobrazí `Dump` virtuální metoda je stále nejednoznačné, protože je implementována jinak v `CFrameWnd` a `CObList`. Nejlepší způsob, jak odebrat nejednoznačnosti je postupujte podle doporučení uvedená v předchozí části.
+To může zdát, že prakticky dědění `CObject` by vyřešit problém funkce nejednoznačnost, ale to není případ. Protože neexistuje žádná data členů v `CObject`, není nutné virtuální dědičnost, aby se zabránilo více kopií dat člena základní třídy. V prvním příkladu, které se zobrazilo dříve `Dump` virtuální metody je stále nejednoznačný, protože jinak v implementaci `CFrameWnd` a `CObList`. Nejlepší způsob, jak odstranit nejednoznačnost je postupujte podle doporučení v předchozí části.
 
-## <a name="cobjectiskindof-and-run-time-typing"></a>CObject::IsKindOf a zadáte běhu
+## <a name="cobjectiskindof-and-run-time-typing"></a>CObject::IsKindOf a zadáním příkazu Run-Time
 
-Zadáním mechanismus běhu nepodporuje MFC v `CObject` používá DECLARE_DYNAMIC, implement_dynamic –, DECLARE_DYNCREATE –, IMPLEMENT_DYNCREATE, declare_serial – a implement_serial – makra. Tyto makra můžete provést kontrolu typu běhu k zajištění bezpečného downcasts.
+Za běhu psaní mechanismu, který podporuje knihovnu MFC ve `CObject` používá makra DECLARE_DYNAMIC, IMPLEMENT_DYNAMIC, DECLARE_DYNCREATE, IMPLEMENT_DYNCREATE, DECLARE_SERIAL a IMPLEMENT_SERIAL. Tato makra lze provést kontrolu typu za běhu k zajištění bezpečné přetypování dolů.
 
-Tyto makra podporují pouze jediná základní třída a bude fungovat v omezené míře pro násobkem zděděné třídy. Základní třídy, které zadáte v implement_dynamic – nebo implement_serial – musí být základní třídy první (nebo nejvíce vlevo). Toto umístění vám umožní kontrola pro základní třídu nejvíce vlevo pouze typu. Systém typů běhu vědět nic o další základní třídy. V následujícím příkladu, systémy běhu provede kontrolu proti typu `CFrameWnd`, ale nic vědět o `CObList`.
+Tato makra podporují pouze jednu základní třídu a bude fungovat v omezené způsob, jakým vícenásobně zděděné třídy. Základní třída, kterou zadáte v IMPLEMENT_DYNAMIC nebo IMPLEMENT_SERIAL by měla být základní třídy první (nebo úplně vlevo). Toto umístění vám umožní kontrolu pro základní třídu nejvíce vlevo pouze typu. Run-time typu systému vědět nic o dalších základních tříd. V následujícím příkladu se za běhu systémy provede kontrolu proti typu `CFrameWnd`, ale nic vědět o `CObList`.
 
 ```cpp
 class CListWnd : public CFrameWnd, public CObList
@@ -107,13 +107,13 @@ IMPLEMENT_DYNAMIC(CListWnd, CFrameWnd)
 
 ## <a name="cwnd-and-message-maps"></a>CWnd a mapy zpráv
 
-Pro systém mapy zpráv knihovny MFC fungovala správně existují dva další požadavky:
+Systém mapy zpráv knihovny MFC fungovala správně existují dva další požadavky:
 
-- Musí existovat jenom jeden `CWnd`-odvozené základní třídy.
+- Musí obsahovat pouze jeden `CWnd`-odvozené základní třídy.
 
-- `CWnd`-Odvozené třídy základní musí být základní třídy první (nebo nejvíce vlevo).
+- `CWnd`-Odvozené základní třídy musí být základní třídy první (nebo úplně vlevo).
 
-Zde jsou některé příklady, které nebudou fungovat:
+Tady jsou některé příklady, které nebudou fungovat:
 
 ```cpp
 class CTwoWindows : public CFrameWnd, public CEdit
@@ -123,9 +123,9 @@ class CListEdit : public CObList, public CEdit
 { /* ... */ }; // error : CEdit (derived from CWnd) must be first
 ```
 
-## <a name="a-sample-program-using-mi"></a>Ukázka programu pomocí MI
+## <a name="a-sample-program-using-mi"></a>Ukázkový Program pomocí MI
 
-Následující příklad je samostatná aplikace, která se skládá z jedné třídy odvozené od `CFrameWnd` a [CWinApp](../mfc/reference/cwinapp-class.md). Nedoporučujeme struktury aplikace tímto způsobem, že toto je příklad nejmenší MFC aplikace, která obsahuje jednu třídu.
+Následující příklad je samostatná aplikace, která se skládá z jedné třídy odvozené od `CFrameWnd` a [CWinApp](../mfc/reference/cwinapp-class.md). Nedoporučujeme struktury aplikace tím, že toto je příklad nejmenší aplikace knihovny MFC, která má jednu třídu.
 
 ```cpp
 #include <afxwin.h>
@@ -194,5 +194,5 @@ CHelloAppAndFrame theHelloAppAndFrame;
 
 ## <a name="see-also"></a>Viz také:
 
-[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)  
-[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)  
+[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
+[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)

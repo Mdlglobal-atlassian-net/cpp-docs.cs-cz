@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76966d5d39f9b4407268e5932dc3f633e0b36cd1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 789747ff05c044aa77b58b7f94988fd78202bedc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603080"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443517"
 ---
 # <a name="shrinking-or-stretching-an-entire-image-image-editor-for-icons"></a>Zmenšení nebo roztažení celého obrázku (editor obrázků pro ikony)
 
@@ -42,5 +42,5 @@ Informace o přidávání prostředků do spravovaných projektů, najdete v té
 
 ## <a name="see-also"></a>Viz také
 
-[Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Změna velikosti obrázku](../windows/resizing-an-image-image-editor-for-icons.md)

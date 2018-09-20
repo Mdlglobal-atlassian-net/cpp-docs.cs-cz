@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ae4f50e6d2d614e444766babf8e55f5c9f83932
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a8b84bcaec7dbadfb7b735264df12f7e958dcd20
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609541"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444694"
 ---
 # <a name="modulecreate-method"></a>Module::Create – metoda
 
@@ -45,16 +45,16 @@ WRL_NOTHROW static Module& Create(
 
 ### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ modulu.
 
-*zpětné volání*  
+*zpětné volání*<br/>
 Volá se, když se uvolní objekt poslední instance modulu.
 
-*object*  
+*object*<br/>
 *Objekt* a *metoda* v kombinaci se používají parametry. Když se uvolní objekt poslední instance v modulu odkazuje na poslední instance objektu.
 
-*– Metoda*  
+*– Metoda*<br/>
 *Objekt* a *metoda* v kombinaci se používají parametry. Odkazuje na metodu poslední instance objektu poslední objekt instance v modulu se při uvolnění.
 
 ## <a name="return-value"></a>Návratová hodnota

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9be5b7665b84a26492d7cfc33141206e380eb020
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 38326a76c884d180e4337626a4efec6d52fa24af
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46064331"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430485"
 ---
 # <a name="c-run-time-library-reference"></a>Referenční dokumentace běhové knihovny jazyka C
 
@@ -33,26 +33,37 @@ Ukázkové aplikace jsou zahrnuté v jednotlivých referenční témata pro vět
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[C Run-Time Libraries](../c-runtime-library/crt-library-features.md) popisuje soubory .lib, které tvoří knihovny jazyka C za běhu.
+[Knihovny Run-Time jazyka C](../c-runtime-library/crt-library-features.md)<br/>
+Tento článek popisuje soubory .lib, které tvoří knihovny jazyka C za běhu.
 
-[Universal C runtime rutiny podle kategorie](../c-runtime-library/run-time-routines-by-category.md) obsahuje odkazy na knihovny run-time podle kategorie.
+[Rutiny UCRT (Universal C runtime) podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
+Obsahuje odkazy na knihovny run-time podle kategorie.
 
-[Globální proměnné a standardní typy](../c-runtime-library/global-variables-and-standard-types.md) obsahuje odkazy na globální proměnné a standardní typy poskytované knihovny run-time.
+[Globální proměnné a standardní typy](../c-runtime-library/global-variables-and-standard-types.md)<br/>
+Obsahuje odkazy na globální proměnné a standardní typy poskytované knihovny run-time.
 
-[Globální konstanty](../c-runtime-library/global-constants.md) obsahuje odkazy na globální konstanty definované pomocí knihovny run-time.
+[Globální konstanty](../c-runtime-library/global-constants.md)<br/>
+Obsahuje odkazy na globální konstanty definované pomocí knihovny run-time.
 
-[Abecední odkazy funkcí](../c-runtime-library/reference/crt-alphabetical-function-reference.md) poskytuje obsah vstupní bod do abecední seznam všech funkcí běhové knihovny jazyka C.
+[Abecední seznam odkazů na funkce](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+Poskytuje obsah vstupní bod do abecední seznam všech funkcí běhové knihovny jazyka C.
 
-[Mapování obecného textu](../c-runtime-library/generic-text-mappings.md) obsahuje odkazy na mapování obecného textu, které jsou definovány v souboru Tchar.h.
+[Mapování obecného textu](../c-runtime-library/generic-text-mappings.md)<br/>
+Obsahuje odkazy na mapování obecného textu, které jsou definovány v souboru Tchar.h.
 
-[Jazyka a země/Region Strings](../c-runtime-library/locale-names-languages-and-country-region-strings.md) popisuje způsob použití `setlocale` funkce pro nastavení jazyka a země/Region strings.
+[Jazyka a země/Region Strings](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+Popisuje způsob použití `setlocale` funkce pro nastavení jazyka a země/Region strings.
 
 ## <a name="related-sections"></a>Související oddíly
 
-[Rutiny ladění](../c-runtime-library/debug-routines.md) obsahuje odkazy na ladicí verze knihovny run-time rutiny.
+[Rutiny ladění](../c-runtime-library/debug-routines.md)<br/>
+Obsahuje odkazy na ladicí verze knihovny run-time rutiny.
 
-[Kontrola chyb za běhu](../c-runtime-library/run-time-error-checking.md) obsahuje odkazy na funkce, které podporují kontroly chyb za běhu.
+[Kontrola chyb za běhu](../c-runtime-library/run-time-error-checking.md)<br/>
+Obsahuje odkazy na funkce, které podporují kontroly chyb za běhu.
 
-[Knihovny DLL a chování běhové knihovny jazyka Visual C++](../build/run-time-library-behavior.md) popisuje vstupní bod a při spuštění kód použitý pro knihovnu DLL.
+[Knihovny DLL a chování běhové knihovny v jazyce Visual C++](../build/run-time-library-behavior.md)<br/>
+Tento článek popisuje vstupní bod a při spuštění kód použitý pro knihovnu DLL.
 
-[Ladění](/visualstudio/debugger/debugging-in-visual-studio) poskytuje odkazy na popis využití ladicího programu sady Visual Studio k opravě logických chyb v aplikaci nebo uložených procedur.
+[Ladění](/visualstudio/debugger/debugging-in-visual-studio)<br/>
+Poskytuje odkazy na popis využití ladicího programu sady Visual Studio k opravě logických chyb v aplikaci nebo uložených procedur.

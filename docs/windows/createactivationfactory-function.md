@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd43102eb3a3b4e7bb14e65e0c710b814fc10cff
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: aed52e5ba209a826130b1a85aa866fe024174818
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593829"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424635"
 ---
 # <a name="createactivationfactory-function"></a>CreateActivationFactory – funkce
 
@@ -40,16 +40,16 @@ template<typename Factory>
 
 ### <a name="parameters"></a>Parametry
 
-*příznaky*  
+*příznaky*<br/>
 Kombinace jedné nebo více [runtimeclasstype –](../windows/runtimeclasstype-enumeration.md) hodnot výčtu.
 
-*entry*  
+*entry*<br/>
 Ukazatel [creatormap –](../windows/creatormap-structure.md) , který obsahuje informace o parametru inicializace a registraci *riid*.
 
-*riid*  
+*riid*<br/>
 Odkaz na identifikátor rozhraní.
 
-*ppFactory*  
+*ppFactory*<br/>
 Pokud se tato operace dokončí úspěšně, ukazatel na objekt factory pro aktivaci.
 
 ## <a name="return-value"></a>Návratová hodnota

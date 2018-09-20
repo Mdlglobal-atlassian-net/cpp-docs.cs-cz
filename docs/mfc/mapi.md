@@ -1,5 +1,5 @@
 ---
-title: MAPI | Microsoft Docs
+title: ROZHRANÍ MAPI | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,27 +20,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1df0d00aa6356fa1741e7f4fc34d8063782da859
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: b2ca182da3a0300604415b790c0aba138c8fd7a2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930671"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439104"
 ---
 # <a name="mapi"></a>MAPI
-Tento článek popisuje Microsoft Zasílání zpráv rozhraní MAPI (Application Programming) pro vývojáře aplikací zpráv klienta. MFC poskytuje podporu pro podmnožinu rozhraní MAPI v třídě `CDocument` , ale není zapouzdření celý rozhraní API. Další informace najdete v tématu [Podpora MAPI v MFC](../mfc/mapi-support-in-mfc.md).  
-  
- MAPI je sada funkcí, které poštovní a e-mailu podporou aplikace použít k vytvoření, manipulaci, přenos a ukládání e-mailových zpráv. To poskytuje vývojářům aplikací definovat účel a obsah e-mailových zpráv nástroje a poskytuje flexibilitu v jejich správu uložené e-mailových zpráv. MAPI taky poskytuje jednotné rozhraní, které vývojáři aplikace můžete použít k vytvoření, poštovní a e-mailu aplikací nezávislé systému pro zasílání zpráv.  
-  
- Klienti zasílání zpráv poskytují lidského rozhraní pro interakci s Microsoft Windows zasílání zpráv systému (WMS). Tato interakce obvykle zahrnuje požaduje služby od takovou poskytovatelů, jako je například úložiště zpráv a adresářů.  
-  
- Další informace o rozhraní MAPI najdete v článcích v části průvodce v Win32 MAPI (Messaging) sady Windows SDK.  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
- [Podpora MAPI v MFC](../mfc/mapi-support-in-mfc.md)  
-  
-## <a name="see-also"></a>Viz také  
- [CDocument::OnFileSendMail](../mfc/reference/cdocument-class.md#onfilesendmail)   
- [CDocument::OnUpdateFileSendMail](../mfc/reference/cdocument-class.md#onupdatefilesendmail)   
- [COleDocument::OnFileSendMail](../mfc/reference/coledocument-class.md#onfilesendmail)
+
+Tento článek popisuje společnosti Microsoft Zasílání zpráv rozhraní MAPI (Application Programming) pro vývojáře aplikací zprávy klienta. Knihovna MFC poskytuje podporu pro celou dílčí sadu rozhraní MAPI ve třídě `CDocument` , ale ne zapouzdření celé rozhraní API. Další informace najdete v tématu [Podpora MAPI v MFC](../mfc/mapi-support-in-mfc.md).
+
+Rozhraní MAPI je sada funkcí, které používají aplikace s povoleným e-mailem a s ohledem na e-mailu k vytváření, manipulaci s, přenosu a uložení e-mailové zprávy. Aplikace vývojářům poskytuje nástroje k definování účel a obsah e-mailové zprávy a poskytuje flexibilitu v jejich správu uloženého e-mailové zprávy. Rozhraní MAPI také poskytuje společné rozhraní, která vývojářům aplikací můžete použít k vytvoření, poštovní a aplikací pracujících s e-mailu nezávisle na základní systému zasílání zpráv.
+
+Klienti zasílání zpráv poskytuje lidské rozhraní pro interakci s Microsoft Windows zasílání zpráv systému (WMS). Tato interakce obvykle zahrnuje žádosti o služby od takovou poskytovatelů, jako je například úložiště zpráv a adresáře.
+
+Další informace o rozhraní MAPI najdete v článcích v části průvodce v systému Win32 rozhraní MAPI (Messaging) sady Windows SDK.
+
+## <a name="in-this-section"></a>V tomto oddílu
+
+[Podpora MAPI v MFC](../mfc/mapi-support-in-mfc.md)
+
+## <a name="see-also"></a>Viz také
+
+[CDocument::OnFileSendMail](../mfc/reference/cdocument-class.md#onfilesendmail)<br/>
+[CDocument::OnUpdateFileSendMail](../mfc/reference/cdocument-class.md#onupdatefilesendmail)<br/>
+[COleDocument::OnFileSendMail](../mfc/reference/coledocument-class.md#onfilesendmail)
 

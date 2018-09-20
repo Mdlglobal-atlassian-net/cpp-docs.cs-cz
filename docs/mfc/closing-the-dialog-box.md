@@ -1,5 +1,5 @@
 ---
-title: Zavření dialogového okna | Microsoft Docs
+title: Zavření dialogového okna | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c800c204fd09057585064397d459f92c9ded272d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9ad4b8af63b68912c232767bf1fd14070fda261
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341742"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409048"
 ---
 # <a name="closing-the-dialog-box"></a>Zavření dialogového okna
-Modální dialogové okno zavře, když uživatel vybere jeden z jeho tlačítka, obvykle na tlačítko OK nebo na tlačítko Storno. Klepněte na tlačítko OK nebo Storno způsobí, že systému Windows pro odesílání objektu dialogového okna **BN_CLICKED** zpráva oznámení ovládacího prvku pomocí tlačítka je buď ID, **IDOK** nebo **IDCANCEL**. `CDialog` poskytuje výchozí funkce obslužných rutin pro tyto zprávy: `OnOK` a `OnCancel`. Výchozí volání obslužné rutiny `EndDialog` – členská funkce zavřete dialogové okno. Můžete také volat `EndDialog` z vlastního kódu. Další informace najdete v tématu [EndDialog](../mfc/reference/cdialog-class.md#enddialog) funkce člena třídy `CDialog` v *odkaz knihovny MFC*.  
-  
- Uspořádat pro zavření a odstraňování nemodální dialogové okno, přepsání `PostNcDestroy` a vyvolání **odstranit** operátor na **to** ukazatel. [Zničení dialogových oken](../mfc/destroying-the-dialog-box.md) vysvětluje, co se stane dále.  
-  
-## <a name="see-also"></a>Viz také  
- [Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
+
+Modální dialogové okno se zavře, když uživatel vybere jeden z jeho tlačítka, obvykle na tlačítko OK nebo na tlačítko Storno. Kliknutím na tlačítko OK nebo zrušit způsobí, že Windows k odesílání objektu dialogového okna **BN_CLICKED** zprávy oznámení ovládacího prvku pomocí tlačítka je buď ID, **IDOK** nebo **IDCANCEL**. `CDialog` poskytuje výchozí funkce obslužné rutiny pro tyto zprávy: `OnOK` a `OnCancel`. Výchozí volání obslužné rutiny `EndDialog` členskou funkci, zavřete dialogové okno. Můžete také volat `EndDialog` z vlastního kódu. Další informace najdete v tématu [EndDialog](../mfc/reference/cdialog-class.md#enddialog) členské funkce třídy `CDialog` v *odkaz knihovny MFC*.
+
+Pokud chcete uspořádat pro zavření a odstranění nemodální dialogové okno, přepište `PostNcDestroy` a vyvolat **odstranit** operátoru u **to** ukazatele. [Zničení dialogových oken](../mfc/destroying-the-dialog-box.md) vysvětluje, co bude dál.
+
+## <a name="see-also"></a>Viz také
+
+[Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
 

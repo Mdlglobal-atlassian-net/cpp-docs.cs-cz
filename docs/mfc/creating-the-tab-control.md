@@ -1,5 +1,5 @@
 ---
-title: Vytvoření ovládacího prvku karta | Microsoft Docs
+title: Vytvoření ovládacího prvku karta | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,54 +20,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3945d441130d723bbda3d137f2adae637d56c2b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dc1acd65aed84321e1f32c3114223899e17f2ad
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344088"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430875"
 ---
 # <a name="creating-the-tab-control"></a>Vytvoření ovládacího prvku karta
-Vytvoření ovládacího prvku karta závisí na tom, jestli jsou pomocí ovládacího prvku v dialogovém okně nebo jeho vytváření v okně nondialog.  
-  
-### <a name="to-use-ctabctrl-directly-in-a-dialog-box"></a>K použití přímo v dialogovém okně CTabCtrl  
-  
-1.  V editoru dialogového okna přidáte do šablony zdroje dialogové okno ovládacího prvku karta. Zadejte své ID ovládacího prvku.  
-  
-2.  Použití [Průvodce přidáním členské proměnné](../ide/adding-a-member-variable-visual-cpp.md) přidání členské proměnné typu [CTabCtrl](../mfc/reference/ctabctrl-class.md) s vlastností ovládacího prvku. Tento člen mohou využít k volání `CTabCtrl` členské funkce.  
-  
-3.  Mapování funkce obslužných rutin ve třídě dialog pro všechny zpráv oznámení ovládacího prvku karta, které je třeba zpracovat. Další informace najdete v tématu [mapování zpráv do funkcí](../mfc/reference/mapping-messages-to-functions.md).  
-  
-4.  V [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), nastavení stylů pro `CTabCtrl`.  
-  
-### <a name="to-use-ctabctrl-in-a-nondialog-window"></a>V okně nondialog používat CTabCtrl  
-  
-1.  Definování ovládacího prvku ve třídě zobrazení nebo okno.  
-  
-2.  Volání ovládacího prvku [vytvořit](../mfc/reference/ctabctrl-class.md#create) člen funkce, které by mohly mít v [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), pravděpodobně časná jako nadřazeného okna [OnCreate](../mfc/reference/cwnd-class.md#oncreate) funkce obslužné rutiny (Pokud jste vytvoření podtřídy ovládacího prvku). Nastavení stylů pro ovládací prvek.  
-  
- Po `CTabCtrl` objekt byl vytvořen, můžete nastavit nebo vymazat následující rozšířené styly:  
-  
--   **Tcs_ex_flatseparators –** ovládacího prvku karta bude kreslení oddělovačů mezi položkami kartě. Rozšířený styl jen ovlivňuje kartě ovládací prvky, které mají **TCS_BUTTONS** a **TCS_FLATBUTTONS** stylů. Ve výchozím nastavení, vytvoření ovládacího prvku karta s **TCS_FLATBUTTONS** styl nastaví tento rozšířený styl.  
-  
--   **Tcs_ex_registerdrop –** generuje ovládacího prvku karta **TCN_GETOBJECT** zpráv s oznámením o cíle přetažení objektu při přetažení objektu přes Karta položky v ovládacím prvku.  
-  
+
+Vytvoření ovládacího prvku karta závisí na tom, jestli jsou pomocí ovládacího prvku v dialogovém okně nebo vytváří v okně nondialog.
+
+### <a name="to-use-ctabctrl-directly-in-a-dialog-box"></a>Použití atributu CTabCtrl přímo v dialogovém okně
+
+1. V editoru dialogového okna přidáte do šablony prostředku dialogového okna ovládacího prvku karta. Zadejte své ID ovládacího prvku.
+
+1. Použití [Průvodce přidáním členské proměnné](../ide/adding-a-member-variable-visual-cpp.md) přidat členskou proměnnou typu [atributu CTabCtrl](../mfc/reference/ctabctrl-class.md) s vlastností ovládacího prvku. Tento člen můžete použít k volání `CTabCtrl` členské funkce.
+
+1. Mapování funkce obslužné rutiny ve třídě dialog pro všechny zprávy oznámení ovládacího prvku karty, které je potřeba zpracovat. Další informace najdete v tématu [mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md).
+
+1. V [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), nastavení stylů pro `CTabCtrl`.
+
+### <a name="to-use-ctabctrl-in-a-nondialog-window"></a>V okně nondialog použití atributu CTabCtrl
+
+1. Definování ovládacího prvku ve třídě zobrazení nebo okno.
+
+1. Volání ovládacího prvku [vytvořit](../mfc/reference/ctabctrl-class.md#create) členské funkce, případně v [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), může být co nejdříve jako nadřazené okno [OnCreate](../mfc/reference/cwnd-class.md#oncreate) funkci obslužné rutiny (Pokud jste vytvoření podtřídy ovládacího prvku). Nastavení stylů pro ovládací prvek.
+
+Po `CTabCtrl` objekt byl vytvořen, můžete nastavit nebo zrušte tyto rozšířené styly:
+
+- **Tcs_ex_flatseparators –** ovládacího prvku karta nakreslí oddělovače mezi položkami kartu. Rozšířený styl pouze kartu ovládací prvky, které mají vliv **TCS_BUTTONS** a **TCS_FLATBUTTONS** styly. Ve výchozím nastavení, vytvoření ovládacího prvku karta s **TCS_FLATBUTTONS** styl nastaví tento rozšířený styl.
+
+- **Tcs_ex_registerdrop –** ovládacího prvku karta generuje **TCN_GETOBJECT** zpráv s oznámením o cíle přetažení objektu, když je objekt přetažen přes kartu položek v ovládacím prvku.
+
     > [!NOTE]
-    >  Pro příjem **TCN_GETOBJECT** oznámení, je třeba inicializovat knihoven OLE pomocí volání [AfxOLEInit –](../mfc/reference/ole-initialization.md#afxoleinit).  
-  
- Tyto styly můžete načíst a nastavit po vytvoření ovládacího prvku pomocí příslušných volání [GetExtendedStyle](../mfc/reference/ctabctrl-class.md#getextendedstyle) a [SetExtendedStyle](../mfc/reference/ctabctrl-class.md#setextendedstyle) členské funkce.  
-  
- Například nastavit **tcs_ex_flatseparators –** styl s následujícími řádky kódu:  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#33](../mfc/codesnippet/cpp/creating-the-tab-control_1.cpp)]  
-  
- Vymazat **tcs_ex_flatseparators –** styl z `CTabCtrl` objekt s následující řádky kódu:  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#34](../mfc/codesnippet/cpp/creating-the-tab-control_2.cpp)]  
-  
- Tato akce odebere oddělovačů, které se zobrazují mezi tlačítky z vaší `CTabCtrl` objektu.  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CTabCtrl](../mfc/using-ctabctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+    >  Pro příjem **TCN_GETOBJECT** oznámení, je třeba inicializovat knihovny OLE voláním [AfxOleInit](../mfc/reference/ole-initialization.md#afxoleinit).
+
+Dají se tyto styly načíst a nastavit, po vytvoření ovládacího prvku pomocí odpovídajících volání [GetExtendedStyle](../mfc/reference/ctabctrl-class.md#getextendedstyle) a [SetExtendedStyle](../mfc/reference/ctabctrl-class.md#setextendedstyle) členské funkce.
+
+Například nastavit **tcs_ex_flatseparators –** style s následujícími řádky kódu:
+
+[!code-cpp[NVC_MFCControlLadenDialog#33](../mfc/codesnippet/cpp/creating-the-tab-control_1.cpp)]
+
+Zrušte **tcs_ex_flatseparators –** stylu z `CTabCtrl` objektu s následujícími řádky kódu:
+
+[!code-cpp[NVC_MFCControlLadenDialog#34](../mfc/codesnippet/cpp/creating-the-tab-control_2.cpp)]
+
+Tato akce odebere oddělovače, které se zobrazí mezi tlačítek vaše `CTabCtrl` objektu.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CTabCtrl](../mfc/using-ctabctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Typově bezpečný přístup k ovládacím prvkům bez průvodců kódem | Microsoft Docs
+title: Typově bezpečný přístup k ovládacím prvkům bez průvodců kódem | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,23 +15,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb861995c16411bb58e3051c5ffc78f75931ae8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2685c946b9ee1c738ee83f9413b7fd955857febb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385762"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438337"
 ---
 # <a name="type-safe-access-to-controls-without-code-wizards"></a>Typově bezpečný přístup k ovládacím prvkům bez průvodců kódem
-Prvním přístupem k vytvoření typově bezpečný přístup k ovládacím prvkům používá funkci člen vložené přetypovat návratový typ třídy `CWnd`na `GetDlgItem` – členská funkce odpovídající typ ovládacího prvku C++, jako v následujícím příkladu:  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#50](../mfc/codesnippet/cpp/type-safe-access-to-controls-without-code-wizards_1.cpp)]  
-  
- Potom můžete tuto funkci člen přístup k ovládacím prvku způsobem bezpečnost typů s kódem podobný následujícímu:  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#51](../mfc/codesnippet/cpp/type-safe-access-to-controls-without-code-wizards_2.cpp)]  
-  
-## <a name="see-also"></a>Viz také  
- [Typově bezpečný přístup k ovládacím prvkům v dialogovém okně](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)   
- [Typově bezpečný přístup k ovládacím prvkům s průvodci kódem](../mfc/type-safe-access-to-controls-with-code-wizards.md)
+
+První postup k vytvoření typově bezpečný přístup k ovládacím prvkům používá vložené členské funkce přetypovat návratový typ třídy `CWnd`společnosti `GetDlgItem` členskou funkci na příslušný typ ovládacího prvku jazyka C++, jako v následujícím příkladu:
+
+[!code-cpp[NVC_MFCControlLadenDialog#50](../mfc/codesnippet/cpp/type-safe-access-to-controls-without-code-wizards_1.cpp)]
+
+Potom můžete tuto funkci člena pro přístup k ovládacímu prvku způsobem typově bezpečný kód podobný následujícímu:
+
+[!code-cpp[NVC_MFCControlLadenDialog#51](../mfc/codesnippet/cpp/type-safe-access-to-controls-without-code-wizards_2.cpp)]
+
+## <a name="see-also"></a>Viz také
+
+[Typově bezpečný přístup k ovládacím prvkům v dialogovém okně](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)<br/>
+[Typově bezpečný přístup k ovládacím prvkům s průvodci kódem](../mfc/type-safe-access-to-controls-with-code-wizards.md)
 

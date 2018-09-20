@@ -1,5 +1,5 @@
 ---
-title: Uživatelem definované obslužné rutiny | Microsoft Docs
+title: Uživatelem definované obslužné rutiny | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,24 +18,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fdc8c70f7ef9bdd04bf40f408c4e014b3e3faa3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50348d36badb955a14f15e30d846b052b297b4a1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373243"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442536"
 ---
 # <a name="user-defined-handlers"></a>Uživatelem definované obslužné rutiny
-Následující položky mapy odpovídají prototypy funkcí.  
-  
-|Položku mapování|Prototyp funkce|  
-|---------------|------------------------|  
-|On_message – ( \<zpráva >, \<memberFxn >)|afx_msg LRESULT memberFxn (WPARAM, LPARAM);|  
-|On_registered_message – ( \<nMessageVariable >, \<memberFxn >)|afx_msg LRESULT memberFxn (WPARAM, LPARAM);|  
-|On_thread_message – ( \<zpráva >, \<memberFxn >)|void memberFxn afx_msg (WPARAM, LPARAM);|  
-|On_registered_thread_message – ( \<nMessageVariable >, \<memberFxn >)|void memberFxn afx_msg (WPARAM, LPARAM);|  
-  
-## <a name="see-also"></a>Viz také  
- [Mapy zpráv](../../mfc/reference/message-maps-mfc.md)   
- [Obslužné rutiny pro zprávy WM_](../../mfc/reference/handlers-for-wm-messages.md)
+
+Následující položky mapování odpovídají prototypy funkcí.
+
+|Položka mapování|Prototyp funkce|
+|---------------|------------------------|
+|ON_MESSAGE ( \<zpráva >, \<memberFxn >)|afx_msg LRESULT memberFxn (WPARAM, LPARAM);|
+|ON_REGISTERED_MESSAGE ( \<nMessageVariable >, \<memberFxn >)|afx_msg LRESULT memberFxn (WPARAM, LPARAM);|
+|ON_THREAD_MESSAGE ( \<zpráva >, \<memberFxn >)|void memberFxn afx_msg (WPARAM, LPARAM);|
+|ON_REGISTERED_THREAD_MESSAGE ( \<nMessageVariable >, \<memberFxn >)|void memberFxn afx_msg (WPARAM, LPARAM);|
+
+## <a name="see-also"></a>Viz také
+
+[Mapy zpráv](../../mfc/reference/message-maps-mfc.md)<br/>
+[Obslužné rutiny pro zprávy WM_](../../mfc/reference/handlers-for-wm-messages.md)
 

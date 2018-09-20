@@ -1,5 +1,5 @@
 ---
-title: Dělení textu v ovládacích prvcích pro úpravy s formátováním | Microsoft Docs
+title: Dělení textu v ovládacích prvcích pro úpravy s formátováním | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 373a30ed4a327cff99cb3cfce873707314608b57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f012897d968d108cb366126fc38992ff1dd11d0a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382957"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424609"
 ---
 # <a name="word-breaks-in-rich-edit-controls"></a>Dělení textu v ovládacích prvcích pro úpravy s formátováním
-Ovládacích prvků pro úpravy s formátováním ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) volá funkci s názvem "zalomení procedury slovo" najít zalomení mezi slovy a určení, kde ji můžete rozdělit řádky. Ovládací prvek používá tyto informace při provádění operací zalamovat a při zpracování kombinace kláves CTRL + ŠIPKA vlevo a CTRL + ŠIPKA vpravo. Aplikace může odesílat zprávy do ovládacího prvku RichEdit nahradit výchozí postupu dělením slov načíst informace o dělením slov a určit, co řádek daného znaku klesne.  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Ovládací prvek pro úpravy s formátováním ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) volá funkci s názvem "konec procedury slovo" najít zalomení mezi slovy a zjistit, kde může dojít k narušení řádky. Ovládací prvek používá tyto informace při provádění operace zalamování slov a při zpracování kombinace kláves CTRL + Šipka doleva a CTRL + ŠIPKA vpravo. Aplikace může odesílat zprávy do ovládacího prvku RichEdit nahradit výchozí postupu dělením slov k načtení informací dělením slov a na zjištění, co daný znak řádku připadá.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

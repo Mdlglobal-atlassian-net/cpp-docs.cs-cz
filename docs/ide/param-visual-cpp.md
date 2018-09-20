@@ -18,47 +18,51 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e88890917986e54b3b912d50e97da77032abab34
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 94382cb1f2bab59fae6c397f8ad6dadee221c96b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46078787"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434840"
 ---
 # <a name="ltparamgt-visual-c"></a>&lt;Param&gt; (Visual C++)
-\<Param > značky byste měli použít ve komentář pro deklaraci metody, popisující jeden z parametrů pro metodu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-<param name='name'>description</param>  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+\<Param > značky byste měli použít ve komentář pro deklaraci metody, popisující jeden z parametrů pro metodu.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+<param name='name'>description</param>
+```
+
+#### <a name="parameters"></a>Parametry
+
 *Jméno*<br/>
-Název parametru metody.  Název uzavřete do jednoduchých nebo dvojitých uvozovek.  Kompilátor vyvolá upozornění, pokud se nenajde `name`.  
-  
+Název parametru metody.  Název uzavřete do jednoduchých nebo dvojitých uvozovek.  Kompilátor vyvolá upozornění, pokud se nenajde `name`.
+
 *Popis*<br/>
-Popis pro parametr.  
-  
-## <a name="remarks"></a>Poznámky  
- Text \<param > značky se zobrazí v IntelliSense, [prohlížeče objektů](/visualstudio/ide/viewing-the-structure-of-code)a v sestavě webového kódu komentář.  
-  
- Kompilovat s [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.  
-  
-## <a name="example"></a>Příklad  
-  
-```cpp  
-// xml_param_tag.cpp  
-// compile with: /clr /doc /LD  
-// post-build command: xdcmake xml_param_tag.dll  
-/// Text for class MyClass.  
-public ref class MyClass {  
-   /// <param name="Int1">Used to indicate status.</param>  
-   void MyMethod(int Int1) {  
-   }  
-};  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Dokumentace XML](../ide/xml-documentation-visual-cpp.md)
+Popis pro parametr.
+
+## <a name="remarks"></a>Poznámky
+
+Text \<param > značky se zobrazí v IntelliSense, [prohlížeče objektů](/visualstudio/ide/viewing-the-structure-of-code)a v sestavě webového kódu komentář.
+
+Kompilovat s [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.
+
+## <a name="example"></a>Příklad
+
+```cpp
+// xml_param_tag.cpp
+// compile with: /clr /doc /LD
+// post-build command: xdcmake xml_param_tag.dll
+/// Text for class MyClass.
+public ref class MyClass {
+   /// <param name="Int1">Used to indicate status.</param>
+   void MyMethod(int Int1) {
+   }
+};
+```
+
+## <a name="see-also"></a>Viz také
+
+[Dokumentace XML](../ide/xml-documentation-visual-cpp.md)

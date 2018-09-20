@@ -1,5 +1,5 @@
 ---
-title: Pole, seznamu a mapování tříd | Microsoft Docs
+title: Pole, seznamu a mapování tříd | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,22 +20,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41dfe0b36548d87b5e0501c557e70f3cf11eea5d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8d044f8844fdf46969342d1b4fc5cf2f007c041
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345290"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436335"
 ---
 # <a name="array-list-and-map-classes"></a>Třídy pole, seznamu a mapy
-Pro zpracování agregace dat, poskytuje knihovna tříd skupinu typu tříd kolekce – polí, seznamy a mapy, které mohou být uloženy různé objektu a předdefinovaných typů. Kolekce jsou dynamicky velikost. Tyto třídy lze v žádné program zapsán pro Windows, nebo ne. Jsou však velmi užitečné pro implementaci datové struktury, které definují vaší třídy dokumentů v rozhraní. Třídy specializované kolekce můžete snadno odvozena z nich, nebo můžete je vytvořit podle třídy šablony. Další informace o těchto přístupů, najdete v článku [kolekce](../mfc/collections.md). Seznam tříd kolekce šablony, najdete v článku [třídy šablon pro pole, seznamy a mapy](../mfc/template-classes-for-arrays-lists-and-maps.md).  
-  
- Pole jsou jednorozměrné datové struktury, které jsou souvisle uložené v paměti. Vzhledem k tomu, že adresa paměti žádné daného elementu, lze vypočítat vynásobením index elementu velikostí elementu a přidávání výsledek do pole Základní adresa podporují velmi vysoká rychlost náhodného přístup. Ale pole jsou velmi náročné, pokud máte elementy vložení do pole, od celé pole posledních element vložit musí přesunout aby uvolnil prostor pro elementu, který chcete vložit. Pole můžete zvýšit nebo snížit podle potřeby.  
-  
- Seznamy jsou podobné pole, ale jsou uloženy velmi odlišně. Každý prvek v seznamu součástí ukazatel na předchozí a další prvky, což dvakrát propojený seznam. Je velmi rychlé k přidání nebo odstranění položek, protože díky tomu pouze zahrnuje změnu na několik věcí. Seznam hledání však může být náročná, protože všechny hledání nutné spustit v některém z elementů end v seznamu.  
-  
- Mapy související s hodnotou klíče na hodnotu data. Například klíč mapu může být řetězce a data ukazatel do seznamu. By požádejte mapy tak, abyste získali ukazatele spojené s konkrétní řetězec. Vyhledávání map jsou rychlé, protože mapy použít zatřiďovacích tabulek pro hledání klíče. Přidávání a odstraňování položek je také rychlé. Maps se často používají s další datové struktury jako pomocného indexy. MFC používá zvláštní druh mapy názvem [mapy zpráv](../mfc/mapping-messages.md) k mapování zpráv systému Windows na ukazatel na funkci obslužné rutiny pro zprávy.  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled třídy](../mfc/class-library-overview.md)
+
+Pro zpracování agregace dat, poskytuje knihovna tříd skupinu tříd kolekcí, pole, seznamy a mapy –, který může obsahovat řadu objektu a předdefinovaných typů. Kolekce jsou dynamicky velikost. Tyto třídy lze použít v jakékoli aplikaci, zapsán pro Windows, nebo ne. Nicméně jsou zvláště užitečná pro implementaci datové struktury, které definují třídy dokumentu v rámci aplikace. Specializované kolekce tříd lze snadno odvodit z těchto nebo je můžete vytvořit podle třídy šablony. Další informace o těchto přístupů, najdete v článku [kolekce](../mfc/collections.md). Seznam tříd kolekce šablon, najdete v článku [třídy šablon pro pole, seznamy a mapy](../mfc/template-classes-for-arrays-lists-and-maps.md).
+
+Pole je jednorozměrné datových struktur, které jsou uložena souvisle v paměti. Podporují taky velmi vysoká rychlost náhodného přístupu, protože adresa paměti pro libovolný daný prvek je možné vypočítat index prvku vynásobí velikost elementu a přidáním výsledek do pole Základní adresa. Ale pole jsou velmi náročná, pokud je třeba vložit prvky do pole, od poslední celého pole element vloží má k přesunutí, aby uvolnil prostor pro element, který má být vložen. Pole můžete zvětšovat a zmenšovat podle potřeby.
+
+Seznamy jsou podobná pole, ale jsou uloženy nějak významně odlišně. Každý prvek v seznamu také obsahuje ukazatel na předchozí a další prvky, takže dvakrát propojený seznam. Je velmi rychle přidat nebo odstranit položky, protože to pouze zahrnuje změnu odkazy. Hledání v seznamu však může být nákladné, protože všechna hledání, musí spustit v některém z konce seznamu.
+
+Maps se týkají hodnotu klíče datové hodnoty. Klíč objektu map může být například řetězec a datového ukazatele do seznamu. Zeptáte na mapě získáte ukazatel spojené s konkrétní řetězec. Vyhledávání map jsou rychlé, protože maps používají klíče vyhledávání zatřiďovacích tabulek. Přidávání a odstraňování položek je také rychlé. Mapy se často používá s další datové struktury jako pomocné indexy. Knihovna MFC používá zvláštní druh mapy volána [mapu zpráv](../mfc/mapping-messages.md) mapování zpráv Windows na ukazatel na funkci obslužné rutiny pro zprávy.
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../mfc/class-library-overview.md)
 

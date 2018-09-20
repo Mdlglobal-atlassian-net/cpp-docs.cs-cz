@@ -1,5 +1,5 @@
 ---
-title: Přidání ovládacích prvků ručně | Microsoft Docs
+title: Přidání ovládacích prvků ručně | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,30 +20,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c39f2d7803630aaaef6e803e90bf332c74937a71
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 72170e3e21f5ca895b95da0d5905a2167375f721
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930612"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434541"
 ---
 # <a name="adding-controls-by-hand"></a>Ruční přidání ovládacích prvků
-Můžete buď [přidání ovládacích prvků do dialogového okna pomocí editoru dialogových oken](../mfc/using-the-dialog-editor-to-add-controls.md) nebo je přidat sami, s kódem.  
-  
- Pokud chcete vytvořit objekt ovládacího prvku, bude obvykle vložení C++ objekt ovládacího prvku v dialogovém okně C++ nebo objekt oken s rámečkem. Ovládací prvky jako mnoho dalších objektů v rámci vyžadují dvoufázová konstrukce. By měly volat ovládacího prvku **vytvořit** – členská funkce v rámci vytváření nadřazeného dialogové okno pole nebo rámce okna. Pro dialogová okna, to se obvykle provádí v [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)a okna s rámečkem v [OnCreate](../mfc/reference/cwnd-class.md#oncreate).  
-  
- Následující příklad ukazuje, jak může deklarovat `CEdit` objektu v deklaraci třídy třídy odvozené dialogového okna a potom zavolejte `Create` – členská funkce v `OnInitDialog`. Protože `CEdit` objektu je deklarovaný jako objekt, je automaticky vytvořený, když je vytvořený objektu dialogového okna, ale musí inicializovat stále vlastní `Create` – členská funkce.  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#1](../mfc/codesnippet/cpp/adding-controls-by-hand_1.h)]  
-  
- Následující `OnInitDialog` funkce nastaví obdélníku, pak zavolá `Create` vytvoření ovládacího prvku úprav Windows a jeho připojení k Neinicializovaný `CEdit` objektu.  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#2](../mfc/codesnippet/cpp/adding-controls-by-hand_2.cpp)]  
-  
- Po vytvoření upravit objekt, můžete také nastavit zaměření pro vstup do ovládacího prvku pomocí volání `SetFocus` – členská funkce. Nakonec se vraťte 0 z `OnInitDialog` zobrazíte fokus nastavit. Pokud jste vrátí nenulovou hodnotu, dialogové okno správce nastaví fokus na první položku ovládacího prvku v dialogovém okně položky seznamu. Ve většině případů budete chtít přidat ovládací prvky dialogových oken s editoru dialogových oken.  
-  
-## <a name="see-also"></a>Viz také  
- [Příprava a použití ovládacích prvků](../mfc/making-and-using-controls.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)   
- [CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)
+
+Můžete buď [přidání ovládacích prvků do dialogového okna s editorem dialogového okna](../mfc/using-the-dialog-editor-to-add-controls.md) nebo přidávat sami, s kódem.
+
+Chcete-li vytvořit objekt ovládacího prvku, bude obvykle vložit objekt ovládacího prvku jazyka C++ v dialogovém okně C++ nebo objekt okna rámce. Stejně jako mnoho dalších objektů v rámci ovládací prvky vyžadují dvoufázová konstrukce. Měli byste zavolat ovládacího prvku **vytvořit** členské funkce jako součást vytváření dialogového okna nadřazené okno rámce nebo pole. Pro dialogová okna, to se obvykle provádí v [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)a oken s rámečkem v [OnCreate](../mfc/reference/cwnd-class.md#oncreate).
+
+Následující příklad ukazuje, jak může prohlásit `CEdit` objektu v deklaraci třídy z třídy odvozené dialogového okna a následně zavolat `Create` členskou funkci `OnInitDialog`. Protože `CEdit` objekt je deklarován jako vložený objekt, je vytvořen automaticky při vytvoření objektu dialogového okna, ale je stále je nutné inicializovat s vlastním `Create` členskou funkci.
+
+[!code-cpp[NVC_MFCControlLadenDialog#1](../mfc/codesnippet/cpp/adding-controls-by-hand_1.h)]
+
+Následující `OnInitDialog` funkce nastaví obdélníku, pak zavolá `Create` vytvořit ovládací prvek pro úpravy Windows a připojit ho k neinicializovaného `CEdit` objektu.
+
+[!code-cpp[NVC_MFCControlLadenDialog#2](../mfc/codesnippet/cpp/adding-controls-by-hand_2.cpp)]
+
+Po vytvoření upravit objekt, můžete také nastavit zaměření pro vstup na ovládací prvek voláním `SetFocus` členskou funkci. Nakonec se vrátí 0 z `OnInitDialog` zobrazíte nastavit fokus. Pokud jste vrátí nenulovou hodnotu, dialogové okno správce nastaví fokus na první položku v seznamu položek dialogového okna ovládacího prvku. Ve většině případů budete chtít přidat ovládací prvky dialogových oknech s editorem dialogového okna.
+
+## <a name="see-also"></a>Viz také
+
+[Příprava a použití ovládacích prvků](../mfc/making-and-using-controls.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)<br/>
+[CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)
 

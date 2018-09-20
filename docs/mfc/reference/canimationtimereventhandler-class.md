@@ -1,5 +1,5 @@
 ---
-title: Třída CAnimationTimerEventHandler | Microsoft Docs
+title: Canimationtimereventhandler – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,108 +26,125 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dcd12f3d2f57b947beb71385327f0ad1a14975d
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: ad48c372043c06c2bc3a64537734a30d79e81a50
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953269"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394995"
 ---
-# <a name="canimationtimereventhandler-class"></a>CAnimationTimerEventHandler – třída
-Implementuje zpětné volání, která je volána rozhraním API animace, když dojde k událostem časování.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CAnimationTimerEventHandler : public CUIAnimationTimerEventHandlerBase<CAnimationTimerEventHandler>;  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CAnimationTimerEventHandler::CreateInstance](#createinstance)|Vytvoří instanci `CAnimationTimerEventHandler` zpětného volání.|  
-|[CAnimationTimerEventHandler::OnPostUpdate](#onpostupdate)|Obslužné rutiny události, které se provádějí až po dokončení aktualizace animace. (Přepisuje `CUIAnimationTimerEventHandlerBase::OnPostUpdate`.)|  
-|[CAnimationTimerEventHandler::OnPreUpdate](#onpreupdate)|Obslužné rutiny události, které nastaly před zahájením aktualizace animace. (Přepisuje `CUIAnimationTimerEventHandlerBase::OnPreUpdate`.)|  
-|[CAnimationTimerEventHandler::OnRenderingTooSlow](#onrenderingtooslow)|Zpracovává události, které nastaly při vykreslování snímků za sekundu pro animace klesne pod minimální žádoucí snímků za sekundu. (Přepisuje `CUIAnimationTimerEventHandlerBase::OnRenderingTooSlow`.)|  
-|[CAnimationTimerEventHandler::SetAnimationController](#setanimationcontroller)|Ukládá ukazatel animace řadiče události trasy.|  
-  
-## <a name="remarks"></a>Poznámky  
- Tuto obslužnou rutinu události je vytvořen a předaný IUIAnimationTimer::SetTimerEventHandler při volání CAnimationController::EnableAnimationTimerEventHandler.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `CUIAnimationCallbackBase`  
-  
- `CUIAnimationTimerEventHandlerBase`  
-  
- `CAnimationTimerEventHandler`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxanimationcontroller.h  
-  
-##  <a name="createinstance"></a>  CAnimationTimerEventHandler::CreateInstance  
- Vytvoří instanci CAnimationTimerEventHandler zpětného volání.  
-  
-```  
+# <a name="canimationtimereventhandler-class"></a>Canimationtimereventhandler – třída
+
+Implementuje zpětné volání, které je voláno rozhraním API animace při výskytu události časování.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CAnimationTimerEventHandler : public CUIAnimationTimerEventHandlerBase<CAnimationTimerEventHandler>;
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CAnimationTimerEventHandler::CreateInstance](#createinstance)|Vytvoří instanci `CAnimationTimerEventHandler` zpětného volání.|
+|[CAnimationTimerEventHandler::OnPostUpdate](#onpostupdate)|Zpracovává události, ke kterým dochází po dokončení aktualizace animace. (Přepíše `CUIAnimationTimerEventHandlerBase::OnPostUpdate`.)|
+|[CAnimationTimerEventHandler::OnPreUpdate](#onpreupdate)|Zpracovává události, ke kterým dochází před zahájením aktualizace animace. (Přepíše `CUIAnimationTimerEventHandlerBase::OnPreUpdate`.)|
+|[CAnimationTimerEventHandler::OnRenderingTooSlow](#onrenderingtooslow)|Zpracovává události, ke kterým dochází při vykreslování snímkovou frekvenci animace klesne pod minimální kmitočet žádoucí. (Přepíše `CUIAnimationTimerEventHandlerBase::OnRenderingTooSlow`.)|
+|[CAnimationTimerEventHandler::SetAnimationController](#setanimationcontroller)|Uchovává ukazatel na řadič animace směrování událostí.|
+
+## <a name="remarks"></a>Poznámky
+
+Tuto obslužnou rutinu události je vytvořen a předán IUIAnimationTimer::SetTimerEventHandler při volání CAnimationController::EnableAnimationTimerEventHandler.
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`CUIAnimationCallbackBase`
+
+`CUIAnimationTimerEventHandlerBase`
+
+`CAnimationTimerEventHandler`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxanimationcontroller.h
+
+##  <a name="createinstance"></a>  CAnimationTimerEventHandler::CreateInstance
+
+Vytvoří instanci canimationtimereventhandler – zpětného volání.
+
+```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
-    CAnimationController* pAnimationController,  
+    CAnimationController* pAnimationController,
     IUIAnimationTimerEventHandler** ppTimerEventHandler);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pAnimationController*  
- Ukazatel na animace řadiči, který bude přijímat události.  
-  
- *ppTimerEventHandler*  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Pokud metoda bude úspěšná, vrátí S_OK. Funkce HRESULT chybový kód.  
-  
-##  <a name="onpostupdate"></a>  CAnimationTimerEventHandler::OnPostUpdate  
- Obslužné rutiny události, které se provádějí až po dokončení aktualizace animace.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pAnimationController*<br/>
+Ukazatel na řadič animace, který se zobrazí události.
+
+*ppTimerEventHandler*
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pokud metoda uspěje, vrátí hodnotu S_OK. V opačném případě vrátí kód chyby HRESULT.
+
+##  <a name="onpostupdate"></a>  CAnimationTimerEventHandler::OnPostUpdate
+
+Zpracovává události, ke kterým dochází po dokončení aktualizace animace.
+
+```
 IFACEMETHOD(OnPostUpdate)();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- S_OK, pokud metoda úspěšně. jinak E_FAIL.  
-  
-##  <a name="onpreupdate"></a>  CAnimationTimerEventHandler::OnPreUpdate  
- Obslužné rutiny události, které nastaly před zahájením aktualizace animace.  
-  
-```  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pokud metoda uspěje; S_OK jinak E_FAIL.
+
+##  <a name="onpreupdate"></a>  CAnimationTimerEventHandler::OnPreUpdate
+
+Zpracovává události, ke kterým dochází před zahájením aktualizace animace.
+
+```
 IFACEMETHOD(OnPreUpdate)();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- S_OK, pokud metoda úspěšně. jinak E_FAIL.  
-  
-##  <a name="onrenderingtooslow"></a>  CAnimationTimerEventHandler::OnRenderingTooSlow  
- Zpracovává události, které nastaly při vykreslování snímků za sekundu pro animace klesne pod minimální žádoucí snímků za sekundu.  
-  
-```  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pokud metoda uspěje; S_OK jinak E_FAIL.
+
+##  <a name="onrenderingtooslow"></a>  CAnimationTimerEventHandler::OnRenderingTooSlow
+
+Zpracovává události, ke kterým dochází při vykreslování snímkovou frekvenci animace klesne pod minimální kmitočet žádoucí.
+
+```
 IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *snímků za sekundu*  
-  
-### <a name="return-value"></a>Návratová hodnota  
- S_OK, pokud metoda úspěšně. jinak E_FAIL.  
-  
-##  <a name="setanimationcontroller"></a>  CAnimationTimerEventHandler::SetAnimationController  
- Ukládá ukazatel animace řadiče události trasy.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*snímků za sekundu*
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pokud metoda uspěje; S_OK jinak E_FAIL.
+
+##  <a name="setanimationcontroller"></a>  CAnimationTimerEventHandler::SetAnimationController
+
+Uchovává ukazatel na řadič animace směrování událostí.
+
+```
 void SetAnimationController(CAnimationController* pAnimationController);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pAnimationController*  
- Ukazatel na animace řadiči, který bude přijímat události.  
-  
-## <a name="see-also"></a>Viz také  
- [Třídy](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*pAnimationController*<br/>
+Ukazatel na řadič animace, který se zobrazí události.
+
+## <a name="see-also"></a>Viz také
+
+[Třídy](../../mfc/reference/mfc-classes.md)

@@ -1,5 +1,5 @@
 ---
-title: Příklady ovládacích prvků pro úpravy s formátováním | Microsoft Docs
+title: Příklady ovládacích prvků pro úpravy s formátováním | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b6bccb7ff1df1125f3a6643b9af4bfeb9f32a32
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48c73504f54ce2732bff808ced50d463a4c50a85
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379278"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433351"
 ---
 # <a name="rich-edit-control-examples"></a>Příklady ovládacích prvků pro úpravy s formátováním
-Ukázka MFC OLE [WORDPAD](../visual-cpp-samples.md) používá `CRichEditView`, `CRichEditDoc`, a `CRichEditCntrItem` třídy. Rozšíření, použije [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md). Rychlé popis těchto tří tříd naleznete v tématu [třídy související s ovládacími prvky upravit bohaté](../mfc/classes-related-to-rich-edit-controls.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Ukázky knihovny MFC OLE [WORDPAD](../visual-cpp-samples.md) používá `CRichEditView`, `CRichEditDoc`, a `CRichEditCntrItem` třídy. Rozšíření, použije [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md). Stručný popis těchto tří tříd, naleznete v tématu [třídy související s formátováním upravit ovládací prvky](../mfc/classes-related-to-rich-edit-controls.md).
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

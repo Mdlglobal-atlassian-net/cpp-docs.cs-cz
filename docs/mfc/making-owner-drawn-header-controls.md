@@ -18,17 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca5545f7ebf828a04321db999d74aaa0d8a42187
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 899d51cf20d911d5ef0e46400330a59865cdd9af
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214730"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435074"
 ---
 # <a name="making-owner-drawn-header-controls"></a>Tvorba ovládacích prvků záhlaví vykreslovaných vlastníkem
-Můžete definovat jednotlivé položky ovládacího prvku záhlaví ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) bude vlastníkem vykreslované položky. Další informace najdete v tématu [ovládacích prvků záhlaví Owner-Drawn](/windows/desktop/Controls/header-controls) v sadě Windows SDK.  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Můžete definovat jednotlivé položky ovládacího prvku záhlaví ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) bude vlastníkem vykreslované položky. Další informace najdete v tématu [ovládacích prvků záhlaví Owner-Drawn](/windows/desktop/Controls/header-controls) v sadě Windows SDK.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 
