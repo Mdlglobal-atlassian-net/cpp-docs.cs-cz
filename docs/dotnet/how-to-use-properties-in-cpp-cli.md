@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: použití vlastnosti v jazyce C + +/ CLI | Microsoft Docs'
+title: 'Postupy: používání vlastností v jazyce C + +/ CLI | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 07/21/2017
 ms.technology:
@@ -16,399 +16,408 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4873b7d37ef55c050ef074323c4644e4277f593d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84d12ab4d50b5cc18a6ba6ad74a6a0e5423a28b2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33134336"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379967"
 ---
 # <a name="how-to-use-properties-in-ccli"></a>Postupy: Používání vlastností v jazyce C++/CLI
-Tento článek ukazuje, jak pomocí vlastností v jazyce C + +/ CLI.  
-  
-## <a name="basic-properties"></a>Základní vlastnosti  
- Pro základní vlastnosti – ty, které jenom přiřadit a načtení privátního datový člen – není nutné explicitně definujte get a nastavte přístupové funkce, protože kompilátor automaticky poskytuje, je-li určeno právě datový typ vlastnosti. Tento kód ukazuje základní vlastnosti:  
-  
-```cpp  
-// SimpleProperties.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-ref class C {  
-public:  
-   property int Size;  
-};  
-  
-int main() {  
-   C^ c = gcnew C;  
-   c->Size = 111;  
-   Console::WriteLine("c->Size = {0}", c->Size);  
-}  
-```  
-  
-```Output  
-c->Size = 111  
-```  
-  
-## <a name="static-properties"></a>Statické vlastnosti  
- Tento příklad ukazuje, jak deklarace a používání statických vlastností.  Statické vlastnosti přístup jenom k statické členy jeho třídy.  
-  
-```cpp  
-// mcppv2_property_3.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-ref class StaticProperties {  
-   static int MyInt;  
-   static int MyInt2;  
-  
-public:  
-   static property int Static_Data_Member_Property;  
-  
-   static property int Static_Block_Property {  
-      int get() {  
-         return MyInt;  
-      }  
-  
-      void set(int value) {  
-         MyInt = value;  
-      }        
-   }  
-};  
-  
-int main() {  
-   StaticProperties::Static_Data_Member_Property = 96;  
-   Console::WriteLine(StaticProperties::Static_Data_Member_Property);  
-  
-   StaticProperties::Static_Block_Property = 47;  
-   Console::WriteLine(StaticProperties::Static_Block_Property);  
-}  
-```  
-  
-```Output  
-96  
-47  
-```  
-  
-## <a name="indexed-properties"></a>Indexované vlastnosti  
- Indexované vlastnosti obvykle zpřístupní datová struktura, která přistupuje pomocí operátor dolního indexu.  
-  
- Pokud použijete výchozí indexované vlastnosti, dostanete datovou strukturu právě tím, že odkazuje na název třídy, ale pokud používáte indexované vlastnosti definovaný uživatelem, je nutné zadat název vlastnosti pro přístup k datovou strukturu.  
-  
- Informace o tom, jak využívat indexer, který je napsán v jazyce C# najdete v tématu [postupy: spotřeba indexeru C# (C + +/ CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).  
-  
- Tento příklad ukazuje, jak používat výchozí a uživatelem definované indexované vlastnosti:  
-  
-```cpp  
-// mcppv2_property_2.cpp  
-// compile with: /clr  
-using namespace System;  
-public ref class C {  
-   array<int>^ MyArr;  
-  
-public:  
-   C() {  
-      MyArr = gcnew array<int>(5);  
-   }  
-  
-   // default indexer  
-   property int default[int] {  
-      int get(int index) {  
-         return MyArr[index];  
-      }  
-      void set(int index, int value) {  
-         MyArr[index] = value;  
-      }  
-   }  
-  
-   // user-defined indexer  
-   property int indexer1[int] {  
-      int get(int index) {  
-         return MyArr[index];  
-      }  
-      void set(int index, int value) {  
-         MyArr[index] = value;  
-      }  
-   }  
-};  
-  
-int main() {  
-   C ^ MyC = gcnew C();  
-  
-   // use the default indexer  
-   Console::Write("[ ");  
-   for (int i = 0 ; i < 5 ; i++) {  
-      MyC[i] = i;  
-      Console::Write("{0} ", MyC[i]);  
-   }  
-  
-   Console::WriteLine("]");  
-  
-   // use the user-defined indexer  
-   Console::Write("[ ");  
-   for (int i = 0 ; i < 5 ; i++) {  
-      MyC->indexer1[i] = i * 2;  
-      Console::Write("{0} ", MyC->indexer1[i]);  
-   }  
-  
-   Console::WriteLine("]");  
-}  
-```  
-  
-```Output  
-[ 0 1 2 3 4 ]  
-[ 0 2 4 6 8 ]  
-```  
-  
- Další příklad ukazuje, jak volat výchozí indexeru pomocí `this` ukazatel.  
-  
-```cpp  
-// call_default_indexer_through_this_pointer.cpp  
-// compile with: /clr /c  
-value class Position {  
-public:  
-   Position(int x, int y) : position(gcnew array<int, 2>(100, 100)) {  
-      this->default[x, y] = 1;  
-   }  
-  
-   property int default[int, int] {  
-      int get(int x, int y) {  
-         return position[x, y];  
-      }  
-  
-      void set(int x, int y, int value) {}  
-   }  
-  
-private:  
-   array<int, 2> ^ position;  
-};  
-```  
-  
- Tento příklad ukazuje způsob použití <xref:System.Reflection.DefaultMemberAttribute> zadat výchozí indexeru:  
-  
-```cpp  
-// specify_default_indexer.cpp  
-// compile with: /LD /clr  
-using namespace System;  
-[Reflection::DefaultMember("XXX")]  
-public ref struct Squares {  
-   property Double XXX[Double] {  
-      Double get(Double data) {  
-         return data*data;  
-      }  
-   }  
-};  
-```  
-  
- Další vzorek spotřebuje metadata, která se vytvoří v předchozím příkladu.  
-  
-```cpp  
-// consume_default_indexer.cpp  
-// compile with: /clr  
-#using "specify_default_indexer.dll"  
-int main() {  
-   Squares ^ square = gcnew Squares();  
-   System::Console::WriteLine("{0}", square[3]);  
-}  
-```  
-  
-```Output  
-9  
-```  
-  
-## <a name="virtual-properties"></a>Virtuální vlastnosti  
- Tento příklad ukazuje, jak deklarace a používání virtuálních vlastností:  
-  
-```cpp  
-// mcppv2_property_4.cpp  
-// compile with: /clr  
-using namespace System;  
-interface struct IEFace {  
-public:  
-   property int VirtualProperty1;  
-   property int VirtualProperty2 {  
-      int get();  
-      void set(int i);  
-   }  
-};  
-  
-// implement virtual events  
-ref class PropImpl : public IEFace {  
-   int MyInt;  
-public:  
-   virtual property int VirtualProperty1;  
-  
-   virtual property int VirtualProperty2 {  
-      int get() {  
-         return MyInt;  
-      }  
-      void set(int i) {  
-         MyInt = i;  
-      }  
-   }  
-};  
-  
-int main() {  
-   PropImpl ^ MyPI = gcnew PropImpl();  
-   MyPI->VirtualProperty1 = 93;  
-   Console::WriteLine(MyPI->VirtualProperty1);  
-  
-   MyPI->VirtualProperty2 = 43;  
-   Console::WriteLine(MyPI->VirtualProperty2);  
-}  
-```  
-  
-```Output  
-93  
-43  
-```  
-  
-## <a name="abstract-and-sealed-properties"></a>Abstraktní a uzavřené vlastnosti  
- I když [abstraktní](../windows/abstract-cpp-component-extensions.md) a [zapečetěné](../windows/sealed-cpp-component-extensions.md) klíčová slova nejsou zadány jako platná v s ECMA C + +/ specifikace rozhraní příkazového řádku pro kompilátor Visual C++, nemůžete zadat je trivial vlastností, ani na vlastnosti deklarace nejsou v netriviálních vlastnosti.  
-  
- Deklarace vlastnosti zapečetěné nebo abstraktní, musíte definovat netriviální vlastnost a potom zadat `abstract` nebo `sealed` – klíčové slovo, na zjištění a nastavte přístupové funkce.  
-  
-```cpp  
-// properties_abstract_sealed.cpp  
-// compile with: /clr  
-ref struct A {  
-protected:  
-   int m_i;  
-  
-public:  
-   A() { m_i = 87; }  
-  
-   // define abstract property  
-   property int Prop_1 {  
-      virtual int get() abstract;  
-      virtual void set(int i) abstract;  
-   }  
-};  
-  
-ref struct B : A {  
-private:  
-   int m_i;  
-  
-public:  
-   B() { m_i = 86; }  
-  
-   // implement abstract property  
-   property int Prop_1 {  
-      virtual int get() override { return m_i; }  
-      virtual void set(int i) override { m_i = i; }  
-   }  
-};  
-  
-ref struct C {  
-private:  
-   int m_i;  
-  
-public:  
-   C() { m_i = 87; }  
-  
-   // define sealed property  
-   property int Prop_2 {  
-      virtual int get() sealed { return m_i; }  
-      virtual void set(int i) sealed { m_i = i; };  
-   }  
-};  
-  
-int main() {  
-   B b1;  
-   // call implementation of abstract property  
-   System::Console::WriteLine(b1.Prop_1);  
-  
-   C c1;  
-   // call sealed property  
-   System::Console::WriteLine(c1.Prop_2);  
-}  
-```  
-  
-```Output  
-86  
-87  
-```  
-  
-## <a name="multidimensional-properties"></a>Vícerozměrné vlastnosti  
- Vícerozměrné vlastnosti můžete použít k definování přístupových metod vlastností, které provést nestandardní počet parametrů.  
-  
-```cpp  
-// mcppv2_property_5.cpp  
-// compile with: /clr  
-ref class X {  
-   double d;  
-public:  
-   X() : d(0) {}  
-   property double MultiDimProp[int, int, int] {  
-      double get(int, int, int) {  
-         return d;  
-      }  
-      void set(int i, int j, int k, double l) {  
-         // do something with those ints  
-         d = l;  
-      }  
-   }  
-  
-   property double MultiDimProp2[int] {  
-      double get(int) {  
-         return d;  
-      }  
-      void set(int i, double l) {  
-         // do something with those ints  
-         d = l;  
-      }  
-   }  
-  
-};  
-  
-int main() {  
-   X ^ MyX = gcnew X();  
-   MyX->MultiDimProp[0,0,0] = 1.1;  
-   System::Console::WriteLine(MyX->MultiDimProp[0, 0, 0]);  
-}  
-```  
-  
-```Output  
-1.1  
-```  
-  
-## <a name="overloading-property-accessors"></a>Přetížení vlastnost přístupové objekty  
- Následující příklad ukazuje, jak přetížení indexované vlastnosti.  
-  
-```cpp  
-// mcppv2_property_6.cpp  
-// compile with: /clr  
-ref class X {  
-   double d;  
-public:  
-   X() : d(0.0) {}  
-   property double MyProp[int] {  
-      double get(int i) {  
-         return d;  
-      }  
-  
-      double get(System::String ^ i) {  
-         return 2*d;  
-      }  
-  
-      void set(int i, double l) {  
-         d = i * l;  
-      }  
-   }   // end MyProp definition  
-};  
-  
-int main() {  
-   X ^ MyX = gcnew X();  
-   MyX->MyProp[2] = 1.7;  
-   System::Console::WriteLine(MyX->MyProp[1]);  
-   System::Console::WriteLine(MyX->MyProp["test"]);  
-}  
-```  
-  
-```Output  
-3.4  
-6.8  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [property](../windows/property-cpp-component-extensions.md)
+
+Tento článek popisuje, jak používat vlastnosti v jazyce C + +/ CLI.
+
+## <a name="basic-properties"></a>Základní vlastnosti
+
+Pro základní vlastnosti – ty, které pouze přiřazení a načtení dat soukromých členů – není nutné explicitně definovat get a nastavit přístupový objekt funkce, protože kompilátor automaticky poskytuje jim při pouze datový typ vlastnosti. Tento kód ukazuje základní vlastnosti:
+
+```cpp
+// SimpleProperties.cpp
+// compile with: /clr
+using namespace System;
+
+ref class C {
+public:
+   property int Size;
+};
+
+int main() {
+   C^ c = gcnew C;
+   c->Size = 111;
+   Console::WriteLine("c->Size = {0}", c->Size);
+}
+```
+
+```Output
+c->Size = 111
+```
+
+## <a name="static-properties"></a>Statické vlastnosti
+
+Tento vzorový kód ukazuje, jak deklarace a používání statických vlastností.  Statická vlastnost přístupná pouze statické členy své třídy.
+
+```cpp
+// mcppv2_property_3.cpp
+// compile with: /clr
+using namespace System;
+
+ref class StaticProperties {
+   static int MyInt;
+   static int MyInt2;
+
+public:
+   static property int Static_Data_Member_Property;
+
+   static property int Static_Block_Property {
+      int get() {
+         return MyInt;
+      }
+
+      void set(int value) {
+         MyInt = value;
+      }
+   }
+};
+
+int main() {
+   StaticProperties::Static_Data_Member_Property = 96;
+   Console::WriteLine(StaticProperties::Static_Data_Member_Property);
+
+   StaticProperties::Static_Block_Property = 47;
+   Console::WriteLine(StaticProperties::Static_Block_Property);
+}
+```
+
+```Output
+96
+47
+```
+
+## <a name="indexed-properties"></a>Indexované vlastnosti
+
+Indexovaná vlastnost obvykle poskytuje datová struktura, která se využívají pomocí operátor dolního indexu.
+
+Pokud používáte výchozí indexovanou vlastnost, dostanete strukturu dat tak, že odkazují na název třídy, ale pokud používáte indexované vlastnosti definované uživatelem, je nutné zadat název vlastnosti pro přístup k datová struktura.
+
+Informace o tom, jak využívat indexeru, která je napsána v jazyce C# najdete v tématu [postupy: spotřeba indexeru C# (C + +/ CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).
+
+Tento vzorový kód ukazuje, jak používat výchozí a uživatelem definované indexované vlastnosti:
+
+```cpp
+// mcppv2_property_2.cpp
+// compile with: /clr
+using namespace System;
+public ref class C {
+   array<int>^ MyArr;
+
+public:
+   C() {
+      MyArr = gcnew array<int>(5);
+   }
+
+   // default indexer
+   property int default[int] {
+      int get(int index) {
+         return MyArr[index];
+      }
+      void set(int index, int value) {
+         MyArr[index] = value;
+      }
+   }
+
+   // user-defined indexer
+   property int indexer1[int] {
+      int get(int index) {
+         return MyArr[index];
+      }
+      void set(int index, int value) {
+         MyArr[index] = value;
+      }
+   }
+};
+
+int main() {
+   C ^ MyC = gcnew C();
+
+   // use the default indexer
+   Console::Write("[ ");
+   for (int i = 0 ; i < 5 ; i++) {
+      MyC[i] = i;
+      Console::Write("{0} ", MyC[i]);
+   }
+
+   Console::WriteLine("]");
+
+   // use the user-defined indexer
+   Console::Write("[ ");
+   for (int i = 0 ; i < 5 ; i++) {
+      MyC->indexer1[i] = i * 2;
+      Console::Write("{0} ", MyC->indexer1[i]);
+   }
+
+   Console::WriteLine("]");
+}
+```
+
+```Output
+[ 0 1 2 3 4 ]
+[ 0 2 4 6 8 ]
+```
+
+Další příklad ukazuje, jak volat výchozímu indexeru pomocí `this` ukazatele.
+
+```cpp
+// call_default_indexer_through_this_pointer.cpp
+// compile with: /clr /c
+value class Position {
+public:
+   Position(int x, int y) : position(gcnew array<int, 2>(100, 100)) {
+      this->default[x, y] = 1;
+   }
+
+   property int default[int, int] {
+      int get(int x, int y) {
+         return position[x, y];
+      }
+
+      void set(int x, int y, int value) {}
+   }
+
+private:
+   array<int, 2> ^ position;
+};
+```
+
+Tento příklad ukazuje způsob použití <xref:System.Reflection.DefaultMemberAttribute> k určení výchozímu indexeru:
+
+```cpp
+// specify_default_indexer.cpp
+// compile with: /LD /clr
+using namespace System;
+[Reflection::DefaultMember("XXX")]
+public ref struct Squares {
+   property Double XXX[Double] {
+      Double get(Double data) {
+         return data*data;
+      }
+   }
+};
+```
+
+Bude další vzorek využívá metadata, která se vytvoří v předchozím příkladu.
+
+```cpp
+// consume_default_indexer.cpp
+// compile with: /clr
+#using "specify_default_indexer.dll"
+int main() {
+   Squares ^ square = gcnew Squares();
+   System::Console::WriteLine("{0}", square[3]);
+}
+```
+
+```Output
+9
+```
+
+## <a name="virtual-properties"></a>Virtuální vlastnosti
+
+Tento vzorový kód ukazuje, jak deklarovat a používání virtuálních vlastností:
+
+```cpp
+// mcppv2_property_4.cpp
+// compile with: /clr
+using namespace System;
+interface struct IEFace {
+public:
+   property int VirtualProperty1;
+   property int VirtualProperty2 {
+      int get();
+      void set(int i);
+   }
+};
+
+// implement virtual events
+ref class PropImpl : public IEFace {
+   int MyInt;
+public:
+   virtual property int VirtualProperty1;
+
+   virtual property int VirtualProperty2 {
+      int get() {
+         return MyInt;
+      }
+      void set(int i) {
+         MyInt = i;
+      }
+   }
+};
+
+int main() {
+   PropImpl ^ MyPI = gcnew PropImpl();
+   MyPI->VirtualProperty1 = 93;
+   Console::WriteLine(MyPI->VirtualProperty1);
+
+   MyPI->VirtualProperty2 = 43;
+   Console::WriteLine(MyPI->VirtualProperty2);
+}
+```
+
+```Output
+93
+43
+```
+
+## <a name="abstract-and-sealed-properties"></a>Abstraktní a uzavřené vlastnosti
+
+I když [abstraktní](../windows/abstract-cpp-component-extensions.md) a [zapečetěné](../windows/sealed-cpp-component-extensions.md) klíčová slova jsou určené jako platná v s ECMA C + +/ specifikace rozhraní příkazového řádku pro kompilátor Visual C++ nelze zadat jejich na triviální vlastnosti ani na vlastnost deklarace netriviální vlastnosti.
+
+Chcete-li deklarovat zapečetěné nebo abstraktní vlastnost, musí definovat netriviální vlastnosti a pak zadejte `abstract` nebo `sealed` – klíčové slovo na získat a nastavit přístupové funkce.
+
+```cpp
+// properties_abstract_sealed.cpp
+// compile with: /clr
+ref struct A {
+protected:
+   int m_i;
+
+public:
+   A() { m_i = 87; }
+
+   // define abstract property
+   property int Prop_1 {
+      virtual int get() abstract;
+      virtual void set(int i) abstract;
+   }
+};
+
+ref struct B : A {
+private:
+   int m_i;
+
+public:
+   B() { m_i = 86; }
+
+   // implement abstract property
+   property int Prop_1 {
+      virtual int get() override { return m_i; }
+      virtual void set(int i) override { m_i = i; }
+   }
+};
+
+ref struct C {
+private:
+   int m_i;
+
+public:
+   C() { m_i = 87; }
+
+   // define sealed property
+   property int Prop_2 {
+      virtual int get() sealed { return m_i; }
+      virtual void set(int i) sealed { m_i = i; };
+   }
+};
+
+int main() {
+   B b1;
+   // call implementation of abstract property
+   System::Console::WriteLine(b1.Prop_1);
+
+   C c1;
+   // call sealed property
+   System::Console::WriteLine(c1.Prop_2);
+}
+```
+
+```Output
+86
+87
+```
+
+## <a name="multidimensional-properties"></a>Vícerozměrné vlastnosti
+
+Vícerozměrné vlastnosti můžete použít k definování přístupové metody vlastností, které trvat nestandardní počet parametrů.
+
+```cpp
+// mcppv2_property_5.cpp
+// compile with: /clr
+ref class X {
+   double d;
+public:
+   X() : d(0) {}
+   property double MultiDimProp[int, int, int] {
+      double get(int, int, int) {
+         return d;
+      }
+      void set(int i, int j, int k, double l) {
+         // do something with those ints
+         d = l;
+      }
+   }
+
+   property double MultiDimProp2[int] {
+      double get(int) {
+         return d;
+      }
+      void set(int i, double l) {
+         // do something with those ints
+         d = l;
+      }
+   }
+
+};
+
+int main() {
+   X ^ MyX = gcnew X();
+   MyX->MultiDimProp[0,0,0] = 1.1;
+   System::Console::WriteLine(MyX->MultiDimProp[0, 0, 0]);
+}
+```
+
+```Output
+1.1
+```
+
+## <a name="overloading-property-accessors"></a>Přetížení přistupující objekty vlastnosti
+
+Následující příklad ukazuje, jak přetížení indexované vlastnosti.
+
+```cpp
+// mcppv2_property_6.cpp
+// compile with: /clr
+ref class X {
+   double d;
+public:
+   X() : d(0.0) {}
+   property double MyProp[int] {
+      double get(int i) {
+         return d;
+      }
+
+      double get(System::String ^ i) {
+         return 2*d;
+      }
+
+      void set(int i, double l) {
+         d = i * l;
+      }
+   }   // end MyProp definition
+};
+
+int main() {
+   X ^ MyX = gcnew X();
+   MyX->MyProp[2] = 1.7;
+   System::Console::WriteLine(MyX->MyProp[1]);
+   System::Console::WriteLine(MyX->MyProp["test"]);
+}
+```
+
+```Output
+3.4
+6.8
+```
+
+## <a name="see-also"></a>Viz také
+
+[property](../windows/property-cpp-component-extensions.md)

@@ -1,5 +1,5 @@
 ---
-title: Použití seznamu obrázků | Microsoft Docs
+title: Použití seznamu obrázků | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5722a2ef8c4e93e4996ee243b3c01b6dd6aeca78
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4dc30d418ae57205e4566dad7f490a773321768e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381602"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391667"
 ---
 # <a name="using-an-image-list"></a>Použití seznamu obrázků
-Typické použití seznamu obrázků se následující níže:  
-  
--   Vytvořit [CImageList](../mfc/reference/cimagelist-class.md) objektu a volání jednoho z přetížení jeho [vytvořit](../mfc/reference/cimagelist-class.md#create) funkce vytvoření seznamu obrázků a připojte ji k `CImageList` objektu.  
-  
--   Pokud jste při vytvoření seznamu obrázků nepřidali bitové kopie, přidání bitové kopie do seznamu obrázků voláním [přidat](../mfc/reference/cimagelist-class.md#add) nebo [čtení](../mfc/reference/cimagelist-class.md#read) – členská funkce.  
-  
--   Přidružení seznamu obrázků s ovládacím prvkem voláním funkce příslušného člena tohoto ovládacího prvku a vykreslení obrázků ze seznamu obrázků sami pomocí seznamu obrázků [kreslení](../mfc/reference/cimagelist-class.md#draw) – členská funkce.  
-  
--   Případně povolte uživatelům přetáhněte bitovou kopii, použití seznamu obrázků integrovanou podporu pro přetažení myší.  
-  
+
+Typické použití seznamu obrázků má následující formát, níže:
+
+- Vytvoření [atributu CImageList](../mfc/reference/cimagelist-class.md) objektu a volání jednoho z přetížení jeho [vytvořit](../mfc/reference/cimagelist-class.md#create) funkci pro vytvoření seznamu obrázků a připojte ji k `CImageList` objektu.
+
+- Pokud jste nepřidali Image při vytváření seznamu obrázků, přidání obrázků do seznamu obrázků voláním [přidat](../mfc/reference/cimagelist-class.md#add) nebo [čtení](../mfc/reference/cimagelist-class.md#read) členskou funkci.
+
+- Přidružení seznamu obrázků s ovládacím prvkem voláním příslušné členské funkce ovládacího prvku nebo vykreslení obrázků ze seznamu obrázků sami pomocí seznamu obrázků [nakreslit](../mfc/reference/cimagelist-class.md#draw) členskou funkci.
+
+- Možná umožní uživateli přetáhnout image, pomocí seznamu obrázků integrovanou podporu pro přetažení myší.
+
 > [!NOTE]
->  Pokud byl vytvořen seznamu obrázků s **nové** operátor, musíte zničit `CImageList` objektu až skončíte s ním.  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CImageList](../mfc/using-cimagelist.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+>  Pokud byl vytvořen seznam obrázků **nové** operátoru, budete muset zničit `CImageList` objektu, jakmile budete hotovi s ním.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CImageList](../mfc/using-cimagelist.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

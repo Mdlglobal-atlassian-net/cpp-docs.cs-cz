@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f554d6d3369f94c5f4e9409d9f6af9a65935fc42
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: dcf9e9a6264f7c58cd0f44573e3b0be81b15f068
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313531"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446527"
 ---
 # <a name="changing-the-properties-of-a-toolbar-button-c"></a>Změna vlastností tlačítka panelu nástrojů (C++)
 
@@ -41,6 +41,6 @@ Knihovny MFC nebo ATL
 
 ## <a name="see-also"></a>Viz také
 
-[Vlastnosti tlačítka panelu nástrojů](../windows/toolbar-button-properties.md)  
-[Vytváření, přesunutí a úprava tlačítek panelu nástrojů](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[Vlastnosti tlačítka panelu nástrojů](../windows/toolbar-button-properties.md)<br/>
+[Vytváření, přesunutí a úprava tlačítek panelu nástrojů](../windows/creating-moving-and-editing-toolbar-buttons.md)<br/>
 [Editor panelu nástrojů](../windows/toolbar-editor.md)

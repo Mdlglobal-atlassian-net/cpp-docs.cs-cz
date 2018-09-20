@@ -20,93 +20,103 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7c25f55263270ad797b231a21e60fe4b0e552c4
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 3610f5c8fa11aabcc3de81ddf0cb23060b9e77a1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336110"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390926"
 ---
 # <a name="cd2dsizef-class"></a>Cd2dsizef – třída
-Obálka pro D2D1_SIZE_F.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CD2DSizeF : public D2D1_SIZE_F;  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CD2DSizeF::CD2DSizeF](#cd2dsizef)|Přetíženo. Vytvoří `CD2DSizeF` objektu z `D2D1_SIZE_F` objektu.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CD2DSizeF::IsNull](#isnull)|Vrátí **logická** hodnotu, která určuje, zda výraz neobsahuje žádná platná data (NULL).|  
-  
-### <a name="public-operators"></a>Veřejné operátory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CD2DSizeF::Operator CSize](#operator_csize)|Převede `CD2DSizeF` k `CSize` objektu.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `D2D1_SIZE_F`  
-  
- [Cd2dsizef –](../../mfc/reference/cd2dsizef-class.md)  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxrendertarget.h  
-  
-##  <a name="cd2dsizef"></a>  CD2DSizeF::CD2DSizeF  
- Vytvoří objekt cd2dsizef – z CSize objektu.  
-  
-```  
-CD2DSizeF(const CSize& size);  
-CD2DSizeF(const D2D1_SIZE_F& size);  
+
+Obálka pro D2D1_SIZE_F.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CD2DSizeF : public D2D1_SIZE_F;
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[CD2DSizeF::CD2DSizeF](#cd2dsizef)|Přetíženo. Vytvoří `CD2DSizeF` objektu z `D2D1_SIZE_F` objektu.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CD2DSizeF::IsNull](#isnull)|Vrátí **logická** hodnotu, která určuje, zda výraz neobsahuje žádná platná data (NULL).|
+
+### <a name="public-operators"></a>Veřejné operátory
+
+|Název|Popis|
+|----------|-----------------|
+|[CD2DSizeF::Operator CSize](#operator_csize)|Převede `CD2DSizeF` k `CSize` objektu.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`D2D1_SIZE_F`
+
+[Cd2dsizef –](../../mfc/reference/cd2dsizef-class.md)
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxrendertarget.h
+
+##  <a name="cd2dsizef"></a>  CD2DSizeF::CD2DSizeF
+
+Vytvoří objekt cd2dsizef – z CSize objektu.
+
+```
+CD2DSizeF(const CSize& size);
+CD2DSizeF(const D2D1_SIZE_F& size);
   CD2DSizeF(const D2D1_SIZE_F* size);
 
- 
+
 CD2DSizeF(
-    FLOAT cx = 0.,  
+    FLOAT cx = 0.,
     FLOAT cy = 0.);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Velikost*  
- velikost zdroje  
-  
- *CX*  
- Šířka zdroje  
-  
- *CY*  
- výška zdroje  
-  
-##  <a name="isnull"></a>  CD2DSizeF::IsNull  
- Vrátí logickou hodnotu, která určuje, zda výraz neobsahuje žádná platná data (Null).  
-  
-```  
-BOOL IsNull() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud šířky a výšky jsou prázdná. v opačném případě FALSE.  
-  
-##  <a name="operator_csize"></a>  CD2DSizeF::Operator CSize  
- Převede cd2dsizef – CSize objektu.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*Velikost*<br/>
+velikost zdroje
+
+*CX*<br/>
+Šířka zdroje
+
+*CY*<br/>
+výška zdroje
+
+##  <a name="isnull"></a>  CD2DSizeF::IsNull
+
+Vrátí logickou hodnotu, která určuje, zda výraz neobsahuje žádná platná data (Null).
+
+```
+BOOL IsNull() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Hodnota TRUE, pokud šířky a výšky jsou prázdná. v opačném případě FALSE.
+
+##  <a name="operator_csize"></a>  CD2DSizeF::Operator CSize
+
+Převede cd2dsizef – CSize objektu.
+
+```
 operator CSize();
-```   
-  
-### <a name="return-value"></a>Návratová hodnota  
- Aktuální hodnota velikosti D2D.  
-  
-## <a name="see-also"></a>Viz také  
- [Třídy](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Aktuální hodnota velikosti D2D.
+
+## <a name="see-also"></a>Viz také
+
+[Třídy](../../mfc/reference/mfc-classes.md)

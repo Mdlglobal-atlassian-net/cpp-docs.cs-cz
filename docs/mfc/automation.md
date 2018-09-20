@@ -1,5 +1,5 @@
 ---
-title: Automatizace | Microsoft Docs
+title: Automatizace | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,70 +30,73 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdd62c73c099cbae8a21c82cca55cb8430d7fd04
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 5e0abb9e95244b4501be96029709bc4dc412cc79
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930599"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405499"
 ---
 # <a name="automation"></a>Automatizace
-Automatizace (dříve označované jako automatizace OLE) umožňuje jednu aplikaci k manipulaci s objekty, které jsou implementovány v jiné aplikaci, nebo ke zveřejnění objekty, budou se dá upravit.  
-  
- [Automatizační server](../mfc/automation-servers.md) je aplikace (typ COM server), která zveřejňuje jeho funkce prostřednictvím rozhraní modelu COM k ostatním aplikacím volat [klienti automatizace](../mfc/automation-clients.md). Expozici umožňuje klientům automatizace automatizovat určité funkce přímo přístup k objektům a použitím služby, které poskytují.  
-  
- Automatizační servery a klienty použijte rozhraní modelu COM, které jsou vždy odvozeny od `IDispatch` a přijmout a vrátit konkrétní sadu datových typů s názvem typy Automation. Je možné automatizovat libovolný objekt, který zveřejňuje automatizace rozhraní, poskytuje metody a vlastnosti, kterým můžete přistupovat z jiných aplikací. Automatizace je k dispozici pro objekty OLE a COM. Automatizované objekt může být místní nebo vzdálené (na jiném počítači přístupné přes síť); proto existují dvě kategorie automatizace:  
-  
--   Automatizovaná (místní počítač).  
-  
--   Vzdálená automatizace (přes síť pomocí Distributed COM nebo DCOM).  
-  
- Vystavení objektů je užitečné, když aplikace poskytují funkce, které jsou užitečné k ostatním aplikacím. Například ovládacího prvku ActiveX je typ automatizační server; hostování ovládacího prvku ActiveX aplikace je klient automatizace tohoto ovládacího prvku.  
-  
- Další příklad textový editor mohou být vystaveny jeho pravopisu funkce do jiných programů. Vystavení objektů, které umožňuje dodavatelům ke zlepšení svých aplikacích pomocí připravených funkce jiných aplikací. Tímto způsobem se vztahuje automatizace některé ze zásad objektově orientované programování, jako je například – opětovné použití a zapouzdření na úrovni aplikace, sami.  
-  
- Důležitější se na technickou podporu, které Automation nabízí uživatelům a poskytovatelé řešení. Díky zpřístupnění funkcí aplikace pomocí běžných, dobře definované rozhraní, Automation umožňuje vytvořit komplexní řešení v jednom Obecné programovací jazyk, jako je například Microsoft Visual Basic, místo v různých Makro specifické pro aplikaci jazyky.  
-  
- Mnoho obchodních aplikací, jako je například aplikace Microsoft Excel a Microsoft Visual C++, umožňují automatizovat většinu jejich funkce. Například v jazyce Visual C++, může zapisovat makra jazyk VBScript k automatizaci sestavení, aspektů kód úprav a ladění úloh.  
-  
-##  <a name="_core_passing_parameters_in_automation"></a> Předávání parametrů v automatizace  
- Jeden potíže při vytváření automatizace metody pomáhá zajistit uniform "bezpečnou" mechanismus k předávání dat mezi automatizační servery a klienty. Automatizace používá **VARIANT** typ k předávání dat. **VARIANT** je typ s příznakem union. Obsahuje člena dat pro hodnotu (jedná se anonymní sjednocení C++) a data člena označující typ informací uložených v sjednocení. **VARIANT** typu podporuje několik standardní datových typů: 2 a 4 bajtů celá čísla, čísla s plovoucí desetinnou čárkou 4 a 8 bajtů, řetězce a logické hodnoty. Kromě toho podporuje **HRESULT** (OLE kódy chyb), **MĚNA** (s pevnou desetinnou čárkou číselný typ.), a **datum** (absolutní datum a čas), typy a také odkazy na `IUnknown` a `IDispatch` rozhraní.  
-  
- **VARIANT** typ je zapouzdřené v [COleVariant](../mfc/reference/colevariant-class.md) třídy. V podporu **MĚNA** a **datum** třídy jsou zapouzdřené v [COleCurrency](../mfc/reference/colecurrency-class.md) a [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) třídy.  
-  
-## <a name="automation-samples"></a>Ukázky automatizace  
-  
--   [AUTOCLIK](../visual-cpp-samples.md) tuto ukázku použít další techniky automatizace a jako základ pro učení vzdálené automatizace.  
-  
--   [Acdual –](../visual-cpp-samples.md) přidá duální rozhraní k aplikaci serveru automatizace.  
-  
--   [CALCDRIV](../visual-cpp-samples.md) řídí MFCCALC automatizace klientské aplikace.  
-  
--   [INPROC](../visual-cpp-samples.md) ukazuje aplikace server automatizace v procesu.  
-  
--   [IPDRIVE](../visual-cpp-samples.md) řídí INPROC automatizace klientské aplikace.  
-  
--   [MFCCALC](../visual-cpp-samples.md) ukazuje automatizace klientské aplikace.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
-  
--   [Klienti automatizace](../mfc/automation-clients.md)  
-  
--   [Automatizační servery](../mfc/automation-servers.md)  
-  
--   [OLE](../mfc/ole-in-mfc.md)  
-  
--   [Technologie Active](../mfc/mfc-com.md)  
-  
-## <a name="what-do-you-want-to-do"></a>Co chcete udělat  
-  
--   [Přidejte třídu automatizace](../mfc/automation-servers.md)  
-  
--   [Použití knihovny typů](../mfc/automation-clients-using-type-libraries.md)  
-   
--   [Automatizační servery přístupu](../mfc/automation-servers.md)  
-  
--   [Klienti automatizace zápis v jazyce C++](../mfc/automation-clients.md)  
-  
-## <a name="see-also"></a>Viz také  
- [MFC COM](../mfc/mfc-com.md)
+
+Automatizace (dříve označované jako automatizace OLE) umožňuje jednu aplikaci k manipulaci s objekty, které jsou implementovány v jiné aplikaci, nebo ke zveřejnění objekty, lze manipulovat.
+
+[Automatizační server](../mfc/automation-servers.md) je aplikace (typ serveru COM.), která zpřístupňuje jeho funkce přes rozhraní modelu COM k ostatním aplikacím, volá [klientům automatizace](../mfc/automation-clients.md). Možnost vidět umožňuje klientům služby Automation automatizovat přímo přístup k objektům a používání služeb, které poskytují určité funkce.
+
+Automatizační servery a klienty použijte rozhraní modelu COM, které jsou vždy odvozené z `IDispatch` a používají a vrací konkrétní sadu datových typů, které volá typy ve službě Automation. Můžete automatizovat libovolný objekt, který zpřístupňuje rozhraní automatizace, poskytuje metody a vlastnosti, ke kterým můžete přistupovat z jiných aplikací. Služba Automation je dostupná pro OLE a modelu COM objekty. Automatizované objekt může být místní nebo vzdálené (na jiný počítač přístupný přes síť). proto existují dvě kategorie služby automation:
+
+- Automatizace (místní).
+
+- Vzdálená automatizace (přes síť pomocí modelu Distributed COM a DCOM).
+
+Zveřejnění objekty je vhodné v případě aplikací poskytují funkce, které jsou užitečné k ostatním aplikacím. Například ovládací prvek ActiveX je typ serveru automatizace. Aplikace hostující ovládací prvek ActiveX je klient automatizace ovládacího prvku.
+
+Další příklad – textový procesor může zveřejnit funkčnost kontrolu pravopisu do jiných programů. Vystavení objektů umožňuje dodavatelům ke zlepšení svých aplikací s použitím předdefinované funkce jiných aplikací. Tímto způsobem automatizace platí některé zásady objektově orientovaného programování, jako je například opětovné použití a zapouzdření na úrovni aplikace sami.
+
+Důležitější je podpora, automatizace poskytuje uživatelům a poskytovatelů řešení. Zveřejněním funkčnost aplikace přes běžné, dobře definovaných rozhraní automatizace umožňuje vytvářet komplexní řešení v jediné Obecné programovací jazyk, jako je například Microsoft Visual Basic, ne v různých jazyky – makro specifické pro aplikaci.
+
+Řada obchodních aplikací, jako je například aplikace Microsoft Excel a Microsoft Visual C++, umožňují automatizovat velkou část jejich funkce. Například v jazyce Visual C++ můžete psát makra jazyka VBScript k automatizaci sestavení, aspektů kód, úpravy a ladění úloh.
+
+##  <a name="_core_passing_parameters_in_automation"></a> Předávání parametrů ve službě Automation
+
+Jeden potíže při vytváření metod automatizace pomáhá poskytovat jednotné "bezpečné" mechanismus pro předávání dat mezi automatizační servery a klienty. Použití služby Automation **VARIANT** k předání dat typu. **VARIANT** typ je označený sjednocení. Má datový člen pro hodnotu (to je anonymní sjednocení jazyka C++) a datový člen určující typ informací uložených ve sjednocení. **VARIANT** typů podporuje několik standardních datových typů: 2 a 4bajtová celá čísla, 4 a 8 bajtů s plovoucí desetinnou čárkou čísla, řetězce a logické hodnoty. Kromě toho podporuje **HRESULT** (OLE kódy chyb), **měny** (s pevnou desetinnou čárkou numerický typ), a **datum** (absolutní datum a čas), typy a také odkazy na `IUnknown` a `IDispatch` rozhraní.
+
+**VARIANT** typu, je zapouzdřena v [COleVariant](../mfc/reference/colevariant-class.md) třídy. Podpůrné **měny** a **datum** třídy jsou zapouzdřeny v [COleCurrency](../mfc/reference/colecurrency-class.md) a [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) třídy.
+
+## <a name="automation-samples"></a>Ukázky služby Automation
+
+- [AUTOCLIK](../visual-cpp-samples.md) fungování této ukázky se dozvíte postupy automatizace a jako základ pro výuku vzdálené automatizace.
+
+- [Acdual –](../visual-cpp-samples.md) přidává dvojí rozhraní do aplikaci automatizačního serveru.
+
+- [CALCDRIV](../visual-cpp-samples.md) řízení MFCCALC aplikace klienta automatizace.
+
+- [INPROC](../visual-cpp-samples.md) ukazuje aplikaci automatizačního v procesu serveru.
+
+- [IPDRIVE](../visual-cpp-samples.md) aplikace klienta automatizace řízení INPROC.
+
+- [MFCCALC](../visual-cpp-samples.md) ukazuje aplikace klienta automatizace.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+
+- [Klienti automatizace](../mfc/automation-clients.md)
+
+- [Automatizační servery](../mfc/automation-servers.md)
+
+- [OLE](../mfc/ole-in-mfc.md)
+
+- [Technologie Active](../mfc/mfc-com.md)
+
+## <a name="what-do-you-want-to-do"></a>Co chcete udělat
+
+- [Přidejte třídu služby Automation](../mfc/automation-servers.md)
+
+- [Použití knihoven typů](../mfc/automation-clients-using-type-libraries.md)
+
+- [Automatizační servery přístup](../mfc/automation-servers.md)
+
+- [Klienti automatizace napíšeme v jazyce C++](../mfc/automation-clients.md)
+
+## <a name="see-also"></a>Viz také
+
+[MFC COM](../mfc/mfc-com.md)

@@ -1,5 +1,5 @@
 ---
-title: Přístup k informacím o Run-Time třída | Microsoft Docs
+title: Přístup k informacím o Run-Time třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,50 +26,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 947102f17a5f35b7e6b5266f637375982d4cd55f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b92f634e120bf40fe2355a4c09e0e0fb68e9ec2c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334058"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407442"
 ---
 # <a name="accessing-run-time-class-information"></a>Přístup k běhovým informacím o třídě
-Tento článek vysvětluje, jak pro přístup k informacím o třídě objektu v době běhu.  
-  
+
+Tento článek vysvětluje, jak získat přístup k informacím o třídě objektu v době běhu.
+
 > [!NOTE]
->  MFC nepoužívá [informací o typu Run-Time](../cpp/run-time-type-information.md) podporu (RTTI) byla zavedená v aplikaci Visual C++ 4.0.  
-  
- Pokud mají odvozené třídě z [CObject](../mfc/reference/cobject-class.md) a použít **DECLARE**_**dynamické** a `IMPLEMENT_DYNAMIC`, `DECLARE_DYNCREATE` a `IMPLEMENT_DYNCREATE`, nebo `DECLARE_SERIAL` a `IMPLEMENT_SERIAL` makra popsané v článku [odvození třídy z objektu CObject](../mfc/deriving-a-class-from-cobject.md), `CObject` třída má schopnost určit přesnou třídu objektu v době běhu.  
-  
- Tato možnost je velmi užitečné, když je potřeba další typ kontroly argumenty funkce a když musíte napsat kód speciální na základě třídy objektu. Tento postup však se většinou nedoporučuje, protože duplikuje funkci virtuální funkce.  
-  
- `CObject` – Členská funkce `IsKindOf` lze použít k určení, pokud daný objekt patří do zadané třídy, nebo pokud je odvozený od určité třídy. Argument `IsKindOf` je `CRuntimeClass` objekt, který můžete získat pomocí `RUNTIME_CLASS` makro s názvem třídy.  
-  
-### <a name="to-use-the-runtimeclass-macro"></a>Použití makra RUNTIME_CLASS  
-  
-1.  Použití `RUNTIME_CLASS` s názvem třídy, jak je vidět tady pro třídu `CObject`:  
-  
-     [!code-cpp[NVC_MFCCObjectSample#4](../mfc/codesnippet/cpp/accessing-run-time-class-information_1.cpp)]  
-  
- Musíte se zřídka přímo přistupovat k tomuto objektu run-time třída. Více běžně používá, je předat run-time třída objekt, který má `IsKindOf` fungovat, jak je vidět v dalším postupu. `IsKindOf` Funkce testy objekt zobrazit, pokud patří do určité třídy.  
-  
-#### <a name="to-use-the-iskindof-function"></a>Použití iskindof – funkce  
-  
-1.  Ujistěte se, že má třída podporu run-time třída. To znamená, třída musí pocházet přímo nebo nepřímo ze `CObject` a použít **DECLARE**_**dynamické** a `IMPLEMENT_DYNAMIC`, `DECLARE_DYNCREATE` a `IMPLEMENT_DYNCREATE`, nebo `DECLARE_SERIAL` a `IMPLEMENT_SERIAL` makra popsané v článku [odvození třídy z objektu CObject](../mfc/deriving-a-class-from-cobject.md).  
-  
-2.  Volání `IsKindOf` – členská funkce pro objekty třídy, pomocí `RUNTIME_CLASS` makro ke generování `CRuntimeClass` argument, jak je vidět tady:  
-  
-     [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/accessing-run-time-class-information_2.h)]  
-  
-     [!code-cpp[NVC_MFCCObjectSample#5](../mfc/codesnippet/cpp/accessing-run-time-class-information_3.cpp)]  
-  
+>  Knihovny MFC nepoužívá [informace o typu za běhu](../cpp/run-time-type-information.md) zavedena v aplikaci Visual C++ 4.0 podpory (RTTI).
+
+Pokud mají odvozené třídě z [CObject](../mfc/reference/cobject-class.md) a použít **DECLARE**_**dynamické** a `IMPLEMENT_DYNAMIC`, `DECLARE_DYNCREATE` a `IMPLEMENT_DYNCREATE`, nebo `DECLARE_SERIAL` a `IMPLEMENT_SERIAL` makra je popsáno v článku [odvození třídy z objektu CObject](../mfc/deriving-a-class-from-cobject.md), `CObject` třída má schopnost určit přesné třídu objektu v době běhu.
+
+Tato možnost je nejužitečnější, když je potřeba další kontrolu argumentů funkce typu a při psaní kódu zvláštní účely na základě třídy objektu. Tento postup však není obvykle doporučeno, protože duplikuje fungování virtuálních funkcí.
+
+`CObject` Členskou funkci `IsKindOf` je možné určit, jestli konkrétní objekt náleží do dané třídy, nebo pokud je odvozena z určité třídy. Argument `IsKindOf` je `CRuntimeClass` objektu, který můžete získat pomocí `RUNTIME_CLASS` – makro s názvem třídy.
+
+### <a name="to-use-the-runtimeclass-macro"></a>Použití makra RUNTIME_CLASS
+
+1. Použití `RUNTIME_CLASS` s názvem třídy, jak je znázorněno zde pro třídu `CObject`:
+
+     [!code-cpp[NVC_MFCCObjectSample#4](../mfc/codesnippet/cpp/accessing-run-time-class-information_1.cpp)]
+
+Musíte jen zřídka přímý přístup k objektu třídy za běhu. Běžnější použití je předat objekt run-time třída `IsKindOf` fungovat, jak je znázorněno v následujícím postupu. `IsKindOf` Otestuje objekt zobrazit, jestli patří do určité třídy.
+
+#### <a name="to-use-the-iskindof-function"></a>Chcete-li použít funkci IsKindOf
+
+1. Ujistěte se, že třída má podpora run-time třída. To znamená, třída musí mít byla odvozena přímo nebo nepřímo z `CObject` a použít **DECLARE**_**dynamické** a `IMPLEMENT_DYNAMIC`, `DECLARE_DYNCREATE` a `IMPLEMENT_DYNCREATE`, nebo `DECLARE_SERIAL` a `IMPLEMENT_SERIAL` makra je popsáno v článku [odvození třídy z objektu CObject](../mfc/deriving-a-class-from-cobject.md).
+
+1. Volání `IsKindOf` členské funkce pro objekty třídy, pomocí `RUNTIME_CLASS` – makro ke generování `CRuntimeClass` argument, jak je znázorněno zde:
+
+     [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/accessing-run-time-class-information_2.h)]
+
+     [!code-cpp[NVC_MFCCObjectSample#5](../mfc/codesnippet/cpp/accessing-run-time-class-information_3.cpp)]
+
     > [!NOTE]
-    >  Vrátí IsKindOf **TRUE** Pokud se objekt členem pro zadanou třídu nebo třídy odvozené od pro zadanou třídu. `IsKindOf` nepodporuje více dědičnosti nebo virtuální základní třídy, přestože je možné použít vícenásobná dědičnost pro vaše odvozené třídy Microsoft Foundation v případě potřeby.  
-  
- Jedno použití informace run-time třída je v dynamického vytváření objektů. Tento proces je popsána v článku [dynamické vytvoření objektu](../mfc/dynamic-object-creation.md).  
-  
- Podrobnější informace o serializaci a run-time třída informace najdete v článcích [soubory v prostředí MFC](../mfc/files-in-mfc.md) a [serializace](../mfc/serialization-in-mfc.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Použití objektů CObject](../mfc/using-cobject.md)
+    >  Vrátí IsKindOf **TRUE** Pokud objekt je členem dané třídy nebo třídy odvozené z dané třídy. `IsKindOf` nepodporuje více dědičnosti nebo virtuálními základními třídami, i když používáte vícenásobné dědičnosti pro odvozených tříd Microsoft Foundation classes v případě potřeby.
+
+Jedno použití informací o třídě za běhu spočívá ve vytvoření dynamické objektů. Tento proces je popsán v článku [vytváření dynamických objektů](../mfc/dynamic-object-creation.md).
+
+Další podrobné informace o serializaci a informace o třídě za běhu, najdete v článcích [soubory v prostředí MFC](../mfc/files-in-mfc.md) a [serializace](../mfc/serialization-in-mfc.md).
+
+## <a name="see-also"></a>Viz také
+
+[Použití objektů CObject](../mfc/using-cobject.md)
 

@@ -18,36 +18,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee82433b45e89dd4f2f8039a9690d343723b96a6
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: d833d1e62cb2df94d6cad740aa6e1513d55d5ecf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686669"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431044"
 ---
 # <a name="halt"></a>__halt
-**Specifické pro Microsoft**  
-  
- Mikroprocesoru zastaví, dokud nenastane povoleno přerušení, nemaskovatelné přerušení (NMI) nebo obnovení.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void __halt( void );  
-```  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Vnitřní|Architektura|  
-|---------------|------------------|  
-|`__halt`|x86, x64|  
-  
- **Soubor hlaviček** \<intrin.h >  
-  
-## <a name="remarks"></a>Poznámky  
- `__halt` Funkce je ekvivalentní volání `HLT` strojové instrukce a je k dispozici pouze v režimu jádra. Další informace vyhledejte dokument, "ruční architektury Intel softwarový vývojář, svazek 2: odkaz na sadu instrukcí," na [společnosti Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) lokality.  
-  
-**Specifické pro END Microsoft**  
-  
-## <a name="see-also"></a>Viz také  
- [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)
+
+**Specifické pro Microsoft**
+
+Mikroprocesoru zastaví, dokud nenastane povoleno přerušení, nemaskovatelné přerušení (NMI) nebo obnovení.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+void __halt( void );
+```
+
+## <a name="requirements"></a>Požadavky
+
+|Vnitřní|Architektura|
+|---------------|------------------|
+|`__halt`|x86, x64|
+
+**Soubor hlaviček** \<intrin.h >
+
+## <a name="remarks"></a>Poznámky
+
+`__halt` Funkce je ekvivalentní volání `HLT` strojové instrukce a je k dispozici pouze v režimu jádra. Další informace vyhledejte dokument, "ruční architektury Intel softwarový vývojář, svazek 2: odkaz na sadu instrukcí," na [společnosti Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) lokality.
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také
+
+[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)

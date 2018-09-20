@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27e3ad32500d1b0ff0efa2dab40888f163744bb1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 63bda924a91bb1f86494d844af037386d6e30292
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318704"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406344"
 ---
 # <a name="using-the-richedit-10-control-with-mfc"></a>Použití ovládacího prvku RichEdit 1.0 s MFC
 
@@ -35,5 +35,5 @@ MFC
 
 ## <a name="see-also"></a>Viz také
 
-[Řešení potíží s editorem dialogového okna](../windows/troubleshooting-the-dialog-editor.md)  
+[Řešení potíží s editorem dialogového okna](../windows/troubleshooting-the-dialog-editor.md)<br/>
 [Editor dialogových oken](../windows/dialog-editor.md)

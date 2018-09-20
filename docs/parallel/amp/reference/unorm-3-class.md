@@ -82,222 +82,217 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e10653eb4eb6ebb57215baceb1e3b67d7e1f8cf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9bb22f2f627f66012b1ca435d0989cb031605dd1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46042517"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407605"
 ---
 # <a name="unorm3-class"></a>unorm_3 – třída
-Představuje krátký vektor tří normálních čísel bez znaménka.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class unorm_3;  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-typedefs"></a>Veřejné definice TypeDef  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|`value_type`||  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[unorm_3 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|unorm_3::get_x||  
-|unorm_3::get_xy||  
-|unorm_3::get_xyz||  
-|unorm_3::get_xz||  
-|unorm_3::get_xzy||  
-|unorm_3::get_y||  
-|unorm_3::get_yx||  
-|unorm_3::get_yxz||  
-|unorm_3::get_yz||  
-|unorm_3::get_yzx||  
-|unorm_3::get_z||  
-|unorm_3::get_zx||  
-|unorm_3::get_zxy||  
-|unorm_3::get_zy||  
-|unorm_3::get_zyx||  
-|Unorm_3::ref_b||  
-|Unorm_3::ref_g||  
-|Unorm_3::ref_r||  
-|Unorm_3::ref_x||  
-|Unorm_3::ref_y||  
-|Unorm_3::ref_z||  
-|unorm_3::set_x||  
-|unorm_3::set_xy||  
-|unorm_3::set_xyz||  
-|unorm_3::set_xz||  
-|unorm_3::set_xzy||  
-|unorm_3::set_y||  
-|unorm_3::set_yx||  
-|unorm_3::set_yxz||  
-|unorm_3::set_yz||  
-|unorm_3::set_yzx||  
-|unorm_3::set_z||  
-|unorm_3::set_zx||  
-|unorm_3::set_zxy||  
-|unorm_3::set_zy||  
-|unorm_3::set_zyx||  
-  
-### <a name="public-operators"></a>Veřejné operátory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|unorm_3::operator--||  
-|unorm_3::operator*=||  
-|unorm_3::Operator / =||  
-|unorm_3::Operator ++||  
-|unorm_3::operator+=||  
-|unorm_3::Operator =||  
-|unorm_3::operator-=||  
-  
-### <a name="public-constants"></a>Veřejné konstanty  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[velikost – konstanta](#unorm_3__size)||  
-  
-### <a name="public-data-members"></a>Veřejné datové členy  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|unorm_3::b||  
-|unorm_3::BG||  
-|unorm_3::BGR||  
-|unorm_3::br||  
-|unorm_3::brg||  
-|unorm_3::g||  
-|unorm_3::GB||  
-|unorm_3::GBR||  
-|unorm_3::GR||  
-|unorm_3::grb||  
-|unorm_3::r||  
-|unorm_3::rb||  
-|unorm_3::rbg||  
-|unorm_3::rg||  
-|unorm_3::RGB||  
-|unorm_3::x||  
-|unorm_3::XY||  
-|unorm_3::xyz||  
-|unorm_3::xz||  
-|unorm_3::xzy||  
-|unorm_3::y||  
-|unorm_3::yx||  
-|unorm_3::yxz||  
-|unorm_3::YZ||  
-|unorm_3::yzx||  
-|unorm_3::z||  
-|unorm_3::zx||  
-|unorm_3::zxy||  
-|unorm_3::Zy||  
-|unorm_3::Zyx||  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `unorm_3`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** amp_short_vectors.h  
-  
- **Namespace:** Concurrency::graphics  
-  
-##  <a name="ctor"></a> unorm_3 – 
 
- Výchozí konstruktor, inicializuje všechny prvky na 0.  
-  
-```  
+Představuje krátký vektor tří normálních čísel bez znaménka.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class unorm_3;
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-typedefs"></a>Veřejné definice TypeDef
+
+|Název|Popis|
+|----------|-----------------|
+|`value_type`||
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[unorm_3 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|unorm_3::get_x||
+|unorm_3::get_xy||
+|unorm_3::get_xyz||
+|unorm_3::get_xz||
+|unorm_3::get_xzy||
+|unorm_3::get_y||
+|unorm_3::get_yx||
+|unorm_3::get_yxz||
+|unorm_3::get_yz||
+|unorm_3::get_yzx||
+|unorm_3::get_z||
+|unorm_3::get_zx||
+|unorm_3::get_zxy||
+|unorm_3::get_zy||
+|unorm_3::get_zyx||
+|Unorm_3::ref_b||
+|Unorm_3::ref_g||
+|Unorm_3::ref_r||
+|Unorm_3::ref_x||
+|Unorm_3::ref_y||
+|Unorm_3::ref_z||
+|unorm_3::set_x||
+|unorm_3::set_xy||
+|unorm_3::set_xyz||
+|unorm_3::set_xz||
+|unorm_3::set_xzy||
+|unorm_3::set_y||
+|unorm_3::set_yx||
+|unorm_3::set_yxz||
+|unorm_3::set_yz||
+|unorm_3::set_yzx||
+|unorm_3::set_z||
+|unorm_3::set_zx||
+|unorm_3::set_zxy||
+|unorm_3::set_zy||
+|unorm_3::set_zyx||
+
+### <a name="public-operators"></a>Veřejné operátory
+
+|Název|Popis|
+|----------|-----------------|
+|unorm_3::operator--||
+|unorm_3::operator*=||
+|unorm_3::Operator / =||
+|unorm_3::Operator ++||
+|unorm_3::operator+=||
+|unorm_3::Operator =||
+|unorm_3::operator-=||
+
+### <a name="public-constants"></a>Veřejné konstanty
+
+|Název|Popis|
+|----------|-----------------|
+|[velikost – konstanta](#unorm_3__size)||
+
+### <a name="public-data-members"></a>Veřejné datové členy
+
+|Název|Popis|
+|----------|-----------------|
+|unorm_3::b||
+|unorm_3::BG||
+|unorm_3::BGR||
+|unorm_3::br||
+|unorm_3::brg||
+|unorm_3::g||
+|unorm_3::GB||
+|unorm_3::GBR||
+|unorm_3::GR||
+|unorm_3::grb||
+|unorm_3::r||
+|unorm_3::rb||
+|unorm_3::rbg||
+|unorm_3::rg||
+|unorm_3::RGB||
+|unorm_3::x||
+|unorm_3::XY||
+|unorm_3::xyz||
+|unorm_3::xz||
+|unorm_3::xzy||
+|unorm_3::y||
+|unorm_3::yx||
+|unorm_3::yxz||
+|unorm_3::YZ||
+|unorm_3::yzx||
+|unorm_3::z||
+|unorm_3::zx||
+|unorm_3::zxy||
+|unorm_3::Zy||
+|unorm_3::Zyx||
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`unorm_3`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** amp_short_vectors.h
+
+**Namespace:** Concurrency::graphics
+
+##  <a name="ctor"></a> unorm_3 –
+
+Výchozí konstruktor, inicializuje všechny prvky na 0.
+
+```
 unorm_3() restrict(amp,
     cpu);
 
- 
 unorm_3(
-    unorm _V0,  
-    unorm _V1,  
+    unorm _V0,
+    unorm _V1,
     unorm _V2) restrict(amp,
     cpu);
 
- 
 unorm_3(
-    float _V0,  
-    float _V1,  
+    float _V0,
+    float _V1,
     float _V2) restrict(amp,
     cpu);
 
- 
 unorm_3(
     unorm _V) restrict(amp,
     cpu);
 
- 
 explicit unorm_3(
     float _V) restrict(amp,
     cpu);
 
- 
 unorm_3(
     const unorm_3& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline unorm_3(
     const uint_3& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline unorm_3(
     const int_3& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline unorm_3(
     const float_3& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline unorm_3(
     const norm_3& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline unorm_3(
     const double_3& _Other) restrict(amp,
     cpu);
-```  
-  
-### <a name="parameters"></a>Parametry  
-*_V0*<br/>
-Hodnota inicializace prvek 0.  
-  
-*_V1*<br/>
-Hodnota inicializace element 1.  
-  
-*_V2*<br/>
-Hodnota inicializace elementu 2.  
-  
-*_V*<br/>
-Hodnota inicializace.  
-  
-*Ji_né*<br/>
-Objekt použitý k inicializaci.  
-  
-##  <a name="unorm_3__size"></a> Velikost 
+```
 
-```  
-static const int size = 3;  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)
+### <a name="parameters"></a>Parametry
+
+*_V0*<br/>
+Hodnota inicializace prvek 0.
+
+*_V1*<br/>
+Hodnota inicializace element 1.
+
+*_V2*<br/>
+Hodnota inicializace elementu 2.
+
+*_V*<br/>
+Hodnota inicializace.
+
+*Ji_né*<br/>
+Objekt použitý k inicializaci.
+
+##  <a name="unorm_3__size"></a> Velikost
+
+```
+static const int size = 3;
+```
+
+## <a name="see-also"></a>Viz také
+
+[Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

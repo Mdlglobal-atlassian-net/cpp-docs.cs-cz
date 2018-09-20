@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdcd101759b35490451bf46bd6e222db469a3fba
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 26282ef73f6a979cd564bd7597f8418c6535179a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42581239"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390512"
 ---
 # <a name="win32-application-wizard"></a>Win32 – průvodce aplikací
 
@@ -62,5 +62,5 @@ Můžete zobrazit soubory Průvodce vytvoří pro váš projekt v **Průzkumník
 
 ## <a name="see-also"></a>Viz také
 
-[Vytvoření prázdné desktopové aplikace Windows](../windows/creating-an-empty-windows-desktop-application.md)  
+[Vytvoření prázdné desktopové aplikace Windows](../windows/creating-an-empty-windows-desktop-application.md)<br/>
 [Typy projektů Visual C++](../ide/visual-cpp-project-types.md)

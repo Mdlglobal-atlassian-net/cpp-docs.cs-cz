@@ -1,5 +1,5 @@
 ---
-title: Manipulace s ovládacím prvkem popis tlačítka | Microsoft Docs
+title: Manipulace s ovládacím prvkem popis tlačítka nástroje | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,35 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91e2e247acb85188c1280713e9e5ad8ef8f19448
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 336ba8466e1d1eefbd07d35c4856b273faea7537
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929825"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377367"
 ---
 # <a name="manipulating-the-tool-tip-control"></a>Manipulace s ovládacím prvkem popis tlačítka
-Třída `CToolTipCtrl` poskytuje funkce, které řídí různé atributy skupinu člena `CToolTipCtrl` objekt a tip okno nástroje.  
-  
- Počáteční, automaticky otevírané okno a reshow doby trvání pro tip okna nástrojů můžete nastavit a načíst pomocí volání [GetDelayTime](../mfc/reference/ctooltipctrl-class.md#getdelaytime) a [SetDelayTime](../mfc/reference/ctooltipctrl-class.md#setdelaytime).  
-  
- Změna vzhledu windows tip nástroj s následující funkce:  
-  
--   [GetMargin](../mfc/reference/ctooltipctrl-class.md#getmargin) a [SetMargin](../mfc/reference/ctooltipctrl-class.md#setmargin) načítá a nastaví šířku ohraničení tip nástroj až nástroj tip text.  
-  
--   [GetMaxTipWidth](../mfc/reference/ctooltipctrl-class.md#getmaxtipwidth) a [SetMaxTipWidth](../mfc/reference/ctooltipctrl-class.md#setmaxtipwidth) načítá a nastaví maximální šířku nástroj tip okno.  
-  
--   [GetTipBkColor](../mfc/reference/ctooltipctrl-class.md#gettipbkcolor) a [SetTipBkColor](../mfc/reference/ctooltipctrl-class.md#settipbkcolor) načítá a nastaví barvu pozadí nástroje tip okno.  
-  
--   [GetTipTextColor](../mfc/reference/ctooltipctrl-class.md#gettiptextcolor) a [SetTipTextColor](../mfc/reference/ctooltipctrl-class.md#settiptextcolor) načítá a nastaví barvu textu nástroje tip okno.  
-  
- Aby ovládacím prvkem popis tlačítka upozornit důležité zprávy, jako je například WM_LBUTTONXXX zprávy musí předávání zpráv do vašeho prvkem popis tlačítka. Nejlepší metody pro tento předávání se provést volání [CToolTipCtrl::RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent)v `PreTranslateMessage` funkce okna vlastníka. Následující příklad ilustruje jeden možný způsob (za předpokladu, že ovládacím prvkem popis tlačítka se nazývá `m_ToolTip`):  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#41](../mfc/codesnippet/cpp/manipulating-the-tool-tip-control_1.cpp)]  
-  
- Okamžitě odstranit okno nástroj tip, volání [Pop](../mfc/reference/ctooltipctrl-class.md#pop) – členská funkce.  
-  
-## <a name="see-also"></a>Viz také  
- [Použití objektu CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Třída `CToolTipCtrl` poskytuje skupinu členské funkce, které řídí různé atributy `CToolTipCtrl` objektu a tip panel nástrojů.
+
+Počáteční, automaticky otevíraném okně a reshow doby trvání pro tip okna nástrojů můžete nastavit a načíst pomocí volání [GetDelayTime](../mfc/reference/ctooltipctrl-class.md#getdelaytime) a [SetDelayTime](../mfc/reference/ctooltipctrl-class.md#setdelaytime).
+
+Změna vzhledu windows tip nástroj s následující funkce:
+
+- [GetMargin](../mfc/reference/ctooltipctrl-class.md#getmargin) a [SetMargin](../mfc/reference/ctooltipctrl-class.md#setmargin) získá a nastaví text tipu šířku mezi ohraničením nástroj tip a nástroj.
+
+- [GetMaxTipWidth](../mfc/reference/ctooltipctrl-class.md#getmaxtipwidth) a [SetMaxTipWidth](../mfc/reference/ctooltipctrl-class.md#setmaxtipwidth) získá a nastaví maximální šířku nástroj tip okna.
+
+- [GetTipBkColor](../mfc/reference/ctooltipctrl-class.md#gettipbkcolor) a [SetTipBkColor](../mfc/reference/ctooltipctrl-class.md#settipbkcolor) získá a nastaví barvu pozadí nástroje tip okna.
+
+- [GetTipTextColor](../mfc/reference/ctooltipctrl-class.md#gettiptextcolor) a [SetTipTextColor](../mfc/reference/ctooltipctrl-class.md#settiptextcolor) získá a nastaví barvu textu nástroje tip okna.
+
+Aby ovládacím prvkem popis tlačítka nástroj upozornit důležité zprávy, jako je například WM_LBUTTONXXX zprávy musí zpráv přenosu do vaší ovládacím prvkem popis tlačítka nástroj. Nejlepší metody pro toto propojení je, aby volání [CToolTipCtrl::RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent)v `PreTranslateMessage` funkce nadřazenému oknu. Následující příklad ukazuje jednu metodu je to možné (za předpokladu, že ovládacím prvkem popis tlačítka nástroj se nazývá `m_ToolTip`):
+
+[!code-cpp[NVC_MFCControlLadenDialog#41](../mfc/codesnippet/cpp/manipulating-the-tool-tip-control_1.cpp)]
+
+Pokud chcete okamžitě odstranit popis tlačítka panelu nástrojů, zavolejte [vyvolat přes Pop](../mfc/reference/ctooltipctrl-class.md#pop) členskou funkci.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CToolTipCtrl](../mfc/using-ctooltipctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

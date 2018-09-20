@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 715ed5bf12c424c49e96012c5391dfe334e44db4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3e2975e200a65ccaf57dab3170bb1854ccb4e53b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705884"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387445"
 ---
 # <a name="custom-color-selector-dialog-box-c-image-editor-for-icons"></a>Dialogové okno Výběr vlastních barev (Editor obrázků pro ikony) (C++)
 
@@ -71,6 +71,6 @@ Toto dialogové okno umožňuje přizpůsobit barvy, které používáte pro va�
 
 ## <a name="see-also"></a>Viz také
 
-[Nabídka obrázku](../windows/image-menu-image-editor-for-icons.md)  
-[Přizpůsobení nebo změna barev](../windows/customizing-or-changing-colors-image-editor-for-icons.md)  
+[Nabídka obrázku](../windows/image-menu-image-editor-for-icons.md)<br/>
+[Přizpůsobení nebo změna barev](../windows/customizing-or-changing-colors-image-editor-for-icons.md)<br/>
 [Okno barvy](../windows/colors-window-image-editor-for-icons.md)

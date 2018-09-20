@@ -1,5 +1,5 @@
 ---
-title: Příklady nasazení | Microsoft Docs
+title: Příklady nasazení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 436b289c14110dd8f616112a309e757618b6f954
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: eebcb272a07b225aaa249e986f8fac69d0c7edf8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327408"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405525"
 ---
 # <a name="deployment-examples"></a>Příklady nasazení
-Tato část obsahuje příklady, který ukazuje, jak nasadit aplikace Visual C++.  
-  
-## <a name="examples"></a>Příklady  
- [Návod: Nasazení aplikace Visual C++ pomocí projektu instalace](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)  
-  
- [Návod: Nasazení aplikace Visual C++ do místní složky aplikace](../ide/walkthrough-deploying-a-visual-cpp-application-to-an-application-local-folder.md)  
-  
- [Návod: Nasazení aplikace Visual C++ s použitím redistribuovatelného balíčku Visual C++](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)  
-  
- [Příprava testovacího počítače ke spuštění ladicího spustitelného souboru](../ide/preparing-a-test-machine-to-run-a-debug-executable.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Návod: Ruční nasazení aplikace ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)   
- [Nasazení aplikací klasické pracovní plochy](../ide/deploying-native-desktop-applications-visual-cpp.md)
+
+Tato část obsahuje příklady představením toho, jak nasadit aplikace Visual C++.
+
+## <a name="examples"></a>Příklady
+
+[Návod: Nasazení aplikace Visual C++ pomocí projektu instalace](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)
+
+[Návod: Nasazení aplikace Visual C++ do místní složky aplikace](../ide/walkthrough-deploying-a-visual-cpp-application-to-an-application-local-folder.md)
+
+[Návod: Nasazení aplikace Visual C++ s použitím redistribuovatelného balíčku Visual C++](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)
+
+[Příprava testovacího počítače ke spuštění ladicího spustitelného souboru](../ide/preparing-a-test-machine-to-run-a-debug-executable.md)
+
+## <a name="see-also"></a>Viz také
+
+[Návod: Ruční nasazení aplikace ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)<br>
+[Nasazení aplikací klasické pracovní plochy](../ide/deploying-native-desktop-applications-visual-cpp.md)

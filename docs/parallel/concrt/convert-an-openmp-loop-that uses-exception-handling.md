@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: převedení smyčky OpenMP využívající zpracování výjimek na využití modulu Concurrency Runtime | Microsoft Docs'
+title: 'Postupy: převedení smyčky OpenMP využívající zpracování výjimek na využití modulu Concurrency Runtime | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,61 +15,62 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b96273589fb4e7d7e73e7bc72da03a92d5587de8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a5df38ada13e06f773a19436e80112946cc96157
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687800"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387325"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-exception-handling-to-use-the-concurrency-runtime"></a>Postupy: Převedení smyčky OpenMP využívající zpracování výjimek na využití modulu Concurrency Runtime
-Tento příklad ukazuje, jak převést OpenMP [paralelní](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[pro](../../parallel/openmp/reference/for-openmp.md) smyčky, který provádí zpracování výjimek používat zpracování mechanismus výjimek Concurrency Runtime.  
-  
- V OpenMP musí být zachycena výjimka, která je vyvolána v paralelní oblasti a zpracovány ve stejné oblasti, ve stejném vlákně, v. Výjimka, která řídicí sekvence paralelní oblast je zachytila obslužná rutina neošetřených výjimek, která ukončí proces ve výchozím nastavení.  
-  
 
- V Concurrency Runtime, když je vyvolána výjimka v těle pracovní funkce, kterou předáte pro skupinu úloh, jako [concurrency::task_group](reference/task-group-class.md) nebo [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) objekt, nebo paralelní algoritmus jako [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for), modul runtime ukládá této výjimky a zařazuje do kontextu, která čeká na skupinu úloh nebo algoritmus ukončíte. Pro skupiny úloh čekací kontext je kontext, který volá [concurrency::task_group::wait](reference/task-group-class.md#wait), [concurrency::structured_task_group::wait](reference/structured-task-group-class.md#wait), [concurrency::task_group::run_and _wait](reference/task-group-class.md#run_and_wait), nebo [concurrency::structured_task_group::run_and_wait](reference/structured-task-group-class.md#run_and_wait). Čekání na kontext pro paralelní algoritmus, není kontext, který volá tento algoritmus. Modul runtime také zastaví všechny aktivní úlohy, které jsou ve skupině úloh, včetně programů v podřízené skupiny úloh, a zahodí se všechny úlohy, které nebyly ještě nezačala.  
+Tento příklad ukazuje, jak převést OpenMP [paralelní](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[pro](../../parallel/openmp/reference/for-openmp.md) smyčku, která provádí zpracování výjimek použít mechanismus zpracování výjimek Concurrency Runtime.
 
+V OpenMP musí být výjimku, která je vyvolána v paralelní oblasti odchycena a zpracována stejným vlákna ve stejné oblasti. Obslužná rutina neošetřené výjimky, která ukončí proces ve výchozím nastavení je zachytil výjimku, aby řídící paralelní oblasti.
 
-  
-## <a name="example"></a>Příklad  
- Tento příklad ukazuje, jak zpracování výjimek v OpenMP `parallel` oblasti a v volání `parallel_for`. `do_work` Funkce provede požadavek na přidělení paměti, neproběhne úspěšně a proto vyvolá výjimku typu [std::bad_alloc](../../standard-library/bad-alloc-class.md). Ve verzi, která používá OpenMP vláken, která vyvolala výjimku musí také catch ho. Jinými slovy musí každé iteraci smyčky parallel OpenMP ošetření výjimky. Ve verzi, která používá Concurrency Runtime hlavní vlákno zachytí výjimku, která je vyvolána jiné vlákno.  
-  
- [!code-cpp[concrt-openmp#3](../../parallel/concrt/codesnippet/cpp/convert-an-openmp-loop-that uses-exception-handling_1.cpp)]  
-  
- Tento příklad vytvoří následující výstup.  
-  
-```Output  
-Using OpenMP...  
-An error of type 'class std::bad_alloc' occurred.  
-An error of type 'class std::bad_alloc' occurred.  
-An error of type 'class std::bad_alloc' occurred.  
-An error of type 'class std::bad_alloc' occurred.  
-An error of type 'class std::bad_alloc' occurred.  
-An error of type 'class std::bad_alloc' occurred.  
-An error of type 'class std::bad_alloc' occurred.  
-An error of type 'class std::bad_alloc' occurred.  
-An error of type 'class std::bad_alloc' occurred.  
-An error of type 'class std::bad_alloc' occurred.  
-Using the Concurrency Runtime...  
-An error of type 'class std::bad_alloc' occurred.  
-```  
-  
- Ve verzi tohoto příkladu, který používá OpenMP výjimka v dojde a jsou zpracována každé iteraci smyčky. Ve verzi, která používá Concurrency Runtime, modul runtime ukládá výjimku, zastaví všechny aktivní úlohy, zahodí se všechny úlohy, které dosud nebyly spuštění a zařazuje výjimka, která má kontext, který volá `parallel_for`.  
-  
- Pokud budete potřebovat, že verze, která používá OpenMP ukončí po výskytu výjimky, můžete použít logický příznak do další iterace smyčky signál, že došlo k chybě. Jako v příkladu v tomto tématu [postupy: převedení smyčky OpenMP této používá zrušení na využití modulu Concurrency Runtime](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md), následující smyčce opakování se nic nestane. Pokud je nastavený příznak. Naopak pokud požadujete, aby smyčky, který používá Concurrency Runtime pokračuje po výskytu výjimky, ošetření výjimky v těle paralelní smyčky, sám sebe.  
-  
- Ostatní součásti Concurrency Runtime, jako je například asynchronních agentů a prosté úlohy, není přenosu výjimky. Místo toho neošetřené výjimky jsou zachyceny pomocí obslužná rutina neošetřených výjimek, která ukončí proces ve výchozím nastavení. Další informace o zpracování výjimek najdete v tématu [zpracování výjimek](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).  
-  
- Další informace o `parallel_for` a dalších paralelní algoritmy najdete v tématu [paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md).  
-  
-## <a name="compiling-the-code"></a>Probíhá kompilace kódu  
- Příklad kódu zkopírujte a vložte ji do projektu sady Visual Studio nebo ho vložte v souboru, který je pojmenován `concrt-omp-exceptions.cpp` a poté spusťte následující příkaz v okně příkazového řádku Visual Studia.  
-  
- **cl.exe /EHsc/OpenMP concrt-omp – exceptions.cpp**  
-  
-## <a name="see-also"></a>Viz také  
- [Migrace z OpenMP do Concurrency Runtime](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)   
- [Zpracování výjimek](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)   
- [Paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md)
+V modulu Runtime souběžnosti, při vyvolání výjimky v těle funkce práce, která předáte do skupiny úloh, jako například [concurrency::task_group](reference/task-group-class.md) nebo [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) objektu, nebo paralelního algoritmu, jako [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for), modul runtime ukládá tuto výjimku a zařadí do kontextu, který se čeká na skupinu úloh nebo algoritmus, který se dokončit. Pro skupiny úloh, je kontext čekání kontext, který volá [Concurrency::task_group:: wait](reference/task-group-class.md#wait), [Concurrency::structured_task_group:: wait](reference/structured-task-group-class.md#wait), [concurrency::task_group::run_and _wait](reference/task-group-class.md#run_and_wait), nebo [Concurrency::structured_task_group:: run_and_wait](reference/structured-task-group-class.md#run_and_wait). Pro paralelní algoritmus je čekání kontextu kontextu, který volá tento algoritmus. Modul runtime také zastaví všechny aktivní úkoly, které jsou ve skupině úloh, včetně těch v podřízených skupinách úloh, a zahodí všechny úkoly, které ještě nebyly spuštěny.
+
+## <a name="example"></a>Příklad
+
+Tento příklad ukazuje způsob zpracování výjimek v OpenMP `parallel` oblasti a při volání k `parallel_for`. `do_work` Funkce provádí požadavek na přidělení paměti, který selže a proto vyvolá výjimku typu [std::bad_alloc](../../standard-library/bad-alloc-class.md). Ve verzi, která používá OpenMP vlákna, které vyvolá výjimku musí také zachytit. Jednotlivých iteracích paralelní smyčky OpenMP – jinými slovy, musí umět zpracovat výjimku. Hlavní vlákno ve verzi, která používá modulu Runtime souběžnosti, zachytí výjimku, která je vyvolána jiným vláknem.
+
+[!code-cpp[concrt-openmp#3](../../parallel/concrt/codesnippet/cpp/convert-an-openmp-loop-that uses-exception-handling_1.cpp)]
+
+Tento příklad vytvoří následující výstup.
+
+```Output
+Using OpenMP...
+An error of type 'class std::bad_alloc' occurred.
+An error of type 'class std::bad_alloc' occurred.
+An error of type 'class std::bad_alloc' occurred.
+An error of type 'class std::bad_alloc' occurred.
+An error of type 'class std::bad_alloc' occurred.
+An error of type 'class std::bad_alloc' occurred.
+An error of type 'class std::bad_alloc' occurred.
+An error of type 'class std::bad_alloc' occurred.
+An error of type 'class std::bad_alloc' occurred.
+An error of type 'class std::bad_alloc' occurred.
+Using the Concurrency Runtime...
+An error of type 'class std::bad_alloc' occurred.
+```
+
+Ve verzi tohoto příkladu, který používá OpenMP výjimky probíhá a je zpracována každé iteraci smyčky. Ve verzi, která používá modulu Runtime souběžnosti, modul runtime ukládá výjimku, ukončí všechny aktivní úkoly, zahodí všechny úkoly, které dosud nebyly spuštěna a zařadí výjimka, která má kontext, který volá `parallel_for`.
+
+Pokud požadujete, verzi, která používá OpenMP ukončí, když dojde k výjimce, můžete použít příznak logické hodnoty na signál pro dalších iterací smyčky, že došlo k chybě. Stejně jako v příkladu v tomto tématu [postupy: převedení smyčky OpenMP této používá zrušení na využití modulu Concurrency Runtime](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md), následné průchod cyklem by neprovedení, pokud je nastavený příznak. Naopak pokud požadujete, smyčky, která používá modul Concurrency Runtime bude pokračovat po vyvolá výjimku, zpracujte výjimku v těle paralelní smyčky, samotného.
+
+Další součásti modulu Runtime souběžnosti, jako je například asynchronních agentů a jednoduché úlohy, není přenášet výjimky. Místo toho neošetřené výjimky jsou zachyceny obslužnou rutinu neošetřených výjimek, které ukončí proces ve výchozím nastavení. Další informace o zpracování výjimek naleznete v tématu [zpracování výjimek](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
+
+Další informace o `parallel_for` a jiné paralelní algoritmy, naleznete v tématu [paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md).
+
+## <a name="compiling-the-code"></a>Probíhá kompilace kódu
+
+Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `concrt-omp-exceptions.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
+
+**cl.exe/EHsc/OpenMP concrt-omp – exceptions.cpp**
+
+## <a name="see-also"></a>Viz také
+
+[Migrace z OpenMP do Concurrency Runtime](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
+[Zpracování výjimek](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
+[Paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md)
 

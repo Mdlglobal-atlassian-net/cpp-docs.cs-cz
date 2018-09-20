@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5644f99e15685f8f1784cc40886709b05a9a06bd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d9c2efecf34e5d58f633bc21e62801157b1b8955
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221281"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388586"
 ---
 # <a name="helpcontext"></a>helpcontext
 
@@ -38,7 +38,7 @@ Určuje ID kontextu, který umožňuje uživateli zobrazit informace o tomto ele
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 ID kontextu téma nápovědy. Zobrazit [HTML Help: Context-Sensitive Help for Your Programs](../mfc/html-help-context-sensitive-help-for-your-programs.md) Další informace o kontextu ID.
 
 ## <a name="remarks"></a>Poznámky
@@ -64,10 +64,10 @@ Další informace najdete v tématu [kontexty atributů](../windows/attribute-co
 
 ## <a name="see-also"></a>Viz také
 
-[IDL – atributy](../windows/idl-attributes.md)  
-[Atributy rozhraní](../windows/interface-attributes.md)  
-[Atributy třídy](../windows/class-attributes.md)  
-[Atributy metody](../windows/method-attributes.md)  
-[Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[helpfile](../windows/helpfile.md)  
+[IDL – atributy](../windows/idl-attributes.md)<br/>
+[Atributy rozhraní](../windows/interface-attributes.md)<br/>
+[Atributy třídy](../windows/class-attributes.md)<br/>
+[Atributy metody](../windows/method-attributes.md)<br/>
+[Atributy klíčových slov typedef, enum, union a struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[helpfile](../windows/helpfile.md)<br/>
 [helpstring](../windows/helpstring.md)  

@@ -1,5 +1,5 @@
 ---
-title: 2.7.2.7 copyin | Microsoft Docs
+title: 2.7.2.7 copyin | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ee711bfb24e7a2a1cbada1a7e01a243e204f4a8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 94b4c529b7ad6fd717be1e1dee0edd3ff9ac3ff5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689373"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426884"
 ---
 # <a name="2727-copyin"></a>2.7.2.7 copyin
-**Copyin** klauzule poskytuje mechanismus pro přiřadit stejnou hodnotu do **threadprivate** proměnných pro každé vlákno v týmu provádění paralelní oblast. Pro každou proměnnou, zadaný v **copyin** zkopírovali klauzule, hodnota proměnné v hlavní vlákno týmu, jako kdyby podle přiřazení, zkopíruje privátní přístup z více vláken na začátku paralelní oblast. Syntaxe **copyin** klauzule vypadá takto:  
-  
-```  
-  
-copyin(  
-variable-list  
-)  
-  
-```  
-  
- Omezení, které mají **copyin** klauzule jsou následující:  
-  
--   Proměnné, která je zadána v **copyin** klauzule musí mít operátor přiřazení přístupný, jednoznačným kopírování.  
-  
--   Proměnné, která je zadána v **copyin** musí být klauzule **threadprivate** proměnné.
+
+**Copyin** klauzule poskytuje mechanismus pro stejnou hodnotu přiřadit **threadprivate** proměnné pro každé vlákno v týmu provádí paralelní oblasti. Pro každou proměnnou podle **copyin** klauzule, hodnotu proměnné v hlavním vlákně tým zkopírován jako při přiřazení kopie privátní vlákno na začátku paralelní oblasti. Syntaxe **copyin** klauzule vypadá takto:
+
+```
+
+copyin(
+variable-list
+)
+
+```
+
+Omezení týkající **copyin** klauzule jsou následující:
+
+- Proměnná, která je zadána v **copyin** klauzule musí mít operátor přiřazení kopie přístupná a jednoznačná.
+
+- Proměnná, která je zadána v **copyin** klauzule musí být **threadprivate** proměnné.

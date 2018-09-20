@@ -1,5 +1,5 @@
 ---
-title: auto_partitioner – třída | Microsoft Docs
+title: auto_partitioner – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,54 +18,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05232aa954a9ded7d2ab3a26ae4e1524610c3d04
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a2bb62d76733e77c2528a80dfc4e9ef358878895
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705442"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425398"
 ---
 # <a name="autopartitioner-class"></a>auto_partitioner – třída
-`auto_partitioner` Třída reprezentuje výchozí metoda `parallel_for`, `parallel_for_each` a `parallel_transform` použít při vytváření oddílů se iteruje nad rozsahu. Tato metoda oddíly employes rozsahu krádež pro vyrovnávání zatížení a také za iteraci zrušení.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+`auto_partitioner` Třída představuje výchozí metodu `parallel_for`, `parallel_for_each` a `parallel_transform` použít při vytváření oddílů rozsah se Iteruje přes. Tato metoda dělení employes rozsahu zcizování pro vyrovnávání zatížení také na iterovat zrušení.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 class auto_partitioner;
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[auto_partitioner](#ctor)|Vytvoří `auto_partitioner` objektu.|  
-|[~auto_partitioner Destructor](#dtor)|Zničí `auto_partitioner` objektu.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `auto_partitioner`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** ppl.h  
-  
- **Namespace:** souběžnosti  
-  
-##  <a name="dtor"></a> ~ auto_partitioner 
+```
 
- Zničí `auto_partitioner` objektu.  
-  
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[auto_partitioner](#ctor)|Vytvoří `auto_partitioner` objektu.|
+|[~auto_partitioner Destructor](#dtor)|Odstraní `auto_partitioner` objektu.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`auto_partitioner`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** ppl.h
+
+**Namespace:** souběžnosti
+
+##  <a name="dtor"></a> ~ auto_partitioner –
+
+Odstraní `auto_partitioner` objektu.
+
 ```
 ~auto_partitioner();
-```  
-  
-##  <a name="ctor"></a> auto_partitioner 
+```
 
- Vytvoří `auto_partitioner` objektu.  
-  
+##  <a name="ctor"></a> auto_partitioner –
+
+Vytvoří `auto_partitioner` objektu.
+
 ```
 auto_partitioner();
-```  
-  
-## <a name="see-also"></a>Viz také  
- [concurrency – obor názvů](concurrency-namespace.md)
+```
+
+## <a name="see-also"></a>Viz také
+
+[concurrency – obor názvů](concurrency-namespace.md)

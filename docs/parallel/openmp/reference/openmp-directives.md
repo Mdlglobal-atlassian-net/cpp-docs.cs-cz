@@ -1,5 +1,5 @@
 ---
-title: Direktivy jazyka OpenMP | Microsoft Docs
+title: Direktivy jazyka OpenMP | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,32 +12,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7421f397b39c6d26c2e60042b25f37277afa5fd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 983a71920e9e7ce390ab8c64e81886db0d459450
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692191"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389444"
 ---
 # <a name="openmp-directives"></a>Direktivy jazyka OpenMP
-Obsahuje odkazy na direktivy použité v rozhraní API OpenMP.  
-  
- Visual C++ podporuje následující direktivy OpenMP:  
-  
-|– Direktiva|Popis|  
-|---------------|-----------------|  
-|[atomic](../../../parallel/openmp/reference/atomic.md)|Určuje, že umístění paměti, který bude aktualizován atomicky.|  
-|[barrier](../../../parallel/openmp/reference/barrier.md)|Synchronizuje všechna vlákna v týmu; všechna vlákna pozastaví při bariéry, dokud všechna vlákna provést bariéry.|  
-|[critical](../../../parallel/openmp/reference/critical.md)|Určuje, zda kód je spustit pouze na jedno vlákno najednou.|  
-|[Vyprázdnění](../../../parallel/openmp/reference/flush-openmp.md)|Určuje, že všechna vlákna mají stejné zobrazení paměti pro všechny sdílené objekty.|  
-|[for](../../../parallel/openmp/reference/for-openmp.md)|Způsobí, že práci pro smyčky uvnitř paralelní oblast, kterou chcete rozdělit mezi vláken.|  
-|[master](../../../parallel/openmp/reference/master.md)|Určuje, spouštění jenom hlavní threadshould oddíl programu.|  
-|[řazení](../../../parallel/openmp/reference/ordered-openmp-directives.md)|Určuje tento kód v části parallelized pro smyčky by měl být spuštěn jako sekvenční smyčky.|  
-|[parallel](../../../parallel/openmp/reference/parallel.md)|Definuje paralelní oblasti, která je kód, který budou spuštěny několik vláken současně.|  
-|[Oddíly](../../../parallel/openmp/reference/sections-openmp.md)|Určuje kód oddíly pro rozdělí mezi všechna vlákna.|  
-|[single](../../../parallel/openmp/reference/single.md)|Umožňuje určit, zda se má provést části kódu, na jedno vlákno, nikoli nutně hlavní vlákno.|  
-|[threadprivate](../../../parallel/openmp/reference/threadprivate.md)|Určuje, že je na vlákno soukromé proměnné.|  
-  
-## <a name="see-also"></a>Viz také  
- [OpenMP](../../../parallel/openmp/openmp-in-visual-cpp.md)   
- [Klauzule](../../../parallel/openmp/reference/openmp-clauses.md)
+
+Obsahuje odkazy na direktivy použité v rozhraní API OpenMP.
+
+Jazyk Visual C++ podporuje následující direktivy OpenMP:
+
+|– Direktiva|Popis|
+|---------------|-----------------|
+|[atomic](../../../parallel/openmp/reference/atomic.md)|Určuje, že umístění v paměti, která bude aktualizována atomicky.|
+|[barrier](../../../parallel/openmp/reference/barrier.md)|Synchronizuje všechna vlákna v týmu; všechna vlákna pozastaví při bariéry, dokud všechna vlákna provést odbourejte překážky bránící.|
+|[critical](../../../parallel/openmp/reference/critical.md)|Určuje, že kód je pouze spustit v jednom vlákně najednou.|
+|[Vyprázdnění](../../../parallel/openmp/reference/flush-openmp.md)|Určuje, že všechna vlákna stejným zobrazení paměti pro všechny sdílené objekty.|
+|[for](../../../parallel/openmp/reference/for-openmp.md)|Způsobí, že během smyčky for uvnitř paralelní oblasti rozdělit mezi vlákny.|
+|[master](../../../parallel/openmp/reference/master.md)|Určuje, že pouze hlavní threadshould spustit část programu.|
+|[Řazení](../../../parallel/openmp/reference/ordered-openmp-directives.md)|Určuje, že kód v rámci paralelizovaná smyčka by měl být spuštěn jako sekvenční smyčka.|
+|[parallel](../../../parallel/openmp/reference/parallel.md)|Definuje paralelní oblasti, což je kód, který spustí paralelně několik vláken.|
+|[Oddíly](../../../parallel/openmp/reference/sections-openmp.md)|Identifikuje části kódu k rozdělení mezi všemi vlákny.|
+|[single](../../../parallel/openmp/reference/single.md)|Umožňuje určit, že část kódu by měl být provedeny v jednom vlákně, ne tedy nutně hlavní vlákno.|
+|[threadprivate](../../../parallel/openmp/reference/threadprivate.md)|Určuje, že proměnná je privátní pro vlákno.|
+
+## <a name="see-also"></a>Viz také
+
+[OpenMP](../../../parallel/openmp/openmp-in-visual-cpp.md)<br/>
+[Klauzule](../../../parallel/openmp/reference/openmp-clauses.md)

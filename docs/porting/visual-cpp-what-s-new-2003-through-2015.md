@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f80def64c62420fff47b0476822fb3eb612ca4b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 01ee370b4fd96419ce095fa9a93450b98b241dd2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42588245"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448568"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s novou 2003 – 2015
 
@@ -45,7 +45,9 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
 ### <a name="VS_RTM"></a> Vylepšení v sadě Visual Studio 2015
 
-- **Možnost /Zc:forScope-** možnost kompilátoru `/Zc:forScope-` je zastaralá a bude v budoucí verzi odebrána.
+- **Možnost /Zc:forScope-**
+
+   Možnost kompilátoru `/Zc:forScope-` je zastaralá a bude v budoucí verzi odebrána.
 
    ```output
     Command line warning  D9035: option 'Zc:forScope-' has been deprecated and will be removed in a future release
@@ -66,11 +68,15 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     }
    ```
 
-- **Zg – možnost kompilátoru.** `/Zg` – Možnost kompilátoru (Generovat prototypy funkcí) už nejsou k dispozici. Tato možnost kompilátoru dříve byla zrušena.
+- **Zg – možnost kompilátoru.**
+
+   `/Zg` – Možnost kompilátoru (Generovat prototypy funkcí) už nejsou k dispozici. Tato možnost kompilátoru dříve byla zrušena.
 
 - Jednotkové testy můžete spustit již s C + +/ CLI z příkazového řádku pomocí mstest.exe. Místo toho používá příkaz vstest.console.exe
 
-- **Mutable – klíčové slovo.** **Proměnlivé** specifikátor třídy úložiště již není povolena na místech, kde dříve ho zkompilovány bez chyb. Nyní, kompilátor dochází k chybě C2071 (neplatná třída úložiště). Proměnný specifikátor podle standardu, lze použít pouze u názvů datové členy třídy a nejde použít u názvů deklarovaný jako const nebo statické a nejde použít u odkazovat na členy.
+- **Mutable – klíčové slovo.**
+
+   **Proměnlivé** specifikátor třídy úložiště již není povolena na místech, kde dříve ho zkompilovány bez chyb. Nyní, kompilátor dochází k chybě C2071 (neplatná třída úložiště). Proměnný specifikátor podle standardu, lze použít pouze u názvů datové členy třídy a nejde použít u názvů deklarovaný jako const nebo statické a nejde použít u odkazovat na členy.
 
    Zvažte například následující kód:
 
@@ -88,7 +94,9 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
    Chcete-li vyřešit chybu, jednoduše odebrat redundantní **proměnlivé** – klíčové slovo.
 
-- **char_16_t a char32_t** kterou již nebudete používat `char16_t` nebo `char32_t` jako aliasy v definici typu, protože tyto typy jsou nyní považovány za předdefinované. Je běžné, že uživatelé a autoři knihovny k definování `char16_t` a `char32_t` jako aliasy `uint16_t` a `uint32_t`v uvedeném pořadí.
+- **char_16_t a char32_t**
+
+   Již slouží `char16_t` nebo `char32_t` jako aliasy v definici typu, protože tyto typy jsou nyní považovány za předdefinované. Je běžné, že uživatelé a autoři knihovny k definování `char16_t` a `char32_t` jako aliasy `uint16_t` a `uint32_t`v uvedeném pořadí.
 
    ```cpp
     #include <cstdint>
@@ -107,7 +115,9 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
    Chcete-li aktualizovat váš kód, odeberte **– typedef** deklarace a přejmenujte další identifikátory, které kolidují s těmito názvy.
 
-- **Parametry šablony bez typu** určitý kód, který zahrnuje parametry šablony bez typu je nyní správně kontroluje kompatibilita typů při poskytování explicitní argumenty šablony. Například následující kód zkompilován bez chyby v předchozích verzích Visual C++.
+- **Parametry šablony bez typu**
+
+   Určitý kód, který zahrnuje parametry šablony bez typu je nyní správně kontroluje kompatibilita typů při poskytování explicitní argumenty šablony. Například následující kód zkompilován bez chyby v předchozích verzích Visual C++.
 
    ```cpp
     struct S1
@@ -136,7 +146,9 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
    Chcete-li vyřešit tuto chybu v kódu, ujistěte se, že typ argumentu šablony používáte odpovídá deklarovaného typu parametru šablony.
 
-- **__declspec(align)** už akceptuje kompilátor `__declspec(align)` na funkce. To vždy ignorovány, ale nyní způsobí chybu kompilátoru.
+- **__declspec(align)**
+
+   Kompilátor už přijímá `__declspec(align)` na funkce. To vždy ignorovány, ale nyní způsobí chybu kompilátoru.
 
    ```cpp
     error C3323: 'alignas' and '__declspec(align)' are not allowed on function declarations
@@ -144,7 +156,9 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
    Chcete-li tento problém vyřešit, odeberte `__declspec(align)` z deklarace funkce. Protože to nemělo žádný vliv, jeho odebrání není něco změnit.
 
-- **Zpracování výjimek** existuje několik změn pro zpracování výjimek. Nejprve objekty výjimky musí být kopírovatelné nebo přesouvatelný. Následující kód zkompilován v sadě Visual Studio 2013, ale nebude zkompilován v sadě Visual Studio 2015:
+- **Zpracování výjimek**
+
+   Existuje několik změn pro zpracování výjimek. Nejprve objekty výjimky musí být kopírovatelné nebo přesouvatelný. Následující kód zkompilován v sadě Visual Studio 2013, ale nebude zkompilován v sadě Visual Studio 2015:
 
    ```cpp
     struct S {
@@ -208,7 +222,9 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     }
    ```
 
-- **Řetězcových literálů, za nímž následuje makra** kompilátor nyní podporuje uživatelsky definované literály. Řetězcové literály, za nímž následuje makra bez žádné prázdné znaky použité v důsledku toho jsou interpretovány jako uživateli definované literály, které by mohla vést k chybám nebo neočekávané výsledky. Například v předchozím kompilátory následující kód zkompilován úspěšně:
+- **Řetězcové literály, za nímž následuje makra**
+
+   Kompilátor nyní podporuje uživatelsky definované literály. Řetězcové literály, za nímž následuje makra bez žádné prázdné znaky použité v důsledku toho jsou interpretovány jako uživateli definované literály, které by mohla vést k chybám nebo neočekávané výsledky. Například v předchozím kompilátory následující kód zkompilován úspěšně:
 
    ```cpp
     #define _x "there"
@@ -232,7 +248,9 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
    Chcete-li tento problém vyřešit, přidejte mezeru mezi řetězcový literal a makro.
 
-- **Sousední řetězcové literály** podobně jako na předchozí, z důvodu souvisejících změn, při analýze řetězce, byly sousedních textových literálů (buď široký nebo úzký znak řetězcových literálů) bez žádné prázdné znaky interpretován jako jeden řetězec zřetězených v předchozí verze Visaul C++. V sadě Visual Studio 2015 teď musíte přidat prázdné znaky mezi dva řetězce. Například musíte změnit následující kód:
+- **Sousední řetězcové literály**
+
+   Podobně jako na předchozí, z důvodu související změny v analýze řetězce byly sousedních textových literálů (buď široký nebo úzký znak řetězcových literálů) bez žádné prázdné znaky interpretován jako jeden řetězec zřetězených v předchozích verzích Visaul C++. V sadě Visual Studio 2015 teď musíte přidat prázdné znaky mezi dva řetězce. Například musíte změnit následující kód:
 
    ```cpp
     char * str = "abc""def";
@@ -244,7 +262,9 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     char * str = "abc" "def";
    ```
 
-- **Nové umístění a odstranění** byla provedena změna **odstranit** operátor pamětí souladu s C ++ 14, standardní. Podrobnosti o změně standardy najdete v [C++ velikostí Dealokace](http://isocpp.org/files/papers/n3778.html). Změny přidejte formulář globálního **odstranit** operátor, který přijímá parametr velikosti. Rozbíjející změnu je, že pokud jste dříve používali operátor **odstranit** se stejným podpisem (tak, aby odpovídaly s **nové umístění** operátor), obdržíte chybu kompilátoru (C2956, to se stává v místě, kde **nové umístění** se používá, protože to je pozice v kódu, kde kompilátor se pokusí identifikovat příslušné odpovídající **odstranit** operátor).
+- **Nové umístění a delete**
+
+   Byla provedena změna **odstranit** operátor pamětí souladu s C ++ 14, standardní. Podrobnosti o změně standardy najdete v [C++ velikostí Dealokace](http://isocpp.org/files/papers/n3778.html). Změny přidejte formulář globálního **odstranit** operátor, který přijímá parametr velikosti. Rozbíjející změnu je, že pokud jste dříve používali operátor **odstranit** se stejným podpisem (tak, aby odpovídaly s **nové umístění** operátor), obdržíte chybu kompilátoru (C2956, to se stává v místě, kde **nové umístění** se používá, protože to je pozice v kódu, kde kompilátor se pokusí identifikovat příslušné odpovídající **odstranit** operátor).
 
    Funkce `void operator delete(void *, size_t)` byla **umístění operátoru delete** odpovídající operátor **umístění nového** funkce `void * operator new(size_t, size_t)` v C ++ 11. Pomocí C ++ 14 velikostí dealokace, to **odstranit** funkce je teď *funkce zrušení přidělení obvykle* (globální **odstranit** operátor). Standardní vyžaduje, že pokud použití **umístění nového** vyhledá odpovídající **odstranit** funkce a najde funkce obvykle zrušení přidělení, program je chybně vytvořený.
 
@@ -292,7 +312,9 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
    Chcete-li tento problém vyřešit, změňte typy odkazů na ukazatel nebo hodnotu. Změna typu ukazatele vyžaduje změny v kódu, který používá pole typu union. Kód na hodnotu by změna dat uložených ve sjednocení, které ovlivňují ostatní pole, protože pole ve sjednocení typů sdílejí stejnou paměť. V závislosti na velikosti hodnotu se může také změnit velikost sjednocení.
 
-- **Anonymní sjednocení** jsou teď další splňující podmínky standardu. Předchozí verze kompilátoru generované představují explicitní konstruktor a destruktor pro anonymní sjednocení. Odstraní se v sadě Visual Studio 2015.
+- **Anonymní sjednocení**
+
+   jsou teď další splňující podmínky standardu. Předchozí verze kompilátoru generované představují explicitní konstruktor a destruktor pro anonymní sjednocení. Odstraní se v sadě Visual Studio 2015.
 
    ```cpp
     struct S {
@@ -328,7 +350,9 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     } u;
    ```
 
-- **Sjednocení s anonymní struktury** aby bylo možné v souladu se standardem, chování za běhu se změnilo členům anonymní struktury ve sjednoceních. Konstruktor pro anonymní struktury členům ve sjednocení je už nebude implicitně volána při vytvoření těchto sjednocení. Destruktor pro anonymní struktury členům ve sjednocení také, je už nebude implicitně volána, když sjednocení dostane mimo rozsah. Uvažujme následující kód, ve kterém sjednocení U obsahuje anonymní struktury, který obsahuje člena, který je pojmenované struktury S, který má destruktor.
+- **Sjednocení s anonymní struktury**
+
+   Aby bylo možné v souladu se standardem, chování za běhu změnil členům anonymní struktury ve sjednoceních. Konstruktor pro anonymní struktury členům ve sjednocení je už nebude implicitně volána při vytvoření těchto sjednocení. Destruktor pro anonymní struktury členům ve sjednocení také, je už nebude implicitně volána, když sjednocení dostane mimo rozsah. Uvažujme následující kód, ve kterém sjednocení U obsahuje anonymní struktury, který obsahuje člena, který je pojmenované struktury S, který má destruktor.
 
    ```cpp
     #include <stdio.h>
@@ -433,7 +457,9 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     }
    ```
 
-- **Šablona řešení** pro překlad názvů pro šablony byly provedeny změny. V jazyce C++ při zvažování kandidáty pro rozlišení názvu může být případ, že jeden nebo více názvů uvažovanou jako potenciální shody vytváří instance neplatná šablona. Tyto neplatné instancí obvykle nezpůsobí chyby kompilátoru principem, který je označován jako SFINAE (nahrazení selhání je není chybovou).
+- **Šablony řešení**
+
+   Překlad názvů pro šablony byly provedeny změny. V jazyce C++ při zvažování kandidáty pro rozlišení názvu může být případ, že jeden nebo více názvů uvažovanou jako potenciální shody vytváří instance neplatná šablona. Tyto neplatné instancí obvykle nezpůsobí chyby kompilátoru principem, který je označován jako SFINAE (nahrazení selhání je není chybovou).
 
    Nyní pokud SFINAE vyžaduje, aby kompilátor pro vytvoření instance specializace šablony třídy, pak všechny chyby, ke kterým dochází během tohoto procesu jsou chyby kompilátoru. V předchozích verzích by kompilátor ignorovat tyto chyby. Zvažte například následující kód:
 
@@ -491,11 +517,15 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
    V tomto případě opravy je nepoužívat těchto vlastností s typem, dokud je definována třída. Pokud je definice B a D přesunout na začátek souboru kódu, se problém nevyřeší. Pokud jsou definice v souborech hlaviček, zkontrolujte pořadí příkazů zahrnout soubory hlaviček, abyste měli jistotu, že žádné definice tříd jsou zkompilovány před problematický šablony používá.
 
-- **Kopírovací konstruktory** v sadě Visual Studio 2013 a Visual Studio 2015, kompilátor generuje kopírovací konstruktor pro třídu, pokud tato třída má konstruktor přesunutí definovaný uživatelem, ale žádná uživatelem definovaného kopírovacího konstruktoru. V Dev14 tento implicitně generovaný kopírovací konstuktor je také označena, "= delete".
+- **Kopírovací konstruktory**
+
+   V sadě Visual Studio 2013 a Visual Studio 2015 kompilátor generuje kopírovací konstruktor pro třídu, pokud tato třída má konstruktor přesunutí definovaný uživatelem, ale žádná uživatelem definovaného kopírovacího konstruktoru. V Dev14 tento implicitně generovaný kopírovací konstuktor je také označena, "= delete".
 
 ### <a name="VS_Update1"></a> Vylepšení Visual Studio 2015 Update 1
 
-- **Privátní virtuální základní třídy a nepřímé dědění** předchozí verze kompilátoru povolené odvozené třídy za účelem volat členské funkce z jeho *nepřímo odvozeny* `private virtual` základních tříd. Toto chování staré bylo nesprávné a není v souladu s standardu jazyka C++. Kompilátor už přijímá kódu napsaného v tímto způsobem a vydá Chyba kompilátoru C2280 ve výsledku.
+- **Privátní virtuální základní třídy a nepřímé dědění**
+
+   Předchozí verze kompilátoru povolené odvozené třídy za účelem volat členské funkce z jeho *nepřímo odvozeny* `private virtual` základních tříd. Toto chování staré bylo nesprávné a není v souladu s standardu jazyka C++. Kompilátor už přijímá kódu napsaného v tímto způsobem a vydá Chyba kompilátoru C2280 ve výsledku.
 
    ```Output
     error C2280: 'void *S3::__delDtor(unsigned int)': attempting to reference a deleted function
@@ -547,7 +577,9 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     }
    ```
 
-- **Přetížený operátor new a delete – operátor** předchozí verze kompilátoru povoleno bez členů **operátor new** a třetí **operátor delete** být deklarované jako statické a být deklarovány v oborech názvů, než je globální obor názvů.  Toto chování staré vytvořili riziko, že program by volat **nové** nebo **odstranit** operátor implementace, která má programátora, výsledný tiché chybný modul runtime chování. Kompilátor už přijímá kódu napsaného v tímto způsobem a místo toho vystavuje Chyba kompilátoru C2323.
+- **Přetížený operátor new a delete – operátor**
+
+   Předchozí verze kompilátoru povoleno bez členů **operátor new** a třetí **operátor delete** být deklarované jako statické a být deklarovány v oborech názvů, než je globální obor názvů.  Toto chování staré vytvořili riziko, že program by volat **nové** nebo **odstranit** operátor implementace, která má programátora, výsledný tiché chybný modul runtime chování. Kompilátor už přijímá kódu napsaného v tímto způsobem a místo toho vystavuje Chyba kompilátoru C2323.
 
    ```Output
     error C2323: 'operator new': non-member operator new or delete functions may not be declared static or in a namespace other than the global namespace.
@@ -703,7 +735,9 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     }
    ```
 
-- **Obnovení upozornění příkazu switch** A předchozí verze kompilátoru odebrat dříve existující upozornění související s **přepnout** příkazů; toto upozornění ACLs byly obnoveny. Kompilátor vyvolá nyní obnovené upozornění a upozornění souvisejících s konkrétní případy (včetně výchozí případ) jsou teď vydaný na řádek obsahující problematický případu, nikoli na posledním řádku příkazu switch. Díky tomu teď vystavujících upozornění na samostatné řádky než v minulosti, upozornění dříve potlačit pomocí `#pragma warning(disable:####)` už dá potlačit očekávaným způsobem. Chcete-li tato upozornění potlačit očekávaným způsobem, může být potřeba přesunout `#pragma warning(disable:####)` direktivy řádku nad prvním případě potenciálně poškozený. Následují obnovené upozornění.
+- **Obnovení upozornění switch – příkaz**
+
+   Předchozí verzi kompilátoru odstraněny dříve existující upozornění související s **přepnout** příkazů; toto upozornění ACLs byly obnoveny. Kompilátor vyvolá nyní obnovené upozornění a upozornění souvisejících s konkrétní případy (včetně výchozí případ) jsou teď vydaný na řádek obsahující problematický případu, nikoli na posledním řádku příkazu switch. Díky tomu teď vystavujících upozornění na samostatné řádky než v minulosti, upozornění dříve potlačit pomocí `#pragma warning(disable:####)` už dá potlačit očekávaným způsobem. Chcete-li tato upozornění potlačit očekávaným způsobem, může být potřeba přesunout `#pragma warning(disable:####)` direktivy řádku nad prvním případě potenciálně poškozený. Následují obnovené upozornění.
 
    ```Output
     warning C4060: switch statement contains no 'case' or 'default' labels
@@ -909,7 +943,9 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
    I když je běžné, kód napsaný v tímto způsobem je někdy úmyslné. Je citlivá na změny v kódu napsaného v tímto způsobem `#include` pořadí; Pokud je to možné, doporučujeme vám, že soubory se zdrojovým kódem spravovat stav s varováním samostatná způsobem.
 
-- **Bezkonkurenční #pragma warning(push)** (má vliv pouze `/Wall` `/WX`) předchozí verze kompilátoru nezjistili bezkonkurenční `#pragma warning(push)` stavu změny na konci jednotky překladu. Kompilátor nyní zjistí a upozorní programátor kódu napsaného v tímto způsobem a problémy volitelné kompilátor varování C5032 v umístění souboru neporovnané `#pragma warning(push)`, pokud je povoleno. Pokud nejsou žádné chyby během kompilace v jednotce překladu se pouze objeví toto upozornění.
+- **Bezkonkurenční #pragma warning(push)** (má vliv pouze `/Wall` `/WX`)
+
+   Předchozí verze kompilátoru nezjistili bezkonkurenční `#pragma warning(push)` stavu změny na konci jednotky překladu. Kompilátor nyní zjistí a upozorní programátor kódu napsaného v tímto způsobem a problémy volitelné kompilátor varování C5032 v umístění souboru neporovnané `#pragma warning(push)`, pokud je povoleno. Pokud nejsou žádné chyby během kompilace v jednotce překladu se pouze objeví toto upozornění.
 
    ```Output
     warning C5032: detected #pragma warning(push) with no corresponding #pragma warning(pop)
@@ -946,11 +982,15 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     // C5032.cpp ends -- the translation unit is completed without unmatched #pragma warning(push)
    ```
 
-- **Může se objevit další upozornění v důsledku stav varování #pragma vylepšené sledování** předchozí verze kompilátoru sledovat `#pragma warning` změně stavu dostatečně vydat všechny určené upozornění. Toto chování vytvoření rizika určitá upozornění by efektivně potlačit v případech liší od programátor určené. Kompilátor nyní sleduje `#pragma warning` stav více robustní – zejména související s `#pragma warning` stav se změní v rámci šablony – a volitelně vydá nová upozornění C5031 a C5032, které umožní programátora, vyhledejte neúmyslnému použití `#pragma warning(push)` a `#pragma warning(pop)`.
+- **Může se objevit další upozornění v důsledku stav varování #pragma vylepšené sledování**
+
+   Předchozí verze kompilátoru sledovat `#pragma warning` změně stavu dostatečně vydat všechny určené upozornění. Toto chování vytvoření rizika určitá upozornění by efektivně potlačit v případech liší od programátor určené. Kompilátor nyní sleduje `#pragma warning` stav více robustní – zejména související s `#pragma warning` stav se změní v rámci šablony – a volitelně vydá nová upozornění C5031 a C5032, které umožní programátora, vyhledejte neúmyslnému použití `#pragma warning(push)` a `#pragma warning(pop)`.
 
    Kvůli vylepšení `#pragma warning` stav řešení change tracking, dříve nesprávně potlačit upozornění a upozornění související s problémy dříve misdiagnosed mohou nyní být vydány.
 
-- **Vylepšené identifikaci nedosažitelný kód** změní standardní knihovny C++ a vylepšená možnost volání vložených funkcí porovnání s předchozími verzemi kompilátoru může umožnit kompilátoru prokázat, že určitý kód je nyní nedostupná. Toto nové chování může způsobit nové a dalších často vydané instancí upozornění C4720.
+- **Vylepšila se identifikace nedosažitelný kód**
+
+   Změny standardní knihovny C++ a vylepšená možnost volání vložených funkcí porovnání s předchozími verzemi kompilátoru může umožnit kompilátoru prokázat, že určitý kód je nyní nedostupná. Toto nové chování může způsobit nové a dalších často vydané instancí upozornění C4720.
 
    ```Output
     warning C4720: unreachable code
@@ -986,7 +1026,9 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
 ### <a name="VS_Update2"></a> Vylepšení Visual Studio 2015 Update 2
 
-- **Další upozornění a chyby mohou být vydány v důsledku částečná podpora sfinae u výrazů** předchozí verze kompilátoru analyzovat určité druhy výrazy uvnitř **decltype** specifikátory vzhledem k absenci Podpora pro výraz SFINAE Toto chování staré bylo nesprávné a není v souladu s standardu jazyka C++. Kompilátor nyní analyzuje tyto výrazy a má částečná podpora sfinae u výrazů z důvodu probíhající vylepšení. V důsledku toho kompilátor nyní vyvolá upozornění a chyby nalezené ve výrazech, že analyzovat předchozí verze kompilátoru.
+- **Další upozornění a chyby mohou být vydány v důsledku částečná podpora sfinae u výrazů**
+
+   Předchozí verze kompilátoru analyzovat určité druhy výrazy uvnitř **decltype** specifikátory vzhledem k absenci podpora sfinae u výrazů. Toto chování staré bylo nesprávné a není v souladu s standardu jazyka C++. Kompilátor nyní analyzuje tyto výrazy a má částečná podpora sfinae u výrazů z důvodu probíhající vylepšení. V důsledku toho kompilátor nyní vyvolá upozornění a chyby nalezené ve výrazech, že analyzovat předchozí verze kompilátoru.
 
    Když toto nové chování analyzuje **decltype** výraz, který obsahuje typ, který nebyl dosud deklarován, kompilátor vydává chybu kompilátoru C2039 ve výsledku.
 
@@ -1127,7 +1169,9 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     B b2 (b1);  // error C2280
    ```
 
-- **Statické členské funkce nepodporují kvalifikátory cv.** Předchozích verzích Visual C++ 2015 povoleny kvalifikátory cv mít statické členské funkce. Toto chování je z důvodu regrese v Visual C++ 2015 a Visual C++ 2015 Update 1; Visual C++ 2013 a předchozích verzích Visual C++ odmítnout kódu napsaného v tímto způsobem. Chování Visual C++ 2015 a Visual C++ 2015 Update 1 je nesprávný a není v souladu s C++ standard.  Visual Studio 2015 Update 2 odmítne kódu napsaného v tímto způsobem a místo toho vystavuje Chyba kompilátoru C2511.
+- **Statické členské funkce nepodporují kvalifikátory cv.**
+
+   Předchozích verzích Visual C++ 2015 povoleny kvalifikátory cv mít statické členské funkce. Toto chování je z důvodu regrese v Visual C++ 2015 a Visual C++ 2015 Update 1; Visual C++ 2013 a předchozích verzích Visual C++ odmítnout kódu napsaného v tímto způsobem. Chování Visual C++ 2015 a Visual C++ 2015 Update 1 je nesprávný a není v souladu s C++ standard.  Visual Studio 2015 Update 2 odmítne kódu napsaného v tímto způsobem a místo toho vystavuje Chyba kompilátoru C2511.
 
    ```Output
     error C2511: 'void A::func(void) const': overloaded member function not found in 'A'
@@ -1155,7 +1199,9 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     void A::func() {}  // removed const
    ```
 
-- **Dopředná deklarace výčtu není povolený v kódu WinRT** (ovlivňuje `/ZW` pouze) kódu zkompilovaném pro prostředí Windows Runtime (WinRT) neumožňuje **výčtu** typy vpřed deklarovat, podobně jako při spravovaného kódu C++ je zkompilován pro rozhraní .net Framework pomocí `/clr` přepínač kompilátoru. Toto chování je zajišťuje, že velikost výčet je vždy známé a je možné správně promítnout do systému typů WinRT. Kompilátor odmítne kódu napsaného v tímto způsobem a vyvolá chybu kompilátoru C2599 spolu s chyba kompilátoru C3197.
+- **Dopředná deklarace výčtu není povolený v kódu WinRT** (ovlivňuje `/ZW` jenom)
+
+   Kód zkompilován pro prostředí Windows Runtime (WinRT) neumožňuje **výčtu** typy vpřed deklarovat, podobně jako při kompilaci spravovaného kódu C++ pro rozhraní .net Framework pomocí `/clr` přepínač kompilátoru. Toto chování je zajišťuje, že velikost výčet je vždy známé a je možné správně promítnout do systému typů WinRT. Kompilátor odmítne kódu napsaného v tímto způsobem a vyvolá chybu kompilátoru C2599 spolu s chyba kompilátoru C3197.
 
    ```Output
     error C2599: 'CustomEnum': the forward declaration of a WinRT enum is not allowed
@@ -1210,7 +1256,9 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     };
    ```
 
-- **Přetížení bez členů operátor new a delete – operátor nemůže být deklarovaná jako inline.** (úroveň 1 (`/W1`) na výchozím nastavení) předchozí verze kompilátoru bez vyvolání upozornění, pokud nejsou členy **operátor new** a **operátor delete** funkce je deklarovaná jako inline. Kód napsaný v tímto způsobem je chybně vytvořený (vyžadováno žádné diagnostické) a může způsobit paměti problémy způsobené nový Neshoda a operátory (zejména při použití společně s velikostí dealokace), které může být obtížné diagnostikovat, odstranit. Kompilátor nyní vyvolá kompilátor varování C4595 vám pomůže identifikovat kód napsaný v tímto způsobem.
+- **Přetížení bez členů operátor new a operátor delete se nedá deklarovat vložené** (úroveň 1 (`/W1`) na výchozím nastavení)
+
+   Předchozí verze kompilátoru bez vyvolání upozornění, pokud nejsou členy **operátor new** a **operátor delete** funkce je deklarovaná jako inline. Kód napsaný v tímto způsobem je chybně vytvořený (vyžadováno žádné diagnostické) a může způsobit paměti problémy způsobené nový Neshoda a operátory (zejména při použití společně s velikostí dealokace), které může být obtížné diagnostikovat, odstranit. Kompilátor nyní vyvolá kompilátor varování C4595 vám pomůže identifikovat kód napsaný v tímto způsobem.
 
    ```Output
     warning C4595: 'operator new': non-member operator new or delete functions may not be declared inline
@@ -1264,7 +1312,9 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
    V předchozích verzích aplikace Visual C++, předat statický kontrolní výrazy v dolní části v tomto příkladu, protože `std::is_convertable<>::value` bylo nesprávně nastaveno jejich **true**. Nyní `std::is_convertable<>::value` správně nastavená na **false**, způsobuje selhání statický kontrolní výrazy.
 
-- **Nastavit na výchozí hodnotu nebo odstranit triviální kopírování a přesun konstruktorů respektovat specifikátory přístupu** předchozí verze kompilátoru není zkontrolujte specifikátor přístupu nastavených výchozích nebo odstraněných triviální kopírování a přesun konstruktorů před povolením, která se má volat. Toto chování staré bylo nesprávné a není v souladu s standardu jazyka C++. V některých případech se vytvoří toto staré chování riziko generování tiché chybného kódu, což vede k modulu runtime nepředvídatelné chování. Kompilátor nyní zkontroluje specifikátor přístupu nastavených výchozích nebo odstraněných triviální kopírování a přesun konstruktorů k určení, zda může být volána a pokud ne, problémy kompilátoru C2248 upozornění ve výsledku.
+- **Nastavit na výchozí hodnotu nebo odstranit triviální kopírování a přesun konstruktorů specifikátory přístupu dodržování**
+
+   Předchozí verze kompilátoru není zkontrolujte specifikátor přístupu nastavených výchozích nebo odstraněných triviální kopírování a přesun konstruktorů před povolením, která se má volat. Toto chování staré bylo nesprávné a není v souladu s standardu jazyka C++. V některých případech se vytvoří toto staré chování riziko generování tiché chybného kódu, což vede k modulu runtime nepředvídatelné chování. Kompilátor nyní zkontroluje specifikátor přístupu nastavených výchozích nebo odstraněných triviální kopírování a přesun konstruktorů k určení, zda může být volána a pokud ne, problémy kompilátoru C2248 upozornění ve výsledku.
 
    ```Output
     error C2248: 'S::S' cannot access private member declared in class 'S'
@@ -1308,7 +1358,9 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     }
    ```
 
-- **Vyřazení podpory kódu ATL s atributy** (úroveň 1 (`/W1`) na výchozím nastavení) kódu ATL s předchozí verze kompilátoru nepodporuje atributy. Jako další fází odebrání podpory knihovny ATL s atributy kódu, který [začal v aplikaci Visual C++ 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx), s atributy kódu ATL je zastaralá. Kompilátor nyní vyvolá kompilátor varování C4467 pomáhá rozpoznat tento druh zastaralý kód.
+- **Vyřazení podpory kódu ATL s atributy** (úroveň 1 (`/W1`) na výchozím nastavení)
+
+   Předchozí verze kompilátoru nepodporuje kódu ATL s přidělenými atributy. Jako další fází odebrání podpory knihovny ATL s atributy kódu, který [začal v aplikaci Visual C++ 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx), s atributy kódu ATL je zastaralá. Kompilátor nyní vyvolá kompilátor varování C4467 pomáhá rozpoznat tento druh zastaralý kód.
 
    ```Output
     warning C4467: Usage of ATL attributes is deprecated
@@ -1403,7 +1455,9 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     };
    ```
 
-- **Předkompilované hlavičky (PCH) soubory a neshoda #include** (má vliv pouze `/Wall` `/WX`) předchozí verze kompilátoru přijato neshoda `#include` direktivy ve zdrojových souborech mezi `-Yc` a `-Yu` kompilace při použití předkompilované hlavičky (PCH) soubory. Kód napsaný v tímto způsobem je už akceptuje kompilátor. Kompilátor nyní problémy kompilátor varování CC4598 vám pomůže identifikovat neshoda `#include` direktivy při použití souborů PCH.
+- **Předkompilované hlavičky (PCH) soubory a neshoda #include** (má vliv pouze `/Wall` `/WX`)
+
+   Předchozí verze kompilátoru přijato neshoda `#include` direktivy ve zdrojových souborech mezi `-Yc` a `-Yu` kompilace při použití předkompilované hlavičky (PCH) soubory. Kód napsaný v tímto způsobem je už akceptuje kompilátor. Kompilátor nyní problémy kompilátor varování CC4598 vám pomůže identifikovat neshoda `#include` direktivy při použití souborů PCH.
 
    ```Output
     warning C4598: 'b.h': included header file specified for Ycc.h at position 2 does not match Yuc.h at that position
@@ -1445,7 +1499,9 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     #include "c.h"
    ```
 
-- **Předkompilované hlavičky (PCH) soubory a neshoda adresáře souborů k zahrnutí** (má vliv pouze `/Wall` `/WX`) předchozí verze kompilátoru přijato neshoda zahrnout adresáře (`-I`) argumenty příkazového řádku pro kompilátor mezi `-Yc` a `-Yu` kompilace při použití předkompilované hlavičky (PCH) soubory. Kód napsaný v tímto způsobem je už akceptuje kompilátor.   Kompilátor nyní problémy kompilátor varování CC4599 vám pomůže identifikovat neshoda zahrnout adresáře (`-I`) argumenty příkazového řádku při použití souborů PCH.
+- **Předkompilované hlavičky (PCH) soubory a neshoda adresáře souborů k zahrnutí** (má vliv pouze `/Wall` `/WX`)
+
+   Předchozí verze kompilátoru přijato neshoda zahrnout adresáře (`-I`) argumenty příkazového řádku pro kompilátor mezi `-Yc` a `-Yu` kompilace při použití předkompilované hlavičky (PCH) soubory. Kód napsaný v tímto způsobem je už akceptuje kompilátor.   Kompilátor nyní problémy kompilátor varování CC4599 vám pomůže identifikovat neshoda zahrnout adresáře (`-I`) argumenty příkazového řádku při použití souborů PCH.
 
    ```Output
     warning C4599: '-I..' : specified for Ycc.h at position 1 does not match Yuc.h at that position
@@ -1535,11 +1591,25 @@ Tato vylepšená podpora standardů ISO C/C++ mohou vyžadovat změny existujíc
 
 ### <a name="windows-runtime-app-development-support"></a>Podpora pro vývoj aplikací pro modul Runtime Windows
 
-- **Podpora pro Boxed typy ve struktuře hodnot.** Nyní můžete určit typy hodnot s použitím pole, která může mít hodnotu null, například `IBox<int>^` nikoli **int**. To znamená, že pole mohou buď mít hodnotu nebo být roven **nullptr**.
-- **Podrobnější informace o výjimce.** C + +/ CX podporuje nový model chyb Windows, který umožňuje zachycení a propagaci bohatých informací o výjimkách napříč binárním rozhraním aplikace (ABI); To zahrnuje volání zásobníku a o vlastní řetězce zpráv.
-- **Object:: ToString() je nyní virtuální.** Nyní můžete přepsat ToString v uživatelem definované typy Windows Runtime ref.
-- **Podpora pro zastaralé rozhraní API.** Veřejné rozhraní API Windows Runtime lze nyní označit jako zastaralé a doplnit vlastní zprávu, která se zobrazí jako varování při sestavení a může poskytnout pokyny k migraci.
-- **Vylepšení ladicího programu.** Podpora pro definiční ladění nativního prostředí/JavaScript, diagnostiky výjimky Windows Runtime a asynchronní ladění (Windows Runtime a PPL) kódu.
+- **Podpora pro Boxed typy ve struktuře hodnot.**
+
+   Nyní můžete určit typy hodnot s použitím pole, která může mít hodnotu null, například `IBox<int>^` nikoli **int**. To znamená, že pole mohou buď mít hodnotu nebo být roven **nullptr**.
+
+- **Podrobnější informace o výjimce.**
+
+   C + +/ CX podporuje nový model chyb Windows, který umožňuje zachycení a propagaci bohatých informací o výjimkách napříč binárním rozhraním aplikace (ABI); To zahrnuje volání zásobníku a o vlastní řetězce zpráv.
+
+- **Object:: ToString() je nyní virtuální.**
+
+   Nyní můžete přepsat ToString v uživatelem definované typy Windows Runtime ref.
+
+- **Podpora pro zastaralé rozhraní API.**
+
+   Veřejné rozhraní API Windows Runtime lze nyní označit jako zastaralé a doplnit vlastní zprávu, která se zobrazí jako varování při sestavení a může poskytnout pokyny k migraci.
+
+- **Vylepšení ladicího programu.**
+
+   Podpora pro definiční ladění nativního prostředí/JavaScript, diagnostiky výjimky Windows Runtime a asynchronní ladění (Windows Runtime a PPL) kódu.
 
 > [!NOTE]
 > Kromě funkcí specifických pro C++ a vylepšení, které jsou popsány v této části Další vylepšení v sadě Visual Studio vám mohou také pomoci psát lepší aplikace pro Windows Runtime.

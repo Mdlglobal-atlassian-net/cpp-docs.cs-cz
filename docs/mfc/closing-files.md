@@ -1,5 +1,5 @@
 ---
-title: Zavírání souborů | Microsoft Docs
+title: Zavírání souborů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,22 +15,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97bd910ae4cb514cda07dd319f37a05a32712909
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c392ef728e1d796a02cfa32edc2c3e8c74d083b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341023"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426234"
 ---
 # <a name="closing-files"></a>Zavírání souborů
-Obvyklým v vstupně-výstupních operací, po dokončení se souboru, je třeba nejprve zavřít jeho.  
-  
-#### <a name="to-close-a-file"></a>Zavřete soubor  
-  
-1.  Použití **Zavřít** – členská funkce. Tato funkce zavře soubor systém souborů a v případě potřeby vyprázdní vyrovnávací paměti.  
-  
- Pokud jste přidělili [cfile –](../mfc/reference/cfile-class.md) objekt rámec (jak je ukázáno v [otevírání souborů](../mfc/opening-files.md)), bude objektu automaticky zavřít a pak zničený, když probíhá mimo rozsah. Všimněte si, že odstranění `CFile` objekt neodstraní fyzického souboru v systému souborů.  
-  
-## <a name="see-also"></a>Viz také  
- [Soubory](../mfc/files-in-mfc.md)
+
+Jako obvykle ve vstupně-výstupních operací, po dokončení se souborem, je zapotřebí jej zavřít.
+
+#### <a name="to-close-a-file"></a>Zavřete soubor
+
+1. Použití **Zavřít** členskou funkci. Tato funkce zavře soubor, který systém souborů a v případě potřeby vyprázdní vyrovnávací paměti.
+
+Pokud jste přidělili [cfile –](../mfc/reference/cfile-class.md) objekt v rámci (stejně jako v příkladu v [otevírání souborů](../mfc/opening-files.md)), objekt bude automaticky zavřít a následně zničeny, když dostane mimo rozsah. Všimněte si, že odstranění `CFile` objekt nedojde k odstranění fyzického souboru v systému souborů.
+
+## <a name="see-also"></a>Viz také
+
+[Soubory](../mfc/files-in-mfc.md)
 

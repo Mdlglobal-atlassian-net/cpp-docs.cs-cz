@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49ef07365675ddb9cdedee1f6a2cdfb676188dc6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 89cebd5c6fdfa3ee523a3ab2730ba11c1e2b68ab
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42576706"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407618"
 ---
 # <a name="activationfactorygetiids-method"></a>ActivationFactory::GetIids – metoda
 
@@ -38,10 +38,10 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*iidCount*  
+*iidCount*<br/>
 Když tato operace dokončí, počet ID uživatelského rozhraní v *IID* pole.
 
-*IID*  
+*IID*<br/>
 Po dokončení této operace implementované pole ID rozhraní.
 
 ## <a name="return-value"></a>Návratová hodnota

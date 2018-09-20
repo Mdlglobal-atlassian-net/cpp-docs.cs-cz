@@ -1,5 +1,5 @@
 ---
-title: Správa aktuálního zobrazení | Microsoft Docs
+title: Správa aktuálního zobrazení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,20 +21,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09d29f4bc0b62e5824209759d45e63c1d9e2daa6
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ca9738f9b6083ef88c2f72e1608121f849f8e909
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928737"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425362"
 ---
 # <a name="managing-the-current-view"></a>Správa aktuálního zobrazení
-Jako součást výchozí implementaci třídy oken s rámečkem uchovává informace okně s rámečkem o aktuálně aktivní zobrazení. Pokud okně s rámečkem obsahuje více než jedno zobrazení, jako například v rozděleném okně, je aktuální zobrazení poslední zobrazení používá. Aktivní zobrazení je nezávislé na aktivní okno v systému Windows nebo aktuální zaměření pro vstup.  
-  
- Při aktivním zobrazení změní, rozhraní upozorní aktuální zobrazení voláním jeho [OnActivateView](../mfc/reference/cview-class.md#onactivateview) – členská funkce. Můžete zjistit, zda zobrazení se aktivace nebo deaktivace prověřením `OnActivateView`na *bActivate* parametr. Ve výchozím nastavení `OnActivateView` nastaví fokus na aktuální zobrazení na aktivaci. Můžete přepsat `OnActivateView` provádět žádné zvláštní zpracování, pokud je zobrazení deaktivovala nebo znovu aktivovat. Můžete například chtít zadat speciální vizuální upozornění k rozlišení aktivní zobrazení z jiných, neaktivní zobrazení.  
-  
- Okně s rámečkem předá příkazy na jeho aktuální zobrazení (aktivní), jak je popsáno v [směrování příkazů](../mfc/command-routing.md), jako součást standardního směrování příkazů.  
-  
-## <a name="see-also"></a>Viz také  
- [Použití oken s rámečkem](../mfc/using-frame-windows.md)
+
+Jako součást výchozí implementace oken s rámečkem uchovává informace okno rámce o aktuálně aktivní zobrazení. Pokud obsahuje více než jedno zobrazení, například v okně rozdělovač okna rámce aktuálního zobrazení se zobrazení posledního použití. Aktivní zobrazení je nezávislá aktivního okna ve Windows nebo aktuální vstupní fokus.
+
+Aktivní zobrazení změny, rozhraní upozorní aktuální zobrazení po zavolání jeho [OnActivateView](../mfc/reference/cview-class.md#onactivateview) členskou funkci. Poznáte, zda je zobrazení se aktivuje nebo deaktivuje prozkoumáním `OnActivateView`společnosti *bActivate* parametru. Ve výchozím nastavení `OnActivateView` nastaví fokus na aktuální zobrazení na aktivaci. Můžete přepsat `OnActivateView` provést žádné speciální zpracování při zobrazení je deaktivováno nebo znovu aktivovat. Například můžete chtít poskytnout speciální vizuálních podnětů k rozlišení zobrazení aktivního ze zobrazení, které neaktivní.
+
+Okno rámce předává příkazy do jeho aktuálního zobrazení (aktivní), jak je popsáno v [směrování příkazů](../mfc/command-routing.md), jako součást standardního směrování příkazů.
+
+## <a name="see-also"></a>Viz také
+
+[Použití oken s rámečkem](../mfc/using-frame-windows.md)
 

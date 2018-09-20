@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ccd5f5220a49ddb63554b4c3b96533a3066d4d4b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d3f4cacd380a86138095b0f8b3bf67f860d45cda
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214590"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390536"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -38,7 +38,7 @@ Třídy určuje rozhraní zdrojového objektu modelu COM pro spojovací body. Na
 
 ### <a name="parameters"></a>Parametry
 
-*Rozhraní*  
+*Rozhraní*<br/>
 Jedno nebo více rozhraní, zadejte, pokud použijete zdrojové atribut třídy. Tento parametr se nepoužívá při použití u zdroj vlastnosti nebo metody.
 
 ## <a name="remarks"></a>Poznámky
@@ -96,7 +96,7 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](..
 
 ## <a name="see-also"></a>Viz také
 
-[IDL – atributy](../windows/idl-attributes.md)  
-[Atributy třídy](../windows/class-attributes.md)  
-[Atributy metody](../windows/method-attributes.md)  
+[IDL – atributy](../windows/idl-attributes.md)<br/>
+[Atributy třídy](../windows/class-attributes.md)<br/>
+[Atributy metody](../windows/method-attributes.md)<br/>
 [coclass](../windows/coclass.md)  

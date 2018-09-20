@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5465ccacf6fb051e787cf390c82108cb9344d203
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2326918b6efd4c8da5f74527166d8f373dbacefc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613106"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376835"
 ---
 # <a name="resizing-an-entire-image-image-editor-for-icons"></a>Změna velikosti celého obrázku (editor obrázků pro ikony)
 
@@ -48,5 +48,5 @@ Informace o přidávání prostředků do spravovaných projektů, najdete v té
 
 ## <a name="see-also"></a>Viz také
 
-[Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Změna velikosti obrázku](../windows/resizing-an-image-image-editor-for-icons.md)

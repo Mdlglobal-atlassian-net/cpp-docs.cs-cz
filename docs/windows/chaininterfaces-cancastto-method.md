@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8398f0bd4d9fdc786926782b13ebcac913a6a351
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 752c3598a38117506154b0a2b7d7d3e578bf3c3e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612867"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417641"
 ---
 # <a name="chaininterfacescancastto-method"></a>ChainInterfaces::CanCastTo – metoda
 
@@ -39,10 +39,10 @@ __forceinline bool CanCastTo(
 
 ### <a name="parameters"></a>Parametry
 
-*riid*  
+*riid*<br/>
 Identifikátor rozhraní.
 
-*ppv*  
+*ppv*<br/>
 Ukazatel na poslední ID rozhraní, který byl úspěšně převeden.
 
 ## <a name="return-value"></a>Návratová hodnota

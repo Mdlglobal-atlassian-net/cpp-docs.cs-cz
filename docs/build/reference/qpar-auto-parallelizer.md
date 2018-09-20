@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a701183becc7a561ca778dea383fdb57181d8da4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9e69bc999721bf833f100418442315fc8bb69e6c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710772"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413897"
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar (automatický modul pro paralelní zpracování)
 
@@ -53,9 +53,9 @@ Informace o tom, jak povolit výstupní zprávy pro automatický paralelizér, n
 
 ## <a name="see-also"></a>Viz také
 
-[/Q – možnosti (operace nízké úrovně)](../../build/reference/q-options-low-level-operations.md)
-[/Qpar-report (automatický Paralelizér úroveň generování sestav)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)
-[– možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[/Q – možnosti (operace nízké úrovně)](../../build/reference/q-options-low-level-operations.md)<br/>
+[/Qpar-report (úroveň generování sestav s automatickou paralelizací)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
-[#pragma loop()](../../preprocessor/loop.md)
-[paralelní programování v nativním kódu](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)
+[#pragma loop()](../../preprocessor/loop.md)<br/>
+[Paralelní programování v nativním kódu](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

@@ -1,5 +1,5 @@
 ---
-title: Výměna dat | Microsoft Docs
+title: Výměna dat | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e503bd9268423fbe63ec76de4bcb5443a7d52696
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 504d2ff9f011770f75db73a63fa77b821281269b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345817"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435555"
 ---
 # <a name="exchanging-data"></a>Výměna dat
-Stejně jako u většiny dialogových oken, výměnu dat mezi vlastností a aplikace je jedním z nejdůležitějších funkce seznamu vlastností. Tento článek popisuje, jak k provedení této úlohy.  
-  
- Výměna dat s vlastností je ve skutečnosti řádu výměna dat s stránkách vlastností jednotlivých seznamu vlastností. Výměna dat s stránky vlastností postup je stejný jako u výměna dat se dialogové okno, protože [CPropertyPage](../mfc/reference/cpropertypage-class.md) objekt je právě specializované [CDialog](../mfc/reference/cdialog-class.md) objektu. Postup využívá rozhraní framework dialogové okno dat systému exchange (DDX) prostředků, což výměny dat mezi ovládacími prvky v dialogovém okně pole a člen proměnné objektu dialogové okno pole.  
-  
- Důležitý rozdíl mezi výměna dat s vlastností a dialogové okno normální je, že seznam vlastností má více stránek, proto musí vyměňovat data s všechny stránky v seznamu vlastností. Další informace o DDX najdete v tématu [výměna dialogových dat a ověření](../mfc/dialog-data-exchange-and-validation.md).  
-  
- Následující příklad ilustruje výměnou dat mezi zobrazením a dvě stránky vlastností:  
-  
- [!code-cpp[NVC_MFCDocView#4](../mfc/codesnippet/cpp/exchanging-data_1.cpp)]  
-  
-## <a name="see-also"></a>Viz také  
- [Seznam vlastností](../mfc/property-sheets-mfc.md)
+
+Stejně jako u většiny dialogová okna, výměna dat mezi vlastností a aplikací je jednou z vašich nejdůležitějších funkcí vlastností. Tento článek popisuje, jak tento úkol provést.
+
+Výměna dat s vlastností je ve skutečnosti otázkou výměna dat se na stránkách vlastností jednotlivých vlastností. Postup pro výměnu dat pomocí stránky vlastností je stejná jako výměna dat se dialogové okno, protože [CPropertyPage](../mfc/reference/cpropertypage-class.md) objekt je jenom specializované [CDialog](../mfc/reference/cdialog-class.md) objektu. Postup využívá v rámci dialogového okna data exchange (DDX) zařízení, který vyměňuje data mezi ovládacími prvky v objektu pole dialogové okno dialogové okno pole a členské proměnné.
+
+Důležitý rozdíl mezi výměna dat s vlastností a s normální dialogového okna je, že seznam vlastností obsahuje více stránek, proto musí vyměňovat data s všechny stránky v seznamu vlastností. Další informace o DDX najdete v tématu [výměna dat dialogových oken a ověření](../mfc/dialog-data-exchange-and-validation.md).
+
+Následující příklad ukazuje výměnou dat mezi zobrazením a dvě stránky vlastností:
+
+[!code-cpp[NVC_MFCDocView#4](../mfc/codesnippet/cpp/exchanging-data_1.cpp)]
+
+## <a name="see-also"></a>Viz také
+
+[Seznamy vlastností](../mfc/property-sheets-mfc.md)
 

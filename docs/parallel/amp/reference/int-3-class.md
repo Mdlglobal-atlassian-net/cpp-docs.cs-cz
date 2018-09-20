@@ -82,205 +82,210 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d1f0f26856d6da002f5ba74bbfa8e98f27e4f02
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 69dd5e5080735c1b347b164887fdfab76aa9b178
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46042582"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428392"
 ---
 # <a name="int3-class"></a>int_3 – třída
-Představuje krátký vektor tří celých čísel.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class int_3;  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-typedefs"></a>Veřejné definice TypeDef  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|`value_type`||  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[int_3 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|int_3::get_x||  
-|int_3::get_xy||  
-|int_3::get_xyz||  
-|int_3::get_xz||  
-|int_3::get_xzy||  
-|int_3::get_y||  
-|int_3::get_yx||  
-|int_3::get_yxz||  
-|int_3::get_yz||  
-|int_3::get_yzx||  
-|int_3::get_z||  
-|int_3::get_zx||  
-|int_3::get_zxy||  
-|int_3::get_zy||  
-|int_3::get_zyx||  
-|int_3::ref_b||  
-|int_3::ref_g||  
-|int_3::ref_r||  
-|int_3::ref_x||  
-|int_3::ref_y||  
-|int_3::ref_z||  
-|int_3::set_x||  
-|int_3::set_xy||  
-|int_3::set_xyz||  
-|int_3::set_xz||  
-|int_3::set_xzy||  
-|int_3::set_y||  
-|int_3::set_yx||  
-|int_3::set_yxz||  
-|int_3::set_yz||  
-|int_3::set_yzx||  
-|int_3::set_z||  
-|int_3::set_zx||  
-|int_3::set_zxy||  
-|int_3::set_zy||  
-|int_3::set_zyx||  
-  
-### <a name="public-operators"></a>Veřejné operátory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|int_3::operator-||  
-|int_3::operator--||  
-|int_3::operator%=||  
-|int_3::operator&=||  
-|int_3::operator*=||  
-|int_3::Operator / =||  
-|int_3::operator^=||  
-|int_3::operator&#124;=||  
-|int_3::operator~||  
-|int_3::operator++||  
-|int_3::operator+=||  
-|int_3::operator<\<=||  
-|int_3::operator=||  
-|int_3::operator-=||  
-|int_3::operator>>=||  
-  
-### <a name="public-constants"></a>Veřejné konstanty  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[velikost – konstanta](#size)||  
-  
-### <a name="public-data-members"></a>Veřejné datové členy  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|int_3::b||  
-|int_3::bg||  
-|int_3::bgr||  
-|int_3::br||  
-|int_3::brg||  
-|int_3::g||  
-|int_3::GB||  
-|int_3::GBR||  
-|int_3::GR||  
-|int_3::grb||  
-|int_3::r||  
-|int_3::rb||  
-|int_3::rbg||  
-|int_3::rg||  
-|int_3::RGB||  
-|int_3::x||  
-|int_3::xy||  
-|int_3::xyz||  
-|int_3::xz||  
-|int_3::xzy||  
-|int_3::y||  
-|int_3::yx||  
-|int_3::yxz||  
-|int_3::yz||  
-|int_3::yzx||  
-|int_3::z||  
-|int_3::zx||  
-|int_3::zxy||  
-|int_3::Zy||  
-|int_3::zyx||  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `int_3`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** amp_short_vectors.h  
-  
- **Namespace:** Concurrency::graphics  
 
-## <a name="ctor"></a> int_3 – 
+Představuje krátký vektor tří celých čísel.
 
-Výchozí konstruktor, inicializuje všechny prvky na 0.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int_3() restrict(amp,cpu);  
-int_3(  
-   int _V0,  
-   int _V1,  
-   int _V2  
-) restrict(amp,cpu);  
-int_3(  
-   int _V  
-) restrict(amp,cpu);  
-int_3(  
-   const int_3& _Other  
-) restrict(amp,cpu);  
-explicit inline int_3(  
-   const uint_3& _Other  
-) restrict(amp,cpu);  
-explicit inline int_3(  
-   const float_3& _Other  
-) restrict(amp,cpu);  
-explicit inline int_3(  
-   const unorm_3& _Other  
-) restrict(amp,cpu);  
-explicit inline int_3(  
-   const norm_3& _Other  
-) restrict(amp,cpu);  
-explicit inline int_3(  
-   const double_3& _Other  
-) restrict(amp,cpu);  
-```  
-  
-### <a name="parameters"></a>Parametry  
+## <a name="syntax"></a>Syntaxe
+
+```
+class int_3;
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-typedefs"></a>Veřejné definice TypeDef
+
+|Název|Popis|
+|----------|-----------------|
+|`value_type`||
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[int_3 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|int_3::get_x||
+|int_3::get_xy||
+|int_3::get_xyz||
+|int_3::get_xz||
+|int_3::get_xzy||
+|int_3::get_y||
+|int_3::get_yx||
+|int_3::get_yxz||
+|int_3::get_yz||
+|int_3::get_yzx||
+|int_3::get_z||
+|int_3::get_zx||
+|int_3::get_zxy||
+|int_3::get_zy||
+|int_3::get_zyx||
+|int_3::ref_b||
+|int_3::ref_g||
+|int_3::ref_r||
+|int_3::ref_x||
+|int_3::ref_y||
+|int_3::ref_z||
+|int_3::set_x||
+|int_3::set_xy||
+|int_3::set_xyz||
+|int_3::set_xz||
+|int_3::set_xzy||
+|int_3::set_y||
+|int_3::set_yx||
+|int_3::set_yxz||
+|int_3::set_yz||
+|int_3::set_yzx||
+|int_3::set_z||
+|int_3::set_zx||
+|int_3::set_zxy||
+|int_3::set_zy||
+|int_3::set_zyx||
+
+### <a name="public-operators"></a>Veřejné operátory
+
+|Název|Popis|
+|----------|-----------------|
+|int_3::operator-||
+|int_3::operator--||
+|int_3::operator%=||
+|int_3::operator&=||
+|int_3::operator*=||
+|int_3::Operator / =||
+|int_3::operator^=||
+|int_3::operator&#124;=||
+|int_3::operator~||
+|int_3::operator++||
+|int_3::operator+=||
+|int_3::operator<\<=||
+|int_3::operator=||
+|int_3::operator-=||
+|int_3::operator>>=||
+
+### <a name="public-constants"></a>Veřejné konstanty
+
+|Název|Popis|
+|----------|-----------------|
+|[velikost – konstanta](#size)||
+
+### <a name="public-data-members"></a>Veřejné datové členy
+
+|Název|Popis|
+|----------|-----------------|
+|int_3::b||
+|int_3::bg||
+|int_3::bgr||
+|int_3::br||
+|int_3::brg||
+|int_3::g||
+|int_3::GB||
+|int_3::GBR||
+|int_3::GR||
+|int_3::grb||
+|int_3::r||
+|int_3::rb||
+|int_3::rbg||
+|int_3::rg||
+|int_3::RGB||
+|int_3::x||
+|int_3::xy||
+|int_3::xyz||
+|int_3::xz||
+|int_3::xzy||
+|int_3::y||
+|int_3::yx||
+|int_3::yxz||
+|int_3::yz||
+|int_3::yzx||
+|int_3::z||
+|int_3::zx||
+|int_3::zxy||
+|int_3::Zy||
+|int_3::zyx||
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`int_3`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** amp_short_vectors.h
+
+**Namespace:** Concurrency::graphics
+
+## <a name="ctor"></a> int_3 –
+
+Výchozí konstruktor, inicializuje všechny prvky na 0.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+int_3() restrict(amp,cpu);
+int_3(
+   int _V0,
+   int _V1,
+   int _V2
+) restrict(amp,cpu);
+int_3(
+   int _V
+) restrict(amp,cpu);
+int_3(
+   const int_3& _Other
+) restrict(amp,cpu);
+explicit inline int_3(
+   const uint_3& _Other
+) restrict(amp,cpu);
+explicit inline int_3(
+   const float_3& _Other
+) restrict(amp,cpu);
+explicit inline int_3(
+   const unorm_3& _Other
+) restrict(amp,cpu);
+explicit inline int_3(
+   const norm_3& _Other
+) restrict(amp,cpu);
+explicit inline int_3(
+   const double_3& _Other
+) restrict(amp,cpu);
+```
+
+### <a name="parameters"></a>Parametry
+
 *_V0*<br/>
-Hodnota inicializace prvek 0.  
-  
-*_V1*<br/>
-Hodnota inicializace element 1.  
-  
-*_V2*<br/>
-Hodnota inicializace elementu 2.  
-  
-*_V*<br/>
-Hodnota inicializace.  
-  
-*Ji_né*<br/>
-Objekt použitý k inicializaci.  
-  
-## <a name="size"></a> Velikost 
+Hodnota inicializace prvek 0.
 
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-static const int size = 3;  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)
+*_V1*<br/>
+Hodnota inicializace element 1.
+
+*_V2*<br/>
+Hodnota inicializace elementu 2.
+
+*_V*<br/>
+Hodnota inicializace.
+
+*Ji_né*<br/>
+Objekt použitý k inicializaci.
+
+## <a name="size"></a> Velikost
+
+## <a name="syntax"></a>Syntaxe
+
+```
+static const int size = 3;
+```
+
+## <a name="see-also"></a>Viz také
+
+[Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

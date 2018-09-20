@@ -1,5 +1,5 @@
 ---
-title: 'Kontejnery: Stavy klientských položek | Microsoft Docs'
+title: 'Kontejnery: Stavy klientských položek | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c02fb9e695fe206912f360dd1ad9907c6714cf1b
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: e482123207c287c33a36406ba961747545af7c73
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929715"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378048"
 ---
 # <a name="containers-client-item-states"></a>Kontejnery: Stavy klientských položek
-Tento článek vysvětluje různé stavy, které klientské položky projdou v celé jeho životnosti.  
-  
- Klientské položky projdou několik stavy, jako je vytvořen, aktivovat, upravit a uložit. Každý čas položky změny stavu, volání framework [COleClientItem::OnChange](../mfc/reference/coleclientitem-class.md#onchange) s **OLE_CHANGED_STATE** oznámení. Druhý parametr je hodnota z `COleClientItem::ItemState` výčtu. Může být jeden z následujících akcí:  
-  
--   *COleClientItem::emptyState*  
-  
--   *COleClientItem::loadedState*  
-  
--   *COleClientItem::openState*  
-  
--   *COleClientItem::activeState*  
-  
--   *COleClientItem::activeUIState*  
-  
- V prázdné stavu, klient položka ještě není úplně položku. Pro něj byl přidělen paměti, ale ještě nebyla inicializovaná daty položky OLE. Toto je stav položku klienta je v vytvořenou pomocí volání **nové** , ale ještě neprošel druhý krok vytvoření typické dvoustupňové.  
-  
- V druhém kroku, provádět prostřednictvím volání `COleClientItem::CreateFromFile` nebo jiný `CreateFrom` *xxxx* funkce, položka je zcela vytvořen. Byla přidružena data OLE (ze souboru nebo z jiného zdroje, jako např. schránku) `COleClientItem`-odvozené objektu. Položka se nyní v načíst stav.  
-  
- Pokud položku má byl otevřen v okně serveru spíše než v místě v kontejneru dokument otevřít, je ve stavu otevřít (nebo plně otevřít). V tomto stavu je cross šrafování obvykle vykresluje přes reprezentaci položky v okně kontejneru indikující, že je položka jinde aktivní.  
-  
- Když položka byla aktivována na místě, se předá, obvykle pouze stručně řečeno, prostřednictvím aktivním stavu. Potom vstupuje do stavu active uživatelského rozhraní, ve kterém se sloučil serveru jeho nabídky, panely nástrojů a další součásti uživatelského rozhraní s těmi, která kontejneru. Přítomnost tyto součásti uživatelského rozhraní rozlišuje aktivním stavu uživatelského rozhraní z aktivním stavu. Aktivním stavu, jinak se podobá aktivním stavu uživatelského rozhraní. Pokud je server podporuje vrácení zpět, je potřeba uchovávat informace zpět stav položky OLE, dokud nebude dosaženo stavu načíst nebo otevřete serveru.  
-  
-## <a name="see-also"></a>Viz také  
- [Kontejnery](../mfc/containers.md)   
- [Aktivace](../mfc/activation-cpp.md)   
- [Kontejnery: Oznámení klientských položek](../mfc/containers-client-item-notifications.md)   
- [Snímače](../mfc/trackers.md)   
- [CRectTracker – třída](../mfc/reference/crecttracker-class.md)
+
+Tento článek popisuje různé stavy, které prochází položku klienta v průběhu své životnosti.
+
+Klientské položky prochází několika stavů je vytvořen, aktivovat, upravit a uložit. Pokaždé, když změny stavu položky, rámec volá [COleClientItem::OnChange](../mfc/reference/coleclientitem-class.md#onchange) s **OLE_CHANGED_STATE** oznámení. Druhý parametr je hodnota z `COleClientItem::ItemState` výčtu. Může být jeden z následujících akcí:
+
+- *COleClientItem::emptyState*
+
+- *COleClientItem::loadedState*
+
+- *COleClientItem::openState*
+
+- *COleClientItem::activeState*
+
+- *COleClientItem::activeUIState*
+
+V prázdné stavu klientskou položku ještě není úplně položky. Pro něj byla přidělena paměť, ale dosud nebyla inicializována s daty položky OLE. Toto je stav položky klienta je v po vytvoření přímo pomocí volání **nové** , ale ještě neprošlo druhý krok typické dvoustupňové vytváření.
+
+V druhém kroku provádí prostřednictvím volání `COleClientItem::CreateFromFile` nebo jiném `CreateFrom` *xxxx* funkce, tato položka je zcela vytvořena. Je přidružená data OLE (ze souboru nebo jiného zdroje, jako např. schránku) `COleClientItem`-odvozenému objektu. Položka je nyní v načíst stav.
+
+Pokud položka má byl otevřen v okně serveru spíše než otevřít místo v dokumentu kontejneru, je ve stavu open (nebo zcela otevřená). V tomto stavu je mezi šrafování obvykle nakreslen přes reprezentace položky v okně kontejneru k označení, že položka je aktivní jinde.
+
+Když se položka byla aktivována na místě, předá, obvykle pouze stručně, prostřednictvím aktivním stavu. Potom zadá aktivním stavu uživatelského rozhraní sloučil serveru své nabídky, panely nástrojů a další komponenty uživatelského rozhraní s těmi kontejneru. Přítomnost tyto součásti uživatelského rozhraní odlišuje aktivním stavu uživatelského rozhraní v aktivním stavu. V opačném případě se podobá aktivní stav aktivního stavu uživatelského rozhraní. Pokud server podporuje vrácení zpět, je potřeba uchovávat informace zpět stav položky OLE. dokud nebude dosaženo stavu nenačetl nebo je otevřít na serveru.
+
+## <a name="see-also"></a>Viz také
+
+[Kontejnery](../mfc/containers.md)<br/>
+[Aktivace](../mfc/activation-cpp.md)<br/>
+[Kontejnery: Oznámení klientských položek](../mfc/containers-client-item-notifications.md)<br/>
+[Snímače](../mfc/trackers.md)<br/>
+[CRectTracker – třída](../mfc/reference/crecttracker-class.md)

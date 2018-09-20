@@ -1,5 +1,5 @@
 ---
-title: Ovládací prvky karet a seznamy vlastností | Microsoft Docs
+title: Ovládací prvky karet a seznamy vlastností | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 096c61a62ea382639356eca81483c9aacfe04b2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fc03427847a64330d1ff2814d268997f63fac6bd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385869"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382541"
 ---
 # <a name="tab-controls-and-property-sheets"></a>Ovládací prvky karet a seznamy vlastností
-Seznam vlastností jsou dialogová okna více stránek nebo "karta dialogy", které můžou zobrazit až 24 prostředky dialogu šablony pro uživatele. Příklady vlastností najdete v části dialogové okno Vlastnosti zobrazení Windows nebo následující ukázkovou aplikaci MFC:  
-  
- [CMNCTRL1: Předvádí běžné třídy ovládacích prvků, část 1](../visual-cpp-samples.md)  
-  
- [CMNCTRL2: Předvádí běžné třídy ovládacích prvků, část 2](../visual-cpp-samples.md)  
-  
- Seznam vlastností lze snadno implementovat pomocí třídy MFC [cpropertysheet –](../mfc/reference/cpropertysheet-class.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CTabCtrl](../mfc/using-ctabctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Seznamy vlastností jsou více stránky dialogová okna nebo "kartové dialogy", které můžete zobrazit až 24 prostředků šablony dialogového okna pro uživatele. Příklady seznamy vlastností zobrazí dialogové okno Vlastnosti zobrazení Windows nebo následující ukázkové aplikace knihovny MFC:
+
+[CMNCTRL1: Předvádí běžné třídy ovládacích prvků, část 1](../visual-cpp-samples.md)
+
+[CMNCTRL2: Předvádí běžné třídy ovládacích prvků, část 2](../visual-cpp-samples.md)
+
+Seznamy vlastností lze snadno implementovat pomocí třídy knihovny MFC [cpropertysheet –](../mfc/reference/cpropertysheet-class.md).
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CTabCtrl](../mfc/using-ctabctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

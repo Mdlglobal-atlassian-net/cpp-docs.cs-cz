@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 01785329b23ced8dd9ea5b22387f418173815ac8
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 6fd8a4b6781008b80be1b0c8fd33bc7f1eece7f9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314973"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431317"
 ---
 # <a name="finding-an-entry-in-an-accelerator-table"></a>Hledání záznamu v tabulce akcelerátorů
 
@@ -44,5 +44,5 @@ Win32
 
 ## <a name="see-also"></a>Viz také
 
-[Úprava tabulek akcelerátorů](../windows/editing-accelerator-tables.md)  
+[Úprava tabulek akcelerátorů](../windows/editing-accelerator-tables.md)<br/>
 [Editor akcelerátorů](../windows/accelerator-editor.md)

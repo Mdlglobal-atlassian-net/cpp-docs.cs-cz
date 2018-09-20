@@ -1,5 +1,5 @@
 ---
-title: Zprávy | Microsoft Docs
+title: Zprávy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d7544d92d55ec4a1f6d15f3c1d4358970bf2deb
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: f25c9cc70cec598f975bbd242af83597311bdc7c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928338"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392252"
 ---
 # <a name="messages"></a>Zprávy
-Ve smyčce zpráv `Run` funkce člena třídy `CWinApp` načte zprávy vytvářené různých událostí zařazených do fronty. Například když uživatel klikne myš, systém Windows odešle několik zprávy týkající se myš, například WM_LBUTTONDOWN při stisknutí levým tlačítkem myši a WM_LBUTTONUP po vydání levé tlačítko. Implementace rozhraní framework zpráva smyčky aplikace odešle zprávy do příslušné okna.  
-  
- Důležité kategorie zpráv jsou popsány v [kategorie zpráv](../mfc/message-categories.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Zprávy a příkazy v prostředí .NET Framework](../mfc/messages-and-commands-in-the-framework.md)
+
+Smyčky zpráv v `Run` členské funkce třídy `CWinApp` načte zařazených do fronty zprávy generované různé události. Například když uživatel klikne myší, Windows odešle několik zprávy týkající se myši, jako je například WM_LBUTTONDOWN, když se stiskne levé tlačítko myši a WM_LBUTTONUP, když se uvolní levé tlačítko myši. Implementace smyčky zpráv aplikace odešle zprávu, která se příslušné okno.
+
+Důležité kategorie zpráv, které jsou popsány v [kategorie zpráv](../mfc/message-categories.md).
+
+## <a name="see-also"></a>Viz také
+
+[Zprávy a příkazy v prostředí .NET Framework](../mfc/messages-and-commands-in-the-framework.md)
 

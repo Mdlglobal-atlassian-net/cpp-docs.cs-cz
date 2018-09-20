@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c97ca07e06da3663dfd0a06a125f361b4e4dc591
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7e3de9b373a80ef939f5ac5ff3d746e0ebdc8b74
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758027"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405460"
 ---
 # <a name="using-cstring"></a>CString – použití
 
@@ -54,41 +54,41 @@ int main() {
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[CString – základní operace](../atl-mfc-shared/basic-cstring-operations.md)  
+[CString – základní operace](../atl-mfc-shared/basic-cstring-operations.md)<br/>
 Popisuje základní `CString` operace, včetně vytváření objektů z řetězcové literály jazyka C, přístup k jednotlivé znaky `CString`zřetězení dvou objektů a porovnání `CString` objekty.
 
-[Správa řetězcových dat](../atl-mfc-shared/string-data-management.md)  
+[Správa řetězcových dat](../atl-mfc-shared/string-data-management.md)<br/>
 Popisuje použití kódování Unicode a MBCS s `CString`.
 
-[CString – sémantika](../atl-mfc-shared/cstring-semantics.md)  
+[CString – sémantika](../atl-mfc-shared/cstring-semantics.md)<br/>
 Vysvětluje, jak `CString` objekty se používají.
 
-[CString – operace týkající se řetězců ve stylu jazyka C](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)  
+[CString – operace týkající se řetězců ve stylu jazyka C](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
 Popisuje práce s obsahem `CString` objekt jako řetězec stylu C zakončený hodnotou null.
 
-[Přidělování a uvolňování pro BSTR](../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)  
+[Přidělování a uvolňování pro BSTR](../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)<br/>
 Tento článek popisuje použití paměti pro BSTR a modelu COM objekty.
 
-[CString – čištění výjimek](../atl-mfc-shared/cstring-exception-cleanup.md)  
+[CString – čištění výjimek](../atl-mfc-shared/cstring-exception-cleanup.md)<br/>
 Vysvětluje, že explicitní vyčištění v MFC 3.0 a novější už nejsou potřebná.
 
-[CString – předávání argumentů](../atl-mfc-shared/cstring-argument-passing.md)  
+[CString – předávání argumentů](../atl-mfc-shared/cstring-argument-passing.md)<br/>
 Vysvětluje, jak předat CString – objekty funkce a jak vrátit `CString` objekty z funkce.
 
-[Podpora znakových sad Unicode a MBCS](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)  
+[Podpora znakových sad Unicode a MBCS](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)<br/>
 Popisuje, jak MFC je povolená pro kódování Unicode a MBCS podporovat.
 
 ## <a name="reference"></a>Odkaz
 
-[CStringT](../atl-mfc-shared/reference/cstringt-class.md)  
+[CStringT](../atl-mfc-shared/reference/cstringt-class.md)<br/>
 Poskytuje referenční informace o `CStringT` třídy.
 
-[CSimpleStringT – třída](../atl-mfc-shared/reference/csimplestringt-class.md)  
+[CSimpleStringT – třída](../atl-mfc-shared/reference/csimplestringt-class.md)<br/>
 Poskytuje referenční informace o `CSimpleStringT` třídy.
 
 ## <a name="related-sections"></a>Související oddíly
 
-[Řetězce (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
+[Řetězce (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 Obsahuje odkazy na témata, která popisují několik způsobů, jak spravovat data řetězce.
 
 [Řetězce (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)

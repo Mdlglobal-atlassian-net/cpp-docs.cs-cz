@@ -1,5 +1,5 @@
 ---
-title: – Komentář k Přepisovatelným | Microsoft Docs
+title: --Komentář k Přepisovatelným | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a1b9b04647717fc5892421f2b45947ebd079a0c
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: d50fb62767f2130e89cb75df5d66f8c18ce2a097
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928724"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428054"
 ---
 # <a name="-overridables-comment"></a>// Komentář k přepisovatelným
-`// Overridables` Obsahuje deklarace tříd MFC virtuální funkce, které můžete přepsat v odvozené třídě, když potřebujete změnit chování základní třídy. Že jsou obvykle s názvem počínaje "Na", ačkoli to není nezbytně nutné. Funkce tady jsou navrženy pro přepsat a často implementovat nebo zadejte nějaká "zpětného volání" nebo "připojit". Obvykle jsou chráněny tito členové.  
-  
- V prostředí MFC samotné jsou vždy umístěny čistý virtuální funkce v této části. Čistou virtuální funkci v jazyce C++ je jedním z formuláře:  
-  
- `virtual void OnDraw( ) = 0;`  
-  
- V ukázce výpis z třídy `CStdioFile`v [příklad komentářů](../mfc/an-example-of-the-comments.md), seznam obsahuje žádnou část k přepisovatelným. Třída `CDocument`, na druhé straně zobrazí přibližně 10 přepisovatelné členské funkce.  
-  
- V některých tříd, může se také zobrazit komentář `// Advanced Overridables`. Toto jsou funkce, které pouze pokročilé programátory pokuste se přepsat. Musíte pravděpodobně nikdy nepřepíšete.  
-  
+
+`// Overridables` Část deklarace třídy knihovny MFC obsahuje virtuální funkce, které můžete přepsat v odvozené třídě. Pokud chcete změnit chování základní třídy. Jsou obvykle nazývají počínaje "On", přestože to není nezbytně nutné. Funkce Zde jsou navrženy k přepsat a často implementovat nebo zadejte nějaký druh "zpětné volání" nebo "připojení". Obvykle jsou chráněny těchto členů.
+
+V prostředí MFC sama jsou čistě virtuální funkce vždy umístěny v této části. Čistě virtuální funkce v jazyce C++ je jedním z formuláře:
+
+`virtual void OnDraw( ) = 0;`
+
+V ukázce výpis z třídy `CStdioFile`v [příklad, komentáře](../mfc/an-example-of-the-comments.md), patří k přepisovatelným oddíl. Třída `CDocument`, na druhé straně jsou uvedeny přibližně 10 přepisovatelné členské funkce.
+
+V některých tříd, může se zobrazit také komentáře `// Advanced Overridables`. Toto jsou funkce, které pouze rozšířené programátoři má pokusit o přepsání. Musíte se pravděpodobně nikdy k jejich přepsání.
+
 > [!NOTE]
->  Konvence popsané v tomto článku použít také, obecně vlastností a metod automatizace (dříve označované jako automatizace OLE). Automatizace metody jsou podobná MFC operace. Vlastnosti automatizace jsou podobná MFC atributy. Události automatizace (podporuje pro ovládací prvky ActiveX, dřív označované jako ovládací prvky OLE) jsou podobná MFC přepisovatelné členské funkce.  
-  
-## <a name="see-also"></a>Viz také  
- [Použití zdrojových souborů MFC](../mfc/using-the-mfc-source-files.md)   
- [Příklad komentářů](../mfc/an-example-of-the-comments.md)   
- [Implementační komentář](../mfc/decrement-implementation-comment.md)   
- [/ Komentář ke konstruktorům](../mfc/decrement-constructors-comment.md)   
- [Komentář k atributům](../mfc/decrement-attributes-comment.md)   
- [Komentář k operacím](../mfc/decrement-operations-comment.md)
+>  Konvence popsaných v tomto článku je možné použít také, obecně pro Automation (dříve označované jako automatizace OLE) metody a vlastnosti. Automatizace metody jsou podobné operacím knihovny MFC. Vlastnosti automatizace se podobají atributy knihovny MFC. Přepisovatelné členské funkce MFC podobají událostí automatizace (podporovaných pro ovládací prvky ActiveX, dřív označované jako ovládací prvky OLE).
+
+## <a name="see-also"></a>Viz také
+
+[Použití zdrojových souborů MFC](../mfc/using-the-mfc-source-files.md)<br/>
+[Příklad komentářů](../mfc/an-example-of-the-comments.md)<br/>
+[/ / Implementační komentář](../mfc/decrement-implementation-comment.md)<br/>
+[/ Komentář ke konstruktorům](../mfc/decrement-constructors-comment.md)<br/>
+[Komentář k atributům](../mfc/decrement-attributes-comment.md)<br/>
+[Komentář k operacím](../mfc/decrement-operations-comment.md)
 

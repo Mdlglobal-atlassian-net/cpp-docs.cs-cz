@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2cc6b296684c13c2cf9c538a226fb440a2e50349
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 121d3bf1fd7d59f36362a034216e0728b2fc25b0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599260"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448347"
 ---
 # <a name="generics--c-component-extensions"></a>Obecné typy (rozšíření komponent C++)
 
@@ -33,35 +33,35 @@ Obecné typy jsou parametrizované typy a metody. V této části přečtěte si
 
 ### <a name="supported-by-the-windows-runtime-and-the-common-language-runtime"></a>Podporuje prostředí Windows Runtime a modul Common Language Runtime
 
-[Přehled obecných typů ve Visual C++](../windows/overview-of-generics-in-visual-cpp.md)  
+[Přehled obecných typů ve Visual C++](../windows/overview-of-generics-in-visual-cpp.md)<br/>
 Informace o obecných typů jsou motivace pro funkci jazyk definice termíny používané k popisu obecné typy a informace o používání typy odkazů a typy hodnot jako parametry typu pro obecné typy.
 
-[Obecná rozhraní (Visual C++)](../windows/generic-interfaces-visual-cpp.md)  
+[Obecná rozhraní (Visual C++)](../windows/generic-interfaces-visual-cpp.md)<br/>
 Informace o definování a použití obecných rozhraní.
 
-[Obecní delegáti (Visual C++)](../windows/generic-delegates-visual-cpp.md)  
+[Obecní delegáti (Visual C++)](../windows/generic-delegates-visual-cpp.md)<br/>
 Informace o definování a používání obecných delegátů.
 
-[Omezení parametrů obecných typů (C++/CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
+[Omezení parametrů obecných typů (C++/CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)<br/>
 Informace o použití omezení v obecných typech.
 
-[Použití obecných typů (C++/CLI)](../windows/consuming-generics-cpp-cli.md)  
+[Použití obecných typů (C++/CLI)](../windows/consuming-generics-cpp-cli.md)<br/>
 Informace o použití obecných typů definované v sestavení .NET, může být vytvořená v jiných jazycích, v jazyce Visual C++.
 
-[Obecné typy a šablony (Visual C++)](../windows/generics-and-templates-visual-cpp.md)  
+[Obecné typy a šablony (Visual C++)](../windows/generics-and-templates-visual-cpp.md)<br/>
 Porovnání obecné typy a šablony pro použití každou a jak kombinovat úspěšně.
 
 ### <a name="supported-by-the-common-language-runtime"></a>Podporuje modul Common Language Runtime
 
-[Obecné funkce (C++/CLI)](../windows/generic-functions-cpp-cli.md)  
+[Obecné funkce (C++/CLI)](../windows/generic-functions-cpp-cli.md)<br/>
 Informace o definování a použití obecné funkce a metody.
 
-[Obecné třídy (C++/CLI)](../windows/generic-classes-cpp-cli.md)  
+[Obecné třídy (C++/CLI)](../windows/generic-classes-cpp-cli.md)<br/>
 Informace o definování a použití obecné třídy.
 
 ## <a name="related-sections"></a>Související oddíly
 
-[Postupy: Iterace v obecné kolekci s výrazem for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)  
+[Postupy: Iterace v obecné kolekci s výrazem for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)<br/>
 Použití [u každé v](../dotnet/for-each-in.md) – klíčové slovo v obecné kolekci.
 
 ## <a name="see-also"></a>Viz také

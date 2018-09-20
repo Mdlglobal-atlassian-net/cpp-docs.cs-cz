@@ -1,5 +1,5 @@
 ---
-title: 'TN028: Podpora kontextové nápovědy | Microsoft Docs'
+title: 'TN028: Podpora kontextové nápovědy | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,152 +18,160 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45a8835b43225a8e134da0f983f7c86d461a0636
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: e2bc7b3db974a34022089facb2536cf12c49b48a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954894"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394163"
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028: Podpora kontextové nápovědy
-Tato poznámka popisuje pravidla pro přiřazování ID kontexty nápovědy a další pomoc problémy v prostředí MFC. Podpora kontextové nápovědy vyžaduje kompilátor nápovědy, která je k dispozici v jazyce Visual C++.  
-  
+
+Tato poznámka popisuje pravidla pro přiřazování ID kontextů nápovědy a další problémy nápovědy v knihovně MFC. Podpora kontextové nápovědy vyžaduje kompilátor nápovědy, která je k dispozici v jazyce Visual C++.
+
 > [!NOTE]
->  Kromě implementace Kontextová nápověda pomocí WinHelp, MFC také podporuje používání nápovědy HTML. Další informace o tuto podporu a programování s nápovědou HTML najdete v tématu [nápovědy HTML: Context-Sensitive Nápověda pro vaše programy](../mfc/html-help-context-sensitive-help-for-your-programs.md).  
-  
-## <a name="types-of-help-supported"></a>Typy podporované nápovědy  
- Existují dva typy Kontextová nápověda implementovaná v aplikacích Windows. První, označuje jako "Nápověda F1" zahrnuje spuštění WinHelp s odpovídající kontext založen na aktuálně aktivní objektu. Druhá je režim "Shift + F1". V tomto režimu změní myší na kurzor nápovědy a pokračuje uživatel kliknout na objekt. V tomto bodě se spustí WinHelp poskytnout nápovědu pro objekt, který uživatel klepl.  
-  
- Microsoft Foundation třídy implementovat obě tyto formuláře nápovědy. Kromě toho rozhraní podporuje dva příkazy jednoduché nápovědy, pomůže Index a použití pomoci.  
-  
-## <a name="help-files"></a>Soubory nápovědy  
- Microsoft Foundation třídy předpokládají do jednoho souboru nápovědy. Tento soubor nápovědy musí mít stejný název a cestu jako aplikace. Například pokud spustitelný soubor je C:\MyApplication\MyHelp.exe musí být v souboru nápovědy C:\MyApplication\MyHelp.hlp. Nastavení cesty prostřednictvím *m_pszHelpFilePath* členské proměnné [CWinApp – třída](../mfc/reference/cwinapp-class.md).  
-  
-## <a name="help-context-ranges"></a>Rozsahy kontextové nápovědy  
- Výchozí implementace MFC vyžaduje program podle některá pravidla o přiřazení kontextové nápovědy ID. Tato pravidla jsou určitý rozsah ID přidělené na konkrétní ovládací prvky. Tato pravidla můžete přepsat zadáním jiné implementace různých funkcí souvisejících s člen.  
-  
-```  
-0x00000000 - 0x0000FFFF : user defined  
-0x00010000 - 0x0001FFFF : commands (menus/command buttons)  
-0x00010000 + ID_  
-(note: 0x18000-> 0x1FFFF is the practical range since command IDs are>=0x8000)  
-0x00020000 - 0x0002FFFF : windows and dialogs  
-0x00020000 + IDR_  
-(note: 0x20000-> 0x27FFF is the practical range since IDRs are <= 0x7FFF)  
-0x00030000 - 0x0003FFFF : error messages (based on error string ID)  
-0x00030000 + IDP_  
-0x00040000 - 0x0004FFFF : special purpose (non-client areas)  
-0x00040000 + HitTest area  
-0x00050000 - 0x0005FFFF : controls (those that are not commands)  
-0x00040000 + IDW_  
-```  
-  
-## <a name="simple-help-commands"></a>Příkazy jednoduchý "Nápověda"  
- Existují dva jednoduché příkazy nápovědy, které implementují Microsoft Foundation třídy:  
-  
--   Id_help_index –, které je implementované [CWinApp::OnHelpIndex](../mfc/reference/cwinapp-class.md#onhelpindex)  
-  
--   Id_help_using –, které je implementované [CWinApp::OnHelpUsing](../mfc/reference/cwinapp-class.md#onhelpusing)  
-  
- První příkaz zobrazí indexu nápovědy pro aplikaci. U druhé se zobrazí v nápovědě uživatele na pomocí programu WinHelp.  
-  
-## <a name="context-sensitive-help-f1-help"></a>Kontextové nápovědy (Nápověda F1)  
- Klávesy F1 je obvykle přeložen na příkaz s id_help s ID – akcelerátor umístí do tabulky akcelerátorů hlavního okna. Id_help – příkaz může být generována také tlačítko s ID id_help – na pole hlavní okno nebo dialogové okno.  
-  
- Bez ohledu na to, jak se vygeneruje id_help – příkaz je směrována jako normální příkaz dokud nedosáhne obslužná rutina příkazu. Další informace o architektuře směrování příkazů MFC, najdete v části [Technická poznámka 21](../mfc/tn021-command-and-message-routing.md). Pokud aplikace má povolené nápovědy, bude zpracovávat id_help – příkaz [CWinApp::OnHelp](../mfc/reference/cwinapp-class.md#onhelp). Objekt aplikace přijímá zprávy nápovědy a pak směruje příkaz správně. To je nezbytné, protože výchozí směrování příkazů není vhodný pro určení nejvíce kontextu.  
-  
- `CWinApp::OnHelp` se pokusí spustit WinHelp v následujícím pořadí:  
-  
-1.  Kontroluje aktivní `AfxMessageBox` volání s pomůže ID. Pokud je aktuálně aktivní okno se zprávou, WinHelp se spustí s kontextem vhodné pro dané pole zpráva.  
-  
-2.  Odešle zprávu WM_COMMANDHELP na aktivní okno. Pokud toto okno spuštěním WinHelp neodpoví, stejná zpráva dokud zpracovat zprávu nebo aktuální není nejvyšší úrovně okně pak posílá nadřazených členů toto okno.  
-  
-3.  Id_default_help – příkaz odešle do hlavního okna. Tím se spustí výchozího nápovědy. Tento příkaz je obvykle namapována na `CWinApp::OnHelpIndex`.  
-  
- Globálně přepsat výchozí ID základní hodnoty (například 0x10000 pro příkazy a 0x20000 pro prostředky, jako je například dialogová okna), by měly přepsat aplikaci [CWinApp::WinHelp](../mfc/reference/cwinapp-class.md#winhelp).  
-  
- Pokud chcete přepsat, tato funkce a způsobem, že je určen kontextové nápovědy, by měla řídit WM_COMMANDHELP zprávy. Můžete chtít poskytují podrobnější nápovědy směrování než poskytuje rozhraní, protože pouze probíhá hloubky aktuální podřízeného okna MDI. Můžete také zadat konkrétnější nápovědy pro konkrétní okno nebo dialogové okno, případně podle aktuální vnitřní stav tohoto objektu nebo aktivní ovládací prvek v dialogovém okně.  
-  
-## <a name="wmcommandhelp"></a>WM_COMMANDHELP  
-  
-```  
- 
-afx_msg LRESULT CWnd::OnCommandHelp(WPARAM wParam, LPARAM lParam)  
- 
-```  
-  
- WM_COMMANDHELP je privátní zpráva Windows MFC, který je přijatých aktivní okno, pokud se požaduje nápovědy. Když okna obdrží tuto zprávu, může volat `CWinApp::WinHelp` s kontextem, který odpovídá okna vnitřní stav.  
-  
- *lParam*  
- Obsahuje kontext aktuálně k dispozici nápověda. *lParam* rovná nule, pokud byla zjištěna žádný kontext nápovědy. Implementace `OnCommandHelp` můžete použít ID kontextu v *lParam* k určení různých kontext nebo můžete stačí předat jej do `CWinApp::WinHelp`.  
-  
- *wParam*  
- Se nepoužívá a bude nula.  
-  
- Pokud `OnCommandHelp` volání funkce `CWinApp::WinHelp`, měla by vrátit **TRUE**. Vrácení **TRUE** zastaví směrování tohoto příkazu pro jiné třídy a další windows.  
-  
-## <a name="help-mode-shiftf1-help"></a>Režim nápovědy (Shift + F1 – Nápověda)  
- Jde o druhou podobu Kontextová nápověda. Tento režim je obecně zadání stisknutím kláves SHIFT + F1 nebo prostřednictvím nabídky panelu nástrojů. Jsou implementované jako příkaz (id_context_help –). Hák filtr zpráv se nepoužívá k převede tento příkaz při modální dialogové okno nebo nabídky je aktivní, proto tento příkaz je k dispozici pouze uživateli, když se aplikace spouští hlavní message pump (`CWinApp::Run`).  
-  
- Po zadání tohoto režimu, ukazatelem myši nápovědy se zobrazí přes všechny oblasti aplikace, i v případě, že aplikace by za normálních okolností zobrazit svou vlastní kurzor pro tuto oblast (např. nastavení velikosti ohraničení okno). Uživatel je možné používat myš nebo klávesnice a vyberte příkaz. Místo provedení příkazu, zobrazení nápovědy na tento příkaz. Také uživatel může kliknout na objekt viditelný na obrazovce, například tlačítka na panelu nástrojů a zobrazí nápovědu pro tento objekt. Tento režim nápovědy poskytuje `CWinApp::OnContextHelp`.  
-  
- Během provádění této smyčky, všechny klávesové vstup je neaktivní, s výjimkou klíče, které přístup k nabídce. Navíc se stále provádí překlad příkaz prostřednictvím `PreTranslateMessage` umožňující uživateli pomocí klávesy akcelerátoru a zobrazit nápovědu k tomuto příkazu.  
-  
- Pokud existují konkrétní překlady nebo akce trvá umístit `PreTranslateMessage` funkce, který by neměl probíhat během režimu SHIFT + F1 – Nápověda, měli byste zkontrolovat *m_bHelpMode* členem `CWinApp` před provedením ty operace. `CDialog` Implementace `PreTranslateMessage` kontroluje to před voláním `IsDialogMessage`, např. Během režimu SHIFT + F1 to zakáže "dialogové okno navigační" klávesy na nemodální dialogová okna. Kromě toho `CWinApp::OnIdle` je stále volána v průběhu této smyčky.  
-  
- Pokud se uživatel rozhodne příkazu v nabídce, se zpracovává jako nápovědu v tomto příkazu (prostřednictvím WM_COMMANDHELP, viz níže). Pokud uživatel klikne viditelné oblast okna aplikace, rozhodne, zda je klikněte na tlačítko nonclient nebo klikněte na klienta. `OnContextHelp` mapování obslužných rutin nonclient klikne na kliknutí klienta automaticky. Pokud je klient kliknutím, pak se odešle WM_HELPHITTEST do okna označeného. Pokud toto okno vrátí nenulovou hodnotu, tato hodnota se používá jako kontext nápovědu. Pokud vrátí hodnotu nula, `OnContextHelp` pokusí nadřazeného okna (a které se jeho nadřazeným prvkem a tak dále). Pokud kontextové nápovědy nelze určit, ve výchozím nastavení se id_default_help – příkaz poslat hlavní okno, která se pak (obvykle) mapuje na `CWinApp::OnHelpIndex`.  
-  
-## <a name="wmhelphittest"></a>WM_HELPHITTEST  
-  
-```  
- 
+>  Kromě provádění WinHelp pomocí kontextové nápovědy, MFC také podporuje přes nabídku Nápověda jazyka HTML. Další informace o tuto podporu a programování s nápovědou HTML naleznete v tématu [HTML Help: Context-Sensitive Help for Your Programs](../mfc/html-help-context-sensitive-help-for-your-programs.md).
+
+## <a name="types-of-help-supported"></a>Typy podporované nápovědy
+
+Existují dva druhy kontextové nápovědy, které jsou implementované v aplikacích Windows. První, označuje jako "Nápověda F1" zahrnuje spuštění WinHelp s odpovídající kontext založen na aktuálně aktivní objekt. Druhým je režim "Shift + F1". V tomto režimu se ukazatel změní na kurzor nápovědy a uživatel pokračuje na objekt. V tomto okamžiku WinHelp spuštění a poskytnout pomoc pro objekt, který uživatel kliknul na.
+
+Microsoft Foundation Classes implementovat oba z těchto forem nápovědy. Kromě toho rozhraní framework podporuje dva příkazy jednoduché nápovědy, Index nápovědy a pomoci.
+
+## <a name="help-files"></a>Soubory nápovědy
+
+Microsoft Foundation classes předpokládají jednoho souboru nápovědy. Tento soubor nápovědy musí mít stejný název a cestu jako aplikace. Například pokud je spustitelný soubor C:\MyApplication\MyHelp.exe musí být v souboru nápovědy C:\MyApplication\MyHelp.hlp. Nastavte cestu prostřednictvím *m_pszHelpFilePath* členské proměnné [CWinApp – třída](../mfc/reference/cwinapp-class.md).
+
+## <a name="help-context-ranges"></a>Rozsahy kontextové nápovědy
+
+Výchozí implementace MFC vyžaduje programu použít některá pravidla přiřazení kontextové nápovědy ID. Tato pravidla jsou určitý rozsah ID přidělené k určité ovládací prvky. Tato pravidla můžete přepsat tím, že poskytuje různé implementace různých souvisejících s nápovědou členských funkcí.
+
+```
+0x00000000 - 0x0000FFFF : user defined
+0x00010000 - 0x0001FFFF : commands (menus/command buttons)
+0x00010000 + ID_
+(note: 0x18000-> 0x1FFFF is the practical range since command IDs are>=0x8000)
+0x00020000 - 0x0002FFFF : windows and dialogs
+0x00020000 + IDR_
+(note: 0x20000-> 0x27FFF is the practical range since IDRs are <= 0x7FFF)
+0x00030000 - 0x0003FFFF : error messages (based on error string ID)
+0x00030000 + IDP_
+0x00040000 - 0x0004FFFF : special purpose (non-client areas)
+0x00040000 + HitTest area
+0x00050000 - 0x0005FFFF : controls (those that are not commands)
+0x00040000 + IDW_
+```
+
+## <a name="simple-help-commands"></a>Příkazy jednoduché "Help"
+
+Existují dvou jednoduchých příkazů nápovědy, které jsou implementovány v rámci tříd Microsoft Foundation:
+
+- Id_help_index –, který je implementován [CWinApp::OnHelpIndex](../mfc/reference/cwinapp-class.md#onhelpindex)
+
+- Id_help_using –, který je implementován [CWinApp::OnHelpUsing](../mfc/reference/cwinapp-class.md#onhelpusing)
+
+První příkaz zobrazí index nápovědy pro aplikaci. Druhé se zobrazí uživatelské nápovědy pomocí programu WinHelp.
+
+## <a name="context-sensitive-help-f1-help"></a>Kontextové nápovědy (Nápověda F1)
+
+Klávesy F1 je obvykle přeložit do příkazu se ID sady id_help – za akcelerátoru umístí do tabulky akcelerátorů hlavního okna. Id_help – příkaz může být také generován tlačítko s ID id_help – v hlavním okně nebo dialogovém okně pole.
+
+Bez ohledu na to, jak je generován id_help – příkaz přesměruje ho jako normální příkaz dokud nedosáhne obslužná rutina příkazu. Další informace o architektuře MFC směrování příkazů [Technická poznámka 21](../mfc/tn021-command-and-message-routing.md). Pokud má aplikace Help povolena, id_help – příkaz bude zpracován adresou [CWinApp::OnHelp](../mfc/reference/cwinapp-class.md#onhelp). Objekt aplikace přijme zprávu nápovědy a přesměruje příkaz odpovídajícím způsobem. To je nezbytné, protože výchozí směrování příkazů není vhodný pro určení nejspecifičtější kontextu.
+
+`CWinApp::OnHelp` pokusy o spuštění WinHelp v následujícím pořadí:
+
+1. Kontroluje aktivní `AfxMessageBox` volání s pomáhají ID. Pokud je aktuálně aktivní okno se zprávou, WinHelp se spustí s kontextem vhodné tuto okno se zprávou.
+
+1. Odešle zprávu WM_COMMANDHELP do aktivního okna. Pokud toto okno spuštěním WinHelp neodpoví, stejnou zprávu odeslaný na předchůdce tohoto okna dokud zpracování zprávy nebo aktuální okno je okno nejvyšší úrovně.
+
+1. Id_default_help – příkaz odešle do hlavního okna. Tím se spustí výchozí nápovědy. Tento příkaz se obvykle mapuje na `CWinApp::OnHelpIndex`.
+
+Globálně přepsat výchozí ID základní hodnoty (například 0x10000 pro příkazy a 0x20000 pro prostředky, například dialogová okna), aplikace by měly přepsat [CWinApp::WinHelp](../mfc/reference/cwinapp-class.md#winhelp).
+
+Pokud chcete přepsat tuto funkci a tak, že je určena kontextové nápovědy, zpracovávejte WM_COMMANDHELP zprávy. Můžete chtít poskytnout konkrétnější nápovědy směrování než poskytuje rozhraní, protože pouze přejde hluboké aktuální podřízené okno MDI. Také můžete chtít poskytnout další nápovědu pro konkrétní okno nebo dialogového okna, například podle aktuální vnitřní stav tohoto objektu nebo aktivní ovládací prvek v rámci dialogového okna.
+
+## <a name="wmcommandhelp"></a>WM_COMMANDHELP
+
+```
+
+afx_msg LRESULT CWnd::OnCommandHelp(WPARAM wParam, LPARAM lParam)
+
+```
+
+WM_COMMANDHELP je soukromých zpráv knihovny MFC Windows, které se získaly podle aktivního okna, pokud se požaduje nápovědy. Když v okně obdrží tuto zprávu, může volat `CWinApp::WinHelp` s kontextem, který odpovídá vnitřní stav okna.
+
+*lParam*<br/>
+Obsahuje aktuálně k dispozici kontextové nápovědy. *lParam* je nula, pokud byly určeny žádné kontextové nápovědy. Implementace `OnCommandHelp` můžete použít ID kontextu v *lParam* k určení jiného kontextu nebo právě jej lze předat do `CWinApp::WinHelp`.
+
+*wParam*<br/>
+Se nepoužívá a bude nula.
+
+Pokud `OnCommandHelp` volání funkce `CWinApp::WinHelp`, měla by vrátit **TRUE**. Vrací **TRUE** zastaví směrování tento příkaz k jiné třídy a dalších oknech.
+
+## <a name="help-mode-shiftf1-help"></a>Režim nápovědy (Nápověda Shift + F1)
+
+Toto je tedy o druhou podobu kontextové nápovědy. Obecně platí tento režim je zadání stisknutím klávesy SHIFT + F1 nebo prostřednictvím nabídky panelu nástrojů. Je implementován jako příkaz (id_context_help –). Zavěšení filtru zprávy se nepoužívá pro převod tento příkaz při modální dialogové okno nebo nabídka je aktivní, proto tento příkaz je k dispozici pouze uživateli, pokud aplikace provádí pumpu zpráv hlavní (`CWinApp::Run`).
+
+Po zadání tohoto režimu, se zobrazí kurzor myši nápovědy přes všechny oblasti aplikace, i v případě, že aplikace obvykle zobrazí jeho vlastní kurzoru pro tuto oblast (např. velikosti ohraničení kolem okno). Uživatel je možné vybrat příkaz pomocí myši nebo klávesnice. Namísto provádění příkazu se zobrazí nápovědu k tento příkaz. Také uživatel může kliknout na objekt viditelný na obrazovce, jako je například tlačítko na panelu nástrojů a zobrazí nápovědu pro daný objekt. Tento režim Nápověda je poskytována `CWinApp::OnContextHelp`.
+
+Během provádění této smyčky, všechny vstup klávesnice je neaktivní, s výjimkou klíče, které přistupují k nabídce. Navíc se příkaz překlad stále provádí prostřednictvím `PreTranslateMessage` aby uživatel mohl klávesy akcelerátoru a zobrazit nápovědu k tento příkaz.
+
+Pokud existují konkrétní překlady nebo akce trvá umístit `PreTranslateMessage` funkce, která by neměl probíhat během režimu nápovědy klávesy SHIFT + F1, měli byste zkontrolovat *m_bHelpMode* člen `CWinApp` než se pustíte do těch operace. `CDialog` Provádění `PreTranslateMessage` zkontroluje to před voláním `IsDialogMessage`, např. Zakáže "dialogové okno navigační" klávesy na nemodální dialogová okna v režimu SHIFT + F1. Kromě toho `CWinApp::OnIdle` je stále volána v průběhu této smyčky.
+
+Pokud uživatel vybere příkaz v nabídce, zpracuje se jako nápovědu k tomuto příkazu (prostřednictvím WM_COMMANDHELP, viz níže). Pokud uživatel klikne viditelná oblast okna aplikace, rozhodne, zda je myši v neklientské oblasti klikněte nebo klepněte na klienta. `OnContextHelp` mapování obslužné rutiny myši v neklientské oblasti klikne na kliknutí na klienta automaticky. Pokud je klient kliknutí, pak se odešle WM_HELPHITTEST okna, ke které došlo ke kliknutí na. Pokud toto okno vrátí nenulovou hodnotu, tato hodnota slouží jako kontext nápovědu. Pokud hodnotu nula, `OnContextHelp` pokusí nadřazené okno (a které se svou nadřazenou třídou a tak dále). Pokud kontextové nápovědy nelze určit, ve výchozím nastavení je odeslat do hlavního okna, která se pak (obvykle) mapuje na id_default_help – příkaz `CWinApp::OnHelpIndex`.
+
+## <a name="wmhelphittest"></a>WM_HELPHITTEST
+
+```
+
 afx_msg LRESULT CWnd::OnHelpHitTest(
-WPARAM, LPARAM lParam)  
-```  
-  
- WM_HELPHITTEST je zprávu MFC privátní windows, který přijme aktivní okno klikli během režimu SHIFT + F1 – Nápověda. Okno obdrží tuto zprávu, vrátí **DWORD** pomoci ID pro použití WinHelp.  
-  
- LOWORD(lParam)  
- obsahuje souřadnice zařízení osy x, kde myši označeného relativně k klientské oblasti okna.  
-  
- HIWORD(lParam)  
- obsahuje souřadnice osy y.  
-  
- *wParam*  
- se nepoužívá a bude nula. Pokud je vrácená hodnota nenulové, WinHelp je volán s tohoto kontextu. Pokud návratovou hodnotu nula, nadřazeného okna je dotazován na nápovědu.  
-  
- V mnoha případech můžete využít přístupů k testování kódu, které už můžete mít. V tématu implementace `CToolBar::OnHelpHitTest` příklad zpracování zprávy WM_HELPHITTEST (kód využívá vstupů do testovací kód použitý na tlačítka a popisy tlačítek v `CControlBar`).  
-  
-## <a name="mfc-application-wizard-support-and-makehm"></a>Podpora průvodce aplikací MFC a makehm –  
- Průvodce aplikací MFC vytvoří soubory potřebné k vytvoření souboru nápovědy (soubory .cnt a HPJ). Zahrnuje také řadu soubory .rtf předem, které jsou přijímány kompilátoru nápovědy společnosti Microsoft. Řadu témata jsou dokončeny, ale některé může být nutné upravit pro konkrétní aplikaci.  
-  
- Makehm – nástroj podporuje automatické vytváření souboru "Nápověda mapování". Makehm – nástroj může překládat prostředků aplikace. H soubor k mapování souboru nápovědy. Příklad:  
-  
-```  
-#define IDD_MY_DIALOG   2000  
-#define ID_MY_COMMAND   150  
-```  
-  
- bude převeden na:  
-  
-```  
-HIDD_MY_DIALOG    0x207d0  
-HID_MY_COMMAND    0x10096  
-```  
-  
- Tento formát je kompatibilní se zařízením kompilátoru nápovědy, který mapuje ID kontextu (čísla na pravé straně) s názvy tématu (symbolů na levé straně).  
-  
- Zdrojový kód pro makehm – je k dispozici ve vzorku, nástroje pro programování MFC [makehm –](../visual-cpp-samples.md).  
-  
-## <a name="adding-help-support-after-running-the-mfc-application-wizard"></a>Přidání podpory nápovědy po spuštění Průvodce aplikací MFC  
- Nejlepší způsob, jak přidat Nápověda k aplikaci je zaškrtnutí políčka "Context-sensitive Help" na stránce Pokročilé funkce, Průvodce aplikací MFC před vytvořením aplikace. Tímto způsobem Průvodce aplikací MFC automaticky přidá položek mapování nezbytné zprávu na vaše `CWinApp`-odvozené třídy pro podporu nápovědy.  
-  
-## <a name="help-on-message-boxes"></a>Nápovědy na okna zpráv  
- Nápovědu k oken zpráv (někdy nazývané výstrahy) je podporováno prostřednictvím `AfxMessageBox` funkce, obálka pro `MessageBox` rozhraní API systému Windows.  
-  
- Existují dvě verze `AfxMessageBox`, jeden pro použití s ID řetězce a druhou pro použití s ukazatel na řetězec (`LPCSTR`):  
-  
-```  
+WPARAM, LPARAM lParam)
+```
+
+WM_HELPHITTEST je zpráva MFC privátní windows, který přijme aktivní okno kliknutí na režimu nápovědy klávesy SHIFT + F1. V okně obdrží tuto zprávu, vrátí **DWORD** ID nápovědy pro použití u WinHelp.
+
+LOWORD(lParam) obsahuje souřadnice zařízení osy x, ve kterém bylo kliknuto myši vzhledem ke klientské oblasti okna.
+
+HIWORD(lParam) obsahuje souřadnice y.
+
+*wParam*<br/>
+se nepoužívá a bude nula. Pokud vrácená hodnota je nenulový, se nazývá WinHelp pomocí daného kontextu. Pokud vrácená hodnota je nula, je dotazován nadřazené okno o pomoc.
+
+V mnoha případech můžete využít kód spuštění testu, které už můžete mít. Zobrazit provádění `CToolBar::OnHelpHitTest` příklad zpracování zprávy WM_HELPHITTEST (kód využívá spuštění testu kód použitý pro tlačítka a popisky v `CControlBar`).
+
+## <a name="mfc-application-wizard-support-and-makehm"></a>Podpora průvodce aplikací knihovny MFC a makehm –
+
+Průvodce aplikací MFC vytvoří soubory potřebné k sestavení souboru nápovědy (.cnt a HPJ soubory). Zahrnuje také řadu předem připravených .rtf soubory, které je akceptuje kompilátor nápovědy společnosti Microsoft. Řada z nich jsou dokončeny, ale některé možná muset upravit pro konkrétní aplikaci.
+
+Makehm – nástroj podporuje automatické vytvoření souboru "Nápověda mapování". Makehm – nástroj jsou dobře převeditelné prostředků aplikace. H soubor k mapování souboru nápovědy. Příklad:
+
+```
+#define IDD_MY_DIALOG   2000
+#define ID_MY_COMMAND   150
+```
+
+bude přeloženo na:
+
+```
+HIDD_MY_DIALOG    0x207d0
+HID_MY_COMMAND    0x10096
+```
+
+Tento formát je kompatibilní se zařízením kompilátor nápovědy, který mapuje identifikátory kontextu (čísla na pravé straně) s názvy témat (symboly na levé straně).
+
+Zdrojový kód pro makehm – je dostupný v ukázce MFC programovací nástroje [makehm –](../visual-cpp-samples.md).
+
+## <a name="adding-help-support-after-running-the-mfc-application-wizard"></a>Přidání podpory nápovědy po spuštění Průvodce aplikací MFC
+
+Nejlepší způsob, jak přidat zobrazíte nápovědu, jak vaše aplikace je zaškrtněte možnost "Context-sensitive Help" na stránce Pokročilé funkce, Průvodce aplikací knihovny MFC před vytvořením aplikace. Tímto způsobem Průvodce aplikací MFC automaticky přidá položky mapování nezbytné zprávu do vašeho `CWinApp`-odvozené třídy pro podporu nápovědy.
+
+## <a name="help-on-message-boxes"></a>Nápověda k okna se zprávou
+
+Nápovědu k okna se zprávou (říká se jim upozornění) je podporované prostřednictvím `AfxMessageBox` funkce, obálku pro `MessageBox` rozhraní Windows API.
+
+Existují dvě verze `AfxMessageBox`, jeden pro použití s ID řetězce a druhou pro použití s ukazatelem na řetězec (`LPCSTR`):
+
+```
 int AFXAPI AfxMessageBox(LPCSTR lpszText,
     UINT nType,
     UINT nIDHelp);
@@ -171,15 +179,16 @@ int AFXAPI AfxMessageBox(LPCSTR lpszText,
 int AFXAPI AfxMessageBox(UINT nIDPrompt,
     UINT nType,
     UINT nIDHelp);
-```  
-  
- V obou případech je zadání volitelné pomůže ID.  
-  
- V prvním případě výchozí hodnota pro nIDHelp je 0, který označuje žádná nápověda pro toto okno se zprávou. Stisknutí klávesy F1 při například zpráva pole je aktivní, uživatel neobdrží nápovědy (i v případě, že aplikace podporuje Nápověda). Pokud to není žádoucí, je třeba a ID pomohou stanovit nIDHelp.  
-  
- V druhém případě je výchozí hodnota pro nIDHelp -1, která označuje, že ID pomoci je stejný jako nIDPrompt. Nápověda bude fungovat pouze v případě, že aplikace je povoleno nápovědy, samozřejmě). Pro nIDHelp by měl poskytovat 0, pokud chcete splnit žádná podpora nápovědy do pole zpráva. Budete chtít zpráva, která má být nápovědy povoleno, ale požadavky ID nápovědy jiný než nIDPrompt, jednoduše zadejte kladnou hodnotu pro nIDHelp z nIDPrompt.  
-  
-## <a name="see-also"></a>Viz také  
- [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)   
- [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
+```
+
+V obou případech je volitelná Nápověda ID.
+
+V prvním případě výchozí hodnota pro nIDHelp je 0, což označuje není žádná nápověda pro toto okno se zprávou. Pokud uživatel stiskne klávesu F1, jako je například zpráva pole je aktivní, uživatel nebude přijímat nápovědy (i v případě, že aplikace podporuje nápovědy). Pokud to není žádoucí, pro nIDHelp musí být zadána a ID nápovědy.
+
+V druhém případě je výchozí hodnota pro nIDHelp -1, což znamená, že ID nápovědy je stejný jako nIDPrompt. Pomoc bude fungovat pouze v případě, že aplikace je povoleno nápovědy, samozřejmě). Pro nIDHelp byste měli použít 0, pokud chcete, okno se zprávou nemají žádnou pomoc podporu. Se má zpráva nápovědy povolené, ale výkonný ID nápovědy jiný než nIDPrompt, stačí zadat kladnou hodnotu pro nIDHelp liší od nIDPrompt.
+
+## <a name="see-also"></a>Viz také
+
+[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
+[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
 

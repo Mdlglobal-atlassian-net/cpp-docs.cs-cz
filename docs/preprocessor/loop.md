@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e4881dfdcb92e778501982482abc13cc91836b0
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 0850a30c0e0e85cd1d90ba5b2399a295a482a3ce
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42466093"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444668"
 ---
 # <a name="loop"></a>loop
 Určuje, jak bude kód smyčky zohledněn pomocí automatického paralelizéru, anebo vylučuje smyčku z úvahy pomocí automatického vektorizéru.  
@@ -57,5 +57,5 @@ Použít **smyčky** – Direktiva pragma, umístěte ji těsně před – není
   
 ## <a name="see-also"></a>Viz také  
  
-[Automatická paralelizace a Automatická vektorizace](../parallel/auto-parallelization-and-auto-vectorization.md)   
+[Automatická paralelizace a automatická vektorizace](../parallel/auto-parallelization-and-auto-vectorization.md)<br/>
 [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

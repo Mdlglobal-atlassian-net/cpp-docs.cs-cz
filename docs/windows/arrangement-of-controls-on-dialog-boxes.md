@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 46bc2d627c9efbb49227e17c809d188aa3a8b5fc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 24c318f6028db1f2c64b2d2d334648fe4d47619f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315233"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390783"
 ---
 # <a name="arrangement-of-controls-on-dialog-box-ces"></a>Uspořádání ovládacích prvků v dialogovém okně pole es (C++)
 
@@ -54,5 +54,5 @@ Win32
 
 ## <a name="see-also"></a>Viz také
 
-[Ovládací prvky v dialogových oknech](../windows/controls-in-dialog-boxes.md)  
+[Ovládací prvky v dialogových oknech](../windows/controls-in-dialog-boxes.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)

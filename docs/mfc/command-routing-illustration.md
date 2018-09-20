@@ -1,5 +1,5 @@
 ---
-title: Příkaz znázornění směrování | Microsoft Docs
+title: Znázornění směrování příkazů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a12a5cd19177761dfbf484c64f528d8def194ca5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 46449a90223bdb5e7774d4be5710014ff2c6ccae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341133"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406071"
 ---
 # <a name="command-routing-illustration"></a>Znázornění směrování příkazů
-Pro ilustraci, zvažte zprávou příkazu z vymazat všechny položky nabídky v nabídce aplikace MDI upravit. Předpokládejme, že se stane, obslužné rutiny pro tento příkaz jako funkce člena třídy dokumentu aplikace. Zde je, jak tento příkaz dosáhne její obslužnou rutinu po výběru položky nabídky:  
-  
-1.  Hlavní okno rámce nejprve obdrží zprávu příkaz.  
-  
-2.  Hlavní rámce okna MDI dává aktuálně aktivní podřízeného okna MDI příležitosti pro zpracování příkazu.  
-  
-3.  Standardní směrování rámce okna MDI podřízené dává jeho zobrazení možnost v příkazu před zaškrtnutím vlastní mapy zpráv.  
-  
-4.  Zobrazení nejprve hledá vlastní mapy zpráv a hledání žádná obslužná rutina vedle směruje příkaz jeho přidružené dokumentu.  
-  
-5.  Dokument zkontroluje jeho mapy zpráv a zjistí obslužnou rutinu. Tento dokument – členská funkce je volána a směrování zastaví.  
-  
- Pokud dokument neměl obslužnou rutinu, ho by příkaz směrovat vedle jeho šablona dokumentu. Příkaz by pak vrátí k zobrazení a poté okně s rámečkem. Okně s rámečkem by nakonec zkontrolujte jeho mapy zpráv. Pokud se kontroly se nezdařilo i, příkaz zpět do hlavní rámce okna MDI a pak do objektu application směrován – konečným cílem neošetřené příkazy.  
-  
-## <a name="see-also"></a>Viz také  
- [Jakým způsobem volá framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md)
+
+Pro ilustraci, vezměte v úvahu zprávou příkazu z vymazat všechny položky nabídky v nabídce Úpravy aplikace MDI. Předpokládejme, že se stane, obslužné rutiny pro tento příkaz jako členské funkce třídy dokumentu aplikace. Zde je, jak tento příkaz dosáhne její obslužná rutina po kliknutí na položku nabídky:
+
+1. Hlavní okno rámce nejprve obdrží zprávu příkazu.
+
+1. Hlavní okno rámce MDI dává příležitost dobře se zpracování příkazu aktuálně aktivní podřízené okno MDI.
+
+1. Standardní směrování podřízeným oknem rámce MDI poskytuje jeho zobrazení šanci na příkaz před vrácením vlastní mapu zpráv.
+
+1. Toto zobrazení nejprve zkontroluje vlastní mapu zpráv a další hledání žádná obslužná rutina trasy příkaz jeho přidružený dokument.
+
+1. Dokument ověří jeho mapu zpráv a vyhledá obslužnou rutinu. Tento dokument členská funkce je volána a směrování se zastaví.
+
+Pokud dokument neměl obslužnou rutinu, ho by příkaz Další směrování do šablony dokumentu. Příkaz by vrátíte se do zobrazení a pak okno rámce. Okno rámce by nakonec zkontrolujte jeho mapování zprávy. Pokud tento kontrola selhala stejně, by se směroval příkaz zpět na hlavní okno rámce MDI a potom na objekt aplikace – ultimate cílové neošetřené příkazy.
+
+## <a name="see-also"></a>Viz také
+
+[Jakým způsobem volá framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md)
 

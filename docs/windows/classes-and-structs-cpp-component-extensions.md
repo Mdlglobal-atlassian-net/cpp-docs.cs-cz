@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04a632e657b57519d02c013d9c03e558b9aec8e1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 60e388e18e6d3607dac1946c3fd9a511e948afd4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726619"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448373"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>Třídy a struktury (rozšíření komponent C++)
 
@@ -46,19 +46,19 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ### <a name="parameters"></a>Parametry
 
-*class_access*  
+*class_access*<br/>
 (Volitelné) Usnadnění přístupu z dané třídy nebo struktury mimo sestavení. Možné hodnoty jsou **veřejné** a **privátní** (**privátní** je výchozí nastavení). Nemůže obsahovat vnořené třídy nebo struktury *class_access* specifikátor.
 
-*Jméno*  
+*Jméno*<br/>
 Název třídy nebo struktury.
 
-*Modifikátor*  
+*Modifikátor*<br/>
 (Volitelné) [abstraktní](../windows/abstract-cpp-component-extensions.md) a [zapečetěné](../windows/sealed-cpp-component-extensions.md) jsou platné modifikátory.
 
-*inherit_access*  
+*inherit_access*<br/>
 (Volitelné) Přístupnost *base_type*. Pouze povolené přístupnost **veřejné** (**veřejné** je výchozí nastavení).
 
-*base_type*  
+*base_type*<br/>
 (Volitelné) Základní typ. Hodnotový typ však nemůže fungovat jako základního typu.
 
 Další informace najdete v popisech specifické pro jazyk tohoto parametru v prostředí Windows Runtime a běžné Runtimesections jazyka.
@@ -97,7 +97,7 @@ Zobrazit [referenční třídy a struktury](../cppcx/ref-classes-and-structs-c-c
 
 ### <a name="parameters"></a>Parametry
 
-*base_type*  
+*base_type*<br/>
 (Volitelné) Základní typ. A **třídy ref class** nebo **ref struct** může dědit z nuly nebo více rozhraní a nula nebo jedna **ref** typy. A **hodnotu třídy** nebo **hodnotu struktury** může dědit jedině z nuly nebo více rozhraní.
 
 Pokud deklarujete objekt s použitím **třídy ref class** nebo **ref struct** klíčových slov, objekt přistupuje popisovač pro objekt, což znamená, čítač odkaz na ukazatel na objekt. Pokud proměnnou deklarovanou dostane mimo rozsah, kompilátor automaticky odstraní základní objekt. Když objekt se používá jako parametr ve volání nebo je uložen v proměnné, popisovač pro objekt skutečně předány nebo uložené.
@@ -116,7 +116,7 @@ V následující tabulce jsou uvedeny rozdíly v syntaxi uvedenou v **všechny m
 
 ### <a name="parameters"></a>Parametry
 
-*base_type*  
+*base_type*<br/>
 (Volitelné) Základní typ. A **třídy ref class** nebo **ref struct** může dědit od nuly nebo více spravovaných rozhraní a nula nebo jedna typech. A **hodnotu třídy** nebo **hodnotu struktury** může dědit jedině z nuly nebo více spravovaných rozhraních.
 
 **Třídy ref class** a **ref struct** klíčová slova oznámení kompilátoru, která je třídu nebo strukturu, která bude přidělena v haldě. Když objekt se používá jako parametr ve volání nebo je uložen v proměnné, odkaz na objekt skutečně předány nebo uložené.

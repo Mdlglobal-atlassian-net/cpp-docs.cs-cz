@@ -56,44 +56,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 037eaa864f4b24622fdd72e15674fb8489f9b4bb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ac529c3084917bd43fbb0a9fd51f1f0e3942447b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220011"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416019"
 ---
 # <a name="reflected-window-message-ids"></a>Identifikátory reflektovaných zpráv oken
-Rychlý způsob, jak vytvořit ovládací prvek ActiveX nebo jiného specializovaného ovládacího prvku, je podtřídou časového období. Další informace najdete v tématu [knihovny MFC – ovládací prvky ActiveX: vytvoření podtřídy ovládacího prvku Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  
-  
- Aby se zabránilo kontejneru ovládacího prvku příjem okno zprávy odesílané rozčleněné ovládací prvek Windows, [COleControl](../mfc/reference/colecontrol-class.md) vytvoří okno "reflector" zachytily určité zprávy okna a odeslat je zpátky do ovládacího prvku. Ovládacího prvku, v jeho proceduru okna můžete následně zpracovat tyto reflektované zprávy provedením akce, které jsou vhodné pro ovládací prvek ActiveX.  
-  
- Následující tabulka uvádí zprávy, které jsou zachyceny a odpovídající zprávy, které odesílá okně reflector.  
-  
-|Zprávy odesílané ovládacího prvku|Zpráva odrazí na ovládacím prvku|  
-|---------------------------------|--------------------------------------|  
-|[WM_COMMAND –](/windows/desktop/menurc/wm-command)|OCM_COMMAND –|  
-|[WM_CTLCOLORBTN](/windows/desktop/Controls/wm-ctlcolorbtn)|OCM_CTLCOLORBTN –|  
-|[WM_CTLCOLOREDIT](/windows/desktop/Controls/wm-ctlcoloredit)|OCM_CTLCOLOREDIT –|  
-|[WM_CTLCOLORDLG](/windows/desktop/dlgbox/wm-ctlcolordlg)|OCM_CTLCOLORDLG –|  
-|[WM_CTLCOLORLISTBOX](/windows/desktop/Controls/wm-ctlcolorlistbox)|OCM_CTLCOLORLISTBOX –|  
-|[WM_CTLCOLORSCROLLBAR](/windows/desktop/Controls/wm-ctlcolorscrollbar)|OCM_CTLCOLORSCROLLBAR –|  
-|[WM_CTLCOLORSTATIC](/windows/desktop/Controls/wm-ctlcolorstatic)|OCM_CTLCOLORSTATIC –|  
-|[WM_DRAWITEM](/windows/desktop/Controls/wm-drawitem)|OCM_DRAWITEM –|  
-|[WM_MEASUREITEM](/windows/desktop/Controls/wm-measureitem)|OCM_MEASUREITEM –|  
-|[WM_DELETEITEM](/windows/desktop/Controls/wm-deleteitem)|OCM_DELETEITEM –|  
-|[WM_VKEYTOITEM](/windows/desktop/Controls/wm-vkeytoitem)|OCM_VKEYTOITEM –|  
-|[WM_CHARTOITEM](/windows/desktop/Controls/wm-chartoitem)|OCM_CHARTOITEM –|  
-|[WM_COMPAREITEM](/windows/desktop/Controls/wm-compareitem)|OCM_COMPAREITEM –|  
-|[WM_HSCROLL](/windows/desktop/Controls/wm-hscroll)|OCM_HSCROLL –|  
-|[WM_VSCROLL](/windows/desktop/Controls/wm-vscroll)|OCM_VSCROLL –|  
-|[WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)|OCM_PARENTNOTIFY –|  
-|[WM_NOTIFY –](https://msdn.microsoft.com/library/windows/desktop/bb775583)|OCM_NOTIFY –|  
-  
+
+Rychlý způsob, jak vytvořit ovládací prvek ActiveX nebo jiného specializovaného ovládacího prvku, je podtřídou časového období. Další informace najdete v tématu [knihovny MFC – ovládací prvky ActiveX: vytvoření podtřídy ovládacího prvku Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
+
+Aby se zabránilo kontejneru ovládacího prvku příjem okno zprávy odesílané rozčleněné ovládací prvek Windows, [COleControl](../mfc/reference/colecontrol-class.md) vytvoří okno "reflector" zachytily určité zprávy okna a odeslat je zpátky do ovládacího prvku. Ovládacího prvku, v jeho proceduru okna můžete následně zpracovat tyto reflektované zprávy provedením akce, které jsou vhodné pro ovládací prvek ActiveX.
+
+Následující tabulka uvádí zprávy, které jsou zachyceny a odpovídající zprávy, které odesílá okně reflector.
+
+|Zprávy odesílané ovládacího prvku|Zpráva odrazí na ovládacím prvku|
+|---------------------------------|--------------------------------------|
+|[WM_COMMAND –](/windows/desktop/menurc/wm-command)|OCM_COMMAND –|
+|[WM_CTLCOLORBTN](/windows/desktop/Controls/wm-ctlcolorbtn)|OCM_CTLCOLORBTN –|
+|[WM_CTLCOLOREDIT](/windows/desktop/Controls/wm-ctlcoloredit)|OCM_CTLCOLOREDIT –|
+|[WM_CTLCOLORDLG](/windows/desktop/dlgbox/wm-ctlcolordlg)|OCM_CTLCOLORDLG –|
+|[WM_CTLCOLORLISTBOX](/windows/desktop/Controls/wm-ctlcolorlistbox)|OCM_CTLCOLORLISTBOX –|
+|[WM_CTLCOLORSCROLLBAR](/windows/desktop/Controls/wm-ctlcolorscrollbar)|OCM_CTLCOLORSCROLLBAR –|
+|[WM_CTLCOLORSTATIC](/windows/desktop/Controls/wm-ctlcolorstatic)|OCM_CTLCOLORSTATIC –|
+|[WM_DRAWITEM](/windows/desktop/Controls/wm-drawitem)|OCM_DRAWITEM –|
+|[WM_MEASUREITEM](/windows/desktop/Controls/wm-measureitem)|OCM_MEASUREITEM –|
+|[WM_DELETEITEM](/windows/desktop/Controls/wm-deleteitem)|OCM_DELETEITEM –|
+|[WM_VKEYTOITEM](/windows/desktop/Controls/wm-vkeytoitem)|OCM_VKEYTOITEM –|
+|[WM_CHARTOITEM](/windows/desktop/Controls/wm-chartoitem)|OCM_CHARTOITEM –|
+|[WM_COMPAREITEM](/windows/desktop/Controls/wm-compareitem)|OCM_COMPAREITEM –|
+|[WM_HSCROLL](/windows/desktop/Controls/wm-hscroll)|OCM_HSCROLL –|
+|[WM_VSCROLL](/windows/desktop/Controls/wm-vscroll)|OCM_VSCROLL –|
+|[WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)|OCM_PARENTNOTIFY –|
+|[WM_NOTIFY –](https://msdn.microsoft.com/library/windows/desktop/bb775583)|OCM_NOTIFY –|
+
 > [!NOTE]
->  Pokud spustí v systému Win32, existuje několik typů WM_CTLCOLOR –\* může přijímat zprávy. Další informace najdete v tématu WM_CTLCOLORBTN WM_CTLCOLORDLG, WM_CTLCOLOREDIT, WM_CTLCOLORLISTBOX, WM_CTLCOLORMSGBOX, WM_CTLCOLORSCROLLBAR, WM_CTLCOLORSTATIC.  
-  
-## <a name="see-also"></a>Viz také  
- [MFC – ovládací prvky ActiveX: Vytvoření podtřídy ovládacího prvku Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)   
- [TN062: Reflexe zprávy pro ovládací prvky Windows](../mfc/tn062-message-reflection-for-windows-controls.md)
+>  Pokud spustí v systému Win32, existuje několik typů WM_CTLCOLOR –\* může přijímat zprávy. Další informace najdete v tématu WM_CTLCOLORBTN WM_CTLCOLORDLG, WM_CTLCOLOREDIT, WM_CTLCOLORLISTBOX, WM_CTLCOLORMSGBOX, WM_CTLCOLORSCROLLBAR, WM_CTLCOLORSTATIC.
+
+## <a name="see-also"></a>Viz také
+
+[MFC – ovládací prvky ActiveX: Vytvoření podtřídy ovládacího prvku systému Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
+[TN062: Reflexe zprávy pro ovládací prvky Windows](../mfc/tn062-message-reflection-for-windows-controls.md)
 

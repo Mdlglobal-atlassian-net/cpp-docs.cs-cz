@@ -1,5 +1,5 @@
 ---
-title: Vytváření nových dokumentů, oken a zobrazení | Microsoft Docs
+title: Vytváření nových dokumentů, Windows a zobrazení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,37 +34,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c0abc53e1a24d822605c9e5bfd7ab8276b32f82
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 0b4ccddbed0d347468331218614cad70cfd49a62
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931203"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427235"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Vytváření nových dokumentů, oken a zobrazení
-Následující obrázky poskytují přehled o procesu vytvoření pro dokumenty, zobrazení a oken s rámečkem. Další články, které soustředit na zúčastněných objekty poskytnout další podrobnosti.  
-  
- Po dokončení tohoto procesu spolupracující objekty existují a uložení ukazatele na sebe navzájem. Následující obrázky zobrazit pořadí, ve kterém jsou vytvořeny objekty. Můžete provést sekvenci obrázek z obrázku.  
-  
- ![Pořadí pro vytvoření dokumentu](../mfc/media/vc387l1.gif "vc387l1")  
-Pořadí při vytváření dokumentu  
-  
- ![Posloupnost vytvoření okna s rámečkem](../mfc/media/vc387l2.png "vc387l2")  
-Pořadí při vytváření oken s rámečkem  
-  
- ![Pořadí pro vytvoření zobrazení](../mfc/media/vc387l3.gif "vc387l3")  
-Pořadí při vytváření zobrazení  
-  
- Informace o tom, jak rozhraní inicializuje nový dokument, zobrazení a oken s rámečkem objekty, najdete v tématu třídy [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), a [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) v referenční příručka knihovny MFC. Viz také [Technická poznámka 22](../mfc/tn022-standard-commands-implementation.md), která vysvětluje další procesy vytváření a inicializace pod jeho diskuzi o standardní příkazy rozhraní framework pro **nový** a **otevřete** položky na **souboru** nabídky.  
-  
-##  <a name="_core_initializing_your_own_additions_to_these_classes"></a> Inicializace vlastní doplňky tyto třídy  
- Předchozí údaje také navrhnout body, ve kterém můžete přepsat členské funkce třeba inicializovat objekty vaší aplikace. Přepsání `OnInitialUpdate` v zobrazení třída je nejlepší místo k inicializaci zobrazení. `OnInitialUpdate` Ihned po je vytvořen okně s rámečkem a zobrazení v okně s rámečkem je připojen k jeho dokumentu dojde k volání. Například, pokud je zobrazení posuňte zobrazení (odvozený od `CScrollView` místo `CView`), měli byste nastavit velikost zobrazení na základě velikosti dokumentu v vaší `OnInitialUpdate` přepsat. (Tento proces je popsán v popisu třídy [CScrollView](../mfc/reference/cscrollview-class.md).) Je možné přepsat `CDocument` členské funkce `OnNewDocument` a `OnOpenDocument` zajistit specifické pro aplikaci inicializace dokumentu. Obvykle je nutné přepsat obě vzhledem k tomu, že dokument můžete vytvořit dvěma způsoby.  
-  
- Ve většině případů přepsání by měly volat základní třída verze. Další informace najdete v tématu s názvem členské funkce tříd [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), a [CWinApp](../mfc/reference/cwinapp-class.md) v prostředí MFC Referenční příručka knihovny.  
-  
-## <a name="see-also"></a>Viz také  
- [Šablony dokumentů a proces vytváření dokumentů/zobrazení](../mfc/document-templates-and-the-document-view-creation-process.md)   
- [Vytváření šablon dokumentů](../mfc/document-template-creation.md)   
- [Vytváření dokumentů/zobrazení](../mfc/document-view-creation.md)   
- [Vztahy mezi objekty MFC](../mfc/relationships-among-mfc-objects.md)
+
+Na následujících obrázcích poskytují přehled o procesu vytváření pro dokumenty, zobrazení a oken s rámečkem. Další články, které se soustředí na zúčastněných objekty poskytnout další podrobnosti.
+
+Po dokončení tohoto procesu spolupracující objekty existují a uložte ukazatele na sebe navzájem. Následující obrázky znázorňují pořadí, ve kterém jsou vytvořeny objekty. Můžete postupovat podle pořadí z obrázku na obrázek.
+
+![Pořadí pro vytvoření dokumentu](../mfc/media/vc387l1.gif "vc387l1") pořadí při vytváření dokumentu
+
+![Posloupnost vytvoření okna rámce](../mfc/media/vc387l2.png "vc387l2") posloupnost vytvoření okna rámce
+
+![Pořadí pro vytvoření zobrazení](../mfc/media/vc387l3.gif "vc387l3") pořadí při vytváření zobrazení
+
+Informace o tom, jak rozhraní inicializuje nového dokumentu, zobrazení a oken s rámečkem objektů, naleznete v tématu třídy [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), a [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) v odkazu knihovny MFC. Viz také [Technická poznámka 22](../mfc/tn022-standard-commands-implementation.md), která vysvětluje v rámci jeho diskuze v rámci standardní příkazy pro další procesy vytváření a inicializace **nový** a **otevřete** položky na **souboru** nabídky.
+
+##  <a name="_core_initializing_your_own_additions_to_these_classes"></a> Inicializace vlastní doplňky tyto třídy
+
+Na předchozích obrázcích také navrhnout body, na které můžete přepsat členské funkce, třeba inicializovat objekty vaší aplikace. Přepsání `OnInitialUpdate` v zobrazení tříd je nejlepším místem k zahájení zobrazení. `OnInitialUpdate` Ihned po vytvoření okna rámce a zobrazení v okně rámce je připojena k jeho dokumentu dojde k volání. Například, pokud je zobrazení posuvníky zobrazení (odvozený od `CScrollView` spíše než `CView`), byste měli nastavit velikost zobrazení na základě velikosti dokumentu ve vaší `OnInitialUpdate` přepsat. (Tento proces je popsán v popisu třídy [cscrollview –](../mfc/reference/cscrollview-class.md).) Je možné přepsat `CDocument` členské funkce `OnNewDocument` a `OnOpenDocument` poskytnout specifické pro aplikaci inicializace dokumentu. Obvykle je nutné přepsat obě vzhledem k tomu, že dokument můžete vytvořit dvěma způsoby.
+
+Ve většině případů by měly volat přepsání verze základní třídy. Další informace najdete v tématu s názvem členské funkce tříd [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), a [CWinApp](../mfc/reference/cwinapp-class.md) v MFC Referenční dokumentace ke knihovně.
+
+## <a name="see-also"></a>Viz také
+
+[Šablony dokumentů a proces vytváření dokumentů/zobrazení](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
+[Vytváření šablon dokumentů](../mfc/document-template-creation.md)<br/>
+[Vytváření dokumentů/zobrazení](../mfc/document-view-creation.md)<br/>
+[Vztahy mezi objekty MFC](../mfc/relationships-among-mfc-objects.md)
 

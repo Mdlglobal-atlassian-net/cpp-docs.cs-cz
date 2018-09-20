@@ -1,5 +1,5 @@
 ---
-title: omp_get_dynamic – | Microsoft Docs
+title: omp_get_dynamic – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d97cae8091f88c283412b36ef757b03c72f7580d
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c2b5a285ef019cd1752b60065f7040d9a937ce38
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691263"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389886"
 ---
 # <a name="ompgetdynamic"></a>omp_get_dynamic
-Vrátí hodnotu, která určuje, pokud počet vláken, která je k dispozici v dalších paralelní oblasti lze upravit podle času spuštění.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int omp_get_dynamic();  
-```  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Pokud je povoleno nenulové hodnoty, dynamické úpravy vláken.  
-  
-## <a name="remarks"></a>Poznámky  
- Dynamické přizpůsobení vláken je definován s [omp_set_dynamic –](../../../parallel/openmp/reference/omp-set-dynamic.md) a [OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md).  
-  
- Další informace najdete v tématu [3.1.7 omp_set_dynamic – funkce](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md).  
-  
-## <a name="example"></a>Příklad  
- V tématu [omp_set_dynamic –](../../../parallel/openmp/reference/omp-set-dynamic.md) příklad použití `omp_get_dynamic`.  
-  
-## <a name="see-also"></a>Viz také  
- [Funkce](../../../parallel/openmp/reference/openmp-functions.md)
+
+Vrátí hodnotu určující, pokud je možné upravit počet vláken v následných paralelní oblasti podle času spuštění.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+int omp_get_dynamic();
+```
+
+## <a name="return-value"></a>Návratová hodnota
+
+Pokud je povolené nenulovou hodnotu, dynamické úpravy vláken.
+
+## <a name="remarks"></a>Poznámky
+
+Dynamické přizpůsobení vláken není zadán s [omp_set_dynamic –](../../../parallel/openmp/reference/omp-set-dynamic.md) a [OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md).
+
+Další informace najdete v tématu [3.1.7 omp_set_dynamic – funkce](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md).
+
+## <a name="example"></a>Příklad
+
+Zobrazit [omp_set_dynamic –](../../../parallel/openmp/reference/omp-set-dynamic.md) pro příklad použití `omp_get_dynamic`.
+
+## <a name="see-also"></a>Viz také
+
+[Funkce](../../../parallel/openmp/reference/openmp-functions.md)

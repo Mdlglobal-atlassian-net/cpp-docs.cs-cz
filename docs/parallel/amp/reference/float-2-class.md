@@ -38,161 +38,158 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff3c05f1a96dd4717371d48b60cca6a549a94a7d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4a36cef1681722874350510f86e9cf767d7d019a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019950"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390796"
 ---
 # <a name="float2-class"></a>float_2 – třída
-Představuje krátký vektor dvou hodnot float.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class float_2;  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-typedefs"></a>Veřejné definice TypeDef  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|`value_type`||  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[float_2 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|float_2::get_x||  
-|float_2::get_xy||  
-|float_2::get_y||  
-|float_2::get_yx||  
-|float_2::ref_g||  
-|float_2::ref_r||  
-|float_2::ref_x||  
-|float_2::ref_y||  
-|float_2::set_x||  
-|float_2::set_xy||  
-|float_2::set_y||  
-|float_2::set_yx||  
-  
-### <a name="public-operators"></a>Veřejné operátory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|float_2::Operator-||  
-|float_2::Operator-||  
-|float_2::Operator * =||  
-|float_2::Operator / =||  
-|float_2::Operator ++||  
-|float_2::Operator +=||  
-|float_2::Operator =||  
-|operátor float_2::Operator-=||  
-  
-### <a name="public-constants"></a>Veřejné konstanty  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[velikost – konstanta](#float_2__size)||  
-  
-### <a name="public-data-members"></a>Veřejné datové členy  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|float_2::g||  
-|float_2::GR||  
-|float_2::r||  
-|float_2::rg||  
-|float_2::x||  
-|float_2::XY||  
-|float_2::y||  
-|float_2::yx||  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `float_2`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** amp_short_vectors.h  
-  
- **Namespace:** Concurrency::graphics  
-  
-##  <a name="ctor"></a> float_2 – 
 
- Výchozí konstruktor, inicializuje všechny prvky na 0.  
-  
-```  
+Představuje krátký vektor dvou hodnot float.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class float_2;
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-typedefs"></a>Veřejné definice TypeDef
+
+|Název|Popis|
+|----------|-----------------|
+|`value_type`||
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[float_2 – konstruktor](#ctor)|Přetíženo. Výchozí konstruktor, inicializuje všechny prvky na 0.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|float_2::get_x||
+|float_2::get_xy||
+|float_2::get_y||
+|float_2::get_yx||
+|float_2::ref_g||
+|float_2::ref_r||
+|float_2::ref_x||
+|float_2::ref_y||
+|float_2::set_x||
+|float_2::set_xy||
+|float_2::set_y||
+|float_2::set_yx||
+
+### <a name="public-operators"></a>Veřejné operátory
+
+|Název|Popis|
+|----------|-----------------|
+|float_2::Operator-||
+|float_2::Operator-||
+|float_2::Operator * =||
+|float_2::Operator / =||
+|float_2::Operator ++||
+|float_2::Operator +=||
+|float_2::Operator =||
+|operátor float_2::Operator-=||
+
+### <a name="public-constants"></a>Veřejné konstanty
+
+|Název|Popis|
+|----------|-----------------|
+|[velikost – konstanta](#float_2__size)||
+
+### <a name="public-data-members"></a>Veřejné datové členy
+
+|Název|Popis|
+|----------|-----------------|
+|float_2::g||
+|float_2::GR||
+|float_2::r||
+|float_2::rg||
+|float_2::x||
+|float_2::XY||
+|float_2::y||
+|float_2::yx||
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`float_2`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** amp_short_vectors.h
+
+**Namespace:** Concurrency::graphics
+
+##  <a name="ctor"></a> float_2 –
+
+Výchozí konstruktor, inicializuje všechny prvky na 0.
+
+```
 float_2() restrict(amp,
     cpu);
 
- 
 float_2(
-    float _V0,  
+    float _V0,
     float _V1) restrict(amp,
     cpu);
 
- 
 float_2(
     float _V) restrict(amp,
     cpu);
 
- 
 float_2(
     const float_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_2(
     const uint_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_2(
     const int_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_2(
     const unorm_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_2(
     const norm_2& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_2(
     const double_2& _Other) restrict(amp,
     cpu);
-```  
-  
-### <a name="parameters"></a>Parametry  
-*_V0*<br/>
-Hodnota inicializace prvek 0.  
-  
-*_V1*<br/>
-Hodnota inicializace element 1.  
-  
-*_V*<br/>
-Hodnota inicializace.  
-  
-*Ji_né*<br/>
-Objekt použitý k inicializaci.  
-  
-##  <a name="float_2__size"></a> Velikost 
+```
 
-```  
-static const int size = 2;  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)
+### <a name="parameters"></a>Parametry
+
+*_V0*<br/>
+Hodnota inicializace prvek 0.
+
+*_V1*<br/>
+Hodnota inicializace element 1.
+
+*_V*<br/>
+Hodnota inicializace.
+
+*Ji_né*<br/>
+Objekt použitý k inicializaci.
+
+##  <a name="float_2__size"></a> Velikost
+
+```
+static const int size = 2;
+```
+
+## <a name="see-also"></a>Viz také
+
+[Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

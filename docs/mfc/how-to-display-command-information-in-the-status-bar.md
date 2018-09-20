@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: zobrazení informací o příkazu ve stavovém řádku | Microsoft Docs'
+title: 'Postupy: zobrazení informací o příkazu ve stavovém | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84f1a12dd9ca25ec19415cde42dc8ce12e515833
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 089e0fd8f1853a4e219309c0df7659f90e4f4b3d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930950"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405746"
 ---
 # <a name="how-to-display-command-information-in-the-status-bar"></a>Postupy: Zobrazení informací o příkazu ve stavovém řádku
-Když spustíte Průvodce aplikace vytvořit kostru aplikace, může podporovat panelu nástrojů a stavového řádku. Právě jednou z možností v Průvodci aplikace podporuje obě. Když se nachází stavového řádku, aplikace automaticky poskytuje užitečné zpětnou vazbu přesunutí ukazatele myši položky v nabídkách. Aplikace automaticky zobrazí výzva řetězec ve stavovém řádku, když je označený položky nabídky. Například při přesunutí ukazatele myši **Vyjmout** příkaz na **upravit** nabídce Stavový řádek může zobrazit "Vyjme výběr a umístí jej do schránky" v oblasti zpráv stavového řádku. Na řádku pomáhá pochopit účel položky nabídky uživatele. Tento postup funguje i když uživatel klikne tlačítko panelu nástrojů.  
-  
- Můžete přidat do této nápovědy stavového řádku definováním výzva řetězce pro položky nabídky, které přidáte do programu. K tomu, poskytnout výzva řetězce, když upravujete vlastnosti položky nabídky v editoru nabídky. Řetězce, které definujete jsou uloženy v souboru prostředků aplikace. mají stejné ID jako příkazy, které jsou zde popsány.  
-  
- Ve výchozím nastavení, Průvodce aplikací přidá **AFX_IDS_IDLEMESSAGE**, ID pro standardní "Připravena" zprávy, která se zobrazí, když program čeká nové zprávy. Pokud zadáte možnost Context-Sensitive Help v Průvodci aplikací, zpráva se změní na "Nápovědy, stiskněte F1."  
-  
-## <a name="see-also"></a>Viz také  
- [Zpracování a mapování zpráv](../mfc/message-handling-and-mapping.md)
+
+Při spuštění Průvodce aplikací k vytvoření kostra aplikace může podporovat panelu nástrojů a stavový řádek. Pouze jedna z možností v Průvodci aplikací podporuje oboje. Když stavový řádek je k dispozici, aplikace automaticky poskytují užitečné zpětnou vazbu, jak uživatel přesouvá ukazatel myši nad položkami v nabídkách. Řetězec výzvy aplikace automaticky zobrazí ve stavovém řádku, při zvýraznění položky nabídky. Například když uživatel přesune ukazatel myši **Vyjmout** příkaz **upravit** nabídky, může ve stavovém řádku zobrazí "Vyjme výběr a umístí jej do schránky" v oblasti zpráv ve stavovém řádku. Na řádku pomáhá uživatelům pochopit účel položky nabídky. Tento postup funguje i když uživatel klikne na tlačítko panelu nástrojů.
+
+Můžete přidat tuto nápovědu stavový řádek tak, že definujete řetězce výzev pro položky nabídky, které přidáte do programu. K tomuto účelu poskytuje řetězce výzev při úpravě vlastností položky nabídky v nabídce editoru. Řetězce, které definujete jsou uloženy v souboru prostředků aplikace. mají stejné ID jako příkazy, které jsou zde popsány.
+
+Ve výchozím nastavení, Průvodce aplikací přidá **AFX_IDS_IDLEMESSAGE**, ID pro standardní zprávy "Připraveno", které se zobrazí, když program čeká na nové zprávy. Pokud zadáte možnost Context-Sensitive Help v Průvodci aplikací, zprávy se změní na "Nápovědy, stiskněte klávesu F1."
+
+## <a name="see-also"></a>Viz také
+
+[Zpracování a mapování zpráv](../mfc/message-handling-and-mapping.md)
 

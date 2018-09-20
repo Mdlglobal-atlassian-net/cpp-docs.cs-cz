@@ -1,5 +1,5 @@
 ---
-title: 'TN020: ID konvence pojmenování a číslování | Microsoft Docs'
+title: 'TN020: ID konvence pojmenování a číslování | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,99 +18,103 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca1e78ab4b94d9055b8f0c7cc14bde12506695b8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: f19d79b7946e3f2b4fda0b2651ce8d2099373d93
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951364"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433579"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: Konvence pojmenování a číslování pro identifikátory
-Tato poznámka popisuje ID pojmenování a číslování konvence, které používá MFC 2.0 pro prostředky, příkazy, řetězce, ovládací prvky a podřízená okna.  
-  
- Konvence pojmenování MFC ID a číslování mají splňovat následující požadavky:  
-  
--   Poskytují konzistentní standardní pojmenování ID používané v rámci celé knihovny MFC a knihovny MFC aplikace, které jsou podporovány pomocí editoru prostředků Visual C++. Díky tomu je snazší pro programátory interpretovat typu a původu prostředku z jeho ID.  
-  
--   Zvýraznit silný vztah 1: 1 mezi určité typy identifikátorů.  
-  
--   Odpovídají standardům již často používaný pro pojmenování ID v systému Windows.  
-  
--   Místo číslování ID oddílu. Čísla ID jde přiřadit programátory, MFC, Windows a upravit Visual C++ prostředky. Odpovídající dělení předejdete duplikace čísla ID.  
-  
-## <a name="the-id-prefix-naming-convention"></a>Předpona ID konvence pojmenování  
- Několik typů ID, může dojít v aplikaci. Konvence pojmenování MFC ID definuje různé předpon pro různé typy prostředků.  
-  
- MFC použije předpona "IDR_" ID prostředku, který se vztahuje na více typů prostředků. Například pro okno daného rámce, používá MFC stejnou předponu "IDR_" k označení prostředků nabídky, akcelerátoru, řetězec a ikona. Následující tabulka uvádí různé předpony a jejich využití:  
-  
-|Předpona|Použití|  
-|------------|---------|  
-|IDR_|Pro více typů prostředků (primárně pro nabídek, akcelerátorů a pásů karet).|  
-|IDD_|Pro dialogové okno šablony prostředky (například IDD_DIALOG1).|  
-|IDC_|Pro kurzor prostředky.|  
-|IDI_|Ikona prostředků.|  
-|IDB_|Pro prostředky rastrového obrázku.|  
-|IDS_|Pro řetězcové prostředky.|  
-  
- V rámci zdroj dialogového okna knihovny MFC dodržovat tyto konvence:  
-  
-|Předpona nebo popisek|Použití|  
-|---------------------|---------|  
-|IDOK IDCANCEL|Pro standardní tlačítko ID.|  
-|IDC_|Pro další ovládací prvky dialogového okna.|  
-  
- Předpona "IDC_" se také používá pro kurzory. Tato ke konfliktu názvů není obvykle problém protože Typická aplikace bude mít několik kurzory a mnoho ovládací prvky dialogového okna.  
-  
- V nabídce prostředku MFC dodržovat tyto konvence:  
-  
-|Předpona|Použití|  
-|------------|---------|  
-|IDM_|Pro položky nabídky, které nepoužívají architektury MFC příkaz.|  
-|ID_|Příkazy nabídky, použijte příkaz architektury MFC.|  
-  
- Příkazy, které následují příkaz architektury MFC musí mít on_command – obslužná rutina a může mít obslužnou rutinu on_update_command_ui –. Pokud tyto obslužné rutiny příkazů postupovat podle příkaz architektury MFC, budou fungovat správně jestli jsou vázány na příkazu nabídky, tlačítka panelu nástrojů nebo tlačítko panel dialogového okna. Nabídky výzva řetězec, který se zobrazí na panelu zpráv programu se také používá stejnou předponu "ID_". Konvence příkaz MFC by mělo vycházet většinu položek nabídky v aplikaci. Všechny identifikátory standardních příkazů (například id_file_new –) postupujte podle touto konvencí.  
-  
- "IDP_" MFC také používá jako specializovaná forma řetězce (místo "IDS_"). Řetězce s předponou "IDP_" jsou výzvy, který je řetězce použité v oknech zprávy. Řetězce "IDP_" může obsahovat "%1" a "%2" zástupnými symboly řetězců určen program. Řetězce "IDP_" obvykle mají témata nápovědy související s nimi a řetězce "IDS_" nepodporují. Jsou vždy lokalizované řetězce "IDP_" a nemusí být lokalizované řetězce "IDS_".  
-  
- Knihovny MFC také používá předpona "IDW_" jako specializovaná forma řízení ID (místo "IDC_"). Tyto identifikátory přiřazené k podřízená okna například zobrazení a příčky třídy framework. ID implementace MFC mají předponu "AFX_".  
-  
-## <a name="the-id-numbering-convention"></a>Konvence ID číslování  
- Následující tabulka uvádí platném rozsahu pro konkrétní typy identifikátorů. Některá omezení jsou technickou implementaci omezení a jiné jsou konvence, které jsou navrženy tak, aby vaše ID vzájemné kolizi předdefinovaná identifikátory Windows nebo MFC výchozí implementace.  
-  
- Důrazně doporučujeme definovat všechna ID uvnitř doporučené rozsahy. Dolní limit tyto rozsahy je 1, protože se nepoužívá 0. Doporučujeme používat běžné konvence a použít 100 nebo 101 jako první ID.  
-  
-|Předpona|Typ prostředku|Platný rozsah|  
-|------------|-------------------|-----------------|  
-|IDR_|vícenásobné|1 až 0x6FFF|  
-|IDD_|šablony dialogu|1 až 0x6FFF|  
-|IDB_ IDC_, IDI_,|kurzory, ikony, rastrové obrázky|1 až 0x6FFF|  
-|IDS_ IDP_|Obecné řetězce|1 až 0x7FFF|  
-|ID_|příkazy|0x8000 prostřednictvím 0xDFFF|  
-|IDC_|ovládací prvky|8 až 0xDFFF|  
-  
- Důvody pro tyto limity rozsahu:  
-  
--   Podle konvence není použita hodnota ID 0.  
-  
--   Omezení implementace systému Windows omezit ID být menší než nebo rovno 0x7FFF true prostředků.  
-  
--   Knihovny MFC framework interní si vyhrazuje těchto oblastí:  
-  
-    -   0x7000 prostřednictvím 0x7FFF (viz afxres.h)  
-  
-    -   0xE000 prostřednictvím 0xEFFF (viz afxres.h)  
-  
-    -   16000 prostřednictvím 18000 (viz afxribbonres.h)  
-  
-     Tyto rozsahy mohou v budoucnu měnit MFC implementace.  
-  
--   Několik příkazů systému Windows použít rozsah 0xF000 prostřednictvím 0xFFFF.  
-  
--   ID ovládacího prvku 1 až 7 jsou vyhrazené pro standardní ovládací prvky, jako je například IDOK a IDCANCEL.  
-  
--   Rozsah 0x8000 prostřednictvím 0xFFFF pro řetězce je vyhrazený pro nabídky výzvy pro příkazy.  
-  
-## <a name="see-also"></a>Viz také  
- [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)   
- [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
+
+Tato poznámka popisuje ID pojmenování a číslování vytváření názvů pro prostředky, příkazy, řetězce, ovládací prvky a podřízená okna používá MFC 2.0.
+
+ID knihovny MFC pojmenování a číslování pro identifikátory konvence jsou určeny pro splnění následujících požadavků:
+
+- Poskytují konzistentní standardní pojmenování ID použít v rámci knihovny MFC a aplikací MFC, které jsou podporovány editor prostředků Visual C++. To usnadňuje programátor k interpretaci typu a původu zdroje z jejího ID.
+
+- Zvýraznit silný vztah 1: 1 mezi určité typy identifikátorů.
+
+- Odpovídat již běžně používaných normy pro pojmenování identifikátorů ve Windows.
+
+- Rozdělení prostoru ID číslování. Čísla ID může přiřadit programátora, MFC, Windows a prostředky upravené jinak Visual C++. Aby nedošlo k duplikaci čísla ID vám pomůže odpovídající dělení.
+
+## <a name="the-id-prefix-naming-convention"></a>Konvence pojmenování předpona ID
+
+Několik typů identifikátorů může dojít v aplikaci. Konvence pojmenovávání ID knihovny MFC definuje různé předpony pro různé typy zdrojů.
+
+Knihovna MFC používá předpona "IDR_" označuje ID prostředku, který se vztahuje na více typů prostředků. Například pro okno daného rámce, knihovna MFC používá stejnou předponu "IDR_" k označení prostředek nabídky, akcelerátoru, řetězec a ikonu. V následující tabulce jsou uvedeny různé předpony a jejich využití:
+
+|Předpona|Použití|
+|------------|---------|
+|IDR_|Pro více typů prostředků (primárně pro nabídky, akcelerátory a pásů karet).|
+|IDD_|Dialogové okno šablony prostředků (například IDD_DIALOG1).|
+|IDC_|Pro kurzor prostředky.|
+|IDI_|Ikona prostředků.|
+|IDB_|Pro prostředky rastrového obrázku.|
+|IDS_|Pro řetězcové prostředky.|
+
+V rámci zdroj dialogového okna knihovny MFC dodržovat tyto konvence:
+
+|Předpona nebo popisek|Použití|
+|---------------------|---------|
+|IDOK IDCANCEL|Pro standardní tlačítko ID.|
+|IDC_|Pro ostatní ovládací prvky dialogového okna.|
+
+Pro ukazatele je také použita předpona "IDC_". Tento konflikt názvů není obvykle problém vzhledem k tomu, že Typická aplikace bude mít několik kurzory a mnoho ovládacích prvků dialogového okna.
+
+V nabídce prostředků MFC dodržovat tato konvence:
+
+|Předpona|Použití|
+|------------|---------|
+|IDM_|Pro položky nabídky, které nepoužívají architekturu příkaz knihovny MFC.|
+|ID_|Pro příkazy nabídek, které používají architekturu příkaz knihovny MFC.|
+
+Příkazy, které následují příkaz architektury MFC musí mít obslužné rutiny příkazu ON_COMMAND a může mít obslužnou rutinu ON_UPDATE_COMMAND_UI. Pokud tyto obslužné rutiny příkazů použijte příkaz architektury MFC, budou fungovat správně, jestli jsou vázány na příkaz nabídky, tlačítka panelu nástrojů nebo tlačítko panel dialogového okna. Stejnou předponou "ID_" se používá také pro nabídky výzvy řetězec, který se zobrazí na panelu zpráv dané aplikace. Většina položek nabídky v aplikaci by měly dodržovat konvence příkaz knihovny MFC. Všechny identifikátory standardních příkazů (například id_file_new –) podle Tato konvence.
+
+Knihovna MFC také používá "IDP_" jako specializovaná forma řetězce (namísto "IDS_"). Řetězce s předponou "IDP_" výzvy, tedy řetězců použitých ve okna se zprávou. "IDP_" řetězce mohou obsahovat "%1" a "%2" jako zástupné symboly řetězců určené program. Řetězce "IDP_" obvykle mají témata nápovědy k nim má přiřazené a řetězce "IDS_" tomu tak není. Jsou vždy lokalizované řetězce "IDP_" a "IDS_" řetězce nemusí být lokalizována.
+
+Knihovna MFC také používá předpona "IDW_" jako specializovaná forma ovládací prvek ID (místo "IDC_"). Tyto identifikátory jsou přiřazeny k podřízených oken, jako je například zobrazení a příčky v rámci tříd. ID implementace MFC mají předponu "AFX_".
+
+## <a name="the-id-numbering-convention"></a>Konvence číslování ID
+
+Následující tabulka uvádí platné rozsahy pro ID konkrétní typy. Některá omezení jsou technické implementace omezení a jiné konvence, které jsou navrženy pro vaše ID zabránit kolize s identifikátory předdefinovaných Windows nebo MFC výchozí implementace.
+
+Důrazně doporučujeme, že definujete všechna ID uvnitř doporučené rozsahy. Dolní mez tyto rozsahy je 1, protože se nepoužívá 0. Doporučujeme použít běžné vytváření a použití 100 nebo 101 jako první ID.
+
+|Předpona|Typ prostředku|Platný rozsah|
+|------------|-------------------|-----------------|
+|IDR_|vícenásobné|1 až 0x6FFF|
+|IDD_|šablony dialogu|1 až 0x6FFF|
+|IDB_ IDC_ IDI_,|kurzory, ikony, bitmapy|1 až 0x6FFF|
+|IDS_ IDP_|Obecné řetězce|1 až 0x7FFF|
+|ID_|příkazy|0x8000 až 0xDFFF|
+|IDC_|ovládací prvky|8 až 0xDFFF|
+
+Důvodů, proč tato omezení rozsahu:
+
+- Podle konvence se nepoužívá hodnotu ID 0.
+
+- Windows implementace omezení omezit ID menší než nebo rovna hodnotě 0x7FFF true prostředků.
+
+- Interní rámec MFC rezervuje tyto rozsahy:
+
+   - 0x7000 prostřednictvím 0x7FFF (viz afxres.h)
+
+   - 0xE000 prostřednictvím 0xEFFF (viz afxres.h)
+
+   - 16000 prostřednictvím 18000 (viz afxribbonres.h)
+
+     Tyto rozsahy mohou v budoucnu měnit implementace MFC.
+
+- Několika příkazů systému Windows použít rozsah 0xF000 prostřednictvím 0xFFFF.
+
+- ID ovládacího prvku 1 až 7 jsou vyhrazené pro standardní ovládací prvky, jako je například IDOK a IDCANCEL.
+
+- Rozsah 0x8000 prostřednictvím 0xFFFF pro řetězce je vyhrazený pro nabídky vyzve k zadání příkazy.
+
+## <a name="see-also"></a>Viz také
+
+[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
+[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
 

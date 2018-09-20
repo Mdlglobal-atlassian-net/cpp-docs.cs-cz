@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2353b952964ffe6b8078f688b4ac8e129d891d7
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 258875f488dd0d3460513ba285b894f114093077
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314679"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448217"
 ---
 # <a name="attributes-alphabetical-reference"></a>Abecedně řazená referenční dokumentace k atributům
 
@@ -138,7 +138,7 @@ Následující atributy jsou k dispozici v jazyce Visual C++.
 
 ## <a name="see-also"></a>Viz také
 
-[Referenční dokumentace k atributům C++](../windows/cpp-attributes-reference.md)  
-[Koncepty](../windows/attributed-programming-concepts.md)  
-[Atributy podle skupin](../windows/attributes-by-group.md)  
+[Referenční dokumentace k atributům C++](../windows/cpp-attributes-reference.md)<br/>
+[Koncepty](../windows/attributed-programming-concepts.md)<br/>
+[Atributy podle skupin](../windows/attributes-by-group.md)<br/>
 [Atributy podle použití](../windows/attributes-by-usage.md)

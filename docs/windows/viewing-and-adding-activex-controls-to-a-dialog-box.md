@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bc5360a90690b27f1c52f97cd8b3746ddee5d60a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1eccaaff3f89b6353bd38e316ad515edc59eb9ae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318379"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427404"
 ---
 # <a name="viewing-and-adding-activex-controls-to-a-dialog-box-c"></a>Zobrazení a přidání ovládacích prvků ActiveX do dialogového okna (C++)
 
@@ -61,6 +61,6 @@ Win32
 
 ## <a name="see-also"></a>Viz také
 
-[Ovládací prvky v dialogových oknech](../windows/controls-in-dialog-boxes.md)  
-[MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)  
+[Ovládací prvky v dialogových oknech](../windows/controls-in-dialog-boxes.md)<br/>
+[MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)<br/>
 [ActiveX – kontejnery ovládacích prvků](../mfc/activex-control-containers.md)

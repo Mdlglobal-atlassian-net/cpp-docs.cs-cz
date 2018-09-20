@@ -1,5 +1,5 @@
 ---
-title: Posloupnost operací při vytváření databázových aplikací | Microsoft Docs
+title: Posloupnost operací při vytváření databázových aplikací | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbe18e9733388cc6e43f6ca3de520596c713b783
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef9c66324f886da27431a94a464554e2a8ddb00a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381326"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391569"
 ---
 # <a name="sequence-of-operations-for-creating-database-applications"></a>Posloupnost operací při vytváření databázových aplikací
-Následující tabulka uvádí vaše role a role rozhraní framework zápis databázových aplikací.  
-  
+
+Následující tabulka uvádí vaši roli a roli v rámci při psaní databázových aplikací.
+
 > [!NOTE]
->  Prostředí Visual C++ a průvodců nepodporují rozhraní DAO (i když jsou zahrnuté třídy DAO a můžete je dál používat). Společnost Microsoft doporučuje použití rozhraní ODBC pro nové projekty MFC. DAO byste měli používat jenom pro údržbu existujících aplikací.  
-  
-### <a name="creating-database-applications"></a>Vytváření databázových aplikací  
-  
-|Úloha|Můžete provést|Nepodporuje rozhraní|  
-|----------|------------|------------------------|  
-|Rozhodněte, jestli použít třídy knihovny MFC rozhraní ODBC a DAO.|Použití pro nové projekty MFC rozhraní ODBC. Pomocí rozhraní DAO pouze zachovat stávající aplikace. Obecné informace najdete v článku [programovací přístup dat](../data/data-access-programming-mfc-atl.md).|Rozhraní framework poskytuje třídy, které podporují přístup k databázi.|  
-|Vytvoření kostru aplikace s možnosti databáze.|Spusťte Průvodce aplikací MFC. Vyberte možnosti na stránce Podpora databáze. Pokud zvolíte možnost, která vytvoří zobrazení záznamu, také zadejte:<br /><br /> -Data zdroje a název tabulky nebo názvy<br />-Dotaz na název nebo názvy.|Průvodce aplikací MFC vytvoří soubory a určuje, že obsahuje nezbytné. V závislosti na možnostech, které zadáte může zahrnovat soubory třídy sady záznamů.|  
-|Návrh formuláře databáze nebo formulářů.|Použití editoru dialogových oken Visual C++ umístit ovládacími prvky v dialogovém okně Šablony prostředky pro vaše tříd zobrazení záznamu.|Průvodce aplikací MFC vytvoří prostředek dialogové okno prázdné šablonu můžete vyplnit.|  
-|Vytvořte další záznam třídy zobrazení a sady záznamů podle potřeby.|Zobrazení tříd použijte k vytvoření třídy a dialogové okno editor k zobrazení návrhu.|Zobrazení tříd vytvoří další soubory pro nové třídy.|  
-|Vytvořte sadu záznamů objekty podle potřeby v kódu. Použijte jednotlivých záznamů k manipulaci s záznamy...|Vaše sady záznamů jsou založené na třídy odvozené z [CRecordset](../mfc/reference/crecordset-class.md) pomocí průvodců.|Rozhraní ODBC používá pole záznamu (exchange – RFX) pro výměnu dat mezi databází a sady záznamů pole datových členů. Pokud používáte zobrazení záznamů, výměna dialogových dat (DDX) výměny dat mezi ovládacími prvky v zobrazení záznamů a záznamů.|  
-|.. nebo vytvořit explicitního [CDatabase](../mfc/reference/cdatabase-class.md) ve vašem kódu pro každou databázi, kterou chcete otevřít.|Základní vašich objektů sady záznamů pro databázové objekty.|Objekt databáze poskytuje rozhraní ke zdroji dat.|  
-|Dynamicky vazby datových sloupců do sady záznamů.|V rozhraní ODBC přidávání kódu do vaší třídy odvozené sady záznamů ke správě vazby. Najdete v článku [sada záznamů: dynamické vazby datových sloupců (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).||  
-  
-## <a name="see-also"></a>Viz také  
- [Vytváření v rozhraní Framework](../mfc/building-on-the-framework.md)   
- [Posloupnost operací při sestavování aplikací MFC](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
- [Posloupnost operací při vytváření aplikací OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)   
- [Posloupnost operací při vytváření ovládacích prvků ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)
+>  Prostředí Visual C++ a Průvodce nepodporuje rozhraní DAO (i když jsou součástí třídy DAO a můžete stále použít). Společnost Microsoft doporučuje použití rozhraní ODBC pro nové projekty MFC. DAO byste měli používat jenom v udržování existujících aplikací.
+
+### <a name="creating-database-applications"></a>Vytváření databázových aplikací
+
+|Úloha|Můžete provést|Nepodporuje rozhraní framework|
+|----------|------------|------------------------|
+|Rozhodněte, jestli se má použít třídy knihovny MFC rozhraní ODBC a DAO.|Použití rozhraní ODBC pro nové projekty MFC. Pouze k udržování existujících aplikací pomocí rozhraní DAO. Obecné informace najdete v článku [programování přístupu dat](../data/data-access-programming-mfc-atl.md).|Architektura dodává třídy, které podporují přístup k databázi.|
+|Vytvoření kostru aplikace s možnostmi databáze.|Spuštění Průvodce aplikací knihovny MFC. Vyberte možnosti na stránce Podpora databáze. Pokud zvolíte možnost, která vytvoří zobrazení záznamů, také zadejte:<br /><br /> – Data zdroje a název tabulky nebo názvy<br />-Dotazování název nebo názvy.|Průvodce aplikací MFC vytvoří soubory a určí, že obsahuje nezbytné. V závislosti na možnostech, které zadáte může obsahovat soubory třídy sady záznamů.|
+|Návrh databáze formuláře nebo formuláře.|Pomocí dialogového okna editoru Visual C++ umístit ovládací prvky na prostředků šablony dialogového okna pro tříd zobrazení záznamu.|Průvodce aplikací MFC vytvoří prostředek šablony prázdné dialogového okna můžete vyplnit.|
+|Podle potřeby vytvořte další záznam třídy zobrazení a sady záznamů.|Vytvoření třídy a dialogové okno k zobrazení návrhu editoru pomocí zobrazení tříd.|Zobrazení tříd vytvoří další soubory pro nové třídy.|
+|Vytvořte sadu záznamů objekty podle potřeby ve vašem kódu. Každá sada záznamů slouží k manipulaci s záznamů...|Vaše sady záznamů jsou založeny na třídy odvozené od [CRecordset](../mfc/reference/crecordset-class.md) pomocí průvodců.|ODBC používá výměna pole záznamu (RFX) k výměně dat mezi databází a sady záznamů pole datových členů. Pokud používáte zobrazení záznamů, výměna dat dialogových oken (DDX) vyměňuje data mezi ovládacími prvky pro zobrazení záznamů a záznamů.|
+|.. .nebo vytvořit explicitní [CDatabase](../mfc/reference/cdatabase-class.md) ve vašem kódu pro každou databázi, kterou chcete otevřít.|Základní sada záznamů objekty na databázových objektů.|Databázový objekt poskytuje rozhraní ke zdroji dat.|
+|Vytvoření vazby datových sloupců do sady záznamů dynamicky.|V rozhraní ODBC přidejte kód do vaší třídy odvozené sady záznamů ke správě vazby. Přečtěte si článek [sada záznamů: dynamické vazby dat sloupců (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).||
+
+## <a name="see-also"></a>Viz také
+
+[Sestavení na základě rozhraní .NET Framework](../mfc/building-on-the-framework.md)<br/>
+[Posloupnost operací při sestavování aplikací MFC](../mfc/sequence-of-operations-for-building-mfc-applications.md)<br/>
+[Posloupnost operací při vytváření aplikací OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)<br/>
+[Posloupnost operací při vytváření ovládacích prvků ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)

@@ -1,5 +1,5 @@
 ---
-title: Extrahování funkce | Microsoft Docs
+title: Extrahovat funkci | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -10,39 +10,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fc4d48c972bca9352f326085574e4cf4df83aea
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 8ca75ca3b69fb175bea160d7f2a35d36416ea2f5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33333154"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441366"
 ---
-# <a name="extract-function"></a>Extrahování – funkce
-**Co:** umožňuje zapnout fragment kódu do své vlastní funkce.
+# <a name="extract-function"></a>Extrahovat funkci
+**Co:** umožňuje zapnout fragment kódu do samostatné funkce.
 
-**Kdy:** máte fragment kódu existující v některé funkce, která musí být volána z jiné funkce.  
+**Kdy:** máte fragment existující kód v některé funkce, které je potřeba volat z jiné funkci.
 
-**Důvod:** vám může zkopírujte a vložte tento kód, ale které by vedlo k duplikaci.  Lepší řešení je refaktorovat tento fragment do svou vlastní funkci, která lze volat volně dalších funkcí.
+**Důvod, proč:** vám může kopírovat/vložit tento kód, ale které by mohlo dojít k duplikaci.  Lepším řešením je refaktorovat tohoto fragmentu do své vlastní funkce, které je možné vyvolat bez omezení dalších funkcí.
 
-**Postupy:**
+**Jak:**
 
-1. Zvýrazněte kód extrahovat:
+1. Zvýraznění kódu extrahovaným:
 
    ![Zvýrazněný kód](images/extractfunction_highlight.png)
 
 1. Dále proveďte jednu z následujících akcí:
    * **Klávesnice**
-     * Stiskněte klávesu **Ctrl + R**, pak **Ctrl + M**.  (Všimněte si, že klávesové zkratky se může lišit na základě na profilu, které jste vybrali.)
-     * Stiskněte klávesu **Ctrl +.** k aktivační události **rychlé akce a refaktoring** nabídku a vyberte **extrahovat – funkce (experimentální)** v místní nabídce.
-   * **Myš**
-     * Vyberte **Upravit > Refaktorovat > extrahovat funkce (experimentální)**.
-     * Klikněte pravým tlačítkem na kód, vyberte **rychlé akce a refaktoring** nabídku a vyberte **extrahovat – funkce (experimentální)** v místní nabídce.
-     * Klikněte ![žárovek](images/bulb.png) ikonu, která se zobrazí v levým okrajem a vyberte **extrahovat – funkce (experimentální)** v místní nabídce.
+     * Stisknutím klávesy **Ctrl + R**, pak **Ctrl + M**.  (Všimněte si, že klávesová zkratka může být jiný platformě, na který profil vyberete.)
+     * Stisknutím klávesy **Ctrl +.** aktivační událost **rychlé akce a Refaktoringy** nabídky a vybereme **extrahovat funkci (experimentální)** v místní nabídce.
+   * **Myši**
+     * Vyberte **Upravit > Refaktorovat > extrahovat (experimentální) funkce**.
+     * Klikněte pravým tlačítkem na kód, vyberte **rychlé akce a Refaktoringy** nabídky a vybereme **extrahovat funkci (experimentální)** v místní nabídce.
+     * Klikněte na tlačítko ![žárovky](images/bulb.png) ikonu, která se zobrazí v levém okraji a vyberte **extrahovat funkci (experimentální)** v místní nabídce.
 
-1. V **extrahovat funkce nebo metodu (experimentální)** okno, zadejte název nové funkce, vyberte místo kód umístit a klikněte **OK** tlačítko.  
+1. V **extrahovat funkci/metodu (experimentální)** zadejte nový název funkce, vyberte, kde chcete kód umístit a klikněte na tlačítko **OK** tlačítko.
 
-   ![Extrahování funkce – funkce](images/extractfunction_dialog.png)
+   ![Extrahovat funkci – funkce](images/extractfunction_dialog.png)
 
-1. Vytvoří se nové funkce tam, kde jste zadali, prototyp funkce v odpovídající soubor hlaviček, a původní kód bude změněno na volání této funkce.
+1. Vytvoří se nová funkce tam, kde jste zadali, prototypu funkce v odpovídající soubor záhlaví a původního kódu se změní, aby volání této funkce.
 
-   ![Extrahování výsledku funkce](images/extractfunction_result.png)
+   ![Extrahovat výsledku funkce](images/extractfunction_result.png)

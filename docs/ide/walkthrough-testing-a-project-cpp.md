@@ -16,59 +16,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef6f2534ca0415ea8b8a17445e9cf9441026f669
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9553e6cbbd4c4fbf8b9b7e1907bd6dea63faa2a5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46110598"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377432"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Návod: Testování projektu (C++)
-Když spustíte program v režimu ladění, můžete používat zarážky pro pozastavení programu a kontrolu stavu proměnných a objektů.  
-  
-V tomto podrobném návodu sledovat hodnotu proměnné po spuštění programu a zjistit, proč je hodnota, které jste očekávali.  
-  
-## <a name="prerequisites"></a>Požadavky  
-  
-- Tento názorný průvodce předpokládá, že chápete základy jazyka C++.  
-  
-- Dále předpokládá, že jste dokončili dříve související návody, které jsou uvedeny v [pomocí integrovaného vývojového prostředí sady Visual Studio pro vývoj v jazyce C++ Desktop](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
-  
-### <a name="to-run-a-program-in-debug-mode"></a>Spuštění programu v režimu ladění  
-  
-1. Games.cpp otevřete pro úpravy.  
-  
-1. Vyberte tento řádek kódu:  
-  
-     `Cardgame.solitaire(1);`  
-  
-1. Chcete-li nastavit zarážku na tomto řádku, na panelu nabídek zvolte **ladění** > **Přepnout zarážku**, nebo zvolte **F9** klíč. Zobrazí se červený kruh vlevo od řádku; znamená to, že byla nastavena zarážka. Chcete-li odebrat zarážku, můžete použít příkaz nabídky nebo **F9** klíč znovu.  
-  
-     Pokud používáte myš, můžete také nastavit nebo odebrat zarážku kliknutím do levého okraje.  
-  
-1. V panelu nabídky zvolte **ladění** > **spustit ladění**, nebo zvolte **F5** klíč.  
-  
-     Když program dosáhne řádku se zarážkou, provádění se dočasně zastaví, protože aplikace je v režimu pozastavení. Žlutá šipka vlevo od řádku kódu označuje, že je na další řádek, který se spustí.  
-  
-1. Chcete-li zkoumat hodnoty `Cardgame::totalParticipants` proměnnou, přesuňte ukazatel nad `Cardgame` a poté ho přesuňte nad rozšiřující ovládací prvek vlevo od okna popisu. Název proměnné `totalParticipants` a její hodnota **12** jsou zobrazeny.  
-  
-     Otevřete místní nabídku `Cardgame::totalParticipants` proměnné a pak zvolte **Přidat kukátko** zobrazíte danou proměnnou v **kukátko 1** okna. Můžete také zvýraznit proměnné a přetáhněte ji do **kukátko 1** okna.  
-  
-1. Chcete-li na další řádek kódu na řádku nabídek zvolte **ladění** > **Krokovat s přeskočením**, nebo zvolte **F10** klíč.  
-  
-     Hodnota `Cardgame::totalParticipants` v **kukátko 1** okno se teď zobrazí jako **13**.  
-  
-1. Otevřete místní nabídku `return 0;` příkaz a klikněte na tlačítko **spustit ke kurzoru**. Žlutá šipka nalevo od kód odkazuje na další příkaz, který se spustí.  
-  
-1. `Cardgame::totalParticipants` Čísla by měla snížit při `Cardgame` ukončí. V tomto okamžiku `Cardgame::totalParticipants` by se měl rovnat 0, protože všechny `Cardgame` instancí se odstranily, ale **kukátko 1** okno znamená, že `Cardgame::totalparticipants` rovná **18**. To znamená, že je chyba v kódu, který lze rozpoznat a opravit provedením dalšího názorného postupu, [návod: ladění projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md).  
-  
-1. Chcete-li ukončit program, na panelu nabídek, zvolte **ladění** > **Zastavit ladění**, nebo zvolte **Shift**+**F5**klávesové zkratky.  
-  
-## <a name="next-steps"></a>Další kroky  
+
+Když spustíte program v režimu ladění, můžete používat zarážky pro pozastavení programu a kontrolu stavu proměnných a objektů.
+
+V tomto podrobném návodu sledovat hodnotu proměnné po spuštění programu a zjistit, proč je hodnota, které jste očekávali.
+
+## <a name="prerequisites"></a>Požadavky
+
+- Tento názorný průvodce předpokládá, že chápete základy jazyka C++.
+
+- Dále předpokládá, že jste dokončili dříve související návody, které jsou uvedeny v [pomocí integrovaného vývojového prostředí sady Visual Studio pro vývoj v jazyce C++ Desktop](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+
+### <a name="to-run-a-program-in-debug-mode"></a>Spuštění programu v režimu ladění
+
+1. Games.cpp otevřete pro úpravy.
+
+1. Vyberte tento řádek kódu:
+
+     `Cardgame.solitaire(1);`
+
+1. Chcete-li nastavit zarážku na tomto řádku, na panelu nabídek zvolte **ladění** > **Přepnout zarážku**, nebo zvolte **F9** klíč. Zobrazí se červený kruh vlevo od řádku; znamená to, že byla nastavena zarážka. Chcete-li odebrat zarážku, můžete použít příkaz nabídky nebo **F9** klíč znovu.
+
+   Pokud používáte myš, můžete také nastavit nebo odebrat zarážku kliknutím do levého okraje.
+
+1. V panelu nabídky zvolte **ladění** > **spustit ladění**, nebo zvolte **F5** klíč.
+
+   Když program dosáhne řádku se zarážkou, provádění se dočasně zastaví, protože aplikace je v režimu pozastavení. Žlutá šipka vlevo od řádku kódu označuje, že je na další řádek, který se spustí.
+
+1. Chcete-li zkoumat hodnoty `Cardgame::totalParticipants` proměnnou, přesuňte ukazatel nad `Cardgame` a poté ho přesuňte nad rozšiřující ovládací prvek vlevo od okna popisu. Název proměnné `totalParticipants` a její hodnota **12** jsou zobrazeny.
+
+   Otevřete místní nabídku `Cardgame::totalParticipants` proměnné a pak zvolte **Přidat kukátko** zobrazíte danou proměnnou v **kukátko 1** okna. Můžete také zvýraznit proměnné a přetáhněte ji do **kukátko 1** okna.
+
+1. Chcete-li na další řádek kódu na řádku nabídek zvolte **ladění** > **Krokovat s přeskočením**, nebo zvolte **F10** klíč.
+
+   Hodnota `Cardgame::totalParticipants` v **kukátko 1** okno se teď zobrazí jako **13**.
+
+1. Otevřete místní nabídku `return 0;` příkaz a klikněte na tlačítko **spustit ke kurzoru**. Žlutá šipka nalevo od kód odkazuje na další příkaz, který se spustí.
+
+1. `Cardgame::totalParticipants` Čísla by měla snížit při `Cardgame` ukončí. V tomto okamžiku `Cardgame::totalParticipants` by se měl rovnat 0, protože všechny `Cardgame` instancí se odstranily, ale **kukátko 1** okno znamená, že `Cardgame::totalparticipants` rovná **18**. To znamená, že je chyba v kódu, který lze rozpoznat a opravit provedením dalšího názorného postupu, [návod: ladění projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md).
+
+1. Chcete-li ukončit program, na panelu nabídek, zvolte **ladění** > **Zastavit ladění**, nebo zvolte **Shift**+**F5**klávesové zkratky.
+
+## <a name="next-steps"></a>Další kroky
 
 **Předchozí:** [návod: sestavení projektu (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
 **Další krok:** [návod: ladění projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
-  
+
 ## <a name="see-also"></a>Viz také
 
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>

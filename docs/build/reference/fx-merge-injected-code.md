@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bd95ea00a63f28f04874f873cf0a4e991fac0fc
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ca8522f85a8ce10bc694ab1144e7f24ed3fca6fa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710518"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425746"
 ---
 # <a name="fx-merge-injected-code"></a>/Fx (sloučení vloženého kódu)
 
@@ -86,6 +86,6 @@ Pokud váš program zahrnuje soubor hlaviček, který používá vložený kód 
 
 ## <a name="see-also"></a>Viz také
 
-[Výstupního souboru (/ F) možnosti](../../build/reference/output-file-f-options.md)
-[– možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
+[Možnosti výstupního souboru (/F)](../../build/reference/output-file-f-options.md)<br/>
+[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)

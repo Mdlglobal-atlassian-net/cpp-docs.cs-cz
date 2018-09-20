@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0132cdfb291c7c8691a6b31f00de125cb08b702d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fa3bd3d0e44591ba56291a39187d373df980734a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764643"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417719"
 ---
 # <a name="atlmfc-concepts"></a>ATL/MFC – koncepce
 
@@ -28,7 +28,7 @@ Tato část obsahuje rámcové a úlohově zaměřená témata, které vám pom�
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Řetězce (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
+[Řetězce (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 Popisuje, jak spravovat data řetězce v aplikacích.
 
 ## <a name="see-also"></a>Viz také

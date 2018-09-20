@@ -1,5 +1,5 @@
 ---
-title: Použití ovládacích prvků posuvník | Microsoft Docs
+title: Použití ovládacích prvků posuvník | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9180d792f38652b22f430e497ef0e42dc54f6d73
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0496a15b289ec055fd2706975603f25cef13938
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382177"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388833"
 ---
 # <a name="using-slider-controls"></a>Použití ovládacích prvků posuvník
-Typické použití ovládacího prvku posuvník se následující níže:  
-  
--   Ovládací prvek je vytvořen. Pokud ovládací prvek je zadané v poli šablony dialogového okna, je vytvoření automaticky při vytvoření dialogové okno. (Byste měli mít [CSliderCtrl](../mfc/reference/csliderctrl-class.md) člena v vlastní třídy dialogového okna, která odpovídá do ovládacího prvku posuvník.) Alternativně můžete použít [vytvořit](../mfc/reference/csliderctrl-class.md#create) – členská funkce vytvoření ovládacího prvku jako podřízeného okna časového období.  
-  
--   Volání různé sady členské funkce pro nastavení hodnot pro ovládací prvek. Změny, které můžete provést zahrnují nastavení minimální a maximální pozice pro posuvník, kreslení osové značky, nastavení výběru rozsahu a přemístění posuvníku. Pro ovládací prvky v dialogovém okně, je vhodná doba na k tomu v dialogovém okně [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) funkce.  
-  
--   Jako uživatel pracuje s ovládacím prvkem, odešle různých zpráv s oznámením. Můžete rozbalit hodnota posuvníku z ovládacího prvku voláním [GetPos](../mfc/reference/csliderctrl-class.md#getpos) – členská funkce.  
-  
--   Když jste hotovi s ovládacím prvkem, budete muset zkontrolujte, zda že je správně zničena. Pokud je v ovládacím prvku posuvník v dialogovém okně, jeho a `CSliderCtrl` objektu budou automaticky zničena. Pokud ne, musíte zajistit, aby obě ovládacího prvku a `CSliderCtrl` objekt jsou správně zničena.  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CSliderCtrl](../mfc/using-csliderctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Typické použití ovládacího prvku jezdec má následující formát, níže:
+
+- Ovládací prvek je vytvořen. Pokud ovládací prvek je zadané v šablony dialogového okna, je automatické vytváření, při vytváření dialogových oken. (Byste měli mít [atributu CSliderCtrl](../mfc/reference/csliderctrl-class.md) člena v vlastní třídy dialogového okna, která odpovídá v ovládacím prvku posuvník.) Alternativně můžete použít [vytvořit](../mfc/reference/csliderctrl-class.md#create) členská funkce vytvoření ovládacího prvku jako podřízeného okna z jakékoli okno.
+
+- Volejte různé členské funkce Set k nastavení hodnot pro ovládací prvek. Změny, které můžete provést zahrnují nastavení minimální a maximální pozice pro posuvník, značky kreslení, nastavení oblast výběru a změnou pozice posuvníku. Pro ovládací prvky v dialogovém okně je vhodná doba k tomu v dialogovém okně [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) funkce.
+
+- Během interakce uživatele s ovládacím prvkem, odešle různé zprávy s oznámením. Hodnota posuvníku se dají extrahovat z ovládacího prvku pomocí volání [GetPos](../mfc/reference/csliderctrl-class.md#getpos) členskou funkci.
+
+- Jakmile budete hotovi s ovládacím prvkem, budete muset Ujistěte se, že je správně zničeny. Pokud je ovládací prvek posuvník v dialogovém okně ho a `CSliderCtrl` bude objekt zničen. automaticky. Pokud ne, musíte zajistit, aby oba ovládací prvek a `CSliderCtrl` objektu jsou správně zničeny.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CSliderCtrl](../mfc/using-csliderctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

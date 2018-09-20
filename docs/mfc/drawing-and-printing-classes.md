@@ -1,5 +1,5 @@
 ---
-title: Vykreslování a tisk třídy | Microsoft Docs
+title: Vykreslování a tisk tříd | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,16 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 930075a459424e5ffac00d4e620e18cd2c318273
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 331fabe63a3abad1ea19fe4440f8eec0c05481d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344777"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380325"
 ---
 # <a name="drawing-and-printing-classes"></a>Třídy pro vykreslování a tisk
-V systému Windows všechny grafického výstupu vykreslením na virtuální prostor pro kreslení názvem kontextu zařízení (DC). MFC poskytuje třídy pro zapouzdření různých typů řadičů domény, stejně jako encapsulations kreslení nástroje systému Windows, například rastrové obrázky, štětce, palety a pera.  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled třídy](../mfc/class-library-overview.md)
+
+Ve Windows je vykreslen všechny grafického výstupu na virtuální prostor pro kreslení volá kontextu zařízení (DC). Knihovna MFC poskytuje třídy, které zapouzdřují různé typy řadičů domény, jakož i encapsulations pro Windows nástrojů pro kreslení například rastrové obrázky, štětce, palety a pera.
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../mfc/class-library-overview.md)
 

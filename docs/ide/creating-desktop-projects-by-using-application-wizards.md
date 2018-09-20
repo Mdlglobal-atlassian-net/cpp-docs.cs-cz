@@ -1,5 +1,5 @@
 ---
-title: Tvorba běžných projektů pomocí průvodců aplikací | Microsoft Docs
+title: Tvorba desktopových projektů pomocí průvodců aplikací | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,33 +20,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f4328747a594d18dd61631ddb930d8c59964452
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c16f68800fb69736593b61e3b56d837770c088be
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33334012"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387780"
 ---
 # <a name="creating-desktop-projects-by-using-application-wizards"></a>Tvorba běžných projektů pomocí průvodců aplikací
-Každý typ projektu jazyka Visual C++ obsahuje průvodce aplikací, který pomáhá rychle a snadno generovat nové projekty modelované ze šablony projektu.  Pokud chcete otevřít Průvodce aplikací, použijte **nový projekt** dialogové okno k určení vlastností projektu, například název projektu, nebo adresář a řešení kde se bude nacházet projektu.  
-  
-#### <a name="to-open-a-visual-c-application-wizard"></a>Spuštění Průvodce aplikací Visual C++  
-  
-1.  Na **soubor** nabídky, klikněte na tlačítko **nový**a potom klikněte na **projektu**.  
-  
-     **Nový projekt** zobrazí se dialogové okno.  
-  
-2.  V podokně typy projektů, vyberte **projekty Visual C++** složky. V podokně Šablony se zobrazí ikona pro každý typ projektu jazyka C++.  
-  
-3.  Vyberte zde ikonu požadovaného typu projektu. Pod oběma podokny se zobrazí zpráva označující typ projektu, který se chystáte vytvořit.  
-  
-4.  Zadejte vlastnosti projektu. Pokud tento krok přeskočíte, použijí se výchozí nastavení projektu sady Visual Studio. V tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md) podrobnosti.  
-  
-5.  Klikněte na tlačítko **OK**a Průvodce pro svůj projekt zadejte otevře. Pokud chcete pro Průvodce naleznete v tématu nápovědy, stiskněte klávesu **F1**.  
-  
- Při vytváření projektu jej lze přidat k existujícím řešením, nebo lze vytvořit nové řešení. Další informace najdete v tématu [postupy: vytvoření projektu jazyka C++ z existujícího kódu](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Vytváření a správa projektů Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)   
- [MFC průvodců a dialogových oken](../mfc/reference/mfc-wizards-and-dialog-boxes.md)   
- [Průvodci a dialogová okna ATL](../atl/reference/atl-wizards-and-dialog-boxes.md)
+
+Každý typ projektu jazyka Visual C++ obsahuje průvodce aplikací, který pomáhá rychle a snadno generovat nové projekty modelované ze šablony projektu.  Chcete-li otevřít Průvodce aplikací, použijte **nový projekt** dialogové okno specifikace vlastností projektu, jako je například název adresáře a řešení nebo projektu, ve kterém se projekt bude nacházet.
+
+#### <a name="to-open-a-visual-c-application-wizard"></a>Spuštění Průvodce aplikací Visual C++
+
+1. Na **souboru** nabídky, klikněte na tlačítko **nový**a potom klikněte na tlačítko **projektu**.
+
+   **Nový projekt** zobrazí se dialogové okno.
+
+1. V podokně typy projektů, vyberte **projekty Visual C++** složky. V podokně Šablony se zobrazí ikona pro každý typ projektu jazyka C++.
+
+1. Vyberte zde ikonu požadovaného typu projektu. Pod oběma podokny se zobrazí zpráva označující typ projektu, který se chystáte vytvořit.
+
+1. Zadejte vlastnosti projektu. Pokud tento krok přeskočíte, použijí se výchozí nastavení projektu sady Visual Studio. Zobrazit [práce s vlastnostmi projektu](../ide/working-with-project-properties.md) podrobnosti.
+
+1. Klikněte na tlačítko **OK**, spustíte Průvodce pro váš projekt vybraný typ. Pokud chcete přečíst téma nápovědy pro průvodce, stiskněte **F1**.
+
+Při vytváření projektu jej lze přidat k existujícím řešením, nebo lze vytvořit nové řešení. Další informace najdete v tématu [postupy: vytvoření projektu jazyka C++ z existujícího kódu](../ide/how-to-create-a-cpp-project-from-existing-code.md).
+
+## <a name="see-also"></a>Viz také
+
+[Vytváření a spravování projektů Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)<br>
+[Průvodci a dialogová okna knihovny MFC](../mfc/reference/mfc-wizards-and-dialog-boxes.md)<br>
+[Průvodci a dialogová okna ATL](../atl/reference/atl-wizards-and-dialog-boxes.md)

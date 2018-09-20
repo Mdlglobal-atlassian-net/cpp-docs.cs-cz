@@ -1,5 +1,5 @@
 ---
-title: Přístup k Embedded měsíce v ovládacím prvku Kalendář | Microsoft Docs
+title: Přístup k vložené měsíc kalendář ovládacího prvku | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,34 +19,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfbc9ce7b99efc1f8d99f5735c16c252ff613c59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a92660223c84c5f53bc848e72b03316602180d36
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332124"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430290"
 ---
 # <a name="accessing-the-embedded-month-calendar-control"></a>Přístup k vloženému ovládacímu prvku měsíční kalendář
-Objekt ovládacího prvku Kalendář embedded měsíc je přístupná z `CDateTimeCtrl` objekt s volání [GetMonthCalCtrl](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl) – členská funkce.  
-  
+
+Objekt ovládacího prvku Kalendář vložený měsíc je přístupný z `CDateTimeCtrl` objektu voláním [GetMonthCalCtrl](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl) členskou funkci.
+
 > [!NOTE]
->  Ovládací prvek embedded měsíční kalendář se používá pouze v případě, že nemá prvku pro výběr data a času **DTS_UPDOWN** styl sady.  
-  
- To je užitečné, pokud chcete změnit určité atributy dříve, než se zobrazí vloženému ovládacímu prvku. K tomu, zpracování **dtn_dropdown –** oznámení, načíst ovládací prvek měsíční kalendář (pomocí [CDateTimeCtrl::GetMonthCalCtrl](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl)) a proveďte úpravy. Ovládací prvek měsíční kalendář bohužel není trvalý.  
-  
- Jinými slovy, když si uživatel vyžádá zobrazení ovládací prvek měsíční kalendář, ovládacího prvku Kalendář nového měsíce se vytvoří (před **dtn_dropdown –** oznámení). Zničení ovládacího prvku (po **dtn_closeup –** oznámení) při uživatelem zamítnuta. To znamená, že libovolné atributy, které můžete upravit, než se zobrazí vloženému ovládacímu prvku, jsou ztraceny, když se zruší vloženému ovládacímu prvku.  
-  
- Následující příklad ukazuje, tento postup, obslužné rutiny pro použití **dtn_dropdown –** oznámení. Kód změní barvu pozadí ovládací prvek měsíční kalendář, pomocí volání [SetMonthCalColor](../mfc/reference/cdatetimectrl-class.md#setmonthcalcolor), šedou barvu. Kód je následující:  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#5](../mfc/codesnippet/cpp/accessing-the-embedded-month-calendar-control_1.cpp)]  
-  
- Jak jsme uvedli dříve, se ztratí, se dvěma výjimkami, všechny změny vlastností ovládací prvek měsíční kalendář, když se zruší vloženému ovládacímu prvku. První výjimka barvy ovládací prvek měsíční kalendář má již popsány. Druhou výjimkou je písmo použité ovládací prvek měsíční kalendář. Můžete upravit výchozí písmo tím, že zavoláte na [CDateTimeCtrl::SetMonthCalFont](../mfc/reference/cdatetimectrl-class.md#setmonthcalfont), předávání popisovač existující písma. Následující příklad (kde `m_dtPicker` je datum a čas objekt ovládacího prvku) ukazuje jedna z možných metod:  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#6](../mfc/codesnippet/cpp/accessing-the-embedded-month-calendar-control_2.cpp)]  
-  
- Jakmile změníte písmo, pomocí volání `CDateTimeCtrl::SetMonthCalFont`, nové písmo uložena a následně použít při příštím měsíční kalendář se mají zobrazit.  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+>  Ovládací prvek vložený měsíční kalendář se používá jenom v případě prvku Výběr data a času nemá **DTS_UPDOWN** stylu sady.
+
+To je užitečné, pokud chcete změnit určité atributy před zobrazením vloženému ovládacímu prvku. K dosažení tohoto zpracování **dtn_dropdown –** oznámení, načíst ovládací prvek měsíční kalendář (pomocí [CDateTimeCtrl::GetMonthCalCtrl](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl)) a zkontrolujte provedené změny. Ovládací prvek měsíční kalendář bohužel není trvalý.
+
+Jinými slovy, když uživatel požádá o zobrazení ovládací prvek měsíční kalendář, ovládací prvek nový měsíční kalendář je vytvořen (před **dtn_dropdown –** oznámení). Ovládací prvek zničen (až **dtn_closeup –** oznámení) při uživatelem zamítnuta. To znamená, že všechny atributy, které změníte, před zobrazením vloženému ovládacímu prvku, je ztracena při vloženému ovládacímu prvku se zavře.
+
+Následující příklad ukazuje tento postup pomocí obslužné rutiny pro **dtn_dropdown –** oznámení. Kód změní barvu pozadí v ovládacím prvku měsíční kalendář, voláním [SetMonthCalColor](../mfc/reference/cdatetimectrl-class.md#setmonthcalcolor), šedou barvu. Kód je následujícím způsobem:
+
+[!code-cpp[NVC_MFCControlLadenDialog#5](../mfc/codesnippet/cpp/accessing-the-embedded-month-calendar-control_1.cpp)]
+
+Jak bylo uvedeno dříve, všechny změny vlastnosti prvku měsíční kalendář bude ztracen, se dvěma výjimkami, když se zavře vloženému ovládacímu prvku. První výjimkou barvy ovládací prvek měsíční kalendář již probírali. Druhou výjimkou je písmo použité v ovládacím prvku měsíční kalendář. Výchozí písmo můžete upravit tak, že volání [CDateTimeCtrl::SetMonthCalFont](../mfc/reference/cdatetimectrl-class.md#setmonthcalfont), předávání popisovač existující písma. Následující příklad (kde `m_dtPicker` je objekt ovládacího prvku datum a čas) ukazuje možných metod:
+
+[!code-cpp[NVC_MFCControlLadenDialog#6](../mfc/codesnippet/cpp/accessing-the-embedded-month-calendar-control_2.cpp)]
+
+Jakmile změníte písmo, voláním `CDateTimeCtrl::SetMonthCalFont`, jsou uloženy a používány při příštím měsíčním kalendáři je zobrazený nový písma.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CDateTimeCtrl](../mfc/using-cdatetimectrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

@@ -1,5 +1,5 @@
 ---
-title: 'TN017: Likvidace objektů oken | Microsoft Docs'
+title: 'TN017: Zničení objektů oken | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,86 +18,93 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd7b8e9882d682d3e7a9b9162f1f2f84675cd590
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 8286622ec8e7cb739e55a39ce42ed658395551ba
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951527"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407670"
 ---
 # <a name="tn017-destroying-window-objects"></a>TN017: Zničení objektů oken
-Tato poznámka popisuje použití [CWnd::PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) metoda. Tuto metodu použijte, pokud chcete nastavit vlastní přidělení `CWnd`-odvozené objekty. Tato poznámka také vysvětluje, proč byste měli používat [CWnd::DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) zrušení objekt C++ Windows místo **odstranit** operátor.  
-  
- Pokud budete postupovat podle pokynů v tomto tématu, budete mít několik čištění problémy. Tyto problémy může být důsledkem problémy, jako je, že zapomenete odstranit nebo volné paměti C++, že zapomenete uvolnit systémové prostředky, jako je `HWND`s nebo uvolnění objektů příliš mnohokrát.  
-  
-## <a name="the-problem"></a>Problém  
- Každý objekt systému windows (objekt třídy odvozené od `CWnd`) představuje objekt C++ a `HWND`. Objekty C++ mají při přidělování v haldě aplikace a `HWND`s v systémové prostředky přiděluje správce oken. Vzhledem k tomu, že existuje několik způsobů zničit okno objekt, musí poskytujeme sadu pravidel, které brání systému nevracení prostředků nebo paměti. Tato pravidla musí také zabránit objekty a obslužné rutiny Windows zničen více než jednou.  
-  
-## <a name="destroying-windows"></a>Zničení oken  
- Následují dva povolených způsoby zrušení objekt systému Windows:  
-  
--   Volání metody `CWnd::DestroyWindow` nebo rozhraním API systému Windows `DestroyWindow`.  
-  
--   Explicitní odstranění s **odstranit** operátor.  
-  
- Prvním případě je nástrojem nejobvyklejší. Tento případ platí i v případě, že váš kód nevyvolá `DestroyWindow` přímo. Když uživatel nezavře přímo oken s rámečkem, tato akce vytvoří zprávu funkce WM_CLOSE bude a výchozí odpovědi na tuto zprávu je volání `DestroyWindow.` při nadřazeného okna zničení, Windows zavolá `DestroyWindow` pro všechny její podřízené položky.  
-  
- Druhý případ, použití **odstranit** operátor pro objekty Windows by měla být výjimečných. Následující jsou některé případů, kde je pomocí **odstranit** nejvhodnější.  
-  
-## <a name="auto-cleanup-with-cwndpostncdestroy"></a>Automatické čištění s CWnd::PostNcDestroy  
- Pokud systém zničí okno systému Windows, je poslední Windows zprávou odeslanou v okně WM_NCDESTROY. Výchozí hodnota `CWnd` obslužné rutiny pro zprávy je [CWnd::OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy). `OnNcDestroy` bude detach `HWND` z C++ objektu a zavolejte funkci virtuální `PostNcDestroy`. Některé třídy přepsat tuto funkci C++ objekt odstranit.  
-  
- Výchozí implementaci `CWnd::PostNcDestroy` neprovede žádnou akci, která je vhodná pro objekty oken, které jsou přiděleny na rámec zásobníku nebo vložené v jiné objekty. Toto není vhodná pro objekty oken, které jsou určeny přidělování v haldě bez všechny další objekty. Jinými slovy není vhodné pro objekty oken, které nejsou součástí jiné objekty C++.  
-  
- Tyto třídy, které jsou určeny samostatně přidělování v haldě přepsat `PostNcDestroy` metodu za účelem **odstranit tento**. Tento příkaz uvolní paměť přidružená k objektu C++. I když výchozí `CWnd` volání destruktoru `DestroyWindow` Pokud *m_hWnd* je jinou hodnotu než NULL, to není vést k nekonečné rekurzi protože popisovač bude mít hodnotu NULL a odpojit fázi čištění.  
-  
+
+Tato poznámka popisuje použití [CWnd::PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) metody. Tuto metodu použijte, pokud chcete provést vlastní přidělení `CWnd`-odvozené objekty. Tato poznámka také vysvětluje, proč byste měli používat [CWnd::DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) ke zničení objektu jazyka C++ Windows namísto **odstranit** operátor.
+
+Pokud budete postupovat podle pokynů v tomto tématu, budete mít několik problémů vyčištění. Tyto problémy můžou být výsledkem problémy, jako je zapomínání odstranění nebo uvolnění paměti C++, zapomínání uvolnit systémové prostředky, jako je `HWND`s nebo uvolnění objektů příliš mnohokrát.
+
+## <a name="the-problem"></a>Problém
+
+Každý objekt windows (objekt třídy odvozené z `CWnd`) představuje objekt jazyka C++ a `HWND`. Objekty C++ jsou přiděleny do haldy vaší aplikace a `HWND`v systémové prostředky s přidělují Správce oken. Musí, protože existuje několik způsobů, jak zničit objekt window, poskytujeme sadu pravidel, která zabraňuje systému nevracení prostředku nebo paměti. Tato pravidla musí také zabránit objektů a popisovače Windows likviduje více než jednou.
+
+## <a name="destroying-windows"></a>Zničení oken s Windows
+
+Následují dva způsoby povolených zničit objekt Windows:
+
+- Volání `CWnd::DestroyWindow` nebo rozhraní API Windows `DestroyWindow`.
+
+- Explicitní odstranění se **odstranit** operátor.
+
+Prvním případě se zdaleka nejčastěji. Tento případ platí i v případě, že váš kód nevolá `DestroyWindow` přímo. Pokud uživatel přímo zavře okno rámce, tato akce vytvoří zprávu WM_CLOSE výchozí odpověď na tuto zprávu se volat `DestroyWindow.` při zničení nadřazené okno Windows volá `DestroyWindow` pro všechny jeho podřízené objekty.
+
+Druhý případ, použití **odstranit** by měl mít operátor pro objekty Windows výjimečný. Následující jsou některé případy, kdy použití **odstranit** je tou správnou volbou.
+
+## <a name="auto-cleanup-with-cwndpostncdestroy"></a>Automatické čištění s CWnd::PostNcDestroy
+
+Když systém odstraní okno Windows, je poslední Windows zpráva odeslaná do okna WM_NCDESTROY. Výchozí hodnota `CWnd` obslužné rutiny pro zprávy je [CWnd::OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy). `OnNcDestroy` se odpojit `HWND` z jazyka C++ a následně zavolat virtuální funkci `PostNcDestroy`. Některé třídy přepsat tato funkce se odstranit objekt jazyka C++.
+
+Výchozí implementace `CWnd::PostNcDestroy` neprovede žádnou akci, která je vhodná pro objekty oken, které jsou přiděleny v zásobníku nebo vložené v jiných objektech. To není vhodná pro objekty oken, které jsou navržené tak, která bude přidělena v haldě bez dalších objektů. Jinými slovy není vhodné pro objekty oken, které nejsou součástí jiných objektů jazyka C++.
+
+Tyto třídy, které mají být samostatně přidělený k haldě přepsat `PostNcDestroy` metodu za účelem **odstranit tento**. Tento příkaz uvolní paměť přidružený objekt jazyka C++. I když výchozí `CWnd` volání destruktoru `DestroyWindow` Pokud *m_hWnd* je není NULL, to není vést k nekonečné rekurzi popisovač proto bude odpojená a NULL ve fázi čištění.
+
 > [!NOTE]
->  Systém obvykle volá `CWnd::PostNcDestroy` poté, co zpracuje zprávu Windows WM_NCDESTROY a `HWND` a objekt okno C++ již připojeni. Systém bude také zavolat `CWnd::PostNcDestroy` při provádění většiny [CWnd::Create](../mfc/reference/cwnd-class.md#create) volá, pokud dojde k selhání. Automatické čištění pravidla jsou popsané dále v tomto tématu.  
-  
-## <a name="auto-cleanup-classes"></a>Automatické čištění třídy  
- Následující třídy nejsou určená pro automatické čištění. Obvykle jsou vloženy v jiné objekty C++ nebo v zásobníku:  
-  
--   Všechny standardní ovládací prvky Windows (`CStatic`, `CEdit`, `CListBox`a tak dále).  
-  
--   Všechny podřízené windows odvozené přímo z `CWnd` (například vlastní ovládací prvky).  
-  
--   Rozdělovače oken (`CSplitterWnd`).  
-  
--   Výchozí ovládací pruhy (třídy odvozené od `CControlBar`, najdete v části [Technická poznámka 31](../mfc/tn031-control-bars.md) pro povolení automatického odstranění pro ovládací prvek panelu objekty).  
-  
--   Dialogová okna (`CDialog`) určený pro modální dialogová okna na rámec zásobníku.  
-  
--   Všechny standardní dialogová okna s výjimkou `CFindReplaceDialog`.  
-  
--   V dialogových oknech výchozí vytvořené ClassWizard.  
-  
- Následující třídy jsou navrženy pro automatické čištění. Obvykle jsou přidělovány samy o sobě v haldě:  
-  
--   Okna s rámečkem hlavní (přímo nebo nepřímo odvozené z `CFrameWnd`).  
-  
--   Zobrazení systému windows (přímo nebo nepřímo odvozené z `CView`).  
-  
- Pokud chcete rozdělit tato pravidla, je nutné přepsat `PostNcDestroy` metoda v odvozené třídě. Automatické čištění přidat do vaší třídy, volat základní třídy a udělejte **odstranit tento**. Chcete-li odebrat automatické čištění z vaší třídy, volejte `CWnd::PostNcDestroy` přímo místo z `PostNcDestroy` metoda vaší přímé základní třídy.  
-  
- Nejběžnější použití změny automatické čištění chování je vytvoření nemodálního dialogu, který může být přidělen v haldě.  
-  
-## <a name="when-to-call-delete"></a>Když k odstranění volání  
- Doporučujeme vám, že zavoláte `DestroyWindow` zrušení objekt systému Windows, metoda C++ nebo na globální `DestroyWindow` rozhraní API.  
-  
- Nevolejte na globální `DestroyWindow` rozhraní API se zničit okno podřízeného MDI. Používejte virtuální metody `CWnd::DestroyWindow` místo.  
-  
- Pro okna v jazyku C++ objekty, které Neprovádět automatické čištění, pomocí **odstranit** operátor může způsobit, že paměti při pokusu o volání `DestroyWindow` v `CWnd::~CWnd` destruktor Pokud VTBL neukazuje správně odvozené třídy. K tomu dochází, protože systém nemůže najít, že odpovídající destroy – metoda k volání. Pomocí `DestroyWindow` místo **odstranit** zabraňuje tyto problémy. Protože to může být jemně chyba, kompilace v režimu ladění, vydá následující upozornění Pokud jsou v ohrožení.  
-  
-```  
-Warning: calling DestroyWindow in CWnd::~CWnd  
-    OnDestroy or PostNcDestroy in derived class will not be called  
-```  
-  
- V případě C++ Windows objekty, které provádějí automatické čištění, musí volat `DestroyWindow`. Pokud použijete **odstranit** operátor přímo, přidělení paměti diagnostiky MFC vás upozorní, že jste se uvolnění paměti dvakrát. Jsou dva výskyty první explicitní volání a nepřímé volání **odstranit tento** implementace automatické čištění `PostNcDestroy`.  
-  
- Po volání `DestroyWindow` na objekt automatické čištění, zůstanou objekt C++ kolem, ale *m_hWnd* bude mít hodnotu NULL. Po volání `DestroyWindow` na objekt automatické čištění objekt C++ bude pryč, vydání operátorem odstranění C++ implementace automatické čištění `PostNcDestroy`.  
-  
-## <a name="see-also"></a>Viz také  
- [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)   
- [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
+>  Systém volá obvykle `CWnd::PostNcDestroy` po zpracování zprávy Windows WM_NCDESTROY a `HWND` a okno objekt jazyka C++ jsou již propojeny. Systém také bude volat `CWnd::PostNcDestroy` při provádění většiny [CWnd::Create](../mfc/reference/cwnd-class.md#create) zavolá, pokud dojde k chybě. Automatické čištění pravidel jsou popsány dále v tomto tématu.
+
+## <a name="auto-cleanup-classes"></a>Automatické čištění třídy
+
+Následující třídy nejsou určeny pro automatické čištění. Obvykle jsou vloženy do jiných objektů jazyka C++ nebo v zásobníku:
+
+- Všechny standardní ovládací prvky Windows (`CStatic`, `CEdit`, `CListBox`, a tak dále).
+
+- Žádné podřízená okna odvozena přímo z `CWnd` (například vlastní ovládací prvky).
+
+- Rozdělovače oken (`CSplitterWnd`).
+
+- Výchozí ovládací pruhy (třídy odvozené z `CControlBar`, naleznete v tématu [Technická poznámka 31](../mfc/tn031-control-bars.md) pro povolení automatické odstranění pro ovládací prvek panelu objekty).
+
+- Dialogová okna (`CDialog`) navržené pro modální dialogová okna v rámci zásobníku.
+
+- Všechny standardní dialogová okna s výjimkou `CFindReplaceDialog`.
+
+- Dialogová okna výchozí vytvořené nástrojem ClassWizard.
+
+Následující třídy jsou navržené pro automatické čištění. Obvykle jsou přidělovány samy na haldě:
+
+- Hlavního okna s rámečkem (odvozený přímo nebo nepřímo z `CFrameWnd`).
+
+- Zobrazení systému windows (odvozený přímo nebo nepřímo z `CView`).
+
+Pokud chcete provést přerušení tato pravidla, je nutné přepsat `PostNcDestroy` metoda v odvozené třídě. Automatické čištění přidat do vaší třídy, volat základní třídy a proveďte **odstranit tento**. Chcete-li odebrat automatické vyčištění z vaší třídy, zavolejte `CWnd::PostNcDestroy` přímo namísto tohoto `PostNcDestroy` metoda přímou základní třídu.
+
+Změna chování automatického čištění nejběžnější použití je vytvoření nemodálního dialogového okna, který může být přidělen na haldě.
+
+## <a name="when-to-call-delete"></a>Pokud k volání delete
+
+Doporučujeme vám, že zavoláte `DestroyWindow` zničit objekt Windows, metoda jazyka C++ nebo globální `DestroyWindow` rozhraní API.
+
+Nevolejte globální `DestroyWindow` API zrušení podřízené okno MDI. By měl používal virtuální metodu `CWnd::DestroyWindow` místo.
+
+Pro okna v jazyku C++ objekty, které neprováděl automatické čištění, pomocí **odstranit** operátor může způsobit nevracení paměti, při pokusu o volání `DestroyWindow` v `CWnd::~CWnd` destruktor, pokud VTBL neodkazuje správně odvozené třídy. K tomu dojde, protože systém nemůže najít že odpovídající metodu chce volat zničit. Pomocí `DestroyWindow` místo **odstranit** tyto problémy se vyhnete. Protože to může být drobné chyby, kompilace v režimu ladění vygeneruje toto upozornění Pokud vám hrozí.
+
+```
+Warning: calling DestroyWindow in CWnd::~CWnd
+    OnDestroy or PostNcDestroy in derived class will not be called
+```
+
+V případě Windows C++ objekty, které provádějí automatické čištění, je nutné volat `DestroyWindow`. Pokud používáte **odstranit** operátor přímo, přidělení paměti diagnostických MFC vás upozorní, že jste se uvolňování paměti dvakrát. Jsou dva výskyty první explicitní volání a nepřímé volání **odstranit tento** při provádění automatické čištění `PostNcDestroy`.
+
+Po volání `DestroyWindow` na automatické vyčištění objektu, objekt jazyka C++ bude i nadále, ale *m_hWnd* budou mít hodnotu NULL. Po volání `DestroyWindow` na automatické vyčištění objektu, objekt jazyka C++ zmizí, uvolnění operátor delete C++ při provádění automatické čištění `PostNcDestroy`.
+
+## <a name="see-also"></a>Viz také
+
+[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
+[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
 

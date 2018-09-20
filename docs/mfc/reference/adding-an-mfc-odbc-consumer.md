@@ -1,5 +1,5 @@
 ---
-title: Přidání příjemce knihovny MFC rozhraní ODBC | Microsoft Docs
+title: Přidání příjemce ODBC knihovny MFC | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,28 +14,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ce5adc8cb9afc63aa1b2d1c7366ceba081ef1a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02323f1af8ee36d53cdd29d48989a96e61f72c60
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346855"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406792"
 ---
 # <a name="adding-an-mfc-odbc-consumer"></a>Přidání příjemce rozhraní ODBC knihovny MFC
-Příjemce knihovny MFC rozhraní ODBC se skládá vazeb ODBC sada záznamů třídy a data potřebná pro přístup k datovému zdroji.  
-  
-### <a name="to-add-an-mfc-odbc-consumer"></a>Chcete-li přidat příjemce knihovny MFC rozhraní ODBC  
-  
-1.  V zobrazení tříd klikněte pravým tlačítkem na projekt. V místní nabídce klikněte na tlačítko **přidat** a pak klikněte na **přidat třídu**.  
-  
-2.  Ve složce Visual C++, dvakrát klikněte **příjemce knihovny MFC rozhraní ODBC** ikonu nebo vyberte ho a klikněte na tlačítko **otevřete**.  
-  
-     Otevře se průvodce příjemcem knihovny MFC rozhraní ODBC.  
-  
-3.  Definujte nastavení, jak je popsáno v [průvodce příjemcem knihovny MFC ODBC](../../mfc/reference/mfc-odbc-consumer-wizard.md).  
-  
-4.  Klikněte na tlačítko **Dokončit** zavřete průvodce, který se vloží nově vytvořený kód příjemce rozhraní ODBC do projektu.  
-  
-## <a name="see-also"></a>Viz také  
- [Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)
+
+Příjemci knihovny MFC rozhraní ODBC se skládá z rozhraní ODBC záznamů třídy a datových vazeb nezbytná pro přístup ke zdroji dat.
+
+### <a name="to-add-an-mfc-odbc-consumer"></a>Chcete-li přidat příjemce knihovny MFC rozhraní ODBC
+
+1. V zobrazení tříd klikněte pravým tlačítkem na projekt. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat třídu**.
+
+1. Ve složce Visual C++, dvakrát klikněte **příjemce ODBC knihovny MFC** ikonu nebo ho vyberte a klikněte na tlačítko **otevřít**.
+
+     Otevře se průvodce příjemcem ODBC knihovny MFC.
+
+1. Definujte nastavení, jak je popsáno v [průvodce příjemcem MFC ODBC](../../mfc/reference/mfc-odbc-consumer-wizard.md).
+
+1. Klikněte na tlačítko **Dokončit** zavřete průvodce, který se vloží nově vytvořený kód příjemce ODBC ve vašem projektu.
+
+## <a name="see-also"></a>Viz také
+
+[Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da9e378ff75ec67660b0c29a5765be88a2c06496
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 00dd1042195bd7593676021cc4f2f1153ec47844
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205663"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432851"
 ---
 # <a name="cppquote"></a>cpp_quote
 
@@ -38,7 +38,7 @@ Zadaný řetězec bez uvozovek znaků, vysílá do generovaného souboru.
 
 ### <a name="parameters"></a>Parametry
 
-*– Příkaz*  
+*– Příkaz*<br/>
 Instrukce C.
 
 ## <a name="remarks"></a>Poznámky
@@ -68,5 +68,5 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](..
 
 ## <a name="see-also"></a>Viz také
 
-[IDL – atributy](../windows/idl-attributes.md)  
+[IDL – atributy](../windows/idl-attributes.md)<br/>
 [Samostatné atributy](../windows/stand-alone-attributes.md)  

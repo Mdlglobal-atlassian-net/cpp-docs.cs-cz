@@ -1,5 +1,5 @@
 ---
-title: Třídy šablony dokumentu | Microsoft Docs
+title: Třídy šablony dokumentu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9958484633dd736426fc91321d0964abf0ad7e1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87984bf06d8ca178d2a21ac8ff475f828690668e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343538"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406058"
 ---
 # <a name="document-template-classes"></a>Třídy šablony dokumentu
-Objekty šablony dokumentu koordinaci vytvoření dokumentu, zobrazení a rámečku okno objekty, když nový dokument nebo není vytvořená zobrazení.  
-  
- [CDocTemplate](../mfc/reference/cdoctemplate-class.md)  
- Základní třída pro šablony dokumentů. Tato třída se nikdy používat přímo; Místo toho použijte jeden z jiné třídy šablony dokumentu odvozen z této třídy.  
-  
- [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)  
- Šablona pro dokumenty v rozhraní více dokumentů (MDI). Aplikace MDI mohou mít více dokumentů, otevřete v čase.  
-  
- [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md)  
- Šablona pro dokumenty v rozhraní s jedním dokumentem (SDI). Aplikace SDI mít pouze jeden dokument otevřít v čase.  
-  
-## <a name="related-class"></a>Související – třída  
- [CCreateContext](../mfc/reference/ccreatecontext-structure.md)  
- Struktury předaná šablony dokumentu na vytvoření oken funkce pro koordinaci vytváření objektů dokumentů, zobrazení a oken s rámečkem.  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled třídy](../mfc/class-library-overview.md)
+
+Objekty šablony dokumentu koordinovat vytvoření dokumentu, zobrazení a objekty oken rámce při vytváření nového dokumentu nebo zobrazení je vytvořeno.
+
+[CDocTemplate –](../mfc/reference/cdoctemplate-class.md)<br/>
+Základní třída pro šablony dokumentů. Tato třída se nikdy nepoužívejte přímo. Místo toho použít jeden z jiné třídy šablony dokumentu odvozen z této třídy.
+
+[Cmultidoctemplate –](../mfc/reference/cmultidoctemplate-class.md)<br/>
+Šablona pro dokumenty v rozhraní více dokumentů (MDI). Aplikace MDI může mít několik dokumentů, otevřete v čase.
+
+[Csingledoctemplate –](../mfc/reference/csingledoctemplate-class.md)<br/>
+Šablona pro dokumenty v rozhraní jednoho dokumentu (SDI). Aplikace SDI mít pouze jeden dokument otevřete v čase.
+
+## <a name="related-class"></a>Související třídy
+
+[Ccreatecontext –](../mfc/reference/ccreatecontext-structure.md)<br/>
+Struktury předávány šablonu dokumentu pro funkce vytvoření okna pro koordinaci vytváření objektů dokumentů, zobrazení a oken s rámečkem.
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../mfc/class-library-overview.md)
 

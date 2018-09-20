@@ -1,5 +1,5 @@
 ---
-title: Přetažení (OLE) | Microsoft Docs
+title: Přetažení (OLE) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,35 +19,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc23c7695bf5afa22734c382ddc72e8418ff74c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 498644a159c6472ed197fcadd28ad0236d62ca0b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344330"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389639"
 ---
 # <a name="drag-and-drop-ole"></a>Přetažení (OLE)
-Funkce přetažení myší OLE je primárně zástupce pro kopírování a vkládání dat. Použijete-li do schránky Kopírovat nebo vložit data, jsou vyžaduje několik kroků. Vyberte data, klikněte na **Vyjmout** nebo **kopie** z **upravit** nabídky, přejděte do cílového souboru, okno nebo aplikace, umístěte kurzor do požadovaného umístění a klikněte na **Vložení** z **upravit** nabídky.  
-  
- OLE – přetažení se liší od mechanismus přetažení myší Správce souborů, který lze zpracovat pouze názvy souborů a je navrženo konkrétně k předat názvy souborů aplikace. OLE – přetažení je mnohem víc Obecné. Umožňuje přetažení všechna data, která může být také umístěny do schránky.  
-  
- Pokud používáte OLE – přetažení, odeberete z procesu dva kroky. Vyberte data z okna zdroje ("rozevírací zdroj"), přetáhněte jej do požadované cílové umístění ("cíle přetažení") a umístěte jej uvolněním tlačítka myši. Operaci se eliminuje potřeba nabídky a je rychlejší než pořadí, kopírování a vkládání. Jediným požadavkem je, že rozevírací zdroje i cíle přetažení musí být otevřené a aspoň částečně viditelný na obrazovce.  
-  
- Pomocí OLE – přetažení, data můžete přenést z jednoho umístění do druhého v rámci dokumentu, mezi různé dokumenty nebo mezi aplikacemi. Může být implementováno v kontejneru nebo serverová aplikace a všechny aplikace může být zdroje přetažení, cíle přetažení nebo obojí. Pokud má aplikace rozevírací zdroje a cíle přetažení podporu implementována, je povoleno přetažení mezi podřízená okna, nebo v rámci jednoho okna. Tato funkce může usnadnit aplikace mnohem používání.  
-  
- Pokud chcete využívat možnosti přetahování myší OLE, přečtěte si téma [přetažení: přizpůsobení](../mfc/drag-and-drop-customizing.md). Techniky popsané v tomto tématu můžete použít k aplikacím jiných než OLE vyřadit zdroje. Článek [přetažení: implementace cíle přetažení](../mfc/drag-and-drop-implementing-a-drop-target.md) popisuje, jak implementovat podporu cíle přetažení OLE a aplikacích jiných než OLE. Může také být vhodné vzorky MFC OLE [OCLIENT](../visual-cpp-samples.md) a [HIERSVR](../visual-cpp-samples.md).  
-  
- Pokud nebyly přečíst [datové objekty a zdroje dat (OLE)](../mfc/data-objects-and-data-sources-ole.md) rodiny článků, můžete nyní. Tyto články vysvětlují základní informace o přenosu dat a jak implementovat ve svých aplikacích.  
-  
- Další informace o přetažení najdete v tématu:  
-  
--   [Přetažení: Implementace zdroje přemístění](../mfc/drag-and-drop-implementing-a-drop-source.md)  
-  
--   [Přetažení: Implementace cíle přetažení](../mfc/drag-and-drop-implementing-a-drop-target.md)  
-  
--   [Přetažení: Přizpůsobení](../mfc/drag-and-drop-customizing.md)  
-  
-## <a name="see-also"></a>Viz také  
- [OLE](../mfc/ole-in-mfc.md)   
- [Datové objekty a zdroje dat (OLE)](../mfc/data-objects-and-data-sources-ole.md)
+
+Funkce a přetahování OLE je primárně klávesovou zkratku pro kopírování a vkládání dat. Při použití schránky pro kopírování nebo vkládání dat, se vyžadují několik kroků. Vyberte data, klikněte na tlačítko **Vyjmout** nebo **kopírování** z **upravit** nabídce, přejít k cílovému souboru, okno nebo aplikace, umístěte kurzor do požadovaného umístění a klikněte na **Vložit** z **upravit** nabídky.
+
+OLE – přetažení se liší od mechanismus přetažení myší Správce souborů, který může zpracovat pouze názvy souborů a je určený konkrétně pro předávání názvů souborů do aplikace. OLE – přetažení je mnohem více obecné. Umožňuje přetáhnout myší všechna data, která můžete také umístit do schránky.
+
+Při použití OLE – přetažení, odeberete z procesu dva kroky. Vyberte data z okna zdroje ("rozevírací zdroj"), přetáhněte ho do požadovaného cíle ("cíl") a umístěte ho uvolněním tlačítka myši. Tato operace se eliminuje potřeba nabídky a je rychlejší než řada, kopírování a vkládání. Jediným požadavkem je, že rozevírací zdroj i cíl přetažení musí být otevřený a aspoň částečně viditelný na obrazovce.
+
+Použití OLE – přetažení, může být přenesená data z jednoho umístění do jiného v rámci dokumentu, mezi různými dokumenty nebo mezi aplikacemi. Se dá implementovat v kontejneru nebo serverové aplikace, a jakékoli aplikace může být zdroje přemístění nebo cíl přetažení. Pokud aplikace podporuje rozevírací zdroj a cíl přetažení implementované, je povoleno přetažení mezi podřízená okna nebo v rámci jednoho okna. Tato funkce může vaše aplikace značně zjednodušují použít.
+
+Pokud chcete používat funkce a přetahování OLE, přečtěte si téma [přetažení: přizpůsobení](../mfc/drag-and-drop-customizing.md). Technik popsaných v tomto článku můžete použít tak, aby aplikace OLE – přetažení zdroje. Tento článek [přetažení: implementace cíle přetažení](../mfc/drag-and-drop-implementing-a-drop-target.md) popisuje způsob implementace cíle přetažení podporu technologie OLE a aplikacích jiných než OLE. To se hodí i prozkoumat ukázky MFC OLE [OCLIENT](../visual-cpp-samples.md) a [HIERSVR](../visual-cpp-samples.md).
+
+Pokud jste čtení [datové objekty a zdroje dat (OLE)](../mfc/data-objects-and-data-sources-ole.md) řady článků, můžete chtít provést nyní. Tyto články vysvětlují základní informace o přenosu dat a jak implementovat ve svých aplikacích.
+
+Další informace o přetahování naleznete v tématu:
+
+- [Přetažení: Implementace zdroje přemístění](../mfc/drag-and-drop-implementing-a-drop-source.md)
+
+- [Přetažení: Implementace cíle přetažení](../mfc/drag-and-drop-implementing-a-drop-target.md)
+
+- [Přetažení: Přizpůsobení](../mfc/drag-and-drop-customizing.md)
+
+## <a name="see-also"></a>Viz také
+
+[OLE](../mfc/ole-in-mfc.md)<br/>
+[Datové objekty a zdroje dat (OLE)](../mfc/data-objects-and-data-sources-ole.md)
 

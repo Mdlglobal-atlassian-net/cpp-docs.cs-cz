@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d301f2bc7464d52be643d252e4febf7049657c2b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f001f61a9425a064d3b899beb6cbb689471da5bf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724755"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442588"
 ---
 # <a name="event--c-component-extensions"></a>event (rozšíření komponent C++)
 
@@ -50,19 +50,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parametry
 
-*Modifikátor*  
+*Modifikátor*<br/>
 Modifikátor, který lze použít v deklaraci události nebo metodu přistupujícího objektu události.  Možné hodnoty jsou **statické** a **virtuální**.
 
-*delegate*  
+*delegate*<br/>
 [Delegovat](../windows/delegate-cpp-component-extensions.md), jehož předpis obslužná rutina události se musí shodovat.
 
-*EVENT_NAME*  
+*EVENT_NAME*<br/>
 Název události
 
-*return_ value*  
+*return_ value*<br/>
 Na návratový typ metody přistupujícího objektu události.  Chcete-li ověřit, návratový typ musí být **void**.
 
-*Parametry*  
+*Parametry*<br/>
 (volitelné) Parametry pro `raise` metodu, která odpovídá podpisu *delegovat* parametru.
 
 ### <a name="remarks"></a>Poznámky
@@ -71,10 +71,10 @@ Událost je přidružení mezi delegáta a členské funkce (Obslužná rutina u
 
 Existují dva typy deklarací události:
 
-*datový člen události*  
+*datový člen události*<br/>
 Kompilátor automaticky vytvoří úložiště pro události v podobě člena typu delegáta a vytvoří interní `add()`, `remove()`, a `raise()` členské funkce. Datový člen události musí být deklarované uvnitř třídy. Návratový typ návratový typ delegáta musí odpovídat návratový typ obslužné rutiny události.
 
-*událost bloku*  
+*událost bloku*<br/>
 Blok událostí umožňuje explicitně deklarovat a přizpůsobit chování `add()`, `remove()`, a `raise()` metody.
 
 Můžete použít **operátory +=** a **operator-=** přidávat a odebírat událost obslužné rutiny nebo volání `add()` a `remove()` metody explicitně.
@@ -114,19 +114,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parametry
 
-*Modifikátor*  
+*Modifikátor*<br/>
 Modifikátor, který lze použít v deklaraci události nebo metodu přistupujícího objektu události.  Možné hodnoty jsou **statické** a **virtuální**.
 
-*delegate*  
+*delegate*<br/>
 [Delegovat](../windows/delegate-cpp-component-extensions.md), jehož předpis obslužná rutina události se musí shodovat.
 
-*EVENT_NAME*  
+*EVENT_NAME*<br/>
 Název události
 
-*return_ value*  
+*return_ value*<br/>
 Na návratový typ metody přistupujícího objektu události.  Chcete-li ověřit, návratový typ musí být **void**.
 
-*Parametry*  
+*Parametry*<br/>
 (volitelné) Parametry pro `raise` metodu, která odpovídá podpisu *delegovat* parametru.
 
 ### <a name="remarks"></a>Poznámky
@@ -137,10 +137,10 @@ Delegát může mít jeden nebo více přidružených metody, které se má vola
 
 Existují dva typy deklarací události:
 
-*data události*  
+*data události*<br/>
 Úložiště pro události v podobě člena typu delegáta, je vytvořen kompilátorem pro datový člen události.  Datový člen události musí být deklarované uvnitř třídy. Se také označuje jako triviální události (viz následující ukázka kódu).
 
-*bloky události*  
+*bloky události*<br/>
 Událost bloky umožňují přizpůsobit chování přidat, odebrat a vyvolat metody implementací přidat, odebrat a vyvolání metody. Podpis přidat, odebrat a vyvolat metody musí odpovídat signatuře delegáta.  Události bloku nejsou datové členy a jakékoli použití jako datový člen vygeneruje chybu kompilátoru.
 
 Návratový typ obslužné rutiny události musí odpovídat návratový typ delegáta.

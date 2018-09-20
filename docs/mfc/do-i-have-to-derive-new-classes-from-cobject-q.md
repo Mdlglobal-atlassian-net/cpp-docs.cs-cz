@@ -1,5 +1,5 @@
 ---
-title: Je nutné odvozovat z objektu CObject novou třídu? | Microsoft Docs
+title: Je nutné odvozovat z objektu CObject novou třídu? | Dokumenty Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51904ac06ae6c2db5586f8dc405f85145c5b1f30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec080e556b57afadbc3d958f4dba5ac6393108aa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343057"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408905"
 ---
 # <a name="do-i-have-to-derive-new-classes-from-cobject"></a>Je nutné odvozovat z objektu CObject novou třídu?
-Ne, můžete si.  
-  
- Odvození třídy z [CObject](../mfc/reference/cobject-class.md) Pokud budete potřebovat zařízení, které poskytuje, jako je například serializace nebo dynamické creatability. Mnoho datových tříd, které jsou potřeba serializovat na soubory, proto je často vhodné odvozena z `CObject`. Pro příklad třídy odvozené od `CObject`, najdete v článku [Scribble ukázka](../visual-cpp-samples.md).  
-  
-## <a name="see-also"></a>Viz také  
- [CObject – třída: Nejčastější dotazy](../mfc/cobject-class-frequently-asked-questions.md)
+
+Ne, nemusíte.
+
+Odvodit třídu z [CObject](../mfc/reference/cobject-class.md) když potřebujete zařízení, které poskytuje, jako je například serializace nebo dynamické creatability. Mnoho datových tříd muset být serializován do souborů, proto je často vhodné k odvození z `CObject`. Pro příklad třídy odvozené z `CObject`, najdete v článku [ukázky Scribble](../visual-cpp-samples.md).
+
+## <a name="see-also"></a>Viz také
+
+[CObject – třída: Nejčastější dotazy](../mfc/cobject-class-frequently-asked-questions.md)

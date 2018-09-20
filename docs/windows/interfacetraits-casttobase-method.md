@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 55a4d7487be5b3565ba3945630cab4388f287a68
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 473656f25c4ba08e011bef8f938cea54bdc51d6d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611821"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424897"
 ---
 # <a name="interfacetraitscasttobase-method"></a>InterfaceTraits::CastToBase – metoda
 
@@ -39,10 +39,10 @@ static __forceinline Base* CastToBase(
 
 ### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ parametru *ptr*.
 
-*ptr*  
+*ptr*<br/>
 Ukazatel na typ *T*.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -63,5 +63,5 @@ Další informace o `Base`, naleznete v části veřejné definice TypeDef [inte
 
 ## <a name="see-also"></a>Viz také
 
-[InterfaceTraits – struktura](../windows/interfacetraits-structure.md)  
+[InterfaceTraits – struktura](../windows/interfacetraits-structure.md)<br/>
 [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

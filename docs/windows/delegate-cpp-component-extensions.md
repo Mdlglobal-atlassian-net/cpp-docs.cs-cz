@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 46b09b5cbe74849c3dc08e8faee3ee4ca645a55b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 13ce7d2a35245716adc70b9e84532ea7d1a4a440
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602931"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432402"
 ---
 # <a name="delegate--c-component-extensions"></a>delegate (rozšíření komponent C++)
 
@@ -57,16 +57,16 @@ delegate-type-identifier
 
 ### <a name="parameters"></a>Parametry
 
-*Přístup*  
+*Přístup*<br/>
 (volitelné) Usnadnění delegáta, který může být **veřejné** (výchozí) nebo **privátní**. Prototyp funkce může také být kvalifikován s **const** nebo **volatile** klíčová slova.
 
-*Návratový typ*  
+*Návratový typ*<br/>
 Návratový typ prototypu funkce.
 
-*identifikátor typu delegáta*  
+*identifikátor typu delegáta*<br/>
 Název typu deklarovaného delegáta.
 
-*Parametry*  
+*Parametry*<br/>
 (Volitelné) Typy a identifikátory prototypu funkce.
 
 ### <a name="remarks"></a>Poznámky
@@ -91,10 +91,10 @@ function_declaration
 
 ### <a name="parameters"></a>Parametry
 
-*Přístup*  
+*Přístup*<br/>
 (volitelné) Usnadnění delegáta mimo sestavení může být veřejné nebo soukromé.  Výchozí hodnota je privátní.  Uvnitř třídy může mít delegáta jakoukoliv přístupností.
 
-*function_declaration*  
+*function_declaration*<br/>
 Signatura funkce, která může být vázána na delegáta. Návratový typ delegátu, může být jakékoli spravovaného typu. Vzájemná funkční spolupráce z důvodů se doporučuje, návratový typ delegátu být typ kompatibilní se Specifikací.
 
 Chcete-li definovat delegáta bez vazby, první parametr v *function_declaration* by měl být typu **to** ukazatel objektu.

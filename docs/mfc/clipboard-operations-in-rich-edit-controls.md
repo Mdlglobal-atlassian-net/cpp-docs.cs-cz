@@ -20,25 +20,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb207b31da27041ee777277e7e76502789402ab7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f978880344113c71f8f22dd3c49e2ec35024a729
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216227"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405707"
 ---
 # <a name="clipboard-operations-in-rich-edit-controls"></a>Operace se schránkou v ovládacích prvcích pro úpravy s formátováním
-Aplikace můžete vložit obsah schránky do ovládacího prvku ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) pomocí nejlépe dostupné formátu schránky nebo konkrétní formát schránky. Můžete také určit, zda je ovládací prvek RTF dokáže vkládání formát schránky.  
-  
- Můžete kopírovat nebo vyjmutí obsah aktuální výběr pomocí [kopírování](../mfc/reference/cricheditctrl-class.md#copy) nebo [Vyjmout](../mfc/reference/cricheditctrl-class.md#cut) členskou funkci. Podobně můžete vložit obsah schránky do ovládacího prvku s použitím [vložte](../mfc/reference/cricheditctrl-class.md#paste) členskou funkci. Ovládací prvek vloží první dostupná formát, který rozpozná, což je pravděpodobně nejvíce popisný formátu.  
-  
- Chcete-li vložit konkrétní formát schránky, můžete použít [PasteSpecial](../mfc/reference/cricheditctrl-class.md#pastespecial) členskou funkci. Tato funkce je užitečná pro aplikace, která umožňuje uživateli vybrat formát schránky Vložit jinak příkazem. Můžete použít [CanPaste](../mfc/reference/cricheditctrl-class.md#canpaste) členskou funkci k určení, zda je daný formát rozpoznáván ovládacího prvku.  
-  
- Můžete také použít `CanPaste` k určení, zda všechny dostupné formát schránky je rozpoznáván ovládacího prvku. Tato funkce je užitečná v `OnInitMenuPopup` obslužné rutiny. Aplikace může povolit nebo šedý jeho příkaz Paste v závislosti na tom, zda ovládací prvek můžete vložit libovolný formát k dispozici.  
-  
- RichEdit ovládací prvky registrace dva formáty schránky: formátu RTF a formátu textu RichEdit a objektů. Aplikace můžete registrovat pomocí těchto formátů [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) fungovala, určení **CF_RTF** a **CF_RETEXTOBJ** hodnoty.  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Aplikace můžete vložit obsah schránky do ovládacího prvku ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) pomocí nejlépe dostupné formátu schránky nebo konkrétní formát schránky. Můžete také určit, zda je ovládací prvek RTF dokáže vkládání formát schránky.
+
+Můžete kopírovat nebo vyjmutí obsah aktuální výběr pomocí [kopírování](../mfc/reference/cricheditctrl-class.md#copy) nebo [Vyjmout](../mfc/reference/cricheditctrl-class.md#cut) členskou funkci. Podobně můžete vložit obsah schránky do ovládacího prvku s použitím [vložte](../mfc/reference/cricheditctrl-class.md#paste) členskou funkci. Ovládací prvek vloží první dostupná formát, který rozpozná, což je pravděpodobně nejvíce popisný formátu.
+
+Chcete-li vložit konkrétní formát schránky, můžete použít [PasteSpecial](../mfc/reference/cricheditctrl-class.md#pastespecial) členskou funkci. Tato funkce je užitečná pro aplikace, která umožňuje uživateli vybrat formát schránky Vložit jinak příkazem. Můžete použít [CanPaste](../mfc/reference/cricheditctrl-class.md#canpaste) členskou funkci k určení, zda je daný formát rozpoznáván ovládacího prvku.
+
+Můžete také použít `CanPaste` k určení, zda všechny dostupné formát schránky je rozpoznáván ovládacího prvku. Tato funkce je užitečná v `OnInitMenuPopup` obslužné rutiny. Aplikace může povolit nebo šedý jeho příkaz Paste v závislosti na tom, zda ovládací prvek můžete vložit libovolný formát k dispozici.
+
+RichEdit ovládací prvky registrace dva formáty schránky: formátu RTF a formátu textu RichEdit a objektů. Aplikace můžete registrovat pomocí těchto formátů [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) fungovala, určení **CF_RTF** a **CF_RETEXTOBJ** hodnoty.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

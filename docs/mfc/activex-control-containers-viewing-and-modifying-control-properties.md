@@ -1,5 +1,5 @@
 ---
-title: 'Kontejnery ovládacích prvků ActiveX: Zobrazení a úprava vlastností ovládacího prvku | Microsoft Docs'
+title: 'Kontejnery ovládacích prvků ActiveX: Zobrazení a úprava vlastností ovládacího prvku | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,36 +18,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef443442cb19b9aaca82b74a0a5d8c72098d5cc2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9614ecfcd23418f8b0abc08622e8c272bb5548a7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340291"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388820"
 ---
 # <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>ActiveX – kontejnery ovládacích prvků: Zobrazení a úpravy vlastností ovládacích prvků
-Při vložení ovládacího prvku ActiveX do projektu, je užitečné k zobrazení a změna vlastností nepodporuje ovládací prvek ActiveX. Tento článek popisuje, jak to udělat pomocí editoru prostředků Visual C++.  
-  
- Pokud vaše aplikace kontejneru ovládacího prvku ActiveX používá vložený ovládací prvky, můžete zobrazit a upravit vlastnosti ovládacího prvku v editoru prostředků. Editor prostředků můžete taky nastavit hodnoty vlastností v době návrhu. Editor prostředků pak automaticky uloží tyto hodnoty do souboru prostředků projektu. Jakékoli instanci ovládacího prvku pak bude mít jeho vlastnosti inicializována tak, aby tyto hodnoty.  
-  
- Tento postup předpokládá, že jste vložili ovládacího prvku do projektu. Informace najdete v tématu [ActiveX – kontejnery ovládacích prvků: vložení ovládacího prvku do aplikace ovládacího prvku kontejner](../mfc/inserting-a-control-into-a-control-container-application.md).  
-  
- Prvním krokem při prohlížení vlastností ovládacího prvku je přidání instance ovládacího prvku do projektu šablony dialogového okna.  
-  
-### <a name="to-view-the-properties-of-a-control"></a>Zobrazení vlastností ovládacího prvku  
-  
-1.  V zobrazení prostředků, otevřete **dialogové okno** složky.  
-  
-2.  Otevřete šablonu pole hlavním dialogu.  
-  
-3.  Vložit ovládací prvek ActiveX pomocí **vložit ovládací prvek ActiveX** dialogové okno. Další informace najdete v tématu [zobrazení a přidání ovládacích prvků ActiveX do dialogového okna](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
-  
-4.  V dialogovém okně vyberte ovládací prvek ActiveX.  
-  
-5.  V okně vlastností klikněte na **vlastnosti** tlačítko.  
-  
- Použití **vlastnosti** dialogovém okně Upravit a testování nových vlastností okamžitě.  
-  
-## <a name="see-also"></a>Viz také  
- [ActiveX – kontejnery ovládacích prvků](../mfc/activex-control-containers.md)
+
+Když je do projektu vložit ovládací prvek ActiveX, je užitečný k zobrazení a změna vlastností podporuje ovládací prvek ActiveX. Tento článek popisuje, jak k tomu použít editor prostředků Visual C++.
+
+Pokud vaše kontejnerové aplikace ovládacího prvku ActiveX používá vložené ovládací prvky, můžete zobrazit a upravit vlastnosti ovládacího prvku v editoru prostředků. Editor prostředků můžete také použít k nastavení hodnot vlastností v době návrhu. Editor prostředků pak automaticky ukládá tyto hodnoty v souboru prostředků projektu. Všechny instance ovládací prvek pak bude mít inicializován na tyto hodnoty vlastností.
+
+Tento postup předpokládá, že jste tam vložili ovládací prvek do projektu. Informace najdete v tématu [ActiveX – kontejnery ovládacích prvků: vložení ovládacího prvku do ovládací prvek aplikace typu kontejner pro](../mfc/inserting-a-control-into-a-control-container-application.md).
+
+Prvním krokem při zobrazení vlastností ovládacího prvku je do projektu šablony dialogového okna přidat instanci ovládacího prvku.
+
+### <a name="to-view-the-properties-of-a-control"></a>Chcete-li zobrazit vlastnosti ovládacího prvku
+
+1. V okně zobrazení prostředků, otevřete **dialogové okno** složky.
+
+1. Otevření šablony vaší hlavní dialogového okna.
+
+1. Vložit ovládací prvek ActiveX pomocí **vložit ovládací prvek ActiveX** dialogové okno. Další informace najdete v tématu [zobrazení a přidání ovládacích prvků ActiveX do dialogového okna](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).
+
+1. V dialogovém okně vyberte ovládací prvek ActiveX.
+
+1. V okně Vlastnosti klikněte **vlastnosti** tlačítko.
+
+Použití **vlastnosti** dialogové okno Upravit a hned ho otestujte nové vlastnosti.
+
+## <a name="see-also"></a>Viz také
+
+[ActiveX – kontejnery ovládacích prvků](../mfc/activex-control-containers.md)
 

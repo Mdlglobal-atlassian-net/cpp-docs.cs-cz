@@ -18,62 +18,67 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7472e8fa8932983569ad9e2a9c1fe6cdfc9318b7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4ed33df07ed6fe9f99f5e9a135e3286672e7a013
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059677"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393565"
 ---
 # <a name="unsupportedfeature-class"></a>unsupported_feature – třída
-Výjimka, která je vyvolána při použití nepodporované funkce.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class unsupported_feature : public runtime_exception;  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[unsupported_feature – konstruktor](#ctor)|Vytvoří novou instanci třídy `unsupported_feature` výjimky.|  
 
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `exception`  
-  
- `runtime_exception`  
-  
- `unsupported_feature`  
-  
-## <a name="unsupported_feature__ctor"></a> unsupported_feature – 
+Výjimka, která je vyvolána při použití nepodporované funkce.
 
-  Sestaví novou instanci výjimky unsupported_feature.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```  
-explicit unsupported_feature(  
-    const char * _Message ) throw();  
-  
-unsupported_feature() throw();  
-```  
-  
-### <a name="parameters"></a>Parametry  
+## <a name="syntax"></a>Syntaxe
+
+```
+class unsupported_feature : public runtime_exception;
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[unsupported_feature – konstruktor](#ctor)|Vytvoří novou instanci třídy `unsupported_feature` výjimky.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`exception`
+
+`runtime_exception`
+
+`unsupported_feature`
+
+## <a name="unsupported_feature__ctor"></a> unsupported_feature –
+
+  Sestaví novou instanci výjimky unsupported_feature.
+
+### <a name="syntax"></a>Syntaxe
+
+```
+explicit unsupported_feature(
+    const char * _Message ) throw();
+
+unsupported_feature() throw();
+```
+
+### <a name="parameters"></a>Parametry
+
 *_TEXT*<br/>
-Popis chyby.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- `unsupported_feature` Objektu.  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** amprt.h  
-  
- **Namespace:** souběžnosti  
-  
-## <a name="see-also"></a>Viz také  
- [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)
+Popis chyby.
+
+### <a name="return-value"></a>Návratová hodnota
+
+`unsupported_feature` Objektu.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** amprt.h
+
+**Namespace:** souběžnosti
+
+## <a name="see-also"></a>Viz také
+
+[Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

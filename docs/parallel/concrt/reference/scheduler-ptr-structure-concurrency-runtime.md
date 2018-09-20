@@ -18,90 +18,99 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd15238408f90f268a5fea96635136077c795779
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ea128a6122bf69735d118045eef2e8d8e323f8de
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059105"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393411"
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr Structure
-Představuje ukazatel na Plánovač. Tato třída existuje pro povolení specifikace sdílené životnosti pomocí shared_ptr nebo jen prostým odkazem pomocí nezpracovaného ukazatele.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+Představuje ukazatel na Plánovač. Tato třída existuje pro povolení specifikace sdílené životnosti pomocí shared_ptr nebo jen prostým odkazem pomocí nezpracovaného ukazatele.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 struct scheduler_ptr;
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[scheduler_ptr::scheduler_ptr](#ctor)|Přetíženo. Vytvoří ukazatel plánovače z shared_ptr do plánovače|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[scheduler_ptr::get](#get)|Vrátí ukazatel raw pro Plánovač|  
-  
-### <a name="public-operators"></a>Veřejné operátory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[scheduler_ptr::Operator bool](#operator_bool)|Otestujte, zda ukazatel plánovače nemá hodnotu null|  
-|[scheduler_ptr::operator-&gt;](#operator_ptr)|Chovají se jako ukazatel|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `scheduler_ptr`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** pplinterface.h  
-  
- **Namespace:** souběžnosti  
-  
-##  <a name="get"></a>  scheduler_ptr::Get – metoda  
- Vrátí ukazatel raw pro Plánovač  
-  
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[scheduler_ptr::scheduler_ptr](#ctor)|Přetíženo. Vytvoří ukazatel plánovače z shared_ptr do plánovače|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[scheduler_ptr::get](#get)|Vrátí ukazatel raw pro Plánovač|
+
+### <a name="public-operators"></a>Veřejné operátory
+
+|Název|Popis|
+|----------|-----------------|
+|[scheduler_ptr::Operator bool](#operator_bool)|Otestujte, zda ukazatel plánovače nemá hodnotu null|
+|[scheduler_ptr::operator-&gt;](#operator_ptr)|Chovají se jako ukazatel|
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`scheduler_ptr`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** pplinterface.h
+
+**Namespace:** souběžnosti
+
+##  <a name="get"></a>  scheduler_ptr::Get – metoda
+
+Vrátí ukazatel raw pro Plánovač
+
 ```
 scheduler_interface* get() const;
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
-  
-##  <a name="operator_bool"></a>  scheduler_ptr::Operator bool   
- Otestujte, zda ukazatel plánovače nemá hodnotu null  
-  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+##  <a name="operator_bool"></a>  scheduler_ptr::Operator bool
+
+Otestujte, zda ukazatel plánovače nemá hodnotu null
+
 '''operator bool() const;
-```  
-  
-##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;   
- Behave like a pointer  
-  
+```
+
+##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;
+
+Behave like a pointer
+
 ```
 scheduler_interface – * – operátor -> const;)
-```  
-  
-### Return Value  
-  
-##  <a name="ctor"></a>  scheduler_ptr::scheduler_ptr Constructor  
- Creates a scheduler pointer from shared_ptr to scheduler  
-  
+```
+
+### Return Value
+
+##  <a name="ctor"></a>  scheduler_ptr::scheduler_ptr Constructor
+
+Creates a scheduler pointer from shared_ptr to scheduler
+
 ```
 scheduler_ptr – explicitní (std::shared_ptr < scheduler_interface – > Plánovač);
 
 scheduler_ptr – explicitní (_In_opt_ pScheduler scheduler_interface – *);
-```  
-  
-### Parameters  
+```
+
+### Parameters
+
 *scheduler*<br/>
 The scheduler to convert.
 
 *pScheduler*<br/>
 The scheduler pointer to convert.
-  
-## See Also  
- [concurrency Namespace](concurrency-namespace.md)
+
+## See Also
+
+[concurrency Namespace](concurrency-namespace.md)

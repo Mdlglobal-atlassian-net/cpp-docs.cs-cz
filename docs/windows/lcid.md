@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 936777adf9863c233303c4b78ffd9e45aa0f3b95
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ce3bf5b229baa953a8e3431a35f4449fbae87a4d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209528"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405642"
 ---
 # <a name="lcid"></a>lcid
 
@@ -68,5 +68,5 @@ Další informace najdete v tématu [kontexty atributů](../windows/attribute-co
 
 ## <a name="see-also"></a>Viz také
 
-[IDL – atributy](../windows/idl-attributes.md)  
+[IDL – atributy](../windows/idl-attributes.md)<br/>
 [Atributy parametru](../windows/parameter-attributes.md)  

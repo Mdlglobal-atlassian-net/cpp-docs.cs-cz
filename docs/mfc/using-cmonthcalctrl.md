@@ -1,5 +1,5 @@
 ---
-title: Používání atributu CMonthCalCtrl | Microsoft Docs
+title: Používání atributu CMonthCalCtrl | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30c6a25cdb2bd61ec9346108ca5b4587b70ef870
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9160afd1d9885f9bc9b928b5654abedf0fcaf11
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382376"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380502"
 ---
 # <a name="using-cmonthcalctrl"></a>Používání atributu CMonthCalCtrl
-Ovládací prvek měsíční kalendář ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) implementuje kalendáře jako uživatelské rozhraní. To poskytuje uživatele s velmi intuitivní a rozpoznatelném metody zadáním nebo výběrem data. Ovládací prvek také poskytuje aplikace způsob, jak získat a nastavit informace o datu v ovládacím prvku pomocí stávající datové typy. Ve výchozím nastavení zobrazí ovládací prvek měsíční kalendář aktuálního dne a měsíce. Uživatel je však možné se přejděte na předchozí a další měsíců a vyberte konkrétní měsíce a roku.  
-  
+
+Ovládací prvek měsíční kalendář ([atributu CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) implementuje kalendáře jako uživatelské rozhraní. To poskytuje uživatelům způsob velice intuitivní a rozpoznat zadáním nebo výběrem data. Ovládací prvek také poskytuje aplikace s prostředky pro získání a nastavení informace o datu v prvku pomocí stávající datové typy. Ve výchozím nastavení zobrazí ovládací prvek měsíční kalendář aktuální den a měsíc. Uživatel je však možné posunout na další a předchozí měsíce a vybrat konkrétní měsíc nebo rok.
+
 > [!NOTE]
->  Použít `CMonthCalCtrl` – třída v projektu, musí obsahovat AFXDTCTL. H, obvykle v STDAFX. H.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
-  
--   [Vytvoření ovládacího prvku měsíční kalendář](../mfc/creating-the-month-calendar-control.md)  
-  
--   [Příklady pro ovládací prvek měsíční kalendář](../mfc/month-calendar-control-examples.md)  
-  
--   [Zpracování zpráv s oznámením v ovládacím prvku měsíční kalendář](../mfc/processing-notification-messages-in-month-calendar-controls.md)  
-  
--   [Nastavení stavu dne v ovládacím prvku měsíční kalendář](../mfc/setting-the-day-state-of-a-month-calendar-control.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Ovládací prvky](../mfc/controls-mfc.md)
+>  Použít `CMonthCalCtrl` třídy v projektu, musíte zahrnout AFXDTCTL. H, obvykle v STDAFX. H.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+
+- [Vytvoření ovládacího prvku měsíční kalendář](../mfc/creating-the-month-calendar-control.md)
+
+- [Příklady pro ovládací prvek měsíční kalendář](../mfc/month-calendar-control-examples.md)
+
+- [Zpracování zpráv s oznámením v ovládacím prvku měsíční kalendář](../mfc/processing-notification-messages-in-month-calendar-controls.md)
+
+- [Nastavení stavu dne v ovládacím prvku měsíční kalendář](../mfc/setting-the-day-state-of-a-month-calendar-control.md)
+
+## <a name="see-also"></a>Viz také
+
+[Ovládací prvky](../mfc/controls-mfc.md)
 

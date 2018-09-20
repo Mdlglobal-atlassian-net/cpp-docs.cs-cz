@@ -1,5 +1,5 @@
 ---
-title: 'Výjimky: Uvolnění objektů ve výjimkách | Microsoft Docs'
+title: 'Výjimky: Uvolnění objektů ve výjimkách | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,56 +21,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21a63a55103cbefda2ba501c5609b772b2203166
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0f7c9c28e438ad9d5cf643f005175512192be80
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347825"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390761"
 ---
 # <a name="exceptions-freeing-objects-in-exceptions"></a>Výjimky: Uvolnění objektů ve výjimkách
-Tento článek vysvětluje potřeba a metodě uvolnění objektů, když dojde k výjimce. Témata zahrnují:  
-  
--   [Zpracování výjimek místně](#_core_handling_the_exception_locally)  
-  
--   [Vyvolání výjimek po zničení objektů](#_core_throwing_exceptions_after_destroying_objects)  
-  
- Výjimky vydané pomocí rozhraní nebo pomocí vaší aplikace přerušení normálního toku programu. Proto je velmi důležité, abyste detailně sledovat objektů, takže můžete správně vyřazení je v případě, že je vyvolána výjimka.  
-  
- Existují dvě primární metody k tomu.  
-  
--   Zpracování výjimek místně pomocí **zkuste** a **catch** klíčová slova, pak odstraňte všechny objekty s jeden příkaz.  
-  
--   Zrušení všech objektů v **catch** blok před způsobující výjimku mimo blok pro další zpracování.  
-  
- Tyto dva přístupy jsou znázorněné dole jako řešení v následujícím příkladu problematické:  
-  
- [!code-cpp[NVC_MFCExceptions#14](../mfc/codesnippet/cpp/exceptions-freeing-objects-in-exceptions_1.cpp)]  
-  
- Jak je uvedeno výše, `myPerson` nebudou odstraněna, pokud je vyvolána výjimka podle `SomeFunc`. Provádění přejde přímo na další vnější obslužná rutina výjimky, obcházení ukončení normální funkce a kód, který odstraní objekt. Ukazatele na objekt je mimo rozsah při výjimka ponechá funkce a paměti obsazené objekt se obnoví nikdy tak dlouho, dokud je aplikace spuštěna. Toto je nevrácená paměť systému; by být zjistil, že pomocí diagnostiky paměti.  
-  
-##  <a name="_core_handling_the_exception_locally"></a> Zpracování výjimek místně  
- **Try/catch –** zlepší poskytuje Obranným programovací metodu pro vyloučení nevracení paměti a zajištění, že jsou při výskytu výjimek zničen vašich objektů. Například z příkladu výše v tomto článku by mohla být přepsána následujícím způsobem:  
-  
- [!code-cpp[NVC_MFCExceptions#15](../mfc/codesnippet/cpp/exceptions-freeing-objects-in-exceptions_2.cpp)]  
-  
- Tento nový příklad nastaví obslužnou rutinu výjimky pro zachycení výjimky a zacházejte s ním místně. Potom obvykle ukončí funkce a zničí objektu. Důležitým aspektem tohoto příkladu je, že se naváže kontext k zachycení výjimky **try/catch –** bloky. Bez lokálních výjimek rámečku by funkce nikdy vědět, že výjimku měl nebyly vytvořeny a nebude mít možnost ukončení normálně a odstraňte objekt.  
-  
-##  <a name="_core_throwing_exceptions_after_destroying_objects"></a> Vyvolání výjimek po zničení objektů  
- Dalším způsobem zpracování výjimek je je předat další vnější kontext zpracování výjimek. Ve vaší **catch** blok, můžete provést některé čištění místně přidělené objektů a poté vyvolat výjimku pro další zpracování.  
-  
- Aktivační funkce může nebo nemusí být nutné se zrušit přidělení haldy objekty. Pokud funkci vždy zruší přidělení haldy objekt před vrácením v případě, že normální, potom funkce by také navrácení objektu haldy před způsobující výjimku. Na druhé straně Pokud funkce není navrátit normálně objekt před vrácením v případě, že normální, pak musíte se rozhodnout případ od případu zda objektu haldy by měl být navrácena.  
-  
- Následující příklad ukazuje, jak místně přidělené objekty mohou být vyčištěna:  
-  
- [!code-cpp[NVC_MFCExceptions#16](../mfc/codesnippet/cpp/exceptions-freeing-objects-in-exceptions_3.cpp)]  
-  
- Mechanismus výjimek automaticky zruší přidělení rámce objekty; je také označován destruktoru objektu rámce.  
-  
- Při volání funkce, které můžete vyvolat výjimky, můžete použít **try/catch –** bloky catch výjimky a šance, že chcete odstranit všechny objekty, které jste vytvořili. Konkrétně Upozorňujeme, že mnoho funkcí MFC můžete vyvolat výjimky.  
-  
- Další informace najdete v tématu [výjimkami: zachycení a odstraňování výjimek](../mfc/exceptions-catching-and-deleting-exceptions.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Zpracování výjimek](../mfc/exception-handling-in-mfc.md)
+
+Tento článek vysvětluje potřeba a metodu uvolnění objektů, když dojde k výjimce. Mezi témata patří:
+
+- [Zpracování výjimek místně](#_core_handling_the_exception_locally)
+
+- [Vyvolávání výjimek po zničení objektů](#_core_throwing_exceptions_after_destroying_objects)
+
+Výjimky vyvolané rozhraním, nebo ve vaší aplikaci přerušení normálního toku programu. Proto je velmi důležité zaznamenávat zavřít objekty tak, že můžete správně vyřazení je v případě, že dojde k výjimce.
+
+Existují dvě základní metody, chcete-li to provést.
+
+- Zpracování výjimek pomocí místně **zkuste** a **catch** klíčová slova, pak zničilo všechny objekty pomocí jednoho příkazu.
+
+- Odstranit libovolný objekt v **catch** blok před vygenerováním výjimky mimo blok pro další zpracování.
+
+Tyto dvě metody jsou jako řešení v následujícím příkladu problematické znázorněno níže:
+
+[!code-cpp[NVC_MFCExceptions#14](../mfc/codesnippet/cpp/exceptions-freeing-objects-in-exceptions_1.cpp)]
+
+Jak je uvedená výše, `myPerson` nebudou odstraněny, pokud je vyvolána výjimka ve `SomeFunc`. Spuštění přejde přímo na další vnější obslužnou rutinu výjimky, vynechání ukončení normální funkce a kód, který odstraní objekt. Ukazatel na objekt dostane mimo rozsah, pokud tato výjimka zanechá funkce a paměti obsazena objekt se obnoví nikdy tak dlouho, dokud je aplikace spuštěna. Toto je nevrácená paměť; by se zjistilo pomocí diagnostiky paměti.
+
+##  <a name="_core_handling_the_exception_locally"></a> Zpracování výjimek místně
+
+**Bloku try/catch** paradigma poskytuje obranné programovací metodu pro zabránění nevracení paměti a zajišťuje, že objekty jsou zničeny při výskytu výjimky. Například v příkladu zmíněném výše v tomto článku měl by být přepsán následujícím způsobem:
+
+[!code-cpp[NVC_MFCExceptions#15](../mfc/codesnippet/cpp/exceptions-freeing-objects-in-exceptions_2.cpp)]
+
+Tento nový příklad nastaví obslužnou rutinu výjimky zachytit výjimku a zpracovat místně. Potom obvykle ukončí funkce a odstraní objekt. Důležitý aspekt jazyka v tomto příkladu je, že se kontext pro zachycení výjimky naváže s **bloku try/catch** bloky. Bez blok lokálních výjimek by funkce nikdy vědět, kdyby byla vyvolána a nebude mít možnost ukončit normálně a zničte objekt výjimka.
+
+##  <a name="_core_throwing_exceptions_after_destroying_objects"></a> Vyvolávání výjimek po zničení objektů
+
+Jiný způsob zpracování výjimek je předat do další vnější kontext zpracování výjimek. Ve vaší **catch** blok, můžete si udělat trochu pořádek místně přidělených objektů a poté vyvolají výjimku k dalšímu zpracování.
+
+Aktivační funkce může nebo nemusí být nutné zrušit přidělení objektů haldy. Pokud funkce vždycky uvolní objekt haldy návrat zpět v případě, Normální, pak funkce by měl také uvolnit objekt haldy před vygenerováním výjimky. Na druhé straně Pokud funkce není uvolnění obvykle objekt před vrácením v případě, Normální, pak musíte se rozhodnout případ od případu, zda by měla být odebrána objekt haldy.
+
+Následující příklad ukazuje, jak místně přidělené objekty je možné vymazat:
+
+[!code-cpp[NVC_MFCExceptions#16](../mfc/codesnippet/cpp/exceptions-freeing-objects-in-exceptions_3.cpp)]
+
+Mechanismus výjimek automaticky zruší přidělení rámce objekty. také je volán destruktor objektu rámce.
+
+Při volání funkce, které můžou vyvolat výjimku, můžete použít **bloku try/catch** bloky, abyste měli jistotu, že zachycovat výjimky a mít možnost zničit všechny objekty, které jste vytvořili. Zejména mějte na paměti, že mnoho funkcí knihovny MFC může vyvolat výjimky.
+
+Další informace najdete v tématu [výjimky: výjimky zachycení a odstraňování](../mfc/exceptions-catching-and-deleting-exceptions.md).
+
+## <a name="see-also"></a>Viz také
+
+[Zpracování výjimek](../mfc/exception-handling-in-mfc.md)
 

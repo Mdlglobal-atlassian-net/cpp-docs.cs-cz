@@ -1,5 +1,5 @@
 ---
-title: 'TN047: Uvolnění požadavků transakcí databáze | Microsoft Docs'
+title: 'TN047: Uvolnění požadavků na databázové transakce | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be5870efacb61d5c0bb74f85427c41f787d2edd6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 96f3116f503ffa0ffc461ea2c1a0bdaf8947a0be
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380930"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427014"
 ---
 # <a name="tn047-relaxing-database-transaction-requirements"></a>TN047: Uvolnění požadavků na databázové transakce
-Tato technická Poznámka, která popsané požadavků transakce databázové třídy MFC rozhraní ODBC, je nyní zastaralá. Před MFC 4.2 databázové třídy vyžaduje, že kurzory se zachová, i na sady záznamů po **CommitTrans** nebo **vrácení zpět** operaci. Pokud ovladač ODBC a databázového systému nepodporují tato úroveň písmen a zachovávání kurzoru, pak databázové třídy nepovolili transakce.  
-  
- Počínaje MFC 4.2, databázové třídy mít mírnější omezení vyžadoval písmen a zachovávání kurzoru. Transakce bude povoleno, jestliže je ovladač podporuje. Však musí být nyní zkontrolovat dopad **CommitTrans** nebo **vrácení zpět** operace na otevřete sady záznamů. Členské funkce v tématu [CDatabase::GetCursorCommitBehavior](../mfc/reference/cdatabase-class.md#getcursorcommitbehavior) a [CDatabase::GetCursorRollbackBehavior](../mfc/reference/cdatabase-class.md#getcursorrollbackbehavior) Další informace.  
-  
-## <a name="see-also"></a>Viz také  
- [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)   
- [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
+
+Tato poznámka Odborný popsané požadavků na transakce databáze tříd knihovny MFC rozhraní ODBC, je nyní zastaralá. Před MFC 4.2 databázové třídy vyžaduje, že při sady záznamů po zachovány kurzory **CommitTrans** nebo **vrácení zpět** operace. Pokud ovladač ODBC a DBMS nepodporuje tuto úroveň kurzoru a zachovávání s rozlišením, pak databázové třídy nepovolili transakce.
+
+Od verze 4.2 knihovny MFC, databázové třídy mít mírnější omezení vyžadování kurzoru a zachovávání s rozlišením. Transakce se aktivuje, pokud je ovladač podporuje. Však musí nyní zkontrolovat dopad **CommitTrans** nebo **vrácení zpět** operace na otevřené sady záznamů. Podívat se na členské funkce [CDatabase::GetCursorCommitBehavior](../mfc/reference/cdatabase-class.md#getcursorcommitbehavior) a [CDatabase::GetCursorRollbackBehavior](../mfc/reference/cdatabase-class.md#getcursorrollbackbehavior) Další informace.
+
+## <a name="see-also"></a>Viz také
+
+[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
+[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
 

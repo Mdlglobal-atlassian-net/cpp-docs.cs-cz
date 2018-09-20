@@ -1,5 +1,5 @@
 ---
-title: Určení událostí sestavení | Microsoft Docs
+title: Určení událostí sestavení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 12/28/2017
 ms.technology:
@@ -25,45 +25,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5940f0d6efaec402a4a85ed659f42d7eab1bf91d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: dfdedf01c6203c483c1aa30d5d2934caa66e76d2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33334961"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375965"
 ---
 # <a name="specifying-build-events"></a>Určení událostí sestavení
 
-Události sestavení můžete použít k určení příkazy, které před začátkem sestavování před proces odkaz, nebo po dokončení sestavení.
+Použití událostí sestavení zadat příkazy, na kterých běží před začátkem sestavení před proces propojení nebo po dokončení sestavení.
 
-Události sestavení jsou spuštěny pouze v případě, že sestavení úspěšně dosáhne těchto bodů v procesu sestavení. Pokud dojde k chybě v sestavení, *po sestavení* události nedojde; pokud dojde k chybě před fází propojení, ani *před propojením* ani *po sestavení* událostí nastane. Kromě toho, pokud žádné soubory musí být propojený, *před propojením* události nedojde. *Před propojením* událostí není k dispozici v projektech, které neobsahují krok propojení.
+Události sestavení jsou spouštěny pouze v případě, že se sestavení úspěšně dosáhne těchto bodů v procesu sestavení. Pokud dojde k chybě v sestavení, *po sestavení* události nedojde, pokud k této chybě dojde před propojovací fázi ani *před propojením* ani *po sestavení* událostí Vyvolá se v. Kromě toho, pokud chcete propojit, není třeba žádné soubory *před propojením* události nedochází. *Před propojením* událostí není k dispozici v projektech, které neobsahují krok propojování.
 
-Pokud žádné soubory se musela být vytvořená, dojde k žádné události sestavení.
+Pokud má být sestaven. není třeba žádné soubory, dojde k událostem žádná sestavení.
 
-Obecné informace o událostech sestavení najdete v tématu [kroky sestavení vlastní pochopení a vytvoření události](../ide/understanding-custom-build-steps-and-build-events.md).
+Obecné informace o události sestavení, naleznete v tématu [kroky sestavení vlastní principy a události sestavení](../ide/understanding-custom-build-steps-and-build-events.md).
 
 ### <a name="to-specify-a-build-event"></a>K určení událostí sestavení
 
-1. V **Průzkumníku**, vyberte projekt, pro který chcete určit událost sestavení.
+1. V **Průzkumníka řešení**, vyberte projekt, pro které chcete k určení událostí sestavení.
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Další informace najdete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Další informace najdete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md).
 
 1. V **události sestavení** složky, vyberte stránku vlastností události sestavení.
 
-1. Zadejte vlastnosti související s událostí sestavení:
+1. Zadejte vlastnosti přidružené k události sestavení:
 
-   - V **příkazového řádku**, jako kdyby byly ho zadat na příkazovém řádku zadejte příkaz. Zadejte platný příkaz nebo dávkového souboru a libovolný požadovaný vstupní nebo výstupní soubory. Zadejte **volání** dávky příkazu před název souboru batch zaručit, že jsou všechny následné příkazy provedeny.
+   - V **příkazového řádku**, jako kdyby byly jeho zadáním na příkazovém řádku zadejte příkaz. Zadejte platný příkaz nebo dávkový soubor a všechny povinné vstupní nebo výstupní soubory. Zadejte **volání** dávkového příkazu před název dávkového souboru zaručí, že jsou provedeny všechny následné příkazy.
 
-      Více vstupních a výstupních souborů může být zadáno symbolicky s makry MSBuild. Informace o tom, jak zadat umístění souborů nebo názvy sad souborů najdete v tématu [běžné makra pro příkazy sestavení a vlastnosti](../ide/common-macros-for-build-commands-and-properties.md).
+      Více vstupních a výstupních souborů lze symbolicky s makry MSBuild. Informace o tom, jak zadat umístění souborů nebo názvy sad souborů najdete v tématu [běžné Macros for Build Commands and Properties](../ide/common-macros-for-build-commands-and-properties.md).
 
-      Protože znak "%" je rezervován MSBuild, pokud zadáte proměnnou prostředí nahradit každý **%** znaku s **% 25** šestnáctková řídicí sekvence. Například nahradit **% WINDIR %** s **25WINDIR % 25**. MSBuild nahradí každý **% 25** pořadí se **%** znak před přistupuje k proměnné prostředí.
+      Protože znak '%' je vyhrazený nástroj MSBuild, pokud zadáte proměnnou prostředí nahraďte každé **%** řídicí znak s **% 25** šestnáctková řídicí sekvence. Nahraďte třeba **% WINDIR %** s **25WINDIR % 25**. Nástroj MSBuild nahradí každou **% 25** pořadí se **%** dříve, než přistupuje k proměnné prostředí.
 
-   - V **popis**, zadejte popis pro tuto událost. Popis vytištěn **výstup** okno, pokud dojde k této události.
+   - V **popis**, zadejte popis pro tuto událost. Popis zobrazeny **výstup** okno, když dojde k této události.
 
    - V **vyloučeno ze sestavení**, zadejte **Ano** Pokud nechcete, aby událost pro spuštění.
 
 ## <a name="see-also"></a>Viz také:
 
-[Seznámení s kroky vlastního sestavení a s událostmi sestavení](../ide/understanding-custom-build-steps-and-build-events.md)  
-[Běžná makra pro příkazy a vlastnosti sestavení](../ide/common-macros-for-build-commands-and-properties.md)  
-[Řešení potíží s přizpůsobením sestavení](../ide/troubleshooting-build-customizations.md)  
+[Seznámení s kroky vlastního sestavení a s událostmi sestavení](../ide/understanding-custom-build-steps-and-build-events.md)<br>
+[Běžná makra pro příkazy a vlastnosti sestavení](../ide/common-macros-for-build-commands-and-properties.md)<br>
+[Řešení potíží s přizpůsobením sestavení](../ide/troubleshooting-build-customizations.md)

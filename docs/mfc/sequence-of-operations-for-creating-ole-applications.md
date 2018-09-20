@@ -1,5 +1,5 @@
 ---
-title: Posloupnost operací při vytváření aplikací OLE | Microsoft Docs
+title: Posloupnost operací při vytváření aplikací OLE | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 412fa5c104d6e85bcaa6ba3703cc8c7ba535f25f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02542f8a4eb382ff4d7a88f98163b0052be09f75
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381206"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392508"
 ---
 # <a name="sequence-of-operations-for-creating-ole-applications"></a>Posloupnost operací při vytváření aplikací OLE
-Následující tabulka uvádí vaše role a role rozhraní framework při vytváření OLE propojování a vkládání aplikace. Tyto představují možnosti k dispozici pro místo posloupnost kroků provést.  
-  
-### <a name="creating-ole-applications"></a>Vytváření aplikací OLE  
-  
-|Úloha|Můžete provést|Nepodporuje rozhraní|  
-|----------|------------|------------------------|  
-|Vytvoření komponenty COM.|Spusťte Průvodce aplikací MFC. Zvolte **úplný server** nebo **mini serveru** v **složené podporu dokumentu** kartě.|Rozhraní framework generuje kostru aplikace s možnosti komponenty COM, které umožňují. Všechny funkce COM lze přenést do vaší stávající aplikace s pouze mírné úpravy.|  
-|Vytvoření aplikace kontejnerů od začátku.|Spusťte Průvodce aplikací MFC. Zvolte **kontejneru** v **složené podporu dokumentu** kartě. Pomocí zobrazení tříd, přejděte do editoru zdrojového kódu. Zadejte kód pro funkce COM obslužné rutiny.|Rozhraní framework generuje kostru aplikace, které můžete vložit COM – objekty vytvořené pomocí aplikací modelu COM součást (server).|  
-|Vytvořte aplikaci, která podporuje automatizace od začátku.|Spusťte Průvodce aplikací MFC. Zvolte **automatizace** z **upřesňující funkce** kartě. Pomocí zobrazení tříd vystavit metod a vlastností v aplikaci pro automatizaci.|Rozhraní framework generuje kostru aplikace, které je možné aktivovat a automatizované jiné aplikace.|  
-  
-## <a name="see-also"></a>Viz také  
- [Vytváření v rozhraní Framework](../mfc/building-on-the-framework.md)   
- [Posloupnost operací při sestavování aplikací MFC](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
- [Posloupnost operací při vytváření ovládacích prvků ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)   
- [Posloupnost operací při vytváření databázových aplikací](../mfc/sequence-of-operations-for-creating-database-applications.md)
+
+V následující tabulce jsou uvedeny vaši roli a roli v rámci při vytváření OLE propojování a vkládání aplikací. Představují možnosti k dispozici pro místo posloupnost kroků provést.
+
+### <a name="creating-ole-applications"></a>Vytváření aplikací OLE
+
+|Úloha|Můžete provést|Nepodporuje rozhraní framework|
+|----------|------------|------------------------|
+|Vytvoření komponenty COM.|Spuštění Průvodce aplikací knihovny MFC. Zvolte **úplný server** nebo **mini serveru** v **Podpora složených dokumentů** kartu.|Rozhraní framework generuje kostry aplikace s možností komponenty modelu COM povolena. Všechny možnosti modelu COM lze přenést do stávající aplikace s jen drobné změny.|
+|Vytvoření zcela nové aplikace typu kontejner.|Spuštění Průvodce aplikací knihovny MFC. Zvolte **kontejneru** v **Podpora složených dokumentů** kartu. Zobrazení tříd, přejděte na editor zdrojového kódu. Zadejte kód pro vaše funkce modelu COM obslužné rutiny.|Rozhraní framework generuje kostru aplikace, který může vložit objekty modelu COM, které jsou vytvořené pomocí modelu COM komponenty (server) aplikací.|
+|Vytvořte aplikaci, která podporuje automatizaci úplně od začátku.|Spuštění Průvodce aplikací knihovny MFC. Zvolte **automatizace** z **rozšířené funkce** kartu. Zobrazení tříd můžete zpřístupnit metody a vlastnosti v aplikaci pro automatizaci.|Rozhraní framework generuje kostru aplikace, které můžete aktivovat a automatizované jiné aplikace.|
+
+## <a name="see-also"></a>Viz také
+
+[Sestavení na základě rozhraní .NET Framework](../mfc/building-on-the-framework.md)<br/>
+[Posloupnost operací při sestavování aplikací MFC](../mfc/sequence-of-operations-for-building-mfc-applications.md)<br/>
+[Posloupnost operací při vytváření ovládacích prvků ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)<br/>
+[Posloupnost operací při vytváření databázových aplikací](../mfc/sequence-of-operations-for-creating-database-applications.md)
 
