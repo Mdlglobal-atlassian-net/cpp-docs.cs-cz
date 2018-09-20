@@ -1,7 +1,7 @@
 ---
 title: Nasazení aplikace s použitím redistribuovatelného balíčku (C++) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e213d5d91c229f7f07bc383f0a0158d85c05cf2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9759811554fd0998a919c9939a0441c63c26a3f8
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434502"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494345"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>Návod: Nasazení aplikace Visual C++ s použitím redistribuovatelného balíčku Visual C++
 
@@ -35,9 +35,9 @@ Tyto součásti k dokončení tohoto názorného postupu musíte mít:
 
 ### <a name="to-use-the-visual-c-redistributable-package-to-deploy-an-application"></a>Distribuovatelný balíček Visual C++ použít k nasazení aplikace
 
-1. Vytvořte a sestavte aplikaci MFC podle prvních tří kroků v [návod: nasazení Visual C++ Application By Using a Setup Project](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).
+1.  Vytvoření a sestavení aplikace knihovny MFC podle postupu v [návod: nasazení Visual C++ Application By Using a Setup Project](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
 
-2. Vytvořte soubor, pojmenujte ho setup.bat a přidejte následující příkazy do ní. Změna `MyMFCApplication` na název vašeho projektu.
+1. Vytvořte soubor, pojmenujte ho setup.bat a přidejte následující příkazy do ní. Změna `MyMFCApplication` na název vašeho projektu.
 
     ```cmd
     @echo off
@@ -46,55 +46,55 @@ Tyto součásti k dokončení tohoto názorného postupu musíte mít:
     copy MyMFCApplication.exe "C:\Program Files\MyMFCApplication"
     ```
 
-3. Vytvořte samorozbalovací soubor nastavení:
+1. Vytvořte samorozbalovací soubor nastavení:
 
    1. Na příkazovém řádku nebo v **spustit** okna, spusťte iexpress.exe.
 
-   2. Vyberte **vytvořit novou směrnici pro samorozbalovací soubor** a klikněte na tlačítko **Další** tlačítko.
+   1. Vyberte **vytvořit novou směrnici pro samorozbalovací soubor** a klikněte na tlačítko **Další** tlačítko.
 
-   3. Vyberte **extrahujte soubory a spusťte instalační příkaz** a klikněte na tlačítko **Další**.
+   1. Vyberte **extrahujte soubory a spusťte instalační příkaz** a klikněte na tlačítko **Další**.
 
-   4. Do textového pole zadejte název aplikace knihovny MFC a klikněte na tlačítko **Další**.
+   1. Do textového pole zadejte název aplikace knihovny MFC a klikněte na tlačítko **Další**.
 
-   5. Na **výzvu k potvrzení** stránce **bez výzvy** a klikněte na tlačítko **Další**.
+   1. Na **výzvu k potvrzení** stránce **bez výzvy** a klikněte na tlačítko **Další**.
 
-   6. Na **licenční smlouvy** stránce **nezobrazují licenci** a klikněte na tlačítko **Další**.
+   1. Na **licenční smlouvy** stránce **nezobrazují licenci** a klikněte na tlačítko **Další**.
 
-   7. Na **zabalený soubory** stránce, přidejte následující soubory a pak zvolte **Další**.
+   1. Na **zabalený soubory** stránce, přidejte následující soubory a pak zvolte **Další**.
 
       - Aplikace knihovny MFC (soubor .exe).
 
-      - VCRedist_x86.exe. Tento soubor je umístěn v \Program Files\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages\vcredist_x86\\.
+      - VCRedist_x86.exe. Tento soubor je umístěn v \Program Files (x86) \Microsoft Visual Studio \<verze > \SDK\Bootstrapper\Packages\. Můžete také stáhnout tento soubor z [Microsoft](https://www.microsoft.com/download/confirmation.aspx?id=5555).
 
       - Soubor setup.bat, který jste vytvořili v předchozím kroku.
 
-   8. Na **spuštění instalačního programu** stránku, **nainstalovat Program** textové pole, zadejte následující příkazový řádek a klikněte na tlačítko **Další**.
+   1. Na **spuštění instalačního programu** stránku, **nainstalovat Program** textové pole, zadejte následující příkazový řádek a klikněte na tlačítko **Další**.
 
       **cmd.exe /c "setup.bat"**
 
-   9. Na **zobrazení okna** stránce **výchozí** a klikněte na tlačítko **Další**.
+   1. Na **zobrazení okna** stránce **výchozí** a klikněte na tlačítko **Další**.
 
-   10. Na **dokončené zprávy** stránce **žádná zpráva** a klikněte na tlačítko **Další**.
+   1. Na **dokončené zprávy** stránce **žádná zpráva** a klikněte na tlačítko **Další**.
 
-   11. Na **název balíčku a možnosti** stránky, zadejte název samorozbalovací soubor instalace, vyberte **Store souborů s využitím dlouhý název souboru uvnitř balíčku** možnost a klikněte na tlačítko **Další**. Konci názvu souboru musí být Setup.exe—for například MyMFCApplicationSetup.exe.
+   1. Na **název balíčku a možnosti** stránky, zadejte název samorozbalovací soubor instalace, vyberte **Store souborů s využitím dlouhý název souboru uvnitř balíčku** možnost a klikněte na tlačítko **Další**. Konci názvu souboru musí být například Setup.exe—for *MyMFCApplicationSetup.exe*.
 
-   12. Na **konfigurace restartování** stránce **bez restartování** a klikněte na tlačítko **Další**.
+   1. Na **konfigurace restartování** stránce **bez restartování** a klikněte na tlačítko **Další**.
 
-   13. Na **uložit extrakci směrnici** stránce **uložit extrakci – direktiva () soubor SED** a klikněte na tlačítko **Další**.
+   1. Na **uložit extrakci směrnici** stránce **uložit extrakci – direktiva () soubor SED** a klikněte na tlačítko **Další**.
 
-   14. Na **vytvořit balíček** zvolte **Další**.
+   1. Na **vytvořit balíček** zvolte **Další**. Zvolte **Dokončit**.
 
-4. Otestujte samorozbalovací instalační soubor na jiný počítač, který nemá knihoven Visual C++:
+1. Otestujte samorozbalovací instalační soubor na jiný počítač, který nemá knihoven Visual C++:
 
-   1. V jiném počítači stáhnout si kopii instalačního souboru a pak nainstalujte ho spuštěním a následující kroky, které poskytuje.
+   1. V jiném počítači stáhnout si kopii instalačního souboru a pak nainstalujte ho spuštěním a následující kroky, které poskytuje. Vybrané možnosti instalace může trvat v závislosti **spustit jako správce** příkazu.
 
-   2. Spuštění aplikace knihovny MFC.
+   1. Spuštění aplikace knihovny MFC.
 
       Samorozbalovací soubor Instalační program nainstaluje aplikace knihovny MFC, která je ve složce, která jste zadali v kroku 2. Spuštění aplikace je úspěšně, protože instalačního programu distribuovatelného balíčku Visual C++ je součástí samorozbalovací instalační soubor.
 
       > [!IMPORTANT]
-      > Pokud chcete zjistit, která verze modulu runtime je nainstalovaná, instalační program zkontroluje \HKLM\SOFTWARE\Microsoft\VisualStudio\11.0\VC\Runtimes klíče registru\\[platforma]. Pokud aktuálně nainstalované verze je novější než verze, které instalační program se pokouší nainstalovat, instalační program vrátí úspěch bez instalace starší verze a ponechá další položky na stránce s nainstalovanými programy v Ovládacích panelech.
+      > Pokud chcete zjistit, která verze modulu runtime je nainstalovaná, instalační program zkontroluje \HKLM\SOFTWARE\Microsoft\VisualStudio klíče registru\\\<verze > \VC\Runtimes\\<platform>. Pokud aktuálně nainstalované verze je novější než verze, které instalační program se pokouší nainstalovat, instalační program vrátí úspěch bez instalace starší verze a ponechá další položky na stránce s nainstalovanými programy v Ovládacích panelech.
 
 ## <a name="see-also"></a>Viz také
 
-[Příklady nasazení](../ide/deployment-examples.md)
+[Příklady nasazení](deployment-examples.md)<br/>

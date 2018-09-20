@@ -1,7 +1,7 @@
 ---
 title: Visual C++ Průvodce přenosem a upgradem | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-language
 ms.topic: conceptual
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0be5d4cc09dbb5753bd8889ad880364ebd228bf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1b573a22b9502548cc84f2bd459cda72d071cf68
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433650"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494396"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Průvodce přenosem a upgradováním Visual C++
 
@@ -93,7 +93,6 @@ Případně třeba Teď máte nové požadavky nebo můžou předvídat potřebu
 |[Přenos aplikací do platformy Universal Windows](porting-to-the-universal-windows-platform-cpp.md)|Obsahuje informace o převodu kódu pro Windows 10|  
 |[Úvod do prostředí Visual C++ pro uživatele systému UNIX](introduction-to-visual-cpp-for-unix-users.md)|Poskytuje informace pro uživatele systému UNIX, kteří začínají s Visual C++ a chcete se s ním být produktivní.|  
 |[Přenos ze systému UNIX do Win32](porting-from-unix-to-win32.md)|Tento článek popisuje možnosti pro migraci systému UNIX aplikací pro Windows.|  
-|[Základy migrace v jazyce C++/CLI](../dotnet/cpp-cli-migration-primer.md)|Podrobně ukazuje, jak upgradovat vaše spravovaných rozšíření syntaxe jazyka C++ použít novou syntaxi. Další informace najdete v tématu [přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md).|  
   
 ## <a name="see-also"></a>Viz také  
 

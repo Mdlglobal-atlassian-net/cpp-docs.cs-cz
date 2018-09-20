@@ -1,28 +1,34 @@
 ---
 title: Module::genericreleasenotifier – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::GenericReleaseNotifier
+- module/Microsoft::WRL::Module::GenericReleaseNotifier::callback_
+- module/Microsoft::WRL::Module::GenericReleaseNotifier::GenericReleaseNotifier
+- module/Microsoft::WRL::Module::GenericReleaseNotifier::Invoke
 dev_langs:
 - C++
 helpviewer_keywords:
-- GenericReleaseNotifier class
+- Microsoft::WRL::Module::GenericReleaseNotifier class
+- Microsoft::WRL::Module::GenericReleaseNotifier::callback_ data member
+- Microsoft::WRL::Module::GenericReleaseNotifier::GenericReleaseNotifier, constructor
+- Microsoft::WRL::Module::GenericReleaseNotifier::Invoke method
 ms.assetid: 244a8fbe-f89b-409b-aa65-db3e37f9b125
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 80b04600f1f464220b00749903f27826855f6000
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 18aeac7767fbd4c1688b202670a812e5738ef62f
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46400260"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494423"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier – třída
 
@@ -44,21 +50,21 @@ Typ datového člena, který obsahuje umístění obslužné rutiny události.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
-|----------|-----------------|
-|[Module::GenericReleaseNotifier::GenericReleaseNotifier – konstruktor](../windows/module-genericreleasenotifier-genericreleasenotifier-constructor.md)|Inicializuje novou instanci třídy **Module::GenericReleaseNotifier** třídy.|
+Název                                                                                                     | Popis
+-------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------
+[Module::genericreleasenotifier:: genericreleasenotifier –](#genericreleasenotifier-genericreleasenotifier) | Inicializuje novou instanci třídy `Module::GenericReleaseNotifier` třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
-|----------|-----------------|
-|[Module::GenericReleaseNotifier::Invoke – metoda](../windows/module-genericreleasenotifier-invoke-method.md)|Volá obslužnou rutinu události spojené s aktuálním **Module::GenericReleaseNotifier** objektu.|
+Název                                                                     | Popis
+------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------
+[Module::GenericReleaseNotifier:: Invoke](#genericreleasenotifier-invoke) | Volá obslužnou rutinu události spojené s aktuálním `Module::GenericReleaseNotifier` objektu.
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Název|Popis|
-|----------|-----------------|
-|[Module::GenericReleaseNotifier::callback_ – datový člen](../windows/module-genericreleasenotifier-callback-data-member.md)|Obsahuje výraz lambda, funktor nebo obslužná rutina události ukazatele na funkce přidružené k aktuální **Module::GenericReleaseNotifier** objektu.|
+Název                                                                          | Popis
+----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------
+[Module::genericreleasenotifier:: callback_ –](#genericreleasenotifier-callback) | Obsahuje výraz lambda, funktor nebo obslužná rutina události ukazatele na funkce přidružené k aktuální `Module::GenericReleaseNotifier` objektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -72,6 +78,37 @@ Typ datového člena, který obsahuje umístění obslužné rutiny události.
 
 **Namespace:** Microsoft::WRL
 
-## <a name="see-also"></a>Viz také
+## <a name="genericreleasenotifier-callback"></a>Module::genericreleasenotifier:: callback_ –
 
-[Module – třída](../windows/module-class.md)
+Obsahuje výraz lambda, funktor nebo obslužná rutina události ukazatele na funkce přidružené k aktuální `Module::GenericReleaseNotifier` objektu.
+
+```cpp
+T callback_;
+```
+
+## <a name="genericreleasenotifier-genericreleasenotifier"></a>Module::genericreleasenotifier:: genericreleasenotifier –
+
+Inicializuje novou instanci třídy `Module::GenericReleaseNotifier` třídy.
+
+```cpp
+GenericReleaseNotifier(
+   T callback,
+   bool release
+) throw() : ReleaseNotifier(release), callback_(callback);
+```
+
+### <a name="parameters"></a>Parametry
+
+*zpětné volání*  
+Výraz lambda, funktor nebo obslužná rutina události ukazatele na funkci, který lze vyvolat pomocí funkce operátoru závorky (`()`).
+
+*Vydání verze*  
+Zadejte `true` povolit volání základní [modulu:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) metody; v opačném případě zadejte `false`.
+
+## <a name="genericreleasenotifier-invoke"></a>Module::GenericReleaseNotifier:: Invoke
+
+Volá obslužnou rutinu události spojené s aktuálním `Module::GenericReleaseNotifier` objektu.
+
+```cpp
+void Invoke();
+```

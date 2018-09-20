@@ -1,7 +1,7 @@
 ---
 title: 'Postupy: přechod na / clr | Dokumentace Microsoftu'
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -20,16 +20,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 818b6e102d9da759aa8889779515917b96e22c89
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cf55b6f5dc422bb01babe0bdf8d8c27ce50371da
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412961"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494462"
 ---
 # <a name="how-to-migrate-to-clr"></a>Postupy: Migrace do prostředí /clr
 
-Toto téma popisuje problémy, které vznikají při kompilace nativního kódu s **/CLR** (viz [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) Další informace). **/ CLR** umožňuje moduly Visual C++ pro vyvolání a vyvolat z .NET sestavení při zachování kompatibility s nespravovanými moduly. Zobrazit [smíšený (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md) a [nativní a vzájemná funkční spolupráce rozhraní .NET](../dotnet/native-and-dotnet-interoperability.md) Další informace o výhodách kompilace s **/CLR**.
+Toto téma popisuje problémy, které vznikají při kompilace nativního kódu s **/CLR** (viz [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) Další informace). **/ CLR** umožňuje nativní kód C++ volání a vyvolat z .NET sestavení kromě jiných nativní kód C++. Zobrazit [smíšený (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md) a [nativní a vzájemná funkční spolupráce rozhraní .NET](../dotnet/native-and-dotnet-interoperability.md) Další informace o výhodách kompilace s **/CLR**.
 
 ## <a name="known-issues-compiling-library-projects-with-clr"></a>Známé problémy kompilace projektů knihovny s parametrem/CLR
 
@@ -132,7 +132,7 @@ Různé verze typů dat může způsobit linkeru se nezdařila, protože metadat
 
 ### <a name="loader-lock-deadlock"></a>Zablokování zámku zaváděcího programu
 
-V sadě Visual Studio 2010 a novější, můžete stále k "zámek zablokování zavaděč" jako v předchozích verzích se ale deterministické a je rozpoznáno a Ohlášeno za běhu. Zobrazit [inicializace smíšených sestavení](../dotnet/initialization-of-mixed-assemblies.md) podrobné na pozadí, pokyny a řešení.
+"Zablokování pro zámek zavaděče" situace může nastat, ale je deterministická a rozpoznáno a Ohlášeno za běhu. Zobrazit [inicializace smíšených sestavení](../dotnet/initialization-of-mixed-assemblies.md) podrobné na pozadí, pokyny a řešení.
 
 ### <a name="data-exports"></a>Export dat
 

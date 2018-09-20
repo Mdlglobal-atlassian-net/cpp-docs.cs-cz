@@ -1,7 +1,7 @@
 ---
 title: Referenční dokumentace knihoven STL/CLR | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018"
 ms.technology:
 - cpp-cli
 ms.topic: reference
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 78dc5c57ca000dfa03dba640c46cec16aaca133f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 14217396801731505753be121e98f0aebf5b5f22
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429471"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494384"
 ---
 # <a name="stlclr-library-reference"></a>STL/CLR – Referenční dokumentace knihoven
 
-Knihovna STL/CLR je obal podmnožiny standardní knihovny C++ pro použití s C++ a .NET Framework common language runtime (CLR). STL/CLR můžete kontejnerů, iterátorů a algoritmů standardní knihovny ve spravovaném prostředí.
+Knihovna STL/CLR poskytuje rozhraní podobně jako kontejnery standardní knihovny C++ pro použití s C++ a .NET Framework common language runtime (CLR). Je zcela nezávislý Microsoft implementuje standardní knihovně C++ STL/CLR. STL/CLR je zachován z důvodu stále podporuje starší verze, ale není pořád aktuální standardu C++. Důrazně doporučujeme používat nativní [standardní knihovny C++](../standard-library/cpp-standard-library-reference.md) kontejnery místo STL/CLR, kdykoli je to možné.
 
 Použití STL/CLR:
 
@@ -34,7 +34,7 @@ Použití STL/CLR:
 
 - Kvalifikovat názvy knihovny `cliext::` místo `std::`.
 
-STL/CLR poskytují obecné typy a rozhraní, které poté používají ve scénářích mezi sestaveními v rámci sestavení .NET **Microsoft.VisualC.STLCLR.dll**. Tato knihovna DLL je součástí rozhraní .NET Framework 3.5. Pokud redistribuujete aplikaci, která používá STL/CLR, musíte zahrnout rozhraní .NET Framework 3.5, jakož i jiné knihovny Visual C++, které používá váš projekt, v oblasti závislostí projektu instalace.
+Knihovna STL/CLR poskytuje rozhraní jako v STL pro použití s C++ a .NET Framework common language runtime (CLR). Tato knihovna je zachován z důvodu stále podporuje starší verze, ale není pořád aktuální standardu C++. Důrazně doporučujeme používat nativní [standardní knihovny C++](../standard-library/cpp-standard-library-reference.md) kontejnery místo STL/CLR.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 

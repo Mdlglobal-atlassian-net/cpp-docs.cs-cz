@@ -1,7 +1,7 @@
 ---
 title: Nasazení aplikace v jazyce Visual C++ pomocí projektu instalace | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9e781a311f965dc71bb64425a4d1354d6b38e1a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 59ceff2de0093e3a1659fe46bdeea296337370ee
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416562"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494475"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>Návod: Nasazení aplikace Visual C++ pomocí projektu instalace
 
@@ -27,32 +27,47 @@ Popisuje, jak nasadit aplikace v jazyce Visual C++ pomocí projektu instalace.
 
 ## <a name="prerequisites"></a>Požadavky
 
-K dokončení tohoto návodu budete potřebovat následující komponenty:
+K dokončení tohoto návodu budete potřebovat následující komponenty:  
+  
+- Počítač s nainstalovanou sadu Visual Studio.  
+  
+- Další počítač, který nemá knihoven Visual C++.  
+  
+### <a name="to-deploy-an-application-by-using-a-setup-project"></a>K nasazení aplikace pomocí projektu instalace  
 
-- Počítače s Visual Studio 2012 nainstalovat.
+1. Vytvořte nový projekt. Na **souboru** nabídky, přejděte k **nový**a potom klikněte na tlačítko **projektu**. 
+  
+1. Použití **MFC ApplicationWizard** vytvořit nové řešení sady Visual Studio. Najít průvodce, ze **nový projekt** dialogového okna rozbalte **Visual C++** uzlu, vyberte **MFC**vyberte **aplikace knihovny MFC**, zadejte název projektu a klikněte na **OK**. Klikněte na tlačítko **Dokončit**.
 
-- Další počítač, který nemá knihoven Visual C++.
+   > [!NOTE]
+   > Pokud **aplikace knihovny MFC** chybí typ:<br/>
+   > **Visual Studio 2017**: vyberte **otevřít instalační program Visual Studio** v levém podokně **nový projekt** dialogové okno. Možnost umístěna ve složce instalace **vývoj desktopových aplikací pomocí C++** v **volitelné** součástí oddílu s názvem **Visual C++ MFC pro x86 a x64**.<br/>
+   > **Visual Studio 2015**: klikněte na tlačítko Windows Start a typ **přidat nebo odebrat programy**. Otevřete program ze seznamu výsledků a pak v seznamu nainstalovaných programů najít instalaci sady Microsoft Visual Studio 2015. Poklepejte na něj a pak zvolte **změnit** a vyberte **Microsoft Foundation Classes** komponentu pod **Visual C++**.
+  
+1. Změňte konfiguraci aktivního řešení na **vydání**. Z **sestavení** nabídce vyberte možnost **Správce konfigurace**. Z **nástroje Configuration Manager** dialogu **vydání** z **konfigurace aktivního řešení** rozevíracího seznamu. Klikněte na tlačítko **Zavřít**.
+  
+1. Stisknutím klávesy **Ctrl**+**Shift**+**B** k sestavení aplikace. Případně na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**. To umožňuje nastavení projektu používají výstup tohoto projektu aplikace knihovny MFC.   
 
-### <a name="to-deploy-an-application-by-using-a-setup-project"></a>K nasazení aplikace pomocí projektu instalace
+1. Pokud jste tak již neučinili, stáhněte si rozšíření Microsoft projektů instalačního programu sady Visual Studio. Rozšíření je zdarma pro vývojáře v sadě Visual Studio a přidá funkce šablon projektů instalace a nasazení do sady Visual Studio. Pokud jste připojeni k Internetu, v sadě Visual Studio, zvolte **nástroje** > **rozšíření a aktualizace**. V části **rozšíření a aktualizace** dialogového okna, vyberte **Online** kartu a typ *projektů instalačního programu sady Visual Studio Microsoft* do vyhledávacího pole. Spuštění **Enter**vyberte **sady Microsoft Visual Studio \<verze > Projekty instalačního programu**a klikněte na tlačítko **Stáhnout**. Zvolte spuštění a instalace rozšíření a potom restartujte Visual Studio. 
+  
+1. V panelu nabídky zvolte **souboru** > **poslední projekty a řešení**a klikněte na tlačítko k otevření projektu.   
+  
+1. V panelu nabídky zvolte **souboru** > **nový** > **projektu** otevřít **nový projekt** dialogové okno. V levém podokně dialogového okna rozbalte **nainstalováno** > **ostatní typy projektů** uzlů a vyberte **instalační program sady Visual Studio**. V prostředním podokně vyberte **projektu instalace**.  
+  
+1. Zadejte název projektu instalace v **název** pole. V **řešení** rozevíracího seznamu vyberte **přidat do řešení**. Zvolte **OK** pro vytvoření projektu instalace. A **souboru Assistant (ProjectName)** kartě se otevře v okně editoru.  
 
-1. Použití **MFC ApplicationWizard** vytvořit nové řešení sady Visual Studio. Najít průvodce, ze **nový projekt** dialogového okna rozbalte **Visual C++** uzlu, vyberte **MFC**vyberte **aplikace knihovny MFC**, zadejte název projektu a klikněte na **OK**.
+1. Klikněte pravým tlačítkem myši **složky aplikace** uzel a vyberte možnost **přidat** > **výstup projektu** otevřete **Přidat výstupní skupinu projektu**dialogové okno. V dialogovém okně vyberte **primární výstup** a klikněte na tlačítko **OK**. Nová položka s názvem **primární výstup z ProjectName (aktivní)** se zobrazí.
 
-1. Změňte konfiguraci aktivního řešení na **vydání**. Z **sestavení** nabídce vyberte možnost **Správce konfigurace**. Z **nástroje Configuration Manager** dialogu **vydání** z **konfigurace aktivního řešení** rozevíracího seznamu.
+1. Klikněte pravým tlačítkem na **složky aplikace** uzel a vyberte možnost **přidat** > **sestavení** otevřít **vyberte komponentu** dialogového okna pole. Vyberte a přidejte veškeré požadované knihovny DLL vyžadované program, jak je popsáno v tématu [Determining Which DLLs to Redistribute](determining-which-dlls-to-redistribute.md). 
 
-1. Stisknutím klávesy F7 k sestavení aplikace. Případně na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**. To umožňuje nastavení projektu používají výstup tohoto projektu aplikace knihovny MFC.
+1. Vyberte položku **primární výstup z ProjectName (aktivní)** klikněte pravým tlačítkem a zvolte **vytvořit zástupce na primární výstup z ProjectName (aktivní)**. Nová položka s názvem **zástupce primární výstup z ProjectName (aktivní)** se zobrazí. Vám může přejmenovat položky místní pak přetažení položky do **Uživatelská nabídka programy** uzlu na levé straně okna.
 
-1. Pokud jste tak již neučinili, stáhněte si InstallShield Limited Edition (ISLE), který je zdarma pro vývojáře v sadě Visual Studio a nahrazuje funkcionalitu šablon projektů v sadě Visual Studio pro instalaci a nasazení. Pokud jste připojeni k Internetu, otevřete **nový projekt** dialogové okno výběrem **souboru**, **nový**, **projektu** v nabídce panelu nebo pomocí pravým tlačítkem myši na řešení v **Průzkumníka řešení** a zvolíte **přidat**, **nový projekt**. Rozbalte **ostatní typy projektů** uzlu, vyberte **Povolit InstallShield Limited Edition** v **instalace a nasazení** uzel a postupujte podle pokynů na obrazovce. Po stažení, instalaci a aktivaci programu InstallShield Limited Edition, zavřete sadu Visual Studio a znovu ho otevřete.
+1. V panelu nabídky zvolte **sestavení** > **nástroje Configuration Manager**. V **projektu** tabulky v části **sestavení** sloupců, zaškrtněte políčko u projektu nasazení. Klikněte na tlačítko **Zavřít**.
+  
+1. V panelu nabídky zvolte **sestavení** > **sestavit řešení** k sestavení projektu knihovny MFC a projekt nasazení.  
+  
+1. Ve složce řešení vyhledejte program setup.exe vytvořený z projektu nasazení. Můžete zkopírovat tento soubor (a tento soubor .msi) k instalaci aplikace a jeho požadovaných souborů knihovny v jiném počítači. Spusťte instalační program na druhém počítači, který nemá žádné knihovny Visual C++.
+  
+## <a name="see-also"></a>Viz také  
 
-1. Otevřít **nový projekt** dialogové okno znovu, rozbalte **ostatní typy projektů** uzel a zvolte **projektu InstallShield Limited Edition** v  **InstallShield Limited Edition** uzlu.
-
-1. Postupujte podle pokynů **Začínáme** uzlu projektu instalace vytvořených šablonou InstallShield Limited Edition pro přidání odkazu na výstup do projektu knihovny MFC Visual Studio.
-
-1. Sestavte projekt instalace k vytvoření souboru Instalační služby (setup.exe). Uděláte to tak, klikněte pravým tlačítkem myši na uzel projektu instalace v **Průzkumníka řešení** a vyberte **sestavení**.
-
-   InstallShield Limited Edition vytvoří instalační soubor ve stromu projektu instalace (ve výchozím nastavení, může být umístěn v podsložce Express\SingleImage\DiskImages\DISK1 v nastavení projektu).
-
-1. Spusťte instalační program na druhém počítači, který nemá žádné knihovny Visual C++.
-
-## <a name="see-also"></a>Viz také
-
-[Příklady nasazení](../ide/deployment-examples.md)
+[Příklady nasazení](deployment-examples.md)<br/>

@@ -1,7 +1,7 @@
 ---
 title: -clr (kompilace Common Language Runtime) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b46f61ef727c1b283137bb3d537d2dbad416c1d8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: dcd5739f2fb0663609ce7bcabc920cc3aa20d8e1
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703817"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494410"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Common Language Runtime)
 
@@ -45,15 +45,15 @@ Jeden nebo více z následujících parametrů oddělených čárkou.
 
 - žádná
 
-   Bez jakýchkoli možností **/CLR** vytvoří metadata pro aplikaci. Metadata mohou využívat jiné aplikace modulu CLR a umožňuje aplikaci využívala typy a data v metadatech jiných součástí modulu CLR. Další informace najdete v tématu [smíšený (nativní a spravovaná) sestavení](../../dotnet/mixed-native-and-managed-assemblies.md) a [postupy: přechod na/CLR](../../dotnet/how-to-migrate-to-clr.md).
+   Bez jakýchkoli možností **/CLR** vytvoří metadata pro aplikaci. Metadata mohou využívat jiné aplikace modulu CLR a umožňuje aplikaci využívala typy a data v metadatech jiných součástí modulu CLR. Další informace najdete v tématu [smíšený (nativní a spravovaná) sestavení](../../dotnet/mixed-native-and-managed-assemblies.md).
 
 - **pure**
 
-   **/ CLR: pure zastaralé**. Tuto možnost nemusí podporovat budoucí verze kompilátoru. Doporučujeme vám, že port kód, který musí být prázdné MSIL do jazyka C#.
+   **/ CLR: pure zastaralé**. Možnost Odebereme v sadě Visual Studio 2017. Doporučujeme vám, že port kód, který musí být prázdné MSIL do jazyka C#.
 
 - **Bezpečné**
 
-   **zastaralé/CLR: safe**. Tuto možnost nemusí podporovat budoucí verze kompilátoru. Doporučujeme vám, že port kód, který musí být bezpečné jazyka MSIL do jazyka C#.
+   **zastaralé/CLR: safe**. Možnost Odebereme v sadě Visual Studio 2017. Doporučujeme vám, že port kód, který musí být bezpečné jazyka MSIL do jazyka C#.
 
 - **noAssembly**
 
@@ -112,31 +112,6 @@ class {} x;
 ```
 
 Umožňuje zobrazit metadata ildasm.exe.
-
-## <a name="managed-extensions-for-c"></a>spravovaná rozšíření pro C++
-
-Visual C++ již nepodporuje zprostředkovatele **oldSyntax** možnost. Tato možnost se přestala nabízet v sadě Visual Studio 2005. Podporované syntaxe pro psaní spravovaného kódu v jazyce C++ je C + +/ CLI. Další informace najdete v tématu [přípony komponent pro platformy běhového prostředí](../../windows/component-extensions-for-runtime-platforms.md).
-
-Pokud máte kód, který používá spravovaného rozšíření jazyka C++, doporučujeme port používal C + +/ CLI syntaxe. Informace o tom, jak váš kód, naleznete v tématu [C + +/ CLI Základy migrace](../../dotnet/cpp-cli-migration-primer.md).
-
-#### <a name="to-set-this-compiler-option-in-visual-studio"></a>Nastavení této možnosti kompilátoru v sadě Visual Studio
-
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na název projektu a pak klikněte na tlačítko **vlastnosti** pro otevření projektu **stránky vlastností** dialogové okno.
-
-1. Vyberte **vlastnosti konfigurace** > **Obecné** stránku vlastností.
-
-1. Upravit **Common Language Runtime support** vlastnost.
-
-   > [!NOTE]
-   > Když **/CLR** je povolený v **stránky vlastností** dialogovém okně Vlastnosti – možnost kompilátoru, které nejsou kompatibilní s **/CLR** také upravit podle potřeby. Například pokud **/RTC** nastavena a poté **/CLR** je povoleno, **/RTC** se vypne.
-   >
-   >  Navíc při ladění **/CLR** aplikace, nastavte **typ ladicího programu** vlastnost **smíšený** nebo **režim pouze spravovaný**. Další informace najdete v tématu [nastavení projektu pro konfiguraci ladění jazyka C++](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration).
-
-   Informace, jak vytvořit modul, naleznete v tématu [parametr/noassembly (vytvoření modulu MSIL)](../../build/reference/noassembly-create-a-msil-module.md).
-
-#### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
-
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAsManaged%2A>.
 
 ## <a name="see-also"></a>Viz také
 

@@ -1,7 +1,7 @@
 ---
 title: Smíšená (nativní a spravovaná) sestavení | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -23,18 +23,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2a48f34edec8a9f24f22d35be482d3b297215dbe
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4ee94905bc4c40f6d080e34098e24bd71d495141
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210622"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494488"
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Smíšená (nativní a spravovaná) sestavení
 
-Smíšená sestavení jsou schopné obsahující nespravované strojové instrukce a instrukce jazyka MSIL. To umožňuje jejich zavolat a volat součásti rozhraní .NET, při zachování kompatibility s komponentami, které jsou zcela nespravovaný. Pomocí smíšená sestavení, mohou vývojáři vytvářet aplikace pomocí kombinaci spravovaných a nespravovaných funkcí. Díky tomu smíšená sestavení ideální pro migraci stávajících aplikací Visual C++ pro platformu .NET.
+Smíšená sestavení jsou schopné obsahující nespravované strojové instrukce a instrukce jazyka MSIL. Díky tomu je možné vyvolat v součásti .NET, při zachování kompatibility s nativních knihoven C++ a volání. Pomocí smíšená sestavení, mohou vývojáři vytvářet aplikace pomocí kombinaci .NET a nativního kódu C++.
 
-Například existující aplikaci skládající se nespravovaných funkcí může být přenesena na platformě .NET opětovnou kompilací pouze jeden modul s **/CLR** přepínač kompilátoru. Tento modul je pak možné používat funkce rozhraní .NET, ale zůstane kompatibilní s zbytek aplikace. Tímto způsobem lze převést aplikace na platformě .NET v podobě postupné, jeden po druhém. Dokonce můžete rozhodnout mezi spravovanými a nespravovanými kompilace na základě funkce funkce ve stejném souboru (viz [spravované, nespravované](../preprocessor/managed-unmanaged.md)).
+Například již existující knihovny, které obsahuje jenom nativní kód C++, může být přenesena na platformě .NET opětovnou kompilací pouze jeden modul s **/CLR** přepínač kompilátoru. Tento modul je pak možné používat funkce rozhraní .NET, ale zůstane kompatibilní s zbytek aplikace. Dokonce můžete rozhodnout mezi spravovaný a nativní kompilace na základě funkce funkce ve stejném souboru (viz [spravované, nespravované](../preprocessor/managed-unmanaged.md)).
 
 Generování smíšené spravované sestavení Visual C++ podporuje pouze s použitím **/CLR** – možnost kompilátoru. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017. Pokud budete potřebovat čisté a ověřitelné spravovaná sestavení, doporučujeme že vytvořit pomocí jazyka C#.
 
