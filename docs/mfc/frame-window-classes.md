@@ -1,5 +1,5 @@
 ---
-title: Třídy oken s rámečkem | Microsoft Docs
+title: Třídy oken s rámečkem | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,30 +22,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b9003ba503e0a78e5f223e766346d63679d9959
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ac60fb8d1b12708c7e64a91beb224ca436e5005
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347883"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404524"
 ---
 # <a name="frame-window-classes"></a>Třídy oken s rámečkem
-Každá aplikace má jeden "hlavního rámce okna," plochy okno, které obvykle má název aplikace v jeho záhlaví. Každý dokument má obvykle jeden "rámce okna dokumentu." Okně s rámečkem dokument obsahuje alespoň jedno zobrazení, který představuje data dokumentu.  
-  
-## <a name="frame-windows-in-sdi-and-mdi-applications"></a>Okna s rámečkem v SDI a MDI aplikace  
- Aplikace SDI je jeden odvozené od třídy oken s rámečkem [CFrameWnd](../mfc/reference/cframewnd-class.md). Toto okno se hlavního rámce okna a rámce okna dokumentu. Pro aplikace MDI hlavního okna rámce je odvozená od třídy [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), a v dokumentu okna s rámečkem, které jsou podřízených oken MDI, jsou odvozena od třídy [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md).  
-  
-## <a name="use-the-frame-window-class-or-derive-from-it"></a>Použití třídy oken s rámečkem nebo z něj odvodit  
- Tyto třídy poskytují většinu oken s rámečkem funkcí, které potřebujete pro vaše aplikace. Za normálních okolností výchozí chování a vzhled, které poskytují bude vyhovovat vašim potřebám. Pokud potřebujete další funkce, odvozujte z těchto tříd.  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
-  
--   [Třídy oken s rámečkem vytvořené průvodcem aplikací](../mfc/frame-window-classes-created-by-the-application-wizard.md)  
-  
--   [Styly oken s rámečkem](../mfc/frame-window-styles-cpp.md)  
-  
--   [Změna stylů okna vytvořeného rozhraním MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Okna s rámečkem](../mfc/frame-windows.md)
+
+Každá aplikace má jeden "hlavní okno rámce," desktop okno, které obvykle název aplikace v titulek. Každý dokument obvykle má jednu "okno rámce dokumentu." Okno rámce dokumentu obsahuje alespoň jedno zobrazení, která představuje data dokumentu.
+
+## <a name="frame-windows-in-sdi-and-mdi-applications"></a>Rámce Windows SDI a MDI aplikacemi
+
+Pro aplikace SDI je jedno okno rámce odvozené od třídy [CFrameWnd](../mfc/reference/cframewnd-class.md). Toto okno je hlavní okno rámce a okna rámce dokumentu. Pro aplikace MDI, hlavní okno rámce je odvozena od třídy [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), a rámečkem v dokumentu, které jsou podřízených oken MDI, jsou odvozeny z třídy [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md).
+
+## <a name="use-the-frame-window-class-or-derive-from-it"></a>Použití třídy oken s rámečkem nebo z něj odvodit
+
+Tyto třídy poskytují většinu oken s rámečkem funkcí, které potřebujete pro své aplikace. Za normálních okolností výchozí chování a vzhled, které poskytují a bude vyhovovat vašim potřebám. Pokud potřebujete další funkce, jsou odvozeny z těchto tříd.
+
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+
+- [Třídy oken s rámečkem vytvořené průvodcem aplikací](../mfc/frame-window-classes-created-by-the-application-wizard.md)
+
+- [Styly oken s rámečkem](../mfc/frame-window-styles-cpp.md)
+
+- [Změna stylů okna vytvořeného rozhraním MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)
+
+## <a name="see-also"></a>Viz také
+
+[Okna s rámečkem](../mfc/frame-windows.md)
 

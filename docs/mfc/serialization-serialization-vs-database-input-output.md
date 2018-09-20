@@ -1,5 +1,5 @@
 ---
-title: 'Serializace: Serializace vs. Databáze vstupy a výstupy | Microsoft Docs'
+title: 'Serializace: Serializace vs. Databázového vstupu a výstupu | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d43c0259dd394a7dbbe7ef5b2ed558c9351e73a8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67621d44766e6f4b726c8553024933fd0e904a17
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379574"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381540"
 ---
-# <a name="serialization-serialization-vs-database-inputoutput"></a>Serializace: Serializace vs. Databáze vstupu a výstupu
-Tento článek vysvětluje, kdy použít objekty dokumentu a serializace pro souborových vstupně výstupní (I/O) a jinými technikami, vstupně-výstupní operace jsou vhodné, protože aplikace čte a zapisuje data na základě jednotlivé transakce, jako v databázových aplikacích. Pokud nepoužijete serializace, můžete také nebude potřebovat soubor otevřít, uložit a uložit jako příkazy. Obsahuje následující témata:  
-  
--   [Doporučení pro zpracování vstupu a výstupu](../mfc/recommendations-for-handling-input-output.md)  
-  
--   [Zpracování v nabídce Soubor v databázových aplikacích](../mfc/file-menu-in-an-mfc-database-application.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Serializace](../mfc/serialization-in-mfc.md)
+# <a name="serialization-serialization-vs-database-inputoutput"></a>Serializace: Serializace vs. Databázový vstup/výstup
+
+Tento článek vysvětluje, kdy použít objekty dokumentu a serializace pro souborových vstupně výstupní (I/O) a jiné vstupně-výstupní techniky, které jsou vhodné, protože aplikace čte a zapisuje data na základě za transakce, jako v databázových aplikacích. Pokud nepoužíváte serializace, také nebude potřebujete otevřít soubor, uložit a uložte jako příkazy. Probíraná témata zahrnují:
+
+- [Doporučení pro zpracování vstupu a výstupu](../mfc/recommendations-for-handling-input-output.md)
+
+- [Zpracování v nabídce Soubor v databázových aplikacích](../mfc/file-menu-in-an-mfc-database-application.md)
+
+## <a name="see-also"></a>Viz také
+
+[Serializace](../mfc/serialization-in-mfc.md)
 

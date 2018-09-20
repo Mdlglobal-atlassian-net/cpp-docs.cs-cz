@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c758226935151bd11faec12aed459aeb2606ca9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8b220ecd69ce539c03339ac73048efb2750d2e32
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684821"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401795"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Knihovna šablon C++ prostředí Windows Runtime (WRL)
 
@@ -50,43 +50,43 @@ Knihovna šablon C++ Windows Runtime a C + +/ CX poskytují různé výhody. Tad
 
 Tady jsou některé prostředky, které můžete hned začít pracovat s knihovna šablon C++ Windows Runtime.
 
-[Knihovna Windows Runtime (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)  
+[Knihovna Windows Runtime (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
 V tomto videu Channel 9 Další informace o tom, jak se knihovna šablon C++ Runtime Windows pomáhá zápisu aplikace univerzální platformy Windows (UPW) a jak vytvářet a využívat komponenty prostředí Windows Runtime.
 
-[Postupy: Aktivace a používání komponent prostředí Windows Runtime](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)  
+[Postupy: Aktivace a používání komponent prostředí Windows Runtime](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
 Ukazuje, jak pomocí šablony knihovna Windows Runtime C++ inicializovat Windows Runtime a aktivaci a používání komponent prostředí Windows Runtime.
 
-[Postupy: dokončení asynchronních operací](../windows/how-to-complete-asynchronous-operations-using-wrl.md)  
+[Postupy: dokončení asynchronních operací](../windows/how-to-complete-asynchronous-operations-using-wrl.md)<br/>
 Ukazuje způsob použití knihovny šablon jazyka C++ Runtime Windows ke spuštění asynchronních operací a provedení práce po dokončení operací.
 
-[Postupy: zpracování událostí](../windows/how-to-handle-events-using-wrl.md)  
+[Postupy: zpracování událostí](../windows/how-to-handle-events-using-wrl.md)<br/>
 Ukazuje způsob použití knihovny šablon jazyka C++ Runtime Windows přihlásit k odběru a zpracování událostí objekt prostředí Windows Runtime.
 
-[Návod: Vytvoření aplikace pro UPW s použitím knihovny WRL a platformy Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
+[Návod: Vytvoření aplikace pro UPW s použitím knihovny WRL a platformy Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)<br/>
 Naučíte se vytvářet aplikace pro UPW, která používá [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
 
-[Postupy: vytvoření klasické komponenty COM](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
+[Postupy: vytvoření klasické komponenty COM](../windows/how-to-create-a-classic-com-component-using-wrl.md)<br/>
 Ukazuje, jak pomocí šablony knihovna Windows Runtime C++ k vytvoření základní komponenty modelu COM a základní způsob, jak zaregistrovat a využívat komponenty modelu COM z desktopové aplikace.
 
-[Postupy: Přímé vytváření instancí komponent knihovny WRL](../windows/how-to-instantiate-wrl-components-directly.md)  
+[Postupy: Přímé vytváření instancí komponent knihovny WRL](../windows/how-to-instantiate-wrl-components-directly.md)<br/>
 Další informace o použití [Microsoft::WRL:: Make](../windows/make-function.md) a [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) pro vytvoření instance komponenty z modulu, který ji definuje.
 
-[Postupy: Vytváření souborů .h z metadat Windows pomocí nástrojů winmdidl.exe a midlrt.exe](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)  
+[Postupy: Vytváření souborů .h z metadat Windows pomocí nástrojů winmdidl.exe a midlrt.exe](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)<br/>
 Ukazuje, jak využívat vlastní součásti prostředí Windows Runtime z WRL vytvořením souboru IDL z metadat .winmd.
 
-[Návod: Připojení pomocí úloh a žádostí XML HTTP](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
+[Návod: Připojení pomocí úloh a žádostí XML HTTP](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
 Ukazuje způsob použití [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) a [IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) spolu s úkoly odesílajícími požadavky HTTP GET a POST na webovou službu v aplikaci UWP.
 
-[Příklad optimalizace cesty mapy Bing](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)  
+[Příklad optimalizace cesty mapy Bing](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
 Používá `HttpRequest` třídu, která je definována v [návod: připojení pomocí úloh a žádostí XML HTTP](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) v souvislosti s kompletní aplikace pro UPW.
 
-[Vytváření součásti modulu Windows Runtime s ukázkou jazyka C++](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)  
+[Vytváření součásti modulu Windows Runtime s ukázkou jazyka C++](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
 Ukazuje, jak pomocí šablony knihovna Windows Runtime C++ vytvořit komponentu knihovny DLL v procesu a používat ji v jazyce C + +/ CX, JavaScriptu a C#.
 
-[Ukázka hry mramorového bludiště DirectX](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)  
+[Ukázka hry mramorového bludiště DirectX](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
 Popisuje způsob použití knihovny šablon jazyka C++ Runtime Windows ke správě životnosti komponent modelu COM, jako je rozhraní DirectX a platformy Media Foundation v souvislosti s kompletní 3D hrou.
 
-[Odesílání oznámení z ukázkové aplikace klasické pracovní plochy](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)  
+[Odesílání oznámení z ukázkové aplikace klasické pracovní plochy](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
 Popisuje způsob použití knihovny šablon jazyka C++ Runtime Windows pro práci s oznámeními pro oznámení z desktopové aplikace.
 
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Knihovna šablon C++ prostředí Windows Runtime porovnané s ATL.

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2710609cbf20861c77dae1cb0aea327983efef6e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9142ba85a78259c0a6e5ae06f3745d414e62e908
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098170"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425623"
 ---
 # <a name="smart-pointers-modern-c"></a>Chytré ukazatele (moderní verze jazyka C++)
 
@@ -86,29 +86,39 @@ Tyto inteligentní ukazatele představují první volbu pro zapouzdření ukazat
 
 Při práci s objekty COM zabalte ukazatele rozhraní do příslušného typu inteligentního ukazatele. Knihovna ATL definuje řadu inteligentních ukazatelů pro různé účely. Můžete také použít `_com_ptr_t` typ inteligentního ukazatele, který kompilátor používá při vytváření obálkových tříd ze souborů .tlb. Jedná se o nejlepší volbu, pokud nechcete zahrnovat hlavičkové soubory ATL.
 
-[CComPtr – třída](../atl/reference/ccomptr-class.md) využit, pokud nemůžete použít knihovnu ATL. Provede součet odkazů pomocí `AddRef` a `Release` metody. Další informace najdete v tématu [postupy: vytvoření a používání instancí objektů CComPtr a CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
+[CComPtr – třída](../atl/reference/ccomptr-class.md)<br/>
+Tuto volbu použijte, dokud nenastane situace, že nemůžete použít knihovnu ATL. Provede součet odkazů pomocí `AddRef` a `Release` metody. Další informace najdete v tématu [postupy: vytvoření a používání instancí objektů CComPtr a CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
 
-[CComQIPtr – třída](../atl/reference/ccomqiptr-class.md) Resembles `CComPtr` , ale také poskytuje zjednodušenou syntaxi pro volání `QueryInterface` v objektech com. Další informace najdete v tématu [postupy: vytvoření a používání instancí objektů CComPtr a CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
+[CComQIPtr – třída](../atl/reference/ccomqiptr-class.md)<br/>
+Se podobá `CComPtr` , ale také poskytuje zjednodušenou syntaxi pro volání `QueryInterface` v objektech com. Další informace najdete v tématu [postupy: vytvoření a používání instancí objektů CComPtr a CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
 
-[Ccomheapptr – třída](../atl/reference/ccomheapptr-class.md) inteligentní ukazatel na objekty, které používají `CoTaskMemFree` k uvolnění paměti.
+[CComHeapPtr – třída](../atl/reference/ccomheapptr-class.md)<br/>
+Inteligentní ukazatel na objekty, které používají `CoTaskMemFree` k uvolnění paměti.
 
-[Ccomgitptr – třída](../atl/reference/ccomgitptr-class.md) inteligentní ukazatel rozhraní, které jsou získávány z tabulky globálního rozhraní (GIT).
+[CComGITPtr – třída](../atl/reference/ccomgitptr-class.md)<br/>
+Inteligentní ukazatel rozhraní, která se získávají z tabulky globálního rozhraní (GIT).
 
-[_com_ptr_t – třída](../cpp/com-ptr-t-class.md) Resembles `CComQIPtr` funkcí, ale nezávisí na hlavičkách ATL.
+[_com_ptr_t – třída](../cpp/com-ptr-t-class.md)<br/>
+Se podobá `CComQIPtr` funkcí, ale nezávisí na hlavičkách ATL.
 
 ### <a name="atl-smart-pointers-for-poco-objects"></a>Inteligentní ukazatele ATL pro objekty POCO
 
 Kromě inteligentních ukazatelů pro objekty COM definuje ATL také inteligentní ukazatele a kolekce inteligentních ukazatelů pro objekty POCO. V klasickém programování Windows, jsou tyto typy užitečné alternativy ke kolekcím standardní knihovny C++, zejména v případě, že není požadována přenositelnost kódu nebo pokud nechcete kombinovat modely programování C++ standardní knihovna a ATL.
 
-[Cautoptr – třída](../atl/reference/cautoptr-class.md) inteligentní ukazatel, který vynucuje jedinečné vlastnictví převodem vlastnictví na kopii. Srovnatelné se zastaralou `std::auto_ptr` třídy.
+[CAutoPtr – třída](../atl/reference/cautoptr-class.md)<br/>
+Inteligentní ukazatel, který vynucuje jedinečné vlastnictví převodem vlastnictví na kopii. Srovnatelné se zastaralou `std::auto_ptr` třídy.
 
-[Cheapptr – třída](../atl/reference/cheapptr-class.md) inteligentní ukazatel pro objekty, které jsou přiřazovány pomocí jazyka C [malloc](../c-runtime-library/reference/malloc.md) funkce.
+[CHeapPtr – třída](../atl/reference/cheapptr-class.md)<br/>
+Inteligentní ukazatel pro objekty, které jsou přiřazovány pomocí jazyka C [malloc](../c-runtime-library/reference/malloc.md) funkce.
 
-[Cautovectorptr – třída](../atl/reference/cautovectorptr-class.md) inteligentní ukazatel pro pole, které jsou přiřazovány pomocí `new[]`.
+[CAutoVectorPtr – třída](../atl/reference/cautovectorptr-class.md)<br/>
+Inteligentní ukazatel pro pole, které jsou přiřazovány pomocí `new[]`.
 
-[Cautoptrarray – třída](../atl/reference/cautoptrarray-class.md) třídu, která zapouzdřuje pole `CAutoPtr` elementy.
+[CAutoPtrArray – třída](../atl/reference/cautoptrarray-class.md)<br/>
+Třída, která zapouzdřuje pole `CAutoPtr` elementy.
 
-[Cautoptrlist – třída](../atl/reference/cautoptrlist-class.md) třídu, která zapouzdřuje metody pro práci se seznamem `CAutoPtr` uzly.
+[CAutoPtrList – třída](../atl/reference/cautoptrlist-class.md)<br/>
+Třída, která zapouzdřuje metody pro práci se seznamem `CAutoPtr` uzly.
 
 ## <a name="see-also"></a>Viz také:
 
