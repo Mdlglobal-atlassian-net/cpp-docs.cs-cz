@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Aktualizace aplikace MFC Scribble (část 2) | Microsoft Docs'
+title: 'Návod: Aktualizace aplikace MFC Scribble (část 2) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -14,16 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bccc10e1aa2d984486c3cadfd45a14a6625ec959
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 351aea09376d6cba7f091828225fd337fa3f68e1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122401"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423154"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Návod: Aktualizace aplikace MFC Scribble (část 2)
 
-[Část 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) Tento průvodce vám ukázal, jak přidat Office Fluent Ribbon do classic Klikyháky aplikace. Tato část popisuje postup pro přidání panelů pásu karet a ovládacích prvků, které uživatelé můžou použít místo nabídek a příkazů.
+[Část 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) tohoto návodu jsme si ukázali, jak přidat pásu karet Office Fluent classic Scribble aplikace. Tato část ukazuje, jak přidat panely pásu karet a ovládacích prvků, které uživatelé můžou používat místo nabídek a příkazů.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -31,106 +31,106 @@ ms.locfileid: "37122401"
 
 ##  <a name="top"></a> Oddíly
 
-Tato část průvodce obsahuje následující části:
+Tato část návodu obsahuje následující oddíly:
 
-- [Přidávání nových panelů na pásu karet](#addnewpanel)
+- [Přidávání nových panelů pásu karet](#addnewpanel)
 
-- [Přidávání panelů nápovědy na pásu karet](#addhelppanel)
+- [Přidání Panel nápovědy na pás karet](#addhelppanel)
 
-- [Přidávání panelů pera na pásu karet](#addpenpanel)
+- [Přidání panelu Pero na pás karet](#addpenpanel)
 
-- [Přidání tlačítka Barva na pásu karet](#addcolorbutton)
+- [Přidání barvy tlačítka na pás karet](#addcolorbutton)
 
-- [Přidání člena barvu k třídě dokumentů](#addcolormember)
+- [Přidává se člen barvu pro třídy dokumentu](#addcolormember)
 
 - [Inicializace pera a ukládání předvoleb](#initpensave)
 
-##  <a name="addnewpanel"></a> Přidávání nových panelů na pásu karet
+##  <a name="addnewpanel"></a> Přidávání nových panelů pásu karet
 
-Tyto kroky ukazují, jak přidat **zobrazení** panel, který obsahuje dvě zaškrtávací políčka, která řídí viditelnost panelu nástrojů a na stavovém řádku, a také **okno** panel, který obsahuje svisle orientované rozdělení tlačítko, které řídí vytváření a uspořádání systému windows, rozhraní více dokumentů (MDI).
+Tyto kroky ukazují, jak přidat **zobrazení** panel, který obsahuje dvě zaškrtávací políčka, která řídí viditelnost panelu nástrojů a stavový řádek, a také **okno** panel, který obsahuje svisle orientovaný rozdělení tlačítko, které řídí vytváření a uspořádání oken rozhraní více dokumentů (MDI).
 
-### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>K přidání panelů zobrazení a oken panelech na panelu pásu karet
+### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>Chcete-li přidat panel zobrazení a panely okno na panel pásu karet
 
-1. Vytvořit panel s názvem `View`, která má dva políček, která přepnutí stavového řádku a panelu nástrojů.
+1. Vytvořit panel s názvem `View`, která má dvě zaškrtávací políčka, které přepnout stavový řádek a nástrojů.
 
-   1. Z **sada nástrojů**, přetáhněte **Panel** k **Domů** kategorie. Přetáhněte dvě **zaškrtávací políčka** do panelu.
+   1. Z **nástrojů**, přetáhněte **Panel** k **Domů** kategorie. Potom přetáhněte dva **zaškrtávací políčka** do panelu.
 
-   2. Klikněte na panel, který chcete upravit její vlastnosti. Změna **popisek** k `View`.
+   2. Klikněte na panel k úpravě jeho vlastností. Změna **titulek** k `View`.
 
-   3. Klikněte na první zaškrtávací políčko, chcete-li upravit jeho vlastnosti. Změna **ID** k `ID_VIEW_TOOLBAR` a **popisek** k `Toolbar`.
+   3. Klikněte na první zaškrtávací políčko k úpravě jeho vlastností. Změna **ID** k `ID_VIEW_TOOLBAR` a **titulek** k `Toolbar`.
 
-   4. Klikněte na tlačítko Upravit její vlastnosti, druhý zaškrtnutím políčka. Změna **ID** k `ID_VIEW_STATUS_BAR` a **popisek** k `Status Bar`.
+   4. Klikněte na druhý zaškrtávací políčko k úpravě jeho vlastností. Změna **ID** k `ID_VIEW_STATUS_BAR` a **titulek** k `Status Bar`.
 
-2. Vytvořit panel s názvem `Window` s tlačítko rozdělení. Když uživatel klikne na tlačítko rozdělení, zobrazí místní nabídka tři příkazy, které jsou již definováni v aplikaci Scribble.
+2. Vytvořit panel s názvem `Window` , který má tlačítko rozdělení. Když uživatel klikne na tlačítko rozdělení, zobrazí místní nabídka tři příkazy, které jsou již definovány v aplikaci Scribble.
 
-   1. Z **sada nástrojů**, přetáhněte **Panel** k **Domů** kategorie. Přetáhněte **tlačítko** do panelu.
+   1. Z **nástrojů**, přetáhněte **Panel** k **Domů** kategorie. Potom přetáhněte **tlačítko** do panelu.
 
-   2. Klikněte na panel, který chcete upravit její vlastnosti. Změna **popisek** k `Window`.
+   2. Klikněte na panel k úpravě jeho vlastností. Změna **titulek** k `Window`.
 
-   3. Klikněte na tlačítko. Změna **popisek** k `Windows`, **klíče** k `w`, **velký obrázek indexu** k `1`, a **rozdělení režimu** k `False`. Pak klikněte na tlačítko se třemi tečkami (**...** ) vedle **položky nabídky** otevřete **položky Editor** dialogové okno.
+   3. Klikněte na tlačítko. Změna **titulek** k `Windows`, **klíče** k `w`, **Index velkého obrázku** k `1`, a **rozdělený režim** k `False`. Pak klikněte na tlačítko se třemi tečkami (**...** ) vedle položky **položky nabídky** otevřít **Editor položek** dialogové okno.
 
-   4. Klikněte na tlačítko **přidat** třikrát přidat tři tlačítka.
+   4. Klikněte na tlačítko **přidat** třikrát přidáte tři tlačítka.
 
-   5. Klikněte na první tlačítko a poté změňte **popisek** k `New Window`, a **ID** k `ID_WINDOW_NEW`.
+   5. Klikněte na první tlačítko a pak změňte **titulek** k `New Window`, a **ID** k `ID_WINDOW_NEW`.
 
-   6. Klikněte na tlačítko druhý a poté změňte **popisek** k `Cascade`, a **ID** k `ID_WINDOW_CASCADE`.
+   6. Klikněte na druhé tlačítko a pak změňte **titulek** k `Cascade`, a **ID** k `ID_WINDOW_CASCADE`.
 
-   7. Klikněte na tlačítko třetí a poté změňte **popisek** k `Tile`, a **ID** k `ID_WINDOW_TILE_HORZ`.
+   7. Klikněte na třetí tlačítko a pak změňte **titulek** k `Tile`, a **ID** k `ID_WINDOW_TILE_HORZ`.
 
-3. Uložte změny a sestavte a spusťte aplikaci. **Zobrazení** a **okno** panelů má být zobrazen. Pomocí tlačítek potvrďte, že fungují správně.
+3. Uložte změny a potom sestavíte a spustíte aplikaci. **Zobrazení** a **okno** panelů by se mělo zobrazit. Klikněte na tlačítko potvrďte, že správně fungují.
 
-[[Části](#top)]
+[[Oddíly](#top)]
 
-##  <a name="addhelppanel"></a> Přidávání panelů nápovědy na pásu karet
+##  <a name="addhelppanel"></a> Přidání Panel nápovědy na pás karet
 
-Nyní můžete přiřadit dvě položky nabídky, které jsou definovány v aplikaci Scribble tlačítka pásu karet, které jsou s názvem **témata nápovědy** a **o Klikyháky**. Tlačítka se přidají do nových panelů s názvem **pomoci**.
+Teď můžete přiřadit dvě položky nabídky, které jsou definovány v aplikaci Scribble tlačítek na pásu karet, které jsou pojmenovány **témata nápovědy** a **o Scribble**. Tlačítka jsou přidány do nového panelu s názvem **pomáhají**.
 
-### <a name="to-add-a-help-panel"></a>K přidání panelu nápovědy
+### <a name="to-add-a-help-panel"></a>Chcete-li přidat panel nápovědy
 
-1. Z **sada nástrojů**, přetáhněte **Panel** k **Domů** kategorie. Přetáhněte dvě **tlačítka** do panelu.
+1. Z **nástrojů**, přetáhněte **Panel** k **Domů** kategorie. Potom přetáhněte dva **tlačítka** do panelu.
 
-2. Klikněte na panel, který chcete upravit její vlastnosti. Změna **popisek** k `Help`.
+2. Klikněte na panel k úpravě jeho vlastností. Změna **titulek** k `Help`.
 
-3. Klikněte na první tlačítko. Změna **popisek** k `Help Topics`, a **ID** k `ID_HELP_FINDER`.
+3. Klikněte na první tlačítko. Změna **titulek** k `Help Topics`, a **ID** k `ID_HELP_FINDER`.
 
-4. Klikněte na tlačítko druhý. Změna **popisek** k `About Scribble...`, a **ID** k `ID_APP_ABOUT`.
+4. Klikněte na druhé tlačítko. Změna **titulek** k `About Scribble...`, a **ID** k `ID_APP_ABOUT`.
 
-5. Uložte změny a sestavte a spusťte aplikaci. A **pomoci** má být zobrazen panel, který obsahuje dvě tlačítka pásu karet.
+5. Uložte změny a potom sestavíte a spustíte aplikaci. A **pomáhají** by se mělo zobrazit panel, který obsahuje dvě tlačítka pásu karet.
 
    > [!IMPORTANT]
-   > Když kliknete **témata nápovědy** tlačítko aplikace Scribble otevře komprimovaný soubor nápovědy HTML (CHM.) s názvem *your_project_name*. chm. V důsledku toho pokud váš projekt nejmenuje Scribble, je třeba přejmenovat soubor nápovědy na název projektu.
+   > Když kliknete **témata nápovědy** tlačítko, otevře se aplikace Scribble komprimovaný soubor nápovědy HTML (CHM) s názvem *your_project_name*. chm. V důsledku toho pokud váš projekt nejmenuje Scribble, třeba přejmenovat soubor nápovědy na název vašeho projektu.
 
-[[Části](#top)]
+[[Oddíly](#top)]
 
-##  <a name="addpenpanel"></a> Přidávání panelů pera na pásu karet
+##  <a name="addpenpanel"></a> Přidání panelu Pero na pás karet
 
-Nyní přidejte panel pro zobrazení tlačítka, která řídí tloušťka a barvy pera. Tento panel obsahuje zaškrtávací políčko, které přepíná mezi pera silné a dynamické. Jeho funkce podobá se **konvenčním řádku** položky nabídky v aplikaci Scribble.
+Teď přidejte panel pro zobrazení tlačítka, která řídí tloušťku a barvu pera. Tento panel obsahuje zaškrtávací políčko, přepne mezi silné a dynamicky pera. Funkčnost vypadá podobně jako u **tlustá čára** položky nabídky v aplikaci Scribble.
 
-Původní Scribble aplikace umožňuje uživateli vybrat pera šířek z dialogu, který se zobrazí, když uživatel klikne na **pera šířek** v nabídce. Protože panelu pásu karet má dostatečným místo pro nové ovládací prvky, můžete nahradit dialogové okno s použitím dvě pole se seznamem na pásu karet. Jednoho pole se seznamem upraví šířku dynamické pera a další pole se seznamem upraví šířku silných pera.
+Původní aplikace Scribble umožní uživateli vybrat šířku pera z dialogového okna, která se zobrazí, když uživatel klikne **šířku pera** v nabídce. Vzhledem k tomu, že na pásu karet má dostatek místa pro nové ovládací prvky, můžete nahradit dialogových oken pomocí dvou polích se seznamem na pásu karet. Jedno pole se seznamem upraví šířku pera dynamického zajišťování a ostatní pole se seznamem upraví šířku tlustých pera.
 
-#### <a name="to-add-a-pen-panel-and-combo-boxes-to-the-ribbon"></a>Chcete-li přidat pera panely a pole se seznamem polí na pásu karet
+#### <a name="to-add-a-pen-panel-and-combo-boxes-to-the-ribbon"></a>Chcete-li přidat panel pera a pole se seznamem polí na pás karet
 
-1. Z **sada nástrojů**, přetáhněte **Panel** k **Domů** kategorie. Přetáhněte **políčko** a dvě **pole se seznamem** do panelu.
+1. Z **nástrojů**, přetáhněte **Panel** k **Domů** kategorie. Potom přetáhněte **zaškrtávací políčko** a dva **polích se seznamem** do panelu.
 
-2. Klikněte na panel, který chcete upravit její vlastnosti. Změna **popisek** k `Pen`.
+2. Klikněte na panel k úpravě jeho vlastností. Změna **titulek** k `Pen`.
 
-3. Klikněte na zaškrtávací políčko. Změna **popisek** k `Use Thick`, a **ID** k `ID_PEN_THICK_OR_THIN`.
+3. Klikněte na zaškrtávací políčko. Změna **titulek** k `Use Thick`, a **ID** k `ID_PEN_THICK_OR_THIN`.
 
-4. Klikněte na první pole se seznamem. Změna **popisek** k `Thin Pen`, **ID** k `ID_PEN_THIN_WIDTH`, **Text** k `2`, **typ** k `Drop List`, a **Data** k `1;2;3;4;5;6;7;8;9;`.
+4. Klikněte na první pole se seznamem. Změna **titulek** k `Thin Pen`, **ID** k `ID_PEN_THIN_WIDTH`, **Text** k `2`, **typ** k `Drop List`, a **Data** k `1;2;3;4;5;6;7;8;9;`.
 
-5. Klikněte na tlačítko druhé pole se seznamem. Změna **popisek** k `Thick Pen`, **ID** k `ID_PEN_THICK_WIDTH`, **Text** k `5`, **typ** k `Drop List`, a **Data** k `5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`.
+5. Klikněte na druhé pole se seznamem. Změna **titulek** k `Thick Pen`, **ID** k `ID_PEN_THICK_WIDTH`, **Text** k `5`, **typ** k `Drop List`, a **Data** k `5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`.
 
-6. Nové pole se seznamem nemusí odpovídat všechny existující položky nabídky. Proto je nutné vytvořit položku nabídky pro všechny dostupné možnosti pera.
+6. Nová pole se seznamem nemusí odpovídat všechny stávající položky nabídky. Proto musíte vytvořit položku nabídky pro všechny dostupné možnosti pera.
 
-   1. V **zobrazení prostředků** okně Otevřít prostředek IDR_SCRIBBTYPE nabídky.
+   1. V **zobrazení prostředků** okně otevřete prostředek IDR_SCRIBBTYPE nabídky.
 
-   2. Klikněte na tlačítko **pera** otevřete p**en** nabídky. Pak klikněte na tlačítko **zde typ** a typ `Thi&n Pen`.
+   2. Klikněte na tlačítko **pera** otevřít p**en** nabídky. Pak klikněte na tlačítko **typu tady** a typ `Thi&n Pen`.
 
-   3. Klikněte pravým tlačítkem na text, který jste právě zadali, otevřete **vlastnosti** okna a potom změnu ID vlastnosti `ID_PEN_THIN_WIDTH`.
+   3. Klikněte pravým tlačítkem na text, který jste právě zadali, otevřete **vlastnosti** intervalu a poté změnit ID vlastnosti `ID_PEN_THIN_WIDTH`.
 
-   4. Musíte taky vytvořit obslužnou rutinu události pro každou položku nabídky pera. Klikněte pravým tlačítkem myši **Thi & n pera** položky nabídky, který jste právě vytvořili a potom klikněte na **přidejte obslužné rutiny události**. **Průvodce obslužnou rutinou události** se zobrazí.
+   4. Musíte také vytvořit obslužnou rutinu události pro každou položku nabídky pera. Klikněte pravým tlačítkem myši **tent & n pera** položku nabídky, který jste právě vytvořili a klikněte na **přidat obslužnou rutinu události**. **Průvodce obslužnou rutinou události** se zobrazí.
 
-   5. V **seznam tříd** pole v průvodci vyberte **CScribbleDoc** a pak klikněte na **přidávat a upravovat**. Tím se vytvoří obslužnou rutinu události s názvem `CScribbleDoc::OnPenThinWidth`.
+   5. V **seznamu tříd** pole v průvodci vyberte **CScribbleDoc** a potom klikněte na tlačítko **přidávat a upravovat**. Tím se vytvoří obslužnou rutinu události s názvem `CScribbleDoc::OnPenThinWidth`.
 
    6. Přidejte následující kód, který `CScribbleDoc::OnPenThinWidth`.
 
@@ -149,22 +149,22 @@ Původní Scribble aplikace umožňuje uživateli vybrat pera šířek z dialogu
     {
         m_nThinWidth = atoi(pThinComboBox->GetItem(nCurSel));
     }
-    
+
     // Create a new pen using the selected width
     ReplacePen();
     ```
 
-7. Dále vytvořte nabídky položky a událost obslužné rutiny pro silných pera.
+7. Dále vytvořte nabídku položky a událost obslužné rutiny pro silné pera.
 
-   1. V **zobrazení prostředků** okně Otevřít prostředek IDR_SCRIBBTYPE nabídky.
+   1. V **zobrazení prostředků** okně otevřete prostředek IDR_SCRIBBTYPE nabídky.
 
-   2. Klikněte na tlačítko **pera** otevřete nabídku pera. Pak klikněte na tlačítko **zde typ** a typ `Thic&k Pen`.
+   2. Klikněte na tlačítko **pera** otevřete nabídku pera. Pak klikněte na tlačítko **typu tady** a typ `Thic&k Pen`.
 
-   3. Klikněte pravým tlačítkem na text, který jste právě zadali zobrazíte **vlastnosti** okno. Změňte vlastnost ID na `ID_PEN_THICK_WIDTH`.
+   3. Klikněte pravým tlačítkem na text, který jste právě zadali zobrazíte **vlastnosti** okna. Změnit vlastnosti ID na `ID_PEN_THICK_WIDTH`.
 
-   4. Klikněte pravým tlačítkem myši **konvenčním pera** položky nabídky, který jste právě vytvořili a potom klikněte na **přidejte obslužné rutiny události**. **Průvodce obslužnou rutinou události** se zobrazí.
+   4. Klikněte pravým tlačítkem na **silný pera** položku nabídky, který jste právě vytvořili a klikněte na **přidat obslužnou rutinu události**. **Průvodce obslužnou rutinou události** se zobrazí.
 
-   5. V **seznam tříd** pole v průvodci vyberte **CScribbleDoc** a pak klikněte na **přidávat a upravovat**. Tím se vytvoří obslužnou rutinu události s názvem `CScribbleDoc::OnPenThickWidth`.
+   5. V **seznamu tříd** pole v průvodci vyberte **CScribbleDoc** a potom klikněte na tlačítko **přidávat a upravovat**. Tím se vytvoří obslužnou rutinu události s názvem `CScribbleDoc::OnPenThickWidth`.
 
    6. Přidejte následující kód, který `CScribbleDoc::OnPenThickWidth`.
 
@@ -181,58 +181,58 @@ Původní Scribble aplikace umožňuje uživateli vybrat pera šířek z dialogu
       {
           m_nThickWidth = atoi(pThickComboBox->GetItem(nCurSel));
       }
-      
+
       // Create a new pen using the selected width
       ReplacePen();
       ```
 
-8. Uložte změny a sestavte a spusťte aplikaci. Nová tlačítka a pole se seznamem má být zobrazena. Zkuste použít jiné pero šířek zvyklí.
+8. Uložte změny a potom sestavíte a spustíte aplikaci. Nová tlačítka a pole se seznamem má být zobrazena. Zkuste použít jiné pero šířky zvyklí.
 
-[[Části](#top)]
+[[Oddíly](#top)]
 
-##  <a name="addcolorbutton"></a> Přidání tlačítka barvy pera panely
+##  <a name="addcolorbutton"></a> Přidání barevné tlačítko na panelu pera
 
-Dál přidejte [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutton-class.md) objekt, který umožňuje uživatelům scribble barvou.
+V dalším kroku přidejte [cmfcribboncolorbutton –](../mfc/reference/cmfcribboncolorbutton-class.md) objekt, který umožňuje uživateli scribble barvou.
 
-### <a name="to-add-a-color-button-to-the-pen-panel"></a>Přidání tlačítka barvy pera panely
+### <a name="to-add-a-color-button-to-the-pen-panel"></a>Chcete-li přidat barevné tlačítko panelu pera
 
-1. Než přidáte tlačítko barvy, vytvořte pro tuto položku nabídky. V **zobrazení prostředků** okně Otevřít prostředek IDR_SCRIBBTYPE nabídky. Klikněte **pera** položku otevřete nabídku pera. Pak klikněte na tlačítko **zde typ** a typ `&Color`. Klikněte pravým tlačítkem na text, který jste právě zadali zobrazíte **vlastnosti** okno. Změnit ID na `ID_PEN_COLOR`.
+1. Před přidáním bude tlačítko barev pro ni vytvořte položku nabídky. V **zobrazení prostředků** okně otevřete prostředek IDR_SCRIBBTYPE nabídky. Klikněte na tlačítko **pera** položky nabídky a otevřete nabídku pera. Pak klikněte na tlačítko **typu tady** a typ `&Color`. Klikněte pravým tlačítkem na text, který jste právě zadali zobrazíte **vlastnosti** okna. ID se má změnit `ID_PEN_COLOR`.
 
-2. Nyní přidejte tlačítko barvy. Z **sada nástrojů**, přetáhněte **barva tlačítko** k **pera** panelu.
+2. Nyní přidejte bude tlačítko barev. Z **nástrojů**, přetáhněte **barva – tlačítko** k **pera** panelu.
 
-3. Klikněte na tlačítko barvy. Změna **popisek** k `Color`, **ID** k `ID_PEN_COLOR`, **SimpleLook** k `True`, **velký obrázek indexu** na `1`, a **rozdělení režimu** k `False`.
+3. Klikněte na tlačítko barvy. Změna **titulek** k `Color`, **ID** k `ID_PEN_COLOR`, **SimpleLook** k `True`, **Index velkého obrázku** do `1`, a **rozdělený režim** k `False`.
 
-4. Uložte změny a sestavte a spusťte aplikaci. Tlačítko nové barva se má zobrazit na **pera** panelu. Ale jej nelze použít, protože ještě nemá obslužné rutiny události. Další kroky ukazují, jak přidat obslužné rutiny události pro tlačítko barvy.
+4. Uložte změny a potom sestavíte a spustíte aplikaci. Tlačítko Barva má být zobrazena na **pera** panelu. Ale jej nelze použít, protože ještě nemá obslužné rutiny události. Následující kroky ukazují, jak přidat obslužnou rutinu události pro tlačítko barvy.
 
-[[Části](#top)]
+[[Oddíly](#top)]
 
-##  <a name="addcolormember"></a> Přidání člena barvu k třídě dokumentů
+##  <a name="addcolormember"></a> Přidává se člen barvu pro třídy dokumentu
 
-Vzhledem k tomu, že původní Scribble aplikace nemá barvy pera, musí zapsat implementace pro ně. K uložení barvy pera dokumentu, přidejte nový člen k třídě dokumentů `CscribbleDoc.`
+Protože původní aplikace Scribble nemá Barva pera, musíte napsat implementaci pro ně. K ukládání Barva pera dokumentu, přidání nového člena do třídy dokumentu `CscribbleDoc.`
 
-### <a name="to-add-a-color-member-to-the-document-class"></a>Barva člena přidat do třídy dokumentů
+### <a name="to-add-a-color-member-to-the-document-class"></a>Přidat barvu člena třídy dokumentu
 
-1. V scribdoc.h v `CScribbleDoc` třídy, vyhledejte `// Attributes` části. Přidejte následující řádky kódu po definování `m_nThickWidth` – datový člen.
+1. V scribdoc.h v `CScribbleDoc` třídy, vyhledejte `// Attributes` oddílu. Přidejte následující řádky kódu po definování `m_nThickWidth` datový člen.
 
    ```cpp
    // Current pen color
    COLORREF m_penColor;
    ```
 
-2. Každý dokument obsahuje seznam stokes, že má uživatel již vykreslován. Každý tah je definované `CStroke` objektu. `CStroke` Třída nezahrnuje informace o barvy pera. Proto je třeba upravit třídy. V scribdoc.h v `CStroke` třídy, přidejte následující řádky kódu po definování `m_nPenWidth` – datový člen.
+2. Každý dokument obsahuje seznam stokes, že má uživatel již vykreslen. Každý tah je definován `CStroke` objektu. `CStroke` Třída neobsahuje informace o barvu pera. Proto je třeba upravit třídu. V scribdoc.h v `CStroke` třídy, přidejte následující řádky kódu po definování `m_nPenWidth` datový člen.
 
    ```cpp
    // Pen color for the stroke
    COLORREF m_penColor;
    ```
 
-3. V scribdoc.h, přidejte nový `CStroke` konstruktor, jejíž parametry zadejte šířky a barvy. Přidejte následující řádek kódu po `CStroke(UINT nPenWidth);` příkaz.
+3. V scribdoc.h, přidejte novou `CStroke` konstruktor, jehož parametry zadejte šířku a barvu. Přidejte následující řádek kódu po `CStroke(UINT nPenWidth);` příkazu.
 
    ```cpp
    CStroke(UINT nPenWidth, COLORREF penColor);
    ```
 
-4. V scribdoc.cpp, přidat nové implementace `CStroke` konstruktor. Přidejte následující kód po implementaci `CStroke::CStroke(UINT nPenWidth)` konstruktor.
+4. V scribdoc.cpp, přidejte implementaci nového `CStroke` konstruktoru. Přidejte následující kód za implementaci `CStroke::CStroke(UINT nPenWidth)` konstruktoru.
 
    ```cpp
    // Constructor that uses the document's current width and color
@@ -244,40 +244,40 @@ Vzhledem k tomu, že původní Scribble aplikace nemá barvy pera, musí zapsat 
    }
    ```
 
-5. Změnit na druhý řádek `CStroke::DrawStroke` metoda následujícím způsobem.
+5. Změňte druhý řádek `CStroke::DrawStroke` metodu následujícím způsobem.
 
    ```cpp
    if (!penStroke.CreatePen(PS_SOLID, m_nPenWidth, m_penColor))
    ```
 
-6. Nastavení barvy pera výchozí pro třídu dokumentu. V scribdoc.cpp, přidejte následující řádky, které se `CScribbleDoc::InitDocument`, po `m_nThickWidth = 5;` příkaz.
+6. Nastavte výchozí barva pera třídy dokumentu. V scribdoc.cpp, přidejte následující řádky do `CScribbleDoc::InitDocument`, poté, co `m_nThickWidth = 5;` příkazu.
 
    ```cpp
    // default pen color is black
    m_penColor = RGB(0, 0, 0);
    ```
 
-7. Scribdoc.cpp, změňte první řádek `CScribbleDoc::NewStroke` metoda pro následující.
+7. V scribdoc.cpp, změnit první řádek `CScribbleDoc::NewStroke` metoda pro následující.
 
    ```cpp
    CStroke* pStrokeItem = new CStroke(m_nPenWidth, m_penColor);
    ```
 
-8. Změnit poslední řádek `CScribbleDoc::ReplacePen` metoda pro následující.
+8. Změňte poslední řádek `CScribbleDoc::ReplacePen` metoda pro následující.
 
    ```cpp
    m_penCur.CreatePen(PS_SOLID, m_nPenWidth, m_penColor);
    ```
 
-9. Jste přidali `m_penColor` člen v předchozím kroku. Teď vytvořte obslužnou rutinu události pro tlačítko barvu, která nastaví člena.
+9. Jste přidali `m_penColor` člena v předchozím kroku. Teď vytvořte obslužnou rutinu události pro tlačítko barvy, které nastaví člena.
 
-   1. V **zobrazení prostředků** okně Otevřít prostředek IDR_SCRIBBTYPE nabídky.
+   1. V **zobrazení prostředků** okně otevřete prostředek IDR_SCRIBBTYPE nabídky.
 
-   2. Klikněte pravým tlačítkem myši **barva** položky nabídky a klikněte na tlačítko **přidejte obslužné rutiny události**. **Průvodce obslužnou rutinou události** se zobrazí.
+   2. Klikněte pravým tlačítkem **barva** položky nabídky a klikněte na tlačítko **přidat obslužnou rutinu události**. **Průvodce obslužnou rutinou události** se zobrazí.
 
-   3. V **seznam tříd** pole v průvodci vyberte možnost **CScribbleDoc** a klikněte **přidávat a upravovat** tlačítko. Tím se vytvoří `CScribbleDoc::OnPenColor` se zakázaným inzerováním obslužná rutina události.
+   3. V **seznamu tříd** pole v průvodci vyberte **CScribbleDoc** a potom klikněte na tlačítko **přidávat a upravovat** tlačítko. Tím se vytvoří `CScribbleDoc::OnPenColor` zástupnou proceduru obslužné rutiny události.
 
-10. Nahraďte se zakázaným inzerováním pro `CScribbleDoc::OnPenColor` obslužné rutiny události s následujícím kódem.
+10. Nahraďte zástupné procedury pro `CScribbleDoc::OnPenColor` obslužné rutiny události s následujícím kódem.
 
    ```cpp
    void CScribbleDoc::OnPenColor()
@@ -295,19 +295,19 @@ Vzhledem k tomu, že původní Scribble aplikace nemá barvy pera, musí zapsat 
    }
    ```
 
-11. Uložte změny a sestavte a spusťte aplikaci. Nyní byste měli mít klikněte na tlačítko barvy a změnit barva.
+11. Uložte změny a potom sestavíte a spustíte aplikaci. Je třeba stiskněte tlačítko barvy a změnit barvu pera.
 
-[[Části](#top)]
+[[Oddíly](#top)]
 
 ##  <a name="initpensave"></a> Inicializace pera a ukládání předvoleb
 
-V dalším kroku inicializujte barva a šířka per. Nakonec uložit a načíst barvy kreslení ze souboru.
+V dalším kroku inicializujte barvu a šířku pera. A konečně uložit a načíst barvu ze souboru výkresu.
 
-### <a name="to-initialize-controls-on-the-ribbon-bar"></a>K chybě při inicializaci ovládacích prvků na panelu pásu karet
+### <a name="to-initialize-controls-on-the-ribbon-bar"></a>Chcete-li inicializovat ovládací prvky na panelu pásu karet
 
 1. Inicializujte pera na panelu pásu karet.
 
-   Přidejte následující kód do scribdoc.cpp, v `CScribbleDoc::InitDocument` metoda, po `m_sizeDoc = CSize(200,200)` příkaz.
+   Přidejte následující kód k scribdoc.cpp, v `CScribbleDoc::InitDocument` metoda, poté, co `m_sizeDoc = CSize(200,200)` příkazu.
 
    ```cpp
    // Reset the ribbon UI to its initial values
@@ -337,27 +337,27 @@ V dalším kroku inicializujte barva a šířka per. Nakonec uložit a načíst 
    pThickComboBox->SelectItem(0);
    ```
 
-2. Barvy do souboru uložte. Přidejte následující příkaz k scribdoc.cpp, v `CStroke::Serialize` metoda, po `ar << (WORD)m_nPenWidth;` příkaz.
+2. Uložte barvy vykreslování do souboru. Přidejte následující příkaz, kterým scribdoc.cpp, v `CStroke::Serialize` metoda, poté, co `ar << (WORD)m_nPenWidth;` příkazu.
 
    ```cpp
    ar << (COLORREF)m_penColor;
     ```
 
-3. Nakonec načtěte barvy kreslení ze souboru. Přidejte následující řádek kódu, v `CStroke::Serialize` metoda, po `m_nPenWidth = w;` příkaz.
+3. Nakonec načtěte barvu ze souboru výkresu. Přidejte následující řádek kódu, v `CStroke::Serialize` metoda, poté, co `m_nPenWidth = w;` příkazu.
 
    ```cpp
    ar >> m_penColor;
    ```
 
-4. Teď Klikyháky barevně a uložením souboru do souboru.
+4. Nyní scribble barevně a uložit do souboru výkresu.
 
-[[Části](#top)]
+[[Oddíly](#top)]
 
 ## <a name="conclusion"></a>Závěr
 
-Aplikace MFC Klikyháky jste aktualizovali. Pomocí tohoto průvodce použijte jako vodítko při úpravě existující aplikace.
+Aplikace MFC Scribble aktualizována. Pomocí tohoto průvodce použijte jako vodítko při úpravě stávající aplikace.
 
 ## <a name="see-also"></a>Viz také
 
-[Návody](../mfc/walkthroughs-mfc.md)  
-[Návod: Aktualizace aplikace MFC Scribble (část 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)  
+[Návody](../mfc/walkthroughs-mfc.md)<br/>
+[Návod: Aktualizace aplikace MFC Scribble (část 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)

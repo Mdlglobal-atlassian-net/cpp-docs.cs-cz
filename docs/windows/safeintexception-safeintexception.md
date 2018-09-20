@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 749ef965520732c37457613f44e0a23e213023db
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 24138db5ab772990f050fc8fcb6e5dad640a662d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700970"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396776"
 ---
 # <a name="safeintexceptionsafeintexception"></a>SafeIntException::SafeIntException
 
@@ -63,6 +63,6 @@ Možné hodnoty parametru *kód* jsou definovány v souboru Safeint.h. Pro usnad
 
 ## <a name="see-also"></a>Viz také
 
-[SafeInt – knihovna](../windows/safeint-library.md)  
-[SafeIntException – třída](../windows/safeintexception-class.md)  
+[SafeInt – knihovna](../windows/safeint-library.md)<br/>
+[SafeIntException – třída](../windows/safeintexception-class.md)<br/>
 [SafeInt – třída](../windows/safeint-class.md)

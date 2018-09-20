@@ -1,5 +1,5 @@
 ---
-title: Třídy ladění a výjimek | Microsoft Docs
+title: Třídy ladění a výjimek | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9adf6a585771336de9fb33abbebdd6bab97383ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b7c88c5d12f56318bbb37a825e28c2bfcbc132d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341758"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418174"
 ---
 # <a name="debugging-and-exception-classes"></a>Třídy ladění a výjimek
-Tyto třídy poskytují podporu pro ladění dynamické přidělování paměti a pro předávání informací výjimky z funkce, kde je vyvolána výjimka funkce kde je zachycena.  
-  
- Použití třídy [CDumpContext](../mfc/reference/cdumpcontext-class.md) a [CMemoryState](../mfc/reference/cmemorystate-structure.md) během vývoje při ladění, jak je popsáno v [ladění aplikace MFC](/visualstudio/debugger/mfc-debugging-techniques). Použití [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) určení třídy z libovolného objektu v době běhu, jak je popsáno v článku [informace o třídě přístup k Run-Time](../mfc/accessing-run-time-class-information.md). Rozhraní používá `CRuntimeClass` dynamicky vytvářet objekty určité třídy.  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled třídy](../mfc/class-library-overview.md)
+
+Tyto třídy poskytují podporu pro ladění dynamické přidělování paměti a pro předávání informací výjimky z funkce, kde je vyvolána výjimka funkci kde je zachycena.
+
+Použití tříd [CDumpContext](../mfc/reference/cdumpcontext-class.md) a [cmemorystate –](../mfc/reference/cmemorystate-structure.md) během vývoje vám pomůže s laděním, jak je popsáno v [ladění aplikací MFC](/visualstudio/debugger/mfc-debugging-techniques). Použití [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) určení třídy libovolného objektu v době běhu, jak je popsáno v článku [přístup k informacím o třídě Run-Time](../mfc/accessing-run-time-class-information.md). Rozhraní používá `CRuntimeClass` dynamicky vytvořit objekty určité třídy.
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../mfc/class-library-overview.md)
 

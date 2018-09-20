@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f91474ec4c435b6fb2a005b47c67210a54d0804
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: abe76a4153ecfb0e4db4ce9e92eb63f5b00067ff
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317261"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394644"
 ---
 # <a name="attributed-programming-concepts"></a>Koncepty programování s atributy
 
@@ -32,27 +32,27 @@ Zatímco atributy eliminují některý podrobné psaní kódu, které jsou potř
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Účel atributů](../windows/purpose-of-attributes.md)  
+[Účel atributů](../windows/purpose-of-attributes.md)<br/>
 Obsahuje přehled programování s atributy.
 
-[Základní mechanismy atributů](../windows/basic-mechanics-of-attributes.md)  
+[Základní mechanismy atributů](../windows/basic-mechanics-of-attributes.md)<br/>
 Popisuje, jak fungují atributy ve vašem projektu.
 
-[Sestavení programu s atributy](../windows/building-an-attributed-program.md)  
+[Sestavení programu s atributy](../windows/building-an-attributed-program.md)<br/>
 Obsahuje informace o použití možnosti kompilátoru jazyka C++ ve vašem projektu.
 
-[Kategorie atributů](../windows/attribute-categories.md)  
+[Kategorie atributů](../windows/attribute-categories.md)<br/>
 Obsahuje odkazy na kategorie Atributy použité v jazyce Visual C++.
 
-[Atribut Programmming – nejčastější dotazy](../windows/attribute-programming-faq.md)  
+[Atribut Programmming – nejčastější dotazy](../windows/attribute-programming-faq.md)<br/>
 Odpovědi na časté otázky k programování s atributy.
 
 ## <a name="related-sections"></a>Související oddíly
 
-[Referenční dokumentace k atributům](../windows/cpp-attributes-reference.md)  
+[Referenční dokumentace k atributům](../windows/cpp-attributes-reference.md)<br/>
 Obsahuje odkazy na referenční téma popisující jednotlivé atributy a jejich použití.
 
-[Ladění vloženého kódu](/visualstudio/debugger/how-to-debug-injected-code)  
+[Ladění vloženého kódu](/visualstudio/debugger/how-to-debug-injected-code)<br/>
 Popisuje ladění programů s atributy.
 
 [__super](../cpp/super.md)a [__interface](../cpp/interface.md)  

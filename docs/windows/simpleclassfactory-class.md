@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b20cbb906676705113bd1a84884cc5719b8272bf
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 4a3e262567927b818072c1e05acd18aa64cbaa6c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691442"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446507"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory – třída
 
@@ -39,7 +39,7 @@ class SimpleClassFactory : public ClassFactory<>;
 
 ### <a name="parameters"></a>Parametry
 
-*základ*  
+*základ*<br/>
 Základní třída.
 
 ## <a name="remarks"></a>Poznámky
@@ -102,15 +102,15 @@ STDMETHOD( CreateInstance )(
 
 #### <a name="parameters"></a>Parametry
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 Musí být `nullptr`; v opačném případě je vrácená hodnota CLASS_E_NOAGGREGATION.
 
 Simpleclassfactory – nepodporuje agregace. Pokud byly podporovány agregace a součást agregace, byl tento objekt vytváří *pUnkOuter* bude ukazatel řízení `IUnknown` rozhraní agregace.
 
-*riid*  
+*riid*<br/>
 ID objektu pro vytváření rozhraní.
 
-*ppvObject*  
+*ppvObject*<br/>
 Když tato operace dokončí, ukazatel na instanci objektu určeného parametrem *riid* parametru.
 
 ### <a name="return-value"></a>Návratová hodnota

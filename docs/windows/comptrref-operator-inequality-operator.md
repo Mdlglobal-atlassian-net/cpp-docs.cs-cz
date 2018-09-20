@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97a0f98044e18ec6eff1f1b99e9c9178b711e040
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0f4aeb3bc5b2ee0598cf9e7d3f572f1f0e5fb5f2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596020"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393175"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator!= – operátor
 
@@ -57,10 +57,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*a*  
+*a*<br/>
 Odkaz na **comptrref –** objektu.
 
-*b*  
+*b*<br/>
 Odkaz na jiný **comptrref –** objekt nebo ukazatel na anonymní objekt (`void*`).
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -83,5 +83,5 @@ Určuje, zda dva **comptrref –** objekty nejsou stejné.
 
 ## <a name="see-also"></a>Viz také
 
-[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)  
+[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)<br/>
 [ComPtrRef – třída](../windows/comptrref-class.md)

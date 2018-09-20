@@ -1,5 +1,5 @@
 ---
-title: CListView – třída | Microsoft Docs
+title: CListView – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,94 +22,105 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9087642a529911c0c0a885c4613a3dbf2e92311f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 5fbb9561111a75011f934aeb0ce972829132cb87
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037612"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423400"
 ---
 # <a name="clistview-class"></a>CListView – třída
-Používání ovládacího prvku seznam, zjednodušuje [CListCtrl](../../mfc/reference/clistctrl-class.md), třídu, která zapouzdřuje funkce ovládací prvek seznamu, s architekturou MFC na zobrazení dokumentu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CListView : public CCtrlView  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CListView::CListView](#clistview)|Vytvoří `CListView` objektu.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CListView::GetListCtrl](#getlistctrl)|Vrátí ovládací prvek seznamu, které jsou přidružené k zobrazení.|  
-  
-### <a name="protected-methods"></a>Chráněné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CListView::RemoveImageList](#removeimagelist)|Odebere zadanou bitovou kopii seznamu ze zobrazení seznamu.|  
-  
-## <a name="remarks"></a>Poznámky  
- Další informace o této architektury, najdete v článku Přehled pro [CView](../../mfc/reference/cview-class.md) třídy a křížové odkazy citovalo existuje.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
-  
- [CWnd](../../mfc/reference/cwnd-class.md)  
-  
- [CView](../../mfc/reference/cview-class.md)  
-  
- [CCtrlView](../../mfc/reference/cctrlview-class.md)  
-  
- `CListView`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxcview.h  
-  
-##  <a name="clistview"></a>  CListView::CListView  
- Vytvoří `CListView` objektu.  
-  
-```  
+
+Zjednodušuje použití ovládacího prvku seznam a [CListCtrl](../../mfc/reference/clistctrl-class.md), třídy, která zapouzdřuje funkce ovládacího prvku seznam architektuře document / view knihovny MFC.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CListView : public CCtrlView
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[CListView::CListView](#clistview)|Vytvoří `CListView` objektu.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CListView::GetListCtrl](#getlistctrl)|Vrátí ovládací prvek seznamu, který je přidružený k zobrazení.|
+
+### <a name="protected-methods"></a>Chráněné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CListView::RemoveImageList](#removeimagelist)|Odebere seznam zadané bitové kopie ze zobrazení seznamu.|
+
+## <a name="remarks"></a>Poznámky
+
+Další informace na této architektuře, najdete v přehledu pro [CView](../../mfc/reference/cview-class.md) třídy a křížové odkazy uvedené existuje.
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[Třídy CObject](../../mfc/reference/cobject-class.md)
+
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+
+[CWnd](../../mfc/reference/cwnd-class.md)
+
+[CView](../../mfc/reference/cview-class.md)
+
+[Cctrlview –](../../mfc/reference/cctrlview-class.md)
+
+`CListView`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxcview.h
+
+##  <a name="clistview"></a>  CListView::CListView
+
+Vytvoří `CListView` objektu.
+
+```
 CListView();
-```  
-  
-##  <a name="getlistctrl"></a>  CListView::GetListCtrl  
- Volání této funkce člen získat odkaz na ovládací prvek seznamu, které jsou přidružené k zobrazení.  
-  
-```  
-CListCtrl& GetListCtrl() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Odkaz na ovládací prvek seznamu, které jsou přidružené k zobrazení.  
-  
-### <a name="example"></a>Příklad  
- [!code-cpp[NVC_MFCListView#7](../../atl/reference/codesnippet/cpp/clistview-class_1.cpp)]  
-  
-##  <a name="removeimagelist"></a>  CListView::RemoveImageList  
- Odebere zadanou bitovou kopii seznamu ze zobrazení seznamu.  
-  
-```  
+```
+
+##  <a name="getlistctrl"></a>  CListView::GetListCtrl
+
+Voláním této členské funkce k získání odkazu na ovládací prvek seznamu, který je přidružený k zobrazení.
+
+```
+CListCtrl& GetListCtrl() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Odkaz na ovládací prvek seznamu, který je přidružený k zobrazení.
+
+### <a name="example"></a>Příklad
+
+[!code-cpp[NVC_MFCListView#7](../../atl/reference/codesnippet/cpp/clistview-class_1.cpp)]
+
+##  <a name="removeimagelist"></a>  CListView::RemoveImageList
+
+Odebere seznam zadané bitové kopie ze zobrazení seznamu.
+
+```
 void RemoveImageList(int nImageList);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *nImageList*  
- Index založený na nule bitové kopie k odebrání.  
-  
-## <a name="see-also"></a>Viz také  
- [Ukázka MFC ROWLIST](../../visual-cpp-samples.md)   
- [CCtrlView – třída](../../mfc/reference/cctrlview-class.md)   
- [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [CCtrlView – třída](../../mfc/reference/cctrlview-class.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*nImageList*<br/>
+Z nuly vycházející index bitové kopie k odebrání.
+
+## <a name="see-also"></a>Viz také
+
+[Ukázky knihovny MFC ROWLIST](../../visual-cpp-samples.md)<br/>
+[CCtrlView – třída](../../mfc/reference/cctrlview-class.md)<br/>
+[Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
+[CCtrlView – třída](../../mfc/reference/cctrlview-class.md)

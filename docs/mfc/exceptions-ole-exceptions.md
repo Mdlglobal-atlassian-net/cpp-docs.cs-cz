@@ -1,5 +1,5 @@
 ---
-title: 'Výjimky: Výjimky OLE | Microsoft Docs'
+title: 'Výjimky: Výjimky OLE | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,38 +18,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 991848e9b5b78ad960fb8ed0bdf09dd56db47e2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6013caa79e21a305ba5ff8ad6266e960bb21504a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345536"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395242"
 ---
 # <a name="exceptions-ole-exceptions"></a>Výjimky: Výjimky OLE
-Techniky a zařízení pro zpracování výjimek v prostředí OLE jsou stejné jako v případě zpracování další výjimky. Další informace o zpracování výjimek, najdete v článku [zpracování výjimek C++](../cpp/cpp-exception-handling.md).  
-  
- Všechny objekty výjimek jsou odvozeny od abstraktní základní třída `CException`. MFC poskytuje dvě třídy pro zpracování OLE – výjimky:  
-  
--   [COleException](../mfc/reference/coleexception-class.md) pro zpracování obecné OLE – výjimky.  
-  
--   [COleDispatchException](../mfc/reference/coledispatchexception-class.md) pro generování a zpracování OLE dispatch výjimky (Automatizace).  
-  
- Rozdíl mezi tyto dvě třídy je množství informací o poskytují a kdy se používá. `COleException` má veřejná data člena, který obsahuje OLE stavový kód pro výjimku. `COleDispatchException` poskytuje další informace, včetně následujících:  
-  
--   Kód chyby specifické pro aplikaci  
-  
--   Popis chyby, jako je například "Disk plný."  
-  
--   Nápověda kontext, který aplikace můžete použít pro poskytují další informace pro uživatele  
-  
--   Název souboru nápovědy aplikace  
-  
--   Název aplikace, které vygenerovalo výjimku  
-  
- `COleDispatchException` poskytuje další informace, takže se dá použít s produkty, jako je Microsoft Visual Basic. Popis ústní chyby mohou být používány okno se zprávou nebo jiné oznámení; informace nápovědy lze pomoct uživateli reakce na stav, který způsobil výjimku.  
-  
- Dvě globální funkce odpovídají dvě třídy výjimky OLE: [afxthrowoleexception –](../mfc/reference/exception-processing.md#afxthrowoleexception) a [afxthrowoledispatchexception –](../mfc/reference/exception-processing.md#afxthrowoledispatchexception). Je použijte k throw obecné OLE – výjimky a výjimky OLE odesílání, v uvedeném pořadí.  
-  
-## <a name="see-also"></a>Viz také  
- [Zpracování výjimek](../mfc/exception-handling-in-mfc.md)
+
+Techniky a funkce pro zpracování výjimek v prostředí OLE jsou stejné jako pro zpracování jiných výjimek. Další informace o zpracování výjimek, najdete v článku [zpracování výjimek jazyka C++](../cpp/cpp-exception-handling.md).
+
+Všechny výjimky objekty jsou odvozeny od abstraktní základní třída `CException`. Knihovna MFC poskytuje dvě třídy pro zpracování výjimek OLE:
+
+- [Coleexception –](../mfc/reference/coleexception-class.md) pro zpracování obecné výjimky OLE.
+
+- [Coledispatchexception –](../mfc/reference/coledispatchexception-class.md) pro generování a zpracování OLE odeslání výjimky (Automatizace).
+
+Rozdíl mezi těmito dvěma třídami je množství informací poskytují, a kde jsou použity. `COleException` má data veřejného člena, který obsahuje OLE stavový kód výjimky. `COleDispatchException` poskytuje další informace, včetně následujících:
+
+- Kód chyby specifické pro aplikaci
+
+- Popis chyby, jako je například "Disk je plný"
+
+- Kontextové nápovědy, které vaše aplikace může použít na další informace pro uživatele
+
+- Název souboru nápovědy vaší aplikace
+
+- Název aplikace, které generují výjimku
+
+`COleDispatchException` poskytuje další informace, takže je možné s produkty, jako je Microsoft Visual Basicu. Popis slovní chyby lze použít v okně se zprávou nebo jiné oznámení; informace nápovědy je možné umožňující uživateli reagovat na podmínky, které způsobil výjimku.
+
+Dvě globální funkce, které odpovídají dvě třídy výjimky OLE: [afxthrowoleexception –](../mfc/reference/exception-processing.md#afxthrowoleexception) a [afxthrowoledispatchexception –](../mfc/reference/exception-processing.md#afxthrowoledispatchexception). Je použijte k vyvolání obecné OLE výjimky a výjimky odbavení OLE, v uvedeném pořadí.
+
+## <a name="see-also"></a>Viz také
+
+[Zpracování výjimek](../mfc/exception-handling-in-mfc.md)
 

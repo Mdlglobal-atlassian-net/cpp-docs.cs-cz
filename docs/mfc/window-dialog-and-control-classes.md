@@ -1,5 +1,5 @@
 ---
-title: Okna, dialogové okno a třídy ovládacích prvků | Microsoft Docs
+title: Okna, dialogové okno a třídy ovládacích prvků | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a5e197909a55e5c634bd31ec359a848293c001
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 690166ad8c7a823cc4d8dab76894add6aae973a4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381843"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431928"
 ---
 # <a name="window-dialog-and-control-classes"></a>Třídy oken, dialogových oken a ovládacích prvků
-Třída `CWnd` a jejich odvozené třídy zapouzdření `HWND`, popisovač pro okno systému Windows. `CWnd` můžete použít samostatně nebo jako základ pro odvození nové třídy. Odvozené třídy knihovna tříd představují různé typy systému windows.  
-  
- [CWnd](../mfc/reference/cwnd-class.md)  
- Základní třída pro všechny systémy windows. Můžete použít jednu z třídy odvozené z `CWnd` nebo vlastní odvozovat z něj.  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled třídy](../mfc/class-library-overview.md)
+
+Třída `CWnd` a její odvozené třídy zapouzdření `HWND`, popisovač okna Windows. `CWnd` můžete použít samostatně nebo jako základ pro odvození nové třídy. Knihovna tříd odvozených tříd představují různé druhy oken.
+
+[CWnd](../mfc/reference/cwnd-class.md)<br/>
+Základní třída pro všechny systémy windows. Můžete použít jednu z tříd odvozených z `CWnd` nebo přímo z něj odvodit vaše vlastní třídy.
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../mfc/class-library-overview.md)
 

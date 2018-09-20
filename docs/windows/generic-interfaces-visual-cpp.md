@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abad906c7fcc5c86a6901757ddfbb5dfeff2ec29
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2065b96875f2c441b24eb69f8ca51b06fe5717f0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704897"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444481"
 ---
 # <a name="generic-interfaces-visual-c"></a>Obecná rozhraní (Visual C++)
 
@@ -42,31 +42,31 @@ Další informace o rozhraní najdete v tématu [třída rozhraní](../windows/i
 
 ## <a name="remarks"></a>Poznámky
 
-*Atributy*  
+*Atributy*<br/>
 (Volitelné) Další informace o deklarativní. Další informace o atributy a třídy atributů najdete v tématu **atributy**.
 
-*klíč třídy*  
+*klíč třídy*<br/>
 **Třída** nebo **typename**
 
-*Typ – parametr-identifikátory*  
+*Typ – parametr-identifikátory*<br/>
 Seznam identifikátorů oddělených čárkou.
 
-*Typ parametru omezení klauzule*  
+*Typ parametru omezení klauzule*<br/>
 Má podobu podle [omezení parametrů obecných typů (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
 
-*Modifikátory dostupnosti*  
+*Modifikátory dostupnosti*<br/>
 (Volitelné) Modifikátory (třeba **veřejné, privátní**).
 
-*identifikátor*  
+*identifikátor*<br/>
 Název rozhraní.
 
-*Base-list*  
+*Base-list*<br/>
 (Volitelné) Seznam, který obsahuje jedno nebo více explicitní základní rozhraní oddělených čárkami.
 
-*tělo rozhraní*  
+*tělo rozhraní*<br/>
 Deklarace členů rozhraní.
 
-*deklarátory*  
+*deklarátory*<br/>
 (Volitelné) Deklarace proměnných na základě tohoto typu.
 
 ## <a name="example"></a>Příklad

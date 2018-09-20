@@ -34,24 +34,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07745d1488b22645200d7af155d2af9b2ea73838
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 560db57282f42b28f274b0498073e512e0ec33d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199866"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434515"
 ---
 # <a name="data-types-mfc"></a>Datové typy (MFC)
-V tomto tématu jsou uvedeny typy dat, běžně používané knihovny Microsoft Foundation Class. Většina datových typů jsou stejné jako v platformě Software Development Kit (SDK), zatímco jiné jsou jedinečné pro knihovny MFC.  
-  
- Informace o datové typy používané v sadě Windows SDK a knihovny MFC naleznete v tématu [datové typy Windows](/windows/desktop/WinProg/windows-data-types).  
-  
- Datové typy, které jsou jedinečné pro knihovny Microsoft Foundation Class, patří:  
-  
--   Hodnota pozice A používá k označení pozice elementu v kolekci. třídy kolekcí MFC používá.  
-  
--   Lpcrect – A 32bitový ukazatel na konstantu (neupravitelnými) `RECT` struktury.  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled tříd](../../mfc/class-library-overview.md)   
- [Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)
+
+V tomto tématu jsou uvedeny typy dat, běžně používané knihovny Microsoft Foundation Class. Většina datových typů jsou stejné jako v platformě Software Development Kit (SDK), zatímco jiné jsou jedinečné pro knihovny MFC.
+
+Informace o datové typy používané v sadě Windows SDK a knihovny MFC naleznete v tématu [datové typy Windows](/windows/desktop/WinProg/windows-data-types).
+
+Datové typy, které jsou jedinečné pro knihovny Microsoft Foundation Class, patří:
+
+- Hodnota pozice A používá k označení pozice elementu v kolekci. třídy kolekcí MFC používá.
+
+- Lpcrect – A 32bitový ukazatel na konstantu (neupravitelnými) `RECT` struktury.
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../../mfc/class-library-overview.md)<br/>
+[Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)

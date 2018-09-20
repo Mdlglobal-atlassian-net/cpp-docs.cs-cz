@@ -19,24 +19,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd1b1d65148a951ba78e0408ab590a2c979648f7
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 76aa828727ccfcf93c7b9b0242e60b747c1873f8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339576"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390848"
 ---
 # <a name="classes-and-functions-generated-by-the-mfc-dll-wizard"></a>Třídy a funkce generované průvodcem knihovnou MFC DLL
-Kód, který generuje Průvodce MFC DLL závisí na druhu při vytváření knihovny DLL a možnosti, které jste vybrali. Průvodce MFC DLL vygeneruje stejný kód pro obě formy běžných knihovnách MFC DLL.  
-  
-|Druh knihovny DLL|Možnost|Třídy|Funkce|  
-|-----------------|------------|-------------|---------------|  
-|[Rozšíření](../../build/extension-dlls-overview.md)|Žádné|Žádné|`DllMain`|  
-|[Pravidelné](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Žádné|Aplikace třída odvozená z `CWinApp`|Žádné|  
-|[Pravidelné](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Automatizace|Aplikace třída odvozená z `CWinApp`|`DllGetClassObjectDllCanUnloadNowDllRegisterServer`|  
-|[Rozšíření](../../build/extension-dlls-overview.md)|Okno Sockets|Žádné|`DllMain`|  
-|[Pravidelné](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Okno Sockets|Aplikace třída odvozená z `CWinApp`|`InitInstance` obsahuje volání `AfxSocketInit`|  
-  
-## <a name="see-also"></a>Viz také  
- [MFC DLL – průvodce knihovnou](../../mfc/reference/mfc-dll-wizard.md)
+
+Kód, který generuje Průvodce MFC DLL závisí na druhu při vytváření knihovny DLL a možnosti, které jste vybrali. Průvodce MFC DLL vygeneruje stejný kód pro obě formy běžných knihovnách MFC DLL.
+
+|Druh knihovny DLL|Možnost|Třídy|Funkce|
+|-----------------|------------|-------------|---------------|
+|[Rozšíření](../../build/extension-dlls-overview.md)|Žádné|Žádné|`DllMain`|
+|[Pravidelné](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Žádné|Aplikace třída odvozená z `CWinApp`|Žádné|
+|[Pravidelné](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Automatizace|Aplikace třída odvozená z `CWinApp`|`DllGetClassObjectDllCanUnloadNowDllRegisterServer`|
+|[Rozšíření](../../build/extension-dlls-overview.md)|Okno Sockets|Žádné|`DllMain`|
+|[Pravidelné](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Okno Sockets|Aplikace třída odvozená z `CWinApp`|`InitInstance` obsahuje volání `AfxSocketInit`|
+
+## <a name="see-also"></a>Viz také
+
+[MFC DLL – průvodce knihovnou](../../mfc/reference/mfc-dll-wizard.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Ovládací pruhy | Microsoft Docs
+title: Ovládací pruhy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,51 +24,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 179e959ce4d6a516f51576712e50408ef41d5c7e
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 8583b0ceba041ba9b99cb78e523d78bba71414a5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931788"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439624"
 ---
 # <a name="control-bars"></a>Ovládací pruhy
-"Ovládacích pruhů" je obecné název panely nástrojů, stavové řádky a řádky dialogové okno. MFC – třídy `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, a `CReBar` odvozena od třídy [ccontrolbar –](../mfc/reference/ccontrolbar-class.md), který implementuje své běžné funkce.  
-  
- Ovládací pruhy jsou windows, které zobrazují řádky ovládacích prvků, které uživatelé můžete vybrat možnosti, spuštěním příkazů nebo získat informace o programu. Typy ovládacích panelů zahrnují panely nástrojů, dialogové pruhy a stavové řádky.  
-  
--   Panely nástrojů v třídě [ctoolbar –](../mfc/reference/ctoolbar-class.md)  
-  
--   Stavové řádky v třídě [cstatusbar –](../mfc/reference/cstatusbar-class.md)  
-  
--   Dialogové pruhy v třídě [CDialogBar](../mfc/reference/cdialogbar-class.md)  
-  
--   Ve třídě tyčová ocel [CReBar](../mfc/reference/crebar-class.md)  
-  
+
+"Ovládací prvek panel" je obecný název pro dialogové pruhy, panely nástrojů a stavové řádky. MFC – třídy `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, a `CReBar` odvozen od třídy [ccontrolbar –](../mfc/reference/ccontrolbar-class.md), který implementuje své běžné funkce.
+
+Ovládací pruhy jsou windows, které zobrazují řádků ovládacích prvků, pomocí kterých můžete uživatele vyberte možnosti, spusťte příkazy nebo získat informace o programu. Typy ovládacích pruhů zahrnují panely nástrojů, dialogové pruhy a stavové řádky.
+
+- Panely nástrojů ve třídě [ctoolbar –](../mfc/reference/ctoolbar-class.md)
+
+- Stavové řádky, ve třídě [cstatusbar –](../mfc/reference/cstatusbar-class.md)
+
+- Dialogové pruhy ve třídě [CDialogBar](../mfc/reference/cdialogbar-class.md)
+
+- Rebars ve třídě [crebar –](../mfc/reference/crebar-class.md)
+
 > [!IMPORTANT]
->  Od verze rozhraní MFC 4.0, panely nástrojů, stavové řádky a nástroj tipy jsou implementované pomocí funkce systému v aplikaci *comctl32.dll* místo předchozí implementace, které jsou specifické pro MFC. V prostředí MFC verze 6.0 `CReBar`, který také zahrnuje funkce comctl32.dll, byl přidán.  
-  
- Postupujte podle stručný přehled typů ovládacích pruhů. Další informace najdete v tématu odkazy níže.  
-  
-## <a name="control-bars"></a>Ovládací pruhy  
- Ovládací pruhy výrazně zlepšují použitelnost programu tím, že poskytuje rychlé, jednoduchý příkaz akce. Třída `CControlBar` poskytuje běžné funkce všech panely nástrojů, stavové řádky a řádky dialogové okno. `CControlBar` poskytuje funkce pro umístění panelu ovládacího prvku v jeho nadřazeného rámce okna. Ovládací prvek panelu je obvykle podřízeného okna rámce okna nadřazené, proto je na "úrovni" do zobrazení klienta nebo klienta MDI rámce okna. Objekt ovládacího prvku panel používá informace o jeho nadřazeného okna klienta obdélníku na pozici sám sebe. Poté změní zbývající obdélníku okno klienta nadřazeného objektu, tak, aby zobrazení klienta nebo okna MDI klienta vyplnil zbytek okna klienta.  
-  
+>  MFC verze 4.0, panely nástrojů, stavovém řádku a nástroje jsou implementovány pomocí funkce systému, které jsou implementované v tipy *comctl32.dll* místo předchozích implementacích specifické pro knihovny MFC. V prostředí MFC verze 6.0 `CReBar`, což také zahrnuje funkce knihovny comctl32.dll, která byla přidána.
+
+Postupujte podle stručné úvodní informace k typům ovládacích panelů. Další informace najdete na odkazech níže.
+
+## <a name="control-bars"></a>Ovládací pruhy
+
+Ovládací pruhy výrazně zlepšují použitelnost programu tím, že poskytuje rychlé, jednoduchý příkaz akce. Třída `CControlBar` poskytuje běžné funkce panely nástrojů, stavovém řádku a dialogové pruhy. `CControlBar` poskytuje funkce pro umístění panelu ovládacího prvku v jeho nadřazenému oknu rámce. Protože ovládací panel, je obvykle podřízené okno nadřazené okno rámce, je na "stejné" k zobrazení klienta nebo klienta MDI okna rámce. Objekt ovládacích panelů používá informace o jeho nadřazenému oknu klientský obdélník k umístění samotný. Poté změní nadřazeného objektu zbývající obdélník okno klienta tak, aby zobrazení klientů nebo okno klienta MDI vyplnil zbývající část okna klienta.
+
 > [!NOTE]
->  Pokud nemá na panelu Ovládací prvek tlačítko **příkaz** nebo **UPDATE_COMMAND_UI** obslužnou rutinu, rozhraní automaticky zakáže tlačítko.  
-  
-## <a name="toolbars"></a>Panely nástrojů  
- Panel nástrojů je ovládací prvek panel, který zobrazí řádek rastrové tlačítka, která provádět příkazy. Stisknutím tlačítka panelu nástrojů je ekvivalentem možnosti vybrání položku nabídky; volá obslužnou rutinu stejné namapované na položku nabídky, pokud daná položka nabídky má stejné ID jako tlačítka panelu nástrojů. Tlačítka lze nastavit zobrazit, a chovat jako tlačítek, přepínače nebo zaškrtávací políčka. Panel nástrojů je obvykle zarovnán do horní části okna rámce, ale panelu nástrojů MFC můžete "ukotvení" žádné straně jeho nadřazeného okna nebo float v samostatném okně zkrácená rámce. Panel nástrojů můžete také "float" a můžete změnit jeho velikost a přetáhněte ji myší. Panel nástrojů můžete také zobrazit popisy, jako přechodu myší přes tlačítka panelu nástrojů. Popis tlačítka je malá velikost automaticky otevíraném okně, který stručně popisuje účel na tlačítko.  
-  
+>  Pokud už se tlačítko na panelu ovládacího prvku **příkaz** nebo **UPDATE_COMMAND_UI** obslužnou rutinu, rozhraní automaticky zakáže tlačítko.
+
+## <a name="toolbars"></a>Panely nástrojů
+
+Panel nástrojů se ovládací panel, který zobrazuje řádek tlačítek s rastrovými obrázky, provádět příkazy. Stisknutím tlačítka panelu nástrojů je ekvivalentem možnosti vybrání položky nabídky; volá obslužnou rutinu stejné namapované na položku nabídky, pokud tuto položku nabídky má stejné ID jako tlačítko panelu nástrojů. Tlačítka lze nastavit na a chovají se jako tlačítek, přepínacích tlačítek nebo zaškrtávací políčka. Panel nástrojů je obvykle zarovnán do horní části okna rámce, ale knihovny MFC nástrojů můžete "dock" na žádné straně její nadřazené okno nebo plovoucí desetinnou čárkou v samostatném okně okna s minirámcem. Panel nástrojů můžete také "float" a můžete změnit jeho velikost a přetažením myší. Panel nástrojů můžete také zobrazit popisy tlačítek, jak uživatel přesouvá ukazatel myši nad tlačítka panelu nástrojů. Popisku tlačítka je malý automaticky otevíraném okně, která stručně popisuje účel tlačítka.
+
 > [!NOTE]
->  Od verze knihovny MFC verze 4.0, třídy [ctoolbar –](../mfc/reference/ctoolbar-class.md) používá Windows běžné ovládací prvek panelu nástrojů. A `CToolBar` obsahuje [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md). Panely nástrojů starší jsou stále podporovány, ale. Najdete v článku [panely nástrojů](../mfc/mfc-toolbar-implementation.md).  
-  
-## <a name="status-bars"></a>Stavové řádky  
- Stavový řádek je ovládací prvek panel, který obsahuje podokna výstup textu nebo "indikátory." Podokna výstup běžně se používají jako řádky zprávy a jako indikátory stavu. Zpráva řádku Příklady příkazových řádků zprávu nápovědy, které stručně popisují vybrané nabídky nebo příkazu panelu nástrojů v podokně krajní levé stavového řádku výchozí vytvořené průvodcem aplikací MFC. Stav indikátoru příklady SCROLL LOCK NUMLOCK a jiných klíčů. Stavové řádky jsou obvykle zarovnán k dolnímu okraji okna rámce. Viz třída [cstatusbar –](../mfc/reference/cstatusbar-class.md) a třída [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md).  
-  
-## <a name="dialog-bars"></a>Dialogové pruhy  
- Panel dialogového okna je ovládacích pruhů, založené na prostředek šablony dialogového okna s funkcemi dialogového okna bez režimu. Dialogové pruhy může obsahovat Windows, nebo vlastní ovládací prvky ActiveX. V dialogovém okně může uživatel kartě mezi ovládacími prvky. Dialogové pruhy lze zarovnávat na nahoru, dolů, doleva nebo pravé straně okně s rámečkem a může být také obtékané ve svých vlastních oken s rámečkem. Viz třída [CDialogBar](../mfc/reference/cdialogbar-class.md).  
-  
-## <a name="rebars"></a>Tyčová ocel  
- A [matrice](../mfc/using-crebarctrl.md) je ovládací prvek panel, který obsahuje informace pro ovládací prvky matrice ukotvení, rozložení, stavu a trvalost. Objekt matrice může obsahovat celou řadu podřízená okna, obvykle další ovládací prvky, včetně polí úpravy, panely nástrojů a seznamy. Objekt matrice můžete zobrazit jeho podřízené systému windows přes zadané rastrového obrázku. Ji může automaticky nebo ručně změnit velikost kliknutím nebo přetažením jeho úchytu pruh. Viz třída [CReBar](../mfc/reference/crebar-class.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Prvky uživatelského rozhraní](../mfc/user-interface-elements-mfc.md)
+>  Od verze 4.0 knihovna MFC, třídy [ctoolbar –](../mfc/reference/ctoolbar-class.md) používá Windows běžné ovládací prvek panelu nástrojů. A `CToolBar` obsahuje [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md). Starší panely nástrojů jsou nadále podporován. Přečtěte si článek [panely nástrojů](../mfc/mfc-toolbar-implementation.md).
+
+## <a name="status-bars"></a>Stavové řádky
+
+Stavový řádek je ovládací panel, který obsahuje podoken textového výstupu nebo "ukazatelů". Výstupní podokna se obvykle používají jako zprávy řádky a indikátory stavu. Zpráva řádku Příklady příkazových řádků zprávu nápovědy, které stručně popisují vybrané nabídky nebo panelu nástrojů příkazu v podokně úplně vlevo ve stavovém řádku výchozí vytvořené průvodcem aplikací MFC. Stav indikátoru příklady SCROLL LOCK a NUM LOCK, další klíče. Stavové řádky jsou obvykle zarovnány k dolnímu okraji okna rámce. Viz třída [cstatusbar –](../mfc/reference/cstatusbar-class.md) a třída [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md).
+
+## <a name="dialog-bars"></a>Dialogové pruhy
+
+Panel dialogového okna se ovládací panel, založené na prostředek šablony dialogového okna s funkcemi nemodální dialogové okno. Dialogové pruhy může obsahovat Windows, nebo vlastní ovládací prvky ActiveX. Stejně jako v dialogovém okně vytvořit kartu uživatele mezi ovládacími prvky. Dialogové pruhy lze zarovnávat na horní, dolní, levé nebo pravé straně okna rámce a může být také obtékané ve své vlastní okna rámce. Viz třída [CDialogBar](../mfc/reference/cdialogbar-class.md).
+
+## <a name="rebars"></a>Rebars
+
+A [matrice](../mfc/using-crebarctrl.md) se ovládací panel, který poskytuje informace o ukotvení, rozložení, stavu a trvalosti pro prvky matrice. Matrice objekt může obsahovat řadu podřízených oken, obvykle další ovládací prvky, včetně textových polí, panely nástrojů a pole se seznamem. Objekt matrice můžete zobrazit jeho podřízených oken přes zadané rastrový obrázek. To může automaticky nebo ručně změnit velikost můžete také kliknout nebo přetažením jeho úchytu panelu. Viz třída [crebar –](../mfc/reference/crebar-class.md).
+
+## <a name="see-also"></a>Viz také
+
+[Prvky uživatelského rozhraní](../mfc/user-interface-elements-mfc.md)

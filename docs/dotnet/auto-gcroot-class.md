@@ -19,34 +19,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: da63d58136d61bbea75daa90ac01cee5b44ac86d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 48412a932ff3752b0613f7045cd88992332b7917
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039098"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423222"
 ---
 # <a name="autogcroot-class"></a>auto_gcroot – třída
-Správa automatického prostředků (jako [auto_ptr – třída](../standard-library/auto-ptr-class.md)) který slouží k vložení virtuální popisovač do nativního typu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-template<typename _element_type>  
-class auto_gcroot;  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+Správa automatického prostředků (jako [auto_ptr – třída](../standard-library/auto-ptr-class.md)) který slouží k vložení virtuální popisovač do nativního typu.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+template<typename _element_type>
+class auto_gcroot;
+```
+
+#### <a name="parameters"></a>Parametry
+
 *_element_type*<br/>
-Spravovaný typ má být vložen.  
-  
-## <a name="requirements"></a>Požadavky  
- **Soubor hlaviček** \<msclr\auto_gcroot.h >  
-  
- **Namespace** msclr –  
-  
-## <a name="see-also"></a>Viz také  
- [auto_gcroot –](../dotnet/auto-gcroot.md)   
- [auto_gcroot – členové](../dotnet/auto-gcroot-members.md)   
- [Postupy: deklarace obslužných rutin v nativních typech](../dotnet/how-to-declare-handles-in-native-types.md)   
- [auto_handle – třída](../dotnet/auto-handle-class.md)
+Spravovaný typ má být vložen.
+
+## <a name="requirements"></a>Požadavky
+
+**Soubor hlaviček** \<msclr\auto_gcroot.h >
+
+**Namespace** msclr –
+
+## <a name="see-also"></a>Viz také
+
+[auto_gcroot](../dotnet/auto-gcroot.md)<br/>
+[auto_gcroot Members](../dotnet/auto-gcroot-members.md)<br/>
+[Postupy: Deklarace obslužných rutin v nativních typech](../dotnet/how-to-declare-handles-in-native-types.md)<br/>
+[auto_handle – třída](../dotnet/auto-handle-class.md)

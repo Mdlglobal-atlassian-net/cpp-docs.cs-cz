@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dca97238310c42b9a537baa4056563b25c20c617
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 98734522410b867d735d0af25f440d5b45874563
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895224"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393279"
 ---
 # <a name="hint-files"></a>Soubory pokynů
 
@@ -52,9 +52,9 @@ Následující definice makra jsou v samostatných hlavičkovém souboru.
 
 ```cpp
 // Header file.
-#define STDMETHOD(method) HRESULT (STDMETHODCALLTYPE * method)  
+#define STDMETHOD(method) HRESULT (STDMETHODCALLTYPE * method)
 #define STDMETHODCALLTYPE __stdcall
-#define HRESULT void*  
+#define HRESULT void*
 ```
 
 Systém analýzy nemůže interpretovat zdrojového kódu, protože funkce s názvem `STDMETHOD` se zdá být deklarována, a že je syntakticky nesprávný prohlášení, protože má dva seznamy parametrů. Systém analýzy neotevře hlavičkový soubor definice pro zjišťování `STDMETHOD`, `STDMETHODCALLTYPE`, a `HRESULT` makra. Protože nelze interpretovat systém analýzy `STDMETHOD` – makro, ignoruje celý výraz a potom pokračuje v analýze.
@@ -127,21 +127,21 @@ Některé makra způsobit analýzy systém interpretuje zdrojového kódu, ale m
 
 V následující zdrojový kód, zadejte parametr `FormatWindowClassName()` funkce je `PXSTR`, a název parametru je `szBuffer`. Ale analýzy chyby systému `_Pre_notnull_` a `_Post_z_` poznámky SAL pro typ parametru nebo název parametru.
 
-**Zdrojový kód:**  
+**Zdrojový kód:**
 
-```  
-static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)  
-```  
+```cpp
+static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
+```
 
 **Strategie:** definice s hodnotou Null
 
-Strategie v této situaci se zachází poznámky SAL, jako kdyby neexistovala. K tomuto účelu zadejte pokyn, jejichž náhradní řetězec má hodnotu null. V důsledku toho systém analýzy ignoruje poznámky a **zobrazení tříd** prohlížeče je nezobrazí. (Visual C++ obsahuje integrovanou informačního souboru, který skryje poznámky SAL.)  
+Strategie v této situaci se zachází poznámky SAL, jako kdyby neexistovala. K tomuto účelu zadejte pokyn, jejichž náhradní řetězec má hodnotu null. V důsledku toho systém analýzy ignoruje poznámky a **zobrazení tříd** prohlížeče je nezobrazí. (Visual C++ obsahuje integrovanou informačního souboru, který skryje poznámky SAL.)
 
-**Soubor pokynů:**  
+**Soubor pokynů:**
 
-```  
+```cpp.hint
 #define _Pre_notnull_
-```  
+```
 
 ### <a name="concealed-cc-language-elements"></a>Elementy jazyka C/C++ skryté
 
@@ -149,11 +149,11 @@ Typický případ, že systém analýzy špatně interpretuje zdrojový kód je 
 
 V následující zdrojový kód `START_NAMESPACE` – makro skryje levou složenou závorku (`{`).
 
-**Zdrojový kód:**  
+**Zdrojový kód:**
 
-```  
+```cpp
 #define START_NAMESPACE namespace MyProject {
-```  
+```
 
 **Strategie:** přímé kopírování
 
@@ -161,11 +161,11 @@ Pokud sémantiku makra jsou důležité pro uživatele z procházení, vytvořen
 
 Všimněte si, že obsahuje-li makra ve zdrojovém souboru dalších maker, tato makra jsou interpretovány pouze v případě, že jsou již v sadě efektivní pokyny.
 
-**Soubor pokynů:**  
+**Soubor pokynů:**
 
-```  
+```cpp.hint
 #define START_NAMESPACE namespace MyProject {
-```  
+```
 
 ### <a name="maps"></a>Mapy
 
@@ -173,9 +173,9 @@ Mapování se skládá z maker, která určí počáteční element koncový ele
 
 Definuje následující zdrojový kód `BEGIN_CATEGORY_MAP`, `IMPLEMENTED_CATEGORY`, a `END_CATEGORY_MAP` makra.
 
-**Zdrojový kód:**  
+**Zdrojový kód:**
 
-```  
+```cpp
 #define BEGIN_CATEGORY_MAP(x)\
 static const struct ATL::_ATL_CATMAP_ENTRY* GetCategoryMap() throw() {\
 static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
@@ -183,15 +183,15 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 #define END_CATEGORY_MAP()\
    { _ATL_CATMAP_ENTRY_END, NULL } };\
    return( pMap ); }
-```  
+```
 
 **Strategie:** identifikovat prvky mapy
 
 Zadejte pomocné parametry pro spuštění, střední (pokud existuje) a ukončení prvky objektu map. Použít náhradní řetězce speciální mapy, `@<`, `@=`, a `@>`. Další informace najdete v tématu `Syntax` v tomto tématu.
 
-**Soubor pokynů:**  
+**Soubor pokynů:**
 
-```  
+```cpp.hint
 // Start of the map.
 #define BEGIN_CATEGORY_MAP(x) @<
 // Intermediate map element.
@@ -200,7 +200,7 @@ Zadejte pomocné parametry pro spuštění, střední (pokud existuje) a ukonče
 #define REQUIRED_CATEGORY( catid ) @=
 // End of the map.
 #define END_CATEGORY_MAP() @>
-```  
+```
 
 ### <a name="composite-macros"></a>Složené makra
 
@@ -208,11 +208,11 @@ Složené makra obsahují jeden nebo více typů – makro, které matou systém
 
 Obsahuje následující zdrojový kód `START_NAMESPACE` makro, které určuje začátek rozsahu oboru názvů, a `BEGIN_CATEGORY_MAP` – makro, které určuje začátek objektu map.
 
-**Zdrojový kód:**  
+**Zdrojový kód:**
 
-```  
+```cpp
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP
-```  
+```
 
 **Strategie:** přímé kopírování
 
@@ -220,31 +220,31 @@ Pokyny pro vytvoření `START_NAMESPACE` a `BEGIN_CATEGORY_MAP` makra a pak vytv
 
 V tomto příkladu se předpokládá `START_NAMESPACE` už má pomocného parametru, jak je popsáno v tomto tématu v `Concealed C/C++ Language Elements` podnadpisu. A předpokládá `BEGIN_CATEGORY_MAP` má pomocného parametru, jak je popsáno výše u `Maps`.
 
-**Soubor pokynů:**  
+**Soubor pokynů:**
 
-```  
+```cpp.hint
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP
-```  
+```
 
 ### <a name="inconvenient-macros"></a>Nevyhovující makra
 
 Některé makra lze interpretovat analýzy systému, ale zdrojový kód je obtížné číst, protože makra je dlouhý nebo složitý. Pro účely čitelnosti může poskytnout nápovědu, která zjednodušuje zobrazení makra.
 
-**Zdrojový kód:**  
+**Zdrojový kód:**
 
-```  
-#define STDMETHOD(methodName) HRESULT (STDMETHODCALLTYPE * methodName)  
-```  
+```cpp
+#define STDMETHOD(methodName) HRESULT (STDMETHODCALLTYPE * methodName)
+```
 
 **Strategie:** zjednodušení
 
 Vytvoření pomocného parametru, který zobrazuje jednodušší definici makra.
 
-**Soubor pokynů:**  
+**Soubor pokynů:**
 
-```  
+```cpp.hint
 #define STDMETHOD(methodName) void* methodName
-```  
+```
 
 ## <a name="example"></a>Příklad
 
@@ -254,7 +254,7 @@ Následující obrázek znázorňuje některé z fyzického adresáře projektu 
 
 ### <a name="hint-file-directories"></a>Pomocný parametr souborové adresáře
 
-![Běžné a projekt&#45;konkrétní pomocný parametr souborové adresáře. ](../ide/media/hintfile.png "HintFile")  
+![Běžné a projekt&#45;konkrétní pomocný parametr souborové adresáře. ](../ide/media/hintfile.png "HintFile")
 
 ### <a name="directories-and-hint-file-contents"></a>Adresáře a obsah souboru nápovědy
 
@@ -262,41 +262,41 @@ Následující seznam obsahuje adresáře v tomto projektu, které obsahují sou
 
 - vcpackages
 
-    ```  
-    // vcpackages (partial list)  
+    ```cpp.hint
+    // vcpackages (partial list)
     #define _In_
     #define _In_opt_
     #define _In_z_
     #define _In_opt_z_
-    #define _In_count_(size)  
-    ```  
+    #define _In_count_(size)
+    ```
 
 - Ladit
 
-    ```  
+    ```cpp.hint
     // Debug
     #undef _In_
     #define OBRACE {
     #define CBRACE }
-    #define RAISE_EXCEPTION(x) throw (x)  
+    #define RAISE_EXCEPTION(x) throw (x)
     #define START_NAMESPACE namespace MyProject {
     #define END_NAMESPACE }
-    ```  
+    ```
 
 - A1
 
-    ```  
+    ```cpp.hint
     // A1
     #define START_NAMESPACE namespace A1Namespace {
-    ```  
+    ```
 
 - A2
 
-    ```  
+    ```cpp.hint
     // A2
     #undef OBRACE
     #undef CBRACE
-    ```  
+    ```
 
 ### <a name="effective-hints"></a>Efektivní pokyny
 
@@ -306,19 +306,19 @@ V následující tabulce jsou uvedeny efektivní pokyny pro zdrojové soubory v 
 
 - Efektivní pokyny:
 
-    ```  
-    // vcpackages (partial list)  
+    ```cpp.hint
+    // vcpackages (partial list)
     #define _In_opt_
     #define _In_z_
     #define _In_opt_z_
-    #define _In_count_(size)  
+    #define _In_count_(size)
     // Debug...
-    #define RAISE_EXCEPTION(x) throw (x)  
+    #define RAISE_EXCEPTION(x) throw (x)
     // A1
     #define START_NAMESPACE namespace A1Namespace {
     // ...Debug
     #define END_NAMESPACE }
-    ```  
+    ```
 
 Následující poznámky platí pro v předchozím seznamu.
 
@@ -332,10 +332,10 @@ Následující poznámky platí pro v předchozím seznamu.
 
 ## <a name="see-also"></a>Viz také
 
-[Typy souborů vytvořených pro projekty Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)    
-[#define – direktiva (C/C++)](../preprocessor/hash-define-directive-c-cpp.md)   
-[#undef – direktiva (C++)](../preprocessor/hash-undef-directive-c-cpp.md)   
-[Poznámky SAL](../c-runtime-library/sal-annotations.md)   
-[Mapy zpráv](../mfc/reference/message-maps-mfc.md)   
-[Makra Map zpráv](../atl/reference/message-map-macros-atl.md)   
+[Typy souborů vytvořených pro projekty Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)<br>
+[#define – direktiva (C++)](../preprocessor/hash-define-directive-c-cpp.md)<br>
+[#undef – direktiva (C++)](../preprocessor/hash-undef-directive-c-cpp.md)<br>
+[Poznámky SAL](../c-runtime-library/sal-annotations.md)<br>
+[Mapy zpráv](../mfc/reference/message-maps-mfc.md)<br>
+[Makra Map zpráv](../atl/reference/message-map-macros-atl.md)<br>
 [Makra map objektů](../atl/reference/object-map-macros.md)

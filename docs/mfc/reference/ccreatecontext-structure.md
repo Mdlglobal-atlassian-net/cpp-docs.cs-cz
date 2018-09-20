@@ -1,5 +1,5 @@
 ---
-title: Struktura CCreateContext | Microsoft Docs
+title: Ccreatecontext – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,65 +16,69 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af6e81b9215aa6e7bc9e5f294a1d95aee4b51321
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 320f84a8c423c16c4647108af0154fe7c07ce653
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352041"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447294"
 ---
-# <a name="ccreatecontext-structure"></a>Struktura CCreateContext
-Rozhraní používá `CCreateContext` struktury při vytváření okna s rámečkem a zobrazení, které jsou přidruženy dokumentu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-struct CCreateContext  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- `CCreateContext` je struktura a nemá základní třídu.  
-  
- Při vytváření okna hodnoty v této struktuře poskytují informace, které slouží pro připojení součástí dokument k zobrazení jeho data. Budete muset použít `CCreateContext` Pokud přepíšete součástí procesu vytváření.  
-  
- A `CCreateContext` struktura obsahuje odkazy na dokument, okně s rámečkem, zobrazení a šablony dokumentu. Obsahuje taky odkazy `CRuntimeClass` identifikující na typu zobrazení pro vytvoření. Run-time třída informace a aktuální ukazatele dokumentu slouží k vytvoření nového zobrazení dynamicky. Následující tabulka doporučuje jak a kdy každý `CCreateContext` člen může být použit:  
-  
-|Člen|Typ|Co je pro|  
-|------------|----------|--------------------|  
-|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass` k vytvoření nového zobrazení.|  
-|`m_pCurrentDoc`|`CDocument*`|Stávající dokument, který se má přidružit nové zobrazení.|  
-|`m_pNewDocTemplate`|`CDocTemplate*`|Šablony dokumentů přidružené k vytvoření nového okna MDI rámce.|  
-|`m_pLastView`|`CView*`|Původní zobrazení, na kterém jsou modelovat další zobrazení, jako vytvoření rozdělovače okno zobrazení nebo vytvoření druhého zobrazení v dokumentu.|  
-|`m_pCurrentFrame`|`CFrameWnd*`|Okno rámečku, na kterém jsou modelovat okna s rámečkem další jako vytvoření druhého okně s rámečkem v dokumentu.|  
-  
- Pokud šablona dokumentu vytvoří dokument a jeho přidružených součásti, ověřuje informace uložené v `CCreateContext` struktura. Zobrazení například nesmí být vytvářeny pro neexistující dokument.  
-  
+# <a name="ccreatecontext-structure"></a>Ccreatecontext – struktura
+
+Rozhraní používá `CCreateContext` struktury při vytváření oken s rámečkem a zobrazení, které jsou spojené s dokumentem.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+struct CCreateContext
+```
+
+## <a name="remarks"></a>Poznámky
+
+`CCreateContext` Struktura a nemá žádné základní třídy.
+
+Při vytváření okna hodnoty v této struktuře poskytují informace použité pro připojení komponenty dokument k zobrazení jeho data. Budete muset použít `CCreateContext` Pokud přepíšete součástí procesu vytváření.
+
+A `CCreateContext` struktura obsahuje odkazy na dokument, okno rámce, zobrazení a šablony dokumentu. Také obsahuje ukazatel `CRuntimeClass` , který určuje typ zobrazení vytvořit. Informace o třídě za běhu a ukazatel na aktuální dokument slouží k vytvoření nového zobrazení dynamicky. Následující tabulce najdete doporučení, jak a kdy každý `CCreateContext` člena může použít:
+
+|Člen|Typ|Co je pro|
+|------------|----------|--------------------|
+|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass` k vytvoření nového zobrazení.|
+|`m_pCurrentDoc`|`CDocument*`|K existujícímu dokumentu, který se má přidružit nové zobrazení.|
+|`m_pNewDocTemplate`|`CDocTemplate*`|Šablona dokumentu přidružené k vytvoření nového okna rámce MDI.|
+|`m_pLastView`|`CView*`|Původní zobrazení, ve kterém jsou modelovány další zobrazení, stejně jako v vytváření rozdělovač okna zobrazení nebo vytvoření druhého zobrazení dokumentu.|
+|`m_pCurrentFrame`|`CFrameWnd*`|Okno rámce, ve kterém jsou modelovány další okna s rámečkem, stejně jako v vytvoření druhého okna rámce dokumentu.|
+
+Když šablony dokumentu vytvoří dokument a jeho přidružených součásti, ověří informace uložené v `CCreateContext` struktury. Například by neměl vytvořit zobrazení pro neexistující dokumentu.
+
 > [!NOTE]
->  Všechny následující ukazatele v `CCreateContext` jsou volitelná a může být `NULL` Pokud určena nebo neznámé.  
-  
- `CCreateContext` používá členské funkce uvedené v části "Viz také." Pokud budete chtít nepřepíšete najdete popis těchto funkcí konkrétní informace.  
-  
- Tady je několik obecné pokyny:  
-  
--   Když předat jako argument pro vytvoření oken, jako v `CWnd::Create`, `CFrameWnd::Create`, a `CFrameWnd::LoadFrame`, kontext vytvořit Určuje, co novém okně by měly být připojené k. Pro většinu windows celá struktura je volitelné a `NULL` lze předat ukazatel.  
-  
--   Přepisovatelné členské funkce jako například `CFrameWnd::OnCreateClient`, `CCreateContext` argument je volitelný.  
-  
--   Pro členské funkce související se situací v zobrazení vytváření, je nutné zadat dostatek informací pro vytvoření zobrazení. Pro první zobrazení v rozděleném okně, musíte třeba zadat informace o třídě zobrazení a aktuálním dokumentu.  
-  
- Obecně platí, pokud chcete použít výchozí hodnoty framework, můžete ignorovat `CCreateContext`. Pokud se pokusíte pokročilejší úpravy, zdrojový kód Microsoft Foundation Class Library nebo ukázkové programy, jako je například VIEWEX, vám pomohou. Pokud zapomenete povinný parametr, framework assertion zjistit, co jste zapomněli.  
-  
- Další informace o `CCreateContext`, naleznete v ukázce MFC [VIEWEX](../../visual-cpp-samples.md).  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxext.h  
-  
-## <a name="see-also"></a>Viz také  
- [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [CFrameWnd::Create](../../mfc/reference/cframewnd-class.md#create)   
- [CFrameWnd::LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe)   
- [CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)   
- [CSplitterWnd::Create](../../mfc/reference/csplitterwnd-class.md#create)   
- [CSplitterWnd::CreateView](../../mfc/reference/csplitterwnd-class.md#createview)   
- [CWnd::Create](../../mfc/reference/cwnd-class.md#create)
+>  Všechny ukazatele v `CCreateContext` jsou volitelné a může být `NULL` Pokud neurčené nebo neznámý.
+
+`CCreateContext` používá členské funkce uvedené v části "Viz také." Pokud chcete je přepsat najdete konkrétní informace popisy těchto funkcí.
+
+Tady je pár obecné pokyny:
+
+- Pokud je předán jako argument pro vytvoření okna, stejně jako v `CWnd::Create`, `CFrameWnd::Create`, a `CFrameWnd::LoadFrame`, vytvořit kontext určuje, co nového okna musí být připojené k. Pro většinu windows celá struktura je volitelné a `NULL` lze předat ukazatele.
+
+- Přepisovatelné členské funkce jako například `CFrameWnd::OnCreateClient`, `CCreateContext` argument je nepovinný.
+
+- Pro členské funkce, které jsou zahrnuté v zobrazení vytváření, musíte zadat dostatek informací pro vytvoření zobrazení. Pro zobrazení první okno s rozdělovačem. musíte například zadat informace o zobrazení třídy a aktuální dokument.
+
+Obecně platí, pokud použijete výchozí nastavení rozhraní framework, můžete ignorovat `CCreateContext`. Pokud se pokusíte pokročilejší úpravy, zdrojový kód knihovny Microsoft Foundation Class nebo ukázkové programy, jako je například VIEWEX, vás provede. Pokud zapomenete povinný parametr, kontrolní výraz framework říct, co jste zapomněli.
+
+Další informace o `CCreateContext`, najdete v ukázce MFC [VIEWEX](../../visual-cpp-samples.md).
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxext.h
+
+## <a name="see-also"></a>Viz také
+
+[Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
+[CFrameWnd::Create](../../mfc/reference/cframewnd-class.md#create)<br/>
+[CFrameWnd::LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe)<br/>
+[CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)<br/>
+[CSplitterWnd::Create](../../mfc/reference/csplitterwnd-class.md#create)<br/>
+[CSplitterWnd::CreateView](../../mfc/reference/csplitterwnd-class.md#createview)<br/>
+[CWnd::Create](../../mfc/reference/cwnd-class.md#create)
 

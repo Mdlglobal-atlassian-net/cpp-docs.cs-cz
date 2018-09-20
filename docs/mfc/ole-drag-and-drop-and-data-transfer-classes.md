@@ -1,5 +1,5 @@
 ---
-title: OLE přetahování myší a třídy přenosu dat | Microsoft Docs
+title: OLE – přetažením a třídy přenosu dat | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,28 +20,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d55d6d171f490631afe17a605f50607fb55f070b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a4b5d694d0081fbe2d852884c4a379e962c22f2a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347039"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444135"
 ---
 # <a name="ole-drag-and-drop-and-data-transfer-classes"></a>Přetahování v rozhraní OLE a třídy přenosu dat
-Tyto třídy se používají v přenosech souborů OLE. Umožňují data na přenos mezi aplikací pomocí schránky nebo prostřednictvím přetažení a drop.  
-  
- [COleDropSource](../mfc/reference/coledropsource-class.md)  
- Určuje operaci přetažení myší od začátku do konce. Tato třída určuje při spuštění operace přetažení a při ukončení. Zobrazí také zpětná vazba kurzoru během operace přetažení myší.  
-  
- [Coledatasource –](../mfc/reference/coledatasource-class.md)  
- Když aplikaci poskytuje data pro přenos dat použít. `COleDataSource` může zobrazit jako objekt objektově orientované schránky.  
-  
- [COleDropTarget](../mfc/reference/coledroptarget-class.md)  
- Představuje cíl operace přetažení myší. A `COleDropTarget` objekt odpovídá okně na obrazovce. Určují, jestli se má přijmout žádná data do ho vyřadit a implementuje operace skutečného odstranění.  
-  
- [COleDataObject](../mfc/reference/coledataobject-class.md)  
- Použít jako na straně příjemce k `COleDataSource`. `COleDataObject` objekty poskytnout přístup k datům, uložení `COleDataSource` objektu.  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled třídy](../mfc/class-library-overview.md)
+
+Tyto třídy jsou používáno v přenosech dat OLE. Nechají data přenesená mezi aplikacemi s využitím schránky nebo pomocí přetažení a přetažení.
+
+[Coledropsource –](../mfc/reference/coledropsource-class.md)<br/>
+Určuje operaci přetažení myší od začátku do konce. Tato třída určuje při operaci přetažení spuštění a ukončení. Zobrazí také kurzor zpětnou vazbu během operace přetažení myší.
+
+[Coledatasource –](../mfc/reference/coledatasource-class.md)<br/>
+Použít, pokud aplikace poskytuje data pro přenos dat. `COleDataSource` může zobrazit jako objekt schránky objektově orientovaný.
+
+[Coledroptarget –](../mfc/reference/coledroptarget-class.md)<br/>
+Představuje cíl operace přetažení myší. A `COleDropTarget` objekt odpovídá okna na obrazovce. Určuje, jestli se má přijmout žádná data vyřadit problém napravit a implementuje operace skutečné vyřazení.
+
+[Coledataobject –](../mfc/reference/coledataobject-class.md)<br/>
+Použít jako straně příjemce `COleDataSource`. `COleDataObject` objekty poskytují přístup k datům uloženým ve `COleDataSource` objektu.
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../mfc/class-library-overview.md)
 

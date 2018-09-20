@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a5e9ce2480612cdc84982cd1474e003d9151557
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 7c6797e9a75e9150718655ed7fcd72d7f343e591
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42464697"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430199"
 ---
 # <a name="strictgscheck"></a>strict_gs_check
 Tato direktiva pragma poskytuje rozšířenou kontrolu zabezpečení.  
@@ -76,5 +76,5 @@ void ** ReverseArray(void **pData,
   
 ## <a name="see-also"></a>Viz také  
  
-[Direktivy pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
 [/GS (kontrola zabezpečení vyrovnávací paměti)](../build/reference/gs-buffer-security-check.md)

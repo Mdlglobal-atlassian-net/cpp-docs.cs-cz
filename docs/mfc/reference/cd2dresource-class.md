@@ -1,5 +1,5 @@
 ---
-title: Třída CD2DResource | Microsoft Docs
+title: Cd2dresource – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,152 +32,172 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1848e0fe6d3e09ea4707279e83293ae2dc0feb64
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 1e2ee4f7f5f1e3e6126cee6e5822468a7487eb1f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950674"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442263"
 ---
-# <a name="cd2dresource-class"></a>CD2DResource – třída
-Abstraktní třída, která poskytuje rozhraní pro vytváření a Správa prostředků D2D například štětce, vrstvy a texty.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CD2DResource : public CObject;  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="protected-constructors"></a>Chráněné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CD2DResource::CD2DResource](#cd2dresource)|Vytvoří objekt CD2DResource.|  
-|[CD2DResource:: ~ CD2DResource](#cd2dresource__~cd2dresource)|Destruktor. Voláno, když je zničen objektu D2D prostředků.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CD2DResource::Create](#create)|Vytvoří CD2DResource.|  
-|[CD2DResource::Destroy](#destroy)|Zničí CD2DResource objektu.|  
-|[CD2DResource::IsValid](#isvalid)|Kontrola platnosti prostředků|  
-  
-### <a name="protected-methods"></a>Chráněné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CD2DResource::IsAutoDestroy](#isautodestroy)|Kontrola automaticky zrušte příznak.|  
-|[CD2DResource::ReCreate](#recreate)|Znovu vytvoří CD2DResource.|  
-  
-### <a name="protected-data-members"></a>Chráněné datové členy  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|Prostředků bude destoyed vlastník (CRenderTarget)|  
-|[CD2DResource::m_pParentTarget](#m_pparenttarget)|Ukazatel na hodnotu parent CRenderTarget)|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- `CD2DResource`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxrendertarget.h  
-  
-##  <a name="_dtorcd2dresource"></a>  CD2DResource:: ~ CD2DResource  
- Destruktor. Voláno, když je zničen objektu D2D prostředků.  
-  
-```  
+# <a name="cd2dresource-class"></a>Cd2dresource – třída
+
+Abstraktní třída, která poskytuje rozhraní pro vytváření a správu D2D prostředky, jako jsou štětce, vrstvy a texty.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CD2DResource : public CObject;
+```
+
+## <a name="members"></a>Členové
+
+### <a name="protected-constructors"></a>Chráněné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[CD2DResource::CD2DResource](#cd2dresource)|Vytvoří objekt cd2dresource –.|
+|[Cd2dresource –:: ~ cd2dresource –](#cd2dresource__~cd2dresource)|Destruktor. Volá se, když se likviduje prostředků objektu D2D.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CD2DResource::Create](#create)|Vytvoří cd2dresource –.|
+|[CD2DResource::Destroy](#destroy)|Odstraní objekt cd2dresource –.|
+|[CD2DResource::IsValid](#isvalid)|Kontrola platnosti prostředků|
+
+### <a name="protected-methods"></a>Chráněné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CD2DResource::IsAutoDestroy](#isautodestroy)|Kontrola automaticky zničit příznak.|
+|[CD2DResource::ReCreate](#recreate)|Znovu vytvoří cd2dresource –.|
+
+### <a name="protected-data-members"></a>Chránění členové dat
+
+|Název|Popis|
+|----------|-----------------|
+|[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|Prostředek bude destoyed vlastníkem (crendertarget –)|
+|[CD2DResource::m_pParentTarget](#m_pparenttarget)|Ukazatel na hodnotu parent crendertarget –)|
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[Třídy CObject](../../mfc/reference/cobject-class.md)
+
+`CD2DResource`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxrendertarget.h
+
+##  <a name="_dtorcd2dresource"></a>  Cd2dresource –:: ~ cd2dresource –
+
+Destruktor. Volá se, když se likviduje prostředků objektu D2D.
+
+```
 virtual ~CD2DResource();
-```  
-  
-##  <a name="cd2dresource"></a>  CD2DResource::CD2DResource  
- Vytvoří objekt CD2DResource.  
-  
-```  
+```
+
+##  <a name="cd2dresource"></a>  CD2DResource::CD2DResource
+
+Vytvoří objekt cd2dresource –.
+
+```
 CD2DResource(
-    CRenderTarget* pParentTarget,  
+    CRenderTarget* pParentTarget,
     BOOL bAutoDestroy);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pParentTarget*  
- Ukazatel na cíl vykreslení.  
-  
- *bAutoDestroy*  
- Označuje, že bude objekt zničí vlastník (pParentTarget).  
-  
-##  <a name="create"></a>  CD2DResource::Create  
- Vytvoří CD2DResource.  
-  
-```  
-virtual HRESULT Create(CRenderTarget* pRenderTarget) = 0;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pRenderTarget*  
- Ukazatel na cíl vykreslení.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Pokud metoda bude úspěšná, vrátí S_OK. Funkce HRESULT chybový kód.  
-  
-##  <a name="destroy"></a>  CD2DResource::Destroy  
- Zničí CD2DResource objektu.  
-  
-```  
-virtual void Destroy() = 0;  
-```  
-  
-##  <a name="isautodestroy"></a>  CD2DResource::IsAutoDestroy  
- Kontrola automaticky zrušte příznak.  
-  
-```  
-BOOL IsAutoDestroy() const;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud objekt budou zničena jeho vlastníka; jinak hodnota FALSE.  
-  
-##  <a name="isvalid"></a>  CD2DResource::IsValid  
- Kontrola platnosti prostředků  
-  
-```  
-virtual BOOL IsValid() const = 0;  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud prostředek je platná. jinak hodnota FALSE.  
-  
-##  <a name="m_bisautodestroy"></a>  CD2DResource::m_bIsAutoDestroy  
- Prostředků bude destoyed vlastník (CRenderTarget)  
-  
-```  
-BOOL m_bIsAutoDestroy;  
-```  
-  
-##  <a name="m_pparenttarget"></a>  CD2DResource::m_pParentTarget  
- Ukazatel na hodnotu parent CRenderTarget)  
-  
-```  
-CRenderTarget* m_pParentTarget;  
-```  
-  
-##  <a name="recreate"></a>  CD2DResource::ReCreate  
- Znovu vytvoří CD2DResource.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pParentTarget*<br/>
+Ukazatel na cíl vykreslování.
+
+*bAutoDestroy*<br/>
+Označuje, že bude objekt zničen. vlastník (pParentTarget).
+
+##  <a name="create"></a>  CD2DResource::Create
+
+Vytvoří cd2dresource –.
+
+```
+virtual HRESULT Create(CRenderTarget* pRenderTarget) = 0;
+```
+
+### <a name="parameters"></a>Parametry
+
+*pRenderTarget*<br/>
+Ukazatel na cíl vykreslování.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pokud metoda uspěje, vrátí hodnotu S_OK. V opačném případě vrátí kód chyby HRESULT.
+
+##  <a name="destroy"></a>  CD2DResource::Destroy
+
+Odstraní objekt cd2dresource –.
+
+```
+virtual void Destroy() = 0;
+```
+
+##  <a name="isautodestroy"></a>  CD2DResource::IsAutoDestroy
+
+Kontrola automaticky zničit příznak.
+
+```
+BOOL IsAutoDestroy() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Hodnota TRUE, pokud vlastník; bude objekt zničen. v opačném případě FALSE.
+
+##  <a name="isvalid"></a>  CD2DResource::IsValid
+
+Kontrola platnosti prostředků
+
+```
+virtual BOOL IsValid() const = 0;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Hodnota TRUE, pokud prostředek je platná. v opačném případě FALSE.
+
+##  <a name="m_bisautodestroy"></a>  CD2DResource::m_bIsAutoDestroy
+
+Prostředek bude destoyed vlastníkem (crendertarget –)
+
+```
+BOOL m_bIsAutoDestroy;
+```
+
+##  <a name="m_pparenttarget"></a>  CD2DResource::m_pParentTarget
+
+Ukazatel na hodnotu parent crendertarget –)
+
+```
+CRenderTarget* m_pParentTarget;
+```
+
+##  <a name="recreate"></a>  CD2DResource::ReCreate
+
+Znovu vytvoří cd2dresource –.
+
+```
 virtual HRESULT ReCreate(CRenderTarget* pRenderTarget);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pRenderTarget*  
- Ukazatel na cíl vykreslení.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Pokud metoda bude úspěšná, vrátí S_OK. Funkce HRESULT chybový kód.  
-  
-## <a name="see-also"></a>Viz také  
- [Třídy](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*pRenderTarget*<br/>
+Ukazatel na cíl vykreslování.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pokud metoda uspěje, vrátí hodnotu S_OK. V opačném případě vrátí kód chyby HRESULT.
+
+## <a name="see-also"></a>Viz také
+
+[Třídy](../../mfc/reference/mfc-classes.md)

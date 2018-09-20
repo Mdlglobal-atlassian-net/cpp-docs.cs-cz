@@ -1941,644 +1941,657 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0c2138de2becc7afa9d2392c2fa5240b584b6d3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 092ac94cac92b3ba327aa7c7853ec286268a00af
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46018246"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434099"
 ---
 # <a name="arm-intrinsics"></a>ARM – vnitřní prvky
-Kompilátor Visual C++ zpřístupňuje následující vnitřní objekty na architekturu ARM. Další informace o ARM najdete v článku [příručky pro referenční architekturu ARM](http://go.microsoft.com/fwlink/p/?LinkId=522049) a [příručka nástroje assembleru ARM](http://go.microsoft.com/fwlink/p/?LinkId=246102) na webu informační středisko ARM.  
-  
-##  <a name="top"></a> NEON  
- Rozšíření sady instrukcí vektorů NEON ARM poskytují možnosti více dat jedné instrukce (SIMD), které se podobají těm v MMX a SSE vektoru instrukce sady, které jsou společné pro procesory s architekturou x86 a x64.  
-  
- Vnitřní objekty NEON jsou podporovány, jak je uvedeno v souboru hlaviček `arm_neon.h`. Podpora kompilátoru Visual C++ pro vnitřní objekty NEON vypadá podobně jako u kompilátoru ARM, které jsou uvedené v dodatku G [sada nástrojů kompilátoru ARM, verze 4.1 kompilátoru odkaz](http://go.microsoft.com/fwlink/p/?LinkId=251083) na webu informační středisko ARM.  
-  
- Hlavní rozdíl mezi kompilátor Visual C++ a kompilátor ARM je, že kompilátor Visual C++ přidá `_ex` varianty `vldX` a `vstX` vektorové načtení a uložení pokyny. `_ex` Varianty trvat další parametr, který určuje zarovnání argument ukazatele, ale jsou jinak stejné jako jejich jinou hodnotu než`_ex` protějšky.  
-  
-##  <a name="A"></a> Vnitřní objekty ARM specifické výpis  
-  
-|Název funkce|Instrukce|Prototyp funkce|  
-|-------------------|-----------------|------------------------|  
-|_arm_smlal|SMLAL|__int64 _arm_smlal (\__int64 _RdHiLo int _Rn, int _Rm)|  
-|_arm_umlal|UMLAL|unsigned __int64 _arm_umlal (unsigned \__int64 _RdHiLo, _Rn unsigned int, unsigned int _Rm)|  
-|_arm_clz|CLZ|_arm_clz int bez znaménka (unsigned int _Rm)|  
-|_arm_qadd|QADD|int _arm_qadd (int _Rm, int _Rn)|  
-|_arm_qdadd|QDADD|int _arm_qdadd (int _Rm, int _Rn)|  
-|_arm_qdsub|QDSUB|int _arm_qdsub (int _Rm, int _Rn)|  
-|_arm_qsub|QSUB|int _arm_qsub (int _Rm, int _Rn)|  
-|_arm_smlabb|SMLABB|int _arm_smlabb (int _Rn, int _Rm, int _Ra)|  
-|_arm_smlabt|SMLABT|int _arm_smlabt (int _Rn, int _Rm, int _Ra)|  
-|_arm_smlatb|SMLATB|int _arm_smlatb (int _Rn, int _Rm, int _Ra)|  
-|_arm_smlatt|SMLATT|int _arm_smlatt (int _Rn, int _Rm, int _Ra)|  
-|_arm_smlalbb|SMLALBB|__int64 _arm_smlalbb (\__int64 _RdHiLo int _Rn, int _Rm)|  
-|_arm_smlalbt|SMLALBT|__int64 _arm_smlalbt (\__int64 _RdHiLo int _Rn, int _Rm)|  
-|_arm_smlaltb|SMLALTB|__int64 _arm_smlaltb (\__int64 _RdHiLo int _Rn, int _Rm)|  
-|_arm_smlaltt|SMLALTT|__int64 _arm_smlaltt (\__int64 _RdHiLo int _Rn, int _Rm)|  
-|_arm_smlawb|SMLAWB|int _arm_smlawb (int _Rn, int _Rm, int _Ra)|  
-|_arm_smlawt|SMLAWT|int _arm_smlawt (int _Rn, int _Rm, int _Ra)|  
-|_arm_smulbb|SMULBB|int _arm_smulbb (int _Rn, int _Rm)|  
-|_arm_smulbt|SMULBT|int _arm_smulbt (int _Rn, int _Rm)|  
-|_arm_smultb|SMULTB|int _arm_smultb (int _Rn, int _Rm)|  
-|_arm_smultt|SMULTT|int _arm_smultt (int _Rn, int _Rm)|  
-|_arm_smulwb|SMULWB|int _arm_smulwb (int _Rn, int _Rm)|  
-|_arm_smulwt|SMULWT|int _arm_smulwt (int _Rn, int _Rm)|  
-|_arm_sadd16|SADD16|int _arm_sadd16 (_Rn int, int _Rm)|  
-|_arm_sadd8|SADD8|int _arm_sadd8 (_Rn int, int _Rm)|  
-|_arm_sasx|SASX|int _arm_sasx (int _Rn, int _Rm)|  
-|_arm_ssax|SSAX|int _arm_ssax (int _Rn, int _Rm)|  
-|_arm_ssub16|SSUB16|int _arm_ssub16 (_Rn int, int _Rm)|  
-|_arm_ssub8|SSUB8|int _arm_ssub8 (_Rn int, int _Rm)|  
-|_arm_shadd16|SHADD16|int _arm_shadd16 (_Rn int, int _Rm)|  
-|_arm_shadd8|SHADD8|int _arm_shadd8 (_Rn int, int _Rm)|  
-|_arm_shasx|SHASX|int _arm_shasx (int _Rn, int _Rm)|  
-|_arm_shsax|SHSAX|int _arm_shsax (int _Rn, int _Rm)|  
-|_arm_shsub16|SHSUB16|int _arm_shsub16 (_Rn int, int _Rm)|  
-|_arm_shsub8|SHSUB8|int _arm_shsub8 (_Rn int, int _Rm)|  
-|_arm_qadd16|QADD16|int _arm_qadd16 (_Rn int, int _Rm)|  
-|_arm_qadd8|QADD8|int _arm_qadd8 (_Rn int, int _Rm)|  
-|_arm_qasx|QASX|int _arm_qasx (int _Rn, int _Rm)|  
-|_arm_qsax|QSAX|int _arm_qsax (int _Rn, int _Rm)|  
-|_arm_qsub16|QSUB16|int _arm_qsub16 (_Rn int, int _Rm)|  
-|_arm_qsub8|QSUB8|int _arm_qsub8 (_Rn int, int _Rm)|  
-|_arm_uadd16|UADD16|unsigned int _arm_uadd16 (_Rn unsigned int, unsigned int _Rm)|  
-|_arm_uadd8|UADD8|unsigned int _arm_uadd8 (_Rn unsigned int, unsigned int _Rm)|  
-|_arm_uasx|UASX|unsigned int _arm_uasx (_Rn unsigned int, unsigned int _Rm)|  
-|_arm_usax|USAX|unsigned int _arm_usax (_Rn unsigned int, unsigned int _Rm)|  
-|_arm_usub16|USUB16|unsigned int _arm_usub16 (_Rn unsigned int, unsigned int _Rm)|  
-|_arm_usub8|USUB8|unsigned int _arm_usub8 (_Rn unsigned int, unsigned int _Rm)|  
-|_arm_uhadd16|UHADD16|unsigned int _arm_uhadd16 (_Rn unsigned int, unsigned int _Rm)|  
-|_arm_uhadd8|UHADD8|unsigned int _arm_uhadd8 (_Rn unsigned int, unsigned int _Rm)|  
-|_arm_uhasx|UHASX|unsigned int _arm_uhasx (_Rn unsigned int, unsigned int _Rm)|  
-|_arm_uhsax|UHSAX|unsigned int _arm_uhsax (_Rn unsigned int, unsigned int _Rm)|  
-|_arm_uhsub16|UHSUB16|unsigned int _arm_uhsub16 (_Rn unsigned int, unsigned int _Rm)|  
-|_arm_uhsub8|UHSUB8|unsigned int _arm_uhsub8 (_Rn unsigned int, unsigned int _Rm)|  
-|_arm_uqadd16|UQADD16|unsigned int _arm_uqadd16 (_Rn unsigned int, unsigned int _Rm)|  
-|_arm_uqadd8|UQADD8|unsigned int _arm_uqadd8 (_Rn unsigned int, unsigned int _Rm)|  
-|_arm_uqasx|UQASX|unsigned int _arm_uqasx (_Rn unsigned int, unsigned int _Rm)|  
-|_arm_uqsax|UQSAX|unsigned int _arm_uqsax (_Rn unsigned int, unsigned int _Rm)|  
-|_arm_uqsub16|UQSUB16|unsigned int _arm_uqsub16 (_Rn unsigned int, unsigned int _Rm)|  
-|_arm_uqsub8|UQSUB8|unsigned int _arm_uqsub8 (_Rn unsigned int, unsigned int _Rm)|  
-|_arm_sxtab|SXTAB|int _arm_sxtab (int _Rn, int _Rm, unsigned int _Rotation)|  
-|_arm_sxtab16|SXTAB16|int _arm_sxtab16 (_Rn int, int _Rm, unsigned int _Rotation)|  
-|_arm_sxtah|SXTAH|int _arm_sxtah (int _Rn, int _Rm, unsigned int _Rotation)|  
-|_arm_uxtab|UXTAB|_arm_uxtab int bez znaménka (unsigned int _Rn, _Rm unsigned int, unsigned int _Rotation)|  
-|_arm_uxtab16|UXTAB16|unsigned int _arm_uxta16b (unsigned int _Rn, _Rm unsigned int, unsigned int _Rotation)|  
-|_arm_uxtah|UXTAH|_arm_uxtah int bez znaménka (unsigned int _Rn, _Rm unsigned int, unsigned int _Rotation)|  
-|_arm_sxtb|SXTB|int _arm_sxtb (int _Rn, unsigned int _Rotation)|  
-|_arm_sxtb16|SXTB16|int _arm_sxtb16 (_Rn int, unsigned int _Rotation)|  
-|_arm_sxth|SXTH|int _arm_sxth (int _Rn, unsigned int _Rotation)|  
-|_arm_uxtb|UXTB|unsigned int _arm_uxtb (_Rn unsigned int, unsigned int _Rotation)|  
-|_arm_uxtb16|UXTB16|unsigned int _arm_uxtb16 (_Rn unsigned int, unsigned int _Rotation)|  
-|_arm_uxth|UXTH|unsigned int _arm_uxth (_Rn unsigned int, unsigned int _Rotation)|  
-|_arm_pkhbt|PKHBT|int _arm_pkhbt (int _Rn, int _Rm, unsigned int _Lsl_imm)|  
-|_arm_pkhtb|PKHTB|int _arm_pkhtb (int _Rn, int _Rm, unsigned int _Asr_imm)|  
-|_arm_usad8|USAD8|unsigned int _arm_usad8 (_Rn unsigned int, unsigned int _Rm)|  
-|_arm_usada8|USADA8|unsigned int _arm_usada8 (unsigned int _Rn, _Rm unsigned int, unsigned int _Ra)|  
-|_arm_ssat|SSAT|int _arm_ssat (unsigned int _Sat_imm, _int _Rn, _ARMINTR_SHIFT_T _Shift_type, unsigned int _Shift_imm)|  
-|_arm_usat|USAT|int _arm_usat (unsigned int _Sat_imm, _int _Rn, _ARMINTR_SHIFT_T _Shift_type, unsigned int _Shift_imm)|  
-|_arm_ssat16|SSAT16|int _arm_ssat16 (unsigned int _Sat_imm, _int _Rn)|  
-|_arm_usat16|USAT16|int _arm_usat16 (unsigned int _Sat_imm, _int _Rn)|  
-|_arm_rev|REV|_arm_rev int bez znaménka (unsigned int _Rm)|  
-|_arm_rev16|REV16|unsigned int _arm_rev16 (unsigned int _Rm)|  
-|_arm_revsh|REVSH|_arm_revsh int bez znaménka (unsigned int _Rm)|  
-|_arm_smlad|SMLAD|int _arm_smlad (int _Rn, int _Rm, int _Ra)|  
-|_arm_smladx|SMLADX|int _arm_smladx (int _Rn, int _Rm, int _Ra)|  
-|_arm_smlsd|SMLSD|int _arm_smlsd (int _Rn, int _Rm, int _Ra)|  
-|_arm_smlsdx|SMLSDX|int _arm_smlsdx (int _Rn, int _Rm, int _Ra)|  
-|_arm_smmla|SMMLA|int _arm_smmla (int _Rn, int _Rm, int _Ra)|  
-|_arm_smmlar|SMMLAR|int _arm_smmlar (int _Rn, int _Rm, int _Ra)|  
-|_arm_smmls|SMMLS|int _arm_smmls (int _Rn, int _Rm, int _Ra)|  
-|_arm_smmlsr|SMMLSR|int _arm_smmlsr (int _Rn, int _Rm, int _Ra)|  
-|_arm_smmul|SMMUL|int _arm_smmul (int _Rn, int _Rm)|  
-|_arm_smmulr|SMMULR|int _arm_smmulr (int _Rn, int _Rm)|  
-|_arm_smlald|SMLALD|__int64 _arm_smlald (\__int64 _RdHiLo int _Rn, int _Rm)|  
-|_arm_smlaldx|SMLALDX|__int64 _arm_smlaldx (\__int64 _RdHiLo int _Rn, int _Rm)|  
-|_arm_smlsld|SMLSLD|__int64 _arm_smlsld (\__int64 _RdHiLo int _Rn, int _Rm)|  
-|_arm_smlsldx|SMLSLDX|__int64 _arm_smlsldx (\__int64 _RdHiLo int _Rn, int _Rm)|  
-|_arm_smuad|SMUAD|int _arm_smuad (int _Rn, int _Rm)|  
-|_arm_smuadx|SMUADX|int _arm_muadxs (int _Rn, int _Rm)|  
-|_arm_smusd|SMUSD|int _arm_smusd (int _Rn, int _Rm)|  
-|_arm_smusdx|SMUSDX|int _arm_smusdx (int _Rn, int _Rm)|  
-|_arm_smull|SMULL|__int64 _arm_smull (int _Rn, int _Rm)|  
-|_arm_umull|UMULL|unsigned __int64 _arm_umull (_Rn unsigned int, unsigned int _Rm)|  
-|_arm_umaal|UMAAL|unsigned __int64 _arm_umaal (_RdLo unsigned int, unsigned int _RdHi, _Rn unsigned int, unsigned int _Rm)|  
-|_arm_bfc|BFC|_arm_bfc int bez znaménka (unsigned int _Rd, _Lsb unsigned int, unsigned int k vlastnostem _Width)|  
-|_arm_bfi|BFI|unsigned int _arm_bfi (_Rd unsigned int, unsigned int _Rn, _Lsb unsigned int, unsigned int k vlastnostem _Width)|  
-|_arm_rbit|RBIT|_arm_rbit int bez znaménka (unsigned int _Rm)|  
-|_arm_sbfx|SBFX|int _arm_sbfx (int _Rn, unsigned int _Lsb, k vlastnostem _Width unsigned int)|  
-|_arm_ubfx|UBFX|_arm_ubfx int bez znaménka (unsigned int _Rn, _Lsb unsigned int, unsigned int k vlastnostem _Width)|  
-|_arm_sdiv|SDIV|int _arm_sdiv (int _Rn, int _Rm)|  
-|_arm_udiv|UDIV|unsigned int _arm_udiv (_Rn unsigned int, unsigned int _Rm)|  
-|__cps|PROHLÁŠENÍ CPS|void __cps (unsigned int _Ops, _Flags unsigned int, unsigned int reži_m)|  
-|__dmb|MB|void __dmb (unsigned int `_Type`)<br /><br /> Vloží operaci barrier paměti do datového proudu instrukce. Parametr `_Type` určuje druh omezení, které je vynucuje odbourejte překážky bránící.<br /><br /> Další informace o druzích omezení, které je možné vynutit, najdete v části [omezení paměti Barrier](#BarrierRestrictions).|  
-|__dsb|DSB|void __dsb (unsigned int _typ)<br /><br /> Vloží operaci barrier paměti do datového proudu instrukce. Parametr `_Type` určuje druh omezení, které je vynucuje odbourejte překážky bránící.<br /><br /> Další informace o druzích omezení, které je možné vynutit, najdete v části [omezení paměti Barrier](#BarrierRestrictions).|  
-|__isb|ISB|void __isb (unsigned int _typ)<br /><br /> Vloží operaci barrier paměti do datového proudu instrukce. Parametr `_Type` určuje druh omezení, které je vynucuje odbourejte překážky bránící.<br /><br /> Další informace o druzích omezení, které je možné vynutit, najdete v části [omezení paměti Barrier](#BarrierRestrictions).|  
-|__emit||void __emit (unsigned \__int32 opcode)<br /><br /> Vloží zadaný instrukce na datový proud instrukcí výstupní kompilátorem.<br /><br /> Hodnota `opcode` musí být konstantní výraz, který je známý v době kompilace. Velikost word instrukce je 16 bitů a nejdůležitější 16 bitů `opcode` jsou ignorovány.<br /><br /> Kompilátor nesnaží interpretovat obsah `opcode` a před provedením vložené instrukce nezaručuje stavu procesoru nebo paměti.<br /><br /> Kompilátor předpokládá, že stav procesoru a paměti jsou beze změny po provedení vložené instrukce. Pokyny, které mění stav proto může mít nepříznivý vliv na běžné kód, který je generovaný kompilátorem.<br /><br /> Z tohoto důvodu použít `emit` pouze pro vložení instrukcí, které ovlivňují stav procesoru, který kompilátor nezpracovává obvykle – například koprocesoru stavu – nebo k implementaci funkcí, které jsou deklarovány pomocí `declspec(naked)`.|  
-|__hvc|HVC|__hvc int bez znaménka (unsigned int,...).|  
-|__iso_volatile_load16||__int16 \__iso_volatile_load16 (const volatile \__int16 \*)<br /><br /> Další informace najdete v tématu [Using __iso_volatile_load/store instrinsics](#IsoVolatileLoadStore).|  
-|__iso_volatile_load32||__int32 \__iso_volatile_load32 (const volatile \__int32 \*)<br /><br /> Další informace najdete v tématu [Using __iso_volatile_load/store instrinsics](#IsoVolatileLoadStore).|  
-|__iso_volatile_load64||__int64 \__iso_volatile_load64 (const volatile \__int64 \*)<br /><br /> Další informace najdete v tématu [Using __iso_volatile_load/store instrinsics](#IsoVolatileLoadStore).|  
-|__iso_volatile_load8||__int8 \__iso_volatile_load8 (const volatile \__int8 \*)<br /><br /> Další informace najdete v tématu [Using __iso_volatile_load/store instrinsics](#IsoVolatileLoadStore).|  
-|__iso_volatile_store16||void __iso_volatile_store16 (volatile \__int16 \*, \__int16)<br /><br /> Další informace najdete v tématu [Using __iso_volatile_load/store instrinsics](#IsoVolatileLoadStore).|  
-|__iso_volatile_store32||void __iso_volatile_store32 (volatile \__int32 \*, \__int32)<br /><br /> Další informace najdete v tématu [Using __iso_volatile_load/store instrinsics](#IsoVolatileLoadStore).|  
-|__iso_volatile_store64||void __iso_volatile_store64 (volatile \__int64 \*, \__int64)<br /><br /> Další informace najdete v tématu [Using __iso_volatile_load/store instrinsics](#IsoVolatileLoadStore).|  
-|__iso_volatile_store8||void __iso_volatile_store8 (volatile \__int8 \*, \__int8)<br /><br /> Další informace najdete v tématu [Using __iso_volatile_load/store instrinsics](#IsoVolatileLoadStore).|  
-|__ldrexd|LDREXD|__int64 \__ldrexd (const volatile \__int64 \*)|  
-|__prefetch|PLD|void __cdecl \__prefetch (const void \*)<br /><br /> Poskytuje `PLD` paměti pokyn k systému, tato paměť na nebo blízko ní zadaná adresa přístupná brzy. Některé systémy rozhodnout optimalizovat pro tento vzor přístupu paměti pro zvýšení výkonu modulu runtime. Však z C++ language pohledu, funkce nemá žádný vliv pozorovatelné a může nedělat nic vůbec.|  
-|__rdpmccntr64||unsigned __int64 \__rdpmccntr64(void)|  
-|__sev|ZÁVAŽNOST|void __sev(void)|  
-|__static_assert||void __static_assert (int, const char \*)|  
-|__swi|SVC|__swi int bez znaménka (unsigned int,...).|  
-|__trap|BKPT|int __trap (int,...)|  
-|__wfe|WFE|void __wfe(void)|  
-|__wfi|WFI|void __wfi(void)|  
-|_AddSatInt|QADD|int _AddSatInt (int, int)|  
-|_CopyDoubleFromInt64||dvojité _CopyDoubleFromInt64 (\__int64)|  
-|_CopyFloatFromInt32||float _CopyFloatFromInt32(\__int32)|  
-|_CopyInt32FromFloat||__int32 _CopyInt32FromFloat(float)|  
-|_CopyInt64FromDouble||__int64 _CopyInt64FromDouble(double)|  
-|_CountLeadingOnes||unsigned int _CountLeadingOnes(unsigned long)|  
-|_CountLeadingOnes64||unsigned int _CountLeadingOnes64 (unsigned \__int64)|  
-|_CountLeadingSigns||unsigned int _CountLeadingSigns(long)|  
-|_CountLeadingSigns64||unsigned int _CountLeadingSigns64 (\__int64)|  
-|_CountLeadingZeros||unsigned int _CountLeadingZeros(unsigned long)|  
-|_CountLeadingZeros64||unsigned int _CountLeadingZeros64 (unsigned \__int64)|  
-|_CountOneBits||unsigned int _CountOneBits(unsigned long)|  
-|_CountOneBits64||unsigned int _CountOneBits64 (unsigned \__int64)|  
-|_DAddSatInt|QDADD|int _DAddSatInt (int, int)|  
-|_DSubSatInt|QDSUB|int _DSubSatInt (int, int)|  
-|_isunordered||int _isunordered (double, double)|  
-|_isunorderedf||int _isunorderedf (float, float)|  
-|_MoveFromCoprocessor|MRC|_MoveFromCoprocessor int bez znaménka (unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> Čte data z koprocesoru ARM pomocí pokynů pro přenos dat koprocesoru. Další informace najdete v části [_MoveFromCoprocessor _MoveFromCoprocessor2](#MoveFromCo).|  
-|_MoveFromCoprocessor2|MRC2|unsigned int _MoveFromCoprocessor2 (unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> Čte data z koprocesoru ARM pomocí pokynů pro přenos dat koprocesoru. Další informace najdete v části [_MoveFromCoprocessor _MoveFromCoprocessor2](#MoveFromCo).|  
-|_MoveFromCoprocessor64|MRRC|unsigned __int64 _MoveFromCoprocessor64 (unsigned int, unsigned int, unsigned int)<br /><br /> Čte data z koprocesoru ARM pomocí pokynů pro přenos dat koprocesoru. Další informace najdete v části [_MoveFromCoprocessor64](#MoveFromCo64).|  
-|_MoveToCoprocessor|MCR|void _MoveToCoprocessor (unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> Čte data z koprocesoru ARM pomocí pokynů pro přenos dat koprocesoru. Další informace najdete v části [_MoveToCoprocessor _MoveToCoprocessor2](#MoveToCo).|  
-|_MoveToCoprocessor2|MCR2|void _MoveToCoprocessor2 (unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> Čte data z koprocesoru ARM pomocí pokynů pro přenos dat koprocesoru. Další informace najdete v části [_MoveToCoprocessor _MoveToCoprocessor2](#MoveToCo).|  
-|_MoveToCoprocessor64|MCRR|void _MoveToCoprocessor64 (unsigned \__int64, unsigned int, unsigned int, unsigned int)<br /><br /> Čte data z koprocesoru ARM pomocí pokynů pro přenos dat koprocesoru. Další informace najdete v části [_MoveToCoprocessor64](#MoveToCo64).|  
-|_MulHigh||dlouhé _MulHigh (long, long)|  
-|_MulUnsignedHigh||unsigned long _MulUnsignedHigh (long long bez znaménka, bez znaménka)|  
-|_ReadBankedReg|MRS|int _ReadBankedReg (int _Reg)|  
-|_ReadStatusReg|MRS|int _ReadStatusReg(int)|  
-|_SubSatInt|QSUB|int _SubSatInt (int, int)|  
-|_WriteBankedReg|MSR|void _WriteBankedReg (int _Value, int _Reg)|  
-|_WriteStatusReg|MSR|void _WriteStatusReg (int, int, int)|  
-  
- [[NEON](#top)]  
-  
-###  <a name="BarrierRestrictions"></a> Omezení paměti Barrier  
- Vnitřní funkce `__dmb` (data paměti barrier), `__dsb` (barrier synchronizaci dat), a `__isb` (instrukce synchronizace barrier) použijte následující předdefinované hodnoty k určení barrier omezení paměti v podmínkách sdílení domény a druh přístupu, které jsou ovlivněny operaci.  
-  
-|Hodnota omezení|Popis|  
-|-----------------------|-----------------|  
-|_ARM_BARRIER_SY|Úplnou, čtení a zápisy.|  
-|_ARM_BARRIER_ST|Úplné systém zapíše pouze.|  
-|_ARM_BARRIER_ISH|Vnitřní, které se dají sdílet, čtení a zápisu.|  
-|_ARM_BARRIER_ISHST|Vnitřní sdílet, zapíše pouze.|  
-|_ARM_BARRIER_NSH|Jiné – které se dají sdílet, čtení a zápisu.|  
-|_ARM_BARRIER_NSHST|Pouze bez sdílet, zápisy.|  
-|_ARM_BARRIER_OSH|Vnější sdílet, čtení a zápisu.|  
-|_ARM_BARRIER_OSHST|Vnější sdílet, zapíše pouze.|  
-  
- Pro `__isb` vnitřní, je jediným omezením, který je aktuálně platný _ARM_BARRIER_SY; všechny ostatní hodnoty jsou vyhrazené architekturu.  
-  
-###  <a name="IsoVolatileLoadStore"></a> instrinsics Using __iso_volatile_load/store  
- Tyto vnitřní funkce explicitně provádět zatížení a úložišť, která nejsou v souladu s optimalizace kompilátoru.  
-  
-```  
-__int16 __iso_volatile_load16(const volatile __int16 * Location)  
-__int32 __iso_volatile_load32(const volatile __int32 * Location)  
-__int64 __iso_volatile_load64(const volatile __int64 * Location)  
-__int8 __iso_volatile_load8(const volatile __int8 * Location)  
-  
-void __iso_volatile_store16(volatile __int16 * Location, __int16 Value)  
-void __iso_volatile_store32(volatile __int32 * Location, __int32 Value)  
-void __iso_volatile_store64(volatile __int64 * Location, __int64 Value)  
-void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)  
-  
-```  
-  
- **Parametry**  
-  
+
+Kompilátor Visual C++ zpřístupňuje následující vnitřní objekty na architekturu ARM. Další informace o ARM najdete v článku [příručky pro referenční architekturu ARM](http://go.microsoft.com/fwlink/p/?LinkId=522049) a [příručka nástroje assembleru ARM](http://go.microsoft.com/fwlink/p/?LinkId=246102) na webu informační středisko ARM.
+
+##  <a name="top"></a> NEON
+
+Rozšíření sady instrukcí vektorů NEON ARM poskytují možnosti více dat jedné instrukce (SIMD), které se podobají těm v MMX a SSE vektoru instrukce sady, které jsou společné pro procesory s architekturou x86 a x64.
+
+Vnitřní objekty NEON jsou podporovány, jak je uvedeno v souboru hlaviček `arm_neon.h`. Podpora kompilátoru Visual C++ pro vnitřní objekty NEON vypadá podobně jako u kompilátoru ARM, které jsou uvedené v dodatku G [sada nástrojů kompilátoru ARM, verze 4.1 kompilátoru odkaz](http://go.microsoft.com/fwlink/p/?LinkId=251083) na webu informační středisko ARM.
+
+Hlavní rozdíl mezi kompilátor Visual C++ a kompilátor ARM je, že kompilátor Visual C++ přidá `_ex` varianty `vldX` a `vstX` vektorové načtení a uložení pokyny. `_ex` Varianty trvat další parametr, který určuje zarovnání argument ukazatele, ale jsou jinak stejné jako jejich jinou hodnotu než`_ex` protějšky.
+
+##  <a name="A"></a> Vnitřní objekty ARM specifické výpis
+
+|Název funkce|Instrukce|Prototyp funkce|
+|-------------------|-----------------|------------------------|
+|_arm_smlal|SMLAL|__int64 _arm_smlal (\__int64 _RdHiLo int _Rn, int _Rm)|
+|_arm_umlal|UMLAL|unsigned __int64 _arm_umlal (unsigned \__int64 _RdHiLo, _Rn unsigned int, unsigned int _Rm)|
+|_arm_clz|CLZ|_arm_clz int bez znaménka (unsigned int _Rm)|
+|_arm_qadd|QADD|int _arm_qadd (int _Rm, int _Rn)|
+|_arm_qdadd|QDADD|int _arm_qdadd (int _Rm, int _Rn)|
+|_arm_qdsub|QDSUB|int _arm_qdsub (int _Rm, int _Rn)|
+|_arm_qsub|QSUB|int _arm_qsub (int _Rm, int _Rn)|
+|_arm_smlabb|SMLABB|int _arm_smlabb (int _Rn, int _Rm, int _Ra)|
+|_arm_smlabt|SMLABT|int _arm_smlabt (int _Rn, int _Rm, int _Ra)|
+|_arm_smlatb|SMLATB|int _arm_smlatb (int _Rn, int _Rm, int _Ra)|
+|_arm_smlatt|SMLATT|int _arm_smlatt (int _Rn, int _Rm, int _Ra)|
+|_arm_smlalbb|SMLALBB|__int64 _arm_smlalbb (\__int64 _RdHiLo int _Rn, int _Rm)|
+|_arm_smlalbt|SMLALBT|__int64 _arm_smlalbt (\__int64 _RdHiLo int _Rn, int _Rm)|
+|_arm_smlaltb|SMLALTB|__int64 _arm_smlaltb (\__int64 _RdHiLo int _Rn, int _Rm)|
+|_arm_smlaltt|SMLALTT|__int64 _arm_smlaltt (\__int64 _RdHiLo int _Rn, int _Rm)|
+|_arm_smlawb|SMLAWB|int _arm_smlawb (int _Rn, int _Rm, int _Ra)|
+|_arm_smlawt|SMLAWT|int _arm_smlawt (int _Rn, int _Rm, int _Ra)|
+|_arm_smulbb|SMULBB|int _arm_smulbb (int _Rn, int _Rm)|
+|_arm_smulbt|SMULBT|int _arm_smulbt (int _Rn, int _Rm)|
+|_arm_smultb|SMULTB|int _arm_smultb (int _Rn, int _Rm)|
+|_arm_smultt|SMULTT|int _arm_smultt (int _Rn, int _Rm)|
+|_arm_smulwb|SMULWB|int _arm_smulwb (int _Rn, int _Rm)|
+|_arm_smulwt|SMULWT|int _arm_smulwt (int _Rn, int _Rm)|
+|_arm_sadd16|SADD16|int _arm_sadd16 (_Rn int, int _Rm)|
+|_arm_sadd8|SADD8|int _arm_sadd8 (_Rn int, int _Rm)|
+|_arm_sasx|SASX|int _arm_sasx (int _Rn, int _Rm)|
+|_arm_ssax|SSAX|int _arm_ssax (int _Rn, int _Rm)|
+|_arm_ssub16|SSUB16|int _arm_ssub16 (_Rn int, int _Rm)|
+|_arm_ssub8|SSUB8|int _arm_ssub8 (_Rn int, int _Rm)|
+|_arm_shadd16|SHADD16|int _arm_shadd16 (_Rn int, int _Rm)|
+|_arm_shadd8|SHADD8|int _arm_shadd8 (_Rn int, int _Rm)|
+|_arm_shasx|SHASX|int _arm_shasx (int _Rn, int _Rm)|
+|_arm_shsax|SHSAX|int _arm_shsax (int _Rn, int _Rm)|
+|_arm_shsub16|SHSUB16|int _arm_shsub16 (_Rn int, int _Rm)|
+|_arm_shsub8|SHSUB8|int _arm_shsub8 (_Rn int, int _Rm)|
+|_arm_qadd16|QADD16|int _arm_qadd16 (_Rn int, int _Rm)|
+|_arm_qadd8|QADD8|int _arm_qadd8 (_Rn int, int _Rm)|
+|_arm_qasx|QASX|int _arm_qasx (int _Rn, int _Rm)|
+|_arm_qsax|QSAX|int _arm_qsax (int _Rn, int _Rm)|
+|_arm_qsub16|QSUB16|int _arm_qsub16 (_Rn int, int _Rm)|
+|_arm_qsub8|QSUB8|int _arm_qsub8 (_Rn int, int _Rm)|
+|_arm_uadd16|UADD16|unsigned int _arm_uadd16 (_Rn unsigned int, unsigned int _Rm)|
+|_arm_uadd8|UADD8|unsigned int _arm_uadd8 (_Rn unsigned int, unsigned int _Rm)|
+|_arm_uasx|UASX|unsigned int _arm_uasx (_Rn unsigned int, unsigned int _Rm)|
+|_arm_usax|USAX|unsigned int _arm_usax (_Rn unsigned int, unsigned int _Rm)|
+|_arm_usub16|USUB16|unsigned int _arm_usub16 (_Rn unsigned int, unsigned int _Rm)|
+|_arm_usub8|USUB8|unsigned int _arm_usub8 (_Rn unsigned int, unsigned int _Rm)|
+|_arm_uhadd16|UHADD16|unsigned int _arm_uhadd16 (_Rn unsigned int, unsigned int _Rm)|
+|_arm_uhadd8|UHADD8|unsigned int _arm_uhadd8 (_Rn unsigned int, unsigned int _Rm)|
+|_arm_uhasx|UHASX|unsigned int _arm_uhasx (_Rn unsigned int, unsigned int _Rm)|
+|_arm_uhsax|UHSAX|unsigned int _arm_uhsax (_Rn unsigned int, unsigned int _Rm)|
+|_arm_uhsub16|UHSUB16|unsigned int _arm_uhsub16 (_Rn unsigned int, unsigned int _Rm)|
+|_arm_uhsub8|UHSUB8|unsigned int _arm_uhsub8 (_Rn unsigned int, unsigned int _Rm)|
+|_arm_uqadd16|UQADD16|unsigned int _arm_uqadd16 (_Rn unsigned int, unsigned int _Rm)|
+|_arm_uqadd8|UQADD8|unsigned int _arm_uqadd8 (_Rn unsigned int, unsigned int _Rm)|
+|_arm_uqasx|UQASX|unsigned int _arm_uqasx (_Rn unsigned int, unsigned int _Rm)|
+|_arm_uqsax|UQSAX|unsigned int _arm_uqsax (_Rn unsigned int, unsigned int _Rm)|
+|_arm_uqsub16|UQSUB16|unsigned int _arm_uqsub16 (_Rn unsigned int, unsigned int _Rm)|
+|_arm_uqsub8|UQSUB8|unsigned int _arm_uqsub8 (_Rn unsigned int, unsigned int _Rm)|
+|_arm_sxtab|SXTAB|int _arm_sxtab (int _Rn, int _Rm, unsigned int _Rotation)|
+|_arm_sxtab16|SXTAB16|int _arm_sxtab16 (_Rn int, int _Rm, unsigned int _Rotation)|
+|_arm_sxtah|SXTAH|int _arm_sxtah (int _Rn, int _Rm, unsigned int _Rotation)|
+|_arm_uxtab|UXTAB|_arm_uxtab int bez znaménka (unsigned int _Rn, _Rm unsigned int, unsigned int _Rotation)|
+|_arm_uxtab16|UXTAB16|unsigned int _arm_uxta16b (unsigned int _Rn, _Rm unsigned int, unsigned int _Rotation)|
+|_arm_uxtah|UXTAH|_arm_uxtah int bez znaménka (unsigned int _Rn, _Rm unsigned int, unsigned int _Rotation)|
+|_arm_sxtb|SXTB|int _arm_sxtb (int _Rn, unsigned int _Rotation)|
+|_arm_sxtb16|SXTB16|int _arm_sxtb16 (_Rn int, unsigned int _Rotation)|
+|_arm_sxth|SXTH|int _arm_sxth (int _Rn, unsigned int _Rotation)|
+|_arm_uxtb|UXTB|unsigned int _arm_uxtb (_Rn unsigned int, unsigned int _Rotation)|
+|_arm_uxtb16|UXTB16|unsigned int _arm_uxtb16 (_Rn unsigned int, unsigned int _Rotation)|
+|_arm_uxth|UXTH|unsigned int _arm_uxth (_Rn unsigned int, unsigned int _Rotation)|
+|_arm_pkhbt|PKHBT|int _arm_pkhbt (int _Rn, int _Rm, unsigned int _Lsl_imm)|
+|_arm_pkhtb|PKHTB|int _arm_pkhtb (int _Rn, int _Rm, unsigned int _Asr_imm)|
+|_arm_usad8|USAD8|unsigned int _arm_usad8 (_Rn unsigned int, unsigned int _Rm)|
+|_arm_usada8|USADA8|unsigned int _arm_usada8 (unsigned int _Rn, _Rm unsigned int, unsigned int _Ra)|
+|_arm_ssat|SSAT|int _arm_ssat (unsigned int _Sat_imm, _int _Rn, _ARMINTR_SHIFT_T _Shift_type, unsigned int _Shift_imm)|
+|_arm_usat|USAT|int _arm_usat (unsigned int _Sat_imm, _int _Rn, _ARMINTR_SHIFT_T _Shift_type, unsigned int _Shift_imm)|
+|_arm_ssat16|SSAT16|int _arm_ssat16 (unsigned int _Sat_imm, _int _Rn)|
+|_arm_usat16|USAT16|int _arm_usat16 (unsigned int _Sat_imm, _int _Rn)|
+|_arm_rev|REV|_arm_rev int bez znaménka (unsigned int _Rm)|
+|_arm_rev16|REV16|unsigned int _arm_rev16 (unsigned int _Rm)|
+|_arm_revsh|REVSH|_arm_revsh int bez znaménka (unsigned int _Rm)|
+|_arm_smlad|SMLAD|int _arm_smlad (int _Rn, int _Rm, int _Ra)|
+|_arm_smladx|SMLADX|int _arm_smladx (int _Rn, int _Rm, int _Ra)|
+|_arm_smlsd|SMLSD|int _arm_smlsd (int _Rn, int _Rm, int _Ra)|
+|_arm_smlsdx|SMLSDX|int _arm_smlsdx (int _Rn, int _Rm, int _Ra)|
+|_arm_smmla|SMMLA|int _arm_smmla (int _Rn, int _Rm, int _Ra)|
+|_arm_smmlar|SMMLAR|int _arm_smmlar (int _Rn, int _Rm, int _Ra)|
+|_arm_smmls|SMMLS|int _arm_smmls (int _Rn, int _Rm, int _Ra)|
+|_arm_smmlsr|SMMLSR|int _arm_smmlsr (int _Rn, int _Rm, int _Ra)|
+|_arm_smmul|SMMUL|int _arm_smmul (int _Rn, int _Rm)|
+|_arm_smmulr|SMMULR|int _arm_smmulr (int _Rn, int _Rm)|
+|_arm_smlald|SMLALD|__int64 _arm_smlald (\__int64 _RdHiLo int _Rn, int _Rm)|
+|_arm_smlaldx|SMLALDX|__int64 _arm_smlaldx (\__int64 _RdHiLo int _Rn, int _Rm)|
+|_arm_smlsld|SMLSLD|__int64 _arm_smlsld (\__int64 _RdHiLo int _Rn, int _Rm)|
+|_arm_smlsldx|SMLSLDX|__int64 _arm_smlsldx (\__int64 _RdHiLo int _Rn, int _Rm)|
+|_arm_smuad|SMUAD|int _arm_smuad (int _Rn, int _Rm)|
+|_arm_smuadx|SMUADX|int _arm_muadxs (int _Rn, int _Rm)|
+|_arm_smusd|SMUSD|int _arm_smusd (int _Rn, int _Rm)|
+|_arm_smusdx|SMUSDX|int _arm_smusdx (int _Rn, int _Rm)|
+|_arm_smull|SMULL|__int64 _arm_smull (int _Rn, int _Rm)|
+|_arm_umull|UMULL|unsigned __int64 _arm_umull (_Rn unsigned int, unsigned int _Rm)|
+|_arm_umaal|UMAAL|unsigned __int64 _arm_umaal (_RdLo unsigned int, unsigned int _RdHi, _Rn unsigned int, unsigned int _Rm)|
+|_arm_bfc|BFC|_arm_bfc int bez znaménka (unsigned int _Rd, _Lsb unsigned int, unsigned int k vlastnostem _Width)|
+|_arm_bfi|BFI|unsigned int _arm_bfi (_Rd unsigned int, unsigned int _Rn, _Lsb unsigned int, unsigned int k vlastnostem _Width)|
+|_arm_rbit|RBIT|_arm_rbit int bez znaménka (unsigned int _Rm)|
+|_arm_sbfx|SBFX|int _arm_sbfx (int _Rn, unsigned int _Lsb, k vlastnostem _Width unsigned int)|
+|_arm_ubfx|UBFX|_arm_ubfx int bez znaménka (unsigned int _Rn, _Lsb unsigned int, unsigned int k vlastnostem _Width)|
+|_arm_sdiv|SDIV|int _arm_sdiv (int _Rn, int _Rm)|
+|_arm_udiv|UDIV|unsigned int _arm_udiv (_Rn unsigned int, unsigned int _Rm)|
+|__cps|PROHLÁŠENÍ CPS|void __cps (unsigned int _Ops, _Flags unsigned int, unsigned int reži_m)|
+|__dmb|MB|void __dmb (unsigned int `_Type`)<br /><br /> Vloží operaci barrier paměti do datového proudu instrukce. Parametr `_Type` určuje druh omezení, které je vynucuje odbourejte překážky bránící.<br /><br /> Další informace o druzích omezení, které je možné vynutit, najdete v části [omezení paměti Barrier](#BarrierRestrictions).|
+|__dsb|DSB|void __dsb (unsigned int _typ)<br /><br /> Vloží operaci barrier paměti do datového proudu instrukce. Parametr `_Type` určuje druh omezení, které je vynucuje odbourejte překážky bránící.<br /><br /> Další informace o druzích omezení, které je možné vynutit, najdete v části [omezení paměti Barrier](#BarrierRestrictions).|
+|__isb|ISB|void __isb (unsigned int _typ)<br /><br /> Vloží operaci barrier paměti do datového proudu instrukce. Parametr `_Type` určuje druh omezení, které je vynucuje odbourejte překážky bránící.<br /><br /> Další informace o druzích omezení, které je možné vynutit, najdete v části [omezení paměti Barrier](#BarrierRestrictions).|
+|__emit||void __emit (unsigned \__int32 opcode)<br /><br /> Vloží zadaný instrukce na datový proud instrukcí výstupní kompilátorem.<br /><br /> Hodnota `opcode` musí být konstantní výraz, který je známý v době kompilace. Velikost word instrukce je 16 bitů a nejdůležitější 16 bitů `opcode` jsou ignorovány.<br /><br /> Kompilátor nesnaží interpretovat obsah `opcode` a před provedením vložené instrukce nezaručuje stavu procesoru nebo paměti.<br /><br /> Kompilátor předpokládá, že stav procesoru a paměti jsou beze změny po provedení vložené instrukce. Pokyny, které mění stav proto může mít nepříznivý vliv na běžné kód, který je generovaný kompilátorem.<br /><br /> Z tohoto důvodu použít `emit` pouze pro vložení instrukcí, které ovlivňují stav procesoru, který kompilátor nezpracovává obvykle – například koprocesoru stavu – nebo k implementaci funkcí, které jsou deklarovány pomocí `declspec(naked)`.|
+|__hvc|HVC|__hvc int bez znaménka (unsigned int,...).|
+|__iso_volatile_load16||__int16 \__iso_volatile_load16 (const volatile \__int16 \*)<br /><br /> Další informace najdete v tématu [Using __iso_volatile_load/store instrinsics](#IsoVolatileLoadStore).|
+|__iso_volatile_load32||__int32 \__iso_volatile_load32 (const volatile \__int32 \*)<br /><br /> Další informace najdete v tématu [Using __iso_volatile_load/store instrinsics](#IsoVolatileLoadStore).|
+|__iso_volatile_load64||__int64 \__iso_volatile_load64 (const volatile \__int64 \*)<br /><br /> Další informace najdete v tématu [Using __iso_volatile_load/store instrinsics](#IsoVolatileLoadStore).|
+|__iso_volatile_load8||__int8 \__iso_volatile_load8 (const volatile \__int8 \*)<br /><br /> Další informace najdete v tématu [Using __iso_volatile_load/store instrinsics](#IsoVolatileLoadStore).|
+|__iso_volatile_store16||void __iso_volatile_store16 (volatile \__int16 \*, \__int16)<br /><br /> Další informace najdete v tématu [Using __iso_volatile_load/store instrinsics](#IsoVolatileLoadStore).|
+|__iso_volatile_store32||void __iso_volatile_store32 (volatile \__int32 \*, \__int32)<br /><br /> Další informace najdete v tématu [Using __iso_volatile_load/store instrinsics](#IsoVolatileLoadStore).|
+|__iso_volatile_store64||void __iso_volatile_store64 (volatile \__int64 \*, \__int64)<br /><br /> Další informace najdete v tématu [Using __iso_volatile_load/store instrinsics](#IsoVolatileLoadStore).|
+|__iso_volatile_store8||void __iso_volatile_store8 (volatile \__int8 \*, \__int8)<br /><br /> Další informace najdete v tématu [Using __iso_volatile_load/store instrinsics](#IsoVolatileLoadStore).|
+|__ldrexd|LDREXD|__int64 \__ldrexd (const volatile \__int64 \*)|
+|__prefetch|PLD|void __cdecl \__prefetch (const void \*)<br /><br /> Poskytuje `PLD` paměti pokyn k systému, tato paměť na nebo blízko ní zadaná adresa přístupná brzy. Některé systémy rozhodnout optimalizovat pro tento vzor přístupu paměti pro zvýšení výkonu modulu runtime. Však z C++ language pohledu, funkce nemá žádný vliv pozorovatelné a může nedělat nic vůbec.|
+|__rdpmccntr64||unsigned __int64 \__rdpmccntr64(void)|
+|__sev|ZÁVAŽNOST|void __sev(void)|
+|__static_assert||void __static_assert (int, const char \*)|
+|__swi|SVC|__swi int bez znaménka (unsigned int,...).|
+|__trap|BKPT|int __trap (int,...)|
+|__wfe|WFE|void __wfe(void)|
+|__wfi|WFI|void __wfi(void)|
+|_AddSatInt|QADD|int _AddSatInt (int, int)|
+|_CopyDoubleFromInt64||dvojité _CopyDoubleFromInt64 (\__int64)|
+|_CopyFloatFromInt32||float _CopyFloatFromInt32(\__int32)|
+|_CopyInt32FromFloat||__int32 _CopyInt32FromFloat(float)|
+|_CopyInt64FromDouble||__int64 _CopyInt64FromDouble(double)|
+|_CountLeadingOnes||unsigned int _CountLeadingOnes(unsigned long)|
+|_CountLeadingOnes64||unsigned int _CountLeadingOnes64 (unsigned \__int64)|
+|_CountLeadingSigns||unsigned int _CountLeadingSigns(long)|
+|_CountLeadingSigns64||unsigned int _CountLeadingSigns64 (\__int64)|
+|_CountLeadingZeros||unsigned int _CountLeadingZeros(unsigned long)|
+|_CountLeadingZeros64||unsigned int _CountLeadingZeros64 (unsigned \__int64)|
+|_CountOneBits||unsigned int _CountOneBits(unsigned long)|
+|_CountOneBits64||unsigned int _CountOneBits64 (unsigned \__int64)|
+|_DAddSatInt|QDADD|int _DAddSatInt (int, int)|
+|_DSubSatInt|QDSUB|int _DSubSatInt (int, int)|
+|_isunordered||int _isunordered (double, double)|
+|_isunorderedf||int _isunorderedf (float, float)|
+|_MoveFromCoprocessor|MRC|_MoveFromCoprocessor int bez znaménka (unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> Čte data z koprocesoru ARM pomocí pokynů pro přenos dat koprocesoru. Další informace najdete v části [_MoveFromCoprocessor _MoveFromCoprocessor2](#MoveFromCo).|
+|_MoveFromCoprocessor2|MRC2|unsigned int _MoveFromCoprocessor2 (unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> Čte data z koprocesoru ARM pomocí pokynů pro přenos dat koprocesoru. Další informace najdete v části [_MoveFromCoprocessor _MoveFromCoprocessor2](#MoveFromCo).|
+|_MoveFromCoprocessor64|MRRC|unsigned __int64 _MoveFromCoprocessor64 (unsigned int, unsigned int, unsigned int)<br /><br /> Čte data z koprocesoru ARM pomocí pokynů pro přenos dat koprocesoru. Další informace najdete v části [_MoveFromCoprocessor64](#MoveFromCo64).|
+|_MoveToCoprocessor|MCR|void _MoveToCoprocessor (unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> Čte data z koprocesoru ARM pomocí pokynů pro přenos dat koprocesoru. Další informace najdete v části [_MoveToCoprocessor _MoveToCoprocessor2](#MoveToCo).|
+|_MoveToCoprocessor2|MCR2|void _MoveToCoprocessor2 (unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> Čte data z koprocesoru ARM pomocí pokynů pro přenos dat koprocesoru. Další informace najdete v části [_MoveToCoprocessor _MoveToCoprocessor2](#MoveToCo).|
+|_MoveToCoprocessor64|MCRR|void _MoveToCoprocessor64 (unsigned \__int64, unsigned int, unsigned int, unsigned int)<br /><br /> Čte data z koprocesoru ARM pomocí pokynů pro přenos dat koprocesoru. Další informace najdete v části [_MoveToCoprocessor64](#MoveToCo64).|
+|_MulHigh||dlouhé _MulHigh (long, long)|
+|_MulUnsignedHigh||unsigned long _MulUnsignedHigh (long long bez znaménka, bez znaménka)|
+|_ReadBankedReg|MRS|int _ReadBankedReg (int _Reg)|
+|_ReadStatusReg|MRS|int _ReadStatusReg(int)|
+|_SubSatInt|QSUB|int _SubSatInt (int, int)|
+|_WriteBankedReg|MSR|void _WriteBankedReg (int _Value, int _Reg)|
+|_WriteStatusReg|MSR|void _WriteStatusReg (int, int, int)|
+
+[[NEON](#top)]
+
+###  <a name="BarrierRestrictions"></a> Omezení paměti Barrier
+
+Vnitřní funkce `__dmb` (data paměti barrier), `__dsb` (barrier synchronizaci dat), a `__isb` (instrukce synchronizace barrier) použijte následující předdefinované hodnoty k určení barrier omezení paměti v podmínkách sdílení domény a druh přístupu, které jsou ovlivněny operaci.
+
+|Hodnota omezení|Popis|
+|-----------------------|-----------------|
+|_ARM_BARRIER_SY|Úplnou, čtení a zápisy.|
+|_ARM_BARRIER_ST|Úplné systém zapíše pouze.|
+|_ARM_BARRIER_ISH|Vnitřní, které se dají sdílet, čtení a zápisu.|
+|_ARM_BARRIER_ISHST|Vnitřní sdílet, zapíše pouze.|
+|_ARM_BARRIER_NSH|Jiné – které se dají sdílet, čtení a zápisu.|
+|_ARM_BARRIER_NSHST|Pouze bez sdílet, zápisy.|
+|_ARM_BARRIER_OSH|Vnější sdílet, čtení a zápisu.|
+|_ARM_BARRIER_OSHST|Vnější sdílet, zapíše pouze.|
+
+Pro `__isb` vnitřní, je jediným omezením, který je aktuálně platný _ARM_BARRIER_SY; všechny ostatní hodnoty jsou vyhrazené architekturu.
+
+###  <a name="IsoVolatileLoadStore"></a> instrinsics Using __iso_volatile_load/store
+
+Tyto vnitřní funkce explicitně provádět zatížení a úložišť, která nejsou v souladu s optimalizace kompilátoru.
+
+```
+__int16 __iso_volatile_load16(const volatile __int16 * Location)
+__int32 __iso_volatile_load32(const volatile __int32 * Location)
+__int64 __iso_volatile_load64(const volatile __int64 * Location)
+__int8 __iso_volatile_load8(const volatile __int8 * Location)
+
+void __iso_volatile_store16(volatile __int16 * Location, __int16 Value)
+void __iso_volatile_store32(volatile __int32 * Location, __int32 Value)
+void __iso_volatile_store64(volatile __int64 * Location, __int64 Value)
+void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
+
+```
+
+#### <a name="parameters"></a>Parametry
+
 *Poloha*<br/>
-Adresa umístění v paměti a číst nebo zapisovat.  
-  
+Adresa umístění v paměti a číst nebo zapisovat.
+
 *Hodnota*<br/>
-Hodnota k zápisu na zadaném umístění v paměti (pouze vnitřních úložiště objektů).  
-  
- **Vrátí hodnotu (pouze pro zatížení vnitřní)**  
-  
- Hodnota umístění v paměti, která je zadána `Location`.  
-  
- **Poznámky**  
-  
- Můžete použít `__iso_volatile_load8/16/32/64` a `__iso_volatile_store8/16/32/64` vnitřní objekty explicitně provádět přístupy do paměti, které nejsou v souladu s optimalizace kompilátoru. Kompilátor nelze odebrat, synthetize, nebo změňte relativní pořadí těchto operací, ale negeneruje implicitní hardwarové překážky paměti. Proto hardwaru může stále změnit pořadí přístupu k pozorovatelných paměti napříč více vlákny. Přesněji řečeno, tyto vnitřní objekty jsou ekvivalentní s následující výrazy zkompilovat v rámci **/volatile:iso**.  
-  
+Hodnota k zápisu na zadaném umístění v paměti (pouze vnitřních úložiště objektů).
+
+#### <a name="return-value-load-intrinsics-only"></a>Vrátí hodnotu (pouze pro zatížení vnitřní)
+
+Hodnota umístění v paměti, která je zadána `Location`.
+
+#### <a name="remarks"></a>Poznámky
+
+Můžete použít `__iso_volatile_load8/16/32/64` a `__iso_volatile_store8/16/32/64` vnitřní objekty explicitně provádět přístupy do paměti, které nejsou v souladu s optimalizace kompilátoru. Kompilátor nelze odebrat, synthetize, nebo změňte relativní pořadí těchto operací, ale negeneruje implicitní hardwarové překážky paměti. Proto hardwaru může stále změnit pořadí přístupu k pozorovatelných paměti napříč více vlákny. Přesněji řečeno, tyto vnitřní objekty jsou ekvivalentní s následující výrazy zkompilovat v rámci **/volatile:iso**.
+
 ```cpp
-int a = __iso_volatile_load32(p);    // equivalent to: int a = *(const volatile __int32*)p;   
-__iso_volatile_store32(p, a);        // equivalent to: *(volatile __int32*)p = a;  
-```  
-  
- Všimněte si, že vnitřní objekty trvat ukazatelé typu volatile tak, aby vyhovovaly volatile proměnné. Neexistuje však žádný požadavek nebo doporučení pro použití jako argumenty; ukazatelé typu volatile Sémantika tyto operace se přesně shodují-li regulární, není typu volatile. typ se používá.  
-  
- Další informace o **/volatile:iso** argument příkazového řádku, naleznete v tématu [/volatile (interpretace klíčového slova volatile)](../build/reference/volatile-volatile-keyword-interpretation.md).  
-  
-###  <a name="MoveFromCo"></a> _MoveFromCoprocessor _MoveFromCoprocessor2  
- Tyto vnitřní funkce podle pokynů pro přenos dat koprocesoru číst data z ARM coprocessors.  
-  
-```  
-int _MoveFromCoprocessor(  
-      unsigned int coproc,  
-      unsigned int opcode1,  
-      unsigned int crn,  
-      unsigned int crm,  
-      unsigned int opcode2  
-);  
-  
-int _MoveFromCoprocessor2(  
-      unsigned int coproc,  
-      unsigned int opcode1,  
-      unsigned int crn,  
-      unsigned int crm,  
-      unsigned int opcode2  
-);  
-  
-```  
-  
- **Parametry**  
-  
+int a = __iso_volatile_load32(p);    // equivalent to: int a = *(const volatile __int32*)p;
+__iso_volatile_store32(p, a);        // equivalent to: *(volatile __int32*)p = a;
+```
+
+Všimněte si, že vnitřní objekty trvat ukazatelé typu volatile tak, aby vyhovovaly volatile proměnné. Neexistuje však žádný požadavek nebo doporučení pro použití jako argumenty; ukazatelé typu volatile Sémantika tyto operace se přesně shodují-li regulární, není typu volatile. typ se používá.
+
+Další informace o **/volatile:iso** argument příkazového řádku, naleznete v tématu [/volatile (interpretace klíčového slova volatile)](../build/reference/volatile-volatile-keyword-interpretation.md).
+
+###  <a name="MoveFromCo"></a> _MoveFromCoprocessor _MoveFromCoprocessor2
+
+Tyto vnitřní funkce podle pokynů pro přenos dat koprocesoru číst data z ARM coprocessors.
+
+```
+int _MoveFromCoprocessor(
+      unsigned int coproc,
+      unsigned int opcode1,
+      unsigned int crn,
+      unsigned int crm,
+      unsigned int opcode2
+);
+
+int _MoveFromCoprocessor2(
+      unsigned int coproc,
+      unsigned int opcode1,
+      unsigned int crn,
+      unsigned int crm,
+      unsigned int opcode2
+);
+
+```
+
+#### <a name="parameters"></a>Parametry
+
 *coproc*<br/>
-Koprocesor číslo v rozsahu 0 až 15.  
-  
+Koprocesor číslo v rozsahu 0 až 15.
+
 *opcode1*<br/>
-Koprocesor konkrétní operační kód v rozsahu 0 až 7  
-  
+Koprocesor konkrétní operační kód v rozsahu 0 až 7
+
 *crn*<br/>
-Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje první operand podle pokynů.  
-  
+Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje první operand podle pokynů.
+
 *CRM*<br/>
-Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje další zdrojové nebo cílové operand.  
-  
+Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje další zdrojové nebo cílové operand.
+
 *opcode2*<br/>
-Další specifické pro koprocesor operační kód v rozsahu 0 až 7.  
-  
- **Návratová hodnota**  
-  
- Hodnota, která je načtena z 80bitové.  
-  
- **Poznámky**  
-  
- Hodnoty všech parametrů pět tomto vnitřních musí být konstantní výrazy, které jsou v době kompilace znám.  
-  
- `_MoveFromCoprocessor` použije instrukce MRC; `_MoveFromCoprocessor2` používá MRC2. Parametry odpovídají bitová pole, která jsou kódovány přímo do aplikace word instrukce. Výklad parametry závisí na koprocesoru. Další informace naleznete v příručce pro koprocesor dotyčný.  
-  
-###  <a name="MoveFromCo64"></a> _MoveFromCoprocessor64  
- Pomocí pokynů pro přenos dat koprocesoru čte data z ARM coprocessors.  
-  
-```  
-unsigned __int64 _MoveFromCoprocessor64(  
-      unsigned int coproc,  
-      unsigned int opcode1,  
-      unsigned int crm,  
-);  
-  
-```  
-  
- **Parametry**  
-  
+Další specifické pro koprocesor operační kód v rozsahu 0 až 7.
+
+#### <a name="return-value"></a>Návratová hodnota
+
+Hodnota, která je načtena z 80bitové.
+
+#### <a name="remarks"></a>Poznámky
+
+Hodnoty všech parametrů pět tomto vnitřních musí být konstantní výrazy, které jsou v době kompilace znám.
+
+`_MoveFromCoprocessor` použije instrukce MRC; `_MoveFromCoprocessor2` používá MRC2. Parametry odpovídají bitová pole, která jsou kódovány přímo do aplikace word instrukce. Výklad parametry závisí na koprocesoru. Další informace naleznete v příručce pro koprocesor dotyčný.
+
+###  <a name="MoveFromCo64"></a> _MoveFromCoprocessor64
+
+Pomocí pokynů pro přenos dat koprocesoru čte data z ARM coprocessors.
+
+```
+unsigned __int64 _MoveFromCoprocessor64(
+      unsigned int coproc,
+      unsigned int opcode1,
+      unsigned int crm,
+);
+
+```
+
+#### <a name="parameters"></a>Parametry
+
 *coproc*<br/>
-Koprocesor číslo v rozsahu 0 až 15.  
-  
+Koprocesor číslo v rozsahu 0 až 15.
+
 *opcode1*<br/>
-Koprocesor konkrétní operační kód v rozsahu 0 až 15.  
-  
+Koprocesor konkrétní operační kód v rozsahu 0 až 15.
+
 *CRM*<br/>
-Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje další zdrojové nebo cílové operand.  
-  
- **Vrací hodnotu**  
-  
- Hodnota, která je načtena z 80bitové.  
-  
- **Poznámky**  
-  
- Hodnoty všech tří parametrů tomto vnitřních musí být konstantní výrazy, které jsou v době kompilace znám.  
-  
- `_MoveFromCoprocessor64` používá MRRC instrukce. Parametry odpovídají bitová pole, která jsou kódovány přímo do aplikace word instrukce. Výklad parametry závisí na koprocesoru. Další informace naleznete v příručce pro koprocesor dotyčný.  
-  
-###  <a name="MoveToCo"></a> _MoveToCoprocessor _MoveToCoprocessor2  
- Tyto vnitřní funkce zapisovat data do ARM coprocessors pomocí pokynů koprocesoru data přenosu.  
-  
-```  
-void _MoveToCoprocessor(  
-      unsigned int value,  
-      unsigned int coproc,  
-      unsigned int opcode1,  
-      unsigned int crn,  
-      unsigned int crm,  
-      unsigned int opcode2  
-);  
-  
-void _MoveToCoprocessor2(  
-      unsigned int value,  
-      unsigned int coproc,  
-      unsigned int opcode1,  
-      unsigned int crn,  
-      unsigned int crm,  
-      unsigned int opcode2  
-);  
-  
-```  
-  
- **Parametry**  
-  
+Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje další zdrojové nebo cílové operand.
+
+**Vrací hodnotu**
+
+Hodnota, která je načtena z 80bitové.
+
+#### <a name="remarks"></a>Poznámky
+
+Hodnoty všech tří parametrů tomto vnitřních musí být konstantní výrazy, které jsou v době kompilace znám.
+
+`_MoveFromCoprocessor64` používá MRRC instrukce. Parametry odpovídají bitová pole, která jsou kódovány přímo do aplikace word instrukce. Výklad parametry závisí na koprocesoru. Další informace naleznete v příručce pro koprocesor dotyčný.
+
+###  <a name="MoveToCo"></a> _MoveToCoprocessor _MoveToCoprocessor2
+
+Tyto vnitřní funkce zapisovat data do ARM coprocessors pomocí pokynů koprocesoru data přenosu.
+
+```
+void _MoveToCoprocessor(
+      unsigned int value,
+      unsigned int coproc,
+      unsigned int opcode1,
+      unsigned int crn,
+      unsigned int crm,
+      unsigned int opcode2
+);
+
+void _MoveToCoprocessor2(
+      unsigned int value,
+      unsigned int coproc,
+      unsigned int opcode1,
+      unsigned int crn,
+      unsigned int crm,
+      unsigned int opcode2
+);
+
+```
+
+#### <a name="parameters"></a>Parametry
+
 *value*<br/>
-Hodnota má být proveden zápis 80bitové.  
-  
+Hodnota má být proveden zápis 80bitové.
+
 *coproc*<br/>
-Koprocesor číslo v rozsahu 0 až 15.  
-  
+Koprocesor číslo v rozsahu 0 až 15.
+
 *opcode1*<br/>
-Koprocesor konkrétní operační kód v rozsahu 0 až 7.  
-  
+Koprocesor konkrétní operační kód v rozsahu 0 až 7.
+
 *crn*<br/>
-Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje první operand podle pokynů.  
-  
+Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje první operand podle pokynů.
+
 *CRM*<br/>
-Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje další zdrojové nebo cílové operand.  
-  
+Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje další zdrojové nebo cílové operand.
+
 *opcode2*<br/>
-Další specifické pro koprocesor operační kód v rozsahu 0 až 7.  
-  
- **Návratová hodnota**  
-  
- Žádné  
-  
- **Poznámky**  
-  
- Hodnoty `coproc`, `opcode1`, `crn`, `crm`, a `opcode2` parametry tomto vnitřních musí být konstantní výrazy, které jsou v době kompilace znám.  
-  
- `_MoveToCoprocessor` použije instrukce MCR; `_MoveToCoprocessor2` používá MCR2. Parametry odpovídají bitová pole, která jsou kódovány přímo do aplikace word instrukce. Výklad parametry závisí na koprocesoru. Další informace naleznete v příručce pro koprocesor dotyčný.  
-  
-###  <a name="MoveToCo64"></a> _MoveToCoprocessor64  
- Tyto vnitřní funkce zapisovat data do ARM coprocessors pomocí pokynů koprocesoru data přenosu.  
-  
-```  
-void _MoveFromCoprocessor64(  
-      unsigned __int64 value,  
-      unsigned int coproc,  
-      unsigned int opcode1,  
-      unsigned int crm,  
-);  
-  
-```  
-  
- **Parametry**  
-  
+Další specifické pro koprocesor operační kód v rozsahu 0 až 7.
+
+#### <a name="return-value"></a>Návratová hodnota
+
+Žádné
+
+#### <a name="remarks"></a>Poznámky
+
+Hodnoty `coproc`, `opcode1`, `crn`, `crm`, a `opcode2` parametry tomto vnitřních musí být konstantní výrazy, které jsou v době kompilace znám.
+
+`_MoveToCoprocessor` použije instrukce MCR; `_MoveToCoprocessor2` používá MCR2. Parametry odpovídají bitová pole, která jsou kódovány přímo do aplikace word instrukce. Výklad parametry závisí na koprocesoru. Další informace naleznete v příručce pro koprocesor dotyčný.
+
+###  <a name="MoveToCo64"></a> _MoveToCoprocessor64
+
+Tyto vnitřní funkce zapisovat data do ARM coprocessors pomocí pokynů koprocesoru data přenosu.
+
+```
+void _MoveFromCoprocessor64(
+      unsigned __int64 value,
+      unsigned int coproc,
+      unsigned int opcode1,
+      unsigned int crm,
+);
+
+```
+
+#### <a name="parameters"></a>Parametry
+
 *coproc*<br/>
-Koprocesor číslo v rozsahu 0 až 15.  
-  
+Koprocesor číslo v rozsahu 0 až 15.
+
 *opcode1*<br/>
-Koprocesor konkrétní operační kód v rozsahu 0 až 15.  
-  
+Koprocesor konkrétní operační kód v rozsahu 0 až 15.
+
 *CRM*<br/>
-Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje další zdrojové nebo cílové operand.  
-  
- **Návratová hodnota**  
-  
- Žádné  
-  
- **Poznámky**  
-  
- Hodnoty `coproc`, `opcode1`, a `crm` parametry tomto vnitřních musí být konstantní výrazy, které jsou v době kompilace znám.  
-  
- `_MoveFromCoprocessor64` používá MCRR instrukce. Parametry odpovídají bitová pole, která jsou kódovány přímo do aplikace word instrukce. Výklad parametry závisí na koprocesoru. Další informace naleznete v příručce pro koprocesor dotyčný.  
-  
-##  <a name="I"></a> Podpora ARM pro vnitřní objekty z jiných architektury  
- Následující tabulka obsahuje seznam vnitřních objektů z jiné architektury, které jsou podporovány na platformách ARM. Kde se liší od jeho chování pro jiné architektury hardwaru chování vnitřní na ARM jsou uvedené další podrobnosti.  
-  
-|Název funkce|Prototyp funkce|  
-|-------------------|------------------------|  
-|__assume|void __assume(int)|  
-|__code_seg|void __code_seg (const char \*)|  
-|__debugbreak|void __cdecl \__debugbreak(void)|  
-|__fastfail|__declspec(noreturn) void \__fastfail (unsigned int).|  
-|__nop|void __nop(void) **Poznámka:** na ARM platformy, tato funkce generuje instrukce NOP, pokud jeden je implementovaná v cílové architektuře; v opačném případě je alternativní instrukce, která se nezmění stav programu nebo využití procesoru vygeneruje – například `MOV r8, r8`. Toto je funkčně srovnatelný s \__nop vnitřní pro jiné architektury hardwaru. Protože pokyn, který nemá žádný vliv na stav aplikace nebo procesor může ignorovat. Cílová architektura jako optimalizace, instrukce nespotřebovává nutně cyklů procesoru. Proto nepoužívejte \__nop vnitřní k manipulaci s doba provádění sekvenci kódu, pokud si nejste jisti, o jak procesoru se bude chovat. Místo toho můžete použít \__nop vnitřní zarovnat další instrukci k určité hranici 32-bit adrese.|  
-|__yield|void __yield(void) **Poznámka:** na ARM platformy, tato funkce generuje instrukce YIELD, což znamená, že vlákno provádí úlohu, která může být dočasně pozastaveno z spuštění – například spinlock – bez což nepříznivě ovlivňuje program. To umožňuje procesoru ke spuštění dalších úloh během provádění cykly, které by jinak byly ztraceny.|  
-|_AddressOfReturnAddress|void \* _AddressOfReturnAddress(void)|  
-|_BitScanForward|unsigned char _BitScanForward (unsigned long \* _Index unsigned long _podsítě)|  
-|_BitScanReverse|unsigned char _BitScanReverse (unsigned long \* _Index unsigned long _podsítě)|  
-|_bittest|unsigned char _bittest (long const \*, long)|  
-|_bittestandcomplement|unsigned char _bittestandcomplement (long \*, long)|  
-|_bittestandreset|unsigned char _bittestandreset (long \*, long)|  
-|_bittestandset|unsigned char _bittestandset (long \*, long)|  
-|_byteswap_uint64|unsigned __int64 \__byteswap_uint64 – _cdecl (unsigned \__int64)|  
-|_byteswap_ulong|unsigned long __cdecl _byteswap_ulong(unsigned long)|  
-|_byteswap_ushort|_byteswap_ushort – unsigned short __cdecl (unsigned short)|  
-|_disable|void __cdecl _disable(void) **Poznámka:** na platformách ARM, tato funkce generuje instrukce CPSID; to je k dispozici pouze jako vnitřní.|  
-|_enable|void __cdecl _enable(void) **Poznámka:** na platformách ARM, tato funkce generuje instrukce CPSIE; to je k dispozici pouze jako vnitřní.|  
-|_lrotl|_lrotl – dlouhý __cdecl bez znaménka (unsigned long int)|  
-|_lrotr|_lrotr – dlouhý __cdecl bez znaménka (unsigned long int)|  
-|_ReadBarrier|void _ReadBarrier(void)|  
-|_ReadWriteBarrier|void _ReadWriteBarrier(void)|  
-|_ReturnAddress|void \* _ReturnAddress(void)|  
-|_rotl|_rotl – __cdecl int bez znaménka (_Value unsigned int, int _Shift)|  
-|_rotl16|unsigned short _rotl16 (unsigned short _Value, unsigned char _Shift)|  
-|_rotl64|unsigned __int64 \__rotl64 – _cdecl (unsigned \__int64 _Value, int _Shift)|  
-|_rotl8|unsigned char _rotl8 (unsigned char _Value, unsigned char _Shift)|  
-|_rotr|_rotr – __cdecl int bez znaménka (_Value unsigned int, int _Shift)|  
-|_rotr16|unsigned short _rotr16 (unsigned short _Value, unsigned char _Shift)|  
-|_rotr64|unsigned __int64 \__rotr64 – _cdecl (unsigned \__int64 _Value, int _Shift)|  
-|_rotr8|unsigned char _rotr8 (unsigned char _Value, unsigned char _Shift)|  
-|_setjmpex|int __cdecl _setjmpex(jmp_buf)|  
-|_WriteBarrier|void _WriteBarrier(void)|  
-  
- [[NEON](#top)]  
-  
-## <a name="interlocked-intrinsics"></a>Vnitřní funkce Interlocked  
- Propojené vnitřní objekty jsou sada vnitřních objektů, které jsou používány k provádění atomických operací čtení modify-write. Některé z nich jsou společné pro všechny platformy. Jsou uvedeny samostatně zde vzhledem k tomu, že existuje velký počet z nich, ale protože jejich definice jsou většinou redundantní, je snazší uvažovat o jejich obecné podmínky. Jejich názvy lze použít k odvození přesné chování.  
-  
- Následující tabulka shrnuje podporu ARM – vnitřní prvky bez bittest propojené. Každá buňka tabulky odpovídá názvu, který je odvozen připojením názvu operace v buňce nejvíce vlevo řádku a název typu v nejvyšším buňky sloupce, který se `_Interlocked`. Například buňky v průsečíku `Xor` řádek a **8** sloupec odpovídá `_InterlockedXor8` a jsou plně podporovány. Většina funkcí podporovaných nabízejí tyto volitelné přípony: `_acq`, `_rel`, a `_nf`. `_acq` Přípona označuje "získat" sémantické a `_rel` přípona označuje "vydání" sémantické. `_nf` Nebo příponu "žádné ohrazení" je jedinečné pro ARM a je popsána v následující části.  
-  
-||8|16|32|64|P|  
-|-|-------|--------|--------|--------|-------|  
-|Přidejte|Žádné|Žádné|Do bloku|Do bloku|Žádné|  
-|a|Do bloku|Do bloku|Do bloku|Do bloku|Žádné|  
-|CompareExchange|Do bloku|Do bloku|Do bloku|Do bloku|Do bloku|  
-|Snížení|Žádné|Do bloku|Do bloku|Do bloku|Žádné|  
-|Exchange|Částečné|Částečné|Částečné|Částečné|Částečné|  
-|ExchangeAdd|Do bloku|Do bloku|Do bloku|Do bloku|Žádné|  
-|Přírůstek|Žádné|Do bloku|Do bloku|Do bloku|Žádné|  
-|Nebo|Do bloku|Do bloku|Do bloku|Do bloku|Žádné|  
-|XOR|Do bloku|Do bloku|Do bloku|Do bloku|Žádné|  
-  
- Klíč:  
-  
--   **Úplné**: podporuje prostý, `_acq`, `_rel`, a `_nf` formuláře.  
-  
--   **Částečné**: podporuje prostý, `_acq`, a `_nf` formuláře.  
-  
--   **Žádný**: není podporováno  
-  
-###  <a name="nf_suffix"></a> Přípona _nf (žádné ohraničení)  
- `_nf` Nebo přípona "žádné ohrazení" označuje, že operace nechová jako jakýkoli druh barrier paměti. Tím se liší od tři formuláře (plain, `_acq`, a `_rel`), který všechny chovat jako určitého druhu bariéry. Jeden využití `_nf` formuláře je Udržovat statistiky čítače, která se aktualizuje pomocí více vláken ve stejnou dobu, ale jehož hodnota se jinak nepoužívá, přestože jsou provádění více vláken.  
-  
-### <a name="list-of-interlocked-intrinsics"></a>Seznam vnitřních objektů Interlocked  
-  
-|Název funkce|Prototyp funkce|  
-|-------------------|------------------------|  
-|_InterlockedAdd|dlouhé _InterlockedAdd (long _volatile \*, long)|  
-|_InterlockedAdd64|__int64 _InterlockedAdd64 (\__int64 volatile \*, \__int64)|  
-|_InterlockedAdd64_acq|__int64 _InterlockedAdd64_acq (\__int64 volatile \*, \__int64)|  
-|_InterlockedAdd64_nf|__int64 _InterlockedAdd64_nf (\__int64 volatile \*, \__int64)|  
-|_InterlockedAdd64_rel|__int64 _InterlockedAdd64_rel (\__int64 volatile \*, \__int64)|  
-|_InterlockedAdd_acq|dlouhé _InterlockedAdd_acq (long volatile \*, long)|  
-|_InterlockedAdd_nf|dlouhé _InterlockedAdd_nf (long volatile \*, long)|  
-|_InterlockedAdd_rel|dlouhé _InterlockedAdd_rel (long volatile \*, long)|  
-|_InterlockedAnd|dlouhé _InterlockedAnd (long volatile \*, long)|  
-|_InterlockedAnd16|krátký _InterlockedAnd16 (krátký volatile \*, short)|  
-|_InterlockedAnd16_acq|krátký _InterlockedAnd16_acq (krátký volatile \*, short)|  
-|_InterlockedAnd16_nf|krátký _InterlockedAnd16_nf (krátký volatile \*, short)|  
-|_InterlockedAnd16_rel|krátký _InterlockedAnd16_rel (krátký volatile \*, short)|  
-|_InterlockedAnd64|__int64 _InterlockedAnd64 (\__int64 volatile \*, \__int64)|  
-|_InterlockedAnd64_acq|__int64 _InterlockedAnd64_acq (\__int64 volatile \*, \__int64)|  
-|_InterlockedAnd64_nf|__int64 _InterlockedAnd64_nf (\__int64 volatile \*, \__int64)|  
-|_InterlockedAnd64_rel|__int64 _InterlockedAnd64_rel (\__int64 volatile \*, \__int64)|  
-|_InterlockedAnd8|Char _InterlockedAnd8 (char volatile \*, char)|  
-|_InterlockedAnd8_acq|Char _InterlockedAnd8_acq (char volatile \*, char)|  
-|_InterlockedAnd8_nf|Char _InterlockedAnd8_nf (char volatile \*, char)|  
-|_InterlockedAnd8_rel|Char _InterlockedAnd8_rel (char volatile \*, char)|  
-|_InterlockedAnd_acq|dlouhé _InterlockedAnd_acq (long volatile \*, long)|  
-|_InterlockedAnd_nf|dlouhé _InterlockedAnd_nf (long volatile \*, long)|  
-|_InterlockedAnd_rel|dlouhé _InterlockedAnd_rel (long volatile \*, long)|  
-|_InterlockedCompareExchange|dlouhé __cdecl _InterlockedCompareExchange (dlouho volatile \*, long, dlouhý)|  
-|_InterlockedCompareExchange16|krátký _InterlockedCompareExchange16 (krátký volatile \*, krátký, short)|  
-|_InterlockedCompareExchange16_acq|krátký _InterlockedCompareExchange16_acq (krátký volatile \*, krátký, short)|  
-|_InterlockedCompareExchange16_nf|krátký _InterlockedCompareExchange16_nf (krátký volatile \*, krátký, short)|  
-|_InterlockedCompareExchange16_rel|krátký _InterlockedCompareExchange16_rel (krátký volatile \*, krátký, short)|  
-|_InterlockedCompareExchange64|__int64 _InterlockedCompareExchange64 (\__int64 volatile \*, \__int64, \__int64)|  
-|_InterlockedCompareExchange64_acq|__int64 _InterlockedCompareExchange64_acq (\__int64 volatile \*, \__int64, \__int64)|  
-|_InterlockedCompareExchange64_nf|__int64 _InterlockedCompareExchange64_nf (\__int64 volatile \*, \__int64, \__int64)|  
-|_InterlockedCompareExchange64_rel|__int64 _InterlockedCompareExchange64_rel (\__int64 volatile \*, \__int64, \__int64)|  
-|_InterlockedCompareExchange8|Char _InterlockedCompareExchange8 (char volatile \*, char, char)|  
-|_InterlockedCompareExchange8_acq|Char _InterlockedCompareExchange8_acq (char volatile \*, char, char)|  
-|_InterlockedCompareExchange8_nf|Char _InterlockedCompareExchange8_nf (char volatile \*, char, char)|  
-|_InterlockedCompareExchange8_rel|Char _InterlockedCompareExchange8_rel (char volatile \*, char, char)|  
-|_InterlockedCompareExchangePointer|void \* _InterlockedCompareExchangePointer (void \* volatile \*, void \*, void \*)|  
-|_InterlockedCompareExchangePointer_acq|void \* _InterlockedCompareExchangePointer_acq (void \* volatile \*, void \*, void \*)|  
-|_InterlockedCompareExchangePointer_nf|void \* _InterlockedCompareExchangePointer_nf (void \* volatile \*, void \*, void \*)|  
-|_InterlockedCompareExchangePointer_rel|void \* _InterlockedCompareExchangePointer_rel (void \* volatile \*, void \*, void \*)|  
-|_InterlockedCompareExchange_acq|dlouhé _InterlockedCompareExchange_acq (long volatile \*, long, dlouhý)|  
-|_InterlockedCompareExchange_nf|dlouhé _InterlockedCompareExchange_nf (long volatile \*, long, dlouhý)|  
-|_InterlockedCompareExchange_rel|dlouhé _InterlockedCompareExchange_rel (long volatile \*, long, dlouhý)|  
-|_InterlockedDecrement|dlouhé __cdecl _InterlockedDecrement (long volatile \*)|  
-|_InterlockedDecrement16|krátký _InterlockedDecrement16 (krátký volatile \*)|  
-|_InterlockedDecrement16_acq|krátký _InterlockedDecrement16_acq (krátký volatile \*)|  
-|_InterlockedDecrement16_nf|krátký _InterlockedDecrement16_nf (krátký volatile \*)|  
-|_InterlockedDecrement16_rel|krátký _InterlockedDecrement16_rel (krátký volatile \*)|  
-|_InterlockedDecrement64|__int64 _InterlockedDecrement64 (\__int64 volatile \*)|  
-|_InterlockedDecrement64_acq|__int64 _InterlockedDecrement64_acq (\__int64 volatile \*)|  
-|_InterlockedDecrement64_nf|__int64 _InterlockedDecrement64_nf (\__int64 volatile \*)|  
-|_InterlockedDecrement64_rel|__int64 _InterlockedDecrement64_rel (\__int64 volatile \*)|  
-|_InterlockedDecrement_acq|dlouhé _InterlockedDecrement_acq (long volatile \*)|  
-|_InterlockedDecrement_nf|dlouhé _InterlockedDecrement_nf (long volatile \*)|  
-|_InterlockedDecrement_rel|dlouhé _InterlockedDecrement_rel (long volatile \*)|  
-|_InterlockedExchange|dlouhé __cdecl _InterlockedExchange (dlouho volatile \* _cíl, dlouhý)|  
-|_InterlockedExchange16|krátký _InterlockedExchange16 (krátký volatile \* _cíl krátký)|  
-|_InterlockedExchange16_acq|krátký _InterlockedExchange16_acq (krátký volatile \* _cíl krátký)|  
-|_InterlockedExchange16_nf|krátký _InterlockedExchange16_nf (krátký volatile \* _cíl krátký)|  
-|_InterlockedExchange64|__int64 _InterlockedExchange64 (\__int64 volatile \* _cíl, \__int64)|  
-|_InterlockedExchange64_acq|__int64 _InterlockedExchange64_acq (\__int64 volatile \* _cíl, \__int64)|  
-|_InterlockedExchange64_nf|__int64 _InterlockedExchange64_nf (\__int64 volatile \* _cíl, \__int64)|  
-|_InterlockedExchange8|Char _InterlockedExchange8 (char volatile \* _cíl, char)|  
-|_InterlockedExchange8_acq|Char _InterlockedExchange8_acq (char volatile \* _cíl, char)|  
-|_InterlockedExchange8_nf|Char _InterlockedExchange8_nf (char volatile \* _cíl, char)|  
-|_InterlockedExchangeAdd|dlouhé __cdecl _InterlockedExchangeAdd (long volatile \*, long)|  
-|_InterlockedExchangeAdd16|krátký _InterlockedExchangeAdd16 (krátký volatile \*, short)|  
-|_InterlockedExchangeAdd16_acq|krátký _InterlockedExchangeAdd16_acq (krátký volatile \*, short)|  
-|_InterlockedExchangeAdd16_nf|krátký _InterlockedExchangeAdd16_nf (krátký volatile \*, short)|  
-|_InterlockedExchangeAdd16_rel|krátký _InterlockedExchangeAdd16_rel (krátký volatile \*, short)|  
-|_InterlockedExchangeAdd64|__int64 _InterlockedExchangeAdd64 (\__int64 volatile \*, \__int64)|  
-|_InterlockedExchangeAdd64_acq|__int64 _InterlockedExchangeAdd64_acq (\__int64 volatile \*, \__int64)|  
-|_InterlockedExchangeAdd64_nf|__int64 _InterlockedExchangeAdd64_nf (\__int64 volatile \*, \__int64)|  
-|_InterlockedExchangeAdd64_rel|__int64 _InterlockedExchangeAdd64_rel (\__int64 volatile \*, \__int64)|  
-|_InterlockedExchangeAdd8|Char _InterlockedExchangeAdd8 (char volatile \*, char)|  
-|_InterlockedExchangeAdd8_acq|Char _InterlockedExchangeAdd8_acq (char volatile \*, char)|  
-|_InterlockedExchangeAdd8_nf|Char _InterlockedExchangeAdd8_nf (char volatile \*, char)|  
-|_InterlockedExchangeAdd8_rel|Char _InterlockedExchangeAdd8_rel (char volatile \*, char)|  
-|_InterlockedExchangeAdd_acq|dlouhé _InterlockedExchangeAdd_acq (long volatile \*, long)|  
-|_InterlockedExchangeAdd_nf|dlouhé _InterlockedExchangeAdd_nf (long volatile \*, long)|  
-|_InterlockedExchangeAdd_rel|dlouhé _InterlockedExchangeAdd_rel (long volatile \*, long)|  
-|_InterlockedExchangePointer|void \* _InterlockedExchangePointer (void \* volatile \* _cíl void \*)|  
-|_InterlockedExchangePointer_acq|void \* _InterlockedExchangePointer_acq (void \* volatile \* _cíl void \*)|  
-|_InterlockedExchangePointer_nf|void \* _InterlockedExchangePointer_nf (void \* volatile \* _cíl void \*)|  
-|_InterlockedExchange_acq|dlouhé _InterlockedExchange_acq (dlouho volatile \* _cíl, dlouhý)|  
-|_InterlockedExchange_nf|dlouhé _InterlockedExchange_nf (dlouho volatile \* _cíl, dlouhý)|  
-|_InterlockedIncrement|dlouhé __cdecl _InterlockedIncrement (long volatile \*)|  
-|_InterlockedIncrement16|krátký _InterlockedIncrement16 (krátký volatile \*)|  
-|_InterlockedIncrement16_acq|krátký _InterlockedIncrement16_acq (krátký volatile \*)|  
-|_InterlockedIncrement16_nf|krátký _InterlockedIncrement16_nf (krátký volatile \*)|  
-|_InterlockedIncrement16_rel|krátký _InterlockedIncrement16_rel (krátký volatile \*)|  
-|_InterlockedIncrement64|__int64 _InterlockedIncrement64 (\__int64 volatile \*)|  
-|_InterlockedIncrement64_acq|__int64 _InterlockedIncrement64_acq (\__int64 volatile \*)|  
-|_InterlockedIncrement64_nf|__int64 _InterlockedIncrement64_nf (\__int64 volatile \*)|  
-|_InterlockedIncrement64_rel|__int64 _InterlockedIncrement64_rel (\__int64 volatile \*)|  
-|_InterlockedIncrement_acq|dlouhé _InterlockedIncrement_acq (long volatile \*)|  
-|_InterlockedIncrement_nf|dlouhé _InterlockedIncrement_nf (long volatile \*)|  
-|_InterlockedIncrement_rel|dlouhé _InterlockedIncrement_rel (long volatile \*)|  
-|_InterlockedOr|dlouhé _InterlockedOr (long volatile \*, long)|  
-|_InterlockedOr16|krátký _InterlockedOr16 (krátký volatile \*, short)|  
-|_InterlockedOr16_acq|krátký _InterlockedOr16_acq (krátký volatile \*, short)|  
-|_InterlockedOr16_nf|krátký _InterlockedOr16_nf (krátký volatile \*, short)|  
-|_InterlockedOr16_rel|krátký _InterlockedOr16_rel (krátký volatile \*, short)|  
-|_InterlockedOr64|__int64 _InterlockedOr64 (\__int64 volatile \*, \__int64)|  
-|_InterlockedOr64_acq|__int64 _InterlockedOr64_acq (\__int64 volatile \*, \__int64)|  
-|_InterlockedOr64_nf|__int64 _InterlockedOr64_nf (\__int64 volatile \*, \__int64)|  
-|_InterlockedOr64_rel|__int64 _InterlockedOr64_rel (\__int64 volatile \*, \__int64)|  
-|_InterlockedOr8|Char _InterlockedOr8 (char volatile \*, char)|  
-|_InterlockedOr8_acq|Char _InterlockedOr8_acq (char volatile \*, char)|  
-|_InterlockedOr8_nf|Char _InterlockedOr8_nf (char volatile \*, char)|  
-|_InterlockedOr8_rel|Char _InterlockedOr8_rel (char volatile \*, char)|  
-|_InterlockedOr_acq|dlouhé _InterlockedOr_acq (long volatile \*, long)|  
-|_InterlockedOr_nf|dlouhé _InterlockedOr_nf (long volatile \*, long)|  
-|_InterlockedOr_rel|dlouhé _InterlockedOr_rel (long volatile \*, long)|  
-|_InterlockedXor|dlouhé _InterlockedXor (long volatile \*, long)|  
-|_InterlockedXor16|krátký _InterlockedXor16 (krátký volatile \*, short)|  
-|_InterlockedXor16_acq|krátký _InterlockedXor16_acq (krátký volatile \*, short)|  
-|_InterlockedXor16_nf|krátký _InterlockedXor16_nf (krátký volatile \*, short)|  
-|_InterlockedXor16_rel|krátký _InterlockedXor16_rel (krátký volatile \*, short)|  
-|_InterlockedXor64|__int64 _InterlockedXor64 (\__int64 volatile \*, \__int64)|  
-|_InterlockedXor64_acq|__int64 _InterlockedXor64_acq (\__int64 volatile \*, \__int64)|  
-|_InterlockedXor64_nf|__int64 _InterlockedXor64_nf (\__int64 volatile \*, \__int64)|  
-|_InterlockedXor64_rel|__int64 _InterlockedXor64_rel (\__int64 volatile \*, \__int64)|  
-|_InterlockedXor8|Char _InterlockedXor8 (char volatile \*, char)|  
-|_InterlockedXor8_acq|Char _InterlockedXor8_acq (char volatile \*, char)|  
-|_InterlockedXor8_nf|Char _InterlockedXor8_nf (char volatile \*, char)|  
-|_InterlockedXor8_rel|Char _InterlockedXor8_rel (char volatile \*, char)|  
-|_InterlockedXor_acq|dlouhé _InterlockedXor_acq (long volatile \*, long)|  
-|_InterlockedXor_nf|dlouhé _InterlockedXor_nf (long volatile \*, long)|  
-|_InterlockedXor_rel|dlouhé _InterlockedXor_rel (long volatile \*, long)|  
-  
- [[NEON](#top)]  
-  
-### <a name="interlockedbittest-intrinsics"></a>_interlockedbittest vnitřních objektů  
- Vnitřní objekty prostý propojené bittest jsou společné pro všechny platformy. Přidá ARM `_acq`, `_rel`, a `_nf` varianty, které právě upravují sémantiku barrier operace, jak je popsáno v [přípony _nf (žádné ohrazení)](#nf_suffix) dříve v tomto článku.  
-  
-|Název funkce|Prototyp funkce|  
-|-------------------|------------------------|  
-|_interlockedbittestandreset|unsigned char _interlockedbittestandreset (long volatile \*, long)|  
-|_interlockedbittestandreset_acq|unsigned char _interlockedbittestandreset_acq (long volatile \*, long)|  
-|_interlockedbittestandreset_nf|unsigned char _interlockedbittestandreset_nf (long volatile \*, long)|  
-|_interlockedbittestandreset_rel|unsigned char _interlockedbittestandreset_rel (long volatile \*, long)|  
-|_interlockedbittestandset|unsigned char _interlockedbittestandset (long volatile \*, long)|  
-|_interlockedbittestandset_acq|unsigned char _interlockedbittestandset_acq (long volatile \*, long)|  
-|_interlockedbittestandset_nf|unsigned char _interlockedbittestandset_nf (long volatile \*, long)|  
-|_interlockedbittestandset_rel|unsigned char _interlockedbittestandset_rel (long volatile \*, long)|  
-  
- [[NEON](#top)]  
-  
-## <a name="see-also"></a>Viz také  
- [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   
- [Referenční dokumentace assembleru ARM](../assembler/arm/arm-assembler-reference.md)   
- [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)
+Koprocesor zaregistrovat číslo v rozsahu 0 až 15, který určuje další zdrojové nebo cílové operand.
+
+#### <a name="return-value"></a>Návratová hodnota
+
+Žádné
+
+#### <a name="remarks"></a>Poznámky
+
+Hodnoty `coproc`, `opcode1`, a `crm` parametry tomto vnitřních musí být konstantní výrazy, které jsou v době kompilace znám.
+
+`_MoveFromCoprocessor64` používá MCRR instrukce. Parametry odpovídají bitová pole, která jsou kódovány přímo do aplikace word instrukce. Výklad parametry závisí na koprocesoru. Další informace naleznete v příručce pro koprocesor dotyčný.
+
+##  <a name="I"></a> Podpora ARM pro vnitřní objekty z jiných architektury
+
+Následující tabulka obsahuje seznam vnitřních objektů z jiné architektury, které jsou podporovány na platformách ARM. Kde se liší od jeho chování pro jiné architektury hardwaru chování vnitřní na ARM jsou uvedené další podrobnosti.
+
+|Název funkce|Prototyp funkce|
+|-------------------|------------------------|
+|__assume|void __assume(int)|
+|__code_seg|void __code_seg (const char \*)|
+|__debugbreak|void __cdecl \__debugbreak(void)|
+|__fastfail|__declspec(noreturn) void \__fastfail (unsigned int).|
+|__nop|void __nop(void) **Poznámka:** na ARM platformy, tato funkce generuje instrukce NOP, pokud jeden je implementovaná v cílové architektuře; v opačném případě je alternativní instrukce, která se nezmění stav programu nebo využití procesoru vygeneruje – například `MOV r8, r8`. Toto je funkčně srovnatelný s \__nop vnitřní pro jiné architektury hardwaru. Protože pokyn, který nemá žádný vliv na stav aplikace nebo procesor může ignorovat. Cílová architektura jako optimalizace, instrukce nespotřebovává nutně cyklů procesoru. Proto nepoužívejte \__nop vnitřní k manipulaci s doba provádění sekvenci kódu, pokud si nejste jisti, o jak procesoru se bude chovat. Místo toho můžete použít \__nop vnitřní zarovnat další instrukci k určité hranici 32-bit adrese.|
+|__yield|void __yield(void) **Poznámka:** na ARM platformy, tato funkce generuje instrukce YIELD, což znamená, že vlákno provádí úlohu, která může být dočasně pozastaveno z spuštění – například spinlock – bez což nepříznivě ovlivňuje program. To umožňuje procesoru ke spuštění dalších úloh během provádění cykly, které by jinak byly ztraceny.|
+|_AddressOfReturnAddress|void \* _AddressOfReturnAddress(void)|
+|_BitScanForward|unsigned char _BitScanForward (unsigned long \* _Index unsigned long _podsítě)|
+|_BitScanReverse|unsigned char _BitScanReverse (unsigned long \* _Index unsigned long _podsítě)|
+|_bittest|unsigned char _bittest (long const \*, long)|
+|_bittestandcomplement|unsigned char _bittestandcomplement (long \*, long)|
+|_bittestandreset|unsigned char _bittestandreset (long \*, long)|
+|_bittestandset|unsigned char _bittestandset (long \*, long)|
+|_byteswap_uint64|unsigned __int64 \__byteswap_uint64 – _cdecl (unsigned \__int64)|
+|_byteswap_ulong|unsigned long __cdecl _byteswap_ulong(unsigned long)|
+|_byteswap_ushort|_byteswap_ushort – unsigned short __cdecl (unsigned short)|
+|_disable|void __cdecl _disable(void) **Poznámka:** na platformách ARM, tato funkce generuje instrukce CPSID; to je k dispozici pouze jako vnitřní.|
+|_enable|void __cdecl _enable(void) **Poznámka:** na platformách ARM, tato funkce generuje instrukce CPSIE; to je k dispozici pouze jako vnitřní.|
+|_lrotl|_lrotl – dlouhý __cdecl bez znaménka (unsigned long int)|
+|_lrotr|_lrotr – dlouhý __cdecl bez znaménka (unsigned long int)|
+|_ReadBarrier|void _ReadBarrier(void)|
+|_ReadWriteBarrier|void _ReadWriteBarrier(void)|
+|_ReturnAddress|void \* _ReturnAddress(void)|
+|_rotl|_rotl – __cdecl int bez znaménka (_Value unsigned int, int _Shift)|
+|_rotl16|unsigned short _rotl16 (unsigned short _Value, unsigned char _Shift)|
+|_rotl64|unsigned __int64 \__rotl64 – _cdecl (unsigned \__int64 _Value, int _Shift)|
+|_rotl8|unsigned char _rotl8 (unsigned char _Value, unsigned char _Shift)|
+|_rotr|_rotr – __cdecl int bez znaménka (_Value unsigned int, int _Shift)|
+|_rotr16|unsigned short _rotr16 (unsigned short _Value, unsigned char _Shift)|
+|_rotr64|unsigned __int64 \__rotr64 – _cdecl (unsigned \__int64 _Value, int _Shift)|
+|_rotr8|unsigned char _rotr8 (unsigned char _Value, unsigned char _Shift)|
+|_setjmpex|int __cdecl _setjmpex(jmp_buf)|
+|_WriteBarrier|void _WriteBarrier(void)|
+
+[[NEON](#top)]
+
+## <a name="interlocked-intrinsics"></a>Vnitřní funkce Interlocked
+
+Propojené vnitřní objekty jsou sada vnitřních objektů, které jsou používány k provádění atomických operací čtení modify-write. Některé z nich jsou společné pro všechny platformy. Jsou uvedeny samostatně zde vzhledem k tomu, že existuje velký počet z nich, ale protože jejich definice jsou většinou redundantní, je snazší uvažovat o jejich obecné podmínky. Jejich názvy lze použít k odvození přesné chování.
+
+Následující tabulka shrnuje podporu ARM – vnitřní prvky bez bittest propojené. Každá buňka tabulky odpovídá názvu, který je odvozen připojením názvu operace v buňce nejvíce vlevo řádku a název typu v nejvyšším buňky sloupce, který se `_Interlocked`. Například buňky v průsečíku `Xor` řádek a **8** sloupec odpovídá `_InterlockedXor8` a jsou plně podporovány. Většina funkcí podporovaných nabízejí tyto volitelné přípony: `_acq`, `_rel`, a `_nf`. `_acq` Přípona označuje "získat" sémantické a `_rel` přípona označuje "vydání" sémantické. `_nf` Nebo příponu "žádné ohrazení" je jedinečné pro ARM a je popsána v následující části.
+
+||8|16|32|64|P|
+|-|-------|--------|--------|--------|-------|
+|Přidejte|Žádné|Žádné|Do bloku|Do bloku|Žádné|
+|a|Do bloku|Do bloku|Do bloku|Do bloku|Žádné|
+|CompareExchange|Do bloku|Do bloku|Do bloku|Do bloku|Do bloku|
+|Snížení|Žádné|Do bloku|Do bloku|Do bloku|Žádné|
+|Exchange|Částečné|Částečné|Částečné|Částečné|Částečné|
+|ExchangeAdd|Do bloku|Do bloku|Do bloku|Do bloku|Žádné|
+|Přírůstek|Žádné|Do bloku|Do bloku|Do bloku|Žádné|
+|Nebo|Do bloku|Do bloku|Do bloku|Do bloku|Žádné|
+|XOR|Do bloku|Do bloku|Do bloku|Do bloku|Žádné|
+
+Klíč:
+
+- **Úplné**: podporuje prostý, `_acq`, `_rel`, a `_nf` formuláře.
+
+- **Částečné**: podporuje prostý, `_acq`, a `_nf` formuláře.
+
+- **Žádný**: není podporováno
+
+###  <a name="nf_suffix"></a> Přípona _nf (žádné ohraničení)
+
+`_nf` Nebo přípona "žádné ohrazení" označuje, že operace nechová jako jakýkoli druh barrier paměti. Tím se liší od tři formuláře (plain, `_acq`, a `_rel`), který všechny chovat jako určitého druhu bariéry. Jeden využití `_nf` formuláře je Udržovat statistiky čítače, která se aktualizuje pomocí více vláken ve stejnou dobu, ale jehož hodnota se jinak nepoužívá, přestože jsou provádění více vláken.
+
+### <a name="list-of-interlocked-intrinsics"></a>Seznam vnitřních objektů Interlocked
+
+|Název funkce|Prototyp funkce|
+|-------------------|------------------------|
+|_InterlockedAdd|dlouhé _InterlockedAdd (long _volatile \*, long)|
+|_InterlockedAdd64|__int64 _InterlockedAdd64 (\__int64 volatile \*, \__int64)|
+|_InterlockedAdd64_acq|__int64 _InterlockedAdd64_acq (\__int64 volatile \*, \__int64)|
+|_InterlockedAdd64_nf|__int64 _InterlockedAdd64_nf (\__int64 volatile \*, \__int64)|
+|_InterlockedAdd64_rel|__int64 _InterlockedAdd64_rel (\__int64 volatile \*, \__int64)|
+|_InterlockedAdd_acq|dlouhé _InterlockedAdd_acq (long volatile \*, long)|
+|_InterlockedAdd_nf|dlouhé _InterlockedAdd_nf (long volatile \*, long)|
+|_InterlockedAdd_rel|dlouhé _InterlockedAdd_rel (long volatile \*, long)|
+|_InterlockedAnd|dlouhé _InterlockedAnd (long volatile \*, long)|
+|_InterlockedAnd16|krátký _InterlockedAnd16 (krátký volatile \*, short)|
+|_InterlockedAnd16_acq|krátký _InterlockedAnd16_acq (krátký volatile \*, short)|
+|_InterlockedAnd16_nf|krátký _InterlockedAnd16_nf (krátký volatile \*, short)|
+|_InterlockedAnd16_rel|krátký _InterlockedAnd16_rel (krátký volatile \*, short)|
+|_InterlockedAnd64|__int64 _InterlockedAnd64 (\__int64 volatile \*, \__int64)|
+|_InterlockedAnd64_acq|__int64 _InterlockedAnd64_acq (\__int64 volatile \*, \__int64)|
+|_InterlockedAnd64_nf|__int64 _InterlockedAnd64_nf (\__int64 volatile \*, \__int64)|
+|_InterlockedAnd64_rel|__int64 _InterlockedAnd64_rel (\__int64 volatile \*, \__int64)|
+|_InterlockedAnd8|Char _InterlockedAnd8 (char volatile \*, char)|
+|_InterlockedAnd8_acq|Char _InterlockedAnd8_acq (char volatile \*, char)|
+|_InterlockedAnd8_nf|Char _InterlockedAnd8_nf (char volatile \*, char)|
+|_InterlockedAnd8_rel|Char _InterlockedAnd8_rel (char volatile \*, char)|
+|_InterlockedAnd_acq|dlouhé _InterlockedAnd_acq (long volatile \*, long)|
+|_InterlockedAnd_nf|dlouhé _InterlockedAnd_nf (long volatile \*, long)|
+|_InterlockedAnd_rel|dlouhé _InterlockedAnd_rel (long volatile \*, long)|
+|_InterlockedCompareExchange|dlouhé __cdecl _InterlockedCompareExchange (dlouho volatile \*, long, dlouhý)|
+|_InterlockedCompareExchange16|krátký _InterlockedCompareExchange16 (krátký volatile \*, krátký, short)|
+|_InterlockedCompareExchange16_acq|krátký _InterlockedCompareExchange16_acq (krátký volatile \*, krátký, short)|
+|_InterlockedCompareExchange16_nf|krátký _InterlockedCompareExchange16_nf (krátký volatile \*, krátký, short)|
+|_InterlockedCompareExchange16_rel|krátký _InterlockedCompareExchange16_rel (krátký volatile \*, krátký, short)|
+|_InterlockedCompareExchange64|__int64 _InterlockedCompareExchange64 (\__int64 volatile \*, \__int64, \__int64)|
+|_InterlockedCompareExchange64_acq|__int64 _InterlockedCompareExchange64_acq (\__int64 volatile \*, \__int64, \__int64)|
+|_InterlockedCompareExchange64_nf|__int64 _InterlockedCompareExchange64_nf (\__int64 volatile \*, \__int64, \__int64)|
+|_InterlockedCompareExchange64_rel|__int64 _InterlockedCompareExchange64_rel (\__int64 volatile \*, \__int64, \__int64)|
+|_InterlockedCompareExchange8|Char _InterlockedCompareExchange8 (char volatile \*, char, char)|
+|_InterlockedCompareExchange8_acq|Char _InterlockedCompareExchange8_acq (char volatile \*, char, char)|
+|_InterlockedCompareExchange8_nf|Char _InterlockedCompareExchange8_nf (char volatile \*, char, char)|
+|_InterlockedCompareExchange8_rel|Char _InterlockedCompareExchange8_rel (char volatile \*, char, char)|
+|_InterlockedCompareExchangePointer|void \* _InterlockedCompareExchangePointer (void \* volatile \*, void \*, void \*)|
+|_InterlockedCompareExchangePointer_acq|void \* _InterlockedCompareExchangePointer_acq (void \* volatile \*, void \*, void \*)|
+|_InterlockedCompareExchangePointer_nf|void \* _InterlockedCompareExchangePointer_nf (void \* volatile \*, void \*, void \*)|
+|_InterlockedCompareExchangePointer_rel|void \* _InterlockedCompareExchangePointer_rel (void \* volatile \*, void \*, void \*)|
+|_InterlockedCompareExchange_acq|dlouhé _InterlockedCompareExchange_acq (long volatile \*, long, dlouhý)|
+|_InterlockedCompareExchange_nf|dlouhé _InterlockedCompareExchange_nf (long volatile \*, long, dlouhý)|
+|_InterlockedCompareExchange_rel|dlouhé _InterlockedCompareExchange_rel (long volatile \*, long, dlouhý)|
+|_InterlockedDecrement|dlouhé __cdecl _InterlockedDecrement (long volatile \*)|
+|_InterlockedDecrement16|krátký _InterlockedDecrement16 (krátký volatile \*)|
+|_InterlockedDecrement16_acq|krátký _InterlockedDecrement16_acq (krátký volatile \*)|
+|_InterlockedDecrement16_nf|krátký _InterlockedDecrement16_nf (krátký volatile \*)|
+|_InterlockedDecrement16_rel|krátký _InterlockedDecrement16_rel (krátký volatile \*)|
+|_InterlockedDecrement64|__int64 _InterlockedDecrement64 (\__int64 volatile \*)|
+|_InterlockedDecrement64_acq|__int64 _InterlockedDecrement64_acq (\__int64 volatile \*)|
+|_InterlockedDecrement64_nf|__int64 _InterlockedDecrement64_nf (\__int64 volatile \*)|
+|_InterlockedDecrement64_rel|__int64 _InterlockedDecrement64_rel (\__int64 volatile \*)|
+|_InterlockedDecrement_acq|dlouhé _InterlockedDecrement_acq (long volatile \*)|
+|_InterlockedDecrement_nf|dlouhé _InterlockedDecrement_nf (long volatile \*)|
+|_InterlockedDecrement_rel|dlouhé _InterlockedDecrement_rel (long volatile \*)|
+|_InterlockedExchange|dlouhé __cdecl _InterlockedExchange (dlouho volatile \* _cíl, dlouhý)|
+|_InterlockedExchange16|krátký _InterlockedExchange16 (krátký volatile \* _cíl krátký)|
+|_InterlockedExchange16_acq|krátký _InterlockedExchange16_acq (krátký volatile \* _cíl krátký)|
+|_InterlockedExchange16_nf|krátký _InterlockedExchange16_nf (krátký volatile \* _cíl krátký)|
+|_InterlockedExchange64|__int64 _InterlockedExchange64 (\__int64 volatile \* _cíl, \__int64)|
+|_InterlockedExchange64_acq|__int64 _InterlockedExchange64_acq (\__int64 volatile \* _cíl, \__int64)|
+|_InterlockedExchange64_nf|__int64 _InterlockedExchange64_nf (\__int64 volatile \* _cíl, \__int64)|
+|_InterlockedExchange8|Char _InterlockedExchange8 (char volatile \* _cíl, char)|
+|_InterlockedExchange8_acq|Char _InterlockedExchange8_acq (char volatile \* _cíl, char)|
+|_InterlockedExchange8_nf|Char _InterlockedExchange8_nf (char volatile \* _cíl, char)|
+|_InterlockedExchangeAdd|dlouhé __cdecl _InterlockedExchangeAdd (long volatile \*, long)|
+|_InterlockedExchangeAdd16|krátký _InterlockedExchangeAdd16 (krátký volatile \*, short)|
+|_InterlockedExchangeAdd16_acq|krátký _InterlockedExchangeAdd16_acq (krátký volatile \*, short)|
+|_InterlockedExchangeAdd16_nf|krátký _InterlockedExchangeAdd16_nf (krátký volatile \*, short)|
+|_InterlockedExchangeAdd16_rel|krátký _InterlockedExchangeAdd16_rel (krátký volatile \*, short)|
+|_InterlockedExchangeAdd64|__int64 _InterlockedExchangeAdd64 (\__int64 volatile \*, \__int64)|
+|_InterlockedExchangeAdd64_acq|__int64 _InterlockedExchangeAdd64_acq (\__int64 volatile \*, \__int64)|
+|_InterlockedExchangeAdd64_nf|__int64 _InterlockedExchangeAdd64_nf (\__int64 volatile \*, \__int64)|
+|_InterlockedExchangeAdd64_rel|__int64 _InterlockedExchangeAdd64_rel (\__int64 volatile \*, \__int64)|
+|_InterlockedExchangeAdd8|Char _InterlockedExchangeAdd8 (char volatile \*, char)|
+|_InterlockedExchangeAdd8_acq|Char _InterlockedExchangeAdd8_acq (char volatile \*, char)|
+|_InterlockedExchangeAdd8_nf|Char _InterlockedExchangeAdd8_nf (char volatile \*, char)|
+|_InterlockedExchangeAdd8_rel|Char _InterlockedExchangeAdd8_rel (char volatile \*, char)|
+|_InterlockedExchangeAdd_acq|dlouhé _InterlockedExchangeAdd_acq (long volatile \*, long)|
+|_InterlockedExchangeAdd_nf|dlouhé _InterlockedExchangeAdd_nf (long volatile \*, long)|
+|_InterlockedExchangeAdd_rel|dlouhé _InterlockedExchangeAdd_rel (long volatile \*, long)|
+|_InterlockedExchangePointer|void \* _InterlockedExchangePointer (void \* volatile \* _cíl void \*)|
+|_InterlockedExchangePointer_acq|void \* _InterlockedExchangePointer_acq (void \* volatile \* _cíl void \*)|
+|_InterlockedExchangePointer_nf|void \* _InterlockedExchangePointer_nf (void \* volatile \* _cíl void \*)|
+|_InterlockedExchange_acq|dlouhé _InterlockedExchange_acq (dlouho volatile \* _cíl, dlouhý)|
+|_InterlockedExchange_nf|dlouhé _InterlockedExchange_nf (dlouho volatile \* _cíl, dlouhý)|
+|_InterlockedIncrement|dlouhé __cdecl _InterlockedIncrement (long volatile \*)|
+|_InterlockedIncrement16|krátký _InterlockedIncrement16 (krátký volatile \*)|
+|_InterlockedIncrement16_acq|krátký _InterlockedIncrement16_acq (krátký volatile \*)|
+|_InterlockedIncrement16_nf|krátký _InterlockedIncrement16_nf (krátký volatile \*)|
+|_InterlockedIncrement16_rel|krátký _InterlockedIncrement16_rel (krátký volatile \*)|
+|_InterlockedIncrement64|__int64 _InterlockedIncrement64 (\__int64 volatile \*)|
+|_InterlockedIncrement64_acq|__int64 _InterlockedIncrement64_acq (\__int64 volatile \*)|
+|_InterlockedIncrement64_nf|__int64 _InterlockedIncrement64_nf (\__int64 volatile \*)|
+|_InterlockedIncrement64_rel|__int64 _InterlockedIncrement64_rel (\__int64 volatile \*)|
+|_InterlockedIncrement_acq|dlouhé _InterlockedIncrement_acq (long volatile \*)|
+|_InterlockedIncrement_nf|dlouhé _InterlockedIncrement_nf (long volatile \*)|
+|_InterlockedIncrement_rel|dlouhé _InterlockedIncrement_rel (long volatile \*)|
+|_InterlockedOr|dlouhé _InterlockedOr (long volatile \*, long)|
+|_InterlockedOr16|krátký _InterlockedOr16 (krátký volatile \*, short)|
+|_InterlockedOr16_acq|krátký _InterlockedOr16_acq (krátký volatile \*, short)|
+|_InterlockedOr16_nf|krátký _InterlockedOr16_nf (krátký volatile \*, short)|
+|_InterlockedOr16_rel|krátký _InterlockedOr16_rel (krátký volatile \*, short)|
+|_InterlockedOr64|__int64 _InterlockedOr64 (\__int64 volatile \*, \__int64)|
+|_InterlockedOr64_acq|__int64 _InterlockedOr64_acq (\__int64 volatile \*, \__int64)|
+|_InterlockedOr64_nf|__int64 _InterlockedOr64_nf (\__int64 volatile \*, \__int64)|
+|_InterlockedOr64_rel|__int64 _InterlockedOr64_rel (\__int64 volatile \*, \__int64)|
+|_InterlockedOr8|Char _InterlockedOr8 (char volatile \*, char)|
+|_InterlockedOr8_acq|Char _InterlockedOr8_acq (char volatile \*, char)|
+|_InterlockedOr8_nf|Char _InterlockedOr8_nf (char volatile \*, char)|
+|_InterlockedOr8_rel|Char _InterlockedOr8_rel (char volatile \*, char)|
+|_InterlockedOr_acq|dlouhé _InterlockedOr_acq (long volatile \*, long)|
+|_InterlockedOr_nf|dlouhé _InterlockedOr_nf (long volatile \*, long)|
+|_InterlockedOr_rel|dlouhé _InterlockedOr_rel (long volatile \*, long)|
+|_InterlockedXor|dlouhé _InterlockedXor (long volatile \*, long)|
+|_InterlockedXor16|krátký _InterlockedXor16 (krátký volatile \*, short)|
+|_InterlockedXor16_acq|krátký _InterlockedXor16_acq (krátký volatile \*, short)|
+|_InterlockedXor16_nf|krátký _InterlockedXor16_nf (krátký volatile \*, short)|
+|_InterlockedXor16_rel|krátký _InterlockedXor16_rel (krátký volatile \*, short)|
+|_InterlockedXor64|__int64 _InterlockedXor64 (\__int64 volatile \*, \__int64)|
+|_InterlockedXor64_acq|__int64 _InterlockedXor64_acq (\__int64 volatile \*, \__int64)|
+|_InterlockedXor64_nf|__int64 _InterlockedXor64_nf (\__int64 volatile \*, \__int64)|
+|_InterlockedXor64_rel|__int64 _InterlockedXor64_rel (\__int64 volatile \*, \__int64)|
+|_InterlockedXor8|Char _InterlockedXor8 (char volatile \*, char)|
+|_InterlockedXor8_acq|Char _InterlockedXor8_acq (char volatile \*, char)|
+|_InterlockedXor8_nf|Char _InterlockedXor8_nf (char volatile \*, char)|
+|_InterlockedXor8_rel|Char _InterlockedXor8_rel (char volatile \*, char)|
+|_InterlockedXor_acq|dlouhé _InterlockedXor_acq (long volatile \*, long)|
+|_InterlockedXor_nf|dlouhé _InterlockedXor_nf (long volatile \*, long)|
+|_InterlockedXor_rel|dlouhé _InterlockedXor_rel (long volatile \*, long)|
+
+[[NEON](#top)]
+
+### <a name="interlockedbittest-intrinsics"></a>_interlockedbittest vnitřních objektů
+
+Vnitřní objekty prostý propojené bittest jsou společné pro všechny platformy. Přidá ARM `_acq`, `_rel`, a `_nf` varianty, které právě upravují sémantiku barrier operace, jak je popsáno v [přípony _nf (žádné ohrazení)](#nf_suffix) dříve v tomto článku.
+
+|Název funkce|Prototyp funkce|
+|-------------------|------------------------|
+|_interlockedbittestandreset|unsigned char _interlockedbittestandreset (long volatile \*, long)|
+|_interlockedbittestandreset_acq|unsigned char _interlockedbittestandreset_acq (long volatile \*, long)|
+|_interlockedbittestandreset_nf|unsigned char _interlockedbittestandreset_nf (long volatile \*, long)|
+|_interlockedbittestandreset_rel|unsigned char _interlockedbittestandreset_rel (long volatile \*, long)|
+|_interlockedbittestandset|unsigned char _interlockedbittestandset (long volatile \*, long)|
+|_interlockedbittestandset_acq|unsigned char _interlockedbittestandset_acq (long volatile \*, long)|
+|_interlockedbittestandset_nf|unsigned char _interlockedbittestandset_nf (long volatile \*, long)|
+|_interlockedbittestandset_rel|unsigned char _interlockedbittestandset_rel (long volatile \*, long)|
+
+[[NEON](#top)]
+
+## <a name="see-also"></a>Viz také
+
+[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
+[Referenční dokumentace assembleru ARM](../assembler/arm/arm-assembler-reference.md)<br/>
+[Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)

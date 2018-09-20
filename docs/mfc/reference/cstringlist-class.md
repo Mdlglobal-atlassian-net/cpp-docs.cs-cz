@@ -1,5 +1,5 @@
 ---
-title: Třída CStringList | Microsoft Docs
+title: CStringList – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -60,92 +60,98 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31e13222ccd5ac12768961ff5e93d11e68ecfded
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: a3182a9f5a53c2f086800eb0eccb7d61e423e591
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122712"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439182"
 ---
 # <a name="cstringlist-class"></a>CStringList – třída
-Podporuje seznamy `CString` objekty.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CStringList : public CObject  
-```  
-  
-## <a name="members"></a>Členové  
- Členské funkce `CStringList` jsou podobné funkce člena třídy [CObList](../../mfc/reference/coblist-class.md). Z důvodu této podobnosti, můžete použít `CObList` referenční dokumentace pro konkrétní funkce člen. Po zobrazení `CObject` ukazatel jako návratová hodnota, nahraďte `CString` (není `CString` ukazatel). Po zobrazení `CObject` ukazatel jako parametr funkce nahraďte `LPCTSTR`.  
-  
- `CObject*& CObList::GetHead() const;`  
-  
- například překládá do  
-  
- `CString& CStringList::GetHead() const;`  
-  
- and  
-  
- `POSITION AddHead( CObject* <newElement> );`  
-  
- přeloží na  
-  
- `POSITION AddHead( LPCTSTR <newElement> );`  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)|Vytvoří prázdný seznam.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CObList::AddHead](../../mfc/reference/coblist-class.md#addhead)|Přidá do hlavičky seznamu (díky nové head) elementu (nebo všechny elementy v jiném seznamu).|  
-|[CObList::AddTail](../../mfc/reference/coblist-class.md#addtail)|Přidá na konec seznamu (díky nové tail) elementu (nebo všechny elementy v jiném seznamu).|  
-|[CObList::Find](../../mfc/reference/coblist-class.md#find)|Načte pozici elementu určená hodnotou ukazatele.|  
-|[CObList::FindIndex](../../mfc/reference/coblist-class.md#findindex)|Načte pozici elementu určeného index počítaný od nuly.|  
-|[CObList::GetAt](../../mfc/reference/coblist-class.md#getat)|Získá element na dané pozici.|  
-|[CObList::GetCount](../../mfc/reference/coblist-class.md#getcount)|Vrátí počet prvků v tomto seznamu.|  
-|[CObList::GetHead](../../mfc/reference/coblist-class.md#gethead)|Vrátí element head seznamu (nemůže být prázdný).|  
-|[CObList::GetHeadPosition](../../mfc/reference/coblist-class.md#getheadposition)|Vrátí pozici element head seznamu.|  
-|[CObList::GetNext](../../mfc/reference/coblist-class.md#getnext)|Získá další prvek pro iterace.|  
-|[CObList::GetPrev](../../mfc/reference/coblist-class.md#getprev)|Získá předchozí prvek pro iterace.|  
-|[CObList::GetSize](../../mfc/reference/coblist-class.md#getsize)|Vrátí počet prvků v tomto seznamu.|  
-|[CObList::GetTail](../../mfc/reference/coblist-class.md#gettail)|Vrátí element tail seznamu (nemůže být prázdný).|  
-|[CObList::GetTailPosition](../../mfc/reference/coblist-class.md#gettailposition)|Vrátí pozici tail element seznamu.|  
-|[CObList::InsertAfter](../../mfc/reference/coblist-class.md#insertafter)|Vloží nového elementu za dané pozici.|  
-|[CObList::InsertBefore](../../mfc/reference/coblist-class.md#insertbefore)|Vloží nového elementu před dané pozici.|  
-|[CObList::IsEmpty](../../mfc/reference/coblist-class.md#isempty)|Testy pro prázdný seznam podmínku (žádné elementy).|  
-|[CObList::RemoveAll](../../mfc/reference/coblist-class.md#removeall)|Odebere všechny elementy z tohoto seznamu.|  
-|[CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat)|Odebere element z tohoto seznamu, určeného umístění.|  
-|[CObList::RemoveHead](../../mfc/reference/coblist-class.md#removehead)|Odebere element z hlavičky v seznamu.|  
-|[CObList::RemoveTail](../../mfc/reference/coblist-class.md#removetail)|Odebere element z konec seznamu.|  
-|[CObList::SetAt](../../mfc/reference/coblist-class.md#setat)|Nastaví element na dané pozici.|  
-  
-## <a name="remarks"></a>Poznámky  
- Všechny porovnání se provádí hodnotu, což znamená, že místo adresy řetězce jsou porovnávány znaky v řetězci.  
-  
- `CStringList` zahrnuje implement_serial – makro pro podporu serializace a vypsání jejích elementů. Pokud seznam `CString` objekty ukládána do archivu, a to buď operátor přetížené vložení nebo s `Serialize` členské funkce se každý `CString` element serializován naopak.  
-  
- Pokud potřebujete výpis individuální `CString` elementy, je nutné nastavit hloubka kontext výpisu na 1 nebo vyšší.  
-  
- Další informace o používání `CStringList`, najdete v článku [kolekce](../../mfc/collections.md).  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- `CStringList`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxcoll.h  
-  
-## <a name="see-also"></a>Viz také  
- [Ukázka MFC shromažďování](../../visual-cpp-samples.md)   
- [CObject – třída](../../mfc/reference/cobject-class.md)   
- [Graf hierarchie](../../mfc/hierarchy-chart.md)
+
+Podporuje seznamy `CString` objekty.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CStringList : public CObject
+```
+
+## <a name="members"></a>Členové
+
+Členské funkce `CStringList` jsou podobné jako u členských funkcí třídy [coblist –](../../mfc/reference/coblist-class.md). Z důvodu podobnosti, můžete použít `CObList` referenční dokumentaci pro konkrétní členské funkce. Po zobrazení `CObject` ukazatel jako návratová hodnota, nahraďte `CString` (není `CString` ukazatele). Po zobrazení `CObject` ukazatele jako parametr funkce, použijte `LPCTSTR`.
+
+`CObject*& CObList::GetHead() const;`
+
+například se přeloží na
+
+`CString& CStringList::GetHead() const;`
+
+and
+
+`POSITION AddHead( CObject* <newElement> );`
+
+přeloží na
+
+`POSITION AddHead( LPCTSTR <newElement> );`
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)|Vytvoří prázdný seznam.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CObList::AddHead](../../mfc/reference/coblist-class.md#addhead)|Přidá k začátku seznamu (novou vedoucí díky) elementu (nebo všechny prvky v jiném seznamu).|
+|[CObList::AddTail](../../mfc/reference/coblist-class.md#addtail)|Přidá na konec seznamu (umožňuje nové funkce tail) elementu (nebo všechny prvky v jiném seznamu).|
+|[CObList::Find](../../mfc/reference/coblist-class.md#find)|Získá pozici prvku určeného hodnotou ukazatele.|
+|[CObList::FindIndex](../../mfc/reference/coblist-class.md#findindex)|Získá pozici prvku určený index založený na nule.|
+|[CObList::GetAt](../../mfc/reference/coblist-class.md#getat)|Získá prvek na dané pozici.|
+|[CObList::GetCount](../../mfc/reference/coblist-class.md#getcount)|Vrátí počet prvků v tomto seznamu.|
+|[CObList::GetHead](../../mfc/reference/coblist-class.md#gethead)|Vrátí element head seznamu (nemůže být prázdný).|
+|[CObList::GetHeadPosition](../../mfc/reference/coblist-class.md#getheadposition)|Vrátí pozici element head seznamu.|
+|[CObList::GetNext](../../mfc/reference/coblist-class.md#getnext)|Získá další prvek pro iterace.|
+|[CObList::GetPrev](../../mfc/reference/coblist-class.md#getprev)|Získá předchozí prvek pro iterace.|
+|[CObList::GetSize](../../mfc/reference/coblist-class.md#getsize)|Vrátí počet prvků v tomto seznamu.|
+|[CObList::GetTail](../../mfc/reference/coblist-class.md#gettail)|Vrátí element tail seznamu (nemůže být prázdný).|
+|[CObList::GetTailPosition](../../mfc/reference/coblist-class.md#gettailposition)|Vrátí pozici prvku tail seznamu.|
+|[CObList::InsertAfter](../../mfc/reference/coblist-class.md#insertafter)|Vloží nový prvek za danou pozici.|
+|[CObList::InsertBefore](../../mfc/reference/coblist-class.md#insertbefore)|Vloží nový prvek před danou pozici.|
+|[CObList::IsEmpty](../../mfc/reference/coblist-class.md#isempty)|Testy pro prázdný seznam podmínku (žádné elementy).|
+|[CObList::RemoveAll](../../mfc/reference/coblist-class.md#removeall)|Odebere všechny prvky z tohoto seznamu.|
+|[CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat)|Odebere element z tohoto seznamu, určené pozici.|
+|[CObList::RemoveHead](../../mfc/reference/coblist-class.md#removehead)|Odebere element z prvního seznamu.|
+|[CObList::RemoveTail](../../mfc/reference/coblist-class.md#removetail)|Odebere element z konec seznamu.|
+|[CObList::SetAt](../../mfc/reference/coblist-class.md#setat)|Nastaví element na dané pozici.|
+
+## <a name="remarks"></a>Poznámky
+
+Všechna porovnání provádí hodnotou, což znamená, že jsou místo adresy řetězce porovnány znaků v řetězci.
+
+`CStringList` zahrnuje IMPLEMENT_SERIAL – makro na podporu serializace a výpis z jeho prvků. Pokud seznam `CString` objekty je uložit do archivu, s operátorem vložení přetížené nebo se `Serialize` členské funkce se každý `CString` zase serializuje jako element.
+
+Pokud potřebujete s výpisem paměti jednotlivých `CString` prvky, hloubka kontextu výpisu stavu systému je nutné nastavit na 1 nebo větší.
+
+Další informace o používání `CStringList`, najdete v článku [kolekce](../../mfc/collections.md).
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[Třídy CObject](../../mfc/reference/cobject-class.md)
+
+`CStringList`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxcoll.h
+
+## <a name="see-also"></a>Viz také
+
+[Ukázky knihovny MFC shromažďování](../../visual-cpp-samples.md)<br/>
+[CObject – třída](../../mfc/reference/cobject-class.md)<br/>
+[Graf hierarchie](../../mfc/hierarchy-chart.md)
 
 
 

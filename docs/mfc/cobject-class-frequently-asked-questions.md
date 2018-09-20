@@ -1,5 +1,5 @@
 ---
-title: 'CObject – třída: Nejčastější dotazy | Microsoft Docs'
+title: 'CObject – třída: Nejčastější dotazy | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7487d8fdc016642e56a469d45c8063e764823ff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 987ae71b556abea1279605f42f5c633083221554
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343564"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433943"
 ---
 # <a name="cobject-class-frequently-asked-questions"></a>CObject – třída: Nejčastější dotazy
-Tato část popisuje dotazy na třídě `CObject`.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
-  
--   [Je nutné odvozovat z objektu CObject novou](do-i-have-to-derive-new-classes-from-cobject-q.md)  
-  
--   [Co stojí na odvození třídy z objektu CObject](what-does-it-cost-me-to-derive-a-class-from-cobject-q.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Použití objektů CObject](../mfc/using-cobject.md)
+
+Tato část zahrnuje otázky na třídě `CObject`.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+
+- [Je nutné odvozovat nové třídy z objektu CObject](do-i-have-to-derive-new-classes-from-cobject-q.md)
+
+- [Kolik stojí na odvození třídy z objektu CObject](what-does-it-cost-me-to-derive-a-class-from-cobject-q.md)
+
+## <a name="see-also"></a>Viz také
+
+[Použití objektů CObject](../mfc/using-cobject.md)

@@ -1,5 +1,5 @@
 ---
-title: Jak MFC usnadňuje tvorbu internetových klientských aplikací | Microsoft Docs
+title: Jak MFC usnadňuje tvorbu internetových klientských aplikací | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d04a27a51645fc44296db7f5fd84bc2524804c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26380dc7e01449e4700ddf403c7395714287ed38
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346110"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407163"
 ---
 # <a name="how-mfc-makes-it-easier-to-create-internet-client-applications"></a>Jak prostředí MFC usnadňuje tvorbu internetových klientských aplikací
-Třídy Microsoft Foundation zapouzdřují funkce Win32 internetová rozšíření (WinInet) způsobem, který poskytuje pro programátory v jazyce MFC Známé kontext. Knihovna MFC poskytuje tři třídy souborů Internetu ([CInternetFile](../mfc/reference/cinternetfile-class.md), [CHttpFile](../mfc/reference/chttpfile-class.md), a [CGopherFile](../mfc/reference/cgopherfile-class.md)) odvozené z [CStdioFile](../mfc/reference/cstdiofile-class.md) – třída . Ne jenom tyto třídy, Nedělejte načítání a manipulace s daty Internetu pro programátory, kteří použili `CStdioFile` pro místní soubory, ale tyto třídy můžete řešit místní soubory a soubory Internet konzistentní, transparentním způsobem.  
-  
- Třídy MFC WinInet poskytovat stejné funkce jako `CStdioFile` pro data, která se přenáší přes Internet. Tyto třídy abstraktní Internetové protokoly pro protokol HTTP, FTP a gopher na vysoké úrovni aplikaci programovací rozhraní, poskytuje rychlý a snadný cestu k vytvoření aplikace podporující rozhraní Internet. Například připojení k serveru FTP, stále vyžaduje několik kroků na nízké úrovni, ale jako vývojář MFC potřebujete jenom jednu hovor `CInternetSession::GetFTPConnection` k vytvoření připojení.  
-  
- Kromě toho tříd WinInet knihovny MFC poskytuje následující výhody:  
-  
--   Vstupně-výstupních operací ve vyrovnávací paměti  
-  
--   Typově bezpečný zpracovává pro data  
-  
--   Výchozí parametry pro mnoho funkcí  
-  
--   Zpracování výjimek pro běžné chyby Internetu  
-  
--   Automatické čištění připojení a otevřených popisovačů  
-  
-## <a name="see-also"></a>Viz také  
- [Win32 – internetová rozšíření (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
- [Jak rozhraní WinInet usnadňuje tvorbu internetových klientských aplikací](../mfc/how-wininet-makes-it-easier-to-create-internet-client-applications.md)
+
+Microsoft Foundation Classes zapouzdřují funkce Win32 internetová rozšíření (WinInet) způsobem, který poskytuje Známé kontext usnadňuje práci programátorům knihovny MFC. Knihovna MFC poskytuje tři třídy souborů Internetu ([cinternetfile –](../mfc/reference/cinternetfile-class.md), [chttpfile –](../mfc/reference/chttpfile-class.md), a [cgopherfile –](../mfc/reference/cgopherfile-class.md)) odvozený od [cstdiofile –](../mfc/reference/cstdiofile-class.md) třídy . Nejen těchto tříd Ujistěte se, načítání a manipulace s daty Internet pro programátory, kteří použili srozumitelná `CStdioFile` místních souborů, ale s tyto třídy můžete zpracovávat místní soubory a soubory Internetu konzistentní vzhledem k aplikacím a transparentní způsobem.
+
+Tříd WinInet knihovny MFC poskytují stejné funkce jako `CStdioFile` pro data, která se přenáší přes Internet. Tyto třídy abstraktní Internetové protokoly HTTP, FTP a gopher na vysoké úrovni aplikaci programování rozhraní, poskytuje rychlý a jednoduchý cestu k vytváření aplikací s ohledem na Internetu. Například připojení k serveru FTP stále vyžaduje několik kroků na nízké úrovni, ale jako vývojář knihovny MFC, je potřeba jenom jeden hovor `CInternetSession::GetFTPConnection` vytvořit toto připojení.
+
+Kromě toho tříd WinInet knihovny MFC poskytují následující výhody:
+
+- Vstupně-výstupních operací ve vyrovnávací paměti
+
+- Typově bezpečný zpracovává vaše data
+
+- Výchozí parametry pro mnoho funkcí
+
+- Zpracování výjimek pro běžné chyby Internet
+
+- Automatické čištění připojení a otevřených popisovačů
+
+## <a name="see-also"></a>Viz také
+
+[Win32 – internetová rozšíření (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
+[Jak rozhraní WinInet usnadňuje tvorbu internetových klientských aplikací](../mfc/how-wininet-makes-it-easier-to-create-internet-client-applications.md)
 

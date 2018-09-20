@@ -1,5 +1,5 @@
 ---
-title: Nastavení pro třídu CStatusBarCtrl | Microsoft Docs
+title: Nastavení pro třídu CStatusBarCtrl | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1dde1f005e53aff7ebe505d1ce619bf5c94410f8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 2411659e6ae33fe9ce81d508d3e7c206b1e5b113
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955453"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440027"
 ---
 # <a name="settings-for-the-cstatusbarctrl"></a>Nastavení pro třídu CStatusBarCtrl
-Výchozí umístění [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) okno Stav je podél dolního okraje nadřazeného okna, ale můžete určit styl CCS_TOP jej zobrazí v horní části okna nadřazené klientské oblasti.  
-  
- Můžete určit styl SBARS_SIZEGRIP zahrnout úchyt na pravém konci `CStatusBarCtrl` okno stav. Úchyt je podobná velikosti ohraničení; je obdélníkovou oblast, která může uživatel klikněte a přetáhněte ke změně velikosti nadřazeného okna.  
-  
+
+Výchozí pozice [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) podél dolního okraje nadřazeného okna se stavové okno, ale můžete určit styl CCS_TOP na něm se zobrazí v horní části klientské oblasti okna nadřazené.
+
+Můžete určit styl SBARS_SIZEGRIP zahrnout úchyt na pravém konci `CStatusBarCtrl` stavové okno. Úchyt pro změnu velikosti je podobná velikosti ohraničení; je obdélníkovou oblast, která uživatel může klikněte a přetáhněte pro změnu velikosti nadřazeného okna.
+
 > [!NOTE]
->  Pokud kombinujete styly CCS_TOP a SBARS_SIZEGRIP, výsledná úchyt není funkční, i když systém nevykresluje se v okně Stav.  
-  
- Okno postup pro okno Stav automaticky nastaví počáteční velikost a umístění okna ovládacího prvku. Šířka je stejný jako u nadřazeného okna klientské oblasti. Výška je založena na metriky písma, které je aktuálně vybrané do kontextu okna Stav zařízení a na šířku ohraničení okna.  
-  
- Postup okno automaticky upraví velikost okna stavu, vždy, když obdrží zprávu WM_SIZE. Obvykle když se změní velikost nadřazené okno, nadřazený odešle zprávu WM_SIZE do okna stav.  
-  
- Můžete nastavit minimální výšku oblasti výkresu stavové okno voláním [SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight), určení minimální výška v pixelech. Oblasti výkresu nezahrnuje okna ohraničení.  
-  
- Načtení šířku ohraničení okno stav voláním [GetBorders](../mfc/reference/cstatusbarctrl-class.md#getborders). Tato funkce člen zahrnuje má ukazatel na tři element pole, které obdrží šířku ohraničení vodorovné, svislé ohraničení a ohraničení mezi obdélníky.  
-  
-## <a name="see-also"></a>Viz také  
- [Použití třídy CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+>  Pokud kombinujete CCS_TOP a SBARS_SIZEGRIP styly, výsledný úchyt pro změnu velikosti není funkční, přestože systém nakreslí ho v okně Stav.
+
+Proceduru okna pro stavové okno automaticky nastaví počáteční velikost a umístění okna ovládacího prvku. Šířka je stejné jako u nadřazené okno klientské oblasti. Výška je založena na metriky písma, která je aktuálně vybrána v kontextu zařízení stavové okno a na šířku ohraničení okna.
+
+Proceduru okna velikost stavové okno automaticky přizpůsobí pokaždé, když dostane zprávu WM_SIZE. Obvykle při změně velikosti nadřazené okno nadřazené odešle zprávu WM_SIZE stavové okno.
+
+Můžete nastavit minimální výšku oblasti pro kreslení stavové okno voláním [SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight), určení minimální výšku v pixelech. Vykreslení oblasti nezahrnuje ohraničení okna.
+
+Načíst šířky ohraničení stavové okno voláním [GetBorders](../mfc/reference/cstatusbarctrl-class.md#getborders). Tato členská funkce obsahuje ukazatel na prvek tři pole, která přijímá šířku ohraničení vodorovné, svislé ohraničení a ohraničení mezi obdélníky.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

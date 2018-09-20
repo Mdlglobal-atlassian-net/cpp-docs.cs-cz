@@ -1,5 +1,5 @@
 ---
-title: Třídy OLE DB | Microsoft Docs
+title: Třídy OLE DB | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7831b06d116828cf5a4e6b714661082555899cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: efdc77adac947af81be9595ffabc313610e11ce9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345101"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425220"
 ---
 # <a name="ole-db-classes"></a>Třídy OLE DB
-Podpora OLE DB v MFC se skládá právě třídy [COLEDBRecordView](../mfc/reference/coledbrecordview-class.md). `COleDBRecordView` Zobrazuje záznamy databáze v ovládacích prvcích prostřednictvím připojení přímo k zobrazení formuláře [CRowset](../data/oledb/crowset-class.md) objektu. Další informace o šablony příjemce technologie OLE DB najdete v tématu [seznamu z OLE DB – šablony příjemce](../data/oledb/ole-db-consumer-templates-reference.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled třídy](../mfc/class-library-overview.md)
+
+Podporu technologie OLE DB v prostředí MFC se skládá právě z třídy [COLEDBRecordView](../mfc/reference/coledbrecordview-class.md). `COleDBRecordView` Zobrazuje záznamy databáze v ovládacích prvcích, prostřednictvím připojený přímo k zobrazení formuláře [CRowset](../data/oledb/crowset-class.md) objektu. Další informace o šablonách příjemců OLE DB najdete v tématu [seznamu z OLE DB – šablony příjemce](../data/oledb/ole-db-consumer-templates-reference.md).
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../mfc/class-library-overview.md)
 

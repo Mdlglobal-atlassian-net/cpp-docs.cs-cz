@@ -15,14 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad982ee72e93a2779e4f3334984a325514248565
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 02dd1b2cbe4d1da2364d884a0326cdc394bc16af
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315103"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444876"
 ---
 # <a name="attributes-by-group"></a>Atributy podle skupin
+
 Atributy C++ jsou uspořádány do následujících skupin funkční.
   
 |Atribut|Popis|
@@ -32,10 +33,11 @@ Atributy C++ jsou uspořádány do následujících skupin funkční.
 |[Atributy příjemce technologie OLE DB](../windows/ole-db-consumer-attributes.md)|Vložení kódu – na základě [OLE DB – šablony příjemce](../data/oledb/ole-db-consumer-templates-reference.md)– Chcete-li vytvořit pracovní technologie OLE DB příjemce, který provádí úlohy, jako je otevření tabulek, provádění příkazů a přístup k datům.|
 |[Atributy kompilátoru](../windows/compiler-attributes.md)|Zadaný v kompilátoru jazyka Visual C++.|
   
- Informace o tom, jak definovat vlastní atributy pro aplikaci rozhraní .NET Framework najdete v tématu [uživatelem definované atributy](../windows/user-defined-attributes-cpp-component-extensions.md).
+Informace o tom, jak definovat vlastní atributy pro aplikaci rozhraní .NET Framework najdete v tématu [uživatelem definované atributy](../windows/user-defined-attributes-cpp-component-extensions.md).
   
 ## <a name="see-also"></a>Viz také
- [Referenční dokumentace k atributům C++](../windows/cpp-attributes-reference.md)  
- [Koncepty](../windows/attributed-programming-concepts.md)  
- [Atributy podle použití](../windows/attributes-by-usage.md)  
- [Abecedně řazená referenční dokumentace k atributům](../windows/attributes-alphabetical-reference.md)
+
+[Referenční dokumentace k atributům C++](../windows/cpp-attributes-reference.md)<br/>
+[Koncepty](../windows/attributed-programming-concepts.md)<br/>
+[Atributy podle použití](../windows/attributes-by-usage.md)<br/>
+[Abecedně řazená referenční dokumentace k atributům](../windows/attributes-alphabetical-reference.md)

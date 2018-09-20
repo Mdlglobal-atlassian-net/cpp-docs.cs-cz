@@ -2,7 +2,7 @@
 title: Instalace podpory jazyka C++ v sadě Visual Studio 2017 | Dokumentace Microsoftu
 description: Nainstalovat Visual Studio – podpora pro Visual C++
 ms.custom: mvc
-ms.date: 06/21/2018
+ms.date: 09/17/2018
 ms.topic: tutorial
 ms.technology:
 - devlang-C++
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e0fef319fbe119118e3a915a66bea3546bbb9a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6c905df6fb406b9189bd46d20c6f199d3d90a722
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702894"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441938"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Instalace podpory jazyka C++ v sadě Visual Studio
 
@@ -37,7 +37,7 @@ Podrobnosti o místo na disku a požadavky na operační systém, najdete v čá
 
 ## <a name="visual-studio-2015-installation"></a>Instalace sady Visual Studio 2015
 
-Chcete-li nainstalovat sadu Visual Studio 2015, přejděte na [starší verze sady Visual Studio si můžete stáhnout](https://www.visualstudio.com/vs/older-downloads/). Spusťte instalační program a zvolte **vlastní instalace** a klikněte na tlačítko komponent C++.
+Chcete-li nainstalovat sadu Visual Studio 2015, přejděte na [starší verze sady Visual Studio si můžete stáhnout](https://www.visualstudio.com/vs/older-downloads/). Spusťte instalační program a zvolte **vlastní instalace** a klikněte na tlačítko komponent C++. Chcete-li přidat podporu C++ do existující instalace sady Visual Studio 2015, klikněte na tlačítko Windows Start a typ **přidat nebo odebrat programy**. Otevřete program ze seznamu výsledků a pak v seznamu nainstalovaných programů najít instalaci sady Visual Studio 2015. Poklepejte na něj a pak zvolte **změnit** a vybrat součásti Visual C++ k instalaci.
 
 Obecně platí důrazně doporučujeme použít Visual Studio 2017, i v případě, že budete potřebovat ke kompilaci kódu pomocí kompilátoru Visual Studio 2015. Další informace najdete v tématu [pomocí nativního cílení na více platforem v sadě Visual Studio sestavení starých projektů](../porting/use-native-multi-targeting.md).
 

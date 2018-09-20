@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06350e851501cfa26d1ea4d326c26d7a37270889
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: a0be5d4cc09dbb5753bd8889ad880364ebd228bf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42465651"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433650"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Průvodce přenosem a upgradováním Visual C++
+
 Toto téma poskytuje návod pro upgrade kódu jazyka Visual C++. To zahrnuje získání kódu zkompilovat a spustit správně na novější verzi nástrojů, jakož i využívat nový jazyk a funkce aplikace Visual Studio. Toto téma obsahuje také informace o migraci starších aplikací na Modernější platformy.  
   
 ## <a name="reasons-to-upgrade-visual-c-code"></a>Důvody pro Upgrade kódu Visual C++  

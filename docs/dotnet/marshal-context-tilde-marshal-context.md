@@ -1,5 +1,5 @@
 ---
-title: 'marshal_context –:: ~ marshal_context | Microsoft Docs'
+title: 'marshal_context –:: ~ marshal_context – | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,33 +21,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a6cb7ed3c7b1ee5b28c4943d83b6a8ca6166b6d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 49f194f153f3e4f911333e22b11ebddf7efcaa32
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33138085"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447255"
 ---
 # <a name="marshalcontextmarshalcontext"></a>marshal_context::~marshal_context
-Zničí `marshal_context` objektu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-~marshal_context();  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Některé konverze datových vyžadují zařazování kontextu. V tématu [přehled zařazování v jazyku C++](../dotnet/overview-of-marshaling-in-cpp.md) Další informace o které překlady vyžadují kontextu a má zařazování souborů, které mají být zahrnuty do vaší aplikace.  
-  
- Odstranění `marshal_context` objekt zruší platnost dat převedených pomocí tohoto kontextu. Pokud chcete zachovat data po `marshal_context` zničena objektu, musíte ručně zkopírovat data do proměnné, která zachová.  
-  
-## <a name="requirements"></a>Požadavky  
- **Soubor hlaviček:** \<msclr\marshal.h >, \<msclr\marshal_windows.h >, \<msclr\marshal_cppstd.h >, nebo \<msclr\marshal_atl.h >  
-  
- **Namespace:** msclr::interop  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled zařazování v jazyce C++](../dotnet/overview-of-marshaling-in-cpp.md)   
- [marshal_as](../dotnet/marshal-as.md)   
- [marshal_context Class](../dotnet/marshal-context-class.md)
+
+Odstraní `marshal_context` objektu.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+~marshal_context();
+```
+
+## <a name="remarks"></a>Poznámky
+
+Některé převodů dat vyžadují zařazování kontextu. Zobrazit [Overview of Marshaling in C++](../dotnet/overview-of-marshaling-in-cpp.md) Další informace o překlady, které vyžadují kontextu a které zařazování soubor musí být součástí vaší aplikace.
+
+Odstranění `marshal_context` objekt zruší platnost dat převedených pomocí daného kontextu. Pokud chcete zachovat data po `marshal_context` objekt je zničen, musíte ručně zkopírovat data do proměnné, která se zachová.
+
+## <a name="requirements"></a>Požadavky
+
+**Soubor hlaviček:** \<msclr\marshal.h >, \<msclr\marshal_windows.h >, \<msclr\marshal_cppstd.h >, nebo \<msclr\marshal_atl.h >
+
+**Namespace:** msclr::interop
+
+## <a name="see-also"></a>Viz také
+
+[Přehled zařazování v jazyce C++](../dotnet/overview-of-marshaling-in-cpp.md)<br/>
+[marshal_as](../dotnet/marshal-as.md)<br/>
+[marshal_context Class](../dotnet/marshal-context-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Zajištění interakce s myší v neaktivním stavu | Microsoft Docs
+title: Zajištění interakce s myší v neaktivním stavu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,32 +14,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c322493a0ee1aebd068ffe1fedb695445b6274aa
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 9394a3c161b82fa95de0e2ae0c590aec87493a85
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929491"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418733"
 ---
 # <a name="providing-mouse-interaction-while-inactive"></a>Zajištění interakce s myší v neaktivním stavu
-Pokud vlastní ovládací prvek není aktivovat hned, stále můžete ho do procesu WM_SETCURSOR a WM_MOUSEMOVE zprávy, i když ovládací prvek nemá žádné okno. To lze provést povolením `COleControl`na implementaci `IPointerInactive` rozhraní, které se ve výchozím nastavení vypnutá. (Viz *ActiveX SDK* popis tohoto rozhraní.) Ho Pokud chcete zapnout, zahrnout příznak pointerInactive sadu příznaky vrácený [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags):  
-  
- [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_1.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#10](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_2.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_3.cpp)]  
-  
- Kód, který patří tento příznak vytváří automaticky, pokud jste vybrali **myši ukazatel oznámení při neaktivní** možnost [nastavení řízení](../mfc/reference/control-settings-mfc-activex-control-wizard.md) stránka při vytváření vlastního ovládacího prvku pomocí **Průvodce ovládacím prvkem ActiveX knihovny MFC**.  
-  
- Když `IPointerInactive` rozhraní je povoleno, kontejneru deleguje WM_SETCURSOR a WM_MOUSEMOVE zprávy do něj. `COleControl`pro implementaci `IPointerInactive` expeduje zprávy prostřednictvím ovládacího prvku mapy zpráv, po úpravě myši koordinuje správně. Přidáním odpovídající položky do mapy zpráv může zpracovat zprávy stejně jako obyčejnou okno zprávy. Ve vaší obslužné rutiny pro tyto zprávy, vyhněte se použití *m_hWnd* členské proměnné (nebo – členská funkce, která jej používá) bez první kontrola její hodnota není **NULL**.  
-  
- Můžete také ovládací prvek neaktivní jako cíl operace přetažení myší OLE. To vyžaduje aktivaci ovládacího prvku v okamžiku, kdy uživatel nastavuje tažením objekt přes, tak, aby ovládacího prvku okno může být registrován jako cíle přetažení. Aby aktivace proběhnout během přetažení, přepsání [COleControl::GetActivationPolicy](../mfc/reference/colecontrol-class.md#getactivationpolicy)a vrátí příznak POINTERINACTIVE_ACTIVATEONDRAG:  
-  
- [!code-cpp[NVC_MFC_AxOpt#11](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_4.cpp)]  
-  
- Povolení `IPointerInactive` rozhraní obvykle znamená, že chcete být schopná zpracovávat myši zpráv za všech okolností ovládacího prvku. Chcete-li získat toto chování v kontejneru, který nepodporuje `IPointerInactive` rozhraní, musíte mít kontrolu nad vždy aktivovat, pokud viditelná, což znamená, že ovládacího prvku by měla obsahovat příznak OLEMISC_ACTIVATEWHENVISIBLE mezi její různé příznaky. Ale, aby se zabránilo tento příznak z trvá vliv v kontejneru, který podporuje `IPointerInactive`, můžete také zadat příznak OLEMISC_IGNOREACTIVATEWHENVISIBLE:  
-  
- [!code-cpp[NVC_MFC_AxOpt#12](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_5.cpp)]  
-  
-## <a name="see-also"></a>Viz také  
- [MFC – ovládací prvky ActiveX: Optimalizace](../mfc/mfc-activex-controls-optimization.md)
+
+Pokud váš ovládací prvek není aktivovat hned, stále můžete se k procesu ovládací prvky WM_SETCURSOR a wm_mousemove a zprávy, i v případě, že ovládací prvek nemá žádné okno. Můžete to provést povolením `COleControl`provádění `IPointerInactive` rozhraní, které je ve výchozím nastavení zakázané. (Viz *ActiveX SDK* popis tohoto rozhraní.) Ho Pokud chcete povolit, zahrňte příznak pointerInactive v sadě příznaky vrácený [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags):
+
+[!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_1.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#10](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_2.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_3.cpp)]
+
+Kód, který patří tento příznak není automaticky vygenerován, pokud vyberete **myši ukazatel oznámení při neaktivní** možnost [nastavení](../mfc/reference/control-settings-mfc-activex-control-wizard.md) stránce při vytváření ovládacího prvku s **Průvodce ovládacím prvkem ActiveX knihovny MFC**.
+
+Když `IPointerInactive` rozhraní je povoleno, kontejner deleguje ovládací prvky WM_SETCURSOR a wm_mousemove a zprávy do něj. `COleControl`pro implementaci `IPointerInactive` odesílá zprávy přes mapu zpráv ovládacího prvku po nastavení myši koordinuje odpovídajícím způsobem. Zprávy stejně jako běžné okno zprávy může zpracovat tak, že přidáte odpovídající položky v mapování zprávy. V obslužné rutině pro tyto zprávy, vyhněte se použití *m_hWnd* členské proměnné (nebo žádnou členskou funkci, která ji používá) bez nejdřív zkontrolovali, že její hodnota není **NULL**.
+
+Můžete také neaktivní ovládací prvek jako cíl operace přetažení myší OLE. Tento postup vyžaduje aktivaci ovládacího prvku v tuto chvíli uživatel přetáhne objekt přes něj, tak, aby okno ovládacího prvku lze zaregistrovat jako cíl přetažení. Způsobí aktivace během přetáhněte přepsat [COleControl::GetActivationPolicy](../mfc/reference/colecontrol-class.md#getactivationpolicy)a vrátí příznak POINTERINACTIVE_ACTIVATEONDRAG:
+
+[!code-cpp[NVC_MFC_AxOpt#11](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_4.cpp)]
+
+Povolení `IPointerInactive` rozhraní obvykle znamená, že ovládací prvek dokáže zpracovávat zprávy týkající se myši za všech okolností. Chcete-li získat toto chování v kontejneru, který nepodporuje `IPointerInactive` rozhraní, musíte mít ovládací prvek vždy aktivována, když je viditelné, to znamená, že ovládací prvek by měl obsahovat příznak OLEMISC_ACTIVATEWHENVISIBLE mezi jeho různé příznaky. Ale, aby se zabránilo tento příznak z neprojeví v kontejneru, který podporuje `IPointerInactive`, můžete také zadat příznak OLEMISC_IGNOREACTIVATEWHENVISIBLE:
+
+[!code-cpp[NVC_MFC_AxOpt#12](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_5.cpp)]
+
+## <a name="see-also"></a>Viz také
+
+[MFC – ovládací prvky ActiveX: Optimalizace](../mfc/mfc-activex-controls-optimization.md)
 

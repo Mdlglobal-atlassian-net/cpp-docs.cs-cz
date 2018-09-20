@@ -1,5 +1,5 @@
 ---
-title: Obrázek informace v seznamech obrázků | Microsoft Docs
+title: Obrázek informace v seznamech obrázků | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b45a685a9de44bdc40f83481cb83ef58a5c4234
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c98bc629cde74cf7a6fc8a416de862f50a1dd5ae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343710"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422282"
 ---
 # <a name="image-information-in-image-lists"></a>Informace o obrázku v seznamu obrázků
-[CImageList](../mfc/reference/cimagelist-class.md) zahrnuje několik funkcí, které načtení informací ze seznamu obrázků. [GetImageInfo](../mfc/reference/cimagelist-class.md#getimageinfo) – členská funkce doplní `IMAGEINFO` struktura s informacemi o jednu bitovou kopii, včetně popisovače bitmap bitové kopie a maska, počet barevných rovin a bitů na pixel a ohraničující obdélník bitové kopie v rámci rastrový obrázek bitové kopie. Tyto informace můžete použít k manipulaci se přímo bitmap pro bitovou kopii.  
-  
- [Getimagecount –](../mfc/reference/cimagelist-class.md#getimagecount) – členská funkce načte množství obrázků v seznamu obrázků.  
-  
- Můžete vytvořit ikonu založené na bitové kopie a maska v seznamu obrázků s použitím [ExtractIcon](../mfc/reference/cimagelist-class.md#extracticon) – členská funkce. Vrátí popisovač na ikonu nový.  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CImageList](../mfc/using-cimagelist.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+[Cimagelist –](../mfc/reference/cimagelist-class.md) zahrnuje celou řadu funkcí, které načítají informace ze seznamu obrázků. [GetImageInfo](../mfc/reference/cimagelist-class.md#getimageinfo) vyplní členskou funkci `IMAGEINFO` struktura s informacemi o jedné image, včetně popisovačů image a maska rastrové obrázky, počet barevných rovin a počet bitů na pixel a ohraničující obdélník bitové kopie v rámci image rastrového obrázku. Tyto informace můžete přímo pracovat s rastrové obrázky pro bitovou kopii.
+
+[Getimagecount –](../mfc/reference/cimagelist-class.md#getimagecount) členskou funkci zjišťuje počet imagí v seznamu obrázků.
+
+Můžete vytvořit podle image a maska v seznamu obrázků pomocí ikony [ExtractIcon](../mfc/reference/cimagelist-class.md#extracticon) členskou funkci. Vrátí popisovač na ikonu nový.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CImageList](../mfc/using-cimagelist.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

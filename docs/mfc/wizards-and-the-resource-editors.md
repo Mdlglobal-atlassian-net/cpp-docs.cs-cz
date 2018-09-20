@@ -1,5 +1,5 @@
 ---
-title: Průvodci a editory prostředků | Microsoft Docs
+title: Průvodci a editory prostředků | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,39 +22,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db1b807856baf4cab3cdef57092cd29fdff3a19d
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 3a02a6e1f2b40f777cef0f82f92d0c41ff40595b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951137"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436532"
 ---
 # <a name="wizards-and-the-resource-editors"></a>Průvodci a editory prostředků
-Visual C++ obsahuje několik průvodců pro použití v MFC – programování, společně s mnoha editory integrované prostředků. Pro programování, ovládací prvky ActiveX [Průvodce ovládacím prvkem ActiveX](../mfc/reference/mfc-activex-control-wizard.md) slouží k účelu, podobně jako u Průvodce aplikací MFC. Při můžete psát aplikace MFC bez většinu těchto nástrojů, nástroje výrazně zjednodušit a urychlit práci.  
-  
-##  <a name="_core_use_appwizard_to_create_an_mfc_application"></a> Vytvoření aplikace knihovny MFC pomocí Průvodce aplikací MFC  
- Použití [Průvodce aplikací knihovny MFC](../mfc/reference/mfc-application-wizard.md) k vytvoření projektu knihovny MFC v jazyce Visual C++, což může zahrnovat OLE a podpora databáze. Soubory v projektu obsahují aplikace, dokumentu, zobrazení a oken s rámečkem třídy; standardní prostředky, včetně nabídky a volitelné nástrojů; Další požadované soubory Windows; a volitelné .rtf soubory obsahující standardní témata nápovědy pro Windows, která můžete revidovat a posílení k vytvoření souboru nápovědy vašeho programu.  
-  
-##  <a name="_core_use_classwizard_to_manage_classes_and_windows_messages"></a> Zobrazení tříd použijte ke správě třídy a zpráv systému Windows  
- Třídy zobrazení pomáhá vytvářet funkce obslužných rutin zpráv systému Windows a příkazy, vytvořit a spravovat třídy, vytvořit člen třídy proměnné, vytvoření automatizace metody a vlastnosti, vytvoření databázové třídy a další.  
-  
+
+Visual C++ obsahuje několik průvodců pro použití v programování knihovny MFC, spolu s mnoha editory integrované prostředků. Pro programování a ovládací prvky ActiveX [Průvodce ovládacím prvkem ActiveX](../mfc/reference/mfc-activex-control-wizard.md) slouží k účelu, stejně jako u Průvodce aplikací knihovny MFC. Přestože můžete psát aplikace knihovny MFC bez většina těchto nástrojů, nástroje výrazně Zjednodušte a urychlete svou práci.
+
+##  <a name="_core_use_appwizard_to_create_an_mfc_application"></a> Vytvoření aplikace knihovny MFC pomocí Průvodce aplikací MFC
+
+Použití [Průvodce aplikací knihovny MFC](../mfc/reference/mfc-application-wizard.md) pro vytvoření projektu knihovny MFC v jazyce Visual C++, které můžete zahrnout OLE a podpora databáze. Obsahují soubory v projektu aplikace, dokumentu, zobrazení a třídy oken s rámečkem; standardní prostředky, včetně nabídek a volitelné nástrojů; Další požadované soubory Windows; a standardní témata nápovědy Windows, které můžete upravit a rozšířit k vytvoření souboru nápovědy váš program, který obsahuje soubory .rtf volitelné.
+
+##  <a name="_core_use_classwizard_to_manage_classes_and_windows_messages"></a> Zobrazení tříd používá Správa třídy a zpráv Windows
+
+Třídy zobrazení pomáhá vytvářet funkce obslužné rutiny pro zprávy o Windows a příkazy, vytvářet a spravovat třídy, vytvořte proměnné člena třídy, vytvoření automatizace metody a vlastnosti, vytvoření databázové třídy a další.
+
 > [!NOTE]
->  Zobrazení tříd také pomáhá přepsání virtuální funkce do tříd MFC. Vyberte třídu a virtuální funkce pro přepsání. Zbytek procesu je podobná zpracování zpráv, jak je popsáno v následujících odstavcích.  
-  
- Aplikace běžící v systému Windows jsou [zpráva řízené](../mfc/message-handling-and-mapping.md). Akcemi uživatelů a dalších událostí, ke kterým došlo v programu spuštěný systém Windows k odesílání zpráv do systému windows v programu. Například pokud uživatel klikne na tlačítko myši v okně, systém Windows odešle zprávu WM_LBUTTONDOWN při stisknutí levým tlačítkem myši a zprávu WM_LBUTTONUP po vydání tlačítko. Windows rovněž odesílá wm_command – zprávy, když uživatel vybere příkazy z řádku nabídek.  
-  
- V rozhraní MFC framework různé objekty, jako jsou dokumenty, zobrazení, okna s rámečkem, šablony dokumentů a objekt aplikace může "zpracovávat" zprávy. Takového objektu poskytuje "obslužné rutiny funkce" jako jeden z jeho členských funkcí a rozhraní mapuje příchozí zpráva její obslužnou rutinu.  
-  
- Velkou část programovací úkolu je výběr zprávy k mapování na které objekty a pak implementace mapování. Uděláte to tak, použijte zobrazení tříd a okně Vlastnosti.  
-  
- Okno vlastností vytvoří prázdný popisovač zpráv členské funkce a pomocí editoru zdrojového kódu pro implementaci text obslužné rutiny. Můžete také vytvořit nebo upravit třídy (třídy vlastní není odvozen od třídy MFC včetně) a jejich členové s zobrazení tříd. Další informace o používání zobrazení tříd a o Průvodci, který přidá do projektu kódu najdete v tématu [přidání funkce pomocí průvodců kódem](../ide/adding-functionality-with-code-wizards-cpp.md).  
-  
-##  <a name="_core_use_the_resource_editors_to_create_and_edit_resources"></a> Editory prostředků slouží k vytvoření a úpravě prostředků  
- Pomocí Visual C++ [editory prostředků](../windows/resource-editors.md) můžete vytvářet a upravovat nabídky, dialogová okna, vlastní ovládací prvky, klávesy akcelerátoru, rastrové obrázky, ikony, kurzory, řetězce a verze prostředky. Od verze Visual C++ verze 4.0 editor panelu nástrojů jednodušší vytváření panelů nástrojů.  
-  
- Můžete i další, poskytuje knihovny Microsoft Foundation Class do souboru s názvem běžné. RES, který obsahuje "clip art" prostředky, které můžete zkopírovat z běžné. RES a vložte do souboru prostředků. BĚŽNÉ. RES zahrnuje tlačítka panelu nástrojů, běžné kurzory, ikony a další. Můžete použít, upravit a znovu distribuovat tyto prostředky ve vaší aplikaci. Další informace o běžné. RES, najdete v článku [Clipart ukázka](../visual-cpp-samples.md).  
-  
- Průvodce aplikací MFC, průvodci Visual C++, editory prostředků a rozhraní MFC framework velké množství pracovních to pro vás a ujistěte se, správa kódu mnohem jednodušší. Třídy dokumentů a zobrazení se hromadným kódu pro konkrétní aplikace.  
-  
-## <a name="see-also"></a>Viz také  
- [Použití tříd pro psaní aplikací pro Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)
+>  Zobrazení tříd také umožňuje přepsat virtuální funkce v třídách knihovny MFC. Vyberte třídu a virtuální funkce pro přepsání. Zbytek procesu je podobný zpracování zpráv, jak je popsáno v následujících odstavcích.
+
+Aplikace běžící v rámci Windows jsou [zpráva řízené](../mfc/message-handling-and-mapping.md). Akce uživatele a další události, ke kterým dochází v běžící aplikaci způsobit, že Windows k odesílání zpráv do systému windows v programu. Například když uživatel klikne myší v okně, Windows odešle WM_LBUTTONDOWN zprávu, když se stiskne levé tlačítko myši a napište zprávu, WM_LBUTTONUP při uvolnění tlačítka. Windows rovněž odesílá wm_command – zprávy, když uživatel vybere příkazy na řádku nabídek.
+
+V rámci MFC různé objekty, jako jsou dokumenty, zobrazení, oken s rámečkem, šablony dokumentů a objekt aplikace můžete "handle" zprávy. Takový objekt poskytuje "funkci obslužné rutiny" jako jeden z jeho členské funkce a rozhraní mapuje příchozí zprávy na její obslužná rutina.
+
+Velkou část úlohou programování je výběr zpráv pro mapování na které objekty a pak implementace mapování. K tomu použijete zobrazení tříd a okně Vlastnosti.
+
+V okně Vlastnosti vytvoří prázdný popisovač zpráv členské funkce a používat editor zdrojového kódu k implementaci těla obslužné rutiny. Můžete také vytvořit nebo upravit třídy (včetně třídy vlastní neodvozených ze třídy knihovny MFC) a jejich členy s zobrazení tříd. Další informace o použití zobrazení tříd a o Průvodci, který do projektu přidejte kód, naleznete v tématu [přidání funkce pomocí průvodců kódem](../ide/adding-functionality-with-code-wizards-cpp.md).
+
+##  <a name="_core_use_the_resource_editors_to_create_and_edit_resources"></a> Editory prostředků můžete vytvořit a upravit prostředky
+
+Použití jazyka Visual C++ [editory prostředků](../windows/resource-editors.md) vytvářet a upravovat nabídek, dialogová okna, vlastní ovládací prvky, klávesové zkratky, rastrové obrázky, ikony, kurzory, řetězce a verze zdroje. Od verze Visual C++ verze 4.0 editor panelu nástrojů jednodušší vytváření panelů nástrojů.
+
+To vám pomůže i, poskytuje knihovny Microsoft Foundation Class soubor s názvem COMMON. RES, který obsahuje "klipart" prostředky, které můžete zkopírovat z běžné. RES a vložit do souboru prostředků. BĚŽNÉ. RES obsahuje tlačítka na panelu nástrojů, běžné kurzorů, ikony a další. Můžete použít, upravit a distribuovat tyto prostředky ve vaší aplikaci. Další informace o běžné. RES, najdete v článku [klipart ukázka](../visual-cpp-samples.md).
+
+Průvodce aplikací MFC, průvodců aplikace Visual C++, editory prostředků a rozhraní MFC dělat spoustu práce za vás a ujistěte se, správa kódu mnohem jednodušší. Hromadné kódu specifické pro aplikaci se dokument a zobrazení tříd.
+
+## <a name="see-also"></a>Viz také
+
+[Použití tříd pro psaní aplikací pro Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)

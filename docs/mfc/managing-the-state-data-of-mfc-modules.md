@@ -1,5 +1,5 @@
 ---
-title: Správa údajů o stavu modulů knihovny MFC | Microsoft Docs
+title: Správa údajů o stavu modulů knihovny MFC | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,37 +22,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5c2bced4f7f04cf75c72e68db0f99e0f89d2566
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: f1077128ec417ab0cd3e1fb0d5b7e57e1ffaec37
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930513"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442796"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>Správa údajů o stavu modulů knihovny MFC
-Tento článek popisuje data o stavu modulů knihovny MFC a jak se tento stav bude aktualizován, jakmile tok provádění (kód cesta provede aplikace při provádění) zadá a zanechá modul. Stavy modulů s AFX_MANAGE_STATE a method_prologue – makra přepínání také popsané.  
-  
+
+Tento článek popisuje data o stavu modulů knihovny MFC a způsob, jakým je tento stav aktualizuje když dorazí opustí modulu toku provádění (cesta kód provede aplikace při spuštění). Přepíná stavy modulů s makry AFX_MANAGE_STATE a METHOD_PROLOGUE jsou také popsány.
+
 > [!NOTE]
->  Termín "modul" zde odkazuje spustitelný program, nebo knihovna DLL (nebo sadu knihoven DLL), pracovat nezávisle na zbytek aplikace, ale používá sdílené kopie knihovny MFC DLL. Ovládací prvek ActiveX je typický příklad modulu.  
-  
- Jak je znázorněno na následujícím obrázku, má MFC data o stavu pro každý modul používaný v aplikaci. Mezi tato data patří například popisovače instance systému Windows (používané pro načítání prostředků), odkazy na aktuální `CWinApp` a `CWinThread` objekty aplikace, počty odkaz na modul OLE a celou řadu mapy, které udržují připojení mezi Windows objekt obslužné rutiny a odpovídajících instancí objektů MFC. Ale pokud aplikace používá více modulů, data o stavu každého modulu není aplikace široké. Místo toho každý modul má svou vlastní privátní kopii dat o stavu MFC.  
-  
- ![Stav dat jeden modul &#40;aplikace&#41;](../mfc/media/vc387n1.gif "vc387n1")  
-Údajů o stavu jeden modul (aplikace)  
-  
- Data o stavu modul je obsažen ve struktuře a je vždy k dispozici prostřednictvím ukazatel na této struktury. Tok provádění zadá konkrétního modulu, jak je znázorněno na následujícím obrázku, musí být stav tohoto modulu stavu "aktuální" nebo "efektivní". Každý objekt vlákno proto má ukazatel na strukturu efektivní stav této aplikace. Zachování tento ukazatel aktualizován na všech časy je důležité pro globální stav aplikace pro správu a údržbu integritu každý modul stavu. Nesprávný správu globální stav může způsobit nepředvídatelné chování aplikací.  
-  
- ![Stav dat více modulů](../mfc/media/vc387n2.gif "vc387n2")  
-Údajů o stavu více modulů  
-  
- Jinými slovy každý modul je zodpovědná za správně přepínání mezi stavy modulů všechny jeho vstupní body. "Vstupní bod" je jakékoli místo, kde tok provádění můžete zadat kód modulu. Vstupní body patří:  
-  
--   [Exportované funkce v knihovně DLL](../mfc/exported-dll-function-entry-points.md)  
-  
--   [Členské funkce COM – rozhraní](../mfc/com-interface-entry-points.md)  
-  
--   [Procedury oken](../mfc/window-procedure-entry-points.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Obecná témata MFC](../mfc/general-mfc-topics.md)
+>  Termín "modul" zde odkazuje spustitelného programu nebo knihovny DLL (nebo sadu knihoven DLL), které budou fungovat nezávisle zbývajících částí aplikace, ale používá sdílené kopie knihovny MFC DLL. Ovládací prvek ActiveX je typickým příkladem modulu.
+
+Jak je znázorněno na následujícím obrázku, knihovna MFC má data o stavu jednotlivých modulů použít v aplikaci. Mezi tato data patří například popisovače instance Windows (používané pro načítání prostředků), ukazatele na aktuální `CWinApp` a `CWinThread` objekty aplikace, počty odkazů modulu OLE a širokou škálu mapy, které udržují připojení mezi Obslužné rutiny a odpovídající instance objektů MFC objektů Windows. Ale když aplikace využívá více modulů, jsou data o stavu každého modulu, není aplikační široké. Místo toho každého modulu, který má vlastní soukromá kopie dat o stavu MFC.
+
+![Stav data jeden modul &#40;aplikace&#41;](../mfc/media/vc387n1.gif "vc387n1") Data o stavu jednoho modulu (aplikace)
+
+Data o stavu modulu je obsažen ve struktuře a je vždy k dispozici prostřednictvím ukazatele na danou strukturu. Tok provádění zadá konkrétního modulu, jak je znázorněno na následujícím obrázku, musí být stav tímto modulem stavu "aktuální" nebo "efektivní". Proto se každý objekt vlákna má ukazatel na strukturu efektivní stavu této aplikace. Udržování tento ukazatel aktualizován vůbec časy je důležité pro správu globální stav aplikace a zachování integrity stavu každého modulu. Nesprávný správy globální stav může způsobit nepředvídatelné chování aplikací.
+
+![Stav data z více modulů](../mfc/media/vc387n2.gif "vc387n2") stavu dat více modulů
+
+Každý modul jinými slovy, zodpovídá za správně přepínání mezi stavy modulů ve všech jeho vstupní body. "Vstupního bodu" je jakéhokoli místa, kde tok spouštění můžete zadat kód modulu. Vstupní body patří:
+
+- [Exportované funkce v knihovně DLL](../mfc/exported-dll-function-entry-points.md)
+
+- [Členské funkce rozhraní modelu COM](../mfc/com-interface-entry-points.md)
+
+- [Procedury oken](../mfc/window-procedure-entry-points.md)
+
+## <a name="see-also"></a>Viz také
+
+[Obecná témata MFC](../mfc/general-mfc-topics.md)
 

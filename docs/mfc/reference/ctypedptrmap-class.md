@@ -1,5 +1,5 @@
 ---
-title: CTypedPtrMap – třída | Microsoft Docs
+title: Ctypedptrmap – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,188 +24,211 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f312d7e829657f2cc9c7c41c65afad8d8f8b343
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 85f44473237a17a83aae2377e63a4e35d43483b9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121861"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433787"
 ---
-# <a name="ctypedptrmap-class"></a>CTypedPtrMap – třída
-Poskytuje bezpečnost typů "obálky" pro objekty třídy map ukazatel `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, a `CMapStringToPtr`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-template<class BASE_CLASS, class KEY, class VALUE>  
-class CTypedPtrMap : public BASE_CLASS  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *BASE_CLASS*  
- Základní třída třídy map typu ukazatele; musí být třída mapy ukazatele ( `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, nebo `CMapStringToPtr`).  
-  
- *KEY*  
- Třída objektu použitého jako klíč k mapy.  
-  
- *HODNOTA*  
- Třída objektu uložené v mapě.  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CTypedPtrMap::GetNextAssoc](#getnextassoc)|Získá další prvek pro iterace.|  
-|[CTypedPtrMap::Lookup](#lookup)|Vrátí `KEY` na základě `VALUE`.|  
-|[CTypedPtrMap::RemoveKey](#removekey)|Odebere element určeného klíč.|  
-|[CTypedPtrMap::SetAt](#setat)|Vloží element do mapy; nahradí existující elementu, pokud je nalezen odpovídající klíč.|  
-  
-### <a name="public-operators"></a>Veřejné operátory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[[CTypedPtrMap::operator]](#operator_at)|Element vloží do mapy.|  
-  
-## <a name="remarks"></a>Poznámky  
- Při použití `CTypedPtrMap`, kontrola typu zařízení C++ pomáhá eliminovat chyby způsobené typy neodpovídající ukazatelů.  
-  
- Protože všechny `CTypedPtrMap` jsou vložené funkce, pomocí této šablony nemá vliv na výrazně velikost a rychlost kódu.  
-  
- Další informace o používání `CTypedPtrMap`, najdete v článcích [kolekce](../../mfc/collections.md) a [na základě šablon třídy](../../mfc/template-based-classes.md).  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `BASE_CLASS`  
-  
- `CTypedPtrMap`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxtempl.h  
-  
-##  <a name="getnextassoc"></a>  CTypedPtrMap::GetNextAssoc  
- Načte element mapy v `rNextPosition`, pak aktualizuje `rNextPosition` odkazovat na další prvek v mapě.  
-  
-```  
+# <a name="ctypedptrmap-class"></a>Ctypedptrmap – třída
+
+Poskytuje typově zabezpečenou "obálku" pro objekty tříd ukazatel mapy `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, a `CMapStringToPtr`.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+template<class BASE_CLASS, class KEY, class VALUE>
+class CTypedPtrMap : public BASE_CLASS
+```
+
+#### <a name="parameters"></a>Parametry
+
+*$BASE_CLASS*<br/>
+Základní třída typované ukazatele mapování třídy; musí být třída map ukazatel ( `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, nebo `CMapStringToPtr`).
+
+*KEY*<br/>
+Třída objektu se používá jako klíč do mapy.
+
+*HODNOTA*<br/>
+Třída objekt uložený v objektu map.
+
+## <a name="members"></a>Členové
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CTypedPtrMap::GetNextAssoc](#getnextassoc)|Získá další prvek pro iterace.|
+|[CTypedPtrMap::Lookup](#lookup)|Vrátí `KEY` na základě `VALUE`.|
+|[CTypedPtrMap::RemoveKey](#removekey)|Odebere element určený klíč.|
+|[CTypedPtrMap::SetAt](#setat)|Vloží prvek do mapy; nahradí existující prvek, pokud je nalezen odpovídající klíč.|
+
+### <a name="public-operators"></a>Veřejné operátory
+
+|Název|Popis|
+|----------|-----------------|
+|[[] Č. CTypedPtrMap::operator](#operator_at)|Vloží prvek do objektu map.|
+
+## <a name="remarks"></a>Poznámky
+
+Při použití `CTypedPtrMap`, kontroly typů zařízení C++ pomáhá eliminovat chyby způsobené typy neodpovídající ukazatelů.
+
+Protože všechny `CTypedPtrMap` jsou vložené funkce, použijte tato šablona nemá vliv na výrazně velikost nebo rychlost kódu.
+
+Další informace o používání `CTypedPtrMap`, najdete v článcích [kolekce](../../mfc/collections.md) a [založené na šablonách třídy](../../mfc/template-based-classes.md).
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`BASE_CLASS`
+
+`CTypedPtrMap`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxtempl.h
+
+##  <a name="getnextassoc"></a>  CTypedPtrMap::GetNextAssoc
+
+Načte prvek mapy v `rNextPosition`, pak aktualizuje `rNextPosition` odkazovat na další prvek v objektu map.
+
+```
 void GetNextAssoc(
     POSITION& rPosition,
     KEY& rKey,
-    VALUE& rValue) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *rPosition*  
- Určuje odkaz na hodnotu pozice vrácený předchozím `GetNextAssoc` nebo `BASE_CLASS` **:: GetStartPosition** volání.  
-  
- *KEY*  
- Určení typu klíče mapy pro parametr šablony.  
-  
- *rKey*  
- Určuje vrácená klíč načtený elementu.  
-  
- *HODNOTA*  
- Parametr šablony určení typu hodnoty na mapě.  
-  
- *rValue*  
- Určuje vrácená hodnota načtené elementu.  
-  
-### <a name="remarks"></a>Poznámky  
- Tato funkce je nejvhodnější pro iterace v rámci všechny elementy v mapě. Všimněte si, že pořadí pozice není nutně stejná jako hodnota klíče pořadí.  
-  
- Pokud načtené elementem je poslední v mapě, pak nová hodnota `rNextPosition` je nastaven na hodnotu NULL.  
-  
- Tato vložená funkce volá `BASE_CLASS` **:: GetNextAssoc**.  
-  
-##  <a name="lookup"></a>  CTypedPtrMap::Lookup  
- `Lookup` používá algoritmus hash se s klíčem, který přesně odpovídá rychle najít elementu mapy.  
-  
-```  
-BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *BASE_CLASS*  
- Parametr šablony zadání toto mapování třídy základní třídy.  
-  
- *Klíč*  
- Klíč elementu, který chcete vyhledávat.  
-  
- *HODNOTA*  
- Parametr šablony určující typy hodnot uložených v této mapě.  
-  
- *rValue*  
- Určuje vrácená hodnota načtené elementu.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud byl nalezen element; jinak 0.  
-  
-### <a name="remarks"></a>Poznámky  
- Tato vložená funkce volá `BASE_CLASS` **:: vyhledávání**.  
-  
-##  <a name="operator_at"></a>  [CTypedPtrMap::operator]  
- Tento operátor. můžete použít pouze na levé straně příkazu přiřazení (l hodnota).  
-  
-```  
+    VALUE& rValue) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*rposition.*<br/>
+Určuje referenci na POZICI hodnotu vrácenou předchozím `GetNextAssoc` nebo `BASE_CLASS` **:: GetStartPosition** volání.
+
+*KEY*<br/>
+Parametr šablony určující typ klíče na mapě.
+
+*rKey*<br/>
+Určuje vrácené klíč načtený elementu.
+
+*HODNOTA*<br/>
+Parametr šablony určující typ hodnoty na mapě.
+
+*r-hodnoty*<br/>
+Určuje, vrácená hodnota elementu načtený.
+
+### <a name="remarks"></a>Poznámky
+
+Tato funkce je zvláště užitečná pro procházení všech prvků v objektu map. Všimněte si, že sekvence pozice není nutně stejné jako pořadí klíč-hodnota.
+
+Pokud je načtený element poslední v objektu map, pak nová hodnota `rNextPosition` nastaven na hodnotu NULL.
+
+Tato vložená funkce zavolá `BASE_CLASS` **:: GetNextAssoc**.
+
+##  <a name="lookup"></a>  CTypedPtrMap::Lookup
+
+`Lookup` používá algoritmus hash a rychle najít prvek mapy s klíčem, který přesně odpovídá.
+
+```
+BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*$BASE_CLASS*<br/>
+Parametr šablony určující základní třídy tuto mapu třídy.
+
+*Klíč*<br/>
+Klíč elementu, který chcete vyhledávat.
+
+*HODNOTA*<br/>
+Parametr šablony určující typ hodnot uložených na této mapě.
+
+*r-hodnoty*<br/>
+Určuje, vrácená hodnota elementu načtený.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Nenulové, pokud element nebyl nalezen; jinak 0.
+
+### <a name="remarks"></a>Poznámky
+
+Tato vložená funkce zavolá `BASE_CLASS` **:: vyhledávání**.
+
+##  <a name="operator_at"></a>  [] Č. CTypedPtrMap::operator
+
+Tento operátor lze použít pouze na levé straně příkazu přiřazení (l hodnota).
+
+```
 VALUE& operator[ ](base_class ::base_arg_key key);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *HODNOTA*  
- Parametr šablony určující typy hodnot uložených v této mapě.  
-  
- *BASE_CLASS*  
- Parametr šablony zadání toto mapování třídy základní třídy.  
-  
- *Klíč*  
- Klíč elementu, který chcete vyhledávat nebo vytvořené v mapě.  
-  
-### <a name="remarks"></a>Poznámky  
- Pokud neexistuje žádný element mapy se zadaným klíčem, je vytvoření nového elementu. Ekvivalentní tento operátor není žádná "pravé straně" (r-value), protože je možné, který klíč asi se nenašla v mapě. Použití `Lookup` – členská funkce pro načtení elementu.  
-  
-##  <a name="removekey"></a>  CTypedPtrMap::RemoveKey  
- Tato funkce člen volá `BASE_CLASS` **:: RemoveKey**.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*HODNOTA*<br/>
+Parametr šablony určující typ hodnot uložených na této mapě.
+
+*$BASE_CLASS*<br/>
+Parametr šablony určující základní třídy tuto mapu třídy.
+
+*Klíč*<br/>
+Klíč elementu, který chcete vyhledávat nebo vytvořili v objektu map.
+
+### <a name="remarks"></a>Poznámky
+
+Pokud neexistuje žádné mapování element se zadaným klíčem, se vytvoří nový prvek. Ekvivalentní pro tento operátor není žádný "pravému" (r), protože je možné, že klíče nemusí být nalezen v objektu map. Použití `Lookup` členskou funkci pro prvek načítání.
+
+##  <a name="removekey"></a>  CTypedPtrMap::RemoveKey
+
+Tato členská funkce volá `BASE_CLASS` **:: RemoveKey**.
+
+```
 BOOL RemoveKey(KEY key);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *KEY*  
- Určení typu klíče mapy pro parametr šablony.  
-  
- *Klíč*  
- Klíč elementu k odebrání.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Nenulové hodnoty, pokud byla položka nalezena a úspěšně odebral; jinak 0.  
-  
-### <a name="remarks"></a>Poznámky  
- Podrobné poznámky, najdete v části [CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey).  
-  
-##  <a name="setat"></a>  CTypedPtrMap::SetAt  
- Tato funkce člen volá `BASE_CLASS` **:: SetAt**.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*KEY*<br/>
+Parametr šablony určující typ klíče na mapě.
+
+*Klíč*<br/>
+Klíč elementu, který chcete odebrat.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Nenulové, pokud byl nalezen a úspěšně odebral; položka jinak 0.
+
+### <a name="remarks"></a>Poznámky
+
+Podrobné poznámky, naleznete v tématu [CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey).
+
+##  <a name="setat"></a>  CTypedPtrMap::SetAt
+
+Tato členská funkce volá `BASE_CLASS` **:: SetAt**.
+
+```
 void SetAt(KEY key, VALUE newValue);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *KEY*  
- Určení typu klíče mapy pro parametr šablony.  
-  
- *Klíč*  
- Určuje hodnotu klíče newValue.  
-  
- *newValue*  
- Určuje ukazatele objektu, který je hodnota nového elementu.  
-  
-### <a name="remarks"></a>Poznámky  
- Podrobné poznámky, najdete v části [CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat).  
-  
-## <a name="see-also"></a>Viz také  
- [Ukázka MFC shromažďování](../../visual-cpp-samples.md)   
- [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [CMapPtrToPtr – třída](../../mfc/reference/cmapptrtoptr-class.md)   
- [CMapPtrToWord – třída](../../mfc/reference/cmapptrtoword-class.md)   
- [CMapWordToPtr – třída](../../mfc/reference/cmapwordtoptr-class.md)   
- [CMapStringToPtr – třída](../../mfc/reference/cmapstringtoptr-class.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*KEY*<br/>
+Parametr šablony určující typ klíče na mapě.
+
+*Klíč*<br/>
+Určuje hodnotu klíče newValue.
+
+*newValue*<br/>
+Určuje objekt ukazatel, který je hodnota nového elementu.
+
+### <a name="remarks"></a>Poznámky
+
+Podrobné poznámky, naleznete v tématu [CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat).
+
+## <a name="see-also"></a>Viz také
+
+[Ukázky knihovny MFC shromažďování](../../visual-cpp-samples.md)<br/>
+[Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
+[CMapPtrToPtr – třída](../../mfc/reference/cmapptrtoptr-class.md)<br/>
+[CMapPtrToWord – třída](../../mfc/reference/cmapptrtoword-class.md)<br/>
+[CMapWordToPtr – třída](../../mfc/reference/cmapwordtoptr-class.md)<br/>
+[CMapStringToPtr – třída](../../mfc/reference/cmapstringtoptr-class.md)

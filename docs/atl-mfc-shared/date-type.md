@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5a6ade991e3a2def588bdd3139cbea8089d3124
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fe80a16f0085e37feaf7c80611fa303f1d3bf1ab
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758008"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425766"
 ---
 # <a name="date-type"></a>DATE – typ
 
@@ -76,6 +76,6 @@ Další informace o problémy související s datem a `COleDateTime` typy najdet
 
 ## <a name="see-also"></a>Viz také
 
-[Datum a čas](../atl-mfc-shared/date-and-time.md)   
+[Datum a čas](../atl-mfc-shared/date-and-time.md)<br/>
 [COleDateTime – třída](../atl-mfc-shared/reference/coledatetime-class.md)
 

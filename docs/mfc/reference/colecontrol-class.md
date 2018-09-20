@@ -344,14 +344,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3c5f68d35c4cf77073de3f8d2e6090f62a6dae2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 292121e95b20061e95e85b49c60d4758bd18a568
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050096"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435529"
 ---
 # <a name="colecontrol-class"></a>COleControl – třída
+
 Výkonná základní třída pro vývoj ovládacích prvků OLE.
 
 ## <a name="syntax"></a>Syntaxe
@@ -1440,15 +1441,13 @@ void FireReadyStateChange();
 
 Stavu Připraveno, může být jeden z následujících hodnot:
 
-Výchozí READYSTATE_UNINITIALIZED stavu inicializace
-
-Ovládací prvek READYSTATE_LOADING aktuálně načítá vlastností
-
-Ovládací prvek READYSTATE_LOADED byl inicializován.
-
-Ovládací prvek READYSTATE_INTERACTIVE má dostatek dat pro interaktivní, ale všechny asynchronní data se načtou ještě
-
-Ovládací prvek READYSTATE_COMPLETE má všechna její data
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|Výchozí inicializace stavu|
+|READYSTATE_LOADING|Ovládací prvek právě načítá vlastností|
+|READYSTATE_LOADED|Ovládací prvek byl inicializován.|
+|READYSTATE_INTERACTIVE|Ovládací prvek má dostatek dat pro interaktivní, ale ještě načtení všech asynchronní dat|
+|READYSTATE_COMPLETE.|Ovládací prvek má všechna její data|
 
 Použití [GetReadyState](#getreadystate) určit aktuální připravenosti ovládacího prvku.
 
@@ -1466,11 +1465,11 @@ virtual DWORD GetActivationPolicy();
 
 Kombinace příznaků výčtu POINTERINACTIVE. Je to možné příznaky jsou:
 
-POINTERINACTIVE_ACTIVATEONENTRY objektu by měla být aktivována, když ukazatel myši přejde během operace přesunutí myši v místě.
-
-Operace přesunu POINTERINACTIVE_DEACTIVATEONLEAVE, který objekt by měl deaktivováno, když ukazatel myši opustí objektu během myši.
-
-POINTERINACTIVE_ACTIVATEONDRAG objektu by měla být aktivován při přetažení myší nad ním během přetáhněte na místě a operace odstranění.
+|||
+|-|-|
+|POINTERINACTIVE_ACTIVATEONENTRY|Objekt by měl být aktivována, když ukazatel myši přejde během operace přesunutí myši v místě.|
+|POINTERINACTIVE_DEACTIVATEONLEAVE|Objekt by měl deaktivováno, když ukazatel myši opustí objektu během operace přesunutí myši.|
+|POINTERINACTIVE_ACTIVATEONDRAG|Objekt musí být aktivován při přetažení myší nad ním během přetáhněte na místě a operace odstranění.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1915,15 +1914,13 @@ long GetReadyState();
 
 Stav připravenosti ovládacího prvku, jeden z následujících hodnot:
 
-Výchozí READYSTATE_UNINITIALIZED stavu inicializace
-
-Ovládací prvek READYSTATE_LOADING aktuálně načítá vlastností
-
-Ovládací prvek READYSTATE_LOADED byl inicializován.
-
-Ovládací prvek READYSTATE_INTERACTIVE má dostatek dat pro interaktivní, ale všechny asynchronní data se načtou ještě
-
-Ovládací prvek READYSTATE_COMPLETE má všechna její data
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|Výchozí inicializace stavu|
+|READYSTATE_LOADING|Ovládací prvek právě načítá vlastností|
+|READYSTATE_LOADED|Ovládací prvek byl inicializován.|
+|READYSTATE_INTERACTIVE|Ovládací prvek má dostatek dat pro interaktivní, ale ještě načtení všech asynchronní dat|
+|READYSTATE_COMPLETE.|Ovládací prvek má všechna její data|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2065,15 +2062,13 @@ void InternalSetReadyState(long lNewReadyState);
 *lNewReadyState*<br/>
 Stav připravenosti k nastavení pro ovládací prvek, jeden z následujících hodnot:
 
-Výchozí READYSTATE_UNINITIALIZED stavu inicializace
-
-Ovládací prvek READYSTATE_LOADING aktuálně načítá vlastností
-
-Ovládací prvek READYSTATE_LOADED byl inicializován.
-
-Ovládací prvek READYSTATE_INTERACTIVE má dostatek dat pro interaktivní, ale všechny asynchronní data se načtou ještě
-
-Ovládací prvek READYSTATE_COMPLETE má všechna její data
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|Výchozí inicializace stavu|
+|READYSTATE_LOADING|Ovládací prvek právě načítá vlastností|
+|READYSTATE_LOADED|Ovládací prvek byl inicializován.|
+|READYSTATE_INTERACTIVE|Ovládací prvek má dostatek dat pro interaktivní, ale ještě načtení všech asynchronní dat|
+|READYSTATE_COMPLETE.|Ovládací prvek má všechna její data|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2848,13 +2843,12 @@ virtual DWORD OnGetViewStatus();
 
 Jedna z hodnot výčtu které v případě úspěchu; jinak 0. Možné hodnoty jsou libovolné z následujících akcí:
 
-VIEWSTATUS_OPAQUE objekt se stane zcela neprůhledný. Pokud není tento bit nastaven, objekt obsahuje transparentní části. Tento systém vztahuje pouze na aspekty související obsah a DVASPECT_ICON ani DVASPECT_DOCPRINT.
-
-Objekt VIEWSTATUS_SOLIDBKGND má jednobarevné pozadí (spočívající v plnou barvou, ne vzorkem štětce). Tato verze má smysl pouze v případě VIEWSTATUS_OPAQUE nastavena a platí jenom pro aspekty související obsah a DVASPECT_ICON ani DVASPECT_DOCPRINT.
-
-Objekt VIEWSTATUS_DVASPECTOPAQUE podporuje DVASPECT_OPAQUE. Všechny metody IViewObjectEx přijímajícími aspekt kreslení. jako parametr lze volat tento aspekt.
-
-Objekt VIEWSTATUS_DVASPECTTRANSPARENT podporuje DVASPECT_TRANSPARENT. Všechny `IViewObjectEx` metod, které berou aspekt kreslení. jako parametr lze volat tento aspekt.
+|||
+|-|-|
+|VIEWSTATUS_OPAQUE|Objekt se stane zcela neprůhledný. Pokud není tento bit nastaven, objekt obsahuje transparentní části. Tento systém vztahuje pouze na aspekty související obsah a DVASPECT_ICON ani DVASPECT_DOCPRINT.|
+|VIEWSTATUS_SOLIDBKGND|Objekt má jednobarevné pozadí (spočívající v plnou barvou, ne vzorkem štětce). Tato verze má smysl pouze v případě VIEWSTATUS_OPAQUE nastavena a platí jenom pro aspekty související obsah a DVASPECT_ICON ani DVASPECT_DOCPRINT.|
+|VIEWSTATUS_DVASPECTOPAQUE|Objekt podporuje DVASPECT_OPAQUE. Všechny metody IViewObjectEx přijímajícími aspekt kreslení. jako parametr lze volat tento aspekt.|
+|VIEWSTATUS_DVASPECTTRANSPARENT|Objekt podporuje DVASPECT_TRANSPARENT. Všechny `IViewObjectEx` metod, které berou aspekt kreslení. jako parametr lze volat tento aspekt.|
 
 ### <a name="remarks"></a>Poznámky
 

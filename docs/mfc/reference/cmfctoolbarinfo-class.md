@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCToolBarInfo | Microsoft Docs
+title: Cmfctoolbarinfo – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,103 +32,116 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de968fe53348b4cfa3f46e999da37cdca6f88c90
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7825983fbc70dafbbcc96221b8a38c3ae4e939c5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369359"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435438"
 ---
-# <a name="cmfctoolbarinfo-class"></a>CMFCToolBarInfo – třída
-Obsahuje ID obrázků panelu nástrojů v různé stavy prostředků. `CMFCToolBarInfo` je pomocná třída, která se používá jako parametr [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) metoda.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CMFCToolBarInfo  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="data-members"></a>Datové členy  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CMFCToolBarInfo::m_uiColdResID](#m_uicoldresid)|ID prostředku rastrového obrázku panelu nástrojů, který obsahuje regulární panelu nástrojů (cold) bitových kopií.|  
-|[CMFCToolBarInfo::m_uiDisabledResID](#m_uidisabledresid)|ID prostředku bitové mapy nástrojů, které obsahuje zakázané nástrojů bitových kopií.|  
-|[CMFCToolBarInfo::m_uiHotResID](#m_uihotresid)|ID prostředku bitové mapy nástrojů, které obsahuje bitových kopií vybrané panelu nástrojů (aktivní).|  
-|[CMFCToolBarInfo::m_uiLargeColdResID](#m_uilargecoldresid)|ID prostředku bitové mapy nástrojů, které obsahuje bitových kopií velký, regulární panelu nástrojů.|  
-|[CMFCToolBarInfo::m_uiLargeDisabledResID](#m_uilargedisabledresid)|ID prostředku rastrového obrázku panelu nástrojů, který obsahuje velký, zakázané obrázků panelu nástrojů.|  
-|[CMFCToolBarInfo::m_uiLargeHotResID](#m_uilargehotresid)|ID prostředku rastrového obrázku panelu nástrojů, který obsahuje velký, vybrat obrázků panelu nástrojů.|  
-|[CMFCToolBarInfo::m_uiMenuDisabledResID](#m_uimenudisabledresid)|ID prostředku bitové mapy nástrojů, které obsahuje zakázané nabídky bitových kopií.|  
-|[CMFCToolBarInfo::m_uiMenuResID](#m_uimenuresid)|ID prostředku bitové mapy nástrojů, které obsahuje nabídky bitových kopií.|  
-  
-## <a name="remarks"></a>Poznámky  
- Rastrový obrázek úplný panel nástrojů se skládá z Image malý panel nástrojů (tlačítka) s pevnou velikostí. Každý ID prostředku, který je uložen v `CMFCToolBarInfo` objekt je rastrový obrázek, který obsahuje úplnou sadu obrázků panelu nástrojů v jednom stavu (pro příklad, vybrali, zakázáno, velký nebo nabídky Image).  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CMFCToolBarInfo](../../mfc/reference/cmfctoolbarinfo-class.md)  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxtoolbar.h  
-  
-##  <a name="m_uicoldresid"></a>  CMFCToolBarInfo::m_uiColdResID  
- Určuje ID prostředku pro všechny Image regulární tlačítka panelu nástrojů.  
-  
-```  
-UINT m_uiColdResID;  
-```  
-  
-##  <a name="m_uidisabledresid"></a>  CMFCToolBarInfo::m_uiDisabledResID  
- Určuje ID prostředku pro Image není k dispozici tlačítko panelu nástrojů.  
-  
-```  
-UINT m_uiDisabledResID;  
-```  
-  
-##  <a name="m_uihotresid"></a>  CMFCToolBarInfo::m_uiHotResID  
- Určuje ID prostředku pro všechny Image zvýrazněné tlačítko panelu nástrojů.  
-  
-```  
-UINT m_uiHotResID  
-```  
-  
-##  <a name="m_uilargecoldresid"></a>  CMFCToolBarInfo::m_uiLargeColdResID  
- Určuje ID prostředku pro všechny Image velké regulární tlačítko panelu nástrojů.  
-  
-```  
-UINT m_uiLargeColdResID  
-```  
-  
-##  <a name="m_uilargedisabledresid"></a>  CMFCToolBarInfo::m_uiLargeDisabledResID  
- Určuje ID prostředku pro všechny Image velké zakázané tlačítko panelu nástrojů.  
-  
-```  
-UINT m_uiLargeDisabledResID;  
-```  
-  
-##  <a name="m_uilargehotresid"></a>  CMFCToolBarInfo::m_uiLargeHotResID  
- Určuje ID prostředku pro všechny velkých zvýrazněná obrázků panelu nástrojů.  
-  
-```  
-UINT m_uiLargeHotResID;  
-```  
-  
-##  <a name="m_uimenudisabledresid"></a>  CMFCToolBarInfo::m_uiMenuDisabledResID  
- Určuje ID prostředku není k dispozici příkaz obrázků panelu nástrojů.  
-  
-```  
-UINT m_uiMenuDisabledResID;  
-```  
-  
-##  <a name="m_uimenuresid"></a>  CMFCToolBarInfo::m_uiMenuResID  
- Určuje ID prostředku pro všechny Image položky regulární nabídky panelu nástrojů.  
-  
-```  
-UINT m_uiMenuResID;  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [Třídy](../../mfc/reference/mfc-classes.md)   
- [CMFCToolBar – třída](../../mfc/reference/cmfctoolbar-class.md)
+# <a name="cmfctoolbarinfo-class"></a>Cmfctoolbarinfo – třída
+
+Obsahuje ID obrázků panelu nástrojů v různých stavech prostředků. `CMFCToolBarInfo` je pomocnou třídu, která se používá jako parametr [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) metody.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CMFCToolBarInfo
+```
+
+## <a name="members"></a>Členové
+
+### <a name="data-members"></a>Datové členy
+
+|Název|Popis|
+|----------|-----------------|
+|[CMFCToolBarInfo::m_uiColdResID](#m_uicoldresid)|ID prostředku rastrového obrázku panelu nástrojů, který obsahuje obrázky panelu nástrojů regulární (studená).|
+|[CMFCToolBarInfo::m_uiDisabledResID](#m_uidisabledresid)|ID prostředku rastrového obrázku panelu nástrojů, který obsahuje obrázky panelu nástrojů zakázané.|
+|[CMFCToolBarInfo::m_uiHotResID](#m_uihotresid)|ID prostředku rastrového obrázku panelu nástrojů, který obsahuje obrázky panelu nástrojů vybrané (hot).|
+|[CMFCToolBarInfo::m_uiLargeColdResID](#m_uilargecoldresid)|ID prostředku, který obsahuje obrázky panelu nástrojů velké a pravidelné rastrového obrázku panelu nástrojů.|
+|[CMFCToolBarInfo::m_uiLargeDisabledResID](#m_uilargedisabledresid)|ID prostředku rastrového obrázku panelu nástrojů, které obsahuje velké, zakázané obrázky panelu nástrojů.|
+|[CMFCToolBarInfo::m_uiLargeHotResID](#m_uilargehotresid)|ID prostředku rastrového obrázku panelu nástrojů, které obsahuje velké, vybrat obrázky panelu nástrojů.|
+|[CMFCToolBarInfo::m_uiMenuDisabledResID](#m_uimenudisabledresid)|ID prostředku rastrového obrázku panelu nástrojů, který obsahuje zakázané nabídky Image.|
+|[CMFCToolBarInfo::m_uiMenuResID](#m_uimenuresid)|ID prostředku rastrového obrázku panelu nástrojů, který obsahuje nabídky Image.|
+
+## <a name="remarks"></a>Poznámky
+
+Rastrový obrázek úplné nástrojů se skládá z nástrojů malé obrázky (tlačítka) s pevnou velikostí. Každé ID prostředku, který je uložený v `CMFCToolBarInfo` rastrový obrázek, který obsahuje úplnou sadu obrázků panelu nástrojů v jednoho státu (pro příklad vybrali, zakázáno, velká nebo nabídky imagí) je objekt.
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[Cmfctoolbarinfo –](../../mfc/reference/cmfctoolbarinfo-class.md)
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxtoolbar.h
+
+##  <a name="m_uicoldresid"></a>  CMFCToolBarInfo::m_uiColdResID
+
+Určuje Identifikátor prostředku pro všechny Image běžné tlačítko panelu nástrojů.
+
+```
+UINT m_uiColdResID;
+```
+
+##  <a name="m_uidisabledresid"></a>  CMFCToolBarInfo::m_uiDisabledResID
+
+Určuje Identifikátor prostředku pro Image není k dispozici tlačítko panelu nástrojů.
+
+```
+UINT m_uiDisabledResID;
+```
+
+##  <a name="m_uihotresid"></a>  CMFCToolBarInfo::m_uiHotResID
+
+Určuje Identifikátor prostředku pro všechny Image zvýrazněné tlačítko panelu nástrojů.
+
+```
+UINT m_uiHotResID
+```
+
+##  <a name="m_uilargecoldresid"></a>  CMFCToolBarInfo::m_uiLargeColdResID
+
+Určuje Identifikátor prostředku pro všechny Image velké běžné tlačítko panelu nástrojů.
+
+```
+UINT m_uiLargeColdResID
+```
+
+##  <a name="m_uilargedisabledresid"></a>  CMFCToolBarInfo::m_uiLargeDisabledResID
+
+Určuje Identifikátor prostředku pro všechny Image velké zakázané tlačítko panelu nástrojů.
+
+```
+UINT m_uiLargeDisabledResID;
+```
+
+##  <a name="m_uilargehotresid"></a>  CMFCToolBarInfo::m_uiLargeHotResID
+
+Určuje Identifikátor prostředku pro všechny velké zvýrazněné obrázky panelu nástrojů.
+
+```
+UINT m_uiLargeHotResID;
+```
+
+##  <a name="m_uimenudisabledresid"></a>  CMFCToolBarInfo::m_uiMenuDisabledResID
+
+Určuje Identifikátor prostředku není k dispozici příkaz obrázků panelu nástrojů.
+
+```
+UINT m_uiMenuDisabledResID;
+```
+
+##  <a name="m_uimenuresid"></a>  CMFCToolBarInfo::m_uiMenuResID
+
+Určuje Identifikátor prostředku pro všechny obrázků položek regulární nabídky panelu nástrojů.
+
+```
+UINT m_uiMenuResID;
+```
+
+## <a name="see-also"></a>Viz také
+
+[Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
+[Třídy](../../mfc/reference/mfc-classes.md)<br/>
+[CMFCToolBar – třída](../../mfc/reference/cmfctoolbar-class.md)

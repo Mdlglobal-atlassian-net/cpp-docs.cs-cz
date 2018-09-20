@@ -19,81 +19,85 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3afd68e8407d1e02fa39b76316da66fcfe56b8c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3168057527eb1df6d87bd8f5aefe3403b7467bd9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754992"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406695"
 ---
 # <a name="mfc-desktop-applications"></a>Běžné aplikace knihovny MFC
-Knihovny Microsoft Foundation Class (MFC) poskytuje objektově orientovanou obálku přes velkou část Win32 a COM API. Lze vytvořit velmi jednoduchých aplikací klasické pracovní plochy, ale je nejužitečnější, když potřebujete vyvinout složitější uživatelská rozhraní s více ovládacími prvky. K vytváření aplikací s uživatelskými rozhraními ve stylu sady Office můžete použít knihovnu MFC.  
-  
- Odkaz knihovny MFC zahrnuje třídy, globálních funkcí, globálních proměnných a maker tvořících knihovnu Microsoft Foundation Class.  
-  
- Jednotlivé grafy hierarchie zahrnuté v každé třídě jsou užitečné pro nalezení základních tříd. Odkaz MFC obvykle nepopisuje zděděný člen funkce nebo operátory zděděné. Informace o těchto funkcích naleznete v základních třídách zobrazených v diagramech hierarchie.  
-  
- Dokumentace pro každou třídu obsahuje přehled třídy, přehled členů podle kategorií a témata pro členské funkce, přetížené operátory a datové členy.  
-  
- Členové veřejné a chráněné třídy jsou popsány pouze v případě, že se obvykle používají v aplikacích nebo odvozených třídách. Zobrazit soubory s hlavičkami tříd pro úplný seznam členů třídy.  
-  
+
+Knihovny Microsoft Foundation Class (MFC) poskytuje objektově orientovanou obálku přes velkou část Win32 a COM API. Lze vytvořit velmi jednoduchých aplikací klasické pracovní plochy, ale je nejužitečnější, když potřebujete vyvinout složitější uživatelská rozhraní s více ovládacími prvky. K vytváření aplikací s uživatelskými rozhraními ve stylu sady Office můžete použít knihovnu MFC.
+
+Odkaz knihovny MFC zahrnuje třídy, globálních funkcí, globálních proměnných a maker tvořících knihovnu Microsoft Foundation Class.
+
+Jednotlivé grafy hierarchie zahrnuté v každé třídě jsou užitečné pro nalezení základních tříd. Odkaz MFC obvykle nepopisuje zděděný člen funkce nebo operátory zděděné. Informace o těchto funkcích naleznete v základních třídách zobrazených v diagramech hierarchie.
+
+Dokumentace pro každou třídu obsahuje přehled třídy, přehled členů podle kategorií a témata pro členské funkce, přetížené operátory a datové členy.
+
+Členové veřejné a chráněné třídy jsou popsány pouze v případě, že se obvykle používají v aplikacích nebo odvozených třídách. Zobrazit soubory s hlavičkami tříd pro úplný seznam členů třídy.
+
 > [!IMPORTANT]
->  Třídy knihovny MFC a jejich členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.  
->   
->  Knihovny MFC (DLL) pro vícebajtové kódování znaků (MBCS) již nejsou zahrnuty v sadě Visual Studio, ale jsou k dispozici jako doplněk Visual Studio. Další informace najdete v tématu [MFC MBCS DLL – doplněk](mfc-mbcs-dll-add-on.md).  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
- [Koncepty](mfc-concepts.md)  
- Koncepční články o tématech knihovny MFC.  
-  
- [Graf hierarchie](hierarchy-chart.md)  
- Vizuální podrobnosti relace tříd v knihovně tříd rozhraní.  
-  
- [Přehled tříd](class-library-overview.md)  
- Seznam tříd v knihovně MFC podle kategorie.  
-  
- [Návody](walkthroughs-mfc.md)  
- Obsahuje články, které vás provedou různými úkoly spojenými s funkcemi knihovny MFC.  
-  
- [Technické poznámky](mfc-technical-notes.md)  
- Obsahuje odkazy na specializovaná témata, autorem je vývojový tým MFC, knihovny tříd.  
-  
- [Přizpůsobení pro prostředí MFC](customization-for-mfc.md)  
- Obsahuje některé tipy pro přizpůsobení aplikace MFC.  
-  
- [Třídy](reference/mfc-classes.md)  
- Obsahuje odkazy na a informace o souboru záhlaví pro třídy MFC.  
-  
- [Interní třídy](reference/internal-classes.md)  
- Používá se interně v knihovně MFC. Pro úplnost Tato část popisuje tyto vnitřní třídy, ale nejsou určeny k použití přímo ve vašem kódu.  
-  
- [Makra a globální prvky](reference/mfc-macros-and-globals.md)  
- Obsahuje odkazy na makra a globální funkce v knihovně MFC.  
-  
- [Struktury, styly, zpětná volání a mapy zpráv](reference/structures-styles-callbacks-and-message-maps.md)  
- Obsahuje odkazy na struktury, styly, zpětná volání a mapy zpráv používá knihovnu MFC.  
-  
- [Průvodci a dialogová okna knihovny MFC](reference/mfc-wizards-and-dialog-boxes.md)  
- Příručka k funkcím v sadě Visual Studio pro vytváření aplikací knihovny MFC.  
-  
- [Práce se zdrojovými soubory](../windows/working-with-resource-files.md)  
- Jak používat soubory prostředků ke správě statické uživatelské rozhraní data, například řetězce uživatelského rozhraní a pole rozložení dialogového okna.  
-  
-## <a name="related-sections"></a>Související oddíly  
- [Kategorie grafů hierarchie](hierarchy-chart-categories.md)  
- Popisuje graf hierarchie MFC podle kategorie.  
-  
- [Sdílené třídy ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)  
- Obsahuje odkazy na třídy, které jsou sdíleny mezi MFC a ATL.  
-  
- [Ukázky knihovny MFC](../visual-cpp-samples.md)  
- Obsahuje odkazy na ukázky, které ukazují, jak použít knihovnu MFC.  
-  
- [Knihovny Visual C++ – referenční informace](../standard-library/cpp-standard-library-reference.md)  
- Obsahuje odkazy na různé knihovny poskytované s aplikací Visual C++, jako například ATL, MFC, šablony technologie OLE DB, knihovny run-time jazyka C a standardní knihovny C++.  
-  
- [Ladění v sadě Visual Studio](/visualstudio/debugger/debugging-in-visual-studio.md)  
- Poskytuje odkazy na popis využití ladicího programu sady Visual Studio k opravě logických chyb v aplikaci nebo uložených procedur.  
-  
-## <a name="see-also"></a>Viz také  
- [Rozhraní MFC a knihovna ATL](mfc-and-atl.md)
+>  Třídy knihovny MFC a jejich členy nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime.
+>
+>  Knihovny MFC (DLL) pro vícebajtové kódování znaků (MBCS) již nejsou zahrnuty v sadě Visual Studio, ale jsou k dispozici jako doplněk Visual Studio. Další informace najdete v tématu [MFC MBCS DLL – doplněk](mfc-mbcs-dll-add-on.md).
+
+## <a name="in-this-section"></a>V tomto oddílu
+
+[Koncepty](mfc-concepts.md)<br/>
+Koncepční články o tématech knihovny MFC.
+
+[Graf hierarchie](hierarchy-chart.md)<br/>
+Vizuální podrobnosti relace tříd v knihovně tříd rozhraní.
+
+[Přehled tříd](class-library-overview.md)<br/>
+Seznam tříd v knihovně MFC podle kategorie.
+
+[Návody](walkthroughs-mfc.md)<br/>
+Obsahuje články, které vás provedou různými úkoly spojenými s funkcemi knihovny MFC.
+
+[Technické poznámky](mfc-technical-notes.md)<br/>
+Obsahuje odkazy na specializovaná témata, autorem je vývojový tým MFC, knihovny tříd.
+
+[Přizpůsobení pro prostředí MFC](customization-for-mfc.md)<br/>
+Obsahuje některé tipy pro přizpůsobení aplikace MFC.
+
+[Třídy](reference/mfc-classes.md)<br/>
+Obsahuje odkazy na a informace o souboru záhlaví pro třídy MFC.
+
+[Interní třídy](reference/internal-classes.md)<br/>
+Používá se interně v knihovně MFC. Pro úplnost Tato část popisuje tyto vnitřní třídy, ale nejsou určeny k použití přímo ve vašem kódu.
+
+[Makra a globální prvky](reference/mfc-macros-and-globals.md)<br/>
+Obsahuje odkazy na makra a globální funkce v knihovně MFC.
+
+[Struktury, styly, zpětná volání a mapy zpráv](reference/structures-styles-callbacks-and-message-maps.md)<br/>
+Obsahuje odkazy na struktury, styly, zpětná volání a mapy zpráv používá knihovnu MFC.
+
+[Průvodci a dialogová okna knihovny MFC](reference/mfc-wizards-and-dialog-boxes.md)<br/>
+Příručka k funkcím v sadě Visual Studio pro vytváření aplikací knihovny MFC.
+
+[Práce se zdrojovými soubory](../windows/working-with-resource-files.md)<br/>
+Jak používat soubory prostředků ke správě statické uživatelské rozhraní data, například řetězce uživatelského rozhraní a pole rozložení dialogového okna.
+
+## <a name="related-sections"></a>Související oddíly
+
+[Kategorie grafů hierarchie](hierarchy-chart-categories.md)<br/>
+Popisuje graf hierarchie MFC podle kategorie.
+
+[Sdílené třídy ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
+Obsahuje odkazy na třídy, které jsou sdíleny mezi MFC a ATL.
+
+[Ukázky knihovny MFC](../visual-cpp-samples.md)<br/>
+Obsahuje odkazy na ukázky, které ukazují, jak použít knihovnu MFC.
+
+[Knihovny Visual C++ – referenční informace](../standard-library/cpp-standard-library-reference.md)<br/>
+Obsahuje odkazy na různé knihovny poskytované s aplikací Visual C++, jako například ATL, MFC, šablony technologie OLE DB, knihovny run-time jazyka C a standardní knihovny C++.
+
+[Ladění v sadě Visual Studio](/visualstudio/debugger/debugging-in-visual-studio.md)<br/>
+Poskytuje odkazy na popis využití ladicího programu sady Visual Studio k opravě logických chyb v aplikaci nebo uložených procedur.
+
+## <a name="see-also"></a>Viz také
+
+[Rozhraní MFC a knihovna ATL](mfc-and-atl.md)

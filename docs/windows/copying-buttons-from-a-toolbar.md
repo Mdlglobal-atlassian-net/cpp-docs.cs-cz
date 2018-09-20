@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92002b41ace8fe68c80d2b607bb692f7fb9f9c62
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1b5dd804b0c405158d822b260f1a21529472add3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318670"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421892"
 ---
 # <a name="copying-buttons-from-a-toolbar-c"></a>Kopírování tlačítek z panelu nástrojů (C++)
 
@@ -40,5 +40,5 @@ Knihovny MFC nebo ATL
 
 ## <a name="see-also"></a>Viz také
 
-[Vytváření, přesunutí a úprava tlačítek panelu nástrojů](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[Vytváření, přesunutí a úprava tlačítek panelu nástrojů](../windows/creating-moving-and-editing-toolbar-buttons.md)<br/>
 [Editor panelu nástrojů](../windows/toolbar-editor.md)

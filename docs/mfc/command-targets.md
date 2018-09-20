@@ -1,5 +1,5 @@
 ---
-title: Příkaz cíle | Microsoft Docs
+title: Příkaz cíle | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cbcfa1042a8430c704bad93e4bc0ce5655b5921
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 408f63b80ff30a7ebdc51e5becb1dd97bb062852
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341294"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404225"
 ---
 # <a name="command-targets"></a>Cíle příkazů
-Obrázek [příkazy v rámci](../mfc/user-interface-objects-and-command-ids.md) ukazuje připojení mezi objekt uživatelského rozhraní, například položku nabídky a obslužné rutiny, která volá framework k provedení příkazu výsledné při kliknutí na objekt.  
-  
- Systém Windows odešle zprávy, které nejsou příkaz zprávy přímo do časového období, jejichž obslužné rutiny pro zprávy je potom volána. Ale rozhraní směruje příkazy na počet objektů candidate – názvem "cíle příkazů" – jeden z nich obvykle vyvolá obslužnou rutinu pro příkaz. Funkce obslužných rutin fungovat stejným způsobem jako pro příkazy a standardní zprávy Windows, ale mechanismy, které se nazývají se liší, jak je popsáno v [jakým způsobem volá Framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Zprávy a příkazy v prostředí .NET Framework](../mfc/messages-and-commands-in-the-framework.md)
+
+Na obrázku [příkazy v rámci](../mfc/user-interface-objects-and-command-ids.md) zobrazuje spojení mezi objekt uživatelského rozhraní, například položky nabídky a obslužné rutiny, která volá framework k provedení příkazu výsledný při kliknutí na objekt.
+
+Windows odešle zprávy, které nejsou příkaz zprávy přímo do okna je pak volá jehož obslužné rutiny pro zprávy. Však rozhraní směrovat příkazy na počet objektů Release candidate – nazývá "cíle příkazů", z nichž jeden obvykle vyvolá obslužnou rutinu pro příkaz. Funkce obslužných rutin fungovat i pro příkazy a standardní zprávy Windows, ale mechanismy, které se nazývají se liší, jak je vysvětleno v [jakým způsobem volá Framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md).
+
+## <a name="see-also"></a>Viz také
+
+[Zprávy a příkazy v prostředí .NET Framework](../mfc/messages-and-commands-in-the-framework.md)
 

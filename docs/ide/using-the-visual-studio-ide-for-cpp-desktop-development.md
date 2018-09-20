@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0678afc9d79499e4581feeca03b1a5bf9b7b963
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 4aa276c0e9d97cd5b723499a21432290772a49a7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131303"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390302"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>Použití prostředí IDE sady Visual Studio pro vývoj aplikací klasické pracovní plochy v jazyce C++
 
@@ -31,7 +31,7 @@ Pokud jste dosud nenainstalovali aplikaci Visual Studio, teď je čas. Odkazy ke
 
 Tyto kurzy se předpokládá, že jste nainstalovali aplikaci Visual Studio a jazyka Visual C++ a komponenty potřebné pro vývoj pro plochu Windows. Také předpokládáme, že chápete základy jazyka C++. Pokud potřebujete informace o jazyku C++, existuje mnoho knih a webových prostředků k dispozici. Je jeden Dobrým začátkem [Začínáme](https://isocpp.org/get-started) stránce webu základ standardu C++.
 
-Pokud jste dosud nenainstalovali aplikaci Visual Studio, teď je čas. 
+Pokud jste dosud nenainstalovali aplikaci Visual Studio, teď je čas.
 
 **Instalace sady Visual Studio 2017**
 
@@ -39,9 +39,9 @@ Pokud chcete získat Visual Studio 2017, můžete sadu stáhnout z [stahování 
 
 **Instalace sady Visual Studio 2015**
 
- Chcete-li nainstalovat sadu Visual Studio 2015, přejděte na [starší verze sady Visual Studio si můžete stáhnout](https://www.visualstudio.com/vs/older-downloads/). Spusťte instalační program a zvolte **vlastní instalace** a klikněte na tlačítko komponent C++. 
+Chcete-li nainstalovat sadu Visual Studio 2015, přejděte na [starší verze sady Visual Studio si můžete stáhnout](https://www.visualstudio.com/vs/older-downloads/). Spusťte instalační program a zvolte **vlastní instalace** a klikněte na tlačítko komponent C++.
 
- Obecně platí důrazně doporučujeme použít Visual Studio 2017, i v případě, že budete potřebovat ke kompilaci kódu pomocí kompilátoru Visual Studio 2015. Další informace najdete v tématu [pomocí nativního cílení na více platforem v sadě Visual Studio sestavení starých projektů](../porting/use-native-multi-targeting.md).
+Obecně platí důrazně doporučujeme použít Visual Studio 2017, i v případě, že budete potřebovat ke kompilaci kódu pomocí kompilátoru Visual Studio 2015. Další informace najdete v tématu [pomocí nativního cílení na více platforem v sadě Visual Studio sestavení starých projektů](../porting/use-native-multi-targeting.md).
 
 Po dokončení instalace sady Visual Studio budete chtít pokračovat.
 

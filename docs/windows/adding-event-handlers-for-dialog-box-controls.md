@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5caec6d9d77d743fa1a8455819b813364bde27d0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 156908a1611f8a1c8b22df61e6b789468753d25d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317053"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443082"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls-c"></a>Přidání obslužných rutin události pro ovládací prvky dialogového okna pole (C++)
 
@@ -76,11 +76,11 @@ Win32
 
 ## <a name="see-also"></a>Viz také
 
-[Výchozí události ovládacích prvků](../windows/default-control-events.md)  
-[Definování členských proměnných pro ovládací prvky dialogového okna](../windows/defining-member-variables-for-dialog-controls.md)  
-[Ovládací prvky dialogových oken a typy proměnných](../ide/dialog-box-controls-and-variable-types.md)  
-[Přidání třídy](../ide/adding-a-class-visual-cpp.md)  
-[Přidání členské funkce](../ide/adding-a-member-function-visual-cpp.md)  
-[Přidání členské proměnné](../ide/adding-a-member-variable-visual-cpp.md)  
-[Přepisování virtuální funkce](../ide/overriding-a-virtual-function-visual-cpp.md)  
+[Výchozí události ovládacích prvků](../windows/default-control-events.md)<br/>
+[Definování členských proměnných pro ovládací prvky dialogového okna](../windows/defining-member-variables-for-dialog-controls.md)<br/>
+[Ovládací prvky dialogových oken a typy proměnných](../ide/dialog-box-controls-and-variable-types.md)<br/>
+[Přidání třídy](../ide/adding-a-class-visual-cpp.md)<br/>
+[Přidání členské funkce](../ide/adding-a-member-function-visual-cpp.md)<br/>
+[Přidání členské proměnné](../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[Přepisování virtuální funkce](../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Popisovače zpráv knihovny MFC](../mfc/reference/adding-an-mfc-message-handler.md)  

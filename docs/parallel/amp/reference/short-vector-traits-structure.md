@@ -1,5 +1,5 @@
 ---
-title: short_vector_traits – struktura | Microsoft Docs
+title: short_vector_traits – struktura | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,115 +17,120 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54ab4120fa4eb6393c25a7ea77377bd0a2b04258
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 414231e0a11c7f06c333f0b08c4363ebf5b2dbe5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688899"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440989"
 ---
 # <a name="shortvectortraits-structure"></a>short_vector_traits – struktura
-short_vector_traits – umožňuje načtení služby základní délka vektoru a skalární typu typu krátké vektoru nebo skalární typ.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
+
+short_vector_traits – umožňuje načtení základní délku vektoru a skalárním typu typu short vector nebo skalární typ.
+
+## <a name="syntax"></a>Syntaxe
+
+```
 template<
-    typename T  
->  
-struct short_vector_traits;  
-template<>  
-struct short_vector_traits<unsigned int>;  
-template<>  
-struct short_vector_traits<uint_2>;  
-template<>  
-struct short_vector_traits<uint_3>;  
-template<>  
-struct short_vector_traits<uint_4>;  
-template<>  
-struct short_vector_traits<int>;  
-template<>  
-struct short_vector_traits<int_2>;  
-template<>  
-struct short_vector_traits<int_3>;  
-template<>  
-struct short_vector_traits<int_4>;  
-template<>  
-struct short_vector_traits<float>;  
-template<>  
-struct short_vector_traits<float_2>;  
-template<>  
-struct short_vector_traits<float_3>;  
-template<>  
-struct short_vector_traits<float_4>;  
-template<>  
-struct short_vector_traits<unorm>;  
-template<>  
-struct short_vector_traits<unorm_2>;  
-template<>  
-struct short_vector_traits<unorm_3>;  
-template<>  
-struct short_vector_traits<unorm_4>;  
-template<>  
-struct short_vector_traits<norm>;  
-template<>  
-struct short_vector_traits<norm_2>;  
-template<>  
-struct short_vector_traits<norm_3>;  
-template<>  
-struct short_vector_traits<norm_4>;  
-template<>  
-struct short_vector_traits<double>;  
-template<>  
-struct short_vector_traits<double_2>;  
-template<>  
-struct short_vector_traits<double_3>;  
-template<>  
-struct short_vector_traits<double_4>;  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `T`  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-typedefs"></a>Veřejné – definice TypeDef  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|`value_type`||  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[short_vector_traits::short_vector_traits – konstruktor](#ctor)||  
-  
-### <a name="public-constants"></a>Veřejné konstanty  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[short_vector_traits::size – konstanta](#size)||  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `short_vector_traits`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** amp_short_vectors.h  
-  
- **Namespace:** Concurrency::graphics  
-  
-##  <a name="ctor"></a>  short_vector_traits::short_vector_traits – konstruktor  
-  
-```  
+    typename T
+>
+struct short_vector_traits;
+template<>
+struct short_vector_traits<unsigned int>;
+template<>
+struct short_vector_traits<uint_2>;
+template<>
+struct short_vector_traits<uint_3>;
+template<>
+struct short_vector_traits<uint_4>;
+template<>
+struct short_vector_traits<int>;
+template<>
+struct short_vector_traits<int_2>;
+template<>
+struct short_vector_traits<int_3>;
+template<>
+struct short_vector_traits<int_4>;
+template<>
+struct short_vector_traits<float>;
+template<>
+struct short_vector_traits<float_2>;
+template<>
+struct short_vector_traits<float_3>;
+template<>
+struct short_vector_traits<float_4>;
+template<>
+struct short_vector_traits<unorm>;
+template<>
+struct short_vector_traits<unorm_2>;
+template<>
+struct short_vector_traits<unorm_3>;
+template<>
+struct short_vector_traits<unorm_4>;
+template<>
+struct short_vector_traits<norm>;
+template<>
+struct short_vector_traits<norm_2>;
+template<>
+struct short_vector_traits<norm_3>;
+template<>
+struct short_vector_traits<norm_4>;
+template<>
+struct short_vector_traits<double>;
+template<>
+struct short_vector_traits<double_2>;
+template<>
+struct short_vector_traits<double_3>;
+template<>
+struct short_vector_traits<double_4>;
+```
+
+#### <a name="parameters"></a>Parametry
+
+`T`
+
+## <a name="members"></a>Členové
+
+### <a name="public-typedefs"></a>Veřejné definice TypeDef
+
+|Název|Popis|
+|----------|-----------------|
+|`value_type`||
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[short_vector_traits::short_vector_traits – konstruktor](#ctor)||
+
+### <a name="public-constants"></a>Veřejné konstanty
+
+|Název|Popis|
+|----------|-----------------|
+|[short_vector_traits::size – konstanta](#size)||
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`short_vector_traits`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** amp_short_vectors.h
+
+**Namespace:** Concurrency::graphics
+
+##  <a name="ctor"></a>  short_vector_traits::short_vector_traits – konstruktor
+
+```
 short_vector_traits();
-```  
-  
-##  <a name="size"></a>  short_vector_traits::size – konstanta  
-  
-```  
-static int const size = 1;  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)
+```
+
+##  <a name="size"></a>  short_vector_traits::size – konstanta
+
+```
+static int const size = 1;
+```
+
+## <a name="see-also"></a>Viz také
+
+[Concurrency::graphics – obor názvů](concurrency-graphics-namespace.md)

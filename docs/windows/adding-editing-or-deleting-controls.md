@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce32186083e156525ccc1f75a6d93d58c7f9294e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: e52f169653222808845b0d381718e064c09fda11
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316065"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440820"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>Přidání, úprava nebo odstranění ovládacích prvků
 
@@ -50,6 +50,6 @@ Win32
 
 ## <a name="see-also"></a>Viz také
 
-[Ovládací prvky v dialogových oknech](controls-in-dialog-boxes.md)  
-[Přidání obslužných rutin události pro ovládací prvky dialogového okna](adding-event-handlers-for-dialog-box-controls.md)  
+[Ovládací prvky v dialogových oknech](controls-in-dialog-boxes.md)<br/>
+[Přidání obslužných rutin události pro ovládací prvky dialogového okna](adding-event-handlers-for-dialog-box-controls.md)<br/>
 [Ovládací prvky dialogových oken a typy proměnných](../ide/dialog-box-controls-and-variable-types.md)

@@ -14,34 +14,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3f483d266b8150dfd4aaa5299ffec280d447157
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 401bc3cd9933f44b92f5f361b1a1aaad24bc79ce
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46037616"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436946"
 ---
 # <a name="makeexceptionptr-function"></a>Funkce make_exception_ptr
-## <a name="syntax"></a>Syntaxe  
-  
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 template<class _E>
 exception_ptr make_exception_ptr(_E _Except);
-```  
-  
-#### <a name="parameters"></a>Parametry  
+```
+
+#### <a name="parameters"></a>Parametry
+
 *_E*<br/>
 Typ výjimky.
 
 *_Except*<br/>
 Hodnota výjimky.
-  
-## <a name="return-value"></a>Návratová hodnota  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** ppltasks.h  
-  
- **Namespace:** std  
-  
-## <a name="see-also"></a>Viz také  
- [std – obor názvů](std-namespace.md)
+
+## <a name="return-value"></a>Návratová hodnota
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** ppltasks.h
+
+**Namespace:** std
+
+## <a name="see-also"></a>Viz také
+
+[std – obor názvů](std-namespace.md)

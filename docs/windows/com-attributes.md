@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e18f64d48b357ed691f42fc900f68c8e8054776
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 71ff4e3fdb80b48e306e543bdb683c3dd2b26ec3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317248"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443329"
 ---
 # <a name="com-attributes"></a>COM – atributy
 Com – atributy vložení kódu pro podporu mnoha oblastech COM vývoj a rozhraní .NET Framework common language runtime. Tyto oblasti sahají od implementace vlastního rozhraní a podporu existující rozhraní podporující uložené vlastnosti, metody a události. Kromě toho podpory najdete složeného a implementaci ovládacího prvku ActiveX.
@@ -44,4 +44,5 @@ Com – atributy vložení kódu pro podporu mnoha oblastech COM vývoj a rozhra
 |[vi_progid](../windows/vi-progid.md)|Definuje identifikátor ProgID nezávislé na verzi pro ovládací prvek.|
   
 ## <a name="see-also"></a>Viz také
- [Atributy podle skupin](../windows/attributes-by-group.md)
+
+[Atributy podle skupin](../windows/attributes-by-group.md)

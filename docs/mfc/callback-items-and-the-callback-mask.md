@@ -1,5 +1,5 @@
 ---
-title: Položky zpětného volání a maska zpětného volání | Microsoft Docs
+title: Položky zpětného volání a maska zpětného volání | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,35 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f3608fbc0c7e34de4ae67ae60a12af23e9ac885
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 0711fccb142d9774c37f2cb2d8f576bf7fddd128
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931685"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422841"
 ---
 # <a name="callback-items-and-the-callback-mask"></a>Položky zpětného volání a maska zpětného volání
-Pro každý z jeho položky ovládacího prvku zobrazení seznamu obvykle ukládá na text popisku, index bitové kopie seznamu položky ikony, a sadu bit flags pro stav položky. Jednotlivé položky můžete definovat jako položky zpětného volání, které jsou užitečné, pokud již aplikace ukládá některé z informací pro položku.  
-  
- Jako položka zpětného volání definujete tak, že zadáte odpovídající hodnoty pro položky `pszText` a `iImage` členy **LV_ITEM** struktury (najdete v části [CListCtrl::GetItem](../mfc/reference/clistctrl-class.md#getitem)). Pokud aplikace udržuje text položky nebo podřízenou položku na, zadejte **LPSTR_TEXTCALLBACK** hodnota `pszText` člen. Pokud ikonu pro položku uchovává informace o aplikaci, zadejte **I_IMAGECALLBACK** hodnota `iImage` člen.  
-  
- Kromě definování položky zpětného volání, můžete také upravit maska zpětného volání ovládacího prvku. Tato maska je sada bitové příznaky, které určují stavy položek, pro které aplikace, nikoli ovládacího prvku, uloží aktuální data. Maska zpětného volání platí pro všechny položky ovládacího prvku, na rozdíl od označení položky zpětného volání, která se vztahuje na konkrétní položku. Maska zpětného volání je nulová ve výchozím nastavení, což znamená, že ovládací prvek sleduje všechny stavy položek. Chcete-li změnit toto výchozí chování, inicializace maska na libovolnou kombinaci těchto hodnot:  
-  
--   **LVIS_CUT** položka je označen pro operace vyjímání a vkládání.  
-  
--   **LVIS_DROPHILITED** položka je označený jako cíl přetažení myší.  
-  
--   **LVIS_FOCUSED** položka je aktivní.  
-  
--   **LVIS_SELECTED** vybranou položku.  
-  
--   **LVIS_OVERLAYMASK** aplikace ukládá seznam index bitové kopie aktuální Image překrytí pro každou položku.  
-  
--   **LVIS_STATEIMAGEMASK** aplikace ukládá seznam index bitové kopie aktuální stav obrázku pro každou položku.  
-  
- Další informace o načtení a nastavení tuto masku, najdete v části [CListCtrl::GetCallbackMask](../mfc/reference/clistctrl-class.md#getcallbackmask) a [CListCtrl::SetCallbackMask](../mfc/reference/clistctrl-class.md#setcallbackmask).  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CListCtrl](../mfc/using-clistctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Pro každou z položek ovládací prvek zobrazení seznamu obvykle ukládá text popisku, index bitové kopie seznamu ikon položky a sadu bitové příznaky pro položky stavu. Jednotlivé položky můžete definovat jako položky zpětného volání, které jsou užitečné, pokud už vaše aplikace ukládá některé informace pro položku.
+
+Definujte položku jako položka zpětného volání tak, že zadáte odpovídající hodnoty pro `pszText` a `iImage` členy **LV_ITEM** strukturu (naleznete v tématu [CListCtrl::GetItem](../mfc/reference/clistctrl-class.md#getitem)). Pokud aplikace udržuje položky nebo podřízenou položku v textu, zadejte **LPSTR_TEXTCALLBACK** hodnota `pszText` člena. Pokud na ikonu pro položku uchovává informace o aplikaci, zadejte **I_IMAGECALLBACK** hodnota `iImage` člena.
+
+Kromě definování položky zpětného volání, můžete také upravit maska zpětného volání ovládacího prvku. Tato maska je sadu bitových příznaků, které určují stavy položky, pro které aplikace, spíše než ovládací prvek, uloží aktuální data. Maska zpětného volání se vztahuje na všechny položky ovládacího prvku, na rozdíl od označení položka zpětného volání, která se vztahuje k určité položce. Maska zpětného volání je nula ve výchozím nastavení, což znamená, že ovládací prvek sleduje všechny stavy položky. Chcete-li změnit toto výchozí chování, inicializujte maska pro libovolnou kombinaci následujícího:
+
+- **LVIS_CUT** položky je označen pro operace vyjmutí a vložení.
+
+- **LVIS_DROPHILITED** položky se zvýrazní jako cíl přetažení myší.
+
+- **LVIS_FOCUSED** položka má fokus.
+
+- **LVIS_SELECTED** výběru položky.
+
+- **LVIS_OVERLAYMASK** ale aplikace ukládá seznam index bitové kopie aktuální Image překrytí pro každou položku.
+
+- **LVIS_STATEIMAGEMASK** ale aplikace ukládá seznam index bitové kopie aktuální stav obrázku pro každou položku.
+
+Další informace o načtení a nastavení masky najdete v tématu [CListCtrl::GetCallbackMask](../mfc/reference/clistctrl-class.md#getcallbackmask) a [CListCtrl::SetCallbackMask](../mfc/reference/clistctrl-class.md#setcallbackmask).
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CListCtrl](../mfc/using-clistctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

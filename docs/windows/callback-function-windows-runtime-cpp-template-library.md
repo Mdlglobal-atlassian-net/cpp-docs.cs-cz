@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57d1a3adc160323726bcdd31808cf82bc8da2e7f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 19bb77128eee9cc8af514e60730c3a39115695cc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609251"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426534"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>Zpětné volání – funkce (knihovna šablon C++ prostředí Windows Runtime)
 
@@ -201,49 +201,49 @@ ComPtr<TDelegateInterface> Callback(
 
 ### <a name="parameters"></a>Parametry
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 Parametr šablony určuje rozhraní delegáta pro volání při výskytu události.
 
-*TCallback*  
+*TCallback*<br/>
 Parametr šablony určující typ objektu, který reprezentuje objekt a jeho členskou funkci zpětného volání.
 
-*TCallbackObject*  
+*TCallbackObject*<br/>
 Parametr šablony, který určuje objekt, jehož členská funkce je metoda volání při výskytu události.
 
-*TArg1*  
+*TArg1*<br/>
 Parametr šablony, který určuje typ prvního argumentu metody zpětného volání.
 
-*TArg2*  
+*TArg2*<br/>
 Parametr šablony, který určuje typ druhého argumentu metody zpětného volání.
 
-*TArg3*  
+*TArg3*<br/>
 Parametr šablony, který určuje typ třetího argumentu metody zpětného volání.
 
-*TArg4*  
+*TArg4*<br/>
 Parametr šablony, který určuje typ čtvrtého argumentu metody zpětného volání.
 
-*TArg5*  
+*TArg5*<br/>
 Parametr šablony, který určuje typ pátého argumentu metody zpětného volání.
 
-*TArg6*  
+*TArg6*<br/>
 Parametr šablony, který určuje typ šestého argumentu metody zpětného volání.
 
-*TArg7*  
+*TArg7*<br/>
 Parametr šablony, který určuje typ sedmého argumentu metody zpětného volání.
 
-*TArg8*  
+*TArg8*<br/>
 Parametr šablony, který určuje typ osmého argumentu metody zpětného volání.
 
-*TArg9*  
+*TArg9*<br/>
 Parametr šablony, který určuje typ devátého argumentu metody zpětného volání.
 
-*zpětné volání*  
+*zpětné volání*<br/>
 Objekt představující objekt zpětného volání a jeho členskou funkci.
 
-*object*  
+*object*<br/>
 Objekt, jehož členská funkce je volána, když dojde k události.
 
-*– Metoda*  
+*– Metoda*<br/>
 Členská funkci volat při výskytu události.
 
 ## <a name="return-value"></a>Návratová hodnota

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0800812e39d4d5240b87b24961585610814cd367
-ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
+ms.openlocfilehash: 28d1df72efcc1fa7408922876ad91bafcd2b005a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44384953"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422661"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Doprovodné materiály pro vývojáře v C++ pro kanály na straně spekulativního spouštění
 
@@ -31,7 +31,7 @@ Tento článek obsahuje pokyny pro vývojáře, které pomáhají při identifik
 
 Pokynů, které jste v tomto článku se vztahuje na třídy reprezentována ohrožení zabezpečení:
 
-1. CVE-2017-5753, označované také jako chyby zabezpečení Spectre variant 1. Tuto třídu hardwaru ohrožení zabezpečení se týká kanály na straně, které mohou vzniknout z důvodu spekulativního spouštění, ke které dojde v důsledku misprediction podmíněná větev. Kompilátor Visual C++ v sadě Visual Studio 2017 (od verze 15.5.5) zahrnuje podporu pro `/Qspectre` přepínač, který poskytuje zmírnění kompilace pro omezenou sadu potenciálně ohrožená vzorce kódování související s CVE-2017-5753. `/Qspectre` Přepínač je také k dispozici v sadě Visual Studio 2015 Update 3 prostřednictvím [KB 4338871](https://support.microsoft.com/help/4338871). V dokumentaci [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) příznak poskytuje další informace o jeho dopady a využití. 
+1. CVE-2017-5753, označované také jako chyby zabezpečení Spectre variant 1. Tuto třídu hardwaru ohrožení zabezpečení se týká kanály na straně, které mohou vzniknout z důvodu spekulativního spouštění, ke které dojde v důsledku misprediction podmíněná větev. Kompilátor Visual C++ v sadě Visual Studio 2017 (od verze 15.5.5) zahrnuje podporu pro `/Qspectre` přepínač, který poskytuje zmírnění kompilace pro omezenou sadu potenciálně ohrožená vzorce kódování související s CVE-2017-5753. `/Qspectre` Přepínač je také k dispozici v sadě Visual Studio 2015 Update 3 prostřednictvím [KB 4338871](https://support.microsoft.com/help/4338871). V dokumentaci [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) příznak poskytuje další informace o jeho dopady a využití.
 
 2. CVE-2018-3639, označované také jako [spekulativního jednorázové přihlášení pro Store (SSB)](https://aka.ms/sescsrdssb). Tuto třídu hardwaru ohrožení zabezpečení se týká kanály na straně, které mohou vzniknout z důvodu spekulativního spouštění zatížení náskok před závislé úložiště jako výsledek misprediction přístupu k paměti.
 
@@ -55,9 +55,9 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 }
 ```
 
-V tomto příkladu `ReadByte` je zadané vyrovnávací paměti, velikost vyrovnávací paměti a indexu do vyrovnávací paměti. Index parametru, jak jsou určené `untrusted_index`, získáte ho od méně privilegovaným kontextu, například bez oprávnění správce procesu. Pokud `untrusted_index` je menší než `buffer_size`, znak na pozici indexu je přečten z `buffer` a slouží jako index do oblasti sdílené paměti, na které odkazuje `shared_buffer`. 
+V tomto příkladu `ReadByte` je zadané vyrovnávací paměti, velikost vyrovnávací paměti a indexu do vyrovnávací paměti. Index parametru, jak jsou určené `untrusted_index`, získáte ho od méně privilegovaným kontextu, například bez oprávnění správce procesu. Pokud `untrusted_index` je menší než `buffer_size`, znak na pozici indexu je přečten z `buffer` a slouží jako index do oblasti sdílené paměti, na které odkazuje `shared_buffer`.
 
-Z architektonického hlediska, toto pořadí kód je zcela bezpečné, protože je zaručeno, že `untrusted_index` bude vždy menší než `buffer_size`. Za přítomnosti spekulativního spouštění, je však možné, že procesor bude nevyplněné předpovědi podmíněná větev a spustit tělo příkazu if – příkaz i v případě `untrusted_index` je větší než nebo rovna hodnotě `buffer_size`. Následkem toho může procesor speculatively číst bajt from beyond hranice `buffer` (která může být tajný klíč) a pak použít tuto hodnotu bajtu pro výpočet adresy následné zatížení prostřednictvím `shared_buffer`. 
+Z architektonického hlediska, toto pořadí kód je zcela bezpečné, protože je zaručeno, že `untrusted_index` bude vždy menší než `buffer_size`. Za přítomnosti spekulativního spouštění, je však možné, že procesor bude nevyplněné předpovědi podmíněná větev a spustit tělo příkazu if – příkaz i v případě `untrusted_index` je větší než nebo rovna hodnotě `buffer_size`. Následkem toho může procesor speculatively číst bajt from beyond hranice `buffer` (která může být tajný klíč) a pak použít tuto hodnotu bajtu pro výpočet adresy následné zatížení prostřednictvím `shared_buffer`.
 
 Zatímco procesoru nakonec zjistí tento misprediction, plyne ze zbytkových vedlejší účinky, může zůstat v mezipaměti procesoru, který zjistí informace o hodnotě bajtů, který byl načten mimo rozsah od `buffer`. Můžete rozpoznat tyto vedlejší účinky less privileged kontext spuštěné v systému, jak rychle zjišťováním každá mezipaměť řádku v `shared_buffer` přistupuje. Kroky, které můžete k tomu jsou:
 
@@ -73,14 +73,14 @@ Výše uvedené kroky uveďte příklad pomocí techniky označované jako VYPR�
 
 ## <a name="what-software-scenarios-can-be-impacted"></a>Může mít dopad na jakých situacích softwaru?
 
-Vývoj pomocí procesu, jako je zabezpečení softwaru [Security Development Lifecycle](https://www.microsoft.com/en-us/sdl/) (SDL) obvykle vyžaduje, aby vývojáři k identifikaci hranice vztahu důvěryhodnosti, které existují ve svých aplikacích. Hranice vztahů důvěryhodnosti existuje na místech, kde můžou aplikace pracovat s daty poskytuje kontext, méně důvěryhodnému, například jiný proces v systému nebo proces režimu uživatele bez oprávnění správce v případě ovladač zařízení režimu jádra. Nová třída zahrnující kanály na straně spekulativního spouštění ohrožení zabezpečení je relevantní pro řadu hranicemi vztahů důvěryhodnosti v existujících modelech zabezpečení softwaru, které izolovat kódu a dat na zařízení. 
+Vývoj pomocí procesu, jako je zabezpečení softwaru [Security Development Lifecycle](https://www.microsoft.com/en-us/sdl/) (SDL) obvykle vyžaduje, aby vývojáři k identifikaci hranice vztahu důvěryhodnosti, které existují ve svých aplikacích. Hranice vztahů důvěryhodnosti existuje na místech, kde můžou aplikace pracovat s daty poskytuje kontext, méně důvěryhodnému, například jiný proces v systému nebo proces režimu uživatele bez oprávnění správce v případě ovladač zařízení režimu jádra. Nová třída zahrnující kanály na straně spekulativního spouštění ohrožení zabezpečení je relevantní pro řadu hranicemi vztahů důvěryhodnosti v existujících modelech zabezpečení softwaru, které izolovat kódu a dat na zařízení.
 
 Následující tabulka obsahuje souhrn modely zabezpečení softwaru, kde vývojáři muset mít obavy o těchto chyb, ke kterým došlo:
 
 |Hranice vztahu důvěryhodnosti|Popis|
 |----------------|----------------|
-|Virtuální počítač hranice|Aplikace, které izolování úloh v samostatných virtuálních počítačů, které přijímají nedůvěryhodná data z jiného virtuálního počítače může být ohrožena.| 
-|Hranice jádra|Ovladač zařízení režimu jádra, která přijímá nedůvěryhodná data z procesu režimu bez oprávnění správce uživatele může být ohrožena.| 
+|Virtuální počítač hranice|Aplikace, které izolování úloh v samostatných virtuálních počítačů, které přijímají nedůvěryhodná data z jiného virtuálního počítače může být ohrožena.|
+|Hranice jádra|Ovladač zařízení režimu jádra, která přijímá nedůvěryhodná data z procesu režimu bez oprávnění správce uživatele může být ohrožena.|
 |Hranice procesu|Aplikace, která přijímá nedůvěryhodná data z jiného procesu spuštění v místním systému, jako je prostřednictvím vzdálené volání procedur (RPC), sdílené paměti nebo jiných mezi proces komunikace (IPC) mechanismy může být ohrožena.|
 |Enklávě hranic|Aplikace, která se spustí v rámci zabezpečeného enklávy (například Intel SGX), která přijímá nedůvěryhodná data z mimo enklávy může být ohrožena.|
 |Jazyky|Aplikace, který interpretuje nebo za běhu (JIT) zkompiluje a spustí nedůvěryhodný kód napsaný v jazyce vyšší úrovně může být ohrožena.|
@@ -133,7 +133,7 @@ unsigned char ReadBytes(unsigned char *buffer, unsigned int buffer_size) {
 
 ### <a name="array-out-of-bounds-load-feeding-an-indirect-branch"></a>Pole celočíselných načíst předáte nepřímé větve
 
-Tento model kódování zahrnuje tento případ, kdy misprediction podmíněná větev může vést k celočíselných přístup k poli z ukazatele funkcí, které pak vede k nepřímé větev do cílové adresy, která byla načtena celočíselných. Následující fragment kódu poskytuje příklad, který ukazuje to. 
+Tento model kódování zahrnuje tento případ, kdy misprediction podmíněná větev může vést k celočíselných přístup k poli z ukazatele funkcí, které pak vede k nepřímé větev do cílové adresy, která byla načtena celočíselných. Následující fragment kódu poskytuje příklad, který ukazuje to.
 
 V tomto příkladu identifikátor nedůvěryhodné zprávu dostane DispatchMessage prostřednictvím `untrusted_message_id` parametru. Pokud `untrusted_message_id` je menší než `MAX_MESSAGE_ID`, pak se používá k Indexujte pole ukazatelů na funkce a větvit do odpovídající cílové větve. Tento kód je bezpečné architektonicky, ale pokud procesor nevyplněných předpovědí rozvětvení podmíněná větev, může vést `DispatchTable` indexované podle `untrusted_message_id` když její hodnota je větší než nebo rovna hodnotě `MAX_MESSAGE_ID`, tedy vedoucí k celočíselných přístup. To může způsobit spekulativního spouštění z adresy cílové větve, která je odvozena za hranice pole, které by mohlo vést k informacím v závislosti na kód, který je proveden speculatively.
 
@@ -188,7 +188,7 @@ Je třeba poznamenat, že oba tyto příklady zahrnují spekulativního úpravy 
 
 ## <a name="speculative-type-confusion"></a>Typu spekulativním záměny
 
-Tato kategorie se zabývá vzorů, které můžou vést k záměně typu spekulativním psaní kódu. Vyvolá se při přístupu k paměti pomocí nesprávného typu – architektury cestě během spekulativního spouštění. Misprediction podmíněná větev a obejít spekulativního úložiště může potenciálně vést k typu spekulativním nejasnosti. 
+Tato kategorie se zabývá vzorů, které můžou vést k záměně typu spekulativním psaní kódu. Vyvolá se při přístupu k paměti pomocí nesprávného typu – architektury cestě během spekulativního spouštění. Misprediction podmíněná větev a obejít spekulativního úložiště může potenciálně vést k typu spekulativním nejasnosti.
 
 Pro jednorázové přihlášení spekulativního úložiště tato situace může nastat ve scénářích, kde kompilátor opětovně používá umístění zásobníku pro proměnné více typů. Důvodem je, že architektury úložiště proměnné typu `A` může obejít, což umožní načíst typ `A` speculatively běžet, než proměnná přiřazená. Pokud dříve uložené proměnné jiného typu, toto můžete vytvořit podmínky typu spekulativním nejasnostem.
 
@@ -368,6 +368,5 @@ Další technikou, který slouží k omezení spekulativního spouštění na st
 
 ## <a name="see-also"></a>Viz také
 
-[Pokyny ke zmírnění chyby zabezpečení na straně kanálu spekulativního spouštění](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)
-
+[Pokyny ke zmírnění chyby zabezpečení na straně kanálu spekulativního spouštění](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)<br/>
 [Omezení spekulativního spouštění na straně kanálu hardwarové ohrožení zabezpečení](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)

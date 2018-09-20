@@ -1,5 +1,5 @@
 ---
-title: Typy projektů Visual C++ | Microsoft Docs
+title: Typy projektu Visual C++ | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 10/30/2017
 ms.technology:
@@ -20,88 +20,88 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80ac3479338dcb7f6be9e7e5f3f150cc8e15a9a9
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 45b62d5ce8f49b023721cf7323dc42e1c65c2109
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339979"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396685"
 ---
 # <a name="visual-c-project-types"></a>Typy projektů Visual C++
 
-Šablona projektu můžete použít k vytvoření struktura základní programu, nabídek, panely nástrojů, ikony, odkazy, a `#include` příkazy, které jsou vhodné pro typ projektu, kterou chcete vytvořit. Visual Studio obsahuje několik druhů šablony projektů Visual C++ a poskytuje průvodců pro mnoho z nich tak, aby si můžete přizpůsobit projekty, podle jejich vytvoření. Okamžitě po vytvoření projektu, můžete ji sestavíte a spustíte aplikaci; je dobrým zvykem sestavení občas, když budete vyvíjet aplikace.
+Chcete-li vytvořit základní program strukturu, nabídky, panely nástrojů, ikony, odkazy, můžete použít šablonu projektu a `#include` příkazy, které jsou vhodné pro typ projektu chcete vytvořit. Visual Studio obsahuje několik druhů šablony projektů Visual C++ a poskytuje průvodce pro mnoho z nich tak, aby vaše projekty můžete přizpůsobit podle jejich vytvoření. Ihned po vytvoření projektu lze sestavit a spustit aplikaci. je dobrým zvykem přerušovaně sestavení při vývoji vaší aplikace.
 
-Nemusíte používat šablonu pro vytvoření projektu, ale ve většině případů je efektivnější to provést, protože je jednodušší a upravit soubory zadaného projektu a struktura, než je při jejich vytváření od začátku.  
-  
+Není nutné používat šablonu k vytvoření projektu, ale ve většině případů je mnohem efektivnější to provést, protože je jednodušší úpravy souborů zadaný projekt a struktura, než je vytvořit úplně od začátku.
+
 > [!NOTE]
-> Projekt jazyka C můžete vytvořit pomocí šablony projektu jazyka C++. V projektu vygenerované najít soubory, které mají sada příponou názvu souboru a změňte ji na. c. Potom na **vlastnosti projektu** stránky pro projekt (není pro řešení), rozbalte položku **vlastnosti konfigurace**, **C/C++** a vyberte **Upřesnit**. Změna **zkompilovat jako** nastavení na **zkompilovat jako kódu jazyka C (/ TC)**.
+> Vytvořte projekt jazyka C pomocí šablon projektů jazyka C++. V generovaném projektu, vyhledejte soubory, které mají .cpp příponu názvu souboru a změňte ji na. c. Potom na **vlastnosti projektu** stránce projektu (ne pro řešení), rozbalte **vlastnosti konfigurace**, **C/C++** a vyberte **Upřesnit**. Změnit **zkompilovat jako** nastavení **kompilovat jako kód jazyka C (/ TC)**.
 
 ## <a name="project-templates"></a>Šablony projektů
 
-Šablony projektů, které jsou zahrnuté v sadě Visual Studio závisí na verzi produktu a úlohy, které jste nainstalovali. Pokud jste nainstalovali vývoj aplikací zatížením, C++, Visual Studio má tyto šablony projektů Visual C++.
+Šablony projektů, které jsou součástí sady Visual Studio závisí na verzi produktu a úlohy, které jste nainstalovali. Pokud jste nainstalovali vývoj desktopových aplikací pomocí úlohy pro C++, Visual Studio obsahuje tyto šablony projektů Visual C++.
 
-### <a name="windows-desktop"></a>Windows Desktop
+### <a name="windows-desktop"></a>Plocha Windows
 
-|Šablona projektu|Popis|  
-|----------------------|-----------------------------| 
-|[Konzolové aplikace pro Windows](../windows/creating-a-console-application.md)|Projekt pro vytvoření konzolové aplikace systému Windows.|
-|[Aplikace pracovní plochy Windows](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|Projekt pro vytvoření aplikace pro systém Windows desktop (Win32).|
-|[Knihovna DLL](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)|Projekt pro vytvoření dynamická knihovna (DLL).|
-|[Statické knihovny](../windows/walkthrough-creating-and-using-a-static-library-cpp.md)|Projekt pro vytvoření statické knihovny (LIB).|
-|Průvodce na ploše systému Windows|Průvodce pro vytváření aplikací klasické pracovní plochy Windows a knihovny s další možnosti.|
+|Šablona projektu|Popis|
+|----------------------|-----------------------------|
+|[Konzolová aplikace Windows](../windows/creating-a-console-application.md)|Projekt pro vytvoření konzolové aplikace pro Windows.|
+|[Aplikace klasické pracovní plochy Windows](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|Projekt pro vytvoření aplikace pro Windows desktop (Win32).|
+|[Dynamická knihovna](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)|Projekt pro vytvoření dynamické knihovny (DLL).|
+|[Statická knihovna](../windows/walkthrough-creating-and-using-a-static-library-cpp.md)|Projekt pro vytvoření statické knihovny (LIB).|
+|Desktopový Průvodce pro Windows|Průvodce pro vytváření aplikací klasické pracovní plochy Windows a knihovny s další možnosti.|
 
 ### <a name="general"></a>Obecné
 
 |Šablona projektu|Popis|
 |----------------------|-----------------------------|
-|Prázdný projekt|Prázdný projekt pro vytvoření aplikace, knihovny nebo DLL. Je nutné přidat kód ani prostředků, které vyžaduje.|
-|[Projektem souboru pravidel](../ide/creating-a-makefile-project.md)|Sestavení projektu pro použití externího systému.|
-|Sdílené položky projektu|Projekt, který se používá pro sdílení souborů mezi více projektů.|
+|Prázdný projekt|Prázdný projekt pro vytvoření aplikace, knihovny nebo knihovny DLL. Je nutné přidat kód ani prostředků, které vyžaduje.|
+|[Projekt makefile](../ide/creating-a-makefile-project.md)|Projekt pro použití externího sestavovacího systému.|
+|Projekt sdílené položky|Projekt, který se používá ke sdílení souborů mezi více projekty.|
 
 ### <a name="atl"></a>ATL
 
 |Šablona projektu|Popis|
 |----------------------|-----------------------------|
-|[Projekt knihovny ATL](../atl/reference/creating-an-atl-project.md)|Projekt, který používá Active knihovna šablon.|
+|[Projekt knihovny ATL](../atl/reference/creating-an-atl-project.md)|Projekt, který používá knihovnu Active Template Library.|
 
 ### <a name="test"></a>Test
 
 |Šablona projektu|Popis|
 |----------------------|-----------------------------|
-|[Nativní jednotky testovacího projektu](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)|Projekt, který obsahuje nativní testování částí C++.|
+|[Nativní projekt testu jednotek](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)|Projekt obsahující nativní testy jednotek C++.|
 
 ### <a name="mfc"></a>MFC
 
-Pokud přidáte MFC a knihovna ATL podporu součásti k instalaci sady Visual Studio, tyto šablony projektu se přidají do sady Visual Studio.
+Pokud chcete přidat komponenty k instalaci sady Visual Studio podporu knihovny MFC a ATL, tyto šablony projektu jsou přidány k sadě Visual Studio.
 
 |Šablona projektu|Popis|
 |----------------------|-----------------------------|
-|[Aplikace MFC](../mfc/reference/creating-an-mfc-application.md)|Projekt pro vytvoření aplikace, která používá knihovna Microsoft Foundation Class (MFC).|
-|[Ovládací prvek ActiveX knihovny MFC](../mfc/reference/creating-an-mfc-activex-control.md)|Projekt pro vytvoření ovládacího prvku ActiveX, který používá knihovny MFC.|
-|[MFC DLL](../mfc/reference/creating-an-mfc-dll-project.md)|Projekt pro vytvoření dynamickou knihovnu, která používá knihovny MFC.|
+|[Aplikace MFC](../mfc/reference/creating-an-mfc-application.md)|Projekt pro vytvoření aplikace, která používá knihovny Microsoft Foundation Class (MFC).|
+|[Ovládací prvek ActiveX knihovny MFC](../mfc/reference/creating-an-mfc-activex-control.md)|Projekt pro vytvoření ovládacího prvku ActiveX, který používá knihovnu MFC.|
+|[KNIHOVNA MFC DLL](../mfc/reference/creating-an-mfc-dll-project.md)|Projekt pro vytvoření knihovny DLL, která používá knihovnu MFC.|
 
 ### <a name="windows-universal-apps"></a>Univerzální aplikace pro Windows
 
-Když přidáte komponentu nástroje pro univerzální platformu Windows C++ instalace Visual Studia, tyto šablony projektu se přidají k sadě Visual Studio.
+Pokud chcete přidat součást nástrojů pro univerzální platformu Windows C++ k instalaci sady Visual Studio, tyto šablony projektu jsou přidány k sadě Visual Studio.
 
-Přehled univerzálních aplikací pro Windows v jazyce C++ najdete v tématu [univerzální aplikace pro Windows (C++)](../windows/universal-windows-apps-cpp.md).
+Přehled Windows univerzální aplikace v jazyce C++, naleznete v tématu [univerzální aplikace pro Windows (C++)](../windows/universal-windows-apps-cpp.md).
 
 |Šablona projektu|Popis|
 |----------------------|-----------------------------|
-|Prázdná aplikace|Projekt pro jednostránkové aplikace univerzální platformu Windows (UWP), který nemá žádné předdefinované ovládací prvky nebo rozložení.|
-|Aplikace rozhraní DirectX 11|Projekt pro univerzální platformu Windows aplikaci, která používá rozhraní DirectX 11.|
-|Aplikace rozhraní DirectX 12|Projekt pro univerzální platformu Windows aplikaci, která používá rozhraní DirectX 12.|
-|DirectX 11 a aplikace XAML|Projekt pro univerzální platformu Windows aplikaci, která používá rozhraní DirectX 11 a XAML.|
-|Jednotka testování aplikace|Projekt k vytvoření aplikace testů jednotek pro aplikace pro univerzální platformu Windows (UWP).|
-|DLL|Projekt pro nativní dynamická knihovna (DLL), které je možné součást aplikace nebo modul runtime univerzální platformu Windows.|
-|Statické knihovny|Projekt pro nativní statická knihovna (LIB), které je možné součást aplikace nebo modul runtime univerzální platformu Windows.|
-|Součást prostředí Windows Runtime|Projekt pro komponenty prostředí Windows Runtime, která mohou být využívána univerzální platformu Windows aplikace, bez ohledu na programovací jazyk, ve kterém je aplikace zapsána.|
-|Balení projekt aplikace Windows|Projekt, který vytvoří UWP balíček, který umožňuje desktopová aplikace zkušebně načtených nebo distribuovaných přes Microsoft Store.|
+|Prázdná aplikace|Projekt pro jednostránkovou aplikaci univerzální platformy Windows (UPW), který nemá žádné předdefinované ovládací prvky ani rozložení.|
+|Aplikace DirectX 11|Projekt aplikace pro univerzální platformu Windows používající rozhraní DirectX 11.|
+|Aplikace DirectX 12|Projekt aplikace pro univerzální platformu Windows využívající DirectX 12.|
+|Rozhraní DirectX 11 a XAML aplikací|Projekt aplikace pro univerzální platformu Windows používající rozhraní DirectX 11 a XAML.|
+|Aplikace testů jednotek|Projekt pro vytvoření aplikace testů jednotek pro aplikace univerzální platformy Windows (UPW).|
+|DLL|Projekt pro nativní dynamickou knihovnu (DLL), použitý univerzální platformu Windows aplikace nebo komponenta prostředí runtime.|
+|Statická knihovna|Projekt pro nativní knihovnu statických odkazů (LIB), který lze použít univerzální platformu Windows aplikace nebo komponenta prostředí runtime.|
+|Součást prostředí Windows Runtime|Projekt pro součást prostředí Windows Runtime, která může používat aplikace pro univerzální platformu Windows, bez ohledu na programovací jazyk, ve kterém je aplikace vytvořená.|
+|Projekt Windows Application Packaging|Projekt, který vytvoří balíček, UPW, která umožňuje desktopovou aplikaci zkušebně načtených nebo distribuované přes Microsoft Store.|
 
 ## <a name="todo-comments"></a>Komentáře TODO
 
-Řadu soubory generované šablona projektu obsahovat komentáře TODO, který vám pomůže identifikovat, kde můžete zadat vlastní zdrojového kódu. Další informace o tom, jak přidat kód najdete v tématu [přidání funkce pomocí průvodců kódem](../ide/adding-functionality-with-code-wizards-cpp.md) a [práce se zdrojovými soubory](../windows/working-with-resource-files.md).
+Mnoho soubory generované záznamem šablony projektu obsahovat komentáře TODO, abyste mohli snadno identifikovat, ve kterém můžete zadat zdrojový kód. Další informace o tom, jak přidat kód, naleznete v tématu [přidání funkce pomocí průvodců kódem](../ide/adding-functionality-with-code-wizards-cpp.md) a [práce se zdrojovými soubory](../windows/working-with-resource-files.md).
 
 ## <a name="see-also"></a>Viz také
 
-[Tvorba desktopových projektů pomocí průvodců aplikací](../ide/creating-desktop-projects-by-using-application-wizards.md)   
+[Tvorba desktopových projektů pomocí průvodců aplikací](../ide/creating-desktop-projects-by-using-application-wizards.md)

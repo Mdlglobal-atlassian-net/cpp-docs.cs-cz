@@ -1,5 +1,5 @@
 ---
-title: 3.2.5 omp_test_lock a omp_test_nest_lock – funkce | Microsoft Docs
+title: 3.2.5 omp_test_lock a omp_test_nest_lock – Functions | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,24 +12,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5023f0b089d76e92be886f4917905f57dda7a018
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5349134bf92f407d4b65df9b92e3eebe87c097c1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686224"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426143"
 ---
 # <a name="325-omptestlock-and-omptestnestlock-functions"></a>3.2.5 omp_test_lock a omp_test_nest_lock – funkce
-Tyto funkce k pokusu nastavit zámek ale neblokují provádění vlákna. Formát vypadá takto:  
-  
-```  
-#include <omp.h>  
-int omp_test_lock(omp_lock_t *lock);  
-int omp_test_nest_lock(omp_nest_lock_t *lock);  
-```  
-  
- Argument musí odkazovat na proměnnou inicializovaného zámku. Tyto funkce k pokusu nastavit zámek stejným způsobem jako `omp_set_lock` a `omp_set_nest_lock`kromě toho, že nebrání provádění vlákna.  
-  
- Pro jednoduché zámku `omp_test_lock` funkce vrátí nenulovou hodnotu, pokud se úspěšně nastavila zámek; jinak vrátí hodnotu nula.  
-  
- Na nestable Zámek `omp_test_nest_lock` funkce vrací nový počet vnoření, pokud se úspěšně nastavila zámek; jinak vrátí hodnotu nula.
+
+Tyto funkce pokus o nastavení zámku ale neblokují provádění vlákna. Formát je následujícím způsobem:
+
+```
+#include <omp.h>
+int omp_test_lock(omp_lock_t *lock);
+int omp_test_nest_lock(omp_nest_lock_t *lock);
+```
+
+Argument musí ukazovat na proměnnou inicializované zámku. Tyto funkce se pokusí nastavit zámek stejným způsobem jako `omp_set_lock` a `omp_set_nest_lock`, s tím rozdílem, že nebudou blokovat spuštění vlákna.
+
+Pro jednoduché Zámek `omp_test_lock` funkce vrací nenulovou hodnotu, pokud je úspěšně nastavené uzamčení; v opačném případě vrátí 0.
+
+Pro zámek, vnořitelných `omp_test_nest_lock` funkce vrací nový počet vnoření, pokud je úspěšně nastavené uzamčení; v opačném případě vrátí 0.

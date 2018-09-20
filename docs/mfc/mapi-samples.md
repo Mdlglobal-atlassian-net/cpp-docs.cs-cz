@@ -1,5 +1,5 @@
 ---
-title: Ukázky MAPI | Microsoft Docs
+title: Ukázky MAPI | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6260c7bc9875e92e66920fb8837810132d0a4a50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a6427ec6748ffcb32f401a4b9efe46127dd64f2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344114"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430680"
 ---
 # <a name="mapi-samples"></a>Ukázky MAPI
-Viz následující ukázka programy, které ilustrují funkce Microsoft Zasílání zpráv rozhraní MAPI (Application Programming):  
-  
--   [AGENT NPP](../visual-cpp-samples.md)  
-  
--   [DRAWCLI](../visual-cpp-samples.md)  
-  
-## <a name="see-also"></a>Viz také  
- [MAPI](../mfc/mapi.md)
+
+Viz následující ukázkové programy, které ilustrují funkce Microsoft Zasílání zpráv rozhraní MAPI (Application Programming):
+
+- [AGENT NPP](../visual-cpp-samples.md)
+
+- [DRAWCLI](../visual-cpp-samples.md)
+
+## <a name="see-also"></a>Viz také
+
+[MAPI](../mfc/mapi.md)
 

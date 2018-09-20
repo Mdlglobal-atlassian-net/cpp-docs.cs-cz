@@ -1,5 +1,5 @@
 ---
-title: Přesunout umístění definice | Microsoft Docs
+title: Přesunout umístění definice | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -10,32 +10,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44211105429e33c136999a7877ac6ee42af29f17
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 5058e0b3bab1fb5fb5e8d52b55e3fa7c37fd8a4e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327837"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430042"
 ---
-# <a name="move-definition-location"></a>Přesunutí definice umístění
-**Co:** umožňuje okamžitě přesunout do odpovídající soubor hlaviček definici funkce.
+# <a name="move-definition-location"></a>Přesunout umístění definice
+**Co:** umožňuje okamžitě přesunutí definice funkce pro odpovídající soubor záhlaví.
 
-**Kdy:** máte funkci, která chcete přesunout do záhlaví souboru.  
+**Kdy:** máte funkci, kterou chcete přesunout do souboru hlaviček.
 
-**Důvod:** může ručně přesunout funkce, ale tato funkce se přesune se automaticky, vytváření soubor hlaviček, pokud je to nutné.
+**Důvod, proč:** můžete ručně přesunout funkci, ale tato funkce se jej přesunout automaticky, vytváření souboru hlaviček v případě potřeby.
 
-**Postupy:**
+**Jak:**
 
-1. Umístěte kurzor text nebo myši nad funkce, pro který chcete přesunout.
+1. Umístěte ukazatel myši text nebo myši nad funkce, pro který chcete přesunout.
 
    ![Zvýrazněný kód](images/movedefinition_highlight.png)
 
 1. Dále proveďte jednu z následujících akcí:
    * **Klávesnice**
-     * Stiskněte klávesu **Ctrl +.** spuštění **rychlé akce a refaktoring** nabídku a vyberte **přesunout umístění definice** v místní nabídce.
-   * **Myš**
-     * Klikněte pravým tlačítkem a vyberte **rychlé akce a refaktoring** nabídku a vyberte **přesunout umístění definice** v místní nabídce.
+     * Stisknutím klávesy **Ctrl +.** aktivační událost **rychlé akce a Refaktoringy** nabídky a vybereme **přesunout umístění definice** v místní nabídce.
+   * **Myši**
+     * Klikněte pravým tlačítkem a vyberte **rychlé akce a Refaktoringy** nabídky a vybereme **přesunout umístění definice** v místní nabídce.
 
-1. Funkce přesunou do odpovídající záhlaví souboru, který se zobrazí v automaticky otevřeném okně okně preview.  Pokud soubor hlaviček neexistuje, bude také vytvořit a umístit do projektu.
+1. Funkce se přesunou na odpovídající soubor záhlaví, která se zobrazí v automaticky otevíraném okně ve verzi preview.  Pokud hlavičkový soubor buď neexistuje, bude také vytvořena a umístěna do projektu.
 
-   ![Vytvořit deklaraci / způsobit definice](images/movedefinition_result.png)
+   ![Vytvořit deklaraci / definici způsobit](images/movedefinition_result.png)

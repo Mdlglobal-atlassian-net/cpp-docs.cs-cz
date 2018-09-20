@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 47fcbdb82501744c8155432e4f4cf220ed945dec
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6140b6764efe530664a1904940f3a8426e6fee02
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709901"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445853"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -43,7 +43,7 @@ Vytvoří příkaz OLE DB.
 
 ### <a name="parameters"></a>Parametry
 
-*Příkaz*  
+*Příkaz*<br/>
 Příkaz řetězec obsahující text příkazu technologie OLE DB. Je jednoduchý příklad:
 
 ```cpp
@@ -64,15 +64,15 @@ kde:
 
 - **\[** *bindtype* **]** je jedním z následujících řetězců velká a malá písmena:
 
-  -   **\[db_column]** všechny proměnné členů váže ke sloupci v sadě řádků.
+  - **\[db_column]** všechny proměnné členů váže ke sloupci v sadě řádků.
 
-  -   **\[bindto]** (stejné jako  **\[db_column]**).
+  - **\[bindto]** (stejné jako  **\[db_column]**).
 
-  -   **\[v]** váže členské proměnné jako vstupní parametry.
+  - **\[v]** váže členské proměnné jako vstupní parametry.
 
-  -   **\[out]** váže členské proměnné jako výstupní parametry.
+  - **\[out]** váže členské proměnné jako výstupní parametry.
 
-  -   **\[in, out]** váže členské proměnné jako vstupní a výstupní parametry.
+  - **\[in, out]** váže členské proměnné jako vstupní a výstupní parametry.
 
 - *szVarX*, *nVarX* přeložit na proměnnou člena v aktuálním oboru.
 
@@ -99,25 +99,25 @@ TCHAR m_state[3] = 'CA';
 ]
 ```
 
-*Jméno*  
+*Jméno*<br/>
 (Volitelné) Název popisovače, který můžete použít pro práci se v sadě řádků. Pokud zadáte *název*, **db_command** vygeneruje třídu se zadaným *název*, které lze použít k procházení řádků nebo chcete-li spustit více dotazů akce. Pokud nezadáte *název*, nebude možné vrátit více než jeden řádek výsledků pro uživatele.
 
-*source_name*  
+*source_name*<br/>
 (Volitelné) `CSession` Proměnnou nebo instance třídy, která má `db_source` atribut WebMethod na kterém příkaz spustí. Zobrazit [db_source](../windows/db-source.md).
 
 **db_command** kontroluje, ujistěte se, že proměnné použité pro *source_name* je platný, funkce nebo globální rozsah by tak měly být zadané proměnné.
 
-*Hodnota HRESULT*  
+*Hodnota HRESULT*<br/>
 (Volitelné) Určuje proměnné, která se zobrazí hodnota HRESULT tohoto databázového příkazu. Pokud proměnná neexistuje, ji budou automaticky vloženy atribut.
 
-*Vazby*  
+*Vazby*<br/>
 (Volitelné) Umožňuje oddělit vazby parametrů příkazu technologie OLE DB.
 
 Pokud zadáte hodnotu pro *vazby*, **db_command** provede analýzu přidruženou hodnotu a nebude analyzovat \[ *bindtype*] parametru. Toto použití můžete použít syntaxi zprostředkovatele OLE DB. Chcete-li zakázat analýzy bez vazby parametrů, zadejte `Bindings=""`.
 
 Pokud nezadáte hodnotu *vazby*, **db_command** provede analýzu bloku parametrů vazby, hledá "**(**" následovaný **\[** _bindtype_**]** v závorkách, za nímž následuje jedna nebo více dříve deklarovaný člen proměnné C++, za nímž následuje "**)**". Veškerý text v závorkách se odstraní z výsledné příkazu a tyto parametry se použije k vytvoření sloupce a parametr vazby tohoto příkazu.
 
-*bulk_fetch*  
+*bulk_fetch*<br/>
 (Volitelné) Celočíselná hodnota, která určuje počet řádků, které mají načíst.
 
 Výchozí hodnota je 1, která určuje načítání jednoho řádku (řádků budou typu [CRowset](../data/oledb/crowset-class.md)).
@@ -266,5 +266,5 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](..
 
 ## <a name="see-also"></a>Viz také:
 
-[Atributy příjemce technologie OLE DB](../windows/ole-db-consumer-attributes.md)  
+[Atributy příjemce technologie OLE DB](../windows/ole-db-consumer-attributes.md)<br/>
 [Samostatné atributy](../windows/stand-alone-attributes.md)  

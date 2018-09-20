@@ -17,14 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50696d8f6ee0aa1c61374c0758905a5bb7063ab5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 732fab9e0f9f0233de6de7db6328c2e6736db5d0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606934"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437712"
 ---
 # <a name="mfc-database-programming-symbols"></a>Programovací symboly databáze MFC
+
 Symboly v této tabulce zobrazí jenom v projektu knihovny MFC při byla přidána podpora databáze. Podporují taky MFC připojení k SQL serverům a programování databáze.
   
 |||
@@ -45,8 +46,10 @@ Symboly v této tabulce zobrazí jenom v projektu knihovny MFC při byla přidá
 |AFX_IDP_SQL_SQL_NO_TOTAL|AFX_IDP_SQL_UPDATE_DELETE_FAILED|
   
 ## <a name="requirements"></a>Požadavky
- MFC
+
+MFC
   
 ## <a name="see-also"></a>Viz také
- [Předdefinované symboly MFC](../windows/mfc-predefined-symbols.md)  
- [Symboly: Identifikátory prostředků](../windows/symbols-resource-identifiers.md)
+
+[Předdefinované symboly MFC](../windows/mfc-predefined-symbols.md)<br/>
+[Symboly: Identifikátory prostředků](../windows/symbols-resource-identifiers.md)

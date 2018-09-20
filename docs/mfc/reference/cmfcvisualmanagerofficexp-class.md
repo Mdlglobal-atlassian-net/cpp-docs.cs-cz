@@ -1,5 +1,5 @@
 ---
-title: Třída CMFCVisualManagerOfficeXP | Microsoft Docs
+title: CMFCVisualManagerOfficeXP – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8450df47de5f7947aaf1a94e0f5022ac9fc66516
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 879854d820c0baae9f2a078ed5b136e985be8ed2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368644"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440508"
 ---
 # <a name="cmfcvisualmanagerofficexp-class"></a>CMFCVisualManagerOfficeXP – třída
-`CMFCVisualManagerOfficeXP` Poskytuje aplikace Microsoft Office XP vzhled.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CMFCVisualManagerOfficeXP : public CMFCVisualManager  
-```  
-  
-## <a name="members"></a>Členové  
- Všechny členy této třídy jsou virtuální funkce, které jsou odvozeny od nadřazeného této třídy [CMFCVisualManager třída](../../mfc/reference/cmfcvisualmanager-class.md).  
-  
-## <a name="remarks"></a>Poznámky  
- Můžete použít `CMFCVisualManagerOfficeXP` třída změnit vzhled aplikace tak, aby připomínaly, Microsoft Office XP.  
-  
-## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak používat `CMFCVisualManagerOfficeXP`. Tento fragment kódu je součástí [plochy výstrahy Demo-ukázka](../../visual-cpp-samples.md).  
-  
- [!code-cpp[NVC_MFC_DesktopAlertDemo#8](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagerofficexp-class_1.cpp)]  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)  
-  
- [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)  
-  
- [CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxvisualmanagerofficexp.h  
-  
-## <a name="see-also"></a>Viz také  
- [Graf hierarchie](../../mfc/hierarchy-chart.md)   
- [Třídy](../../mfc/reference/mfc-classes.md)   
- [CMFCVisualManager – třída](../../mfc/reference/cmfcvisualmanager-class.md)
+
+`CMFCVisualManagerOfficeXP` Poskytuje vzhled aplikace Microsoft Office XP aplikace.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CMFCVisualManagerOfficeXP : public CMFCVisualManager
+```
+
+## <a name="members"></a>Členové
+
+Všichni členové této třídy jsou virtuální funkce, které jsou odvozeny z nadřazeného člena pro tuto třídu [cmfcvisualmanager – třída](../../mfc/reference/cmfcvisualmanager-class.md).
+
+## <a name="remarks"></a>Poznámky
+
+Můžete použít `CMFCVisualManagerOfficeXP` třídy změnit vzhled vaší aplikace tak, aby připomínaly, Microsoft Office XP.
+
+## <a name="example"></a>Příklad
+
+Následující příklad ukazuje, jak používat `CMFCVisualManagerOfficeXP`. Tento fragment kódu je součástí [Desktopu výstrah demonstrační ukázka](../../visual-cpp-samples.md).
+
+[!code-cpp[NVC_MFC_DesktopAlertDemo#8](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagerofficexp-class_1.cpp)]
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[Třídy CObject](../../mfc/reference/cobject-class.md)
+
+[Cmfcbasevisualmanager –](../../mfc/reference/cmfcbasevisualmanager-class.md)
+
+[Cmfcvisualmanager –](../../mfc/reference/cmfcvisualmanager-class.md)
+
+[CMFCVisualManagerOfficeXP –](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxvisualmanagerofficexp.h
+
+## <a name="see-also"></a>Viz také
+
+[Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
+[Třídy](../../mfc/reference/mfc-classes.md)<br/>
+[CMFCVisualManager – třída](../../mfc/reference/cmfcvisualmanager-class.md)

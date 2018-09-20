@@ -1,5 +1,5 @@
 ---
-title: 'Výjimky: Výjimky v konstruktorech | Microsoft Docs'
+title: 'Výjimky: Výjimky v konstruktorech | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8336700cc0137efe3bc106871ebd76b8de7a99af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3cab21255698c19046cfca185a0d8d7e7c530112
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342628"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421931"
 ---
 # <a name="exceptions-exceptions-in-constructors"></a>Výjimky: Výjimky v konstruktorech
-Při vyvolání k výjimce v konstruktoru, vyčistit ať objekty a přidělení paměti provedené před vyvolání výjimky, jak je popsáno v [výjimkami: vyvolání výjimky z funkce vaše vlastní](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md).  
-  
- Při vyvolání k výjimce v konstruktoru, již bylo přiděleno o dobu, kterou volání konstruktoru paměť pro odkaz sám na sebe. Ano bude kompilátor automaticky navrácení paměti obsazené objektem po vyvolání výjimky.  
-  
- Další informace najdete v tématu [výjimky: uvolnění objektů ve výjimkách](../mfc/exceptions-freeing-objects-in-exceptions.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Zpracování výjimek](../mfc/exception-handling-in-mfc.md)
+
+Při vyvolání výjimky v konstruktoru, vyčistit libovolné objekty a přidělení paměti provedené před vyvolání výjimky, jak je vysvětleno v [výjimky: generování výjimek z vaše vlastní funkce](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md).
+
+Při vyvolání výjimky v konstruktoru, paměť pro samotný objekt již byl vytvořen v době, kdy je konstruktor volán. Proto kompilátor bude automaticky přidělení paměti obsazena objektu poté, co je vyvolána výjimka.
+
+Další informace najdete v tématu [výjimky: uvolnění objektů ve výjimkách](../mfc/exceptions-freeing-objects-in-exceptions.md).
+
+## <a name="see-also"></a>Viz také
+
+[Zpracování výjimek](../mfc/exception-handling-in-mfc.md)
 

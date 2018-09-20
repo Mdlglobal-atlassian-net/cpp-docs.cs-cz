@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90c94e87693929c2ae33d65fe3f3a4b2dd55d48b
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 677828343fa7247e64a8dfbd8faede4efbc9df24
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313972"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393747"
 ---
 # <a name="how-to-use-resource-templates-c"></a>Postupy: použití šablon prostředků (C++)
 
@@ -82,5 +82,5 @@ Win32
 
 ## <a name="see-also"></a>Viz také
 
-[Soubory prostředků](../windows/resource-files-visual-studio.md)  
+[Soubory prostředků](../windows/resource-files-visual-studio.md)<br/>
 [Editory prostředků](../windows/resource-editors.md)

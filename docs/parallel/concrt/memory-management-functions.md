@@ -1,5 +1,5 @@
 ---
-title: Funkce správy paměti | Microsoft Docs
+title: Funkce správy paměti | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,33 +14,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0a298c7fb9e50bb17d37224b69ce342c54115d7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: bfbef45593a95cb8b317e7585119a6afbffd7a4e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687293"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423608"
 ---
 # <a name="memory-management-functions"></a>Funkce správy paměti
-Tento dokument popisuje funkce správy paměti, které poskytuje Concurrency Runtime můžete přidělit a volné paměti souběžných způsobem.  
-  
+
+Tento dokument popisuje funkce správy paměti, které poskytuje modulu Runtime souběžnosti můžete přidělují a uvolňují paměť souběžných způsobem.
+
 > [!TIP]
->  Concurrency Runtime poskytuje výchozí plánovač, a proto není nutné vytvořit ve vaší aplikaci. Protože Plánovač úloh umožňuje optimalizovat výkon aplikací, doporučujeme začínat [paralelní vzory knihovna PPL ()](../../parallel/concrt/parallel-patterns-library-ppl.md) nebo [knihovna asynchronních agentů](../../parallel/concrt/asynchronous-agents-library.md) Pokud jste nové do Concurrency Runtime.  
-  
- Concurrency Runtime poskytuje dvě funkce správy paměti, která jsou optimalizována pro přidělování a uvolnění bloky paměti souběžných způsobem. [Concurrency::Alloc](reference/concurrency-namespace-functions.md#alloc) funkce přiděluje blok paměti pomocí zadané velikosti. [Concurrency::Free](reference/concurrency-namespace-functions.md#free) funkce uvolní paměť, která byla přidělena `Alloc`.  
-  
+>  Poskytuje výchozí plánovač Concurrency Runtime, a proto není nutné vytvořit ve vaší aplikaci. Vzhledem k tomu, že Plánovač úloh umožňuje optimalizovat výkon vašich aplikací, doporučujeme začít s [knihovna paralelních vzorů (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) nebo [asynchronní knihovnou agentů](../../parallel/concrt/asynchronous-agents-library.md) máte nového modulu runtime souběžnosti.
+
+Modul Concurrency Runtime poskytuje dvě funkce správy paměti, které jsou optimalizovány pro přidělení a uvolnění bloky paměti souběžných způsobem. [Concurrency::Alloc](reference/concurrency-namespace-functions.md#alloc) funkce přidělí blok paměti s použitím zadané velikosti. [Concurrency::Free](reference/concurrency-namespace-functions.md#free) uvolnění paměti, která byla přidělena pomocí funkce `Alloc`.
+
 > [!NOTE]
->  `Alloc` a `Free` funkce spoléhají na sobě navzájem. Použití `Free` funkce pouze k uvolnění paměti, kterou přidělit pomocí `Alloc` funkce. Také při použití `Alloc` funkce, které chcete přidělit paměť, použijte pouze `Free` funkce k uvolnění tohoto paměti.  
-  
- Použití `Alloc` a `Free` funkce při přidělit a volné sadu pevné velikosti přidělení z různých vláknech nebo úlohy. Concurrency Runtime ukládá do mezipaměti paměti, která přiděluje z haldy C Runtime. Concurrency Runtime obsahuje samostatné mezipaměť pro každé spuštěné vlákno; modul runtime tedy spravuje paměti bez použití zámky nebo překážek paměti. Aplikace výhody informace z `Alloc` a `Free` funkce při mezipaměti paměti přistupuje častěji. Například vlákno, které často volá obě `Alloc` a `Free` výhody víc než vlákno, které především volá `Alloc` nebo `Free`.  
-  
+>  `Alloc` a `Free` funkce závisí na sebe navzájem. Použití `Free` funkce pouze k uvolnění paměti, kterou přidělíte pomocí `Alloc` funkce. Navíc při použití `Alloc` funkce přidělení paměti, použijte pouze `Free` funkce, tato paměť uvolnit.
+
+Použití `Alloc` a `Free` funkce při přidělují a uvolňují pevná sada přidělení velikosti z různých vláken nebo úloh. Modul Concurrency Runtime přiděluje z modulu C Runtime haldy paměti ukládá do mezipaměti. Modul Concurrency Runtime obsahuje samostatný mezipaměti pro každé vlákno spuštěné; Proto se modul runtime spravuje paměť bez použití zámků nebo překážky paměti. Aplikace výhody naplno `Alloc` a `Free` funkce při mezipaměti se využívají častěji. Například vlákna, která často volá obě `Alloc` a `Free` výhod více než vlákno, které se primárně volá `Alloc` nebo `Free`.
+
 > [!NOTE]
->  Pokud používáte tyto funkce správy paměti, a může vaše aplikace používá velké množství paměti, aplikace zadejte podmínku nedostatku paměti dřív než můžete očekávat. Protože bloky paměti, které jsou uloženy v mezipaměti jedno vlákno nejsou k dispozici pro jiné vlákno, pokud jedno vlákno obsahuje velké množství paměti, že paměť není k dispozici.  
-  
-## <a name="example"></a>Příklad  
- Pro příklad, který používá `Alloc` a `Free` najdete v části funkce ke zlepšení výkonu paměti [postupy: použití Alloc a Free ke zlepšení výkonu paměti](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
- [Postupy: Použití funkcí Alloc a Free ke zlepšení výkonu paměti](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)
+>  Pokud používáte tyto funkce správy paměti, a vaše aplikace používá velké množství paměti, aplikace může zadat podmínku nedostatku paměti dříve, než na kolik máte očekávat. Protože paměťových bloků, které jsou uložené v mezipaměti jedním vláknem nejsou k dispozici pro ostatní vlákna, pokud jedno vlákno obsahuje velké množství paměti, že paměť není k dispozici.
+
+## <a name="example"></a>Příklad
+
+Příklad, který se používá `Alloc` a `Free` funkce ke zlepšení výkonu paměti naleznete v tématu [postupy: použití Alloc a Free ke zlepšení výkonu paměti](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
+
+## <a name="see-also"></a>Viz také
+
+[Plánovač úloh](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
+[Postupy: Použití funkcí Alloc a Free ke zlepšení výkonu paměti](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)
 

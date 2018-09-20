@@ -66,173 +66,178 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26ae6034e9a54a6cf198b39c81d688f10616d1d0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fc44da7470d8924900ed496958aac806d21ca5f0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707860"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434918"
 ---
 # <a name="interlockedand-intrinsic-functions"></a>Vnitřní funkce _InterlockedAnd
-**Specifické pro Microsoft**  
-  
- Umožňuje provádět atomická operace bitový AND u proměnné sdíleny více vlákny.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-long _InterlockedAnd(  
-   long volatile * value,  
-   long mask  
-);  
-long _InterlockedAnd_acq(  
-   long volatile * value,  
-   long mask  
-);  
-long _InterlockedAnd_HLEAcquire(  
-   long volatile * value,  
-   long mask  
-);  
-long _InterlockedAnd_HLERelease(  
-   long volatile * value,  
-   long mask  
-);  
-long _InterlockedAnd_nf(  
-   long volatile * value,  
-   long mask  
-);  
-long _InterlockedAnd_np(  
-   long volatile * value,  
-   long mask  
-);  
-long _InterlockedAnd_rel(  
-   long volatile * value,  
-   long mask  
-);  
-char _InterlockedAnd8(  
-   char volatile * value,  
-   char mask  
-);  
-char _InterlockedAnd8_acq(  
-   char volatile * value,  
-   char mask  
-);  
-char _InterlockedAnd8_nf(  
-   char volatile * value,  
-   char mask  
-);  
-char _InterlockedAnd8_np(  
-   char volatile * value,  
-   char mask  
-);  
-char _InterlockedAnd8_rel(  
-   char volatile * value,  
-   char mask  
-);  
-short _InterlockedAnd16(  
-   short volatile * value,  
-   short mask  
-);  
-short _InterlockedAnd16_acq(  
-   short volatile * value,  
-   short mask  
-);  
-short _InterlockedAnd16_nf(  
-   short volatile * value,  
-   short mask  
-);  
-short _InterlockedAnd16_np(  
-   short volatile * value,  
-   short mask  
-);  
-short _InterlockedAnd16_rel(  
-   short volatile * value,  
-   short mask  
-);  
-__int64 _InterlockedAnd64(  
-   __int64 volatile* value,  
-   __int64 mask  
-);  
-__int64 _InterlockedAnd64_acq(  
-   __int64 volatile* value,  
-   __int64 mask  
-);   
-__int64 _InterlockedAnd64_HLEAcquire(  
-   __int64 volatile* value,  
-   __int64 mask  
-);  
-__int64 _InterlockedAnd64_HLERelease(  
-   __int64 volatile* value,  
-   __int64 mask  
-);  
-__int64 _InterlockedAnd64_nf(  
-   __int64 volatile* value,  
-   __int64 mask  
-);  
-__int64 _InterlockedAnd64_np(  
-   __int64 volatile* value,  
-   __int64 mask  
-);  
-__int64 _InterlockedAnd64_rel(  
-   __int64 volatile* value,  
-   __int64 mask  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+**Specifické pro Microsoft**
+
+Umožňuje provádět atomická operace bitový AND u proměnné sdíleny více vlákny.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+long _InterlockedAnd(
+   long volatile * value,
+   long mask
+);
+long _InterlockedAnd_acq(
+   long volatile * value,
+   long mask
+);
+long _InterlockedAnd_HLEAcquire(
+   long volatile * value,
+   long mask
+);
+long _InterlockedAnd_HLERelease(
+   long volatile * value,
+   long mask
+);
+long _InterlockedAnd_nf(
+   long volatile * value,
+   long mask
+);
+long _InterlockedAnd_np(
+   long volatile * value,
+   long mask
+);
+long _InterlockedAnd_rel(
+   long volatile * value,
+   long mask
+);
+char _InterlockedAnd8(
+   char volatile * value,
+   char mask
+);
+char _InterlockedAnd8_acq(
+   char volatile * value,
+   char mask
+);
+char _InterlockedAnd8_nf(
+   char volatile * value,
+   char mask
+);
+char _InterlockedAnd8_np(
+   char volatile * value,
+   char mask
+);
+char _InterlockedAnd8_rel(
+   char volatile * value,
+   char mask
+);
+short _InterlockedAnd16(
+   short volatile * value,
+   short mask
+);
+short _InterlockedAnd16_acq(
+   short volatile * value,
+   short mask
+);
+short _InterlockedAnd16_nf(
+   short volatile * value,
+   short mask
+);
+short _InterlockedAnd16_np(
+   short volatile * value,
+   short mask
+);
+short _InterlockedAnd16_rel(
+   short volatile * value,
+   short mask
+);
+__int64 _InterlockedAnd64(
+   __int64 volatile* value,
+   __int64 mask
+);
+__int64 _InterlockedAnd64_acq(
+   __int64 volatile* value,
+   __int64 mask
+);
+__int64 _InterlockedAnd64_HLEAcquire(
+   __int64 volatile* value,
+   __int64 mask
+);
+__int64 _InterlockedAnd64_HLERelease(
+   __int64 volatile* value,
+   __int64 mask
+);
+__int64 _InterlockedAnd64_nf(
+   __int64 volatile* value,
+   __int64 mask
+);
+__int64 _InterlockedAnd64_np(
+   __int64 volatile* value,
+   __int64 mask
+);
+__int64 _InterlockedAnd64_rel(
+   __int64 volatile* value,
+   __int64 mask
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
 *value*<br/>
-[out v] Ukazatel na první operand, bude nahrazen výsledek.  
-  
+[out v] Ukazatel na první operand, bude nahrazen výsledek.
+
 *Maska*<br/>
-[in] Druhý operand.  
-  
-## <a name="return-value"></a>Návratová hodnota  
- Původní hodnotu prvního operandu.  
-  
-## <a name="requirements"></a>Požadavky  
-  
-|Vnitřní|Architektura|Záhlaví|  
-|---------------|------------------|------------|  
-|`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`, `_InterlockedAnd64`|x86, ARM, x64|\<intrin.h >|  
-|`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM|\<intrin.h >|  
-|`_InterlockedAnd_np`, `_InterlockedAnd8_np`, `_InterlockedAnd16_np`, `_InterlockedAnd64_np`|x64|\<intrin.h >|  
-|`_InterlockedAnd_HLEAcquire`, `_InterlockedAnd_HLERelease`, `_InterlockedAnd64_HLEAcquire`, `_InterlockedAnd64_HLERelease`|x86, x64|\<immintrin.h >|  
-  
-## <a name="remarks"></a>Poznámky  
- Číslo názvu každá funkce určuje velikost bit argumentů.  
-  
- Na platformách ARM, pomocí vnitřní objekty s `_acq` a `_rel` přípony pro získání a uvolnění sémantiky, jako například na začátku a konci kritický oddíl. Vnitřní objekty s `_nf` příponu ("žádná ohrazení") nefungují jako překážku paměti.  
-  
- Vnitřní objekty s `_np` příponu ("žádná předběžné načtení") zabránit možný předběžné načtení operace nebude vložen kompilátorem.  
-  
- Na platformách Intel, které podporují pokyny Elize zámek hardwaru (HLE), vnitřní objekty s `_HLEAcquire` a `_HLERelease` přípony zahrnují nápovědu pro procesor, který může zrychlit výkonu odstraněním kroku zámek zápisu v hardwaru. Pokud tyto vnitřní objekty jsou volány na platformách, které nepodporují HLE, doporučení se ignoruje.  
-  
-## <a name="example"></a>Příklad  
-  
-```  
-// InterlockedAnd.cpp  
-// Compile with: /Oi  
-#include <stdio.h>  
-#include <intrin.h>  
-  
-#pragma intrinsic(_InterlockedAnd)  
-  
-int main()  
-{  
-        long data1 = 0xFF00FF00;  
-        long data2 = 0x00FFFF00;  
-        long retval;  
-        retval = _InterlockedAnd(&data1, data2);  
-        printf_s("0x%x 0x%x 0x%x", data1, data2, retval);   
-}  
-```  
-  
-```Output  
-0xff00 0xffff00 0xff00ff00  
-```  
-  
-**Specifické pro END Microsoft**  
-  
-## <a name="see-also"></a>Viz také  
- [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)   
- [Konflikty s kompilátorem x86](../build/conflicts-with-the-x86-compiler.md)
+[in] Druhý operand.
+
+## <a name="return-value"></a>Návratová hodnota
+
+Původní hodnotu prvního operandu.
+
+## <a name="requirements"></a>Požadavky
+
+|Vnitřní|Architektura|Záhlaví|
+|---------------|------------------|------------|
+|`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`, `_InterlockedAnd64`|x86, ARM, x64|\<intrin.h >|
+|`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM|\<intrin.h >|
+|`_InterlockedAnd_np`, `_InterlockedAnd8_np`, `_InterlockedAnd16_np`, `_InterlockedAnd64_np`|x64|\<intrin.h >|
+|`_InterlockedAnd_HLEAcquire`, `_InterlockedAnd_HLERelease`, `_InterlockedAnd64_HLEAcquire`, `_InterlockedAnd64_HLERelease`|x86, x64|\<immintrin.h >|
+
+## <a name="remarks"></a>Poznámky
+
+Číslo názvu každá funkce určuje velikost bit argumentů.
+
+Na platformách ARM, pomocí vnitřní objekty s `_acq` a `_rel` přípony pro získání a uvolnění sémantiky, jako například na začátku a konci kritický oddíl. Vnitřní objekty s `_nf` příponu ("žádná ohrazení") nefungují jako překážku paměti.
+
+Vnitřní objekty s `_np` příponu ("žádná předběžné načtení") zabránit možný předběžné načtení operace nebude vložen kompilátorem.
+
+Na platformách Intel, které podporují pokyny Elize zámek hardwaru (HLE), vnitřní objekty s `_HLEAcquire` a `_HLERelease` přípony zahrnují nápovědu pro procesor, který může zrychlit výkonu odstraněním kroku zámek zápisu v hardwaru. Pokud tyto vnitřní objekty jsou volány na platformách, které nepodporují HLE, doporučení se ignoruje.
+
+## <a name="example"></a>Příklad
+
+```
+// InterlockedAnd.cpp
+// Compile with: /Oi
+#include <stdio.h>
+#include <intrin.h>
+
+#pragma intrinsic(_InterlockedAnd)
+
+int main()
+{
+        long data1 = 0xFF00FF00;
+        long data2 = 0x00FFFF00;
+        long retval;
+        retval = _InterlockedAnd(&data1, data2);
+        printf_s("0x%x 0x%x 0x%x", data1, data2, retval);
+}
+```
+
+```Output
+0xff00 0xffff00 0xff00ff00
+```
+
+**Specifické pro END Microsoft**
+
+## <a name="see-also"></a>Viz také
+
+[Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
+[Konflikty s kompilátorem x86](../build/conflicts-with-the-x86-compiler.md)

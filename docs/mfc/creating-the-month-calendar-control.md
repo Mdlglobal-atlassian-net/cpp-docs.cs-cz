@@ -1,5 +1,5 @@
 ---
-title: Vytváření v měsíci v ovládacím prvku Kalendář | Microsoft Docs
+title: Vytváření v měsíci v kalendáři ovládacího prvku | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e5cb58cfbecd03964963814081c2f0039c0752c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0fadc3b56d0aa64068071ee7230ed125c6af925
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343240"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410868"
 ---
 # <a name="creating-the-month-calendar-control"></a>Vytvoření ovládacího prvku měsíční kalendář
-Vytváření ovládací prvek měsíční kalendář závisí na tom, jestli jsou pomocí ovládacího prvku v dialogovém okně nebo jeho vytváření v okně nondialog.  
-  
-### <a name="to-use-cmonthcalctrl-directly-in-a-dialog-box"></a>K použití přímo v dialogovém okně CMonthCalCtrl  
-  
-1.  V editoru dialogového okna přidáte ovládací prvek měsíční kalendář vaše dialogu šablony prostředků. Zadejte své ID ovládacího prvku.  
-  
-2.  Zadejte všechny styly potřeby pomocí dialogové okno Vlastnosti ovládací prvek měsíční kalendář.  
-  
-3.  Použití [Průvodce přidáním členské proměnné](../ide/adding-a-member-variable-visual-cpp.md) přidání členské proměnné typu [CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md) s vlastností ovládacího prvku. Tento člen mohou využít k volání `CMonthCalCtrl` členské funkce.  
-  
-4.  Použijte okno Vlastnosti pro mapování obslužné rutiny funkce ve třídě dialog pro všechna oznámení ovládací prvek měsíční kalendář zpráv, které můžete potřebovat pro zpracování (viz [mapování zpráv do funkcí](../mfc/reference/mapping-messages-to-functions.md)).  
-  
-5.  V [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), nastavení pro všechny další stylů `CMonthCalCtrl` objektu.  
-  
-### <a name="to-use-cmonthcalctrl-in-a-nondialog-window"></a>V okně nondialog používat CMonthCalCtrl  
-  
-1.  Definování ovládacího prvku ve třídě zobrazení nebo okno.  
-  
-2.  Volání ovládacího prvku [vytvořit](../mfc/reference/cmonthcalctrl-class.md#create) člen funkce, které by mohly mít v [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), pravděpodobně časná jako nadřazeného okna [OnCreate](../mfc/reference/cwnd-class.md#oncreate) funkce obslužné rutiny (Pokud jste vytvoření podtřídy ovládacího prvku). Nastavení stylů pro ovládací prvek.  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Jak vytvořit ovládací prvek měsíční kalendář závisí na, jestli jsou pomocí ovládacího prvku v dialogovém okně nebo jeho vytváření v okně nondialog.
+
+### <a name="to-use-cmonthcalctrl-directly-in-a-dialog-box"></a>Použití atributu CMonthCalCtrl přímo v dialogovém okně
+
+1. V editoru dialogového okna přidáte do šablony prostředku dialogového okna Ovládací prvek měsíční kalendář. Zadejte své ID ovládacího prvku.
+
+1. Zadejte všechny styly potřeby pomocí dialogového okna vlastnosti z ovládací prvek měsíční kalendář.
+
+1. Použití [Průvodce přidáním členské proměnné](../ide/adding-a-member-variable-visual-cpp.md) přidat členskou proměnnou typu [atributu CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md) s vlastností ovládacího prvku. Tento člen můžete použít k volání `CMonthCalCtrl` členské funkce.
+
+1. Použití mapování obslužné rutiny funkce ve třídě dialog pro všechna oznámení ovládacího prvku kalendáře měsíce zprávy v okně Vlastnosti potřeba zpracovat (viz [mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md)).
+
+1. V [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), nastavte pro všechny další styly `CMonthCalCtrl` objektu.
+
+### <a name="to-use-cmonthcalctrl-in-a-nondialog-window"></a>V okně nondialog použití atributu CMonthCalCtrl
+
+1. Definování ovládacího prvku ve třídě zobrazení nebo okno.
+
+1. Volání ovládacího prvku [vytvořit](../mfc/reference/cmonthcalctrl-class.md#create) členské funkce, případně v [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), může být co nejdříve jako nadřazené okno [OnCreate](../mfc/reference/cwnd-class.md#oncreate) funkci obslužné rutiny (Pokud jste vytvoření podtřídy ovládacího prvku). Nastavení stylů pro ovládací prvek.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

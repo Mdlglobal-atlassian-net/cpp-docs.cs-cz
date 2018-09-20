@@ -1,5 +1,5 @@
 ---
-title: Nastavení stavu dne v měsíci v ovládacím prvku Kalendář | Microsoft Docs
+title: Nastavení stavu dne v měsíci v kalendáři ovládacího prvku | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,42 +18,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d4254448e3f8f5a23acd9a303788fd13afb2f84
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: b443e1758f766b7fa2dd9a0169ab98172423779d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950792"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439339"
 ---
 # <a name="setting-the-day-state-of-a-month-calendar-control"></a>Nastavení stavu dne v ovládacím prvku měsíční kalendář
-Jeden z atributů prvku měsíční kalendář je možnost ukládat informace, označuje jako stavu dne v ovládacím prvku pro každý den v měsíci. Tyto informace slouží k zdůraznil určitá data pro aktuálně zobrazený měsíc.  
-  
+
+Jeden z atributů ovládací prvek měsíční kalendář je možnost ukládat informace, označované jako den stav ovládacího prvku pro každý den v měsíci. Tyto informace slouží ke zvýraznění některých dat pro aktuálně zobrazený měsíc.
+
 > [!NOTE]
->  `CMonthCalCtrl` Objekt musí mít styl MCS_DAYSTATE zobrazíte informace o stavu den.  
-  
- Informace o stavu den je vyjádřený jako typ dat 32-bit **MONTHDAYSTATE**. Každý bit ve **MONTHDAYSTATE** bitová pole (1 až 31) představuje stav den v měsíci. Pokud je bit na, zobrazí se odpovídající den v bold; v opačném případě se bude zobrazovat s žádné zvýraznění.  
-  
- Existují dvě metody pro nastavení stavu dne v ovládacím prvku měsíční kalendář: explicitně pomocí volání [CMonthCalCtrl::SetDayState](../mfc/reference/cmonthcalctrl-class.md#setdaystate) nebo zpracování mcn_getdaystate – oznámení.  
-  
-## <a name="handling-the-mcngetdaystate-notification-message"></a>Zpracování zpráv mcn_getdaystate – oznámení  
- Mcn_getdaystate – zprávu posílá ovládacího prvku určit, jak mají být zobrazeny dny v rámci viditelné měsíců.  
-  
+>  `CMonthCalCtrl` Musí mít objekt style MCS_DAYSTATE zobrazíte informace o stavu den.
+
+Informace o stavu den je vyjádřena jako typ dat 32-bit **MONTHDAYSTATE**. Každý bit ve **MONTHDAYSTATE** bitového pole (1 až 31) představuje stav den v měsíci. Pokud bit zapnutý, zobrazí se odpovídající den v bold; v opačném případě se zobrazí s žádné zvýraznění.
+
+Existují dvě metody pro nastavení stavu dne ovládací prvek měsíční kalendář: explicitně pomocí volání [CMonthCalCtrl::SetDayState](../mfc/reference/cmonthcalctrl-class.md#setdaystate) nebo zpracovává zprávy mcn_getdaystate – oznámení.
+
+## <a name="handling-the-mcngetdaystate-notification-message"></a>Zpracování zprávy mcn_getdaystate – oznámení
+
+Mcn_getdaystate – zpráva je odeslána ovládacího prvku určit, jak mají být zobrazeny dny viditelné měsíců.
+
 > [!NOTE]
->  Protože ovládací prvek ukládá do mezipaměti předešlých a následných měsíců, která z hlediska viditelné měsíc, zobrazí se toto oznámení pokaždé, když je vybrán na nový měsíc.  
-  
- Správně zpracovat tuto zprávu, je třeba určit, kolik měsíců informace o stavu den se vyžaduje pro, inicializovat pole **MONTHDAYSTATE** struktury s správné hodnoty a inicializaci související struktura člena s novými informacemi. Následující postup, s podrobnostmi o potřebné kroky, předpokládá, že máte `CMonthCalCtrl` objektu s názvem *m_monthcal* a pole **MONTHDAYSTATE** objekty, *mdState*.  
-  
-#### <a name="to-handle-the-mcngetdaystate-notification-message"></a>Zpracování zpráv mcn_getdaystate – oznámení  
-  
-1.  Pomocí okna vlastností, přidejte obslužnou rutinu pro zprávy mcn_getdaystate – oznámení *m_monthcal* objektu (viz [mapování zpráv do funkcí](../mfc/reference/mapping-messages-to-functions.md)).  
-  
-2.  V těle obslužná rutina přidejte následující kód:  
-  
-     [!code-cpp[NVC_MFCControlLadenDialog#26](../mfc/codesnippet/cpp/setting-the-day-state-of-a-month-calendar-control_1.cpp)]  
-  
-     V příkladu převede *pNMHDR* ukazatel na správný typ., pak určuje, kolik měsíců informace se vyžadují (`pDayState->cDayState`). Pro každý měsíc, aktuální bitfield (`pDayState->prgDayState[i]`) je inicializováno nula a pak potřebné data jsou nastavit (v tomto případě 15. dne v měsíci).  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+>  Vzhledem k tomu, že ovládací prvek předchozích a následujících měsíců, z hlediska zobrazený měsíc ukládá do mezipaměti, zobrazí se toto oznámení pokaždé, když je vybrán nový měsíc.
+
+Správně zpracovat tuto zprávu, musíte určit, kolik měsíců se informace o stavu den požadované pro inicializaci pole **MONTHDAYSTATE** struktury s odpovídajícími hodnotami a inicializace související struktury člena pomocí nové informace. Následující postup s podrobnostmi o nezbytných kroků se předpokládá, že máte `CMonthCalCtrl` objektu s názvem *m_monthcal* a pole **MONTHDAYSTATE** objekty, *mdState*.
+
+#### <a name="to-handle-the-mcngetdaystate-notification-message"></a>Aby se zpracovala zpráva mcn_getdaystate – oznámení
+
+1. V okně Vlastnosti přidejte obslužnou rutinu oznámení pro mcn_getdaystate – zpráva, která má *m_monthcal* objektu (naleznete v tématu [mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md)).
+
+1. Do těla obslužné rutiny přidejte následující kód:
+
+     [!code-cpp[NVC_MFCControlLadenDialog#26](../mfc/codesnippet/cpp/setting-the-day-state-of-a-month-calendar-control_1.cpp)]
+
+     Tento příklad převede *pNMHDR* ukazatel na správný typ, pak určuje, kolik měsíců informace jsou požadovány (`pDayState->cDayState`). Pro každý měsíc, aktuální bitového pole (`pDayState->prgDayState[i]`) je inicializován na nulu a potom potřeba data jsou nastaveny (v tomto případě 15. dne každého měsíce).
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

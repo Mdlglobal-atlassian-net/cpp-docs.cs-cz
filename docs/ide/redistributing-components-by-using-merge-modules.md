@@ -15,19 +15,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d816d932ce518e006e5537075fe4ac7782362ad4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2f4dda75533b2c16405485f8bb2f3ab9982033ce
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206981"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425558"
 ---
 # <a name="redistributing-components-by-using-merge-modules"></a>Redistribuce součástí s použitím modulů sloučení
-Visual Studio obsahuje [slučovací moduly](/windows/desktop/Msi/about-merge-modules) pro každou komponentu jazyka Visual C++, které se licencuje znovu distribuovat s aplikací. Jakmile se slučovací modul zkompiluje v instalačním souboru Instalační služba systému Windows, umožňuje nasazení konkrétních knihoven DLL do počítačů na určité platformě. V instalačním souboru určete, že slučovací moduly představují požadavky pro vaši aplikaci. Při instalaci sady Visual Studio slučovací moduly jsou nainstalovány do \Program Files\Common moduly\\. (Pouze neladitelné verze knihoven DLL Visual C++ může být znovu distribuovány.) Další informace a odkaz na seznam slučovacích modulů, které jsou licencovány pro distribuci, naleznete v tématu [Redistribuce souborů Visual C++](../ide/redistributing-visual-cpp-files.md).  
-  
- Slučovací moduly můžete použít k instalaci distribuovatelné součásti Visual C++ knihovny DLL do složky %SYSTEMROOT%\system32\. (Samotnou sadu visual Studio používá tuto techniku.) Instalace do této složky se však nezdaří, pokud daný uživatel nemá oprávnění správce.  
-  
- Doporučujeme slučovací moduly nepoužívat, s výjimkou případů, kdy není nutné aplikaci obsluhovat a nemáte závislosti na více než jedné verzi knihovny DLL. Do jednoho instalačního programu nelze zahrnout slučovací moduly pro různé verze stejné knihovny DLL. Slučovací moduly navíc komplikují obsluhu knihoven DLL nezávisle na aplikaci. Namísto toho doporučujeme nainstalovat Distribuovatelný balíček Visual C++.  
-  
-## <a name="see-also"></a>Viz také  
- [Redistribuce souborů Visual C++](../ide/redistributing-visual-cpp-files.md)
+
+Visual Studio obsahuje [slučovací moduly](/windows/desktop/Msi/about-merge-modules) pro každou komponentu jazyka Visual C++, které se licencuje znovu distribuovat s aplikací. Jakmile se slučovací modul zkompiluje v instalačním souboru Instalační služba systému Windows, umožňuje nasazení konkrétních knihoven DLL do počítačů na určité platformě. V instalačním souboru určete, že slučovací moduly představují požadavky pro vaši aplikaci. Při instalaci sady Visual Studio slučovací moduly jsou nainstalovány do \Program Files\Common moduly\\. (Pouze neladitelné verze knihoven DLL Visual C++ může být znovu distribuovány.) Další informace a odkaz na seznam slučovacích modulů, které jsou licencovány pro distribuci, naleznete v tématu [Redistribuce souborů Visual C++](../ide/redistributing-visual-cpp-files.md).
+
+Slučovací moduly můžete použít k instalaci distribuovatelné součásti Visual C++ knihovny DLL do složky %SYSTEMROOT%\system32\. (Samotnou sadu visual Studio používá tuto techniku.) Instalace do této složky se však nezdaří, pokud daný uživatel nemá oprávnění správce.
+
+Doporučujeme slučovací moduly nepoužívat, s výjimkou případů, kdy není nutné aplikaci obsluhovat a nemáte závislosti na více než jedné verzi knihovny DLL. Do jednoho instalačního programu nelze zahrnout slučovací moduly pro různé verze stejné knihovny DLL. Slučovací moduly navíc komplikují obsluhu knihoven DLL nezávisle na aplikaci. Namísto toho doporučujeme nainstalovat Distribuovatelný balíček Visual C++.
+
+## <a name="see-also"></a>Viz také
+
+[Redistribuce souborů Visual C++](../ide/redistributing-visual-cpp-files.md)

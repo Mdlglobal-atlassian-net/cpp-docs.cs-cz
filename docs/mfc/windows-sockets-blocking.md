@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: Blokování | Microsoft Docs'
+title: 'Windows Sockets: Blokování | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,47 +18,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ec6b8383f13e8b632163a1fe83a2cd79f7966c5
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 8cc68d435063f27f891b5f3d98f5da72ca9bf5e3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956184"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441717"
 ---
 # <a name="windows-sockets-blocking"></a>Windows Sockets: Blokování
-V tomto článku a dvě doprovodné články vysvětlují několik problémů v rozhraní Windows Sockets programování. Tento článek se zabývá blokování. Další problémy, které jsou popsané v článcích: [Windows Sockets: pořadí bajtů](../mfc/windows-sockets-byte-ordering.md) a [Windows Sockets: převádění řetězců](../mfc/windows-sockets-converting-strings.md).  
-  
- Pokud používáte nebo odvozena od třídy [CAsyncSocket](../mfc/reference/casyncsocket-class.md), budete muset řešení těchto problémů. Pokud používáte nebo odvozena od třídy [CSocket](../mfc/reference/csocket-class.md), spravuje MFC za vás.  
-  
-## <a name="blocking"></a>Blokování  
- Soket může být v "režimu blokování" nebo "neblokový režimu." Funkce soketů v režimu blokování (nebo synchronní) nevrátí, dokud se jejich akci dokončit. Tento postup se nazývá blokování protože soketu, jejichž funkce byla zavolána nemůžete udělat nic – blokováno – dokud vrátí volání. Volání `Receive` – členská funkce, například může trvat dokončit, protože se čeká na odesílající aplikací k odeslání nahodile dlouho (to je, pokud používáte `CSocket`, nebo pomocí `CAsyncSocket` s blokování). Pokud `CAsyncSocket` objekt je v neblokový režimu (operační asynchronně), vrátí volání okamžitě a aktuální kód chyby, se dá načíst [GetLastError](../mfc/reference/casyncsocket-class.md#getlasterror) – členská funkce je **WSAEWOULDBLOCK**, která určuje, že by blokovaly volání, kdyby se nebyla vrácena okamžitě z důvodu režimu. (`CSocket` nikdy vrátí **WSAEWOULDBLOCK**. Třída spravuje blokování za vás.)  
-  
- Chování sockets se liší v 32bitové a 64bitové verze operačních systémů (například systému Windows 95 nebo Windows 98) než v části 16bitové operačních systémů (například systému Windows 3.1). Na rozdíl od 16bitové operační systémy 32bitové a 64bitové verze operačních systémů použít preemptivní multitasking a zadejte více vláken. V části 32bitové a 64bitové verze operačních systémů můžou vaše sockets v samostatných pracovních vláken. Soket ve vlákně můžete blokovat bez zasahování další aktivity v aplikaci a bez výdaje dobu výpočtů na blokování. Informace o vícevláknové programování, najdete v článku [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).  
-  
+
+V tomto článku a dva doprovodné články popisují několik problémů v programování v rozhraní Windows Sockets. Tento článek se týká blokování. Tyto problémy jsou popsané v článcích: [rozhraní Windows Sockets: pořadí bajtů](../mfc/windows-sockets-byte-ordering.md) a [rozhraní Windows Sockets: převádění řetězců](../mfc/windows-sockets-converting-strings.md).
+
+Pokud používáte nebo odvozen od třídy [CAsyncSocket](../mfc/reference/casyncsocket-class.md), budete muset spravovat tyto problémy sami. Pokud používáte nebo odvozen od třídy [csocket –](../mfc/reference/csocket-class.md), knihovna MFC je spravuje za vás.
+
+## <a name="blocking"></a>Blokování
+
+Soket může být v "režim blokování" nebo "neblokový režim." Funkce sokety režimu blokování (nebo synchronní) vracet, dokud, můžete provést akci. Tento postup se nazývá blokování, protože soketu, jehož funkce jmenovala nemůže provádět žádné akce – blokovaný, dokud volání se vrátí. Volání `Receive` členskou funkci, například může trvat libovolně dlouhý čas dokončit, protože se čeká na odeslání aplikace pro odesílání (to je, pokud používáte `CSocket`, nebo pomocí `CAsyncSocket` s blokování). Pokud `CAsyncSocket` objektu je v neblokový režimu (provozní asynchronně), volání se vrátí okamžitě a aktuální kód chyby, retrievable s [GetLastError](../mfc/reference/casyncsocket-class.md#getlasterror) členská funkce je **WSAEWOULDBLOCK**, byl označující, že volání bude blokováno z důvodu režimu nevrací se, okamžitě. (`CSocket` nikdy nevrátí **WSAEWOULDBLOCK**. Třída spravuje blokování za vás.)
+
+Chování sockets se liší podle 32bitové a 64bitové operační systémy (například Windows 95 nebo Windows 98) než v 16bitových operačních systémů (například Windows 3.1). Na rozdíl od 16bitových operačních systémů 32bitová verze a 64bitová verze operačních systémů použijte preemptive multitaskingu a zadejte multithreadingu. V části 32bitové a 64bitové operační systémy můžete umístit vaše sockets v samostatných pracovních vláknech. Soket ve vlákně můžete zablokovat, aniž by zasahovala do další aktivity v aplikaci a bez blokování zbavuje výpočetní čas. Informace o programování s více vlákny, najdete v článku [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
+
 > [!NOTE]
->  Vícevláknové aplikace, můžete v blokování povaha `CSocket` zjednodušit návrh vašeho programu bez ovlivnění odezvy uživatelského rozhraní. Pomocí zpracování interakcí v hlavní vlákno a `CSocket` zpracování v alternativní vláken, můžete oddělit tyto logické operace. V aplikaci, která není s více vlákny, musí být tyto dvě aktivity kombinaci a spravovány jako jedním vláknem, a to obvykle znamená použití `CAsyncSocket` tak může zpracovávat požadavky na komunikaci na vyžádání nebo přepsání `CSocket::OnMessagePending` pro zpracování akcí uživatele během zdlouhavé synchronní aktivity.  
-  
- Zbytek Tato diskuse se pro programátory v jazyce cílení 16bitové operační systémy:  
-  
- Za normálních okolností Pokud používáte `CAsyncSocket`, měli byste nepoužívejte blokování operace a pracovat asynchronně místo. V asynchronních operací z bodu příjmu **WSAEWOULDBLOCK** kód chyby po volání `Receive`, například čekat vaší `OnReceive` – členská funkce je volána s upozorněním, že si můžete přečíst znovu. Asynchronní volání jsou provedené zpětné volání funkce oznámení vaše soketu odpovídající zpětného volání, jako například [události OnReceive](../mfc/reference/casyncsocket-class.md#onreceive).  
-  
- V části Windows blokování volání jsou považovány za chybný postup. Ve výchozím nastavení [CAsyncSocket](../mfc/reference/casyncsocket-class.md) podporuje asynchronní volání a musí spravovat blokování sami pomocí zpětné volání oznámení. Třída [CSocket](../mfc/reference/csocket-class.md), na druhé straně je synchronní. To čerpadla zpráv systému Windows a spravuje blokování za vás.  
-  
- Další informace o blokování najdete v rozhraní Windows Sockets specifikaci. Další informace o "Na" funkce najdete v tématu [Windows Sockets: oznámení soketů](../mfc/windows-sockets-socket-notifications.md) a [Windows Sockets: odvozování z tříd soketů](../mfc/windows-sockets-deriving-from-socket-classes.md).  
-  
- Další informace naleznete v tématu:  
-  
--   [Windows Sockets – Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
-  
--   [Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md)  
-  
--   [Windows Sockets: Pozadí](../mfc/windows-sockets-background.md)  
-  
--   [Windows Sockets: Sokety streamu](../mfc/windows-sockets-stream-sockets.md)  
-  
--   [Windows Sockets: Sokety datagramů](../mfc/windows-sockets-datagram-sockets.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)   
- [CAsyncSocket::OnSend](../mfc/reference/casyncsocket-class.md#onsend)
+>  Ve vícevláknových aplikacích, můžete použít k blokování povaze `CSocket` zjednodušit návrh vašeho programu bez ovlivnění rychlosti odezvy uživatelského rozhraní. Díky zpracování interakcí s uživateli v hlavním vlákně a `CSocket` zpracování v alternativní vlákna, můžete oddělit tyto logické operace. V aplikaci, která není s více vlákny, musí být obě aktivity kombinovat a spravovány jako jedno vlákno, které obvykle znamená, že používá `CAsyncSocket` tak může zpracovávat požadavky na komunikaci na vyžádání nebo přepsání `CSocket::OnMessagePending` pro zpracování uživatelské akce během dlouhých synchronní aktivity.
+
+Zbytek této diskuse je usnadňuje práci programátorům cílení 16bitových operačních systémů:
+
+Za normálních okolností používáte `CAsyncSocket`, byste měli vyhnout blokující operace a pracovat místo asynchronně. V asynchronních operací z bodu, ve kterém se zobrazí **WSAEWOULDBLOCK** kód chyby: po volání `Receive`, třeba počkat do vaší `OnReceive` členská funkce je volána s upozorněním, že si můžete přečíst znovu. Byla zahájena asynchronní volání jsou provedeny voláním zpět k soketu odpovídající funkce zpětného volání oznámení, jako například [události OnReceive](../mfc/reference/casyncsocket-class.md#onreceive).
+
+V části Windows se považují blokování volání chybný postup. Ve výchozím nastavení [CAsyncSocket](../mfc/reference/casyncsocket-class.md) podporuje asynchronní volání a vy musíte spravovat blokování sami pomocí zpětné volání oznámení. Třída [csocket –](../mfc/reference/csocket-class.md), na druhé straně je synchronní. Čerpadla zpráv Windows a spravuje blokování za vás.
+
+Další informace o blokování najdete v tématu Specifikace rozhraní Windows Sockets. Další informace o "U" funkcí najdete v tématu [rozhraní Windows Sockets: oznámení soketů](../mfc/windows-sockets-socket-notifications.md) a [rozhraní Windows Sockets: odvozování z tříd soketů](../mfc/windows-sockets-deriving-from-socket-classes.md).
+
+Další informace naleznete v tématu:
+
+- [Windows Sockets – Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+
+- [Windows Sockets: Použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md)
+
+- [Windows Sockets: Pozadí](../mfc/windows-sockets-background.md)
+
+- [Windows Sockets: Sokety streamu](../mfc/windows-sockets-stream-sockets.md)
+
+- [Windows Sockets: Sokety datagramů](../mfc/windows-sockets-datagram-sockets.md)
+
+## <a name="see-also"></a>Viz také
+
+[Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)<br/>
+[CAsyncSocket::OnSend](../mfc/reference/casyncsocket-class.md#onsend)
 

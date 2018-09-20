@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20973969385d0b5c61872a12f4d0168420bc2eef
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8716c0a0f954b0a2ad0bbe0e25c29a4445b11823
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713178"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428340"
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C (Zachovat komentáře při předběžném zpracování)
 
@@ -76,6 +76,6 @@ int i;   // a variable
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
-[/E (předběžné zpracování výstupu stdout)](../../build/reference/e-preprocess-to-stdout.md)
-[/P (předběžné zpracování souboru)](../../build/reference/p-preprocess-to-a-file.md)
-[/EP (předběžné zpracování do direktiv bez příkazů #line)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)
+[/E (předzpracování do stdout)](../../build/reference/e-preprocess-to-stdout.md)<br/>
+[/P (předzpracování do souboru)](../../build/reference/p-preprocess-to-a-file.md)<br/>
+[/EP (předzpracování do stdout bez direktiv #line)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)

@@ -1,5 +1,5 @@
 ---
-title: A.16 pomocí zámky | Microsoft Docs
+title: A.16 použití zámků | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,52 +12,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db55a8e562e0b1ae72038128a035d2cdabcd3e86
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 2bb901ab311221f1375bb5f3bfe7f996981e97a6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695899"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432747"
 ---
 # <a name="a16---using-locks"></a>A.16   Použití zámků
-V následujícím příkladu (pro [části 3.2](../../parallel/openmp/3-2-lock-functions.md) na stránce 41) Všimněte si, že argument funkce Zámek měl by být typ `omp_lock_t`, a že je potřeba ho vyprázdnění.  Funkce Zámek způsobit vláken na nečinnost čekání do oddílu první kritické, ale provádět další činnosti při čekání na položku na druhý.  `omp_set_lock` Funkce bloky, ale `omp_test_lock` funkce název neexistuje, povolení práce v skip() provést.  
-  
-## <a name="example"></a>Příklad  
-  
-### <a name="code"></a>Kód  
-  
-```  
-// omp_using_locks.c  
-// compile with: /openmp /c  
-#include <stdio.h>  
-#include <omp.h>  
-  
-void work(int);  
-void skip(int);  
-  
-int main() {  
-   omp_lock_t lck;  
-   int id;  
-  
-   omp_init_lock(&lck);  
-   #pragma omp parallel shared(lck) private(id)  
-   {  
-      id = omp_get_thread_num();  
-  
-      omp_set_lock(&lck);  
-      printf_s("My thread id is %d.\n", id);  
-  
-      // only one thread at a time can execute this printf  
-      omp_unset_lock(&lck);  
-  
-      while (! omp_test_lock(&lck)) {  
-         skip(id);   // we do not yet have the lock,  
-                     // so we must do something else   
-      }  
-      work(id);     // we now have the lock  
-                    // and can do the work   
-      omp_unset_lock(&lck);  
-   }  
-   omp_destroy_lock(&lck);  
-}  
+
+V následujícím příkladu (pro [části 3.2](../../parallel/openmp/3-2-lock-functions.md) na stránce 41) Všimněte si, že argument funkce zamykání by měla mít typ `omp_lock_t`, a že je potřeba vyprázdněte ji.  Funkce zamykání způsobit vláken na nečinnost při čekání na vstup do první kritický oddíl, ale provádět další činnosti při čekání na vstup do druhé.  `omp_set_lock` Funkce bloky, ale `omp_test_lock` funkce tak není, povolení práce v skip() udělat.
+
+## <a name="example"></a>Příklad
+
+### <a name="code"></a>Kód
+
+```
+// omp_using_locks.c
+// compile with: /openmp /c
+#include <stdio.h>
+#include <omp.h>
+
+void work(int);
+void skip(int);
+
+int main() {
+   omp_lock_t lck;
+   int id;
+
+   omp_init_lock(&lck);
+   #pragma omp parallel shared(lck) private(id)
+   {
+      id = omp_get_thread_num();
+
+      omp_set_lock(&lck);
+      printf_s("My thread id is %d.\n", id);
+
+      // only one thread at a time can execute this printf
+      omp_unset_lock(&lck);
+
+      while (! omp_test_lock(&lck)) {
+         skip(id);   // we do not yet have the lock,
+                     // so we must do something else
+      }
+      work(id);     // we now have the lock
+                    // and can do the work
+      omp_unset_lock(&lck);
+   }
+   omp_destroy_lock(&lck);
+}
 ```

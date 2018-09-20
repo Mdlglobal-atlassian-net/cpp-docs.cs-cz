@@ -1,5 +1,5 @@
 ---
-title: Windows | Microsoft Docs
+title: Windows | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,105 +17,108 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97d8f7a0107f3f6d7aa9e5baa1454142e1426d9e
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 664afc2d842a7072ed41d579939e530e01c6e33f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950471"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431772"
 ---
 # <a name="windows"></a>Windows
-Tato řada článků popisuje objekty oken v rozhraní MFC framework. Všechny systémy windows MFC odvozena od třídy [CWnd](../mfc/reference/cwnd-class.md), včetně okna s rámečkem, zobrazení, dialogových oken a ovládacích prvků.  
-  
- První skupina článků popisuje [objekty oken](../mfc/window-objects.md) obecně. Odkazovat na tuto skupinu pro obecné informace o objekty oken C++, jak zapouzdřují `HWND`, a jak je používat při vytváření vlastní windows, jako je například podřízená okna.  
-  
- Druhá skupina článků popisuje [okna s rámečkem](../mfc/frame-windows.md)– windows, které ukládají kolem obsahu – konkrétně. Odkazovat na tuto skupinu pro informace o správě rozhraní MFC framework okna s rámečkem a obsah, který se rámce, včetně ovládací pruhy a zobrazení.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o  
- *Témata na objekty oken v obecné*  
-  
--   [Objekty oken](../mfc/window-objects.md)  
-  
--   [Vztah mezi jazyka C++ zpracovává objekty oken a HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)  
-  
--   [Odvozené třídy oken](../mfc/derived-window-classes.md)  
-  
--   [Vytváření objektů oken](../mfc/creating-windows.md)  
-  
--   [Zničení objektů oken](../mfc/destroying-window-objects.md)  
-  
--   [Registrace tříd"oken"](../mfc/registering-window-classes.md)  
-  
--   [Práce s objekty oken](../mfc/working-with-window-objects.md)  
-  
--   [Kontexty zařízení](../mfc/device-contexts.md): objekty, které Windows kreslení nezávislé na zařízení  
-  
--   [Grafické objekty](../mfc/graphic-objects.md): pera, štětce, písma, rastrové obrázky, palety, oblastí  
-  
- *Témata týkající se rámce okna*  
-  
--   [Okna s rámečkem](../mfc/frame-windows.md): objekty oken, které poskytují rámce  
-  
--   [Zobrazení a oken s rámečkem](../mfc/frame-windows.md)  
-  
--   [Třídy oken s rámečkem](../mfc/frame-window-classes.md)  
-  
--   [Styly oken s rámečkem](../mfc/frame-window-styles-cpp.md)  
-  
--   [Změna stylů okna vytvořeného rozhraním MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
-  
--   [Co dělat okna s rámečkem](../mfc/what-frame-windows-do.md)  
-  
--   [Použití oken s rámečkem](../mfc/using-frame-windows.md)  
-  
--   [Správa MD/podřízených oken (okno MDICLIENT)](../mfc/managing-mdi-child-windows.md)  
-  
--   [Správa nabídek, ovládacích pruhů a akcelerátorů](../mfc/managing-menus-control-bars-and-accelerators.md)  
-  
--   [CFrameWnd](../mfc/reference/cframewnd-class.md)  
-  
--   [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)  
-  
--   [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)  
-  
--   [Použití zobrazení](../mfc/using-views.md)  
-  
--   [Více typů dokumentů, zobrazení a oken s rámečkem (rozdělovače windows)](../mfc/multiple-document-types-views-and-frame-windows.md)  
-  
--   [Zprávy (mapy a funkce obslužných rutin)](../mfc/messages.md)  
-  
- *Vytvoření a zrušení Windows*  
-  
--   [Obecná posloupnost vytvoření okna](../mfc/general-window-creation-sequence.md)  
-  
--   [Zničení objektů oken](../mfc/destroying-window-objects.md)  
-  
--   [Vytvoření okna s rámečkem v dokumentu](../mfc/creating-document-frame-windows.md)  
-  
--   [Zničení oken s rámečkem](../mfc/destroying-frame-windows.md)  
-  
- *Vytvoření rozdělovače oken*  
-  
--   [Vytvoření rozdělovače oken](../mfc/multiple-document-types-views-and-frame-windows.md)  
-  
- *Správa podřízených oken a aktuální zobrazení*  
-  
--   [Správa podřízených oken MDI](../mfc/managing-mdi-child-windows.md)  
-  
--   [Správa aktuálního zobrazení](../mfc/managing-the-current-view.md)  
-  
--   [Správa nabídek, ovládacích pruhů a akcelerátorů](../mfc/managing-menus-control-bars-and-accelerators.md)  
-  
- *Práce s kontexty zařízení a styly oken*  
-  
--   [Pomocí pera a jiné grafické objekty v kontextu zařízení](../mfc/graphic-objects.md)  
-  
--   [Změna stylů okna vytvořeného rozhraním MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
-  
-## <a name="see-also"></a>Viz také  
- [Prvky uživatelského rozhraní](../mfc/user-interface-elements-mfc.md)   
- [Dialogová okna](../mfc/dialog-boxes.md)   
- [Panely nástrojů](../mfc/toolbars.md)   
- [Stavové řádky](../mfc/status-bars.md)   
- [Dialogové pruhy](../mfc/dialog-bars.md)
+
+Tato řada článků obsahuje objekty oken v rámci MFC. Všechna okna knihovny MFC jsou odvozeny z třídy [CWnd](../mfc/reference/cwnd-class.md), včetně oken s rámečkem, zobrazení, dialogová okna a ovládací prvky.
+
+První skupina článků popisuje [objekty oken](../mfc/window-objects.md) obecně. Odkazovat na tuto skupinu obecné informace o objekty oken C++, jak zapouzdřují `HWND`, a jak můžete využít při vytváření vlastní windows, jako je například podřízená okna.
+
+Druhý skupina článků popisuje [rámečkem](../mfc/frame-windows.md)– windows, které ukládají rámečku kolem obsahu – zejména. Odkazovat na tuto skupinu informace o tom, jak rozhraní MFC framework spravuje oken s rámečkem a obsah, včetně ovládací panely a zobrazení snímku.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+
+*Témata týkající se objekty oken v obecné*
+
+- [Objekty oken](../mfc/window-objects.md)
+
+- [Vztah mezi jazyka C++ zpracovává objekty oken a HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)
+
+- [Odvozené třídy oken](../mfc/derived-window-classes.md)
+
+- [Vytvoření objektů oken](../mfc/creating-windows.md)
+
+- [Zničení objektů oken](../mfc/destroying-window-objects.md)
+
+- [Registrace tříd"oken"](../mfc/registering-window-classes.md)
+
+- [Práce s objekty oken](../mfc/working-with-window-objects.md)
+
+- [Kontexty zařízení](../mfc/device-contexts.md): objekty, které usnadňují Windows kreslení nezávislé na zařízení
+
+- [Grafické objekty](../mfc/graphic-objects.md): pera, štětce, písma, rastrové obrázky, palety, oblastí
+
+*Témata okna rámce*
+
+- [Rámečkem](../mfc/frame-windows.md): objekty oken, které poskytují snímků
+
+- [Zobrazení a oken s rámečkem](../mfc/frame-windows.md)
+
+- [Třídy oken s rámečkem](../mfc/frame-window-classes.md)
+
+- [Styly oken s rámečkem](../mfc/frame-window-styles-cpp.md)
+
+- [Změna stylů okna vytvořeného rozhraním MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)
+
+- [Co dělat oken s rámečkem](../mfc/what-frame-windows-do.md)
+
+- [Použití oken s rámečkem](../mfc/using-frame-windows.md)
+
+- [Správa MD/podřízených oken (okno MDICLIENT)](../mfc/managing-mdi-child-windows.md)
+
+- [Správa nabídek, ovládacích pruhů a akcelerátorů](../mfc/managing-menus-control-bars-and-accelerators.md)
+
+- [CFrameWnd](../mfc/reference/cframewnd-class.md)
+
+- [CMDIFrameWnd –](../mfc/reference/cmdiframewnd-class.md)
+
+- [CMDIChildWnd –](../mfc/reference/cmdichildwnd-class.md)
+
+- [Použití zobrazení](../mfc/using-views.md)
+
+- [Více typů dokumentů, zobrazení a rámečku Windows (rozdělovače oken)](../mfc/multiple-document-types-views-and-frame-windows.md)
+
+- [Zprávy (mapy a funkce obslužné rutiny)](../mfc/messages.md)
+
+*Vytvořit a zničit Windows*
+
+- [Obecná posloupnost vytvoření okna](../mfc/general-window-creation-sequence.md)
+
+- [Zničení objektů oken](../mfc/destroying-window-objects.md)
+
+- [Vytváření oken s rámečkem v dokumentu](../mfc/creating-document-frame-windows.md)
+
+- [Zničení oken s rámečkem](../mfc/destroying-frame-windows.md)
+
+*Vytvoření Windows rozdělovač*
+
+- [Vytvoření rozdělovače oken](../mfc/multiple-document-types-views-and-frame-windows.md)
+
+*Správa podřízených Windows a aktuální zobrazení*
+
+- [Správa podřízených oken MDI](../mfc/managing-mdi-child-windows.md)
+
+- [Správa aktuálního zobrazení](../mfc/managing-the-current-view.md)
+
+- [Správa nabídek, ovládacích pruhů a akcelerátorů](../mfc/managing-menus-control-bars-and-accelerators.md)
+
+*Práce s kontexty zařízení a styly oken*
+
+- [Pomocí pera a jiných grafických objektů v kontextu zařízení](../mfc/graphic-objects.md)
+
+- [Změna stylů okna vytvořeného rozhraním MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)
+
+## <a name="see-also"></a>Viz také
+
+[Prvky uživatelského rozhraní](../mfc/user-interface-elements-mfc.md)<br/>
+[Dialogová okna](../mfc/dialog-boxes.md)<br/>
+[Panely nástrojů](../mfc/toolbars.md)<br/>
+[Stavové řádky](../mfc/status-bars.md)<br/>
+[Dialogové pruhy](../mfc/dialog-bars.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Odesílání a příjem zpráv | Microsoft Docs
+title: Odesílání a příjem zpráv | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,28 +19,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55f450085c446503ebf86960dbee1b0d930691c2
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: e28f35fc87b78ac4e04df0f8147d76571c51320e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36932001"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438818"
 ---
 # <a name="message-sending-and-receiving"></a>Odesílání a příjem zpráv
-Vezměte v úvahu odesílání část procesu a odpovědí rozhraní.  
-  
- Většina výsledek zprávy z interakce uživatele s programu. Příkazy jsou generovány kliknutí myší v nabídce položky nebo tlačítka panelu nástrojů nebo stisknutí kláves akcelerátoru. Uživatel generuje také zpráv systému Windows, například přesun nebo změnou velikosti okna. Další zprávy Windows se odesílají při výskytu události, jako je například spuštění programu nebo ukončení, jak windows získat nebo ztratit fokus a tak dále. Oznámení ovládacího prvku zprávy generované kliknutí myši nebo jiné uživatelské interakce s ovládacím prvkem, jako je tlačítko nebo pole se seznamem ovládacího prvku v dialogovém okně.  
-  
- `Run` Funkce člena třídy `CWinApp` načítá zprávy a odešle je do příslušné okna. Většina příkazů zpráv se odesílají do hlavního rámce okna aplikace. `WindowProc` Předdefinovaná v nástroji získá knihovny tříd zprávy a směruje je jinak, v závislosti na kategorii přijatá zpráva.  
-  
- Teď se podíváme přijímající součást procesu.  
-  
- Počáteční příjemce zprávy musí být objektem okna. Zprávy Windows jsou obvykle zpracovávány přímo okno objektu. Příkaz zprávy, většinou pocházející z okna aplikace hlavního rámce, získat směrovány do řetězu příkaz cíl popsané v [směrování příkazů](../mfc/command-routing.md).  
-  
- Každý objekt schopná přijmout zprávy nebo příkazy, má svou vlastní zprávu namapovat této páry zpráva nebo příkaz s názvem jeho obslužné rutiny.  
-  
- Když příkaz cílový objekt obdrží zprávu nebo příkazu, vyhledá jeho mapy zpráv pro shodu. Pokud najde obslužnou rutinu pro zprávu, volá obslužnou rutinu. Další informace o tom, jak budou prohledávány mapy zpráv najdete v tématu [jak rámci hledání mapy zpráv](../mfc/how-the-framework-searches-message-maps.md). Znovu najdete na obrázku [příkazy v rámci](../mfc/user-interface-objects-and-command-ids.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Jakým způsobem volá framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md)
+
+Vezměte v úvahu odesílání součástí procesu a jak rozhraní reagovat.
+
+Většina výsledek zprávy z interakce uživatele s programem. Příkazy jsou generovány pomocí kliknutí myší položky nabídky nebo tlačítka na panelu nástrojů nebo stisknutí kláves akcelerátoru. Uživatel také například generování zpráv Windows, přesunutí nebo změně velikosti okna. Další zprávy Windows jsou odesílány při výskytu události, například spuštění programu nebo ukončení windows získat nebo ztratí fokus a tak dále. Zprávy s oznámením ovládacího prvku jsou generovány kliknutí myší nebo další interakce uživatele s ovládacím prvkem, jako je například ovládací prvek tlačítko nebo pole se seznamem v dialogovém okně.
+
+`Run` Členské funkce třídy `CWinApp` načítá zprávy a odešle je do příslušné okno. Většina příkazů zpráv se odesílají do okna hlavního rámce aplikace. `WindowProc` Předdefinovaná v nástroji získá knihovny tříd zpráv a směruje je jinak v závislosti na kategorii byla přijata zpráva.
+
+Teď se podíváme přijímající součástí procesu.
+
+Počáteční příjemce zprávy musí být objekt okna. Zprávy Windows jsou obvykle zpracovávány přímo tento objekt okna. Příkaz zpráv, obvykle pocházejí z okna hlavního rámce aplikace směrované do řetězce cíl příkazu je popsáno v [směrování příkazů](../mfc/command-routing.md).
+
+Každý objekt schopná přijmout zprávy nebo příkazů má svůj vlastní zprávu mapování této páry zprávu nebo příkaz s názvem její obslužná rutina.
+
+Pokud cíl příkazu objekt obdrží zprávu nebo příkaz, hledá jeho mapy zpráv pro shody. Pokud najde obslužné rutiny pro zprávy, volá obslužná rutina. Další informace o tom, jak jsou prohledávány mapy zpráv, najdete v části [jak rámci vyhledávání mapy zpráv](../mfc/how-the-framework-searches-message-maps.md). Znovu najdete na obrázku [příkazy v rámci](../mfc/user-interface-objects-and-command-ids.md).
+
+## <a name="see-also"></a>Viz také
+
+[Jakým způsobem volá framework obslužnou rutinu](../mfc/how-the-framework-calls-a-handler.md)
 

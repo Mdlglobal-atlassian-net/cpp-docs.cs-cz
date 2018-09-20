@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e1cb0a77c04a1bfea03f742686e1b28a6e2f04c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0c1704bf6ea5d8eaa2fc76db61fe0143c06b46ae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43687847"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429640"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -36,7 +36,7 @@ Určuje, zda jsou všechny následné IDL – atributy zpracovat a umístí do g
 
 ### <a name="parameters"></a>Parametry
 
-*Stav*  
+*Stav*<br/>
 Jednu z těchto hodnot: `true`, `false`, `forced`, `restricted`, `push`, nebo `pop`.
 
 - Pokud `true`, atributy IDL kategorie v souboru zdrojového kódu jsou umístěny v souboru generovaného IDL. Toto je výchozí nastavení pro **emitidl**.
@@ -77,5 +77,5 @@ Další informace najdete v tématu [kontexty atributů](../windows/attribute-co
 
 ## <a name="see-also"></a>Viz také
 
-[Atributy kompilátoru](../windows/compiler-attributes.md)  
+[Atributy kompilátoru](../windows/compiler-attributes.md)<br/>
 [Samostatné atributy](../windows/stand-alone-attributes.md)  

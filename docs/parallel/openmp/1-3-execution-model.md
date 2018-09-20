@@ -1,5 +1,5 @@
 ---
-title: 1.3 Model spouštění | Microsoft Docs
+title: 1.3 Model spouštění | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,22 +12,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0acdd7a5d9f2dcb58850254281b5c18fd0d1123c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c284563a47d21abc9a1dacf045238449d64205d5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687891"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394007"
 ---
 # <a name="13-execution-model"></a>1.3 Model spouštění
-OpenMP používá model připojení k rozvětvení paralelní provádění. I když tento model rozvětvení připojení může být užitečná pro řešení různé problémy, poněkud přizpůsobit pro velké aplikace založené na pole. OpenMP je určený pro podporu programy, které budou spuštěny správně i jako paralelní programy (více vláken provádění a knihovnu úplnou podporu OpenMP) a jako sekvenční programy (direktivy ignorována a jednoduchý knihovny zástupných procedur OpenMP). Ale je možné a umožnit vyvíjet program, který není chovat správně při spuštění postupně. Navíc různé stupně paralelního zpracování může vést k jiné číselných výsledků z důvodu změn v association číselné operací. Snížení sériové přidání například může mít jiný vzor přidružení přidání než paralelní snížení. Tyto jiné přidružení může změnit výsledky přidání s plovoucí desetinnou čárkou.  
-  
- Program vytvořený pomocí rozhraní API jazyka C/C++ OpenMP zahájí provádění jako jedním vláknem a provádění volat *hlavní vlákno*. Hlavní vlákno spustí sériové oblast až do první paralelní konstrukce. V rozhraní API jazyka C/C++ OpenMP **paralelní** směrnice představuje paralelní konstrukce. Když je zjištěna paralelní konstrukce, hlavní vlákno vytvoří tým vláken a se stává hlavní týmu. Každé vlákno v týmu provede příkazy na dynamické rozsah paralelní oblasti, s výjimkou konstrukce pro sdílení práce. Konstrukce pro sdílení práce musí být zjištěny všechny vlákna v týmu ve stejném pořadí a příkazy v přidružené strukturovaných bloku jsou spouštěny jedním nebo více vláken. Barrier implicitní na konci konstrukt sdílení práce bez `nowait` klauzule je provedený všechna vlákna v týmu.  
-  
- Pokud vlákno upraví objekt sdílené, ovlivňuje pouze svou vlastní prostředí pro spuštění, ale také těch, které používá jiná vlákna v programu. Úpravy není zaručena bezpečnost pro dokončení, z hlediska jednoho jiná vlákna na další bod pořadí (podle definice v základním jazyku) pouze v případě, že objekt je deklarován jako volatile. Jinak hodnota úpravy představuje záruku dokončení po první úprava přístup z více vláken, a pak (nebo souběžně) jiná vlákna, dojde **vyprázdnění** direktiva, která určuje objekt (implicitně nebo explicitně). Všimněte si, že pokud **vyprázdnění** direktivy, které jsou implicitní jiné směrnice OpenMP nejsou dostatečná k zajištění požadované řazení vedlejší účinky, je pro programátory odpovědnost k poskytování dalších, explicitní  **vyprázdnění** direktivy.  
-  
- Po dokončení paralelní konstrukce vláken v týmu synchronizovat v implicitní bariéry a pouze hlavní vlákno pokračuje v provádění. V jednom programu můžete zadat libovolný počet paralelní konstrukce. V důsledku toho může program rozvětvovat a připojení tolikrát, kolikrát během provádění.  
-  
- Rozhraní API jazyka C/C++ OpenMP umožňuje programátorům použít direktivy ve funkcích volat v rámci paralelní konstrukce. Direktivy jazyka, které se nezobrazí v lexikální rozsah paralelní konstrukce, ale může být v dynamické rozsah se nazývají *osamocené* direktivy. Osamocené direktivy poskytne programátorům spouštění hlavní části jejich programu paralelně s jen minimální změny sekvenční programu. Pomocí této funkce můžete uživatelům code paralelní konstrukce na nejvyšší úrovni stromu program volání a použít direktivy k řízení provádění v žádném volaných funkcí.  
-  
- Nesynchronizované volání pro C a C++ výstupu funkce, které zapisovat do stejného souboru může být výstup, ve kterém se zobrazí data zapsaná pomocí různých vláknech v nedeterministická pořadí. Podobně nesynchronizovaných volání jako vstup funkce, které čtou ze stejného souboru může číst data v pořadí nedeterministická. Nesynchronizované použití vstupně-výstupních operací, tak, aby každé vlákno používá jiný soubor, vytvoří stejné výsledky jako sériové provádění funkcí vstupně-výstupní operace.
+
+OpenMP – používá model forku spojení paralelní spuštění. I když tento model forku spojení mohou být užitečné pro vyřešení různých problémů, je trochu přizpůsobit pro velké aplikace založené na pole. OpenMP – je určená pro podporu programy, které se spustí správně i jako paralelních programů (více vláken provádění a knihovnu úplná podpora OpenMP) a jako sekvenční programy (direktivy ignorována a jednoduché knihovny zástupné procedury OpenMP). Nicméně je možné a umožnit vývoj program, který se nechová správně při prováděny postupně. Kromě toho různým stupněm paralelizace může způsobit různých číselných výsledků z důvodu změn v přidružení škály číselných operací. Například sériového portu přidání snížení může mít různé vzor přidružení přidání než paralelní redukci. Tyto jiné přidružení může změnit výsledky s plovoucí desetinnou čárkou sčítání.
+
+Program napsané pomocí rozhraní API pro C/C++ OpenMP zahájí provádění spuštění označované jako jedno vlákno *hlavní vlákno*. Hlavní vlákno provádí v oblasti sériového portu, dokud se zjistil první paralelní konstrukce. V rozhraní API OpenMP C/C++ **paralelní** směrnice představuje paralelní konstrukce. Vyskytne paralelní konstrukce hlavní vlákno vytvoří tým vláken a se stává hlavní týmu. Každé vlákno v týmu provede příkazy na dynamický rozsah paralelní oblasti, s výjimkou konstrukce pro sdílení práce. Konstrukce pro sdílení práce musí být dodržováním všech vláken v týmu ve stejném pořadí a příkazy v rámci přidružené strukturovaný blok jsou spouštěny jedním nebo více vláken. Překážkou implicitní na konci konstruktoru work-sharing bez `nowait` klauzule se spouštějí všemi vlákny v týmu.
+
+Pokud vlákno upraví objekt sdílené, ovlivní to pouze svou vlastní spouštěcí prostředí, ale také ty ostatní vlákna v programu. Změna je zaručeno, že na dokončení, z pohledu jednoho z jiných vláken, v dalším bodě pořadí (podle definice v základní jazyk) pouze v případě, že objekt je deklarován jako volatile. V opačném případě úpravy je zaručeně dokončení po první úprava vlákna a poté (nebo souběžně) ostatní vlákna, dojde **vyprázdnění** směrnice, který určuje objekt (implicitně nebo explicitně). Všimněte si, že **vyprázdnění** direktivy, které jsou odvozené od jiné direktivy OpenMP nejsou dostatečná k zajištění požadované řazení vedlejší účinky, zodpovídá programátor slouží k poskytování dalších, explicitní  **vyprázdnění** direktivy.
+
+Po dokončení paralelní konstrukce synchronizaci vláken v týmu na implicitní bariéry a pouze hlavní vlákno pokračuje v provádění kódu. V jediném programu můžete zadat libovolný počet paralelní konstrukce pro. V důsledku toho může program vytvořit fork a připojte se k během provádění v mnoha případech.
+
+Rozhraní API OpenMP – C/C++ umožňuje programátorům ve funkcích volaných z v rámci paralelní konstrukce pro použití direktivy. Direktivy, které se nezobrazí v lexikálním rozsahu paralelní konstrukce ale můžou být v rozsahu dynamické se nazývají *osamocené* direktivy. Osamocené direktivy umožňují programátorům paralelně s pouze minimálním změny do sekvenční program spustit hlavní části tohoto programu. Pomocí této funkce můžete uživatelům kódu paralelní konstrukce v nejvyšší úrovně stromu volání aplikace a použít direktivy k řízení provádění v některém z volané funkce.
+
+Nesynchronizované volání jazyka C a C++ výstupních funkcí, které se zapisovat do stejného souboru může vést k výstupu, ve kterém se zobrazí data napsané v různých vláknech popořadě nedeterministická. Nesynchronizované volání k zadání funkce, které čtou ze stejného souboru obdobně může číst data v nedeterministická pořadí. Nesynchronizované použití vstupně-výstupních operací, tak, aby každé vlákno má přístup k jiný soubor, vytvoří stejné výsledky jako sériové provádění funkcí vstupně-výstupních operací.

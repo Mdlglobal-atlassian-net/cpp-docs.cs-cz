@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2080aae34a69b18286953bfa48a269b81a5a5e65
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1d6feb80c93298d5fe3d2cb23f9b34727bced57d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761810"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442224"
 ---
 # <a name="atlmfc-shared-classes"></a>Sdílené třídy ATL/MFC
 
@@ -44,16 +44,16 @@ Tyto třídy nástroje je možné v každém nativní projektu C++ nevyžaduje �
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Třídy sdílené mezi MFC a ATL](../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)  
+[Třídy sdílené mezi MFC a ATL](../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)<br/>
 Obsahuje odkazy na třídy sdílené mezi MFC a ATL.
 
 ## <a name="related-sections"></a>Související oddíly
 
-[Odkaz na aktivní šablony knihovny (ATL)](../atl/atl-com-desktop-components.md)  
+[Odkaz na aktivní šablony knihovny (ATL)](../atl/atl-com-desktop-components.md)<br/>
 Poskytuje referenční materiál pro knihovnu ATL sady založené na šablonách třídy jazyka C++, které zjednodušují programování objektů modelu COM.
 
-[Microsoft Foundation Class Library (MFC) Reference](../mfc/mfc-desktop-applications.md)  
+[Microsoft Foundation Class Library (MFC) Reference](../mfc/mfc-desktop-applications.md)<br/>
 Poskytuje referenční materiál pro knihovnu MFC, sadu tříd v, které tvoří aplikační architekturu, což je rozhraní napsané pro rozhraní API Windows.
 
-[Ladění](/visualstudio/debugger/debugging-in-visual-studio)  
+[Ladění](/visualstudio/debugger/debugging-in-visual-studio)<br/>
 Poskytuje odkazy na popis využití ladicího programu sady Visual Studio k opravě logických chyb v aplikaci nebo uložených procedur.

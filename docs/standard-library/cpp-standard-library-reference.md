@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcf760219f06ab71684d9d67240712fa501b3c00
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0c38485e84f0b06e79e02ba780926b6e08378220
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722602"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392915"
 ---
 # <a name="c-standard-library-reference"></a>Standardní knihovna C++ – referenční dokumentace
 
@@ -32,10 +32,13 @@ Další informace o knihovnách runtime jazyka Visual C++, naleznete v tématu [
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Přehled standardní knihovny C++](../standard-library/cpp-standard-library-overview.md) poskytuje přehled implementace standardní knihovny jazyka C++ společnosti Microsoft.
+[Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>
+Poskytuje přehled implementace standardní knihovny jazyka C++ společnosti Microsoft.
 
-[iostream – programování](../standard-library/iostream-programming.md) obsahuje základní informace o programování s iostream.
+[iostream – programování](../standard-library/iostream-programming.md)<br/>
+Obsahuje přehled programování s iostream.
 
-[Referenční příručka souborů záhlaví](../standard-library/cpp-standard-library-header-files.md) obsahuje odkazy na referenční témata o soubory hlaviček standardní knihovny C++, s příklady kódu.
+[Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
+Obsahuje odkazy na referenční témata o soubory hlaviček standardní knihovny C++, s příklady kódu.
 
 

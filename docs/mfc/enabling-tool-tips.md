@@ -1,5 +1,5 @@
 ---
-title: Povolení tipů nástrojů | Microsoft Docs
+title: Povolení popisů tlačítek | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 598583360eca2a65a5352fc9d284d8d359ac021c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 968d31b49c6d2b2fe5a5f69e04f58f17de8df5a2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346133"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440482"
 ---
 # <a name="enabling-tool-tips"></a>Povolení tipů nástrojů
-Můžete povolit nástroj pro podporu tip pro podřízené prvky okna (například ovládacích prvků na formuláři zobrazení nebo dialogové okno pole).  
-  
-### <a name="to-enable-tool-tips-for-the-child-controls-of-a-window"></a>Chcete-li povolit popisy pro ovládací prvky podřízená okna  
-  
-1.  Volání `EnableToolTips` časového intervalu pro který chcete zadat typy nástrojů pro správu.  
-  
-2.  Zadejte řetězec pro každý ovládací prvek v vaše [oznámení TTN_NEEDTEXT](../mfc/handling-ttn-needtext-notification-for-tool-tips.md) obslužné rutiny. Obslužná rutina se mapy zpráv okna, která obsahuje podřízené ovládací prvky (například třídě zobrazení formuláře). Tato obslužná rutina by měly volat funkci, která identifikuje ovládacího prvku a nastaví **pszText** Určuje text, který používá ovládacím prvkem popis tlačítka.  
-  
-## <a name="see-also"></a>Viz také  
- [Popisy tlačítek v oknech neodvozených ze třídy CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+
+Můžete povolit nástroj tip podporu pro podřízené ovládací prvky okna (jako je například ovládací prvky na formuláři zobrazení nebo dialogové okno pole).
+
+### <a name="to-enable-tool-tips-for-the-child-controls-of-a-window"></a>Povolení popisů tlačítek pro podřízených ovládacích prvků okna.
+
+1. Volání `EnableToolTips` pro okno, pro které chcete poskytnout popisů tlačítek.
+
+1. Zadejte řetězec pro každý ovládací prvek ve vaší [oznámení TTN_NEEDTEXT](../mfc/handling-ttn-needtext-notification-for-tool-tips.md) obslužné rutiny. Obslužná rutina je v mapování zprávy okna, která obsahuje podřízené ovládací prvky (například vaší třídy formuláře zobrazení). Tuto obslužnou rutinu by měly volat funkci, která identifikuje ovládací prvek a nastaví **pszText** zadat text, který používá ovládacím prvkem popis tlačítka nástroj.
+
+## <a name="see-also"></a>Viz také
+
+[Popisy tlačítek v oknech neodvozených ze třídy CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
 

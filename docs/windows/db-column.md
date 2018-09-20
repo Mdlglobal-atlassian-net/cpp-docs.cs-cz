@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d89fef6c2ed3f8ff1a4211cdf8da59d8406e7031
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bde6909716b55298a515aac32580a24f26c823fc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715400"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406643"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -43,7 +43,7 @@ Připojí zadaný sloupec proměnné v dané sadě řádků.
 
 #### <a name="parameters"></a>Parametry
 
-*Pořadí*  
+*Pořadí*<br/>
 Číslo pořadí sloupce (`DBCOLUMNINFO` pořadovém místě) nebo názvem sloupce (řetězec ANSI nebo Unicode) odpovídající pole v dané sadě řádků, ke kterému chcete svázat data. Pokud používáte čísla, můžete přeskočit po sobě jdoucích řadové číslovky (například: 1, 2, 3, 5). Název může obsahovat mezery, pokud podporuje zprostředkovatel OLE DB, který používáte. Například můžete použít některou z následujících formátů:
 
 ```cpp
@@ -51,19 +51,19 @@ Připojí zadaný sloupec proměnné v dané sadě řádků.
 [db_column(L"city_name")] TCHAR szCity[30];
 ```
 
-*Hodnota DbType*  
+*Hodnota DbType*<br/>
 (Volitelné) OLE DB [indikátor typu](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) pro vstupní sloupec.
 
-*Přesnost*  
+*Přesnost*<br/>
 (Volitelné) Přesnost, který má být použit pro vstupní sloupec. Podrobnosti najdete v tématu Popis `bPrecision` elementu [DBBINDING struktura](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*Škálování*  
+*Škálování*<br/>
 (Volitelné) Škálování, která má být použit pro vstupní sloupec. Podrobnosti najdete v tématu Popis `bScale` elementu [DBBINDING struktura](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*Stav*  
+*Stav*<br/>
 (Volitelné) Členské proměnné používané pro udržení stavu daného sloupce. Stav označuje, zda je hodnota sloupce datovou hodnotu nebo jinou hodnotu, jako je NULL. Možné hodnoty najdete v části [stav](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.
 
-*Délka*  
+*Délka*<br/>
 (Volitelné) Členské proměnné používané pro udržení velikost sloupce v bajtech.
 
 ## <a name="remarks"></a>Poznámky
@@ -131,5 +131,5 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](..
 
 ## <a name="see-also"></a>Viz také
 
-[Atributy příjemce technologie OLE DB](../windows/ole-db-consumer-attributes.md)  
+[Atributy příjemce technologie OLE DB](../windows/ole-db-consumer-attributes.md)<br/>
 [Atributy třídy](../windows/class-attributes.md)  

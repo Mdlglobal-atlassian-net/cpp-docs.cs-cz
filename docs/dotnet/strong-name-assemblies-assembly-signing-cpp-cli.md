@@ -1,5 +1,5 @@
 ---
-title: Sestavení se silným názvem (podepisování sestavení) (C + +/ CLI) | Microsoft Docs
+title: Sestavení se silným názvem (podepisování sestavení) (C + +/ CLI) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,40 +20,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5d7ae911d2572a35ee8dbb21d5484b4679b64c4d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75b7df96b9366680b69d40dea866fb3067a507b7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169189"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430901"
 ---
 # <a name="strong-name-assemblies-assembly-signing-ccli"></a>Sestavení se silným názvem (Podepisování sestavení) (C++/CLI)
-Toto téma popisuje, jak se můžete přihlásit sestavení, často označuje jako poskytnutí vašeho sestavení silným názvem.  
-  
-## <a name="remarks"></a>Poznámky  
- Pokud používáte Visual C++, použijte možnosti linkeru podepsat své sestavení, aby se zabránilo problémy související s atributy CLR pro podepsání sestavení:  
-  
--   <xref:System.Reflection.AssemblyDelaySignAttribute>  
-  
--   <xref:System.Reflection.AssemblyKeyFileAttribute>  
-  
--   <xref:System.Reflection.AssemblyKeyNameAttribute>  
-  
- Důvody není pomocí atributů zahrnují skutečnost, že je název klíče viditelné v sestavení metadat, které může představovat bezpečnostní riziko, pokud název souboru obsahuje důvěrné informace. Proces sestavení používá vývojového prostředí jazyka Visual C++ také zruší platnost klíč, pomocí kterého je podepsaná sestavení, pokud používáte atributy CLR umožnit sestavení silným názvem a poté spusťte nástroj následného zpracování jako mt.exe na sestavení.  
-  
- Pokud sestavení na příkazovém řádku, použijte možnosti linkeru podepsat své sestavení a spusťte nástroj následného zpracování (např. mt.exe), musíte znovu podepsat sestavení s sn.exe. Alternativně můžete sestavit a zpoždění podepsání sestavení a po spuštění nástroje pro následné zpracování, dokončení podepisování.  
-  
- Pokud používáte podepisování atributů při sestavování ve vývojovém prostředí, můžete úspěšně podepsat sestavení explicitně voláním sn.exe ([Sn.exe (nástroj silným názvem)](/dotnet/framework/tools/sn-exe-strong-name-tool)) v události po sestavení. Další informace najdete v tématu [určení událostí sestavení](../ide/specifying-build-events.md). Časy sestavení může být nižší, pokud používáte atributy a události po sestavení, ve srovnání s použitím možnosti linkeru.  
-  
- Následující možnosti linkeru podporují podepsání sestavení:  
-  
--   [/DELAYSIGN (částečné podepsání sestavení)](../build/reference/delaysign-partially-sign-an-assembly.md)  
-  
--   [/KEYFILE (zadání klíče nebo páru klíčů pro podpis sestavení)](../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
-  
--   [/KEYCONTAINER (zadání kontejneru klíčů pro podpis sestavení)](../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
-  
- Další informace o silných sestaveních najdete v tématu [vytvoření a použití sestavení](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies).  
-  
-## <a name="see-also"></a>Viz také  
- [Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+
+Toto téma popisuje, jak můžete podepsat sestavení, označovaný také jako poskytnutí silného názvu vašeho sestavení.
+
+## <a name="remarks"></a>Poznámky
+
+Při použití jazyka Visual C++, podepsat vaše sestavení, aby se zabránilo problémům, které souvisí s atributy CLR pro podepsání sestavení pomocí možnosti linkeru:
+
+- <xref:System.Reflection.AssemblyDelaySignAttribute>
+
+- <xref:System.Reflection.AssemblyKeyFileAttribute>
+
+- <xref:System.Reflection.AssemblyKeyNameAttribute>
+
+Mezi důvody bez použití atributů patří skutečnost, že název klíče, který je viditelný v sestavení metadat, což může představovat bezpečnostní riziko, pokud název souboru obsahuje důvěrné informace. Proces sestavení ve vývojovém prostředí Visual C++ navíc skončí platnost všech klíč, pomocí kterého je sestavení podepsáno, je-li poskytnout sestavení silným názvem pomocí atributů CLR a pak spusťte následného zpracování nástroje, jako je mt.exe sestavení.
+
+Pokud podepsat sestavení pomocí možnosti propojovacího programu sestavení na příkazovém řádku a pak spusťte nástroj následného zpracování (například mt.exe), musíte znovu podepsat sestavení s sn.exe. Alternativně můžete vytvářet a zpoždění podepsání sestavení a po spuštění nástroje následného zpracování, dokončení podpisu.
+
+Pokud používáte podepisování atributů při sestavování ve vývojovém prostředí, můžete podepsat sestavení úspěšně explicitně voláním sn.exe ([Sn.exe (nástroj Strong Name)](/dotnet/framework/tools/sn-exe-strong-name-tool)) v události po sestavení. Další informace najdete v tématu [určení událostí sestavení](../ide/specifying-build-events.md). Dobu sestavení může být nižší, pokud používáte atributy a událost po sestavení, ve srovnání s použitím možnosti linkeru.
+
+Následující možnosti linkeru podporují podepisování sestavení:
+
+- [/DELAYSIGN (částečné podepsání sestavení)](../build/reference/delaysign-partially-sign-an-assembly.md)
+
+- [/KEYFILE (zadání klíče nebo páru klíčů pro podpis sestavení)](../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
+
+- [/KEYCONTAINER (zadání kontejneru klíčů pro podpis sestavení)](../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)
+
+Další informace o silné sestavení naleznete v tématu [vytvoření a použití sestavení](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies).
+
+## <a name="see-also"></a>Viz také
+
+[Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

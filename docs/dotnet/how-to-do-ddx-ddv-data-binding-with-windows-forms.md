@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: vytvoření datové vazby DDX DDV s modelem Windows Forms | Microsoft Docs'
+title: 'Postupy: datové vazby DDX / DDV s formuláři Windows | Dokumentace Microsoftu'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -16,78 +16,84 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2f6992aa0c7238d2dc89a8084c7b870dae23067a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87e6eb6e845a7e900568494ed2834f23b9f6c175
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33131657"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418046"
 ---
 # <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>Postupy: Vytvoření datové vazby DDX/DDV s modelem Windows Forms
-[DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol) volání [CWinFormsControl::CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol) k vytvoření ovládacího prvku odpovídající ID prostředku ovládacího prvku. Pokud používáte `DDX_ManagedControl` pro `CWinFormsControl` ovládací prvek (v generované v průvodci kódu), by neměl volání `CreateManagedControl` explicitně pro stejný ovládací prvek.  
-  
- Volání `DDX_ManagedControl` v [CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) k vytvoření ovládacích prvků z ID prostředků. Pro data systému exchange není potřeba použít funkce DDX/DDV s Windows Forms – ovládací prvky. Místo toho můžete umístit kód pro přístup k vlastnostem spravovaného ovládacího prvku `DoDataExchange` metoda třídě dialog (nebo zobrazení) jako v následujícím příkladu.  
-  
- Následující příklad ukazuje, jak vytvořit vazbu na nativní řetězec C++ uživatelského ovládacího prvku rozhraní .NET.  
-  
-## <a name="example"></a>Příklad  
- Následuje příklad datové vazby DDX/DDV řetězec MFC `m_str` s uživatelsky definované `NameText` vlastnost uživatelského ovládacího prvku rozhraní .NET.  
-  
- Ovládací prvek je vytvořen, když [CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) volání `CMyDlg::DoDataExchange` poprvé, tak, aby kód, který odkazuje `m_UserControl` musí být pozdější `DDX_ManagedControl` volání.  
-  
- Tento kód můžete implementovat v aplikaci MFC01, kterou jste vytvořili v [postupy: vytvoření uživatelského ovládacího prvku a vložení v dialogovém okně](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).  
-  
- Chápat deklaraci CMFC01Dlg, vložte následující kód:  
-  
-```  
-class CMFC01Dlg : public CDialog  
-{  
-   CWinFormsControl<WindowsFormsControlLibrary1::UserControl1> m_MyControl;  
-   CString m_str;  
-};  
-```  
-  
-## <a name="example"></a>Příklad  
- Chápat implementaci CMFC01Dlg, vložte následující kód:  
-  
-```  
-void CMFC01Dlg::DoDataExchange(CDataExchange* pDX)  
-{  
-   CDialog::DoDataExchange(pDX);  
-   DDX_ManagedControl(pDX, IDC_CTRL1, m_MyControl);  
-  
-   if (pDX->m_bSaveAndValidate) {  
-      m_str = m_MyControl->textBox1->Text;  
-   } else  
-   {  
-      m_MyControl->textBox1->Text = gcnew System::String(m_str);  
-   }  
-}  
-```  
-  
-## <a name="example"></a>Příklad  
- Teď přidáme metodu obslužné rutiny pro a klikněte na tlačítko OK. Klikněte **zobrazení prostředků** kartě. V zobrazení zdrojů, dvakrát klikněte na `IDD_MFC01_DIALOG`. Prostředku dialogového okna se zobrazí v editoru prostředků. Dvakrát klikněte na tlačítko OK...  
-  
- Obslužná rutina definujte takto.  
-  
-```  
-void CMFC01Dlg::OnBnClickedOk()  
-{  
-   AfxMessageBox(CString(m_MyControl.GetControl()->textBox1->Text));  
-   OnOK();  
-}  
-```  
-  
-## <a name="example"></a>Příklad  
- A přidejte následující řádek na implementaci BOOL CMFC01Dlg::OnInitDialog().  
-  
-```  
-m_MyControl.GetControl()->textBox1->Text = "hello";  
-```  
-  
- Teď můžete sestavit a spustit aplikaci. Všimněte si, že jakýkoli text v textovém poli se zobrazí automaticky otevírané okno se zprávou, po ukončení aplikace.  
-  
-## <a name="see-also"></a>Viz také  
- [CWinFormsControl – třída](../mfc/reference/cwinformscontrol-class.md)   
- [DDX_ManagedControl –](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)   
- [CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)
+
+[DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol) volání [CWinFormsControl::CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol) vytvořit ovládací prvek s odpovídajícím ID prostředku ovládacího prvku. Pokud používáte `DDX_ManagedControl` pro `CWinFormsControl` ovládacího prvku (ve vygenerovaném kódu), neměli by jste volat `CreateManagedControl` explicitně pro stejný ovládací prvek.
+
+Volání `DDX_ManagedControl` v [CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) k vytvoření ovládacích prvků z ID prostředků. Pro data systému exchange není potřeba používat funkce DDX/DDV s ovládacími prvky Windows Forms. Místo toho můžete kód pro přístup k vlastnosti spravovatelného ovládacího prvku v umístit `DoDataExchange` metody třídy dialogového okna (nebo zobrazení), jako v následujícím příkladu.
+
+Následující příklad ukazuje, jak svázat řetězec nativní C++ uživatelský ovládací prvek .NET.
+
+## <a name="example"></a>Příklad
+
+Následuje příklad datové vazby DDX/DDV řetězce MFC `m_str` s uživatelsky definované `NameText` vlastnost uživatelský ovládací prvek .NET.
+
+Ovládací prvek je vytvořen při [CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) volání `CMyDlg::DoDataExchange` poprvé, tak, aby kód, který odkazuje `m_UserControl` musí být pozdější než `DDX_ManagedControl` volání.
+
+Tento kód lze implementovat v MFC01 aplikaci, kterou jste vytvořili v [postupy: vytvoření uživatelského ovládacího prvku a hostitele v dialogovém okně](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
+
+Umístěte do deklarace CMFC01Dlg, vložte následující kód:
+
+```
+class CMFC01Dlg : public CDialog
+{
+   CWinFormsControl<WindowsFormsControlLibrary1::UserControl1> m_MyControl;
+   CString m_str;
+};
+```
+
+## <a name="example"></a>Příklad
+
+Ukládejte provádění CMFC01Dlg, vložte následující kód:
+
+```
+void CMFC01Dlg::DoDataExchange(CDataExchange* pDX)
+{
+   CDialog::DoDataExchange(pDX);
+   DDX_ManagedControl(pDX, IDC_CTRL1, m_MyControl);
+
+   if (pDX->m_bSaveAndValidate) {
+      m_str = m_MyControl->textBox1->Text;
+   } else
+   {
+      m_MyControl->textBox1->Text = gcnew System::String(m_str);
+   }
+}
+```
+
+## <a name="example"></a>Příklad
+
+Teď přidáme metodu obslužné rutiny pro kliknutí na tlačítko OK. Klikněte na tlačítko **zobrazení prostředků** kartu. V okně zobrazení prostředků, dvakrát klikněte na `IDD_MFC01_DIALOG`. Prostředku dialogového okna se zobrazí v editoru prostředků. Dvakrát klikněte na tlačítko OK...
+
+Definování obslužné rutiny následujícím způsobem.
+
+```
+void CMFC01Dlg::OnBnClickedOk()
+{
+   AfxMessageBox(CString(m_MyControl.GetControl()->textBox1->Text));
+   OnOK();
+}
+```
+
+## <a name="example"></a>Příklad
+
+A přidejte následující řádek do implementace BOOL CMFC01Dlg::OnInitDialog().
+
+```
+m_MyControl.GetControl()->textBox1->Text = "hello";
+```
+
+Teď můžete sestavit a spustit aplikaci. Všimněte si, že veškerý text v textovém poli se zobrazí v místním okně se zprávou, po zavření aplikace.
+
+## <a name="see-also"></a>Viz také
+
+[CWinFormsControl – třída](../mfc/reference/cwinformscontrol-class.md)<br/>
+[DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)<br/>
+[CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)

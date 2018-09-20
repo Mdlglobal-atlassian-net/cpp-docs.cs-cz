@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e56e3f48a3a58f25d03053867c195d11970893f9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f844d63bc04deb4294203f04aef30db48f195fd9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601404"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438064"
 ---
 # <a name="terminatemap-function"></a>TerminateMap – funkce
 
@@ -39,13 +39,13 @@ inline bool TerminateMap(
 
 ### <a name="parameters"></a>Parametry
 
-*Modul*  
+*Modul*<br/>
 A [modulu](../windows/module-class.md).
 
-*název_serveru*  
+*název_serveru*<br/>
 Název dílčí sady objekty pro vytváření tříd v modulu určené parametrem *modulu*.
 
-*forceTerminate*  
+*forceTerminate*<br/>
 **Hodnota TRUE** ukončení třídy jsou aktivní, bez ohledu na to, že objekty pro vytváření **false** není ukončit objekty pro vytváření tříd, pokud je aktivní libovolný objekt pro vytváření.
 
 ## <a name="return-value"></a>Návratová hodnota

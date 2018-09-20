@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0b5a352d10c1fd1f825cecbe3d6a1083f6efd425
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: af227712e3ac64d69836f5cf83b6629bdbffe834
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212166"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432721"
 ---
 # <a name="reflection-ccli"></a>Reflexe (C++/CLI)
 
@@ -78,7 +78,7 @@ Typy hodnot lze použít s `GetType` fungovat stejně, ale musí být nejprve za
 // compile with: /clr
 using namespace System;
 int main() {
-   Int32 i = 100; 
+   Int32 i = 100;
    Object ^ o = i;
    Console::WriteLine("type of i = '{0}'", o->GetType());
 }
@@ -106,7 +106,7 @@ enum class Options {   // not a native enum
 int main() {
    array<String^>^ names = Enum::GetNames(Options::typeid);
 
-   Console::WriteLine("there are {0} options in enum '{1}'", 
+   Console::WriteLine("there are {0} options in enum '{1}'",
                names->Length, Options::typeid);
 
    for (int i = 0 ; i < names->Length ; i++)
@@ -156,7 +156,7 @@ int main() {
 
 ```Output
 type information for 'String':
-assembly name: mscorlib, Version=1.0.5000.0, Culture=neutral, 
+assembly name: mscorlib, Version=1.0.5000.0, Culture=neutral,
 PublicKeyToken=b77a5c561934e089
 namespace: System
 base type: System.Object
@@ -177,7 +177,7 @@ public ref class TestClass {
 public:
    TestClass() {}
    void SimpleTestMember1() {}
-   String ^ SimpleMember2(String ^ s) { return s; } 
+   String ^ SimpleMember2(String ^ s) { return s; }
    int TestMember(int i) { return i; }
    property int Member {
       int get() { return m_i; }
@@ -227,10 +227,10 @@ int main() {
       // retrieve array of member descriptions
       array<MemberInfo^>^ member = typeArray[i]->GetMembers();
 
-      Console::WriteLine("  members of {0} ({1} members):", 
+      Console::WriteLine("  members of {0} ({1} members):",
       typeArray[i]->FullName, member->Length);
       for (int j = 0 ; j < member->Length ; j++) {
-         Console::Write("       ({0})", 
+         Console::Write("       ({0})",
          member[j]->MemberType.ToString() );
          Console::Write("{0}  ", member[j]);
          Console::WriteLine("");
@@ -244,165 +244,169 @@ int main() {
 ```
 
 ## <a name="implement"></a> Postupy: implementace architektury komponenty modulu Plugin pomocí reflexe
-Následující příklady kódu znázorňují použití reflexe implementace jednoduché "modulu plug-in" architektury. První odkaz je aplikace a druhá je modul plug-in. Aplikace je formulář více dokumentů, které naplňuje sebe pomocí nalezené v knihovně DLL modulu plug-in jako argument příkazového řádku k dispozici žádné třídy založené na formulářích.  
-  
- Pokusí se načíst zadané sestavení pomocí aplikace <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> metody. Pokud úspěšné, typy v sestavení jsou uvedené použití <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName> metody. Každý typ je pak odhalena použitím kompatibility <xref:System.Type.IsAssignableFrom%2A?displayProperty=fullName> metody. V tomto příkladu třídy v zadané sestavení musí být odvozen z <xref:System.Windows.Forms.Form> třídu k určení jako modul plug-in.  
-  
- Instance třídy kompatibilní se pak vytvářejí s <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> metodu, která přijímá <xref:System.Type> jako argument a vrátí ukazatel na novou instanci. Každá nová instance poté připojen k formuláři a zobrazit.  
-  
- Všimněte si, <xref:System.Reflection.Assembly.Load%2A> metoda nepřijímá žádné názvy sestavení, které mají příponu souboru. Hlavní funkce v aplikaci ořízne všechny zadané přípony, tak v následujícím příkladu kódu funguje v obou případech.  
-  
-### <a name="example"></a>Příklad  
- Následující kód definuje aplikaci, která přijímá moduly plug-in. Název sestavení musí být zadaná jako první argument. Toto sestavení by měl obsahovat alespoň jednu veřejnou <xref:System.Windows.Forms.Form> odvozeného typu.  
-  
+
+Následující příklady kódu znázorňují použití reflexe implementace jednoduché "modulu plug-in" architektury. První odkaz je aplikace a druhá je modul plug-in. Aplikace je formulář více dokumentů, které naplňuje sebe pomocí nalezené v knihovně DLL modulu plug-in jako argument příkazového řádku k dispozici žádné třídy založené na formulářích.
+
+Pokusí se načíst zadané sestavení pomocí aplikace <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> metody. Pokud úspěšné, typy v sestavení jsou uvedené použití <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName> metody. Každý typ je pak odhalena použitím kompatibility <xref:System.Type.IsAssignableFrom%2A?displayProperty=fullName> metody. V tomto příkladu třídy v zadané sestavení musí být odvozen z <xref:System.Windows.Forms.Form> třídu k určení jako modul plug-in.
+
+Instance třídy kompatibilní se pak vytvářejí s <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> metodu, která přijímá <xref:System.Type> jako argument a vrátí ukazatel na novou instanci. Každá nová instance poté připojen k formuláři a zobrazit.
+
+Všimněte si, <xref:System.Reflection.Assembly.Load%2A> metoda nepřijímá žádné názvy sestavení, které mají příponu souboru. Hlavní funkce v aplikaci ořízne všechny zadané přípony, tak v následujícím příkladu kódu funguje v obou případech.
+
+### <a name="example"></a>Příklad
+
+Následující kód definuje aplikaci, která přijímá moduly plug-in. Název sestavení musí být zadaná jako první argument. Toto sestavení by měl obsahovat alespoň jednu veřejnou <xref:System.Windows.Forms.Form> odvozeného typu.
+
 ```cpp
-// plugin_application.cpp  
-// compile with: /clr /c  
-#using <system.dll>  
-#using <system.drawing.dll>  
-#using <system.windows.forms.dll>  
-  
-using namespace System;  
-using namespace System::Windows::Forms;  
-using namespace System::Reflection;  
-  
-ref class PluggableForm : public Form  {  
-public:  
-   PluggableForm() {}  
-   PluggableForm(Assembly^ plugAssembly) {  
-      Text = "plug-in example";  
-      Size = Drawing::Size(400, 400);  
-      IsMdiContainer = true;  
-  
-      array<Type^>^ types = plugAssembly->GetTypes( );  
-      Type^ formType = Form::typeid;  
-  
-      for (int i = 0 ; i < types->Length ; i++) {  
-         if (formType->IsAssignableFrom(types[i])) {  
-            // Create an instance given the type description.  
-            Form^ f = dynamic_cast<Form^> (Activator::CreateInstance(types[i]));  
-            if (f) {  
-               f->Text = types[i]->ToString();  
-               f->MdiParent = this;  
-               f->Show();  
-            }  
-         }  
-      }  
-   }  
-};  
-  
-int main() {  
-   Assembly^ a = Assembly::LoadFrom("plugin_application.exe");  
-   Application::Run(gcnew PluggableForm(a));  
-}  
-```  
-  
-### <a name="example"></a>Příklad  
- Následující kód definuje tři třídy odvozené od <xref:System.Windows.Forms.Form>. Pokud název výsledný název sestavení je předán do spustitelného souboru v předchozí ukázce, každá z těchto tří tříd, se zjistí a vytvoření instance navzdory tomu, že byly všechny neznámé hostování aplikace v době kompilace.  
-  
-```cpp  
-// plugin_assembly.cpp  
-// compile with: /clr /LD  
-#using <system.dll>  
-#using <system.drawing.dll>  
-#using <system.windows.forms.dll>  
-  
-using namespace System;  
-using namespace System::Windows::Forms;  
-using namespace System::Reflection;  
-using namespace System::Drawing;  
-  
-public ref class BlueForm : public Form {  
-public:  
-   BlueForm() {  
-      BackColor = Color::Blue;  
-   }  
-};  
-  
-public ref class CircleForm : public Form {  
-protected:  
-   virtual void OnPaint(PaintEventArgs^ args) override {  
-      args->Graphics->FillEllipse(Brushes::Green, ClientRectangle);  
-   }  
-};  
-  
-public ref class StarburstForm : public Form {  
-public:  
-   StarburstForm(){  
-      BackColor = Color::Black;  
-   }  
-protected:  
-   virtual void OnPaint(PaintEventArgs^ args) override {  
-      Pen^ p = gcnew Pen(Color::Red, 2);  
-      Random^ r = gcnew Random( );  
-      Int32 w = ClientSize.Width;  
-      Int32 h = ClientSize.Height;  
-      for (int i=0; i<100; i++) {  
-         float x1 = w / 2;  
-         float y1 = h / 2;  
-         float x2 = r->Next(w);  
-         float y2 = r->Next(h);  
-         args->Graphics->DrawLine(p, x1, y1, x2, y2);  
-      }  
-   }  
-};  
-```  
+// plugin_application.cpp
+// compile with: /clr /c
+#using <system.dll>
+#using <system.drawing.dll>
+#using <system.windows.forms.dll>
+
+using namespace System;
+using namespace System::Windows::Forms;
+using namespace System::Reflection;
+
+ref class PluggableForm : public Form  {
+public:
+   PluggableForm() {}
+   PluggableForm(Assembly^ plugAssembly) {
+      Text = "plug-in example";
+      Size = Drawing::Size(400, 400);
+      IsMdiContainer = true;
+
+      array<Type^>^ types = plugAssembly->GetTypes( );
+      Type^ formType = Form::typeid;
+
+      for (int i = 0 ; i < types->Length ; i++) {
+         if (formType->IsAssignableFrom(types[i])) {
+            // Create an instance given the type description.
+            Form^ f = dynamic_cast<Form^> (Activator::CreateInstance(types[i]));
+            if (f) {
+               f->Text = types[i]->ToString();
+               f->MdiParent = this;
+               f->Show();
+            }
+         }
+      }
+   }
+};
+
+int main() {
+   Assembly^ a = Assembly::LoadFrom("plugin_application.exe");
+   Application::Run(gcnew PluggableForm(a));
+}
+```
+
+### <a name="example"></a>Příklad
+
+Následující kód definuje tři třídy odvozené od <xref:System.Windows.Forms.Form>. Pokud název výsledný název sestavení je předán do spustitelného souboru v předchozí ukázce, každá z těchto tří tříd, se zjistí a vytvoření instance navzdory tomu, že byly všechny neznámé hostování aplikace v době kompilace.
+
+```cpp
+// plugin_assembly.cpp
+// compile with: /clr /LD
+#using <system.dll>
+#using <system.drawing.dll>
+#using <system.windows.forms.dll>
+
+using namespace System;
+using namespace System::Windows::Forms;
+using namespace System::Reflection;
+using namespace System::Drawing;
+
+public ref class BlueForm : public Form {
+public:
+   BlueForm() {
+      BackColor = Color::Blue;
+   }
+};
+
+public ref class CircleForm : public Form {
+protected:
+   virtual void OnPaint(PaintEventArgs^ args) override {
+      args->Graphics->FillEllipse(Brushes::Green, ClientRectangle);
+   }
+};
+
+public ref class StarburstForm : public Form {
+public:
+   StarburstForm(){
+      BackColor = Color::Black;
+   }
+protected:
+   virtual void OnPaint(PaintEventArgs^ args) override {
+      Pen^ p = gcnew Pen(Color::Red, 2);
+      Random^ r = gcnew Random( );
+      Int32 w = ClientSize.Width;
+      Int32 h = ClientSize.Height;
+      for (int i=0; i<100; i++) {
+         float x1 = w / 2;
+         float y1 = h / 2;
+         float x2 = r->Next(w);
+         float y2 = r->Next(h);
+         args->Graphics->DrawLine(p, x1, y1, x2, y2);
+      }
+   }
+};
+```
 
 ## <a name="enumerate"></a> Postupy: výčet datových typů v sestaveních pomocí reflexe
-Následující kód ukazuje výčet veřejných typů a členů pomocí <xref:System.Reflection>.  
-  
- Zadaný název sestavení, v místním adresáři nebo v mezipaměti GAC, následující kód se pokusí otevřít sestavení a načíst popisy. V případě úspěchu, zobrazí se s jeho veřejné členy jednotlivých typů.  
-  
- Všimněte si, že <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> vyžaduje, že se používá bez přípony souboru. Proto pomocí "mscorlib.dll" jako argument příkazového řádku se nezdaří, zatímco použití pouze "mscorlib" způsobí zobrazení typů rozhraní .NET Framework. Pokud je poskytnut žádný název sestavení, kód rozpozná a typů v rámci aktuálního sestavení sestav (EXE, vyplývající z tohoto kódu).  
-  
-### <a name="example"></a>Příklad  
-  
-```cpp  
-// self_reflection.cpp  
-// compile with: /clr  
-using namespace System;  
-using namespace System::Reflection;  
-using namespace System::Collections;  
-  
-public ref class ExampleType {  
-public:  
-   ExampleType() {}  
-   void Func() {}  
-};  
-  
-int main() {  
-   String^ delimStr = " ";  
-   array<Char>^ delimiter = delimStr->ToCharArray( );  
-   array<String^>^ args = Environment::CommandLine->Split( delimiter );  
-  
-// replace "self_reflection.exe" with an assembly from either the local  
-// directory or the GAC  
-   Assembly^ a = Assembly::LoadFrom("self_reflection.exe");  
-   Console::WriteLine(a);  
-  
-   int count = 0;  
-   array<Type^>^ types = a->GetTypes();  
-   IEnumerator^ typeIter = types->GetEnumerator();  
-  
-   while ( typeIter->MoveNext() ) {  
-      Type^ t = dynamic_cast<Type^>(typeIter->Current);  
-      Console::WriteLine("   {0}", t->ToString());  
-  
-      array<MemberInfo^>^ members = t->GetMembers();  
-      IEnumerator^ memberIter = members->GetEnumerator();  
-      while ( memberIter->MoveNext() ) {  
-         MemberInfo^ mi = dynamic_cast<MemberInfo^>(memberIter->Current);  
-         Console::Write("      {0}", mi->ToString( ) );  
-         if (mi->MemberType == MemberTypes::Constructor)  
-            Console::Write("   (constructor)");  
-  
-         Console::WriteLine();  
-      }  
-      count++;  
-   }  
-   Console::WriteLine("{0} types found", count);  
-}  
-```  
+
+Následující kód ukazuje výčet veřejných typů a členů pomocí <xref:System.Reflection>.
+
+Zadaný název sestavení, v místním adresáři nebo v mezipaměti GAC, následující kód se pokusí otevřít sestavení a načíst popisy. V případě úspěchu, zobrazí se s jeho veřejné členy jednotlivých typů.
+
+Všimněte si, že <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> vyžaduje, že se používá bez přípony souboru. Proto pomocí "mscorlib.dll" jako argument příkazového řádku se nezdaří, zatímco použití pouze "mscorlib" způsobí zobrazení typů rozhraní .NET Framework. Pokud je poskytnut žádný název sestavení, kód rozpozná a typů v rámci aktuálního sestavení sestav (EXE, vyplývající z tohoto kódu).
+
+### <a name="example"></a>Příklad
+
+```cpp
+// self_reflection.cpp
+// compile with: /clr
+using namespace System;
+using namespace System::Reflection;
+using namespace System::Collections;
+
+public ref class ExampleType {
+public:
+   ExampleType() {}
+   void Func() {}
+};
+
+int main() {
+   String^ delimStr = " ";
+   array<Char>^ delimiter = delimStr->ToCharArray( );
+   array<String^>^ args = Environment::CommandLine->Split( delimiter );
+
+// replace "self_reflection.exe" with an assembly from either the local
+// directory or the GAC
+   Assembly^ a = Assembly::LoadFrom("self_reflection.exe");
+   Console::WriteLine(a);
+
+   int count = 0;
+   array<Type^>^ types = a->GetTypes();
+   IEnumerator^ typeIter = types->GetEnumerator();
+
+   while ( typeIter->MoveNext() ) {
+      Type^ t = dynamic_cast<Type^>(typeIter->Current);
+      Console::WriteLine("   {0}", t->ToString());
+
+      array<MemberInfo^>^ members = t->GetMembers();
+      IEnumerator^ memberIter = members->GetEnumerator();
+      while ( memberIter->MoveNext() ) {
+         MemberInfo^ mi = dynamic_cast<MemberInfo^>(memberIter->Current);
+         Console::Write("      {0}", mi->ToString( ) );
+         if (mi->MemberType == MemberTypes::Constructor)
+            Console::Write("   (constructor)");
+
+         Console::WriteLine();
+      }
+      count++;
+   }
+   Console::WriteLine("{0} types found", count);
+}
+```
 
 ## <a name="see-also"></a>Viz také:
 

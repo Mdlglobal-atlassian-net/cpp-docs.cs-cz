@@ -1,5 +1,5 @@
 ---
-title: Jak rozhraní WinInet usnadňuje tvorbu internetových klientských aplikací | Microsoft Docs
+title: Jak rozhraní WinInet usnadňuje tvorbu internetových klientských aplikací | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,45 +16,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09a7427374de085de9bd2872c8b1368a6b961b35
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 356027e151dcc94891b9c4043e4f1af8b2f0b947
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344253"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430914"
 ---
 # <a name="how-wininet-makes-it-easier-to-create-internet-client-applications"></a>Jak rozhraní WinInet usnadňuje tvorbu internetových klientských aplikací
-Win32 – internetová rozšíření nebo WinInet, poskytují přístup k běžné Internetové protokoly, včetně gopher, FTP a HTTP. Pomocí WinInet, můžete napsat internetové klientské aplikace na vyšší úrovni programování, aniž byste museli řešit rozhraní WinSock, protokolu TCP/IP nebo podrobnosti o konkrétní internetových protokolech. WinInet poskytuje konzistentní sadu funkcí pro všechny tři protokoly s známé rozhraní Win32 API. Tato konzistence minimalizuje změn kódu, které budete muset udělat, pokud se změní základního protokolu (například z FTP HTTP).  
-  
- Visual C++ nabízí dva způsoby, budete moci použít WinInet. Funkce Win32 Internet můžete volat přímo (viz dokumentace OLE ve Windows SDK pro další informace) nebo můžete použít WinInet prostřednictvím [WinInet knihovny MFC – třídy](../mfc/mfc-classes-for-creating-internet-client-applications.md).  
-  
- **Můžete použít WinInet na:**  
-  
--   Stáhněte si stránky HTML.  
-  
-     HTTP je protokol, který slouží k přenosu stránky HTML ze serveru do prohlížeče klienta.  
-  
--   Odesílat požadavky protokolu FTP odeslání nebo stažení souborů nebo získat výpisech adresářů.  
-  
-     Je typické požadavek anonymní přihlášení ke stažení souboru.  
-  
--   Používejte systém nabídek na gopher pro přístup k prostředkům na Internetu.  
-  
-     Položky nabídky může být několik typů, včetně jiných nabídek, indexované databáze, můžete hledat, diskusní skupiny nebo souboru.  
-  
- Pro všechny tři protokoly připojení, zkontrolujte požadavky na server a ukončení připojení.  
-  
- **Třídy MFC WinInet usnadňují:**  
-  
--   Načíst informace z protokolů HTTP, FTP a gopher servery snadno jako čtení souborů z pevného disku.  
-  
--   Pomocí protokolů HTTP, FTP a gopher bez programování přímo na rozhraní WinSock nebo protokolu TCP/IP.  
-  
-     Není potřeba znát protokolu TCP/IP nebo Windows Sockets vývojáře, kteří používají funkce Win32 Internet. Můžete stále programovat na úrovni soketu, pomocí protokolů rozhraní WinSock a TCP/IP přímo, ale je snazší i pomocí tříd WinInet knihovny MFC přístup protokolu HTTP, FTP a protokoly gopher přes Internet. Pro mnoho běžných operací není potřeba vývojáři znát podrobnosti o konkrétní protokol, který používají.  
-  
- Mnoho operací, které lze provést pomocí počítače jako klienta na jiné počítače na Internetu může trvat dlouhou dobu. Rychlost těchto operací je obvykle limitována rychlostí síťového připojení, ale budou mít vliv i provoz v síti a složitost operace. Připojení ke vzdálenému serveru FTP, například vyžaduje, že váš počítač nejprve vyhledat název tohoto serveru najít její adresu. Aplikace se potom pokusí připojit k serveru na tuto adresu. Po otevření připojení vaším počítačem a vzdáleným serverem zahájíte konverzace s protokol pro přenos souborů před připojení můžete použít ve skutečnosti k načtení souborů.  
-  
-## <a name="see-also"></a>Viz také  
- [Win32 – internetová rozšíření (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
- [Jak prostředí MFC usnadňuje tvorbu internetových klientských aplikací](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)
+
+Win32 – internetová rozšíření nebo rozhraní WinInet, poskytují přístup ke common Internetové protokoly, včetně gopher, FTP, HTTP. Pomocí rozhraní WinInet, můžete napsat internetových klientských aplikací na vyšší úrovni programování, aniž byste museli řešit WinSock, TCP/IP nebo podrobnosti o konkrétní protokolů sítě Internet. Wininet – poskytuje konzistentní sadu funkcí pro všechny tři protokoly pomocí známých rozhraní API systému Win32. Taková konzistence minimalizuje změn kódu, které je potřeba udělat, pokud se změní na základním protokolu (například z protokolu FTP pro HTTP).
+
+Visual C++ poskytuje dva způsoby, jak použít rozhraní WinInet. Bude možné volat funkce Win32 Internet přímo (dokumentace OLE v sadě Windows SDK pro další informace najdete v článku) nebo můžete použít rozhraní WinInet prostřednictvím [tříd WinInet knihovny MFC](../mfc/mfc-classes-for-creating-internet-client-applications.md).
+
+**Můžete použít rozhraní WinInet na:**
+
+- Stáhněte si stránky HTML.
+
+     HTTP je protokol, který slouží k přenosu stránky HTML ze serveru do prohlížeče klienta.
+
+- Odesílání požadavků FTP pro nahrávání nebo stahování souborů nebo získat výpisech adresářů.
+
+     Typické požadavek je anonymní přihlášení ke stažení souboru.
+
+- Použijte systém nabídek na gopher pro přístup k prostředkům v síti Internet.
+
+     Položky nabídky může být několik typů, včetně jiných nabídek, indexované databáze, můžete hledat, diskusní skupiny nebo soubor.
+
+Pro všechny tři protokoly navázat připojení, zkontrolujte požadavky na server a ukončete připojení.
+
+**Tříd WinInet knihovny MFC usnadňuje:**
+
+- Přečtěte si informace ze serverů protokolu HTTP, FTP a gopher stejně snadno, jako čtení souborů z pevného disku.
+
+- Použijte protokoly HTTP, FTP a gopher bez přímé programování rozhraní WinSock nebo protokolu TCP/IP.
+
+     Vývojáři, kteří používají Win32 Internet funkce není potřeba znát TCP/IP nebo rozhraní Windows Sockets. Můžete stále naprogramovat na úrovni soketu WinSock a TCP/IP protokoly pomocí přímo, ale je ještě snadnější použití tříd WinInet knihovny MFC pro přístup k protokolu HTTP, FTP a protokoly gopher přes Internet. Pro mnoho běžných operací vývojáři není nutné znát podrobnosti o konkrétní protokolu, který používají.
+
+Mnoho operací, které můžete provádět v počítači jako klienta na jiné počítače na Internetu může trvat dlouhou dobu. Rychlost těchto operací je obvykle limitována rychlostí síťového připojení, ale může mít také vliv tak, že provoz v síti a složitosti operaci. Připojování ke vzdálenému serveru FTP, například vyžaduje, že počítač nejprve vyhledat název tohoto serveru na její adresu. Aplikace se pak pokusí připojit k serveru na této adrese. Jakmile je otevřeno připojení, počítačem a vzdáleným serverem opraví, zahájí se konverzace s protokol pro přenos souborů předtím, než ve skutečnosti můžete připojení k načtení souborů.
+
+## <a name="see-also"></a>Viz také
+
+[Win32 – internetová rozšíření (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
+[Jak prostředí MFC usnadňuje tvorbu internetových klientských aplikací](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)
 

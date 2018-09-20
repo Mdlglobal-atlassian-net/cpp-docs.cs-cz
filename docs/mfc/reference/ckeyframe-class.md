@@ -1,5 +1,5 @@
 ---
-title: Třída CKeyFrame | Microsoft Docs
+title: Ckeyframe – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,212 +36,244 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56fa354a46e40704ac063791931ca01d1386a558
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: b5bdba80f0be5e6e47043b67934a79ea5039b4ed
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038455"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394236"
 ---
-# <a name="ckeyframe-class"></a>CKeyFrame – třída
-Představuje klíčový snímek animace.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CKeyFrame : public CBaseKeyFrame;  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CKeyFrame::CKeyFrame](#ckeyframe)|Přetíženo. Vytvoří klíčový snímek, který závisí na jiné klíčový snímek.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CKeyFrame::AddToStoryboard](#addtostoryboard)|Přidá klíčový scénáře. (Přepisuje [CBaseKeyFrame::AddToStoryboard](../../mfc/reference/cbasekeyframe-class.md#addtostoryboard).)|  
-|[CKeyFrame::AddToStoryboardAfterTransition](#addtostoryboardaftertransition)|Přidá klíčový do scénáře po přechodu.|  
-|[CKeyFrame::AddToStoryboardAtOffset](#addtostoryboardatoffset)|Přidá klíčový do scénáře na posunu.|  
-|[CKeyFrame::GetExistingKeyframe](#getexistingkeyframe)|Vrátí ukazatel klíčový snímek, který tento klíčový snímek závisí na.|  
-|[CKeyFrame::GetOffset](#getoffset)|Vrátí posun od jiných klíčový snímek.|  
-|[CKeyFrame::GetTransition](#gettransition)|Vrací ukazatel na tento klíčový snímek závisí na přechod.|  
-  
-### <a name="protected-data-members"></a>Chráněné datové členy  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CKeyFrame::m_offset](#m_offset)|Určuje posun tento klíčový snímek z klíčový uložené v m_pExistingKeyFrame.|  
-|[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|Ukládá ukazatele na existující keframe. Klíčový tento snímek se přidá do scénáře s m_offset do existujícího klíčového snímku.|  
-|[CKeyFrame::m_pTransition](#m_ptransition)|Ukládá do transtion, který začíná na tento klíčový ukazatel.|  
-  
-## <a name="remarks"></a>Poznámky  
- Tato třída implementuje klíčový snímek animace. Klíčový představuje časového okamžiku v rámci scénáře a slouží k určení počáteční a koncový čas přechody. Klíčový může být založeno na jiné klíčový snímek a mít posun (v sekundách) z něj, nebo může být založeno na přechod a představují časového okamžiku při ukončení tento přechod.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CBaseKeyFrame](../../mfc/reference/cbasekeyframe-class.md)  
-  
- [CKeyFrame](../../mfc/reference/ckeyframe-class.md)  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxanimationcontroller.h  
-  
-##  <a name="addtostoryboard"></a>  CKeyFrame::AddToStoryboard  
- Přidá klíčový scénáře.  
-  
-```  
+# <a name="ckeyframe-class"></a>Ckeyframe – třída
+
+Představuje klíčový snímek animace.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CKeyFrame : public CBaseKeyFrame;
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[CKeyFrame::CKeyFrame](#ckeyframe)|Přetíženo. Sestaví klíčový snímek, který závisí na jiné klíčový snímek.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CKeyFrame::AddToStoryboard](#addtostoryboard)|Přidá klíčového snímku do scénáře. (Přepíše [CBaseKeyFrame::AddToStoryboard](../../mfc/reference/cbasekeyframe-class.md#addtostoryboard).)|
+|[CKeyFrame::AddToStoryboardAfterTransition](#addtostoryboardaftertransition)|Přidá klíčového snímku do scénáře po přechodu.|
+|[CKeyFrame::AddToStoryboardAtOffset](#addtostoryboardatoffset)|Přidá klíčového snímku do scénáře na posunu.|
+|[CKeyFrame::GetExistingKeyframe](#getexistingkeyframe)|Vrací ukazatel na klíčový snímek tohoto klíčového snímku, na kterém závisí.|
+|[CKeyFrame::GetOffset](#getoffset)|Vrátí posun z jiných klíčový snímek.|
+|[CKeyFrame::GetTransition](#gettransition)|Vrací ukazatel na přechod tento klíčový snímek, na kterém závisí.|
+
+### <a name="protected-data-members"></a>Chránění členové dat
+
+|Název|Popis|
+|----------|-----------------|
+|[CKeyFrame::m_offset](#m_offset)|Určuje posun tento klíčový snímek z klíčového snímku uloženy v m_pExistingKeyFrame.|
+|[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|Uchovává ukazatel na existující keframe. Tento klíčový snímek se přidá do scénáře s m_offset existující klíčový snímek.|
+|[CKeyFrame::m_pTransition](#m_ptransition)|Uchovává ukazatel na transtion, který začíná na tento klíčový snímek.|
+
+## <a name="remarks"></a>Poznámky
+
+Tato třída implementuje klíčový snímek animace. Klíčový snímek představuje okamžik v čase v rámci scénáře a je možné zadat počáteční a koncový čas přechodů. Klíčový snímek mohou být založeny na jiné klíčový snímek a mají posun (v sekundách), nebo mohou být založeny na přechod a představují okamžiku v čase po ukončení tohoto přechodu.
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+[Třídy CObject](../../mfc/reference/cobject-class.md)
+
+[Cbasekeyframe –](../../mfc/reference/cbasekeyframe-class.md)
+
+[Ckeyframe –](../../mfc/reference/ckeyframe-class.md)
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxanimationcontroller.h
+
+##  <a name="addtostoryboard"></a>  CKeyFrame::AddToStoryboard
+
+Přidá klíčového snímku do scénáře.
+
+```
 virtual BOOL AddToStoryboard(
-    IUIAnimationStoryboard* pStoryboard,  
+    IUIAnimationStoryboard* pStoryboard,
     BOOL bDeepAdd);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pStoryboard*  
- Ukazatel na scénář.  
-  
- *bDeepAdd*  
- Určuje, jestli chcete přidat klíčový snímek nebo přechod rekurzivně.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud klíčový snímek byl úspěšně přidán.  
-  
-### <a name="remarks"></a>Poznámky  
- Tato metoda přidá klíčový do scénáře. Pokud je závislý na jiných klíčový snímek nebo přechod a bDeepAdd má hodnotu TRUE, tato metoda se pokusí přidat je rekurzivní.  
-  
-##  <a name="addtostoryboardaftertransition"></a>  CKeyFrame::AddToStoryboardAfterTransition  
- Přidá klíčový do scénáře po přechodu.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pStoryboard*<br/>
+Ukazatel na scénáře.
+
+*bDeepAdd*<br/>
+Určuje, jestli se má přidat klíčový snímek nebo přechod rekurzivně.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Hodnota TRUE, pokud klíčový snímek byl úspěšně přidán.
+
+### <a name="remarks"></a>Poznámky
+
+Tato metoda přidá klíčového snímku do scénáře. Pokud závisí na jiné klíčového snímku nebo přechodu a bDeepAdd má hodnotu TRUE, tato metoda se pokusí přidat rekurzivně.
+
+##  <a name="addtostoryboardaftertransition"></a>  CKeyFrame::AddToStoryboardAfterTransition
+
+Přidá klíčového snímku do scénáře po přechodu.
+
+```
 BOOL AddToStoryboardAfterTransition(
-    IUIAnimationStoryboard* pStoryboard,  
+    IUIAnimationStoryboard* pStoryboard,
     BOOL bDeepAdd);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pStoryboard*  
- Ukazatel na scénář.  
-  
- *bDeepAdd*  
- Určuje, zda chcete přidat rekurzivně přechodu.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud klíčový snímek byl úspěšně přidán.  
-  
-### <a name="remarks"></a>Poznámky  
- Tato funkce je volána rámcem přidat klíčový do scénáře po přechodu.  
-  
-##  <a name="addtostoryboardatoffset"></a>  CKeyFrame::AddToStoryboardAtOffset  
- Přidá klíčový do scénáře na posunu.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pStoryboard*<br/>
+Ukazatel na scénáře.
+
+*bDeepAdd*<br/>
+Určuje, jestli se má přidat rekurzivně přechodu.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Hodnota TRUE, pokud klíčový snímek byl úspěšně přidán.
+
+### <a name="remarks"></a>Poznámky
+
+Tato funkce je volána rozhraním, chcete-li přidat klíčový snímek do scénáře po přechodu.
+
+##  <a name="addtostoryboardatoffset"></a>  CKeyFrame::AddToStoryboardAtOffset
+
+Přidá klíčového snímku do scénáře na posunu.
+
+```
 virtual BOOL AddToStoryboardAtOffset(
-    IUIAnimationStoryboard* pStoryboard,  
+    IUIAnimationStoryboard* pStoryboard,
     BOOL bDeepAdd);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pStoryboard*  
- Ukazatel na scénář.  
-  
- *bDeepAdd*  
- Určuje, zda chcete-li přidat klíčový tento klíčový snímek závisí na rekurzivní.  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Hodnota TRUE, pokud klíčový snímek byl úspěšně přidán.  
-  
-### <a name="remarks"></a>Poznámky  
- Tato funkce je volána rámcem přidat klíčový do scénáře na posunu.  
-  
-##  <a name="ckeyframe"></a>  CKeyFrame::CKeyFrame  
- Vytvoří klíčový snímek, který závisí na přechod.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pStoryboard*<br/>
+Ukazatel na scénáře.
+
+*bDeepAdd*<br/>
+Určuje, zda chcete-li přidat klíčový snímek tohoto klíčového snímku závisí na rekurzivně.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Hodnota TRUE, pokud klíčový snímek byl úspěšně přidán.
+
+### <a name="remarks"></a>Poznámky
+
+Tato funkce je volána rozhraním, chcete-li přidat klíčový snímek do scénáře na posunu.
+
+##  <a name="ckeyframe"></a>  CKeyFrame::CKeyFrame
+
+Sestaví klíčový snímek, který závisí na přechod.
+
+```
 CKeyFrame(CBaseTransition* pTransition);
 
- 
+
 CKeyFrame(
-    CBaseKeyFrame* pKeyframe,  
+    CBaseKeyFrame* pKeyframe,
     UI_ANIMATION_SECONDS offset = 0.0);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pTransition*  
- Ukazatel na přechod.  
-  
- *pKeyframe*  
- Ukazatel na klíčový snímek.  
-  
- *Posun*  
- Posun v sekundách, z určeného pKeyframe klíčový snímek.  
-  
-### <a name="remarks"></a>Poznámky  
- Sestavené klíčový snímek bude reprezentovat časového okamžiku v rámci scénáře při ukončení zadaný přechodu.  
-  
-##  <a name="getexistingkeyframe"></a>  CKeyFrame::GetExistingKeyframe  
- Vrátí ukazatel klíčový snímek, který tento klíčový snímek závisí na.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pTransition*<br/>
+Ukazatel na přechod.
+
+*pKeyframe*<br/>
+Ukazatel na klíčový snímek.
+
+*Posun*<br/>
+Posun v sekundách, z určeného pKeyframe klíčový snímek.
+
+### <a name="remarks"></a>Poznámky
+
+Konstruovaný klíčový snímek bude reprezentovat okamžik v čase v rámci scénáře při ukončení zadaného přechodu.
+
+##  <a name="getexistingkeyframe"></a>  CKeyFrame::GetExistingKeyframe
+
+Vrací ukazatel na klíčový snímek tohoto klíčového snímku, na kterém závisí.
+
+```
 CBaseKeyFrame* GetExistingKeyframe();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Neplatný ukazatel na klíčový snímek, nebo hodnota NULL, pokud tento klíčový snímek není závislá na jiných klíčový snímek.  
-  
-### <a name="remarks"></a>Poznámky  
- Toto je přistupující objekt pro tento klíčový snímek závisí na klíčový snímek.  
-  
-##  <a name="getoffset"></a>  CKeyFrame::GetOffset  
- Vrátí posun od jiných klíčový snímek.  
-  
-```  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Platný ukazatel klíčový snímek, nebo hodnota NULL, pokud tento klíčový snímek není závislý na jiných klíčový snímek.
+
+### <a name="remarks"></a>Poznámky
+
+Toto je přístupový objekt pro tento klíčový snímek, na kterém závisí klíčového snímku.
+
+##  <a name="getoffset"></a>  CKeyFrame::GetOffset
+
+Vrátí posun z jiných klíčový snímek.
+
+```
 UI_ANIMATION_SECONDS GetOffset();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Posun v sekundách z jiných klíčový snímek.  
-  
-### <a name="remarks"></a>Poznámky  
- Tato metoda by měla být volána k určení posun v sekundách z jiných klíčový snímek.  
-  
-##  <a name="gettransition"></a>  CKeyFrame::GetTransition  
- Vrací ukazatel na tento klíčový snímek závisí na přechod.  
-  
-```  
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Posun v řádu sekund z jiných klíčový snímek.
+
+### <a name="remarks"></a>Poznámky
+
+Tuto metodu lze volat pro určení posunu v řádu sekund z jiných klíčový snímek.
+
+##  <a name="gettransition"></a>  CKeyFrame::GetTransition
+
+Vrací ukazatel na přechod tento klíčový snímek, na kterém závisí.
+
+```
 CBaseTransition* GetTransition();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- Neplatný ukazatel na přechod nebo hodnota NULL, pokud tento klíčový snímek nezávisí na přechod.  
-  
-### <a name="remarks"></a>Poznámky  
- Toto je přistupující objekt pro tento klíčový snímek závisí na přechod.  
-  
-##  <a name="m_offset"></a>  CKeyFrame::m_offset  
- Určuje posun tento klíčový snímek z klíčový uložené v m_pExistingKeyFrame.  
-  
-```  
-UI_ANIMATION_SECONDS m_offset;  
-```  
-  
-##  <a name="m_pexistingkeyframe"></a>  CKeyFrame::m_pExistingKeyFrame  
- Ukládá ukazatele na existující keframe. Klíčový tento snímek se přidá do scénáře s m_offset do existujícího klíčového snímku.  
-  
-```  
-CBaseKeyFrame* m_pExistingKeyFrame;  
-```  
-  
-##  <a name="m_ptransition"></a>  CKeyFrame::m_pTransition  
- Ukládá do transtion, který začíná na tento klíčový ukazatel.  
-  
-```  
-CBaseTransition* m_pTransition;  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Třídy](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Platný ukazatel do přechodu nebo hodnota NULL, pokud tento klíčový snímek není závislý na přechod.
+
+### <a name="remarks"></a>Poznámky
+
+Toto je přístupový objekt pro tento klíčový snímek, na kterém závisí přechod.
+
+##  <a name="m_offset"></a>  CKeyFrame::m_offset
+
+Určuje posun tento klíčový snímek z klíčového snímku uloženy v m_pExistingKeyFrame.
+
+```
+UI_ANIMATION_SECONDS m_offset;
+```
+
+##  <a name="m_pexistingkeyframe"></a>  CKeyFrame::m_pExistingKeyFrame
+
+Uchovává ukazatel na existující keframe. Tento klíčový snímek se přidá do scénáře s m_offset existující klíčový snímek.
+
+```
+CBaseKeyFrame* m_pExistingKeyFrame;
+```
+
+##  <a name="m_ptransition"></a>  CKeyFrame::m_pTransition
+
+Uchovává ukazatel na transtion, který začíná na tento klíčový snímek.
+
+```
+CBaseTransition* m_pTransition;
+```
+
+## <a name="see-also"></a>Viz také
+
+[Třídy](../../mfc/reference/mfc-classes.md)

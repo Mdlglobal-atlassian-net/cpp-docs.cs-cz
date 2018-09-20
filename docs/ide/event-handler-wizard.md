@@ -16,43 +16,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c2ff441fc38d460e27039d7825753a2011dac3e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: eb3a025c293c3252b52b9ae705e6475b7095f049
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702764"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444093"
 ---
 # <a name="event-handler-wizard"></a>Průvodce obslužnou rutinou události
-Tento průvodce přidá do vámi vybrané třídy obslužnou rutinu události pro ovládací prvek dialogového okna. Pokud chcete přidat obslužnou rutinu události z [okno vlastností](/visualstudio/ide/reference/properties-window), ho můžete přidat pouze do třídy, která implementuje dialogových oken. Zobrazit [přidání obslužné rutiny události pro ovládací prvky dialogového okna](../windows/adding-event-handlers-for-dialog-box-controls.md) Další informace.  
-  
+
+Tento průvodce přidá do vámi vybrané třídy obslužnou rutinu události pro ovládací prvek dialogového okna. Pokud chcete přidat obslužnou rutinu události z [okno vlastností](/visualstudio/ide/reference/properties-window), ho můžete přidat pouze do třídy, která implementuje dialogových oken. Zobrazit [přidání obslužné rutiny události pro ovládací prvky dialogového okna](../windows/adding-event-handlers-for-dialog-box-controls.md) Další informace.
+
 - **Název příkazu**
 
-   Určuje vybraný ovládací prvek, pro který se přidá obslužnou rutinu události. Toto pole je k dispozici.  
-  
+   Určuje vybraný ovládací prvek, pro který se přidá obslužnou rutinu události. Toto pole je k dispozici.
+
 - **Typ zprávy**
 
-   Zobrazí seznam aktuální obslužné rutiny zpráv možné pro vybraný ovládací prvek.  
-  
+   Zobrazí seznam aktuální obslužné rutiny zpráv možné pro vybraný ovládací prvek.
+
 - **Název obslužné rutiny – funkce**
 
-   Zobrazuje název funkce, která se přidá ke zpracování události. Ve výchozím nastavení je název podle typu zprávy a příkaz předcházený "Na". Například pro tlačítko názvem `IDC_BUTTON1`, typ zprávy `BN_CLICKED` zobrazí název obslužné rutiny funkce `OnBnClickedButton1`.  
-  
+   Zobrazuje název funkce, která se přidá ke zpracování události. Ve výchozím nastavení je název podle typu zprávy a příkaz předcházený "Na". Například pro tlačítko názvem `IDC_BUTTON1`, typ zprávy `BN_CLICKED` zobrazí název obslužné rutiny funkce `OnBnClickedButton1`.
+
 - **Seznam tříd**
 
-   Zobrazí dostupné třídy, na které můžete přidat obslužnou rutinu události. Třída pro vybrané dialogové okno se zobrazí červeně.  
-  
+   Zobrazí dostupné třídy, na které můžete přidat obslužnou rutinu události. Třída pro vybrané dialogové okno se zobrazí červeně.
+
 - **Popis obslužné rutiny**
 
-   Poskytuje popis položky vybrané v **typ zprávy** pole. Toto pole je k dispozici.  
-  
+   Poskytuje popis položky vybrané v **typ zprávy** pole. Toto pole je k dispozici.
+
 - **Přidávání a úprava**
 
-   Přidá popisovač zprávy pro vybranou třídu nebo objektu a následně otevírá textového editoru na tuto novou funkci, můžete přidat kód pro obslužnou rutinu oznámení ovládacího prvku.  
-  
+   Přidá popisovač zprávy pro vybranou třídu nebo objektu a následně otevírá textového editoru na tuto novou funkci, můžete přidat kód pro obslužnou rutinu oznámení ovládacího prvku.
+
 - **Úpravy kódu**
 
-   Proto můžete přidat nebo upravit kód pro obslužnou rutinu oznámení ovládací prvek, otevře se textovém editoru na vybrané existující funkce.  
-  
-## <a name="see-also"></a>Viz také  
- [Přidání obslužné rutiny událostí](../ide/adding-an-event-handler-visual-cpp.md)
+   Proto můžete přidat nebo upravit kód pro obslužnou rutinu oznámení ovládací prvek, otevře se textovém editoru na vybrané existující funkce.
+
+## <a name="see-also"></a>Viz také
+
+[Přidání obslužné rutiny událostí](../ide/adding-an-event-handler-visual-cpp.md)

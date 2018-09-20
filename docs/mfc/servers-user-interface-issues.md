@@ -1,5 +1,5 @@
 ---
-title: 'Servery: Problémy uživatelského rozhraní | Microsoft Docs'
+title: 'Servery: Problémy uživatelského rozhraní | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18382d305c8128a70e17651de913f38303286885
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 539486ac1bce56fdc972943abcf8c7de72635f72
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379668"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445552"
 ---
 # <a name="servers-user-interface-issues"></a>Servery: Problémy uživatelského rozhraní
-Serverová aplikace obsahuje řadu funkcí, které musí být přidaný do uživatelského rozhraní k poskytování položek OLE – aplikace typu kontejner. Další informace o nabídky a další prostředky, které je třeba přidat do aplikace server, najdete v části [nabídky a prostředky: serverové doplňky](../mfc/menus-and-resources-server-additions.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Servery](../mfc/servers.md)   
- [Nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md)
+
+Serverová aplikace má řadu funkcí, které musí být přidané do uživatelské rozhraní, které slouží k poskytování položky OLE do aplikace typu kontejner. Další informace o nabídkách a další prostředky, které je potřeba přidat do serverové aplikace, najdete v části [nabídky a prostředky: serverové doplňky](../mfc/menus-and-resources-server-additions.md).
+
+## <a name="see-also"></a>Viz také
+
+[Servery](../mfc/servers.md)<br/>
+[Nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md)
 

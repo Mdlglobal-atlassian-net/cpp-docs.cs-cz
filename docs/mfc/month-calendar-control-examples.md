@@ -1,5 +1,5 @@
 ---
-title: Příklady pro ovládací prvek měsíční kalendář | Microsoft Docs
+title: Příklady pro ovládací prvek měsíční kalendář | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77dcf22e82fda1d0326c35f3e56ced19a1ca05fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 653c81da4cb9cd1a4beff453b4a36847e1837491
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342904"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437063"
 ---
 # <a name="month-calendar-control-examples"></a>Příklady pro ovládací prvek měsíční kalendář
-[CMNCTRL1](../visual-cpp-samples.md) ukázkovou aplikaci ukazuje různé atributy `CMonthCalCtrl` třídy. Ovládací prvek, na samostatné kartě v ukázce nalezen ukazuje základní funkce a umožňuje uživateli dynamicky upravit určité atributy.  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+[CMNCTRL1](../visual-cpp-samples.md) ukázkové aplikaci ukazuje různé atributy `CMonthCalCtrl` třídy. Ovládací prvek, na samostatné kartě ve vzorku, ukazuje základní funkce a umožňuje uživateli změnit dynamicky určité atributy.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

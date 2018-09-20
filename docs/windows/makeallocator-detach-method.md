@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d609b685bb5e3d24d561e66050769b6b7728e691
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3ef07b3de2125c38064bc2a0f15559e8ef6084d4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607159"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443381"
 ---
 # <a name="makeallocatordetach-method"></a>MakeAllocator::Detach – metoda
 
@@ -48,5 +48,5 @@ Při volání **Detach()**, zodpovídáte za odstranění paměti poskytované `
 
 ## <a name="see-also"></a>Viz také
 
-[MakeAllocator – třída](../windows/makeallocator-class.md)  
+[MakeAllocator – třída](../windows/makeallocator-class.md)<br/>
 [Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)

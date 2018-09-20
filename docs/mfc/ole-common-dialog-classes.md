@@ -1,5 +1,5 @@
 ---
-title: Třídy společných dialogů OLE | Microsoft Docs
+title: Společné třídy dialogových oken OLE | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,46 +19,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e3cedbe3cd08a425bd2bde2b4a6ca8c5a493c72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c6ef5a7aed288331322243d316dde58d9f36cbd9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348101"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430420"
 ---
 # <a name="ole-common-dialog-classes"></a>Společné třídy dialogových oken OLE
-Tyto třídy zpracování běžných úloh OLE implementací počet standardní dialogových oken OLE. Obsahují taky konzistentní uživatelské rozhraní pro funkci OLE.  
-  
- [COleDialog](../mfc/reference/coledialog-class.md)  
- Používá rozhraní tak, aby obsahovala běžné implementace pro všechny dialogových oken OLE. Všechny třídy dialogových oken v kategorii uživatelského rozhraní jsou odvozené z této základní třídy. `COleDialog` nelze použít přímo.  
-  
- [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)  
- Zobrazí dialogové okno Vložit objekt, standardní uživatelské rozhraní, pro vkládání nové OLE propojené nebo vložené položky.  
-  
- [COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md)  
- Zobrazí Vložit jinak dialogové okno, standardní uživatelské rozhraní pro implementaci příkaz Upravit Vložit jinak.  
-  
- [COleLinksDialog](../mfc/reference/colelinksdialog-class.md)  
- Zobrazí dialogové okno Upravit odkazy, standardní uživatelské rozhraní pro úpravy informace o propojené položky.  
-  
- [COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md)  
- Zobrazí dialogové okno Změnit ikonu, standardní uživatelské rozhraní pro změny, které ikony přidružené OLE vložené nebo propojené položky.  
-  
- [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md)  
- Zobrazí dialogové okno převést, standardní uživatelské rozhraní pro převod OLE – položky z jednoho typu do jiného.  
-  
- [COlePropertiesDialog](../mfc/reference/colepropertiesdialog-class.md)  
- Zapouzdří běžné vlastnosti OLE dialogové okno. Společná dialogová okna OLE vlastnosti poskytují snadný způsob, jak zobrazit a upravit vlastnosti položky OLE dokumentu v souladu s normami systému Windows.  
-  
- [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md)  
- Zobrazí dialogové okno aktualizace, standardní uživatelské rozhraní k aktualizaci všech propojení v dokumentu. Dialogové okno obsahuje indikátor průběhu k označení, jak blízko aktualizace je dokončen.  
-  
- [COleChangeSourceDialog](../mfc/reference/colechangesourcedialog-class.md)  
- Zobrazí dialogové okno Změnit zdroj, standardní uživatelské rozhraní pro změnu cílová nebo zdrojová odkazu.  
-  
- [COleBusyDialog](../mfc/reference/colebusydialog-class.md)  
- Zobrazí zaneprázdněný Server a Server neodpovídá dialogových oknech, standardní uživatelské rozhraní pro zpracování volání do zaneprázdněn aplikací. Obvykle zobrazují automaticky pomocí `COleMessageFilter` implementace.  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled třídy](../mfc/class-library-overview.md)
+
+Tyto třídy zpracování běžných úkolů OLE implementací počet standardní dialogová okna OLE. Obsahují taky konzistentní uživatelské rozhraní pro funkci OLE.
+
+[Coledialog –](../mfc/reference/coledialog-class.md)<br/>
+Používá rozhraní tak, aby obsahovala běžné implementace pro všechna dialogová okna OLE. Všechny třídy dialogových oken v kategorii uživatelského rozhraní jsou odvozeny z této základní třídy. `COleDialog` nelze použít přímo.
+
+[Coleinsertdialog –](../mfc/reference/coleinsertdialog-class.md)<br/>
+Zobrazí dialogové okno Vložit objekt, tak se standardní uživatelské rozhraní pro vložení OLE nové propojené nebo vložené položky.
+
+[Colepastespecialdialog –](../mfc/reference/colepastespecialdialog-class.md)<br/>
+Zobrazí zvláštní vložení dialogové okno, standardní uživatelské rozhraní pro implementaci příkazu Upravit Vložit jinak.
+
+[Colelinksdialog –](../mfc/reference/colelinksdialog-class.md)<br/>
+Zobrazí dialogové okno Upravit odkazy, standardní uživatelské rozhraní pro úpravu informace o propojené položky.
+
+[Colechangeicondialog –](../mfc/reference/colechangeicondialog-class.md)<br/>
+Zobrazí dialogové okno změny ikony, standardní uživatelské rozhraní, že změníte ikony přidružené k OLE vložené nebo propojené položky.
+
+[Coleconvertdialog –](../mfc/reference/coleconvertdialog-class.md)<br/>
+Zobrazí dialogové okno převést, standardní uživatelské rozhraní pro převod OLE – položky z jednoho typu na jiný.
+
+[Colepropertiesdialog –](../mfc/reference/colepropertiesdialog-class.md)<br/>
+Zapouzdřuje dialogové okno vlastnosti OLE Windows běžné. Společná dialogová okna OLE vlastnosti poskytují snadný způsob, jak zobrazit a upravit vlastnosti dokumentu položky OLE v souladu se standardy Windows.
+
+[Coleupdatedialog –](../mfc/reference/coleupdatedialog-class.md)<br/>
+Zobrazí dialogové okno aktualizace, standardní uživatelské rozhraní pro aktualizaci všech odkazů v dokumentu. Dialogové okno obsahuje indikátor průběhu označuje, jak blízko bude dokončen.
+
+[Colechangesourcedialog –](../mfc/reference/colechangesourcedialog-class.md)<br/>
+Zobrazí dialogové okno Změnit zdroj, standardní uživatelské rozhraní pro změnu cílová nebo zdrojová odkazu.
+
+[Colebusydialog –](../mfc/reference/colebusydialog-class.md)<br/>
+Zobrazí Serverbusy dialogových oknech a Server neodpovídá, standardní uživatelské rozhraní pro zpracování volání zaneprázdněný aplikací. Obvykle automaticky zobrazí `COleMessageFilter` implementace.
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../mfc/class-library-overview.md)
 

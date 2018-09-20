@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4df3f6f72ec7a83186cc3d96b2dda837bdd1cfff
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a27120869c464a9009f8d19cf0f84bfde7a02e96
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207993"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446052"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
@@ -36,7 +36,7 @@ Umožňuje specifikace výchozí hodnotu pro zadaný nepovinný parametr.
 
 ### <a name="parameters"></a>Parametry
 
-*value*  
+*value*<br/>
 Výchozí hodnota pro parametr.
 
 ## <a name="remarks"></a>Poznámky
@@ -84,10 +84,10 @@ Další informace najdete v tématu [kontexty atributů](../windows/attribute-co
 
 ## <a name="see-also"></a>Viz také
 
-[IDL – atributy](../windows/idl-attributes.md)  
-[Atributy parametru](../windows/parameter-attributes.md)  
-[out](../windows/out-cpp.md)  
-[retval](../windows/retval.md)  
-[in](../windows/in-cpp.md)  
-[pointer_default](../windows/pointer-default.md)  
+[IDL – atributy](../windows/idl-attributes.md)<br/>
+[Atributy parametru](../windows/parameter-attributes.md)<br/>
+[out](../windows/out-cpp.md)<br/>
+[retval](../windows/retval.md)<br/>
+[in](../windows/in-cpp.md)<br/>
+[pointer_default](../windows/pointer-default.md)<br/>
 [Jedinečný](../windows/unique-cpp.md)  

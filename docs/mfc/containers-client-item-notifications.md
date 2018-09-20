@@ -1,5 +1,5 @@
 ---
-title: 'Kontejnery: Oznámení klientských položek | Microsoft Docs'
+title: 'Kontejnery: Oznámení klientských položek | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,47 +16,49 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d76717e68e37769cf55dceb4492ed78031c49e10
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 5db5170b6c946e4bfeda99a3275f045a07fc9beb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928221"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435217"
 ---
 # <a name="containers-client-item-notifications"></a>Kontejnery: Oznámení klientských položek
-Tento článek popisuje přepisovatelné funkce, které volá rozhraní MFC framework, pokud server aplikace upravovat položky v dokumentu klientské aplikace.  
-  
- [COleClientItem](../mfc/reference/coleclientitem-class.md) definuje několik přepisovatelné funkce, které se nazývají v reakci na požadavky ze součásti aplikace, což se označuje taky jako serverové aplikace. Tyto k přepisovatelným obvykle fungují jako oznámení. Informují aplikace kontejneru různé události, jako je například posouvání, aktivaci nebo změně pozice a změny, které uživatel provede při úpravách nebo jinak manipulace s položky.  
-  
- Rozhraní framework upozorní aplikace kontejneru změn prostřednictvím volání `COleClientItem::OnChange`, jejíž implementace je vyžadován přepisovatelné funkce. Tato funkce chráněné přijímá dva argumenty. Určuje první z důvodu, že server změněn položky:  
-  
-|Oznámení|Význam|  
-|------------------|-------------|  
-|**OLE_CHANGED**|Došlo ke změně vzhledu položky OLE.|  
-|**OLE_SAVED**|Položka OLE se uložila.|  
-|**OLE_CLOSED**|Položka OLE bylo ukončeno.|  
-|**OLE_RENAMED**|Server dokument obsahující položky OLE byl přejmenován.|  
-|**OLE_CHANGED_STATE**|Tato položka OLE změněna z jednoho stavu do jiného.|  
-|**OLE_CHANGED_ASPECT**|Aspekt kreslení OLE položka byla změněna rozhraní.|  
-  
- Tyto hodnoty jsou od **OLE_NOTIFICATION** výčtu, která je definována v AFXOLE. H.  
-  
- Druhým argumentem této funkce určuje, jak se změnila položka nebo co stavu, že má zadali:  
-  
-|Po prvním argumentem|Druhý argument|  
-|----------------------------|---------------------|  
-|**OLE_SAVED** nebo **OLE_CLOSED**|Se nepoužívá.|  
-|**OLE_CHANGED**|Určuje aspekt OLE položky, které se změnily.|  
-|**OLE_CHANGED_STATE**|Popisuje stav, který vkládáte (*emptyState*, *loadedState*, *openState*, *activeState*, nebo  *activeUIState*).|  
-  
- Další informace o stavy klientských položek můžete předpokládat, najdete v tématu [kontejnery: stavy klientských položek](../mfc/containers-client-item-states.md).  
-  
- Volání framework `COleClientItem::OnGetItemPosition` při položku aktivování pro úpravy na místě. Implementace je vyžadována pro aplikace, které podporují úpravy na místě. Průvodce aplikací MFC poskytuje základní implementaci, která přiřadí souřadnice položky k `CRect` objekt, který se předá jako argument k `OnGetItemPosition`.  
-  
- Pokud položku OLE pozici nebo velikost změní během úprav na místě, musí být aktualizované kontejneru informace o umístění a obdélníky výstřižek položky a server musí obdržet informace o změnách. Volání framework `COleClientItem::OnChangeItemPosition` pro tento účel. Průvodce aplikací MFC poskytuje přepsání, která volá funkce základní třídy. Upravíte funkce, která zapisuje Průvodce aplikací pro vaše `COleClientItem`-odvozené třídy tak, aby funkce aktualizuje všechny informace o zachována objektu klientských položek.  
-  
-## <a name="see-also"></a>Viz také  
- [Kontejnery](../mfc/containers.md)   
- [Kontejnery: Stavy klientských položek](../mfc/containers-client-item-states.md)   
- [COleClientItem::OnChangeItemPosition](../mfc/reference/coleclientitem-class.md#onchangeitemposition)
+
+Tento článek popisuje přepisovatelné funkce, které rozhraní MFC volá, když aplikace serveru upravit položky v dokumentu klientské aplikace.
+
+[COleClientItem](../mfc/reference/coleclientitem-class.md) definuje několik přepisovatelné funkce, které jsou volány v reakci na žádosti z komponenty aplikace, což se označuje taky jako serverové aplikace. Tyto k přepisovatelným obvykle fungují jako oznámení. Informují aplikace typu kontejner různé události, jako je například posouvání, aktivace nebo změna pozice a změn, které uživatel provede při úpravách nebo jinak manipulace s položky.
+
+Rozhraní framework oznámí svou aplikaci typu kontejner změn přímo pomocí volání `COleClientItem::OnChange`, přepisovatelné funkce, jejichž implementace se vyžaduje. Tato funkce chráněné přijímá dva argumenty. Určuje první důvodem že ke změně serveru položky:
+
+|Oznámení|Význam|
+|------------------|-------------|
+|**OLE_CHANGED**|Vzhled položky OLE se změnila.|
+|**OLE_SAVED**|Položky OLE se uložil.|
+|**OLE_CLOSED**|Položky OLE se zavřel.|
+|**OLE_RENAMED**|Server dokument obsahující položky OLE se přejmenoval.|
+|**OLE_CHANGED_STATE**|Položky OLE se změnil z jednoho stavu do druhého.|
+|**OLE_CHANGED_ASPECT**|Aspekt příkazu pro vykreslení položky OLE se změnil v rámci rozhraní.|
+
+Tyto hodnoty jsou od **OLE_NOTIFICATION** výčet, který je definován v AFXOLE. H.
+
+Druhý argument pro tuto funkci určuje, jak položka se změnila nebo stavu, přechodu:
+
+|Pokud je první argument|Druhý argument|
+|----------------------------|---------------------|
+|**OLE_SAVED** nebo **OLE_CLOSED**|Se nepoužívá.|
+|**OLE_CHANGED**|Určuje aspekt položky OLE, které se změnily.|
+|**OLE_CHANGED_STATE**|Popisuje stav zadání (*emptyState*, *loadedState*, *openState*, *activeState*, nebo  *activeUIState*).|
+
+Další informace o stavech klientské položky, můžete předpokládat, naleznete v tématu [kontejnery: stavy klientských položek](../mfc/containers-client-item-states.md).
+
+Rámec volá `COleClientItem::OnGetItemPosition` když se položka aktivuje pro místní úpravy. Implementace je vyžadována pro aplikace, které podporují místní úpravy. Průvodce aplikací MFC poskytuje základní implementaci, která přiřadí položky souřadnice, kde `CRect` objekt, který je předán jako argument `OnGetItemPosition`.
+
+Pokud během místní úpravy se změní umístění a velikost položky OLE, musí být aktualizováno kontejneru informace o umístění a obdélníky výstřižek položky a server musí přijímat informace o změnách. Rámec volá `COleClientItem::OnChangeItemPosition` pro tento účel. Průvodce aplikací MFC poskytuje přepsání, která volá funkci základní třídy. Byste měli upravovat funkce, která zapisuje Průvodce aplikace pro vaše `COleClientItem`-odvozené třídy tak, aby funkce aktualizuje všechny informace, které uchovávají objektem klientských položek.
+
+## <a name="see-also"></a>Viz také
+
+[Kontejnery](../mfc/containers.md)<br/>
+[Kontejnery: Stavy klientských položek](../mfc/containers-client-item-states.md)<br/>
+[COleClientItem::OnChangeItemPosition](../mfc/reference/coleclientitem-class.md#onchangeitemposition)
 

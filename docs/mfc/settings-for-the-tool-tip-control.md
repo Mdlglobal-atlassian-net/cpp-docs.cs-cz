@@ -1,5 +1,5 @@
 ---
-title: Nastavení nástroje pro ovládací prvek tlačítka | Microsoft Docs
+title: Nastavení pro ovládací prvek popis tlačítka | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39de60d17dae5a6d7b2965350162117d049c29c8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6d0adfd1c7a7ae1e1f36fa8dd53610d19ad8e7b2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951111"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379551"
 ---
 # <a name="settings-for-the-tool-tip-control"></a>Nastavení pro ovládací prvek popis tlačítka
-Můžete nastavit ovládacím prvkem popis tlačítka ([CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)) Chcete-li být aktivní nebo neaktivní. Když nastavíte ji jako aktivní, ovládacím prvkem popis tlačítka se zobrazí, pokud se ukazatel na nástroj. Když nastavíte ho do neaktivního stavu, ovládacím prvkem popis tlačítka nezobrazí, i když na nástroj se nachází kurzor. Volání [aktivovat](../mfc/reference/ctooltipctrl-class.md#activate) aktivovat nebo deaktivovat prvkem popis tlačítka.  
-  
- Můžete nastavit active Popis zobrazený popis tlačítka, pokud se ukazatel na nástroj, zda okno vlastníka prvkem popis tlačítka je aktivní nebo neaktivní, pomocí TTS_ALWAYSTIP styl. Pokud nepoužijete tento styl, ovládacím prvkem popis tlačítka se zobrazí, když je aktivní okno nástroje vlastníka, ale ne v případě, že je neaktivní.  
-  
- Většina aplikací obsahovat panely nástrojů s nástroji, které odpovídají příkazy nabídky. Tyto nástroje je vhodné pro ovládacím prvkem popis tlačítka pro zobrazení textu stejné jako odpovídající položky nabídky. Systém automaticky odstraní ampersand (&) akcelerátoru znaky z všechny řetězce předaný prvkem popis tlačítka, pokud má styl TTS_NOPREFIX ovládacího prvku.  
-  
-## <a name="see-also"></a>Viz také  
- [Použití objektu CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Můžete nastavit ovládacím prvkem popis tlačítka nástroje ([CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)) Chcete-li být aktivní nebo neaktivní. Když se nastavuje jako aktivní, ovládacím prvkem popis tlačítka nástroje se zobrazí, když ukazatel zůstane na nástroj. Pokud ji do neaktivního stavu, ovládacím prvkem popis tlačítka nástroje nezobrazí, i když ukazatel zůstane na nástroj. Volání [aktivovat](../mfc/reference/ctooltipctrl-class.md#activate) aktivovat nebo deaktivovat ovládacím prvkem popis tlačítka nástroj.
+
+Můžete nastavit aktivní popis tlačítka, který zobrazí popis tlačítka, když je ukazatel myši na nástroje, zda okno vlastníka ovládacím prvkem popis tlačítka nástroj je aktivní nebo neaktivní, s použitím stylu TTS_ALWAYSTIP. Pokud nepoužijete tento styl, zobrazí se ovládacím prvkem popis tlačítka nástroj při aktivním nástroje nadřazenému oknu, ale ne v případě, že je neaktivní.
+
+Většina aplikací obsahují panely nástrojů s nástroji, které odpovídají nabídce příkazů. Pro takové nástroje je vhodné pro ovládacím prvkem popis tlačítka nástroj zobrazit stejný text jako příslušnou položku. Systém automaticky odstraní ampersand (&) akcelerátoru znaků z řetězců všechny předán ovládacím prvkem popis tlačítka nástroj, pokud ovládací prvek nemá TTS_NOPREFIX style.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CToolTipCtrl](../mfc/using-ctooltipctrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

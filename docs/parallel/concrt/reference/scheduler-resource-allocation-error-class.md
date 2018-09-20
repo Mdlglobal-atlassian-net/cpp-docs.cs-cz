@@ -19,64 +19,69 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ede37cec7b654c2d5ead32f117e4fe76f28fa60
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f8639e70e74f122da8ffa2d58501ad04884aa306
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101693"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437141"
 ---
 # <a name="schedulerresourceallocationerror-class"></a>scheduler_resource_allocation_error – třída
-Tato třída popisuje výjimku vyvolána, protože se nepodařilo získat důležitých prostředků v modulu Runtime souběžnosti.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+
+Tato třída popisuje výjimku vyvolána, protože se nepodařilo získat důležitých prostředků v modulu Runtime souběžnosti.
+
+## <a name="syntax"></a>Syntaxe
+
 ```
 class scheduler_resource_allocation_error : public std::exception;
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[scheduler_resource_allocation_error](#ctor)|Přetíženo. Vytvoří `scheduler_resource_allocation_error` objektu.|  
-  
-### <a name="public-methods"></a>Veřejné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[get_error_code](#get_error_code)|Vrátí kód chyby, který způsobil výjimku.|  
-  
-## <a name="remarks"></a>Poznámky  
- Toto se obvykle výjimka při volání do operačního systému z v rámci modulu Runtime souběžnosti selže. Kód chyby, která by obvykle vrácená z volání metody Win32 `GetLastError` je převedena na hodnotu typu `HRESULT` a je možné načíst pomocí `get_error_code` metody.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `exception`  
-  
- `scheduler_resource_allocation_error`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** concrt.h  
-  
- **Namespace:** souběžnosti  
-  
-##  <a name="get_error_code"></a> get_error_code – 
+```
 
- Vrátí kód chyby, který způsobil výjimku.  
-  
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[scheduler_resource_allocation_error](#ctor)|Přetíženo. Vytvoří `scheduler_resource_allocation_error` objektu.|
+
+### <a name="public-methods"></a>Veřejné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[get_error_code](#get_error_code)|Vrátí kód chyby, který způsobil výjimku.|
+
+## <a name="remarks"></a>Poznámky
+
+Toto se obvykle výjimka při volání do operačního systému z v rámci modulu Runtime souběžnosti selže. Kód chyby, která by obvykle vrácená z volání metody Win32 `GetLastError` je převedena na hodnotu typu `HRESULT` a je možné načíst pomocí `get_error_code` metody.
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`exception`
+
+`scheduler_resource_allocation_error`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** concrt.h
+
+**Namespace:** souběžnosti
+
+##  <a name="get_error_code"></a> get_error_code –
+
+Vrátí kód chyby, který způsobil výjimku.
+
 ```
 HRESULT get_error_code() const throw();
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
- `HRESULT` Hodnotou chyby, který způsobil výjimku.  
-  
-##  <a name="ctor"></a> scheduler_resource_allocation_error – 
+```
 
- Vytvoří `scheduler_resource_allocation_error` objektu.  
-  
+### <a name="return-value"></a>Návratová hodnota
+
+`HRESULT` Hodnotou chyby, který způsobil výjimku.
+
+##  <a name="ctor"></a> scheduler_resource_allocation_error –
+
+Vytvoří `scheduler_resource_allocation_error` objektu.
+
 ```
 scheduler_resource_allocation_error(
     _In_z_ const char* _Message,
@@ -84,14 +89,16 @@ scheduler_resource_allocation_error(
 
 explicit _CRTIMP scheduler_resource_allocation_error(
     HRESULT _Hresult) throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *_TEXT*<br/>
-Popisná zpráva chyby.  
-  
+Popisná zpráva chyby.
+
 *_Hresult*<br/>
-`HRESULT` Hodnotou chyby, který způsobil výjimku.  
-  
-## <a name="see-also"></a>Viz také  
- [concurrency – obor názvů](concurrency-namespace.md)
+`HRESULT` Hodnotou chyby, který způsobil výjimku.
+
+## <a name="see-also"></a>Viz také
+
+[concurrency – obor názvů](concurrency-namespace.md)

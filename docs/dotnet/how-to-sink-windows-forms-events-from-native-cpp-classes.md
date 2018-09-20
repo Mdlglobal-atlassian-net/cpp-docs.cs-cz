@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: jímky událostí modelu Windows Forms z nativních tříd jazyka C++ | Microsoft Docs'
+title: 'Postupy: zpracování událostí modelu Windows Forms z nativních tříd jazyka C++ | Dokumentace Microsoftu'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -18,56 +18,58 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0fec32bf179424b5ec0164e4511f74eae44f7320
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9316d27637d335bc0e3a71656a5d7b9c8796ec28
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33130422"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424980"
 ---
 # <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>Postupy: Zpracování událostí modelu Windows Forms z nativních tříd jazyka C++
-Můžete povolit nativní třídy C++ přijímat zpětná volání ze spravovaných událostí z ovládacích prvků Windows Forms nebo jiných formulářů s formátem mapy maker MFC. Zpracování událostí ve zobrazeních a dialogových oknech se podobá provedení stejné úlohy pro ovládací prvky.  
-  
- K tomu budete muset:  
-  
--   Připojit `OnClick` obslužné rutiny události pro ovládací prvek s využitím [MAKE_DELEGATE –](../mfc/reference/delegate-and-interface-maps.md#make_delegate).  
-  
--   Vytvořit mapu delegáta pomocí [BEGIN_DELEGATE_MAP –](../mfc/reference/delegate-and-interface-maps.md#begin_delegate_map), [END_DELEGATE_MAP –](../mfc/reference/delegate-and-interface-maps.md#end_delegate_map), a [EVENT_DELEGATE_ENTRY –](../mfc/reference/delegate-and-interface-maps.md#event_delegate_entry).  
-  
- Tato ukázka pokračuje v práci, jste to udělali v [postup: provést vazby dat k DDX/DDV s modelem Windows Forms](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).  
-  
- Nyní, kterou přidružíte váš ovládací prvek MFC (`m_MyControl`) s delegátem obslužné rutiny spravovaného událostí nazvané `OnClick` pro spravovaný <xref:System.Windows.Forms.Control.Click> událostí.  
-  
-### <a name="to-attach-the-onclick-event-handler"></a>Připojit obslužné rutiny události OnClick:  
-  
-1.  Přidejte následující kód do implementace BOOL CMFC01Dlg::OnInitDialog:  
-  
-    ```  
-    m_MyControl.GetControl()->button1->Click += MAKE_DELEGATE( System::EventHandler, OnClick );  
-    ```  
-  
-2.  Přidejte následující kód do veřejného oddílu v deklaraci třídy CMFC01Dlg: veřejné CDialog.  
-  
-    ```  
-    // delegate map  
-    BEGIN_DELEGATE_MAP( CMFC01Dlg )  
-    EVENT_DELEGATE_ENTRY( OnClick, System::Object^, System::EventArgs^ )  
-    END_DELEGATE_MAP()  
-  
-    void OnClick( System::Object^ sender, System::EventArgs^ e );  
-    ```  
-  
-3.  Nakonec přidejte implementaci pro `OnClick` do CMFC01Dlg.cpp:  
-  
-    ```  
-    void CMFC01Dlg::OnClick(System::Object^ sender, System::EventArgs^ e)  
-    {  
-        AfxMessageBox(_T("Button clicked"));  
-    }  
-    ```  
-  
-## <a name="see-also"></a>Viz také  
- [MAKE_DELEGATE –](../mfc/reference/delegate-and-interface-maps.md#make_delegate)   
- [BEGIN_DELEGATE_MAP –](../mfc/reference/delegate-and-interface-maps.md#begin_delegate_map)   
- [END_DELEGATE_MAP –](../mfc/reference/delegate-and-interface-maps.md#end_delegate_map)   
- [EVENT_DELEGATE_ENTRY –](../mfc/reference/delegate-and-interface-maps.md#event_delegate_entry)
+
+Můžete povolit nativních tříd jazyka C++ přijmout zpětná volání z spravovaných událostí vyvolaných z ovládacích prvků Windows Forms nebo jiných formulářů s formátem mapy maker MFC. Zpracování událostí v zobrazeních a dialogových oknech se podobá provedení stejné úlohy pro ovládací prvky.
+
+Chcete-li to provést, budete muset:
+
+- Připojit `OnClick` obslužnou rutinu události pro ovládací prvek s využitím [MAKE_DELEGATE](../mfc/reference/delegate-and-interface-maps.md#make_delegate).
+
+- Vytvořit delegáta mapy pomocí [BEGIN_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#begin_delegate_map), [END_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#end_delegate_map), a [EVENT_DELEGATE_ENTRY](../mfc/reference/delegate-and-interface-maps.md#event_delegate_entry).
+
+Tento příklad pokračuje v práci, jste to udělali v [jak: proveďte DDX/DDV datové vazby pomocí Windows Forms](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
+
+Nyní, váš ovládací prvek MFC přidružíte (`m_MyControl`) s spravovaná událost obslužné rutiny delegáta volá `OnClick` pro spravovanou <xref:System.Windows.Forms.Control.Click> událostí.
+
+### <a name="to-attach-the-onclick-event-handler"></a>Obslužná rutina události OnClick připojit:
+
+1. Přidejte následující kód do implementace BOOL CMFC01Dlg::OnInitDialog:
+
+    ```
+    m_MyControl.GetControl()->button1->Click += MAKE_DELEGATE( System::EventHandler, OnClick );
+    ```
+
+1. Přidejte následující kód do veřejné sekce v deklaraci třídy CMFC01Dlg: veřejné CDialog.
+
+    ```
+    // delegate map
+    BEGIN_DELEGATE_MAP( CMFC01Dlg )
+    EVENT_DELEGATE_ENTRY( OnClick, System::Object^, System::EventArgs^ )
+    END_DELEGATE_MAP()
+
+    void OnClick( System::Object^ sender, System::EventArgs^ e );
+    ```
+
+1. Nakonec přidejte implementaci pro `OnClick` do CMFC01Dlg.cpp:
+
+    ```
+    void CMFC01Dlg::OnClick(System::Object^ sender, System::EventArgs^ e)
+    {
+        AfxMessageBox(_T("Button clicked"));
+    }
+    ```
+
+## <a name="see-also"></a>Viz také
+
+[MAKE_DELEGATE](../mfc/reference/delegate-and-interface-maps.md#make_delegate)<br/>
+[BEGIN_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#begin_delegate_map)<br/>
+[END_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#end_delegate_map)<br/>
+[EVENT_DELEGATE_ENTRY](../mfc/reference/delegate-and-interface-maps.md#event_delegate_entry)

@@ -1,5 +1,5 @@
 ---
-title: Použití seznamů obrázků s ovládacími prvky záhlaví | Microsoft Docs
+title: Použití seznamů obrázků s ovládacími prvky záhlaví | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2da3737b54c53903f8fc8ff30cccba6165cbde45
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 477ed175e6f8e81acdae5c873d1436e6c3dbbd60
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382776"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423556"
 ---
 # <a name="using-image-lists-with-header-controls"></a>Použití seznamů obrázků s ovládacími prvky záhlaví
-Položky hlavičky mít možnost zobrazit obrázek v rámci položky záhlaví. Tuto bitovou kopii, uložené v seznamu přidruženou bitovou kopii, je velikosti 16 x 16 pixelů a má stejné vlastnosti jako ikona obrázků použitých v ovládacím prvku zobrazení seznamu. Aby bylo možné úspěšně implementovat toto chování, musíte nejprve vytvořit a Inicializace seznamu obrázků, přidružit seznamu pomocí ovládacího prvku záhlaví a potom upravte atributy položky záhlaví, který se zobrazí bitovou kopii.  
-  
- Následující postup ukazuje podrobnosti, pomocí ukazatele do ovládacího prvku záhlaví (`m_pHdrCtrl`) a ukazatel na seznamu obrázků (`m_pHdrImages`).  
-  
-### <a name="to-display-an-image-in-a-header-item"></a>Chcete zobrazit obrázek v položky záhlaví  
-  
-1.  Vytvoření nového seznamu obrázků (nebo použijte existující objekt seznamu image) pomocí [CImageList](../mfc/reference/cimagelist-class.md) konstruktoru, ukládání výsledné ukazatele.  
-  
-2.  Inicializace nového objektu seznamu image voláním [CImageList::Create](../mfc/reference/cimagelist-class.md#create). Následující kód je jedním z příkladů tohoto volání.  
-  
-     [!code-cpp[NVC_MFCControlLadenDialog#15](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_1.cpp)]  
-  
-3.  Přidání bitové kopie pro každou položku záhlaví. Následující kód přidá dvě předdefinované bitové kopie.  
-  
-     [!code-cpp[NVC_MFCControlLadenDialog#16](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_2.cpp)]  
-  
-4.  Přidružení seznamu obrázků s ovládacím prvkem záhlaví s volání [CHeaderCtrl::SetImageList](../mfc/reference/cheaderctrl-class.md#setimagelist).  
-  
-5.  Upravte položky záhlaví zobrazíte bitové kopie ze seznamu přidruženou bitovou kopii. Následující příklad přiřadí první obrázek z `m_phdrImages`, na první položku záhlaví `m_pHdrCtrl`.  
-  
-     [!code-cpp[NVC_MFCControlLadenDialog#17](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_3.cpp)]  
-  
- Podrobné informace o používá hodnoty parametrů naleznete příslušné [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md).  
-  
+
+Položky hlavičky se budou moct zobrazit obrázek položky záhlaví. Tuto bitovou kopii, uložené v seznamu přidružených obrázků, je 16 × 16 pixelů a má stejné vlastnosti jako obrázky ikon používaných pro ovládací prvek zobrazení seznamu. Aby bylo možné úspěšně implementovat toto chování, musíte nejprve vytvořit a inicializovat seznam obrázků, přidružení seznamu pomocí ovládacího prvku záhlaví a změňte atributy, které se zobrazí obrázek položky záhlaví.
+
+Následující postup ukazuje podrobnosti, pomocí ukazatele na ovládacím prvku hlavička (`m_pHdrCtrl`) a ukazatel na seznamu obrázků (`m_pHdrImages`).
+
+### <a name="to-display-an-image-in-a-header-item"></a>Pro zobrazení obrázku položky záhlaví
+
+1. Vytvoření nového seznamu obrázků (nebo použijte existující objekt seznam obrázků) pomocí [atributu CImageList](../mfc/reference/cimagelist-class.md) konstruktor ukládání výsledný ukazatel.
+
+1. Inicializovat nový objekt seznamu obrázků voláním [CImageList::Create](../mfc/reference/cimagelist-class.md#create). Následující kód je jedním z příkladů tohoto volání.
+
+     [!code-cpp[NVC_MFCControlLadenDialog#15](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_1.cpp)]
+
+1. Přidání obrázků pro jednotlivé položky záhlaví. Následující kód přidá dvě předdefinované bitové kopie.
+
+     [!code-cpp[NVC_MFCControlLadenDialog#16](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_2.cpp)]
+
+1. Přidružení seznamu obrázků s ovládacím prvkem záhlaví voláním [CHeaderCtrl::SetImageList](../mfc/reference/cheaderctrl-class.md#setimagelist).
+
+1. Upravte položky záhlaví pro zobrazení obrázku ze seznamu přidružené image. Následující příklad přiřadí první image z `m_phdrImages`, na první položku záhlaví `m_pHdrCtrl`.
+
+     [!code-cpp[NVC_MFCControlLadenDialog#17](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_3.cpp)]
+
+Podrobné informace o používá hodnoty parametrů naleznete v příslušné [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md).
+
 > [!NOTE]
->  Je možné, že více ovládacích prvků pomocí stejné seznamu obrázků. Například v ovládacím prvku zobrazení seznamu standard, může dojít seznamu obrázků (o velikosti 16 x 16 pixelů Image) používané zobrazení malé ikony ovládacího prvku zobrazení seznamu a položek záhlaví ovládacího prvku zobrazení seznamu.  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CHeaderCtrl](../mfc/using-cheaderctrl.md)
+>  Je možné mít více ovládacích prvků pomocí stejného seznamu obrázků. Například v ovládacím prvku seznamu standardní zobrazení, může dojít obrázek seznamu (16 × 16 pixelů imagí) používaných zobrazení malou ikonu ovládacího prvku zobrazení seznamu a položky záhlaví ovládacího prvku zobrazení seznamu.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CHeaderCtrl](../mfc/using-cheaderctrl.md)
 

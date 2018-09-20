@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ce2f65fd740fd2bf133d65b25cbb52838c53dd2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ba6ed66359ee833b51154e47f8f6c26c0de8994c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601209"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408944"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>Explicitní přepsání (rozšíření komponent C++)
 
@@ -37,16 +37,16 @@ overriding-function-declarator = function { overriding-function-definition }
 
 ### <a name="parameters"></a>Parametry
 
-*přepsání deklarátorem funkce*  
+*přepsání deklarátorem funkce*<br/>
 Návratový typ, název a argumentu seznamu přepisující funkce.  Všimněte si, že není nutné mít stejný název jako funkce přepsání přepisující funkce.
 
-*Typ*  
+*Typ*<br/>
 Základní typ, který obsahuje funkci, kterou chcete přepsat.
 
-*– funkce*  
+*– funkce*<br/>
 Čárkami oddělený seznam jednoho nebo více názvy funkcí, které chcete přepsat.
 
-*přepsání definice funkce*  
+*přepsání definice funkce*<br/>
 Příkazy tělo funkce, které definují přepisující funkce.
 
 ### <a name="remarks"></a>Poznámky

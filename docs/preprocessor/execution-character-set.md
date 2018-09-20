@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f6851813172c39cd3c8c5dfe19b4d12ba81d090
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: a387b051bbecedd1c6c4dba8fc3881a3c1f3a4b9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42465650"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446813"
 ---
 # <a name="executioncharacterset"></a>execution_character_set
 Určuje znakovou sadu spuštění použitou pro literálech řetězců a znaků. Tato direktiva, není nutná pro literály označené předponou u8.  
@@ -50,6 +50,6 @@ Ve výchozím nastavení používá Visual Studio jako zdrojovou znakovou sadou 
   
 ## <a name="see-also"></a>Viz také  
  
-[Direktivy pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
-[/ Execution-Charset (nastavení znakové sady spuštění)](../build/reference/execution-charset-set-execution-character-set.md)   
+[Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
+[/ Execution-Charset (nastavení znakové sady spuštění)](../build/reference/execution-charset-set-execution-character-set.md)<br/>
 [/utf-8 (nastavení zdrojové znakové sady a spustitelné znakové sady na UTF-8)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

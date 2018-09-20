@@ -1,5 +1,5 @@
 ---
-title: Vytváření Nemodálních dialogových oken | Microsoft Docs
+title: Vytváření Nemodálních dialogových oken | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2055312c7418b14c9b274649db8faa297554257e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77b80f66f2956e71b90e4d939a0fb74aef28edb1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340990"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407033"
 ---
 # <a name="creating-modeless-dialog-boxes"></a>Vytváření nemodálních dialogových oken
-Pro pole dialogového okna bez režimu je nutné zadat vlastní veřejný konstruktor ve vlastní třídy dialogového okna. Vytvoření nemodálního dialogové okno, volání veřejný konstruktor a pak zavolají objektu dialogového okna [vytvořit](../mfc/reference/cdialog-class.md#create) – členská funkce načíst prostředku dialogového okna. Můžete volat **vytvořit** během nebo po volání konstruktoru. Pokud má vlastnost prostředku dialogového okna **ws_visible –**, okamžitě se zobrazí dialogové okno. Pokud ne, musí volat jeho [ShowWindow](../mfc/reference/cwnd-class.md#showwindow) – členská funkce.  
-  
-## <a name="see-also"></a>Viz také  
- [Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
+
+Pro nemodální dialogové okno je nutné zadat vlastní veřejný konstruktor ve vlastní třídy dialogového okna. Vytvoření nemodálního dialogového okna, zavolejte veřejný konstruktor a poté zavolejte objektu dialogového okna [vytvořit](../mfc/reference/cdialog-class.md#create) členská funkce se načíst prostředek dialogu. Můžete volat **vytvořit** během nebo po volání konstruktoru. Pokud má vlastnost prostředku dialogového okna **WS_VISIBLE**, okamžitě se zobrazí dialogové okno. Pokud ne, je nutné volat jeho [ShowWindow](../mfc/reference/cwnd-class.md#showwindow) členskou funkci.
+
+## <a name="see-also"></a>Viz také
+
+[Životní cyklus dialogového okna](../mfc/life-cycle-of-a-dialog-box.md)
 

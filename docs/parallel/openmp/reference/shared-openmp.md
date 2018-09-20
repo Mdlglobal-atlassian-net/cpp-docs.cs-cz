@@ -16,42 +16,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 078d4b01d2c797fa11c3603c79a341f75e11f18c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 118fa1eb75e8b943b6b490c158e5e21522d57e6c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46115473"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441327"
 ---
 # <a name="shared-openmp"></a>shared (OpenMP)
-Určuje, že jeden nebo více proměnných by měl být sdílena mezi všemi vlákny.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-shared(var)  
-```  
-  
+
+Určuje, že jeden nebo více proměnných by měl být sdílena mezi všemi vlákny.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+shared(var)
+```
+
 ### <a name="parameters"></a>Parametry
-  
+
 *var*<br/>
-Jeden nebo více proměnných sdílet. Pokud je zadán více než jednu proměnnou, oddělte názvy proměnných čárkou.  
-  
-## <a name="remarks"></a>Poznámky  
- Dalším způsobem, jak sdílet proměnné mezi vlákny je [copyprivate](../../../parallel/openmp/reference/copyprivate.md) klauzuli.  
-  
- `shared` platí pro následující direktivy:  
-  
--   [for](../../../parallel/openmp/reference/for-openmp.md)  
-  
--   [parallel](../../../parallel/openmp/reference/parallel.md)  
-  
--   [Oddíly](../../../parallel/openmp/reference/sections-openmp.md)  
-  
- Další informace najdete v tématu [2.7.2.4 sdílené](../../../parallel/openmp/2-7-2-4-shared.md).  
-  
-## <a name="example"></a>Příklad  
- Zobrazit [privátní](../../../parallel/openmp/reference/private-openmp.md) pro příklad použití `shared`.  
-  
-## <a name="see-also"></a>Viz také  
- [Klauzule](../../../parallel/openmp/reference/openmp-clauses.md)
+Jeden nebo více proměnných sdílet. Pokud je zadán více než jednu proměnnou, oddělte názvy proměnných čárkou.
+
+## <a name="remarks"></a>Poznámky
+
+Dalším způsobem, jak sdílet proměnné mezi vlákny je [copyprivate](../../../parallel/openmp/reference/copyprivate.md) klauzuli.
+
+`shared` platí pro následující direktivy:
+
+- [for](../../../parallel/openmp/reference/for-openmp.md)
+
+- [parallel](../../../parallel/openmp/reference/parallel.md)
+
+- [Oddíly](../../../parallel/openmp/reference/sections-openmp.md)
+
+Další informace najdete v tématu [2.7.2.4 sdílené](../../../parallel/openmp/2-7-2-4-shared.md).
+
+## <a name="example"></a>Příklad
+
+Zobrazit [privátní](../../../parallel/openmp/reference/private-openmp.md) pro příklad použití `shared`.
+
+## <a name="see-also"></a>Viz také
+
+[Klauzule](../../../parallel/openmp/reference/openmp-clauses.md)

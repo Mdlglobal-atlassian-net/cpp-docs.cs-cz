@@ -1,5 +1,5 @@
 ---
-title: Odvozené třídy zobrazení dostupné v prostředí MFC | Microsoft Docs
+title: Odvozené třídy zobrazení dostupné v prostředí MFC | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b166e64c57482586e145cecc9e79317eea282b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f8d058891b361b3747caafd9c4bd279c7626856
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345661"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426912"
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>Odvozené třídy zobrazení dostupné v prostředí MFC
-Následující tabulka uvádí třídy MFC na zobrazení a jejich vzájemných vztahů. Možnosti zobrazení třídy závisí na třídy MFC zobrazení, ze kterého pochází.  
-  
-### <a name="view-classes"></a>Třídy zobrazení  
-  
-|Třída|Popis|  
-|-----------|-----------------|  
-|[CView](../mfc/reference/cview-class.md)|Základní třída všech zobrazení.|  
-|[CCtrlView](../mfc/reference/cctrlview-class.md)|Základní třída `CTreeView`, `CListView`, `CEditView`, a `CRichEditView`. Tyto třídy umožňují používat document/view – architektura s uvedené běžné ovládací prvky Windows.|  
-|[CEditView](../mfc/reference/ceditview-class.md)|Pole ovládacích prvků pro úpravy jednoduché zobrazení založeného na systému Windows. Umožňuje zadávání a úpravy textu a může sloužit jako základ pro jednoduchý textový editor aplikace. Viz také `CRichEditView`.|  
-|[Cricheditview –](../mfc/reference/cricheditview-class.md)|Zobrazení obsahující [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) objektu. Tato třída je obdobou `CEditView`, ale na rozdíl od `CEditView`, `CRichEditView` popisovače formátovaného textu.|  
-|[CListView](../mfc/reference/clistview-class.md)|Zobrazení obsahující [CListCtrl](../mfc/reference/clistctrl-class.md) objektu.|  
-|[CTreeView](../mfc/reference/ctreeview-class.md)|Zobrazení obsahující [CTreeCtrl](../mfc/reference/ctreectrl-class.md) objekt, pro zobrazení, které se podobají okno Průzkumník řešení v jazyce Visual C++.|  
-|[CScrollView](../mfc/reference/cscrollview-class.md)|Základní třída `CFormView`, `CRecordView`, a `CDaoRecordView`. Implementuje posouvání obsah zobrazení.|  
-|[Třídy CFormView](../mfc/reference/cformview-class.md)|Zobrazení formuláře, zobrazení, která obsahuje ovládací prvky. Formulářové aplikace obsahuje jeden nebo více těchto formuláře rozhraní.|  
-|[CHtmlView](../mfc/reference/chtmlview-class.md)|Zobrazení webové prohlížeče, se kterým uživatel aplikace můžete procházet weby na webu, jakož i složky v místním systému souborů a v síti. Webové prohlížeče zobrazení může spolupracovat taky jako kontejner pro aktivní dokument.|  
-|[CRecordView](../mfc/reference/crecordview-class.md)|Zobrazení formuláře, které zobrazí záznamů rozhraní ODBC databáze v ovládacích prvcích. Pokud vyberete podpora rozhraní ODBC do projektu, zobrazení základní třída má `CRecordView`. Zobrazení je připojený k `CRowset` objektu.|  
-|[CDaoRecordView](../mfc/reference/cdaorecordview-class.md)|Zobrazení formuláře, které zobrazí záznamů rozhraní DAO databáze v ovládacích prvcích. Pokud vyberete rozhraní DAO podporu ve vašem projektu, zobrazení základní třída má `CDaoRecordView`. Zobrazení je připojený k `CDaoRecordset` objektu.|  
-|[COleDBRecordView](../mfc/reference/coledbrecordview-class.md)|Formulář zobrazení záznamů technologie OLE DB v ovládacích prvcích. Pokud vyberete podporu technologie OLE DB ve vašem projektu, zobrazení základní třída má `COleDBRecordView`. Zobrazení je připojený k `CRowset` objektu.|  
-  
+
+V následující tabulce jsou uvedeny zobrazení tříd knihovny MFC a jejich vztahy mezi sebou. Možnosti zobrazení třídy závisí na zobrazení třídy knihovny MFC, ze kterého pochází.
+
+### <a name="view-classes"></a>Třídy zobrazení
+
+|Třída|Popis|
+|-----------|-----------------|
+|[CView](../mfc/reference/cview-class.md)|Základní třída všech zobrazení.|
+|[Cctrlview –](../mfc/reference/cctrlview-class.md)|Základní třída `CTreeView`, `CListView`, `CEditView`, a `CRichEditView`. Tyto třídy umožňují použít architekturu document/view s uvedené běžné ovládací prvky Windows.|
+|[CEditView](../mfc/reference/ceditview-class.md)|Zobrazení založené Windows na jednoduché upravit ovládací prvek pole. Umožňuje zadávat a upravovat text a může sloužit jako základ pro aplikace jednoduchý textový editor. Viz také `CRichEditView`.|
+|[Cricheditview –](../mfc/reference/cricheditview-class.md)|Zobrazit obsahující [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) objektu. Tato třída je obdobou `CEditView`, ale na rozdíl od `CEditView`, `CRichEditView` obslužné rutiny formátovaného textu.|
+|[CListView](../mfc/reference/clistview-class.md)|Zobrazit obsahující [CListCtrl](../mfc/reference/clistctrl-class.md) objektu.|
+|[CTreeView](../mfc/reference/ctreeview-class.md)|Zobrazit obsahující [CTreeCtrl](../mfc/reference/ctreectrl-class.md) objektu pro zobrazení, které se podobají okna Průzkumník řešení v jazyce Visual C++.|
+|[Cscrollview –](../mfc/reference/cscrollview-class.md)|Základní třída `CFormView`, `CRecordView`, a `CDaoRecordView`. Implementuje posouvání obsah zobrazení.|
+|[CFormView](../mfc/reference/cformview-class.md)|Zobrazení formuláře, zobrazení, která obsahuje ovládací prvky. Aplikace založené na formulářích obsahuje jeden nebo více těchto formuláře rozhraní.|
+|[CHtmlView –](../mfc/reference/chtmlview-class.md)|Zobrazení webového prohlížeče pomocí kterého uživatelé aplikace můžou procházet webů na webu, jakož i složky v místním systému souborů a v síti. Ve webovém prohlížeči zobrazení může spolupracovat také jako kontejner pro aktivní dokument.|
+|[CRecordView](../mfc/reference/crecordview-class.md)|Zobrazení formuláře, které zobrazuje záznamy databáze ODBC v ovládacích prvcích. Pokud vyberete podpora rozhraní ODBC ve vašem projektu, v zobrazení základní třída je `CRecordView`. Zobrazení je připojen k `CRowset` objektu.|
+|[CDaoRecordView](../mfc/reference/cdaorecordview-class.md)|Zobrazení formuláře, které zobrazuje záznamy databáze DAO v ovládacích prvcích. Pokud vyberete rozhraní DAO podpory ve vašem projektu, v zobrazení základní třída je `CDaoRecordView`. Zobrazení je připojen k `CDaoRecordset` objektu.|
+|[COleDBRecordView –](../mfc/reference/coledbrecordview-class.md)|Formulářové zobrazení záznamů technologie OLE DB zobrazuje v ovládacích prvcích. Pokud vyberete podporu technologie OLE DB ve vašem projektu, v zobrazení základní třída je `COleDBRecordView`. Zobrazení je připojen k `CRowset` objektu.|
+
 > [!NOTE]
->  Od verze knihovny MFC verze 4.0 `CEditView` je odvozený od `CCtrlView`.  
-  
- K použití těchto tříd ve vaší aplikaci, odvozovat aplikace zobrazení z nich. Související informace najdete v tématu [posouvání a změna měřítka zobrazení](../mfc/scrolling-and-scaling-views.md). Další informace o databázové třídy najdete v tématu [přehled: programování databáze](../data/data-access-programming-mfc-atl.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Použití zobrazení](../mfc/using-views.md)
+>  Od verze knihovny MFC verze 4.0 `CEditView` je odvozen z `CCtrlView`.
+
+K použití těchto tříd ve vaší aplikaci, odvozovat z nich třídy zobrazení vaší aplikace. Související informace naleznete v tématu [posouvání a změna měřítka zobrazení](../mfc/scrolling-and-scaling-views.md). Další informace o databázových tříd naleznete v tématu [přehled: databáze programování](../data/data-access-programming-mfc-atl.md).
+
+## <a name="see-also"></a>Viz také
+
+[Použití zobrazení](../mfc/using-views.md)
 

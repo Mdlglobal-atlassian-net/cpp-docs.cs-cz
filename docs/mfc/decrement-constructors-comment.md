@@ -1,5 +1,5 @@
 ---
-title: --/ Komentář ke konstruktorům | Microsoft Docs
+title: --/ Komentář ke konstruktorům | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,22 +21,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f58c8410de51a4692dd0e7f018d40eaa28c0dae8
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: f03a65c3f870b1e7648f03b70efe7242c35a21f9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929579"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429352"
 ---
 # <a name="-constructors-comment"></a>// Komentář ke konstruktorům
-`// Constructors` Části deklarace tříd MFC deklaruje konstruktory (v tom smyslu, C++) a také všechny funkce inicializace vyžadované skutečně použití objektu. Například `CWnd::Create` je v části konstruktory, protože před použitím `CWnd` objektu, se musí "plně zkonstruovat" tak, že první volání konstruktoru C++ a pak volání `Create` funkce. Tito členové jsou obvykle veřejné.  
-  
- Například třídy `CStdioFile` má tři konstruktory, z nichž jeden je uveden v seznamu pod [příklad komentářů](../mfc/an-example-of-the-comments.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Použití zdrojových souborů MFC](../mfc/using-the-mfc-source-files.md)   
- [Implementační komentář](../mfc/decrement-implementation-comment.md)   
- [Komentář k atributům](../mfc/decrement-attributes-comment.md)   
- [Komentář k operacím](../mfc/decrement-operations-comment.md)   
- [Komentář k Přepisovatelným](../mfc/decrement-overridables-comment.md)
+
+`// Constructors` Části deklarace třídy knihovny MFC deklaruje konstruktory (ve smyslu C++), stejně jako všechny funkce inicializace vyžaduje k opravdu pomocí objektu. Například `CWnd::Create` je v části konstruktory, protože před použitím `CWnd` objektu, se musí být "plně zkonstruovaný" nejdřív voláním konstruktoru C++ a následným voláním `Create` funkce. Tyto členy jsou obvykle veřejné.
+
+Například třída `CStdioFile` tři konstruktory, z nichž jeden je uveden v seznamu pod [příklad, komentáře](../mfc/an-example-of-the-comments.md).
+
+## <a name="see-also"></a>Viz také
+
+[Použití zdrojových souborů MFC](../mfc/using-the-mfc-source-files.md)<br/>
+[/ / Implementační komentář](../mfc/decrement-implementation-comment.md)<br/>
+[Komentář k atributům](../mfc/decrement-attributes-comment.md)<br/>
+[Komentář k operacím](../mfc/decrement-operations-comment.md)<br/>
+[Komentář k Přepisovatelným](../mfc/decrement-overridables-comment.md)
 

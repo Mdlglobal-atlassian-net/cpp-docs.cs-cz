@@ -1,5 +1,5 @@
 ---
-title: 1. Úvod | Microsoft Docs
+title: 1. Úvod | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,16 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 883af9cb48a0fb13dbb9a758d6f8174096d4c0c3
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4ce963d312d145e26567a5902f32e45735eb1d89
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685837"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438415"
 ---
 # <a name="1-introduction"></a>1. Úvod
-Tento dokument určuje kolekci proměnných prostředí, které lze použít k určení stupně paralelního zpracování sdílené paměti v programy C a C++, direktivy kompilátoru a funkce knihovny. Funkce popsané v tomto dokumentu se souhrnně označuje jako *OpenMP C/C++ rozhraní API (Application Program)*. Cílem této specifikaci je zajistit model pro paralelní programování, který umožňuje programu, který má být přenosná v architekturách sdílené paměti od různých výrobců. Rozhraní API jazyka C/C++ OpenMP bude podporovat kompilátory od více dodavatelů. Další informace o OpenMP, včetně *OpenMP Fortran aplikační programovací rozhraní*, naleznete na následujícím webu:  
-  
- [http://www.openmp.org](http://www.openmp.org)  
-  
- Direktivy, funkce knihovny a proměnné definované v tomto dokumentu vám umožní uživatelům vytvářet a spravovat paralelní programy při umožňující přenositelnost. Direktivy rozšířit C a C++ sekvenční programování modelu s jeden program víc dat (SPMD) konstrukce, konstrukce pro sdílení práce a konstrukce synchronizace a poskytují podporu pro sdílení a privatizace data. Kompilátory, které podporují OpenMP C a C++ API bude obsahovat možnost příkazového řádku pro kompilátor, která aktivuje a umožňuje výklad všechny direktivy kompilátoru OpenMP.
+
+Tento dokument určuje kolekci direktivy kompilátoru knihovních funkcí a proměnných prostředí, které lze použít k určení paralelismu sdílené paměti v aplikacích jazyka C a C++. Funkce popsané v tomto dokumentu se souhrnně říká *OpenMP – C/C++ rozhraní API (Application Program)*. Cílem této specifikace je k poskytnutí modelu pro paralelní programování umožňuje aplikaci mít přenosné mezi architekturami sdílené paměti od různých dodavatelů. Kompilátory od mnoha dodavatelů bude podporovat rozhraní API OpenMP – C/C++. Další informace o OpenMP, včetně *OpenMP až po Fortran Application Program Interface*, najdete na následujícím webu:
+
+[http://www.openmp.org](http://www.openmp.org)
+
+Direktivy, knihovních funkcí a proměnných prostředí definovaných v tomto dokumentu vám umožní uživatelům vytvářet a spravovat paralelních programů při umožňující přenositelnost. Direktivy rozšíření jazyka C a sekvenční programování C++ model jedné programu více dat (SPMD) konstrukce, konstrukce pro sdílení práce a konstrukce synchronizace a poskytují podporu pro sdílení a privatizace data. Kompilátory, které podporují OpenMP – C a C++ API bude zahrnovat možnost příkazového řádku pro kompilátor, který aktivuje a umožňuje výklad všechny direktivy OpenMP kompilátoru.

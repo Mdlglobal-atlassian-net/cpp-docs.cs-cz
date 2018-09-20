@@ -1,5 +1,5 @@
 ---
-title: Třída CD2DBrushProperties | Microsoft Docs
+title: Cd2dbrushproperties – třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,70 +20,77 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 897be7063385566f2fd0e717eba0f89b335c2c48
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 9c02c2b2e6b0c24ab4f12d0d6b9c04927b2cba8d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950410"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440547"
 ---
-# <a name="cd2dbrushproperties-class"></a>CD2DBrushProperties – třída
-Obálka pro `D2D1_BRUSH_PROPERTIES`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-class CD2DBrushProperties : public D2D1_BRUSH_PROPERTIES;  
-```  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="public-constructors"></a>Veřejné konstruktory  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CD2DBrushProperties::CD2DBrushProperties](#cd2dbrushproperties)|Přetíženo. Vytvoří `CD2D_BRUSH_PROPERTIES` struktura|  
-  
-### <a name="protected-methods"></a>Chráněné metody  
-  
-|Název|Popis|  
-|----------|-----------------|  
-|[CD2DBrushProperties::CommonInit](#commoninit)|Inicializuje objekt|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti  
- `D2D1_BRUSH_PROPERTIES`  
-  
- `CD2DBrushProperties`  
-  
-## <a name="requirements"></a>Požadavky  
- **Záhlaví:** afxrendertarget.h  
-  
-##  <a name="cd2dbrushproperties"></a>  CD2DBrushProperties::CD2DBrushProperties  
- Vytvoří struktura CD2D_BRUSH_PROPERTIES  
-  
-```  
-CD2DBrushProperties();  
+# <a name="cd2dbrushproperties-class"></a>Cd2dbrushproperties – třída
+
+Obálka pro `D2D1_BRUSH_PROPERTIES`.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+class CD2DBrushProperties : public D2D1_BRUSH_PROPERTIES;
+```
+
+## <a name="members"></a>Členové
+
+### <a name="public-constructors"></a>Veřejné konstruktory
+
+|Název|Popis|
+|----------|-----------------|
+|[CD2DBrushProperties::CD2DBrushProperties](#cd2dbrushproperties)|Přetíženo. Vytvoří `CD2D_BRUSH_PROPERTIES` struktura|
+
+### <a name="protected-methods"></a>Chráněné metody
+
+|Název|Popis|
+|----------|-----------------|
+|[CD2DBrushProperties::CommonInit](#commoninit)|Inicializuje objekt|
+
+## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
+
+`D2D1_BRUSH_PROPERTIES`
+
+`CD2DBrushProperties`
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** afxrendertarget.h
+
+##  <a name="cd2dbrushproperties"></a>  CD2DBrushProperties::CD2DBrushProperties
+
+Vytvoří strukturu CD2D_BRUSH_PROPERTIES
+
+```
+CD2DBrushProperties();
 CD2DBrushProperties(FLOAT _opacity);
 
- 
+
 CD2DBrushProperties(
-    D2D1_MATRIX_3X2_F _transform,  
+    D2D1_MATRIX_3X2_F _transform,
     FLOAT _opacity = 1.);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *_opacity*  
- Základní krytí stopy. Výchozí hodnota je 1.0.  
-  
- *_transform*  
- Transformace, které chcete použít pro štětce  
-  
-##  <a name="commoninit"></a>  CD2DBrushProperties::CommonInit  
- Inicializuje objekt  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*_opacity*<br/>
+Základní neprůhlednost štětce. Výchozí hodnota je 1.0.
+
+*_transform*<br/>
+Transformace vyrovnat štětec
+
+##  <a name="commoninit"></a>  CD2DBrushProperties::CommonInit
+
+Inicializuje objekt
+
+```
 void CommonInit();
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Třídy](../../mfc/reference/mfc-classes.md)
+```
+
+## <a name="see-also"></a>Viz také
+
+[Třídy](../../mfc/reference/mfc-classes.md)

@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 398149d0d65b0dcf4c914d8f35e4c6faf209173f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5c97d69bbca685ca64245d5d784452029c14f73f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606984"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393621"
 ---
 # <a name="activatableclass-macros"></a>ActivatableClass – makra
 
@@ -53,13 +53,13 @@ ActivatableClassWithFactoryEx(
 
 ### <a name="parameters"></a>Parametry
 
-*Název třídy*  
+*Název třídy*<br/>
 Název třídy pro vytvoření.
 
-*objekt pro vytváření*  
+*objekt pro vytváření*<br/>
 Objekt Factory, který vytvoří instanci dané třídy.
 
-*název_serveru*  
+*název_serveru*<br/>
 Název, který určuje podmnožinu objektů pro vytváření v modulu.
 
 ## <a name="remarks"></a>Poznámky

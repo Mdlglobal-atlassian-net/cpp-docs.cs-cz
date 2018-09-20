@@ -1,5 +1,5 @@
 ---
-title: Určení pevný počet vláken A.11 | Microsoft Docs
+title: A.11 určení pevného počtu vláken | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,29 +12,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71d09c470b76b61c6737566f7833334aeec6c63a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 892140425dc9f7083c606fce3ffe671a107a65ca
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686536"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422984"
 ---
 # <a name="a11---specifying-a-fixed-number-of-threads"></a>A.11   Určení pevného počtu vláken
-Některé programy spoléhají na pevnou, prespecified počet vláken správně spustit.  Protože výchozí nastavení pro dynamické přizpůsobení počet vláken je definované implementací, takové programy můžete vypnout funkce dynamické vláken a nastavte počet vláken explicitně zajistit přenositelnost. Následující příklad ukazuje, jak to provést pomocí `omp_set_dynamic` ([části 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) na stránce 39), a `omp_set_num_threads` ([bod 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) na stránce 36):  
-  
-```  
-omp_set_dynamic(0);  
-omp_set_num_threads(16);  
-#pragma omp parallel shared(x, npoints) private(iam, ipoints)  
-{  
-    if (omp_get_num_threads() != 16)   
-      abort();  
-    iam = omp_get_thread_num();  
-    ipoints = npoints/16;  
-    do_by_16(x, iam, ipoints);  
-}  
-```  
-  
- V tomto příkladu se program spustí správně pouze v případě, že je provedený 16 vláken. Pokud implementace není schopný zajistit podporu 16 vláken, chování tohoto příkladu je definované implementací.  
-  
- Všimněte si, že počet vláken provádění paralelní oblast zůstane konstantní během paralelní oblast, bez ohledu na nastavení dynamické vláken. Mechanismus dynamické vláken určuje počet vláken používaných na začátku oblasti paralelní a udržuje ho konstantní po dobu trvání oblasti.
+
+Některé programy spoléhají na pevný, prespecified počet vláken se správně spustit.  Vzhledem k tomu, že výchozí nastavení pro dynamické úpravy počtu vláken, je definováno implementací, těchto programů můžete vypnout funkci dynamického vláken a nastavit počet vláken explicitně pro zajištění přenositelnosti. Následující příklad ukazuje, jak to udělat pomocí `omp_set_dynamic` ([části 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) na stránce 39), a `omp_set_num_threads` ([části 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) na stránce 36):
+
+```
+omp_set_dynamic(0);
+omp_set_num_threads(16);
+#pragma omp parallel shared(x, npoints) private(iam, ipoints)
+{
+    if (omp_get_num_threads() != 16)
+      abort();
+    iam = omp_get_thread_num();
+    ipoints = npoints/16;
+    do_by_16(x, iam, ipoints);
+}
+```
+
+V tomto příkladu se program spustí správně pouze v případě, že se provede 16 vlákny. Pokud implementace není schopný zajistit podporu 16 vlákna, chování v tomto příkladu je definován implementací.
+
+Všimněte si, že během paralelní oblasti, bez ohledu na nastavení dynamické vlákna konstantní počet vláken v paralelní oblasti. Mechanismus dynamické vlákna určuje počet vláken na začátku paralelní oblasti a zachová konstantní po dobu trvání oblast.

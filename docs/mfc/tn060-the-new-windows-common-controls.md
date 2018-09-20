@@ -1,5 +1,5 @@
 ---
-title: 'TN060: Nové Windows běžné ovládací prvky | Microsoft Docs'
+title: 'TN060: Nové Windows běžné ovládací prvky | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6626f9be05c9c6bd3cb583a27eefcb29eede6871
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0028d7b2f2121f9463dcb45b13bf34305c39f3d4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381475"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388968"
 ---
 # <a name="tn060-the-new-windows-common-controls"></a>TN060: Nové běžné ovládací prvky Windows
-Technické 60 poznámka popisující nové běžné ovládací prvky systému Windows a jejich, použití bylo integrováno do [ovládací prvky](../mfc/controls-mfc.md).  
-  
-## <a name="see-also"></a>Viz také  
- [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)   
- [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
+
+Technická poznámka 60, nové běžné ovládací prvky Windows a na tom, jak je používají, se stává součástí [ovládací prvky](../mfc/controls-mfc.md).
+
+## <a name="see-also"></a>Viz také
+
+[Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
+[Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Komunikace s ovládacím prvkem strom | Microsoft Docs
+title: Komunikace s ovládacím prvkem strom | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af0b248d5e32b535c23cc17b48efdd551dad7a2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 78bb6a6d6421a5336f8efbffc7d24a6121e208e6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341994"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432149"
 ---
 # <a name="communicating-with-a-tree-control"></a>Komunikace s ovládacím prvkem strom
-Použít různé metody pro volání členských funkcí [CTreeCtrl](../mfc/reference/ctreectrl-class.md) objekt v závislosti na tom, jak byl vytvořen objekt:  
-  
--   Pokud ovládací prvek stromu v dialogovém okně, použijte členské proměnné typu `CTreeCtrl` , které vytvoříte v třídy dialogového okna.  
-  
--   Pokud ovládací prvek stromu podřízeného okna, použijte `CTreeCtrl` objektu (nebo ukazatel) jste použili k vytvoření objektu.  
-  
--   Pokud používáte `CTreeView` objektu, použijte funkci [CTreeView::GetTreeCtrl](../mfc/reference/ctreeview-class.md#gettreectrl) získat odkaz na ovládací prvek stromu. Můžete inicializovat další odkaz s touto hodnotou nebo přiřadit adresu odkaz na `CTreeCtrl` ukazatel.  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Ovládací prvky](../mfc/controls-mfc.md)
+
+Použít různé metody pro volání členských funkcí [CTreeCtrl](../mfc/reference/ctreectrl-class.md) objekt v závislosti na způsobu vytvoření objektu:
+
+- Pokud do ovládacího prvku stromu je v dialogovém okně, použijte proměnnou člena typu `CTreeCtrl` , který vytvoříte v poli třídy dialogového okna.
+
+- Pokud do ovládacího prvku stromu je podřízené okno, použijte `CTreeCtrl` objektu (nebo ukazatele) jste použili pro vytvoření objektu.
+
+- Pokud používáte `CTreeView` objektu, použijte funkci [CTreeView::GetTreeCtrl](../mfc/reference/ctreeview-class.md#gettreectrl) získáte odkaz na ovládací prvek stromu. Můžete inicializovat jiný odkaz s touto hodnotou nebo přiřazení adresy proměnné odkazu na `CTreeCtrl` ukazatele.
+
+## <a name="see-also"></a>Viz také
+
+[Používání atributu CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
+[Ovládací prvky](../mfc/controls-mfc.md)
 

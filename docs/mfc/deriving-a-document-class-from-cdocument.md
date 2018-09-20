@@ -1,5 +1,5 @@
 ---
-title: Odvození dokumentové třídy z objektu CDocument | Microsoft Docs
+title: Odvození dokumentové třídy z objektu CDocument | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a81f3c3a36f049e3f47401efa31b36677b3b9ba6
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: b45dadbc062bbba61cdcb4c883f91943b1b18ba8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931746"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429822"
 ---
 # <a name="deriving-a-document-class-from-cdocument"></a>Odvození dokumentové třídy z objektu CDocument
-Dokumenty obsahují a spravovat data aplikace. Použití třídy Průvodce aplikací knihovny MFC zadaný dokument, postupujte takto:  
-  
--   Odvození třídy z `CDocument` pro každý typ dokumentu.  
-  
--   Přidání členské proměnné k ukládání dat pro každý dokument.  
-  
--   Přepsání `CDocument`na `Serialize` členské funkce ve třídě dokumentů. `Serialize` zapíše a čte data dokumentu do a z disku.  
-  
-## <a name="other-document-functions-often-overridden"></a>Často přepisované funkce jiných dokumentu  
- Můžete také přepsat dalších `CDocument` členské funkce. Konkrétně je často nutné přepsat [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) a [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) k chybě při inicializaci dokumentu datové členy a [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) zrušení dynamicky přidělené data. Informace o přepisovatelné členy najdete v tématu třídy [CDocument](../mfc/reference/cdocument-class.md) v *odkaz knihovny MFC*.  
-  
-## <a name="see-also"></a>Viz také  
- [Použití dokumentů](../mfc/using-documents.md)
+
+Dokumenty obsahují a spravujte data vaší aplikace. Pomocí Průvodce aplikací knihovny MFC zadaný dokument třídy, postupujte takto:
+
+- Odvodit třídu z `CDocument` pro každý typ dokumentu.
+
+- Přidání členské proměnné k ukládání dat každého dokumentu.
+
+- Přepsat `CDocument`společnosti `Serialize` členské funkce ve třídě dokumentů. `Serialize` zapíše a čte data dokumentu z disku a disk.
+
+## <a name="other-document-functions-often-overridden"></a>Často přepisované funkce jiných dokumentů
+
+Můžete také přepsat jiné `CDocument` členské funkce. Zejména je často potřeba přepsat [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) a [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) inicializace dokumentu datové členy a [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) zničit. dynamicky přidělené data. Informace o členech overridable najdete v tématu třídy [CDocument](../mfc/reference/cdocument-class.md) v *odkaz knihovny MFC*.
+
+## <a name="see-also"></a>Viz také
+
+[Použití dokumentů](../mfc/using-documents.md)
 

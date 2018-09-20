@@ -1,5 +1,5 @@
 ---
-title: Třídy výjimek | Microsoft Docs
+title: Třídy výjimek | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,51 +18,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ce4085d0f5f2dcc73d126d04b7560ef8360ffd9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd666f96ed694b57bf02eb3ad239783828b69e48
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344893"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439260"
 ---
 # <a name="exception-classes"></a>Třídy výjimek
-Knihovna tříd poskytuje mechanismus zpracování výjimek na základě třídy `CException`. Rozhraní používá výjimky v jeho kód; můžete je také použít v vaše. Další informace najdete v článku [výjimky](../mfc/exception-handling-in-mfc.md). Odvozujete vlastní typy výjimek z `CException`.  
-  
- MFC poskytuje třídu výjimky, ze kterého odvodíte vlastní výjimky a také třídy výjimek pro všechny výjimky, kterou podporuje.  
-  
- [CException](../mfc/reference/cexception-class.md)  
- Základní třída pro výjimky.  
-  
- [CArchiveException](../mfc/reference/carchiveexception-class.md)  
- Výjimku archivu.  
-  
- [CDaoException](../mfc/reference/cdaoexception-class.md)  
- Výjimku vyplývající z selhání v rámci operace databáze DAO.  
-  
- [CDBException](../mfc/reference/cdbexception-class.md)  
- Výjimku vyplývající z chyby při zpracování databáze ODBC.  
-  
- [CFileException](../mfc/reference/cfileexception-class.md)  
- Výjimka zaměřené na konkrétní soubor.  
-  
- [CMemoryException](../mfc/reference/cmemoryexception-class.md)  
- Výjimku z důvodu nedostatku paměti.  
-  
- [CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md)  
- Výjimku vyplývající z pomocí nepodporované funkce.  
-  
- [COleException](../mfc/reference/coleexception-class.md)  
- Výsledkem chyba ve zpracování OLE výjimku. Tato třída se používá kontejnery a servery.  
-  
- [COleDispatchException](../mfc/reference/coledispatchexception-class.md)  
- Výjimku vyplývající z chybu během automatizace. Automatizace výjimky vyvolané automatizační servery a zachytila klienti automatizace.  
-  
- [CResourceException](../mfc/reference/cresourceexception-class.md)  
- Výjimku vyplývající z selhání načtení prostředků Windows.  
-  
- [CUserException](../mfc/reference/cuserexception-class.md)  
- Výjimku použít k zastavení operace se uživatel spustil. Obvykle se uživatel ohlášení problému předtím, než je vyvolána výjimka.  
-  
-## <a name="see-also"></a>Viz také  
- [Přehled třídy](../mfc/class-library-overview.md)
+
+Knihovna tříd poskytuje mechanismus zpracování výjimek založené na třídě `CException`. Aplikační framework používá výjimky v jeho kód; Můžete také využít v té vaší. Další informace najdete v článku [výjimky](../mfc/exception-handling-in-mfc.md). Můžete odvozovat vlastní typy výjimek z `CException`.
+
+Knihovna MFC poskytuje třídu výjimky, ze které odvozujete vlastní výjimky, stejně jako třídy výjimky pro všechny výjimky, které podporuje.
+
+[Cexception –](../mfc/reference/cexception-class.md)<br/>
+Základní třída pro výjimky.
+
+[Carchiveexception –](../mfc/reference/carchiveexception-class.md)<br/>
+Výjimku archivu.
+
+[Cdaoexception –](../mfc/reference/cdaoexception-class.md)<br/>
+Výjimka výsledkem selhání v rámci operace databáze DAO.
+
+[CDBException](../mfc/reference/cdbexception-class.md)<br/>
+Výjimka vyplývající z chyby ve zpracování databáze ODBC.
+
+[Cfileexception –](../mfc/reference/cfileexception-class.md)<br/>
+Soubor objektově orientovaný výjimky.
+
+[Cmemoryexception –](../mfc/reference/cmemoryexception-class.md)<br/>
+Výjimka mimo z důvodu nedostatku paměti.
+
+[Cnotsupportedexception –](../mfc/reference/cnotsupportedexception-class.md)<br/>
+Výjimka vyplývající z použití nepodporované funkce.
+
+[Coleexception –](../mfc/reference/coleexception-class.md)<br/>
+Výjimka vyplývající z chyby ve zpracování OLE. Tato třída se používá tak, že kontejnery a servery.
+
+[Coledispatchexception –](../mfc/reference/coledispatchexception-class.md)<br/>
+Výjimka vyplývající z chybu během automatizace. Automatizace výjimky jsou vyvolané automatizační servery a zachytit klientům automatizace.
+
+[Cresourceexception –](../mfc/reference/cresourceexception-class.md)<br/>
+Výjimka výsledkem selhání při načítání prostředků Windows.
+
+[Cuserexception –](../mfc/reference/cuserexception-class.md)<br/>
+Výjimka použít k zastavení operace iniciovaná uživatelem. Obvykle uživatel má byl informován o problém předtím, než je vyvolána výjimka.
+
+## <a name="see-also"></a>Viz také
+
+[Přehled tříd](../mfc/class-library-overview.md)
 

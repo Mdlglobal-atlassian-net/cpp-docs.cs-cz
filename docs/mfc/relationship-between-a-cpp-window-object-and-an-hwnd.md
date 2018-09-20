@@ -1,5 +1,5 @@
 ---
-title: Vztah mezi objektem okna v jazyku C++ a popisovačem HWND | Microsoft Docs
+title: Vztah mezi objektem okna v jazyku C++ a popisovačem HWND | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,19 +20,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3864de8b3133fd2284b3ce57b75b30d8f41c26a7
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 844f62b110f54ba3e2c8909a78d58c9f2c01dcac
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928525"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392811"
 ---
 # <a name="relationship-between-a-c-window-object-and-an-hwnd"></a>Vztah mezi objektem okna v jazyku C++ a popisovačem HWND
-Okno *objekt* je objekt C++ `CWnd` – třída (nebo v odvozené třídě) přímo vytvářející vašeho programu. Se dodává a přejde na základě vašeho programu konstruktor a destruktor výzvy. Windows *okno*, na druhé straně je neprůhledného popisovače vnitřní datovou strukturu Windows, který odpovídá okno a spotřebovává prostředky systému, pokud jsou k dispozici. Okno systému Windows je identifikována "popisovač okna" (`HWND`) a je vytvořen po `CWnd` objekt se vytvoří voláním `Create` funkce člena třídy `CWnd`. Okno může být zničený, volání programu nebo akce uživatele. Popisovač okna je uložený v objektu okna *m_hWnd* členské proměnné. Následující obrázek znázorňuje vztah mezi objektem okna C++ a období systému Windows. Vytváření windows je popsáno v [vytváření Windows](../mfc/creating-windows.md). Zničení oken popsané v [zničení objektů oken](../mfc/destroying-window-objects.md).  
-  
- ![CWnd objektu okna a výsledný okna](../mfc/media/vc37fj1.gif "vc37fj1")  
-Okno objekt a Windows – okno  
-  
-## <a name="see-also"></a>Viz také  
- [Objekty oken](../mfc/window-objects.md)
+
+V okně *objekt* je objekt jazyka c++ `CWnd` třídy (nebo z odvozené třídy), který vytvoří váš program přímo. Přichází a přejde v reakci na váš program volá konstruktor a destruktor. Windows *okno*, na druhé straně je neprůhledný popisovač vnitřní datovou strukturu Windows, který odpovídá okna a využívá systémové prostředky, pokud je k dispozici. Okno Windows je identifikován "popisovač okna" (`HWND`) a je vytvořen po `CWnd` objekt je vytvořen voláním `Create` členské funkce třídy `CWnd`. V okně může zničit volání programu nebo akce uživatele. Popisovač okna je uložena v objektu window *m_hWnd* členské proměnné. Následující obrázek ukazuje vztah mezi objektem okna C++ a v okně Windows. Vytváření oken je podrobněji popsána [vytváření Windows](../mfc/creating-windows.md). Zničení oken je podrobněji popsána [zničení objektů oken](../mfc/destroying-window-objects.md).
+
+![CWnd objekt okna a okna výsledný](../mfc/media/vc37fj1.gif "vc37fj1") objekt okna a okna Windows
+
+## <a name="see-also"></a>Viz také
+
+[Objekty oken](../mfc/window-objects.md)
 

@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce4c5159a66963268ae83e0c0adfdc082dfcc81c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9d9ecfada513e16ce10bab37bb38b6ce6d67f907
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706937"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397621"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Zadejte možnosti příkazového řádku MIDL)
 
@@ -63,7 +63,7 @@ Soubor musí obsahovat jeden parametr příkazového řádku MIDL každý řáde
 
 [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
 [Možnosti linkeru](../../build/reference/linker-options.md)<br/>
-[/ IDLOUT (pojmenování výstupních souborů MIDL)](../../build/reference/idlout-name-midl-output-files.md)
-[/IGNOREIDL (Nezpracovávat atributy do MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
-[/TLBOUT (název. Soubor vyrovnávací paměti TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)
-[sestavení programu s atributy](../../windows/building-an-attributed-program.md)
+[/IDLOUT (pojmenování výstupních souborů MIDL)](../../build/reference/idlout-name-midl-output-files.md)<br/>
+[/IGNOREIDL (nezpracovávat atributy do MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)<br/>
+[/TLBOUT (pojmenování souboru .TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)<br/>
+[Sestavení programu s atributy](../../windows/building-an-attributed-program.md)

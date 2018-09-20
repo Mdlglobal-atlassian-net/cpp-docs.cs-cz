@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8646ad544b6c481ea394add9e6e8faa82919e15
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 09db7dbb2af9294e215ab60c716f73eee821b29a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725033"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438571"
 ---
 # <a name="errlook-reference"></a>ERRLOOK – odkaz
 
@@ -30,14 +30,19 @@ Klíče akcelerátoru pro kopírování (CTRL + C), vyjmutí (CTRL + X) a vlože
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Hodnota upravit ovládací prvek](../../build/reference/value-edit-control.md) popisuje hodnoty upravit ovládací prvek v aplikaci ERRLOOK.
+[Hodnota – textové pole](../../build/reference/value-edit-control.md)<br/>
+Popisuje hodnoty upravit ovládací prvek v aplikaci ERRLOOK.
 
-[Chybová zpráva upravit pole](../../build/reference/error-message-edit-control.md) popisuje chybová zpráva upravit ovládací prvek v aplikaci ERRLOOK.
+[Chybová zpráva – textové pole](../../build/reference/error-message-edit-control.md)<br/>
+Popisuje chybová zpráva upravit ovládací prvek v aplikaci ERRLOOK.
 
-[Moduly – tlačítko](../../build/reference/modules-button.md) popisuje moduly – tlačítko v aplikaci ERRLOOK.
+[Moduly – tlačítko](../../build/reference/modules-button.md)<br/>
+Popisuje moduly – tlačítko v aplikaci ERRLOOK.
 
-[Podívejte se tlačítko](../../build/reference/look-up-button.md) popisuje tlačítko Hledat v aplikaci ERRLOOK.
+[Hledat – tlačítko](../../build/reference/look-up-button.md)<br/>
+Popisuje tlačítko Hledat v aplikaci ERRLOOK.
 
 ## <a name="related-sections"></a>Související oddíly
 
-[Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md) sestavení nástrojů sady Visual C++ obsahuje odkazy na témata popisující C/C++.
+[Nástroje sestavení C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
+Poskytuje odkazy na témata popisující C/C++ sestavení nástrojů sady Visual C++.
