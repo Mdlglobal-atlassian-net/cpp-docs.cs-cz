@@ -1,7 +1,7 @@
 ---
 title: 'Návod: Přidání animace do projektu MFC | Dokumentace Microsoftu'
 ms.custom: ''
-ms.date: 06/28/2018
+ms.date: 09/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfcab237070b401d78c3fc52fc765930272832da
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 326535395599a76f521100475cfc80b014ba6cd9
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439273"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169434"
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>Návod: Přidání animace do projektu MFC
 
@@ -50,27 +50,27 @@ K dokončení tohoto návodu, musíte mít Visual Studio.
 
 1. Na **souboru** nabídky, přejděte k **nový** a potom klikněte na tlačítko **projektu**.
 
-2. V **nový projekt** dialogové okno, v levém podokně v části **nainstalované šablony**, rozbalte **Visual C++** a pak vyberte **MFC**. V prostředním podokně vyberte **aplikace knihovny MFC**. V **název** zadejte *MFCAnimationWalkthrough*. Klikněte na tlačítko **OK**.
+1. V **nový projekt** dialogové okno, v levém podokně v části **nainstalované šablony**, rozbalte **Visual C++** a pak vyberte **MFC**. V prostředním podokně vyberte **aplikace knihovny MFC**. V **název** zadejte *MFCAnimationWalkthrough*. Klikněte na tlačítko **OK**.
 
-3. V **Průvodce aplikací knihovny MFC** dialogovém okně ověřte, zda **typ aplikace** je **více dokumentů**, **styl projektu** je  **Visual Studio**a **podpora architektury Document/View** je vybraná možnost. Klikněte na tlačítko **Dokončit**.
+1. V **Průvodce aplikací knihovny MFC** dialogovém okně ověřte, zda **typ aplikace** je **více dokumentů**, **styl projektu** je  **Visual Studio**a **podpora architektury Document/View** je vybraná možnost. Klikněte na tlačítko **Dokončit**.
 
 ### <a name="to-add-a-menu-and-then-add-commands-to-start-and-stop-an-animation"></a>Přidání nabídky a pak přidejte příkazy ke spuštění a zastavení animace
 
 1. Na **zobrazení** nabídky, přejděte k **ostatní Windows** a potom klikněte na tlačítko **zobrazení prostředků**.
 
-2. V **zobrazení prostředků**, přejděte **nabídky** složky a otevřete ho. Dvakrát klikněte `IDR_MFCAnimationWalTYPE` prostředků otevřete pro úpravy.
+1. V **zobrazení prostředků**, přejděte **nabídky** složky a otevřete ho. Dvakrát klikněte **IDR_MFCAnimationWalkthroughTYPE** prostředků otevřete pro úpravy.
 
-3. Na panelu nabídek v **typu tady** zadejte *A & nalizaci* k vytvoření nabídky animace.
+1. Na panelu nabídek v **typu tady** zadejte *A & nalizaci* k vytvoření nabídky animace.
 
-4. V části **animace**v **typu tady** zadejte *Start & vpřed* vytvoření příkazu Start vpřed.
+1. V části **animace**v **typu tady** zadejte *Start & vpřed* vytvoření příkazu Start vpřed.
 
-5. V části **Start vpřed**v **typu tady** zadejte *oddíl Start & zpětně*.
+1. V části **Start vpřed**v **typu tady** zadejte *oddíl Start & zpětně*.
 
-6. V části **Start zpětně**v **typu tady** zadejte *zas & tavit* vytvoření příkazu Stop.
+1. V části **Start zpětně**v **typu tady** zadejte *zas & tavit* vytvoření příkazu Stop.
 
-7. MFCAnimationWalkthrough.rc uložte a zavřete ho.
+1. MFCAnimationWalkthrough.rc uložte a zavřete ho.
 
-8. V **Průzkumníka řešení**, dvakrát klikněte na panel MainFrm.cpp otevřete pro úpravy. V `CMainFrame::OnCreate` metoda, vyhledejte oddíl, který má několik volání `lstBasicCommands.AddTail`. Bezprostředně po této části přidejte následující kód.
+1. V **Průzkumníka řešení**, dvakrát klikněte na panel MainFrm.cpp otevřete pro úpravy. V `CMainFrame::OnCreate` metoda, vyhledejte oddíl, který má několik volání `lstBasicCommands.AddTail`. Bezprostředně po této části přidejte následující kód.
 
     ```cpp
     lstBasicCommands.AddTail(ID_ANIMATION_STARTFORWARD);
@@ -78,29 +78,29 @@ K dokončení tohoto návodu, musíte mít Visual Studio.
     lstBasicCommands.AddTail(ID_ANIMATION_STOP);
     ```
 
-9. Soubor uložte a zavřete ho.
+1. Soubor uložte a zavřete ho.
 
 ### <a name="to-create-handlers-for-the-start-and-stop-commands"></a>Vytváření obslužných rutin pro spuštění a zastavení příkazy
 
 1. Na **projektu** nabídky, klikněte na tlačítko **Průvodce třídami**.
 
-2. V **Průvodce třídami MFC**v části **název třídy**vyberte `CMFCAnimationWalkthroughView`.
+1. V **Průvodce třídami MFC**v části **název třídy**vyberte **CMFCAnimationWalkthroughView**.
 
-3. Na **příkazy** kartě **ID objektů** vyberte `ID_ANIMATION_STARTFORWARD`a pak v **zprávy** vyberte `COMMAND`. Klikněte na tlačítko **přidat obslužnou rutinu**.
+1. Na **příkazy** kartě **ID objektů** vyberte **ID_ANIMATION_STARTFORWARD**a pak v **zprávy** vyberte  **PŘÍKAZ**. Klikněte na tlačítko **přidat obslužnou rutinu**.
 
-4. V **přidat členskou funkci** dialogové okno, klikněte na tlačítko **OK**.
+1. V **přidat členskou funkci** dialogové okno, klikněte na tlačítko **OK**.
 
-5. V **ID objektů** vyberte `ID_ANIMATION_STARTBACKWARD`a pak **zprávy** vyberte `COMMAND`. Klikněte na tlačítko **přidat obslužnou rutinu**.
+1. V **ID objektů** vyberte **ID_ANIMATION_STARTBACKWARD**a pak v **zprávy** vyberte **příkaz**. Klikněte na tlačítko **přidat obslužnou rutinu**.
 
-6. V **přidat členskou funkci** dialogové okno, klikněte na tlačítko **OK**.
+1. V **přidat členskou funkci** dialogové okno, klikněte na tlačítko **OK**.
 
-7. V **ID objektů** vyberte `ID_ANIMATION_STOP`a pak **zprávy** vyberte `COMMAND`. Klikněte na tlačítko **přidat obslužnou rutinu** a potom klikněte na tlačítko **OK**.
+1. V **ID objektů** vyberte **ID_ANIMATION_STOP**a pak v **zprávy** vyberte **příkaz**. Klikněte na tlačítko **přidat obslužnou rutinu** a potom klikněte na tlačítko **OK**.
 
-8. V **přidat členskou funkci** dialogové okno, klikněte na tlačítko **OK**.
+1. V **přidat členskou funkci** dialogové okno, klikněte na tlačítko **OK**.
 
-9. V **Průvodce třídami MFC**, klikněte na tlačítko **OK**.
+1. V **Průvodce třídami MFC**, klikněte na tlačítko **OK**.
 
-10. Uložit MFCAnimationWalkthroughView.cpp, což je otevřen v editoru, ale není ukončena.
+1. Uložit MFCAnimationWalkthroughView.cpp, což je otevřen v editoru, ale není ukončena.
 
 ### <a name="to-add-an-animated-object-to-the-project"></a>Chcete-li přidat do projektu animovaný objekt
 
@@ -123,7 +123,7 @@ K dokončení tohoto návodu, musíte mít Visual Studio.
     };
     ```
 
-2. Na konci `CMFCAnimationWalkthroughView` třídy, přidejte následující kód.
+1. Na konci `CMFCAnimationWalkthroughView` třídy, přidejte následující kód.
 
     ```cpp
     CCustomAnimationController m_animationController;
@@ -131,22 +131,22 @@ K dokončení tohoto návodu, musíte mít Visual Studio.
     CAnimationRect m_animationRect;
     ```
 
-3. Po `DECLARE_MESSAGE_MAP()` řádek, přidejte následující kód.
+1. Po `DECLARE_MESSAGE_MAP()` řádek, přidejte následující kód.
 
     ```cpp
     void Animate(BOOL bDirection);
     ```
 
-4. Soubor uložte a zavřete ho.
+1. Soubor uložte a zavřete ho.
 
-5. V MFCAnimationWalkthroughView.cpp v horní části souboru po `#include` příkazy ale předtím, než se jakékoli třídy, metody, přidejte následující kód.
+1. V MFCAnimationWalkthroughView.cpp v horní části souboru po `#include` příkazy ale předtím, než se jakékoli třídy, metody, přidejte následující kód.
 
     ```cpp
     static int nAnimationGroup = 0;
     static int nInfoAreaHeight = 40;
     ```
 
-6. Na konci konstruktor pro `CMFCAnimationWalkthroughView`, přidejte následující kód.
+1. Na konci konstruktor pro `CMFCAnimationWalkthroughView`, přidejte následující kód.
 
     ```cpp
     m_animationController.EnableAnimationTimerEventHandler();
@@ -159,7 +159,7 @@ K dokončení tohoto návodu, musíte mít Visual Studio.
     m_animationController.AddAnimationObject(&m_animationRect);
     ```
 
-7. Vyhledejte `CAnimationWalthroughView::PreCreateWindow` metodu a nahraďte ho následujícím kódem.
+1. Vyhledejte `CAnimationWalthroughView::PreCreateWindow` metodu a nahraďte ho následujícím kódem.
 
     ```cpp
     BOOL CMFCAnimationWalkthroughView::PreCreateWindow(CREATESTRUCT& cs)
@@ -172,7 +172,7 @@ K dokončení tohoto návodu, musíte mít Visual Studio.
     }
     ```
 
-8. Vyhledejte `CAnimationWalkthroughView::OnDraw` metodu a nahraďte ho následujícím kódem.
+1. Vyhledejte `CAnimationWalkthroughView::OnDraw` metodu a nahraďte ho následujícím kódem.
 
     ```cpp
     void CMFCAnimationWalkthroughView::OnDraw(CDC* pDC)
@@ -209,7 +209,7 @@ K dokončení tohoto návodu, musíte mít Visual Studio.
     }
     ```
 
-9. Na konci souboru přidejte následující kód.
+1. Na konci souboru přidejte následující kód.
 
     ```cpp
     void CMFCAnimationWalkthroughView::Animate(BOOL bDirection)
@@ -219,9 +219,9 @@ K dokončení tohoto návodu, musíte mít Visual Studio.
         static BYTE nStartColor = 50;
         static BYTE nEndColor = 255;
 
-        BYTE nRedColorFinal = bDirection  nStartColor : nEndColor;
-        BYTE nGreenColorFinal = bDirection  nStartColor : nEndColor;
-        BYTE nBlueColorFinal = bDirection  nStartColor : nEndColor;
+        BYTE nRedColorFinal = bDirection ? nStartColor : nEndColor;
+        BYTE nGreenColorFinal = bDirection ? nStartColor : nEndColor;
+        BYTE nBlueColorFinal = bDirection ? nStartColor : nEndColor;
 
         CLinearTransition* pRedTransition =
             new CLinearTransition(duration, (DOUBLE)nRedColorFinal);
@@ -278,13 +278,13 @@ K dokončení tohoto návodu, musíte mít Visual Studio.
     }
     ```
 
-10. Na **projektu** nabídky, klikněte na tlačítko **Průvodce třídami**.
+1. Na **projektu** nabídky, klikněte na tlačítko **Průvodce třídami**.
 
-11. V **Průvodce třídami MFC**v části **název třídy**vyberte `CMFCAnimationWalkthroughView`.
+1. V **Průvodce třídami MFC**v části **název třídy**vyberte **CMFCAnimationWalkthroughView**.
 
-12. Na **zprávy** kartě **zprávy** vyberte `WM_ERASEBKGND`, klikněte na tlačítko **přidat obslužnou rutinu**a potom klikněte na tlačítko **OK**.
+1. Na **zprávy** kartě **zprávy** vyberte **WM_ERASEBKGND**, klikněte na tlačítko **přidat obslužnou rutinu**a potom klikněte na tlačítko **OK** .
 
-13. V MFCAnimationWalkthroughView.cpp, nahraďte provádění `OnEraseBkgnd` s následující kód pro omezení blikání v animovaný objekt, když se měl překreslit.
+1. V MFCAnimationWalkthroughView.cpp, nahraďte provádění `OnEraseBkgnd` s následující kód pro omezení blikání v animovaný objekt, když se měl překreslit.
 
     ```cpp
     BOOL CMFCAnimationWalkthroughView::OnEraseBkgnd(CDC* /*pDC*/)
@@ -293,7 +293,7 @@ K dokončení tohoto návodu, musíte mít Visual Studio.
     }
     ```
 
-14. Nahraďte implementace `CMFCAnimationWalkthroughView::OnAnimationStartforward`, `CMFCAnimationWalkthroughView::OnAnimationStartbackward`, a `CMFCAnimationWalkthroughView::OnAnimationStop` následujícím kódem.
+1. Nahraďte implementace `CMFCAnimationWalkthroughView::OnAnimationStartforward`, `CMFCAnimationWalkthroughView::OnAnimationStartbackward`, a `CMFCAnimationWalkthroughView::OnAnimationStop` následujícím kódem.
 
     ```cpp
     void CMFCAnimationWalkthroughView::OnAnimationStartforward()
@@ -317,7 +317,7 @@ K dokončení tohoto návodu, musíte mít Visual Studio.
     }
     ```
 
-15. Soubor uložte a zavřete ho.
+1. Soubor uložte a zavřete ho.
 
 ### <a name="to-center-the-animated-object-in-the-window"></a>Zarovnat na střed animovaný objekt v okně
 
@@ -327,15 +327,15 @@ K dokončení tohoto návodu, musíte mít Visual Studio.
     BOOL m_bCurrentDirection;
     ```
 
-2. Soubor uložte a zavřete ho.
+1. Soubor uložte a zavřete ho.
 
-3. Na **projektu** nabídky, klikněte na tlačítko **Průvodce třídami**.
+1. Na **projektu** nabídky, klikněte na tlačítko **Průvodce třídami**.
 
-4. V **Průvodce třídami MFC**v části **název třídy**vyberte `CMFCAnimationWalkthroughView`.
+1. V **Průvodce třídami MFC**v části **název třídy**vyberte **CMFCAnimationWalkthroughView**.
 
-5. Na **zprávy** kartě **zprávy** vyberte `WM_SIZE`, klikněte na tlačítko **přidat obslužnou rutinu**a potom klikněte na tlačítko **OK**.
+1. Na **zprávy** kartě **zprávy** vyberte **WM_SIZE**, klikněte na tlačítko **přidat obslužnou rutinu**a potom klikněte na tlačítko **OK**.
 
-6. V MFCAnimationWalkthroughView.cpp, nahraďte kód `CMFCAnimationWalkthroughView::OnSize` následujícím kódem.
+1. V MFCAnimationWalkthroughView.cpp, nahraďte kód `CMFCAnimationWalkthroughView::OnSize` následujícím kódem.
 
     ```cpp
     void CMFCAnimationWalkthroughView::OnSize(UINT nType, int cx, int cy)
@@ -358,19 +358,19 @@ K dokončení tohoto návodu, musíte mít Visual Studio.
     }
     ```
 
-7. Na začátku konstruktor pro `CMFCAnimationWalkthroughView`, přidejte následující kód.
+1. Na začátku konstruktor pro `CMFCAnimationWalkthroughView`, přidejte následující kód.
 
     ```cpp
     m_bCurrentDirection = TRUE;
     ```
 
-8. Na začátku `CMFCAnimationWalkthroughView::Animate` metodu, přidejte následující kód.
+1. Na začátku `CMFCAnimationWalkthroughView::Animate` metodu, přidejte následující kód.
 
     ```cpp
     m_bCurrentDirection = bDirection;
     ```
 
-9. Soubor uložte a zavřete ho.
+1. Soubor uložte a zavřete ho.
 
 ### <a name="to-verify-the-results"></a>Chcete-li ověřit výsledky
 
