@@ -5,7 +5,7 @@ ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: tutorial
 ms.technology:
-- devlang-C++
+- cpp-tools
 ms.devlang: C++
 dev_langs:
 - C++
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05a5204234eb127da676e3b4a12ef875baecdad0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c9c32f6811a18fae00cb2943a9ca97a89cf159a1
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705780"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029590"
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Sestavení a spuštění projektu aplikace konzoly C++
 
@@ -45,7 +45,7 @@ Pokud aplikace Visual Studio vypadá to, jste připraveni k sestavení a spušt�
 
    ![Spustit projekt](../build/media/vscpp-start-without-debugging.gif "spustit projekt")
 
-    Okno konzoly otevře a spustí vaši aplikaci. Když spustíte aplikaci konzoly v sadě Visual Studio, spustí váš kód a pak vypíše "stisknutím libovolné klávesy, abyste mohli pokračovat. . ." získáte možnost zobrazit výstup.
+   Okno konzoly otevře a spustí vaši aplikaci. Když spustíte aplikaci konzoly v sadě Visual Studio, spustí váš kód a pak vypíše "stisknutím libovolné klávesy, abyste mohli pokračovat. . ." získáte možnost zobrazit výstup.
 
 Blahopřejeme! Vytvoření první "Hello, world!" Konzolová aplikace v sadě Visual Studio! Stisknutím jakékoli klávesy zavřete okno konzoly a vraťte se do sady Visual Studio.
 

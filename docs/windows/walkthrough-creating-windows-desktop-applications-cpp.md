@@ -1,7 +1,7 @@
 ---
 title: 'Návod: Vytvoření tradiční aplikace klasické pracovní plochy Windows (C++) | Dokumentace Microsoftu'
 ms.custom: get-started-article
-ms.date: 06/12/2018
+ms.date: 09/18/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 34342fbca00a127d1fdee13d29626bc2a3dfe53f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 7e9541517852696073a3dbbff560bb6c44fd3264
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679202"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029668"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Návod: Vytvoření tradiční aplikace klasické pracovní plochy Windows (C++)
 
@@ -120,7 +120,7 @@ V dalším kroku se dozvíte, jak vytvořit kód pro aplikace klasické pracovn�
    Informace o parametrech a vrácených hodnotách této funkce najdete v tématu [WinMain vstupní bod](https://msdn.microsoft.com/library/windows/desktop/ms633559).
 
    > [!NOTE]
-   > Co jsou všechny tyto nadbytečná slova, jako je například `CALLBACK`, nebo `HINSTANCE`, nebo `_In_`? Tradiční rozhraní Windows API používá – definice TypeDef a makra preprocesoru pro abstrakci některé podrobnosti typů a specifické pro platformu. kód, jako je například konvence volání, **__declspec** deklarace a pragma kompilátoru. V sadě Visual Studio, můžete použít technologie IntelliSense [rychlé informace](/visualstudio/ide/using-intellisense#quick-info) funkce naleznete v tématu co definování těchto funkcí TypeDef a makra. Umístěte ukazatel myši nad slovo, které vás zajímají, nebo ho vyberte a stiskněte klávesu ctrl-K, ctrl-I pro malého vyskakovacího okna, který obsahuje definici. Další informace najdete v tématu [pomocí technologie IntelliSense](/visualstudio/ide/using-intellisense). Parametry a návratové typy často používají *poznámky SAL* umožňují catch programovací chyby. Další informace najdete v tématu [použití anotací SAL k omezení defektů kódu C/C++](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+   > Co jsou všechny tyto nadbytečná slova, jako je například `CALLBACK`, nebo `HINSTANCE`, nebo `_In_`? Tradiční rozhraní Windows API používá – definice TypeDef a makra preprocesoru pro abstrakci některé podrobnosti typů a specifické pro platformu. kód, jako je například konvence volání, **__declspec** deklarace a pragma kompilátoru. V sadě Visual Studio, můžete použít technologie IntelliSense [rychlé informace](/visualstudio/ide/using-intellisense#quick-info) funkce naleznete v tématu co definování těchto funkcí TypeDef a makra. Umístěte ukazatel myši nad slovo, které vás zajímají, nebo ho vyberte a stiskněte klávesu **Ctrl**+**K**, **Ctrl**+**můžu** pro malého vyskakovacího okna, který obsahuje definici. Další informace najdete v tématu [pomocí technologie IntelliSense](/visualstudio/ide/using-intellisense). Parametry a návratové typy často používají *poznámky SAL* umožňují catch programovací chyby. Další informace najdete v tématu [použití anotací SAL k omezení defektů kódu C/C++](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
 
 1. Aplikace klasické pracovní plochy Windows vyžadují &lt;windows.h >. &lt;Tchar.h > definuje `TCHAR` makro, které řeší nakonec k **wchar_t** Pokud a symbolů UNICODE je definován ve vašem projektu, jinak se překládá na **char**.  Při sestavování vždy s povoleným kódem UNICODE, není nutné Tchar – a můžete pouze **wchar_t** přímo.
 

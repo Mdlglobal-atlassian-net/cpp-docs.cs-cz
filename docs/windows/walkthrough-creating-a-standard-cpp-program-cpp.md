@@ -1,7 +1,7 @@
 ---
 title: 'Návod: Vytvoření programu ve standardním C++ (C++) | Dokumentace Microsoftu'
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff4a2078bef03127507d1da35599ea391904bee7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d5481b9391d47887d85ca43746f1a6aff5f6eb92
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382632"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029616"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Návod: Vytvoření programu ve standardním C++ (C++)
 
@@ -45,41 +45,48 @@ Předpokladem práce s tímto návodem je znalost základů jazyka C++.
 
 1. Vytvořte projekt tak, že označíte **nový** na **souboru** nabídky a pak levým na **projektu**.
 
-2. V **Visual C++** podokně typů projektů, klikněte na tlačítko **Windows Desktop**a potom klikněte na tlačítko **Konzolová aplikace Windows**.
+1. V **Visual C++** podokně typů projektů, klikněte na tlačítko **Windows Desktop**a potom klikněte na tlačítko **Konzolová aplikace Windows**. 
 
-3. Zadejte název projektu.
+   > [!NOTE]
+   > Pro verze starší než 2017, Visual Studio v **nový projekt** dialogového okna rozbalte **nainstalováno** > **šablony**  >  **Visual C++** a pak vyberte **Win32**. V prostředním podokně vyberte **Konzolová aplikace Win32**. 
+
+   Zadejte název projektu.
 
    Ve výchozím nastavení řešení, které obsahuje projekt má stejný název jako projekt, ale můžete zadat jiný název. Můžete také zadat jiné umístění pro projekt.
 
    Klikněte na tlačítko **OK** pro vytvoření projektu.
 
-4. Pokud **Průzkumníka řešení** se nezobrazuje na **zobrazení** nabídky, klikněte na tlačítko **Průzkumníka řešení**.
+   > [!NOTE]
+   > Verze sady Visual Studio starší než 2017, dokončete **Průvodce aplikací Win32**. Klikněte na tlačítko **Další**, zkontrolujte, zda **konzolovou aplikaci** je vybraná a zrušte zaškrtnutí políčka **předkompilované hlavičky** pole. Klikněte na tlačítko **Dokončit**.
 
-5. Přidání nového zdrojového souboru do projektu, následujícím způsobem.
+1. Pokud **Průzkumníka řešení** se nezobrazuje na **zobrazení** nabídky, klikněte na tlačítko **Průzkumníka řešení**.
+
+1. Přidání nového zdrojového souboru do projektu, následujícím způsobem.
 
    1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na **zdrojové soubory** složku, přejděte na příkaz **přidat**a potom klikněte na tlačítko **nová položka**.
 
-   2. V **kód** uzel, klikněte na tlačítko **soubor C++ (.cpp)**, zadejte název souboru a pak klikněte na tlačítko **přidat**.
+   1. V **kód** uzel, klikněte na tlačítko **soubor C++ (.cpp)**, zadejte název souboru a pak klikněte na tlačítko **přidat**.
 
    Soubor .cpp se zobrazí v **zdrojové soubory** složky **Průzkumníka řešení**, a soubor je otevřen v editoru sady Visual Studio.
 
-6. V souboru v editoru zadejte platný program C++ používající standardní knihovny C++, nebo zkopírujte jeden z ukázkových programů a vložte ho do souboru.
+1. V souboru v editoru zadejte platný program C++ používající standardní knihovny C++, nebo zkopírujte jeden z ukázkových programů a vložte ho do souboru.
 
-7. Uložte soubor.
+1. Uložte soubor.
 
-8. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
+1. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
 
    **Výstup** okně zobrazí informace o průběhu kompilace, například umístění protokolu sestavení a napište zprávu, která označuje stav sestavení.
 
-9. Na **ladění** nabídky, klikněte na tlačítko **spustit bez ladění**.
+1. Na **ladění** nabídky, klikněte na tlačítko **spustit bez ladění**.
 
    Pokud jste použili ukázkový program, zobrazí se okno příkazového řádku a ukazuje, zda jsou určitá celá čísla nalezena v množině.
 
 ## <a name="next-steps"></a>Další kroky
 
-**Předchozí:** [konzolové aplikace v jazyce Visual C++](../windows/console-applications-in-visual-cpp.md). **Další krok:**[návod: kompilace nativního programu C++ v příkazovém řádku](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).
+**Předchozí:** [konzolové aplikace v jazyce Visual C++](../windows/console-applications-in-visual-cpp.md)<br/>
+**Další krok:** [návod: kompilace nativního programu C++ v příkazovém řádku](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
 
 ## <a name="see-also"></a>Viz také
 
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
-[Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)
+[Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)<br/>
