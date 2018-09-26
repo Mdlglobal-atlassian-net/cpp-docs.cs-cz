@@ -1,7 +1,7 @@
 ---
-title: 'Návod: Přidání objektu D2D do projektu MFC | Microsoft Docs'
+title: 'Návod: Přidání objektu D2D do projektu MFC | Dokumentace Microsoftu'
 ms.custom: ''
-ms.date: 06/19/2018
+ms.date: 09/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,26 +15,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87e1c696f3da374d7b71e1b24e3a8bd3ebfe41b9
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6117b17421e37238c9bc585677eb7b0c8ed557fb
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954868"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169655"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>Návod: Přidání objektu D2D do projektu MFC
 
-Tento názorný postup učí, jak přidat základní Direct2D (D2D) objektu pro aplikaci Visual C++, projektu Microsoft Foundation Class Library (MFC) a poté sestavení projektu do aplikace, která vytiskne "Hello, world" v přechodu pozadí.
+Tento návod vás naučí, jak přidat základní Direct2D (D2D) objektů jazyka Visual C++, projekt třídy knihovny MFC (Microsoft Foundation) a následné sestavení projektu do aplikace, která zobrazí "text Hello, world" na barevného přechodu pozadí.
 
-Průvodce ukazuje, jak provést tyto úlohy:
+Návodu ukazuje, jak provádět tyto úlohy:
 
 - Vytvoření aplikace knihovny MFC.
 
-- Vytvořte ucelený barevný štětec a štětce lineárního přechodu.
+- Vytvořte štětec plnými barvami a štětec lineárního přechodu.
 
-- Štětce přechodu upravte tak, aby se správně změní, když se změní velikost okna.
+- Štětec přechodu upravte tak, aby se správně změní, když je velikost okna.
 
-- Implementujte D2D kreslení obslužná rutina.
+- Implementujte obslužnou rutinu výkresu D2D.
 
 - Zkontrolujte výsledky.
 
@@ -42,19 +42,19 @@ Průvodce ukazuje, jak provést tyto úlohy:
 
 ## <a name="prerequisites"></a>Požadavky
 
-Pro dokončení tohoto návodu, musíte mít nainstalované s Visual Studio **vývoj aplikací s jazykem C++** zatížení a volitelné **Visual C++ MFC pro x86 a x64** součásti.
+K dokončení tohoto návodu, musíte mít nainstalované s Visual Studio **vývoj desktopových aplikací pomocí C++** pracovního vytížení a volitelné **Visual C++ MFC pro x86 a x64** komponenty.
 
-## <a name="to-create-an-mfc-application"></a>K vytvoření aplikace knihovny MFC
+## <a name="to-create-an-mfc-application"></a>Vytvoření aplikace MFC
 
-1. Na **soubor** nabídky, přejděte na příkaz **nový** a potom zvolte **projektu**.
+1. Na **souboru** nabídky, přejděte k **nový** a klikněte na tlačítko **projektu**.
 
-2. V **nový projekt** dialogové okno, v levém podokně v části **nainstalovaných šablonách**, rozbalte položku **Visual C++** a pak vyberte **MFC**. V prostředním podokně vyberte **aplikace knihovny MFC**. V **název** zadejte *MFCD2DWalkthrough*. Zvolte **OK**.
+1. V **nový projekt** dialogové okno, v levém podokně v části **nainstalované šablony**, rozbalte **Visual C++** a pak vyberte **MFC**. V prostředním podokně vyberte **aplikace knihovny MFC**. V **název** zadejte *MFCD2DWalkthrough*. Zvolte **OK**.
 
-3. V **Průvodce aplikací knihovny MFC**, zvolte **Dokončit** bez jakýchkoli změn nastavení.
+1. V **Průvodce aplikací knihovny MFC**, zvolte **Dokončit** bez jakýchkoli změn nastavení.
 
-## <a name="to-create-a-solid-color-brush-and-a-linear-gradient-brush"></a>Chcete-li vytvořit ucelený barevný štětec a štětce lineárního přechodu
+## <a name="to-create-a-solid-color-brush-and-a-linear-gradient-brush"></a>Chcete-li vytvořit štětec plnými barvami a štětec lineárního přechodu
 
-1. V **Průzkumníku řešení**v **MFCD2DWalkthrough** v projektu **soubory hlaviček** složku, otevřete MFCD2DWalkthroughView.h. Přidejte tento kód, který `CMFCD2DWalkthroughView` třídy za účelem vytvoření tří proměnných dat:
+1. V **Průzkumníka řešení**v **MFCD2DWalkthrough** v projektu **hlavičkové soubory** složku, otevřete MFCD2DWalkthroughView.h. Přidejte tento kód `CMFCD2DWalkthroughView` třídy za účelem vytvoření tří datových proměnných:
 
    ```cpp
    CD2DTextFormat* m_pTextFormat;
@@ -64,7 +64,7 @@ Pro dokončení tohoto návodu, musíte mít nainstalované s Visual Studio **v�
 
    Soubor uložte a zavřete ho.
 
-2. V **zdrojové soubory** složku, otevřete MFCD2DWalkthroughView.cpp. V konstruktoru pro `CMFCD2DWalkthroughView` třídy, přidejte tento kód:
+1. V **zdrojové soubory** složku, otevřete MFCD2DWalkthroughView.cpp. V konstruktoru pro `CMFCD2DWalkthroughView` třídy, přidejte tento kód:
 
    ```cpp
    // Enable D2D support for this window:
@@ -108,15 +108,15 @@ Pro dokončení tohoto návodu, musíte mít nainstalované s Visual Studio **v�
 
    Soubor uložte a zavřete ho.
 
-## <a name="to-modify-the-gradient-brush-so-that-it-will-change-appropriately-when-the-window-is-resized"></a>Chcete-li upravit štětce přechodu tak, aby se správně změní, když se změní velikost okna
+## <a name="to-modify-the-gradient-brush-so-that-it-will-change-appropriately-when-the-window-is-resized"></a>Chcete-li změnit štětce přechodu tak, aby se správně změní, když je velikost okna
 
-1. Na **projektu** nabídce zvolte **Průvodce třídou**.
+1. Na **projektu** nabídce zvolte **Průvodce třídami**.
 
-2. V **Průvodce třídou MFC**v části **název třídy**, vyberte `CMFCD2DWalkthroughView`.
+1. V **Průvodce třídami MFC**v části **název třídy**vyberte `CMFCD2DWalkthroughView`.
 
-3. Na **zprávy** ve **zprávy** vyberte `WM_SIZE` a potom zvolte **přidat obslužnou rutinu**. Tato akce přidá `OnSize` popisovač zpráv se má `CMFCD2DWalkthroughView` třídy.
+1. Na **zprávy** kartě **zprávy** vyberte `WM_SIZE` a klikněte na tlačítko **přidat obslužnou rutinu**. Tato akce přidá `OnSize` obslužná rutina zprávy `CMFCD2DWalkthroughView` třídy.
 
-4. V **stávající obslužné rutiny** vyberte `OnSize`. Zvolte **upravit kód** zobrazíte `CMFCD2DWalkthroughView::OnSize` metoda. Na konci metodu přidejte následující kód.
+1. V **existující obslužné rutiny** vyberte `OnSize`. Zvolte **upravit kód** zobrazíte `CMFCD2DWalkthroughView::OnSize` metody. Na konci metody přidejte následující kód.
 
    ```cpp
    m_pLinearGradientBrush->SetEndPoint(CPoint(cx, cy));
@@ -124,17 +124,17 @@ Pro dokončení tohoto návodu, musíte mít nainstalované s Visual Studio **v�
 
    Soubor uložte a zavřete ho.
 
-## <a name="to-implement-a-d2d-drawing-handler"></a>K implementaci D2D kreslení obslužná rutina
+## <a name="to-implement-a-d2d-drawing-handler"></a>K implementaci obslužné rutiny vykreslení D2D
 
-1. Na **projektu** nabídce zvolte **Průvodce třídou**.
+1. Na **projektu** nabídce zvolte **Průvodce třídami**.
 
-2. V **Průvodce třídou MFC**v části **název třídy**, vyberte `CMFCD2DWalkthroughView`.
+1. V **Průvodce třídami MFC**v části **název třídy**vyberte `CMFCD2DWalkthroughView`.
 
-3. Na **zprávy** , zvolte **přidat vlastní zprávu**.
+1. Na **zprávy** kartě **přidat vlastní zprávu**.
 
-4. V **přidat vlastní zprávu** dialogovém **vlastní zpráv systému Windows** zadejte *AFX_WM_DRAW2D*. V **název obslužné rutiny zpráv** zadejte *OnDraw2D*. Vyberte **zaregistrován zpráva** možnost a potom zvolte **OK**. Tato akce přidá obslužné rutiny zpráv pro zprávy AFX_WM_DRAW2D `CMFCD2DWalkthroughView` třídy.
+1. V **přidat vlastní zprávu** v dialogu **vlastní zpráva Windows** zadejte *AFX_WM_DRAW2D*. V **název obslužné rutiny** zadejte *OnDraw2D*. Vyberte **registrovanou zprávu** možnost a klikněte na tlačítko **OK**. Tato akce přidá obslužné rutiny zpráv pro zprávy AFX_WM_DRAW2D `CMFCD2DWalkthroughView` třídy.
 
-5. V **stávající obslužné rutiny** vyberte `OnDraw2D`. Zvolte **upravit kód** zobrazíte `CMFCD2DWalkthroughView::OnDraw2D` metoda. Pomocí tohoto kódu pro `CMFCD2DWalkthroughView::OnDrawD2D` metoda:
+1. V **existující obslužné rutiny** vyberte `OnDraw2D`. Zvolte **upravit kód** zobrazíte `CMFCD2DWalkthroughView::OnDraw2D` metody. Pomocí tohoto kódu pro `CMFCD2DWalkthroughView::OnDrawD2D` metody:
 
    ```cpp
    afx_msg LRESULT CMFCD2DWalkthroughView::OnDraw2D(
@@ -161,10 +161,10 @@ Pro dokončení tohoto návodu, musíte mít nainstalované s Visual Studio **v�
 
    Soubor uložte a zavřete ho.
 
-## <a name="to-verify-the-results"></a>Ověření výsledků
+## <a name="to-verify-the-results"></a>Chcete-li ověřit výsledky
 
-- Sestavte a spusťte aplikaci. Měl by mít barevného přechodu rámečku, která se změní při změně velikosti okna. "Hello, World!" má být zobrazena v centru rámečku.
+Sestavte a spusťte aplikaci. Měl by mít přechodu obdélníku, která se mění při změně velikosti okna. "Hello World!" má být zobrazena ve středu obdélníku.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Návody](../mfc/walkthroughs-mfc.md)
+[Návody](../mfc/walkthroughs-mfc.md)

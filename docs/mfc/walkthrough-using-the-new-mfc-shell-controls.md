@@ -1,7 +1,7 @@
 ---
 title: 'Návod: Použití nového prostředí MFC prostředí ovládací prvky | Dokumentace Microsoftu'
 ms.custom: ''
-ms.date: 06/28/2018
+ms.date: 09/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81925cfa31c394a1b307a184388fb0d331d31fdd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8e1cffc9d1231cd9e8e91b445f05eb7dbbbc4ce4
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432487"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169616"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Návod: Použití nových ovládacích prvků prostředí MFC
 
@@ -33,31 +33,29 @@ Tento názorný průvodce předpokládá, že jste nastavili sady Visual Studio,
 
 1. Použití **Průvodce aplikací knihovny MFC** k vytvoření nové aplikace knihovny MFC. Chcete-li spustit průvodce, ze **souboru** nabídky vyberte možnost **nový**a pak vyberte **projektu**. **Nový projekt** se zobrazí dialogové okno.
 
-2. V **nový projekt** dialogového okna rozbalte **Visual C++** uzlu v **typy projektů** podokně a vyberte **MFC**. Potom v **šablony** vyberte **aplikace knihovny MFC**. Zadejte název projektu, například `MFCShellControls` a klikněte na tlačítko **OK**. **Průvodce aplikací knihovny MFC** se zobrazí.
+1. V **nový projekt** dialogového okna rozbalte **Visual C++** uzlu v **typy projektů** podokně a vyberte **MFC**. Potom v **šablony** vyberte **aplikace knihovny MFC**. Zadejte název projektu, například `MFCShellControls` a klikněte na tlačítko **OK**. Po **Průvodce aplikací knihovny MFC** zobrazí, pomocí následujících možností:
 
-3. V **Průvodce aplikací knihovny MFC** dialogové okno, klikněte na tlačítko **Další**. **Typ aplikace** podokně se zobrazí.
+    1. Na **typ aplikace** podokně v části **typ aplikace**, zrušte zaškrtnutí políčka **dokumenty na kartách** možnost. V dalším kroku vyberte **jednotlivý dokument** a vyberte **podpora architektury Document/View**. V části **projektu styl**vyberte **sady Visual Studio**a od **vizuální styl a barvy** rozevíracím seznamu vyberte **Office 2007 (modrý motiv)**. 
 
-4. Na **typ aplikace** podokně v části **typ aplikace**, zrušte zaškrtnutí políčka **dokumenty na kartách** možnost. V dalším kroku vyberte **jednotlivý dokument** a vyberte **podpora architektury Document/View**. V části **projektu styl**vyberte **sady Visual Studio**a od **vizuální styl a barvy** rozevíracím seznamu vyberte **Office 2007 (modrý motiv)**. Nechte ostatní možnosti, jak jsou. Klikněte na tlačítko **Další** zobrazíte **Podpora složených dokumentů** podokně.
+    1. Na **Podpora složených dokumentů** vyberte **žádný**.
 
-5. Na **Podpora složených dokumentů** vyberte **žádný**. Klikněte na tlačítko **Další** zobrazíte **řetězce šablony dokumentu** podokně.
+    1. Neprovádějte žádné změny **řetězce šablony dokumentu** podokně.
 
-6. Neprovádějte žádné změny **řetězce šablony dokumentu** podokně. Klikněte na tlačítko **Další** zobrazíte **Podpora databáze** podokně.
+    1. Na **Podpora databáze** podokně (Visual Studio 2015 a starší), vyberte **žádný** vzhledem k tomu, že tuto aplikaci nebude používat databázi. 
 
-7. Na **Podpora databáze** vyberte **žádný** vzhledem k tomu, že tuto aplikaci nebude používat databázi. Klikněte na tlačítko **Další** zobrazíte **funkce uživatelského rozhraní** podokně.
+    1. Na **funkce uživatelského rozhraní** podokno, ujistěte se, že **použít řádek nabídek a panelů nástrojů** je vybraná možnost. Nechte ostatní možnosti, jak jsou. 
 
-8. Na **funkce uživatelského rozhraní** podokno, ujistěte se, že **použít řádek nabídek a panelů nástrojů** je vybraná možnost. Nechte ostatní možnosti, jak jsou. Klikněte na tlačítko **Další** zobrazíte **rozšířené funkce** podokně.
+    1. Na **rozšířené funkce** podokně v části **pokročilé funkce**, vyberte pouze **ovládací prvky ActiveX** a **běžné Manifest ovládacího prvku**. V části **rozšířená podokna rámců**, vyberte pouze **navigačním podokně** možnost. To způsobí, že průvodce vytvoří v podokně nalevo od okna s `CMFCShellTreeCtrl` již vložen. 
 
-9. Na **rozšířené funkce** podokně v části **pokročilé funkce**, vyberte pouze **ovládací prvky ActiveX** a **běžné Manifest ovládacího prvku**. V části **rozšířená podokna rámců**, vyberte pouze **navigačním podokně** možnost. To způsobí, že průvodce vytvoří v podokně nalevo od okna s `CMFCShellTreeCtrl` již vložen. Klikněte na tlačítko **Další** zobrazíte **třídy generované v** podokně.
+    1. Nebudeme žádné změny k **třídy generované v** podokně. Proto klikněte na tlačítko **Dokončit** k vytvoření nového projektu knihovny MFC.
 
-10. Nebudeme žádné změny k **třídy generované v** podokně. Proto klikněte na tlačítko **Dokončit** k vytvoření nového projektu knihovny MFC.
-
-11. Ověřte, že aplikace úspěšně vytvořil sestavováním a spouštěním ho. Jak vytvořit aplikaci, ze **sestavení** nabídky vyberte možnost **sestavit řešení**. Je-li aplikace sestavena úspěšně, spusťte aplikaci tak, že vyberete **spustit ladění** z **ladění** nabídky.
+1. Ověřte, že aplikace úspěšně vytvořil sestavováním a spouštěním ho. Jak vytvořit aplikaci, ze **sestavení** nabídky vyberte možnost **sestavit řešení**. Je-li aplikace sestavena úspěšně, spusťte aplikaci tak, že vyberete **spustit ladění** z **ladění** nabídky.
 
    Průvodce automaticky vytvoří aplikaci, která má standardní nabídek, standardním panelu nástrojů, standardní stavového řádku a panel aplikace Outlook k levému okraji okna s **složky** zobrazení a **kalendáře** zobrazení .
 
 ### <a name="to-add-the-shell-list-control-to-the-document-view"></a>Chcete-li přidat ovládací prvek seznamu prostředí na zobrazení dokumentu
 
-1. V této části přidáte instanci `CMFCShellListCtrl` do zobrazení, který průvodce vytvořil. Otevřete soubor záhlaví zobrazení dvojitým kliknutím MFCShellControlsView.h v **Průzkumníka řešení**.
+1. V této části přidáte instanci `CMFCShellListCtrl` do zobrazení, který průvodce vytvořil. Dvojitým kliknutím otevřete soubor záhlaví zobrazení **MFCShellControlsView.h** v **Průzkumníka řešení**.
 
    Vyhledejte `#pragma once` direktiv v horní části souboru hlaviček. Bezprostředně pod ní přidejte tento kód přikazující zahrnutí souboru hlaviček pro `CMFCShellListCtrl`:
 
@@ -78,7 +76,7 @@ Tento názorný průvodce předpokládá, že jste nastavili sady Visual Studio,
    CMFCShellListCtrl m_wndList;
    ```
 
-2. **Průvodce aplikací knihovny MFC** už vytvořili `CMFCShellTreeCtrl` objekt `CMainFrame` třídy, ale je chráněný člen. Tento objekt jsme se později přístup. Proto teď vytvořte přístupový objekt pro něj. Otevřete soubor hlaviček MainFrm.h poklepáním v **Průzkumníka řešení**. Vyhledejte následující komentář:
+1. **Průvodce aplikací knihovny MFC** už vytvořili `CMFCShellTreeCtrl` objekt `CMainFrame` třídy, ale je chráněný člen. Tento objekt jsme se později přístup. Proto teď vytvořte přístupový objekt pro něj. Otevřete soubor hlaviček MainFrm.h poklepáním v **Průzkumníka řešení**. Vyhledejte následující komentář:
 
    ```cpp
    // Attributes
@@ -100,13 +98,9 @@ Tento názorný průvodce předpokládá, že jste nastavili sady Visual Studio,
    }
    ```
 
-3. Nyní aktualizujeme `CMFCShellControlsView` třídy pro zpracování **WM_CREATE** zpráv systému windows. Otevřete soubor hlaviček MFCShellControlsView.h a klikněte na tento řádek kódu:
+1. Nyní aktualizujeme `CMFCShellControlsView` třídy pro zpracování `WM_CREATE` zpráv systému windows. Otevřít **zobrazení tříd** okna a vyberte `CMFCShellControlsView` třídy. Klikněte pravým tlačítkem a vyberte **vlastnosti**.
 
-    ```cpp
-    class CMFCShellControlsView : public CView
-    ```
-
-   Vedle **vlastnosti** okna, klikněte na tlačítko **zprávy** ikonu. Posuňte se dolů, dokud nenajdete **WM_CREATE** zprávy. Z rozevíracího seznamu vedle **WM_CREATE**vyberte  **\<Přidat > OnCreate**. Tím se vytvoří obslužné rutiny zpráv pro nás a automaticky aktualizuje mapování zpráv knihovny MFC.
+    Vedle **vlastnosti** okna, klikněte na tlačítko **zprávy** ikonu. Posuňte se dolů, dokud nenajdete `WM_CREATE` zprávy. Z rozevíracího seznamu vedle `WM_CREATE`vyberte  **\<Přidat > OnCreate**. Tím se vytvoří obslužné rutiny zpráv pro nás a automaticky aktualizuje mapování zpráv knihovny MFC.
 
    V `OnCreate` metoda teď vytvoříme naši `CMFCShellListCtrl` objektu. Najít `OnCreate` definici metody v MFCShellControlsView.cpp zdrojového souboru a jeho implementace nahraďte následujícím kódem:
 
@@ -125,7 +119,7 @@ Tento názorný průvodce předpokládá, že jste nastavili sady Visual Studio,
     }
     ```
 
-4. Opakujte předchozí krok, ale pro **WM_SIZE** zprávy. To způsobí, že zobrazení aplikací, aby vyžadovaly překreslení pokaždé, když uživatel změní velikost okna aplikace. Nahraďte definici `OnSize` metodu s následujícím kódem:
+1. Opakujte předchozí krok, ale pro `WM_SIZE` zprávy. To způsobí, že zobrazení aplikací, aby vyžadovaly překreslení pokaždé, když uživatel změní velikost okna aplikace. Nahraďte definici `OnSize` metodu s následujícím kódem:
 
     ```cpp
     void CMFCShellControlsView::OnSize(UINT nType, int cx, int cy)
@@ -137,7 +131,7 @@ Tento názorný průvodce předpokládá, že jste nastavili sady Visual Studio,
     }
     ```
 
-5. Posledním krokem je připojení `CMFCShellTreeCtrl` a `CMFCShellListCtrl` objektů pomocí [CMFCShellTreeCtrl::SetRelatedList](../mfc/reference/cmfcshelltreectrl-class.md#setrelatedlist) metody. Po volání této metody `CMFCShellListCtrl` se automaticky zobrazí obsah položky vybrané v `CMFCShellTreeCtrl`. Uděláme to `OnActivateView` metodu, která je přepsána z [CView::OnActivateView](../mfc/reference/cview-class.md#onactivateview).
+1. Posledním krokem je připojení `CMFCShellTreeCtrl` a `CMFCShellListCtrl` objektů pomocí [CMFCShellTreeCtrl::SetRelatedList](../mfc/reference/cmfcshelltreectrl-class.md#setrelatedlist) metody. Po volání této metody `CMFCShellListCtrl` se automaticky zobrazí obsah položky vybrané v `CMFCShellTreeCtrl`. Uděláme to `OnActivateView` metodu, která je přepsána z [CView::OnActivateView](../mfc/reference/cview-class.md#onactivateview).
 
    V souboru hlaviček MFCShellControlsView.h uvnitř `CMFCShellControlsView` deklarace třídy, přidejte následující deklarace metody:
 
@@ -172,18 +166,18 @@ Tento názorný průvodce předpokládá, že jste nastavili sady Visual Studio,
     #include "MainFrm.h"
     ```
 
-6. Ověřte, že aplikace úspěšně vytvořil sestavováním a spouštěním ho. Jak vytvořit aplikaci, ze **sestavení** nabídky vyberte možnost **sestavit řešení**. Je-li aplikace sestavena úspěšně, spustit tak, že **spustit ladění** z **ladění** nabídky.
+1. Ověřte, že aplikace úspěšně vytvořil sestavováním a spouštěním ho. Jak vytvořit aplikaci, ze **sestavení** nabídky vyberte možnost **sestavit řešení**. Je-li aplikace sestavena úspěšně, spustit tak, že **spustit ladění** z **ladění** nabídky.
 
    Teď byste měli vidět podrobnosti o položce vybrané `CMFCShellTreeCtrl` v podokně zobrazení. Po kliknutí na uzel v `CMFCShellTreeCtrl`, `CMFCShellListCtrl` se automaticky aktualizují. Podobně pokud dvakrát kliknete na složku, do `CMFCShellListCtrl`, `CMFCShellTreeCtrl` mají být automaticky aktualizováni.
 
-   Klikněte pravým tlačítkem myši klikněte na libovolnou položku v ovládacím prvku stromu nebo v ovládacím prvku seznamu. Všimněte si, že dostanete stejné místní nabídce, jako kdyby jste používali skutečné Průzkumníka souborů.
+   Klikněte pravým tlačítkem myši klikněte na libovolnou položku v ovládacím prvku stromu nebo v ovládacím prvku seznamu. Všimněte si, že dostanete stejné místní nabídce, jako kdyby jste používali reálném **Průzkumníka souborů**.
 
 ## <a name="next-steps"></a>Další kroky
 
-- Průvodce vytvoří panel aplikace Outlook s oběma **složky** podokně a **kalendáře** podokně. To pravděpodobně nemá smysl mít **kalendáře** podokno v okně Průzkumníka. Proto teď odeberte toto podokno.
+- Průvodce vytvoří panel aplikace Outlook s oběma **složky** podokně a **kalendáře** podokně. Ho pravděpodobně nemá smysl mít **kalendáře** v podokně **Explorer** okna. Proto teď odeberte toto podokno.
 
 - `CMFCShellListCtrl` Podporuje zobrazení souborů v různých režimech, jako například **velké ikony**, **malé ikony**, **seznamu**, a **podrobnosti**. Aktualizace aplikace pro implementaci této funkce. Tip: viz [Visual C++ – ukázky](../visual-cpp-samples.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Návody](../mfc/walkthroughs-mfc.md)

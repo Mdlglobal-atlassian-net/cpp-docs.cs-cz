@@ -1,7 +1,7 @@
 ---
 title: 'Návod: Umístění ovládacích prvků na panely nástrojů | Dokumentace Microsoftu'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c50be81cbddb30752f401ca7a1784cfe428c379b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a8267704e6bb1b43a13cc05d21d0572695365fd6
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384556"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169746"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Návod: Umístění ovládacích prvků na panely nástrojů
 
@@ -30,11 +30,11 @@ Toto téma popisuje, jak na panel nástrojů přidat tlačítko panelu nástroj�
 
 Chcete-li přidat ovládací prvek na panel nástrojů, postupujte takto:
 
-1. Zarezervujte si pro tlačítko zástupný identifikátor ID prostředku v nadřazeném prostředku panelu nástrojů. Další informace o tom, jak vytváření tlačítek pomocí editoru panelu nástrojů v sadě Visual Studio, najdete v článku [panelu nástrojů editoru](../windows/toolbar-editor.md) tématu.
+1. Zarezervujte si pro tlačítko zástupný identifikátor ID prostředku v nadřazeném prostředku panelu nástrojů. Další informace o tom, jak vytvářet tlačítka pomocí **panelu nástrojů editoru** v sadě Visual Studio, najdete v článku [panelu nástrojů editoru](../windows/toolbar-editor.md) tématu.
 
 1. Zarezervujte obrázek panelu nástrojů (ikonu tlačítka) pro tlačítko ve všech rastrových obrázcích nadřazeného panelu nástrojů.
 
-1. V popisovači zpráv, která zpracovává zprávu AFX_WM_RESETTOOLBAR postupujte takto:
+1. V popisovači zpráv, který zpracovává zprávu `AFX_WM_RESETTOOLBAR`, proveďte následující akce:
 
    1. Vytvořte ovládací prvek tlačítka pomocí odvozené třídy `CMFCToolbarButton`.
 
@@ -55,22 +55,22 @@ Tato část popisuje, jak vytvořit **najít** prvek pole se seznamem, který se
 
 ### <a name="creating-the-find-control"></a>Vytvoření ovládacího prvku Find
 
-Nejprve vytvořte ovládací prvek pole se seznamem `Find`:
+Nejprve vytvořte **najít** ovládací prvek pole se seznamem:
 
 1. Přidejte tlačítko a jeho příkazy do prostředků aplikace:
 
    1. V prostředcích aplikace přidejte na panel nástrojů v aplikaci a ke všem rastrovým obrázkům přidruženým k panelu nástrojů nové tlačítko s identifikátorem příkazu `ID_EDIT_FIND`.
 
-   1. Vytvořte novou položku nabídky s identifikátorem příkazu ID_EDIT_FIND.
+   1. Vytvořit novou položku nabídky s `ID_EDIT_FIND` Apple ID.
 
-   1. Do tabulky řetězců přidejte nový řetězec „Najít text\nNajít“ a přiřaďte k němu identifikátor příkazu `ID_EDIT_FIND_COMBO`. Tento identifikátor bude použit jako identifikátor příkazu tlačítka pole se seznamem `Find`.
+   1. Do tabulky řetězců přidejte nový řetězec „Najít text\nNajít“ a přiřaďte k němu identifikátor příkazu `ID_EDIT_FIND_COMBO`. Toto ID se použije jako Identifikátor příkazu **najít** tlačítko pole se seznamem.
 
         > [!NOTE]
-        >  Jelikož příkaz `ID_EDIT_FIND` je standardní příkaz zpracovávaný třídou `CEditView`, není nutné implementovat pro něj zvláštní obslužnou rutinu.  Obslužnou rutinu je však zapotřebí implementovat pro nový příkaz `ID_EDIT_FIND_COMBO`.
+        > Jelikož příkaz `ID_EDIT_FIND` je standardní příkaz zpracovávaný třídou `CEditView`, není nutné implementovat pro něj zvláštní obslužnou rutinu.  Obslužnou rutinu je však zapotřebí implementovat pro nový příkaz `ID_EDIT_FIND_COMBO`.
 
 1. Vytvořte novou třídu, `CFindComboBox`odvozenou z [CComboBox – třída](../mfc/reference/ccombobox-class.md).
 
-1. Ve třídě `CFindComboBox` přepište virtuální metodu `PreTranslateMessage`. Tato metoda umožní poli se seznamem zpracovávat [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) zprávy. Stiskne-li uživatel klávesu Escape (`VK_ESCAPE`), vraťte fokus na okno hlavního rámce. Pokud uživatel stiskne klávesu Enter (`VK_ENTER`), publikuje do okna hlavního rámce wm_command – zpráva, která obsahuje `ID_EDIT_FIND_COMBO` Apple ID.
+1. Ve třídě `CFindComboBox` přepište virtuální metodu `PreTranslateMessage`. Tato metoda umožní poli se seznamem zpracovávat [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) zprávy. Stiskne-li uživatel klávesu Escape (`VK_ESCAPE`), vraťte fokus na okno hlavního rámce. Stiskne-li uživatel klávesu Enter (`VK_ENTER`), zašlete oknu hlavního rámce zprávu `WM_COMMAND` obsahující identifikátor příkazu `ID_EDIT_FIND_COMBO`.
 
 1. Vytvořte třídu pro **najít** tlačítko pole se seznamem, odvozený z [cmfctoolbarcomboboxbutton – třída](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). V tomto příkladu je pojmenována `CFindComboButton`.
 
@@ -88,7 +88,7 @@ Nejprve vytvořte ovládací prvek pole se seznamem `Find`:
 
 1. V aktuálním zobrazení dokumentu implementujte obslužnou rutinu příkazu `ID_EDIT_FIND_COMBO`. Použití [CMFCToolBar::GetCommandButtons](../mfc/reference/cmfctoolbar-class.md#getcommandbuttons) s `ID_EDIT_FIND_COMBO` chcete načíst všechny **najít** tlačítka pole se seznamem. V důsledku přizpůsobení může existovat několik kopií tlačítka se stejným identifikátorem příkazu.
 
-9. V popisovači zprávy ID_EDIT_FIND `OnFind`, použijte [CMFCToolBar::IsLastCommandFromButton](../mfc/reference/cmfctoolbar-class.md#islastcommandfrombutton) k určení, zda příkaz k vyhledávání byla odeslána z **najít** tlačítko pole se seznamem. Pokud ano, vyhledejte text a přidejte vyhledávací řetězec do pole se seznamem.
+1. V `ID_EDIT_FIND` obslužná rutina zprávy `OnFind`, použijte [CMFCToolBar::IsLastCommandFromButton](../mfc/reference/cmfctoolbar-class.md#islastcommandfrombutton) k určení, zda příkaz k vyhledávání byla odeslána z **najít** tlačítko pole se seznamem. Pokud ano, vyhledejte text a přidejte vyhledávací řetězec do pole se seznamem.
 
 ### <a name="adding-the-find-control-to-the-main-toolbar"></a>Přidání ovládacího prvku Find na hlavní panel nástrojů
 
@@ -97,16 +97,16 @@ Chcete-li přidat tlačítko pole se seznamem na panel nástrojů, postupujte ta
 1. V hlavním okně rámce implementujte popisovač zprávy `AFX_WM_RESETTOOLBAR``OnToolbarReset`.
 
     > [!NOTE]
-    >  Rozhraní pošle tuto zprávu hlavnímu oknu rámce ve chvíli, kdy je panel nástrojů inicializován během spuštění aplikace, nebo kdy je panel nástrojů obnoven během přizpůsobení. V obou případech je zapotřebí nahradit standardní tlačítko Vlastní **najít** tlačítko pole se seznamem.
+    > Rozhraní pošle tuto zprávu hlavnímu oknu rámce ve chvíli, kdy je panel nástrojů inicializován během spuštění aplikace, nebo kdy je panel nástrojů obnoven během přizpůsobení. V obou případech je zapotřebí nahradit standardní tlačítko Vlastní **najít** tlačítko pole se seznamem.
 
 1. V `AFX_WM_RESETTOOLBAR` obslužnou rutinu, zkontrolujte Identifikátor panelu nástrojů, to znamená, *WPARAM* AFX_WM_RESETTOOLBAR zprávy. Je-li Identifikátor panelu nástrojů roven panelu nástrojů, který obsahuje **najít** tlačítko pole se seznamem, volání [CMFCToolBar::ReplaceButton](../mfc/reference/cmfctoolbar-class.md#replacebutton) nahradit **najít** tlačítko (to znamená tlačítko s Identifikátorem příkazu `ID_EDIT_FIND)` s `CFindComboButton` objektu.
 
     > [!NOTE]
-    >  Objekt `CFindComboBox` lze vytvořit v zásobníku, protože funkce `ReplaceButton` zkopíruje objekt tlačítka a tuto kopii udržuje.
+    > Objekt `CFindComboBox` lze vytvořit v zásobníku, protože funkce `ReplaceButton` zkopíruje objekt tlačítka a tuto kopii udržuje.
 
 ### <a name="adding-the-find-control-to-the-customize-dialog-box"></a>Přidání ovládacího prvku Find do dialogového okna Přizpůsobit
 
-V obslužné rutině přizpůsobení `OnViewCustomize`, volání [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) nahradit **najít** tlačítko (tj. tlačítko s Identifikátorem příkazu `ID_EDIT_FIND)` s `CFindComboButton` objektu.
+V obslužné rutině přizpůsobení `OnViewCustomize`, volání [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) nahradit **najít** tlačítko (tj. tlačítko s Identifikátorem příkazu `ID_EDIT_FIND`) s `CFindComboButton` objektu.
 
 ## <a name="see-also"></a>Viz také
 
