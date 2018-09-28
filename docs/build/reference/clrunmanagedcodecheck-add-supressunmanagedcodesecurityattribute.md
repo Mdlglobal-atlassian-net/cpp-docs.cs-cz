@@ -1,5 +1,5 @@
 ---
-title: / CLRUNMANAGEDCODECHECK (přidat atribut SupressUnmanagedCodeSecurityAttribute) | Microsoft Docs
+title: / CLRUNMANAGEDCODECHECK (přidat atribut SuppressUnmanagedCodeSecurityAttribute) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d0a70ea74851d3a10f9d46b8289098d6fb3fe22
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 679adc527cc70056e1292eb7e639499bd814bca6
+ms.sourcegitcommit: 7838764e09819822a105accf5d773b2e37ffa0ae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705371"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47429758"
 ---
-# <a name="clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (Přidat atribut SupressUnmanagedCodeSecurityAttribute)
+# <a name="clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute"></a>/ CLRUNMANAGEDCODECHECK (přidat atribut SuppressUnmanagedCodeSecurityAttribute)
 
-**/ CLRUNMANAGEDCODECHECK** Určuje, zda se uplatní linkeru <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> na linkeru generované `PInvoke` volání nativních knihoven DLL ze spravovaného kódu.
+**/ CLRUNMANAGEDCODECHECK** Určuje, zda linker použije <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> do vytvořeného v propojovacím programu `PInvoke` volání ze spravovaného kódu do nativních knihoven DLL.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/ CLRUNMANAGEDCODECHECK**[**: NE**]
+> **/ CLRUNMANAGEDCODECHECK**[**: NO**]
 
 ## <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení, použije linkeru **SuppressUnmanagedCodeSecurityAttribute** na linkeru generované `PInvoke` volání. Když **/CLRUNMANAGEDCODECHECK** je v platnosti **SuppressUnmanagedCodeSecurityAttribute** není použita.
+Ve výchozím nastavení, linker použije **SuppressUnmanagedCodeSecurityAttribute** do vytvořeného v propojovacím programu `PInvoke` volání. Když **/CLRUNMANAGEDCODECHECK** je ve skutečnosti **SuppressUnmanagedCodeSecurityAttribute** se nepoužije.
 
-Atribut linkeru přidá jenom na objekty, které jsou kompilovat s **/CLR** nebo **/CLR: pure**. Ale **/CLR: pure** – možnost kompilátoru je zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017.
+Propojovací program přidá pouze atribut na objekty, které jsou kompilovány pomocí **/CLR** nebo **/CLR: pure**. Ale **/CLR: pure** – možnost kompilátoru je zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
 
-A `PInvoke` volání je generován linkeru, když linkeru nelze najít symbol spravované vyhovět odkaz ze spravovaných volající ale můžete najít nativní symbol pro uspokojení tento odkaz. Další informace o `PInvoke`, najdete v části [volání nativních funkcí ze spravovaného kódu](../../dotnet/calling-native-functions-from-managed-code.md).
+A `PInvoke` volání je vygenerován linkerem, když linker nelze najít spravovaných symbolů pro uspokojení odkazem ze spravovaného volající ale můžete najít symbol nativní ke splnění tohoto odkazu. Další informace o `PInvoke`, naleznete v tématu [volání nativních funkcí ze spravovaného kódu](../../dotnet/calling-native-functions-from-managed-code.md).
 
-Všimněte si, že pokud používáte <xref:System.Security.AllowPartiallyTrustedCallersAttribute> ve vašem kódu, byste měli explicitně nastavit **/CLRUNMANAGEDCODECHECK**. Pokud bitová kopie obsahuje atribut SuppressUnmanagedCodeSecurity i AllowPartiallyTrustedCallers je potenciální ohrožení zabezpečení.
+Poznámka: Pokud používáte <xref:System.Security.AllowPartiallyTrustedCallersAttribute> ve vašem kódu, byste měli explicitně nastavit **/CLRUNMANAGEDCODECHECK**. Pokud image obsahuje atributy SuppressUnmanagedCodeSecurity i AllowPartiallyTrustedCallers je potenciální ohrožení zabezpečení.
 
-V tématu [zabezpečené kódování pokyny pro nespravovaného kódu](/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code) Další informace o důsledky použití **SuppressUnmanagedCodeSecurityAttribute**.
+Zobrazit [zabezpečené kódování pokyny pro nespravovaný kód](/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code) Další informace o důsledky použití **SuppressUnmanagedCodeSecurityAttribute**.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
 1. Rozbalte **vlastnosti konfigurace** uzlu.
 
@@ -54,11 +54,11 @@ V tématu [zabezpečené kódování pokyny pro nespravovaného kódu](/dotnet/f
 
 1. Vyberte **Upřesnit** stránku vlastností.
 
-1. Změnit **CLR nespravovaný kód zkontrolovat** vlastnost.
+1. Upravit **CLR nespravovaného kódu zkontrolujte** vlastnost.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-1. V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRUnmanagedCodeCheck%2A>.
+1. Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRUnmanagedCodeCheck%2A>.
 
 ## <a name="see-also"></a>Viz také:
 
