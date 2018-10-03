@@ -1,28 +1,30 @@
 ---
 title: Argtraits – struktura | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Details::ArgTraits
+- event/Microsoft::WRL::Details::ArgTraits::args
 dev_langs:
 - C++
 helpviewer_keywords:
-- ArgTraits structure
+- Microsoft::WRL::Details::ArgTraits structure
+- Microsoft::WRL::Details::ArgTraits::args constant
 ms.assetid: 58ae4115-c1bc-48c8-b01b-e60554841c30
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 047754338566d476fa8e832d58dd2d4cd0776a63
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b84658271793b5f8c48ad54df44aec27022ea5a1
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418395"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48236072"
 ---
 # <a name="argtraits-structure"></a>ArgTraits – struktura
 
@@ -155,29 +157,29 @@ Typ devátého argumentu `Invoke` metody.
 
 ## <a name="remarks"></a>Poznámky
 
-**Argtraits –** struktura deklaruje delegáta zadané rozhraní a anonymní členskou funkci, která má zadaný počet parametrů.
+`ArgTraits` Struktura deklaruje delegáta zadané rozhraní a anonymní členskou funkci, která má zadaný počet parametrů.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-|Název|Popis|
-|----------|-----------------|
-|`Arg1Type`|Definice typu pro TArg1.|
-|`Arg2Type`|Definice typu pro TArg2.|
-|`Arg3Type`|Definice typu pro TArg3.|
-|`Arg4Type`|Definice typu pro TArg4.|
-|`Arg5Type`|Definice typu pro TArg5.|
-|`Arg6Type`|Definice typu pro TArg6.|
-|`Arg7Type`|Definice typu pro TArg7.|
-|`Arg8Type`|Definice typu pro TArg8.|
-|`Arg9Type`|Definice typu pro TArg9.|
+Název       | Popis
+---------- | ----------------------
+`Arg1Type` | Definice typu pro TArg1.
+`Arg2Type` | Definice typu pro TArg2.
+`Arg3Type` | Definice typu pro TArg3.
+`Arg4Type` | Definice typu pro TArg4.
+`Arg5Type` | Definice typu pro TArg5.
+`Arg6Type` | Definice typu pro TArg6.
+`Arg7Type` | Definice typu pro TArg7.
+`Arg8Type` | Definice typu pro TArg8.
+`Arg9Type` | Definice typu pro TArg9.
 
 ### <a name="public-constants"></a>Veřejné konstanty
 
-|Název|Popis|
-|----------|-----------------|
-|[ArgTraits::args – konstanta](../windows/argtraits-args-constant.md)|Sleduje počet parametrů `Invoke` metoda rozhraní delegáta.|
+Název                     | Popis
+------------------------ | ---------------------------------------------------------------------------------------
+[ArgTraits::args](#args) | Sleduje počet parametrů `Invoke` metoda rozhraní delegáta.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -189,6 +191,14 @@ Typ devátého argumentu `Invoke` metody.
 
 **Namespace:** Microsoft::WRL:: details –
 
-## <a name="see-also"></a>Viz také
+## <a name="args"></a>ArgTraits::args
 
-[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+```cpp
+static const int args = -1;
+```
+
+### <a name="remarks"></a>Poznámky
+
+Sleduje počet parametrů `Invoke` metoda rozhraní delegáta. Když `args` rovná -1, nesmí být žádná shoda pro `Invoke` podpis metody.

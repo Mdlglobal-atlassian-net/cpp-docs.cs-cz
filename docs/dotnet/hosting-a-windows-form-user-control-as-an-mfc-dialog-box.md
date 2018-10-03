@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2355a5341259978e402ecc6f8de5c684c9435e3a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5867f9524d897657641ab9db392d77585117a465
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433059"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234984"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Hostitelské poskytování uživatelského ovládacího prvku modelu Windows Form jako dialogového okna knihovny MFC
 
@@ -56,7 +56,7 @@ Ukázková aplikace, která ukazuje použití s knihovnou MFC modelu Windows For
 
 1. Přidejte novou třídu, která je podtřídou `CDialog`.
 
-     Klikněte pravým tlačítkem na název projektu a přidání třídy knihovny MFC (nazývanou CHostForWinForm), která je podtřídou `CDialog`. Vzhledem k tomu, že nepotřebujete prostředky dialogového, můžete odstranit ID prostředku (vyberte zobrazení prostředků, rozbalte složku dialogu a odstraňte prostředek IDD_HOSTFORWINFORM.  Potom odeberte všechny odkazy na ID v kódu.).
+     Klikněte pravým tlačítkem na název projektu a přidání třídy knihovny MFC (nazývanou CHostForWinForm), která je podtřídou `CDialog`. Vzhledem k tomu, že nepotřebujete prostředky dialogového, můžete odstranit ID prostředku (vyberte **zobrazení prostředků**, rozbalte **dialogové okno** složku a odstraňte `IDD_HOSTFORWINFORM` prostředků.  Potom odeberte všechny odkazy na ID v kódu.).
 
 1. Nahraďte `CDialog` v CHostForWinForm.h a CHostForWinForm.cpp soubory s `CWinFormsDialog<WindowsControlLibrary1::UserControl1>`.
 

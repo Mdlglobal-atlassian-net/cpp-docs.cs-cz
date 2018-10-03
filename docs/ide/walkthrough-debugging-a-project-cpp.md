@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fa9761abde1a740a9f5daea4933ac6f8b89af6f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 04bec9c0de7734ae2c78dd3e9c124eac3d0a55d8
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381704"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234310"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>Návod: Ladění projektu (C++)
 
@@ -43,11 +43,11 @@ V tomto návodu změníte program pro vyřešení problému, který jste zjistil
 
    Otevřete místní nabídku **~Cardgame(void)** destruktor a klikněte na tlačítko **přejít k definici**.
 
-1. Pro snížení proměnné `totalParticipants` při ukončení aplikace Cardgame přidejte následující kód mezi otevírací a uzavírací závorky destruktoru `Cardgame::~Cardgame`:
+1. Aby se snížila `totalParticipants` při ukončení Cardgame přidejte následující kód mezi otevírací a uzavírací závorky `Cardgame::~Cardgame` – destruktor.
 
      [!code-cpp[NVC_Walkthrough_Debugging_A_Project#110](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_1.cpp)]
 
-1. Soubor Cardgame.cpp by měl po změnách by vypadat takto:
+1. Po změnách by, by měl vypadat Cardgame.cpp souboru následující kód:
 
      [!code-cpp[NVC_Walkthrough_Debugging_A_Project#111](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_2.cpp)]
 

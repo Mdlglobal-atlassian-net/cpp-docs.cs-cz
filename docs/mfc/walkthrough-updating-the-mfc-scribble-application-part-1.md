@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d028d1cb3a42a68aab67d2b6fa90165a7d6264b
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 48cbc29685660f00665fbbb08be76779272d0fcf
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169772"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235501"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Návod: Aktualizace aplikace MFC Scribble (část 1)
 
@@ -54,7 +54,7 @@ Tato část návodu obsahuje následující oddíly:
 
 ##  <a name="replaceclass"></a> Nahrazení základní třídy
 
-Převést aplikaci, která podporuje nabídky k aplikaci, která podporuje pás karet, musí aplikace, okno rámce a nástrojů třídy odvozeny od aktualizace základní třídy. (Doporučujeme, že jste není upravit původní ukázky Scribble; místo toho, vyčistěte projekt Scribble, zkopírujte ho do jiného adresáře a upravte kopii.)
+Převést aplikaci, která podporuje nabídky k aplikaci, která podporuje pás karet, musí aplikace, okno rámce a nástrojů třídy odvozeny od aktualizace základní třídy. (My Navrhujeme, že nebudete muset měnit původní ukázky Scribble pomocí. Místo toho vyčistěte projekt Scribble, zkopírujte ho do jiného adresáře a potom upravte kopii.)
 
 ### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>Chcete-li nahradit základní třídy v aplikaci Scribble
 
@@ -115,9 +115,9 @@ Převést aplikaci, která podporuje nabídky k aplikaci, která podporuje pás 
 
 ##  <a name="addbitmap"></a> Přidávání bitmap do projektu
 
-Další čtyři kroky tohoto názorného postupu vyžadovat prostředky rastrového obrázku. Můžete získat příslušné rastrové obrázky různými způsoby:
+Další čtyři kroky tohoto názorného postupu vyžadovat prostředky rastrového obrázku. Získáte příslušné rastrové obrázky různými způsoby:
 
-- Použití [editory prostředků](../windows/resource-editors.md) vytvářet vlastní rastrových obrázků. Nebo použijte editory prostředků sestavení z imagí portable network graphics (.png), které jsou součástí sady Visual Studio a můžete stáhnout z bitmapy [knihovna obrázků sady Visual Studio](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library).
+- Použití [editory prostředků](../windows/resource-editors.md) vytvářet vlastní rastrových obrázků. Nebo můžete sestavit rastrové obrázky z imagí portable network graphics (.png), které jsou součástí sady Visual Studio a můžete ho stáhnout z editory prostředků [knihovna obrázků sady Visual Studio](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library).
 
     Ale **pásu karet** uživatelského rozhraní vyžaduje, aby určité rastrové obrázky podporující průhledné obrázky. Transparentní rastrové obrázky použijte 32bitový pixelů, kde 24 bitů komponenty červené, zelené a modré barvy a určete 8 bitů *alfa kanál* , který určuje průhlednost barvy. Aktuální editory prostředků můžete zobrazit, ale nemohou měnit rastrové obrázky s 32-bit pixelů. V důsledku toho pomocí editoru obrázků externí místo editory prostředků pro manipulaci s transparentní rastrové obrázky.
 
@@ -165,7 +165,7 @@ Tento podrobný postup kopíruje soubory prostředků z příkladu, vytvoří v 
 
 ##  <a name="addribbon"></a> Přidání prostředku pásu karet do projektu
 
-Při převodu aplikaci, která používá nabídky k aplikaci, která používá pás karet, není nutné odebrat nebo zakázat stávající nabídky. Místo toho vytvořte prostředek pásu karet, přidejte tlačítek na pásu karet a nová tlačítka přidružit existující položky nabídky. I když již nejsou viditelné v nabídkách, zprávy z pásu karet jsou směrovány v nabídkách. Kromě toho zástupci v nabídce pokračovat v práci.
+Můžete převést aplikaci, která používá nabídky k aplikaci, která používá pás karet, není nutné odebrat nebo zakázat stávající nabídky. Stačí vytvořit prostředek pásu karet, přidejte tlačítek na pásu karet a nová tlačítka přidružit existující položky nabídky. I když již nejsou viditelné v nabídkách, zprávy z pásu karet jsou směrovány prostřednictvím nabídky a nabídky zástupců pokračovat v práci.
 
 Se skládá z pásu karet **aplikace** tlačítko, které je velké tlačítko v levé horní části pásu karet a jednu nebo více karet kategorie. Každá karta kategorie obsahuje jednu nebo více panelů, které fungují jako kontejnery pro tlačítek na pásu karet a ovládacích prvků. Následující postup ukazuje, jak vytvořit prostředek pásu karet a potom přizpůsobit **aplikace** tlačítko.
 
@@ -205,7 +205,7 @@ Se skládá z pásu karet **aplikace** tlačítko, které je velké tlačítko v
 
    1. Klikněte na tlačítko **tisk** tlačítko a pak klikněte na tlačítko **vložit** k přidání dalšího tlačítka. Změna **titulek** k `Print Pre&view`, **ID** k `ID_FILE_PRINT_PREVIEW`, **Image** k `6`, a **velký obrázek** k `6`.
 
-   1. Nyní jste změnili **položky hlavní**. Klikněte na tlačítko **Zavřít** ukončíte **Editor položek**.
+   1. Nyní jste upravili **položky hlavní**. Klikněte na tlačítko **Zavřít** ukončíte **Editor položek**.
 
 1. Následující změny vytvoří ukončení tlačítko, které se zobrazí v dolní části **aplikace** tlačítka nabídky.
 
@@ -213,7 +213,7 @@ Se skládá z pásu karet **aplikace** tlačítko, které je velké tlačítko v
 
    1. S **položky** typ **tlačítko** vybraný, klikněte na tlačítko **přidat** přidáte tlačítko. Změna **titulek** k `E&xit`, **ID** k `ID_APP_EXIT`, **Image** k `8`.
 
-   1. Změnili jste **tlačítka**. Klikněte na tlačítko **Zavřít** ukončíte **Editor položek**.
+   1. Jsme změnili **tlačítka**. Klikněte na tlačítko **Zavřít** ukončíte **Editor položek**.
 
 ##  <a name="createinstance"></a> Vytvoření Instance na pásu karet
 
@@ -221,14 +221,14 @@ Následující kroky ukazují, jak vytvořit instance na pásu karet při spušt
 
 ### <a name="to-create-an-instance-of-the-ribbon-bar"></a>K vytvoření instance na pásu karet
 
-1. V souboru mainfrm.h přidat datový člen chráněné části `CMainFrame`, definice třídy pro hlavního rámce. Tento člen představuje na pásu karet.
+1. V souboru mainfrm.h přidat datový člen chráněné části `CMainFrame`, definice třídy pro hlavního rámce. Tento člen je panel pásu karet.
 
     ```cpp
     // Ribbon bar for the application
     CMFCRibbonBar m_wndRibbonBar;
     ```
 
-2. V souboru mainfrm.cpp, přidejte následující kód před finální `return` příkaz na konci `CMainFrame::OnCreate` funkce. Tím se vytvoří instance na pásu karet.
+2. V souboru mainfrm.cpp, přidejte následující kód před finální `return` příkaz na konci `CMainFrame::OnCreate` funkce. Vytvoří instanci na pásu karet.
 
     ```cpp
     // Create the ribbon bar
@@ -250,9 +250,9 @@ Teď, když jste vytvořili **aplikace** tlačítko, můžete přidat prvky na p
 
 1. Scribble program vyžaduje pouze jednu kategorii. V okně návrhu v **nástrojů**, dvakrát klikněte na panel **kategorie** ho přidejte a zobrazit její vlastnosti. Změňte hodnoty vlastností následujícím způsobem: **titulek** k `&Home`, **Large Images** k `IDB_RIBBON_HOMELARGE`, **Small Images** k `IDB_RIBBON_HOMESMALL`.
 
-1. Každá kategorie pásu karet je uspořádaný do pojmenované panelů. Každý panel obsahuje sadu ovládacích prvků, které provádějí souvisejících operací. Tato kategorie obsahuje jeden panel. Klikněte na tlačítko **Panel**a potom změňte **titulek** k `Edit`.
+1. Každá kategorie pásu karet je uspořádaný do pojmenované panelů. Každý panel obsahuje sadu ovládacích prvků tohoto dokončení souvisejících operací. Tato kategorie obsahuje jeden panel. Klikněte na tlačítko **Panel**a potom změňte **titulek** k `Edit`.
 
-1. Chcete **upravit** panelu, přidejte tlačítko, které je zodpovědný za vymazat obsah dokumentu. ID zprávy pro toto tlačítko je již definována v `IDR_SCRIBBTYPE` nabídce prostředků. Zadejte `Clear All` jako text tlačítka a index rastrový obrázek, který upraví na tlačítko. Otevřít **nástrojů**a pak přetáhněte **tlačítko** k **upravit** panelu. Klikněte na tlačítko a pak změňte **titulek** k `Clear All`, **ID** k `ID_EDIT_CLEAR_ALL`, **Index bitové kopie** k `0`, **Large Image Index**  k `0`.
+1. Chcete **upravit** panelu, přidejte tlačítko za vymazat obsah dokumentu. ID zprávy pro toto tlačítko je již definována v `IDR_SCRIBBTYPE` nabídce prostředků. Zadejte `Clear All` jako text tlačítka a index rastrový obrázek, který upraví na tlačítko. Otevřít **nástrojů**a pak přetáhněte **tlačítko** k **upravit** panelu. Klikněte na tlačítko a pak změňte **titulek** k `Clear All`, **ID** k `ID_EDIT_CLEAR_ALL`, **Index bitové kopie** k `0`, **Large Image Index**  k `0`.
 
 1. Uložte změny a potom sestavíte a spustíte aplikaci. Scribble aplikace má být zobrazena, a měl by mít panel pásu karet v horní části okna namísto řádku nabídek. Na pásu karet by měl mít jednu kategorii **Domů**, a **Domů** by měl mít jeden panel **upravit**. Tlačítka pásu karet, který jste přidali by měly být přidruženy s existující obslužné rutiny událostí a **otevřít**, **Zavřít**, **Uložit**, **tisk**, a **Vymazat vše** tlačítka by měla fungovat podle očekávání.
 

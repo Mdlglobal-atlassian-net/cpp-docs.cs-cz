@@ -1,28 +1,34 @@
 ---
 title: Comptrrefbase – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::Details::ComPtrRefBase
+- client/Microsoft::WRL::Details::ComPtrRefBase::operator IInspectable**
+- client/Microsoft::WRL::Details::ComPtrRefBase::operator IUnknown**
+- client/Microsoft::WRL::Details::ComPtrRefBase::ptr_
 dev_langs:
 - C++
 helpviewer_keywords:
-- ComPtrRefBase class
+- Microsoft::WRL::Details::ComPtrRefBase class
+- Microsoft::WRL::Details::ComPtrRefBase::operator IInspectable** operator
+- Microsoft::WRL::Details::ComPtrRefBase::operator IUnknown** operator
+- Microsoft::WRL::Details::ComPtrRefBase::ptr_ data member
 ms.assetid: 6d344c1a-cc13-4a3f-8a0d-f167ccb9348f
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ca2cb8cdc748abcac61bd548491187095b71a3f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 02e430184c5fa7418eb02ed6ef2f63951af89a5c
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415314"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48233954"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase – třída
 
@@ -40,7 +46,7 @@ class ComPtrRefBase;
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-A [ComPtr\<T >](../windows/comptr-class.md) typ nebo z ní odvozené, nikoli pouze rozhraní, které jsou reprezentována **ComPtr**.
+A [ComPtr\<T >](../windows/comptr-class.md) typ nebo z ní odvozené, nikoli pouze rozhraní, které jsou reprezentována `ComPtr`.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -50,22 +56,22 @@ Představuje základní třídu pro [comptrref –](../windows/comptrref-class.m
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-|Název|Popis|
-|----------|-----------------|
-|`InterfaceType`|Synonymum pro typ parametru šablony *T*.|
+Název            | Popis
+--------------- | -------------------------------------------------
+`InterfaceType` | Synonymum pro typ parametru šablony *T*.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
-|----------|-----------------|
-|[ComPtrRefBase::operator IInspectable** – operátor](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|Přetypování aktuální [ptr_ –](../windows/comptrrefbase-ptr-data-member.md) na ukazatel na ukazatel – datový člen `IInspectable` rozhraní.|
-|[ComPtrRefBase::operator IUnknown** – operátor](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|Přetypování aktuální [ptr_ –](../windows/comptrrefbase-ptr-data-member.md) na ukazatel na ukazatel – datový člen `IUnknown` rozhraní.|
+Název                                                                       | Popis
+-------------------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------
+[ComPtrRefBase::operator IInspectable **](#operator-iinspectable-star-star) | Přetypování aktuální [ptr_ –](#ptr) na ukazatel na ukazatel – datový člen `IInspectable` rozhraní.
+[ComPtrRefBase::operator IUnknown **](#operator-iunknown-star-star)         | Přetypování aktuální [ptr_ –](#ptr) na ukazatel na ukazatel – datový člen `IUnknown` rozhraní.
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Název|Popis|
-|----------|-----------------|
-|[ComPtrRefBase::ptr_ – datový člen](../windows/comptrrefbase-ptr-data-member.md)|Ukazatel na typ zadaný v parametru aktuální šablony.|
+Název                        | Popis
+--------------------------- | ----------------------------------------------------------------
+[Comptrrefbase::ptr_ –](#ptr) | Ukazatel na typ zadaný v parametru aktuální šablony.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -77,6 +83,44 @@ Představuje základní třídu pro [comptrref –](../windows/comptrref-class.m
 
 **Namespace:** Microsoft::WRL:: details –
 
-## <a name="see-also"></a>Viz také
+## <a name="operator-iinspectable-star-star"></a>ComPtrRefBase::operator IInspectable\* \* – operátor
 
-[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+```cpp
+operator IInspectable**() const;
+```
+
+### <a name="remarks"></a>Poznámky
+
+Přetypování aktuální [ptr_ –](#ptr) na ukazatel na ukazatel – datový člen `IInspectable` rozhraní.
+
+Je vygenerován chybu, pokud aktuální `ComPtrRefBase` není odvozen od `IInspectable`.
+
+Toto přetypování je k dispozici pouze tehdy, pokud `__WRL_CLASSIC_COM__` je definována.
+
+## <a name="operator-iunknown-star-star"></a>ComPtrRefBase::operator IUnknown ** – operátor
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+```cpp
+operator IUnknown**() const;
+```
+
+### <a name="remarks"></a>Poznámky
+
+Přetypování aktuální [ptr_ –](#ptr) na ukazatel na ukazatel – datový člen `IUnknown` rozhraní.
+
+Je vygenerován chybu, pokud aktuální `ComPtrRefBase` není odvozen od `IUnknown`.
+
+## <a name="ptr"></a>Comptrrefbase::ptr_ –
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+```cpp
+T* ptr_;
+```
+
+### <a name="remarks"></a>Poznámky
+
+Ukazatel na typ zadaný v parametru aktuální šablony. `ptr_` je chráněný datový člen.

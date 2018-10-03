@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 326535395599a76f521100475cfc80b014ba6cd9
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 16613425633f55eeed152e86c1b4fea7f00a784c
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169434"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234058"
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>Návod: Přidání animace do projektu MFC
 
@@ -100,11 +100,11 @@ K dokončení tohoto návodu, musíte mít Visual Studio.
 
 1. V **Průvodce třídami MFC**, klikněte na tlačítko **OK**.
 
-1. Uložit MFCAnimationWalkthroughView.cpp, což je otevřen v editoru, ale není ukončena.
+1. Uložit MFCAnimationWalkthroughView.cpp, což je otevřen v editoru, ale nechejte ho.
 
 ### <a name="to-add-an-animated-object-to-the-project"></a>Chcete-li přidat do projektu animovaný objekt
 
-1. V Průzkumníku řešení poklikejte na MFCAnimationWalkthroughView.h otevřete pro úpravy. Těsně před definici `CMFCAnimationWalkthroughView` třídy, přidejte následující kód k vytvoření vlastní animace kontroler, který bude zpracovávat plánování je v konfliktu s objektem animace.
+1. V **Průzkumníka řešení**, dvakrát klikněte na panel MFCAnimationWalkthroughView.h otevřete pro úpravy. Těsně před definici `CMFCAnimationWalkthroughView` třídy, přidejte následující kód k vytvoření vlastní animace kontroler, který bude zpracovávat plánování je v konfliktu s objektem animace.
 
     ```cpp
     class CCustomAnimationController : public CAnimationController

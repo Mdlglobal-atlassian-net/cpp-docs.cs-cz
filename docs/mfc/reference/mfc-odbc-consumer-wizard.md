@@ -1,7 +1,7 @@
 ---
 title: Průvodce příjemcem MFC ODBC | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 09/17/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2df730c5ee38c41cc6f40ac7000802bbe0bbb30d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 23a264c48f0a03888f8b6ac744129de75d8ad757
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46400312"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250468"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Průvodce příjemcem knihovny MFC ODBC
 
-Sem vložte "Výsledky hledání" souhrnu.
+> [!WARNING]
+> V sadě Visual Studio 2017 verze 15.9 průvodce tento kód je zastaralá a v budoucí verzi systému Visual Studio se odebere. Tento průvodce je používána zřídka. Obecné podpory knihovny ATL a MFC nemá žádný vliv, odebráním tohoto průvodce. Pokud chcete sdílet svůj názor na toto vyřazení, vyplňte prosím [tento průzkum](https://www.surveymonkey.com/r/QDWKKCN). Vaše zpětná vazba záleží na nás.
 
 Tento průvodce nastavuje třídu sady záznamů rozhraní ODBC a datové vazby potřebné pro přístup k danému zdroji dat.
 

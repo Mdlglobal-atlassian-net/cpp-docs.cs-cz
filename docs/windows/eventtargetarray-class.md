@@ -1,28 +1,40 @@
 ---
 title: Eventtargetarray – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Details::EventTargetArray
+- event/Microsoft::WRL::Details::EventTargetArray::AddTail
+- event/Microsoft::WRL::Details::EventTargetArray::Begin
+- event/Microsoft::WRL::Details::EventTargetArray::End
+- event/Microsoft::WRL::Details::EventTargetArray::EventTargetArray
+- event/Microsoft::WRL::Details::EventTargetArray::Length
+- event/Microsoft::WRL::Details::EventTargetArray::~EventTargetArray
 dev_langs:
 - C++
 helpviewer_keywords:
-- EventTargetArray class
+- Microsoft::WRL::Details::EventTargetArray class
+- Microsoft::WRL::Details::EventTargetArray::AddTail method
+- Microsoft::WRL::Details::EventTargetArray::Begin method
+- Microsoft::WRL::Details::EventTargetArray::End method
+- Microsoft::WRL::Details::EventTargetArray::EventTargetArray, constructor
+- Microsoft::WRL::Details::EventTargetArray::Length method
+- Microsoft::WRL::Details::EventTargetArray::~EventTargetArray, destructor
 ms.assetid: e3cadb7c-2160-4cbb-a2f8-c28733d1e96d
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3be91f85838ceb557edd5def7d7984aaf8904ea5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a02c571f33378ed65fc4b0c4efc7d1a82144279f
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42575662"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234697"
 ---
 # <a name="eventtargetarray-class"></a>EventTargetArray – třída
 
@@ -38,25 +50,25 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
 
 Reprezentuje pole prvků obslužných rutin událostí.
 
-Obslužné rutiny událostí, které jsou přidružené [EventSource](../windows/eventsource-class.md) objektu jsou uloženy v chráněné **EventTargetArray** datový člen.
+Obslužné rutiny událostí, které jsou přidružené [EventSource](../windows/eventsource-class.md) objektu jsou uloženy v chráněné `EventTargetArray` datový člen.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
-|----------|-----------------|
-|[EventTargetArray::EventTargetArray – konstruktor](../windows/eventtargetarray-eventtargetarray-constructor.md)|Inicializuje novou instanci třídy **EventTargetArray** třídy.|
-|[EventTargetArray::~EventTargetArray – destruktor](../windows/eventtargetarray-tilde-eventtargetarray-destructor.md)|Zruší inicializaci aktuální **EventTargetArray** třídy.|
+Název                                                           | Popis
+-------------------------------------------------------------- | -----------------------------------------------------------
+[Eventtargetarray::eventtargetarray –](#eventtargetarray)        | Inicializuje novou instanci třídy `EventTargetArray` třídy.
+[EventTargetArray:: ~ eventtargetarray –](#tilde-eventtargetarray) | Zruší inicializaci aktuální `EventTargetArray` třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
-|----------|-----------------|
-|[EventTargetArray::AddTail – metoda](../windows/eventtargetarray-addtail-method.md)|Obslužné rutiny zadané události připojí na konec vnitřní pole obslužných rutin událostí.|
-|[EventTargetArray::Begin – metoda](../windows/eventtargetarray-begin-method.md)|Získá adresu prvního prvku v poli interní obslužných rutin událostí.|
-|[EventTargetArray::End – metoda](../windows/eventtargetarray-end-method.md)|Získá adresu poslední prvek v poli interní obslužných rutin událostí.|
-|[EventTargetArray::Length – metoda](../windows/eventtargetarray-length-method.md)|Získá aktuální počet prvků v poli interní obslužných rutin událostí.|
+Název                                  | Popis
+------------------------------------- | ---------------------------------------------------------------------------------------
+[Eventtargetarray::addtail –](#addtail) | Obslužné rutiny zadané události připojí na konec vnitřní pole obslužných rutin událostí.
+[Eventtargetarray::begin –](#begin)     | Získá adresu prvního prvku v poli interní obslužných rutin událostí.
+[Eventtargetarray::end –](#end)         | Získá adresu poslední prvek v poli interní obslužných rutin událostí.
+[Eventtargetarray::length –](#length)   | Získá aktuální počet prvků v poli interní obslužných rutin událostí.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -68,6 +80,117 @@ Obslužné rutiny událostí, které jsou přidružené [EventSource](../windows
 
 **Namespace:** Microsoft::WRL:: details –
 
-## <a name="see-also"></a>Viz také
+## <a name="tilde-eventtargetarray"></a>EventTargetArray:: ~ eventtargetarray –
 
-[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+```cpp
+~EventTargetArray();
+```
+
+### <a name="remarks"></a>Poznámky
+
+Zruší inicializaci aktuální `EventTargetArray` třídy.
+
+## <a name="addtail"></a>Eventtargetarray::addtail –
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+```cpp
+void AddTail(
+   _In_ IUnknown* element
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*– Element*<br/>
+Ukazatel na obslužnou rutinu události pro připojení.
+
+### <a name="remarks"></a>Poznámky
+
+Obslužné rutiny zadané události připojí na konec vnitřní pole obslužných rutin událostí.
+
+`AddTail()` je určena pro použití interně pomocí pouze `EventSource` třídy.
+
+## <a name="begin"></a>Eventtargetarray::begin –
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+```cpp
+ComPtr<IUnknown>* Begin();
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Adresa první prvek v poli interní obslužných rutin událostí.
+
+### <a name="remarks"></a>Poznámky
+
+Získá adresu prvního prvku v poli interní obslužných rutin událostí.
+
+## <a name="end"></a>Eventtargetarray::end –
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+```cpp
+ComPtr<IUnknown>* End();
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Adresa poslední prvek v poli interní obslužných rutin událostí.
+
+### <a name="remarks"></a>Poznámky
+
+Získá adresu poslední prvek v poli interní obslužných rutin událostí.
+
+## <a name="eventtargetarray"></a>Eventtargetarray::eventtargetarray –
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+```cpp
+EventTargetArray(
+   _Out_ HRESULT* hr,
+   size_t items
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*hr*<br/>
+Po operacích tento konstruktor parametr *hr* označuje, zda přidělení pole bylo úspěšné nebo neúspěšné. V následující seznamu jsou uvedeny možné hodnoty pro *hr*.
+
++   S_OK<br/>
+    Operace byla úspěšná.
+
++   E_OUTOFMEMORY<br/>
+    Nepodařilo se přidělit paměť pro pole.
+
++   S_FALSE<br/>
+    Parametr *položky* je menší než nebo rovna nule.
+
+*Položky*<br/>
+Počet prvků pole pro přidělení.
+
+### <a name="remarks"></a>Poznámky
+
+Inicializuje novou instanci třídy `EventTargetArray` třídy.
+
+`EventTargetArray` Umožňuje ponechat pole obslužné rutiny událostí v `EventSource` objektu.
+
+## <a name="length"></a>Eventtargetarray::length –
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+```cpp
+size_t Length();
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Aktuální počet prvků v poli interní obslužných rutin událostí.
+
+### <a name="remarks"></a>Poznámky
+
+Získá aktuální počet prvků v poli interní obslužných rutin událostí.

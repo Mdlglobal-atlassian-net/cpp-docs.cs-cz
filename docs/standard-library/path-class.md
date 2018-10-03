@@ -1,7 +1,7 @@
 ---
 title: Path – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 09/10/2018
+ms.date: 09/27/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd8fa524d0c41d437575a61ff4e4456fd9933404
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7674f07c92f8a0c9d8a9070f3f99e00dfde39140
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725306"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235461"
 ---
 # <a name="path-class"></a>path – třída
 
-**Cesta** třída uchovává objekt typu `string_type`, označované jako `myname` zde pro účely budeme vhodný pro použití jako cestu. `string_type` je synonymum pro `basic_string<value_type>`, kde `value_type` je synonymum pro **char** pod Windows nebo **wchar_t** v rámci specifikace Posix.
+**Cesta** třída uchovává objekt typu `string_type`, označované jako `myname` zde pro účely budeme vhodný pro použití jako cestu. `string_type` je synonymum pro `basic_string<value_type>`, kde `value_type` je synonymum pro **wchar_t** na Windows nebo **char** v rámci specifikace POSIX.
 
 Další informace a příklady kódu naleznete v tématu [navigace systému souborů (C++)](../standard-library/file-system-navigation.md).
 

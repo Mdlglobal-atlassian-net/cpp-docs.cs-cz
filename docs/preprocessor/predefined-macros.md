@@ -152,12 +152,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9a1472cba13f477143c9b9ace27cb2555f41406
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a95141aa97d7272970adaaa69f3f63de2a622780
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408424"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235643"
 ---
 # <a name="predefined-macros"></a>Předdefinovaná makra
 
@@ -435,7 +435,7 @@ Microsoft Visual C++ podporuje tyto dodatečné předdefinovaná makra.
 
 - **&#95;WINRT&#95;DLL** definována jako 1, pokud zkompilovat jako C++ a obě [/ZW (kompilace Windows Runtime)](../build/reference/zw-windows-runtime-compilation.md) a [/LD nebo /LDd](../build/reference/md-mt-ld-use-run-time-library.md) jsou nastavené možnosti kompilátoru. V opačném případě undefined.
 
- Makra preprocesoru používá k určení verze knihovny ATL nebo MFC nejsou předdefinovaná v nástroji kompilátor. Tato makra jsou definovány v záhlaví knihovny, proto nejsou definovaná v direktivách preprocesoru, předtím, než je součástí požadované záhlaví.
+Makra preprocesoru používá k určení verze knihovny ATL nebo MFC nejsou předdefinovaná v nástroji kompilátor. Tato makra jsou definovány v záhlaví knihovny, proto nejsou definovaná v direktivách preprocesoru, předtím, než je součástí požadované záhlaví.
 
 - **&#95;ATL –&#95;VER** definované v \<atldef.h > jako celočíselného literálu, který binárně kóduje ATL číslo verze.
 

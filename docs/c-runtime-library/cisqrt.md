@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04c628dec2c2fd7e0b0b5a61aa20abf9266ca416
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cb57de60736d55875206ead1eabc5fbd3c3c2c0e
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46084442"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235905"
 ---
 # <a name="cisqrt"></a>_CIsqrt
 
@@ -53,7 +53,8 @@ Tato verze `sqrt` funkce má specializované konvence volání, které kompilát
 Výsledná hodnota je vloženy do horní části zásobníku.
 
 ## <a name="requirements"></a>Požadavky
- **Platforma:** x86
+
+**Platforma:** x86
 
 ## <a name="see-also"></a>Viz také
 

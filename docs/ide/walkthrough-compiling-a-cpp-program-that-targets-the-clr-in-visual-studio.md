@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b120053a4a9129fea83995aa5be67e50b59e2a2
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: a375f93eaa164657964be7ad1ea2554ebc1986b8
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494501"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235396"
 ---
 # <a name="walkthrough-compiling-a-c-program-that-targets-the-clr-in-visual-studio"></a>Návod: Kompilace programu C++ pro CLR v aplikaci Visual Studio
 
 Můžete vytvořit programů aplikace Visual C++, které používají třídy rozhraní .NET a kompilovat s použitím vývojového prostředí sady Visual Studio.  
   
-Pro tento postup můžete zadat vlastní program Visual C++ nebo použijte jednu z ukázkových programů. Ukázkový program, který používáme v tomto postupu vytváří textový soubor s názvem textfile.txt a uloží jej do adresáře projektu.  
+Tento postup můžete zadat vlastní program Visual C++ nebo použijte jednu z ukázkových programů. Ukázkový program, který používáme v tomto postupu vytváří textový soubor s názvem textfile.txt a uloží jej do adresáře projektu.  
   
 ## <a name="prerequisites"></a>Požadavky  
 
@@ -45,41 +45,41 @@ Tato témata se předpokládá, že chápete základy jazyka C++.
   
 1. Zadejte název projektu.  
   
-     Ve výchozím nastavení řešení, které obsahuje projekt má stejný název jako nový projekt, ale můžete zadat jiný název. Pokud chcete, můžete zadat jiné umístění pro projekt.  
+    Ve výchozím nastavení řešení, které obsahuje projekt má stejný název jako nový projekt, ale můžete zadat jiný název. Pokud chcete, můžete zadat jiné umístění pro projekt.  
   
-     Klikněte na tlačítko **OK** k vytvoření nového projektu.  
+    Klikněte na tlačítko **OK** k vytvoření nového projektu.  
   
-1. Pokud **Průzkumníka řešení** se nezobrazuje, klikněte na tlačítko **Průzkumníka řešení** na **zobrazení** nabídky.  
+1. Pokud **Průzkumníka řešení** nezobrazuje, klikněte na tlačítko **Průzkumníka řešení** na **zobrazení** nabídky.  
   
 1. Přidání nového zdrojového souboru do projektu:  
   
-    - Klikněte pravým tlačítkem na **zdrojové soubory** složky **Průzkumníku řešení**, přejděte na **přidat** a klikněte na tlačítko **nová položka**.  
+    - Klikněte pravým tlačítkem na **zdrojové soubory** složky **Průzkumníku řešení**, přejděte na **přidat**a klikněte na tlačítko **nová položka**.  
   
     - Klikněte na tlačítko **soubor C++ (.cpp)** a zadejte název souboru a pak klikněte na tlačítko **přidat**.  
   
-     **.Cpp** souboru se zobrazí v **zdrojové soubory** složky **Průzkumníka řešení** a zobrazí se okno s kartami, kde zadejte kód chcete v tomto souboru.  
+    **.Cpp** souboru se zobrazí v **zdrojové soubory** složky **Průzkumníka řešení** a zobrazí se okno s kartami, kde zadejte kód chcete v tomto souboru.  
   
 1. Klikněte na kartě nově vytvořené v sadě Visual Studio a zadejte platný program Visual C++, nebo zkopírujte a vložte jednu z ukázkových programů.  
   
-     Například můžete použít [postupy: zápis do textového souboru (C + +/ CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md) ukázkový program (v **zpracování souborů a vstupně-výstupních operací** uzel Průvodce programováním).  
+    Například můžete použít [postupy: zápis do textového souboru (C + +/ CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md) ukázkový program (v **zpracování souborů a vstupně-výstupních operací** uzel Průvodce programováním).  
   
-     Pokud použijete ukázkový program, Všimněte si, že používáte `gcnew` – klíčové slovo místo `new` při vytváření objektů .NET a že `gcnew` vrátí popisovač (`^`) namísto ukazatel (`*`):  
+    Pokud použijete ukázkový program, Všimněte si, že používáte `gcnew` – klíčové slovo místo `new` při vytváření objektů .NET a že `gcnew` vrátí popisovač (`^`) namísto ukazatel (`*`):  
   
-     `StreamWriter^ sw = gcnew StreamWriter(fileName);`  
+    `StreamWriter^ sw = gcnew StreamWriter(fileName);`  
   
-     Další informace o novou syntaxi jazyka Visual C++, naleznete v tématu [přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md).  
+    Další informace o novou syntaxi jazyka Visual C++, naleznete v tématu [přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md).  
   
 1. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.  
   
-     **Výstup** okně zobrazí informace o průběhu kompilace, jako je například umístění protokolu sestavení a napište zprávu, která označuje stav sestavení.  
+    **Výstup** okně zobrazí informace o průběhu kompilace, jako je například umístění protokolu sestavení a napište zprávu, která označuje stav sestavení.  
   
-     Pokud provedete změny a spusťte program bez provedení sestavení, dialogové okno může znamenat, že projekt je zastaralý. Zaškrtněte políčko v tomto dialogovém okně před kliknutím na **OK** sady Visual Studio, vždy používali aktuální verze souborů namísto dotazování pokaždé, když chcete-li sestavení aplikace.  
+    Pokud provedete změny a spusťte program bez provedení sestavení, dialogové okno může znamenat, že projekt je zastaralý. Zaškrtněte políčko v tomto dialogovém okně před kliknutím na **OK** sady Visual Studio, vždy používali aktuální verze souborů namísto dotazování pokaždé, když chcete-li sestavení aplikace.  
   
 1. Na **ladění** nabídky, klikněte na tlačítko **spustit bez ladění**.  
   
 1. Pokud jste použili ukázkový program při spuštění programu se zobrazí okno příkazového řádku, která označuje, že se vytvořil textového souboru.  
   
-     **Textfile.txt** textový soubor se nyní nachází v adresáři projektu. Tento soubor můžete otevřít pomocí poznámkového bloku.  
+    **Textfile.txt** textový soubor se nyní nachází v adresáři projektu. Tento soubor můžete otevřít pomocí poznámkového bloku.  
   
     > [!NOTE]
     > Výběr prázdný CLR šablonu projektu automaticky nastaví `/clr` – možnost kompilátoru. To pokud chcete ověřit, klikněte pravým tlačítkem na projekt v **Průzkumníku řešení** a kliknete na **vlastnosti**a potom zaškrtněte políčko **Common Language Runtime support** možnost  **Obecné** uzlu **vlastnosti konfigurace**.  

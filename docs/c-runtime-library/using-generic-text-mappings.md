@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9435076bdc02f9f0b8a909ffdbc60dd06e1a388
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4aeee73cb065e40d345dcbfe35ac2d6a7be03d90
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097520"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234655"
 ---
 # <a name="using-generic-text-mappings"></a>Použití mapování obecného textu
 
@@ -105,7 +105,7 @@ RetVal = strrev(szString);
 
 Můžete tak zapisovat, udržovat a kompilaci jednoho zdrojového kódu pro spuštění rutiny, které jsou specifické pro všechny tři druhy znakových sad.
 
- **Specifické pro END Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také
 

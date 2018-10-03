@@ -1,7 +1,7 @@
 ---
 title: Spuštění knihovny LIB | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/28/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff75c149ff3cfff5a360314386cc4828d00f4e8d
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 5d8a221a829d3cded8d974c608bdd27edab07f60
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894600"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235413"
 ---
 # <a name="running-lib"></a>Spuštění knihovny LIB
 
@@ -62,25 +62,29 @@ Argumenty příkazového řádku můžete předat LIB v souboru příkazů, pou�
 
 Soubor *commandfile* je textový soubor. Je povolená žádná mezera nebo tabulátor mezi zavináč (**\@**) a název souboru. Neexistuje žádný výchozí příponou; musíte zadat úplný název souboru, včetně všech rozšíření. Zástupné znaky nelze použít. Můžete zadat absolutní nebo relativní cestu s názvem souboru.
 
-V souboru příkazů argumentů je možné oddělit mezerami či tabulátory, jak to jde na příkazovém řádku; také je možné oddělit znaky nového řádku. K označení komentář použijte středník (;). Lib – ignoruje veškerý text z středník na konec řádku.
+V souboru příkazů argumentů je možné oddělit mezerami či tabulátory, jak to jde na příkazovém řádku; také je možné oddělit znaky nového řádku. Použijte středník (**;**) k označení komentář. Lib – ignoruje veškerý text z středník na konec řádku.
 
 Můžete zadat část nebo celý příkazový řádek v souboru příkazů a můžete použít více než jeden soubor příkazů v příkazu LIB. LIB přijímá vstupní soubor příkazů, jako kdyby byly zadány v dané oblasti na příkazovém řádku. Soubory příkazů nelze vnořit. LIB vypisuje obsah souborů příkazů, pokud není použit parametr/nologo.
 
 ## <a name="using-lib-options"></a>Pomocí možností LIB
 
-Možnost sestává ze specifikátoru možnosti, který je buď pomlčka (-) nebo lomítkem (/), za nímž následuje název možnosti. Názvy možností nelze zkracovat. Některé možnosti přijímají argument, zadané za dvojtečkou (:). Ve specifikaci možnosti nejsou povoleny mezery ani tabulátory. Jednotlivé specifikace možností lze na příkazovém řádku oddělit jednou nebo více mezerami či tabulátory. Názvy možností a jejich klíčového slova nebo argumenty názvů souborů nejsou velká a malá písmena, ale identifikátory používané jako argumenty jsou malá a velká písmena. Lib – zpracovává možnosti v pořadí zadaném v příkazovém řádku a v souborech příkazů. Pokud je možnost Opakovat různé argumenty, poslední z nich má být zpracován přednost.
+Možnost sestává ze specifikátoru možnosti, které je buď pomlčka (**-**) nebo lomítka (**/**), následuje název možnosti. Názvy možností nelze zkracovat. Některé možnosti přijímají argument, zadané za dvojtečkou (**:**). Ve specifikaci možnosti nejsou povoleny mezery ani tabulátory. Jednotlivé specifikace možností lze na příkazovém řádku oddělit jednou nebo více mezerami či tabulátory. Názvy možností a jejich klíčového slova nebo argumenty názvů souborů nejsou velká a malá písmena, ale identifikátory používané jako argumenty jsou malá a velká písmena. Lib – zpracovává možnosti v pořadí zadaném v příkazovém řádku a v souborech příkazů. Pokud je možnost Opakovat různé argumenty, poslední z nich má být zpracován přednost.
 
 Tyto možnosti platí pro všechny druhy LIB:
 
 > **/ ERRORREPORT** [**NONE** &AMP;#124; **VÝZVY** &AMP;#124; **FRONTY** &AMP;#124; **ODESLAT**]
 
-Pokud lib.exe selže v době běhu, můžete použít/errorreport odesílat informace společnosti Microsoft o tyto vnitřní chyby.
+Pokud lib.exe selže v době běhu, můžete použít **/errorreport** odesílat informace společnosti Microsoft o tyto vnitřní chyby.
 
-Další informace o/errorreport najdete v tématu [/errorreport (sestava interními chybami kompilátoru)](../../build/reference/errorreport-report-internal-compiler-errors.md).
+Další informace o **/errorreport**, naleznete v tématu [/errorreport (sestava interními chybami kompilátoru)](../../build/reference/errorreport-report-internal-compiler-errors.md).
 
 > **/LTCG**
 
-Způsobí, že knihovna, která má být sestaven pomocí generování kódu při propojování.  Další informace najdete v tématu [parametru/LTCG](../../build/reference/ltcg-link-time-code-generation.md).
+Zastupuje "LTCG" *generování kódu při propojování*. Tato funkce vyžaduje spolupráci mezi kompilátor ([cl.exe](compiler-options.md)), LIB a linkeru ([odkaz](linker-options.md)) k optimalizaci kódu za jakékoli součásti přínosech samostatně.
+
+Pro LIB **parametru/LTCG** možnost určuje, že vstupy z cl.exe obsahovat objektové soubory, které byly generovány použitím [/GL](gl-whole-program-optimization.md) – možnost kompilátoru. Pokud tyto vstupy zaznamená LIB a **parametru/LTCG** není zadán, bude pomocí parametru/LTCG povolena poté, co zobrazení informačních zpráv restartujte. Jinými slovy není nutné explicitně nastavit tuto možnost, ale jeho zrychluje výkon sestavení to provést, protože není potřeba restartovat LIB.
+
+V procesu sestavení na odkaz přijde výstup LIB. PROPOJENÍ má svůj vlastní samostatný **parametru/LTCG** možnost, která se používá k provádění různých optimalizací, včetně celého programu optimalizace a optimalizace na základě profilu (PGO) instrumentace. Další informace o možnosti propojení naleznete v tématu [parametru/LTCG](ltcg-link-time-code-generation.md).
 
 > **/ MACHINE**
 

@@ -1,28 +1,40 @@
 ---
 title: Criticalsection – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/24/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::CriticalSection
+- corewrappers/Microsoft::WRL::Wrappers::CriticalSection::cs_
+- corewrappers/Microsoft::WRL::Wrappers::CriticalSection::IsValid
+- corewrappers/Microsoft::WRL::Wrappers::CriticalSection::Lock
+- corewrappers/Microsoft::WRL::Wrappers::CriticalSection::~CriticalSection
+- corewrappers/Microsoft::WRL::Wrappers::CriticalSection::CriticalSection
+- corewrappers/Microsoft::WRL::Wrappers::CriticalSection::TryLock
 dev_langs:
 - C++
 helpviewer_keywords:
-- CriticalSection class
+- Microsoft::WRL::Wrappers::CriticalSection class
+- Microsoft::WRL::Wrappers::CriticalSection::cs_ data member
+- Microsoft::WRL::Wrappers::CriticalSection::IsValid method
+- Microsoft::WRL::Wrappers::CriticalSection::Lock method
+- Microsoft::WRL::Wrappers::CriticalSection::~CriticalSection, destructor
+- Microsoft::WRL::Wrappers::CriticalSection::CriticalSection, constructor
+- Microsoft::WRL::Wrappers::CriticalSection::TryLock method
 ms.assetid: f2e0a024-71a3-4f6b-99ea-d93a4a608ac4
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cab1beeaa3ce54899d1a052e4972bd7e7f52bb57
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 67ca6e8eab90e1e97a3ab8aacd46616dbcbf2d0e
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592446"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234707"
 ---
 # <a name="criticalsection-class"></a>CriticalSection – třída
 
@@ -38,24 +50,24 @@ class CriticalSection;
 
 ### <a name="constructor"></a>Konstruktor
 
-|Název|Popis|
-|----------|-----------------|
-|[CriticalSection::CriticalSection – konstruktor](../windows/criticalsection-criticalsection-constructor.md)|Inicializuje objekt synchronizace, který je podobný objektu mutex, ale může využívat pouze vláken v jednom procesu.|
-|[CriticalSection::~CriticalSection – destruktor](../windows/criticalsection-tilde-criticalsection-destructor.md)|Uvolní a odstraní aktuální **CriticalSection** objektu.|
+Název                                                        | Popis
+----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------
+[Criticalsection::criticalsection –](#criticalsection)        | Inicializuje objekt synchronizace, který je podobný objektu mutex, ale může využívat pouze vláken v jednom procesu.
+[CriticalSection:: ~ criticalsection –](#tilde-criticalsection) | Uvolní a odstraní aktuální `CriticalSection` objektu.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
-|----------|-----------------|
-|[CriticalSection::TryLock – metoda](../windows/criticalsection-trylock-method.md)|Pokusy o zadání kritický oddíl bez blokování. Pokud je volání úspěšné, volající vlákno trvá vlastnictví kritický oddíl.|
-|[CriticalSection::Lock – metoda](../windows/criticalsection-lock-method.md)|Čeká na vlastnictví objektu zadaného kritický oddíl. Funkce vrátí, pokud volající vlákno bylo uděleno vlastnictví.|
-|[CriticalSection::IsValid – metoda](../windows/criticalsection-isvalid-method.md)|Označuje, zda aktuální kritický oddíl je platný.|
+Název                                 | Popis
+------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------
+[Criticalsection::IsValid –](#isvalid) | Označuje, zda aktuální kritický oddíl je platný.
+[Criticalsection::LOCK –](#lock)       | Čeká na vlastnictví objektu zadaného kritický oddíl. Funkce vrátí, pokud volající vlákno bylo uděleno vlastnictví.
+[Criticalsection::trylock –](#trylock) | Pokusy o zadání kritický oddíl bez blokování. Pokud je volání úspěšné, volající vlákno trvá vlastnictví kritický oddíl.
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
-|Název|Popis|
-|----------|-----------------|
-|[CriticalSection::cs_ – datový člen](../windows/criticalsection-cs-data-member.md)|Deklaruje datový člen kritický oddíl.|
+Název                        | Popis
+--------------------------- | ----------------------------------------
+[Criticalsection::cs_ –](#cs) | Deklaruje datový člen kritický oddíl.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -67,6 +79,103 @@ class CriticalSection;
 
 **Namespace:** Microsoft::WRL:: wrappers –
 
-## <a name="see-also"></a>Viz také
+## <a name="tilde-criticalsection"></a>CriticalSection:: ~ criticalsection –
 
-[Microsoft::WRL::Wrappers – obor názvů](../windows/microsoft-wrl-wrappers-namespace.md)
+Uvolní a odstraní aktuální `CriticalSection` objektu.
+
+```cpp
+WRL_NOTHROW ~CriticalSection();
+```
+
+## <a name="criticalsection"></a>Criticalsection::criticalsection –
+
+Inicializuje objekt synchronizace, který je podobný objektu mutex, ale může využívat pouze vláken v jednom procesu.
+
+```cpp
+explicit CriticalSection(
+   ULONG spincount = 0
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*spincount*<br/>
+Počet typu číselník pro objekt kritický oddíl. Výchozí hodnota je 0.
+
+### <a name="remarks"></a>Poznámky
+
+Další informace o kritických oddílů a spincounts, najdete v článku `InitializeCriticalSectionAndSpinCount` fungovat v `Synchronization` část jejich rozhraní Windows API.
+
+## <a name="cs"></a>Criticalsection::cs_ –
+
+Deklaruje datový člen kritický oddíl.
+
+```cpp
+CRITICAL_SECTION cs_;
+```
+
+### <a name="remarks"></a>Poznámky
+
+Tento datový člen je chráněný.
+
+## <a name="isvalid"></a>Criticalsection::IsValid –
+
+Označuje, zda aktuální kritický oddíl je platný.
+
+```cpp
+bool IsValid() const;
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Ve výchozím nastavení, vždy vrátí `true`.
+
+## <a name="lock"></a>Criticalsection::LOCK –
+
+Čeká na vlastnictví objektu zadaného kritický oddíl. Funkce vrátí, pokud volající vlákno bylo uděleno vlastnictví.
+
+```cpp
+SyncLock Lock();
+
+   static SyncLock Lock(
+   _In_ CRITICAL_SECTION* cs
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*cs*<br/>
+Kritický oddíl uživatelem zadaného objektu.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Zamknout objekt, který můžete použít k odemknutí aktuální kritický oddíl.
+
+### <a name="remarks"></a>Poznámky
+
+První `Lock` aktuální objekt kritický oddíl má vliv na funkce. Druhá `Lock` funkce ovlivňuje kritickou sekci zadané uživatelem.
+
+## <a name="trylock"></a>Criticalsection::trylock –
+
+Pokusy o zadání kritický oddíl bez blokování. Pokud je volání úspěšné, volající vlákno trvá vlastnictví kritický oddíl.
+
+```cpp
+SyncLock TryLock();
+
+static SyncLock TryLock(
+   _In_ CRITICAL_SECTION* cs
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*cs*<br/>
+Kritický oddíl uživatelem zadaného objektu.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Nenulovou hodnotu, pokud byly úspěšně uloženy kritický oddíl nebo aktuální vlákno již vlastní kritický oddíl. Nula v případě jiné vlákno již vlastní kritický oddíl.
+
+### <a name="remarks"></a>Poznámky
+
+První `TryLock` aktuální objekt kritický oddíl má vliv na funkce. Druhá `TryLock` funkce ovlivňuje kritickou sekci zadané uživatelem.

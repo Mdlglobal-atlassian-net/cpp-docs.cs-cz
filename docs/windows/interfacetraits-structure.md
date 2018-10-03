@@ -1,28 +1,40 @@
 ---
 title: Interfacetraits – struktura | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::InterfaceTraits
+- implements/Microsoft::WRL::Details::InterfaceTraits::CanCastTo
+- implements/Microsoft::WRL::Details::InterfaceTraits::CastToBase
+- implements/Microsoft::WRL::Details::InterfaceTraits::CastToUnknown
+- implements/Microsoft::WRL::Details::InterfaceTraits::FillArrayWithIid
+- implements/Microsoft::WRL::Details::InterfaceTraits::IidCount
+- implements/Microsoft::WRL::Details::InterfaceTraits::Verify
 dev_langs:
 - C++
 helpviewer_keywords:
-- InterfaceTraits structure
+- Microsoft::WRL::Details::InterfaceTraits structure
+- Microsoft::WRL::Details::InterfaceTraits::CanCastTo method
+- Microsoft::WRL::Details::InterfaceTraits::CastToBase method
+- Microsoft::WRL::Details::InterfaceTraits::CastToUnknown method
+- Microsoft::WRL::Details::InterfaceTraits::FillArrayWithIid method
+- Microsoft::WRL::Details::InterfaceTraits::IidCount constant
+- Microsoft::WRL::Details::InterfaceTraits::Verify method
 ms.assetid: ede0c284-19a7-4892-9738-ff3da4923d0a
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb8eb8fbc4199ccdaf5717e465f202c0e4ec296e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e184d9e5b99cd59d4dde63b06cbe259d328a0e4e
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437641"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234681"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits – struktura
 
@@ -60,25 +72,25 @@ Druhá šablona je specializací skrytá rozhraní. Třetí šablony je speciali
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-|Název|Popis|
-|----------|-----------------|
-|`Base`|Synonymum pro *I0* parametr šablony.|
+Název   | Popis
+------ | ------------------------------------------
+`Base` | Synonymum pro *I0* parametr šablony.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
-|----------|-----------------|
-|[InterfaceTraits::CanCastTo – metoda](../windows/interfacetraits-cancastto-method.md)|Určuje, zda je zadaný ukazatel může být převeden na ukazatel na `Base`.|
-|[InterfaceTraits::CastToBase – metoda](../windows/interfacetraits-casttobase-method.md)|Přetypování zadaný ukazatel na ukazatel na `Base`.|
-|[InterfaceTraits::CastToUnknown – metoda](../windows/interfacetraits-casttounknown-method.md)|Přetypování zadaný ukazatel na ukazatel na `IUnknown`.|
-|[InterfaceTraits::FillArrayWithIid – metoda](../windows/interfacetraits-fillarraywithiid-method.md)|Přiřadí Identifikátor rozhraní `Base` k prvku pole určená argumentem indexu.|
-|[InterfaceTraits::Verify – metoda](../windows/interfacetraits-verify-method.md)|Ověřuje, že `Base` správně pochází.|
+Název                                                   | Popis
+------------------------------------------------------ | ----------------------------------------------------------------------------------------
+[Interfacetraits::cancastto –](#cancastto)               | Určuje, zda je zadaný ukazatel může být převeden na ukazatel na `Base`.
+[Interfacetraits::casttobase –](#casttobase)             | Přetypování zadaný ukazatel na ukazatel na `Base`.
+[Interfacetraits::casttounknown –](#casttounknown)       | Přetypování zadaný ukazatel na ukazatel na `IUnknown`.
+[Interfacetraits::fillarraywithiid –](#fillarraywithiid) | Přiřadí Identifikátor rozhraní `Base` k prvku pole určená argumentem indexu.
+[Interfacetraits::Verify –](#verify)                     | Ověřuje, že `Base` správně pochází.
 
 ### <a name="public-constants"></a>Veřejné konstanty
 
-|Název|Popis|
-|----------|-----------------|
-|[InterfaceTraits::IidCount – konstanta](../windows/interfacetraits-iidcount-constant.md)|Obsahuje počet rozhraní přidružené k aktuální ID **interfacetraits –** objektu.|
+Název                                   | Popis
+-------------------------------------- | ---------------------------------------------------------------------------------------
+[InterfaceTraits::IidCount](#iidcount) | Obsahuje počet rozhraní přidružené k aktuální ID `InterfaceTraits` objektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -90,6 +102,147 @@ Druhá šablona je specializací skrytá rozhraní. Třetí šablony je speciali
 
 **Namespace:** Microsoft::WRL:: details –
 
-## <a name="see-also"></a>Viz také
+## <a name="cancastto"></a>Interfacetraits::cancastto –
 
-[Microsoft::WRL::Details – obor názvů](../windows/microsoft-wrl-details-namespace.md)
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+```cpp
+template<typename T>
+static __forceinline bool CanCastTo(
+   _In_ T* ptr,
+   REFIID riid,
+   _Deref_out_ void **ppv
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*ptr*<br/>
+Název ukazatele na typ.
+
+*riid*<br/>
+ID rozhraní `Base`.
+
+*ppv*<br/>
+Pokud je tato operace úspěšná, *ppv* odkazuje na rozhraní určené typem `Base`. V opačném případě *ppv* je nastavena na `nullptr`.
+
+### <a name="return-value"></a>Návratová hodnota
+
+`true` Pokud je tato operace úspěšná a *ptr* přetypovat na ukazatel na `Base`; v opačném případě `false` .
+
+### <a name="remarks"></a>Poznámky
+
+Určuje, zda je zadaný ukazatel může být převeden na ukazatel na `Base`.
+
+Další informace o `Base`, najdete v článku [veřejné definice TypeDef](#public-typedefs) oddílu.
+
+## <a name="casttobase"></a>Interfacetraits::casttobase –
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+```cpp
+template<typename T>
+static __forceinline Base* CastToBase(
+   _In_ T* ptr
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*T*<br/>
+Typ parametru *ptr*.
+
+*ptr*<br/>
+Ukazatel na typ *T*.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Ukazatel na `Base`.
+
+### <a name="remarks"></a>Poznámky
+
+Přetypování zadaný ukazatel na ukazatel na `Base`.
+
+Další informace o `Base`, najdete v článku [veřejné definice TypeDef](#public-typedefs) oddílu.
+
+## <a name="casttounknown"></a>Interfacetraits::casttounknown –
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+```cpp
+template<typename T>
+static __forceinline IUnknown* CastToUnknown(
+   _In_ T* ptr
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*T*<br/>
+Typ parametru *ptr*.
+
+*ptr*<br/>
+Ukazatel na typ *T*.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Ukazatel rozhraní IUnknown odkud `Base` pochází.
+
+### <a name="remarks"></a>Poznámky
+
+Přetypování zadaný ukazatel na ukazatel na `IUnknown`.
+
+Další informace o `Base`, najdete v článku [veřejné definice TypeDef](#public-typedefs) oddílu.
+
+## <a name="fillarraywithiid"></a>Interfacetraits::fillarraywithiid –
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+```cpp
+__forceinline static void FillArrayWithIid(
+   _Inout_ unsigned long &index,
+   _In_ IID* iids
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*index*<br/>
+Ukazatel na pole, které obsahuje hodnotu index založený na nule.
+
+*IID*<br/>
+Pole ID rozhraní.
+
+### <a name="remarks"></a>Poznámky
+
+Přiřadí Identifikátor rozhraní `Base` k prvku pole určená argumentem indexu.
+
+Rozporu s názvem toto rozhraní API se mění pouze jedno pole elementu; není celého pole.
+
+Další informace o `Base`, najdete v článku [veřejné definice TypeDef](#public-typedefs) oddílu.
+
+## <a name="iidcount"></a>InterfaceTraits::IidCount
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+```cpp
+static const unsigned long IidCount = 1;
+```
+
+### <a name="remarks"></a>Poznámky
+
+Obsahuje počet rozhraní přidružené k aktuální ID `InterfaceTraits` objektu.
+
+## <a name="verify"></a>Interfacetraits::Verify –
+
+Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+
+```cpp
+__forceinline static void Verify();
+```
+
+### <a name="remarks"></a>Poznámky
+
+Ověřuje, že `Base` správně pochází.
+
+Další informace o `Base`, najdete v článku [veřejné definice TypeDef](#public-typedefs) oddílu.

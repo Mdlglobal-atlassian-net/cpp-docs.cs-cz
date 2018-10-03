@@ -14,16 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e1cffc9d1231cd9e8e91b445f05eb7dbbbc4ce4
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 47b169371b8551622650687e5d7bd8c06f560725
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169616"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48236046"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Návod: Použití nových ovládacích prvků prostředí MFC
 
-V tomto návodu vytvoříte aplikaci, která se podobá Průzkumníku souborů. Vytvoří okno, které obsahuje dvě podokna. V levém podokně bude obsahovat [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) objekt, který se zobrazí v hierarchické zobrazení plochy. V pravém podokně bude obsahovat [CMFCShellListCtrl –](../mfc/reference/cmfcshelllistctrl-class.md) , která zobrazuje soubory ve složce, který je vybraný v levém podokně.
+V tomto návodu vytvoříte aplikaci, která se podobá Průzkumníku souborů. Vytvoříte okno, které obsahuje dvě podokna. V levém podokně se uloží [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) objekt, který se zobrazí v hierarchické zobrazení plochy. V pravém podokně se uloží [CMFCShellListCtrl –](../mfc/reference/cmfcshelllistctrl-class.md) , která zobrazuje soubory ve složce, který je vybraný v levém podokně.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -39,15 +39,15 @@ Tento názorný průvodce předpokládá, že jste nastavili sady Visual Studio,
 
     1. Na **Podpora složených dokumentů** vyberte **žádný**.
 
-    1. Neprovádějte žádné změny **řetězce šablony dokumentu** podokně.
+    1. Neprovádějte žádné změny k **řetězce šablony dokumentu** podokně.
 
-    1. Na **Podpora databáze** podokně (Visual Studio 2015 a starší), vyberte **žádný** vzhledem k tomu, že tuto aplikaci nebude používat databázi. 
+    1. Na **Podpora databáze** podokně (Visual Studio 2015 a starší), vyberte **žádný** vzhledem k tomu, že aplikace nepoužívá databázi. 
 
     1. Na **funkce uživatelského rozhraní** podokno, ujistěte se, že **použít řádek nabídek a panelů nástrojů** je vybraná možnost. Nechte ostatní možnosti, jak jsou. 
 
     1. Na **rozšířené funkce** podokně v části **pokročilé funkce**, vyberte pouze **ovládací prvky ActiveX** a **běžné Manifest ovládacího prvku**. V části **rozšířená podokna rámců**, vyberte pouze **navigačním podokně** možnost. To způsobí, že průvodce vytvoří v podokně nalevo od okna s `CMFCShellTreeCtrl` již vložen. 
 
-    1. Nebudeme žádné změny k **třídy generované v** podokně. Proto klikněte na tlačítko **Dokončit** k vytvoření nového projektu knihovny MFC.
+    1. Nebudeme žádné změny k **třídy generované v** podokně, klikněte na tlačítko Ano **Dokončit** k vytvoření nového projektu knihovny MFC.
 
 1. Ověřte, že aplikace úspěšně vytvořil sestavováním a spouštěním ho. Jak vytvořit aplikaci, ze **sestavení** nabídky vyberte možnost **sestavit řešení**. Je-li aplikace sestavena úspěšně, spusťte aplikaci tak, že vyberete **spustit ladění** z **ladění** nabídky.
 
@@ -69,14 +69,14 @@ Tento názorný průvodce předpokládá, že jste nastavili sady Visual Studio,
    // Generated message map functions
    ```
 
-   Bezprostředně nad tento komentář přidejte tento kód:
+   Bezprostředně nad tento komentář, přidejte tento kód:
 
    ```cpp
    private:
    CMFCShellListCtrl m_wndList;
    ```
 
-1. **Průvodce aplikací knihovny MFC** už vytvořili `CMFCShellTreeCtrl` objekt `CMainFrame` třídy, ale je chráněný člen. Tento objekt jsme se později přístup. Proto teď vytvořte přístupový objekt pro něj. Otevřete soubor hlaviček MainFrm.h poklepáním v **Průzkumníka řešení**. Vyhledejte následující komentář:
+1. **Průvodce aplikací knihovny MFC** už vytvořili `CMFCShellTreeCtrl` objekt `CMainFrame` třídy, ale je chráněný člen. Jsme budete později přístup k objektu, takže teď vytvořte přístupový objekt pro něj. Otevřete soubor hlaviček MainFrm.h poklepáním v **Průzkumníka řešení**. Vyhledejte následující komentář:
 
    ```cpp
    // Attributes
@@ -100,9 +100,9 @@ Tento názorný průvodce předpokládá, že jste nastavili sady Visual Studio,
 
 1. Nyní aktualizujeme `CMFCShellControlsView` třídy pro zpracování `WM_CREATE` zpráv systému windows. Otevřít **zobrazení tříd** okna a vyberte `CMFCShellControlsView` třídy. Klikněte pravým tlačítkem a vyberte **vlastnosti**.
 
-    Vedle **vlastnosti** okna, klikněte na tlačítko **zprávy** ikonu. Posuňte se dolů, dokud nenajdete `WM_CREATE` zprávy. Z rozevíracího seznamu vedle `WM_CREATE`vyberte  **\<Přidat > OnCreate**. Tím se vytvoří obslužné rutiny zpráv pro nás a automaticky aktualizuje mapování zpráv knihovny MFC.
+    Vedle **vlastnosti** okna, klikněte na tlačítko **zprávy** ikonu. Posuňte se dolů, dokud nenajdete `WM_CREATE` zprávy. Z rozevíracího seznamu vedle položky `WM_CREATE`vyberte  **\<Přidat > OnCreate**. Příkaz vytvoří obslužné rutiny zpráv pro nás a automaticky aktualizuje mapování zpráv knihovny MFC.
 
-   V `OnCreate` metoda teď vytvoříme naši `CMFCShellListCtrl` objektu. Najít `OnCreate` definici metody v MFCShellControlsView.cpp zdrojového souboru a jeho implementace nahraďte následujícím kódem:
+   V `OnCreate` metoda, vytvoříme teď naše `CMFCShellListCtrl` objektu. Najít `OnCreate` definici metody v MFCShellControlsView.cpp zdrojového souboru a jeho implementace nahraďte následujícím kódem:
 
     ```cpp
     int CMFCShellControlsView::OnCreate(LPCREATESTRUCT lpCreateStruct)
@@ -131,7 +131,7 @@ Tento názorný průvodce předpokládá, že jste nastavili sady Visual Studio,
     }
     ```
 
-1. Posledním krokem je připojení `CMFCShellTreeCtrl` a `CMFCShellListCtrl` objektů pomocí [CMFCShellTreeCtrl::SetRelatedList](../mfc/reference/cmfcshelltreectrl-class.md#setrelatedlist) metody. Po volání této metody `CMFCShellListCtrl` se automaticky zobrazí obsah položky vybrané v `CMFCShellTreeCtrl`. Uděláme to `OnActivateView` metodu, která je přepsána z [CView::OnActivateView](../mfc/reference/cview-class.md#onactivateview).
+1. Posledním krokem je připojení `CMFCShellTreeCtrl` a `CMFCShellListCtrl` objektů pomocí [CMFCShellTreeCtrl::SetRelatedList](../mfc/reference/cmfcshelltreectrl-class.md#setrelatedlist) metody. Po zavolání `CMFCShellTreeCtrl::SetRelatedList`, `CMFCShellListCtrl` se automaticky zobrazí obsah položky vybrané v `CMFCShellTreeCtrl`. Objekty v se nám připojit `OnActivateView` metodu, která je přepsána z [CView::OnActivateView](../mfc/reference/cview-class.md#onactivateview).
 
    V souboru hlaviček MFCShellControlsView.h uvnitř `CMFCShellControlsView` deklarace třídy, přidejte následující deklarace metody:
 
@@ -142,7 +142,7 @@ Tento názorný průvodce předpokládá, že jste nastavili sady Visual Studio,
         CView* pDeactiveView);
     ```
 
-   V dalším kroku přidejte definici pro tuto metodu do zdrojového souboru MFCShellControlsView.cpp:
+   V dalším kroku přidejte definici pro metodu do zdrojového souboru MFCShellControlsView.cpp:
 
     ```cpp
     void CMFCShellControlsView::OnActivateView(BOOL bActivate,
@@ -160,7 +160,7 @@ Tento názorný průvodce předpokládá, že jste nastavili sady Visual Studio,
     }
     ```
 
-   Protože jsme se volání metod z `CMainFrame` třídy, musí přidáme `#include` direktiv v horní části souboru se zdrojovým MFCShellControlsView.cpp:
+   Protože voláme metody ze `CMainFrame` třídy, musí přidáme `#include` direktiv v horní části souboru se zdrojovým MFCShellControlsView.cpp:
 
     ```cpp
     #include "MainFrm.h"
@@ -170,11 +170,11 @@ Tento názorný průvodce předpokládá, že jste nastavili sady Visual Studio,
 
    Teď byste měli vidět podrobnosti o položce vybrané `CMFCShellTreeCtrl` v podokně zobrazení. Po kliknutí na uzel v `CMFCShellTreeCtrl`, `CMFCShellListCtrl` se automaticky aktualizují. Podobně pokud dvakrát kliknete na složku, do `CMFCShellListCtrl`, `CMFCShellTreeCtrl` mají být automaticky aktualizováni.
 
-   Klikněte pravým tlačítkem myši klikněte na libovolnou položku v ovládacím prvku stromu nebo v ovládacím prvku seznamu. Všimněte si, že dostanete stejné místní nabídce, jako kdyby jste používali reálném **Průzkumníka souborů**.
+   Klikněte pravým tlačítkem na libovolnou položku v ovládacím prvku stromu nebo v ovládacím prvku seznamu. Získáte stejné místní nabídce, jako kdyby jste používali skutečné **Průzkumníka souborů**.
 
 ## <a name="next-steps"></a>Další kroky
 
-- Průvodce vytvoří panel aplikace Outlook s oběma **složky** podokně a **kalendáře** podokně. Ho pravděpodobně nemá smysl mít **kalendáře** v podokně **Explorer** okna. Proto teď odeberte toto podokno.
+- Průvodce vytvoří panel aplikace Outlook s oběma **složky** podokně a **kalendáře** podokně. Pravděpodobně nemá smysl mít **kalendáře** v podokně **Explorer** okno, proto teď odebrat toto podokno.
 
 - `CMFCShellListCtrl` Podporuje zobrazení souborů v různých režimech, jako například **velké ikony**, **malé ikony**, **seznamu**, a **podrobnosti**. Aktualizace aplikace pro implementaci této funkce. Tip: viz [Visual C++ – ukázky](../visual-cpp-samples.md).
 

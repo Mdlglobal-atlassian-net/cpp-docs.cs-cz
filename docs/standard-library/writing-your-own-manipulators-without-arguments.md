@@ -1,5 +1,5 @@
 ---
-title: Psaní vlastních manipulátorů bez argumentů | Microsoft Docs
+title: Psaní vlastních manipulátorů bez argumentů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,44 +14,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df8fcc1f316b5281e8c6775492d402559d77f483
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e8bfad1919863a58554604fe6d32b4563e57a14a
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857750"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235708"
 ---
 # <a name="writing-your-own-manipulators-without-arguments"></a>Psaní vlastních manipulátorů bez argumentů
 
-Zápis manipulátory, které nepoužívají argumenty vyžaduje odvození třídy ani používají komplexní makra. Předpokládejme, že tiskárna vyžaduje dvojici \<ESC > [k zadání tučné režimu. Můžete vložit tento pár přímo do datového proudu:
+Zápis manipulátory, které nepoužívají argumenty vyžaduje odvození třídy ani používají složité makra. Předpokládejme, že tiskárna vyžaduje dvojici \<ESC > [do tučné režimu. Tento pár můžete vložit přímo do datového proudu:
 
 ```cpp
-cout <<"regular " <<'\033' <<'[' <<"boldface" <<endl;
+cout << "regular " << '\033' << '[' << "boldface" << endl;
 ```
 
-Nebo můžete definovat `bold` manipulator, která vloží znaky:
+Nebo můžete definovat `bold` manipulátor, která vloží znaky:
 
 ```cpp
 ostream& bold(ostream& os) {
-    return os <<'\033' <<'[';
+    return os << '\033' << '[';
 }
-cout <<"regular " <<bold <<"boldface" <<endl;
+cout << "regular " << bold << "boldface" << endl;
 ```
 
-Globálně definovaný `bold` funkce trvá `ostream` argument a vrátí odkaz `ostream` odkaz. Není členské funkce nebo přítele protože nepotřebuje přístup k žádné elementy Soukromá třída. `bold` Funkce připojí do datového proudu, protože datový proud `<<` operátor je přetížena tak, aby přijímal typu funkce, pomocí deklaraci, která vypadá přibližně takto:
+Globálně definované `bold` funkce přebírá `ostream` odkazovat na argument a vrátí `ostream` odkaz. Není členská funkce nebo přátelská protože nepotřebuje přístup k prvkům žádné soukromé třídy. `bold` Funkce připojí k datového proudu, protože datový proud `<<` je operátor přetížen tak, aby přijímal tento druh funkce, pomocí deklarace, která vypadá přibližně takto:
 
 ```cpp
 _Myt& operator<<(ios_base& (__cdecl *_Pfn)(ios_base&))
-{     // call ios_base manipulator
- (*_Pfn)(*(ios_base *)this);
+{
+    // call ios_base manipulator
+    (*_Pfn)(*(ios_base *)this);
 
     return (*this);
-
 }
 ```
 
-Tato funkce slouží k rozšíření jiných přetížené operátory. V takovém případě je následných, `bold` vloží znaků do datového proudu. Funkce je volána, když je vložen do datového proudu, nemusí při tisku sousedících znaků. Tisk může tedy dojít ke zpoždění, kvůli ukládání do vyrovnávací paměti datový proud.
+Tuto funkci můžete použít k rozšíření jiné přetížené operátory. V takovém případě je náhodné, který `bold` vloží znaků do datového proudu. Funkce je volána, když je vložen do datového proudu, ne tedy nutně vytištěné sousedících znaků. Díky tomu se může zpozdit tisk z důvodu ukládání do vyrovnávací paměti datového proudu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Výstupní streamy](../standard-library/output-streams.md)<br/>

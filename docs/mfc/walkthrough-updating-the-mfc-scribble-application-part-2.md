@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 208ae27e694396a21b76bc482c87084e03a21975
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: d3623eb594ff82660e97809eef609a33e74e74dc
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169681"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235435"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Návod: Aktualizace aplikace MFC Scribble (část 2)
 
@@ -116,17 +116,17 @@ Původní aplikace Scribble umožní uživateli vybrat šířku pera z dialogov�
 
 1. Klikněte na druhé pole se seznamem. Změna **titulek** k `Thick Pen`, **ID** k `ID_PEN_THICK_WIDTH`, **typ** k `Drop List`, **Data** k `5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`, a **Text** k `5`.
 
-1. Nová pole se seznamem nemusí odpovídat všechny stávající položky nabídky. Proto musíte vytvořit položku nabídky pro všechny dostupné možnosti pera.
+1. Nová pole se seznamem neodpovídají všechny stávající položky nabídky, proto je nutné vytvořit položku nabídky pro všechny dostupné možnosti pera.
 
    1. V **zobrazení prostředků** otevřené okno **IDR_SCRIBBTYPE** nabídce prostředků.
 
    1. Klikněte na tlačítko **pera** otevřete nabídku pera. Pak klikněte na tlačítko **typu tady** a typ `Thi&n Pen`.
 
-   1. Klikněte pravým tlačítkem na text, který jste právě zadali, otevřete **vlastnosti** intervalu a poté změnit ID vlastnosti `ID_PEN_THIN_WIDTH`.
+   1. Klikněte pravým tlačítkem na text, který jste zadali, otevřete **vlastnosti** intervalu a poté změnit ID vlastnosti `ID_PEN_THIN_WIDTH`.
 
-   1. Musíte také vytvořit obslužnou rutinu události pro každou položku nabídky pera. Klikněte pravým tlačítkem myši **tent & n pera** položku nabídky, který jste právě vytvořili a klikněte na **přidat obslužnou rutinu události**. **Průvodce obslužnou rutinou události** se zobrazí.
+   1. Vytvořte obslužnou rutinu události pro každou položku nabídky pera. Klikněte pravým tlačítkem myši **tent & n pera** položku nabídky, který jste vytvořili a potom klikněte na **přidat obslužnou rutinu události**. **Průvodce obslužnou rutinou události** se zobrazí.
 
-   1. V **seznamu tříd** pole v průvodci vyberte **CScribbleDoc** a potom klikněte na tlačítko **přidávat a upravovat**. Tím se vytvoří obslužnou rutinu události s názvem `CScribbleDoc::OnPenThinWidth`.
+   1. V **seznamu tříd** pole v průvodci vyberte **CScribbleDoc** a potom klikněte na tlačítko **přidávat a upravovat**. Příkaz vytvoří obslužnou rutinu události s názvem `CScribbleDoc::OnPenThinWidth`.
 
    1. Přidejte následující kód, který `CScribbleDoc::OnPenThinWidth`.
 
@@ -156,11 +156,11 @@ Původní aplikace Scribble umožní uživateli vybrat šířku pera z dialogov�
 
    1. Klikněte na tlačítko **pera** otevřete nabídku pera. Pak klikněte na tlačítko **typu tady** a typ `Thic&k Pen`.
 
-   1. Klikněte pravým tlačítkem na text, který jste právě zadali zobrazíte **vlastnosti** okna. Změnit vlastnosti ID na `ID_PEN_THICK_WIDTH`.
+   1. Klikněte pravým tlačítkem na text, který jste zadali pro zobrazení **vlastnosti** okna. Změnit vlastnosti ID na `ID_PEN_THICK_WIDTH`.
 
-   1. Klikněte pravým tlačítkem na **silný pera** položku nabídky, který jste právě vytvořili a klikněte na **přidat obslužnou rutinu události**. **Průvodce obslužnou rutinou události** se zobrazí.
+   1. Klikněte pravým tlačítkem na **silný pera** položku nabídky, který jste vytvořili a potom klikněte na tlačítko **přidat obslužnou rutinu události**. **Průvodce obslužnou rutinou události** se zobrazí.
 
-   1. V **seznamu tříd** pole v průvodci vyberte **CScribbleDoc** a potom klikněte na tlačítko **přidávat a upravovat**. Tím se vytvoří obslužnou rutinu události s názvem `CScribbleDoc::OnPenThickWidth`.
+   1. V **seznamu tříd** pole v průvodci vyberte **CScribbleDoc** a potom klikněte na tlačítko **přidávat a upravovat**. Příkaz vytvoří obslužnou rutinu události s názvem `CScribbleDoc::OnPenThickWidth`.
 
    1. Přidejte následující kód, který `CScribbleDoc::OnPenThickWidth`.
 
@@ -190,7 +190,7 @@ V dalším kroku přidejte [cmfcribboncolorbutton –](../mfc/reference/cmfcribb
 
 ### <a name="to-add-a-color-button-to-the-pen-panel"></a>Chcete-li přidat barevné tlačítko panelu pera
 
-1. Před přidáním bude tlačítko barev pro ni vytvořte položku nabídky. V **zobrazení prostředků** otevřené okno **IDR_SCRIBBTYPE** nabídce prostředků. Klikněte na tlačítko **pera** položky nabídky a otevřete nabídku pera. Pak klikněte na tlačítko **typu tady** a typ `&Color`. Klikněte pravým tlačítkem na text, který jste právě zadali zobrazíte **vlastnosti** okna. ID se má změnit `ID_PEN_COLOR`.
+1. Před přidáním bude tlačítko barev pro ni vytvořte položku nabídky. V **zobrazení prostředků** otevřené okno **IDR_SCRIBBTYPE** nabídce prostředků. Klikněte na tlačítko **pera** položky nabídky a otevřete nabídku pera. Pak klikněte na tlačítko **typu tady** a typ `&Color`. Klikněte pravým tlačítkem na text, který jste zadali pro zobrazení **vlastnosti** okna. ID se má změnit `ID_PEN_COLOR`.
 
 1. Nyní přidejte bude tlačítko barev. Z **nástrojů**, přetáhněte **barva – tlačítko** k **pera** panelu.
 
@@ -211,7 +211,7 @@ Protože původní aplikace Scribble nemá Barva pera, musíte napsat implementa
    COLORREF m_penColor;
    ```
 
-1. Každý dokument obsahuje seznam stokes, že má uživatel již vykreslen. Každý tah je definován `CStroke` objektu. `CStroke` Třída neobsahuje informace o barvu pera. Proto je třeba upravit třídu. V scribdoc.h v `CStroke` třídy, přidejte následující řádky kódu po definování `m_nPenWidth` datový člen.
+1. Každý dokument obsahuje seznam stokes, že má uživatel již vykreslen. Každý tah je definován `CStroke` objektu. `CStroke` Třída neobsahuje informace o barvu pera, proto je třeba upravit třídu. V scribdoc.h v `CStroke` třídy, přidejte následující řádky kódu po definování `m_nPenWidth` datový člen.
 
    ```cpp
    // Pen color for the stroke
@@ -267,7 +267,7 @@ Protože původní aplikace Scribble nemá Barva pera, musíte napsat implementa
 
    1. Klikněte pravým tlačítkem **barva** položky nabídky a klikněte na tlačítko **přidat obslužnou rutinu události**. **Průvodce obslužnou rutinou události** se zobrazí.
 
-   1. V **seznamu tříd** pole v průvodci vyberte **CScribbleDoc** a potom klikněte na tlačítko **přidávat a upravovat** tlačítko. Tím se vytvoří `CScribbleDoc::OnPenColor` zástupnou proceduru obslužné rutiny události.
+   1. V **seznamu tříd** pole v průvodci vyberte **CScribbleDoc** a potom klikněte na tlačítko **přidávat a upravovat** tlačítko. Příkaz vytvoří `CScribbleDoc::OnPenColor` zástupnou proceduru obslužné rutiny události.
 
 1. Nahraďte zástupné procedury pro `CScribbleDoc::OnPenColor` obslužné rutiny události s následujícím kódem.
 
@@ -287,7 +287,7 @@ Protože původní aplikace Scribble nemá Barva pera, musíte napsat implementa
    }
    ```
 
-1. Uložte změny a potom sestavíte a spustíte aplikaci. Je třeba stiskněte tlačítko barvy a změnit barvu pera.
+1. Uložte změny a potom sestavíte a spustíte aplikaci. Teď můžete stisknout tlačítko barvy a změnit barva.
 
 ##  <a name="initpensave"></a> Inicializace pera a ukládání předvoleb
 
@@ -343,7 +343,7 @@ V dalším kroku inicializujte barvu a šířku pera. A konečně uložit a nač
 
 ## <a name="conclusion"></a>Závěr
 
-Aplikace MFC Scribble aktualizována. Pomocí tohoto průvodce použijte jako vodítko při úpravě stávající aplikace.
+Aplikace MFC Scribble jste aktualizovali. Pomocí tohoto průvodce použijte jako vodítko při úpravě stávající aplikace.
 
 ## <a name="see-also"></a>Viz také
 

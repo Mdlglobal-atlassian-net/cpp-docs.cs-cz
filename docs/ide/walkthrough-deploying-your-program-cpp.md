@@ -19,34 +19,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b91c6d1d392c792862f3e5e4e1e313770136b70c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d795ea8678c04d5525e726017a2fa3a0760f3a87
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374072"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235909"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Návod: Nasazení programu (C++)
 
-Teď, když jste vytvořili aplikaci provedením dříve související návody, které jsou uvedeny v [pomocí integrovaného vývojového prostředí sady Visual Studio pro vývoj v jazyce C++ Desktop](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md), posledním krokem je vytvoření instalátoru, mohli ostatní uživatelé Nainstalujte aplikaci na svých počítačích. Provedete to tak, přidáte nový projekt do existujícího řešení. Výstup tohoto nového projektu je soubor setup.exe, který nainstaluje vaši aplikaci na jiném počítači.
+Teď, když jste vytvořili aplikaci provedením dříve související návody, které jsou uvedeny v [pomocí integrovaného vývojového prostředí sady Visual Studio pro vývoj v jazyce C++ Desktop](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md), posledním krokem je vytvoření instalátoru, mohli ostatní uživatelé Nainstalujte aplikaci na svých počítačích. Pro instalační program přidáte nový projekt do existujícího řešení. Výstup tohoto nového projektu je soubor setup.exe, který nainstaluje vaši aplikaci na jiném počítači.
 
-Tento názorný postup ukazuje, jak nasadit aplikaci pomocí Instalační služby systému Windows. Můžete také použít ClickOnce k nasazení aplikace. Další informace najdete v tématu [ClickOnce – nasazení pro aplikace Visual C++](../ide/clickonce-deployment-for-visual-cpp-applications.md). Další informace o nasazení, najdete v části [nasazování aplikací, služeb a komponent](/visualstudio/deployment/deploying-applications-services-and-components).
+Návodu ukazuje způsob použití Instalační služby systému Windows pro nasazení aplikace. Můžete také použít ClickOnce k nasazení aplikace. Další informace najdete v tématu [ClickOnce – nasazení pro aplikace Visual C++](../ide/clickonce-deployment-for-visual-cpp-applications.md). Další informace o nasazení, najdete v části [nasazování aplikací, služeb a komponent](/visualstudio/deployment/deploying-applications-services-and-components).
 
 ## <a name="prerequisites"></a>Požadavky
 
-- Tento názorný průvodce předpokládá, že chápete základy jazyka C++.
+- Návod předpokládá, že chápete základy jazyka C++.
 
 - Dále předpokládá, že jste dokončili dříve související návody, které jsou uvedeny v [pomocí integrovaného vývojového prostředí sady Visual Studio pro vývoj v jazyce C++ Desktop](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
-- Tento návod nelze dokončit v edicích Express sady Visual Studio.
+- Návod nelze dokončit v edicích Express sady Visual Studio.
 
-- Pokud jste tak již neučinili, stáhněte si rozšíření Microsoft projektů instalačního programu sady Visual Studio, jak je popsáno v postupu dále v tomto článku. Rozšíření je zdarma pro vývojáře v sadě Visual Studio a přidá funkce šablon projektů instalace a nasazení do sady Visual Studio.
+- Pokud jste tak již neučinili, stáhněte si rozšíření Microsoft projektů instalačního programu sady Visual Studio, jak je popsáno v dalších krocích později. Rozšíření je zdarma pro vývojáře v sadě Visual Studio a přidá funkce šablon projektů instalace a nasazení do sady Visual Studio.
 
 ### <a name="to-install-the-visual-studio-setup-and-deployment-project-template"></a>Chcete-li nainstalovat Visual Studio šablona projektu instalace a nasazení
 
 1. Pokud jste připojeni k Internetu, v sadě Visual Studio, zvolte **nástroje** > **rozšíření a aktualizace**.
 
-1. V části **rozšíření a aktualizace**, vyberte **Online** kartu a typ *projektů instalačního programu sady Visual Studio Microsoft* do vyhledávacího pole. Spuštění **Enter**vyberte **Microsoft Visual Studio 2017 instalační program projekty**a klikněte na tlačítko **Stáhnout**.
+1. V části **rozšíření a aktualizace**, vyberte **Online** kartu a typ *projektů instalačního programu sady Visual Studio Microsoft* do vyhledávacího pole. Spuštění **Enter**vyberte **sady Microsoft Visual Studio \<verze > Projekty instalačního programu**a klikněte na tlačítko **Stáhnout**.
 
 1. Zvolte možnost nainstalovat rozšíření a pak restartujte sadu Visual Studio.
 
@@ -70,7 +70,7 @@ Tento názorný postup ukazuje, jak nasadit aplikaci pomocí Instalační služb
 
 1. Přejmenovat položku místní *hru*, pak přetažení položky do **Uživatelská nabídka programy** uzlu na levé straně okna.
 
-1. V **Průzkumníka řešení** vyberte **instalátor hry** projekt a zvolte **zobrazení** > **okno vlastností** nebo stiskněte tlačítko  **F4** otevřít **vlastnosti** okna.
+1. V **Průzkumníka řešení**, vyberte **instalátor hry** projekt a zvolte **zobrazení** > **okno vlastností** nebo stiskněte tlačítko  **F4** otevřít **vlastnosti** okna.
 
 1. Zadejte další podrobnosti, jak chcete, aby se objevily v instalačním programu.  Například použít *Contoso* pro **výrobce**, *instalátor hry* pro **název produktu**, a *http://www.contoso.com* pro **SupportUrl**.
 

@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28e55b9afd3a6254182f1bb0a94fb2136d036c32
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 52147dcf79c73e1f931a3e9b52241308def864c4
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413494"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234422"
 ---
 # <a name="autorename"></a>auto_rename
-**Specifické pro C++**  
-  
-Přejmenuje vyhrazená slova jazyka C++ přidáním dvou podtržítek (__) k názvu proměnné a vyřeší tak možné konflikty názvů.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-auto_rename  
-```  
-  
-## <a name="remarks"></a>Poznámky 
 
-Tento atribut se používá při importování knihovny typů používající jedno nebo více vyhrazených slov jazyka C++ (klíčových slov nebo maker) jako názvů proměnných.  
-  
- **Specifické pro END C++**  
-  
-## <a name="see-also"></a>Viz také 
+**Specifické pro C++**
+
+Přejmenuje vyhrazená slova jazyka C++ přidáním dvou podtržítek (__) k názvu proměnné a vyřeší tak možné konflikty názvů.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+auto_rename
+```
+
+## <a name="remarks"></a>Poznámky
+
+Tento atribut se používá při importování knihovny typů používající jedno nebo více vyhrazených slov jazyka C++ (klíčových slov nebo maker) jako názvů proměnných.
+
+**Specifické pro END C++**
+
+## <a name="see-also"></a>Viz také
 
 [atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

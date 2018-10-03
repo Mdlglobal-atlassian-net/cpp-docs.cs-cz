@@ -16,18 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9553e6cbbd4c4fbf8b9b7e1907bd6dea63faa2a5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 133214cceebf5d43610207e446698341d7803b71
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377432"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235539"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Návod: Testování projektu (C++)
 
 Když spustíte program v režimu ladění, můžete používat zarážky pro pozastavení programu a kontrolu stavu proměnných a objektů.
 
-V tomto podrobném návodu sledovat hodnotu proměnné po spuštění programu a zjistit, proč je hodnota, které jste očekávali.
+V tomto podrobném návodu sledovat hodnotu proměnné po spuštění programu a zjistit, proč hodnota není, co očekáváte.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -61,7 +61,7 @@ V tomto podrobném návodu sledovat hodnotu proměnné po spuštění programu a
 
 1. Otevřete místní nabídku `return 0;` příkaz a klikněte na tlačítko **spustit ke kurzoru**. Žlutá šipka nalevo od kód odkazuje na další příkaz, který se spustí.
 
-1. `Cardgame::totalParticipants` Čísla by měla snížit při `Cardgame` ukončí. V tomto okamžiku `Cardgame::totalParticipants` by se měl rovnat 0, protože všechny `Cardgame` instancí se odstranily, ale **kukátko 1** okno znamená, že `Cardgame::totalparticipants` rovná **18**. To znamená, že je chyba v kódu, který lze rozpoznat a opravit provedením dalšího názorného postupu, [návod: ladění projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md).
+1. `Cardgame::totalParticipants` Čísla by měla snížit při `Cardgame` skončí. V tomto okamžiku `Cardgame::totalParticipants` by se měl rovnat 0, protože všechny `Cardgame` instancí se odstranily, ale **kukátko 1** okno znamená, že `Cardgame::totalparticipants` rovná **18**. Rozdíl označuje, že je chyba v kódu, který lze rozpoznat a opravit provedením dalšího názorného postupu, [návod: ladění projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md).
 
 1. Chcete-li ukončit program, na panelu nabídek, zvolte **ladění** > **Zastavit ladění**, nebo zvolte **Shift**+**F5**klávesové zkratky.
 

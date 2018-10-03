@@ -17,18 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 017dac5f9cba676980629109b53f4b2aec4af940
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 57f6e24ec664128a47813c29ce07a4272ce4a771
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713216"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250364"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Průvodce komponentami stránka ATL Active Server
 
 Tento průvodce se vloží do projektu jako součást stránky ASP (Active Server). Microsoft Internetové informační služby (IIS) používá jako součást jeho architektuře vývoj rozšířená webová stránka ASP součásti.
 
 Pomocí tohoto průvodce můžete určit, že se že procesu komponenty modelu a jeho podporu agregace. Můžete také určit podporu pro rozhraní informace o chybě, spojovací body a volných vláken zařazování.
+
+> [!WARNING]
+> V sadě Visual Studio 2017 verze 15.9 průvodce tento kód je zastaralá a v budoucí verzi systému Visual Studio se odebere. Tento průvodce je používána zřídka. Obecné podpory knihovny ATL a MFC nemá žádný vliv, odebráním tohoto průvodce. Pokud chcete sdílet svůj názor na toto vyřazení, vyplňte prosím [tento průzkum](https://www.surveymonkey.com/r/QDWKKCN). Vaše zpětná vazba záleží na nás.
 
 ## <a name="remarks"></a>Poznámky
 

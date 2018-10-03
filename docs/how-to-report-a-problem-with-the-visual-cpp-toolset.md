@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 359c9d3f72ffa87abf49c6e3ca90743ad0fc80a3
-ms.sourcegitcommit: 9be4b66efa45dc132cef06eb3b258c2252ea23a9
+ms.openlocfilehash: 279598c320131b163b936091560de45255c18a4d
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42464756"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235006"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Postup ohlášení problému se sadou nástrojů Visual C++ nebo dokumentace
 
@@ -370,14 +370,12 @@ Pokud budete chtít nahlásit problém, nejprve hledat komunity vývojářů s p
 
 ### <a name="use-the-visual-studio-developer-community-pages"></a>Použít na stránkách komunity vývojářů v aplikaci Visual Studio
 
-Na stránkách komunity vývojářů v aplikaci Visual Studio jsou jiné pohodlný způsob, jak zprávy o problémech a vyhledání řešení pro Visual Studio, C++ kompilátor, nástroje a knihovny. [Visual Studio dotazy](https://developercommunity.visualstudio.com/spaces/8/index.html) stránky je tam, kde chcete nahlásit problémy s prostředím IDE nebo instalace. Pro problémy s použitím C++ kompilátoru, linkeru a další nástroje a knihovny, [C++ dotazy](https://developercommunity.visualstudio.com/spaces/62/index.html) stránky.
+Na stránkách komunity vývojářů v aplikaci Visual Studio jsou jiné pohodlný způsob, jak zprávy o problémech a najděte řešení pro Visual Studio a jazyka C++ kompilátor, nástroje a knihovny. Existují určité komunity vývojářů stránky pro [sady Visual Studio](https://developercommunity.visualstudio.com/spaces/8/index.html), [Visual Studio for Mac](https://developercommunity.visualstudio.com/spaces/41/index.html), [.NET](https://developercommunity.visualstudio.com/spaces/61/index.html), [C++](https://developercommunity.visualstudio.com/spaces/62/index.html), [ Azure DevOps](https://developercommunity.visualstudio.com/spaces/21/index.html), a [TFS](https://developercommunity.visualstudio.com/spaces/22/index.html). Pod tyto karty v horní části každé stránky je vyhledávací pole, která vám pomůže najít příspěvky nebo témata, která zprávy o problémech, které jsou podobné. Možná zjistíte, že řešení a další užitečné informace týkající se vašeho problému je již k dispozici. Pokud někdo ohlásil stejný problém před, podpořit svým hlasem a komentářů k tomuto tématu ne vytvořit nové hlášení o problému. Komentovat, hlasovat nebo nahlásit nový problém, můžete být vyzváni k přihlášení k účtu Visual Studio a vyjádření souhlasu komunity vývojářů v aplikaci dáte přístup k vašemu profilu.
 
-V komunitě vývojářů banner v horní části každé stránky je vyhledávací pole, která vám pomůže najít příspěvky nebo témata, která zprávy o problémech, které jsou podobné. Možná zjistíte, že řešení a další užitečné informace týkající se vašeho problému je již dostupný v existující téma. Pokud někdo ohlásil stejný problém před, podpořit svým hlasem a komentářů k tomuto tématu ne vytvořit nové hlášení o problému.
-
-Pokud váš problém neohlásil před, zvolte **nahlásit problém** tlačítko vedle vyhledávacího pole na stránce komunity vývojářů. Můžete být vyzváni k přihlášení k účtu Visual Studio a vyjádření souhlasu komunity vývojářů v aplikaci dáte přístup k vašemu profilu. Když se přihlásíte, můžete přejít přímo na stránku ohlásit problém. Může obsahovat kód reprodukci a příkazového řádku, snímky obrazovky, odkazy na související diskuse a další informace, které si myslíte, že je důležité a užitečné.
+Pro problémy s použitím C++ kompilátoru, linkeru a další nástroje a knihovny, [C++](https://developercommunity.visualstudio.com/spaces/62/index.html) stránky. Pokud hledáte váš problém a nebyla hlášena před, zvolte **nahlásit problém** tlačítko vedle pole Hledat v horní části stránky. Může obsahovat kód reprodukci a příkazového řádku, snímky obrazovky, odkazy na související diskuse a další informace, které si myslíte, že je důležité a užitečné.
 
 > [!TIP]
-> Pro jiné druhy problémů můžete narazit v sadě Visual Studio, které nesouvisí se sada nástrojů (například uživatelského rozhraní problémů, chybnou funkčnost IDE nebo obecné selhání), **nástrojem ohlásit problém** může být obzvláště Dobrá volba termínu splnění k jeho snímek obrazovky s možností a schopnost záznamu akce uživatelského rozhraní, které vedly k problému jste se setkali. Tyto druhy chyb může být rovněž uvedeny na [komunity vývojářů](https://developercommunity.visualstudio.com/) lokality.
+> Pro jiné druhy problémů může dojít v sadě Visual Studio, které nesouvisí s sadu nástrojů pro C++ (například problémy uživatelského rozhraní, fungovat funkce integrovaného vývojového prostředí nebo obecné selhání), použijte **nahlásit problém** nástroje v integrovaném vývojovém prostředí. Toto je nejlepší volbou z důvodu možnosti snímku obrazovky a jeho funkcí záznamu akce uživatelského rozhraní, které vedly k problém, který jste se setkali. Tyto druhy chyb lze také vyhledávat [komunity vývojářů](https://developercommunity.visualstudio.com/) lokality. Další informace najdete v tématu [postup ohlášení problému se sadou Visual Studio](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).
 
 ### <a name="reports-and-privacy"></a>Sestavy a ochrana osobních údajů
 

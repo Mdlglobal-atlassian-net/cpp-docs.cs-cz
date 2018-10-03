@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5481b9391d47887d85ca43746f1a6aff5f6eb92
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 342716f3197713a584e2f0a1d20e4de75ece474b
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029616"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234308"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Návod: Vytvoření programu ve standardním C++ (C++)
 
@@ -32,7 +32,7 @@ Visual C++ v sadě Visual Studio integrované vývojové prostředí (IDE) slou�
 
 Můžete zadat vlastní program C++, nebo použijte jednu z ukázkových programů. Ukázkový program v tomto návodu je konzolová aplikace. Tato aplikace používá `set` kontejneru ve standardní knihovně jazyka C++.
 
-Visual C++ v souladu se standardem 2003 C++, s následujícími hlavními výjimkami: vyhledávání dvoufázová názvu, specifikace výjimek a export. Kromě toho Visual C++ podporuje několik funkcí C ++ 0 x, například výrazy lambda, auto, static_assert, odkazy rvalue a externí šablony.
+Následuje Visual C++ 2003 C++ Standard, s následujícími hlavními výjimkami: vyhledávání dvoufázová názvu, specifikace výjimek a export. Kromě toho Visual C++ podporuje několik funkcí C ++ 0 x, například výrazy lambda, auto, static_assert, odkazy rvalue a externí šablony.
 
 > [!NOTE]
 > Pokud dodržování standardu je potřeba použít `/Za` – možnost kompilátoru zakázat rozšíření Microsoft pro standardní. Další informace najdete v tématu [/Za, /Ze (zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md).

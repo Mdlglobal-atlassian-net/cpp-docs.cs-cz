@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e9541517852696073a3dbbff560bb6c44fd3264
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 0b50234efa193adda081520667658f57e42de1b4
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029668"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235412"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Návod: Vytvoření tradiční aplikace klasické pracovní plochy Windows (C++)
 
 Tento návod ukazuje, jak vytvořit tradiční desktopové aplikace Windows v sadě Visual Studio. Ukázková aplikace, které vytvoříte pomocí rozhraní API Windows zobrazí "Hello, plochu Windows!" v okně. Můžete použít kód vyvinutý v tomto názorném postupu jako vzor pro vytvoření jiných aplikací klasické pracovní plochy Windows.
 
-Rozhraní API Windows (označované také jako rozhraní Win32 API, rozhraní API Windows Desktop a Windows klasického rozhraní API) je rozhraní na základě jazyka C pro vytváření aplikací pro Windows. V existence od 1980s a byla použita k vytvoření aplikací Windows desítky let. Pokročilé a jednodušší program rozhraní jsou zabudovány nad rámec tohoto rozhraní API, jako je například knihovny MFC, ATL a rozhraní .NET Framework. Dokonce i většině moderních kód pro UPW a Store aplikace napsané v jazyce C + +/ WinRT používá toto rozhraní API pod. Další informace o rozhraní API Windows najdete v tématu [Index rozhraní API Windows](/windows/desktop/apiindex/windows-api-list). Existuje mnoho způsobů, jak vytvářet aplikace pro Windows, ale to byl první.
+Rozhraní API Windows (označované také jako rozhraní Win32 API, rozhraní API Windows Desktop a Windows klasického rozhraní API) je architektura podle jazyka C pro vytváření aplikací pro Windows. V existence od 1980s a byla použita k vytvoření aplikací Windows desítky let. Pokročilé a jednodušší program rozhraní sestavené nad rámec rozhraní Windows API, jako je například knihovny MFC, ATL a rozhraní .NET Framework. Dokonce i většině moderních kód pro UPW a Store aplikace napsané v jazyce C + +/ WinRT používá rozhraní Windows API pod. Další informace o rozhraní API Windows najdete v tématu [Index rozhraní API Windows](/windows/desktop/apiindex/windows-api-list). Existuje mnoho způsobů, jak vytvářet aplikace pro Windows, ale výše uvedeného postupu byl první.
 
 > [!IMPORTANT]
 > Pro účely zkrácení jsou vynechány některé příkazy v textu. [Sestavení kódu](#build-the-code) oddílu na konci tohoto dokumentu obsahuje kompletní kód.
@@ -140,13 +140,13 @@ V dalším kroku se dozvíte, jak vytvořit kód pro aplikace klasické pracovn�
    );
    ```
 
-   V této funkci můžete napsat kód pro zpracování *zprávy* , která přijímá aplikace z Windows při *události* dojít. Například pokud uživatel vybere tlačítko OK v aplikaci, Windows odešle zprávu, a můžete napsat kód uvnitř vaší `WndProc` funkce, která provádí práci je vhodné. Tento postup se nazývá *zpracování* událost. Pouze zpracování událostí, které jsou relevantní pro vaši aplikaci.
+   V této funkci, napište kód pro zpracování *zprávy* , která přijímá aplikace z Windows při *události* dojít. Například pokud uživatel vybere tlačítko OK v aplikaci, Windows odešle zprávu, a můžete napsat kód uvnitř vaší `WndProc` funkce, která provádí práci je vhodné. Je volána *zpracování* událost. Pouze zpracování událostí, které jsou relevantní pro vaši aplikaci.
 
    Další informace najdete v tématu [procedury okna](https://msdn.microsoft.com/library/windows/desktop/ms632593).
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>Přidání funkčnosti do funkce WinMain
 
-1. V `WinMain` funkce, naplnění strukturu typu [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577). Tato struktura obsahuje informace o okně, například ikonu aplikace, barvy pozadí okna, název má být zobrazen v záhlaví a co je velmi důležité, ukazatel na funkci procedury okna. Následující příklad ukazuje typickou `WNDCLASSEX` struktury.
+1. V `WinMain` funkce, naplnění strukturu typu [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577). Struktura obsahuje informace o okně, například ikonu aplikace, barvy pozadí okna, název má být zobrazen v záhlaví a co je důležité, ukazatel na funkci procedury okna. Následující příklad ukazuje typickou `WNDCLASSEX` struktury.
 
    ```cpp
    WNDCLASSEX wcex;
@@ -165,9 +165,9 @@ V dalším kroku se dozvíte, jak vytvořit kód pro aplikace klasické pracovn�
    wcex.hIconSm        = LoadIcon(wcex.hInstance, IDI_APPLICATION);
    ```
 
-   Informace o polích této struktury viz [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577).
+   Informace o polích struktury výše najdete v tématu [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577).
 
-1. Je nutné zaregistrovat `WNDCLASSEX` s Windows tak, že ví o okně aplikace a jak odesílat zprávy do něj. Použití [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) fungovat a předejte strukturu třídy okna jako argument. `_T` – Makro se používá, protože používáme `TCHAR` typu.
+1. Zaregistrujte `WNDCLASSEX` s Windows tak, že ví o okně aplikace a jak odesílat zprávy do něj. Použití [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) fungovat a předejte strukturu třídy okna jako argument. `_T` – Makro se používá, protože používáme `TCHAR` typu.
 
    ```cpp
    if (!RegisterClassEx(&wcex))
@@ -221,7 +221,7 @@ V dalším kroku se dozvíte, jak vytvořit kód pro aplikace klasické pracovn�
 
    Tato funkce vrátí `HWND`, což je popisovač okna. Popisovač je něco jako ukazatel, který používá Windows ke sledování otevřená okna. Další informace najdete v tématu [datové typy Windows](/windows/desktop/WinProg/windows-data-types).
 
-1. V tuto chvíli se v okně vytvořil, ale musíme říct Windows, aby byla viditelná. Je to, čemu tento kód:
+1. V tomto okamžiku v okně se vytvořil, ale musíme říct Windows, aby byla viditelná. Je to, čemu tento kód:
 
    ```cpp
    // The parameters to ShowWindow explained:
@@ -232,7 +232,7 @@ V dalším kroku se dozvíte, jak vytvořit kód pro aplikace klasické pracovn�
    UpdateWindow(hWnd);
    ```
 
-   Zobrazené okno příliš mnoho obsahu nemá, protože dosud nebyla implementována `WndProc` funkce. Jinými slovy aplikace neošetřuje ještě zprávy, které je teď odesílání Windows.
+   Zobrazené okno nemá příliš mnoho obsahu, protože dosud nebyla implementována `WndProc` funkce. Jinými slovy aplikace neošetřuje ještě zprávy, které je teď odesílání Windows.
 
 1. Zpracování zpráv, jsme nejprve přidejte smyčku přijímat zprávy, které odešle Windows. Když aplikace obdrží zprávu, smyčka ji odešle vaše `WndProc` funkci ke zpracování. Smyčky zpráv vypadá podobně jako následující kód.
 
@@ -340,9 +340,9 @@ V dalším kroku se dozvíte, jak vytvořit kód pro aplikace klasické pracovn�
 
 1. Povolit `WndProc` funkce pro zpracování zprávy, které aplikace obdrží, implementovat příkaz switch.
 
-   Je důležité zpráv pro zpracování [WM_PAINT](/windows/desktop/gdi/wm-paint) zprávy. Aplikace obdrží tuto zprávu při část zobrazeného okna musí být aktualizovány. Tato událost může dojít, když uživatel přesune časové období před okno a poté přesunut ho znovu. Vaše aplikace nebude vědět, pokud dojde k událostem takto; pouze Windows ví, takže se zobrazí oznámení s `WM_PAINT`. Při prvním zobrazení okna musí být aktualizovány všechny jeho.
+   Je důležité zpráv pro zpracování [WM_PAINT](/windows/desktop/gdi/wm-paint) zprávy. Aplikace obdrží `WM_PAINT` zprávy, když část zobrazeného okna musí být aktualizovány. Události může dojít, když uživatel přesune časové období před okno a poté přesunut ho znovu a vaše aplikace nebude vědět, když dojde k těmto událostem. Pouze Windows ví, takže se zobrazí oznámení s `WM_PAINT`. Při prvním zobrazení okna musí být aktualizovány všechny jeho.
 
-   Pro zpracování `WM_PAINT` zprávy, první volání [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint), následně zpracovat veškerou logiku pro vykreslení textu, tlačítek a dalších ovládacích prvků v okně a následně zavolat [EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint). V této aplikaci logika mezi zahajovacím a ukončovacím voláním se zobrazí řetězec "Hello, plochu Windows!" v okně. V následujícím kódu, Všimněte si, [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) funkce slouží k zobrazení řetězce.
+   Pro zpracování `WM_PAINT` zprávy, první volání [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint), následně zpracovat veškerou logiku pro vykreslení textu, tlačítek a dalších ovládacích prvků v okně a následně zavolat [EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint). Pro aplikace je logika mezi zahajovacím a ukončovacím voláním zobrazí řetězec "Hello, plochu Windows!" v okně. V následujícím kódu, Všimněte si, [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) funkce slouží k zobrazení řetězce.
 
    ```cpp
    PAINTSTRUCT ps;
@@ -367,7 +367,7 @@ V dalším kroku se dozvíte, jak vytvořit kód pro aplikace klasické pracovn�
    }
    ```
 
-   `HDC` v tomto kódu je popisovač kontextu zařízení, což je datová struktura, která používá Windows umožňují aplikaci komunikovat s grafický podsystém. `BeginPaint` a `EndPaint` funkce zajišťují, že vaše aplikace chová jako dobrý občany a nepoužívá kontext zařízení pro delší, než je potřeba. To pomáhá zajistit, že grafický podsystém je k dispozici pro použití jiné aplikace.
+   `HDC` v kódu je popisovač kontextu zařízení, což je datová struktura, která používá Windows umožňují aplikaci komunikovat s grafický podsystém. `BeginPaint` a `EndPaint` funkce vaše aplikace chovat jako dobrý občany a nepoužívá kontext zařízení pro delší, než je potřeba. Zpřístupnění nápovědy funkce grafický podsystém je k dispozici pro použití jiné aplikace.
 
 1. Aplikace obvykle zpracovává mnoho jiných zpráv, například [WM_CREATE](/windows/desktop/winmsg/wm-create) při prvním vytvoření okna a [WM_DESTROY](/windows/desktop/winmsg/wm-destroy) při zavření okna. Následující kód ukazuje základní, ale dokončení `WndProc` funkce.
 

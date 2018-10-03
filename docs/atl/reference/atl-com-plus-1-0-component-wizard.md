@@ -1,7 +1,7 @@
 ---
 title: ATL COM + 1.0 součást Průvodce | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -17,18 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcf97c08680583dde686c68fb7e26f323e22716e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 102ec4f85c8915cf6afb70f03d470cec4e9e807f
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717901"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250403"
 ---
 # <a name="atl-com-10-component-wizard"></a>Průvodce komponentami 1.0 knihovny ATL modelu COM +
 
 Tohoto průvodce použijte k přidání objektu do projektu, který podporuje služby COM + 1.0, včetně transakce.
 
 Můžete určit, zda objekt podporuje duální rozhraní a automatizace. Můžete také určit podporu pro rozhraní informace o chybě, vylepšeného objektu ovládacího prvku, transakce a asynchronních zpráv služby Řízení front.
+
+> [!WARNING]
+> V sadě Visual Studio 2017 verze 15.9 průvodce tento kód je zastaralá a v budoucí verzi systému Visual Studio se odebere. Tento průvodce je používána zřídka. Obecné podpory knihovny ATL a MFC nemá žádný vliv, odebráním tohoto průvodce. Pokud chcete sdílet svůj názor na toto vyřazení, vyplňte prosím [tento průzkum](https://www.surveymonkey.com/r/QDWKKCN). Vaše zpětná vazba záleží na nás.
 
 ## <a name="remarks"></a>Poznámky
 

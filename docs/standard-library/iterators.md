@@ -15,30 +15,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb8efba0146a0a230a85a7980f1e71381fcf4b2
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 858612ebdda30e68972d11072b4c2ac7f4f88954
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208399"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235487"
 ---
 # <a name="iterators"></a>Iterátory
 
 Iterátor je objekt, který může iterovat prvky v kontejneru standardní knihovny C++ a poskytují přístup k jednotlivým prvkům. Kontejnery standardní knihovny C++, všechny poskytnuté iterátory tak, aby algoritmů můžete ke jejich prvky standardním způsobem, aniž byste museli být obeznámeni s typu kontejneru elementů jsou uloženy v.
 
-Můžete použít iterátory explicitně pomocí členské a globální funkce, jako je například begin() a end() a operátory, jako ++ a--přesunout vpřed nebo vzad. Můžete také použít iterátory implicitně s rozsahem-smyčky for nebo (pro některé typy iterátoru) operátor dolního indexu [].
+Můžete použít iterátory explicitně pomocí členské a globální funkce, jako `begin()` a `end()` a operátory, jako například ** ++ ** a ** -- ** přesunout vpřed nebo zpětně. Můžete také použít iterátory implicitně s rozsahem-smyčky for nebo (pro některé typy iterátoru) operátor dolního indexu ** \[]**.
 
-Na začátek pořadí nebo rozsahu ve standardní knihovně jazyka C++ je první prvek. Konec pořadí nebo rozsah je vždy definována jako jedno místo za posledním prvkem. Globální funkce začínají i končí iterátorů vrácené do zadaného kontejneru. Typické explicitní iterace smyčky přes všechny prvky v kontejneru vypadá takto:
+Na začátek pořadí nebo rozsahu ve standardní knihovně jazyka C++ je první prvek. Konec pořadí nebo rozsah je vždy definována jako jedno místo za posledním prvkem. Globální funkce `begin` a `end` vrátí iterátory do zadaného kontejneru. Typické explicitní iterace smyčky přes všechny prvky v kontejneru vypadá takto:
 
 ```cpp
 vector<int> vec{ 0,1,2,3,4 };
-for (auto it = begin(vec);
-
-it != end(vec);
-
-it++)
-{  // Access element using dereference operator
-    cout <<*it <<" ";
+for (auto it = begin(vec); it != end(vec); it++)
+{
+    // Access element using dereference operator
+    cout << *it << " ";
 }
 ```
 
@@ -46,22 +43,23 @@ Totéž lze provést jednoduše pomocí rozsah-smyčka for:
 
 ```cpp
 for (auto num : vec)
- {  // no deference operator
-    cout <<num <<" ";
- }
+{
+    // no deference operator
+    cout << num << " ";
+}
 ```
 
 Existuje pět kategorií iterátorů. V pořadí podle zvýšení výkonu kategorie jsou:
 
-- **Výstup**. Výstupní iterátor `X` můžete Iterujte vpřed přes posloupnosti pomocí ++ operátor a můžete napsat jenom jednou, elementu s použitím \* operátor.
+- **Výstup**. *Výstupního iterátoru* `X` můžete Iterujte vpřed přes posloupnosti pomocí ** ++ ** operátorů a můžete napsat jenom jednou, elementu s použitím ** &ast; ** operátor.
 
-- **Vstup**. Vstupní iterátor `X` můžete Iterujte vpřed přes posloupnosti pomocí ++ operátor a může číst prvek libovolný počet pokusů s použitím \* operátor. Můžete porovnat vstupní iterátory s použitím ++ a! = operátory. Po zvýšit libovolné kopii vstupní iterátor žádné další kopie lze bezpečně porovnat, přes ukazatel nebo zvýšena po tomto datu.
+- **Vstup**. *Vstupní iterátor* `X` můžete Iterujte vpřed přes posloupnosti pomocí ++ operátor a může číst prvek libovolný počet pokusů s použitím ** &ast; ** operátor. Můžete porovnat vstupní iterátory s použitím ** ++ ** a **! =** operátory. Po zvýšit libovolné kopii vstupní iterátor žádné další kopie lze bezpečně porovnat, přes ukazatel nebo zvýšena po tomto datu.
 
-- **Vpřed**. Dopředný iterátor, který `X` můžete Iterujte vpřed přes posloupnosti pomocí ++ – operátor a může číst libovolný prvek nebo zapisovat elementy nekonstantní libovolný počet pokusů s použitím \* operátor. Získáte přístup k členům elementu s použitím -> – operátor a porovnat dopředných iterátorů pomocí operátory == a! = operátory. Může vytvářet více kopií dopředný iterátor, z nichž každý lze přistoupit přes ukazatel a zvýší, nezávisle na sobě. Dopředný iterátor, který hodnotu null je volán dopředný iterátor, který je inicializován bez ohledu na kterýkoli kontejner. Null dopředných iterátorů vždy porovnávají se stejně.
+- **Vpřed**. A *dopředný iterátor, který* `X` můžete Iterujte vpřed přes posloupnosti pomocí ++ – operátor a může číst libovolný prvek nebo zapisovat elementy nekonstantní libovolný počet pokusů s použitím ** &ast; ** operátor. Získáte přístup k členům elementu s použitím ** -> ** operátor a porovnejte dál iterátory s použitím ** == ** a **! =** operátory. Může vytvářet více kopií dopředný iterátor, z nichž každý lze přistoupit přes ukazatel a zvýší, nezávisle na sobě. Dopředný iterátor, který je inicializován bez odkazu na kterýkoli kontejner se volá *null dopředný iterátor, který*. Null dopředných iterátorů vždy porovnávají se stejně.
 
-- Obousměrné. Obousměrný iterátor, který `X` může proběhnout iterátor předání. Vám může, ale také snížení obousměrný iterátor, jako v parametru--`X`, `X`--, nebo (`V` = \*`X`--). Je možné přistupovat k členům elementu a porovnat obousměrných iterátorů stejným způsobem jako dopředných iterátorů.
+- **Obousměrné**. A *obousměrný iterátor, který* `X` může proběhnout iterátor předání. Vám může, ale také snížení obousměrný iterátor, stejně jako v `--X`, `X--`, nebo `(V = *X--)`. Je možné přistupovat k členům elementu a porovnat obousměrných iterátorů stejným způsobem jako dopředných iterátorů.
 
-- **Náhodný přístup**. Iterátor s náhodným přístupem `X` může proběhnout obousměrný iterátor. S iterátor náhodného přístupu můžete použít operátor dolního indexu [] k přístupu k prvkům. Můžete použít +, -, += a-= operátory a přesunout vpřed nebo vzad zadaného počtu prvků vzdálenosti mezi vzájemně iterátory. Můžete porovnat s použitím obousměrných iterátorů ==,! =, \<, >, \<= a > =.
+- **Náhodný přístup**. A *iterátor s náhodným přístupem* `X` může proběhnout obousměrný iterátor. S iterátor náhodného přístupu můžete použít operátor dolního indexu ** \[]** k přístupu k prvkům. Můžete použít ** + **, ** - **, ** += ** a ** -= ** operátory přesunutí dopředu nebo dozadu zadaný počet prvků a vzdálenosti mezi vzájemně iterátory. Můžete porovnat s použitím obousměrných iterátorů ** == **, **! =**, ** \< **, ** > **, ** \< = **, a ** >= **.
 
 Všechny iterátory můžete přiřadit nebo zkopírován. Jsou považovány za jednoduché objekty a jsou často předané a vrácené hodnoty není odkazem. Všimněte si také, že žádná z operací výše popsaný může vyvolat výjimku při provádění na iterátor platný.
 

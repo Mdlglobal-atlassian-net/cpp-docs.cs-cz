@@ -1,28 +1,32 @@
 ---
 title: Handletraits – struktura | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/27/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::GetInvalidValue
 dev_langs:
 - C++
 helpviewer_keywords:
-- HANDLETraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close method
+- Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::GetInvalidValue method
 ms.assetid: 22963e88-d857-4624-9182-7c986daff722
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2193743da9e7b5667714650660cd8e1efdb5cf4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 33181b2cf477c3f753eacf63110a426b36e62b31
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610978"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235266"
 ---
 # <a name="handletraits-structure"></a>Struktura HANDLETraits
 
@@ -38,16 +42,16 @@ struct HANDLETraits;
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-|Název|Popis|
-|----------|-----------------|
-|`Type`|Synonymum pro POPISOVAČ.|
+Název   | Popis
+------ | ---------------------
+`Type` | Synonymum pro POPISOVAČ.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
-|----------|-----------------|
-|[HANDLETraits::Close – metoda](../windows/handletraits-close-method.md)|Zavře určený.|
-|[HANDLETraits::GetInvalidValue – metoda](../windows/handletraits-getinvalidvalue-method.md)|Představuje neplatný popisovač.|
+Název                                              | Popis
+------------------------------------------------- | -----------------------------
+[Handletraits::Close –](#close)                     | Zavře určený.
+[Handletraits::getinvalidvalue –](#getinvalidvalue) | Představuje neplatný popisovač.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -59,6 +63,33 @@ struct HANDLETraits;
 
 **Namespace:** Microsoft::WRL::Wrappers::HandleTraits
 
-## <a name="see-also"></a>Viz také
+## <a name="close"></a>Handletraits::Close –
 
-[Microsoft::WRL::Wrappers::HandleTraits – obor názvů](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+Zavře určený.
+
+```cpp
+inline static bool Close(
+   _In_ Type h
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*h*<br/>
+Obslužná rutina zavřete.
+
+### <a name="return-value"></a>Návratová hodnota
+
+`true` Pokud zpracování *h* zavření úspěšně; v opačném případě `false`.
+
+## <a name="getinvalidvalue"></a>Handletraits::getinvalidvalue –
+
+Představuje neplatný popisovač.
+
+```cpp
+inline static HANDLE GetInvalidValue();
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vždy vrátí INVALID_HANDLE_VALUE. (INVALID_HANDLE_VALUE je definován ve Windows.)

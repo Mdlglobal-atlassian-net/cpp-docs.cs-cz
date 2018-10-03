@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 210cf8d3183e9fcd94cfa51d875a0b26e4a8fa07
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 165ea5b42ea4e293eb60b7a798778e3a461e0385
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029655"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235448"
 ---
 # <a name="how-to-migrate-to-clr"></a>Postupy: Migrace do prostředí /clr
 
@@ -118,7 +118,7 @@ Předkompilované hlavičky jsou podporovány v rámci **/CLR**. Ale pokud pouze
 
 Nejjednodušší způsob, jak sestavení projektu, kde jsou zkompilovány některé moduly **/CLR** je zcela zakázat předkompilovaných hlaviček. (V dialogovém okně stránky vlastností projektu, otevřete uzel jazyka C/C++ a vyberte předkompilované hlavičky. Změňte vlastnost vytvořit/použít předkompilovaných hlaviček na "Ne pomocí předkompilovaných hlaviček".)
 
-Ale hlavně pro velké projekty, předkompilovaných hlaviček poskytuje mnohem lepší rychlost kompilace, takže zakázáním této funkce není žádoucí. V tomto případě je vhodné nakonfigurovat **/CLR** a jiných **/CLR** soubory používají samostatné předkompilované hlavičky. To můžete udělat v jednom kroku pomocí vyberete víc moduly se zkompiluje **/CLR** pomocí Průzkumníka řešení, kliknete pravým tlačítkem na skupinu a vybrat vlastnosti. Změňte vlastnosti soubor prostřednictvím PCH vytvořit/použít i předkompilovaný soubor hlaviček pro použití názvu souboru odlišnou hlavičku a soubor PCH.
+Ale hlavně pro velké projekty, předkompilovaných hlaviček poskytuje mnohem lepší rychlost kompilace, takže zakázáním této funkce není žádoucí. V tomto případě je vhodné nakonfigurovat **/CLR** a jiných **/CLR** soubory používají samostatné předkompilované hlavičky. To můžete udělat v jednom kroku pomocí vyberete víc moduly se zkompiluje **/CLR** pomocí **Průzkumníka řešení**, pravým tlačítkem myši na skupinu a vyberte možnost Vlastnosti. Změňte vlastnosti soubor prostřednictvím PCH vytvořit/použít i předkompilovaný soubor hlaviček pro použití názvu souboru odlišnou hlavičku a soubor PCH.
 
 ## <a name="fixing-errors"></a>Opravy chyb
 

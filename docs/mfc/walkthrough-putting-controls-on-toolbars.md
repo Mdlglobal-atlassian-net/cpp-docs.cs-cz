@@ -15,26 +15,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8267704e6bb1b43a13cc05d21d0572695365fd6
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 1995d3472f175872e084e2654531a2e72a90f950
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169746"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235507"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Návod: Umístění ovládacích prvků na panely nástrojů
 
-Toto téma popisuje, jak na panel nástrojů přidat tlačítko panelu nástrojů obsahující ovládací prvek systému Windows. V knihovně MFC, musí být tlačítko panelu nástrojů [cmfctoolbarbutton – třída](../mfc/reference/cmfctoolbarbutton-class.md)-odvozené třídy, například [cmfctoolbarcomboboxbutton – třída](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [cmfctoolbareditboxbutton – třída](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Cmfcdropdowntoolbarbutton – třída](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), nebo [cmfctoolbarmenubutton – třída](../mfc/reference/cmfctoolbarmenubutton-class.md).
+Tento článek popisuje, jak přidat tlačítko panelu nástrojů, která obsahuje ovládací prvek Windows na panelu nástrojů. V knihovně MFC, musí být tlačítko panelu nástrojů [cmfctoolbarbutton – třída](../mfc/reference/cmfctoolbarbutton-class.md)-odvozené třídy, například [cmfctoolbarcomboboxbutton – třída](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [cmfctoolbareditboxbutton – třída](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Cmfcdropdowntoolbarbutton – třída](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), nebo [cmfctoolbarmenubutton – třída](../mfc/reference/cmfctoolbarmenubutton-class.md).
 
 ## <a name="adding-controls-to-toolbars"></a>Přidávání ovládacích prvků na panely nástrojů
 
 Chcete-li přidat ovládací prvek na panel nástrojů, postupujte takto:
 
-1. Zarezervujte si pro tlačítko zástupný identifikátor ID prostředku v nadřazeném prostředku panelu nástrojů. Další informace o tom, jak vytvářet tlačítka pomocí **panelu nástrojů editoru** v sadě Visual Studio, najdete v článku [panelu nástrojů editoru](../windows/toolbar-editor.md) tématu.
+1. Zarezervujte si pro tlačítko zástupný identifikátor ID prostředku v nadřazeném prostředku panelu nástrojů. Další informace o tom, jak vytvářet tlačítka pomocí **panelu nástrojů editoru** v sadě Visual Studio, najdete v článku [panelu nástrojů editoru](../windows/toolbar-editor.md) článku.
 
 1. Zarezervujte obrázek panelu nástrojů (ikonu tlačítka) pro tlačítko ve všech rastrových obrázcích nadřazeného panelu nástrojů.
 
-1. V popisovači zpráv, který zpracovává zprávu `AFX_WM_RESETTOOLBAR`, proveďte následující akce:
+1. V popisovači zpráv, která zpracovává `AFX_WM_RESETTOOLBAR` zpráva, proveďte následující kroky:
 
    1. Vytvořte ovládací prvek tlačítka pomocí odvozené třídy `CMFCToolbarButton`.
 
@@ -51,7 +51,7 @@ Po povolení přizpůsobení vytvoříte **vlastní** dialogové okno v obslužn
 
 ## <a name="example-creating-a-find-combo-box"></a>Příklad: Vytvoření pole se seznamem Find
 
-Tato část popisuje, jak vytvořit **najít** prvek pole se seznamem, který se zobrazí na panelu nástrojů a obsahuje naposled použité vyhledávací řetězce. Uživatel může do ovládacího prvku zadat řetězec a stisknutím klávesy Enter prohledat dokument, nebo stisknout klávesu Escape a vrátit fokus na hlavní rámec. Tento příklad předpokládá, že dokument je zobrazen v [třídy CEditView](../mfc/reference/ceditview-class.md)– zobrazení odvozeném z třídy.
+Tato část popisuje, jak vytvořit **najít** prvek pole se seznamem, který se zobrazí na panelu nástrojů a obsahuje poslední použité vyhledávací řetězce. Uživatel může do ovládacího prvku zadat řetězec a stisknutím klávesy Enter prohledat dokument, nebo stisknout klávesu Escape a vrátit fokus na hlavní rámec. Tento příklad předpokládá, že dokument je zobrazen v [třídy CEditView](../mfc/reference/ceditview-class.md)– zobrazení odvozeném z třídy.
 
 ### <a name="creating-the-find-control"></a>Vytvoření ovládacího prvku Find
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab6a0693ccad032953e9891c9cc9ef67d725b477
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: eca30330e721575443ba9d3f7b0b19c315427eb2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373565"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234122"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Návod: Sestavení projektu (C++)
 
@@ -35,17 +35,17 @@ V tomto podrobném návodu se záměrně zavést chybu syntaxe jazyka Visual C++
 
 ### <a name="to-fix-compilation-errors"></a>Opravení chyb kompilace
 
-1. V Game.cpp odstraňte středník na posledním řádku tak, aby vypadal takto:
+1. V Game.cpp odstraňte středník na posledním řádku tak, aby se podobá příkaz:
 
-     `return 0`
+    `return 0`
 
 1. V panelu nabídky zvolte **sestavení** > **sestavit řešení**.
 
-1. Zpráva v **seznam chyb** okno znamená, že došlo k chybě při tvorbě projektu. Popis vypadá zhruba takhle:
+1. Zpráva v **seznam chyb** okno znamená, že došlo k chybě při tvorbě projektu. Popis vypadá podobně jako chybová zpráva:
 
-     `error C2143: syntax error: missing ';' before '}'`
+    `error C2143: syntax error: missing ';' before '}'`
 
-   Chcete-li zobrazit informace nápovědy o této chybě, zvýrazněte ho v **seznam chyb** okno a klikněte na tlačítko **F1** klíč.
+  Chcete-li zobrazit informace nápovědy o této chybě, zvýrazněte ho v **seznam chyb** okno a klikněte na tlačítko **F1** klíč.
 
 1. Přidejte středník zpět do konce řádku, který obsahuje chybu syntaxe:
 
@@ -53,7 +53,7 @@ V tomto podrobném návodu se záměrně zavést chybu syntaxe jazyka Visual C++
 
 1. V panelu nabídky zvolte **sestavení** > **sestavit řešení**.
 
-   Zpráva v **výstup** okno znamená, že sestavení projektu zdařilo.
+  Zpráva v **výstup** okno znamená, že sestavení projektu zdařilo.
 
     ```Output
     1>------ Build started: Project: Game, Configuration: Debug Win32 ------

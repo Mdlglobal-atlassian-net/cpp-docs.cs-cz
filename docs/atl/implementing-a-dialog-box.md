@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b656af864f8a0dd7c5a69866976b4c1e624b87b9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 30e843c6df70548257de1bf1af8c5f0e83555652
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764290"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234057"
 ---
 # <a name="implementing-a-dialog-box"></a>Implementace dialogového okna
 
@@ -30,7 +30,7 @@ Existují dva způsoby, jak dialogové okno Přidat do projektu ATL: použijte P
 
 ## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>Přidání dialogového okna pomocí Průvodce dialogem ATL
 
-V [dialogové okno Přidat třídu](../ide/add-class-dialog-box.md), vyberte objekt ATL Dialog dialogového okna Přidat do projektu ATL s Knihovnami. Průvodce dialogem ATL podle potřeby zadejte a klikněte na tlačítko **Dokončit**. Průvodce přidá třídu odvozenou z [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) do projektu. Otevřete zobrazení prostředků z **zobrazení** nabídku, vyhledejte dialogové okno a dvojím kliknutím ho otevřete v editoru prostředků.
+V [dialogové okno Přidat třídu](../ide/add-class-dialog-box.md), vyberte objekt ATL Dialog dialogového okna Přidat do projektu ATL s Knihovnami. Průvodce dialogem ATL podle potřeby zadejte a klikněte na tlačítko **Dokončit**. Průvodce přidá třídu odvozenou z [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) do projektu. Otevřete **zobrazení prostředků** z **zobrazení** nabídku, vyhledejte dialogové okno a dvojím kliknutím ho otevřete v editoru prostředků.
 
 > [!NOTE]
 >  Pokud vaše dialogové okno je odvozena z `CAxDialogImpl`, může být hostitelem obou ActiveX a ovládacích prvků Windows. Pokud nechcete, aby nároky na podporu ovládacích prvků ActiveX do vaší třídy dialogového okna, použijte [CSimpleDialog](../atl/reference/csimpledialog-class.md) nebo [CDialogImpl](../atl/reference/cdialogimpl-class.md) místo.

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dd07ead0608657597a81b239732347f67455273
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f95eaa49db5e09bceaefafc16312250d823e5d5c
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436881"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250390"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details – obor názvů
 
@@ -43,7 +43,7 @@ namespace Microsoft::WRL::Details;
 |[MakeAllocator – třída](../windows/makeallocator-class.md)|Přiděluje paměť pro aktivovatelné třídy s nebo bez něj slabou podporu odkazu.|
 |[ModuleBase – třída](../windows/modulebase-class.md)|Představuje základní třídu [modulu](../windows/module-class.md) třídy.|
 |[RemoveIUnknown – třída](../windows/removeiunknown-class.md)|Vytvoří typ, který je ekvivalentní `IUnknown`– podle typu, ale má nevirtuální `QueryInterface`, `AddRef`, a `Release` metody.|
-|[Weakreference – třída](../windows/weakreference-class1.md)|Představuje *nestálý odkaz* , který je možné pomocí prostředí Windows Runtime nebo klasického modelu COM. Slabý odkaz představuje objekt, který může nebo nemusí být dostupný.|
+|[Weakreference – třída](../windows/weakreference-class.md)|Představuje *nestálý odkaz* , který je možné pomocí prostředí Windows Runtime nebo klasického modelu COM. Slabý odkaz představuje objekt, který může nebo nemusí být dostupný.|
 
 ### <a name="structures"></a>Struktury
 
@@ -84,7 +84,7 @@ namespace Microsoft::WRL::Details;
 |[ActivationFactoryCallback – funkce](../windows/activationfactorycallback-function.md)|Získá objekt factory aktivace pro ID zadaná aktivace.|
 |[Move – funkce](../windows/move-function.md)|Zadaný argument přesune z jednoho umístění do druhého.|
 |[RaiseException – funkce](../windows/raiseexception-function.md)|Vyvolá výjimku v volajícího vlákna.|
-|[Swap – funkce (knihovna šablon C++ prostředí Windows Runtime)](../windows/swap-function-windows-runtime-cpp-template-library.md)|Vymění hodnoty dvou zadaných argumentů.|
+|[Swap – funkce (WRL)](../windows/swap-function-wrl.md)|Vymění hodnoty dvou zadaných argumentů.|
 |[TerminateMap – funkce](../windows/terminatemap-function.md)|Třída továrny v zadaném modulu vypne.|
 
 ## <a name="requirements"></a>Požadavky

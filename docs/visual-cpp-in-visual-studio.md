@@ -1,28 +1,25 @@
 ---
 title: Visual C++ v sadě Visual Studio | Dokumentace Microsoftu
+description: Visual C++ je název pro kompilátor C++ společnosti Microsoft, editor kódu a související nástroje v integrovaném vývojovém prostředí sady Visual Studio. Použití jazyka Visual C++ pro vývoj aplikací pro Windows, Linux, Android a iOS.
 ms.custom: ''
-ms.date: 08/22/2018
+ms.date: 09/26/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- unmanaged code, C++
-- development environment, Visual C++
-- unmanaged code
-- Visual C++
-- Visual C++, reference
+- Visual C++, home page
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92ffcd9ecf292f07d78df75f75c8d1ce77a6cbfb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4e8082b734f0ccc2943d8ba9f23b19f152ce42a6
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399779"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234929"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ v sadě Visual Studio
 
@@ -81,11 +78,20 @@ Informace o ukázkách kódu.
 
 ## <a name="c-development-tools"></a>Vývojové nástroje C++
 
-[Integrované vývojové prostředí a nástroje pro vývoj](ide/ide-and-tools-for-visual-cpp-development.md).
-Tom, jak pomocí integrovaného vývojového prostředí sady Visual Studio můžete vytvářet projekty, pracovat s souborů se zdrojovým kódem, propojit s knihovnami, kompilace, ladění, vytvořit testy jednotek, provést statické analýzy, nasazení a další.
+[Integrované vývojové prostředí a nástroje pro vývoj](ide/ide-and-tools-for-visual-cpp-development.md)<br/>
+Tom, jak pomocí integrovaného vývojového prostředí sady Visual Studio můžete vytvářet projekty, úpravy kódu, propojit s knihovnami, kompilace, ladění, vytvořit testy jednotek, provést statické analýzy, nasazení a další.
 
 [Kompilátory a Build Tools](build/building-c-cpp-programs.md)<br/>
-Možnosti kompilátoru a linkeru C++ společnosti Microsoft, chybové zprávy, příkladech příkazového řádku, configurating pro různé platformy a sestavení referenčních témat. 
+Možnosti kompilátoru a linkeru C++ společnosti Microsoft, chybové zprávy, příkladech příkazového řádku, configurating pro různé platformy a sestavení referenčních témat.
+
+[Ladění nativního kódu](/visualstudio/debugger/debugging-native-code)<br/>
+Pomocí ladicího programu sady Visual Studio s projekty C++.
+
+[Analýza kódu pro C/C++ – přehled](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
+Použití anotací SAL nebo podle dokumentu C++ Core Guidelines šachovnice provádět statické analýzy.
+
+[Zápis testů jednotek pro C/C++ v sadě Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
+Vytvoření testování částí pomocí Microsoft Unit Testing Framework pro C++, Google Test, Boost.Test nebo CTest.
 
 ## <a name="write-applications-in-c"></a>Psaní aplikací v jazyce C++
 
@@ -119,11 +125,15 @@ Připojení k databázím pomocí rozhraní ODBC a dalších technologií přís
 [Text a řetězce](text/text-and-strings-in-visual-cpp.md)<br/>
 Další informace o práci s jiným textovým a formáty řetězců a kódování pro místní i mezinárodní vývoje.
 
-## <a name="c-language-reference"></a>Referenční dokumentace jazyka C++
+## <a name="languages-reference"></a>Odkaz na jazyky
 
-Informace o jazyce C++, naleznete v tématu [referenční dokumentace jazyka C++](cpp/cpp-language-reference.md).
+[Referenční dokumentace jazyka C++](cpp/cpp-language-reference.md)
 
-Informace o proprocesoru jazyka C++, naleznete v tématu [C/C++ Preprocessor Reference](preprocessor/c-cpp-preprocessor-reference.md).
+[C/C++ – referenční dokumentace preprocesoru](preprocessor/c-cpp-preprocessor-reference.md)
+
+[Referenční dokumentace jazyka C](c-language/c-language-reference.md)
+
+[Vnitřní funkce kompilátoru a jazyk sestavení](intrinsics/compiler-intrinsics-and-assembly-language.md)
 
 ## <a name="c-libraries-in-visual-studio"></a>Knihovny C++ v sadě Visual Studio
 

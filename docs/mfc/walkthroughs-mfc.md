@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05255f71f304b32de95faf96eaa23f5ce3da9f96
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 9d96ce9ade06c849716a680bd3c0c8bb6feeccc6
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169408"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235656"
 ---
 # <a name="walkthroughs-mfc"></a>Návody (MFC)
 
@@ -28,7 +28,7 @@ Tento oddíl obsahuje články, které vás provedou různými úkoly spojenými
 ## <a name="in-this-section"></a>V tomto oddílu
 
 [Návod: Použití nových ovládacích prvků prostředí MFC](../mfc/walkthrough-using-the-new-mfc-shell-controls.md)<br/>
-V tomto návodu vytvoříte aplikaci, která se podobá Průzkumníku souborů. Vytvoří okno, které obsahuje dvě podokna. V levém podokně bude obsahovat [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) objekt, který se zobrazí v hierarchické zobrazení plochy. V pravém podokně bude obsahovat [CMFCShellListCtrl –](../mfc/reference/cmfcshelllistctrl-class.md) soubory, které se zobrazí ve složce, který je vybraný v levém podokně.
+V tomto návodu vytvoříte aplikaci, která se podobá Průzkumníku souborů. Vytvoříte okno, které obsahuje dvě podokna. V levém podokně [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) objekt, který se zobrazí v hierarchické zobrazení plochy. V pravém podokně [CMFCShellListCtrl –](../mfc/reference/cmfcshelllistctrl-class.md) soubory, které se zobrazí ve složce, který je vybraný v levém podokně.
 
 [Návod: Umístění ovládacích prvků na panely nástrojů](../mfc/walkthrough-putting-controls-on-toolbars.md)<br/>
 Moderní panelů nástrojů MFC může být hostitelem ovládacích prvků než jednoduché tlačítka. Tento článek vysvětluje, jak na to.

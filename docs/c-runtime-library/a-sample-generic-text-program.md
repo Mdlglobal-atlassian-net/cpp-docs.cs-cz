@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbb02f426e839eff20a1dcd37ab41d4a08640599
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3adde04ba8fe259c25f3439cef247192eea175f2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081530"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48233671"
 ---
 # <a name="a-sample-generic-text-program"></a>Ukázka programu obecného textu
 
@@ -31,7 +31,7 @@ ms.locfileid: "46081530"
 
 Následující program GENTEXT. Jazyk C poskytuje podrobnější příklad použití mapování obecného textu, které jsou definovány v TCHAR. V:
 
-```
+```C
 // GENTEXT.C
 // use of generic-text mappings defined in TCHAR.H
 
@@ -67,12 +67,11 @@ int __cdecl _tmain(int argc, _TCHAR **argv, _TCHAR **envp)
    _tprintf(_T("'%s'\n"), _tcsrev(_tcsdup(str)));
    return 0;
 }
-
 ```
 
 Pokud `_MBCS` byl definován GENTEXT. C mapuje se na následující program znakové sady MBCS:
 
-```
+```C
 // crt_mbcsgtxt.c
 
 /*
@@ -110,7 +109,7 @@ int __cdecl main(int argc, char **argv, char **envp)
 
 Pokud `_UNICODE` byl definován GENTEXT. C mapuje následující Unicode verzi programu. Další informace o používání `wmain` sady Unicode jako náhrada `main`, naleznete v tématu [použití funkce wmain](../c-language/using-wmain.md) v *referenční dokumentace jazyka C*.
 
-```
+```C
 // crt_unicgtxt.c
 
 /*
@@ -148,7 +147,7 @@ int __cdecl wmain(int argc, wchar_t **argv, wchar_t **envp)
 
 Pokud ani `_MBCS` ani `_UNICODE` byl definován GENTEXT. C mapuje jednobajtové kódu ASCII, následujícím způsobem:
 
-```
+```C
 // crt_sbcsgtxt.c
 /*
  * Use of generic-text mappings defined in TCHAR.H
@@ -183,7 +182,7 @@ int __cdecl main(int argc, char **argv, char **envp)
 }
 ```
 
- **Specifické pro END Microsoft**
+**Specifické pro END Microsoft**
 
 ## <a name="see-also"></a>Viz také
 

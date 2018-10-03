@@ -1,7 +1,7 @@
 ---
 title: Přidání funkce pomocí průvodců kódem (C++) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -20,16 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d531184b03d06dbe2a395e55638e4457c2c9c0e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 931299a03d0fed91c68338eec41c94b875dc9d01
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441964"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250429"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Přidání funkce pomocí průvodců kódem (C++)
 
 Po vytvoření projektu můžete změnit nebo přidat funkce tohoto projektu. Mezi tyto úlohy patří vytváření nových tříd, přidává nové členské funkce a proměnné a přidání automatizace metody a vlastnosti. Průvodci kódem jsou navržené tak, aby šlo dělat tyto věci.
+
+> [!WARNING]
+> Průvodci kódem několik ATL a MFC jsou už zastaralé a v budoucí verzi systému Visual Studio se odebere. Tito průvodci jsou zřídka se používá. Obecné podpory knihovny ATL a MFC nemá žádný vliv, odebrání těchto průvodců. Pokud chcete sdílet svůj názor na toto vyřazení, vyplňte prosím [tento průzkum](https://www.surveymonkey.com/r/QDWKKCN). Vaše zpětná vazba záleží na nás.
 
 > [!NOTE]
 >  Teď můžete přidat obslužné rutiny zpráv a mapování zpráv na ně a přepsat virtuální funkce MFC pomocí [okno vlastností](/visualstudio/ide/reference/properties-window).

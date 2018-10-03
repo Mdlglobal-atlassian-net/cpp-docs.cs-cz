@@ -1,30 +1,56 @@
 ---
 title: SafeInt – Functions | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/28/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
+f1_keywords:
+- SafeInt functions
+- SafeAdd
+- SafeCast
+- SafeDivide
+- SafeEquals
+- SafeGreaterThan
+- SafeGreaterThanEquals
+- SafeLessThan
+- SafeLessThanEquals
+- SafeModulus
+- SafeMultiply
+- SafeNotEquals
+- SafeSubtract
 dev_langs:
 - C++
 helpviewer_keywords:
 - functions, SafeInt
+- SafeAdd function
+- SafeCast function
+- SafeDivide function
+- SafeEquals function
+- SafeGreaterThan function
+- SafeGreaterThanEquals function
+- SafeLessThan function
+- SafeLessThanEquals function
+- SafeModulus function
+- SafeMultiply function
+- SafeNotEquals function
+- SafeSubtract function
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf9a35d2198c78290bb6e60adef40fc88fdf4879
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 504cfe0780cfb0116f59ae67937ea5f0370dc8b2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604425"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235565"
 ---
 # <a name="safeint-functions"></a>Funkce jazyka SafeInt
 
-SafeInt – knihovna poskytuje několik funkcí, které lze použít bez vytvoření instance [SafeInt – třída](../windows/safeint-class.md). Pokud chcete zabránit přetečení celého čísla jedné matematické operace, můžete tyto funkce. Pokud chcete chránit několik matematických operací, měli byste vytvořit **SafeInt** objekty. Je mnohem efektivnější, chcete-li vytvořit **SafeInt** objektů, než se tyto funkce používat více než jednou.
+SafeInt – knihovna poskytuje několik funkcí, které lze použít bez vytvoření instance [SafeInt – třída](../windows/safeint-class.md). Pokud chcete zabránit přetečení celého čísla jedné matematické operace, můžete tyto funkce. Pokud chcete chránit několik matematických operací, měli byste vytvořit `SafeInt` objekty. Je mnohem efektivnější, chcete-li vytvořit `SafeInt` objektů, než se tyto funkce používat více než jednou.
 
 Tyto funkce umožňují snadno porovnat nebo provádění matematických operací na dva různé typy parametrů, aniž by bylo nutné je nejprve převést na stejný typ.
 
@@ -32,19 +58,351 @@ Každá z těchto funkcí má dva typy šablon: `T` a `U`. Každý z těchto typ
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-|Funkce|Popis|
-|--------------|-----------------|
-|[SafeAdd](../windows/safeadd.md)|Sečte dvě čísla a chrání proti přetečení.|
-|[SafeCast](../windows/safecast.md)|Přetypování jednoho typu na jiný typ parametru.|
-|[SafeDivide](../windows/safedivide.md)|Provede podíl dvou čísel a chrání proti dělení nulou.|
-|[SafeEquals](../windows/safeequals.md), [SafeGreaterThan](../windows/safegreaterthan.md), [SafeGreaterThanEquals](../windows/safegreaterthanequals.md), [SafeLessThan](../windows/safelessthan.md), [SafeLessThanEquals](../windows/safelessthanequals.md), [ SafeNotEquals](../windows/safenotequals.md)|Porovná dvě čísla. Tyto funkce umožňují snadno porovnat dva různé typy čísel beze změny jejich typy.|
-|[SafeModulus](../windows/safemodulus.md)|Provádí operace numerického zbytku dvou čísel.|
-|[SafeMultiply](../windows/safemultiply.md)|Vynásobí dvě čísla společně a chrání proti přetečení.|
-|[SafeSubtract](../windows/safesubtract.md)|Odečte dvou čísel a chrání proti přetečení.|
+Funkce                      | Popis
+----------------------------- | --------------------------------------------------------------
+[SafeAdd](#safeadd)           | Sečte dvě čísla a chrání proti přetečení.
+[SafeCast](#safecast)         | Přetypování jednoho typu na jiný typ parametru.
+[SafeDivide](#safedivide)     | Provede podíl dvou čísel a chrání proti dělení nulou.
+[SafeEquals](#safeequals), [SafeGreaterThan](#safegreaterthan), [SafeGreaterThanEquals](#safegreaterthanequals), [SafeLessThan](#safelessthan), [SafeLessThanEquals](#safelessthanequals), [ SafeNotEquals](#safenotequals) | Porovná dvě čísla. Tyto funkce umožňují snadno porovnat dva různé typy čísel beze změny jejich typy.
+[SafeModulus](#safemodulus)   | Provádí operace numerického zbytku dvou čísel.
+[SafeMultiply](#safemultiply) | Vynásobí dvě čísla společně a chrání proti přetečení.
+[SafeSubtract](#safesubtract) | Odečte dvou čísel a chrání proti přetečení.
 
 ## <a name="related-sections"></a>Související oddíly
 
-|Oddíl|Popis|
-|-------------|-----------------|
-|[SafeInt – třída](../windows/safeint-class.md)|**SafeInt** třídy.|
-|[SafeIntException – třída](../windows/safeintexception-class.md)|Třídy výjimek specifické pro SafeInt – knihovna.|
+Oddíl                                                  | Popis
+-------------------------------------------------------- | ----------------------------------------------------
+[SafeInt –](../windows/safeint-class.md)                   | `SafeInt` Třídy.
+[SafeIntException –](../windows/safeintexception-class.md) | Třídy výjimek specifické pro SafeInt – knihovna.
+
+## <a name="safeadd"></a>SafeAdd
+
+Sečte dvě čísla způsobem, který chrání proti přetečení.
+
+```cpp
+template<typename T, typename U>
+inline bool SafeAdd (
+   T t,
+   U u,
+   T& result
+) throw ();
+```
+
+### <a name="parameters"></a>Parametry
+
+*t*<br/>
+[in] Chcete-li přidat o první číslo. Toto musí být typu T.
+
+*u*<br/>
+[in] Druhé číslo, které chcete přidat. Musí se jednat o typ U.
+
+*výsledek*<br/>
+[out] Parametr kde `SafeAdd` výsledek je uložen.
+
+### <a name="return-value"></a>Návratová hodnota
+
+`true` Pokud nedojde k žádné chybě; `false` Pokud dojde k chybě.
+
+## <a name="safecast"></a>SafeCast
+
+Přetypování jednom typu čísla do jiného typu.
+
+```cpp
+template<typename T, typename U>
+inline bool SafeCast (
+   const T From,
+   U& To
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*z*<br/>
+[in] Zdroj číslo k převedení. Musí se jednat o typ `T`.
+
+*k*<br/>
+[out] Odkaz na nový typ number. Musí se jednat o typ `U`.
+
+### <a name="return-value"></a>Návratová hodnota
+
+`true` Pokud nedojde k žádné chybě; `false` Pokud dojde k chybě.
+
+## <a name="safedivide"></a>SafeDivide
+
+Provede podíl dvou čísel způsobem, který chrání před dělení nulou.
+
+```cpp
+template<typename T, typename U>
+inline bool SafeDivide (
+   T t,
+   U u,
+   T& result
+) throw ();
+```
+
+### <a name="parameters"></a>Parametry
+
+*t*<br/>
+[in] Dělitel. Toto musí být typu T.
+
+*u*<br/>
+[in] Dividenda. Musí se jednat o typ U.
+
+*výsledek*<br/>
+[out] Parametr kde `SafeDivide` výsledek je uložen.
+
+### <a name="return-value"></a>Návratová hodnota
+
+`true` Pokud nedojde k žádné chybě; `false` Pokud dojde k chybě.
+
+## <a name="safeequals"></a>SafeEquals
+
+Porovná dvě čísla, chcete-li zjistit, jestli jsou shodné.
+
+```cpp
+template<typename T, typename U>
+inline bool SafeEquals (
+   const T t,
+   const U u
+) throw ();
+```
+
+### <a name="parameters"></a>Parametry
+
+*t*<br/>
+[in] První číslo k porovnání. Toto musí být typu T.
+
+*u*<br/>
+[in] Druhé číslo k porovnání. Musí se jednat o typ U.
+
+### <a name="return-value"></a>Návratová hodnota
+
+`true` Pokud *t* a *u* jsou stejné; jinak `false`.
+
+### <a name="remarks"></a>Poznámky
+
+Metoda rozšiřuje `==` protože `SafeEquals` umožňuje porovnat dva různé typy čísel.
+
+## <a name="safegreaterthan"></a>SafeGreaterThan
+
+Porovná dvě čísla.
+
+```cpp
+template<typename T, typename U>
+inline bool SafeGreaterThan (
+   const T t,
+   const U u
+) throw ();
+```
+
+### <a name="parameters"></a>Parametry
+
+*t*<br/>
+[in] První číslo k porovnání. Musí se jednat o typ `T`.
+
+*u*<br/>
+[in] Druhé číslo k porovnání. Musí se jednat o typ `U`.
+
+### <a name="return-value"></a>Návratová hodnota
+
+`true` Pokud *t* je větší než *u*; jinak vrátí hodnotu `false`.
+
+### <a name="remarks"></a>Poznámky
+
+`SafeGreaterThan` operátor porovnání regulární rozšiřuje tím, že můžete porovnat dva různé typy čísel.
+
+## <a name="safegreaterthanequals"></a>SafeGreaterThanEquals
+
+Porovná dvě čísla.
+
+```cpp
+template <typename T, typename U>
+inline bool SafeGreaterThanEquals (
+   const T t,
+   const U u
+) throw ();
+```
+
+### <a name="parameters"></a>Parametry
+
+*t*<br/>
+[in] První číslo k porovnání. Musí se jednat o typ `T`.
+
+*u*<br/>
+[in] Druhé číslo k porovnání. Musí se jednat o typ `U`.
+
+### <a name="return-value"></a>Návratová hodnota
+
+`true` Pokud *t* je větší než nebo rovna hodnotě *u*; jinak vrátí hodnotu `false`.
+
+### <a name="remarks"></a>Poznámky
+
+`SafeGreaterThanEquals` operátor porovnání standardní zvyšuje, protože ho můžete porovnat dva různé typy čísel.
+
+## <a name="safelessthan"></a>SafeLessThan
+
+Určuje, zda je jedno číslo menší než jiný.
+
+```cpp
+template<typename T, typename U>
+inline bool SafeLessThan (
+   const T t,
+   const U u
+) throw ();
+```
+
+### <a name="parameters"></a>Parametry
+
+*t*<br/>
+[in] První číslo. Musí se jednat o typ `T`.
+
+*u*<br/>
+[in] Druhé číslo. Musí se jednat o typ `U`.
+
+### <a name="return-value"></a>Návratová hodnota
+
+`true` Pokud *t* je menší než *u*; jinak vrátí hodnotu `false`.
+
+### <a name="remarks"></a>Poznámky
+
+Tato metoda rozšiřuje standardní relační operátor protože `SafeLessThan` umožňuje porovnat dva různé typy číslo.
+
+## <a name="safelessthanequals"></a>SafeLessThanEquals
+
+Porovná dvě čísla.
+
+```cpp
+template <typename T, typename U>
+inline bool SafeLessThanEquals (
+   const T t,
+   const U u
+) throw ();
+```
+
+### <a name="parameters"></a>Parametry
+
+*t*<br/>
+[in] První číslo k porovnání. Musí se jednat o typ `T`.
+
+*u*<br/>
+[in] Druhé číslo k porovnání. Musí se jednat o typ `U`.
+
+### <a name="return-value"></a>Návratová hodnota
+
+`true` Pokud *t* je menší než nebo rovna hodnotě *u*; jinak vrátí hodnotu `false`.
+
+### <a name="remarks"></a>Poznámky
+
+`SafeLessThanEquals` operátor porovnání regulární rozšiřuje tím, že můžete porovnat dva různé typy čísel.
+
+## <a name="safemodulus"></a>SafeModulus
+
+Provádí operace numerického zbytku dvou čísel.
+
+```cpp
+template<typename T, typename U>
+inline bool SafeModulus (
+   const T t,
+   const U u,
+   T& result
+) throw ();
+```
+
+### <a name="parameters"></a>Parametry
+
+*t*<br/>
+[in] Dělitel. Musí se jednat o typ `T`.
+
+*u*<br/>
+[in] Dividenda. Musí se jednat o typ `U`.
+
+*výsledek*<br/>
+[out] Parametr kde `SafeModulus` výsledek je uložen.
+
+### <a name="return-value"></a>Návratová hodnota
+
+`true` Pokud nedojde k žádné chybě; `false` Pokud dojde k chybě.
+
+## <a name="safemultiply"></a>SafeMultiply
+
+Vynásobí dvě čísla společně způsobem, který chrání proti přetečení.
+
+```cpp
+template<typename T, typename U>
+inline bool SafeMultiply (
+   T t,
+   U u,
+   T& result
+) throw ();
+```
+
+### <a name="parameters"></a>Parametry
+
+*t*<br/>
+[in] První číslo pro vynásobení. Musí se jednat o typ `T`.
+
+*u*<br/>
+[in] Druhé číslo pro vynásobení. Musí se jednat o typ `U`.
+
+*výsledek*<br/>
+[out] Parametr kde `SafeMultiply` výsledek je uložen.
+
+### <a name="return-value"></a>Návratová hodnota
+
+`true` Pokud nedojde k žádné chybě; `false` Pokud dojde k chybě.
+
+## <a name="safenotequals"></a>SafeNotEquals
+
+Určuje, pokud dvě čísla nejsou stejné.
+
+```cpp
+template<typename T, typename U>
+inline bool SafeNotEquals (
+   const T t,
+   const U u
+) throw ();
+```
+
+### <a name="parameters"></a>Parametry
+
+*t*<br/>
+[in] První číslo k porovnání. Musí se jednat o typ `T`.
+
+*u*<br/>
+[in] Druhé číslo k porovnání. Musí se jednat o typ `U`.
+
+### <a name="return-value"></a>Návratová hodnota
+
+`true` Pokud *t* a *u* nejsou stejné; jinak `false`.
+
+### <a name="remarks"></a>Poznámky
+
+Metoda rozšiřuje `!=` protože `SafeNotEquals` umožňuje porovnat dva různé typy čísel.
+
+## <a name="safesubtract"></a>SafeSubtract
+
+Odečte dvě čísla způsobem, který chrání proti přetečení.
+
+```cpp
+template<typename T, typename U>
+inline bool SafeSubtract (
+   T t,
+   U u,
+   T& result
+) throw ();
+```
+
+### <a name="parameters"></a>Parametry
+
+*t*<br/>
+[in] První číslo v odčítání. Musí se jednat o typ `T`.
+
+*u*<br/>
+[in] Číslo, které se má odečíst od *t*. Musí se jednat o typ `U`.
+
+*výsledek*<br/>
+[out] Parametr kde `SafeSubtract` výsledek je uložen.
+
+### <a name="return-value"></a>Návratová hodnota
+
+`true` Pokud nedojde k žádné chybě; `false` Pokud dojde k chybě.

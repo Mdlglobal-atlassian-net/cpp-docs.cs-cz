@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51754b2b777523593118b0b0a88dfa4ac8803b20
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 60f82332f9dd0fa6d6e64beb2a5d793784471a1f
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959804"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234592"
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Používání operátorů insertion a řízení formátu
 
@@ -99,7 +99,7 @@ int main( )
    double values[] = { 1.23, 35.36, 653.7, 4358.24 };
    char *names[] = { "Zoot", "Jimmy", "Al", "Stan" };
    for( int i = 0; i < 4; i++ )
-      cout << setw( 6 )  << names[i]
+      cout << setw( 7 )  << names[i]
            << setw( 10 ) << values[i] << endl;
 }
 ```
@@ -107,10 +107,10 @@ int main( )
 `width` Členská funkce je deklarována v \<iostream – >. Pokud používáte `setw` nebo jakékoli jiné manipulátor s argumenty, je nutné zahrnout \<iomanip >. Ve výstupu jsou řetězce vytištěn v pole šířky 6 a celá čísla v poli šířky 10:
 
 ```Output
-  Zoot      1.23
- Jimmy     35.36
-    Al     653.7
-  Stan   4358.24
+   Zoot      1.23
+  Jimmy     35.36
+     Al     653.7
+   Stan   4358.24
 ```
 
 Ani `setw` ani `width` zkrátí hodnoty. Pokud formátovaný výstup přesahuje šířku, vytiskne celou hodnotu v souladu s přesností nastavení datového proudu. Obě `setw` a `width` ovlivňují jenom následující pole. Šířka pole se vrátí do jeho výchozí chování (nezbytná šířka) po vytisknutí jedno pole. Však další možnosti formátu datového proudu zůstávají v platnosti až do změnit.

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb7039481469bbd6c307ab1ec88b508ff089733
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 2d86749cc8481f2472ed2ebe29dd535e05dcb2e2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169577"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48236020"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Návod: Vytvoření jednoduché aplikace pásu karet pomocí knihovny MFC
 
@@ -28,7 +28,7 @@ Tento návod ukazuje, jak používat **Průvodce aplikací knihovny MFC** vytvo�
 
 ## <a name="prerequisites"></a>Požadavky
 
-Tento názorný průvodce předpokládá, že jste nastavili Visual Studio použije **obecným vývojovým nastavením**. Používáte-li jiná nastavení, některé prvky uživatelského rozhraní (UI), na které se následující instrukce odkazují, nemusí být zobrazeny.
+Tento názorný průvodce předpokládá, že jste nastavili Visual Studio použije **obecným vývojovým nastavením**. Pokud používáte různá nastavení, některé prvky uživatelského rozhraní (UI), které jsou odkazovány v následujících pokynech nemusí být zobrazeny.
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>Vytvoření aplikace MFC obsahující pás karet
 
@@ -81,7 +81,7 @@ Tento názorný průvodce předpokládá, že jste nastavili Visual Studio použ
 
 1. Chcete-li přidat prvky panel, který jste vytvořili v předchozím postupu, přetáhněte ovládací prvky z **Editor pásu karet** část **nástrojů** do panelu v zobrazení Návrh.
 
-1. Nejprve přidejte **tisk** tlačítko. **Tisk** tlačítko bude mít podnabídku obsahující **rychlý tisk** příkaz, který dokument vytiskne na výchozí tiskárně. Oba tyto příkazy jsou již pro tuto aplikaci definovány. Jsou umístěny v nabídce aplikace.
+1. Nejprve přidejte **tisk** tlačítko. **Tisk** tlačítko bude mít podnabídku obsahující **rychlý tisk** příkaz, který dokument vytiskne na výchozí tiskárně. Oba tyto příkazy jsou již pro tuto aplikaci definovány. Nacházejí se v nabídce aplikace.
 
     Chcete-li vytvořit **tisk** tlačítko, přetáhněte na panel nástroj tlačítko.
 
