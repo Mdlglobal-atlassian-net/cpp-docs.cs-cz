@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ffea6dede3bc6bcc7c28b2326299362e78ed2b9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8c9aebeb2216bf8248b3182159a0f0aef1482c3b
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599298"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250442"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL – obor názvů
 
@@ -89,7 +89,7 @@ namespace Microsoft::WRL;
 |Název|Popis|
 |----------|-----------------|
 |[AsWeak – funkce](../windows/asweak-function.md)|Získá nestálý odkaz pro zadanou instanci.|
-|[Funkce zpětného volání](../windows/callback-function-windows-runtime-cpp-template-library.md)|Vytvoří objekt, jehož členská funkce je metoda zpětného volání.|
+|[Funkce zpětného volání (WRL)](../windows/callback-function-wrl.md)|Vytvoří objekt, jehož členská funkce je metoda zpětného volání.|
 |[CreateActivationFactory – funkce](../windows/createactivationfactory-function.md)|Vytvoří objekt factory, který vytvoří instance dané třídy, které mohou být aktivovány modulem Windows Runtime.|
 |[CreateClassFactory – funkce](../windows/createclassfactory-function.md)|Vytvoří objekt factory, který vytvoří instance dané třídy.|
 |[Make – funkce](../windows/make-function.md)|Inicializuje zadanou třídu Windows Runtime.|

@@ -1,7 +1,7 @@
 ---
 title: Projekty CMake v jazyce Visual C++ | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 09/17/2018
+ms.date: 09/26/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc50656a2d429ad80f31f26169f620d1370eacd6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 76877a0559fd954661fb3e38131796e89c41679f
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390107"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235097"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Projekty CMake v jazyce Visual C++
 
@@ -403,3 +403,11 @@ Pokud potřebujete další informace o stavu mezipaměti CMake k diagnostice pro
 **Visual Studio 2017 verze 15.7 nebo novější**: Pokud chcete vytvořit jeden soubor projektu CMake, klikněte pravým tlačítkem na soubor v **Průzkumníku řešení** a zvolte **kompilaci**. Můžete také vytvořit soubor, který je právě otevřen v editoru pomocí hlavní nabídky CMake:
 
 ![Kompilace jednoho souboru CMake](media/cmake-single-file-compile.png)
+
+## <a name="run-cmake-from-the-command-line"></a>Spuštění CMake z příkazového řádku
+Pokud jste nainstalovali CMake z instalačního programu sady Visual Studio, můžete ji spustit z příkazového řádku pomocí následujících kroků:
+
+1. Spusťte příslušné vsdevcmd.bat (x86/x64). Zobrazit [sestavení na příkazovém řádku](../build/building-on-the-command-line.md) Další informace.
+1. Přepnout do výstupní složky.
+1. Spuštění CMake, sestavení a konfiguraci vaší aplikace.
+

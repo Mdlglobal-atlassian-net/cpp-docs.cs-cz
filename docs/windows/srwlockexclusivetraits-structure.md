@@ -1,28 +1,32 @@
 ---
 title: Srwlockexclusivetraits – struktura | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/27/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::GetInvalidValue
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
-- SRWLockExclusiveTraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::GetInvalidValue method
+- Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::Unlock method
 ms.assetid: 38a996ef-c2d7-4886-b413-a426ecee8f05
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 542ad92aa636c934e3250817931dd7f31d1fe85b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7737c802634b618b9ea363c231a44d9381ad30ae
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601600"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235162"
 ---
 # <a name="srwlockexclusivetraits-structure"></a>SRWLockExclusiveTraits – struktura
 
@@ -38,16 +42,16 @@ struct SRWLockExclusiveTraits;
 
 ### <a name="public-typedefs"></a>Veřejné definice TypeDef
 
-|Název|Popis|
-|----------|-----------------|
-|`Type`|Synonymum pro ukazatel [SRWLOCK](../windows/srwlock-class.md) třídy.|
+Název   | Popis
+------ | --------------------------------------------------------------------------
+`Type` | Synonymum pro ukazatel [SRWLOCK](../windows/srwlock-class.md) třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
-|----------|-----------------|
-|[SRWLockExclusiveTraits::GetInvalidValue – metoda](../windows/srwlockexclusivetraits-getinvalidvalue-method.md)|Načte **srwlockexclusivetraits –** objekt, který je pořád platný.|
-|[SRWLockExclusiveTraits::Unlock – metoda](../windows/srwlockexclusivetraits-unlock-method.md)|Uvolní výhradní kontrolu zadaného `SRWLock` objektu.|
+Název                                                        | Popis
+----------------------------------------------------------- | --------------------------------------------------------------------
+[Srwlockexclusivetraits::getinvalidvalue –](#getinvalidvalue) | Načte `SRWLockExclusiveTraits` objekt, který je pořád platný.
+[Srwlockexclusivetraits::Unlock –](#unlock)                   | Uvolní výhradní kontrolu zadaného `SRWLock` objektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -59,6 +63,29 @@ struct SRWLockExclusiveTraits;
 
 **Namespace:** Microsoft::WRL::Wrappers::HandleTraits
 
-## <a name="see-also"></a>Viz také
+## <a name="getinvalidvalue"></a>Srwlockexclusivetraits::getinvalidvalue –
 
-[Microsoft::WRL::Wrappers::HandleTraits – obor názvů](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+Načte `SRWLockExclusiveTraits` objekt, který je pořád platný.
+
+```cpp
+inline static Type GetInvalidValue();
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Prázdná `SRWLockExclusiveTraits` objektu.
+
+## <a name="unlock"></a>Srwlockexclusivetraits::Unlock –
+
+Uvolní výhradní kontrolu zadaného `SRWLock` objektu.
+
+```cpp
+inline static void Unlock(
+   _In_ Type srwlock
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*srwlock*<br/>
+Popisovač `SRWLock` objektu.
