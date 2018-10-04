@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abd65d209bf24fb9285937cc998bd82d5ef3cb4f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 56b5e41872ebe4b3cdc4800d7818cceb05f03dd1
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418161"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235149"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>Návod: Práce s projekty a řešeními (C++)
 
 Toto téma shrnuje postup, jak vytvořit projekt jazyka C++ v sadě Visual Studio, přidat kód a poté projekt sestavit a spustit. V tomto návodu používáme jako příklad projektu program, který sleduje, kolik hráčů hraje různé karetní hry.
 
-V sadě Visual Studio je práce organizována do projektů a řešení. Řešení může obsahovat více než jeden projekt, například knihovnu DLL a spustitelný soubor, který na tuto knihovnu DLL odkazuje. Další informace najdete v tématu [řešení a projekty](/visualstudio/ide/solutions-and-projects-in-visual-studio).
+V sadě Visual Studio je práce organizována do projektů a řešení. Řešení může obsahovat více než jeden projekt, například knihovny DLL i spustitelný soubor, který odkazuje na tuto knihovnu DLL. Další informace najdete v tématu [řešení a projekty](/visualstudio/ide/solutions-and-projects-in-visual-studio).
 
 ## <a name="before-you-start"></a>Než začnete
 
@@ -48,6 +48,9 @@ Chcete-li vytvořit projekt, zvolte nejprve šablonu typu projektu. Pro každý 
 
 1. V seznamu nainstalovaných šablon v prostředním podokně vyberte **Konzolová aplikace Windows**.
 
+   > [!NOTE]
+   > V předchozích verzích sady Visual Studio se nazývá nainstalovanou šablonu **Konzolová aplikace Win32**.
+
 1. Zadejte název projektu v **název** pole. V tomto příkladu zadejte *hru*.
 
    Můžete přijmout výchozí umístění v **umístění** rozevíracího seznamu zadat jiné umístění nebo zvolte **Procházet** tlačítko vyhledat adresář, kam chcete projekt uložit.
@@ -62,7 +65,7 @@ Chcete-li vytvořit projekt, zvolte nejprve šablonu typu projektu. Pro každý 
 
 Můžete použít **Průzkumníka řešení** k uspořádání a správě projektů, souborů a dalších prostředků ve vašem řešení.
 
-Tato část návodu ukazuje, jak do projektu přidat třídu. Při přidání třídy přidá aplikace Visual Studio odpovídající soubory .h a .cpp. Zobrazí se výsledky v **Průzkumníka řešení**.
+Tato část návodu ukazuje, jak přidat třídu do projektu. Při přidání třídy přidá aplikace Visual Studio odpovídající soubory .h a .cpp. Zobrazí se výsledky v **Průzkumníka řešení**.
 
 ### <a name="to-add-a-class-to-a-project"></a>Přidání třídy do projektu
 
@@ -84,11 +87,11 @@ Tato část návodu ukazuje, jak do projektu přidat třídu. Při přidání t�
       static int totalParticipants;
       ```
 
-   - Upravte výchozí konstruktor, který aplikace Visual Studio vygenerovala. Po `public:` specifikátor přístupu, najděte řádek, který vypadá takto:
+   - Upravte výchozí konstruktor, který aplikace Visual Studio vygenerovala. Po `public:` specifikátor přístupu, najděte řádek, který bude vypadat takto:
 
       `Cardgame();`
 
-      Upravit tento konstruktor vzít jeden parametr typu `int`s názvem *hráči*.
+      Upravte konstruktor pro přijímat jeden parametr typu `int`s názvem *hráči*.
 
       <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]-->`Cardgame(int players);`
 
@@ -96,7 +99,7 @@ Tato část návodu ukazuje, jak do projektu přidat třídu. Při přidání t�
 
       <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]-->`static int GetParticipants() { return totalParticipants; }`
 
-   Po změnách by soubor Cardgame.h měl vypadat takto:
+   Soubor Cardgame.h měl vypadat kód uvedený níže, po změnách by:
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#103](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_4.h)]-->
    ```cpp
@@ -112,11 +115,11 @@ Tato část návodu ukazuje, jak do projektu přidat třídu. Při přidání t�
    };
    ```
 
-   Na řádku `#pragma once` instruuje kompilátor, aby zahrnutím souboru hlaviček jen jednou. Další informace najdete v tématu [po](../preprocessor/once.md). Informace o dalších klíčových slovech C++ z tohoto hlavičkového souboru naleznete v tématu [třídy](../cpp/class-cpp.md), [int](../cpp/fundamental-types-cpp.md), [statické](../cpp/storage-classes-cpp.md), a [veřejné](../cpp/public-cpp.md).
+   Na řádku `#pragma once` instruuje kompilátor, aby zahrnutím souboru hlaviček jen jednou. Další informace najdete v tématu [po](../preprocessor/once.md). Informace o dalších klíčových slovech C++ z výše uvedené hlavičky souboru najdete v tématu [třídy](../cpp/class-cpp.md), [int](../cpp/fundamental-types-cpp.md), [statické](../cpp/storage-classes-cpp.md), a [veřejné](../cpp/public-cpp.md).
 
 1. Zvolte **Cardgame.cpp** kartě v horní části editovacím podokně otevřete pro úpravy.
 
-1. Odstraňte všechny položky v souboru a nahraďte je tímto kódem:
+1. Odstraňte všechny položky v souboru a nahraďte kód:
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#111](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_5.cpp)]-->
    ```cpp
@@ -150,7 +153,7 @@ Přidání kódu do vaší aplikace, který kontroluje nových funkcí.
 
 ### <a name="to-add-test-code-to-the-project"></a>Chcete-li přidat testovací kód do projektu
 
-1. V **Game.cpp** okno editoru nahraďte existující kód s tímto:
+1. V **Game.cpp** okno editoru nahraďte existující kód:
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#120](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_6.cpp)]-->
    ```cpp
@@ -177,7 +180,7 @@ Přidání kódu do vaší aplikace, který kontroluje nových funkcí.
        return 0;
    }
    ```
-Tento kód přidá testovací funkci, `PlayGames`, zdrojový kód a volání v `main`.
+Kód přidá testovací funkci, `PlayGames`, zdrojový kód a volání v `main`.
 
 ## <a name="build-and-run-your-app-project"></a>Sestavení a spuštění projektu aplikace
 
@@ -187,7 +190,7 @@ V dalším kroku se projekt sestavil a spuštění aplikace.
 
 1. V panelu nabídky zvolte **sestavení** > **sestavit řešení**.
 
-   Výstup sestavení se zobrazí v **výstup** okna. Pokud bylo sestavení úspěšné, výstup by měl vypadat následovně:
+   Výstup sestavení se zobrazí v **výstup** okna. Pokud bylo sestavení úspěšné, výstup by měl vypadat:
 
    ```Output
    1>------ Build started: Project: Game, Configuration: Debug Win32 ------
@@ -203,7 +206,7 @@ V dalším kroku se projekt sestavil a spuštění aplikace.
 
    Pokud sestavení nebylo úspěšné, porovnejte svůj kód do kódu, který se zobrazí v předchozích krocích.
 
-1. Chcete-li spustit projekt, na panelu nabídek, zvolte **ladění** > **spustit bez ladění**. By měl zobrazit okno konzoly a výstup by měl vypadat takto:
+1. Chcete-li spustit projekt, na panelu nabídek, zvolte **ladění** > **spustit bez ladění**. By měl zobrazit okno konzoly a výstup by měl vypadat:
 
    ```Output
    4 players have started a new game.  There are now 4 players in total.
