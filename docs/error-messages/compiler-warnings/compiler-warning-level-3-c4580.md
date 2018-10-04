@@ -16,18 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a9d25a77b6936a3b5b741a1da927c6beb24cbb1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 90cd0b401624ea6815b31b55a7da9c8796746ce8
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46072222"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789199"
 ---
 # <a name="compiler-warning-level-3-c4580"></a>Kompilátor upozornění (úroveň 3) C4580
 
 [attribute] je zastaralá; Místo toho zadejte System::Attribute nebo Platform::metadata – jako základní třída
 
-[[atribut](../../windows/attribute.md)] už není preferovanou syntaxí pro vytvoření uživatelsky definované atributy. Další informace najdete v tématu [uživatelem definované atributy](../../windows/user-defined-attributes-cpp-component-extensions.md). Kód CLR jsou odvozeny atributů z `System::Attribute`. Pro prostředí Windows Runtime kód odvodit atributů z `Platform::Metadata`.
+[[atribut](../../windows/attributes/attribute.md)] už není preferovanou syntaxí pro vytvoření uživatelsky definované atributy. Další informace najdete v tématu [uživatelem definované atributy](../../windows/user-defined-attributes-cpp-component-extensions.md). Kód CLR jsou odvozeny atributů z `System::Attribute`. Pro prostředí Windows Runtime kód odvodit atributů z `Platform::Metadata`.
 
 ## <a name="example"></a>Příklad
 

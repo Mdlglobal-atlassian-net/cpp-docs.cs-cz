@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef2aaf3f37e9699547c3a85c55a2f72d4baab7a6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 86387103d4d8257a109928a665579621468a3cf3
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46047691"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788689"
 ---
 # <a name="compiler-warning-level-1-c4096"></a>Kompilátor upozornění (úroveň 1) C4096
 
@@ -29,7 +29,7 @@ ms.locfileid: "46047691"
 
 Definice rozhraní, který vám může mít určený jako rozhraní modelu COM nebyl definován jako rozhraní modelu COM a proto nebude se emitovat do souboru IDL.
 
-Zobrazit [atributy rozhraní](../../windows/interface-attributes.md) pro seznam atributů, které je rozhraní modelu COM rozhraní.
+Zobrazit [atributy rozhraní](../../windows/attributes/interface-attributes.md) pro seznam atributů, které je rozhraní modelu COM rozhraní.
 
 Následující ukázka generuje C4096:
 

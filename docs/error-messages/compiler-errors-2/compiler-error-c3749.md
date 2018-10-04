@@ -16,18 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4151d712c12cb34785c3f4ab77c76cdd78d4830
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7ac866d742734f5b6126315a0b79020c9ec7fb74
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024083"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788393"
 ---
 # <a name="compiler-error-c3749"></a>Chyba kompilátoru C3749
 
 'attribute': vlastního atributu nelze použít uvnitř funkce.
 
-Vlastní atribut nelze použít uvnitř funkce. Další informace o vlastních atributů, naleznete v tématu [atribut](../../windows/attribute.md).
+Vlastní atribut nelze použít uvnitř funkce. Další informace o vlastních atributů, naleznete v tématu [atribut](../../windows/attributes/attribute.md).
 
 ## <a name="example"></a>Příklad
 

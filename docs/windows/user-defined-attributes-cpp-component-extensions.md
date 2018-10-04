@@ -1,7 +1,7 @@
 ---
 title: Uživatelsky definované atributy (rozšíření komponent C++) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/02/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 605759e241498e83174f4d6b16435c3119c56671
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3c2f5568b067c119bfa65744290c39d7ca577072
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600378"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789225"
 ---
 # <a name="user-defined-attributes--c-component-extensions"></a>Uživatelsky definované atributy (rozšíření komponent C++)
 
@@ -47,7 +47,7 @@ Uživatelských atributů, které umožňují rozšířit metadat spravovaného 
 
 ### <a name="remarks"></a>Poznámky
 
-Informace a syntaxi popsanou v tomto tématu slouží k nahrazení informace uváděné v [atribut](../windows/attribute.md).
+Informace a syntaxi popsanou v tomto tématu slouží k nahrazení informace uváděné v [atribut](attributes/attribute.md).
 
 Můžete definovat vlastní atribut definování typu a provedením <xref:System.Attribute> základní třídu pro typ a volitelně použití <xref:System.AttributeUsageAttribute> atribut.
 
@@ -55,9 +55,9 @@ Například Vyrovnávání zatížení v Microsoft serveru (MTS Transaction) 1.0
 
 Další informace najdete v tématu,
 
-- [Cíle atributů](../windows/attribute-targets-cpp-component-extensions.md)
+- [Cíle atributů](attribute-targets-cpp-component-extensions.md)
 
-- [Typy parametrů atributů](../windows/attribute-parameter-types-cpp-component-extensions.md)
+- [Typy parametrů atributů](attribute-parameter-types-cpp-component-extensions.md)
 
 Informace o podepisování sestavení v jazyce Visual C++, naleznete v tématu [sestavení se silným názvem (podepisování sestavení) (C + +/ CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
@@ -177,7 +177,7 @@ Service Access = Read
 
 Argumenty atributu musí být konstanty z doby kompilace; ve většině případů měly by být konstantní literály.
 
-Zobrazit [typeid](../windows/typeid-cpp-component-extensions.md) informace o tom, jak vrátit hodnotu System::Type z bloku vlastního atributu.
+Zobrazit [typeid](typeid-cpp-component-extensions.md) informace o tom, jak vrátit hodnotu System::Type z bloku vlastního atributu.
 
 ```cpp
 // extending_metadata_e.cpp
@@ -216,4 +216,4 @@ ref struct B {};
 
 ## <a name="see-also"></a>Viz také
 
-[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+[Přípony komponent pro platformy běhového prostředí](component-extensions-for-runtime-platforms.md)
