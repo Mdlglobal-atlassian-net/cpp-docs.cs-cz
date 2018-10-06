@@ -1,7 +1,7 @@
 ---
-title: 'Návod: Kompilace C + +/ CLI Program na příkazovém řádku | Microsoft Docs'
+title: 'Návod: Kompilace a C + +/ CLI Program příkazového řádku | Dokumentace Microsoftu'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/24/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -12,43 +12,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46e4b8d6341ad659596f7e83ab3cdcb89b18df2d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: bdc09d5c1de2e74f7e24b72439910068fe9f6c1a
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705303"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820621"
 ---
-# <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Návod: Kompilace C + +/ CLI Program na příkazovém řádku
+# <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Návod: Kompilace a C + +/ CLI Program na příkazovém řádku
 
-Můžete vytvořit programy Visual C++, cíle Common Language Runtime (CLR), které používají rozhraní .NET Framework a sestavení je na příkazovém řádku. Podporuje Visual C++ C + +/ CLI programovací jazyk, který má operátory a další typy, jehož cílem je programovací model rozhraní .NET. Obecné informace o jazyce C + +/ CLI jazyka, najdete v části [.NET programování v jazyce C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
+Můžete vytvořit programů aplikace Visual C++, které cílí Common Language Runtime (CLR) a pomocí rozhraní .NET Framework a sestavení na příkazovém řádku. Jazyk Visual C++ podporuje C + +/ CLI programovací jazyk, který obsahuje operátory a další typy cílit na .NET programovací model. Obecné informace o jazyce C + +/ jazyce CLI, najdete v článku [.NET programování v jazyce C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
 
-V tomto názorném postupu získáte pomocí textového editoru k vytvoření základní C + +/ CLI programu a zkompilujte jej na příkazovém řádku. (Můžete použít vlastní C + +/ CLI program místo zadání ten, který se zobrazí, nebo můžete použít C + +/ CLI ukázka kódu z jiný článek nápovědy. Tato metoda je užitečná pro vytváření a testování malé modulů, které obsahují žádné elementy uživatelského rozhraní.)
+V tomto názorném postupu pomocí textového editoru, vytvořte základní C + +/ CLI programu a jeho následnou kompilaci v příkazovém řádku. (Můžete použít vlastní C + +/ CLI program místo zadání ten, který se zobrazí, nebo můžete použít C + +/ CLI vzorového kódu z jiného článku nápovědy. Tato technika je užitečná pro vytváření a testování malé moduly, které mají bez prvků uživatelského rozhraní.)
 
 > [!NOTE]
-> Můžete také použít Visual Studio IDE zkompilovat C + +/ CLI programy. Další informace najdete v tématu [návod: kompilace programu C++ pro CLR v sadě Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md).
+> Můžete také integrovaného vývojového prostředí sady Visual Studio ke kompilaci C + +/ CLI programy. Další informace najdete v tématu [návod: kompilace programu v jazyce C++ pro CLR v sadě Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md).
 
 ## <a name="prerequisites"></a>Požadavky
 
-Je potřeba pochopit základy jazyka C++.
+Rozumíte základům jazyka C++.
 
-## <a name="compiling-a-ccli-program"></a>Kompilování C + +/ CLI programu
+## <a name="compiling-a-ccli-program"></a>Kompilace jazyka C + +/ CLI programu
 
-Následující kroky ukazují, jak zkompilovat C + +/ CLI konzolovou aplikaci, která používá třídy rozhraní .NET Framework.
+Následující kroky ukazují, jak kompilovat a C + +/ CLI konzolovou aplikaci využívající tříd rozhraní .NET Framework.
 
-Chcete-li povolit kompilace pro C + +/ CLI, je nutné použít [/CLR](../build/reference/clr-common-language-runtime-compilation.md) – možnost kompilátoru. Visual C++ compiler generuje soubor .exe, který obsahuje kód MSIL – nebo ve smíšeném MSIL a nativní kód – a odkazy na požadované knihovny rozhraní .NET Framework.
+Povolit kompilace pro C + +/ CLI, je nutné použít [/CLR](../build/reference/clr-common-language-runtime-compilation.md) – možnost kompilátoru. Kompilátor Visual C++ generuje soubor .exe, který obsahuje kód jazyka MSIL – nebo smíšený jazyk MSIL i nativní kód – a odkazy na požadované knihovny rozhraní .NET Framework.
 
-### <a name="to-compile-a-ccli-application-on-the-command-line"></a>Kompilace C + +/ CLI aplikace na příkazovém řádku
+### <a name="to-compile-a-ccli-application-on-the-command-line"></a>Chcete-li zkompilovat a C + +/ CLI aplikace v příkazovém řádku
 
-1. Otevřete **příkazový řádek vývojáře** okno. Konkrétní pokyny najdete v tématu [otevřete okno příkazového řádku vývojáře](../build/building-on-the-command-line.md#developer_command_prompt).
+1. Otevřít **Developer Command Prompt** okna. Konkrétní pokyny najdete v tématu [otevřete okno příkazového řádku pro vývojáře](../build/building-on-the-command-line.md#developer_command_prompt).
 
-   Přihlašovací údaje správce může být nutné úspěšně zkompilovat kód, v závislosti na operačním systému a konfigurace počítače. Spusťte okno příkazového řádku jako správce, kliknete pravým tlačítkem na otevření místní nabídky pro příkazový řádek a potom vyberte **Další**, **spustit jako správce**.
+   Přihlašovací údaje správce, může být nutné úspěšně kompilaci kódu, v závislosti na operačním systému a konfigurace počítače. Spusťte okno příkazového řádku jako správce, kliknete pravým tlačítkem na otevřete místní nabídku pro příkazový řádek a klikněte na tlačítko **Další** > **spustit jako správce**.
 
-1. Na příkazovém řádku zadejte **Poznámkový blok basicclr.cpp**.
+1. Na příkazovém řádku zadejte `notepad basicclr.cpp`.
 
-   Zvolte **Ano** po zobrazení výzvy k vytvoření souboru.
+   Zvolte **Ano** Jakmile budete vyzváni k vytvoření souboru.
 
-1. V poznámkovém bloku zadejte tyto řádky:
+1. V programu Poznámkový blok zadejte tyto řádky:
 
    ```cpp
    int main()
@@ -57,15 +57,15 @@ Chcete-li povolit kompilace pro C + +/ CLI, je nutné použít [/CLR](../build/r
    }
    ```
 
-1. Na řádku nabídek zvolte **soubor**, **Uložit**.
+1. V panelu nabídky zvolte **souboru** > **Uložit**.
 
-   Jste vytvořili Visual C++ zdrojový soubor, který používá třídu rozhraní .NET Framework (<xref:System.Console>) v <xref:System> oboru názvů.
+   Vytvoření zdrojového souboru jazyka Visual C++, který používá třídu rozhraní .NET Framework (<xref:System.Console>) v <xref:System> oboru názvů.
 
-1. Na příkazovém řádku zadejte **cl/CLR basicclr.cpp**. Cl.exe – kompilátor zkompiluje zdrojový kód do souboru .obj, který obsahuje MSIL a poté spustí linkeru pro generování spustitelný program s názvem basicclr.exe.
+1. Na příkazovém řádku zadejte `cl /clr basicclr.cpp`. Cl.exe – kompilátor zkompiluje zdrojový kód do souboru .obj, který obsahuje jazyk MSIL a pak spustí linkeru, aby generoval spustitelný program s názvem basicclr.exe.
 
-1. Chcete-li basicclr.exe program, spusťte na příkazovém řádku, zadejte **basicclr**.
+1. Chcete-li spustit basicclr.exe program příkazového řádku, zadejte `basicclr`.
 
-   Program zobrazí tento text a bude ukončen:
+   Program zobrazí tento text a ukončení:
 
    ```Output
    This is a C++/CLI program.
@@ -73,6 +73,6 @@ Chcete-li povolit kompilace pro C + +/ CLI, je nutné použít [/CLR](../build/r
 
 ## <a name="see-also"></a>Viz také:
 
-- [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)
-- [Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)
-- [Možnosti kompilátoru](../build/reference/compiler-options.md)
+[Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
+[Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)<br/>
+[Možnosti kompilátoru](../build/reference/compiler-options.md)

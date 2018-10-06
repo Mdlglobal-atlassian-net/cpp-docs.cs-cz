@@ -14,12 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 043ad3a0767cc6769be1d20fe6e6d31cc5c119fb
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: ed44479f6e6d1569a9b27a059e837cbbb924b803
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42464702"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821420"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Správce balíčků jazyka C++ pro Windows, Linux a MacOS
 
@@ -138,7 +138,7 @@ Spustit **vcpkg integrovat instalace** ke konfiguraci Visual Studio Code v syst�
 
 ## <a name="target-linux-from-windows-via-wsl"></a>Cíl Linux z Windows prostřednictvím WSL
 
-Linux binární soubory z počítače s Windows můžete vytvářet pomocí subsystém Windows pro Linux (WSL). Postupujte podle pokynů a [nastavení WSL ve Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10)a nakonfigurujte ho [rozšíření sady Visual Studio pro Linux](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/). Můžete vložit všechny sestavené knihovny pro Windows i Linuxem do stejné složky a k němu přístup z Windows a WSL.
+Linux binární soubory z počítače s Windows můžete vytvářet pomocí subsystém Windows pro Linux (WSL). Postupujte podle pokynů a [nastavení WSL ve Windows 10](/windows/wsl/install-win10)a nakonfigurujte ho [rozšíření sady Visual Studio pro Linux](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/). Můžete vložit všechny sestavené knihovny pro Windows i Linuxem do stejné složky a k němu přístup z Windows a WSL.
 
 
 ## <a name="export_binaries_per_project"></a> Export kompilované binární soubory a hlavičky
@@ -243,4 +243,3 @@ Obsah instance vcpkg jsou:
 |---------|---------|
 |**--trojici \<t >**|Zadejte trojici cílové architektury. (výchozí: `%VCPKG_DEFAULT_TRIPLET%`, viz také **vcpkg nápovědy trojici**)|
 |**--vcpkg kořenové \<cesta >**|Zadat kořenový adresář vcpkg (výchozí: `%VCPKG_ROOT%`)|
-

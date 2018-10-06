@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 426e23aa935cd0b0add664c1eeb3885181cb4e6b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 320bbc9fde5888f75149d6f3f9fad60deb869924
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383750"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821417"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Makra a funkce pro správu knihoven DLL
 
@@ -34,7 +34,6 @@ ms.locfileid: "46383750"
 |[AfxInitExtensionModule]()#afxinitextensionmodule|Inicializuje knihovnu DLL.|
 |[Afxsetambientactctx –](#afxsetambientactctx)|nastavte příznak stavu na modul, který má vliv na chování WinSxS knihovny MFC.|
 |[AfxTermExtensionModule]()#afxtermextensionmodule)|Umožňuje MFC vyčištění MFC – rozšiřující knihovny DLL při každém odpojení procesu z knihovny DLL.|
-
 
 ## <a name="afx_ext_class"></a>  AFX_EXT_CLASS
 
@@ -68,6 +67,7 @@ Volání toto makro k ochraně exportované funkce v knihovně DLL.
 ```
 AFX_MANAGE_STATE(AFX_MODULE_STATE* pModuleState )
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *pModuleState*<br/>
@@ -77,15 +77,20 @@ Ukazatel `AFX_MODULE_STATE` struktury.
 
 Při vyvolání toto makra *pModuleState* je efektivní modul stavu pro zbývající okamžité obsahující obor. Při opuštění oboru, budou se automaticky obnoví předchozí stav efektivní modulu.
 `AFX_MODULE_STATE` Struktura obsahuje globální data modulu, to znamená, část státu modul, který je vloženo nebo odebrán.
+
 Ve výchozím nastavení knihovna MFC používá k načtení šablony prostředků popisovač prostředku hlavní aplikace. Pokud máte exportované funkce v knihovně DLL, jako je ten, který spustí dialogové okno v knihovně DLL, tato šablona je ve skutečnosti uložené v modul knihovny DLL. Je potřeba přepnout stav modulu pro správné popisovač, který se má použít. To lze provést přidáním následujícího kódu na začátek funkce:
+
 ```cpp
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
-
 ```
+
 To Zamění aktuální stav modulu se stavem vrácená [afxgetstaticmodulestate –](#afxgetstaticmodulestate) až do konce v aktuálním oboru.
+
 Další informace o stavy modulů a knihovna MFC naleznete v části "Správa the stav dat modulů knihovny MFC" v [vytváření nových dokumentů, Windows a zobrazení](../creating-new-documents-windows-and-views.md) a [technická Poznámka: 58](../tn058-mfc-module-state-implementation.md).
+
 > [!NOTE]
 >  Knihovna MFC vytvoří aktivační kontext pro sestavení, používá [afxwininit –](#afxwininit) k vytvoření kontextu a `AFX_MANAGE_STATE` aktivovat a deaktivovat. Všimněte si také, že `AFX_MANAGE_STATE` je povolený pro statické knihovny MFC, knihovny DLL MFC, aby bylo možné povolit MFC kód pro spuštění ve správné aktivační kontext zvolila DLL uživatele. Další informace najdete v tématu [podpora kontextů aktivace ve stavu modulu MFC](../support-for-activation-contexts-in-the-mfc-module-state.md).
+
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxstat_.h
@@ -197,7 +202,6 @@ Ve výchozím nastavení knihovna MFC používá k načtení šablony prostředk
 
 ```cpp
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
-
 ```
 
 To Zamění aktuální stav modulu se stavem vrácená `AfxGetStaticModuleState` až do konce v aktuálním oboru.
@@ -207,7 +211,6 @@ Další informace o stavy modulů a knihovna MFC naleznete v části "Správa th
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxstat_.h
-
 
 ## <a name="afxinitextensionmodule"></a> AfxInitExtensionModule
 
@@ -249,13 +252,16 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
         // MFC extension DLL one-time initialization
         if (!AfxInitExtensionModule(NVC_MFC_DLLDLL, hInstance))
             return 0;
-
+...
 ```
 
 `AfxInitExtensionModule` Vytvoří kopii HMODULE knihovny DLL a zachytává knihovnu DLL modulu runtime – třídy (`CRuntimeClass` struktury) i jeho objekty pro vytváření objektů (`COleObjectFactory` objektů) pro použití novější při `CDynLinkLibrary` je vytvořen objekt.
 MFC – rozšiřující knihovny DLL je potřeba udělat dvě věci v jejich `DllMain` funkce:
+
 - Volání [AfxInitExtensionModule](#_mfc_afxinitextensionmodule) a ověřte návratovou hodnotu.
+
 - Vytvoření `CDynLinkLibrary` objektu, pokud se Export knihovny DLL [CRuntimeClass – struktura](cruntimeclass-structure.md) objekty nebo má svůj vlastní vlastní prostředky.
+
 Můžete volat `AfxTermExtensionModule` vyčistit MFC – rozšiřující knihovny DLL při každém odpojení procesu z MFC – rozšiřující knihovny DLL (který se stane při ukončení procesu, nebo pokud kvůli uvolnění knihovny DLL `AfxFreeLibrary` volání).
 
 ### <a name="requirements"></a>Požadavky
@@ -273,9 +279,8 @@ Pomocí této funkce můžete nastavit příznak stavu na modul, který má vliv
 
 ### <a name="syntax"></a>Syntaxe
 
-  ```
-   void AFXAPI AfxSetAmbientActCtx( BOOL bSet
-);
+```
+void AFXAPI AfxSetAmbientActCtx(BOOL bSet);
 ```
 ### <a name="parameters"></a>Parametry
 
@@ -295,6 +300,7 @@ BOOL CMFCListViewApp::InitInstance()
 {
    AfxSetAmbientActCtx(FALSE);
    // Remainder of function definition omitted.
+}
 ```
 
 ### <a name="requirements"></a>Požadavky
@@ -314,9 +320,10 @@ Voláním této funkce umožňující knihovny MFC k vyčištění MFC – rozš
 
 ### <a name="syntax"></a>Syntaxe
 
-  ```
+```
 void AFXAPI AfxTermExtensionModule(  AFX_EXTENSION_MODULE& state,  BOOL bAll  = FALSE );
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *Stav*<br/>
@@ -357,7 +364,6 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
     }
     return 1;   // ok
 }
-
 ```
 
 Pokud vaše aplikace načte nebo uvolní MFC – rozšiřující knihovny DLL dynamicky, je nutné volat `AfxTermExtensionModule`. Protože většina MFC – rozšiřující knihovny DLL nejsou načtené dynamicky (obvykle jsou propojeny prostřednictvím jejich knihovny importu), volání `AfxTermExtensionModule` není obvykle nutné.
@@ -372,8 +378,3 @@ MFC – rozšiřující knihovny DLL musí volat [AfxInitExtensionModule](#afxin
 
 [Makra a globální prvky](mfc-macros-and-globals.md)<br/>
 [AfxInitExtensionModule](#afxinitextensionmodule)
-
-
-
-
-

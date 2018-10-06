@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85439e191ac8676603c9d7fab8a41bb126e97b9e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4420bdac9e788f80142546d8b09781a8aa3ce06d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398661"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821384"
 ---
 # <a name="working-with-project-properties"></a>Práce s vlastnostmi projektu
 
@@ -250,7 +250,7 @@ V pravém podokně upravte **prostředí** nebo **sloučit prostředí** nastave
 
 ## <a name="modifying-properties-and-targets-without-changing-the-project-file"></a>Úprava vlastností a cílů beze změny souboru projektu
 
-Můžete přepsat vlastnosti projektu a cíle z příkazového řádku MSBuild beze změny souboru projektu. To je užitečné, pokud chcete použít některé vlastnosti dočasně nebo čas od času. Předpokládá základní znalost MSBuild. Další informace najdete v tématu [MSBUild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild).
+Můžete přepsat vlastnosti projektu a cíle z příkazového řádku MSBuild beze změny souboru projektu. To je užitečné, pokud chcete použít některé vlastnosti dočasně nebo čas od času. Předpokládá základní znalost MSBuild. Další informace najdete v tématu [MSBUild](https://docs.microsoft.com/visualstudio/msbuild/msbuild).
 
 > [!IMPORTANT]
 > Můžete použít Editor XML v sadě Visual Studio nebo libovolného textového editoru vytvořte soubor PROPS nebo .targets. Nepoužívejte **Správce vlastností** v tomto scénáři protože přidá vlastnosti do souboru projektu.

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28d1df72efcc1fa7408922876ad91bafcd2b005a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2ba89aadc8e1c617ed8e101a226560b80cb9e431
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422661"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821397"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Doprovodné materiály pro vývojáře v C++ pro kanály na straně spekulativního spouštění
 
@@ -73,7 +73,7 @@ Výše uvedené kroky uveďte příklad pomocí techniky označované jako VYPR�
 
 ## <a name="what-software-scenarios-can-be-impacted"></a>Může mít dopad na jakých situacích softwaru?
 
-Vývoj pomocí procesu, jako je zabezpečení softwaru [Security Development Lifecycle](https://www.microsoft.com/en-us/sdl/) (SDL) obvykle vyžaduje, aby vývojáři k identifikaci hranice vztahu důvěryhodnosti, které existují ve svých aplikacích. Hranice vztahů důvěryhodnosti existuje na místech, kde můžou aplikace pracovat s daty poskytuje kontext, méně důvěryhodnému, například jiný proces v systému nebo proces režimu uživatele bez oprávnění správce v případě ovladač zařízení režimu jádra. Nová třída zahrnující kanály na straně spekulativního spouštění ohrožení zabezpečení je relevantní pro řadu hranicemi vztahů důvěryhodnosti v existujících modelech zabezpečení softwaru, které izolovat kódu a dat na zařízení.
+Vývoj pomocí procesu, jako je zabezpečení softwaru [Security Development Lifecycle](https://www.microsoft.com/sdl/) (SDL) obvykle vyžaduje, aby vývojáři k identifikaci hranice vztahu důvěryhodnosti, které existují ve svých aplikacích. Hranice vztahů důvěryhodnosti existuje na místech, kde můžou aplikace pracovat s daty poskytuje kontext, méně důvěryhodnému, například jiný proces v systému nebo proces režimu uživatele bez oprávnění správce v případě ovladač zařízení režimu jádra. Nová třída zahrnující kanály na straně spekulativního spouštění ohrožení zabezpečení je relevantní pro řadu hranicemi vztahů důvěryhodnosti v existujících modelech zabezpečení softwaru, které izolovat kódu a dat na zařízení.
 
 Následující tabulka obsahuje souhrn modely zabezpečení softwaru, kde vývojáři muset mít obavy o těchto chyb, ke kterým došlo:
 
@@ -341,7 +341,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>Spekulační bariéru prostřednictvím kompilaci instrumentace
 
-Kompilátor Visual C++ v sadě Visual Studio 2017 (od verze 15.5.5) zahrnuje podporu pro `/Qspectre` přepínač, který automaticky vloží spekulační bariéru pro omezenou sadu potenciálně ohrožená vzorce kódování související s CVE-2017-5753. V dokumentaci [/qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) příznak poskytuje další informace o jeho dopady a využití. Je důležité si uvědomit, že tento příznak nepopisuje všechny potenciálně ohrožená vzorce kódování a jako takový vývojáři by neměl spoléhat jako komplexní omezení rizik pro tuto třídu ohrožení zabezpečení.
+Kompilátor Visual C++ v sadě Visual Studio 2017 (od verze 15.5.5) zahrnuje podporu pro `/Qspectre` přepínač, který automaticky vloží spekulační bariéru pro omezenou sadu potenciálně ohrožená vzorce kódování související s CVE-2017-5753. V dokumentaci [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) příznak poskytuje další informace o jeho dopady a využití. Je důležité si uvědomit, že tento příznak nepopisuje všechny potenciálně ohrožená vzorce kódování a jako takový vývojáři by neměl spoléhat jako komplexní omezení rizik pro tuto třídu ohrožení zabezpečení.
 
 ### <a name="masking-array-indices"></a>Indexy pole maskování
 

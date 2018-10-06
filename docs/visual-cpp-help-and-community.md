@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 172ead8aa67f042512a73b8c0d1ecdaa0723c5d1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1e74ed975cce0ac3a87716d9f7ad00da2d75d509
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676542"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820672"
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ – nápověda a komunita
 
@@ -34,7 +34,7 @@ Tady je způsob pro získání informací o tom, jak psát C++ kódu a použití
 |Název|Popis|
 |-----------|-----------------|
 |[Visual C++](visual-cpp-in-visual-studio.md)|Obsahuje odkaz a rámcové dokumentaci o jazyce Visual C++. Část knihovny MSDN.|
-|[Středisko pro vývojáře Windows](https://developer.microsoft.com/en-us/windows/)|Obsahuje informace o tom, jak pomocí jazyka C++ a další jazyky můžete vyvíjet aplikace pro Windows 8. Obsah pro jazyk C++ se jako součást Centra pro vývojáře systému Windows nachází pod uzlem Dokumenty > Referenční příručka jazyka.|
+|[Středisko pro vývojáře Windows](https://developer.microsoft.com/windows/)|Obsahuje informace o tom, jak pomocí jazyka C++ a další jazyky můžete vyvíjet aplikace pro Windows 8. Obsah pro jazyk C++ se jako součást Centra pro vývojáře systému Windows nachází pod uzlem Dokumenty > Referenční příručka jazyka.|
 
 ### <a name="online-and-offline-documentation"></a>Dokumentace ke službě online a Offline
 

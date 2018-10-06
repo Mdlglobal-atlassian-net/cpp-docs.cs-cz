@@ -1,7 +1,7 @@
 ---
 title: / Qspectre | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 1/23/2018
+ms.date: 09/24/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aaf77e1856f535dba81d4b61e2ce19d363f48038
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9ed4b84ab761653dde4da6adcd14ec8e77334688
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386950"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821644"
 ---
 # <a name="qspectre"></a>/ Qspectre
 
@@ -32,11 +32,13 @@ Určuje kompilátoru generování pokynů ke zmírnění chyby zabezpečení ur�
 
 ## <a name="remarks"></a>Poznámky
 
-**/Qspectre** možnost je k dispozici v sadě Visual Studio 2017 verze 15.7 nebo novější. To způsobí, že kompilátor vložit pokyny pro zmírnění některých [chyby zabezpečení Spectre](https://spectreattack.com/spectre.pdf). Tyto chyby zabezpečení, volá *útoky na straně kanálu spekulativního spouštění*, ovlivnit řada operačních systémů a moderní procesory, včetně procesory od Intelu, AMD a ARM.
+**/Qspectre** možnost je k dispozici v sadě Visual Studio 2017 verze 15.5.5 a novější a v aplikaci Visual Studio 2015 Update 3 prostřednictvím [KB 4338871](https://support.microsoft.com/en-us/help/4338871/visual-studio-2015-update-3-spectre-variant-1-toolset-qspectre). To způsobí, že kompilátor vložit pokyny pro zmírnění některých [chyby zabezpečení Spectre](https://spectreattack.com/spectre.pdf). Tyto chyby zabezpečení, volá *útoky na straně kanálu spekulativního spouštění*, ovlivnit řada operačních systémů a moderní procesory, včetně procesory od Intelu, AMD a ARM.
 
 **/Qspectre** možnost je vypnuto ve výchozím nastavení.
 
-V úvodním vydání **/qspectre** možnost funguje pouze v optimalizovaném kódu. Měli byste zajistit Kompilujte kód pomocí některé z možností optimalizace (například [/O2 nebo/O1](o1-o2-minimize-size-maximize-speed.md) , ale ne [/Od](od-disable-debug.md)) k Ujistěte se, že použijí omezení rizik. Podobně, kontrolovat veškerý kód, který používá [#pragma optimize ("stg", vypnuto)](../../preprocessor/optimize.md).
+V its vitial release **/qspectre** možnost pouze pracovali v optimalizovaném kódu. V sadě Visual Studio 2017 verze 15.7 nebo novější **/qspectre** možnost se podporuje na všech úrovních optimalizace. 
+
+Knihovny Microsoft Visual C++ jsou také k dispozici ve verzích s zmírnění hrozby Spectre. V instalačním programu sady Visual Studio si můžete stáhnout zmírnit hrozby Spectre knihovny pro Visual Studio 2017. Se nenachází v **jednotlivé komponenty** kartu **sestavení kompilátory, nástroje a moduly runtime**, a mít "Knihovny pro Spectre" v názvu. Jsou k dispozici pro celou dílčí moduly runtime Visual C++ knihovny DLL a statických runtime knihovny se zmírněními hrozeb povolená omezení rizik: spuštění kódu VC ++, vcruntime140, msvcp140, concrt140 a vcamp140. Knihovny DLL jsou podporovány pro nasazení místní aplikace. obsah Visual C++ 2017 modulu Runtime knihoven Redistributable nebyl změněn. Můžete také nainstalovat zmírnit hrozby Spectre knihovny MFC a ATL, součástí **jednotlivé komponenty** kartu **sad SDK, knihoven a architektur**.
 
 ### <a name="applicability"></a>Použitelnost.
 
@@ -44,9 +46,9 @@ Pokud váš kód pracuje s daty, která překročí hranice vztahu důvěryhodno
 
 ### <a name="availability"></a>Dostupnost
 
-**/Qspectre** možnost je dostupná v sadě Visual Studio 2017 verze 15.5.5 a všechny aktualizace kompilátory Microsoft Visual C++ (MSVC) provedené po 23. ledna 2018. Aktualizovat kompilátor a k instalaci knihoven zmírnit hrozby Spectre jako jednotlivé komponenty, použijte instalační program sady Visual Studio. **/Qspectre** možnost je také k dispozici v sadě Visual Studio 2015 Update 3 prostřednictvím opravy. Další informace najdete v tématu [KB 4338871](https://support.microsoft.com/help/4338871).
+**/Qspectre** možnost je k dispozici v sadě Visual Studio 2017 verze 15.5.5 a všechny aktualizace kompilátory Microsoft Visual C++ (MSVC) provedené po 23. ledna 2018. Aktualizovat kompilátor a k instalaci knihoven zmírnit hrozby Spectre jako jednotlivé komponenty, použijte instalační program sady Visual Studio. **/Qspectre** možnost je také k dispozici v sadě Visual Studio 2015 Update 3 prostřednictvím opravy. Další informace najdete v tématu [KB 4338871](https://support.microsoft.com/help/4338871).
 
-Všechny verze sady Visual Studio 2017 verze 15.5 a všechny verze Preview sady Visual Studio verze 15.6 již obsahuje nezdokumentovaný možnost **/d2guardspecload**, tedy ekvivalent počáteční chování   **/qspectre**. Můžete použít **/d2guardspecload** použít stejné způsoby zmírnění rizik pro váš kód v těchto verzích kompilátoru. Aktualizujte prosím vaše sestavení, **/qspectre** v kompilátorech, které podporují parametr; **/qspectre** možnost můžou podporovat i nové způsoby zmírnění rizik v novějších verzích kompilátoru.
+Všechny verze sady Visual Studio 2017 verze 15.5 a všechny verze Preview sady Visual Studio 2017 verze 15.6 zahrnují nezdokumentovaný možnost **/d2guardspecload**, tedy ekvivalent počáteční chování   **/qspectre**. Můžete použít **/d2guardspecload** použít stejné způsoby zmírnění rizik pro váš kód v těchto verzích kompilátoru. Aktualizujte prosím vaše sestavení, **/qspectre** v kompilátorech, které podporují parametr; **/qspectre** možnost můžou podporovat i nové způsoby zmírnění rizik v novějších verzích kompilátoru.
 
 ### <a name="effect"></a>Efekt
 
@@ -62,9 +64,9 @@ Dopad výkon **/qspectre** ukázala být nepatrné v několika velmi rozsáhlýc
 
 **/Qspectre** – možnost kompilátoru generuje kód, který se odkazuje implicitně verzí knihoven runtime, která byla vytvořená pro poskytování zmírnění hrozby Spectre. Tyto knihovny jsou volitelné součásti, které je třeba nainstalovat pomocí instalačního programu sady Visual Studio:
 
-- VC ++ 2017 verze *version_number* knihovny pro Spectre (x86 a x64)
-- Visual C++ ATL (x86/x64) se zmírněními hrozeb Spectre
-- Visual C++ MFC pro x86/x64 se zmírněními hrozeb Spectre
+- VC ++ 2017 verze *version_numbers* knihovny pro Spectre \[(x86 a x64) | (ARM) | (ARM64)]
+- Visual C++ ATL pro \[(x86/x64) | ARM | ARM64] se zmírněními hrozeb Spectre
+- Visual C++ MFC pro \[x86/x64 | ARM | ARM64] se zmírněními hrozeb Spectre
 
 Při vytváření kódu s použitím **/qspectre** a tyto knihovny nejsou nainstalované, zprávy systému sestavení **upozornění MSB8038: zmírnění hrozby Spectre je zapnutá, ale nebyly nalezeny zmírnit hrozby Spectre knihovny**. Pokud se nepovede kódu knihovny MFC nebo ATL k sestavení a propojovací program hlásí chybu, jako **závažná chyba LNK1104: Nelze otevřít soubor oldnames.lib**, tyto chybějící knihovny může být příčinou.
 

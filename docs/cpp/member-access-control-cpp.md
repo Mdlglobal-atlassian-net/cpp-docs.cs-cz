@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32a58d35a78fce6a0a6bb499df1363a80200de5a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dced1bd7db0f3eec9d9d070deb8cf990496116ae
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017557"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821657"
 ---
 # <a name="member-access-control-c"></a>řízení přístupu ke členu (C++)
 
@@ -47,7 +47,7 @@ protected:      // Declare protected function for derived classes only.
 
 Přístup k výchozím **privátní** ve třídě, a **veřejné** v struktura nebo sjednocení. Specifikátory přístupu ve třídě může být libovolný počet pokusů o použít v libovolném pořadí. Přidělení úložiště pro objekty typů třídy je závislé na implementaci, ale je zaručeno, že členům budou přiřazeny postupné vyšší adresy paměti mezi specifikátory přístupu.
 
-### <a name="member-access-control"></a>Ovládací prvek přístupu členů
+## <a name="member-access-control"></a>Ovládací prvek přístupu členů
 
 |Typ přístupu|Význam|
 |--------------------|-------------|

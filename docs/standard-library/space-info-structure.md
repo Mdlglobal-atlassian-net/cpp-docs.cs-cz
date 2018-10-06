@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e078b38dd90fcda7a6973ac1b0aee13c301823d4
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 9bfbcbe990effa20fc91494e5586d3c34d47a0d5
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691429"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821231"
 ---
 # <a name="spaceinfo-structure"></a>space_info – struktura
 
@@ -28,11 +28,12 @@ Obsahuje informace o svazku.
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-struct space_info   {
+struct space_info
+{
     uintmax_t capacity;
     uintmax_t free;
     uintmax_t available;
-    };
+};
 ```
 
 ## <a name="members"></a>Členové
@@ -41,9 +42,9 @@ struct space_info   {
 
 |Název|Popis|
 |----------|-----------------|
-|`unsigned long long available`|Představuje počet bajtů, které jsou k dispozici pro reprezentaci dat na svazku.|
 |`unsigned long long capacity`|Představuje celkový počet bajtů, které mohou představovat svazku.|
 |`unsigned long long free`|Představuje počet bajtů, které nejsou použity pro reprezentaci dat na svazku.|
+|`unsigned long long available`|Představuje počet bajtů, které jsou k dispozici pro reprezentaci dat na svazku.|
 
 ## <a name="requirements"></a>Požadavky
 

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1f7d94dafa34c5ab01dfbcf28e2c429642dbf68
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d6f0e5ce08e362cef0fd625036a92c1d13885ded
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397307"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821540"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>2003 – 2015 historie změn Visual C++
 
@@ -2966,7 +2966,7 @@ Kompilátor C++ v sadě Visual Studio 2013 zjistí neshody v makru _ITERATOR_DEB
 
 ### <a name="mfc-and-atl"></a>Rozhraní MFC a knihovna ATL
 
-- **Visual Studio 2013 pouze**: Knihovna MFC MBCS není zahrnutý v sadě Visual Studio, protože kódování Unicode je Oblíbené a používání znakové sady MBCS je výrazně omezeno. Tato změna také udržuje MFC lépe zarovnané s Windows SDK, protože mnoho ovládacích prvků a zpráv má pouze kódování Unicode. Nicméně, pokud je nutné použít knihovnu MFC znakové sady MBCS, můžete ji stáhnout ze služby Stažení softwaru MSDN na [vícebajtová knihovna MFC pro Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40770). Distribuovatelný balíček Visual C++ stále zahrnuje i tuto knihovnu.  (Poznámka: knihovny DLL znakové sady MBCS je součástí komponenty instalačního programu C++ v sadě Visual Studio 2015 a novější).
+- **Visual Studio 2013 pouze**: Knihovna MFC MBCS není zahrnutý v sadě Visual Studio, protože kódování Unicode je Oblíbené a používání znakové sady MBCS je výrazně omezeno. Tato změna také udržuje MFC lépe zarovnané s Windows SDK, protože mnoho ovládacích prvků a zpráv má pouze kódování Unicode. Nicméně, pokud je nutné použít knihovnu MFC znakové sady MBCS, můžete ji stáhnout ze služby Stažení softwaru MSDN na [vícebajtová knihovna MFC pro Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770). Distribuovatelný balíček Visual C++ stále zahrnuje i tuto knihovnu.  (Poznámka: knihovny DLL znakové sady MBCS je součástí komponenty instalačního programu C++ v sadě Visual Studio 2015 a novější).
 
 - Přístupnost pásu karet MFC se změní.  Místo architektury existuje je nyní hierarchická architektura. Můžete přesto používat staré chování voláním `CRibbonBar::EnableSingleLevelAccessibilityMode()`.
 

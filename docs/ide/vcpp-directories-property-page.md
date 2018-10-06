@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 238f26e8955d4be676c3bf37f7cc8b2d842b3de9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82aaa2dc43177963b9b38c398e74aaa0ffff11dd
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394435"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821215"
 ---
 # <a name="vc-directories-property-page-windows"></a>VC ++ Directories Property Page (Windows)
 
@@ -76,11 +76,13 @@ Poznámka: Naplnění seznamu při psaní. Není stiskněte **Enter**.
 
 Další informace o makra a proč byste měli používat namísto pevně zakódovaných cest, kdykoli je to možné, naleznete v tématu [práce s vlastnostmi projektu](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros).
 
-Seznam běžně používaných maker naleznete v tématu [běžné Macros for Build Commands and Properties](https://docs.microsoft.com/en-us/cpp/ide/common-macros-for-build-commands-and-properties).
+Seznam běžně používaných maker naleznete v tématu [běžné Macros for Build Commands and Properties](https://docs.microsoft.com/cpp/ide/common-macros-for-build-commands-and-properties).
 
 Můžete definovat vlastní makra dvěma způsoby:
--   Nastavení proměnných prostředí v příkazovém řádku pro vývojáře. Všechny proměnné prostředí jsou považovány za MSBuild vlastnosti a makra.
--   V souboru .props definujte uživatelská makra. Další informace najdete v tématu [makra stránky vlastností](working-with-project-properties.md#bkmkPropertiesVersusMacros).
+
+- Nastavení proměnných prostředí v příkazovém řádku pro vývojáře. Všechny proměnné prostředí jsou považovány za MSBuild vlastnosti a makra.
+
+- V souboru .props definujte uživatelská makra. Další informace najdete v tématu [makra stránky vlastností](working-with-project-properties.md#bkmkPropertiesVersusMacros).
 
 Další informace najdete v tématu příspěvky na blogu: [adresáře VC ++](http://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [zděděné vlastnosti a seznamy vlastností](http://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx), a [Visual Studio 2010 C++ Průvodce upgradem projektu](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx).
 

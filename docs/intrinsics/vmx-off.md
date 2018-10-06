@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba075822c348d9d4b0dc3f580f3f136bb7d49a7a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4799f9381ad4ff6469af30482ed3c7089e5569a8
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415405"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821033"
 ---
 # <a name="vmxoff"></a>__vmx_off
 
@@ -38,7 +38,7 @@ void __vmx_off();
 
 ## <a name="remarks"></a>Poznámky
 
-`__vmx_off` Funkce je ekvivalentní volání `VMXOFF` strojové instrukce. Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace, hledání dokumentů "Intel Virtualization technické specifikace pro the architekturou IA-32 Intel," dokumentu C97063-002 čísla na [společnosti Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) lokality.
+`__vmx_off` Funkce je ekvivalentní volání `VMXOFF` strojové instrukce. Tato funkce podporuje interakce monitorování virtuálního počítače hostitele s hostovaného operačního systému a jeho aplikací. Další informace, hledání dokumentů "Intel Virtualization technické specifikace pro the architekturou IA-32 Intel," dokumentu C97063-002 čísla na [společnosti Intel Corporation](https://software.intel.com/articles/intel-sdm) lokality.
 
 ## <a name="requirements"></a>Požadavky
 

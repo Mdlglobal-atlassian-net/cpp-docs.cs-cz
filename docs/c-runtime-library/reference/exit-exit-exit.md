@@ -40,19 +40,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d26cc39039b95b8c12e429d333918e83628b2619
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: eb5bd1ef619c899a6b0faab33104a579fdb9f1d0
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110601"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821271"
 ---
 # <a name="exit-exit-exit"></a>ukončit, _Exit, _exit
 
 Ukončí volající proces. **Ukončit** funkce skončí po vyčištění **_exit** a **_Exit** ukončit okamžitě.
 
 > [!NOTE]
-> Nepoužívejte tuto metodu k vypnutí aplikace univerzální platformy Windows (UPW), s výjimkou testování nebo ladění scénářů. Zavření aplikace pro Store způsoby programátorské nebo uživatelské rozhraní nejsou povoleny podle [zásady Microsoft Store](/legal/windows/agreements/store-policies). Další informace najdete v tématu [životního cyklu aplikace pro UPW](/windows/uwp/launch-resume/app-lifecycle). Další informace o aplikacích pro Windows 10 najdete v tématu [postupy příručky pro aplikace pro Windows 10](https://developer.microsoft.com/en-us/windows/apps).
+> Nepoužívejte tuto metodu k vypnutí aplikace univerzální platformy Windows (UPW), s výjimkou testování nebo ladění scénářů. Zavření aplikace pro Store způsoby programátorské nebo uživatelské rozhraní nejsou povoleny podle [zásady Microsoft Store](/legal/windows/agreements/store-policies). Další informace najdete v tématu [životního cyklu aplikace pro UPW](/windows/uwp/launch-resume/app-lifecycle). Další informace o aplikacích pro Windows 10 najdete v tématu [postupy příručky pro aplikace pro Windows 10](https://developer.microsoft.com/windows/apps).
 
 ## <a name="syntax"></a>Syntaxe
 

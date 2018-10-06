@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 705f4f0d41b98c46e2cd61962d84fe8412b9e296
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: aa5cf1be80b22d3577347dbf7de9ee262125aa86
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414053"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821358"
 ---
 # <a name="message-map-macros-mfc"></a>Makra map zpráv (MFC)
 
@@ -81,7 +81,6 @@ Pro podporu mapy zpráv, knihovna MFC poskytuje následující makra:
 |[ON_CONTROL_RANGE](#on_control_range)|Určuje funkci, která bude zpracovávat upozornění z rozsahu ID zadané v druhý a třetí parametry makro ovládacích prvků. První parametr je zpráva oznámení ovládacího prvku, jako je například BN_CLICKED.|
 
 Další informace o mapy zpráv, map zpráv deklarace a rozhraničení makra a makra mapování zpráv, najdete v části [mapy zpráv](../../mfc/reference/message-maps-mfc.md) a [zpracování zpráv a mapování témata](../../mfc/message-handling-and-mapping.md). Další informace o oblasti map zpráv najdete v tématu [obslužné rutiny pro oblasti Map zpráv](../../mfc/handlers-for-message-map-ranges.md).
-
 
 ## <a name="begin_message_map"></a> BEGIN_MESSAGE_MAP
 
@@ -125,15 +124,18 @@ Začíná definici mapy zpráv na typ třídy obsahující jednu šablonu argume
 
 ### <a name="syntax"></a>Syntaxe
 
-  ```
+```
 BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *theClass*<br/>
 Určuje, že je název třídy namapujte tento parametr jehož zprávy.
+
 *type_name*<br/>
 Název parametru šablony určeného pro třídu.
+
 *baseClass*<br/>
 Určuje název základní třídy *theClass*.
 
@@ -181,7 +183,6 @@ class CMainFrame : public CMDIFrameWnd
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxwin.h
-
 
 ## <a name="end_message_map"></a>  END_MESSAGE_MAP
 
@@ -245,9 +246,10 @@ Rozšířené obslužná rutina příkazu členskou funkci.
 
 ### <a name="syntax"></a>Syntaxe
 
-  ```
+```
 ON_COMMAND_EX(id, memberFxn);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *id*<br/>
@@ -267,6 +269,7 @@ Toto makro mapuje zprávou příkazu rozšířené obslužná rutina příkazu �
 ```
 ON_COMMAND_EX(id,  memberFxn);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *id*<br/>
@@ -287,8 +290,7 @@ Soubor hlaviček: afxmsg_.h
 ### <a name="see-also"></a>Viz také
 
 [ON_COMMAND](message-map-macros-mfc.md#on_command)<br/>
-[TN006: mapy zpráv] tm006. zpráva maps.md)
-
+[TN006: Mapy zpráv](../tn006-message-maps.md)
 
 ## <a name="on_control"></a>  ON_CONTROL
 
@@ -322,7 +324,6 @@ Další informace a příklady najdete v tématu [zpracování zpráv a mapován
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxmsg_.h
-
 
 ## <a name="on_message"></a>  ON_MESSAGE
 
@@ -382,7 +383,7 @@ LRESULT CMyWnd2::OnMyMessage(WPARAM wParam, LPARAM lParam)
 
 **Záhlaví:** afxmsg_.h
 
-## <a name="on_olecmd"></a>  ON_OLECMD  
+## <a name="on_olecmd"></a>  ON_OLECMD
 
 Směrovat příkazy přes rozhraní příkazového řádku odeslání `IOleCommandTarget`.
 
@@ -545,7 +546,6 @@ Další informace a příklady najdete v tématu [zpracování zpráv a mapován
 ```cpp
 static UINT NEAR WM_FIND = RegisterWindowMessage(_T("COMMDLG_FIND"));
 
-
 BEGIN_MESSAGE_MAP(CMyWnd3, CWnd)
    ON_REGISTERED_MESSAGE(WM_FIND, OnFind)
 END_MESSAGE_MAP()
@@ -560,7 +560,7 @@ END_MESSAGE_MAP()
 [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)<br/>
 [Uživatelem definované obslužné rutiny](user-defined-handlers.md)
 
-## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE    
+## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE
 
 Určuje funkci, která bude zpracovávat zprávy registrovaných funkci Windows RegisterWindowMessage.
 
@@ -586,7 +586,7 @@ RegisterWindowMessage slouží k definování novou zprávu okna, která je zaru
 
 **Záhlaví:** afxmsg_.h
 
-## <a name="on_thread_message"></a>  ON_THREAD_MESSAGE  
+## <a name="on_thread_message"></a>  ON_THREAD_MESSAGE
 
 Určuje funkci, která bude zpracovávat uživatelsky definovanou zprávu.
 
@@ -612,7 +612,7 @@ ON_THREAD_MESSAGE musí použít namísto ON_MESSAGE, když máte `CWinThread` t
 
 **Záhlaví:** afxole.h
 
-## <a name="on_update_command_ui"></a>  ON_UPDATE_COMMAND_UI    
+## <a name="on_update_command_ui"></a>  ON_UPDATE_COMMAND_UI
 
 Toto makro označuje funkci, která bude zpracovávat zprávou příkazu aktualizace uživatelského rozhraní.
 
@@ -699,7 +699,7 @@ void CChildFrame::OnRangeCmds(UINT nID)
 
 **Záhlaví:** afxmsg_.h
 
-## <a name="on_update_command_ui_range"></a>  ON_UPDATE_COMMAND_UI_RANGE    
+## <a name="on_update_command_ui_range"></a>  ON_UPDATE_COMMAND_UI_RANGE
 
 Mapuje souvislý rozsah ID příkazů funkci obslužné rutiny zpráv jednu aktualizaci.
 
@@ -730,7 +730,7 @@ Neexistuje žádné automatické podpory pro oblasti map zpráv, takže je nutn�
 
 **Záhlaví:** afxmsg_.h
 
-## <a name="on_control_range"></a>  ON_CONTROL_RANGE    
+## <a name="on_control_range"></a>  ON_CONTROL_RANGE
 
 Použijte toto makro pro mapování na obslužnou rutinu jedné zprávy zadané zprávy oznámení Windows, jako je například BN_CLICKED souvislý rozsah ID ovládacích prvků.
 

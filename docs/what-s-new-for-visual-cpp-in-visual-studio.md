@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc82a45c181d4a2b56670af9cc0d6da055737b8d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 07c8b18e8de5caf924cd31a18eb304778634050f
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722316"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821452"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Co je nového v aplikaci Visual C++ v sadě Visual Studio 2017
 
@@ -65,7 +65,7 @@ Další vylepšení diagnostiky v kompilátoru. Další informace najdete v tém
 
 **Visual Studio 2017 verze 15.5**:
 
-Výkon sady Visual C++ runtime neustále zlepšuje kvůli lepší kvalitu generovaného kódu. To znamená, že můžete jednoduše znovu zkompilovat kód a vaše aplikace běží rychleji. Některé optimalizace kompilátoru jsou úplně nové, jako je například vektorizaci podmíněných skalárních úložišť, kombinování volání `sin(x)` a `cos(x)` do nového `sincos(x)`a odstranění redundantní pokyny od Optimalizátor SSA. Další optimalizace kompilátoru jsou vylepšení stávajících funkcí, jako je například heuristiku vektorizéru pro podmíněné výrazy, lepší optimalizace smyčky a plovoucí codegen min/max. Propojovací program má nový a rychlejší **/OPT:ICF** implementaci, což může mít za následek až 9 % urychlení propojení a existují další opravy výkonu v přírůstkové propojení. Další informace najdete v tématu [/OPT (optimalizace)](https://docs.microsoft.com/en-us/cpp/build/reference/opt-optimizations) a [Parametr/incremental (Inkrementální odkaz)](https://docs.microsoft.com/en-us/cpp/build/reference/incremental-link-incrementally).
+Výkon sady Visual C++ runtime neustále zlepšuje kvůli lepší kvalitu generovaného kódu. To znamená, že můžete jednoduše znovu zkompilovat kód a vaše aplikace běží rychleji. Některé optimalizace kompilátoru jsou úplně nové, jako je například vektorizaci podmíněných skalárních úložišť, kombinování volání `sin(x)` a `cos(x)` do nového `sincos(x)`a odstranění redundantní pokyny od Optimalizátor SSA. Další optimalizace kompilátoru jsou vylepšení stávajících funkcí, jako je například heuristiku vektorizéru pro podmíněné výrazy, lepší optimalizace smyčky a plovoucí codegen min/max. Propojovací program má nový a rychlejší **/OPT:ICF** implementaci, což může mít za následek až 9 % urychlení propojení a existují další opravy výkonu v přírůstkové propojení. Další informace najdete v tématu [/OPT (optimalizace)](build/reference/opt-optimizations.md) a [Parametr/incremental (Inkrementální odkaz)](build/reference/incremental-link-incrementally.md).
 
 Jazyk Visual C++ podporuje společnosti Intel AVX-512, včetně instrukcí pro délku vektoru, které přinášejí nové funkce v AVX-512 do 128 - a 256bitových širokých registrů.
 
@@ -439,7 +439,7 @@ Další informace najdete v tématu [Boost.Test Unit Testing: Podpora dynamický
 
 **Visual Studio 2017 verze 15.7**:
 
-[Funkce CodeLens](https://docs.microsoft.com/en-us/visualstudio/ide/find-code-changes-and-other-history-with-codelens) podporována pro projekty testů jednotek C++ přidat. Další informace najdete v tématu [uvedení funkce CodeLens pro testování částí C++](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/announcing-codelens-for-c-unit-testing/).
+[Funkce CodeLens](/visualstudio/ide/find-code-changes-and-other-history-with-codelens) podporována pro projekty testů jednotek C++ přidat. Další informace najdete v tématu [uvedení funkce CodeLens pro testování částí C++](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/announcing-codelens-for-c-unit-testing/).
 
 ## <a name="visual-studio-graphics-diagnostics"></a>Diagnostika grafiky sady Visual Studio
 
