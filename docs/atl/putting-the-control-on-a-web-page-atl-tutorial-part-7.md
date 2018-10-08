@@ -1,7 +1,7 @@
 ---
 title: Vložení ovládacího prvku na webovou stránku (ATL – tutoriál, část 7) | Dokumentace Microsoftu
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/27/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -12,24 +12,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edc45522aaff12077de6115105b344ecf41e187e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 052c6fa80b222a077fb41d861a4ea234f64073ec
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762821"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821605"
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>Vložení ovládacího prvku na webovou stránku (ATL – tutoriál, část 7)
 
 Ovládací prvek je nyní dokončena. Chcete-li zobrazit práci v reálné situaci ovládacího prvku, umístěte ho na webové stránce. Soubor HTML, který obsahuje ovládací prvek byl vytvořen při definování vašeho ovládacího prvku. Otevřete soubor PolyCtl.htm z **Průzkumníka řešení**, a vy vidíte ovládacího prvku na webové stránce.
 
-V tomto kroku naskriptujete webovou stránku v reakci na události. Upravíte také ovládací prvek umožňuje aplikaci Internet Explorer vědět, že ovládací prvek je bezpečný pro skriptování.
+V tomto kroku přidáte funkci do ovládacího prvku a skriptovat webovou stránku pro reakci na události. Upravíte také ovládací prvek umožňuje aplikaci Internet Explorer vědět, že ovládací prvek je bezpečný pro skriptování.
+
+## <a name="adding-new-functionality"></a>Přidání nové funkce
+
+### <a name="to-add-control-features"></a>Chcete-li přidat ovládací prvek funkce
+
+1. Otevřete PolyCtl.cpp a nahraďte následujícím kódem:
+
+    ```cpp
+    if (PtInRegion(hRgn, xPos, yPos))
+        Fire_ClickIn(xPos, yPos);
+    else
+        Fire_ClickOut(xPos, yPos);
+    ```
+
+    with
+
+    ```cpp
+    short temp = m_nSides;
+    if (PtInRegion(hRgn, xPos, yPos))
+    {
+        Fire_ClickIn(xPos, yPos);
+        put_Sides(++temp);
+    }
+    else
+    {
+        Fire_ClickOut(xPos, yPos);
+        put_Sides(--temp);
+    }
+    ```
+
+Tvar se nyní přidat nebo odebrat strany v závislosti na tom, kde klikněte na.
 
 ## <a name="scripting-the-web-page"></a>Skriptování webové stránky
 
 Ovládací prvek zatím nic nedělá, takže upravte webovou stránku v reakci na odeslané události.
 
-#### <a name="to-script-the-web-page"></a>Chcete-li skriptovat webovou stránku
+### <a name="to-script-the-web-page"></a>Chcete-li skriptovat webovou stránku
 
 1. Otevřete PolyCtl.htm a vyberte zobrazení HTML. Přidejte následující řádky do kódu HTML. Měly by být přidány po `</OBJECT>` ale předtím, než `</BODY>`.
 
@@ -37,22 +68,25 @@ Ovládací prvek zatím nic nedělá, takže upravte webovou stránku v reakci n
     <SCRIPT LANGUAGE="VBScript">
     <!--
         Sub PolyCtl_ClickIn(x, y)
-            PolyCtl.Sides = PolyCtl.Sides + 1
+            MsgBox("Clicked (" & x & ", " & y & ") - adding side")
         End Sub
         Sub PolyCtl_ClickOut(x, y)
-            PolyCtl.Sides = PolyCtl.Sides - 1
+            MsgBox("Clicked (" & x & ", " & y & ") - removing side")
         End Sub
     -->
     </SCRIPT>
     ```
 
-2. Uložte soubor HTM.
+1. Uložte soubor HTM.
 
 Přidali jste některý kód jazyka VBScript, který získá vlastnost Sides z ovládacího prvku a zvýší počet stran o 1, pokud kliknete dovnitř ovládacího prvku. Pokud klepnete na tlačítko mimo ovládací prvek, snížíte počet stran o jednu.
 
 ## <a name="indicating-that-the-control-is-safe-for-scripting"></a>Indikuje, že ovládací prvek je bezpečný pro skriptování
 
 Můžete zobrazit webovou stránku pomocí ovládacího prvku v aplikaci Internet Explorer nebo ještě pohodlněji pomocí zobrazení webového prohlížeče, které jsou součástí Visual C++. Chcete-li zobrazit ovládací prvek ve webovém prohlížeči, pravým tlačítkem myši na PolyCtl.htm a klikněte na tlačítko **zobrazit v prohlížeči**.
+
+> [!NOTE]
+> Pokud ovládací prvek není viditelný, vědět, že některé prohlížeče vyžadovat úpravy nastavení spuštění ovládacích prvků ActiveX. Najdete v prohlížeči na dokumentaci o tom, jak povolit ovládací prvky ActiveX.
 
 Podle aktuálního nastavení zabezpečení aplikace Internet Explorer, může se zobrazit dialogové okno oznamující, že ovládací prvek nemusí být skript bezpečný a může potenciálně způsobit poškození výstrahy zabezpečení. Například, pokud jste měli ovládací prvek, který zobrazil soubor, ale měl rovněž `Delete` metodě, která se odstranil se soubor, mělo by být bezpečné Pokud jste ho pouze zobrazili na stránce. Mělo by není bezpečné použít skript, protože někdo může volat `Delete` metody.
 
@@ -61,19 +95,19 @@ Podle aktuálního nastavení zabezpečení aplikace Internet Explorer, může s
 
 Můžete programově upozornit aplikaci Internet Explorer, že nemusí zobrazit dialogové okno upozornění zabezpečení pro tento konkrétní ovládací prvek. Můžete to provedete `IObjectSafety` rozhraní a ATL dodá implementaci tohoto rozhraní ve třídě [IObjectSafetyImpl](../atl/reference/iobjectsafetyimpl-class.md). Chcete-li přidat rozhraní do ovládacího prvku, přidejte `IObjectSafetyImpl` do seznamu zděděných tříd a přidejte položku do mapy modelu COM. pro něj.
 
-#### <a name="to-add-iobjectsafetyimpl-to-the-control"></a>Přidat IObjectSafetyImpl do ovládacího prvku
+### <a name="to-add-iobjectsafetyimpl-to-the-control"></a>Přidat IObjectSafetyImpl do ovládacího prvku
 
 1. Přidejte následující řádek na konec seznamu zděděné třídy v souboru PolyCtl.h a přidejte čárku na předchozí řádek:
 
-[!code-cpp[NVC_ATL_Windowing#62](../atl/codesnippet/cpp/putting-the-control-on-a-web-page-atl-tutorial-part-7_1.h)]
+    [!code-cpp[NVC_ATL_Windowing#62](../atl/codesnippet/cpp/putting-the-control-on-a-web-page-atl-tutorial-part-7_1.h)]
 
-2. Do mapy modelu COM v souboru PolyCtl.h přidejte následující řádek:
+1. Do mapy modelu COM v souboru PolyCtl.h přidejte následující řádek:
 
-[!code-cpp[NVC_ATL_Windowing#63](../atl/codesnippet/cpp/putting-the-control-on-a-web-page-atl-tutorial-part-7_2.h)]
+    [!code-cpp[NVC_ATL_Windowing#63](../atl/codesnippet/cpp/putting-the-control-on-a-web-page-atl-tutorial-part-7_2.h)]
 
 ## <a name="building-and-testing-the-control"></a>Vytváření a testování ovládacího prvku
 
-Vytvoření ovládacího prvku. Po dokončení sestavení, otevřete PolyCtl.htm znovu v prohlížeči. Tentokrát webovou stránku má být zobrazena přímo bez dialogového okna Výstraha zabezpečení. Klikněte dovnitř mnohoúhelníku; počet stran se zvýší o jedna. Klikněte mimo mnohoúhelník pro snížení počtu stran. Pokud se pokusíte snížit počet stran pod tři, zobrazí se chybová zpráva, kterou jste nastavili.
+Vytvoření ovládacího prvku. Po dokončení sestavení, otevřete PolyCtl.htm znovu v prohlížeči. Tentokrát by měl webovou stránku přímo bez zobrazí **výstraha zabezpečení** dialogové okno. Klikněte dovnitř mnohoúhelníku; počet stran se zvýší o jedna. Klikněte mimo mnohoúhelník pro snížení počtu stran.
 
 [Zpět na krok 6](../atl/adding-a-property-page-atl-tutorial-part-6.md)
 
