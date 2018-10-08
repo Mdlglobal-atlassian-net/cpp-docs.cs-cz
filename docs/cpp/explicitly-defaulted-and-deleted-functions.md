@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69058c00757cea466683246c1aee2e89f806c931
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7c199f687f5004066bf67d087daa1bd7a5b27d01
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058604"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861158"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Explicitně přednastavené a odstraněné funkce
 
@@ -48,8 +48,8 @@ Tato možnost je pohodlná pro jednoduché typy, ale komplexní typy často defi
 > [!NOTE]
 >  Kromě toho standardu C ++ 11 určuje následující další pravidla:
 >
->  -   Pokud je kopírovací konstruktor nebo destruktor výslovně deklarovány, automatické generování operátor přiřazení kopie je zastaralý.
-> -   Pokud operátor přiřazení kopie nebo destruktor je explicitně deklarované, pak automatické generování kopírovací konstruktor je zastaralý.
+> - Pokud je kopírovací konstruktor nebo destruktor výslovně deklarovány, automatické generování operátor přiřazení kopie je zastaralý.
+> - Pokud operátor přiřazení kopie nebo destruktor je explicitně deklarované, pak automatické generování kopírovací konstruktor je zastaralý.
 >
 >  V obou případech se Visual Studio nadále automaticky generovat nezbytné funkce implicitně a negeneruje upozornění.
 

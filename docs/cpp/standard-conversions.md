@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75ec7271950a2aee28e55d4b7b9fdcf7c8c894d0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b7d895671efdec4649faf1f0611380d2065770ac
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039371"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861444"
 ---
 # <a name="standard-conversions"></a>Standardní převody
 
@@ -162,7 +162,7 @@ Mnoho binárních operátorů (popsáno v [výrazy s binárními operátory](../
 |Některý operand je typu **long double**.|Další operand je převeden na typ **long double**.|
 |Předcházející podmínky nebyly splněny a některý operand je typu **double**.|Další operand je převeden na typ **double**.|
 |Předcházející podmínky nebyly splněny a některý operand je typu **float**.|Další operand je převeden na typ **float**.|
-|Předcházející podmínky nebyly splněny (žádný z operandů není typ s plovoucí desetinnou čárkou).|Celočíselné povýšení je s těmito operandy provedeno následovně:<br /><br /> – Pokud některý operand je typu **unsigned long**, je druhý operand je převeden na typ **unsigned long**.<br />-Pokud není předcházející podmínka splněna a některý operand je typu **dlouhé** a druhý operand typu **unsigned int**, jsou oba operandy převedeny na typ **unsigned long**.<br />– Pokud nejsou splněny obě předcházející podmínky, a pokud některý operand je typu **dlouhé**, je druhý operand je převeden na typ **dlouhé**.<br />– Nejsou-li předchozí tři podmínky splněny a některý operand je typu **unsigned int**, je druhý operand je převeden na typ **unsigned int**.<br />– Pokud je splněna žádná z předchozích podmínek, jsou oba operandy převedeny na typ **int**.|
+|Předcházející podmínky nebyly splněny (žádný z operandů není typ s plovoucí desetinnou čárkou).|Celočíselné povýšení je s těmito operandy provedeno následovně:<br /><br />– Pokud některý operand je typu **unsigned long**, je druhý operand je převeden na typ **unsigned long**.<br />-Pokud není předcházející podmínka splněna a některý operand je typu **dlouhé** a druhý operand typu **unsigned int**, jsou oba operandy převedeny na typ **unsigned long**.<br />– Pokud nejsou splněny obě předcházející podmínky, a pokud některý operand je typu **dlouhé**, je druhý operand je převeden na typ **dlouhé**.<br />– Nejsou-li předchozí tři podmínky splněny a některý operand je typu **unsigned int**, je druhý operand je převeden na typ **unsigned int**.<br />– Pokud je splněna žádná z předchozích podmínek, jsou oba operandy převedeny na typ **int**.|
 
 Následující kód znázorňuje pravidla převodu, která jsou popsána v tabulce:
 

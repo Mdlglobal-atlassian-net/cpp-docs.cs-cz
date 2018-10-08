@@ -1,7 +1,7 @@
 ---
 title: Zkuste-except – příkaz | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/05/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 107b759345e221ad8100f11d97b79c5bd9fd2b65
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6e938f5b7e5f25461ae921fbfa3c49920eca86eb
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031434"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861925"
 ---
 # <a name="try-except-statement"></a>try-except – příkaz
 
@@ -50,7 +50,14 @@ ms.locfileid: "46031434"
 
 ## <a name="syntax"></a>Syntaxe
 
-> **__try** {/ / strážených kód} **__except** ( *výraz* ) {/ / kód obslužné rutiny výjimek}
+> **__try** <br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;strážené kódu<br/>
+> }<br/>
+> **__except** ( *výraz* )<br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;Kód obslužné rutiny výjimek<br/>
+> }<br/>
 
 ## <a name="remarks"></a>Poznámky
 
@@ -67,15 +74,15 @@ Složený příkaz za **__try** klauzule je tělem nebo chráněnou částí. Sl
 
 1. Chráněná část je spuštěna.
 
-2. Pokud při provádění chráněné části dojde k žádné výjimce, provádění pokračuje na příkazu následujícímu po **__except** klauzuli.
+1. Pokud při provádění chráněné části dojde k žádné výjimce, provádění pokračuje na příkazu následujícímu po **__except** klauzuli.
 
-3. Pokud dojde k výjimce za běhu chráněné části nebo v jakékoli rutině chráněná část volá, **__except** *výraz* (volá se *filtr* výraz) je vyhodnocen a jeho hodnota určuje, jak je výjimka ošetřena. Existují tři hodnoty:
+1. Pokud dojde k výjimce za běhu chráněné části nebo v jakékoli rutině chráněná část volá, **__except** *výraz* (volá se *filtr* výraz) je vyhodnocen a jeho hodnota určuje, jak je výjimka ošetřena. Existují tři možné hodnoty:
 
-   EXCEPTION_CONTINUE_EXECUTION (-1) výjimka je ignorována. Program bude pokračovat tam, kde k výjimce došlo.
+   - EXCEPTION_CONTINUE_EXECUTION (-1) výjimka je ignorována. Program bude pokračovat tam, kde k výjimce došlo.
 
-   EXCEPTION_CONTINUE_SEARCH (0) výjimka není rozpoznána. Pokračujte ve vyhledávání zásobníkem pro obslužnou rutinu, nejprve obsahující **zkuste – s výjimkou** příkazy, pak u obslužných rutin s druhou nejvyšší prioritou.
+   - EXCEPTION_CONTINUE_SEARCH (0) výjimka není rozpoznána. Pokračujte ve vyhledávání zásobníkem pro obslužnou rutinu, nejprve obsahující **zkuste – s výjimkou** příkazy, pak u obslužných rutin s druhou nejvyšší prioritou.
 
-   EXCEPTION_EXECUTE_HANDLER (1) výjimka je rozpoznána. Řízení je převedeno na obslužnou rutinu výjimek pomocí provádí **__except** složený příkaz a potom pokračovat v provádění po **__except** bloku.
+   - EXCEPTION_EXECUTE_HANDLER (1) výjimka je rozpoznána. Řízení je převedeno na obslužnou rutinu výjimek pomocí provádí **__except** složený příkaz a potom pokračovat v provádění po **__except** bloku.
 
 Vzhledem k tomu, **__except** výraz je vyhodnocen jako výraz jazyka C, je omezený na jednu hodnotu, operátor podmíněného výrazu nebo operátor čárky. Je-li požadováno rozsáhlejší zpracování, může výraz zavolat rutinu, která vrátí jednu z výše uvedených tří hodnot.
 
@@ -83,9 +90,7 @@ Každá aplikace může obsahovat svou vlastní obslužnou rutinu výjimky.
 
 Není povoleno přejít do **__try** příkaz však povoleno přejít mimo něj. Obslužná rutina výjimky není volána, pokud proces je ukončen v průběhu provádění příkazu **zkuste – s výjimkou** příkazu.
 
-Další informace naleznete v článku Q315937 znalostní báze: POSTUP: Zachycení přetečení zásobníku v aplikaci Visual C++.
-
-## <a name="the-leave-keyword"></a>Klíčové slovo __leave
+### <a name="the-leave-keyword"></a>Klíčové slovo __leave
 
 **__Leave** – klíčové slovo je platné pouze uvnitř chráněné části **zkuste – s výjimkou** příkazu a jeho účinkem je přechod na konec chráněné části. Běh programu pokračuje prvním příkazem za obslužnou rutinou výjimky.
 
@@ -170,7 +175,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Výstup
+### <a name="output"></a>Výstup
 
 ```Output
 hello

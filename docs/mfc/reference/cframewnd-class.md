@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12982c212cf8ff4fe502638a5c466306bfe15eb1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 32456b15cc00d296354016f8769e020f8133b609
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374285"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861730"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd – třída
 
@@ -1103,7 +1103,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*nInformace*|[in] Určuje, jestli se má zobrazit nebo skrýt v nabídce. *NInformace* parametr může mít následující hodnoty:<br /><br /> -AFX_MBS_VISIBLE (0x01) - zobrazí nabídku, pokud je skrytý, ale nemá žádný vliv, pokud je zobrazen.<br />-AFX_MBS_HIDDEN (0x02) – skryje v nabídce, pokud je zobrazen, ale nemá žádný vliv, pokud je skrytá.|
+|*nInformace*|[in] Určuje, jestli se má zobrazit nebo skrýt v nabídce. *NInformace* parametr může mít následující hodnoty:<br /><br />-AFX_MBS_VISIBLE (0x01) - zobrazí nabídku, pokud je skrytý, ale nemá žádný vliv, pokud je zobrazen.<br />-AFX_MBS_HIDDEN (0x02) – skryje v nabídce, pokud je zobrazen, ale nemá žádný vliv, pokud je skrytá.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1125,7 +1125,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*nStyle*|[in] Určuje, zda v nabídce je standardně skrytý, nebo je viditelná a má fokus. *NStyle* parametr může mít následující hodnoty:<br /><br /> -AFX_MBV_KEEPVISIBLE (0X01)-<br />     V nabídce se zobrazí po celou dobu a ve výchozím nastavení nemá fokus.<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     V nabídce je ve výchozím nastavení skrytá. Pokud je skrytý nabídky, stiskněte klávesu ALT k zobrazení nabídky a přiřaďte mu fokus. Pokud se zobrazí v nabídce, stiskněte klávesu ALT nebo ESC, chcete-li skrýt nabídku.<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (bitová kombinace (nebo)) – v nabídce je ve výchozím nastavení skrytá. Když je skrytý nabídky, stiskněte klávesu F10 zobrazení nabídky a přiřaďte jí fokus. Pokud se zobrazí v nabídce, stiskněte klávesu F10 Chcete-li přepnout fokus zapnout nebo vypnout v nabídce. V nabídce se zobrazí, dokud nestisknete klávesu ALT nebo ESC ho chcete skrýt.|
+|*nStyle*|[in] Určuje, zda v nabídce je standardně skrytý, nebo je viditelná a má fokus. *NStyle* parametr může mít následující hodnoty:<br /><br />-AFX_MBV_KEEPVISIBLE (0X01)-<br />     V nabídce se zobrazí po celou dobu a ve výchozím nastavení nemá fokus.<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     V nabídce je ve výchozím nastavení skrytá. Pokud je skrytý nabídky, stiskněte klávesu ALT k zobrazení nabídky a přiřaďte mu fokus. Pokud se zobrazí v nabídce, stiskněte klávesu ALT nebo ESC, chcete-li skrýt nabídku.<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (bitová kombinace (nebo)) – v nabídce je ve výchozím nastavení skrytá. Když je skrytý nabídky, stiskněte klávesu F10 zobrazení nabídky a přiřaďte jí fokus. Pokud se zobrazí v nabídce, stiskněte klávesu F10 Chcete-li přepnout fokus zapnout nebo vypnout v nabídce. V nabídce se zobrazí, dokud nestisknete klávesu ALT nebo ESC ho chcete skrýt.|
 
 ### <a name="remarks"></a>Poznámky
 

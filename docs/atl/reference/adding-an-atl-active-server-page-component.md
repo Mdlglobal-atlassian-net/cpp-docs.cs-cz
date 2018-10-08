@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a326b72ac5594d7ef5f0b9ad26f9bdf4e8472bd4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a9410ac275ecd321184153d45fd5b044deb80e5b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46112990"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861509"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Přidání komponenty ATL Active Server stránky
 
@@ -36,13 +36,13 @@ Active Server Pages komponenty jsou součástí architekturu Internetová inform
 
 - Možnosti zpracování chyb ASP můžete použít pro vaše webové aplikace.
 
-### <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Chcete-li do projektu přidejte komponentu ATL Active Server Pages
+## <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Chcete-li do projektu přidejte komponentu ATL Active Server Pages
 
 1. V **Průzkumníka řešení** klikněte pravým tlačítkem na název projektu, ke kterému chcete přidat komponenty ATL Active Server Pages.
 
-2. V místní nabídce klikněte na tlačítko **přidat**a potom klikněte na tlačítko **přidat třídu**.
+1. V místní nabídce klikněte na tlačítko **přidat**a potom klikněte na tlačítko **přidat třídu**.
 
-3. V [přidat třídu](../../ide/add-class-dialog-box.md) dialogové okno, v podokně šablon, klikněte na tlačítko **ATL Active Server Page Component**a potom klikněte na tlačítko **otevřít** zobrazíte [ATL Active Server Průvodce komponentami Pages](../../atl/reference/atl-active-server-page-component-wizard.md).
+1. V [přidat třídu](../../ide/add-class-dialog-box.md) v dialogu **šablony** podokně klikněte na tlačítko **ATL Active Server Page Component**a potom klikněte na **otevřít** zobrazíte [Průvodce stránky komponentami ATL Active Server](../../atl/reference/atl-active-server-page-component-wizard.md).
 
 ## <a name="see-also"></a>Viz také
 
@@ -52,4 +52,3 @@ Active Server Pages komponenty jsou součástí architekturu Internetová inform
 [Přidání metody](../../ide/adding-a-method-visual-cpp.md)<br/>
 [Třída knihovny MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Přidání generické třídy jazyka C++](../../ide/adding-a-generic-cpp-class.md)
-

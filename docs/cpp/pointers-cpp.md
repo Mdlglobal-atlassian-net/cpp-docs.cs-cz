@@ -17,62 +17,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a39ee9c45084d03198157f427ca3edca13767e6c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7e896c1a00e45e5e7503837409903651ed2bdc3a
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024109"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861236"
 ---
 # <a name="pointers-c"></a>Ukazatelé (C++)
 
 Ukazatele jsou deklarovány následujícím způsobem.
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers 
-[ms-modifier] declarator ;
-```
+> \[*specifikátory třídy úložiště*] \[ *kvalifikátory cv*] *specifikátory typu* \[ *ms modifikátor*]  *deklarátor* **;**
 
-kde lze použít libovolný platný ukazatel deklarátor pro `declarator`. Syntaxe deklarátoru jednoduchého ukazatele je následujícím způsobem:
+kde lze použít libovolný platný ukazatel deklarátor pro *deklarátor*. Syntaxe deklarátoru jednoduchého ukazatele je následujícím způsobem:
 
-```
-* [cv-qualifiers] identifier [= expression]
-```
+> __\*__ \[*Kvalifikátory CV*] *identifikátor* \[ **=** *výraz*]
 
 1. Specifikátory deklarace:
 
-    - Volitelný specifikátor paměťové třídy. Další informace najdete v tématu [specifikátory](../cpp/specifiers.md).
+   - Volitelný specifikátor paměťové třídy. Další informace najdete v tématu [specifikátory](../cpp/specifiers.md).
 
-    - Volitelně **const** nebo **volatile** – klíčové slovo použití typu objekt, který má být odkazovala na.
+   - Volitelně **const** nebo **volatile** – klíčové slovo použití typu objekt, který má být odkazovala na.
 
-    - Specifikátor typu: název typu reprezentující typ objektu odkazovala na.
+   - Specifikátor typu: název typu reprezentující typ objektu odkazovala na.
 
-2. Deklarátor:
+1. Deklarátor:
 
-    - Volitelný specifický modifikátor Microsoft. Další informace najdete v tématu [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md).
+   - Volitelný modifikátor specifické pro společnost Microsoft. Další informace najdete v tématu [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-    - Operátor `*`.
+   - __\*__ Operátor.
 
-    - Volitelně **const** nebo **volatile** – klíčové slovo použití na ukazatel sám.
+   - Volitelně **const** nebo **volatile** – klíčové slovo použití na ukazatel sám.
 
-    - Identifikátor.
+   - Identifikátor.
 
-    - Volitelný inicializátor.
+   - Volitelný inicializátor.
 
-     Deklarátoru ukazatele na funkce vypadá takto:
+Deklarátoru ukazatele na funkce vypadá takto:
 
-```
-(* [cv-qualifiers] identifier )( argument-list ) [cv-qualifers]
-[exception specification] [= expression];
-```
+> __(\*__  \[ *kvalifikátory cv*] *identifikátor* **) (** *seznam argumentů* **)** \[ *cv-qualifers*] \[ *specifikace výjimky*] \[ **=** *výraz*] **;**
 
-- Pro pole ukazatelů syntaxe vypadá takto:
+Pro pole ukazatelů syntaxe vypadá takto:
 
-```
-* identifier [ [ constant-expression ] ]
-```
+> __\*__ *identifikátor* **\[** \[ *konstantní výraz*] **]**
 
-- Jejich inicializátory a víc deklarátorů. může se zobrazí společně v jedné deklaraci v následující deklaraci specifikátor seznam oddělený čárkami.
+Jejich inicializátory a víc deklarátorů. může se zobrazí společně v jedné deklaraci v následující deklaraci specifikátor seznam oddělený čárkami.
 
 Jednoduchý příklad deklaraci ukazatele je:
 

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 829afe53d5fde976b7877475cf577b6204be8aed
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1d0aa647f6f94d31f1a06bb09b143554dba51b68
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46051084"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861743"
 ---
 # <a name="overview-of-file-translation"></a>Přehled posunutí souboru
 
@@ -32,9 +32,9 @@ Programy jazyka C++ se stejně jako programy jazyka C skládají z jednoho nebo 
 
 1. Lexikální tokenizace. Mapování znaků a zpracování trigraph, spojování řádků a tokenizace jsou prováděny v této fázi překladu.
 
-2. Předběžné zpracování. Tato fáze překladu přináší přidružené zdrojové soubory odkazované `#include` direktivy, zpracovává "převádějící na řetězec" a "charakterizace" direktivy a provádí tokenu vložení a rozšíření maker (viz [direktivy preprocesoru](../preprocessor/preprocessor-directives.md) v *odkazu preprocesoru* Další informace). Výsledkem fáze předběžného zpracování je sekvence tokenů, které společně definují „jednotku překladu“.
+1. Předběžné zpracování. Tato fáze překladu přináší přidružené zdrojové soubory odkazované `#include` direktivy, zpracovává "převádějící na řetězec" a "charakterizace" direktivy a provádí tokenu vložení a rozšíření maker (viz [direktivy preprocesoru](../preprocessor/preprocessor-directives.md) v *odkazu preprocesoru* Další informace). Výsledkem fáze předběžného zpracování je sekvence tokenů, které společně definují „jednotku překladu“.
 
-     Direktivy preprocesoru vždy začínají znakem čísla (**#**) znaků (to znamená, že první neprázdný znak na řádku musí být znak čísla). Na daném řádku se může objevit pouze jedna direktiva preprocesoru. Příklad:
+   Direktivy preprocesoru vždy začínají znakem čísla (**#**) znaků (to znamená, že první neprázdný znak na řádku musí být znak čísla). Na daném řádku se může objevit pouze jedna direktiva preprocesoru. Příklad:
 
     ```cpp
     #include <iostream>  // Include text of iostream in
@@ -43,9 +43,9 @@ Programy jazyka C++ se stejně jako programy jazyka C skládají z jednoho nebo 
                          //  text string).
     ```
 
-3. Generování kódu. Tato fáze překladu používá tokeny, které jsou vygenerovány ve fázi předběžného zpracování k vygenerování kódu objektu.
+1. Generování kódu. Tato fáze překladu používá tokeny, které jsou vygenerovány ve fázi předběžného zpracování k vygenerování kódu objektu.
 
-     V této fázi se provádí syntaktická a sémantická kontrola zdrojového kódu.
+   V této fázi se provádí syntaktická a sémantická kontrola zdrojového kódu.
 
 Zobrazit [fáze překladu](../preprocessor/phases-of-translation.md) v *odkazu preprocesoru* Další informace.
 

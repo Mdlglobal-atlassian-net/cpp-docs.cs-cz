@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fcaffc3eba3711accdfa13d311f5284e564b703
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 163949c4421cca8e4d5e414a18bda4ed98f32d3d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020430"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861639"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Průvodce příjemcem ATL OLE DB
 
@@ -52,7 +52,7 @@ Tento průvodce nastaví třída příjemce technologie OLE DB pomocí datové v
 
       1. **Vyberte nebo zadejte název serveru:** klikněte na nabídku rozevíracího seznamu zobrazíte všechny registrované datové servery v síti a vyberte jednu.
 
-      2. **Zadejte informace pro přihlášení k serveru:** zadejte uživatelské jméno a heslo pro přihlášení k serveru data.
+      1. **Zadejte informace pro přihlášení k serveru:** zadejte uživatelské jméno a heslo pro přihlášení k serveru data.
 
          > [!NOTE]
          > Dojde k problému zabezpečení s funkcí "Povolit uložení hesla" dialogové okno Vlastnosti datového připojení. V "Zadejte informace pro přihlášení k serveru", existují dva přepínače:
@@ -63,7 +63,7 @@ Tento průvodce nastaví třída příjemce technologie OLE DB pomocí datové v
          > Pokud vyberete **použít konkrétní uživatelské jméno a heslo**, mají možnost uložení hesla (pomocí zaškrtávací políčko "Povolit uložení hesla"), ale tato možnost není zabezpečený. Doporučuje se, že vyberete **integrované zabezpečení Windows NT použití**; tato možnost je bezpečná, protože je heslo zašifruje.
          > Můžou nastat situace, ve kterých chcete možnost "Povolit uložení hesla." Například pokud uvolnění knihovny s privátní databázového řešení vám by měl není přímý přístup k databázi, ale místo toho použít k ověření uživatele (pomocí libovolné zvolíte schéma ověřování) a pak omezit druh dat aplikace střední vrstvy k dispozici pro uživatele.
 
-      3. **Vyberte databázi na serveru:** klikněte na nabídku rozevíracího seznamu zobrazíte všechny registrované databází na serveru pro data a vyberte jednu.
+      1. **Vyberte databázi na serveru:** klikněte na nabídku rozevíracího seznamu zobrazíte všechny registrované databází na serveru pro data a vyberte jednu.
 
          \- nebo –
 
@@ -80,13 +80,13 @@ Tento průvodce nastaví třída příjemce technologie OLE DB pomocí datové v
          **Použijte připojovací řetězec:** buď zadejte připojovací řetězec už získali, nebo klikněte na tlačítko **sestavení** tlačítko; **vybrat zdroj dat** zobrazí se dialogové okno. Vyberte zdroj dat souboru nebo počítače a klikněte na tlačítko **OK**.
 
          > [!NOTE]
-         > Připojovací řetězec můžete získat zobrazením vlastností existujícího připojení v Průzkumníku serveru nebo můžete vytvořit připojení na něj poklikejte **přidat připojení** v Průzkumníku serveru.
+         > Připojovací řetězec můžete získat zobrazením vlastností existujícího připojení v **Průzkumníka serveru**, nebo můžete vytvořit připojení na něj poklikejte **přidat připojení** v **serveru Průzkumník**.
 
-      2. **Zadejte informace pro přihlášení k serveru:** zadejte uživatelské jméno a heslo pro přihlášení k serveru data.
+      1. **Zadejte informace pro přihlášení k serveru:** zadejte uživatelské jméno a heslo pro přihlášení k serveru data.
 
-      3. Zadejte počáteční katalog.
+      1. Zadejte počáteční katalog.
 
-      4. Klikněte na tlačítko **Test připojení**; Pokud je test úspěšný, klikněte na tlačítko **OK**. V opačném případě zkontrolujte vaše přihlašovací údaje, zkuste jiné databáze nebo zkuste jiný datový server.
+      1. Klikněte na tlačítko **Test připojení**; Pokud je test úspěšný, klikněte na tlačítko **OK**. V opačném případě zkontrolujte vaše přihlašovací údaje, zkuste jiné databáze nebo zkuste jiný datový server.
 
    - **Pokročilé** kartu
 

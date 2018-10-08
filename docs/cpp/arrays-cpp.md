@@ -16,44 +16,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7c88c1d0f4096017b8ffc48a92143a63d229c5e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b2423355aa53abe52fffcd81ec847b41337efcbf
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017908"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861028"
 ---
 # <a name="arrays-c"></a>Pole (C++)
 
 Pole je kolekce podobných objektů. Nejjednodušší případ pole je vektor, který může být deklarován následující sekvencí:
 
-```
-decl-specifier identifier [ constant-expression ]
-decl-specifier identifier []
-decl-specifier identifer [][ constant-expression] . . .
-decl-specifier identifier [ constant-expression ]
-[ constant-expression ] . . .
-```
+> *decl-specifier* *identifikátor* **\[** *konstantní výraz* **]**<br/>
+> *decl-specifier* *identifikátor*  **\[]**<br/>
+> *decl-specifier* *identifikátor* **\[]\[** *konstantní výraz* **]** . . .<br/>
+> *decl-specifier* *identifikátor* **\[** *konstantní výraz* **]** **\[** *konstantní výraz* **]** . . .
 
 1. Specifikátor deklarace:
 
-- Volitelný specifikátor paměťové třídy.
+   - Volitelný specifikátor paměťové třídy.
 
-- Volitelné **const** a/nebo **volatile** specifikátorů.
+   - Volitelné **const** a/nebo **volatile** specifikátorů.
 
-- Název typu prvků pole.
+   - Název typu prvků pole.
 
-2. Deklarátor:
+1. Deklarátor:
 
-- Identifikátor.
+   - Identifikátor.
 
-- Konstantní výraz integrálního typu uzavřený v závorkách, **[]**. Pokud více dimenzí jsou deklarovány pomocí dalších závorky, můžete na první sadu závorek vynechat konstantní výraz.
+   - Konstantní výraz integrálního typu uzavřený v závorkách,  **\[]**. Pokud více dimenzí jsou deklarovány pomocí dalších závorky, můžete na první sadu závorek vynechat konstantní výraz.
 
-- Volitelně přidejte hranaté závorky ohraničující konstantní výrazy.
+   - Volitelně přidejte hranaté závorky ohraničující konstantní výrazy.
 
-3. Volitelný inicializátor.  Zobrazit [inicializátory](../cpp/initializers.md).
+1. Volitelný inicializátor. Další informace najdete v tématu [inicializátory](../cpp/initializers.md).
 
-Počet prvků v poli je dán konstantní výraz. První prvek v poli je 0. prvkem a poslední prvek je (*n*-1) elementu, kde *n* je počet elementů pole může obsahovat. *Konstantní výraz* musí být integrálního typu a musí být větší než 0. Pole s nulovou velikostí je platný jenom v případě pole je posledním polem **struktura** nebo **sjednocení** a když jsou povolena rozšíření společnosti Microsoft (/Ze).
+Počet prvků v poli je dán *konstantní výraz*. První prvek v poli je 0. prvkem a poslední prvek je (*n*-1) elementu, kde *n* je počet elementů pole může obsahovat. *Konstantní výraz* musí být integrálního typu a musí být větší než 0. Pole s nulovou velikostí je platný jenom v případě pole je posledním polem **struktura** nebo **sjednocení** a když jsou povolena rozšíření společnosti Microsoft (/Ze).
 
 Následující příklad ukazuje, jak definovat pole za běhu:
 

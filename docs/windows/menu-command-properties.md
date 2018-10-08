@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 28426e2ca75638f5ad45188a8790d1c281afa99b
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: c846cecb415365db92e3097bbf04ab06cd4209d0
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317913"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860443"
 ---
 # <a name="menu-command-properties-c"></a>Vlastnosti příkazu nabídky (C++)
 
@@ -28,7 +28,7 @@ Níže uvedené informace jsou uspořádané podle **nabídky** vlastnosti, kter
 
 |Vlastnost|Popis|
 |--------------|-----------------|
-|**Konec**|Může být jedna z těchto hodnot:<br /><br /> -   **Žádný** (výchozí): žádné přerušení.<br />-   **Sloupec**: pro statické nabídky, tato hodnota umístí příkaz nabídky na nový řádek. Pro místní nabídky umístí tato hodnota příkazu nabídky nový sloupec s žádný zřejmý mezi sloupci. Nastavení této vlastnosti má vliv na vzhled nabídky pouze v době běhu, není v nabídce editoru.<br />-   **Panel**: totéž jako **sloupec** s výjimkou, pro místní nabídky, tato hodnota odděluje nového sloupce ze staré sloupci se zobrazuje svislá čára. Nastavení této vlastnosti není v ovlivňuje vzhled nabídky pouze v době běhu **nabídky** editoru.|
+|**Konec**|Může být jedna z těchto hodnot:<br /><br />- **Žádný** (výchozí): žádné přerušení.<br />- **Sloupec**: pro statické nabídky, tato hodnota umístí příkaz nabídky na nový řádek. Pro místní nabídky umístí tato hodnota příkazu nabídky nový sloupec s žádný zřejmý mezi sloupci. Nastavení této vlastnosti má vliv na vzhled nabídky pouze v době běhu, není v nabídce editoru.<br />- **Panel**: totéž jako **sloupec** s výjimkou, pro místní nabídky, tato hodnota odděluje nového sloupce ze staré sloupci se zobrazuje svislá čára. Nastavení této vlastnosti není v ovlivňuje vzhled nabídky pouze v době běhu **nabídky** editoru.|
 |**Titulek**|Text, který označuje příkaz nabídky (název nabídky). K výběru jedné ze písmena v popiscích nabídky příkazu mnemonická klávesa, předchází znak ampersand (&).|
 |**Zaškrtnuto**|Pokud **True**, je příkaz nabídky hesla implicitně zaškrtnuto. Typ: **Bool**. Výchozí hodnota: **False**.|
 |**Povoleno**|Pokud **False**, položka nabídky je zakázána.|

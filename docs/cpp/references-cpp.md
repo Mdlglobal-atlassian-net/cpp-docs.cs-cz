@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9bd01cf5c153fcd31bae1a73fead87fe480cdd2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a3a93d434907a2a3ff13053ee4b932201de22f3a
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030417"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861405"
 ---
 # <a name="references-c"></a>Odkazy (C++)
 
@@ -32,41 +32,35 @@ Odkaz, jako je ukazatel, uchovává adresu objektu, který je umístěn kdekoli 
 
 Odkazy mohou být deklarovány pomocí následující syntaxe:
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers 
-[ms-modifier] declarator [= expression];
-```
+> \[*specifikátory třídy úložiště*] \[ *kvalifikátory cv*] *specifikátory typu* \[ *ms modifikátor*]  *deklarátor* \[ **=** *výraz*]**;**
 
 Žádné platné deklarátoru určující odkaz může být použit. Není-li odkaz na odkaz na funkci nebo typ pole, platí následující zjednodušenou syntaxi:
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers [& or &&] 
-[cv-qualifiers] identifier [= expression];
-```
+> \[*specifikátory třídy úložiště*] \[ *kvalifikátory cv*] *specifikátory typu* \[ **&** nebo **&&**] \[ *kvalifikátory cv*] *identifikátor* \[ **=** *výraz*]**;**
 
 Odkazy jsou deklarovány následujícím způsobem:
 
 1. Specifikátory deklarace:
 
-- Volitelný specifikátor paměťové třídy.
+   - Volitelný specifikátor paměťové třídy.
 
-- Volitelné **const** a/nebo **volatile** kvalifikátory.
+   - Volitelné **const** a/nebo **volatile** kvalifikátory.
 
-- Specifikátor typu: název typu.
+   - Specifikátor typu: název typu.
 
-- 2. Deklarátor:
+1. Deklarátor:
 
-- Volitelný specifický modifikátor Microsoft. Další informace najdete v tématu [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md).
+   - Volitelný specifický modifikátor Microsoft. Další informace najdete v tématu [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-- & – Operátor nebo & & – operátor.
+   - **&** Operátor nebo **&&** operátor.
 
-- Volitelné **const** a/nebo **volatile** qualifers.
+   - Volitelné **const** a/nebo **volatile** qualifers.
 
-- Identifikátor.
+   - Identifikátor.
 
-3. Volitelný inicializátor.
+1. Volitelný inicializátor.
 
-Složitější forms deklarátoru ukazatele na pole a funkce platí také pro odkazy na pole a funkce, najdete v části [ukazatele](../cpp/pointers-cpp.md).
+Složitějších deklarátorů formuláře pro ukazatele na pole a funkce platí také pro odkazy na pole a funkce. Další informace najdete v tématu [ukazatele](../cpp/pointers-cpp.md).
 
 Více inicializátory a deklarátory mohou zobrazit v čárkami oddělený seznam po jedné deklaraci specifikátor. Příklad:
 
@@ -83,7 +77,7 @@ int &ref, *ptr, k;
 
 Odkaz na uchovává adresu objektu, ale chová se syntakticky stejně jako objekt.
 
-V následující program, Všimněte si, že název objektu, `Today`a odkaz na objekt, `TodayRef`, můžete použít stejně jako v programech:
+V následující program, Všimněte si, že název objektu, `s`a odkaz na objekt, `SRef`, můžete použít stejně jako v programech:
 
 ## <a name="example"></a>Příklad
 
@@ -120,4 +114,3 @@ int main() {
 [Argumenty funkce typu odkazu](../cpp/reference-type-function-arguments.md)<br/>
 [Funkce vracející typ odkazu](../cpp/reference-type-function-returns.md)<br/>
 [Odkazy na ukazatele](../cpp/references-to-pointers.md)
-

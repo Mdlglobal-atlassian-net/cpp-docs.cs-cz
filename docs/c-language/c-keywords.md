@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3091437333d01db3fa556cb3c164e916c3628333
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 80c1f0d4ac5d843732771281202612e31a4073c2
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057790"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860885"
 ---
 # <a name="c-keywords"></a>Klíčová slova jazyka C
 
@@ -48,15 +48,15 @@ Kompilátor jazyka C společnosti Microsoft rozlišuje následující klíčová
 
 |||||
 |-|-|-|-|
-|**__asm**|**DllImport**2|**__int8**|**naked**2|
-|**__based –** 1|**__except**|**__int16**|**__stdcall**|
-|**__cdecl**|**__fastcall**|**__int32**|**vlákno**2|
+|**__asm**|**DllImport**<sup>2</sup>|**__int8**|**naked**<sup>2</sup>|
+|**__based –**<sup>1</sup>|**__except**|**__int16**|**__stdcall**|
+|**__cdecl**|**__fastcall**|**__int32**|**vlákno**<sup>2</sup>|
 |**__declspec**|**__finally**|**__int64**|**__try**|
-|**dllexport**2|**__inline**|**__leave**||
+|**dllexport**<sup>2</sup>|**__inline**|**__leave**||
 
-1. **__Based** – klíčové slovo má omezené využití pro 32bitové a 64bitové cílové soubory.
+<sup>1</sup> **__based** – klíčové slovo má omezené využití pro 32bitové a 64bitové cílové soubory.
 
-2. Toto jsou speciální identifikátory při použití s **__declspec**; jejich použití v jiných kontextech není omezeno.
+<sup>2</sup> jde o speciální identifikátory při použití s **__declspec**; jejich použití v jiných kontextech není omezeno.
 
 Ve výchozím nastavení jsou povolena rozšíření společnosti Microsoft. K zajištění plné přenositelnosti programů lze zakázat rozšíření Microsoft zadáním možnosti kompilátoru /Za (kompilace z důvodu kompatibility ANSI) během kompilace. Když toto provedete, jsou zakázána klíčová slova specifická pro společnost Microsoft.
 

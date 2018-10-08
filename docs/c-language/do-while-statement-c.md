@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef670aca60b2e3156ea70480a1dafc315ae60624
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4b86fa6444889f77b306e4ae543e7d2db41d721b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061471"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860677"
 ---
 # <a name="do-while-statement-c"></a>do-while – příkaz (C)
 
@@ -30,7 +30,7 @@ ms.locfileid: "46061471"
 
 ## <a name="syntax"></a>Syntaxe
 
-*příkaz iterace*: &nbsp; &nbsp; &nbsp; &nbsp; **proveďte***příkaz***během (** *výraz***);** 
+*příkaz iterace*: &nbsp; &nbsp; &nbsp; &nbsp; **proveďte***příkaz***během (** *výraz***);**
 
 *Výraz* v *proveďte – zatímco* vyhodnotí po provedení tělo smyčky. Tělo smyčky, proto je vždy alespoň jednou spuštěn.
 
@@ -38,7 +38,7 @@ ms.locfileid: "46061471"
 
 1. Provede se tělo příkazu.
 
-2. Dále *výraz* vyhodnocena. Pokud *výraz* má hodnotu false, *proveďte-při* příkaz skončí a předá řízení dalšímu příkazu v programu. Pokud *výraz* má hodnotu true (nenulový), proces se opakuje, počínaje krokem 1.
+1. Dále *výraz* vyhodnocena. Pokud *výraz* má hodnotu false, *proveďte-při* příkaz skončí a předá řízení dalšímu příkazu v programu. Pokud *výraz* má hodnotu true (nenulový), proces se opakuje, počínaje krokem 1.
 
 *Proveďte-při* příkaz může také skončit při **přerušení**, **goto**, nebo **vrátit** je proveden příkaz v rámci těla příkazu.
 

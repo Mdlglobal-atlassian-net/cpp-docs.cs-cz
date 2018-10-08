@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985ff4eb96b904dc9c5b4377b336109b00e06b40
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ba4cb1411bca452de0f146626421315fa7dc177e
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716585"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48859858"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI (Zadat adresáře metadat)
 
@@ -49,9 +49,9 @@ Lze předat pouze jeden adresář **/AI** vyvolání. Zadejte jednu **/AI** mož
 
 1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
-2. Vyberte **vlastnosti konfigurace** > **C/C++** > **Obecné** stránku vlastností.
+1. Vyberte **vlastnosti konfigurace** > **C/C++** > **Obecné** stránku vlastností.
 
-3. Upravit **další # adresáře using** vlastnost.
+1. Upravit **další # adresáře using** vlastnost.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 

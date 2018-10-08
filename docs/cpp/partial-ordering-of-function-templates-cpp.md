@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5b550cd0b76aa0a2e061536ae6bb0ea61063909
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 048589ecab367a3762764b627de11d72160c4602
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087744"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861301"
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>Částečné řazení šablon funkcí (C++)
 
@@ -31,23 +31,23 @@ Chcete-li určit, zda je kandidát šablony funkce více specializovaný, použi
 
 1. Vezměte v úvahu dvě šablony funkcí, T1 a T2.
 
-2. Nahraďte parametry šablony T1 hypotetickým jedinečným typem X.
+1. Nahraďte parametry šablony T1 hypotetickým jedinečným typem X.
 
-3. Zjistěte, zda je šablona T2 platnou šablonou pro seznam parametrů šablony T1. Ignorujte všechny implicitní převody.
+1. Zjistěte, zda je šablona T2 platnou šablonou pro seznam parametrů šablony T1. Ignorujte všechny implicitní převody.
 
-4. Opakujte stejný postup se záměnou šablon T1 a T2.
+1. Opakujte stejný postup se záměnou šablon T1 a T2.
 
-5. Je-li jedna šablona platnou šablonou seznamu argumentů pro druhou šablonu, nikoli naopak, je první šablona považována za méně specializovanou než druhá šablona. Je-li obě šablony předchozí krok formuláře platné argumenty pro sebe navzájem, pak jsou považovány za utvářejí a výsledky nejednoznačné volání při pokusu o jejich použití.
+1. Je-li jedna šablona platnou šablonou seznamu argumentů pro druhou šablonu, nikoli naopak, je první šablona považována za méně specializovanou než druhá šablona. Je-li obě šablony předchozí krok formuláře platné argumenty pro sebe navzájem, pak jsou považovány za utvářejí a výsledky nejednoznačné volání při pokusu o jejich použití.
 
-6. Použijte tato pravidla:
+1. Použijte tato pravidla:
 
-     1. Specializace šablony pro konkrétní typ je více specializovaná než specializace přijímající argument obecného typu.
+   1. Specializace šablony pro konkrétní typ je více specializovaná než specializace přijímající argument obecného typu.
 
-     2. Šablony trvá pouze __T\*__  je více specializovaný než jeden trvá __T__, protože typ hypotetické __X\*__  je platným argumentem pro __T__ argument šablony, ale __X__ není platným argumentem pro __T\*__  argument šablony.
+   1. Šablony trvá pouze __T\*__  je více specializovaný než jeden trvá __T__, protože typ hypotetické __X\*__  je platným argumentem pro __T__ argument šablony, ale __X__ není platným argumentem pro __T\*__  argument šablony.
 
-     3. __Const T__ je více specializovaný než __T__, protože __const X__ je platným argumentem pro __T__ argument šablony, ale __X__ je argument není platný pro __const T__ argument šablony.
+   1. __Const T__ je více specializovaný než __T__, protože __const X__ je platným argumentem pro __T__ argument šablony, ale __X__ je argument není platný pro __const T__ argument šablony.
 
-     4. __Const T\*__  je více specializovaný než __T\*__, protože __const X\*__  je platným argumentem pro __T\*__  argument šablony, ale __X\*__  není platným argumentem pro __const T\*__  argument šablony.
+   1. __Const T\*__  je více specializovaný než __T\*__, protože __const X\*__  je platným argumentem pro __T\*__  argument šablony, ale __X\*__  není platným argumentem pro __const T\*__  argument šablony.
 
 ## <a name="example"></a>Příklad
 

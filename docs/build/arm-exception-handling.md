@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2251aefebd6805cfd071d014ad6be30cbea065bb
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ae80e1f7f824f41f6bc0b3f979973f5867666354
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711227"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861652"
 ---
 # <a name="arm-exception-handling"></a>Zpracování výjimek ARM
 
@@ -82,15 +82,15 @@ Tato tabulka zobrazuje ve formátu sady .pdata záznam, který obsahuje balené 
 |Posun aplikace Word|Bity|Účel|
 |-----------------|----------|-------------|
 |0|0-31|*Funkce spuštění RVA* je adresa RVA 32-bit zahájení funkce. Pokud funkce obsahuje kód pro thumb, musí být nastavena s nízkou bit tuto adresu.|
-|1|0-1|*Příznak* je 2 bitové pole, která má tyto význam:<br /><br /> -00 = sbalené unwind dat nepoužívá; zbývající bity odkazují na záznam .xdata.<br />-01 = sbalené unwind data.<br />-10 = sbalené unwind dat, ve kterém funkce předpokládá, že je mít žádné prologu. To je užitečné pro popis funkce fragmentů, které jsou nesousedících s spuštění funkce.<br />-11 = rezervované.|
+|1|0-1|*Příznak* je 2 bitové pole, která má tyto význam:<br /><br />-00 = sbalené unwind dat nepoužívá; zbývající bity odkazují na záznam .xdata.<br />-01 = sbalené unwind data.<br />-10 = sbalené unwind dat, ve kterém funkce předpokládá, že je mít žádné prologu. To je užitečné pro popis funkce fragmentů, které jsou nesousedících s spuštění funkce.<br />-11 = rezervované.|
 |1|2-12|*Funkce délka* je 11bitový pole, která poskytuje délka celou funkci v bajtech, děleno 2. Pokud funkce je větší než 4 kB, záznam úplné .xdata musí použít.|
-|1|13-14|*Staré* je 2 bitové pole, která určuje, jak funkce vrátí:<br /><br /> -00 = vrátit přes pop {pc} ( *L* bit příznaku musí být nastavena na hodnotu 1 v tomto případě).<br />-01 = vrátit pomocí větev 16 bitů.<br />-10 = vrátit pomocí 32bitové větve.<br />-11 = žádná epilogu vůbec. To je užitečné pro popis fragmentu nesousedících funkce, která může obsahovat jenom prologu, ale jehož epilogu je jinde.|
+|1|13-14|*Staré* je 2 bitové pole, která určuje, jak funkce vrátí:<br /><br />-00 = vrátit přes pop {pc} ( *L* bit příznaku musí být nastavena na hodnotu 1 v tomto případě).<br />-01 = vrátit pomocí větev 16 bitů.<br />-10 = vrátit pomocí 32bitové větve.<br />-11 = žádná epilogu vůbec. To je užitečné pro popis fragmentu nesousedících funkce, která může obsahovat jenom prologu, ale jehož epilogu je jinde.|
 |1|15|*H* je 1-bit příznaku, která určuje, zda funkce "homes" parametr celé číslo registruje (r0 – r3) podle jejich ukládání na začátku funkce a uvolní 16 bajtů zásobníku před vrácením. (0 = není domácí registrů, 1 = registrů nemovitostí.)|
 |1|16-18|*Reg* 3 bitové pole, která určuje index posledního uložení register není typu volatile. Pokud *R* bit na hodnotu 0, pak se ukládají pouze celočíselné registry a předpokládá, že jsou v rozsahu r4 rN, kde N je rovna 4 + *Reg*. Pokud *R* bit na hodnotu 1 a pak se ukládají pouze s plovoucí desetinnou čárkou registry a předpokládá, že jsou v rozsahu d8 – rozlišující název, kde N je rovna hodnotě 8 + *Reg*. Speciální kombinací *R* = 1 a *Reg* = 7 znamená, že jsou uloženy žádné Registry.|
 |1|19|*R* je 1-bit příznaku, která označuje, jestli jsou uložené registry stálé celočíselné registry (0) nebo s plovoucí desetinnou čárkou registrů (1). Pokud *R* je nastavena na hodnotu 1 a *Reg* je nastaveno na hodnotu 7, byly nabídnuty žádné registry není typu volatile.|
 |1|20|*L* je 1-bit příznaku, která určuje, zda funkce uloží a obnoví LR, spolu s jinými registry indikován *Reg* pole. (0 = nelze uložit/obnovit, 1 = nemá uložit/obnovit.)|
 |1|21|*C* je 1bitový příznak, který značí, zda funkce obsahuje další pokyny k nastavení řetěz snímků pro rychlé stack walking (1) nebo ne (0). Pokud je tento bit nastaven, r11 implicitně přidá do seznamu celé číslo bez registry uložit. (Zobrazit omezení pod if *C* příznak se používá.)|
-|1|22-31|*Stack – upravit* je 10 bitové pole, která určuje počet bajtů zásobníku, které jsou přiděleny pro tuto funkci hodnotou 4. Nicméně je možné přímo kódovat pouze hodnoty mezi hodnotu 0x000 0x3F3. Funkce, které přidělit víc než 4044 bajtů zásobníku musí používat úplnou .xdata záznam. Pokud *upravit zásobníku* pole je 0x3F4 nebo větší, pak nízké bity 4 mají zvláštní význam:<br /><br /> -Služba bits 0-1 určit počet slova zásobníku úpravy (1 – 4) odečte 1.<br />-Bit 2 je nastavena na hodnotu 1, pokud prologu kombinovat tato úprava do jeho pomocí operace push.<br />-Bit 3 je nastavena na hodnotu 1, pokud epilogu kombinovat tato úprava do jeho operace pop.|
+|1|22-31|*Stack – upravit* je 10 bitové pole, která určuje počet bajtů zásobníku, které jsou přiděleny pro tuto funkci hodnotou 4. Nicméně je možné přímo kódovat pouze hodnoty mezi hodnotu 0x000 0x3F3. Funkce, které přidělit víc než 4044 bajtů zásobníku musí používat úplnou .xdata záznam. Pokud *upravit zásobníku* pole je 0x3F4 nebo větší, pak nízké bity 4 mají zvláštní význam:<br /><br />-Služba bits 0-1 určit počet slova zásobníku úpravy (1 – 4) odečte 1.<br />-Bit 2 je nastavena na hodnotu 1, pokud prologu kombinovat tato úprava do jeho pomocí operace push.<br />-Bit 3 je nastavena na hodnotu 1, pokud epilogu kombinovat tato úprava do jeho operace pop.|
 
 Z důvodu možných redundance ve výše uvedené kódování platí tato omezení:
 
@@ -187,7 +187,7 @@ Když sbalené unwind formátu není dostatečná k popisu odvíjení funkce, je
    |1|16-23|*Rozšířené slova kódu* je 8 bitů pole, která poskytuje více místa pro kódování neobvykle velký počet slov kód unwind. Slovo rozšíření, která obsahuje toto pole je k dispozici pouze pokud *epilogu počet* a *slova kódu* obě pole v první slovo záhlaví jsou nastaveny na hodnotu 0.|
    |1|24-31|Rezervováno|
 
-2. Po data výjimky (Pokud *E* bitu v hlavičce byl nastaven na hodnotu 0) je přehled informací o epilogu obory, které jsou zabaleny z nich se má u slov velká a uloženy v pořadí podle zvýšení počáteční posun. Každý obor obsahuje tato pole:
+1. Po data výjimky (Pokud *E* bitu v hlavičce byl nastaven na hodnotu 0) je přehled informací o epilogu obory, které jsou zabaleny z nich se má u slov velká a uloženy v pořadí podle zvýšení počáteční posun. Každý obor obsahuje tato pole:
 
    |Bity|Účel|
    |----------|-------------|
@@ -196,9 +196,9 @@ Když sbalené unwind formátu není dostatečná k popisu odvíjení funkce, je
    |20-23|*Podmínka* je 4 bitové pole, která poskytuje podmínku, pod kterým je spuštěn epilogu. Nepodmíněný epilogů by měla být nastavena na 0xE, což znamená "always". (Epilogu musí být zcela podmíněný nebo zcela Nepodmíněný a v režimu Thumb-2 epilogu začíná první instrukce po IT operační kód.)|
    |24-31|*Start Index epilogu* je 8 bitů pole, která určuje bajtový index první unwind kódu, který popisuje toto epilogu.|
 
-3. Po vstupu do seznamu oborů epilogu pole bajtů, které obsahují kódy unwind, které jsou podrobně popsány v části kódy Unwind v tomto článku. Toto pole je, aby bylo vytvořeno po uplynutí na nejbližší hranici úplné slovo. Bajty jsou uloženy v pořadí little endian, takže může být přímo načíst v režimu little endian.
+1. Po vstupu do seznamu oborů epilogu pole bajtů, které obsahují kódy unwind, které jsou podrobně popsány v části kódy Unwind v tomto článku. Toto pole je, aby bylo vytvořeno po uplynutí na nejbližší hranici úplné slovo. Bajty jsou uloženy v pořadí little endian, takže může být přímo načíst v režimu little endian.
 
-4. Pokud *X* pole v záhlaví je 1, kód bajtů unwind následuje informace o výjimce obslužné rutiny. To se skládá z jednoho *RVA obslužné rutiny výjimek* , který obsahuje adresu obslužnou rutinu výjimky, okamžitě následován (proměnné délky) množství dat nutnému obslužnou rutinou výjimky.
+1. Pokud *X* pole v záhlaví je 1, kód bajtů unwind následuje informace o výjimce obslužné rutiny. To se skládá z jednoho *RVA obslužné rutiny výjimek* , který obsahuje adresu obslužnou rutinu výjimky, okamžitě následován (proměnné délky) množství dat nutnému obslužnou rutinou výjimky.
 
 Záznam .xdata je navržený tak, aby je možné načíst první 8 bajtů a výpočetní na plnou velikost záznamu, nezahrnuje délka data výjimky proměnlivé velikosti, který následuje. Tento fragment kódu vypočítá velikost záznamu:
 

@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dfcf1839048f3c110bbca6754d1549161b63301
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fd273afaf5934313067ada55574edbaeee43929b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716529"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861535"
 ---
 # <a name="arm64-exception-handling"></a>Zpracování výjimek ARM64
 
@@ -34,11 +34,11 @@ Data konvence odvíjení výjimky a tento popis jsou určené pro:
 
    - Pokud není možné plně popsány pomocí kódy unwind odvíjení, v některých případech ho musí přejít k dekódování instrukce. To zvyšuje celkovou složitost a v ideálním případě by se jim vyhnout.
 
-2. Podpora odvíjení v polovině kódu prologu a epilogu uprostřed.
+1. Podpora odvíjení v polovině kódu prologu a epilogu uprostřed.
 
    - Uvolnění se používá ve Windows pro více než zpracování výjimek, takže je důležité, že budeme moct provádět přesný unwind i při uprostřed sekvence kódu prologu nebo epilogu.
 
-3. Spotřebovávat minimální množství místa.
+1. Spotřebovávat minimální množství místa.
 
    - Významně zvyšuje velikost binárního nesmí agregovat kódy unwind.
 
@@ -50,15 +50,15 @@ Následují předpoklady v popisu zpracování výjimek:
 
 1. Pro zrcadlení obou jiné mají tendenci Prology a epilogu funkce. Podle a současně využívat toto společné vlastnosti lze velikost metadata potřebná k popisu odvíjení výrazně snížit. V těle funkce nezáleží, jestli jsou prologu operace vrátit zpět nebo epilogu operace se provádějí v dopředné způsobem. Jak by měl vytvářet identické výsledky.
 
-2. Funkce jsou obvykle celkově poměrně malý. Několik optimalizací pro prostor spoléhat na to, abyste dosáhli co nejúčinnější balení data.
+1. Funkce jsou obvykle celkově poměrně malý. Několik optimalizací pro prostor spoléhat na to, abyste dosáhli co nejúčinnější balení data.
 
-3. V epilogů není žádný podmíněný kód.
+1. V epilogů není žádný podmíněný kód.
 
-4. Vyhrazené registr ukazatelů rámce: Pokud sp je uložen v registru jiného (r29) v prologu, registru zůstane beze změny v rámci funkce, tak, aby původní sp může být kdykoli obnoven.
+1. Vyhrazené registr ukazatelů rámce: Pokud sp je uložen v registru jiného (r29) v prologu, registru zůstane beze změny v rámci funkce, tak, aby původní sp může být kdykoli obnoven.
 
-5. Pokud sp je uložen v registru jiné, všech manipulaci s ukazatel zásobníku dojde k výhradně v rámci kódu prologu a epilogu.
+1. Pokud sp je uložen v registru jiné, všech manipulaci s ukazatel zásobníku dojde k výhradně v rámci kódu prologu a epilogu.
 
-6. Rozložení rámce zásobníku je uspořádaný, jak je popsáno v další části.
+1. Rozložení rámce zásobníku je uspořádaný, jak je popsáno v další části.
 
 ## <a name="arm64-stack-frame-layout"></a>Rozložení rámce zásobníku ARM64
 
@@ -80,7 +80,7 @@ Pro funkce rámce zřetězené lze uložit dvojice fp a lr v jakékoliv pozici v
         sub    sp, #outsz               // (optional for #outsz != 0)
     ```
 
-2. Zřetězené #localsz > 512
+1. Zřetězené #localsz > 512
 
     ```asm
         stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -94,7 +94,7 @@ Pro funkce rámce zřetězené lze uložit dvojice fp a lr v jakékoliv pozici v
         add    r29,sp, #outsz           // setup r29 points to bottom of local area
     ```
 
-3. Funkce unchained, typu list (lr neuložené)
+1. Funkce unchained, typu list (lr neuložené)
 
     ```asm
         stp    r19,r20,[sp, -72]!       // pre-indexed, save in 1st FP/INT reg-pair
@@ -107,7 +107,7 @@ Pro funkce rámce zřetězené lze uložit dvojice fp a lr v jakékoliv pozici v
 
    Všechny místní hodnoty jsou přístupné podle SP. \<R29, lr > odkazuje na předchozí snímek. Pro velikost rámce < = 512, "sub sp,..." lze vypuštěn když oblasti regs uložit se přesune do dolní části zásobníku. Nevýhodou, který je, že to není konzistentní s jiné rozložení výše a uložené regs trvat součástí rozsahu pro dvojice regs a provedení před instrumentací a po ní indexované režim odsazení adresování.
 
-4. Funkce unchained, mimo úroveň listu (lr je uložen v oblasti Int uložit)
+1. Funkce unchained, mimo úroveň listu (lr je uložen v oblasti Int uložit)
 
     ```asm
         stp    r19,r20,[sp,-80]!        // pre-indexed, save in 1st FP/INT reg-pair
@@ -141,7 +141,7 @@ Pro funkce rámce zřetězené lze uložit dvojice fp a lr v jakékoliv pozici v
 
    Všechny místní hodnoty jsou přístupné podle SP. \<R29 > odkazuje na předchozí snímek.
 
-5. Zřetězené #framesz < = 512 #outsz = 0
+1. Zřetězené #framesz < = 512 #outsz = 0
 
     ```asm
         stp    r29, lr, [sp, -#framesz]!    // pre-indexed, save <r29,lr>
@@ -152,7 +152,7 @@ Pro funkce rámce zřetězené lze uložit dvojice fp a lr v jakékoliv pozici v
 
    Porovnejte prologu #1 výše, výhodou je, se všechny registrace uložit pokyny se spustí hned po pouze jeden zásobníku přidělením pokyn. Proto není proti závislost na sp, která zabrání instrukce úrovně paralelismu.
 
-6. Zřetězené, velikost rámce > 512 (volitelné pro funkce bez alloca)
+1. Zřetězené, velikost rámce > 512 (volitelné pro funkce bez alloca)
 
     ```asm
         stp    r29, lr, [sp, -80]!          // pre-indexed, save <r29,lr>
@@ -166,7 +166,7 @@ Pro funkce rámce zřetězené lze uložit dvojice fp a lr v jakékoliv pozici v
 
    Za účelem optimalizace r29 můžete umístit na libovolné pozici v místní síti a poskytuje lepší pokrytí pro "reg dvojice" a předprodukční/po-indexed posun režim adresování. Místní hodnoty níže ukazatele na rámce je přístupný podle SP.
 
-7. Zřetězené, velikost rámce > 4 kB, s nebo bez něj alloca(),
+1. Zřetězené, velikost rámce > 4 kB, s nebo bez něj alloca(),
 
     ```asm
         stp    r29, lr, [sp, -80]!          // pre-indexed, save <r29,lr>
@@ -237,7 +237,7 @@ Tato data rozdělená do čtyř oddílů:
 
    g. **Rozšířené epilogu počet** a **rozšířené slova kódu** jsou pole 16 bitů a 8 bitů, respektive, které poskytují více místa pro kódování neobvykle velký počet epilogů nebo neobvykle velký počet unwind slova kódu. Word rozšíření obsahující tato pole se nachází pouze pokud **epilogu počet** a **slova kódu** pole v první slovo záhlaví jsou nastavena na hodnotu 0.
 
-2. Po data výjimky Pokud **epilogu počet** není nula, je seznam informací o oborech epilogu zabaleny z nich se má u slov velká a uloženy v pořadí podle zvýšení počáteční posun. Každý obor obsahuje následující bits:
+1. Po data výjimky Pokud **epilogu počet** není nula, je seznam informací o oborech epilogu zabaleny z nich se má u slov velká a uloženy v pořadí podle zvýšení počáteční posun. Každý obor obsahuje následující bits:
 
    a. **Posun Start epilogu** je 18 bitové pole s popisem posun v bajtech, dělený 4 epilogu vzhledem ke spuštění funkce
 
@@ -245,9 +245,9 @@ Tato data rozdělená do čtyř oddílů:
 
    c. **Start Index epilogu** je 10-bit (2 většího počtu bitů než **rozšířené slova kódu**) označující bajtový index prvního pole unwind kód, který popisuje toto epilogu.
 
-3. Po vstupu do seznamu oborů epilogu pole bajtů, které obsahují kódy unwind podrobně popsány v další části. Toto pole je, aby bylo vytvořeno po uplynutí na nejbližší hranici úplné slovo. Bajty jsou uloženy v pořadí little endian, takže může být přímo načíst v režimu little endian.
+1. Po vstupu do seznamu oborů epilogu pole bajtů, které obsahují kódy unwind podrobně popsány v další části. Toto pole je, aby bylo vytvořeno po uplynutí na nejbližší hranici úplné slovo. Bajty jsou uloženy v pořadí little endian, takže může být přímo načíst v režimu little endian.
 
-4. Nakonec po unwind kód bajtů (a pokud **X** bitu v hlavičce byla nastavena na 1) obsahuje informace o výjimce obslužné rutiny. Tento postup se skládá z jednoho **RVA obslužné rutiny výjimek** poskytuje adresu obslužná rutina výjimky, okamžitě následován proměnné délky množství dat nutnému obslužnou rutinou výjimky.
+1. Nakonec po unwind kód bajtů (a pokud **X** bitu v hlavičce byla nastavena na 1) obsahuje informace o výjimce obslužné rutiny. Tento postup se skládá z jednoho **RVA obslužné rutiny výjimek** poskytuje adresu obslužná rutina výjimky, okamžitě následován proměnné délky množství dat nutnému obslužnou rutinou výjimky.
 
 Výše uvedené .xdata záznamu je navržená tak, že je možné načíst první 8 bajtů a z té compute na plnou velikost záznamu (minus délka data výjimky proměnlivé velikosti, který následuje). Následující fragment kódu vypočítá velikost záznamu:
 
@@ -287,9 +287,9 @@ Pokud výjimky byla zaručeno, že vždy jen ke kterým dochází v těle funkce
 
 1. Podle počtu kódy unwind, je možné vypočítat délku kódu prologu a epilogu.
 
-2. Podle počtu pokynů po spuštění epilogu oboru, je možné přeskočit ekvivalentní počet kódy unwind a provést zbývající části sekvence dokončit částečně spouštěné unwind fungování epilogu.
+1. Podle počtu pokynů po spuštění epilogu oboru, je možné přeskočit ekvivalentní počet kódy unwind a provést zbývající části sekvence dokončit částečně spouštěné unwind fungování epilogu.
 
-3. Podle počtu pokynů před koncem prologu, je možné přeskočit ekvivalentní počet kódy unwind a provést zbývající části sekvence vrátit pouze ty části úvodní části, které se dokončí.
+1. Podle počtu pokynů před koncem prologu, je možné přeskočit ekvivalentní počet kódy unwind a provést zbývající části sekvence vrátit pouze ty části úvodní části, které se dokončí.
 
 Podle následující tabulky jsou kódovány kódy unwind. Všechny kódy unwind jsou jedním/double byte, kromě toho, který přiděluje obrovské zásobníku. Existují zcela 21 unwind kód. Každý unwind kód mapy přesně jeden instrukce v kódu prologu/epilogu aby bylo možné povolit pro uvolnění částečně prováděnou Prology a epilogu funkce.
 
@@ -433,9 +433,9 @@ Nyní není vždy případě, že kód prologu a epilogu přesně shodovat. Z to
 
 1. Pokud návrat zpět z v rámci těla funkce, jednoduše spusťte skript kódy unwind na pozici 0 a pokračovat až do dosažení operační kód "end".
 
-2. Pokud návrat zpět z v rámci epilogu, použijte konkrétní epilogu počáteční index s rozsahem epilogu jako výchozí bod k dispozici. Kolik bajtů dotyčný počítač je od samého začátku epilogu služby COMPUTE. Pak přejděte vpřed prostřednictvím kódy unwind kódy unwind přeskakuje, dokud všechny už provedli pokyny jsou zahrnuté. Pak proveďte spuštění v tomto okamžiku.
+1. Pokud návrat zpět z v rámci epilogu, použijte konkrétní epilogu počáteční index s rozsahem epilogu jako výchozí bod k dispozici. Kolik bajtů dotyčný počítač je od samého začátku epilogu služby COMPUTE. Pak přejděte vpřed prostřednictvím kódy unwind kódy unwind přeskakuje, dokud všechny už provedli pokyny jsou zahrnuté. Pak proveďte spuštění v tomto okamžiku.
 
-3. Pokud návrat zpět z v rámci prologu, použijte jako výchozí bod index 0. Výpočetní délky kódu prologu z pořadí a pak výpočetní kolik bajtů dotyčný počítač se od konce prologu. Pak přejděte vpřed prostřednictvím kódy unwind kódy unwind přeskakuje, dokud všechny nebyl dosud proveden pokyny jsou zahrnuté. Pak proveďte spuštění v tomto okamžiku.
+1. Pokud návrat zpět z v rámci prologu, použijte jako výchozí bod index 0. Výpočetní délky kódu prologu z pořadí a pak výpočetní kolik bajtů dotyčný počítač se od konce prologu. Pak přejděte vpřed prostřednictvím kódy unwind kódy unwind přeskakuje, dokud všechny nebyl dosud proveden pokyny jsou zahrnuté. Pak proveďte spuštění v tomto okamžiku.
 
 V důsledku těchto pravidel kódy unwind prologu musí být vždy první pole a jsou také kódy používané k provedení operace unwind v obecné případ návrat zpět z v rámci těla. Ihned po postupujte podle jakékoli sekvencí kódu epilogu specifické.
 
@@ -484,13 +484,13 @@ Je obvyklý případ z funkce fragmenty "code oddělení" s, kterou kompilátor 
 
    Parsovat kódy unwind: `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`.
 
-2. Pouze epilogů (oblast 2: prologu je v oblasti hostitele)
+1. Pouze epilogů (oblast 2: prologu je v oblasti hostitele)
 
    Předpokládá se, že ovládací prvek čas přechod do této oblasti, všechny kódy prologu spustily. Částečné unwind může dojít v epilogů stejném principu jako normální funkce. Tento typ oblasti nemůže být reprezentována compact .pdata. V záznamu o úplné xdata, může být zakódován pomocí "fiktivní" prologu, uváděn v závorkách `end_c` a `end` unwind pár kódu.  Úvodního `end_c` označuje velikost kódu prologu je nula. Index v jedné epilogu bodů, do počátečního epilogu `set_fp`.
 
    Kódu uvolnění pro oblast 2: `end_c`, `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`.
 
-3. Žádné Prology nebo který (oblast 3: Prology a epilogu všechny funkce jsou v jiné fragmenty):
+1. Žádné Prology nebo který (oblast 3: Prology a epilogu všechny funkce jsou v jiné fragmenty):
 
    Kompaktní .pdata formátu lze použít prostřednictvím nastavení příznaku = 10. S plnou .xdata záznamem, počet epilogu = 1. Unwind – kód je stejný jako v případě oblast 2 výše, ale epilogu Start Index také odkazuje na `end_c`. Částečné unwind nikdy dojde v této oblasti kódu.
 

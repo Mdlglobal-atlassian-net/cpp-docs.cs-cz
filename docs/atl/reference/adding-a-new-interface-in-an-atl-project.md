@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d468e6e2770eca3bc01fca95fb585d1753210a3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fec98fd785f5e99875c5f73b13ce1082c16add2b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039020"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861756"
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>Přidání nového rozhraní projektu ATL
 
@@ -32,23 +32,23 @@ Přidat rozhraní do objektu nebo ovládací prvek, vytvoříte prázdná funkce
 
 Nové rozhraní můžete přidat do vašeho ovládacího prvku v jednom ze dvou způsobů: ručně nebo pomocí průvodců kódem v zobrazení tříd.
 
-### <a name="to-use-code-wizards-in-class-view-to-add-an-interface-to-an-existing-object-or-control"></a>Přidat rozhraní do existujícího objektu nebo ovládací prvek pomocí průvodců kódem v zobrazení tříd
+## <a name="to-use-code-wizards-in-class-view-to-add-an-interface-to-an-existing-object-or-control"></a>Přidat rozhraní do existujícího objektu nebo ovládací prvek pomocí průvodců kódem v zobrazení tříd
 
 1. V [zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code), klikněte pravým tlačítkem na název třídy ovládacího prvku. Například Úplné řízení nebo složených ovládacích prvků nebo jiných, který implementuje BEGIN_COM_MAP maker v souboru hlaviček třídy ovládacího prvku.
 
-2. V místní nabídce klikněte na tlačítko **přidat**a potom klikněte na tlačítko **implementovat rozhraní**.
+1. V místní nabídce klikněte na tlačítko **přidat**a potom klikněte na tlačítko **implementovat rozhraní**.
 
-3. Vyberte rozhraní k implementaci v [implementovat rozhraní průvodce](../../ide/implement-interface-wizard.md). Pokud rozhraní neexistuje v libovolné dostupné knihovny typů, pak jste musí jej ručně přidat do souboru IDL.
+1. Vyberte rozhraní k implementaci v [implementovat rozhraní průvodce](../../ide/implement-interface-wizard.md). Pokud rozhraní neexistuje v libovolné dostupné knihovny typů, pak jste musí jej ručně přidat do souboru IDL.
 
-### <a name="to-add-a-new-interface-manually"></a>Chcete-li ručně přidat nové rozhraní
+## <a name="to-add-a-new-interface-manually"></a>Chcete-li ručně přidat nové rozhraní
 
 1. Přidejte definici nového rozhraní do souboru IDL.
 
-2. Odvození objektu nebo ovládací prvek z rozhraní.
+1. Odvození objektu nebo ovládací prvek z rozhraní.
 
-3. Vytvořte nový [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) rozhraní nebo, pokud je projekt s atributy, přidejte `coclass` atribut.
+1. Vytvořte nový [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) rozhraní nebo, pokud je projekt s atributy, přidejte `coclass` atribut.
 
-4. Implementace metody v rozhraní.
+1. Implementace metody v rozhraní.
 
 ## <a name="see-also"></a>Viz také
 
@@ -58,4 +58,3 @@ Nové rozhraní můžete přidat do vašeho ovládacího prvku v jednom ze dvou 
 [Programování s použitím knihovny ATL a běhového kódu jazyka C](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Základy ATL – objekty COM](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Výchozí konfigurace projektu ATL](../../atl/reference/default-atl-project-configurations.md)
-

@@ -17,36 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be4bb44455fb97a61cb4af608667bd5c05f2756a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ea2301a85411cea8d5ffd6121f4fb4f45d3196eb
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766289"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860846"
 ---
 # <a name="testing-the-atl-dhtml-control"></a>Testování ovládacího prvku ATL DHTML
 
-Po vytvoření projektu můžete vytvářet a testovat Ukázka ovládacího prvku. Než to uděláte, můžete zobrazení tříd a okně Průzkumník řešení zkontrolujte projekt. Prvky projektu jsou popsány podrobněji v [identifikace prvků projektu ovládací prvek DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md).
+Po vytvoření projektu můžete vytvářet a testovat Ukázka ovládacího prvku. Než to uděláte, použijte **zobrazení tříd** a **Průzkumníka řešení** prozkoumat projektu. Prvky projektu jsou popsány podrobněji v [identifikace prvků projektu ovládací prvek DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md).
 
-#### <a name="to-build-and-test-the-atl-dhtml-control"></a>Pro vytváření a testování ovládacího prvku ATL DHTML
+## <a name="to-build-and-test-the-atl-dhtml-control"></a>Pro vytváření a testování ovládacího prvku ATL DHTML
 
 1. Sestavte projekt. Z **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
 
-2. Po dokončení sestavení, otevřete kontejner testu. Zobrazit [testování vlastností a událostí pomocí testovacího kontejneru](../mfc/testing-properties-and-events-with-test-container.md) informace o tom, jak získat přístup ke kontejneru testů.
+1. Po dokončení sestavení, otevřete **kontejner testu**. Zobrazit [testování vlastností a událostí pomocí testovacího kontejneru](../mfc/testing-properties-and-events-with-test-container.md) informace o tom, jak získat přístup k **kontejner testu**.
 
-3. V kontejneru testů z **upravit** nabídky, klikněte na tlačítko **vložte nový ovládací prvek**.
+1. V **kontejner testu**, z **upravit** nabídky, klikněte na tlačítko **vložte nový ovládací prvek**.
 
-4. V **vložit ovládací prvek** dialogové okno Vyberte ovládací prvek pole se seznamem. Mějte na paměti, jeho název je založen na krátký název, který jste určili v Průvodce ovládacími prvky ATL. Klikněte na tlačítko **OK**.
+1. V **vložit ovládací prvek** dialogové okno Vyberte ovládací prvek pole se seznamem. Mějte na paměti, jeho název je založen na krátký název, který jste určili v Průvodce ovládacími prvky ATL. Klikněte na tlačítko **OK**.
 
-5. Prozkoumejte ovládacího prvku. Všimněte si, že má posuvníku. Použijte úchyty ovládacího prvku pro změnu velikosti ovládacího prvku aktivovat posuvník.
+1. Prozkoumejte ovládacího prvku. Všimněte si, že má posuvníku. Použijte úchyty ovládacího prvku pro změnu velikosti ovládacího prvku aktivovat posuvník.
 
-6. Testování ovládacího prvku tlačítka. Barva pozadí změní barvu indikován tlačítka.
+1. Testování ovládacího prvku tlačítka. Barva pozadí změní barvu indikován tlačítka.
 
-7. Zavřete kontejner testu.
+1. Zavřít **kontejner testů**.
 
 Zkuste [úpravy ovládací prvek DHTML](../atl/modifying-the-atl-dhtml-control.md).
 
 ## <a name="see-also"></a>Viz také
 
 [Podpora pro ovládací prvek DHTML](../atl/atl-support-for-dhtml-controls.md)
-

@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6a980a96198db80f0956895292d37f123d0351c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 75f629c8a9c8a06f02024e9d52ab13b2d12b234c
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723304"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860385"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Sestavení knihovny importu a souboru exportu
 
@@ -52,9 +52,9 @@ Pokud je zadána DEF, LIB vytvoří výstupní soubory z specifikace exportu, kt
 
 1. A **__declspec(dllexport)** definice v jednom z *objfiles* nebo *knihovny*
 
-2. Specifikaci/Export je přebytečný:*název* na příkazovém řádku LIB
+1. Specifikaci/Export je přebytečný:*název* na příkazovém řádku LIB
 
-3. V definici **EXPORTY** příkaz v *deffile*
+1. V definici **EXPORTY** příkaz v *deffile*
 
 Jedná se o stejné metody, které se používá k určení exportů při propojování export programu. Program můžete použít více než jednu metodu. Můžete zadat část příkazu LIB (například více *objfiles* nebo specifikaci/Export je přebytečný) v souboru příkazů v příkazu LIB, stejně jako lze v příkazu LINK.
 

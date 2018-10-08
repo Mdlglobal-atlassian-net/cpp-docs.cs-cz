@@ -16,26 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83dbcdc433ea731e6ddf0765b4b3a55d5707f429
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4a0ccd608baa2765ae355a16b9a71afbf3695d8f
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059495"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48859780"
 ---
 # <a name="c-runtime-error-r6031"></a>Chyba modulu Runtime R6031 C
 
 Pokus o inicializaci CRT více než jednou. To znamená chybu ve vaší aplikaci.
 
 > [!NOTE]
->  Pokud k této chybě dojde při spuštění aplikace, aplikace se vypnout, protože má vnitřní problém. To může být způsobeno chyb v aplikaci, nebo chybu v doplňku nebo rozšíření, které aplikace používá.
+> Pokud k této chybě dojde při spuštění aplikace, aplikace se vypnout, protože má vnitřní problém. To může být způsobeno chyb v aplikaci, nebo chybu v doplňku nebo rozšíření, které aplikace používá.
 >
->  Zkuste chybu odstranit pomocí tohoto postupu:
+> Zkuste chybu odstranit pomocí tohoto postupu:
 >
->  -   Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte program.
-> -   Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** odebrat, opravte nebo přeinstalujte všechny doplněk nebo rozšíření programy, které aplikace používá.
-> -   Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.
-> -   Vyhledat aktualizovanou verzi aplikace. Pokud se problém nevyřeší, obraťte se na dodavatele aplikace.
+> - Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte program.
+> - Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** odebrat, opravte nebo přeinstalujte všechny doplněk nebo rozšíření programy, které aplikace používá.
+> - Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.
+> - Vyhledat aktualizovanou verzi aplikace. Pokud se problém nevyřeší, obraťte se na dodavatele aplikace.
 
 **Informace pro programátory**
 

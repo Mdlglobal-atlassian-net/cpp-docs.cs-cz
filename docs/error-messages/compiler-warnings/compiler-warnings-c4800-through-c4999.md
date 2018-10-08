@@ -105,12 +105,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0f8e2c5e3feea1c7607b8303bc42cef5b2f21e0
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: deee159c9da6fce9001d010a1a6b1db9b3b1d666
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601610"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861418"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Upozornění kompilátoru C4800 až C5999
 
@@ -153,6 +153,7 @@ ms.locfileid: "45601610"
 |Upozornění kompilátoru (úroveň 4) C4842|není zaručeno, že výsledek offsetof použitý pro typ pomocí vícenásobného dědění bude konzistentní napříč verzemi kompilátoru.|
 |Kompilátor varování C4843|"*type1*': Obslužná rutina výjimky odkazu na pole nebo typ funkce není dostupná, použijte '*type2*' místo toho|
 |Kompilátor varování C4844|"export module *module_name*;" je teď preferovanou syntaxí pro deklaraci rozhraní modulu|
+|[Upozornění kompilátoru (úroveň 4) C4866](c4866.md)| Kompilátor nemůže vynutit pořadí vyhodnocování zleva doprava pro volání *operator_name*|
 |[Upozornění (chyba) kompilátoru C4867](compiler-warning-c4867.md)|"*funkce*': chybí seznam argumentů volání funkce; použijte"*volání*' vytvořte ukazatel na člena|
 |[Upozornění (úroveň 4) kompilátoru C4868](compiler-warning-c4868.md)|"_souboru_(*line_number*)' kompilátor nemůže vynutit pořadí vyhodnocování zleva doprava v inicializačního seznamu v závorkách|
 |Upozornění kompilátoru (úroveň 2) C4872|číslo s plovoucí čárkou bodu dělení nulou zjistil při kompilování grafu volání pro: concurrency::parallel_for_each: "*umístění*.|

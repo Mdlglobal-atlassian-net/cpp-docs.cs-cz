@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 086de927a6927087b8cbf3d1501ba6420e1027ed
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 61b9943488a9d6a720e8d86750b14ad044677112
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110802"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861834"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Možnosti kompilátoru a Linkeru (C + +/ CX)
 
@@ -28,7 +28,7 @@ Proměnné prostředí % % LIBPATH Určuje výchozí cestu pro hledání soubory
 
 |Možnost|Popis|
 |------------|-----------------|
-|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Povolí jazyková rozšíření prostředí Windows Runtime.<br /><br /> `nostdlib` Parametr zabrání kompilátoru pomocí standardní předdefinované vyhledávací cesty k vyhledání souborů sestavení a .winmd.<br /><br /> **/ZW** – možnost kompilátoru implicitně určuje následující možnosti kompilátoru:<br /><br /> -   **/Fi** vccorlib.h, která vynutí zahrnutí souboru záhlaví vccorlib.h, který definuje mnoho typů, které jsou vyžadované kompilátor.<br />-   [/FU](../build/reference/fu-name-forced-hash-using-file.md) Windows.winmd, která vynutí zahrnutí soubor Windows.winmd metadat, který je k dispozici v operačním systému a definuje mnoho typů v modulu Windows Runtime.<br />-   **/FU** Platform.winmd, která vynutí zahrnutí Platform.winmd metadata souboru, který je poskytován kompilátorem a definuje většinu typů řady platformy oborů názvů.|
+|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Povolí jazyková rozšíření prostředí Windows Runtime.<br /><br /> `nostdlib` Parametr zabrání kompilátoru pomocí standardní předdefinované vyhledávací cesty k vyhledání souborů sestavení a .winmd.<br /><br /> **/ZW** – možnost kompilátoru implicitně určuje následující možnosti kompilátoru:<br /><br />- **/Fi** vccorlib.h, která vynutí zahrnutí souboru záhlaví vccorlib.h, který definuje mnoho typů, které jsou vyžadované kompilátor.<br />- [/FU](../build/reference/fu-name-forced-hash-using-file.md) Windows.winmd, která vynutí zahrnutí soubor Windows.winmd metadat, který je k dispozici v operačním systému a definuje mnoho typů v modulu Windows Runtime.<br />- **/FU** Platform.winmd, která vynutí zahrnutí Platform.winmd metadata souboru, který je poskytován kompilátorem a definuje většinu typů řady platformy oborů názvů.|
 |[/AI](../build/reference/ai-specify-metadata-directories.md) *dir*|Přidá adresář, který je určený *dir* parametr do cesty pro hledání, kterou kompilátor používá k vyhledání souborů sestavení a .winmd.|
 |**/FU***souboru*|Vynutí zahrnutí zadaném modulu nebo souboru .winmd. To znamená, není nutné zadat `#using` *souboru* ve zdrojovém kódu. Kompilátor automaticky vynutí zahrnutí svůj vlastní soubor Windows metadata, Platform.winmd.|
 |/D "WINAPI_FAMILY = 2"|Vytvoří definici, která umožňuje používat podmnožinu Win32 SDK, která je kompatibilní s modulem Windows Runtime.|

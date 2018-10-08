@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef9c66324f886da27431a94a464554e2a8ddb00a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 483a36f62a147d9b71a489c2f611fc45c1b7fa54
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391569"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860729"
 ---
 # <a name="sequence-of-operations-for-creating-database-applications"></a>Posloupnost operací při vytváření databázových aplikací
 
@@ -36,7 +36,7 @@ Následující tabulka uvádí vaši roli a roli v rámci při psaní databázov
 |Úloha|Můžete provést|Nepodporuje rozhraní framework|
 |----------|------------|------------------------|
 |Rozhodněte, jestli se má použít třídy knihovny MFC rozhraní ODBC a DAO.|Použití rozhraní ODBC pro nové projekty MFC. Pouze k udržování existujících aplikací pomocí rozhraní DAO. Obecné informace najdete v článku [programování přístupu dat](../data/data-access-programming-mfc-atl.md).|Architektura dodává třídy, které podporují přístup k databázi.|
-|Vytvoření kostru aplikace s možnostmi databáze.|Spuštění Průvodce aplikací knihovny MFC. Vyberte možnosti na stránce Podpora databáze. Pokud zvolíte možnost, která vytvoří zobrazení záznamů, také zadejte:<br /><br /> – Data zdroje a název tabulky nebo názvy<br />-Dotazování název nebo názvy.|Průvodce aplikací MFC vytvoří soubory a určí, že obsahuje nezbytné. V závislosti na možnostech, které zadáte může obsahovat soubory třídy sady záznamů.|
+|Vytvoření kostru aplikace s možnostmi databáze.|Spuštění Průvodce aplikací knihovny MFC. Vyberte možnosti na stránce Podpora databáze. Pokud zvolíte možnost, která vytvoří zobrazení záznamů, také zadejte:<br /><br />– Data zdroje a název tabulky nebo názvy<br />-Dotazování název nebo názvy.|Průvodce aplikací MFC vytvoří soubory a určí, že obsahuje nezbytné. V závislosti na možnostech, které zadáte může obsahovat soubory třídy sady záznamů.|
 |Návrh databáze formuláře nebo formuláře.|Pomocí dialogového okna editoru Visual C++ umístit ovládací prvky na prostředků šablony dialogového okna pro tříd zobrazení záznamu.|Průvodce aplikací MFC vytvoří prostředek šablony prázdné dialogového okna můžete vyplnit.|
 |Podle potřeby vytvořte další záznam třídy zobrazení a sady záznamů.|Vytvoření třídy a dialogové okno k zobrazení návrhu editoru pomocí zobrazení tříd.|Zobrazení tříd vytvoří další soubory pro nové třídy.|
 |Vytvořte sadu záznamů objekty podle potřeby ve vašem kódu. Každá sada záznamů slouží k manipulaci s záznamů...|Vaše sady záznamů jsou založeny na třídy odvozené od [CRecordset](../mfc/reference/crecordset-class.md) pomocí průvodců.|ODBC používá výměna pole záznamu (RFX) k výměně dat mezi databází a sady záznamů pole datových členů. Pokud používáte zobrazení záznamů, výměna dat dialogových oken (DDX) vyměňuje data mezi ovládacími prvky pro zobrazení záznamů a záznamů.|

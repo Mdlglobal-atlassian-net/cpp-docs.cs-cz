@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc115fbc77ac68c774b85bb86fd0cf9eac1fa51b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 585fd757c18c3a7c09645b64656e6ef77cde6dca
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716635"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861380"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Přehled konvencí ARM64 ABI
 
@@ -131,9 +131,9 @@ Této fázi se provádí pouze jednou, před zahájením zpracování argumentů
 
 1. Na další General-purpose zaregistrovat číslo (NGRN) je nastavena na hodnotu nula.
 
-2. Další SIMD a plovoucí desetinné čárky zaregistrovat číslo (NSRN) je nastaven na hodnotu nula.
+1. Další SIMD a plovoucí desetinné čárky zaregistrovat číslo (NSRN) je nastaven na hodnotu nula.
 
-3. Adresa dalšího skládaný argument (NSAA) je nastavena na hodnotu aktuální ukazatel zásobníku (SP).
+1. Adresa dalšího skládaný argument (NSAA) je nastavena na hodnotu aktuální ukazatel zásobníku (SP).
 
 ### <a name="stage-b--pre-padding-and-extension-of-arguments"></a>Fáze B – před odsazení a rozšíření argumentů
 
@@ -141,11 +141,11 @@ Pro každý argument v seznamu je použito první vyhovující pravidlo z násle
 
 1. Pokud typ argumentu je složený typ, jehož velikost nelze určit staticky tak, že volající a volaného, argument se zkopíruje do paměti a argument je nahrazena ukazatel na kopii. (Nejsou žádné takové typy v jazyce C/C++ však existují v jiných jazycích nebo jazyková rozšíření).
 
-2. Pokud je typ argumentu HFA nebo HVA, pak tento argument se používá bez úprav.
+1. Pokud je typ argumentu HFA nebo HVA, pak tento argument se používá bez úprav.
 
-3. Pokud typ argumentu je složený typ, který je větší než 16 bajtů, argument se zkopíruje na paměť přidělenou volajícím a argument je nahrazena ukazatel na kopii.
+1. Pokud typ argumentu je složený typ, který je větší než 16 bajtů, argument se zkopíruje na paměť přidělenou volajícím a argument je nahrazena ukazatel na kopii.
 
-4. Pokud typ argumentu je složený typ velikost argumentu je zaokrouhlí nahoru na nejbližší násobek 8 bajtů.
+1. Pokud typ argumentu je složený typ velikost argumentu je zaokrouhlí nahoru na nejbližší násobek 8 bajtů.
 
 ### <a name="stage-c--assignment-of-arguments-to-registers-and-stack"></a>Fáze C – přiřazení argumentů, které mají registry a zásobníku
 
@@ -153,33 +153,33 @@ Pro každý argument v seznamu následující pravidla se použijí pak dokud ar
 
 1. Pokud je argumentem polovině-, Single-, Double - nebo Quad přesnost s plovoucí desetinnou čárkou nebo typu Short Vector a NSRN je menší než 8, pak argument je přidělená k nejméně významných bitů v rejstříku [NSRN]. NSRN se zvýší o jedna. Argument teď byl přidělen.
 
-2. Pokud je argument HFA nebo HVA a nejsou dostatečné volné SIMD a zaregistruje se s plovoucí desetinnou čárkou (NSRN + počet členů ≤ 8), je přidělena argument SIMD a zaregistruje plovoucí desetinné čárky (u jeden registr na člen HFA nebo HVA). NSRN se zvýší počet registrů použít. Argument teď byl přidělen.
+1. Pokud je argument HFA nebo HVA a nejsou dostatečné volné SIMD a zaregistruje se s plovoucí desetinnou čárkou (NSRN + počet členů ≤ 8), je přidělena argument SIMD a zaregistruje plovoucí desetinné čárky (u jeden registr na člen HFA nebo HVA). NSRN se zvýší počet registrů použít. Argument teď byl přidělen.
 
-3. Pokud je argumentem HFA nebo HVA NSRN nastavená na 8 a velikost argumentu se zaokrouhluje na nejbližší násobek 8 bajtů.
+1. Pokud je argumentem HFA nebo HVA NSRN nastavená na 8 a velikost argumentu se zaokrouhluje na nejbližší násobek 8 bajtů.
 
-4. Pokud je argumentem HFA, HVA, zadejte Quad přesnost s plovoucí desetinnou čárkou nebo krátkého vektoru se zaokrouhlí NSAA až větší z 8 nebo přirozeného zarovnání typ argumentu.
+1. Pokud je argumentem HFA, HVA, zadejte Quad přesnost s plovoucí desetinnou čárkou nebo krátkého vektoru se zaokrouhlí NSAA až větší z 8 nebo přirozeného zarovnání typ argumentu.
 
-5. Pokud je argumentem Typ polovině nebo jednoduchou přesnost s plovoucí desetinnou čárkou, velikost argumentu nastavená na 8 bajtů. Účinek jako by měl argument byl zkopírován do nejméně významných bitů 64-bit registru a zbývající bitů vyplněny neurčené hodnoty.
+1. Pokud je argumentem Typ polovině nebo jednoduchou přesnost s plovoucí desetinnou čárkou, velikost argumentu nastavená na 8 bajtů. Účinek jako by měl argument byl zkopírován do nejméně významných bitů 64-bit registru a zbývající bitů vyplněny neurčené hodnoty.
 
-6. Pokud je argumentem HFA, HVA, polovině-, Single-, Double - nebo Quad přesnost s plovoucí desetinnou čárkou nebo typu Short Vector a argument je zkopírován do paměti na upravené NSAA. NSAA je zvýšen o velikost argumentu. Argument teď byl přidělen.
+1. Pokud je argumentem HFA, HVA, polovině-, Single-, Double - nebo Quad přesnost s plovoucí desetinnou čárkou nebo typu Short Vector a argument je zkopírován do paměti na upravené NSAA. NSAA je zvýšen o velikost argumentu. Argument teď byl přidělen.
 
-7. Pokud argument je celočíselný typ nebo typ ukazatele, velikost argumentu je menší než nebo rovna hodnotě 8 bajtů a NGRN je menší než 8, argument je zkopírován do nejméně významných bitů v x [NGRN]. NGRN se zvýší o jedna. Argument teď byl přidělen.
+1. Pokud argument je celočíselný typ nebo typ ukazatele, velikost argumentu je menší než nebo rovna hodnotě 8 bajtů a NGRN je menší než 8, argument je zkopírován do nejméně významných bitů v x [NGRN]. NGRN se zvýší o jedna. Argument teď byl přidělen.
 
-8. Pokud má argument zarovnání 16 NGRN se zaokrouhlí nahoru na nejbližší sudé číslo.
+1. Pokud má argument zarovnání 16 NGRN se zaokrouhlí nahoru na nejbližší sudé číslo.
 
-9. Pokud argument je Integrálový typ, velikost argumentu je rovno 16 a NGRN je kratší než 7, argument je zkopírován do x [NGRN] x [NGRN + 1]. x [NGRN] musí obsahovat nižší adresovaný double slovo vyjádření paměti argumentu. NGRN je zvýšen o dvou. Argument teď byl přidělen.
+1. Pokud argument je Integrálový typ, velikost argumentu je rovno 16 a NGRN je kratší než 7, argument je zkopírován do x [NGRN] x [NGRN + 1]. x [NGRN] musí obsahovat nižší adresovaný double slovo vyjádření paměti argumentu. NGRN je zvýšen o dvou. Argument teď byl přidělen.
 
-10. Pokud argument je složený typ a velikost v dvojslova argument není větší než 8 minus NGRN pak argument je zkopírována do registrů po sobě jdoucích pro obecné účely, začínající hodnotou x [NGRN]. Argument je předán jako by měl byla načtena do registrů z adresy double word souladu s pokyny omezeně distribuovatelných oprav načítání po sobě jdoucích registry z paměti (obsah libovolné nevyužité části registrů nejsou specifikována příslušné pořadí podle této normy). NGRN se zvýší počet registrů použít. Argument teď byl přidělen.
+1. Pokud argument je složený typ a velikost v dvojslova argument není větší než 8 minus NGRN pak argument je zkopírována do registrů po sobě jdoucích pro obecné účely, začínající hodnotou x [NGRN]. Argument je předán jako by měl byla načtena do registrů z adresy double word souladu s pokyny omezeně distribuovatelných oprav načítání po sobě jdoucích registry z paměti (obsah libovolné nevyužité části registrů nejsou specifikována příslušné pořadí podle této normy). NGRN se zvýší počet registrů použít. Argument teď byl přidělen.
 
-11. NGRN byla nastavená na 8.
+1. NGRN byla nastavená na 8.
 
-12. NSAA se zaokrouhlí na větší z 8 nebo přirozené zarovnání typu argumentu...
+1. NSAA se zaokrouhlí na větší z 8 nebo přirozené zarovnání typu argumentu...
 
-13. Pokud argument je složený typ argumentu je zkopírován do paměti na upravené NSAA. NSAA je zvýšen o velikost argumentu. Argument teď byl přidělen.
+1. Pokud argument je složený typ argumentu je zkopírován do paměti na upravené NSAA. NSAA je zvýšen o velikost argumentu. Argument teď byl přidělen.
 
-14. Pokud velikost argumentu je menší než 8 bajtů. velikost argumentu nastavená na 8 bajtů. Efekt je jako argument byl zkopírován do nejméně významných bitů 64-bit registru a zbývající bitů vyplněny neurčené hodnoty.
+1. Pokud velikost argumentu je menší než 8 bajtů. velikost argumentu nastavená na 8 bajtů. Efekt je jako argument byl zkopírován do nejméně významných bitů 64-bit registru a zbývající bitů vyplněny neurčené hodnoty.
 
-15. Argument je zkopírován do paměti na upravené NSAA. NSAA je zvýšen o velikost argumentu. Argument teď byl přidělen.
+1. Argument je zkopírován do paměti na upravené NSAA. NSAA je zvýšen o velikost argumentu. Argument teď byl přidělen.
 
 ### <a name="addendum-variadic-functions"></a>Dodatek: Variadické funkce
 
@@ -187,7 +187,7 @@ Funkce vyžadující proměnný počet argumentů jsou zpracovány jinak než v�
 
 1. Všechny složené zachází stejně; žádná zvláštní zacházení HFAs nebo HVAs.
 
-2. Nejsou použity SIMD a zaregistruje plovoucí desetinné čárky.
+1. Nejsou použity SIMD a zaregistruje plovoucí desetinné čárky.
 
 Efektivně to odpovídá následujícím pravidlům C.12–C.15 přidělit argumenty, které mají imaginární zásobníku, kde první 64 bajtů zásobníku se načtou do x0 x7 a všechny zbývající argumenty zásobníku jsou obvykle umístěny.
 

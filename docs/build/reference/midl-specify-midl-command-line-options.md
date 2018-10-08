@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d9ecfada513e16ce10bab37bb38b6ce6d67f907
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d2fa03920f60d7da4730bc46b23605ccfa13f6d7
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397621"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860379"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Zadejte možnosti příkazového řádku MIDL)
 
@@ -51,9 +51,9 @@ Soubor musí obsahovat jeden parametr příkazového řádku MIDL každý řáde
 
 1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
 
-2. Vyberte **vlastnosti konfigurace** > **Linkeru** > **vložené IDL** stránku vlastností.
+1. Vyberte **vlastnosti konfigurace** > **Linkeru** > **vložené IDL** stránku vlastností.
 
-3. Upravit **příkazy MIDL** vlastnost.
+1. Upravit **příkazy MIDL** vlastnost.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 512f791b3db513c2a143bda84a8dc2677b341544
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1b8074ad511544dcc6638ca804a26745e3da317b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106038"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860339"
 ---
 # <a name="adding-an-atl-dialog-box"></a>Přidání dialogového okna ATL
 
@@ -30,15 +30,15 @@ Přidání dialogového okna knihovny ATL do projektu, váš projekt musí být 
 Ve výchozím nastavení, Průvodce dialogem ATL implementuje dialog odvozený od [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Tato třída obsahuje podporu pro hostování ovládacích prvků ActiveX a Windows. Pokud nechcete, aby nároky na podporu ovládacích prvků ActiveX, jakmile v Průvodci vygenerovala kódu, nahraďte všechny výskyty `CAxDialogImpl` s oběma [CSimpleDialog](../../atl/reference/csimpledialog-class.md) nebo [CDialogImpl](../../atl/reference/cdialogimpl-class.md) jako základní třídy. .
 
 > [!NOTE]
->  `CSimpleDialog` vytvoří pouze modálních dialogových oken, které podporují pouze běžných ovládacích prvků Windows. `CDialogImpl` Vytvoří modální a nemodální dialogová okna.
+> `CSimpleDialog` vytvoří pouze modálních dialogových oken, které podporují pouze běžných ovládacích prvků Windows. `CDialogImpl` Vytvoří modální a nemodální dialogová okna.
 
-### <a name="to-add-an-atl-dialog-resource-to-your-project"></a>Chcete-li přidat dialogu knihovny ATL do projektu
+## <a name="to-add-an-atl-dialog-resource-to-your-project"></a>Chcete-li přidat dialogu knihovny ATL do projektu
 
 1. Vytvořte projekt knihovny ATL pomocí [Průvodce projektem ATL](../../atl/reference/atl-project-wizard.md).
 
-2. Z [zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code), klikněte pravým tlačítkem na název projektu a klikněte na tlačítko **přidat** z místní nabídky. Klikněte na tlačítko **přidejte třídu**.
+1. Z [zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code), klikněte pravým tlačítkem na název projektu a klikněte na tlačítko **přidat** z místní nabídky. Klikněte na tlačítko **přidejte třídu**.
 
-3. V podokně šablon [přidat třídu](../../ide/add-class-dialog-box.md) dialogové okno, klikněte na tlačítko **ATL Dialog**. Klikněte na tlačítko **otevřít** zobrazíte [Průvodce dialogem ATL](../../atl/reference/atl-dialog-wizard.md).
+1. V **šablony** podokně [přidat třídu](../../ide/add-class-dialog-box.md) dialogové okno, klikněte na tlačítko **ATL Dialog**. Klikněte na tlačítko **otevřít** zobrazíte [Průvodce dialogem ATL](../../atl/reference/atl-dialog-wizard.md).
 
 Další informace najdete v tématu [implementace dialogového okna](../../atl/implementing-a-dialog-box.md).
 
@@ -47,4 +47,3 @@ Další informace najdete v tématu [implementace dialogového okna](../../atl/i
 [Přidání třídy](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Třídy oken](../../atl/atl-window-classes.md)<br/>
 [Mapy zpráv](../../atl/message-maps-atl.md)
-

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc23cf3c692eef37a86b5385d2e9e3a68340374e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cde499e919a7b222a41229576ef3b2d37d55d648
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080919"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860639"
 ---
 # <a name="c-runtime-error-r6002"></a>C R6002 Chyba za běhu
 
@@ -30,13 +30,13 @@ podpora plovoucí desetinné čárky není načtená.
 Nepropojil potřebné knihovny s plovoucí desetinnou čárkou.
 
 > [!NOTE]
->  Pokud k této chybě dojde při spuštění aplikace, aplikace se vypnout, protože má vnitřní problém. Existuje několik příčin této chyby, ale často je způsobena závadou v kódu aplikace nebo pokusem o spuštění aplikace, který nebyl vytvořen pro procesor konkrétní počítače.
+> Pokud k této chybě dojde při spuštění aplikace, aplikace se vypnout, protože má vnitřní problém. Existuje několik příčin této chyby, ale často je způsobena závadou v kódu aplikace nebo pokusem o spuštění aplikace, který nebyl vytvořen pro procesor konkrétní počítače.
 >
->  Zkuste chybu odstranit pomocí tohoto postupu:
+> Zkuste chybu odstranit pomocí tohoto postupu:
 >
->  -   Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte program.
-> -   Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.
-> -   Vyhledat aktualizovanou verzi aplikace. Pokud se problém nevyřeší, obraťte se na dodavatele aplikace.
+> - Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte program.
+> - Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.
+> - Vyhledat aktualizovanou verzi aplikace. Pokud se problém nevyřeší, obraťte se na dodavatele aplikace.
 
 **Informace pro programátory**
 

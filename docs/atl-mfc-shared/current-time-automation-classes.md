@@ -18,26 +18,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9f267653f87ffcaf357a20abd5d72fd148d7900
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8ead35da3c20630e93757787f54755dd383264d2
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753432"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860612"
 ---
 # <a name="current-time-automation-classes"></a>Aktuální čas: Automatizační třídy
 
 Následující postup ukazuje, jak vytvořit `COleDateTime` objektu a inicializovat s aktuálním časem.
 
-#### <a name="to-get-the-current-time"></a>Chcete-li získat aktuální čas
+## <a name="to-get-the-current-time"></a>Chcete-li získat aktuální čas
 
 1. Vytvoření `COleDateTime` objektu.
 
-2. Volání `GetCurrentTime`.
+1. Volání `GetCurrentTime`.
 
    [!code-cpp[NVC_ATLMFC_Utilities#177](../atl-mfc-shared/codesnippet/cpp/current-time-automation-classes_1.cpp)]
 
 ## <a name="see-also"></a>Viz také
 
 [Datum a čas: Podpora automatizace](../atl-mfc-shared/date-and-time-automation-support.md)
-

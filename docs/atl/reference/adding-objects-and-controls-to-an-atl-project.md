@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5cb510bb02f71f71b35191d3ba9c4fee6b7059d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5758dff128cd213442ec3738967ccd78e20e75af
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093958"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861132"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Přidání objektů a ovládacích prvků do projektu ATL
 
@@ -41,16 +41,16 @@ Některého z průvodců kódu knihovny ATL slouží k přidání objektu nebo o
 > [!NOTE]
 > Před přidáním objekt knihovny ATL do projektu, měli byste zkontrolovat podrobnosti a požadavky pro objekt v příslušných tématech nápovědy.
 
-### <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>Chcete-li přidat objekt nebo ovládacího prvku s použitím Průvodce ovládacími prvky ATL
+## <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>Chcete-li přidat objekt nebo ovládacího prvku s použitím Průvodce ovládacími prvky ATL
 
-1. V Průzkumníku řešení klikněte pravým tlačítkem myši na uzel projektu a klikněte na tlačítko **přidat** z místní nabídky. Klikněte na tlačítko **přidejte třídu**.
+1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na uzel projektu a klikněte na tlačítko **přidat** z místní nabídky. Klikněte na tlačítko **přidejte třídu**.
 
    [Přidat třídu](../../ide/add-class-dialog-box.md) zobrazí se dialogové okno.
 
-2. Ve složce ATL vybrané v podokně Kategorie vyberte objekt vložit v podokně šablony. Klikněte na tlačítko **otevřít**. Zobrazí se Průvodce kód pro vybraný objekt.
+1. S **ATL** do vybrané složky **kategorie** podokně, vyberte příslušný objekt pro vložení z **šablony** podokně. Klikněte na tlačítko **otevřít**. Zobrazí se Průvodce kód pro vybraný objekt.
 
    > [!NOTE]
-   >  Pokud chcete přidat objekt ATL do projektu knihovny MFC, musíte přidat podporu ATL do existujícího projektu. Můžete to provést pomocí následujících pokynů [přidání podpory knihovny ATL do projektu knihovny MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md).
+   > Pokud chcete přidat objekt ATL do projektu knihovny MFC, musíte přidat podporu ATL do existujícího projektu. Můžete to provést pomocí následujících pokynů [přidání podpory knihovny ATL do projektu knihovny MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md).
 
    Můžete také při pokusu o přidání objektu ATL bez dříve přidání podpory knihovny ATL do projektu knihovny MFC, Visual Studio vás vyzve k určení, zda chcete podpory knihovny ATL přidané do projektu. Klikněte na tlačítko **Ano** přidat podporu ATL do projektu a otevřete Průvodce vybrané knihovny ATL.
 
@@ -62,4 +62,3 @@ Některého z průvodců kódu knihovny ATL slouží k přidání objektu nebo o
 [Základy ATL – objekty COM](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Programování s použitím knihovny ATL a běhového kódu jazyka C](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Výchozí konfigurace projektu ATL](../../atl/reference/default-atl-project-configurations.md)
-

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62b49c20248ca4825bcf2c95b6c7adc956a39025
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6bf350b0a129c642678fc6af1bac7d35633fe909
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714519"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860976"
 ---
 # <a name="exports"></a>EXPORTY
 
@@ -82,11 +82,11 @@ Existují čtyři způsoby, jak exportovat definici uvedené v doporučené poř
 
 1. [__Declspec(dllexport)](../../cpp/dllexport-dllimport.md) – klíčové slovo ve zdrojovém kódu
 
-2. `EXPORTS` Výroky. Soubor DEF
+1. `EXPORTS` Výroky. Soubor DEF
 
-3. [/EXPORT](../../build/reference/export-exports-a-function.md) specifikace v příkazu LINK
+1. [/EXPORT](../../build/reference/export-exports-a-function.md) specifikace v příkazu LINK
 
-4. A [komentář](../../preprocessor/comment-c-cpp.md) směrnice ve zdrojovém kódu formuláře `#pragma comment(linker, "/export: definition ")`. Následující příklad ukazuje Direktiva #pragma komentář před deklarací funkce, kde `PlainFuncName` je nedekorovaný název a `_PlainFuncName@4` je upravený název funkce:
+1. A [komentář](../../preprocessor/comment-c-cpp.md) směrnice ve zdrojovém kódu formuláře `#pragma comment(linker, "/export: definition ")`. Následující příklad ukazuje Direktiva #pragma komentář před deklarací funkce, kde `PlainFuncName` je nedekorovaný název a `_PlainFuncName@4` je upravený název funkce:
 
     ```cpp
     #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")

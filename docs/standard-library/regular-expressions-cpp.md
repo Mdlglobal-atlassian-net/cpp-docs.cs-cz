@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86c64ff0eda298ba330f3f1e1ff6d953fd859234
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: ca3d636b1dffdb3237fb94fade41c90057543b9d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209017"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861561"
 ---
 # <a name="regular-expressions-c"></a>Regulární výrazy (C++)
 
@@ -58,17 +58,17 @@ Prvek může být jeden z následujících:
 
 - A *párování výraz* ve formátu "[`expr`]", který odpovídá znaku nebo prvku kolace v cílové sekvenci, která je také do množiny definované výrazem `expr`, nebo ve formátu "[^`expr`]", který odpovídá znaku nebo prvku kolace v cílové sekvenci, který není v sadě definována výrazem `expr`.
 
-     Výraz `expr` může obsahovat libovolnou kombinaci následujících akcí:
+   Výraz `expr` může obsahovat libovolnou kombinaci následujících akcí:
 
-    -   Jednotlivý znak. Přidá daný znak do množiny definované `expr`.
+   - Jednotlivý znak. Přidá daný znak do množiny definované `expr`.
 
-    -   A *rozsah znaků* ve tvaru "`ch1`-`ch2`". Přidá znaky, které jsou reprezentovány hodnotami v uzavřeném intervalu [`ch1`, `ch2`] do množiny definované `expr`.
+   - A *rozsah znaků* ve tvaru "`ch1`-`ch2`". Přidá znaky, které jsou reprezentovány hodnotami v uzavřeném intervalu [`ch1`, `ch2`] do množiny definované `expr`.
 
-    -   A *třídy znaků* ve formátu "[:`name`:]". Přidá znaky v pojmenované třídě do množiny definované `expr`.
+   - A *třídy znaků* ve formátu "[:`name`:]". Přidá znaky v pojmenované třídě do množiny definované `expr`.
 
-    -   *Třída ekvivalence* ve formátu "[=`elt`=]". Přidá kolační prvky, které jsou ekvivalentem `elt` do množiny definované `expr`.
+   - *Třída ekvivalence* ve formátu "[=`elt`=]". Přidá kolační prvky, které jsou ekvivalentem `elt` do množiny definované `expr`.
 
-    -   A *kolační symbol* ve formátu "[.`elt`.]". Přidá kolační prvek `elt` do množiny definované `expr`.
+   - A *kolační symbol* ve formátu "[.`elt`.]". Přidá kolační prvek `elt` do množiny definované `expr`.
 
 - *Ukotvení*. Ukotvení „^“ odpovídá začátku cílové sekvence; ukotvení „$“ odpovídá konci cílové sekvence.
 
@@ -403,11 +403,11 @@ Běžný znak je jakýkoli platný znak, který nemá v aktuální gramatice zvl
 
 V `ECMAScript`, mají následující znaky zvláštní význam:
 
-- ^  $  \  .  \*  +  ?  (  )  [  ]  {  }  &#124;
+- ^  $  \  .  \*  +  ?  (  )  \[  ]  {  }&#124;
 
 V `basic` a `grep`, mají následující znaky zvláštní význam:
 
-- .   [   \
+- .   \[   \
 
 Také v `basic` a `grep`, mají následující znaky zvláštní význam, pokud jsou použity v konkrétním kontextu:
 
@@ -419,7 +419,7 @@ Také v `basic` a `grep`, mají následující znaky zvláštní význam, pokud 
 
 V `extended`, `egrep`, a `awk`, mají následující znaky zvláštní význam:
 
-- .   [   \   (   \*   +   ?   {   &#124;
+- .   \[   \   (   \*   +   ?   {   &#124;
 
 Také v `extended`, `egrep`, a `awk`, mají následující znaky zvláštní význam, pokud jsou použity v konkrétním kontextu.
 

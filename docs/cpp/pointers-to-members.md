@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 509181abc0d9b3e2f2c2d4c76275e635ba3a4477
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 971f3df56f049b919ebb1f3fb8f517c97b2829e7
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46076070"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861275"
 ---
 # <a name="pointers-to-members"></a>Ukazatelé na členy
 
@@ -56,7 +56,7 @@ Deklarace ukazatelů na členy jsou zvláštní případy deklarace ukazatelů. 
   - Kvalifikovaný název třídy.
   - Operátor `::`.
   - Název Nestatický člen třídy příslušného typu.
-  -  Jako vždy víc deklarátorů. (a všechny přidružené inicializátory) jsou povoleny v jedné deklaraci.
+  - Jako vždy víc deklarátorů. (a všechny přidružené inicializátory) jsou povoleny v jedné deklaraci.
 
 Ukazatel na člen třídy, se liší od normální ukazatel, protože obsahuje informace o typu pro typ člena a třídy, do které patří člena. Identifikuje normální ukazatel (má adresu) pouze jeden objekt v paměti. Ukazatel na člen třídy identifikuje člena v jakékoli instance třídy. Následující příklad deklaruje třídu, `Window`a některé ukazatele na člen data.
 

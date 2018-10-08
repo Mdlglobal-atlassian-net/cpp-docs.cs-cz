@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f0090195506e26cab165e3ddadca0342c0b35b6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a6ad4b23e6caef15b5dabaaa3102d72e3ff84fbc
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46084052"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860586"
 ---
 # <a name="for-statement-c"></a>for – příkaz (C)
 
@@ -34,7 +34,7 @@ Spuštění **pro** příkaz probíhá následujícím způsobem:
 
 1. *Init-expression*, pokud existuje, je vyhodnocen. Toto nastavení určuje inicializaci smyčky. Neexistuje žádné omezení na typu *init-expression*.
 
-2. *Cond-expression*, pokud existuje, je vyhodnocen. Tento výraz musí mít aritmetický typ nebo typ ukazatele. Vyhodnotí se před každou iteraci. Tří výsledků je možné:
+1. *Cond-expression*, pokud existuje, je vyhodnocen. Tento výraz musí mít aritmetický typ nebo typ ukazatele. Vyhodnotí se před každou iteraci. Tří výsledků je možné:
 
    - Pokud *cond-expression* je **true** (nenulový), *příkaz* je spuštěn; potom *výraz smyčky*, pokud existuje, je vyhodnocen. *Výraz smyčky* je vyhodnocen po každé iteraci. Neexistuje žádné omezení na jeho typu. Vedlejší efekty bude vykonán v pořadí. Proces potom začne znovu vyhodnocením *cond-expression*.
 

@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: def07f92cc05828c132ba7d34d3dcc06d4aecf50
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4254506345ab72eccaa43968a0af9aab2dada3b9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721445"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861483"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Přehled konvencí ARM32 ABI
 
@@ -153,11 +153,11 @@ Inicializace probíhá pouze jednou, před zahájením zpracování argumentů:
 
 1. Na další základní registrace číslo (NCRN) je nastavena na r0.
 
-2. VFP registry jsou označeny jako volné.
+1. VFP registry jsou označeny jako volné.
 
-3. Na další skládaný Argument adresu (NSAA) je nastavena na aktuální SP.
+1. Na další skládaný Argument adresu (NSAA) je nastavena na aktuální SP.
 
-4. Pokud je volána funkce, která vrátí výsledek v paměti, adresu pro výsledek se umístí do r0 a je nastavena NCRN R1.
+1. Pokud je volána funkce, která vrátí výsledek v paměti, adresu pro výsledek se umístí do r0 a je nastavena NCRN R1.
 
 ### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Fáze B: předběžné odsazení a rozšíření argumentů
 
@@ -165,9 +165,9 @@ Pro každý argument v seznamu je použito první vyhovující pravidlo z násle
 
 1. Pokud argument je složený typ, jehož velikost nelze určit staticky tak, že volající a volaného, tento argument je zkopírována do paměti a nahrazuje ukazatel na kopii.
 
-2. Pokud je argumentem bajtů nebo částečně slova 16 bitů, je nulou nebo rozšířena znaménkem na 32bitové úplné slovo a považován za argument na 4 bajty.
+1. Pokud je argumentem bajtů nebo částečně slova 16 bitů, je nulou nebo rozšířena znaménkem na 32bitové úplné slovo a považován za argument na 4 bajty.
 
-3. Pokud argument je složený typ, jeho velikost se zaokrouhluje na nejbližší násobek čísla 4.
+1. Pokud argument je složený typ, jeho velikost se zaokrouhluje na nejbližší násobek čísla 4.
 
 ### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Fáze C: přiřazení argumentů, které mají registry a zásobníku
 
@@ -175,17 +175,17 @@ Pro každý argument v seznamu následující pravidla se použijí pak dokud by
 
 1. Pokud je argument typu VFP a dostatek po sobě jdoucích nepřidělené registrů VFP příslušného typu, argument je přidělen nejnižší číslované pořadí těchto registrů.
 
-2. Pokud je argumentem Typ VFP, všechny zbývající volné registry jsou označeny jako nedostupné. NSAA se upraví nahoru, dokud je správně zarovnán pro typ argumentu a argument je zkopírován do zásobníku volání na upravené NSAA. NSAA je poté zvýšen o velikost argumentu.
+1. Pokud je argumentem Typ VFP, všechny zbývající volné registry jsou označeny jako nedostupné. NSAA se upraví nahoru, dokud je správně zarovnán pro typ argumentu a argument je zkopírován do zásobníku volání na upravené NSAA. NSAA je poté zvýšen o velikost argumentu.
 
-3. Pokud argument vyžaduje 8bajtový zarovnání, NCRN se zaokrouhluje nahoru na nejbližší číslo sudé registru.
+1. Pokud argument vyžaduje 8bajtový zarovnání, NCRN se zaokrouhluje nahoru na nejbližší číslo sudé registru.
 
-4. Pokud není více než r4 minus NCRN velikost argumentu ve slovech 32-bit, argument zkopírována do registrů core, počínaje NCRN, s nejméně významných bitů zabírá registrů nižší sudým číslem. NCRN se zvýší počet registrů použít.
+1. Pokud není více než r4 minus NCRN velikost argumentu ve slovech 32-bit, argument zkopírována do registrů core, počínaje NCRN, s nejméně významných bitů zabírá registrů nižší sudým číslem. NCRN se zvýší počet registrů použít.
 
-5. Pokud NCRN je menší než r4 a NSAA rovná SP, argument je rozdělená mezi základní registry a zásobníku. První část argumentu je zkopírována do registrů core, počínaje NCRN, až a včetně r3. Zbývající část argumentu je zkopírován do zásobníku, počínaje NSAA. NCRN je nastavena na r4 a NSAA je zvýšen o velikost argumentu minus částka předány v registrech.
+1. Pokud NCRN je menší než r4 a NSAA rovná SP, argument je rozdělená mezi základní registry a zásobníku. První část argumentu je zkopírována do registrů core, počínaje NCRN, až a včetně r3. Zbývající část argumentu je zkopírován do zásobníku, počínaje NSAA. NCRN je nastavena na r4 a NSAA je zvýšen o velikost argumentu minus částka předány v registrech.
 
-6. Pokud argument vyžaduje 8bajtový zarovnání, NSAA se zaokrouhluje další zarovnané adrese 8 bajtů.
+1. Pokud argument vyžaduje 8bajtový zarovnání, NSAA se zaokrouhluje další zarovnané adrese 8 bajtů.
 
-7. Argument je zkopírována do paměti NSAA. NSAA je zvýšen o velikost argumentu.
+1. Argument je zkopírována do paměti NSAA. NSAA je zvýšen o velikost argumentu.
 
 VFP registrech nejsou použity pro variadické funkce a pravidel C fáze 1 a 2 jsou ignorovány. To znamená, že variadické funkce může začínat volitelné nabízených {r0 – r3} pro předřazení argumentů registru do jakýchkoli dalších argumentů předaná volající funkcí a přejděte k seznamu argumentů celý přímo ze zásobníku.
 

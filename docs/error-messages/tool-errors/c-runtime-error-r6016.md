@@ -16,27 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65f4b4529e0faf433ff9dc5c4fc2c0594a4d9ff6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b14d6e20f58ef5a9fbda6d640f5c8a596635d70c
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46076642"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861704"
 ---
 # <a name="c-runtime-error-r6016"></a>Chyba modulu Runtime R6016 C
 
 Nedostatek místa pro data vlákna
 
 > [!NOTE]
->  Pokud k této chybě dojde při spuštění aplikace, aplikace se vypnout, protože má problému s interní pamětí. Existuje mnoho možných příčin této chyby, ale často je způsobeno podmínku velmi málo paměti chybu v aplikaci, nebo chybu v add-in nebo rozšíření, které aplikace používá.
+> Pokud k této chybě dojde při spuštění aplikace, aplikace se vypnout, protože má problému s interní pamětí. Existuje mnoho možných příčin této chyby, ale často je způsobeno podmínku velmi málo paměti chybu v aplikaci, nebo chybu v add-in nebo rozšíření, které aplikace používá.
 >
->  Zkuste chybu odstranit pomocí tohoto postupu:
+> Zkuste chybu odstranit pomocí tohoto postupu:
 >
->  -   Ukončete ostatní spuštěné aplikace nebo restartovat počítač pro uvolnění paměti.
-> -   Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte aplikaci.
-> -   Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** odebrat, opravte nebo přeinstalujte doplňky nebo rozšíření používané v aplikaci.
-> -   Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.
-> -   Vyhledat aktualizovanou verzi aplikace. Pokud se problém nevyřeší, obraťte se na dodavatele aplikace.
+> - Ukončete ostatní spuštěné aplikace nebo restartovat počítač pro uvolnění paměti.
+> - Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte aplikaci.
+> - Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** odebrat, opravte nebo přeinstalujte doplňky nebo rozšíření používané v aplikaci.
+> - Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.
+> - Vyhledat aktualizovanou verzi aplikace. Pokud se problém nevyřeší, obraťte se na dodavatele aplikace.
 
 **Informace pro programátory**
 

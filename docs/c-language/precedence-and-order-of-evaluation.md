@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e318687dfa3cc8e841643e5caf6fe1fbcc00d051
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 953473102a42792dc3ae3afa3b1a8caf507e5648
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080763"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861496"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Přednost a pořadí vyhodnocení
 
@@ -53,7 +53,7 @@ Následující tabulka shrnuje prioritu a asociativitu (tedy pořadí, v němž 
 
 1. Operátory jsou uvedeny v sestupném pořadí dle priority. Je-li několik operátorů uvedeno na stejném řádku nebo ve skupině, mají stejnou prioritu.
 
-2. Všechny operátory jednoduchého a složeného přiřazení mají stejnou prioritu.
+1. Všechny operátory jednoduchého a složeného přiřazení mají stejnou prioritu.
 
 Výraz může obsahovat několik operátorů shodné priority. Vyskytne-li se na stejné úrovni ve výrazu několik takových operátorů, vyhodnocování pokračuje dle asociativity operátorů, tedy zleva doprava nebo zprava doleva. Směr vyhodnocení neovlivní výsledky výrazů, které obsahují více než jedno násobení (<strong>\*</strong>), sčítání (**+**), nebo binární bitový (**&**, **&#124;**, nebo **^**) operátor na stejné úrovni. Pořadí operací není v jazyce definováno. Dokáže-li kompilátor zaručit konzistentní výsledek, může takové výrazy vyhodnotit v libovolném pořadí.
 

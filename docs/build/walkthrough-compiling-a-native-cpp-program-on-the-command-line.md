@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7f8fad0c4676e8dfedcf8e80332c0a239f230cb
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 122d33be06755b92a17db62237787151a0811898
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821189"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860404"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Návod: Kompilace nativního programu C++ v příkazovém řádku
 
@@ -53,7 +53,7 @@ Před sestavením programu jazyka C nebo C++ v příkazovém řádku, je nutné 
 
    Pokud používáte jinou verzi sady Visual Studio nebo jsou spuštěny na jinou verzi Windows, vyhledejte v nabídce Start nebo úvodní stránka pro složku nástroje Visual Studio, který obsahuje zástupce příkazového řádku pro vývojáře. Funkce vyhledávání Windows můžete použít také k vyhledání "developer command prompt" a vyberte ten, který odpovídá vaší nainstalované verzi sady Visual Studio. Chcete-li otevřít okno příkazového řádku použijte klávesovou zkratku.
 
-1. Dále ověřte, že je správně nastavené příkazový řádek pro vývojáře Visual C++. V okně příkazového řádku zadejte `cl` a ověřte, že výstup vypadá přibližně takto:
+1. Dále ověřte, že je správně nastavené příkazový řádek pro vývojáře Visual C++. V okně příkazového řádku zadejte `cl` a ověřte, že výstup by měl vypadat přibližně takto:
 
    ```Output
    C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
@@ -140,7 +140,7 @@ Před sestavením programu jazyka C nebo C++ v příkazovém řádku, je nutné 
    > [!NOTE]
    > Pokud se zobrazí různých kompilátoru nebo linkeru chybu nebo upozornění, zkontrolujte zdrojový kód opravte všechny chyby, pak jej uložit a znovu spusťte kompilátor. Informace o konkrétní chyby použijte vyhledávací pole na této stránce MSDN a vyhledejte číslo chyby.
 
-7. Chcete-li spustit hello.exe program příkazového řádku, zadejte `hello`.
+1. Chcete-li spustit hello.exe program příkazového řádku, zadejte `hello`.
 
    Program zobrazí tento text a ukončení:
 

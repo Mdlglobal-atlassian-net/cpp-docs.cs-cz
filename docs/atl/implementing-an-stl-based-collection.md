@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d414df9d5e5f7d930497d42b5ec73d92a65ac3cc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cc7df3233b5605c4b19269571d1afa0f5a6215ae
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116701"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861093"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>Implementace kolekce založené na knihovně Standard jazyka C++
 
@@ -57,15 +57,15 @@ Toto je standardní formulář pro rozhraní kolekce jen pro čtení s klientům
 
 1. Jsou obvykle duální rozhraní pro kolekce, protože přistupuje ke klientům automatizace `_NewEnum` vlastnost prostřednictvím `IDispatch::Invoke`. Ale automatizace klienti mají přístup k zbývající metody prostřednictvím tabulku vtable, takže duální rozhraní jsou upřednostňovány vůči odesílacích rozhraních.
 
-2. Pokud rozhraní dual nebo dispinterface nebude možné rozšířit v době běhu (to znamená, nebude poskytovat další metody nebo vlastnosti prostřednictvím `IDispatch::Invoke`), byste měli použít **nerozšiřitelnou kategorii** atribut do definice. Tento atribut umožňuje klientům automatizace k provedení ověření úplného kódu v době kompilace. V takovém případě by neměly rozšířit rozhraní.
+1. Pokud rozhraní dual nebo dispinterface nebude možné rozšířit v době běhu (to znamená, nebude poskytovat další metody nebo vlastnosti prostřednictvím `IDispatch::Invoke`), byste měli použít **nerozšiřitelnou kategorii** atribut do definice. Tento atribut umožňuje klientům automatizace k provedení ověření úplného kódu v době kompilace. V takovém případě by neměly rozšířit rozhraní.
 
-3. Je důležité, pokud chcete klientům automatizace moct tuto vlastnost použít správný identifikátor DISPID. (Všimněte si, že pouze jeden znak podtržení v konstantu DISPID_NEWENUM.)
+1. Je důležité, pokud chcete klientům automatizace moct tuto vlastnost použít správný identifikátor DISPID. (Všimněte si, že pouze jeden znak podtržení v konstantu DISPID_NEWENUM.)
 
-4. Můžete zadat jakoukoli hodnotu jako hodnota DISPID z `Item` vlastnost. Ale `Item` DISPID_VALUE obvykle používá k němu výchozí vlastnost kolekce. To umožňuje klientům automatizace odkazovat na vlastnost bez pojmenování explicitně.
+1. Můžete zadat jakoukoli hodnotu jako hodnota DISPID z `Item` vlastnost. Ale `Item` DISPID_VALUE obvykle používá k němu výchozí vlastnost kolekce. To umožňuje klientům automatizace odkazovat na vlastnost bez pojmenování explicitně.
 
-5. Datový typ používaný pro vrácenou hodnotu `Item` vlastnost má typ položky uložená v kolekci, pokud jsou klienti modelu COM obavy. Rozhraní vrátí hodnotu řetězce, proto byste měli použít standardní řetězec typu modelu COM, BSTR. Data můžete interně uložit v jiném formátu, jak brzy zjistíte.
+1. Datový typ používaný pro vrácenou hodnotu `Item` vlastnost má typ položky uložená v kolekci, pokud jsou klienti modelu COM obavy. Rozhraní vrátí hodnotu řetězce, proto byste měli použít standardní řetězec typu modelu COM, BSTR. Data můžete interně uložit v jiném formátu, jak brzy zjistíte.
 
-6. Hodnota použitá identifikátorem DISPID `Count` je zcela libovolné vlastnosti. Neexistuje žádný standardní DISPID pro tuto vlastnost.
+1. Hodnota použitá identifikátorem DISPID `Count` je zcela libovolné vlastnosti. Neexistuje žádný standardní DISPID pro tuto vlastnost.
 
 ##  <a name="vcconstorage_and_exposure_typedefs"></a> Vytvoření definice TypeDef pro úložiště a ohrožení
 
@@ -114,4 +114,3 @@ Teď můžete otestovat kód s klientem nástroje podle vašeho výběru.
 [Kolekce a výčty](../atl/atl-collections-and-enumerators.md)<br/>
 [Ukázka ATLCollections](../visual-cpp-samples.md)<br/>
 [Třídy zásady kopírování ATL](../atl/atl-copy-policy-classes.md)
-

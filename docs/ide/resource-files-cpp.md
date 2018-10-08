@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9ba28a426c439454d8b0723f8d2997bbefa5759
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 101d58eeb61335939db507ff6addd0c4fa7917f0
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417225"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861899"
 ---
 # <a name="resource-files-c"></a>Zdrojové soubory (C++)
 
@@ -31,7 +31,7 @@ Zobrazit [práci s nimi](../windows/working-with-resource-files.md) Další info
 
 |Název souboru|Umístění adresáře|Umístění v Průzkumníku řešení|Popis|
 |---------------|------------------------|--------------------------------|-----------------|
-|*Název_projektu*.rc|*Projname*|Zdrojové soubory|Soubor skriptu prostředků pro projekt. Soubor skriptu prostředků obsahuje následující příkaz, v závislosti na typu projektu a vybrané podpory pro projekt (například panely nástrojů, dialogová okna nebo HTML):<br /><br /> – Definice výchozí nabídky.<br />– Tabulky akcelerátoru a řetězců.<br />– Výchozí **o** dialogové okno.<br />-Další dialogová okna.<br />-Soubor ikony (res\\*název_projektu*ICO).<br />-Informace o version.<br />-Rastrových obrázků.<br />-Panel nástrojů.<br />– Soubory HTML.<br /><br /> Soubor prostředků obsahuje soubor Afxres.rc pro standardní prostředky aplikace Microsoft Foundation Class.|
+|*Název_projektu*.rc|*Projname*|Zdrojové soubory|Soubor skriptu prostředků pro projekt. Soubor skriptu prostředků obsahuje následující příkaz, v závislosti na typu projektu a vybrané podpory pro projekt (například panely nástrojů, dialogová okna nebo HTML):<br /><br />– Definice výchozí nabídky.<br />– Tabulky akcelerátoru a řetězců.<br />– Výchozí **o** dialogové okno.<br />-Další dialogová okna.<br />-Soubor ikony (res\\*název_projektu*ICO).<br />-Informace o version.<br />-Rastrových obrázků.<br />-Panel nástrojů.<br />– Soubory HTML.<br /><br /> Soubor prostředků obsahuje soubor Afxres.rc pro standardní prostředky aplikace Microsoft Foundation Class.|
 |Resource.h|*Projname*|Soubory hlaviček|Hlavičkový soubor prostředků, který obsahuje definice pro prostředky používané tímto projektem.|
 |*Název_projektu*.rc2|*Název_projektu*\res|Zdrojové soubory|Soubor skriptu obsahující další prostředky používané tímto projektem. Můžete zahrnout soubor .rc2 v souboru .rc v projektu.<br /><br /> Soubor s příponou .rc2 je užitečné pro zahrnutí prostředky využívané třídou několik různých projektech. Namísto toho, k vytvoření stejné prostředky pro různé projekty, můžete umístit je do souboru .rc2 a .rc2 soubor zahrnout do souboru .rc hlavní.|
 |*Název_projektu*.def|*Projname*|Zdrojové soubory|Soubor definice modulu projektu knihovny DLL. Pro ovládací prvek obsahuje název a popis ovládacího prvku, a také velikost haldy za běhu.|

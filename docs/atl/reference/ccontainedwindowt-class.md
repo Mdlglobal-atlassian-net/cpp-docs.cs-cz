@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c64db5a041845bbd068bab1a72ad461740170b8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5e65451fcb506da9072d0dc8031ffba1b30280e6
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040476"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861431"
 ---
 # <a name="ccontainedwindowt-class"></a>Ccontainedwindowt – třída
 
@@ -118,7 +118,7 @@ Při použití **přidání ovládacího prvku na základě** možnost Průvodce
 |Vytváření ovládacích prvků|[ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md)|
 |Pomocí systému windows v knihovně ATL|[ATL – třídy oken](../../atl/atl-window-classes.md)|
 |Průvodce projektem ATL|[Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)|
-|Windows|[Windows](https://msdn.microsoft.com/library/windows/desktop/ms632595) a dalších tématech v sadě Windows SDK|
+|Windows|[Windows](/windows/desktop/winmsg/windows) a dalších tématech v sadě Windows SDK|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 

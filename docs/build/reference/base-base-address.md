@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f6f287f98b542a3d8eb24f9cc2b5e725e27dceb
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 28e4e2ea0118d79e2746db93ba30478ed2563434
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725969"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860534"
 ---
 # <a name="base-base-address"></a>/BASE (základní adresa)
 
@@ -78,9 +78,9 @@ Dalším způsobem, jak nastavit základní adresu, je pomocí *základní* argu
 
 1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
 
-2. Vyberte **vlastnosti konfigurace** > **Linkeru** > **Upřesnit** stránku vlastností.
+1. Vyberte **vlastnosti konfigurace** > **Linkeru** > **Upřesnit** stránku vlastností.
 
-3. Upravit **základní adresa** vlastnost.
+1. Upravit **základní adresa** vlastnost.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 

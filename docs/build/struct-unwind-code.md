@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da6f078741c598099e71da9164f54b56da3f355
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f5bccddd2ddd5c0f9dfbc828a7da3a66fa13339d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726645"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861717"
 ---
 # <a name="struct-unwindcode"></a>struct UNWIND_CODE
 
@@ -112,17 +112,17 @@ Tento kód unwind vždy zobrazí ve fiktivní prologu, který je ve skutečnosti
 
 1. Vyvolat přes POP RIP návratovou hodnotu z horní části zásobníku do *Temp*
 
-2. Push SS
+1. Push SS
 
-3. Starý RSP nabízených oznámení
+1. Starý RSP nabízených oznámení
 
-4. Push EFLAGS
+1. Push EFLAGS
 
-5. CS nabízených oznámení
+1. CS nabízených oznámení
 
-6. Push *Temp*
+1. Push *Temp*
 
-7. Vložit kód chyby (Pokud se informace op rovná 1)
+1. Vložit kód chyby (Pokud se informace op rovná 1)
 
 Simulované `UWOP_PUSH_MACHFRAME` operace sníží RSP podle 40 (informace o op se rovná 0) nebo 48 (informace o op se rovná 1).
 

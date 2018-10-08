@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e12c8eeb162d93a41c2bad85fda3570f3ffc1127
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ebcb2e52f67cfe37c4954e530fd2b2393ae23b68
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220213"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861691"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Vylepšení shody C++ v sadě Visual Studio 2017 verze 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158)
 
@@ -1263,7 +1263,8 @@ extern "C" __declspec(noinline) HRESULT __stdcall
 Toto nové upozornění C4768 je uvedeno na záhlaví Windows SDK, které byly dodány s Visual Studio 2017 15.3 nebo starší (například: verzi 10.0.15063.0, označované také jako RS2 SDK). Novější verze sady Windows SDK hlavičky (konkrétně ShlObj.h a ShlObj_core.h) jsme opravili, ale tak, aby výsledkem toto upozornění není. Když se zobrazí toto upozornění z hlavičky Windows SDK, můžete provést tyto akce:
 
 1. Přepnout na nejnovější sadu Windows SDK, která byla součástí verze sady Visual Studio 2017 verze 15.5.
-2. Vypnout varování týkající #include příkazu záhlaví Windows SDK:
+
+1. Vypnout varování týkající #include příkazu záhlaví Windows SDK:
 
 ```cpp
    #pragma warning (push)

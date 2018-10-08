@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 486e7ba1b91f1e5b8a7f99f27b89183ed32608a1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c5a71e6f358a682adad2d12f7b567dc0bad3d0f3
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409646"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861879"
 ---
 # <a name="ctoolbarctrl-class"></a>Ctoolbarctrl – třída
 
@@ -440,11 +440,11 @@ typedef struct _TBBUTTON {
 
    Z nuly vycházející index obrázku tlačítka, -1, pokud žádný obrázek pro toto tlačítko.
 
--  `idCommand`
+- `idCommand`
 
    Příkaz identifikátor přidružený k tlačítku. Tento identifikátor se posílá ve wm_command – zprávy při kliknutí na toto tlačítko. Pokud `fsStyle` člen má hodnotu TBSTYLE_SEP, tento člen musí být nula.
 
--  `fsState`
+- `fsState`
 
    Příznaky stav tlačítka. Může být kombinací hodnot uvedených níže:
 

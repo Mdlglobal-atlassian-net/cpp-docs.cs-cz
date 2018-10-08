@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9f1d205eff155b628081c5bc615570c44a88f08
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: eea3159bff6f2c69c94ef31d01b1d6a85104ef13
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412805"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861850"
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (soubor seznamu)
 
@@ -87,9 +87,9 @@ Soubor výpisu s názvem *filename.extension* je umístěn v zadaném *directory
 
 1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
-2. Vyberte **vlastnosti konfigurace** > **C/C++** > **výstupní soubory** stránku vlastností.
+1. Vyberte **vlastnosti konfigurace** > **C/C++** > **výstupní soubory** stránku vlastností.
 
-3. Upravit **výstup assembleru** vlastnosti chcete nastavit **/FAC** a **/FAS** možnosti pro assembler, počítače a zdrojový kód. Upravit **použijte kódování Unicode pro výpis Assembler** vlastnosti chcete nastavit **/fau vytvořte** možnost pro výstup ANSI nebo UTF-8. Upravit **umístění seznamu ASM** nastavit **/Fa** možnost pro výpis název a umístění souboru.
+1. Upravit **výstup assembleru** vlastnosti chcete nastavit **/FAC** a **/FAS** možnosti pro assembler, počítače a zdrojový kód. Upravit **použijte kódování Unicode pro výpis Assembler** vlastnosti chcete nastavit **/fau vytvořte** možnost pro výstup ANSI nebo UTF-8. Upravit **umístění seznamu ASM** nastavit **/Fa** možnost pro výpis název a umístění souboru.
 
 Poznámka: Toto nastavení i **výstup assembleru** a **použijte kódování Unicode pro výpis Assembler** vlastnosti může způsobit [příkazového řádku D9025 upozornění](../../error-messages/tool-errors/command-line-warning-d9025.md). Chcete-li sloučit tyto možnosti v integrovaném vývojovém prostředí, použijte **další možnosti** pole v **příkazového řádku** místo toho stránce vlastností.
 

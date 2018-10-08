@@ -16,26 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0deafa72a427543c0d885401a1d4192d61a6db65
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 42a5aed9f823b5d2c5425c4d7baae129c08e76e7
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069037"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860924"
 ---
 # <a name="c-runtime-error-r6009"></a>Chyba modulu Runtime R6009 C
 
 není dostatek místa pro prostředí
 
 > [!NOTE]
->  Pokud k této chybě dojde při spuštění aplikace, aplikace se vypnout, protože má problému s interní pamětí. Existuje několik příčin této chyby, ale často je způsobena podmínku velmi málo paměti příliš mnoho paměti provedenou proměnné prostředí nebo chyby v programu.
+> Pokud k této chybě dojde při spuštění aplikace, aplikace se vypnout, protože má problému s interní pamětí. Existuje několik příčin této chyby, ale často je způsobena podmínku velmi málo paměti příliš mnoho paměti provedenou proměnné prostředí nebo chyby v programu.
 >
->  Zkuste chybu odstranit pomocí tohoto postupu:
+> Zkuste chybu odstranit pomocí tohoto postupu:
 >
->  -   Ukončete ostatní spuštěné aplikace nebo restartovat počítač pro uvolnění paměti.
-> -   Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte program.
-> -   Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.
-> -   Vyhledat aktualizovanou verzi aplikace. Pokud se problém nevyřeší, obraťte se na dodavatele aplikace.
+> - Ukončete ostatní spuštěné aplikace nebo restartovat počítač pro uvolnění paměti.
+> - Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte program.
+> - Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.
+> - Vyhledat aktualizovanou verzi aplikace. Pokud se problém nevyřeší, obraťte se na dodavatele aplikace.
 
 **Informace pro programátory**
 

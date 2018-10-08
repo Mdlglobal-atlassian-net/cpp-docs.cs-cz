@@ -16,27 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39b06566f84003b08f5fe3869a021c4bf86dcf5f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 604b54d1c1752c76e28680e3373913ca7e92a9bc
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46105121"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860430"
 ---
 # <a name="c-runtime-error-r6008"></a>Chyba modulu Runtime R6008 C
 
 není dostatek místa pro argumenty
 
 > [!NOTE]
->  Pokud k této chybě dojde při spuštění aplikace, aplikace se vypnout, protože má problému s interní pamětí. Existuje několik příčin této chyby, ale často je způsobena podmínku velmi málo paměti příliš mnoho paměti provedenou proměnné prostředí nebo chyby v programu.
+> Pokud k této chybě dojde při spuštění aplikace, aplikace se vypnout, protože má problému s interní pamětí. Existuje několik příčin této chyby, ale často je způsobena podmínku velmi málo paměti příliš mnoho paměti provedenou proměnné prostředí nebo chyby v programu.
 >
->  Zkuste chybu odstranit pomocí tohoto postupu:
+> Zkuste chybu odstranit pomocí tohoto postupu:
 >
->  -   Ukončete ostatní spuštěné aplikace nebo restartovat počítač pro uvolnění paměti.
-> -   Snížení počtu a velikosti argumenty příkazového řádku do aplikace.
-> -   Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte program.
-> -   Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.
-> -   Vyhledat aktualizovanou verzi aplikace. Pokud se problém nevyřeší, obraťte se na dodavatele aplikace.
+> - Ukončete ostatní spuštěné aplikace nebo restartovat počítač pro uvolnění paměti.
+> - Snížení počtu a velikosti argumenty příkazového řádku do aplikace.
+> - Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte program.
+> - Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.
+> - Vyhledat aktualizovanou verzi aplikace. Pokud se problém nevyřeší, obraťte se na dodavatele aplikace.
 
 **Informace pro programátory**
 

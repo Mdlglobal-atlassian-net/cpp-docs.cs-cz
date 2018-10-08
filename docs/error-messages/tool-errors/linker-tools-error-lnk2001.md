@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb8e560e46da06c4312ab4261016ccd5a5ddda68
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3da81f46514fbdd7d01ce9c2a9d8be6007301b45
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017844"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861574"
 ---
 # <a name="linker-tools-error-lnk2001"></a>Chyba linkerů LNK2001
 
@@ -73,9 +73,9 @@ K této chybě může dojít, pokud můžete propojit ke knihovnám režimu vyd�
 
 K této chybě může dojít, pokud váš kód odkazuje na symbol z jedné verze knihovny, ale můžete zadat jinou verzi knihovny do propojovacího programu. Obecně platí nejde kombinovat soubory objektů nebo knihoven, které jsou vytvořeny pro různé verze kompilátoru. Knihovny, které se dodávají v nové verzi může obsahovat symboly, které se nenašel v knihovnách zahrnutá v předchozích verzích a naopak. Chcete-li vyřešit tento problém, sestavujte všech souborů objektů a knihovny se zmírněními hrozeb stejnou verzi nástroje kompilátor před propojí je dohromady.
 
--  Nástroje &#124; možnosti &#124; projekty &#124; adresáře VC ++ dialogového okna, v části Výběr soubory knihovny, umožňuje změnit pořadí hledání knihoven. Složka Linkeru v dialogové okno stránky vlastností projektu může také obsahovat cesty, které může být zastaralá.
+- Nástroje &#124; možnosti &#124; projekty &#124; adresáře VC ++ dialogového okna, v části Výběr soubory knihovny, umožňuje změnit pořadí hledání knihoven. Složka Linkeru v dialogové okno stránky vlastností projektu může také obsahovat cesty, které může být zastaralá.
 
--  Tento problém se můžou objevit, když je nainstalován na novou sadu SDK (například do jiného umístění) a pořadí hledání není aktualizován tak, aby odkazoval na nové umístění. Za normálních okolností byste měli umístit cestu novou sadu SDK zahrnout a lib adresáře před Visual C++ výchozí umístění. Projekt obsahující vložené cesty může navíc stále odkazovat na staré cesty, které jsou platné, ale zastaralé pro nové funkce přidá nová verze, který je nainstalován do jiného umístění.
+- Tento problém se můžou objevit, když je nainstalován na novou sadu SDK (například do jiného umístění) a pořadí hledání není aktualizován tak, aby odkazoval na nové umístění. Za normálních okolností byste měli umístit cestu novou sadu SDK zahrnout a lib adresáře před Visual C++ výchozí umístění. Projekt obsahující vložené cesty může navíc stále odkazovat na staré cesty, které jsou platné, ale zastaralé pro nové funkce přidá nová verze, který je nainstalován do jiného umístění.
 
 - Pokud sestavení na příkazovém řádku a vytvořili vlastní proměnné prostředí, ověřte, že cesty k nástrojům, knihovny a soubory hlaviček přejít na konzistentní verzi. Další informace najdete v tématu [nastavení cesty a proměnných prostředí pro sestavení příkazového řádku](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)
 

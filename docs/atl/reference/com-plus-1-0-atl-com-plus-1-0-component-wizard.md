@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 471d6a273bfb4a446dbf5aba1c3b1bb31d988b24
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e167d1a8d6b7faa161edb332f1041659c176b323
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116097"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861782"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM + 1.0, Průvodce komponentami ATL COM + 1.0
 
@@ -34,7 +34,7 @@ Další informace o projekty knihovny ATL a třídy knihovny ATL modelu COM, nal
    |Možnost|Popis|
    |------------|-----------------|
    |**Duální**|Určuje, že objekt podporuje duální rozhraní (jeho vtable má funkce vlastního rozhraní a pozdní vazby `IDispatch` metody). Umožňuje klientům modelu COM a spustila samostatná instance přístup k objektu.|
-   |**Vlastní**|Určuje, že objekt podporuje vlastní rozhraní (jeho vtable má vlastní funkce rozhraní). Vlastní rozhraní může být rychlejší než duální rozhraní, zejména přes hranice procesu.<br /><br /> -   **Automatizace kompatibilní** přidává podporu automatizace pro vlastní rozhraní. Pro projekty s atributy, nastaví **oleautomation** atribut v coclass.|
+   |**Vlastní**|Určuje, že objekt podporuje vlastní rozhraní (jeho vtable má vlastní funkce rozhraní). Vlastní rozhraní může být rychlejší než duální rozhraní, zejména přes hranice procesu.<br /><br /> - **Automatizace kompatibilní** přidává podporu automatizace pro vlastní rozhraní. Pro projekty s atributy, nastaví **oleautomation** atribut v coclass.|
 
 - **Do fronty**
 

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e95ad940aac14892ac14e8d56ba64f49d0bbf7c0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 66cbf25324b71c3fd28bdd344c7a217348cdb5d9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423829"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861613"
 ---
 # <a name="12-definition-of-terms"></a>1.2 Definice pojmů
 
@@ -43,7 +43,7 @@ V tomto dokumentu se používají následující termíny:
 
    Příkazy lexikálně obsažené *strukturovaný blok*.
 
--  hlavní vlákno
+- hlavní vlákno
 
    Vlákno, které vytvoří tým při *paralelní oblasti* zadání.
 
@@ -75,7 +75,7 @@ V tomto dokumentu se používají následující termíny:
 
    Strukturovaný blok je příkaz (jednoduchá nebo složené), který má jednu položku a jeden výstup. Žádný příkaz je strukturovaný blok v případě přechod do nebo z něj, který tento příkaz (včetně volání **longjmp**(3 C) nebo použití **throw**, ale volání **ukončit** smí obsahovat). Složený příkaz je strukturovaný blok, pokud jeho spuštění vždy začíná na otevření **{** a vždy končí uzavírací **}**. Příkaz výrazu, příkaz výběru, příkazu iterace nebo **zkuste** blok je strukturovaný blok, pokud odpovídající složený příkaz získali ve kterém je obsažená v **{** a **}** by být strukturovaný blok. Příkaz skoku, příkaz s popiskem nebo příkazu deklarace není strukturovaný blok.
 
--  Tým
+- Tým
 
    Jedno nebo více vláken spolupracující při provádění konstruktoru.
 

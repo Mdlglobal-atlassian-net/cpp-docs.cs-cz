@@ -21,32 +21,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcde08e8ffdb30f9ebf0ae7577bf836e84513a07
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d8f36c48cf654379e9db3a99c2404732dca30f63
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751674"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860315"
 ---
 # <a name="elapsed-time-automation-classes"></a>Uplynulý čas: Automatizační třídy
 
 Tento postup ukazuje, jak vypočítat rozdíl mezi dvěma `CTime` objekty a get `CTimeSpan` výsledek.
 
-#### <a name="to-calculate-elapsed-time"></a>Pro výpočet uplynulého času
+## <a name="to-calculate-elapsed-time"></a>Pro výpočet uplynulého času
 
 1. Pak vytvoříte další dva `COleDateTime` objekty.
 
-2. Nastavte jednu z `COleDateTime` objektů na aktuální čas.
+1. Nastavte jednu z `COleDateTime` objektů na aktuální čas.
 
-3. Provedení některých časově náročné úlohy.
+1. Provedení některých časově náročné úlohy.
 
-4. Nastavit další `COleDateTime` objektů na aktuální čas.
+1. Nastavit další `COleDateTime` objektů na aktuální čas.
 
-5. Využijte rozdíl mezi dvěma časy.
+1. Využijte rozdíl mezi dvěma časy.
 
    [!code-cpp[NVC_ATLMFC_Utilities#178](../atl-mfc-shared/codesnippet/cpp/elapsed-time-automation-classes_1.cpp)]
 
 ## <a name="see-also"></a>Viz také
 
 [Datum a čas: Podpora automatizace](../atl-mfc-shared/date-and-time-automation-support.md)
-

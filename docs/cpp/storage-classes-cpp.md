@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b57e2c4e6631683afdabec983f155941b8cd2da
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 29e5b2783dda3c66736a7e668186d0645cdd4b84
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107457"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861314"
 ---
 # <a name="storage-classes-c"></a>Třídy úložiště (C++)
 
@@ -220,13 +220,13 @@ Co je třeba mít na paměti `thread_local` specifikátor:
 
 - Dynamicky inicializovaná místní proměnné vlákna v knihovnách DLL nemusí být správně inicializován na všechna vlákna volání. Další informace najdete v tématu [vlákno](thread.md).
 
--  `thread_local` Lze kombinovat se specifikátorem **statické** nebo **extern**.
+- `thread_local` Lze kombinovat se specifikátorem **statické** nebo **extern**.
 
--  Můžete použít `thread_local` jenom pro deklarace a definice; dat `thread_local` nelze použít v deklaracích nebo definicích funkce.
+- Můžete použít `thread_local` jenom pro deklarace a definice; dat `thread_local` nelze použít v deklaracích nebo definicích funkce.
 
--  Můžete zadat `thread_local` pouze na položky dat s trváním statického úložiště. To zahrnuje globální datové objekty (obojí **statické** a **extern**), místní statické objekty a statické datové členy třídy. Všechny místní proměnná deklarovaná `thread_local` je implicitně statická, není-li zadána žádná jiná třída úložiště; jinými slovy, v oboru bloku `thread_local` je ekvivalentní `thread_local static`.
+- Můžete zadat `thread_local` pouze na položky dat s trváním statického úložiště. To zahrnuje globální datové objekty (obojí **statické** a **extern**), místní statické objekty a statické datové členy třídy. Všechny místní proměnná deklarovaná `thread_local` je implicitně statická, není-li zadána žádná jiná třída úložiště; jinými slovy, v oboru bloku `thread_local` je ekvivalentní `thread_local static`.
 
--  Je nutné zadat `thread_local` pro deklarace a definice místního objektu vlákna, zda deklarace a definice objeví ve stejný soubor nebo samostatné soubory.
+- Je nutné zadat `thread_local` pro deklarace a definice místního objektu vlákna, zda deklarace a definice objeví ve stejný soubor nebo samostatné soubory.
 
 Na Windows `thread_local` je funkčně srovnatelný s [__declspec(thread)](../cpp/thread.md) s tím rozdílem, že **__declspec(thread)** lze použít s definicí typu a je platný v kódu jazyka C. Kdykoli je to možné, použijte `thread_local` vzhledem k tomu, že je součástí standardu C++ a proto je větší přenositelnost.
 

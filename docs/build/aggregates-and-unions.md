@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f0ac55dce5d00f8931ee263be0fc5ab8a8a3a08
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: aac6da94a0786e5cdc2eee4d16f5927f66e0a8d5
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710018"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861184"
 ---
 # <a name="aggregates-and-unions"></a>Agregace a sjednocení
 
@@ -29,7 +29,7 @@ Jiné typy, jako je například pole, struktury a sjednocení, mít přísnějš
 
    Obsahuje skupinu seřazený sousedními datovými objekty. Každý objekt je názvem elementu. Všechny prvky v rámci pole mají stejnou velikost a datový typ.
 
--  Struktura
+- Struktura
 
    Obsahuje skupinu seřazený datových objektů. Na rozdíl od prvků pole datových objektů v rámci struktury můžete mít různé datové typy a velikosti. Každý datový objekt ve struktuře je názvem člena.
 

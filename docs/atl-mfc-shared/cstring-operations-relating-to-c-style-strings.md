@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7047161a059432b43d4ff1a92e9c4d10dc01d51
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3a2567182f0e2622a72ceb9b98988c4d122a3561
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387013"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860560"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>CString – operace týkající se řetězců ve stylu C
 
@@ -67,7 +67,7 @@ Někdy můžete potřebovat kopii `CString` data upravovat přímo. Použijte fu
 [!code-cpp[NVC_ATLMFC_Utilities#189](../atl-mfc-shared/codesnippet/cpp/cstring-operations-relating-to-c-style-strings_1.cpp)]
 
 > [!NOTE]
->  Třetí argument `strcpy_s` (nebo Unicode a MBCS-přenosné `_tcscpy_s`) je buď `const wchar_t*` (Unicode) nebo `const char*` (ANSI). V příkladu výše průchody `CString` pro tento argument. Kompilátor C++ automaticky použije funkce pro převod definovaný pro `CString` třídu, která převede `CString` do `LPCTSTR`. Schopnost definovat operace přetypování z jednoho typu na jiný je mezi nejužitečnější funkce jazyka C++.
+> Třetí argument `strcpy_s` (nebo Unicode a MBCS-přenosné `_tcscpy_s`) je buď `const wchar_t*` (Unicode) nebo `const char*` (ANSI). V příkladu výše průchody `CString` pro tento argument. Kompilátor C++ automaticky použije funkce pro převod definovaný pro `CString` třídu, která převede `CString` do `LPCTSTR`. Schopnost definovat operace přetypování z jednoho typu na jiný je mezi nejužitečnější funkce jazyka C++.
 
 ##  <a name="_core_working_with_standard_run.2d.time_library_string_functions"></a> Práce s řetězci funkce standardní knihovny Run-Time
 
@@ -83,13 +83,13 @@ To bude dávat smysl přímo upravit v některých situacích `CString` obsah, n
 
 `GetBuffer` a `ReleaseBuffer` metody poskytují přístup k interní znak vyrovnávací paměť `CString` objektu a umožňují upravovat přímo. Následující kroky ukazují, jak používat tyto funkce pro tento účel.
 
-#### <a name="to-use-getbuffer-and-releasebuffer-to-access-the-internal-character-buffer-of-a-cstring-object"></a>Použití getbuffer – a ReleaseBuffer pro přístup k vyrovnávací paměti pro interní znaky CString objektu
+### <a name="to-use-getbuffer-and-releasebuffer-to-access-the-internal-character-buffer-of-a-cstring-object"></a>Použití getbuffer – a ReleaseBuffer pro přístup k vyrovnávací paměti pro interní znaky CString objektu
 
 1. Volání `GetBuffer` pro `CString` a určení délku vyrovnávací paměti, budete potřebovat.
 
-2. Použít ukazatele vrácené `GetBuffer` pro zápis znaků do přímo `CString` objektu.
+1. Použít ukazatele vrácené `GetBuffer` pro zápis znaků do přímo `CString` objektu.
 
-3. Volání `ReleaseBuffer` pro `CString` objektu k aktualizaci všech interní `CString` informace, například délku řetězce stavu. Když upravíte obsah `CString` objektu přímo, je nutné volat `ReleaseBuffer` před voláním jakékoli jiné `CString` členské funkce.
+1. Volání `ReleaseBuffer` pro `CString` objektu k aktualizaci všech interní `CString` informace, například délku řetězce stavu. Když upravíte obsah `CString` objektu přímo, je nutné volat `ReleaseBuffer` před voláním jakékoli jiné `CString` členské funkce.
 
 ##  <a name="_core_using_cstring_objects_with_variable_argument_functions"></a> CString – objekty pomocí funkce argumentů proměnných
 
@@ -113,4 +113,3 @@ Pro většinu funkcí výsledky, můžete jednoduše vrátit `CString` objektu p
 
 [Řetězce (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [CString – předávání argumentů](../atl-mfc-shared/cstring-argument-passing.md)
-

@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 800b3d7d588d1038ac61cb7c9c4b9f1913bec9d4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 509464ba78a6b7693a849d9f753b13328ab868f9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722368"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860742"
 ---
 # <a name="delayload-delay-load-import"></a>/DELAYLOAD (import odloženého načtení)
 
@@ -46,9 +46,9 @@ Možnost/delayload způsobí, že knihovna DLL, která je určená `dllname` na�
 
 1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
-2. V **Linkeru** složky, vyberte **vstup** stránku vlastností.
+1. V **Linkeru** složky, vyberte **vstup** stránku vlastností.
 
-3. Upravit **DLL s odloženým načtením** vlastnost.
+1. Upravit **DLL s odloženým načtením** vlastnost.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 

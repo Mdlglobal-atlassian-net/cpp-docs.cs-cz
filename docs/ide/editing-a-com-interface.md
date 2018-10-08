@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 451e7fc6e2a7b4a72188da6b69888bf04b605842
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f660f9d69fc787384fcfbec37caec0064a58ec29
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412357"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861340"
 ---
 # <a name="editing-a-com-interface"></a>Úpravy rozhraní modelu COM
 
@@ -38,8 +38,8 @@ Následující tři průvodce vám umožní přizpůsobit existující rozhraní
 
 |Průvodce|Typ projektu|
 |------------|------------------|
-|[Průvodce přidáním vlastnosti](../ide/names-add-property-wizard.md)|Projekty knihovny ATL nebo MFC podpůrné knihovny ATL. Klikněte pravým tlačítkem na rozhraní, ke kterému chcete přidat vlastnost.<br /><br /> Visual C++ zjistí tento typ projektů a odpovídajícím způsobem mění možnosti v průvodci Přidat vlastnost:<br /><br /> -Pro odesílacích rozhraních v projekty vytvořené pomocí [Průvodce aplikací knihovny MFC](../mfc/reference/mfc-application-wizard.md), vyvolání Průvodce přidáním vlastnosti poskytuje možnosti konkrétní ke knihovně MFC.<br />-Pro rozhraní ovládací prvek ActiveX knihovny MFC Průvodce přidáním vlastnosti obsahuje seznam uložených metod a vlastností, které můžete použít podle nebo upravit pro ovládací prvek.<br />-Pro všechny ostatní rozhraní Průvodci přidat vlastnost poskytují možnosti užitečné ve většině situací.|
-|[Průvodce přidáním metody](../ide/add-method-wizard.md)|Projekty knihovny ATL nebo MFC podpůrné knihovny ATL. Klikněte pravým tlačítkem na rozhraní, ke kterému chcete přidat metodu.<br /><br /> Visual C++ zjistí tento typ projektů a odpovídajícím způsobem mění možnosti Průvodce přidáním metody:<br /><br /> -Pro odesílacích rozhraních v projekty vytvořené pomocí [Průvodce aplikací knihovny MFC](../mfc/reference/mfc-application-wizard.md), Průvodce přidáním metody vyvolání poskytuje možnosti konkrétní ke knihovně MFC.<br />-Pro rozhraní ovládací prvek ActiveX knihovny MFC Průvodce přidáním metody obsahuje seznam uložených metod a vlastností, které můžete použít podle nebo upravit pro ovládací prvek.<br />-Pro všechny ostatní rozhraní **přidat metodu** průvodci poskytují možnosti užitečné ve většině situací.|
+|[Průvodce přidáním vlastnosti](../ide/names-add-property-wizard.md)|Projekty knihovny ATL nebo MFC podpůrné knihovny ATL. Klikněte pravým tlačítkem na rozhraní, ke kterému chcete přidat vlastnost.<br /><br />Visual C++ zjistí tento typ projektů a odpovídajícím způsobem mění možnosti v průvodci Přidat vlastnost:<br /><br />-Pro odesílacích rozhraních v projekty vytvořené pomocí [Průvodce aplikací knihovny MFC](../mfc/reference/mfc-application-wizard.md), vyvolání Průvodce přidáním vlastnosti poskytuje možnosti konkrétní ke knihovně MFC.<br />-Pro rozhraní ovládací prvek ActiveX knihovny MFC Průvodce přidáním vlastnosti obsahuje seznam uložených metod a vlastností, které můžete použít podle nebo upravit pro ovládací prvek.<br />-Pro všechny ostatní rozhraní Průvodci přidat vlastnost poskytují možnosti užitečné ve většině situací.|
+|[Průvodce přidáním metody](../ide/add-method-wizard.md)|Projekty knihovny ATL nebo MFC podpůrné knihovny ATL. Klikněte pravým tlačítkem na rozhraní, ke kterému chcete přidat metodu.<br /><br />Visual C++ zjistí tento typ projektů a odpovídajícím způsobem mění možnosti Průvodce přidáním metody:<br /><br />-Pro odesílacích rozhraních v projekty vytvořené pomocí [Průvodce aplikací knihovny MFC](../mfc/reference/mfc-application-wizard.md), Průvodce přidáním metody vyvolání poskytuje možnosti konkrétní ke knihovně MFC.<br />-Pro rozhraní ovládací prvek ActiveX knihovny MFC Průvodce přidáním metody obsahuje seznam uložených metod a vlastností, které můžete použít podle nebo upravit pro ovládací prvek.<br />-Pro všechny ostatní rozhraní **přidat metodu** průvodci poskytují možnosti užitečné ve většině situací.|
 
 Kromě toho můžete implementovat nové rozhraní ovládacího prvku COM tak, že kliknete pravým tlačítkem objekt třídy ovládacího prvku v zobrazení tříd a kliknete [implementovat rozhraní](../ide/implement-interface-wizard.md).
 

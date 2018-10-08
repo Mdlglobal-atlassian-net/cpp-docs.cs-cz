@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db0445e83bbcae6baa45d4a482489e6761fa945a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f80abd3b6270f105fecd7ef8b9988a379901b541
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069427"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860209"
 ---
 # <a name="specifying-property-pages"></a>Zadání stránek vlastností
 
@@ -32,12 +32,12 @@ K implementaci `ISpecifyPropertyPages` pomocí knihovny ATL, proveďte následuj
 
 1. Odvodit třídu z [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md).
 
-2. Přidat položku pro `ISpecifyPropertyPages` do vaší třídy modelu COM mapy.
+1. Přidat položku pro `ISpecifyPropertyPages` do vaší třídy modelu COM mapy.
 
-3. Přidat [PROP_PAGE](reference/property-map-macros.md#prop_page) položku do mapy vlastností pro každou stránku přidružený ovládací prvek.
+1. Přidat [PROP_PAGE](reference/property-map-macros.md#prop_page) položku do mapy vlastností pro každou stránku přidružený ovládací prvek.
 
 > [!NOTE]
->  Při generování standardního ovládacího prvku pomocí [Průvodce ovládacími prvky ATL](../atl/reference/atl-control-wizard.md), pouze je nutné přidat položky PROP_PAGE do mapy vlastností. Průvodce vygeneruje kód nezbytné pro další kroky.
+> Při generování standardního ovládacího prvku pomocí [Průvodce ovládacími prvky ATL](../atl/reference/atl-control-wizard.md), pouze je nutné přidat položky PROP_PAGE do mapy vlastností. Průvodce vygeneruje kód nezbytné pro další kroky.
 
 Které jsou v pořádku kontejnery se zobrazí na stránkách vlastností zadané ve stejném pořadí jako PROP_PAGE položky na mapě vlastnost. Obecně byste měli umístit standardní vlastnosti stránky položky po položky pro svoje vlastní stránky v mapě vlastností tak, aby se uživatelům zobrazí na stránkách, které jsou specifické pro váš ovládací prvek nejprve.
 
@@ -51,4 +51,3 @@ Následující třídy pro kalendář používá ovládací prvek `ISpecifyPrope
 
 [Stránky vlastností](../atl/atl-com-property-pages.md)<br/>
 [Ukázka ATLPages](../visual-cpp-samples.md)
-
