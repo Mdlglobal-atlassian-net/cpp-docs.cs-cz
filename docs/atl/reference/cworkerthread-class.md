@@ -25,19 +25,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2c3e0eb625c492cb9f0e9a1234d33149ac201a1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 79855860b4d2d6bfee328f8fa07f2a3ba6cfd69c
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040229"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861457"
 ---
 # <a name="cworkerthread-class"></a>Cworkerthread – třída
 
 Tato třída vytvoří pracovní vlákno nebo použije existující předplatné, čeká na jeden nebo více jádra manipulačních bodů objektu a provede funkci zadaného klienta v případě jednoho z úchytů signalizován.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+> Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,7 +46,7 @@ template <class ThreadTraits = DefaultThreadTraits>
 class CWorkerThread
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *ThreadTraits*<br/>
 Třída poskytující funkce vytvoření vláken, jako například [crtthreadtraits –](../../atl/reference/crtthreadtraits-class.md) nebo [win32threadtraits –](../../atl/reference/win32threadtraits-class.md).
@@ -84,19 +84,19 @@ Třída poskytující funkce vytvoření vláken, jako například [crtthreadtra
 
 1. Vytvoření instance této třídy.
 
-2. Volání [CWorkerThread::Initialize](#initialize).
+1. Volání [CWorkerThread::Initialize](#initialize).
 
-3. Volání [CWorkerThread::AddHandle](#addhandle) s popisovačem objekt jádra a ukazatel na implementaci [iworkerthreadclient –](../../atl/reference/iworkerthreadclient-interface.md).
+1. Volání [CWorkerThread::AddHandle](#addhandle) s popisovačem objekt jádra a ukazatel na implementaci [iworkerthreadclient –](../../atl/reference/iworkerthreadclient-interface.md).
 
-     - nebo –
+   \- nebo –
 
-     Volání [CWorkerThread::AddTimer](#addtimer) s ukazatelem na implementaci [iworkerthreadclient –](../../atl/reference/iworkerthreadclient-interface.md).
+   Volání [CWorkerThread::AddTimer](#addtimer) s ukazatelem na implementaci [iworkerthreadclient –](../../atl/reference/iworkerthreadclient-interface.md).
 
-4. Implementace [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) k provedlo určitou akci, když je signál, popisovač nebo časovače.
+1. Implementace [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) k provedlo určitou akci, když je signál, popisovač nebo časovače.
 
-5. Chcete-li odebrat objekt ze seznamu generický objektů, zavolejte [CWorkerThread::RemoveHandle](#removehandle).
+1. Chcete-li odebrat objekt ze seznamu generický objektů, zavolejte [CWorkerThread::RemoveHandle](#removehandle).
 
-6. Chcete-li ukončit vlákno, volejte [CWorkerThread::Shutdown](#shutdown).
+1. Chcete-li ukončit vlákno, volejte [CWorkerThread::Shutdown](#shutdown).
 
 ## <a name="requirements"></a>Požadavky
 

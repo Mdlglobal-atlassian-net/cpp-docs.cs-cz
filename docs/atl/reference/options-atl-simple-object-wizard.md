@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d337d31150b6da1a1556589d63fd60d63842efce
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7a337ceffbbfb1577b58fea2f60213cd79052b00
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098781"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861366"
 ---
 # <a name="options-atl-simple-object-wizard"></a>Možnosti Průvodce jednoduchým objektem ATL
 
@@ -60,7 +60,7 @@ Další informace o projekty knihovny ATL a třídy knihovny ATL modelu COM, nal
    |Možnost|Popis|
    |------------|-----------------|
    |**Duální**|Určuje, že objekt podporuje duální rozhraní (jeho vtable má funkce vlastního rozhraní a pozdní vazby `IDispatch` metody). Umožňuje oba klienti modelu COM a [spustila samostatná instance](../../mfc/automation-clients.md) pro přístup k objektu. Výchozí nastavení|
-   |**Vlastní**|Určuje, že objekt podporuje vlastní rozhraní (jeho vtable má vlastní funkce rozhraní). Vlastní rozhraní může být rychlejší než duální rozhraní, zejména přes hranice procesu.<br /><br /> -   **Automatizace kompatibilní** kontrolery automatizace umožňuje přístup k objektu, který podporuje vlastní rozhraní.|
+   |**Vlastní**|Určuje, že objekt podporuje vlastní rozhraní (jeho vtable má vlastní funkce rozhraní). Vlastní rozhraní může být rychlejší než duální rozhraní, zejména přes hranice procesu.<br /><br /> - **Automatizace kompatibilní** kontrolery automatizace umožňuje přístup k objektu, který podporuje vlastní rozhraní.|
 
 - **Podpora**
 

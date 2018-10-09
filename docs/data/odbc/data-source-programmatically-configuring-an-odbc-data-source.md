@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 36f8233d7d3683a885fc0f38468ad5a7b9b59c57
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6c9b9cb66e64f85ad8800faf11011e351a3f3539
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030765"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861353"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Zdroj dat: Programové nakonfigurování zdroje dat ODBC
 
@@ -85,7 +85,7 @@ Popis ovladače. Toto je název prezentovaný uživatelům, nikoli fyzický náz
 *lpszAttributes*<br/>
 Seznam atributů ve formě "Název_klíče = hodnota". Tyto řetězce jsou odděleny znakem null a zakončeny dvěma po sobě jdoucí znaky "null" na konci seznamu. Tyto atributy jsou primárně výchozí specifický ovladač položek, které jsou předávány do registrů pro nový zdroj dat. Jeden důležitý klíč, který není zmíněn v referenční dokumentaci rozhraní API ODBC pro tuto funkci je "DSN" ("název zdroje dat"), který určuje název nového zdroje dat. Zbývající položky jsou specifické pro ovladač pro nový zdroj dat. Není často nutné zadat všechny položky, protože ovladač může vyzvat uživatele s dialogová okna pro nové hodnoty. (Nastavit *hwndParent* na hodnotu NULL způsobí to.) Můžete explicitně poskytnout výchozí hodnoty tak, aby se uživateli nezobrazí výzva.  
   
-###### <a name="to-determine-the-description-of-a-driver-for-the-lpszdriver-parameter-using-odbc-administrator"></a>Určení popisu ovladače pro parametr lpszDriver pomocí Správce rozhraní ODBC  
+#### <a name="to-determine-the-description-of-a-driver-for-the-lpszdriver-parameter-using-odbc-administrator"></a>Určení popisu ovladače pro parametr lpszDriver pomocí Správce rozhraní ODBC  
   
 1. Spusťte správce rozhraní ODBC.  
   
@@ -97,23 +97,23 @@ Jako alternativu můžete ověřit registr (nebo u 16bitové verze soubor Odbcin
   
 Jeden ze způsobů, jak najít názvy klíčů a hodnot pro *lpszAttributes* parametr je prozkoumat soubor Odbc.ini pro již nakonfigurovaný zdroj, (např. ten, který byl nakonfigurován správcem rozhraní ODBC).  
   
-###### <a name="to-find-keynames-and-values-for-the-lpszattributes-parameter"></a>K vyhledání názvu klíčů a hodnot pro parametr lpszAttributes  
+#### <a name="to-find-keynames-and-values-for-the-lpszattributes-parameter"></a>K vyhledání názvu klíčů a hodnot pro parametr lpszAttributes  
   
 1. Spusťte editor registru Windows (nebo u 16bitové verze otevřete soubor Odbc.ini).  
   
 1. Najdete informace zdroje dat ODBC pomocí jedné z následujících akcí:  
   
-    -   U 32bitové verze vyhledejte klíč **HKEY_CURRENT_USER\Software\ODBC\ODBC. Zdroje dat INI\ODBC** v levém podokně.  
+   - U 32bitové verze vyhledejte klíč **HKEY_CURRENT_USER\Software\ODBC\ODBC. Zdroje dat INI\ODBC** v levém podokně.  
   
-         V pravém podokně jsou uvedeny položky ve formátu: "pub: REG_SZ:*<data source name>*", kde *<data source name>* je zdroj dat, která je už nakonfigurovaná s požadovaným nastavením ovladače určené pro instalaci k použití. Vyberte zdroj dat, které potřebujete, třeba SQL Server. Položky následující za řetězcem "pub:" jsou v pořadí, název klíče a hodnoty pro použití v vaše *lpszAttributes* parametru.  
+      V pravém podokně jsou uvedeny položky ve formátu: "pub: REG_SZ:*<data source name>*", kde *<data source name>* je zdroj dat, která je už nakonfigurovaná s požadovaným nastavením ovladače určené pro instalaci k použití. Vyberte zdroj dat, které potřebujete, třeba SQL Server. Položky následující za řetězcem "pub:" jsou v pořadí, název klíče a hodnoty pro použití v vaše *lpszAttributes* parametru.  
   
-    -   U 16bitové verze, najděte část do souboru Odbc.ini označeny [*\<název zdroje dat >*].  
+   - U 16bitové verze, najděte část do souboru Odbc.ini označeny [*\<název zdroje dat >*].  
   
-         Řádky následující tento řádek jsou ve tvaru "Název_klíče = hodnota". Jedná se přesně o položky ve vaší *lpszAttributes* parametru.  
+      Řádky následující tento řádek jsou ve tvaru "Název_klíče = hodnota". Jedná se přesně o položky ve vaší *lpszAttributes* parametru.  
   
 Můžete také prozkoumat dokumentaci pro konkrétní ovladač, který se chystáte používat. Užitečné informace najdete v online nápovědě pro ovladač, která je přístupná po spuštění Správce rozhraní ODBC. Tyto soubory nápovědy jsou obvykle umístěny v adresáři WINDOWS\SYSTEM u systému Windows NT, Windows 3.1 nebo Windows 95.  
   
-###### <a name="to-obtain-online-help-for-your-odbc-driver"></a>Získání online nápovědy pro ovladač rozhraní ODBC  
+#### <a name="to-obtain-online-help-for-your-odbc-driver"></a>Získání online nápovědy pro ovladač rozhraní ODBC  
   
 1. Spusťte správce rozhraní ODBC.  
   
