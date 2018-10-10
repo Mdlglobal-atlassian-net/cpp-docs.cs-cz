@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc42cd1eab4f19c8184ad500b4a4a1871747d6aa
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9a68a0ae6392c2a9a64c9ff6c567451c2672c861
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713086"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890189"
 ---
 # <a name="dll-frequently-asked-questions"></a>DLL – nejčastější dotazy
 
@@ -39,7 +39,7 @@ Toto jsou některé nejčastější dotazy (FAQ) o knihovnách DLL.
 
 ## <a name="mfc_multithreaded_1"></a> Knihovna MFC DLL vytvořit více vláken?
 
-S výjimkou během inicializace knihovny MFC DLL můžete bezpečně vytvořit více vláken tak dlouho, dokud používá místní úložiště (TLS) funkce, jako například Win32 vlákno **TlsAlloc** přidělit úložiště thread local. Nicméně pokud používá knihovny MFC DLL **__declspec(thread)** přidělit úložiště thread local, klientská aplikace musí implicitně propojit do knihovny DLL. Pokud klientská aplikace explicitně odkazovat na knihovnu DLL, volání **LoadLibrary** nebude úspěšně načíst knihovnu DLL. Další informace o vytváření více vláken uvnitř knihovny DLL MFC najdete v článku znalostní báze Knowledge Base, "PRB: Volání LoadLibrary() na zatížení knihovny DLL, že má statické TLS" (Q118816). Další informace o proměnných místního vlákna v knihovnách DLL naleznete v tématu [vlákno](../cpp/thread.md).
+S výjimkou během inicializace knihovny MFC DLL můžete bezpečně vytvořit více vláken tak dlouho, dokud používá místní úložiště (TLS) funkce, jako například Win32 vlákno **TlsAlloc** přidělit úložiště thread local. Nicméně pokud používá knihovny MFC DLL **__declspec(thread)** přidělit úložiště thread local, klientská aplikace musí implicitně propojit do knihovny DLL. Pokud klientská aplikace explicitně odkazovat na knihovnu DLL, volání **LoadLibrary** nebude úspěšně načíst knihovnu DLL. Další informace o proměnných místního vlákna v knihovnách DLL naleznete v tématu [vlákno](../cpp/thread.md).
 
 Knihovna MFC DLL, která při spuštění vytvoří nové vlákno MFC přestane reagovat při načtení aplikace. Jedná se o pokaždé, když vlákno je vytvořen zavoláním `AfxBeginThread` nebo `CWinThread::CreateThread` uvnitř:
 
@@ -49,13 +49,11 @@ Knihovna MFC DLL, která při spuštění vytvoří nové vlákno MFC přestane 
 
 - Zadaného `DllMain` nebo **RawDllMain** funkce v rozšiřující knihovny DLL MFC.
 
-Další informace o vytváření vláken při inicializaci najdete v článku znalostní báze Knowledge Base, "PRB: Nelze vytvořit knihovny MFC vlákno během spouštění knihovny DLL" (Q142243).
-
 ## <a name="mfc_multithreaded_2"></a> Může Vícevláknová aplikace přistupovat ke knihovně MFC DLL v různých vláknech?
 
 Vícevláknové aplikace můžou k běžných knihovnách MFC DLL, která dynamicky propojené ke knihovně MFC a rozšiřující knihovny DLL MFC z různých vláken. A od verze Visual C++ verze 4.2, mají přístup aplikace k běžných knihovnách MFC DLL, která staticky se propojit s knihovnou MFC z více vláken v aplikaci.
 
-Starší než verze 4.2 pouze jedno vlákno externí přiložit běžné knihovny MFC DLL staticky propojené do MFC. Další informace o omezení přístupu k běžných knihovnách MFC DLL, která staticky se propojit s knihovnou MFC z více vláken (před Visual C++ verze 4.2), najdete v článku znalostní báze Knowledge Base, "více vláken a MFC _USRDLLs" (Q122676).
+Starší než verze 4.2 pouze jedno vlákno externí přiložit běžné knihovny MFC DLL staticky propojené do MFC.
 
 Všimněte si, že v dokumentaci k Visual C++ se již nepoužívá termín USRDLL. Běžné knihovny MFC DLL staticky propojené do MFC má stejné vlastnosti jako dosavadní USRDLL.
 

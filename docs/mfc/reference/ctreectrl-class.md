@@ -172,12 +172,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f1294517a49687a2fc94b1bb696a111a9f55da7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 98dfdc792341d215830d46d078d9ece69419efed
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403965"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890839"
 ---
 # <a name="ctreectrl-class"></a>Ctreectrl – třída
 
@@ -292,8 +292,6 @@ Další informace o používání `CTreeCtrl`, naleznete v tématu:
 - [Používání atributu CTreeCtrl](../../mfc/using-ctreectrl.md)
 
 - [Odkaz na ovládací prvek zobrazení stromové struktury](/windows/desktop/Controls/tree-view-control-reference) ve Windows SDK.
-
-- Článek znalostní báze Q222905: postupy: zobrazení místní nabídky pro CTreeCtrl
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 

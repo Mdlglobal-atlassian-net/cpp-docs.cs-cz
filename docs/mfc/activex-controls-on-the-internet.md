@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47d1a5308b379d8bd1923bb9ad1ad805cb6bded3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6004c3acd052d1424004017941a5e4aa110c602c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432814"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890333"
 ---
 # <a name="activex-controls-on-the-internet"></a>Ovládací prvky ActiveXna Internetu
 
@@ -170,10 +170,6 @@ Asynchronní monikery poskytují způsob, jak stahovat data asynchronně přes s
 Například pokud pouze 10 bajtů je k dispozici a čtení je volána asynchronně v souboru 1 kB, čtení nedochází k blokování, ale vrátí se v současnosti 10 bajtů.
 
 Můžete implementovat [asynchronní monikery](../mfc/asynchronous-monikers-on-the-internet.md) pomocí `CAsyncMonikerFile` třídy. Ale můžete použít ovládací prvky ActiveX `CDataPathProperty` třídu, která je odvozena od `CAsyncMonikerFile`, implementaci asynchronního ovládacího prvku vlastnosti.
-
-Ukázka ASYNDOWN ukazuje, jak nastavit do asynchronní smyčky pomocí časovače číst data. ASYNDOWN je podrobně popsán v článku znalostní báze "Postupy: AsyncDown ukazuje asynchronní stahování dat" (Q177244) a je k dispozici ke stažení z webu Microsoft Download Center. (Další informace o stahování souborů z webu Microsoft Download Center, najdete v článku "Jak na získat služby podpory společnosti Microsoft soubory z Online" (Q119591) znalostní báze Microsoft Knowledge Base.) Můžete najít článků znalostní báze [ http://support.microsoft.com/support ](http://support.microsoft.com/support).
-
-Základní technika používána ASYNDOWN je nastavit časovač **CDataPathProperty::OnDataAvailable** označuje, kdy data jsou k dispozici. Při doručení zprávy časovače aplikace čte v 128 bajtů bloků dat a vyplní ovládací prvek upravit. Data nejsou k dispozici, když se zpracovává zpráva časovače, časovač vypnuta. `OnDataAvailable` spustí časovač, pokud další data přibývají později.
 
 ## <a name="displaying-a-control-on-a-web-page"></a>Zobrazení ovládacího prvku na webové stránce
 

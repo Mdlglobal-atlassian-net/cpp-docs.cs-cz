@@ -110,12 +110,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ca5b649ba5d09d0406658112b8067ed804f7e70
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 81ecc91d8c942a36920368bdb4054ffc2145478d
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423933"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890722"
 ---
 # <a name="cricheditview-class"></a>Cricheditview – třída
 
@@ -470,8 +470,6 @@ Typ výběru může obsahovat libovolnou kombinaci následujících příznaků:
 Výchozí implementace vrací hodnotu NULL. To je moderní overridable.
 
 Další informace najdete v tématu [IRichEditOleCallback::GetContextMenu](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getcontextmenu) a [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) v sadě Windows SDK.
-
-Další informace o `OLEOBJECT` typu, najdete v článku OLE datových struktur a struktura přidělení v *OLE znalostní báze*.
 
 ##  <a name="getdocument"></a>  CRichEditView::GetDocument
 

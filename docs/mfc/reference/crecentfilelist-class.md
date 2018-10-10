@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a6ac97eaa55dde337068e450c0223b4ec4409f8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1394c3c614d80a07bfea7f411576d5b303d67da8
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393305"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890605"
 ---
 # <a name="crecentfilelist-class"></a>Crecentfilelist – třída
 
@@ -78,10 +78,6 @@ class CRecentFileList
 ## <a name="remarks"></a>Poznámky
 
 Soubory můžete přidána nebo odstraněna ze seznamu naposledy použitých souborů, seznam souborů může číst nebo zapsat do registru nebo. Je možné aktualizovat soubor INI a nabídky zobrazení seznamu naposledy použitých souborů.
-
-Další informace o naposledy použitých položek nabídky naleznete v tématu
-
-- Článek znalostní báze Q243751: postupy: přidání obslužné rutiny příkazů pro položky seznamu naposledy použitých položek nabídky v aplikaci knihovny MFC
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 

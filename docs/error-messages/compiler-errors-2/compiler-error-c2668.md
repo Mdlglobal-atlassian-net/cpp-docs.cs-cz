@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3b318c663bb036629086d0bca9a67641e3c4c4e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 23bb1a6fcf64590670ede2eb6aca232a5a3b4f5c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093750"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889988"
 ---
 # <a name="compiler-error-c2668"></a>Chyba kompilátoru C2668
 
@@ -31,15 +31,11 @@ Volání zadané funkce přetížení se nepodařilo přeložit. Můžete explic
 
 Tuto chybu můžete získat také pomocí šablony. Pokud ve stejné třídě, máte regulární členské funkce a bez vizuálního vzhledu členská funkce se stejným podpisem, musí být první je bez vizuálního vzhledu. Jedná se omezení aktuální implementace jazyka Visual C++.
 
-Na částečné řazení šablon funkcí najdete v článku znalostní báze Knowledge Base Q240869 Další informace.
-
-Pokud vytváříte projekt knihovny ATL, který obsahuje objekt modelu COM podporuje `ISupportErrorInfo`, najdete v článku znalostní báze Q243298.
-
 ## <a name="example"></a>Příklad
 
 Následující ukázka generuje C2668:
 
-```
+```cpp
 // C2668.cpp
 struct A {};
 struct B : A {};
@@ -59,7 +55,7 @@ int main() {
 
 Dalším způsobem, jak vyřešit tuto chybu je [using – deklarace](../../cpp/using-declaration.md):
 
-```
+```cpp
 // C2668b.cpp
 // compile with: /EHsc /c
 // C2668 expected
@@ -104,7 +100,7 @@ Tato chyba může být také generovány jako důsledek kompilátoru prací, kte
 
 Převod na přetypování pomocí konstantní 0 je nejednoznačný, protože int vyžaduje převod jak dlouho a na typ void *. Chcete-li vyřešit tuto chybu, přetypování 0 pro přesného typu parametru funkce, který používá se pro tak, aby žádný převod muset provést (Tento kód bude platit ve Visual Studio .NET 2003 a Visual Studio .NET verzí jazyka Visual C++).
 
-```
+```cpp
 // C2668c.cpp
 #include "stdio.h"
 void f(long) {
@@ -126,7 +122,7 @@ int main() {
 
 Této chybě může dojít, protože CRT má teď plovoucí desetinnou čárkou a double formy všechny matematické funkce.
 
-```
+```cpp
 // C2668d.cpp
 #include <math.h>
 int main() {
@@ -141,7 +137,7 @@ int main() {
 
 Této chybě může dojít, protože pow (int, int) byla odstraněna z math.h v CRT.
 
-```
+```cpp
 // C2668e.cpp
 #include <math.h>
 int main() {
@@ -154,8 +150,7 @@ int main() {
 
 Tento kód v sadě Visual Studio 2015 úspěšné, ale v sadě Visual Studio 2017 a novější s C2668 se nezdaří. V sadě Visual Studio 2015 kompilátor nesprávně zpracovávají Inicializace kopírování seznamu v stejným způsobem jako regulární Inicializace kopírování; za to, převod pouze konstruktory pro řešení přetížení.
 
-```
-C++
+```cpp
 struct A {
     explicit A(int) {}
 };

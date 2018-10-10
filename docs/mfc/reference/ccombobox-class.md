@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03d418fc45d3947248c78d70af5d036bd93b204d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 912bbd37d4d9afcb60158d41b82b7fa829eeb4ec
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821501"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890644"
 ---
 # <a name="ccombobox-class"></a>CComboBox – třída
 
@@ -256,7 +256,7 @@ Pokud vytvoříte `CComboBox` objekt v rámci dialogového okna (prostřednictv�
 
 Vložíte-li `CComboBox` objekt v rámci jiného okna objektu, není potřeba ji odstranit. Pokud jste vytvořili `CComboBox` objekt v zásobníku, je automaticky zničen. Pokud jste vytvořili `CComboBox` objektů na haldě pomocí **nové** funkce, je nutné volat **odstranit** na objekt, který chcete zničit ho při zničení pole se seznamem Windows.
 
-**Poznámka:** Pokud chcete zpracovávat zprávy WM_KEYDOWN a z WM_CHAR, budete muset podtřídy pole se seznamem pro úpravy a seznamu ovládací prvky, odvozovat z `CEdit` a `CListBox`, a přidejte obslužné rutiny pro zprávy do odvozené třídy. Další informace najdete v tématu [ http://support.microsoft.com/default.aspxscid=kb; Q174667](http://support.microsoft.com/default.aspxscid=kb;q174667) a [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
+**Poznámka:** Pokud chcete zpracovávat zprávy WM_KEYDOWN a z WM_CHAR, budete muset podtřídy pole se seznamem pro úpravy a seznamu ovládací prvky, odvozovat z `CEdit` a `CListBox`, a přidejte obslužné rutiny pro zprávy do odvozené třídy. Další informace najdete v tématu [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 

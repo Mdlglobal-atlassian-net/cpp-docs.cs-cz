@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec12275291321751c539d095c60fa9dabffa2b7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 50b1816320521f8ad20ee64fc4a051f938e902ec
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445175"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890774"
 ---
 # <a name="cpropertysheet-class"></a>Cpropertysheet – třída
 
@@ -155,7 +155,7 @@ Můžete vytvořit typ dialogové okno Karta nazývá průvodce, který se sklá
 
 Vytvoření dialogového okna typ průvodce, postupujte podle stejných kroků, které byste použili k vytvoření standardní vlastností, ale volání [SetWizardMode](#setwizardmode) před voláním [DoModal](#domodal). Chcete-li povolit Průvodce tlačítka, zavolejte [SetWizardButtons](#setwizardbuttons), pomocí příznaků přizpůsobit jejich funkce a vzhledu. Povolit **Dokončit** tlačítko, volání [SetFinishText](#setfinishtext) poté, co uživatel má provést akce na poslední stránce průvodce.
 
-Další informace o tom, jak používat `CPropertySheet` objekty, najdete v článku [seznamy vlastností a stránky vlastností](../../mfc/property-sheets-and-property-pages-in-mfc.md). Také, najdete v článku znalostní báze Q146916: postupy: vytvoření cpropertysheet – nemodální pomocí standardní tlačítka a článek Q300606: postupy: návrh možností změny velikosti vlastností knihovny MFC.
+Další informace o tom, jak používat `CPropertySheet` objekty, najdete v článku [seznamy vlastností a stránky vlastností](../../mfc/property-sheets-and-property-pages-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 

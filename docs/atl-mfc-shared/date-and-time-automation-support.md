@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38933847065544f97d60dfc109436f059a025f7a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1ce0acc7eb90e534e1e66882f5a4a6a88b1eb782
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763851"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890176"
 ---
 # <a name="date-and-time-automation-support"></a>Datum a čas: Podpora automatizace
 
@@ -57,11 +57,8 @@ Druhá metoda vytvoří dva `COleDateTime` objekty, `oletime1` a `oletime2`a nas
 
 CRT správně vypočítá rozdíl ve 23 hodin. `COleDateTimeSpan` vypočítá rozdíl 24 hodin.
 
-Všimněte si, že řešení se blíží ke konci příklad zobrazí datum pomocí správně `COleDateTime::Format`. Najdete v článku znalostní báze Knowledge Base "Chyba: Format("%D") selže `COleDateTime` a `COleDateTimeSpan`" (Q167338).
-
 [!code-cpp[NVC_ATLMFC_Utilities#176](../atl-mfc-shared/codesnippet/cpp/date-and-time-automation-support_1.cpp)]
 
 ## <a name="see-also"></a>Viz také
 
 [Datum a čas](../atl-mfc-shared/date-and-time.md)
-

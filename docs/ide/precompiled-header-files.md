@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d2e2bab9da3d19347577f0b1d1e8ab2ed6bb0dc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d93486d8df8cdb8bc253a0e71037f4e2ddf9e128
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404017"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890476"
 ---
 # <a name="precompiled-header-files"></a>Předkompilované soubory hlaviček
 
@@ -35,7 +35,7 @@ Tyto soubory jsou umístěny v *název_projektu* adresáře. V Průzkumníku ře
 
 |Název souboru|Popis|
 |---------------|-----------------|
-|Stdafx.h|Zahrnout soubor pro standardní systémové soubory zahrnutí a specifické pro projekt zahrnuté soubory, které jsou často používány, ale se mění jen zřídka.<br /><br /> By neměl definovat nebo zrušit všechny _AFX_NO_XXX v souboru stdafx.h; najdete v článku znalostní báze Knowledge Base "PRB: dojít k problémům při definování _AFX_NO_XXX". Články znalostní báze můžete vyhledat v knihovně MSDN nebo na [http:// support.microsoft.com/](http://%20support.microsoft.com/).|
+|Stdafx.h|Zahrnout soubor pro standardní systémové soubory zahrnutí a specifické pro projekt zahrnuté soubory, které jsou často používány, ale se mění jen zřídka.<br /><br /> By neměl definovat nebo některý z _AFX_NO_XXX v souboru stdafx.h nedefinované.|
 |Stdafx.cpp|Obsahuje direktivy preprocesoru `#include "stdafx.h"` a přidá zahrnout soubory pro předkompilované typy. Předkompilované soubory libovolného typu, včetně souborů záhlaví, podporují kratší časy kompilace omezením kompilace pouze na tyto soubory, které je vyžadují. Jakmile se váš projekt se vytvořil poprvé, můžete si všimnout, sestavení mnohem rychlejší u následujících sestavení z důvodu přítomnosti předkompilované hlavičkové soubory.|
 
 ## <a name="see-also"></a>Viz také

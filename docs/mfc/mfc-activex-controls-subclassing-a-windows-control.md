@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94b989594316f2eac3e65fad2cb5bf419e7ee2eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 03fc15cc2d2a73c0e8a1a016a2a477a5c65cdc15
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407532"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890554"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC – ovládací prvky ActiveX: Vytvoření podtřídy ovládacího prvku systému Windows
 
@@ -48,10 +48,8 @@ Pokud chcete podtřídy ovládacího prvku Windows proveďte následující úlo
 
 - [Zpracovat všechny ActiveX ovládacího prvku zprávy (OCM) odrazí na ovládacím prvku](#_core_handling_reflected_window_messages)
 
-    > [!NOTE]
-    >  Velká část této práce se provádí za vás Průvodce ovládacím prvkem ActiveX Pokud vyberete ovládací prvek má rozčlenit do podtříd pomocí **vyberte nadřazené třídu okna** rozevíracího seznamu na **nastavení** stránky.
-
-Najdete v článku znalostní báze Q243454 Další informace o vytvoření podtřídy ovládacího prvku.
+   > [!NOTE]
+   > Velká část této práce se provádí za vás Průvodce ovládacím prvkem ActiveX Pokud vyberete ovládací prvek má rozčlenit do podtříd pomocí **vyberte nadřazené třídu okna** rozevíracího seznamu na **nastavení** stránky.
 
 ##  <a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a> Přepsání IsSubclassedControl a PreCreateWindow
 

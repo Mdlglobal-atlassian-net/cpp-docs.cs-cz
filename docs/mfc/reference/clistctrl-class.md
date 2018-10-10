@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a93294e955dcdc04b320302c573dcbbb827670d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: c530a9853aad3e16e5e4094f4d90e30c2643c0d8
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821566"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890891"
 ---
 # <a name="clistctrl-class"></a>CListCtrl – třída
 
@@ -457,12 +457,6 @@ Ovládací prvky zobrazení seznamu můžete zobrazit jejich obsah v čtyřmi r�
 - Zobrazení sestav
 
      Každá položka je zobrazena na samostatném řádku, společně s dalšími informacemi, které jsou uspořádány ve sloupcích na pravé straně. Levém sloupci obsahuje malé ikony a popisek a následující sloupce obsahují podřízené položky podle aplikace. Ovládací prvek vložený záhlaví (třída [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementuje tyto sloupce. Další informace o ovládací prvky záhlaví a sloupců v zobrazení sestav, naleznete v tématu [pomocí třídy CListCtrl: přidávání sloupců do ovládacího prvku (zobrazení sestavy)](../../mfc/adding-columns-to-the-control-report-view.md).
-
-Viz také:
-
-- Článek znalostní báze Q250614: postupy: řazení položek v atributu CListCtrl v zobrazení sestav
-
-- Článek znalostní báze Q200054: PRB: OnTimer() je není volána opakovaně pro ovládací prvek seznamu
 
 Určuje styl ovládacího prvku zobrazení aktuálního seznamu aktuálního zobrazení. Další informace o těchto stylů a jejich využití naleznete v tématu [pomocí třídy CListCtrl: Změna stylů ovládacího prvku seznam](../../mfc/changing-list-control-styles.md).
 

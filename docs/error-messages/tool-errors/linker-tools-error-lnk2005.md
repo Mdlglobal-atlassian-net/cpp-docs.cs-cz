@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a800fb8065fd3c613a2bc05975c15decb0145891
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8a3dbb1d63e7d7c6f5e036fc0cde967277c91a40
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028308"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890124"
 ---
 # <a name="linker-tools-error-lnk2005"></a>Chyba linkerů LNK2005
 
@@ -121,14 +121,3 @@ Tady jsou některé běžné příčiny této chyby.
     ```
 
    Chcete-li tento problém vyřešit, přidejte [/FORCE:MULTIPLE](../../build/reference/force-force-file-output.md) možnosti příkazového řádku linkeru a ujistěte se, že je tento uuid.lib první knihovna odkazuje.
-
-## <a name="additional-information"></a>Další informace
-
-Pokud používáte starší verzi sady nástrojů, najdete v článcích znalostní báze pro další informace o konkrétní příčiny této chyby:
-
-- [Chyba LNK2005 nastane, pokud jsou v nesprávném pořadí, v jazyce Visual C++ propojené knihovny CRT a knihovny MFC](https://support.microsoft.com/kb/148652)
-
-- [Oprava: Globální přetížené Delete – operátor způsobí, že LNK2005](https://support.microsoft.com/kb/140440)
-
-- [Pokud kompilujete projekt knihovny ATL spustitelný soubor (.exe) v jazyce Visual C++ se zobrazí chyby LNK2005](https://support.microsoft.com/kb/184235).
-

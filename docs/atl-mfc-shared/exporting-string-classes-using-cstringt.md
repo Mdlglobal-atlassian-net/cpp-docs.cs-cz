@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5355b6e81354ef04b7cc4d2c3495289c9d1d029d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f2d77516ae53b0ee1c4f39e4d8f095848aa00acc
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444200"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889968"
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>Export tříd řetězců pomocí CStringT
 
@@ -29,7 +29,7 @@ V minulosti, mají vývojáři MFC odvozené od `CString` se specializují vlast
 
 - S novými `CStringT` třída šablony, můžete přizpůsobit `CString` chování pomocí parametrů šablony, které určují vlastnosti znaků, podobný šablony ve standardní knihovně jazyka C++.
 
-- Při exportu vlastní řetězcové třídy z knihovny DLL pomocí `CStringT`, kompilátor také automaticky vyexportuje `CString` základní třídy. Protože `CString` samotného je třída šablony, může být vytvořena pomocí kompilátoru při použití, pokud kompilátor si je vědoma, který `CString` je importována z knihovny DLL. Pokud jste migrovali projekty Visual C++ 6.0 na Visual C++ .NET, možná jste viděli chybami linkeru symbolů pro násobení definovanou `CString` z důvodu kolize z `CString` naimportované z knihovny DLL a verze místní instance. Správný způsob, jak k tomu je popsána níže. Další informace o tomto problému najdete v článku znalostní báze Knowledge Base "propojení chyb při importu CString odvozené třídy" (Q309801) na [ http://support.microsoft.com/default.aspx ](http://support.microsoft.com/default.aspx).
+- Při exportu vlastní řetězcové třídy z knihovny DLL pomocí `CStringT`, kompilátor také automaticky vyexportuje `CString` základní třídy. Protože `CString` samotného je třída šablony, může být vytvořena pomocí kompilátoru při použití, pokud kompilátor si je vědoma, který `CString` je importována z knihovny DLL. Pokud jste migrovali projekty Visual C++ 6.0 na Visual C++ .NET, možná jste viděli chybami linkeru symbolů pro násobení definovanou `CString` z důvodu kolize z `CString` naimportované z knihovny DLL a verze místní instance. Správný způsob, jak k tomu je popsána níže.
 
 Následující příklad způsobí, že linkeru, aby způsobí chyby symbol pro vícenásobně definovaný třídy. Předpokládejme, že exportujete `CString`-odvozené třídy (`CMyString`) z rozšiřující knihovny DLL MFC:
 

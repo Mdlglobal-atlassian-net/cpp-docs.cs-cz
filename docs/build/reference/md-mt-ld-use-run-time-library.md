@@ -45,12 +45,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee8e59fbc88e63343d4da75a4cbf95d4f83bf815
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1aefd61d724f7716392b5fd2d15ef3a2f9ff0006
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701360"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890228"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (Použít běhovou knihovnu)
 
@@ -81,8 +81,6 @@ Všechny moduly předané danému vyvolání linkeru musí být zkompilovány s 
 
 Další informace o použití ladicích verzí knihoven runtime naleznete v tématu [C Run-Time Library Reference](../../c-runtime-library/c-run-time-library-reference.md).
 
-Výběr příslušné knihovny runtime jazyka C popisuje také článek Q140584 znalostní báze Knowledge Base.
-
 Další informace o knihovnách DLL naleznete v tématu [knihovny DLL v jazyce Visual C++](../../build/dlls-in-visual-cpp.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
@@ -97,7 +95,7 @@ Další informace o knihovnách DLL naleznete v tématu [knihovny DLL v jazyce V
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.RuntimeLibrary%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.RuntimeLibrary%2A>.
 
 ## <a name="see-also"></a>Viz také
 

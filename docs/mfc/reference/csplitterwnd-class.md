@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e56ab939cd6b3cfcb0601eaec1e450835069705f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 549669841a4b10468679795ca045f5626f5e9101
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389534"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890670"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd – třída
 
@@ -181,11 +181,7 @@ Okno s rozdělovačem podporuje speciální posuvníky (kromě posuvníků, kter
 
 Můžete vytvořit tyto speciální posuvníky, při vytváření okna s rozdělovačem. Například `CSplitterWnd` , který má jeden řádek, dvěma sloupci a styl WS_VSCROLL se zobrazí svislý posuvník, jež jsou sdílena ve dvou podoken. Když se uživatel přesune na posuvník, WM_VSCROLL zprávy se posílají do obou podoken. Při podokna nastavení pozice posuvníku, je nastavit sdílený posuvníku.
 
-Další informace o rozdělovače oken naleznete v tématu:
-
-- [Technická poznámka 29](../../mfc/tn029-splitter-windows.md)
-
-- Článek znalostní báze Q262024: postupy: použití cpropertysheet – jako podřízené CSplitterWnd
+Další informace o rozdělovače oken, naleznete v tématu [Technická poznámka 29](../../mfc/tn029-splitter-windows.md).
 
 Další informace o tom, jak vytvořit dynamické rozdělovače oken, najdete tady:
 

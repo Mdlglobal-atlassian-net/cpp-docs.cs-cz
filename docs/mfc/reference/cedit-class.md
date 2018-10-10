@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2935ac160f5d778faf119390d1f023d00d6d322b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d4ae42373ddf70cf4945c540e781397d7d67bd21
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448542"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890748"
 ---
 # <a name="cedit-class"></a>Cedit – třída
 
@@ -225,11 +225,7 @@ Pokud jste vytvořili `CEdit` objektů v okně a také je nutné ji odstranit. P
 
 Chcete-li změnit určité styly v ovládacím prvku upravit (například ES_READONLY) je nutné odeslat konkrétní zprávy do ovládacího prvku, namísto použití [ModifyStyle](cwnd-class.md#modifystyle). Zobrazit [styly ovládacího prvku pro úpravy](/windows/desktop/Controls/edit-control-styles) ve Windows SDK.
 
-Další informace o `CEdit`, naleznete v tématu:
-
-- [Ovládací prvky](../../mfc/controls-mfc.md)
-
-- Článek znalostní báze Q259949: INFO: SetCaretPos() je není vhodné CEdit nebo ovládací prvky CRichEditCtrl
+Další informace o `CEdit`, naleznete v tématu [ovládací prvky](../../mfc/controls-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 

@@ -17,24 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdde0f8d4edc13e8c1e1a53d8f4393dc7c2dac40
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d036f7d46e0db84b8572b26c747947c929972517
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46372467"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889929"
 ---
 # <a name="redistributing-web-client-applications"></a>Redistribuce klientských webových aplikací
 
 Pokud vaše aplikace používá třídy knihovny MFC implementující ovládací prvek WebBrowser (například `CHtmlView` nebo `CHtmlEditView`), Microsoft Internet Explorer 4.0 nebo novější musí alespoň minimálně nainstalují do cílového počítače.
 
-Instalace nejnovější verze aplikace Internet Explorer také zajišťuje, že má cílový počítač nejnovější soubory obvyklých ovládacích prvků.
-
-Informace o instalaci minimální komponent aplikace Internet Explorer je k dispozici v následujícím článku znalostní báze Knowledge Base:
-
-- Q185375, postupy: Vytvoření jedné EXE instalace aplikace Internet Explorer ([http://support.microsoft.com/support/kb/articles/q185/3/75.asp](http://support.microsoft.com/support/kb/articles/q185/3/75.asp))
-
-Články znalostní báze můžete vyhledat v knihovně MSDN nebo na [ http://support.microsoft.com ](http://support.microsoft.com).
+Instalace nejnovější verze aplikace Internet Explorer také zajišťuje, že má cílový počítač nejnovější soubory obvyklých ovládacích prvků. Další informace najdete v tématu [instalace a nasazení aplikace Internet Explorer 11](/internet-explorer/ie11-deploy-guide/install-and-deploy-ie11).
 
 ## <a name="see-also"></a>Viz také
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4a4327e1c3e4d65c5bdc3b822cf2cdfc1ec0353
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: cdc9b47bbd7b639850a13a77b81ef4802a301ba7
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820591"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890059"
 ---
 # <a name="automation-clients"></a>Klienti automatizace
 
@@ -46,7 +46,7 @@ Pak zadejte soubor knihovny typů popisující vlastnosti a funkce serveru aplik
 
 ### <a name="handling-events-in-automation-clients"></a>Zpracování událostí u klientů automatizace
 
-Pokud chcete zpracovávat události v klientovi služby automation, musíte přidat rozhraní jímky. Knihovna MFC poskytuje podporu průvodce přidat rozhraní jímky pro ovládací prvky ActiveX, ale není podporován pro ostatní servery COM. Informace o tom, jak přidat rozhraní stoku v klientovi knihovny MFC pro rozhraní zdroje popsal serverů modelu COM, naleznete v tématu Postupy: vytváření rozhraní stoku v ovládací klient modelu COM (KB 181845) na [ http://support.microsoft.com/default.aspxscid=kb; 181845](http://support.microsoft.com/default.aspxscid=kb;181845).
+Pokud chcete zpracovávat události v klientovi služby automation, musíte přidat rozhraní jímky. Knihovna MFC poskytuje podporu průvodce přidat rozhraní jímky pro ovládací prvky ActiveX, ale není podporován pro ostatní servery COM.
 
 ## <a name="see-also"></a>Viz také
 

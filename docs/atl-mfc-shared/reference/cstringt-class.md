@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 253282092bb71b6d4a5c520355ab4f8b51015c9f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6d6a6afeca0bcf0d08a0a206983d3db33b61a041
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445136"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890696"
 ---
 # <a name="cstringt-class"></a>Cstringt – třída
 
@@ -224,7 +224,7 @@ Při použití v aplikaci knihovny ATL:
 `CString`, `CStringA`, a `CStringW` byly exportovány z knihovny MFC DLL (MFC90. Knihovny DLL), nikdy od uživatele knihovny DLL. To se provádí, aby se zabránilo `CStringT` z je definovaná víckrát.
 
 > [!NOTE]
->  Pokud váš kód obsahuje alternativní řešení pro chyby, která je popsána v [Linking Errors When You Import CString-Derived třídy "(Q309801)](https://support.microsoft.com/help/309801/you-may-receive-an-lnk2019-error-message-when-you-build-a-visual-c-200), měli byste odebrat tento kód. Už je nepotřebujete.
+>  Pokud váš kód obsahuje alternativní řešení pro chyby, která je popsána v [export řetězec třídy pomocí CStringT](../../atl-mfc-shared/exporting-string-classes-using-cstringt.md), měli byste odebrat tento kód. Už je nepotřebujete.
 
 Následující typy řetězců jsou dostupné v rámci aplikace založené na knihovně MFC:
 

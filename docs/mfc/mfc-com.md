@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d23a9be38ebb870adf098b34fac79afff6345cd8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 660b2fc2f6ece6f60ff7bd1868b3a65bc8f045c1
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394737"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890033"
 ---
 # <a name="mfc-com"></a>MFC COM
 
@@ -57,8 +57,6 @@ Aktivní technologie patří klientských i serverových technologií, včetně 
 - Tato část také obsahuje informace o tom, jak napsat komponenty modelu COM pomocí knihovny MFC, například v [spojovací body](../mfc/connection-points.md).
 
 Diskuzi o co stále nazývá OLE a co se teď nazývá technologie active, naleznete v tématech na [OLE](../mfc/ole-in-mfc.md).
-
-Také, najdete v článku znalostní báze Q248019: postupy: zabránit Server zaneprázdněný dialogové okno pole z povolí, nebude během časově náročná COM operace.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 

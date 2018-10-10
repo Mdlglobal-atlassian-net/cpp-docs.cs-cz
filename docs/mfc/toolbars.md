@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcd7e0a1b2786a92d7a0e64b85417ddb82c82871
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7fd8738c0dec9771a94ba94aefdcaf2af87fdb09
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437791"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890541"
 ---
 # <a name="toolbars"></a>Panely nástrojů
 
@@ -38,10 +38,7 @@ Panel nástrojů řada článků popisuje panelů nástrojů MFC a tom, jak vytv
 
 - [Ukázka](../mfc/toolbar-sample-list.md)
 
-Další informace o panelů nástrojů MFC, najdete v článku Q232017, "Postupy: Přidání Text pro tlačítka panelu nástrojů," znalostní báze Microsoft Knowledge Base na http://support.microsoft.com.
-
 ## <a name="see-also"></a>Viz také
 
 [Prvky uživatelského rozhraní](../mfc/user-interface-elements-mfc.md)<br/>
 [Editor panelu nástrojů](../windows/toolbar-editor.md)
-

@@ -18,24 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d87682d9110aa37fbb806f7d1dcd70009cf2ad63
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4ac1eef12a3f782f3ad9ba8a9bb526989876251e
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406955"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890215"
 ---
 # <a name="steps-in-a-typical-ftp-client-application"></a>Postup v typické aplikaci klienta FTP
 
 Vytvoří v typické aplikaci klienta FTP [cinternetsession –](../mfc/reference/cinternetsession-class.md) a [cftpconnection –](../mfc/reference/cftpconnection-class.md) objektu. Všimněte si, že těchto tříd WinInet knihovny MFC ve skutečnosti neovládají typ nastavení proxy serveru; Služba IIS neodpovídá.
-
-Také najdete v článcích znalostní báze Knowledge Base:
-
-- POSTUPY: FTP s CERN proxy server založený na používání rozhraní WinInet rozhraní API (ID článku: Q166961)
-
-- Ukázka: FTP na základě CERN heslem chráněná Proxy (ID článku: Q216214)
-
-- Internetové služby správce nebude moci zobrazit nainstalované Proxy služby (ID článku: Q216802)
 
 Následující tabulka uvádí kroky, že které může provádět v typické aplikaci klienta FTP.
 

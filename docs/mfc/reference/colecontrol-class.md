@@ -344,12 +344,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 292121e95b20061e95e85b49c60d4758bd18a568
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 160d9857097c4cac1912d2ca44b0433905c238f5
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435529"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890865"
 ---
 # <a name="colecontrol-class"></a>COleControl – třída
 
@@ -2158,7 +2158,7 @@ Nenulové, pokud ovládací prvek byl inicializován. jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Implementace rozhraní framework `IDispatch::Invoke` volání `IsInvokeAllowed` k určení, zda dané funkce (identifikovaný `dispid`) mohou být vyvolány. Výchozí chování pro ovládací prvek OLE je umožnit metod automatizace má být volána pouze v případě, že ovládací prvek byl inicializován. Nicméně `IsInvokeAllowed` je virtuální funkce a může být přepsána v případě potřeby (například když ovládacího prvku se používá jako automatizační server). Další informace najdete v článku znalostní báze Knowledge Base Q166472, "postupy: použití ovládacího prvku OLE jako Server automatizace." Články znalostní báze jsou k dispozici na [ http://support.microsoft.com ](http://support.microsoft.com/).
+Implementace rozhraní framework `IDispatch::Invoke` volání `IsInvokeAllowed` k určení, zda dané funkce (identifikovaný `dispid`) mohou být vyvolány. Výchozí chování pro ovládací prvek OLE je umožnit metod automatizace má být volána pouze v případě, že ovládací prvek byl inicializován. Nicméně `IsInvokeAllowed` je virtuální funkce a může být přepsána v případě potřeby (například když ovládacího prvku se používá jako automatizační server).
 
 ##  <a name="ismodified"></a>  COleControl::IsModified
 

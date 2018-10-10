@@ -16,20 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c6352c87748bafa635d8d6dae29bf37b78ac6c1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5c729ecbdea13c36cf5df71efa16d12853fc4433
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46041984"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890491"
 ---
 # <a name="compiler-error-c2143"></a>Chyba kompilátoru C2143
 
 Chyba syntaxe: chybí "token1" před "token2.
 
 Kompilátor očekává konkrétní token (to znamená, že prvky jazyka jiné než prázdné znaky) a místo toho se našel jiný token.
-
-Informace o této chybě dojde-li se při použití bloku try funkce, najdete v článku [článku znalostní báze 241706](http://support.microsoft.com/kb/241706).
 
 Zkontrolujte, [referenční dokumentace jazyka C++](../../cpp/cpp-language-reference.md) k určení, kde je syntakticky nesprávný kód. Protože kompilátor může nahlásit tuto chybu, jakmile narazí na řádek, který způsobí, že problém, zkontrolujte několika řádky kódu, které před chybou.
 

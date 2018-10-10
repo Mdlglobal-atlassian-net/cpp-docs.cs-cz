@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddf4b505689521fbdfd702eb1944ac0779f16bf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dc5bca0f7ff1b2fdb2650eadbcdca4778d9b53ef
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409568"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890357"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Upgradování existujícího ovládacího prvku ActiveX
 
@@ -56,7 +56,7 @@ Můžete také přidat optimalizace, jak je popsáno v [ovládací prvky ActiveX
 
 ##  <a name="_core_packaging_code_for_downloading"></a> Balení kódu pro stahování
 
-Další informace o této skutečnosti najdete v článku znalostní báze Knowledge Base "Balení MFC ovládacích prvků pro použití v Internetu" (Q167158). Můžete najít článků znalostní báze [ http://support.microsoft.com/support ](http://support.microsoft.com/support).
+Další informace o této skutečnosti najdete v tématu [ovládací prvky ActiveX balení](https://docs.microsoft.com//previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa751974%28v%3dvs.85%29).
 
 ### <a name="the-codebase-tag"></a>Značka základu kódu
 
@@ -94,7 +94,7 @@ CAB soubory jsou doporučeným způsobem, jak balíček – ovládací prvky Act
 
 ### <a name="creating-cab-files"></a>Vytváření souborů CAB
 
-Soubor CAB Development Kit si můžete stáhnout z článku znalostní báze [310618: Sada SDK Microsoft soubor CAB](http://go.microsoft.com/fwlink/p/?linkid=148204). V této sadě najdete nástroje potřebné k vytvoření souborů CAB.
+Nástroje pro vytváření souboru CAB soubory jsou teď součástí [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk).
 
 Soubor CAB odkazuje `CODEBASE` by měl obsahovat soubor .ocx ovládacího prvku ActiveX a soubor s příponou INF řídit její instalaci. Vytvořte soubor CAB tak, že zadáte název ovládacího prvku souboru a soubor s příponou INF. Nezahrnují závislé knihovny DLL, které mohou již existovat v systému v tomto souboru CAB. Například knihovny DLL MFC jsou zabalené v samostatném souboru CAB a řídící soubor INF.
 

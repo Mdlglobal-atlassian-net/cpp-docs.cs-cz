@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5a71e6f358a682adad2d12f7b567dc0bad3d0f3
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 2473f33508274bb0f0aa9aebcb462973ec80b267
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861879"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890813"
 ---
 # <a name="ctoolbarctrl-class"></a>Ctoolbarctrl – třída
 
@@ -731,8 +731,6 @@ void Customize();
 ### <a name="remarks"></a>Poznámky
 
 Toto dialogové okno umožňuje uživateli upravit tak, že přidání nebo odstranění tlačítka panelu nástrojů. Pro podporu přizpůsobení, nadřazené okno panelu nástrojů musí zpracovat zprávy s oznámením přizpůsobení jak je popsáno v [zpracování oznámení o přizpůsobení](../../mfc/handling-customization-notifications.md). Panel nástrojů musí také byla vytvořena CCS_ADJUSTABLE styl, jak je popsáno v [CToolBarCtrl::Create](#create).
-
-Další informace najdete v článku znalostní báze Q241850: PRB: volání CToolBarCtrl::Customize neudržuje přizpůsobit dialogové okno viditelné.
 
 ##  <a name="deletebutton"></a>  CToolBarCtrl::DeleteButton
 

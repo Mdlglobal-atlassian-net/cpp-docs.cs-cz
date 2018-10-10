@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067f31d837b4b83a477d6b919f2d5bbd5efa00f3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 552252c8826e167b4aaa21aa41e489bbc8179ec3
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381072"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890372"
 ---
 # <a name="cdocobjectserver-class"></a>Cdocobjectserver – třída
 
@@ -74,10 +74,6 @@ Dokument DocObject server může obsahovat [cdocobjectserveritem –](../../mfc/
 Pokud chcete přizpůsobit zcela DocObject server, odvodit vlastní třídu z `CDocObjectServer` a přepsat nastavení jeho zobrazení funkce [OnActivateView](#onactivateview), [OnApplyViewState](#onapplyviewstate), a [OnSaveViewState ](#onsaveviewstate). Je potřeba zadat novou instanci třídy v reakci na volání rozhraní framework.
 
 Další informace o DocObjects najdete v tématu [cdocobjectserveritem –](../../mfc/reference/cdocobjectserveritem-class.md) a [colecmdui –](../../mfc/reference/colecmdui-class.md) v *odkaz knihovny MFC*.
-
-Také naleznete v následujícím článku znalostní báze Knowledge Base:
-
-- Q247382: PRB: popisky dat pro ovládací prvky ActiveX Dokumentovém serveru jsou skryté kontejnerem dokument ActiveX
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 

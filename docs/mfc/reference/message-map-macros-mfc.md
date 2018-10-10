@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa5cf1be80b22d3577347dbf7de9ee262125aa86
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: c2d5a0f2f5f7515e36997b876373dcf25bb6fc03
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821358"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890631"
 ---
 # <a name="message-map-macros-mfc"></a>Makra map zpráv (MFC)
 
@@ -352,7 +352,7 @@ Uživatelem definované zprávy jsou všechny zprávy, které nejsou standardní
 Měla by existovat právě jeden příkaz ON_MESSAGE – makro v mapy zpráv pro každou zprávu definovaný uživatelem, který musí být namapována na funkci obslužné rutiny zprávy.
 
 > [!NOTE]
->  Kromě uživatelem definované zprávy zpracovává ON_MESSAGE méně běžné zpráv Windows. Další informace najdete v článku znalostní báze Microsoft Knowledge Base [99848: INFO: použití ON_MESSAGE() makra Map zpráv méně běžné](http://go.microsoft.com/fwlink/p/?linkid=192022).
+>  Kromě uživatelem definované zprávy zpracovává ON_MESSAGE méně běžné zpráv Windows. Další informace najdete v tématu [mapy zpráv](../../mfc/tn006-message-maps.md).
 
 Další informace a příklady najdete v tématu [zpracování zpráv a mapování témata](../../mfc/message-handling-and-mapping.md) a [uživatelem definované obslužné rutiny](user-defined-handlers.md)
 

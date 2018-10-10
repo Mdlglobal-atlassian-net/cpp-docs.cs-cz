@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cafc3868d41dcf90baabbf05e0d5a4671c5b11fc
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: bc9d1d1ff35755a966591e6f46f7742ddfa59e08
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820292"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890020"
 ---
 # <a name="initinstance-member-function"></a>InitInstance – členská funkce
 
@@ -45,7 +45,7 @@ Standardní `InitInstance` implementace vytvořené průvodcem aplikací MFC pro
 Můžete přidat kód inicializace nebo upravit kód napsaný v průvodci.
 
 > [!NOTE]
->  Aplikace MFC musí být inicializovány jako jednovláknový objekt apartment (STA). Při volání [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) ve vašich `InitInstance` přepsání, určete COINIT_APARTMENTTHREADED (spíše než COINIT_MULTITHREADED). Další informace najdete v tématu PRB: aplikace MFC přestane reagovat při inicializaci aplikace jako a s více vlákny typu Apartment (828643) na [ http://support.microsoft.com/default.aspxscid=kb; 828643](http://support.microsoft.com/default.aspxscid=kb;828643).
+>  Aplikace MFC musí být inicializovány jako jednovláknový objekt apartment (STA). Při volání [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) ve vašich `InitInstance` přepsání, určete COINIT_APARTMENTTHREADED (spíše než COINIT_MULTITHREADED).
 
 ## <a name="see-also"></a>Viz také
 

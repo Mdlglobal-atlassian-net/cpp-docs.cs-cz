@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df67a24fa9bae63bbaf1bba344aa7f684ec91123
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 79da071b592a31ea3fe7ca486a7e02abc770f08e
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081907"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890085"
 ---
 # <a name="compiler-error-c2989"></a>Chyba kompilátoru C2989
 
@@ -29,11 +29,9 @@ ms.locfileid: "46081907"
 
 Obecná třída nebo šablona předefinuje nešablonové nebo neobecná třída. Zkontrolujte soubory hlaviček pro je v konfliktu.
 
-Pokud používáte částečné specializace šablony třídy, najdete v článku znalostní báze Q240866.
-
 Následující ukázka generuje C2989:
 
-```
+```cpp
 // C2989.cpp
 // compile with: /c
 class C{};
@@ -45,7 +43,7 @@ class C2{};
 
 C2989 může dojít také při použití obecných typů:
 
-```
+```cpp
 // C2989b.cpp
 // compile with: /clr /c
 ref class GC1;

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fa8370bb02e71c457f7967d5cb6b508e743333e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: abc9af657e790fcedf949719776581b5c1877e89
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373932"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889984"
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>MFC – ovládací prvky ActiveX: Vytvoření serveru automatizace
 
@@ -33,7 +33,7 @@ Ovládací prvek ActiveX knihovny MFC můžete vyvíjet jako automatizační ser
 
 1. [Přidejte metody](../mfc/mfc-activex-controls-methods.md).
 
-1. Přepsat [IsInvokeAllowed](../mfc/reference/colecontrol-class.md#isinvokeallowed). Další informace najdete v článku znalostní báze Knowledge Base Q146120.
+1. Přepsat [IsInvokeAllowed](../mfc/reference/colecontrol-class.md#isinvokeallowed).
 
 1. Vytvoření ovládacího prvku.
 

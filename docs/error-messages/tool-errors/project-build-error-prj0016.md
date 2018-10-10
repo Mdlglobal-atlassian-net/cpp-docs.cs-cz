@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01610f888d8afe275b0e52b86e4f4c678f896c9f
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: ceb004cba243d6e2e9c44aadcaa40670ef7a0bbb
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820466"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890254"
 ---
 # <a name="project-build-error-prj0016"></a>Chyba sestavení projektu PRJ0016
 
@@ -37,8 +37,4 @@ Chcete-li tuto chybu vyřešit, odstraňte klíč RestrictRun. Pokud tento klí�
 
 Další příčinou této chyby je, že vaše nastavení zásad nezahrnuje VCSpawn.exe v klíči registru HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun jako Povolené program okno pro tento uživatelský účet.
 
-Další informace najdete v tématu:
-
-- Znalostní báze Knowledge Base 324153, která je k dispozici na [ http://support.microsoft.com/default.aspx?scid=kb; 324153](http://support.microsoft.com/default.aspx?scid=kb;324153).
-
-- [Týkajícími se nastavení zásad systému](https://msdn.microsoft.com/library/aa372139), v sekci "Spouštět pouze povolené aplikace Windows".
+Další informace najdete v tématu [týkajícími se nastavení zásad systému](https://msdn.microsoft.com/library/aa372139), v části "Spouštět pouze povolené aplikace Windows".

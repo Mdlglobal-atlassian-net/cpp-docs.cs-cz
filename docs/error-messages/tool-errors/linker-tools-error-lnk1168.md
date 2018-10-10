@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0910c23202b975999e10ef2effaebc470c62fb9d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: e8b9f8614feb98f7e21392565aa610b7d42cd512
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821072"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890163"
 ---
 # <a name="linker-tools-error-lnk1168"></a>Chyba linkerů LNK1168
 
@@ -38,7 +38,3 @@ Pokud je soubor uzamčen antivirovým programem, můžete tento problém vyřeš
 Pokud je soubor uzamčen indexovací službou vyhledávání, můžete tento problém vyřešit tím, že výstupní adresáře sestavení vyloučíte z automatického indexování. Další informace naleznete v dokumentaci k indexovací službě. Ke změně indexovací služby vyhledávání Windows, použijte **možnosti indexování** v Windows **ovládací panely**. Další informace najdete v tématu [vylepšit Windows vyhledávání pomocí indexu: Nejčastější dotazy k](http://windows.microsoft.com/windows/improve-windows-searches-using-index-faq#1TC=windows-7).
 
 Pokud proces sestavení nemůže přepsat spustitelný soubor, může být uzamčen Průzkumníkem souborů. Pokud **funkčnost aplikací** služba byla zakázána, Průzkumníka souborů může blokovat zámek popisovače spustitelného souboru po delší dobu. Chcete-li tento problém vyřešit, spusťte **services.msc** a pak otevřete **vlastnosti** dialogové okno pro **funkčnost aplikací** služby. Změnit **typ spouštění** z **zakázané** k **ruční**.
-
-## <a name="see-also"></a>Viz také
-
-[Můžete obdržet k "Chyba PRJ0008" nebo "Závažná chyba LNK1168" chybová zpráva při pokusu o sestavení řešení nebo projektu ActiveX v jazyku Visual C++](http://support.microsoft.com/kb/308358)

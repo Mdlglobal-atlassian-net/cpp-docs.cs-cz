@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2869e936115317ff34183b55ba16fe8e9cdc4d2d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1abb923a52ccce181782d5387636c45491c342cd
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378186"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890202"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Příklad: Zobrazení dialogového okna pomocí příkazu v nabídce
 
@@ -98,12 +98,7 @@ Postupy použijte následující názvy a hodnoty:
 
          [!code-cpp[NVC_MFCControlLadenDialog#48](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_7.cpp)]
 
-Také naleznete v následujícím článku znalostní báze Knowledge Base:
-
-- Q251059: Postupy: Zadejte vlastní název třídy okna pro dialogového okna knihovny MFC
-
 ## <a name="see-also"></a>Viz také
 
 [Dialogová okna](../mfc/dialog-boxes.md)<br/>
 [Modální a nemodální dialogová okna](../mfc/modal-and-modeless-dialog-boxes.md)
-

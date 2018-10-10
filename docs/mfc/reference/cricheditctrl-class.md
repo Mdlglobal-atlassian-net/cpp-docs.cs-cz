@@ -162,12 +162,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ddefef4525e000002b6fb685887b666aa53fc87
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dc76e89cf8ca44b3254b21585bf00ff6243d818c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378055"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890826"
 ---
 # <a name="cricheditctrl-class"></a>Cricheditctrl – třída
 
@@ -278,8 +278,6 @@ Další informace o používání `CRichEditCtrl`, naleznete v tématu:
 - [Ovládací prvky](../../mfc/controls-mfc.md)
 
 - [Používání atributu CRichEditCtrl](../../mfc/using-cricheditctrl.md)
-
-- Článek znalostní báze Q259949: INFO: SetCaretPos() je není vhodné CEdit nebo ovládací prvky CRichEditCtrl
 
 Příklad použití ovládacího prvku v aplikaci knihovny MFC, najdete v článku [WORDPAD](../../visual-cpp-samples.md) ukázkovou aplikaci.
 

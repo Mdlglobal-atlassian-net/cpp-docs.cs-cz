@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bda3bcbd8686d985406842a4b7a64536616ae8ac
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fdbbda6956e3265e7b17aa63ea26ac760b1fda5a
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419545"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890618"
 ---
 # <a name="cdialog-class"></a>CDialog – třída
 
@@ -133,11 +133,7 @@ Modální dialogové okno se automaticky zavře po stisknutí tlačítka OK nebo
 
 Při implementaci nemodální dialogové okno vždy přepíší `OnCancel` členské funkce a volání `DestroyWindow` z ní. Nevolejte základní třídu `CDialog::OnCancel`, protože volá `EndDialog`, které se vytvořit dialogové okno, ale nebude zničit. Měli byste také přepsat `PostNcDestroy` pro nemodální dialogová okna, chcete-li odstranit **to**, protože nemodální dialogová okna jsou obvykle přiděleny pomocí **nové**. Modální dialogová okna jsou obvykle vytvořeny v rámci a není nutné `PostNcDestroy` vyčištění.
 
-Další informace o `CDialog`, naleznete v tématu:
-
-- [Dialogová okna](../../mfc/dialog-boxes.md)
-
-- Článek znalostní báze Q262954: postupy: Vytvoření dialogového okna Resizeable s posuvníky
+Další informace o `CDialog`, naleznete v tématu [dialogových oknech](../../mfc/dialog-boxes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -281,7 +277,7 @@ WS_VISIBLE styl šablony dialogového okna použijte, pokud při vytváření na
 
 Použití `CWnd::DestroyWindow` funkce zničit dialogové okno vytvořené `CreateIndirect` funkce.
 
-Dialogová okna, které obsahují ovládací prvky ActiveX vyžadují další informace, které jsou součástí DLGINIT prostředků. Další informace najdete v článku znalostní báze Knowledge Base Q231591, "postupy: použití šablony dialogového okna vytvořit dialogové okno knihovny MFC s ovládacím prvkem ActiveX." Články znalostní báze jsou k dispozici na [ http://support.microsoft.com ](http://support.microsoft.com/).
+Dialogová okna, které obsahují ovládací prvky ActiveX vyžadují další informace, které jsou součástí DLGINIT prostředků.
 
 ##  <a name="domodal"></a>  CDialog::DoModal
 
@@ -410,7 +406,7 @@ Nenulové, pokud byl vytvořen a inicializován úspěšně; objektu dialogovéh
 
 K vytvoření modálního dialogového okna nepřímo, nejprve přidělit globální blok paměti a vyplnit šablony dialogového okna. Poté zavolejte prázdné `CDialog` konstruktor k vytvoření objektu dialogového okna. Pak zavolejte `InitModalIndirect` pro ukládání vašich popisovač do šablony dialogového okna v paměti. Dialogové okno Windows se vytvoří a zobrazí později, když [DoModal](#domodal) členská funkce je volána.
 
-Dialogová okna, které obsahují ovládací prvky ActiveX vyžadují další informace, které jsou součástí DLGINIT prostředků. Další informace najdete v článku znalostní báze Knowledge Base Q231591, "postupy: použití šablony dialogového okna vytvořit dialogové okno knihovny MFC s ovládacím prvkem ActiveX." Články znalostní báze jsou k dispozici na [ http://support.microsoft.com ](http://support.microsoft.com/).
+Dialogová okna, které obsahují ovládací prvky ActiveX vyžadují další informace, které jsou součástí DLGINIT prostředků.
 
 ##  <a name="mapdialogrect"></a>  CDialog::MapDialogRect
 

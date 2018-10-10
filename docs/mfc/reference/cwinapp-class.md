@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86adc1e2337b32ced77cafda92229ed9724ba548
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: a6c7d961119d4fe25652601ebe5e423be898f49e
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821514"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890735"
 ---
 # <a name="cwinapp-class"></a>CWinApp – třída
 
@@ -367,7 +367,7 @@ Naleznete v tématu [CWinApp: třída aplikace](../../mfc/cwinapp-the-applicatio
 
 - `CWinApp`pro klíč k přepisovatelným.
 
-`m_hPrevInstance` Datový člen už neexistuje. Informace o zjišťování předchozí instanci `CWinApp`, najdete v článku znalostní báze Knowledge Base "Jak k identifikaci předchozí instanci z aplikace" (KB106385) na [ http://support.microsoft.com/default.aspxscid=kb; 106385](http://support.microsoft.com/default.aspxscid=kb;106385).
+`m_hPrevInstance` Datový člen už neexistuje. Pokud chcete zjistit, zda je spuštěna jiná instance aplikace, použijte pojmenovaný vzájemně vyloučený přístup. Pokud otevřete mutex selže, nejsou žádné jiné instance aplikace spuštěná.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -1073,7 +1073,7 @@ Inicializace aplikace je koncepčně rozdělený do dvou částí: Inicializace 
 Přepsat `InitInstance` inicializovat každou novou instanci vaší aplikace běžící pod Windows. Obvykle je přepsat `InitInstance` konstrukce objektu hlavní okno a nastavit `CWinThread::m_pMainWnd` datový člen tak, aby odkazoval na toto okno. Další informace o přepsání tato členská funkce, najdete v části [CWinApp: třída aplikace](../../mfc/cwinapp-the-application-class.md).
 
 > [!NOTE]
-> Aplikace MFC musí být inicializovány jako jednovláknový objekt apartment (STA). Při volání [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) ve vašich `InitInstance` přepsání, určete COINIT_APARTMENTTHREADED (spíše než COINIT_MULTITHREADED). Další informace najdete v tématu PRB: aplikace MFC přestane reagovat při inicializaci aplikace jako a s více vlákny typu Apartment (828643) na [ http://support.microsoft.com/default.aspxscid=kb; 828643](http://support.microsoft.com/default.aspxscid=kb;828643).
+> Aplikace MFC musí být inicializovány jako jednovláknový objekt apartment (STA). Při volání [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) ve vašich `InitInstance` přepsání, určete COINIT_APARTMENTTHREADED (spíše než COINIT_MULTITHREADED).
 
 ### <a name="example"></a>Příklad
 

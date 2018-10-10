@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98e1920b2163a318fbdba3b64d56bf74a8cd809f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5d9bb276ded32d8b263e64a8ea70f2c1953ee24b
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085896"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890293"
 ---
 # <a name="compiler-error-c2535"></a>Chyba kompilátoru C2535
 
@@ -30,8 +30,6 @@ ms.locfileid: "46085896"
 Tato chyba může být způsobena použitím stejného seznamu formálních parametrů ve více než jedné definici nebo deklaraci přetížené funkce.
 
 Pokud jste c2535 zobrazí z důvodu funkce Dispose, přečtěte si téma [destruktory a finalizační metody](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) Další informace.
-
-Pokud kompilujete projekt knihovny ATL, další informace naleznete v článku Q241852 znalostní báze.
 
 Následující ukázka generuje C2535:
 

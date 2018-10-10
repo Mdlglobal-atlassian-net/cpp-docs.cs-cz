@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07c8b18e8de5caf924cd31a18eb304778634050f
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 40c74633be8556fc075f10e328521209761f385c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821452"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890709"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Co je nového v aplikaci Visual C++ v sadě Visual Studio 2017
 
@@ -398,7 +398,7 @@ Teď máte nové možnosti pro zápis a balení aplikací pro univerzální plat
 
 Pokud zapisujete nový kód, můžete nyní použít C + +/ WinRT, standardní projekce jazyka C++ prostředí Windows runtime implementována pouze v souborech hlaviček. Umožňuje oba Autor a používání rozhraní API Windows Runtime pomocí jakýkoli standardům kompilátor jazyka C++. C + +/ WinRT je navržené pro poskytování vývojáře v jazyce C++ s přístupem k prvotřídní moderní rozhraní Windows API. Další informace najdete v tématu [C + +/ WinRT dostupný na Githubu](https://moderncpp.com/).
 
-Od verze [sestavení 17025 Windows SDK Insider Preview](https://blogs.windows.com/buildingapps/2017/11/01/windows-10-sdk-preview-build-17025/#ryPH3zAy6yk2cIRX.97), C + +/ WinRT je součástí sady Windows SDK. Další informace najdete v tématu [C + +/ WinRT je nyní zahrnutá sady Windows SDK](https://blogs.msdn.microsoft.com/vcblog/2017/11/01/cppwinrt-is-now-included-the-windows-sdk/).
+Od verze sestavení 17025 sady Windows SDK Insider Preview, C + +/ WinRT je součástí sady Windows SDK. Další informace najdete v tématu [C + +/ WinRT je nyní zahrnutá sady Windows SDK](https://blogs.msdn.microsoft.com/vcblog/2017/11/01/cppwinrt-is-now-included-the-windows-sdk/).
 
 ## <a name="clangc2-platform-toolset"></a>Sada nástrojů platformy clang/C2
 
