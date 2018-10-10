@@ -1,32 +1,30 @@
 ---
-title: Soubory projektu | Dokumentace Microsoftu
+title: Příklad souboru projektu | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- .vcproj files
-- Visual C++ projects, project file format
-- VCPROJ (Visual C++ project file) format
-- project files [C++], .vcproj file format
+- .vcxproj files
+- C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
 author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7202dff0bd1a790a4e8727bbac9d375daecb8e7a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 591802e04348ca08bded17504b3fb19fb9aa7213
+ms.sourcegitcommit: 243ee0395ee44654a81ce1232f4581fb54904868
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389014"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072382"
 ---
 # <a name="project-files"></a>Soubory projektu
 
-Soubor projektu Visual C++ je soubor založený na formátu XML, který má příponu názvu souboru a obsahuje informace potřebné k sestavení projektu Visual C++.
+Soubor projektu Visual C++ je soubor založený na formátu XML, který má příponu názvu souboru a obsahuje informace potřebné k sestavení projektu Visual C++. Všimněte si, že import souboru projektu různých souborů projektu, které mají příponu *.props* nebo *.targets*. Tyto soubory obsahují informace o další sestavení a může samotné odkazovat na jiné *.props* nebo *.targets* soubory. Makra v cestě k souboru (například `$(VCTargetsPath)`) jsou závislá na instalaci sady Visual Studio. Další informace o těchto maker a *.props* a *.targets* soubory, naleznete v tématu [VC ++ Directories Property Page](vcpp-directories-property-page.md), [práce s vlastnostmi projektu ](working-with-project-properties.md#bkmkPropertiesVersusMacros) a [běžná makra pro příkazy a vlastnosti sestavení](common-macros-for-build-commands-and-properties.md).
 
 ## <a name="example"></a>Příklad
 
