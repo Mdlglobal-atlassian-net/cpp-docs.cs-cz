@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb62a61762c2c4e042777376f4d2b9f3ffc747e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 60397fea85e3fd121469ae4568dac18fa6b9ddb1
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429744"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890319"
 ---
 # <a name="import-directive-c"></a>#import – direktiva (C++)
 **Specifické pro C++**  
@@ -185,11 +185,9 @@ Pokud knihovna typů obsahuje odkazy na typy definované v jiných knihovnách t
 Skutečný název souboru **#import** komentář je úplná cesta knihovny typů s křížovými odkazy, jak je uložen v registru. Pokud narazíte na chyby, které jsou z důvodu chybějící definice typu, zkontrolujte poznámky v čele. TLH zobrazíte závislé knihovny typů pravděpodobně nutné nejprve importovat. Pravděpodobné chyby jsou chyby syntaxe (například C2143, C2146, C2321), C2501 (chybí specifikátory decl) nebo C2433 ("vložené" nejsou u dat deklarace povoleny) při kompilaci. Souboru TLI.  
   
 Musíte určit, které závislosti komentáře nejsou jinak poskytovány pro záhlaví systému a pak zadejte **#import** direktiv v určitém okamžiku před **#import** direktiv závislé osoby. knihovny typů na případné chyby opravte.  
-  
-Další informace najdete v článku znalostní báze Knowledge Base "obálková #import může způsobit narušení přístupu" (Q242527) nebo "chyby kompilátoru při použití #import s XML" (Q269194). Články znalostní báze můžete vyhledat na médiu knihovny MSDN nebo na [Microsoft Support](https://support.microsoft.com/).  
-  
-##  <a name="_predir_the_23import_directive_import_attributes"></a> atributů #import  
- 
+
+##  <a name="_predir_the_23import_directive_import_attributes"></a> atributů #import
+
 **#import** může volitelně zahrnovat jeden nebo více atributů. Tyto atributy oznamují kompilátoru, který chcete upravit obsah záhlaví knihovny typů. Zpětné lomítko (**\\**) symbolů lze použít k zahrnutí dalších řádků do jediného **#import** příkazu. Příklad:  
   
 ```  
