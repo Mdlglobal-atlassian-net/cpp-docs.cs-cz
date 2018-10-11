@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cbe2269bfe4a67ba4e8c6952980216fce92165f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bd35c0879896ca7edfd6524c31a86765bbcce219
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448607"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084188"
 ---
 # <a name="cwnd-class"></a>Třída CWnd
 
@@ -1662,7 +1662,7 @@ void BringWindowToTop();
 
 Kromě toho `BringWindowToTop` aktivuje automaticky otevírané okno nejvyšší úrovně a podřízených oken MDI. `BringWindowToTop` Členská funkce by měla být použita k odkrytí okna, které je částečně nebo zcela zakryto překrývajícími se okny.
 
-Tato funkce volá pouze Win32 [BringWindowToTop](https://msdn.microsoft.com/library/windows/desktop/ms632673\(v=vs.85\).aspx) funkce. Volání [SetWindowPos](#setwindowpos) funkce změně pozic okna v pořadí vykreslování. `BringWindowToTop` Funkce nezmění styl okna, aby okno nejvyšší úrovně. Další informace najdete v tématu [jaký je rozdíl mezi HWND_TOP a HWND_TOPMOST](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
+Tato funkce volá pouze Win32 [BringWindowToTop](https://msdn.microsoft.com/library/windows/desktop/ms632673) funkce. Volání [SetWindowPos](#setwindowpos) funkce změně pozic okna v pořadí vykreslování. `BringWindowToTop` Funkce nezmění styl okna, aby okno nejvyšší úrovně. Další informace najdete v tématu [jaký je rozdíl mezi HWND_TOP a HWND_TOPMOST](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
 
 ### <a name="example"></a>Příklad
 

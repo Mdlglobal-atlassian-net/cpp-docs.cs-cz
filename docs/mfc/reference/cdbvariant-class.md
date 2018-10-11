@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14e2e646a2b05ba8514f22fb9ffb027aa0a570c1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0c3ab06de159722e4aae4e15d93e057b12dc8864
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419643"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083291"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant – třída
 
@@ -226,7 +226,7 @@ Uchovává ukazatel na objekt typu TIMESTAMP_STRUCT z.
 
 `m_pdate` Patří datový člen sjednocení. Před použitím `m_pdate`, nejprve zkontrolujte hodnotu [CDBVariant::m_dwType](#m_dwtype). Pokud `m_dwType` nastavena na DBVT_DATE, pak `m_pdate` obsahuje platný ukazatel; v opačném případě přístupu k `m_pdate` vytvoří nespolehlivé výsledky.
 
-Další informace o typu TIMESTAMP_STRUCT z dat, naleznete v tématu [datové typy jazyka C](/previous-versions/windows/desktop/ms714556\(v=vs.85\)) v dodatku D *ODBC programátora* v sadě Windows SDK.
+Další informace o typu TIMESTAMP_STRUCT z dat, naleznete v tématu [datové typy jazyka C](/previous-versions/windows/desktop/ms714556) v dodatku D *ODBC programátora* v sadě Windows SDK.
 
 ##  <a name="m_pstring"></a>  CDBVariant::m_pstring
 

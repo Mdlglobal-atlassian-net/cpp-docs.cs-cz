@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 76dc4cb86601be714e7ca1d442eb904d016e877b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 47b869ffc6ad3dd1492ab052d648bcb8acde7e52
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46102777"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083694"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Podpora transakcí v prostředí OLE DB
 
@@ -33,11 +33,11 @@ A [transakce](../../data/transactions-mfc-data-access.md) je způsob, jak seskup
   
 OLE DB podporuje transakce pomocí následujících tří metod:  
   
-- [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\))  
+- [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786)  
   
-- [ITransaction::Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\))  
+- [ITransaction::Commit](/previous-versions/windows/desktop/ms713008)  
   
-- [ITransaction::Abort](/previous-versions/windows/desktop/ms709833\(v=vs.85\))  
+- [ITransaction::Abort](/previous-versions/windows/desktop/ms709833)  
   
 ## <a name="relationship-of-sessions-and-transactions"></a>Vztah mezi relacemi a transakce  
 
@@ -59,7 +59,7 @@ Volání `ITransaction::Commit` nebo `ITransaction::Abort` končí transakce. `C
   
 ## <a name="nested-transactions"></a>Vnořené transakce  
 
-A [vnořená transakce](/previous-versions/windows/desktop/ms716985\(v=vs.85\)) nastane, pokud se spuštění nové místní transakce v aktivní transakci již. Nové transakce je spuštěn jako vnořenou transakci pod aktuální transakce. Pokud zprostředkovatel nepodporuje vnořené transakce, volání `StartTransaction` již existuje aktivní transakce v relaci vrátí XACT_E_XTIONEXISTS.  
+A [vnořená transakce](/previous-versions/windows/desktop/ms716985) nastane, pokud se spuštění nové místní transakce v aktivní transakci již. Nové transakce je spuštěn jako vnořenou transakci pod aktuální transakce. Pokud zprostředkovatel nepodporuje vnořené transakce, volání `StartTransaction` již existuje aktivní transakce v relaci vrátí XACT_E_XTIONEXISTS.  
   
 ## <a name="distributed-transactions"></a>Distribuované transakce  
 

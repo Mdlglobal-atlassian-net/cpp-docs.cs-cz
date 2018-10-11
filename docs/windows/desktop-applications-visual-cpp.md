@@ -13,18 +13,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d4f44e3587e9b274bbe89e2fa4f91accadb08ab
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 991e3e74ba280b615d951c12472de46833b7de72
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688256"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083343"
 ---
 # <a name="desktop-applications-visual-c"></a>Desktopové aplikace (Visual C++)
 
 A *aplikace klasické pracovní plochy* v jazyce C++ je nativní aplikace s přístupem k kompletní sadu rozhraní API pro Windows a buď spuštěn v okně nebo systémové konzoly. Desktopové aplikace v jazyce C++ může běžet na Windows XP do systému Windows 10 (i když je již nejsou oficiálně podporované Windows XP a existuje mnoho rozhraní API Windows, které byly zavedeny od té doby).
 
-Desktopová aplikace, která se liší od aplikace univerzální platformy Windows (UPW), které můžou spouštět na počítačích se systémem Windows 10 a také na XBox, Windows Phone, Surface Hubech a dalších zařízení. Další informace o klasické pracovní plochy vs. Aplikace UWP, naleznete v tématu [výběr technologie](https://msdn.microsoft.com/library/windows/desktop/dn614993\(v=vs.85\).aspx).
+Desktopová aplikace, která se liší od aplikace univerzální platformy Windows (UPW), které můžou spouštět na počítačích se systémem Windows 10 a také na XBox, Windows Phone, Surface Hubech a dalších zařízení. Další informace o klasické pracovní plochy vs. Aplikace UWP, naleznete v tématu [výběr technologie](https://msdn.microsoft.com/library/windows/desktop/dn614993).
 
 
 ### <a name="desktop-bridge"></a>Přemostění na Desktop
@@ -35,7 +35,7 @@ V sadě Visual Studio 2017 verze 15.4 nebo novější můžete vytvořit projekt
 
 ### <a name="terminology"></a>Terminologie
 
-- A *Win32* aplikace je Windows aplikace klasické pracovní plochy v jazyce C++, který může používat nativní [rozhraní API Windows C a/nebo rozhraní API modelu COM](https://msdn.microsoft.com/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT a standardní knihovny rozhraní API a 3. knihovnách třetích stran. Aplikace Win32, na kterém běží v okně vyžaduje pro vývojáře pro práci s zpráv Windows uvnitř procedury funkce Windows explicitně. Bez ohledu na název můžete jako (x86) 32bitové nebo 64bitové (x64) binární zkompilovat aplikaci Win32. V sadě Visual Studio IDE je shodný podmínky x86 a Win32.
+- A *Win32* aplikace je Windows aplikace klasické pracovní plochy v jazyce C++, který může používat nativní [rozhraní API Windows C a/nebo rozhraní API modelu COM](https://msdn.microsoft.com/library/windows/desktop/ff818516) CRT a standardní knihovny rozhraní API a 3. knihovnách třetích stran. Aplikace Win32, na kterém běží v okně vyžaduje pro vývojáře pro práci s zpráv Windows uvnitř procedury funkce Windows explicitně. Bez ohledu na název můžete jako (x86) 32bitové nebo 64bitové (x64) binární zkompilovat aplikaci Win32. V sadě Visual Studio IDE je shodný podmínky x86 a Win32.
 
 - [Modelu COM (Component Object)](/windows/desktop/com/the-component-object-model) je specifikace, které umožňuje programy napsané v různých jazycích, aby mezi sebou komunikovat. Řada Windows komponenty jsou implementovány jako objekty modelu COM a pravidlům standardní modelu COM pro vytváření objektů rozhraní zničení objektu a zjišťování.  Použití objektů COM v aplikacích klasické pracovní plochy jazyka C++ je poměrně přímočarý, ale zápis objektu modelu COM je složitější. [Aktivní šablony knihovny (ATL)](../atl/atl-com-desktop-components.md) poskytuje makra a pomocných funkcí, které zjednodušují vývoj COM.
 

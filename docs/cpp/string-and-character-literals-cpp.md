@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f34bd3f1594a49737f4298316b5eb3fe08b866a3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fb88721c64666cc5b74bb51c1f92bd612b66fc4c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46038552"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083317"
 ---
 # <a name="string-and-character-literals--c"></a>Řetězcové a znakové literály (C++)
 
@@ -211,7 +211,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
 
 Univerzální názvy znaků nelze dekódovat hodnoty v náhradní rozsah bodového kódu D800 DFFF. Páry nahrazení Unicode, zadat název univerzálních znaků pomocí `\UNNNNNNNN`, kde je NNNNNNNN bodu osm 6místným číselným kódem znaku. Kompilátor generuje náhradní pár v případě potřeby.
 
-V C ++ 03 jazyk pouze povolené podmnožinu znaků a nelze je reprezentovat podle jejich univerzální názvy znaků a povoleny některé univerzální názvy znaků, které skutečně nepředstavovala platnou znaky Unicode. Tato chyba byla opravena v C ++ 11 standard. V C ++ 11 můžete použít univerzální názvy znaků znakové a řetězcové literály a identifikátory.  Další informace o univerzální názvy znaků, naleznete v tématu [znakových sad](../cpp/character-sets.md). Další informace o kódování Unicode naleznete v tématu [Unicode](https://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Další informace o náhradních párech naleznete v tématu [náhradní páry a doplňující znaky](/windows/desktop/Intl/surrogates-and-supplementary-characters).
+V C ++ 03 jazyk pouze povolené podmnožinu znaků a nelze je reprezentovat podle jejich univerzální názvy znaků a povoleny některé univerzální názvy znaků, které skutečně nepředstavovala platnou znaky Unicode. Tato chyba byla opravena v C ++ 11 standard. V C ++ 11 můžete použít univerzální názvy znaků znakové a řetězcové literály a identifikátory.  Další informace o univerzální názvy znaků, naleznete v tématu [znakových sad](../cpp/character-sets.md). Další informace o kódování Unicode naleznete v tématu [Unicode](https://msdn.microsoft.com/library/dd374081). Další informace o náhradních párech naleznete v tématu [náhradní páry a doplňující znaky](/windows/desktop/Intl/surrogates-and-supplementary-characters).
 
 ## <a name="string-literals"></a>Řetězcové literály
 

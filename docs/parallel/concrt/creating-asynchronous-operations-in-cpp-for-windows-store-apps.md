@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3461c4965dd40d0aecc7515185592a13f30c08c9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4014d0d7cea999c105a5ee513d9dd1be410546f4
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422999"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084071"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Vytváření asynchronních operací v jazyce C++ pro aplikace pro UPW
 
@@ -113,7 +113,7 @@ Přidejte následující kód do generovaného zdrojového souboru jazyka C++ (T
 
 [!code-cpp[concrt-windowsstore-primes#2](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_3.cpp)]
 
-Každá metoda nejprve provádí ověřování vstupních parametrů musí být nezáporná. Pokud je vstupní hodnota záporná, vyvolá metoda [Platform::InvalidArgumentException](https://msdn.microsoft.com/library/windows/apps/hh755794\(v=vs.110\).aspx). Zpracování chyb je vysvětleno dále v této části.
+Každá metoda nejprve provádí ověřování vstupních parametrů musí být nezáporná. Pokud je vstupní hodnota záporná, vyvolá metoda [Platform::InvalidArgumentException](https://msdn.microsoft.com/library/windows/apps/hh755794.aspx). Zpracování chyb je vysvětleno dále v této části.
 
 Chcete-li používat tyto metody z aplikace pro UPW, použijte Visual C# **prázdná aplikace (XAML)** šablony přidáte druhý projekt do řešení sady Visual Studio. V tomto příkladu názvy projektu `Primes`. Pak v `Primes` projektu, přidejte odkaz na `PrimesLibrary` projektu.
 
@@ -136,7 +136,7 @@ Je vidět na následujícím obrázku `Primes` aplikace po jednotlivých možnos
 
 ![Aplikace Windows Runtime základen](../../parallel/concrt/media/concrt_windows_primes.png "concrt_windows_primes")
 
-Příklady, které používají `create_async` pro vytváření asynchronních úloh určených pro jiné jazyky, naleznete v tématu [pomocí C++ v příklad optimalizace cesty mapy Bing](https://msdn.microsoft.com/library/windows/apps/hh699891\(v=vs.110\).aspx) a [asynchronní operace systému Windows 8 v jazyce C++ pomocí úlohy PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).
+Příklady, které používají `create_async` pro vytváření asynchronních úloh určených pro jiné jazyky, naleznete v tématu [pomocí C++ v příklad optimalizace cesty mapy Bing](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) a [asynchronní operace systému Windows 8 v jazyce C++ pomocí úlohy PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).
 
 ##  <a name="exethread"></a> Řízení prováděcího vlákna
 

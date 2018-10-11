@@ -113,12 +113,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f64fce16201a15936cb97b1961827865c7b917b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2ce23acf1988e88954279f3b8cdbc8fc3c9001af
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446345"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083642"
 ---
 # <a name="canimationcontroller-class"></a>Canimationcontroller – třída
 
@@ -882,7 +882,7 @@ By měl vrací TRUE, pokud scénář vlastněné pGroupNew má prioritu. By měl
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána, pokud povolíte Priorita porovnávání události pomocí CAnimationController::EnablePriorityComparisonHandler a zadejte UI_ANIMATION_PHT_CANCEL. Ho bude možné přepsat v odvozené třídě akce specifické pro aplikaci. Dokumentace k API animace Windows ke čtení pro další informace o správě konflikt (https://msdn.microsoft.com/library/dd371759(VS.85).aspx).
+Tato metoda je volána, pokud povolíte Priorita porovnávání události pomocí CAnimationController::EnablePriorityComparisonHandler a zadejte UI_ANIMATION_PHT_CANCEL. Ho bude možné přepsat v odvozené třídě akce specifické pro aplikaci. Dokumentace k API animace Windows ke čtení pro další informace o [konflikt správu](https://msdn.microsoft.com/library/dd371759).
 
 ##  <a name="onhasprioritycompress"></a>  CAnimationController::OnHasPriorityCompress
 
@@ -912,7 +912,7 @@ By měl vrací TRUE, pokud scénář vlastněné pGroupNew má prioritu. By měl
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána, pokud povolíte Priorita porovnávání události pomocí CAnimationController::EnablePriorityComparisonHandler a zadejte UI_ANIMATION_PHT_COMPRESS. Ho bude možné přepsat v odvozené třídě akce specifické pro aplikaci. Dokumentace k API animace Windows ke čtení pro další informace o správě konflikt (https://msdn.microsoft.com/library/dd371759(VS.85).aspx).
+Tato metoda je volána, pokud povolíte Priorita porovnávání události pomocí CAnimationController::EnablePriorityComparisonHandler a zadejte UI_ANIMATION_PHT_COMPRESS. Ho bude možné přepsat v odvozené třídě akce specifické pro aplikaci. Dokumentace k API animace Windows ke čtení pro další informace o [konflikt správu](https://msdn.microsoft.com/library/dd371759).
 
 ##  <a name="onhaspriorityconclude"></a>  CAnimationController::OnHasPriorityConclude
 
@@ -942,7 +942,7 @@ By měl vrací TRUE, pokud scénář vlastněné pGroupNew má prioritu. By měl
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána, pokud povolíte Priorita porovnávání události pomocí CAnimationController::EnablePriorityComparisonHandler a zadejte UI_ANIMATION_PHT_CONCLUDE. Ho bude možné přepsat v odvozené třídě akce specifické pro aplikaci. Dokumentace k API animace Windows ke čtení pro další informace o správě konflikt (https://msdn.microsoft.com/library/dd371759(VS.85).aspx).
+Tato metoda je volána, pokud povolíte Priorita porovnávání události pomocí CAnimationController::EnablePriorityComparisonHandler a zadejte UI_ANIMATION_PHT_CONCLUDE. Ho bude možné přepsat v odvozené třídě akce specifické pro aplikaci. Dokumentace k API animace Windows ke čtení pro další informace o [konflikt správu](https://msdn.microsoft.com/library/dd371759).
 
 ##  <a name="onhasprioritytrim"></a>  CAnimationController::OnHasPriorityTrim
 
@@ -972,7 +972,7 @@ By měl vrací TRUE, pokud scénář vlastněné pGroupNew má prioritu. By měl
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána, pokud povolíte Priorita porovnávání události pomocí CAnimationController::EnablePriorityComparisonHandler a zadejte UI_ANIMATION_PHT_TRIM. Ho bude možné přepsat v odvozené třídě akce specifické pro aplikaci. Dokumentace k API animace Windows ke čtení pro další informace o správě konflikt (https://msdn.microsoft.com/library/dd371759(VS.85).aspx).
+Tato metoda je volána, pokud povolíte Priorita porovnávání události pomocí CAnimationController::EnablePriorityComparisonHandler a zadejte UI_ANIMATION_PHT_TRIM. Ho bude možné přepsat v odvozené třídě akce specifické pro aplikaci. Dokumentace k API animace Windows ke čtení pro další informace o [konflikt správu](https://msdn.microsoft.com/library/dd371759).
 
 ##  <a name="onstoryboardstatuschanged"></a>  CAnimationController::OnStoryboardStatusChanged
 

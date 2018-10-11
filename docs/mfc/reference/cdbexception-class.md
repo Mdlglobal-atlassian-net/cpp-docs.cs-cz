@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b860084b12f285effff7cf3c8fc74409a9baf4a3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c34c70f1bca3091ba078846b7b94ad947d5f31cb
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389546"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083109"
 ---
 # <a name="cdbexception-class"></a>CDBException – třída
 
@@ -142,7 +142,7 @@ Obsahuje řetězec popisující chybu, která způsobila výjimku.
 
 Řetězec je formuláře "stav: % s, nativní: % ld původu: % s", kde jsou kódy v pořadí, nahrazena hodnot, které popisují:
 
-- SQLSTATE, řetězec zakončený hodnotou null obsahující kód pěti chyby vrácené v *szSqlState* parametr funkce ODBC `SQLError`. SQLSTATE hodnoty jsou uvedené v dodatku A [kódy chyb rozhraní ODBC](/previous-versions/windows/desktop/ms714687\(v=vs.85\))v *ODBC programátora*. Příklad: "S0022".
+- SQLSTATE, řetězec zakončený hodnotou null obsahující kód pěti chyby vrácené v *szSqlState* parametr funkce ODBC `SQLError`. SQLSTATE hodnoty jsou uvedené v dodatku A [kódy chyb rozhraní ODBC](/previous-versions/windows/desktop/ms714687)v *ODBC programátora*. Příklad: "S0022".
 
 - Kód nativní chyby specifické pro zdroj dat se vrátil v *pfNativeError* parametr `SQLError` funkce. Příklad: 207.
 
@@ -150,7 +150,7 @@ Obsahuje řetězec popisující chybu, která způsobila výjimku.
 
 Rozhraní framework interpretuje řetězec chyby a vloží do jeho komponenty `m_strStateNativeOrigin`; Pokud `m_strStateNativeOrigin` obsahuje informace o více než jednu chybu, chyby jsou odděleny tabulátorů. Vloží text alfanumerické chyby do rozhraní framework `m_strError`.
 
-Další informace o kódech použité k vytvoření tohoto řetězce najdete v tématu [SQLError](/previous-versions/windows/desktop/ms716312\(v=vs.85\)) fungovat v *ODBC programátora*.
+Další informace o kódech použité k vytvoření tohoto řetězce najdete v tématu [SQLError](/previous-versions/windows/desktop/ms716312) fungovat v *ODBC programátora*.
 
 ### <a name="example"></a>Příklad
 

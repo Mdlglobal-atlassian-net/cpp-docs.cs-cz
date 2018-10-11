@@ -63,16 +63,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 67510ada7af557877f427d757200a48c0df95fe9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f13da3ed0b1f2193ab86e1644d401a6e4fb6b942
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46054113"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082852"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl – třída
 
-Šablony technologie OLE DB provádění [IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\)) rozhraní.  
+Šablony technologie OLE DB provádění [IRowsetUpdate](/previous-versions/windows/desktop/ms714401) rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -146,7 +146,7 @@ Jednotky úložiště pro všechny popisovačů řádků uchovávat zprostředko
   
 ## <a name="remarks"></a>Poznámky  
 
-Nejprve byste si a porozuměli jim v dokumentaci k [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)), protože všechno, co je popsáno zde platí i zde. Doporučujeme přečíst kapitola 6 *OLE DB referenční informace pro programátory* o nastavení data.  
+Nejprve byste si a porozuměli jim v dokumentaci k [IRowsetChange](/previous-versions/windows/desktop/ms715790), protože všechno, co je popsáno zde platí i zde. Doporučujeme přečíst kapitola 6 *OLE DB referenční informace pro programátory* o nastavení data.  
   
 `IRowsetUpdateImpl` implementuje rozhraní OLE DB `IRowsetUpdate` rozhraní, která umožňuje uživatelům zpoždění přenosu změn provedených s `IRowsetChange` do zdroje dat a vrátit zpět změny před samotným přenosem.  
   
@@ -173,7 +173,7 @@ STDMETHOD (SetData )(HROW hRow,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobrazit [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+Zobrazit [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="remarks"></a>Poznámky  
 
@@ -193,7 +193,7 @@ STDMETHOD (GetOriginalData )(HROW hRow,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobrazit [IRowsetUpdate::GetOriginalData](/previous-versions/windows/desktop/ms709947\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.   
+Zobrazit [IRowsetUpdate::GetOriginalData](/previous-versions/windows/desktop/ms709947) v *referenční informace pro OLE DB programátory*.   
 
 ## <a name="getpendingrows"></a> IRowsetUpdateImpl::GetPendingRows
 
@@ -212,13 +212,13 @@ STDMETHOD (GetPendingRows )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>Parametry  
 
 *hReserved*<br/>
-[in] Odpovídá *hChapter* parametr [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\)).  
+[in] Odpovídá *hChapter* parametr [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626).  
   
-Další parametry, naleznete v tématu [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.  
+Další parametry, naleznete v tématu [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626) v *OLE DB referenční informace pro programátory*.  
   
 ### <a name="remarks"></a>Poznámky  
 
-Další informace najdete v tématu [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.  
+Další informace najdete v tématu [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626) v *OLE DB referenční informace pro programátory*.  
 
 ## <a name="getrowstatus"></a> IRowsetUpdateImpl::GetRowStatus
 
@@ -236,9 +236,9 @@ STDMETHOD (GetRowStatus )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>Parametry  
 
 *hReserved*<br/>
-[in] Odpovídá *hChapter* parametr [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377\(v=vs.85\)).  
+[in] Odpovídá *hChapter* parametr [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377).  
   
-Další parametry, naleznete v tématu [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.  
+Další parametry, naleznete v tématu [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377) v *OLE DB referenční informace pro programátory*.  
 
 ## <a name="undo"></a> IRowsetUpdateImpl::Undo
 
@@ -258,15 +258,15 @@ STDMETHOD (Undo )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>Parametry  
 
 *hReserved*<br/>
-[in] Odpovídá *hChapter* parametr [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)).  
+[in] Odpovídá *hChapter* parametr [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655).  
   
 *pcRowsUndone*<br/>
-[out] Odpovídá *pcRows* parametr [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)).  
+[out] Odpovídá *pcRows* parametr [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655).  
   
 *prgRowsUndone*<br/>
-[in] Odpovídá *prgRows* parametr [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)).  
+[in] Odpovídá *prgRows* parametr [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655).  
   
-Další parametry, naleznete v tématu [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)) v *OLE DB referenční informace pro programátory*. 
+Další parametry, naleznete v tématu [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655) v *OLE DB referenční informace pro programátory*. 
 
 ## <a name="update"></a> IRowsetUpdateImpl::Update
 
@@ -286,13 +286,13 @@ STDMETHOD (Update )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>Parametry  
 
 *hReserved*<br/>
-[in] Odpovídá *hChapter* parametr [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709\(v=vs.85\)).  
+[in] Odpovídá *hChapter* parametr [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709).  
   
-Další parametry, naleznete v tématu [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.  
+Další parametry, naleznete v tématu [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709) v *OLE DB referenční informace pro programátory*.  
   
 ### <a name="remarks"></a>Poznámky  
 
-Změny se přenáší pomocí volání [IRowsetChangeImpl::FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md). Spotřebitel musí volat [CRowset::Update](../../data/oledb/crowset-update.md) se změny projevily. Nastavte *prgRowstatus* na odpovídající hodnotu jak je popsáno v [stavy řádků](/previous-versions/windows/desktop/ms722752\(v=vs.85\)) v *OLE DB referenční informace pro programátory*. 
+Změny se přenáší pomocí volání [IRowsetChangeImpl::FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md). Spotřebitel musí volat [CRowset::Update](../../data/oledb/crowset-update.md) se změny projevily. Nastavte *prgRowstatus* na odpovídající hodnotu jak je popsáno v [stavy řádků](/previous-versions/windows/desktop/ms722752) v *OLE DB referenční informace pro programátory*. 
   
 ## <a name="isupdateallowed"></a> IRowsetUpdateImpl::IsUpdateAllowed
 
@@ -319,7 +319,7 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
   
 ### <a name="remarks"></a>Poznámky  
 
-Pokud zjistíte, že má být povolený aktualizace, vrátí hodnotu S_OK; v opačném případě vrátí E_FAIL. Pokud povolíte aktualizaci, musíte také nastavit `DBROWSTATUS` v [IRowsetUpdateImpl::Update](../../data/oledb/irowsetupdateimpl-update.md) na odpovídající [řádek stavu](/previous-versions/windows/desktop/ms722752\(v=vs.85\)).  
+Pokud zjistíte, že má být povolený aktualizace, vrátí hodnotu S_OK; v opačném případě vrátí E_FAIL. Pokud povolíte aktualizaci, musíte také nastavit `DBROWSTATUS` v [IRowsetUpdateImpl::Update](../../data/oledb/irowsetupdateimpl-update.md) na odpovídající [řádek stavu](/previous-versions/windows/desktop/ms722752).  
 
 ## <a name="mapcacheddata"></a> IRowsetUpdateImpl::m_mapCachedData
 

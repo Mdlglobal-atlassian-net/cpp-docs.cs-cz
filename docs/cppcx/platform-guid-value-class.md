@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e115cf74eaac194c9e5b7154898cc23e10b220eb
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b09fe303cb69cb36d04d696af2b83b30b8378f70
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100428"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083447"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid – hodnotová třída
 
-Představuje [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) typu v systému typů modulu Windows Runtime.
+Představuje [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931) typu v systému typů modulu Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -157,7 +157,7 @@ Hodnota TRUE, pokud dva identifikátory GUID nejsou stejné.
 
 ## <a name="operator-call"></a> GUID::Operator() – operátor
 
-Implicitně převede [GUID struktury](https://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)Platform::GUID – identifikátor GUID.
+Implicitně převede [GUID struktury](https://msdn.microsoft.com/library/windows/desktop/aa373931)Platform::GUID – identifikátor GUID.
 
 ### <a name="syntax"></a>Syntaxe
 

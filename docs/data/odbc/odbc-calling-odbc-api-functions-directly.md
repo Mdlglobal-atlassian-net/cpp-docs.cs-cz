@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 24701e2bab154f0815408f4e2e3e37e56ad6d823
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5e5972eab67e19752700ac5f8a027288eb6fc43c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092525"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083681"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: Přímé volání funkcí rozhraní API ODBC
 
@@ -49,7 +49,7 @@ Voláním funkce rozhraní API ODBC přímo, je nutné provést stejné kroky, k
   
 - Po dokončení zrušit přidělení úložiště.  
   
-Další informace o těchto krocích najdete v článku [připojení ODBC (Open Database)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) sady SDK v dokumentaci MSDN.  
+Další informace o těchto krocích najdete v článku [připojení ODBC (Open Database)](/previous-versions/windows/desktop/ms710252) sady SDK v dokumentaci MSDN.  
   
 Kromě těchto kroků budete muset udělat dodatečné kroky, chcete-li zkontrolovat vrácené hodnoty funkce, ujistěte se, že váš program nečeká na asynchronní volání dokončí a tak dále. Poslední takto můžete zjednodušit pomocí AFX_SQL_ASYNC a AFX_SQL_SYNC makra. Další informace najdete v tématu [makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md) v *odkaz knihovny MFC*.  
 

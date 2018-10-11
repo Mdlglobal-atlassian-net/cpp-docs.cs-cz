@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 71e693c09d59643a272a0b2736a5a229ef444aa9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ebea06a70f82c8014b52bc8f8db081ca2f0264c7
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46078891"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082992"
 ---
 # <a name="ole-db-provider-template-architecture"></a>Architektura šablon zprostředkovatele OLE DB
 
@@ -50,7 +50,7 @@ Architektura zprostředkovatele OLE DB zahrnuje objekt zdroje dat a jednu nebo v
   
 Všimněte si, že šablony zprostředkovatele OLE DB neimplementují řádek a úložiště objektů.  
   
-Následující tabulka obsahuje seznam povinných a volitelných rozhraní pro objekty uvedené výše, podle [2.6 SDK dokumentace technologie OLE DB](/previous-versions/windows/desktop/ms722784\(v=vs.85\)).  
+Následující tabulka obsahuje seznam povinných a volitelných rozhraní pro objekty uvedené výše, podle [2.6 SDK dokumentace technologie OLE DB](/previous-versions/windows/desktop/ms722784).  
   
 |Součást|Rozhraní|Komentář|  
 |---------------|---------------|-------------|  
@@ -69,4 +69,4 @@ Další informace naleznete v následujících tématech:
 ## <a name="see-also"></a>Viz také  
 
 [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Rozhraní OLE DB](/previous-versions/windows/desktop/ms709709\(v=vs.85\))
+[Rozhraní OLE DB](/previous-versions/windows/desktop/ms709709)

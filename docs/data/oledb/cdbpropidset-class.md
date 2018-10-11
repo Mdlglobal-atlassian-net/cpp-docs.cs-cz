@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9619ffdf9fd24bd73548fb3992084eb0a5d437a7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 514a013cf3f327c0c73ca8469900693d6a4e5e21
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114472"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084032"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet – třída
 
@@ -83,7 +83,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
   
 ## <a name="remarks"></a>Poznámky  
 
-Použití příjemců OLE DB `DBPROPIDSET` struktury předat pole ID vlastnost, pro které chce příjemce se získat informace o vlastnosti. Vlastnosti identifikované v jediném [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) struktura patří do sady jednu vlastnost.  
+Použití příjemců OLE DB `DBPROPIDSET` struktury předat pole ID vlastnost, pro které chce příjemce se získat informace o vlastnosti. Vlastnosti identifikované v jediném [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) struktura patří do sady jednu vlastnost.  
 
 ## <a name="addpropertyid"></a> CDBPropIDSet::AddPropertyID
 
@@ -102,7 +102,7 @@ bool AddPropertyID(DBPROPID propid) throw();
 
 ## <a name="cdbpropidset"></a> CDBPropIDSet::CDBPropIDSet
 
-Konstruktor Inicializuje `rgProperties`, `cProperties`a (volitelně) `guidPropertySet` pole [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) struktury.  
+Konstruktor Inicializuje `rgProperties`, `cProperties`a (volitelně) `guidPropertySet` pole [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) struktury.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -135,7 +135,7 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>Parametry  
 
 *identifikátor GUID*<br/>
-[in] Identifikátor GUID lze nastavit `guidPropertySet` pole [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) struktury.  
+[in] Identifikátor GUID lze nastavit `guidPropertySet` pole [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) struktury.  
   
 ### <a name="remarks"></a>Poznámky  
 

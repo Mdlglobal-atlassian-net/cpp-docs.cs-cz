@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 42545b24bff14daf66f719a78ba414f1ae86c5c0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 52b5c5bea282e4ebb4106d8e9c2fede40f375ae3
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789491"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083605"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -45,23 +45,23 @@ Připojí zadaný sloupec proměnné v dané sadě řádků.
 ```
 
 *Hodnota DbType*<br/>
-(Volitelné) OLE DB [indikátor typu](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) pro vstupní sloupec.
+(Volitelné) OLE DB [indikátor typu](/previous-versions/windows/desktop/ms711251) pro vstupní sloupec.
 
 *Přesnost*<br/>
-(Volitelné) Přesnost, který má být použit pro vstupní sloupec. Podrobnosti najdete v tématu Popis `bPrecision` elementu [DBBINDING struktura](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+(Volitelné) Přesnost, který má být použit pro vstupní sloupec. Podrobnosti najdete v tématu Popis `bPrecision` elementu [DBBINDING struktura](/previous-versions/windows/desktop/ms716845)
 
 *Škálování*<br/>
-(Volitelné) Škálování, která má být použit pro vstupní sloupec. Podrobnosti najdete v tématu Popis `bScale` elementu [DBBINDING struktura](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+(Volitelné) Škálování, která má být použit pro vstupní sloupec. Podrobnosti najdete v tématu Popis `bScale` elementu [DBBINDING struktura](/previous-versions/windows/desktop/ms716845)
 
 *Stav*<br/>
-(Volitelné) Členské proměnné používané pro udržení stavu daného sloupce. Stav označuje, zda je hodnota sloupce datovou hodnotu nebo jinou hodnotu, jako je NULL. Možné hodnoty najdete v části [stav](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.
+(Volitelné) Členské proměnné používané pro udržení stavu daného sloupce. Stav označuje, zda je hodnota sloupce datovou hodnotu nebo jinou hodnotu, jako je NULL. Možné hodnoty najdete v části [stav](/previous-versions/windows/desktop/ms722617) v *OLE DB referenční informace pro programátory*.
 
 *Délka*<br/>
 (Volitelné) Členské proměnné používané pro udržení velikost sloupce v bajtech.
 
 ## <a name="remarks"></a>Poznámky
 
-**db_column** váže sloupec tabulky zadané proměnné v dané sadě řádků. Vymezuje členská data, která se může účastnit OLE DB `IAccessor`– na základě vazby. Tento atribut nastaví mapy sloupce obvykle definovány pomocí makra příjemce technologie OLE DB [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md), a [COLUMN_ENTRY](../../data/oledb/column-entry.md). Tyto manipulovat s OLE DB [struktura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) svázat zadaný sloupec. Každý člen můžete označit **db_column** atribut budou zaměstnávat jedna položka v mapě sloupců ve formuláři položky sloupce. Proto volání tento atribut kde vložíte mapy sloupce, tedy ve třídě příkazu nebo tabulky.
+**db_column** váže sloupec tabulky zadané proměnné v dané sadě řádků. Vymezuje členská data, která se může účastnit OLE DB `IAccessor`– na základě vazby. Tento atribut nastaví mapy sloupce obvykle definovány pomocí makra příjemce technologie OLE DB [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md), a [COLUMN_ENTRY](../../data/oledb/column-entry.md). Tyto manipulovat s OLE DB [struktura DBBINDING](/previous-versions/windows/desktop/ms716845) svázat zadaný sloupec. Každý člen můžete označit **db_column** atribut budou zaměstnávat jedna položka v mapě sloupců ve formuláři položky sloupce. Proto volání tento atribut kde vložíte mapy sloupce, tedy ve třídě příkazu nebo tabulky.
 
 Použití **db_column** ve spojení s buď [db_table](db-table.md) nebo [db_command](db-command.md) atributy.
 

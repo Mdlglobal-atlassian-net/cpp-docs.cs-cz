@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f79f8648c2c0d12bf521c38e2db025a8841ab927
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2b8508b5a14e67092339a456f5b85f78d17906a5
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061081"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082537"
 ---
 # <a name="argument-description"></a>Popis argumentu
 
@@ -33,7 +33,7 @@ ms.locfileid: "46061081"
 
 `argv` Parametr je pole ukazatelů na řetězec zakončený null představující argumenty programu. Každý prvek pole odkazuje na řetězec představující argument předaný **hlavní** (nebo **wmain**). (Informace o polích naleznete v tématu [deklarace pole](../c-language/array-declarations.md).) `argv` Parametru lze deklarovat jako pole ukazatelů na typ `char` (`char *argv[]`) nebo jako ukazatel na ukazatele na typ `char` (`char **argv`). Pro **wmain**, `argv` parametru lze deklarovat jako pole ukazatelů na typ `wchar_t` (`wchar_t *argv[]`) nebo jako ukazatel na ukazatele na typ `wchar_t` (`wchar_t **argv`).
 
-Podle konvence `argv` **[0]** příkaz, kterým je vyvolán program.  Nicméně je možné vytvořit podřízený proces pomocí [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) a pokud používáte první a druhý argument (`lpApplicationName` a `lpCommandLine`), `argv` **[0]** nemusí být název spustitelného souboru; použít [GetModuleFileName –](https://msdn.microsoft.com/library/windows/desktop/ms683197) k načtení názvu spustitelného souboru.
+Podle konvence `argv` **[0]** příkaz, kterým je vyvolán program.  Nicméně je možné vytvořit podřízený proces pomocí [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) a pokud používáte první a druhý argument (`lpApplicationName` a `lpCommandLine`), `argv` **[0]** nemusí být název spustitelného souboru; použít [GetModuleFileName –](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea) k načtení názvu spustitelného souboru.
 
 Poslední ukazatel (`argv[argc]`) je **NULL**. (Viz [getenv](../c-runtime-library/reference/getenv-wgetenv.md) v *Run-Time Library Reference* alternativní metody pro získání informací o proměnné prostředí.)
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf350b0a129c642678fc6af1bac7d35633fe909
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: b650c2a20d18f3f638f924cce1e4b475f7e33a0d
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860976"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084058"
 ---
 # <a name="exports"></a>EXPORTY
 
@@ -67,7 +67,7 @@ Pokud chcete zjistit dekorované názvy produkované kompilátorem, použijte [D
 
 Můžete použít \@ *ordinální* k určení, že číslo a ne název funkce, přejde do tabulky exportu knihovny DLL. Mnoho knihoven DLL Windows exportovat řadové číslovky důvodu podpory původního kódu. Bylo běžné použití řadové číslovky v 16bitového kódu Windows, protože může pomoct minimalizovat velikost knihovny DLL. Nedoporučujeme export funkcí podle pořadových čísel, pokud ho vaše knihovna DLL klienti potřebovat pro stále podporuje starší verze. Vzhledem k tomu,. LIB soubor bude obsahovat mapování mezi řadová číslovka a funkci, můžete použít název funkce, jako byste normálně v projektech, které používají knihovnu DLL.
 
-Pomocí volitelného **NONAME** – klíčové slovo, můžete exportovat na základě pořadí pouze a snížit velikost tabulky exportu v výslednou knihovnu DLL. Nicméně pokud chcete použít [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) na knihovnu DLL, musíte znát řadová číslovka, protože nebude platný název.
+Pomocí volitelného **NONAME** – klíčové slovo, můžete exportovat na základě pořadí pouze a snížit velikost tabulky exportu v výslednou knihovnu DLL. Nicméně pokud chcete použít [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) na knihovnu DLL, musíte znát řadová číslovka, protože nebude platný název.
 
 Optional – klíčové slovo **PRIVÁTNÍ** brání *Název_položky* nebudou zahrnuty do knihovna importů generovaná odkaz. Export obrázku také generovány podle propojení nemá vliv.
 

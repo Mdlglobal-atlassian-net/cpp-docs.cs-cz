@@ -25,16 +25,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ed4eefe8c05e2b5b027ba1d7c1fec022c9e44409
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 09f70e45891e7dc0b07933fe95dce772e5c7159a
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46104943"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082342"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl – třída
 
-Poskytuje implementaci [IConvertType](/previous-versions/windows/desktop/ms715926\(v=vs.85\)) rozhraní.  
+Poskytuje implementaci [IConvertType](/previous-versions/windows/desktop/ms715926) rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -79,7 +79,7 @@ STDMETHOD(CanConvert)(DBTYPE wFromType,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobrazit [IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+Zobrazit [IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="remarks"></a>Poznámky  
 

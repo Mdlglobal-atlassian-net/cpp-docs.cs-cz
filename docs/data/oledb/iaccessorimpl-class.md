@@ -48,16 +48,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0fd40d4cac87302a6a636693e0da4480720a2cf3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a5de49679652b04afa4df08ce9d4ea015ebd031d
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098116"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082720"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl – třída
 
-Poskytuje implementaci [IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\)) rozhraní.  
+Poskytuje implementaci [IAccessor](/previous-versions/windows/desktop/ms719672) rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -102,7 +102,7 @@ Jednotky úložiště pro informace o sloupci. Výchozí hodnota je [catlmap –
   
 ## <a name="remarks"></a>Poznámky  
 
-Toto je povinná na příkazy a sady řádků. OLE DB vyžaduje poskytovatele, jak implementovat HACCESSOR, což je značka na pole [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) struktury. HACCESSORs poskytované `IAccessorImpl` jsou adresy `BindType` struktury. Ve výchozím nastavení `BindType` je definován jako `ATLBINDINGS` v `IAccessorImpl`vaší definice šablony. `BindType` poskytuje mechanismus používaný `IAccessorImpl` ke sledování počtu prvků v jeho `DBBINDING` pole a také odkaz na počtu a přístupový objekt příznaky.  
+Toto je povinná na příkazy a sady řádků. OLE DB vyžaduje poskytovatele, jak implementovat HACCESSOR, což je značka na pole [DBBINDING](/previous-versions/windows/desktop/ms716845) struktury. HACCESSORs poskytované `IAccessorImpl` jsou adresy `BindType` struktury. Ve výchozím nastavení `BindType` je definován jako `ATLBINDINGS` v `IAccessorImpl`vaší definice šablony. `BindType` poskytuje mechanismus používaný `IAccessorImpl` ke sledování počtu prvků v jeho `DBBINDING` pole a také odkaz na počtu a přístupový objekt příznaky.  
 
 ## <a name="iaccessorimpl"></a> IAccessorImpl::IAccessorImpl
 
@@ -127,7 +127,7 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobrazit [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="createaccessor"></a> IAccessorImpl::CreateAccessor
 
@@ -146,7 +146,7 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobrazit [IAccessor::CreateAccessor](/previous-versions/windows/desktop/ms720969\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+Zobrazit [IAccessor::CreateAccessor](/previous-versions/windows/desktop/ms720969) v *referenční informace pro OLE DB programátory*.  
 
 ## <a name="getbindings"></a> IAccessorImpl::GetBindings
 
@@ -163,7 +163,7 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobrazit [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253\(v=vs.85\)) v *referenční informace pro OLE DB programátory*. 
+Zobrazit [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253) v *referenční informace pro OLE DB programátory*. 
 
 ## <a name="releaseaccessor"></a> IAccessorImpl::ReleaseAccessor
 
@@ -178,7 +178,7 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobrazit [IAccessor::ReleaseAccessor](/previous-versions/windows/desktop/ms719717\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IAccessor::ReleaseAccessor](/previous-versions/windows/desktop/ms719717) v *referenční informace pro OLE DB programátory*.
   
 ## <a name="see-also"></a>Viz také  
 

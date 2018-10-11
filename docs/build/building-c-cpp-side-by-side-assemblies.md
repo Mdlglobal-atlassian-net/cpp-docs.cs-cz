@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e3c80b383c592d3eebf892981c088e26529c515
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 93e02ee27fb8b5a1f4f4f7b2e435a737e1c637a2
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860937"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083837"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Sestavení souběžných sestavení C/C++
 
@@ -30,7 +30,7 @@ Aplikace v jazyce Visual C++ může používat jednu nebo několik knihoven DLL 
 Ve výchozím nastavení, při vytváření knihovny DLL pomocí sady Visual Studio, má [manifest aplikace](/windows/desktop/SbsCs/application-manifests) vložený jako prostředek RT_MANIFEST s ID roven 2. Stejně jako u spustitelný soubor tento manifest popisuje závislosti této knihovny DLL na jiná sestavení. Předpokladem je, že knihovna DLL není součástí sestavení vedle sebe a aplikace, které závisí na tuto knihovnu DLL nebudou používat manifest aplikace načíst, ale místo toho spoléhají na zavaděči operačního systému k vyhledání této knihovny DLL v systémové cestě.
 
 > [!NOTE]
-> Je důležité pro knihovnu DLL, která používá manifest aplikace má manifest vložený jako prostředek s ID roven 2. Pokud načtení knihovny DLL dynamicky za běhu (například pomocí [voláním LoadLibrary vloženým pomocí](https://msdn.microsoft.com/library/windows/desktop/ms684175) funkce), operační systém načte závislá sestavení určená v manifestu knihovny DLL. Manifest externí aplikace pro knihovny DLL není kontrolován během `LoadLibrary` volání. Pokud v manifestu není vložená, zavaděč může opakovat pokus o načtení nesprávné verze sestavení, nebo se nedaří najít k hledání závislých sestavení.
+> Je důležité pro knihovnu DLL, která používá manifest aplikace má manifest vložený jako prostředek s ID roven 2. Pokud načtení knihovny DLL dynamicky za běhu (například pomocí [voláním LoadLibrary vloženým pomocí](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) funkce), operační systém načte závislá sestavení určená v manifestu knihovny DLL. Manifest externí aplikace pro knihovny DLL není kontrolován během `LoadLibrary` volání. Pokud v manifestu není vložená, zavaděč může opakovat pokus o načtení nesprávné verze sestavení, nebo se nedaří najít k hledání závislých sestavení.
 
 Jeden nebo několik týkající se knihoven DLL může být znovu zabalené, sadu do sestavení vedle sebe s odpovídající [manifestu sestavení](/windows/desktop/SbsCs/assembly-manifests), která popisuje soubory, které tvoří sestavení, jakož i závislost sestavení na jiné side-by-side sestavení.
 

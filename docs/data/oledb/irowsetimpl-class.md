@@ -102,12 +102,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 17e353f044a3b003736589f52c538101e18fd7ea
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b495a756cbccc88f00c42dc8de78bf80a39f4b7a
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085547"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083357"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl – třída
 
@@ -173,7 +173,7 @@ Jednotky úložiště pro všechny popisovačů řádků uchovávat zprostředko
   
 ## <a name="remarks"></a>Poznámky  
 
-[IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\)) je rozhraní pro základní sadu řádků.  
+[IRowset](/previous-versions/windows/desktop/ms720986) je rozhraní pro základní sadu řádků.  
 
 ## <a name="addrefrows"></a> IRowsetImpl::AddRefRows
 
@@ -190,7 +190,7 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobrazit [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+Zobrazit [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) v *referenční informace pro OLE DB programátory*.  
 
 ## <a name="createrow"></a> IRowsetImpl::CreateRow
 
@@ -233,7 +233,7 @@ STDMETHOD(GetData )(HROW hRow,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobrazit [IRowset::GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+Zobrazit [IRowset::GetData](/previous-versions/windows/desktop/ms716988) v *referenční informace pro OLE DB programátory*.  
   
 Některé parametry odpovídají *OLE DB referenční informace pro programátory* parametry jiné názvy, které jsou popsány v `IRowset::GetData`:  
   
@@ -266,7 +266,7 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
   
 ### <a name="return-value"></a>Návratová hodnota  
 
-[DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) příznaky pro sloupec. 
+[DBSTATUS](/previous-versions/windows/desktop/ms722617) příznaky pro sloupec. 
 
 ## <a name="getnextrows"></a> IRowsetImpl::GetNextRows
 
@@ -284,7 +284,7 @@ STDMETHOD(GetNextRows )(HCHAPTER hReserved,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobrazit [IRowset::GetNextRows](/previous-versions/windows/desktop/ms709827\(v=vs.85\)) v *referenční informace pro OLE DB programátory*. 
+Zobrazit [IRowset::GetNextRows](/previous-versions/windows/desktop/ms709827) v *referenční informace pro OLE DB programátory*. 
 
 ## <a name="irowsetimpl"></a> IRowsetImpl::IRowsetImpl
 
@@ -316,7 +316,7 @@ HRESULT RefRows(DBCOUNTITEM cRows,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobrazit [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+Zobrazit [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
 
@@ -338,7 +338,7 @@ STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobrazit [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+Zobrazit [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) v *referenční informace pro OLE DB programátory*.  
 
 ## <a name="restartposition"></a> IRowsetImpl::RestartPosition
 
@@ -352,7 +352,7 @@ STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);
   
 #### <a name="parameters"></a>Parametry  
 
-Zobrazit [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+Zobrazit [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="remarks"></a>Poznámky  
 
@@ -373,7 +373,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 #### <a name="parameters"></a>Parametry  
 
 *statusFlags*<br/>
-[DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) příznaky nastavit pro sloupec.  
+[DBSTATUS](/previous-versions/windows/desktop/ms722617) příznaky nastavit pro sloupec.  
   
 *vlastnosti CurrentRow platné*<br/>
 Na aktuálním řádku.  

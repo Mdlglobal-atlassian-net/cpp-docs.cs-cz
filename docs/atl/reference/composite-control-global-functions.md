@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54e4ab00a0d0df90601d06d9e2ffa100d82d4c03
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dee59f5e86cddeec47da47c648b0cf12789cc85a
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46037356"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084097"
 ---
 # <a name="composite-control-global-functions"></a>Globální funkce složených ovládacích prvků
 
@@ -81,7 +81,7 @@ ATLAPI_(int) AtlAxDialogBox(
 [in] Určuje instanci modulu, jehož spustitelný soubor obsahuje šablony dialogového okna.
 
 *lpTemplateName*<br/>
-[in] Identifikuje šablony dialogového okna. Tento parametr je buď má ukazatel na řetězec znaků zakončené znakem null, který určuje název šablony dialogového okna nebo celočíselnou hodnotu, která určuje identifikátor prostředku šablony dialogového okna. Pokud parametr určuje identifikátor prostředku, jeho vyšší řád slova musí být nulová a jeho nižší řád slova musí obsahovat identifikátor. Můžete použít [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) – makro pro vytvoření této hodnoty.
+[in] Identifikuje šablony dialogového okna. Tento parametr je buď má ukazatel na řetězec znaků zakončené znakem null, který určuje název šablony dialogového okna nebo celočíselnou hodnotu, která určuje identifikátor prostředku šablony dialogového okna. Pokud parametr určuje identifikátor prostředku, jeho vyšší řád slova musí být nulová a jeho nižší řád slova musí obsahovat identifikátor. Můžete použít [MAKEINTRESOURCE](/windows/desktop/api/winuser/nf-winuser-makeintresourcea) – makro pro vytvoření této hodnoty.
 
 *hWndParent*<br/>
 [in] Identifikuje okna, který vlastní dialogové okno.
@@ -128,7 +128,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 [in] Určuje instanci modulu, jehož spustitelný soubor obsahuje šablony dialogového okna.
 
 *lpTemplateName*<br/>
-[in] Identifikuje šablony dialogového okna. Tento parametr je buď má ukazatel na řetězec znaků zakončené znakem null, který určuje název šablony dialogového okna nebo celočíselnou hodnotu, která určuje identifikátor prostředku šablony dialogového okna. Pokud parametr určuje identifikátor prostředku, jeho vyšší řád slova musí být nulová a jeho nižší řád slova musí obsahovat identifikátor. Můžete použít [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) – makro pro vytvoření této hodnoty.
+[in] Identifikuje šablony dialogového okna. Tento parametr je buď má ukazatel na řetězec znaků zakončené znakem null, který určuje název šablony dialogového okna nebo celočíselnou hodnotu, která určuje identifikátor prostředku šablony dialogového okna. Pokud parametr určuje identifikátor prostředku, jeho vyšší řád slova musí být nulová a jeho nižší řád slova musí obsahovat identifikátor. Můžete použít [MAKEINTRESOURCE](/windows/desktop/api/winuser/nf-winuser-makeintresourcea) – makro pro vytvoření této hodnoty.
 
 *hWndParent*<br/>
 [in] Identifikuje okna, který vlastní dialogové okno.

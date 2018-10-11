@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 99d647e2e5a98c7e4c4433baaface66d1f987b32
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3ed6610f71561a62d3ff99a794bb166bdcabd3d3
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46073666"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083512"
 ---
 # <a name="ole-db-programming"></a>OLE DB – programování
 
@@ -40,7 +40,7 @@ Kromě toho můžete použít atributy k implementaci šablony příjemců OLE D
 |Pomocí šablony zprostředkovatele OLE DB (koncepční témata)|[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)|  
 |Třídy šablon technologie OLE DB a makra|[Referenční dokumentace k šablonám OLE DB](../../data/oledb/ole-db-templates.md) (Visual C++)|  
 |Atributy příjemce technologie OLE DB|[Atributy příjemce technologie OLE DB](../../windows/ole-db-consumer-attributes.md)|  
-|Rozhraní technologie OLE DB|[Referenční informace pro programátory OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) (v sadě Windows SDK)|  
+|Rozhraní technologie OLE DB|[Referenční informace pro programátory OLE DB](/previous-versions/windows/desktop/ms713643) (v sadě Windows SDK)|  
 |Ukázky šablon technologie OLE DB|[OLE DB – Ukázky šablon](https://github.com/Microsoft/VCSamples)| 
 |Přístup k datům programování přehled (Visual C++)|[Programování přístupu k datům](../../data/data-access-programming-mfc-atl.md)|  
 |Koncepční témata ODBC|[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)|  

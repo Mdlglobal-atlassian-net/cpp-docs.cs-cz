@@ -31,16 +31,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d2d63b4046774bd7e1c427639db3483536e94bc5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9ade96e5d73d86519a067d632a4e05250d1264cf
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095338"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082303"
 ---
 # <a name="irowsetnotifyimpl-class"></a>IRowsetNotifyImpl – třída
 
-Implementuje a zaregistruje [IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\)) na spotřebitele (označované také jako "jímka") tak, aby se zpracování oznámení.  
+Implementuje a zaregistruje [IRowsetNotify](/previous-versions/windows/desktop/ms712959) na spotřebitele (označované také jako "jímka") tak, aby se zpracování oznámení.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,7 +66,7 @@ class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify
 
 Zobrazit [příjem oznámení](../../data/oledb/receiving-notifications.md) o implementaci rozhraní bod připojení pro příjemce.  
   
-`IRowsetNotifyImpl` poskytuje implementaci pro fiktivní `IRowsetNotify`, s prázdné funkce pro `IRowsetNotify` metody [onfieldchange –](/previous-versions/windows/desktop/ms715961\(v=vs.85\)), [onrowchange –](/previous-versions/windows/desktop/ms722694\(v=vs.85\)), a [onrowsetchange –](/previous-versions/windows/desktop/ms722669\(v=vs.85\)). Pokud je zděděn z této třídy při implementaci `IRowsetNotify` rozhraní, můžete implementovat pouze metody, které potřebujete. Také budete muset poskytnout prázdná implementace pro jiné metody sami.  
+`IRowsetNotifyImpl` poskytuje implementaci pro fiktivní `IRowsetNotify`, s prázdné funkce pro `IRowsetNotify` metody [onfieldchange –](/previous-versions/windows/desktop/ms715961), [onrowchange –](/previous-versions/windows/desktop/ms722694), a [onrowsetchange –](/previous-versions/windows/desktop/ms722669). Pokud je zděděn z této třídy při implementaci `IRowsetNotify` rozhraní, můžete implementovat pouze metody, které potřebujete. Také budete muset poskytnout prázdná implementace pro jiné metody sami.  
 
 ## <a name="onfieldchange"></a> IRowsetNotifyImpl::OnFieldChange
 
@@ -87,15 +87,15 @@ STDMETHOD(OnFieldChange)(
   
 #### <a name="parameters"></a>Parametry  
 
-Zobrazit [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\)) pro popisy parametrů.  
+Zobrazit [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961) pro popisy parametrů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
 
-Zobrazit [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\)) pro vrácení hodnoty popisy.  
+Zobrazit [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961) pro vrácení hodnoty popisy.  
   
 ### <a name="remarks"></a>Poznámky  
 
-Tato metoda zabalí [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\)) metody. Viz popis v této metodě v OLE DB programátora odkaz podrobnosti.  
+Tato metoda zabalí [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961) metody. Viz popis v této metodě v OLE DB programátora odkaz podrobnosti.  
 
 ## <a name="onrowchange"></a> IRowsetNotifyImpl::OnRowChange
 
@@ -115,15 +115,15 @@ STDMETHOD(OnRowChange)(
   
 #### <a name="parameters"></a>Parametry  
 
-Zobrazit [IRowsetNotify::OnRowChange](/previous-versions/windows/desktop/ms722694\(v=vs.85\)) pro popisy parametrů.  
+Zobrazit [IRowsetNotify::OnRowChange](/previous-versions/windows/desktop/ms722694) pro popisy parametrů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
 
-Zobrazit [IRowsetNotify::OnRowChange](/previous-versions/windows/desktop/ms722694\(v=vs.85\)) pro vrácení hodnoty popisy.  
+Zobrazit [IRowsetNotify::OnRowChange](/previous-versions/windows/desktop/ms722694) pro vrácení hodnoty popisy.  
   
 ### <a name="remarks"></a>Poznámky  
 
-Tato metoda zabalí [IRowsetNotify::OnRowChange](/previous-versions/windows/desktop/ms722694\(v=vs.85\)) metody. Viz popis v této metodě v OLE DB programátora odkaz podrobnosti. 
+Tato metoda zabalí [IRowsetNotify::OnRowChange](/previous-versions/windows/desktop/ms722694) metody. Viz popis v této metodě v OLE DB programátora odkaz podrobnosti. 
 
 ## <a name="onrowsetchange"></a> IRowsetNotifyImpl::OnRowsetChange
 
@@ -141,19 +141,19 @@ STDMETHOD(OnRowsetChange)(
   
 #### <a name="parameters"></a>Parametry  
 
-Zobrazit [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\)) pro popisy parametrů.  
+Zobrazit [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669) pro popisy parametrů.  
   
 ### <a name="return-value"></a>Návratová hodnota  
 
-Zobrazit [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\)) pro vrácení hodnoty popisy.  
+Zobrazit [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669) pro vrácení hodnoty popisy.  
   
 ### <a name="remarks"></a>Poznámky  
 
-Tato metoda zabalí [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\)) metody. Viz popis v této metodě v OLE DB programátora odkaz podrobnosti.
+Tato metoda zabalí [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669) metody. Viz popis v této metodě v OLE DB programátora odkaz podrobnosti.
   
 ## <a name="see-also"></a>Viz také  
 
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\))   
+[IRowsetNotify](/previous-versions/windows/desktop/ms712959)   
 [IRowsetNotifyCP – třída](../../data/oledb/irowsetnotifycp-class.md)

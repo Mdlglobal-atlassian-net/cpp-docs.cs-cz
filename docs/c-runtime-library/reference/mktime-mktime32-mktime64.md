@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc8fbe595259b0f5e59d3ac844710222042540c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 68211c3807893d28adb5e90e8863967b7f60318f
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206065"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083564"
 ---
 # <a name="mktime-mktime32-mktime64"></a>mktime, _mktime32, _mktime64
 
@@ -93,7 +93,7 @@ Tyto funkce slouží k ověření a vyplňte strukturu tm. Pokud úspěšné, ty
 
 - Hodnotu menší než nula, která mají kód knihovny run-time C compute, zda (běžný čas) nebo letního času je v platnosti.
 
-Určuje chování letního času úspory času z knihovny run-time jazyka C [TZ](tzset.md) proměnné prostředí. Pokud **TZ** není nastavena, voláním rozhraní Win32 API [funkce GetTimeZoneInformation](https://msdn.microsoft.com/library/windows/desktop/ms724421.aspx) slouží k získání letní čas informace z operačního systému. Když se to nepovede, knihovně předpokládá, že jsou použita pravidla Spojených států pro implementaci výpočtu letního času. **tm_isdst** je povinné pole. Pokud není nastavena, její hodnota není definována a návratovou hodnotu z těchto funkcí nepředvídatelné. Pokud *timeptr* odkazuje na **tm** struktura vrácený z předchozího volání [asctime –](asctime-wasctime.md), [gmtime](gmtime-gmtime32-gmtime64.md), nebo [localtime](localtime-localtime32-localtime64.md) (nebo varianty těchto funkcí), **tm_isdst** pole obsahuje správnou hodnotu.
+Určuje chování letního času úspory času z knihovny run-time jazyka C [TZ](tzset.md) proměnné prostředí. Pokud **TZ** není nastavena, voláním rozhraní Win32 API [funkce GetTimeZoneInformation](/windows/desktop/api/timezoneapi/nf-timezoneapi-gettimezoneinformation) slouží k získání letní čas informace z operačního systému. Když se to nepovede, knihovně předpokládá, že jsou použita pravidla Spojených států pro implementaci výpočtu letního času. **tm_isdst** je povinné pole. Pokud není nastavena, její hodnota není definována a návratovou hodnotu z těchto funkcí nepředvídatelné. Pokud *timeptr* odkazuje na **tm** struktura vrácený z předchozího volání [asctime –](asctime-wasctime.md), [gmtime](gmtime-gmtime32-gmtime64.md), nebo [localtime](localtime-localtime32-localtime64.md) (nebo varianty těchto funkcí), **tm_isdst** pole obsahuje správnou hodnotu.
 
 Všimněte si, že **gmtime** a **localtime** (a **_gmtime32**, **_gmtime64**, **_localtime32**, a **_localtime64**) použijte jednu vyrovnávací paměť na vlákno pro převod. Pokud zadáte tuto vyrovnávací paměť pro **mktime**, **_mktime32** nebo **_mktime64**, předchozí obsah je zničen.
 

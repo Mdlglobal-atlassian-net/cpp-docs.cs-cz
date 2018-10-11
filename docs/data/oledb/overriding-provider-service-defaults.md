@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 561617628e79513434d498d4c5e5af8ff2c189be
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 77ea251b91e55d3a3f01b6591828beffaaa9272d
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46104904"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083382"
 ---
 # <a name="overriding-provider-service-defaults"></a>Přepsání výchozích hodnot služby zprostředkovatele
 
-Hodnota registru zprostředkovatele pro OLEDB_SERVICES se vrátí jako výchozí hodnota [DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898\(v=vs.85\)) inicializace vlastnosti na objektu zdroje dat.  
+Hodnota registru zprostředkovatele pro OLEDB_SERVICES se vrátí jako výchozí hodnota [DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898) inicializace vlastnosti na objektu zdroje dat.  
   
 Jako položka registru existuje, zobrazují se objekty zprostředkovatele a uživatel může přepsat poskytovatele výchozí nastavení pro povolené služby tak, že nastavíte `DBPROP_INIT_OLEDBSERVICES` vlastnost před inicializací. Pokud chcete povolit nebo zakázat určité služby, uživatel obvykle získá aktuální hodnotu `DBPROP_INIT_OLEDBSERVICES` vlastnost, nastaví nebo vymaže bit pro konkrétní vlastnost, která má být povolena nebo zakázána a obnoví vlastnost. `DBPROP_INIT_OLEDBSERVICES` můžete nastavit přímo v OLE DB nebo v připojovacím řetězci, který je předán ADO nebo `IDataInitialize::GetDatasource`. Odpovídající hodnoty pro povolení nebo zákaz jednotlivé služby jsou uvedené v následující tabulce.  
   
@@ -41,7 +41,7 @@ Pokud položka registru neexistuje pro zprostředkovatele, správce součástí 
   
 ## <a name="see-also"></a>Viz také  
 
-[Sdružování prostředků](/previous-versions/windows/desktop/ms713655\(v=vs.85\))   
-[Jak zákazníci používají fondy prostředků](/previous-versions/windows/desktop/ms715907\(v=vs.85\))   
-[Jak poskytovatelů efektivně pracovat s fondy prostředků](/previous-versions/windows/desktop/ms714906\(v=vs.85\))   
+[Sdružování prostředků](/previous-versions/windows/desktop/ms713655)   
+[Jak zákazníci používají fondy prostředků](/previous-versions/windows/desktop/ms715907)   
+[Jak poskytovatelů efektivně pracovat s fondy prostředků](/previous-versions/windows/desktop/ms714906)   
 [Povolení a zakázání služeb OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)

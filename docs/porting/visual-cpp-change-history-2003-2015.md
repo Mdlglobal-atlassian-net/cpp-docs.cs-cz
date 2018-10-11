@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6f0e5ce08e362cef0fd625036a92c1d13885ded
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: bcf3ce1f0ddc5003886c367cfe5db8968a911ee9
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821540"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083980"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>2003 – 2015 historie změn Visual C++
 
@@ -282,7 +282,7 @@ Kromě toho probíhající vylepšení shoda s kompilátorem prostředí můžet
 
 - **clock**
 
-   V předchozích verzích [hodiny](../c-runtime-library/reference/clock.md) funkce bylo implementováno pomocí rozhraní Windows API [GetSystemTimeAsFileTime](https://msdn.microsoft.com/library/windows/desktop/ms724397.aspx). S touto implementací clock – funkce záleželo na systémový čas a nebyla proto nemusí být monotónní. Clock – funkce má byla reimplemented z hlediska [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) a je nyní monotónní.
+   V předchozích verzích [hodiny](../c-runtime-library/reference/clock.md) funkce bylo implementováno pomocí rozhraní Windows API [GetSystemTimeAsFileTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime). S touto implementací clock – funkce záleželo na systémový čas a nebyla proto nemusí být monotónní. Clock – funkce má byla reimplemented z hlediska [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) a je nyní monotónní.
 
 - **fstat – a _utime**
 
@@ -2545,7 +2545,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
 - **Vyřazení podpory kódu ATL s atributy** (úroveň 1 (`/W1`) na výchozím nastavení)
 
-   Předchozí verze kompilátoru nepodporuje kódu ATL s přidělenými atributy. Jako další fází odebrání podpory knihovny ATL s atributy kódu, který [začal v sadě Visual Studio 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx), s atributy kódu ATL je zastaralá. Kompilátor nyní vyvolá kompilátor varování C4467 pomáhá rozpoznat tento druh zastaralý kód.
+   Předchozí verze kompilátoru nepodporuje kódu ATL s přidělenými atributy. Jako další fází odebrání podpory knihovny ATL s atributy kódu, který [začal v sadě Visual Studio 2008](https://msdn.microsoft.com/library/bb384632), s atributy kódu ATL je zastaralá. Kompilátor nyní vyvolá kompilátor varování C4467 pomáhá rozpoznat tento druh zastaralý kód.
 
     ```Output
     warning C4467: Usage of ATL attributes is deprecated

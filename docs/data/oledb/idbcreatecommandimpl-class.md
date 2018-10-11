@@ -23,16 +23,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c6d8a07ded3da02c21c4ee8c528474efc6e52b6c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b06d6c730562203cdef1191a9d73012c3b19c2c8
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021561"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083959"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl – třída
 
-Poskytuje implementaci [IDBCreateCommand](/previous-versions/windows/desktop/ms711625\(v=vs.85\)) rozhraní.  
+Poskytuje implementaci [IDBCreateCommand](/previous-versions/windows/desktop/ms711625) rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -80,7 +80,7 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobrazit [IDBCreateCommand::CreateCommand](/previous-versions/windows/desktop/ms709772\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+Zobrazit [IDBCreateCommand::CreateCommand](/previous-versions/windows/desktop/ms709772) v *referenční informace pro OLE DB programátory*.  
   
 Některé parametry odpovídají *OLE DB referenční informace pro programátory* parametry jiné názvy, které jsou popsány v `IDBCreateCommand::CreateCommand`:  
   

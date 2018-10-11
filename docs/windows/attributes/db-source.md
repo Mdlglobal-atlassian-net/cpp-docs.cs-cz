@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0fa55ba0193f24acdf308888c3ec505c33003292
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 11a58511684a58ebb0b8ec13138bfbdb7afa4729
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789342"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081900"
 ---
 # <a name="dbsource"></a>db_source
 
@@ -37,7 +37,7 @@ Vytvoří připojení ke zdroji dat.
 ### <a name="parameters"></a>Parametry
 
 *db_source*<br/>
-Připojovací řetězec použitý pro připojení ke zdroji dat. Formát připojovacího řetězce, naleznete v tématu [připojovací řetězce a propojení dat](/previous-versions/windows/desktop/ms718376\(v=vs.85\)) v Microsoft Data Access Components (MDAC) SDK.
+Připojovací řetězec použitý pro připojení ke zdroji dat. Formát připojovacího řetězce, naleznete v tématu [připojovací řetězce a propojení dat](/previous-versions/windows/desktop/ms718376) v Microsoft Data Access Components (MDAC) SDK.
 
 *Jméno*<br/>
 (Volitelné) Při použití **db_source** na třídu, *název* je instance objektu zdroje dat, který má **db_source** byt aplikovaný atribut (viz Příklad 1). Při použití **db_source** vložené v implementaci metody, *název* je proměnná (místní počítač do metody), který slouží pro přístup k datům zdroje (viz příklad 2). To předat *název* k *source_name* parametr `db_command` ke zdroji dat pomocí příkazu.

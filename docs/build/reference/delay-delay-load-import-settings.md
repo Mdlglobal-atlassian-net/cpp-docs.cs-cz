@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ce585f9dc8439a02a2883229e8d9ec006c29c24
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 086fab7d1d50f96ab05c38f2e6d524d7ff344e02
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717688"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081913"
 ---
 # <a name="delay-delay-load-import-settings"></a>/DELAY (nastavení importu odloženého načtení)
 
@@ -46,7 +46,7 @@ Ovládací prvky/delay – možnost [s odloženým načtením](../../build/refer
 
 - Kvalifikátor NOBIND přikazuje linkeru, aby do finální image zahrnout IAT s možností vazby. Ve výchozím nastavení je vytvořit IAT s možností vazby pro odloženě zaváděné knihovny DLL. Výsledná bitová kopie nemůže být vázán staticky. (Imagí pomocí umožňujících vazbu IATs staticky vázat před provedením.) Zobrazit [/BIND](../../build/reference/bind.md).
 
-   Pokud je vázán knihovnu DLL, pomocná funkce se pokusí použít vázané informace namísto volání metody [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) ve všech odkazovaných importy. Pokud časové razítko nebo upřednostňovanou adresu neodpovídá načtené knihovny DLL, bude předpokládat pomocnou funkci vázané IAT je zastaralá a bude pokračovat, jako kdyby vázané IAT neexistuje.
+   Pokud je vázán knihovnu DLL, pomocná funkce se pokusí použít vázané informace namísto volání metody [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) ve všech odkazovaných importy. Pokud časové razítko nebo upřednostňovanou adresu neodpovídá načtené knihovny DLL, bude předpokládat pomocnou funkci vázané IAT je zastaralá a bude pokračovat, jako kdyby vázané IAT neexistuje.
 
    NOBIND způsobí, že váš program obrázku větší, ale můžete urychlit načítání času knihovny DLL. Pokud chcete nikdy vytvořit vazbu knihovny DLL, NOBIND zabrání vázané IAT nefunkční.
 
@@ -62,7 +62,7 @@ Pokud chcete zadat knihovny DLL pro odložené načtení, použijte [/delayload]
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.DelayLoadDLLs%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.DelayLoadDLLs%2A>.
 
 ## <a name="see-also"></a>Viz také
 

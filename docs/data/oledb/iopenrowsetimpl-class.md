@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 84050dcf4faed8bb99b871d3b797400c1ed5620e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5f5071adcf12bde10a3fc67a5503875dfb264372
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46086951"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081601"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl – třída
 
@@ -63,11 +63,11 @@ Vaše třída odvozena od `IOpenRowsetImpl`.
   
 ## <a name="remarks"></a>Poznámky  
 
-[IOpenRowset](/previous-versions/windows/desktop/ms716946\(v=vs.85\)) rozhraní je povinné pro objekt relace. Otevře se a vrátí sadu řádků, který obsahuje všechny řádky z jedné základní tabulky nebo indexu.  
+[IOpenRowset](/previous-versions/windows/desktop/ms716946) rozhraní je povinné pro objekt relace. Otevře se a vrátí sadu řádků, který obsahuje všechny řádky z jedné základní tabulky nebo indexu.  
   
 ## <a name="createrowset"></a> IOpenRowsetImpl::CreateRowset
 
-Vytvoří objekt sady řádků. Nebyla volána přímo uživatelem. Zobrazit [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) v *referenční informace pro OLE DB programátory.*  
+Vytvoří objekt sady řádků. Nebyla volána přímo uživatelem. Zobrazit [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724) v *referenční informace pro OLE DB programátory.*  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -91,7 +91,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 *pRowsetObj*<br/>
 [out] Ukazatel na objektu sady řádků. Tento parametr se obvykle nepoužívá, ale lze použít, pokud před předáním objektu COM je nutné provést další práce na dané sadě řádků. Životnost *pRowsetObj* je svázaná s *ppRowset*.  
   
-Další parametry, naleznete v tématu [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) v *OLE DB referenční informace pro programátory.*  
+Další parametry, naleznete v tématu [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724) v *OLE DB referenční informace pro programátory.*  
 
 ## <a name="openrowset"></a> IOpenRowsetImpl::OpenRowset
 
@@ -111,7 +111,7 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobrazit [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+Zobrazit [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="remarks"></a>Poznámky  
 

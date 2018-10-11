@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fb3febbbaffc7c3a0de945fc9d30b544fd22188
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c43e28e035691b04181bef2162de828f3271a600
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46023303"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082751"
 ---
 # <a name="server-registration-global-functions"></a>Globální funkce serverové registrace
 
@@ -125,7 +125,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 Ukazatel na modulu COM.
 
 *dwClsContext*<br/>
-Určuje kontext, ve kterém má být spuštěn objektu třídy. Možné hodnoty jsou CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER nebo CLSCTX_LOCAL_SERVER. Zobrazit [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) další podrobnosti.
+Určuje kontext, ve kterém má být spuštěn objektu třídy. Možné hodnoty jsou CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER nebo CLSCTX_LOCAL_SERVER. Zobrazit [CLSCTX](/windows/desktop/api/wtypesbase/ne-wtypesbase-tagclsctx) další podrobnosti.
 
 *dwFlags*<br/>
 Určuje typy připojení k objektu třídy. Možné hodnoty jsou REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE nebo REGCLS_MULTI_SEPARATE. Zobrazit [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) další podrobnosti.
