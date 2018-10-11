@@ -138,12 +138,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8b421bcc84152fede78ca985bbf2896f42a148fe
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b9d1982e1da6526c1c9db607062a66b163f912ce
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46100449"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083668"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor – třída
 
@@ -167,7 +167,7 @@ class CDynamicAccessor : public CAccessorBase
 |-|-|  
 |[AddBindEntry –](#addbindentry)|Přidá do vazby položku výstupní sloupce při přepisování výchozí přístupový objekt.|  
 |[CDynamicAccessor](#cdynamicaccessor)|Vytvoří a inicializuje `CDynamicAccessor` objektu.|  
-|[Zavřít](#close)|Odpojuje všechny sloupce, uvolní přidělené paměti a uvolní [IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\)) ukazatel rozhraní ve třídě.|  
+|[Zavřít](#close)|Odpojuje všechny sloupce, uvolní přidělené paměti a uvolní [IAccessor](/previous-versions/windows/desktop/ms719672) ukazatel rozhraní ve třídě.|  
 |[Getblobhandling –](#getblobhandling)|Načte objekt BLOB zpracování hodnotu aktuálního řádku.|  
 |[Getblobsizelimit –](#getblobsizelimit)|Získá maximální velikost objektu BLOB v bajtech.|  
 |[GetBookmark](#getbookmark)|Načte záložky na aktuálním řádku.|  
@@ -207,7 +207,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 #### <a name="parameters"></a>Parametry  
 
 *Informace o*<br/>
-[in] A `DBCOLUMNINFO` struktura obsahující informace o sloupci. Naleznete v části "DBCOLUMNINFO struktury" v [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+[in] A `DBCOLUMNINFO` struktura obsahující informace o sloupci. Naleznete v části "DBCOLUMNINFO struktury" v [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
 
@@ -244,7 +244,7 @@ Můžete také určit, jak `CDynamicAccessor` zpracovává sloupec data, která 
 
 ## <a name="close"></a> CDynamicAccessor::Close
 
-Odpojuje všechny sloupce, uvolní přidělené paměti a uvolní [IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\)) ukazatel rozhraní ve třídě.  
+Odpojuje všechny sloupce, uvolní přidělené paměti a uvolní [IAccessor](/previous-versions/windows/desktop/ms719672) ukazatel rozhraní ve třídě.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -334,7 +334,7 @@ bool GetColumnFlags(DBORDINAL nColumn,
 [in] Číslo sloupce. Sloupec čísel začínající číslem 1. Hodnota 0 odkazuje na sloupec záložku, pokud existuje.  
   
 *pFlags*<br/>
-[out] Ukazatel na bitová maska, která popisuje vlastnosti sloupce. Naleznete v části "DBCOLUMNFLAGS Výčtový typ" v [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+[out] Ukazatel na bitová maska, která popisuje vlastnosti sloupce. Naleznete v části "DBCOLUMNFLAGS Výčtový typ" v [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
 
@@ -360,13 +360,13 @@ HRESULT GetColumnInfo(IRowset* pRowset,
 #### <a name="parameters"></a>Parametry  
 
 *pRowset*<br/>
-[in] Ukazatel [IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\)) rozhraní.  
+[in] Ukazatel [IRowset](/previous-versions/windows/desktop/ms720986) rozhraní.  
   
 *pColumns*<br/>
 [out] Ukazatel na paměť ke vrácení počet sloupců v dané sadě řádků; Toto číslo zahrnuje sloupec záložky, pokud existuje.  
   
 *ppColumnInfo*<br/>
-[out] Ukazatel na paměť ke vrácení pole `DBCOLUMNINFO` struktury. Naleznete v části "DBCOLUMNINFO struktury" v [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+[out] Ukazatel na paměť ke vrácení pole `DBCOLUMNINFO` struktury. Naleznete v části "DBCOLUMNINFO struktury" v [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) v *referenční informace pro OLE DB programátory*.  
   
 *ppStringsBuffer*<br/>
 [out] Ukazatel na paměť ke vrácení ukazatele do služby storage pro všechny hodnoty řetězce (použít názvy v rámci *columnid* nebo *pwszName*) v rámci jedna alokace bloku.  
@@ -377,7 +377,7 @@ Jeden standardní hodnoty HRESULT.
   
 ### <a name="remarks"></a>Poznámky  
 
-Zobrazit [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) v *OLE DB referenční informace pro programátory* informace o typech dat `DBORDINAL`, `DBCOLUMNINFO`, a `OLECHAR`.  
+Zobrazit [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) v *OLE DB referenční informace pro programátory* informace o typech dat `DBORDINAL`, `DBCOLUMNINFO`, a `OLECHAR`.  
 
 ## <a name="getcolumnname"></a> CDynamicAccessor::GetColumnName
 
@@ -509,7 +509,7 @@ bool GetStatus(const WCHAR* pColumnName,
 [in] Ukazatel na řetězec znaků, který obsahuje název sloupce.  
   
 *pStatus*<br/>
-[out] Ukazatel na proměnnou obsahující sloupec Stav. Zobrazit [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace.  
+[out] Ukazatel na proměnnou obsahující sloupec Stav. Zobrazit [DBSTATUS](/previous-versions/windows/desktop/ms722617) v *OLE DB referenční informace pro programátory* Další informace.  
   
 ### <a name="return-value"></a>Návratová hodnota  
 
@@ -667,7 +667,7 @@ bool SetStatus(const WCHAR* pColumnName,
 [in] Číslo sloupce. Sloupec čísel začínající číslem 1. Hodnota 0 odkazuje na sloupec záložku, pokud existuje.  
   
 *Stav*<br/>
-[in] Stav sloupce. Zobrazit [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) v *OLE DB referenční informace pro programátory* Další informace.  
+[in] Stav sloupce. Zobrazit [DBSTATUS](/previous-versions/windows/desktop/ms722617) v *OLE DB referenční informace pro programátory* Další informace.  
   
 *pColumnName*<br/>
 [in] Ukazatel na řetězec znaků, který obsahuje název sloupce.  

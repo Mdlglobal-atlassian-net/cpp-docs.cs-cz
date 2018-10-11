@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6fb948efd63a8392661cc38a80393bc90d5e694
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 163ef22563141b9365bc2c086870877c7ad2bf00
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396445"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083590"
 ---
 # <a name="run-time-object-model-services"></a>Služby modelu běhového objektu
 
@@ -92,7 +92,7 @@ Ukazatel na řetězec zakončený hodnotou null obsahující název funkce nebo 
 
 ### <a name="remarks"></a>Poznámky
 
-Použijte toto makro k určení, zda knihovny běžných ovládacích prvků funkci určené *proc* (namísto volání metody [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212).
+Použijte toto makro k určení, zda knihovny běžných ovládacích prvků funkci určené *proc* (namísto volání metody [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress).
 
 ### <a name="requirements"></a>Požadavky
 
@@ -119,7 +119,7 @@ Ukazatel na řetězec zakončený hodnotou null obsahující název funkce nebo 
 
 ### <a name="remarks"></a>Poznámky
 
-Použijte toto makro k určení, zda knihovny běžných ovládacích prvků funkci určené *proc* (namísto volání metody [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212). Toto makro je verzi AFX_COMCTL32_IF_EXISTS kódování Unicode.
+Použijte toto makro k určení, zda knihovny běžných ovládacích prvků funkci určené *proc* (namísto volání metody [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress). Toto makro je verzi AFX_COMCTL32_IF_EXISTS kódování Unicode.
 
 ### <a name="requirements"></a>Požadavky
 

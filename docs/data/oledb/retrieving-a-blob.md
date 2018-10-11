@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2d3c66fdb15a27b027be656ab07152e74d848526
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5194d205dc29df9c73e3ca44637f23ca16f72e6b
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46086899"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083772"
 ---
 # <a name="retrieving-a-blob"></a>Načtení objektu BLOB
 
-Můžete načíst binární velkých objektů (BLOB) různými způsoby. Můžete použít `DBTYPE_BYTES` k načtení objektu BLOB jako sekvence bajtů nebo můžete použít rozhraní jako `ISequentialStream`. Další informace najdete v tématu [objekty BLOB a objekty OLE](/previous-versions/windows/desktop/ms711511\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.  
+Můžete načíst binární velkých objektů (BLOB) různými způsoby. Můžete použít `DBTYPE_BYTES` k načtení objektu BLOB jako sekvence bajtů nebo můžete použít rozhraní jako `ISequentialStream`. Další informace najdete v tématu [objekty BLOB a objekty OLE](/previous-versions/windows/desktop/ms711511) v *OLE DB referenční informace pro programátory*.  
   
 Následující kód ukazuje, jak načíst objekt BLOB pomocí `ISequentialStream`. Makro [BLOB_ENTRY](../../data/oledb/blob-entry.md) vám umožní určit rozhraní a příznaky použité pro rozhraní. Po otevření tabulce Kód volá `Read` opakovaně na `ISequentialStream` čtení bajtů z objektu BLOB. Kód volá `Release` k uvolnění rozhraní ukazatele před voláním `MoveNext` k získání dalšího záznamu.  
   

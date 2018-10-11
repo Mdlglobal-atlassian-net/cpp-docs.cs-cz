@@ -46,12 +46,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aa4953c5ba879f5fa0fe8c5b892f91dfa8d15dc9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fb27c7fc401fb27b3677659f4f1b5539c19fda2c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095209"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082693"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow – třída
 
@@ -116,7 +116,7 @@ Ukazatel `CSimpleRow` objektu.
   
 ### <a name="return-value"></a>Návratová hodnota  
 
-Hodnotu HRESULT, obvykle S_OK označující dvěma řádky se stejnou instanci řádek nebo S_FALSE označující dvěma řádky se liší. Zobrazit [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\)) v *OLE DB referenční informace pro programátory* pro ostatní možných vrácených hodnot. 
+Hodnotu HRESULT, obvykle S_OK označující dvěma řádky se stejnou instanci řádek nebo S_FALSE označující dvěma řádky se liší. Zobrazit [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629) v *OLE DB referenční informace pro programátory* pro ostatní možných vrácených hodnot. 
 
 ## <a name="csimplerow"></a> CSimpleRow::CSimpleRow
 

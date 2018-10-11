@@ -33,16 +33,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 22f4aee2ac7cbefee19a33d929ec80b319b537d4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6f85fafe213fa7e53f67fb6a3035f415235c8794
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117475"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082446"
 ---
 # <a name="cenumerator-class"></a>CEnumerator – třída
 
-Používá objekt enumerátoru OLE DB, která zveřejní [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) rozhraní vrátit sadu řádků s popisem všechny zdroje dat a enumerátory.  
+Používá objekt enumerátoru OLE DB, která zveřejní [ISourcesRowset](/previous-versions/windows/desktop/ms715969) rozhraní vrátit sadu řádků s popisem všechny zdroje dat a enumerátory.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -90,7 +90,7 @@ bool Find(TCHAR* szSearchName) throw();
   
 ### <a name="remarks"></a>Poznámky  
 
-Tento název se mapuje `SOURCES_NAME` člena [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) rozhraní.  
+Tento název se mapuje `SOURCES_NAME` člena [ISourcesRowset](/previous-versions/windows/desktop/ms715969) rozhraní.  
   
 ## <a name="getmoniker"></a> CEnumerator::GetMoniker
 
@@ -119,7 +119,7 @@ Standardní HRESULT.
 
 ## <a name="open"></a> CEnumerator::Open
 
-Vazeb zástupný název čítače, pokud jeden je zadán, pak načte sada řádků pro enumerátor voláním [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)).  
+Vazeb zástupný název čítače, pokud jeden je zadán, pak načte sada řádků pro enumerátor voláním [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200).  
   
 ### <a name="syntax"></a>Syntaxe  
   

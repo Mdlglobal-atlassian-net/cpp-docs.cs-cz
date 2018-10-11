@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 263a90710d2103c4ea97e6c56da67d676ba7366b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7f9cbfce7e04040f0e1618148a3c258f21bb84b8
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222077"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083460"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Převod projektů ze smíšeného režimu do čistého IL
 
@@ -84,26 +84,26 @@ Pokud používáte starší verzi sady nástrojů kompilátoru Visual C++, kter�
 
 3. Odeberte všechny nespravované typy:
 
-   Bez ohledu na to vhodné, nahradit odkazy na struktury z nespravovaného typy [systému](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx) oboru názvů. V následující tabulce jsou uvedeny běžné spravované typy:
+   Bez ohledu na to vhodné, nahradit odkazy na struktury z nespravovaného typy [systému](/dotnet/api/system) oboru názvů. V následující tabulce jsou uvedeny běžné spravované typy:
 
    |Struktura|Popis|
    |---------------|-----------------|
-   |[Datový typ Boolean](https://msdn.microsoft.com/library/system.boolean\(v=vs.140\).aspx)|Představuje logickou hodnotu.|
-   |[Bajtů](https://msdn.microsoft.com/library/system.byte\(v=vs.140\).aspx)|Představuje celé číslo bez znaménka 8 bitů.|
-   |[Char](https://msdn.microsoft.com/library/system.char\(v=vs.140\).aspx)|Hodnota představuje znak Unicode.|
-   |[Datum a čas](https://msdn.microsoft.com/library/system.datetime.datetime.aspx)|Představuje okamžik v čase, obvykle vyjádřený jako datum a čas.|
-   |[Decimal](https://msdn.microsoft.com/library/system.decimal\(v=vs.140\).aspx)|Představuje desetinné číslo.|
-   |[Double](https://msdn.microsoft.com/library/system.double\(v=vs.140\).aspx)|Představuje číslo s plovoucí desetinnou čárkou dvojitou přesností.|
-   |[identifikátor GUID](https://msdn.microsoft.com/library/system.guid\(v=vs.140\).aspx)|Představuje globálně jedinečný identifikátor (GUID).|
-   |[Int16](https://msdn.microsoft.com/library/system.int16\(v=vs.140\).aspx)|Představuje 16bitové celé číslo se znaménkem.|
-   |[Datový typ Int32](https://msdn.microsoft.com/library/system.int32\(v=vs.140\).aspx)|Představuje 32bitové celé číslo se znaménkem.|
-   |[Int64](https://msdn.microsoft.com/library/system.int64\(v=vs.140\).aspx)|Představuje 64bitové celé číslo se znaménkem.|
-   |[IntPtr](https://msdn.microsoft.com/library/system.intptr\(v=vs.140\).aspx)|Typ specifické pro platformu, která se používá k reprezentaci ukazatele nebo popisovače.|
-   |[SByte –](https://msdn.microsoft.com/library/system.byte.aspx)|Představuje 8bitové celé číslo se znaménkem.|
-   |[Jeden](https://msdn.microsoft.com/library/system.single.aspx)|Představuje číslo s plovoucí desetinnou čárkou jednoduchou přesností.|
-   |[TimeSpan](https://msdn.microsoft.com/library/system.timespan\(v=vs.140\).aspx)|Představuje časový interval.|
-   |[UInt16](https://msdn.microsoft.com/library/system.uint16\(v=vs.140\).aspx)|Představuje celé číslo bez znaménka 16 bitů.|
-   |[UInt32](https://msdn.microsoft.com/library/system.uint32\(v=vs.140\).aspx)|Představuje celé číslo bez znaménka 32-bit.|
-   |[UInt64](https://msdn.microsoft.com/library/system.uint64\(v=vs.140\).aspx)|Představuje celé číslo bez znaménka 64-bit.|
-   |[UIntPtr](https://msdn.microsoft.com/library/system.uintptr\(v=vs.140\).aspx)|Typ specifické pro platformu, která se používá k reprezentaci ukazatele nebo popisovače.|
-   |[Typ void](https://msdn.microsoft.com/library/system.void\(v=vs.140\).aspx)|Označuje metodu, která nevrací hodnotu; To znamená že metoda nemá návratový typ void.|
+   |[Datový typ Boolean](/dotnet/api/system.boolean)|Představuje logickou hodnotu.|
+   |[Bajtů](/dotnet/api/system.byte)|Představuje celé číslo bez znaménka 8 bitů.|
+   |[Char](/dotnet/api/system.char)|Hodnota představuje znak Unicode.|
+   |[Datum a čas](/dotnet/api/system.datetime.datetime.aspx)|Představuje okamžik v čase, obvykle vyjádřený jako datum a čas.|
+   |[Decimal](/dotnet/api/system.decimal)|Představuje desetinné číslo.|
+   |[Double](/dotnet/api/system.double)|Představuje číslo s plovoucí desetinnou čárkou dvojitou přesností.|
+   |[identifikátor GUID](/dotnet/api/system.guid)|Představuje globálně jedinečný identifikátor (GUID).|
+   |[Int16](/dotnet/api/system.int16)|Představuje 16bitové celé číslo se znaménkem.|
+   |[Datový typ Int32](/dotnet/api/system.int32)|Představuje 32bitové celé číslo se znaménkem.|
+   |[Int64](/dotnet/api/system.int64)|Představuje 64bitové celé číslo se znaménkem.|
+   |[IntPtr](/dotnet/api/system.intptr)|Typ specifické pro platformu, která se používá k reprezentaci ukazatele nebo popisovače.|
+   |[SByte –](/dotnet/api/system.byte.aspx)|Představuje 8bitové celé číslo se znaménkem.|
+   |[Jeden](/dotnet/api/system.single.aspx)|Představuje číslo s plovoucí desetinnou čárkou jednoduchou přesností.|
+   |[TimeSpan](/dotnet/api/system.timespan)|Představuje časový interval.|
+   |[UInt16](/dotnet/api/system.uint16)|Představuje celé číslo bez znaménka 16 bitů.|
+   |[UInt32](/dotnet/api/system.uint32)|Představuje celé číslo bez znaménka 32-bit.|
+   |[UInt64](/dotnet/api/system.uint64)|Představuje celé číslo bez znaménka 64-bit.|
+   |[UIntPtr](/dotnet/api/system.uintptr)|Typ specifické pro platformu, která se používá k reprezentaci ukazatele nebo popisovače.|
+   |[Typ void](/dotnet/api/system.void)|Označuje metodu, která nevrací hodnotu; To znamená že metoda nemá návratový typ void.|

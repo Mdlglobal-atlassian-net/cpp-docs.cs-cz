@@ -60,12 +60,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e9cc04c6d9e270e0c3b5c3bd02e05b426ccf4c53
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: de27441658c4c0537384447028a0383a0d87756b
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46060925"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083258"
 ---
 # <a name="ccommand-class"></a>CCommand – třída
 
@@ -92,7 +92,7 @@ Typ třídy přístupového objektu (například `CDynamicParameterAccessor`, `C
 Typ třídy sady řádků (například `CArrayRowset` nebo `CNoRowset`), že chcete, aby příkaz použil. Výchozí hodnota je `CRowset`.  
   
 *TMultiple*<br/>
-Chcete-li použít technologie OLE DB příkaz, který může vrátit více výsledků, zadejte [CMultipleResults](../../data/oledb/cmultipleresults-class.md). Jinak použijte [cnomultipleresults –](../../data/oledb/cnomultipleresults-class.md). Podrobnosti najdete v tématu [hodnotu IMultipleResults](/previous-versions/windows/desktop/ms721289\(v=vs.85\)).  
+Chcete-li použít technologie OLE DB příkaz, který může vrátit více výsledků, zadejte [CMultipleResults](../../data/oledb/cmultipleresults-class.md). Jinak použijte [cnomultipleresults –](../../data/oledb/cnomultipleresults-class.md). Podrobnosti najdete v tématu [hodnotu IMultipleResults](/previous-versions/windows/desktop/ms721289).  
 
 ## <a name="requirements"></a>Požadavky  
 
@@ -224,13 +224,13 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 [in] Relace, ve kterém chcete provést příkaz.  
   
 *wszCommand*<br/>
-[in] Příkaz k provedení, předán jako řetězec znaků Unicode. Může mít hodnotu NULL, při použití `CAccessor`, v takovém případě bude příkaz načíst z hodnotu předanou [DEFINE_COMMAND](../../data/oledb/define-command.md) – makro. Zobrazit [ICommand::Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\)) v *OLE DB referenční informace pro programátory* podrobnosti.  
+[in] Příkaz k provedení, předán jako řetězec znaků Unicode. Může mít hodnotu NULL, při použití `CAccessor`, v takovém případě bude příkaz načíst z hodnotu předanou [DEFINE_COMMAND](../../data/oledb/define-command.md) – makro. Zobrazit [ICommand::Execute](/previous-versions/windows/desktop/ms718095) v *OLE DB referenční informace pro programátory* podrobnosti.  
   
 *szCommand*<br/>
 [in] Stejné jako *wszCommand* s tím rozdílem, že tento parametr má příkaz řetězec ANSI. Čtvrtý formu této metody může nabývat hodnoty NULL. Viz "Poznámky" dále v tomto tématu podrobnosti.  
   
 *pPropSet*<br/>
-[in] Ukazatel na pole [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) v *referenční informace pro OLE DB programátory* ve Windows SDK.  
+[in] Ukazatel na pole [DBPROPSET](/previous-versions/windows/desktop/ms714367) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](/previous-versions/windows/desktop/ms713696) v *referenční informace pro OLE DB programátory* ve Windows SDK.  
   
 *pRowsAffected*<br/>
 [/ out] Ukazatel na paměti, kde se vrátí počet řádků, které jsou ovlivněny příkazu. Pokud  *\*pRowsAffected* má hodnotu NULL, je vrácen žádný počet řádků. V opačném případě `Open` nastaví  *\*pRowsAffected* podle následujících podmínek:  
@@ -242,13 +242,13 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 |Tento příkaz neprovede aktualizaci, odstranění nebo vložení řádků|*\*pRowsAffected* není definován.|  
   
 *guidCommand*<br/>
-[in] Identifikátor GUID, který určuje syntaxi a obecná pravidla pro zprostředkovatele, který má být použit při analýze text příkazu. Zobrazit [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\)) a [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757\(v=vs.85\)) v *OLE DB referenční informace pro programátory* podrobnosti.  
+[in] Identifikátor GUID, který určuje syntaxi a obecná pravidla pro zprostředkovatele, který má být použit při analýze text příkazu. Zobrazit [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825) a [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757) v *OLE DB referenční informace pro programátory* podrobnosti.  
   
 *bBind*<br/>
 [in] Určuje, zda vytvořit vazbu příkazu automaticky po spouštěna. Výchozí hodnota je **true**, což způsobí, že příkaz, který má být automaticky vázán. Nastavení *bBind* k **false** brání automatické vazby příkazu tak, aby mohl vytvořit vazbu ručně. (Ruční vazba je zajímavé především uživatelům OLAP).  
   
 *ulPropSets*<br/>
-[in] Počet [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury předané *pPropSet* argument.  
+[in] Počet [DBPROPSET](/previous-versions/windows/desktop/ms714367) struktury předané *pPropSet* argument.  
   
 ### <a name="return-value"></a>Návratová hodnota  
 
@@ -271,7 +271,7 @@ Třetí forma `Open` umožňuje příkaz řetězec, který má být hodnota NULL
 
 ## <a name="create"></a> CCommand::Create
 
-Volání [CCommand::CreateCommand](../../data/oledb/ccommand-createcommand.md) vytvoření příkazu pro zadané relaci, pak zavolá [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\)) zadat text příkazu.  
+Volání [CCommand::CreateCommand](../../data/oledb/ccommand-createcommand.md) vytvoření příkazu pro zadané relaci, pak zavolá [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709825) zadat text příkazu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -297,7 +297,7 @@ HRESULT CCommandBase::Create(const CSession& session,
 [in] Ukazatel na ANSI text příkazu řetězce.  
   
 *guidCommand*<br/>
-[in] Identifikátor GUID, který určuje syntaxi a obecná pravidla pro zprostředkovatele, který má být použit při analýze text příkazu. Popis dialekty, naleznete v tématu [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.  
+[in] Identifikátor GUID, který určuje syntaxi a obecná pravidla pro zprostředkovatele, který má být použit při analýze text příkazu. Popis dialekty, naleznete v tématu [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825) v *OLE DB referenční informace pro programátory*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
 
@@ -344,7 +344,7 @@ HRESULT CCommandBase::GetParameterInfo(DB_UPARAMS* pParams,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobrazit [ICommandWithParameters::GetParameterInfo](/previous-versions/windows/desktop/ms714917\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+Zobrazit [ICommandWithParameters::GetParameterInfo](/previous-versions/windows/desktop/ms714917) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
 
@@ -371,7 +371,7 @@ Standardní HRESULT.
   
 ### <a name="remarks"></a>Poznámky  
 
-Tato metoda zabalí metodu OLE DB [ICommandPrepare::Prepare](/previous-versions/windows/desktop/ms718370\(v=vs.85\)).  
+Tato metoda zabalí metodu OLE DB [ICommandPrepare::Prepare](/previous-versions/windows/desktop/ms718370).  
 
 ## <a name="releasecommand"></a> CCommand::ReleaseCommand
 
@@ -401,7 +401,7 @@ HRESULT CCommandBase::SetParameterInfo(DB_UPARAMS ulParams,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobrazit [ICommandWithParameters::SetParameterInfo](/previous-versions/windows/desktop/ms725393\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+Zobrazit [ICommandWithParameters::SetParameterInfo](/previous-versions/windows/desktop/ms725393) v *referenční informace pro OLE DB programátory*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
 
@@ -423,7 +423,7 @@ Standardní HRESULT.
   
 ### <a name="remarks"></a>Poznámky  
 
-Tato metoda zabalí metodu OLE DB [ICommandPrepare::Unprepare](/previous-versions/windows/desktop/ms719635\(v=vs.85\)). 
+Tato metoda zabalí metodu OLE DB [ICommandPrepare::Unprepare](/previous-versions/windows/desktop/ms719635). 
   
 ## <a name="see-also"></a>Viz také  
 

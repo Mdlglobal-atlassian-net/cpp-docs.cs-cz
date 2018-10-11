@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c94152a9322b64acafe91e1fb0eb34ab82aa2902
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4548e319d7a85c547b0e750d040bdc6b6d7bbba5
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081296"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083902"
 ---
 # <a name="ctable-class"></a>CTable – třída
 
@@ -106,10 +106,10 @@ HRESULT Open(const CSession& session,
 [in] `DBID` Tabulky otevřete.  
   
 *pPropSet*<br/>
-[in] Ukazatel na pole [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) v *referenční informace pro OLE DB programátory* ve Windows SDK. Výchozí hodnota Null určuje žádné vlastnosti.  
+[in] Ukazatel na pole [DBPROPSET](/previous-versions/windows/desktop/ms714367) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](/previous-versions/windows/desktop/ms713696) v *referenční informace pro OLE DB programátory* ve Windows SDK. Výchozí hodnota Null určuje žádné vlastnosti.  
   
 *ulPropSets*<br/>
-[in] Počet [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury předané *pPropSet* argument.  
+[in] Počet [DBPROPSET](/previous-versions/windows/desktop/ms714367) struktury předané *pPropSet* argument.  
   
 ### <a name="return-value"></a>Návratová hodnota  
 
@@ -117,7 +117,7 @@ Standardní HRESULT.
   
 ### <a name="remarks"></a>Poznámky  
 
-Další podrobnosti najdete v tématu [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.  
+Další podrobnosti najdete v tématu [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724) v *OLE DB referenční informace pro programátory*.  
   
 ## <a name="see-also"></a>Viz také  
 

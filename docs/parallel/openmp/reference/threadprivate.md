@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9313934744f6eae66736f25b0d0b8592743cf12
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b769b5aa5f46b9a4b815424a0c4178cf4504ab5
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376977"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082433"
 ---
 # <a name="threadprivate"></a>threadprivate
 
@@ -46,7 +46,7 @@ Další informace najdete v tématu [2.7.1 threadprivate – direktiva](../../..
 
 `threadprivate` Podle směrnice [vlákno](../../../cpp/thread.md) `__declspec` atribut; omezení **__declspec(thread)** platí pro `threadprivate`.
 
-Nemůžete použít `threadprivate` v žádné knihovny DLL, která se načtou prostřednictvím [LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175).  To zahrnuje knihovny DLL, které načítají s [/delayload (Import odloženého načtení)](../../../build/reference/delayload-delay-load-import.md), který také používá **LoadLibrary**.
+Nemůžete použít `threadprivate` v žádné knihovny DLL, která se načtou prostřednictvím [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya).  To zahrnuje knihovny DLL, které načítají s [/delayload (Import odloženého načtení)](../../../build/reference/delayload-delay-load-import.md), který také používá **LoadLibrary**.
 
 Můžete použít `threadprivate` v knihovně DLL, která je staticky načtená při spouštění procesu.
 

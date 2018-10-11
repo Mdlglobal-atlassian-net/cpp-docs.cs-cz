@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7ab24f981e90342a679b1a0a542b540192fee06e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a98848799163fd31037dc137b92b94878a1ee675
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107842"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082459"
 ---
 # <a name="supporting-notifications"></a>Podpora oznámení
 
@@ -33,7 +33,7 @@ ms.locfileid: "46107842"
 
 Pokud chcete implementovat oznámení, třída zprostředkovatele musí dědit z [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md) a [IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md).  
   
-`IRowsetNotifyCP` implementuje poskytovatele lokality pro bod připojení rozhraní [IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\)). `IRowsetNotifyCP` implementuje vysílání funkce radit naslouchacích procesů najdete v bodě připojení `IID_IRowsetNotify` změny obsahu v sadě řádků.  
+`IRowsetNotifyCP` implementuje poskytovatele lokality pro bod připojení rozhraní [IRowsetNotify](/previous-versions/windows/desktop/ms712959). `IRowsetNotifyCP` implementuje vysílání funkce radit naslouchacích procesů najdete v bodě připojení `IID_IRowsetNotify` změny obsahu v sadě řádků.  
   
 Všimněte si, že musí také implementovat a zaregistrovat `IRowsetNotify` na spotřebitele (označované také jako jímka) pomocí [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) tak, aby příjemce může zpracovat oznámení. Informace o implementaci rozhraní bod připojení pro spotřebitele, naleznete v tématu [příjem oznámení](../../data/oledb/receiving-notifications.md).  
   

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d175216fedb2e6a9139d970fc7696672576f7423
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 04687ed080013d9ae96a11eda32e060c02c61dec
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46042894"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081978"
 ---
 # <a name="testing-your-provider"></a>Testování zprostředkovatele
 
@@ -32,7 +32,7 @@ Ještě před vydáním zprostředkovatele, měli byste provést následující 
   
 1. Otestujte ho pomocí příjemce aplikace napsané pomocí rozhraní ADO. Většina vývojářů (zejména Microsoft Visual Basic a C# Microsoft vývojářům) používá ADO nebo ADO.NET pro aplikace pro koncové uživatele. Test příjemce by mělo zahrnovat všechny funkční oblasti vašeho zprostředkovatele. Příklad aplikace ADO příjemce, naleznete v tématu [ukázky kódu ADO v aplikaci Microsoft Visual Basicu](https://msdn.microsoft.com/library/ms807514.aspx).  
   
-1. Spuštění testů shodnosti technologie OLE DB (včetně testů shodnosti ADO) jestli splňuje standardní úroveň 0 pro zprostředkovatele OLE DB poskytovatele. (Vysvětlení úroveň 0, vyhledejte "Testů shodnosti úroveň 0 technologie OLE DB" v [Příručka programátora technologie OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\)). Tyto testy a související dokumentace jsou součástí Visual C++ v sadě SDK pro Data Access. Tyto testy také pomáhají zajistit, že váš poskytovatel funguje dobře, když se agregují jiná [poskytovatelé služeb](../../data/oledb/ole-db-resource-pooling-and-services.md) a jsou zvlášť užitečné, pokud změníte nebo přidáte vlastnosti. Další informace o přizpůsobení testů naleznete v souboru Readme pro Data Access SDK, která se nachází na jeden z disků CD Visual Studio.  
+1. Spuštění testů shodnosti technologie OLE DB (včetně testů shodnosti ADO) jestli splňuje standardní úroveň 0 pro zprostředkovatele OLE DB poskytovatele. (Vysvětlení úroveň 0, vyhledejte "Testů shodnosti úroveň 0 technologie OLE DB" v [Příručka programátora technologie OLE DB](/previous-versions/windows/desktop/ms713643). Tyto testy a související dokumentace jsou součástí Visual C++ v sadě SDK pro Data Access. Tyto testy také pomáhají zajistit, že váš poskytovatel funguje dobře, když se agregují jiná [poskytovatelé služeb](../../data/oledb/ole-db-resource-pooling-and-services.md) a jsou zvlášť užitečné, pokud změníte nebo přidáte vlastnosti. Další informace o přizpůsobení testů naleznete v souboru Readme pro Data Access SDK, která se nachází na jeden z disků CD Visual Studio.  
   
 ## <a name="see-also"></a>Viz také  
 

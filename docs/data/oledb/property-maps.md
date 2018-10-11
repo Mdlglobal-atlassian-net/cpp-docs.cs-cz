@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b3fb9c5a5c18925bfcd448bb2349379262b27361
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8672cca382d89eda93e624f566f754bd2eb14d0a
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080984"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083408"
 ---
 # <a name="property-maps"></a>Mapy vlastností
 
-Kromě relace, řádků a objekt volitelný příkaz každý poskytovatel podporuje jednu nebo více vlastností. Tyto vlastnosti jsou definované v rámci služby maps vlastnosti obsažené v souborech hlaviček vytvořené průvodcem zprostředkovatele OLE DB. Každý soubor hlavičky obsahuje mapování vlastností ve skupině vlastností OLE DB pro objekt nebo objekty definované v tomto souboru definován. Hlavičkový soubor, který obsahuje objekt zdroje dat také obsahuje vlastnosti mapy [vlastnosti DataSource](https://msdn.microsoft.com/library/ms724188\(v=vs.140\).aspx). Session.h obsahuje vlastnost mapy [vlastnosti relace](/previous-versions/windows/desktop/ms714221\(v=vs.85\)). Objekty sady řádků a příkaz se nacházejí v jedné hlavičce souboru s názvem *projectname*RS.h. Tyto vlastnosti jsou členy [vlastnosti sady řádků](/previous-versions/windows/desktop/ms711252\(v=vs.85\)) skupiny.  
+Kromě relace, řádků a objekt volitelný příkaz každý poskytovatel podporuje jednu nebo více vlastností. Tyto vlastnosti jsou definované v rámci služby maps vlastnosti obsažené v souborech hlaviček vytvořené průvodcem zprostředkovatele OLE DB. Každý soubor hlavičky obsahuje mapování vlastností ve skupině vlastností OLE DB pro objekt nebo objekty definované v tomto souboru definován. Hlavičkový soubor, který obsahuje objekt zdroje dat také obsahuje vlastnosti mapy [vlastnosti DataSource](https://msdn.microsoft.com/library/ms724188). Session.h obsahuje vlastnost mapy [vlastnosti relace](/previous-versions/windows/desktop/ms714221). Objekty sady řádků a příkaz se nacházejí v jedné hlavičce souboru s názvem *projectname*RS.h. Tyto vlastnosti jsou členy [vlastnosti sady řádků](/previous-versions/windows/desktop/ms711252) skupiny.  
   
 ## <a name="see-also"></a>Viz také  
 

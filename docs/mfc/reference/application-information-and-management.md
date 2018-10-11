@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b64e92eaca38743f0bc9de31f9be7684271c4674
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9783da47a22260f0edbe5ddf6d8f5021aae31e5c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374350"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083798"
 ---
 # <a name="application-information-and-management"></a>Informace o aplikacích a správa aplikací
 
@@ -591,7 +591,7 @@ Pokud funkce uspěje, vrácená hodnota je popisovač modulu. Pokud funkce selž
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí popisovač, který lze použít v [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) k získání adresy funkce knihovny DLL. `AfxLoadLibrary` je také možné mapovat jiné spustitelných modulů.
+Vrátí popisovač, který lze použít v [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) k získání adresy funkce knihovny DLL. `AfxLoadLibrary` je také možné mapovat jiné spustitelných modulů.
 
 Každý proces udržuje počet odkazů pro každý modul načíst knihovny. Tento počet odkazů je zvýšen pokaždé, když `AfxLoadLibrary` se nazývá a je snížen pokaždé, když `AfxFreeLibrary` je volána. Když počet odkazů dosáhne nuly, modul není mapován z adresního prostoru volajícího procesu a již není platný popisovač.
 

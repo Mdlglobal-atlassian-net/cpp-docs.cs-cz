@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce1a287a9fa608881a39f82a2b86cfc541674218
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ef48157d1f4efb467fd33270ff05271bedd1a563
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713716"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081887"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 
-Zpracuje explicitní propojení s voláním knihovny DLL [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) pro získání adresy exportované funkce v knihovně DLL. Použijete ukazatele vrácené funkce pro volání funkce knihovny DLL. **GetProcAddress** přijímá jako parametry popisovač DLL modulu (vrácený buď **LoadLibrary**, `AfxLoadLibrary`, nebo **GetModuleHandle**) a přebírá buď název funkce, kterou chcete na volání nebo funkce exportním ordinálním.
+Zpracuje explicitní propojení s voláním knihovny DLL [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) pro získání adresy exportované funkce v knihovně DLL. Použijete ukazatele vrácené funkce pro volání funkce knihovny DLL. **GetProcAddress** přijímá jako parametry popisovač DLL modulu (vrácený buď **LoadLibrary**, `AfxLoadLibrary`, nebo **GetModuleHandle**) a přebírá buď název funkce, kterou chcete na volání nebo funkce exportním ordinálním.
 
 Protože jsou volání funkce DLL prostřednictvím ukazatele a neexistuje žádná kontrola typu v čase kompilace, ujistěte se, že jsou parametry funkce správné tak, že nemáte k překročení paměti přidělené v zásobníku a způsobí narušení přístupu. Jedním ze způsobů, které vám pomůžou zajistit bezpečnost typů je podívat se na funkční prototypy exportovaných funkcí a vytvořit odpovídající výrazy TypeDef pro ukazatele na funkce. Příklad:
 
@@ -73,7 +73,7 @@ Můžete si opatřit pouze ordinální export Pokud odkazujete na knihovnu DLL s
 
 - [LoadLibrary a AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)
 
-- [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152)
+- [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
 
 - [Export z knihovny DLL pomocí souborů DEF](../build/exporting-from-a-dll-using-def-files.md)
 

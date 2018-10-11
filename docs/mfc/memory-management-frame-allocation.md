@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca2d98898c232cdb65d3ac5d1288b06aca403772
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1138a675d64561a2e8399accd93c4ebb5eff382d
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398115"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083857"
 ---
 # <a name="memory-management-frame-allocation"></a>Správa paměti: Přidělení rámců
 
@@ -47,7 +47,7 @@ Lokální funkce proměnné tohoto přechodu je obor se stane při ukončení fu
 
 Když je objekt definován jako proměnné rámce, jeho konstruktor je automaticky vyvolána v místě, kde došlo k definici. Když objekt dostane mimo rozsah, vyvolání jeho destruktoru automaticky před uvolnit paměť pro objekt. Toto automatické konstrukcí a destrukcí může být velmi užitečná, ale je nutné znát automatické volání, zejména destruktor.
 
-Hlavní výhodou přidělování objektů na rámci je, že automaticky odebrány. Při přidělování objektů v rámci nemusíte starat o zapomenuté objekty způsobí nevracení paměti. (Podrobnosti o nevracení paměti, najdete v článku [zjištění nevracení paměti v knihovně MFC](/previous-versions/visualstudio/visual-studio-2010/c99kz476\(v=vs.100\)).) Přidělení rámce nevýhodou je, že rámec proměnné nelze použít mimo jejich rozsah. Dalším faktorem při výběru rámec přidělení a přidělení haldy je, že velké struktury a objekty, často je lepší použít haldy namísto zásobníku pro úložiště, protože je často omezené místo v zásobníku.
+Hlavní výhodou přidělování objektů na rámci je, že automaticky odebrány. Při přidělování objektů v rámci nemusíte starat o zapomenuté objekty způsobí nevracení paměti. (Podrobnosti o nevracení paměti, najdete v článku [zjištění nevracení paměti v knihovně MFC](/previous-versions/visualstudio/visual-studio-2010/c99kz476).) Přidělení rámce nevýhodou je, že rámec proměnné nelze použít mimo jejich rozsah. Dalším faktorem při výběru rámec přidělení a přidělení haldy je, že velké struktury a objekty, často je lepší použít haldy namísto zásobníku pro úložiště, protože je často omezené místo v zásobníku.
 
 ## <a name="see-also"></a>Viz také
 

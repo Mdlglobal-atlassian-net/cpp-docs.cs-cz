@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a49cb4fa88b3a014d79969cc86fc03fa1136efa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5491f8a761eee80595265150ee0cb89c682b3079
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405343"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084045"
 ---
 # <a name="changing-the-font-of-text-on-an-image-image-editor-for-icons"></a>Změna písma textu obrázku (editor obrázků pro ikony)
 
@@ -32,7 +32,7 @@ Následující postup je příklad toho, jak:
 
 ### <a name="to-change-the-font-of-text-on-an-image"></a>Změna písma textu obrázku
 
-1. Vytvoření aplikace C++ Windows Forms. Podrobnosti najdete v tématu [vytvoření projektu aplikace Windows](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5\(v=vs.100\)). `app.ico` Ve výchozím nastavení se přidá do projektu soubor.
+1. Vytvoření aplikace C++ Windows Forms. Podrobnosti najdete v tématu [vytvoření projektu aplikace Windows](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5). `app.ico` Ve výchozím nastavení se přidá do projektu soubor.
 
 2. V **Průzkumníka řešení**, poklikejte na soubor app.ico. [Editor obrázků](../windows/image-editor-for-icons.md) se otevře.
 

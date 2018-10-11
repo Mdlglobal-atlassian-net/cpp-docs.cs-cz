@@ -25,16 +25,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b90d89a5a9541f0c3c68efc8031e6cb1dd87ad84
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 34daf1f1c8624206070c73c9f012192c8b3dec66
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019026"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082628"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl – třída
 
-Poskytuje implementaci [ISessionProperties](/previous-versions/windows/desktop/ms713721\(v=vs.85\)) rozhraní.  
+Poskytuje implementaci [ISessionProperties](/previous-versions/windows/desktop/ms713721) rozhraní.  
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -85,7 +85,7 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobrazit [ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643\(v=vs.85\)) v *referenční informace pro OLE DB programátory*. 
+Zobrazit [ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643) v *referenční informace pro OLE DB programátory*. 
 
 ## <a name="setproperties"></a> ISessionPropertiesImpl::SetProperties
 
@@ -100,7 +100,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobrazit [ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405\(v=vs.85\)) v *referenční informace pro OLE DB programátory*.  
+Zobrazit [ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405) v *referenční informace pro OLE DB programátory*.  
   
 ## <a name="see-also"></a>Viz také  
 

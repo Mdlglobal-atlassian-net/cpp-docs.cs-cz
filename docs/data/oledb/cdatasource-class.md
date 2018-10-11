@@ -68,12 +68,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: df5a93ae8b646eb0b4f012484ef8c13d07d328da
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 50917bcdca5e355f20194b9333a247d7a0a49728
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106308"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083852"
 ---
 # <a name="cdatasource-class"></a>CDataSource – třída
 
@@ -163,7 +163,7 @@ HRESULT GetProperties(ULONG ulPropIDSets,
   
 #### <a name="parameters"></a>Parametry  
 
-Zobrazit [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344\(v=vs.85\)) v *referenční informace pro OLE DB programátory* ve Windows SDK.  
+Zobrazit [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344) v *referenční informace pro OLE DB programátory* ve Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
 
@@ -256,10 +256,10 @@ HRESULT Open(LPCSTR szProgID,
 [in] `CLSID` Data zprostředkovatele.  
   
 *pPropSet*<br/>
-[in] Ukazatel na pole [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) v *referenční informace pro OLE DB programátory* ve Windows SDK.  
+[in] Ukazatel na pole [DBPROPSET](/previous-versions/windows/desktop/ms714367) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](/previous-versions/windows/desktop/ms713696) v *referenční informace pro OLE DB programátory* ve Windows SDK.  
   
 *nPropertySets*<br/>
-[in] Počet [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury předané *pPropSet* argument.  
+[in] Počet [DBPROPSET](/previous-versions/windows/desktop/ms714367) struktury předané *pPropSet* argument.  
   
 *pName*<br/>
 [in] Název databáze pro připojení.  
@@ -271,7 +271,7 @@ HRESULT Open(LPCSTR szProgID,
 [in] Heslo uživatele.  
   
 *nInitMode*<br/>
-[in] Režim inicializaci databáze. Zobrazit [inicializační vlastnosti](/previous-versions/windows/desktop/ms723127\(v=vs.85\))v *OLE DB referenční informace pro programátory* v sadě Windows SDK pro seznam režimů platné inicializace. Pokud *nInitMode* je nula, žádná inicializace režimu je součástí sady vlastností, které se používá k otevření připojení.  
+[in] Režim inicializaci databáze. Zobrazit [inicializační vlastnosti](/previous-versions/windows/desktop/ms723127)v *OLE DB referenční informace pro programátory* v sadě Windows SDK pro seznam režimů platné inicializace. Pokud *nInitMode* je nula, žádná inicializace režimu je součástí sady vlastností, které se používá k otevření připojení.  
   
 *szProgID*<br/>
 [in] Identifikátor programu.  
@@ -316,7 +316,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 *szFileName*<br/>
 [in] Název souboru, obvykle připojení ke zdroji dat (. Soubor UDL).  
   
-Další informace o souborech odkaz data (soubory UDL) najdete v tématu [Data přehled rozhraní API odkazu](/previous-versions/windows/desktop/ms718102\(v=vs.85\)) v sadě Windows SDK.  
+Další informace o souborech odkaz data (soubory UDL) najdete v tématu [Data přehled rozhraní API odkazu](/previous-versions/windows/desktop/ms718102) v sadě Windows SDK.  
   
 ### <a name="return-value"></a>Návratová hodnota  
 
@@ -411,10 +411,10 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 [in] ID programu zprostředkovatele dat  
   
 *pPropset*<br/>
-[in] Ukazatel na pole [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) v *referenční informace pro OLE DB programátory* ve Windows SDK. Pokud je inicializovat objekt zdroje dat, vlastnosti musí patřit do skupiny vlastností zdroje dat. Pokud stejná vlastnost je zadán více než jednou v *pPropset*, jehož hodnota se používá se specifickým pro zprostředkovatele. Pokud *ulPropSets* je nula, tento parametr je ignorován.  
+[in] Ukazatel na pole [DBPROPSET](/previous-versions/windows/desktop/ms714367) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](/previous-versions/windows/desktop/ms713696) v *referenční informace pro OLE DB programátory* ve Windows SDK. Pokud je inicializovat objekt zdroje dat, vlastnosti musí patřit do skupiny vlastností zdroje dat. Pokud stejná vlastnost je zadán více než jednou v *pPropset*, jehož hodnota se používá se specifickým pro zprostředkovatele. Pokud *ulPropSets* je nula, tento parametr je ignorován.  
   
 *ulPropSets*<br/>
-[in] Počet [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury předané *pPropSet* argument. Pokud to je nula, poskytovatel ignoruje *pPropset*.  
+[in] Počet [DBPROPSET](/previous-versions/windows/desktop/ms714367) struktury předané *pPropSet* argument. Pokud to je nula, poskytovatel ignoruje *pPropset*.  
   
 ### <a name="return-value"></a>Návratová hodnota  
 

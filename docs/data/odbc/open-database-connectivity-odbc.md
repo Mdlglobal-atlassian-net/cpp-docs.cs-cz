@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6e5282d1944ca789e56ac6890c10f41c15ec59e4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d28194b44fca4360fc7a0ca1614e9f5685cc0d98
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46111274"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082329"
 ---
 # <a name="open-database-connectivity-odbc"></a>ODBC (Open Database Connectivity)
 
 Knihovny Microsoft Foundation Classes (MFC) poskytuje třídy pro programování s připojením ODBC (Open Database). Od verze Visual Studio 2015 a ODBC systému SQL Server 2012 je preferovaný způsob, jak se připojit ke zdrojům dat SQL.
   
-Další informace o použití rozhraní API ODBC bez knihovny MFC naleznete v tématu [připojení ODBC (Open Database)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) SDK na webu MSDN.  
+Další informace o použití rozhraní API ODBC bez knihovny MFC naleznete v tématu [připojení ODBC (Open Database)](/previous-versions/windows/desktop/ms710252) SDK na webu MSDN.  
   
   
 ## <a name="in-this-section"></a>V tomto oddílu  
@@ -69,7 +69,7 @@ Další informace o použití rozhraní API ODBC bez knihovny MFC naleznete v t�
   
 ## <a name="odbc-database-tasks"></a>Databázové úkoly rozhraní ODBC  
 
-Tyto úkoly jsou založeny na MFC [ODBC](odbc-basics.md) třídy. Další informace o použití rozhraní API ODBC bez knihovny MFC naleznete v tématu [připojení ODBC (Open Database)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) SDK.  
+Tyto úkoly jsou založeny na MFC [ODBC](odbc-basics.md) třídy. Další informace o použití rozhraní API ODBC bez knihovny MFC naleznete v tématu [připojení ODBC (Open Database)](/previous-versions/windows/desktop/ms710252) SDK.  
   
 - [Nainstalovat a začít s rozhraním ODBC](installing-and-getting-started-with-odbc.md)  
   

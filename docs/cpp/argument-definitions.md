@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cf75e1c0fe2b3ff0d883a8785e69aef489c0545
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e0c42478e5e6ce3c9efe66c45ed32292f2040a83
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056388"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084149"
 ---
 # <a name="argument-definitions"></a>Definice argumentů
 
@@ -45,7 +45,7 @@ Pole řetězců zakončených znakem null představující argumenty příkazov�
 První argument příkazového řádku je vždy `argv` **[1]** a poslední je `argv` **[** `argc` – 1 **]**.
 
 > [!NOTE]
->  Podle konvence `argv` **[0]** příkaz, kterým je vyvolán program.  Nicméně je možné vytvořit podřízený proces pomocí [CreateProcess](https://msdn.microsoft.com/library/windows/desktop/ms683197) a pokud používáte první a druhý argument (*lpApplicationName* a *lpCommandLine*), `argv` **[0]** nemusí být spustitelný soubor s názvem; použijte [GetModuleFileName –](https://msdn.microsoft.com/library/windows/desktop/ms683197) k načtení názvu spustitelného souboru a jeho plně kvalifikovanou cestu.
+>  Podle konvence `argv` **[0]** příkaz, kterým je vyvolán program.  Nicméně je možné vytvořit podřízený proces pomocí [CreateProcess](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea) a pokud používáte první a druhý argument (*lpApplicationName* a *lpCommandLine*), `argv` **[0]** nemusí být spustitelný soubor s názvem; použijte [GetModuleFileName –](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea) k načtení názvu spustitelného souboru a jeho plně kvalifikovanou cestu.
 
 ## <a name="microsoft-specific"></a>Specifické pro Microsoft
 

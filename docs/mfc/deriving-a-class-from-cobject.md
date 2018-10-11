@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 177d4160972f521eeeaee56087c29e18433be87e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f673f0212884fce33069f044b34d5396cf72b7c3
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440228"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081927"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Odvození třídy z objektu CObject
 
@@ -69,7 +69,7 @@ Následující tabulka ukazuje vztah mezi makra použitá pro podporu serializac
 
      [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
 
-Za normálních okolností však můžete chtít potlačit některé `CObject`pro členské funkce pro zpracování podrobností o nové třídy. Například může obvykle chcete přepsat `Dump` funkce `CObject` zajištění výstupu ladění pro obsah vaší třídy. Podrobnosti ohledně postupu přepsání `Dump`, najdete v článku [diagnostiky: výpis obsah objektu](/previous-versions/visualstudio/visual-studio-2010/sc15kz85\(v=vs.100\)). Můžete také přepsat `AssertValid` funkce `CObject` poskytnout vlastní testování k ověření konzistence datové členy třídy objektů. Popis toho, jak přepsat `AssertValid`, naleznete v tématu [MFC ASSERT_VALID a CObject::AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa\(v=vs.100\)).
+Za normálních okolností však můžete chtít potlačit některé `CObject`pro členské funkce pro zpracování podrobností o nové třídy. Například může obvykle chcete přepsat `Dump` funkce `CObject` zajištění výstupu ladění pro obsah vaší třídy. Podrobnosti ohledně postupu přepsání `Dump`, najdete v článku [diagnostiky: výpis obsah objektu](/previous-versions/visualstudio/visual-studio-2010/sc15kz85). Můžete také přepsat `AssertValid` funkce `CObject` poskytnout vlastní testování k ověření konzistence datové členy třídy objektů. Popis toho, jak přepsat `AssertValid`, naleznete v tématu [MFC ASSERT_VALID a CObject::AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa).
 
 Tento článek [určení úrovní funkčnosti](../mfc/specifying-levels-of-functionality.md) popisuje, jak určit jiných úrovních funkčnosti, včetně informací o třídě za běhu, vytváření dynamických objektů a serializace.
 

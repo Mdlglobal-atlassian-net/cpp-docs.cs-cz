@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69e985b81072de306c818218e19bbb660e3e04a4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 497de9695e75810f2fe68101627f2ba3606aa048
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719730"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082006"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>Omezení odloženého načítání knihoven DLL
 
@@ -44,9 +44,9 @@ Existují omezení týkající se načítání zpoždění importu.
 ## <a name="see-also"></a>Viz také
 
 [Podpora linkeru pro knihovny DLL s odloženým načtením](../../build/reference/linker-support-for-delay-loaded-dlls.md)<br/>
-[LoadLibrary – funkce](https://msdn.microsoft.com/library/windows/desktop/ms684175.aspx)<br/>
-[Funkce GetModuleHandle](https://msdn.microsoft.com/library/windows/desktop/ms683199.aspx)<br/>
-[GetProcAddress – funkce](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)<br/>
+[LoadLibrary – funkce](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)<br/>
+[Funkce GetModuleHandle](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea)<br/>
+[GetProcAddress – funkce](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)<br/>
 [TlsAlloc – funkce](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)<br/>
 [TlsFree – funkce](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsfree)<br/>
 [TlsGetValue – funkce](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)<br/>

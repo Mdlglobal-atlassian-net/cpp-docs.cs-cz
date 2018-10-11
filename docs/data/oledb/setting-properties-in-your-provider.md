@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aef8b069e9f77b61ee0c6c26d8d9232ee139867d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a7d8f7a55379707282fd5ea9ad2063d00392d7eb
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098911"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082615"
 ---
 # <a name="setting-properties-in-your-provider"></a>Nastavení vlastností ve zprostředkovateli
 
-Najdete skupinu vlastností a vlastnost ID pro požadovanou vlastnost. Další informace najdete v tématu [vlastnosti technologie OLE DB](/previous-versions/windows/desktop/ms722734\(v=vs.85\)) v *OLE DB referenční informace pro programátory*.  
+Najdete skupinu vlastností a vlastnost ID pro požadovanou vlastnost. Další informace najdete v tématu [vlastnosti technologie OLE DB](/previous-versions/windows/desktop/ms722734) v *OLE DB referenční informace pro programátory*.  
   
 V kódu zprostředkovatele generované průvodcem knihovnou vyhledejte mapování vlastnosti odpovídající vlastnosti skupiny. Název skupiny vlastností obvykle odpovídá názvu objektu. Vlastnosti příkazu a sady řádků lze nalézt v příkazu nebo sady řádků; Vlastnosti datového zdroje a inicializace naleznete v objektu zdroje dat.  
   
@@ -33,7 +33,7 @@ Vlastnosti mapy, přidejte [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-in
   
 - ID vlastnosti odpovídající vaší vlastnosti. Prvních 7 znaků ("DBPROP_") je třeba odebrat z přední části názvu vlastnosti. Pokud chcete přidat například `DBPROP_MAXROWS`, předejte `MAXROWS` jako prvního prvku. Pokud se jedná vlastní vlastnost, předejte úplný název identifikátoru GUID (například `DBMYPROP_MYPROPERTY`).  
   
-- Typ varianty vlastnosti (v [vlastnosti technologie OLE DB](/previous-versions/windows/desktop/ms722734\(v=vs.85\)) v *OLE DB referenční informace pro programátory*). Zadejte odpovídající typ VT_ typ (například VT_BOOL nebo VT_I2) do datového typu.  
+- Typ varianty vlastnosti (v [vlastnosti technologie OLE DB](/previous-versions/windows/desktop/ms722734) v *OLE DB referenční informace pro programátory*). Zadejte odpovídající typ VT_ typ (například VT_BOOL nebo VT_I2) do datového typu.  
   
 - Příznaky, které označují, zda je vlastnost pro čtení a pro zápis a skupiny, do které patří. Například následující kód označuje vlastnost pro čtení a zápis patří do skupiny řádků:  
   

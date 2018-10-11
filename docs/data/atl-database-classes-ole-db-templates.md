@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8dcefa3068cb27514671094194ba590e99402b05
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6defe70a018fe954a0daa2d1a4b49142a9a37884
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021094"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081933"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Databázové třídy ATL (šablony OLE DB)
 
@@ -40,7 +40,7 @@ Kromě toho [atributy příjemce technologie OLE DB](../windows/ole-db-consumer-
   
 Všimněte si, že knihovna MFC obsahuje jednu třídu, [COleDBRecordView](../mfc/reference/coledbrecordview-class.md), který zobrazuje záznamy databáze v ovládacích prvcích. Zobrazení je připojený přímo k zobrazení formuláře `CRowset` který zobrazuje pole `CRowset` objektu v ovládacích prvcích šablony dialogového okna.  
   
-Další informace najdete v tématu [programování technologie OLE DB](../data/oledb/ole-db-programming.md) a [Příručka programátora technologie OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\)).  
+Další informace najdete v tématu [programování technologie OLE DB](../data/oledb/ole-db-programming.md) a [Příručka programátora technologie OLE DB](/previous-versions/windows/desktop/ms713643).  
   
 ## <a name="see-also"></a>Viz také  
 
