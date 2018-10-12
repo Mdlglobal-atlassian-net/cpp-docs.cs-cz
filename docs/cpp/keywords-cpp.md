@@ -1,7 +1,7 @@
 ---
 title: Klíčová slova (C++) | Dokumentace Microsoftu
 ms.custom: index-page
-ms.date: 09/24/2018
+ms.date: 10/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38808ea3874964db7983c0f7193c919b9df05391
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 86912ad8dfa3e048b74c67b6936eb09f74db308a
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169603"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162448"
 ---
 # <a name="keywords-c"></a>Klíčová slova (C++)
 
@@ -31,21 +31,22 @@ Klíčová slova jsou předdefinované, vyhrazené identifikátory, které mají
 
 |||||
 |-|-|-|-|
-|[__abstract](../dotnet/declaration-of-a-managed-class-type.md) <sup>2</sup>|[__alignof – operátor](alignof-operator.md)|[__asm](../assembler/inline/asm.md)|[__assume](../intrinsics/assume.md)|
-|[__based](based-pointers-cpp.md)|[__box](../dotnet/value-type-semantics.md) <sup>2</sup>|[__cdecl](cdecl.md)|[__declspec](declspec.md)|
-|[__delegate](../dotnet/delegates-and-events.md) <sup>2</sup>|[__event](event.md)|[__except](try-except-statement.md)|[__fastcall](fastcall.md)|
-|[__finally](try-finally-statement.md)|[__forceinline](inline-functions-cpp.md)|[__gc](../dotnet/declaration-of-a-clr-reference-class-object.md) <sup>2</sup>|[__hook](hook.md) <sup>3</sup>|
-|[__identifier](../windows/identifier-cpp-cli.md)|[__if_exists –](if-exists-statement.md)|[__if_not_exists –](if-not-exists-statement.md)|[__inline](inline-functions-cpp.md)|
-|[__int16](int8-int16-int32-int64.md)|[__int32](int8-int16-int32-int64.md)|[__int64](int8-int16-int32-int64.md)|[__int8](int8-int16-int32-int64.md)|
-|[__interface](interface.md)|[__leave](try-finally-statement.md)|[__m128](m128.md)|[__m128d](m128d.md)|
-|[__m128i](m128i.md)|[__m64](m64.md)|[__multiple_inheritance](inheritance-keywords.md)|[__nogc –](../dotnet/declaration-of-a-clr-reference-class-object.md) <sup>2</sup>|
-|[__noop](../intrinsics/noop.md)|**__pin** <sup>2</sup>|**__property** <sup>2</sup>|[__raise](raise.md)|
-|**__sealed** <sup>2</sup>|[__single_inheritance](inheritance-keywords.md)|[__stdcall](stdcall.md)|[__super](super.md)|
-|[__thiscall](thiscall.md)|[__try /\__except](try-except-statement.md)|[__try /\__finally](try-finally-statement.md)|[__try_cast](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md) <sup>2</sup>|
-|[__unaligned](unaligned.md)|[__unhook](unhook.md) <sup>3</sup>|[__uuidof](uuidof-operator.md)|[__value](../dotnet/value-type-semantics.md) <sup>2</sup>|
-|[__virtual_inheritance](inheritance-keywords.md)|[__w64](w64.md)|[__wchar_t](fundamental-types-cpp.md)|[abstract](../windows/abstract-cpp-component-extensions.md)|
+|[__abstract](../dotnet/declaration-of-a-managed-class-type.md) <sup>2</sup>|[__alignof – operátor](alignof-operator.md) <sup>4</sup>|[__asm](../assembler/inline/asm.md) <sup>4</sup>|[__assume](../intrinsics/assume.md) <sup>4</sup>|
+|[__based –](based-pointers-cpp.md) <sup>4</sup>|[__box](../dotnet/value-type-semantics.md) <sup>2</sup>|[__cdecl](cdecl.md) <sup>4</sup>|[__declspec](declspec.md) <sup>4</sup>|
+|[__delegate](../dotnet/delegates-and-events.md) <sup>2</sup>|[__event](event.md)|[__except](try-except-statement.md) <sup>4</sup>|[__fastcall](fastcall.md) <sup>4</sup>|
+|[__finally](try-finally-statement.md) <sup>4</sup>|[__forceinline](inline-functions-cpp.md) <sup>4</sup>|[__gc](../dotnet/declaration-of-a-clr-reference-class-object.md) <sup>2</sup>|[__hook](hook.md) <sup>3</sup>|
+|[__identifier](../windows/identifier-cpp-cli.md)|[__if_exists –](if-exists-statement.md)|[__if_not_exists –](if-not-exists-statement.md)|[__inline](inline-functions-cpp.md) <sup>4</sup>|
+|[__int16](int8-int16-int32-int64.md) <sup>4</sup>|[__int32](int8-int16-int32-int64.md) <sup>4</sup>|[__int64](int8-int16-int32-int64.md) <sup>4</sup>|[__int8](int8-int16-int32-int64.md) <sup>4</sup>|
+|[__interface](interface.md)|[__leave](try-finally-statement.md) <sup>4</sup>|[__m128](m128.md)|[__m128d](m128d.md)|
+|[__m128i](m128i.md)|[__m64](m64.md)|[__multiple_inheritance](inheritance-keywords.md) <sup>4</sup>|[__nogc –](../dotnet/declaration-of-a-clr-reference-class-object.md) <sup>2</sup>|
+|[__noop](../intrinsics/noop.md)|**__pin** <sup>2</sup>|**__property** <sup>2</sup>|[__ptr32](ptr32-ptr64.md) <sup>4</sup>|
+|[__ptr64](ptr32-ptr64.md)<sup>4</sup>|[__raise](raise.md)|[Kvalifikátor __restrict](extension-restrict.md) <sup>4</sup>|**__sealed** <sup>2</sup>|
+|[__single_inheritance](inheritance-keywords.md)<sup>4</sup>|[__sptr](sptr-uptr.md)<sup>4</sup>|[__stdcall](stdcall.md) <sup>4</sup>|[__super](super.md)|
+|[__thiscall](thiscall.md)|[__try_cast](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md) <sup>2</sup>|[__unaligned](unaligned.md) <sup>4</sup>|[__unhook](unhook.md) <sup>3</sup>|
+|[__uptr](sptr-uptr.md) <sup>4</sup>|[__uuidof](uuidof-operator.md) <sup>4</sup>|[__value](../dotnet/value-type-semantics.md) <sup>2</sup>|[__vectorcall](vectorcall.md) <sup>4</sup>|
+|[__virtual_inheritance](inheritance-keywords.md) <sup>4</sup>|[__w64](w64.md) <sup>4</sup>|[__wchar_t](fundamental-types-cpp.md)|[abstract](../windows/abstract-cpp-component-extensions.md)|
 |[alignas](align-cpp.md)|[Pole](../windows/arrays-cpp-component-extensions.md)|[auto](auto-keyword.md)|[bool](bool-cpp.md)|
-|[break](break-statement-cpp.md)|[případ](switch-statement-cpp.md)|[catch](try-throw-and-catch-statements-cpp.md)|[char](fundamental-types-cpp.md)|
+|[break](break-statement-cpp.md)|[case](switch-statement-cpp.md)|[catch](try-throw-and-catch-statements-cpp.md)|[char](fundamental-types-cpp.md)|
 |[char16_t](char-wchar-t-char16-t-char32-t.md)|[char32_t](char-wchar-t-char16-t-char32-t.md)|[class](class-cpp.md)|[const](const-cpp.md)|
 |[const_cast](const-cast-operator.md)|[constexpr](constexpr-cpp.md)|[continue](continue-statement-cpp.md)|[decltype](decltype-cpp.md)|
 |[default](switch-statement-cpp.md)|[delegate](../windows/delegate-cpp-component-extensions.md)|[delete](delete-operator-cpp.md)|[zastaralé](deprecated-cpp.md) <sup>1</sup>|
@@ -72,22 +73,21 @@ Klíčová slova jsou předdefinované, vyhrazené identifikátory, které mají
 |[Hodnota – struktura](../windows/classes-and-structs-cpp-component-extensions.md)|[virtual](virtual-cpp.md)|[void](void-cpp.md)|[volatile](volatile-cpp.md)|
 |[while](while-statement-cpp.md)|
 
+<sup>1</sup> rozšířené atributy pro **__declspec** – klíčové slovo.
 
-1 Rozšířené atributy pro **__declspec** – klíčové slovo.
+<sup>2</sup> platí pro spravovaná rozšíření pro C++ pouze. Tato syntaxe je nyní zastaralá. Zobrazit [přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md) Další informace.
 
-2 platí pro spravovaná rozšíření pro C++ pouze. Tato syntaxe je nyní zastaralá.
+<sup>3</sup> vnitřní funkce použitá při zpracování událostí.
 
-3 vnitřní funkce použitá při zpracování událostí.
+<sup>4</sup> z důvodu zpětné kompatibility s předchozími verzemi, tato klíčová slova jsou k dispozici s dvěma úvodními podtržítky a jedno vedoucí podtržítko, když jsou rozšíření společnosti Microsoft povolena (výchozí).
 
-Zobrazit [přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md) Další informace.
-
-## <a name="microsoft-specific"></a>Specifické pro Microsoft
+**Specifické pro Microsoft**
 
 V programu Microsoft C++ identifikátory s dvěma úvodními podtržítky jsou vyhrazena pro implementace kompilátoru. Konvence společnosti Microsoft tedy předchází specifická klíčová slova Microsoft se dvojitými podtržítky. Tato slova nelze použít jako názvy identifikátorů.
 
-Ve výchozím nastavení jsou povolena rozšíření společnosti Microsoft. Zajistit, že plné přenositelnosti programů lze zakázat rozšíření Microsoft zadáním ANSI kompatibilního [/Za](../build/reference/za-ze-disable-language-extensions.md) možnost příkazového řádku (kompilace z důvodu kompatibility ANSI) během kompilace. Když toto provedete, jsou zakázána klíčová slova specifická pro společnost Microsoft.
+Ve výchozím nastavení jsou povolena rozšíření společnosti Microsoft. Zajistit, že plné přenositelnosti programů lze zakázat rozšíření Microsoft zadáním [/Za \(zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md) možnost během kompilace. Když toto provedete, jsou zakázána klíčová slova specifická pro společnost Microsoft.
 
-Když jsou povolena rozšíření společnosti Microsoft, můžete použít klíčová slova specifická pro společnost Microsoft ve svých programech. ANSI dodržování předpisů jsou uvedena tato klíčová slova dvojitým podtržítkem. Z důvodu zpětné kompatibility, jednou podtržené verze všech dvojitě podtržených klíčových slov s výjimkou **__except**, **__finally**, **__leave**, a **_ _try** jsou podporovány. Kromě toho **__cdecl** je k dispozici bez vedoucího podtržítka.
+Když jsou povolena rozšíření společnosti Microsoft, můžete použít klíčová slova specifická pro společnost Microsoft ve svých programech. ANSI dodržování předpisů jsou uvedena tato klíčová slova dvojitým podtržítkem. Z důvodu zpětné kompatibility jsou podporovány jednou podtržené verze mnoha dvojitě podtržených klíčových slov. Kromě toho **__cdecl** je k dispozici bez vedoucího podtržítka.
 
 **__Asm** nahradí – klíčové slovo C++ `asm` syntaxe. `asm` je vyhrazen pro kompatibilitu s jinými implementacemi jazyka C++, ale není implementován. Použití **__asm**.
 

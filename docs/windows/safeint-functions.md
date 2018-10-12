@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 504cfe0780cfb0116f59ae67937ea5f0370dc8b2
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 43960e70f1aad29fa4b8fc03517231c7658d155b
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235565"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162578"
 ---
 # <a name="safeint-functions"></a>Funkce jazyka SafeInt
 
@@ -101,7 +101,7 @@ inline bool SafeAdd (
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud nedojde k žádné chybě; `false` Pokud dojde k chybě.
+**Hodnota TRUE** Pokud nenastane žádná chyba; **false** Pokud dojde k chybě.
 
 ## <a name="safecast"></a>SafeCast
 
@@ -125,7 +125,7 @@ inline bool SafeCast (
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud nedojde k žádné chybě; `false` Pokud dojde k chybě.
+**Hodnota TRUE** Pokud nenastane žádná chyba; **false** Pokud dojde k chybě.
 
 ## <a name="safedivide"></a>SafeDivide
 
@@ -153,7 +153,7 @@ inline bool SafeDivide (
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud nedojde k žádné chybě; `false` Pokud dojde k chybě.
+**Hodnota TRUE** Pokud nenastane žádná chyba; **false** Pokud dojde k chybě.
 
 ## <a name="safeequals"></a>SafeEquals
 
@@ -177,7 +177,7 @@ inline bool SafeEquals (
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud *t* a *u* jsou stejné; jinak `false`.
+**Hodnota TRUE** Pokud *t* a *u* jsou stejné; jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -205,7 +205,7 @@ inline bool SafeGreaterThan (
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud *t* je větší než *u*; jinak vrátí hodnotu `false`.
+**Hodnota TRUE** Pokud *t* je větší než *u*; jinak vrátí hodnotu **false**.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -233,7 +233,7 @@ inline bool SafeGreaterThanEquals (
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud *t* je větší než nebo rovna hodnotě *u*; jinak vrátí hodnotu `false`.
+**Hodnota TRUE** Pokud *t* je větší než nebo rovna hodnotě *u*; jinak vrátí hodnotu **false**.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -261,7 +261,7 @@ inline bool SafeLessThan (
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud *t* je menší než *u*; jinak vrátí hodnotu `false`.
+**Hodnota TRUE** Pokud *t* je menší než *u*; jinak vrátí hodnotu **false**.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -289,7 +289,7 @@ inline bool SafeLessThanEquals (
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud *t* je menší než nebo rovna hodnotě *u*; jinak vrátí hodnotu `false`.
+**Hodnota TRUE** Pokud *t* je menší než nebo rovna hodnotě *u*; jinak vrátí hodnotu **false**.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -321,7 +321,7 @@ inline bool SafeModulus (
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud nedojde k žádné chybě; `false` Pokud dojde k chybě.
+**Hodnota TRUE** Pokud nenastane žádná chyba; **false** Pokud dojde k chybě.
 
 ## <a name="safemultiply"></a>SafeMultiply
 
@@ -373,7 +373,7 @@ inline bool SafeNotEquals (
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud *t* a *u* nejsou stejné; jinak `false`.
+**Hodnota TRUE** Pokud *t* a *u* nejsou stejné; jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -405,4 +405,4 @@ inline bool SafeSubtract (
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud nedojde k žádné chybě; `false` Pokud dojde k chybě.
+**Hodnota TRUE** Pokud nenastane žádná chyba; **false** Pokud dojde k chybě.

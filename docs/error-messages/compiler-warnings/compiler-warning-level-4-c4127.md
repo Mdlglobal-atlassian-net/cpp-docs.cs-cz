@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 561173e2b451a0b736d97042667a2fb14b3a7eb7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 80f831d527e918fce0551f6a1336fd2fe994917d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094894"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161278"
 ---
 # <a name="compiler-warning-level-4-c4127"></a>Kompilátor C4127 upozornění (úroveň 4)
 
@@ -29,9 +29,9 @@ ms.locfileid: "46094894"
 
 ## <a name="remarks"></a>Poznámky
 
-Řídicí výraz `if` příkazu nebo `while` smyčky je vyhodnocen jako konstanta. Z důvodu jejich společné idiomatickou využití, od Visual Studio 2015 update 3, jako je například 1 triviální konstanty nebo `true` nespouštějí upozornění, pokud nejsou výsledek operace ve výrazu.
+Řídicí výraz **Pokud** příkazu nebo **při** smyčky je vyhodnocen jako konstanta. Z důvodu jejich společné idiomatickou využití, od Visual Studio 2015 update 3, jako je například 1 triviální konstanty nebo **true** nespouštějí upozornění, pokud nejsou výsledek operace ve výrazu.
 
-Pokud kontrolní výraz `while` smyčky je konstanta, vzhledem k tomu, opakování ve smyčce ukončeno uprostřed, zvažte nahrazení `while` smyčky s `for` smyčky. Můžete vynechat inicializaci, ukončení testu a opakovat přírůstek `for` smyčky, což způsobí, že smyčka bude neomezený, stejně jako `while(1)`, a můžete ukončení smyčky z textu `for` příkazu.
+Pokud kontrolní výraz **při** smyčky je konstanta, vzhledem k tomu, opakování ve smyčce ukončeno uprostřed, zvažte nahrazení **při** smyčky s **pro** smyčky. Můžete vynechat inicializaci, ukončení testu a opakovat přírůstek **pro** smyčky, což způsobí, že smyčka bude neomezený, stejně jako `while(1)`, a můžete ukončení smyčky z textu **pro** příkaz.
 
 ## <a name="example"></a>Příklad
 

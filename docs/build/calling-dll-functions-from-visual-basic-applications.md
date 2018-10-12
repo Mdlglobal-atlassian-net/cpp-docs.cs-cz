@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1cedafaea33ac642e3a5593468b996f2442bd50
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 47504b7a471dc38f30e4ceb59b5feeffcc53db6d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894561"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161829"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Volání funkcí knihovny DLL z aplikací jazyka Visual Basic
 
@@ -33,7 +33,7 @@ Pro aplikace Visual Basic (nebo aplikace v jiných jazycích, jako například P
 
 `__stdcall` Vytvoří správnou konvenci volání funkce (volaná funkce vyčistí zásobník a parametry jsou předány zprava doleva), ale název funkce upraví odlišně. Ano, v případě **__declspec(dllexport)** se používá na exportované funkce v knihovně DLL, upravený název je exportován.
 
-`__stdcall` Dekorování názvů předpon název symbol podtržítka (_) a připojí symbol zavináč (**\@**) následovaný počtem bajtů v seznamu argumentů (požadované místo v zásobníku). V důsledku toho je funkce deklarovaná jako:
+`__stdcall` Dekorování názvů předpon název symbol podtržítka ( **\_** ) a připojí symbol zavináč (**\@**) následovaný počet počet bajtů v seznamu argumentů (požadované místo v zásobníku). V důsledku toho je funkce deklarovaná jako:
 
 ```C
 int __stdcall func (int a, double b)
@@ -45,7 +45,7 @@ Konvence volání jazyka C (`__cdecl`) upraví název jako `_func`.
 
 Chcete-li získat upravený název, použijte [/MAP](../build/reference/map-generate-mapfile.md). Použití **__declspec(dllexport)** provede následující akce:
 
-- Pokud se exportuje funkci s konvencí volání jazyka C (**_cdecl**), při exportu názvu odstraní počáteční podtržítko (_).
+- Pokud se exportuje funkci s konvencí volání jazyka C (`__cdecl`), odstraní počáteční podtržítko ( **\_** ) při exportu názvu.
 
 - Pokud je funkce exportována nepoužívá konvence volání jazyka C (například `__stdcall`), exportuje upravený název.
 

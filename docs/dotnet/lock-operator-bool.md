@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: eea3e1f54fa1c5e1c4313a9442e812770b0a6cdd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d0aee08fc59130e829d9448ba4f28a9823a461ed
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424726"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161772"
 ---
 # <a name="lockoperator-bool"></a>lock::operator bool
 
@@ -40,17 +40,17 @@ operator bool();
 
 ## <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud je držen zámek, `false` jinak.
+**Hodnota TRUE** Pokud je držen zámek, **false** jinak.
 
 ## <a name="remarks"></a>Poznámky
 
-Tento operátor převede ve skutečnosti na `_detail_class::_safe_bool` což je bezpečnější než `bool` vzhledem k tomu, že jej nelze převést na celočíselný typ.
+Tento operátor převede ve skutečnosti na `_detail_class::_safe_bool` což je bezpečnější než **bool** vzhledem k tomu, že jej nelze převést na celočíselný typ.
 
 ## <a name="example"></a>Příklad
 
 Tento příklad používá jednu instanci třídy napříč více vlákny.  K zajištění, že jsou přístupy k jeho vnitřní data konzistentní vzhledem k aplikacím pro každé vlákno používá třídu zámek na sobě.  Hlavního vlákna aplikace používá zámek na stejnou instanci třídy, aby pravidelně kontrolovaly, zda stále existují jakékoli pracovní vlákna a čekání na ukončení až do všech pracovních vláken dokončení jejich úloh.
 
-```
+```cpp
 // msl_lock_op_bool.cpp
 // compile with: /clr
 #include <msclr/lock.h>

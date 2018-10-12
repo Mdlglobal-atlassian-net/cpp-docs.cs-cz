@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74e871255e3308450764e8f65cdb6acebe79df38
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ab586243df9b015c95f4a703744bfb02a54d064e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437739"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162188"
 ---
 # <a name="event-class"></a>event – třída
 
@@ -167,7 +167,7 @@ Pole událostí pro čekání. Počet událostí v poli je indikován `count` pa
 Počet událostí v poli v `_PPEvents` parametru.
 
 *_FWaitAll*<br/>
-Pokud nastaveno na hodnotu `true`, parametr určuje, že všechny události v poli dodané v `_PPEvents` parametr musí být signalizovány, aby vyhověly čekání. Pokud nastaveno na hodnotu `false`, určuje, že všechny události v poli dodané v `_PPEvents` parametr stávají signalizovanými vyhoví čekání.
+Pokud nastaveno na hodnotu **true**, parametr určuje, že všechny události v poli dodané v `_PPEvents` parametr musí být signalizovány, aby vyhověly čekání. Pokud nastaveno na hodnotu **false**, určuje, že všechny události v poli dodané v `_PPEvents` parametr stávají signalizovanými vyhoví čekání.
 
 *_Vypršení časového limitu*<br/>
 Určuje počet milisekund před vypršením čekání. Hodnota `COOPERATIVE_TIMEOUT_INFINITE` znamená, že neexistuje žádný časový limit.
@@ -181,7 +181,7 @@ Pokud bylo čekání uspokojeno, index v poli dodané v `_PPEvents` parametr, kt
 Pokud parametr `_FWaitAll` je nastaveno na hodnotu `true` k označení, že všechny události musí být signalizovány, aby splnily čekání, index vrácený funkcí nemá žádný speciální význam mimo skutečnost, že není hodnota `COOPERATIVE_WAIT_TIMEOUT`.
 
 > [!IMPORTANT]
->  V aplikaci pro univerzální platformu Windows (UPW), nevolejte `wait_for_multiple` na ASTA vlákno, protože toto volání může blokovat aktuální vlákno a může způsobit, že aplikace přestane reagovat.
+> V aplikaci pro univerzální platformu Windows (UPW), nevolejte `wait_for_multiple` na ASTA vlákno, protože toto volání může blokovat aktuální vlákno a může způsobit, že aplikace přestane reagovat.
 
 ## <a name="see-also"></a>Viz také
 

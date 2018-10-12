@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4aa6df9afddc43980818439ee2c7bbd29ca2f848
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a9e87ebd4523b5211c94955b5bec7905ed848946
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446072"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161681"
 ---
 # <a name="structuredtaskgroup-class"></a>structured_task_group – třída
 
@@ -54,7 +54,7 @@ class structured_task_group;
 |Název|Popis|
 |----------|-----------------|
 |[Zrušit](#cancel)|Díky nezaručené pokus o zrušení podstromě pracovní kořenovým adresářem v této skupině úloh. Každá úloha naplánována na skupinu úloh bude zrušena přechodně Pokud je to možné.|
-|[is_canceling –](#is_canceling)|Určuje, jestli je skupina úloh aktuálně uprostřed zrušením informuje volající. Neznamená to nutně, který `cancel` byla volána metoda `structured_task_group` objektu (i když například jistě kvalifikuje tuto metodu za účelem vrácení `true`). To může být případ, který `structured_task_group` objektu je probíhá vloženě a další skupinu úloh nahoru ve stromové struktuře práce byla zrušena. V případech, jako jsou tyto kde můžete určit modul runtime zrušení budou směrovat přes to předem `structured_task_group` objektu, `true` vrátí se také.|
+|[is_canceling –](#is_canceling)|Určuje, jestli je skupina úloh aktuálně uprostřed zrušením informuje volající. Neznamená to nutně, který `cancel` byla volána metoda `structured_task_group` objektu (i když například jistě kvalifikuje tuto metodu za účelem vrácení **true**). To může být případ, který `structured_task_group` objektu je probíhá vloženě a další skupinu úloh nahoru ve stromové struktuře práce byla zrušena. V případech, jako jsou tyto kde můžete určit modul runtime zrušení budou směrovat přes to předem `structured_task_group` objektu, **true** se také vrátit.|
 |[Spuštění](#run)|Přetíženo. Naplánuje úlohy na `structured_task_group` objektu. Volající spravuje životnost `task_handle` objekt předaný `_Task_handle` parametru. Verze, která přebírá parametr `_Placement` způsobí, že na tendenční směrem k provádění v místě určeném v parametru úlohy.|
 |[run_and_wait](#run_and_wait)|Přetíženo. Naplánuje úlohy spustit vložené na kontext volání za pomoci `structured_task_group` objekt pro zrušení plnou podporu. Pokud `task_handle` objekt je předán jako parametr `run_and_wait`, volající zodpovídá za správu životnosti `task_handle` objektu. Funkce vyčká, dokud všechny práce na `structured_task_group` objekt buď dokončí nebo byla zrušena.|
 |[Počkej](#wait)|Počká, dokud nebudou všechny práce na `structured_task_group` již byla dokončena nebo zrušena.|
@@ -97,7 +97,7 @@ Další informace najdete v tématu [zrušení](../../../parallel/concrt/excepti
 
 ##  <a name="is_canceling"></a> is_canceling –
 
-Určuje, jestli je skupina úloh aktuálně uprostřed zrušením informuje volající. Neznamená to nutně, který `cancel` byla volána metoda `structured_task_group` objektu (i když například jistě kvalifikuje tuto metodu za účelem vrácení `true`). To může být případ, který `structured_task_group` objektu je probíhá vloženě a další skupinu úloh nahoru ve stromové struktuře práce byla zrušena. V případech, jako jsou tyto kde můžete určit modul runtime zrušení budou směrovat přes to předem `structured_task_group` objektu, `true` vrátí se také.
+Určuje, jestli je skupina úloh aktuálně uprostřed zrušením informuje volající. Neznamená to nutně, který `cancel` byla volána metoda `structured_task_group` objektu (i když například jistě kvalifikuje tuto metodu za účelem vrácení **true**). To může být případ, který `structured_task_group` objektu je probíhá vloženě a další skupinu úloh nahoru ve stromové struktuře práce byla zrušena. V případech, jako jsou tyto kde můžete určit modul runtime zrušení budou směrovat přes to předem `structured_task_group` objektu, **true** se také vrátit.
 
 ```
 bool is_canceling();

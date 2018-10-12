@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 912cdb59a1841bbe3bbe3e71202a796a3e67a94e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 642b73f81146fa8df68d36ee3b63b1902ed66619
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390256"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162396"
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource – struktura
 
@@ -79,7 +79,7 @@ Aktuální úroveň předplatného.
 
 Počet spuštěných vláken jsou přidružené vlákno hardwaru říká úrovně předplatného. To zahrnuje pouze vláken, která je seznámen ve formě předplacenému vláken a kořenových adresářů virtuálního procesoru, které aktivně spouštíte proxy vlákna Resource Manageru.
 
-Volání metody [ischedulerproxy::subscribecurrentthread –](ischedulerproxy-structure.md#subscribecurrentthread), nebo metodu [ischedulerproxy::requestinitialvirtualprocessors –](ischedulerproxy-structure.md#requestinitialvirtualprocessors) s parametrem `doSubscribeCurrentThread` nastaven na hodnotu `true`zvýší o jednu úroveň předplatného vlákno hardwaru. Navíc vracejí `IExecutionResource` rozhraní představující předplatné. Odpovídající volání [iexecutionresource::Remove –](#remove) sníží úroveň předplatného vlákno hardwaru o jednu.
+Volání metody [ischedulerproxy::subscribecurrentthread –](ischedulerproxy-structure.md#subscribecurrentthread), nebo metodu [ischedulerproxy::requestinitialvirtualprocessors –](ischedulerproxy-structure.md#requestinitialvirtualprocessors) s parametrem `doSubscribeCurrentThread` nastaven na hodnotu **true** zvýší o jednu úroveň předplatného vlákno hardwaru. Navíc vracejí `IExecutionResource` rozhraní představující předplatné. Odpovídající volání [iexecutionresource::Remove –](#remove) sníží úroveň předplatného vlákno hardwaru o jednu.
 
 V rámci aktivaci kořenu virtuálního procesoru pomocí metody [IVirtualProcessorRoot::Activate](ivirtualprocessorroot-structure.md#activate) zvýší o jednu úroveň předplatného vlákno hardwaru. Metody [ivirtualprocessorroot::Deactivate –](ivirtualprocessorroot-structure.md#deactivate), nebo [iexecutionresource::Remove –](#remove) jednou při vyvolání na kořen virtuálního procesoru aktivované snížení úrovně předplatného.
 

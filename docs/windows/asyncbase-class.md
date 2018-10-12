@@ -65,12 +65,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1003553cb0c3fc3abc8c24a6870485816397eaa
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 9647e18af021caf67dea5d946c9e5bf00fb50807
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861951"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162929"
 ---
 # <a name="asyncbase-class"></a>AsyncBase – třída
 
@@ -233,7 +233,7 @@ inline bool ContinueAsyncOperation();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud jeho aktuální stav asynchronní operace je *spuštění*, což znamená, že operace má pokračovat. V opačném případě `false`, což znamená, že operace by měla zastavit.
+**true** -li aktuální stav asynchronní operace *spuštění*, což znamená, že operace má pokračovat. V opačném případě **false**, což znamená, že operace by měla zastavit.
 
 ## <a name="currentstatus"></a>Asyncbase::currentStatus –
 
@@ -528,7 +528,7 @@ bool TryTransitionToCompleted(
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud má dokončení asynchronní operace; v opačném případě `false`.
+**Hodnota TRUE** Pokud dokončení asynchronní operace; v opačném případě **false**.
 
 ## <a name="trytransitiontoerror"></a>Asyncbase::trytransitiontoerror –
 
@@ -547,7 +547,7 @@ Chyba HRESULT.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud se změnil stav vnitřní chyby; v opačném případě `false`.
+**Hodnota TRUE** Pokud státu došlo k vnitřní chybě byla změněné; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 

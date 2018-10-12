@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f39b9fff9d5fad930123fc930afe1600cd259e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e53f8999b4559a221b335528ec20b6034de269d3
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396475"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162201"
 ---
 # <a name="isource-class"></a>ISource – třída
 
@@ -158,7 +158,7 @@ Ukazatel `message` volající má teď vlastnictví objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-`consume` Metoda je podobná `accept`, ale musí vždy předcházet volání `reserve` vrácená `true`.
+`consume` Metoda je podobná `accept`, ale musí vždy předcházet volání `reserve` vrácená **true**.
 
 ##  <a name="dtor"></a> ~ Isource –
 
@@ -236,7 +236,7 @@ Ukazatel na cílový blok, který volá `reserve` metody.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud zpráva byla úspěšně vyhrazené, `false` jinak. Rezervace může selhat z mnoha důvodů včetně: byla zpráva již vyhrazena nebo přijatý jiný cíl, zdroj může zamítnout rezervace a tak dále.
+**Hodnota TRUE** Pokud zpráva byla úspěšně vyhrazené, **false** jinak. Rezervace může selhat z mnoha důvodů včetně: byla zpráva již vyhrazena nebo přijatý jiný cíl, zdroj může zamítnout rezervace a tak dále.
 
 ### <a name="remarks"></a>Poznámky
 

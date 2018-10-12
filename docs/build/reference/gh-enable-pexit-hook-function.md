@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 489ff00571c79d89c9e807f0d8796989e7a0f84f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e9b8ee4c80310c4d94ed432d48ee9702c41f80bf
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714985"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161785"
 ---
 # <a name="gh-enable-pexit-hook-function"></a>/GH (Povolit funkce háku _pexit)
 
@@ -43,7 +43,7 @@ Volání `_pexit` funkce na konci každé metody nebo funkce.
 Pokud máte v úmyslu explicitně volat `_pexit`, není potřeba poskytovat prototypu. Funkce musí být uvedena jako by měl následující prototyp, a musí distribuce obsahu všem registrů na záznam a vyvolat přes pop beze změny obsahu při ukončení:
 
 ```
-void __declspec(naked) _cdecl _pexit( void );
+void __declspec(naked) __cdecl _pexit( void );
 ```
 
 `_pexit` je podobný `_penter`; naleznete v tématu [/Gh (povolení _penter funkce háku)](../../build/reference/gh-enable-penter-hook-function.md) příklad toho, jak zapisovat `_pexit` funkce.
@@ -60,7 +60,7 @@ void __declspec(naked) _cdecl _pexit( void );
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Viz také
 

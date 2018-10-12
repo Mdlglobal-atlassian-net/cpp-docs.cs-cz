@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9b438725a5a725597a81f0587936618a06cbb4b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 218451b0483e569bf4c944e139aff3446f5925e7
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414300"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162071"
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token – třída
 
@@ -55,7 +55,7 @@ class cancellation_token;
 |----------|-----------------|
 |[deregister_callback](#deregister_callback)|Odebere zpětné volání dříve registrované `register` metoda na základě `cancellation_token_registration` vrácen objekt v době registrace.|
 |[is_cancelable –](#is_cancelable)|Vrací údaj o Určuje, zda tento token může být zrušený nebo nikoliv.|
-|[is_canceled](#is_canceled)|Vrátí `true` Pokud token byl zrušen.|
+|[is_canceled](#is_canceled)|Vrátí **true** Pokud token byl zrušen.|
 |[None](#none)|Vrátí token zrušení, který nemůže být nikdy předmětem zrušení.|
 |[register_callback](#register_callback)|Zaregistruje funkci zpětného volání s tokenem. Pokud je token zrušen, bude proveden zpětného volání. Všimněte si, že pokud je token již zrušen v místě, kde tato metoda je volána, zpětné volání bude provedeno, okamžitě a synchronně.|
 
@@ -123,7 +123,7 @@ Označení, zda tento token může být zrušený nebo nikoliv.
 
 ##  <a name="is_canceled"></a> is_canceled –
 
-Vrátí `true` Pokud token byl zrušen.
+Vrátí **true** Pokud token byl zrušen.
 
 ```
 bool is_canceled() const;
@@ -131,7 +131,7 @@ bool is_canceled() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota `true` Pokud token byl zrušené; v opačném případě hodnota `false`.
+Hodnota **true** Pokud token byl zrušené; v opačném případě hodnota **false**.
 
 ##  <a name="none"></a> None
 

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 186fe4bbeb86780cde586500380a7e2c500da38e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9a5fef363b289ba2062db6f8d903ea832bffd6e5
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443503"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161668"
 ---
 # <a name="ptroperator"></a>ptr::operator!
 
@@ -39,17 +39,17 @@ bool operator!();
 
 ## <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud je neplatný; vlastní objekt modelu COM `false` jinak.
+**Hodnota TRUE** Pokud vlastní objekt modelu COM je neplatný; **false** jinak.
 
 ## <a name="remarks"></a>Poznámky
 
-Vlastní objekt modelu COM je platný, pokud není `nullptr`.
+Vlastní objekt modelu COM je platný, pokud není **nullptr**.
 
 ## <a name="example"></a>Příklad
 
 V tomto příkladu implementuje třídu CLR, která se používá `com::ptr` zabalit její privátní člen `IXMLDOMDocument` objektu.  `CreateInstance` Členská funkce používá `operator!` k určení, zda již vlastní objekt dokumentu a pouze vytvoří novou instanci, pokud objekt je neplatný.
 
-```
+```cpp
 // comptr_op_not.cpp
 // compile with: /clr /link msxml2.lib
 #include <msxml2.h>

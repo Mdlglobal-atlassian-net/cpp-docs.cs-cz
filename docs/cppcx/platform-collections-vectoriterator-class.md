@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20da45d6161f76043c3d06f027192726c3520f44
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 668365cf69fc3457efc615a5fa0da2c24b3cb02e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102548"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162383"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections:: vectoriterator – třída
 
@@ -157,7 +157,7 @@ Jiné VectorIterator.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud se rovná aktuální VectorIterator `other`; v opačném případě `false`.
+**Hodnota TRUE** Pokud rovná aktuální VectorIterator *jiných*; v opačném případě **false**.
 
 ## <a name="operator-greater-than"></a>  VectorIterator::operator&gt; – operátor
 
@@ -176,7 +176,7 @@ Jiné VectorIterator.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud je větší než aktuální VectorIterator `other`; v opačném případě `false`.
+**Hodnota TRUE** Pokud je větší než aktuální VectorIterator *jiných*; v opačném případě **false**.
 
 ## <a name="operator-greater-than-or-equals"></a>  VectorIterator::operator&gt;= – operátor
 
@@ -195,7 +195,7 @@ Jiné VectorIterator.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud aktuální VectorIterator je větší než nebo rovna hodnotě `other`; v opačném případě `false`.
+**Hodnota TRUE** Pokud aktuální VectorIterator je větší než nebo rovna hodnotě *jiných*; v opačném případě **false**.
 
 ## <a name="operator-increment"></a>  VectorIterator::operator ++ – operátor
 
@@ -235,7 +235,7 @@ Jiné VectorIterator.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud aktuální VectorIterator není roven `other`; v opačném případě `false`.
+**true** Pokud aktuální VectorIterator není roven *jiných*; v opačném případě **false**.
 
 ## <a name="operator-less-than"></a>  VectorIterator::operator&lt; – operátor
 
@@ -254,7 +254,7 @@ Jiné VectorIterator.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud je aktuální VectorIterator menší než `other`; v opačném případě `false`.
+**true** Pokud aktuální VectorIterator je menší než *jiných*; v opačném případě **false**.
 
 ## <a name="operator-less-than-or-equals"></a>  VectorIterator::operator&lt;= – operátor
 
@@ -273,7 +273,7 @@ Jiné VectorIterator.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud aktuální VectorIterator je menší než nebo rovna `other`; v opačném případě `false`.
+**Hodnota TRUE** Pokud aktuální VectorIterator je menší než nebo rovna *jiných*; v opačném případě **false**.
 
 ## <a name="operator-minus"></a>  VectorIterator::operator-– operátor
 

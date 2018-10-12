@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: df483f08e96f2bd479504028ce4ce17513bb7d41
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 28683d8c69a800cb6f9a365beda26c75b3a69d15
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789018"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161811"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces – struktura
 
@@ -117,7 +117,7 @@ Odvozeného typu.
 Základní typ odvozeného typu.
 
 *hasImplements*<br/>
-Logická hodnota, že pokud `true`, znamená, že nemůžete použít [MixIn](../windows/mixin-structure.md) strukturu s třídou, která není odvozena od [implementuje](../windows/implements-structure.md) stucture.
+Logická hodnota, že pokud **true**, znamená, že nemůžete použít [MixIn](../windows/mixin-structure.md) strukturu s třídou, která není odvozena od [implementuje](../windows/implements-structure.md) stucture.
 
 ## <a name="members"></a>Členové
 
@@ -169,7 +169,7 @@ Ukazatel na poslední ID rozhraní, který byl úspěšně převeden.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud se úspěšně dokončila všechny operace přetypování; v opačném případě `false`.
+**Hodnota TRUE** Pokud všechny operace přetypování bylo úspěšné; jinak **false**.
 
 ## <a name="casttounknown"></a>Chaininterfaces::casttounknown –
 

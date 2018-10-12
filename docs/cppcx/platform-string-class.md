@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3777116bf2a641a4fdc220306680c0150d5ba2d0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2d9c68bde9fdd49e4007b8b6e1d92899d71dde4e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106410"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162539"
 ---
 # <a name="platformstring-class"></a>Platform::String – třída
 
@@ -240,7 +240,7 @@ Objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud `str` je rovná aktuálnímu objektu; v opačném případě `false`.
+**Hodnota TRUE** Pokud `str` je rovná aktuálnímu objektu; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -272,7 +272,7 @@ bool IsEmpty();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud se aktuální objekt řetězec `null` nebo prázdný řetězec (L""); v opačném případě `false`.
+**true** Pokud aktuální `String` objekt **null** nebo prázdný řetězec (L""); v opačném případě **false**.
 
 ## <a name="isfastpass"></a>  String::IsFastPass – metoda
 
@@ -286,7 +286,7 @@ bool IsFastPass();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud se aktuální objekt řetězec minulosti fast; v opačném případě `false`.
+**Hodnota TRUE** Pokud aktuální `String` minulosti fast; v opačném případě je objekt **false**.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -294,7 +294,7 @@ Ve volání funkce, kde objekt referenčně započítaný je parametr a volané 
 
 ## <a name="length"></a>  String::length – metoda
 
-Získá počet znaků v aktuální objekt řetězce.
+Získá počet znaků v aktuální `String` objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -304,7 +304,7 @@ unsigned int Length();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet znaků v aktuální objekt řetězce.
+Počet znaků v aktuální `String` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -337,7 +337,7 @@ Druhá `String` objekt, jehož obsah se připojí k `str1`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud `str1` rovná `str2`; v opačném případě `false`.
+**Hodnota TRUE** Pokud *str1* rovná *řetězci str2*; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -356,14 +356,14 @@ bool String::operator==( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parametry
 
 *Str1*<br/>
-První řetězec, který objekt k porovnání.
+První `String` objekt k porovnání.
 
 *řetězci Str2*<br/>
-Druhý řetězec objekt k porovnání.
+Druhá `String` objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud obsah `str1` rovnají `str2`; v opačném případě `false`.
+**Hodnota TRUE** Pokud obsah `str1` rovnají `str2`; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -371,7 +371,7 @@ Tento operátor je ekvivalentní [String::CompareOrdinal](#compareordinal).
 
 ##  <a name="operator-greater-than"></a>  String::Operator&gt;
 
-Určuje, zda je hodnota jednoho objektu řetězec větší než hodnota druhý objekt řetězce.
+Určuje, zda hodnota jednoho `String` objekt je větší než hodnota sekundy `String` objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -382,14 +382,14 @@ bool String::operator>( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parametry
 
 *Str1*<br/>
-První řetězec objektu.
+První `String` objektu.
 
 *řetězci Str2*<br/>
-Druhý objekt řetězce.
+Druhá `String` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud hodnota `str1` je větší než hodnota `str2`; v opačném případě `false`.
+**Hodnota TRUE** Pokud hodnota `str1` je větší než hodnota `str2`; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -397,7 +397,7 @@ Tento operátor je ekvivalentní explicitně voláním [String::CompareOrdinal](
 
 ## <a name="operator-greater-than-or-equals"></a> String::Operator&gt;=
 
-Určuje, zda je hodnota jednoho objektu řetězec větší nebo rovna hodnotě druhý objekt řetězce.
+Určuje, zda hodnota jednoho `String` objekt je větší než nebo rovna hodnotě sekundy `String` objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -408,18 +408,18 @@ bool String::operator>=( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parametry
 
 *Str1*<br/>
-První řetězec objektu.
+První `String` objektu.
 
 *řetězci Str2*<br/>
-Druhý objekt řetězce.
+Druhá `String` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud hodnota `str1` je větší než nebo rovna hodnotě tohoto `str2`; v opačném případě `false`.
+**Hodnota TRUE** Pokud hodnota `str1` je větší než nebo rovna hodnotě tohoto `str2`; v opačném případě **false**.
 
 ## <a name="operator-inequality"></a> String::Operator! =
 
-Určuje, zda dva objekty zadaný řetězec mají různé hodnoty.
+Určuje, zda dva zadaný `String` objekty mají různé hodnoty.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -430,18 +430,18 @@ bool String::operator!=( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parametry
 
 *Str1*<br/>
-První řetězec, který objekt k porovnání.
+První `String` objekt k porovnání.
 
 *řetězci Str2*<br/>
-Druhý řetězec objekt k porovnání.
+Druhá `String` objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud `str1` není roven `str2`; v opačném případě `false`.
+**Hodnota TRUE** Pokud `str1` není roven `str2`; v opačném případě **false**.
 
 ## <a name="operator-less-than"></a> String::Operator&lt;
 
-Určuje, zda je hodnota jednoho objektu řetězce menší než hodnota druhý objekt řetězce.
+Určuje, zda hodnota jednoho `String` je objekt menší než hodnota sekundy `String` objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -452,18 +452,18 @@ bool String::operator<( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parametry
 
 *Str1*<br/>
-První řetězec objektu.
+První `String` objektu.
 
 *řetězci Str2*<br/>
-Druhý objekt řetězce.
+Druhá `String` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud hodnota `str1` je menší než hodnota `str2`; v opačném případě `false`.
+**Hodnota TRUE** Pokud hodnota *str1* je menší než hodnota *řetězci str2*; v opačném případě **false**.
 
 ## <a name="ctor"></a> String::String konstruktor
 
-Inicializuje novou instanci třídy řetězce s kopií dat vstupního řetězce.
+Inicializuje novou instanci třídy `String` třídy pomocí kopírovaných dat vstupního řetězce.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -492,7 +492,7 @@ String^ s = L"Hello!";
 
 ## <a name="tostring"></a> String::ToString
 
-Vrátí objekt String, jehož hodnota je stejná jako aktuální řetězec.
+Vrátí `String` objekt, jehož hodnota je stejná jako aktuální řetězec.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -502,7 +502,7 @@ String^ String::ToString();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Objekt String, jehož hodnota je stejná jako aktuální řetězec.
+A `String` objekt, jehož hodnota je stejná jako aktuální řetězec.
 
 ## <a name="see-also"></a>Viz také
 

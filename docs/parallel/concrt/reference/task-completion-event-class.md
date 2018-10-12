@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16778adeb898759a9c15d08175d9482f8411b44c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 867f94cd290e6b8ee5f9e50b266b0e4c9df63adf
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413767"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163254"
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event – třída
 
@@ -96,11 +96,11 @@ Výsledek, který má tato událost nastavit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Metoda vrátí `true` Pokud bylo nastavení události úspěšné. Vrátí `false` -li událost již nastavena.
+Metoda vrátí **true** Pokud bylo nastavení události úspěšné. Vrátí **false** -li událost již nastavena.
 
 ### <a name="remarks"></a>Poznámky
 
-Za přítomnosti více nebo souběžných volání `set`, bude úspěšné pouze první volání a jeho výsledek (pokud existují) budou uložena v události dokončení úkolu. Zbývající sady jsou ignorovány a metoda vrátí hodnotu false. Při nastavení události dokončení úkolu budou všechny úkoly vytvořené z, že události okamžitě dokončeny a její pokračování, pokud existuje, bude naplánováno. Úloha dokončení objekty, které mají `_ResultType` jiné než `void` předají hodnotu svým následovníkům.
+Za přítomnosti více nebo souběžných volání `set`, bude úspěšné pouze první volání a jeho výsledek (pokud existují) budou uložena v události dokončení úkolu. Zbývající sady jsou ignorovány a metoda vrátí hodnotu false. Při nastavení události dokončení úkolu budou všechny úkoly vytvořené z, že události okamžitě dokončeny a její pokračování, pokud existuje, bude naplánováno. Úloha dokončení objekty, které mají `_ResultType` jiné než **void** předají hodnotu svým následovníkům.
 
 ##  <a name="set_exception"></a> set_exception
 

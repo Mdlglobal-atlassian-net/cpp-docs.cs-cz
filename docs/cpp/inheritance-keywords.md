@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1106ad878f4053cacae67d9d0e343e9469b1a1c1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f4b3703d0bd4556090c08a874bce362120817397
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061172"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161798"
 ---
 # <a name="inheritance-keywords"></a>Klíčová slova dědičnosti
 
@@ -83,6 +83,8 @@ ukazatelé na členy třídy `class S` budou používat nejmenší možnou repre
 
 > [!NOTE]
 >  Stejná dopředná deklarace reprezentace ukazatele na člen třídy by se měla nacházet v každé jednotce překladu, která deklaruje ukazatele na členy této třídy, a deklarace by se měla objevit před deklarací ukazatelů na členy.
+
+Z důvodu kompatibility s předchozími verzemi **_single_inheritance**, **_multiple_inheritance**, a **_virtual_inheritance** jsou synonyma pro **__ single_inheritance**, **__multiple_inheritance**, a **__virtual_inheritance** Pokud – možnost kompilátoru [/Za \(zakázat jazyka rozšíření)](../build/reference/za-ze-disable-language-extensions.md) určena.
 
 **Specifické pro END Microsoft**
 

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41e4c6f3a540f44f6cec0d94ffab74d65a1ffe52
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7f8f864dcbf412b9dea0d96f6a0ba046792d7827
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386584"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162968"
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue – třída
 
@@ -177,7 +177,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud v tuto chvíli jsme se podívali, byla prázdná souběžná fronta `false` jinak.
+**Hodnota TRUE** Pokud v tuto chvíli jsme se podívali, byla prázdná souběžná fronta **false** jinak.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -229,11 +229,11 @@ Odkaz na umístění pro uložení dequeued položky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud byla položka úspěšně dequeued `false` jinak.
+**Hodnota TRUE** Pokud byla položka úspěšně dequeued **false** jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud byla položka úspěšně dequeued parametr `_Dest` přijímá dequeued hodnotu, původní hodnota uložená ve frontě je zničen, a tato funkce vrací `true`. Pokud se žádné položky k odstranění z fronty, tato funkce vrací `false` bez blokování a obsah `_Dest` parametr nejsou definovány.
+Pokud byla položka úspěšně dequeued parametr `_Dest` přijímá dequeued hodnotu, původní hodnota uložená ve frontě je zničen, a tato funkce vrací **true**. Pokud se žádné položky k odstranění z fronty, tato funkce vrací `false` bez blokování a obsah `_Dest` parametr nejsou definovány.
 
 `try_pop` je bezpečné na souběžnosti s ohledem na volání metody `push`, `try_pop`, a `empty`.
 

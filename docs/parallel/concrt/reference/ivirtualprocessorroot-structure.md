@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7466c00ec1a5c507a84a098b3dca79d57ffee91e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 891fcd96901423e5d5c23b840784f9e050dbbe81
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445981"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162916"
 ---
 # <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot – struktura
 
@@ -111,7 +111,7 @@ Kontext, který je právě provedenou tohoto kořenového adresáře.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Logická hodnota. Hodnotu `true` označuje, že proxy vlákna vrácena z `Deactivate` metody v reakci na volání `Activate` metoda. Hodnota `false` označuje, že vlákno proxy server vrátil z metody v reakci na události oznámení v Resource Manageru. V uživatelském režimu plánovatelná (UMS) podprocesu plánovače to znamená, že se nezobrazují položky v seznamu pro doplňování plánovače a Plánovač je vyžadován ke zpracování je.
+Logická hodnota. Hodnotu **true** označuje, že proxy vlákna vrácena z `Deactivate` metody v reakci na volání `Activate` metoda. Hodnota `false` označuje, že vlákno proxy server vrátil z metody v reakci na události oznámení v Resource Manageru. V uživatelském režimu plánovatelná (UMS) podprocesu plánovače to znamená, že se nezobrazují položky v seznamu pro doplňování plánovače a Plánovač je vyžadován ke zpracování je.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -119,9 +119,9 @@ Tuto metodu použijte k dočasnému zastavení provádění kořen virtuálního
 
 Kořenu virtuálního procesoru deaktivované může být probouzet pomocí volání `Activate` metodou stejný argument, který byl předán v `Deactivate` metoda. Plánovač zodpovídá za to, která volá do `Activate` a `Deactivate` metody jsou párovány, ale nejsou vyžadovány pro další přijetí v určitém pořadí. Resource Manager dokáže zpracovat přijímají volání `Activate` metodu než obdrží volání `Deactivate` metoda je určená pro.
 
-Pokud awakens kořen virtuálního procesoru a návratovou hodnotu z `Deactivate` metoda je hodnota `false`, Plánovač by měl seznamu dokončení UMS pomocí dotazu `IUMSCompletionList::GetUnblockNotifications` metodu, mohly reagovat na těchto informací a následně zavolat `Deactivate`metoda znovu. To je třeba opakovat, dokud `Deactivate` vrátí metoda hodnotu `true`.
+Pokud awakens kořen virtuálního procesoru a návratovou hodnotu z `Deactivate` metoda je hodnota **false**, Plánovač by měl seznamu dokončení UMS pomocí dotazu `IUMSCompletionList::GetUnblockNotifications` metoda zákona o informace a pak následně zavolat `Deactivate` metoda znovu. To je třeba opakovat, dokud `Deactivate` vrátí metoda hodnotu `true`.
 
-`invalid_argument` je vyvolána, pokud argument `pContext` má hodnotu `NULL`.
+`invalid_argument` je vyvolána, pokud argument `pContext` má hodnotu NULL.
 
 `invalid_operation` je vyvolána, pokud byl neaktivoval kořen virtuálního procesoru, nebo argument `pContext` nepředstavuje kontextu spuštění, který byl naposledy odeslaných v tomto kořenovém adresáři virtuálního procesoru.
 

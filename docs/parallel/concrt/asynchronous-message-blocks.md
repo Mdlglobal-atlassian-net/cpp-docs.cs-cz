@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e9379dd15dbb0d814da1e617fb1f3f8408d1da0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0b180b1a92defb2c29d0e54b0ecf9700dd299170
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388482"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163423"
 ---
 # <a name="asynchronous-message-blocks"></a>Asynchronní bloky zpráv
 
@@ -307,7 +307,7 @@ Souběžnost::[třída timer](../../parallel/concrt/reference/timer-class.md) sl
 
 `timer` Třídy odešle zprávu s jeho pouze jeden cíl. Pokud nastavíte `_PTarget` parametr v konstruktoru `NULL`, cíl můžete zadat později pomocí volání [concurrency::ISource::link_target](reference/source-block-class.md#link_target) metody.
 
-A `timer` objektu můžete opakující se nebo bez opakování. Chcete-li vytvořit opakující se časovač, předejte `true` pro `_Repeating` parametru při volání konstruktoru. Jinak předejte `false` pro `_Repeating` parametr k vytvoření časovače bez opakování. Pokud se opakuje časovač, pošle stejná zpráva k cíli po každém intervalu.
+A `timer` objektu můžete opakující se nebo bez opakování. Chcete-li vytvořit opakující se časovač, předejte **true** pro `_Repeating` parametru při volání konstruktoru. Jinak předejte **false** pro `_Repeating` parametr k vytvoření časovače bez opakování. Pokud se opakuje časovač, pošle stejná zpráva k cíli po každém intervalu.
 
 Knihovna agentů vytvoří `timer` objekty ve stavu-started. Chcete-li spustit objekt časovače, zavolejte [concurrency::timer::start](reference/timer-class.md#start) metody. Zastavit `timer` objektu, zničit objekt nebo volání [concurrency::timer::stop](reference/timer-class.md#stop) metody. Chcete-li pozastavit opakující se časovač, zavolejte [concurrency::timer::pause](reference/timer-class.md#pause) metody.
 

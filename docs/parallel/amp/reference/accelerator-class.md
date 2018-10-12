@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7748ae0f3993c1df97dcf97308fd6dfbfafdc8b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a154d266ead19cfef00f30a5327c5b18809a4111
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375870"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163163"
 ---
 # <a name="accelerator-class"></a>accelerator – třída
 
@@ -102,9 +102,9 @@ class accelerator;
 
 |Název|Popis|
 |----------|-----------------|
-|[operator!=](#operator_neq)|Porovná tento `accelerator` objekt s jiným a vrátí `false` případě, že jsou totožné; v opačném případě vrátí `true`.|
+|[operator!=](#operator_neq)|Porovná tento `accelerator` objekt s jiným a vrátí **false** případě, že jsou totožné; v opačném případě vrátí **true**.|
 |[operátor =](#operator_eq)|Zkopíruje obsah zadaného `accelerator` do tohoto objektu.|
-|[operator==](#operator_eq_eq)|Porovná tento `accelerator` objekt s jiným a vrátí `true` případě, že jsou totožné; v opačném případě vrátí `false`.|
+|[operator==](#operator_eq_eq)|Porovná tento `accelerator` objekt s jiným a vrátí **true** případě, že jsou totožné; v opačném případě vrátí **false**.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
@@ -125,7 +125,7 @@ class accelerator;
 |[supports_cpu_shared_memory](#supports_cpu_shared_memory)|Určuje, zda `accelerator` podporuje sdílenou paměť.|
 |[supports_double_precision](#supports_double_precision)|Určuje, zda akcelerátor podporuje výpočty s dvojitou přesností.|
 |[supports_limited_double_precision](#supports_limited_double_precision)|Určuje, zda má akcelerátor omezenou podporu pro matematiku s dvojitou přesností.|
-|[Verze](#version)|Získá verzi `accelerator`.|
+|[version](#version)|Získá verzi `accelerator`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -362,7 +362,7 @@ bool get_has_display() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud `accelerator` zvládne výstup na monitor; v opačném případě `false`.
+**Hodnota TRUE** Pokud `accelerator` zvládne výstup na monitor; v opačném případě **false**.
 
 ##  <a name="get_is_debug"></a> get_is_debug –
 
@@ -375,7 +375,7 @@ bool get_is_debug() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud `accelerator` má povolenu vrstvu DEBUG pro rozsáhlé hlášení chyb. V opačném případě `false`.
+**Hodnota TRUE** Pokud `accelerator` má povolenu vrstvu DEBUG pro rozsáhlé hlášení chyb. V opačném případě **false**.
 
 ##  <a name="get_is_emulated"></a> get_is_emulated –
 
@@ -388,7 +388,7 @@ bool get_is_emulated() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud `accelerator` je emulován. V opačném případě `false`.
+**Hodnota TRUE** Pokud `accelerator` je emulován. V opačném případě **false**.
 
 ##  <a name="get_supports_cpu_shared_memory"></a> get_supports_cpu_shared_memory
 
@@ -401,11 +401,11 @@ bool get_supports_cpu_shared_memory() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud akcelerátor podporuje sdílenou paměť procesoru v opačném případě `false`.
+**Hodnota TRUE** Pokud akcelerátor podporuje procesoru sdílené paměti; v opačném případě **false**.
 
 ##  <a name="get_supports_double_precision"></a> get_supports_double_precision
 
-Vrátí logickou hodnotu, která určuje, zda akcelerátor podporuje výpočty s dvojitou přesností, včetně začleněny vynásobit sčítání (FMA), dělení, obrácené hodnoty a přetypování mezi `int` a `double`.
+Vrátí logickou hodnotu, která určuje, zda akcelerátor podporuje výpočty s dvojitou přesností, včetně začleněny vynásobit sčítání (FMA), dělení, obrácené hodnoty a přetypování mezi **int** a **double**
 
 ```
 bool get_supports_double_precision() const;
@@ -414,11 +414,11 @@ bool get_supports_double_precision() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud akcelerátor podporuje výpočty s dvojitou přesností v opačném případě `false`.
+**Hodnota TRUE** Pokud akcelerátor podporuje výpočty s dvojitou přesností, jinak **false**.
 
 ##  <a name="get_supports_limited_double_precision"></a> get_supports_limited_double_precision
 
-Vrátí logickou hodnotu, která určuje, zda má akcelerátor omezenou podporu pro výpočty s dvojitou přesností. Pokud akcelerátor podporuje pouze omezená, pak začleněny vícenásobně sčítání (FMA), dělení, obrácené hodnoty a přetypování mezi `int` a `double` nejsou podporovány.
+Vrátí logickou hodnotu, která určuje, zda má akcelerátor omezenou podporu pro výpočty s dvojitou přesností. Pokud akcelerátor podporuje pouze omezená, pak začleněny vícenásobně sčítání (FMA), dělení, obrácené hodnoty a přetypování mezi **int** a **double** nejsou podporovány.
 
 ```
 bool get_supports_limited_double_precision() const;
@@ -427,7 +427,7 @@ bool get_supports_limited_double_precision() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud má akcelerátor omezenou podporu pro výpočty s dvojitou přesností v opačném případě `false`.
+**Hodnota TRUE** Pokud má akcelerátor omezenou podporu pro výpočty s dvojitou přesností, jinak **false**.
 
 ##  <a name="get_version"></a> get_version –
 
@@ -468,7 +468,7 @@ __declspec(property(get= get_is_emulated)) bool is_emulated;
 
 ##  <a name="operator_neq"></a> Operator! =
 
-Porovná tento `accelerator` objekt s jiným a vrátí `false` případě, že jsou totožné; v opačném případě vrátí `true`.
+Porovná tento `accelerator` objekt s jiným a vrátí **false** případě, že jsou totožné; v opačném případě vrátí **true**.
 
 ```
 bool operator!= (const accelerator& _Other) const;
@@ -482,7 +482,7 @@ bool operator!= (const accelerator& _Other) const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`false` Pokud dvě `accelerator` jsou objekty stejné; jinak `true`.
+**false** Pokud dva `accelerator` jsou objekty stejné; jinak **true**.
 
 ##  <a name="operator_eq"></a> operátor =
 
@@ -503,7 +503,7 @@ Odkaz na tento `accelerator` objektu.
 
 ##  <a name="operator_eq_eq"></a> Operator ==
 
-Porovná tento `accelerator` objekt s jiným a vrátí `true` případě, že jsou totožné; v opačném případě vrátí `false`.
+Porovná tento `accelerator` objekt s jiným a vrátí **true** případě, že jsou totožné; v opačném případě vrátí **false**.
 
 ```
 bool operator== (const accelerator& _Other) const;
@@ -517,7 +517,7 @@ bool operator== (const accelerator& _Other) const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud druhá `accelerator` objekt je stejné jako to `accelerator` objektu; v opačném případě `false`.
+**true** Pokud druhá `accelerator` objekt je stejné jako to `accelerator` objektu; v opačném případě **false**.
 
 ##  <a name="set_default"></a> set_default
 
@@ -534,7 +534,7 @@ Cesta k akcelerátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud je volání úspěšné při nastavování výchozího akcelerátoru. V opačném případě `false`.
+**Hodnota TRUE** Pokud bude volání úspěšné při nastavování výchozího akcelerátoru. V opačném případě **false**.
 
 ##  <a name="set_default_cpu_access_type"></a> set_default_cpu_access_type
 
@@ -664,7 +664,7 @@ bool get_is_auto_selection() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud modul runtime automaticky vybere odpovídající akcelerátor; v opačném případě `false`.
+**Hodnota TRUE** Pokud modul runtime automaticky vybere odpovídající akcelerátor; v opačném případě **false**.
 
 ##  <a name="get_is_debug"></a> get_is_debug –
 
@@ -737,7 +737,7 @@ bool operator!= (const accelerator_view& _Other) const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`false` Pokud jsou oba objekty stejné. v opačném případě `true`.
+**false** Pokud jsou oba objekty stejné; jinak **true**.
 
 ##  <a name="operator_eq"></a> operátor =
 
@@ -758,7 +758,7 @@ Odkaz na upravené `accelerator_view` objektu.
 
 ##  <a name="operator_eq_eq"></a> Operator ==
 
-Porovná tento [accelerator_view](accelerator-view-class.md) objekt s jiným a vrátí `true` případě, že jsou totožné; v opačném případě vrátí `false`.
+Porovná tento [accelerator_view](accelerator-view-class.md) objekt s jiným a vrátí **true** případě, že jsou totožné; v opačném případě vrátí **false**.
 
 ```
 bool operator== (const accelerator_view& _Other) const;
@@ -772,7 +772,7 @@ bool operator== (const accelerator_view& _Other) const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud jsou oba objekty stejné. v opačném případě `false`.
+**Hodnota TRUE** Pokud jsou oba objekty stejné; jinak **false**.
 
 ##  <a name="queuing_mode"></a> queuing_mode –
 

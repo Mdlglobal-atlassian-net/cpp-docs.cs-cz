@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f5e32599096b4e0fa451c18b3e05adf01b34ff4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b372959105407074cd2a7295837e2c47ef629da7
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407592"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162162"
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Přidání odkazů v projektech v jazyce Visual C++
 
@@ -84,11 +84,11 @@ Následující vlastnosti jsou k dispozici na různé typy odkazů. Umožňují 
 
 - **Zkopírovat místní satelitní sestavení**
 
-   Určuje, jestli se mají automaticky kopírovat satelitní sestavení odkazovaného sestavení do cílového umístění během sestavení. Použít jenom v případě **Kopírovat místně** je `true`.
+   Určuje, jestli se mají automaticky kopírovat satelitní sestavení odkazovaného sestavení do cílového umístění během sestavení. Použít jenom v případě **Kopírovat místně** je **true**.
 
 - **Výstup referenčního sestavení**
 
-   Určuje, že toto sestavení se používá v procesu sestavení. Pokud `true`, sestavení se používá na příkazový řádek kompilátoru během sestavení.
+   Určuje, že toto sestavení se používá v procesu sestavení. Pokud **true**, sestavení se používá na příkazový řádek kompilátoru během sestavení.
 
 ### <a name="project-to-project-reference-properties"></a>Vlastnosti odkazu typu projekt projekt
 

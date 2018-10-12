@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 26ecab69c2c31db51e137ad012bf67541e03a095
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 2af59860016835f8e8dfddc9d0a77204ff866bd3
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788458"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161850"
 ---
 # <a name="issame-structure"></a>IsSame – struktura
 
@@ -92,4 +92,4 @@ struct IsSame<T1, T1>
 
 Označuje, zda jeden typ. je stejný jako jiný.
 
-`value` je `true` Pokud parametrů šablony jsou stejné, a `false` Pokud se liší parametry šablony.
+`value` je **true** Pokud parametrů šablony jsou stejné, a **false** Pokud se liší parametry šablony.

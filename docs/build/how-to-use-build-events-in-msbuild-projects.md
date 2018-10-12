@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d875836cbfe9506d41a979a63d941d1ee5b467a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fd35ff136c0145e1c76a04d15052d426a7c90dcc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444330"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161265"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Postupy: Použití událostí sestavení v projektech MSBuild
 
@@ -29,7 +29,7 @@ Události sestavení je příkaz, který provádí MSBuild v určité fázi v pr
 
 Všech událostí tři sestavení je reprezentován ve skupině definice příkazu elementu (`<Command>`), který je proveden a elementu zprávy (`<Message>`), který je zobrazí, když **MSBuild** provádí události sestavení. Každý element je volitelný a pokud chcete zadat více než jednou stejného elementu, posledního výskytu přednost.
 
-Volitelně *použít v sestavení* – element (`<`*události sestavení*`UseInBuild>`) lze zadat ve skupině vlastností k označení, zda je událost sestavení spustit. Hodnota obsahu *použít v sestavení* element je buď `true` nebo `false`. Ve výchozím nastavení, je provedena události sestavení, pokud jeho odpovídajícím *použít v sestavení* prvek je nastaven na `false`.
+Volitelně *použít v sestavení* – element (`<`*události sestavení*`UseInBuild>`) lze zadat ve skupině vlastností k označení, zda je událost sestavení spustit. Hodnota obsahu *použít v sestavení* element je buď **true** nebo **false**. Ve výchozím nastavení, je provedena události sestavení, pokud jeho odpovídajícím *použít v sestavení* prvek je nastaven na `false`.
 
 V následující tabulce jsou uvedeny jednotlivých prvků XML události sestavení:
 

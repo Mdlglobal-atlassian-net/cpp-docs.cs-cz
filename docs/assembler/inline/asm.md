@@ -1,12 +1,13 @@
 ---
 title: __asm | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 08/30/2018
+ms.date: 10/09/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
 f1_keywords:
 - __asm
+- _asm
 - __asm_cpp
 dev_langs:
 - C++
@@ -18,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfe0cac0a35c821f3275ec323181f04c1ab982c4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: dd279a6324aec6eba50c6c3b7ffe846200d45fe1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693000"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161720"
 ---
 # <a name="asm"></a>__asm
 
@@ -59,6 +60,8 @@ __asm int 3
 nezpůsobil nativního kódu při kompilaci s vygenerování **/CLR**; kompilátor přeložil pokyn k instrukci CLR break.
 
 `__asm int 3` nyní způsobí generování nativního kódu pro funkci. Pokud chcete, aby funkce způsobila přerušení v kódu a pokud chcete tuto funkci zkompilovat pro jazyk MSIL, použijte [__debugbreak](../../intrinsics/debugbreak.md).
+
+Z důvodu kompatibility s předchozími verzemi **_asm** je synonymum pro **__asm** Pokud – možnost kompilátoru [/Za \(zakázat jazyková rozšíření)](../../build/reference/za-ze-disable-language-extensions.md) určena.
 
 ## <a name="example"></a>Příklad
 

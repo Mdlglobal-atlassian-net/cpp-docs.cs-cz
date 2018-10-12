@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 517e861020c48d08f40c9683822e3df23cbf38a2
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 1060d28e35a52e2a8c5c550664d36d8272628526
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235890"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161733"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits – struktura
 
@@ -80,7 +80,7 @@ Obslužná rutina zavřete.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud zpracování *h* zavření úspěšně; v opačném případě `false`.
+**Hodnota TRUE** pokud zpracování *h* zavření úspěšně; v opačném případě **false**.
 
 ## <a name="getinvalidvalue"></a>Handlenulltraits::getinvalidvalue –
 

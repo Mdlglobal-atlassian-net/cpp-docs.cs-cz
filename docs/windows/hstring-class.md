@@ -47,12 +47,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fea4f576e347ca03dda1142b3118bf605bc9f385
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 2a70b39352f26d76e9199b9da46f679507b148ed
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235344"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163113"
 ---
 # <a name="hstring-class"></a>HString – třída
 
@@ -225,7 +225,7 @@ bool IsValid() const throw()
 
 ### <a name="parameters"></a>Parametry
 
-`true` Pokud aktuální `HString` objekt není prázdný; v opačném případě `false`.
+**Hodnota TRUE** Pokud aktuální `HString` objekt není prázdný; v opačném případě **false**.
 
 ## <a name="makereference"></a>Hstring::makereference –
 
@@ -310,7 +310,7 @@ Druhý parametr k porovnání. *zarovnání indirekce rhs* může být `HString`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud *lhs* a *zarovnání indirekce rhs* parametry jsou stejné, jinak `false`.
+**Hodnota TRUE** Pokud *lhs* a *zarovnání indirekce rhs* parametry jsou stejné, jinak **false**.
 
 ## <a name="operator-inequality"></a>HString::operator! = – operátor
 
@@ -343,7 +343,7 @@ Druhý parametr k porovnání. *zarovnání indirekce rhs* může být `HString`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud *lhs* a *zarovnání indirekce rhs* parametry nejsou stejné; jinak `false`.
+**Hodnota TRUE** Pokud *lhs* a *zarovnání indirekce rhs* parametry nejsou stejné; jinak **false**.
 
 ## <a name="operator-less-than"></a>HString::operator&lt; – operátor
 
@@ -365,7 +365,7 @@ Druhý parametr k porovnání. *Zarovnání indirekce RHS* může být odkazem n
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud *lhs* parametr je menší než *zarovnání indirekce rhs* parametr; v opačném případě `false`.
+**Hodnota TRUE** Pokud *lhs* parametr je menší než *zarovnání indirekce rhs* parametr; v opačném případě **false**.
 
 ## <a name="release"></a>Hstring::Release –
 

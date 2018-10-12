@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e07c5b985552fcf30b2acb18030ab3288efb9be
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b89c1a3057e9753b99aaac837c903b6fd5f6d3ea
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428145"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163345"
 ---
 # <a name="concurrency-namespace-functions"></a>Funkce oboru názvů Concurrency
 
@@ -118,7 +118,7 @@ Odkaz na data, která mají být odeslány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud zpráva byla přijata před vrácením metodu `false` jinak.
+**Hodnota TRUE** Pokud zpráva byla přijata před vrácením metodu **false** jinak.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -424,7 +424,7 @@ bool __cdecl is_current_task_group_canceling();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud je skupina úloh, který právě probíhá rušení, `false` jinak.
+**Hodnota TRUE** Pokud skupina úloh, který právě probíhá ruší, **false** jinak.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -687,7 +687,7 @@ Iterátor s náhodným přístupem adresuje umístění jedno místo za posledn�
 Instance Přidělovač paměti kompatibilní standardní knihovny C++.
 
 *_Func*<br/>
-Objekt funkce predikátu definovaný uživatelem, který definuje kritérium porovnání vyhovět pomocí po sobě jdoucí prvky v pořadí. Binární predikát přijímá dva argumenty a vrací `true` při splnění a `false` pokud nevyhovují. Tato funkce porovnání musí uložit přísné slabé seřazení na dvojice prvků z posloupnosti.
+Objekt funkce predikátu definovaný uživatelem, který definuje kritérium porovnání vyhovět pomocí po sobě jdoucí prvky v pořadí. Binární predikát přijímá dva argumenty a vrací **true** při splnění a **false** pokud nevyhovují. Tato funkce porovnání musí uložit přísné slabé seřazení na dvojice prvků z posloupnosti.
 
 *_Chunk_size*<br/>
 Minimální velikost bloku dat, který bude možné rozdělit na dvě pro paralelní zpracování.
@@ -1217,7 +1217,7 @@ Iterátor s náhodným přístupem adresuje umístění prvního prvku v rozsahu
 Iterátor s náhodným přístupem adresuje umístění jedno místo za poslední prvek v rozsahu který se má seřadit.
 
 *_Func*<br/>
-Objekt funkce predikátu definovaný uživatelem, který definuje kritérium porovnání vyhovět pomocí po sobě jdoucí prvky v pořadí. Binární predikát přijímá dva argumenty a vrací `true` při splnění a `false` pokud nevyhovují. Tato funkce porovnání musí uložit přísné slabé seřazení na dvojice prvků z posloupnosti.
+Objekt funkce predikátu definovaný uživatelem, který definuje kritérium porovnání vyhovět pomocí po sobě jdoucí prvky v pořadí. Binární predikát přijímá dva argumenty a vrací **true** při splnění a **false** pokud nevyhovují. Tato funkce porovnání musí uložit přísné slabé seřazení na dvojice prvků z posloupnosti.
 
 *_Chunk_size*<br/>
 Minimální velikost bloku dat, který bude možné rozdělit na dvě pro paralelní zpracování.
@@ -1460,7 +1460,7 @@ Odkaz na data, která mají být odeslány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud byla přijata zpráva, `false` jinak.
+**Hodnota TRUE** Pokud byla přijata zpráva, **false** jinak.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1613,7 +1613,7 @@ Název pro daný objekt.
 
 ##  <a name="try_receive"></a>  try_receive –
 
-Obecné try a přijetí implementace, povolení kontextu vyhledat data z přesně jednoho zdroje a filtrování hodnot, které byly přijaty. Pokud data není připraven, metoda vrátí hodnotu false.
+Obecné try a přijetí implementace, povolení kontextu vyhledat data z přesně jednoho zdroje a filtrování hodnot, které byly přijaty. Pokud data nejsou připravené, metoda vrátí **false**.
 
 ```
 template <class T>

@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a674d63c52f6f204d0bb69c69cd5814cd6d9761a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 85f9498f44f4f1ec2598e6263c003d041f519105
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788939"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162214"
 ---
 # <a name="comptrref-class"></a>ComPtrRef – třída
 
@@ -176,11 +176,11 @@ Odkaz na jiný `ComPtrRef` objekt nebo ukazatel na anonymního typu (`void*`).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První operátor výnosy `true` Pokud objekt *a* rovná objektu *b*; v opačném případě `false`.
+První operátor výnosy **true** Pokud objekt *a* rovná objektu *b*; v opačném případě **false**.
 
-Druhý a třetí operátory yield `true` Pokud objekt *a* rovná `nullptr`; v opačném případě `false`.
+Druhý a třetí operátory yield **true** Pokud objekt *a* rovná **nullptr**; v opačném případě **false**.
 
-Čtvrtý a pátý operátory yield `true` Pokud objekt *a* rovná objektu *b*; v opačném případě `false`.
+Čtvrtý a pátý operátory yield **true** Pokud objekt *a* rovná objektu *b*; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -227,11 +227,11 @@ Odkaz na jiný `ComPtrRef` objekt nebo ukazatel na anonymní objekt (`void*`).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První operátor výnosy `true` Pokud objekt *a* není roven objektu *b*; v opačném případě `false`.
+První operátor výnosy **true** Pokud objekt *a* není roven objektu *b*; v opačném případě **false**.
 
-Druhý a třetí operátory yield `true` Pokud objekt *a* není roven `nullptr`; v opačném případě `false`.
+Druhý a třetí operátory yield **true** Pokud objekt *a* není roven **nullptr**; v opačném případě **false**.
 
-Čtvrtý a pátý operátory yield `true` Pokud objekt *a* není roven objektu *b*; v opačném případě `false`.
+Čtvrtý a pátý operátory yield **true** Pokud objekt *a* není roven objektu *b*; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 

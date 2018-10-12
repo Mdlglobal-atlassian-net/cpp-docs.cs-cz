@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8adba73274fbc9821eb8096e82268b24b41718f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 72fa49d763159385607330231994d15952f0c771
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430038"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163137"
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy – struktura
 
@@ -124,7 +124,7 @@ Určuje, zda odběru aktuální vlákno a zohlednily při přidělování prost�
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`IExecutionResource` Rozhraní pro aktuální vlákno, pokud parametr `doSubscribeCurrentThread` má hodnotu `true`. Pokud je hodnota `false`, vrátí metoda `NULL`.
+`IExecutionResource` Rozhraní pro aktuální vlákno, pokud parametr `doSubscribeCurrentThread` má hodnotu **true**. Pokud je hodnota **false**, metoda vrátí hodnotu NULL.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -132,7 +132,7 @@ Předtím, než Plánovač spustí každé dílo, ji by měl tuto metodu použij
 
 Resource Manager uděluje prostředky do fronty plánovače voláním metody [ischeduler::addvirtualprocessors –](ischeduler-structure.md#addvirtualprocessors) seznam kořenových adresářů virtuálního procesoru. Metoda je vyvolána jako zpětné volání do plánovače dříve, než tato metoda vrátí.
 
-Pokud plánovač požadované předplatné pro aktuální vlákno tak, že nastavíte parametr `doSubscribeCurrentThread` k `true`, metoda vrátí `IExecutionResource` rozhraní. Předplatné musí být ukončen později pomocí [iexecutionresource::Remove –](iexecutionresource-structure.md#remove) metody.
+Pokud plánovač požadované předplatné pro aktuální vlákno tak, že nastavíte parametr `doSubscribeCurrentThread` k **true**, metoda vrátí `IExecutionResource` rozhraní. Předplatné musí být ukončen později pomocí [iexecutionresource::Remove –](iexecutionresource-structure.md#remove) metody.
 
 Při určování, které hardwarových vláken jsou vybrané, se pokusí optimalizovat pro spřažení uzlu Resource Manageru. Pokud je požadováno předplatné pro aktuální vlákno je znamením, že si klade za cíl aktuální vlákno k účasti v práci, která tento plánovač přiřazena. V takovém případě kořeny přidělené virtuální procesory jsou umístěny na uzlu procesoru, na který se provádí aktuální vlákno, pokud je to možné.
 

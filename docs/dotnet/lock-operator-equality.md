@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f60cf71305731391d03763810775eaf7f8e5fd7e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7579c7493cd05d3cf2a0a119e601dd63ed5faf91
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411531"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162240"
 ---
 # <a name="lockoperator"></a>lock::operator== – operátor
 
@@ -46,11 +46,11 @@ Objekt k porovnání rovnosti.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí `true` Pokud `t` je stejný jako objekt na uzamčení, `false` jinak.
+Vrátí **true** Pokud `t` je stejný jako objekt na uzamčení, **false** jinak.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // msl_lock_op_eq.cpp
 // compile with: /clr
 #include <msclr/lock.h>

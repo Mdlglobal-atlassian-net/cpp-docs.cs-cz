@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36fe82bc5d17cd3c4951b008af28ba89b171c78f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: acf3ae2fd16eb3aacbc0a2e681ae39aece1b4dd4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103929"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163215"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections:: Vector – třída
 
@@ -240,11 +240,11 @@ Položka k vyhledání.
 *index*<br/>
 Z nuly vycházející index položky-li parametr *hodnotu* je nalezen, jinak 0.
 
-*Index* parametru je 0, pokud je první prvek vektoru položka nebo položka nebyla nalezena. Pokud je návratová hodnota `true`, položka byla nalezena a je první prvek; v opačném případě položka nebyla nalezena.
+*Index* parametru je 0, pokud je první prvek vektoru položka nebo položka nebyla nalezena. Pokud je návratová hodnota **true**, položka byla nalezena a je první prvek; v opačném případě položka nebyla nalezena.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud zadaná položka není nalezen; v opačném případě `false`.
+**Hodnota TRUE** Pokud zadaná položka je jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 

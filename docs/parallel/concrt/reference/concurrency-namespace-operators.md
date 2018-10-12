@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9eb820b533b74d5634695ddabda26f081a35f95
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8065be6cc53cad04d5d52bea91da05bb3125dd63
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436920"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162565"
 ---
 # <a name="concurrency-namespace-operators"></a>Concurrency – operátory oboru názvů
 
@@ -151,7 +151,7 @@ Objekt typu `concurrent_vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud je souběžného vektoru na levé straně operátoru roven souběžného vektoru na pravé straně operátoru; v opačném případě `false`.
+**Hodnota TRUE** souběžného vektoru na levé straně operátoru je jinak souběžného vektoru na pravé straně operátoru roven **false**.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -189,7 +189,7 @@ Objekt typu `concurrent_vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud souběžných vektory nejsou stejné; `false` Pokud jsou souběžný vektory stejné.
+**Hodnota TRUE** Pokud souběžných vektory nejsou stejné; **false** Pokud jsou souběžný vektory stejné.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -227,7 +227,7 @@ Objekt typu `concurrent_vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud je souběžného vektoru na levé straně operátoru menší než souběžného vektoru na pravé straně operátoru; v opačném případě `false`.
+**Hodnota TRUE** Pokud souběžného vektoru na levé straně operátoru menší než souběžného vektoru na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -265,7 +265,7 @@ Objekt typu `concurrent_vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud je souběžného vektoru na levé straně operátoru menší než nebo rovno souběžného vektoru na pravé straně operátoru; v opačném případě `false`.
+**Hodnota TRUE** Pokud souběžného vektoru na levé straně operátoru menší než nebo rovna hodnotě souběžného vektoru na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -303,7 +303,7 @@ Objekt typu `concurrent_vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud je souběžného vektoru na levé straně operátoru větší než souběžného vektoru na pravé straně operátoru; v opačném případě `false`.
+**Hodnota TRUE** Pokud souběžného vektoru na levé straně operátoru větší než souběžného vektoru na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -341,7 +341,7 @@ Objekt typu `concurrent_vector`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud je souběžného vektoru na levé straně operátoru větší než nebo rovna hodnotě souběžného vektoru na pravé straně operátoru; v opačném případě `false`.
+**Hodnota TRUE** Pokud souběžného vektoru na levé straně operátoru větší než nebo rovna hodnotě souběžného vektoru na pravé straně operátoru; v opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 

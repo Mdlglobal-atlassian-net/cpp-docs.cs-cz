@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40a98bd546f29cd42629ad991866a85a86852c9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bac539fc2826b5628769126d9802688c01f01c7b
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399298"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163202"
 ---
 # <a name="task-class-concurrency-runtime"></a>task – třída (Concurrency Runtime)
 
@@ -134,7 +134,7 @@ bool is_apartment_aware() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud úkol rozbaluje `IAsyncInfo` rozhraní nebo je potomkem takového úkolu `false` jinak.
+**Hodnota TRUE** Pokud úkol rozbaluje `IAsyncInfo` rozhraní nebo je potomkem takového úkolu **false** jinak.
 
 ##  <a name="is_done"></a>  Task::is_done – metoda (Concurrency Runtime)
 
@@ -169,7 +169,7 @@ bool operator!= (const task<void>& _Rhs) const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud objekty odkazují na různé základní úkoly a `false` jinak.
+**Hodnota TRUE** Pokud objekty odkazují na různé základní úkoly a **false** jinak.
 
 ##  <a name="operator_eq"></a> operátor =
 
@@ -209,7 +209,7 @@ bool operator== (const task<void>& _Rhs) const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud objekty odkazují na stejný základní úkol a `false` jinak.
+**Hodnota TRUE** Pokud objekty odkazují na stejný základní úkol a **false** jinak.
 
 ##  <a name="scheduler"></a>  Task::Scheduler – metoda (Concurrency Runtime)
 

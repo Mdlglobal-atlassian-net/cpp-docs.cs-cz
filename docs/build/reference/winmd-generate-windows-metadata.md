@@ -14,22 +14,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25b8b34e55fc0814653f4c44be50e545633be373
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 492be2c5510155ab0336070adc4b5ae96a9775c0
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705721"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162955"
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD (Generování metadat Windows)
 
 Povolí generování souboru Windows Runtime Metadata (.winmd).
 
-```
-/WINMD[:{NO|ONLY}]
-```
+> **/ WINMD**\[**:**{**NE**\|**POUZE**}]
 
-## <a name="remarks"></a>Poznámky
+## <a name="arguments"></a>Arguments
 
 **/ WINMD**<br/>
 Výchozí nastavení pro aplikace univerzální platformy Windows. Propojovací program vytvoří binární spustitelný soubor a soubor metadat .winmd.
@@ -40,19 +38,27 @@ Linker generuje pouze binární spustitelný soubor, ale nejedná se o soubor wi
 **/ WINMD: POUZE**<br/>
 Linker generuje pouze soubor winmd, ale nikoli binární spustitelný soubor.
 
-Ve výchozím nastavení, název výstupního souboru má tvar `binaryname`.winmd. Chcete-li zadat jiný název souboru, použijte [/WINMDFILE](../../build/reference/winmdfile-specify-winmd-file.md) možnost.
+## <a name="remarks"></a>Poznámky
+
+**Winmd** – možnost linkeru se používá pro aplikace UWP a součástí prostředí Windows runtime k řízení vytvoření souboru Windows Runtime metadata (.winmd). Soubor winmd je druh knihovny DLL, která obsahuje metadata pro typy Windows runtime a v případě součásti modulu runtime, implementace těchto typů. Řídí metadata [ECMA-335](http://www.ecma-international.org/publications/standards/Ecma-335.htm) standard.
+
+Ve výchozím nastavení, název výstupního souboru má tvar *binaryname*.winmd. Chcete-li zadat jiný název souboru, použijte [/WINMDFILE](../../build/reference/winmdfile-specify-winmd-file.md) možnost.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
 1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
-1. Vyberte **Linkeru** složky.
-
-1. Vyberte **metadat Windows** stránku vlastností.
+1. Vyberte **vlastnosti konfigurace** > **Linkeru** > **metadat Windows** stránku vlastností.
 
 1. V **generování metadat Windows** rozevíracího seznamu vyberte požadovanou možnost.
 
 ## <a name="see-also"></a>Viz také
 
+[Návod: Vytvoření komponenty jednoduché Windows Runtime a volání komponenty z jazyka JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)<br/>
+[Úvod do Microsoft Interface Definition Language 3.0](/uwp/midl-3/intro)<br/>
+[/WINMDFILE (určení souboru winmd)](winmdfile-specify-winmd-file.md)<br/>
+[/WINMDKEYFILE (určení souboru klíče winmd)](winmdkeyfile-specify-winmd-key-file.md)<br/>
+[/WINMDKEYCONTAINER (určení kontejneru klíče)](winmdkeycontainer-specify-key-container.md)<br/>
+[/WINMDDELAYSIGN (částečné podepsání souboru winmd)](winmddelaysign-partially-sign-a-winmd.md)<br/>
 [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
 [Možnosti linkeru](../../build/reference/linker-options.md)

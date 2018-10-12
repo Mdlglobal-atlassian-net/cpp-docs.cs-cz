@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6e21626b9b69d1c25ca638f659b6d8cc1a850594
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c2fe517809db7cecacc7a0190e0dae94ef55c35d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421216"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161187"
 ---
 # <a name="autogcrootoperator-bool"></a>auto_gcroot::operator bool
 
@@ -40,15 +40,15 @@ operator bool() const;
 
 ## <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud zabalená objektu je platná. `false` jinak.
+**Hodnota TRUE** Pokud zabalená objektu je platná. **false** jinak.
 
 ## <a name="remarks"></a>Poznámky
 
-Tento operátor převede ve skutečnosti na `_detail_class::_safe_bool` což je bezpečnější než `bool` vzhledem k tomu, že jej nelze převést na celočíselný typ.
+Tento operátor převede ve skutečnosti na `_detail_class::_safe_bool` což je bezpečnější než **bool** vzhledem k tomu, že jej nelze převést na celočíselný typ.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // msl_auto_gcroot_operator_bool.cpp
 // compile with: /clr
 #include <msclr\auto_gcroot.h>

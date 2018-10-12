@@ -1,13 +1,17 @@
 ---
 title: __ptr32 __ptr64 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __ptr32_cpp
 - __ptr64_cpp
+- __ptr32
+- __ptr64
+- _ptr32
+- _ptr64
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 573af4088e288403edaa8e5c34fb84817442c8f5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 50360ab6a163f70f4f950e44d963b9aa67dc04f4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46115993"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161642"
 ---
 # <a name="ptr32-ptr64"></a>__ptr32, __ptr64
 
@@ -46,6 +50,8 @@ V 32bitové verzi systému je ukazatel deklarovaný pomocí **__ptr64** zkrácen
 
 > [!NOTE]
 > Nemůžete použít **__ptr32** nebo **__ptr64** při kompilaci s **/CLR: pure**. V opačném případě bude vygenerována chyba kompilátoru C2472. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
+
+Z důvodu kompatibility s předchozími verzemi **_ptr32** a **_ptr64** jsou synonyma pro **__ptr32** a **__ptr64** Pokud – možnost kompilátoru [/Za \(zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md) určena.
 
 ## <a name="example"></a>Příklad
 

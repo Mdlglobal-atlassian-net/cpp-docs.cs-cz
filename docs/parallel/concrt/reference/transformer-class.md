@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 803cb474edbce6eb3d397e025ecc31bd5332cc92
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8e5c6b9d15ef2ca456fd91dbd7829d94e33e2c0a
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427881"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162227"
 ---
 # <a name="transformer-class"></a>Třída transformer
 
@@ -205,11 +205,11 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud zpráva byla úspěšně vyhrazené, `false` jinak.
+**Hodnota TRUE** Pokud zpráva byla úspěšně vyhrazené, **false** jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Po `reserve` je volána, pokud se vrátí `true`– buď `consume` nebo `release` využít nebo uvolnit vlastnictví zprávy musí být volána.
+Po `reserve` je volána, pokud se vrátí **true**– buď `consume` nebo `release` využít nebo uvolnit vlastnictví zprávy musí být volána.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -251,7 +251,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` protože bloku není odložit nabízené zprávy.
+**Hodnota TRUE** protože bloku není odložit nabízené zprávy.
 
 ##  <a name="ctor"></a> Transformer
 

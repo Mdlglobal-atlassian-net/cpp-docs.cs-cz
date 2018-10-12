@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0b7a7afb25d46fa3b521353c4577fbed66e69fd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7435bdbc4d5959771a1f80e2ad12f038a8157bae
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436985"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162279"
 ---
 # <a name="message-passing-functions"></a>Funkce usnadnění
 
@@ -41,9 +41,9 @@ Toto téma popisuje následující funkce předávání zpráv:
 
 [Concurrency::send](reference/concurrency-namespace-functions.md#send) funkce odešle zprávu do zadané cílové synchronně a [concurrency::asend](reference/concurrency-namespace-functions.md#asend) funkce odešle zprávu do zadané cílové asynchronně. Jak `send` a `asend` funkce Počkejte, až cílový označuje, že bude nakonec přijmout nebo odmítnout zprávu.
 
-`send` Funkce počká, až cílový přijme nebo odmítne zprávy ještě před jeho vrácením. `send` Vrací funkce `true` Pokud byla zpráva doručena a `false` jinak. Vzhledem k tomu, `send` funkce pracuje synchronně, `send` funkce čeká na cíl, který chcete zobrazit zpráva, před jeho vrácením.
+`send` Funkce počká, až cílový přijme nebo odmítne zprávy ještě před jeho vrácením. `send` Vrací funkce **true** Pokud byla zpráva doručena a **false** jinak. Vzhledem k tomu, `send` funkce pracuje synchronně, `send` funkce čeká na cíl, který chcete zobrazit zpráva, před jeho vrácením.
 
-Naopak `asend` funkce nečeká cíl, který chcete přijmout nebo odmítnout zprávu, před jeho vrácením. Místo toho `asend` vrací funkce `true` Pokud cíl přijme zprávu a bude nakonec trvat. V opačném případě `asend` vrátí `false` k označení, že cíl odmítl zprávu, nebo odloženo rozhodnutí o tom, jestli se zpráva.
+Naopak `asend` funkce nečeká cíl, který chcete přijmout nebo odmítnout zprávu, před jeho vrácením. Místo toho `asend` vrací funkce **true** Pokud cíl přijme zprávu a bude nakonec trvat. V opačném případě `asend` vrátí **false** k označení, že cíl odmítl zprávu, nebo odloženo rozhodnutí o tom, jestli se zpráva.
 
 [[Horní](#top)]
 

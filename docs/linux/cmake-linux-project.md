@@ -15,12 +15,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 82134d48853896ccb70c2620cd70c803fcc74bc8
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 0e735ece878797ffdcf89fffefa33473107ad3d5
+ms.sourcegitcommit: 7098d64443ffbd4a47f30bc41753007b570b47e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821046"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120561"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Konfigurace projektu Linux CMake
 
@@ -30,7 +30,7 @@ Pokud jste si nainstalovali úlohu Linux C++ pro Visual Studio, je standardně v
 Toto téma předpokládá, že máte základní znalosti podpora CMake v sadě Visual Studio. Další informace najdete v tématu [nástroje CMake pro Visual C++](../ide/cmake-tools-for-visual-cpp.md). Další informace o CMake samotný najdete v tématu [sestavení, testování a balíček svůj Software s CMake](https://cmake.org/).
 
 > [!NOTE]  
-> Podpora CMake v sadě Visual Studio vyžaduje režim podporu serveru, která byla zavedena v CMake 3.8. Pro hodnotu typu variant CMake poskytovaný společností Microsoft, který podporuje [zobrazení cílů CMake](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) podokno v sadě Visual Studio, stáhněte si nejnovější předem připravených binární soubory na [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases). Pokud váš správce balíčků poskytuje starší verze než CMake 3.8, můžete alternativně vyřešit ji [vytváření CMake ze zdroje](#build-a-supported-cmake-release-from-source), nebo byste radši chtěli použít standardní CMake, si můžete stáhnout z oficiální [stránku pro stažení CMake](https://cmake.org/download/). 
+> Podpora CMake v sadě Visual Studio vyžaduje režim podporu serveru, která byla zavedena v CMake 3.8. Hodnotu typu variant poskytovaný společností Microsoft CMake stáhnout nejnovější předem připravených binární soubory na [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases). 
 
 ## <a name="open-a-folder"></a>Otevřít složku
 
@@ -118,49 +118,10 @@ Existují také některé volitelné nastavení, která vám pomůže k větší
 
 Tyto možnosti umožňují spuštění příkazů v okně vzdáleného před a po sestavení a před generování CMake. Může být libovolný platný příkaz na vzdáleného pole. Výstup je přesměrovaná zpět do sady Visual Studio.
 
-## <a name="build-a-supported-cmake-release-from-source"></a>Podporované verze CMake ze zdroje sestavení
+## <a name="download-prebuilt-cmake-binaries"></a>Stáhněte si předem připravených binární soubory CMake
 
-Minimální verzi CMake požadovaná na vaší platformě Linux 3.8 je počítač, musí taky podporovat režim serveru. To chcete ověřit spuštěním tohoto příkazu:
+Vaší distribuce Linuxu mohou mít starší verzi CMake. Podpora CMake v sadě Visual Studio vyžaduje režim podporu serveru, která byla zavedena v CMake 3.8. Hodnotu typu variant poskytovaný společností Microsoft CMake stáhnout nejnovější předem připravených binární soubory na [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases). 
 
-```cmd
-cmake --version
-```
-
-Pokud chcete ověřit, že je povolený režim tohoto serveru, spusťte:
-
-```cmd
-cmake -E capabilities
-```
-
-Ve výstupu vyhledejte **"serverMode": true**. Všimněte si, že i při sestavování CMake ze zdroje jak je popsáno níže by měla zkontrolujte možnosti až budete hotovi. Systému Linux mohou mít omezení, zabrání režim serveru povolené.
-
-Abyste mohli začít vytvářet CMake ze zdroje v prostředí systému Linux, ujistěte se, že váš správce balíčků je aktuální a zda máte git a cmake, které jsou k dispozici.
-
-Nejprve naklonujte CMake zdrojů, ze [úložiště Microsoft CMake](https://github.com/Microsoft/CMake) kde budeme udržovat větev pro Visual Studio – podpora CMake:
-
-```cmd
-sudo apt-get update
-sudo apt-get install -y git cmake
-git clone https://github.com/Microsoft/CMake.git
-cd CMake
-```
-
-V dalším kroku sestavit a nainstalovat aktuální verzi CMake /usr/local/bin, spusťte tyto příkazy:
-
-```cmd
-mkdir out
-cd out
-cmake ../
-make
-sudo make install
-```
-
-V dalším kroku spusťte tento příkaz k ověření verze > = 3.8 a tento server je povolen režim:
-
-```cmd
-/usr/local/bin/cmake –version
-cmake -E capabilities
-```
 
 ## <a name="see-also"></a>Viz také
 

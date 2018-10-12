@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 845addc73d0dd542b7bb6a4abccbf915005ddd41
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 4dab192b2d5d4210461bd791e3f4d9996363c953
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235812"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163293"
 ---
 # <a name="safeint-class"></a>SafeInt – třída
 
@@ -194,7 +194,7 @@ Při provádění logické porovnání s objektem SafeInt je výhradně aritmeti
 
 - `((uint)~0) > -1`
 
-První příkaz se překládá na `true`, ale druhý příkaz přeloží na `false`. Bitová negace 0 je 0xFFFFFFFF. V druhém příkazu výchozí operátor porovnání porovná 0xFFFFFFFF na 0xFFFFFFFF a je rovna považuje za. Operátor porovnání pro `SafeInt` třídy si uvědomuje, že druhý parametr je záporné, že první parametr je bez znaménka. Proto, i když bitové reprezentace je stejné, `SafeInt` logický operátor, který si uvědomuje, že je celé číslo bez znaménka větší než -1.
+První příkaz se překládá na **true**, ale druhý příkaz přeloží na `false`. Bitová negace 0 je 0xFFFFFFFF. V druhém příkazu výchozí operátor porovnání porovná 0xFFFFFFFF na 0xFFFFFFFF a je rovna považuje za. Operátor porovnání pro `SafeInt` třídy si uvědomuje, že druhý parametr je záporné, že první parametr je bez znaménka. Proto, i když bitové reprezentace je stejné, `SafeInt` logický operátor, který si uvědomuje, že je celé číslo bez znaménka větší než -1.
 
 Buďte opatrní při použití `SafeInt` třídy společně s `?:` Ternární operátor. Vezměte v úvahu následující řádek kódu.
 

@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5844afa476510e4b4984ae69c75193fdf048ddd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f1e313dbda3dfc75f291310818d593b9a4daf90b
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382359"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162175"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Operátory oboru názvů Concurrency (AMP)
 
@@ -52,7 +52,7 @@ Jedna z n-tic pro srovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud jsou záznamy stejné; v opačném případě `false`.
+**Hodnota TRUE** Pokud jsou záznamy stejné; jinak **false**.
 
 ##  <a name="operator_neq"></a>  Operator! =
 
@@ -81,7 +81,7 @@ Jedna z n-tic pro srovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud záznamy nejsou stejné; v opačném případě `false`.
+**Hodnota TRUE** Pokud záznamy nejsou stejné; jinak **false**.
 
 ##  <a name="operator_add"></a>  Operator +
 

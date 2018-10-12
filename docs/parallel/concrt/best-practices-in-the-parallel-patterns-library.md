@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28bedc703a8fa965b5380cb8c7eba840d07f7772
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d5ad7d0210f99b1b1aa5c481ed1b8695c68fb311
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396932"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163384"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Osvědčené postupy v knihovně PPL (Parallel Patterns Library)
 
@@ -180,7 +180,7 @@ Pokud je to možné, neprovádějte blokující operace před voláním [concurr
 
 Když úloha provede kooperativní blokující operace, modul runtime můžete provádět jinou práci, zatímco první úloha čeká na data. Modul runtime přeplánuje úkol čekání, když se odblokuje. Modul runtime obvykle přeplánuje úkoly, které byly nedávno odblokované před přeplánuje úlohy, které byly menší odblokované. Modul runtime může proto plánování zbytečné práce během blokující operace, což vede k poklesu výkonu. Když provádíte operaci blokování před zrušení paralelně prováděných úloh, proto můžete blokující operace zpoždění volání `cancel`. To způsobí, že jiné úlohy, které zbytečné práce.
 
-Podívejte se na následující příklad, který definuje `parallel_find_answer` funkce, která vyhledá prvek zadaného pole, která splňuje zadaný predikát funkce. Při vrácení funkce predikátu `true`, vytvoří funkci paralelní práce `Answer` objektu a zruší jedné úlohy.
+Podívejte se na následující příklad, který definuje `parallel_find_answer` funkce, která vyhledá prvek zadaného pole, která splňuje zadaný predikát funkce. Při vrácení funkce predikátu **true**, vytvoří funkci paralelní práce `Answer` objektu a zruší jedné úlohy.
 
 [!code-cpp[concrt-blocking-cancel#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_13.cpp)]
 

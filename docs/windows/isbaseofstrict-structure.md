@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fc41bdccf9cce3d455d4effd3541731929e5de2
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 90ceaf20a5d601fc2904b7ce8610b4a3906e30ac
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789264"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161200"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict – struktura
 
@@ -52,7 +52,7 @@ Odvozeného typu.
 
 Ověřuje, zda je jeden typ základ jiného.
 
-První šablona testuje, jestli typ je odvozen od základního typu, který může přinést `true` nebo `false`. Druhá šablona testuje, jestli je typ odvozený od sebe sama, který vždy dává `false`.
+První šablona testuje, jestli typ je odvozen od základního typu, který může přinést **true** nebo **false**. Druhá šablona testuje, jestli je typ odvozený od sebe sama, který vždy dává **false**.
 
 ## <a name="members"></a>Členové
 
@@ -84,4 +84,4 @@ static const bool value = __is_base_of(Base, Derived);
 
 Označuje, zda je jeden typ základ jiného.
 
-`value` je `true` Pokud typ `Base` je základní třídu typu `Derived`, v opačném případě je `false`.
+`value` je **true** Pokud typ `Base` je základní třídu typu `Derived`, v opačném případě je **false**.

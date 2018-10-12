@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2798c4abe33e49d2ac6199ad6f9a1013805fde7b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0bcdb05230cdacbf626235e315e605414c435493
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424414"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163059"
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry – třída
 
@@ -124,7 +124,7 @@ Ukazatele na blok, který má být vyhledán v `network_link_registry` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud byl nalezen blok, `false` jinak.
+**Hodnota TRUE** Pokud bloku byla nalezena, **false** jinak.
 
 ##  <a name="count"></a> Počet
 
@@ -153,7 +153,7 @@ Ukazatele na blok, který se odeberou, pokud se nenašel.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud odkaz byl nalezen a odebrání `false` jinak.
+**Hodnota TRUE** Pokud odkazu byl nalezen a odebrání **false** jinak.
 
 ## <a name="see-also"></a>Viz také
 

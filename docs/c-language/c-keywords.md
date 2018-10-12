@@ -1,7 +1,7 @@
 ---
 title: Klíčová slova jazyka C | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80c1f0d4ac5d843732771281202612e31a4073c2
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: d9a5255609c3abb4846ce08a2163407eee6f240c
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860885"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161902"
 ---
 # <a name="c-keywords"></a>Klíčová slova jazyka C
 
@@ -31,7 +31,7 @@ ms.locfileid: "48860885"
 |-|-|-|-|
 |**auto**|**double**|**int**|**struct**|
 |**break**|**else**|**long**|**switch**|
-|**případ**|**enum**|**Registrace**|**Definice TypeDef**|
+|**case**|**enum**|**Registrace**|**Definice TypeDef**|
 |**char**|**extern**|**return**|**sjednocení**|
 |**const**|**float**|**short**|**bez znaménka**|
 |**continue**|**for**|**podepsané**|**void**|
@@ -48,17 +48,19 @@ Kompilátor jazyka C společnosti Microsoft rozlišuje následující klíčová
 
 |||||
 |-|-|-|-|
-|**__asm**|**DllImport**<sup>2</sup>|**__int8**|**naked**<sup>2</sup>|
-|**__based –**<sup>1</sup>|**__except**|**__int16**|**__stdcall**|
-|**__cdecl**|**__fastcall**|**__int32**|**vlákno**<sup>2</sup>|
-|**__declspec**|**__finally**|**__int64**|**__try**|
-|**dllexport**<sup>2</sup>|**__inline**|**__leave**||
+|**__asm**<sup>3</sup>|**DllImport**<sup>2</sup>|**__int8**<sup>3</sup>|**naked**<sup>2</sup>|
+|**__based –**<sup>1, 3</sup>|**__except**<sup>3</sup>|**__int16**<sup>3</sup>|**__stdcall**<sup>3</sup>|
+|**__cdecl**<sup>3</sup>|**__fastcall**|**__int32**<sup>3</sup>|**vlákno**<sup>2</sup>|
+|**__declspec**<sup>3</sup>|**__finally**<sup>3</sup>|**__int64**<sup>3</sup>|**__try**<sup>3</sup>|
+|**dllexport**<sup>2</sup>|**__inline**<sup>3</sup>|**__leave**<sup>3</sup>||
 
 <sup>1</sup> **__based** – klíčové slovo má omezené využití pro 32bitové a 64bitové cílové soubory.
 
 <sup>2</sup> jde o speciální identifikátory při použití s **__declspec**; jejich použití v jiných kontextech není omezeno.
 
-Ve výchozím nastavení jsou povolena rozšíření společnosti Microsoft. K zajištění plné přenositelnosti programů lze zakázat rozšíření Microsoft zadáním možnosti kompilátoru /Za (kompilace z důvodu kompatibility ANSI) během kompilace. Když toto provedete, jsou zakázána klíčová slova specifická pro společnost Microsoft.
+<sup>3</sup> z důvodu kompatibility s předchozími verzemi, tato klíčová slova jsou dostupné s dvěma úvodními podtržítky a jedno vedoucí podtržítko, když jsou povolena rozšíření společnosti Microsoft.
+
+Ve výchozím nastavení jsou povolena rozšíření společnosti Microsoft. Zajistit, že plné přenositelnosti programů lze zakázat rozšíření Microsoft zadáním [/Za \(zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md) možnost během kompilace. Když toto provedete, jsou zakázána klíčová slova specifická pro společnost Microsoft.
 
 Jsou-li rozšíření společnosti Microsoft povolena, lze klíčová slova specifická pro společnost Microsoft uvedená výše používat v programech. Kvůli souladu s normou ANSI začíná většina těchto klíčových slov dvojitým podtržítkem. Čtyři výjimky, **dllexport**, **dllimport**, **naked**, a **vlákno**, jsou používány pouze s **__declspec** a proto nevyžadují dvě podtržítka na začátku. Z důvodu zpětné kompatibility jsou podporovány verze ostatních klíčových slov s jedním podtržítkem.
 

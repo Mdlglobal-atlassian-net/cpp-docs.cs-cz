@@ -61,12 +61,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f549f0737d74829dbd79c280f3f6c1acd9bca6e
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 12afcfe09335082f873d88e1aa825b4eee3a1ae2
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235994"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163228"
 ---
 # <a name="comptr-class"></a>ComPtr – třída
 
@@ -539,9 +539,9 @@ Odkaz na jiný `ComPtr` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První operátor výnosy `true` Pokud objekt *a* rovná objektu *b*; v opačném případě `false`.
+První operátor výnosy **true** Pokud objekt *a* rovná objektu *b*; v opačném případě **false**.
 
-Druhý a třetí operátory yield `true` Pokud objekt *a* rovná `nullptr`; v opačném případě `false`.
+Druhý a třetí operátory yield **true** Pokud objekt *a* rovná **nullptr**; v opačném případě **false**.
 
 ## <a name="operator-inequality"></a>ComPtr::operator! =
 
@@ -574,9 +574,9 @@ Odkaz na jiný `ComPtr` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První operátor výnosy `true` Pokud objekt *a* není roven objektu *b*; v opačném případě `false`.
+První operátor výnosy **true** Pokud objekt *a* není roven objektu *b*; v opačném případě **false**.
 
-Druhý a třetí operátory yield `true` Pokud objekt *a* není roven `nullptr`; v opačném případě `false`.
+Druhý a třetí operátory yield **true** Pokud objekt *a* není roven **nullptr**; v opačném případě **false**.
 
 ## <a name="operator-microsoft-wrl-details-booltype"></a>ComPtr::operator Microsoft::WRL::Details::BoolType
 
@@ -588,7 +588,7 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je přidruženo toto rozhraní `ComPtr`, adresu [boolstruct::Member –](../windows/boolstruct-member-data-member.md) datový člen; v opačném případě `nullptr`.
+Pokud je přidruženo toto rozhraní `ComPtr`, adresu [boolstruct::Member –](../windows/boolstruct-member-data-member.md) datový člen; v opačném případě **nullptr**.
 
 ## <a name="ptr"></a>Comptr::ptr_ –
 

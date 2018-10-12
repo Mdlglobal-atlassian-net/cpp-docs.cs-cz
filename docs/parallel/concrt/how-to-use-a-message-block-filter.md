@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b16dee4d0a3c5a6d09c1fd19006c832be400d5a4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 93578f9d798e0c0bab0fe58a3211c20507dd99d4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411068"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162058"
 ---
 # <a name="how-to-use-a-message-block-filter"></a>Postupy: Použití filtru bloku zpráv
 
@@ -48,7 +48,7 @@ Protože `transformer` objektu přijímá pouze prvočísel, `transformer` samot
 
 [!code-cpp[concrt-primes-filter#2](../../parallel/concrt/codesnippet/cpp/how-to-use-a-message-block-filter_2.cpp)]
 
-`transformer` Objekt nyní zpracovává jenom hodnoty, které jsou primární. V předchozím příkladu `transformer` objekt zpracovávat všechny zprávy. V předchozím příkladu proto musí být stejný počet zpráv, které se odešle. Tento příklad používá výsledek [concurrency::send](reference/concurrency-namespace-functions.md#send) funkce k určení, kolik zpráv pro příjem z `transformer` objektu. `send` Vrací funkce `true` když vyrovnávací paměti zpráv přijme zprávu a `false` při vyrovnávací paměti zpráv odmítne zprávy. Počet pokusů, vyrovnávací paměti zpráv přijímá zprávy proto odpovídá počtu prvočísel.
+`transformer` Objekt nyní zpracovává jenom hodnoty, které jsou primární. V předchozím příkladu `transformer` objekt zpracovávat všechny zprávy. V předchozím příkladu proto musí být stejný počet zpráv, které se odešle. Tento příklad používá výsledek [concurrency::send](reference/concurrency-namespace-functions.md#send) funkce k určení, kolik zpráv pro příjem z `transformer` objektu. `send` Vrací funkce **true** když vyrovnávací paměti zpráv přijme zprávu a **false** při vyrovnávací paměti zpráv odmítne zprávy. Počet pokusů, vyrovnávací paměti zpráv přijímá zprávy proto odpovídá počtu prvočísel.
 
 ## <a name="example"></a>Příklad
 

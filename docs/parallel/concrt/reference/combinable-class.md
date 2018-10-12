@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60e1f944d19efd22cb2c6c7d6a3752d6d32ae1e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d544ac392e2eb227d7e1c37412110d09272f10d5
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381670"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162502"
 ---
 # <a name="combinable-class"></a>combinable – třída
 
@@ -61,7 +61,7 @@ Datový typ konečný výsledek sloučení. Typ musí mít konstruktor kopie a v
 |[Vymazat](#clear)|Vymaže všechny výpočetní mezivýsledků z předchozí spotřeby.|
 |[kombinování](#combine)|Vypočítá konečnou hodnotu ze sady dílčích výpočty místního vlákna voláním Zadaná kombinace funktor.|
 |[combine_each](#combine_each)|Vypočítá konečnou hodnotu ze sady dílčích výpočty místního vlákna voláním funktor Zadaná kombinace jednou za dílčí výpočtu místního vlákna. Konečný výsledek je shromážděných řešením objektu funkce.|
-|[místní](#local)|Přetíženo. Vrátí odkaz na dílčí výpočtu privátní vlákna.|
+|[local](#local)|Přetíženo. Vrátí odkaz na dílčí výpočtu privátní vlákna.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
@@ -182,7 +182,7 @@ T& local(bool& _Exists);
 ### <a name="parameters"></a>Parametry
 
 *_Exists*<br/>
-Odkaz na logickou hodnotu. Logická hodnota, odkazuje tento argument se nastaví `true` Pokud dílčí výpočtu již existoval v tomto vláknu a nastavte na `false` Pokud jste to byli první dílčí výpočet v tomto vlákně.
+Odkaz na logickou hodnotu. Logická hodnota, odkazuje tento argument se nastaví **true** Pokud dílčí výpočtu již existoval v tomto vláknu a nastavte na **false** Pokud jste to byli první dílčí výpočet v tomto vlákně.
 
 ### <a name="return-value"></a>Návratová hodnota
 

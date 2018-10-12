@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04202b647910914de8ebe92397efe1373e9508be
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8d6d91f312b028f44e0671c7960d4b06c2634928
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401365"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162506"
 ---
 # <a name="agent-class"></a>agent – třída
 
@@ -132,7 +132,7 @@ bool cancel();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud agenta byla zrušena, `false` jinak. Agenta nelze zrušit, pokud byl již spuštěn nebo již byla dokončena.
+**Hodnota TRUE** pokud agent byl zrušen, **false** jinak. Agenta nelze zrušit, pokud byl již spuštěn nebo již byla dokončena.
 
 ##  <a name="done"></a> Hotovo
 
@@ -144,7 +144,7 @@ bool done();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud se přesune do agenta `agent_done` stavu, `false` jinak. Agent, který byl zrušen nelze přesunout do `agent_done` stavu.
+**Hodnota TRUE** pokud agent je přesunut do `agent_done` stavu, **false** jinak. Agent, který byl zrušen nelze přesunout do `agent_done` stavu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -172,7 +172,7 @@ bool start();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud agent spuštěn správně, `false` jinak. Nelze spustit agenta, který byl zrušen.
+**Hodnota TRUE** pokud agent spuštěn správně, **false** jinak. Nelze spustit agenta, který byl zrušen.
 
 ##  <a name="status"></a> Stav
 

@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2050be008f89ff2d125842d5919407dc292eed40
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b0b8a17cf83171a570f2ca3f6ff40c657d17164d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105832"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162344"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap – třída
 
@@ -163,7 +163,7 @@ Klíč používaná k nalezení UnorderedMap elementu. Typ *klíč* je typename 
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud je nalezen klíč; v opačném případě `false`.
+**Hodnota TRUE** Pokud je klíč nalezen, jinak **false**.
 
 ## <a name="insert"></a>  Unorderedmap::Insert – metoda
 
@@ -188,7 +188,7 @@ Hodnota část páru klíč hodnota. Typ *hodnotu* je typename *V*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud klíč existujícího prvku v aktuální mapování odpovídá *klíč* a hodnota část tohoto prvku je nastavená na *hodnota*. `false` žádné stávající elementy v aktuálním Map *klíč* a *klíč* a *hodnotu* parametry jsou provedeny v páru klíč hodnota a pak přidá do aktuálního UnorderedMap.
+**Hodnota TRUE** Pokud klíč existujícího prvku v aktuální mapování odpovídá *klíč* a hodnota část tohoto prvku je nastavená na *hodnota*. **false** žádné stávající elementy v aktuálním Map *klíč* a *klíč* a *hodnotu* parametry jsou provedeny v páru klíč hodnota a pak přidá do aktuální UnorderedMap.
 
 ## <a name="lookup"></a>  Unorderedmap::Lookup – metoda
 

@@ -1,7 +1,7 @@
 ---
 title: Zkuste-except – příkaz | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 10/05/2018
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -11,6 +11,7 @@ f1_keywords:
 - EXCEPTION_CONTINUE_SEARCH
 - _exception_info
 - __except
+- _except
 - EXCEPTION_CONTINUE_EXECUTION
 - _exception_code
 - __except_cpp
@@ -35,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e938f5b7e5f25461ae921fbfa3c49920eca86eb
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: af4d14eb3fad691a5ff10665a83879ae4319a3d9
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861925"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162032"
 ---
 # <a name="try-except-statement"></a>try-except – příkaz
 
@@ -89,6 +90,8 @@ Vzhledem k tomu, **__except** výraz je vyhodnocen jako výraz jazyka C, je omez
 Každá aplikace může obsahovat svou vlastní obslužnou rutinu výjimky.
 
 Není povoleno přejít do **__try** příkaz však povoleno přejít mimo něj. Obslužná rutina výjimky není volána, pokud proces je ukončen v průběhu provádění příkazu **zkuste – s výjimkou** příkazu.
+
+Z důvodu kompatibility s předchozími verzemi **_try**, **_except**, a **_leave** jsou synonyma pro **__try**, **__except** , a **__leave** Pokud – možnost kompilátoru [/Za \(zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md) určena.
 
 ### <a name="the-leave-keyword"></a>Klíčové slovo __leave
 
