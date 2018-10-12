@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f5b84020d9428066bdadfff53500d671233f07d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f4a184e0fee76f3aa5bb8f7729250c03b10b9dfc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386720"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163488"
 ---
 # <a name="sourceblock-class"></a>source_block – třída
 
@@ -237,7 +237,7 @@ Metoda vyvolá [invalid_argument](../../../standard-library/invalid-argument-cla
 
 Vyvolá metodu [bad_target –](bad-target-class.md) výjimky-li parametr `_PTarget` nepředstavuje cíl, který volá `reserve`.
 
-`consume` Metoda je podobná `accept`, ale musí vždy předcházet volání `reserve` vrácená `true`.
+`consume` Metoda je podobná `accept`, ale musí vždy předcházet volání `reserve` vrácená **true**.
 
 ##  <a name="consume_message"></a> consume_message
 
@@ -427,7 +427,7 @@ Ukazatel na cílový blok, který volá `reserve` metody.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud zpráva byla úspěšně vyhrazené, `false` jinak. Rezervace může selhat z mnoha důvodů včetně: byla zpráva již vyhrazena nebo přijatý jiný cíl, zdroj může zamítnout rezervace a tak dále.
+**Hodnota TRUE** Pokud zpráva byla úspěšně vyhrazené, **false** jinak. Rezervace může selhat z mnoha důvodů včetně: byla zpráva již vyhrazena nebo přijatý jiný cíl, zdroj může zamítnout rezervace a tak dále.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -450,11 +450,11 @@ virtual bool reserve_message(runtime_object_identity _MsgId) = 0;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud zpráva byla úspěšně vyhrazené, `false` jinak.
+**Hodnota TRUE** Pokud zpráva byla úspěšně vyhrazené, **false** jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Po `reserve` je volána, pokud se vrátí `true`– buď `consume` nebo `release` využít nebo uvolnit vlastnictví zprávy musí být volána.
+Po `reserve` je volána, pokud se vrátí **true**– buď `consume` nebo `release` využít nebo uvolnit vlastnictví zprávy musí být volána.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 

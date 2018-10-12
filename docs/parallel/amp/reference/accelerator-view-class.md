@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b9a157f747f32b7e146a0bc89ac695837c37974
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 30eb0befda4d439bf4153d7c6726c982d3bf19ae
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399675"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163332"
 ---
 # <a name="acceleratorview-class"></a>accelerator_view – třída
 
@@ -74,9 +74,9 @@ class accelerator_view;
 
 |Název|Popis|
 |----------|-----------------|
-|[operator!=](#operator_neq)|Porovná tento `accelerator_view` objekt s jiným a vrátí `false` případě, že jsou totožné; v opačném případě vrátí `true`.|
+|[operator!=](#operator_neq)|Porovná tento `accelerator_view` objekt s jiným a vrátí **false** případě, že jsou totožné; v opačném případě vrátí **true**.|
 |[operátor =](#operator_eq)|Zkopíruje obsah zadaného `accelerator_view` do tohoto objektu.|
-|[operator==](#operator_eq_eq)|Porovná tento `accelerator_view` objekt s jiným a vrátí `true` případě, že jsou totožné; v opačném případě vrátí `false`.|
+|[operator==](#operator_eq_eq)|Porovná tento `accelerator_view` objekt s jiným a vrátí **true** případě, že jsou totožné; v opačném případě vrátí **false**.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
@@ -86,7 +86,7 @@ class accelerator_view;
 |[is_auto_selection](#is_auto_selection)|Získá logickou hodnotu, která určuje, zda modul runtime automaticky vybere odpovídající akcelerátor při `accelerator_view` objekt je předán [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).|
 |[is_debug](#is_debug)|Získá logickou hodnotu, která určuje, zda `accelerator_view` objekt má povolenu vrstvu DEBUG pro rozsáhlé hlášení chyb.|
 |[queuing_mode –](#queuing_mode)|Načte režim zařazování do fronty pro `accelerator_view` objektu.|
-|[Verze](#version)|Získá verzi accelerator.|
+|[version](#version)|Získá verzi accelerator.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -183,7 +183,7 @@ bool get_is_auto_selection() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud modul runtime automaticky vybere odpovídající akcelerátor; v opačném případě `false`.
+**Hodnota TRUE** Pokud modul runtime automaticky vybere odpovídající akcelerátor; v opačném případě **false**.
 
 ## <a name="accelerator_view__get_is_debug"></a> get_is_debug –
 
@@ -249,7 +249,7 @@ __declspec(property(get= get_is_debug)) bool is_debug;
 
 ## <a name="accelerator_view__operator_neq"></a> Operator! =
 
-Porovná tento objekt accelerator_view s jiným a vrátí `false` případě, že jsou totožné; v opačném případě vrátí `true`.
+Porovná tento objekt accelerator_view s jiným a vrátí **false** případě, že jsou totožné; v opačném případě vrátí **true**.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -264,7 +264,7 @@ bool operator!= (    const accelerator_view & _Other ) const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`false` Pokud jsou oba objekty stejné. v opačném případě `true`.
+**false** Pokud jsou oba objekty stejné; jinak **true**.
 
 ## <a name="accelerator_view__operator_eq"></a> operátor =
 
@@ -287,7 +287,7 @@ Odkaz na upravené `accelerator_view` objektu.
 
 ## <a name="accelerator_view__operator_eq_eq"></a> Operator ==
 
-Porovná tento objekt accelerator_view s jiným a vrátí `true` případě, že jsou totožné; v opačném případě vrátí `false`.
+Porovná tento objekt accelerator_view s jiným a vrátí **true** případě, že jsou totožné; v opačném případě vrátí **false**.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -302,7 +302,7 @@ bool operator= = (    const accelerator_view & _Other ) const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud jsou oba objekty stejné. v opačném případě `false`.
+**Hodnota TRUE** Pokud jsou oba objekty stejné; jinak **false**.
 
 ## <a name="accelerator_view__queuing_mode"></a> queuing_mode –
 

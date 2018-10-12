@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad6feef707d991d07fa4e086bc8535f32b991825
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9c337ec94f863e6c19851bcf962db61f277491cf
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716855"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163241"
 ---
 # <a name="msbuild-visual-c-overview"></a>Přehled nástroje MSBuild (Visual C++)
 
@@ -111,7 +111,7 @@ Například nastavit `PreferredToolArchitecture` vlastnost `x64` použití 64bit
 
 ### <a name="useenv-property"></a>Vlastnost UseEnv
 
-Ve výchozím nastavení specifické pro platformu pro aktuální projekt potlačit proměnné prostředí PATH, INCLUDE, LIB, LIBPATH, konfigurace a PLATFORMA. Nastavte `UseEnv` vlastnost `true` zaručí, že proměnné prostředí nejsou přepsána.
+Ve výchozím nastavení specifické pro platformu pro aktuální projekt potlačit proměnné prostředí PATH, INCLUDE, LIB, LIBPATH, konfigurace a PLATFORMA. Nastavte `UseEnv` vlastnost **true** zaručí, že proměnné prostředí nejsou přepsána.
 
 `msbuild myProject.vcxproj /p:UseEnv=true`
 

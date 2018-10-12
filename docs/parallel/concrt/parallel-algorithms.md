@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23a4efb1412260ad71a610f53a7d1745157b3c53
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f1eb46754f80bca89419e6c3c85db94ec802df2f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434989"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163397"
 ---
 # <a name="parallel-algorithms"></a>Paralelní algoritmy
 
@@ -284,7 +284,7 @@ Tento příklad používá výraz lambda jako funkce hash. Můžete také použ�
 
 [!code-cpp[concrt-parallel-sort-points#3](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_14.cpp)]
 
-Funkce hash musí vrátit integrální typ ([std::is_integral::value](../../standard-library/is-integral-class.md) musí být `true`). Tento celočíselný typ musí být převoditelná na typ `size_t`.
+Funkce hash musí vrátit integrální typ ([std::is_integral::value](../../standard-library/is-integral-class.md) musí být **true**). Tento celočíselný typ musí být převoditelná na typ `size_t`.
 
 ###  <a name="choose_sort"></a> Volba řadicího algoritmu
 
