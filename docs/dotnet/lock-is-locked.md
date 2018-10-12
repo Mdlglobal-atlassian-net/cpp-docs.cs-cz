@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 130ffcb372e3791af74ae6ec70e7b9bcfaff9376
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 64c0a3fbc197af66e8a57928cadc29c28b1ece1a
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438090"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163761"
 ---
 # <a name="lockislocked"></a>lock::is_locked
 
@@ -40,13 +40,13 @@ bool is_locked();
 
 ## <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud je držen zámek, `false` jinak.
+**Hodnota TRUE** Pokud je držen zámek, **false** jinak.
 
 ## <a name="example"></a>Příklad
 
 Tento příklad používá jednu instanci třídy napříč více vlákny.  K zajištění, že jsou přístupy k jeho vnitřní data konzistentní vzhledem k aplikacím pro každé vlákno používá třídu zámek na sobě.  Hlavního vlákna aplikace používá zámek na stejnou instanci třídy, aby pravidelně kontrolovaly, zda stále existují jakékoli pracovní vlákna a čekání na ukončení až do všech pracovních vláken dokončení jejich úloh.
 
-```
+```cpp
 // msl_lock_is_locked.cpp
 // compile with: /clr
 #include <msclr/lock.h>

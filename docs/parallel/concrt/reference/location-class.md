@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e4e2b7af8e99059151963398215a18411797101
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8c2352662de2d55be823064afd16354ff7f2c72e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380149"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163618"
 ---
 # <a name="location-class"></a>location – třída
 
@@ -157,7 +157,7 @@ Operand `location`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud se liší, dvěma umístěními `false` jinak.
+**Hodnota TRUE** Pokud dvou míst je jiný, **false** jinak.
 
 ##  <a name="operator_eq"></a> operátor =
 
@@ -189,7 +189,7 @@ Operand `location`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud jsou identické, dvěma umístěními a `false` jinak.
+**Hodnota TRUE** Pokud dvou míst je stejné, a **false** jinak.
 
 ## <a name="see-also"></a>Viz také
 

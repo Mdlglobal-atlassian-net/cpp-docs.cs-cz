@@ -1,7 +1,7 @@
 ---
 title: Vložené funkce (C++) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -9,6 +9,10 @@ f1_keywords:
 - __forceinline_cpp
 - __inline_cpp
 - inline_cpp
+- __inline
+- _inline
+- __forceinline
+- _forceinline
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31738407b788f69998681442f15a8f1c104477a3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 21f3d74a7b640e203a8a5882710849c98ba5b40f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017818"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163585"
 ---
 # <a name="inline-functions-c"></a>Vložené funkce (C++)
 
@@ -84,7 +88,7 @@ Pomocí vložených funkcí lze program urychlit, protože tyto funkce odstraňu
 
 Kompilátor zpracovává možnosti vloženého rozšíření a klíčová slova jako návrhy. Není zaručeno, že budou funkce vloženy. Nelze vynutit na kompilátoru k vložení funkce, i s **__forceinline** – klíčové slovo. Při kompilaci s **/CLR**, kompilátor nevloží funkci Pokud nejsou u funkce použity atributy zabezpečení.
 
-**Vložené** – klíčové slovo je k dispozici pouze v jazyce C++. **__Inline** a **__forceinline** klíčová slova jsou k dispozici v jazycích C a C++. Z důvodu kompatibility s předchozími verzemi **_inline** je synonymum pro **__inline**.
+**Vložené** – klíčové slovo je k dispozici pouze v jazyce C++. **__Inline** a **__forceinline** klíčová slova jsou k dispozici v jazycích C a C++. Z důvodu kompatibility s předchozími verzemi **_inline** a **_forceinline** jsou synonyma pro **__inline**, a **__forceinline** Pokud – možnost kompilátoru [/Za \(zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md) určena.
 
 **Vložené** – klíčové slovo sděluje kompilátoru, že je upřednostněno vložené rozšíření upřednostňované. Kompilátor však může vytvořit samostatnou instanci funkce (vytvoření instance) a může vytvořit standardní spojení volání namísto vložení kódu. Jsou dva případy, kdy tato situace může nastat:
 

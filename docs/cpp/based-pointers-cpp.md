@@ -1,12 +1,13 @@
 ---
 title: Na základě ukazatele (C++) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __based
+- _based
 - __based_cpp
 dev_langs:
 - C++
@@ -19,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dc4d19b94c8d0257eb1dbfc715b9eed7c5d85b4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4465cb2965983c37ac9d758e424b58b5ed3304fd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46074433"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163605"
 ---
 # <a name="based-pointers-c"></a>Základní ukazatelé (C++)
 
@@ -62,7 +63,7 @@ Ukazateli `vpBuffer` je přiřazena adresa paměti, která je přidělena v prog
 
 Při dereferenci ukazatele základní třídy musí být základ buď explicitně zadán, nebo implicitně znám prostřednictvím deklarace.
 
-Z důvodu kompatibility s předchozími verzemi **_založeno** je synonymum pro **__based**.
+Z důvodu kompatibility s předchozími verzemi **_založeno** je synonymum pro **__based** Pokud – možnost kompilátoru [/Za \(zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md) je zadat.
 
 ## <a name="example"></a>Příklad
 

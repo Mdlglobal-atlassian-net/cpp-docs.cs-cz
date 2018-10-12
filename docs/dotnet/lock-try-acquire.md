@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7782f59ae63c185995fe52f19bca739bc12fcaa1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0f121ff9915e49c98bc9f32ff683f8d08914f560
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375845"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163462"
 ---
 # <a name="locktryacquire"></a>lock::try_acquire
 
@@ -50,7 +50,7 @@ Hodnota časového limitu v milisekundách, nebo jako <xref:System.TimeSpan>.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud byl získán zámek, `false` jinak.
+**Hodnota TRUE** Pokud byl získán zámek, **false** jinak.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -60,7 +60,7 @@ Pokud již byl získán zámek, tato funkce nemá žádný účinek.
 
 Tento příklad používá jednu instanci třídy napříč více vlákny.  K zajištění, že jsou přístupy k jeho vnitřní data konzistentní vzhledem k aplikacím pro každé vlákno používá třídu zámek na sobě.  Hlavního vlákna aplikace používá zámek na stejnou instanci třídy, aby pravidelně kontrolovaly, zda stále existují jakékoli pracovní vlákna a čekání na ukončení až do všech pracovních vláken dokončení jejich úloh.
 
-```
+```cpp
 // msl_lock_try_acquire.cpp
 // compile with: /clr
 #include <msclr/lock.h>

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f96a8a27b511c1a93114c32d048043aa9562fe1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 24e1113dac068a20e535bee3e8fd5fa9dcfb9064
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392958"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163566"
 ---
 # <a name="how-to-use-oversubscription-to-offset-latency"></a>Postupy: Kompenzace latence vytvořením nadbytečného počtu vláken
 
@@ -30,7 +30,7 @@ Překryvný odběr můžete zlepšit celkové efektivity některé aplikace, kte
 
 V tomto příkladu [asynchronní knihovnou agentů](../../parallel/concrt/asynchronous-agents-library.md) ke stažení souborů ze serverů HTTP. `http_reader` Třída odvozena z [concurrency::agent](../../parallel/concrt/reference/agent-class.md) a používá zprávu předávání k asynchronnímu čtení názvy adresu URL ke stažení.
 
-`http_reader` Třídy používá [concurrency::task_group](reference/task-group-class.md) třídy souběžně číst každý soubor. Každý úkol volá [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) metodu `_BeginOversubscription` parametr nastaven na `true` chcete povolit překročení stanovených v aktuálním kontextu. Každý úkol, použije Microsoft Foundation Classes (MFC) [cinternetsession –](../../mfc/reference/cinternetsession-class.md) a [chttpfile –](../../mfc/reference/chttpfile-class.md) třídy ke stažení souboru. Nakonec se volá každý úkol `Context::Oversubscribe` s `_BeginOversubscription` parametr nastaven na `false` zakázat překryvného odběru.
+`http_reader` Třídy používá [concurrency::task_group](reference/task-group-class.md) třídy souběžně číst každý soubor. Každý úkol volá [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) metodu `_BeginOversubscription` parametr nastaven na **true** chcete povolit překročení stanovených v aktuálním kontextu. Každý úkol, použije Microsoft Foundation Classes (MFC) [cinternetsession –](../../mfc/reference/cinternetsession-class.md) a [chttpfile –](../../mfc/reference/chttpfile-class.md) třídy ke stažení souboru. Nakonec se volá každý úkol `Context::Oversubscribe` s `_BeginOversubscription` parametr nastaven na **false** zakázat překryvného odběru.
 
 Pokud je povoleno více úloh než, modul runtime vytvoří jeden další vlákno, ve kterém chcete spouštět úlohy. Každá z tato vlákna můžete také přidělit nadměrnému počtu procesů aktuálního kontextu a tím vytvořit další vlákna. `http_reader` Třídy používá [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) objektu, který chcete omezit počet vláken, které aplikace používá. Agent inicializuje vyrovnávací paměti s pevným počtem hodnoty tokenu. Pro každou operaci stahování agent načte hodnota tokenu z vyrovnávací paměti předtím, než spustí operace a pak zapíše tuto hodnotu do vyrovnávací paměti po dokončení operace. Pokud vyrovnávací paměť je prázdná, agent čeká na jednu operací stažení, která hodnotu zapíše zpět do vyrovnávací paměti.
 
@@ -68,7 +68,7 @@ V příkladu může pracovat rychleji, pokud více úloh než je povolena, proto
 
 ## <a name="compiling-the-code"></a>Probíhá kompilace kódu
 
-Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `download-oversubscription.cpp` a pak spusťte jeden z následujících příkazů v okně Příkazový řádek sady Visual Studio.
+Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `download-oversubscription.cpp` a pak spusťte jeden z následujících příkazů v **příkazový řádek sady Visual Studio** okna.
 
 **cl.exe/EHsc/MD /D "_AFXDLL" download-oversubscription.cpp**
 

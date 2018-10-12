@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e222ba48121702c2388e64cea5e81da627f324a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e1dd4aab5912b2f15e8c0b36c7e482001809099d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110854"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163904"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections:: mapview – třída
 
@@ -117,11 +117,11 @@ bool HasKey(K key);
 ### <a name="parameters"></a>Parametry
 
 *Klíč*<br/>
-Klíč používaná k nalezení MapView elementu. Typ `key` je typename *K*.
+Klíč používaná k nalezení MapView elementu. Typ *klíč* je typename *K*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud je nalezen klíč; v opačném případě `false`.
+**Hodnota TRUE** Pokud je klíč nalezen, jinak **false**.
 
 ##  <a name="lookup"></a> MapView::Lookup – metoda
 

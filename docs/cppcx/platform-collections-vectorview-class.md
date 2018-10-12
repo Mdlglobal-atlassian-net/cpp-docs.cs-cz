@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3c516881115dd96337f950d83de2d30c57161b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9cfad80ac1f16d200f29504be1d4fb818e6e6afd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102509"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163891"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections:: vectorview – třída
 
@@ -168,11 +168,11 @@ Položka k vyhledání.
 *index*<br/>
 Z nuly vycházející index položky-li parametr `value` je nalezen, jinak 0.
 
-`index` Parametru je 0, pokud je první prvek VectorView položka nebo položka nebyla nalezena. Pokud je návratová hodnota `true`, položka byla nalezena a je první prvek; v opačném případě položka nebyla nalezena.
+*Index* parametru je 0, pokud je první prvek buď položka `VectorView` nebo položka nebyla nalezena. Pokud je návratová hodnota **true**, položka byla nalezena a je první prvek; v opačném případě položka nebyla nalezena.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud zadaná položka není nalezen; v opačném případě `false`.
+**Hodnota TRUE** Pokud zadaná položka je jinak **false**.
 
 ## <a name="size"></a>  VectorView::Size – metoda
 

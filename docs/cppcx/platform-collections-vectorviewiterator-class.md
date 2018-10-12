@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d45bd056bff41832a98c7936510d22a321891fd0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 36e0421e002efbcabc4c4525ddcf592258f6f7d1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102036"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163696"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections:: vectorviewiterator – třída
 
@@ -156,7 +156,7 @@ Jiné VectorViewIterator.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud se rovná aktuální VectorViewIterator `other`; v opačném případě `false`.
+**Hodnota TRUE** Pokud aktuální `VectorViewIterator` rovná *jiných*; v opačném případě **false**.
 
 ## <a name="operator-greater-than"></a>  VectorViewIterator::operator&gt; – operátor
 
@@ -176,11 +176,11 @@ Jiné VectorViewIterator.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud je větší než aktuální VectorViewIterator `other`; v opačném případě `false`.
+**Hodnota TRUE** Pokud je větší než aktuální VectorViewIterator *jiných*; v opačném případě **false**.
 
 ## <a name="operator-greater-than-or-equals"></a>  VectorViewIterator::operator&gt;= – operátor
 
-Určuje, zda aktuální VectorViewIterator je větší než nebo rovna hodnotě zadané VectorViewIterator.
+Určuje, zda aktuální `VectorViewIterator` je větší než nebo rovna hodnotě zadané `VectorViewIterator`.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -196,7 +196,7 @@ Jiné VectorViewIterator.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud aktuální VectorViewIterator je větší než nebo rovna hodnotě `other`; v opačném případě `false`.
+**Hodnota TRUE** Pokud aktuální `VectorViewIterator` je větší než nebo rovna hodnotě *jiných*; v opačném případě **false**.
 
 ## <a name="operator-increment"></a>  VectorViewIterator::operator ++ – operátor
 
@@ -237,7 +237,7 @@ Jiné VectorViewIterator.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud aktuální VectorViewIterator není roven `other`; v opačném případě `false`.
+**true** Pokud aktuální `VectorViewIterator` není roven *jiných*; v opačném případě **false**.
 
 ## <a name="operator-less-than"></a>  VectorViewIterator::operator&lt; – operátor
 
@@ -252,15 +252,15 @@ bool operator<(const VectorViewIterator& other) const;
 ### <a name="parameters"></a>Parametry
 
 *Ostatní*<br/>
-Jiné VectorIterator.
+Jiné `VectorIterator`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud je aktuální VectorIterator menší než `other`; v opačném případě `false`.
+**Hodnota TRUE** Pokud aktuální `VectorIterator` je menší než *jiných*; v opačném případě **false**.
 
 ## <a name="operator-less-than-or-equals"></a>  VectorViewIterator::operator&lt;= – operátor
 
-Označuje, zda aktuální VectorIterator je menší než nebo rovna hodnotě zadané VectorIterator.
+Určuje, zda aktuální `VectorIterator` je menší než nebo rovna zadané `VectorIterator`.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -272,11 +272,11 @@ bool operator<=(const VectorViewIterator& other) const;
 ### <a name="parameters"></a>Parametry
 
 *Ostatní*<br/>
-Jiné VectorIterator.
+Jiné `VectorIterator`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud aktuální VectorIterator je menší než nebo rovna `other`; v opačném případě `false`.
+**Hodnota TRUE** Pokud aktuální `VectorIterator` je menší než nebo rovna hodnotě *jiných*; v opačném případě **false**.
 
 ## <a name="operator-minus"></a>  VectorViewIterator::operator-– operátor
 

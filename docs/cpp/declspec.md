@@ -1,12 +1,14 @@
 ---
 title: __declspec | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 1/23/2018
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __declspec_cpp
+- __declspec
+- _declspec
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b159bcdae6e7f576ed92275ec5f79d25132b53e5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f413c56b665a1878fb1e948b975ab8e4cbc0daf4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46111314"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163581"
 ---
 # <a name="declspec"></a>__declspec
 
@@ -66,6 +68,8 @@ Mezera odděluje sekvenci modifikátoru deklarace. Příklady se zobrazí v pozd
 Rozšířený atribut gramatiky podporuje tyto atributy třídy úložiště specifické pro společnost Microsoft: [zarovnat](../cpp/align-cpp.md), [přidělit](../cpp/allocate.md), [appdomain](../cpp/appdomain.md), [code_seg](../cpp/code-seg-declspec.md), [zastaralé](../cpp/deprecated-cpp.md), [dllexport](../cpp/dllexport-dllimport.md), [dllimport](../cpp/dllexport-dllimport.md), [jitintrinsic](../cpp/jitintrinsic.md), [naked](../cpp/naked-cpp.md), [noalias](../cpp/noalias.md), [noinline](../cpp/noinline.md), [noreturn](../cpp/noreturn.md), [nothrow](../cpp/nothrow-cpp.md), [novtable](../cpp/novtable.md) , [procesu](../cpp/process.md), [omezit](../cpp/restrict.md), [safebuffers](../cpp/safebuffers.md), [selectany](../cpp/selectany.md), [chyby zabezpečení spectre](../cpp/spectre.md), a [vlákno](../cpp/thread.md). Také podporuje tyto atributy objektu COM: [vlastnost](../cpp/property-cpp.md) a [uuid](../cpp/uuid-cpp.md).
 
 **Code_seg**, **dllexport**, **dllimport**, **naked**, **noalias**, **nothrow** , **vlastnost**, **omezit**, **selectany**, **vlákno**, a **uuid**atributy třídy úložiště jsou vlastnosti pouze prohlášení objektu nebo funkce, do které se použijí. **Vlákno** atribut má vliv na data a pouze objekty. **Naked** a **chyby zabezpečení spectre** atributy ovlivňují pouze funkce. **Dllimport** a **dllexport** ovlivňují atributy funkce, data a objekty. **Vlastnost**, **selectany**, a **uuid** objekty COM ovlivňují atributy.
+
+Z důvodu kompatibility s předchozími verzemi **_declspec** je synonymum pro **__declspec** Pokud – možnost kompilátoru [/Za \(zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md) je zadat.
 
 **__Declspec** klíčová slova, umístit na začátek jednoduchého prohlášení. Kompilátor ignoruje bez varování všechna **__declspec** klíčová slova umístí po * nebo & a před identifikátorem proměnné v deklaraci.
 

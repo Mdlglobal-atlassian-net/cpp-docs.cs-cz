@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac3072e3fafe317e0517c36b375259c3c98a1a41
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6fee851ed1df79f2868414a0a7e960eeb76bc127
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438480"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163644"
 ---
 # <a name="completionfuture-class"></a>completion_future – třída
 
@@ -203,7 +203,7 @@ bool valid() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud se objekt přidružené asynchronní operace; v opačném případě `false`.
+**Hodnota TRUE** -li přidružená asynchronní operace; v opačném případě je objekt **false**.
 
 ## <a name="wait"></a> Počkej
 

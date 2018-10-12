@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17babc058ef3e1851da686e9a8c5bf17cefbc2fd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f84ca4c924c837ec008c16d6ff3b77af379df4cd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427001"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163800"
 ---
 # <a name="cancellation-in-the-ppl"></a>Zrušení v knihovně PPL
 
@@ -91,7 +91,7 @@ Abyste zahájili zrušení, zavolejte [concurrency::cancellation_token_source::c
 
 - Pro `task` objekty, použijte [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) funkce. `cancel_current_task` Zruší aktuální úloha a všechny jeho pokračování založené na hodnotách. (Nezruší zrušení *token* přidružený k úkolu nebo jeho pokračování.)
 
-- U skupin úloh a paralelní algoritmy, použijte [concurrency::is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) funkce zjistit zrušení a vrátit co nejdříve z těla úkolu, když se tato funkce vrátí `true`. (Nevolejte `cancel_current_task` ze skupiny úkolů.)
+- U skupin úloh a paralelní algoritmy, použijte [concurrency::is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) funkce zjistit zrušení a vrátit co nejdříve z těla úkolu, když se tato funkce vrátí **true** . (Nevolejte `cancel_current_task` ze skupiny úkolů.)
 
 Následující příklad ukazuje první základní vzor pro zrušení úlohy. Tělo úkolu příležitostně zkontroluje zrušení uvnitř smyčka.
 

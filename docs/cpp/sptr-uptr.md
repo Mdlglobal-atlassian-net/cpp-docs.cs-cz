@@ -1,13 +1,17 @@
 ---
 title: __sptr __uptr | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __uptr_cpp
 - __sptr_cpp
+- __uptr
+- __sptr
+- _uptr
+- _sptr
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 269fe70a5a40a90a512c826e98ba2c8ea698a55b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fa67c815fdfeac0f5728ecd671aaa8f04a59ef89
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46052514"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163475"
 ---
 # <a name="sptr-uptr"></a>__sptr, __uptr
 
@@ -44,6 +48,8 @@ void MyFunction(char * __uptr __ptr32 myValue);
 ```
 
 Použití **__sptr** a **__uptr** modifikátory s deklaracemi ukazatelů. Modifikátory je třeba použít v pozici [kvalifikátoru typu ukazatele](../c-language/pointer-declarations.md), což znamená, že modifikátor musí následovat po hvězdičce. Nejde použít modifikátory s [ukazatelů na členy](../cpp/pointers-to-members.md). Modifikátory nemají vliv na deklarace neobsahující ukazatele.
+
+Z důvodu kompatibility s předchozími verzemi **_sptr** a **_uptr** jsou synonyma pro **__sptr** a **__uptr** Pokud –možnostkompilátoru[/Za \(zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md) určena.
 
 ## <a name="example"></a>Příklad
 

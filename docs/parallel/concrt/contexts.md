@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7be66658c9452fa97c1971ae6719dccb06dbd836
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9fb14544a799861053c2fdf2a5bb92f210eb5c46
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378214"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163826"
 ---
 # <a name="contexts"></a>Kontexty
 
@@ -67,7 +67,7 @@ Pro výpočetně náročných operací překryvného odběru obvykle nejsou adek
 > [!NOTE]
 >  Povolte překročení stanovených pouze z vlákna, které bylo vytvořeno pomocí modulu Runtime souběžnosti. Kompenzujte nemá žádný vliv, pokud se volá z vlákna, která nebyla vytvořena modulu runtime (včetně hlavní vlákno).
 
-Chcete-li povolit překročení stanovených v aktuálním kontextu, zavolejte [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) metodu `_BeginOversubscription` parametr nastaven na `true`. Když povolíte překročení stanovených ve vlákně, které bylo vytvořeno pomocí modulu Runtime souběžnosti, způsobí, že modul runtime vytvořte jedno další vlákno. Za všechny úkoly, které vyžadují překryvného odběru dokončit, volání `Context::Oversubscribe` s `_BeginOversubscription` parametr nastaven na `false`.
+Chcete-li povolit překročení stanovených v aktuálním kontextu, zavolejte [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) metodu `_BeginOversubscription` parametr nastaven na **true**. Když povolíte překročení stanovených ve vlákně, které bylo vytvořeno pomocí modulu Runtime souběžnosti, způsobí, že modul runtime vytvořte jedno další vlákno. Za všechny úkoly, které vyžadují překryvného odběru dokončit, volání `Context::Oversubscribe` s `_BeginOversubscription` parametr nastaven na **false**.
 
 Můžete povolit překročení stanovených více než jednou z aktuálního kontextu, ale je nutné jej vypnout stejný počet případů, kdy ji povolit. Překryvný odběr také může být vnořena; To znamená úkol, který je vytvořen jinou úlohou, která používá překryvného odběru můžete také přidělit nadměrnému počtu procesů jeho kontextu. Nicméně pokud vnořená úloha a její nadřazené patří do stejného kontextu, pouze nejkrajnější volání `Context::Oversubscribe` způsobí vytvoření další vlákno.
 

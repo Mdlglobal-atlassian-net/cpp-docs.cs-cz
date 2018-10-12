@@ -1,12 +1,13 @@
 ---
 title: __assume | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
 f1_keywords:
 - __assume
+- _assume
 - __assume_cpp
 dev_langs:
 - C++
@@ -17,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1c8c37bc46580db42bfa2a91d215b09bc1dbaf4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 41542065a4fc7d3b90fd3159dca4c7a7d169c115
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405694"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163664"
 ---
 # <a name="assume"></a>__assume
 
@@ -57,6 +58,8 @@ Pokud `__assume` příkazu je zapsán jako rozporu (výraz, který se vždycky v
 Použití `__assume` v [ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) pouze když kontrolní výraz se nedá vrátit zpátky. Nepoužívejte `__assume` v assert, pro který máte kód pro obnovení další chybě protože kompilátor může optimalizují kód pro zpracování chyb.
 
 `__assume(0)` Příkaz je zvláštní případ. Použití `__assume(0)` označuje cestu kódu, který není dostupný. Následující příklad ukazuje, jak používat `__assume(0)` k označení, že výchozí případ přepínače příkazu není dostupný. Zobrazí se obvykle použití `__assume(0)`.
+
+Z důvodu kompatibility s předchozími verzemi **_assume** je synonymum pro **__assume** Pokud – možnost kompilátoru [/Za \(zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md) je zadat.
 
 ## <a name="requirements"></a>Požadavky
 

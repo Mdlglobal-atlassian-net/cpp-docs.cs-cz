@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c4ada69fcd687d63022d0527ddf8da43906c483
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8fe26b202dbe9aabc1ccf98a59ead6c51c498fc1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412012"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163709"
 ---
 # <a name="itarget-class"></a>ITarget – třída
 
@@ -67,7 +67,7 @@ Datový typ datové části v rámci přijal cílový blok zpráv.
 |----------|-----------------|
 |[propagate](#propagate)|Při přepisu v odvozené třídě, asynchronně předává zprávy z zdrojový blok pro tento cílový blok.|
 |[Odeslat](#send)|Při přepisu v odvozené třídě, synchronně předává zprávy na cílový blok.|
-|[supports_anonymous_source –](#supports_anonymous_source)|Při přepisu v odvozené třídě vrátí hodnotu PRAVDA nebo NEPRAVDA v závislosti na tom, zda blok zpráv přijímá zprávy nabízí zdrojem, který není přidružený k němu. Přepsané metody vrátí-li `true`, cílem nelze odložit nabízené zprávy, jako využití odloženou zprávu později vyžaduje zdroj musí identifikovat jeho sourse odkaz registru.|
+|[supports_anonymous_source –](#supports_anonymous_source)|Při přepisu v odvozené třídě vrátí hodnotu PRAVDA nebo NEPRAVDA v závislosti na tom, zda blok zpráv přijímá zprávy nabízí zdrojem, který není přidružený k němu. Přepsané metody vrátí-li **true**, cílem nelze odložit nabízené zprávy, jako využití odloženou zprávu později vyžaduje zdroj musí identifikovat jeho sourse odkaz registru.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
@@ -174,7 +174,7 @@ Když `send` vrátí zprávy buď již byla přijata a přenést na cílový blo
 
 ##  <a name="supports_anonymous_source"></a> supports_anonymous_source –
 
-Při přepisu v odvozené třídě vrátí hodnotu PRAVDA nebo NEPRAVDA v závislosti na tom, zda blok zpráv přijímá zprávy nabízí zdrojem, který není přidružený k němu. Přepsané metody vrátí-li `true`, cílem nelze odložit nabízené zprávy, jako využití odloženou zprávu později vyžaduje zdroj musí identifikovat jeho sourse odkaz registru.
+Při přepisu v odvozené třídě vrátí hodnotu PRAVDA nebo NEPRAVDA v závislosti na tom, zda blok zpráv přijímá zprávy nabízí zdrojem, který není přidružený k němu. Přepsané metody vrátí-li **true**, cílem nelze odložit nabízené zprávy, jako využití odloženou zprávu později vyžaduje zdroj musí identifikovat jeho sourse odkaz registru.
 
 ```
 virtual bool supports_anonymous_source();
@@ -182,7 +182,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud blok může přijmout zprávy ze zdroje, který není přidružený k němu `false` jinak.
+**Hodnota TRUE** Pokud bloku může přijmout zprávy ze zdroje, který není přidružený k němu **false** jinak.
 
 ##  <a name="unlink_source"></a> unlink_source –
 

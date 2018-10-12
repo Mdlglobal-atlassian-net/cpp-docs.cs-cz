@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30efbfa9c7c9b4be0c9b92e4ec5300a9c4313cb4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f03e3366caaf6b18ecb8f401fb3209f859113ca0
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448312"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163631"
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry – třída
 
@@ -125,7 +125,7 @@ Ukazatele na blok, který má být vyhledán v `single_link_registry` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud byl nalezen odkaz, `false` jinak.
+**Hodnota TRUE** Pokud byl nalezen odkaz, **false** jinak.
 
 ##  <a name="count"></a> Počet
 
@@ -154,7 +154,7 @@ Ukazatele na blok, který se odeberou, pokud se nenašel.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud odkaz byl nalezen a odebrání `false` jinak.
+**Hodnota TRUE** Pokud odkazu byl nalezen a odebrání **false** jinak.
 
 ##  <a name="ctor"></a> single_link_registry –
 

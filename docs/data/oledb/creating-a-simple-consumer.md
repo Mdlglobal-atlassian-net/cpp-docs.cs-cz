@@ -1,7 +1,7 @@
 ---
 title: Vytvoření jednoduchého příjemce | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,46 +15,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 120829b08ab65c10cca7ab922fc4f9be732ccc53
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 85efb2a1d699914c6d7ffb1fd079a38be70f0b52
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860807"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163839"
 ---
 # <a name="creating-a-simple-consumer"></a>Vytvoření jednoduchého příjemce
 
 Generování šablony příjemce OLE DB pomocí Průvodce projektem ATL a průvodce příjemcem ATL OLE DB.
 
-### <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>K vytvoření konzolové aplikace pro příjemce technologie OLE DB
+## <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>K vytvoření konzolové aplikace pro příjemce technologie OLE DB
 
 1. Na **souboru** nabídky, klikněte na tlačítko **nový**a potom klikněte na tlačítko **projektu**.
 
    **Nový projekt** zobrazí se dialogové okno.
 
-1. V podokně typy projektů, klikněte **projekty Visual C++** složku a pak klikněte na tlačítko **projekt Win32** ikony v podokně šablon. V **název** zadejte název projektu, například **MyCons**.
+1. V **typy projektů** podokně klikněte na tlačítko **nainstalováno** > **šablony** > **Visual C++** složky, a klikněte **Konzolová aplikace Win32** ikonu **šablony** podokně. V **název** zadejte název projektu, například *MyCons*.
 
 1. Klikněte na tlačítko **OK**.
 
-   Zobrazí se Průvodce projektu Win32.
+   Zobrazí se Průvodce aplikací Win32.
 
-1. Na **nastavení aplikace** stránce **konzolovou aplikaci**a pak vyberte **přidat podporu ATL**.
+1. Na **nastavení aplikace** stránce **konzolovou aplikaci**a pak vyberte **přidat společné soubory hlaviček pro knihovnu ATL**.
 
 1. Klikněte na tlačítko **Dokončit** zavřete průvodce a generování projektu.
 
 Pak přidejte objekt příjemce technologie OLE DB pomocí průvodce příjemcem ATL OLE DB.
 
-#### <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>Vytvoření příjemce pomocí průvodce příjemcem ATL OLE DB
+## <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>Vytvoření příjemce pomocí průvodce příjemcem ATL OLE DB
 
-1. V zobrazení tříd klikněte pravým tlačítkem myši `MyCons` projektu.
+1. V **Průzkumníka řešení**, klikněte pravým tlačítkem myši `MyCons` projektu.
 
-1. V místní nabídce klikněte na tlačítko **přidat**a potom klikněte na tlačítko **přidat třídu**.
+1. V místní nabídce klikněte na tlačítko **přidat**a potom klikněte na tlačítko **třídy**.
 
    **Přidat třídu** zobrazí se dialogové okno.
 
-1. V podokně kategorie, klikněte na tlačítko **Visual C++**, klikněte na tlačítko **příjemce ATL OLE DB** v podokně šablon a pak klikněte na ikonu **otevřít**.
+1. V **kategorie** podokně klikněte na tlačítko **nainstalováno** > **Visual C++** > **ATL**, klikněte na tlačítko **Spotřebitele OLEDB knihovny ATL** ikonu **šablony** podokně a pak klikněte na tlačítko **přidat**.
 
-   Zobrazí se průvodce příjemcem ATL OLE DB.
+   Zobrazí se průvodce příjemcem ATL OLEDB.
 
 1. Klikněte na tlačítko **zdroj dat** tlačítko.
 
@@ -64,7 +64,7 @@ Pak přidejte objekt příjemce technologie OLE DB pomocí průvodce příjemcem
 
    - Na **poskytovatele** kartu, zadejte zprostředkovatele OLE DB.
 
-   - Na **připojení** kartu, zadejte název serveru, přihlašovací jméno a heslo pro zdroj dat a databáze na serveru.
+   - Na **připojení** kartu, zadejte požadované informace, jako je například název serveru, přihlašovací jméno a heslo pro zdroj dat a databáze na serveru.
 
    > [!NOTE]
    > Existuje problém zabezpečení s **povolit uložení hesla** funkce **vlastnosti propojení dat** dialogové okno. V **zadejte informace pro přihlášení k serveru**, existují dva přepínače: **integrované zabezpečení Windows NT použití** a **použít konkrétní uživatelské jméno a heslo**.
@@ -79,7 +79,7 @@ Pak přidejte objekt příjemce technologie OLE DB pomocí průvodce příjemcem
 
    **Vyberte databázový objekt** zobrazí se dialogové okno.
 
-1. Výběr tabulky, zobrazení nebo uložené procedury pomocí ovládacího prvku stromu. Pro účely tohoto postupu vyberte tabulku produktů z databáze Northwind.
+1. Výběr tabulky, zobrazení nebo uložené procedury pomocí ovládacího prvku stromu. Pro účely tohoto postupu, vyberte `Products` tabulce `Northwind` databáze.
 
 1. Klikněte na tlačítko **OK**. Vrátí průvodce příjemcem ATL OLE DB.
 

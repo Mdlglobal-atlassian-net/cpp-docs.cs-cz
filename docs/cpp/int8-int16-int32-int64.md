@@ -1,7 +1,7 @@
 ---
 title: __int8, __int16, __int32 __int64 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -10,6 +10,14 @@ f1_keywords:
 - __int16_cpp
 - __int32_cpp
 - __int64_cpp
+- __int8
+- __int16
+- __int32
+- __int64
+- _int8
+- _int16
+- _int32
+- _int64
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 723724a477a5cdb714aa2644e1db938d67fb7b73
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b639e7a65bbe206d029a5ba28109170cb0f6a610
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194248"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163540"
 ---
 # <a name="int8-int16-int32-int64"></a>__int8, __int16, __int32, __int64
 
@@ -47,6 +55,8 @@ __int64 nHuge;      // Declares 64-bit integer
 ```
 
 Typy **__int8**, **__int16**, a **__int32** jsou synonyma pro typy ANSI stejné velikosti a jsou užitečné pro psaní přenositelného kódu, který se chová stejně jako na různých platformách. **__Int8** datový typ je synonymum pro typ **char**, **__int16** je synonymem typu **krátký**, a **__int32**  je synonymem typu **int**. **__Int64** typ je synonymum pro typ **long long**.
+
+Z důvodu kompatibility s předchozími verzemi **_int8**, **_int16**, **_int32**, a **_int64** jsou synonyma pro **__int8** , **__int16**, **__int32**, a **__int64** Pokud – možnost kompilátoru [/Za \(zakázat jazyka rozšíření)](../build/reference/za-ze-disable-language-extensions.md) určena.
 
 ## <a name="example"></a>Příklad
 
