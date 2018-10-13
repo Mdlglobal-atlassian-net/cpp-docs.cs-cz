@@ -17,14 +17,12 @@ f1_keywords:
 - '&='
 - ^=
 - '|='
-- '&&='
 dev_langs:
 - C++
 helpviewer_keywords:
 - operators [C++], assignment
 - assignment operators [C++], C++
 - '&= operator'
-- '&&= operator'
 - ^= operator
 - += operator
 - '>>= operator'
@@ -43,32 +41,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c9efaf8dc5b9f0886a697ad2b872e24264820f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1429bcb9f4002cb65cc14000d3bcf62004000566
+ms.sourcegitcommit: b05cff71a8a6a8a4c7bbea1263fd0a711853f921
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017895"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307916"
 ---
 # <a name="assignment-operators"></a>Operátory přiřazení
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-expression assignment-operator expression 
-assignment-operator : one of
-   =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  &&=
-```
+*výraz* *operátor přiřazení* *výraz*
+
+*operátor přiřazení* : jeden z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>= * =, / = % =, +=,-= \< \<= >> = & = ^ =   \|=</strong>
 
 ## <a name="remarks"></a>Poznámky
 
-Operátory přiřazení ukládají hodnotu v objektu určeném levým operandem. Existují tři typy operací přiřazení:
+Operátory přiřazení ukládají hodnotu v objektu určeném levým operandem. Existují dva typy operací přiřazení:
 
-1. jednoduché přiřazení, ve kterém je hodnota druhého operandu uložena v objektu určeném prvním operandem. 1. složené přiřazení, ve kterém aritmetický, posunu nebo bitová operace provádí před uložením výsledku.
-1. které prostředky jsou přeneseny bez kopírování přesuňte přiřazení (pro typy tříd).
+1. *jednoduché přiřazení*, ve které je uložený hodnotu druhého operandu v objektu určeném prvním operandem.
 
+1. *složené přiřazení*, ve kterém aritmetický, posunu nebo bitová operace provádí před uložením výsledku.
 
-Všechny operátory přiřazení v následující tabulce s výjimkou = a & & = složené operátory přiřazení jsou operátory.
+Všechny operátory přiřazení v následující tabulce, s výjimkou operátoru =, jsou operátory složeného přiřazení.
 
 ### <a name="assignment-operators"></a>Operátory přiřazení
 
@@ -85,7 +82,6 @@ Všechny operátory přiřazení v následující tabulce s výjimkou = a & & = 
 |**&=**|Získá bitový AND prvního a druhého operandu a uloží výsledek v objektu určeném prvním operandem.|
 |**^=**|Získá bitový exkluzivní OR prvního a druhého operandu a uloží výsledek v objektu určeném prvním operandem.|
 |**\|=**|Získá bitový inkluzivní OR prvního a druhého operandu a uloží výsledek v objektu určeném prvním operandem.|
-|**&&=**| Operátor přiřazení přesunutí (třída pouze pro typy). Pokud je druhý operand je typu rvalue, jeho prostředky přesunout do prvního operandu (bez kopírování). Zobrazit [konstruktory přesunutí a operátory přiřazení přesunutí](move-constructors-and-move-assignment-operators-cpp.md) Další informace.|
 
 **Klíčová slova operátorů**
 
@@ -125,11 +121,11 @@ int main() {
 
 ## <a name="simple-assignment"></a>Jednoduché přiřazení
 
-Operátor jednoduchého přiřazení (=) způsobí, že je hodnota druhého operandu uložena v objektu, který je zadán prvním operandem. Jsou-li oba objekty aritmetickými typy, je pravý operand před uložením hodnoty převeden na typ levého operandu.
+Operátor jednoduchého přiřazení (**=**) způsobí, že hodnota druhého operandu uložena v objektu určeném prvním operandem. Jsou-li oba objekty aritmetickými typy, je pravý operand před uložením hodnoty převeden na typ levého operandu.
 
-Objekty typů const a volatile lze přiřadit l-hodnotám typů, které jsou pouze typu volatile nebo typům, které jsou const, nikoli však volatile.
+Objekty **const** a **volatile** typy je možné přiřadit l-hodnotám typů, které jsou právě **volatile** nebo ani jeden **const** ani **volatile**.
 
-Přiřazení k objektům typu třídy (typy struct, union a class) je prováděno pomocí funkce operátoru pojmenování =. Výchozí chování této funkce operátoru je provedení bitového kopírování. Toto chování lze však změnit pomocí přetížených operátorů. (Viz [přetížené operátory](../cpp/operator-overloading.md) Další informace.)
+Přiřazení k objektům typu třídy (struct, union a typy tříd) se provádí pomocí funkce s názvem `operator=`. Výchozí chování této funkce operátoru je provedení bitového kopírování. Toto chování lze však změnit pomocí přetížených operátorů. Zobrazit [přetížení operátoru](../cpp/operator-overloading.md) Další informace. Kromě toho může mít typy tříd *zkopírujte přiřazení* a *přesunutí přiřazení* operátory. Další informace najdete v tématu [kopírovací konstruktory a operátory přiřazení pro kopírování](copy-constructors-and-copy-assignment-operators-cpp.md) a [konstruktory přesunutí a operátory přiřazení přesunutí](move-constructors-and-move-assignment-operators-cpp.md).
 
 Objekt libovolné jednoznačně odvozené třídy z dané základní třídy lze přiřadit k objektu základní třídy. Opačně to neplatí, protože mezi odvozenou třídou a základní třídou existuje explicitní převod, který však neexistuje mezi základní a odvozenou třídou. Příklad:
 
@@ -186,7 +182,7 @@ B = A;
 
 mít jednu z následujících funkcí:
 
-- Pro `UserType2` je třeba zavolat funkční operátor =, který je součástí argumentu `UserType1`.
+- Volání funkce `operator=` pro `UserType2`, k dispozici `operator=` je součástí služby `UserType1` argument.
 
 - Bude-li taková funkce existovat, je třeba zavolat funkci explicitního převodu `UserType1::operator UserType2`.
 
@@ -194,13 +190,13 @@ mít jednu z následujících funkcí:
 
 ## <a name="compound-assignment"></a>Složené přiřazení
 
-Operátory složeného přiřazení, uvedené v tabulce v [operátory přiřazení](../cpp/assignment-operators.md), jsou uvedeny ve tvaru *e1* `op` =  *e2*, kde *e1* je upravitelná l hodnota nekonstantního typu a *e2* je jedním z následujících akcí:
+Operátory složeného přiřazení, uvedené v tabulce v [operátory přiřazení](#assignment-operators), jsou uvedeny ve tvaru *e1* *op*= *e2*, kde *e1* je upravitelná l hodnota není **const** typ a *e2* je jedním z následujících akcí:
 
 - Aritmetický typ
 
-- Ukazatel, pokud `op` je + nebo -
+- Ukazatel, pokud *op* je **+** nebo **-**
 
-*E1* `op` =  *e2* formulář chovat jako *e1* *= e1* `op` *e2*, ale *e1* se vyhodnotí pouze jednou.
+*E1* *op*= *e2* formulář chovat jako *e1* **=** *e1* *op* *e2*, ale *e1* se vyhodnotí pouze jednou.
 
 Složené přiřazení výčtového typu vygeneruje chybovou zprávu. Je-li levý operand typu ukazatele, pravý operand musí být typu ukazatele nebo musí být konstantním výrazem vyhodnoceným na hodnotu 0. Je-li levý operand celočíselný typ, nesmí být pravý operand typu ukazatele.
 

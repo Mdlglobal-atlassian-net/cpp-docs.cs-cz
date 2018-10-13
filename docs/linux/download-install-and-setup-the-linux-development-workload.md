@@ -2,7 +2,7 @@
 title: Nainstalujte úlohu C++ Linux v sadě Visual Studio | Dokumentace Microsoftu
 description: Popisuje, jak stáhnout, nainstalovat a nastavit Linux úlohy pro C++ v sadě Visual Studio.
 ms.custom: ''
-ms.date: 09/12/2018
+ms.date: 10/12/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -13,12 +13,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 403f1bcd8634c3f471f34ff1266501de5bf05d52
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: 060859879c6164bd8af10763ae5f828c9136abe5
+ms.sourcegitcommit: b05cff71a8a6a8a4c7bbea1263fd0a711853f921
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601389"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307903"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Stažení, instalace a nastavení úloh Linux
 
@@ -41,7 +41,7 @@ Pokud ještě nemáte počítač s Linuxem, můžete vytvořit virtuální poč�
 
 Další možností, ve Windows 10, je k aktivaci subsystém Windows pro Linux. Další informace najdete v tématu [Průvodce instalací systému Windows 10](/windows/wsl/install-win10).
 
-## <a name="linux-setup"></a>Nastavení pro Linux
+## <a name="linux-setup-ubuntu"></a>Nastavení pro Linux: Ubuntu
 
 Musí mít cílový počítač s Linuxem **openssh-server**, **g ++**, **gdb**, a **gdbserver** nainstalované a ssh démon musí být spuštěn. **ZIP** se vyžaduje pro automatickou synchronizaci vzdálených hlaviček pomocí místního počítače pro podporu technologie Intellisense. Pokud tyto aplikace již nejsou k dispozici, můžete je nainstalovat následujícím způsobem:
 
@@ -49,10 +49,27 @@ Musí mít cílový počítač s Linuxem **openssh-server**, **g ++**, **gdb**, 
 
    `sudo apt-get install openssh-server g++ gdb gdbserver zip`
 
-   Můžete být vyzváni k kořenové heslo z důvodu příkazu sudo.  Pokud ano, zadejte ho a pokračovat.  Jakmile budete hotovi, se nainstalují tyto služby a nástroje.
+   Můžete být vyzváni k kořenové heslo z důvodu příkazu sudo.  Pokud ano, zadejte ho a pokračovat. Jakmile budete hotovi, se nainstalují požadované služby a nástroje.
 
 1. Zkontrolujte, ssh služba běží na počítači s Linuxem pomocí:
 
    `sudo service ssh start`
 
-   Se spustit službu a spustit na pozadí je připraven přijmout připojení na portu.
+   To spustí službu a běží na pozadí je připraven přijmout připojení na portu.
+
+## <a name="linux-setup-fedora"></a>Nastavení pro Linux: Fedora
+
+Cílový počítač s Fedora používá **dnf** balíček Instalační služby. Chcete-li stáhnout **openssh-server**, **g ++**, **gdb**, **gdbserver** a **zip**a restartujte ssh proces démon, postupujte podle těchto pokynů:
+
+1. V příkazovém řádku shell na počítači s Linuxem spusťte:
+
+   `sudo dnf install openssh-server g++ gdb gdbserver zip`
+
+   Můžete být vyzváni k kořenové heslo z důvodu příkazu sudo.  Pokud ano, zadejte ho a pokračovat. Jakmile budete hotovi, se nainstalují požadované služby a nástroje.
+
+1. Zkontrolujte, ssh služba běží na počítači s Linuxem pomocí:
+
+   `sudo systemctl start sshd`
+
+   To spustí službu a běží na pozadí je připraven přijmout připojení na portu.
+
