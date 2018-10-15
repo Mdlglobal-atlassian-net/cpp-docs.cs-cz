@@ -1,7 +1,7 @@
 ---
-title: Atribut parametru typy (rozšíření komponent C++) | Dokumentace Microsoftu
+title: Typy parametrů atributů (C + +/ CLI a C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 84c97dc0eb449ed0a2e835c46e77981dda0b67e2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8db82e2b31984429165ce39a328abc28ba6e2cfd
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611903"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328165"
 ---
-# <a name="attribute-parameter-types--c-component-extensions"></a>Typy parametrů atributů (rozšíření komponent C++)
+# <a name="attribute-parameter-types--ccli-and-ccx"></a>Typy parametrů atributů (C + +/ CLI a C + +/ CX)
 
 Hodnoty předané metodě atributy musí být známo pro kompilátor v době kompilace.  Parametry atributu může být z následujících typů:
 

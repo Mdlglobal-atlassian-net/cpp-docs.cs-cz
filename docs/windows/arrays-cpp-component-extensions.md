@@ -1,7 +1,7 @@
 ---
-title: Pole (rozšíření komponent C++) | Dokumentace Microsoftu
+title: Pole (C + +/ CLI a C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -22,14 +22,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 836017dcec969db85a0725a49193d7b8e8a88875
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b1a1f977e15d80d631799d8a9e101a8c85e3aaf1
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402847"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328100"
 ---
-# <a name="arrays-c-component-extensions"></a>Pole (přípony komponent C++)
+# <a name="arrays-ccli-and-ccx"></a>Pole (C + +/ CLI a C + +/ CX)
 
 `Platform::Array<T>` Typu v jazyce C + +/ CX nebo **pole** – klíčové slovo v jazyce C + +/ CLI, deklaruje pole určeného typu a počáteční hodnota.
 
@@ -180,4 +180,4 @@ int main() {
 
 ## <a name="see-also"></a>Viz také
 
-[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+[Přípony komponent pro .NET a UPW](../windows/component-extensions-for-runtime-platforms.md)

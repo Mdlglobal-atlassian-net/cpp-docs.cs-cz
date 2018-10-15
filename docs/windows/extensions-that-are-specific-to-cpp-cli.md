@@ -1,7 +1,7 @@
 ---
 title: Rozšíření, která jsou specifická pro C + +/ CLI | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -13,15 +13,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e4a2b0c631c4356bed7ff190c2867a8540b57526
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0bb6b1738b0eecbfd4e97171d2a9faea2d9b6005
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444655"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327762"
 ---
 # <a name="extensions-that-are-specific-to-ccli"></a>Rozšíření specifická pro C++/CLI
-Následující funkce jazyka, které jsou vysvětlené v této části dokumentace, platí pouze pro C + +/ CLI.
+
+Následující funkce jazyka platí pouze pro C + +/ CLI:
   
 [__identifier (C++/CLI)](../windows/identifier-cpp-cli.md)  
   
@@ -37,4 +38,4 @@ Následující funkce jazyka, které jsou vysvětlené v této části dokumenta
   
 ## <a name="see-also"></a>Viz také
 
-[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+[Přípony komponent pro .NET a UPW](../windows/component-extensions-for-runtime-platforms.md)

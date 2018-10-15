@@ -1,7 +1,7 @@
 ---
-title: Přehled obecných typů v jazyce Visual C++ | Dokumentace Microsoftu
+title: Přehled obecných typů v jazyce C + +/ CLI | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -22,20 +22,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c1a6e9b9734fbb836d9e061b15534e23b95b29c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9e6240fd5e33f44c42d8a0d33302b9ef4cf9f8bb
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590935"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327853"
 ---
-# <a name="overview-of-generics-in-visual-c"></a>Přehled obecných typů ve Visual C++
+# <a name="overview-of-generics-in-ccli"></a>Přehled obecných typů v jazyce C + +/ CLI
 
 Obecné typy jsou parametrizované typy podporované modulem common language runtime. Parametrizované typ je typ, který je definován s parametrem Neznámý typ, který je zadán, pokud se používá Obecné.
 
 ## <a name="why-generics"></a>Proč obecných typů?
 
-Jazyk C++ podporuje šablony a obě šablony a obecné typy podporují parametrizované typy pro vytvoření typu kolekce tříd. Nicméně šablony poskytují Parametrizace za kompilace. Nemůže odkazovat na sestavení obsahující definice šablony a vytvořte nový specializace šablony. Po kompilaci, specializovaná šablona vypadá jiné třídy nebo metody. Naproti tomu jsou emitovány obecné typy v jazyce MSIL jako parametry typu ví, modul runtime typ s parametry; zdrojový kód, který odkazuje na sestavení obsahující obecný typ, můžete vytvořit specializace obecného typu. Další informace o porovnání šablony Visual C++ a obecnými typy najdete v tématu [obecné typy a šablony (Visual C++)](../windows/generics-and-templates-visual-cpp.md).
+Jazyk C++ podporuje šablony a obě šablony a obecné typy podporují parametrizované typy pro vytvoření typu kolekce tříd. Nicméně šablony poskytují Parametrizace za kompilace. Nemůže odkazovat na sestavení obsahující definice šablony a vytvořte nový specializace šablony. Po kompilaci, specializovaná šablona vypadá jiné třídy nebo metody. Naproti tomu jsou emitovány obecné typy v jazyce MSIL jako parametry typu ví, modul runtime typ s parametry; zdrojový kód, který odkazuje na sestavení obsahující obecný typ, můžete vytvořit specializace obecného typu. Další informace o porovnání standardní šablony jazyka C++ a obecnými typy najdete v tématu [obecné typy a šablony (C + +/ CLI)](../windows/generics-and-templates-visual-cpp.md).
 
 ## <a name="generic-functions-and-types"></a>Obecné funkce a typy
 

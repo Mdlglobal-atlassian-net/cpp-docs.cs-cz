@@ -1,7 +1,7 @@
 ---
 title: Obecné funkce (C + +/ CLI) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b8c51b3468a636335a74b8a4206a6b533d3a200b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0d687dfbee48105001d3be04fd4918b9889e2d04
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398856"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327697"
 ---
 # <a name="generic-functions-ccli"></a>Obecné funkce (C++/CLI)
 
@@ -91,7 +91,7 @@ Tělo metody, která mohou odkazovat na identifikátory parametr typu.
 
 Obecné funkce jsou funkce deklarované s parametr obecného typu. Mohou být metody do třídy nebo struktury nebo samostatné funkce. Jeden obecný deklarace implicitně deklaruje název řady funkcí, které se liší pouze v rámci nahrazování jiný typ skutečného parametru obecného typu.
 
-V jazyce Visual C++ nemůže být deklarovaný třídy nebo struktury konstruktory s parametry obecného typu.
+Konstruktor třídy nebo struktury nemůže být deklarovaný s parametry obecného typu.
 
 Při volání, parametr obecného typu je nahrazen skutečným typem. Skutečný typ může být explicitně zadán v ostrými závorkami pomocí syntaxe podobné volání šablony funkce. Pokud je volána bez parametrů typu, kompilátor se pokusí odvodit skutečný typ z parametry zadané ve volání funkce. Pokud argumentu zamýšlený typ nelze odvodit z parametrů použitých, kompilátor oznámí chybu.
 
@@ -193,5 +193,5 @@ My function returned a string: Hello generic functions!
 
 ## <a name="see-also"></a>Viz také
 
-[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Přípony komponent pro .NET a UPW](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Obecné typy](../windows/generics-cpp-component-extensions.md)

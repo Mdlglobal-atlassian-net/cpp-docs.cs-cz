@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 310dc9b8e31f72fbd04c620987d9857932f7a0a1
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 31b9c0c8668ec16d84ad84627eb73a0f406eb21e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821129"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328373"
 ---
 # <a name="ide-and-compiler-tools-for-visual-c-development"></a>Integrované vývojové prostředí a kompilačních nástrojů pro vývoj v jazyce Visual C++
 
@@ -59,7 +59,7 @@ Pokud váš program má uživatelské rozhraní, můžete použít návrháře k
 
 ![Návrháře a nástrojů](media/vs2017-toolbox-designer.png "návrháře a nástrojů sady Visual Studio 2017")
 
-Další informace o navrhování uživatelského rozhraní pro aplikace univerzální platformy Windows, naleznete v tématu [návrhu a uživatelské rozhraní](https://developer.microsoft.com/en-us/windows/design).
+Další informace o navrhování uživatelského rozhraní pro aplikace univerzální platformy Windows, naleznete v tématu [návrhu a uživatelské rozhraní](https://developer.microsoft.com/windows/design).
 
 Další informace o vytváření uživatelského rozhraní pro aplikaci knihovny MFC naleznete v tématu [desktopových aplikací knihovny MFC](../mfc/mfc-desktop-applications.md). Informace o aplikacích Win32 Windows najdete v tématu [desktopových aplikací Windows](../windows/windows-desktop-applications-cpp.md).
 

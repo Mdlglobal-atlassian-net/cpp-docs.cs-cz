@@ -1,7 +1,7 @@
 ---
-title: Operátor popisovače objektu (^) (rozšíření komponent C++) | Dokumentace Microsoftu
+title: Operátor popisovače objektu (^) (C + +/ CLI a C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa72b6ec2983c0d7b9850578e743d03b7e3946e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d7fb74dcff370b314df5da5428ba3e406023acbe
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410855"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327970"
 ---
-# <a name="handle-to-object-operator---c-component-extensions"></a>Operátor popisovače objektu (^) (rozšíření komponent C++)
+# <a name="handle-to-object-operator---ccli-and-ccx"></a>Operátor popisovače objektu (^) (C + +/ CLI a C + +/ CX)
 
 *Deklarátor popisovače* (`^`, výslovnost "stříška"), změní typ [specifikátor](../cpp/overview-of-declarators.md) znamenat, že deklarovaný objekt má být automaticky odstraněn, když systém zjistí, že objekt je už nebude přístupný.
 
@@ -34,7 +34,7 @@ Proměnná, která je deklarována pomocí deklarátoru popisovače se chová ja
 
 Kompilátor používá COM *počítání odkazů* mechanismus pro určení, zda objekt se už nepoužívá a je možné odstranit. To je možné, protože objekt, který je odvozen z rozhraní Windows Runtime je ve skutečnosti objekt modelu COM. Počet odkazů je zvýšen, pokud je objekt vytvořený nebo zkopírován a snížen, když je objekt nastaven na hodnotu null nebo přejde mimo obor. Pokud počet odkazů dosáhne nuly, objekt je automaticky a okamžitě odstraněn.
 
-Výhodou deklarátoru popisovač je, že v COM musíte explicitně spravovat počet odkazů pro objekt, což je únavné a snadno dojde k chybám proces. To znamená a zvýší počet odkazů musí volat metody zvýšit a Release() objektu. Nicméně pokud deklarujete objekt s deklarátorem popisovače, kompilátor Visual C++ vygeneruje kód, který automaticky přizpůsobí počet odkazů.
+Výhodou deklarátoru popisovač je, že v COM musíte explicitně spravovat počet odkazů pro objekt, což je únavné a snadno dojde k chybám proces. To znamená a zvýší počet odkazů musí volat metody zvýšit a Release() objektu. Nicméně pokud deklarujete objekt s deklarátorem popisovače, kompilátor generuje kód, který automaticky přizpůsobí počet odkazů.
 
 Informace o tom, jak vytvořit instanci objektu naleznete v tématu [ref nové](../windows/ref-new-gcnew-cpp-component-extensions.md).
 
@@ -47,8 +47,6 @@ Informace o tom, jak vytvořit instanci objektu naleznete v tématu [ref nové](
 Systém používá modul CLR *systému uvolňování paměti* mechanismus pro určení, zda objekt se už nepoužívá a je možné odstranit. Modul common language runtime udržuje haldu, na které se přidělují objekty a používá spravované odkazy (proměnné) ve svém programu označení umístění objektů na haldě. Pokud objekt už nebude používat, je uvolněna paměť, která je obsazena na haldě. Pravidelně systému uvolňování paměti zkomprimuje hladu k lepšímu využití uvolněné paměti. Komprimací haldy můžete přesunout objekty do haldy, což způsobí neplatnost uvedená umístění uváděná spravovanými odkazy. Ale systému uvolňování paměti zná umístění všech spravovaných odkazů a automaticky je aktualizuje pro označení aktuálního umístění objektů na haldě.
 
 Protože nativní ukazatelé C++ (`*`) a odkazy (`&`) nejsou spravované odkazy, uvolňování nemůže automaticky aktualizovat adresy, které ukazují na. Pokud chcete tento problém vyřešit, použijte deklarátor popisovače k určení proměnné, které systému uvolňování paměti je vědět a lze ji automaticky aktualizovat.
-
-V aplikaci Visual C++ 2002 a Visual C++ 2003 `__gc *` byl použit k deklarování objektu na spravované haldě.  `^` Nahradí `__gc *` v nové syntaxi.
 
 Další informace najdete v tématu [postupy: deklarování zpracovává v nativních typech](../dotnet/how-to-declare-handles-in-native-types.md).
 
@@ -235,5 +233,5 @@ int main() {
 
 ## <a name="see-also"></a>Viz také
 
-[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Přípony komponent pro .NET a UPW](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Operátor sledovacího odkazu](../windows/tracking-reference-operator-cpp-component-extensions.md)

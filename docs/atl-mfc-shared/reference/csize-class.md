@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa840b2fd6e143715c924d0f7ac67e78eb8306a4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3ca548fec9a70a04b0bdb9a5169021fc43f149eb
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417539"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328535"
 ---
 # <a name="csize-class"></a>Csize – třída
 
@@ -100,7 +100,7 @@ Nastaví `cy` člena `CSize`.
 [VELIKOST](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo `CSize` objekt použitý k inicializaci `CSize`.
 
 *initPt*  
-[BOD](../../mfc/reference/point-structure1.md) struktury nebo `CPoint` objekt použitý k inicializaci `CSize`.
+[BOD](../../mfc/reference/point-structure.md) struktury nebo `CPoint` objekt použitý k inicializaci `CSize`.
 
 *dwSize*  
 DWORD použitý k inicializaci `CSize`. Je nižší řád slova `cx` člen a vyšší řád slova je `cy` člena.

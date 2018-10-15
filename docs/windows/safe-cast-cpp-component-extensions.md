@@ -1,7 +1,7 @@
 ---
-title: safe_cast (rozšíření komponent C++) | Dokumentace Microsoftu
+title: safe_cast (C + +/ CLI a C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,14 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d5a4f92e16c2d758fa5e2b88575b12d5710dd08
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 76d53a1322024f1a56477de4e4b58bcdb88930ad
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404205"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328477"
 ---
-# <a name="safecast-c-component-extensions"></a>safe_cast (rozšíření komponent C++)
+# <a name="safecast-ccli-and-ccx"></a>safe_cast (C + +/ CLI a C + +/ CX)
 
 **Safe_cast** časový limit operace vrátí zadaný výraz jako zadaný typ, v případě úspěchu; jinak vyvolá výjimku `InvalidCastException`.
 
@@ -37,11 +37,7 @@ ms.locfileid: "46404205"
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-[default]:: safe_cast<
-type-id
->(
-expression
-)  
+[default]:: safe_cast< type-id >( expression )  
 ```
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
@@ -51,11 +47,7 @@ expression
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-[default]:: safe_cast<
-type-id
->(
-expression
-)  
+[default]:: safe_cast< type-id >( expression )
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -115,11 +107,7 @@ Caught expected exception: InvalidCastException
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-[cli]:: safe_cast<
-type-id
->(
-expression
-)  
+[cli]:: safe_cast< type-id >( expression )  
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -132,7 +120,7 @@ Výraz, který se vyhodnotí jako popisovač pro odkaz nebo typ hodnoty, typ hod
 
 ### <a name="remarks"></a>Poznámky
 
-Výraz `safe_cast<` *id typu*`>(`*výraz* `)` operand výrazu převede na objekt typu id typu.
+Výraz `safe_cast<` *id typu*`>(`*výraz* `)` převede operand *výraz* na objekt typu *id typu*.
 
 Kompilátor přijme [static_cast](../cpp/static-cast-operator.md) ve většině případů, které bude přijímat **safe_cast**.  Ale **safe_cast** je zaručeno, že k tvorbě ověřitelného kódu MSIL, přičemž **static_cast** by mohla vést neověřitelný MSIL.  Zobrazit [prázdná a ověřitelný kód (C + +/ CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md) a [Peverify.exe (Nástroj PEVerify)](/dotnet/framework/tools/peverify-exe-peverify-tool) Další informace o kódu s možností ověření.
 
@@ -188,4 +176,4 @@ Caught expected exception
 
 ## <a name="see-also"></a>Viz také
 
-[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+[Přípony komponent pro .NET a UPW](../windows/component-extensions-for-runtime-platforms.md)

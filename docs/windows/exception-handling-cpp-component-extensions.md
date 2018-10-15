@@ -1,7 +1,7 @@
 ---
-title: Zpracování výjimek (rozšíření komponent C++) | Dokumentace Microsoftu
+title: Zpracování výjimek (C + +/ CLI a C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -20,14 +20,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2213266d281933c6a6a59775584532acaeb39d6e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7d070cc223f90f84bd52176ee7e50dbbfa441789
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412315"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328126"
 ---
-# <a name="exception-handling--c-component-extensions"></a>Zpracování výjimek (rozšíření komponent C++)
+# <a name="exception-handling--ccli-and-ccx"></a>Zpracování výjimek (C + +/ CLI a C + +/ CX)
 
 Zkompilovaná aplikace `/ZW` – možnost kompilátoru nebo `/clr` – možnost kompilátoru používají *výjimky* zpracování neočekávaných chyb během provádění programu. Následující témata popisují zpracování výjimek v obou C + +/ CX nebo C + +/ CLI aplikací.
 
@@ -54,8 +54,8 @@ Ukazuje, jak zachytit všechny neošetřené výjimky.
 ## <a name="related-sections"></a>Související oddíly
 
 [Zpracování výjimek](../cpp/exception-handling-in-visual-cpp.md)<br/>
-Popisuje zpracování výjimek v C++.
+Popisuje zpracování výjimek v standardním jazyce C++.
 
 ## <a name="see-also"></a>Viz také
 
-[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+[Přípony komponent pro .NET a UPW](../windows/component-extensions-for-runtime-platforms.md)

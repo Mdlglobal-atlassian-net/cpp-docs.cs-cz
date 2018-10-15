@@ -1,7 +1,7 @@
 ---
-title: Přípony komponent pro platformy běhového prostředí | Dokumentace Microsoftu
+title: Přípony komponent pro .NET a UPW | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,28 +19,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0619585a0a5b59ffb6b8cfbe22e7930909369b23
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 45f83fbaaa867e2f58e329d8531259fa3751a521
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386746"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328412"
 ---
-# <a name="component-extensions-for-runtime-platforms"></a>Přípony komponent pro platformy běhového prostředí
+# <a name="component-extensions-for-net-and-uwp"></a>Přípony komponent pro .NET a UPW
 
-Visual C++ poskytuje rozšíření jazyka pomoci programovat proti platformy běhového prostředí. S použitím C + +/ CX, při programování aplikací pro univerzální platformu Windows a komponenty, které se kompilují do nativního kódu. I když můžete vytvořit aplikace pro univerzální platformu Windows pomocí programování přímo proti rozhraní Windows Runtime COM s použitím C + +/ CX, můžete pracovat s konstruktory, výjimek a jiné moderní programovací idiomy C++. Pokud chcete povolit programování C++ ve spravovaném spouštěcím prostředí na platformě .NET, můžete použít C + +/ CLI.
+Standard jazyka C++ umožňuje dodavatelům kompilátoru poskytují nestandardní rozšíření pro jazyk. Microsoft poskytuje rozšíření vám pomůže s připojením nativní kód C++ pro kód, který běží na rozhraní .NET Framework nebo univerzální platformu Windows (UPW). Rozšíření .NET se nazývají C + +/ CLI a vytvoří kód, který se spustí v rozhraní .NET spravované prostředí pro spouštění, která je volána Common Language Runtime (CLR). Rozšíření UPW se nazývají C + +/ CX a vytvořit nativního strojového kódu.
+
+> [!NOTE]
+> Pro nové aplikace, doporučujeme použít C + +/ WinRT spíše než C + +/ CX. C + +/ WinRT je nový, standard C ++ 17 jazyk projekci pro rozhraní API Windows Runtime. Budeme dál podporovat C + +/ CX a WRL, ale důrazně doporučujeme, aby nové aplikace pomocí C + +/ WinRT. Další informace najdete v tématu [C + +/ WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
 
 ### <a name="two-runtimes-one-set-of-extensions"></a>Dva moduly runtime, jednu sadu rozšíření
 
-C + +/ CX je podmnožinou jazyka C + +/ CLI. Pro rozšíření, které jsou společné pro C + +/ CX a C + +/ CLI, sémantika závisí na tom, zda cílíte na modul CLR (CLR) nebo prostředí Windows Runtime. Chcete-li zkompilovat aplikaci pro spuštění v modulu Windows Runtime, zadejte `/ZW` – možnost kompilátoru. Chcete-li zkompilovat jeho spuštění na modulu CLR, zadejte `/clr` – možnost kompilátoru. Tyto přepínače jsou nastaveny automaticky při vytvoření projektu pomocí sady Visual Studio.
-
-Další informace o vytváření aplikací pro univerzální platformu Windows v jazyce C++ naleznete v tématu [plán pro prostředí Windows Runtime aplikací pomocí C++](https://msdn.microsoft.com/library/windows/apps/hh700360.aspx).
-
 C + +/ CLI rozšiřuje standard ISO/ANSI C++ a je definován v části s Ecma C + +/ CLI Standard. Další informace najdete v tématu [.NET programování v jazyce C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
+
+C + +/ CX rozšíření jsou podmnožinou C + +/ CLI. I když rozšíření syntaxe je stejný jako ve většině případů, kód, který je generován závisí na, jestli je zadat `/ZW` – možnost kompilátoru do cíle UPW, nebo `/clr` možnost cílového rozhraní .NET. Tyto přepínače jsou nastaveny automaticky při vytvoření projektu pomocí sady Visual Studio.
 
 ## <a name="data-type-keywords"></a>Klíčová slova datový typ
 
-Jazyková rozšíření zahrnují *agregovat klíčová slova*, které jsou klíčová slova, které se skládají ze dvou tokeny oddělené symbolem mezery. Tokeny může mít jeden význam při použití samostatně a jiný význam při použití společně. Například slovo "ref" je běžný identifikátor a slovo "třída" je klíčové slovo, který deklaruje nativních tříd. Ale když se tato slova kombinovány do **třídy ref class**, výsledný agregační – klíčové slovo deklaruje entita, která se označuje jako *runtime třídy*.
+Jazyková rozšíření zahrnují *agregovat klíčová slova*, které jsou tvořeny dva tokeny oddělené symbolem mezery. Tokeny může mít jeden význam při použití samostatně a jiný význam při použití společně. Například slovo "ref" je běžný identifikátor a slovo "třída" je klíčové slovo, který deklaruje nativních tříd. Ale když se tato slova kombinovány do **třídy ref class**, výsledný agregační – klíčové slovo deklaruje entita, která se označuje jako *runtime třídy*.
 
 Rozšíření také zahrnovat *kontextové* klíčová slova. Klíčové slovo je zpracováván jako kontextové v závislosti na typu příkazu, který obsahuje a jeho umístění v, který tento příkaz. Například token "vlastnosti" může být identifikátor nebo ho můžete deklarovat zvláštní druh člena veřejné třídy.
 
@@ -53,7 +54,7 @@ Následující tabulka obsahuje seznam klíčových slov v rozšíření jazyka 
 |**Třída rozhraní**<br /><br /> **Struktura rozhraní**|Ne|Deklaruje rozhraní.|[Třída rozhraní](../windows/interface-class-cpp-component-extensions.md)|
 |**Třída výčtu**<br /><br /> **Struktura výčet**|Ne|Deklaruje výčet.|[Třída výčtu](../windows/enum-class-cpp-component-extensions.md)|
 |**property**|Ano|Deklaruje vlastnost.|[property](../windows/property-cpp-component-extensions.md)|
-|**delegate**|Ano|Deklaruje delegáta.|[delegate (rozšíření komponent C++)](../windows/delegate-cpp-component-extensions.md)|
+|**delegate**|Ano|Deklaruje delegáta.|[Delegate (C + +/ CLI a C + +/ CX)](../windows/delegate-cpp-component-extensions.md)|
 |**event**|Ano|Deklaruje událost.|[event](../windows/event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>override – specifikátory

@@ -1,7 +1,7 @@
 ---
-title: enum class (rozšíření komponent C++) | Dokumentace Microsoftu
+title: Výčet tříd (C + +/ CLI a C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -13,14 +13,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 993f0e190d87b140fba0008872d57f2a34b6a5cb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7b85807b9e9dd0cec63def8ffc4a9aa69056f270
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377263"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328139"
 ---
-# <a name="enum-class--c-component-extensions"></a>enum class (rozšíření komponent C++)
+# <a name="enum-class--ccli-and-ccx"></a>Výčet tříd (C + +/ CLI a C + +/ CX)
 
 Deklaruje výčet v oboru názvů, který je uživatelem definovaný typ tvořený sadou pojmenovaných konstant nazývaných enumerátory.
 
@@ -146,13 +146,13 @@ Spravované názvy výčtů (*identifikátory*) se vloží do rozsahu, kde je de
 
 Enumerátory standardní výčtu jsou silně vloženy do nadřazeného oboru.  To znamená pokud existuje další symbol se stejným názvem jako enumerátor v nadřazeném oboru, kompilátor vygeneruje chybu.
 
-Ve Visual C++ 2002 a Visual C++ 2003 bylo vložený enumerátory slabě (viditelná v ohraničujícím oboru Pokud byl jiný identifikátor se stejným názvem).
+V sadě Visual Studio 2002 a Visual Studio 2003 byly vloženy enumerátory slabě (viditelná v ohraničujícím oboru Pokud byl jiný identifikátor se stejným názvem).
 
-Pokud je definován standardní výčtu C++ (bez **třídy** nebo **struktura**), kompilace s `/clr` způsobí, že výčet se zkompiluje jako spravovaného výčtu.  Výčet má stále sémantiku Nespravovaný výčet.  Mějte na paměti, kompilátor vkládá atribut `Microsoft::VisualC::NativeEnumAttribute`, které kompilátor Visual C++ rozpoznává k identifikaci záměr programátora ve výčtu být nativní výčet.  Jiné kompilátory jednoduše zobrazí standardní výčtu jako spravovaného výčtu.
+Pokud je definován standardní výčtu C++ (bez **třídy** nebo **struktura**), kompilace s `/clr` způsobí, že výčet se zkompiluje jako spravovaného výčtu.  Výčet má stále sémantiku Nespravovaný výčet.  Mějte na paměti, kompilátor vkládá atribut `Microsoft::VisualC::NativeEnumAttribute` k identifikaci záměr programátora ve výčtu být nativní výčet.  Jiné kompilátory jednoduše zobrazí standardní výčtu jako spravovaného výčtu.
 
 Objekt s názvem, zkompilovaná standardní výčtu `/clr` se nebude zobrazovat v sestavení spravovaného výčtu a můžou je využívat jiné spravované kompilátoru.   Nepojmenované standardní výčet však nebudou veřejně viditelné ze sestavení.
 
-V aplikaci Visual C++ 2002 a Visual C++ 2003, standard výčtu použít jako typ parametru funkce:
+V sadě Visual Studio 2002 a Visual Studio 2003 standard výčtu použít jako typ parametru funkce:
 
 ```cpp
 // mcppv2_enum.cpp
@@ -231,4 +231,4 @@ convert to int: 1
 
 ## <a name="see-also"></a>Viz také
 
-[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+[Přípony komponent pro .NET a UPW](../windows/component-extensions-for-runtime-platforms.md)

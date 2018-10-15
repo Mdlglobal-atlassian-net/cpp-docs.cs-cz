@@ -1,7 +1,7 @@
 ---
-title: Literal (rozšíření komponent C++) | Dokumentace Microsoftu
+title: literál (C + +/ CLI a C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76a57261b28679c4f05b677dc7b49008535c921b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8168b3cd981bb288df35659ffd3520a7c8597d1e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596443"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328064"
 ---
-# <a name="literal-c-component-extensions"></a>literal (rozšíření komponent C++)
+# <a name="literal-ccli-and-ccx"></a>literál (C + +/ CLI a C + +/ CX)
 
 Proměnné (datový člen) označené jako **literálu** v **/CLR** je ekvivalentem nativní kompilace **konstrukce static const** proměnné.
 
@@ -137,4 +137,4 @@ class B {
 
 ## <a name="see-also"></a>Viz také
 
-[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+[Přípony komponent pro .NET a UPW](../windows/component-extensions-for-runtime-platforms.md)

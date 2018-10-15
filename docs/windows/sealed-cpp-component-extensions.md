@@ -1,7 +1,7 @@
 ---
-title: zapečetěné (rozšíření komponent C++) | Dokumentace Microsoftu
+title: sealed (C + +/ CLI a C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,19 +18,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 134ee819edc0698c4ffa067d38b715968f22590f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 211428335473f677f520ee14ad688e5ffcbda8fd
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439559"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327996"
 ---
-# <a name="sealed--c-component-extensions"></a>sealed (rozšíření komponent C++)
+# <a name="sealed--ccli-and-ccx"></a>sealed (C + +/ CLI a C + +/ CX)
 
 **zapečetěné** jako kontextové klíčové slovo pro referenční třídy, která označuje, že virtuální člen nelze přepsat, nebo typ nelze použít jako základní typ.
 
 > [!NOTE]
-> C ++ 11 jazyka podle standardu ISO má [konečné](../cpp/final-specifier.md) – klíčové slovo, což je podporováno v sadě Visual Studio. Použití **konečné** na standardní třídy a **zapečetěné** na referenční třídy.
+> C ++ 11 jazyka podle standardu ISO zavedené [konečné](../cpp/final-specifier.md) – klíčové slovo. Použití **konečné** na standardní třídy a **zapečetěné** na referenční třídy.
 
 ## <a name="all-runtimes"></a>Všechny moduly runtime
 
@@ -53,7 +53,7 @@ Typ, který je vrácen funkce.
 
 V prvním příkladu syntaxe je zapečetěná třída. V druhém příkladu je zapečetěná virtuální funkce.
 
-**Zapečetěné** – klíčové slovo je platný pro nativní cíle a také pro prostředí Windows Runtime a common language runtime (CLR). Další informace najdete v tématu [specifikátory přepisu a nativní kompilace](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+Použití **zapečetěné** – klíčové slovo pro referenční třídy a jejich virtuální členské funkce. Další informace najdete v tématu [specifikátory přepisu a nativní kompilace](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
 V době kompilace může zjistit, zda typ je zapečetěný pomocí `__is_sealed(type)` typovou vlastnost. Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).
 
@@ -108,7 +108,7 @@ public:
    // the following override generates a compiler error
    virtual void g() override {
       System::Console::WriteLine("Y::g override of I1::g");
-   } 
+   }
    */
 };
 
@@ -150,4 +150,4 @@ public:
 
 ## <a name="see-also"></a>Viz také
 
-[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+[Přípony komponent pro .NET a UPW](../windows/component-extensions-for-runtime-platforms.md)

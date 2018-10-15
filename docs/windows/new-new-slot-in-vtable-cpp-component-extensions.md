@@ -1,7 +1,7 @@
 ---
-title: New (nový slot v tabulce vtable) (rozšíření komponent C++) | Dokumentace Microsoftu
+title: New (nový slot v tabulce vtable) (C + +/ CLI a C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b5dc0f490da43b4a2a2befa22f2902e7bfce51ca
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 48351903b7827f4ad9e6d63824658e4f44e047e0
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420917"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327736"
 ---
-# <a name="new-new-slot-in-vtable--c-component-extensions"></a>new (nový slot v tabulce vtable) (rozšíření komponent C++)
+# <a name="new-new-slot-in-vtable--ccli-and-ccx"></a>New (nový slot v tabulce vtable) (C + +/ CLI a C + +/ CX)
 
 **Nové** – klíčové slovo určuje, že virtuální člen získá novou patici ve vtable.
 
@@ -115,5 +115,6 @@ E::f() called
 
 ## <a name="see-also"></a>Viz také
 
-[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Přípony komponent pro .NET a UPW](../windows/component-extensions-for-runtime-platforms.md)<br/>
+
 [Override – specifikátory](../windows/override-specifiers-cpp-component-extensions.md)

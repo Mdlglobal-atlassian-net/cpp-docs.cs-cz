@@ -1,7 +1,7 @@
 ---
-title: Explicitní přepsání (rozšíření komponent C++) | Dokumentace Microsoftu
+title: Explicitní přepsání (C + +/ CLI a C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba6ed66359ee833b51154e47f8f6c26c0de8994c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 689c8420c2526f94f88c8b2ba8433c2310281874
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408944"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328035"
 ---
-# <a name="explicit-overrides--c-component-extensions"></a>Explicitní přepsání (rozšíření komponent C++)
+# <a name="explicit-overrides--ccli-and-ccx"></a>Explicitní přepsání (C + +/ CLI a C + +/ CX)
 
 Toto téma popisuje postup explicitní přepsání člena základní třídy nebo rozhraní. Pojmenované přepsání (explicitně) by měla sloužit pouze k přepsání metody s Odvozená metoda, která má jiný název.
 
@@ -184,4 +184,4 @@ public:
 
 ## <a name="see-also"></a>Viz také
 
-[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+[Přípony komponent pro .NET a UPW](../windows/component-extensions-for-runtime-platforms.md)

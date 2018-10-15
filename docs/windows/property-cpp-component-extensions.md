@@ -1,7 +1,7 @@
 ---
-title: Property (rozšíření komponent C++) | Dokumentace Microsoftu
+title: vlastnosti (C + +/ CLI a C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f9c444861587e21724fe5f6aff545935fed6086
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9bd79042a43588ad4cedcbe88cc69f30947de7f8
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420501"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328230"
 ---
-# <a name="property--c-component-extensions"></a>property (rozšíření komponent C++)
+# <a name="property--ccli-and-ccx"></a>vlastnosti (C + +/ CLI a C + +/ CX)
 
 Deklaruje *vlastnost*, což je členská funkce, který se chová a je přístupná jako datový člen nebo element pole.
 
@@ -226,4 +226,4 @@ test
 
 ## <a name="see-also"></a>Viz také
 
-[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+[Přípony komponent pro .NET a UPW](../windows/component-extensions-for-runtime-platforms.md)

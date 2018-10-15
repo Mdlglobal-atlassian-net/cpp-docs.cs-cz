@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 721dd285760027c35ae93d89ec5bb3fde6e9ba11
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 86dc19600dc8cbb452db585993dec85c3f7b8591
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413444"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328386"
 ---
 # <a name="cpagesetupdialog-class"></a>Cpagesetupdialog – třída
 
@@ -272,7 +272,7 @@ void GetMargins(
 ### <a name="parameters"></a>Parametry
 
 *lpRectMargins*<br/>
-Ukazatel [RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který popisuje (v palcích 1/1 000 nebo 1/100 mm) okrajů tisku pro aktuálně vybrané tiskárny. Pro tento parametr předejte hodnotu NULL, pokud vás nezajímají v obdélníku.
+Ukazatel [RECT](rect-structure.md) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který popisuje (v palcích 1/1 000 nebo 1/100 mm) okrajů tisku pro aktuálně vybrané tiskárny. Pro tento parametr předejte hodnotu NULL, pokud vás nezajímají v obdélníku.
 
 *lpRectMinMargins*<br/>
 Ukazatel `RECT` struktury nebo `CRect` objekt, který popisuje (v palcích 1/1 000 nebo 1/100 mm) minimální okrajů tisku pro aktuálně vybrané tiskárny. Pro tento parametr předejte hodnotu NULL, pokud vás nezajímají v obdélníku.
@@ -351,7 +351,7 @@ Určuje zprávu, s upozorněním oblasti na stránce se vykreslí. Může být j
 - WM_PSD_YAFULLPAGERECT oblast pro reprezentaci návratovou hodnotu. Tato oblast se rozšiřuje na okraji oblasti ukázkové stránky.
 
 *lprect –*<br/>
-Ukazatel [crect –](../../atl-mfc-shared/reference/crect-class.md) nebo [RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) objekt, který obsahuje souřadnice oblasti pro kreslení.
+Ukazatel [crect –](../../atl-mfc-shared/reference/crect-class.md) nebo [RECT](rect-structure.md) objekt, který obsahuje souřadnice oblasti pro kreslení.
 
 ### <a name="return-value"></a>Návratová hodnota
 

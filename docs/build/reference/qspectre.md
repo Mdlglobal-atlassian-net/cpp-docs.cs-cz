@@ -1,7 +1,7 @@
 ---
 title: / Qspectre | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/12/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ed4b84ab761653dde4da6adcd14ec8e77334688
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 0baba6503d1d5b4e382347f4f4d9680b11f954ce
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821644"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328516"
 ---
 # <a name="qspectre"></a>/ Qspectre
 
@@ -32,7 +32,7 @@ Určuje kompilátoru generování pokynů ke zmírnění chyby zabezpečení ur�
 
 ## <a name="remarks"></a>Poznámky
 
-**/Qspectre** možnost je k dispozici v sadě Visual Studio 2017 verze 15.5.5 a novější a v aplikaci Visual Studio 2015 Update 3 prostřednictvím [KB 4338871](https://support.microsoft.com/en-us/help/4338871/visual-studio-2015-update-3-spectre-variant-1-toolset-qspectre). To způsobí, že kompilátor vložit pokyny pro zmírnění některých [chyby zabezpečení Spectre](https://spectreattack.com/spectre.pdf). Tyto chyby zabezpečení, volá *útoky na straně kanálu spekulativního spouštění*, ovlivnit řada operačních systémů a moderní procesory, včetně procesory od Intelu, AMD a ARM.
+**/Qspectre** možnost je k dispozici v sadě Visual Studio 2017 verze 15.5.5 a novější a v aplikaci Visual Studio 2015 Update 3 prostřednictvím [KB 4338871](https://support.microsoft.com/help/4338871/visual-studio-2015-update-3-spectre-variant-1-toolset-qspectre). To způsobí, že kompilátor vložit pokyny pro zmírnění některých [chyby zabezpečení Spectre](https://spectreattack.com/spectre.pdf). Tyto chyby zabezpečení, volá *útoky na straně kanálu spekulativního spouštění*, ovlivnit řada operačních systémů a moderní procesory, včetně procesory od Intelu, AMD a ARM.
 
 **/Qspectre** možnost je vypnuto ve výchozím nastavení.
 
@@ -84,7 +84,7 @@ Další informace najdete v tématu official je přínosné pro [Microsoft Secur
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Viz také:
 

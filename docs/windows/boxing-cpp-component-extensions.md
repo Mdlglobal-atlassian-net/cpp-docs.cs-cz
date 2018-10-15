@@ -1,7 +1,7 @@
 ---
-title: Zabalení (rozšíření komponent C++) | Dokumentace Microsoftu
+title: Zabalení (C + +/ CLI a C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92dc2032031fd0f3032db57b9eca8c723367da9e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b11ac2f6b640e42c14522b45fe0c3da89036ae24
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316715"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328009"
 ---
-# <a name="boxing--c-component-extensions"></a>Zabalení (rozšíření komponent C++)
+# <a name="boxing--ccli-and-ccx"></a>Zabalení (C + +/ CLI a C + +/ CX)
 
-Kompilátor Visual C++ můžete převést typy hodnot k objektům v procesu nazývaného *zabalení*a převedení objektů na typy hodnot v procesu nazývaného *rozbalení*.
+Převod typů hodnot na objekty se nazývá *zabalení*, a převod objektů pro typy hodnot se nazývá *rozbalení*.
 
 ## <a name="all-runtimes"></a>Všechny moduly runtime
 
@@ -86,7 +86,7 @@ Další informace najdete v tématu [zabalení (C + +/ CX)](https://msdn.microso
 
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)
 
-Kompilátor Visual C++ teď typů do hodnot polí <xref:System.Object>. To je možné z důvodu převodu definované kompilátorem převést hodnotu typů do <xref:System.Object>.
+Typy do hodnot polí kompilátoru <xref:System.Object>. To je možné z důvodu převodu definované kompilátorem převést hodnotu typů do <xref:System.Object>.
 
 Zabalení a rozbalení povolit typy hodnot jsou považovány za objekty. Typy hodnot včetně struktury typů a vestavěné typy, například int, může být převeden do a z typu <xref:System.Object>.
 
@@ -200,4 +200,4 @@ in func2(System::ValueType^)
 
 ## <a name="see-also"></a>Viz také
 
-[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+[Přípony komponent pro .NET a UPW](../windows/component-extensions-for-runtime-platforms.md)

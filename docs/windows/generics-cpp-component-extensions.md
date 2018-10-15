@@ -1,7 +1,7 @@
 ---
-title: Obecné typy (rozšíření komponent C++) | Dokumentace Microsoftu
+title: Obecné typy (C + +/ CLI a C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,37 +18,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 121d3bf1fd7d59f36362a034216e0728b2fc25b0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8bb0c6bc3459ff0b86200502b1a31ee341078280
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448347"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327672"
 ---
-# <a name="generics--c-component-extensions"></a>Obecné typy (rozšíření komponent C++)
+# <a name="generics--ccli-and-ccx"></a>Obecné typy (C + +/ CLI a C + +/ CX)
 
-Obecné typy jsou parametrizované typy a metody. V této části přečtěte si obecných funkcí, které podporují prostředí Windows Runtime a modul common language runtime a které jsou podporovány pouze modul common language runtime. Dozvíte se taky, jak si můžete vytvořit vlastní obecné metody a typy v jazyce Visual C++ a použití obecných typů definovaných v rozhraní .NET Framework language v jazyce Visual C++. A konečně Tato část obsahuje porovnání obecné typy a šablony C++.
+Obecné typy jsou parametrizované typy a metody. V této části přečtěte si obecných funkcí, které podporují prostředí Windows Runtime a modul common language runtime a které jsou podporovány pouze modul common language runtime. Dozvíte se taky, jak vytvářet vlastní obecné metody a typy v jazyce C + +/ CLI a jak pomocí obecných typů definovaných v rozhraní .NET Framework language v jazyce C + +/ CLI. A konečně Tato část obsahuje porovnání obecné typy a šablony C++.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
 ### <a name="supported-by-the-windows-runtime-and-the-common-language-runtime"></a>Podporuje prostředí Windows Runtime a modul Common Language Runtime
 
-[Přehled obecných typů ve Visual C++](../windows/overview-of-generics-in-visual-cpp.md)<br/>
+[Přehled obecných typů v jazyce C + +/ CLI](../windows/overview-of-generics-in-visual-cpp.md)<br/>
 Informace o obecných typů jsou motivace pro funkci jazyk definice termíny používané k popisu obecné typy a informace o používání typy odkazů a typy hodnot jako parametry typu pro obecné typy.
 
-[Obecná rozhraní (Visual C++)](../windows/generic-interfaces-visual-cpp.md)<br/>
+[Obecná rozhraní (C + +/ CLI)](../windows/generic-interfaces-visual-cpp.md)<br/>
 Informace o definování a použití obecných rozhraní.
 
-[Obecní delegáti (Visual C++)](../windows/generic-delegates-visual-cpp.md)<br/>
+[Obecní delegáti (C + +/ CLI)](../windows/generic-delegates-visual-cpp.md)<br/>
 Informace o definování a používání obecných delegátů.
 
 [Omezení parametrů obecných typů (C++/CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)<br/>
 Informace o použití omezení v obecných typech.
 
 [Použití obecných typů (C++/CLI)](../windows/consuming-generics-cpp-cli.md)<br/>
-Informace o použití obecných typů definované v sestavení .NET, může být vytvořená v jiných jazycích, v jazyce Visual C++.
+Informace o použití obecných typů definované v sestavení .NET, může být vytvořená v jiných jazycích, v jazyce C + +/ CLI.
 
-[Obecné typy a šablony (Visual C++)](../windows/generics-and-templates-visual-cpp.md)<br/>
+[Obecné typy a šablony (C + +/ CLI)](../windows/generics-and-templates-visual-cpp.md)<br/>
 Porovnání obecné typy a šablony pro použití každou a jak kombinovat úspěšně.
 
 ### <a name="supported-by-the-common-language-runtime"></a>Podporuje modul Common Language Runtime
@@ -66,4 +66,4 @@ Použití [u každé v](../dotnet/for-each-in.md) – klíčové slovo v obecné
 
 ## <a name="see-also"></a>Viz také
 
-[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+[Přípony komponent pro .NET a UPW](../windows/component-extensions-for-runtime-platforms.md)

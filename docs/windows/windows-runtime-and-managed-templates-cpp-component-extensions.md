@@ -1,7 +1,7 @@
 ---
-title: Windows Runtime a spravované šablony (rozšíření komponent C++) | Dokumentace Microsoftu
+title: Windows Runtime a spravované šablony (C + +/ CLI a C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0a7d08354bcd2b0b0d8cf1db6e4bd58fb9821708
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b83aa54b9f9697fddbefc6da29e7cf99d497cc12
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591446"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328295"
 ---
-# <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows Runtime a spravované šablony (rozšíření komponent C++)
+# <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Windows Runtime a spravované šablony (C + +/ CLI a C + +/ CX)
 
 Šablony vám umožní definovat prototyp modulu Windows Runtime nebo společný typ modulu runtime jazyka a potom vytvořte instanci variace tohoto typu pomocí parametrů typu jinou šablonu.
 
@@ -50,7 +50,7 @@ Existují některá omezení k vytvoření šablony třídy ze spravovaných typ
 
 ### <a name="examples"></a>Příklady
 
-Je možné vytvořit instanci obecného typu s parametrem šablony spravovaného typu, ale nelze vytvořit instanci šablony spravované pomocí obecného typu parametru šablony. Je to proto obecné typy jsou vyřešeny za běhu. Další informace najdete v tématu [obecné typy a šablony (Visual C++)](../windows/generics-and-templates-visual-cpp.md).
+Je možné vytvořit instanci obecného typu s parametrem šablony spravovaného typu, ale nelze vytvořit instanci šablony spravované pomocí obecného typu parametru šablony. Je to proto obecné typy jsou vyřešeny za běhu. Další informace najdete v tématu [obecné typy a šablony (C + +/ CLI)](../windows/generics-and-templates-visual-cpp.md).
 
 ```cpp
 // managed_templates.cpp
@@ -142,4 +142,4 @@ class A <int> {};
 
 ## <a name="see-also"></a>Viz také
 
-[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+[Přípony komponent pro .NET a UPW](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,7 +1,7 @@
 ---
-title: abstract (rozšíření komponent C++) | Dokumentace Microsoftu
+title: abstraktní (C + +/ CLI a C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 463848ea5f01bf232850d548c9f4255c07409254
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 78a5b42de6b0ac54d060bb6369566aa446863289
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610996"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328191"
 ---
-# <a name="abstract--c-component-extensions"></a>abstract (rozšíření komponent C++)
+# <a name="abstract--ccli-and-ccx"></a>abstraktní (C + +/ CLI a C + +/ CX)
 
 **Abstraktní** deklaruje klíčové slovo:
 
@@ -37,12 +37,9 @@ ms.locfileid: "42610996"
 
 ### <a name="syntax"></a>Syntaxe
 
-```cpp
-      class-declaration
-      class-identifier
-      abstract {}
-virtualreturn-typemember-function-identifier() abstract ;
-```
+*deklarace třídy* *identifikátor třídy* **abstraktní {}**
+
+**virtuální** *návratový typ* *identifikátor funkce členu* **abstraktní ();**
 
 ### <a name="remarks"></a>Poznámky
 
@@ -115,4 +112,4 @@ public:
 
 ## <a name="see-also"></a>Viz také
 
-[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+[Přípony komponent pro .NET a UPW](../windows/component-extensions-for-runtime-platforms.md)

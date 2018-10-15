@@ -1,7 +1,7 @@
 ---
-title: REF new, gcnew (rozšíření komponent C++) | Dokumentace Microsoftu
+title: REF new, gcnew (C + +/ CLI a C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -20,14 +20,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c31cda7c074b06025051661d27f00d2624721d0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f5a10278957e6a89b52e744f8f0dd78b475f7730
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596155"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328308"
 ---
-# <a name="ref-new-gcnew--c-component-extensions"></a>ref new, gcnew (rozšíření komponent C++)
+# <a name="ref-new-gcnew--ccli-and-ccx"></a>REF new, gcnew (C + +/ CLI a C + +/ CX)
 
 **Ref nové** agregační – klíčové slovo přiděluje instance typu, který je uvolněna při objekt přestane být přístupný a, která vrací popisovač ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) na přiřazený objekt.
 
@@ -99,4 +99,4 @@ int main()
 
 ## <a name="see-also"></a>Viz také
 
-[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+[Přípony komponent pro .NET a UPW](../windows/component-extensions-for-runtime-platforms.md)

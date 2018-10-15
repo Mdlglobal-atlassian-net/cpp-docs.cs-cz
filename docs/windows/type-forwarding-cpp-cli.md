@@ -1,7 +1,7 @@
 ---
 title: Předávání typů (C + +/ CLI) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,28 +15,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 806003e33e60b5146bdd722fa5248011cd4939c0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7fe70de2503134bf76f5e1c7099773737cc153f8
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396544"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328334"
 ---
 # <a name="type-forwarding-ccli"></a>Předávání typů (C++/CLI)
 
 *Předávání typů* vám umožní přesunout typ z jednoho sestavení (assembly A) do jiné sestavení (assembly B), takže není nutné znovu zkompilovat klienty, kteří využívají sestavení A.
 
-## <a name="all-platforms"></a>Všechny platformy
-
-Tato funkce není podporována v všechny moduly runtime.
-
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
 Tato funkce není podporována v modulu Windows Runtime.
-
-### <a name="requirements"></a>Požadavky
-
-– Možnost kompilátoru: `/ZW`
 
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)
 
@@ -44,7 +36,7 @@ Následující příklad kódu ukazuje, jak používat předávání typů.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 #using "new.dll"
 [assembly:TypeForwardedTo(type::typeid)];
 ```
@@ -97,7 +89,7 @@ Pokud soubor zdrojového kódu, který se používá k vytvoření sestavení A.
 
 3. Odstranit `MyClass` zadejte definici ze zdrojového kódu, používá k vytvoření A.dll a nahraďte následujícím kódem:
 
-    ```
+    ```cpp
     #using "B.dll"
     [assembly:TypeForwardedTo(MyClass::typeid)];
     ```

@@ -1,7 +1,7 @@
 ---
-title: String (rozšíření komponent C++) | Dokumentace Microsoftu
+title: Řetězce (C + +/ CLI a C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/08/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,24 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d6b6ce066c84056997ec9b54c9d74e782064df4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b835f1d507c8e577f8b44ca314422dd5b6f2ca46
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408398"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327423"
 ---
-# <a name="string--c-component-extensions"></a>String (rozšíření komponent C++)
-
-Visual C++ podporuje kompilátoru *řetězce*, které jsou objekty, které představují text jako posloupnost znaků. Jazyk Visual C++ podporuje proměnné řetězec, jehož hodnota je implicitní, a literály typu, jehož hodnota je explicitní řetězec v uvozovkách.
-
-## <a name="all-runtimes"></a>Všechny moduly runtime
+# <a name="string--ccli-and-ccx"></a>Řetězce (C + +/ CLI a C + +/ CX)
 
 Modul Windows Runtime a modul common language runtime představují řetězce jako objekty, jejichž přidělenou paměť je spravována automaticky. To znamená není nutné explicitně zahodit paměti pro řetězec při ukončení řetězce proměnné překročí obor nebo aplikace. K označení, že se automaticky spravovat dobu života objektu string, deklarujte typ řetězce s [popisovač objektu (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) modifikátor.
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
-Architektura modulu Windows Runtime vyžaduje Visual C++ k implementaci `String` datového typu ve `Platform` oboru názvů. Pro usnadnění práce, budou také poskytuje jazyk Visual C++ `string` datový typ, který je synonymum pro `Platform::String`v `default` oboru názvů.
+Architektura modulu Windows Runtime vyžaduje, aby `String` datový typ nacházet v `Platform` oboru názvů. Pro usnadnění práce, budou také poskytuje jazyk Visual C++ `string` datový typ, který je synonymum pro `Platform::String`v `default` oboru názvů.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -51,8 +47,6 @@ using namespace default;
 – Možnost kompilátoru: `/ZW`
 
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)
-
-Toto téma popisuje, jak kompilátor Visual C++ zpracovává řetězcové literály, při spuštění pomocí `/clr` – možnost kompilátoru. Chcete-li použít `/clr`, musíte taky použít common language runtime (CLR), C + +/ syntaxe rozhraní příkazového řádku a spravované objekty. Další informace o `/clr`, naleznete v tématu [/CLR (kompilace Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
 
 Při kompilaci s `/clr`, kompilátor převede řetězcové literály řetězce typu <xref:System.String>. Pro zachování zpětné kompatibility s existujícím kódem existuje jsou dvě výjimky:
 
@@ -91,9 +85,9 @@ Následující příklad kódu ukazuje zřetězení a porovnávání řetězců.
 using namespace System;
 
 int main() {
-   String ^ a = gcnew String("abc");
-   String ^ b = "def";   // same as gcnew form
-   Object ^ c = gcnew String("ghi");
+   String^ a = gcnew String("abc");
+   String^ b = "def";   // same as gcnew form
+   Object^ c = gcnew String("ghi");
 
    char d[100] = "abc";
 
@@ -111,12 +105,12 @@ int main() {
    // concatenation of a System::String and string literal
    Console::WriteLine(a + "zzz");
 
-   // you can append to a System::String ^
+   // you can append to a System::String^
    Console::WriteLine(a + 1);
    Console::WriteLine(a + 'a');
    Console::WriteLine(a + 3.1);
 
-   // test System::String ^ for equality
+   // test System::String^ for equality
    a += b;
    Console::WriteLine(a);
    a = b;
@@ -127,12 +121,12 @@ int main() {
    if (a != b)  
       Console::WriteLine("a and b are not equal");
 
-   // System:String ^ and tracking reference
+   // System:String^ and tracking reference
    String^% rstr1 = a;
    Console::WriteLine(rstr1);
 
-   // testing an empty System::String ^
-   String ^ n;
+   // testing an empty System::String^
+   String^ n;
    if (n == nullptr)  
       Console::WriteLine("n is empty");
 }
@@ -179,29 +173,29 @@ using namespace System;
 void Test_Overload(const char * a) {
    Console::WriteLine("const char * a");
 }
-void Test_Overload(String ^ a) {
-   Console::WriteLine("String ^ a");
+void Test_Overload(String^ a) {
+   Console::WriteLine("String^ a");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(String ^ a, String ^ b) {
-   return ("overloaded +(String ^ a, String ^ b)");
+String^ operator +(String^ a, String^ b) {
+   return ("overloaded +(String^ a, String^ b)");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(Object ^ a, String ^ b) {
-   return ("overloaded +(Object ^ a, String ^ b)");
+String^ operator +(Object^ a, String^ b) {
+   return ("overloaded +(Object^ a, String^ b)");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(String ^ a, Object ^ b) {
-   return ("overloaded +(String ^ a, Object ^ b)");
+String^ operator +(String^ a, Object^ b) {
+   return ("overloaded +(String^ a, Object^ b)");
 }
 
 int main() {
-   String ^ a = gcnew String("abc");
-   String ^ b = "def";   // same as gcnew form
-   Object ^ c = gcnew String("ghi");
+   String^ a = gcnew String("abc");
+   String^ b = "def";   // same as gcnew form
+   Object^ c = gcnew String("ghi");
 
    char d[100] = "abc";
 
@@ -215,13 +209,13 @@ int main() {
 ```
 
 ```Output
-overloaded +(String ^ a, String ^ b)
+overloaded +(String^ a, String^ b)
 
-overloaded +(String ^ a, Object ^ b)
+overloaded +(String^ a, Object^ b)
 
-overloaded +(Object ^ a, String ^ b)
+overloaded +(Object^ a, String^ b)
 
-String ^ a
+String^ a
 
 const char * a
 ```
@@ -277,6 +271,6 @@ System.String
 
 ## <a name="see-also"></a>Viz také
 
-[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Přípony komponent pro .NET a UPW](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Řetězcové a znakové literály](../cpp/string-and-character-literals-cpp.md)<br/>
 [/clr (kompilace modulu Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)

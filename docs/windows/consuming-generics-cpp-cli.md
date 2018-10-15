@@ -1,7 +1,7 @@
 ---
 title: Použití obecných typů (C + +/ CLI) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c17e8212b01ad2cf80c74f80de26209d00f6d1a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6bccfc4ab3e5df690c6fdb5ddb04c458756a4cd7
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589853"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327749"
 ---
 # <a name="consuming-generics-ccli"></a>Použití obecných typů (C++/CLI)
 
-Obecné typy vytvořené v jednom jazyce .NET může použít v jiných jazycích rozhraní .NET. Na rozdíl od šablon obecný ve zkompilovaném sestavení stále zůstává obecný. Proto jeden může vytvořit instanci obecného typu v jiném sestavení a dokonce i v jiném jazyce než sestavení, ve kterém byl definován obecného typu.
+Obecné typy vytvořené v jednom jazyce .NET (nebo UPW) lze v jiných jazycích. Na rozdíl od šablon obecný ve zkompilovaném sestavení stále zůstává obecný. Proto jeden může vytvořit instanci obecného typu v jiném sestavení a dokonce i v jiném jazyce než sestavení, ve kterém byl definován obecného typu.
 
 ## <a name="example"></a>Příklad
 

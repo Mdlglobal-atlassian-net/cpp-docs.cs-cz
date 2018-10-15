@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d745b912406407cd56252ba593601a7794fc841d
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 77664c6e849707e6ec9efafbc816a586d5b4850e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234702"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328204"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Návod: Vytvoření aplikace UPW s použitím knihovny WRL a platformy Media Foundation
 
@@ -52,7 +52,7 @@ Ve většině případů můžete použít C + +/ CX k vytvoření prostředí W
 
 - [InspectableClass](../windows/inspectableclass-macro.md) – makro implementuje základní funkce modelu COM, jako je například počítání odkazů a `QueryInterface` metoda a nastaví název třídy modulu runtime a úroveň důvěryhodnosti.
 
-- Použít Microsoft::WRL::[třídy modulu](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/b4acf5de-2f4c-4c8b-b5ff-9140d023ecbe) provádět funkce vstupního bodu DLL [DllGetActivationFactory](https://msdn.microsoft.com/library/br205771.aspx), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), a [ DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject).
+- Použít Microsoft::WRL::[třídy modulu](module-class.md) provádět funkce vstupního bodu DLL [DllGetActivationFactory](https://msdn.microsoft.com/library/br205771.aspx), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), a [ DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject).
 
 - Propojte runtimeobject.lib vaše knihovna DLL komponenty. Také zadejte [winmd](../cppcx/compiler-and-linker-options-c-cx.md) na řádku linkeru pro generování metadat Windows.
 

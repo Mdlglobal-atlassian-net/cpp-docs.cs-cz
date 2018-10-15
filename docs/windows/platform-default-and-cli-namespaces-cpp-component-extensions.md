@@ -1,7 +1,7 @@
 ---
-title: Platform, default a cli obory názvů (rozšíření komponent C++) | Dokumentace Microsoftu
+title: Platform, default a cli obory názvů (C + +/ CLI a C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,20 +19,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 726c9e2653f2914c01d4a45a572614438e12bc8f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a70fb5317f42e98ccddb21fe66e328e1cc6f7643
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194646"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328022"
 ---
-# <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Obory názvů Platform, default a cli (rozšíření komponent C++)
+# <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Platform, default a cli obory názvů (C + +/ CLI a C + +/ CX)
 
 Obor názvů kvalifikuje názvy prvků jazyka, aby názvy nebyly v konfliktu s jinak identickými názvy jinde ve zdrojovém kódu. Například kolize názvů může zabránit kompilátor rozpozná [Context-Sensitive Keywords](../windows/context-sensitive-keywords-cpp-component-extensions.md). Obory názvů používá kompilátor, ale ve zkompilovaném sestavení nejsou zachovány.
 
 ## <a name="all-runtimes"></a>Všechny moduly runtime
 
-Při vytváření projektu poskytuje jazyk Visual C++ výchozí obor názvů pro váš projekt. Obor názvů, můžete ručně přejmenovat, i když v modulu Windows Runtime musí název souboru .winmd odpovídat názvu kořenového oboru názvů.
+Při vytváření projektu sady Visual Studio poskytuje výchozí obor názvů pro váš projekt. Můžete ručně přejmenovat obor názvů, i když v jazyce C + +/ CX název souboru winmd musí odpovídat názvu kořenového oboru názvů.
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
@@ -90,4 +90,4 @@ int main() {
 
 ## <a name="see-also"></a>Viz také
 
-[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+[Přípony komponent pro .NET a UPW](../windows/component-extensions-for-runtime-platforms.md)

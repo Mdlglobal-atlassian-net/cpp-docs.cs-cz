@@ -1,7 +1,7 @@
 ---
-title: Uživatelsky definované atributy (rozšíření komponent C++) | Dokumentace Microsoftu
+title: Uživatelsky definované atributy (C + +/ CLI a C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,26 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c2f5568b067c119bfa65744290c39d7ca577072
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 004c4c30c6e7e75f626e1ac87c09cb0a87f1c8cc
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789225"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328438"
 ---
-# <a name="user-defined-attributes--c-component-extensions"></a>Uživatelsky definované atributy (rozšíření komponent C++)
+# <a name="user-defined-attributes--ccli-and-ccx"></a>Uživatelsky definované atributy (C + +/ CLI a C + +/ CX)
 
-Uživatelských atributů, které umožňují rozšířit metadat rozhraní, třídy nebo struktury, metody, parametr nebo výčet.
-
-## <a name="all-runtimes"></a>Všechny moduly runtime
-
-Všechny moduly runtime podporovat vlastní atributy.
+C + +/ CLI a C + +/ CX umožňují vytvořit atributy specifické pro platformu, které rozšiřují metadat rozhraní, třídy nebo struktury, metody, parametr nebo výčet. Tyto atributy se liší od [standardní C++ atributy](../cpp/attributes.md).
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
-C + +/ CX atributy podporují pouze vlastnosti, ale není atribut konstruktory a metody.
-
-### <a name="remarks"></a>Poznámky
+Můžete použít C + +/ CX atributy vlastnosti, ale ne konstruktory a metody.
 
 ### <a name="requirements"></a>Požadavky
 
@@ -43,17 +37,11 @@ C + +/ CX atributy podporují pouze vlastnosti, ale není atribut konstruktory a
 
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)
 
-Uživatelských atributů, které umožňují rozšířit metadat spravovaného prvku. Další informace najdete v tématu [atributy](/dotnet/standard/attributes/index).
-
-### <a name="remarks"></a>Poznámky
-
 Informace a syntaxi popsanou v tomto tématu slouží k nahrazení informace uváděné v [atribut](attributes/attribute.md).
 
 Můžete definovat vlastní atribut definování typu a provedením <xref:System.Attribute> základní třídu pro typ a volitelně použití <xref:System.AttributeUsageAttribute> atribut.
 
-Například Vyrovnávání zatížení v Microsoft serveru (MTS Transaction) 1.0, chování s ohledem na transakce, synchronizace, a tak dále byla zadána prostřednictvím vlastní GUID vložen do knihovny typů s použitím vlastního atributu ODL. Proto může klient serveru MTS určit jeho vlastnosti načtením knihovny typů. V rozhraní .NET Framework analogové knihovny typů jsou metadata a obdobu jmenovek ODL vlastního atributu je vlastní atributy. Knihovny typů pro čtení je navíc obdobná u typů pomocí reflexe.
-
-Další informace najdete v tématu,
+Další informace naleznete v tématu:
 
 - [Cíle atributů](attribute-targets-cpp-component-extensions.md)
 
@@ -216,4 +204,4 @@ ref struct B {};
 
 ## <a name="see-also"></a>Viz také
 
-[Přípony komponent pro platformy běhového prostředí](component-extensions-for-runtime-platforms.md)
+[Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)

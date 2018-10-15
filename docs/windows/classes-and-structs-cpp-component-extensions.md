@@ -1,7 +1,7 @@
 ---
-title: Třídy a struktury (rozšíření komponent C++) | Dokumentace Microsoftu
+title: třídy ref class a struktura ref (C + +/ CLI a C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60e388e18e6d3607dac1946c3fd9a511e948afd4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f2d7ceea7dd3253b28eab5b5fad28381f115225f
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448373"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328066"
 ---
-# <a name="classes-and-structs--c-component-extensions"></a>Třídy a struktury (rozšíření komponent C++)
+# <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>třídy ref class a struktura ref (C + +/ CLI a C + +/ CX)
 
-Deklaruje třídu nebo strukturu jehož *doba života objektu* je spravována automaticky. Když objekt již není dostupný nebo dostane mimo rozsah, Visual C++ automaticky zahodí paměti, který je přidělen k objektu.
+**Třídy ref class** nebo **ref struct** rozšíření deklaraci třídy nebo struktury jehož *doba života objektu* je spravována automaticky. Když objekt již není dostupný nebo dostane mimo rozsah, se uvolní paměť.
 
 ## <a name="all-runtimes"></a>Všechny moduly runtime
 
@@ -61,7 +61,7 @@ Název třídy nebo struktury.
 *base_type*<br/>
 (Volitelné) Základní typ. Hodnotový typ však nemůže fungovat jako základního typu.
 
-Další informace najdete v popisech specifické pro jazyk tohoto parametru v prostředí Windows Runtime a běžné Runtimesections jazyka.
+Další informace najdete v popisech specifické pro jazyk tohoto parametru v prostředí Windows Runtime a Common Language Runtime.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -129,4 +129,4 @@ V následující tabulce jsou uvedeny rozdíly v syntaxi uvedenou v **všechny m
 
 ## <a name="see-also"></a>Viz také
 
-[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+[Přípony komponent pro .NET a UPW](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: zlepšení výkonu pomocí obecných typů (Visual C++) | Dokumentace Microsoftu'
+title: 'Postupy: zlepšení výkonu pomocí obecných typů (C + +/ CLI) | Dokumentace Microsoftu'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f946970f78b432774a5e4c7ba20fd15a00ae654
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ead9491e7b5302cadfa59eb7d98215fb3c41eb09
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318522"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327815"
 ---
-# <a name="how-to-improve-performance-with-generics-visual-c"></a>Postupy: Zlepšení výkonu pomocí obecných typů (Visual C++)
+# <a name="how-to-improve-performance-with-generics-ccli"></a>Postupy: zlepšení výkonu pomocí obecných typů (C + +/ CLI)
 
 Pomocí obecných typů můžete vytvořit opakovaně použitelný kód založený na parametr typu. Skutečný typ parametru typu je odloženo, dokud není volán kód klienta. Další informace o obecných typů viz [obecných typů](../windows/generics-cpp-component-extensions.md).
 

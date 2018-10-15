@@ -1,7 +1,7 @@
 ---
-title: typeid (rozšíření komponent C++) | Dokumentace Microsoftu
+title: typeid (C + +/ CLI a C + +/ CX) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1daf9d33b3eb21bf7d196a4263b5f2f7009b183
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b31344b1ba72b37bcfff45a3fd4feefda85f6a7a
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435399"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327580"
 ---
-# <a name="typeid--c-component-extensions"></a>typeid (rozšíření komponent C++)
+# <a name="typeid--ccli-and-ccx"></a>typeid (C + +/ CLI a C + +/ CX)
 
 Získá hodnotu, která určuje typ objektu.
 
-> [!WARNING]
+> [!NOTE]
 > Toto téma odkazuje na verzi rozšíření komponent C++ typeid. Verzi tohoto klíčového slova ISO C++ naleznete v části [typeid – operátor](../cpp/typeid-operator.md).
 
 ## <a name="all-runtimes"></a>Všechny moduly runtime
@@ -200,4 +200,4 @@ int::typeid == handle_to_int::typeid, as expected
 
 ## <a name="see-also"></a>Viz také
 
-[Přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md)
+[Přípony komponent pro .NET a UPW](../windows/component-extensions-for-runtime-platforms.md)
