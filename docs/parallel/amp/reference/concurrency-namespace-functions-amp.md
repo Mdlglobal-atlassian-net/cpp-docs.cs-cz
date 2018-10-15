@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78cbd53baf9e9ade8c20f3b9f5fa419eeb2d1c80
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 211005f273500992440c0e95d2c3c4e3adcef581
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441912"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163410"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Funkce oboru názvů Concurrency (AMP)
 
@@ -92,7 +92,7 @@ Hodnota, která má být uložena do umístění paměti zadaného parametrem `_
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true` Pokud je operace úspěšná. v opačném případě `false`.
+**Hodnota TRUE** Pokud je operace úspěšná, jinak **false**.
 
 ##  <a name="atomic_exchange"></a>  atomic_exchange – funkce (C++ AMP)
 
