@@ -58,7 +58,7 @@ ms.locfileid: "46038578"
 
 **\\**  *uveden jako osmičková číslice uveden jako osmičková číslice osmičkovými číslicemi*
 
-*šestnáctková řídicí sekvence*: **\x***šestnáctkové číslice* 
+*šestnáctková řídicí sekvence*: **\x**  *šestnáctkové číslice*
 
 *šestnáctková řídicí sekvence šestnáctkové číslice*
 
