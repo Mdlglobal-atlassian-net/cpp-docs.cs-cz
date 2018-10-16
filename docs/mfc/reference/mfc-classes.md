@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fb0cfa6d3657c0cce01e91c94cb23bce8886a43
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a276868dfdb14f754cac3938e052e82b7ab22a6f
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403139"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328607"
 ---
 # <a name="mfc-classes"></a>MFC – třídy
 
@@ -34,7 +34,7 @@ Třídy v následujícím seznamu jsou součástí knihovny Microsoft Foundation
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Cacceleratedeceleratetransition – třída](../../mfc/reference/cacceleratedeceleratetransition-class1.md)<br/>
+[Cacceleratedeceleratetransition – třída](../../mfc/reference/cacceleratedeceleratetransition-class.md)<br/>
 Implementuje zrychlení-zpomalení přechodu.
 
 [CAnimateCtrl – třída](../../mfc/reference/canimatectrl-class.md)<br/>
@@ -1109,7 +1109,7 @@ Představuje sadu záznamů ze zdroje dat vybrané.
 Zobrazení, které zobrazuje záznamy databáze v ovládacích prvcích.
 
 [CRect – třída](../../atl-mfc-shared/reference/crect-class.md)<br/>
-Podobně jako Windows [Rect – struktura](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us).
+Podobně jako Windows [Rect – struktura](rect-structure.md).
 
 [CRectTracker – třída](../../mfc/reference/crecttracker-class.md)<br/>
 Umožňuje položku, která má být zobrazen, přesouvat a různými způsoby se změněnou velikostí.
