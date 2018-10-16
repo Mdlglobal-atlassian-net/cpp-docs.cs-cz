@@ -1,5 +1,5 @@
 ---
-title: lround –, lroundf –, lroundl –, llround –, llroundf –, llroundl – | Microsoft Docs
+title: lround – lroundf –, lroundl –, llround –, llroundf –, llroundl – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -46,16 +46,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9af035e65e383c8027c8c19df02e18c298f625e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4ea24e45c26abe418023d4f065117928bb17ae2b
+ms.sourcegitcommit: 3f3f1d687e109b63399e14e2c8f4404787bdfae7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401045"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336532"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround, lroundf, lroundl, llround, llroundf, llroundl
 
-Zaokrouhlí na nejbližší celé číslo s plovoucí desetinnou čárkou hodnotu.
+Zaokrouhlí hodnotu s plovoucí desetinnou čárkou na nejbližší celé číslo.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -95,19 +95,19 @@ long long llroundl(
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Hodnota s plovoucí desetinnou čárkou má být zaokrouhleno.
+Hodnota s plovoucí desetinnou čárkou k zaokrouhlení.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Lround –** a **llround –** funkce vrátit na nejbližší **dlouho** nebo **dlouho** **dlouho** celého *x*. Uprostřed hodnoty jsou zaokrouhleny směrem od nuly, bez ohledu na nastavení režimu zaokrouhlení s plovoucí desetinnou čárkou. Neexistuje žádný návratový chyby.
+**Lround –** a **llround –** funkce vrátí nejbližší **dlouhé** nebo **dlouhé** **dlouhé** celé číslo *x*. Středové hodnoty jsou zaokrouhleny směrem od nuly bez ohledu na nastavení režimu zaokrouhlení s plovoucí desetinnou čárkou. Není vrácena žádná chyba.
 
-|Vstup|Výjimka SEH|Matherr – výjimka|
+|Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ **QNAN**, **IND**|žádná|**_DOMAIN –**|
+|ROZMEZÍ **QNAN**, **AJÍT**|žádná|**_DOMÉNA**|
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **lround –** nebo **llround –** , přijmout a vrátit **float** a **dlouho** **dvojité** hodnoty. V programu C **lround –** a **llround –** vždy přijmout a vrátit **dvojité**.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **lround –** nebo **llround –** , která používají a vrací **float** a **dlouhé** **double** hodnoty. V programu jazyka C **lround –** a **llround –** vždy převezme a vrátí **double**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -115,13 +115,13 @@ Protože C++ umožňuje, aby přetížení, můžete volat přetížení **lroun
 |-------------|---------------------|
 |**lround –**, **lroundf –**, **lroundl –**, **llround –**, **llroundf –**, **llroundl –**|\<Math.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
 ```C
 // crt_lround.c
-// Build with: cl /W3 /Tc crt_lround.c
+// Build with: cl /W4 /Tc crt_lround.c
 // This example displays the rounded results of
 // the floating-point values 2.499999, -2.499999,
 // 2.8, -2.8, 3.5 and -3.5.
@@ -133,7 +133,7 @@ int main( void )
 {
    double x = 2.499999;
    float y = 2.8f;
-   long double z = 3.5;
+   long double z = 3.5L;
 
    printf("lround(%f) is %d\n", x, lround(x));
    printf("lround(%f) is %d\n", -x, lround(-x));
@@ -149,11 +149,11 @@ lround(2.499999) is 2
 lround(-2.499999) is -2
 lroundf(2.800000) is 3
 lroundf(-2.800000) is -3
-lroundl(2.500000) is 4
-lroundl(-2.500000) is -4
+lroundl(3.500000) is 4
+lroundl(-3.500000) is -4
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

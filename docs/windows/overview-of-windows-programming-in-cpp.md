@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b2870aa742806671e39728c3b73604dcf4e810e9
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: e8251f45d07e8a410c41a89fbc618839e9bbb838
+ms.sourcegitcommit: 6a6b2061db9d51c5cc79775512de54589a4d2fbc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083083"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347225"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Přehled programování v C++ v systému Windows
 
@@ -35,7 +35,7 @@ Existuje několik kategorií aplikací Windows, které vyvíjíte v jazyce Visua
 
 U aplikací pro UPW je možné spouštět na všech zařízeních Windows 10, jako jsou tablety a mobilní telefony, stejně jako v klientských počítačích. Na ploše, je možné spouštět jako okno klasické pracovní plochy, ne vždy spuštěný celou obrazovku. Tyto aplikace můžete spustit také na Xboxu a v budoucích zařízení.  Aplikace UWP běží na Windows Runtime, která poskytuje prvky uživatelského rozhraní, služby a rozhraní pro různé hardwarová zařízení, které jsou podporované ve Windows.
 
-Aplikace UWP můžete psát v jazyce C + +/ CX, dialekt jazyka C++, můžete použít [C + +/ knihoven WinRT](https://moderncpp.com/)pro několik scénářů. U aplikací pro UPW kompilovány do nativního kódu a mají XAML uživatelské rozhraní nebo pomocí rozhraní DirectX. Součásti prostředí Windows Runtime, které jsou napsány v nativním kódu, můžete využívat aplikace UPW napsané v jiných jazycích. Další informace najdete v tématu [vytvoření aplikace pro univerzální platformu Windows v jazyce C++](http://go.microsoft.com/fwlink/?LinkID=534976), [vytvořit svoji první hru UPW pomocí DirectX](http://go.microsoft.com/fwlink/p/?LinkId=244656), a [součástí vytváření prostředí Windows Runtime v jazyce C++](http://go.microsoft.com/fwlink/p/?LinkId=244658).
+Aplikace UWP můžete psát v jazyce C + +/ CX, dialekt jazyka C++, můžete použít [C + +/ knihoven WinRT](https://moderncpp.com/) pro několik scénářů. U aplikací pro UPW kompilovány do nativního kódu a mají XAML uživatelské rozhraní nebo pomocí rozhraní DirectX. Součásti prostředí Windows Runtime, které jsou napsány v nativním kódu, můžete využívat aplikace UPW napsané v jiných jazycích. Další informace najdete v tématu [vytvoření aplikace pro univerzální platformu Windows v jazyce C++](http://go.microsoft.com/fwlink/?LinkID=534976), [vytvořit svoji první hru UPW pomocí DirectX](http://go.microsoft.com/fwlink/p/?LinkId=244656), a [součástí vytváření prostředí Windows Runtime v jazyce C++](http://go.microsoft.com/fwlink/p/?LinkId=244658).
 
    Tato kategorie zahrnuje také pomocí jazyka C++ pro součásti jádra a výpočetní kód v rámci serveru a programování v cloudu. Někdy náročné na výkon kódu v jádru serveru nebo cloudové aplikace je napsaný v jazyce C++ se pro zajištění maximálního výkonu. Můžete kompilovat takového kódu do knihovny DLL a použití z jazyka C# nebo Visual Basic.
 
