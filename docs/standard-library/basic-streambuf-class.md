@@ -467,7 +467,7 @@ Pokud funkce nemůže být úspěšná, vrátí **traits_type::eof** nebo vyvol�
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud _ *Meta* není výsledkem porovnání **traits_type::eof**, chcete-li vložit element endeavors chráněná virtuální členská funkce **traits_type::**[k_ char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) do výstupního datového proudu. To lze provést různými způsoby:
+Pokud _ *Meta* není výsledkem porovnání **traits_type::eof**, chcete-li vložit element endeavors chráněná virtuální členská funkce **traits_type::**[k_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) do výstupního datového proudu. To lze provést různými způsoby:
 
 - Pokud `write position` je k dispozici, může ukládat element na pozici zápisu a zvýšit další ukazatele pro výstupní vyrovnávací paměť.
 
