@@ -47,16 +47,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2a70b39352f26d76e9199b9da46f679507b148ed
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: a93c36748eb01a1c647a2aa433196c7364f60744
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163113"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410808"
 ---
 # <a name="hstring-class"></a>HString – třída
 
-Pomocná třída pro Správa životního cyklu HSTRING pomocí vzoru RAII.
+Pomocná třída pro Správa životního cyklu [HSTRING](/windows/desktop/WinRT/hstring) pomocí vzoru RAII.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,7 +66,7 @@ class HString;
 
 ## <a name="remarks"></a>Poznámky
 
-Modul Windows Runtime poskytuje přístup k řetězcům prostřednictvím popisovače HSTRING. `HString` Třída poskytuje praktické funkce a operátory pro zjednodušení práce s popisovači HSTRING. Tato třída dokáže zpracovat životnost HSTRING vlastní prostřednictvím vzoru RAII.
+Modul Runtime Windows poskytuje přístup k řetězcům prostřednictvím [HSTRING](/windows/desktop/WinRT/hstring) obslužné rutiny. `HString` Třída poskytuje praktické funkce a operátory pro zjednodušení práce s popisovači HSTRING. Tato třída dokáže zpracovat životnost HSTRING vlastní prostřednictvím vzoru RAII.
 
 ## <a name="members"></a>Členové
 

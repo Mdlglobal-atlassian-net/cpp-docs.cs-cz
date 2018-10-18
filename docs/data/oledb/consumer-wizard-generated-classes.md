@@ -1,7 +1,7 @@
 ---
 title: Třídy generované v Průvodci příjemcem | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/15/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -21,22 +21,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a4ffcb231824c120c90eaae1751a016ef63b8211
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a7498f15072f3b9687476ba7f6c291ebf5ff88cd
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106178"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410770"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Třídy generované v průvodci příjemcem
 
-Při použití průvodce příjemcem ATL OLE DB pro vygenerování příjemce, máte na výběr mezi používáním atributů šablony technologie OLE DB nebo OLE DB. V obou případech průvodce vygeneruje třídu příkazu nebo třída záznamů uživatelů. Třídy příkazů obsahuje kód pro otevření zdroje dat a sady řádků, které jste zadali v průvodci. Třída záznamu uživatele obsahuje mapování sloupců pro tabulku databáze, kterou jste vybrali. Generovaný kód se však liší v každém případě:  
+Při použití **průvodce příjemcem ATL OLE DB** generovat příjemce, máte na výběr mezi používáním atributů šablony technologie OLE DB nebo OLE DB. V obou případech průvodce vygeneruje třídu příkazu nebo třída záznamů uživatelů. Třídy příkazů obsahuje kód pro otevření zdroje dat a sady řádků, které jste zadali v průvodci. Třída záznamu uživatele obsahuje mapování sloupců pro tabulku databáze, kterou jste vybrali. Generovaný kód se však liší v každém případě:  
   
-- Pokud vyberete příjemce bez vizuálního vzhledu, průvodce vygeneruje třídu příkazu nebo třída záznamů uživatelů. Třídy příkazů bude mít název, který zadáte v poli třídy v průvodci (například `CProducts`), a třídu záznamů uživatele bude mít název ve tvaru "*ClassName*přístupového objektu" (například `CProductsAccessor`). Obě třídy jsou umístěny v souboru hlaviček příjemce.  
+- Pokud vyberete příjemce bez vizuálního vzhledu, průvodce vygeneruje třídu příkazu nebo třída záznamů uživatelů. Třídu příkazu bude mít název, který zadáte v **třídy** pole v průvodci (například `CProducts`), a třída záznamů uživatele bude mít název ve tvaru "*ClassName*přístupového objektu" (například) `CProductsAccessor`). Obě třídy jsou umístěny v souboru hlaviček příjemce.  
   
 - Pokud vyberete s atributy uživatelů, třída záznamů uživatele bude mít název ve tvaru "_*ClassName*přístupového objektu" a budou vloženy. To znamená budete moci zobrazit pouze třídu příkazu v textovém editoru; Třída záznamů uživatele můžete zobrazit pouze jako vložený kód. Informace o zobrazení vloženého kódu najdete v tématu [ladění vloženého kódu](/visualstudio/debugger/how-to-debug-injected-code).  
   
-Následující příklady používají třídy příkazu vytvořit na tabulce produktů v databázi Northwind k předvedení generované v Průvodci uživatelský kód pro třídu příkazu a třída uživatelského záznamu.  
+Následující příklady používají vytvořenou na třídu příkazu `Products` tabulku `Northwind` databáze k předvedení generované v Průvodci uživatelský kód pro příkaz třídy a třídy uživatelského záznamu.  
   
 ## <a name="templated-user-record-classes"></a>Třídy bez vizuálního vzhledu uživatelského záznamu  
 
@@ -47,10 +47,10 @@ Pokud vytvoříte příjemce technologie OLE DB pomocí šablony technologie OLE
 První část třída záznamu uživatele obsahuje deklarace členů dat a datové členy stavu a délky pro jednotlivé sloupce vázané na data. Informace o těchto datových členů, najdete v tématu [Datoví členové stavu pole v přístupových objektech generovaných průvodcem](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
   
 > [!NOTE]
->  Pokud změníte název třídy záznamu uživatele nebo napsat vlastní příjemce, datových proměnných musí předcházet proměnné stavu a délky.  
+> Pokud změníte název třídy záznamu uživatele nebo napsat vlastní příjemce, datových proměnných musí předcházet proměnné stavu a délky.  
   
 > [!NOTE]
->  Průvodce příjemcem ATL OLE DB používá `DB_NUMERIC` typ vazby číselných datových typů. To dřív používal `DBTYPE_VARNUMERIC` (formát, který je popsán `DB_VARNUMERIC` typ; viz Oledb.h). Pokud použijete průvodce k vytvoření spotřebitelů, doporučuje se, že používáte `DB_NUMERIC`.  
+> Průvodce příjemcem ATL OLE DB používá `DB_NUMERIC` typ vazby číselných datových typů. To dřív používal `DBTYPE_VARNUMERIC` (formát, který je popsán `DB_VARNUMERIC` typ; viz Oledb.h). Pokud použijete průvodce k vytvoření spotřebitelů, doporučuje se, že používáte `DB_NUMERIC`.  
   
 ```cpp  
 // Products.H : Declaration of the CProducts class  
@@ -159,7 +159,7 @@ class CProducts : public CCommand<CAccessor<CProductsAccessor>>
   
 ## <a name="attribute-injected-user-record-classes"></a>Třídy atributově uživatelských záznamů  
 
-Pokud vytvoříte příjemce technologie OLE DB použitím atributů databáze ([db_command](../../windows/db-command.md) nebo [db_table](../../windows/db-table.md)), vloží atributy třídy uživatelského záznamu s názvem ve formátu "_*ClassName*Přistupujícího objektu. " Například pokud pojmenujete vaší třídy příkazu `COrders`, třída záznamů uživatele bude `_COrdersAccessor`. Přestože třída záznamů uživatele se zobrazí v zobrazení tříd, dvojitým kliknutím na třídu příkazu nebo tabulky v hlavičkovém souboru místo toho. V těchto případech můžete jenom zobrazit skutečné deklarace třídy uživatelského záznamu zobrazením atributově kódu.  
+Pokud vytvoříte příjemce technologie OLE DB použitím atributů databáze ([db_command](../../windows/db-command.md) nebo [db_table](../../windows/db-table.md)), vloží atributy třídy uživatelského záznamu s názvem ve formátu "_*ClassName*Přistupujícího objektu. " Například pokud pojmenujete vaší třídy příkazu `COrders`, třída záznamů uživatele bude `_COrdersAccessor`. Přestože třída záznamů uživatele se zobrazí v **zobrazení tříd**, dvojitým kliknutím na třídu příkazu nebo tabulky v hlavičkovém souboru místo toho. V těchto případech můžete jenom zobrazit skutečné deklarace třídy uživatelského záznamu zobrazením atributově kódu.  
   
 Může existovat možných komplikací Pokud přidáte nebo přepsání metod s atributy uživatelů. Například můžete přidat `_COrdersAccessor` konstruktoru `COrders` deklaraci, ale Všimněte si, že ve skutečnosti to přidá konstruktor do vložené `COrdersAccessor` třídy. Takový konstruktor lze inicializovat sloupce/parametry, ale nelze vytvořit konstruktor kopie tímto způsobem, protože jej nelze doložit přímo `COrdersAccessor` objektu. Pokud potřebujete konstruktoru (nebo jiné metody) přímo na `COrders` třídy, se doporučuje definovat novou třídu odvozenou z `COrders` a přidat nezbytné metody.  
   

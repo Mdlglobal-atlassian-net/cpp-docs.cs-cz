@@ -1,7 +1,7 @@
 ---
 title: Editor obrázků pro ikony | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/17/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -23,16 +23,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe7cad7fccabd7acc8af7ecf1f3711d5b0d636ce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ecd2b3b94f04a246242a33494a124171e95cae7c
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379187"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410665"
 ---
 # <a name="image-editor-for-icons"></a>Editor obrázků pro ikony
 
-Editor obrázků má rozsáhlou sadu nástrojů pro vytváření a úpravu obrázků a také funkce, které vám pomohou vytvořit rastry pro panel nástrojů. Kromě rastrových obrázků, ikon a kurzorů, můžete upravit obrázky ve formátu GIF nebo JPEG pomocí příkazů v **Image** nabídky a nástroje na **Editor obrázků** nástrojů.
+Když kliknete na soubor obrázku (třeba ICO, BMP, PNG) v Průzkumníku řešení, obraz se otevře v editoru obrázků stejně jako kód soubory otevřené v editoru kódu. Když je aktivní karta editoru obrázků, se zobrazí panely nástrojů s celou řadu nástrojů pro vytváření a úpravu obrázků. Kromě rastrových obrázků, ikon a kurzorů, můžete upravit obrázky ve formátu GIF nebo JPEG pomocí příkazů v **Image** nabídky a nástroje na **Editor obrázků** nástrojů.
 
 Editou obrázků vám umožňuje:
 

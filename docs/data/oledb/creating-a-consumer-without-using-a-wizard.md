@@ -1,7 +1,7 @@
 ---
 title: Vytvoření příjemce bez použití Průvodce | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a20abb132d0446874b099119dc6c54979aef4638
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7ce6949e582142e208058b4fa59d02008513e29f
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46023589"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410730"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Vytvoření příjemce bez použití průvodce
 
@@ -28,7 +28,7 @@ V následujícím příkladu se předpokládá, že přidáte podporu příjemce
   
 Chcete-li přidat podporu příjemce technologie OLE DB bez použití průvodce příjemcem ATL OLE DB:  
   
-- V souboru Stdafx.h připojte `#include` příkazy:  
+- V souboru soubor pch.h, připojte `#include` příkazy:  
   
     ```cpp  
     #include <atlbase.h>  
@@ -38,10 +38,10 @@ Chcete-li přidat podporu příjemce technologie OLE DB bez použití průvodce 
   
 Příjemce prostřednictvím kódu programu, obvykle provádí následující pořadí operací:  
   
-- Vytvořte třídu záznam uživatele, který váže sloupce pro lokální proměnné. V tomto příkladu `CMyTableNameAccessor` je třída záznamu uživatele (viz [uživatelských záznamů](../../data/oledb/user-records.md)). Tato třída obsahuje mapování sloupců a parametr mapy. Deklarovat v třídě uživatelského záznamu pro každé pole, které zadáte v mapě sloupců; datový člen pro každou z těchto datových členů také deklarujte datový člen stav a délku datového člena. Další informace najdete v tématu [Datoví členové stavu pole v přístupových objektech generovaných průvodcem](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
+1. Vytvořte třídu záznam uživatele, který váže sloupce pro lokální proměnné. V tomto příkladu `CMyTableNameAccessor` je třída záznamu uživatele (viz [uživatelských záznamů](../../data/oledb/user-records.md)). Tato třída obsahuje mapování sloupců a parametr mapy. Deklarovat v třídě uživatelského záznamu pro každé pole, které zadáte v mapě sloupců; datový člen pro každou z těchto datových členů také deklarujte datový člen stav a délku datového člena. Další informace najdete v tématu [Datoví členové stavu pole v přístupových objektech generovaných průvodcem](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
   
     > [!NOTE]
-    >  Pokud píšete vlastní příjemce, datových proměnných musí předcházet proměnné stavu a délky.  
+    > Pokud píšete vlastní příjemce, datových proměnných musí předcházet proměnné stavu a délky.  
   
 - Vytvořit instanci zdroje dat a relace. Rozhodnout, jaký typ přístupového objektu a sady řádků a potom vytvořte instanci sady řádků pomocí [CCommand](../../data/oledb/ccommand-class.md) nebo [CTable](../../data/oledb/ctable-class.md):  
   
@@ -67,7 +67,7 @@ Příjemce prostřednictvím kódu programu, obvykle provádí následující po
     hr = rs.Open();            // (Open also executes the command)  
     ```  
   
-- Volitelně můžete nastavit vlastnosti sady řádků pomocí `CDBPropSet::AddProperty` a předat je jako parametr `rs.Open`. Příklad, jak to lze provést, naleznete v tématu GetRowsetProperties v [vygenerované metody](../../data/oledb/consumer-wizard-generated-methods.md).  
+- Volitelně můžete nastavit vlastnosti sady řádků pomocí `CDBPropSet::AddProperty` a předat je jako parametr `rs.Open`. Příklad, jak to lze provést, naleznete v tématu **GetRowsetProperties** v [vygenerované metody](../../data/oledb/consumer-wizard-generated-methods.md).  
   
 - Nyní můžete v sadě řádků načtení/práce s daty.  
   
@@ -83,7 +83,7 @@ Příjemce prostřednictvím kódu programu, obvykle provádí následující po
   
 - Volání `CoUnInitialize` k inicializaci modelu COM. To je obvykle volána v hlavní kód.  
   
-    ```  
+    ```cpp  
     CoUninitialize();  
     ```  
   
