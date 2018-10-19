@@ -55,13 +55,13 @@ Vícebajtový řetězec.
 
 Tyto operátory provádějí zřetězení řetězců:
 
-- **+= – operátor (***s1***)** připojí znaky v zapouzdřeného `BSTR` z *s1* na konec tohoto objektu zapouzdřený `BSTR`.
+- **+= – operátor (**  *s1*  **)** připojí znaky v zapouzdřeného `BSTR` z *s1* na konec tohoto objektu zapouzdřený `BSTR`.
 
-- **Operator + (***s1***)** vrátí nový `_bstr_t` zřetězením tento objekt, který je vytvořen `BSTR` se specifikací *s1*.
+- **Operator + (**   *s1*  **)** vrátí nový `_bstr_t` zřetězením tento objekt, který je vytvořen `BSTR` se specifikací *s1*.
 
-- **Operator + (***s2***&#124;***s1***)** vrátí nový `_bstr_t` , který je vytvořený zřetězením vícebajtový řetězec *s2*, převedeno na kódování Unicode, se `BSTR` zapouzdřena v *s1*.
+- **Operator + (**  *s2*  **&#124;**  *s1*  **)** vrátí nový `_bstr_t` , který je vytvořený zřetězením vícebajtový řetězec *s2*, převedeno na kódování Unicode, se `BSTR` zapouzdřena v *s1*.
 
-- **Operator + (***s3* **,***s1***)** vrátí nový `_bstr_t` , který je vytvořen pomocí zřetězení řetězců kódování Unicode *s3* s `BSTR` zapouzdřena v *s1*.
+- **Operator + (**  *s3* **,**  *s1*  **)** vrátí nový `_bstr_t` , který je vytvořen pomocí zřetězení řetězců kódování Unicode *s3* s `BSTR` zapouzdřena v *s1*.
 
 **Specifické pro END Microsoft**
 

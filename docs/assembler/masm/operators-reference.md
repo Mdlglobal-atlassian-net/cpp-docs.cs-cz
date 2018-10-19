@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4708af3c0fa272a1ca803f549ce8953caccaa27
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 5c9f5beb0e3525de6df88e44248410810502962e
+ms.sourcegitcommit: 4cbde5d164d681204c4011dc95a921d75292f423
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688173"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49459150"
 ---
 # <a name="masm-operators-reference"></a>Referenční dokumentace k operátorům MASM
 
@@ -36,7 +36,7 @@ ms.locfileid: "43688173"
 
 ||||
 |-|-|-|
-|[! (prostředí runtime logický operátor not)](operator-logical-not-masm-run-time.md)|[! = (nerovná runtime)](operator-not-equal-masm.md)|[&#124;&#124;(logický modul runtime nebo)](operator-logical-or.md)|
+|[\! (prostředí runtime logický operátor not)](operator-logical-not-masm-run-time.md)|[\!= (nerovná runtime)](operator-not-equal-masm.md)|[&#124;&#124;(logický modul runtime nebo)](operator-logical-or.md)|
 |[& & (logický modul runtime a)](operator-logical-and-masm-run-time.md)|[< (prostředí runtime menší než)](operator-less-than-masm-run-time.md)|[\<= (prostředí runtime menší nebo rovno)](operator-less-or-equal-masm-run-time.md)|
 |[== (prostředí runtime rovno)](operator-equal-masm-run-time.md)|[> (větší než runtime)](operator-greater-than-masm-run-time.md)|[> = (prostředí runtime větší nebo rovno)](operator-greater-or-equal-masm-run-time.md)|
 |[& (bitový modulu runtime a)](operator-bitwise-and.md)|||
@@ -54,7 +54,7 @@ ms.locfileid: "43688173"
 
 ||||
 |-|-|-|
-|[! (znakový literál)](operator-logical-not-masm.md)|[% (nakládání jako text)](operator-percent.md)||
+|[\! (znakový literál)](operator-logical-not-masm.md)|[% (nakládání jako text)](operator-percent.md)||
 |[;; (považovat komentář)](operator-semicolons.md)|[&lt; &gt; (považovat za jeden literál)](operator-literal.md)|[& & (Nahraďte hodnotu parametru)](operator-logical-and-masm.md)|
 
 ## <a name="miscellaneous"></a>Různé
