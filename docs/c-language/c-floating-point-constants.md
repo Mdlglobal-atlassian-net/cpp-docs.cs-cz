@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ceed8fa38ae2b6801fa13c65e54f1cd1cc711d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 23b5db965c8b4e29e8d25bad658189e7b37fc929
+ms.sourcegitcommit: f9d9db80a8f13eae2c41337b974e1298109e33c5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097689"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49640763"
 ---
 # <a name="c-floating-point-constants"></a>Konstanty jazyka C s plovoucí desetinnou čárkou
 
@@ -32,17 +32,27 @@ ms.locfileid: "46097689"
 
 ## <a name="syntax"></a>Syntaxe
 
-*konstanta plovoucí desetinnou*: &nbsp; &nbsp; *desetinná konstanta exponent – část*<sub>optimalizované</sub> *s plovoucí desetinnou čárkou přípona* <sub>optimalizované</sub> &nbsp; &nbsp; *plovoucí desetinné části exponentu sekvence číslic suffix*<sub>optimalizované</sub>
+*konstanta plovoucí desetinnou*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*desetinná konstanta* *exponent část*<sub>optimalizované</sub> *s plovoucí desetinnou čárkou přípona*<sub>optimalizované</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sekvence číslic* *exponent část* *s plovoucí desetinnou čárkou přípona*<sub>optimalizované</sub>
 
-*desetinná konstanta*: &nbsp; &nbsp; *sekvence číslic*<sub>optimalizované</sub> **.** *sekvence číslic* &nbsp; &nbsp; *sekvence číslic***.** 
+*desetinná konstanta*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sekvence číslic*<sub>optimalizované</sub> **.** *sekvence číslic*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sekvence číslic***.**
 
-*exponent část*: &nbsp; &nbsp; **e***přihlašování*<sub>optimalizované</sub> *sekvence číslic* &nbsp; &nbsp; **E***přihlašování*<sub>optimalizované</sub> *sekvence číslic* 
+*exponent část*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**elektronické** *přihlašování*<sub>optimalizované</sub> *sekvence číslic*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**elektronické** *přihlašování*<sub>optimalizované</sub> *sekvence číslic*
 
-*znaménko* : jeden z &nbsp; &nbsp; **+ -**
+*znaménko*: jeden z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**+ -**
 
-*sekvence číslic*: &nbsp; &nbsp; *číslice* &nbsp; &nbsp; *sekvence číslic číslice*
+*sekvence číslic*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*číslice*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sekvence číslic* *číslice*
 
-*číslo s plovoucí čárkou přípona* : jeden z &nbsp; &nbsp; **f l F L**
+*číslo s plovoucí čárkou přípona*: jeden z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**l f F L**
 
 Můžete vynechat buď číslic od desetinné čárky (celočíselnou část hodnoty) nebo číslice za desetinnou čárkou (zlomkové části), ale ne obě možnosti současně. Můžete ponechat si desetinné čárky pouze v případě, že zahrnete exponent. Žádné prázdné znaky mohou oddělit číslic nebo znaků konstanty.
 

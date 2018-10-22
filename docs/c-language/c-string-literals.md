@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57bd79e1df35f650d78da3108137d58405b33f25
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6101c45f30284633c5f10c148be5a15e1e81dde7
+ms.sourcegitcommit: f9d9db80a8f13eae2c41337b974e1298109e33c5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082011"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49640727"
 ---
 # <a name="c-string-literals"></a>Textové literály jazyka C
 
@@ -29,11 +29,19 @@ ms.locfileid: "46082011"
 
 ## <a name="syntax"></a>Syntaxe
 
-*řetězcový literál*: &nbsp; &nbsp; &nbsp; &nbsp; **"** *s – znak sekvence*<sub>optimalizované</sub> **"**  &nbsp; &nbsp; &nbsp; &nbsp; **L "** *s – znak sekvence*<sub>optimalizované</sub> **"**
+*řetězcový literál*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**"** *s – znak sekvence*<sub>optimalizované</sub> **"**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**L"** *s – znak sekvence*<sub>optimalizované</sub> **"**
 
-*s – znak sekvence*: &nbsp; &nbsp; &nbsp; &nbsp; *s char* &nbsp; &nbsp; &nbsp; &nbsp;  *s – znak sekvence* *s-char*
+*s – znak sekvence*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*s-char*
 
-*s char*: &nbsp; &nbsp; &nbsp; &nbsp;libovolný člen zdrojové znakové sady kromě dvojité uvozovky ("), zpětného lomítka (\\), nebo znaku &nbsp; &nbsp; &nbsp; &nbsp; *řídicí sekvence*
+&nbsp;&nbsp;&nbsp;&nbsp;*s – znak sekvence* *s-char*
+
+*s char*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Každý člen zdrojové znakové sady kromě dvojité uvozovky ("), zpětného lomítka (\\), nebo znak nového řádku<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;*řídicí sekvence*
 
 ## <a name="remarks"></a>Poznámky
 
