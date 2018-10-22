@@ -1,13 +1,14 @@
 ---
 title: -Ox (povolení většiny optimalizací pro rychlost) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 09/25/2017
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ToolOptimization
-- /ox
+- /Ox
+- /Oxs
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e1da84c3a4ec481d3af2880a80f5923bf0c50cc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f3f5a39201283567285b37a0901929022b688104
+ms.sourcegitcommit: 4cbde5d164d681204c4011dc95a921d75292f423
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438077"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49459163"
 ---
 # <a name="ox-enable-most-speed-optimizations"></a>/OX (povolení většiny optimalizací pro rychlost)
 
@@ -33,7 +34,7 @@ ms.locfileid: "46438077"
 
 ## <a name="syntax"></a>Syntaxe
 
-> /OX
+> **/OX**
 
 ## <a name="remarks"></a>Poznámky
 
@@ -59,7 +60,7 @@ ms.locfileid: "46438077"
 
 - [/Od (zakázání (ladění))](../../build/reference/od-disable-debug.md)
 
-Můžete je zrušit Posun směrem k rychlosti **/Ox** – možnost kompilátoru při zadání **/Oxs**, které kombinuje **/Ox** – možnost kompilátoru s  [ /OS (upřednostnit malý Kód)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md). Kombinované možnosti upřednostnit menší velikost kódu.
+Můžete je zrušit Posun směrem k rychlosti **/Ox** – možnost kompilátoru při zadání **/Oxs**, které kombinuje **/Ox** – možnost kompilátoru s  [ /OS (upřednostnit malý Kód)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md). Kombinované možnosti upřednostnit menší velikost kódu.  **/Oxs** možnost je přesně stejné jako zadání **/Ox** **/Os** při možnosti se zobrazí v tomto pořadí.
 
 Použít všechny dostupné souboru úroveň optimalizace pro buildy vydaných verzí, doporučujeme vám určit [/O2 (maximalizovat rychlost)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) místo **/Ox**, a [/O1 (minimalizaci velikosti)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) místo z **/Oxs**. Pro ještě více optimalizace ve verzi sestavení, zvažte také [/GL (optimalizace celého programu)](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru a [parametru/LTCG (generování kódu při propojování odkaz)](../../build/reference/ltcg-link-time-code-generation.md) – možnost linkeru.
 
@@ -73,7 +74,7 @@ Použít všechny dostupné souboru úroveň optimalizace pro buildy vydaných v
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Optimization%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Optimization%2A>.
 
 ## <a name="see-also"></a>Viz také
 
