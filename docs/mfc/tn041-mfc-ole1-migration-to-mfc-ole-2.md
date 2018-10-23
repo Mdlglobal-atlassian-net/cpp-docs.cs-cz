@@ -1,7 +1,7 @@
 ---
 title: 'TN041: Migrace MFC-OLE1 do MFC-OLE 2 | Dokumentace Microsoftu'
 ms.custom: ''
-ms.date: 06/28/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75177743b893bdcf48b52b27c25ea4070e000f88
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c2f93ffa79c5f737be032ae9edffa6c3e49c7055
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377055"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809015"
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041: Migrace z prostředí MFC/OLE1 do MFC/OLE2
 
@@ -301,7 +301,7 @@ V tomto okamžiku OCLIENT je funkční aplikace kontejneru OLE. Je možné vlož
 
 Jedním z nejzajímavějších funkce OLE je aktivace na místě (nebo "Vizuální úpravy"). Tato funkce umožňuje se serverová aplikace mohla převzít kontrolu nad částí uživatelského rozhraní na kontejner, poskytuje pohodlnější editační rozhraní pro uživatele. K implementaci místní aktivaci za účelem OCLIENT, je potřeba přidat, a také další kód některé speciální prostředky. Tyto prostředky a kód se obvykle poskytované AppWizard – ve skutečnosti byla velkou část kódu tady si přímo z aplikace čerstvé AppWizard podpora "Kontejnerů".
 
-Za prvé je potřeba přidat nabídce prostředků chcete použít, když je položka, která je na místě aktivní. Tento prostředek doplňující nabídky v jazyce Visual C++ můžete vytvořit zkopírováním IDR_OCLITYPE prostředků a odebírá všechny kromě souborů a okno automaticky otevíraná okna. Mezi souboru a okno automaticky otevíraná okna k označení oddělení skupiny jsou vloženy dvě oddělovacích pruhů (by měl vypadat: soubor &#124; &#124; okno). Další informace o významu těchto oddělovače a jak slučování nabídek serveru a kontejneru najdete v části "Nabídky a prostředky: sloučení nabídky" v *OLE 2 třídy*.
+Za prvé je potřeba přidat nabídce prostředků chcete použít, když je položka, která je na místě aktivní. Tento prostředek doplňující nabídky v jazyce Visual C++ můžete vytvořit zkopírováním IDR_OCLITYPE prostředků a odebírá všechny kromě souborů a okno automaticky otevíraná okna. Mezi souboru a okno automaticky otevíraná okna k označení oddělení skupiny jsou vloženy dvě oddělovacích pruhů (by měl vypadat: soubor &#124; &#124; okno). Další informace o významu těchto oddělovače a jak slučování nabídek serveru a kontejneru najdete v části [nabídky a prostředky: sloučení nabídky](../mfc/menus-and-resources-menu-merging.md).
 
 Jakmile máte těchto nabídek, které vytvořili, musíte nechat informovat o rámci. To se provádí voláním `CDocTemplate::SetContainerInfo` pro šablonu dokumentu, předtím, než přidáte na seznam šablon dokumentů do funkce InitInstance. vaše. Nový kód pro registraci šablonu dokumentu vypadá takto:
 
@@ -618,7 +618,7 @@ Existuje mnoho další chyby v svritem.cpp, které dosud nebylo řešeno. Nejsou
 \hiersvr\svrview.cpp(325) : error C2660: 'CopyToClipboard' : function does not take 2 parameters
 ```
 
-`COleServerItem::CopyToClipboard` Příznak "bIncludeNative" už nepodporuje. Nativní dat (dat zapsaných funkci Serialize položka serveru) je vždy zkopírovány, proto odebrat první parametr. Kromě toho `CopyToClipboard` vyvolá výjimku, pokud dojde k chybě místo vrácení hodnoty FALSE. Změňte kód pro CServerView::OnEditCopy následujícím způsobem:
+`COleServerItem::CopyToClipboard` už nepodporuje `bIncludeNative` příznak. Nativní dat (dat zapsaných funkci Serialize položka serveru) je vždy zkopírovány, proto odebrat první parametr. Kromě toho `CopyToClipboard` vyvolá výjimku, pokud dojde k chybě místo vrácení hodnoty FALSE. Změňte kód pro CServerView::OnEditCopy následujícím způsobem:
 
 ```cpp
 void CServerView::OnEditCopy()
@@ -654,7 +654,7 @@ Přidat do této aplikace serveru "Úpravy s náhledem" (nebo aktivace na míst�
 
 - Budete muset o tyto speciální prostředky a třídy informování rozhraní framework.
 
-Nabídce prostředků je snadné vytvořit. Spusťte Visual C++, kopírování prostředků nabídky IDR_HIERSVRTYPE do nabídky prostředek s názvem IDR_HIERSVRTYPE_SRVR_IP. V nabídce upravte tak, aby zůstaly jenom upravit a nápovědu nabídky automaticky otevíraná okna. Přidejte dva oddělovače do nabídky mezi nabídky Úpravy a nápovědy (by měl vypadat: Upravit &#124; &#124; Nápověda). Další informace o významu těchto oddělovače a jak slučování nabídek serveru a kontejneru, najdete v části "Nabídky a prostředky: sloučení nabídky" v *OLE 2 třídy*.
+Nabídce prostředků je snadné vytvořit. Spusťte Visual C++, kopírování prostředků nabídky IDR_HIERSVRTYPE do nabídky prostředek s názvem IDR_HIERSVRTYPE_SRVR_IP. V nabídce upravte tak, aby zůstaly jenom upravit a nápovědu nabídky automaticky otevíraná okna. Přidejte dva oddělovače do nabídky mezi nabídky Úpravy a nápovědy (by měl vypadat: Upravit &#124; &#124; Nápověda). Další informace o významu těchto oddělovače a jak slučování nabídek serveru a kontejneru najdete v tématu [nabídky a prostředky: sloučení nabídky](../mfc/menus-and-resources-menu-merging.md).
 
 Rastrový obrázek pro panel nástrojů dílčí můžete snadno vytvořit zkopírováním z čerstvého AppWizard vygeneruje aplikace s možností "Server" zaškrtnuté. Tento rastrový obrázek jde pak importovat do Visual C++. Je potřeba poskytnout ID IDR_HIERSVRTYPE_SRVR_IP rastrového obrázku.
 
@@ -677,7 +677,7 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
     AfxGetApp()->m_pMainWnd);
 ```
 
-Všimněte si, že odkaz na *`AfxGetApp()->m_pMainWnd*`. Server je aktivovat v místě, má hlavní okno a nastavení m_pMainWnd., ale je obvykle neviditelné. Kromě toho toto okno odkazuje *hlavní* okna aplikace okno rámce MDI, která se zobrazí, když je server plně otevřít nebo spustí samostatně. Neodkazuje na aktivní rámec okna – což při místní aktivaci je rámec okna odvozený od `COleIPFrameWnd`. Chcete-li získat správný aktivního okna i v případě, že místní úpravy této verze knihovny MFC přidá novou funkci, `AfxGetMainWnd`. Obecně platí, používejte tuto funkci místo *`AfxGetApp()->m_pMainWnd*`. Tento kód je potřeba změnit následujícím způsobem:
+Všimněte si, že odkaz na `AfxGetApp()->m_pMainWnd`. Server je aktivovat v místě, má hlavní okno a nastavení m_pMainWnd., ale je obvykle neviditelné. Kromě toho toto okno odkazuje *hlavní* okna aplikace okno rámce MDI, která se zobrazí, když je server plně otevřít nebo spustí samostatně. Neodkazuje na aktivní rámec okna – což při místní aktivaci je rámec okna odvozený od `COleIPFrameWnd`. Chcete-li získat správný aktivního okna i v případě, že místní úpravy této verze knihovny MFC přidá novou funkci, `AfxGetMainWnd`. Obecně platí, používejte tuto funkci místo `AfxGetApp()->m_pMainWnd`. Tento kód je potřeba změnit následujícím způsobem:
 
 ```cpp
 pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,

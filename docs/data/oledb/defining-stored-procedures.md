@@ -18,26 +18,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 79899bb4ff2dada8f459a6c25499be25d078353e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 769f2bf2c0ef6c2c92b4c0468569e91d399cea59
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46105372"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808443"
 ---
 # <a name="defining-stored-procedures"></a>Definování uložených procedur
 
 Před volání uložené procedury, musíte nejdřív definovat, pomocí [DEFINE_COMMAND](../../data/oledb/define-command.md) – makro. Při definování příkazu parametry s otazníkem (?) označují jako parametr značky:  
   
-```  
+```cpp  
 DEFINE_COMMAND(CMySProcAccessor, _T("{INSERT {name, phone} into shippers  (?,?)}")  
 ```  
   
-Všimněte si, že syntaxe (použití závorek a tak dále) používané v příkladech kódu v tomto tématu je specifická pro SQL Server. Syntaxe používaná v uložených procedurách může lišit podle poskytovatele, který používáte.  
+Syntaxe (použití závorek a tak dále) používané v příkladech kódu v tomto tématu je specifická pro SQL Server. Syntaxe používaná v uložených procedurách může lišit podle poskytovatele, který používáte.  
   
 V dalším kroku v mapě parametr zadejte parametry, které jste použili v příkazu, který obsahuje seznam parametrů v pořadí, ve kterém nastávají v příkazu:  
   
-```  
+```cpp  
 BEGIN_PARAM_MAP(CMySProcAccessor)  
    SET_PARAM_TYPE(DBPARAMIO_INPUT)  
    COLUMN_ENTRY(1, m_Name)   // name corresponds to first '?' param  
@@ -48,7 +48,7 @@ END_PARAM_MAP()
   
 Předchozí příklad definuje uloženou proceduru, jak funguje. Obvykle pro efektivní použití kódu databáze obsahuje sadu předdefinovaných uložené procedury s názvy, například "Sales by Year" nebo "dt_adduserobject." Můžete zobrazit jejich definice pomocí SQL Server Enterprise Manager. Následující volání (umístění "?" parametry závisí na rozhraní uložené procedury):  
   
-```  
+```cpp  
 DEFINE_COMMAND(CMySProcAccessor, _T("{CALL \"Sales by Year\" (?,?) }")  
 DEFINE_COMMAND(CMySProcAccessor, _T("{CALL dbo.dt_adduserobject (?,?) }")  
 ```  

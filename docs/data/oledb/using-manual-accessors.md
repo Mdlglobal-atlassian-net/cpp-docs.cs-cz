@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5aa7f72cc76f80e2304faf93ca0c6198c505e88a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8805878f880d1c195ddf89abc283719e73ff5182
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101638"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808924"
 ---
 # <a name="using-manual-accessors"></a>Použití ručních přístupových objektů
 
@@ -36,7 +36,7 @@ Existují čtyři kroky, které při zpracování Neznámý příkaz:
   
 - Zkontrolujte, jestli více vrácení sad řádků  
   
-Chcete-li to provést pomocí šablony příjemce technologie OLE DB, použijte `CManualAccessor` třídy a postupujte podle těchto kroků:  
+Chcete-li to všechno s šablony příjemce technologie OLE DB, použijte `CManualAccessor` třídy a postupujte podle těchto kroků:  
   
 1. Otevřít `CCommand` objekt s `CManualAccessor` jako parametr šablony.  
   

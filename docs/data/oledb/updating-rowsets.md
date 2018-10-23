@@ -1,7 +1,7 @@
 ---
 title: Aktualizace sad řádků | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/19/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,28 +18,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: be82fb1c1f77ae3204bed54257062f362d286844
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: afe17f30a079e8af24b37b983f8c91d46431966e
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083824"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808855"
 ---
 # <a name="updating-rowsets"></a>Aktualizace sad řádků
 
-K aktualizaci nebo zapisovat data do úložiště dat je operace velmi základní databáze. V OLE DB, je jednoduchý mechanismus aktualizace: aplikace příjemce nastaví hodnoty vázaných dat členů a pak zapíše hodnoty do sady řádků; Příjemce potom, aktualizujte poskytovatele úložiště dat požadavky.  
+Operace databáze basic je aktualizovat, nebo zápis dat do úložiště dat. V OLE DB, je jednoduchý mechanismus aktualizace: aplikace příjemce nastaví hodnoty vázaných dat členů a pak zapíše hodnoty do sady řádků; Příjemce potom, aktualizujte poskytovatele úložiště dat požadavky.  
   
-Příjemci můžete provádět následující typy aktualizace řádků dat: nastavení hodnot sloupce v řádku, řádku vkládání a odstraňování řádku. K provedení těchto operací třídu šablony technologie OLE DB [CRowset](../../data/oledb/crowset-class.md) implementuje [IRowsetChange](/previous-versions/windows/desktop/ms715790) rozhraní a přepíše metody následující rozhraní:  
+Uživatelé dokončit následující typy aktualizací na sadu řádků dat: nastavení hodnot sloupce v řádku, řádku vkládání a odstraňování řádku. K dokončení těchto operací třídu šablony technologie OLE DB [CRowset](../../data/oledb/crowset-class.md) implementuje [IRowsetChange](/previous-versions/windows/desktop/ms715790) rozhraní a přepíše metody následující rozhraní:  
   
-- [Operaci SetData](../../data/oledb/crowset-setdata.md) hodnoty pro sloupce změny za sebou sady řádků; je ekvivalentní příkazu SQL UPDATE.  
+- [Operaci SetData](../../data/oledb/crowset-setdata.md) hodnoty pro sloupce změny za sebou sady řádků; to odpovídá příkazu SQL UPDATE.  
   
-- [Vložit](../../data/oledb/crowset-insert.md) vloží řádek do sady řádků; je ekvivalentní příkazu INSERT jazyka SQL.  
+- [Vložit](../../data/oledb/crowset-insert.md) vloží řádek do sady řádků; to odpovídá příkazu INSERT jazyka SQL.  
   
-- [Odstranit](../../data/oledb/crowset-delete.md) odstraní řádky ze sady řádků; je ekvivalentní příkazu SQL odstranit.  
+- [Odstranit](../../data/oledb/crowset-delete.md) odstraní řádky ze sady řádků; to odpovídá příkazu SQL DELETE.  
   
 ## <a name="supporting-update-operations"></a>Podpora operací aktualizace  
 
-Při vytváření příjemce s průvodce příjemcem ATL OLE DB, může podporovat operace aktualizace tak, že vyberete jeden nebo více ze tří zaškrtávacích políček **změnu**, **vložit**, a **odstranit**. Pokud vyberete tyto, Průvodce upravuje kód odpovídajícím způsobem pro podporu typ změny, které zvolíte. Ale pokud je velmi riskantní používat průvodce, je nutné nastavit následující vlastnosti sady řádků `VARIANT_TRUE` podporovat aktualizace:  
+Při vytváření příjemce s průvodce příjemcem ATL OLE DB, může podporovat operace aktualizace tak, že vyberete jeden nebo více ze tří zaškrtávacích políček **změnu**, **vložit**, a **odstranit**. Pokud vyberete tyto možnosti, Průvodce upravuje kód odpovídajícím způsobem pro podporu typ změny, které zvolíte. Nicméně pokud nepoužíváte průvodce, je nutné nastavit následující vlastnosti sady řádků `VARIANT_TRUE` podporovat aktualizace:  
   
 - `DBPROPVAL_UP_CHANGE` Umožňuje změnit hodnoty data v řádku.  
   
@@ -56,11 +56,11 @@ ps.AddProperty(DBPROP_IRowsetChange, true)
 ps.AddProperty(DBPROP_UPDATABILITY, DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_INSERT | DBPROPVAL_UP_DELETE)  
 ```  
   
-Změna, insert nebo delete operace nemusí podařit, pokud jeden nebo více sloupců se nedá zapisovat. Upravte mapu kurzor to chcete opravit.  
+Změna, insert nebo delete operace nemusí podařit, pokud jeden nebo více sloupců není zapisovatelný. Upravte mapu kurzor k vyřešení tohoto problému.  
   
 ## <a name="setting-data-in-rows"></a>Nastavení Data v řádcích  
 
-[CRowset::SetData](../../data/oledb/crowset-setdata.md) nastaví hodnoty dat do jednoho nebo více sloupců na aktuálním řádku. Následující kód nastaví hodnoty datových členů, které jsou vázané na sloupce "Name" a "Jednotek v zásobách" tabulky produktů a pak zavolá `SetData` zapsat hodnoty do 100th řádku v sadě řádků:  
+[CRowset::SetData](../../data/oledb/crowset-setdata.md) nastaví hodnoty dat do jednoho nebo více sloupců na aktuálním řádku. Následující kód nastaví hodnoty datových členů, které jsou vázané na sloupce "Name" a "Jednotek v zásobách" v tabulce `Products` a pak zavolá `SetData` zapsat hodnoty do 100th řádku v sadě řádků:  
   
 ```cpp  
 // Instantiate a rowset based on the user record class  
@@ -91,9 +91,9 @@ HRESULT Insert(int nAccessor = 0, bool bGetRow = false)
   
 - **false** (výchozí hodnota) určuje, že aktuální řádek zvýší na další řádek (v takovém případě odkazuje na vloženého řádku).  
   
-- **Hodnota TRUE** Určuje, že aktuální řádek zůstanou tam, kde je.  
+- **Hodnota TRUE** Určuje, že aktuální řádek zůstat tam, kde je.  
   
-Následující kód nastaví hodnoty datových členů, které jsou vázané na sloupce tabulky produktů a pak zavolá `Insert` vložte nový řádek s těmito hodnotami po 100th řádku v sadě řádků. Doporučuje se, že nastavíte všechny hodnoty sloupců nepoužíváte Nedefinovaná data na novém řádku:  
+Následující kód nastaví hodnoty datových členů, které jsou vázané na sloupce v tabulce `Products` a pak zavolá `Insert` vložte nový řádek s těmito hodnotami po 100th řádku v sadě řádků. Doporučuje se, že nastavíte všechny hodnoty sloupců nepoužíváte Nedefinovaná data na novém řádku:  
   
 ```cpp  
 // Instantiate a rowset based on the user record class  
@@ -171,17 +171,17 @@ Pokud neurčíte jinak, volání `SetData`, `Insert`, a `Delete` metody aktualiz
   
 - [CRowset::UpdateAll](../../data/oledb/crowset-updateall.md) všechny čekající změny provedené od posledního načtení všech řádků přenese nebo `Update` zavolat.  
   
-Mějte na paměti tuto aktualizaci, protože používá metody aktualizace, má zvláštní význam provádění změn v příkazu a by se zaměňovat s příkazem SQL UPDATE (`SetData` je ekvivalentní příkazu SQL UPDATE).  
+Aktualizace, jak používají metody aktualizace má zvláštní význam provedení změn na příkaz a ne by se zaměňovat s příkazem SQL UPDATE (`SetData` je ekvivalentní příkazu SQL UPDATE).  
   
-Odložená aktualizace jsou užitečné, například v situacích, například řadu bankovních transakcí; Pokud dojde ke zrušení jedna transakce, může této změny vrátit zpátky, protože po poslední z nich záleží Neodesílat řadu změn do. Navíc můžete zprostředkovatele sady změn do jedné sítě volání, což je efektivnější.  
+Odložená aktualizace jsou užitečné, například v situacích, například řadu bankovních transakcí; Pokud dojde ke zrušení jedna transakce, může této změny vrátit zpátky, protože Neodesílat řady změn až po poslední z nich záleží. Navíc můžete zprostředkovatele sady změn do jedné sítě volání, což je efektivnější.  
   
-Pro podporu odložené aktualizace, je nutné nastavit `DBPROP_IRowsetChange` vlastnost kromě vlastností popsaných v "Podpora operací aktualizace":  
+Pro podporu odložené aktualizace, je nutné nastavit `DBPROP_IRowsetChange` vlastnost spolu s vlastností popsaných v "Podpora operací aktualizace":  
   
 ```cpp  
 pPropSet->AddProperty(DBPROP_IRowsetUpdate, true);  
 ```  
   
-Při volání `Update` nebo `UpdateAll`, metody přenést změny z místní mezipaměti do úložiště dat a pak vymazat místní mezipaměť. Aktualizace se přenáší změny pouze pro aktuální řádek, a proto je důležité, že vaše aplikace udržovat přehled o řádek, který má aktualizace a kdy ji aktualizovat. Následující příklad ukazuje, jak aktualizovat dvě po sobě následující řádky:  
+Při volání `Update` nebo `UpdateAll`, metody přenést změny z místní mezipaměti do úložiště dat a pak vymazat místní mezipaměť. Aktualizace se přenáší změny pouze pro aktuální řádek, a proto je důležité, že vaše aplikace uchovává informace o řádek, který má aktualizace a kdy ji aktualizovat. Následující příklad ukazuje, jak aktualizovat dvě po sobě následující řádky:  
   
 ```cpp  
 // Instantiate a rowset based on the user record class  
@@ -215,9 +215,9 @@ product.Update();                 // Update row 101 now
   
 Aby bylo zajištěno, že čekající změny přenesou, měli byste zavolat `Update` před přechodem na další řádek. Ale pokud je to únavné nebo neefektivní, například když vaše aplikace potřebuje aktualizovat stovky řádků, můžete použít `UpdateAll` k aktualizaci všech řádků najednou.  
   
-Například pokud první `Update` volání chyběly výše uvedený kód, řádek 100 zůstane beze změny, zatímco řádku 101 by byla změněna. Po tomto okamžiku by buď mít vaše aplikace volat `UpdateAll` nebo přejděte zpět do řádku 100 a volání `Update` pro tento řádek aktualizovat.  
+Například pokud první `Update` volání chyběly výše uvedený kód, řádek 100 zůstává beze změny, když by byla změněna řádek 101. Po tomto okamžiku by buď mít vaše aplikace volat `UpdateAll` nebo přejděte zpět do řádku 100 a volání `Update` pro tento řádek aktualizovat.  
   
-Nakonec jeden z hlavních důvodů odložit změny je možné vrátit zpět, je. Volání [CRowset::Undo](../../data/oledb/crowset-undo.md) vrátí zpět stav změna v místní mezipaměti na stav úložiště dat než čekající změny byly provedeny. Je důležité si uvědomit, že `Undo` nevrátí zpět stavu místní mezipaměti o jeden krok (stavu před pouze nejnovější změny); místo toho vymaže místní mezipaměť pro tento řádek. Navíc `Undo` má vliv jenom na aktuálním řádku.  
+Nakonec jeden z hlavních důvodů odložit změny je možné vrátit zpět, je. Volání [CRowset::Undo](../../data/oledb/crowset-undo.md) vrátí zpět stav změna v místní mezipaměti na stav úložiště dat než čekající změny byly provedeny. Je důležité si uvědomit, že `Undo` nelze vrátit zpět stav místní mezipaměti o jeden krok (stavu před pouze nejnovější změny); místo toho vymaže místní mezipaměť pro tento řádek. Navíc `Undo` má vliv jenom na aktuálním řádku.  
   
 ## <a name="see-also"></a>Viz také  
 

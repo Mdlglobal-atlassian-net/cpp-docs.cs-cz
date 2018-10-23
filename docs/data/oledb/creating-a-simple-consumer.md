@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 85efb2a1d699914c6d7ffb1fd079a38be70f0b52
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: c9cb2003b857bb156709e4ba2a3345dfb57bfd3c
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163839"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808937"
 ---
 # <a name="creating-a-simple-consumer"></a>Vytvoření jednoduchého příjemce
 
@@ -32,15 +32,15 @@ Generování šablony příjemce OLE DB pomocí Průvodce projektem ATL a průvo
 
    **Nový projekt** zobrazí se dialogové okno.
 
-1. V **typy projektů** podokně klikněte na tlačítko **nainstalováno** > **šablony** > **Visual C++** složky, a klikněte **Konzolová aplikace Win32** ikonu **šablony** podokně. V **název** zadejte název projektu, například *MyCons*.
+1. V **typy projektů** podokně klikněte na tlačítko **nainstalováno** > **Visual C++** > **Windows Desktop** složce a pak klikněte na tlačítko **desktopový Průvodce pro Windows** ikonu **šablony** podokně. V **název** zadejte název projektu, například *MyCons*.
 
 1. Klikněte na tlačítko **OK**.
 
-   Zobrazí se Průvodce aplikací Win32.
+   **Desktopový projekt Windows** průvodce se zobrazí.
 
 1. Na **nastavení aplikace** stránce **konzolovou aplikaci**a pak vyberte **přidat společné soubory hlaviček pro knihovnu ATL**.
 
-1. Klikněte na tlačítko **Dokončit** zavřete průvodce a generování projektu.
+1. Klikněte na tlačítko **OK** zavřete průvodce a generování projektu.
 
 Pak přidejte objekt příjemce technologie OLE DB pomocí průvodce příjemcem ATL OLE DB.
 
@@ -48,9 +48,9 @@ Pak přidejte objekt příjemce technologie OLE DB pomocí průvodce příjemcem
 
 1. V **Průzkumníka řešení**, klikněte pravým tlačítkem myši `MyCons` projektu.
 
-1. V místní nabídce klikněte na tlačítko **přidat**a potom klikněte na tlačítko **třídy**.
+1. V místní nabídce klikněte na tlačítko **přidat**a potom klikněte na tlačítko **nová položka**.
 
-   **Přidat třídu** zobrazí se dialogové okno.
+   **Přidat novou položku** zobrazí se dialogové okno.
 
 1. V **kategorie** podokně klikněte na tlačítko **nainstalováno** > **Visual C++** > **ATL**, klikněte na tlačítko **Spotřebitele OLEDB knihovny ATL** ikonu **šablony** podokně a pak klikněte na tlačítko **přidat**.
 

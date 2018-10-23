@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39329f4895060ff950f36c3d10dd5e4020f3b98a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 92761508a5e93c7ef0d0a4099dde587987a50dad
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448425"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809158"
 ---
 # <a name="coledatetime-class"></a>COleDateTime – třída
 
@@ -165,7 +165,7 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Datum*  
+*Datum*<br/>
 `COleDateTime` Objekt k porovnání.
 
 ### <a name="remarks"></a>Poznámky
@@ -210,22 +210,22 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dateSrc*  
+*dateSrc*<br/>
 Existující `COleDateTime` objektu, které se mají zkopírovat do nové `COleDateTime` objektu.
 
-*varSrc*  
+*varSrc*<br/>
 Existující `VARIANT` datovou strukturu (pravděpodobně `COleVariant` objekt) převést na hodnotu data a času (VT_DATE) a zkopírovány do nového `COleDateTime` objektu.
 
-*dtSrc*  
+*dtSrc*<br/>
 Datum/čas (`DATE`) hodnota, která má být zkopírován do nové `COleDateTime` objektu.
 
-*timeSrc*  
+*timeSrc*<br/>
 A `time_t` nebo `__time64_t` hodnota, která má být převedena na hodnotu data a času a zkopírovány do nového `COleDateTime` objektu.
 
-*systimeSrc*  
+*systimeSrc*<br/>
 A `SYSTEMTIME` struktura bude převeden na hodnotu data a času a zkopírovány do nového `COleDateTime` objektu.
 
-*filetimeSrc*  
+*filetimeSrc*<br/>
 A `FILETIME` struktura bude převeden na hodnotu data a času a zkopírovány do nového `COleDateTime` objektu. Všimněte si, že `FILETIME` používá koordinovaný světový čas (UTC), takže pokud předáte místní čas ve struktuře, vaše výsledky budou nesprávné. Zobrazit [časy](/windows/desktop/SysInfo/file-times) v sadě Windows SDK pro další informace.
 
 *nYear*, *nMonth*, *Nden*, *Nhodina*, *Nminimum*, *nSec*  
@@ -234,7 +234,7 @@ Označení hodnoty data a času, které se mají zkopírovat do nové `COleDateT
 *wDosDate*, *wDosTime*  
 Hodnoty data a času zástupného kódu MS-DOS převést na hodnotu data a času a zkopírovány do nového `COleDateTime` objektu.
 
-*dbts*  
+*dbts*<br/>
 Odkaz na [DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) struktury obsahující aktuální místní čas.
 
 ### <a name="remarks"></a>Poznámky
@@ -297,7 +297,7 @@ CString Format(UINT nFormatID) const;
 
 ### <a name="parameters"></a>Parametry
 
-*dwFlags*  
+*dwFlags*<br/>
 Určuje jeden z následujících příznaků národní prostředí:
 
 - LOCALE_NOUSEROVERRIDE použít výchozí systému v nastavení národního prostředí namísto vlastní uživatelská nastavení.
@@ -306,10 +306,10 @@ Určuje jeden z následujících příznaků národní prostředí:
 
 - VAR_DATEVALUEONLY ignorovat Časová část během analýzy.
 
-*lcid*  
+*lcid*<br/>
 Určuje ID národního prostředí pro převod. Další informace o identifikátorech jazyka najdete v tématu [identifikátory jazyka](/windows/desktop/Intl/language-identifiers).
 
-*lpszFormat*  
+*lpszFormat*<br/>
 Formátování řetězců podobně jako `printf` formátovací řetězec. Každý formátování kódu, předchází procento ( `%`) podepsat, se nahradí odpovídající `COleDateTime` komponenty. Jiné znaky v řetězci formátování se zkopírují do vráceném řetězci beze změny. Zobrazit funkci run-time [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) Další informace. Hodnota a význam kódů formátování pro `Format` jsou:
 
 - `%H` Hodin aktuálního dne
@@ -320,7 +320,7 @@ Formátování řetězců podobně jako `printf` formátovací řetězec. Každ�
 
 - `%%` Znak procent
 
-*nFormatID*  
+*nFormatID*<br/>
 ID prostředku pro řetězec řízení formátu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -356,7 +356,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dbts*  
+*dbts*<br/>
 Odkaz na [DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) struktury.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -381,7 +381,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*systime –*  
+*systime –*<br/>
 Odkaz na [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) strukturu pro příjem hodnota převedená data a času z `COleDateTime` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -404,7 +404,7 @@ bool GetAsUDATE(UDATE& udate) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*AKT.rev.aukce*  
+*AKT.rev.aukce*<br/>
 Odkaz na `UDATE` strukturu pro příjem hodnota převedená data a času z `COleDateTime` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -938,10 +938,10 @@ LCID lcid = LANG_USER_DEFAULT) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpszDate*  
+*lpszDate*<br/>
 Ukazatel na řetězec zakončený hodnotou null, který má být analyzován. Podrobnosti najdete v tématu poznámky.
 
-*dwFlags*  
+*dwFlags*<br/>
 Určuje příznaky pro nastavení národního prostředí a analýzu. Jeden nebo více z následujících příznaků:
 
 - LOCALE_NOUSEROVERRIDE použijte výchozí nastavení národního prostředí systému, raději vlastní uživatelská nastavení.
@@ -950,7 +950,7 @@ Určuje příznaky pro nastavení národního prostředí a analýzu. Jeden nebo
 
 - VAR_DATEVALUEONLY ignorovat Časová část během analýzy.
 
-*lcid*  
+*lcid*<br/>
 Určuje ID národního prostředí pro převod.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1151,7 +1151,7 @@ void SetStatus(DateTimeStatus status) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Stav*  
+*Stav*<br/>
 Nová hodnota pro tento stav `COleDateTime` objektu.
 
 ### <a name="remarks"></a>Poznámky

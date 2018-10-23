@@ -1,43 +1,45 @@
 ---
-title: CMyProviderWindowsFile | Dokumentace Microsoftu
+title: CCustomWindowsFile | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
 f1_keywords:
 - cmyproviderwindowsfile
+- ccustomwindowsfile
 dev_langs:
 - C++
 helpviewer_keywords:
 - CMyProviderWindowsFile class
 - OLE DB providers, wizard-generated files
+- CCustomWindowsFile class
 ms.assetid: 0e9e72ac-1e1e-445f-a7ac-690c20031f9d
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6f3badc08da7bd11e65c244c42c91ad37a584ca5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a87f8cc4d6581c253225fa038d0c8972e71fcff1
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087263"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808794"
 ---
-# <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
+# <a name="ccustomwindowsfile"></a>CCustomWindowsFile
 
-Průvodce vytvoří třídu pro obsahovat jeden řádek dat; v takovém případě se nazývá `CMyProviderWindowsFile`. Následující kód pro `CMyProviderWindowsFile` je vygenerovaný průvodcem a uvádí všechny soubory v adresáři s použitím `WIN32_FIND_DATA` struktury. `CMyProviderWindowsFile` dědí z `WIN32_FIND_DATA` struktury:  
+Průvodce vytvoří třídu pro obsahovat jeden řádek dat; v takovém případě se nazývá `CCustomWindowsFile`. Následující kód pro `CCustomWindowsFile` je vygenerovaný průvodcem a uvádí všechny soubory v adresáři s použitím `WIN32_FIND_DATA` struktury. `CCustomWindowsFile` dědí z `WIN32_FIND_DATA` struktury:  
   
 ```cpp
 /////////////////////////////////////////////////////////////////////  
-// MyProviderRS.H  
+// CustomRS.H  
   
-class CMyProviderWindowsFile:   
+class CCustomWindowsFile:   
    public WIN32_FIND_DATA  
 {  
 public:  
-BEGIN_PROVIDER_COLUMN_MAP(CMyProviderWindowsFile)  
+BEGIN_PROVIDER_COLUMN_MAP(CCustomWindowsFile)  
    PROVIDER_COLUMN_ENTRY("FileAttributes", 1, dwFileAttributes)  
    PROVIDER_COLUMN_ENTRY("FileSizeHigh", 2, nFileSizeHigh)  
    PROVIDER_COLUMN_ENTRY("FileSizeLow", 3, nFileSizeLow)  
@@ -47,13 +49,13 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
-`CMyProviderWindowsFile` je volána [třídy uživatelského záznamu](../../data/oledb/user-record.md) protože také obsahuje mapování popisující sloupce v sadě řádků %{Rowset/ poskytovatele. Mapování sloupce poskytovatele obsahuje jeden záznam pro každé pole v sadě řádků %{Rowset/ použití maker PROVIDER_COLUMN_ENTRY. Makra zadejte název sloupce, pořadí a posun k položce struktury. Sloupec položky zprostředkovatele ve výše uvedeném kódu obsahují posun do `WIN32_FIND_DATA` struktury. Když příjemce volá `IRowset::GetData`, data se přenáší do jedné souvislé vyrovnávací paměti. Místo toho můžete provést aritmetiku ukazatele, mapy můžete zadat datový člen.  
+`CCustomWindowsFile` je volána [třídy uživatelského záznamu](../../data/oledb/user-record.md) protože také obsahuje mapování popisující sloupce v sadě řádků %{Rowset/ poskytovatele. Mapování sloupce poskytovatele obsahuje jeden záznam pro každé pole v sadě řádků %{Rowset/ použití maker PROVIDER_COLUMN_ENTRY. Makra zadejte název sloupce, pořadí a posun k položce struktury. Sloupec položky zprostředkovatele ve výše uvedeném kódu obsahují posun do `WIN32_FIND_DATA` struktury. Když příjemce volá `IRowset::GetData`, data se přenáší do jedné souvislé vyrovnávací paměti. Místo toho můžete provést aritmetiku ukazatele, mapy můžete zadat datový člen.  
   
-`CMyProviderRowset` Třída také obsahuje `Execute` metody. `Execute` je, co skutečně čte data z nativní zdroje. Následující kód ukazuje generované průvodcem `Execute` metody. Využívá rozhraní Win32 funkce `FindFirstFile` a `FindNextFile` rozhraní API k načtení informací o souborech v adresáři a umístit je do instance `CMyProviderWindowsFile` třídy.  
+`CCustomRowset` Třída také obsahuje `Execute` metody. `Execute` je, co skutečně čte data z nativní zdroje. Následující kód ukazuje generované průvodcem `Execute` metody. Využívá rozhraní Win32 funkce `FindFirstFile` a `FindNextFile` rozhraní API k načtení informací o souborech v adresáři a umístit je do instance `CCustomWindowsFile` třídy.  
   
 ```cpp
 /////////////////////////////////////////////////////////////////////  
-// MyProviderRS.H  
+// CustomRS.H  
   
 HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)  
 {  
@@ -62,7 +64,7 @@ HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
    HANDLE hFile;  
    LPTSTR  szDir = (m_strCommandText == _T("")) ? _T("*.*") :  
        OLE2T(m_strCommandText);  
-   CMyProviderWindowsFile wf;  
+   CCustomWindowsFile wf;  
    hFile = FindFirstFile(szDir, &wf);  
    if (hFile == INVALID_HANDLE_VALUE)  
       return DB_E_ERRORSINCOMMAND;  

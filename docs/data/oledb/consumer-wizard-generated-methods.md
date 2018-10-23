@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4a3f80d3e421701ac0612ddb2552d10d1eff1f02
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6d8bcd61fb77b12db612bb12ae516a8665caaee8
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056024"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808222"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Metody generované v průvodci příjemcem
 
@@ -40,7 +40,7 @@ Průvodce příjemcem ATL OLE DB a Průvodce aplikací MFC generovat určité fu
   
 - `CloseAll` Zavře všechny otevřené sady řádků a uvolní všech provedení příkazu.  
   
-- `OpenRowset` je volán OpenAll otevřete příjemce sady řádků nebo sady řádků.  
+- `OpenRowset` je volán `OpenAll` otevřete příjemce sady řádků nebo sady řádků.  
   
 - `GetRowsetProperties` načte ukazatel na nastavit pomocí vlastnosti, které můžete nastavit vlastnost sady řádků.  
   
@@ -91,7 +91,7 @@ int main(int argc, char* argv[])
   
 ## <a name="remarks"></a>Poznámky  
 
-Všimněte si, že definujete `HasBookmark` metody `OpenAll` kódu nastaví vlastnost DBPROP_IRowsetLocate, ujistěte se, že pouze uděláte Pokud poskytovatel podporuje dané vlastnosti.  
+Všimněte si, že definujete `HasBookmark` metody `OpenAll` kódu nastaví `DBPROP_IRowsetLocate` vlastnost; Ujistěte se, že pouze uděláte Pokud poskytovatel podporuje dané vlastnosti.  
   
 ## <a name="openrowset"></a>OpenRowset  
   
@@ -104,7 +104,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);
   
 `OpenAll` volá tuto metodu za účelem otevření sady řádků nebo sady řádků v příjemci. Obvykle není potřeba volat `OpenRowset` Pokud budete chtít pracovat s více zdroji dat a relace a sady řádků. `OpenRowset` je deklarována v souboru hlaviček třídy příkazu nebo tabulky:  
   
-```  
+```cpp  
 // OLE DB Template version:  
 HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)  
 {  
@@ -117,7 +117,7 @@ HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)
 }  
 ```  
   
-Tuto metodu implementovat atributy odlišně. Tato verze má objekt relace a příkaz řetězec, který se použije výchozí příkaz řetězec zadaný v db_command, i když lze předat jiné. Všimněte si, že definujete `HasBookmark` metody `OpenRowset` kódu nastaví vlastnost DBPROP_IRowsetLocate, ujistěte se, že pouze uděláte Pokud poskytovatel podporuje dané vlastnosti.  
+Tuto metodu implementovat atributy odlišně. Tato verze má objekt relace a příkaz řetězec, který se použije výchozí příkaz řetězec zadaný v db_command, i když lze předat jiné. Všimněte si, že definujete `HasBookmark` metody `OpenRowset` kódu nastaví `DBPROP_IRowsetLocate` vlastnost; Ujistěte se, že pouze uděláte Pokud poskytovatel podporuje dané vlastnosti.  
   
 ```cpp  
 // Attribute-injected version:  
@@ -142,7 +142,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 void GetRowsetProperties(CDBPropSet* pPropSet);  
 ```  
   
-Tato metoda načte ukazatel na sadu vlastností v sadě řádků; Chcete-li nastavit vlastnosti, jako je DBPROP_IRowsetChange můžete použít tento ukazatel. `GetRowsetProperties` se používá ve třídě záznamů uživatele následujícím způsobem. Můžete upravit tento kód pro nastavení dalších vlastností sady řádků:  
+Tato metoda načte ukazatel na sadu vlastností v sadě řádků; můžete nastavit vlastnosti, jako tento ukazatel `DBPROP_IRowsetChange`. `GetRowsetProperties` se používá ve třídě záznamů uživatele následujícím způsobem. Můžete upravit tento kód pro nastavení dalších vlastností sady řádků:  
   
 ```cpp  
 void GetRowsetProperties(CDBPropSet* pPropSet)  

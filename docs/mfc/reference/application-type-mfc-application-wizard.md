@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7d27245e06350a9174699fc20246d5e8997795d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: df0b938186716ab86b8eaeadd69d123ff14e57e0
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434372"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808768"
 ---
 # <a name="application-type-mfc-application-wizard"></a>Typ aplikace, Průvodce aplikací knihovny MFC
 
@@ -58,7 +58,7 @@ Pomocí této stránky [Průvodce aplikací knihovny MFC](../../mfc/reference/mf
 
 - **Jazyk prostředku**
 
-   Nastaví jazyk vašich prostředků. Po instalaci sady Visual Studio se v seznamu zobrazí dostupné jazyky ve vašem systému. Pokud chcete vybrat jiný jazyk než jazyku systému, musí být již nainstalován složku příslušnou šablonu pro daný jazyk. Další informace o instalaci liší od výchozích hodnot dostupných v jazykové prostředky **jazyk prostředku** seznamu naleznete v tématu [podpora průvodce pro ostatní jazyky](../../ide/wizard-support-for-other-languages.md).
+   Nastaví jazyk vašich prostředků. Po instalaci sady Visual Studio se v seznamu zobrazí dostupné jazyky ve vašem systému. Pokud chcete vybrat jiný jazyk než jazyku systému, musí být již nainstalován složku příslušnou šablonu pro daný jazyk.
 
    Jazyk, který jste vybrali, se projeví v **lokalizované řetězce** možnost [řetězce šablony dokumentu, Průvodce aplikací knihovny MFC](../../mfc/reference/document-template-strings-mfc-application-wizard.md) stránky průvodce.
 

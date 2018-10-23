@@ -1,7 +1,7 @@
 ---
 title: Csize – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ca548fec9a70a04b0bdb9a5169021fc43f149eb
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 9966bcdf31df3b6d3f702ec425131c5b8baa3aee
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328535"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808495"
 ---
 # <a name="csize-class"></a>Csize – třída
 
@@ -90,19 +90,19 @@ CSize( DWORD dwSize) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*initCX*  
+*initCX*<br/>
 Nastaví `cx` člena `CSize`.
 
-*initCY*  
+*initCY*<br/>
 Nastaví `cy` člena `CSize`.
 
-*initSize*  
+*initSize*<br/>
 [VELIKOST](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo `CSize` objekt použitý k inicializaci `CSize`.
 
-*initPt*  
+*initPt*<br/>
 [BOD](../../mfc/reference/point-structure.md) struktury nebo `CPoint` objekt použitý k inicializaci `CSize`.
 
-*dwSize*  
+*dwSize*<br/>
 DWORD použitý k inicializaci `CSize`. Je nižší řád slova `cx` člen a vyšší řád slova je `cy` člena.
 
 ### <a name="remarks"></a>Poznámky

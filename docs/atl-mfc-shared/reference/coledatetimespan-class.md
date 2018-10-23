@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f313b659629f824828c52948b9a73c50f86b5e40
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: be0e05d61d4949deaee683c5b8f43d18e0501d23
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434177"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808976"
 ---
 # <a name="coledatetimespan-class"></a>Coledatetimespan – třída
 
@@ -124,7 +124,7 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dateSpan*  
+*dateSpan*<br/>
 `COleDateTimeSpan` k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -154,7 +154,7 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dblSpanSrc*  
+*dblSpanSrc*<br/>
 Počet dní, které se mají zkopírovat do nové `COleDateTimeSpan` objektu.
 
 *lDays*, *nHours*, *nMins*, *nSecs*  
@@ -189,7 +189,7 @@ CString Format(UINT nID) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pFormat*  
+*pFormat*<br/>
 Formátování řetězců podobně jako `printf` formátovací řetězec. Formátování kódů předchází procento (`%`) podepsat, jsou nahrazeny odpovídajícím `COleDateTimeSpan` komponenty. Jiné znaky v řetězci formátování se zkopírují do vráceném řetězci beze změny. Hodnota a význam kódů formátování pro `Format` jsou uvedeny níže:
 
 - **%H** hodin aktuálního dne
@@ -204,7 +204,7 @@ Formátování řetězců podobně jako `printf` formátovací řetězec. Formá
 
 -
 
-*nID*  
+*nID*<br/>
 ID prostředku pro řetězec řízení formátu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -731,7 +731,7 @@ void SetStatus(DateTimeSpanStatus status) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Stav*  
+*Stav*<br/>
 Nová hodnota pro tento stav `COleDateTimeSpan` objektu.
 
 ### <a name="remarks"></a>Poznámky

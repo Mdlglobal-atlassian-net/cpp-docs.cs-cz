@@ -1,7 +1,7 @@
 ---
 title: C relační operátory a operátory rovnosti | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bf3c406059fe8744843e1353ad997acc19c499b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9251aeb93ec53c47ca9c7474785b5180c36a3887
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058234"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808950"
 ---
 # <a name="c-relational-and-equality-operators"></a>Relační operátory a operátory rovnosti jazyka C
 
@@ -31,32 +31,28 @@ Binární relační operátory a operátory rovnosti porovnejte jejich prvního 
 
 **Syntaxe**
 
-*relační výraz*: *shift-expression*
+*relační výraz*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*SHIFT-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz* **&lt;** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz* **>** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz* **&lt; =** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz* **>=** *shift-expression*<br/>
 
-*relační výraz***\<***shift-expression* 
-
-*relační výraz***>***shift-expression* 
-
-*relační výraz***\<=***shift-expression* 
-
-*relační výraz***>=***shift-expression* 
-
-*výraz rovnosti*: *relační výraz*
-
-*výraz rovnosti***==***relační výraz* 
-
-*výraz rovnosti***! =***relační výraz* 
+*výraz rovnosti*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relační výraz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz rovnosti* **==** *relační výraz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz rovnosti* **! =** *relační výraz*
 
 Relační operátory a operátory rovnosti testování následující vztahy:
 
 |Operátor|Relace testování|
 |--------------|-------------------------|
-|**\<**|První operand menší než druhý operand|
+|**&lt;**|První operand menší než druhý operand|
 |**>**|První operand větší než druhý operand|
-|**\<=**|První operand menší než nebo rovna Druhý operand|
+|**&lt;=**|První operand menší než nebo rovna Druhý operand|
 |**>=**|První operand větší než nebo rovna hodnotě Druhý operand|
-|`==`|První operand rovna Druhý operand|
-|`!=`|První operand nemá hodnotu druhého operandu|
+|**==**|První operand rovna Druhý operand|
+|**\!=**|První operand nemá hodnotu druhého operandu|
 
 V seznamu výše první čtyři operátory mají vyšší prioritu než operátory rovnosti (`==` a `!=`). Přečtěte si informace Priorita v tabulce [Priorita a asociativita operátorů jazyka C](../c-language/precedence-and-order-of-evaluation.md).
 
@@ -64,7 +60,7 @@ Operandy může mít typ integral, plovoucí nebo ukazatel. Typy operandů můž
 
 - Odkazy na stejný typ může být operandy všechny relační nebo operátor rovnosti. Rovnost (`==`) a nerovnost (`!=`) operátory, výsledek porovnání určuje, zda dva odkazy adres stejné místo v paměti. Pro relační operátory (**\<**, **>**, **\<**=, a **>**=), výsledek porovnání určuje relativní pozice adresy paměti dvou objektů, na. Relační operátory porovnání pouze posunů.
 
-     Porovnání ukazatelů je určená jenom pro části stejný objekt. V případě, že ukazatele odkazují na členy pole, je ekvivalentní k porovnání odpovídající dolní indexy porovnání. Adresa na první prvek pole je "menší než" adresa poslední prvek. V případě struktury ukazatelů na členy struktury deklarované později jsou "větší než" ukazatele na členy deklarované výše ve struktuře. Ukazatelé na členy stejné sjednocení jsou si rovny.
+   Porovnání ukazatelů je určená jenom pro části stejný objekt. V případě, že ukazatele odkazují na členy pole, je ekvivalentní k porovnání odpovídající dolní indexy porovnání. Adresa na první prvek pole je "menší než" adresa poslední prvek. V případě struktury ukazatelů na členy struktury deklarované později jsou "větší než" ukazatele na členy deklarované výše ve struktuře. Ukazatelé na členy stejné sjednocení jsou si rovny.
 
 - Hodnota ukazatele je možné porovnat s konstantní hodnotou 0 rovnosti (`==`) nebo nerovnosti (`!=`). Ukazatel s hodnotou 0 se nazývá "null" ukazatel. To znamená ho neodkazuje na platný paměti umístění.
 
@@ -74,14 +70,14 @@ Operandy může mít typ integral, plovoucí nebo ukazatel. Typy operandů můž
 
 Následující příklady ilustrují relační operátory a operátory rovnosti.
 
-```
+```C
 int x = 0, y = 0;
 if ( x < y )
 ```
 
 Protože `x` a `y` jsou stejné, v tomto příkladu výraz vrací hodnotu 0.
 
-```
+```C
 char array[10];
 char *p;
 
@@ -91,7 +87,7 @@ for ( p = array; p < &array[10]; p++ )
 
 Fragment v tomto příkladě nastaví všechny prvky objektu `array` na konstantu znaku null.
 
-```
+```C
 enum color { red, white, green } col;
    .
    .

@@ -14,7 +14,6 @@
 # [Standardní knihovna C++](standard-library/cpp-standard-library-reference.md)
 # [Vývoj pro Windows](windows/overview-of-windows-programming-in-cpp.md)
 # [Vývoj pro Linux](linux/download-install-and-setup-the-linux-development-workload.md)
-# [Vývoj pro .NET v C++/CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 # [Cloudové a webové programování ve Visual C++](cloud/cloud-and-web-programming-in-visual-cpp.md)
 # [Paralelní programování](parallel/parallel-programming-in-visual-cpp.md)
 # [Přístup k datům](data/data-access-in-cpp.md)

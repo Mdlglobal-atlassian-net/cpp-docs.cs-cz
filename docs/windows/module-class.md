@@ -1,7 +1,7 @@
 ---
 title: Třídy modulu | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 09/17/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -53,12 +53,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0fa34cb8fce2854f4b3864629b86122bdfe6b35f
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: 5df7ae90a347d82b303d7db251e533733c8e4a86
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494527"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808627"
 ---
 # <a name="module-class"></a>Modul – třída
 
@@ -177,22 +177,22 @@ WRL_NOTHROW static Module& Create(
 template<typename T>
 WRL_NOTHROW static Module& Create(
    _In_ T* object,
-   _In_ void (T::* method)()  
+   _In_ void (T::* method)()
 );
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ modulu.
 
-*zpětné volání*  
+*zpětné volání*<br/>
 Volá se, když se uvolní objekt poslední instance modulu.
 
-*object*  
+*object*<br/>
 *Objekt* a *metoda* v kombinaci se používají parametry. Když se uvolní objekt poslední instance v modulu odkazuje na poslední instance objektu.
 
-*– Metoda*  
+*– Metoda*<br/>
 *Objekt* a *metoda* v kombinaci se používají parametry. Odkazuje na metodu poslední instance objektu poslední objekt instance v modulu se při uvolnění.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -225,13 +225,13 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 
 ### <a name="parameters"></a>Parametry
 
-*pActivatibleClassId*  
+*pActivatibleClassId*<br/>
 Identifikátor IID třídy modulu runtime.
 
-*ppIFactory*  
+*ppIFactory*<br/>
 IActivationFactory pro třídu zadaného modulu runtime.
 
-*název_serveru*  
+*název_serveru*<br/>
 Název dílčí sady objekty pro vytváření tříd v aktuálním modulu. Zadejte název serveru používané [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) – makro, nebo zadejte `nullptr` získat výchozí název serveru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -253,16 +253,16 @@ Načte mezipaměť objekty pro vytváření tříd.
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor CLSID*  
+*identifikátor CLSID*<br/>
 ID třídy.
 
-*riid*  
+*riid*<br/>
 ID rozhraní, které požadujete.
 
-*ppv*  
+*ppv*<br/>
 Ukazatel na vráceného objektu.
 
-*název_serveru*  
+*název_serveru*<br/>
 Název serveru, který je zadán buď `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx`, nebo `ActivatableClass` – makro; nebo `nullptr` získat výchozí název serveru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -344,19 +344,19 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 
 ### <a name="parameters"></a>Parametry
 
-*název_serveru*  
+*název_serveru*<br/>
 Plně kvalifikovaný název serveru.
 
-*CLSID*  
+*CLSID*<br/>
 Pole CLSID k registraci.
 
-*objekty pro vytváření*  
+*objekty pro vytváření*<br/>
 Pole rozhraní IUnknown objektů tříd, jejichž dostupnost je publikován.
 
-*Soubory cookie*  
+*Soubory cookie*<br/>
 Po dokončení operace, pole ukazatelů na hodnoty, které identifikují třídu objektů, které jste zaregistrovali. Tyto hodnoty se později použijí zrušit registraci.
 
-*Počet*  
+*Počet*<br/>
 Počet CLSID k registraci.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -381,10 +381,10 @@ HRESULT RegisterObjects(
 
 ### <a name="parameters"></a>Parametry
 
-*Modul*  
+*module*<br/>
 Pole objektů COM nebo prostředí Windows Runtime.
 
-*název_serveru*  
+*název_serveru*<br/>
 Název serveru, který vytvořil objekty.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -399,21 +399,21 @@ Zaregistruje jeden nebo více objektů prostředí Windows Runtime, takže k nim
 HRESULT RegisterWinRTObject(const wchar_t* serverName,
    wchar_t** activatableClassIds,
    WINRT_REGISTRATION_COOKIE* cookie,
-   unsigned int count)  
+   unsigned int count)
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*název_serveru*  
+*název_serveru*<br/>
 Název, který určuje podmnožinu objekty ovlivněné touto operací.
 
-*activatableClassIds*  
+*activatableClassIds*<br/>
 Pole aktivovatelné CLSID k registraci.
 
-*Soubor cookie*  
+*Soubor cookie*<br/>
 Hodnota, která označuje, které jste zaregistrovali objekty třídy. Tato hodnota se používá později zrušení registrace.
 
-*Počet*  
+*Počet*<br/>
 Počet objektů, které chcete zaregistrovat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -453,13 +453,13 @@ virtual HRESULT UnregisterCOMObject(
 
 ### <a name="parameters"></a>Parametry
 
-*název_serveru*  
+*název_serveru*<br/>
 (Nepoužívané)
 
-*Soubory cookie*  
+*Soubory cookie*<br/>
 Pole ukazatelů na hodnoty, které identifikují objekty třídy pro odstranění registrace. Pole byl vytvořen [registercomobject –](#registercomobject) metody.
 
-*Počet*  
+*Počet*<br/>
 Počet tříd se zrušit registraci.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -478,10 +478,10 @@ HRESULT UnregisterObjects(
 
 ### <a name="parameters"></a>Parametry
 
-*Modul*  
+*module*<br/>
 Ukazatel na modul.
 
-*název_serveru*  
+*název_serveru*<br/>
 Kvalifikovaný název, který určuje podmnožinu objekty ovlivněné touto operací.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -501,5 +501,5 @@ virtual HRESULT UnregisterWinRTObject(
 
 ### <a name="parameters"></a>Parametry
 
-*Soubor cookie*  
+*Soubor cookie*<br/>
 Ukazatel na hodnotu, která identifikuje objektu třídy, jehož registrace je zrušené.

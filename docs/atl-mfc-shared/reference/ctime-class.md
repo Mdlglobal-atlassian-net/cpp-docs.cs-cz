@@ -1,7 +1,7 @@
 ---
 title: CTime – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 10/12/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c14dc8c8c9b697ecb7dcf1ff227eb7a76ad7cfa5
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 8c99fe44b5012e08a4b32a9e84d4255e4ee2b7e0
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328594"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808833"
 ---
 # <a name="ctime-class"></a>CTime – třída
 
@@ -49,7 +49,7 @@ Představuje datum a absolutní čas.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-class CTime  
+class CTime
 ```
 
 ## <a name="members"></a>Členové
@@ -119,17 +119,17 @@ Další informace o používání `CTime`, najdete v článcích [datum a čas](
 Operátory porovnání.
 
 ```
-bool operator==(CTime time) const throw(); 
+bool operator==(CTime time) const throw();
 bool operator!=(CTime time) const throw();
 bool operator<(CTime time) const throw();
 bool operator>(CTime time) const throw();
 bool operator<=(CTime time) const throw();
-bool operator>=(CTime time) const throw(); 
+bool operator>=(CTime time) const throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*čas*  
+*čas*<br/>
 `CTime` Objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -152,22 +152,21 @@ CTime(int nYear, int nMonth, int nDay,
 CTime(WORD wDosDate, WORD wDosTime, int nDST = -1);
 CTime(const SYSTEMTIME& st, int nDST = - 1) throw();
 CTime(const FILETIME& ft, int nDST = - 1);
-CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
+CTime(const DBTIMESTAMP& dbts, int nDST = -1) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*timeSrc*  
+*timeSrc*<br/>
 Označuje `CTime` objekt, který již existuje.
 
-*čas*  
-A **__time64_t –** časovou hodnotu, což je počet sekund, po 1. ledna 1970 UTC. Všimněte si, že to bude upravena na místní čas. Například, pokud jsou v New Yorku a vytvořit `CTime` objekt tím, že předáte parametr 0, [CTime::GetMonth](#getmonth) vrátí 12.  
+*čas*<br/>
+A **__time64_t –** časovou hodnotu, což je počet sekund, po 1. ledna 1970 UTC. Všimněte si, že to bude upravena na místní čas. Například, pokud jsou v New Yorku a vytvořit `CTime` objekt tím, že předáte parametr 0, [CTime::GetMonth](#getmonth) vrátí 12.
 
-
-*nYear*, *nMonth*, *Nden*, *Nhodina*, *Nminimum*, *nSec*  
+*nYear*, *nMonth*, *Nden*, *Nhodina*, *Nminimum*, *nSec*<br/>
 Označuje hodnoty data a času, které se mají zkopírovat do nové `CTime` objektu.
 
-*nDST*  
+*nDST*<br/>
 Určuje, zda je v platnosti letní čas. Může mít jednu ze tří hodnot:
 
 - *nDST* sada 0Standard čas je v platnosti.
@@ -176,16 +175,16 @@ Určuje, zda je v platnosti letní čas. Může mít jednu ze tří hodnot:
 
 - *nDST* nastavena na hodnotu menší než výchozí 0The. Vypočítá automaticky, zda (běžný čas) nebo letní čas je v platnosti.
 
-*wDosDate*, *wDosTime*  
+*wDosDate*, *wDosTime*<br/>
 Hodnoty data a času zástupného kódu MS-DOS převést na hodnotu data a času a zkopírovány do nového `CTime` objektu.
 
-*St*  
+*St*<br/>
 A [SYSTEMTIME](../../mfc/reference/systemtime-structure.md) struktura bude převeden na hodnotu data a času a zkopírovány do nového `CTime` objektu.
 
-*FT*  
+*FT*<br/>
 A [hodnota FILETIME](../../mfc/reference/filetime-structure.md) struktura bude převeden na hodnotu data a času a zkopírovány do nového `CTime` objektu.
 
-dbts  
+*dbts*<br/>
 Odkaz na DBTIMESTAMP strukturu obsahující aktuální místní čas.
 
 ### <a name="remarks"></a>Poznámky
@@ -200,13 +199,13 @@ Níže je popsána jednotlivých konstruktor:
 
 - `CTime( int, int, ...);` Vytvoří `CTime` objekt z komponent místní čas pomocí jednotlivých komponent omezen na tyto rozsahy:
 
-   |Součást|Rozsah|  
-   |---------------|-----------|  
-   |*nYear*|1970-3000|  
-   |*nMonth*|1-12|  
-   |*Nden*|1-31|  
-   |*Nhodina*|0-23|  
-   |*Nminimum*|0-59|  
+   |Součást|Rozsah|
+   |---------------|-----------|
+   |*nYear*|1970-3000|
+   |*nMonth*|1-12|
+   |*Nden*|1-31|
+   |*Nhodina*|0-23|
+   |*Nminimum*|0-59|
    |*záznamy nSec*|0-59|
 
    Tento konstruktor vytvoří odpovídající převod na standard UTC. Ladicí verze knihovny Microsoft Foundation Class vyhodnotí, pokud jeden nebo více součástí času jsou mimo rozsah. Musíte ověřit argumenty před voláním. Tento konstruktor očekává, že místní čas.
@@ -231,16 +230,16 @@ Další informace najdete v tématu [SYSTEMTIME](https://msdn.microsoft.com/libr
 Voláním této členské funkce k vytvoření formátovaného reprezentace hodnoty data a času.
 
 ```
-CString Format(LPCTSTR pszFormat) const; 
-CString Format(UINT nFormatID) const; 
+CString Format(LPCTSTR pszFormat) const;
+CString Format(UINT nFormatID) const;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pszFormat*  
+*pszFormat*<br/>
 Formátování řetězců podobně jako `printf` formátovací řetězec. Formátování kódů předchází procento (`%`) podepsat, jsou nahrazeny odpovídajícím `CTime` komponenty. Jiné znaky v řetězci formátování se zkopírují do vráceném řetězci beze změny. Zobrazit funkci run-time [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) seznam formátovacích kódech.
 
-*nFormatID*  
+*nFormatID*<br/>
 ID řetězce, který identifikuje tento formát.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -268,10 +267,10 @@ CString FormatGmt(UINT nFormatID) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pszFormat*  
+*pszFormat*<br/>
 Určuje formátování řetězce podobné tomuto: `printf` formátovací řetězec. Zobrazit funkci run-time [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) podrobnosti.
 
-*nFormatID*  
+*nFormatID*<br/>
 ID řetězce, který identifikuje tento formát.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -298,7 +297,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dbts*  
+*dbts*<br/>
 Odkaz na DBTIMESTAMP strukturu obsahující aktuální místní čas.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -323,7 +322,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*timeDest*  
+*timeDest*<br/>
 Odkaz na [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktura, která bude obsahovat hodnota převedená data a času `CTime` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -359,7 +358,7 @@ Vrátí aktuální systémový datum a čas v koordinovaný univerzální čas (
 Vrátí den představují podle `CTime` objektu.
 
 ```
-int GetDay() const throw(); 
+int GetDay() const throw();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -404,7 +403,7 @@ struct tm* GetGmtTm(struct tm* ptm) const;
 
 ### <a name="parameters"></a>Parametry
 
-*druh*  
+*druh*<br/>
 Body do vyrovnávací paměti, která bude dostávat časové údaje. Pokud tento ukazatel je NULL, je vyvolána výjimka.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -451,7 +450,7 @@ struct tm* GetLocalTm(struct tm* ptm) const;
 
 ### <a name="parameters"></a>Parametry
 
-*druh*  
+*druh*<br/>
 Body do vyrovnávací paměti, která bude dostávat časové údaje. Pokud tento ukazatel je NULL, je vyvolána výjimka.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -574,7 +573,7 @@ CTime& operator=(__time64_t time) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*čas*  
+*čas*<br/>
 Hodnota nová data a času.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -597,10 +596,10 @@ CTimeSpan operator-(CTime time) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Časový interval*  
+*Časový interval*<br/>
 `CTimeSpan` Objekt, který se má přičíst nebo odečíst.
 
-*čas*  
+*čas*<br/>
 `CTime` Objekt má být odečtena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -626,7 +625,7 @@ CTime& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*  
+*značka span*<br/>
 `CTimeSpan` Objekt, který se má přičíst nebo odečíst.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -654,7 +653,7 @@ CArchive& Serialize64(CArchive& ar);
 
 ### <a name="parameters"></a>Parametry
 
-*ar*  
+*ar*<br/>
 `CArchive` Objekt, který chcete aktualizovat.
 
 ### <a name="return-value"></a>Návratová hodnota

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8c4e3003beb0e50887f6b765904095c65dd8f1b6
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 3a3d2926b2f9c958d3770737729726bbad7b13e7
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083655"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808911"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Získávání metadat pomocí sad řádků schématu
 
@@ -31,13 +31,13 @@ Někdy potřebujete získat informace o poskytovateli, sady řádků, tabulky, s
 Šablony technologie OLE DB poskytují sadu tříd pro načtení informací o schématu; Tyto třídy vytvoří předdefinované sady řádků schématu a jsou uvedeny v [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).  
   
 > [!NOTE]
->  Pokud používáte OLAP a některé z vašich sady řádků nejsou podporovány třídy sady řádků schématu (například můžete mít proměnný počet sloupců), měli byste zvážit použití `CManualAccessor` nebo `CDynamicAccessor`. Můžete procházet sloupci a používat příkazy case zpracovat všechny možné datové typy pro každý sloupec.  
+> Pokud používáte OLAP a některé z vašich sady řádků nejsou podporovány třídy sady řádků schématu (například můžete mít proměnný počet sloupců), měli byste zvážit použití `CManualAccessor` nebo `CDynamicAccessor`. Můžete procházet sloupci a používat příkazy case zpracovat všechny možné datové typy pro každý sloupec.  
   
 ## <a name="catalogschema-model"></a>Model katalogu nebo schématu  
 
 ANSI SQL definuje model katalogu nebo schématu pro úložiště dat; Tento model používá technologie OLE DB. V tomto modelu katalogy (databáze) obsahují schémata a schémata obsahují tabulky.  
   
-- **Katalog** katalog je jiný název databáze. Jde o kolekci souvisejících schémat. K zobrazení seznamu katalogy (databáze), které patří do daného zdroje dat, použijte [CCatalog](../../data/oledb/ccatalogs-ccataloginfo.md). Protože velký počet databází mít pouze jeden katalog, metadata v některých případech lze volat informace o schématu.  
+- **Katalog** katalog je jiný název databáze. Jde o kolekci souvisejících schémat. K zobrazení seznamu katalogy (databáze), které patří do daného zdroje dat, použijte [CCatalog](../../data/oledb/ccatalogs-ccataloginfo.md). Protože velký počet databází mít pouze jeden katalog, metadata se někdy označuje jako informace o schématu.  
   
 - **Schéma** schéma je kolekce databázové objekty, které jsou ve vlastnictví nebo vytvořili konkrétní uživatel. K zobrazení seznamu schémat vlastníkem daného uživatele, použijte [CSchemata](../../data/oledb/cschemata-cschematainfo.md).  
   
@@ -47,7 +47,7 @@ ANSI SQL definuje model katalogu nebo schématu pro úložiště dat; Tento mode
   
 ## <a name="restrictions"></a>Omezení  
 
-Když odešlete dotaz na informace o schématu, můžete použít omezení k určení typu informací, které vás zajímají. Omezení jako kvalifikátoru v dotazu nebo filtru si můžete představit. Například v dotazu:  
+Když odešlete dotaz na informace o schématu, můžete použít omezení k určení typu informací, které vás zajímá. Omezení jako kvalifikátoru v dotazu nebo filtru si můžete představit. Například v dotazu:  
   
 ```sql  
 SELECT * FROM authors where l_name = 'pivo'  
@@ -63,11 +63,11 @@ CRestrictions<CAccessor<CColumnsInfo>
   
 [CRestrictions](../../data/oledb/crestrictions-class.md) poskytuje podporu omezení třídy. Po vytvoření instance sady řádků schématu volat [CRestrictions::Open](../../data/oledb/crestrictions-open.md). Tato metoda vrátí sadu výsledků dotazu na základě omezení, které zadáte.  
   
-Chcete-li zadat omezení, přečtěte si [sad řádků schématu příloha B:](/previous-versions/windows/desktop/ms712921) a vyhledání řádků, který používáte. Například `CColumns` odpovídá [sady řádků sloupců](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); Toto téma obsahuje seznam sloupců omezení v sadě řádků sloupců: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Je třeba dodržet toto pořadí v zadání vašeho omezení.  
+Chcete-li zadat omezení, přečtěte si [sad řádků schématu příloha B:](/previous-versions/windows/desktop/ms712921) a vyhledání řádků, které používáte. Například `CColumns` odpovídá [sady řádků sloupců](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); Toto téma obsahuje seznam sloupců omezení v sadě řádků sloupců: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Je třeba dodržet toto pořadí v zadání vašeho omezení.  
   
 Tak, například pokud chcete omezit tím, že název tabulky, mějte na paměti, že je TABLE_NAME třetí sloupec omezení a poté zavolejte `Open`, zadáním požadovaného názvu tabulky jako třetí parametr omezení, jak je znázorněno v následujícím příkladu.  
   
-#### <a name="to-use-schema-rowsets"></a>Použití sad řádků schématu  
+### <a name="to-use-schema-rowsets"></a>Použití sad řádků schématu  
   
 1. Je nutné zahrnout soubor hlaviček Atldbsch.h (samozřejmě budete potřebovat také Atldbcli.h pro podporu příjemce).  
   
@@ -89,7 +89,7 @@ Tak, například pokud chcete omezit tím, že název tabulky, mějte na paměti
     }  
     ```  
   
-1. Chcete-li načíst informace, například přístup k příslušnému datovému členu objektu sady řádků schématu `ColumnSchemaRowset.m_szColumnName`. To odpovídá COLUMN_NAME. Každý datový člen odpovídá sloupec technologie OLE DB najdete v tématu [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md).  
+1. Chcete-li načíst informace, například přístup k příslušnému datovému členu objektu sady řádků schématu `ColumnSchemaRowset.m_szColumnName`. COLUMN_NAME odpovídá tomuto datovému členu. Každý datový člen odpovídá sloupec technologie OLE DB najdete v tématu [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md).  
   
 Pro odkaz na sadu řádků schématu definiční třídy typů součástí šablony technologie OLE DB (viz [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)).  
   

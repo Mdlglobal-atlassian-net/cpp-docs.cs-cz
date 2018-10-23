@@ -1,7 +1,7 @@
 ---
 title: Cfiletime – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b81a8aeaf2b4475a95421853c4ab5822bc06abb3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 36e71cd975ff138343770b80e60b0287faa32558
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437765"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808820"
 ---
 # <a name="cfiletime-class"></a>Cfiletime – třída
 
@@ -133,10 +133,10 @@ CFileTime(ULONGLONG nTime) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*FT*  
+*FT*<br/>
 A [hodnota FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury.
 
-*nTime*  
+*nTime*<br/>
 Datum a čas vyjádřený jako hodnotu 64-bit.
 
 ### <a name="remarks"></a>Poznámky
@@ -246,10 +246,10 @@ CFileTimeSpan operator-(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*  
+*značka span*<br/>
 A `CFileTimeSpan` objektu.
 
-*FT*  
+*FT*<br/>
 A `CFileTime` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -266,7 +266,7 @@ bool operator!=(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*FT*  
+*FT*<br/>
 `CFileTime` Objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -283,7 +283,7 @@ CFileTime operator+(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*  
+*značka span*<br/>
 A `CFileTimeSpan` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -300,7 +300,7 @@ CFileTime& operator+=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*  
+*značka span*<br/>
 A `CFileTimeSpan` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -317,7 +317,7 @@ bool operator<(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*FT*  
+*FT*<br/>
 `CFileTime` Objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -338,7 +338,7 @@ bool operator<=(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*FT*  
+*FT*<br/>
 `CFileTime` Objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -355,7 +355,7 @@ CFileTime& operator=(const FILETIME& ft) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*FT*  
+*FT*<br/>
 A `CFileTime` objekt, který obsahuje nový čas a datum.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -372,7 +372,7 @@ CFileTime& operator-=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*  
+*značka span*<br/>
 A `CFileTimeSpan` objekt, který obsahuje relativní časové se má odečíst.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -389,7 +389,7 @@ bool operator==(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*FT*  
+*FT*<br/>
 `CFileTime` Objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -406,7 +406,7 @@ bool operator>(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*FT*  
+*FT*<br/>
 `CFileTime` Objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -423,7 +423,7 @@ bool operator>=(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*FT*  
+*FT*<br/>
 `CFileTime` Objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -452,7 +452,7 @@ void SetTime(ULONGLONG nTime) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nTime*  
+*nTime*<br/>
 64 bitů hodnotu představující datum a čas ve formátu koordinovaného univerzálního času (UTC) nebo místní.
 
 ##  <a name="utctolocal"></a>  CFileTime::UTCToLocal
@@ -489,4 +489,3 @@ Podívejte se na příklad pro [CFileTime::Millisecond](#millisecond).
 [CFileTimeSpan – třída](../../atl-mfc-shared/reference/cfiletimespan-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Sdílené třídy ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

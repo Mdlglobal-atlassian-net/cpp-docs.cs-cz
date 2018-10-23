@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b135b318a77835d22d7547e78f3b5c4f7ee3daee
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: e8033ceb709ab66c37e1801cd4033e6830467f2b
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328581"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808612"
 ---
 # <a name="crect-class"></a>Crect – třída
 
@@ -259,7 +259,7 @@ void CopyRect(LPCRECT lpSrcRect) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpSrcRect*  
+*lpSrcRect*<br/>
 Odkazuje [RECT](../../mfc/reference/rect-structure.md) struktury nebo `CRect` objekt, který se mají zkopírovat.
 
 ### <a name="example"></a>Příklad
@@ -300,34 +300,34 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*l*  
+*l*<br/>
 Určuje umístění levého `CRect`.
 
-*t*  
+*t*<br/>
 Určuje horní `CRect`.
 
-*r*  
+*r*<br/>
 Určuje pravou pozici `CRect`.
 
-*b*  
+*b*<br/>
 Určuje dolní `CRect`.
 
-*srcRect*  
+*srcRect*<br/>
 Odkazuje [RECT](../../mfc/reference/rect-structure.md) strukturu s souřadnice pro `CRect`.
 
-*lpSrcRect*  
+*lpSrcRect*<br/>
 Odkazuje `RECT` strukturu s souřadnice pro `CRect`.
 
-*Bod*  
+*Bod*<br/>
 Určuje počáteční bod pro obdélník budovat. Odpovídá do levého horního rohu.
 
-*Velikost*  
+*Velikost*<br/>
 Určuje posunutí z levého horního rohu do pravého dolního rohu obdélníku, aby byly konstruovány.
 
-*TopLeft*  
+*TopLeft*<br/>
 Určuje umístění levého horního rohu `CRect`.
 
-*BottomRight*  
+*BottomRight*<br/>
 Určuje pozici vpravo dole `CRect`.
 
 ### <a name="remarks"></a>Poznámky
@@ -387,28 +387,28 @@ void DeflateRect(int l, int t, int r, int b) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 Určuje počet jednotek deflate levé a pravé straně `CRect`.
 
-*y*  
+*y*<br/>
 Určuje počet jednotek, aby se horní a dolní část deflate `CRect`.
 
-*Velikost*  
+*Velikost*<br/>
 A [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) nebo [CSize](csize-class.md) , která určuje počet jednotek deflate `CRect`. `cx` Hodnota určuje počet jednotek deflate levé a pravé straně a `cy` hodnota určuje počet jednotek, aby se horní a dolní deflate.
 
-*lprect –*  
+*lprect –*<br/>
 Odkazuje [RECT](../../mfc/reference/rect-structure.md) struktury nebo `CRect` , která určuje počet jednotek na každé straně deflate.
 
-*l*  
+*l*<br/>
 Určuje počet jednotek na levé straně deflate `CRect`.
 
-*t*  
+*t*<br/>
 Určuje počet jednotek, aby se horní deflate `CRect`.
 
-*r*  
+*r*<br/>
 Určuje počet jednotek na pravé straně deflate `CRect`.
 
-*b*  
+*b*<br/>
 Určuje počet jednotek deflate dolní `CRect`.
 
 ### <a name="remarks"></a>Poznámky
@@ -442,7 +442,7 @@ BOOL EqualRect(LPCRECT lpRect) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*  
+*lprect –*<br/>
 Odkazuje [RECT](../../mfc/reference/rect-structure.md) struktury nebo `CRect` objekt, který obsahuje souřadnice levého a pravého dolního rohu obdélníku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -518,28 +518,28 @@ void InflateRect(int l, int t, int r,  int b) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 Určuje počet jednotek na rozšiřování levé a pravé straně `CRect`.
 
-*y*  
+*y*<br/>
 Určuje počet jednotek, aby se zvýšilo horní a dolní část `CRect`.
 
-*Velikost*  
+*Velikost*<br/>
 A [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) nebo [CSize](csize-class.md) , která určuje počet jednotek, aby se zvýšilo `CRect`. `cx` Hodnota určuje počet jednotek, aby se zvýšilo levé a pravé straně a `cy` hodnota určuje počet jednotek, aby se zvýšilo horní a dolní části.
 
-*lprect –*  
+*lprect –*<br/>
 Odkazuje na [RECT](../../mfc/reference/rect-structure.md) struktury nebo `CRect` , která určuje počet jednotek, aby se zvýšilo každé straně.
 
-*l*  
+*l*<br/>
 Určuje počet jednotek, aby se zvýšilo na levé straně `CRect`.
 
-*t*  
+*t*<br/>
 Určuje počet jednotek, aby se zvýšilo horní `CRect`.
 
-*r*  
+*r*<br/>
 Určuje počet jednotek, aby se zvýšilo pravé straně `CRect`.
 
-*b*  
+*b*<br/>
 Určuje počet jednotek, aby se zvýšilo dolní `CRect`.
 
 ### <a name="remarks"></a>Poznámky
@@ -568,10 +568,10 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpRect1*  
+*lpRect1*<br/>
 Odkazuje [RECT](../../mfc/reference/rect-structure.md) struktury nebo `CRect` objekt, který obsahuje zdrojového obdélníku.
 
-*lpRect2*  
+*lpRect2*<br/>
 Odkazuje `RECT` struktury nebo `CRect` objekt, který obsahuje zdrojového obdélníku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -684,7 +684,7 @@ void MoveToX(int x) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 Absolutní souřadnice x levého horního rohu obdélníku.
 
 ### <a name="example"></a>Příklad
@@ -712,13 +712,13 @@ void MoveToXY(POINT point) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 Absolutní souřadnice x levého horního rohu obdélníku.
 
-*y*  
+*y*<br/>
 Absolutní souřadnice y levého horního rohu obdélníku.
 
-*Bod*  
+*Bod*<br/>
 A `POINT` struktura určení absolutní levého horního rohu obdélníku.
 
 ### <a name="example"></a>Příklad
@@ -745,7 +745,7 @@ void MoveToY(int y) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*y*  
+*y*<br/>
 Absolutní souřadnice y levého horního rohu obdélníku.
 
 ### <a name="example"></a>Příklad
@@ -803,16 +803,16 @@ void OffsetRect(SIZE size) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 Určuje dobu, chcete-li posunout vlevo nebo vpravo. Musí být záporná hodnota, při doleva.
 
-*y*  
+*y*<br/>
 Určuje dobu, chcete-li přesunout nahoru nebo dolů. Musí být záporná hodnota, při přesunutí nahoru.
 
-*Bod*  
+*Bod*<br/>
 Obsahuje [bodu](../../mfc/reference/point-structure.md) struktury nebo [CPoint](cpoint-class.md) určující oba rozměry, podle kterého se má přesunout.
 
-*Velikost*  
+*Velikost*<br/>
 Obsahuje [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](csize-class.md) určující oba rozměry, podle kterého se má přesunout.
 
 ### <a name="remarks"></a>Poznámky
@@ -872,7 +872,7 @@ void operator=(const RECT& srcRect) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*srcRect*  
+*srcRect*<br/>
 Odkazuje na zdrojového obdélníku. Může být [RECT](../../mfc/reference/rect-structure.md) nebo `CRect`.
 
 ### <a name="example"></a>Příklad
@@ -900,7 +900,7 @@ BOOL operator==(const RECT& rect) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*  
+*Rect*<br/>
 Odkazuje na zdrojového obdélníku. Může být [RECT](../../mfc/reference/rect-structure.md) nebo `CRect`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -946,7 +946,7 @@ BOOL operator!=(const RECT& rect) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*  
+*Rect*<br/>
 Odkazuje na zdrojového obdélníku. Může být [RECT](../../mfc/reference/rect-structure.md) nebo `CRect`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -993,13 +993,13 @@ void operator+=(LPCRECT lpRect) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*  
+*Bod*<br/>
 A [bodu](../../mfc/reference/point-structure.md) struktury nebo [CPoint](cpoint-class.md) objekt, který určuje počet jednotek přesunout obdélník.
 
-*Velikost*  
+*Velikost*<br/>
 A [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](csize-class.md) objekt, který určuje počet jednotek přesunout obdélník.
 
-*lprect –*  
+*lprect –*<br/>
 Odkazuje na [RECT](../../mfc/reference/rect-structure.md) struktury nebo `CRect` objekt, který obsahuje počet jednotek na každé straně rozšiřování `CRect`.
 
 ### <a name="remarks"></a>Poznámky
@@ -1036,13 +1036,13 @@ void operator-=(LPCRECT lpRect) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*  
+*Bod*<br/>
 A [bodu](../../mfc/reference/point-structure.md) struktury nebo [CPoint](cpoint-class.md) objekt, který určuje počet jednotek přesunout obdélník.
 
-*Velikost*  
+*Velikost*<br/>
 A [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](csize-class.md) objekt, který určuje počet jednotek přesunout obdélník.
 
-*lprect –*  
+*lprect –*<br/>
 Odkazuje [RECT](../../mfc/reference/rect-structure.md) struktury nebo `CRect` objekt, který obsahuje počet jednotek na každé straně deflate `CRect`.
 
 ### <a name="remarks"></a>Poznámky
@@ -1077,7 +1077,7 @@ void operator&=(const RECT& rect) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*  
+*Rect*<br/>
 Obsahuje [RECT](../../mfc/reference/rect-structure.md) nebo `CRect`.
 
 ### <a name="remarks"></a>Poznámky
@@ -1101,7 +1101,7 @@ void operator|=(const RECT& rect) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Rect*  
+*Rect*<br/>
 Obsahuje `CRect` nebo [RECT](../../mfc/reference/rect-structure.md).
 
 ### <a name="remarks"></a>Poznámky
@@ -1140,13 +1140,13 @@ CRect operator+(SIZE size) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*  
+*Bod*<br/>
 A [bodu](../../mfc/reference/point-structure.md) struktury nebo [CPoint](cpoint-class.md) objekt, který určuje počet jednotek pro přesun návratovou hodnotu.
 
-*Velikost*  
+*Velikost*<br/>
 A [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](csize-class.md) objekt, který určuje počet jednotek pro přesun návratovou hodnotu.
 
-*lprect –*  
+*lprect –*<br/>
 Odkazuje na [RECT](../../mfc/reference/rect-structure.md) struktury nebo `CRect` objekt, který obsahuje počet jednotek, aby se zvýšilo každé straně návratovou hodnotu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1184,13 +1184,13 @@ CRect operator-(LPCRECT lpRect) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*  
+*Bod*<br/>
 A [bodu](../../mfc/reference/point-structure.md) struktury nebo `CPoint` objekt, který určuje počet jednotek pro přesun návratovou hodnotu.
 
-*Velikost*  
+*Velikost*<br/>
 A [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo `CSize` objekt, který určuje počet jednotek pro přesun návratovou hodnotu.
 
-*lprect –*  
+*lprect –*<br/>
 Odkazuje na [RECT](../../mfc/reference/rect-structure.md) struktury nebo `CRect` objekt, který obsahuje počet jednotek na každé straně návratová hodnota deflate.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1226,7 +1226,7 @@ CRect operator&(const RECT& rect2) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*rect2*  
+*rect2*<br/>
 Obsahuje [RECT](../../mfc/reference/rect-structure.md) nebo `CRect`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1264,7 +1264,7 @@ rect2) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*rect2*  
+*rect2*<br/>
 Obsahuje [RECT](../../mfc/reference/rect-structure.md) nebo `CRect`.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1306,7 +1306,7 @@ BOOL PtInRect(POINT point) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*  
+*Bod*<br/>
 Obsahuje [bodu](../../mfc/reference/point-structure.md) struktury nebo [CPoint](cpoint-class.md) objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1358,16 +1358,16 @@ void SetRect(int x1, int y1, int x2, int y2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*x1*  
+*x1*<br/>
 Určuje souřadnice x levého horního rohu.
 
-*Y1*  
+*Y1*<br/>
 Určuje souřadnici y levého horního rohu.
 
-*x2*  
+*x2*<br/>
 Určuje souřadnici x v pravém dolním rohu.
 
-*y2*  
+*y2*<br/>
 Určuje souřadnici y pravého dolního rohu.
 
 ### <a name="example"></a>Příklad
@@ -1438,10 +1438,10 @@ BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpRectSrc1*  
+*lpRectSrc1*<br/>
 Odkazuje na [RECT](../../mfc/reference/rect-structure.md) struktury nebo `CRect` objektu, ze kterého se bude odečítat obdélníku.
 
-*lpRectSrc2*  
+*lpRectSrc2*<br/>
 Odkazuje na `RECT` struktury nebo `CRect` objekt, který má být odečtena od obdélník na které odkazují *lpRectSrc1* parametru.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1526,10 +1526,10 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpRect1*  
+*lpRect1*<br/>
 Odkazuje [RECT](../../mfc/reference/rect-structure.md) nebo `CRect` , který obsahuje zdrojového obdélníku.
 
-*lpRect2*  
+*lpRect2*<br/>
 Odkazuje `RECT` nebo `CRect` , který obsahuje zdrojového obdélníku.
 
 ### <a name="return-value"></a>Návratová hodnota

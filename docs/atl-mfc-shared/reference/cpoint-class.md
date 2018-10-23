@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1ab725391b03eeba35e230c3e0a5ebe0913fec2
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 18f6f49cbcb9fc95ecec73ee22f6830458c561db
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328347"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808534"
 ---
 # <a name="cpoint-class"></a>Cpoint – třída
 
@@ -99,19 +99,19 @@ CPoint(LPARAM dwPoint) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*initX*  
+*initX*<br/>
 Určuje hodnotu `x` člen `CPoint`.
 
-*initY*  
+*initY*<br/>
 Určuje hodnotu `y` člen `CPoint`.
 
-*initPt*  
+*initPt*<br/>
 [BOD](../../mfc/reference/point-structure.md) struktury nebo `CPoint` určující hodnoty použité k inicializaci `CPoint`.
 
-*initSize*  
+*initSize*<br/>
 [VELIKOST](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) určující hodnoty použité k inicializaci `CPoint`.
 
-*dwPoint*  
+*dwPoint*<br/>
 Nastaví `x` člen pro nižší řád slova *dwPoint* a `y` člena na vyšší řád slova *dwPoint*.
 
 ### <a name="remarks"></a>Poznámky
@@ -157,16 +157,16 @@ void Offset(SIZE size) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*xOffset*  
+*xOffset*<br/>
 Určuje velikost odsazení `x` člena `CPoint`.
 
-*yOffset*  
+*yOffset*<br/>
 Určuje velikost odsazení `y` člena `CPoint`.
 
-*Bod*  
+*Bod*<br/>
 Určuje dobu ( [bodu](../../mfc/reference/point-structure.md) nebo `CPoint`) pro posun `CPoint`.
 
-*Velikost*  
+*Velikost*<br/>
 Určuje dobu ( [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) nebo [CSize](../../atl-mfc-shared/reference/csize-class.md)) pro posun `CPoint`.
 
 ### <a name="example"></a>Příklad
@@ -183,7 +183,7 @@ BOOL operator==(POINT point) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*  
+*Bod*<br/>
 Obsahuje [bodu](../../mfc/reference/point-structure.md) struktury nebo `CPoint` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -204,7 +204,7 @@ BOOL operator!=(POINT point) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*  
+*Bod*<br/>
 Obsahuje [bodu](../../mfc/reference/point-structure.md) struktury nebo `CPoint` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -226,10 +226,10 @@ void operator+=(POINT point) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Velikost*  
+*Velikost*<br/>
 Obsahuje [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.
 
-*Bod*  
+*Bod*<br/>
 Obsahuje [bodu](../../mfc/reference/point-structure.md) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -255,10 +255,10 @@ void operator-=(POINT point) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Velikost*  
+*Velikost*<br/>
 Obsahuje [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.
 
-*Bod*  
+*Bod*<br/>
 Obsahuje [bodu](../../mfc/reference/point-structure.md) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -285,13 +285,13 @@ CRect operator+(const RECT* lpRect) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Velikost*  
+*Velikost*<br/>
 Obsahuje [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.
 
-*Bod*  
+*Bod*<br/>
 Obsahuje [bodu](../../mfc/reference/point-structure.md) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.
 
-*lprect –*  
+*lprect –*<br/>
 Obsahuje ukazatel [RECT](../../mfc/reference/rect-structure.md) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -321,13 +321,13 @@ CPoint operator-() const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*  
+*Bod*<br/>
 A [bodu](../../mfc/reference/point-structure.md) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.
 
-*Velikost*  
+*Velikost*<br/>
 A [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.
 
-*lprect –*  
+*lprect –*<br/>
 Ukazatel [RECT](../../mfc/reference/rect-structure.md) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu.
 
 ### <a name="return-value"></a>Návratová hodnota

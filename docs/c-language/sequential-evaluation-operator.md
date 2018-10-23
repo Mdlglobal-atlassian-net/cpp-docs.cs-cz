@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a285cc87ec4182586663afcb3559101167ae7261
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0cee62bdf19e6ba3196e0336cb29a7c7606775b5
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095570"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808287"
 ---
 # <a name="sequential-evaluation-operator"></a>Operátor sekvenčního vyhodnocení
 
@@ -29,9 +29,9 @@ Operátor sekvenčního vyhodnocení, také nazývané "operátor čárka," vyho
 
 ## <a name="syntax"></a>Syntaxe
 
-*výraz*: *výrazu přiřazení*
-
-*výraz***,***výrazu přiřazení*
+*výraz*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přiřazení*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz* **,** *výrazu přiřazení*
 
 Operátor sekvenčního vyhodnocení levý operand je vyhodnocen jako `void` výrazu. Výsledek operace má stejnou hodnotu a typ jako pravý operand. Každý operand může být libovolného typu. Operátor sekvenčního vyhodnocení neprovádí převodech typů mezi jeho operandy a nevydává l hodnotou. Po prvním operandem, což znamená, že před zahájením vyhodnocení pravého operandu jsou dokončeny všechny vedlejší účinky vyhodnocení levý operand je bod sekvence. Zobrazit [body sekvence](../c-language/c-sequence-points.md) Další informace.
 

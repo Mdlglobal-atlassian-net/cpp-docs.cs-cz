@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6ac44a9a27b5c3ad62279dc3065aa9e0aac5236
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d9f48ffb9cad787159a40a58d85e6bff5dacc475
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378218"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808248"
 ---
 # <a name="cfixedstringt-class"></a>Cfixedstringt – třída
 
@@ -39,10 +39,10 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 
 #### <a name="parameters"></a>Parametry
 
-*StringType*  
+*StringType*<br/>
 Použít jako základní třídu pro řetězec pevné délky objekt a může být kterýkoli `CStringT`– na základě typu. Mezi příklady patří `CString`, `CStringA`, a `CStringW`.
 
-*t_nChars*  
+*t_nChars*<br/>
 Počet znaků, které jsou uloženy ve vyrovnávací paměti.
 
 ## <a name="members"></a>Členové
@@ -101,13 +101,13 @@ explicit CFixedStringT(const unsigned char* psz);
 
 ### <a name="parameters"></a>Parametry
 
-*psz*  
+*psz*<br/>
 Řetězec zakončený hodnotou null ke zkopírování do tohoto `CFixedStringT` objektu.
 
-*str*  
+*str*<br/>
 Existující `CFixedStringT` objektu, které se mají zkopírovat do tohoto `CFixedStringT` objektu.
 
-*pStringMgr*  
+*pStringMgr*<br/>
 Ukazatel na správce paměti `CFixedStringT` objektu. Další informace o `IAtlStringMgr` a správa paměti pro `CFixedStringT`, naleznete v tématu [Správa paměti a CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
 ### <a name="remarks"></a>Poznámky
@@ -129,10 +129,10 @@ CFixedStringT<StringType, t_nChars>& operator=(const StringType& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*  
+*str*<br/>
 Řetězec zakončený hodnotou null ke zkopírování do tohoto `CFixedStringT` objektu.
 
-*psz*  
+*psz*<br/>
 Existující `CFixedStringT` ke zkopírování do tohoto `CFixedStringT` objektu.
 
 ### <a name="remarks"></a>Poznámky

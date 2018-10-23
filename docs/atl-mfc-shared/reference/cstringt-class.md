@@ -1,7 +1,7 @@
 ---
 title: Cstringt – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d6a6afeca0bcf0d08a0a206983d3db33b61a041
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: f2d31d24007da1ec279e9c9762158b549e83d114
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890696"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809119"
 ---
 # <a name="cstringt-class"></a>Cstringt – třída
 
@@ -115,7 +115,7 @@ public CSimpleStringT<BaseType,
 
 #### <a name="parameters"></a>Parametry
 
-*BaseType*  
+*BaseType*<br/>
 Znakový typ třída string. Může být jedna z následujících akcí:
 
 - **Char** (pro řetězce znaků ANSI).
@@ -124,7 +124,7 @@ Znakový typ třída string. Může být jedna z následujících akcí:
 
 - TCHAR (pro řetězce znaků ANSI a Unicode).
 
-*StringTraits*  
+*StringTraits*<br/>
 Určuje, zda třída string, potřebuje podpora knihovny Run-Time C (CRT) a kde jsou umístěny prostředky řetězců. Může být jedna z následujících akcí:
 
 - **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**
@@ -343,13 +343,13 @@ void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 
 ### <a name="parameters"></a>Parametry
 
-*pszFormat*  
+*pszFormat*<br/>
 Řetězec řízení formátu.
 
-*nFormatID*  
+*nFormatID*<br/>
 Identifikátor prostředku řetězců obsahující řetězec řízení formátu.
 
-*Argument*  
+*Argument*<br/>
 Volitelné argumenty
 
 ### <a name="remarks"></a>Poznámky
@@ -370,7 +370,7 @@ int Collate(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*psz*  
+*psz*<br/>
 Další řetězec použitý pro porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -391,7 +391,7 @@ int CollateNoCase(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*psz*  
+*psz*<br/>
 Další řetězec použitý pro porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -416,7 +416,7 @@ int Compare(PCXSTR psz) const;
 
 ### <a name="parameters"></a>Parametry
 
-*psz*  
+*psz*<br/>
 Další řetězec použitý pro porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -445,7 +445,7 @@ int CompareNoCase(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*psz*  
+*psz*<br/>
 Další řetězec použitý pro porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -539,28 +539,28 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 
 ### <a name="parameters"></a>Parametry
 
-*pch*  
+*pch*<br/>
 Ukazatel na pole znaků o délce *nLength*, nejsou zakončené znakem null.
 
-*nLength*  
+*nLength*<br/>
 Počet znaků v *pch*.
 
-*ch*  
+*ch*<br/>
 Jeden znak.
 
-*pszSrc*  
+*pszSrc*<br/>
 Řetězec zakončený hodnotou null ke zkopírování do tohoto `CStringT` objektu.
 
-*pStringMgr*  
+*pStringMgr*<br/>
 Ukazatel na správce paměti pro `CStringT` objektu. Další informace o `IAtlStringMgr` a správa paměti pro `CStringT`, naleznete v tématu [Správa paměti pomocí CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-*strSrc*  
+*strSrc*<br/>
 Existující `CStringT` objektu, které se mají zkopírovat do tohoto `CStringT` objektu. Další informace o `CThisString` a `CThisSimpleString`, naleznete v části poznámky.
 
-*varSrc*  
+*varSrc*<br/>
 Varianty objektu, které se mají zkopírovat do tohoto `CStringT` objektu.
 
-*BaseType*  
+*BaseType*<br/>
 Znakový typ třída string. Může být jedna z následujících akcí:
 
 **Char** (pro řetězce znaků ANSI).
@@ -569,13 +569,13 @@ Znakový typ třída string. Může být jedna z následujících akcí:
 
 TCHAR (pro řetězce znaků ANSI a Unicode).
 
-*bMFCDLL*  
+*bMFCDLL*<br/>
 Logická hodnota, která určuje, zda je projekt knihovny MFC DLL (pravda) nebo ne (FALSE).
 
-*SystemString*  
+*SystemString*<br/>
 Musí být `System::String`, a projekt musí být kompilována s parametrem/CLR.
 
-*pString*  
+*pString*<br/>
 Popisovač `CStringT` objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -624,10 +624,10 @@ int Delete(int iIndex, int nCount = 1);
 
 ### <a name="parameters"></a>Parametry
 
-*iIndex*  
+*iIndex*<br/>
 Z nuly vycházející index prvního znaku v `CStringT` objekt odstranit.
 
-*nCount*  
+*nCount*<br/>
 Počet znaků, které mají být odebrány.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -660,13 +660,13 @@ int Find(XCHAR ch, int iStart=0) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pszSub*  
+*pszSub*<br/>
 Podřetězec hledaný.
 
-*iStart*  
+*iStart*<br/>
 Index znaku v řetězci zahájíte hledání s použitím nebo 0 pro začít od začátku.
 
-*ch*  
+*ch*<br/>
 Jeden znak pro hledání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -691,7 +691,7 @@ int FindOneOf(PCXSTR pszCharSet) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pszCharSet*  
+*pszCharSet*<br/>
 Řetězec obsahující znaky pro porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -717,13 +717,13 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 
 ### <a name="parameters"></a>Parametry
 
-*nFormatID*  
+*nFormatID*<br/>
 Identifikátor prostředku řetězců obsahující řetězec řízení formátu.
 
-*pszFormat*  
+*pszFormat*<br/>
 Řetězec řízení formátu.
 
-*Argument*  
+*Argument*<br/>
 Volitelné argumenty
 
 ### <a name="remarks"></a>Poznámky
@@ -751,13 +751,13 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 
 ### <a name="parameters"></a>Parametry
 
-*nFormatID*  
+*nFormatID*<br/>
 Identifikátor prostředku řetězce, který obsahuje text neformátovaný zprávy.
 
-*pszFormat*  
+*pszFormat*<br/>
 Odkazuje na řetězec řízení formátu. Bude vyhledávat vloží a ve formátu odpovídajícím způsobem. Formátovací řetězec je podobný funkci run-time *printf*– styl řetězce formátu, s výjimkou umožňuje parametry, které má být vložen v libovolném pořadí.
 
-*Argument*  
+*Argument*<br/>
 Volitelné argumenty
 
 ### <a name="remarks"></a>Poznámky
@@ -783,10 +783,10 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 
 ### <a name="parameters"></a>Parametry
 
-*pszFormat*  
+*pszFormat*<br/>
 Odkazuje na řetězec řízení formátu. Bude vyhledávat vloží a ve formátu odpovídajícím způsobem. Formátovací řetězec je podobný funkci run-time `printf`– styl řetězce formátu, s výjimkou umožňuje parametry, které má být vložen v libovolném pořadí.
 
-*pArgList*  
+*pArgList*<br/>
 Ukazatel na seznam argumentů.
 
 ### <a name="remarks"></a>Poznámky
@@ -808,10 +808,10 @@ void FormatV(PCXSTR pszFormat, va_list args);
 
 ### <a name="parameters"></a>Parametry
 
-*pszFormat*  
+*pszFormat*<br/>
 Odkazuje na řetězec řízení formátu. Bude vyhledávat vloží a ve formátu odpovídajícím způsobem. Formátovací řetězec je podobný funkci run-time `printf`– styl řetězce formátu, s výjimkou umožňuje parametry, které má být vložen v libovolném pořadí.
 
-*argumenty*  
+*argumenty*<br/>
 Ukazatel na seznam argumentů.
 
 ### <a name="remarks"></a>Poznámky
@@ -834,7 +834,7 @@ BOOL GetEnvironmentVariable(PCXSTR pszVar);
 
 ### <a name="parameters"></a>Parametry
 
-*pszVar*  
+*pszVar*<br/>
 Ukazatel na řetězec zakončený hodnotou null, který určuje proměnnou prostředí.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -860,13 +860,13 @@ int Insert(int iIndex, XCHAR ch);
 
 ### <a name="parameters"></a>Parametry
 
-*iIndex*  
+*iIndex*<br/>
 Index znak, před kterým bude vložení proběhnout.
 
-*psz*  
+*psz*<br/>
 Ukazatel na dílčí řetězec, který má být vložen.
 
-*ch*  
+*ch*<br/>
 Znak, který má být vložen.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -891,7 +891,7 @@ CStringT Left(int nCount) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nCount*  
+*nCount*<br/>
 Počet znaků k extrakci z tohoto `CStringT` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -920,13 +920,13 @@ BOOL LoadString(UINT nID);
 
 ### <a name="parameters"></a>Parametry
 
-*hInstance*  
+*hInstance*<br/>
 Popisovač instance modulu.
 
-*nID*  
+*nID*<br/>
 ID Windows řetězec prostředku.
 
-*wLanguageID*  
+*wLanguageID*<br/>
 Jazyk prostředku řetězců.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1002,10 +1002,10 @@ CStringT Mid(int iFirst) const;
 
 ### <a name="parameters"></a>Parametry
 
-*iFirst*  
+*iFirst*<br/>
 Z nuly vycházející index prvního znaku v tomto `CStringT` objekt, který má být součástí extrahovaného podřetězce.
 
-*nCount*  
+*nCount*<br/>
 Počet znaků k extrakci z tohoto `CStringT` objektu. Pokud tento parametr není zadán, je extrahován zbývající část řetězce.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1054,22 +1054,22 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 
 ### <a name="parameters"></a>Parametry
 
-*CH1*  
+*CH1*<br/>
 ANSI nebo Unicode znak pro řetězení s řetězcem.
 
-*CH2*  
+*CH2*<br/>
 ANSI nebo Unicode znak pro řetězení s řetězcem.
 
-*Str1*  
+*Str1*<br/>
 A `CStringT` zřetězit s řetězec nebo znak.
 
-*řetězci Str2*  
+*řetězci Str2*<br/>
 A `CStringT` zřetězit s řetězec nebo znak.
 
-*psz1*  
+*psz1*<br/>
 Ukazatel na řetězec zakončený hodnotou null pro řetězení s řetězec nebo znak.
 
-*psz2*  
+*psz2*<br/>
 Ukazatel na řetězec zřetězit s řetězec nebo znak.
 
 ### <a name="remarks"></a>Poznámky
@@ -1108,22 +1108,22 @@ CStringT& operator+=(const VARIANT& var);
 str  
 Odkaz na `CThisSimpleString` objektu.
 
-*bMFCDLL*  
+*bMFCDLL*<br/>
 Logická hodnota určující, zda je projekt knihovny MFC DLL, nebo ne.
 
-*BaseType*  
+*BaseType*<br/>
 Základní typ řetězec.
 
-*var*  
+*var*<br/>
 Varianty objekt ke zřetězení tento řetězec.
 
-*ch*  
+*ch*<br/>
 ANSI nebo Unicode znak pro řetězení s řetězcem.
 
-*pszSrc*  
+*pszSrc*<br/>
 Ukazatel na původní řetězec jsou zřetězeny.
 
-*strSrc*  
+*strSrc*<br/>
 A `CStringT` ke zřetězení tento řetězec.
 
 ### <a name="remarks"></a>Poznámky
@@ -1155,22 +1155,22 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*CH1*  
+*CH1*<br/>
 ANSI nebo Unicode znak pro porovnání.
 
-*CH2*  
+*CH2*<br/>
 ANSI nebo Unicode znak pro porovnání.
 
-*Str1*  
+*Str1*<br/>
 A `CStringT` pro porovnání.
 
-*řetězci Str2*  
+*řetězci Str2*<br/>
 A `CStringT` pro porovnání.
 
-*psz1*  
+*psz1*<br/>
 Ukazatel na řetězec zakončený hodnotou null pro srovnání.
 
-*psz2*  
+*psz2*<br/>
 Ukazatel na řetězec zakončený hodnotou null pro srovnání.
 
 ### <a name="remarks"></a>Poznámky
@@ -1197,22 +1197,22 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*CH1*  
+*CH1*<br/>
 ANSI nebo Unicode znak pro řetězení s řetězcem.
 
-*CH2*  
+*CH2*<br/>
 ANSI nebo Unicode znak pro řetězení s řetězcem.
 
-*Str1*  
+*Str1*<br/>
 A `CStringT` pro porovnání.
 
-*řetězci Str2*  
+*řetězci Str2*<br/>
 A `CStringT` pro porovnání.
 
-*psz1*  
+*psz1*<br/>
 Ukazatel na řetězec zakončený hodnotou null pro srovnání.
 
-*psz2*  
+*psz2*<br/>
 Ukazatel na řetězec zakončený hodnotou null pro srovnání.
 
 ### <a name="remarks"></a>Poznámky
@@ -1235,16 +1235,16 @@ friend bool operator<(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Str1*  
+*Str1*<br/>
 A `CStringT` pro porovnání.
 
-*řetězci Str2*  
+*řetězci Str2*<br/>
 A `CStringT` pro porovnání.
 
-*psz1*  
+*psz1*<br/>
 Ukazatel na řetězec zakončený hodnotou null pro srovnání.
 
-*psz2*  
+*psz2*<br/>
 Ukazatel na řetězec zakončený hodnotou null pro srovnání.
 
 ### <a name="remarks"></a>Poznámky
@@ -1273,16 +1273,16 @@ friend bool operator>(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Str1*  
+*Str1*<br/>
 A `CStringT` pro porovnání.
 
-*řetězci Str2*  
+*řetězci Str2*<br/>
 A `CStringT` pro porovnání.
 
-*psz1*  
+*psz1*<br/>
 Ukazatel na řetězec zakončený hodnotou null pro srovnání.
 
-*psz2*  
+*psz2*<br/>
 Ukazatel na řetězec zakončený hodnotou null pro srovnání.
 
 ### <a name="remarks"></a>Poznámky
@@ -1311,16 +1311,16 @@ friend bool operator<=(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Str1*  
+*Str1*<br/>
 A `CStringT` pro porovnání.
 
-*řetězci Str2*  
+*řetězci Str2*<br/>
 A `CStringT` pro porovnání.
 
-*psz1*  
+*psz1*<br/>
 Ukazatel na řetězec zakončený hodnotou null pro srovnání.
 
-*psz2*  
+*psz2*<br/>
 Ukazatel na řetězec zakončený hodnotou null pro srovnání.
 
 ### <a name="remarks"></a>Poznámky
@@ -1349,16 +1349,16 @@ friend bool operator>=(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Str1*  
+*Str1*<br/>
 A `CStringT` pro porovnání.
 
-*řetězci Str2*  
+*řetězci Str2*<br/>
 A `CStringT` pro porovnání.
 
-*psz1*  
+*psz1*<br/>
 Ukazatel na řetězec k porovnání.
 
-*psz2*  
+*psz2*<br/>
 Ukazatel na řetězec k porovnání.
 
 ### <a name="remarks"></a>Poznámky
@@ -1385,7 +1385,7 @@ int Remove(XCHAR chRemove);
 
 ### <a name="parameters"></a>Parametry
 
-*chRemove*  
+*chRemove*<br/>
 Znak, který má být odebrán z řetězce.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1411,16 +1411,16 @@ int Replace(XCHAR chOld, XCHAR chNew);
 
 ### <a name="parameters"></a>Parametry
 
-*pszOld*  
+*pszOld*<br/>
 Ukazatel na řetězec zakončený hodnotou null bude nahrazen *pszNew*.
 
-*pszNew*  
+*pszNew*<br/>
 Ukazatel na řetězec zakončený hodnotou null, který nahrazuje *pszOld*.
 
-*chOld*  
+*chOld*<br/>
 Znak, který má být nahrazen *chNew*.
 
-*chNew*  
+*chNew*<br/>
 Znak nahrazení *chOld*.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1458,7 +1458,7 @@ int ReverseFind(XCHAR ch) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*ch*  
+*ch*<br/>
 Znak, který chcete vyhledat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1483,7 +1483,7 @@ CStringT Right(int nCount) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nCount*  
+*nCount*<br/>
 Počet znaků k extrakci z tohoto `CStringT` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1510,7 +1510,7 @@ BSTR SetSysString(BSTR* pbstr) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pbstr*  
+*pbstr*<br/>
 Ukazatel na řetězec znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1537,7 +1537,7 @@ CStringT SpanExcluding(PCXSTR pszCharSet) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pszCharSet*  
+*pszCharSet*<br/>
 Řetězec je interpretován jako sadu znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1562,7 +1562,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pszCharSet*  
+*pszCharSet*<br/>
 Řetězec je interpretován jako sadu znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1587,10 +1587,10 @@ CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pszTokens*  
+*pszTokens*<br/>
 Řetězec obsahující token oddělovače. Pořadí oddělovačů tyto není důležité.
 
-*iStart*  
+*iStart*<br/>
 Index založený na nule zahájíte hledání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1629,10 +1629,10 @@ CStringT& Trim();
 
 ### <a name="parameters"></a>Parametry
 
-*chTarget*  
+*chTarget*<br/>
 Cíl znak, který má být oříznut.
 
-*pszTargets*  
+*pszTargets*<br/>
 Ukazatel na řetězec obsahující znaky cíl, které mají být oříznut. Všechny úvodní a koncové výskyty znaků v *pszTarget* bude oříznut z `CStringT` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1674,10 +1674,10 @@ CStringT& TrimLeft();
 
 ### <a name="parameters"></a>Parametry
 
-*chTarget*  
+*chTarget*<br/>
 Cíl znak, který má být oříznut.
 
-*pszTargets*  
+*pszTargets*<br/>
 Ukazatel na řetězec obsahující znaky cíl, které mají být oříznut. Všechny úvodní výskyty znaků v *pszTarget* bude oříznut z `CStringT` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1710,10 +1710,10 @@ CStringT& TrimRight();
 
 ### <a name="parameters"></a>Parametry
 
-*chTarget*  
+*chTarget*<br/>
 Cíl znak, který má být oříznut.
 
-*pszTargets*  
+*pszTargets*<br/>
 Ukazatel na řetězec obsahující znaky cíl, které mají být oříznut. Všechny výskyty znaků v koncové *pszTarget* bude oříznut z `CStringT` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota

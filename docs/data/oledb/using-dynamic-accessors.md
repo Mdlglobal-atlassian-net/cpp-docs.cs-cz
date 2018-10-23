@@ -1,7 +1,7 @@
 ---
 title: Použití dynamických přístupových objektů | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 02/14/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -16,26 +16,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fed93404a6c11addb8068d6140fda48d1c02a253
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3a776043d8a65d0a037d17c1c2538a4606b4c9d1
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056730"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808378"
 ---
 # <a name="using-dynamic-accessors"></a>Použití dynamických přístupových objektů
 
-Dynamické přístupové objekty umožňují přístup ke zdroji dat, když nemají žádné informace o schématu databáze (podkladová struktura). Šablony technologie OLE DB knihovna poskytuje několik tříd, můžete to provést.
+Dynamické přístupové objekty umožňují přístup ke zdroji dat, když nemají žádné informace o schématu databáze (podkladová struktura). Šablony technologie OLE DB knihovna poskytuje několik tříd můžete.
 
 [DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer) příklad ukazuje způsob použití tříd dynamického přístupového objektu získat informace o sloupci a dynamicky se vytvářejí přistupující objekty.
 
 ## <a name="using-cdynamicaccessor"></a>CDynamicAccessor – použití
 
-[CDynamicAccessor –](../../data/oledb/cdynamicaccessor-class.md) umožňuje přístup ke zdroji dat, když nemají žádné informace o schématu databáze (základní strukturu vaší databáze). `CDynamicAccessor` informace o sloupci, jako jsou názvy sloupců, počet a typ dat získají metody. Informace o tomto sloupci použijete k vytvoření přistupující objekt dynamicky za běhu. Informace o sloupci je uložená ve vyrovnávací paměti, který je vytvořen a spravován společností tuto třídu. Získání dat z vyrovnávací paměti pomocí [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md) metody.
+[CDynamicAccessor –](../../data/oledb/cdynamicaccessor-class.md) umožňuje přístup ke zdroji dat, když nemají žádné informace o schématu databáze (základní strukturu vaší databáze). `CDynamicAccessor` metody získat informace o sloupci, jako jsou názvy sloupců, počet a typ dat. Informace o tomto sloupci použijete k vytvoření přistupující objekt dynamicky za běhu. Informace o sloupci je uložená ve vyrovnávací paměti, který je vytvořen a spravován společností tuto třídu. Získání dat z vyrovnávací paměti pomocí [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md) metody.
 
 ## <a name="example"></a>Příklad
-
-### <a name="code"></a>Kód
 
 ```cpp
 // Using_Dynamic_Accessors.cpp
@@ -103,13 +101,11 @@ int main(int argc, char* argv[] )
 
 ## <a name="using-cdynamicstringaccessor"></a>CDynamicStringAccessor – použití
 
-[CDynamicStringAccessor –](../../data/oledb/cdynamicstringaccessor-class.md) funguje jako [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md), s výjimkou jedním ze způsobů důležité. Zatímco `CDynamicAccessor` vyžádá data v nativním formátu hlášené poskytovatelem, `CDynamicStringAccessor` požadavků, že zprostředkovatel načíst všechna data z úložiště dat jako řetězce data. To je užitečné zejména pro jednoduché úlohy, které nevyžadují výpočet hodnot v úložišti dat, jako je například zobrazení nebo tisk obsah datového úložiště.
+[CDynamicStringAccessor –](../../data/oledb/cdynamicstringaccessor-class.md) funguje jako [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md), s výjimkou jedním ze způsobů důležité. Zatímco `CDynamicAccessor` vyžádá data v nativním formátu hlášené poskytovatelem, `CDynamicStringAccessor` požadavků, že zprostředkovatel načíst všechna data z úložiště dat jako řetězce data. Proces je zvláště užitečná pro jednoduché úlohy, které nevyžadují výpočet hodnot v úložišti dat, jako je například zobrazení nebo tisk obsah datového úložiště.
 
-Použití `CDynamicStringAccessor` metody získat informace o sloupci. Informace o tomto sloupci použijete k vytvoření přistupující objekt dynamicky za běhu. Informace o sloupci je uložená do vyrovnávací paměti, vytvářet a spravovat touto třídou. Získání dat z vyrovnávací paměti pomocí [CDynamicStringAccessor::GetString](../../data/oledb/cdynamicstringaccessor-getstring.md) nebo je uložit do vyrovnávací paměti pomocí [CDynamicStringAccessor::SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).
+Použití `CDynamicStringAccessor` metody k získání informace o sloupci. Informace o tomto sloupci použijete k vytvoření přistupující objekt dynamicky za běhu. Informace o sloupci je uložená do vyrovnávací paměti, vytvářet a spravovat touto třídou. Získání dat z vyrovnávací paměti pomocí [CDynamicStringAccessor::GetString](../../data/oledb/cdynamicstringaccessor-getstring.md) nebo je uložit do vyrovnávací paměti pomocí [CDynamicStringAccessor::SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).
 
 ## <a name="example"></a>Příklad
-
-### <a name="code"></a>Kód
 
 ```cpp
 // Using_Dynamic_Accessors_b.cpp
@@ -167,7 +163,7 @@ int main(int argc, char* argv[] )
 
 [CDynamicParameterAccessor –](../../data/oledb/cdynamicparameteraccessor-class.md) je podobný [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md), s tím rozdílem, že `CDynamicParameterAccessor` získá informace o parametrech nastavit voláním [ICommandWithParameters](/sql/relational-databases/native-client-ole-db-interfaces/icommandwithparameters) rozhraní. Zprostředkovatel musí podporovat `ICommandWithParameters` pro spotřebitele pro tuto třídu používají.
 
-Parametr informace jsou uloženy ve vyrovnávací paměti, vytvářet a spravovat touto třídou. Získejte data parametrů z vyrovnávací paměti pomocí [CDynamicParameterAccessor::GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) a [CDynamicParameterAccessor::GetParamType](../../data/oledb/cdynamicparameteraccessor-getparamtype.md).
+Parametr informace jsou uloženy ve vyrovnávací paměti, vytvářet a spravovat touto třídou. Získat data parametrů z vyrovnávací paměti s použitím [CDynamicParameterAccessor::GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) a [CDynamicParameterAccessor::GetParamType](../../data/oledb/cdynamicparameteraccessor-getparamtype.md).
 
 Příklad ukazuje, jak použít tuto třídu pro spuštění systému SQL Server uložené procedury a získat hodnoty výstupních parametrů, najdete v článku [DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer) ukázkový kód v [Microsoft VCSamples](https://github.com/Microsoft/VCSamples) úložišti na Githubu.
 

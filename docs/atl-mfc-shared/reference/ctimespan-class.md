@@ -1,7 +1,7 @@
 ---
 title: Ctimespan – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -33,12 +33,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b70e4ca31f4346e8ad0b6dda4e66192e2e53111
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 32e6599fa19c23751beaf3545696a90a2d117248
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397517"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809080"
 ---
 # <a name="ctimespan-class"></a>Ctimespan – třída
 
@@ -114,7 +114,7 @@ bool operator>=(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*  
+*značka span*<br/>
 Objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -133,22 +133,22 @@ Vytvoří `CTimeSpan` objekty různými způsoby.
 CTimeSpan() throw();
 CTimeSpan(__time64_t time) throw();
 
-CTimeSpan(  
-LONG lDays,
-int nHours,
-int nMins,
-int nSecs) throw();
+CTimeSpan(
+    LONG lDays,
+    int nHours,
+    int nMins,
+    int nSecs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*timeSpanSrc*  
+*timeSpanSrc*<br/>
 A `CTimeSpan` objekt, který již existuje.
 
-*čas*  
+*čas*<br/>
 A **__time64_t –** časovou hodnotu, což je počet sekund v časové období.
 
-*lDays*, *nHours*, *nMins*, *nSecs*  
+*lDays*, *nHours*, *nMins*, *nSecs*<br/>
 Dny, hodiny minuty a sekundy, v uvedeném pořadí.
 
 ### <a name="remarks"></a>Poznámky
@@ -163,12 +163,12 @@ Tyto konstruktory vytvořte nový `CTimeSpan` objekt je inicializován s relativ
 
 - `CTimeSpan( LONG, int, int, int );` Vytvoří `CTimeSpan` objekt z komponent pomocí jednotlivých komponent omezen na tyto rozsahy:
 
-    |Součást|Rozsah|  
-    |---------------|-----------|  
-    |*lDays*|0 – 25 000 (přibližně)|  
-    |*nHours*|0-23|  
-    |*nMins*|0-59|  
-    |*nSecs*|0-59|
+   |Součást|Rozsah|
+   |---------------|-----------|
+   |*lDays*|0 – 25 000 (přibližně)|
+   |*nHours*|0-23|
+   |*nMins*|0-59|
+   |*nSecs*|0-59|
 
 Všimněte si, že ladicí verze knihovny Microsoft Foundation Class vyhodnotí, pokud jeden nebo více součástí hodiny je mimo rozsah. Je vaší odpovědností, abyste ověřte argumenty před voláním.
 
@@ -188,7 +188,7 @@ CString Format(UINT nID) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pFormat*, *pszFormat*  
+*pFormat*, *pszFormat*<br/>
 Formátování řetězců podobně jako `printf` formátovací řetězec. Formátování kódů předchází procento (`%`) podepsat, jsou nahrazeny odpovídajícím `CTimeSpan` komponenty. Jiné znaky v řetězci formátování se zkopírují do vráceném řetězci beze změny. Hodnota a význam kódů formátování pro `Format` jsou uvedeny níže:
 
 - **%D** celkový počet dní v tomto `CTimeSpan`
@@ -201,7 +201,7 @@ Formátování řetězců podobně jako `printf` formátovací řetězec. Formá
 
 - **%%** Znak procent
 
-*nID*  
+*nID*<br/>
 ID řetězce, který identifikuje tento formát.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -355,7 +355,7 @@ CTimeSpan operator-(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*  
+*značka span*<br/>
 Hodnota k přidání do `CTimeSpan` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -381,7 +381,7 @@ CTimeSpan& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*  
+*značka span*<br/>
 Hodnota k přidání do `CTimeSpan` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -409,7 +409,7 @@ CArchive& Serialize64(CArchive& ar);
 
 ### <a name="parameters"></a>Parametry
 
-*ar*  
+*ar*<br/>
 `CArchive` Objekt, který chcete aktualizovat.
 
 ### <a name="return-value"></a>Návratová hodnota

@@ -1,7 +1,7 @@
 ---
 title: Přístup k datům XML | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cfde3980e58ba86d6923eaac765332a23e40ad7e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d7db1d790ca9caeea6bd9c7853139f59ffa0ab6c
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46062498"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808716"
 ---
 # <a name="accessing-xml-data"></a>Přístup k datům XML
 
@@ -34,7 +34,7 @@ Existují dvě samostatné metody načítání dat XML ze zdroje dat: jeden pou�
 |Funkce|CStreamRowset –|CXMLAccessor –|  
 |-------------------|-------------------|------------------|  
 |Přenesené množství dat.|Načte data ze všech sloupců a řádků najednou.|Načte data ze všech sloupců, ale pouze jeden řádek v čase. Je nutné přejít řádky pomocí metod, jako například `MoveNext`.|  
-|Formátování řetězce|SQL Server formáty řetězec XML a odešle ji příjemci.|Načte sada řádků data v nativním formátu (počet požadavků, které zprostředkovatel odeslat ho jako řetězce Unicode) a poté sestaví řetězec obsahující data ve formátu XML.|  
+|Formátování řetězce|SQL Server formáty řetězec XML a odešle ji příjemci.|Načte sada řádků data v nativním formátu (počet požadavků, které zprostředkovatel odeslat ho jako řetězce Unicode) a poté sestaví řetězec uchovávající data ve formátu XML.|  
 |Kontrola nad formátováním|Máte určitou úroveň kontroly nad formátování řetězce XML tak, že nastavíte některé vlastnosti specifické pro SQL Server 2000.|Nemáte žádnou kontrolu nad formátem vygenerovaný řetězec XML.|  
   
 Zatímco `CStreamRowset` poskytuje další celkové efektivní způsob načítání dat ve formátu XML, je podporován pouze serverem SQL Server 2000.  
@@ -66,7 +66,7 @@ SQL Server 2000 provede formátování, XML a vrátí všechny sloupce a všechn
 Příklad použití `Read` metody, naleznete v části "Přidání podpory XML příjemci" v [Implementace jednoduchého příjemce](../../data/oledb/implementing-a-simple-consumer.md).  
   
 > [!NOTE]
->  Podpora XML pomocí `CStreamRowset` pracuje pouze se SQL Server 2000 a vyžaduje, abyste měli zprostředkovatele OLE DB Provider pro SQL Server 2000 (instalovanou se MDAC).  
+> Podpora XML pomocí `CStreamRowset` pracuje pouze se SQL Server 2000 a vyžaduje, abyste měli zprostředkovatele OLE DB Provider pro SQL Server 2000 (instalovanou se MDAC).  
   
 ## <a name="retrieving-xml-data-using-cxmlaccessor"></a>Načítání dat XML pomocí CXMLAccessor  
 

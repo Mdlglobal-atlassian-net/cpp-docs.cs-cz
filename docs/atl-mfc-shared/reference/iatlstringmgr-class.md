@@ -1,7 +1,7 @@
 ---
 title: Iatlstringmgr – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad98923c21a28976b54c2251f2da83eb0ec4cf5f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6d637750ab4aa9dc30ca7b297373cb2c752802d8
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408138"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808867"
 ---
 # <a name="iatlstringmgr-class"></a>Iatlstringmgr – třída
 
@@ -73,10 +73,10 @@ CStringData* Allocate(int nAllocLength,int nCharSize) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nAllocLength*  
+*nAllocLength*<br/>
 Počet znaků v nového bloku paměti.
 
-*nCharSize*  
+*nCharSize*<br/>
 Velikost typ znaku, používá správce řetězců (v bajtech).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -124,7 +124,7 @@ void Free(CStringData* pData) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pData*  
+*pData*<br/>
 Ukazatele na blok paměti určený k uvolnění.
 
 ### <a name="remarks"></a>Poznámky
@@ -151,31 +151,31 @@ Ukazatel `CStringData` objekt použitý k reprezentaci prázdný řetězec.
 Voláním této funkce vrátí reprezentaci prázdný řetězec.
 
 > [!NOTE]
->  Při implementaci vlastní řetězec správce, musí tuto funkci nikdy selhat. Lze toho docílit s využitím vkládání služby instance `CNilStringData` správce třída string a vrácení ukazatele do této instance.
+> Při implementaci vlastní řetězec správce, musí tuto funkci nikdy selhat. Lze toho docílit s využitím vkládání služby instance `CNilStringData` správce třída string a vrácení ukazatele do této instance.
 
 > [!NOTE]
->  Příklady využití naleznete v tématu [Správa paměti a CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
+> Příklady využití naleznete v tématu [Správa paměti a CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-##  <a name="reallocate"></a>  IAtlStringMgr::Reallocate
+## <a name="reallocate"></a>  IAtlStringMgr::Reallocate
 
 Znovu alokuje datová struktura řetězec.
 
 ```
-CStringData* Reallocate(  
-CStringData* pData,
-int nAllocLength,
-int nCharSize) throw();
+CStringData* Reallocate(
+    CStringData* pData,
+    int nAllocLength,
+    int nCharSize) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pData*  
+*pData*<br/>
 Ukazatel na paměť přidělenou dříve metodou tento správce paměti.
 
-*nAllocLength*  
+*nAllocLength*<br/>
 Počet znaků v nového bloku paměti.
 
-*nCharSize*  
+*nCharSize*<br/>
 Velikost typ znaku, používá správce řetězců (v bajtech).
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -189,10 +189,9 @@ Voláním této funkce pro změnu velikosti existujícího blok paměti určený
 Volání [IAtlStringMgr::Free](#free) k uvolnění paměti přidělené touto metodou.
 
 > [!NOTE]
->  Příklady využití naleznete v tématu [Správa paměti a CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
+> Příklady využití naleznete v tématu [Správa paměti a CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
 ## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Sdílené třídy ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

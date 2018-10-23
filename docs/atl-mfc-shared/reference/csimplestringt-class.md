@@ -1,7 +1,7 @@
 ---
 title: Csimplestringt – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7a4abff1faaa8fe93f15fb2d4a7e5ba15d6e434
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1f835558bb4d97f90857d44ef63e4b8f6075d2c0
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434658"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809145"
 ---
 # <a name="csimplestringt-class"></a>Csimplestringt – třída
 
@@ -66,7 +66,7 @@ class CSimpleStringT
 
 ### <a name="parameters"></a>Parametry
 
-*BaseType*  
+*BaseType*<br/>
 Znakový typ třída string. Může být jedna z následujících akcí:
 
 - **Char** (pro řetězce znaků ANSI).
@@ -151,13 +151,13 @@ void Append(PCXSTR pszSrc);
 ```
 #### <a name="parameters"></a>Parametry
 
-*strSrc*  
+*strSrc*<br/>
 `CSimpleStringT` Objektů, které se mají připojit.
 
-*pszSrc*  
+*pszSrc*<br/>
 Ukazatel na řetězec obsahující znaky, které se mají připojit.
 
-*nLength*  
+*nLength*<br/>
 Počet znaků k připojení.
 
 ### <a name="remarks"></a>Poznámky
@@ -187,7 +187,7 @@ void AppendChar(XCHAR ch);
 ```
 #### <a name="parameters"></a>Parametry
 
-*ch*  
+*ch*<br/>
 Znak, který má být připojen
 
 ### <a name="remarks"></a>Poznámky
@@ -209,13 +209,13 @@ static void CopyChars(
 
 #### <a name="parameters"></a>Parametry
 
-*pchDest*  
+*pchDest*<br/>
 Ukazatel na řetězec znaků.
 
-*pchSrc*  
+*pchSrc*<br/>
 Ukazatel na řetězec obsahující znaky, které se mají zkopírovat.
 
-*nChars*  
+*nChars*<br/>
 Počet *pchSrc* znaků, které mají být zkopírovány.
 
 ### <a name="remarks"></a>Poznámky
@@ -249,13 +249,13 @@ static void CopyCharsOverlapped(
 
 #### <a name="parameters"></a>Parametry
 
-*pchDest*  
+*pchDest*<br/>
 Ukazatel na řetězec znaků.
 
-*pchSrc*  
+*pchSrc*<br/>
 Ukazatel na řetězec obsahující znaky, které se mají zkopírovat.
 
-*nChars*  
+*nChars*<br/>
 Počet *pchSrc* znaků, které mají být zkopírovány.
 
 ### <a name="remarks"></a>Poznámky
@@ -280,19 +280,19 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
 ```
 #### <a name="parameters"></a>Parametry
 
-*strSrc*  
+*strSrc*<br/>
 Existující `CSimpleStringT` objektu, které se mají zkopírovat do tohoto `CSimpleStringT` objektu.
 
-*pchSrc*  
+*pchSrc*<br/>
 Ukazatel na pole znaků o délce *nLength*, není null byl ukončen.
 
-*pszSrc*  
+*pszSrc*<br/>
 Řetězec zakončený hodnotou null ke zkopírování do tohoto `CSimpleStringT` objektu.
 
-*nLength*  
+*nLength*<br/>
 Počet znaků v `pch`.
 
-*pStringMgr*  
+*pStringMgr*<br/>
 Ukazatel na správce paměti `CSimpleStringT` objektu. Další informace o `IAtlStringMgr` a správa paměti pro `CSimpleStringT`, naleznete v tématu [Správa paměti a CStringT](../memory-management-with-cstringt.md).
 
 ### <a name="remarks"></a>Poznámky
@@ -419,7 +419,7 @@ XCHAR GetAt(int iChar) const;
 ```
 #### <a name="parameters"></a>Parametry
 
-*iChar*  
+*iChar*<br/>
 Z nuly vycházející index znaku v `CSimpleStringT` objektu. *IChar* parametr musí být větší než nebo rovna 0 a menší než hodnota vrácená [GetLength](#getlength). V opačném případě `GetAt` vygeneruje výjimku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -451,7 +451,7 @@ PXSTR GetBuffer();
 ```
 #### <a name="parameters"></a>Parametry
 
-*nMinBufferLength*  
+*nMinBufferLength*<br/>
 Minimální počet znaků, které mohou obsahovat vyrovnávací paměti pro znaky. Tato hodnota nezahrnuje místo pro ukončovacího znaku null.
 
 Pokud *nMinBufferLength* je větší než délka aktuální vyrovnávací paměti, `GetBuffer` odstraní aktuální vyrovnávací paměti, nahradí jej do vyrovnávací paměti požadované velikosti a resetuje počet odkazů objektu na hodnotu nula. Pokud jste dříve označované jako [LockBuffer](#lockbuffer) na této vyrovnávací paměti, ztratíte uzamčení vyrovnávací paměti.
@@ -498,7 +498,7 @@ PXSTR GetBufferSetLength(int nLength);
 ```
 #### <a name="parameters"></a>Parametry
 
-*nLength*  
+*nLength*<br/>
 Přesnou velikost `CSimpleStringT` vyrovnávací paměti pro znaky ve znacích.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -696,7 +696,7 @@ XCHAR operator[](int iChar) const;
 ```
 #### <a name="parameters"></a>Parametry
 
-*iChar*  
+*iChar*<br/>
 Z nuly vycházející index znaku v řetězci.
 
 ### <a name="remarks"></a>Poznámky
@@ -727,7 +727,7 @@ XCHAR operator[](int iChar) const;
 
 ### <a name="parameters"></a>Parametry
 
-*iChar*  
+*iChar*<br/>
 Z nuly vycházející index znaku v řetězci.
 
 ### <a name="remarks"></a>Poznámky
@@ -755,13 +755,13 @@ CSimpleStringT& operator +=(wchar_t ch);
 ```
 #### <a name="parameters"></a>Parametry
 
-*pszSrc*  
+*pszSrc*<br/>
 Ukazatel na řetězec zakončený hodnotou null.
 
-*strSrc*  
+*strSrc*<br/>
 Ukazatel na existující `CSimpleStringT` objektu.
 
-*ch*  
+*ch*<br/>
 Znak, který má být připojen.
 
 ### <a name="remarks"></a>Poznámky
@@ -789,10 +789,10 @@ CSimpleStringT& operator =(const CSimpleStringT& strSrc);
 ```
 #### <a name="parameters"></a>Parametry
 
-*pszSrc*  
+*pszSrc*<br/>
 Ukazatel na řetězec zakončený hodnotou null.
 
-*strSrc*  
+*strSrc*<br/>
 Ukazatel na existující `CSimpleStringT` objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -894,7 +894,7 @@ void Preallocate( int nLength);
 ```
 #### <a name="parameters"></a>Parametry
 
-*nLength*  
+*nLength*<br/>
 Přesnou velikost `CSimpleStringT` vyrovnávací paměti pro znaky ve znacích.
 
 ### <a name="remarks"></a>Poznámky
@@ -934,7 +934,7 @@ void ReleaseBuffer(int nNewLength = -1);
 ```
 #### <a name="parameters"></a>Parametry
 
-*nNewLength*  
+*nNewLength*<br/>
 Nové délku řetězce ve znacích, výčtu nebudou započteny ukončovacího znaku null. Pokud řetězec má hodnotu null, byla ukončena,-1, výchozí hodnota nastaví `CSimpleStringT` velikost aktuální délka řetězce.
 
 ### <a name="remarks"></a>Poznámky
@@ -974,7 +974,7 @@ void ReleaseBufferSetLength(int nNewLength);
 ```
 #### <a name="parameters"></a>Parametry
 
-*nNewLength*  
+*nNewLength*<br/>
 Délka řetězce se vydávají
 
 ### <a name="remarks"></a>Poznámky
@@ -992,10 +992,10 @@ void SetAt(int iChar, XCHAR ch);
 ```
 #### <a name="parameters"></a>Parametry
 
-*iChar*  
+*iChar*<br/>
 Z nuly vycházející index znaku v `CSimpleStringT` objektu. *IChar* parametr musí být větší než nebo rovna 0 a menší než hodnota vrácená [GetLength](#getlength).
 
-*ch*  
+*ch*<br/>
 Nový znak.
 
 ### <a name="remarks"></a>Poznámky
@@ -1023,7 +1023,7 @@ void SetManager(IAtlStringMgr* pStringMgr);
 ```
 #### <a name="parameters"></a>Parametry
 
-*pStringMgr*  
+*pStringMgr*<br/>
 Ukazatel na nového správce paměti.
 
 ### <a name="remarks"></a>Poznámky
@@ -1051,10 +1051,10 @@ void SetString(PCXSTR pszSrc);
 ```
 #### <a name="parameters"></a>Parametry
 
-*pszSrc*  
+*pszSrc*<br/>
 Ukazatel na řetězec zakončený hodnotou null.
 
-*nLength*  
+*nLength*<br/>
 Počet znaků v *pszSrc*.
 
 ### <a name="remarks"></a>Poznámky
@@ -1091,7 +1091,7 @@ ATL_NOINLINE static int StringLength(PCXSTR psz) throw();
 ```
 #### <a name="parameters"></a>Parametry
 
-*psz*  
+*psz*<br/>
 Ukazatel na řetězec zakončený hodnotou null.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1121,7 +1121,7 @@ void Truncate(int nNewLength);
 ```
 #### <a name="parameters"></a>Parametry
 
-*nNewLength*  
+*nNewLength*<br/>
 Nové délku řetězce.
 
 ### <a name="remarks"></a>Poznámky

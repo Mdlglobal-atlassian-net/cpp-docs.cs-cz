@@ -19,16 +19,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5f9e0e273df1221801a9b761cd7f45200e0b50c0
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 4a17ff7e6e78b21267b71ba495ba10a98e29cfe7
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895081"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808847"
 ---
 # <a name="output-parameters"></a>Výstupní parametry
 
-Volání uložené procedury se podobá vyvolání příkazu SQL. Hlavní rozdíl je, že uložených procedur použijte výstupní parametry (nebo "výstupní parametry") a návratových hodnot.
+Volání uložené procedury je podobná spuštění příkazu SQL. Hlavní rozdíl je, že uložených procedur použijte výstupní parametry (nebo "výstupní parametry") a návratových hodnot.
 
 Těmito uloženou proceduru, první '? 'je návratová hodnota (telefon) a druhá'?' je vstupní parametr (název):
 
@@ -47,7 +47,7 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()  
 ```  
 
-Ke zpracování potřeba aplikace výstupu vráceného z uložené procedury. Různé technologie OLE DB – zprostředkovatelé vrátit výstupní parametry a návratové hodnoty v různých časech během zpracování výsledku. Zprostředkovatel Microsoft OLE DB pro SQL Server (SQLOLEDB) například není výstupní parametry a návratové kódy až po příjemce načte nebo zruší sady výsledků vrácené procedurou. uložené. Výstup se vrací v posledním TDS paketu ze serveru.
+Ke zpracování potřeba aplikace výstupu vráceného z uložené procedury. Různé technologie OLE DB – zprostředkovatelé vrátit výstupní parametry a návratové hodnoty v různých časech během zpracování výsledku. Zprostředkovatel Microsoft OLE DB pro SQL Server (SQLOLEDB) není třeba výstupní parametry a návratové kódy až po příjemce načte nebo zruší sady výsledků vrácené procedurou. uložené. Výstup se vrací v posledním TDS paketu ze serveru.
 
 ## <a name="row-count"></a>Počet řádků
 
@@ -64,7 +64,7 @@ as
 return 0
 ```  
 
-\@_Rowcount výstupní zprávy, kolik řádků z tabulky test skutečně vrácených. Tuto uloženou proceduru však omezuje počet řádků, které mají maximálně 50. Například pokud byly nějaké 100 řádků v testu, rowcount by 50 (protože je tento kód načte jenom prvních 50 řádků). Pokud byly nějaké pouze 30 řádky v tabulce, by rowcount 30. Je nutné volat `Close` nebo `CloseAll` k naplnění výstupní před načíst jeho hodnotu.
+\@_Rowcount výstupní zprávy, kolik řádků vrácených z tabulky testu. Tuto uloženou proceduru však omezuje počet řádků na 50. Například pokud byly nějaké 100 řádků v testu, rowcount by 50 (protože je tento kód načte jenom prvních 50 řádků). Pokud byly nějaké pouze 30 řádky v tabulce, by rowcount 30. Nezapomeňte volat `Close` nebo `CloseAll` k naplnění výstupní před načíst jeho hodnotu.
 
 ## <a name="see-also"></a>Viz také
 

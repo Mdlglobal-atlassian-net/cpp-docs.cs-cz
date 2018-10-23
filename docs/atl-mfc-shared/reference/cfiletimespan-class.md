@@ -1,7 +1,7 @@
 ---
 title: Cfiletimespan – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c69a45ec56c5ee6f1c8d7a48be2cac2d158dc6e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 27be228c735b667d76f1dc70d9ae36f4229acd01
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381930"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808963"
 ---
 # <a name="cfiletimespan-class"></a>Cfiletimespan – třída
 
@@ -93,10 +93,10 @@ CFileTimeSpan(LONGLONG nSpan) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*  
+*značka span*<br/>
 Existující objekt `CFileTimeSpan`.
 
-*nSpan*  
+*nSpan*<br/>
 Určitou dobu v milisekundách.
 
 ### <a name="remarks"></a>Poznámky
@@ -125,7 +125,7 @@ CFileTimeSpan operator-(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*  
+*značka span*<br/>
 A `CFileTimeSpan` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -142,7 +142,7 @@ bool operator!=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*  
+*značka span*<br/>
 `CFileTimeSpan` Objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -159,7 +159,7 @@ CFileTimeSpan operator+(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*  
+*značka span*<br/>
 A `CFileTimeSpan` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -176,7 +176,7 @@ CFileTimeSpan& operator+=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*  
+*značka span*<br/>
 A `CFileTimeSpan` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -193,7 +193,7 @@ bool operator<(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*  
+*značka span*<br/>
 `CFileTimeSpan` Objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -210,7 +210,7 @@ bool operator<=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*  
+*značka span*<br/>
 `CFileTimeSpan` Objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -227,7 +227,7 @@ CFileTimeSpan& operator=(const CFileTimeSpan& span) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*  
+*značka span*<br/>
 A `CFileTimeSpan` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -244,7 +244,7 @@ CFileTimeSpan& operator-=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*  
+*značka span*<br/>
 A `CFileTimeSpan` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -261,7 +261,7 @@ bool operator==(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*  
+*značka span*<br/>
 `CFileTimeSpan` Objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -278,7 +278,7 @@ bool operator>(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*  
+*značka span*<br/>
 `CFileTimeSpan` Objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -295,7 +295,7 @@ bool operator>=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*  
+*značka span*<br/>
 `CFileTimeSpan` Objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -312,7 +312,7 @@ void SetTimeSpan(LONGLONG nSpan) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nSpan*  
+*nSpan*<br/>
 Nová hodnota pro časový interval v milisekundách.
 
 ## <a name="see-also"></a>Viz také
@@ -321,4 +321,3 @@ Nová hodnota pro časový interval v milisekundách.
 [CFileTime – třída](../../atl-mfc-shared/reference/cfiletime-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Sdílené třídy ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-
