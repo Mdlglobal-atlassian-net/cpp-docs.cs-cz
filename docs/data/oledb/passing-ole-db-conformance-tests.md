@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 70c44f0063d8fdb354f2b3b2fd222748d9d1d9bf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 70607e0518d13015ee11895270ad3306cd3da24b
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46048094"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808170"
 ---
 # <a name="passing-ole-db-conformance-tests"></a>Předávání testů shodnosti technologie OLE DB
 
@@ -35,7 +35,7 @@ Chcete-li poskytovatele konzistentnější, Data Access SDK poskytuje sadu test�
 Ve Visual C++ 6.0 přidali šablony zprostředkovatele OLE DB počet zapojených funkcí, které umožňují zkontrolovat hodnoty a vlastnosti. Většina těchto funkcí byly přidány v reakci na testů shodnosti.  
   
 > [!NOTE]
->  Budete muset přidat několik ověřovací funkce pro předávání testů shodnosti technologie OLE DB poskytovatele.  
+> Budete muset přidat několik ověřovací funkce pro předávání testů shodnosti technologie OLE DB poskytovatele.  
   
 Tento poskytovatel vyžaduje dvě rutiny ověřování. První rutina `CRowsetImpl::ValidateCommandID`, je součástí vaší třídy sady řádků. Je volána při vytváření sady řádků šablony zprostředkovatele. Ukázka používá tato rutina příjemci říct, že nepodporuje indexy. První volání `CRowsetImpl::ValidateCommandID` (Všimněte si, že poskytovatel použije `_RowsetBaseClass` typedef přidán v mapě rozhraní pro `CMyProviderRowset` v [Podpora zprostředkovatele pro záložky](../../data/oledb/provider-support-for-bookmarks.md), takže není potřeba psát tyto dlouhé řádky šablony argumenty). Pokud parametr indexu není NULL, pak se vraťte DB_E_NOINDEX (označuje, že uživatel chce používat indexu v USA). Další informace o ID příkazů najdete v příslušné specifikaci OLE DB a hledejte `IOpenRowset::OpenRowset`.  
   
@@ -61,29 +61,9 @@ HRESULT ValidateCommandID(DBID* pTableID, DBID* pIndexID)
   
 Šablony zprostředkovatele volají `OnPropertyChanged` metoda pokaždé, když někdo změní vlastnost na `DBPROPSET_ROWSET` skupiny. Pokud chcete zpracovávat vlastnosti pro jiné skupiny, je přidáte do příslušného objektu (to znamená, `DBPROPSET_SESSION` kontroly přejdou do `CMyProviderSession` třídy).  
   
-Kód nejprve zkontroluje, zda je vlastnost propojený na jiný. Když se tato vlastnost je zřetězená, nastaví `DBPROP_BOOKMARKS` vlastnost na hodnotu True. Příloha C specifikaci OLE DB obsahuje informace o vlastnostech. Tyto informace také zjistíte, zda je vlastnost zřetězené do jiného.  
+Kód nejprve zkontroluje, zda je vlastnost propojený na jiný. Když se tato vlastnost je zřetězená, nastaví `DBPROP_BOOKMARKS` vlastnost `True`. Příloha C specifikaci OLE DB obsahuje informace o vlastnostech. Tyto informace také zjistíte, zda je vlastnost zřetězené do jiného.  
   
 Můžete také přidat `IsValidValue` rutiny do vašeho kódu. Volání šablony `IsValidValue` při pokusu o nastavení vlastnosti. Tato metoda by se mělo přepsat, pokud vyžadují další zpracování při nastavení hodnoty vlastnosti. Můžete mít jednu z těchto metod pro každou sadu vlastností.  
-  
-## <a name="threading-issues"></a>Potíže s vlákny  
-
-Ve výchozím nastavení OLE DB Provider průvodce v průvodce zprostředkovatelem ATL OLE DB generuje kód pro zprostředkovatele pro spuštění v modelu objektu apartment. Při pokusu o spuštění tohoto kódu s testů shodnosti, získáte počáteční selhání. To je vzhledem k tomu bezplatné Ltm.exe, nástroj používaný ke spuštění testů shodnosti technologie OLE DB, výchozí hodnota je typu. Kód průvodce zprostředkovatelem technologie OLE DB výchozí model apartment pro výkon a jednoduché používání.  
-  
-Chcete-li tento problém, můžete buď změnit LTM nebo změnit zprostředkovatele.  
-  
-#### <a name="to-change-ltm-to-run-in-apartment-threaded-mode"></a>Chcete-li změnit LTM ke spuštění v objektu apartment režimu vláken  
-  
-1. V hlavní nabídce LTM **nástroje**a potom klikněte na tlačítko **možnosti**.  
-  
-1. Na **Obecné** kartu, změňte model vláken ze **bezplatné vláken** k **s vlákny typu Apartment**.  
-  
-Chcete-li změnit váš poskytovatel pro spuštění v režimu volného vláken:  
-  
-- Hledání ve vašem projektu zprostředkovatele všechny výskyty `CComSingleThreadModel` a nahraďte ho hodnotou `CComMultiThreadModel`, který by měl být v hlavičkách zdroj, relace a sady řádků vaše data.  
-  
-- V souboru .rgs změnit model vláken ze **objektu Apartment** k **obě**.  
-  
-- Postupujte podle správné pravidel programování volných vláken programování (to znamená, že zámek zápisu).  
   
 ## <a name="see-also"></a>Viz také  
 

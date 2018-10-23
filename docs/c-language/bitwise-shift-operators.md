@@ -1,7 +1,7 @@
 ---
 title: Operátory bitového posunutí | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -17,34 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dfb5ffe13d8813eff0e3db4978eb1799bee1a85
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b1abcfa37373702df371b42efbf228fe748bfc45
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020118"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808196"
 ---
 # <a name="bitwise-shift-operators"></a>Operátory bitového posunutí
 
-Operátory posunutí posunutí prvního operandu vlevo (`<<`) nebo doprava (`>>`) počet pozic určuje druhého operandu.
+Operátory posunutí posunutí prvního operandu vlevo (**&lt;&lt;**) nebo doprava (**>>**) počet pozic určuje druhého operandu.
 
 ## <a name="syntax"></a>Syntaxe
 
-*SHIFT-expression*: *additive-expression*
-
-*SHIFT-expression*`<<`*additive-expression shift-expression*`>>`*additive-expression* 
+*SHIFT-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Additive-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*SHIFT-expression* **&lt; &lt;** *additive-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*SHIFT-expression* **>>** *additive-expression*
 
 Oba operandy musí být integrální hodnoty. Tyto operátory provádějí obvyklé aritmetické převody Typ výsledku je typ levého operandu po převodu.
 
 Pro leftward staffhubu uvolněných správných bitů nastavené na hodnotu 0. Pro rightward staffhubu jsou vyplněny uvolněných bitů vlevo na základě typu prvního operandu po převodu. Pokud je typ `unsigned`, jsou nastaveny na hodnotu 0. V opačném případě jsou vyplněny hodnotou kopie na bit znaménka. Pro operátory posunutí doleva bez přetečení, příkaz
 
-```
+```C
 expr1 << expr2
 ```
 
 je ekvivalentní k násobení hodnotou 2<sup>Výraz2</sup>. Pro operátory posunutí doprava
 
-```
+```C
 expr1 >> expr2
 ```
 
@@ -54,7 +55,7 @@ Výsledek operace posunutí není definován, pokud je druhý operand je záporn
 
 Protože převody provést podle přesun neposkytují operátory přetečení nebo podmínky podtečení, informace mohou být ztraceny, pokud výsledek operace posunutí nelze reprezentovat v typu prvního operandu po převodu.
 
-```
+```C
 unsigned int x, y, z;
 
 x = 0x00AA;

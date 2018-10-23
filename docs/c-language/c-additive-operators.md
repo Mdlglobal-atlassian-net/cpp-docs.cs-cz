@@ -1,7 +1,7 @@
 ---
 title: Operátory sčítání jazyka C | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7be460ace4e407a328c0cf23c9e6c9af09d17ca0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 339904e3fe75c712254f3a7802fc76a0e283c8e5
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101464"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808352"
 ---
 # <a name="c-additive-operators"></a>Operátory sčítání jazyka C
 
@@ -31,14 +31,13 @@ Operátory sčítání provedení sčítání (**+**) a odčítání (**-**).
 
 ## <a name="syntax"></a>Syntaxe
 
-*Additive-expression*: *násobení výraz*
-
-*Additive-expression***+***násobení výraz* 
-
-*Additive-expression***-***násobení výraz* 
+*Additive-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*multiplikativní výraz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Additive-expression* **+** *násobení výraz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Additive-expression* **-** *násobení výraz*
 
 > [!NOTE]
->  I když syntaxe *additive-expression* zahrnuje *násobení výraz*, to nutně neznamená, že se vyžadují výrazů pomocí násobení. Zobrazit syntaxi v [souhrn syntaxe jazyka C](../c-language/c-language-syntax-summary.md), pro *násobení výraz*, *výrazem přetypování*, a *unární výraz*.
+> I když syntaxe *additive-expression* zahrnuje *násobení výraz*, to nutně neznamená, že se vyžadují výrazů pomocí násobení. Zobrazit syntaxi v [souhrn syntaxe jazyka C](../c-language/c-language-syntax-summary.md), pro *násobení výraz*, *výrazem přetypování*, a *unární výraz*.
 
 Operandy mohou být integrální hodnoty s plovoucí desetinnou čárkou. Některé operace sčítání lze také provést na hodnoty ukazatele, jak je uvedeno v části diskuzi o každý operátor.
 

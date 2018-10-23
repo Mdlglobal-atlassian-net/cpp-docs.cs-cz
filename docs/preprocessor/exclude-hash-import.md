@@ -1,7 +1,7 @@
 ---
 title: vyloučit (#import) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,38 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5798c7515c411b9abf9d10229a6185e01bb92f7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c345d9268f63a714eeae4beff78a7ac39ce545a1
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46400195"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807897"
 ---
-# <a name="exclude-import"></a>exclude (#import)
-**Specifické pro C++**  
-  
-Vyloučí položky z generovaných souborů hlaviček knihoven typů.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-exclude("Name1"[, "Name2",...])  
-```  
-  
-### <a name="parameters"></a>Parametry  
-*Name1*  
-První položka, která má být vyloučena.  
-  
-*Name2*  
-Druhá položka, která má být vyloučena (je-li zapotřebí).  
-  
-## <a name="remarks"></a>Poznámky  
- 
-Knihovny typů mohou obsahovat definice položek definovaných v systémových hlavičkách nebo jiných knihovnách typů. Tento atribut může přijmout libovolný počet argumentů, přičemž každý z nich je položkou knihovny typů nejvyšší úrovně, která má být vyloučena.  
-  
-**Specifické pro END C++**  
-  
-## <a name="see-also"></a>Viz také  
- 
+# <a name="exclude-import"></a>vyloučit (\#import)
+
+**Specifické pro C++**
+
+Vyloučí položky z generovaných souborů hlaviček knihoven typů.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+exclude("Name1"[, "Name2",...])
+```
+
+### <a name="parameters"></a>Parametry
+
+*Name1*<br/>
+První položka, která má být vyloučena.
+
+*Name2*<br/>
+Druhá položka, která má být vyloučena (je-li zapotřebí).
+
+## <a name="remarks"></a>Poznámky
+
+Knihovny typů mohou obsahovat definice položek definovaných v systémových hlavičkách nebo jiných knihovnách typů. Tento atribut může přijmout libovolný počet argumentů, přičemž každý z nich je položkou knihovny typů nejvyšší úrovně, která má být vyloučena.
+
+**Specifické pro END C++**
+
+## <a name="see-also"></a>Viz také
+
 [atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

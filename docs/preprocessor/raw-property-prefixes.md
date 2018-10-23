@@ -1,7 +1,7 @@
 ---
 title: raw_property_prefixes – | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,41 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ae69e26077692188b8e013e949592df26d7701a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1170440428a5c92e383152826827989d602e69fb
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420397"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808735"
 ---
 # <a name="rawpropertyprefixes"></a>raw_property_prefixes
-**Specifické pro C++**  
-  
-Určuje alternativní předpony pro tři metody vlastností.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-raw_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")  
-```  
-  
-### <a name="parameters"></a>Parametry  
-*GetPrefix*  
-Předpona se použije pro `propget` metody.  
-  
-*PutPrefix*  
-Předpona se použije pro `propput` metody.  
-  
-*PutRefPrefix*  
-Předpona se použije pro `propputref` metody.  
-  
-## <a name="remarks"></a>Poznámky  
- 
-Ve výchozím nastavení, nízké úrovně `propget`, `propput`, a `propputref` metody jsou vystaveny členským funkcím pojmenovaným s **get_**, **put_**, a **putref_** v uvedeném pořadí. Tyto předpony jsou kompatibilní s názvy používanými v souborech hlaviček generovaných jazykem MIDL.  
-  
-**Specifické pro END C++**  
-  
-## <a name="see-also"></a>Viz také  
- 
+
+**Specifické pro C++**
+
+Určuje alternativní předpony pro tři metody vlastností.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+raw_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")
+```
+
+### <a name="parameters"></a>Parametry
+
+*GetPrefix*<br/>
+Předpona se použije pro `propget` metody.
+
+*PutPrefix*<br/>
+Předpona se použije pro `propput` metody.
+
+*PutRefPrefix*<br/>
+Předpona se použije pro `propputref` metody.
+
+## <a name="remarks"></a>Poznámky
+
+Ve výchozím nastavení, nízké úrovně `propget`, `propput`, a `propputref` metody jsou vystaveny členským funkcím pojmenovaným s **get_**, **put_**, a **putref_** v uvedeném pořadí. Tyto předpony jsou kompatibilní s názvy používanými v souborech hlaviček generovaných jazykem MIDL.
+
+**Specifické pro END C++**
+
+## <a name="see-also"></a>Viz také
+
 [atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)

@@ -1,7 +1,7 @@
 ---
 title: stdin, stdout, stderr | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/23/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -23,20 +23,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a36d5fd60a19222e6f802e5a14037fb01ff865f5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 707811a9c05135cb46520dd72895d677cdc0a6e4
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071975"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808703"
 ---
 # <a name="stdin-stdout-stderr"></a>stdin, stdout, stderr
 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-
-      FILE *stdin; 
+FILE *stdin; 
 FILE *stdout; 
 FILE *stderr; 
 #include <stdio.h>
@@ -53,12 +52,12 @@ Následující ukazatele datového proudu jsou k dispozici pro přístup z více
 |Ukazatel|Stream|
 |-------------|------------|
 |`stdin`|Standardní vstup|
-|**STDOUT**|Standardní výstup|
+|`stdout`|Standardní výstup|
 |`stderr`|Standardní chyba|
 
-Tyto ukazatele lze použít jako argumenty funkce. Některé funkce, jako například **getchar** a `putchar`, použijte `stdin` a **stdout** automaticky.
+Tyto ukazatele lze použít jako argumenty funkce. Některé funkce, jako například [getchar](../c-runtime-library/reference/getchar-getwchar.md) a [putchar](../c-runtime-library/reference/putchar-putwchar.md), použijte `stdin` a `stdout` automaticky.
 
-Tyto ukazatele jsou konstanty a nelze jí přiřadit nové hodnoty. `freopen` Funkce lze přesměrovat datové proudy souborů na disku nebo s jinými zařízeními. Operační systém můžete přesměrovat standardní vstupní a výstupní na úrovni příkazu programu.
+Tyto ukazatele jsou konstanty a nelze jí přiřadit nové hodnoty. [Freopen](../c-runtime-library/reference/freopen-wfreopen.md) funkce lze přesměrovat datové proudy souborů na disku nebo s jinými zařízeními. Operační systém můžete přesměrovat standardní vstupní a výstupní na úrovni příkazu programu.
 
 ## <a name="see-also"></a>Viz také
 

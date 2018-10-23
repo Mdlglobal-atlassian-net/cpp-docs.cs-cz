@@ -1,46 +1,49 @@
 ---
-title: CMyProviderCommand (MyProviderRS.H) | Dokumentace Microsoftu
+title: CCustomCommand (CustomRS.H) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
 f1_keywords:
 - cmyprovidercommand
 - myproviderrs.h
+- ccustomcommand
+- customrs.h
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderCommand class in MyProviderRS.H
+- CCustomCommand class in CustomRS.H
 ms.assetid: b30b956e-cc91-4cf5-9fe6-f8b1ce9cc2a5
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 919455c1f0e1bae0491226e2f2d0f53bb35f7ad8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3d3f6b8775ab876834555e7c47e469c72d3a150b
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46046599"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807728"
 ---
-# <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
+# <a name="ccustomcommand-customrsh"></a>CCustomCommand (CustomRS.H)
 
-`CMyProviderCommand` Třída je implementace objektu command zprostředkovatel. Poskytuje implementaci pro `IAccessor`, `ICommandText`, a `ICommandProperties` rozhraní. `IAccessor` Rozhraní je stejný jako v dané sadě řádků. Objekt příkazu používá přistupující k určení vazby parametrů. Objektu sady řádků je používá k určení vazby pro výstupní sloupce. `ICommandText` Rozhraní je užitečný způsob, jak určit textový příkaz. V tomto příkladu `ICommandText` rozhraní později, když přidá vlastní kód; Potlačí také `ICommand::Execute` metody. `ICommandProperties` Rozhraní zpracovává všechny vlastnosti pro objekty příkazu a sady řádků.  
+`CCustomCommand` Třída je implementace objektu command zprostředkovatel. Poskytuje implementaci pro `IAccessor`, `ICommandText`, a `ICommandProperties` rozhraní. `IAccessor` Rozhraní je stejný jako v dané sadě řádků. Objekt příkazu používá přistupující k určení vazby parametrů. Objektu sady řádků je používá k určení vazby pro výstupní sloupce. `ICommandText` Rozhraní je užitečný způsob, jak určit textový příkaz. V tomto příkladu `ICommandText` rozhraní později, když přidá vlastní kód; Potlačí také `ICommand::Execute` metody. `ICommandProperties` Rozhraní zpracovává všechny vlastnosti pro objekty příkazu a sady řádků.  
   
 ```cpp  
-// CMyProviderCommand  
-class ATL_NO_VTABLE CMyProviderCommand :   
-class ATL_NO_VTABLE CMyProviderCommand :   
+// CCustomCommand  
+class ATL_NO_VTABLE CCustomCommand :   
+class ATL_NO_VTABLE CCustomCommand :   
    public CComObjectRootEx<CComSingleThreadModel>,  
-   public IAccessorImpl<CMyProviderCommand>,  
-   public ICommandTextImpl<CMyProviderCommand>,  
-   public ICommandPropertiesImpl<CMyProviderCommand>,  
-   public IObjectWithSiteImpl<CMyProviderCommand>,  
-   public IConvertTypeImpl<CMyProviderCommand>,  
-   public IColumnsInfoImpl<CMyProviderCommand>  
+   public IAccessorImpl<CCustomCommand>,  
+   public ICommandTextImpl<CCustomCommand>,  
+   public ICommandPropertiesImpl<CCustomCommand>,  
+   public IObjectWithSiteImpl<CCustomCommand>,  
+   public IConvertTypeImpl<CCustomCommand>,  
+   public IColumnsInfoImpl<CCustomCommand>  
 ```  
   
 `IAccessor` Rozhraní spravuje všechny vazby použité v příkazech a sady řádků. Příjemce volání `IAccessor::CreateAccessor` s polem `DBBINDING` struktury. Každý `DBBINDING` struktura obsahuje informace o tom, jak by měly být zpracovány vazeb sloupců (jako je například typ a délku). Zprostředkovatel přijímá struktury a určuje, jak by se měly převést data a zda jsou všechny převody potřebné. `IAccessor` Rozhraní se používá v objektu příkazu pro zpracování libovolných parametrů v příkazu.  

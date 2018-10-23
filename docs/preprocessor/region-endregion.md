@@ -1,7 +1,7 @@
 ---
 title: oblast, endregion | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -22,49 +22,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dac2df26f393b7491d94abdb6d987a8e424723e1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2e360009eb9126604d4466daed2445c7dfc582d4
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715553"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808066"
 ---
 # <a name="region-endregion"></a>region, endregion
-`#pragma region` Umožňuje určit blok kódu, které můžete rozbalit nebo sbalit při použití [funkce osnovy](/visualstudio/ide/outlining) z editoru kódu sady Visual Studio.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-#pragma region name  
-#pragma endregion comment  
-```  
-  
-### <a name="parameters"></a>Parametry  
-*Komentář*  
-(Volitelné) Komentář, který se zobrazí v editoru kódu.  
-  
-*Jméno*  
-(Volitelné) Název oblasti.  Tento název se zobrazí v editoru kódu.  
-  
-## <a name="remarks"></a>Poznámky  
- 
-`#pragma endregion` označuje konec `#pragma region` bloku.  
-  
-A `#region` bloku musí být ukončen direktivou `#pragma endregion`.  
-  
-## <a name="example"></a>Příklad  
-  
-```cpp  
-// pragma_directives_region.cpp  
-#pragma region Region_1  
-void Test() {}  
-void Test2() {}  
-void Test3() {}  
-#pragma endregion Region_1  
-  
-int main() {}  
-```  
-  
-## <a name="see-also"></a>Viz také  
- 
+
+`#pragma region` Umožňuje určit blok kódu, které můžete rozbalit nebo sbalit při použití [funkce osnovy](/visualstudio/ide/outlining) z editoru kódu sady Visual Studio.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+#pragma region name
+#pragma endregion comment
+```
+
+### <a name="parameters"></a>Parametry
+
+*Komentář*<br/>
+(Volitelné) Komentář, který se zobrazí v editoru kódu.
+
+*Jméno*<br/>
+(Volitelné) Název oblasti.  Tento název se zobrazí v editoru kódu.
+
+## <a name="remarks"></a>Poznámky
+
+`#pragma endregion` označuje konec `#pragma region` bloku.
+
+A `#region` bloku musí být ukončen direktivou `#pragma endregion`.
+
+## <a name="example"></a>Příklad
+
+```cpp
+// pragma_directives_region.cpp
+#pragma region Region_1
+void Test() {}
+void Test2() {}
+void Test3() {}
+#pragma endregion Region_1
+
+int main() {}
+```
+
+## <a name="see-also"></a>Viz také
+
 [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

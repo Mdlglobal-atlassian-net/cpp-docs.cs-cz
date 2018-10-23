@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e7f97011e66c72c79c3ab6db3b6011e1d4d76ce7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d01674929522326c21eea2ad7d40f33e8ff6fae6
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017170"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807520"
 ---
 # <a name="provider-support-for-bookmarks"></a>Podpora zprostředkovatele pro záložky
 
@@ -247,7 +247,7 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 }  
 ```  
   
-While smyčka obsahuje kód pro volání `Compare` metodu `IRowsetLocate` rozhraní. Kód, který máte by měly vždy předat, protože při porovnávání přesně stejné záložky. Uložte také jednu záložku v dočasné proměnné tak, že můžete používat dál po while smyčky dokončí volání `MoveToBookmark` funkce v šablonách příjemců. `MoveToBookmark` Volání funkce `GetRowsAt` metoda ve `IRowsetLocate`.  
+**Při** smyčka obsahuje kód pro volání `Compare` metodu `IRowsetLocate` rozhraní. Kód, který máte by měly vždy předat, protože při porovnávání přesně stejné záložky. Uložte také jednu záložku v dočasné proměnné tak, aby ho po můžete použít **při** smyčky dokončí volání `MoveToBookmark` funkce v šablonách příjemců. `MoveToBookmark` Volání funkce `GetRowsAt` metoda ve `IRowsetLocate`.  
   
 Také musíte aktualizovat záznam uživatele v příjemci. Přidejte záznam do třídy pro zpracování záložky a položky v `COLUMN_MAP`:  
   

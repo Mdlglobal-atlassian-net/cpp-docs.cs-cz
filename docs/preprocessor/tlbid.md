@@ -1,7 +1,7 @@
 ---
 title: TLBID | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,47 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5bd922089bcf189c403a97679a593a985603a12
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6324ec9a64a0d1c47dab8d1beee021f6c8752a96
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446254"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807975"
 ---
 # <a name="tlbid"></a>tlbid
-**Specifické pro C++**  
-  
-Umožňuje načítání knihoven jiné než primární typ knihovny.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-tlbid(number)  
-```  
-  
-### <a name="parameters"></a>Parametry  
-*Číslo*  
-Počet knihovnu typů v `filename`.  
-  
-## <a name="remarks"></a>Poznámky  
- 
-Pokud více knihoven typů jsou součástí jedné knihovny DLL, je možné načítat knihovny jiné než primární typ knihovny pomocí **tlbid**.  
-  
-Příklad:  
-  
-```  
-#import <MyResource.dll> tlbid(2)  
-```  
-  
-je ekvivalentní:  
-  
-```  
-LoadTypeLib("MyResource.dll\\2");  
-```  
-  
-**Specifické pro END C++**  
-  
-## <a name="see-also"></a>Viz také  
- 
+
+**Specifické pro C++**
+
+Umožňuje načítání knihoven jiné než primární typ knihovny.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+tlbid(number)
+```
+
+### <a name="parameters"></a>Parametry
+
+*Číslo*<br/>
+Počet knihovnu typů v `filename`.
+
+## <a name="remarks"></a>Poznámky
+
+Pokud více knihoven typů jsou součástí jedné knihovny DLL, je možné načítat knihovny jiné než primární typ knihovny pomocí **tlbid**.
+
+Příklad:
+
+```cpp
+#import <MyResource.dll> tlbid(2)
+```
+
+je ekvivalentní:
+
+```cpp
+LoadTypeLib("MyResource.dll\\2");
+```
+
+**Specifické pro END C++**
+
+## <a name="see-also"></a>Viz také
+
 [atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
