@@ -36,7 +36,7 @@ Operátory násobení provedení násobení (<strong>\*</strong>), dělení (**/
 
 *multiplikativní výraz*: &nbsp; &nbsp; &nbsp; &nbsp; *výrazem přetypování* &nbsp; &nbsp; &nbsp; &nbsp; *násobení výraz* <strong>\*</strong> *výrazem přetypování* &nbsp; &nbsp; &nbsp; &nbsp; *násobení výraz* **/** *výrazem přetypování* &nbsp; &nbsp; &nbsp; &nbsp; *násobení výraz* **%** *výrazem přetypování.*
 
-Operandy operátoru zbytek (**%**) musí být integrálního typu. Násobení (<strong>\**</strong>) a dělení (**/**) operátory může trvat celé číslo nebo číslo s plovoucí čárkou typ – operandy; typy operandy se může lišit.
+Operandy operátoru zbytek (**%**) musí být integrálního typu. Násobení (<strong>\*</strong>) a dělení (**/**) operátory může trvat celé číslo nebo číslo s plovoucí čárkou typ – operandy; typy operandy se může lišit.
 
 Operátory násobení provádět běžné aritmetické převody operandů. Typ výsledku je typ operandu po převodu.
 
