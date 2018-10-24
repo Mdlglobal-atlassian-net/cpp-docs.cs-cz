@@ -1,5 +1,5 @@
 ---
-title: -Oy (vynechání ukazatele) | Microsoft Docs
+title: -Oy (vynechání ukazatele na rámec) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 09/22/2017
 ms.technology:
@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6feb682d364c4c40fd01e4aff33404c4506d9c1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c077b5a350d7381adc5412ca4a318713d720ad6
+ms.sourcegitcommit: 1870c342d44b10990fd015e60856225c3026e8c2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377258"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49963048"
 ---
 # <a name="oy-frame-pointer-omission"></a>/Oy (vynechání ukazatele na rámec)
 
@@ -40,29 +40,29 @@ Zakazuje vytváření ukazatelů na rámce v zásobníku volání.
 
 ## <a name="remarks"></a>Poznámky
 
-Tento parametr urychluje volání funkcí, protože není potřeba vytvářet a odebírat žádné ukazatele na rámce. Navíc se uvolní jeden další registr (EBP na procesorech Intel 386 nebo novějších) pro ukládání často používaných proměnných a podvýrazů.
+Tento parametr urychluje volání funkcí, protože není potřeba vytvářet a odebírat žádné ukazatele na rámce. Navíc se uvolní jeden další registr pro obecné použití.
 
-**/Oy** umožňuje vynechání ukazatele na rámec a **/Oy-** zakáže vynechání. **/Oy** je k dispozici pouze v x86 kompilátory.
+**/Oy** povoluje vynechání ukazatele na rámce a **/Oy-** vynechání zakazuje. **/Oy** je k dispozici pouze v x86 kompilátory.
 
-Pokud váš kód vyžaduje na základě EBP adresování, můžete zadat **/Oy-** možnost po **/Ox** možnost nebo použijte [optimalizovat](../../preprocessor/optimize.md) s "**y**" a **vypnout** argumenty k získání maximální optimalizace se na základě EBP adresování. Kompilátor zjistí většině situací, kdy je potřeba na základě EBP adresování (například s `_alloca` a `setjmp` funkce a s strukturované zpracování výjimek).
+Pokud váš kód vyžaduje adresování na základě EBP, můžete zadat **/Oy-** za parametr **/Ox** nebo použitím [optimalizovat](../../preprocessor/optimize.md) s "**y**" a **vypnout** argumenty k získání s adresováním na základě EBP maximální optimalizaci. Kompilátor rozpozná většinu situací, ve kterém se požaduje adresování pomocí na základě EBP (například při `_alloca` a `setjmp` funkce a při zpracování strukturovaných výjimek).
 
-[/Ox (Povolit nejvíce rychlost optimalizace)](../../build/reference/ox-full-optimization.md) a [/O1, / O2 (velikost minimalizovat, maximalizovat rychlost)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) možnosti implikují **/Oy**. Určení **/Oy-** po **/Ox**, **/O1**, nebo **/O2** možnost zakáže **/Oy**, jestli je explicitní nebo implicitní.
+[/Ox (povolení většina optimalizací pro rychlost)](../../build/reference/ox-full-optimization.md) a [/O1, / O2 (minimalizovat velikost, maximální rychlost)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) možnosti implikují **/Oy**. Určení **/Oy-** po **/Ox**, **/O1**, nebo **/O2** zakáže **/Oy**, ať už jde o explicitní nebo implicitní.
 
-**/Oy** díky – možnost kompilátoru pomocí ladicího programu obtížnější, protože kompilátor potlačí informace ukazatel na rámec. Pokud zadáte debug – možnost kompilátoru ([/Z7, / zi, /ZI](../../build/reference/z7-zi-zi-debug-information-format.md)), doporučujeme vám, zda jste zadali **/Oy-** možnost po další možnosti optimalizace kompilátoru.
+**/Oy** díky – možnost kompilátoru pomocí ladicího programu obtížnější, protože kompilátor nezobrazuje informace o ukazateli na rámce. Pokud zadáte ladicí parametr kompilátoru ([/Z7, / zi, /ZI](../../build/reference/z7-zi-zi-debug-information-format.md)), doporučujeme vám, že zadáte **/Oy-** za jakékoli jiné optimalizační parametry kompilátoru.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
-1. Klikněte **C/C++** složky.
+1. Klikněte na tlačítko **C/C++** složky.
 
-1. Klikněte **optimalizace** stránku vlastností.
+1. Klikněte na tlačítko **optimalizace** stránku vlastností.
 
-1. Změnit **vynechání ukazatele na rámce** vlastnost. Tato vlastnost přidá nebo odebere pouze **/Oy** možnost. Pokud chcete přidat **/Oy-** možnost, klikněte na tlačítko **příkazového řádku** a upravovat **další možnosti**.
+1. Upravit **vypustit ukazatele na rámce** vlastnost. Tato vlastnost přidá nebo odebere pouze **/Oy** možnost. Pokud chcete přidat **/Oy-** , kliknutím na **příkazového řádku** a upravit **další možnosti**.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OmitFramePointers%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OmitFramePointers%2A>.
 
 ## <a name="see-also"></a>Viz také
 

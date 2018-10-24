@@ -1,7 +1,7 @@
 ---
 title: OLE DB – Model objektů | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c0bd4c8f18addf50dfcee525dea255f75b2fdf75
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d82b6d51e423109c433438731f16878284c2c277
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101472"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990253"
 ---
 # <a name="ole-db-object-model"></a>OLE DB – model objektů
 
-Objektový model OLE DB se skládá z následujících objektů nebo komponenty. První čtyři objekty nebo součásti (zdrojů dat, relace, příkazy a sady řádků) umožňují připojení ke zdroji dat a jeho zobrazení. Rest, počínaje přístupových objektů, se vztahují na práci s daty, jakmile se zobrazí.  
+Objektový model OLE DB je vytvořen z následujících objektů nebo komponenty. První čtyři objekty nebo součásti (zdrojů dat, relace, příkazy a sady řádků) umožňují připojení ke zdroji dat a jeho zobrazení. Rest, počínaje přístupových objektů, se vztahují na práci s daty, jakmile se zobrazí.  
   
 ## <a name="data-sources"></a>Zdroje dat  
 
@@ -47,15 +47,15 @@ Příkaz je prostě kontejner pro textový příkaz, který je předán z příj
   
 ## <a name="rowsets"></a>Sady řádků  
 
-Sady řádků způsobit vystavení dat v tabelárním formátu. Index je zvláštní případ sady řádků. Sady řádků můžete vytvořit z relace nebo příkaz.  
+Sady řádků zobrazení dat v tabelárním formátu. Index je zvláštní případ sady řádků. Sady řádků můžete vytvořit z relace nebo příkaz.  
   
 ### <a name="schema-rowsets"></a>Sady řádků schématu  
 
-Schémata obsahují metadata (strukturální informace) o databázi. Sady řádků schématu jsou sady řádků, které obsahují informace o schématu. Někteří poskytovatelé OLE DB pro DBMS podporovat rozhraní objektu sady řádků schématu. Další informace o sad řádků schématu najdete v tématu [získávání metadat pomocí sad řádků schématu](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) a [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).  
+Schémata mají metadata (strukturální informace) o databázi. Sady řádků schématu jsou sady řádků, které mají informace o schématu. Někteří poskytovatelé OLE DB pro DBMS podporovat rozhraní objektu sady řádků schématu. Další informace o sad řádků schématu najdete v tématu [získávání metadat pomocí sad řádků schématu](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) a [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).  
   
 ### <a name="view-objects"></a>Zobrazit objekty  
 
-Objekt zobrazení definuje podmnožinu řádků a sloupců ze sady řádků. Neobsahuje žádná data. Zobrazit objekty nelze kombinovat data z více sad řádků.  
+Objekt zobrazení definuje podmnožinu řádků a sloupců ze sady řádků. Nemá žádná data. Zobrazit objekty nelze kombinovat data z více sad řádků.  
   
 ## <a name="accessors"></a>Přístupové objekty  
 
@@ -65,13 +65,13 @@ Pouze technologie OLE DB používá koncept přistupující objekty. Přístupov
 
 Objekty transakce se používají při potvrzení nebo přerušení vnořené transakce na jiné než nejnižší úroveň. Transakce je nedělitelná jednotka práce definované ACID testem. KYSELINY, zkratka pro:  
   
-- Atomicitu: nelze rozdělit do menších jednotek práce.  
+- Atomicitu, nelze rozdělit do menších jednotek práce  
   
-- Souběžnost: více než jedna transakce může dojít v čase.  
+- Souběžnost, více než jedna transakce může dojít v čase  
   
-- Izolace: jedna transakce má omezené znalosti o změny provedené jiným uživatelem.  
+- Izolace, jedna transakce má omezené znalosti o změny provedené jiným uživatelem  
   
-- Odolnost: transakce provede trvalé změny.  
+- Odolnost, provede transakce trvalé změny 
   
 ## <a name="enumerators"></a>Enumerátory  
 
@@ -81,7 +81,7 @@ Kořenový enumerátor dodáváno v sadě Microsoft Data Access SDK prochází r
   
 ## <a name="errors"></a>Chyby  
 
-Libovolné rozhraní libovolného objektu OLE DB mohou způsobit chyby. Chyby obsahují další informace o chybě, včetně objektu volitelné vlastních chyb. Tyto informace je součástí HRESULT.  
+Libovolné rozhraní libovolného objektu OLE DB mohou způsobit chyby. Chyby mají další informace o chybě, včetně objektu volitelné vlastních chyb. Tyto informace jsou uloženy v HRESULT.  
   
 ## <a name="notifications"></a>Oznámení  
 

@@ -1,7 +1,7 @@
 ---
 title: Šablony příjemce technologie OLE DB (C++) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b22f97401900a24ae864174872027b18509dfe0c
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 9983b9347fb0c39333bba33f1c7b1d9237b407ce
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082420"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990136"
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB – šablony příjemce (C++)
 
@@ -71,5 +71,5 @@ Další informace naleznete v následujících tématech:
 
 [Programování v architektuře OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Přístup k datům](../data-access-in-cpp.md)<br/>
-[Dokumentace k sadě SDK technologie OLE DB](/previous-versions/windows/desktop/ms722784)   
+[Dokumentace k sadě SDK technologie OLE DB](/previous-versions/windows/desktop/ms722784)<br/>
 [Referenční informace pro OLE DB programátory](/previous-versions/windows/desktop/ms713643)

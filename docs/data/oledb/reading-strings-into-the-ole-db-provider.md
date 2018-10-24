@@ -15,31 +15,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9b51611ff5727a89e47bef569865f915a189a993
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 6521ed8078f4411b704678b53f16fbdbc4d04e73
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410652"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49989876"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Načtení řetězců do zprostředkovatele OLE DB
 
-`RMyProviderRowset::Execute` Funkce soubor se otevře a přečte řetězce. Příjemce předá název souboru k poskytovateli voláním [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757). Zprostředkovatel přijímá název souboru a uloží je v členské proměnné `m_szCommandText`. `Execute` načte název souboru z `m_szCommandText`. Pokud název souboru je neplatný nebo není k dispozici, soubor `Execute` vrátí chybu. V opačném případě se otevře soubor a volání `fgets` pro načtení řetězců. Pro každou sadu řetězců je operace čtení, `Execute` vytvoří instanci záznam uživatele (`CAgentMan`) a umístí jej do pole.  
+`RCustomRowset::Execute` Funkce soubor se otevře a přečte řetězce. Příjemce předá název souboru k poskytovateli voláním [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757). Zprostředkovatel přijímá název souboru a uloží je v členské proměnné `m_szCommandText`. `Execute` načte název souboru z `m_szCommandText`. Pokud název souboru je neplatný nebo není k dispozici, soubor `Execute` vrátí chybu. V opačném případě se otevře soubor a volání `fgets` pro načtení řetězců. Pro každou sadu řetězců je operace čtení, `Execute` vytvoří instanci záznam uživatele (`CAgentMan`) a umístí jej do pole.  
   
 Pokud soubor nejde otevřít, `Execute` musí vracet DB_E_NOTABLE. Pokud místo toho vrátí E_FAIL, zprostředkovatel nebude fungovat u mnoha příjemci a nebudou předávat OLE DB [testů shodnosti](../../data/oledb/testing-your-provider.md).  
   
 ## <a name="example"></a>Příklad  
-  
-### <a name="description"></a>Popis  
 
 Upravený `Execute` funkce vypadá takto:  
   
-### <a name="code"></a>Kód  
-  
 ```cpp
 /////////////////////////////////////////////////////////////////////////  
-// MyProviderRS.h  
-class RMyProviderRowset : public CRowsetImpl< RMyProviderRowset, CAgentMan, CRMyProviderCommand>  
+// CustomRS.h  
+class RCustomRowset : public CRowsetImpl< RCustomRowset, CAgentMan, CRCustomCommand>  
 {  
 public:  
     HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)  

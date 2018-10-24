@@ -1,7 +1,7 @@
 ---
 title: Vytvoření projektu souboru pravidel C++ | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 09/12/2018
+ms.date: 10/19/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -17,22 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3360d2ed86d220bc59d6f09f582c71b48f7d78c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5f937c11b2453bd296468c5f153b7c9495eba290
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399480"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990240"
 ---
 # <a name="creating-a-c-makefile-project"></a>Vytvoření projektu souboru pravidel C++
 
-A *makefile* je textový soubor, který obsahuje pokyny, jak kompilovat a propojení (nebo *sestavení*) sadu souborů zdrojového kódu jazyka C++. A *zkontrolujte* program přečte soubor pravidel a vyvolá kompilátoru, linkeru a pravděpodobně další programy, aby spustitelný soubor. Implementace společnosti Microsoft *zkontrolujte* program se nazývá **NMAKE**. (Visual Studio ve výchozím nastavení používá systém MSBuild na základě souborů .vcsproj; to je, co se vytvořila **soubor | Nové | Projekt**.)
+A *makefile* je textový soubor, který obsahuje pokyny, jak kompilovat a propojení (nebo *sestavení*) sadu souborů zdrojového kódu jazyka C++. A *zkontrolujte* program přečte soubor pravidel a vyvolá kompilátoru, linkeru a pravděpodobně další programy, aby spustitelný soubor. Implementace společnosti Microsoft *zkontrolujte* program se nazývá **NMAKE**. (Visual Studio ve výchozím nastavení používá systém MSBuild na základě souborů .vcxproj; to je, co se vytvořila **soubor | Nové | Projekt**.)
 
 Pokud máte existujícího projektu souboru pravidel, pokud chcete kód a/nebo ladění v rozhraní IDE sady Visual Studio mají tyto možnosti:
 
 - Vytvoření projektu souboru pravidel v sadě Visual Studio, který používá vaše existující soubor pravidel pro sestavení svého kódu v rozhraní IDE. (Není nutné všechny funkce integrovaného vývojového prostředí, které jste získali s nativní projektu nástroje MSBuild.) Zobrazit [vytvoření projektu souboru pravidel](#create_a_makefile_project) níže.
 - Použití **vytvořit nový projekt z existujících souborů kódu** průvodce vytvořit nativní projekt MSBuild ze zdrojového kódu. Další informace najdete v tématu [postupy: vytvoření projektu jazyka C++ z existujícího kódu](how-to-create-a-cpp-project-from-existing-code.md).
-- **Visual Studio 2017 a novější**: použijte **otevřít složku** funkci pro otevření souboru pravidel. Další informace najdete v tématu [projekty otevřít složku v jazyce Visual C++](non-msbuild-projects.md).
+- **Visual Studio 2017 a novější**: použijte **otevřít složku** funkce k otevření projektu souboru pravidel bez jeho převodu do MSBuild. Další informace najdete v tématu [projekty otevřít složku v jazyce Visual C++](non-msbuild-projects.md).
 
 ## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Vytvoření projektu souboru pravidel se šablonou projektu souboru pravidel
 

@@ -1,7 +1,7 @@
 ---
 title: Upozornění kompilátoru podle verze kompilátoru | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 10/24/2018
 ms.technology:
 - devlang-cpp
 ms.topic: error-reference
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6645bb81a1fd4a2b42eb7419a0d008b9ac7692ad
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1c4d815ba1036a03042992d2715e49bbd8f74a28
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44319081"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990383"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Upozornění kompilátoru podle verze kompilátoru
 
@@ -45,10 +45,19 @@ Tyto verze kompilátoru zavedená nová upozornění:
 | Visual C++ 2017 verze 15.5 | 19.12.25830.0 |
 | Visual C++ 2017 verze 15.6 | 19.13.26128.0 |
 | Visual C++ 2017 verze 15.7 | 19.14.26428.0 |
+| Visual C++ 2017 verze 15.8 | 19.15.26726.0 |
 
 Můžete zadat pouze hlavní číslo, číslo hlavní a dílčí nebo hlavní, vedlejší verzi a čísla do sestavení __/WV:__ možnost. Kompilátor oznámí všechna upozornění, které odpovídají verze, které začínat zadaným číslem a potlačí všechna upozornění pro větší než zadané číslo verze. Například __/Wv:17__ sestavy všech upozornění zavedená v rámci nebo před jakoukoli verzi nástroje Visual Studio 2012 a potlačí všechny upozornění zavedená jakékoli kompilátorem z Visual Studio 2013 (verzi 18) nebo novější. Potlačit upozornění zavedená v sadě Visual Studio 2015 update 2 a novější, je možné použít __/Wv:19.00.23506__. Použití __/Wv:19.11__ hlášení všechna upozornění zavedená v libovolné verzi sady Visual Studio před Visual Studio 2017 verze 15.5, ale potlačí upozornění zavedená v sadě Visual Studio 2017 verze 15.5 nebo novější.
 
 V následujících oddílech najdete seznam upozornění zavedená ve všech verzích Visual C++, který můžete potlačit pomocí __/WV:__ – možnost kompilátoru. __/WV:__ možnost nelze potlačit upozornění, které nejsou uvedené, které jsou staršího data než zadanou verzí kompilátoru.
+
+## <a name="warnings-introduced-in-visual-c-2017-version-158-compiler-version-1915267260"></a>Upozornění zavedená ve Visual C++ 2017 verze 15.8 (verze kompilátoru 19.15.26726.0)
+
+Tato upozornění a všechna upozornění v pozdějších verzích jsou potlačeny pomocí možnosti kompilátoru __/Wv:19.14__.
+
+|||
+|-|-|
+C5046|"*funkce*': typ zahrnující s vnitřním propojením není definovaný Symbol|
 
 ## <a name="warnings-introduced-in-visual-c-2017-version-157-compiler-version-1914264280"></a>Upozornění zavedená v sadě Visual C++ 2017 verze 15.7 (verze kompilátoru 19.14.26428.0)
 

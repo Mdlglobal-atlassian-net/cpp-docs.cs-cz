@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e761115642cb9ab95931a89ac3b511256d88708b
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 4d92d196cc38e6033c6f16332e4977f2481c4496
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809002"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990331"
 ---
 # <a name="openmp-directives"></a>Direktivy jazyka OpenMP
 
@@ -66,7 +66,7 @@ Jazyk Visual C++ podporuje následující direktivy OpenMP:
 [single](#single)                     | Umožňuje určit, že část kódu by měl být provedeny v jednom vlákně, ne tedy nutně hlavní vlákno.
 [threadprivate](#threadprivate)       | Určuje, že proměnná je privátní pro vlákno.
 
-## <a name="atomic"></a>atomic
+## <a name="atomic"></a>Atomic
 
 Určuje, že umístění v paměti, která bude aktualizována atomicky.
 
@@ -111,7 +111,7 @@ int main() {
 Number of threads: 10
 ```
 
-## <a name="barrier"></a>barrier
+## <a name="barrier"></a>Barrier
 
 Synchronizuje všechna vlákna v týmu; všechna vlákna pozastaví při bariéry, dokud všechna vlákna provést odbourejte překážky bránící.
 
@@ -129,7 +129,7 @@ Další informace najdete v tématu [2.6.3 barrier – direktiva](../../../paral
 
 Pro ukázku toho, jak používat `barrier`, naleznete v tématu [hlavní](#master).
 
-## <a name="critical"></a>critical
+## <a name="critical"></a>Kritická
 
 Určuje, že kód provádí pouze v jednom vlákně najednou.
 
@@ -209,7 +209,7 @@ int main()
 max = 29358
 ```
 
-## <a name="flush-openmp"></a>flush (OpenMP)
+## <a name="flush-openmp"></a>Flush (OpenMP)
 
 Určuje, že všechna vlákna stejným zobrazení paměti pro všechny sdílené objekty.
 
@@ -285,7 +285,7 @@ Thread 1: process data
 data = 2
 ```
 
-## <a name="for-openmp"></a>for (OpenMP)
+## <a name="for-openmp"></a>pro (OpenMP)
 
 Způsobí, že práci `for` smyčky uvnitř paralelní oblasti rozdělit mezi vlákny.
 
@@ -382,7 +382,7 @@ int main() {
 The sum of 1 through 10 is 55
 ```
 
-## <a name="master"></a>master
+## <a name="master"></a>Hlavní
 
 Určuje, že by se měl spustit pouze hlavní vlákno části programu.
 
@@ -515,7 +515,7 @@ test2() iteration 3
 test2() iteration 4
 ```
 
-## <a name="parallel"></a>parallel
+## <a name="parallel"></a>paralelní
 
 Definuje paralelní oblasti, což je kód, který spustí paralelně několik vláken.
 
@@ -578,7 +578,7 @@ Hello from thread 3
 
 Všimněte si, že pořadí výstup se může lišit na různých strojích.
 
-## <a name="sections-openmp"></a>sections (OpenMP)
+## <a name="sections-openmp"></a>oddíly (OpenMP)
 
 Identifikuje části kódu k rozdělení mezi všemi vlákny.
 
@@ -588,7 +588,7 @@ Identifikuje části kódu k rozdělení mezi všemi vlákny.
    #pragma omp section
    {
       code_block
-   } 
+   } 
 }
 ```
 
@@ -636,12 +636,12 @@ Hello from thread 0
 Hello from thread 0
 ```
 
-## <a name="single"></a>single
+## <a name="single"></a>Jeden
 
 Umožňuje určit, že část kódu by měl být provedeny v jednom vlákně, ne tedy nutně hlavní vlákno.
 
 ```
-#pragma omp single [clauses] 
+#pragma omp single [clauses] 
 {
    code_block
 }

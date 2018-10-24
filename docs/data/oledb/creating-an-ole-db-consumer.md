@@ -1,7 +1,7 @@
 ---
 title: Vytvoření příjemce technologie OLE DB | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d4ef6d5d54bb3d6ed55ec2837a2300d8a1dcb03e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f64145a8d6269a5c6fd09f7178343a59ebc1b3ad
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46034082"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49989915"
 ---
 # <a name="creating-an-ole-db-consumer"></a>Vytvoření příjemce technologie OLE DB
 
-Spotřebitel šablony technologie OLE DB můžete vytvořit s nebo bez něj Průvodce příjemce knihovny ATL technologie OLE DB pomocí Průvodce je doporučená metoda. Příjemce může pracovat v libovolné aplikaci, která podporuje ATL.  
+Spotřebitel šablony technologie OLE DB můžete vytvořit s nebo bez něj **průvodce příjemcem ATL OLE DB**, když pomocí Průvodce je doporučená metoda. Příjemce může pracovat v libovolné aplikaci, která podporuje ATL.  
   
 Tato část obsahuje následující témata:  
   

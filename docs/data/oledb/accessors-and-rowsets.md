@@ -1,7 +1,7 @@
 ---
 title: Přístupové objekty a sady řádků | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -28,12 +28,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f8dc681e149d54742e4bf5e7ff44afeebe2292eb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c3247cd3b5844df76b8a115a3f28a76874db2a16
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113094"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990175"
 ---
 # <a name="accessors-and-rowsets"></a>Přístupové objekty a sady řádků
 
@@ -50,7 +50,7 @@ Přístupový objekt třídy
   
 - [CAccessor –](../../data/oledb/caccessor-class.md) použijte tento přistupující objekt, když víte struktury zdroje databáze v době návrhu. `CAccessor` staticky váže záznam v databázi, která obsahuje vyrovnávací paměti, ke zdroji dat.  
   
-- [CDynamicAccessor –](../../data/oledb/cdynamicaccessor-class.md) použijte tento přistupující objekt, pokud si nejste jisti struktura databáze v době návrhu. `CDynamicAccessor` volání `IColumnsInfo::GetColumnInfo` zobrazíte informace o sloupci databáze. Vytvoří a spravuje přistupující objekt a vyrovnávací paměti.  
+- [CDynamicAccessor –](../../data/oledb/cdynamicaccessor-class.md) použijte tento přistupující objekt, pokud neznáte struktura databáze v době návrhu. `CDynamicAccessor` volání `IColumnsInfo::GetColumnInfo` zobrazíte informace o sloupci databáze. Vytvoří a spravuje přistupující objekt a vyrovnávací paměti.  
   
 - [CDynamicParameterAccessor –](../../data/oledb/cdynamicparameteraccessor-class.md) použijte tento přistupující objekt zpracovat Neznámý příkaz typy. Při přípravě příkazy `CDynamicParameterAccessor` můžete získat informace o parametru od `ICommandWithParameters` rozhraní, pokud zprostředkovatel podporuje `ICommandWithParameters`.  
   
@@ -77,7 +77,7 @@ Následující obrázek znázorňuje typy sady řádků.
 ![Obrázek %{rowsettype/](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")  
 Třídy sady řádků  
   
-[Sady řádků schématu](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) proveďte není přístup k datům v data ukládat, ale místo toho přístup k informacím o úložišti dat označovaném jako metadata. Sady řádků schématu se obvykle používá v situacích, ve kterých struktura databáze není v době kompilace znám a musí být získány v době běhu.  
+[Sady řádků schématu](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) nemáte přístup k datům v data ukládat, ale místo toho přístup k informacím o úložišti dat označovaném jako metadata. Sady řádků schématu se obvykle používá v situacích, ve kterých struktura databáze není v době kompilace znám a musí být získány v době běhu.  
   
 ## <a name="see-also"></a>Viz také  
 

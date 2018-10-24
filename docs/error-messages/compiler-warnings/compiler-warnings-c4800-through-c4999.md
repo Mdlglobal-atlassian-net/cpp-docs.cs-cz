@@ -1,6 +1,6 @@
 ---
 title: Upozornění kompilátoru C4800 až C5999 | Dokumentace Microsoftu
-ms.date: 05/30/2018
+ms.date: 10/24/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -99,18 +99,20 @@ f1_keywords:
 - C5042
 - C5043
 - C5044
+- C5045
+- C5046
 dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: deee159c9da6fce9001d010a1a6b1db9b3b1d666
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 27f212865965883732e8bd956cafecf50e0a8de3
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861418"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990344"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Upozornění kompilátoru C4800 až C5999
 
@@ -251,3 +253,4 @@ ms.locfileid: "48861418"
 |Upozornění kompilátoru (úroveň 2) C5043|"*specifikace*': specifikace výjimky se neshoduje s předchozí deklarací.|
 |Upozornění kompilátoru (úroveň 4) C5044|Argument pro možnost příkazového řádku *možnost* odkazuje na cestu "*cesta*", která neexistuje|
 |[Kompilátor varování C5045](c5045.md)|Kompilátor vloží zmírnění hrozby Spectre pro zatížení paměti, pokud přepínač/qspectre zadané|
+|[Upozornění kompilátoru (úroveň 2) C5046](c5046.md)|"*funkce*': typ zahrnující s vnitřním propojením není definovaný Symbol|

@@ -1,7 +1,7 @@
 ---
 title: Vytvoření projektu pro zprostředkovatele | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f4d776dbbfbab5e038e14c15a9c281c8edb09153
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 86f85b95b4b45624a778bc183cabadda886d002d
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410873"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990082"
 ---
 # <a name="creating-a-project-for-the-provider"></a>Vytvoření projektu pro zprostředkovatele
 
@@ -32,7 +32,10 @@ ms.locfileid: "49410873"
   
      **Nový projekt** zobrazí se dialogové okno.  
   
-1. V **typy projektů** podokně klikněte na tlačítko **projekty Visual C++** složky. V **šablony** podokně klikněte na tlačítko **projekt knihovny ATL**.  
+1. V **typy projektů** podokně klikněte na tlačítko **nainstalováno** > **Visual C++** > **MFC nebo ATL** složky. V **šablony** podokně klikněte na tlačítko **projekt knihovny ATL**.  
+
+    > [!NOTE]
+    > V předchozích verzích sady Visual Studio najít typ projektu v rámci **nainstalováno** > **šablony** > **Visual C++**  >  **ATL**.
   
 1. V **název** pole, zadejte název projektu a pak klikněte na tlačítko **OK**.  
   

@@ -1,7 +1,7 @@
 ---
-title: _get_tzname – | Microsoft Docs
+title: _get_tzname – | Dokumentace společnosti Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4b49aa404dda6234382ae461459dece64e5996d
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: d773d5d98466963ef621cc3fa7bc5ab8b4acc40a
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451690"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990305"
 ---
 # <a name="gettzname"></a>_get_tzname
 
-Načte řetězcovou reprezentaci znak název časového pásma nebo letní názvu standardního časového pásma (letní čas).
+Získá znak řetězec představující název časového pásma nebo název zóny (běžný čas) letního času (DST).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,46 +59,88 @@ errno_t _get_tzname(
 ### <a name="parameters"></a>Parametry
 
 *pReturnValue*<br/>
-Délka řetězce *timeZoneName* včetně zakončením hodnotu null.
+Délka řetězce *timeZoneName* včetně ukončovacího znaku null.
 
 *timeZoneName*<br/>
-Adresa řetězec znaků pro reprezentaci název časového pásma nebo letní názvu standardního časového pásma (letní čas), v závislosti na *index*.
+Adresa znak řetězec pro reprezentaci název nebo název zóny (běžný čas) letního času (DST), v závislosti na *index*.
 
 *sizeInBytes*<br/>
-Velikost *timeZoneName* znak řetězec v bajtech.
+Velikost *timeZoneName* znakové řetězce v bajtech.
 
 *index*<br/>
-Index jeden ze zadaných názvů dva časové pásmo pro načtení.
+Index jeden z názvů dva časové pásmo pro načtení.
+
+|*index*|Obsah *timeZoneName*|*timeZoneName* výchozí hodnota|
+|-|-|-|
+|0|Název časového pásma|"PST"|
+|1|Název zóny pro letní čas (běžný čas)|"PDT"|
+|< 0 nebo > 1|**errno** nastavena na **EINVAL**|Nezměněno|
+
+Pokud není explicitně byly změněny hodnoty za běhu, výchozí hodnoty jsou "PST" a "PDT".
 
 ## <a name="return-value"></a>Návratová hodnota
 
 Nula v případě úspěchu, jinak **errno** zadejte hodnotu.
 
-Pokud má jedna *timeZoneName* je **NULL**, nebo *sizeInBytes* je nulová nebo menší než nula (ale ne oba), je vyvolána obslužnou rutinu neplatný parametr, jak je popsáno v [ Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tato funkce nastaví **errno** k **einval –** a vrátí **einval –**.
+Pokud *timeZoneName* je **NULL**, nebo *sizeInBytes* je nula nebo menší než nula (ale ne oba), je vyvolána obslužnou rutinu neplatného parametru, jak je popsáno v [ Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce nastaví **errno** k **EINVAL** a vrátí **EINVAL**.
 
-### <a name="error-conditions"></a>Chybové stavy
+### <a name="error-conditions"></a>Chybové podmínky
 
 |*pReturnValue*|*timeZoneName*|*sizeInBytes*|*index*|Návratová hodnota|Obsah *timeZoneName*|
 |--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|
-|velikost TZ název|**HODNOTU NULL**|0|0 nebo 1|0|nedojde ke změně|
-|velikost TZ název|všechny|> 0|0 nebo 1|0|Název TZ|
-|nedojde ke změně|**HODNOTU NULL**|> 0|všechny|**EINVAL –**|nedojde ke změně|
-|nedojde ke změně|všechny|nula|všechny|**EINVAL –**|nedojde ke změně|
-|nedojde ke změně|všechny|> 0|> 1|**EINVAL –**|nedojde ke změně|
+|velikost TZ název|**HODNOTU NULL**|0|0 nebo 1|0|Nezměněno|
+|velikost TZ název|Všechny|> 0|0 nebo 1|0|Název – TZ|
+|Nezměněno|**HODNOTU NULL**|> 0|Všechny|**EINVAL**|Nezměněno|
+|Nezměněno|Všechny|nula|Všechny|**EINVAL**|Nezměněno|
+|Nezměněno|Všechny|> 0|> 1|**EINVAL**|Nezměněno|
 
 ## <a name="remarks"></a>Poznámky
 
-**_Get_tzname –** funkce načte znak řetězcovou reprezentaci název časového pásma nebo letní názvu standardního časového pásma (letní čas) do adresu *timeZoneName* v závislosti na index hodnota, společně s velikost řetězce do *pReturnValue*. Pokud *timeZoneName* je **NULL** a *sizeInBytes* je nula, velikost řetězce buď časové pásmo v bajtech je vrácený v *pReturnValue*. Index hodnoty musí být buď 0 pro zónu (běžný čas) nebo 1 pro letní standardního časového pásma; všechny ostatní hodnoty indexu mít neurčená výsledky.
+**_Get_tzname –** funkce načte znak řetězcová reprezentace aktuální časové pásmo název nebo název zóny (běžný čas) letního času (DST) do adresu *timeZoneName* v závislosti na tom hodnota, spolu s velikost řetězce v indexu *pReturnValue*. Pokud *timeZoneName* je **NULL** a *sizeInBytes* je nula, velikost řetězce potřebných k uložení zadané časové pásmo a vrátí se v ukončujícíhoznakunullvbajtech*pReturnValue*. Index hodnoty musí být buď 0 pro zónu (běžný čas) nebo 1 pro standardního časového pásma letního času; všechny ostatní hodnoty *index* mají neurčeném výsledky.
 
-### <a name="index-values"></a>Index hodnoty
+## <a name="example"></a>Příklad
 
-|*index*|Obsah *timeZoneName*|*timeZoneName* výchozí hodnota|
-|-------------|--------------------------------|----------------------------------|
-|0|Název časového pásma|"PST"|
-|1|Název zóny letního času (běžný čas)|"PDT"|
-|< 0 nebo > 1|**errno** nastavena na **einval –**|nedojde ke změně|
+Tato ukázka volá **_get_tzname –** získat velikost požadované vyrovnávací paměti k zobrazení aktuálního letního času (běžný čas) název zóny, přidělí vyrovnávací paměť o velikosti, volání **_get_tzname –** znovu pro načtení názvu v Uložit do vyrovnávací paměti, který se vypíše do konzoly.
 
-Pokud během doby běhu jsou explicitně změnit hodnoty, výchozí hodnoty jsou "PST" a "PDT".  Velikosti tyto znaková pole se řídí **tzname_max –** hodnotu.
+```C
+// crt_get_tzname.c
+// Compile by using: cl /W4 crt_get_tzname.c
+#include <stdio.h>
+#include <time.h>
+#include <malloc.h>
+
+enum TZINDEX {
+    STD,
+    DST
+};
+
+int main()
+{
+    size_t tznameSize = 0;
+    char * tznameBuffer = NULL;
+
+    // Get the size of buffer required to hold DST time zone name
+    if (_get_tzname(&tznameSize, NULL, 0, DST))
+        return 1;    // Return an error value if it failed
+
+    // Allocate a buffer for the name
+    if (NULL == (tznameBuffer = (char *)(malloc(tznameSize))))
+        return 2;    // Return an error value if it failed
+
+    // Load the name in the buffer
+    if (_get_tzname(&tznameSize, tznameBuffer, tznameSize, DST))
+        return 3;    // Return an error value if it failed
+
+    printf_s("The current Daylight standard time zone name is %s.\n", tznameBuffer);
+    return 0;
+}
+```
+
+### <a name="output"></a>Výstup
+
+```Output
+The current Daylight standard time zone name is PDT.
+```
 
 ## <a name="requirements"></a>Požadavky
 
@@ -108,11 +150,10 @@ Pokud během doby běhu jsou explicitně změnit hodnoty, výchozí hodnoty jsou
 
 Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Správa času](../../c-runtime-library/time-management.md)<br/>
 [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
 [_get_daylight](get-daylight.md)<br/>
 [_get_dstbias](get-dstbias.md)<br/>
 [_get_timezone](get-timezone.md)<br/>
-[TZNAME_MAX](../../c-runtime-library/tzname-max.md)<br/>

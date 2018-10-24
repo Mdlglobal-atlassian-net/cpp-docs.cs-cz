@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a98848799163fd31037dc137b92b94878a1ee675
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 73bc32cd4a02affa98c53f892e5d34e1650d08f7
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082459"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990097"
 ---
 # <a name="supporting-notifications"></a>Podpora oznámení
 
@@ -39,7 +39,7 @@ Všimněte si, že musí také implementovat a zaregistrovat `IRowsetNotify` na 
   
 Kromě toho třída musí obsahovat také mapu, která definuje vstupní bod připojení, následujícím způsobem:  
   
-```  
+```cpp  
 BEGIN_CONNECTION_POINT_MAP  
    CONNECTIONPOINT_ENTRY (IID_IRowsetNotify)  
 END_CONNECTION_POINT_MAP  
@@ -52,7 +52,7 @@ Chcete-li přidat `IRowsetNotify`, budete muset přidat `IConnectionPointContain
 Například tady je řetězec dědičnosti pro `RUpdateRowset` v [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV):  
   
 > [!NOTE]
->  Vzorový kód se mohou lišit od zde; uvedeného vzorový kód by měl považovat za aktuálnější verzi.  
+> Vzorový kód se mohou lišit od zde; uvedeného vzorový kód by měl považovat za aktuálnější verzi.  
   
 ```cpp
 ///////////////////////////////////////////////////////////////////////////  
@@ -71,7 +71,7 @@ public CRowsetImpl< RUpdateRowset, CAgentMan, CUpdateCommand,
 
 Také je potřeba přidat následující do mapy modelu COM ve vaší sadě řádků:  
   
-```  
+```cpp  
 COM_INTERFACE_ENTRY(IConnectionPointContainer)  
 COM_INTERFACE_ENTRY_IMPL(IConnectionPointContainer)  
 ```  
@@ -82,7 +82,7 @@ Tato makra může kdokoli volání `QueryInterface` pro váš kontejner bodu př
 
 Také budete muset přidat mapu bodu připojení. By měl vypadat přibližně jako:  
   
-```  
+```cpp  
 BEGIN_CONNECTION_POINT_MAP(rowset-name)  
      CONNECTION_POINT_ENTRY(_uuidof(IRowsetNotify))  
 END_CONNECTION_POINT_MAP()  

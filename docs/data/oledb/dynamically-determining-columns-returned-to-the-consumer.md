@@ -16,22 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d3b7d20fb82399f3778c751de28858b93f81071a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fffa63c9bbcc556009fb5edff93fd02f302ae3ea
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080880"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990123"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Dynamické určování sloupců vrácených příjemci
 
 PROVIDER_COLUMN_ENTRY makra obvykle zpracovávají `IColumnsInfo::GetColumnsInfo` volání. Ale protože příjemce rozhodnout, že chcete používat záložky, zprostředkovatele musí být změnit sloupců vrácených v závislosti na tom, zda uživatel požádá o záložku.  
   
-Zpracování `IColumnsInfo::GetColumnsInfo` volání, odstraňte Provider Column Map, který definuje funkci `GetColumnInfo`, z `CAgentMan` uživatel záznam v souboru MyProviderRS.h a nahraďte ho vlastní definice `GetColumnInfo` funkce:  
+Zpracování `IColumnsInfo::GetColumnsInfo` volání, odstraňte Provider Column Map, který definuje funkci `GetColumnInfo`, z `CAgentMan` záznam uživatele v *vlastní*RS.h a nahraďte ho vlastní definice `GetColumnInfo` funkce:  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
-// MyProviderRS.H  
+// CustomRS.H  
 class CAgentMan  
 {  
 public:  
@@ -52,13 +52,13 @@ public:
   
 V dalším kroku implementovat `GetColumnInfo` fungovat v MyProviderRS.cpp, jak je znázorněno v následujícím kódu.  
   
-`GetColumnInfo` kontroluje, první Pokud vlastnost OLE DB `DBPROP_BOOKMARKS` nastavena. Chcete-li získat vlastnost, `GetColumnInfo` používá ukazatel (`pRowset`) k objektu sady řádků. `pThis` Ukazatel představuje třídu, která vytvoří sadu řádků, což je třída ukládat mapy vlastností. `GetColumnInfo` zaokrouhlovat `pThis` ukazatel `RMyProviderRowset` ukazatele.  
+`GetColumnInfo` kontroluje, první Pokud vlastnost OLE DB `DBPROP_BOOKMARKS` nastavena. Chcete-li získat vlastnost, `GetColumnInfo` používá ukazatel (`pRowset`) k objektu sady řádků. `pThis` Ukazatel představuje třídu, která vytvoří sadu řádků, což je třída ukládat mapy vlastností. `GetColumnInfo` zaokrouhlovat `pThis` ukazatel `RCustomRowset` ukazatele.  
   
 Hledat `DBPROP_BOOKMARKS` vlastnost `GetColumnInfo` používá `IRowsetInfo` rozhraní, které lze získat voláním `QueryInterface` na `pRowset` rozhraní. Jako alternativu můžete použít knihovny ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) metoda místo.  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////  
-// MyProviderRS.cpp  
+// CustomRS.cpp  
 ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)  
 {  
    static ATLCOLUMNINFO _rgColumns[5];  
@@ -119,7 +119,7 @@ Tento příklad používá statického pole obsahující informace o sloupci. Po
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
-// MyProviderRS.h  
+// CustomRS.h  
   
 #define ADD_COLUMN_ENTRY(ulCols, name, ordinal, colSize, type, precision, scale, guid, dataClass, member) \  
    _rgColumns[ulCols].pwszName = (LPOLESTR)name; \  
