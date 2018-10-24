@@ -30,10 +30,10 @@ Příponové operátory mají nejvyšší prioritu (tightest vazby) ve vyhodnoce
 
 *výraz přípony*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*primární – výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony***[***výraz***]** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony***(***argument-expression-list*<sub>optimalizované</sub> **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony***.**  *identifikátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony***->***identifikátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*  **[**  *výraz*  **]**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*  **(**  *argument-expression-list*<sub>optimalizované</sub> **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*  **.**  *identifikátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*  **->**  *identifikátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*  **++**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*výraz přípony*  **--**
 

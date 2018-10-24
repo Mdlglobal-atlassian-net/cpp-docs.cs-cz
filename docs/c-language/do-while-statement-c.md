@@ -30,7 +30,7 @@ ms.locfileid: "48860677"
 
 ## <a name="syntax"></a>Syntaxe
 
-*příkaz iterace*: &nbsp; &nbsp; &nbsp; &nbsp; **proveďte***příkaz***během (** *výraz***);**
+*příkaz iterace*: &nbsp; &nbsp; &nbsp; &nbsp; **proveďte**  *příkaz*  **během (** *výraz*  **);**
 
 *Výraz* v *proveďte – zatímco* vyhodnotí po provedení tělo smyčky. Tělo smyčky, proto je vždy alespoň jednou spuštěn.
 

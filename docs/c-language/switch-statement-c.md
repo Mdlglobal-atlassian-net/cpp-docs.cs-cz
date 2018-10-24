@@ -33,8 +33,8 @@ ms.locfileid: "46034119"
 &nbsp;&nbsp;&nbsp;&nbsp;**Přepnout (** *výraz* **)** *– příkaz*
 
 *příkaz s popiskem*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**případ***konstantní výraz***:***– příkaz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Výchozí:***– příkaz*
+&nbsp;&nbsp;&nbsp;&nbsp;**případ**  *konstantní výraz*  **:**  *– příkaz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Výchozí:**  *– příkaz*
 
 Ovládací prvek se předá příkazu jehož **případ** *konstantní výraz* odpovídá hodnotě **přepnout (** *výraz* **)**. `switch` Výraz může obsahovat libovolný počet **případ** instancí, ale žádné dvě konstanty velikosti písmen v rámci stejného `switch` může obsahovat stejnou hodnotu. Spuštění těla příkazu začíná u příkazu, vybrané a pokračuje až do konce subjektu, nebo dokud **přerušení** příkaz předává řízení mimo tělo.
 

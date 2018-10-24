@@ -37,9 +37,9 @@ Výjimky mohou být buď hardwaru nebo softwaru založené. I v případech, kdy
 
 ## <a name="syntax"></a>Syntaxe
 
-*s výjimkou příkazu Try*: **__try***compound-statement* 
+*s výjimkou příkazu Try*: **__try**  *compound-statement* 
 
-**__except (***výraz***)***compound-statement* 
+**__except (**  *výraz*  **)**  *compound-statement*
 
 Složený příkaz za `__try` klauzule je chráněná část. Složený příkaz po klauzuli `__except` je obslužnou rutinou výjimky. Obslužná rutina udává sadu akcí provedených v případě je vyvolána výjimka při provádění chráněné části. Spuštění probíhá následujícím způsobem:
 

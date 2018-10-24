@@ -30,9 +30,9 @@ ms.locfileid: "46060951"
 
 `try-finally` Příkaz je rozšířením společnosti Microsoft pro jazyk C, která umožňuje aplikacím zaručit spuštění kódu čištění, když dojde k přerušení vykonání bloku kódu. Čištění se skládá z úlohy, jako jsou rušení přidělení paměti, zavírání souborů a uvolněním popisovačů souborů. `try-finally` Příkaz je užitečné hlavně pro rutiny, které mají několika místech, kde se provede kontrola pro chybu, která by mohla způsobit předčasné vrátit z rutiny.
 
-*try-finally-statement*: **__try***compound-statement* 
+*try-finally-statement*: **__try**  *compound-statement* 
 
-**__finally***compound-statement* 
+**__finally**  *compound-statement* 
 
 Složený příkaz za `__try` klauzule je chráněná část. Složený příkaz za `__finally` klauzule je obslužná rutina ukončení. Obslužná rutina udává sadu akcí, které jsou spuštěny při chráněná část je byl ukončen, zda je chráněná část ukončil výjimku (abnormální ukončení) nebo standardní fall prostřednictvím (normální ukončení).
 

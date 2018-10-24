@@ -31,7 +31,7 @@ ms.locfileid: "48860646"
 ## <a name="syntax"></a>Syntaxe
 
 *příkaz iterace*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**zatímco (***výraz***)***– příkaz*
+&nbsp;&nbsp;&nbsp;&nbsp;**zatímco (**  *výraz*  **)**  *– příkaz*
 
 *Výraz* musí mít aritmetický typ nebo typ ukazatele. Spuštění probíhá následujícím způsobem:
 

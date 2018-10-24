@@ -38,7 +38,7 @@ ms.locfileid: "49640763"
 
 *desetinná konstanta*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*sekvence číslic*<sub>optimalizované</sub> **.** *sekvence číslic*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*sekvence číslic***.**
+&nbsp;&nbsp;&nbsp;&nbsp;*sekvence číslic*  **.**
 
 *exponent část*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**elektronické** *přihlašování*<sub>optimalizované</sub> *sekvence číslic*<br/>

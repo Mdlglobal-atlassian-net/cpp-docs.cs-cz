@@ -88,7 +88,7 @@ Obě tyto funkce vrátí 0 v případě úspěchu nebo číslo chyby při selhá
 
 |||||
 |-|-|-|-|
-|*str*|*sizeInChars*|**Návratová hodnota**|**Obsah***str* |
+|*str*|*sizeInChars*|**Návratová hodnota**|**Obsah**  *str* |
 |**HODNOTU NULL**|Všechny|**EINVAL**|Nezměněno|
 |Není **NULL** (odkazuje na platný paměti)|příliš krátký|**ERANGE**|Nezměněno|
 
