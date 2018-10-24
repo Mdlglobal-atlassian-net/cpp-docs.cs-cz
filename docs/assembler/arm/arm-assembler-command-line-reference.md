@@ -26,7 +26,7 @@ Tento článek obsahuje informace o assembler Microsoft ARM *armasm*, které zko
 ## <a name="syntax"></a>Syntaxe
 
 > **armasm** [*možnosti*] *zdrojový soubor* *objectfile*
-> **armasm** [*možnosti *] **-o** *objectfile* *zdrojový soubor*
+> **armasm**  [*možnosti *]  **-o**  *objectfile*  *zdrojový soubor*
 
 ### <a name="parameters"></a>Parametry
 

@@ -34,9 +34,9 @@ ms.locfileid: "46107875"
 
 ## <a name="syntax"></a>Syntaxe
 
-*příkaz výběru*: **Pokud (***výraz***)***– příkaz* 
+*příkaz výběru*: **Pokud (**  *výraz*  **)**  *–příkaz*
 
-**Pokud (***výraz***)***příkaz***else***– příkaz* 
+**Pokud (**  *výraz*  **)**  *příkaz*  **else**  *– příkaz* 
 
 V obou formách příkazu **Pokud** prohlášení, výrazy, které může mít libovolnou hodnotu, s výjimkou struktury, jsou vyhodnocovány, včetně všech vedlejších účinků.
 
