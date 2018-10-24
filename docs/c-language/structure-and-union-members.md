@@ -33,7 +33,7 @@ ms.locfileid: "46099665"
 „Výraz výběru členů“ odkazuje na členy struktury a sjednocení. Takový výraz má hodnotu a typ vybraného členu.
 
 > *výraz přípony* **.** *identifikátor*
-> *postfix-expression* ** -> ** *identifikátor*
+> *postfix-expression*  **->**  *identifikátor*
 
 Seznam popisuje dva typy výrazů výběru členů:
 
@@ -43,7 +43,7 @@ Seznam popisuje dva typy výrazů výběru členů:
 
 Oba typy výrazů výběru členů mají podobné funkce.
 
-Ve skutečnosti výraz zahrnující operátor výběru členů (**->**) je verze sdruženou výraz používající období (**.**) Pokud výraz před doby se skládá z indirection – operátor (<strong>\**</strong>) projeví na hodnotě ukazatele. Proto
+Ve skutečnosti výraz zahrnující operátor výběru členů (**->**) je verze sdruženou výraz používající období (**.**) Pokud výraz před doby se skládá z indirection – operátor (<strong>\*</strong>) projeví na hodnotě ukazatele. Proto
 
 ```cpp
 expression->identifier
@@ -59,7 +59,7 @@ Když *výraz* hodnotou ukazatele.
 
 ## <a name="examples"></a>Příklady
 
-Následující příklady odkazují na tuto deklaraci struktury. Informace o deferenční operátor (<strong>\**</strong>) používané v těchto příkladech, najdete v části [Deferenční operátory a operátory adresy](../c-language/indirection-and-address-of-operators.md).
+Následující příklady odkazují na tuto deklaraci struktury. Informace o deferenční operátor (<strong>\*</strong>) používané v těchto příkladech, najdete v části [Deferenční operátory a operátory adresy](../c-language/indirection-and-address-of-operators.md).
 
 ```
 struct pair

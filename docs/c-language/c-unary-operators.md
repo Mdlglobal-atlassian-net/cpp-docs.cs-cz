@@ -36,11 +36,11 @@ Unární operátory vyskytovat před jejich operand a přidružte zprava doleva.
 
 *Unární operátor přetypování – výraz*
 
-**operátor sizeof:***unární výraz* 
+**operátor sizeof:**  *unární výraz* 
 
-**sizeof (***název typu***)** 
+**sizeof (**  *název typu*  **)**
 
-*Unární operátor*: jeden z  **&  \* + -** `~` **!**
+*Unární operátor*: jeden z **& \* + -** `~` **!**
 
 ## <a name="see-also"></a>Viz také
 

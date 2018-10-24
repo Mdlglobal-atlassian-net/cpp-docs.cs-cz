@@ -1,4 +1,4 @@
-# [Programování pro .NET v jazyce C++/CLI (Visual C++)](dotnet-programming-with-cpp-cli-visual-cpp.md)
+# [Programování pro .NET v jazyce C++/CLI](dotnet-programming-with-cpp-cli-visual-cpp.md)
 ## [Úlohy v jazycích C++/CLI](cpp-cli-tasks.md)
 ### [Postupy: Vytváření prázdných projektů CLR](how-to-create-clr-empty-projects.md)
 ### [Postupy: Vytváření konzolových aplikací CLR (C++/CLI)](how-to-create-clr-console-applications-cpp-cli.md)
