@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e5dc30c7-405a-4ba4-8ae9-51937243fce8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: b257628747dca488292cfdfff0ef783303bd1b88
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2a20a5c8ad87428e66f90b8f04c3006e5f1c2e84
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094426"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068865"
 ---
 # <a name="ccomsinglethreadmodel-class"></a>CComSingleThreadModel – třída
 
@@ -58,9 +58,9 @@ class CComSingleThreadModel
 
 ## <a name="remarks"></a>Poznámky
 
-`CComSingleThreadModel` poskytuje metody pro zvyšování a dekrementace hodnotu proměnné. Na rozdíl od [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) a [ccommultithreadmodelnocs –](../../atl/reference/ccommultithreadmodelnocs-class.md), tyto metody nejsou bezpečné pro vlákna.  
+`CComSingleThreadModel` poskytuje metody pro zvyšování a dekrementace hodnotu proměnné. Na rozdíl od [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) a [ccommultithreadmodelnocs –](../../atl/reference/ccommultithreadmodelnocs-class.md), tyto metody nejsou bezpečné pro vlákna.
 
-Obvykle použijete `CComSingleThreadModel` prostřednictvím jednoho ze dvou **typedef** názvy buď [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) nebo [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel). Třída odkazovaná každou **typedef** závisí na model vláken použít, jak je znázorněno v následující tabulce:  
+Obvykle použijete `CComSingleThreadModel` prostřednictvím jednoho ze dvou **typedef** názvy buď [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) nebo [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel). Třída odkazovaná každou **typedef** závisí na model vláken použít, jak je znázorněno v následující tabulce:
 
 |– definice typedef|Jeden model vláken|Podprocesový model Apartment|Model vláken zdarma|
 |-------------|----------------------------|-------------------------------|--------------------------|

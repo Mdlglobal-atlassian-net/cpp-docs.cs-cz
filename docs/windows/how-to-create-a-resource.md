@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61105469abc25de38d0d9ae9a59755e08fd298b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 23717c35d0590c88a4904e5b6b6ddb0e4c7ccffc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438636"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071965"
 ---
 # <a name="how-to-create-a-resource"></a>Postupy: Vytvoření prostředku
 
@@ -33,7 +33,7 @@ ms.locfileid: "46438636"
 
 1. Se zaměřením na souboru .rc v [zobrazení prostředků](../windows/resource-view-window.md), klikněte na tlačítko **upravit** nabídku a zvolte **přidat prostředek** (nebo klikněte pravým tlačítkem na soubor .rc v **zobrazení prostředků** a zvolte **přidat prostředek** z místní nabídky).
 
-   > [!NOTE] 
+   > [!NOTE]
    > Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
 
 2. V [přidat prostředek – dialogové okno](../windows/add-resource-dialog-box.md), vyberte typ prostředku, které chcete přidat do projektu.

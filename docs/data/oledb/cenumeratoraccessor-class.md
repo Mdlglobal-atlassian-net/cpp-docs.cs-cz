@@ -48,114 +48,114 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 896c1dd1f1d3a43a3678a086d80e0f95b60b6126
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 616d2cc9919c992212024d25ab11902ffe2eda5e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083330"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072145"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor – třída
 
-Používá [CEnumerator](../../data/oledb/cenumerator-class.md) pro přístup k datům z enumerátor sady řádků.  
-  
+Používá [CEnumerator](../../data/oledb/cenumerator-class.md) pro přístup k datům z enumerátor sady řádků.
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-class CEnumeratorAccessor  
-```  
+class CEnumeratorAccessor
+```
 
-## <a name="requirements"></a>Požadavky  
+## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** také atldbcli.h  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="data-members"></a>Datové členy  
-  
-|||  
-|-|-|  
-|[m_bIsParent](#bisparent)|Proměnná označující, zda je čítač nadřazené čítače, pokud je řádek enumerátor.|  
-|[m_nType](#ntype)|Proměnná označující, zda řádek popisuje zdroje dat nebo enumerátor.|  
-|[m_szDescription](#szdescription)|Popis zdroje dat nebo enumerátor.|  
-|[m_szName](#szname)|Název zdroje dat nebo enumerátor.|  
-|[m_szParseName](#szparsename)|Řetězec pro [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) získat monikeru pro zdroj dat nebo enumerátor.|  
-  
-## <a name="remarks"></a>Poznámky  
+**Záhlaví:** také atldbcli.h
 
-Tato sada řádků se skládá z zdroje dat a enumerátory viditelné z aktuálního výčtu.  
-  
+## <a name="members"></a>Členové
+
+### <a name="data-members"></a>Datové členy
+
+|||
+|-|-|
+|[m_bIsParent](#bisparent)|Proměnná označující, zda je čítač nadřazené čítače, pokud je řádek enumerátor.|
+|[m_nType](#ntype)|Proměnná označující, zda řádek popisuje zdroje dat nebo enumerátor.|
+|[m_szDescription](#szdescription)|Popis zdroje dat nebo enumerátor.|
+|[m_szName](#szname)|Název zdroje dat nebo enumerátor.|
+|[m_szParseName](#szparsename)|Řetězec pro [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) získat monikeru pro zdroj dat nebo enumerátor.|
+
+## <a name="remarks"></a>Poznámky
+
+Tato sada řádků se skládá z zdroje dat a enumerátory viditelné z aktuálního výčtu.
+
 ## <a name="bisparent"></a> CEnumeratorAccessor::m_bIsParent
 
-Proměnná označující, zda je čítač nadřazené čítače, pokud je řádek enumerátor.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-VARIANT_BOOL m_bIsParent;  
-```  
-  
-### <a name="remarks"></a>Poznámky  
+Proměnná označující, zda je čítač nadřazené čítače, pokud je řádek enumerátor.
 
-Zobrazit [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200) v *OLE DB referenční informace pro programátory* Další informace. 
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+VARIANT_BOOL m_bIsParent;
+```
+
+### <a name="remarks"></a>Poznámky
+
+Zobrazit [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200) v *OLE DB referenční informace pro programátory* Další informace.
 
 ## <a name="ntype"></a> CEnumeratorAccessor::m_nType
 
-Proměnná označující, zda řádek popisuje zdroje dat nebo enumerátor.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Proměnná označující, zda řádek popisuje zdroje dat nebo enumerátor.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-USHORT m_nType;  
-```  
-  
-### <a name="remarks"></a>Poznámky  
+USHORT m_nType;
+```
+
+### <a name="remarks"></a>Poznámky
 
 Zobrazit [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200) v *OLE DB referenční informace pro programátory* Další informace.
 
 ## <a name="szdescription"></a> CEnumeratorAccessor::m_szDescription
 
-Popis zdroje dat nebo enumerátor.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Popis zdroje dat nebo enumerátor.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-WCHAR m_szDescription[129];  
-```  
-  
-### <a name="remarks"></a>Poznámky  
+WCHAR m_szDescription[129];
+```
+
+### <a name="remarks"></a>Poznámky
 
 Zobrazit [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200) v *OLE DB referenční informace pro programátory* Další informace.
 
 ## <a name="szname"></a> CEnumeratorAccessor::m_szName
 
-Název zdroje dat nebo enumerátor.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-WCHAR m_szName[129];  
-```  
-  
-### <a name="remarks"></a>Poznámky  
+Název zdroje dat nebo enumerátor.
 
-Zobrazit [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200) v *OLE DB referenční informace pro programátory* Další informace.  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+WCHAR m_szName[129];
+```
+
+### <a name="remarks"></a>Poznámky
+
+Zobrazit [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200) v *OLE DB referenční informace pro programátory* Další informace.
 
 ## <a name="szparsename"></a> CEnumeratorAccessor::m_szParseName
 
-Řetězec pro [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) získat monikeru pro zdroj dat nebo enumerátor.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-WCHAR m_szParseName[129];  
-```  
-  
-### <a name="remarks"></a>Poznámky  
+Řetězec pro [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) získat monikeru pro zdroj dat nebo enumerátor.
 
-Zobrazit [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200) v *OLE DB referenční informace pro programátory* Další informace.  
-  
-## <a name="see-also"></a>Viz také  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+WCHAR m_szParseName[129];
+```
+
+### <a name="remarks"></a>Poznámky
+
+Zobrazit [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200) v *OLE DB referenční informace pro programátory* Další informace.
+
+## <a name="see-also"></a>Viz také
 
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

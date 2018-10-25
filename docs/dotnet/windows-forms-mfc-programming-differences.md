@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e6bac12d841a065495f7775598c65f39a0aaba67
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d0b62bbca87e5b4fcabcf5124271ee8be68b755f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394267"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068837"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Rozdíly v programování mezi prostředími Windows Forms a MFC
 
@@ -39,31 +39,31 @@ Následující zobrazení MFC nebo dokumentu a příkazu směrování funkce nem
 
 - Prostředí integrace
 
-     Knihovna MFC zpracovává dynamických dat (DDE) exchange příkazy a argumenty příkazového řádku, které používá prostředí, když klikněte pravým tlačítkem na dokument a vyberte tyto příkazy jako otevřít, upravit nebo vytisknout. Formuláře Windows nemá integraci prostředí a nereaguje na příkazy prostředí.
+   Knihovna MFC zpracovává dynamických dat (DDE) exchange příkazy a argumenty příkazového řádku, které používá prostředí, když klikněte pravým tlačítkem na dokument a vyberte tyto příkazy jako otevřít, upravit nebo vytisknout. Formuláře Windows nemá integraci prostředí a nereaguje na příkazy prostředí.
 
 - Šablony dokumentů
 
-     V knihovně MFC šablony dokumentů přidružit k zobrazení, která je obsažena v okně s rámečkem (v režimu MDI, SDI nebo MTI), dokumentů, které jste otevřeli. Windows Forms nemá žádný ekvivalent k šablony dokumentů.
+   V knihovně MFC šablony dokumentů přidružit k zobrazení, která je obsažena v okně s rámečkem (v režimu MDI, SDI nebo MTI), dokumentů, které jste otevřeli. Windows Forms nemá žádný ekvivalent k šablony dokumentů.
 
 - Dokumenty
 
-     Knihovna MFC registruje typy souborů dokumentu a zpracovává typ dokumentu, při otevírání dokumentu z prostředí. Windows Forms nemá žádný dokument podpory.
+   Knihovna MFC registruje typy souborů dokumentu a zpracovává typ dokumentu, při otevírání dokumentu z prostředí. Windows Forms nemá žádný dokument podpory.
 
 - Stavy dokumentu
 
-     Knihovna MFC udržuje změny stavů pro dokument. Proto při ukončete aplikaci, zavřete poslední zobrazení, která obsahuje aplikaci nebo výstup z Windows, MFC zobrazí výzvu k uložení dokumentů. Windows Forms nemá žádný ekvivalent podpory.
+   Knihovna MFC udržuje změny stavů pro dokument. Proto při ukončete aplikaci, zavřete poslední zobrazení, která obsahuje aplikaci nebo výstup z Windows, MFC zobrazí výzvu k uložení dokumentů. Windows Forms nemá žádný ekvivalent podpory.
 
 - Příkazy
 
-     Knihovna MFC má koncept příkazy. Řádku nabídek, nástrojů a kontextové nabídky můžete vyvolat všechny stejný příkaz, například vyjmutí a kopírování. Ve Windows Forms příkazy jsou úzce vázané události z konkrétní prvek uživatelského rozhraní (např. položka nabídky); Proto je nutné explicitně připojení všechny události příkazu. Můžete také zpracování více událostí pomocí jedné obslužné rutiny ve Windows Forms. Další informace najdete v tématu [připojení více událostí k jedné obslužné rutině událostí ve Windows Forms](/dotnet/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms).
+   Knihovna MFC má koncept příkazy. Řádku nabídek, nástrojů a kontextové nabídky můžete vyvolat všechny stejný příkaz, například vyjmutí a kopírování. Ve Windows Forms příkazy jsou úzce vázané události z konkrétní prvek uživatelského rozhraní (např. položka nabídky); Proto je nutné explicitně připojení všechny události příkazu. Můžete také zpracování více událostí pomocí jedné obslužné rutiny ve Windows Forms. Další informace najdete v tématu [připojení více událostí k jedné obslužné rutině událostí ve Windows Forms](/dotnet/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms).
 
 - Směrování příkazů
 
-     Směrování příkazů MFC umožňuje zobrazení aktivního nebo dokument ke zpracování příkazů. Protože ten samý příkaz často mají různý význam pro různá zobrazení (například kopírování chová odlišně v zobrazení pro úpravy textu než v grafickém editoru), příkazy musí být zpracovány aktivní zobrazení. Protože Windows Forms nabídky a panely nástrojů nemají žádné vlastní porozumění aktivního zobrazení, nemůže mít jiné obslužné rutiny pro každý typ zobrazení pro vaše **MenuItem.Click** události bez psaním dalšího kódu, interní.
+   Směrování příkazů MFC umožňuje zobrazení aktivního nebo dokument ke zpracování příkazů. Protože ten samý příkaz často mají různý význam pro různá zobrazení (například kopírování chová odlišně v zobrazení pro úpravy textu než v grafickém editoru), příkazy musí být zpracovány aktivní zobrazení. Protože Windows Forms nabídky a panely nástrojů nemají žádné vlastní porozumění aktivního zobrazení, nemůže mít jiné obslužné rutiny pro každý typ zobrazení pro vaše **MenuItem.Click** události bez psaním dalšího kódu, interní.
 
 - Příkaz aktualizační mechanismy
 
-     Knihovna MFC má příkaz Aktualizovat mechanismus. Proto je zodpovědný za stavy prvků UI (například povolování nebo zakazování položka nabídky nebo nástroj tlačítko a zkontrolovat stavy) aktivní zobrazení nebo dokument. Windows Forms nemá žádný ekvivalent mechanismus příkazu update.
+   Knihovna MFC má příkaz Aktualizovat mechanismus. Proto je zodpovědný za stavy prvků UI (například povolování nebo zakazování položka nabídky nebo nástroj tlačítko a zkontrolovat stavy) aktivní zobrazení nebo dokument. Windows Forms nemá žádný ekvivalent mechanismus příkazu update.
 
 ## <a name="see-also"></a>Viz také
 

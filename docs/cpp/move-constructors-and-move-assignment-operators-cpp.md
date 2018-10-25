@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c819d024b9b89d28c0e87b86382bf1c1f23258a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b097e1d3c7d26c51283d4f63bb2bae14059f21cc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118489"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069774"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Konstruktory a operátory přiřazení pro přesunutí (C++)
 
@@ -151,14 +151,14 @@ Následující postupy popisují, jak zapsat konstruktor přesunutí a operátor
 
 1. V podmíněném příkazu uvolněte veškeré prostředky (například paměť) z objektu, který je přiřazen.
 
-     V následujícím příkladu se uvolní `_data` člena v objektu, který je přiřazen:
+   V následujícím příkladu se uvolní `_data` člena v objektu, který je přiřazen:
 
     ```cpp
     // Free the existing resource.
     delete[] _data;
     ```
 
-     Postupujte podle kroků 2 a 3 v prvním postupu pro přenos datových členů ze zdrojového objektu na objekt, který je konstruován:
+   Postupujte podle kroků 2 a 3 v prvním postupu pro přenos datových členů ze zdrojového objektu na objekt, který je konstruován:
 
     ```cpp
     // Copy the data pointer and its length from the

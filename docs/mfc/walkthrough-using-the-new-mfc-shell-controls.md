@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47b169371b8551622650687e5d7bd8c06f560725
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 168d7c1740f9b33af1eca539e30514ce76259ceb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236046"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076331"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Návod: Použití nových ovládacích prvků prostředí MFC
 
@@ -35,17 +35,17 @@ Tento názorný průvodce předpokládá, že jste nastavili sady Visual Studio,
 
 1. V **nový projekt** dialogového okna rozbalte **Visual C++** uzlu v **typy projektů** podokně a vyberte **MFC**. Potom v **šablony** vyberte **aplikace knihovny MFC**. Zadejte název projektu, například `MFCShellControls` a klikněte na tlačítko **OK**. Po **Průvodce aplikací knihovny MFC** zobrazí, pomocí následujících možností:
 
-    1. Na **typ aplikace** podokně v části **typ aplikace**, zrušte zaškrtnutí políčka **dokumenty na kartách** možnost. V dalším kroku vyberte **jednotlivý dokument** a vyberte **podpora architektury Document/View**. V části **projektu styl**vyberte **sady Visual Studio**a od **vizuální styl a barvy** rozevíracím seznamu vyberte **Office 2007 (modrý motiv)**. 
+    1. Na **typ aplikace** podokně v části **typ aplikace**, zrušte zaškrtnutí políčka **dokumenty na kartách** možnost. V dalším kroku vyberte **jednotlivý dokument** a vyberte **podpora architektury Document/View**. V části **projektu styl**vyberte **sady Visual Studio**a od **vizuální styl a barvy** rozevíracím seznamu vyberte **Office 2007 (modrý motiv)**.
 
     1. Na **Podpora složených dokumentů** vyberte **žádný**.
 
     1. Neprovádějte žádné změny k **řetězce šablony dokumentu** podokně.
 
-    1. Na **Podpora databáze** podokně (Visual Studio 2015 a starší), vyberte **žádný** vzhledem k tomu, že aplikace nepoužívá databázi. 
+    1. Na **Podpora databáze** podokně (Visual Studio 2015 a starší), vyberte **žádný** vzhledem k tomu, že aplikace nepoužívá databázi.
 
-    1. Na **funkce uživatelského rozhraní** podokno, ujistěte se, že **použít řádek nabídek a panelů nástrojů** je vybraná možnost. Nechte ostatní možnosti, jak jsou. 
+    1. Na **funkce uživatelského rozhraní** podokno, ujistěte se, že **použít řádek nabídek a panelů nástrojů** je vybraná možnost. Nechte ostatní možnosti, jak jsou.
 
-    1. Na **rozšířené funkce** podokně v části **pokročilé funkce**, vyberte pouze **ovládací prvky ActiveX** a **běžné Manifest ovládacího prvku**. V části **rozšířená podokna rámců**, vyberte pouze **navigačním podokně** možnost. To způsobí, že průvodce vytvoří v podokně nalevo od okna s `CMFCShellTreeCtrl` již vložen. 
+    1. Na **rozšířené funkce** podokně v části **pokročilé funkce**, vyberte pouze **ovládací prvky ActiveX** a **běžné Manifest ovládacího prvku**. V části **rozšířená podokna rámců**, vyberte pouze **navigačním podokně** možnost. To způsobí, že průvodce vytvoří v podokně nalevo od okna s `CMFCShellTreeCtrl` již vložen.
 
     1. Nebudeme žádné změny k **třídy generované v** podokně, klikněte na tlačítko Ano **Dokončit** k vytvoření nového projektu knihovny MFC.
 

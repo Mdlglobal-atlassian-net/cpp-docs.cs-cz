@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 395494431c3942832a64cf64c9c150f643389062
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: a229aa453b6e40f0da25252f2f8aa1be3d97a729
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990227"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074251"
 ---
 # <a name="openmp-environment-variables"></a>OpenMP – proměnné prostředí
 
@@ -37,12 +37,12 @@ Obsahuje odkazy na proměnné prostředí použít v rozhraní API OpenMP.
 
 Implementace jazyka Visual C++, OpenMP standard zahrnuje následující proměnné prostředí. Tyto proměnné prostředí jsou načteny při spuštění programu a změny jejich hodnoty jsou ignorovány za běhu (například pomocí [_putenv _wputenv](../../../c-runtime-library/reference/putenv-wputenv.md)).
 
-Proměnná prostředí                | Popis
------------------------------------ | -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[OMP_DYNAMIC](#omp-dynamic)         | Určuje, zda OpenMP běhu můžete upravit počet vláken v paralelní oblasti.
-[OMP_NESTED](#omp-nested)           | Určuje, zda je vnořené paralelismu povoleno, není-li povolit nebo zakázat pomocí vnořených paralelismu `omp_set_nested`.
-[OMP_NUM_THREADS](#omp-num-threads) | Nastaví maximální počet vláken v paralelní oblasti, pokud není přepsán [omp_set_num_threads –](../../../parallel/openmp/reference/omp-set-num-threads.md) nebo [num_threads](openmp-clauses.md#num-threads).
-[OMP_SCHEDULE](#omp-schedule)       | Upravuje chování [plán](openmp-clauses.md#schedule) klauzule při `schedule(runtime)` je zadán v `for` nebo `parallel for` – direktiva.
+|Proměnná prostředí|Popis|
+|--------------------|-----------|
+|[OMP_DYNAMIC](#omp-dynamic)|Určuje, zda OpenMP běhu můžete upravit počet vláken v paralelní oblasti.|
+|[OMP_NESTED](#omp-nested)|Určuje, zda je vnořené paralelismu povoleno, není-li povolit nebo zakázat pomocí vnořených paralelismu `omp_set_nested`.|
+|[OMP_NUM_THREADS](#omp-num-threads)|Nastaví maximální počet vláken v paralelní oblasti, pokud není přepsán [omp_set_num_threads –](openmp-functions.md#omp-set-num-threads) nebo [num_threads](openmp-clauses.md#num-threads).|
+|[OMP_SCHEDULE](#omp-schedule)|Upravuje chování [plán](openmp-clauses.md#schedule) klauzule při `schedule(runtime)` je zadán v `for` nebo `parallel for` – direktiva.|
 
 ## <a name="omp-dynamic"></a>OMP_DYNAMIC
 
@@ -54,7 +54,7 @@ set OMP_DYNAMIC[=TRUE | =FALSE]
 
 ### <a name="remarks"></a>Poznámky
 
-`OMP_DYNAMIC` Proměnné prostředí můžete přepsat [omp_set_dynamic –](../../../parallel/openmp/reference/omp-set-dynamic.md) funkce.
+`OMP_DYNAMIC` Proměnné prostředí můžete přepsat [omp_set_dynamic –](openmp-functions.md#omp-set-dynamic) funkce.
 
 Je výchozí hodnotu v implementaci Visual C++ OpenMP standard `OMP_DYNAMIC=FALSE`.
 
@@ -84,7 +84,7 @@ set OMP_NESTED[=TRUE | =FALSE]
 
 ### <a name="remarks"></a>Poznámky
 
-`OMP_NESTED` Proměnné prostředí můžete přepsat [omp_set_nested –](../../../parallel/openmp/reference/omp-set-nested.md) funkce.
+`OMP_NESTED` Proměnné prostředí můžete přepsat [omp_set_nested –](openmp-functions.md#omp-set-nested) funkce.
 
 Je výchozí hodnotu v implementaci Visual C++ OpenMP standard `OMP_DYNAMIC=FALSE`.
 
@@ -106,7 +106,7 @@ set OMP_NESTED
 
 ## <a name="omp-num-threads"></a>OMP_NUM_THREADS
 
-Nastaví maximální počet vláken v paralelní oblasti, pokud není přepsán [omp_set_num_threads –](../../../parallel/openmp/reference/omp-set-num-threads.md) nebo [num_threads](openmp-clauses.md#num-threads).
+Nastaví maximální počet vláken v paralelní oblasti, pokud není přepsán [omp_set_num_threads –](openmp-functions.md#omp-set-num-threads) nebo [num_threads](openmp-clauses.md#num-threads).
 
 ```
 set OMP_NUM_THREADS[=num]
@@ -119,7 +119,7 @@ Maximální počet vláken, které chcete v paralelní oblasti až 64 v implemen
 
 ### <a name="remarks"></a>Poznámky
 
-`OMP_NUM_THREADS` Proměnné prostředí můžete přepsat [omp_set_num_threads –](../../../parallel/openmp/reference/omp-set-num-threads.md) funkce nebo [num_threads](openmp-clauses.md#num-threads).
+`OMP_NUM_THREADS` Proměnné prostředí můžete přepsat [omp_set_num_threads –](openmp-functions.md#omp-set-num-threads) funkce nebo [num_threads](openmp-clauses.md#num-threads).
 
 Výchozí hodnota `num` v jazyce Visual C++ implementace standardu OpenMP je počet virtuálních procesorů, včetně hyperthreadingem procesory.
 

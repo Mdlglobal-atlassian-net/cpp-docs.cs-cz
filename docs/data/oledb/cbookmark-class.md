@@ -78,150 +78,150 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7a2eaaf273bb2c0ae4f3ab297fe444a41e81c873
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: aef24c5c55bc3a3250c483536d0a63f967608b20
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058053"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064328"
 ---
 # <a name="cbookmark-class"></a>CBookmark – třída
 
-Obsahuje hodnotu záložky ve vyrovnávací paměti.  
-  
+Obsahuje hodnotu záložky ve vyrovnávací paměti.
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-template < DBLENGTH nSize = 0 >  
+template < DBLENGTH nSize = 0 >
 class CBookmark : public CBookmarkBase
-  
-template <>  
-class CBookmark< 0 > : public CBookmarkBase  
-```  
-  
-### <a name="parameters"></a>Parametry  
+
+template <>
+class CBookmark< 0 > : public CBookmarkBase
+```
+
+### <a name="parameters"></a>Parametry
 
 *nSize*<br/>
-Velikost vyrovnávací paměti záložek v bajtech. Když *nSize* je nula, vyrovnávací paměti záložek se dynamicky vytvoří za běhu.  
+Velikost vyrovnávací paměti záložek v bajtech. Když *nSize* je nula, vyrovnávací paměti záložek se dynamicky vytvoří za běhu.
 
-## <a name="requirements"></a>Požadavky  
+## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** také atldbcli.h  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="methods"></a>Metody  
-  
-|||  
-|-|-|  
-|[CBookmark](#cbookmark)|Konstruktor|  
-|[Getbuffer –](#getbuffer)|Načte ukazatel do vyrovnávací paměti.|  
-|[GetSize](#getsize)|Získá velikost vyrovnávací paměti v bajtech.|  
-|[SetBookmark](#setbookmark)|Nastaví hodnotu záložku.|  
-  
-### <a name="operators"></a>Operátory  
-  
-|||  
-|-|-|  
-|[operátor =](#operator)|Přiřadí jednu `CBookmark` třídy na jiný.|  
-  
-## <a name="remarks"></a>Poznámky  
+**Záhlaví:** také atldbcli.h
 
-`CBookmark<0>` je specializací šablony `CBookmark`; vyrovnávací paměti se dynamicky vytvoří za běhu.  
+## <a name="members"></a>Členové
+
+### <a name="methods"></a>Metody
+
+|||
+|-|-|
+|[CBookmark](#cbookmark)|Konstruktor|
+|[Getbuffer –](#getbuffer)|Načte ukazatel do vyrovnávací paměti.|
+|[GetSize](#getsize)|Získá velikost vyrovnávací paměti v bajtech.|
+|[SetBookmark](#setbookmark)|Nastaví hodnotu záložku.|
+
+### <a name="operators"></a>Operátory
+
+|||
+|-|-|
+|[operátor =](#operator)|Přiřadí jednu `CBookmark` třídy na jiný.|
+
+## <a name="remarks"></a>Poznámky
+
+`CBookmark<0>` je specializací šablony `CBookmark`; vyrovnávací paměti se dynamicky vytvoří za běhu.
 
 ## <a name="cbookmark"></a> CBookmark::CBookmark
 
-Konstruktor  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Konstruktor
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
 CBookmark();
-   
-CBookmark(DBLENGTH nSize);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+ 
+CBookmark(DBLENGTH nSize);
+```
+
+#### <a name="parameters"></a>Parametry
 
 *nSize*<br/>
-[in] Velikost vyrovnávací paměti záložku v bajtech.  
-  
-### <a name="remarks"></a>Poznámky  
+[in] Velikost vyrovnávací paměti záložku v bajtech.
 
-První funkce nastaví vyrovnávací paměť na hodnotu NULL a velikost vyrovnávací paměti na hodnotu 0. Druhá funkce nastaví velikost vyrovnávací paměti na *nSize*a vyrovnávací paměť do bajtového pole *nSize* bajtů.  
-  
+### <a name="remarks"></a>Poznámky
+
+První funkce nastaví vyrovnávací paměť na hodnotu NULL a velikost vyrovnávací paměti na hodnotu 0. Druhá funkce nastaví velikost vyrovnávací paměti na *nSize*a vyrovnávací paměť do bajtového pole *nSize* bajtů.
+
 > [!NOTE]
->  Tato funkce je dostupná jenom `CBookmark<0>`. 
-  
+>  Tato funkce je dostupná jenom `CBookmark<0>`.
+
 ## <a name="getbuffer"></a> CBookmark::GetBuffer
 
-Načte ukazatel na záložku vyrovnávací paměti.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-virtual BYTE* GetBuffer() const throw();  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
+Načte ukazatel na záložku vyrovnávací paměti.
 
-Ukazatel do vyrovnávací paměti záložku. 
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+virtual BYTE* GetBuffer() const throw();
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Ukazatel do vyrovnávací paměti záložku.
 
 ## <a name="getsize"></a> CBookmark::GetSize
 
-Získá velikost vyrovnávací paměti pro záložky.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-virtual DBLENGTH GetSize() const throw();  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
+Získá velikost vyrovnávací paměti pro záložky.
 
-Velikost vyrovnávací paměti v bajtech.  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+virtual DBLENGTH GetSize() const throw();
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Velikost vyrovnávací paměti v bajtech.
 
 ## <a name="setbookmark"></a> CBookmark::SetBookmark
 
-Zkopíruje záložka odkazuje *pBuffer* k `CBookmark` vyrovnávací paměti a nastaví velikost vyrovnávací paměti na *nSize*.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Zkopíruje záložka odkazuje *pBuffer* k `CBookmark` vyrovnávací paměti a nastaví velikost vyrovnávací paměti na *nSize*.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *nSize*<br/>
-[in] Velikost vyrovnávací paměti záložek.  
-  
+[in] Velikost vyrovnávací paměti záložek.
+
 *pBuffer*<br/>
-[in] Ukazatel na bajtové pole obsahující hodnotu záložku.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+[in] Ukazatel na bajtové pole obsahující hodnotu záložku.
 
-Standardní HRESULT.  
-  
-### <a name="remarks"></a>Poznámky  
+### <a name="return-value"></a>Návratová hodnota
 
-Tato funkce je dostupná jenom `CBookmark<0>`. 
+Standardní HRESULT.
+
+### <a name="remarks"></a>Poznámky
+
+Tato funkce je dostupná jenom `CBookmark<0>`.
 
 ## <a name="operator"></a> CBookmark::operator =
 
-Přiřadí `CBookmark` objektu na jiný.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Přiřadí `CBookmark` objektu na jiný.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-CBookmark& operator =(const CBookmark& bookmark) throw();  
-```  
-  
-### <a name="remarks"></a>Poznámky  
+CBookmark& operator =(const CBookmark& bookmark) throw();
+```
 
-Tento operátor je nutný pouze v `CBookmark<0>`.   
+### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také  
+Tento operátor je nutný pouze v `CBookmark<0>`.
+
+## <a name="see-also"></a>Viz také
 
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

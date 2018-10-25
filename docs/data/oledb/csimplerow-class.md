@@ -46,128 +46,128 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fb27c7fc401fb27b3677659f4f1b5539c19fda2c
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: d5ceb07577386f4b3fc9389cf9103fba4036b591
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082693"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076787"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow – třída
 
-Poskytuje výchozí implementaci pro popisovač řádku, který je používán [IRowsetImpl –](../../data/oledb/irowsetimpl-class.md) třídy.  
-  
+Poskytuje výchozí implementaci pro popisovač řádku, který je používán [IRowsetImpl –](../../data/oledb/irowsetimpl-class.md) třídy.
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-class CSimpleRow  
-```  
+class CSimpleRow
+```
 
-## <a name="requirements"></a>Požadavky  
+## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atldb.h  
+**Záhlaví:** atldb.h
 
-## <a name="members"></a>Členové  
-  
-### <a name="methods"></a>Metody  
-  
-|||  
-|-|-|  
-|[Addrefrow –](#addrefrow)|Přidá počet odkazů na existující popisovač řádku.|  
-|[Compare](#compare)|Porovná dva řádky, které chcete zobrazit, pokud se odkazují na stejnou instanci řádek.|  
-|[CSimpleRow](#csimplerow)|Konstruktor|  
-|[Releaserow –](#releaserow)|Verze řádků.|  
-  
-### <a name="data-members"></a>Datové členy  
-  
-|||  
-|-|-|  
-|[m_dwRef](#dwref)|Počet odkazů na existující popisovač řádku.|  
-|[m_iRowset](#irowset)|Index tak, aby v sadě řádků reprezentující kurzor.|  
-  
-## <a name="remarks"></a>Poznámky  
+## <a name="members"></a>Členové
 
-Popisovač řádku jsou logicky jedinečný klíčová slova pro řádek výsledek. `IRowsetImpl` Vytvoří novou `CSimpleRow` pro každý řádek požaduje v [IRowsetImpl::GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` také se dá nahradit výrazem vlastní implementaci popisovač řádku, jako je výchozí argument šablony pro `IRowsetImpl`. Jediným požadavkem na nahrazení Tato třída má mít náhradní třída konstruktor, který přijímá jeden parametr typu zadat **dlouhé**.  
+### <a name="methods"></a>Metody
+
+|||
+|-|-|
+|[Addrefrow –](#addrefrow)|Přidá počet odkazů na existující popisovač řádku.|
+|[Compare](#compare)|Porovná dva řádky, které chcete zobrazit, pokud se odkazují na stejnou instanci řádek.|
+|[CSimpleRow](#csimplerow)|Konstruktor|
+|[Releaserow –](#releaserow)|Verze řádků.|
+
+### <a name="data-members"></a>Datové členy
+
+|||
+|-|-|
+|[m_dwRef](#dwref)|Počet odkazů na existující popisovač řádku.|
+|[m_iRowset](#irowset)|Index tak, aby v sadě řádků reprezentující kurzor.|
+
+## <a name="remarks"></a>Poznámky
+
+Popisovač řádku jsou logicky jedinečný klíčová slova pro řádek výsledek. `IRowsetImpl` Vytvoří novou `CSimpleRow` pro každý řádek požaduje v [IRowsetImpl::GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` také se dá nahradit výrazem vlastní implementaci popisovač řádku, jako je výchozí argument šablony pro `IRowsetImpl`. Jediným požadavkem na nahrazení Tato třída má mít náhradní třída konstruktor, který přijímá jeden parametr typu zadat **dlouhé**.
 
 ## <a name="addrefrow"></a> CSimpleRow::AddRefRow
 
-Přidá počet odkazů na existující popisovač řádku způsobem bezpečným pro vlákno.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Přidá počet odkazů na existující popisovač řádku způsobem bezpečným pro vlákno.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-DWORD AddRefRow();  
-```  
+DWORD AddRefRow();
+```
 
 ## <a name="compare"></a> CSimpleRow::Compare
 
-Porovná dva řádky, které chcete zobrazit, pokud se odkazují na stejnou instanci řádek.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Porovná dva řádky, které chcete zobrazit, pokud se odkazují na stejnou instanci řádek.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT Compare(CSimpleRow* pRow);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT Compare(CSimpleRow* pRow);
+```
+
+#### <a name="parameters"></a>Parametry
 
 *pRow*<br/>
-Ukazatel `CSimpleRow` objektu.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+Ukazatel `CSimpleRow` objektu.
 
-Hodnotu HRESULT, obvykle S_OK označující dvěma řádky se stejnou instanci řádek nebo S_FALSE označující dvěma řádky se liší. Zobrazit [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629) v *OLE DB referenční informace pro programátory* pro ostatní možných vrácených hodnot. 
+### <a name="return-value"></a>Návratová hodnota
+
+Hodnotu HRESULT, obvykle S_OK označující dvěma řádky se stejnou instanci řádek nebo S_FALSE označující dvěma řádky se liší. Zobrazit [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629) v *OLE DB referenční informace pro programátory* pro ostatní možných vrácených hodnot.
 
 ## <a name="csimplerow"></a> CSimpleRow::CSimpleRow
 
-Konstruktor  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Konstruktor
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-CSimpleRow(DBCOUNTITEM iRowsetCur);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+CSimpleRow(DBCOUNTITEM iRowsetCur);
+```
+
+#### <a name="parameters"></a>Parametry
 
 *iRowsetCur*<br/>
-[in] Index aktuální sady řádků.  
-  
-### <a name="remarks"></a>Poznámky  
+[in] Index aktuální sady řádků.
 
-Nastaví [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) k *iRowsetCur*. 
+### <a name="remarks"></a>Poznámky
+
+Nastaví [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) k *iRowsetCur*.
 
 ## <a name="releaserow"></a> CSimpleRow::ReleaseRow
 
-Verze řádků způsobem bezpečným pro vlákno.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Verze řádků způsobem bezpečným pro vlákno.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-DWORD ReleaseRow();  
-```  
+DWORD ReleaseRow();
+```
 
 ## <a name="dwref"></a> CSimpleRow::m_dwRef
 
-Počet odkazů na existující popisovač řádku.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Počet odkazů na existující popisovač řádku.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-DWORD m_dwRef;  
-```  
+DWORD m_dwRef;
+```
 
 ## <a name="irowset"></a> CSimpleRow::m_iRowset
 
-Index řádků reprezentující kurzor.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Index řádků reprezentující kurzor.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-KeyType m_iRowset;  
-```  
-  
-## <a name="see-also"></a>Viz také  
+KeyType m_iRowset;
+```
+
+## <a name="see-also"></a>Viz také
 
 [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

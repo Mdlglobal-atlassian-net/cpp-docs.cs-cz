@@ -18,113 +18,113 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d75b62716066d1df94b0072b00254dc96ec450df
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5937fb5eb3c082575a128db32841416ba31acf11
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720613"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075304"
 ---
 # <a name="pack"></a>pack
-Určuje zarovnání zabalení pro struktury, sjednocení a členy třídy.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-#pragma pack( [ show ] | [ push | pop ] [, identifier ] , n  )  
-```  
-  
+Určuje zarovnání zabalení pro struktury, sjednocení a členy třídy.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+#pragma pack( [ show ] | [ push | pop ] [, identifier ] , n  )
+```
+
 ### <a name="parameters"></a>Parametry
 
 **Show**<br/>
-(Volitelné) Zobrazí aktuální hodnotu bajtu pro balení zarovnání. Hodnota se zobrazí zpráva upozornění.  
+(Volitelné) Zobrazí aktuální hodnotu bajtu pro balení zarovnání. Hodnota se zobrazí zpráva upozornění.
 
 **push**<br/>
-(Volitelné) Nabízená oznámení aktuální zarovnání zabalení hodnoty na vnitřního zásobníku kompilátoru a nastaví hodnotu aktuální zarovnání zabalení *n*. Pokud *n* není zadán, aktuální hodnota zarovnání zabalení je vloženo.  
-  
-**POP**<br/>
-(Volitelné) Odstraní záznam z vrcholu vnitřního zásobníku kompilátoru. Pokud *n* není zadaný s **pop**, balení hodnotu přidruženou k výsledného záznamu vrcholu zásobníku je nová hodnota zarovnání zabalení. Pokud *n* není zadána, například `#pragma pack(pop, 16)`, *n* stane nová hodnota zarovnání zabalení. Pokud jste vyvolat přes pop s *identifikátor*, například `#pragma pack(pop, r1)`, pak všechny záznamy v zásobníku jsou otevřené až do záznam, který má *identifikátor* nenajde. Že záznam není vyjmut záznam a přidružený výsledného záznamu v horní hodnota balení je zásobník nové balení hodnota zarovnání. Pokud jste vyvolat přes pop s *identifikátor* , který se nenachází v libovolné záznamu v zásobníku, pak bude **pop** se ignoruje.  
-  
-*identifikátor*<br/>
-(Volitelné) Při použití s *nabízených*, přiřadí název záznamu ve vnitřním zásobníku kompilátoru. Při použití s **pop**, vyjme všechny záznamy z vnitřního zásobníku až do *identifikátor* li *identifikátor* nebyl nalezen v interním zásobníku, nic nevezme.  
-  
-*n*<br/>
-(Volitelné) Určuje hodnotu, v bajtech, která má být použit pro balení. Pokud možnost kompilátoru [/zp](../build/reference/zp-struct-member-alignment.md) není nastaven pro modul, výchozí hodnota pro *n* je 8. Platné hodnoty jsou 1, 2, 4, 8 a 16. Zarovnání člena bude na hranici, která je buď jednat o násobek *n* nebo násobkem velikosti člena, podle toho, co je menší.  
-  
-`#pragma pack(pop, identifier, n)` není definován.  
-  
-## <a name="remarks"></a>Poznámky  
+(Volitelné) Nabízená oznámení aktuální zarovnání zabalení hodnoty na vnitřního zásobníku kompilátoru a nastaví hodnotu aktuální zarovnání zabalení *n*. Pokud *n* není zadán, aktuální hodnota zarovnání zabalení je vloženo.
 
-Aby zabalil třídy, je umístit jejích členů přímo po sobě navzájem v paměti, což může znamenat, že některé nebo všechny členy může být zarovnány na hranice menší než výchozí zarovnání Cílová architektura. **balíček** poskytuje řízení na úrovni deklarace dat. Tím se liší od – možnost kompilátoru [/zp](../build/reference/zp-struct-member-alignment.md), které jen poskytuje řízení na úrovni modulu. **Pack** se projeví při prvním **struktura**, **sjednocení**, nebo **třídy** deklarace po direktivy pragma je zobrazena. **balíček** nemá žádný vliv na definice. Volání **pack** sadami žádné argumenty *n* na hodnotu nastavenou v možnosti kompilátoru `/Zp`. Pokud není nastavena možnost kompilátoru, výchozí hodnota je 8.  
-  
+**POP**<br/>
+(Volitelné) Odstraní záznam z vrcholu vnitřního zásobníku kompilátoru. Pokud *n* není zadaný s **pop**, balení hodnotu přidruženou k výsledného záznamu vrcholu zásobníku je nová hodnota zarovnání zabalení. Pokud *n* není zadána, například `#pragma pack(pop, 16)`, *n* stane nová hodnota zarovnání zabalení. Pokud jste vyvolat přes pop s *identifikátor*, například `#pragma pack(pop, r1)`, pak všechny záznamy v zásobníku jsou otevřené až do záznam, který má *identifikátor* nenajde. Že záznam není vyjmut záznam a přidružený výsledného záznamu v horní hodnota balení je zásobník nové balení hodnota zarovnání. Pokud jste vyvolat přes pop s *identifikátor* , který se nenachází v libovolné záznamu v zásobníku, pak bude **pop** se ignoruje.
+
+*identifikátor*<br/>
+(Volitelné) Při použití s *nabízených*, přiřadí název záznamu ve vnitřním zásobníku kompilátoru. Při použití s **pop**, vyjme všechny záznamy z vnitřního zásobníku až do *identifikátor* li *identifikátor* nebyl nalezen v interním zásobníku, nic nevezme.
+
+*n*<br/>
+(Volitelné) Určuje hodnotu, v bajtech, která má být použit pro balení. Pokud možnost kompilátoru [/zp](../build/reference/zp-struct-member-alignment.md) není nastaven pro modul, výchozí hodnota pro *n* je 8. Platné hodnoty jsou 1, 2, 4, 8 a 16. Zarovnání člena bude na hranici, která je buď jednat o násobek *n* nebo násobkem velikosti člena, podle toho, co je menší.
+
+`#pragma pack(pop, identifier, n)` není definován.
+
+## <a name="remarks"></a>Poznámky
+
+Aby zabalil třídy, je umístit jejích členů přímo po sobě navzájem v paměti, což může znamenat, že některé nebo všechny členy může být zarovnány na hranice menší než výchozí zarovnání Cílová architektura. **balíček** poskytuje řízení na úrovni deklarace dat. Tím se liší od – možnost kompilátoru [/zp](../build/reference/zp-struct-member-alignment.md), které jen poskytuje řízení na úrovni modulu. **Pack** se projeví při prvním **struktura**, **sjednocení**, nebo **třídy** deklarace po direktivy pragma je zobrazena. **balíček** nemá žádný vliv na definice. Volání **pack** sadami žádné argumenty *n* na hodnotu nastavenou v možnosti kompilátoru `/Zp`. Pokud není nastavena možnost kompilátoru, výchozí hodnota je 8.
+
 Pokud změníte zarovnání struktury, se nesmí používat jako uvidí ke snížení výkonu nebo dokonce i získat generované hardwarové výjimky nezarovnaný přístup, kolik místa v paměti, ale.  Tato výjimka chování lze upravit pomocí [SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621).
 
-Další informace o úpravách zarovnání naleznete v následujících tématech:  
-  
-- [__alignof](../cpp/alignof-operator.md)  
-  
-- [align](../cpp/align-cpp.md)  
-  
-- [__unaligned](../cpp/unaligned.md)  
-  
-- [Příklady zarovnání struktur](../build/examples-of-structure-alignment.md) (x64 konkrétní)  
-  
+Další informace o úpravách zarovnání naleznete v následujících tématech:
+
+- [__alignof](../cpp/alignof-operator.md)
+
+- [align](../cpp/align-cpp.md)
+
+- [__unaligned](../cpp/unaligned.md)
+
+- [Příklady zarovnání struktur](../build/examples-of-structure-alignment.md) (x64 konkrétní)
+
    > [!WARNING]
-   > Všimněte si, že v sadě Visual Studio 2015 a novější můžete použít operátory alignof a alignas standardní které, na rozdíl od `__alignof` a `declspec( align )` přenositelnosti napříč kompilátory. Standard jazyka C++ neřeší balení, takže je nutné použít **pack** (nebo odpovídající rozšíření na jiné kompilátory) k určení zarovnání menší než velikost cílové architektury aplikace word.  
-  
+   > Všimněte si, že v sadě Visual Studio 2015 a novější můžete použít operátory alignof a alignas standardní které, na rozdíl od `__alignof` a `declspec( align )` přenositelnosti napříč kompilátory. Standard jazyka C++ neřeší balení, takže je nutné použít **pack** (nebo odpovídající rozšíření na jiné kompilátory) k určení zarovnání menší než velikost cílové architektury aplikace word.
+
 ## <a name="examples"></a>Příklady
 
-Následující příklad ukazuje způsob použití **pack** – Direktiva pragma, chcete-li změnit zarovnání struktury.  
-  
-```cpp  
-// pragma_directives_pack.cpp  
-#include <stddef.h>  
-#include <stdio.h>  
-  
-struct S {  
-   int i;   // size 4  
-   short j;   // size 2  
-   double k;   // size 8  
-};  
-  
-#pragma pack(2)  
-struct T {  
-   int i;  
-   short j;  
-   double k;  
-};  
-  
-int main() {  
-   printf("%zu ", offsetof(S, i));  
-   printf("%zu ", offsetof(S, j));  
-   printf("%zu\n", offsetof(S, k));  
-  
-   printf("%zu ", offsetof(T, i));  
-   printf("%zu ", offsetof(T, j));  
-   printf("%zu\n", offsetof(T, k));  
-}  
-```  
-  
-```Output  
-0 4 8  
-0 4 6  
-```  
-  
-Následující příklad ukazuje způsob použití *nabízených*, *pop*, a *zobrazit* syntaxe.  
-  
-```cpp  
-// pragma_directives_pack_2.cpp  
-// compile with: /W1 /c  
-#pragma pack()   // n defaults to 8; equivalent to /Zp8  
-#pragma pack(show)   // C4810  
-#pragma pack(4)   // n = 4  
-#pragma pack(show)   // C4810  
-#pragma pack(push, r1, 16)   // n = 16, pushed to stack  
-#pragma pack(show)   // C4810  
-#pragma pack(pop, r1, 2)   // n = 2 , stack popped  
-#pragma pack(show)   // C4810  
-```  
-  
-## <a name="see-also"></a>Viz také  
- 
+Následující příklad ukazuje způsob použití **pack** – Direktiva pragma, chcete-li změnit zarovnání struktury.
+
+```cpp
+// pragma_directives_pack.cpp
+#include <stddef.h>
+#include <stdio.h>
+
+struct S {
+   int i;   // size 4
+   short j;   // size 2
+   double k;   // size 8
+};
+
+#pragma pack(2)
+struct T {
+   int i;
+   short j;
+   double k;
+};
+
+int main() {
+   printf("%zu ", offsetof(S, i));
+   printf("%zu ", offsetof(S, j));
+   printf("%zu\n", offsetof(S, k));
+
+   printf("%zu ", offsetof(T, i));
+   printf("%zu ", offsetof(T, j));
+   printf("%zu\n", offsetof(T, k));
+}
+```
+
+```Output
+0 4 8
+0 4 6
+```
+
+Následující příklad ukazuje způsob použití *nabízených*, *pop*, a *zobrazit* syntaxe.
+
+```cpp
+// pragma_directives_pack_2.cpp
+// compile with: /W1 /c
+#pragma pack()   // n defaults to 8; equivalent to /Zp8
+#pragma pack(show)   // C4810
+#pragma pack(4)   // n = 4
+#pragma pack(show)   // C4810
+#pragma pack(push, r1, 16)   // n = 16, pushed to stack
+#pragma pack(show)   // C4810
+#pragma pack(pop, r1, 2)   // n = 2 , stack popped
+#pragma pack(show)   // C4810
+```
+
+## <a name="see-also"></a>Viz také
+
 [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

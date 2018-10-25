@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f11590a78cb691f4812e7b503350fb72a4bdc95
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9972d603aa563b4432d2935f3d934d4916b7c8b5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390731"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076214"
 ---
 # <a name="using-cstringt"></a>Cstringt – použití
 
@@ -35,7 +35,7 @@ Vysvětluje, jak exportovat vlastní řetězcové třídy z knihovny DLL pomocí
 
 ## <a name="reference"></a>Odkaz
 
-[Cstringt – třída](../atl-mfc-shared/reference/cstringt-class.md).  
+[Cstringt – třída](../atl-mfc-shared/reference/cstringt-class.md).<br/>
 Poskytuje referenční informace o sdílený `CStringT` třídy.
 
 ## <a name="see-also"></a>Viz také

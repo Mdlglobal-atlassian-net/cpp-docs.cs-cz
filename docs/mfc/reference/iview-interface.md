@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec1e6215cd085ed948e4b0554bca12a678563d6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 84ed9bfb8b0c8b5ab30af07d8f0448109161df51
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434008"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077761"
 ---
 # <a name="iview-interface"></a>IView – rozhraní
 
@@ -57,7 +57,6 @@ interface class IView
 
 Další informace o používání formulářů Windows, naleznete v tématu [použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-
 ## <a name="requirements"></a>Požadavky
 
 Záhlaví: afxwinforms.h (definované v sestavení atlmfc\lib\mfcmifc80.dll)
@@ -68,6 +67,7 @@ Volá se v prostředí MFC, když se aktivuje nebo deaktivuje zobrazení.
 ```
 void OnActivateView(bool activate);
 ```
+
 ## <a name="parameters"></a>Parametry
 
 *Aktivovat*<br/>
@@ -86,6 +86,7 @@ Volá se v prostředí MFC po dokumentu v zobrazení se změnila.
 ```
 void OnUpdate();
 ```
+
 ## <a name="remarks"></a>Poznámky
 
 Tato funkce umožňuje zobrazení aktualizovat zobrazení tak, aby odrážely změny.

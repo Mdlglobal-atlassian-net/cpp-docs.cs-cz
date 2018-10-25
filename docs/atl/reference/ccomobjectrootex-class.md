@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f24cf6cce5cdf268367f547e8a536dcdae7cc859
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 413485bc7675fbc68f2c224ceefdd0f552538eb9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098950"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076981"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx – třída
 
@@ -51,7 +51,7 @@ class CComObjectRootEx : public CComObjectRootBase
 #### <a name="parameters"></a>Parametry
 
 *ThreadModel*<br/>
-Třídy, jejíž metody implementovat požadovaného modelu vlákna. Můžete explicitně nastavit model vláken nastavením *ThreadModel* k [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md), [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), nebo [ Ccommultithreadmodelnocs –](../../atl/reference/ccommultithreadmodelnocs-class.md). Model na server výchozí vlákno může přijmout tak, že nastavíte *ThreadModel* k [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) nebo [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel).  
+Třídy, jejíž metody implementovat požadovaného modelu vlákna. Můžete explicitně nastavit model vláken nastavením *ThreadModel* k [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md), [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), nebo [ Ccommultithreadmodelnocs –](../../atl/reference/ccommultithreadmodelnocs-class.md). Model na server výchozí vlákno může přijmout tak, že nastavíte *ThreadModel* k [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) nebo [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel).
 
 ## <a name="members"></a>Členové
 
@@ -139,9 +139,9 @@ Existují výhody provedení inicializace v `FinalConstruct` namísto konstrukto
 
 - Nelze volat virtuální funkce pomocí mechanismu virtuální funkce z konstruktoru třídy. Volání virtuální funkce z konstruktoru třídy, výsledkem je staticky řešeného volání funkce, jak jsou definovány v daném okamžiku v hierarchii dědičnosti. Volání čistě virtuální funkce má za následek chyby linkeru.
 
-     Vaše třída není nejvíce odvozené třídy v hierarchii dědičnosti, spoléhá na odvozenou třídu poskytnutých ATL poskytnout některé ze svých funkcí. Je dobré pravděpodobné, že inicializace potřebovat k funkcím, které poskytuje tuto třídu (to platí jistě při objekty třídy potřeba agregovat jiné objekty), ale nemá žádný způsob, jak přistupovat k těm funkcím konstruktoru ve své třídě. Konstrukce kódu pro třídu je spuštěn před úplném nejvíce odvozené třídy.
+   Vaše třída není nejvíce odvozené třídy v hierarchii dědičnosti, spoléhá na odvozenou třídu poskytnutých ATL poskytnout některé ze svých funkcí. Je dobré pravděpodobné, že inicializace potřebovat k funkcím, které poskytuje tuto třídu (to platí jistě při objekty třídy potřeba agregovat jiné objekty), ale nemá žádný způsob, jak přistupovat k těm funkcím konstruktoru ve své třídě. Konstrukce kódu pro třídu je spuštěn před úplném nejvíce odvozené třídy.
 
-     Nicméně `FinalConstruct` je volána ihned poté, co nejvíce odvozené třídy úplném díky tomu můžete volat virtuální funkce a použít implementaci počítání odkazů poskytované ATL.
+   Nicméně `FinalConstruct` je volána ihned poté, co nejvíce odvozené třídy úplném díky tomu můžete volat virtuální funkce a použít implementaci počítání odkazů poskytované ATL.
 
 ### <a name="example"></a>Příklad
 
@@ -265,7 +265,7 @@ long m_dwRef;
 
 ### <a name="remarks"></a>Poznámky
 
-S `m_pOuterUnknown`sjednocení patří:  
+S `m_pOuterUnknown`sjednocení patří:
 
 ```
 union {

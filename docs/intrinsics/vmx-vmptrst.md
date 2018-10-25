@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f9cd2ebdbcf2ad2feb3b66412fbcd5687e85dce
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: b1014d41ea53405ea96ea5a3e19e627d72663f21
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820565"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074940"
 ---
 # <a name="vmxvmptrst"></a>__vmx_vmptrst
 
@@ -33,14 +33,15 @@ Ukládá ukazatel na aktuální struktura řízení virtuálních počítačů (
 ## <a name="syntax"></a>Syntaxe
 
 ```
-void __vmx_vmptrst( 
-   unsigned __int64 *VmcsPhysicalAddress 
+void __vmx_vmptrst( 
+   unsigned __int64 *VmcsPhysicalAddress 
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-[in] *`VmcsPhysicalAddress` adresu aktuální ukazatel VMCS se mají ukládat.
+*VmcsPhysicalAddress*<br/>
+[in] Adresa aktuální ukazatel VMCS se mají ukládat.
 
 ## <a name="remarks"></a>Poznámky
 

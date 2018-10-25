@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e5147faaf0170a10295006f12d7e95f5dfd3e8d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 159d452c3b0a813c52d8486f52d67b9817c3a558
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380695"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069279"
 ---
 # <a name="ccriticalsection-class"></a>CCriticalSection – třída
 
@@ -81,7 +81,7 @@ Existují dvě metody pro použití `CCriticalSection` objektu: samostatné a vl
 
 - Samostatné metodu použít samostatný `CCriticalSection` objektu, vytvořit `CCriticalSection` objektu, když ho nepotřebují. Po úspěšném návrat z konstruktoru explicitně zamknout objekt voláním [Zámek](#lock). Volání [odemknout](#unlock) po dokončení přístupu k kritický oddíl. Tato metoda při přesnější někomu čtení zdrojového kódu, je více náchylné k chybám jako nesmíte zapomenout při zamykání a odemykání kritický oddíl před a za přístup.
 
-     Vhodnější metodou je použít [CSingleLock](../../mfc/reference/csinglelock-class.md) třídy. Má také `Lock` a `Unlock` metody, ale nemusíte starat o odemknutí prostředku, pokud dojde k výjimce.
+   Vhodnější metodou je použít [CSingleLock](../../mfc/reference/csinglelock-class.md) třídy. Má také `Lock` a `Unlock` metody, ale nemusíte starat o odemknutí prostředku, pokud dojde k výjimce.
 
 - Vložené metody třídy můžete také sdílet s více vlákny tak, že přidáte `CCriticalSection`– datový člen typu třídy a zamykání datový člen v případě potřeby.
 

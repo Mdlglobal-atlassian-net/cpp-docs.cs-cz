@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a3d36720012a7a54109c44d6eac41394323bbe0e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fc144e7b2ab1e97093498fa73930ba100306c23e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107785"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076695"
 ---
 # <a name="use-the-odbc-cursor-library"></a>Použití knihovny kurzorů ODBC
 
-ODBC spravuje procházení sad záznamů pomocí knihovna kurzorů rozhraní. Tato témata vysvětlují, jak pracovat s knihovna kurzorů rozhraní.  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
-  
-- [Použití knihovny kurzorů ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md)  
-  
-## <a name="see-also"></a>Viz také  
+ODBC spravuje procházení sad záznamů pomocí knihovna kurzorů rozhraní. Tato témata vysvětlují, jak pracovat s knihovna kurzorů rozhraní.
+
+## <a name="in-this-section"></a>V tomto oddílu
+
+- [Použití knihovny kurzorů ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md)
+
+## <a name="see-also"></a>Viz také
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

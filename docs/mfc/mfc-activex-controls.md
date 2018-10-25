@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b94172d57bc21e7f747a5d0986ef28dbfb80e481
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 33c79dc8c83f40d0b553a2c44cf22fa107f5ef34
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428639"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065587"
 ---
 # <a name="mfc-activex-controls"></a>MFC – ovládací prvky ActiveX
 
@@ -109,19 +109,19 @@ Ve výchozím nastavení třídy ovládacích prvků ActiveX a nástroje jsou na
 
 - **\Common7\Tools**
 
-     Obsahuje soubory testovacího kontejneru (TstCon32.exe a jeho soubory nápovědy)
+   Obsahuje soubory testovacího kontejneru (TstCon32.exe a jeho soubory nápovědy)
 
 - **\Vc7\atlmfc\include**
 
-     Obsahuje vložené soubory potřebné k vývoji ovládacích prvků ActiveX pomocí knihovny MFC
+   Obsahuje vložené soubory potřebné k vývoji ovládacích prvků ActiveX pomocí knihovny MFC
 
 - **\Vc7\atlmfc\src\mfc**
 
-     Obsahuje zdrojové kódy určitých tříd ovládacích prvků ActiveX v knihovně MFC
+   Obsahuje zdrojové kódy určitých tříd ovládacích prvků ActiveX v knihovně MFC
 
 - **\Vc7\atlmfc\lib**
 
-     Obsahuje knihovny potřebné k vývoji ovládacích prvků ActiveX pomocí knihovny MFC
+   Obsahuje knihovny potřebné k vývoji ovládacích prvků ActiveX pomocí knihovny MFC
 
 Obsahuje také ukázky ovládacích prvků ActiveX knihovny MFC. Další informace o těchto ukázkách najdete v tématu [ukázky ovládacích prvků: ovládací prvky ActiveX](../visual-cpp-samples.md)
 

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 352f3e5ebd9606cc355ea9af65739c3e17894298
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 75e34fd4cfa53257f0e8a497cf8bc245c90f6732
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136293"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077347"
 ---
 # <a name="composite-control-macros"></a>Makra složených ovládacích prvků
 
@@ -41,7 +41,7 @@ Tato makra definují mapy jímek událostí a položek.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom  
+**Záhlaví:** atlcom
 
 ##  <a name="begin_sink_map"></a>  BEGIN_SINK_MAP
 
@@ -122,7 +122,7 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 [in] Určuje ovládací prvek.
 
 *identifikátor IID*<br/>
-[in] Určuje rozhraní odbavení.  
+[in] Určuje rozhraní odbavení.
 
 *piid*<br/>
 [in] Ukazatel na rozhraní odbavení.
@@ -156,7 +156,7 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 [in] Celé číslo bez znaménka určující zdroj události. Tato hodnota musí odpovídat *nID* šablony parametr použitý v souvisejících článcích [idispeventsimpleimpl –](../../atl/reference/idispeventsimpleimpl-class.md) základní třídy.
 
 *identifikátor IID*<br/>
-[in] Identifikátor IID, který identifikuje rozhraní odbavení.  
+[in] Identifikátor IID, který identifikuje rozhraní odbavení.
 
 *piid*<br/>
 [in] Ukazatel na IID, který identifikuje rozhraní odbavení.

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2d82a1254a11dbda3164ea1c350dc14e2b1a122
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a94ed846d2d4ebda2e457ee772a9f8bf081d69d6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050109"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077165"
 ---
 # <a name="expression-evaluator-error-cxx0036"></a>Chyba při vyhodnocování výrazu CXX0036
 
@@ -32,20 +32,20 @@ Tato zpráva se může objevit některou z několika chyb používá operátor k
 
 - Syntaxe operátor kontextu (**{}**) byl nesprávně zadán.
 
-     Syntaxe operátor kontextu je následující:
+   Syntaxe operátor kontextu je následující:
 
      {*funkce*,*modulu*,*dll*}*výraz*
 
-     Určuje kontext *výraz*. Operátor kontextu má stejnou prioritu a použití jako přetypování.
+   Určuje kontext *výraz*. Operátor kontextu má stejnou prioritu a použití jako přetypování.
 
-     Na konci čárky lze vynechat. Pokud je libovolná z *funkce*, *modulu*, nebo *dll* obsahuje čárku literálu celý název je nutné uzavřít do závorek.
+   Na konci čárky lze vynechat. Pokud je libovolná z *funkce*, *modulu*, nebo *dll* obsahuje čárku literálu celý název je nutné uzavřít do závorek.
 
 - Název funkce napsaný správně nebo neexistuje v zadaném modulu nebo knihovny DLL.
 
-     Protože je velká a malá písmena jazyka C *funkce* musí být uvedené v rozlišovat velikost písmen, jak jsou definovány ve zdroji.
+   Protože je velká a malá písmena jazyka C *funkce* musí být uvedené v rozlišovat velikost písmen, jak jsou definovány ve zdroji.
 
 - Modul nebo knihovny DLL se nenašel.
 
-     Zkontrolujte úplný název cesty zadaném modulu nebo knihovny DLL.
+   Zkontrolujte úplný název cesty zadaném modulu nebo knihovny DLL.
 
 Tato chyba se shoduje s CAN0036.

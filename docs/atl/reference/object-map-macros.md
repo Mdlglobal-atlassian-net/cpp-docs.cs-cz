@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b85d157cd6124bb0ef6e6167a415c018e14b046
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cfda40e857cc05a907ce4dcdc2352d52cb9cf0b5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040437"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075928"
 ---
 # <a name="object-map-macros"></a>Makra Map objektů
 
@@ -31,7 +31,7 @@ Tato makra definují objekt map a položky.
 |-|-|
 |[DECLARE_OBJECT_DESCRIPTION](#declare_object_description)|Můžete zadat objekt třídy textový popis, který zadá do objektu map.|
 |[OBJECT_ENTRY_AUTO](#object_entry_auto)|Zadá objekt knihovny ATL do objektu map, aktualizuje registr a vytvoří instanci objektu.|
-|[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](#object_entry_non_createable_ex_auto)|Umožňuje určit, že objekt zaregistrované a inicializován, ale neměl by být externě vytvořitelný prostřednictvím `CoCreateInstance`.|  
+|[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](#object_entry_non_createable_ex_auto)|Umožňuje určit, že objekt zaregistrované a inicializován, ale neměl by být externě vytvořitelný prostřednictvím `CoCreateInstance`.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -54,7 +54,7 @@ DECLARE_OBJECT_DESCRIPTION( x )
 
 ATL zadá do mapy objektu prostřednictvím tento popis [OBJECT_ENTRY_AUTO](#object_entry_auto) – makro.
 
-Implementuje DECLARE_OBJECT_DESCRIPTION `GetObjectDescription` funkci, kterou můžete použít k přepsání [CComCoClass::GetObjectDescription](ccomcoclass-class.md#getobjectdescription) metody.  
+Implementuje DECLARE_OBJECT_DESCRIPTION `GetObjectDescription` funkci, kterou můžete použít k přepsání [CComCoClass::GetObjectDescription](ccomcoclass-class.md#getobjectdescription) metody.
 
 `GetObjectDescription` Funkce je volána `IComponentRegistrar::GetComponents`. `IComponentRegistrar` je rozhraní automatizace, která umožňuje vytvářet a rušit registraci jednotlivých komponent v knihovně DLL. Při vytváření objektu registrátora komponent pomocí Průvodce projektem ATL, průvodce automaticky provede `IComponentRegistrar` rozhraní. `IComponentRegistrar` se obvykle používá Microsoft Transaction Server.
 
@@ -84,7 +84,7 @@ OBJECT_ENTRY_AUTO( clsid, class )
 
 Makra položky objektu jsou umístěny v globálním oboru v projektu k poskytování podpory pro registraci, inicializace a vytvoření třídy.
 
-OBJECT_ENTRY_AUTO přejde do ukazatele na Funkce Tvůrce třídy a třídy tvůrce objektu pro vytváření tříd `CreateInstance` funkce pro tento objekt do objektu map automaticky generovaný objekt knihovny ATL. Když [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver) je volána, aktualizace systémového registru pro jednotlivé objekty v mapě objektů.  
+OBJECT_ENTRY_AUTO přejde do ukazatele na Funkce Tvůrce třídy a třídy tvůrce objektu pro vytváření tříd `CreateInstance` funkce pro tento objekt do objektu map automaticky generovaný objekt knihovny ATL. Když [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver) je volána, aktualizace systémového registru pro jednotlivé objekty v mapě objektů.
 
 Následující tabulka popisuje, jak je informace o přidávají do mapy objektu získat z třídy zadané jako druhý parametr na toto makro.
 
@@ -94,7 +94,7 @@ Následující tabulka popisuje, jak je informace o přidávají do mapy objektu
 |Vytvoření objektu factory třídy|[Makra objektu pro vytváření tříd](../../atl/reference/aggregation-and-class-factory-macros.md)|
 |Vytvoření instance|[Makra agregace](../../atl/reference/aggregation-and-class-factory-macros.md)|
 |Registrace kategorie funkcí|[Makra kategorií](../../atl/reference/category-macros.md)|
-|Úroveň třídy inicializace a vyčištění|[ObjectMain](ccomobjectrootex-class.md#objectmain)|  
+|Úroveň třídy inicializace a vyčištění|[ObjectMain](ccomobjectrootex-class.md#objectmain)|
 
 ##  <a name="object_entry_non_createable_ex_auto"></a>  OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO
 

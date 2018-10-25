@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 356027e151dcc94891b9c4043e4f1af8b2f0b947
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 847ad295956cafa12e3793dc68d663f005da095a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430914"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072834"
 ---
 # <a name="how-wininet-makes-it-easier-to-create-internet-client-applications"></a>Jak rozhraní WinInet usnadňuje tvorbu internetových klientských aplikací
 
@@ -33,15 +33,15 @@ Visual C++ poskytuje dva způsoby, jak použít rozhraní WinInet. Bude možné 
 
 - Stáhněte si stránky HTML.
 
-     HTTP je protokol, který slouží k přenosu stránky HTML ze serveru do prohlížeče klienta.
+   HTTP je protokol, který slouží k přenosu stránky HTML ze serveru do prohlížeče klienta.
 
 - Odesílání požadavků FTP pro nahrávání nebo stahování souborů nebo získat výpisech adresářů.
 
-     Typické požadavek je anonymní přihlášení ke stažení souboru.
+   Typické požadavek je anonymní přihlášení ke stažení souboru.
 
 - Použijte systém nabídek na gopher pro přístup k prostředkům v síti Internet.
 
-     Položky nabídky může být několik typů, včetně jiných nabídek, indexované databáze, můžete hledat, diskusní skupiny nebo soubor.
+   Položky nabídky může být několik typů, včetně jiných nabídek, indexované databáze, můžete hledat, diskusní skupiny nebo soubor.
 
 Pro všechny tři protokoly navázat připojení, zkontrolujte požadavky na server a ukončete připojení.
 
@@ -51,7 +51,7 @@ Pro všechny tři protokoly navázat připojení, zkontrolujte požadavky na ser
 
 - Použijte protokoly HTTP, FTP a gopher bez přímé programování rozhraní WinSock nebo protokolu TCP/IP.
 
-     Vývojáři, kteří používají Win32 Internet funkce není potřeba znát TCP/IP nebo rozhraní Windows Sockets. Můžete stále naprogramovat na úrovni soketu WinSock a TCP/IP protokoly pomocí přímo, ale je ještě snadnější použití tříd WinInet knihovny MFC pro přístup k protokolu HTTP, FTP a protokoly gopher přes Internet. Pro mnoho běžných operací vývojáři není nutné znát podrobnosti o konkrétní protokolu, který používají.
+   Vývojáři, kteří používají Win32 Internet funkce není potřeba znát TCP/IP nebo rozhraní Windows Sockets. Můžete stále naprogramovat na úrovni soketu WinSock a TCP/IP protokoly pomocí přímo, ale je ještě snadnější použití tříd WinInet knihovny MFC pro přístup k protokolu HTTP, FTP a protokoly gopher přes Internet. Pro mnoho běžných operací vývojáři není nutné znát podrobnosti o konkrétní protokolu, který používají.
 
 Mnoho operací, které můžete provádět v počítači jako klienta na jiné počítače na Internetu může trvat dlouhou dobu. Rychlost těchto operací je obvykle limitována rychlostí síťového připojení, ale může mít také vliv tak, že provoz v síti a složitosti operaci. Připojování ke vzdálenému serveru FTP, například vyžaduje, že počítač nejprve vyhledat název tohoto serveru na její adresu. Aplikace se pak pokusí připojit k serveru na této adrese. Jakmile je otevřeno připojení, počítačem a vzdáleným serverem opraví, zahájí se konverzace s protokol pro přenos souborů předtím, než ve skutečnosti můžete připojení k načtení souborů.
 

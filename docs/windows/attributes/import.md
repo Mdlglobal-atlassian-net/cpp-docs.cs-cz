@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a0509f6c1292ee7bb2e1ba97d1f75c626f3b0761
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 046a6eb0d1033efb44dd9f34806e747e1fafd700
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789498"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071112"
 ---
 # <a name="import"></a>import
 
@@ -90,5 +90,5 @@ Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.
 [Samostatné atributy](stand-alone-attributes.md)<br/>
 [importidl](importidl.md)<br/>
 [importlib](importlib.md)<br/>
-[Zahrnout](include-cpp.md)<br/>
-[includelib –](includelib-cpp.md)  
+[include](include-cpp.md)<br/>
+[includelib](includelib-cpp.md)

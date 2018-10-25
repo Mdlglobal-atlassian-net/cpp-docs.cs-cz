@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 868cae6701e17c79c9856b3a16c63c1e25b67bda
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: 8c3fec26f3e41c3edd2346ac2e1b9b1f6b98ba33
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494514"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069617"
 ---
 # <a name="library-support-for-mixed-assemblies"></a>Podpora knihovny pro smíšená sestavení
 
@@ -51,7 +51,6 @@ Tato podpora poskytuje že několik souvisejících výhody:
 Kromě toho tato podpora představuje následující omezení:
 
 - Je podporován pouze model CRT knihovny DLL pro kód zkompilovaný s **/CLR**. Neexistují žádné statické knihovny CRT, které podporují **/CLR** sestavení.
-
 
 ## <a name="see-also"></a>Viz také:
 

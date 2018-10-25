@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1ee17fe577f30735ca78661394c432519d0a4050
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f6fa8dcf1488b693b53cde591c548122767f1af7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396997"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075109"
 ---
 # <a name="file-handling-and-io-ccli"></a>Práce se soubory a vstupně-výstupní operace (C++/CLI)
 Ukazuje různé operace se soubory pomocí rozhraní .NET Framework.
@@ -182,6 +182,7 @@ int main()
    return 0;
 }
 ```
+
 ## <a name="read_text"></a> Čtení z textového souboru
 
 Následující příklad kódu ukazuje, jak otevřít a přečíst si jeden řádek textu souboru chvíli, s použitím <xref:System.IO.StreamReader> třídu, která je definována v <xref:System.IO?displayProperty=fullName> oboru názvů. Instance této třídy se používá k otevření textového souboru a pak <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> metoda se používá k načtení každého řádku.

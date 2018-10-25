@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31b9c0c8668ec16d84ad84627eb73a0f406eb21e
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: c639ddbe3d2e5b8a9c4f402df56215ca7efd1e1a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328373"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070436"
 ---
 # <a name="ide-and-compiler-tools-for-visual-c-development"></a>Integrované vývojové prostředí a kompilačních nástrojů pro vývoj v jazyce Visual C++
 
@@ -30,7 +30,7 @@ Kromě sdílené nástroje v integrovaném vývojovém prostředí sady Visual S
 
 ## <a name="create-projects"></a>Vytváření projektů
 
-A *projektu* je v podstatě sadu souborů se zdrojovým kódem a prostředky, jako jsou obrázky nebo data souborů, které jsou integrované do spustitelného souboru. 
+A *projektu* je v podstatě sadu souborů se zdrojovým kódem a prostředky, jako jsou obrázky nebo data souborů, které jsou integrované do spustitelného souboru.
 
 Visual Studio 2015 poskytuje podporu pro projekty MSBuild. Můžete si stáhnout rozšíření sady Visual Studio pro jiné systémy sestavení, jako je například Qt nebo CMake.
 
@@ -65,7 +65,7 @@ Další informace o vytváření uživatelského rozhraní pro aplikaci knihovny
 
 ## <a name="write-code"></a>Psaní kódu
 
-Když vytvoříte projekt, všechny soubory projektu jsou zobrazeny v **Průzkumníka řešení** okna. (A *řešení* je logický kontejner pro jeden nebo více souvisejících projektů.) Když kliknete na soubor .h a .cpp v **Průzkumníka řešení**, soubor se otevře v editoru kódu. 
+Když vytvoříte projekt, všechny soubory projektu jsou zobrazeny v **Průzkumníka řešení** okna. (A *řešení* je logický kontejner pro jeden nebo více souvisejících projektů.) Když kliknete na soubor .h a .cpp v **Průzkumníka řešení**, soubor se otevře v editoru kódu.
 
 ![Průzkumník řešení a editor kódu](media/vs2017-solution-explorer-code-editor.png "editoru Průzkumníku řešení Visual Studio 2017 a kódu")
 

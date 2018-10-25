@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 028c74bdc0c937fe59b621b81fb6abb8def63707
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: df664db673ee3989d689b8cf28b87cfff32a8dc7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46385102"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076812"
 ---
 # <a name="cmemoryexception-class"></a>Cmemoryexception – třída
 
@@ -79,6 +79,4 @@ Nepoužívejte tento konstruktor přímo, ale místo toho volat funkci globáln�
 
 [CException – třída](cexception-class.md)<br/>
 [Graf hierarchie](../hierarchy-chart.md)
-
-
 

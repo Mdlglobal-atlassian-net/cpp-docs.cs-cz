@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dd74589833d3a5debac4dfa8320267b7a9c430c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d16e3ca84b97aa1c6312ae9c634468b11ca86b9c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447372"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068169"
 ---
 # <a name="cobject-class"></a>CObject – třída
 
@@ -288,11 +288,9 @@ Pro verzi knihovny operátor **odstranit** uvolní paměť přidělenou operáto
 ```
 void PASCAL operator delete(void* p);
 
-
 void PASCAL operator delete(
     void* p,
     void* pPlace);
-
 
 void PASCAL operator delete(
     void* p,
@@ -327,7 +325,6 @@ Pro verzi knihovny operátor **nové** vede přidělení paměti pro optimální
 ```
 void* PASCAL operator new(size_t nSize);
 void* PASCAL operator new(size_t, void* p);
-
 
 void* PASCAL operator new(
     size_t nSize,
@@ -390,6 +387,4 @@ Zobrazit [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) seznam
 ## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-
-
 

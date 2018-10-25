@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95418345d72f0e5be30d2d8df989793dc49b20a4
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: acfb5ea65e4efcba13d6b376dbb2d0f2fe3e6855
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789374"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067862"
 ---
 # <a name="noncreatable"></a>noncreatable
 
@@ -76,4 +76,4 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](cp
 ## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
-[Atributy třídy](class-attributes.md)  
+[Atributy třídy](class-attributes.md)

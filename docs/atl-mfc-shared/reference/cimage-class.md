@@ -64,12 +64,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df61ebeea72a7cf860237b760288cc47ff353bf2
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: a1c27d20970b8e8634e8438c25733fd90a3ad632
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890657"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064794"
 ---
 # <a name="cimage-class"></a>Cimage – třída
 
@@ -172,7 +172,7 @@ Chcete-li zjistit, zda připojené rastrového obrázku je oddíl DIB, zavolejte
 
 ## <a name="example"></a>Příklad
 
-```cpp  
+```cpp
 // Get a CDC for the image
 CDC* pDC = CDC::FromHandle(m_myImage.GetDC());
 
@@ -181,19 +181,19 @@ pDC->Rectangle(0, 40, 100, 50);
 m_myImage.ReleaseDC();
 ```
 
-Při použití `CImage` v projektu knihovny MFC, mějte na paměti očekávat ukazatele na členské funkce, které ve vašem projektu [cbitmap –](../../mfc/reference/cbitmap-class.md) objektu. Pokud chcete použít `CImage` s funkcí, jako je [CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu), použijte [CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle), předáváme vaše `CImage` HBITMAP a použití vráceného `CBitmap*`.  
+Při použití `CImage` v projektu knihovny MFC, mějte na paměti očekávat ukazatele na členské funkce, které ve vašem projektu [cbitmap –](../../mfc/reference/cbitmap-class.md) objektu. Pokud chcete použít `CImage` s funkcí, jako je [CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu), použijte [CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle), předáváme vaše `CImage` HBITMAP a použití vráceného `CBitmap*`.
 
 ## <a name="example"></a>Příklad
 
-```cpp  
+```cpp
 void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 {
     UNREFERENCED_PARAMETER(nFlags);
-    
+
     CBitmap* pBitmap = CBitmap::FromHandle(m_myImage);
     m_pmenuPop->AppendMenu(0, ID_BMPCOMMAND, pBitmap);
     ClientToScreen(&point);
-    m_pmenuPop->TrackPopupMenu(TPM_RIGHTBUTTON | TPM_LEFTALIGN, point.x, 
+    m_pmenuPop->TrackPopupMenu(TPM_RIGHTBUTTON | TPM_LEFTALIGN, point.x,
     point.y, this);
 }
 ```
@@ -203,8 +203,8 @@ Prostřednictvím `CImage`, máte přístup k bitů DIB oddílu. Můžete použ�
 Můžete použít `CImage` z knihovny MFC ani ATL.
 
 > [!NOTE]
-> Při vytváření projektu pomocí `CImage`, je nutné definovat `CString` teprve potom zahrňte `atlimage.h`. Pokud váš projekt používá ATL bez knihovny MFC, zahrňte `atlstr.h` teprve potom zahrňte `atlimage.h`. Pokud váš projekt používá MFC (nebo pokud je projekt knihovny ATL pomocí podpory knihovny MFC), zahrnují `afxstr.h` teprve potom zahrňte `atlimage.h`.  
->   
+> Při vytváření projektu pomocí `CImage`, je nutné definovat `CString` teprve potom zahrňte `atlimage.h`. Pokud váš projekt používá ATL bez knihovny MFC, zahrňte `atlstr.h` teprve potom zahrňte `atlimage.h`. Pokud váš projekt používá MFC (nebo pokud je projekt knihovny ATL pomocí podpory knihovny MFC), zahrnují `afxstr.h` teprve potom zahrňte `atlimage.h`.<br/>
+> <br/>
 > Podobně, je nutné zahrnout `atlimage.h` teprve potom zahrňte `atlimpl.cpp`. K tomu snadno zahrnout `atlimage.h` ve vašich `stdafx.h`.
 
 ## <a name="requirements"></a>Požadavky
@@ -302,7 +302,7 @@ Nenulové, pokud je úspěšná. jinak 0.
 
 Prolnutí alfa bitmap podporují prolnutí barvu na základě jednotlivých pixelů.
 
-Když *bBlendOp* je nastavena na výchozí hodnotu AC_SRC_OVER zdrojovou bitmapu umístěno nad cílovou bitmapu podle hodnoty alfa zdroj pixelů.  
+Když *bBlendOp* je nastavena na výchozí hodnotu AC_SRC_OVER zdrojovou bitmapu umístěno nad cílovou bitmapu podle hodnoty alfa zdroj pixelů.
 
 ##  <a name="attach"></a>  CImage::Attach
 
@@ -506,9 +506,9 @@ Hodnota TRUE v případě úspěšného ověření. V opačném případě FALSE
 
 ### <a name="example"></a>Příklad
 
-Následující příklad vytvoří pomocí 16 bitů určený ke kódování každý pixel rastrového obrázku 100 x 100 pixelů. V dané 16bitové pixel bits 0 – 3 kódování červené, bits 4 – 7 kódování zelené a bits 8-11 kódování modrá. Zbývající bity 4 se nepoužívají.  
+Následující příklad vytvoří pomocí 16 bitů určený ke kódování každý pixel rastrového obrázku 100 x 100 pixelů. V dané 16bitové pixel bits 0 – 3 kódování červené, bits 4 – 7 kódování zelené a bits 8-11 kódování modrá. Zbývající bity 4 se nepoužívají.
 
-```cpp  
+```cpp
 DWORD adwBitmasks[3] = { 0x0000000f, 0x000000f0, 0x00000f00 };
 m_myImage.CreateEx(100, 100, 16, BI_BITFIELDS, adwBitmasks, 0);
 ```
@@ -725,16 +725,15 @@ Pole identifikátory GUID, s každý prvek odpovídající typy souborů v řet�
 *pszAllFilesDescription*<br/>
 Pokud tento parametr není NULL, řetězec filtru bude mít jeden další filtr na začátku seznamu. Tento filtr bude mít aktuální hodnotu *pszAllFilesDescription* jeho popis a přijímá soubory všechna rozšíření, která podporuje další Exportér v seznamu.
 
-Příklad:  
+Příklad:
 
-```cpp  
+```cpp
 //First filter in the list will be titled "All Image Files", and
 //will accept files with any extension supported by any exporter.
 CImage::GetExporterFilterString(
-    strExporters, aguidFileTypes, 
+    strExporters, aguidFileTypes,
 _T("All Image Files"));
 ```
-
 
 *dwExclude*<br/>
 Sada bitové příznaky určující, které typy souborů k vyloučení ze seznamu. Jsou povolená příznaky:
@@ -821,16 +820,15 @@ Pole identifikátory GUID, s každý prvek odpovídající typy souborů v řet�
 *pszAllFilesDescription*<br/>
 Pokud tento parametr není NULL, řetězec filtru bude mít jeden další filtr na začátku seznamu. Tento filtr bude mít aktuální hodnotu *pszAllFilesDescription* jeho popis a přijímá soubory všechna rozšíření, která podporuje další Exportér v seznamu.
 
-Příklad:  
+Příklad:
 
-```cpp  
+```cpp
 //First filter in the list will be titled "All Image Files", and
 //will accept files with any extension supported by any importer.
 CImage::GetImporterFilterString(
-    strImporters, aguidFileTypes, 
+    strImporters, aguidFileTypes,
 _T("All Image Files"));
 ```
-
 
 *dwExclude*<br/>
 Sada bitové příznaky určující, které typy souborů k vyloučení ze seznamu. Jsou povolená příznaky:
@@ -1360,7 +1358,7 @@ Nastaví hodnoty barvy červená, zelená, modrá (RGB) pro celou řadu položek
 
 ```
 void SetColorTable(
-    UINT iFirstColor, 
+    UINT iFirstColor,
     UINT nColors,
     const RGBQUAD* prgbColors) throw();
 ```
@@ -1427,7 +1425,7 @@ Index barev palety barev.
 Nastaví je pixel v umístění určeném *x* a *y* barvy indikován *r*, *g*, a *b*, v červené, zelené a modré (RGB) image.
 
 ```
-void SetPixelRGB(  
+void SetPixelRGB(
     int x,
     int y,
     BYTE r,
@@ -1639,12 +1637,12 @@ TRUE, pokud je úspěšná, jinak hodnota FALSE.
 
 `TransparentBlt` platí pro zdrojové bitmapy 4 bitů na pixel a 8 bitů na pixel. Použití [CImage::AlphaBlend](#alphablend) určit rastrové obrázky 32 bitů na pixel se transparentnost.
 
-### <a name="example"></a>Příklad  
+### <a name="example"></a>Příklad
 
-```cpp  
-// Performs a transparent blit from the source image to the destination 
+```cpp
+// Performs a transparent blit from the source image to the destination
 // image using the images' current transparency settings
-BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage, 
+BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
        int xDest, int yDest, int nDestWidth, int nDestHeight)
 {
     HDC hDstDC = NULL;
@@ -1676,4 +1674,4 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)<br/>
 [Desktopové komponenty ATL objektů COM](../../atl/atl-com-desktop-components.md)<br/>
 [Bitmap nezávislých na zařízení](/windows/desktop/gdi/device-independent-bitmaps)<br/>
-[CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
+[CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)

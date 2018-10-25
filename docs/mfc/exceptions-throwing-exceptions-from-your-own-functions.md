@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6ef86f54442031b4383e6a0b8cc6f57e4e53d58
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a26bd11c2a37e3644333a95ed03d9182f7b32b87
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418421"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066107"
 ---
 # <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Výjimky: Generování výjimek ve vašich vlastních funkcích
 
@@ -33,19 +33,19 @@ Když je vyvolána výjimka, provedení aktuální funkce se zastaví a přejde 
 
 1. Použijte jednu z knihovny MFC pomocných funkcí, jako například `AfxThrowMemoryException`. Tyto funkce vyvolat objekt předběžně přidělené výjimky příslušného typu.
 
-     Funkce v následujícím příkladu, pokusí se o přidělení dva bloky paměti a vyvolá výjimku, pokud se nezdaří buď přidělování:
+   Funkce v následujícím příkladu, pokusí se o přidělení dva bloky paměti a vyvolá výjimku, pokud se nezdaří buď přidělování:
 
-     [!code-cpp[NVC_MFCExceptions#17](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_1.cpp)]
+   [!code-cpp[NVC_MFCExceptions#17](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_1.cpp)]
 
-     Pokud první přidělení selže, může jednoduše vyvolat výjimky paměti. Pokud první přidělení je úspěšné, ale druhý se nezdaří, je nutné uvolnit první blok přidělení před vygenerováním výjimky. Pokud obě přidělení úspěšné, můžete normálně pokračovat a uvolnění bloky při ukončení funkce.
+   Pokud první přidělení selže, může jednoduše vyvolat výjimky paměti. Pokud první přidělení je úspěšné, ale druhý se nezdaří, je nutné uvolnit první blok přidělení před vygenerováním výjimky. Pokud obě přidělení úspěšné, můžete normálně pokračovat a uvolnění bloky při ukončení funkce.
 
      - nebo –
 
 1. Slouží k označení podmínku problém s výjimkou definovaný uživatelem. Položky libovolného typu, dokonce i celou třídu, můžete vyvolat jako výjimky.
 
-     Následující příklad se pokusí zvukový signál prostřednictvím vlnové zařízení a vyvolá výjimku, pokud dojde k selhání.
+   Následující příklad se pokusí zvukový signál prostřednictvím vlnové zařízení a vyvolá výjimku, pokud dojde k selhání.
 
-     [!code-cpp[NVC_MFCExceptions#18](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_2.cpp)]
+   [!code-cpp[NVC_MFCExceptions#18](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_2.cpp)]
 
 > [!NOTE]
 >  Knihovny MFC výchozí zpracování výjimek, které se vztahuje pouze na ukazatele na `CException` objekty (a objekty `CException`-odvozené třídy). Výše uvedený příklad obchází mechanismus výjimek MFC.

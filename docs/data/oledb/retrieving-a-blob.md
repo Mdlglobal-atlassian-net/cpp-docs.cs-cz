@@ -1,7 +1,7 @@
 ---
 title: Načtení objektu BLOB | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -17,50 +17,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5194d205dc29df9c73e3ca44637f23ca16f72e6b
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 1608bf5db491a090f70da5242173fc96419a6179
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083772"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070161"
 ---
 # <a name="retrieving-a-blob"></a>Načtení objektu BLOB
 
-Můžete načíst binární velkých objektů (BLOB) různými způsoby. Můžete použít `DBTYPE_BYTES` k načtení objektu BLOB jako sekvence bajtů nebo můžete použít rozhraní jako `ISequentialStream`. Další informace najdete v tématu [objekty BLOB a objekty OLE](/previous-versions/windows/desktop/ms711511) v *OLE DB referenční informace pro programátory*.  
-  
-Následující kód ukazuje, jak načíst objekt BLOB pomocí `ISequentialStream`. Makro [BLOB_ENTRY](../../data/oledb/blob-entry.md) vám umožní určit rozhraní a příznaky použité pro rozhraní. Po otevření tabulce Kód volá `Read` opakovaně na `ISequentialStream` čtení bajtů z objektu BLOB. Kód volá `Release` k uvolnění rozhraní ukazatele před voláním `MoveNext` k získání dalšího záznamu.  
-  
-```cpp  
-class CCategories  
-{  
-public:  
-   ISequentialStream*   pPicture;  
-  
-BEGIN_COLUMN_MAP(CCategories)  
-   BLOB_ENTRY(4, IID_ISequentialStream, STGM_READ, pPicture)  
-END_COLUMN_MAP()  
-};  
-  
-CTable<CAccessor<CCategories>> categories;  
-ULONG          cb;  
-BYTE            myBuffer[65536];  
-  
-categories.Open(session, "Categories");  
+Můžete načíst binární velkých objektů (BLOB) různými způsoby. Můžete použít `DBTYPE_BYTES` k načtení objektu BLOB jako sekvence bajtů nebo můžete použít rozhraní jako `ISequentialStream`. Další informace najdete v tématu [objekty BLOB a objekty OLE](/previous-versions/windows/desktop/ms711511) v **OLE DB referenční informace pro programátory**.
 
-while (categories.MoveNext() == S_OK)  
-{  
-   do  
-   {  
-      categories.pPicture->Read(myBuffer, 65536, &cb);  
-      // Do something with the buffer  
-   } while (cb > 0);  
-   categories.pPicture->Release();  
-}  
-```  
-  
-Další informace o makra, které zpracovávají data objektů BLOB, naleznete v části "Makra Map sloupec" v [makra a globální funkce pro šablony příjemců OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
-  
-## <a name="see-also"></a>Viz také  
+Následující kód ukazuje, jak načíst objekt BLOB pomocí `ISequentialStream`. Makro [BLOB_ENTRY](../../data/oledb/blob-entry.md) vám umožní určit rozhraní a příznaky použité pro rozhraní. Po otevření tabulce Kód volá `Read` opakovaně na `ISequentialStream` čtení bajtů z objektu BLOB. Kód volá `Release` k uvolnění rozhraní ukazatele před voláním `MoveNext` zobrazíte další záznam.
+
+```cpp
+class CCategories
+{
+public:
+   ISequentialStream* pPicture;
+
+BEGIN_COLUMN_MAP(CCategories)
+   BLOB_ENTRY(4, IID_ISequentialStream, STGM_READ, pPicture)
+END_COLUMN_MAP()
+};
+```
+
+Použije v následujícím kódu:
+
+```cpp
+CTable<CAccessor<CCategories>> categories;
+ULONG cb;
+BYTE myBuffer[65536];
+
+categories.Open(session, "Categories");
+
+while (categories.MoveNext() == S_OK)
+{
+   do
+   {
+      categories.pPicture->Read(myBuffer, 65536, &cb);
+      // Do something with the buffer
+   } while (cb > 0);
+   categories.pPicture->Release();
+}
+```
+
+Další informace o makra, které zpracovávají data objektů BLOB najdete v tématu **makra Map sloupec** v [makra a globální funkce pro šablony příjemců OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).
+
+## <a name="see-also"></a>Viz také
 
 [Použití přístupových objektů](../../data/oledb/using-accessors.md)<br/>
-[Makra a globální funkce pro šablony příjemců OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)
+[Makra a globální funkce pro šablony příjemců OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)<br/>

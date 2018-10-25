@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8376db7eb824856d84e8c742d8a187604f939455
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 13e3f621bafad08694e8e930835ecc62562db013
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384710"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071677"
 ---
 # <a name="custom-image-dialog-box-c-image-editor-for-icons"></a>Dialogové okno vlastní obrázek (Editor obrázků pro ikony) (C++)
 
@@ -31,19 +31,19 @@ Umožňuje vytvořit novou bitovou kopii s vlastní velikost a počet barev.
 - **Šířka**
 
    Poskytuje prostor pro zadání šířku vlastního obrázku v pixelech (1-512, limit 2048).
-  
+
 - **Výška**
 
    Poskytuje prostor pro zadání výška vlastního obrázku v pixelech (1-512, limit 2048).
-  
+
 - **Barvy**
 
    Poskytuje prostor, můžete zvolit počet barev pro vlastní image: 2, 16 nebo 256.
-  
+
 ## <a name="requirements"></a>Požadavky
 
 Žádné
-  
+
 ## <a name="see-also"></a>Viz také
 
 [Nové \<zařízení > typ dialogového okna obrázku zařízení](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)<br/>

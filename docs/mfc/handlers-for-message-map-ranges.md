@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca420ce09cae5bf7c11dcfb0ad384e0002bdc4b1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 738d441cf88b41740cb0cff933916489cac683f2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403567"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073094"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Obslužné rutiny pro oblasti map zpráv
 
@@ -81,7 +81,7 @@ Položka mapování zpráv se skládá z následujících položek:
 
 - Parametry do makra:
 
-     První dvě makra mít tři parametry:
+   První dvě makra mít tři parametry:
 
    - ID příkazu, který se spustí rozsahu
 
@@ -89,9 +89,9 @@ Položka mapování zpráv se skládá z následujících položek:
 
    - Název obslužné rutiny zpráv
 
-     Rozsah ID příkazů musí být spojití.
+   Rozsah ID příkazů musí být spojití.
 
-     Třetí makro `ON_CONTROL_RANGE`, přijímá další první parametr: zpráva oznámení ovládacího prvku, jako například **EN_CHANGE**.
+   Třetí makro `ON_CONTROL_RANGE`, přijímá další první parametr: zpráva oznámení ovládacího prvku, jako například **EN_CHANGE**.
 
 ##  <a name="_core_declaring_the_handler_function"></a> Deklarace funkce obslužné rutiny
 
@@ -113,11 +113,11 @@ Při zápisu položky mapování zpráv, zadejte:
 
 - Dva identifikátory, počáteční a koncové souvislý rozsah příkazů.
 
-     Tady jsou **ID_VIEW_ZOOM25** a **ID_VIEW_ZOOM300**.
+   Tady jsou **ID_VIEW_ZOOM25** a **ID_VIEW_ZOOM300**.
 
 - Název obslužné rutiny pro příkazy.
 
-     Tady je `OnZoom`.
+   Tady je `OnZoom`.
 
 Deklarace funkce by vypadat přibližně takto:
 
@@ -137,15 +137,15 @@ Při psaní `ON_CONTROL_RANGE` – makro v mapě zpráv, zadejte:
 
 - Konkrétní oznámení ovládacího prvku zprávy.
 
-     Tady je **BN_CLICKED**.
+   Tady je **BN_CLICKED**.
 
 - ID ovládacího prvku hodnot spojené s souvislý rozsah ovládací prvky.
 
-     Tady jsou **IDC_BUTTON1** a **IDC_BUTTON10**.
+   Tady jsou **IDC_BUTTON1** a **IDC_BUTTON10**.
 
 - Název obslužné rutiny zprávy.
 
-     Tady je `OnButtonClicked`.
+   Tady je `OnButtonClicked`.
 
 Při zápisu funkce obslužné rutiny, zadejte nadbytečné **UINT** parametru, jak je znázorněno v následujících tématech:
 

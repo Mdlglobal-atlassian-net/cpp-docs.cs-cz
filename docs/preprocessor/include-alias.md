@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26e59888a26b5f71b697e398e81b16012dd35e3a
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: c9844c610a1b5bffab8f5fba67daff90a52412e4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42465567"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065171"
 ---
 # <a name="includealias"></a>include_alias
 
@@ -31,7 +31,7 @@ Určuje, že *short_filename* má být použit jako alias pro *long_filename*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>include_alias – Direktiva pragma ("*long_filename*","*short_filename*")  
+> #<a name="pragma-includealiaslongfilename-shortfilename"></a>include_alias – Direktiva pragma ("*long_filename*","*short_filename*")
 > #<a name="pragma-includealiaslongfilename-shortfilename"></a>include_alias – Direktiva pragma (*long_filename*, *short_filename*)
 
 ## <a name="remarks"></a>Poznámky
@@ -59,7 +59,7 @@ Hledaný alias se musí se specifikací přesně shodovat ve velikosti písmen, 
 ```
 
 není zavedení aliasů (nahrazení) provedeno, protože řetězce souborů hlaviček nejsou přesně shodné. Také názvy souborů hlaviček použité jako argumenty, které mají `/Yu` a `/Yc` – možnosti kompilátoru, nebo `hdrstop` – Direktiva pragma, nejsou nahrazeny. Obsahuje-li zdrojový kód například následující direktivu,
-  
+
 ```cpp
 #include <AppleSystemHeaderStop.h>
 ```
@@ -111,7 +111,7 @@ Povšimněte si také, že není podporována přenositelnost. Jsou-li dány ná
 #include "one.h"
 ```
 
-kompilátor hledá namísto souboru THREE.H soubor TWO.H.  
+kompilátor hledá namísto souboru THREE.H soubor TWO.H.
 
 ## <a name="see-also"></a>Viz také
 

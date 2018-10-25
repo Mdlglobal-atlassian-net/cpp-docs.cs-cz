@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d198368dd3ed1be9110f08712de646156c98bb63
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 19e2e7120a73ed7e386b46f32d105376f3fac9b2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406773"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069240"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Návod: Ladění aplikace C++ AMP
 
@@ -247,27 +247,27 @@ Tato část ukazuje, jak na ladění kódu GPU, což je kód obsažen v `sum_ker
 
 1. Chcete-li otevřít **vlákna GPU** okna na řádku nabídek zvolte **ladění** > **Windows** > **vlákna GPU**.
 
-     Stav vlákna GPU v si můžete prohlédnout **vlákna GPU** okno, které se zobrazí.
+   Stav vlákna GPU v si můžete prohlédnout **vlákna GPU** okno, které se zobrazí.
 
 2. Ukotvit **vlákna GPU** okno v dolní části sady Visual Studio. Zvolte **rozbalte přepínač vlákno** tlačítko zobrazíte textová pole a vlákno. **Vlákna GPU** okno zobrazuje celkový počet aktivních a blokovaná vlákna GPU, jak je znázorněno na následujícím obrázku.
 
      ![Vlákna GPU – okno s 4 aktivní vlákna](../../parallel/amp/media/campc.png "campc") vlákna GPU – okno
 
-     Existují 313 dlaždice přidělených pro tento výpočet. Každá dlaždice obsahuje 32 vláken. Protože místní ladění GPU na emulátoru softwaru dojde, existují čtyři aktivní vlákna GPU. Čtyři vlákna současného provádění pokynů a poté přesuňte společně do další instrukci.
+   Existují 313 dlaždice přidělených pro tento výpočet. Každá dlaždice obsahuje 32 vláken. Protože místní ladění GPU na emulátoru softwaru dojde, existují čtyři aktivní vlákna GPU. Čtyři vlákna současného provádění pokynů a poté přesuňte společně do další instrukci.
 
-     V **vlákna GPU** okna, jsou čtyři vlákna GPU aktivní a zablokovaný 28 vlákna GPU [tile_barrier::wait](reference/tile-barrier-class.md#wait) příkaz definovaný na o řádku 21 (`t_idx.barrier.wait();`). Všechny 32 vláken GPU patří do první dlaždice `tile[0]`. Šipka odkazuje na řádek, který zahrnuje aktuální vlákno. Pokud chcete přepnout do jiného vlákna, použijte jednu z následujících metod:
+   V **vlákna GPU** okna, jsou čtyři vlákna GPU aktivní a zablokovaný 28 vlákna GPU [tile_barrier::wait](reference/tile-barrier-class.md#wait) příkaz definovaný na o řádku 21 (`t_idx.barrier.wait();`). Všechny 32 vláken GPU patří do první dlaždice `tile[0]`. Šipka odkazuje na řádek, který zahrnuje aktuální vlákno. Pokud chcete přepnout do jiného vlákna, použijte jednu z následujících metod:
 
     - V řádku pro vlákno pro přepnutí do v **vlákna GPU** okno, otevřete místní nabídku a zvolte **přepnout na vlákno**. Pokud řádek představuje více než jedno vlákno, nebudete se přepnout na první vlákno podle souřadnice vlákna.
 
     - Zadejte hodnoty pole a vlákno vlákna do příslušných textových polí a klikněte na tlačítko **přepínač vlákno** tlačítko.
 
-     **Zásobník volání** v okně se zobrazí zásobník volání aktuálního vlákna GPU.
+   **Zásobník volání** v okně se zobrazí zásobník volání aktuálního vlákna GPU.
 
 ### <a name="to-use-the-parallel-stacks-window"></a>Použití okna paralelní zásobníky
 
 1. Chcete-li otevřít **paralelní zásobníky** okna na řádku nabídek zvolte **ladění** > **Windows** > **paralelní zásobníky**.
 
-     Můžete použít **paralelní zásobníky** okno současně kontrolovat rámce zásobníku z více vláken GPU.
+   Můžete použít **paralelní zásobníky** okno současně kontrolovat rámce zásobníku z více vláken GPU.
 
 2. Ukotvit **paralelní zásobníky** okno v dolní části sady Visual Studio.
 
@@ -275,19 +275,19 @@ Tato část ukazuje, jak na ladění kódu GPU, což je kód obsažen v `sum_ker
 
      ![Okno paralelních zásobníků s 4 aktivní vlákna](../../parallel/amp/media/campd.png "campd") okna paralelní zásobníky
 
-     32 vláken se nepovedlo z `_kernel_stub` na příkaz lambda v `parallel_for_each` volání funkce a pak `sum_kernel_tiled` funkce, kde dochází k paralelní redukci. 28 mimo 32 vláken pokročila do [tile_barrier::wait](reference/tile-barrier-class.md#wait) příkazu a zůstat blokovaných na řádku 22, zatímco 4 vlákna zůstaly aktivní v `sum_kernel_tiled` funkce na řádku 30.
+   32 vláken se nepovedlo z `_kernel_stub` na příkaz lambda v `parallel_for_each` volání funkce a pak `sum_kernel_tiled` funkce, kde dochází k paralelní redukci. 28 mimo 32 vláken pokročila do [tile_barrier::wait](reference/tile-barrier-class.md#wait) příkazu a zůstat blokovaných na řádku 22, zatímco 4 vlákna zůstaly aktivní v `sum_kernel_tiled` funkce na řádku 30.
 
-     Můžete si prohlédnout vlastnosti vlákna GPU, které jsou k dispozici v **vlákna GPU** okna v bohaté datového tipu sady **paralelní zásobníky** okna. Chcete-li to provést, umístěte ukazatel myši na rámec zásobníku **sum_kernel_tiled**. Následující obrázek znázorňuje DataTip.
+   Můžete si prohlédnout vlastnosti vlákna GPU, které jsou k dispozici v **vlákna GPU** okna v bohaté datového tipu sady **paralelní zásobníky** okna. Chcete-li to provést, umístěte ukazatel myši na rámec zásobníku **sum_kernel_tiled**. Následující obrázek znázorňuje DataTip.
 
      ![Datového tipu pro okna paralelní zásobníky](../../parallel/amp/media/campe.png "campe") vlákna GPU datového tipu
 
-     Další informace o **paralelní zásobníky** okna, naleznete v tématu [použití okna paralelní zásobníky](/visualstudio/debugger/using-the-parallel-stacks-window).
+   Další informace o **paralelní zásobníky** okna, naleznete v tématu [použití okna paralelní zásobníky](/visualstudio/debugger/using-the-parallel-stacks-window).
 
 ### <a name="to-use-the-parallel-watch-window"></a>Použití okna paralelního sledování
 
 1. Chcete-li otevřít **paralelní sledování** okna na řádku nabídek zvolte **ladění** > **Windows** > **paralelní sledování**  >  **Paralelní sledování 1**.
 
-     Můžete použít **paralelní sledování** okno pro kontrolu hodnot výrazu napříč více vlákny.
+   Můžete použít **paralelní sledování** okno pro kontrolu hodnot výrazu napříč více vlákny.
 
 2. Ukotvit **paralelního kukátka 1** okno do dolní části sady Visual Studio. Existují 32 řádky v tabulce **paralelní sledování** okna. Každý odpovídá GPU vlákno, které se zobrazovalo v okně vlákna GPU a **paralelní zásobníky** okna. Teď můžete zadat výrazy jehož hodnoty, které chcete kontrolovat napříč všech 32 vláken GPU.
 
@@ -297,17 +297,17 @@ Tato část ukazuje, jak na ladění kódu GPU, což je kód obsažen v `sum_ker
 
 5. Vyberte **Přidat kukátko** znovu záhlaví sloupců, typ `localA[localIdx[0]]`a klikněte na tlačítko **Enter** klíč.
 
-     Výběrem příslušné záhlaví sloupce můžete řadit podle zadaného výrazu.
+   Výběrem příslušné záhlaví sloupce můžete řadit podle zadaného výrazu.
 
-     Vyberte **localA [localIdx [0]]** záhlaví sloupce seřadí hodnoty ve sloupci. Následující obrázek ukazuje výsledky řazení podle **localA [localIdx [0]]**.
+   Vyberte **localA [localIdx [0]]** záhlaví sloupce seřadí hodnoty ve sloupci. Následující obrázek ukazuje výsledky řazení podle **localA [localIdx [0]]**.
 
      ![Paralelního kukátka s seřazených výsledků](../../parallel/amp/media/campf.png "campf") výsledky řazení
 
-     Můžete exportovat obsah **paralelní sledování** okno do Excelu výběrem **Excel** tlačítko a pak zvolíte **otevřít v aplikaci Excel**. Pokud máte ve svém vývojovém počítači nainstalována aplikace Excel, tím se otevře, který obsahuje obsah Excelového listu.
+   Můžete exportovat obsah **paralelní sledování** okno do Excelu výběrem **Excel** tlačítko a pak zvolíte **otevřít v aplikaci Excel**. Pokud máte ve svém vývojovém počítači nainstalována aplikace Excel, tím se otevře, který obsahuje obsah Excelového listu.
 
 6. V pravém horním rohu **paralelní sledování** okna, je ovládací prvek filtru, který vám umožní filtrovat obsah pomocí logických operátorů. ENTER `localA[localIdx[0]] > 20000` text filtru ovládací prvek pole a klikněte na tlačítko **Enter** klíč.
 
-     V okně nyní obsahuje pouze vlákna, na kterém `localA[localIdx[0]]` hodnota je větší než 20000. Obsah je pořád seřazené podle `localA[localIdx[0]]` sloupec, který je řazení akce jste provedli dříve.
+   V okně nyní obsahuje pouze vlákna, na kterém `localA[localIdx[0]]` hodnota je větší než 20000. Obsah je pořád seřazené podle `localA[localIdx[0]]` sloupec, který je řazení akce jste provedli dříve.
 
 ## <a name="flagging-gpu-threads"></a>Nastavení příznaku vlákna GPU
 
@@ -321,20 +321,20 @@ Můžete označit konkrétní vlákna GPU označením je **vlákna GPU** okně *
 
 3. Výběrem symbolu příznak na levé straně řádek, který obsahuje čtyři vlákna, které jsou nyní aktivní.
 
-     Následující obrázek znázorňuje čtyři aktivní vlákna s příznakem v **vlákna GPU** okna.
+   Následující obrázek znázorňuje čtyři aktivní vlákna s příznakem v **vlákna GPU** okna.
 
      ![Okno vláken GPU s vlákna s příznakem](../../parallel/amp/media/campg.png "campg") aktivní vlákna v okně vlákna GPU
 
-     **Paralelní sledování** okno a datového tipu sady **paralelní zásobníky** okno obou označení vlákna s příznakem.
+   **Paralelní sledování** okno a datového tipu sady **paralelní zásobníky** okno obou označení vlákna s příznakem.
 
 4. Pokud chcete zaměřit na čtyři vlákna, které jste příznakem, můžete zobrazit v **vlákna GPU**, **paralelní sledování**, a **paralelní zásobníky** windows, pouze s příznakem vlákna.
 
-     Zvolte **zobrazit pouze s příznakem** tlačítko na jakémkoli systému windows nebo na **umístění ladění** nástrojů. Je vidět na následujícím obrázku **zobrazit pouze s příznakem** tlačítko **umístění ladění** nástrojů.
+   Zvolte **zobrazit pouze s příznakem** tlačítko na jakémkoli systému windows nebo na **umístění ladění** nástrojů. Je vidět na následujícím obrázku **zobrazit pouze s příznakem** tlačítko **umístění ladění** nástrojů.
 
      ![Panel nástrojů ladit umístění s ikonou zobrazit pouze označená příznakem](../../parallel/amp/media/camph.png "camph")
 **zobrazit pouze s příznakem** tlačítko
 
-     Nyní **vlákna GPU**, **paralelní sledování**, a **paralelní zásobníky** windows zobrazit pouze vlákna s příznakem.
+   Nyní **vlákna GPU**, **paralelní sledování**, a **paralelní zásobníky** windows zobrazit pouze vlákna s příznakem.
 
 ## <a name="freezing-and-thawing-gpu-threads"></a>Zmrazení a uvolnění vlákna GPU
 
@@ -348,11 +348,11 @@ Můžete ukotvit (Pozastavit) a uvolnit vlákna GPU (pokračovat) buď z **vlák
 
 3. Otevřete místní nabídku pro aktivní řádek a pak zvolte **ukotvit**.
 
-     Na následující ilustraci **vlákna GPU** okno zobrazuje, že všechny čtyři vlákna jsou zmražená.
+   Na následující ilustraci **vlákna GPU** okno zobrazuje, že všechny čtyři vlákna jsou zmražená.
 
      ![Vlákna GPU windows zobrazující zmrazené vlákna](../../parallel/amp/media/campk.png "campk") zmrazené vlákna **vlákna GPU** okna
 
-     Podobně **paralelní sledování** okno zobrazuje, že všechny čtyři vlákna jsou zmražená.
+   Podobně **paralelní sledování** okno zobrazuje, že všechny čtyři vlákna jsou zmražená.
 
 4. V panelu nabídky zvolte **ladění** > **pokračovat** umožňující další čtyři vlákna GPU průběhu posledních odbourejte překážky bránící na řádku 22 a dosáhnout zarážku na řádky 30. **Vlákna GPU** okno zobrazuje, čtyři dříve zmrazené vlákna zůstaly zamrznuté a v aktivním stavu.
 
@@ -364,7 +364,7 @@ Můžete ukotvit (Pozastavit) a uvolnit vlákna GPU (pokračovat) buď z **vlák
 
 1. Na místní nabídku pro jednu z vlákna **vlákna GPU** okně zvolte **Group By**, **adresu**.
 
-     Vlákna **vlákna GPU** okna jsou seskupené podle adres. Adresa odpovídá podle pokynů ve zpětném překladu, ve kterém je každá skupina vlákna umístěna. na řádku 22 jsou vlákna 24 kde [tile_barrier::wait – metoda](reference/tile-barrier-class.md#wait) provádí. 12 vlákna jsou podle instrukce pro odbourejte překážky bránící na řádku 32. Čtyři tato vlákna s příznakem. Osm vlákna jsou na zarážku na řádky 30. Čtyři tato vlákna jsou zmražená. Následující obrázek znázorňuje seskupená vlákna **vlákna GPU** okna.
+   Vlákna **vlákna GPU** okna jsou seskupené podle adres. Adresa odpovídá podle pokynů ve zpětném překladu, ve kterém je každá skupina vlákna umístěna. na řádku 22 jsou vlákna 24 kde [tile_barrier::wait – metoda](reference/tile-barrier-class.md#wait) provádí. 12 vlákna jsou podle instrukce pro odbourejte překážky bránící na řádku 32. Čtyři tato vlákna s příznakem. Osm vlákna jsou na zarážku na řádky 30. Čtyři tato vlákna jsou zmražená. Následující obrázek znázorňuje seskupená vlákna **vlákna GPU** okna.
 
      ![Vlákna GPU – okno s vlákny seskupené podle adres](../../parallel/amp/media/campl.png "campl") seskupená vlákna **vlákna GPU** okna
 
@@ -382,7 +382,7 @@ Spuštění všech vláken v daném bloku na řádek obsahující kurzor pomocí
 
 3. V místní nabídce pro **Editor kódu**, zvolte **spustit aktuální dlaždici ke kurzoru**.
 
-     24 vlákna, které byly dříve blokovány bariéře na řádku 21 pokročila řádek 32. To je ukázáno **vlákna GPU** okna.
+   24 vlákna, které byly dříve blokovány bariéře na řádku 21 pokročila řádek 32. To je ukázáno **vlákna GPU** okna.
 
 ## <a name="see-also"></a>Viz také
 

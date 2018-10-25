@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c21c3e62283c51257dd004f7473ad92de105a046
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0ff98b2413e2bf1626530b82a6c928ba7f7c50e4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382777"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068564"
 ---
 # <a name="csplitbutton-class"></a>Csplitbutton – třída
 
@@ -121,7 +121,6 @@ Vytvoří `CSplitButton` objektu. Zadejte parametry konstruktoru podnabídky, kt
 
 ```
 CSplitButton();
-
 
 CSplitButton(
     UINT nMenuId,

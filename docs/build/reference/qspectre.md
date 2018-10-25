@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0baba6503d1d5b4e382347f4f4d9680b11f954ce
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 7bef66e8b3c326f205b6399538a811bcc83c9f9d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328516"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070397"
 ---
 # <a name="qspectre"></a>/ Qspectre
 
@@ -36,7 +36,7 @@ Určuje kompilátoru generování pokynů ke zmírnění chyby zabezpečení ur�
 
 **/Qspectre** možnost je vypnuto ve výchozím nastavení.
 
-V its vitial release **/qspectre** možnost pouze pracovali v optimalizovaném kódu. V sadě Visual Studio 2017 verze 15.7 nebo novější **/qspectre** možnost se podporuje na všech úrovních optimalizace. 
+V its vitial release **/qspectre** možnost pouze pracovali v optimalizovaném kódu. V sadě Visual Studio 2017 verze 15.7 nebo novější **/qspectre** možnost se podporuje na všech úrovních optimalizace.
 
 Knihovny Microsoft Visual C++ jsou také k dispozici ve verzích s zmírnění hrozby Spectre. V instalačním programu sady Visual Studio si můžete stáhnout zmírnit hrozby Spectre knihovny pro Visual Studio 2017. Se nenachází v **jednotlivé komponenty** kartu **sestavení kompilátory, nástroje a moduly runtime**, a mít "Knihovny pro Spectre" v názvu. Jsou k dispozici pro celou dílčí moduly runtime Visual C++ knihovny DLL a statických runtime knihovny se zmírněními hrozeb povolená omezení rizik: spuštění kódu VC ++, vcruntime140, msvcp140, concrt140 a vcamp140. Knihovny DLL jsou podporovány pro nasazení místní aplikace. obsah Visual C++ 2017 modulu Runtime knihoven Redistributable nebyl změněn. Můžete také nainstalovat zmírnit hrozby Spectre knihovny MFC a ATL, součástí **jednotlivé komponenty** kartu **sad SDK, knihoven a architektur**.
 

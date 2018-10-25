@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9783da47a22260f0edbe5ddf6d8f5021aae31e5c
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 1867f044c143fc0e5fbb06705bf45b8fa729a5cc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083798"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068967"
 ---
 # <a name="application-information-and-management"></a>Informace o aplikacích a správa aplikací
 
@@ -61,8 +61,6 @@ Knihovny Microsoft Foundation Class poskytuje následující globální funkce u
 |[Afxsocketinit –](#afxsocketinit)|Volá se `CWinApp::InitInstance` přepsání se inicializovat rozhraní Windows Sockets.|
 |[Afxusertoolsmanager –](#afxusertoolsmanager)|Ukazatel na globální [nástroje Správce uživatelů](cusertoolsmanager-class.md).|
 |[Afxwininit –](#afxwininit)|Volá zadaný MFC `WinMain` funkce, jako součást [CWinApp](../../mfc/reference/cwinapp-class.md) inicializace aplikace využívající grafické rozhraní, se inicializovat knihovnu MFC. Je nutné volat přímo pro konzolové aplikace, které používají knihovnu MFC.|
-
-
 
 ##  <a name="afxbeginthread"></a>  AfxBeginThread
 
@@ -145,6 +143,7 @@ Ukazatel na globální [kontextové nabídky správce](ccontextmenumanager-class
 ```
 CContextMenuManager* afxContextMenuManager;
 ```
+
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxcontextmenumanager.h
@@ -152,7 +151,6 @@ CContextMenuManager* afxContextMenuManager;
 ### <a name="see-also"></a>Viz také
 
 [CContextMenuManager – třída](ccontextmenumanager-class.md)
-
 
 ##  <a name="afxendthread"></a>  AfxEndThread
 
@@ -190,6 +188,7 @@ Použití `AfxFindResourceHandle` vás řetězce prostředků a vyhledejte konkr
 ```
 HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *lpszName*<br/>
@@ -471,6 +470,7 @@ Určuje, zda je daném okně Rozšířené orámovat objekt.
 ```
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *pWnd*<br/>
@@ -514,6 +514,7 @@ Určuje, zda je okno daný objekt panelu nástrojů.
 ```
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *pWnd*<br/>
@@ -536,7 +537,6 @@ Tato metoda vrátí `TRUE` Pokud *pWnd* je odvozena z `CMFCToolBar`. Tato metoda
 [CWnd – třída](cwnd-class.md)<br/>
 [CMFCToolBar – třída](cmfctoolbar-class.md)
 
-
 ## <a name="afxkeyboardmanager"></a> Afxkeyboardmanager –
 
 Ukazatel na globální [klávesnice správce](ckeyboardmanager-class.md).
@@ -546,6 +546,7 @@ Ukazatel na globální [klávesnice správce](ckeyboardmanager-class.md).
 ```
 CKeyboardManager* afxKeyboardManager;
 ```
+
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxkeyboardmanager.h
@@ -554,7 +555,6 @@ CKeyboardManager* afxKeyboardManager;
 
 [Makra, globální funkce a globální proměnné](mfc-macros-and-globals.md)<br/>
 [CKeyboardManager – třída](ckeyboardmanager-class.md)
-
 
 ##  <a name="afxloadlibrary"></a>  AfxLoadLibrary
 
@@ -618,6 +618,7 @@ Ukazatel na globální [odtržené nabídky správce](cmenutearoffmanager-class.
 ```
 CMenuTearOffManager* g_pTearOffMenuManager;
 ```
+
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxmenutearoffmanager.h
@@ -635,6 +636,7 @@ Ukazatel na globální [myši správce](cmousemanager-class.md).
 ```
 CMouseManager* afxMouseManager;
 ```
+
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxmousemanager.h
@@ -642,8 +644,6 @@ CMouseManager* afxMouseManager;
 ### <a name="see-also"></a>Viz také
 
 [CMouseManager – třída](cmousemanager-class.md)
-
-
 
 ##  <a name="afxregisterclass"></a>  Afxregisterclass –
 
@@ -843,7 +843,6 @@ CUserToolsManager* afxUserToolsManager;
 ### <a name="see-also"></a>Viz také
 
 [CUserToolsManager – třída](cusertoolsmanager-class.md)
-
 
 ##  <a name="afxwininit"></a>  Afxwininit –
 

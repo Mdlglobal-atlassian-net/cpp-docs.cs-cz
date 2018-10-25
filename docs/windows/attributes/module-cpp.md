@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e999928e2080796c013107e3bc862d19426dbf88
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 492e5e5c28b50ea8a7a20d654310ebba26d2f701
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083525"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067498"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -50,7 +50,7 @@ Bloku knihovny definuje v souboru IDL.
 *Jméno*<br/>
 (Volitelné) Název bloku knihovny.
 
-*Verze*<br/>
+*version*<br/>
 (Volitelné) Číslo verze, kterou chcete přiřadit k bloku knihovny. Výchozí hodnota je 1.0.
 
 *uuid*<br/>
@@ -83,7 +83,7 @@ Určuje knihovnu typů.
 *restricted*<br/>
 (Volitelné) Členové knihovny nejde volat libovolně. Zobrazit [s omezeným přístupem](/windows/desktop/Midl/restricted) atribut MIDL pro další informace.
 
-*Vlastní*<br/>
+*custom*<br/>
 (Volitelné) Jeden nebo více atributů; podobá se to [vlastní](custom-cpp.md) atribut. První parametr *vlastní* je identifikátor GUID atributu. Příklad:
 
 ```
@@ -181,4 +181,4 @@ Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)<br/>
 [helpfile](helpfile.md)<br/>
-[Verze](version-cpp.md)  
+[version](version-cpp.md)

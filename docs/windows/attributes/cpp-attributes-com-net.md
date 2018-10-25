@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe6941e8809c0d735013b56d340f27302890b149
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 66188f1879c42eaf9429675a2f235130e263211f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789350"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072522"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Atributy C++ COM a .NET
 
@@ -90,21 +90,21 @@ Kromě toho výstup linkeru jazyka Visual C++ všechny informace o atributu souv
 ## <a name="contexts"></a> Kontexty atributů
 
 Atributy C++ lze popsat pomocí čtyři základní pole: cíl se můžou uplatnit na (**platí pro**), pokud jsou opakovatelné nebo ne (**Repeatable**), vyžaduje přítomnost dalších atributů ( **Atributy požadované**) a nekompatibilitu s další atributy (**neplatné atributy**). Tato pole jsou uvedeny v související tabulce v tématu referenční každý atribut. Každá z těchto polí je popsána níže.
-  
+
 ### <a name="applies-to"></a>Platí pro
 
 Toto pole popisuje různé prvky jazyka C++, které jsou platné cíle pro zadaného atributu. Například pokud atribut určuje "třída" v **platí pro** pole, to znamená, že atribut lze použít pouze na právní třídu C++. Pokud je atribut použit na členskou funkci třídy, výsledkem bude chyba syntaxe.
-  
+
 Další informace najdete v tématu [atributy podle použití](attributes-by-usage.md).
-  
+
 ### <a name="repeatable"></a>Opakovatelné
 
 Toto pole je uvedeno, zda je atribut pro stejný cíl opakovaně použít. Většina atributy nejsou opakovatelné.
-  
+
 ### <a name="required-attributes"></a>Vyžadované atributy
 
 Toto pole obsahuje další atributy, které musí být přítomná (který se použije pro stejný cíl) pro zadaný atribut fungovat správně. Je běžné pro atribut, který má obsahovat žádné položky pro toto pole.
-  
+
 ### <a name="invalid-attributes"></a>Neplatné atributy
 
 Toto pole obsahuje další atributy, které nejsou kompatibilní se zadaným atributem. Je běžné pro atribut, který má obsahovat žádné položky pro toto pole.

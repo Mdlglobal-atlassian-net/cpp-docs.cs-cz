@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: d2ffd41fe224e492eb4b27a355f6df864e0dd066
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 964da719da8d6f48131fc60f7e7fdfb247637fbf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410821"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069944"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Nasazení, spuštění a ladění projektu Linux
 
@@ -41,7 +41,7 @@ Existuje několik způsobů, jak pracovat s a ladění projektu Linux.
 
     - V **gdb** režimu jednotky ladicího programu sady Visual Studio GDB ve vzdáleném systému, který je kompatibilní více, pokud v místní verzi GDB není kompatibilní s verzí nainstalované v cílovém počítači. |
 
-    > [!NOTE] 
+    > [!NOTE]
     > Pokud se nemůžete k dosažení zarážky v ladění režimu gdbserver, zkuste režimu gdb použije. musí být nejprve gdb [nainstalované](../linux/download-install-and-setup-the-linux-development-workload.md) na vzdálené cílové.
 
 2. Vyberte vzdálený cíl pomocí standardní **ladění** nástrojů v sadě Visual Studio.
@@ -64,7 +64,7 @@ Existuje několik způsobů, jak pracovat s a ladění projektu Linux.
 
     Pokud nejsou žádné chyby, aplikace se spustí a ladicí program se pozastaví na zarážce.
 
-    ![Na zarážku](media/hit_breakpoint.png)  
+    ![Na zarážku](media/hit_breakpoint.png)
 
     Teď můžete pracovat s aplikací v stisknutím klávesy příkazu, jako je aktuální stav, zobrazit proměnné a procházejte kódem po krocích **F10** nebo **F11**.
 
@@ -79,7 +79,7 @@ Existuje několik způsobů, jak pracovat s a ladění projektu Linux.
 ## <a name="configure-other-debugging-options"></a>Nakonfigurovat další možnosti ladění
 
 * Argumenty příkazového řádku může být předán spustitelného souboru pomocí **argumenty programu** položky v projektu **ladění** stránku vlastností.
-  
+
   ![Argumenty programu](media/settings_programarguments.png)
 
 * Možnosti ladicího programu pro konkrétní mohou být předány GDB pomocí **další příkazy ladicího programu** položka.  Můžete například chtít ignorovat SIGILL signály (Neplatná instrukce).  Můžete použít **zpracování** příkaz, který můžete toho dosáhnout.  přidáním následujícího **další příkazy ladicího programu** položka, jak je uvedeno výše:

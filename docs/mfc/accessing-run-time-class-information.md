@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b92f634e120bf40fe2355a4c09e0e0fb68e9ec2c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 61da17093d56dcfd8b0eeec3ade7955f27bc6b85
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407442"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077711"
 ---
 # <a name="accessing-run-time-class-information"></a>Přístup k běhovým informacím o třídě
 
@@ -50,7 +50,7 @@ Tato možnost je nejužitečnější, když je potřeba další kontrolu argumen
 
 1. Použití `RUNTIME_CLASS` s názvem třídy, jak je znázorněno zde pro třídu `CObject`:
 
-     [!code-cpp[NVC_MFCCObjectSample#4](../mfc/codesnippet/cpp/accessing-run-time-class-information_1.cpp)]
+   [!code-cpp[NVC_MFCCObjectSample#4](../mfc/codesnippet/cpp/accessing-run-time-class-information_1.cpp)]
 
 Musíte jen zřídka přímý přístup k objektu třídy za běhu. Běžnější použití je předat objekt run-time třída `IsKindOf` fungovat, jak je znázorněno v následujícím postupu. `IsKindOf` Otestuje objekt zobrazit, jestli patří do určité třídy.
 
@@ -60,9 +60,9 @@ Musíte jen zřídka přímý přístup k objektu třídy za běhu. Běžnějš�
 
 1. Volání `IsKindOf` členské funkce pro objekty třídy, pomocí `RUNTIME_CLASS` – makro ke generování `CRuntimeClass` argument, jak je znázorněno zde:
 
-     [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/accessing-run-time-class-information_2.h)]
+   [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/accessing-run-time-class-information_2.h)]
 
-     [!code-cpp[NVC_MFCCObjectSample#5](../mfc/codesnippet/cpp/accessing-run-time-class-information_3.cpp)]
+   [!code-cpp[NVC_MFCCObjectSample#5](../mfc/codesnippet/cpp/accessing-run-time-class-information_3.cpp)]
 
     > [!NOTE]
     >  Vrátí IsKindOf **TRUE** Pokud objekt je členem dané třídy nebo třídy odvozené z dané třídy. `IsKindOf` nepodporuje více dědičnosti nebo virtuálními základními třídami, i když používáte vícenásobné dědičnosti pro odvozených tříd Microsoft Foundation classes v případě potřeby.

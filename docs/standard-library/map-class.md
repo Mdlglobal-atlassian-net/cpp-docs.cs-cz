@@ -1,7 +1,7 @@
 ---
 title: map – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42cd23fcba03ed0161b7a19923851dd3d574e23b
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 96d0b6abc7ca9f82c3b9c1ce3e84b7fad99ea486
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235682"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066387"
 ---
 # <a name="map-class"></a>map – třída
 
@@ -1012,7 +1012,6 @@ Vrátí iterátor za koncem.
 ```cpp
 const_iterator end() const;
 
-
 iterator end();
 ```
 
@@ -1115,11 +1114,9 @@ Odebere prvek nebo rozsah prvků v objektu map od zadané pozice nebo odebere pr
 iterator erase(
     const_iterator Where);
 
-
 iterator erase(
     const_iterator First,
     const_iterator Last);
-
 
 size_type erase(
     const key_type& Key);
@@ -1232,7 +1229,6 @@ Vrátí iterátor odkazující na umístění prvku v objektu map, který má kl
 
 ```cpp
 iterator find(const Key& key);
-
 
 const_iterator find(const Key& key) const;
 ```
@@ -1394,19 +1390,16 @@ Vloží prvek nebo rozsah prvků do mapy.
 pair<iterator, bool> insert(
     const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(
     ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(
     const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
@@ -1414,13 +1407,11 @@ iterator insert(
     const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(
     InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(
@@ -2636,9 +2627,9 @@ Vrátí objekt funkce porovnání, která používá mapování k seřazení jeh
 
 ### <a name="remarks"></a>Poznámky
 
-Mapy *m*, pokud dva prvky *e*1 ( *k*1, *d*1) a *e*2 ( *k*2, `d`2) jsou objekty typu `value_type`, kde *k*1 a *k*2 jsou jejich klíče typu `key_type` a `d`1 a `d`jsou 2 jejich data typu `mapped_type`, pak *m.*`value_comp`( *e*1, *e*2) je ekvivalentní *m.* `key_comp` *(k*1, *k*2). Uložený objekt definuje členskou funkci
+Mapy *m*, pokud dva prvky *e1*(*k1*, *d1*) a *e2*(*k2*, *d2*) jsou objekty typu `value_type`, kde *k1* a *k1* jsou jejich klíče typu `key_type` a *d1* a *d2* jsou jejich data typu `mapped_type`, pak `m.value_comp(e1, e2)` je ekvivalentní `m.key_comp(k1, k2)`. Uložený objekt definuje členskou funkci
 
-**BOOL – operátor**( **value_type &**`left`, **value_type &**`right`);
+`bool operator( value_type& left, value_type& right);`
 
 který vrátí **true** Pokud hodnotu klíče `left` předchází a není rovno hodnotě klíče z `right` v pořadí řazení.
 

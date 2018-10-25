@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: a45d216f1d6ddcef704dba40ff97f6ed71f98240
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 4b96fca0bee594ffa441bff6b352b89ffed196f3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410639"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068085"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Stažení, instalace a nastavení úloh Linux
 
@@ -30,10 +30,9 @@ Integrované vývojové prostředí sady Visual Studio ve Windows můžete použ
 
    ![Visual C++ pro úlohu vývoj pro Linux](media/linuxworkload.png)
 
-1. Pokud používáte CMake nebo cílíte na platformy vložený nebo IoT, přejděte na **podrobné informace o instalaci** podokno na pravé straně v části **vývoj pro Linux v C++**, rozbalte **volitelné součásti** a vyberte komponenty, které potřebujete. 
+1. Pokud používáte CMake nebo cílíte na platformy vložený nebo IoT, přejděte na **podrobné informace o instalaci** podokno na pravé straně v části **vývoj pro Linux v C++**, rozbalte **volitelné součásti** a vyberte komponenty, které potřebujete.
 
 1. Klikněte na tlačítko **změnit** pokračujte v instalaci.
-
 
 ## <a name="options-for-creating-a-linux-environment"></a>Možnosti pro vytvoření prostředí s Linuxem
 

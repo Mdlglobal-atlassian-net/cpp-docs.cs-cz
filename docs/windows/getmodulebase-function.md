@@ -15,38 +15,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4d460b006d2d17df308a62c0433621aac7008f4d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: afa76ad23c509689dd693bb0f3e13dbb7adb4d54
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411407"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075447"
 ---
 # <a name="getmodulebase-function"></a>GetModuleBase – funkce
 Načte [ModuleBase](../windows/modulebase-class.md) ukazatel, který umožňuje zvyšování a dekrementace počet odkazů [RuntimeClass](../windows/runtimeclass-class.md) objektu.
-  
+
 ## <a name="syntax"></a>Syntaxe
-  
+
 ```cpp
-inline Details::ModuleBase* GetModuleBase() throw()  
+inline Details::ModuleBase* GetModuleBase() throw()
 ```
-  
+
 ## <a name="return-value"></a>Návratová hodnota
 
 Ukazatel `ModuleBase` objektu.
-  
+
 ## <a name="remarks"></a>Poznámky
 
 Tato funkce se používá interně ke addref() vrátí odkaz na objekt.
-  
+
 Tuto funkci můžete použít k řízení počty odkazů voláním [modulebase::incrementobjectcount –](../windows/modulebase-incrementobjectcount-method.md) a [modulebase::decrementobjectcount –](../windows/modulebase-decrementobjectcount-method.md).
-  
+
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** implements.h
-  
+
 **Namespace:** Microsoft::WRL
-  
+
 ## <a name="see-also"></a>Viz také
 
 [Microsoft::WRL – obor názvů](../windows/microsoft-wrl-namespace.md)

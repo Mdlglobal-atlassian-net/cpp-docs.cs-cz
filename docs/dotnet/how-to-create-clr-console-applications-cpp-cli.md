@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a650d62a53fa6cada535119cb8897f1f97870ea1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 446ed0c6fb84990db572e1e1ead5c2ab5094ec70
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421255"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076058"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>Postupy: Vytváření konzolových aplikací CLR (C++/CLI)
 
@@ -67,7 +67,7 @@ Projekt vytvořený pomocí šablony Konzolová aplikace automaticky přidá tyt
 
 1. V **název** zadejte jedinečný název pro vaši aplikaci.
 
-     Lze zadat další nastavení projektu a řešení, ale nejsou vyžadovány.
+   Lze zadat další nastavení projektu a řešení, ale nejsou vyžadovány.
 
 1. Zvolte **OK** tlačítko.
 

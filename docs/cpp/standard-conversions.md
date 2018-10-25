@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7d895671efdec4649faf1f0611380d2065770ac
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: dec0456c880fea47219dc11c509bbecac025f5d3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861444"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070580"
 ---
 # <a name="standard-conversions"></a>Standardní převody
 
@@ -81,11 +81,11 @@ Povýšení typu zachovávající hodnotu a povýšení typu, která normálně 
 
 - Operand operátoru **/**, `%`, `/=`, `%=`, **<**, **\< =**, **>**, nebo **>=**
 
-     Tyto operátory spoléhají pro stanovení výsledku na znaménko. Proto povýšení typu zachovávající hodnotu a povýšení typu zachovávající znaménko vrátí při použití s těmito operandy různé výsledky.
+   Tyto operátory spoléhají pro stanovení výsledku na znaménko. Proto povýšení typu zachovávající hodnotu a povýšení typu zachovávající znaménko vrátí při použití s těmito operandy různé výsledky.
 
 - Levý operand **>>** nebo **>>=**
 
-     Tyto operátory zacházejí při provádění operací posunu s hodnotami se znaménkem nebo bez znaménka odlišně. U hodnot se znaménkem posunutí hodnoty vpravo způsobí, že je bit znaménka posunut na pozici uvolněného bitu. U hodnot bez znaménka jsou pozice uvolněných bitů vyplněny nulami.
+   Tyto operátory zacházejí při provádění operací posunu s hodnotami se znaménkem nebo bez znaménka odlišně. U hodnot se znaménkem posunutí hodnoty vpravo způsobí, že je bit znaménka posunut na pozici uvolněného bitu. U hodnot bez znaménka jsou pozice uvolněných bitů vyplněny nulami.
 
 - Argument přetížené funkce nebo operand přetíženého operátoru, který závisí na tom, zda je typ tohoto operandu pro párování argumentů se znaménkem nebo bez. (Viz [přetížené operátory](../cpp/operator-overloading.md) Další informace o definici přetížených operátorů.)
 

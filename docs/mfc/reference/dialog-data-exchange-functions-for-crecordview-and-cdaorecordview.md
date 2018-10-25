@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295e19d875585e0ea166dfce552866b8c1fc81b7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7c2c954851348fcb96b28a4c47aee4b4475aeaca
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392265"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070280"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funkce výměny dat dialogových oken pro třídy CRecordView a CDaoRecordView
 
@@ -499,11 +499,12 @@ Zobrazit [DDX_FieldText](#ddx_fieldtext) obecné DDX_Field – příklad. Volán
        CRecordset* pRecordset );
 
 void AFXAPI DDX_FieldSlider(
-     CDataExchange* pDX,
-     int nIDC,
-     int& value,
-     CDaoRecordset* pRecordset );
+   CDataExchange* pDX,
+   int nIDC,
+   int& value,
+   CDaoRecordset* pRecordset );
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
@@ -681,7 +682,6 @@ Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových o
 Následující `DoDataExchange` fungovat [CRecordView](../../mfc/reference/crecordview-class.md) obsahuje `DDX_FieldText` funkce se volá pro tři datové typy: `IDC_COURSELIST` je pole se seznamem; další dva ovládací prvky jsou textových polí. Pro programování v rozhraní DAO, *m_pSet* parametru je ukazatel [CRecordset](../../mfc/reference/crecordset-class.md) nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).
 
 [!code-cpp[NVC_MFCDatabase#43](../../mfc/codesnippet/cpp/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview_1.cpp)]
-
 
 ### <a name="requirements"></a>Požadavky
 

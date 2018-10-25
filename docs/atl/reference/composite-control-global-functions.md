@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee59f5e86cddeec47da47c648b0cf12789cc85a
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 8c8493650ef2c86a89c1a3060deb5ee6269a38a7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084097"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068642"
 ---
 # <a name="composite-control-global-functions"></a>Globální funkce složených ovládacích prvků
 
@@ -56,11 +56,11 @@ Tyto funkce poskytují podporu pro vytváření dialogových oken a pro vytvář
 |[AtlSetChildSite](#atlsetchildsite)|Inicializuje `IUnknown` podřízené lokality.|
 |[AtlAxWinInit](#atlaxwininit)|Inicializuje kód hostování AxWin objektů.|
 |[AtlAxWinTerm](#atlaxwinterm)|Zruší inicializaci kód hostování AxWin objektů.|
-|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|Vrátí informace o výchozím zdrojovém rozhraní objektu.|  
+|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|Vrátí informace o výchozím zdrojovém rozhraní objektu.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlhost.h  
+**Záhlaví:** atlhost.h
 
 ##  <a name="atlaxdialogbox"></a>  AtlAxDialogBox
 
@@ -101,7 +101,7 @@ Jeden standardní hodnoty HRESULT.
 Použití `AtlAxDialogBox` pomocí šablony dialogového okna, která obsahuje ovládací prvek ActiveX, zadejte platný identifikátor CLSID, APPID nebo adresy URL řetězec jako *text* pole **ovládací PRVEK** oddílu prostředku dialogového okna, spolu s " AtlAxWin80 "jako *název třídy* pole v rámci stejného oddílu. Ukazuje, jaké platný následující **ovládací PRVEK** části může vypadat takto:
 
 ```
-CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,  
+CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
@@ -261,7 +261,7 @@ Vytvoření licencovaného ovládacího prvku ActiveX, najdete v tématu [AtlAxC
 
 ##  <a name="atlaxcreatecontrollic"></a>  AtlAxCreateControlLic
 
-Vytvoří, licencuje a hostuje ovládací prvek ActiveX v zadaném okně.  
+Vytvoří, licencuje a hostuje ovládací prvek ActiveX v zadaném okně.
 
 ```
 ATLAPI AtlAxCreateControlLic(
@@ -484,7 +484,7 @@ Nenulové, pokud inicializaci řídicího hostitelského kódu byla úspěšná.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce musí být volána před pomocí ovládacího prvku ATL – hostování rozhraní API. Následující volání této funkce **"AtlAxWin"** třídy okna je možné ve voláních [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) nebo [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa), jak je popsáno v sadě Windows SDK.  
+Tato funkce musí být volána před pomocí ovládacího prvku ATL – hostování rozhraní API. Následující volání této funkce **"AtlAxWin"** třídy okna je možné ve voláních [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) nebo [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa), jak je popsáno v sadě Windows SDK.
 
 ##  <a name="atlaxwinterm"></a>  Call AtlAxWinTerm
 

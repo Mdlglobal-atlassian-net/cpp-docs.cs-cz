@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27fec3420343b5b6af240f89bb922256cee52a7b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c056ce5a9747be280e465e2054402f43761c64e2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375560"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071570"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Cmfcribbonprogressbar – třída
 
@@ -103,7 +103,6 @@ Vytvoří a inicializuje [cmfcribbonprogressbar –](../../mfc/reference/cmfcrib
 
 ```
 CMFCRibbonProgressBar();
-
 
 CMFCRibbonProgressBar(
     UINT nID,
@@ -174,7 +173,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*
+[in] *primárního řadiče domény*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -206,7 +205,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*
+[in] *primárního řadiče domény*<br/>
 
 ### <a name="remarks"></a>Poznámky
 

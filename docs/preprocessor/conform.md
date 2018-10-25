@@ -19,15 +19,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb14af38c4bffed4b9f5c60d2d89fd84a892025b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 05b1f9fef458b8c21de9eb3942730ff901d3922e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721744"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071229"
 ---
 # <a name="conform"></a>conform
-**Specifické pro C++**  
+**Specifické pro C++**
 
 Určuje chování za běhu [/Zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) – možnost kompilátoru.
 
@@ -58,19 +58,19 @@ Určuje název možnosti kompilátoru, který má být upraven. Jediné platné 
 ## <a name="example"></a>Příklad
 
 ```cpp
-// pragma_directive_conform.cpp  
-// compile with: /W1  
-// C4811 expected  
-#pragma conform(forScope, show)  
-#pragma conform(forScope, push, x, on)  
-#pragma conform(forScope, push, x1, off)  
-#pragma conform(forScope, push, x2, off)  
-#pragma conform(forScope, push, x3, off)  
-#pragma conform(forScope, show)  
-#pragma conform(forScope, pop, x1)  
-#pragma conform(forScope, show)  
-  
-int main() {}  
+// pragma_directive_conform.cpp
+// compile with: /W1
+// C4811 expected
+#pragma conform(forScope, show)
+#pragma conform(forScope, push, x, on)
+#pragma conform(forScope, push, x1, off)
+#pragma conform(forScope, push, x2, off)
+#pragma conform(forScope, push, x3, off)
+#pragma conform(forScope, show)
+#pragma conform(forScope, pop, x1)
+#pragma conform(forScope, show)
+
+int main() {}
 ```
 
 ## <a name="see-also"></a>Viz také

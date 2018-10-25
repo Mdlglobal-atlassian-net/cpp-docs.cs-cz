@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c60cf5d6f61f16aac18524e8b6e75638ec13d27e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9907424a583cc16f170890a739fa7ece8cc93ead
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433332"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075122"
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>Použití tříd pro psaní aplikací pro Windows
 
@@ -66,17 +66,17 @@ Ostatní části rozhraní framework patří:
 
 - [Správa paměti](../mfc/memory-management.md)
 
-     Kromě získáte výhody při psaní aplikací pro operační systém Windows, MFC také umožňuje snazší psát aplikace, které se konkrétně používají propojování a vkládání technologie OLE. Dokážete aplikaci prvku OLE vizuálních úprav kontejneru a vizuální úpravy serveru OLE a automatizace můžete přidat tak, aby další aplikace můžete použít objekty z vaší aplikace nebo dokonce jednotku vzdáleně.
+   Kromě získáte výhody při psaní aplikací pro operační systém Windows, MFC také umožňuje snazší psát aplikace, které se konkrétně používají propojování a vkládání technologie OLE. Dokážete aplikaci prvku OLE vizuálních úprav kontejneru a vizuální úpravy serveru OLE a automatizace můžete přidat tak, aby další aplikace můžete použít objekty z vaší aplikace nebo dokonce jednotku vzdáleně.
 
 - [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)
 
-     Sada ovládacího prvku OLE (CDK) je teď plně integrovaná s použitím rozhraní framework. Tato řada článek poskytuje přehled o vývoj ovládacích prvků ActiveX pomocí knihovny MFC. (Ovládací prvky ActiveX dříve označované jako ovládací prvky OLE.)
+   Sada ovládacího prvku OLE (CDK) je teď plně integrovaná s použitím rozhraní framework. Tato řada článek poskytuje přehled o vývoj ovládacích prvků ActiveX pomocí knihovny MFC. (Ovládací prvky ActiveX dříve označované jako ovládací prvky OLE.)
 
 - [Programování databáze](../data/data-access-programming-mfc-atl.md)
 
-     MFC také poskytuje dvě sady databázové třídy, které zjednodušují psaní přístup k datům aplikace. Použití databázových tříd rozhraní ODBC, můžete připojit se k nim prostřednictvím ovladače rozhraní Open Database Connectivity (ODBC), vyberte záznamy z tabulek a zobrazit informace o záznamu v formuláři na obrazovce. Použití tříd objektů DAO (Data Access), můžete pracovat s databázemi na databázovém stroji Microsoft Jet nebo externích (bez Jet) zdrojů dat, včetně zdroje dat ODBC.
+   MFC také poskytuje dvě sady databázové třídy, které zjednodušují psaní přístup k datům aplikace. Použití databázových tříd rozhraní ODBC, můžete připojit se k nim prostřednictvím ovladače rozhraní Open Database Connectivity (ODBC), vyberte záznamy z tabulek a zobrazit informace o záznamu v formuláři na obrazovce. Použití tříd objektů DAO (Data Access), můžete pracovat s databázemi na databázovém stroji Microsoft Jet nebo externích (bez Jet) zdrojů dat, včetně zdroje dat ODBC.
 
-     Kromě toho MFC se plně podporují psaní aplikací, které používají kódování Unicode a vícebajtových znakových sad (MBCS), konkrétně dvoubajtové znakové sady (DBCS).
+   Kromě toho MFC se plně podporují psaní aplikací, které používají kódování Unicode a vícebajtových znakových sad (MBCS), konkrétně dvoubajtové znakové sady (DBCS).
 
 Obecné pokyny k dokumentace knihovny MFC, naleznete v tématu [obecná témata MFC](../mfc/general-mfc-topics.md).
 

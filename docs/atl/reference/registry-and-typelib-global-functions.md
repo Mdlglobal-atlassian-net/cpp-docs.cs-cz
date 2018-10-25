@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0e4eba9940546e72f11c220dc03a6538750ae85
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: af2780c8b7fb332cd739416e5051a57a8bc7f765
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028334"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073529"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Globální funkce registrace a TypeLib
 
@@ -60,7 +60,7 @@ Tyto funkce řízení uzel v registru, který program používá k ukládání i
 |||
 |-|-|
 |[AtlGetPerUserRegistration](#atlgetperuserregistration)|Zjišťuje, zda aplikace přesměrovává přístup k registru do **HKEY_CURRENT_USER** ( **HKCU**) uzlu.|
-|[AtlSetPerUserRegistration](#atlsetperuserregistration)|Nastaví, zda aplikace přesměrovává přístup k registru do **HKEY_CURRENT_USER** ( **HKCU**) uzlu.|  
+|[AtlSetPerUserRegistration](#atlsetperuserregistration)|Nastaví, zda aplikace přesměrovává přístup k registru do **HKEY_CURRENT_USER** ( **HKCU**) uzlu.|
 
 ### <a name="requirements"></a>Požadavky
 
@@ -93,7 +93,7 @@ Přesměrování není globální. Pouze rozhraní MFC a ATL se vztahuje toto p�
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlbase.h  
+**Záhlaví:** atlbase.h
 
 ## <a name="afxregcreatekey"></a> AfxRegCreateKey
 
@@ -121,11 +121,11 @@ Ukazatel `CAtlTransactionManager` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud funkce uspěje, vrácená hodnota je ERROR_SUCCESS. Pokud funkce selže, vrácená hodnota je nenulový chybový kód definovaný ve Winerror.h.  
+Pokud funkce uspěje, vrácená hodnota je ERROR_SUCCESS. Pokud funkce selže, vrácená hodnota je nenulový chybový kód definovaný ve Winerror.h.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxpriv.h  
+**Záhlaví:** afxpriv.h
 
 ## <a name="afxregdeletekey"></a> AfxRegDeleteKey
 
@@ -154,7 +154,7 @@ Pokud funkce uspěje, vrácená hodnota je ERROR_SUCCESS. Pokud funkce selže, v
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxpriv.h  
+**Záhlaví:** afxpriv.h
 
 ## <a name="afxregisterpreviewhandler"></a>
 
@@ -179,7 +179,7 @@ Určuje, přípona souboru registrovaná s touto obslužnou rutinou.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdisp.h   
+**Záhlaví:** afxdisp.h
 
 ##  <a name="atlregistertypelib"></a>  AtlRegisterTypeLib
 
@@ -239,11 +239,11 @@ Pokud funkce uspěje, vrácená hodnota je ERROR_SUCCESS. Pokud funkce selže, v
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxpriv.h  
+**Záhlaví:** afxpriv.h
 
 ## <a name="afxregopenkeyex"></a>  AfxRegOpenKeyEx
 
-Otevře zadaný klíč registru. 
+Otevře zadaný klíč registru.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -277,7 +277,7 @@ Pokud funkce uspěje, vrácená hodnota je ERROR_SUCCESS. Pokud funkce selže, v
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxpriv.h  
+**Záhlaví:** afxpriv.h
 
 ## <a name="afxunregisterpreviewhandler"></a> AfxUnregisterPreviewHandler
 
@@ -296,7 +296,7 @@ Určuje identifikátor CLSID obslužné rutiny pro odstranění registrace.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdisp.h  
+**Záhlaví:** afxdisp.h
 
 ## <a name="atlsetperuserregistration"></a> AtlSetPerUserRegistration
 
@@ -321,11 +321,11 @@ S_OK, pokud je metoda úspěšná, jinak chyba HRESULT kódu pokud dojde k chyb�
 
 Ve výchozím nastavení není povoleno přesměrování registru. Pokud tuto možnost povolíte, přístup k registru je přesměrován na **HKEY_CURRENT_USER\Software\Classes**.
 
-Přesměrování není globální. Pouze rozhraní MFC a ATL se vztahuje toto přesměrování registru.  
+Přesměrování není globální. Pouze rozhraní MFC a ATL se vztahuje toto přesměrování registru.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlbase.h  
+**Záhlaví:** atlbase.h
 
 ##  <a name="atlunregistertypelib"></a>  AtlUnRegisterTypeLib
 
@@ -335,7 +335,7 @@ Voláním této funkce se zruší registrace knihovny typů.
 
 ```
 ATLAPI AtlUnRegisterTypeLib(
-    HINSTANCE hInstTypeLib, 
+    HINSTANCE hInstTypeLib,
     LPCOLESTR lpszIndex);
 ```
 
@@ -353,7 +353,7 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato pomocná funkce je využíváno [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) a [AtlComModuleUnregisterServer](#atlcommoduleunregisterserver).  
+Tato pomocná funkce je využíváno [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) a [AtlComModuleUnregisterServer](#atlcommoduleunregisterserver).
 
 ### <a name="requirements"></a>Požadavky
 
@@ -405,7 +405,7 @@ Tato funkce se přestala nabízet v sadě Visual Studio 2013 a Odebereme v sadě
 
 ##  <a name="registrydataexchange"></a>  RegistryDataExchange
 
-Voláním této funkce se provede čtení nebo zápis v systémovém registru.  
+Voláním této funkce se provede čtení nebo zápis v systémovém registru.
 
 ### <a name="syntax"></a>Syntaxe
 

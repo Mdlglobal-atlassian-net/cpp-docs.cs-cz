@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf4bcdd9290817bb77eeb20f1a014bd537d15d8b
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 763ee9c6ad165ad06016a730e218d6aa36777997
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789469"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065119"
 ---
 # <a name="libraryblock"></a>library_block
 
@@ -69,4 +69,4 @@ Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.
 ## <a name="see-also"></a>Viz také
 
 [Atributy kompilátoru](compiler-attributes.md)<br/>
-[Samostatné atributy](stand-alone-attributes.md)  
+[Samostatné atributy](stand-alone-attributes.md)

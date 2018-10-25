@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24b663e1b07d1012c1611714390340df3ce3867f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c17b280d658eb615d314526f4fd241bf57c2eed1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448493"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074732"
 ---
 # <a name="cdockingmanager-class"></a>Cdockingmanager – třída
 
@@ -296,7 +296,7 @@ Použijte následující tipy k `CDockingManager` objekty:
 
     - `AFX_DOCK_TYPE::DT_SMART`
 
-     Tyto dokovací režimy, které jsou definovány pomocí [CDockingManager::m_dockModeGlobal](#m_dockmodeglobal) a jsou nastaveny voláním [CDockingManager::SetDockingMode](#setdockingmode).
+   Tyto dokovací režimy, které jsou definovány pomocí [CDockingManager::m_dockModeGlobal](#m_dockmodeglobal) a jsou nastaveny voláním [CDockingManager::SetDockingMode](#setdockingmode).
 
 - Pokud chcete vytvořit podokno s plovoucí, bez možností změny velikosti, zavolejte [CDockingManager::AddPane](#addpane) metody. Metoda registruje v podokně s dokovací správce, který je zodpovědný za rozložení v podokně.
 

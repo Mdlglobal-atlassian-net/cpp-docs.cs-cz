@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8c6079cd0371afa1b9a3ed32ba2cf67e1691d665
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 09cfc38626cab785eb7fa1c34178aa28aa23dac6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382801"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069931"
 ---
 # <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>Postupy: Kompilování kódu knihovny MFC a knihovny ATL s použitím přepínače /clr
 
@@ -40,7 +40,7 @@ Toto téma popisuje, jak kompilovat existující programy MFC a ATL cílit na mo
 
 1. V **vlastnosti projektu** dialogového okna rozbalte uzel vedle **vlastnosti konfigurace** a vyberte **Obecné**. V pravém podokně v části **výchozí nastavení projektu**, nastavte **Common Language Runtime support** k **Common Language Runtime Support (/ clr)**.
 
-     V podokně stejné, ujistěte se, že **použít knihovnu MFC** je nastavena na **použít knihovnu MFC ve sdílené knihovně DLL**.
+   V podokně stejné, ujistěte se, že **použít knihovnu MFC** je nastavena na **použít knihovnu MFC ve sdílené knihovně DLL**.
 
 1. V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **Obecné**. Ujistěte se, že **formát informací o ladění** je nastavena na **databázi programu /Zi** (ne **/zi**).
 
@@ -60,7 +60,7 @@ Toto téma popisuje, jak kompilovat existující programy MFC a ATL cílit na mo
 
 1. V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **předkompilované hlavičky**. Nastavte **vytvoření a použití předkompilovaných hlaviček** k **bez použití předkompilovaných hlaviček**.
 
-     Jako alternativu v **Průzkumníka řešení**Stdafx.cpp pravým tlačítkem myši a potom klikněte na tlačítko **vlastnosti**. V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **Obecné**. Nastavte **kompilovat s podporou Common Language Runtime** k **ne Common Language Runtime support**.
+   Jako alternativu v **Průzkumníka řešení**Stdafx.cpp pravým tlačítkem myši a potom klikněte na tlačítko **vlastnosti**. V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **Obecné**. Nastavte **kompilovat s podporou Common Language Runtime** k **ne Common Language Runtime support**.
 
 1. Pro soubor, který obsahuje funkce DllMain a veškerých kódů, které volá, v **Průzkumníka řešení**, klikněte pravým tlačítkem na soubor a potom klikněte na tlačítko **vlastnosti**. V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **Obecné**. V pravém podokně v části **výchozí nastavení projektu**, nastavte **kompilovat s podporou Common Language Runtime** k **ne Common Language Runtime support**.
 
@@ -84,7 +84,7 @@ Toto téma popisuje, jak kompilovat existující programy MFC a ATL cílit na mo
 
 1. V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **předkompilované hlavičky**. Nastavte **vytvoření a použití předkompilovaných hlaviček** k **bez použití předkompilovaných hlaviček**.
 
-     Jako alternativu v **Průzkumníka řešení**Stdafx.cpp pravým tlačítkem myši a potom klikněte na tlačítko **vlastnosti**. V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **Obecné**. Nastavte **kompilovat s podporou Common Language Runtime** k **ne Common Language Runtime support**.
+   Jako alternativu v **Průzkumníka řešení**Stdafx.cpp pravým tlačítkem myši a potom klikněte na tlačítko **vlastnosti**. V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **Obecné**. Nastavte **kompilovat s podporou Common Language Runtime** k **ne Common Language Runtime support**.
 
 1. Pro soubor, který obsahuje funkce DllMain a veškerých kódů, které volá, v **Průzkumníka řešení**, klikněte pravým tlačítkem na soubor a potom klikněte na tlačítko **vlastnosti**. V části **vlastnosti konfigurace**, rozbalte uzel vedle **C/C++** a vyberte **Obecné**. V pravém podokně v části **výchozí nastavení projektu**, nastavte **kompilovat s podporou Common Language Runtime** k **ne Common Language Runtime support**.
 

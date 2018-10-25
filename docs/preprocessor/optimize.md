@@ -18,56 +18,57 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8222d909ad23157b4e3ed32a6920abadd77709b6
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 98275f6e0a16c6d07b66ce592eb12b9391157653
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42466303"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069734"
 ---
 # <a name="optimize"></a>optimize
-Určuje optimalizace, které provádí na základě funkce funkce.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-#pragma optimize( "[optimization-list]", {on | off} )  
-```  
-  
-## <a name="remarks"></a>Poznámky  
 
-**Optimalizovat** – Direktiva pragma musí být uvedena mimo funkci a na první funkci definovanou po viděli direktivy pragma se projeví. *Na* a *vypnout* argumenty zapnutí možnosti zadané v *seznamu optimalizací* zapnutí nebo vypnutí.  
-  
-*Seznamu optimalizací* může být nula nebo více parametrů je znázorněno v následující tabulce.  
-  
-### <a name="parameters-of-the-optimize-pragma"></a>Parametry optimize – direktiva Pragma  
-  
-|Parametry|Typ optimalizace|  
-|--------------------|--------------------------|  
-|*g*|Povolte globální optimalizace.|  
-|*s* nebo *t*|Zadejte krátký nebo rychlý sekvence strojového kódu.|  
-|*y*|Generovat ukazatelů rámců v zásobníku programu.|  
-  
-Toto jsou stejná písmena použít s [/O](../build/reference/o-options-optimize-code.md) – možnosti kompilátoru. Například následující direktivu pragma je ekvivalentní `/Os` – možnost kompilátoru:  
-  
-```  
-#pragma optimize( "ts", on )  
-```  
-  
-Použití **optimalizovat** – Direktiva pragma se prázdný řetězec (**""**) je zvláštní forma direktivy:  
-  
-Při použití *vypnout* parametr, zapne optimalizace, které jsou uvedené v tabulce výše v tomto tématu, vypnout.  
-  
-Při použití *na* parametr resetuje optimalizace na ty, které jste zadali pomocí [/O](../build/reference/o-options-optimize-code.md) – možnost kompilátoru.  
-  
-```  
-#pragma optimize( "", off )  
-.  
-.  
-.  
-#pragma optimize( "", on )   
-```  
-  
-## <a name="see-also"></a>Viz také  
- 
+Určuje optimalizace, které provádí na základě funkce funkce.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+#pragma optimize( "[optimization-list]", {on | off} )
+```
+
+## <a name="remarks"></a>Poznámky
+
+**Optimalizovat** – Direktiva pragma musí být uvedena mimo funkci a na první funkci definovanou po viděli direktivy pragma se projeví. *Na* a *vypnout* argumenty zapnutí možnosti zadané v *seznamu optimalizací* zapnutí nebo vypnutí.
+
+*Seznamu optimalizací* může být nula nebo více parametrů je znázorněno v následující tabulce.
+
+### <a name="parameters-of-the-optimize-pragma"></a>Parametry optimize – direktiva Pragma
+
+|Parametry|Typ optimalizace|
+|--------------------|--------------------------|
+|*g*|Povolte globální optimalizace.|
+|*s* nebo *t*|Zadejte krátký nebo rychlý sekvence strojového kódu.|
+|*y*|Generovat ukazatelů rámců v zásobníku programu.|
+
+Toto jsou stejná písmena použít s [/O](../build/reference/o-options-optimize-code.md) – možnosti kompilátoru. Například následující direktivu pragma je ekvivalentní `/Os` – možnost kompilátoru:
+
+```
+#pragma optimize( "ts", on )
+```
+
+Použití **optimalizovat** – Direktiva pragma se prázdný řetězec (**""**) je zvláštní forma direktivy:
+
+Při použití *vypnout* parametr, ukazuje všechny optimalizace *g*, *s*, *t*, a *y*, vypnuto.
+
+Při použití *na* parametr resetuje optimalizace na ty, které jste zadali pomocí [/O](../build/reference/o-options-optimize-code.md) – možnost kompilátoru.
+
+```
+#pragma optimize( "", off )
+.
+.
+.
+#pragma optimize( "", on )
+```
+
+## <a name="see-also"></a>Viz také
+
 [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

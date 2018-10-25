@@ -15,17 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a79cc4dfa36170293a8832571ba3348d6e2c8865
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 0a0fc54c002511b9c091acc5d5e3fbe4636ad933
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990020"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072236"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Problémy s návrhem technologie OLE DB
 
-Před zahájením aplikaci OLE DB, zvažte následující otázky:  
-  
+Před zahájením aplikaci OLE DB, zvažte následující otázky:
+
 ## <a name="what-programming-implementation-will-you-use-to-write-your-ole-db-application"></a>Jaké programovací implementace použijete k zápisu aplikaci OLE DB?
 
 Společnost Microsoft nabízí několik knihoven k provedení této úlohy: knihovny šablon technologie OLE DB, atributy technologie OLE DB a raw rozhraní OLE DB v SDK technologie OLE DB. K dispozici je také průvodců, snadněji napsat program. Tato implementace jsou popsány v [šablony technologie OLE DB, atributy a jiné implementace](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md).

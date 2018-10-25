@@ -101,12 +101,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d0db07c8419db53d30612e6edbbe134634e37a74
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 252dcb3214c94af359a65f81164656012dfaec10
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083941"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064301"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor – třída
 
@@ -152,375 +152,375 @@ Příklad ukazuje, jak použít tuto třídu pro spuštění systému SQL Server
 
 ## <a name="cdynamicparameteraccessor"></a> CDynamicParameterAccessor::CDynamicParameterAccessor
 
-Konstruktor  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Konstruktor
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-typedef CDynamicParameterAccessor _ParamClass;  
-CDynamicParameterAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,   
-   DBLENGTH nBlobSize = 8000 )   
-   : CDynamicAccessor(eBlobHandling, nBlobSize )  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+typedef CDynamicParameterAccessor _ParamClass;
+CDynamicParameterAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
+   DBLENGTH nBlobSize = 8000 )
+   : CDynamicAccessor(eBlobHandling, nBlobSize )
+```
+
+#### <a name="parameters"></a>Parametry
 
 *eBlobHandling*<br/>
-Určuje, jak má být zpracována datový objekt BLOB. Výchozí hodnota je DBBLOBHANDLING_DEFAULT. Zobrazit [CDynamicAccessor::SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md) popis DBBLOBHANDLINGENUM hodnoty.  
-  
-*nBlobSize*<br/>
-Maximální velikost objektu BLOB v bajtech; sloupec data v průběhu této hodnoty je považován za objekt BLOB. Výchozí hodnota je 8 000. Zobrazit [CDynamicAccessor::SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md) podrobnosti.  
-  
-### <a name="remarks"></a>Poznámky  
+Určuje, jak má být zpracována datový objekt BLOB. Výchozí hodnota je DBBLOBHANDLING_DEFAULT. Zobrazit [CDynamicAccessor::SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md) popis DBBLOBHANDLINGENUM hodnoty.
 
-Zobrazit [CDynamicAccessor::CDynamicAccessor](../../data/oledb/cdynamicaccessor-cdynamicaccessor.md) konstruktor pro další informace o zpracování objektů BLOB. 
+*nBlobSize*<br/>
+Maximální velikost objektu BLOB v bajtech; sloupec data v průběhu této hodnoty je považován za objekt BLOB. Výchozí hodnota je 8 000. Zobrazit [CDynamicAccessor::SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md) podrobnosti.
+
+### <a name="remarks"></a>Poznámky
+
+Zobrazit [CDynamicAccessor::CDynamicAccessor](../../data/oledb/cdynamicaccessor-cdynamicaccessor.md) konstruktor pro další informace o zpracování objektů BLOB.
 
 ## <a name="getparam"></a> CDynamicParameterAccessor::GetParam
 
-Načte data neřetězcový pro zadaný parametr z parametru vyrovnávací paměti.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Načte data neřetězcový pro zadaný parametr z parametru vyrovnávací paměti.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-template <class ctype>bool GetParam(DBORDINAL nParam,   
-   ctype* pData) const throw();  
+template <class ctype>bool GetParam(DBORDINAL nParam, 
+   ctype* pData) const throw();
 
-template <class ctype> bool GetParam(TCHAR* pParamName,   
-   ctype* pData) const throw();  
+template <class ctype> bool GetParam(TCHAR* pParamName, 
+   ctype* pData) const throw();
 
-void* GetParam(DBORDINAL nParam) const throw();  
+void* GetParam(DBORDINAL nParam) const throw();
 
-void* GetParam(TCHAR* pParamName) const throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+void* GetParam(TCHAR* pParamName) const throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *ctype*<br/>
-Parametr bez vizuálního vzhledu, který je datového typu.  
-  
-*nParam*<br/>
-[in] Číslo parametru (posun od 1). Parametr 0 je vyhrazený pro vrácené hodnoty. Počet parametrů je index parametru na základě jeho pořadí v SQL nebo uloženou proceduru volání. Zobrazit [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) příklad.  
-  
-*pParamName*<br/>
-[in] Název parametru.  
-  
-*pData*<br/>
-[out] Ukazatel na paměti, který obsahuje data načtená z vyrovnávací paměti.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+Parametr bez vizuálního vzhledu, který je datového typu.
 
-Pro nešablonové verze odkazuje na paměti, který obsahuje data načíst z vyrovnávací paměti. Šablony verzí, vrátí **true** v případě úspěchu nebo **false** při selhání.  
-  
-Použití `GetParam` k načtení neřetězcový parametr dat z vyrovnávací paměti. Použití [getparamstring –](../../data/oledb/cdynamicparameteraccessor-getparamstring.md) načíst data parametru řetězce z vyrovnávací paměti.  
+*nParam*<br/>
+[in] Číslo parametru (posun od 1). Parametr 0 je vyhrazený pro vrácené hodnoty. Počet parametrů je index parametru na základě jeho pořadí v SQL nebo uloženou proceduru volání. Zobrazit [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) příklad.
+
+*pParamName*<br/>
+[in] Název parametru.
+
+*pData*<br/>
+[out] Ukazatel na paměti, který obsahuje data načtená z vyrovnávací paměti.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Pro nešablonové verze odkazuje na paměti, který obsahuje data načíst z vyrovnávací paměti. Šablony verzí, vrátí **true** v případě úspěchu nebo **false** při selhání.
+
+Použití `GetParam` k načtení neřetězcový parametr dat z vyrovnávací paměti. Použití [getparamstring –](../../data/oledb/cdynamicparameteraccessor-getparamstring.md) načíst data parametru řetězce z vyrovnávací paměti.
 
 ## <a name="getparamcount"></a> CDynamicParameterAccessor::GetParamCount
 
-Získá počet parametrů, které jsou uloženy ve vyrovnávací paměti.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-DB_UPARAMS GetParamCount() const throw();  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
+Získá počet parametrů, které jsou uloženy ve vyrovnávací paměti.
 
-Počet parametrů.  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+DB_UPARAMS GetParamCount() const throw();
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Počet parametrů.
 
 ## <a name="getparamio"></a> CDynamicParameterAccessor::GetParamIO
 
-Určuje, zda je zadaný parametr jako vstupní nebo výstupní parametr.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Určuje, zda je zadaný parametr jako vstupní nebo výstupní parametr.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-bool GetParamIO(DBORDINAL nParam,   
-   DBPARAMIO* pParamIO) const throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+bool GetParamIO(DBORDINAL nParam, 
+   DBPARAMIO* pParamIO) const throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *nParam*<br/>
-[in] Číslo parametru (posun od 1). Parametr 0 je vyhrazený pro vrácené hodnoty. Počet parametrů je index parametru na základě jeho pořadí v SQL nebo uloženou proceduru volání. Zobrazit [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) příklad.  
-  
-*pParamIO*<br/>
-Ukazatel na proměnnou obsahující `DBPARAMIO` (vstupní nebo výstupní) typu zadaného parametru. Je definovaná následujícím způsobem:  
-  
-```cpp  
-typedef DWORD DBPARAMIO;  
-  
-enum DBPARAMIOENUM {  
-    DBPARAMIO_NOTPARAM   = 0,  
-    DBPARAMIO_INPUT      = 0x1,  
-    DBPARAMIO_OUTPUT     = 0x2  
-};  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
+[in] Číslo parametru (posun od 1). Parametr 0 je vyhrazený pro vrácené hodnoty. Počet parametrů je index parametru na základě jeho pořadí v SQL nebo uloženou proceduru volání. Zobrazit [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) příklad.
 
-Vrátí **true** v případě úspěchu nebo **false** při selhání.  
+*pParamIO*<br/>
+Ukazatel na proměnnou obsahující `DBPARAMIO` (vstupní nebo výstupní) typu zadaného parametru. Je definovaná následujícím způsobem:
+
+```cpp
+typedef DWORD DBPARAMIO;
+
+enum DBPARAMIOENUM {
+    DBPARAMIO_NOTPARAM   = 0,
+    DBPARAMIO_INPUT      = 0x1,
+    DBPARAMIO_OUTPUT     = 0x2
+};
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí **true** v případě úspěchu nebo **false** při selhání.
 
 ## <a name="getparamlength"></a> CDynamicParameterAccessor::GetParamLength
 
-Načte Délka zadaného parametru uloženy ve vyrovnávací paměti.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-bool GetParamLength(DBORDINAL nParam,  
-   DBLENGTH* pLength);  
+Načte Délka zadaného parametru uloženy ve vyrovnávací paměti.
 
-DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+bool GetParamLength(DBORDINAL nParam,
+   DBLENGTH* pLength);
+
+DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *nParam*<br/>
-[in] Číslo parametru (posun od 1). Parametr 0 je vyhrazený pro vrácené hodnoty. Počet parametrů je index parametru na základě jeho pořadí v SQL nebo uloženou proceduru volání. Zobrazit [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) příklad.  
-  
-*pLength*<br/>
-[out] Ukazatel na proměnnou obsahující délku v bajtech zadaný parametr.  
-  
-### <a name="remarks"></a>Poznámky  
+[in] Číslo parametru (posun od 1). Parametr 0 je vyhrazený pro vrácené hodnoty. Počet parametrů je index parametru na základě jeho pořadí v SQL nebo uloženou proceduru volání. Zobrazit [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) příklad.
 
-První přepsat vrátí **true** v případě úspěchu nebo **false** při selhání. Druhá přepsat odkazuje na paměti, který obsahuje délku parametru. 
+*pLength*<br/>
+[out] Ukazatel na proměnnou obsahující délku v bajtech zadaný parametr.
+
+### <a name="remarks"></a>Poznámky
+
+První přepsat vrátí **true** v případě úspěchu nebo **false** při selhání. Druhá přepsat odkazuje na paměti, který obsahuje délku parametru.
 
 ## <a name="getparamname"></a> CDynamicParameterAccessor::GetParamName
 
-Načte název zadaný parametr.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Načte název zadaný parametr.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-LPOLESTR GetParamName(DBORDINAL nParam) const throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+LPOLESTR GetParamName(DBORDINAL nParam) const throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *nParam*<br/>
-[in] Číslo parametru (posun od 1). Parametr 0 je vyhrazený pro vrácené hodnoty. Počet parametrů je index parametru na základě jeho pořadí v SQL nebo uloženou proceduru volání. Zobrazit [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) příklad.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+[in] Číslo parametru (posun od 1). Parametr 0 je vyhrazený pro vrácené hodnoty. Počet parametrů je index parametru na základě jeho pořadí v SQL nebo uloženou proceduru volání. Zobrazit [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) příklad.
 
-Název zadaný parametr.  
+### <a name="return-value"></a>Návratová hodnota
+
+Název zadaný parametr.
 
 ## <a name="getparamstatus"></a> CDynamicParameterAccessor::GetParamStatus
 
-Načte stav zadaný parametr uloženy ve vyrovnávací paměti.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-bool GetParamStatus(DBORDINAL nParam,  
-   DBSTATUS* pStatus);  
+Načte stav zadaný parametr uloženy ve vyrovnávací paměti.
 
-DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+bool GetParamStatus(DBORDINAL nParam,
+   DBSTATUS* pStatus);
+
+DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *nParam*<br/>
-[in] Číslo parametru (posun od 1). Parametr 0 je vyhrazený pro vrácené hodnoty. Počet parametrů je index parametru na základě jeho pořadí v SQL nebo uloženou proceduru volání. Zobrazit [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) příklad.  
-  
+[in] Číslo parametru (posun od 1). Parametr 0 je vyhrazený pro vrácené hodnoty. Počet parametrů je index parametru na základě jeho pořadí v SQL nebo uloženou proceduru volání. Zobrazit [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) příklad.
+
 *pStatus*<br/>
-[out] Ukazatel na proměnnou obsahující stav DBSTATUS zadaný parametr. Informace o hodnotách DBSTATUS, naleznete v tématu [stav](/previous-versions/windows/desktop/ms722617) v *OLE DB referenční informace pro programátory*, nebo vyhledejte DBSTATUS oledb.h.  
-  
-### <a name="remarks"></a>Poznámky  
+[out] Ukazatel na proměnnou obsahující stav DBSTATUS zadaný parametr. Informace o hodnotách DBSTATUS, naleznete v tématu [stav](/previous-versions/windows/desktop/ms722617) v *OLE DB referenční informace pro programátory*, nebo vyhledejte DBSTATUS oledb.h.
+
+### <a name="remarks"></a>Poznámky
 
 První přepsat vrátí **true** v případě úspěchu nebo **false** při selhání. Druhá přepsat odkazuje na paměti, který obsahuje stav zadaný parametr.
 
 ## <a name="getparamstring"></a> CDynamicParameterAccessor::GetParamString
 
-Načte data řetězce zadaného parametru uloženy ve vyrovnávací paměti.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Načte data řetězce zadaného parametru uloženy ve vyrovnávací paměti.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-bool GetParamString(DBORDINAL nParam,  
+bool GetParamString(DBORDINAL nParam,
    CSimpleStringA& strOutput) throw();
 
-bool GetParamString(DBORDINAL nParam,  
+bool GetParamString(DBORDINAL nParam,
    CSimpleStringW& strOutput) throw();
-   
-bool GetParamString(DBORDINAL nParam,  
-   CHAR* pBuffer,  
+
+bool GetParamString(DBORDINAL nParam,
+   CHAR* pBuffer,
    size_t* pMaxLen) throw();
 
-bool GetParamString(DBORDINAL nParam,  
-   WCHAR* pBuffer,  
-   size_t* pMaxLen) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+bool GetParamString(DBORDINAL nParam,
+   WCHAR* pBuffer,
+   size_t* pMaxLen) throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *nParam*<br/>
-[in] Číslo parametru (posun od 1). Parametr 0 je vyhrazený pro vrácené hodnoty. Počet parametrů je index parametru na základě jeho pořadí v SQL nebo uloženou proceduru volání. Zobrazit [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) příklad.  
-  
-*strOutput*<br/>
-[out] ANSI (`CSimpleStringA`) nebo Unicode (`CSimpleStringW`) data zadaný parametr řetězce. Je třeba předat parametr typu `CString`, například:  
-  
-[!code-cpp[NVC_OLEDB_Consumer#9](../../data/oledb/codesnippet/cpp/cdynamicparameteraccessor-getparamstring_1.cpp)]  
-  
-*pBuffer*<br/>
-[out] Ukazatel na ANSI (**CHAR**) nebo Unicode (**WCHAR**) data zadaný parametr řetězce.  
-  
-*pMaxLen*<br/>
-[out] Ukazatel na velikost vyrovnávací paměti, na které odkazuje *pBuffer* (ve znacích, včetně ukončujícího znaku NULL).  
-  
-### <a name="remarks"></a>Poznámky  
+[in] Číslo parametru (posun od 1). Parametr 0 je vyhrazený pro vrácené hodnoty. Počet parametrů je index parametru na základě jeho pořadí v SQL nebo uloženou proceduru volání. Zobrazit [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) příklad.
 
-Vrátí **true** v případě úspěchu nebo **false** při selhání.  
-  
-Pokud *pBuffer* má hodnotu NULL, tato metoda nastaví velikost požadované vyrovnávací paměti v paměti, na které odkazuje *pMaxLen* a vrátit **true** bez kopírování data.  
-  
-Tato metoda se nezdaří, pokud vyrovnávací paměť *pBuffer* není dostatečně velký, aby se tak, aby obsahovala celý řetězec.  
-  
-Použití `GetParamString` načíst data parametru řetězce z vyrovnávací paměti. Použití [GetParam –](../../data/oledb/cdynamicparameteraccessor-getparam.md) k načtení neřetězcový parametr dat z vyrovnávací paměti.  
+*strOutput*<br/>
+[out] ANSI (`CSimpleStringA`) nebo Unicode (`CSimpleStringW`) data zadaný parametr řetězce. Je třeba předat parametr typu `CString`, například:
+
+[!code-cpp[NVC_OLEDB_Consumer#9](../../data/oledb/codesnippet/cpp/cdynamicparameteraccessor-getparamstring_1.cpp)]
+
+*pBuffer*<br/>
+[out] Ukazatel na ANSI (**CHAR**) nebo Unicode (**WCHAR**) data zadaný parametr řetězce.
+
+*pMaxLen*<br/>
+[out] Ukazatel na velikost vyrovnávací paměti, na které odkazuje *pBuffer* (ve znacích, včetně ukončujícího znaku NULL).
+
+### <a name="remarks"></a>Poznámky
+
+Vrátí **true** v případě úspěchu nebo **false** při selhání.
+
+Pokud *pBuffer* má hodnotu NULL, tato metoda nastaví velikost požadované vyrovnávací paměti v paměti, na které odkazuje *pMaxLen* a vrátit **true** bez kopírování data.
+
+Tato metoda se nezdaří, pokud vyrovnávací paměť *pBuffer* není dostatečně velký, aby se tak, aby obsahovala celý řetězec.
+
+Použití `GetParamString` načíst data parametru řetězce z vyrovnávací paměti. Použití [GetParam –](../../data/oledb/cdynamicparameteraccessor-getparam.md) k načtení neřetězcový parametr dat z vyrovnávací paměti.
 
 ## <a name="getparamtype"></a> CDynamicParameterAccessor::GetParamType
 
-Načte datový typ zadaný parametr.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Načte datový typ zadaný parametr.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-bool GetParamType(DBORDINAL nParam,  
-   DBTYPE* pType) const throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+bool GetParamType(DBORDINAL nParam,
+   DBTYPE* pType) const throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *nParam*<br/>
-[in] Číslo parametru (posun od 1). Parametr 0 je vyhrazený pro vrácené hodnoty. Počet parametrů je index parametru na základě jeho pořadí v SQL nebo uloženou proceduru volání. Zobrazit [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) příklad.  
-  
-*pType*<br/>
-[out] Ukazatel na proměnnou obsahující datový typ zadaný parametr.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+[in] Číslo parametru (posun od 1). Parametr 0 je vyhrazený pro vrácené hodnoty. Počet parametrů je index parametru na základě jeho pořadí v SQL nebo uloženou proceduru volání. Zobrazit [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) příklad.
 
-Vrátí **true** v případě úspěchu nebo **false** při selhání.  
+*pType*<br/>
+[out] Ukazatel na proměnnou obsahující datový typ zadaný parametr.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí **true** v případě úspěchu nebo **false** při selhání.
 
 ## <a name="setparam"></a> CDynamicParameterAccessor::SetParam
 
-Nastaví parametr vyrovnávací paměti, pomocí zadaného data (bez řetězce).  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Nastaví parametr vyrovnávací paměti, pomocí zadaného data (bez řetězce).
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
 template <class ctype>
-bool SetParam(DBORDINAL nParam,  
-   constctype* pData,  
-   DBSTATUS status = DBSTATUS_S_OK) throw();  
+bool SetParam(DBORDINAL nParam,
+   constctype* pData,
+   DBSTATUS status = DBSTATUS_S_OK) throw();
 
-template <class ctype>  
-bool SetParam(TCHAR* pParamName,  
-   const ctype* pData,  
-   DBSTATUS status = DBSTATUS_S_OK) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+template <class ctype>
+bool SetParam(TCHAR* pParamName,
+   const ctype* pData,
+   DBSTATUS status = DBSTATUS_S_OK) throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *ctype*<br/>
-Parametr bez vizuálního vzhledu, který je datového typu.  
-  
-*nParam*<br/>
-[in] Číslo parametru (posun od 1). Parametr 0 je vyhrazený pro vrácené hodnoty. Počet parametrů je index parametru na základě jeho pořadí v SQL nebo uloženou proceduru volání. Příklad:  
-  
-[!code-cpp[NVC_OLEDB_Consumer#8](../../data/oledb/codesnippet/cpp/cdynamicparameteraccessor-setparam_1.cpp)]  
-  
-*pParamName*<br/>
-[in] Název parametru.  
-  
-*pData*<br/>
-[in] Ukazatel na paměť obsahující data, která mají být zapsána do vyrovnávací paměti.  
-  
-*Stav*<br/>
-[in] Stav sloupce je DBSTATUS. Informace o hodnotách DBSTATUS, naleznete v tématu [stav](/previous-versions/windows/desktop/ms722617) v *OLE DB referenční informace pro programátory*, nebo vyhledejte DBSTATUS oledb.h.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+Parametr bez vizuálního vzhledu, který je datového typu.
 
-Vrátí **true** v případě úspěchu nebo **false** při selhání.  
-  
-Použití `SetParam` nastavit neřetězcový parametr data ve vyrovnávací paměti. Použití [setparamstring –](../../data/oledb/cdynamicparameteraccessor-setparamstring.md) nastavení data parametru řetězce ve vyrovnávací paměti.  
+*nParam*<br/>
+[in] Číslo parametru (posun od 1). Parametr 0 je vyhrazený pro vrácené hodnoty. Počet parametrů je index parametru na základě jeho pořadí v SQL nebo uloženou proceduru volání. Příklad:
+
+[!code-cpp[NVC_OLEDB_Consumer#8](../../data/oledb/codesnippet/cpp/cdynamicparameteraccessor-setparam_1.cpp)]
+
+*pParamName*<br/>
+[in] Název parametru.
+
+*pData*<br/>
+[in] Ukazatel na paměť obsahující data, která mají být zapsána do vyrovnávací paměti.
+
+*Stav*<br/>
+[in] Stav sloupce je DBSTATUS. Informace o hodnotách DBSTATUS, naleznete v tématu [stav](/previous-versions/windows/desktop/ms722617) v *OLE DB referenční informace pro programátory*, nebo vyhledejte DBSTATUS oledb.h.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Vrátí **true** v případě úspěchu nebo **false** při selhání.
+
+Použití `SetParam` nastavit neřetězcový parametr data ve vyrovnávací paměti. Použití [setparamstring –](../../data/oledb/cdynamicparameteraccessor-setparamstring.md) nastavení data parametru řetězce ve vyrovnávací paměti.
 
 ## <a name="setparamlength"></a> CDynamicParameterAccessor::SetParamLength
 
-Nastaví délku zadaný parametr uloženy ve vyrovnávací paměti.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Nastaví délku zadaný parametr uloženy ve vyrovnávací paměti.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-bool SetParamLength(DBORDINAL nParam,  
-   DBLENGTH length);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+bool SetParamLength(DBORDINAL nParam,
+   DBLENGTH length);
+```
+
+#### <a name="parameters"></a>Parametry
 
 *nParam*<br/>
-[in] Číslo parametru (posun od 1). Parametr 0 je vyhrazený pro vrácené hodnoty. Počet parametrů je index parametru na základě jeho pořadí v SQL nebo uloženou proceduru volání. Zobrazit [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) příklad.  
-  
-*Délka*<br/>
-[in] Délka zadaného parametru v bajtech.  
-  
-### <a name="remarks"></a>Poznámky  
+[in] Číslo parametru (posun od 1). Parametr 0 je vyhrazený pro vrácené hodnoty. Počet parametrů je index parametru na základě jeho pořadí v SQL nebo uloženou proceduru volání. Zobrazit [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) příklad.
 
-Vrátí **true** v případě úspěchu nebo **false** při selhání. 
+*Délka*<br/>
+[in] Délka zadaného parametru v bajtech.
+
+### <a name="remarks"></a>Poznámky
+
+Vrátí **true** v případě úspěchu nebo **false** při selhání.
 
 ## <a name="setparamstatus"></a> CDynamicParameterAccessor::SetParamStatus
 
-Nastaví stav zadaný parametr uloženy ve vyrovnávací paměti.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Nastaví stav zadaný parametr uloženy ve vyrovnávací paměti.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-bool SetParamStatus(DBORDINAL nParam,  
-   DBSTATUS status);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+bool SetParamStatus(DBORDINAL nParam,
+   DBSTATUS status);
+```
+
+#### <a name="parameters"></a>Parametry
 
 *nParam*<br/>
-[in] Číslo parametru (posun od 1). Parametr 0 je vyhrazený pro vrácené hodnoty. Počet parametrů je index parametru na základě jeho pořadí v SQL nebo uloženou proceduru volání. Zobrazit [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) příklad.  
-  
-*Stav*<br/>
-[in] Stav DBSTATUS zadaný parametr. Informace o hodnotách DBSTATUS, naleznete v tématu [stav](/previous-versions/windows/desktop/ms722617) v *OLE DB referenční informace pro programátory*, nebo vyhledejte DBSTATUS oledb.h.  
-  
-### <a name="remarks"></a>Poznámky  
+[in] Číslo parametru (posun od 1). Parametr 0 je vyhrazený pro vrácené hodnoty. Počet parametrů je index parametru na základě jeho pořadí v SQL nebo uloženou proceduru volání. Zobrazit [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) příklad.
 
-Vrátí **true** v případě úspěchu nebo **false** při selhání. 
+*Stav*<br/>
+[in] Stav DBSTATUS zadaný parametr. Informace o hodnotách DBSTATUS, naleznete v tématu [stav](/previous-versions/windows/desktop/ms722617) v *OLE DB referenční informace pro programátory*, nebo vyhledejte DBSTATUS oledb.h.
+
+### <a name="remarks"></a>Poznámky
+
+Vrátí **true** v případě úspěchu nebo **false** při selhání.
 
 ## <a name="setparamstring"></a> CDynamicParameterAccessor::SetParamString
 
-Nastaví data řetězce zadaného parametru uloženy ve vyrovnávací paměti.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Nastaví data řetězce zadaného parametru uloženy ve vyrovnávací paměti.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-bool SetParamString(DBORDINAL nParam,   
-   constCHAR* pString,   
-   DBSTATUS status = DBSTATUS_S_OK) throw();bool SetParamString(DBORDINAL nParam,   
-   constWCHAR* pString,   
-   DBSTATUS status = DBSTATUS_S_OK) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+bool SetParamString(DBORDINAL nParam, 
+   constCHAR* pString, 
+   DBSTATUS status = DBSTATUS_S_OK) throw();bool SetParamString(DBORDINAL nParam, 
+   constWCHAR* pString, 
+   DBSTATUS status = DBSTATUS_S_OK) throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *nParam*<br/>
-[in] Číslo parametru (posun od 1). Parametr 0 je vyhrazený pro vrácené hodnoty. Počet parametrů je index parametru na základě jeho pořadí v SQL nebo uloženou proceduru volání. Zobrazit [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) příklad.  
-  
-*pString*<br/>
-[in] Ukazatel na ANSI (**CHAR**) nebo Unicode (**WCHAR**) data zadaný parametr řetězce. Zobrazit DBSTATUS v oledb.h.  
-  
-*Stav*<br/>
-[in] Stav DBSTATUS zadaný parametr. Informace o hodnotách DBSTATUS, naleznete v tématu [stav](/previous-versions/windows/desktop/ms722617) v *OLE DB referenční informace pro programátory*, nebo vyhledejte DBSTATUS oledb.h.  
-  
-### <a name="remarks"></a>Poznámky  
+[in] Číslo parametru (posun od 1). Parametr 0 je vyhrazený pro vrácené hodnoty. Počet parametrů je index parametru na základě jeho pořadí v SQL nebo uloženou proceduru volání. Zobrazit [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) příklad.
 
-Vrátí **true** v případě úspěchu nebo **false** při selhání.  
-  
-`SetParamString` selže, pokud se pokusíte nastavit řetězec, který je větší než maximální velikost zadaná pro *pString*.  
-  
-Použití `SetParamString` nastavení data parametru řetězce ve vyrovnávací paměti. Použití [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) nastavit neřetězcový parametr data ve vyrovnávací paměti. 
+*pString*<br/>
+[in] Ukazatel na ANSI (**CHAR**) nebo Unicode (**WCHAR**) data zadaný parametr řetězce. Zobrazit DBSTATUS v oledb.h.
+
+*Stav*<br/>
+[in] Stav DBSTATUS zadaný parametr. Informace o hodnotách DBSTATUS, naleznete v tématu [stav](/previous-versions/windows/desktop/ms722617) v *OLE DB referenční informace pro programátory*, nebo vyhledejte DBSTATUS oledb.h.
+
+### <a name="remarks"></a>Poznámky
+
+Vrátí **true** v případě úspěchu nebo **false** při selhání.
+
+`SetParamString` selže, pokud se pokusíte nastavit řetězec, který je větší než maximální velikost zadaná pro *pString*.
+
+Použití `SetParamString` nastavení data parametru řetězce ve vyrovnávací paměti. Použití [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) nastavit neřetězcový parametr data ve vyrovnávací paměti.
 
 ## <a name="see-also"></a>Viz také:
 
@@ -528,4 +528,4 @@ Použití `SetParamString` nastavení data parametru řetězce ve vyrovnávací 
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor – třída](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicAccessor – třída](../../data/oledb/cdynamicaccessor-class.md)<br/>
-[CManualAccessor – třída](../../data/oledb/cmanualaccessor-class.md)  
+[CManualAccessor – třída](../../data/oledb/cmanualaccessor-class.md)

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd59cc19c80e305a7e57fb711a49f59a024d528
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5ad6ad1c4d1d7d74f60acbd985ee549d708ae28f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434762"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074121"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Výjimky: Zachytávání a mazání
 
@@ -36,9 +36,9 @@ Vaše **catch** bloku musí odstranit výjimku při:
 
 - **Catch** bloku vyvolá novou výjimku.
 
-     Samozřejmě nesmí odstranit výjimku, pokud vyvoláte výjimku znovu:
+   Samozřejmě nesmí odstranit výjimku, pokud vyvoláte výjimku znovu:
 
-     [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
+   [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
 
 - Spuštění se vrátí v rámci **catch** bloku.
 
@@ -49,15 +49,15 @@ Vaše **catch** bloku musí odstranit výjimku při:
 
 1. Použití **zkuste** – klíčové slovo k nastavení **zkuste** bloku. Spustit všechny příkazy programu, které můžou vyvolat výjimku v rámci **zkuste** bloku.
 
-     Použití **catch** – klíčové slovo k nastavení **catch** bloku. Kód zpracování výjimek v umístěte **catch** bloku. Kód v **catch** blok se spustí, pouze pokud kód v rámci **zkuste** bloku dojde k výjimce typu určeného v **catch** příkazu.
+   Použití **catch** – klíčové slovo k nastavení **catch** bloku. Kód zpracování výjimek v umístěte **catch** bloku. Kód v **catch** blok se spustí, pouze pokud kód v rámci **zkuste** bloku dojde k výjimce typu určeného v **catch** příkazu.
 
-     Zobrazí se následující kostra jak **zkuste** a **catch** bloky, jsou obvykle seřazené:
+   Zobrazí se následující kostra jak **zkuste** a **catch** bloky, jsou obvykle seřazené:
 
-     [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
+   [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
 
-     Když je vyvolána výjimka, řízení se předá první **catch** bloku, deklarace výjimky odpovídá typu výjimky. Můžete selektivně zpracovávat různé druhy výjimek pomocí sekvenční **catch** blokuje, jak je uvedeno níže:
+   Když je vyvolána výjimka, řízení se předá první **catch** bloku, deklarace výjimky odpovídá typu výjimky. Můžete selektivně zpracovávat různé druhy výjimek pomocí sekvenční **catch** blokuje, jak je uvedeno níže:
 
-     [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
+   [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
 
 Další informace najdete v tématu [výjimky: převádění z maker výjimek prostředí MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).
 

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 116cd9ee86ca29aac6da489916f78c3884ba8bdd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3a37f79851df043a5473c82b514b7e85f418f1b6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446542"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067914"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Rutiny ověřování dat standardního dialogového okna
 
@@ -47,8 +47,6 @@ Toto téma uvádí rutiny ověřování (DDV) dat standardního dialogového okn
 |[DDV_MinMaxUInt](#ddv_minmaxuint)|Ověří nepřekročí hodnotu daný ovládací prvek daného **UINT** rozsahu.|
 |[Ddv_minmaxunsigned –](#ddv_minmaxuint)|Ověřuje, že hodnota daný ovládací prvek leží mezi dvěma zadanými hodnotami.|
 |[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|Ověří nepřekročí hodnotu daný ovládací prvek daného **ULONGLONG** rozsahu.|
-
-
 
 ##  <a name="ddv_maxchars"></a>  Ddv_maxchars –
 
@@ -552,6 +550,7 @@ Volání `DDV_MinMaxUnsigned` k ověření, že hodnota v ovládacím prvku při
        unsigned minVal,
        unsigned maxVal );
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
@@ -579,6 +578,4 @@ Další informace o DDV najdete v tématu [výměna dat dialogových oken a ově
 [Makra a globální prvky](mfc-macros-and-globals.md)<br/>
 [Ddx_slider –](#ddx_slider)<br/>
 [DDX_FieldSlider](#ddx_fieldslider)
-
-
 

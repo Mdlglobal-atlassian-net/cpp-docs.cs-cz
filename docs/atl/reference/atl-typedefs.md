@@ -33,12 +33,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 866cedba73be1c7858415359dfd94cec9a55dccc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9835b8cadb5a24aea130b1e32d919ebb49d20293
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46045247"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065692"
 ---
 # <a name="atl-typedefs"></a>ATL – definice TypeDef
 
@@ -280,6 +280,7 @@ Specializace [cpatht –](../../atl/reference/cpatht-class.md) pomocí `CStringW
 ```
 typedef ATL::CPathT<CStringW> CPathW;
 ```
+
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** atlpath.h

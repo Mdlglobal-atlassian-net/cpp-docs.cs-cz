@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6e8f448d4b6bee4b301fc567cc8e8e857747a4e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1ec2e3253b4d26bc6773ffc4005100edfbec1bff
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440287"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077527"
 ---
 # <a name="cpen-class"></a>Cpen – třída
 
@@ -92,12 +92,10 @@ Vytvoří `CPen` objektu.
 ```
 CPen();
 
-
 CPen(
     int nPenStyle,
     int nWidth,
     COLORREF crColor);
-
 
 CPen(
     int nPenStyle,
@@ -132,13 +130,13 @@ Druhá verze `CPen` konstruktor Určuje kombinaci typu, styl, zakončení a atri
 
 - PS_COSMETIC vytvoří kosmetické pera.
 
-     Druhá verze `CPen` konstruktor přidá následující styly pero *nPenStyle*:
+   Druhá verze `CPen` konstruktor přidá následující styly pero *nPenStyle*:
 
 - PS_ALTERNATE vytvoří pera, který nastaví každý pixel. (Tento styl je možné použít pouze kosmetické pera.)
 
 - Vytvoří PS_USERSTYLE pera, která používá pole stylu zadaných uživatelem.
 
-     Zakončení může být jedna z následujících hodnot:
+   Zakončení může být jedna z následujících hodnot:
 
 - Zakončení PS_ENDCAP_ROUND jsou kola.
 
@@ -146,7 +144,7 @@ Druhá verze `CPen` konstruktor Určuje kombinaci typu, styl, zakončení a atri
 
 - Zakončení PS_ENDCAP_FLAT jsou bez stromové struktury.
 
-     Připojení může být jedna z následujících hodnot:
+   Připojení může být jedna z následujících hodnot:
 
 - Jsou sený PS_JOIN_BEVEL připojí.
 
@@ -192,7 +190,6 @@ BOOL CreatePen(
     int nPenStyle,
     int nWidth,
     COLORREF crColor);
-
 
 BOOL CreatePen(
     int nPenStyle,

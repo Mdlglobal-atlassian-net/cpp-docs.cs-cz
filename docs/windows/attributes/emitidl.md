@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e11e1ce061fcf2e9ce21155dcbeb93b45b66238
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 520b9bf8d6a71593acd95ebaac98a72036fcabf2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789474"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070020"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -49,7 +49,8 @@ Jednu z těchto hodnot: `true`, `false`, `forced`, `restricted`, `push`, nebo `p
 
 - `push` Umožňuje uložit aktuální **emitidl** nastavení na interní **emitidl** zásobníku, a `pop` umožňuje nastavit **emitidl** na libovolné hodnoty je v horní části vnitřní **emitidl** zásobníku.
 
-`defaultimports=`*Logická* \(volitelné)  
+`defaultimports=`*Logická* \(volitelné)
+
 - Pokud *logická* je **true**, docobj.idl se importují do generovaného souboru. Navíc pokud souboru IDL se stejným názvem jako. h: soubor, který jste `#include` do zdrojových kód nachází ve stejném adresáři jako soubor hlaviček, pak generovaného souboru obsahuje příkaz import pro tento soubor .idl.
 
 - Pokud *logická* je **false**, docobj.idl není importován do generovaného souboru. Musíte explicitně importujete soubory .idl s [importovat](import.md).
@@ -78,4 +79,4 @@ Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.
 ## <a name="see-also"></a>Viz také
 
 [Atributy kompilátoru](compiler-attributes.md)<br/>
-[Samostatné atributy](stand-alone-attributes.md)  
+[Samostatné atributy](stand-alone-attributes.md)

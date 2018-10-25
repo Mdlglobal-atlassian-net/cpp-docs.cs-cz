@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3374b2a292fc6463cb4fd85d0cd56fe9c3556443
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 986bc24c57f8692bfdd98194b9e58c9cee6817f6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448243"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067186"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>Smazání všech objektů v kolekcích CObject
 
@@ -68,9 +68,9 @@ Všimněte si, že rozdíl mezi odstranění prvku objektu a odebrání samotné
 
 1. Volání `RemoveAll` funkce odeberte všechny prvky z pole poté, co byla odstraněna.
 
-     Kód k odstranění všech prvků pole je následujícím způsobem:
+   Kód k odstranění všech prvků pole je následujícím způsobem:
 
-     [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]
 
 Jak se v seznamu příkladu výše, můžete volat `RemoveAll` odebrat všechny elementy v matici nebo `RemoveAt` odebrat jednotlivý prvek.
 
@@ -82,9 +82,9 @@ Jak se v seznamu příkladu výše, můžete volat `RemoveAll` odebrat všechny 
 
 1. Volání `RemoveAll` funkce odeberte všechny prvky z mapy po se odstranily.
 
-     Kód k odstranění všech prvků `CMap` kolekce je následujícím způsobem. Každý prvek v mapě má řetězec jako klíč a `CPerson` objektu (odvozený od `CObject`) jako hodnotu.
+   Kód k odstranění všech prvků `CMap` kolekce je následujícím způsobem. Každý prvek v mapě má řetězec jako klíč a `CPerson` objektu (odvozený od `CObject`) jako hodnotu.
 
-     [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
+   [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
 
 Můžete volat `RemoveAll` odebrat všechny elementy v objektu map nebo `RemoveKey` odebrat jednotlivý element se zadaným klíčem.
 

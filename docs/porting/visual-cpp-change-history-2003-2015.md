@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcf3ce1f0ddc5003886c367cfe5db8968a911ee9
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 8bda25bc1705183d1482355ae064f87c040daec4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083980"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068070"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>2003 – 2015 historie změn Visual C++
 
@@ -37,7 +37,6 @@ Aby se zabránilo chybám za běhu, které by bylo obtížné najít a diagnosti
 Dále doporučujeme nikdy nepsat kód závislý na konkrétním rozložení pro objekt, který není rozhraním modelu COM nebo objektem POD. Pokud takový kód napíšete, musíte zajistit, aby po upgradu fungoval. Další informace najdete v tématu [přenositelnost na ABI hranice](../cpp/portability-at-abi-boundaries-modern-cpp.md).
 
 Kromě toho probíhající vylepšení shoda s kompilátorem prostředí můžete někdy změnit jak kompilátor rozpozná existující zdrojový kód. Pokud k tomu dojde, mohou se vyskytnout nové nebo jiné chyby během sestavování nebo dokonce behaviorální rozdíly v kódu, který dříve vytvořené a vypadal jako správně spustit. I když tyto nejsou rozbíjející změny, jako jsou popsané v tomto dokumentu, změny zdrojového kódu bude potřeba provést k vyřešení těchto problémů:
-
 
 - [Knihovny jazyka C Runtime (CRT) Rozbíjející změny v](#BK_CRT)
 
@@ -183,7 +182,7 @@ Kromě toho probíhající vylepšení shoda s kompilátorem prostředí můžet
     ```
 
     ```Output
-        Old:  1208925819614629200000000    New:  1208925819614629174706176
+        Old:  1208925819614629200000000    New:  1208925819614629174706176
     ```
 
    Staré analýzy algoritmy byste měli považovat jenom až 17 platných číslic ze vstupního řetězce a by zrušit zbývající číslice. To stačí pro generovat velmi aproximace Hodnota reprezentovaná tímto řetězcem a výsledkem je obvykle velmi blízko správně zakulacený výsledek. Novou implementaci bere v úvahu všechny číslice k dispozici a správně zakulacený výsledek pro všechny vstupy (až 768 číslic). Kromě toho tyto funkce nyní respektují režim (dát řídit přes fesetround).  Toto je potenciálně zásadní chování změnit, protože tyto funkce může být výstup odlišné výsledky. Nové výsledky jsou vždy více než starých výsledků.
@@ -652,7 +651,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
    Předpokládejme například, že váš kód definuje, jak **umístění nového** a **umístění operátoru delete**:
 
     ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
     ```
 
@@ -1743,7 +1742,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     }
     ```
 
-   - nebo -
+   \- nebo –
 
     ```cpp
     class base;  // as above
@@ -1919,7 +1918,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
 - **Obnovení upozornění switch – příkaz**
 
-   Předchozí verzi kompilátoru odstraněny dříve existující upozornění související s **přepnout** příkazů; toto upozornění ACLs byly obnoveny. Kompilátor vyvolá nyní obnovené upozornění a upozornění souvisejících s konkrétní případy (včetně výchozí případ) jsou teď vydaný na řádek obsahující problematický případu, nikoli na posledním řádku příkazu switch. Díky tomu teď vystavujících upozornění na samostatné řádky než v minulosti, upozornění dříve potlačit pomocí `#pragma warning(disable:####)` už dá potlačit očekávaným způsobem. Chcete-li tato upozornění potlačit očekávaným způsobem, může být potřeba přesunout `#pragma warning(disable:####)` direktivy řádku nad prvním případě potenciálně poškozený. Následují obnovené upozornění.
+   Předchozí verze kompilátoru odebrat dříve existující upozornění související s **přepnout** příkazů; toto upozornění ACLs byly obnoveny. Kompilátor vyvolá nyní obnovené upozornění a upozornění souvisejících s konkrétní případy (včetně výchozí případ) jsou teď vydaný na řádek obsahující problematický případu, nikoli na posledním řádku příkazu switch. Díky tomu teď vystavujících upozornění na samostatné řádky než v minulosti, upozornění dříve potlačit pomocí `#pragma warning(disable:####)` už dá potlačit očekávaným způsobem. Chcete-li tato upozornění potlačit očekávaným způsobem, může být potřeba přesunout `#pragma warning(disable:####)` direktivy řádku nad prvním případě potenciálně poškozený. Následují obnovené upozornění.
 
     ```Output
     warning C4060: switch statement contains no 'case' or 'default' labels

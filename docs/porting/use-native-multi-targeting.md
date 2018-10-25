@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62404de4012bcd49888da527ae93ed1b2137a48a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3c66fe63d97f623011b3dade46266a4a9d8d83b1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374142"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064418"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Pomocí nativního cílení na více platforem v sadě Visual Studio sestavení starých projektů
 
@@ -52,11 +52,11 @@ Pokud chcete provést upgrade vašich projektů, je třeba odebrat tuto vlastnos
 
 Pokud se rozhodnete neupgradovat, Visual Studio neprovede žádné změny k souborům řešení nebo projektu. Při sestavování projektu generovaný binární soubory jsou plně kompatibilní s těmi, které jste vytvořili pomocí starší verze sady Visual Studio. Je to proto, že Visual Studio používá stejné kompilátor jazyka C++ a propojí stejné knihovny, která jsou součástí vašeho starší prostředí IDE. To je také proč upgradu dialog upozorňuje na starší verze sady Visual Studio nainstalovaný, pokud se rozhodnete udržovat **zrušit**.
 
-## <a name="instructions-for-visual-studio-2008"></a>Pokyny pro sadu Visual Studio 2008  
-  
+## <a name="instructions-for-visual-studio-2008"></a>Pokyny pro sadu Visual Studio 2008
+
 Visual Studio 2008 má svůj vlastní vyhrazený sestavovací systém pro jazyk C++ volá **VCBuild**. Spouští se v sadě Visual Studio 2010, projekty v jazyce Visual C++ byly změněny na použití **MSBuild**. To znamená, že musí přejít až aktualizaci k sestavování projektů Visual Studio 2008 v nejnovější verzi sady Visual Studio. Aktualizovaný projekt stále generuje binární soubory, které jsou plně kompatibilní s binárními soubory vytvořené pomocí integrovaného vývojového prostředí Visual Studio 2008.
 
-Kromě aktuální verze sady Visual Studio, nejprve musíte nainstalovat Visual Studio 2010 ve stejném počítači jako Visual Studio 2008. Nainstaluje pouze Visual Studio 2010 **MSBuild** skripty, které jsou potřeba k projektům cílové sady Visual Studio 2008. 
+Kromě aktuální verze sady Visual Studio, nejprve musíte nainstalovat Visual Studio 2010 ve stejném počítači jako Visual Studio 2008. Nainstaluje pouze Visual Studio 2010 **MSBuild** skripty, které jsou potřeba k projektům cílové sady Visual Studio 2008.
 
 Dále je třeba aktualizovat Visual Studio 2008 řešení a projektů na aktuální verzi sady Visual Studio. Doporučujeme že vytvořit zálohu projekty a soubory řešení před upgradem. Chcete-li zahájit proces upgradu, otevřete řešení v aktuální verzi sady Visual Studio. Když dostanete upgradu řádku, zkontrolujte zobrazené informace a klikněte na tlačítko **OK** spusťte upgrade. Pokud máte více než jeden projekt v řešení, je nutné aktualizovat Průvodce vytvoří novou .vcxproj projektu soubory – souběžně s existujícími soubory .vcproj. Za předpokladu, máte také kopii původního souboru .sln, upgrade nemá žádný vliv na existující projekty Visual Studio 2008.
 
@@ -77,4 +77,4 @@ Při instalaci těchto produktů **sada nástrojů platformy** vlastnost rozeví
 ## <a name="see-also"></a>Viz také
 
 [Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
-[Vylepšení shody C++ se sadou Visual Studio 2017](../cpp-conformance-improvements-2017.md)  
+[Vylepšení shody C++ se sadou Visual Studio 2017](../cpp-conformance-improvements-2017.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 228349c878e3bef262b5d09790c315e1d8b9e28b
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: a8afa7f6ac4000687f01e09e24c578e6a7853be8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789375"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073042"
 ---
 # <a name="dual"></a>dual
 
@@ -58,7 +58,7 @@ __interface IStatic : IDispatch
    HRESULT P1([out, retval] long *nSize);
    [   propput,    id(1),    bindable,    displaybind,    defaultbind,    requestedit
    ]
-   HRESULT P1([in] long nSize); 
+   HRESULT P1([in] long nSize);
 };
 
 [cpp_quote("#include file.h")];
@@ -81,7 +81,7 @@ Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy podle použití](attributes-by-usage.md)<br/>
-[Vlastní](custom-cpp.md)<br/>
+[custom](custom-cpp.md)<br/>
 [dispinterface](dispinterface.md)<br/>
 [object](object-cpp.md)<br/>
-[__interface](../../cpp/interface.md)  
+[__interface](../../cpp/interface.md)

@@ -19,32 +19,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f3dc76e7d3557f777bb8d521de968671defdde8d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0d6603a410d44608d999685f42954e4562855138
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071559"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072977"
 ---
 # <a name="cmultipleresults-class"></a>CMultipleResults – třída
 
-Pokud chcete, aby příkaz pro zpracování více sad výsledků dotazu, použijte `CMultipleResults` pro `CCommand` argument šablony *TMultiple*.  
-  
+Pokud chcete, aby příkaz pro zpracování více sad výsledků dotazu, použijte `CMultipleResults` pro `CCommand` argument šablony *TMultiple*.
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-class CMultipleResults  
-```  
-  
-## <a name="remarks"></a>Poznámky  
+class CMultipleResults
+```
 
-Pro zpracování více výsledku nastaví, [CCommand](../../data/oledb/ccommand-class.md) musí dědit z této třídy.  
-  
-## <a name="requirements"></a>Požadavky  
+## <a name="remarks"></a>Poznámky
 
-**Záhlaví:** atldbcli  
-  
-## <a name="see-also"></a>Viz také  
+Pro zpracování více výsledku nastaví, [CCommand](../../data/oledb/ccommand-class.md) musí dědit z této třídy.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** atldbcli
+
+## <a name="see-also"></a>Viz také
 
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

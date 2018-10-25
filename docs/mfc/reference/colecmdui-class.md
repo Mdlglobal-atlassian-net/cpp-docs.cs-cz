@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9fe0365440823a394bee44d84bcecd6ed0b70c8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cb4d71f66add8e0462141acf74342c429eb81379
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439091"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071281"
 ---
 # <a name="colecmdui-class"></a>Colecmdui – třída
 
@@ -150,6 +150,4 @@ Ukazatel na text, který se použije příkaz.
 
 [CCmdUI – třída](../../mfc/reference/ccmdui-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-
-
 

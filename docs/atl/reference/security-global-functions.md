@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2cdeef97b92550731b06dcb4a1d425d77f5920a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bbac8dc499c08d96abd33d49f5adec08095ca420
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075151"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067290"
 ---
 # <a name="security-global-functions"></a>Globální funkce zabezpečení
 
@@ -50,11 +50,11 @@ Tyto funkce poskytují podporu pro úpravu objektů SID a seznamu ACL.
 |[AtlSetOwnerSid](#atlsetownersid)|Voláním této funkce nastavíte identifikátor zabezpečení vlastníka (SID) určitého objektu.|
 |[AtlGetSacl](#atlgetsacl)|Voláním této funkce načtete informace o seznamu řízení auditování přístupu (SACL) zadaného objektu.|
 |[AtlSetSacl](#atlsetsacl)|Voláním této funkce nastavíte informace o seznamu řízení auditování přístupu (SACL) zadaného objektu.|
-|[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|Voláním této funkce načtete popisovač zabezpečení daného objektu.|  
+|[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|Voláním této funkce načtete popisovač zabezpečení daného objektu.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsecurity.h 
+**Záhlaví:** atlsecurity.h
 
 ##  <a name="atlgetdacl"></a>  AtlGetDacl
 
@@ -127,7 +127,7 @@ Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.
 V sestavení ladění, dojde k chybě kontrolního výrazu Pokud *hObject* je neplatný, nebo pokud *dwInheritanceFlowControl* není jedním ze tří povolených hodnot.
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsecurity.h 
+**Záhlaví:** atlsecurity.h
 
 ##  <a name="atlgetgroupsid"></a>  AtlGetGroupSid
 
@@ -156,11 +156,11 @@ Ukazatel `CSid` objekt, který bude obsahovat nové informace o zabezpečení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.  
+Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsecurity.h 
+**Záhlaví:** atlsecurity.h
 
 ##  <a name="atlsetgroupsid"></a>  AtlSetGroupSid
 
@@ -189,11 +189,11 @@ Určuje hodnotu z [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_o
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.  
+Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsecurity.h 
+**Záhlaví:** atlsecurity.h
 
 ##  <a name="atlgetownersid"></a>  AtlGetOwnerSid
 
@@ -222,11 +222,11 @@ Ukazatel `CSid` objekt, který bude obsahovat nové informace o zabezpečení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.  
+Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsecurity.h 
+**Záhlaví:** atlsecurity.h
 
 ##  <a name="atlsetownersid"></a>  AtlSetOwnerSid
 
@@ -255,11 +255,11 @@ Určuje hodnotu z [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_o
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.  
+Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsecurity.h 
+**Záhlaví:** atlsecurity.h
 
 ##  <a name="atlgetsacl"></a>  AtlGetSacl
 
@@ -296,11 +296,11 @@ Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `AtlGetSacl` má být volána v mnoha případech na mnoho různých objektů, je efektivnější povolit oprávnění SE_SECURITY_NAME jednou před voláním funkce, s *bRequestNeededPrivileges* nastavena na hodnotu false.  
+Pokud `AtlGetSacl` má být volána v mnoha případech na mnoho různých objektů, je efektivnější povolit oprávnění SE_SECURITY_NAME jednou před voláním funkce, s *bRequestNeededPrivileges* nastavena na hodnotu false.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsecurity.h 
+**Záhlaví:** atlsecurity.h
 
 ##  <a name="atlsetsacl"></a>  AtlSetSacl
 
@@ -343,11 +343,11 @@ Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.
 
 V sestavení ladění, dojde k chybě kontrolního výrazu Pokud *hObject* je neplatný, nebo pokud *dwInheritanceFlowControl* není jedním ze tří povolených hodnot.
 
-Pokud `AtlSetSacl` má být volána v mnoha případech na mnoho různých objektů, je efektivnější povolit oprávnění SE_SECURITY_NAME jednou před voláním funkce, s *bRequestNeededPrivileges* nastavena na hodnotu false.  
+Pokud `AtlSetSacl` má být volána v mnoha případech na mnoho různých objektů, je efektivnější povolit oprávnění SE_SECURITY_NAME jednou před voláním funkce, s *bRequestNeededPrivileges* nastavena na hodnotu false.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsecurity.h 
+**Záhlaví:** atlsecurity.h
 
 ##  <a name="atlgetsecuritydescriptor"></a>  AtlGetSecurityDescriptor
 
@@ -390,7 +390,7 @@ Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `AtlGetSecurityDescriptor` má být volána v mnoha případech na mnoho různých objektů, je efektivnější povolit oprávnění SE_SECURITY_NAME jednou před voláním funkce, s *bRequestNeededPrivileges* nastavena na hodnotu false.  
+Pokud `AtlGetSecurityDescriptor` má být volána v mnoha případech na mnoho různých objektů, je efektivnější povolit oprávnění SE_SECURITY_NAME jednou před voláním funkce, s *bRequestNeededPrivileges* nastavena na hodnotu false.
 
 ### <a name="requirements"></a>Požadavky
 

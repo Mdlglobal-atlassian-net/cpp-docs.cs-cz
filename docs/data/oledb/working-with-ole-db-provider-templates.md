@@ -18,34 +18,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 16f628b5895ca137394186eaa13c6848f2884e50
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fc165a27927954ff7bc4afe2ec9f86797f2d6655
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107639"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075876"
 ---
 # <a name="working-with-ole-db-provider-templates"></a>Práce s šablonami zprostředkovatele OLE DB
 
-Další informace o práci s šablonami zprostředkovatele OLE DB, naleznete v následujících tématech:  
-  
-- [Přidání rozhraní ke zprostředkovateli](../../data/oledb/adding-an-interface-to-your-provider.md)  
-  
-- [Odkazování na vlastnost ve zprostředkovateli](../../data/oledb/referencing-a-property-in-your-provider.md)  
-  
-- [Nastavení vlastností ve zprostředkovateli](../../data/oledb/setting-properties-in-your-provider.md)  
-  
-- [Dynamické vazby sloupců ve zprostředkovateli](../../data/oledb/dynamically-binding-columns-in-your-provider.md)  
-  
-- [Podpora volných vláken ve zprostředkovateli](../../data/oledb/supporting-free-threading-in-your-provider.md)  
-  
-- [Testování zprostředkovatele](../../data/oledb/testing-your-provider.md)  
-  
-- [Ladění zprostředkovatele](../../data/oledb/debugging-your-provider.md)  
-  
-- [Převod dat nepodporovaných zprostředkovatelem](../../data/oledb/converting-data-not-supported-by-the-provider.md)  
-  
-## <a name="see-also"></a>Viz také  
+Další informace o práci s šablonami zprostředkovatele OLE DB, naleznete v následujících tématech:
+
+- [Přidání rozhraní ke zprostředkovateli](../../data/oledb/adding-an-interface-to-your-provider.md)
+
+- [Odkazování na vlastnost ve zprostředkovateli](../../data/oledb/referencing-a-property-in-your-provider.md)
+
+- [Nastavení vlastností ve zprostředkovateli](../../data/oledb/setting-properties-in-your-provider.md)
+
+- [Dynamické vazby sloupců ve zprostředkovateli](../../data/oledb/dynamically-binding-columns-in-your-provider.md)
+
+- [Podpora volných vláken ve zprostředkovateli](../../data/oledb/supporting-free-threading-in-your-provider.md)
+
+- [Testování zprostředkovatele](../../data/oledb/testing-your-provider.md)
+
+- [Ladění zprostředkovatele](../../data/oledb/debugging-your-provider.md)
+
+- [Převod dat nepodporovaných zprostředkovatelem](../../data/oledb/converting-data-not-supported-by-the-provider.md)
+
+## <a name="see-also"></a>Viz také
 
 [Referenční dokumentace k šablonám zprostředkovatelů OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40dddf2bb1619bd896ecf50008f80fca968ef8c9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ce642b6ed4017dba66d80325e7b9be8f18a7fb16
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075706"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076084"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>Ccomcachedtearoffobject – třída
 
@@ -199,7 +199,7 @@ Standardní hodnoty HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je požadovaná rozhraní `IUnknown`, vrací ukazatel na `CComCachedTearOffObject`vaší vlastní `IUnknown` a zvýší počet odkazů. V opačném případě dotazuje na vaše používání třídy odtržených rozhraní [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) metody zděděné z `CComObjectRootEx`.  
+Pokud je požadovaná rozhraní `IUnknown`, vrací ukazatel na `CComCachedTearOffObject`vaší vlastní `IUnknown` a zvýší počet odkazů. V opačném případě dotazuje na vaše používání třídy odtržených rozhraní [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) metody zděděné z `CComObjectRootEx`.
 
 ##  <a name="release"></a>  CComCachedTearOffObject::Release
 

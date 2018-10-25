@@ -21,54 +21,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a838bc904a4f09f72962ce7c991bab8e5ac8fcbf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f14ad79e1cbd2207b4eb1582cb80e0107d68ec39
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46074835"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064235"
 ---
 # <a name="cnorowset-class"></a>CNoRowset – třída
 
-Můžete použít jako argument šablony (`TRowset`) pro [CCommand](../../data/oledb/ccommand-class.md) nebo [CTable](../../data/oledb/ctable-class.md).  
-  
+Můžete použít jako argument šablony (`TRowset`) pro [CCommand](../../data/oledb/ccommand-class.md) nebo [CTable](../../data/oledb/ctable-class.md).
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-template <class TAccessor = CAccessorBase>  
-class CNoRowset  
-```  
-  
-### <a name="parameters"></a>Parametry  
+template <class TAccessor = CAccessorBase>
+class CNoRowset
+```
+
+### <a name="parameters"></a>Parametry
 
 *TAccessor*<br/>
-Třídu přistupujícího objektu. Výchozí hodnota je `CAccessorBase`.  
-  
-## <a name="remarks"></a>Poznámky  
+Třídu přistupujícího objektu. Výchozí hodnota je `CAccessorBase`.
 
-Použití `CNoRowset` jako argument šablony, pokud příkaz nevrací sadu řádků.  
-  
-`CNoRowset` implementuje následující metody zástupných procedur, z nichž každý odpovídají jiné přístupové metody pro třídu:  
-  
-- `BindFinished` -Určuje po dokončení vazby (vrátí `S_OK`).  
-  
-- `Close` -Uvolní řádků a aktuální IRowset rozhraní.  
-  
-- `GetIID` -Načte rozhraní ID bodu připojení.  
-  
-- `GetInterface` -Načte rozhraní.  
-  
-- `GetInterfacePtr` -Načte zapouzdřený ukazatel rozhraní.  
-  
-- `SetAccessor` – Nastaví ukazatel na přistupujícím objektu.  
-  
-- `SetupOptionalRowsetInterfaces` – Nastaví volitelné rozhraní pro sadu řádků.  
-  
-## <a name="requirements"></a>Požadavky  
+## <a name="remarks"></a>Poznámky
 
-**Záhlaví:** také atldbcli.h  
-  
-## <a name="see-also"></a>Viz také  
+Použití `CNoRowset` jako argument šablony, pokud příkaz nevrací sadu řádků.
+
+`CNoRowset` implementuje následující metody zástupných procedur, z nichž každý odpovídají jiné přístupové metody pro třídu:
+
+- `BindFinished` -Určuje po dokončení vazby (vrátí `S_OK`).
+
+- `Close` -Uvolní řádků a aktuální IRowset rozhraní.
+
+- `GetIID` -Načte rozhraní ID bodu připojení.
+
+- `GetInterface` -Načte rozhraní.
+
+- `GetInterfacePtr` -Načte zapouzdřený ukazatel rozhraní.
+
+- `SetAccessor` – Nastaví ukazatel na přistupujícím objektu.
+
+- `SetupOptionalRowsetInterfaces` – Nastaví volitelné rozhraní pro sadu řádků.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** také atldbcli.h
+
+## <a name="see-also"></a>Viz také
 
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

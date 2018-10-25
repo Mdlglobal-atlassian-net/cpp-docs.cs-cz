@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b6f2fdeb02fbc5e57bbba58f685d21133841279
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 72bae0d985c81478321109c3c02c07e6b1386028
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412857"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069903"
 ---
 # <a name="collections"></a>Kolekce
 
@@ -53,15 +53,15 @@ Každá ze tří tvarů zadané kolekci je popsána stručně dále v tomto tém
 
 - Seznam
 
-     Třídy seznamu poskytuje seřazený, neindexované seznam prvků, které jsou implementovány jako dvakrát propojený seznam. Seznam obsahuje "hlavní" a "funkce tail" a přidávání nebo odebírání elementů z hlavní nebo funkce tail, nebo vložení nebo odstranění prvků uprostřed, je velmi rychlá.
+   Třídy seznamu poskytuje seřazený, neindexované seznam prvků, které jsou implementovány jako dvakrát propojený seznam. Seznam obsahuje "hlavní" a "funkce tail" a přidávání nebo odebírání elementů z hlavní nebo funkce tail, nebo vložení nebo odstranění prvků uprostřed, je velmi rychlá.
 
 - Pole
 
-     Třídy pole obsahuje dynamicky velikosti, seřazený a indexovat celé číslo pole objektů.
+   Třídy pole obsahuje dynamicky velikosti, seřazený a indexovat celé číslo pole objektů.
 
 - Mapa (označované také jako slovník)
 
-     Kolekce, která přidruží objekt hodnoty klíče objektu, je objekt map.
+   Kolekce, která přidruží objekt hodnoty klíče objektu, je objekt map.
 
 ##  <a name="_core_the_template_based_collection_classes"></a> Třídy kolekce založené na šablonách
 

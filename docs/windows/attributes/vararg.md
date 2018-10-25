@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97a546c5e6502018e4ee59f26a976994f0c74b7f
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 49e6851bba775a2ccbdae8560effd50063a5afa7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789359"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077217"
 ---
 # <a name="vararg"></a>vararg
 
@@ -72,4 +72,4 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](cp
 ## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
-[Atributy metody](method-attributes.md)  
+[Atributy metody](method-attributes.md)

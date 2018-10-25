@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bef300671894e054ddf9b1ca0ab9dcf3b135370
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f035ac105dee4e668ca8bee0bab18c2a31fd027f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019409"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069149"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>Ladění a globální funkce hlášení chyb
 
@@ -47,11 +47,11 @@ HRESULT AtlHresultFromLastError();
 
 ### <a name="remarks"></a>Poznámky
 
-`AtlHresultFromLastError` volání `GetLastError` získat poslední chyby a vrátí chybu po převedení na použití makra HRESULT_FROM_WIN32 HRESULT.  
+`AtlHresultFromLastError` volání `GetLastError` získat poslední chyby a vrátí chybu po převedení na použití makra HRESULT_FROM_WIN32 HRESULT.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcomcli.h  
+**Záhlaví:** atlcomcli.h
 
 ##  <a name="atlhresultfromwin32"></a>  AtlHresultFromWin32
 
@@ -71,11 +71,11 @@ Hodnota chyby pro převod.
 Převede kód chyby Win32 na HRESULT, makro HRESULT_FROM_WIN32.
 
 > [!NOTE]
->  Namísto použití `HRESULT_FROM_WIN32(GetLastError())`, použijte funkci [AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror).  
+>  Namísto použití `HRESULT_FROM_WIN32(GetLastError())`, použijte funkci [AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcomcli.h  
+**Záhlaví:** atlcomcli.h
 
 ##  <a name="atlreporterror"></a>  AtlReportError
 
@@ -166,7 +166,7 @@ Pokud *hRes* parametr je nenulovou hodnotu, vrátí hodnotu *hRes*. Pokud *hRes*
 [!code-cpp[NVC_ATL_COM#52](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_1.cpp)]
 
 > [!CAUTION]
->  Nepoužívejte `AtlReportError` obslužné rutiny zachytávání v jazyce C++. Některé přepsání těchto funkcí používat převodních maker knihovny ATL řetězec interně, která pak může použít `_alloca` fungovat interně. Pomocí `AtlReportError` v bloku catch C++ může způsobit obslužná rutina výjimky v obslužné rutiny catch C++.  
+>  Nepoužívejte `AtlReportError` obslužné rutiny zachytávání v jazyce C++. Některé přepsání těchto funkcí používat převodních maker knihovny ATL řetězec interně, která pak může použít `_alloca` fungovat interně. Pomocí `AtlReportError` v bloku catch C++ může způsobit obslužná rutina výjimky v obslužné rutiny catch C++.
 
 ### <a name="requirements"></a>Požadavky
 
@@ -203,11 +203,11 @@ Pro projekty ATL je možné poskytnout vlastní implementaci této funkce ATL po
 
 ### <a name="example"></a>Příklad
 
-[!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]  
+[!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atldef.h  
+**Záhlaví:** atldef.h
 
 ##  <a name="atlthrowlastwin32"></a>  AtlThrowLastWin32
 
@@ -225,7 +225,7 @@ Pokud _ATL_NO_EXCEPTIONS není definovaný v projektu knihovny MFC, tato funkce 
 
 Pokud _ATL_NO_EXCEPTIONS není definovaný v projektu knihovny ATL, funkce vyvolá [catlexception –](../../atl/reference/catlexception-class.md).
 
-Pokud je definován _ATL_NO_EXCEPTIONS, funkce způsobí selhání kontrolního výrazu namísto vyvolání výjimky.  
+Pokud je definován _ATL_NO_EXCEPTIONS, funkce způsobí selhání kontrolního výrazu namísto vyvolání výjimky.
 
 ## <a name="requirements"></a>Požadavky
 

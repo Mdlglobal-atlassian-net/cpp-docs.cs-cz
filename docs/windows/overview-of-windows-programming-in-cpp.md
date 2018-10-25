@@ -13,20 +13,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8251f45d07e8a410c41a89fbc618839e9bbb838
-ms.sourcegitcommit: 6a6b2061db9d51c5cc79775512de54589a4d2fbc
+ms.openlocfilehash: 6ea59ae2cb0c12a60a8463434105f1cc6af0a77d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347225"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073525"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Přehled programování v C++ v systému Windows
 
 Visual C++ můžete použít k zápisu mnoha typů programů, které běží na počítači s Windows (x 86, x64 nebo ARM) na Windows serveru v cloudu nebo na Xboxu. Kvalitně napsané programy v jazyce C++ mají tyto vlastnosti:
+
 - efektivní v požadavky na paměť
-- ekonomické ve spotřebě energie 
+- ekonomické ve spotřebě energie
 - možnost využívat všech výhod Vícejádrová a mnohojádrová zařízení
-- možné obecné výpočetní na grafický procesor (úloh GPGPU)  
+- možné obecné výpočetní na grafický procesor (úloh GPGPU)
 - moct využít výhod dalších mnohojádrových hardwaru.
 
 Existuje několik kategorií aplikací Windows, které vyvíjíte v jazyce Visual C++. Tyto kategorie mají různé programovací modely nebo modely aplikace, které byly zavedeny v průběhu let. Každý model používá různé knihovny a rozhraní API poskytnout přístup na platformu a vytváření uživatelských rozhraní, jako je například windows a dialogových oknech. Standardní knihovny C++, stejně jako knihovny třetích stran je možné v některém z těchto kategorií s několika omezeními pro UPW.
@@ -98,7 +99,7 @@ Knihovny Microsoft patří:
 
 - Modul Concurrency Runtime: Knihovna, která zjednodušuje práci paralelního a asynchronního programování pro vícejádrová a mnohojádrová zařízení. Další informace najdete v tématu [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).
 
-Mnoho programovacích scénářů pro Windows navíc také vyžaduje sadu Windows SDK obsahující soubory hlaviček, které umožňují přístup ke komponentám operačního systému Windows. Ve výchozím nastavení nainstaluje Visual Studio jako součást sady funkcí C++ Desktop, umožňující vývoj aplikací pro Windows Universal Windows SDK. K vývoji aplikací pro UWP, musíte verzi sady Windows SDK pro Windows 10. Informace najdete v tématu [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk). (Další informace o sady Windows SDK u starších verzí systému Windows, najdete v článku [sady Windows SDK archivu](https://developer.microsoft.com/windows/downloads/sdk-archive)). 
+Mnoho programovacích scénářů pro Windows navíc také vyžaduje sadu Windows SDK obsahující soubory hlaviček, které umožňují přístup ke komponentám operačního systému Windows. Ve výchozím nastavení nainstaluje Visual Studio jako součást sady funkcí C++ Desktop, umožňující vývoj aplikací pro Windows Universal Windows SDK. K vývoji aplikací pro UWP, musíte verzi sady Windows SDK pro Windows 10. Informace najdete v tématu [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk). (Další informace o sady Windows SDK u starších verzí systému Windows, najdete v článku [sady Windows SDK archivu](https://developer.microsoft.com/windows/downloads/sdk-archive)).
 
 **Program soubory (x86) \Windows Kits** je výchozím umístěním pro všechny verze sady Windows SDK, kterou jste nainstalovali.
 

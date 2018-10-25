@@ -16,18 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31ac9d8ab0200d8dd56bbca3c82eb0ebec32388b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 210ef0d41cd0653718908b10ad64cd6004886c64
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46015965"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077748"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, Průvodce stránky komponentami ATL Active Server
 
 Na této stránce průvodce komponenty ATL Active Server stránky můžete zadat volitelná nastavení pro zpracování informací a stavu související s vaší komponentě ASP.
 
-- **Volitelné metody**  
+- **Volitelné metody**
 
    Přidá metody volitelné ASP **OnStartPage** a **OnEndPage**, do objektu. Musí být vybraná tato možnost nastavit všechny vnitřní objekty Active Server Pages. Standardně je vybrána.
 
@@ -35,7 +35,7 @@ Na této stránce průvodce komponenty ATL Active Server stránky můžete zadat
 
    [Funkce OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx) je volána při prvním pokusu skriptu pro přístup k objektu. **OnEndPage** se volá, když objekt dokončí zpracování skriptu.
 
-- **Vnitřní objekt**  
+- **Vnitřní objekt**
 
    Musíte vybrat **OnStartPage/OnEndPage** možnost nastavit všechny vnitřní objekty ASP.
 

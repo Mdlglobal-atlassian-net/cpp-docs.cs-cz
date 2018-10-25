@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08fc6f6a5b93851468d412e34b3ee0a85ab534e5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5e2fb7b2468946be29553f54fcedde98e43881d7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413247"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068824"
 ---
 # <a name="dynamic-layout"></a>Dynamické rozložení
 
@@ -119,7 +119,7 @@ Z předchozího postupu je užitečné pro určení dynamické rozložení vlast
     dynamicLayout->LoadResource("IDD_DIALOG1");
     ```
 
-     Pojmenovaný prostředek musí odkazovat na dialogu, který obsahuje informace o rozložení ve formě **AFX_DIALOG_LAYOUT** položku v souboru prostředků, jako v následujícím příkladu:
+   Pojmenovaný prostředek musí odkazovat na dialogu, který obsahuje informace o rozložení ve formě **AFX_DIALOG_LAYOUT** položku v souboru prostředků, jako v následujícím příkladu:
 
     ```RC
     /////////////////////////////////////////////////////////////////////////////

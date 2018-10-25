@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fc187cea874d16522955dcd46c2ceac34d29098
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c7100199d7e4ee76bf2f096aba9e20c244ae10ab
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136156"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070556"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Makra ladění a hlášení chyb
 
@@ -102,7 +102,7 @@ Výraz (včetně odkazů), který se vyhodnotí na nenulovou hodnotu nebo 0.
 
 ### <a name="remarks"></a>Poznámky
 
-V ladicím buildu ATLASSERT vyhodnotí *booleanExpression* a vygeneruje sestavu ladění, pokud je výsledek false.  
+V ladicím buildu ATLASSERT vyhodnotí *booleanExpression* a vygeneruje sestavu ladění, pokud je výsledek false.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -139,11 +139,11 @@ Rozdíl mezi ATLENSURE a ATLASSERT je, že ATLENSURE vyvolá výjimku v sestaven
 
 ### <a name="example"></a>Příklad
 
-[!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
+[!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afx.h  
+**Záhlaví:** afx.h
 
 ##  <a name="atltracenotimpl"></a>  ATLTRACENOTIMPL
 
@@ -168,7 +168,7 @@ V sestaveních pro vydání jednoduše vrací E_NOTIMPL.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atltrace.h 
+**Záhlaví:** atltrace.h
 
 ##  <a name="atltrace"></a>  ATLTRACE
 
@@ -177,7 +177,7 @@ Zprávy upozornění na výstupní zařízení, jako je například okna ladicí
 ```
 ATLTRACE(exp);
 
-ATLTRACE(  
+ATLTRACE(
     DWORD category,
     UINT  level,
     LPCSTR lpszFormat, ...);

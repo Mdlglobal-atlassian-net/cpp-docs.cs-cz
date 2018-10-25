@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9351e363bfa0ca654837436a01bb36b4f2b51eb2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5099251f46d3446368c04a39d624fde8128ab2e4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378394"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076305"
 ---
 # <a name="cbasepane-class"></a>Cbasepane – třída
 
@@ -332,7 +332,7 @@ Následující tipy k přizpůsobení se týkají `CBasePane Class` a všechny t
 
     - AFX_CBRS_CLOSE umožňuje podokně bude uzavřen (skryté).
 
-     Jedná se o příznaky, které můžete kombinovat pomocí operace bitového operátoru OR.
+   Jedná se o příznaky, které můžete kombinovat pomocí operace bitového operátoru OR.
 
 `CBasePane` implementuje následující virtuální metody logická tak, aby odrážela tyto příznaky: [CBasePane::CanBeClosed](#canbeclosed), [CBasePane::CanAutoHide](#canautohide), [CBasePane::CanFloat](#canfloat). V odvozených třídách k přizpůsobení jejich chování je můžete přepsat.
 
@@ -1643,7 +1643,8 @@ virtual void OnMovePaneDivider(CPaneDivider*);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *Cpanedivider –\**  nepoužívá.
+*Cpanedivider –\**<br/>
+[in] Nepoužívá se.
 
 ##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu
 

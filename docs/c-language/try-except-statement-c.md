@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f367bd5d9e61d44c24a876bf1d69ad24406d0630
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 957b76b6b39586016e9ed7b921b7bfa51a1fdf34
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036212"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075135"
 ---
 # <a name="try-except-statement-c"></a>try-except – příkaz (C)
 
@@ -49,11 +49,11 @@ Složený příkaz za `__try` klauzule je chráněná část. Složený příkaz
 
 1. Pokud dojde k výjimce za běhu chráněné části nebo v jakékoli rutině chráněná část volá, `__except` výraz je vyhodnocen a vrácená hodnota určuje, jak je výjimka ošetřena. Existují tři hodnoty:
 
-     `EXCEPTION_CONTINUE_SEARCH` Výjimka není rozpoznána. Pokračujte ve vyhledávání zásobníkem pro obslužnou rutinu, nejprve obsahující **zkuste – s výjimkou** příkazy, pak u obslužných rutin s druhou nejvyšší prioritou.
+   `EXCEPTION_CONTINUE_SEARCH` Výjimka není rozpoznána. Pokračujte ve vyhledávání zásobníkem pro obslužnou rutinu, nejprve obsahující **zkuste – s výjimkou** příkazy, pak u obslužných rutin s druhou nejvyšší prioritou.
 
-     `EXCEPTION_CONTINUE_EXECUTION` Výjimka je rozpoznána, ale vynechat. Program bude pokračovat tam, kde k výjimce došlo.
+   `EXCEPTION_CONTINUE_EXECUTION` Výjimka je rozpoznána, ale vynechat. Program bude pokračovat tam, kde k výjimce došlo.
 
-     `EXCEPTION_EXECUTE_HANDLER` Výjimka je rozpoznána. Řízení je převedeno na obslužnou rutinu výjimek pomocí provádí `__except` složený příkaz a potom pokračovat v provádění v místě, se vyskytla výjimka.
+   `EXCEPTION_EXECUTE_HANDLER` Výjimka je rozpoznána. Řízení je převedeno na obslužnou rutinu výjimek pomocí provádí `__except` složený příkaz a potom pokračovat v provádění v místě, se vyskytla výjimka.
 
 Vzhledem k tomu, `__except` výraz je vyhodnocen jako výraz jazyka C, je omezený na jednu hodnotu, operátor podmíněného výrazu nebo operátor čárky. Je-li požadováno rozsáhlejší zpracování, může výraz zavolat rutinu, která vrátí jednu z výše uvedených tří hodnot.
 

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 680ff7d339f592cf112a91fc303a6367fbc4805b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b972d4552a8e41ca0dcea4ef57d48ef161ea35b9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408750"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069227"
 ---
 # <a name="template-based-classes"></a>Třídy založené na šablonách
 
@@ -47,11 +47,11 @@ MFC predefines dvě kategorie založené na šablonách kolekce:
 
 - [Jednoduché polí, seznamů a hotové třídy map](#_core_using_simple_array.2c_.list.2c_.and_map_templates)
 
-     `CArray`, `CList`, `CMap`
+   `CArray`, `CList`, `CMap`
 
 - [Pole, seznamy a mapy typované ukazatele](#_core_using_typed.2d.pointer_collection_templates)
 
-     `CTypedPtrArray`, `CTypedPtrList`, `CTypedPtrMap`
+   `CTypedPtrArray`, `CTypedPtrList`, `CTypedPtrMap`
 
 Třídy kolekcí jednoduchých jsou odvozeny z třídy `CObject`, takže dědí serializace, dynamické vytváření a další vlastnosti `CObject`. Třídy kolekcí typované ukazatele vyžadují zadání odvozujete od třídy, která musí být jedna z kolekcí ukazatel nešablonových předdefinovány knihovnou MFC, například `CPtrList` nebo `CPtrArray`. Nové třídy kolekce dědí z zadaná základní třída a členské funkce nové třídy slouží k vynucení bezpečnost typů zapouzdřený volání na členy základní třídy.
 

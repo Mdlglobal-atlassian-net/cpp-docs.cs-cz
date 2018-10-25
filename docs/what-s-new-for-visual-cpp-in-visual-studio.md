@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40c74633be8556fc075f10e328521209761f385c
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 6f2b4dddd77b245de307173fbc2496181658be78
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890709"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066068"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Co je nového v aplikaci Visual C++ v sadě Visual Studio 2017
 
@@ -42,11 +42,11 @@ V této verzi jsme kompilátor jazyka C++ a standardní knihovny doplnili rozš�
 
 - Visual Studio 2017 umožňuje používat [/SDL](build/reference/sdl-enable-additional-security-checks.md) s [/ await](build/reference/await-enable-coroutine-support.md). Odebrali jsme [/RTC](build/reference/rtc-run-time-error-checks.md) omezení u Korutin.
 
-   **Visual Studio 2017 verze 15.3**:  
+   **Visual Studio 2017 verze 15.3**:
+
 - [/ std: c ++ 14 a/std: c ++ nejnovější](build/reference/std-specify-language-standard-version.md): tyto možnosti kompilátoru umožňují vyjádřit výslovný souhlas pro konkrétní verze ISO C++ programovací jazyk v projektu. Většina konceptu nové funkce na úrovni standard jsou strážený **/std: c ++ nejnovější** možnost.
 
 - [/ std: c ++ 17](build/reference/std-specify-language-standard-version.md) umožňuje sadu funkcí C ++ 17 implementované kompilátorem. Tato možnost zakáže kompilátoru a standardní knihovny podpora pro funkce, které se mění nebo nového ve verzích konceptu práce a defect aktualizace standardu jazyka C++ za C ++ 17. Chcete-li povolit tyto funkce, použijte **/std: c ++ nejnovější**.
-
 
 ### <a name="codegen-security-diagnostics-and-versioning"></a>CODEGEN, zabezpečení, Diagnostika a správa verzí
 
@@ -342,9 +342,9 @@ Visual Studio 2017 zavádí podporu pro práci s projekty CMake bez nutnosti dal
 
   ![Otevřít složku – CMake](media/cmake_cpp.png "Otevřít složku – CMake")
 
-**Visual Studio 2017 verze 15.3**: přidána podpora pro generátor CMake Ninja. 
+**Visual Studio 2017 verze 15.3**: přidána podpora pro generátor CMake Ninja.
 
-**Visual Studio 2017 verze 15.5**: přidané pro import existujících CMake ukládá do mezipaměti. 
+**Visual Studio 2017 verze 15.5**: přidané pro import existujících CMake ukládá do mezipaměti.
 
 **Visual Studio 2017 verze 15.7**: přidané for CMake 3.11, analýza kódu v projektech CMake, zaměřuje na zobrazení v Průzkumníku řešení, možnosti pro mezipaměť, kompilaci a generování jednoho souboru. Další informace najdete v tématu [podpora CMake v sadě Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) a [projekty CMake v jazyce Visual C++](ide/cmake-tools-for-visual-cpp.md).
 
@@ -416,10 +416,11 @@ Se sadou Visual Studio se nyní distribuují moduly pro kontrolu jádra C++, kte
 
 Některá čísla upozornění, která najdete v 15.3, už nejsou k dispozici v 15.5. Tato upozornění byla nahrazena specifičtějšími kontrolami.
 
-**Visual Studio 2017 verze 15.6**:  
-Byla přidána podpora pro jeden soubor analýzy a vylepšení analýzy výkonu za běhu. Další informace najdete v tématu [vylepšení statické analýzy C++ pro Visual Studio 2017 15.6 Preview 2](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/c-static-analysis-improvements-for-visual-studio-2017-15-6-preview-2/)
+**Visual Studio 2017 verze 15.6**:
 
-**Visual Studio 2017 verze 15.7**:  
+- Byla přidána podpora pro jeden soubor analýzy a vylepšení analýzy výkonu za běhu. Další informace najdete v tématu [vylepšení statické analýzy C++ pro Visual Studio 2017 15.6 Preview 2](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/c-static-analysis-improvements-for-visual-studio-2017-15-6-preview-2/)
+
+**Visual Studio 2017 verze 15.7**:
 
 - Podpora pro přidání [/ analyze: ruleset](build/reference/analyze-code-analysis.md) což vám umožní určit, která pravidla analýzy kódu pro spuštění.
 - Byla přidána podpora pro další pravidla podle dokumentu C++ Core Guidelines.  Další informace najdete v tématu [pomocí tyto moduly pro kontrolu podle dokumentu C++ Core Guidelines](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers).
@@ -435,7 +436,7 @@ Adaptér Google Test a Boost.Test adaptér jsou teď k dispozici jako součásti
 - Byla přidána podpora pro Boost.Test podpora dynamických knihoven.
 - Šablony položek Boost.Test je teď k dispozici v integrovaném vývojovém prostředí.
 
-Další informace najdete v tématu [Boost.Test Unit Testing: Podpora dynamických knihoven a nové šablony položky](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/boost-test-unit-testing-dynamic-library-support-and-new-item-template/). 
+Další informace najdete v tématu [Boost.Test Unit Testing: Podpora dynamických knihoven a nové šablony položky](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/boost-test-unit-testing-dynamic-library-support-and-new-item-template/).
 
 **Visual Studio 2017 verze 15.7**:
 

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c4acd417dacadbe2667f63c70435b97353bafe1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4d5db33dda6abc141c9247c74c16624bef5f0fc8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384413"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076032"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>MFC – ovládací prvky ActiveX: Přidání vlastních událostí
 
@@ -48,7 +48,7 @@ Následující procedura přidá určité vlastní události, clickin –. Tento
 
 1. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat událost**.
 
-     Otevře se Průvodce přidáním události.
+   Otevře se Průvodce přidáním události.
 
 1. V **název události** pole, nejprve vyberte jakékoli existující události a poté klikněte na **vlastní** přepínač tlačítko a pak zadejte *clickin –*.
 
@@ -94,7 +94,7 @@ Teď, když jste přidali vlastní událost clickin – pomocí Průvodce přid�
 
 1. V okně Vlastnosti klikněte na tlačítko **zprávy** tlačítko.
 
-     V okně Vlastnosti se zobrazí seznam zpráv, které mohou být zpracovány ovládací prvek ActiveX. Všechny zprávy zobrazeny tučně již má funkci obslužné rutiny přiřazenou.
+   V okně Vlastnosti se zobrazí seznam zpráv, které mohou být zpracovány ovládací prvek ActiveX. Všechny zprávy zobrazeny tučně již má funkci obslužné rutiny přiřazenou.
 
 1. V okně Vlastnosti vyberte zprávu, kterou chcete zpracovat. V tomto příkladu vyberte WM_LBUTTONDOWN.
 
@@ -131,7 +131,7 @@ Následující procedura přidá vlastní klikněte na událost.
 
 1. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat událost**.
 
-     Otevře se Průvodce přidáním události.
+   Otevře se Průvodce přidáním události.
 
 1. V **název události** rozevíracího seznamu vyberte název základní událost. V tomto příkladu vyberte **klikněte na tlačítko**.
 

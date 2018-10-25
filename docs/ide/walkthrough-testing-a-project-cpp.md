@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 133214cceebf5d43610207e446698341d7803b71
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 56614dc0829834e77cfdf10d8d88ed44492237e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235539"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070137"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Návod: Testování projektu (C++)
 
@@ -41,7 +41,7 @@ V tomto podrobném návodu sledovat hodnotu proměnné po spuštění programu a
 
 1. Vyberte tento řádek kódu:
 
-     `Cardgame.solitaire(1);`
+   `Cardgame.solitaire(1);`
 
 1. Chcete-li nastavit zarážku na tomto řádku, na panelu nabídek zvolte **ladění** > **Přepnout zarážku**, nebo zvolte **F9** klíč. Zobrazí se červený kruh vlevo od řádku; znamená to, že byla nastavena zarážka. Chcete-li odebrat zarážku, můžete použít příkaz nabídky nebo **F9** klíč znovu.
 
