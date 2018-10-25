@@ -485,7 +485,7 @@
 ## [Upozornění kompilátoru (úrovně 1 a 3) C4793](compiler-warning-level-1-and-3-c4793.md)
 ## [Upozornění kompilátoru (úroveň 1) C4794](compiler-warning-level-1-c4794.md)
 ## [Upozornění kompilátoru (úroveň 1) C4799](compiler-warning-level-1-c4799.md)
-# [Upozornění kompilátoru C4800 až C4999](compiler-warnings-c4800-through-c4999.md)
+# [Upozornění kompilátoru C4800 až C5999](compiler-warnings-c4800-through-c4999.md)
 ## [Upozornění kompilátoru (úroveň 3) C4800](compiler-warning-level-3-c4800.md)
 ## [Upozornění kompilátoru (úroveň 1) C4803](compiler-warning-level-1-c4803.md)
 ## [Upozornění kompilátoru (úroveň 1) C4804](compiler-warning-level-1-c4804.md)
@@ -560,3 +560,4 @@
 ## [Upozornění kompilátoru (úroveň 1) C4999](compiler-warning-level-1-c4999.md)
 ## [Upozornění kompilátoru C5038](c5038.md)
 ## [Upozornění kompilátoru C5045](c5045.md)
+## [Upozornění kompilátoru (level2) C5046](c5046.md)

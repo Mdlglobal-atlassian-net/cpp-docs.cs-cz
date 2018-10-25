@@ -34,7 +34,7 @@ Přetypování typu můžete použít k explicitnímu převodu typů.
 
 *výraz CAST*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Unární výraz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(**  *název typu*  **)***výrazem přetypování.*
+&nbsp;&nbsp;&nbsp;&nbsp;**(**  *název typu*  **)**  *výrazem přetypování.*
 
 *Název typu*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*specifikátor qualifier-list* *abstraktní deklarátor*<sub>optimalizované</sub>
