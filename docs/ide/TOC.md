@@ -26,7 +26,6 @@
 ### [Soubory XML stránky vlastností](property-page-xml-files.md)
 ### [Struktura souborů .vcxproj a .props](vcxproj-file-structure.md)
 ## [Tvorba desktopových projektů pomocí průvodců aplikací](creating-desktop-projects-by-using-application-wizards.md)
-### [Podpora průvodce pro ostatní jazyky](wizard-support-for-other-languages.md)
 ### [Vytvoření projektu souboru pravidel](creating-a-makefile-project.md)
 #### [Průvodce projektem souboru pravidel](makefile-project-wizard.md)
 ##### [Nastavení aplikace, Průvodce projektem souboru pravidel](application-settings-makefile-project-wizard.md)
