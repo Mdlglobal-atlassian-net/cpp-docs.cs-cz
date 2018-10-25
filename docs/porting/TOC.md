@@ -15,6 +15,7 @@
 ### [Oprava závislostí u interních informací o knihovně](fix-your-dependencies-on-library-internals.md)
 ### [Problémy migrace s plovoucí desetinnou čárkou](floating-point-migration-issues.md)
 ### [Sestavení starých projektů v sadě Visual Studio pomocí nativního cílení na více verzí](use-native-multi-targeting.md)
+### [Funkce Visual C++, které jsou ve verzi Preview sady Visual Studio 2019 zastaralé](features-deprecated-in-visual-studio.md)
 ## [Úvod do prostředí Visual C++ pro uživatele systému UNIX](introduction-to-visual-cpp-for-unix-users.md)
 ## [Přenos ze systému UNIX do Win32](porting-from-unix-to-win32.md)
 ## [Přenos do Univerzální platformy Windows (C++)](porting-to-the-universal-windows-platform-cpp.md)
