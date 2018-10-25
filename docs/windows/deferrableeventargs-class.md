@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 20cb959727cb2c515bd82d5b4d5d8e45019c6875
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 7f5c117d0d65f86e4f4b69011457e166b6440820
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788484"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081560"
 ---
 # <a name="deferrableeventargs-class"></a>DeferrableEventArgs – třída
 
@@ -73,7 +73,7 @@ Třída se zobrazí jako první argument pro obslužnou rutinu události pro odl
 Získá odkaz na [odložení](http://go.microsoft.com/fwlink/p/?linkid=526520) objekt, který představuje odložené událost.
 
 ```cpp
-HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)  
+HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -88,11 +88,11 @@ S_OK v případě úspěchu; v opačném případě HRESULT, která označuje ch
 ## <a name="invokeallfinished"></a>Deferrableeventargs::invokeallfinished –
 
 Volá se, že je veškeré zpracování zpracování odložené události dokončení.
-  
+
 ```cpp
-void InvokeAllFinished()  
+void InvokeAllFinished()
 ```
-  
+
 ### <a name="remarks"></a>Poznámky
 
 Byste měli volat tuto metodu po volání zdroje události [invokeall –](../windows/eventsource-invokeall-method.md). Voláním této metody zabrání se dalšímu odložení změněny a vynutí obslužné rutiny dokončení spustit, když se nevytvořily žádné odložení.

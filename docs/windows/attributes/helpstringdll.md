@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdac159baf51d7143083eb1369d1a83233f0f022
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 1697c25f19fe024ea2f808f08baea3adb4bcc69a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789336"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083227"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
@@ -76,4 +76,4 @@ Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy rozhraní](interface-attributes.md)<br/>
 [Atributy třídy](class-attributes.md)<br/>
-[Atributy metody](method-attributes.md)  
+[Atributy metody](method-attributes.md)

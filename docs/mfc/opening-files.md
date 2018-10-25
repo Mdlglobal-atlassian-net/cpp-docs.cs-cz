@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4abd2bf866a97e13324af22032cce9ebcaba4da
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f74c0fdcdb8d6dfe1aced33a1c7087ecde6c89ff
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408515"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080920"
 ---
 # <a name="opening-files"></a>Otevírání souborů
 
@@ -41,15 +41,15 @@ Nejběžnější způsob otevření souboru v knihovně MFC, je dvoustupňový p
 
 1. Vytvořte soubor objektu bez zadání příznaky cestu nebo oprávnění.
 
-     Obvykle vytvoříte soubor objekt deklarací [cfile –](../mfc/reference/cfile-class.md) proměnné v bloku zásobníku.
+   Obvykle vytvoříte soubor objekt deklarací [cfile –](../mfc/reference/cfile-class.md) proměnné v bloku zásobníku.
 
 1. Volání [otevřít](../mfc/reference/cfile-class.md#open) členské funkce objektu soubor zadáním cesty a oprávnění příznaky.
 
-     Návratová hodnota pro `Open` bude nenulové, pokud soubor byl úspěšně otevřen nebo 0. Pokud zadaný soubor nelze otevřít. `Open` Členská funkce je prototypem následujícím způsobem:
+   Návratová hodnota pro `Open` bude nenulové, pokud soubor byl úspěšně otevřen nebo 0. Pokud zadaný soubor nelze otevřít. `Open` Členská funkce je prototypem následujícím způsobem:
 
-     `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`
+   `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`
 
-     Otevřít příznaky zadejte například jaká oprávnění jen pro čtení, má k souboru. Příznak možné hodnoty jsou definované jako konstanty výčtu v rámci `CFile` třídy, takže jsou kvalifikována "`CFile::`" jako v `CFile::modeRead`. Použití `CFile::modeCreate` příznak, pokud chcete vytvořit soubor.
+   Otevřít příznaky zadejte například jaká oprávnění jen pro čtení, má k souboru. Příznak možné hodnoty jsou definované jako konstanty výčtu v rámci `CFile` třídy, takže jsou kvalifikována "`CFile::`" jako v `CFile::modeRead`. Použití `CFile::modeCreate` příznak, pokud chcete vytvořit soubor.
 
 Následující příklad ukazuje, jak vytvořit nový soubor s oprávněním pro čtení/zápis (nahrazuje jakékoli předchozí soubor se stejnou cestou):
 

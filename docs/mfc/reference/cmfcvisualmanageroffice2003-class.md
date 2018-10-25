@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43f180fd62d4e79f64119097401632caca9b44fe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d50731fede9a65e8d354008e1cee0075b43dd163
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399395"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083526"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>Cmfcvisualmanageroffice2003 – třída
 
@@ -803,10 +803,11 @@ virtual BOOL OnDrawBrowseButton(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rect*
-*pEdit*<br/>
-[in] [in] *stavu* [in] *clrText*
+[in] *primárního řadiče domény*<br/>
+[in] *rect*<br/>
+[in] *pEdit*<br/>
+[in] *stavu*<br/>
+[in] *clrText*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1057,8 +1058,9 @@ virtual void OnDrawHeaderCtrlBorder(
 *Rect*<br/>
 [in] Obdélník, který určuje hranice ovládacího prvku záhlaví.
 
-*bIsPressed*<br/>
-[in] [in] *bIsHighlighted* A logický parametr, který označuje, zda je stisknutí ovládacího prvku záhlaví.
+[in] *bIsPressed*<br/>
+[in] *bIsHighlighted*<br/>
+Parametr logické hodnoty označující, zda je stisknutí ovládacího prvku záhlaví.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1717,8 +1719,9 @@ virtual void OnDrawStatusBarProgress(
 *clrBar*<br/>
 [in] Počáteční barva indikátor průběhu. Hodnota je buď Počáteční barva přechodu nebo celý barevný indikátor průběhu.
 
-*clrProgressBarDest*<br/>
-[in] [in] *clrProgressText* [in] *bProgressText*
+[in] *clrProgressBarDest*<br/>
+[in] *clrProgressText*<br/>
+[in] *bProgressText*<br/>
 
 ### <a name="remarks"></a>Poznámky
 

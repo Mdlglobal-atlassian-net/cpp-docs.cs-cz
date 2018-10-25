@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be0e05d61d4949deaee683c5b8f43d18e0501d23
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 5e50fe341ff52916d16b3c006e438fe2bfa99154
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808976"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082837"
 ---
 # <a name="coledatetimespan-class"></a>Coledatetimespan – třída
 
@@ -157,7 +157,7 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 *dblSpanSrc*<br/>
 Počet dní, které se mají zkopírovat do nové `COleDateTimeSpan` objektu.
 
-*lDays*, *nHours*, *nMins*, *nSecs*  
+*lDays*, *nHours*, *nMins*, *nSecs*<br/>
 Označení dne a času hodnot, které se mají zkopírovat do nové `COleDateTimeSpan` objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -217,10 +217,10 @@ Volání těchto funkcí k vytvoření formátovaného reprezentace hodnoty čas
 
 Následuje stručný popis formulářů pro tuto funkci:
 
-**Formát (** *pFormat* **)**  
+**Formát (** *pFormat* **)**<br/>
 Tento formulář naformátuje hodnotu pomocí řetězce formátu, který obsahuje speciální formátovacích kódech, které jsou uvozená znakem procent (%), stejně jako v `printf`. Formátovací řetězec je předat jako parametr funkce.
 
-**Formát (** *nID* **)**  
+**Formát (** *nID* **)**<br/>
 Tento formulář naformátuje hodnotu pomocí řetězce formátu, který obsahuje speciální formátovacích kódech, které jsou uvozená znakem procent (%), stejně jako v `printf`. Formátovací řetězec je prostředek. ID prostředku tento řetězec je předán jako parametr.
 
 ### <a name="example"></a>Příklad
@@ -388,11 +388,11 @@ Stav této `COleDateTimeSpan` hodnotu.
 Návratová hodnota je definována `DateTimeSpanStatus` Výčtový typ, který je definován v rámci `COleDateTimeSpan` třídy.
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-};  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+};
 ```
 
 Stručný popis tyto hodnoty stavu najdete v následujícím seznamu:
@@ -585,11 +585,11 @@ DateTimeSpanStatus m_status;
 ### <a name="remarks"></a>Poznámky
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-   };  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+   };
 ```
 
 Stručný popis tyto hodnoty stavu najdete v následujícím seznamu:
@@ -694,7 +694,7 @@ void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lDays*, *nHours*, *nMins*, *nSecs*  
+*lDays*, *nHours*, *nMins*, *nSecs*<br/>
 Označení rozsahu data a časový rozsah hodnot, které se mají zkopírovat do tohoto `COleDateTimeSpan` objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -739,11 +739,11 @@ Nová hodnota pro tento stav `COleDateTimeSpan` objektu.
 *Stav* hodnota parametru je definována `DateTimeSpanStatus` Výčtový typ, který je definován v rámci `COleDateTimeSpan` třídy.
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-   };  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+   };
 ```
 
 Stručný popis tyto hodnoty stavu najdete v následujícím seznamu:

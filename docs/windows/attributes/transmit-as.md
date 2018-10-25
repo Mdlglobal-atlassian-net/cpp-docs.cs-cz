@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c096853c968b78b4c5b7c1dacc87da4104f3e78
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 28b95974379a01b4ecd1a07edeb2da35562d82df
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789371"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079685"
 ---
 # <a name="transmitas"></a>transmit_as
 
@@ -92,4 +92,4 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](cp
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy klíčových slov typedef, enum, union a struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[export](export.md)  
+[export](export.md)

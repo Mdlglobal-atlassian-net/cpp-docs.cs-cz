@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d618ace9d922daabecf908c76a319e89a9fdedcc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dff9f3c988e7ffdf8f15b5502bb0326e2692a128
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094179"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079035"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Kompilátor upozornění (úroveň 3) C4996
 
@@ -82,7 +82,6 @@ Microsoft má přejmenovat, některé funkce POSIX v souladu s normou C99 a C ++
 Chcete-li vyřešit tento problém, obvykle doporučujeme že po provedení změny kódu místo toho použít názvy navrhované funkce. Aktualizované názvy jsou však specifické pro společnost Microsoft. Pokud je potřeba použít existující názvy funkcí pro přenositelnost z důvodů, můžete vypnout tato upozornění. Funkce POSIX jsou stále k dispozici v knihovně v části původní názvy.
 
 Chcete-li vypnout upozornění na zastaralost pro tyto funkce, definujte makro preprocesoru  **\_CRT\_NONSTDC\_ne\_upozornění**. Můžete definovat toto makro v příkazovém řádku zahrnutím možnost `/D_CRT_NONSTDC_NO_WARNINGS`.
-
 
 ### <a name="unsafe-crt-library-functions"></a>Nebezpečné funkce knihovny CRT
 

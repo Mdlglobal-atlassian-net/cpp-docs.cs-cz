@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03fc15cc2d2a73c0e8a1a016a2a477a5c65cdc15
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 7cd03babd97033495ecfa84817938103cde05a73
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890554"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081703"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC – ovládací prvky ActiveX: Vytvoření podtřídy ovládacího prvku systému Windows
 
@@ -94,12 +94,12 @@ Chcete-li přidat obslužné rutiny zpráv pro zprávu reflektovaný okna ručn�
 
 - Ve třídě ovládacího prvku. Soubor H, deklarujte funkci obslužné rutiny. Funkce by měla mít typ vrácené hodnoty **LRESULT** a dva parametry s typy **WPARAM** a **LPARAM**v uvedeném pořadí. Příklad:
 
-     [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
+   [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
     [!code-cpp[NVC_MFC_AxSub#6](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_6.h)]
 
 - Ve třídě ovládacího prvku. CPP soubor, přidejte záznam ON_MESSAGE v mapování zprávy. Parametry této položky by měl být identifikátor zprávy a název obslužné rutiny. Příklad:
 
-     [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
+   [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
 
 - Také v. Soubor CPP implementovat `OnOcmCommand` členskou funkci ke zpracování reflektovaných zpráv. *WParam* a *lParam* parametry jsou stejné jako původní zprávy okna.
 

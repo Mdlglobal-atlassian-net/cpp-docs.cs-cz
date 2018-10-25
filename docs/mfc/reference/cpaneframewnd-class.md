@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ac2ddb08b485a56274f6067871c5bbd5893f94
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fb6e87d9deac7a6d0082480196b7dbeecf5a85b8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434814"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081076"
 ---
 # <a name="cpaneframewnd-class"></a>Cpaneframewnd – třída
 
@@ -312,7 +312,6 @@ virtual void AdjustLayout();
 
 ##  <a name="adjustpaneframes"></a>  CPaneFrameWnd::AdjustPaneFrames
 
-
 ```
 virtual void AdjustPaneFrames();
 ```
@@ -401,7 +400,6 @@ Nenulové, pokud lze okna s minirámcem ukotveno *pDockingBar*; jinak 0.
 
 ##  <a name="checkgrippervisibility"></a>  CPaneFrameWnd::CheckGripperVisibility
 
-
 ```
 virtual void CheckGripperVisibility();
 ```
@@ -440,9 +438,11 @@ virtual BOOL Create(
 *Rect*<br/>
 [in] Určuje počáteční velikost a umístění okna miniframe.
 
-[in] [out] *pParentWnd* určuje nadřazeného rámce okna miniframe. Tato hodnota nesmí být NULL.
+*pParentWnd*<br/>
+[out v] Určuje nadřazený rámec okna miniframe. Tato hodnota nesmí být NULL.
 
-[in] [out] *pContext* Určuje uživatelský kontext.
+*pContext*<br/>
+[out v] Určuje uživatelský kontext.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -480,9 +480,11 @@ virtual BOOL CreateEx(
 *Rect*<br/>
 [in] Určuje počáteční velikost a umístění okna miniframe.
 
-[in] [out] *pParentWnd* určuje nadřazeného rámce okna miniframe. Tato hodnota nesmí být NULL.
+*pParentWnd*<br/>
+[out v] Určuje nadřazený rámec okna miniframe. Tato hodnota nesmí být NULL.
 
-[in] [out] *pContext* Určuje uživatelský kontext.
+*pContext*<br/>
+[out v] Určuje uživatelský kontext.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -607,7 +609,6 @@ Tato metoda je volána rozhraním, když se zobrazí text titulku.
 
 ##  <a name="getdockingmanager"></a>  CPaneFrameWnd::GetDockingManager
 
-
 ```
 CDockingManager* GetDockingManager() const;
 ```
@@ -648,7 +649,6 @@ Na první v podokně okna okna s minirámcem, nebo hodnota NULL, pokud se okno s
 
 ##  <a name="gethotpoint"></a>  CPaneFrameWnd::GetHotPoint
 
-
 ```
 CPoint GetHotPoint() const;
 ```
@@ -687,7 +687,6 @@ virtual int GetPaneCount() const;
 
 ##  <a name="getparent"></a>  CPaneFrameWnd::GetParent
 
-
 ```
 CWnd* GetParent();
 ```
@@ -698,7 +697,6 @@ CWnd* GetParent();
 
 ##  <a name="getpinstate"></a>  CPaneFrameWnd::GetPinState
 
-
 ```
 BOOL GetPinState() const;
 ```
@@ -708,7 +706,6 @@ BOOL GetPinState() const;
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="getrecentfloatingrect"></a>  CPaneFrameWnd::GetRecentFloatingRect
-
 
 ```
 CRect GetRecentFloatingRect() const;
@@ -770,7 +767,6 @@ Jeden z následujících hodnot:
 
 ##  <a name="iscaptured"></a>  CPaneFrameWnd::IsCaptured
 
-
 ```
 BOOL IsCaptured() const;
 ```
@@ -780,7 +776,6 @@ BOOL IsCaptured() const;
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="isdelayshow"></a>  CPaneFrameWnd::IsDelayShow
-
 
 ```
 BOOL IsDelayShow() const;
@@ -991,14 +986,13 @@ Volá se rozhraním, když je zobrazení nebo skrytí podokna v okně okna s min
 
 ##  <a name="pin"></a>  CPaneFrameWnd::Pin
 
-
 ```
 void Pin(BOOL bPin = TRUE);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bPin*
+[in] *bPin*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1141,19 +1135,17 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 
 ##  <a name="setdelayshow"></a>  CPaneFrameWnd::SetDelayShow
 
-
 ```
 void SetDelayShow(BOOL bDelayShow);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bDelayShow*
+[in] *bDelayShow*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="setdockingmanager"></a>  CPaneFrameWnd::SetDockingManager
-
 
 ```
 void SetDockingManager(CDockingManager* pManager);
@@ -1161,7 +1153,7 @@ void SetDockingManager(CDockingManager* pManager);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pManager*
+[in] *pManager*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1193,14 +1185,13 @@ virtual void SetDockState(CDockingManager* pDockManager);
 
 ##  <a name="sethotpoint"></a>  CPaneFrameWnd::SetHotPoint
 
-
 ```
 void SetHotPoint(CPoint& ptNew);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *ptNew*
+[in] *ptNew*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1267,19 +1258,17 @@ Hodnota TRUE, pokud metoda byla úspěšná. v opačném případě hodnota FALS
 
 ##  <a name="storerecentdocksiteinfo"></a>  CPaneFrameWnd::StoreRecentDockSiteInfo
 
-
 ```
 virtual void StoreRecentDockSiteInfo(CPane* pBar);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pBar*
+[in] *pBar*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="storerecenttabrelatedinfo"></a>  CPaneFrameWnd::StoreRecentTabRelatedInfo
-
 
 ```
 virtual void StoreRecentTabRelatedInfo(
@@ -1289,8 +1278,8 @@ virtual void StoreRecentTabRelatedInfo(
 
 ### <a name="parameters"></a>Parametry
 
-*pDockingBar*<br/>
-[in] [in] *pTabbedBar*
+[in] *pDockingBar*<br/>
+[in] *pTabbedBar*<br/>
 
 ### <a name="remarks"></a>Poznámky
 

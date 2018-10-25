@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f25928243c8086462f4f35b47dee5239a3a240bf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5ab21338eabe2e432189ccf8a5aae3432005657d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446995"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083214"
 ---
 # <a name="csimpleexception-class"></a>Csimpleexception – třída
 
@@ -132,6 +132,4 @@ Další informace najdete v tématu [CException::GetErrorMessage](../../mfc/refe
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CException – třída](../../mfc/reference/cexception-class.md)<br/>
 [Zpracování výjimek](../../mfc/exception-handling-in-mfc.md)
-
-
 

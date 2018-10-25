@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58c9f26b33c3ab2bcdc4e7f0c0a676835da0e3c3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3f9d312104254323e98f6b2fd031adf1064ecfac
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758840"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078216"
 ---
 # <a name="windows-messages-macros"></a>Makra zpráv Windows
 
@@ -27,7 +27,7 @@ Toto makro předává zprávy okna.
 
 |||
 |-|-|
-|[WM_FORWARDMSG](#wm_forwardmsg)|Slouží k předání zprávy přijímány okno do jiného okna pro zpracování.|  
+|[WM_FORWARDMSG](#wm_forwardmsg)|Slouží k předání zprávy přijímány okno do jiného okna pro zpracování.|
 
 ## <a name="requirements"></a>Požadavky
 

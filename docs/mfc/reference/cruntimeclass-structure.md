@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bc788e646b0e8f788dd8db97d5bc43c3240441f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c7a7b0f8c61226260497baced9575c911b425512
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402483"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078775"
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass – struktura
 
@@ -134,7 +134,6 @@ Voláním této funkce k určení, pokud je volání třída odvozena z třídy 
 ```
 BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -236,6 +235,4 @@ Další informace o schématu čísla, najdete v článku [IMPLEMENT_SERIAL](run
 [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)<br/>
 [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate)<br/>
 [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)
-
-
 

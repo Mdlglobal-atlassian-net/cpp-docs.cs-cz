@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e885ef1db8f282bbdca2e8c39c3d1221d791d1a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7e067b1d72b80950b4ed33fbae8cac7333ac0438
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46067633"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083071"
 ---
 # <a name="atl-module-classes"></a>ATL – třídy modulů
 
@@ -55,15 +55,15 @@ Funkce `CComModule` byl distribuován do nové třídy několik z následující
 
 - Ujistěte se, funkce v `CComModule` podrobné.
 
-     Podpora COM, časová okna, ladění v rozhraní a funkce (knihovna DLL nebo EXE) specifické pro aplikaci je nyní v samostatné třídy.
+   Podpora COM, časová okna, ladění v rozhraní a funkce (knihovna DLL nebo EXE) specifické pro aplikaci je nyní v samostatné třídy.
 
 - Automaticky deklarujte globální instance každé z těchto modulů.
 
-     Globální instanci třídy vyžaduje modul je do projektu propojen.
+   Globální instanci třídy vyžaduje modul je do projektu propojen.
 
 - Odeberte nutnost volání metody Init a délku smlouvy.
 
-     Metody Init a termín bylo přesunuto do konstruktory a destruktory pro modul třídy; již není potřeba volat Init a délku smlouvy.
+   Metody Init a termín bylo přesunuto do konstruktory a destruktory pro modul třídy; již není potřeba volat Init a délku smlouvy.
 
 ## <a name="see-also"></a>Viz také
 

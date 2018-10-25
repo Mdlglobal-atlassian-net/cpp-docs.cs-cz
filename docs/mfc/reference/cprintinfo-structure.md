@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b12c93375618cacf25e88ecba6919808ac7bd705
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b8c1fb4d82bd1aaeb9f625fea66aa339a0ef4d97
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446853"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082889"
 ---
 # <a name="cprintinfo-structure"></a>Cprintinfo – struktura
 
@@ -94,7 +94,6 @@ Voláním této funkce načtete číslo první stránky, které se mají vytiskn
 ```
 UINT GetFromPage() const;
 
-
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -111,7 +110,6 @@ Voláním této funkce načtete číslo poslední stránky dokumentu.
 
 ```
 UINT GetMaxPage() const;
-
 
 ```
 
@@ -130,7 +128,6 @@ Volání této funkce načtete číslo první stránky z dokumentu.
 ```
 UINT GetMinPage() const;
 
-
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -148,7 +145,6 @@ Volání této funkce načtete posun při tisku více položek DocObject z klien
 ```
 UINT GetOffsetPage() const;
 
-
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -165,7 +161,6 @@ Voláním této funkce načtete číslo poslední stránky k tisku.
 
 ```
 UINT GetToPage() const;
-
 
 ```
 
@@ -345,6 +340,4 @@ void SetMinPage(UINT nMinPage);
 [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)<br/>
 [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting)<br/>
 [CView::OnPrint](../../mfc/reference/cview-class.md#onprint)
-
-
 

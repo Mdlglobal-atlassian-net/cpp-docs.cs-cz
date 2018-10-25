@@ -50,140 +50,140 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b799b0383316c212ff2d2cd12ccac9b2b14dce0b
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 92d71bc780e66d4a61d74605aeb5c316b181beba
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082589"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081757"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl – třída
 
-Poskytuje implementaci pro [IDBInitialize](/previous-versions/windows/desktop/ms713706) rozhraní.  
-  
+Poskytuje implementaci pro [IDBInitialize](/previous-versions/windows/desktop/ms713706) rozhraní.
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-template <class T>  
-class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize  
-```  
-  
-### <a name="parameters"></a>Parametry  
+template <class T>
+class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
+```
+
+### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Vaše třída odvozena od `IDBInitializeImpl`.  
+Vaše třída odvozena od `IDBInitializeImpl`.
 
-## <a name="requirements"></a>Požadavky  
+## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atldb.h  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="methods"></a>Metody  
-  
-|||  
-|-|-|  
-|[Idbinitializeimpl –](#idbinitializeimpl)|Konstruktor|  
-  
-### <a name="interface-methods"></a>Metody rozhraní  
-  
-|||  
-|-|-|  
-|[Initialize](#initialize)|Spustí zprostředkovatele.|  
-|[Neinicializovaný](#uninitialize)|Zastaví zprostředkovatele.|  
-  
-### <a name="data-members"></a>Datové členy  
-  
-|||  
-|-|-|  
-|[m_dwStatus](#dwstatus)|Zdroje dat příznaky.|  
-|[m_pCUtlPropInfo](#pcutlpropinfo)|Ukazatel na implementaci informace o vlastnostech DB.|  
-  
-## <a name="remarks"></a>Poznámky  
+**Záhlaví:** atldb.h
 
-Povinné rozhraní pro objekty zdroje dat a volitelné rozhraní pro enumerátory.  
+## <a name="members"></a>Členové
+
+### <a name="methods"></a>Metody
+
+|||
+|-|-|
+|[Idbinitializeimpl –](#idbinitializeimpl)|Konstruktor|
+
+### <a name="interface-methods"></a>Metody rozhraní
+
+|||
+|-|-|
+|[Initialize](#initialize)|Spustí zprostředkovatele.|
+|[Neinicializovaný](#uninitialize)|Zastaví zprostředkovatele.|
+
+### <a name="data-members"></a>Datové členy
+
+|||
+|-|-|
+|[m_dwStatus](#dwstatus)|Zdroje dat příznaky.|
+|[m_pCUtlPropInfo](#pcutlpropinfo)|Ukazatel na implementaci informace o vlastnostech DB.|
+
+## <a name="remarks"></a>Poznámky
+
+Povinné rozhraní pro objekty zdroje dat a volitelné rozhraní pro enumerátory.
 
 ## <a name="idbinitializeimpl"></a> IDBInitializeImpl::IDBInitializeImpl
 
-Konstruktor  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-IDBInitializeImpl();  
-```  
-  
-### <a name="remarks"></a>Poznámky  
+Konstruktor
 
-Inicializuje všechny datové členy. 
-  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+IDBInitializeImpl();
+```
+
+### <a name="remarks"></a>Poznámky
+
+Inicializuje všechny datové členy.
+
 ## <a name="initialize"></a> IDBInitializeImpl::Initialize
 
-Inicializuje objekt zdroje dat připravuje se podpora jeho vlastnosti.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-STDMETHOD(Initialize)(void);  
-```  
-  
-### <a name="remarks"></a>Poznámky  
+Inicializuje objekt zdroje dat připravuje se podpora jeho vlastnosti.
 
-Zobrazit [IDBInitialize::Initialize](/previous-versions/windows/desktop/ms718026) v *referenční informace pro OLE DB programátory*. 
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+STDMETHOD(Initialize)(void);
+```
+
+### <a name="remarks"></a>Poznámky
+
+Zobrazit [IDBInitialize::Initialize](/previous-versions/windows/desktop/ms718026) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="uninitialize"></a> IDBInitializeImpl::Uninitialize
 
-Místa data objektu v neinicializovaném stavu zdroje uvolněním interním prostředkům, jako je například podpora vlastností.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Místa data objektu v neinicializovaném stavu zdroje uvolněním interním prostředkům, jako je například podpora vlastností.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-STDMETHOD(Uninitialize)(void);  
-```  
-  
-### <a name="remarks"></a>Poznámky  
+STDMETHOD(Uninitialize)(void);
+```
+
+### <a name="remarks"></a>Poznámky
 
 Zobrazit [IDBInitialize::Uninitialize](/previous-versions/windows/desktop/ms719648) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="dwstatus"></a> IDBInitializeImpl::m_dwStatus
 
-Zdroje dat příznaky.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-DWORD m_dwStatus;  
-```  
-  
-### <a name="remarks"></a>Poznámky  
+Zdroje dat příznaky.
 
-Tyto příznaky zadat nebo informací o stavu různých atributů pro objekt zdroje dat. Obsahuje jeden nebo více z následujících **výčtu** hodnoty:  
-  
-```cpp  
-enum DATASOURCE_FLAGS {  
-    DSF_MASK_INIT     = 0xFFFFF00F,  
-    DSF_PERSIST_DIRTY = 0x00000001,  
-    DSF_INITIALIZED   = 0x00000010,  
-};  
-```  
-  
-|||  
-|-|-|  
-|`DSF_MASK_INIT`|Maska pro povolení obnovení neinicializovaném stavu.|  
-|`DSF_PERSIST_DIRTY`|Nastavte, pokud objekt zdroje dat vyžaduje trvalost (tj. Pokud byly provedeny změny).|  
-|`DSF_INITIALIZED`|Nastaví, zda zdroj dat byl inicializován.|  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+DWORD m_dwStatus;
+```
+
+### <a name="remarks"></a>Poznámky
+
+Tyto příznaky zadat nebo informací o stavu různých atributů pro objekt zdroje dat. Obsahuje jeden nebo více z následujících **výčtu** hodnoty:
+
+```cpp
+enum DATASOURCE_FLAGS {
+    DSF_MASK_INIT     = 0xFFFFF00F,
+    DSF_PERSIST_DIRTY = 0x00000001,
+    DSF_INITIALIZED   = 0x00000010,
+};
+```
+
+|||
+|-|-|
+|`DSF_MASK_INIT`|Maska pro povolení obnovení neinicializovaném stavu.|
+|`DSF_PERSIST_DIRTY`|Nastavte, pokud objekt zdroje dat vyžaduje trvalost (tj. Pokud byly provedeny změny).|
+|`DSF_INITIALIZED`|Nastaví, zda zdroj dat byl inicializován.|
 
 ## <a name="pcutlpropinfo"></a> IDBInitializeImpl::m_pCUtlPropInfo
 
-Ukazatel na objekt implementace pro informace o vlastnostech DB.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Ukazatel na objekt implementace pro informace o vlastnostech DB.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-CUtlPropInfo< T >* m_pCUtlPropInfo;  
-```  
-  
-## <a name="see-also"></a>Viz také  
+CUtlPropInfo< T >* m_pCUtlPropInfo;
+```
+
+## <a name="see-also"></a>Viz také
 
 [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

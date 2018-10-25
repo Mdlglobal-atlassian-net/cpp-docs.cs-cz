@@ -1,5 +1,5 @@
 ---
-title: Třída kontejneru::rbegin | Microsoft Docs
+title: Třída kontejneru::rbegin | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,29 +14,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d19e7016120d66ceb59b8d1c77620121fc569b1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f5417b8579097c51e7586198525ffdafa4ea2cca
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842055"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079789"
 ---
 # <a name="container-classrbegin"></a>Třída kontejneru::rbegin
 
 > [!NOTE]
-> Toto téma se v dokumentaci k Visual C++ jako funkční příklad kontejnery použít ve standardní knihovně C++. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
+> Toto téma je v dokumentaci k Visual C++ jako funkční příklad kontejnery používané ve standardní knihovně jazyka C++. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
 
-Vrátí zpětného iterator, ukazující právě přesahuje za konec řízené sekvenci určení na začátek zpětné pořadí.
+Vrátí zpětný iterátor, který ukazuje přesně za konec řízené sekvence označení začátku opačném pořadí.
 
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
 const_reverse_iterator rbegin() const;
 
-
 reverse_iterator rbegin();
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázkový kontejner – třída](../standard-library/sample-container-class.md)<br/>

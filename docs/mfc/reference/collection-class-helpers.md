@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a14a45341645feeb0b85f92379702c9fc40c9d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 010afb3939afcb392d38cda8dfb1ab1a37100d3b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381717"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083370"
 ---
 # <a name="collection-class-helpers"></a>Pomocné rutiny třídy kolekce
 
@@ -152,7 +152,6 @@ Počet prvků, které mají být uloženy.
 `CArray::Dump`, `CList::Dump`, A `CMap::Dump` funkce to volat, pokud hloubka výpis paměti je větší než 0.
 
 Výchozí implementace nemá žádný účinek. Pokud prvky vaší kolekce jsou odvozeny z `CObject`, přepsání bude obvykle iteraci v rámci kolekce elementů, volání `Dump` pro každý prvek v důsledku.
-
 
 ### <a name="requirements"></a>Požadavky
 

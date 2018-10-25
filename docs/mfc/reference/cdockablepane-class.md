@@ -1,7 +1,7 @@
 ---
 title: CDockablePane – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed4325cc950cdfa5320f1107df7103cbb2c026b5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 91058da47a97098826939be2248d81ba657f3cbb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417485"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078305"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane – třída
 
@@ -337,7 +337,8 @@ virtual CDockablePane* AttachToTabWnd(
 
 ### <a name="parameters"></a>Parametry
 
-[in] [out] *pTabControlBarAttachTo* Určuje cíl podokno, které aktuální podokno připojí k. V podokně cíl musí být ukotvitelné podokně.
+*pTabControlBarAttachTo*<br/>
+[out v] Určuje cílový podokno, které aktuální podokno připojí k. V podokně cíl musí být ukotvitelné podokně.
 
 *dockMethod*<br/>
 [in] Určuje metodu ukotvení.
@@ -585,7 +586,6 @@ virtual BOOL Create(
     DWORD dwControlBarStyle = AFX_DEFAULT_DOCKING_PANE_STYLE,
     CCreateContext* pContext = NULL);
 
-
 virtual BOOL Create(
     LPCTSTR lpszWindowName,
     CWnd* pParentWnd,
@@ -602,7 +602,8 @@ virtual BOOL Create(
 *lpszCaption*<br/>
 [in] Určuje název okna.
 
-[in] [out] *pParentWnd* určuje nadřazeného okna.
+*pParentWnd*<br/>
+[out v] Určuje nadřazené okno.
 
 *Rect*<br/>
 [in] Určuje velikost a umístění okna, v souřadnicích klienta z *pParentWnd*.
@@ -622,7 +623,8 @@ virtual BOOL Create(
 *dwControlBarStyle*<br/>
 [in] Určuje styl další atributy.
 
-[in] [out] *pContext* určuje kontext vytvoření okna.
+*pContext*<br/>
+[out v] Určuje kontext vytvoření okna.
 
 *lpszWindowName*<br/>
 [in] Určuje název okna.
@@ -705,7 +707,8 @@ virtual BOOL CreateEx(
 *lpszCaption*<br/>
 [in] Určuje název okna.
 
-[in] [out] *pParentWnd* určuje nadřazeného okna.
+*pParentWnd*<br/>
+[out v] Určuje nadřazené okno.
 
 *Rect*<br/>
 [in] Určuje velikost a umístění okna, v souřadnicích klienta z *pParentWnd*.
@@ -725,7 +728,8 @@ virtual BOOL CreateEx(
 *dwControlBarStyle*<br/>
 [in] Určuje atributy stylu Další.
 
-[in] [out] *pContext* určuje kontext vytvoření okna.
+*pContext*<br/>
+[out v] Určuje kontext vytvoření okna.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -842,7 +846,8 @@ virtual BOOL DockToWindow(
 
 ### <a name="parameters"></a>Parametry
 
-[in] [out] *pTargetWindow* určuje podokně ukotvitelné ukotvení v tomto podokně na.
+*pTargetWindow*<br/>
+[out v] Určuje podokně ukotvitelné ukotvení v tomto podokně na.
 
 *dwAlignment*<br/>
 [in] Určuje zarovnání ukotvení panelu. Může být jedna z CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM nebo CBRS_ALIGN_ANY. (Definované v souboru afxres.h.)
@@ -1339,7 +1344,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pWndOldParent*
+[in] *pWndOldParent*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1509,7 +1514,8 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 *dwAlignment*<br/>
 [in] Určuje zarovnání podokně automatické skrývání k vytvoření.
 
-[in] [out] *pCurrAutoHideBar* ukazatel na aktuální automaticky skrývat panel nástrojů. Může mít hodnotu NULL.
+*pCurrAutoHideBar*<br/>
+[out v] Ukazatel na aktuální automaticky skrývat panel nástrojů. Může mít hodnotu NULL.
 
 *bUseTimer*<br/>
 [in] Určuje, zda chcete automaticky skrývat efekt použít, když uživatel přejde do režimu automatické skrývání podokně nebo skrýt podokno okamžitě.

@@ -44,114 +44,114 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 514a013cf3f327c0c73ca8469900693d6a4e5e21
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 6ab6e58ad6f25232be5c298673cefe6d0488f63b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084032"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083097"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet – třída
 
-Dědí z `DBPROPIDSET` struktury a přidá konstruktor, který inicializuje pole klíče i na [addpropertyid –](../../data/oledb/cdbpropidset-addpropertyid.md) přístup k metodě.  
-  
+Dědí z `DBPROPIDSET` struktury a přidá konstruktor, který inicializuje pole klíče i na [addpropertyid –](../../data/oledb/cdbpropidset-addpropertyid.md) přístup k metodě.
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-class CDBPropIDSet : public tagDBPROPIDSET  
-```  
+class CDBPropIDSet : public tagDBPROPIDSET
+```
 
-## <a name="requirements"></a>Požadavky  
+## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** také atldbcli.h
-  
-## <a name="members"></a>Členové  
-  
-### <a name="methods"></a>Metody  
-  
-|||  
-|-|-|  
-|[Addpropertyid –](#addpropertyid)|Přidá vlastnost ID sady vlastností.|  
-|[Cdbpropidset –](#cdbpropidset)|Konstruktor|  
-|[Setguid –](#setguid)|Nastaví nastavení GUID ID vlastnosti.|  
-  
-### <a name="operators"></a>Operátory  
-  
-|||  
-|-|-|  
-|[operátor =](#op_equal)|Přiřadí obsah jedno ID vlastnosti nastavit na jiný.|  
-  
-## <a name="remarks"></a>Poznámky  
 
-Použití příjemců OLE DB `DBPROPIDSET` struktury předat pole ID vlastnost, pro které chce příjemce se získat informace o vlastnosti. Vlastnosti identifikované v jediném [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) struktura patří do sady jednu vlastnost.  
+## <a name="members"></a>Členové
+
+### <a name="methods"></a>Metody
+
+|||
+|-|-|
+|[Addpropertyid –](#addpropertyid)|Přidá vlastnost ID sady vlastností.|
+|[Cdbpropidset –](#cdbpropidset)|Konstruktor|
+|[Setguid –](#setguid)|Nastaví nastavení GUID ID vlastnosti.|
+
+### <a name="operators"></a>Operátory
+
+|||
+|-|-|
+|[operátor =](#op_equal)|Přiřadí obsah jedno ID vlastnosti nastavit na jiný.|
+
+## <a name="remarks"></a>Poznámky
+
+Použití příjemců OLE DB `DBPROPIDSET` struktury předat pole ID vlastnost, pro které chce příjemce se získat informace o vlastnosti. Vlastnosti identifikované v jediném [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) struktura patří do sady jednu vlastnost.
 
 ## <a name="addpropertyid"></a> CDBPropIDSet::AddPropertyID
 
-Přidá ID vlastnosti ID sady vlastností.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Přidá ID vlastnosti ID sady vlastností.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-bool AddPropertyID(DBPROPID propid) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+bool AddPropertyID(DBPROPID propid) throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *číslo PropId*<br/>
-[in] Nastavte vlastnost ID se má přidat do ID vlastnosti.  
+[in] Nastavte vlastnost ID se má přidat do ID vlastnosti.
 
 ## <a name="cdbpropidset"></a> CDBPropIDSet::CDBPropIDSet
 
-Konstruktor Inicializuje `rgProperties`, `cProperties`a (volitelně) `guidPropertySet` pole [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) struktury.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Konstruktor Inicializuje `rgProperties`, `cProperties`a (volitelně) `guidPropertySet` pole [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) struktury.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-CDBPropIDSet(const GUID& guid);  
+CDBPropIDSet(const GUID& guid);
 
-CDBPropIDSet(const CDBPropIDSet& propidset);  
+CDBPropIDSet(const CDBPropIDSet& propidset);
 
-CDBPropIDSet();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+CDBPropIDSet();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *identifikátor GUID*<br/>
-[in] Identifikátor GUID použitý k inicializaci `guidPropertySet` pole.  
-  
+[in] Identifikátor GUID použitý k inicializaci `guidPropertySet` pole.
+
 *propidset*<br/>
-[in] Jiné `CDBPropIDSet` objekt pro konstrukci kopie.  
+[in] Jiné `CDBPropIDSet` objekt pro konstrukci kopie.
 
 ## <a name="setguid"></a> CDBPropIDSet::SetGUID
 
-Nastaví pole identifikátoru GUID v `DBPROPIDSET` struktury.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Nastaví pole identifikátoru GUID v `DBPROPIDSET` struktury.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-void SetGUID(const GUID& guid) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+void SetGUID(const GUID& guid) throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *identifikátor GUID*<br/>
-[in] Identifikátor GUID lze nastavit `guidPropertySet` pole [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) struktury.  
-  
-### <a name="remarks"></a>Poznámky  
+[in] Identifikátor GUID lze nastavit `guidPropertySet` pole [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) struktury.
 
-Toto pole lze nastavit [konstruktor](../../data/oledb/cdbpropidset-cdbpropidset.md) také. Voláním této funkce, pokud použijete výchozí konstruktor pro tuto třídu.  
+### <a name="remarks"></a>Poznámky
+
+Toto pole lze nastavit [konstruktor](../../data/oledb/cdbpropidset-cdbpropidset.md) také. Voláním této funkce, pokud použijete výchozí konstruktor pro tuto třídu.
 
 ## <a name="op_equal"></a> CDBPropIDSet::operator =
 
-Přiřadí obsah jedno ID vlastnosti nastavena na jinou sadu vlastnost ID.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Přiřadí obsah jedno ID vlastnosti nastavena na jinou sadu vlastnost ID.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();  
-```  
-  
-## <a name="see-also"></a>Viz také  
+CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();
+```
+
+## <a name="see-also"></a>Viz také
 
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

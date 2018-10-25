@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04a533acecd837fd5bad51612ce7b7eced841178
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 19dc08fc29de4affaea987025a2bc8b92bc56460
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376483"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079854"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC – ovládací prvky ActiveX: Stránky vlastností
 
@@ -86,7 +86,7 @@ Například účely, následující postupy použijte jednoduché ovládací prv
 
 1. Otevřete dialogové okno IDD_PROPPAGE_SAMPLE.
 
-     Průvodce ovládacím prvkem ActiveX připojí na konec ID dialogu, v tomto případě ukázka název projektu.
+   Průvodce ovládacím prvkem ActiveX připojí na konec ID dialogu, v tomto případě ukázka název projektu.
 
 1. Přetáhnout myší vybraný ovládací prvek z panelu nástrojů na oblast dialogového okna.
 

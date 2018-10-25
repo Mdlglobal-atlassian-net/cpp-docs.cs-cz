@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed39cc636bdc5cc82c5ac16ab33a75c2efbbd8b8
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 564a5ba5048442ccb1ce599d03ba0064715c7f5f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789329"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079061"
 ---
 # <a name="licensed"></a>licensed
 
@@ -75,4 +75,4 @@ Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.
 ## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
-[Atributy třídy](class-attributes.md)  
+[Atributy třídy](class-attributes.md)

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98cf8a0532c3b1f2044ba0338d3f2f2bf8e73813
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0070103724385dcb598c20cd15bc29f341628bce
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390981"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079438"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC – ovládací prvky ActiveX: Přidání přizpůsobených vlastností
 
@@ -36,19 +36,19 @@ Vlastní vlastnosti se dělí na čtyři typy implementace: členskou proměnnou
 
 - Implementace členské proměnné
 
-     Tato implementace představuje stav vlastnosti jako členskou proměnnou v třídě ovládacího prvku. Členské proměnné implementace použijte, pokud to není důležité vědět, když se změní hodnota vlastnosti. Ze tří typů vytvoří tato implementace minimální množství kódu podpory pro vlastnost. Je makro položky mapy odeslání pro členské proměnné implementace [DISP_PROPERTY](../mfc/reference/dispatch-maps.md#disp_property).
+   Tato implementace představuje stav vlastnosti jako členskou proměnnou v třídě ovládacího prvku. Členské proměnné implementace použijte, pokud to není důležité vědět, když se změní hodnota vlastnosti. Ze tří typů vytvoří tato implementace minimální množství kódu podpory pro vlastnost. Je makro položky mapy odeslání pro členské proměnné implementace [DISP_PROPERTY](../mfc/reference/dispatch-maps.md#disp_property).
 
 - Členské proměnné s implementací oznámení
 
-     Tato implementace se skládá z členské proměnné a funkce oznámení vytvořený pomocí průvodce přidat vlastnost. Funkce oznámení je automaticky volá se rozhraním po změně hodnoty vlastnosti. Používejte členskou proměnnou s implementací oznámení budete potřebovat, abyste dostávali oznámení po změně hodnoty vlastnosti. Tato implementace vyžaduje více času, protože vyžaduje volání funkce. Je makro položky mapy odeslání pro tuto implementaci [DISP_PROPERTY_NOTIFY](../mfc/reference/dispatch-maps.md#disp_property_notify).
+   Tato implementace se skládá z členské proměnné a funkce oznámení vytvořený pomocí průvodce přidat vlastnost. Funkce oznámení je automaticky volá se rozhraním po změně hodnoty vlastnosti. Používejte členskou proměnnou s implementací oznámení budete potřebovat, abyste dostávali oznámení po změně hodnoty vlastnosti. Tato implementace vyžaduje více času, protože vyžaduje volání funkce. Je makro položky mapy odeslání pro tuto implementaci [DISP_PROPERTY_NOTIFY](../mfc/reference/dispatch-maps.md#disp_property_notify).
 
 - Implementace metody Get/Set
 
-     Tato implementace se skládá z dvojice členské funkce ve třídě ovládacího prvku. Implementace metody Get/Set automaticky volá člen Get funkci ovládacího prvku uživatel požádá o aktuální hodnota vlastnosti a členskou funkci Set, pokud ovládacího prvku uživatel požaduje, aby byla změněna vlastnost. Tuto implementaci používejte, když potřebujete vypočítat hodnotu vlastnosti za běhu, ověřte hodnotu předanou uživatelem ovládacího prvku před změnou skutečné vlastnost, nebo implementovat typ vlastnosti jen pro čtení nebo zápisu –. Je makro položky mapy odeslání pro tuto implementaci [DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex). V následující části [pomocí Průvodce přidáním vlastnosti lze přidat vlastní vlastnost](#_core_using_classwizard_to_add_a_custom_property), používá vlastní vlastnost CircleOffset k předvedení toho tuto implementaci.
+   Tato implementace se skládá z dvojice členské funkce ve třídě ovládacího prvku. Implementace metody Get/Set automaticky volá člen Get funkci ovládacího prvku uživatel požádá o aktuální hodnota vlastnosti a členskou funkci Set, pokud ovládacího prvku uživatel požaduje, aby byla změněna vlastnost. Tuto implementaci používejte, když potřebujete vypočítat hodnotu vlastnosti za běhu, ověřte hodnotu předanou uživatelem ovládacího prvku před změnou skutečné vlastnost, nebo implementovat typ vlastnosti jen pro čtení nebo zápisu –. Je makro položky mapy odeslání pro tuto implementaci [DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex). V následující části [pomocí Průvodce přidáním vlastnosti lze přidat vlastní vlastnost](#_core_using_classwizard_to_add_a_custom_property), používá vlastní vlastnost CircleOffset k předvedení toho tuto implementaci.
 
 - Parametrizované implementace
 
-     Parametrizované implementace podporuje Průvodce přidáním vlastnosti. Parametrizovaná vlastnost (říká se jim vlastnost pole) lze použít pro přístup k sadě hodnot prostřednictvím jedné vlastnosti ovládacího prvku. DISP_PROPERTY_PARAM je makro položky mapy odeslání pro tuto implementaci. Další informace o implementaci tohoto typu, najdete v části [implementace Parametrizovaná vlastnost](../mfc/mfc-activex-controls-advanced-topics.md) v následujícím článku – ovládací prvky ActiveX: Advanced témata.
+   Parametrizované implementace podporuje Průvodce přidáním vlastnosti. Parametrizovaná vlastnost (říká se jim vlastnost pole) lze použít pro přístup k sadě hodnot prostřednictvím jedné vlastnosti ovládacího prvku. DISP_PROPERTY_PARAM je makro položky mapy odeslání pro tuto implementaci. Další informace o implementaci tohoto typu, najdete v části [implementace Parametrizovaná vlastnost](../mfc/mfc-activex-controls-advanced-topics.md) v následujícím článku – ovládací prvky ActiveX: Advanced témata.
 
 ##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> Použití přidat průvodce vlastností můžete přidat vlastní vlastnost
 
@@ -66,7 +66,7 @@ Stejný postup lze také přidat další vlastní požadované vlastnosti. Nahra
 
 1. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat vlastnost**.
 
-     Tím se otevře [Průvodce přidáním vlastnosti](../ide/names-add-property-wizard.md).
+   Tím se otevře [Průvodce přidáním vlastnosti](../ide/names-add-property-wizard.md).
 
 1. V **název vlastnosti** zadejte *CircleOffset*.
 

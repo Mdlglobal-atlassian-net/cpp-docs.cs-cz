@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c19b000c1d7ee5cb1f8480f0e9f384b42937dc9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 167d3af6d353ec48edde4288db26b9e407c62bd5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414482"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078957"
 ---
 # <a name="exception-handling-in-mfc"></a>Zpracování výjimek v prostředí MFC
 
@@ -81,15 +81,15 @@ Tři kategorie výsledků může dojít, pokud funkce je volána v průběhu pro
 
 - Normální spuštění
 
-     Funkce může normálně spustit a vrátit. Některé funkce vrátí kód výsledku volajícímu, který určuje výsledek funkce. Kódy výsledků možná jsou přísně definována pro funkci a představují rozsah možné výsledky funkce. Kód výsledku může indikuje úspěch nebo neúspěch nebo dokonce můžete určit konkrétní typ selhání, který je v rámci normálního rozsahu očekávání. Stav souboru funkce může například vrátit kód, který označuje, že soubor neexistuje. Všimněte si, že termín "kód chyby" není vzhledem k tomu, že kód výsledku představuje jeden z mnoha očekávaných výsledků.
+   Funkce může normálně spustit a vrátit. Některé funkce vrátí kód výsledku volajícímu, který určuje výsledek funkce. Kódy výsledků možná jsou přísně definována pro funkci a představují rozsah možné výsledky funkce. Kód výsledku může indikuje úspěch nebo neúspěch nebo dokonce můžete určit konkrétní typ selhání, který je v rámci normálního rozsahu očekávání. Stav souboru funkce může například vrátit kód, který označuje, že soubor neexistuje. Všimněte si, že termín "kód chyby" není vzhledem k tomu, že kód výsledku představuje jeden z mnoha očekávaných výsledků.
 
 - Chybné spuštění
 
-     Volající provede nějakou chybu v předávání argumentů do funkce nebo volá funkci v kontextu nevhodný. Tato situace způsobí chybu a by měl být detekoval kontrolní výraz během vývoje aplikace. (Další informace o kontrolních výrazů naleznete v tématu [kontrolní výrazy jazyka C/C++](/visualstudio/debugger/c-cpp-assertions).)
+   Volající provede nějakou chybu v předávání argumentů do funkce nebo volá funkci v kontextu nevhodný. Tato situace způsobí chybu a by měl být detekoval kontrolní výraz během vývoje aplikace. (Další informace o kontrolních výrazů naleznete v tématu [kontrolní výrazy jazyka C/C++](/visualstudio/debugger/c-cpp-assertions).)
 
 - Abnormální provádění
 
-     Abnormální provádění zahrnuje situacích, kdy jsou podmínky mimo řízení programu, jako je nedostatek paměti nebo vstupně-výstupní chyby, vliv na výsledek funkce. Neobvyklých situací by měly být zpracovány zachytávání a vyvolávání výjimek.
+   Abnormální provádění zahrnuje situacích, kdy jsou podmínky mimo řízení programu, jako je nedostatek paměti nebo vstupně-výstupní chyby, vliv na výsledek funkce. Neobvyklých situací by měly být zpracovány zachytávání a vyvolávání výjimek.
 
 Použití výjimek je obzvláště vhodný pro abnormální provádění.
 

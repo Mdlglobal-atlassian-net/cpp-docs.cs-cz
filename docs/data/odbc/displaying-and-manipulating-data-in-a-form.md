@@ -20,21 +20,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6d09245bdf05f770e6b0e3161cf71902944b608c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0b8d769d39a362cd62da2dcc573470391c8530ae
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46103643"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079178"
 ---
 # <a name="displaying-and-manipulating-data-in-a-form"></a>Zobrazení dat ve formuláři a manipulace s nimi
 
-Mnoho aplikací přístup k datům vyberte data a zobrazit je pole ve formuláři. Třída database [CRecordView](../../mfc/reference/crecordview-class.md) vám [CFormView](../../mfc/reference/cformview-class.md) objektu přímo připojen k objektu sady záznamů. Zobrazení záznamu používá [výměna dat dialogových oken (DDX)](../../mfc/dialog-data-exchange-and-validation.md) přesunout hodnoty polí aktuální záznam ze záznamů pro ovládací prvky ve formuláři a přesuňte aktualizované informace zpět do sady záznamů. Sady záznamů pro přesun dat mezi její datové členy a odpovídající sloupce v tabulce ve zdroji dat. pak dále používá výměna pole záznamu (RFX).  
-  
-Můžete použít Průvodce aplikací knihovny MFC nebo **přidat třídu** (jak je popsáno v [přidání příjemce ODBC knihovny MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) Chcete-li vytvořit třídu zobrazení a jeho přidružené třídy sady záznamů ve spojení.  
-  
-Zobrazení záznamu a jeho sady záznamů jsou zničeny při zavření dokumentu. Další informace o zobrazení záznamů najdete v tématu [zobrazení záznamů](../../data/record-views-mfc-data-access.md). Další informace o RFX najdete v tématu [výměna pole záznamu (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
-  
-## <a name="see-also"></a>Viz také  
+Mnoho aplikací přístup k datům vyberte data a zobrazit je pole ve formuláři. Třída database [CRecordView](../../mfc/reference/crecordview-class.md) vám [CFormView](../../mfc/reference/cformview-class.md) objektu přímo připojen k objektu sady záznamů. Zobrazení záznamu používá [výměna dat dialogových oken (DDX)](../../mfc/dialog-data-exchange-and-validation.md) přesunout hodnoty polí aktuální záznam ze záznamů pro ovládací prvky ve formuláři a přesuňte aktualizované informace zpět do sady záznamů. Sady záznamů pro přesun dat mezi její datové členy a odpovídající sloupce v tabulce ve zdroji dat. pak dále používá výměna pole záznamu (RFX).
+
+Můžete použít Průvodce aplikací knihovny MFC nebo **přidat třídu** (jak je popsáno v [přidání příjemce ODBC knihovny MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) Chcete-li vytvořit třídu zobrazení a jeho přidružené třídy sady záznamů ve spojení.
+
+Zobrazení záznamu a jeho sady záznamů jsou zničeny při zavření dokumentu. Další informace o zobrazení záznamů najdete v tématu [zobrazení záznamů](../../data/record-views-mfc-data-access.md). Další informace o RFX najdete v tématu [výměna pole záznamu (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+
+## <a name="see-also"></a>Viz také
 
 [Rozhraní ODBC a knihovna MFC](../../data/odbc/odbc-and-mfc.md)

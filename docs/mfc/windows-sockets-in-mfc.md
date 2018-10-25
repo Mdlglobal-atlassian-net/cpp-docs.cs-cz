@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff86123f395e9647ef848ad017fe3cb69b69dd71
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a460870887f3a012bf02ee6518ba70c65881c804
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427677"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081414"
 ---
 # <a name="windows-sockets-in-mfc"></a>Windows sockets v prostředí MFC
 
@@ -42,11 +42,11 @@ Dva Windows soketů knihovny MFC programovací modely jsou podporovány následu
 
 - `CAsyncSocket`
 
-     Tato třída zapouzdří rozhraní Windows Sockets API. [CAsyncSocket](../mfc/reference/casyncsocket-class.md) je pro programátory, kteří vědět síťové programování a chtějí flexibilně využívat přímé programování soketů rozhraní API, ale také chcete pohodlné funkce zpětného volání pro oznámení o událostech sítě. Než balení soketů ve formuláři objektově orientované pro použití v jazyce C++, je převod jedinými dodatečnými abstrakce, kterou tato třída poskytuje některé zprávy související s soketu Windows na zpětná volání. Další informace najdete v tématu [rozhraní Windows Sockets: oznámení soketů](../mfc/windows-sockets-socket-notifications.md).
+   Tato třída zapouzdří rozhraní Windows Sockets API. [CAsyncSocket](../mfc/reference/casyncsocket-class.md) je pro programátory, kteří vědět síťové programování a chtějí flexibilně využívat přímé programování soketů rozhraní API, ale také chcete pohodlné funkce zpětného volání pro oznámení o událostech sítě. Než balení soketů ve formuláři objektově orientované pro použití v jazyce C++, je převod jedinými dodatečnými abstrakce, kterou tato třída poskytuje některé zprávy související s soketu Windows na zpětná volání. Další informace najdete v tématu [rozhraní Windows Sockets: oznámení soketů](../mfc/windows-sockets-socket-notifications.md).
 
 - `CSocket`
 
-     Tato třída odvozená z `CAsyncSocket`, poskytuje vyšší úroveň abstrakce pro práci s sockets pomocí knihovny MFC [CArchive](../mfc/reference/carchive-class.md) objektu. Použití soketu se archiv výrazně se podobá pomocí protokolu serializace soubor knihovny MFC. To usnadňuje použití než `CAsyncSocket` modelu. [Csocket –](../mfc/reference/csocket-class.md) dědí mnoho funkcí členů z `CAsyncSocket` zapouzdřují rozhraní Windows Sockets API, budete muset použít některé z těchto funkcí a pochopit obecně programování soketů. Ale `CSocket` spravuje mnoho aspektů komunikaci, která budete muset provést sami pomocí nezpracované rozhraní API nebo třída `CAsyncSocket`. Co je nejdůležitější `CSocket` poskytuje blokování (s zpracování na pozadí zpráv Windows), což je nezbytné pro synchronní operace `CArchive`.
+   Tato třída odvozená z `CAsyncSocket`, poskytuje vyšší úroveň abstrakce pro práci s sockets pomocí knihovny MFC [CArchive](../mfc/reference/carchive-class.md) objektu. Použití soketu se archiv výrazně se podobá pomocí protokolu serializace soubor knihovny MFC. To usnadňuje použití než `CAsyncSocket` modelu. [Csocket –](../mfc/reference/csocket-class.md) dědí mnoho funkcí členů z `CAsyncSocket` zapouzdřují rozhraní Windows Sockets API, budete muset použít některé z těchto funkcí a pochopit obecně programování soketů. Ale `CSocket` spravuje mnoho aspektů komunikaci, která budete muset provést sami pomocí nezpracované rozhraní API nebo třída `CAsyncSocket`. Co je nejdůležitější `CSocket` poskytuje blokování (s zpracování na pozadí zpráv Windows), což je nezbytné pro synchronní operace `CArchive`.
 
 Vytváření a používání `CSocket` a `CAsyncSocket` objekty je popsána v [rozhraní Windows Sockets: použití soketů s archivy](../mfc/windows-sockets-using-sockets-with-archives.md) a [rozhraní Windows Sockets: použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md).
 

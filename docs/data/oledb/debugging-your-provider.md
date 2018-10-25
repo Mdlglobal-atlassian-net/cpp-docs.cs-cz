@@ -18,33 +18,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fc4461bb29bb9b9c706177c4dcd2134d37d697e0
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 59431204ae242ac6fab0d562740f859dc85bcd11
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49989902"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081794"
 ---
 # <a name="debugging-your-provider"></a>Ladění zprostředkovatele
 
-Chcete-li ladit poskytovatele dvěma způsoby:  
-  
-- Protože zprostředkovatelé jsou vytvářeny v procesu, můžete vytvořit příjemce kódu s využitím technologie OLE DB – šablony příjemce a krokování s vnořením poskytovateli normálně.  
-  
-- Můžete použít nástroj ITEST, která se dodává s jazykem Visual C++.  
-  
-## <a name="to-use-the-itest-utility"></a>Chcete-li použít nástroj ITEST  
-  
-1. Otevřete projekt zprostředkovatele.  
-  
-1. Na **projekty** nabídky, klikněte na tlačítko **nastavení**.  
-  
-1. V **stránky vlastností** dialogové okno, klikněte na tlačítko **ladění** kartu.  
-  
-1. V **spustitelný soubor pro relaci ladění** vyberte ITEST aplikaci.  
-  
-1. Nastavit zarážky a ladění obvyklým způsobem.  
-  
-## <a name="see-also"></a>Viz také  
+Chcete-li ladit poskytovatele dvěma způsoby:
+
+- Protože zprostředkovatelé jsou vytvářeny v procesu, můžete vytvořit příjemce kódu s využitím technologie OLE DB – šablony příjemce a krokování s vnořením poskytovateli normálně.
+
+- Můžete použít nástroj ITEST, která se dodává s jazykem Visual C++.
+
+## <a name="to-use-the-itest-utility"></a>Chcete-li použít nástroj ITEST
+
+1. Otevřete projekt zprostředkovatele.
+
+1. Na **projekty** nabídky, klikněte na tlačítko **nastavení**.
+
+1. V **stránky vlastností** dialogové okno, klikněte na tlačítko **ladění** kartu.
+
+1. V **spustitelný soubor pro relaci ladění** vyberte ITEST aplikaci.
+
+1. Nastavit zarážky a ladění obvyklým způsobem.
+
+## <a name="see-also"></a>Viz také
 
 [Práce s šablonami zprostředkovatele OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

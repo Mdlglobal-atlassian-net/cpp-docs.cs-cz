@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1781077896465d8a7a1d925262c3fd0696d24380
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9a077cd90055a17f9aff71d67d2cb9a511a1caf0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410556"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078034"
 ---
 # <a name="mfc-library-versions"></a>MFC – verze knihovny
 
@@ -95,7 +95,7 @@ Projekty MFC používají symbol preprocesoru \_UNICODE označuje podporu širok
 
 Statické knihovny MFC pomocí následující názvové konvence. Názvy knihoven mít formát _služba ._protokol
 
-> *u*AFX*c**d*.LIB
+> <em>u</em>afx –<em>cd</em>. LIB
 
 zobrazí kurzívou malá písmena, kde jsou zástupné symboly specifikátory jehož význam, jsou uvedeny v následující tabulce:
 

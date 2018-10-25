@@ -48,139 +48,139 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a5de49679652b04afa4df08ce9d4ea015ebd031d
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 89762d37977efd4c999c38ee9bc586420655f1cc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082720"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078359"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl – třída
 
-Poskytuje implementaci [IAccessor](/previous-versions/windows/desktop/ms719672) rozhraní.  
-  
+Poskytuje implementaci [IAccessor](/previous-versions/windows/desktop/ms719672) rozhraní.
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-template <class T, 
+template <class T,
    class BindType = ATLBINDINGS,
-   class BindingVector = CAtlMap <HACCESSOR hAccessor, BindType* pBindingsStructure>>  
-class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>  
-```  
-  
-### <a name="parameters"></a>Parametry  
+   class BindingVector = CAtlMap <HACCESSOR hAccessor, BindType* pBindingsStructure>>
+class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
+```
+
+### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Vaše třída objektu sady řádků nebo příkaz.  
-  
+Vaše třída objektu sady řádků nebo příkaz.
+
 *BindType*<br/>
-Jednotky úložiště pro informace o vazbě. Výchozí hodnota je `ATLBINDINGS` struktury (viz atldb.h).  
-  
+Jednotky úložiště pro informace o vazbě. Výchozí hodnota je `ATLBINDINGS` struktury (viz atldb.h).
+
 *BindingVector*<br/>
-Jednotky úložiště pro informace o sloupci. Výchozí hodnota je [catlmap –](../../atl/reference/catlmap-class.md) kde HACCESSOR hodnota je klíčovým prvkem a hodnota elementu je ukazatel `BindType` struktury.  
-  
-## <a name="requirements"></a>Požadavky  
+Jednotky úložiště pro informace o sloupci. Výchozí hodnota je [catlmap –](../../atl/reference/catlmap-class.md) kde HACCESSOR hodnota je klíčovým prvkem a hodnota elementu je ukazatel `BindType` struktury.
 
-**Záhlaví:** atldb.h  
+## <a name="requirements"></a>Požadavky
 
-## <a name="members"></a>Členové  
-  
-### <a name="methods"></a>Metody  
-  
-|||  
-|-|-|  
-|[IAccessorImpl –](#iaccessorimpl)|Konstruktor|  
-  
-### <a name="interface-methods"></a>Metody rozhraní  
-  
-|||  
-|-|-|  
-|[Addrefaccessor –](#addrefaccessor)|Přidá počet odkazů na existující přistupující objekt.|  
-|[CreateAccessor –](#createaccessor)|Vytvoří ze sady vazby přistupující objekt.|  
-|[Getbindings –](#getbindings)|Vrátí vazby přistupující objekt.|  
-|[Releaseaccessor –](#releaseaccessor)|Uvolní přistupující objekt.|  
-  
-## <a name="remarks"></a>Poznámky  
+**Záhlaví:** atldb.h
 
-Toto je povinná na příkazy a sady řádků. OLE DB vyžaduje poskytovatele, jak implementovat HACCESSOR, což je značka na pole [DBBINDING](/previous-versions/windows/desktop/ms716845) struktury. HACCESSORs poskytované `IAccessorImpl` jsou adresy `BindType` struktury. Ve výchozím nastavení `BindType` je definován jako `ATLBINDINGS` v `IAccessorImpl`vaší definice šablony. `BindType` poskytuje mechanismus používaný `IAccessorImpl` ke sledování počtu prvků v jeho `DBBINDING` pole a také odkaz na počtu a přístupový objekt příznaky.  
+## <a name="members"></a>Členové
+
+### <a name="methods"></a>Metody
+
+|||
+|-|-|
+|[IAccessorImpl –](#iaccessorimpl)|Konstruktor|
+
+### <a name="interface-methods"></a>Metody rozhraní
+
+|||
+|-|-|
+|[Addrefaccessor –](#addrefaccessor)|Přidá počet odkazů na existující přistupující objekt.|
+|[CreateAccessor –](#createaccessor)|Vytvoří ze sady vazby přistupující objekt.|
+|[Getbindings –](#getbindings)|Vrátí vazby přistupující objekt.|
+|[Releaseaccessor –](#releaseaccessor)|Uvolní přistupující objekt.|
+
+## <a name="remarks"></a>Poznámky
+
+Toto je povinná na příkazy a sady řádků. OLE DB vyžaduje poskytovatele, jak implementovat HACCESSOR, což je značka na pole [DBBINDING](/previous-versions/windows/desktop/ms716845) struktury. HACCESSORs poskytované `IAccessorImpl` jsou adresy `BindType` struktury. Ve výchozím nastavení `BindType` je definován jako `ATLBINDINGS` v `IAccessorImpl`vaší definice šablony. `BindType` poskytuje mechanismus používaný `IAccessorImpl` ke sledování počtu prvků v jeho `DBBINDING` pole a také odkaz na počtu a přístupový objekt příznaky.
 
 ## <a name="iaccessorimpl"></a> IAccessorImpl::IAccessorImpl
 
-Konstruktor  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Konstruktor
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-IAccessorImpl();  
-```  
+IAccessorImpl();
+```
 
 ## <a name="addrefaccessor"></a> IAccessorImpl::AddRefAccessor
 
-Přidá počet odkazů na existující přistupující objekt.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Přidá počet odkazů na existující přistupující objekt.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,  
-   DBREFCOUNT* pcRefCount);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
+   DBREFCOUNT* pcRefCount);
+```
+
+#### <a name="parameters"></a>Parametry
 
 Zobrazit [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="createaccessor"></a> IAccessorImpl::CreateAccessor
 
-Vytvoří ze sady vazby přistupující objekt.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,  
-   DBCOUNTITEM cBindings,  
-   const DBBINDING rgBindings[],  
-   DBLENGTH cbRowSize,  
-   HACCESSOR* phAccessor,  
-   DBBINDSTATUS rgStatus[]);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+Vytvoří ze sady vazby přistupující objekt.
 
-Zobrazit [IAccessor::CreateAccessor](/previous-versions/windows/desktop/ms720969) v *referenční informace pro OLE DB programátory*.  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
+   DBCOUNTITEM cBindings,
+   const DBBINDING rgBindings[],
+   DBLENGTH cbRowSize,
+   HACCESSOR* phAccessor,
+   DBBINDSTATUS rgStatus[]);
+```
+
+#### <a name="parameters"></a>Parametry
+
+Zobrazit [IAccessor::CreateAccessor](/previous-versions/windows/desktop/ms720969) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="getbindings"></a> IAccessorImpl::GetBindings
 
-Vrátí základní sloupce vazby od uživatele v přistupujícím objektu.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-STDMETHOD(GetBindings)(HACCESSOR hAccessor,  
-   DBACCESSORFLAGS* pdwAccessorFlags,  
-   DBCOUNTITEM* pcBindings,  
-   DBBINDING** prgBindings);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+Vrátí základní sloupce vazby od uživatele v přistupujícím objektu.
 
-Zobrazit [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253) v *referenční informace pro OLE DB programátory*. 
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+STDMETHOD(GetBindings)(HACCESSOR hAccessor,
+   DBACCESSORFLAGS* pdwAccessorFlags,
+   DBCOUNTITEM* pcBindings,
+   DBBINDING** prgBindings);
+```
+
+#### <a name="parameters"></a>Parametry
+
+Zobrazit [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="releaseaccessor"></a> IAccessorImpl::ReleaseAccessor
 
-Uvolní přistupující objekt.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Uvolní přistupující objekt.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,  
-   DBREFCOUNT* pcRefCount);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
+   DBREFCOUNT* pcRefCount);
+```
+
+#### <a name="parameters"></a>Parametry
 
 Zobrazit [IAccessor::ReleaseAccessor](/previous-versions/windows/desktop/ms719717) v *referenční informace pro OLE DB programátory*.
-  
-## <a name="see-also"></a>Viz také  
+
+## <a name="see-also"></a>Viz také
 
 [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

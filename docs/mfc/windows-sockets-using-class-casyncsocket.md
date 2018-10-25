@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49e5df8e88124d1d94869618a94525e224d32495
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0aaefc41ca365e2bf4d87583f2e25dfa2a870a90
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424665"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079009"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets – použití třídy CAsyncSocket
 
@@ -48,19 +48,19 @@ Tento článek se týká:
 
 1. Vytvoření [CAsyncSocket](../mfc/reference/casyncsocket-class.md) objektu a použít objekt k vytvoření základního **SOKETU** zpracovat.
 
-     Vytvoření soket má následující formát, MFC dvoufázová konstrukce.
+   Vytvoření soket má následující formát, MFC dvoufázová konstrukce.
 
-     Příklad:
+   Příklad:
 
-     [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]
+   [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]
 
      -nebo-
 
-     [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]
+   [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]
 
-     První konstruktor výše uvedené vytvoří `CAsyncSocket` objekt v zásobníku. Druhý konstruktor vytvoří `CAsyncSocket` na haldě. První [vytvořit](../mfc/reference/casyncsocket-class.md#create) volání výše používá výchozí hodnoty parametrů k vytvoření soketu datového proudu. Druhá `Create` volání vytvoří datagram soketu se zadaný port a adresa. (Můžete použít buď `Create` verze pomocí některé z metod konstrukce.)
+   První konstruktor výše uvedené vytvoří `CAsyncSocket` objekt v zásobníku. Druhý konstruktor vytvoří `CAsyncSocket` na haldě. První [vytvořit](../mfc/reference/casyncsocket-class.md#create) volání výše používá výchozí hodnoty parametrů k vytvoření soketu datového proudu. Druhá `Create` volání vytvoří datagram soketu se zadaný port a adresa. (Můžete použít buď `Create` verze pomocí některé z metod konstrukce.)
 
-     Parametry tak, aby `Create` jsou:
+   Parametry tak, aby `Create` jsou:
 
    - "Portu": krátké celé číslo.
 
@@ -72,28 +72,28 @@ Tento článek se týká:
 
          This is your Internet Protocol (IP) address on the network. You will probably always rely on the default value for this parameter.
 
-     Podmínky "portu" a "adresa soketu" je podrobně popsaný v [rozhraní Windows Sockets: porty a adresy soketů](../mfc/windows-sockets-ports-and-socket-addresses.md).
+   Podmínky "portu" a "adresa soketu" je podrobně popsaný v [rozhraní Windows Sockets: porty a adresy soketů](../mfc/windows-sockets-ports-and-socket-addresses.md).
 
 1. Pokud soketu je klient, připojení k serveru pro objekt soketu soketu, pomocí [CAsyncSocket::Connect](../mfc/reference/casyncsocket-class.md#connect).
 
      -nebo-
 
-     Pokud soketu je server, nastavte soketu. Chcete-li začít naslouchání (s [CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen)) pro pokusy o připojení z klienta. Při přijetí požadavku na připojení, přijměte ji [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept).
+   Pokud soketu je server, nastavte soketu. Chcete-li začít naslouchání (s [CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen)) pro pokusy o připojení z klienta. Při přijetí požadavku na připojení, přijměte ji [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept).
 
-     Po přijetí připojení, můžete provádět úkoly, jako je ověřování hesla.
+   Po přijetí připojení, můžete provádět úkoly, jako je ověřování hesla.
 
     > [!NOTE]
     >  `Accept` Členská funkce používá odkaz na nový, prázdný `CSocket` objektu jako svůj parametr. Je nutné vytvořit tento objekt před voláním `Accept`. Pokud tento objekt dostane mimo rozsah, připojení se ukončí. Nevolejte `Create` pro tento nový objekt soketu. Příklad najdete v článku [rozhraní Windows Sockets: posloupnost operací](../mfc/windows-sockets-sequence-of-operations.md).
 
 1. Provádění komunikaci s jinými sokety voláním `CAsyncSocket` členské funkce objektu, které zapouzdřují funkce rozhraní Windows Sockets API.
 
-     V tématu Specifikace rozhraní Windows Sockets a třída [CAsyncSocket](../mfc/reference/casyncsocket-class.md) v *odkaz knihovny MFC*.
+   V tématu Specifikace rozhraní Windows Sockets a třída [CAsyncSocket](../mfc/reference/casyncsocket-class.md) v *odkaz knihovny MFC*.
 
 1. Zničit `CAsyncSocket` objektu.
 
-     Pokud jste vytvořili objekt soketu v zásobníku, jeho destruktor je volána, když obsahující funkce dostane mimo rozsah. Pokud jste vytvořili objekt soketu v haldě, pomocí **nové** operátoru, zodpovídáte za použití **odstranit** operátor zrušení objektu.
+   Pokud jste vytvořili objekt soketu v zásobníku, jeho destruktor je volána, když obsahující funkce dostane mimo rozsah. Pokud jste vytvořili objekt soketu v haldě, pomocí **nové** operátoru, zodpovídáte za použití **odstranit** operátor zrušení objektu.
 
-     Volá destruktor objektu [Zavřít](../mfc/reference/casyncsocket-class.md#close) členskou funkci před zničení objektu.
+   Volá destruktor objektu [Zavřít](../mfc/reference/casyncsocket-class.md#close) členskou funkci před zničení objektu.
 
 Příklad této sekvence v kódu (ve skutečnosti pro `CSocket` objektu), naleznete v tématu [rozhraní Windows Sockets: posloupnost operací](../mfc/windows-sockets-sequence-of-operations.md).
 

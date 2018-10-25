@@ -28,16 +28,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa3f3356cf3fdddeeb4245986549fa1bd2e12ae7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 16aa17ef58e8e4a7f0b8970cb229b6c914f291fe
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085222"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080114"
 ---
-# <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY – makra  
+# <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY – makra
 
-Tato makra zadejte rozhraní objektu do jeho mapy modelu COM, tak, aby k nim může přistupovat pomocí `QueryInterface`. Pořadí položek v objektu map COM je rozhraní pořadí bude sloužit k odpovídající IID během `QueryInterface`.  
+Tato makra zadejte rozhraní objektu do jeho mapy modelu COM, tak, aby k nim může přistupovat pomocí `QueryInterface`. Pořadí položek v objektu map COM je rozhraní pořadí bude sloužit k odpovídající IID během `QueryInterface`.
 
 |||
 |-|-|
@@ -55,7 +55,7 @@ Tato makra zadejte rozhraní objektu do jeho mapy modelu COM, tak, aby k nim mů
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|Zpracovává mapu COM základní třídy tuto položku v objektu map COM dosáhne zpracování.|
 |[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)|Obecný mechanismus pro zapojení do ATL `QueryInterface` logiku.|
 |[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|Stejné jako [COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func), s tím rozdílem, že dotazování pro libovolný identifikátor IID výsledkem volání *func*.|
-|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|Vrátí E_NOINTERFACE a ukončí zpracování mapy modelu COM, když zadané rozhraní se dotazují pro.|  
+|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|Vrátí E_NOINTERFACE a ukončí zpracování mapy modelu COM, když zadané rozhraní se dotazují pro.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -70,6 +70,7 @@ Zadá do objektu map rozhraní COM rozhraní.
 ```
 COM_INTERFACE_ENTRY( x )
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
@@ -88,6 +89,7 @@ BEGIN_COM_MAP(CThisExample)
    COM_INTERFACE_ENTRY(ISupportErrorInfo)
 END_COM_MAP()
 ```
+
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** atlcom
@@ -406,4 +408,3 @@ Aby se zabránilo rozhraní z používání v konkrétním případě můžete p
 
 Rozhraní IID částka se vypočte připojením *x* k `IID_`. Například pokud *x* je `IPersistStorage`, bude IID `IID_IPersistStorage`.
 
-  

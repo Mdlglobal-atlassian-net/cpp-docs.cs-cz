@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5b5bb50c99efc2a7b18fbbbabba394ec5330661
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fc151ae25df4cac2c6b5ed9ac5a523efda28dff2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378199"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082707"
 ---
 # <a name="using-property-sheets-in-your-application"></a>Použití seznamů vlastností v aplikaci
 
@@ -34,9 +34,9 @@ Pokud chcete použít seznam vlastností ve vaší aplikaci, proveďte následuj
 
 1. Vytvoření prostředku šablony dialogového okna pro každou stránku vlastností. Mějte na paměti, která uživatel může být Měním z jedné stránky, takže rozložení na každé stránce jako konzistentně co nejlépe.
 
-     Šablony dialogu pro všechny stránky není potřeba mít stejnou velikost. Rozhraní používá velikost největší stránky k určení, kolik místa k přidělení v seznamu vlastností pro stránky vlastností.
+   Šablony dialogu pro všechny stránky není potřeba mít stejnou velikost. Rozhraní používá velikost největší stránky k určení, kolik místa k přidělení v seznamu vlastností pro stránky vlastností.
 
-     Při vytváření prostředku šablony dialogového okna stránky vlastností, je nutné zadat následující styly v seznamu vlastností pro dialogové okno Vlastnosti:
+   Při vytváření prostředku šablony dialogového okna stránky vlastností, je nutné zadat následující styly v seznamu vlastností pro dialogové okno Vlastnosti:
 
    - Nastavte **titulek** textové pole na **Obecné** stránky na text, který chcete zobrazovat na kartě pro tuto stránku.
 
@@ -60,9 +60,9 @@ Pokud chcete použít seznam vlastností ve vaší aplikaci, proveďte následuj
 
    - Volání [CPropertySheet::AddPage](../mfc/reference/cpropertysheet-class.md#addpage) pro každou stránku.
 
-     Obvykle, objekt, který vytvoří `CPropertySheet` také vytvoří `CPropertyPage` objekty v tomto kroku. Ale pokud se rozhodnete implementovat `CPropertySheet`– odvozené třídy, můžete vložit `CPropertyPage` objekty v `CPropertySheet` objektu a volání `AddPage` pro každou stránku z `CPropertySheet`-odvozený konstruktor třídy. `AddPage` Přidá `CPropertyPage` objektu do seznamu vlastností seznamu stránek, ale ve skutečnosti nevytváří v okně pro danou stránku. Proto není nutné čekat až do vytvoření okna listu vlastností pro volání `AddPage`; lze volat `AddPage` z konstruktoru seznamu vlastností.
+   Obvykle, objekt, který vytvoří `CPropertySheet` také vytvoří `CPropertyPage` objekty v tomto kroku. Ale pokud se rozhodnete implementovat `CPropertySheet`– odvozené třídy, můžete vložit `CPropertyPage` objekty v `CPropertySheet` objektu a volání `AddPage` pro každou stránku z `CPropertySheet`-odvozený konstruktor třídy. `AddPage` Přidá `CPropertyPage` objektu do seznamu vlastností seznamu stránek, ale ve skutečnosti nevytváří v okně pro danou stránku. Proto není nutné čekat až do vytvoření okna listu vlastností pro volání `AddPage`; lze volat `AddPage` z konstruktoru seznamu vlastností.
 
-     Ve výchozím nastavení Pokud seznam vlastností má více záložek, než se vejde v jediném řádku listu vlastností se karty zásobníku z více řádků. Chcete-li zakázat překrývání, zavolejte [CPropertySheet::EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs) s parametrem nastaveným na **FALSE**. Je nutné volat `EnableStackedTabs` při vytváření seznamu vlastností.
+   Ve výchozím nastavení Pokud seznam vlastností má více záložek, než se vejde v jediném řádku listu vlastností se karty zásobníku z více řádků. Chcete-li zakázat překrývání, zavolejte [CPropertySheet::EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs) s parametrem nastaveným na **FALSE**. Je nutné volat `EnableStackedTabs` při vytváření seznamu vlastností.
 
 1. Volání [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal) nebo [vytvořit](../mfc/reference/cpropertysheet-class.md#create) zobrazíte seznam vlastností. Volání `DoModal` vytvořit seznam vlastností jako modální dialogové okno. Volání **vytvořit** k vytvoření seznamu vlastností, jako nemodálního dialogového okna.
 

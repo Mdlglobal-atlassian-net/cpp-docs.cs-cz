@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c8e2fc86d15472bd4ab63e472df99bb69393b386
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ca9d1ea34aa8a2793f895a3c89f94994743570e5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46060301"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082674"
 ---
 # <a name="data-access-in-visual-c"></a>Přístup k datům v jazyce Visual C++
 
@@ -52,13 +52,13 @@ Připojení ke službě Azure SQL Database v aplikacích jazyka C nebo C++.
 [Azure Storage](/azure/storage/storage-introduction) je řešení cloudového úložiště pro moderní aplikace, které spoléhají na odolnost, dostupnost a škálovatelnost pro potřeby svých zákazníků. Připojení ke službě Azure Storage z jazyka C++ s využitím klientské knihovny Azure Storage pro C++.
 
 [Ovladač ODBC 13.1 pro SQL Server – Windows všeobecně dostupné](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/08/01/announcing-the-odbc-driver-13-1-for-sql-server)<br/>
-Nejnovější ovladač ODBC poskytuje robustní datové přístup k Microsoft SQL Server 2016 Microsoft Azure SQL Database pro C/C++ na základě aplikace. Poskytuje podporu pro funkce, včetně funkcí always encrypted, Azure Active Directory a skupin dostupnosti AlwaysOn. Také k dispozici pro MacOS a Linux.     
- 
+Nejnovější ovladač ODBC poskytuje robustní datové přístup k Microsoft SQL Server 2016 Microsoft Azure SQL Database pro C/C++ na základě aplikace. Poskytuje podporu pro funkce, včetně funkcí always encrypted, Azure Active Directory a skupin dostupnosti AlwaysOn. Také k dispozici pro MacOS a Linux.
+
 [Nativní klient systému SQL Server](/sql/relational-databases/native-client/sql-server-native-client-programming)<br/>
 Nativní klient systému SQL Server je samostatná data přístup aplikace programovací rozhraní (API), používá se pro OLE DB a rozhraní ODBC, který podporuje SQL Server 2005 do SQL serveru 2014. Nová aplikace by měly používat ODBC Driver 13.1 pro SQL Server.
 
 [Středisko pro vývojáře v C++ a C Microsoft Azure](https://azure.microsoft.com/develop/cpp/)<br/>
-Azure usnadňuje vývoj aplikací v C++ se zvýšenou flexibilitou, škálovatelností a spolehlivostí za použití oblíbených nástrojů.    
+Azure usnadňuje vývoj aplikací v C++ se zvýšenou flexibilitou, škálovatelností a spolehlivostí za použití oblíbených nástrojů.
 
 [Používání úložiště Blob z jazyka C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
 Azure Blob storage je služba, která ukládá Nestrukturovaná data v cloudu jako objektů BLOB. BLOB storage dokáže ukládat jakýkoli druh textu nebo binárních dat, jako je například dokument, soubor médií nebo instalační program aplikace. Úložiště objektů blob se taky označuje jako úložiště objektů.

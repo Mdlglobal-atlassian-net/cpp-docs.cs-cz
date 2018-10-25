@@ -1,7 +1,7 @@
 ---
 title: Cmfcdesktopalertwnd – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 728aa39341eb808b2bae178e0a419ec3a2ab46e1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: abd7a3348f59379e798a0c1369a4f69ca99a4d7e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432428"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081063"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>Cmfcdesktopalertwnd – třída
 
@@ -160,7 +160,6 @@ virtual BOOL Create(
     CPoint ptPos = CPoint(-1,-1),
     CRuntimeClass* pRTIDlgBar = RUNTIME_CLASS(CMFCDesktopAlertDialog));
 
-
 virtual BOOL Create(
     CWnd* pWndOwner,
     CMFCDesktopAlertWndInfo& params,
@@ -170,7 +169,8 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-[in] [out] *pWndOwner* Určuje vlastníka okně oznámení. Tento vlastník pak dostanou všechna oznámení pro okno výstrah plochy. Tato hodnota nemůže být NULL.
+*pWndOwner*<br/>
+[out v] Určuje vlastníka okně oznámení. Tento vlastník pak dostanou všechna oznámení pro okno výstrah plochy. Tato hodnota nemůže být NULL.
 
 *uiDlgResID*<br/>
 [in] Určuje ID prostředku okna výstrahy.
@@ -319,14 +319,13 @@ Tuto metodu použijte k určení, zda má automaticky otevíraném okně malé t
 
 ##  <a name="onbeforeshow"></a>  CMFCDesktopAlertWnd::OnBeforeShow
 
-
 ```
 virtual BOOL OnBeforeShow(CPoint&);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *CPoint &*
+[in] *CPoint &*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -355,7 +354,6 @@ Potlačí tuto metodu v odvozené třídě, pokud chcete, která vás upozorní,
 
 ##  <a name="oncommand"></a>  CMFCDesktopAlertWnd::OnCommand
 
-
 ```
 virtual BOOL OnCommand(
     WPARAM wParam,
@@ -364,8 +362,9 @@ virtual BOOL OnCommand(
 
 ### <a name="parameters"></a>Parametry
 
-*wParam*<br/>
-[in] [in] *lParam*
+[in] *wParam*<br/>
+
+[in] *lParam*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -373,19 +372,17 @@ virtual BOOL OnCommand(
 
 ##  <a name="ondraw"></a>  CMFCDesktopAlertWnd::OnDraw
 
-
 ```
 virtual void OnDraw(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*
+[in] *primárního řadiče domény*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="processcommand"></a>  CMFCDesktopAlertWnd::ProcessCommand
-
 
 ```
 BOOL ProcessCommand(HWND hwnd);
@@ -393,7 +390,7 @@ BOOL ProcessCommand(HWND hwnd);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *hwnd*
+[in] *hwnd*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -495,7 +492,6 @@ void SetTransparency(BYTE nTransparency);
 Volání této funkce nastavíte úroveň průhlednosti v automaticky otevíraném okně.
 
 ##  <a name="getdialogsize"></a>  CMFCDesktopAlertWnd::GetDialogSize
-
 
 ```
 virtual CSize GetDialogSize();

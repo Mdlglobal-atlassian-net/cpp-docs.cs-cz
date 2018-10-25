@@ -143,12 +143,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 629e10d06a59b926604fad3b3a6e191fefcb71e7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1a32625001ae86f4d6dffa7eeb953c538822d207
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384498"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080218"
 ---
 # <a name="cpane-class"></a>Cpane – třída
 
@@ -500,7 +500,8 @@ virtual BOOL Create(
 *Rect*<br/>
 [in] Určuje počáteční velikost a umístění *pParentWnd* okno, v souřadnicích klienta.
 
-[in] [out] *pParentWnd* Určuje nadřazené okno v tomto podokně.
+*pParentWnd*<br/>
+[out v] Určuje nadřazené okno v tomto podokně.
 
 *nID*<br/>
 [in] Určuje ID v podokně.
@@ -508,7 +509,8 @@ virtual BOOL Create(
 *dwControlBarStyle*<br/>
 [in] Určuje styl panelu. Další informace najdete v tématu [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
-[in] [out] *pContext* určuje kontext vytvořit podokna.
+*pContext*<br/>
+[out v] Určuje kontext vytvořit podokna.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -573,7 +575,8 @@ virtual BOOL CreateEx(
 *Rect*<br/>
 [in] Určuje počáteční velikost a umístění *pParentWnd* okno, v souřadnicích klienta.
 
-[in] [out] *pParentWnd* Určuje nadřazené okno v tomto podokně.
+*pParentWnd*<br/>
+[out v] Určuje nadřazené okno v tomto podokně.
 
 *nID*<br/>
 [in] Určuje ID v podokně.
@@ -581,7 +584,8 @@ virtual BOOL CreateEx(
 *dwControlBarStyle*<br/>
 [in] Určuje styl panelu. Další informace najdete v tématu [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
-[in] [out] *pContext* určuje vytvořit kontext pro podokno.
+*pContext*<br/>
+[out v] Určuje kontext vytvořit pro podokno.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -623,7 +627,8 @@ virtual BOOL DockPane(
 
 ### <a name="parameters"></a>Parametry
 
-[in] [out] *pDockBar* určuje podokně základní ukotvení na tomto podokně.
+*pDockBar*<br/>
+[out v] Určuje základní podokně ukotvení v tomto podokně na.
 
 *lprect –*<br/>
 [in] Určuje základní podokno, kde je v tomto podokně ukotvit obdélníku.
@@ -1161,7 +1166,8 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>Parametry
 
-[in] [out] *pWndOldParent* předchozí podokno nadřazené.
+*pWndOldParent*<br/>
+[out v] V podokně předchozí nadřazené okno.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1213,7 +1219,8 @@ virtual void OnBeforeChangeParent(
 
 ### <a name="parameters"></a>Parametry
 
-[in] [out] *pWndNewParent* Určuje nové nadřazené okno.
+*pWndNewParent*<br/>
+[out v] Určuje nové nadřazené okno.
 
 *bDelay*<br/>
 [in] TRUE, pokud chcete zpoždění globální dokovací rozložení úpravy; v opačném případě hodnota FALSE.
@@ -1237,7 +1244,8 @@ virtual BOOL OnBeforeDock(
 
 ### <a name="parameters"></a>Parametry
 
-[in] [out] *ppDockBar* určuje panel, který je na ukotvení v tomto podokně.
+*ppDockBar*<br/>
+[out v] Určuje panel, který je na ukotvení v tomto podokně.
 
 *lprect –*<br/>
 [in] Určuje dokovací obdélník.
@@ -1518,7 +1526,8 @@ void SetMiniFrameRTC(CRuntimeClass* pClass);
 
 ### <a name="parameters"></a>Parametry
 
-[in] [out] *pClass* Určuje informace o třídě modulu runtime pro okno s minirámcem.
+*pClass*<br/>
+[out v] Určuje informace o třídě modulu runtime pro okno s minirámcem.
 
 ### <a name="remarks"></a>Poznámky
 

@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24dc82015e003b3a2ddbbd202dd6cba9176154eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 757bc0e1418b2ff68f3aefce7bf54ca38e8a4687
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440079"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079555"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>Cmfcribbonlinkctrl – třída
 
@@ -129,19 +129,17 @@ Následující příklad ukazuje způsob použití konstruktoru `CMFCRibbonLinkC
 
 ##  <a name="copyfrom"></a>  CMFCRibbonLinkCtrl::CopyFrom
 
-
 ```
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *src*
+[in] *src*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="getcompactsize"></a>  CMFCRibbonLinkCtrl::GetCompactSize
-
 
 ```
 virtual CSize GetCompactSize(CDC* pDC);
@@ -149,7 +147,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*
+[in] *primárního řadiče domény*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -171,21 +169,19 @@ Aktuální hodnota hypertextový odkaz.
 
 ##  <a name="getregularsize"></a>  CMFCRibbonLinkCtrl::GetRegularSize
 
-
 ```
 virtual CSize GetRegularSize(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*
+[in] *primárního řadiče domény*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="gettooltiptext"></a>  CMFCRibbonLinkCtrl::GetToolTipText
-
 
 ```
 virtual CString GetToolTipText() const;
@@ -197,21 +193,20 @@ virtual CString GetToolTipText() const;
 
 ##  <a name="ondrawmenuimage"></a>  CMFCRibbonLinkCtrl::OnDrawMenuImage
 
-
 ```
 virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *CDC** [in] *crect –*
+[in] *CDC&#42;*<br/>
+[in] *Crect –*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="isdrawtooltipimage"></a>  CMFCRibbonLinkCtrl::IsDrawTooltipImage
-
 
 ```
 virtual BOOL IsDrawTooltipImage() const;
@@ -223,19 +218,17 @@ virtual BOOL IsDrawTooltipImage() const;
 
 ##  <a name="ondraw"></a>  CMFCRibbonLinkCtrl::OnDraw
 
-
 ```
 virtual void OnDraw(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*
+[in] *primárního řadiče domény*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="onmousemove"></a>  CMFCRibbonLinkCtrl::OnMouseMove
-
 
 ```
 virtual void OnMouseMove(CPoint point);
@@ -243,12 +236,11 @@ virtual void OnMouseMove(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bodu*
+[in] *bodu*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="onseticon"></a>  CMFCRibbonLinkCtrl::OnSetIcon
-
 
 ```
 virtual void OnSetIcon();

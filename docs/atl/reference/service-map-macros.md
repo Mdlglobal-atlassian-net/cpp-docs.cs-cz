@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc7b0ca9388de82d49927a7fe76694212b94246b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 30715cffb42c1dbf92512fa7314bf70f46f300a3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46053710"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079932"
 ---
 # <a name="service-map-macros"></a>Makra Map služeb
 
@@ -33,7 +33,7 @@ Tato makra definují map služeb a položky.
 |[BEGIN_SERVICE_MAP](#begin_service_map)|Označuje začátek ATL služby mapy.|
 |[END_SERVICE_MAP](#end_service_map)|Označuje konec mapování ATL služby.|
 |[SERVICE_ENTRY](#service_entry)|Označuje, že objekt podporuje ID konkrétní služby.|
-|[SERVICE_ENTRY_CHAIN](#service_entry_chain)|Dává pokyn [IServiceProviderImpl::QueryService](#queryservice) ke sledu k zadanému objektu.|  
+|[SERVICE_ENTRY_CHAIN](#service_entry_chain)|Dává pokyn [IServiceProviderImpl::QueryService](#queryservice) ke sledu k zadanému objektu.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -115,7 +115,7 @@ Podívejte se na příklad pro [BEGIN_SERVICE_MAP](#begin_service_map).
 Vytvoří nebo přistupuje k zadané službě a vrátí ukazatel rozhraní k zadanému rozhraní pro službu.
 
 ```
-STDMETHOD(QueryService)( 
+STDMETHOD(QueryService)(
     REFGUID guidService,
     REFIID riid,
     void** ppvObject);

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58d0d250e17ddd8beaef2a9f5cff4d4e1046fdcb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a7368e067e1324c3263440a7a6b165099c870735
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380439"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078151"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Postupy: Příprava typově bezpečné kolekce
 
@@ -45,11 +45,11 @@ Knihovny Microsoft Foundation Class poskytuje předdefinované typově bezpečn�
 
 1. Deklarujte proměnnou typu třídy kolekce. Příklad:
 
-     [!code-cpp[NVC_MFCCollections#7](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_1.cpp)]
+   [!code-cpp[NVC_MFCCollections#7](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_1.cpp)]
 
 1. Volejte členské funkce objektu kolekce. Příklad:
 
-     [!code-cpp[NVC_MFCCollections#8](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#8](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_2.cpp)]
 
 1. V případě potřeby implementovat [pomocné funkce](../mfc/reference/collection-class-helpers.md) a [serializeelements –](../mfc/reference/collection-class-helpers.md#serializeelements). Informace o implementaci těchto funkcí najdete v tématu [implementace pomocných funkcí](#_core_implementing_helper_functions).
 
@@ -85,27 +85,27 @@ Existují dva způsoby vytvoření typově bezpečné kolekce s kolekcemi objekt
 
 1. Použijte jednu z objektu bez šablony třídy, jako například `CWordArray`, přímo.
 
-     Například můžete vytvořit `CWordArray` a přidejte do ní všechny 32bitové hodnoty a pak je načíst. Není nic dalšího dělat. Stačí použít předdefinované funkce.
+   Například můžete vytvořit `CWordArray` a přidejte do ní všechny 32bitové hodnoty a pak je načíst. Není nic dalšího dělat. Stačí použít předdefinované funkce.
 
-     Můžete také použít předdefinovanou kolekci jako `CObList`, pro všechny objekty odvozené z `CObject`. A `CObList` kolekce je definována pro uchování ukazatele na `CObject`. Při získání objektu, ze seznamu, bude pravděpodobně nutné přetypovat na správný typ. od výsledku `CObList` vrátí ukazatele na funkce `CObject`. Například pokud ukládáte `CPerson` objekty v `CObList` kolekce, je nutné přetypovat element načtená jako ukazatel na `CPerson` objektu. Následující příklad používá `CObList` kolekci pro uchování `CPerson` objekty:
+   Můžete také použít předdefinovanou kolekci jako `CObList`, pro všechny objekty odvozené z `CObject`. A `CObList` kolekce je definována pro uchování ukazatele na `CObject`. Při získání objektu, ze seznamu, bude pravděpodobně nutné přetypovat na správný typ. od výsledku `CObList` vrátí ukazatele na funkce `CObject`. Například pokud ukládáte `CPerson` objekty v `CObList` kolekce, je nutné přetypovat element načtená jako ukazatel na `CPerson` objektu. Následující příklad používá `CObList` kolekci pro uchování `CPerson` objekty:
 
-     [!code-cpp[NVC_MFCCollections#10](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_4.cpp)]
+   [!code-cpp[NVC_MFCCollections#10](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_4.cpp)]
 
-     Tento postup pomocí předdefinované kolekce typu a podle potřeby přetypování může být vhodný pro mnoho kolekcí, které potřebujete. Pokud potřebujete další funkce nebo další bezpečnost typů, použití třídy založené na šablonách, nebo použijte následující postup.
+   Tento postup pomocí předdefinované kolekce typu a podle potřeby přetypování může být vhodný pro mnoho kolekcí, které potřebujete. Pokud potřebujete další funkce nebo další bezpečnost typů, použití třídy založené na šablonách, nebo použijte následující postup.
 
 #### <a name="to-derive-and-extend-a-nontemplate-type-safe-collection"></a>Odvodit a rozšířit nešablonových typově bezpečné kolekce
 
 1. Odvození od některého ze třídy předdefinovaného nešablonových vlastní třídu kolekce.
 
-     Pokud odvozujete vaší třídy, můžete přidat funkce obálky typově bezpečné a poskytuje tak zajišťující bezpečnost typů rozhraní pro existující funkce.
+   Pokud odvozujete vaší třídy, můžete přidat funkce obálky typově bezpečné a poskytuje tak zajišťující bezpečnost typů rozhraní pro existující funkce.
 
-     Například, pokud odvozené ze seznamu seznam `CObList` pro uložení `CPerson` objekty, můžete například přidat funkce obálky `AddHeadPerson` a `GetHeadPerson`, jak je znázorněno níže.
+   Například, pokud odvozené ze seznamu seznam `CObList` pro uložení `CPerson` objekty, můžete například přidat funkce obálky `AddHeadPerson` a `GetHeadPerson`, jak je znázorněno níže.
 
-     [!code-cpp[NVC_MFCCollections#11](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_5.h)]
+   [!code-cpp[NVC_MFCCollections#11](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_5.h)]
 
-     Tyto funkce obálky poskytují typově bezpečný způsob, jak přidat a načíst `CPerson` objekty odvozené seznamu. Vidíte, že pro `GetHeadPerson` funkce, se jednoduše zapouzdření přetypování typu.
+   Tyto funkce obálky poskytují typově bezpečný způsob, jak přidat a načíst `CPerson` objekty odvozené seznamu. Vidíte, že pro `GetHeadPerson` funkce, se jednoduše zapouzdření přetypování typu.
 
-     Můžete také přidat nové funkce definováním nových funkcí, které rozšiřují možnosti kolekce, spíše než pouhé obtečení stávajících funkcí v obálky typově bezpečné. Například článek [odstraňování všech objektů v kolekcích CObject](../mfc/deleting-all-objects-in-a-cobject-collection.md) popisuje funkci, kterou chcete odstranit všechny objekty obsažené v seznamu. Tato funkce může být přidán do odvozené třídy jako členskou funkci.
+   Můžete také přidat nové funkce definováním nových funkcí, které rozšiřují možnosti kolekce, spíše než pouhé obtečení stávajících funkcí v obálky typově bezpečné. Například článek [odstraňování všech objektů v kolekcích CObject](../mfc/deleting-all-objects-in-a-cobject-collection.md) popisuje funkci, kterou chcete odstranit všechny objekty obsažené v seznamu. Tato funkce může být přidán do odvozené třídy jako členskou funkci.
 
 ## <a name="see-also"></a>Viz také
 

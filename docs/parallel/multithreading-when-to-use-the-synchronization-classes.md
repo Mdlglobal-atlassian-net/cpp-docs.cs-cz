@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 018623e9e6a093c4f86b8768e0fd5329f4ea3282
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6da48b12b657944864b1a33216692fce296e5dfd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443771"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083448"
 ---
 # <a name="multithreading-when-to-use-the-mfc-synchronization-classes"></a>Multithreading: Kdy použít synchronizační třídy knihovny MFC
 
@@ -38,17 +38,17 @@ Pokud chcete zjistit, jakou synchronizační třídu byste měli použít, pož�
 
 1. Čekání na něco, co můžete provést před vytvořením měl přístup k prostředku nemá aplikace (například data musí být přijata z komunikačních portů předtím, než může být zapsán do souboru)?
 
-     Pokud ano, použít `CEvent`.
+   Pokud ano, použít `CEvent`.
 
 2. Můžete více než jedno vlákno v rámci stejné aplikaci přístup k tomuto prostředku najednou (například vaše aplikace umožňuje až pět oken s názory na stejném dokumentu)?
 
-     Pokud ano, použít `CSemaphore`.
+   Pokud ano, použít `CSemaphore`.
 
 3. Můžete použít více než jednu aplikaci tohoto prostředku (například prostředek je v knihovně DLL)?
 
-     Pokud ano, použít `CMutex`.
+   Pokud ano, použít `CMutex`.
 
-     Pokud ne, použijte `CCriticalSection`.
+   Pokud ne, použijte `CCriticalSection`.
 
 `CSyncObject` nikdy slouží přímo. Je základní třída pro jiné třídy čtyři synchronizace.
 

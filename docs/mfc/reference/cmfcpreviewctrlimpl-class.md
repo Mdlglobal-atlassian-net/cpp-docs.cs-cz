@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b157cfb497c355f44a15c8e42b81bc30753a4a9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 29632784248d624f184550f0c598d05cd26b85cf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441301"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079542"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>Cmfcpreviewctrlimpl – třída
 
@@ -183,7 +183,6 @@ virtual void DoPaint(
 *primární řadič domény*<br/>
 Ukazatel na kontext zařízení pro kreslení.
 
-
 ## <a name="focus"></a> CMFCPreviewCtrlImpl::Focus
 
 Nastaví vstupní fokus na tento ovládací prvek.
@@ -193,6 +192,7 @@ Nastaví vstupní fokus na tento ovládací prvek.
 ```
 virtual void Focus();
 ```
+
 ## <a name="getdocument"></a> CMFCPreviewCtrlImpl::GetDocument
 
 Vrátí dokument připojené na tento ovládací prvek ve verzi preview.
@@ -226,6 +226,7 @@ Barva textu v okně verze preview.
 ```
 COLORREF m_clrTextColor;
 ```
+
 ## <a name="m_font"></a> CMFCPreviewCtrlImpl::m_font písmo použité k zobrazení textu v okně verze preview.
 
 ### <a name="syntax"></a>Syntaxe
@@ -233,6 +234,7 @@ COLORREF m_clrTextColor;
 ```
 CFont m_font;
 ```
+
 ## <a name="m_pdocument"></a> CMFCPreviewCtrlImpl::m_pDocument
 
 Ukazatel na dokument, jejíž obsah je zobrazen v ovládacím prvku.
@@ -252,6 +254,7 @@ ATL::IDocument* m_pDocument;
 ```
 virtual void Redraw();
 ```
+
 ## <a name="setdocument"></a> CMFCPreviewCtrlImpl::SetDocument
 
 Volá obslužnou rutinou ve verzi preview k vytvoření vztahu mezi implementace dokumentu a ovládací prvek náhledu.

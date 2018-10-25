@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: db65e27feee5ac8001cb25592e695831c431742b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a9a0cd385596f62432f16b7e5abc4259a267dd76
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46104514"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080309"
 ---
 # <a name="odbc-configuring-an-odbc-data-source"></a>ODBC: Konfigurace zdroje dat ODBC
 
-Použití [zdroj dat](../../data/odbc/data-source-odbc.md) s aplikací, který jste vytvořili, musíte použít Správce rozhraní ODBC k jeho konfiguraci. Správce rozhraní ODBC uchovává informace o dostupných zdrojů dat a jejich informace o připojení v registru Windows. Správce rozhraní ODBC použijte k přidání, úpravě a odstranění zdroje dat v **zdroje dat** dialogové okno a můžete přidávat a odstraňovat ovladače rozhraní ODBC.  
-  
+Použití [zdroj dat](../../data/odbc/data-source-odbc.md) s aplikací, který jste vytvořili, musíte použít Správce rozhraní ODBC k jeho konfiguraci. Správce rozhraní ODBC uchovává informace o dostupných zdrojů dat a jejich informace o připojení v registru Windows. Správce rozhraní ODBC použijte k přidání, úpravě a odstranění zdroje dat v **zdroje dat** dialogové okno a můžete přidávat a odstraňovat ovladače rozhraní ODBC.
+
 > [!NOTE]
->  Tyto informace se týkají při použití třídy knihovny MFC objektu pro přístup k datům (DAO) pro přístup k rozhraní ODBC a při použití knihovny MFC rozhraní ODBC.  
-  
-Správce rozhraní ODBC se automaticky nainstaluje se podpory databáze knihovny Microsoft Foundation Classes (MFC). Další informace o programu Správce rozhraní ODBC naleznete v tématu [správce rozhraní ODBC](../../data/odbc/odbc-administrator.md) a systému online nápovědy referenční dokumentace rozhraní API ODBC.  
-  
-Informace o tom, jak psát programy ODBC nastavení a správa pro databázové aplikace MFC[Technická poznámka 48](../../mfc/tn048-writing-odbc-setup-and-administration-programs.md).  
-  
-## <a name="see-also"></a>Viz také  
+>  Tyto informace se týkají při použití třídy knihovny MFC objektu pro přístup k datům (DAO) pro přístup k rozhraní ODBC a při použití knihovny MFC rozhraní ODBC.
+
+Správce rozhraní ODBC se automaticky nainstaluje se podpory databáze knihovny Microsoft Foundation Classes (MFC). Další informace o programu Správce rozhraní ODBC naleznete v tématu [správce rozhraní ODBC](../../data/odbc/odbc-administrator.md) a systému online nápovědy referenční dokumentace rozhraní API ODBC.
+
+Informace o tom, jak psát programy ODBC nastavení a správa pro databázové aplikace MFC[Technická poznámka 48](../../mfc/tn048-writing-odbc-setup-and-administration-programs.md).
+
+## <a name="see-also"></a>Viz také
 
 [ODBC – základy](../../data/odbc/odbc-basics.md)<br/>
 [ODBC: Přímé volání funkcí rozhraní API ODBC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b5a4551387716c81766ae99759f8188410497be
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: c7b48b2382ee22cc5d11c1145dc494aca4e7997f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42465208"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083188"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Upozornění kompilátoru, které jsou ve výchozím nastavení vypnuta
 Kompilátor obsahuje upozornění, která jsou vypnuté ve výchozím nastavení, protože většina vývojářů nechcete k jejich zobrazení. V některých případech, představují stylistické podle vlastní volby, nebo jsou společné idiomy ve starším kódu nebo využít výhod rozšíření společnosti Microsoft pro jazyk. V ostatních případech označují oblast, ve které programátoři často vytvářet nesprávné předpoklady, které mohou vést k neočekávaným nebo nedefinované chování. Některá tato upozornění může být velmi hlučného v záhlaví knihovny. Knihovny runtime jazyka C a standardní knihovny C++ jsou určeny k emitování žádná upozornění pouze na úrovni upozornění [/W4](../build/reference/compiler-option-warning-level.md).
@@ -154,12 +154,12 @@ Následující upozornění jsou vypnuté ve výchozím nastavení v sadě Visua
 |C5042 (úroveň 3)|"*funkce*': deklarace funkcí v blokovém rozsahu nemůže být zadané"vložené"ve standardním jazyce C++; odeberte specifikátor inline' <sup>15.5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|Kompilátor vloží zmírnění hrozby Spectre pro zatížení paměti, pokud zadaný přepínač/qspectre <sup>15.7</sup>|
 
-<sup>14.1</sup> toto upozornění je k dispozici od verze Visual Studio 2015 Update 1.  
-<sup>14.3</sup> toto upozornění je k dispozici od verze Visual Studio 2015 Update 3.  
-<sup>15.3</sup> toto upozornění je k dispozici od verze Visual Studio 2017 verze 15.3.  
-<sup>15.5</sup> toto upozornění je k dispozici od verze Visual Studio 2017 verze 15.5.  
-<sup>15.7</sup> toto upozornění je k dispozici od verze Visual Studio 2017 verze 15.7.  
-<sup>Jako trvalé</sup> toto upozornění je vypnuté, pokud [/ permissive-](../build/reference/permissive-standards-conformance.md) – možnost kompilátoru je nastavena.  
+<sup>14.1</sup> toto upozornění je k dispozici od verze Visual Studio 2015 Update 1.<br/>
+<sup>14.3</sup> toto upozornění je k dispozici od verze Visual Studio 2015 Update 3.<br/>
+<sup>15.3</sup> toto upozornění je k dispozici od verze Visual Studio 2017 verze 15.3.<br/>
+<sup>15.5</sup> toto upozornění je k dispozici od verze Visual Studio 2017 verze 15.5.<br/>
+<sup>15.7</sup> toto upozornění je k dispozici od verze Visual Studio 2017 verze 15.7.<br/>
+<sup>Jako trvalé</sup> toto upozornění je vypnuté, pokud [/ permissive-](../build/reference/permissive-standards-conformance.md) – možnost kompilátoru je nastavena.<br/>
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Upozornění vypnuto ve výchozím nastavení v dřívějších verzích
 

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69b11a78d1be76895b9687d1423df74c51fe3d39
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 49ae12184189996561717874833d6cdf3f30e159
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416692"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078841"
 ---
 # <a name="concurrency-namespace-enums"></a>výčty oboru názvů Concurrency
 
@@ -44,6 +44,7 @@ Platné stavy `agent`.
 ```
 enum agent_status;
 ```
+
 ### <a name="values"></a>Hodnoty
 
 |Název|Popis|
@@ -94,6 +95,7 @@ Typy událostí, které lze sledovat pomocí trasování funkce nabízené modul
 ```
 enum ConcRT_EventType;
 ```
+
 ### <a name="values"></a>Hodnoty
 
 |Název|Popis|
@@ -119,6 +121,7 @@ Příznaky trasování pro typy událostí
 ```
 enum Concrt_TraceFlags;
 ```
+
 ### <a name="values"></a>Hodnoty
 
 |Název|Popis|
@@ -142,6 +145,7 @@ Typ důležité oblasti kontext je uvnitř.
 ```
 enum CriticalRegionType;
 ```
+
 ### <a name="values"></a>Hodnoty
 
 |Název|Popis|
@@ -161,6 +165,7 @@ Používá `DynamicProgressFeedback` založenou na zásadách popisující, zda 
 ```
 enum DynamicProgressFeedbackType;
 ```
+
 ### <a name="values"></a>Hodnoty
 
 |Název|Popis|
@@ -174,6 +179,7 @@ Typ `join` blok zpráv.
 ```
 enum join_type;
 ```
+
 ### <a name="values"></a>Hodnoty
 
 |Název|Popis|
@@ -192,6 +198,7 @@ Platné odpovědi pro nabídku `message` objektu do bloku.
 ```
 enum message_status;
 ```
+
 ### <a name="values"></a>Hodnoty
 
 |Název|Popis|
@@ -212,6 +219,7 @@ Klíče zásad popisující aspekty chování plánovače. Každý prvek zásad 
 ```
 enum PolicyElementKey;
 ```
+
 ### <a name="values"></a>Hodnoty
 
 |Název|Popis|
@@ -258,6 +266,7 @@ Používá `SchedulingProtocol` zásady k popisu, který plánování algoritmus
 ```
 enum SchedulingProtocolType;
 ```
+
 ### <a name="values"></a>Hodnoty
 
 |Název|Popis|
@@ -276,6 +285,7 @@ Používá k označení stavu, ve kterém probíhá proxy vlákna, kdy je prová
 ```
 enum SwitchingProxyState;
 ```
+
 ### <a name="values"></a>Hodnoty
 
 |Název|Popis|
@@ -297,6 +307,7 @@ Popisuje stav spuštění objektu `task_group` nebo `structured_task_group` obje
 ```
 enum task_group_status;
 ```
+
 ### <a name="values"></a>Hodnoty
 
 |Název|Popis|
@@ -316,6 +327,7 @@ Používá `WinRTInitialization` zásad popisující, zda a jak Windows Runtime 
 ```
 enum WinRTInitializationType;
 ```
+
 ### <a name="values"></a>Hodnoty
 
 |Název|Popis|

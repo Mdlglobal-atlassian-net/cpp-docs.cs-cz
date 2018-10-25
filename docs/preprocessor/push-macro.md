@@ -18,30 +18,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70b472ba11445cdc5aa2a192d02d82c51d724b8c
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: a6a389289f8849ac6155543299392586dcd389d2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42465298"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078944"
 ---
 # <a name="pushmacro"></a>push_macro
-Uloží hodnotu *macro_name* – makro vrcholu zásobníku tohoto makra.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-#pragma push_macro("  
-macro_name  
-")  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- 
-Můžete načíst hodnotu *macro_name* s `pop_macro`.  
-  
-Zobrazit [pop_macro](../preprocessor/pop-macro.md) ukázku.  
-  
-## <a name="see-also"></a>Viz také  
- 
+Uloží hodnotu *macro_name* – makro vrcholu zásobníku tohoto makra.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+#pragma push_macro("
+macro_name
+")
+```
+
+## <a name="remarks"></a>Poznámky
+
+Můžete načíst hodnotu *macro_name* s `pop_macro`.
+
+Zobrazit [pop_macro](../preprocessor/pop-macro.md) ukázku.
+
+## <a name="see-also"></a>Viz také
+
 [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

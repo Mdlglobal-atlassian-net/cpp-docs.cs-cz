@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 080256f9a5de719e265009080036a3c0c2617118
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 15b069c1075a1b2b7db484da588684fca280ef29
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412233"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083396"
 ---
 # <a name="using-image-lists-in-an-extended-combo-box-control"></a>Použití seznamů obrázků v ovládacím prvku rozšířené pole se seznamem
 
@@ -35,11 +35,11 @@ Následující postup přidruží seznamu obrázků s ovládacím prvku rozší�
 
 1. Inicializovat nový objekt seznamu obrázků voláním [CImageList::Create](../mfc/reference/cimagelist-class.md#create). Následující kód je jedním z příkladů tohoto volání.
 
-     [!code-cpp[NVC_MFCControlLadenDialog#10](../mfc/codesnippet/cpp/using-image-lists-in-an-extended-combo-box-control_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#10](../mfc/codesnippet/cpp/using-image-lists-in-an-extended-combo-box-control_1.cpp)]
 
 1. Přidat volitelné bitových kopií pro každý stav možné: vybraný nebo nevybrané a překrytí. Následující kód přidává tři předdefinované Image.
 
-     [!code-cpp[NVC_MFCControlLadenDialog#11](../mfc/codesnippet/cpp/using-image-lists-in-an-extended-combo-box-control_2.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#11](../mfc/codesnippet/cpp/using-image-lists-in-an-extended-combo-box-control_2.cpp)]
 
 1. Přidružení seznamu obrázků s ovládacím prvkem voláním [CComboBoxEx::SetImageList](../mfc/reference/ccomboboxex-class.md#setimagelist).
 

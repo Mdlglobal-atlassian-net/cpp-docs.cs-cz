@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10b87f57daaf510252fe6f07dc3ba2d9d0a8650d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 630cdd1614aa19ec3a5a654d7dc4bfe7336ce027
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409334"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080582"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>Dva způsoby vytvoření objektu CArchive
 
@@ -66,9 +66,9 @@ Kromě serializaci do dokumentu prostřednictvím rozhraní framework, jsou jin�
 
 1. Předání `CFile` objekt konstruktoru pro `CArchive`, jak je znázorněno v následujícím příkladu:
 
-     [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]
+   [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]
 
-     Druhý argument `CArchive` konstruktor je Výčtová hodnota, která určuje, zda archivu se použije pro ukládání nebo načítání dat do nebo ze souboru. `Serialize` Funkce objektu voláním zkontroluje tento stav `IsStoring` funkce pro objekt archivu.
+   Druhý argument `CArchive` konstruktor je Výčtová hodnota, která určuje, zda archivu se použije pro ukládání nebo načítání dat do nebo ze souboru. `Serialize` Funkce objektu voláním zkontroluje tento stav `IsStoring` funkce pro objekt archivu.
 
 Po dokončení, ukládání nebo načítání dat do nebo z `CArchive` objektu, zavřete ho. I když `CArchive` (a `CFile`) objekty se automaticky zavře archivu (a soubor), je vhodné to provést explicitně, protože je jednodušší zotavení z chyb. Další informace o zpracování chyb, naleznete v článku [výjimky: výjimky zachycení a odstraňování](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
@@ -76,7 +76,7 @@ Po dokončení, ukládání nebo načítání dat do nebo z `CArchive` objektu, 
 
 1. Následující příklad ukazuje, jak lze uzavřít `CArchive` objektu:
 
-     [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]
 
 ## <a name="see-also"></a>Viz také
 

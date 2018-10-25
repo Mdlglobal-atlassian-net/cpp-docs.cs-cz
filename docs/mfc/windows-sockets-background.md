@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fe08de0cbeaf6e70c8d786f3cfc849094117cd2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a6146106a7ae378821fc7133d2d65597d1225cc1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389533"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079659"
 ---
 # <a name="windows-sockets-background"></a>Windows Sockets: Pozadí
 
@@ -69,11 +69,11 @@ K dispozici jsou dva typy soketu:
 
 - Sokety datového proudu
 
-     Sokety datového proudu zajišťují tok dat bez hranic záznamů, je to proud bajtů. Datové proudy zaručují doručení, správné seřazení a zamezují duplicitám.
+   Sokety datového proudu zajišťují tok dat bez hranic záznamů, je to proud bajtů. Datové proudy zaručují doručení, správné seřazení a zamezují duplicitám.
 
 - Sokety datagramu
 
-     Sokety datagramu podporují datový tok orientovaný na záznam, který nezaručuje doručení, správné seřazení ani nezamezuje duplicitám.
+   Sokety datagramu podporují datový tok orientovaný na záznam, který nezaručuje doručení, správné seřazení ani nezamezuje duplicitám.
 
 „Správným seřazením“ se rozumí, že pakety budou doručeny v pořadí odeslání. „Zamezení duplicitám“ znamená získání konkrétního paketu pouze jednou.
 

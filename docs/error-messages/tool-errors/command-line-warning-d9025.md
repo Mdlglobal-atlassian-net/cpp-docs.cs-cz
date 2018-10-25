@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822d1ac0cc1e6b3e728d43b816e7a0a15eee9958
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c5bcc7cbe6fcd8a61e15e80c43f27703957a1e88
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46063690"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083084"
 ---
 # <a name="command-line-warning-d9025"></a>Upozornění příkazového řádku D9025
 
@@ -35,6 +35,6 @@ Je-li získat toto upozornění při kompilaci z vývojového prostředí a nejs
 
 - Možnost se dá nastavit v kódu nebo v nastavení projektu projekt. Když se podíváte na kompilátoru [stránky vlastností příkazového řádku](../../ide/command-line-property-pages.md) a pokud se zobrazí konfliktní možnosti v **všechny možnosti** pole a možnosti jsou nastaveny na stránkách vlastností projektu, jinak, možnosti jsou nastavené ve zdrojovém kódu.
 
-     Pokud jsou možnosti v stránky vlastností projektu, podívejte se na stránku vlastností preprocesoru kompilátoru (s uzlem projektu vybraného v Průzkumníkovi řešení).  Pokud nevidíte možnost nastavit existuje, zkontrolujte nastavení stránky preprocesoru vlastnost pro každý soubor zdrojového kódu (v Průzkumníku řešení), ujistěte se, že tam není přidaný existuje.
+   Pokud jsou možnosti v stránky vlastností projektu, podívejte se na stránku vlastností preprocesoru kompilátoru (s uzlem projektu vybraného v Průzkumníkovi řešení).  Pokud nevidíte možnost nastavit existuje, zkontrolujte nastavení stránky preprocesoru vlastnost pro každý soubor zdrojového kódu (v Průzkumníku řešení), ujistěte se, že tam není přidaný existuje.
 
-     Možnosti jsou nastavené v kódu může být nastavena v kódu nebo v hlavičky systému windows.  Můžete vyzkoušet vytvoření předzpracovaného souboru ([/P](../../build/reference/p-preprocess-to-a-file.md)) a vyhledejte symbol.
+   Možnosti jsou nastavené v kódu může být nastavena v kódu nebo v hlavičky systému windows.  Můžete vyzkoušet vytvoření předzpracovaného souboru ([/P](../../build/reference/p-preprocess-to-a-file.md)) a vyhledejte symbol.

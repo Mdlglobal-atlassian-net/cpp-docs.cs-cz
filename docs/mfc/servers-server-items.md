@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72f8de75607921edda62aec9baec424066431d61
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c134f0d0b0c8ee3009e372de7712a6c0894a51de
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438857"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082902"
 ---
 # <a name="servers-server-items"></a>Servery: Serverové položky
 
@@ -43,7 +43,7 @@ Pokud používáte Průvodce aplikací pro vytvoření "počáteční" kódu pro
 
 1. Přepsání v odvozené třídě, `OnDraw` členskou funkci.
 
-     Rámec volá `OnDraw` k vykreslení položky OLE do metasouboru. Aplikace typu kontejner používá tento metasoubor k vykreslení položky. Třídy zobrazení vaší aplikace má také `OnDraw` členskou funkci, která se použije k vykreslení položky, když je aktivní serverová aplikace.
+   Rámec volá `OnDraw` k vykreslení položky OLE do metasouboru. Aplikace typu kontejner používá tento metasoubor k vykreslení položky. Třídy zobrazení vaší aplikace má také `OnDraw` členskou funkci, která se použije k vykreslení položky, když je aktivní serverová aplikace.
 
 1. Implementace přepsání `OnGetEmbeddedItem` pro třídu dokument na serveru. Další informace najdete v článku [servery: implementace dokumentů serveru](../mfc/servers-implementing-server-documents.md) ukázka MFC OLE a [HIERSVR](../visual-cpp-samples.md).
 

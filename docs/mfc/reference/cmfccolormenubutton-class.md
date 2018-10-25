@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 075fcf0433e925c45e8fd06938b231c62ec77352
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f307a5c0d1c1666c4d8a016496d9a6bf717c6d48
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423298"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083008"
 ---
 # <a name="cmfccolormenubutton-class"></a>Cmfccolormenubutton – třída
 
@@ -140,7 +140,6 @@ Vytvoří `CMFCColorMenuButton` objektu.
 
 ```
 CMFCColorMenuButton();
-
 
 CMFCColorMenuButton(
     UINT uiCmdID,

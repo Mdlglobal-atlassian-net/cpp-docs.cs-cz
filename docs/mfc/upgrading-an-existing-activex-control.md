@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc5bca0f7ff1b2fdb2650eadbcdca4778d9b53ef
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 0567913eac57c4150f9fe6d051d2fc8e0e31860b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890357"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082923"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Upgradování existujícího ovládacího prvku ActiveX
 
@@ -213,11 +213,11 @@ Použití licencovaného ovládacího prvku na stránce HTML na nonlicensed poč
 
 1. Vložit \<objektu > značky pro licencované ovládací prvek po značce správce licencí.
 
-     Například stránky HTML, který se zobrazí Microsoft maskované upravit ovládací prvek je uveden níže. První třídy, kterou je ID pro ovládací prvek správce licencí, druhá třída ID je pro ovládací prvek maskované úpravy. Upravit značky a přejít na relativní cestu LPK soubor, který jste vytvořili dříve a přidejte značku objektu, včetně ID třídy ovládacího prvku.
+   Například stránky HTML, který se zobrazí Microsoft maskované upravit ovládací prvek je uveden níže. První třídy, kterou je ID pro ovládací prvek správce licencí, druhá třída ID je pro ovládací prvek maskované úpravy. Upravit značky a přejít na relativní cestu LPK soubor, který jste vytvořili dříve a přidejte značku objektu, včetně ID třídy ovládacího prvku.
 
 1. Vložit \<vložení > atribut pro LPK soubor, pokud používáte modul plug-in NCompass ActiveX.
 
-     Pokud váš ovládací prvek lze zobrazit na jiné aktivní povolené prohlížeče – například Netscape pomocí modulu plug-in NCompass ActiveX – je nutné přidat \<vložení > syntaxe, jak je znázorněno níže.
+   Pokud váš ovládací prvek lze zobrazit na jiné aktivní povolené prohlížeče – například Netscape pomocí modulu plug-in NCompass ActiveX – je nutné přidat \<vložení > syntaxe, jak je znázorněno níže.
 
 ```
 <OBJECT CLASSID="clsid:5220cb21-c88d-11cf-b347-00aa00a28331">

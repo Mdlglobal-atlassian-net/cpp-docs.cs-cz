@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c530a9853aad3e16e5e4094f4d90e30c2643c0d8
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: f89d70ed5b7a84cdbed61784b59b0748abc6432d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890891"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083318"
 ---
 # <a name="clistctrl-class"></a>CListCtrl – třída
 
@@ -444,19 +444,19 @@ Ovládací prvky zobrazení seznamu můžete zobrazit jejich obsah v čtyřmi r�
 
 - Zobrazení ikon
 
-     Každá položka zobrazuje jako ikona plné velikosti (32 x 32 pixelů) s popiskem pod ní. Uživatel můžete přetáhnout položky do libovolného umístění v okně zobrazení seznamu.
+   Každá položka zobrazuje jako ikona plné velikosti (32 x 32 pixelů) s popiskem pod ní. Uživatel můžete přetáhnout položky do libovolného umístění v okně zobrazení seznamu.
 
 - Zobrazit malé ikony
 
-     Každé položky se zobrazí jako malá ikona (16 × 16 pixelů) s popiskem napravo od ho. Uživatel můžete přetáhnout položky do libovolného umístění v okně zobrazení seznamu.
+   Každé položky se zobrazí jako malá ikona (16 × 16 pixelů) s popiskem napravo od ho. Uživatel můžete přetáhnout položky do libovolného umístění v okně zobrazení seznamu.
 
 - zobrazení seznamu
 
-     Každé položky se zobrazí jako malá ikona s popiskem napravo od ho. Položky jsou uspořádány ve sloupcích a nelze je přetáhnout do libovolného umístění v okně zobrazení seznamu.
+   Každé položky se zobrazí jako malá ikona s popiskem napravo od ho. Položky jsou uspořádány ve sloupcích a nelze je přetáhnout do libovolného umístění v okně zobrazení seznamu.
 
 - Zobrazení sestav
 
-     Každá položka je zobrazena na samostatném řádku, společně s dalšími informacemi, které jsou uspořádány ve sloupcích na pravé straně. Levém sloupci obsahuje malé ikony a popisek a následující sloupce obsahují podřízené položky podle aplikace. Ovládací prvek vložený záhlaví (třída [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementuje tyto sloupce. Další informace o ovládací prvky záhlaví a sloupců v zobrazení sestav, naleznete v tématu [pomocí třídy CListCtrl: přidávání sloupců do ovládacího prvku (zobrazení sestavy)](../../mfc/adding-columns-to-the-control-report-view.md).
+   Každá položka je zobrazena na samostatném řádku, společně s dalšími informacemi, které jsou uspořádány ve sloupcích na pravé straně. Levém sloupci obsahuje malé ikony a popisek a následující sloupce obsahují podřízené položky podle aplikace. Ovládací prvek vložený záhlaví (třída [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementuje tyto sloupce. Další informace o ovládací prvky záhlaví a sloupců v zobrazení sestav, naleznete v tématu [pomocí třídy CListCtrl: přidávání sloupců do ovládacího prvku (zobrazení sestavy)](../../mfc/adding-columns-to-the-control-report-view.md).
 
 Určuje styl ovládacího prvku zobrazení aktuálního seznamu aktuálního zobrazení. Další informace o těchto stylů a jejich využití naleznete v tématu [pomocí třídy CListCtrl: Změna stylů ovládacího prvku seznam](../../mfc/changing-list-control-styles.md).
 
@@ -466,19 +466,19 @@ Kromě standardní seznamu styly třídy `CListCtrl` podporuje velké sady rozš
 
 - Výběr při najetí myší
 
-     Pokud povolená, umožňuje automatický výběr položky, když ukazatel zůstane myší na položku pro určitou dobu.
+   Pokud povolená, umožňuje automatický výběr položky, když ukazatel zůstane myší na položku pro určitou dobu.
 
 - Zobrazení virtuálního seznamu
 
-     Když je povoleno, umožňuje ovládacímu prvku podporovat až položky DWORD. To je možné tak, že režie na správu dat položek na aplikaci. S výjimkou výběr položek a detailní informace se všechny informace o položkách musí spravovat přes aplikaci. Další informace najdete v tématu [pomocí třídy CListCtrl: ovládací prvky typu virtuální seznam](../../mfc/virtual-list-controls.md).
+   Když je povoleno, umožňuje ovládacímu prvku podporovat až položky DWORD. To je možné tak, že režie na správu dat položek na aplikaci. S výjimkou výběr položek a detailní informace se všechny informace o položkách musí spravovat přes aplikaci. Další informace najdete v tématu [pomocí třídy CListCtrl: ovládací prvky typu virtuální seznam](../../mfc/virtual-list-controls.md).
 
 - Aktivace jedním a dvě kliknutím
 
-     Když povoleno, umožňuje horké sledování (automatické zvýrazňování textu položky) a jedním nebo dvěma kliknutím aktivace zvýrazněné položky.
+   Když povoleno, umožňuje horké sledování (automatické zvýrazňování textu položky) a jedním nebo dvěma kliknutím aktivace zvýrazněné položky.
 
 - Přetáhnout myší sloupec řazení
 
-     Když povoleno, umožňuje přetažení myší změny pořadí sloupců v ovládacím prvku zobrazení seznamu. Dostupné jenom v zobrazení sestavy.
+   Když povoleno, umožňuje přetažení myší změny pořadí sloupců v ovládacím prvku zobrazení seznamu. Dostupné jenom v zobrazení sestavy.
 
 Informace o použití těchto nových rozšířené styly, najdete v části [pomocí třídy CListCtrl: Změna stylů ovládacího prvku seznam](../../mfc/changing-list-control-styles.md).
 
@@ -496,19 +496,19 @@ Ikony, obrázků položek záhlaví a aplikace – stavy definované pro položk
 
 - Velké ikony
 
-     Používá se v zobrazení ikon pro plnou velikostí ikony.
+   Používá se v zobrazení ikon pro plnou velikostí ikony.
 
 - Malé ikony
 
-     Používá se v malé ikony, seznamu a zobrazení sestav pro menší verzích ikony používané v zobrazení ikon.
+   Používá se v malé ikony, seznamu a zobrazení sestav pro menší verzích ikony používané v zobrazení ikon.
 
 - Stavu na definovaný uživatelem aplikace
 
-     Obsahuje stav imagí, které se zobrazí vedle položky ikony k označení stavu definovaného aplikací.
+   Obsahuje stav imagí, které se zobrazí vedle položky ikony k označení stavu definovaného aplikací.
 
 - Položky záhlaví
 
-     Používá se v zobrazení sestav pro malé obrázky, které se zobrazují v každé položce ovládacího prvku záhlaví.
+   Používá se v zobrazení sestav pro malé obrázky, které se zobrazují v každé položce ovládacího prvku záhlaví.
 
 Ve výchozím nastavení ovládací prvek zobrazení seznamu odstraní přiřazeno, když je zničen; seznamů obrázků Vývojář můžete upravit toto chování však likvidaci každý seznam obrázků po se už nepoužívá, počítáno od aplikace. Další informace najdete v tématu [pomocí třídy CListCtrl: položky seznamu a seznamy obrázků](../list-items-and-image-lists.md).
 

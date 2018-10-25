@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36da6917a3f0a04cf078132c3949079ccecb25cc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b34c7ee72c7a76d261a50ae227039647617d6fbd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435581"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079022"
 ---
 # <a name="cpaintdc-class"></a>Cpaintdc – třída
 
@@ -141,6 +141,4 @@ Všimněte si, že dostanete popisovač kontextu zařízení prostřednictvím `
 [Ukázky knihovny MFC MDI](../../visual-cpp-samples.md)<br/>
 [CDC – třída](../../mfc/reference/cdc-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-
-
 

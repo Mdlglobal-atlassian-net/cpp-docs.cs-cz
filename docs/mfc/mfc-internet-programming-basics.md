@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7134ea1a822fa61ec0d82592145f1fd3c5ecc6aa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b2be02e6cac5dac226f7b04cd627a292e3761980
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418304"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082670"
 ---
 # <a name="mfc-internet-programming-basics"></a>Základy internetového programování v prostředí MFC
 
@@ -91,6 +91,4 @@ Tento web pro vývojáře obsahuje informace o použití Microsoft vývojářsk�
 OLE – část sady Windows SDK obsahuje další informace o programování technologie OLE. Tyto informace obsahuje podrobnosti o použití funkce rozhraní Win32 WinInet přímo, namísto prostřednictvím třídy knihovny MFC. Také obsahuje souhrnné informace o technologiích Internet.
 
 ## <a name="see-also"></a>Viz také
-
-
 

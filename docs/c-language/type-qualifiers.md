@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ecac60a1b9cbd2758090e52d917c7a65259d62d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4dc0fd45887975c9b50cee141b0c6e8faca33513
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094387"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083240"
 ---
 # <a name="type-qualifiers"></a>Kvalifikátory typu
 
@@ -69,7 +69,7 @@ Tento seznam popisuje způsob použití **const** a `volatile`.
 
 - Kompilátor předpokládá, že, kdekoli v programu, `volatile` proměnná je možný přes neznámý proces, který používá nebo upravuje jeho hodnotu. Proto, bez ohledu na to, na příkaz určených optimalizacích řádek kódu pro každé přiřazení nebo odkaz na `volatile` proměnnou je nutné vygenerovat i v případě, že se zobrazuje v nemají žádný vliv.
 
-     Pokud `volatile` použitý samostatně, `int` se předpokládá, že. `volatile` Specifikátor typu je možné poskytovat spolehlivý přístup k umístění v paměti speciální. Použití `volatile` s datové objekty, které může získat přístup nebo upravené pomocí obslužné rutiny signálu souběžně prováděných programů nebo speciální hardware jako mapované paměti zaregistruje řízení vstupně-výstupních operací. Je možné deklarovat jako proměnnou `volatile` pro svého životního cyklu, nebo můžete přetypovat jeden odkaz bude `volatile`.
+   Pokud `volatile` použitý samostatně, `int` se předpokládá, že. `volatile` Specifikátor typu je možné poskytovat spolehlivý přístup k umístění v paměti speciální. Použití `volatile` s datové objekty, které může získat přístup nebo upravené pomocí obslužné rutiny signálu souběžně prováděných programů nebo speciální hardware jako mapované paměti zaregistruje řízení vstupně-výstupních operací. Je možné deklarovat jako proměnnou `volatile` pro svého životního cyklu, nebo můžete přetypovat jeden odkaz bude `volatile`.
 
 - Položka může být obojí **const** a `volatile`, v takovém případě položky nelze je změnit oprávněně vlastní program, ale může změnit některé asynchronní proces.
 

@@ -16,12 +16,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90754db9c648395ad916cf03682a5c87c0b7da3b
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3cc592deaed967a7b6e93f9250103e28fb058de3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235305"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080751"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>Návod: Vytvoření a použití statické knihovny (C++)
 
@@ -97,7 +97,7 @@ Porozumění základům jazyka C++.
 
 1. V panelu nabídky zvolte **souboru** > **nový** > **projektu**.
 
-1. V levém podokně **nový projekt** dialogového okna rozbalte **nainstalováno** > **Visual C++** a pak vyberte **Windows Desktop**. V prostředním podokně vyberte **desktopový Průvodce pro Windows**. 
+1. V levém podokně **nový projekt** dialogového okna rozbalte **nainstalováno** > **Visual C++** a pak vyberte **Windows Desktop**. V prostředním podokně vyberte **desktopový Průvodce pro Windows**.
 
    > [!NOTE]
    > Pro verze starší než 2017, Visual Studio v **nový projekt** dialogového okna rozbalte **nainstalováno** > **šablony**  >  **Visual C++** a pak vyberte **Win32**. V prostředním podokně vyberte **Konzolová aplikace Win32**.

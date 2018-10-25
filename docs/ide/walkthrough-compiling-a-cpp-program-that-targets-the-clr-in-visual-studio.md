@@ -17,79 +17,79 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a375f93eaa164657964be7ad1ea2554ebc1986b8
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: c656f2f11de6b33ae7299215192a2bbb8750c53d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235396"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078736"
 ---
 # <a name="walkthrough-compiling-a-c-program-that-targets-the-clr-in-visual-studio"></a>Návod: Kompilace programu C++ pro CLR v aplikaci Visual Studio
 
-Můžete vytvořit programů aplikace Visual C++, které používají třídy rozhraní .NET a kompilovat s použitím vývojového prostředí sady Visual Studio.  
-  
-Tento postup můžete zadat vlastní program Visual C++ nebo použijte jednu z ukázkových programů. Ukázkový program, který používáme v tomto postupu vytváří textový soubor s názvem textfile.txt a uloží jej do adresáře projektu.  
-  
-## <a name="prerequisites"></a>Požadavky  
+Můžete vytvořit programů aplikace Visual C++, které používají třídy rozhraní .NET a kompilovat s použitím vývojového prostředí sady Visual Studio.
 
-Tato témata se předpokládá, že chápete základy jazyka C++.  
-  
-### <a name="to-create-a-new-project-in-visual-studio-and-add-a-new-source-file"></a>Vytvoření nového projektu v sadě Visual Studio a přidání nového zdrojového souboru  
-  
-1. Vytvořte nový projekt. Na **souboru** nabídky, přejděte k **nový**a potom klikněte na tlačítko **projektu**.  
-  
-1. Typy projektů jazyka Visual C++, klikněte na **CLR**a potom klikněte na tlačítko **prázdný projekt CLR**.  
+Tento postup můžete zadat vlastní program Visual C++ nebo použijte jednu z ukázkových programů. Ukázkový program, který používáme v tomto postupu vytváří textový soubor s názvem textfile.txt a uloží jej do adresáře projektu.
+
+## <a name="prerequisites"></a>Požadavky
+
+Tato témata se předpokládá, že chápete základy jazyka C++.
+
+### <a name="to-create-a-new-project-in-visual-studio-and-add-a-new-source-file"></a>Vytvoření nového projektu v sadě Visual Studio a přidání nového zdrojového souboru
+
+1. Vytvořte nový projekt. Na **souboru** nabídky, přejděte k **nový**a potom klikněte na tlačítko **projektu**.
+
+1. Typy projektů jazyka Visual C++, klikněte na **CLR**a potom klikněte na tlačítko **prázdný projekt CLR**.
 
    > [!NOTE]
    > Pokud **prázdný projekt CLR** chybí typ (Visual Studio 2017 pouze), vyberte **otevřít instalační program Visual Studio** v levém podokně **nový projekt** dialogové okno. Možnost umístěna ve složce instalace **vývoj desktopových aplikací pomocí C++** v **volitelné** součástí oddílu s názvem **C + +/ podpora rozhraní příkazového řádku**.<br/>
-  
-1. Zadejte název projektu.  
-  
-    Ve výchozím nastavení řešení, které obsahuje projekt má stejný název jako nový projekt, ale můžete zadat jiný název. Pokud chcete, můžete zadat jiné umístění pro projekt.  
-  
-    Klikněte na tlačítko **OK** k vytvoření nového projektu.  
-  
-1. Pokud **Průzkumníka řešení** nezobrazuje, klikněte na tlačítko **Průzkumníka řešení** na **zobrazení** nabídky.  
-  
-1. Přidání nového zdrojového souboru do projektu:  
-  
-    - Klikněte pravým tlačítkem na **zdrojové soubory** složky **Průzkumníku řešení**, přejděte na **přidat**a klikněte na tlačítko **nová položka**.  
-  
-    - Klikněte na tlačítko **soubor C++ (.cpp)** a zadejte název souboru a pak klikněte na tlačítko **přidat**.  
-  
-    **.Cpp** souboru se zobrazí v **zdrojové soubory** složky **Průzkumníka řešení** a zobrazí se okno s kartami, kde zadejte kód chcete v tomto souboru.  
-  
-1. Klikněte na kartě nově vytvořené v sadě Visual Studio a zadejte platný program Visual C++, nebo zkopírujte a vložte jednu z ukázkových programů.  
-  
-    Například můžete použít [postupy: zápis do textového souboru (C + +/ CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md) ukázkový program (v **zpracování souborů a vstupně-výstupních operací** uzel Průvodce programováním).  
-  
-    Pokud použijete ukázkový program, Všimněte si, že používáte `gcnew` – klíčové slovo místo `new` při vytváření objektů .NET a že `gcnew` vrátí popisovač (`^`) namísto ukazatel (`*`):  
-  
-    `StreamWriter^ sw = gcnew StreamWriter(fileName);`  
-  
-    Další informace o novou syntaxi jazyka Visual C++, naleznete v tématu [přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md).  
-  
-1. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.  
-  
-    **Výstup** okně zobrazí informace o průběhu kompilace, jako je například umístění protokolu sestavení a napište zprávu, která označuje stav sestavení.  
-  
-    Pokud provedete změny a spusťte program bez provedení sestavení, dialogové okno může znamenat, že projekt je zastaralý. Zaškrtněte políčko v tomto dialogovém okně před kliknutím na **OK** sady Visual Studio, vždy používali aktuální verze souborů namísto dotazování pokaždé, když chcete-li sestavení aplikace.  
-  
-1. Na **ladění** nabídky, klikněte na tlačítko **spustit bez ladění**.  
-  
-1. Pokud jste použili ukázkový program při spuštění programu se zobrazí okno příkazového řádku, která označuje, že se vytvořil textového souboru.  
-  
-    **Textfile.txt** textový soubor se nyní nachází v adresáři projektu. Tento soubor můžete otevřít pomocí poznámkového bloku.  
-  
+
+1. Zadejte název projektu.
+
+    Ve výchozím nastavení řešení, které obsahuje projekt má stejný název jako nový projekt, ale můžete zadat jiný název. Pokud chcete, můžete zadat jiné umístění pro projekt.
+
+    Klikněte na tlačítko **OK** k vytvoření nového projektu.
+
+1. Pokud **Průzkumníka řešení** nezobrazuje, klikněte na tlačítko **Průzkumníka řešení** na **zobrazení** nabídky.
+
+1. Přidání nového zdrojového souboru do projektu:
+
+    - Klikněte pravým tlačítkem na **zdrojové soubory** složky **Průzkumníku řešení**, přejděte na **přidat**a klikněte na tlačítko **nová položka**.
+
+    - Klikněte na tlačítko **soubor C++ (.cpp)** a zadejte název souboru a pak klikněte na tlačítko **přidat**.
+
+    **.Cpp** souboru se zobrazí v **zdrojové soubory** složky **Průzkumníka řešení** a zobrazí se okno s kartami, kde zadejte kód chcete v tomto souboru.
+
+1. Klikněte na kartě nově vytvořené v sadě Visual Studio a zadejte platný program Visual C++, nebo zkopírujte a vložte jednu z ukázkových programů.
+
+    Například můžete použít [postupy: zápis do textového souboru (C + +/ CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md) ukázkový program (v **zpracování souborů a vstupně-výstupních operací** uzel Průvodce programováním).
+
+    Pokud použijete ukázkový program, Všimněte si, že používáte `gcnew` – klíčové slovo místo `new` při vytváření objektů .NET a že `gcnew` vrátí popisovač (`^`) namísto ukazatel (`*`):
+
+    `StreamWriter^ sw = gcnew StreamWriter(fileName);`
+
+    Další informace o novou syntaxi jazyka Visual C++, naleznete v tématu [přípony komponent pro platformy běhového prostředí](../windows/component-extensions-for-runtime-platforms.md).
+
+1. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
+
+    **Výstup** okně zobrazí informace o průběhu kompilace, jako je například umístění protokolu sestavení a napište zprávu, která označuje stav sestavení.
+
+    Pokud provedete změny a spusťte program bez provedení sestavení, dialogové okno může znamenat, že projekt je zastaralý. Zaškrtněte políčko v tomto dialogovém okně před kliknutím na **OK** sady Visual Studio, vždy používali aktuální verze souborů namísto dotazování pokaždé, když chcete-li sestavení aplikace.
+
+1. Na **ladění** nabídky, klikněte na tlačítko **spustit bez ladění**.
+
+1. Pokud jste použili ukázkový program při spuštění programu se zobrazí okno příkazového řádku, která označuje, že se vytvořil textového souboru.
+
+    **Textfile.txt** textový soubor se nyní nachází v adresáři projektu. Tento soubor můžete otevřít pomocí poznámkového bloku.
+
     > [!NOTE]
-    > Výběr prázdný CLR šablonu projektu automaticky nastaví `/clr` – možnost kompilátoru. To pokud chcete ověřit, klikněte pravým tlačítkem na projekt v **Průzkumníku řešení** a kliknete na **vlastnosti**a potom zaškrtněte políčko **Common Language Runtime support** možnost  **Obecné** uzlu **vlastnosti konfigurace**.  
-  
-## <a name="whats-next"></a>Co se chystá 
+    > Výběr prázdný CLR šablonu projektu automaticky nastaví `/clr` – možnost kompilátoru. To pokud chcete ověřit, klikněte pravým tlačítkem na projekt v **Průzkumníku řešení** a kliknete na **vlastnosti**a potom zaškrtněte políčko **Common Language Runtime support** možnost  **Obecné** uzlu **vlastnosti konfigurace**.
+
+## <a name="whats-next"></a>Co se chystá
 
 **Předchozí:** [návod: kompilace nativního programu C++ v příkazovém řádku](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
 **Další krok:** [návod: kompilace programu C na příkazovém řádku](../build/walkthrough-compile-a-c-program-on-the-command-line.md)<br/>
-  
-## <a name="see-also"></a>Viz také  
+
+## <a name="see-also"></a>Viz také
 
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)<br/>

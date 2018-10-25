@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b9ec3c034e388cec4f91617fbee0e6ab19180de
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 51dee27c69d42bde83f8eb6925e96d0dad80dca6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418746"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081245"
 ---
 # <a name="containers-advanced-features"></a>Kontejnery: Pokročilé funkce
 
@@ -49,7 +49,7 @@ Tento článek [servery: implementace serveru](../mfc/servers-implementing-a-ser
 
 - Přepsat `COleClientItem::CanActivate` nechcete úpravu položky na místě samotný server se používá k úpravě na místě.
 
-     Například MFC OLE ukázky [OCLIENT](../visual-cpp-samples.md) obsahuje vložené položky vytvořené aplikace typu server/kontejner. Otevřete aplikaci OCLIENT a místní úpravy položky vytvořené aplikace typu server/kontejner. Při úpravách položky vaší aplikace, rozhodnete chcete vložit položky vytvořené v rámci MFC OLE ukázky [HIERSVR](../visual-cpp-samples.md). Chcete-li to provést, nelze použít aktivace na místě. Je nutné otevřít plně HIERSVR k aktivaci této položky. Protože knihovny Microsoft Foundation Class nepodporuje tuto funkci OLE, přepisování `COleClientItem::CanActivate` můžete zkontrolovat v této situaci a zabránit možných chyb za běhu ve vaší aplikaci.
+   Například MFC OLE ukázky [OCLIENT](../visual-cpp-samples.md) obsahuje vložené položky vytvořené aplikace typu server/kontejner. Otevřete aplikaci OCLIENT a místní úpravy položky vytvořené aplikace typu server/kontejner. Při úpravách položky vaší aplikace, rozhodnete chcete vložit položky vytvořené v rámci MFC OLE ukázky [HIERSVR](../visual-cpp-samples.md). Chcete-li to provést, nelze použít aktivace na místě. Je nutné otevřít plně HIERSVR k aktivaci této položky. Protože knihovny Microsoft Foundation Class nepodporuje tuto funkci OLE, přepisování `COleClientItem::CanActivate` můžete zkontrolovat v této situaci a zabránit možných chyb za běhu ve vaší aplikaci.
 
 Pokud vytváříte novou aplikaci a chcete, aby fungovala jako aplikace typu server/kontejner, zvolte možnost v dialogovém okně Možnosti OLE v Průvodci aplikací a tato podpora se vytvoří automaticky. Další informace najdete v článku [přehled: vytvoření kontejneru ovládacího prvku ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md). Informace o ukázky knihovny MFC naleznete v tématu ukázky knihovny MFC.
 

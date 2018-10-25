@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51921f8e55b9d4ce4e1875f5216984fe3257ca97
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: b4e5e30b533837eabb71ca8f27a646794d9a654c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084110"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082993"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s novou 2003 – 2015
 
@@ -128,7 +128,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
     struct S2
     {
-        template <class C, void (C::*Function)(int) const> void f() {}        
+        template <class C, void (C::*Function)(int) const> void f() {}
     };
 
     void f()
@@ -271,7 +271,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
    Předpokládejme například, že váš kód definuje, jak **umístění nového** a **umístění operátoru delete**:
 
    ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
    ```
 
@@ -318,14 +318,14 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
    ```cpp
     struct S {
-      S();
-     };
+      S();
+     };
 
-     union {
-      struct {
-       S s;
-      };
-     } u; // C2280
+     union {
+      struct {
+       S s;
+      };
+     } u; // C2280
    ```
 
    Předchozí kód generuje následující chybu v sadě Visual Studio 2015:
@@ -834,7 +834,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
 - **#include: použití specifikátoru nadřazený adresář '..' v názvu cesty** (má vliv pouze `/Wall` `/WX`)
 
-     Předchozí verze kompilátoru nezjistili použití specifikátoru nadřazený adresář '..' v cestě `#include` direktivy. Kód napsaný v tímto způsobem obvykle má zahrnout záhlaví, které existují mimo projekt nesprávně pomocí projektu relativní cesty. Toto chování staré vytvořili riziko, že program může zkompilovat zahrnutím souboru jiného zdroje než programátor určené nebo že tyto relativní cesty by být nepřenositelné na jiné prostředí sestavení. Kompilátor nyní zjistí a upozorní programátor kódu napsaného v tímto způsobem a problémy volitelné kompilátor varování C4464, pokud je povoleno.
+   Předchozí verze kompilátoru nezjistili použití specifikátoru nadřazený adresář '..' v cestě `#include` direktivy. Kód napsaný v tímto způsobem obvykle má zahrnout záhlaví, které existují mimo projekt nesprávně pomocí projektu relativní cesty. Toto chování staré vytvořili riziko, že program může zkompilovat zahrnutím souboru jiného zdroje než programátor určené nebo že tyto relativní cesty by být nepřenositelné na jiné prostředí sestavení. Kompilátor nyní zjistí a upozorní programátor kódu napsaného v tímto způsobem a problémy volitelné kompilátor varování C4464, pokud je povoleno.
 
    ```Output
     warning C4464: relative include path contains '..'
@@ -1465,7 +1465,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
    Příklad (před):
 
-     X.cpp (-Ycc.h)
+   X.cpp (-Ycc.h)
 
    ```cpp
     #include "a.h"
@@ -1473,7 +1473,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     #include "c.h"
    ```
 
-     Z.cpp (-Yuc.h)
+   Z.cpp (-Yuc.h)
 
    ```cpp
     #include "b.h"
@@ -1483,7 +1483,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
    Příklad (po)
 
-     X.cpp (-Ycc.h)
+   X.cpp (-Ycc.h)
 
    ```cpp
     #include "a.h"
@@ -1491,7 +1491,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     #include "c.h"
    ```
 
-     Z.cpp (-Yuc.h)
+   Z.cpp (-Yuc.h)
 
    ```cpp
     #include "a.h"
@@ -1774,7 +1774,7 @@ Zápis testů jednotek C++ pomocí novém rozhraní testování částí C++ v s
 
 #### <a name="architecture-dependency-graphs"></a>Grafy závislosti architektury
 
-Pro lepší pochopení kódu teď můžete generovat grafy závislosti pro binární, třídy a oboru názvů a zahrnout soubory v řešení. V panelu nabídky zvolte **architektura** > **Generovat graf závislosti**a potom **pro řešení** nebo **pro soubor zahrnutí**vygenerujte graf závislosti. Po dokončení generování grafu můžete prozkoumat rozbalením každého uzlu, další vztahů závislosti díky přesunu mezi uzly a procházení zdrojového kódu výběrem **zobrazit obsah** na místní nabídku pro uzel. Chcete-li generovat graf závislostí pro zahrnuté soubory v místní nabídce pro *.cpp zdrojový soubor nebo soubor hlavičky *.h, zvolte **Generovat graf vložených souborů**.
+Pro lepší pochopení kódu teď můžete generovat grafy závislosti pro binární, třídy a oboru názvů a zahrnout soubory v řešení. V panelu nabídky zvolte **architektura** > **Generovat graf závislosti**a potom **pro řešení** nebo **pro soubor zahrnutí**vygenerujte graf závislosti. Po dokončení generování grafu můžete prozkoumat rozbalením každého uzlu, další vztahů závislosti díky přesunu mezi uzly a procházení zdrojového kódu výběrem **zobrazit obsah** na místní nabídku pro uzel. Generovat graf závislostí pro zahrnuté soubory v místní nabídce pro \*zdrojový soubor .cpp nebo \*záhlaví .h souborů, zvolte **Generovat graf vložených souborů**.
 
 #### <a name="architecture-explorer"></a>Průzkumník architektury
 

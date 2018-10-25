@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 608b4560f11e35d9aefb2c848a27c99c8dc6f4ec
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 3d942e2c5bca7d86e66cb579de1cbe946cb9f5f6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821345"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081492"
 ---
 # <a name="function-overloading"></a>Přetížení funkcí
 
@@ -126,7 +126,6 @@ Předchozí kód ukazuje přetížení funkce `print` v oboru souboru.
 Výchozí argument není považován za součást typu funkce. Proto není použit při výběru přetížených funkcí. Dvě funkce, které se liší pouze v jejich výchozích argumentech, jsou považovány za vícenásobné definice spíše než za přetížené funkce.
 
 Pro přetížené operátory nelze zadat výchozí argumenty.
-
 
 ## <a name="argument-matching"></a>Porovnávání argumentů
 
@@ -471,7 +470,7 @@ Můžete použít přetížení **operátor new** výhradně na základě těcht
     void Print( PSTR szToPrint );
     ```
 
-     Předchozí dvě funkce mít seznamy argumentů identické. `PSTR` je synonymum pro typ `char *`. Tento kód v oboru člena, vygeneruje chybu.
+   Předchozí dvě funkce mít seznamy argumentů identické. `PSTR` je synonymum pro typ `char *`. Tento kód v oboru člena, vygeneruje chybu.
 
 - Výčtové typy jsou různé typy a slouží k rozlišení mezi přetížených funkcí.
 
@@ -482,7 +481,7 @@ Můžete použít přetížení **operátor new** výhradně na základě těcht
     void Print( char szToPrint[] );
     ```
 
-     Pro vícenásobně rozměry pole dimenze druhé a všechny následné jsou považovány za součást typu. Proto jsou použity v přetížené funkce rozlišování:
+   Pro vícenásobně rozměry pole dimenze druhé a všechny následné jsou považovány za součást typu. Proto jsou použity v přetížené funkce rozlišování:
 
     ```cpp
     void Print( char szToPrint[] );

@@ -124,19 +124,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 664894fb99f02168d06cfc5d82b4225defe7fe38
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 46b7f613cdb67fa446c878ceda7dd9eca6eec7e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422219"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082577"
 ---
 # <a name="cmfcribbonpanel-class"></a>Cmfcribbonpanel – třída
 
 Implementuje panel, který obsahuje sadu prvků pásu karet. Při vykreslení panelu zobrazí tolik elementů nejvíce dané velikosti panelu.
 
 Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
-
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -540,7 +539,6 @@ Název panelu pásu karet.
 
 ##  <a name="getparentbutton"></a>  CMFCRibbonPanel::GetParentButton
 
-
 ```
 CMFCRibbonBaseElement* GetParentButton() const;
 ```
@@ -562,7 +560,6 @@ CMFCRibbonCategory* GetParentCategory() const;
 Ukazatel na kategorie pásu karet, který obsahuje tento panel pásu karet.
 
 ##  <a name="getparentmenubar"></a>  CMFCRibbonPanel::GetParentMenuBar
-
 
 ```
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
@@ -830,7 +827,6 @@ Panel Hlavní pásu karet se zobrazí, když uživatel vybere tlačítko aplikac
 
 ##  <a name="ismenumode"></a>  CMFCRibbonPanel::IsMenuMode
 
-
 ```
 BOOL IsMenuMode() const;
 ```
@@ -841,14 +837,13 @@ BOOL IsMenuMode() const;
 
 ##  <a name="onkey"></a>  CMFCRibbonPanel::OnKey
 
-
 ```
 virtual BOOL OnKey(UINT nChar);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nChar*
+[in] *nChar*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -929,7 +924,8 @@ CMFCRibbonBaseElement* pElem);
 *nIndex*<br/>
 [in] Určuje index prvku, který chcete nahradit založený na nule.
 
-[in] [out] *pElem* platný ukazatel na prvek, který nahrazuje původní elementu.
+*pElem*<br/>
+[out v] Platný ukazatel na prvek, který nahrazuje původní elementu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -954,7 +950,8 @@ CMFCRibbonBaseElement* pElem);
 *uiCmdID*<br/>
 [in] Určuje Identifikátor příkazu elementu, který má nahradit.
 
-[in] [out] *pElem* platný ukazatel na prvek, který nahradí původní elementu.
+*pElem*<br/>
+[out v] Platný ukazatel na prvek, který nahradí původní elementu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1007,7 +1004,6 @@ HMENU hMenu,
 BOOL bIsDefautCommand = FALSE,
 BOOL bRightAlign = FALSE);
 
-
 BOOL SetElementMenu(
 UINT uiCmdID,
 UINT uiMenuResID,
@@ -1055,7 +1051,8 @@ CRuntimeClass* pRTC);
 *nIndex*<br/>
 [in] Určuje index založený na nule elementu pásu karet, který chcete přidat.
 
-[in] [out] *pRTC* ukazatel na informace o třídě modulu runtime pro prvek pásu karet, který je přidán do panelu pásu karet.
+*pRTC*<br/>
+[out v] Ukazatel na informace o třídě modulu runtime pro prvek pásu karet, který je přidán do panelu pásu karet.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1080,7 +1077,8 @@ CRuntimeClass* pRTC);
 *uiCmdID*<br/>
 [in] Určuje Identifikátor příkazu prvek pásu karet přidat.
 
-[in] [out] *pRTC* ukazatel na informace o třídě modulu runtime přidružený k elementu pásu karet, který je přidán do panelu pásu karet.
+*pRTC*<br/>
+[out v] Ukazatel na informace o třídě modulu runtime přidružený k elementu pásu karet, který je přidán do panelu pásu karet.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1106,7 +1104,6 @@ CMFCRibbonColorButton* pColorButton =
 (CMFCRibbonColorButton*)pPanel->SetElementRTCByID(
 ID_CHAR_COLOR,
     RUNTIME_CLASS (CMFCRibbonColorButton));
-
 
 // SetElementRTCByID sets runtime class and returns a pointer
 // to the newly created custom button,

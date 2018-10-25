@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa1803fb34ce1c9cf50b996efb9cc5467dd55996
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0bd1e6953d936106f272aa8bef4243728d742d8c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387832"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078190"
 ---
 # <a name="colepropertiesdialog-class"></a>Colepropertiesdialog – třída
 
@@ -138,15 +138,15 @@ Ve výchozím nastavení běžné dialogové okno Vlastnosti objektu OLE má tř
 
 - Obecné
 
-     Tato stránka obsahuje informace o systému pro soubor reprezentován položkou vybraný dokument. Z této stránky můžete uživatele převést vybrané položky k jinému typu.
+   Tato stránka obsahuje informace o systému pro soubor reprezentován položkou vybraný dokument. Z této stránky můžete uživatele převést vybrané položky k jinému typu.
 
 - Zobrazit
 
-     Tato stránka obsahuje možnosti pro položku zobrazení, změna ikony a změna měřítka obrázku.
+   Tato stránka obsahuje možnosti pro položku zobrazení, změna ikony a změna měřítka obrázku.
 
 - Odkaz
 
-     Tato stránka obsahuje možnosti pro změnu umístění propojené položky a aktualizaci propojená položka. Z této stránky můžete uživatele rozdělit odkaz na vybranou položku.
+   Tato stránka obsahuje možnosti pro změnu umístění propojené položky a aktualizaci propojená položka. Z této stránky můžete uživatele rozdělit odkaz na vybranou položku.
 
 Chcete-li přidat stránky nad rámec těch, které poskytuje ve výchozím nastavení, upravte [m_psh](#m_psh) členskou proměnnou před ukončením konstruktoru vaše `COlePropertiesDialog`– odvozené třídy. Toto je implementace pokročilých `COlePropertiesDialog` konstruktoru.
 

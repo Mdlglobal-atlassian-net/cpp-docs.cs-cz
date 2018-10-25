@@ -35,122 +35,122 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1c6bda8180d775b49c6bfe6bc98e3ddabe535ac0
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: efd643414085ee71c48e3d4a5654dac82b74b030
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082836"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081284"
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP – třída
 
-Implementuje poskytovatele lokality pro bod připojení rozhraní [IRowsetNotify](/previous-versions/windows/desktop/ms712959).  
-  
+Implementuje poskytovatele lokality pro bod připojení rozhraní [IRowsetNotify](/previous-versions/windows/desktop/ms712959).
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-template <class T, class ReentrantEventSync = CComSharedMutex>  
-class IRowsetNotifyCP :   
-   public IConnectionPointImpl<  
-      T,   
-      piid = &__uuidof(IRowsetNotify),   
-      CComDynamicUnkArray DynamicUnkArray>,  
-   public ReentrantEventSync  
-```  
-  
-### <a name="parameters"></a>Parametry  
+template <class T, class ReentrantEventSync = CComSharedMutex>
+class IRowsetNotifyCP :
+   public IConnectionPointImpl<
+      T,
+      piid = &__uuidof(IRowsetNotify),
+      CComDynamicUnkArray DynamicUnkArray>,
+   public ReentrantEventSync
+```
+
+### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Třída odvozená z `IRowsetNotifyCP`.  
-  
+Třída odvozená z `IRowsetNotifyCP`.
+
 *ReentrantEventSync*<br/>
-Mutex – třída, která podporuje vícenásobného přístupu (výchozí hodnota je `CComSharedMutex`). Objekt mutex je synchronizační objekt umožňující jeden vlákno vzájemně exkluzivní přístup k prostředku.  
-  
+Mutex – třída, která podporuje vícenásobného přístupu (výchozí hodnota je `CComSharedMutex`). Objekt mutex je synchronizační objekt umožňující jeden vlákno vzájemně exkluzivní přístup k prostředku.
+
 *piid*<br/>
-Ukazatel rozhraní s ID (`IID*`) pro `IRowsetNotify` rozhraní bodu připojení. Výchozí hodnota je `&__uuidof(IRowsetNotify)`.  
-  
+Ukazatel rozhraní s ID (`IID*`) pro `IRowsetNotify` rozhraní bodu připojení. Výchozí hodnota je `&__uuidof(IRowsetNotify)`.
+
 *DynamicUnkArray*<br/>
-Pole typu [ccomdynamicunkarray –](../../atl/reference/ccomdynamicunkarray-class.md), která je dynamicky přiřazeného pole `IUnknown` ukazatele na klienta jímka rozhraní. 
+Pole typu [ccomdynamicunkarray –](../../atl/reference/ccomdynamicunkarray-class.md), která je dynamicky přiřazeného pole `IUnknown` ukazatele na klienta jímka rozhraní.
 
-## <a name="requirements"></a>Požadavky  
+## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atldb.h   
-  
-## <a name="members"></a>Členové  
-  
-### <a name="methods"></a>Metody  
-  
-|||  
-|-|-|  
-|[Fire_OnFieldChange](#onfieldchange)|Upozorní příjemce ke změně hodnoty sloupce.|  
-|[Fire_OnRowChange](#onrowchange)|Upozornění uživatelů na změnu by to ovlivnilo řádky.|  
-|[Fire_OnRowsetChange](#onrowsetchange)|Upozorní příjemce změny, které mají vliv celá sada řádků.|  
-  
-## <a name="remarks"></a>Poznámky  
+**Záhlaví:** atldb.h
 
-`IRowsetNotifyCP` implementuje vysílání funkce radit naslouchacích procesů najdete v bodě připojení `IID_IRowsetNotify` změny obsahu v sadě řádků.  
-  
-Všimněte si, že musí také implementovat a zaregistrovat `IRowsetNotify` na spotřebitele (označované také jako "jímka") pomocí [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) tak, aby příjemce může zpracovat oznámení. Zobrazit [příjem oznámení](../../data/oledb/receiving-notifications.md) o implementaci rozhraní bod připojení pro příjemce.  
-  
-Podrobné informace o implementaci oznámení, naleznete v části "Podpora oznámení" v [vytvoření aktualizovatelného zprostředkovatele](../../data/oledb/creating-an-updatable-provider.md).  
+## <a name="members"></a>Členové
+
+### <a name="methods"></a>Metody
+
+|||
+|-|-|
+|[Fire_OnFieldChange](#onfieldchange)|Upozorní příjemce ke změně hodnoty sloupce.|
+|[Fire_OnRowChange](#onrowchange)|Upozornění uživatelů na změnu by to ovlivnilo řádky.|
+|[Fire_OnRowsetChange](#onrowsetchange)|Upozorní příjemce změny, které mají vliv celá sada řádků.|
+
+## <a name="remarks"></a>Poznámky
+
+`IRowsetNotifyCP` implementuje vysílání funkce radit naslouchacích procesů najdete v bodě připojení `IID_IRowsetNotify` změny obsahu v sadě řádků.
+
+Všimněte si, že musí také implementovat a zaregistrovat `IRowsetNotify` na spotřebitele (označované také jako "jímka") pomocí [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) tak, aby příjemce může zpracovat oznámení. Zobrazit [příjem oznámení](../../data/oledb/receiving-notifications.md) o implementaci rozhraní bod připojení pro příjemce.
+
+Podrobné informace o implementaci oznámení, naleznete v části "Podpora oznámení" v [vytvoření aktualizovatelného zprostředkovatele](../../data/oledb/creating-an-updatable-provider.md).
 
 ## <a name="onfieldchange"></a> IRowsetNotifyCP::Fire_OnFieldChange
 
-Vysílá [onfieldchange –](/previous-versions/windows/desktop/ms715961) událost oznámení příjemci změnu hodnoty sloupce.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-HRESULT Fire_OnFieldChange(IRowset* pRowset,  
-   HROW hRow,  
-   DBORDINAL cColumns,  
-   DBORDINAL* rgColumns,  
-   DBREASON eReason,  
-   DBEVENTPHASE ePhase,  
-   BOOL fCantDeny);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+Vysílá [onfieldchange –](/previous-versions/windows/desktop/ms715961) událost oznámení příjemci změnu hodnoty sloupce.
 
-Zobrazit [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961) v *referenční informace pro OLE DB programátory*. 
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+HRESULT Fire_OnFieldChange(IRowset* pRowset,
+   HROW hRow,
+   DBORDINAL cColumns,
+   DBORDINAL* rgColumns,
+   DBREASON eReason,
+   DBEVENTPHASE ePhase,
+   BOOL fCantDeny);
+```
+
+#### <a name="parameters"></a>Parametry
+
+Zobrazit [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="onrowchange"></a> IRowsetNotifyCP::Fire_OnRowChange
 
-Vysílá [onrowchange –](/previous-versions/windows/desktop/ms722694) události pro všechny posluchače v bodě připojení `IID_IRowsetNotify` oznámit příjemci změny ovlivňující řádky.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-HRESULT Fire_OnRowChange(IRowset* pRowset,  
-   DBCOUNTITEM cRows,  
-   const HROW rghRows[],  
-   DBREASON eReason,  
-   DBEVENTPHASE ePhase,  
-   BOOL fCantDeny);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+Vysílá [onrowchange –](/previous-versions/windows/desktop/ms722694) události pro všechny posluchače v bodě připojení `IID_IRowsetNotify` oznámit příjemci změny ovlivňující řádky.
 
-Zobrazit [IRowsetNotify::OnRowChange](/previous-versions/windows/desktop/ms722694) v *referenční informace pro OLE DB programátory*.  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+HRESULT Fire_OnRowChange(IRowset* pRowset,
+   DBCOUNTITEM cRows,
+   const HROW rghRows[],
+   DBREASON eReason,
+   DBEVENTPHASE ePhase,
+   BOOL fCantDeny);
+```
+
+#### <a name="parameters"></a>Parametry
+
+Zobrazit [IRowsetNotify::OnRowChange](/previous-versions/windows/desktop/ms722694) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="onrowsetchange"></a> IRowsetNotifyCP::Fire_OnRowsetChange
 
-Vysílá [onrowsetchange –](/previous-versions/windows/desktop/ms722669) události pro všechny posluchače v bodě připojení `IID_IRowsetNotify` oznámit příjemci změny, které mají vliv celá sada řádků.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Vysílá [onrowsetchange –](/previous-versions/windows/desktop/ms722669) události pro všechny posluchače v bodě připojení `IID_IRowsetNotify` oznámit příjemci změny, které mají vliv celá sada řádků.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT Fire_OnRowsetChange(IRowset* pRowset,  
-   DBREASON eReason,  
-   DBEVENTPHASE ePhase,  
-   BOOL fCantDeny);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT Fire_OnRowsetChange(IRowset* pRowset,
+   DBREASON eReason,
+   DBEVENTPHASE ePhase,
+   BOOL fCantDeny);
+```
+
+#### <a name="parameters"></a>Parametry
 
 Zobrazit [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669) v *referenční informace pro OLE DB programátory*.
-  
-## <a name="see-also"></a>Viz také  
+
+## <a name="see-also"></a>Viz také
 
 [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

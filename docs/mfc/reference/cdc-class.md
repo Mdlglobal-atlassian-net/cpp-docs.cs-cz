@@ -412,12 +412,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59fe5aeaa288f0d36db71df7f7ab5d498aec3256
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 496b958c1ff96b2bc8f3fd3ce8b453c9d3497dcf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448581"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081141"
 ---
 # <a name="cdc-class"></a>CDC – třída
 
@@ -887,7 +887,6 @@ BOOL Arc(
     int x4,
     int y4);
 
-
 BOOL Arc(
     LPCRECT lpRect,
     POINT ptStart,
@@ -957,7 +956,6 @@ BOOL ArcTo(
     int y3,
     int x4,
     int y4);
-
 
 BOOL ArcTo(
     LPCRECT lpRect,
@@ -1141,7 +1139,6 @@ BOOL Chord(
     int y3,
     int x4,
     int y4);
-
 
 BOOL Chord(
     LPCRECT lpRect,
@@ -1421,7 +1418,6 @@ void Draw3dRect(
     COLORREF clrTopLeft,
     COLORREF clrBottomRight);
 
-
 void Draw3dRect(
     int x,
     int y,
@@ -1672,7 +1668,6 @@ BOOL DrawIcon(
     int y,
     HICON hIcon);
 
-
 BOOL DrawIcon(
     POINT point,
     HICON hIcon);
@@ -1721,7 +1716,6 @@ BOOL DrawState(
     UINT nFlags,
     HBRUSH hBrush = NULL);
 
-
 BOOL DrawState(
     CPoint pt,
     CSize size,
@@ -1729,7 +1723,6 @@ BOOL DrawState(
     UINT nFlags,
     CBrush* pBrush = NULL);
 
-
 BOOL DrawState(
     CPoint pt,
     CSize size,
@@ -1737,14 +1730,12 @@ BOOL DrawState(
     UINT nFlags,
     HBRUSH hBrush = NULL);
 
-
 BOOL DrawState(
     CPoint pt,
     CSize size,
     HICON hIcon,
     UINT nFlags,
     CBrush* pBrush = NULL);
-
 
 BOOL DrawState(
     CPoint pt,
@@ -1755,7 +1746,6 @@ BOOL DrawState(
     int nTextLen = 0,
     HBRUSH hBrush = NULL);
 
-
 BOOL DrawState(
     CPoint pt,
     CSize size,
@@ -1764,7 +1754,6 @@ BOOL DrawState(
     BOOL bPrefixText = TRUE,
     int nTextLen = 0,
     CBrush* pBrush = NULL);
-
 
 BOOL DrawState(
     CPoint pt,
@@ -1773,7 +1762,6 @@ BOOL DrawState(
     LPARAM lData,
     UINT nFlags,
     HBRUSH hBrush = NULL);
-
 
 BOOL DrawState(
     CPoint pt,
@@ -1840,7 +1828,6 @@ virtual int DrawText(
     LPRECT lpRect,
     UINT nFormat);
 
-
 int DrawText(
     const CString& str,
     LPRECT lpRect,
@@ -1896,7 +1883,6 @@ virtual int DrawTextEx(
     LPRECT lpRect,
     UINT nFormat,
     LPDRAWTEXTPARAMS lpDTParams);
-
 
 int DrawTextEx(
     const CString& str,
@@ -2097,7 +2083,6 @@ virtual int Escape(
     int nCount,
     LPCSTR lpszInData,
     LPVOID lpOutData);
-
 
 int Escape(
     int nEscape,
@@ -2301,7 +2286,6 @@ virtual BOOL ExtTextOut(
     UINT nCount,
     LPINT lpDxWidths);
 
-
 BOOL ExtTextOut(
     int x,
     int y,
@@ -2433,7 +2417,6 @@ Voláním této členské funkce k vyplnění daného obdélníku zadaného plno
 void FillSolidRect(
     LPCRECT lpRect,
     COLORREF clr);
-
 
 void FillSolidRect(
     int x,
@@ -3553,7 +3536,7 @@ Odkazuje na pole bajtů, kde jsou umístěny typy vrcholu. Hodnoty jsou jedním 
 
 Typy PT_BEZIERTO vždy odehrávat ve skupinách po 3. Bod na cestě bezprostředně před jejich definuje výchozí bod pro křivku Bzier. První dva body PT_BEZIERTO jsou kontrolní body a třetí PT_BEZIERTO bod je koncový bod (Pokud pevně zakódované).
 
-     A PT_LINETO or PT_BEZIERTO type may be combined with the following flag (by using the bitwise operator **OR**) to indicate that the corresponding point is the last point in a figure and that the figure should be closed:
+   Typ PT_LINETO nebo PT_BEZIERTO lze kombinovat se následující příznak (použitím operátoru bitového **nebo**) k označení, že odpovídající bod je poslední bod v elementu figure a že na obrázku by měly být uzavřeny:
 
 - PT_CLOSEFIGURE Určuje, že na obrázku se automaticky ukončí po odpovídající řádek nebo vykreslením křivky. Na obrázku je ukončená kreslení čáry z koncového bodu čáry nebo křivky do bodu na poslední odpovídající PT_MOVETO.
 
@@ -4704,7 +4687,6 @@ BOOL Pie(
     int x4,
     int y4);
 
-
 BOOL Pie(
     LPCRECT lpRect,
     POINT ptStart,
@@ -4768,7 +4750,6 @@ Obsah zadaného metasouboru hraje v kontextu zařízení.
 
 ```
 BOOL PlayMetaFile(HMETAFILE hMF);
-
 
 BOOL PlayMetaFile(
     HENHMETAFILE hEnhMetaFile,
@@ -4951,11 +4932,11 @@ Odkazuje na pole, která určuje, jak každý bod v *lpPoints* pole se použív�
 
 Typy PT_BEZIERTO vždy odehrávat ve skupinách po 3. Aktuální pozice definuje výchozí bod pro Bzier křivky. První dva body PT_BEZIERTO jsou kontrolní body a třetí PT_BEZIERTO bod je koncový bod. Koncový bod se změní na nové aktuální pozici. Pokud nejsou tří po sobě jdoucích PT_BEZIERTO body, bude výsledkem chyba.
 
-     A PT_LINETO or PT_BEZIERTO type can be combined with the following constant by using the bitwise operator OR to indicate that the corresponding point is the last point in a figure and the figure is closed:
+   Typu PT_LINETO nebo PT_BEZIERTO můžete kombinovat se následující konstanty pomocí bitového operátoru nebo je uzavřen, že odpovídající bodu je poslední bod v elementu figure a obrázek:
 
 - PT_CLOSEFIGURE Určuje, že na obrázku se automaticky ukončí po PT_LINETO nebo se provádí PT_BEZIERTO typ pro tento bod. Linie řádku od této chvíle posledního PT_MOVETO nebo `MoveTo` bodu.
 
-     Tento příznak je v kombinaci s typem PT_LINETO pro řádek nebo s typem PT_BEZIERTO koncový bod pro Bzier křivky pomocí bitového **nebo** operátor. Aktuální pozice je nastavena na koncový bod řádku pravou.
+   Tento příznak je v kombinaci s typem PT_LINETO pro řádek nebo s typem PT_BEZIERTO koncový bod pro Bzier křivky pomocí bitového **nebo** operátor. Aktuální pozice je nastavena na koncový bod řádku pravou.
 
 *nCount*<br/>
 Určuje celkový počet bodů v *lpPoints* pole, stejný jako počet bajtů *lpTypes* pole.
@@ -5332,7 +5313,6 @@ BOOL RoundRect(
     int x3,
     int y3);
 
-
 BOOL RoundRect(
     LPCRECT lpRect,
     POINT point);
@@ -5557,7 +5537,6 @@ Vybere konkrétní oblasti jako aktuální oblast ořezu kontextu zařízení.
 
 ```
 int SelectClipRgn(CRgn* pRgn);
-
 
 int SelectClipRgn(
     CRgn* pRgn,
@@ -6194,7 +6173,6 @@ COLORREF SetPixel(
     int y,
     COLORREF crColor);
 
-
 COLORREF SetPixel(
     POINT point,
     COLORREF crColor);
@@ -6233,7 +6211,6 @@ BOOL SetPixelV(
     int x,
     int y,
     COLORREF crColor);
-
 
 BOOL SetPixelV(
     POINT point,
@@ -6903,7 +6880,6 @@ virtual CSize TabbedTextOut(
     LPINT lpnTabStopPositions,
     int nTabOrigin);
 
-
 CSize TabbedTextOut(
     int x,
     int y,
@@ -6961,7 +6937,6 @@ virtual BOOL TextOut(
     int y,
     LPCTSTR lpszString,
     int nCount);
-
 
 BOOL TextOut(
     int x,

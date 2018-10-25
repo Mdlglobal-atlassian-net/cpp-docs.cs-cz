@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295749648dd54349c3fa735008ef8c04d51c8e04
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f4c2ad96674058ac57ccdc7cef9537f1cb413b92
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441899"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079698"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory – třída
 
@@ -132,7 +132,6 @@ COleObjectFactory(
     BOOL bMultiInstance,
     LPCTSTR lpszProgID);
 
-
 COleObjectFactory(
     REFCLSID clsid,
     CRuntimeClass* pRuntimeClass,
@@ -163,7 +162,7 @@ Obsahuje jeden nebo více z následujících příznaků:
 
 - `afxRegFreeThreading` Nastaví model vláken v registru ThreadingModel = Free.
 
-     Můžete kombinovat dvěma příznaky `afxRegApartmentThreading` a `afxRegFreeThreading` nastavit ThreadingModel = obojí. Zobrazit [InprocServer32](/windows/desktop/com/inprocserver32) v sadě Windows SDK pro další informace o dělení na vlákna registrace modelu.
+   Můžete kombinovat dvěma příznaky `afxRegApartmentThreading` a `afxRegFreeThreading` nastavit ThreadingModel = obojí. Zobrazit [InprocServer32](/windows/desktop/com/inprocserver32) v sadě Windows SDK pro další informace o dělení na vlákna registrace modelu.
 
 *lpszProgID*<br/>
 Ukazatel na řetězec obsahující identifikátor slovní programu, jako je například "Microsoft Excelu."
@@ -349,7 +348,7 @@ Postupujte podle stručný diskuse o dvě různými formami pro tuto funkci:
 
 - **UpdateRegistry (** `bRegister` **)** tento formulář funkce je přepsatelný. Pokud *bRegister* má hodnotu TRUE, tato funkce registrů třídy ovládacího prvku s registrem systému. V opačném případě ji zruší registraci třídy.
 
-     Pokud používáte ActiveX ControlWizard knihovny MFC k vytvoření projektu, poskytuje ControlWizard přepsání této čistě virtuální funkce.
+   Pokud používáte ActiveX ControlWizard knihovny MFC k vytvoření projektu, poskytuje ControlWizard přepsání této čistě virtuální funkce.
 
 ##  <a name="updateregistryall"></a>  COleObjectFactory::UpdateRegistryAll
 
