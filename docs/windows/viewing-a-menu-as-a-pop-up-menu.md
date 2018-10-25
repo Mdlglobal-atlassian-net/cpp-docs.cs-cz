@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 71e1bfaf47a901cc57c1280194c4209d94356aac
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 30f6bac0e693b32d7ab6a761b6d4620244e85acd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377484"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055890"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>Zobrazení nabídky jako místní nabídky
 
@@ -43,4 +43,4 @@ Win32
 ## <a name="see-also"></a>Viz také
 
 [Vytváření místních nabídek](../windows/creating-pop-up-menus.md)<br/>
-[Editor nabídek](../windows/menu-editor.md)  
+[Editor nabídek](../windows/menu-editor.md)

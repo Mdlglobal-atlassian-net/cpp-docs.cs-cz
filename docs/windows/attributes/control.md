@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64c123784af81a534a6d6ff2a0fb3d2108ff6021
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: df3a3b17af4ccb55fffccdbe87c1ac8c39eba603
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789320"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057491"
 ---
 # <a name="control"></a>– ovládací prvek
 
@@ -72,4 +72,4 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](cp
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy třídy](class-attributes.md)<br/>
-[Atributy klíčových slov typedef, enum, union a struct](typedef-enum-union-and-struct-attributes.md)  
+[Atributy klíčových slov typedef, enum, union a struct](typedef-enum-union-and-struct-attributes.md)

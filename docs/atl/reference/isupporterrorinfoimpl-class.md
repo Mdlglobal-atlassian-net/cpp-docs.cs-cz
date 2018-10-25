@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a3f912f7ba3a5455f7583ba2a5036548ac65df2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1a6d5ec8a7cd93d9e7e3628ef1e07f94cb169a7a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022172"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053484"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>Isupporterrorinfoimpl – třída
 
@@ -38,7 +38,7 @@ Tato třída poskytuje výchozí implementaci třídy [ISupportErrorInfo rozhran
 
 ```
 template<const IID* piid>
-class ATL_NO_VTABLE ISupportErrorInfoImpl 
+class ATL_NO_VTABLE ISupportErrorInfoImpl
    : public ISupportErrorInfo
 ```
 

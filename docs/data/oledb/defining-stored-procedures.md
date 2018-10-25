@@ -1,7 +1,7 @@
 ---
 title: Definování uložených procedur | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,64 +18,64 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 769f2bf2c0ef6c2c92b4c0468569e91d399cea59
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: a9d5cbe04ac5ad23fef09d53e747dab8c4c4b53b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808443"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053134"
 ---
 # <a name="defining-stored-procedures"></a>Definování uložených procedur
 
-Před volání uložené procedury, musíte nejdřív definovat, pomocí [DEFINE_COMMAND](../../data/oledb/define-command.md) – makro. Při definování příkazu parametry s otazníkem (?) označují jako parametr značky:  
-  
-```cpp  
-DEFINE_COMMAND(CMySProcAccessor, _T("{INSERT {name, phone} into shippers  (?,?)}")  
-```  
-  
-Syntaxe (použití závorek a tak dále) používané v příkladech kódu v tomto tématu je specifická pro SQL Server. Syntaxe používaná v uložených procedurách může lišit podle poskytovatele, který používáte.  
-  
-V dalším kroku v mapě parametr zadejte parametry, které jste použili v příkazu, který obsahuje seznam parametrů v pořadí, ve kterém nastávají v příkazu:  
-  
-```cpp  
-BEGIN_PARAM_MAP(CMySProcAccessor)  
-   SET_PARAM_TYPE(DBPARAMIO_INPUT)  
-   COLUMN_ENTRY(1, m_Name)   // name corresponds to first '?' param  
-   SET_PARAM_TYPE(DBPARAMIO_INPUT)  
-   COLUMN_ENTRY(2, m_Phone)  // phone corresponds to second '?' param  
-END_PARAM_MAP()  
-```  
-  
-Předchozí příklad definuje uloženou proceduru, jak funguje. Obvykle pro efektivní použití kódu databáze obsahuje sadu předdefinovaných uložené procedury s názvy, například "Sales by Year" nebo "dt_adduserobject." Můžete zobrazit jejich definice pomocí SQL Server Enterprise Manager. Následující volání (umístění "?" parametry závisí na rozhraní uložené procedury):  
-  
-```cpp  
-DEFINE_COMMAND(CMySProcAccessor, _T("{CALL \"Sales by Year\" (?,?) }")  
-DEFINE_COMMAND(CMySProcAccessor, _T("{CALL dbo.dt_adduserobject (?,?) }")  
-```  
-  
-V dalším kroku deklarujte třídu příkazu:  
-  
-```cpp  
-class CMySProc : public CCommand<CAccessor<CMySProcAccessor>>  
-```  
-  
-Nakonec proveďte volání uložené procedury `OpenRowset` následujícím způsobem:  
-  
-```cpp  
-CSession m_session;  
+Před volání uložené procedury, musíte nejdřív definovat, pomocí [DEFINE_COMMAND](../../data/oledb/define-command.md) – makro. Při definování příkazu parametry s otazníkem (?) označují jako parametr značky:
 
-HRESULT OpenRowset()  
-{  
-   return CCommand<CAccessor<CMySProcAccessor>>::Open(m_session);  
-}  
-```  
-  
-Všimněte si také, že můžete definovat uložené procedury pomocí atributu databáze [db_command](../../windows/db-command.md) následujícím způsobem:  
-  
-```cpp  
-db_command("{ ? = CALL dbo.dt_adduserobject }")  
-```  
-  
-## <a name="see-also"></a>Viz také  
+```cpp
+DEFINE_COMMAND_EX(CMySProcAccessor, _T("{INSERT {name, phone} INTO shippers (?,?)}"))
+```
+
+Syntaxe (použití závorek a tak dále) používané v příkladech kódu v tomto tématu je specifická pro SQL Server. Syntaxe používaná v uložených procedurách může lišit podle poskytovatele, který používáte.
+
+V dalším kroku v mapě parametr zadejte parametry, které jste použili v příkazu, který obsahuje seznam parametrů v pořadí, ve kterém nastávají v příkazu:
+
+```cpp
+BEGIN_PARAM_MAP(CMySProcAccessor)
+   SET_PARAM_TYPE(DBPARAMIO_INPUT)
+   COLUMN_ENTRY(1, m_Name)   // name corresponds to first '?' param
+   SET_PARAM_TYPE(DBPARAMIO_INPUT)
+   COLUMN_ENTRY(2, m_Phone)  // phone corresponds to second '?' param
+END_PARAM_MAP()
+```
+
+Předchozí příklad definuje uloženou proceduru, jak funguje. Obvykle pro efektivní použití kódu databáze obsahuje sadu předdefinovaných uložené procedury s názvy, jako `Sales by Year` nebo `dt_adduserobject`. Můžete zobrazit jejich definice pomocí SQL Server Enterprise Manager. Následující volání (umístění *?* parametry jsou závislé na rozhraní uložené procedury):
+
+```cpp
+DEFINE_COMMAND_EX(CMySProcAccessor, _T("{CALL \"Sales by Year\" (?,?) }"))
+DEFINE_COMMAND_EX(CMySProcAccessor, _T("{CALL dbo.dt_adduserobject (?,?) }"))
+```
+
+V dalším kroku deklarujte třídu příkazu:
+
+```cpp
+class CMySProc : public CCommand<CAccessor<CMySProcAccessor>>
+```
+
+Nakonec proveďte volání uložené procedury `OpenRowset` následujícím způsobem:
+
+```cpp
+CSession m_session;
+
+HRESULT OpenRowset()
+{
+   return CCommand<CAccessor<CMySProcAccessor>>::Open(m_session);
+}
+```
+
+Všimněte si také, že můžete definovat uložené procedury pomocí atributu databáze [db_command](../../windows/db-command.md) následujícím způsobem:
+
+```cpp
+db_command("{ ? = CALL dbo.dt_adduserobject }")
+```
+
+## <a name="see-also"></a>Viz také
 
 [Použití uložených procedur](../../data/oledb/using-stored-procedures.md)

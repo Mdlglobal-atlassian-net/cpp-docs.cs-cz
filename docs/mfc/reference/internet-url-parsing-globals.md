@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c0ffae70ae2da4edab9326a913e597fe1434611
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 18ef64bc20ba963b248273be16af7748a798a1bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383763"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054706"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Analýzu internetových adres URL a pomocné rutiny
 
@@ -237,6 +237,7 @@ Pomocí této globální funkce určit typ internetového popisovače.
   ```
 DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *hQuery*<br/>
@@ -297,6 +298,7 @@ Vyvolá výjimku Internet.
 ```
    void AFXAPI AfxThrowInternetException(  DWORD dwContext,  DWORD dwError = 0 );
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *dwContext*<br/>
@@ -321,5 +323,4 @@ Je odpovědností zjistit příčinu založené na kód chyby operačního syst�
 [Makra a globální prvky](mfc-macros-and-globals.md)<br/>
 [CInternetException – třída](cinternetexception-class.md)<br/>
 [VYVOLÁNÍ VÝJIMKY](#throw)
-
 

@@ -16,26 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ea4a816053a548ac8e3292d0416fe68da2dc4296
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 423ed9b97900777160818b7699f8dac7b81e38a8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107643"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057528"
 ---
 # <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Sada záznamů: Deklarování třídy pro tabulku (ODBC)
 
-Toto téma platí pro třídy knihovny MFC rozhraní ODBC.  
-  
-Nejběžnější třídy sady záznamů se otevře jedné tabulky. Chcete-li deklarovat třídu sady záznamů pro jednu tabulku, použijte [průvodce příjemcem MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) z **přidat třídu** a vyberte každý sloupec, který má být pojmenováním odpovídající sady záznamů pole datových členů.  
-  
-Další způsoby využití sady záznamů patří:  
-  
-- Spojování dvou nebo více tabulek.  
-  
-- Obsahující výsledky předdefinovaný dotaz.  
-  
-## <a name="see-also"></a>Viz také  
+Toto téma platí pro třídy knihovny MFC rozhraní ODBC.
+
+Nejběžnější třídy sady záznamů se otevře jedné tabulky. Chcete-li deklarovat třídu sady záznamů pro jednu tabulku, použijte [průvodce příjemcem MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) z **přidat třídu** a vyberte každý sloupec, který má být pojmenováním odpovídající sady záznamů pole datových členů.
+
+Další způsoby využití sady záznamů patří:
+
+- Spojování dvou nebo více tabulek.
+
+- Obsahující výsledky předdefinovaný dotaz.
+
+## <a name="see-also"></a>Viz také
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Sada záznamů: Vytváření a uzavírání sad záznamů (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>

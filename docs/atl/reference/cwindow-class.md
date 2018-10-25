@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd4f5ac780b36e51be63aef7ce87884284542cbb
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 999e91f1f437077b90b2c8a0ea9f7ac8a4603080
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861938"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054668"
 ---
 # <a name="cwindow-class"></a>Cwindow – třída
 
@@ -499,7 +499,7 @@ Zobrazit [CheckDlgButton](/windows/desktop/api/winuser/nf-winuser-checkdlgbutton
 Ověří zadaný přepínač.
 
 ```
-BOOL CheckRadioButton(  
+BOOL CheckRadioButton(
     int nIDFirstButton,
     int nIDLastButton,
     int nIDCheckButton) throw();
@@ -667,7 +667,7 @@ Inicializuje [m_hWnd](#m_hwnd) člen *hWnd*, která ve výchozím nastavení má
 Aktualizuje zadaný strukturu více pozice okna pro určené okno.
 
 ```
-HDWP DeferWindowPos(  
+HDWP DeferWindowPos(
     HDWP hWinPosInfo,
     HWND hWndInsertAfter,
     int x,
@@ -720,7 +720,7 @@ HWND přidružené `CWindow` objektu.
 Vyplní pole se seznamem názvů všechny soubory odpovídající zadaná cesta nebo název souboru.
 
 ```
-int DlgDirList(  
+int DlgDirList(
     LPTSTR lpPathSpec,
     int nIDListBox,
     int nIDStaticPath,
@@ -736,7 +736,7 @@ Zobrazit [DlgDirList](/windows/desktop/api/winuser/nf-winuser-dlgdirlista) ve Wi
 Vyplní pole se seznamem názvů všechny soubory odpovídající zadaná cesta nebo název souboru.
 
 ```
-int DlgDirListComboBox(  
+int DlgDirListComboBox(
     LPTSTR lpPathSpec,
     int nIDComboBox,
     int nIDStaticPath,
@@ -752,7 +752,7 @@ Zobrazit [DlgDirListComboBox](/windows/desktop/api/winuser/nf-winuser-dlgdirlist
 Načte aktuální výběr ze seznamu.
 
 ```
-BOOL DlgDirSelect(  
+BOOL DlgDirSelect(
     LPTSTR lpString,
     int nCount,
     int nIDListBox) throw();
@@ -767,7 +767,7 @@ Zobrazit [DlgDirSelectEx](/windows/desktop/api/winuser/nf-winuser-dlgdirselectex
 Načte aktuální výběr z pole se seznamem.
 
 ```
-BOOL DlgDirSelectComboBox(  
+BOOL DlgDirSelectComboBox(
     LPTSTR lpString,
     int nCount,
     int nIDComboBox) throw();
@@ -927,7 +927,7 @@ Popisovač pro následné okna.
 Voláním této funkce získání ukazatele na rozhraní ovládacího prvku ActiveX, který je hostován složený ovládací prvek nebo dialogové okno hostování ovládacího prvku.
 
 ```
-HRESULT GetDlgControl(  
+HRESULT GetDlgControl(
     int nID,
     REFIID iid,
     void** ppCtrl) throw();
@@ -969,7 +969,7 @@ Zobrazit [GetDlgCtrlID](/windows/desktop/api/winuser/nf-winuser-getdlgctrlid) ve
 Načte ukazatel na rozhraní do ovládacího prvku ATL – hostování kontejnerů.
 
 ```
-HRESULT GetDlgHost(  
+HRESULT GetDlgHost(
     int nID,
     REFIID iid,
     void** ppHost) throw();
@@ -1011,7 +1011,7 @@ Zobrazit [GetDlgItem](/windows/desktop/api/winuser/nf-winuser-getdlgitem) ve Win
 Přeloží text ovládacího prvku na celé číslo.
 
 ```
-UINT GetDlgItemInt(  
+UINT GetDlgItemInt(
     int nID,
     BOOL* lpTrans = NULL,
     BOOL bSigned = TRUE) const throw();
@@ -1026,12 +1026,12 @@ Zobrazit [GetDlgItemInt](/windows/desktop/api/winuser/nf-winuser-getdlgitemint) 
 Načte text ovládacího prvku.
 
 ```
-UINT GetDlgItemText(  
+UINT GetDlgItemText(
     int nID,
     LPTSTR lpStr,
     int nMaxCount) const throw();
 
-BOOL GetDlgItemText(  
+BOOL GetDlgItemText(
     int nID,
     BSTR& bstrText) const throw();
 ```
@@ -1202,7 +1202,7 @@ Zobrazit [GetScrollPos](/windows/desktop/api/winuser/nf-winuser-getscrollpos) ve
 Načte rozsah posuvníku.
 
 ```
-BOOL GetScrollRange(  
+BOOL GetScrollRange(
     int nBar,
     LPINT lpMinPos,
     LPINT lpMaxPos) const throw();
@@ -1543,7 +1543,7 @@ Zobrazit [HideCaret](/windows/desktop/api/winuser/nf-winuser-hidecaret) ve Windo
 Zvýrazní nebo odebere zvýraznění z položky nabídek nejvyšší úrovně.
 
 ```
-BOOL HiliteMenuItem(  
+BOOL HiliteMenuItem(
     HMENU hMenu,
     UINT uHiliteItem,
     UINT uHilite) throw();
@@ -1785,12 +1785,12 @@ HWND m_hWnd throw() throw();
 Převede sadu bodů z okna souřadnicového prostoru na souřadnicového prostoru jiného okna.
 
 ```
-int MapWindowPoints(  
+int MapWindowPoints(
     HWND hWndTo,
     LPPOINT lpPoint,
     UINT nCount) const throw();
 
-int MapWindowPoints(  
+int MapWindowPoints(
     HWND hWndTo,
     LPRECT lpRect) const throw();
 ```
@@ -1806,7 +1806,7 @@ Druhá verze této metody můžete převést souřadnice [RECT](https://msdn.mic
 Zobrazí okno se zprávou.
 
 ```
-int MessageBox(  
+int MessageBox(
     LPCTSTR lpszText,
     LPCTSTR lpszCaption = NULL,
     UINT nType = MB_OK) throw();
@@ -1825,7 +1825,7 @@ Zobrazit [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) ve Win
 Upraví okno stylů `CWindow` objektu.
 
 ```
-BOOL ModifyStyle(  
+BOOL ModifyStyle(
     DWORD dwRemove,
     DWORD dwAdd,
     UINT nFlags = 0) throw();
@@ -1871,7 +1871,7 @@ Okno Změnit na rozšířené styly, zavolejte [ModifyStyleEx](#modifystyleex).
 Upravuje rozšířené styly oken nástroje `CWindow` objektu.
 
 ```
-BOOL ModifyStyleEx(  
+BOOL ModifyStyleEx(
     DWORD dwRemove,
     DWORD dwAdd,
     UINT nFlags = 0) throw();
@@ -1917,14 +1917,14 @@ Chcete-li upravit pomocí styly oken s regulární systému windows, zavolejte [
 Změní velikost a pozice okna.
 
 ```
-BOOL MoveWindow(  
+BOOL MoveWindow(
     int x,
     int y,
     int nWidth,
     int nHeight,
     BOOL bRepaint = TRUE) throw();
 
-BOOL MoveWindow(  
+BOOL MoveWindow(
     LPCRECT lpRect,
     BOOL bRepaint = TRUE) throw();
 ```
@@ -1980,7 +1980,7 @@ CWindow& operator= (HWND hWnd) throw();
 Umístí zprávu do fronty zpráv, které jsou spojené s vláknem, které se vytvoří okno.
 
 ```
-BOOL PostMessage(  
+BOOL PostMessage(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0) throw();
@@ -2077,7 +2077,7 @@ static RECT rcDefault;
 Aktualizuje zadaný obdélník nebo oblasti v klientské oblasti.
 
 ```
-BOOL RedrawWindow(  
+BOOL RedrawWindow(
     LPCRECT lpRectUpdate = NULL,
     HRGN hRgnUpdate = NULL,
     UINT flags = RDW_INVALIDATE | RDW_UPDATENOW | RDW_ERASE);
@@ -2114,7 +2114,7 @@ Zobrazit [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) ve Windo
 Změní velikost okna velikost oblasti zadaného klienta.
 
 ```
-BOOL ResizeClient(  
+BOOL ResizeClient(
     int nWidth,
     int nHeight,
     BOOL bRedraw = FALSE) throw();
@@ -2151,7 +2151,7 @@ Druhá verze této metody můžete převést souřadnice [RECT](https://msdn.mic
 Posune zadaný klientské oblasti.
 
 ```
-BOOL ScrollWindow(  
+BOOL ScrollWindow(
     int xAmount,
     int yAmount,
     LPCRECT lpRect = NULL,
@@ -2167,7 +2167,7 @@ Zobrazit [ScrollWindow](/windows/desktop/api/winuser/nf-winuser-scrollwindow) ve
 Posune zadaný klientské oblasti rozšířených o další funkce.
 
 ```
-int ScrollWindowEx(  
+int ScrollWindowEx(
     int dx,
     int dy,
     LPCRECT lpRectScroll,
@@ -2186,7 +2186,7 @@ Zobrazit [ScrollWindowEx](/windows/desktop/api/winuser/nf-winuser-scrollwindowex
 Odešle zprávu do ovládacího prvku.
 
 ```
-LRESULT SendDlgItemMessage(  
+LRESULT SendDlgItemMessage(
     int nID,
     UINT message,
     WPARAM wParam = 0,
@@ -2202,12 +2202,12 @@ Zobrazit [SendDlgItemMessage](/windows/desktop/api/winuser/nf-winuser-senddlgite
 Odešle zprávu do okna a nevrací dokud proceduru okna zpracovala zpráva.
 
 ```
-LRESULT SendMessage(  
+LRESULT SendMessage(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0) throw();
 
-static LRESULT SendMessage(  
+static LRESULT SendMessage(
     HWND hWnd,
     UINT message,
     WPARAM wParam,
@@ -2227,7 +2227,7 @@ Zobrazit [SendMessage](https://msdn.microsoft.com/library/windows/desktop/ms6449
 Odešle určenou zprávu na všechny bezprostředně podřízené `CWindow` objektu.
 
 ```
-void SendMessageToDescendants(  
+void SendMessageToDescendants(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0,
@@ -2257,7 +2257,7 @@ Pokud *bDeep* má hodnotu TRUE, kromě toho je zpráva odeslána do všech ostat
 Odešle zprávu do okna.
 
 ```
-BOOL SendNotifyMessage(  
+BOOL SendNotifyMessage(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0) throw();
@@ -2331,7 +2331,7 @@ V případě úspěchu předchozí identifikátor okna. jinak 0.
 Změní text ovládacího prvku na řetězcovou reprezentaci hodnoty celých čísel.
 
 ```
-BOOL SetDlgItemInt(  
+BOOL SetDlgItemInt(
     int nID,
     UINT nValue,
     BOOL bSigned = TRUE) throw();
@@ -2483,7 +2483,7 @@ Volání `SetRedraw` k povolení změn, které vyžadovaly překreslení nebo za
 Nastaví parametry posuvníku.
 
 ```
-int SetScrollInfo(  
+int SetScrollInfo(
     int nBar,
     LPSCROLLINFO lpScrollInfo,
     BOOL bRedraw = TRUE) throw();
@@ -2498,7 +2498,7 @@ Zobrazit [SetScrollInfo](/windows/desktop/api/winuser/nf-winuser-setscrollinfo) 
 Změny pozice posuvníku.
 
 ```
-int SetScrollPos(  
+int SetScrollPos(
     int nBar,
     int nPos,
     BOOL bRedraw = TRUE) throw();
@@ -2513,7 +2513,7 @@ Zobrazit [SetScrollPos](/windows/desktop/api/winuser/nf-winuser-setscrollpos) ve
 Změní rozsah posuvníku.
 
 ```
-BOOL SetScrollRange(  
+BOOL SetScrollRange(
     int nBar,
     int nMinPos,
     int nMaxPos,
@@ -2529,7 +2529,7 @@ Zobrazit [SetScrollRange](/windows/desktop/api/winuser/nf-winuser-setscrollrange
 Vytvoří událost časovače.
 
 ```
-UINT SetTimer(  
+UINT SetTimer(
     UINT nIDEvent,
     UINT nElapse,
     void (CALLBACK* lpfnTimer)(HWND, UINT, UINT, DWORD) = NULL) throw();
@@ -2597,7 +2597,7 @@ Zobrazit [SetWindowPlacement](https://msdn.microsoft.com/library/windows/desktop
 Nastaví velikost, umístění a Z pořadí.
 
 ```
-BOOL SetWindowPos(  
+BOOL SetWindowPos(
     HWND hWndInsertAfter,
     int x,
     int y,
@@ -2605,7 +2605,7 @@ BOOL SetWindowPos(
     int cy,
     UINT nFlags) throw();
 
-BOOL SetWindowPos(  
+BOOL SetWindowPos(
     HWND hWndInsertAfter,
     LPCRECT lpRect,
     UINT nFlags) throw();
@@ -2770,7 +2770,7 @@ Zobrazit [ValidateRgn](/windows/desktop/api/winuser/nf-winuser-validatergn) ve W
 Nápověda pro spuštění Windows.
 
 ```
-BOOL WinHelp(  
+BOOL WinHelp(
     LPCTSTR lpszHelp,
     UINT nCmd = HELP_CONTEXT,
     DWORD dwData = 0) throw();

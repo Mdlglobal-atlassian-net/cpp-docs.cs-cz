@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b20b5ea002ac16feb99707610fbe4556bf3254f7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b06302d330ec8677a3de9b3ccaebf0b7b237b0e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375991"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053888"
 ---
 # <a name="application-control"></a>Řízení aplikace
 
@@ -41,7 +41,6 @@ OLE vyžaduje podstatné kontrolu nad aplikacemi a objekty. OLE systémové knih
 |[Afxoleunlockcontrol –](#afxoleunlockcontrol)| Odemkne objekt pro vytváření tříd zadaného prvku. |
 |[Afxoleregisterserverclass –](#afxoleregisterserverclass)|Zaregistruje server v registru systému OLE.|
 |[Afxoleseteditmenu –](#afxoleseteditmenu)|Implementuje uživatelské rozhraní pro *typename* objekt příkazu.|
-
 
 ##  <a name="afxolecanexitapp"></a>  Afxolecanexitapp –
 
@@ -192,6 +191,7 @@ Zamkne objekt pro vytváření tříd zadaného ovládacího prvku tak, aby dyna
 BOOL AFXAPI AfxOleLockControl(  REFCLSID clsid  );
 BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *identifikátor CLSID*<br/>
@@ -357,6 +357,7 @@ Odemkne objekt pro vytváření tříd zadaného prvku.
 BOOL AFXAPI AfxOleUnlockControl( REFCLSID clsid );
 BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *identifikátor CLSID*<br/>

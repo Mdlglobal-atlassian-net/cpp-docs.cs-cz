@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2884abbf02c9eb244d6fb446c7158b708c211557
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d0dca0359ea385e3a30f5dab6e8745a2d567ec1e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46066450"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055252"
 ---
 # <a name="thread-local-storage"></a>Úložiště Thread Local
 
@@ -94,7 +94,7 @@ Když deklarujete staticky vázané vlákno lokálních proměnných, musí být
     Thread int tls_i = sizeof( tls_i )    /* Okay  */
     ```
 
-     Mějte na paměti, že operátor sizeof: výraz, který obsahuje proměnné, který je inicializován nepředstavuje odkaz sám na sebe a je povolen.
+   Mějte na paměti, že operátor sizeof: výraz, který obsahuje proměnné, který je inicializován nepředstavuje odkaz sám na sebe a je povolen.
 
 - Použití **__declspec(thread)** může kolidovat s [zpoždění načítání](../build/reference/linker-support-for-delay-loaded-dlls.md) importů knihoven DLL **.**
 

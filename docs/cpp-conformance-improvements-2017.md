@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebcb2e52f67cfe37c4954e530fd2b2393ae23b68
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: a4003868609d8ffd1ea3b29074bdd24c25442ad8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861691"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054446"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Vylepšení shody C++ v sadě Visual Studio 2017 verze 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158)
 
@@ -227,9 +227,9 @@ Následující příklad ukazuje chování C ++ 14 splňující podmínky:
 struct Derived;
 
 struct Base {
-    friend struct Derived;
+    friend struct Derived;
 private:
-    Base() {}
+    Base() {}
 };
 
 struct Derived : Base {};
@@ -247,9 +247,9 @@ Následující příklad ukazuje v sadě Visual Studio verze 15.7 v C ++ 17 chov
 struct Derived;
 
 struct Base {
-    friend struct Derived;
+    friend struct Derived;
 private:
-    Base() {}
+    Base() {}
 };
 
 struct Derived : Base {
@@ -1375,7 +1375,7 @@ Constexpr statické datové členy se teď implicitně vloženě, což znamená,
 
 ```cpp
 struct X {
-    static constexpr int size = 3;
+    static constexpr int size = 3;
 };
 const int X::size; // C5041
 ```
@@ -1588,7 +1588,7 @@ Oprava chyby, změnit výraz B() b\<T > ().
 
 ### <a name="constexpr-aggregate-initialization"></a>Inicializace agregace constexpr.
 
-Předchozí verze kompilátoru jazyka C++ zpracovány nesprávně inicializace agregace constexpr; se přijetí neplatný kód, ve kterém agregace init-list má příliš mnoho prvků a vytváří nesprávná funkce codegen pro něj. Následující kód je příkladem takového kódu: 
+Předchozí verze kompilátoru jazyka C++ zpracovány nesprávně inicializace agregace constexpr; se přijetí neplatný kód, ve kterém agregace init-list má příliš mnoho prvků a vytváří nesprávná funkce codegen pro něj. Následující kód je příkladem takového kódu:
 
 ```cpp
 #include <array>
@@ -1690,15 +1690,14 @@ Chcete-li chybu opravit, změňte `return` příkazu `return this->base_value;`.
 
 Standard jazyka C++ neumožňuje uživateli přidat dopředné deklarace nebo definice do oboru názvů `std`. Přidání definice nebo deklarace do oboru názvů `std` nebo do oboru názvů v rámci oboru názvů std nyní způsobí nedefinované chování.
 
-Někdy v budoucnu Microsoft přesune umístění, kde jsou definovány některé typy STL. Pokud k tomu dojde, přeruší stávající kód, který přidá dopředné deklarace do oboru názvů `std`. Nová upozornění, C4643, pomáhá identifikovat problémy tyto zdroje. Upozornění je povolená v **/výchozí** režimu a je vypnuto ve výchozím nastavení. Bude to mít vliv programy, které jsou kompilovány pomocí **/Wall** nebo **/WX**. 
+Někdy v budoucnu Microsoft přesune umístění, kde jsou definovány některé typy STL. Pokud k tomu dojde, přeruší stávající kód, který přidá dopředné deklarace do oboru názvů `std`. Nová upozornění, C4643, pomáhá identifikovat problémy tyto zdroje. Upozornění je povolená v **/výchozí** režimu a je vypnuto ve výchozím nastavení. Bude to mít vliv programy, které jsou kompilovány pomocí **/Wall** nebo **/WX**.
 
-Následující kód teď vyvolá C4643: *předat dál deklarace 'vektorové' v oboru názvů std není povolen podle standardu jazyka C++*. 
-
+Následující kód teď vyvolá C4643: *předat dál deklarace 'vektorové' v oboru názvů std není povolen podle standardu jazyka C++*.
 
 ```cpp
-namespace std { 
-    template<typename T> class vector; 
-} 
+namespace std {
+    template<typename T> class vector;
+}
 ```
 
 Chcete-li chybu opravit, použijte **zahrnují** direktiv místo Dopředná deklarace:
@@ -1714,106 +1713,106 @@ Standard jazyka C++ naznačuje, že kompilátor by měly vydávat Diagnostika p�
 Bez této chyby následující program zkompiluje, ale bude generovat nekonečná smyčka:
 
 ```cpp
-class X { 
-public: 
-    X(int, int); 
+class X {
+public:
+    X(int, int);
     X(int v) : X(v){}
-}; 
+};
 ```
 
 Aby se zabránilo nekonečnou smyčku, delegovat na jiný konstruktor:
 
 ```cpp
-class X { 
-public: 
+class X {
+public:
 
-    X(int, int); 
-    X(int v) : X(v, 0) {} 
-}; 
+    X(int, int);
+    X(int v) : X(v, 0) {}
+};
 ```
 
 ### <a name="offsetof-with-constant-expressions"></a>offsetof pomocí výrazů konstant
 
-[offsetof](c-runtime-library/reference/offsetof-macro.md) tradičně byl implementován použití makra, která vyžaduje [reinterpret_cast](cpp/reinterpret-cast-operator.md). Toto je neplatný v kontextech, které vyžadují konstantní výraz, ale to má povolené tradičně kompilátor C++ společnosti Microsoft. Offsetof – makro, který je dodáván jako součást STL správně používá vnitřní kompilátor (**__builtin_offsetof**), ale mnoho lidí použilo zdvih – makro definovat vlastní **offsetof**.  
+[offsetof](c-runtime-library/reference/offsetof-macro.md) tradičně byl implementován použití makra, která vyžaduje [reinterpret_cast](cpp/reinterpret-cast-operator.md). Toto je neplatný v kontextech, které vyžadují konstantní výraz, ale to má povolené tradičně kompilátor C++ společnosti Microsoft. Offsetof – makro, který je dodáván jako součást STL správně používá vnitřní kompilátor (**__builtin_offsetof**), ale mnoho lidí použilo zdvih – makro definovat vlastní **offsetof**.
 
 V sadě Visual Studio 2017 verze 15.8 omezí kompilátor oblastí, které tyto reinterpret_casts mohou objevit ve výchozím režimu mohla pomoci kódu v souladu s standardního chování jazyka C++. V části [/ permissive-](build/reference/permissive-standards-conformance.md), omezení jsou ještě přísnější. Používání výsledek offsetof na místech, které vyžadují konstantní výrazy mohou přinést v kódu, který vydá upozornění C4644 *využití modelu na základě – makro offsetof v konstantních výrazech je nestandardní; použití offsetof definované ve standardu jazyka C++ Knihovna místo toho* nebo C2975 *neplatný argument šablony, očekávané době kompilace konstantní výraz*.
 
-Následující kód vyvolá C4644 v **/výchozí** a **/std: c ++ 17** režimech a C2975 v **/ permissive-** režimu: 
+Následující kód vyvolá C4644 v **/výchozí** a **/std: c ++ 17** režimech a C2975 v **/ permissive-** režimu:
 
 ```cpp
-struct Data { 
-    int x; 
-}; 
+struct Data {
+    int x;
+};
 
-// Common pattern of user-defined offsetof 
-#define MY_OFFSET(T, m) (unsigned long long)(&(((T*)nullptr)->m)) 
+// Common pattern of user-defined offsetof
+#define MY_OFFSET(T, m) (unsigned long long)(&(((T*)nullptr)->m))
 
-int main() 
+int main()
 
-{ 
-    switch (0) { 
-    case MY_OFFSET(Data, x): return 0; 
-    default: return 1; 
-    } 
-} 
+{
+    switch (0) {
+    case MY_OFFSET(Data, x): return 0;
+    default: return 1;
+    }
+}
 ```
 
 Chcete-li chybu opravit, použijte **offsetof** definované prostřednictvím \<cstddef – >:
 
 ```cpp
-#include <cstddef>  
+#include <cstddef>
 
-struct Data { 
-    int x; 
-};  
+struct Data {
+    int x;
+};
 
-int main() 
-{ 
-    switch (0) { 
-    case offsetof(Data, x): return 0; 
-    default: return 1; 
-    } 
-} 
+int main()
+{
+    switch (0) {
+    case offsetof(Data, x): return 0;
+    default: return 1;
+    }
+}
 ```
-
 
 ### <a name="cv-qualifiers-on-base-classes-subject-to-pack-expansion"></a>Kvalifikátory CV na základní třídy v souladu s rozšíření balíčku
 
-Předchozí verze kompilátoru jazyka C++ společnosti Microsoft se nepodařilo rozpoznat, že má základní třída měli kvalifikátory cv, pokud byl také v souladu s rozšíření balíčku. 
+Předchozí verze kompilátoru jazyka C++ společnosti Microsoft se nepodařilo rozpoznat, že má základní třída měli kvalifikátory cv, pokud byl také v souladu s rozšíření balíčku.
 
-V sadě Visual Studio 2017 verze 15.8 v **/ permissive-** režimu následující kód vyvolá C3770 *'const S': není platnou základní třídu*: 
+V sadě Visual Studio 2017 verze 15.8 v **/ permissive-** režimu následující kód vyvolá C3770 *'const S': není platnou základní třídu*:
 
 ```cpp
-template<typename... T> 
-class X : public T... { };  
+template<typename... T>
+class X : public T... { };
 
-class S { };  
+class S { };
 
-int main() 
-{ 
-    X<const S> x; 
-} 
+int main()
+{
+    X<const S> x;
+}
 ```
+
 ### <a name="template-keyword-and-nested-name-specifiers"></a>klíčové slovo šablony a vnořené specifikátory názvů
 
-V **/ permissive-** režim, kompilátor nyní vyžaduje `template` – klíčové slovo předcházet název šablony, pokud jde o po vnořené název specifikátorem závislé. 
+V **/ permissive-** režim, kompilátor nyní vyžaduje `template` – klíčové slovo předcházet název šablony, pokud jde o po vnořené název specifikátorem závislé.
 
 Následující kód na **/ permissive-** režimu nyní vyvolá C7510: *"foo": použití závislé šablony názvu musí obsahovat předponu "Šablona". Poznámka: Přečtěte si referenční informace k vytvoření instance šablony třídy ' X<T>"Probíhá zkompilovat*:
 
 ```cpp
 template<typename T> struct Base
 {
-    template<class U> void foo() {} 
-}; 
+    template<class U> void foo() {}
+};
 
-template<typename T> 
-struct X : Base<T> 
-{ 
-    void foo() 
-    { 
-        Base<T>::foo<int>(); 
-    } 
-}; 
+template<typename T>
+struct X : Base<T>
+{
+    void foo()
+    {
+        Base<T>::foo<int>();
+    }
+};
 ```
 
 Oprava chyby, přidejte `template` – klíčové slovo chcete `Base<T>::foo<int>();` příkaz, jak je znázorněno v následujícím příkladu:
@@ -1823,16 +1822,16 @@ template<typename T> struct Base
 {
     template<class U> void foo() {}
 };
- 
-template<typename T> 
-struct X : Base<T> 
-{ 
-    void foo() 
-    { 
+
+template<typename T>
+struct X : Base<T>
+{
+    void foo()
+    {
         // Add template keyword here:
-        Base<T>::template foo<int>(); 
-    } 
-}; 
+        Base<T>::template foo<int>();
+    }
+};
 ```
 
 ## <a name="see-also"></a>Viz také:

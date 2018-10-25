@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88873c9ebde2ce03163e62a59f3dd6fffdd36849
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fdbf1ba3c4cfda4163076386def70c700c156aa7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090279"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057869"
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>Kontrolní výraz a uživatelem zadané zprávy (C++)
 
@@ -36,7 +36,7 @@ C++ jazyk podporuje tři mechanismy zpracování chyb, které vám pomůžou lad
 
 - [Static_assert](../cpp/static-assert.md) deklarace je v platnosti v době kompilace. Testuje kontrolní výrazy softwaru, jež jsou reprezentovány pomocí integrálního výrazu zadaného uživatelem, který lze převést na hodnotu typu Boolean. Je-li výraz vyhodnocen jako nula (false), kompilátor vyvolá uživatelem definovanou zprávu a kompilace selže s chybou.
 
-     Deklarace `static_assert` je zvláště užitečná pro šablony ladění, protože argumenty šablony mohou být součástí výrazu definovaného uživatelem.
+   Deklarace `static_assert` je zvláště užitečná pro šablony ladění, protože argumenty šablony mohou být součástí výrazu definovaného uživatelem.
 
 - [Vyhodnocení makra, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) – makro je v platnosti v době běhu. Vyhodnotí výraz definovaný uživatelem, a pokud je výsledek nula, systém vyvolá diagnostickou zprávu a ukončí aplikaci. Mnoho dalších maker, jako například[_ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) a tomuto makru _asserte –, ale vyvolává různé systémem nebo uživatelem definované diagnostické zprávy.
 

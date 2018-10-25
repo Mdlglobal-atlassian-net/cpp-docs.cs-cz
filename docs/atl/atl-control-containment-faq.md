@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28e22df4eba5a12806221beea1966d1c1cdeae46
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: af14755b9be9413feb3a519d09200577c9260c5a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46052905"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053706"
 ---
 # <a name="atl-control-containment-faq"></a>Nejčastější dotazy k používání kontejnerů ovládacích prvků v knihovně ATL
 
@@ -37,7 +37,7 @@ Hostování ovládacího prvku kódu ATL nevyžaduje, můžete použít libovoln
 |[CAxWindow2T](../atl/reference/caxwindow2t-class.md)|Zabalí **"AtlAxWinLic80"** okna, poskytuje metody pro vytvoření okna, vytvoření ovládacího prvku a/nebo připojení licencovaného ovládacího prvku do okna a načítají ukazatele rozhraní na objekt hostitele.|
 |[Ccomcompositecontrol –](../atl/reference/ccomcompositecontrol-class.md)|Slouží jako základní třída pro třídy ovládacích prvků ActiveX podle prostředku dialogového okna. Tyto ovládací prvky mohou obsahovat další ovládací prvky ActiveX.|
 |[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)|Slouží jako základní třída pro třídy dialogových oken podle prostředku dialogového okna. Takové dialogová okna může obsahovat ovládací prvky ActiveX.|
-|[CWindow](../atl/reference/cwindow-class.md)|Poskytuje metodu, [GetDlgControl](../atl/reference/cwindow-class.md#getdlgcontrol), který vrátí ukazatel rozhraní ovládacího prvku, zadané ID jeho hostitelské okno. Kromě toho obálek rozhraní Windows API vystavené `CWindow` obecně usnadnit správu okna.|  
+|[CWindow](../atl/reference/cwindow-class.md)|Poskytuje metodu, [GetDlgControl](../atl/reference/cwindow-class.md#getdlgcontrol), který vrátí ukazatel rozhraní ovládacího prvku, zadané ID jeho hostitelské okno. Kromě toho obálek rozhraní Windows API vystavené `CWindow` obecně usnadnit správu okna.|
 
 ## <a name="what-is-the-atl-control-hosting-api"></a>Co je knihovny ATL – hostování ovládacího prvku rozhraní API?
 
@@ -62,11 +62,11 @@ V ATL – hostování ovládacího prvku rozhraní API je sada funkcí, které u
 Nejprve sedm funkce volání [AtlAxWinInit](reference/composite-control-global-functions.md#atlaxwininit) implicitně.
 
 > [!NOTE]
->  Rozhraní API pro hostování ovládacího prvku tvoří základ pro podporu ATL pro používání kontejnerů ovládacích prvků ActiveX. Však není obvykle nutné volat tyto funkce přímo-li využít výhod nebo vytěžíte ATL obálkové třídy. Další informace najdete v tématu [která ATL – třídy usnadnění ActiveX používání kontejnerů ovládacích prvků](which-atl-classes-facilitate-activex-control-containment-q.md).  
+>  Rozhraní API pro hostování ovládacího prvku tvoří základ pro podporu ATL pro používání kontejnerů ovládacích prvků ActiveX. Však není obvykle nutné volat tyto funkce přímo-li využít výhod nebo vytěžíte ATL obálkové třídy. Další informace najdete v tématu [která ATL – třídy usnadnění ActiveX používání kontejnerů ovládacích prvků](which-atl-classes-facilitate-activex-control-containment-q.md).
 
 ## <a name="what-is-atlaxwin100"></a>Co je AtlAxWin100?
 
-`AtlAxWin100` je název třídy okna, která pomáhá poskytovat funkce pro hostování ovládacího prvku ATL. Při vytváření instance této třídy použijte proceduru okna automaticky rozhraní API pro hostování ovládacího prvku vytvořit hostitelský objekt přidružený k oknu a načíst ji pomocí ovládacího prvku, který zadáte v záhlaví okna. 
+`AtlAxWin100` je název třídy okna, která pomáhá poskytovat funkce pro hostování ovládacího prvku ATL. Při vytváření instance této třídy použijte proceduru okna automaticky rozhraní API pro hostování ovládacího prvku vytvořit hostitelský objekt přidružený k oknu a načíst ji pomocí ovládacího prvku, který zadáte v záhlaví okna.
 
 ## <a name="when-do-i-need-to-call-atlaxwininit"></a>Kdy potřebuji volat AtlAxWinInit?
 

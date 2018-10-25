@@ -1,7 +1,7 @@
 ---
 title: SafeInt – Functions | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 09/28/2018
+ms.date: 10/22/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 43960e70f1aad29fa4b8fc03517231c7658d155b
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 515bf6793a2b1546bc79998283104b704de7f1ca
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162578"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057282"
 ---
 # <a name="safeint-functions"></a>Funkce jazyka SafeInt
 
@@ -55,6 +55,9 @@ SafeInt – knihovna poskytuje několik funkcí, které lze použít bez vytvoř
 Tyto funkce umožňují snadno porovnat nebo provádění matematických operací na dva různé typy parametrů, aniž by bylo nutné je nejprve převést na stejný typ.
 
 Každá z těchto funkcí má dva typy šablon: `T` a `U`. Každý z těchto typů může být logická hodnota, znak nebo celočíselného typu. Integrální typy mohou být podepsaný nebo nepodepsaný řetězec a libovolné velikosti z 8 bitů na 64 bitů.
+
+> [!NOTE]
+> Nejnovější verzi této knihovny se nachází v [ https://github.com/dcleblanc/SafeInt ](https://github.com/dcleblanc/SafeInt).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 

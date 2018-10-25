@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67a0fd2af9bb8bf3ec11d5a4e2a38c195b18633c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7d29222b461091dcd72a0c894a138a4df15b9d4b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424245"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057286"
 ---
 # <a name="database-macros-and-globals"></a>Databázová makra a globální prvky
 
@@ -50,7 +50,6 @@ Před 4.2 knihovny MFC, makra `AFX_SQL_ASYNC` a `AFX_SQL_SYNC` přiřadil asynch
 |-|-|
 |[AfxDbInitModule –](#afxdbinitmodule)|Přidá podporu databáze pro běžné knihovny MFC DLL staticky propojené do MFC.|
 |[AfxGetHENV](#afxgethenv)|Načte popisovače prostředí ODBC aktuálně používána knihovnou MFC. Můžete použít tento ovladač v přímého volání rozhraní ODBC.|
-
 
 ## <a name="afxdbinitmodule"></a> AfxDbInitModule –
 
@@ -74,8 +73,6 @@ Ujistěte se, že k tomuto volání před voláním třídy base ani v žádném
 
 [Makra a globální prvky](mfc-macros-and-globals.md)
 
-
-
 ##  <a name="afx_odbc_call"></a>  AFX_ODBC_CALL
 
 Použijte toto makro volat jakékoli funkce ODBC API, která může vracet `SQL_STILL_EXECUTING`.
@@ -96,7 +93,6 @@ Funkce rozhraní ODBC API. Další informace o funkcích rozhraní API ODBC najd
 Před vyvoláním `AFX_ODBC_CALL`, je třeba deklarovat proměnnou, `nRetCode`, typu RETCODE.
 
 Všimněte si, že třídy knihovny MFC rozhraní ODBC teď použijte pouze synchronní zpracování. Aby bylo možné provést asynchronní operaci, musí volat funkce ODBC API `SQLSetConnectOption`. Další informace naleznete v tématu "Provádění funkce asynchronně" v sadě Windows SDK.
-
 
 ### <a name="example"></a>Příklad
 

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8a4ac19f9ead379b66d93a7be031bb53bc50fe5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7e9e62c1969d61f84319c0ffadf50f9f96534380
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46109337"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055477"
 ---
 # <a name="registry-data-exchange-macros"></a>Makra výměny dat registru
 
@@ -39,7 +39,7 @@ Tato makra výměny dat registru operacím.
 |[RDX_BINARY](#rdx_binary)|Zadaná položka registru se přidruží k zadané členské proměnné typu BYTE.|
 |[RDX_CSTRING_TEXT](#rdx_cstring_text)|Přidruží zadaný člen proměnné typu CString zadaná položka registru.|
 |[RDX_DWORD](#rdx_dword)|Přidruží zadaný člen proměnné typu DWORD zadaná položka registru.|
-|[RDX_TEXT](#rdx_text)|Přidruží zadaný člen proměnné typu TCHAR zadaná položka registru.|  
+|[RDX_TEXT](#rdx_text)|Přidruží zadaný člen proměnné typu TCHAR zadaná položka registru.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -80,10 +80,10 @@ Zadaná položka registru se přidruží k zadané členské proměnné typu BYT
 
 ```
 RDX_BINARY(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 
@@ -114,10 +114,10 @@ Přidruží zadaný člen proměnné typu CString zadaná položka registru.
 
 ```
 RDX_CSTRING_TEXT(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 
@@ -148,10 +148,10 @@ Přidruží zadaný člen proměnné typu DWORD zadaná položka registru.
 
 ```
 RDX_DWORD(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 
@@ -182,10 +182,10 @@ Přidruží zadaný člen proměnné typu TCHAR zadaná položka registru.
 
 ```
 RDX_TEXT(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 

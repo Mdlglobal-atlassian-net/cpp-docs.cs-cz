@@ -88,12 +88,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4e99227f32418b994ca0e678ae29dc12e716782
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0e0680bb1bed7973071eaabc3535574cb5f470b5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388261"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057631"
 ---
 # <a name="cmfcribbongallery-class"></a>Cmfcribbongallery – třída
 
@@ -189,11 +189,9 @@ void AddGroup(
     UINT uiImagesPaletteResID,
     int cxPaletteImage);
 
-
 void AddGroup(
     LPCTSTR lpszGroupName,
     CMFCToolBarImages& imagesGroup);
-
 
 void AddGroup(
     LPCTSTR lpszGroupName,
@@ -276,7 +274,6 @@ CMFCRibbonGallery (
     int nLargeImageIndex,
     CMFCToolBarImages& imagesPalette);
 
-
 CMFCRibbonGallery (
     UINT nID,
     LPCTSTR lpszText,
@@ -284,7 +281,6 @@ CMFCRibbonGallery (
     int nLargeImageIndex,
     UINT uiImagesPaletteResID=0,
     int cxPaletteImage=0);
-
 
 CMFCRibbonGallery (
     UINT nID,
@@ -371,21 +367,19 @@ Volejte tuto metodu za účelem povolení nebo zakázání bočním panelu Offic
 
 ##  <a name="getcompactsize"></a>  CMFCRibbonGallery::GetCompactSize
 
-
 ```
 virtual CSize GetCompactSize(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*
+[in] *primárního řadiče domény*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="getdroppeddown"></a>  CMFCRibbonGallery::GetDroppedDown
-
 
 ```
 virtual CMFCRibbonBaseElement* GetDroppedDown();
@@ -415,7 +409,6 @@ Název skupiny nachází na zadaném indexu. Předání neplatný index způsob�
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="getgroupoffset"></a>  CMFCRibbonGallery::GetGroupOffset
-
 
 ```
 virtual int GetGroupOffset() const;
@@ -493,21 +486,19 @@ ID příkazu aktuálně vybraného palety.
 
 ##  <a name="getregularsize"></a>  CMFCRibbonGallery::GetRegularSize
 
-
 ```
 virtual CSize GetRegularSize(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*
+[in] *primárního řadiče domény*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="getselecteditem"></a>  CMFCRibbonGallery::GetSelectedItem
-
 
 ```
 int GetSelectedItem() const;
@@ -518,7 +509,6 @@ int GetSelectedItem() const;
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="hasmenu"></a>  CMFCRibbonGallery::HasMenu
-
 
 ```
 virtual BOOL HasMenu() const;
@@ -558,7 +548,6 @@ Hodnota TRUE v případě změny velikosti nabídky se povolila; v opačném př
 
 ##  <a name="ismenuresizevertical"></a>  CMFCRibbonGallery::IsMenuResizeVertical
 
-
 ```
 BOOL IsMenuResizeVertical() const;
 ```
@@ -583,19 +572,17 @@ Hodnota TRUE v případě Office XP – vizuální styl postranní panel vykresl
 
 ##  <a name="onafterchangerect"></a>  CMFCRibbonGallery::OnAfterChangeRect
 
-
 ```
 virtual void OnAfterChangeRect(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*
+[in] *primárního řadiče domény*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondraw"></a>  CMFCRibbonGallery::OnDraw
-
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -603,7 +590,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *primárního řadiče domény*
+[in] *primárního řadiče domény*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
@@ -643,19 +630,17 @@ Mohou přepsat tuto metodu v odvozené třídě pro přizpůsobení vzhledu Gale
 
 ##  <a name="onenable"></a>  CMFCRibbonGallery::OnEnable
 
-
 ```
 virtual void OnEnable(BOOL bEnable);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bEnable*
+[in] *bEnable*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="onrtlchanged"></a>  CMFCRibbonGallery::OnRTLChanged
-
 
 ```
 virtual void OnRTLChanged(BOOL bIsRTL);
@@ -663,7 +648,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bIsRTL*
+[in] *bIsRTL*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
@@ -691,14 +676,13 @@ void RemoveItemToolTips();
 
 ##  <a name="selectitem"></a>  CMFCRibbonGallery::SelectItem
 
-
 ```
 void SelectItem(int nItemIndex);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nItemIndex*
+[in] *nItemIndex*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
@@ -806,7 +790,6 @@ Připojí barevnou paletu do Galerie pásu karet.
 
 ```
 void SetPalette(CMFCToolBarImages& imagesPalette);
-
 
 void SetPalette(
     UINT uiImagesPaletteResID,

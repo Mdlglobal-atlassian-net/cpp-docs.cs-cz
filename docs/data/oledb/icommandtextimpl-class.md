@@ -33,94 +33,94 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b73111fe05a7c752edda0c95f1289a125828d4a5
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: a2ddd7e1a4397b36daba8b354c84941d0d1c4d0e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082550"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057969"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl – třída
 
-Poskytuje implementaci pro [ICommandText](/previous-versions/windows/desktop/ms714914) rozhraní.  
-  
+Poskytuje implementaci pro [ICommandText](/previous-versions/windows/desktop/ms714914) rozhraní.
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-template <class T >  
-class ATL_NO_VTABLE ICommandTextImpl   
-   : public ICommandImpl<T, ICommandText>  
-```  
-  
-### <a name="parameters"></a>Parametry  
+template <class T >
+class ATL_NO_VTABLE ICommandTextImpl
+   : public ICommandImpl<T, ICommandText>
+```
+
+### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Příkaz třída odvozená z `ICommandTextImpl`. 
+Příkaz třída odvozená z `ICommandTextImpl`.
 
-## <a name="requirements"></a>Požadavky  
+## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** altdb.h  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="interface-methods"></a>Metody rozhraní  
-  
-|||  
-|-|-|  
-|[Getcommandtext –](#getcommandtext)|Vrátí text příkazu nastavil poslední volání [SetCommandText –](../../data/oledb/icommandtextimpl-setcommandtext.md).|  
-|[SetCommandText](#setcommandtext)|Nastaví text příkazu, nahraďte existující text příkazu.|  
-  
-### <a name="data-members"></a>Datové členy  
-  
-|||  
-|-|-|  
-|[m_strCommandText](#strcommandtext)|Slouží k uložení textu příkazu.|  
-  
-## <a name="remarks"></a>Poznámky  
+**Záhlaví:** altdb.h
 
-Povinné rozhraní na příkazy.  
- 
+## <a name="members"></a>Členové
+
+### <a name="interface-methods"></a>Metody rozhraní
+
+|||
+|-|-|
+|[Getcommandtext –](#getcommandtext)|Vrátí text příkazu nastavil poslední volání [SetCommandText –](../../data/oledb/icommandtextimpl-setcommandtext.md).|
+|[SetCommandText](#setcommandtext)|Nastaví text příkazu, nahraďte existující text příkazu.|
+
+### <a name="data-members"></a>Datové členy
+
+|||
+|-|-|
+|[m_strCommandText](#strcommandtext)|Slouží k uložení textu příkazu.|
+
+## <a name="remarks"></a>Poznámky
+
+Povinné rozhraní na příkazy.
+
 ## <a name="getcommandtext"></a> ICommandTextImpl::GetCommandText
 
-Vrátí text příkazu nastavil poslední volání [SetCommandText –](../../data/oledb/icommandtextimpl-setcommandtext.md).  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-STDMETHOD(GetCommandText)(GUID * pguidDialect,   
-   LPOLESTR * ppwszCommand);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+Vrátí text příkazu nastavil poslední volání [SetCommandText –](../../data/oledb/icommandtextimpl-setcommandtext.md).
 
-Zobrazit [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825) v *referenční informace pro OLE DB programátory*. *PguidDialect* ve výchozím nastavení je parametr ignorován.  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+STDMETHOD(GetCommandText)(GUID * pguidDialect, 
+   LPOLESTR * ppwszCommand);
+```
+
+#### <a name="parameters"></a>Parametry
+
+Zobrazit [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825) v *referenční informace pro OLE DB programátory*. *PguidDialect* ve výchozím nastavení je parametr ignorován.
 
 ## <a name="setcommandtext"></a> ICommandTextImpl::SetCommandText
 
-Nastaví text příkazu, nahraďte existující text příkazu.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-STDMETHOD(SetCommandText)(REFGUID rguidDialect,   
-   LPCOLESTR pwszCommand);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+Nastaví text příkazu, nahraďte existující text příkazu.
 
-Zobrazit [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757) v *referenční informace pro OLE DB programátory*. 
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+STDMETHOD(SetCommandText)(REFGUID rguidDialect, 
+   LPCOLESTR pwszCommand);
+```
+
+#### <a name="parameters"></a>Parametry
+
+Zobrazit [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="strcommandtext"></a> ICommandTextImpl::m_strCommandText
 
-Ukládá příkaz textový řetězec.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Ukládá příkaz textový řetězec.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-CComBSTR m_strCommandText;  
-```  
-  
-## <a name="see-also"></a>Viz také  
+CComBSTR m_strCommandText;
+```
+
+## <a name="see-also"></a>Viz také
 
 [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

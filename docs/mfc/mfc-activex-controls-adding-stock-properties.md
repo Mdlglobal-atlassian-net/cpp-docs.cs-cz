@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4100dc14a25a744e5c28ffd1b16119408d800656
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 038d33a81d96067089eb55affbad6991a62d129f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404511"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055200"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>MFC – ovládací prvky ActiveX: Přidání uložených vlastností
 
@@ -59,7 +59,7 @@ Přidání uložených vlastností vyžaduje méně kódu než přidání vlastn
 
 1. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat vlastnost**.
 
-     Tím se otevře [Průvodce přidáním vlastnosti](../ide/names-add-property-wizard.md).
+   Tím se otevře [Průvodce přidáním vlastnosti](../ide/names-add-property-wizard.md).
 
 1. V **název vlastnosti** klikněte **titulek**.
 

@@ -17,52 +17,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5798eeb4e99e4901ea83a26e4e570c18437ff445
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: f0dddb55ba724a80c3406188efa47a3fe97676a3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49989928"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057934"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>OLE DB – šablony, atributy a jiné implementace technologie
 
-## <a name="atl-ole-db-templates"></a>Šablony knihovny ATL technologie OLE DB  
+## <a name="atl-ole-db-templates"></a>Šablony knihovny ATL technologie OLE DB
 
-Šablony technologie OLE DB, které jsou součástí knihovny ATL (knihovnu Active Template Library), ujistěte se, databázové technologie OLE DB výkonné usnadňuje používání tím, že poskytuje třídy, které implementují mnoho běžně používaných rozhraní OLE DB. Spolu se tato šablona obsahuje knihovny podpora průvodce pro vytváření aplikací OLE DB starter.  
-  
-Tato šablona knihovny obsahuje dvě části:  
-  
-- **OLE DB – šablony příjemce** používaný k implementaci aplikace klienta (příjemce) technologie OLE DB.  
-  
-- **Šablony zprostředkovatele technologie OLE DB** používaný k implementaci aplikace serveru (poskytovatel) technologie OLE DB.  
-  
-Použití šablony technologie OLE DB, byste měli vědět, jak šablon jazyka C++, COM a rozhraní OLE DB. Pokud nejste obeznámeni s OLE DB, přečtěte si téma [OLE DB referenční informace pro programátory](/previous-versions/windows/desktop/ms713643).  
-  
-Další informace můžete:  
-  
-- Přečtěte si témata o [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md) nebo [šablony zprostředkovatele technologie OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md).  
-  
-- Vytvoření [příjemce technologie OLE DB](../../data/oledb/creating-an-ole-db-consumer.md) nebo [zprostředkovatele OLE DB](../../data/oledb/creating-an-ole-db-provider.md).  
-  
-- Zobrazit seznam [třídy příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) nebo [třídy zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-reference.md).  
-  
-- Zobrazit seznam [OLE DB – Ukázky šablon](https://github.com/Microsoft/VCSamples).  
-  
-- Zobrazit [referenční informace pro OLE DB programátory](/previous-versions/windows/desktop/ms713643) (ve Windows SDK).  
-  
-## <a name="ole-db-attributes"></a>Atributy technologie OLE DB  
+Šablony technologie OLE DB, které jsou součástí knihovny ATL (knihovnu Active Template Library), ujistěte se, databázové technologie OLE DB výkonné usnadňuje používání tím, že poskytuje třídy, které implementují mnoho běžně používaných rozhraní OLE DB. Spolu se tato šablona obsahuje knihovny podpora průvodce pro vytváření aplikací OLE DB starter.
 
-[Atributy příjemce technologie OLE DB](../../windows/ole-db-consumer-attributes.md) poskytují pohodlný způsob, jak vytvořit příjemci knihovny OLE DB. OLE DB atributy vloží kód založený na [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-reference.md) k vytvoření a zprostředkovatele pracovní technologie OLE DB. Pokud je třeba zadat funkce nepodporované atributy, můžete použít šablony technologie OLE DB ve spojení s atributy ve vašem kódu.  
-  
-## <a name="mfc-ole-db-classes"></a>Třídy MFC OLE DB  
+Tato šablona knihovny obsahuje dvě části:
 
-Knihovna MFC má jednu třídu, [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md), který zobrazuje záznamy databáze v ovládacích prvcích. Zobrazení je připojený přímo k zobrazení formuláře `CRowset` objektu a pole se zobrazí `CRowset` objektu v ovládacích prvcích šablony dialogového okna. Také poskytuje výchozí implementaci pro přechod na první další, předchozí nebo poslední záznam a rozhraní pro aktualizace záznamu aktuálně pro zobrazení. Další informace naleznete v tématu `COleDBRecordView`.  
-  
-## <a name="ole-db-sdk-interfaces"></a>Rozhraní OLE DB SDK  
+- **OLE DB – šablony příjemce** používaný k implementaci aplikace klienta (příjemce) technologie OLE DB.
 
-V případech, kdy šablony technologie OLE DB nepodporují funkci OLE DB budete muset použít samotné rozhraní OLE DB. Další informace najdete v tématu [OLE DB referenční informace pro programátory](/previous-versions/windows/desktop/ms713643) v sadě Windows SDK.  
-  
-## <a name="see-also"></a>Viz také  
+- **Šablony zprostředkovatele technologie OLE DB** používaný k implementaci aplikace serveru (poskytovatel) technologie OLE DB.
+
+Použití šablony technologie OLE DB, byste měli vědět, jak šablon jazyka C++, COM a rozhraní OLE DB. Pokud nejste obeznámeni s OLE DB, přečtěte si téma [OLE DB referenční informace pro programátory](/previous-versions/windows/desktop/ms713643).
+
+Další informace můžete:
+
+- Přečtěte si témata o [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md) nebo [šablony zprostředkovatele technologie OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md).
+
+- Vytvoření [příjemce technologie OLE DB](../../data/oledb/creating-an-ole-db-consumer.md) nebo [zprostředkovatele OLE DB](../../data/oledb/creating-an-ole-db-provider.md).
+
+- Zobrazit seznam [třídy příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) nebo [třídy zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-reference.md).
+
+- Zobrazit seznam [OLE DB – Ukázky šablon](https://github.com/Microsoft/VCSamples).
+
+- Zobrazit [referenční informace pro OLE DB programátory](/previous-versions/windows/desktop/ms713643) (ve Windows SDK).
+
+## <a name="ole-db-attributes"></a>Atributy technologie OLE DB
+
+[Atributy příjemce technologie OLE DB](../../windows/ole-db-consumer-attributes.md) poskytují pohodlný způsob, jak vytvořit příjemci knihovny OLE DB. OLE DB atributy vloží kód založený na [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-reference.md) k vytvoření a zprostředkovatele pracovní technologie OLE DB. Pokud je třeba zadat funkce nepodporované atributy, můžete použít šablony technologie OLE DB ve spojení s atributy ve vašem kódu.
+
+## <a name="mfc-ole-db-classes"></a>Třídy MFC OLE DB
+
+Knihovna MFC má jednu třídu, [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md), který zobrazuje záznamy databáze v ovládacích prvcích. Zobrazení je připojený přímo k zobrazení formuláře `CRowset` objektu a pole se zobrazí `CRowset` objektu v ovládacích prvcích šablony dialogového okna. Také poskytuje výchozí implementaci pro přechod na první další, předchozí nebo poslední záznam a rozhraní pro aktualizace záznamu aktuálně pro zobrazení. Další informace naleznete v tématu `COleDBRecordView`.
+
+## <a name="ole-db-sdk-interfaces"></a>Rozhraní OLE DB SDK
+
+V případech, kdy šablony technologie OLE DB nepodporují funkci OLE DB budete muset použít samotné rozhraní OLE DB. Další informace najdete v tématu [OLE DB referenční informace pro programátory](/previous-versions/windows/desktop/ms713643) v sadě Windows SDK.
+
+## <a name="see-also"></a>Viz také
 
 [Programování v architektuře OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Přehled programování v architektuře OLE DB](../../data/oledb/ole-db-programming-overview.md)

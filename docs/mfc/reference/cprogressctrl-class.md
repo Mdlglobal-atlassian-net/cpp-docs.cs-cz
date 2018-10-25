@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6a5668a5d9c179f37e7056de6ae17a25c1b4ebe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b14a3e4fcfbd8287440dddf9a3f660b3bd47911
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393493"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055161"
 ---
 # <a name="cprogressctrl-class"></a>Cprogressctrl – třída
 
@@ -510,7 +510,6 @@ void SetRange(
     short nLower,
     short nUpper);
 
-
 void SetRange32(
     int nLower,
     int nUpper);
@@ -618,5 +617,4 @@ Přírůstek krok nastavuje `CProgressCtrl::SetStep` členskou funkci.
 [Ukázka CMNCTRL2 knihovny MFC](../../visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-
 

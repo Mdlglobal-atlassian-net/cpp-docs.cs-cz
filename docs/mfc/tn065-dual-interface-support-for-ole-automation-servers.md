@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 837149397ec45ebd8b41808b170b9f5e25146d6a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c079201b92b6eaf3ef372bf04ab4785598c3b2bf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387689"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053965"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065: Podpora duálního rozhraní u automatizačních serverů OLE
 
@@ -328,7 +328,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
     hr = MAKE_HRESULT(SEVERITY_ERROR, FACILITY_ITF, (e->m_wCode + 0x200));
     ```
 
-     Tím se vytvoří `HRESULT` specifické pro rozhraní, který způsobil výjimku. Kód chyby je posunut 0x200, aby se zabránilo konfliktům s definovaných systémem `HRESULT`s pro standardní rozhraní OLE.
+   Tím se vytvoří `HRESULT` specifické pro rozhraní, který způsobil výjimku. Kód chyby je posunut 0x200, aby se zabránilo konfliktům s definovaných systémem `HRESULT`s pro standardní rozhraní OLE.
 
 - [Cmemoryexception –](../mfc/reference/cmemoryexception-class.md) – v takovém případě `E_OUTOFMEMORY` je vrácena.
 

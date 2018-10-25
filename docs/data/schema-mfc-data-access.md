@@ -20,20 +20,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7ff1759203593cd556a91cbe17b93388488a2b07
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 597b3870dbfc70b6e1ac392a45491ee0f1804c2f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46091241"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055421"
 ---
 # <a name="schema--mfc-data-access"></a>Schéma (přístup k datům MFC)
 
-Schéma databáze popisuje aktuální struktura tabulky a zobrazení databáze v databázi. Obecně platí generované v Průvodci kód předpokládá, že nedojde ke změně schématu pro tabulku nebo tabulky přistupuje na sadu záznamů, ale databázové třídy můžete vyřešit některé změny schématu, jako je například přidání, změna uspořádání nebo odstranění nevázaných sloupců. Pokud tabulka změní, musíte ručně aktualizovat sadu záznamů tabulky a zkompilovat aplikaci znovu.  
-  
-Můžete doplnit generované v Průvodci kód vypořádat s databází, jejichž schématu není úplně známý v době kompilace. Další informace najdete v tématu [sada záznamů: dynamické vazby dat sloupců (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).  
-  
-## <a name="see-also"></a>Viz také  
+Schéma databáze popisuje aktuální struktura tabulky a zobrazení databáze v databázi. Obecně platí generované v Průvodci kód předpokládá, že nedojde ke změně schématu pro tabulku nebo tabulky přistupuje na sadu záznamů, ale databázové třídy můžete vyřešit některé změny schématu, jako je například přidání, změna uspořádání nebo odstranění nevázaných sloupců. Pokud tabulka změní, musíte ručně aktualizovat sadu záznamů tabulky a zkompilovat aplikaci znovu.
+
+Můžete doplnit generované v Průvodci kód vypořádat s databází, jejichž schématu není úplně známý v době kompilace. Další informace najdete v tématu [sada záznamů: dynamické vazby dat sloupců (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
+
+## <a name="see-also"></a>Viz také
 
 [Přístup k datům programování knihovny MFC nebo ATL)](../data/data-access-programming-mfc-atl.md)<br/>
 [SQL](../data/odbc/sql.md)<br/>

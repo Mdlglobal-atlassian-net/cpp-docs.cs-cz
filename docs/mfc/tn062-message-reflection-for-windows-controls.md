@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cb576ba6ce532bce15b9dda2aa598649044c2d8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 994095042dc473fda315b6d842d9ec9355ff3671
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378008"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055395"
 ---
 # <a name="tn062-message-reflection-for-windows-controls"></a>TN062: Reflexe zprávy pro ovládací prvky Windows
 
@@ -126,7 +126,7 @@ Tento jednoduchý příklad vytvoří ovládací prvek opakovaně volat `CYellow
 
 1. Vytvoření nového dialogového okna v existující aplikaci. Další informace najdete v tématu [editoru dialogového okna](../windows/dialog-editor.md) tématu.
 
-     Musí mít aplikace 00Z vyvíjet opakovaně použitelné ovládací prvek. Pokud nemáte stávající aplikace pro použití, vytvořte aplikace založené na dialogu pomocí AppWizard.
+   Musí mít aplikace 00Z vyvíjet opakovaně použitelné ovládací prvek. Pokud nemáte stávající aplikace pro použití, vytvořte aplikace založené na dialogu pomocí AppWizard.
 
 2. S projektem načtena do jazyka Visual C++, použijte ClassWizard vytvořte novou třídu s názvem `CYellowEdit` na základě `CEdit`.
 
@@ -145,7 +145,7 @@ Tento jednoduchý příklad vytvoří ovládací prvek opakovaně volat `CYellow
 
 5. Pomocí ClassWizard, přidejte obslužnou rutinu pro reflektovaný WM_CTLCOLOR – zpráva k vaší `CYellowEdit` třídy. Všimněte si, že znaménka rovnosti před název zprávy v seznam zpráv, který dokáže zpracovat označuje, že zprávy se projeví. To je popsáno v [definování obslužné rutiny zpráv pro zprávy projeví](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).
 
-     ClassWizard přidá následující funkce – makro a skeleton mapování zpráv za vás:
+   ClassWizard přidá následující funkce – makro a skeleton mapování zpráv za vás:
 
     ```cpp
     ON_WM_CTLCOLOR_REFLECT()

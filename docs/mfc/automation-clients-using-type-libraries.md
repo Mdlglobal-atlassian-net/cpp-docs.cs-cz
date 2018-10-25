@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 421040024e5dd95fb39bdc78cd54f3f7dc49bf83
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 001dfb29a5ac0f6d93b0715bd2b86ccd60e91259
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377707"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054602"
 ---
 # <a name="automation-clients-using-type-libraries"></a>Klienti automatizace: Použití knihoven typů
 
@@ -54,9 +54,9 @@ Pokud jste se rozhodli zahrnují Automation při vytvoření projektu jazyka Vis
     > [!NOTE]
     >  Rozhraní můžete vybrat z víc než jedné knihovny typů.
 
-     Vyberte rozhraní, dvakrát klikněte na ně nebo klikněte na tlačítko **přidat** tlačítko. Pokud tak učiníte, názvy tříd, odeslání se zobrazí v **generované třídy** pole. Můžete upravit názvy tříd v `Class` pole.
+   Vyberte rozhraní, dvakrát klikněte na ně nebo klikněte na tlačítko **přidat** tlačítko. Pokud tak učiníte, názvy tříd, odeslání se zobrazí v **generované třídy** pole. Můžete upravit názvy tříd v `Class` pole.
 
-     **Souboru** pole zobrazí soubor, ve kterém se deklarovat třídu. (můžete upravit tento soubor název). Pokud chcete mít záhlaví tak implementační informace, které jsou napsané v existující soubory nebo na jiný adresář než adresáře projektu, můžete použít také na tlačítko Procházet a vyberte další soubory.
+   **Souboru** pole zobrazí soubor, ve kterém se deklarovat třídu. (můžete upravit tento soubor název). Pokud chcete mít záhlaví tak implementační informace, které jsou napsané v existující soubory nebo na jiný adresář než adresáře projektu, můžete použít také na tlačítko Procházet a vyberte další soubory.
 
     > [!NOTE]
     >  Všechny třídy odeslání pro vybrané rozhraní zařadí do zde zadaného souboru. Pokud chcete rozhraní být deklarován v samostatných záhlaví, musíte spustit tohoto průvodce pro každý soubor hlaviček, které chcete vytvořit.
@@ -66,7 +66,7 @@ Pokud jste se rozhodli zahrnují Automation při vytvoření projektu jazyka Vis
 
 1. Klikněte na tlačítko **Dokončit**.
 
-     Průvodce potom psát kód pro odesílání třídy pomocí zadané třídy a názvy souborů.
+   Průvodce potom psát kód pro odesílání třídy pomocí zadané třídy a názvy souborů.
 
 ## <a name="see-also"></a>Viz také
 

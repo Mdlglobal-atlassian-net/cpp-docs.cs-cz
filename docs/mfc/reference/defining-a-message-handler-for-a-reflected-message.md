@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26345a95559000815ed7d2e2cc336892d619969b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 104f9e0be67a350a1725dfbcd2bf234a8bc79553
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413741"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052561"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>Definování obslužné rutiny zpráv pro zrcadlené zprávy
 
@@ -53,7 +53,7 @@ Vytvoření [ovládacího prvku ActiveX](../../mfc/activex-controls-on-the-inter
 
 1. Klikněte na navrhovaný název tak, aby přijímal. Obslužná rutina se přidá do vašeho projektu.
 
-     V pravém sloupci reflektované zprávy okna se zobrazí názvy obslužných rutin zpráv, které jste přidali.
+   V pravém sloupci reflektované zprávy okna se zobrazí názvy obslužných rutin zpráv, které jste přidali.
 
 9. Pokud chcete upravit nebo odstranit popisovač zpráv, opakujte kroky 4 až 7. Klikněte na buňku obsahující název obslužné rutiny na upravit nebo odstranit a klikněte na příslušnou úlohu.
 

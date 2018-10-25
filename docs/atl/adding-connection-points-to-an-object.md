@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdaf4cf8e1c2f6a062c133ab9e0427cab1d3d094
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 685f1b7d24e781dbee6d67b325b059f09ca9bf4c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762545"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054212"
 ---
 # <a name="adding-connection-points-to-an-object"></a>Přidání bodů připojení objektu
 
@@ -38,15 +38,15 @@ Průvodce implementací bodu připojení v obou případech se používá knihov
 
 1. Definování dispinterface v bloku knihovny ze souboru IDL. Pokud je povolena podpora pro spojovací body při tvorbě ovládacího prvku pomocí Průvodce ovládacími prvky ATL, dispinterface už vytvořili. Pokud jste nepovolili podporu pro spojovací body při tvorbě ovládacího prvku, je třeba ručně přidat dispinterface do souboru IDL. Následuje příklad dispinterface. Odchozí rozhraní nejsou musí být odesílajících rozhraních, ale mnoho skriptovacích jazyků, jako jsou VBScript a JScript vyžadují, proto tento příklad používá dva odesílající rozhraní:
 
-     [!code-cpp[NVC_ATL_Windowing#81](../atl/codesnippet/cpp/adding-connection-points-to-an-object_1.idl)]
+   [!code-cpp[NVC_ATL_Windowing#81](../atl/codesnippet/cpp/adding-connection-points-to-an-object_1.idl)]
 
-     Pomocí nástroje uuidgen.exe nebo guidgen.exe generování identifikátoru GUID.
+   Pomocí nástroje uuidgen.exe nebo guidgen.exe generování identifikátoru GUID.
 
 2. Přidat dispinterface jako `[default,source]` rozhraní v konstruktoru coclass pro objekt v souboru IDL projektu. Znovu, pokud je povolena podpora pro spojovací body při tvorbě ovládacího prvku, Průvodce ovládacím prvkem ATL vytvoří `[default,source`] položka. Chcete-li ručně přidat tuto položku, přidejte řádek tučně:
 
-     [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]
+   [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]
 
-     Soubor .idl [KR](../visual-cpp-samples.md) ukázky knihovny ATL pro příklad.
+   Soubor .idl [KR](../visual-cpp-samples.md) ukázky knihovny ATL pro příklad.
 
 3. Zobrazení tříd můžete přidat vlastnosti a metody pro rozhraní události. Klikněte pravým tlačítkem na třídu v zobrazení tříd, přejděte na **přidat** na místní nabídku a klikněte na **přidat bod připojení**.
 
@@ -56,7 +56,7 @@ Průvodce implementací bodu připojení v obou případech se používá knihov
 
    - Přidáte položku do mapy bodu připojení.
 
-     Zobrazí se také seznam všech knihoven typů ve vašem počítači. Byste měli používat jenom jednu z těchto jiných knihovnách typů k definování spojovací bod, pokud chcete implementovat přesně stejné odchozí rozhraní v jiné knihovny typů.
+   Zobrazí se také seznam všech knihoven typů ve vašem počítači. Byste měli používat jenom jednu z těchto jiných knihovnách typů k definování spojovací bod, pokud chcete implementovat přesně stejné odchozí rozhraní v jiné knihovny typů.
 
 ### <a name="to-reuse-a-connection-point-interface-defined-in-another-type-library"></a>Pro opětovné použití rozhraní bodu připojení definovaný v jiné knihovny typů
 

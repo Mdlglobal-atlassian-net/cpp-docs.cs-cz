@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a4dbf1b085ca5ffddd87396fc367bf19f2ad02e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 841a140236c092ad14501698db90007bce0322ec
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383051"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054875"
 ---
 # <a name="ddxdhtml-helper-macros"></a>Pomocné rutiny Ddx_dhtml
 
@@ -58,8 +58,6 @@ Pomocné rutiny ddx_dhtml umožňují snadný přístup k běžně používanýc
 ## <a name="ddx_dhtml_anchor_href"></a> DDX_DHtml_Anchor_Href
 
 Nastavuje nebo načítá cílový bod adresy URL nebo ukotvení.
-
-
 
 ```
 DDX_DHtml_Anchor_Href(
@@ -113,8 +111,6 @@ Toto makro volá [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtm
 
 Nastavuje nebo načítá HTML mezi úvodní a koncovou značkou aktuálního prvku.
 
-
-
 ```
 DDX_DHtml_ElementInnerHtml(
     CDataExchange* dx,
@@ -137,12 +133,9 @@ Hodnota, která se vyměňují.
 
 Toto makro volá [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funkce využívá DISPID_IHTMLELEMENT_INNERHTML dispatch ID.
 
-
 ## <a name="ddx_dhtml_elementinnertext"></a>  DDX_DHtml_ElementInnerText
 
 Nastavuje nebo načítá text mezi počáteční a koncovou značku aktuálního prvku.
-
-
 
 ```
 DDX_DHtml_ElementInnerText(
@@ -224,8 +217,6 @@ Toto makro volá [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtm
 
 Nastavuje nebo načítá adresy URL přidružené rámce.
 
-
-
 ```
 DDX_DHtml_IFrame_Src(
     CDataExchange* dx,
@@ -275,7 +266,6 @@ Hodnota, která se vyměňují.
 Při použití makra DDX_DHtml_Img_Src načíst vlastnost src pro IMAGE element, image objektu aplikace Internet Explorer vrátí plně uvozovacími znaky adresy URL pro zdroj obrázku. Například pokud používáte – makro DDX_DHtml_Img_Src nastavit vlastnost src elementu IMAGE na řetězec "některé zajímavé obrázek", pokud načítáte tuto vlastnost, Internet Explorer vrátí řetězec "res://d:\myapplication\myapp.exe/some% 20interesting % 20picture."
 
 Toto makro volá [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funkce využívá DISPID_IHTMLIMGELEMENT_SRC dispatch ID.
-
 
 ## <a name="see-also"></a>Viz také
 

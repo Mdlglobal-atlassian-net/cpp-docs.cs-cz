@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb37637cbfc2ec0af96ed339da6e71cf349797e2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b53175e46cfa858a73b581dfefc78047e96380d6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402873"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058946"
 ---
 # <a name="mapping-messages-to-functions"></a>Mapování zpráv na funkce
 
@@ -42,7 +42,7 @@ Použijete-li vytvořit novou třídu odvozenou z jedné třídy rámec zobrazen
     > [!NOTE]
     >  **Zprávy** tlačítko je k dispozici při výběru názvu třídy v zobrazení tříd nebo když kliknete na okno zdrojového kódu.
 
-     Pokud váš projekt obsahuje obslužné rutiny pro zprávy, název obslužné rutiny zobrazí v pravém sloupci vedle zprávy.
+   Pokud váš projekt obsahuje obslužné rutiny pro zprávy, název obslužné rutiny zobrazí v pravém sloupci vedle zprávy.
 
 1. Pokud zpráva nemá žádná obslužná rutina, pak klikněte na buňku v pravém sloupci v okně Vlastnosti, chcete-li zobrazit navrhovaný název obslužné rutiny jako \<Přidat >*HandlerName*. (Například obslužná rutina zprávy WM_TIMER navrhuje \<Přidat >`OnTimer`).
 

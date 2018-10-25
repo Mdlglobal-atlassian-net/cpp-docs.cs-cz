@@ -17,40 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4dd8c62e376b3e160dcc0b6a5da9e2eb0b28cf8c
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 1433b51a6dfe6f558b98360812e694d42ebfb9f5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49989954"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051950"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Použití existující sady záznamů ADO
 
-Pokud chcete kombinovat technologie OLE DB – šablony příjemce a objekty aktivní Data (ADO), použijte ADO otevřít sadu záznamů (odpovídající sady řádků v šablony příjemce technologie OLE DB). Až budete mít na sadu záznamů, proveďte postup pro připojení sady řádků OLE DB:  
-  
-1. Volání `QueryInterface` pro `IRowset` a `IAccessor` ukazatele.  
-  
-    ```cpp  
-    IRowset* lpRowset = NULL;  
-    IAccessor* lpAccessor = NULL;  
-    lpUnk->QueryInterface(IID_IRowset, (void**)&lpRowset);  
-    lpUnk->QueryInterface(IID_IAccessor, (void**)&lpAccessor);  
-    ```  
-  
+Pokud chcete kombinovat technologie OLE DB – šablony příjemce a objekty aktivní Data (ADO), použijte ADO otevřít sadu záznamů (odpovídající sady řádků v šablony příjemce technologie OLE DB). Až budete mít na sadu záznamů, proveďte postup pro připojení sady řádků OLE DB:
+
+1. Volání `QueryInterface` pro `IRowset` a `IAccessor` ukazatele.
+
+    ```cpp
+    IRowset* lpRowset = NULL;
+    IAccessor* lpAccessor = NULL;
+    lpUnk->QueryInterface(IID_IRowset, (void**)&lpRowset);
+    lpUnk->QueryInterface(IID_IAccessor, (void**)&lpAccessor);
+    ```
+
     > [!NOTE]
-    > *lpUnk* odkazuje `IUnknown` objekt sady záznamů ADO.  
-  
-1. Připojení k jejich příslušné třídy šablony příjemce technologie OLE DB přistupující objekt a řádků.  
-  
-    ```cpp  
-    CRowset rs;  
-    CAccessor accessor;  
-  
-    accessor.AddAccessorInfo(0ul);      // 0 is the ordinal of an ADO accessor  
-    rs.m_spRowset.Attach(lpRowset);      // use the Attach method of CComPtr<>  
-    rs.SetAccessor(accessor);  
-    ```  
-  
-## <a name="see-also"></a>Viz také  
+    > *lpUnk* odkazuje `IUnknown` objekt sady záznamů ADO.
+
+1. Připojení k jejich příslušné třídy šablony příjemce technologie OLE DB přistupující objekt a řádků.
+
+    ```cpp
+    CRowset rs;
+    CAccessor accessor;
+
+    accessor.AddAccessorInfo(0ul);      // 0 is the ordinal of an ADO accessor
+    rs.m_spRowset.Attach(lpRowset);      // use the Attach method of CComPtr<>
+    rs.SetAccessor(accessor);
+    ```
+
+## <a name="see-also"></a>Viz také
 
 [Použití přístupových objektů](../../data/oledb/using-accessors.md)

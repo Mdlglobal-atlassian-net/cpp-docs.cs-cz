@@ -15,20 +15,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4107b5e19020843fa50495153841ebcba64301ad
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3af338f4c88b2fa7268387ef0701f52a813b0d49
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46077682"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056191"
 ---
 # <a name="using-a-record-view--mfc-data-access"></a>Použití zobrazení záznamů (přístup k datům MFC)
 
-Toto téma vysvětluje, jak může často přizpůsobit výchozí kód pro zobrazení záznamů, které průvodce zapíše za vás. Obvykle je vhodné omezit výběr záznamu [filtr](../data/odbc/recordset-filtering-records-odbc.md) nebo [parametry](../data/odbc/recordset-parameterizing-a-recordset-odbc.md), možná [řazení](../data/odbc/recordset-sorting-records-odbc.md) záznamy, přizpůsobení příkazu SQL.  
-  
-Pomocí `CRecordView` je skoro stejné jako při použití [CFormView](../mfc/reference/cformview-class.md). Základní přístupem je použití zobrazení záznamů pro zobrazení a případně k aktualizaci záznamů z jedné sady záznamů. Kromě toho můžete chtít použít jiné sady záznamů také, jak je popsáno v [zobrazení záznamů: naplnění seznamu druhou sadou záznamů](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).  
-  
-## <a name="see-also"></a>Viz také  
+Toto téma vysvětluje, jak může často přizpůsobit výchozí kód pro zobrazení záznamů, které průvodce zapíše za vás. Obvykle je vhodné omezit výběr záznamu [filtr](../data/odbc/recordset-filtering-records-odbc.md) nebo [parametry](../data/odbc/recordset-parameterizing-a-recordset-odbc.md), možná [řazení](../data/odbc/recordset-sorting-records-odbc.md) záznamy, přizpůsobení příkazu SQL.
+
+Pomocí `CRecordView` je skoro stejné jako při použití [CFormView](../mfc/reference/cformview-class.md). Základní přístupem je použití zobrazení záznamů pro zobrazení a případně k aktualizaci záznamů z jedné sady záznamů. Kromě toho můžete chtít použít jiné sady záznamů také, jak je popsáno v [zobrazení záznamů: naplnění seznamu druhou sadou záznamů](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).
+
+## <a name="see-also"></a>Viz také
 
 [Zobrazení záznamů (přístup k datům MFC)](../data/record-views-mfc-data-access.md)<br/>
 [Seznam ovladačů ODBC](../data/odbc/odbc-driver-list.md)

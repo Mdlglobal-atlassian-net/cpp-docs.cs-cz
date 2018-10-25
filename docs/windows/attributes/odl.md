@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1bd1958720b2f4f315513610cb0ed7b285e3233f
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 1143b1125110084f1deae445030eab8dcdd3cd7a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789351"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056955"
 ---
 # <a name="odl"></a>odl
 
@@ -76,4 +76,4 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](cp
 ## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
-[Atributy rozhraní](interface-attributes.md)  
+[Atributy rozhraní](interface-attributes.md)

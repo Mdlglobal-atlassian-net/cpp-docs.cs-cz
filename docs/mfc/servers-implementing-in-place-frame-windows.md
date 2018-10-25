@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c63c10feff624abe399952b682303a6e262d35
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e6ef01a7943bbb0c14ec630651757a8665373b85
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425012"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055215"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Servery: Implementace oken s rámečkem na místě
 
@@ -39,15 +39,15 @@ Tento článek vysvětluje, co musíte udělat, abyste implementace oken s ráme
 
 1. Deklarace `COleResizeBar` člen třídy oken s rámečkem. To je potřeba, pokud chcete, aby podporovalo změnu velikosti na místě v serverových aplikacích.
 
-     Deklarovat `OnCreate` obslužná rutina zprávy (pomocí **vlastnosti** okno) a volat `Create` pro vaše `COleResizeBar` člen, pokud jste ji definovali.
+   Deklarovat `OnCreate` obslužná rutina zprávy (pomocí **vlastnosti** okno) a volat `Create` pro vaše `COleResizeBar` člen, pokud jste ji definovali.
 
 1. Pokud máte panel nástrojů, deklarujte `CToolBar` člen třídy oken s rámečkem.
 
-     Přepsat `OnCreateControlBars` členská funkce k vytvoření panelu nástrojů, když je na místě aktivní server. Příklad:
+   Přepsat `OnCreateControlBars` členská funkce k vytvoření panelu nástrojů, když je na místě aktivní server. Příklad:
 
-     [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]
+   [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]
 
-     Přečtěte si diskuzi o tento kód po kroku 5.
+   Přečtěte si diskuzi o tento kód po kroku 5.
 
 1. Zahrňte soubor hlaviček pro této třídy oken s rámečkem na místě hlavní soubor.
 

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb3f2ca2cfe094f4ea9da11786af6f90db7d2217
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9fb13c8c4ce2705d3e7af8ca5b4cd0e4b97b13ca
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136152"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059087"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Převody a bezpečnost typů (moderní verze jazyka C++)
 
@@ -70,7 +70,7 @@ Celočíselný typ se znaménkem a jeho protějšek bez znaménka mají vždy st
 
 ```cpp
 using namespace std;
-unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>
+unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>
 short num2 = num;
 cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 // Prints: unsigned val = 65535 signed val = -1
@@ -126,7 +126,7 @@ Operátor přetypování ve stylu jazyka C je stejný jako operátor volání ()
     Derived* d2 = static_cast<Derived*>(b);
     ```
 
-     Další informace najdete v tématu [static_cast](../cpp/static-cast-operator.md).
+   Další informace najdete v tématu [static_cast](../cpp/static-cast-operator.md).
 
 - **přetypování dynamic_cast**, pro bezpečný, kontrolované za běhu přetypování ukazatele základní ukazatele na odvozenou. A **dynamic_cast** je bezpečnější než **static_cast** pro přetypování dolů, ale modul runtime kontrola způsobuje zvýšení zatížení.
 
@@ -151,7 +151,7 @@ Operátor přetypování ve stylu jazyka C je stejný jako operátor volání ()
     //Output: d3 is null;
     ```
 
-     Další informace najdete v tématu [dynamic_cast](../cpp/dynamic-cast-operator.md).
+   Další informace najdete v tématu [dynamic_cast](../cpp/dynamic-cast-operator.md).
 
 - **const_cast**pro přetypování **const**- ness proměnné nebo převod bez -**const** proměnnou deklarovanou **const**. Přetypování **const**-je stejně náchylné k jako přetypování ve stylu C, s výjimkou, že s deklarovanou s použitím tohoto operátoru **přetypování const** jste mylné provedení přetypování méně pravděpodobné. Někdy je nutné přetypovat pryč **const**-ness proměnné, například k předání **const** proměnné funkci, která vyžaduje**const** parametru. Následující příklad ukazuje, jak to provést.
 
@@ -164,14 +164,14 @@ Operátor přetypování ve stylu jazyka C je stejný jako operátor volání ()
     }
     ```
 
-     Další informace najdete v tématu [const_cast](../cpp/const-cast-operator.md).
+   Další informace najdete v tématu [const_cast](../cpp/const-cast-operator.md).
 
 - **reinterpret_cast**pro přetypování mezi nesouvisejících typů, jako **ukazatel** k **int**.
 
     > [!NOTE]
     >  Tento operátor přetypování se nepoužívá tak často jako ostatní a není zaručena jeho přenositelnost na jiné kompilátory.
 
-     Následující příklad ukazuje, jak **reinterpret_cast** se liší od **static_cast**.
+   Následující příklad ukazuje, jak **reinterpret_cast** se liší od **static_cast**.
 
     ```cpp
     const char* str = "hello";
@@ -183,7 +183,7 @@ Operátor přetypování ve stylu jazyka C je stejný jako operátor volání ()
                                        // However, it is not 64-bit safe.
     ```
 
-     Další informace najdete v tématu [reinterpret_cast – operátor](../cpp/reinterpret-cast-operator.md).
+   Další informace najdete v tématu [reinterpret_cast – operátor](../cpp/reinterpret-cast-operator.md).
 
 ## <a name="see-also"></a>Viz také:
 

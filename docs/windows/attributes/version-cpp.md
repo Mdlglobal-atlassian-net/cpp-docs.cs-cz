@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee79fca8784ade6509cfc5854eaaa165b68edee0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 95b30d65fe67f2647cb8ca50619f3ab13f167053
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789531"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058996"
 ---
 # <a name="version-c"></a>version (C++)
 
@@ -37,7 +37,7 @@ Určuje konkrétní verzi napříč několika verzemi třídu.
 
 ### <a name="parameters"></a>Parametry
 
-*Verze*<br/>
+*version*<br/>
 Číslo verze `coclass`. Pokud není zadán, umístí 1.0 v souboru IDL.
 
 ## <a name="remarks"></a>Poznámky
@@ -64,4 +64,4 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](cp
 ## <a name="see-also"></a>Viz také
 
 [Atributy kompilátoru](compiler-attributes.md)<br/>
-[Atributy třídy](class-attributes.md)  
+[Atributy třídy](class-attributes.md)

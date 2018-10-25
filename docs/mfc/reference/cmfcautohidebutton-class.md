@@ -1,7 +1,7 @@
 ---
 title: Cmfcautohidebutton – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -60,18 +60,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 072473895bbd041f9b195f02572461b02202be32
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 92f7875620f6cc3efee77094fcae80de83f6db1b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386090"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056071"
 ---
 # <a name="cmfcautohidebutton-class"></a>Cmfcautohidebutton – třída
 
 Tlačítko, které zobrazí nebo skryje odkaz [CDockablePane – třída](../../mfc/reference/cdockablepane-class.md) , který je nakonfigurovaný pro skrytí.
 
 Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
+
 ## <a name="syntax"></a>Syntaxe
 
 ```
@@ -130,7 +131,6 @@ Následující příklad ukazuje, jak vytvořit `CMFCAutoHideButton` objektu a p
 **Záhlaví:** afxautohidebutton.h
 
 ##  <a name="bringtotop"></a>  CMFCAutoHideButton::BringToTop
-
 
 ```
 void BringToTop();
@@ -220,7 +220,6 @@ Přidružení automaticky skrýt tlačítko s `CDockablePane`, předat `CDockabl
 
 ##  <a name="getparenttoolbar"></a>  CMFCAutoHideButton::GetParentToolBar
 
-
 ```
 CMFCAutoHideBar* GetParentToolBar();
 ```
@@ -230,7 +229,6 @@ CMFCAutoHideBar* GetParentToolBar();
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="getrect"></a>  CMFCAutoHideButton::GetRect
-
 
 ```
 CRect GetRect() const;
@@ -301,7 +299,6 @@ Nenulové, pokud je tlačítko vodorovné; jinak 0.
 Rozhraní framework nastavuje orientaci ovládacího prvku [cmfcautohidebutton –](../../mfc/reference/cmfcautohidebutton-class.md) objektu při vytváření.  Orientace můžete řídit pomocí *dwAlignment* parametr [CMFCAutoHideButton::Create](#create) metody.
 
 ##  <a name="istop"></a>  CMFCAutoHideButton::IsTop
-
 
 ```
 BOOL IsTop() const;
@@ -416,19 +413,17 @@ virtual void ShowButton(BOOL bShow);
 
 ##  <a name="move"></a>  CMFCAutoHideButton::Move
 
-
 ```
 void Move(int nOffset);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nOffset*
+[in] *nOffset*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="replacepane"></a>  CMFCAutoHideButton::ReplacePane
-
 
 ```
 void ReplacePane(CDockablePane* pNewBar);
@@ -436,7 +431,7 @@ void ReplacePane(CDockablePane* pNewBar);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pNewBar*
+[in] *pNewBar*<br/>
 
 ### <a name="remarks"></a>Poznámky
 

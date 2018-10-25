@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1244c05b7af94d69394c412a3c67864d6e75c337
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9f9ce0094bce1f8e7590cef0cbe3bfe85f35158d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050876"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056058"
 ---
 # <a name="run-time-type-information"></a>Informace běhového typu
 
@@ -35,15 +35,15 @@ Existují tři hlavní prvky jazyka C++ informující o typu modulu runtime:
 
 - [Dynamic_cast](../cpp/dynamic-cast-operator.md) operátor.
 
-     Používá se pro převod polymorfních typů.
+   Používá se pro převod polymorfních typů.
 
 - [Typeid](../cpp/typeid-operator.md) operátor.
 
-     Používá se k identifikaci přesného typu objektu.
+   Používá se k identifikaci přesného typu objektu.
 
 - [Type_info](../cpp/type-info-class.md) třídy.
 
-     Sloužící k uchování informací o typu vrácené **typeid** operátor.
+   Sloužící k uchování informací o typu vrácené **typeid** operátor.
 
 ## <a name="see-also"></a>Viz také:
 

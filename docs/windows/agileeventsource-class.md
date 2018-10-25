@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c5d94b7a3949f0f547c9809d75e22eefbe9f5708
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 0f2ee187087917220751155cc43e8619e6dcf763
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789069"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054571"
 ---
 # <a name="agileeventsource-class"></a>Agileeventsource – třída
 
@@ -96,7 +96,6 @@ Po dokončení této operace, popisovač, který představuje událost. Použív
 ### <a name="return-value"></a>Návratová hodnota
 
 S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.
-
 
 ## <a name="see-also"></a>Viz také
 

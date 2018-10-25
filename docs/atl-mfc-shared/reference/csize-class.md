@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9966bcdf31df3b6d3f702ec425131c5b8baa3aee
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 6d9927712077f7d0d57d9ece5ae72489be291866
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808495"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055219"
 ---
 # <a name="csize-class"></a>Csize – třída
 
@@ -35,7 +35,7 @@ Podobně jako Windows [velikost](https://msdn.microsoft.com/library/windows/desk
 ## <a name="syntax"></a>Syntaxe
 
 ```
-class CSize : public tagSIZE 
+class CSize : public tagSIZE
 ```
 
 ## <a name="members"></a>Členové
@@ -64,7 +64,7 @@ Tato třída je odvozena z `SIZE` struktury. To znamená, že můžete předat `
 `cx` a `cy` členy `SIZE` (a `CSize`) jsou veřejné. Kromě toho `CSize` implementuje členské funkce pro manipulaci s `SIZE` struktury.
 
 > [!NOTE]
->  Další informace o sdílené třídy nástroje (jako je `CSize`), najdete v článku [sdílené třídy](../../atl-mfc-shared/atl-mfc-shared-classes.md).
+> Další informace o sdílené třídy nástroje (jako je `CSize`), najdete v článku [sdílené třídy](../../atl-mfc-shared/atl-mfc-shared-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -85,7 +85,7 @@ CSize() throw();
 CSize( int initCX, int initCY) throw();
 CSize( SIZE initSize) throw();
 CSize( POINT initPt) throw();
-CSize( DWORD dwSize) throw(); 
+CSize( DWORD dwSize) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -117,8 +117,8 @@ Pokud nejsou zadány žádné argumenty, `cx` a `cy` jsou inicializovány na nul
 
 Kontroly pro rovnost mezi dvěma formáty.
 
-``` 
-BOOL operator==(SIZE size) const throw(); 
+```
+BOOL operator==(SIZE size) const throw();
 ```
 
 ### <a name="remarks"></a>Poznámky
@@ -133,8 +133,8 @@ Vrátí nenulovou hodnotu, pokud jsou stejné velikosti, otherwize 0.
 
 Kontroly pro nerovnost mezi dvěma formáty.
 
-``` 
-BOOL operator!=(SIZE size) const throw(); 
+```
+BOOL operator!=(SIZE size) const throw();
 ```
 
 ### <a name="remarks"></a>Poznámky
@@ -149,8 +149,8 @@ Vrátí nenulovou hodnotu, pokud velikosti nejsou stejné, jinak 0.
 
 Přidá k tomuto velikost `CSize`.
 
-``` 
-void operator+=(SIZE size) throw(); 
+```
+void operator+=(SIZE size) throw();
 ```
 
 ### <a name="example"></a>Příklad
@@ -161,8 +161,8 @@ void operator+=(SIZE size) throw();
 
 Odečte velikost z tohoto `CSize`.
 
-``` 
-void operator-=(SIZE size) throw(); 
+```
+void operator-=(SIZE size) throw();
 ```
 
 ### <a name="example"></a>Příklad
@@ -173,10 +173,10 @@ void operator-=(SIZE size) throw();
 
 Přidejte tyto operátory `CSize` hodnotu k hodnotě parametru.
 
-``` 
+```
 CSize operator+(SIZE size) const throw();
 CPoint operator+(POINT point) const throw();
-CRect operator+(const RECT* lpRect) const throw(); 
+CRect operator+(const RECT* lpRect) const throw();
 ```
 
 ### <a name="remarks"></a>Poznámky
@@ -197,11 +197,11 @@ V následujících popisech jednotlivé operátory:
 
 První tři z těchto operátorů odečíst to `CSize` hodnotu k hodnotě parametru.
 
-``` 
+```
 CSize operator-(SIZE size) const throw();
 CPoint operator-(POINT point) const throw();
 CRect operator-(const RECT* lpRect) const throw();
-CSize operator-() const throw(); 
+CSize operator-() const throw();
 ```
 
 ### <a name="remarks"></a>Poznámky

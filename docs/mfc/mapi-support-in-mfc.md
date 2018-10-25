@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fbc661a870c7adc6e2e5dda5def744fa3e0396
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 23b538904c78fc0f0bc88b7c12de1bc4862a88ab
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417010"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053406"
 ---
 # <a name="mapi-support-in-mfc"></a>Podpora MAPI v MFC
 
@@ -44,11 +44,11 @@ Rozhraní MAPI potřebuje číst soubor k odeslání přílohy. Pokud aplikace s
 
 1. Pomocí nabídky editoru Visual C++ přidat položku nabídky, jejichž ID příkazu je ID_FILE_SEND_MAIL.
 
-     Toto ID příkazu je poskytovaného rámcem v AFXRES. H. Příkaz je přidat do jakékoli nabídky, ale obvykle je přidána do **souboru** nabídky.
+   Toto ID příkazu je poskytovaného rámcem v AFXRES. H. Příkaz je přidat do jakékoli nabídky, ale obvykle je přidána do **souboru** nabídky.
 
 1. Ručně přidejte následující text do mapy dokumentu zpráva:
 
-     [!code-cpp[NVC_MFCDocView#9](../mfc/codesnippet/cpp/mapi-support-in-mfc_1.cpp)]
+   [!code-cpp[NVC_MFCDocView#9](../mfc/codesnippet/cpp/mapi-support-in-mfc_1.cpp)]
 
     > [!NOTE]
     >  Toto mapování zpráv se dá použít pro dokumentu odvozen od buď `CDocument` nebo `COleDocument` – použila správné základní třídy v obou případech, přestože je ve své třídě odvozené dokumentu mapování zprávy.

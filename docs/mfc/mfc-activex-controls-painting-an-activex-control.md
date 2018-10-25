@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b14f562bd93bf023d540bf362dd2f9a881c2e441
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b33097c6f6f747d99cf582c1553e25942f1bfcd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436790"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056006"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC – ovládací prvky ActiveX: Vykreslování ovládacího prvku ActiveX
 
@@ -112,11 +112,11 @@ Po dokončení implementace metasoubor vykreslování ovládacího prvku k otest
 
 1. V **vložte nový ovládací prvek** pole, vyberte ovládací prvek a klikněte na tlačítko **OK**.
 
-     Ovládací prvek se zobrazí v kontejneru testů.
+   Ovládací prvek se zobrazí v kontejneru testů.
 
 1. Na **ovládací prvek** nabídky, klikněte na tlačítko **nakreslit metasoubor**.
 
-     Samostatném okně se zobrazí, ve kterém je tento metasoubor zobrazovat. Můžete změnit velikost tohoto okna naleznete v tématu Jak škálování ovlivňuje metasoubor ovládacího prvku. Kdykoli můžete toto okno zavřít.
+   Samostatném okně se zobrazí, ve kterém je tento metasoubor zobrazovat. Můžete změnit velikost tohoto okna naleznete v tématu Jak škálování ovlivňuje metasoubor ovládacího prvku. Kdykoli můžete toto okno zavřít.
 
 ## <a name="see-also"></a>Viz také
 

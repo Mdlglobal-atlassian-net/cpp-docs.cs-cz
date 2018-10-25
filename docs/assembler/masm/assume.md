@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a0e43548292d2ffecbebdaead6aa12d6dacc352
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 6fbba50e56ae06dc3afb64582d4a131bba75a6c8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693805"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055850"
 ---
 # <a name="assume"></a>ASSUME
 
@@ -33,7 +33,6 @@ Povolí kontrolu chyb pro hodnot registru.
 > PŘEDPOKLÁDAT *dataregister*:*typ* [[, *dataregister*:*typ*]]...<br/>
 > PŘEDPOKLÁDAT *zaregistrovat*: Chyba [[, *zaregistrovat*: Chyba]]...<br/>
 > PŘEDPOKLÁDAT [[*zaregistrovat*:]] nic [[, *zaregistrovat*: nic]]...
-
 
 ## <a name="remarks"></a>Poznámky
 

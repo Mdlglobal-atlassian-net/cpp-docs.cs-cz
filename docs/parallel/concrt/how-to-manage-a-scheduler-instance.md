@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea6b687b00310390e3748fb5a8f6db74a19dfd0a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 97735b5509fb841a8b9b3d8212f4a23514f9d28c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373893"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057462"
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>Postupy: Správa instance plánovače
 
@@ -34,7 +34,7 @@ Příklady vytvoření plánovače, které používají výchozí plánovač zá
 
 1. Volání [concurrency::CurrentScheduler::Create](reference/currentscheduler-class.md#create) metoda nebo [concurrency::Scheduler::Create](reference/scheduler-class.md#create) metodu pro vytvoření instance plánovače.
 
-     Pokud používáte `Scheduler::Create` metody, volání [concurrency::Scheduler::Attach](reference/scheduler-class.md#attach) metodu, když budete chtít Plánovač přidružit aktuálního kontextu.
+   Pokud používáte `Scheduler::Create` metody, volání [concurrency::Scheduler::Attach](reference/scheduler-class.md#attach) metodu, když budete chtít Plánovač přidružit aktuálního kontextu.
 
 1. Volání [funkce CreateEvent](/windows/desktop/api/synchapi/nf-synchapi-createeventa) funkci, která vytvoří popisovač pro objekt nesignálového, automatické obnovení události.
 
@@ -44,7 +44,7 @@ Příklady vytvoření plánovače, které používají výchozí plánovač zá
 
 1. Volání [concurrency::CurrentScheduler::Detach](reference/currentscheduler-class.md#detach) metodu detach aktuálního plánovače a obnovit předchozí Plánovač, jako je aktuální.
 
-     Pokud používáte `Scheduler::Create` metody, volání [concurrency::Scheduler::Release](reference/scheduler-class.md#release) metoda se sníží počet odkazů `Scheduler` objektu.
+   Pokud používáte `Scheduler::Create` metody, volání [concurrency::Scheduler::Release](reference/scheduler-class.md#release) metoda se sníží počet odkazů `Scheduler` objektu.
 
 1. Popisovač předat událost, abyste [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) funkce počkat, aby vypnout.
 

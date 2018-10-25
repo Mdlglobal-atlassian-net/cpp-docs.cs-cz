@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f2155fef0f9287273b3c45e9318665acfdae527
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2c0ebbc2686c229d7818042672cdb1d6d2143f81
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070636"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058073"
 ---
 # <a name="declarations-and-definitions-c"></a>Deklarace a definice (C++)
 
@@ -35,7 +35,7 @@ Deklarace jednoho nebo více názvů zavádí do programu. Deklarace může v je
 
 1. Je statický datový člen uvnitř deklarace třídy.
 
-     Protože statické datové členy třídy jsou proměnné diskrétního sdílet všechny objekty třídy, musí být definována a inicializována mimo deklaraci třídy. (Další informace o třídách a členy třídy, naleznete v tématu [třídy](../cpp/classes-and-structs-cpp.md).)
+   Protože statické datové členy třídy jsou proměnné diskrétního sdílet všechny objekty třídy, musí být definována a inicializována mimo deklaraci třídy. (Další informace o třídách a členy třídy, naleznete v tématu [třídy](../cpp/classes-and-structs-cpp.md).)
 
 1. Je název deklarace třídy s žádná následující definice například `class T;`.
 

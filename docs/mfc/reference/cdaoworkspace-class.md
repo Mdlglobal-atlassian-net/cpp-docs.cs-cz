@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 964fab6030e0a89ef69730fd4867973e402db614
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a4a5b6936397728472bf0041735248157091db56
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442016"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054355"
 ---
 # <a name="cdaoworkspace-class"></a>Cdaoworkspace – třída
 
@@ -163,7 +163,7 @@ Můžete použít třídu `CDaoWorkspace` na:
 
 - Explicitně otevřete výchozího pracovního prostoru.
 
-     Použití výchozího pracovního prostoru je obvykle implicitní – při otevření nové [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objekty. Ale můžete potřebovat pro přístup k explicitně – například k přístupu k vlastnosti modul databáze nebo kolekce pracovních prostorů. Níže naleznete v tématu "Implicitního použití výchozího pracovního prostoru".
+   Použití výchozího pracovního prostoru je obvykle implicitní – při otevření nové [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) nebo [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objekty. Ale můžete potřebovat pro přístup k explicitně – například k přístupu k vlastnosti modul databáze nebo kolekce pracovních prostorů. Níže naleznete v tématu "Implicitního použití výchozího pracovního prostoru".
 
 - Vytvoření nové pracovní prostory. Volání [připojit](#append) Pokud chcete přidat do kolekce pracovních prostorů.
 
@@ -309,7 +309,6 @@ static void PASCAL CompactDatabase(
     LPCTSTR lpszLocale = dbLangGeneral,
     int nOptions = 0);
 
-
 static void PASCAL CompactDatabase(
     LPCTSTR lpszSrcName,
     LPCTSTR lpszDestName,
@@ -453,7 +452,6 @@ void GetDatabaseInfo(
     int nIndex,
     CDaoDatabaseInfo& dbinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
-
 
 void GetDatabaseInfo(
     LPCTSTR lpszName,
@@ -624,7 +622,6 @@ void GetWorkspaceInfo(
     int nIndex,
     CDaoWorkspaceInfo& wkspcinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
-
 
 void GetWorkspaceInfo(
     LPCTSTR lpszName,

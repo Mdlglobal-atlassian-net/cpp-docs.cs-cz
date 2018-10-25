@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f5beba4f9a33a5bd9ee93baae6176d3ea592d2e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b61df9a17903f50ea922edf9c29eee926063254
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445812"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055408"
 ---
 # <a name="internet-security-c"></a>Internetové zabezpečení (C++)
 
@@ -37,7 +37,6 @@ Bezpečnostní kód je závažný problém pro vývojáře a uživatele internet
 Existují dva základní přístupy k zabezpečení při vývoji pro Internet. První se nazývá "izolace (sandbox)." V takovém případě aplikaci omezit na konkrétní sadu rozhraní API a vyloučit z potenciálně nebezpečné ty, jako jsou například vstupně, kde může program zničí data v počítači uživatele. Druhá je implementováno pomocí digitálních podpisů. Tento postup se označuje jako "shrinkwrap" pro Internet. Kód je ověřený a podepsán pomocí klíčových technologií privátní klíč/public. Předtím, než je kód spuštěn, je ověřit digitální podpis, ujistěte se, že kód je ze známého ověřeného zdroje a kód nebyl byla změněna, protože byla podepsána.
 
 V prvním případě důvěřovat, že aplikace nebude provádět žádné a původu aplikace důvěřujete. V druhém digitální podpisy se používají k ověření pravosti. Digitální podpis je oborový standard lze identifikovat a zadat další informace o vydavateli kód. Technologie je založena na standardech, včetně RSA a X.509. Prohlížeče obvykle umožňují uživatelům si vybrat, zda chtějí stáhnout a spustit kód neznámého původu.
-
 
 ## <a name="see-also"></a>Viz také
 

@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a0864c87b33937fe18c3e4c3083e63bde23ac06
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7562f6e5a8915f33b3f2c8bd23ce310e641984c6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092232"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057038"
 ---
 # <a name="crt-library-features"></a>Funkce knihovny CRT
 
@@ -123,7 +123,6 @@ Mnohé z těchto problémů můžete vyhnout pomocí technologie binární rozhr
 Je také možné vyhnout některé z těchto potíží, pokud všechny Image v procesu použít stejnou verzi dynamicky načíst CRT. Aby bylo zajištěno, že všechny komponenty používat stejnou verzi knihovny DLL CRT, je vytvořit pomocí **/MD** možnost a použijte stejné nastavení vlastnosti a sady nástrojů kompilátoru.
 
 Některé péči Pokud váš program projde určitých prostředků CRT (jako jsou popisovače souborů, národní prostředí a proměnných prostředí) přes hranice knihovny DLL, i když se používá stejnou verzi CRT. Další informace o problematiku a způsob jejich řešení najdete v tématu [potenciální chyby předávání CRT objekty přes hranice knihovny DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
-
 
 ## <a name="see-also"></a>Viz také:
 

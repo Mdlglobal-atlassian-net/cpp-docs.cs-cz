@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcdbc8012edbe17ce9fcc8298da68f45acad4b8b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 2553ac5cdc20f3d5d38a6bad77dc79fc7c1737d8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683362"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052874"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Cloudové a webové programování v jazyku Visual C++
 
@@ -52,11 +52,11 @@ V jazyce C++ máte několik možností pro připojení k webu a cloudu.
   - Protokoly Websocket připojení pro vzdálené služby
   - Plně asynchronní úloha rozhraní API založených na PPL, včetně integrovaných fondu vláken
 
-   Podporuje Windows Desktop (7 +), Windows Server (2012 +), univerzální platforma Windows, Linux, OSX, Android a iOS. 
+   Podporuje Windows Desktop (7 +), Windows Server (2012 +), univerzální platforma Windows, Linux, OSX, Android a iOS.
 
 - [Windows::Web::Http::HttpClient](https://msdn.microsoft.com/library/windows/apps/windows.web.http.httpclient.aspx)
 
-   Třída klienta Windows Runtime HTTP modelována ve třídě rozhraní .NET Framework se stejným názvem v oboru názvů System.Web. `HttpClient` plně podporuje asynchronní nahrávání a stahování prostřednictvím protokolu HTTP a kanály filtrů, které umožňují vkládání vlastní obslužné rutiny HTTP do kanálu. Sada Windows SDK obsahuje ukázku filtrů pro měřené sítě, ověřování OAuth a další. Pro aplikace, které se zaměřují jenom na univerzální platformu Windows, doporučujeme použít `Windows::Web:HttpClient` třídy. 
+   Třída klienta Windows Runtime HTTP modelována ve třídě rozhraní .NET Framework se stejným názvem v oboru názvů System.Web. `HttpClient` plně podporuje asynchronní nahrávání a stahování prostřednictvím protokolu HTTP a kanály filtrů, které umožňují vkládání vlastní obslužné rutiny HTTP do kanálu. Sada Windows SDK obsahuje ukázku filtrů pro měřené sítě, ověřování OAuth a další. Pro aplikace, které se zaměřují jenom na univerzální platformu Windows, doporučujeme použít `Windows::Web:HttpClient` třídy.
 
 - [Rozhraní IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5650707f9c08c144d2f5832744117dfdd06acc08
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0e151ba4fc2adbe6dab2397d68658b0cb1eb5ef1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106906"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059074"
 ---
 # <a name="window-class-macros"></a>Makra třídy okna
 
@@ -32,7 +32,7 @@ Tato makra definují nástroje třídy okna.
 |[DECLARE_WND_CLASS](#declare_wnd_class)|Můžete zadat název nové třídy okna.|
 |[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017) Můžete zadat název nové třídy okna a jejichž proceduru okna používat nové třídy nadřazené třídy.|
 |[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)|Můžete zadat název existující třídy okna, na kterém bude na základě nové třídy okna.|
-|[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|Umožňuje zadat parametry třídy.|  
+|[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|Umožňuje zadat parametry třídy.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -69,9 +69,9 @@ DECLARE_WND_CLASS určuje následující styly pro nové okno:
 
 DECLARE_WND_CLASS také určuje barvu pozadí okna výchozí. Použití [DECLARE_WND_CLASS_EX](#declare_wnd_class_ex) – makro poskytovat vlastní styly a barva pozadí.
 
-[CWindowImpl](cwindowimpl-class.md) používá makro DECLARE_WND_CLASS vytvořit okno založené na nové třídě okna. Chcete-li toto chování přepsat, použijte [DECLARE_WND_SUPERCLASS](#declare_wnd_superclass) – makro, nebo Poskytněte vlastní implementaci [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) funkce.  
+[CWindowImpl](cwindowimpl-class.md) používá makro DECLARE_WND_CLASS vytvořit okno založené na nové třídě okna. Chcete-li toto chování přepsat, použijte [DECLARE_WND_SUPERCLASS](#declare_wnd_superclass) – makro, nebo Poskytněte vlastní implementaci [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) funkce.
 
-Další informace o používání oken v ATL, najdete v článku [tříd oken ATL](../../atl/atl-window-classes.md).  
+Další informace o používání oken v ATL, najdete v článku [tříd oken ATL](../../atl/atl-window-classes.md).
 
 ##  <a name="declare_wnd_class2"></a>  DECLARE_WND_CLASS2
 
@@ -84,7 +84,7 @@ DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 ### <a name="parameters"></a>Parametry
 
 *WndClassName*<br/>
-[in] Název nové třídy okna. Pokud má hodnotu NULL, ATL vygeneruje název třídy okna. 
+[in] Název nové třídy okna. Pokud má hodnotu NULL, ATL vygeneruje název třídy okna.
 
 *EnclosingClass*<br/>
 [in] Název třídy okna, která vloží nové třídy okna. Nemůže mít hodnotu NULL.
@@ -120,7 +120,7 @@ DECLARE_WND_SUPERCLASS implementuje následující statické funkce:
 
 Ve výchozím nastavení [CWindowImpl](cwindowimpl-class.md) používá [DECLARE_WND_CLASS](#declare_wnd_class) – makro vytvořit okno založené na nové třídě okna. Zadáním DECLARE_WND_SUPERCLASS – makro v `CWindowImpl`-odvozené třídy, třídu okna bude vycházet z existující třídy, ale bude používat vaše proceduru okna. Tato technika se nazývá superclassing.
 
-Kromě použití maker DECLARE_WND_CLASS a DECLARE_WND_SUPERCLASS, můžete přepsat [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) funkci s vlastní implementaci.  
+Kromě použití maker DECLARE_WND_CLASS a DECLARE_WND_SUPERCLASS, můžete přepsat [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) funkci s vlastní implementaci.
 
 Další informace o používání oken v ATL, najdete v článku [tříd oken ATL](../../atl/atl-window-classes.md).
 

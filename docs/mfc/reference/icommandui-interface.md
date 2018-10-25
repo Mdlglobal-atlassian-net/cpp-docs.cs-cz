@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ec76a554068dbec050078a0e0558cecd583410c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cd9ea4397c655f0ebb28d10febe82581d6ad8771
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429201"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055005"
 ---
 # <a name="icommandui-interface"></a>Icommandui – rozhraní
 
@@ -73,6 +73,7 @@ Nastaví položku uživatelského rozhraní pro tento příkaz do příslušné 
 ```
 property UICheckState Check;
 ```
+
 ## <a name="remarks"></a>Poznámky
 
 Tato vlastnost nastaví položku uživatelského rozhraní pro tento příkaz do příslušné kontroly stavu. Kontrola nastavení následující hodnoty:
@@ -86,6 +87,7 @@ Určuje mechanismus směrování příkazu pokračujte směrování aktuální z
 ```
 void ContinueRouting();
 ```
+
 ## <a name="remarks"></a>Poznámky
 
 To je funkce členů s pokročilým členstvím, které byste měli použít ve spojení s ON_COMMAND_EX obslužná rutina, která vrací hodnotu FALSE. Další informace najdete v tématu Technická poznámka TN006: mapy zpráv.
@@ -96,6 +98,7 @@ Povolí nebo zakáže položku uživatelského rozhraní pro tento příkaz.
 ```
 property bool Enabled;
 ```
+
 ## <a name="remarks"></a>Poznámky
 
 Tato vlastnost povolí nebo zakáže položku uživatelského rozhraní pro tento příkaz. Nastavit povoleno na hodnotu PRAVDA, povolte položku, FALSE pro jeho zakázání.
@@ -106,6 +109,7 @@ Získá ID objektu uživatelské rozhraní icommandui – objektem.
 ```
 property unsigned int ID;
 ```
+
 ## <a name="remarks"></a>Poznámky
 
 Tato vlastnost získá ID (popisovač) položky nabídky, tlačítka panelu nástrojů nebo jiný uživatel rozhraní objekt reprezentovaný objektem icommandui –.
@@ -116,6 +120,7 @@ Získá index reprezentovaný objektem icommandui – rozhraní objektu uživate
 ```
 property unsigned int Index;
 ```
+
 ## <a name="remarks"></a>Poznámky
 
 Tato vlastnost získá index (popisovač) položky nabídky, tlačítka panelu nástrojů nebo jiný uživatel rozhraní objekt reprezentovaný objektem icommandui –.
@@ -126,6 +131,7 @@ Nastaví položku uživatelského rozhraní pro tento příkaz do příslušné 
 ```
 property bool Radio;
 ```
+
 ## <a name="remarks"></a>Poznámky
 
 Tato vlastnost nastaví položku uživatelského rozhraní pro tento příkaz do příslušné kontroly stavu. Nastavte přepínač na true pro povolení položky; v opačném případě FALSE.
@@ -136,6 +142,7 @@ Nastaví text položku uživatelského rozhraní pro tento příkaz.
 ```
 property String^ Text;
 ```
+
 ## <a name="remarks"></a>Poznámky
 
 Tato vlastnost nastavuje vlastnost text položky uživatelského rozhraní pro tento příkaz. Nastavte vlastnost Text na popisovač řetězce textu.

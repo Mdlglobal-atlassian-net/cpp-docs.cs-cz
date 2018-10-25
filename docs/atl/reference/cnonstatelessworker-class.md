@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4aa07273e68f0320823d258f324bb8631aef77a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 90c50d3a918f452372aacae5beb36f5425d6a77a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095596"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053614"
 ---
 # <a name="cnonstatelessworker-class"></a>Cnonstatelessworker – třída
 
@@ -75,7 +75,7 @@ Výhodou této třídy je, že poskytuje pohodlný způsob, jak změnit model st
 
 ##  <a name="execute"></a>  CNonStatelessWorker::Execute
 
-Provádění [WorkerArchetype::Execute](worker-archetype.md#execute).  
+Provádění [WorkerArchetype::Execute](worker-archetype.md#execute).
 
 ```
 void Execute(
@@ -86,7 +86,7 @@ void Execute(
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vytvoří instanci *pracovního procesu* třídu v zásobníku a volání [inicializovat](worker-archetype.md#initialize) k tomuto objektu. Pokud se inicializace je úspěšný, tato metoda také zavolá [Execute](worker-archetype.md#execute) a [Terminate](worker-archetype.md#terminate) na stejný objekt.  
+Tato metoda vytvoří instanci *pracovního procesu* třídu v zásobníku a volání [inicializovat](worker-archetype.md#initialize) k tomuto objektu. Pokud se inicializace je úspěšný, tato metoda také zavolá [Execute](worker-archetype.md#execute) a [Terminate](worker-archetype.md#terminate) na stejný objekt.
 
 ##  <a name="initialize"></a>  CNonStatelessWorker::Initialize
 

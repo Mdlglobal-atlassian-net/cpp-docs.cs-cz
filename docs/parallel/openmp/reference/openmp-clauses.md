@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d19a2b1859012a56bdaf3c454f8b92758179bed9
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: ea394ca09a086229a8718f4e7e1bfa55115652bc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809067"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056219"
 ---
 # <a name="openmp-clauses"></a>OpenMP – klauzule
 
@@ -56,21 +56,21 @@ Obsahuje odkazy na použité v rozhraní API OpenMP – klauzule.
 
 Jazyk Visual C++ podporuje následující klauzule OpenMP:
 
-Klauzule                             | Popis
----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[copyin](#copyin)                  | Umožňuje vláken pro přístup k hodnotě hlavní vlákno, [threadprivate](openmp-directives.md#threadprivate) proměnné.
-[copyprivate](#copyprivate)        | Určuje, že jeden nebo více proměnných by měl být sdílena mezi všemi vlákny.
-[default](#default-openmp)         | Určuje chování bez ohledu na obor proměnné v paralelní oblasti.
-[firstprivate](#firstprivate)      | Určuje, že každé vlákno má svoji vlastní instanci proměnné. proto, že proměnné by měl inicializovat pomocí hodnoty proměnné, protože existuje před paralelní konstrukce.
-[if](#if-openmp)                   | Určuje, zda smyčku budou spuštěny paralelně nebo postupně.
-[lastprivate](#lastprivate)        | Určuje, že verze nadřazeného objektu context proměnné je nastavena na soukromou verzi podle toho, která vlákno spustí poslední iterace (konstrukci smyčky for-loop) nebo poslední část (#pragma oddílů).
-[nowait](#nowait)                  | Přepíše překážkou implicitní v direktivě.
-[num_threads](#num-threads)        | Nastaví počet vláken v týmu vlákna.
-[Řazení](#ordered-openmp-clauses) | Vyžaduje na paralelní [pro](openmp-directives.md#for-openmp) příkaz Pokud [seřazené](openmp-directives.md#ordered-openmp-directives) – direktiva se má použít ve smyčce.
-[private](#private-openmp)         | Určuje, že každé vlákno má svoji vlastní instanci proměnné.
-[reduction](#reduction)            | Určuje, že jeden nebo více proměnných, které jsou privátní pro každé vlákno je předmětem operaci snížení na konci paralelní oblasti.
-[schedule](#schedule)              | Platí pro [pro](openmp-directives.md#for-openmp) směrnice.
-[Sdílet](#shared-openmp)           | Určuje, že jeden nebo více proměnných by měl být sdílena mezi všemi vlákny.
+|Klauzule|Popis|
+|------|-----------|
+|[copyin](#copyin)|Umožňuje vláken pro přístup k hodnotě hlavní vlákno, [threadprivate](openmp-directives.md#threadprivate) proměnné.|
+|[copyprivate](#copyprivate)|Určuje, že jeden nebo více proměnných by měl být sdílena mezi všemi vlákny.|
+|[default](#default-openmp)|Určuje chování bez ohledu na obor proměnné v paralelní oblasti.|
+|[firstprivate](#firstprivate)|Určuje, že každé vlákno má svoji vlastní instanci proměnné. proto, že proměnné by měl inicializovat pomocí hodnoty proměnné, protože existuje před paralelní konstrukce.|
+|[if](#if-openmp)|Určuje, zda smyčku budou spuštěny paralelně nebo postupně.|
+|[lastprivate](#lastprivate)|Určuje, že verze nadřazeného objektu context proměnné je nastavena na soukromou verzi podle toho, která vlákno spustí poslední iterace (konstrukci smyčky for-loop) nebo poslední část (#pragma oddílů).|
+|[nowait](#nowait)|Přepíše překážkou implicitní v direktivě.|
+|[num_threads](#num-threads)|Nastaví počet vláken v týmu vlákna.|
+|[Řazení](#ordered-openmp-clauses)|Vyžaduje na paralelní [pro](openmp-directives.md#for-openmp) příkaz Pokud [seřazené](openmp-directives.md#ordered-openmp-directives) – direktiva se má použít ve smyčce.|
+|[private](#private-openmp)|Určuje, že každé vlákno má svoji vlastní instanci proměnné.|
+|[reduction](#reduction)|Určuje, že jeden nebo více proměnných, které jsou privátní pro každé vlákno je předmětem operaci snížení na konci paralelní oblasti.|
+|[schedule](#schedule)|Platí pro [pro](openmp-directives.md#for-openmp) směrnice.|
+|[Sdílet](#shared-openmp)|Určuje, že jeden nebo více proměnných by měl být sdílena mezi všemi vlákny.|
 
 ## <a name="copyin"></a>copyin
 
@@ -401,7 +401,7 @@ Počet vláken
 
 ### <a name="remarks"></a>Poznámky
 
-`num_threads` Klauzule má stejné funkce jako [omp_set_num_threads –](../../../parallel/openmp/reference/omp-set-num-threads.md) funkce.
+`num_threads` Klauzule má stejné funkce jako [omp_set_num_threads –](openmp-functions.md#omp-set-num-threads) funkce.
 
 `num_threads` platí pro následující direktivy:
 

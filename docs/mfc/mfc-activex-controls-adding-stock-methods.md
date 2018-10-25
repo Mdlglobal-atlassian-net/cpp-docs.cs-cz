@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b42907273423d69ed93df5700b33556047338fe2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e103e43f23746f8274ad00da4d043e3446dfc706
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391423"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053025"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>MFC – ovládací prvky ActiveX: Přidání uložených metod
 
@@ -51,7 +51,7 @@ Přidání uložených metody je jednoduché použití [Průvodce přidáním me
 
 1. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat metodu**.
 
-     Otevře se Průvodce přidáním metody.
+   Otevře se Průvodce přidáním metody.
 
 1. V **název metody** klikněte **aktualizovat**.
 

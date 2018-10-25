@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a582d5de7087e433aed839dc2f55db01dd926f22
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8f7dc77eb9afdfcded959abad2199b1d255ffe3e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447567"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054264"
 ---
 # <a name="cpagerctrl-class"></a>Cpagerctrl – třída
 
@@ -627,6 +627,4 @@ Tato metoda odesílá [PGM_SETPOS](/windows/desktop/Controls/pgm-setpos) zprávu
 [CPagerCtrl – třída](../../mfc/reference/cpagerctrl-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Ovládacími prvky stránkování](/windows/desktop/Controls/pager-controls)
-
-
 

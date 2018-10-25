@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d050f27688d97cd3ef0352eed00f4dadb1fe6d98
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 96bcaf768ece46c22422fb3d98b85def7c57ed6b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403783"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056591"
 ---
 # <a name="creating-stack-and-queue-collections"></a>Vytváření kolekcí zásobníků a front
 
@@ -40,9 +40,9 @@ Protože standardní seznamu kolekce má head a koncovou část, je snadné vytv
 
 1. Odvodit novou třídu seznamu z jednoho z existujících seznamu tříd knihovny MFC a přidejte další členské funkce pro podporu funkcí zásobníku operací.
 
-     Následující příklad ukazuje, jak přidat členské funkce Vložit prvky do zásobníku, náhled prvku na vrcholu zásobníku, a hlavní prvek ze zásobníku:
+   Následující příklad ukazuje, jak přidat členské funkce Vložit prvky do zásobníku, náhled prvku na vrcholu zásobníku, a hlavní prvek ze zásobníku:
 
-     [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
+   [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
 
 Všimněte si, že tento přístup poskytuje základní `CObList` třídy. Uživatel může vrstva volat všechny `CObList` členské funkce, zda má smysl pro zásobník nebo ne.
 
@@ -54,9 +54,9 @@ Protože standardní seznamu kolekce má head a koncovou část, je také snadn�
 
 1. Odvodit novou třídu seznamu z jednoho z předdefinovaného seznamu tříd, opatřeného knihovny Microsoft Foundation Class a přidejte další členské funkce pro podporu sémantiku operace fronty.
 
-     Následující příklad ukazuje, jak můžete členské funkce přidat element do konce fronty a načíst prvek z přední části fronty připojit.
+   Následující příklad ukazuje, jak můžete členské funkce přidat element do konce fronty a načíst prvek z přední části fronty připojit.
 
-     [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
+   [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
 
 ## <a name="see-also"></a>Viz také
 

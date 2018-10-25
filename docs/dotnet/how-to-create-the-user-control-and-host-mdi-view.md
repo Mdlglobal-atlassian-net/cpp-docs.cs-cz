@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: eeeb02393e96e7afd2deed875465f6797d145b6e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2e61a69661034fb582039c744c3483f461405581
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399809"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056968"
 ---
 # <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Postupy: Vytvoření uživatelského ovládacího prvku a hostitelské poskytování zobrazení MDI
 
@@ -38,23 +38,23 @@ Tento postup předpokládá, že jste vytvořili projekt Knihovna ovládacích p
 
 1. Vytvořte projekt aplikace knihovny MFC.
 
-     Na **souboru** nabídce vyberte možnost **nový**a potom klikněte na tlačítko **projektu**. V **Visual C++** složky, vyberte **aplikace knihovny MFC**.
+   Na **souboru** nabídce vyberte možnost **nový**a potom klikněte na tlačítko **projektu**. V **Visual C++** složky, vyberte **aplikace knihovny MFC**.
 
-     V **název** zadejte `MFC02` a změnit **řešení** nastavení **přidat do řešení**. Klikněte na tlačítko **OK**.
+   V **název** zadejte `MFC02` a změnit **řešení** nastavení **přidat do řešení**. Klikněte na tlačítko **OK**.
 
-     V **Průvodce aplikací knihovny MFC**, přijměte všechny výchozí hodnoty a klikněte na **Dokončit**. Tím se vytvoří aplikace knihovny MFC s rozhraním více dokumentů.
+   V **Průvodce aplikací knihovny MFC**, přijměte všechny výchozí hodnoty a klikněte na **Dokončit**. Tím se vytvoří aplikace knihovny MFC s rozhraním více dokumentů.
 
 1. Konfigurace projektu pro podporu Common Language Runtime (CLR).
 
-     V **Průzkumníka řešení**, klikněte pravým tlačítkem myši `MFC01` uzel projektu a vyberte **vlastnosti** v místní nabídce. **Stránky vlastností** zobrazí se dialogové okno.
+   V **Průzkumníka řešení**, klikněte pravým tlačítkem myši `MFC01` uzel projektu a vyberte **vlastnosti** v místní nabídce. **Stránky vlastností** zobrazí se dialogové okno.
 
-     V části **vlastnosti konfigurace**vyberte **Obecné**. V části **výchozí nastavení projektu** nastavte **Common Language Runtime support** k **Common Language Runtime Support (/ clr)**.
+   V části **vlastnosti konfigurace**vyberte **Obecné**. V části **výchozí nastavení projektu** nastavte **Common Language Runtime support** k **Common Language Runtime Support (/ clr)**.
 
-     V části **vlastnosti konfigurace**, rozbalte **C/C++** a klikněte na tlačítko **Obecné** uzlu. Nastavte **formát ladicích informací** k **Program Database (/Zi)**.
+   V části **vlastnosti konfigurace**, rozbalte **C/C++** a klikněte na tlačítko **Obecné** uzlu. Nastavte **formát ladicích informací** k **Program Database (/Zi)**.
 
-     Klikněte na tlačítko **generování kódu** uzlu. Nastavte **povolit minimální opětovné sestavení** k **ne (/ Gm-)**. Nastavit také **Basic Runtime Checks** k **výchozí**.
+   Klikněte na tlačítko **generování kódu** uzlu. Nastavte **povolit minimální opětovné sestavení** k **ne (/ Gm-)**. Nastavit také **Basic Runtime Checks** k **výchozí**.
 
-     Klikněte na tlačítko **OK** změny.
+   Klikněte na tlačítko **OK** změny.
 
 1. Ve stdafx.h přidejte následující řádek:
 
@@ -64,7 +64,7 @@ Tento postup předpokládá, že jste vytvořili projekt Knihovna ovládacích p
 
 1. Přidejte odkaz na ovládací prvek .NET.
 
-     V **Průzkumníka řešení**, klikněte pravým tlačítkem myši `MFC02` uzel projektu a vyberte **přidat**, **odkazy**. V **stránku vlastností**, klikněte na tlačítko **přidat nový odkaz**, vyberte WindowsFormsControlLibrary1 (v části **projekty** kartu) a klikněte na tlačítko **OK** . To přidá odkaz ve formuláři [/FU](../build/reference/fu-name-forced-hash-using-file.md) – možnost kompilátoru tak, že program bude kompilován; také zkopíruje WindowsFormsControlLibrary1.dll do `MFC02` adresáře projektu tak, aby se bude program spouštět.
+   V **Průzkumníka řešení**, klikněte pravým tlačítkem myši `MFC02` uzel projektu a vyberte **přidat**, **odkazy**. V **stránku vlastností**, klikněte na tlačítko **přidat nový odkaz**, vyberte WindowsFormsControlLibrary1 (v části **projekty** kartu) a klikněte na tlačítko **OK** . To přidá odkaz ve formuláři [/FU](../build/reference/fu-name-forced-hash-using-file.md) – možnost kompilátoru tak, že program bude kompilován; také zkopíruje WindowsFormsControlLibrary1.dll do `MFC02` adresáře projektu tak, aby se bude program spouštět.
 
 1. Ve stdafx.h vyhledejte tento řádek:
 
@@ -72,7 +72,7 @@ Tento postup předpokládá, že jste vytvořili projekt Knihovna ovládacích p
     #endif // _AFX_NO_AFXCMN_SUPPORT
     ```
 
-     Přidejte tyto řádky nad něj:
+   Přidejte tyto řádky nad něj:
 
     ```
     #include <afxwinforms.h>   // MFC Windows Forms support
@@ -80,7 +80,7 @@ Tento postup předpokládá, že jste vytvořili projekt Knihovna ovládacích p
 
 1. Upravte zobrazení třídy tak, aby dědila z [CWinFormsView](../mfc/reference/cwinformsview-class.md).
 
-     V MFC02View.h nahraďte [CView](../mfc/reference/cview-class.md) s [CWinFormsView](../mfc/reference/cwinformsview-class.md) tak, aby kód se zobrazí takto:
+   V MFC02View.h nahraďte [CView](../mfc/reference/cview-class.md) s [CWinFormsView](../mfc/reference/cwinformsview-class.md) tak, aby kód se zobrazí takto:
 
     ```
     class CMFC02View : public CWinFormsView
@@ -88,7 +88,7 @@ Tento postup předpokládá, že jste vytvořili projekt Knihovna ovládacích p
     };
     ```
 
-     Pokud chcete přidat další zobrazení do vaší aplikace MDI, budete muset volat [CWinApp::AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) pro každé zobrazení, které vytvoříte.
+   Pokud chcete přidat další zobrazení do vaší aplikace MDI, budete muset volat [CWinApp::AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) pro každé zobrazení, které vytvoříte.
 
 1. Upravte soubor MFC02View.cpp tak, že změníte CView na CWinFormsView v makru IMPLEMENT_DYNCREATE a mapování zpráv a nahradit stávající prázdný konstruktor za konstruktor uvedený níže:
 
@@ -105,11 +105,11 @@ Tento postup předpokládá, že jste vytvořili projekt Knihovna ovládacích p
 
 1. Sestavte a spusťte projekt.
 
-     V **Průzkumníka řešení**, pravým tlačítkem myši na MFC02 a vyberte **nastavit jako spouštěný projekt**.
+   V **Průzkumníka řešení**, pravým tlačítkem myši na MFC02 a vyberte **nastavit jako spouštěný projekt**.
 
-     Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
+   Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
 
-     Na **ladění** nabídky, klikněte na tlačítko **spustit bez ladění**.
+   Na **ladění** nabídky, klikněte na tlačítko **spustit bez ladění**.
 
 ## <a name="see-also"></a>Viz také
 

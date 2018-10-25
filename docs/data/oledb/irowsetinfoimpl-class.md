@@ -37,105 +37,105 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d00e6a89d8c05f5b9d6a3f1eaef434968931a26
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: ac05cdb93ff87e40c41a59ce466d81aa7bcb5e92
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083304"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053471"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl – třída
 
-Poskytuje implementaci pro [IRowsetInfo](/previous-versions/windows/desktop/ms724541) rozhraní.  
-  
+Poskytuje implementaci pro [IRowsetInfo](/previous-versions/windows/desktop/ms724541) rozhraní.
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-template <class T, class PropClass = T>  
-class ATL_NO_VTABLE IRowsetInfoImpl :   
-   public IRowsetInfo,    
-   public CUtlProps<PropClass>  
-```  
-  
-### <a name="parameters"></a>Parametry  
+template <class T, class PropClass = T>
+class ATL_NO_VTABLE IRowsetInfoImpl :
+   public IRowsetInfo,  
+   public CUtlProps<PropClass>
+```
+
+### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Vaše třída odvozena od `IRowsetInfoImpl`.  
-  
+Vaše třída odvozena od `IRowsetInfoImpl`.
+
 *PropClass*<br/>
-Uživatelská vlastnost třídy, která výchozí hodnota je *T*. 
+Uživatelská vlastnost třídy, která výchozí hodnota je *T*.
 
-## <a name="requirements"></a>Požadavky  
+## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** altdb.h   
-  
-## <a name="members"></a>Členové  
-  
-### <a name="interface-methods"></a>Metody rozhraní  
-  
-|||  
-|-|-|  
-|[GetProperties](#getproperties)|Vrátí aktuální nastavení všech vlastností, které sada řádků podporuje.|  
-|[Getreferencedrowset –](#getreferencedrowset)|Vrátí ukazatel rozhraní v sadě řádků, ke kterému se vztahuje na záložku.|  
-|[Getspecification –](#getspecification)|Vrátí ukazatel rozhraní na objekt (příkaz nebo relace), který vytvořili této sady řádků.|  
-  
-## <a name="remarks"></a>Poznámky  
+**Záhlaví:** altdb.h
 
-Povinné rozhraní sady řádků. Tato třída implementuje pomocí vlastnosti sady řádků [mapy sady vlastností](../../data/oledb/begin-propset-map.md) definované ve třídě příkazu. I když třídy sady řádků se zobrazí, a používat třídu příkazu vlastnost sady, v sadě řádků je dodán vlastní kopii vlastností za běhu při vytvoření objektu příkazu nebo v jiné relaci.  
-  
+## <a name="members"></a>Členové
+
+### <a name="interface-methods"></a>Metody rozhraní
+
+|||
+|-|-|
+|[GetProperties](#getproperties)|Vrátí aktuální nastavení všech vlastností, které sada řádků podporuje.|
+|[Getreferencedrowset –](#getreferencedrowset)|Vrátí ukazatel rozhraní v sadě řádků, ke kterému se vztahuje na záložku.|
+|[Getspecification –](#getspecification)|Vrátí ukazatel rozhraní na objekt (příkaz nebo relace), který vytvořili této sady řádků.|
+
+## <a name="remarks"></a>Poznámky
+
+Povinné rozhraní sady řádků. Tato třída implementuje pomocí vlastnosti sady řádků [mapy sady vlastností](../../data/oledb/begin-propset-map.md) definované ve třídě příkazu. I když třídy sady řádků se zobrazí, a používat třídu příkazu vlastnost sady, v sadě řádků je dodán vlastní kopii vlastností za běhu při vytvoření objektu příkazu nebo v jiné relaci.
+
 ## <a name="getproperties"></a> IRowsetInfoImpl::GetProperties
 
-Vrátí aktuální nastavení pro vlastnosti v `DBPROPSET_ROWSET` skupiny.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,  
-   const DBPROPIDSET rgPropertyIDSets[],  
-   ULONG* pcPropertySets,  
-   DBPROPSET** prgPropertySets);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+Vrátí aktuální nastavení pro vlastnosti v `DBPROPSET_ROWSET` skupiny.
 
-Zobrazit [IRowsetInfo::GetProperties](/previous-versions/windows/desktop/ms719611) v *referenční informace pro OLE DB programátory*. 
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
+   const DBPROPIDSET rgPropertyIDSets[],
+   ULONG* pcPropertySets,
+   DBPROPSET** prgPropertySets);
+```
+
+#### <a name="parameters"></a>Parametry
+
+Zobrazit [IRowsetInfo::GetProperties](/previous-versions/windows/desktop/ms719611) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="getreferencedrowset"></a> IRowsetInfoImpl::GetReferencedRowset
 
-Vrátí ukazatel rozhraní v sadě řádků, ke kterému se vztahuje na záložku.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,  
-   REFIID riid,  
-   IUnknown** ppReferencedRowset);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+Vrátí ukazatel rozhraní v sadě řádků, ke kterému se vztahuje na záložku.
 
-Zobrazit [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145) v *referenční informace pro OLE DB programátory*. *IOrdinal* parametr musí být sloupec záložky. 
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
+   REFIID riid,
+   IUnknown** ppReferencedRowset);
+```
+
+#### <a name="parameters"></a>Parametry
+
+Zobrazit [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145) v *referenční informace pro OLE DB programátory*. *IOrdinal* parametr musí být sloupec záložky.
 
 ## <a name="getspecification"></a> IRowsetInfoImpl::GetSpecification
 
-Vrátí ukazatel rozhraní na objekt (příkaz nebo relace), který vytvořili této sady řádků.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Vrátí ukazatel rozhraní na objekt (příkaz nebo relace), který vytvořili této sady řádků.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-STDMETHOD (GetSpecification )(REFIID riid,  
-   IUnknown** ppSpecification);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+STDMETHOD (GetSpecification )(REFIID riid,
+   IUnknown** ppSpecification);
+```
 
-Zobrazit [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746) v *referenční informace pro OLE DB programátory*.  
-  
-### <a name="remarks"></a>Poznámky  
+#### <a name="parameters"></a>Parametry
 
-Pomocí této metody [igetdatasourceimpl –](../../data/oledb/igetdatasourceimpl-class.md) k načtení vlastnosti z objektu zdroje dat.  
-  
-## <a name="see-also"></a>Viz také  
+Zobrazit [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746) v *referenční informace pro OLE DB programátory*.
+
+### <a name="remarks"></a>Poznámky
+
+Pomocí této metody [igetdatasourceimpl –](../../data/oledb/igetdatasourceimpl-class.md) k načtení vlastnosti z objektu zdroje dat.
+
+## <a name="see-also"></a>Viz také
 
 [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

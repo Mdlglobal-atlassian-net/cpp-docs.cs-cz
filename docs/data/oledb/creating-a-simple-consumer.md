@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c9cb2003b857bb156709e4ba2a3345dfb57bfd3c
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 5a989466cff50d7e336bc9af8fee68f7ab72929d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808937"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054914"
 ---
 # <a name="creating-a-simple-consumer"></a>Vytvoření jednoduchého příjemce
 
-Generování šablony příjemce OLE DB pomocí Průvodce projektem ATL a průvodce příjemcem ATL OLE DB.
+Použití **Průvodce projektem ATL** a **průvodce příjemcem ATL OLE DB** ke generování šablony příjemce OLE DB.
 
 ## <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>K vytvoření konzolové aplikace pro příjemce technologie OLE DB
 
@@ -42,7 +42,7 @@ Generování šablony příjemce OLE DB pomocí Průvodce projektem ATL a průvo
 
 1. Klikněte na tlačítko **OK** zavřete průvodce a generování projektu.
 
-Pak přidejte objekt příjemce technologie OLE DB pomocí průvodce příjemcem ATL OLE DB.
+Pak pomocí **průvodce příjemcem ATL OLE DB** přidání objektu příjemce technologie OLE DB.
 
 ## <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>Vytvoření příjemce pomocí průvodce příjemcem ATL OLE DB
 
@@ -54,7 +54,7 @@ Pak přidejte objekt příjemce technologie OLE DB pomocí průvodce příjemcem
 
 1. V **kategorie** podokně klikněte na tlačítko **nainstalováno** > **Visual C++** > **ATL**, klikněte na tlačítko **Spotřebitele OLEDB knihovny ATL** ikonu **šablony** podokně a pak klikněte na tlačítko **přidat**.
 
-   Zobrazí se průvodce příjemcem ATL OLEDB.
+   **Průvodce příjemcem ATL OLEDB** se zobrazí.
 
 1. Klikněte na tlačítko **zdroj dat** tlačítko.
 
@@ -62,26 +62,26 @@ Pak přidejte objekt příjemce technologie OLE DB pomocí průvodce příjemcem
 
 1. V **vlastnosti propojení dat** dialogové okno pole, postupujte takto:
 
-   - Na **poskytovatele** kartu, zadejte zprostředkovatele OLE DB.
+    1. Na **poskytovatele** kartu, zadejte zprostředkovatele OLE DB.
 
-   - Na **připojení** kartu, zadejte požadované informace, jako je například název serveru, přihlašovací jméno a heslo pro zdroj dat a databáze na serveru.
+    1. Na **připojení** kartu, zadejte požadované informace, jako je například název serveru, přihlašovací jméno a heslo pro zdroj dat a databáze na serveru.
 
-   > [!NOTE]
-   > Existuje problém zabezpečení s **povolit uložení hesla** funkce **vlastnosti propojení dat** dialogové okno. V **zadejte informace pro přihlášení k serveru**, existují dva přepínače: **integrované zabezpečení Windows NT použití** a **použít konkrétní uživatelské jméno a heslo**.
+       > [!NOTE]
+       > Existuje problém zabezpečení s **povolit uložení hesla** funkce **vlastnosti propojení dat** dialogové okno. V **zadejte informace pro přihlášení k serveru**, existují dva přepínače: **integrované zabezpečení Windows NT použití** a **použít konkrétní uživatelské jméno a heslo**.
 
-   > [!NOTE]
-   > Pokud vyberete **použít konkrétní uživatelské jméno a heslo**, máte možnost uložení hesla (pomocí **povolit uložení hesla** zaškrtávací políčko), ale tato možnost není zabezpečený. Doporučuje se, že vyberete **integrované zabezpečení Windows NT použití**; tato možnost používá k ověření vaší identity systému Windows NT.
+       > [!NOTE]
+       > Pokud vyberete **použít konkrétní uživatelské jméno a heslo**, máte možnost uložení hesla (pomocí **povolit uložení hesla** zaškrtávací políčko), ale tato možnost není zabezpečený. Doporučuje se, že vyberete **integrované zabezpečení Windows NT použití**; tato možnost používá k ověření vaší identity systému Windows NT.
 
-   > [!NOTE]
-   > Pokud nemůžete použít Windows NT integrované zabezpečení, používejte aplikace střední vrstvy vyzvat uživatele k zadání hesla nebo k uložení hesla v umístění s mechanismy zabezpečení, které zvýší jeho ochranu (místo ve zdrojovém kódu).
+       > [!NOTE]
+       > Pokud nemůžete použít Windows NT integrované zabezpečení, používejte aplikace střední vrstvy vyzvat uživatele k zadání hesla nebo k uložení hesla v umístění s mechanismy zabezpečení, které zvýší jeho ochranu (místo ve zdrojovém kódu).
 
-   Po výběru poskytovatele a další nastavení, klikněte na **Test připojení** ověření výběru z předchozího stránek dialogového okna. Pokud **výsledky** pole sestavy `Test connection succeeded`, klikněte na tlačítko **OK** pro vytvoření odkazu data.
+   1. Po výběru poskytovatele a další nastavení, klikněte na **Test připojení** ověření výběru z předchozího stránek dialogového okna. Pokud **výsledky** pole sestavy `Test connection succeeded`, klikněte na tlačítko **OK** pro vytvoření odkazu data.
 
    **Vyberte databázový objekt** zobrazí se dialogové okno.
 
-1. Výběr tabulky, zobrazení nebo uložené procedury pomocí ovládacího prvku stromu. Pro účely tohoto postupu, vyberte `Products` tabulce `Northwind` databáze.
+1. Výběr tabulky, zobrazení nebo uložené procedury pomocí ovládacího prvku stromu. V tomto příkladu vyberte `Products` tabulce `Northwind` databáze.
 
-1. Klikněte na tlačítko **OK**. Vrátí průvodce příjemcem ATL OLE DB.
+1. Klikněte na tlačítko **OK**. Tím se vrátíte do **průvodce příjemcem ATL OLE DB**.
 
 1. Názvy pro dokončení průvodce `Class` a **souboru .h** na základě názvu tabulky, zobrazení nebo uložené procedury, kterou jste vybrali. Pokud chcete, můžete upravit tyto názvy.
 
@@ -93,14 +93,14 @@ Pak přidejte objekt příjemce technologie OLE DB pomocí průvodce příjemcem
 
 1. V části **podporu**, nechat **změnu**, **vložit**, a **odstranit** políčka prázdná.
 
-   Vyberte **změnu**, **vložit**, a **odstranit** zaškrtávací políčka pro podporu změn, vkládání a odstraňování záznamů v dané sadě řádků, pokud je to nutné. Další informace o zápisu dat do dat úložiště, najdete v článku [aktualizace sad řádků](../../data/oledb/updating-rowsets.md).
+   Vyberte **změnu**, **vložit**, a **odstranit** zaškrtávací políčka pro podporu změn, vkládání a odstraňování záznamů v dané sadě řádků. Další informace o zápisu dat do dat úložiště, najdete v článku [aktualizace sad řádků](../../data/oledb/updating-rowsets.md).
 
 1. Klikněte na tlačítko **Dokončit** vytvořte příjemce.
 
 Průvodce vygeneruje třídu příkazu nebo třída záznamů uživatelů, jak je znázorněno v [vygenerované třídy](../../data/oledb/consumer-wizard-generated-classes.md). Třídy příkazů bude mít název, který jste zadali v `Class` pole v průvodci (v tomto případě `CProducts`), a třídu záznamů uživatele bude mít název ve tvaru "*ClassName*přístupového objektu" (v tomto případě `CProductsAccessor`).
 
 > [!NOTE]
-> Průvodce umístí do souboru Products.h následující řádek:
+> Průvodce umístí následující řádek do `Products.h`:
 
 ```cpp
 #error Security Issue: The connection string may contain a password

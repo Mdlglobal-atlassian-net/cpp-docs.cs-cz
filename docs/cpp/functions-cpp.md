@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aacbb7709daf6952f00276663e20131e967a554d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 24eded7bac023bd2291e0c574012f72ba86b6bcf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022354"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053796"
 ---
 # <a name="functions-c"></a>Funkce (C++)
 
@@ -101,7 +101,7 @@ Volitelné části deklarace funkce jsou:
 
     ```
 
-     Další informace najdete v tématu [Program a propojení](../cpp/program-and-linkage-cpp.md).
+   Další informace najdete v tématu [Program a propojení](../cpp/program-and-linkage-cpp.md).
 
 1. **vložené**, který instruuje kompilátor, aby každé volání funkce nahraďte samotný kód funkce. vkládání může vám pomůže zvýšit výkon v situacích, kdy funkce rychle spustí a je vyvolána opakovaně v kritickém pro výkon část kódu.
 
@@ -112,7 +112,7 @@ Volitelné části deklarace funkce jsou:
     }
     ```
 
-     Další informace najdete v tématu [vložené funkce](../cpp/inline-functions-cpp.md).
+   Další informace najdete v tématu [vložené funkce](../cpp/inline-functions-cpp.md).
 
 1. A `noexcept` výraz, který určuje, zda funkce může vyvolat výjimku. V následujícím příkladu se funkce nevyvolá výjimku pokud `is_pod` výraz vyhodnocen jako **true**.
 
@@ -123,7 +123,7 @@ Volitelné části deklarace funkce jsou:
     T copy_object(T& obj) noexcept(std::is_pod<T>) {...}
     ```
 
-     Další informace najdete v tématu [noexcept](../cpp/noexcept-cpp.md).
+   Další informace najdete v tématu [noexcept](../cpp/noexcept-cpp.md).
 
 1. (Pouze pro členské funkce) Kvalifikátory cv, které určují, jestli je funkce **const** nebo **volatile**.
 
@@ -263,7 +263,6 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 ```
 
 Když **automaticky** se používá ve spojení s koncovým návratovým typem, stačí slouží jako zástupný symbol pro libovolné decltype výraz vytvoří a sám není provádí odvození typu.
-
 
 ## <a name="function-local-variables"></a>Lokální proměnné – funkce
 

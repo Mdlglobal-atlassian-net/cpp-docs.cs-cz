@@ -19,38 +19,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b16a3d87741b8dda3b130c09d74e86a2350cd7be
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 211a73fb2af2925f40518f2b0eda3f7bd5b5daf1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42465299"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057241"
 ---
 # <a name="checkstack"></a>check_stack
-Instruuje kompilátor, chcete-li vypnout sondy zásobníku, pokud `off` (nebo `-`) je zadán, nebo chcete zapnout sondy zásobníku, pokud `on` (nebo `+`) je zadán.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-#pragma check_stack([ {on | off}] )  
-#pragma check_stack{+ | -}  
-```  
-  
-## <a name="remarks"></a>Poznámky 
+Instruuje kompilátor, chcete-li vypnout sondy zásobníku, pokud `off` (nebo `-`) je zadán, nebo chcete zapnout sondy zásobníku, pokud `on` (nebo `+`) je zadán.
 
-Pokud není uveden žádný argument, jsou považovány sondy zásobníku podle výchozích nastavení. Tato direktiva pragma se projeví v první funkci definovanou po direktivy pragma je zobrazena. Sondy zásobníku se ani jedna část maker ani funkcí, které jsou generované jako vložené.  
-  
-Pokud není argument **check_stack –** – Direktiva pragma, kontrolou zásobníku se vrátí do chování zadané na příkazovém řádku. Další informace najdete v tématu [kompilátory](../build/reference/compiler-options.md). Interakce `#pragma check_stack` a [/Gs](../build/reference/gs-control-stack-checking-calls.md) možnost je shrnuto v následující tabulce.  
-  
-### <a name="using-the-checkstack-pragma"></a>Pomocí check_stack – direktiva Pragma  
-  
-|Syntaxe|Zkompilovaná<br /><br /> /GS – možnost?|Akce|  
-|------------|------------------------------------|------------|  
-|`#pragma check_stack( )` Nebo<br /><br /> `#pragma check_stack`|Ano|Vypne kontroly zásobníku pro funkce, které následují|  
-|`#pragma check_stack( )` Nebo<br /><br /> `#pragma check_stack`|Ne|Zapne kontroly zásobníku pro funkce, které následují|  
-|`#pragma check_stack(on)`<br /><br /> Nebo `#pragma check_stack +`|Ano nebo ne|Zapne kontroly zásobníku pro funkce, které následují|  
-|`#pragma check_stack(off)`<br /><br /> Nebo `#pragma check_stack -`|Ano nebo ne|Vypne kontroly zásobníku pro funkce, které následují|  
-  
-## <a name="see-also"></a>Viz také  
- 
+## <a name="syntax"></a>Syntaxe
+
+```
+#pragma check_stack([ {on | off}] )
+#pragma check_stack{+ | -}
+```
+
+## <a name="remarks"></a>Poznámky
+
+Pokud není uveden žádný argument, jsou považovány sondy zásobníku podle výchozích nastavení. Tato direktiva pragma se projeví v první funkci definovanou po direktivy pragma je zobrazena. Sondy zásobníku se ani jedna část maker ani funkcí, které jsou generované jako vložené.
+
+Pokud není argument **check_stack –** – Direktiva pragma, kontrolou zásobníku se vrátí do chování zadané na příkazovém řádku. Další informace najdete v tématu [kompilátory](../build/reference/compiler-options.md). Interakce `#pragma check_stack` a [/Gs](../build/reference/gs-control-stack-checking-calls.md) možnost je shrnuto v následující tabulce.
+
+### <a name="using-the-checkstack-pragma"></a>Pomocí check_stack – direktiva Pragma
+
+|Syntaxe|Zkompilovaná<br /><br /> /GS – možnost?|Akce|
+|------------|------------------------------------|------------|
+|`#pragma check_stack( )` Nebo<br /><br /> `#pragma check_stack`|Ano|Vypne kontroly zásobníku pro funkce, které následují|
+|`#pragma check_stack( )` Nebo<br /><br /> `#pragma check_stack`|Ne|Zapne kontroly zásobníku pro funkce, které následují|
+|`#pragma check_stack(on)`<br /><br /> Nebo `#pragma check_stack +`|Ano nebo ne|Zapne kontroly zásobníku pro funkce, které následují|
+|`#pragma check_stack(off)`<br /><br /> Nebo `#pragma check_stack -`|Ano nebo ne|Vypne kontroly zásobníku pro funkce, které následují|
+
+## <a name="see-also"></a>Viz také
+
 [Direktivy Pragma a klíčové slovo __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

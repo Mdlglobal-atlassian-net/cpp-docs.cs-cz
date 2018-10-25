@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce6099b904c088399dcb43635a1b254567e8320
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fbfd58491981cdba1b3aa3002736f49a7c09038c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024907"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054473"
 ---
 # <a name="message-map-macros-atl"></a>Makra Map zpráv (ATL)
 
@@ -93,11 +93,11 @@ Tato makra definují mapy zpráv a položky.
 |[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|Mapuje zrcadlené wm_notify – zprávy pro obslužnou rutinu, na základě kód upozornění a identifikátor ovládacího prvku.|
 |[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|Zrcadlené wm_notify – zprávy se mapuje na obslužnou rutinu, na základě identifikátoru ovládacího prvku.|
 |[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|Zrcadlené wm_notify – zprávy se mapuje na obslužnou rutinu, na základě kód upozornění a souvislý rozsah identifikátory ovládacího prvku.|
-|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Mapuje zrcadlené wm_notify – zprávy pro obslužnou rutinu pro souvislý rozsah identifikátorů ovládacího prvku.|  
+|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Mapuje zrcadlené wm_notify – zprávy pro obslužnou rutinu pro souvislý rozsah identifikátorů ovládacího prvku.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlwin.h  
+**Záhlaví:** atlwin.h
 
 ##  <a name="alt_msg_map"></a>  ALT_MSG_MAP
 
@@ -136,7 +136,7 @@ Další příklad ukazuje dva alternativní zprávy maps. Výchozí mapování z
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlwin.h   
+**Záhlaví:** atlwin.h
 
 ##  <a name="begin_msg_map"></a>  BEGIN_MSG_MAP
 
@@ -153,7 +153,7 @@ BEGIN_MSG_MAP(theClass)
 
 ### <a name="remarks"></a>Poznámky
 
-[CWindowImpl::WindowProc](cwindowimpl-class.md#windowproc) používá výchozí mapování zpráv pro zpracování zprávy odeslané do okna. Mapy zpráv směruje zprávy odpovídající obslužné rutiny nebo jiné mapování zprávy.  
+[CWindowImpl::WindowProc](cwindowimpl-class.md#windowproc) používá výchozí mapování zpráv pro zpracování zprávy odeslané do okna. Mapy zpráv směruje zprávy odpovídající obslužné rutiny nebo jiné mapování zprávy.
 
 Následující makra mapování na obslužnou rutinu zprávy. Tato funkce musí být definován v *theClass*.
 
@@ -328,7 +328,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 
 ### <a name="remarks"></a>Poznámky
 
-CHAIN_MSG_MAP_DYNAMIC směruje zprávy, v době běhu k výchozí mapování zpráv v jiném objektu. Objekt a jeho mapu zpráv jsou přidružené k *dynaChainID*, které jste definovali [CDynamicChain::SetChainEntry](cdynamicchain-class.md#setchainentry). Musíte odvodit třídu z `CDynamicChain` Chcete-li použít CHAIN_MSG_MAP_DYNAMIC. Příklad najdete v tématu [cdynamicchain –](../../atl/reference/cdynamicchain-class.md) Přehled.  
+CHAIN_MSG_MAP_DYNAMIC směruje zprávy, v době běhu k výchozí mapování zpráv v jiném objektu. Objekt a jeho mapu zpráv jsou přidružené k *dynaChainID*, které jste definovali [CDynamicChain::SetChainEntry](cdynamicchain-class.md#setchainentry). Musíte odvodit třídu z `CDynamicChain` Chcete-li použít CHAIN_MSG_MAP_DYNAMIC. Příklad najdete v tématu [cdynamicchain –](../../atl/reference/cdynamicchain-class.md) Přehled.
 
 > [!NOTE]
 >  Vždy začínají mapy zpráv s [BEGIN_MSG_MAP](#begin_msg_map). Pak může deklarovat mapy následující alternativní zpráv s ALT_MSG_MAP. [END_MSG_MAP](#end_msg_map) – makro označuje konec mapování zprávy. Mapování každé zprávy musí mít přesně jednu instanci BEGIN_MSG_MAP a END_MSG_MAP.
@@ -823,7 +823,7 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 [in] Kód upozornění.
 
 *Func*<br/>
-[in] Název funkce obslužná rutina zprávy.  
+[in] Název funkce obslužná rutina zprávy.
 
 ### <a name="requirements"></a>Požadavky
 
@@ -846,11 +846,11 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 [in] Kód upozornění.
 
 *Func*<br/>
-[in] Název funkce obslužná rutina zprávy.  
+[in] Název funkce obslužná rutina zprávy.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlwin.h  
+**Záhlaví:** atlwin.h
 
 ##  <a name="reflected_command_id_handler"></a>  REFLECTED_COMMAND_ID_HANDLER
 
@@ -866,11 +866,11 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 [in] Identifikátor položky nabídky, ovládací prvek nebo akcelerátoru.
 
 *Func*<br/>
-[in] Název funkce obslužná rutina zprávy.  
+[in] Název funkce obslužná rutina zprávy.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlwin.h  
+**Záhlaví:** atlwin.h
 
 ##  <a name="reflected_command_range_code_handler"></a>  REFLECTED_COMMAND_RANGE_CODE_HANDLER
 
@@ -892,11 +892,11 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 [in] Kód upozornění.
 
 *Func*<br/>
-[in] Název funkce obslužná rutina zprávy.  
+[in] Název funkce obslužná rutina zprávy.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlwin.h  
+**Záhlaví:** atlwin.h
 
 ##  <a name="reflected_command_range_handler"></a>  REFLECTED_COMMAND_RANGE_HANDLER
 
@@ -915,11 +915,11 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 [in] Označuje konec souvislý rozsah identifikátory ovládacího prvku.
 
 *Func*<br/>
-[in] Název funkce obslužná rutina zprávy.  
+[in] Název funkce obslužná rutina zprávy.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlwin.h  
+**Záhlaví:** atlwin.h
 
 ##  <a name="reflected_notify_code_handler"></a>  REFLECTED_NOTIFY_CODE_HANDLER
 
@@ -935,11 +935,11 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 [in] Kód upozornění.
 
 *Func*<br/>
-[in] Název funkce obslužná rutina zprávy.  
+[in] Název funkce obslužná rutina zprávy.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlwin.h  
+**Záhlaví:** atlwin.h
 
 ##  <a name="reflected_notify_handler"></a>  REFLECTED_NOTIFY_HANDLER
 
@@ -958,11 +958,11 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 [in] Kód upozornění.
 
 *Func*<br/>
-[in] Název funkce obslužná rutina zprávy.  
+[in] Název funkce obslužná rutina zprávy.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlwin.h  
+**Záhlaví:** atlwin.h
 
 ##  <a name="reflected_notify_id_handler"></a>  REFLECTED_NOTIFY_ID_HANDLER
 
@@ -978,11 +978,11 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 [in] Identifikátor položky nabídky, ovládací prvek nebo akcelerátoru.
 
 *Func*<br/>
-[in] Název funkce obslužná rutina zprávy.  
+[in] Název funkce obslužná rutina zprávy.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlwin.h  
+**Záhlaví:** atlwin.h
 
 ##  <a name="reflected_notify_range_code_handler"></a>  REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 
