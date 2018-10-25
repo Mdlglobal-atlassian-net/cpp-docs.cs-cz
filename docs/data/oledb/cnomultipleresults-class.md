@@ -19,32 +19,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 67658f6edadd7723789288ab268b97cecdd611d2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6d68daae7bce6ca4c9ffafe7a24c80cff3a5426a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017350"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059854"
 ---
 # <a name="cnomultipleresults-class"></a>CNoMultipleResults – třída
 
-Použít jako argument šablony (*TMultiple*) k [CCommand](../../data/oledb/ccommand-class.md) nastavení k vytvoření optimalizované příkazu, který zpracovává jeden výsledek.  
-  
+Použít jako argument šablony (*TMultiple*) k [CCommand](../../data/oledb/ccommand-class.md) nastavení k vytvoření optimalizované příkazu, který zpracovává jeden výsledek.
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-class CNoMultipleResults  
-```  
-  
-## <a name="remarks"></a>Poznámky  
+class CNoMultipleResults
+```
 
-Pokud chcete, aby příkaz pro zpracování více sad výsledků dotazu, použijte [CMultipleResults](../../data/oledb/cmultipleresults-class.md) místo.  
-  
-## <a name="requirements"></a>Požadavky  
+## <a name="remarks"></a>Poznámky
 
-**Záhlaví:** také atldbcli.h  
-  
-## <a name="see-also"></a>Viz také  
+Pokud chcete, aby příkaz pro zpracování více sad výsledků dotazu, použijte [CMultipleResults](../../data/oledb/cmultipleresults-class.md) místo.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** také atldbcli.h
+
+## <a name="see-also"></a>Viz také
 
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

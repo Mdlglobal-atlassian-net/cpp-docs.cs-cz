@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15a03708f96f881206aa683b31c26c3c5192f8cb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8f4a3ba23fbf6e9465d78b04fcd79758c7cae525
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389054"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060224"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Schránka: Kopírování a vkládání dat
 
@@ -56,7 +56,7 @@ Vkládání dat je složitější než zkopírováním, protože je nutné zvoli
 
 1. Volání `COleDataObject::IsDataAvailable` ke kontrole, jestli konkrétní formát je k dispozici.
 
-     Alternativně můžete použít `COleDataObject::BeginEnumFormats` vás pod rouškou pro ostatní formáty najděte nejvíce vhodné pro vaši aplikaci.
+   Alternativně můžete použít `COleDataObject::BeginEnumFormats` vás pod rouškou pro ostatní formáty najděte nejvíce vhodné pro vaši aplikaci.
 
 1. Operace vložení formátu.
 

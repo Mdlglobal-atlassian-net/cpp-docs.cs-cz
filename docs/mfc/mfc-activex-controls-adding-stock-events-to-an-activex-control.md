@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51fff5b7e43b489bdaf2a27b115af26c48e33956
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3bf023dbc52ccac7311a62aba1a290b1a03190dd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46400784"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060556"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC – ovládací prvky ActiveX: Přidání uložených událostí do ovládacího prvku ActiveX
 
@@ -73,13 +73,13 @@ Uložených událostí se liší od vlastních událostí, v tom, že automatick
 |-----------|---------------------|--------------|
 |Klikněte na...|**void (fireclick –)**|Aktivována, když ovládací prvek zachytí myš, všechny **BUTTONUP** přijetí zprávy (levý, střední nebo pravou) a na tlačítko se uvolní nad ovládací prvek. MouseDown akcie a události MouseUp dojít před touto událostí.<br /><br /> Zápis do mapy událostí: **(event_stock_click –)**|
 |DblClick|**void (firedblclick –)**|Podobně jako to Click ale aktivována, pokud **BUTTONDBLCLK** doručení zprávy.<br /><br /> Zápis do mapy událostí: **(event_stock_dblclick –)**|
-|Chyba|**fireerror – void (SCODE***scode* **, LPCSTR** `lpszDescription` **, UINT**`nHelpID`**= 0)** |Je aktivována při výskytu chyby v rámci ovládacího prvku ActiveX mimo rozsah přístup metody volání nebo vlastnost.<br /><br /> Zápis do mapy událostí: **(event_stock_errorevent –)**|
-|KeyDown|**firekeydown – void (krátký** `nChar` **krátká**`nShiftState`**)** |Aktivováno, když `WM_SYSKEYDOWN` nebo `WM_KEYDOWN` doručení zprávy.<br /><br /> Zápis do mapy událostí: **(event_stock_keydown –)**|
-|KeyPress|**firekeypress – void (krátký** <strong>\*</strong> `pnChar` **)** |Aktivováno, když `WM_CHAR` doručení zprávy.<br /><br /> Zápis do mapy událostí: **EVENT_STOCK_KEYPRESS)**|
-|KeyUp|**firekeyup – void (krátký** `nChar` **krátká**`nShiftState`**)** |Aktivováno, když `WM_SYSKEYUP` nebo `WM_KEYUP` doručení zprávy.<br /><br /> Zápis do mapy událostí: **(event_stock_keyup –)**|
-|MouseDown|**firemousedown – void (krátký** `nButton` **krátká** `nShiftState` **, float***x* **, float** *y***)** |Odesláno, pokud žádné **STISKNUTITLACITKA** přijetí (doleva, střední nebo doprava). Ukazatel myši je zachycena, bezprostředně před Tato událost se aktivuje.<br /><br /> Zápis do mapy událostí: **(event_stock_mousedown –)**|
-|MouseMove|**firemousemove – void (krátký** `nButton` **krátká** `nShiftState` **, float***x* **, float** *y***)** |Je aktivována při doručení zprávy do wm_mousemove a.<br /><br /> Zápis do mapy událostí: **(event_stock_mousemove –)**|
-|MouseUp|**firemouseup – void (krátký** `nButton` **krátká** `nShiftState` **, float***x* **, float** *y***)** |Odesláno, pokud žádné **BUTTONUP** přijetí (doleva, střední nebo doprava). Zachycení myši je uvolněn předtím, než se tato událost se aktivuje.<br /><br /> Zápis do mapy událostí: **(event_stock_mouseup –)**|
+|Chyba|**fireerror – void (SCODE***scode* **, LPCSTR** `lpszDescription` **, UINT**`nHelpID`**= 0)**|Je aktivována při výskytu chyby v rámci ovládacího prvku ActiveX mimo rozsah přístup metody volání nebo vlastnost.<br /><br /> Zápis do mapy událostí: **(event_stock_errorevent –)**|
+|KeyDown|**firekeydown – void (krátký** `nChar` **krátká**`nShiftState`**)**|Aktivováno, když `WM_SYSKEYDOWN` nebo `WM_KEYDOWN` doručení zprávy.<br /><br /> Zápis do mapy událostí: **(event_stock_keydown –)**|
+|KeyPress|**firekeypress – void (krátký** <strong>\*</strong> `pnChar` **)**|Aktivováno, když `WM_CHAR` doručení zprávy.<br /><br /> Zápis do mapy událostí: **EVENT_STOCK_KEYPRESS)**|
+|KeyUp|**firekeyup – void (krátký** `nChar` **krátká**`nShiftState`**)**|Aktivováno, když `WM_SYSKEYUP` nebo `WM_KEYUP` doručení zprávy.<br /><br /> Zápis do mapy událostí: **(event_stock_keyup –)**|
+|MouseDown|**firemousedown – void (krátký** `nButton` **krátká** `nShiftState` **, float***x* **, float** *y***)**|Odesláno, pokud žádné **STISKNUTITLACITKA** přijetí (doleva, střední nebo doprava). Ukazatel myši je zachycena, bezprostředně před Tato událost se aktivuje.<br /><br /> Zápis do mapy událostí: **(event_stock_mousedown –)**|
+|MouseMove|**firemousemove – void (krátký** `nButton` **krátká** `nShiftState` **, float***x* **, float** *y***)**|Je aktivována při doručení zprávy do wm_mousemove a.<br /><br /> Zápis do mapy událostí: **(event_stock_mousemove –)**|
+|MouseUp|**firemouseup – void (krátký** `nButton` **krátká** `nShiftState` **, float***x* **, float** *y***)**|Odesláno, pokud žádné **BUTTONUP** přijetí (doleva, střední nebo doprava). Zachycení myši je uvolněn předtím, než se tato událost se aktivuje.<br /><br /> Zápis do mapy událostí: **(event_stock_mouseup –)**|
 |ReadyStateChange|**void (FireReadyStateChange)**|Je aktivována při řízení přejde na další připravena kvůli množství dat přijatých.<br /><br /> Zápis do mapy událostí: **(event_stock_readystatechange –)**|
 
 ##  <a name="_core_adding_a_stock_event_using_classwizard"></a> Přidání uložených událostí pomocí Průvodce přidáním události
@@ -94,7 +94,7 @@ Přidání uložených událostí vyžaduje méně práce než přidání vlastn
 
 1. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat událost**.
 
-     Otevře se Průvodce přidáním události.
+   Otevře se Průvodce přidáním události.
 
 1. V **název události** rozevíracího seznamu vyberte `KeyPress`.
 

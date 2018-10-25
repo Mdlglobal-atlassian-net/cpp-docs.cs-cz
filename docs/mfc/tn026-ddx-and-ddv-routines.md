@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3930f08ae0708b81dde218a88fcda4dc34931390
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f07ab7b4420a5c33be56a9278b60afb6424e9e83
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389732"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063546"
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026: Rutiny DDX a DDV
 
@@ -224,21 +224,21 @@ Každé pole je oddělené znakem ";". Pole a jejich účel jsou popsané níže
 
    - *promptN*
 
-     Řetězec umístit nad upravit položku (& pro akcelerátor).
+      Řetězec umístit nad upravit položku (& pro akcelerátor).
 
    - *fmtN*
 
-     Znak formátu pro typ arg, jeden z:
+      Znak formátu pro typ arg, jeden z:
 
-     |Znak|Typ|
-     |-|-|
-     d | int
-     u | unsigned int
-     D | Long int (to znamená, long)
-     U | Long bez znaménka (DWORD)
-     f | float
-     F | double
-     s | odkazy řetězců
+      |Znak|Typ|
+      |-|-|
+      |d | int|
+      |u | unsigned int|
+      |D | Long int (to znamená, long)|
+      |U | Long bez znaménka (DWORD)|
+      |f | float|
+      |F | double|
+      |s | odkazy řetězců|
 
 ## <a name="see-also"></a>Viz také:
 

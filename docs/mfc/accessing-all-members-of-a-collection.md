@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 320457928ef8bc1a03d86b3a898bc0b719e116a2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8bcaaf4723e8b6a1ad40fb534b7114f317d76f6b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442874"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060816"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Přístup ke všem členům kolekce
 
@@ -48,38 +48,38 @@ Následující postupy ukazují, jak k iteraci přes tři hlavní typy kolekcí,
 
 1. Sekvenční index čísla s `GetAt` členské funkce:
 
-     [!code-cpp[NVC_MFCCollections#12](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_1.cpp)]
+   [!code-cpp[NVC_MFCCollections#12](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_1.cpp)]
 
-     V tomto příkladu, který obsahuje odkazy na pole s typem ukazatele `CPerson` objekty. Pole je odvozen od třídy `CObArray`, jeden nešablonových předdefinované třídy. `GetAt` vrací ukazatel `CPerson` objektu. Pro třídy kolekce typu ukazatele – pole nebo seznamy – první parametr určuje základní třídy; druhý parametr určuje typ, který chcete uložit.
+   V tomto příkladu, který obsahuje odkazy na pole s typem ukazatele `CPerson` objekty. Pole je odvozen od třídy `CObArray`, jeden nešablonových předdefinované třídy. `GetAt` vrací ukazatel `CPerson` objektu. Pro třídy kolekce typu ukazatele – pole nebo seznamy – první parametr určuje základní třídy; druhý parametr určuje typ, který chcete uložit.
 
-     `CTypedPtrArray` Třídy také přetížení **[] č.** operátor tak, aby může používat běžné syntaxe dolní index pole pro přístup k prvků pole. O alternativu k příkazu v těle **pro** je výše uvedený cyklus
+   `CTypedPtrArray` Třídy také přetížení **[] č.** operátor tak, aby může používat běžné syntaxe dolní index pole pro přístup k prvků pole. O alternativu k příkazu v těle **pro** je výše uvedený cyklus
 
-     [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]
 
-     Tento operátor existuje v obou **const** a jiných-**const** verze. **Const** verzi, která je vyvolána **const** pole, se může objevit pouze na pravé straně příkazu přiřazení.
+   Tento operátor existuje v obou **const** a jiných-**const** verze. **Const** verzi, která je vyvolána **const** pole, se může objevit pouze na pravé straně příkazu přiřazení.
 
 ### <a name="_core_to_iterate_a_list"></a> K iteraci v seznamu
 
 1. Pomocí členské funkce `GetHeadPosition` a `GetNext` pro procházení seznamu nahlíželi:
 
-     [!code-cpp[NVC_MFCCollections#14](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_3.cpp)]
+   [!code-cpp[NVC_MFCCollections#14](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_3.cpp)]
 
-     Tento příklad používá tak, aby obsahovala ukazatele na seznam typované ukazatele `CPerson` objekty. Seznam deklarací se podobá pro pole v postupu [pro iteraci polem](#_core_to_iterate_an_array) je odvozena z třídy, ale `CObList`. `GetNext` vrací ukazatel `CPerson` objektu.
+   Tento příklad používá tak, aby obsahovala ukazatele na seznam typované ukazatele `CPerson` objekty. Seznam deklarací se podobá pro pole v postupu [pro iteraci polem](#_core_to_iterate_an_array) je odvozena z třídy, ale `CObList`. `GetNext` vrací ukazatel `CPerson` objektu.
 
 ### <a name="_core_to_iterate_a_map"></a> K iteraci v mapě
 
 1. Použití `GetStartPosition` zobrazíte na začátek mapy a `GetNextAssoc` opakovaně získat další klíč a hodnotu z mapy, jak je znázorněno v následujícím příkladu:
 
-     [!code-cpp[NVC_MFCCollections#15](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_4.cpp)]
+   [!code-cpp[NVC_MFCCollections#15](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_4.cpp)]
 
-     Tento příklad používá šablonu jednoduché mapy (místo kolekce typu ukazatel), který používá `CString` klíče a ukládá ukazatele do `CPerson` objekty. Při použití funkcí přístup, jako jsou `GetNextAssoc`, třída poskytuje odkazy na `CPerson` objekty. Pokud používáte jednu z kolekcí mapy nešablonových místo, musíte přetypovat vráceného `CObject` ukazatel na ukazatel `CPerson`.
+   Tento příklad používá šablonu jednoduché mapy (místo kolekce typu ukazatel), který používá `CString` klíče a ukládá ukazatele do `CPerson` objekty. Při použití funkcí přístup, jako jsou `GetNextAssoc`, třída poskytuje odkazy na `CPerson` objekty. Pokud používáte jednu z kolekcí mapy nešablonových místo, musíte přetypovat vráceného `CObject` ukazatel na ukazatel `CPerson`.
 
     > [!NOTE]
     >  Kompilátor pro mapování objektu bez šablony vyžaduje odkaz na `CObject` ukazatel v posledním parametru do `GetNextAssoc`. Na vstupu musí přetypování ukazatele na typ, jak je znázorněno v následujícím příkladu.
 
-     Šablona řešení je jednodušší a zajišťuje vyšší bezpečnost typů. Kód objektu bez šablony je složitější, jak je vidět tady:
+   Šablona řešení je jednodušší a zajišťuje vyšší bezpečnost typů. Kód objektu bez šablony je složitější, jak je vidět tady:
 
-     [!code-cpp[NVC_MFCCollections#16](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_5.cpp)]
+   [!code-cpp[NVC_MFCCollections#16](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_5.cpp)]
 
 Další informace najdete v tématu [odstraňování všech objektů v kolekcích CObject](../mfc/deleting-all-objects-in-a-cobject-collection.md).
 

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4fca5d567d19434654b7ccf3cfb2b4d5d3e44d53
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 109b0303eaf4c4352d4e9b426642f92e361051a4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410704"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063403"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Použití ověřitelných sestavení se serverem SQL Server (C++/CLI)
 
@@ -32,7 +32,7 @@ SQL Server poskytuje rozšíření příkazů jazyka Transact-SQL (T-SQL) k tomu
 
 - Neomezené režimu: spuštění kódu na vaše vlastní nebezpečí; kód nemusí být prokazatelně typově bezpečný.
 
-- Nouzový režim: spuštění prokazatelně typově bezpečné kódu; Zkompilovaná/CLR: safe. 
+- Nouzový režim: spuštění prokazatelně typově bezpečné kódu; Zkompilovaná/CLR: safe.
 
 > [!IMPORTANT]
 > Zastaralé Visual Studio 2015 a Visual Studio 2017 se nepodporuje **/CLR: pure** a **/CLR: safe** Vytvoření ověřitelných projektů. Pokud budete potřebovat ověřitelný kód, doporučujeme že překlad kódu jazyka C#.
@@ -88,6 +88,5 @@ sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
 ```
 
 ## <a name="see-also"></a>Viz také
-
 
 [Třídy a struktury](../cpp/classes-and-structs-cpp.md)

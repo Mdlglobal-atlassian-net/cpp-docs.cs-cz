@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 279598c320131b163b936091560de45255c18a4d
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: e2ca0f4aa5f3965adc97e4cdaef09e01646e8809
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235006"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062116"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Postup ohlášení problému se sadou nástrojů Visual C++ nebo dokumentace
 
@@ -381,7 +381,7 @@ Pro problémy s použitím C++ kompilátoru, linkeru a další nástroje a kniho
 
 Ve výchozím nastavení **všechny informace v sestavách a všechny komentáře a odpovědi jsou veřejně viditelné**. Za normálních okolností jde výhody, protože umožňuje celé komunitě zobrazíte problémů, řešení a řešení, které našli ostatním uživatelům. Pokud máte obavy o tom, že vaše data nebo identity veřejného z důvodů duševní vlastnictví nebo osobních údajů, ale máte možnosti.
 
-Pokud máte obavy o odhalení svoji identitu [vytvořit nový účet Microsoft](https://signup.live.com/) , který nesmí vyzradit žádné podrobnosti o vás. Vytvoření sestavy pomocí tohoto účtu. 
+Pokud máte obavy o odhalení svoji identitu [vytvořit nový účet Microsoft](https://signup.live.com/) , který nesmí vyzradit žádné podrobnosti o vás. Vytvoření sestavy pomocí tohoto účtu.
 
 **Neumisťujte všechno, co chcete zachovat privátní v nadpisu nebo obsahu objektu původní sestavy, což je veřejná.** Místo toho Všimněte si, že chcete odeslat podrobnosti soukromě v samostatných komentář. Pokud chcete mít jistotu, že se vaše sestava směřuje těm správným lidem, zahrňte **cppcompiler** v seznamu témat hlášení o problému. Po vytvoření hlášení o problému, je teď možné určit, kdo uvidí vaše odpovědi a přílohy.
 

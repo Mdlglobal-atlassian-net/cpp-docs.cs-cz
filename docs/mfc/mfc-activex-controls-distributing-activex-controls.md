@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f067b1835c9ff70c7a7c91d401a83e7fa3e1cce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 734707256bb97e25452c45829fd99a1e0fb06fd0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382294"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060309"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>MFC – ovládací prvky ActiveX: Distribuce ovládacích prvků ActiveX
 
@@ -51,7 +51,6 @@ Tento článek popisuje několik problémy související s Redistribuce souborů
 - [Instalace ovládacích prvků ActiveX a distribuovatelné knihovny DLL](#_core_installing_activex_controls_and_redistributable_dlls)
 
 - [Registrace ovládacích prvků](#_core_registering_controls)
-
 
 >[!IMPORTANT]
 > ActiveX je starší technologie, která by neměla být používána při novém vývoji. Další informace o moderních technologií, které nahrazují ActiveX naleznete v tématu [ovládací prvky ActiveX](activex-controls.md).

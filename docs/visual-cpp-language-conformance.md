@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a40738b5a360e521ff890ef53240609a9afde32
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dd4848ae88d7bd66286ef13b3505a741d9b55c5c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388967"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060882"
 ---
 # <a name="visual-c-language-conformance"></a>Shoda jazyka Visual C++
 
@@ -93,8 +93,6 @@ Podrobnosti o vylepšení a jiné změny v sadě Visual Studio 2017 najdete v t�
 |&nbsp;&nbsp;[P0283R2 ignoruje se nerozpoznaný atributy](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0283r2.html)|VS 2015 <sup> [14](#note_14)</sup>|
 |&nbsp;&nbsp;[Oprava P0702R1 třídy odvození argumentu šablony pro konstruktory seznam inicializátorů](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0702r1.html)|VS 2017 15.7 <sup> [17](#note_17)</sup>|
 
-  
-  
 |Oblast funkcí| |
 |----|---|
 |__C ++ 17 základních funkcí jazyka (zprávy o chybách)__|__Podporované__|
@@ -105,8 +103,6 @@ Podrobnosti o vylepšení a jiné změny v sadě Visual Studio 2017 najdete v t�
 |&nbsp;&nbsp;[P0962R2 uvolnit rozsahu-pro přizpůsobení bod smyčky hledání pravidla](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0962r1.html)|Ne|
 |&nbsp;&nbsp;[Povolení P0969R0 strukturované vazby přístupní členové](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0969r0.pdf)|Ne|
 
-  
-  
 |Oblast funkcí| |
 |----|---|
 |__20 základní funkce jazyka c ++__|__Podporované__|
@@ -117,7 +113,6 @@ Podrobnosti o vylepšení a jiné změny v sadě Visual Studio 2017 najdete v t�
 |&nbsp;&nbsp;[Výchozí P0683R1 inicializátory členů pro bitová pole](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0683r1.html)|Ne|
 |&nbsp;&nbsp;[Oprava P0704R1 const l-hodnoty kvalifikaci ref ukazatelů na členy](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0704r1.html)|Ne|
 |&nbsp;&nbsp;[Koncepty P0734R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0734r0.pdf)|Ne|
-
 
 ## <a name="standard-library-features"></a>Funkce standardní knihovny
 
@@ -258,38 +253,55 @@ Skupina Paper uvedené společně označuje, že funkce byla prosazena do standa
 
 ### <a name="supported-values"></a>Podporované hodnoty
 
-__Ne__ znamená, že ještě nebyla implementována.  
-__Částečné__ znamená, že implementace v sadě Visual Studio 2017 je neúplná. Další podrobnosti najdete v části poznámky.  
-__Není k dispozici__ znamená, že návrh Paper popisují funkce. Tyto doklady změnit jazyk standardní, ale veškeré pracovní pro implementátory nevytvořili. Jsou uvedeny zde pro úplnost.  
-__VS 2010__ určuje funkce, které jsou podporovány v sadě Visual Studio 2010.  
-__VS 2013__ určuje funkce, které jsou podporovány v sadě Visual Studio 2013.  
-__VS 2015__ určuje funkce, které jsou podporovány v sadě Visual Studio 2015 RTM.  
-__VS 2015.2__ a __VS 2015.3__ označení funkce, které jsou podporovány v aplikaci Visual Studio 2015 Update 2 a Visual Studio 2015 Update 3, v uvedeném pořadí.  
-__VS 2017__ určuje funkce, které jsou podporovány v sadě Visual Studio 2017 RTM.  
-__VS 2017 15.3__ určuje funkce, které jsou podporovány v sadě Visual Studio 2017 verze 15.3.  
-__VS 2017 15.5__ určuje funkce, které jsou podporovány v sadě Visual Studio 2017 verze 15.5.
-__VS 2017 15.7__ určuje funkce, které jsou podporovány v sadě Visual Studio 2017 verze 15.7.
+__Ne__ znamená, že ještě nebyla implementována.<br/>
+__Částečné__ znamená, že implementace v sadě Visual Studio 2017 je neúplná. Další podrobnosti najdete v části poznámky.<br/>
+__Není k dispozici__ znamená, že návrh Paper popisují funkce. Tyto doklady změnit jazyk standardní, ale veškeré pracovní pro implementátory nevytvořili. Jsou uvedeny zde pro úplnost.<br/>
+__VS 2010__ určuje funkce, které jsou podporovány v sadě Visual Studio 2010.<br/>
+__VS 2013__ určuje funkce, které jsou podporovány v sadě Visual Studio 2013.<br/>
+__VS 2015__ určuje funkce, které jsou podporovány v sadě Visual Studio 2015 RTM.<br/>
+__VS 2015.2__ a __VS 2015.3__ označení funkce, které jsou podporovány v aplikaci Visual Studio 2015 Update 2 a Visual Studio 2015 Update 3, v uvedeném pořadí.<br/>
+__VS 2017__ určuje funkce, které jsou podporovány v sadě Visual Studio 2017 RTM.<br/>
+__VS 2017 15.3__ určuje funkce, které jsou podporovány v sadě Visual Studio 2017 verze 15.3.<br/>
+__VS 2017 15.5__ určuje funkce, které jsou podporovány v sadě Visual Studio 2017 verze 15.5.<br/>
+__VS 2017 15.7__ určuje funkce, které jsou podporovány v sadě Visual Studio 2017 verze 15.7.<br/>
 
 ### <a name="notes"></a>Poznámky
 
 <a name="note_A"></a>__A__ v/std: c ++ 14 režimu, zůstane neimplementovaná specifikace dynamických výjimek a throw() je stále považovány za synonymum pro \_ \_declspec(nothrow). V C ++ 17, byla specifikace dynamických výjimek většinou odstraněna P0003R5, ponechat jeden vestige: throw(), je zastaralé a chovat jako synonymum pro noexcept. V/std: c ++ 17 režimu MSVC nyní odpovídá standardu zadáním throw() stejné chování jako noexcept, například vynucení prostřednictvím ukončení.
-Možnost kompilátoru /Zc:noexceptTypes-požadavky našich staré chování \_ \_declspec(nothrow). Je pravděpodobné, že throw() se odebere v C ++ 20. Abychom vám pomohli s migrací kódu v reakci na tyto změny standardní a naše implementace nová upozornění kompilátoru problémů specifikace výjimek byly přidány pod **/std: c ++ 17** a **/permissive-**.  
-<a name="note_B"></a>__B__ podporované v /permissive-mode v sadě Visual Studio 2017 verze 15.7. Zobrazit [jde o název pro dvoufázové vyhledávání podpory MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/09/11/two-phase-name-lookup-support-comes-to-msvc/) Další informace.  
-<a name="note_C"></a>__C__ kompilátoru podpora sfinae u výrazů byla dostatečná pro standardní knihovnu od verze Visual Studio 2015 Update 2. Podporované ve verzi Visual Studio 2017 15.7 bez ohledu na to, zda /permissive-mode nastavena. Zůstanou některé chyby opravit. Alternativní řešení "jedinečný značku typu" již není nezbytné a odebrali jsme toto řešení od našich implementace STL.  
-<a name="note_D"></a>__D__ neúplná podporu kompilátoru pro preprocesor C99 pravidla v sadě Visual Studio 2017. Variadická makra jsou podporované, ale existuje mnoho chyb v chování bude preprocesor.  Jsme jsou overhauling preprocesoru a experimentálně plánujeme tyto změny v rámci **/ permissive-** brzy režimu.  
-<a name="note_E"></a>__Elektronické__ to je označen jako není k dispozici, protože kompilátory jsou povolené, ale není nutné pro podporu rozšířené celočíselné typy.  Stejně jako GCC a Clang jsme zvolili není pro jejich podporu.  
-<a name="note_F"></a>__F__ podobně, to je označen jako není k dispozici protože kompilátory jsou povolené, ale není nutné implementovat tyto optimalizace.  
-<a name="note_G"></a>__G__ podporované v rámci [/std: c ++ 14](./build/reference/std-specify-language-standard-version.md) suppressible upozornění.  
-<a name="note_J"></a>__J__ funkce, které nebyly dokončeny v sadě Visual Studio 2015 jsou rozdělená jinde v této tabulce.  
-<a name="note_K"></a>__K__ to je úplně nové implementaci, nekompatibilní s předchozí verzí std::experimental vyžadovaných symlink podpory, opravy chyb a změny v chování vyžaduje standard. V současné době včetně \<systému souborů > poskytuje nové std::filesystem a předchozí std::experimental::filesystem a včetně \<experimentální/filesystem > poskytuje pouze původní experimentální implementaci. ODEBERE experimentální implementace v další vydané verzi ABI ukončování knihoven.  
-<a name="note_L"></a>__L__ vnitřní kompilátor nepodporuje.   
-<a name="note_14"></a>__14__ tyto 17/20 funkce C ++ jsou vždy povoleny, i v případě [/std: c ++ 14](build/reference/std-specify-language-standard-version.md) (výchozí nastavení) je definováno. Je to způsobeno funkce byla implementována před zavedením **/std** možnosti, nebo protože podmíněné implementace bylo by složité.  
-<a name="note_17"></a>__17__ tyto funkce jsou povolené [/std: c ++ 17](./build/reference/std-specify-language-standard-version.md) (nebo [/std: c ++ nejnovější](./build/reference/std-specify-language-standard-version.md)) – možnost kompilátoru.  
-<a name="note_byte"></a>__bajtů__ `std::byte` zajišťuje [/std: c ++ 17](./build/reference/std-specify-language-standard-version.md) (nebo [/std: c ++ nejnovější](./build/reference/std-specify-language-standard-version.md)), ale vzhledem k tomu, že ji může dojít ke konfliktu se záhlavím Windows SDK v některých případech, má podrobných – makro odhlásit. Je možné ho zakázat tak, že definujete `_HAS_STD_BYTE` jako `0`.  
-<a name="note_C11"></a>__C11__ části C11 standardní knihovny, které jsou vyžadované C ++ 17, s výjimkou C99 implementován Universal CRT `strftime()` jen pro čtení E alternativní převod specifikátory C11 `fopen()` výhradním režimu a C11 `aligned_alloc()`. Je nepravděpodobné, že by k implementaci, protože zadaný C11 `aligned_alloc()` způsobem, který není kompatibilní s implementací Microsoft `free()`, jmenovitě, který `free()` musí být schopna zpracovávat vysoce zarovnané přidělení.  
-<a name="note_rem"></a>__rem__ odebrané, kdy [/std: c ++ 17](./build/reference/std-specify-language-standard-version.md) (nebo [/std: c ++ nejnovější](./build/reference/std-specify-language-standard-version.md)) je zadána možnost kompilátoru. Tyto funkce mají odhlásit makra: `_HAS_AUTO_PTR_ETC`, `_HAS_FUNCTION_ALLOCATOR_SUPPORT`, `_HAS_OLD_IOSTREAMS_MEMBERS`, a `_HAS_UNEXPECTED`.  
-<a name="note_charconv"></a>__charconv__ from_chars() a to_chars() jsou k dispozici pro celá čísla. Aktuálně pracujeme na s plovoucí desetinnou čárkou from_chars() následovat to_chars() s plovoucí desetinnou čárkou.  
-<a name ="note_parallel"></a> __paralelní__ paralelní algoritmy knihovny C ++ 17. dokončení. Všimněte si, že to ale neznamená, že je každý algoritmus paralelizovaná v každém případě; Nejdůležitější algoritmy mají paralelizována. a spuštění zásady podpisy jsou k dispozici i kde nejsou paralelizovaná algoritmy. Centrální hlavička interní implementace naše STL yvals.h, obsahuje následující "paralelní algoritmy poznámky": jazyk C++ umožňuje implementaci provádět paralelní algoritmy jako volání sériového portu algoritmy.   Tato implementace parallelizes několik běžných volání algoritmu, ale ne pro všechny.  
+
+Možnost kompilátoru /Zc:noexceptTypes-požadavky našich staré chování \_ \_declspec(nothrow). Je pravděpodobné, že throw() se odebere v C ++ 20. Abychom vám pomohli s migrací kódu v reakci na tyto změny standardní a naše implementace nová upozornění kompilátoru problémů specifikace výjimek byly přidány pod **/std: c ++ 17** a **/permissive-**.
+
+<a name="note_B"></a>__B__ podporované v /permissive-mode v sadě Visual Studio 2017 verze 15.7. Zobrazit [jde o název pro dvoufázové vyhledávání podpory MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/09/11/two-phase-name-lookup-support-comes-to-msvc/) Další informace.
+
+<a name="note_C"></a>__C__ kompilátoru podpora sfinae u výrazů byla dostatečná pro standardní knihovnu od verze Visual Studio 2015 Update 2. Podporované ve verzi Visual Studio 2017 15.7 bez ohledu na to, zda /permissive-mode nastavena. Zůstanou některé chyby opravit. Alternativní řešení "jedinečný značku typu" již není nezbytné a odebrali jsme toto řešení od našich implementace STL.
+
+<a name="note_D"></a>__D__ neúplná podporu kompilátoru pro preprocesor C99 pravidla v sadě Visual Studio 2017. Variadická makra jsou podporované, ale existuje mnoho chyb v chování bude preprocesor.  Jsme jsou overhauling preprocesoru a experimentálně plánujeme tyto změny v rámci **/ permissive-** brzy režimu.
+
+<a name="note_E"></a>__Elektronické__ to je označen jako není k dispozici, protože kompilátory jsou povolené, ale není nutné pro podporu rozšířené celočíselné typy.  Stejně jako GCC a Clang jsme zvolili není pro jejich podporu.
+
+<a name="note_F"></a>__F__ podobně, to je označen jako není k dispozici protože kompilátory jsou povolené, ale není nutné implementovat tyto optimalizace.
+
+<a name="note_G"></a>__G__ podporované v rámci [/std: c ++ 14](./build/reference/std-specify-language-standard-version.md) suppressible upozornění.
+
+<a name="note_J"></a>__J__ funkce, které nebyly dokončeny v sadě Visual Studio 2015 jsou rozdělená jinde v této tabulce.
+
+<a name="note_K"></a>__K__ to je úplně nové implementaci, nekompatibilní s předchozí verzí std::experimental vyžadovaných symlink podpory, opravy chyb a změny v chování vyžaduje standard. V současné době včetně \<systému souborů > poskytuje nové std::filesystem a předchozí std::experimental::filesystem a včetně \<experimentální/filesystem > poskytuje pouze původní experimentální implementaci. ODEBERE experimentální implementace v další vydané verzi ABI ukončování knihoven.
+
+<a name="note_L"></a>__L__ vnitřní kompilátor nepodporuje.
+
+<a name="note_14"></a>__14__ tyto 17/20 funkce C ++ jsou vždy povoleny, i v případě [/std: c ++ 14](build/reference/std-specify-language-standard-version.md) (výchozí nastavení) je definováno. Je to způsobeno funkce byla implementována před zavedením **/std** možnosti, nebo protože podmíněné implementace bylo by složité.
+
+<a name="note_17"></a>__17__ tyto funkce jsou povolené [/std: c ++ 17](./build/reference/std-specify-language-standard-version.md) (nebo [/std: c ++ nejnovější](./build/reference/std-specify-language-standard-version.md)) – možnost kompilátoru.
+
+<a name="note_byte"></a>__bajtů__ `std::byte` zajišťuje [/std: c ++ 17](./build/reference/std-specify-language-standard-version.md) (nebo [/std: c ++ nejnovější](./build/reference/std-specify-language-standard-version.md)), ale vzhledem k tomu, že ji může dojít ke konfliktu se záhlavím Windows SDK v některých případech, má podrobných – makro odhlásit. Je možné ho zakázat tak, že definujete `_HAS_STD_BYTE` jako `0`.
+
+<a name="note_C11"></a>__C11__ části C11 standardní knihovny, které jsou vyžadované C ++ 17, s výjimkou C99 implementován Universal CRT `strftime()` jen pro čtení E alternativní převod specifikátory C11 `fopen()` výhradním režimu a C11 `aligned_alloc()`. Je nepravděpodobné, že by k implementaci, protože zadaný C11 `aligned_alloc()` způsobem, který není kompatibilní s implementací Microsoft `free()`, jmenovitě, který `free()` musí být schopna zpracovávat vysoce zarovnané přidělení.
+
+<a name="note_rem"></a>__rem__ odebrané, kdy [/std: c ++ 17](./build/reference/std-specify-language-standard-version.md) (nebo [/std: c ++ nejnovější](./build/reference/std-specify-language-standard-version.md)) je zadána možnost kompilátoru. Tyto funkce mají odhlásit makra: `_HAS_AUTO_PTR_ETC`, `_HAS_FUNCTION_ALLOCATOR_SUPPORT`, `_HAS_OLD_IOSTREAMS_MEMBERS`, a `_HAS_UNEXPECTED`.
+
+<a name="note_charconv"></a>__charconv__ from_chars() a to_chars() jsou k dispozici pro celá čísla. Aktuálně pracujeme na s plovoucí desetinnou čárkou from_chars() následovat to_chars() s plovoucí desetinnou čárkou.
+
+<a name ="note_parallel"></a> __paralelní__ paralelní algoritmy knihovny C ++ 17. dokončení. Všimněte si, že to ale neznamená, že je každý algoritmus paralelizovaná v každém případě; Nejdůležitější algoritmy mají paralelizována. a spuštění zásady podpisy jsou k dispozici i kde nejsou paralelizovaná algoritmy. Centrální hlavička interní implementace naše STL yvals.h, obsahuje následující "paralelní algoritmy poznámky": jazyk C++ umožňuje implementaci provádět paralelní algoritmy jako volání sériového portu algoritmy.   Tato implementace parallelizes několik běžných volání algoritmu, ale ne pro všechny.
 
 Tyto algoritmy jsou paralelizovaná:
 
@@ -314,4 +326,4 @@ Následující není paralelizovaná v současné době:
 [Novinky v jazyce Visual C++ v sadě Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [Historie změn Visual C++ 2003 – 2015](porting/visual-cpp-change-history-2003-2015.md)<br/>
 [Novinky Visual C++ 2003–2015](porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
-[Blog týmu Visual C++](https://blogs.msdn.microsoft.com/vcblog/)  
+[Blog týmu Visual C++](https://blogs.msdn.microsoft.com/vcblog/)

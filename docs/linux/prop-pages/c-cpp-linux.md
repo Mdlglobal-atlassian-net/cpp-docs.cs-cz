@@ -13,12 +13,12 @@ f1_keywords: []
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 7ab78284929de8e5991abb0d1a8c89ead500096a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 78918acc70bddb25841b2bcaaf8f7cd7b627d63b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314700"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061557"
 ---
 # <a name="cc-properties-linux-c"></a>Vlastnosti C/C++ (C++ pro Linux)
 
@@ -85,4 +85,4 @@ Vlastnost | Popis | Možnosti
 Kompilovat jako | Vyberte možnost jazyka kompilace pro soubory .c a .cpp.  "Výchozí" rozpozná na základě přípony .c nebo .cpp rozšíření. (-x c, - x c ++) | **Výchozí** – výchozí.<br/>**Kompilovat jako kód jazyka C** -kompilovat jako kód jazyka C.<br/>**Kompilovat jako kód jazyka C++** -kompilovat jako kód jazyka C++.<br/>
 Nuceně zahrnuté soubory | Jeden nebo více vynucených k zahrnutí souborů (-include [název])
 
-## <a name="additional-options"></a>Další možnosti 
+## <a name="additional-options"></a>Další možnosti

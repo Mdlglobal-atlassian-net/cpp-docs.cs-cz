@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 425caf89619670dd8cabe647b01f8df63be24167
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 0eb8c8b3a49e7aa4754762ce0c065c816e262bca
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789364"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062909"
 ---
 # <a name="switchis"></a>switch_is
 
@@ -59,4 +59,4 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](cp
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy klíčových slov typedef, enum, union a struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[switch_type](switch-type.md)  
+[switch_type](switch-type.md)

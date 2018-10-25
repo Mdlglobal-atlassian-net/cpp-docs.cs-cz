@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb6ee8cd591c4a5b5a4a3701c6974849f9e3238f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 69ea4cf411e0ded0f1c324cea439d5a5a4c0c553
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069389"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062467"
 ---
 # <a name="cwintraits-class"></a>Cwintraits – třída
 
@@ -68,15 +68,15 @@ Tuto šablonu použít, pokud chcete zadat výchozí styly oken, které budou po
 
 Knihovna ATL poskytuje tři předdefinované specializace této šablony pro běžně používané kombinací styly oken:
 
-- `CControlWinTraits`  
+- `CControlWinTraits`
 
    Navržené pro standardní ovládací prvek okno. Jsou použity následující standardní styly: WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN a WS_CLIPSIBLINGS. Neexistují žádné rozšířené styly.
 
-- `CFrameWinTraits`  
+- `CFrameWinTraits`
 
    Navržené pro standardní rámce okna. Zahrnují standardní stylů použitých: WS_OVERLAPPEDWINDOW WS_CLIPCHILDREN a WS_CLIPSIBLINGS. Rozšířené styly využívané zahrnují: WS_EX_APPWINDOW a WS_EX_WINDOWEDGE.
 
-- `CMDIChildWinTraits`  
+- `CMDIChildWinTraits`
 
    Navržené pro standardní podřízené okno MDI. Zahrnují standardní stylů použitých: WS_OVERLAPPEDWINDOW WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN a WS_CLIPSIBLINGS. Rozšířené styly využívané zahrnují: WS_EX_MDICHILD.
 

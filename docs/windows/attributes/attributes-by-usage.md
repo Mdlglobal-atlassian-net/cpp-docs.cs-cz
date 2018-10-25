@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49e298af793655bb3ea3854909a16dd4db03c6a3
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 7dc5519fbef10ca6c369bcffacacb8351dbc0390
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328178"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060426"
 ---
 # <a name="attributes-by-usage"></a>Atributy podle použití
 
@@ -43,7 +43,7 @@ Pokud atribut předchází element, který není v atributu oboru, je považová
 
 ## <a name="module-attributes"></a>Atributy modulu
 Tento atribut může být jedině pro [modulu](module-cpp.md) atribut.
-  
+
 |Atribut|Popis|
 |---------------|-----------------|
 |[helpstringdll](helpstringdll.md)|Určuje název knihovny DLL použít k provádění vyhledání řetězce dokumentu (lokalizace).|
@@ -85,7 +85,6 @@ Musí dodržovat tato pravidla pro definování rozhraní:
 - Žádné přetížení metody jsou povoleny.
 
 Pokud nezadáte [uuid](uuid-cpp-attributes.md) atribut a pomocí stejného názvu rozhraní v různých atributů projekty, vygeneruje se stejným GUID.
-
 
 ## <a name="see-also"></a>Viz také
 

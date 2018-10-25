@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ba6d6193c8422e25e174c7a4b73b2b74095cced9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4dd67728773df86f9961fe54c7dd9e4a08ec743d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436504"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060946"
 ---
 # <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>Postupy: Převod typu .NET Collection na kontejner STL/CLR
 
@@ -31,7 +31,7 @@ Toto téma ukazuje, jak převod kolekce .NET na jejich ekvivalentní kontejnerů
 
 1. Převést celou kolekci, vytvořte kontejner STL/CLR a předat konstruktoru kolekce.
 
-     První příklad ukazuje tento postup.
+   První příklad ukazuje tento postup.
 
 -OR-
 
@@ -39,7 +39,7 @@ Toto téma ukazuje, jak převod kolekce .NET na jejich ekvivalentní kontejnerů
 
 1. Zkopírujte obsah .NET collection na kontejner. To můžete udělat pomocí STL/CLR [algoritmus](../dotnet/algorithm-stl-clr.md), nebo podle iterace nad kolekcí .NET a vložením kopie každý prvek do kontejneru STL/CLR.
 
-     Druhý příklad ukazuje tento postup.
+   Druhý příklad ukazuje tento postup.
 
 ## <a name="example"></a>Příklad
 

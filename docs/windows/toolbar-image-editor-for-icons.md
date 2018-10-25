@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8dee099912b69d48b0ded4184dc68c14da1899fe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ed6639bdf86a54689834c6eda03a3b6ec4dd171d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391901"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063845"
 ---
 # <a name="toolbar-c-image-editor-for-icons"></a>Panel nástrojů (C++ Editor obrázků pro ikony)
 
@@ -36,8 +36,7 @@ ms.locfileid: "46391901"
 > [!NOTE]
 > Všechny nástroje, které jsou k dispozici na **Editor obrázků** nástrojů jsou také k dispozici **Image** nabídky (v části **nástroje** příkaz).
 
-![Panel nástrojů editoru obrázků](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")  
-Panel nástrojů editoru obrázků
+![Panel nástrojů editoru obrázků](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar") panelu nástrojů editoru obrázků
 
 Použít **Editor obrázků** nástrojů a **možnost** výběr, klikněte na nástroj nebo možnost, že chcete.
 
@@ -46,8 +45,7 @@ Použít **Editor obrázků** nástrojů a **možnost** výběr, klikněte na n�
 
 S **možnost** selektor můžete určit šířku na řádku, štětcem od ruky, atd. Ikona na **možnost** selektor tlačítko se změní v závislosti na tom nástroje, které jste vybrali.
 
-![Kreslení&#45;selektor tvar na panelu nástrojů editoru obrázků](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")  
-Výběr možnosti na panelu nástrojů editoru obrázků
+![Kreslení&#45;selektor tvar na panelu nástrojů editoru obrázků](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector") výběr možnosti na panelu nástrojů editoru obrázků
 
 Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
 

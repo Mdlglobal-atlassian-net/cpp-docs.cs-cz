@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f69dab9dfc9216d1c56ed54730d5f94cbb58b1db
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f00e95aee0f3e16a979f4969a33b90746b4082ea
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46088732"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062402"
 ---
 # <a name="implementing-property-pages"></a>Implementace stránek vlastností
 
@@ -43,11 +43,11 @@ Chcete-li vytvořit pomocí knihovny ATL stránky vlastností:
 
 - Volitelně můžete přepsat `IPropertyPageImpl` metod pomocí níže uvedených pokynů.
 
-   |Ipropertypageimpl – metoda|Přepište, pokud chcete...|Poznámky|  
-   |------------------------------|----------------------------------|-----------|  
-   |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|Proveďte základní vhodnosti kontrol počet objektů, které jsou předávány na vaši stránku a rozhraní, které podporují.|Spuštění vlastního kódu před voláním implementaci základní třídy. Pokud objekty nastavování nevyhovují vašim požadavkům, by volání selhat co nejdřív.|  
-   |[Aktivovat](../atl/reference/ipropertypageimpl-class.md#activate)|Inicializujte na stránce uživatelského rozhraní (třeba nastavit ovládací prvky dialogového okna s aktuální hodnoty vlastností z objektů, dynamicky vytvořit ovládací prvky nebo provést další inicializaci).|Volejte implementaci základní třídy před váš kód tak, aby základní třída má možnost vytvořit dialogové okno a všechny ovládací prvky před pokusem o je aktualizovat.|  
-   |[Použít](../atl/reference/ipropertypageimpl-class.md#apply)|Ověřte nastavení vlastností a aktualizovat objekty.|Není nutné volat implementaci základní třídy, protože nedělá nic kromě trasování volání.|  
+   |Ipropertypageimpl – metoda|Přepište, pokud chcete...|Poznámky|
+   |------------------------------|----------------------------------|-----------|
+   |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|Proveďte základní vhodnosti kontrol počet objektů, které jsou předávány na vaši stránku a rozhraní, které podporují.|Spuštění vlastního kódu před voláním implementaci základní třídy. Pokud objekty nastavování nevyhovují vašim požadavkům, by volání selhat co nejdřív.|
+   |[Aktivovat](../atl/reference/ipropertypageimpl-class.md#activate)|Inicializujte na stránce uživatelského rozhraní (třeba nastavit ovládací prvky dialogového okna s aktuální hodnoty vlastností z objektů, dynamicky vytvořit ovládací prvky nebo provést další inicializaci).|Volejte implementaci základní třídy před váš kód tak, aby základní třída má možnost vytvořit dialogové okno a všechny ovládací prvky před pokusem o je aktualizovat.|
+   |[Použít](../atl/reference/ipropertypageimpl-class.md#apply)|Ověřte nastavení vlastností a aktualizovat objekty.|Není nutné volat implementaci základní třídy, protože nedělá nic kromě trasování volání.|
    |[Deaktivace](../atl/reference/ipropertypageimpl-class.md#deactivate)|Odstraňte položky týkající se oken.|Zničí implementaci základní třídy dialogových oken představující stránku vlastností. Pokud budete potřebovat k vyčištění před jeho zničení dialogových oken, měli byste přidat kódu před voláním metody základní třídy.|
 
 Implementace stránky vlastností příklad naleznete v tématu [příklad: implementace stránky vlastností](../atl/example-implementing-a-property-page.md).

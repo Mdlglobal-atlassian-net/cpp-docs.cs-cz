@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a2567182f0e2622a72ceb9b98988c4d122a3561
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 765cb6ccf24415c174761c57268dc79e1fc6845b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860560"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062558"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>CString – operace týkající se řetězců ve stylu C
 
@@ -54,9 +54,9 @@ A [CString](../atl-mfc-shared/using-cstring.md) objektu obsahuje znak řetězec 
 
 Použití `CString` objektu jako řetězec stylu C, objekt přetypujte na LPCTSTR. V následujícím příkladu `CString` vrací ukazatel jen pro čtení ve stylu jazyka C řetězec zakončený hodnotou null. `strcpy` Funkce vloží kopii řetězce ve stylu jazyka C v proměnné `myString`.
 
-```
-CString aCString = "A string";  
-char myString[256];  
+```cpp
+CString aCString = "A string";
+char myString[256];
 strcpy(myString, (LPCTSTR)aCString);
 ```
 

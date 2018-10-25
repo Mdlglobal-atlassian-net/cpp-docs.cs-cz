@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b14adec8d601778e255ae7e4242fc552fc820e64
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8c34b4a842655ebce6fccaa89a1dfc6d4ef49add
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396698"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063481"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC – ovládací prvky ActiveX: Použití písem
 
@@ -64,7 +64,7 @@ Jak je popsáno v [knihovny MFC – ovládací prvky ActiveX: vlastnosti](../mfc
 
 1. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat vlastnost**.
 
-     Otevře se Průvodce přidáním vlastnosti.
+   Otevře se Průvodce přidáním vlastnosti.
 
 1. V **název vlastnosti** klikněte **písmo**.
 
@@ -90,7 +90,7 @@ Uložené vlastnosti titulku je příkladem text vlastnost, která může vykres
 
 1. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat vlastnost**.
 
-     Otevře se Průvodce přidáním vlastnosti.
+   Otevře se Průvodce přidáním vlastnosti.
 
 1. V **název vlastnosti** klikněte **titulek**.
 
@@ -132,7 +132,7 @@ K implementaci vlastních vlastností písma, použijte Průvodce přidáním vl
 
 1. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat vlastnost**.
 
-     Otevře se Průvodce přidáním vlastnosti.
+   Otevře se Průvodce přidáním vlastnosti.
 
 1. V **název vlastnosti** zadejte název pro vlastnost. V tomto příkladu použijte **HeadingFont**.
 
@@ -168,35 +168,35 @@ V souboru implementace ovládacího prvku (. CPP), postupujte takto:
 
 - Inicializovat *m_fontHeading* v konstruktoru ovládacího prvku.
 
-     [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]
 
 - Deklarujte statickou FONTDESC strukturu obsahující výchozí atributy písma.
 
-     [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]
 
 - V ovládacím prvku `DoPropExchange` členské funkci, přidejte volání `PX_Font` funkce. Tímto způsobem, inicializace a trvalosti pro vaši vlastní vlastnost písma.
 
-     [!code-cpp[NVC_MFC_AxFont#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_11.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_11.cpp)]
 
 - Dokončení implementace ovládacího prvku `GetHeadingFont` členskou funkci.
 
-     [!code-cpp[NVC_MFC_AxFont#12](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_12.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#12](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_12.cpp)]
 
 - Dokončení implementace ovládacího prvku `SetHeadingFont` členskou funkci.
 
-     [!code-cpp[NVC_MFC_AxFont#13](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_13.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#13](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_13.cpp)]
 
 - Upravit ovládací prvek `OnDraw` členské funkce definovat proměnnou pro uchování dříve vybraného písma.
 
-     [!code-cpp[NVC_MFC_AxFont#14](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_14.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#14](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_14.cpp)]
 
 - Upravit ovládací prvek `OnDraw` členskou funkci k výběru vlastního písma do kontextu zařízení tak, že přidáte následující řádek bez ohledu na to je písmo, který se má použít.
 
-     [!code-cpp[NVC_MFC_AxFont#15](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_15.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#15](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_15.cpp)]
 
 - Upravit ovládací prvek `OnDraw` členské funkce vyberte předchozí písmo zpět do kontextu zařízení tak, že přidáte následující řádek po písma se používá.
 
-     [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]
 
 Poté, co byl implementován vlastních vlastností písma, standardní stránek vlastností písma by měla být implementována, umožnit uživatelům ovládacího prvku, chcete-li změnit písmo ovládacího prvku. Chcete-li přidat ID stránky vlastností pro standardní stránek vlastností písma, vložte následující řádek po BEGIN_PROPPAGEIDS – makro:
 

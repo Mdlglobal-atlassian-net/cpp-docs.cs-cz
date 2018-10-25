@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6613e38a19987abcc9f95288e9d1cb6957b076a2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: add9336165195ba4da0125c606eebd39f3fce298
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427274"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062221"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: Příklady soketů využívajících archivy
 
@@ -40,11 +40,11 @@ Pro odesílání, ukázkovou funkci smyčky pro do zadaného počtu opakování,
 
 - "Záhlaví", který určuje charakteru dat (v tomto případě hodnoty *bValue* proměnné a kolik kopií se budou odesílat).
 
-     Obě položky jsou náhodně vygenerované v tomto příkladu.
+   Obě položky jsou náhodně vygenerované v tomto příkladu.
 
 - Zadaný počet kopií dat.
 
-     Vnitřní **pro** smyčky odešle *bValue* zadaný počet.
+   Vnitřní **pro** smyčky odešle *bValue* zadaný počet.
 
 - Volá se řetězec *strText* zobrazující příjemce s uživatelem.
 

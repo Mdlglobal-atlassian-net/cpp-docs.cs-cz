@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378cd6fd283cd36142e293b51fdb91527afb6f88
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: e5cce23d34c739ed6a3aca67e05b59c6cafd9191
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808898"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062298"
 ---
 # <a name="atl-com-desktop-components"></a>COM desktopové komponenty ATL
 
@@ -61,4 +61,4 @@ Vás provede vytvořením ovládacího prvku a ukazuje některé ATL – princip
 Ukázkový kód, který ukazuje způsob použití knihovny ATL pro zápis objektů COM.
 
 [Šablony OLE DB](../data/oledb/ole-db-templates.md)<br/>
-Poskytuje referenční materiál pro spotřebitele a zprostředkovatele šablony technologie OLE DB sady tříd šablon, které implementují mnoho běžně používaných rozhraní OLE DB.  
+Poskytuje referenční materiál pro spotřebitele a zprostředkovatele šablony technologie OLE DB sady tříd šablon, které implementují mnoho běžně používaných rozhraní OLE DB.

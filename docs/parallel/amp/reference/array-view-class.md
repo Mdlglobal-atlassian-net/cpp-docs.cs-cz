@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c78d95afbadb0d3612dcdbca1714ae8c3a06454
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 690e612201d0d3614b47c8baf7b5c46cb29d6140
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426338"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063039"
 ---
 # <a name="arrayview-class"></a>array_view – třída
 
@@ -561,6 +561,7 @@ Upozorní `array_view` objekt, který jemu přidružená paměť byla upravena m
 ```
 void refresh() const restrict(cpu);
 ```
+
 ## <a name="reinterpret_as"></a> reinterpret_as –
 
 Opětovně interpretuje objekt array_view skrze jednorozměrný prvek array_view, který případně může mít typ jinou hodnotu než zdrojový prvek array_view.

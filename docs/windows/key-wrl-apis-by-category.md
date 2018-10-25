@@ -13,18 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d79888a58e5fc6d6911c4cc123877c1537f22cf1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c2d0cc85272eae4a5231872232dc259a9120a6bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441925"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059867"
 ---
 # <a name="key-wrl-apis-by-category"></a>Nejdůležitější rozhraní API knihovny WRL podle kategorie
+
 V následujících tabulkách jsou uvedeny primární knihovna šablon C++ Windows Runtime třídy, struktury, funkce a makra. Konstrukce v pomocné rutiny obory názvů a třídy jsou vynechány. Tyto seznamy rozšířit dokumentaci k rozhraní API, která jsou uspořádána podle oborů názvů.
-  
-### <a name="classes"></a>Třídy
-  
+
+## <a name="classes"></a>Třídy
+
 |Název|Popis|
 |-----------|-----------------|
 |[ActivationFactory – třída](../windows/activationfactory-class.md)|Umožňuje jednu nebo více tříd aktivováno modulu Windows Runtime.|
@@ -46,18 +47,18 @@ V následujících tabulkách jsou uvedeny primární knihovna šablon C++ Windo
 |[SimpleActivationFactory – třída](../windows/simpleactivationfactory-class.md)|Poskytuje základní mechanismus pro vytvoření prostředí Windows Runtime nebo klasického modelu COM základní třídy.|
 |[SimpleClassFactory – třída](../windows/simpleclassfactory-class.md)|Poskytuje základní mechanismus pro vytvoření základní třídy.|
 |[WeakRef – třída](../windows/weakref-class.md)|Představuje *nestálý odkaz* , který lze používat pouze modulu Windows Runtime, ne klasického modelu COM. Slabý odkaz představuje objekt, který může nebo nemusí být dostupný.|
-  
-### <a name="structures"></a>Struktury
-  
+
+## <a name="structures"></a>Struktury
+
 |Název|Popis|
 |-----------|-----------------|
 |[ChainInterfaces – struktura](../windows/chaininterfaces-structure.md)|Určuje, ověřování a Inicializace funkce, které mohou být použity na sadu rozhraní ID.|
 |[CloakedIid – struktura](../windows/cloakediid-structure.md)|Pozná, `RuntimeClass`, `Implements` a `ChainInterfaces` šablony, že zadané rozhraní není v seznamu IID k dispozici.|
 |[Implements – struktura](../windows/implements-structure.md)|Implementuje `QueryInterface` a `GetIid` pro zadaných rozhraní.|
 |[MixIn – struktura](../windows/mixin-structure.md)|Zajišťuje, že runtime třídy je odvozen z rozhraní Windows Runtime, pokud existuje a potom klasické rozhraní COM.|
-  
-### <a name="functions"></a>Funkce
-  
+
+## <a name="functions"></a>Funkce
+
 |Název|Popis|
 |-----------|-----------------|
 |[ActivateInstance – funkce](../windows/activateinstance-function.md)|Zaregistruje a načte instanci zadaného typu definované v ID zadané třídy.|
@@ -67,14 +68,14 @@ V následujících tabulkách jsou uvedeny primární knihovna šablon C++ Windo
 |[CreateClassFactory – funkce](../windows/createclassfactory-function.md)|Vytvoří objekt factory, který vytvoří instance dané třídy.|
 |[GetActivationFactory – funkce](../windows/getactivationfactory-function.md)|Načte objekt factory pro aktivaci pro typ zadaný v parametru šablony.|
 |[Make – funkce](../windows/make-function.md)|Inicializuje zadanou třídu Windows Runtime.|
-  
-### <a name="macros"></a>Makra
-  
+
+## <a name="macros"></a>Makra
+
 |Název|Popis|
 |-----------|-----------------|
 |[ActivatableClass – makra](../windows/activatableclass-macros.md)|Naplní interní mezipaměť, která obsahuje objekt factory, který můžete vytvořit instanci dané třídy.|
 |[InspectableClass – makro](../windows/inspectableclass-macro.md)|Nastaví runtime název a vztah důvěryhodnosti na úrovni třídy.|
-  
+
 ## <a name="see-also"></a>Viz také
 
 [Knihovna šablon C++ prostředí Windows Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

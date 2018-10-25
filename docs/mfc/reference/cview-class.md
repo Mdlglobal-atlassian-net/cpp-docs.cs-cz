@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ccb638669712222cac2dee522bf729766a4bc93
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e76dc8ca4a61839b893b4328bdb9d606424def91
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402262"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062227"
 ---
 # <a name="cview-class"></a>CView – třída
 
@@ -757,7 +757,7 @@ Tato funkce přepsání pro některý z následujících důvodů:
 
 - Aby byl obraz tištěné lišit od obrazovky (tj. Pokud vaše aplikace není WYSIWYG). Místo předání kontextu zařízení do tiskárny `OnDraw`, kontext zařízení použít k vykreslení obrázku pomocí atributů není zobrazené na obrazovce.
 
-     Pokud potřebujete prostředků GDI pro tisk, který nebudete používat pro obrazovku, vyberte je do kontextu zařízení před vykreslením a později zrušit. Tyto prostředky GDI by měla být přidělená v [OnBeginPrinting –](#onbeginprinting) a vydanou v [OnEndPrinting –](#onendprinting).
+   Pokud potřebujete prostředků GDI pro tisk, který nebudete používat pro obrazovku, vyberte je do kontextu zařízení před vykreslením a později zrušit. Tyto prostředky GDI by měla být přidělená v [OnBeginPrinting –](#onbeginprinting) a vydanou v [OnEndPrinting –](#onendprinting).
 
 - K implementaci záhlaví a zápatí. Můžete dál používat `OnDraw` udělat tak, že omezíte oblasti, která můžete vytisknout na vykreslování.
 

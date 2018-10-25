@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6857bf80aaaad36b4dcfc4fbf1330eccd03f971a
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: a9710fd4c770f17afb8902b80241179aa20344c1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250351"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060726"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Průvodce zprostředkovatelem ATL OLE DB
 
@@ -30,7 +30,6 @@ Tento průvodce vytvoří třídy, které tvoří zprostředkovatele OLE DB.
 
 > [!WARNING]
 > V sadě Visual Studio 2017 verze 15.9 průvodce tento kód je zastaralá a v budoucí verzi systému Visual Studio se odebere. Tento průvodce je používána zřídka. Obecné podpory knihovny ATL a MFC nemá žádný vliv, odebráním tohoto průvodce. Pokud chcete sdílet svůj názor na toto vyřazení, vyplňte prosím [tento průzkum](https://www.surveymonkey.com/r/QDWKKCN). Vaše zpětná vazba záleží na nás.
-
 
 ## <a name="remarks"></a>Poznámky
 

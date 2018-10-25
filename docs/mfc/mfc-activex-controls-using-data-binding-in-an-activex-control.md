@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ecd2cea655536ab12751a169793273c27b7d8f7
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 397356f8144e3680f3b2d19824d19c0a3bbaddd1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029564"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062610"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC – ovládací prvky ActiveX: Použití datových vazeb v ovládacím prvku ActiveX
 
@@ -63,13 +63,13 @@ Je možné vytvořit uložených vlastností vázané na data, i když je pravd�
 
 1. Klikněte pravým tlačítkem na uzel rozhraní ovládacího prvku.
 
-     Tím se otevře v místní nabídce.
+   Tím se otevře v místní nabídce.
 
 1. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat vlastnost**.
 
 1. Vyberte jednu z položek **název vlastnosti** rozevíracího seznamu. Například můžete vybrat **Text**.
 
-     Protože **Text** je uložených vlastností **umožňujících vazbu** a **requestedit –** atributy jsou již zaškrtnuté.
+   Protože **Text** je uložených vlastností **umožňujících vazbu** a **requestedit –** atributy jsou již zaškrtnuté.
 
 1. Vyberte z následujících políček **IDL – atributy** kartu: **displaybind** a **defaultbind** a přidat atributy v definici vlastnosti v projektu. Soubor IDL. Tyto atributy Zviditelněte ovládací prvek pro uživatele a zkontrolujte výchozí vázanou vlastnost uložených vlastností.
 
@@ -96,7 +96,7 @@ Kromě vázaný na data získá nebo nastaví metodu, můžete také vytvořit [
 
 1. Klikněte pravým tlačítkem na uzel rozhraní ovládacího prvku.
 
-     Tím se otevře v místní nabídce.
+   Tím se otevře v místní nabídce.
 
 1. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat vlastnost**.
 
@@ -112,33 +112,33 @@ Kromě vázaný na data získá nebo nastaví metodu, můžete také vytvořit [
 
 11. Upravit text `SetMyProp` fungovat tak, aby obsahoval následující kód:
 
-     [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]
+   [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]
 
 12. Parametr předána `BoundPropertyChanged` a `BoundPropertyRequestEdit` funkce je hodnota dispid vlastnost, která je parametr předaný pro vlastnost v atributu id(). Soubor IDL.
 
 13. Upravit [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) fungovat tak, aby obsahovala následující kód:
 
-     [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
+   [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
 
 14. Upravit `OnDraw` fungovat tak, aby obsahoval následující kód:
 
-     [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]
+   [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]
 
 15. Do veřejné sekce souboru hlaviček hlavičkový soubor pro třídy vašeho ovládacího prvku přidejte následující definice (konstruktory) pro členské proměnné:
 
-     [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]
+   [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]
 
 16. Zkontrolujte následující řádek na posledním řádku `DoPropExchange` funkce:
 
-     [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]
+   [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]
 
 17. Upravit `OnResetState` fungovat tak, aby obsahoval následující kód:
 
-     [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]
+   [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]
 
 18. Upravit `GetMyProp` fungovat tak, aby obsahoval následující kód:
 
-     [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]
+   [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]
 
 Nyní můžete vytvořit projekt, který se zaregistrujte ovládací prvek. Když vložíte ovládací prvek v dialogovém okně **datové pole** a **zdroj dat** vlastnosti se nepřidaly a teď můžete vybrat zdroj dat a pole, které chcete zobrazit v ovládacím prvku.
 

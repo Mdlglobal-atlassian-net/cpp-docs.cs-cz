@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c83ab1a42c62a4cb1afd0c7f49f55c40633d05b
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: e787eb7e638751fa369923f8f4059f40fae34104
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234564"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061245"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Vytvoření projektu knihovny MFC DLL
 
@@ -53,5 +53,4 @@ Po vytvoření projektu lze zobrazit vytvořené soubory v **Průzkumníka řeš
 [Typy projektů Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
 [Přidání funkce pomocí průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Stránky vlastností](../../ide/property-pages-visual-cpp.md)
-
 

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac2e56e4b13f739f61df5b37ab70689784a39882
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8d85767ad529cb54686ff2cde186bd4a681d3570
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46077539"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063312"
 ---
 # <a name="device-context-global-functions"></a>Globální funkce kontextu zařízení
 
@@ -53,7 +53,7 @@ Vrátí popisovač kontext zařízení pro zařízení zadané ve `DVTARGETDEVIC
 
 Pokud struktura je NULL a *hdc* má hodnotu NULL, vytvoří kontext zařízení pro výchozím zobrazovacím zařízení.
 
-Pokud *hdc* nemá hodnotu NULL a *ptd* má hodnotu NULL, funkce vrátí existující *hdc*.  
+Pokud *hdc* nemá hodnotu NULL a *ptd* má hodnotu NULL, funkce vrátí existující *hdc*.
 
 ## <a name="requirements"></a>Požadavky
 

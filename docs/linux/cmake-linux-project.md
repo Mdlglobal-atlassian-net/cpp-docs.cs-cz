@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 20291e1f824704ee94cb45f14c16d6f0e4960348
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: b7c28a8e67ef2731d26071262383e93d32be9583
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410834"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064105"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Konfigurace projektu Linux CMake
 
@@ -29,8 +29,8 @@ Pokud jste si nainstalovali úlohu Linux C++ pro Visual Studio, je standardně v
 
 Toto téma předpokládá, že máte základní znalosti podpora CMake v sadě Visual Studio. Další informace najdete v tématu [nástroje CMake pro Visual C++](../ide/cmake-tools-for-visual-cpp.md). Další informace o CMake samotný najdete v tématu [sestavení, testování a balíček svůj Software s CMake](https://cmake.org/).
 
-> [!NOTE]  
-> Podpora CMake v sadě Visual Studio vyžaduje režim podporu serveru, která byla zavedena v CMake 3.8. Hodnotu typu variant poskytovaný společností Microsoft CMake stáhnout nejnovější předem připravených binární soubory na [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases). 
+> [!NOTE]
+> Podpora CMake v sadě Visual Studio vyžaduje režim podporu serveru, která byla zavedena v CMake 3.8. Hodnotu typu variant poskytovaný společností Microsoft CMake stáhnout nejnovější předem připravených binární soubory na [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases).
 
 ## <a name="open-a-folder"></a>Otevřít složku
 
@@ -120,10 +120,9 @@ Tyto možnosti umožňují spuštění příkazů v okně vzdáleného před a p
 
 ## <a name="download-prebuilt-cmake-binaries"></a>Stáhněte si předem připravených binární soubory CMake
 
-Vaší distribuce Linuxu mohou mít starší verzi CMake. Podpora CMake v sadě Visual Studio vyžaduje režim podporu serveru, která byla zavedena v CMake 3.8. Hodnotu typu variant poskytovaný společností Microsoft CMake stáhnout nejnovější předem připravených binární soubory na [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases). 
-
+Vaší distribuce Linuxu mohou mít starší verzi CMake. Podpora CMake v sadě Visual Studio vyžaduje režim podporu serveru, která byla zavedena v CMake 3.8. Hodnotu typu variant poskytovaný společností Microsoft CMake stáhnout nejnovější předem připravených binární soubory na [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases).
 
 ## <a name="see-also"></a>Viz také
 
 [Práce s vlastnostmi projektu](../ide/working-with-project-properties.md)<br/>
-[Nástroje CMake pro Visual C++](../ide/cmake-tools-for-visual-cpp.md)  
+[Nástroje CMake pro Visual C++](../ide/cmake-tools-for-visual-cpp.md)

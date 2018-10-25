@@ -162,12 +162,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc76e89cf8ca44b3254b21585bf00ff6243d818c
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: ccd409a99ccbcf80dc117d7c034d4b8a66b551ef
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890826"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060465"
 ---
 # <a name="cricheditctrl-class"></a>Cricheditctrl – třída
 
@@ -1956,7 +1956,6 @@ Nastaví cílové zařízení a řádku šířku pro WYSIWYG (co uvidíte, bude 
 BOOL SetTargetDevice(
     HDC hDC,
     long lLineWidth);
-
 
 BOOL SetTargetDevice(
     CDC& dc,

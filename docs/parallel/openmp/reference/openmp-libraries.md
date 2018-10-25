@@ -1,7 +1,7 @@
 ---
 title: OpenMP – knihovny | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-parallel
 ms.topic: reference
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9a4ccfefeaeb9446731027db44b849233bfefd6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7620b0ea710a5474fbbbf614691ceeb1e5cc945e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391212"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061999"
 ---
 # <a name="openmp-libraries"></a>OpenMP – knihovny
 
@@ -36,6 +36,6 @@ Můžete použít [: / NODEFAULTLIB (ignorování knihoven)](../../../build/refe
 
 OpenMP – knihovny DLL v adresáři distribuovatelné součásti Visual C++ a potřebujete distribuovat s aplikací, které používají OpenMP.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Referenční dokumentace knihoven](../../../parallel/openmp/reference/openmp-library-reference.md)
+[Referenční dokumentace knihoven](openmp-library-reference.md)

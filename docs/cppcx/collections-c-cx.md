@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67e5b086e57c90b9cb11779d8f3af167768a45fe
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 5b57b03af7c0a98e2bb8c70b6c0921930ebb1b9c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103344"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062636"
 ---
 # <a name="collections-ccx"></a>Kolekce (C + +/ CX)
 
@@ -64,7 +64,7 @@ Libovolný element, který bude uložen do [Platform::Collections:: Vector –](
 
 ## <a name="vectorproxy-elements"></a>VectorProxy elementy
 
-[Platform::Collections:: vectoriterator –](../cppcx/platform-collections-vectoriterator-class.md) a [Platform::Collections:: vectorviewiterator –](../cppcx/platform-collections-vectorviewiterator-class.md) povolit použití `range for` smyčky a algoritmy, jako je [std::sort](../standard-library/algorithm-functions.md#sort) s [ IVector\<T >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) kontejneru. Ale `IVector` elementy se nedá přistupovat prostřednictvím C++ přesměrování ukazatele; k nim může přistupovat pouze prostřednictvím [GetAt](https://msdn.microsoft.com/library/windows/apps/br206634.aspx) a [SetAt](https://msdn.microsoft.com/library/windows/apps/br206642.aspx) metody. Proto tyto iterátory použít třídy proxy `Platform::Details::VectorProxy<T>` a `Platform::Details::ArrowProxy<T>` pro poskytnutí přístupu k jednotlivým prvkům prostřednictvím `*`, `->`, a `[]` operátory znamének podle STL. Přesněji řečeno, vzhledem `IVector<Person^> vec`, typ `*begin(vec)` je `VectorProxy<Person^>`. Objekt proxy je však téměř vždy transparentního kódu. Tyto objekty proxy nejsou uvedené, protože jsou pouze pro interní použití rozhraním iterátory, ale je vhodné vědět, jak funguje mechanismus.
+[Platform::Collections:: vectoriterator –](../cppcx/platform-collections-vectoriterator-class.md) a [Platform::Collections:: vectorviewiterator –](../cppcx/platform-collections-vectorviewiterator-class.md) povolit použití `range for` smyčky a algoritmy, jako je [std::sort](../standard-library/algorithm-functions.md#sort) s [ IVector\<T >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) kontejneru. Ale `IVector` elementy se nedá přistupovat prostřednictvím C++ přesměrování ukazatele; k nim může přistupovat pouze prostřednictvím [GetAt](https://msdn.microsoft.com/library/windows/apps/br206634.aspx) a [SetAt](https://msdn.microsoft.com/library/windows/apps/br206642.aspx) metody. Proto tyto iterátory použít třídy proxy `Platform::Details::VectorProxy<T>` a `Platform::Details::ArrowProxy<T>` pro poskytnutí přístupu k jednotlivým prvkům prostřednictvím __\*__, __->__ a  __\[]__ operátory, podle potřeby ve standardní knihovně. Přesněji řečeno, vzhledem `IVector<Person^> vec`, typ `*begin(vec)` je `VectorProxy<Person^>`. Objekt proxy je však téměř vždy transparentního kódu. Tyto objekty proxy nejsou uvedené, protože jsou pouze pro interní použití rozhraním iterátory, ale je vhodné vědět, jak funguje mechanismus.
 
 Při použití `range for` ve smyčce `IVector` kontejnery, používají `auto&&` umožňující proměnná iterátoru pro vazbu správně na `VectorProxy` elementy. Pokud používáte `auto` nebo `auto&`, je vyvolána C4239 upozornění kompilátoru a `VectoryProxy` je uvedený v textu upozornění.
 
@@ -74,8 +74,7 @@ Následující ilustrace ukazuje `range for` ve smyčce `IVector<Person^>`. Vši
 
 Jeden scénář, ve kterém budete muset kód kolem objektu proxy serveru je, když je nutné provést `dynamic_cast` na prvcích – například při hledání pro objekty určitého typu v XAML `UIElement` kolekci elementů. V takovém případě musíte nejdříve přetypována elementu, který chcete [Platform::Object](../cppcx/platform-object-class.md)^ a pak proveďte dynamické přetypování:
 
-```
-
+```cpp
 void FindButton(UIElementCollection^ col)
 {
     // Use auto&& to avoid warning C4239
@@ -149,7 +148,7 @@ V následující tabulce jsou uvedeny dostupné iterátory a funkce.
 
 `Vector` a `Map` podporují datové vazby v kolekcích XAML pomocí implementace události, ke kterým dochází, když se změní objekt kolekce nebo obnovení, nebo při vložení libovolný prvek v kolekci, odebrat nebo změnit. Můžete napsat vlastní typy databinding této podpory, i když nemůže dědit z `Map` nebo `Vector` vzhledem k tomu, že tyto typy jsou zapečetěné.
 
-[Windows::Foundation::Collections::VectorChangedEventHandler](/uwp/api/windows.foundation.collections.vectorchangedeventhandler) a [Windows::Foundation::Collections::MapChangedEventHandler](/uwp/api/windows.foundation.collections.mapchangedeventhandler) delegáti určit podpisy pro obslužné rutiny událostí pro události změny kolekce. [Windows::Foundation::Collections::CollectionChange](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx) veřejný výčet tříd a `Platform::Collection::Details::MapChangedEventArgs` a `Platform::Collections::Details::VectorChangedEventArgs` referenční třídy uložit argumenty události, které mají určit, co způsobilo události. *`EventArgs` Typy jsou definovány `Details` obor názvů vzhledem k tomu není nutné vytvořit nebo je při použití explicitně využívat `Map` nebo `Vector`.
+[Windows::Foundation::Collections::VectorChangedEventHandler](/uwp/api/windows.foundation.collections.vectorchangedeventhandler) a [Windows::Foundation::Collections::MapChangedEventHandler](/uwp/api/windows.foundation.collections.mapchangedeventhandler) delegáti určit podpisy pro obslužné rutiny událostí pro události změny kolekce. [Windows::Foundation::Collections::CollectionChange](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx) veřejný výčet tříd a `Platform::Collection::Details::MapChangedEventArgs` a `Platform::Collections::Details::VectorChangedEventArgs` referenční třídy uložit argumenty události, které mají určit, co způsobilo události. `*EventArgs` Typy jsou definovány `Details` obor názvů vzhledem k tomu není nutné vytvořit nebo je při použití explicitně využívat `Map` nebo `Vector`.
 
 ## <a name="see-also"></a>Viz také
 

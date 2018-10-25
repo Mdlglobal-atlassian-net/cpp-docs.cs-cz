@@ -1,5 +1,5 @@
 ---
-title: Třída kontejneru::rend | Microsoft Docs
+title: Třída kontejneru::rend | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,19 +14,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cf4e963d4afcdfdf3c4ba18347e06489392e5db
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: be8182bad16c832f5c65e1cb402ef2714a172a0a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844195"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061427"
 ---
 # <a name="container-classrend"></a>Třída kontejneru::rend
 
 > [!NOTE]
-> Toto téma se v dokumentaci k Visual C++ jako funkční příklad kontejnery použít ve standardní knihovně C++. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
+> Toto téma je v dokumentaci k Visual C++ jako funkční příklad kontejnery používané ve standardní knihovně jazyka C++. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
 
-Členská funkce vrátí zpětné iterator této body v prvním elementem pořadí (nebo jenom přesahuje za konec prázdné sekvenci), určení konec zpětného pořadí.
+Členská funkce vrátí "reverse iterator", na kterou odkazuje na první prvek pořadí (nebo přesně za konec k prázdné sekvenci), označení konce opačném pořadí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,10 +34,9 @@ ms.locfileid: "33844195"
 
     const_reverse_iterator rend() const;
 
-
 reverse_iterator rend();
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázkový kontejner – třída](../standard-library/sample-container-class.md)<br/>

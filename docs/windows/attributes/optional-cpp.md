@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70e0a2d3f12452a92df3358760a5c5189de78dda
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 2da82c7390a6e0677bd324b062de56ba39cbc13a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789484"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061050"
 ---
 # <a name="optional-c"></a>optional (C++)
 
@@ -71,4 +71,4 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](cp
 ## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
-[Atributy parametru](parameter-attributes.md)  
+[Atributy parametru](parameter-attributes.md)

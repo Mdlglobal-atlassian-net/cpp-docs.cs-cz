@@ -24,102 +24,102 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4548e319d7a85c547b0e750d040bdc6b6d7bbba5
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: dd9d3b291f967b98017e4136740628ef951ea12a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083902"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060127"
 ---
 # <a name="ctable-class"></a>CTable – třída
 
-Poskytuje prostředky pro přímý přístup k jednoduché sady řádků (jeden bez parametrů).  
-  
+Poskytuje prostředky pro přímý přístup k jednoduché sady řádků (jeden bez parametrů).
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-template <class TAccessor = CNoAccessor, 
-            template <typename T> class TRowset = CRowset>  
-class CTable :  
-   public CAccessorRowset <TAccessor, TRowset>  
-```  
-  
-### <a name="parameters"></a>Parametry  
+template <class TAccessor = CNoAccessor,
+            template <typename T> class TRowset = CRowset>
+class CTable :
+   public CAccessorRowset <TAccessor, TRowset>
+```
+
+### <a name="parameters"></a>Parametry
 
 *TAccessor*<br/>
-Třídu přistupujícího objektu.  
-  
+Třídu přistupujícího objektu.
+
 *TRowset*<br/>
-Třídy sady řádků.  
+Třídy sady řádků.
 
-## <a name="requirements"></a>Požadavky  
+## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** také atldbcli.h  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="methods"></a>Metody  
-  
-|||  
-|-|-|  
-|[Otevřít](#open)|Otevře se v tabulce.|  
-  
-## <a name="remarks"></a>Poznámky  
+**Záhlaví:** také atldbcli.h
 
-Zobrazit [CCommand](../../data/oledb/ccommand-class.md) informace o tom, jak provést příkaz pro přístup k sadě řádků.  
+## <a name="members"></a>Členové
+
+### <a name="methods"></a>Metody
+
+|||
+|-|-|
+|[Otevřít](#open)|Otevře se v tabulce.|
+
+## <a name="remarks"></a>Poznámky
+
+Zobrazit [CCommand](../../data/oledb/ccommand-class.md) informace o tom, jak provést příkaz pro přístup k sadě řádků.
 
 ## <a name="open"></a> CTable::Open
 
-Otevře se v tabulce.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Otevře se v tabulce.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT Open(const CSession& session,  
-   LPCWSTR wszTableName,  
-   DBPROPSET* pPropSet = NULL,  
-   ULONG ulPropSets = 0) throw ();  
+HRESULT Open(const CSession& session,
+   LPCWSTR wszTableName,
+   DBPROPSET* pPropSet = NULL,
+   ULONG ulPropSets = 0) throw ();
 
-HRESULT Open(const CSession& session,  
-   LPCSTR szTableName,  
-   DBPROPSET* pPropSet = NULL,  
-   ULONG ulPropSets = 0) throw ();  
+HRESULT Open(const CSession& session,
+   LPCSTR szTableName,
+   DBPROPSET* pPropSet = NULL,
+   ULONG ulPropSets = 0) throw ();
 
-HRESULT Open(const CSession& session,  
-   DBID& dbid,  
-   DBPROPSET* pPropSet = NULL,  
-   ULONG ulPropSets = 0) throw ();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT Open(const CSession& session,
+   DBID& dbid,
+   DBPROPSET* pPropSet = NULL,
+   ULONG ulPropSets = 0) throw ();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *Relace*<br/>
-[in] Relace, pro který je otevřen v tabulce.  
-  
+[in] Relace, pro který je otevřen v tabulce.
+
 *wszTableName*<br/>
-[in] Název tabulky, pokud chcete otevřít, je předán jako řetězec znaků Unicode.  
-  
+[in] Název tabulky, pokud chcete otevřít, je předán jako řetězec znaků Unicode.
+
 *szTableName*<br/>
-[in] Název tabulky, pokud chcete otevřít, je předán jako řetězec ANSI.  
-  
+[in] Název tabulky, pokud chcete otevřít, je předán jako řetězec ANSI.
+
 *DBID*<br/>
-[in] `DBID` Tabulky otevřete.  
-  
+[in] `DBID` Tabulky otevřete.
+
 *pPropSet*<br/>
-[in] Ukazatel na pole [DBPROPSET](/previous-versions/windows/desktop/ms714367) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](/previous-versions/windows/desktop/ms713696) v *referenční informace pro OLE DB programátory* ve Windows SDK. Výchozí hodnota Null určuje žádné vlastnosti.  
-  
+[in] Ukazatel na pole [DBPROPSET](/previous-versions/windows/desktop/ms714367) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](/previous-versions/windows/desktop/ms713696) v *referenční informace pro OLE DB programátory* ve Windows SDK. Výchozí hodnota Null určuje žádné vlastnosti.
+
 *ulPropSets*<br/>
-[in] Počet [DBPROPSET](/previous-versions/windows/desktop/ms714367) struktury předané *pPropSet* argument.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+[in] Počet [DBPROPSET](/previous-versions/windows/desktop/ms714367) struktury předané *pPropSet* argument.
 
-Standardní HRESULT.  
-  
-### <a name="remarks"></a>Poznámky  
+### <a name="return-value"></a>Návratová hodnota
 
-Další podrobnosti najdete v tématu [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724) v *OLE DB referenční informace pro programátory*.  
-  
-## <a name="see-also"></a>Viz také  
+Standardní HRESULT.
+
+### <a name="remarks"></a>Poznámky
+
+Další podrobnosti najdete v tématu [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724) v *OLE DB referenční informace pro programátory*.
+
+## <a name="see-also"></a>Viz také
 
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
+[Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -113,224 +113,224 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3538a8cd15fc315f4d91d1c83c517811acce1802
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 3a5548d9c2b54b265910ea6708bc448f09f8f151
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082901"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059984"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset – třída
 
-Načítá a zpracovává řádků pro práci s daty hromadně načtením více popisovačů řádků pomocí jediného volání.  
-  
+Načítá a zpracovává řádků pro práci s daty hromadně načtením více popisovačů řádků pomocí jediného volání.
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-template <class TAccessor>  
-class CBulkRowset : public CRowset<TAccessor>  
-```  
-  
-### <a name="parameters"></a>Parametry  
+template <class TAccessor>
+class CBulkRowset : public CRowset<TAccessor>
+```
+
+### <a name="parameters"></a>Parametry
 
 *TAccessor*<br/>
-Třídu přistupujícího objektu.  
+Třídu přistupujícího objektu.
 
-## <a name="requirements"></a>Požadavky  
+## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** také atldbcli.h  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="methods"></a>Metody  
-  
-|||  
-|-|-|  
-|[Addrefrows –](#addrefrows)|Zvýší počet odkazů.|  
-|[CBulkRowset](#cbulkrowset)|Konstruktor|  
-|[MoveFirst](#movefirst)|Načte první řádek dat, provádění nové hromadné načítání, v případě potřeby.|  
-|[MoveLast](#movelast)|Přejde na poslední řádek.|  
-|[Metoda MoveNext](#movenext)|Načte další řádek dat.|  
-|[MovePrev](#moveprev)|Přesune se na předchozí řádek.|  
-|[MoveToBookmark](#movetobookmark)|Načte řádek označený záložkou nebo řádek na zadaný posun z tuto záložku.|  
-|[Movetoratio –](#movetoratio)|Načte řádky začínající od desetinné pozice v dané sadě řádků.|  
-|[Releaserows –](#releaserows)|Nastaví aktuální řádek (`m_nCurrentRow`) na nulu a verzích všechny řádky.|  
-|[Setrows –](#setrows)|Nastaví počet popisovačů řádků, které se mají načíst jedním voláním.|  
-  
-## <a name="example"></a>Příklad  
+**Záhlaví:** také atldbcli.h
 
-Následující příklad ukazuje použití `CBulkRowset` třídy.  
-  
-[!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
+## <a name="members"></a>Členové
+
+### <a name="methods"></a>Metody
+
+|||
+|-|-|
+|[Addrefrows –](#addrefrows)|Zvýší počet odkazů.|
+|[CBulkRowset](#cbulkrowset)|Konstruktor|
+|[MoveFirst](#movefirst)|Načte první řádek dat, provádění nové hromadné načítání, v případě potřeby.|
+|[MoveLast](#movelast)|Přejde na poslední řádek.|
+|[Metoda MoveNext](#movenext)|Načte další řádek dat.|
+|[MovePrev](#moveprev)|Přesune se na předchozí řádek.|
+|[MoveToBookmark](#movetobookmark)|Načte řádek označený záložkou nebo řádek na zadaný posun z tuto záložku.|
+|[Movetoratio –](#movetoratio)|Načte řádky začínající od desetinné pozice v dané sadě řádků.|
+|[Releaserows –](#releaserows)|Nastaví aktuální řádek (`m_nCurrentRow`) na nulu a verzích všechny řádky.|
+|[Setrows –](#setrows)|Nastaví počet popisovačů řádků, které se mají načíst jedním voláním.|
+
+## <a name="example"></a>Příklad
+
+Následující příklad ukazuje použití `CBulkRowset` třídy.
+
+[!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]
 
 ## <a name="addrefrows"></a> CBulkRowset::AddRefRows
 
-Volání [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) se zvýší počet odkazů pro všechny řádky, které jsou aktuálně získaných v hromadné sadě řádků.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-HRESULT AddRefRows() throw();  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
+Volání [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) se zvýší počet odkazů pro všechny řádky, které jsou aktuálně získaných v hromadné sadě řádků.
 
-Standardní HRESULT. 
-  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+HRESULT AddRefRows() throw();
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Standardní HRESULT.
+
 ## <a name="cbulkrowset"></a> CBulkRowset::CBulkRowset
 
-Vytvoří novou `CBulkRowset` objekt a nastaví výchozí počet řádků na 10.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Vytvoří novou `CBulkRowset` objekt a nastaví výchozí počet řádků na 10.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-CBulkRowset();  
-```  
+CBulkRowset();
+```
 
 ## <a name="movefirst"></a> CBulkRowset::MoveFirst
 
-Načte první řádek dat.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Načte první řádek dat.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT MoveFirst() throw();  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
+HRESULT MoveFirst() throw();
+```
+
+### <a name="return-value"></a>Návratová hodnota
 
 Standardní HRESULT.
 
 ## <a name="movelast"></a> CBulkRowset::MoveLast
 
-Přejde na poslední řádek.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-HRESULT MoveLast() throw();  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
+Přejde na poslední řádek.
 
-Standardní HRESULT.  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+HRESULT MoveLast() throw();
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Standardní HRESULT.
 
 ## <a name="movenext"></a> CBulkRowset::MoveNext
 
-Načte další řádek dat.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-HRESULT MoveNext() throw();  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
+Načte další řádek dat.
 
-Standardní HRESULT. Když se dosáhne konce řádků, vrátí DB_S_ENDOFROWSET. 
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+HRESULT MoveNext() throw();
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Standardní HRESULT. Když se dosáhne konce řádků, vrátí DB_S_ENDOFROWSET.
 
 ## <a name="moveprev"></a> CBulkRowset::MovePrev
 
-Přesune se na předchozí řádek.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-HRESULT MovePrev() throw();  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
+Přesune se na předchozí řádek.
 
-Standardní HRESULT.  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+HRESULT MovePrev() throw();
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Standardní HRESULT.
 
 ## <a name="movetobookmark"></a> CBulkRowset::MoveToBookmark
 
-Načte řádek označený záložku nebo řádek na zadaný posun (*lSkip*) z tuto záložku.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Načte řádek označený záložku nebo řádek na zadaný posun (*lSkip*) z tuto záložku.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT MoveToBookmark(const CBookmarkBase& bookmark, 
-   DBCOUNTITEM lSkip = 0) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
+   DBCOUNTITEM lSkip = 0) throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *záložky*<br/>
-[in] Záložka označení umístění, ze kterého chcete načíst data.  
-  
-*lSkip*<br/>
-[in] Počtu řádků ze záložky pro cílový řádek. Pokud *lSkip* je nula, první řádek načtený je označenou záložkou a doplňujte řádek. Pokud *lSkip* 1, načíst první řádek je řádek po řádku označenou záložkou a doplňujte. Pokud *lSkip* se -1, načíst první řádek je řádek před označenou záložkou a doplňujte řádek.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+[in] Záložka označení umístění, ze kterého chcete načíst data.
 
-Zobrazit [IRowset::GetData](/previous-versions/windows/desktop/ms716988) v *referenční informace pro OLE DB programátory*. 
+*lSkip*<br/>
+[in] Počtu řádků ze záložky pro cílový řádek. Pokud *lSkip* je nula, první řádek načtený je označenou záložkou a doplňujte řádek. Pokud *lSkip* 1, načíst první řádek je řádek po řádku označenou záložkou a doplňujte. Pokud *lSkip* se -1, načíst první řádek je řádek před označenou záložkou a doplňujte řádek.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Zobrazit [IRowset::GetData](/previous-versions/windows/desktop/ms716988) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="movetoratio"></a> CBulkRowset::MoveToRatio
 
-Načte řádky začínající od desetinné pozice v dané sadě řádků.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Načte řádky začínající od desetinné pozice v dané sadě řádků.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT MoveToRatio(DBCOUNTITEM nNumerator, 
-   DBCOUNTITEM nDenominator)throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
+   DBCOUNTITEM nDenominator)throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *nNumerator*<br/>
-[in] Čítač použít k určení desetinné umístění, ze kterého se má načíst data.  
-  
+[in] Čítač použít k určení desetinné umístění, ze kterého se má načíst data.
+
 *nDenominator*<br/>
-[in] Jmenovatel používá k určení desetinné umístění, ze kterého se má načíst data.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+[in] Jmenovatel používá k určení desetinné umístění, ze kterého se má načíst data.
 
-Standardní HRESULT.  
-  
-### <a name="remarks"></a>Poznámky  
+### <a name="return-value"></a>Návratová hodnota
 
-`MoveToRatio` načte řádky zhruba podle následující vzorec:  
-  
-`(nNumerator *  RowsetSize ) / nDenominator`  
-  
-Kde `RowsetSize` je velikost řádků, měřený v řádcích. Přesnost tohoto vzorce závisí na konkrétního zprostředkovatele. Podrobnosti najdete v tématu [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602) v *OLE DB referenční informace pro programátory*.   
+Standardní HRESULT.
+
+### <a name="remarks"></a>Poznámky
+
+`MoveToRatio` načte řádky zhruba podle následující vzorec:
+
+`(nNumerator *  RowsetSize ) / nDenominator`
+
+Kde `RowsetSize` je velikost řádků, měřený v řádcích. Přesnost tohoto vzorce závisí na konkrétního zprostředkovatele. Podrobnosti najdete v tématu [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602) v *OLE DB referenční informace pro programátory*.
 
 ## <a name="releaserows"></a> CBulkRowset::ReleaseRows
 
-Volání [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) se sníží počet odkazů pro všechny řádky, které jsou aktuálně získaných v hromadné sadě řádků.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-HRESULT ReleaseRows() throw();   
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
+Volání [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) se sníží počet odkazů pro všechny řádky, které jsou aktuálně získaných v hromadné sadě řádků.
 
-Standardní HRESULT.  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+HRESULT ReleaseRows() throw();
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Standardní HRESULT.
 
 ## <a name="setrows"></a> CBulkRowset::SetRows
 
-Nastaví počet popisovačů řádků, které jsou načítána pro každé volání.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Nastaví počet popisovačů řádků, které jsou načítána pro každé volání.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-void SetRows(DBROWCOUNT nRows) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+void SetRows(DBROWCOUNT nRows) throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *nRows*<br/>
-[in] Nová velikost řádků (počet řádků).  
-  
-### <a name="remarks"></a>Poznámky  
+[in] Nová velikost řádků (počet řádků).
+
+### <a name="remarks"></a>Poznámky
 
 Při volání této funkce, musí být před otevřením v sadě řádků.
-  
-## <a name="see-also"></a>Viz také  
+
+## <a name="see-also"></a>Viz také
 
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

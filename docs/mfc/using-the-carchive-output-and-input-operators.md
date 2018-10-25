@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49ea94258c163c241243934f41d55d896d0d1fa2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 74660dc2baeff683d35fac8d4b9dda06bdbec22d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46372454"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061310"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>Použití CArchive &lt; &lt; a &gt; &gt; operátory
 
@@ -33,13 +33,13 @@ ms.locfileid: "46372454"
 
 1. Následující příklad ukazuje, jak uložit objekt v souboru prostřednictvím archivu:
 
-     [!code-cpp[NVC_MFCSerialization#7](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_1.cpp)]
+   [!code-cpp[NVC_MFCSerialization#7](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_1.cpp)]
 
 #### <a name="to-load-an-object-from-a-value-previously-stored-in-a-file"></a>Chcete-li načíst objekt z hodnoty v souboru dříve uložena
 
 1. Následující příklad ukazuje, jak načíst objekt z hodnoty dříve uložené v souboru:
 
-     [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]
 
 Obvykle, ukládání a načítání dat do a ze souboru prostřednictvím archivu v `Serialize` funkce `CObject`-odvozené třídy, které vám musí být deklarován s DECLARE_SERIALIZE – makro. Odkaz na `CArchive` objekt je předán do vaší `Serialize` funkce. Volání `IsLoading` funkce `CArchive` objektem pro určení, zda `Serialize` byla volána funkce k načtení dat ze souboru nebo ukládání dat do souboru.
 

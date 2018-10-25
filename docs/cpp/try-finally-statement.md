@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a250862f5514f290043bf596ba19bf0834e71e
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 4040f5a05f8c9bccfbf1c8b48a40188f684d48ad
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49161655"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060010"
 ---
 # <a name="try-finally-statement"></a>try-finally – příkaz
 
@@ -44,7 +44,7 @@ ms.locfileid: "49161655"
 Následující syntaxe popisuje **try-finally** – příkaz:
 
 ```cpp
-__try {
+__try {
    // guarded code
 }
 __finally {
@@ -73,7 +73,7 @@ Ovládací prvek dosáhne **__try** prohlášení jednoduchý sekvenční prová
 
 1. Po dokončení obslužné rutiny ukončení provádění pokračuje **__finally** příkazu. Bez ohledu na to, jak chráněné části končí (třeba přes **goto** mimo tělo strážených nebo **vrátit** příkaz), je provedena obslužná rutina ukončení *před* Tok řízení přesune mimo chráněnou část.
 
-     A **__finally** příkaz neblokuje hledání pro obslužnou rutinu příslušné výjimky.
+   A **__finally** příkaz neblokuje hledání pro obslužnou rutinu příslušné výjimky.
 
 Pokud dojde k výjimce v **__try** blok, operační systém musí najít obslužné rutiny výjimky nebo program se nezdaří. Pokud obslužná rutina nenajde, všechny **__finally** bloky jsou spouštěny a provádění pokračuje v obslužné rutině.
 

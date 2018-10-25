@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd6f38ff8fbe0c4179addf46a43a35be4237b73e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6129bea28b943f8f18e1cf6b1e760e604223bdc1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46100835"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060933"
 ---
 # <a name="compiler-error-c2558"></a>Chyba kompilátoru C2558
 
@@ -33,7 +33,7 @@ Konstruktor kopie inicializuje objekt z jiného objektu stejného typu. (Vytvo�
 
 1. Tento problém může dojít, když je kopie třídy, jejíž konstruktor kopie je proveden pokus o `private`. Ve většině případů třídu, která má `private` kopírovací konstuktor neměla kopírovat. Běžně deklaruje `private` kopírovací konstruktor, aby se zabránilo přímému použití třídy. Tato třída může být sama o sobě nepoužitelná nebo ke správné funkci vyžaduje jinou třídu.
 
-     Pokud zjistíte, že je bezpečné používat třídu, která má `private` kopírovací konstruktor, odvodit novou třídu od třídy, který má `private` a zpřístupněte `public` nebo `protected` k dispozici v této nové třídě konstruktor kopie. Použijte odvozenou třídu namísto původní.
+   Pokud zjistíte, že je bezpečné používat třídu, která má `private` kopírovací konstruktor, odvodit novou třídu od třídy, který má `private` a zpřístupněte `public` nebo `protected` k dispozici v této nové třídě konstruktor kopie. Použijte odvozenou třídu namísto původní.
 
 1. Tento problém může dojít při pokusu o kopie třídy, jejíž konstruktor kopie je explicitní. Deklarování konstruktoru kopie jako `explicit` zabraňuje předávání/vracení objektů třídy do/z funkce. Další informace o explicitní konstruktory, naleznete v tématu [uživatelem definovaných převodů typu](../../cpp/user-defined-type-conversions-cpp.md).
 

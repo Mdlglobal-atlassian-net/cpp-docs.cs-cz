@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b271ed2c2af94e37edcbabb6611cda967f9587c7
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 18d9d2c1b3c633ba3399e93d34317c2360d45215
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081868"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059841"
 ---
 # <a name="thread-local-storage-tls"></a>Úložiště Thread Local (TLS)
 
@@ -100,7 +100,7 @@ Při deklarování staticky vázaného místními objekty vlákna a proměnné, 
     int *p = &tls_i;       //This will generate an error in C.
     ```
 
-     Toto omezení neplatí v jazyce C++. Protože jazyk C++ umožňuje pro dynamická inicializace všech objektů, je objekt inicializovat pomocí výrazu, který používá adresu místní proměnné vlákna. To lze provést stejně jako konstrukce místními objekty vlákna. Příklad kódu uvedeného výše nevygeneruje chybu při kompilaci jako zdrojový soubor jazyka C++. Všimněte si, že adresu místní proměnné vlákna je platný pouze dokud vlákno, ve kterém byla získána adresu stále existuje.
+   Toto omezení neplatí v jazyce C++. Protože jazyk C++ umožňuje pro dynamická inicializace všech objektů, je objekt inicializovat pomocí výrazu, který používá adresu místní proměnné vlákna. To lze provést stejně jako konstrukce místními objekty vlákna. Příklad kódu uvedeného výše nevygeneruje chybu při kompilaci jako zdrojový soubor jazyka C++. Všimněte si, že adresu místní proměnné vlákna je platný pouze dokud vlákno, ve kterém byla získána adresu stále existuje.
 
 - Standard jazyka C umožňuje inicializaci objektu nebo proměnné s výrazem zahrnujícím odkaz sám na sebe, ale pouze pro nestatické objekty. Přestože jazyk C++ obvykle umožňuje takovou dynamickou inicializaci objektu s výrazem zahrnujícím odkaz sám na sebe, tento typ inicializace není povolen s místními objekty vlákna. Příklad:
 
@@ -110,9 +110,9 @@ Při deklarování staticky vázaného místními objekty vlákna a proměnné, 
     __declspec( thread )int tls_i = sizeof( tls_i )       // Legal in C and C++
     ```
 
-     Všimněte si, že `sizeof` výraz, který obsahuje inicializovaný objekt, nepředstavuje odkaz sám na sebe a je povolen v jazyce C a C++.
+   Všimněte si, že `sizeof` výraz, který obsahuje inicializovaný objekt, nepředstavuje odkaz sám na sebe a je povolen v jazyce C a C++.
 
-     Jazyk C++ neumožňuje takovou dynamickou inicializaci vlákna dat z důvodu možných budoucí vylepšení zařízení místní úložiště vláken.
+   Jazyk C++ neumožňuje takovou dynamickou inicializaci vlákna dat z důvodu možných budoucí vylepšení zařízení místní úložiště vláken.
 
 - V operačních systémech Windows než Windows Vista `__declspec`(vlákno) má určitá omezení. Pokud knihovna DLL deklaruje data ani jako objekt `__declspec`(vlákno), může to způsobit selhání ochrany Pokud dynamicky načíst. Po načtení knihovny DLL s [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya), dojde k selhání systému pokaždé, když se kód odkazuje `__declspec`data (vlákno). Vzhledem k tomu, že v době běhu je přiděleno globální proměnné místo pro vlákno, velikost toto místo je založená na výpočtu požadavkům aplikace a všechny knihovny DLL staticky propojené požadavky. Při použití `LoadLibrary`, nelze rozšířit tento prostor pro místní proměnné vlákna deklarované pomocí `__declspec`(vlákno). Použít rozhraní API pro protokol TLS, například [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc), v knihovně DLL přidělit TLS, pokud knihovna DLL může být načten s `LoadLibrary`.
 

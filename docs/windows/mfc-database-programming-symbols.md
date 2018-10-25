@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 732fab9e0f9f0233de6de7db6328c2e6736db5d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dfdec25349afcd9b582952f2c907cd573e366a35
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437712"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059620"
 ---
 # <a name="mfc-database-programming-symbols"></a>Programovací symboly databáze MFC
 
 Symboly v této tabulce zobrazí jenom v projektu knihovny MFC při byla přidána podpora databáze. Podporují taky MFC připojení k SQL serverům a programování databáze.
-  
+
 |||
 |-|-|
 |AFX_IDP_SQL_API_CONFORMANCE|AFX_IDP_SQL_BOOKMARKS_ NOT_ENABLED|
@@ -44,11 +44,11 @@ Symboly v této tabulce zobrazí jenom v projektu knihovny MFC při byla přidá
 |AFX_IDP_SQL_ROW_FETCH|AFX_IDP_SQL_ROW_UPDATE_ NOT_SUPPORTED|
 |AFX_IDP_SQL_SNAPSHOT_ NOT_SUPPORTED|AFX_IDP_SQL_SQL_CONFORMANCE|
 |AFX_IDP_SQL_SQL_NO_TOTAL|AFX_IDP_SQL_UPDATE_DELETE_FAILED|
-  
+
 ## <a name="requirements"></a>Požadavky
 
 MFC
-  
+
 ## <a name="see-also"></a>Viz také
 
 [Předdefinované symboly MFC](../windows/mfc-predefined-symbols.md)<br/>

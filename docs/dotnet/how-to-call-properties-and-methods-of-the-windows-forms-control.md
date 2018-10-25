@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1d3f8dc2251dbfbcd8155b0edc512a9dc40bacc2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 71e42f7d7a60478ec9344a44e8e86463e5845500
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393396"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061570"
 ---
 # <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>Postupy: Vlastnosti volání a metody ovládacího prvku modelu Windows Forms
 
@@ -39,11 +39,11 @@ Toto téma předpokládá, že jste již dříve dokončili [postupy: vytvořen�
 
 1. Přidejte následující řádek do části veřejné přepsání `CMFC02View` deklarace v MFC02View.h třídy.
 
-     `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`
+   `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`
 
 1. Přidejte přepsání pro OnInitialupdate.
 
-     Zobrazení **vlastnosti** okno (F4). V **zobrazení tříd** (CTRL + SHIFT + C), vyberte CMFC02View třídu. V **vlastnosti** okna, vyberte ikonu pro přepsání. Přesuňte se dolů seznamem, aby OnInitialUpdate. Klikněte na rozevírací seznam a vyberte \<Přidat >. V MFC02View.cpp. Ujistěte se, že tělo funkce OnInitialUpdate následujícím způsobem:
+   Zobrazení **vlastnosti** okno (F4). V **zobrazení tříd** (CTRL + SHIFT + C), vyberte CMFC02View třídu. V **vlastnosti** okna, vyberte ikonu pro přepsání. Přesuňte se dolů seznamem, aby OnInitialUpdate. Klikněte na rozevírací seznam a vyberte \<Přidat >. V MFC02View.cpp. Ujistěte se, že tělo funkce OnInitialUpdate následujícím způsobem:
 
     ```
     CWinFormsView::OnInitialUpdate();
@@ -53,11 +53,11 @@ Toto téma předpokládá, že jste již dříve dokončili [postupy: vytvořen�
 
 1. Sestavte a spusťte projekt.
 
-     Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
+   Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
 
-     Na **ladění** nabídky, klikněte na tlačítko **spustit bez ladění**.
+   Na **ladění** nabídky, klikněte na tlačítko **spustit bez ladění**.
 
-     Všimněte si, že se teď inicializují do textového pole.
+   Všimněte si, že se teď inicializují do textového pole.
 
 ## <a name="see-also"></a>Viz také
 

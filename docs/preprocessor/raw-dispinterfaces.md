@@ -16,31 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02133e6b9d884fa8e0a175dd01845035ec8b96a7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b89c1f549168a762b5ae095c4eacf5ddb1b4d053
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435945"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062345"
 ---
 # <a name="rawdispinterfaces"></a>raw_dispinterfaces
-**Specifické pro C++**  
-  
-Instruuje kompilátor, aby generovat funkce nízké úrovně obálky pro dispinterface metody a vlastnosti, které volají `IDispatch::Invoke` a vrátí kód chyby: HRESULT.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-raw_dispinterfaces  
-```  
-  
-## <a name="remarks"></a>Poznámky  
- 
-Pokud tento atribut není zadaný, pouze vysoké úrovně jsou generovány obálky, které vyvolají výjimky C++ v případě selhání.  
-  
-**Specifické pro END C++**  
-  
-## <a name="see-also"></a>Viz také  
- 
+**Specifické pro C++**
+
+Instruuje kompilátor, aby generovat funkce nízké úrovně obálky pro dispinterface metody a vlastnosti, které volají `IDispatch::Invoke` a vrátí kód chyby: HRESULT.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+raw_dispinterfaces
+```
+
+## <a name="remarks"></a>Poznámky
+
+Pokud tento atribut není zadaný, pouze vysoké úrovně jsou generovány obálky, které vyvolají výjimky C++ v případě selhání.
+
+**Specifické pro END C++**
+
+## <a name="see-also"></a>Viz také
+
 [atributů #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import – direktiva](../preprocessor/hash-import-directive-cpp.md)
