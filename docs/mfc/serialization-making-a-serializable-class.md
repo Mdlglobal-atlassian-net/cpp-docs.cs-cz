@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378a99021ca1b48599ee934d659542384068e195
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2f3824e87a2016a848b3723aaa293f235f6f9b09
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443342"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054862"
 ---
 # <a name="serialization-making-a-serializable-class"></a>Serializace: Příprava serializovatelné třídy
 
@@ -67,9 +67,9 @@ Vezměte v úvahu třídu, která je odvozena od `CObject` a má dva nové prom�
 
 1. Vložit nebo extrahovat členské proměnné, které jsou specifické pro vaší třídy.
 
-     Operátory vkládání a extrakci pracovat s třídou archivu číst a zapisovat data. Následující příklad ukazuje, jak implementovat `Serialize` pro `CPerson` třídy deklarované výše:
+   Operátory vkládání a extrakci pracovat s třídou archivu číst a zapisovat data. Následující příklad ukazuje, jak implementovat `Serialize` pro `CPerson` třídy deklarované výše:
 
-     [!code-cpp[NVC_MFCSerialization#2](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#2](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_2.cpp)]
 
 Můžete také použít [CArchive::Read](../mfc/reference/carchive-class.md#read) a [CArchive::Write](../mfc/reference/carchive-class.md#write) členské funkce pro čtení a zápis velkých objemů dat bez typu.
 

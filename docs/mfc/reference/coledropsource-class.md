@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f40ac527ba8ad7e65f025910e96a69f546842e30
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cb12135a0fbffdeba55130bced80c2f23c365caa
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447554"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052346"
 ---
 # <a name="coledropsource-class"></a>Coledropsource – třída
 
@@ -177,6 +177,4 @@ Protože tato funkce je volána často, to by mělo být optimalizované co nejv
 [Ukázky knihovny MFC OCLIENT](../../visual-cpp-samples.md)<br/>
 [CCmdTarget – třída](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-
-
 

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d0db4d53d64def1c1f55929aa9d7514142955cf
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 00390f5a5872c183fdea385158dfa5020362a06f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821118"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055058"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Přidání stránky vlastností (ATL – tutoriál, část 6)
 
@@ -45,7 +45,7 @@ Přidání stránky vlastností do ovládacího prvku, použijte stránku vlastn
 
 1. Klikněte na tlačítko **řetězce** otevřít **řetězce** stránku a zadejte **& mnohoúhelníku** jako **Title**.
 
-     **Název** vlastnosti stránky je řetězec, který se zobrazí na kartě pro danou stránku. **Řetězec Doc** je popis, který používá rámec vlastnosti uvést do stavu řádku nebo v popisu tlačítka. Všimněte si, že rámec standardní vlastnosti aktuálně nepoužívá tento řetězec, takže ho můžete nechat výchozí obsah. Nebude generovat **soubor nápovědy** v okamžiku, proto můžete odstranit položku do tohoto textového pole.
+   **Název** vlastnosti stránky je řetězec, který se zobrazí na kartě pro danou stránku. **Řetězec Doc** je popis, který používá rámec vlastnosti uvést do stavu řádku nebo v popisu tlačítka. Všimněte si, že rámec standardní vlastnosti aktuálně nepoužívá tento řetězec, takže ho můžete nechat výchozí obsah. Nebude generovat **soubor nápovědy** v okamžiku, proto můžete odstranit položku do tohoto textového pole.
 
 1. Klikněte na tlačítko **Dokončit**, a vytvoří se objekt stránky vlastností.
 

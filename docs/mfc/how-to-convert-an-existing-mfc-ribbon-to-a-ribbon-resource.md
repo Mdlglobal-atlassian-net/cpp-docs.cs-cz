@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07ed60edf2b83810616e2ed58a92510d1d973ff0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b31062530bfe6da940cd6458bd5cfa91f3e29ae7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378108"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052548"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>Postupy: Převod existujícího pásu karet MFC na prostředek pásu karet
 
@@ -37,13 +37,13 @@ Musíte mít existující projekt knihovny MFC, která má kód, který použív
 
 ```
 
-     Save and close the file.
+   Soubor uložte a zavřete.
 
 1. Sestavení a spuštění aplikace knihovny MFC v poznámkovém bloku otevřete RibbonOutput.txt a zkopírujte jeho obsah.
 
 1. V sadě Visual Studio na **projektu** nabídky, klikněte na tlačítko **přidat prostředek**. V **přidat prostředek** dialogu **pásu karet** a potom klikněte na tlačítko **nový**.
 
-     Visual Studio vytvoří prostředek pásu karet a otevře v zobrazení návrhu. ID prostředku pásu karet je IDR_RIBBON1, který se zobrazí v **zobrazení prostředků**. Na pásu karet je definována v souboru XML ribbon1.mfcribbon ms.
+   Visual Studio vytvoří prostředek pásu karet a otevře v zobrazení návrhu. ID prostředku pásu karet je IDR_RIBBON1, který se zobrazí v **zobrazení prostředků**. Na pásu karet je definována v souboru XML ribbon1.mfcribbon ms.
 
 1. V sadě Visual Studio otevřete ribbon1.mfcribbon ms, odstraňte její obsah a vložte obsah RibbonOutput.txt, který jste si zkopírovali dříve. Uložte a zavřete ribbon1.mfcribbon ms.
 

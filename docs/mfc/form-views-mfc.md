@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9019b8f2314cfefa5b952994e7fa7c3e9d8d459e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8236ed06a5863e2208c77294e4ddb7352b0f83f7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442770"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052990"
 ---
 # <a name="form-views-mfc"></a>Zobrazení formulářů (MFC)
 
@@ -40,7 +40,7 @@ Při vložení nového formuláře do aplikace Visual C++ provede následující
 
 - Vytvoří prostředek dialogového okna s odpovídající styly (nebo můžete použít existující prostředek dialogu, který ještě nebyl přidružen Class).
 
-     Pokud zvolíte existující prostředek dialogového okna, budete muset nastavit tyto styly pomocí stránky vlastností pro dialogové okno. Styly pro dialogové okno, musí obsahovat:
+   Pokud zvolíte existující prostředek dialogového okna, budete muset nastavit tyto styly pomocí stránky vlastností pro dialogové okno. Styly pro dialogové okno, musí obsahovat:
 
      **WS_CHILD**= zapnuto
 
@@ -54,17 +54,17 @@ Pro aplikace založené na architektuře document/view **nový formulář** př�
 
 - Vytvoří `CDocument`– na základě třídy
 
-     Namísto toho, aby vytvořili novou třídu, můžete použít všechny existující `CDocument`– na základě třídu ve vašem projektu.
+   Namísto toho, aby vytvořili novou třídu, můžete použít všechny existující `CDocument`– na základě třídu ve vašem projektu.
 
 - Vygeneruje šablonu dokumentu (odvozený od `CDocument`) s prostředky řetězce, nabídky a ikony.
 
-     Můžete také vytvořit novou třídu, na kterém chcete založit šabloně.
+   Můžete také vytvořit novou třídu, na kterém chcete založit šabloně.
 
 - Přidá volání `AddDocumentTemplate` ve vaší aplikaci `InitInstance` kódu.
 
-     Visual C++ přidá tento kód pro každý nový formulář vytvoříte, který přidá do seznamu dostupných formulářů formuláře, když uživatel vybere **nový** příkazu. Tento kód obsahuje ID přidružený prostředek formuláře a názvy přidružený dokument, zobrazení a snímků tříd, které společně tvoří nový objekt formuláře.
+   Visual C++ přidá tento kód pro každý nový formulář vytvoříte, který přidá do seznamu dostupných formulářů formuláře, když uživatel vybere **nový** příkazu. Tento kód obsahuje ID přidružený prostředek formuláře a názvy přidružený dokument, zobrazení a snímků tříd, které společně tvoří nový objekt formuláře.
 
-     Šablony dokumentů slouží jako propojení mezi dokumenty, oken s rámečkem a zobrazení. Pro jednotlivý dokument můžete vytvořit mnoho šablon.
+   Šablony dokumentů slouží jako propojení mezi dokumenty, oken s rámečkem a zobrazení. Pro jednotlivý dokument můžete vytvořit mnoho šablon.
 
 Další informace naleznete v tématu:
 

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f01b15a226887216b45ba232437d9d20c4691b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f1b20dd592e180122e119b08ab59babfdaae8d54
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388329"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052799"
 ---
 # <a name="creating-an-active-document-container-application"></a>Vytvoření aplikace kontejnerů pro aktivní dokument
 
@@ -57,9 +57,9 @@ Nejjednodušší a největší doporučený způsob, jak vytvořit aplikace kont
 
          [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
 
-     `OnPreparePrinting` poskytuje podporu tisku. Tento kód nahradí `DoPreparePrinting`, což je výchozí Příprava tisku.
+   `OnPreparePrinting` poskytuje podporu tisku. Tento kód nahradí `DoPreparePrinting`, což je výchozí Příprava tisku.
 
-     Zahrnutí aktivního dokumentu poskytuje vylepšené schéma tisku:
+   Zahrnutí aktivního dokumentu poskytuje vylepšené schéma tisku:
 
    - Můžete nejprve volat aktivní dokument pomocí jeho `IPrint` rozhraní a určit, aby se vytiskl. Tím se liší od předchozí OLE členství ve skupině, ve kterém museli vykreslil obraz obsažené položky do tiskárny kontejneru `CDC` objektu.
 
@@ -67,7 +67,7 @@ Nejjednodušší a největší doporučený způsob, jak vytvořit aplikace kont
 
    - Pokud se nezdaří, zkontrolujte vlastní vykreslování položky.
 
-     Statické členské funkce `COleDocObjectItem::OnPrint` a `COleDocObjectItem::OnPreparePrinting`, jak je implementován v předchozím kódu zpracovávat toto vylepšené schéma tisku.
+   Statické členské funkce `COleDocObjectItem::OnPrint` a `COleDocObjectItem::OnPreparePrinting`, jak je implementován v předchozím kódu zpracovávat toto vylepšené schéma tisku.
 
 11. Přidejte všechny vlastní implementaci a sestavte aplikaci.
 

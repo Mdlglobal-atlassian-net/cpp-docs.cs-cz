@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83606041250dafed0ef57eb4eea18d7314e0bbef
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ba22c87ee601d66ccfb1092047e69be42d8163c3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429263"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052747"
 ---
 # <a name="inserting-a-form-into-a-project"></a>Vložení formuláře do projektu
 
@@ -33,7 +33,7 @@ Formuláře poskytují praktický kontejner pro ovládací prvky. Můžete snadn
 
 1. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat třídu**.
 
-     Pokud **nový formulář** příkaz není k dispozici, váš projekt může být založen na aktivní šablony knihovny (ATL). Chcete-li přidat formuláře do projektu ATL, je třeba [určitá nastavení](../atl/reference/application-settings-atl-project-wizard.md) při prvním vytvoření projektu.
+   Pokud **nový formulář** příkaz není k dispozici, váš projekt může být založen na aktivní šablony knihovny (ATL). Chcete-li přidat formuláře do projektu ATL, je třeba [určitá nastavení](../atl/reference/application-settings-atl-project-wizard.md) při prvním vytvoření projektu.
 
 1. Z **MFC** složky, klikněte na tlačítko **třídy knihovny MFC**.
 

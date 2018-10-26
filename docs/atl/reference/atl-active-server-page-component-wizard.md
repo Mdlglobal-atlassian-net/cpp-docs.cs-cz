@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57f6e24ec664128a47813c29ce07a4272ce4a771
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: 8a87b2ba1e846ce995a987379ae6f30567a39773
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250364"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053809"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Průvodce komponentami stránka ATL Active Server
 
@@ -47,27 +47,27 @@ Pokud změníte **Coclass** název v oddílu modelu COM, tato změna se projeví
 
 Poskytuje informace pro třídu C++ vytvořené pro objekt.
 
-- **Krátký název**  
+- **Krátký název**
 
    Nastaví název kořenového objektu. Název, který zadáte, určuje `Class` a **Coclass** názvy, **soubor .cpp** a **souboru .h** názvy, **rozhraní**název, **typ** názvy a **ProgID**, pokud nezměníte těchto polí samostatně.
 
-- **soubor .h**  
+- **soubor .h**
 
    Nastaví název hlavičkového souboru pro nový objekt třídy. Ve výchozím nastavení, tento název je založen na název, který jste zadali v **krátký název**. Klikněte na tlačítko se třemi tečkami uložení názvu souboru do umístění podle vaší volby, nebo připojit k existujícímu souboru deklaraci třídy. Pokud vyberete existující soubor, Průvodce neuloží se do vybraného umístění dokud kliknutím **Dokončit** v průvodci.
 
    Průvodce nepřepisuje soubor. Pokud jste vybrali název existujícího souboru, po kliknutí na **Dokončit**, Průvodce vás vyzve k označení, zda by měla být k obsah souboru připojen deklaraci třídy. Klikněte na tlačítko **Ano** pro připojení k souboru, klikněte na tlačítko **ne** pro návrat do průvodce a zadejte jiný název souboru.
 
-- **Třída**  
+- **Třída**
 
    Nastaví název třídy, který se má vytvořit. Tento název je založen na název, který jste zadali v **krátký název**, předchází "C", typická předpona pro název třídy.
 
-- **soubor .cpp**  
+- **soubor .cpp**
 
    Nastaví název implementačního souboru pro nový objekt třídy. Ve výchozím nastavení, tento název je založen na název, který jste zadali v **krátký název**. Klikněte na tlačítko se třemi tečkami se uložit název souboru do umístění podle vašeho výběru. Soubor se neukládá do vybraného umístění, dokud nekliknete na tlačítko **Dokončit** v průvodci.
 
    Průvodce nepřepisuje soubor. Pokud jste vybrali název existujícího souboru, po kliknutí na **Dokončit**, Průvodce vás vyzve k označení, zda má být připojen implementace třídy do obsahu souboru. Klikněte na tlačítko **Ano** pro připojení k souboru, klikněte na tlačítko **ne** pro návrat do průvodce a zadejte jiný název souboru.
 
-- **S atributy**  
+- **S atributy**
 
    Označuje, zda objekt používá atributy. Při přidávání objektu do projektu knihovny ATL, tato možnost je vybraný a nelze ji změnit. To znamená můžete přidat pouze objekty s atributy do projektu vytvořeného s podporou atribut.
 
@@ -81,19 +81,19 @@ Poskytuje informace pro třídu C++ vytvořené pro objekt.
 
 Poskytuje informace o funkcích, které modelu COM pro objekt.
 
-- **Coclass**  
+- **Coclass**
 
    Nastaví název třídy komponenty, který obsahuje seznam podporovaných v objektu rozhraní. Pokud váš projekt nebo tento objekt používá atributy, tuto možnost nelze změnit, protože nezahrnuje ATL **coclass** atribut.
 
-- **Typ**  
+- **Typ**
 
    Nastaví popis objektu, který se zobrazí v registru pro coclass.
 
-- **Rozhraní**  
+- **Rozhraní**
 
    Nastaví rozhraní, které vytvoříte pro svůj objekt. Toto rozhraní obsahuje vaše vlastní metody.
 
-- **ProgID**  
+- **ProgID**
 
    Nastaví název, který kontejnery lze použít místo identifikátor CLSID objektu.
 

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a488a3d46d60762f73406ea6f604761804277aa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ce4caa9b8a8575264563d69f47dbba1dcedb69e5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429770"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054108"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Více typů dokumentů, zobrazení a oken s rámečkem
 
@@ -62,15 +62,15 @@ MFC podporuje tři běžné uživatelské rozhraní vyžaduje více pohledy v je
 
 - Zobrazit objekty stejné třídy, každou v samostatném okně rámce MDI dokumentu.
 
-     Můžete chtít podporují vytváření druhém okně s rámečkem v dokumentu. Uživatel může zvolit příkaz nové okno k zobrazení stejný dokument otevřít na druhý snímek a potom použít dvěma snímky chcete-li zobrazit různé části dokumentu současně. Rozhraní framework podporuje nové okno příkaz v nabídce okno pro aplikace MDI tak, že duplikujete počáteční rámec okna a zobrazení, které jsou připojené k dokumentu.
+   Můžete chtít podporují vytváření druhém okně s rámečkem v dokumentu. Uživatel může zvolit příkaz nové okno k zobrazení stejný dokument otevřít na druhý snímek a potom použít dvěma snímky chcete-li zobrazit různé části dokumentu současně. Rozhraní framework podporuje nové okno příkaz v nabídce okno pro aplikace MDI tak, že duplikujete počáteční rámec okna a zobrazení, které jsou připojené k dokumentu.
 
 - Zobrazit objekty stejné třídy ve stejném okně rámce dokumentu.
 
-     Rozdělovače oken rozdělit do více samostatných zobrazení dokumentu místo zobrazení okna jednotlivý dokument. Rozhraní vytvoří několik zobrazení objektů ze stejné třídy zobrazení. Další informace najdete v tématu [rozdělovač Windows](#_core_splitter_windows).
+   Rozdělovače oken rozdělit do více samostatných zobrazení dokumentu místo zobrazení okna jednotlivý dokument. Rozhraní vytvoří několik zobrazení objektů ze stejné třídy zobrazení. Další informace najdete v tématu [rozdělovač Windows](#_core_splitter_windows).
 
 - Zobrazit objekty jiné třídy v rámci jednoho okna.
 
-     V tomto modelu varianta okna s rozdělovačem více zobrazení sdílet jeden snímek okna. Zobrazení se vytvářejí na základě různých tříd, každé zobrazení jiný způsob, jak zobrazit stejný dokument. Jedno zobrazení může například zobrazit textový dokument v normálním režimu ostatní zobrazení se zobrazí ho v režimu osnovy. Ovládací prvek splitter umožňuje uživateli upravit relativní velikosti zobrazení.
+   V tomto modelu varianta okna s rozdělovačem více zobrazení sdílet jeden snímek okna. Zobrazení se vytvářejí na základě různých tříd, každé zobrazení jiný způsob, jak zobrazit stejný dokument. Jedno zobrazení může například zobrazit textový dokument v normálním režimu ostatní zobrazení se zobrazí ho v režimu osnovy. Ovládací prvek splitter umožňuje uživateli upravit relativní velikosti zobrazení.
 
 Na následujícím obrázku je rozdělena na oddíly a, b a c, ukazuje tři modely uživatelského rozhraní v uvedeném pořadí výše.
 

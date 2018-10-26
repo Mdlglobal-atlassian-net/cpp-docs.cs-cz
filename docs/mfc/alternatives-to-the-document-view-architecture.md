@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07277e9b98186747415cf1bf6abed3e431e64fff
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b45b1a1f2903dfcdfa4a95adc161766f5bb3328c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403471"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053042"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternativy k architektuře dokument/zobrazení
 
@@ -56,7 +56,7 @@ Důrazně doporučujeme použít Průvodce aplikací knihovny MFC k vytváření
 
 - Považovat za nepoužívané appendage dokumentu a implementujte kód pro správu vašich dat ve třídě zobrazení, jak je navrženo výše. Režie pro dokument je relativně nízký. Jediný [CDocument](../mfc/reference/cdocument-class.md) objektu s sebou nese náklady malé množství režie samostatně a navíc malé nároky na `CDocument`od základních tříd, [CCmdTarget –](../mfc/reference/ccmdtarget-class.md) a [CObject](../mfc/reference/cobject-class.md). I ten, že třídy jsou malé.
 
-     Deklarované v `CDocument`:
+   Deklarované v `CDocument`:
 
    - Dvě `CString` objekty.
 
@@ -66,7 +66,7 @@ Důrazně doporučujeme použít Průvodce aplikací knihovny MFC k vytváření
 
    - Jeden `CPtrList` objektu, který obsahuje seznam zobrazení dokumentu.
 
-     Kromě toho dokumentů vyžaduje základní množství času vytvořit objekt dokumentu, jeho zobrazení objektů, okno rámce a objekt šablony dokumentu.
+   Kromě toho dokumentů vyžaduje základní množství času vytvořit objekt dokumentu, jeho zobrazení objektů, okno rámce a objekt šablony dokumentu.
 
 - Považovat za dokument a zobrazení postranní nepoužité řetězce. Vložte kód pro vykreslování a správy dat v okně rámce místo zobrazení. Tento přístup je blíž ke jazyka C programovací model.
 

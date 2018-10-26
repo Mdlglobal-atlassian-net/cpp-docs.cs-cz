@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b443e1758f766b7fa2dd9a0169ab98172423779d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5e589f07d1c9c54c3acd2fa3ff6a0f346077f9b4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439339"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053094"
 ---
 # <a name="setting-the-day-state-of-a-month-calendar-control"></a>Nastavení stavu dne v ovládacím prvku měsíční kalendář
 
@@ -51,9 +51,9 @@ Správně zpracovat tuto zprávu, musíte určit, kolik měsíců se informace o
 
 1. Do těla obslužné rutiny přidejte následující kód:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#26](../mfc/codesnippet/cpp/setting-the-day-state-of-a-month-calendar-control_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#26](../mfc/codesnippet/cpp/setting-the-day-state-of-a-month-calendar-control_1.cpp)]
 
-     Tento příklad převede *pNMHDR* ukazatel na správný typ, pak určuje, kolik měsíců informace jsou požadovány (`pDayState->cDayState`). Pro každý měsíc, aktuální bitového pole (`pDayState->prgDayState[i]`) je inicializován na nulu a potom potřeba data jsou nastaveny (v tomto případě 15. dne každého měsíce).
+   Tento příklad převede *pNMHDR* ukazatel na správný typ, pak určuje, kolik měsíců informace jsou požadovány (`pDayState->cDayState`). Pro každý měsíc, aktuální bitového pole (`pDayState->prgDayState[i]`) je inicializován na nulu a potom potřeba data jsou nastaveny (v tomto případě 15. dne každého měsíce).
 
 ## <a name="see-also"></a>Viz také
 

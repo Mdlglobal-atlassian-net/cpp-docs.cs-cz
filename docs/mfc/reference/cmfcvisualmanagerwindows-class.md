@@ -150,12 +150,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80346cd29d719ef28a2d4270f52e41fa3bc88674
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6e47c32ee3b552f95594b1ba89c05437a6b8e957
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440560"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054615"
 ---
 # <a name="cmfcvisualmanagerwindows-class"></a>CMFCVisualManagerWindows – třída
 
@@ -284,7 +284,6 @@ Následující příklad ukazuje, jak používat `CMFCVisualManagerWindows`. Ten
 
 ##  <a name="alwayshighlight3dtabs"></a>  CMFCVisualManagerWindows::AlwaysHighlight3DTabs
 
-
 ```
 virtual BOOL AlwaysHighlight3DTabs() const;
 ```
@@ -295,19 +294,17 @@ virtual BOOL AlwaysHighlight3DTabs() const;
 
 ##  <a name="cmfcvisualmanagerwindows"></a>  CMFCVisualManagerWindows::CMFCVisualManagerWindows
 
-
 ```
 CMFCVisualManagerWindows(BOOL bIsTemporary = FALSE);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bIsTemporary*
+[in] *bIsTemporary*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="drawcomboborderwinxp"></a>  CMFCVisualManagerWindows::DrawComboBorderWinXP
-
 
 ```
 virtual BOOL DrawComboBorderWinXP(
@@ -320,17 +317,17 @@ virtual BOOL DrawComboBorderWinXP(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rect*
-*bDisabled*<br/>
-[in] [in] *bIsDropped* [in] *bIsHighlighted*
+[in] *primárního řadiče domény*<br/>
+[in] *rect*<br/>
+[in] *bDisabled*<br/>
+[in] *bIsDropped*<br/>
+[in] *bIsHighlighted*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="drawcombodropbuttonwinxp"></a>  CMFCVisualManagerWindows::DrawComboDropButtonWinXP
-
 
 ```
 virtual BOOL DrawComboDropButtonWinXP(
@@ -343,17 +340,17 @@ virtual BOOL DrawComboDropButtonWinXP(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rect*
-*bDisabled*<br/>
-[in] [in] *bIsDropped* [in] *bIsHighlighted*
+[in] *primárního řadiče domény*<br/>
+[in] *rect*<br/>
+[in] *bDisabled*<br/>
+[in] *bIsDropped*<br/>
+[in] *bIsHighlighted*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="drawpushbuttonwinxp"></a>  CMFCVisualManagerWindows::DrawPushButtonWinXP
-
 
 ```
 virtual BOOL DrawPushButtonWinXP(
@@ -365,17 +362,16 @@ virtual BOOL DrawPushButtonWinXP(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rect*
-*pButton*<br/>
-[in] [in] *uiState*
+[in] *primárního řadiče domény*<br/>
+[in] *rect*<br/>
+[in] *pButton*<br/>
+[in] *uiState*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="getbuttonextraborder"></a>  CMFCVisualManagerWindows::GetButtonExtraBorder
-
 
 ```
 virtual CSize GetButtonExtraBorder() const;
@@ -387,7 +383,6 @@ virtual CSize GetButtonExtraBorder() const;
 
 ##  <a name="getcaptionbuttonextraborder"></a>  CMFCVisualManagerWindows::GetCaptionButtonExtraBorder
 
-
 ```
 virtual CSize GetCaptionButtonExtraBorder() const;
 ```
@@ -397,7 +392,6 @@ virtual CSize GetCaptionButtonExtraBorder() const;
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="getdockingpanecaptionextraheight"></a>  CMFCVisualManagerWindows::GetDockingPaneCaptionExtraHeight
-
 
 ```
 virtual int GetDockingPaneCaptionExtraHeight() const;
@@ -409,21 +403,19 @@ virtual int GetDockingPaneCaptionExtraHeight() const;
 
 ##  <a name="gethighlightedmenuitemtextcolor"></a>  CMFCVisualManagerWindows::GetHighlightedMenuItemTextColor
 
-
 ```
 virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pButton*
+[in] *pButton*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="getpopupmenugap"></a>  CMFCVisualManagerWindows::GetPopupMenuGap
-
 
 ```
 virtual int GetPopupMenuGap() const;
@@ -435,7 +427,6 @@ virtual int GetPopupMenuGap() const;
 
 ##  <a name="gettoolbarbuttontextcolor"></a>  CMFCVisualManagerWindows::GetToolbarButtonTextColor
 
-
 ```
 virtual COLORREF GetToolbarButtonTextColor(
     CMFCToolBarButton* pButton,
@@ -444,8 +435,8 @@ virtual COLORREF GetToolbarButtonTextColor(
 
 ### <a name="parameters"></a>Parametry
 
-*pButton*<br/>
-[in] [in] *stavu*
+[in] *pButton*<br/>
+[in] *stavu*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -453,21 +444,19 @@ virtual COLORREF GetToolbarButtonTextColor(
 
 ##  <a name="isdefaultwinxppopupbutton"></a>  CMFCVisualManagerWindows::IsDefaultWinXPPopupButton
 
-
 ```
 virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton* pButton) const;
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pButton*
+[in] *pButton*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ishighlightwholemenuitem"></a>  CMFCVisualManagerWindows::IsHighlightWholeMenuItem
-
 
 ```
 virtual BOOL IsHighlightWholeMenuItem();
@@ -479,7 +468,6 @@ virtual BOOL IsHighlightWholeMenuItem();
 
 ##  <a name="isofficestylemenus"></a>  CMFCVisualManagerWindows::IsOfficeStyleMenus
 
-
 ```
 BOOL IsOfficeStyleMenus() const;
 ```
@@ -490,7 +478,6 @@ BOOL IsOfficeStyleMenus() const;
 
 ##  <a name="isofficexpstylemenus"></a>  CMFCVisualManagerWindows::IsOfficeXPStyleMenus
 
-
 ```
 virtual BOOL IsOfficeXPStyleMenus() const;
 ```
@@ -500,7 +487,6 @@ virtual BOOL IsOfficeXPStyleMenus() const;
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="iswindowsthemingsupported"></a>  CMFCVisualManagerWindows::IsWindowsThemingSupported
-
 
 ```
 virtual BOOL IsWindowsThemingSupported() const;
@@ -540,7 +526,6 @@ AFX_IMPORT_DATA static BOOL m_b3DTabsXPTheme;
 
 ##  <a name="ondrawbargripper"></a>  CMFCVisualManagerWindows::OnDrawBarGripper
 
-
 ```
 virtual void OnDrawBarGripper(
     CDC* pDC,
@@ -551,15 +536,14 @@ virtual void OnDrawBarGripper(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rectGripper*
-*bHorz*<br/>
-[in] [in] *pBar*
+[in] *primárního řadiče domény*<br/>
+[in] *rectGripper*<br/>
+[in] *bHorz*<br/>
+[in] *pBar*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawbrowsebutton"></a>  CMFCVisualManagerWindows::OnDrawBrowseButton
-
 
 ```
 virtual BOOL OnDrawBrowseButton(
@@ -572,17 +556,17 @@ virtual BOOL OnDrawBrowseButton(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rect*
-*pEdit*<br/>
-[in] [in] *stavu* [in] *clrText*
+[in] *primárního řadiče domény*<br/>
+[in] *rect*<br/>
+[in] *pEdit*<br/>
+[in] *stavu*<br/>
+[in] *clrText*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawbuttonborder"></a>  CMFCVisualManagerWindows::OnDrawButtonBorder
-
 
 ```
 virtual void OnDrawButtonBorder(
@@ -594,15 +578,14 @@ virtual void OnDrawButtonBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *pButton*
-*rect*<br/>
-[in] [in] *stavu*
+[in] *primárního řadiče domény*<br/>
+[in] *pButton*<br/>
+[in] *rect*<br/>
+[in] *stavu*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawbuttonseparator"></a>  CMFCVisualManagerWindows::OnDrawButtonSeparator
-
 
 ```
 virtual void OnDrawButtonSeparator(
@@ -615,15 +598,15 @@ virtual void OnDrawButtonSeparator(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *pButton*
-*rect*<br/>
-[in] [in] *stavu* [in] *bHorz*
+[in] *primárního řadiče domény*<br/>
+[in] *pButton*<br/>
+[in] *rect*<br/>
+[in] *stavu*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawcaptionbutton"></a>  CMFCVisualManagerWindows::OnDrawCaptionButton
-
 
 ```
 virtual void OnDrawCaptionButton(
@@ -638,17 +621,17 @@ virtual void OnDrawCaptionButton(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *pButton*
-*bActive*<br/>
-[in] [in] *bHorz*
-*bMaximized*<br/>
-[in] [in] *bDisabled* [in] *nImageID*
+[in] *primárního řadiče domény*<br/>
+[in] *pButton*<br/>
+[in] *bActive*<br/>
+[in] *bHorz*<br/>
+[in] *bMaximized*<br/>
+[in] *bDisabled*<br/>
+[in] *nImageID*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawcaptionbuttonicon"></a>  CMFCVisualManagerWindows::OnDrawCaptionButtonIcon
-
 
 ```
 virtual void OnDrawCaptionButtonIcon(
@@ -662,17 +645,16 @@ virtual void OnDrawCaptionButtonIcon(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *pButton*
-*id*<br/>
-[in] [in] *bActive*
-*bDisabled*<br/>
-[in] [in] *ptImage*
+[in] *primárního řadiče domény*<br/>
+[in] *pButton*<br/>
+[in] *id*<br/>
+[in] *bActive*<br/>
+[in] *bDisabled*<br/>
+[in] *ptImage*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawcheckboxex"></a>  CMFCVisualManagerWindows::OnDrawCheckBoxEx
-
 
 ```
 virtual void OnDrawCheckBoxEx(
@@ -686,17 +668,16 @@ virtual void OnDrawCheckBoxEx(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rect*
-*nInformace*<br/>
-[in] [in] *bHighlighted*
-*bPressed*<br/>
-[in] [in] *bEnabled*
+[in] *primárního řadiče domény*<br/>
+[in] *rect*<br/>
+[in] *nInformace*<br/>
+[in] *bHighlighted*<br/>
+[in] *bPressed*<br/>
+[in] *bEnabled*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawcomboborder"></a>  CMFCVisualManagerWindows::OnDrawComboBorder
-
 
 ```
 virtual void OnDrawComboBorder(
@@ -710,17 +691,16 @@ virtual void OnDrawComboBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rect*
-*bDisabled*<br/>
-[in] [in] *bIsDropped*
-*bIsHighlighted*<br/>
-[in] [in] *pButton*
+[in] *primárního řadiče domény*<br/>
+[in] *rect*<br/>
+[in] *bDisabled*<br/>
+[in] *bIsDropped*<br/>
+[in] *bIsHighlighted*<br/>
+[in] *pButton*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawcombodropbutton"></a>  CMFCVisualManagerWindows::OnDrawComboDropButton
-
 
 ```
 virtual void OnDrawComboDropButton(
@@ -734,17 +714,16 @@ virtual void OnDrawComboDropButton(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rect*
-*bDisabled*<br/>
-[in] [in] *bIsDropped*
-*bIsHighlighted*<br/>
-[in] [in] *pButton*
+[in] *primárního řadiče domény*<br/>
+[in] *rect*<br/>
+[in] *bDisabled*<br/>
+[in] *bIsDropped*<br/>
+[in] *bIsHighlighted*<br/>
+[in] *pButton*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawcontrolborder"></a>  CMFCVisualManagerWindows::OnDrawControlBorder
-
 
 ```
 virtual void OnDrawControlBorder(CWnd* pWndCtrl);
@@ -752,12 +731,11 @@ virtual void OnDrawControlBorder(CWnd* pWndCtrl);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pWndCtrl*
+[in] *pWndCtrl*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondraweditborder"></a>  CMFCVisualManagerWindows::OnDrawEditBorder
-
 
 ```
 virtual void OnDrawEditBorder(
@@ -770,15 +748,15 @@ virtual void OnDrawEditBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rect*
-*bDisabled*<br/>
-[in] [in] *bIsHighlighted* [in] *pButton*
+[in] *primárního řadiče domény*<br/>
+[in] *rect*<br/>
+[in] *bDisabled*<br/>
+[in] *bIsHighlighted*<br/>
+[in] *pButton*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawexpandingbox"></a>  CMFCVisualManagerWindows::OnDrawExpandingBox
-
 
 ```
 virtual void OnDrawExpandingBox(
@@ -790,15 +768,14 @@ virtual void OnDrawExpandingBox(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rect*
-*bIsOpened*<br/>
-[in] [in] *colorBox*
+[in] *primárního řadiče domény*<br/>
+[in] *rect*<br/>
+[in] *bIsOpened*<br/>
+[in] *colorBox*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawfloatingtoolbarborder"></a>  CMFCVisualManagerWindows::OnDrawFloatingToolbarBorder
-
 
 ```
 virtual void OnDrawFloatingToolbarBorder(
@@ -810,15 +787,14 @@ virtual void OnDrawFloatingToolbarBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *pToolBar*
-*rectBorder*<br/>
-[in] [in] *rectBorderSize*
+[in] *primárního řadiče domény*<br/>
+[in] *pToolBar*<br/>
+[in] *rectBorder*<br/>
+[in] *rectBorderSize*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawheaderctrlborder"></a>  CMFCVisualManagerWindows::OnDrawHeaderCtrlBorder
-
 
 ```
 virtual void OnDrawHeaderCtrlBorder(
@@ -831,15 +807,15 @@ virtual void OnDrawHeaderCtrlBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*pCtrl*<br/>
-[in] [in] *primárního řadiče domény*
-*rect*<br/>
-[in] [in] *bIsPressed* [in] *bIsHighlighted*
+[in] *pCtrl*<br/>
+[in] *primárního řadiče domény*<br/>
+[in] *rect*<br/>
+[in] *bIsPressed*<br/>
+[in] *bIsHighlighted*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawheaderctrlsortarrow"></a>  CMFCVisualManagerWindows::OnDrawHeaderCtrlSortArrow
-
 
 ```
 virtual void OnDrawHeaderCtrlSortArrow(
@@ -851,15 +827,14 @@ virtual void OnDrawHeaderCtrlSortArrow(
 
 ### <a name="parameters"></a>Parametry
 
-*pCtrl*<br/>
-[in] [in] *primárního řadiče domény*
-*rect*<br/>
-[in] [in] *bIsUp*
+[in] *pCtrl*<br/>
+[in] *primárního řadiče domény*<br/>
+[in] *rect*<br/>
+[in] *bIsUp*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawmenuborder"></a>  CMFCVisualManagerWindows::OnDrawMenuBorder
-
 
 ```
 virtual void OnDrawMenuBorder(
@@ -870,13 +845,13 @@ virtual void OnDrawMenuBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *pMenu* [in] *rect*
+[in] *primárního řadiče domény*<br/>
+[in] *pMenu*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawmenusystembutton"></a>  CMFCVisualManagerWindows::OnDrawMenuSystemButton
-
 
 ```
 virtual void OnDrawMenuSystemButton(
@@ -889,15 +864,15 @@ virtual void OnDrawMenuSystemButton(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rect*
-*uiSystemCommand*<br/>
-[in] [in] *nStyle* [in] *bHighlight*
+[in] *primárního řadiče domény*<br/>
+[in] *rect*<br/>
+[in] *uiSystemCommand*<br/>
+[in] *nStyle*<br/>
+[in] *bHighlight*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawminiframeborder"></a>  CMFCVisualManagerWindows::OnDrawMiniFrameBorder
-
 
 ```
 virtual void OnDrawMiniFrameBorder(
@@ -909,15 +884,14 @@ virtual void OnDrawMiniFrameBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *pFrameWnd*
-*rectBorder*<br/>
-[in] [in] *rectBorderSize*
+[in] *primárního řadiče domény*<br/>
+[in] *pFrameWnd*<br/>
+[in] *rectBorder*<br/>
+[in] *rectBorderSize*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawoutlookpagebuttonborder"></a>  CMFCVisualManagerWindows::OnDrawOutlookPageButtonBorder
-
 
 ```
 virtual void OnDrawOutlookPageButtonBorder(
@@ -929,15 +903,14 @@ virtual void OnDrawOutlookPageButtonBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rectBtn*
-*bIsHighlighted*<br/>
-[in] [in] *bIsPressed*
+[in] *primárního řadiče domény*<br/>
+[in] *rectBtn*<br/>
+[in] *bIsHighlighted*<br/>
+[in] *bIsPressed*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawpaneborder"></a>  CMFCVisualManagerWindows::OnDrawPaneBorder
-
 
 ```
 virtual void OnDrawPaneBorder(
@@ -948,13 +921,13 @@ virtual void OnDrawPaneBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *pBar* [in] *rect*
+[in] *primárního řadiče domény*<br/>
+[in] *pBar*<br/>
+[in] *rect*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawpanecaption"></a>  CMFCVisualManagerWindows::OnDrawPaneCaption
-
 
 ```
 virtual COLORREF OnDrawPaneCaption(
@@ -967,17 +940,17 @@ virtual COLORREF OnDrawPaneCaption(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *pBar*
-*bActive*<br/>
-[in] [in] *rectCaption* [in] *rectButtons*
+[in] *primárního řadiče domény*<br/>
+[in] *pBar*<br/>
+[in] *bActive*<br/>
+[in] *rectCaption*<br/>
+[in] *rectButtons*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawpopupwindowbuttonborder"></a>  CMFCVisualManagerWindows::OnDrawPopupWindowButtonBorder
-
 
 ```
 virtual void OnDrawPopupWindowButtonBorder(
@@ -988,13 +961,13 @@ virtual void OnDrawPopupWindowButtonBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rectClient* [in] *pButton*
+[in] *primárního řadiče domény*<br/>
+[in] *rectClient*<br/>
+[in] *pButton*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawscrollbuttons"></a>  CMFCVisualManagerWindows::OnDrawScrollButtons
-
 
 ```
 virtual void OnDrawScrollButtons(
@@ -1007,15 +980,15 @@ virtual void OnDrawScrollButtons(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rect*
-*nBorderSize*<br/>
-[in] [in] *iImage* [in] *bHilited*
+[in] *primárního řadiče domény*<br/>
+[in] *rect*<br/>
+[in] *nBorderSize*<br/>
+[in] *iImage*<br/>
+[in] *bHilited*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawseparator"></a>  CMFCVisualManagerWindows::OnDrawSeparator
-
 
 ```
 virtual void OnDrawSeparator(
@@ -1027,15 +1000,14 @@ virtual void OnDrawSeparator(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *pBar*
-*rect*<br/>
-[in] [in] *bIsHoriz*
+[in] *primárního řadiče domény*<br/>
+[in] *pBar*<br/>
+[in] *rect*<br/>
+[in] *bIsHoriz*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawspinbuttons"></a>  CMFCVisualManagerWindows::OnDrawSpinButtons
-
 
 ```
 virtual void OnDrawSpinButtons(
@@ -1048,15 +1020,15 @@ virtual void OnDrawSpinButtons(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rectSpin*
-*nInformace*<br/>
-[in] [in] *bOrientation* [in] *pSpinCtrl*
+[in] *primárního řadiče domény*<br/>
+[in] *rectSpin*<br/>
+[in] *nInformace*<br/>
+[in] *bOrientation*<br/>
+[in] *pSpinCtrl*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawstatusbarpaneborder"></a>  CMFCVisualManagerWindows::OnDrawStatusBarPaneBorder
-
 
 ```
 virtual void OnDrawStatusBarPaneBorder(
@@ -1069,15 +1041,15 @@ virtual void OnDrawStatusBarPaneBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *pBar*
-*rectPane*<br/>
-[in] [in] *uiID* [in] *nStyle*
+[in] *primárního řadiče domény*<br/>
+[in] *pBar*<br/>
+[in] *rectPane*<br/>
+[in] *uiID*<br/>
+[in] *nStyle*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawstatusbarprogress"></a>  CMFCVisualManagerWindows::OnDrawStatusBarProgress
-
 
 ```
 virtual void OnDrawStatusBarProgress(
@@ -1094,19 +1066,19 @@ virtual void OnDrawStatusBarProgress(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *pStatusBar*
-*rectProgress*<br/>
-[in] [in] *nProgressTotal*
-*nProgressCurr*<br/>
-[in] [in] *clrBar*
-*clrProgressBarDest*<br/>
-[in] [in] *clrProgressText* [in] *bProgressText*
+[in] *primárního řadiče domény*<br/>
+[in] *pStatusBar*<br/>
+[in] *rectProgress*<br/>
+[in] *nProgressTotal*<br/>
+[in] *nProgressCurr*<br/>
+[in] *clrBar*<br/>
+[in] *clrProgressBarDest*<br/>
+[in] *clrProgressText*<br/>
+[in] *bProgressText*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawstatusbarsizebox"></a>  CMFCVisualManagerWindows::OnDrawStatusBarSizeBox
-
 
 ```
 virtual void OnDrawStatusBarSizeBox(
@@ -1117,13 +1089,13 @@ virtual void OnDrawStatusBarSizeBox(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *pStatBar* [in] *rectSizeBox*
+[in] *primárního řadiče domény*<br/>
+[in] *pStatBar*<br/>
+[in] *rectSizeBox*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawtab"></a>  CMFCVisualManagerWindows::OnDrawTab
-
 
 ```
 virtual void OnDrawTab(
@@ -1136,15 +1108,15 @@ virtual void OnDrawTab(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rectTab*
-*iTab*<br/>
-[in] [in] *bIsActive* [in] *pTabWnd*
+[in] *primárního řadiče domény*<br/>
+[in] *rectTab*<br/>
+[in] *iTab*<br/>
+[in] *bIsActive*<br/>
+[in] *pTabWnd*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawtabclosebutton"></a>  CMFCVisualManagerWindows::OnDrawTabCloseButton
-
 
 ```
 virtual void OnDrawTabCloseButton(
@@ -1158,17 +1130,16 @@ virtual void OnDrawTabCloseButton(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rect*
-*pTabWnd*<br/>
-[in] [in] *bIsHighlighted*
-*bIsPressed*<br/>
-[in] [in] *bIsDisabled*
+[in] *primárního řadiče domény*<br/>
+[in] *rect*<br/>
+[in] *pTabWnd*<br/>
+[in] *bIsHighlighted*<br/>
+[in] *bIsPressed*<br/>
+[in] *bIsDisabled*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawtabsbuttonborder"></a>  CMFCVisualManagerWindows::OnDrawTabsButtonBorder
-
 
 ```
 virtual void OnDrawTabsButtonBorder(
@@ -1181,15 +1152,15 @@ virtual void OnDrawTabsButtonBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rect*
-*pButton*<br/>
-[in] [in] *uiState* [in] *pWndTab*
+[in] *primárního řadiče domény*<br/>
+[in] *rect*<br/>
+[in] *pButton*<br/>
+[in] *uiState*<br/>
+[in] *pWndTab*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawtask"></a>  CMFCVisualManagerWindows::OnDrawTask
-
 
 ```
 virtual void OnDrawTask(
@@ -1202,15 +1173,15 @@ virtual void OnDrawTask(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *pTask*
-*pIcons*<br/>
-[in] [in] *bIsHighlighted* [in] *bIsSelected*
+[in] *primárního řadiče domény*<br/>
+[in] *pTask*<br/>
+[in] *pIcons*<br/>
+[in] *bIsHighlighted*<br/>
+[in] *bIsSelected*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawtasksgroupareaborder"></a>  CMFCVisualManagerWindows::OnDrawTasksGroupAreaBorder
-
 
 ```
 virtual void OnDrawTasksGroupAreaBorder(
@@ -1222,15 +1193,14 @@ virtual void OnDrawTasksGroupAreaBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rect*
-*bSpecial*<br/>
-[in] [in] *bNoTitle*
+[in] *primárního řadiče domény*<br/>
+[in] *rect*<br/>
+[in] *bSpecial*<br/>
+[in] *bNoTitle*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawtasksgroupcaption"></a>  CMFCVisualManagerWindows::OnDrawTasksGroupCaption
-
 
 ```
 virtual void OnDrawTasksGroupCaption(
@@ -1243,15 +1213,15 @@ virtual void OnDrawTasksGroupCaption(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *pGroup*
-*bIsHighlighted*<br/>
-[in] [in] *bIsSelected* [in] *bCanCollapse*
+[in] *primárního řadiče domény*<br/>
+[in] *pGroup*<br/>
+[in] *bIsHighlighted*<br/>
+[in] *bIsSelected*<br/>
+[in] *bCanCollapse*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ondrawtearoffcaption"></a>  CMFCVisualManagerWindows::OnDrawTearOffCaption
-
 
 ```
 virtual void OnDrawTearOffCaption(
@@ -1262,13 +1232,13 @@ virtual void OnDrawTearOffCaption(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rect* [in] *bIsActive*
+[in] *primárního řadiče domény*<br/>
+[in] *rect*<br/>
+[in] *bIsActive*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="onerasepopupwindowbutton"></a>  CMFCVisualManagerWindows::OnErasePopupWindowButton
-
 
 ```
 virtual void OnErasePopupWindowButton(
@@ -1279,13 +1249,13 @@ virtual void OnErasePopupWindowButton(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rectClient* [in] *pButton*
+[in] *primárního řadiče domény*<br/>
+[in] *rectClient*<br/>
+[in] *pButton*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="onerasetabsarea"></a>  CMFCVisualManagerWindows::OnEraseTabsArea
-
 
 ```
 virtual void OnEraseTabsArea(
@@ -1296,13 +1266,13 @@ virtual void OnEraseTabsArea(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rect* [in] *pTabWnd*
+[in] *primárního řadiče domény*<br/>
+[in] *rect*<br/>
+[in] *pTabWnd*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="onerasetabsbutton"></a>  CMFCVisualManagerWindows::OnEraseTabsButton
-
 
 ```
 virtual void OnEraseTabsButton(
@@ -1314,15 +1284,14 @@ virtual void OnEraseTabsButton(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rect*
-*pButton*<br/>
-[in] [in] *pWndTab*
+[in] *primárního řadiče domény*<br/>
+[in] *rect*<br/>
+[in] *pButton*<br/>
+[in] *pWndTab*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="onerasetabsframe"></a>  CMFCVisualManagerWindows::OnEraseTabsFrame
-
 
 ```
 virtual BOOL OnEraseTabsFrame(
@@ -1333,15 +1302,15 @@ virtual BOOL OnEraseTabsFrame(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rect* [in] *pTabWnd*
+[in] *primárního řadiče domény*<br/>
+[in] *rect*<br/>
+[in] *pTabWnd*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="onfillbarbackground"></a>  CMFCVisualManagerWindows::OnFillBarBackground
-
 
 ```
 virtual void OnFillBarBackground(
@@ -1354,15 +1323,15 @@ virtual void OnFillBarBackground(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *pBar*
-*rectClient*<br/>
-[in] [in] *rectClip* [in] *bNCArea*
+[in] *primárního řadiče domény*<br/>
+[in] *pBar*<br/>
+[in] *rectClient*<br/>
+[in] *rectClip*<br/>
+[in] *bNCArea*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="onfillbuttoninterior"></a>  CMFCVisualManagerWindows::OnFillButtonInterior
-
 
 ```
 virtual void OnFillButtonInterior(
@@ -1374,15 +1343,14 @@ virtual void OnFillButtonInterior(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *pButton*
-*rect*<br/>
-[in] [in] *stavu*
+[in] *primárního řadiče domény*<br/>
+[in] *pButton*<br/>
+[in] *rect*<br/>
+[in] *stavu*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="onfillcommandslistbackground"></a>  CMFCVisualManagerWindows::OnFillCommandsListBackground
-
 
 ```
 virtual COLORREF OnFillCommandsListBackground(
@@ -1393,15 +1361,15 @@ virtual COLORREF OnFillCommandsListBackground(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rect* [in] *bIsSelected*
+[in] *primárního řadiče domény*<br/>
+[in] *rect*<br/>
+[in] *bIsSelected*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="onfillminiframecaption"></a>  CMFCVisualManagerWindows::OnFillMiniFrameCaption
-
 
 ```
 virtual COLORREF OnFillMiniFrameCaption(
@@ -1413,17 +1381,16 @@ virtual COLORREF OnFillMiniFrameCaption(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rectCaption*
-*pFrameWnd*<br/>
-[in] [in] *bActive*
+[in] *primárního řadiče domény*<br/>
+[in] *rectCaption*<br/>
+[in] *pFrameWnd*<br/>
+[in] *bActive*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="onfilloutlookpagebutton"></a>  CMFCVisualManagerWindows::OnFillOutlookPageButton
-
 
 ```
 virtual void OnFillOutlookPageButton(
@@ -1436,15 +1403,15 @@ virtual void OnFillOutlookPageButton(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rect*
-*bIsHighlighted*<br/>
-[in] [in] *bIsPressed* [in] *clrText*
+[in] *primárního řadiče domény*<br/>
+[in] *rect*<br/>
+[in] *bIsHighlighted*<br/>
+[in] *bIsPressed*<br/>
+[in] *clrText*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="onfilltasksgroupinterior"></a>  CMFCVisualManagerWindows::OnFillTasksGroupInterior
-
 
 ```
 virtual void OnFillTasksGroupInterior(
@@ -1455,13 +1422,13 @@ virtual void OnFillTasksGroupInterior(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rect* [in] *bSpecial*
+[in] *primárního řadiče domény*<br/>
+[in] *rect*<br/>
+[in] *bSpecial*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="onfilltaskspanebackground"></a>  CMFCVisualManagerWindows::OnFillTasksPaneBackground
-
 
 ```
 virtual void OnFillTasksPaneBackground(
@@ -1471,13 +1438,12 @@ virtual void OnFillTasksPaneBackground(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rectWorkArea*
+[in] *primárního řadiče domény*<br/>
+[in] *rectWorkArea*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="onhighlightmenuitem"></a>  CMFCVisualManagerWindows::OnHighlightMenuItem
-
 
 ```
 virtual void OnHighlightMenuItem(
@@ -1489,15 +1455,14 @@ virtual void OnHighlightMenuItem(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *pButton*
-*rect*<br/>
-[in] [in] *clrText*
+[in] *primárního řadiče domény*<br/>
+[in] *pButton*<br/>
+[in] *rect*<br/>
+[in] *clrText*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="onhighlightrarelyusedmenuitems"></a>  CMFCVisualManagerWindows::OnHighlightRarelyUsedMenuItems
-
 
 ```
 virtual void OnHighlightRarelyUsedMenuItems(
@@ -1507,13 +1472,12 @@ virtual void OnHighlightRarelyUsedMenuItems(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
-[in] [in] *rectRarelyUsed*
+[in] *primárního řadiče domény*<br/>
+[in] *rectRarelyUsed*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="onupdatesystemcolors"></a>  CMFCVisualManagerWindows::OnUpdateSystemColors
-
 
 ```
 virtual void OnUpdateSystemColors();
@@ -1523,14 +1487,13 @@ virtual void OnUpdateSystemColors();
 
 ##  <a name="setofficestylemenus"></a>  CMFCVisualManagerWindows::SetOfficeStyleMenus
 
-
 ```
 void SetOfficeStyleMenus(BOOL bOn = TRUE);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *Šťastnou*
+[in] *Šťastnou*<br/>
 
 ### <a name="remarks"></a>Poznámky
 

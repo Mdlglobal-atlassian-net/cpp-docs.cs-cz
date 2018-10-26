@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acc8aeb54e98e531756d71d6be389dca8a494f4c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5ef89aec3a0eaf53c6c97b3480008b7e9fd586e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46091451"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054888"
 ---
 # <a name="event-handling-global-functions"></a>Globální funkce zpracování událostí
 
@@ -33,11 +33,11 @@ Tato funkce poskytuje obslužné rutiny události.
 
 |||
 |-|-|
-|[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|Počká na objekt, který má být signalizován, mezitím podle potřeby odbaví zprávy okna.|  
+|[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|Počká na objekt, který má být signalizován, mezitím podle potřeby odbaví zprávy okna.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlbase.h  
+**Záhlaví:** atlbase.h
 
 ##  <a name="atlwaitwithmessageloop"></a>  AtlWaitWithMessageLoop
 

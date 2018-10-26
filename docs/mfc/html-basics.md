@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b25f957615d738d0608f911736bb42f8e3731dd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dbe2c743f04e8fc8dc67947b9bd9d5560dd35182
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391616"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052691"
 ---
 # <a name="html-basics"></a>HTML – základy
 
@@ -47,9 +47,9 @@ Následující postup použijte k vytvoření jednoduché webové stránky znač
 
 1. Přepněte do prohlížeče a z **souboru** nabídce zvolte **otevřít**, nebo typ *file://C:/webpages/first.htm* textového pole URL v prohlížeči. Zobrazí se prázdná stránka s titulek okna "Hlavní značky HTML."
 
-     Všimněte si, že značky jsou párovány a jsou zahrnuty v lomených závorkách. Slovech se nerozlišují malá a velká písmena, ale malá a velká písmena se často používá značek zvýraznění.
+   Všimněte si, že značky jsou párovány a jsou zahrnuty v lomených závorkách. Slovech se nerozlišují malá a velká písmena, ale malá a velká písmena se často používá značek zvýraznění.
 
-     Značka \<HTML > spustí dokumentu a značky  \< /HTML > neukončí. Koncové značky (není vždy nutné) jsou stejné jako počáteční značku, ale mají lomítkem (/) před značku. Měla by existovat žádné mezery mezi ostré závorky (<) a spusťte vaši značku.
+   Značka \<HTML > spustí dokumentu a značky  \< /HTML > neukončí. Koncové značky (není vždy nutné) jsou stejné jako počáteční značku, ale mají lomítkem (/) před značku. Měla by existovat žádné mezery mezi ostré závorky (<) a spusťte vaši značku.
 
 1. Přepněte zpět do poznámkového bloku a po  \< /HEAD > řádek, zadejte:
 
@@ -64,9 +64,9 @@ Následující postup použijte k vytvoření jednoduché webové stránky znač
 
 1. Přepněte zpět do prohlížeče a aktualizujte stránku.
 
-     Slova se zobrazí v klientské oblasti okna prohlížeče. Všimněte si, že vaše zalomení řádku je ignorován. Pokud chcete mít konce řádku, je nutné zahrnout `<BR>` značky po první řádek.
+   Slova se zobrazí v klientské oblasti okna prohlížeče. Všimněte si, že vaše zalomení řádku je ignorován. Pokud chcete mít konce řádku, je nutné zahrnout `<BR>` značky po první řádek.
 
-     Pro všechny kroky, které řídí, vložit text kdekoli mezi \<text > a  \< /BODY > Chcete-li přidat do těla dokumentu.
+   Pro všechny kroky, které řídí, vložit text kdekoli mezi \<text > a  \< /BODY > Chcete-li přidat do těla dokumentu.
 
 9. Přidáte záhlaví:
 

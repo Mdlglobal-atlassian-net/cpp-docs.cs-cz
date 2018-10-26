@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8426a0113ca245f6c9390a5c95f350398938731
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e0b9a8e72cb3c1334484ed4a4e5c85c8b9a12347
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106230"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055135"
 ---
 # <a name="marshaling-global-functions"></a>Zařazení globálních funkcí
 
@@ -34,7 +34,7 @@ Tyto funkce poskytují podporu pro zařazování a převodem zařazování dat n
 |-|-|
 |[AtlFreeMarshalStream](#atlfreemarshalstream)|Uvolní zařazování dat a `IStream` ukazatele.|
 |[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Vytvoří nový objekt streamu a zařadí zadaný ukazatel rozhraní.|
-|[AtlUnmarshalPtr](#atlunmarshalptr)|Převede zařazovaná data streamu ukazatel rozhraní.|  
+|[AtlUnmarshalPtr](#atlunmarshalptr)|Převede zařazovaná data streamu ukazatel rozhraní.|
 
 ## <a name="requirements"></a>Požadavky:
 
@@ -42,7 +42,7 @@ Tyto funkce poskytují podporu pro zařazování a převodem zařazování dat n
 
 ##  <a name="atlfreemarshalstream"></a>  AtlFreeMarshalStream
 
-Uvolní zařazování dat ve streamu a následně uvolní ukazatel streamu.  
+Uvolní zařazování dat ve streamu a následně uvolní ukazatel streamu.
 
 ```
 HRESULT AtlFreeMarshalStream(IStream* pStream);

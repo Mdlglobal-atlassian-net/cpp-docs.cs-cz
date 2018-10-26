@@ -23,72 +23,72 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b06d6c730562203cdef1191a9d73012c3b19c2c8
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 727d50025ce7fc4808444ac7ad73d828c6f0c545
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083959"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053510"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl – třída
 
-Poskytuje implementaci [IDBCreateCommand](/previous-versions/windows/desktop/ms711625) rozhraní.  
-  
+Poskytuje implementaci [IDBCreateCommand](/previous-versions/windows/desktop/ms711625) rozhraní.
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-template <class T, class CommandClass >  
-class ATL_NO_VTABLE IDBCreateCommandImpl   
-   : public IDBCreateCommand  
-```  
-  
-### <a name="parameters"></a>Parametry  
+template <class T, class CommandClass >
+class ATL_NO_VTABLE IDBCreateCommandImpl
+   : public IDBCreateCommand
+```
+
+### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Relace objekt odvozený od `IDBCreateCommandImpl`.  
-  
+Relace objekt odvozený od `IDBCreateCommandImpl`.
+
 *CommandClass*<br/>
-Vaší třídy příkazu.  
+Vaší třídy příkazu.
 
-## <a name="requirements"></a>Požadavky  
+## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atldb.h  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="interface-methods"></a>Metody rozhraní  
-  
-|||  
-|-|-|  
-|[CreateCommand](#createcommand)|Vytvoří nový příkaz.|  
-  
-## <a name="remarks"></a>Poznámky  
+**Záhlaví:** atldb.h
 
-Volitelné rozhraní objektu relace získat nový příkaz.  
+## <a name="members"></a>Členové
+
+### <a name="interface-methods"></a>Metody rozhraní
+
+|||
+|-|-|
+|[CreateCommand](#createcommand)|Vytvoří nový příkaz.|
+
+## <a name="remarks"></a>Poznámky
+
+Volitelné rozhraní objektu relace získat nový příkaz.
 
 ## <a name="createcommand"></a> IDBCreateCommandImpl::CreateCommand
 
-Vytvoří nový příkaz a vrátí požadované rozhraní.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,   
-   REFIID riid,   
-   IUnknown ** ppvCommand);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+Vytvoří nový příkaz a vrátí požadované rozhraní.
 
-Zobrazit [IDBCreateCommand::CreateCommand](/previous-versions/windows/desktop/ms709772) v *referenční informace pro OLE DB programátory*.  
-  
-Některé parametry odpovídají *OLE DB referenční informace pro programátory* parametry jiné názvy, které jsou popsány v `IDBCreateCommand::CreateCommand`:  
-  
-|Parametry šablony technologie OLE DB|*OLE DB referenční informace pro programátory* parametry|  
-|--------------------------------|------------------------------------------------|  
-|*ppvCommand*|*ppCommand*|  
-  
-## <a name="see-also"></a>Viz také  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+STDMETHOD(CreateCommand)(IUnknown * pUnkOuter, 
+   REFIID riid, 
+   IUnknown ** ppvCommand);
+```
+
+#### <a name="parameters"></a>Parametry
+
+Zobrazit [IDBCreateCommand::CreateCommand](/previous-versions/windows/desktop/ms709772) v *referenční informace pro OLE DB programátory*.
+
+Některé parametry odpovídají *OLE DB referenční informace pro programátory* parametry jiné názvy, které jsou popsány v `IDBCreateCommand::CreateCommand`:
+
+|Parametry šablony technologie OLE DB|*OLE DB referenční informace pro programátory* parametry|
+|--------------------------------|------------------------------------------------|
+|*ppvCommand*|*ppCommand*|
+
+## <a name="see-also"></a>Viz také
 
 [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

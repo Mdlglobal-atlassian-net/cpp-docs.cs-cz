@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8d3db1d8c19b68adb8cec53984e0dfe5a189651
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7ff5c3f28a47eb4e1810f046a242f6170c537bf2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389862"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054928"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>Použití běžných ovládacích prvků v dialogovém okně
 
@@ -42,7 +42,7 @@ Běžné ovládací prvky Windows lze použít v [dialogových oknech](../mfc/di
 
 1. V [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) pro vlastní třídy dialogového okna, nastavte počáteční podmínky pro běžný ovládací prvek. Členské funkce pomocí členské proměnné, vytvořené v předchozím kroku, použijte k nastavení výchozí hodnoty a další nastavení. Následující popisy ovládacích prvků pro podrobnosti naleznete na nastavení.
 
-     Můžete také použít [výměna dat dialogových oken](../mfc/dialog-data-exchange-and-validation.md) (DDX) k inicializaci ovládacích prvků v dialogovém okně.
+   Můžete také použít [výměna dat dialogových oken](../mfc/dialog-data-exchange-and-validation.md) (DDX) k inicializaci ovládacích prvků v dialogovém okně.
 
 1. V obslužné rutiny pro ovládací prvky v dialogovém okně manipulovat s prvkem pomocí členské proměnné. Najdete v následujících popisech ovládací prvky pro podrobnosti pro metody.
 
