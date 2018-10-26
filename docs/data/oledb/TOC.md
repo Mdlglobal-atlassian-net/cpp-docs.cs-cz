@@ -66,7 +66,7 @@
 ###### [Načtení řetězců do zprostředkovatele OLE DB](reading-strings-into-the-ole-db-provider.md)
 ###### [Ukládání řetězců ve zprostředkovateli OLE DB](storing-strings-in-the-ole-db-provider.md)
 ##### [Rozšíření jednoduchého zprostředkovatele pouze pro čtení](enhancing-the-simple-read-only-provider.md)
-###### [Úprava dědičnosti třídy RMyProviderRowset](modifying-the-inheritance-of-rmyproviderrowset.md)
+###### [Úprava dědičnosti třídy RCustomRowset](modifying-the-inheritance-of-rmyproviderrowset.md)
 ###### [Dynamické určování sloupců vrácených příjemci](dynamically-determining-columns-returned-to-the-consumer.md)
 ##### [Testování zprostředkovatele pouze pro čtení](testing-the-read-only-provider.md)
 #### [Vytvoření aktualizovatelného zprostředkovatele](creating-an-updatable-provider.md)
