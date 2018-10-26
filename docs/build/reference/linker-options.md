@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5a091a4301a107fb820f63c357c4e7f43c35948
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ca1bae4e2ca45424fd7f9cff48d8ece1039d73f6
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721289"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136169"
 ---
 # <a name="linker-options"></a>Možnosti linkeru
 
@@ -60,7 +60,7 @@ Můžete použít [komentář](../../preprocessor/comment-c-cpp.md) – Direktiv
 |[/ CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md)|Nastavuje typ bitové kopie modulu CLR (IJW, čistě nebo Bezpeční).|
 |[/ CLRSUPPORTLASTERROR](../../build/reference/clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)|Zachová poslední chybový kód funkcí, které jsou volány prostřednictvím mechanismu P/Invoke.|
 |[/ CLRTHREADATTRIBUTE](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md)|Určuje atribut dělení na vlákna má použít pro vstupní bod programu CLR.|
-|[/ CLRUNMANAGEDCODECHECK](../../build/reference/clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute.md)|Určuje, zda linker použije atribut SuppressUnmanagedCodeSecurity linkerem generovaných zástupné procedury PInvoke, která volá ze spravovaného kódu do nativních knihoven DLL.|
+|[/ CLRUNMANAGEDCODECHECK](../../build/reference/clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute.md)|Určuje, zda linker použije atribut SuppressUnmanagedCodeSecurity linkerem generovaných zástupné procedury PInvoke, která volá ze spravovaného kódu do nativních knihoven DLL.|
 |[/ DEBUG](../../build/reference/debug-generate-debug-info.md)|Vytvoří ladicí informace.|
 |[/ DEBUGTYPE](../../build/reference/debugtype-debug-info-options.md)|Určuje, jaká data mají být zahrnuty informace o ladění.|
 |[/ DEF](../../build/reference/def-specify-module-definition-file.md)|Předá linkeru soubor definice modulu (.def).|

@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4e5e30b533837eabb71ca8f27a646794d9a654c
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: f005beb9bc71724c289322822a3bae4c03f19d48
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50082993"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136247"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s novou 2003 – 2015
 
@@ -2100,7 +2100,7 @@ Rozbíjející změny v této verzi má kompilátor.
 - `/CLRIMAGETYPE` (Zadání typu Image modulu CLR) – možnost linkeru se přidala.
 - `/CLRSUPPORTLASTERROR` Byla přidána možnost linkeru (zachování kódu poslední chyby pro volání PInvoke).
 - `/CLRTHREADATTRIBUTE` Byla přidána možnost linkeru (nastavení atributu modulu CLR vlákno).
-- `/CLRUNMANAGEDCODECHECK` (Přidání atributu SupressUnmanagedCodeSecurityAttribute) – možnost linkeru se přidala.
+- `/CLRUNMANAGEDCODECHECK` (Přidat atribut SuppressUnmanagedCodeSecurityAttribute) – možnost linkeru se přidala.
 - `/ERRORREPORT` Byla přidána možnost linkeru (sestava interními chybami Linkeru).
 - `/EXETYPE` Odebrali jsme – možnost linkeru. Propojovací program již podporuje vytváření Windows 95 a Windows 98 ovladače zařízení. Pomocí příslušné DDK můžete vytvořit tyto ovladače zařízení. Klíčové slovo EXETYPE už není platný pro soubory definice modulu.
 - `/FUNCTIONPADMIN` (Vytvoření Image vyměnitelné za provozu) se přidal – možnost linkeru.

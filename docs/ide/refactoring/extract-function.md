@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ca75ca3b69fb175bea160d7f2a35d36416ea2f5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e032c2f1579294431b01d5a7695bf2c8a35aa421
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441366"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136117"
 ---
 # <a name="extract-function"></a>Extrahovat funkci
 **Co:** umožňuje zapnout fragment kódu do samostatné funkce.
@@ -41,7 +41,7 @@ ms.locfileid: "46441366"
 
 1. V **extrahovat funkci/metodu (experimentální)** zadejte nový název funkce, vyberte, kde chcete kód umístit a klikněte na tlačítko **OK** tlačítko.
 
-   ![Extrahovat funkci – funkce](images/extractfunction_dialog.png)
+   ![Extrahovat funkci dialogového okna](images/extractfunction_dialog.png)
 
 1. Vytvoří se nová funkce tam, kde jste zadali, prototypu funkce v odpovídající soubor záhlaví a původního kódu se změní, aby volání této funkce.
 

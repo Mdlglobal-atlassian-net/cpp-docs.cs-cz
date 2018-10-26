@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c639ddbe3d2e5b8a9c4f402df56215ca7efd1e1a
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 99fdb8f9c08845c5f440fc4ae1f100f8afd832e2
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50070436"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136156"
 ---
 # <a name="ide-and-compiler-tools-for-visual-c-development"></a>Integrované vývojové prostředí a kompilačních nástrojů pro vývoj v jazyce Visual C++
 
@@ -51,7 +51,7 @@ Správy zdrojového kódu umožňuje práci mezi více vývojářů, izolaci pro
 
 ![Team Explorer](media/vs2017-team-explorer.png "Team Exploreru sady Visual Studio 2017")
 
-Další informace o Git integrace s úložišti v Azure najdete v tématu [sdílení kódu pomocí sady Visual Studio 2017 a Azure úložišť Git](/azure/devops/repos/git/share-your-code-in-git-vs-2017). Informace o Git integraci s Githubem, najdete v tématu [rozšíření GitHub pro Visual Studio](https://visualstudio.github.com/).
+Další informace o Git integrace s úložišti v Azure najdete v tématu [sdílení kódu pomocí sady Visual Studio 2017 a Azure úložišť Git](/azure/devops/repos/git/share-your-code-in-git-vs-2017). Informace o Git integraci s Githubem, naleznete v tématu [rozšíření GitHub pro Visual Studio](https://visualstudio.github.com/).
 
 ## <a name="create-user-interfaces-with-designers"></a>Vytvoření uživatelského rozhraní pomocí návrháře
 

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66d57ea870d6d1332b8d14f0dc7376961c40d829
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: cd85aa6ce1cfee3416d04291d484a7bad6359ea4
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50065704"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136182"
 ---
 # <a name="porting-guide-spy"></a>Průvodce přenosem: Spy++
 
@@ -45,7 +45,7 @@ Při vytváření nově převedeného projektu, jedním z prvních věcí, kter�
 
 Byl jeden ze souborů, které se nenašel v nástroji Spy ++ verstamp.h. Ze vyhledávání na Internetu můžeme určit, pochází ze sady SDK rozhraní DAO, technologie zastaralá data. Chtěli jsme se zjistit, jaké symboly byly použity z tohoto souboru záhlaví, zda tento soubor byl opravdu potřebujete, nebo pokud tyto symboly nebyly definovány jinde, takže můžeme zakomentované deklaraci záhlaví souboru a znovu zkompilovat. Ukazuje je jen jeden symbol, který je potřeba, VER_FILEFLAGSMASK.
 
-```
+```Output
 1>C:\Program Files (x86)\Windows Kits\8.1\Include\shared\common.ver(212): error RC2104: undefined keyword or key name: VER_FILEFLAGSMASK
 ```
 
@@ -73,7 +73,7 @@ Další chyba udává, že verze WINVER již není podporována v knihovně MFC.
 C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h(40): fatal error C1189: #error:  MFC does not support WINVER less than 0x0501.  Please change the definition of WINVER in your project properties or precompiled header.
 ```
 
-Windows XP je již nejsou podporovány společností Microsoft, takže i v případě, že její nastavení jako cíle může v sadě Visual Studio 2015, by měl být překážkou podporu pro ně ve svých aplikacích a podporu uživatelé přijmout nové verze Windows.
+Windows XP je již nejsou podporovány společností Microsoft, takže i v případě, že její nastavení jako cíle může v sadě Visual Studio, by měl být překážkou podporu pro ně ve svých aplikacích a podporu uživatelé přijmout nové verze Windows.
 
 Chyba zbavit, definujte WINVER aktualizací **vlastnosti projektu** nastavení na nejnižší verze Windows aktuálně chcete cílit. Najít tabulku s hodnotami pro různé verze Windows [tady](/windows/desktop/WinProg/using-the-windows-headers).
 
@@ -95,7 +95,7 @@ Příkaz WINVER nastavíme na Windows 7. Je snazší přečíst kód později po
 
 Tyto změny projektu SpyHk (DLL) sestavení, ale způsobí chybu linkeru.
 
-```
+```Output
 LINK : warning LNK4216: Exported entry point _DLLEntryPoint@12
 ```
 
@@ -120,7 +120,9 @@ Zadaný projekt s mnoha chyby kompilace, které jsou postupně vyloučení, nen�
 
 Další chyba je běžné u starého kódu C++, který používá iostreams.
 
-mstream.h(40): závažná chyba C1083: nejde otevřít vložený soubor: 'iostream.h': žádný odpovídající soubor nebo adresář
+```Output
+mstream.h(40): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory
+```
 
 Tento problém je, že původní knihovny iostreams byl odebrán a nahrazen. Máme nahraďte staré iostreams novější standardy.
 
@@ -195,7 +197,7 @@ MOUT << _T(" chUser:'") << chUser
 << _T("' (") << (INT)(UCHAR)chUser << _T(')');
 ```
 
-Makro MOUT přeloží na \*g_pmout, což je objekt typu `mstream`. `mstream` Třída odvozena ze třídy řetězec standardního výstupu `std::basic_ostream<TCHAR>.` ale s _T kolem řetězcový literál, který jsme do v rámci přípravy pro převod do kódu Unicode, rozlišení přetížení pro **operátor <<** nezdaří a zobrazí se následující chybová zpráva:
+Makro MOUT přeloží na `*g_pmout` což je objekt typu `mstream`. `mstream` Třída odvozena ze třídy řetězec standardního výstupu `std::basic_ostream<TCHAR>`. Nicméně s \_T kolem řetězcový literál, který máme v rámci přípravy pro převod do kódu Unicode, rozlišení přetížení pro **operátor <<** nezdaří a zobrazí se následující chybová zpráva:
 
 ```Output
 1>winmsgs.cpp(4612): error C2666: 'mstream::operator <<': 2 overloads have similar conversions
@@ -266,7 +268,7 @@ Tento typ převodu byla povolena v rámci starší, méně striktní kompilátor
 
 Máme k dispozici také mnoho chyb vypadat asi takto:
 
-```
+```Output
 error C2440: 'static_cast': cannot convert from 'UINT (__thiscall CHotLinkCtrl::* )(CPoint)' to 'LRESULT (__thiscall CWnd::* )(CPoint)'
 ```
 
@@ -526,7 +528,7 @@ msvcrtd.lib;msvcirtd.lib;kernel32.lib;user32.lib;gdi32.lib;advapi32.lib;Debug\Sp
 
 Teď nám skutečně aktualizujte starý kód vícebajtové znakové sady (MBCS) do kódování Unicode. Protože jde o aplikaci Windows, úzce vázané na desktopové platformy Windows, jsme se port na Unicode UTF-16, který používá Windows. Při psaní kódu napříč platformami nebo přenesení aplikací Windows pro jiné platformy, můžete chtít zvážit přenos na UTF-8, který je běžně používaný v jiných operačních systémech.
 
-Portování do Unicode UTF-16, jsme musíte rozhodnout, zda stále chceme možnost kompilace do znakové sady MBCS, nebo ne.  Pokud chcete mít možnost pro podporu znakové sady MBCS, bychom měli použít makra TCHAR jako typ znaku, který se přeloží na buď **char** nebo **wchar_t**, v závislosti na tom, zda je definován _MBCS nebo _UNICODE během kompilace. Přepnutí do Tchar – a TCHAR verzích různá rozhraní API namísto **wchar_t** a jeho přidružené rozhraní API znamená, že můžete vrátit na verzi znakové sady MBCS kódu jednoduše tak, že definice makra _MBCS místo _UNICODE. Kromě TCHAR existuje širokou škálu TCHAR verze jako je často používaný – definice TypeDef, makra a funkce. Například LPCTSTR místo LPCSTR a tak dále. V dialogovém okně Vlastnosti projektu v části **vlastnosti konfigurace**v **Obecné** oddíl, změna **znaková sada** vlastnost z **pomocí znakové sady MBCS Znaková sada** k **použít znakovou sadu Unicode**. Toto nastavení má vliv, které – makro je předdefinovaná během kompilace. Je UNICODE makra a makra _UNICODE. Vlastnost projektu ovlivňuje konzistentně. Záhlaví Windows používat kódování UNICODE, kde _UNICODE použít záhlaví Visual C++, jako je například knihovny MFC, ale v případě, že je definován, druhá je vždy definována.
+Portování do Unicode UTF-16, jsme musíte rozhodnout, zda stále chceme možnost kompilace do znakové sady MBCS, nebo ne.  Pokud chcete mít možnost pro podporu znakové sady MBCS, bychom měli použít makra TCHAR jako typ znaku, který se přeloží na buď **char** nebo **wchar_t**, v závislosti na tom, zda \_znakové sady MBCS nebo \_UNICODE je definovalo během kompilace. Přepnutí do Tchar – a TCHAR verzích různá rozhraní API namísto **wchar_t** a jeho přidružené rozhraní API znamená, že můžete vrátit na verzi znakové sady MBCS kódu jednoduše tak, že definujete \_maker MBCS místo \_ KÓDOVÁNÍ UNICODE. Kromě TCHAR existuje širokou škálu TCHAR verze jako je často používaný – definice TypeDef, makra a funkce. Například LPCTSTR místo LPCSTR a tak dále. V dialogovém okně Vlastnosti projektu v části **vlastnosti konfigurace**v **Obecné** oddíl, změna **znaková sada** vlastnost z **pomocí znakové sady MBCS Znaková sada** k **použít znakovou sadu Unicode**. Toto nastavení má vliv, které – makro je předdefinovaná během kompilace. Je makru kódování UNICODE a \_– makro kódování UNICODE. Vlastnost projektu ovlivňuje konzistentně. Záhlaví Windows používat kódování UNICODE, kde použít záhlaví Visual C++, jako je například knihovny MFC \_kódování UNICODE, ale pokud je definován, druhá je vždy definováno.
 
 Vhodná [průvodce](https://msdn.microsoft.com/library/cc194801.aspx) pomocí TCHAR existuje pro přenos ze znakové sady MBCS do kódu Unicode UTF-16. Můžeme vybrat tuto trasu. Nejprve Změníme **znaková sada** vlastnost **pomocí Unicode znaková sada** a sestavte projekt znovu.
 
@@ -544,13 +546,13 @@ Tady je příklad kódu, který vytvoří toto:
 wsprintf(szTmp, "%d.%2.2d.%4.4d", rmj, rmm, rup);
 ```
 
-Máme _T kolem řetězec literálu odebrat chyby.
+Abychom přidali \_T kolem řetězcový literál odebrat chyby.
 
 ```cpp
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
 ```
 
-_T – makro má vliv na provádění řetězec literálu kompilovat jako **char** řetězec nebo **wchar_t** řetězec, v závislosti na nastavení znakové sady MBCS a UNICODE. Chcete-li nahradit všechny řetězce _T v sadě Visual Studio, nejprve otevřete **rychlého nahrazení** (klávesnice: **Ctrl**+**F**) pole nebo **nahrazování v souborech**  (Klávesnice: **Ctrl**+**Shift**+**H**), klikněte na tlačítko **použijte regulární Výrazy** zaškrtávací políčko. Zadejte `((\".*?\")|('.+?'))` jako hledaný text a `_T($1)` jako náhradní text. Pokud už máte _T – makro kolem některé řetězce, tento postup přidá ho znovu a setkat i případy, kdy nechcete _T, jako je například při použití `#include`, takže je vhodné použít **nahradit další** spíše než  **Nahradit vše**.
+\_– Makro T má vliv na provádění řetězec literálu kompilovat jako **char** řetězec nebo **wchar_t** řetězec, v závislosti na nastavení znakové sady MBCS a UNICODE. Chcete-li nahradit všechny řetězce s \_T v sadě Visual Studio, otevřete nejprve **rychlého nahrazení** (klávesnice: **Ctrl**+**F**) pole nebo  **Nahrazování v souborech** (klávesnice: **Ctrl**+**Shift**+**H**), klikněte na tlačítko **použití Regulární výrazy** zaškrtávací políčko. Zadejte `((\".*?\")|('.+?'))` jako hledaný text a `_T($1)` jako náhradní text. Pokud už máte \_T – makro kolem některé řetězce, tento postup bude znovu přidat, a setkat i případy, kdy nechcete \_T, jako je například při použití `#include`, takže je vhodné použít **nahradit další**spíše než **Nahradit vše**.
 
 Tato funkce [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa), je ve skutečnosti definovány v záhlaví Windows a v dokumentaci pro doporučí, že se nepoužívají, z důvodu přetečení vyrovnávací paměti je to možné. Není uvedena velikost pro `szTmp` vyrovnávací paměti, takže neexistuje žádný způsob, jak funkce, zkontrolujte, že vyrovnávací paměti může obsahovat všechna data, která má být zapsán do něj. Viz následující část o převodu na zabezpečení CRT, ve kterém jsme podobnými problémy opravit. Jsme skončila jeho nahrazením [_stprintf_s –](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).
 
@@ -578,7 +580,7 @@ Podobně změnili jsme LPSTR (dlouhým ukazatelem na řetězec) a LPCSTR (dlouh�
 
 V některých případech jsme museli nahradit typ má být použit na verzi, která řeší správně (WNDCLASS místo WNDCLASSA příkladu).
 
-V řadě případů jsme museli používat obecná verzi (makro) rozhraní Win32 API, jako je `GetClassName` (místo `GetClassNameA`). V příkazu switch obslužné rutiny zpráv, některé zprávy jsou specifické pro znakovou sadu MBCS a Unicode, v těchto případech, abychom museli kód explicitně volat verzi znakové sady MBCS, změnit, protože jsme obecně pojmenované funkce se nahradí **A** a **W** specifické funkce a přidá makro pro obecný název, který se překládá na správný **A** nebo **W** název založený na tom, jestli je definována kódování UNICODE.  V mnoha části kódu, když jsme přešli k definování _UNICODE, W verze je teď zvolené i v případě **A** verze není co chtěli.
+V řadě případů jsme museli používat obecná verzi (makro) rozhraní Win32 API, jako je `GetClassName` (místo `GetClassNameA`). V příkazu switch obslužné rutiny zpráv, některé zprávy jsou specifické pro znakovou sadu MBCS a Unicode, v těchto případech, abychom museli kód explicitně volat verzi znakové sady MBCS, změnit, protože jsme obecně pojmenované funkce se nahradí **A** a **W** specifické funkce a přidá makro pro obecný název, který se překládá na správný **A** nebo **W** název založený na tom, jestli je definována kódování UNICODE.  V mnoha části kódu, když jsme přešli k definování \_kódování UNICODE, W verze je teď zvolené i v případě **A** verze není co chtěli.
 
 Nejsou k dispozici na několika místech, kde musel být přijata zvláštní akce. Jakékoli použití `WideCharToMultiByte` nebo `MultiByteToWideChar` může vyžadovat podívat podrobněji. Tady je jeden příklad kde `WideCharToMultiByte` se používal.
 

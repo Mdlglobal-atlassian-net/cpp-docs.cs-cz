@@ -197,7 +197,7 @@
 ### [/CLRIMAGETYPE (zadání typu image modulu CLR)](clrimagetype-specify-type-of-clr-image.md)
 ### [/CLRSUPPORTLASTERROR (zachování kódu poslední chyby pro volání PInvoke)](clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)
 ### [/CLRTHREADATTRIBUTE (nastavení atributu vlákna modulu CLR)](clrthreadattribute-set-clr-thread-attribute.md)
-### [/CLRUNMANAGEDCODECHECK (odebrání atributu SuppressUnmanagedCodeSecurityAttribute)](clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute.md)
+### [/CLRUNMANAGEDCODECHECK (odebrání atributu SuppressUnmanagedCodeSecurityAttribute)](clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute.md)
 ### [/DEBUG (generování informací o ladění)](debug-generate-debug-info.md)
 ### [/DEBUGTYPE (možnosti informací o ladění)](debugtype-debug-info-options.md)
 ### [/DEF (zadání souboru definice modulu)](def-specify-module-definition-file.md)

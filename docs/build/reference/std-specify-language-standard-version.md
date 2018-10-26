@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80c501c74d0e36d7a1c564e107101782468708c3
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 32bbcd47c4ce22882941b6fa9c02373bab32eeb1
+ms.sourcegitcommit: 938d118d02543c822a5f58c84d6119d23339e43c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709068"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50135991"
 ---
 # <a name="std-specify-language-standard-version"></a>/ STD (určení standardní jazykové verze)
 
@@ -31,7 +31,7 @@ Povolit podporovány funkcí jazyka C++ z určenou verzi standard jazyka C++.
 
 ## <a name="remarks"></a>Poznámky
 
-**/Std** je možnost je k dispozici v sadě Visual Studio 2017 nebo novější. Používá se k řízení programovací jazyk standardní funkce povolené během kompilace kódu specifické pro verzi ISO C++. Tato možnost umožňuje zakázat podporu pro některé nové funkce jazyka a knihovny, které mohou přestat fungovat existující kód, který odpovídá konkrétní verzi jazyka standard. Ve výchozím nastavení **/std: c ++ 14** není zadána, která zakáže jazyka a funkce standardní knihovny, které jsou součástí standardní novější verze jazyka C++. Použití **/std: c ++ 17** povolení C ++ 17 specifické pro standardní funkce a chování. Chcete-li explicitně povolit nejnovější podporované kompilátor a standardní knihovna funkcí, použijte **/std: c ++ nejnovější**.
+**/Std** možnost je k dispozici v sadě Visual Studio 2017 a novější. Používá se k řízení programovací jazyk standardní funkce povolené během kompilace kódu specifické pro verzi ISO C++. Tato možnost umožňuje zakázat podporu pro některé nové funkce jazyka a knihovny, které mohou přestat fungovat existující kód, který odpovídá konkrétní verzi jazyka standard. Ve výchozím nastavení **/std: c ++ 14** není zadána, která zakáže jazyka a funkce standardní knihovny, které jsou součástí standardní novější verze jazyka C++. Použití **/std: c ++ 17** povolení C ++ 17 specifické pro standardní funkce a chování. Chcete-li explicitně povolit nejnovější podporované kompilátor a standardní knihovna funkcí, použijte **/std: c ++ nejnovější**.
 
 Výchozí hodnota **/std: c ++ 14** možnost povolí sadu funkcí C ++ 14 implementované kompilátorem jazyka Visual C++. Tato možnost zakáže kompilátoru a standardní knihovny podpora pro funkce, které se mění nebo nové v novějších verzích jazyka standard, s výjimkou některé funkce C ++ 17 již implementováno v předchozích verzích kompilátoru jazyka Visual C++. Aby se zabránilo zásadní změny pro uživatele, kteří už udělali závislosti na funkcích, které jsou k dispozici od verze Visual Studio 2015 Update 2, tyto funkce zůstat zapnuté, kdy **/std: c ++ 14** je zadána možnost:
 
