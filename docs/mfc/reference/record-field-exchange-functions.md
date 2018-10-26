@@ -55,12 +55,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430d9d297161a05f9158893454f00be2afbe7a47
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8fba2e8d949745f694973f2d7b29c5244ab30db4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408567"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058905"
 ---
 # <a name="record-field-exchange-functions"></a>Funkce výměny polí v záznamu
 
@@ -440,7 +440,6 @@ Zobrazit [RFX_Text](#rfx_text).
 
 **Záhlaví:** afxdb.h
 
-
 ## <a name="rfx_text"></a>  RFX_Text –
 
 Přenosy `CString` data mezi pole datové členy `CRecordset` objektu a sloupců záznamu ve zdroji dat rozhraní ODBC zadejte SQL_LONGVARCHAR, SQL_CHAR, SQL_VARCHAR, SQL_DECIMAL nebo SQL_NUMERIC.
@@ -506,7 +505,6 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxdb.h
-
 
 ## <a name="rfx_binary_bulk"></a>  Rfx_binary_bulk –
 
@@ -873,7 +871,6 @@ Zobrazit [rfx_text_bulk –](#rfx_text_bulk).
 
 **Záhlaví:** afxdb.h
 
-
 ## <a name="rfx_text_bulk"></a>  Rfx_text_bulk –
 
 Přenese více řádků znaková data ze sloupce ze zdroje dat rozhraní ODBC pro odpovídající pole v `CRecordset`-odvozenému objektu.
@@ -986,7 +983,6 @@ Zobrazit [dfx_text –](#dfx_text).
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxdao.h
-
 
 ## <a name="dfx_bool"></a>  Dfx_bool –
 
@@ -1249,7 +1245,6 @@ Zobrazit [dfx_text –](#dfx_text).
 
 **Záhlaví:** afxdao.h
 
-
 ## <a name="dfx_longbinary"></a>  Dfx_longbinary –
 
 **Důležité** se doporučuje použít [dfx_binary –](#dfx_binary) místo této funkce.
@@ -1342,7 +1337,6 @@ Zobrazit [dfx_text –](#dfx_text).
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxdao.h
-
 
 ## <a name="dfx_single"></a>  Dfx_single –
 

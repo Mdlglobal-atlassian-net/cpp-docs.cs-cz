@@ -249,704 +249,704 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 320f81bf0502d892cbd56b4320a82a1e11cc745a
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: cc3eb0ab487d90271ec28af225faff2211f17595
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083608"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060595"
 ---
 # <a name="crowset-class"></a>CRowset – třída
 
-Zapouzdřuje objektu sady řádků OLE DB a několika související rozhraní a poskytuje metody zpracování pro datové sady řádků.  
-  
+Zapouzdřuje objektu sady řádků OLE DB a několika související rozhraní a poskytuje metody zpracování pro datové sady řádků.
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-template <class TAccessor = CAccessorBase>  
-class CRowset  
-```  
-  
-### <a name="parameters"></a>Parametry  
+template <class TAccessor = CAccessorBase>
+class CRowset
+```
+
+### <a name="parameters"></a>Parametry
 
 *TAccessor*<br/>
-Třídu přistupujícího objektu. Výchozí hodnota je `CAccessorBase`.  
-  
-## <a name="requirements"></a>Požadavky  
+Třídu přistupujícího objektu. Výchozí hodnota je `CAccessorBase`.
 
-**Záhlaví:** také atldbcli.h  
+## <a name="requirements"></a>Požadavky
 
-## <a name="members"></a>Členové  
-  
-### <a name="methods"></a>Metody  
-  
-|||  
-|-|-|  
-|[Addrefrows –](#addrefrows)|Zvýší počet odkazů spojené s aktuálním řádku.|  
-|[Zavřít](#close)|Uvolní řádků a aktuální `IRowset` rozhraní.|  
-|[Compare](#compare)|Porovná dvě záložky pomocí [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539).|  
-|[CRowset –](#crowset)|Vytvoří novou `CRowset` objektu a přidruží ji k (volitelně) `IRowset` rozhraní zadanou jako parametr.|  
-|[Delete](#delete)|Odstraní řádky z řádků pomocí [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)).|  
-|[FindNextRow](#findnextrow)|Vyhledá další odpovídající řádek po zadanou záložkou.|  
-|[Getapproximateposition –](#getapproximateposition)|Vrátí přibližné pozici řádku odpovídající záložku.|  
-|[GetData](#getdata)|Načte data z dané sadě řádků kopii řádku.|  
-|[GetDataHere](#getdatahere)|Načte data ze zadané vyrovnávací paměti.|  
-|[GetOriginalData](#getoriginaldata)|Načte data naposledy načtených z nebo přeneseno do zdroje dat, ignoruje se čekající změny.|  
-|[GetRowStatus –](#getrowstatus)|Vrátí stav všech řádků.|  
-|[Vložit](#insert)|Vytvoří a vloží nový řádek pomocí [IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921).|  
-|[Issamerow –](#issamerow)|Porovná zadaný řádek s aktuálním řádkem.|  
-|[MoveFirst](#movefirst)|Přemístí další načtení umístění na počáteční pozici.|  
-|[MoveLast](#movelast)|Přejde na poslední záznam.|  
-|[Metoda MoveNext](#movenext)|Načte data z dalšího řádku sekvenční nebo určený počet pozic za další řádek.|  
-|[MovePrev](#moveprev)|Přesune na předchozí záznam.|  
-|[MoveToBookmark](#movetobookmark)|Načte řádek označený záložkou nebo řádek na zadaný posun z tuto záložku.|  
-|[Movetoratio –](#movetoratio)|Načte řádky začínající od desetinné pozice v dané sadě řádků.|  
-|[Releaserows –](#releaserows)|Volání [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) uvolnit popisovač aktuálního řádku.|  
-|[SetData](#setdata)|Nastaví hodnoty dat v řádku použití jednoho nebo více sloupců [IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232).|  
-|[Vrácení zpět](#undo)|Vrátí zpět všechny změny provedené od posledního načtení řádek nebo [aktualizace](../../data/oledb/crowset-update.md).|  
-|[Aktualizace](#update)|Odesílá všechny neuložené změny provedené od posledního načtení nebo aktualizace na aktuálním řádku.|  
-|[UpdateAll](#updateall)|Odesílá všechny neuložené změny provedené od posledního načtení nebo aktualizace pro všechny řádky.|  
-  
-## <a name="remarks"></a>Poznámky  
+**Záhlaví:** také atldbcli.h
 
-Sady řádků v OLE DB, je objekt, jehož prostřednictvím programu nastaví a načítá data.  
-  
-Tato třída není určena k vytvoření instance, ale spíše předán jako parametr šablony `CTable` nebo `CCommand` (`CRowset` je výchozí nastavení).  
+## <a name="members"></a>Členové
+
+### <a name="methods"></a>Metody
+
+|||
+|-|-|
+|[Addrefrows –](#addrefrows)|Zvýší počet odkazů spojené s aktuálním řádku.|
+|[Zavřít](#close)|Uvolní řádků a aktuální `IRowset` rozhraní.|
+|[Compare](#compare)|Porovná dvě záložky pomocí [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539).|
+|[CRowset –](#crowset)|Vytvoří novou `CRowset` objektu a přidruží ji k (volitelně) `IRowset` rozhraní zadanou jako parametr.|
+|[Delete](#delete)|Odstraní řádky z řádků pomocí [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)).|
+|[FindNextRow](#findnextrow)|Vyhledá další odpovídající řádek po zadanou záložkou.|
+|[Getapproximateposition –](#getapproximateposition)|Vrátí přibližné pozici řádku odpovídající záložku.|
+|[GetData](#getdata)|Načte data z dané sadě řádků kopii řádku.|
+|[GetDataHere](#getdatahere)|Načte data ze zadané vyrovnávací paměti.|
+|[GetOriginalData](#getoriginaldata)|Načte data naposledy načtených z nebo přeneseno do zdroje dat, ignoruje se čekající změny.|
+|[GetRowStatus –](#getrowstatus)|Vrátí stav všech řádků.|
+|[Vložit](#insert)|Vytvoří a vloží nový řádek pomocí [IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921).|
+|[Issamerow –](#issamerow)|Porovná zadaný řádek s aktuálním řádkem.|
+|[MoveFirst](#movefirst)|Přemístí další načtení umístění na počáteční pozici.|
+|[MoveLast](#movelast)|Přejde na poslední záznam.|
+|[Metoda MoveNext](#movenext)|Načte data z dalšího řádku sekvenční nebo určený počet pozic za další řádek.|
+|[MovePrev](#moveprev)|Přesune na předchozí záznam.|
+|[MoveToBookmark](#movetobookmark)|Načte řádek označený záložkou nebo řádek na zadaný posun z tuto záložku.|
+|[Movetoratio –](#movetoratio)|Načte řádky začínající od desetinné pozice v dané sadě řádků.|
+|[Releaserows –](#releaserows)|Volání [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) uvolnit popisovač aktuálního řádku.|
+|[SetData](#setdata)|Nastaví hodnoty dat v řádku použití jednoho nebo více sloupců [IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232).|
+|[Vrácení zpět](#undo)|Vrátí zpět všechny změny provedené od posledního načtení řádek nebo [aktualizace](../../data/oledb/crowset-update.md).|
+|[Aktualizace](#update)|Odesílá všechny neuložené změny provedené od posledního načtení nebo aktualizace na aktuálním řádku.|
+|[UpdateAll](#updateall)|Odesílá všechny neuložené změny provedené od posledního načtení nebo aktualizace pro všechny řádky.|
+
+## <a name="remarks"></a>Poznámky
+
+Sady řádků v OLE DB, je objekt, jehož prostřednictvím programu nastaví a načítá data.
+
+Tato třída není určena k vytvoření instance, ale spíše předán jako parametr šablony `CTable` nebo `CCommand` (`CRowset` je výchozí nastavení).
 
 ## <a name="addrefrows"></a> CRowset::AddRefRows
 
-Volání [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) přírůstku (jeden) počet odkazů spojené s aktuálním popisovač řádku.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Volání [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) přírůstku (jeden) počet odkazů spojené s aktuálním popisovač řádku.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT AddRefRows() throw();  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
+HRESULT AddRefRows() throw();
+```
 
-Standardní HRESULT.  
-  
-### <a name="remarks"></a>Poznámky  
+### <a name="return-value"></a>Návratová hodnota
 
-Tato metoda zvýší počet odkazů pro popisovač aktuálního řádku. Volání [releaserows –](../../data/oledb/crowset-releaserows.md) se sníží počet. Řádky vrácené přesunutí metody mají referenční počet jeden.  
+Standardní HRESULT.
+
+### <a name="remarks"></a>Poznámky
+
+Tato metoda zvýší počet odkazů pro popisovač aktuálního řádku. Volání [releaserows –](../../data/oledb/crowset-releaserows.md) se sníží počet. Řádky vrácené přesunutí metody mají referenční počet jeden.
 
 ## <a name="close"></a> CRowset::Close
 
-Uvolní řádků a aktuální [IRowset](/previous-versions/windows/desktop/ms720986) rozhraní.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-void Close() throw();  
-```  
-  
-### <a name="remarks"></a>Poznámky  
+Uvolní řádků a aktuální [IRowset](/previous-versions/windows/desktop/ms720986) rozhraní.
 
-Tato metoda uvolní všechny řádky aktuálně v dané sadě řádků.  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+void Close() throw();
+```
+
+### <a name="remarks"></a>Poznámky
+
+Tato metoda uvolní všechny řádky aktuálně v dané sadě řádků.
 
 ## <a name="compare"></a> CRowset::Compare
 
-Porovná dvě záložky pomocí [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539).  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Porovná dvě záložky pomocí [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539).
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT Compare(const CBookmarkBase& bookmark1,   
-   const CBookmarkBase& bookmark2,   
-   DBCOMPARE* pComparison) const throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT Compare(const CBookmarkBase& bookmark1, 
+   const CBookmarkBase& bookmark2, 
+   DBCOMPARE* pComparison) const throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *Bookmark1*<br/>
-[in] Prvním záložek k porovnání.  
-  
+[in] Prvním záložek k porovnání.
+
 *Bookmark2*<br/>
-[in] Druhý záložku k porovnání.  
-  
+[in] Druhý záložku k porovnání.
+
 *pComparison*<br/>
-[out] Ukazatel na výsledek porovnání.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+[out] Ukazatel na výsledek porovnání.
 
-Standardní HRESULT.  
-  
-### <a name="remarks"></a>Poznámky  
+### <a name="return-value"></a>Návratová hodnota
 
-Tato metoda vyžaduje, volitelné rozhraní `IRowsetLocate`, která nemusí být podporován na všichni poskytovatelé; Pokud se v případě, vrátí metoda E_NOINTERFACE. Musíte taky nastavit `DBPROP_IRowsetLocate` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků.  
-  
-Informace o používání záložek v příjemci najdete v tématu [pomocí záložky](../../data/oledb/using-bookmarks.md).  
+Standardní HRESULT.
+
+### <a name="remarks"></a>Poznámky
+
+Tato metoda vyžaduje, volitelné rozhraní `IRowsetLocate`, která nemusí být podporován na všichni poskytovatelé; Pokud se v případě, vrátí metoda E_NOINTERFACE. Musíte taky nastavit `DBPROP_IRowsetLocate` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků.
+
+Informace o používání záložek v příjemci najdete v tématu [pomocí záložky](../../data/oledb/using-bookmarks.md).
 
 ## <a name="crowset"></a> CRowset::CRowset
 
-Vytvoří novou `CRowset` objektu a přidruží ji k (volitelně) [IRowset](/previous-versions/windows/desktop/ms720986) rozhraní zadanou jako parametr.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-CRowset();   
+Vytvoří novou `CRowset` objektu a přidruží ji k (volitelně) [IRowset](/previous-versions/windows/desktop/ms720986) rozhraní zadanou jako parametr.
 
-CRowset(IRowset* pRowset);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+CRowset(); 
+
+CRowset(IRowset* pRowset);
+```
+
+#### <a name="parameters"></a>Parametry
 
 *pRowset*<br/>
-[in] Ukazatel `IRowset` rozhraní má být přidružena k této třídy.  
+[in] Ukazatel `IRowset` rozhraní má být přidružena k této třídy.
 
 ## <a name="delete"></a> CRowset::Delete
 
-Volání [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)) odstranit aktuální řádek ze sady řádků.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-HRESULT Delete() const throw();  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
+Volání [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)) odstranit aktuální řádek ze sady řádků.
 
-Standardní HRESULT.  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+HRESULT Delete() const throw();
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Standardní HRESULT.
 
 ## <a name="findnextrow"></a> CRowset::FindNextRow
 
-Vyhledá další odpovídající řádek po zadanou záložkou.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Vyhledá další odpovídající řádek po zadanou záložkou.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT FindNextRow(DBCOMPAREOP op,   
-   BYTE* pData,   
-   DBTYPE wType,   
-   DBLENGTH nLength,   
-   BYTE bPrecision,   
-   BYTE bScale,   
-   BOOL bSkipCurrent = TRUE,   
-   CBookmarkBase* pBookmark = NULL) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT FindNextRow(DBCOMPAREOP op, 
+   BYTE* pData, 
+   DBTYPE wType, 
+   DBLENGTH nLength, 
+   BYTE bPrecision, 
+   BYTE bScale, 
+   BOOL bSkipCurrent = TRUE, 
+   CBookmarkBase* pBookmark = NULL) throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *OP*<br/>
-[in] Operace pro použití v porovnávání hodnot řádků. Hodnoty, najdete v části [IRowsetFind::FindNextRow](/previous-versions/windows/desktop/ms723091).  
-  
+[in] Operace pro použití v porovnávání hodnot řádků. Hodnoty, najdete v části [IRowsetFind::FindNextRow](/previous-versions/windows/desktop/ms723091).
+
 *pData*<br/>
-[in] Ukazatel na hodnotu, která si měly odpovídat.  
-  
+[in] Ukazatel na hodnotu, která si měly odpovídat.
+
 *wType*<br/>
-[in] Určuje datový typ z část hodnoty vyrovnávací paměti. Informace o typ ukazatele, naleznete v tématu [datové typy](/previous-versions/windows/desktop/ms723969) v *OLE DB referenční informace pro programátory* v sadě Windows SDK.  
-  
+[in] Určuje datový typ z část hodnoty vyrovnávací paměti. Informace o typ ukazatele, naleznete v tématu [datové typy](/previous-versions/windows/desktop/ms723969) v *OLE DB referenční informace pro programátory* v sadě Windows SDK.
+
 *nLength*<br/>
-[in] Délka v bajtech, datové struktury příjemce přidělené pro hodnotu data. Podrobnosti najdete v tématu Popis `cbMaxLen` v [DBBINDING struktury](/previous-versions/windows/desktop/ms716845) v *OLE DB referenční informace pro programátory.*  
-  
+[in] Délka v bajtech, datové struktury příjemce přidělené pro hodnotu data. Podrobnosti najdete v tématu Popis `cbMaxLen` v [DBBINDING struktury](/previous-versions/windows/desktop/ms716845) v *OLE DB referenční informace pro programátory.*
+
 *bPrecision*<br/>
-[in] Při získávání dat maximální přesnost. Používá pouze tehdy, pokud *wType* je DBTYPE_NUMERIC. Další informace najdete v tématu [převody zahrnující DBTYPE_NUMERIC nebo DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714) v *OLE DB referenční informace pro programátory*.  
-  
+[in] Při získávání dat maximální přesnost. Používá pouze tehdy, pokud *wType* je DBTYPE_NUMERIC. Další informace najdete v tématu [převody zahrnující DBTYPE_NUMERIC nebo DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714) v *OLE DB referenční informace pro programátory*.
+
 *bScale*<br/>
-[in] Při získávání dat stupnice. Používá pouze tehdy, pokud *wType* DBTYPE_NUMERIC nebo DBTYPE_DECIMAL. Další informace najdete v tématu [převody zahrnující DBTYPE_NUMERIC nebo DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714) v *OLE DB referenční informace pro programátory*.  
-  
+[in] Při získávání dat stupnice. Používá pouze tehdy, pokud *wType* DBTYPE_NUMERIC nebo DBTYPE_DECIMAL. Další informace najdete v tématu [převody zahrnující DBTYPE_NUMERIC nebo DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714) v *OLE DB referenční informace pro programátory*.
+
 *bSkipCurrent*<br/>
-[in] Počet řádků ze záložky, ve kterém se má spustit vyhledávání.  
-  
+[in] Počet řádků ze záložky, ve kterém se má spustit vyhledávání.
+
 *pBookmark*<br/>
-[in] Záložka pro umístění, ve kterém se má spustit vyhledávání.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+[in] Záložka pro umístění, ve kterém se má spustit vyhledávání.
 
-Standardní HRESULT.  
-  
-### <a name="remarks"></a>Poznámky  
+### <a name="return-value"></a>Návratová hodnota
 
-Tato metoda vyžaduje, volitelné rozhraní `IRowsetFind`, která nemusí být podporován na všichni poskytovatelé; Pokud se v případě, vrátí metoda E_NOINTERFACE. Musíte taky nastavit `DBPROP_IRowsetFind` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků.  
-  
-Informace o používání záložek v příjemci najdete v tématu [pomocí záložky](../../data/oledb/using-bookmarks.md).  
+Standardní HRESULT.
+
+### <a name="remarks"></a>Poznámky
+
+Tato metoda vyžaduje, volitelné rozhraní `IRowsetFind`, která nemusí být podporován na všichni poskytovatelé; Pokud se v případě, vrátí metoda E_NOINTERFACE. Musíte taky nastavit `DBPROP_IRowsetFind` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků.
+
+Informace o používání záložek v příjemci najdete v tématu [pomocí záložky](../../data/oledb/using-bookmarks.md).
 
 ## <a name="getapproximateposition"></a> CRowset::GetApproximatePosition
 
-Vrátí přibližné pozici řádku odpovídající záložku.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Vrátí přibližné pozici řádku odpovídající záložku.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark,   
-   DBCOUNTITEM* pPosition,   
-   DBCOUNTITEM* pcRows) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark, 
+   DBCOUNTITEM* pPosition, 
+   DBCOUNTITEM* pcRows) throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *pBookmark*<br/>
-[in] Ukazatel na záložku, která určuje řádek, jehož pozice se má nacházet. Pokud počet řádků je vyžadována pouze s hodnotou NULL.  
-  
+[in] Ukazatel na záložku, která určuje řádek, jehož pozice se má nacházet. Pokud počet řádků je vyžadována pouze s hodnotou NULL.
+
 *pPosition*<br/>
-[out] Ukazatel do umístění, kde `GetApproximatePosition` vrátí pozici řádku. Hodnota NULL, pokud pozice není potřeba.  
-  
+[out] Ukazatel do umístění, kde `GetApproximatePosition` vrátí pozici řádku. Hodnota NULL, pokud pozice není potřeba.
+
 *pcRows*<br/>
-[out] Ukazatel do umístění, kde `GetApproximatePosition` vrátí celkový počet řádků. Hodnota NULL, pokud počet řádků se nevyžaduje.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+[out] Ukazatel do umístění, kde `GetApproximatePosition` vrátí celkový počet řádků. Hodnota NULL, pokud počet řádků se nevyžaduje.
 
-Standardní HRESULT.  
-  
-### <a name="remarks"></a>Poznámky  
+### <a name="return-value"></a>Návratová hodnota
 
-Tato metoda vyžaduje, volitelné rozhraní `IRowsetScroll`, která nemusí být podporován na všichni poskytovatelé; Pokud se v případě, vrátí metoda E_NOINTERFACE. Musíte taky nastavit `DBPROP_IRowsetScroll` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků.  
-  
-Informace o používání záložek v příjemci najdete v tématu [pomocí záložky](../../data/oledb/using-bookmarks.md).  
+Standardní HRESULT.
+
+### <a name="remarks"></a>Poznámky
+
+Tato metoda vyžaduje, volitelné rozhraní `IRowsetScroll`, která nemusí být podporován na všichni poskytovatelé; Pokud se v případě, vrátí metoda E_NOINTERFACE. Musíte taky nastavit `DBPROP_IRowsetScroll` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků.
+
+Informace o používání záložek v příjemci najdete v tématu [pomocí záložky](../../data/oledb/using-bookmarks.md).
 
 ## <a name="getdata"></a> CRowset::GetData
 
-Načte data z dané sadě řádků kopii řádku.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-HRESULT GetData() throw();   
+Načte data z dané sadě řádků kopii řádku.
 
-HRESULT GetData(int nAccessor) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+HRESULT GetData() throw(); 
+
+HRESULT GetData(int nAccessor) throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *nAccessor*<br/>
-[in] Číslo indexu (nula posun) přistupujícího objektu pro přístup k data.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+[in] Číslo indexu (nula posun) přistupujícího objektu pro přístup k data.
 
-Standardní HRESULT.  
-  
-### <a name="remarks"></a>Poznámky  
+### <a name="return-value"></a>Návratová hodnota
 
-Pokud zadáte přistupující objekt, který není objekt automaticky přistupující objekt v [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md), pomocí této metody můžete explicitně získat data předáním číslo přistupujícího objektu.  
+Standardní HRESULT.
+
+### <a name="remarks"></a>Poznámky
+
+Pokud zadáte přistupující objekt, který není objekt automaticky přistupující objekt v [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md), pomocí této metody můžete explicitně získat data předáním číslo přistupujícího objektu.
 
 ## <a name="getdatahere"></a> CRowset::GetDataHere
 
-Načte data z aktuální řádek a umístí jej do zadané vyrovnávací paměti.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Načte data z aktuální řádek a umístí jej do zadané vyrovnávací paměti.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT GetDataHere(int nAccessor,   
-   void* pBuffer) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT GetDataHere(int nAccessor, 
+   void* pBuffer) throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *nAccessor*<br/>
-[in] Indexové číslo přístupový objekt pro účely přístupu k datům.  
-  
-*pBuffer*<br/>
-[out] Vyrovnávací paměť do kterého chcete uložit data pro aktuální záznam.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+[in] Indexové číslo přístupový objekt pro účely přístupu k datům.
 
-Standardní HRESULT.  
-  
-### <a name="remarks"></a>Poznámky  
+*pBuffer*<br/>
+[out] Vyrovnávací paměť do kterého chcete uložit data pro aktuální záznam.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Standardní HRESULT.
+
+### <a name="remarks"></a>Poznámky
 
 Příklad toho, jak tuto funkci použít, najdete v článku [MultiRead ukázka](../../visual-cpp-samples.md).
 
 ## <a name="getoriginaldata"></a> CRowset::GetOriginalData
 
-Volání `IRowsetUpdate::GetOriginalData` k načtení dat naposledy načtených z nebo přeneseno do zdroje dat.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Volání `IRowsetUpdate::GetOriginalData` k načtení dat naposledy načtených z nebo přeneseno do zdroje dat.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT GetOriginalData() throw();  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
+HRESULT GetOriginalData() throw();
+```
 
-Standardní HRESULT.  
-  
-### <a name="remarks"></a>Poznámky  
+### <a name="return-value"></a>Návratová hodnota
 
-Tato metoda načítá data z načteno jako poslední nebo přeneseno do zdroje dat; Tato možnost nenačte hodnoty na základě čekajících změn.  
-  
-Tato metoda vyžaduje, volitelné rozhraní `IRowsetUpdate`, která nemusí být podporován na všichni poskytovatelé; Pokud se v případě, vrátí metoda E_NOINTERFACE. Musíte taky nastavit `DBPROP_IRowsetUpdate` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků. 
+Standardní HRESULT.
+
+### <a name="remarks"></a>Poznámky
+
+Tato metoda načítá data z načteno jako poslední nebo přeneseno do zdroje dat; Tato možnost nenačte hodnoty na základě čekajících změn.
+
+Tato metoda vyžaduje, volitelné rozhraní `IRowsetUpdate`, která nemusí být podporován na všichni poskytovatelé; Pokud se v případě, vrátí metoda E_NOINTERFACE. Musíte taky nastavit `DBPROP_IRowsetUpdate` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků.
 
 ## <a name="getrowstatus"></a> CRowset::GetRowStatus
 
-Vrátí stav všech řádků.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Vrátí stav všech řádků.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT GetRowStatus(DBPENDINGSTATUS* pStatus) const throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT GetRowStatus(DBPENDINGSTATUS* pStatus) const throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *pStatus*<br/>
-[out] Ukazatel na umístění kde `GetRowStatus` vrátí hodnotu stavu. Zobrazit DBPENDINGSTATUS v odkazu na programátora OLE DB.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+[out] Ukazatel na umístění kde `GetRowStatus` vrátí hodnotu stavu. Zobrazit DBPENDINGSTATUS v odkazu na programátora OLE DB.
 
-Standardní HRESULT.  
-  
-### <a name="remarks"></a>Poznámky  
+### <a name="return-value"></a>Návratová hodnota
 
-Tato metoda vyžaduje, volitelné rozhraní `IRowsetUpdate`, která nemusí být podporován na všichni poskytovatelé; Pokud se v případě, vrátí metoda E_NOINTERFACE. Musíte taky nastavit `DBPROP_IRowsetUpdate` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků.   
+Standardní HRESULT.
+
+### <a name="remarks"></a>Poznámky
+
+Tato metoda vyžaduje, volitelné rozhraní `IRowsetUpdate`, která nemusí být podporován na všichni poskytovatelé; Pokud se v případě, vrátí metoda E_NOINTERFACE. Musíte taky nastavit `DBPROP_IRowsetUpdate` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků.
 
 ## <a name="insert"></a> CRowset::Insert
 
-Vytvoří a inicializuje nový řádek pomocí dat z přistupujícího objektu.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Vytvoří a inicializuje nový řádek pomocí dat z přistupujícího objektu.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT Insert(int nAccessor = 0,   
-   bool bGetHRow = false) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT Insert(int nAccessor = 0, 
+   bool bGetHRow = false) throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *nAccessor*<br/>
-[in] Počet přistupující objekt používaná pro vkládání dat  
-  
+[in] Počet přistupující objekt používaná pro vkládání dat
+
 *bGetHRow*<br/>
-[in] Označuje, zda je načíst popisovač vloženého řádku.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+[in] Označuje, zda je načíst popisovač vloženého řádku.
 
-Standardní HRESULT.  
-  
-### <a name="remarks"></a>Poznámky  
+### <a name="return-value"></a>Návratová hodnota
 
-Tato metoda vyžaduje, volitelné rozhraní `IRowsetChange`, která nemusí být podporován na všichni poskytovatelé; Pokud se v případě, vrátí metoda E_NOINTERFACE. Musíte taky nastavit `DBPROP_IRowsetChange` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků.  
-  
-Vložit může selhat, pokud jeden nebo více sloupců se nedá zapisovat. Upravte mapu kurzor to chcete opravit.  
-  
-### <a name="example"></a>Příklad  
+Standardní HRESULT.
 
-Následující příklad ukazuje, jak přístup ke zdroji dat prostřednictvím sady řádků a vložte řetězec pomocí tabulky v této sadě řádků.  
-  
-Nejprve vytvořte třídu tabulku vložíte-li objekt knihovny ATL do projektu. Například, klikněte pravým tlačítkem na projekt v podokně pracovní prostor a vyberte **nový objekt knihovny ATL**. Z **přístup k datům** vyberte **příjemce**. Vytvořte objekt příjemce typu **tabulky**. (Výběr **tabulky** vytvoří sadu řádků přímo z tabulky; výběr **příkaz** vytvoří pomocí příkazu SQL sady řádků.) Vyberte zdroj dat, zadáte tabulku, pomocí kterého je možné přistupovat k danému zdroji dat. Při volání objektu příjemce **CCustomerTable**, pak byste implementovali vložení kódu následujícím způsobem:  
-  
-[!code-cpp[NVC_OLEDB_Consumer#10](../../data/oledb/codesnippet/cpp/crowset-insert_1.cpp)]  
+### <a name="remarks"></a>Poznámky
+
+Tato metoda vyžaduje, volitelné rozhraní `IRowsetChange`, která nemusí být podporován na všichni poskytovatelé; Pokud se v případě, vrátí metoda E_NOINTERFACE. Musíte taky nastavit `DBPROP_IRowsetChange` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků.
+
+Vložit může selhat, pokud jeden nebo více sloupců se nedá zapisovat. Upravte mapu kurzor to chcete opravit.
+
+### <a name="example"></a>Příklad
+
+Následující příklad ukazuje, jak přístup ke zdroji dat prostřednictvím sady řádků a vložte řetězec pomocí tabulky v této sadě řádků.
+
+Nejprve vytvořte třídu tabulku vložíte-li objekt knihovny ATL do projektu. Například, klikněte pravým tlačítkem na projekt v podokně pracovní prostor a vyberte **nový objekt knihovny ATL**. Z **přístup k datům** vyberte **příjemce**. Vytvořte objekt příjemce typu **tabulky**. (Výběr **tabulky** vytvoří sadu řádků přímo z tabulky; výběr **příkaz** vytvoří pomocí příkazu SQL sady řádků.) Vyberte zdroj dat, zadáte tabulku, pomocí kterého je možné přistupovat k danému zdroji dat. Při volání objektu příjemce **CCustomerTable**, pak byste implementovali vložení kódu následujícím způsobem:
+
+[!code-cpp[NVC_OLEDB_Consumer#10](../../data/oledb/codesnippet/cpp/crowset-insert_1.cpp)]
 
 ## <a name="issamerow"></a> CRowset::IsSameRow
 
-Porovná zadaný řádek s aktuálním řádkem.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Porovná zadaný řádek s aktuálním řádkem.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT IsSameRow(HROW hRow) const throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT IsSameRow(HROW hRow) const throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *hRow*<br/>
-[in] Popisovač na řádek, který má být porovnán s aktuální řádek.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+[in] Popisovač na řádek, který má být porovnán s aktuální řádek.
 
-Standardní HRESULT. S_OK označuje, že řádky jsou stejné. Další hodnoty, najdete v části [IRowsetIndentity::IsSameRow](/previous-versions/windows/desktop/ms719629) v *OLE DB referenční informace pro programátory* v sadě Windows SDK.  
+### <a name="return-value"></a>Návratová hodnota
+
+Standardní HRESULT. S_OK označuje, že řádky jsou stejné. Další hodnoty, najdete v části [IRowsetIndentity::IsSameRow](/previous-versions/windows/desktop/ms719629) v *OLE DB referenční informace pro programátory* v sadě Windows SDK.
 
 ## <a name="movefirst"></a> CRowset::MoveFirst
 
-Přesune kurzor počáteční pozice a načte počáteční řádek.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Přesune kurzor počáteční pozice a načte počáteční řádek.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT MoveFirst() throw();  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
+HRESULT MoveFirst() throw();
+```
 
-Standardní HRESULT.  
-  
-### <a name="remarks"></a>Poznámky  
+### <a name="return-value"></a>Návratová hodnota
 
-Volání [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877) můžete přemístit další načtení umístění na počáteční pozici (umístění, která se další načítání umístění při vytváření v sadě řádků) a načte počáteční řádek.  
+Standardní HRESULT.
+
+### <a name="remarks"></a>Poznámky
+
+Volání [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877) můžete přemístit další načtení umístění na počáteční pozici (umístění, která se další načítání umístění při vytváření v sadě řádků) a načte počáteční řádek.
 
 ## <a name="movelast"></a> CRowset::MoveLast
 
-Přesune kurzor na poslední řádek.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Přesune kurzor na poslední řádek.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT MoveLast() throw();  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
+HRESULT MoveLast() throw();
+```
 
-Standardní HRESULT.  
-  
-### <a name="remarks"></a>Poznámky  
+### <a name="return-value"></a>Návratová hodnota
 
-Volání [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877) můžete přemístit další načtení umístění na poslední pozici a načte poslední řádek.  
-  
-Tato metoda vyžaduje, že jste nastavili `DBPROP_CANSCROLLBACKWARDS` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků. (Pro lepší výkon, může být také nastavena `DBPROP_QUICKRESTART` k VARIANT_TRUE.)  
+Standardní HRESULT.
+
+### <a name="remarks"></a>Poznámky
+
+Volání [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877) můžete přemístit další načtení umístění na poslední pozici a načte poslední řádek.
+
+Tato metoda vyžaduje, že jste nastavili `DBPROP_CANSCROLLBACKWARDS` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků. (Pro lepší výkon, může být také nastavena `DBPROP_QUICKRESTART` k VARIANT_TRUE.)
 
 ## <a name="movenext"></a> CRowset::MoveNext
 
-Přesune kurzor na další záznam.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Přesune kurzor na další záznam.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
 HRESULT MoveNext() throw();
 
-HRESULT MoveNext(LONG lSkip,   
-   bool bForward= true) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT MoveNext(LONG lSkip, 
+   bool bForward= true) throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *lSkip*<br/>
-[in] Počet řádků, které mají přeskočit načítáním.  
-  
+[in] Počet řádků, které mají přeskočit načítáním.
+
 *bForward*<br/>
-[in] Předejte **true** Přesun na další záznam, **false** pro přechod dozadu.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+[in] Předejte **true** Přesun na další záznam, **false** pro přechod dozadu.
 
-Standardní HRESULT. Když se dosáhne konce řádků, vrátí DB_S_ENDOFROWSET.  
-  
-### <a name="remarks"></a>Poznámky  
+### <a name="return-value"></a>Návratová hodnota
 
-Načte další sekvenční řádek z `CRowset` objekt pamatovat předchozí pozici. Volitelně můžete také přeskočit *lSkip* řádků nebo přesunutí zpětně.  
-  
-Tato metoda vyžaduje, nastavte následující vlastnosti před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků:  
-  
-- `DBPROP_CANSCROLLBACKWARDS` Pokud musí být VARIANT_TRUE *lSkip* < 0  
-  
-- `DBPROP_CANFETCHBACKWARDS` Pokud musí být VARIANT_TRUE *bForward* = false  
-  
-V opačném případě (Pokud *lSkip* > = 0 a *bForward* = true), není potřeba nastavovat žádné další vlastnosti.  
+Standardní HRESULT. Když se dosáhne konce řádků, vrátí DB_S_ENDOFROWSET.
+
+### <a name="remarks"></a>Poznámky
+
+Načte další sekvenční řádek z `CRowset` objekt pamatovat předchozí pozici. Volitelně můžete také přeskočit *lSkip* řádků nebo přesunutí zpětně.
+
+Tato metoda vyžaduje, nastavte následující vlastnosti před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků:
+
+- `DBPROP_CANSCROLLBACKWARDS` Pokud musí být VARIANT_TRUE *lSkip* < 0
+
+- `DBPROP_CANFETCHBACKWARDS` Pokud musí být VARIANT_TRUE *bForward* = false
+
+V opačném případě (Pokud *lSkip* > = 0 a *bForward* = true), není potřeba nastavovat žádné další vlastnosti.
 
 ## <a name="moveprev"></a> CRowset::MovePrev
 
-Přesune kurzor na předchozí záznam.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Přesune kurzor na předchozí záznam.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT MovePrev() throw();  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
+HRESULT MovePrev() throw();
+```
 
-Standardní HRESULT.  
-  
-### <a name="remarks"></a>Poznámky  
+### <a name="return-value"></a>Návratová hodnota
 
-Tato metoda vyžaduje, nastavte buď `DBPROP_CANFETCHBACKWARDS` nebo `DBPROP_CANSCROLLBACKWARDS` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků. 
+Standardní HRESULT.
+
+### <a name="remarks"></a>Poznámky
+
+Tato metoda vyžaduje, nastavte buď `DBPROP_CANFETCHBACKWARDS` nebo `DBPROP_CANSCROLLBACKWARDS` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků.
 
 ## <a name="movetobookmark"></a> CRowset::MoveToBookmark
 
-Načte řádek označený záložku nebo řádek na zadaný posun (*lSkip*) z tuto záložku.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Načte řádek označený záložku nebo řádek na zadaný posun (*lSkip*) z tuto záložku.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT MoveToBookmark(const CBookmarkBase& bookmark,   
-   LONG lSkip = 0) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT MoveToBookmark(const CBookmarkBase& bookmark, 
+   LONG lSkip = 0) throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *záložky*<br/>
-[in] Záložka označení umístění, ze kterého chcete načíst data.  
-  
+[in] Záložka označení umístění, ze kterého chcete načíst data.
+
 *lSkip*<br/>
-[in] Počtu řádků ze záložky pro cílový řádek. Pokud *lSkip* je nula, první řádek načtený je označenou záložkou a doplňujte řádek. Pokud *lSkip* 1, načíst první řádek je řádek po řádku označenou záložkou a doplňujte. Pokud *lSkip* se -1, načíst první řádek je řádek před označenou záložkou a doplňujte řádek.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+[in] Počtu řádků ze záložky pro cílový řádek. Pokud *lSkip* je nula, první řádek načtený je označenou záložkou a doplňujte řádek. Pokud *lSkip* 1, načíst první řádek je řádek po řádku označenou záložkou a doplňujte. Pokud *lSkip* se -1, načíst první řádek je řádek před označenou záložkou a doplňujte řádek.
 
-Standardní HRESULT.  
-  
-### <a name="remarks"></a>Poznámky  
+### <a name="return-value"></a>Návratová hodnota
 
-Tato metoda vyžaduje, volitelné rozhraní `IRowsetLocate`, která nemusí být podporován na všichni poskytovatelé; Pokud se v případě, vrátí metoda E_NOINTERFACE. Musíte taky nastavit `DBPROP_IRowsetLocate` VARIANT_TRUE a nastavte `DBPROP_CANFETCHBACKWARDS` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků.  
-  
-Informace o používání záložek v příjemci najdete v tématu [pomocí záložky](../../data/oledb/using-bookmarks.md).  
-  
+Standardní HRESULT.
+
+### <a name="remarks"></a>Poznámky
+
+Tato metoda vyžaduje, volitelné rozhraní `IRowsetLocate`, která nemusí být podporován na všichni poskytovatelé; Pokud se v případě, vrátí metoda E_NOINTERFACE. Musíte taky nastavit `DBPROP_IRowsetLocate` VARIANT_TRUE a nastavte `DBPROP_CANFETCHBACKWARDS` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků.
+
+Informace o používání záložek v příjemci najdete v tématu [pomocí záložky](../../data/oledb/using-bookmarks.md).
+
 ## <a name="movetoratio"></a> CRowset::MoveToRatio
 
-Načte řádky začínající od desetinné pozice v dané sadě řádků.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Načte řádky začínající od desetinné pozice v dané sadě řádků.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT MoveToRatio(DBCOUNTITEM nNumerator,   
-   DBCOUNTITEM nDenominator,bool bForward = true) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT MoveToRatio(DBCOUNTITEM nNumerator, 
+   DBCOUNTITEM nDenominator,bool bForward = true) throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *nNumerator*<br/>
-[in] Čítač použít k určení desetinné poziční, ze kterého se má načíst data.  
-  
+[in] Čítač použít k určení desetinné poziční, ze kterého se má načíst data.
+
 *nDenominator*<br/>
-[in] Jmenovatel umožňuje určit, desetinné poziční, ze kterého se má načíst data.  
-  
+[in] Jmenovatel umožňuje určit, desetinné poziční, ze kterého se má načíst data.
+
 *bForward*<br/>
-[in] Označuje, zda se má přesunout vpřed nebo vzad. Výchozí hodnota je předat dál.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+[in] Označuje, zda se má přesunout vpřed nebo vzad. Výchozí hodnota je předat dál.
 
-Standardní HRESULT.  
-  
-### <a name="remarks"></a>Poznámky  
+### <a name="return-value"></a>Návratová hodnota
 
-`MoveToRatio` načte řádky podle zhruba následující vzorec:  
-  
-`(nNumerator *  RowsetSize ) / nDenominator`  
-  
-Kde `RowsetSize` je velikost řádků, měřený v řádcích. Přesnost tohoto vzorce závisí na konkrétního zprostředkovatele. Podrobnosti najdete v tématu [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602).  
-  
-Tato metoda vyžaduje, volitelné rozhraní `IRowsetScroll`, která nemusí být podporován na všichni poskytovatelé; Pokud se v případě, vrátí metoda E_NOINTERFACE. Musíte taky nastavit `DBPROP_IRowsetScroll` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků.  
+Standardní HRESULT.
+
+### <a name="remarks"></a>Poznámky
+
+`MoveToRatio` načte řádky podle zhruba následující vzorec:
+
+`(nNumerator *  RowsetSize ) / nDenominator`
+
+Kde `RowsetSize` je velikost řádků, měřený v řádcích. Přesnost tohoto vzorce závisí na konkrétního zprostředkovatele. Podrobnosti najdete v tématu [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602).
+
+Tato metoda vyžaduje, volitelné rozhraní `IRowsetScroll`, která nemusí být podporován na všichni poskytovatelé; Pokud se v případě, vrátí metoda E_NOINTERFACE. Musíte taky nastavit `DBPROP_IRowsetScroll` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků.
 
 ## <a name="releaserows"></a> CRowset::ReleaseRows
 
-Volání [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) uvolnit popisovač aktuálního řádku.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-HRESULT ReleaseRows() throw();  
-```  
-  
-### <a name="return-value"></a>Návratová hodnota  
+Volání [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) uvolnit popisovač aktuálního řádku.
 
-Standardní HRESULT.  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+HRESULT ReleaseRows() throw();
+```
+
+### <a name="return-value"></a>Návratová hodnota
+
+Standardní HRESULT.
 
 ## <a name="setdata"></a> CRowset::SetData
 
-Nastaví hodnoty dat do jednoho nebo více sloupců řádků.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```cpp
-HRESULT SetData() const throw();   
+Nastaví hodnoty dat do jednoho nebo více sloupců řádků.
 
-HRESULT SetData(int nAccessor) const throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+HRESULT SetData() const throw(); 
+
+HRESULT SetData(int nAccessor) const throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *nAccessor*<br/>
-[in] Počet přístupový objekt pro účely přístupu k datům.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+[in] Počet přístupový objekt pro účely přístupu k datům.
 
-Standardní HRESULT.  
-  
-### <a name="remarks"></a>Poznámky  
+### <a name="return-value"></a>Návratová hodnota
 
-Pro `SetData` formulář, který přijímá žádné argumenty, všechny přistupující objekty se používají pro aktualizaci. Obvykle volání `SetData` k nastavení datové hodnoty ve sloupcích za sebou, zavolejte [aktualizace](../../data/oledb/crowset-update.md) přenést tyto změny.  
-  
-Tato metoda vyžaduje, volitelné rozhraní `IRowsetChange`, která nemusí být podporován na všichni poskytovatelé; Pokud se v případě, vrátí metoda E_NOINTERFACE. Musíte taky nastavit `DBPROP_IRowsetChange` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků.  
-  
-Operace nastavení může selhat, pokud jeden nebo více sloupců se nedá zapisovat. Upravte mapu kurzor to chcete opravit. 
-  
+Standardní HRESULT.
+
+### <a name="remarks"></a>Poznámky
+
+Pro `SetData` formulář, který přijímá žádné argumenty, všechny přistupující objekty se používají pro aktualizaci. Obvykle volání `SetData` k nastavení datové hodnoty ve sloupcích za sebou, zavolejte [aktualizace](../../data/oledb/crowset-update.md) přenést tyto změny.
+
+Tato metoda vyžaduje, volitelné rozhraní `IRowsetChange`, která nemusí být podporován na všichni poskytovatelé; Pokud se v případě, vrátí metoda E_NOINTERFACE. Musíte taky nastavit `DBPROP_IRowsetChange` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků.
+
+Operace nastavení může selhat, pokud jeden nebo více sloupců se nedá zapisovat. Upravte mapu kurzor to chcete opravit.
+
 ## <a name="undo"></a> CRowset::Undo
 
-Vrátí zpět všechny změny provedené od posledního načtení řádek nebo [aktualizace](../../data/oledb/crowset-update.md).  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Vrátí zpět všechny změny provedené od posledního načtení řádek nebo [aktualizace](../../data/oledb/crowset-update.md).
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT Undo(DBCOUNTITEM* pcRows = NULL,   
-   HROW* phRow = NULL,   
-   DBROWSTATUS* pStatus = NULL) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT Undo(DBCOUNTITEM* pcRows = NULL, 
+   HROW* phRow = NULL, 
+   DBROWSTATUS* pStatus = NULL) throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *pcRows*<br/>
-[out] Ukazatel do umístění, kde `Undo` vrací počet řádků se pokusila vrátit zpět v případě potřeby.  
-  
+[out] Ukazatel do umístění, kde `Undo` vrací počet řádků se pokusila vrátit zpět v případě potřeby.
+
 *phRow*<br/>
-[out] Ukazatel do umístění, kde `Undo` vrátí pole popisovačů pro všechny řádky se pokusila vrátit zpět v případě potřeby.  
-  
+[out] Ukazatel do umístění, kde `Undo` vrátí pole popisovačů pro všechny řádky se pokusila vrátit zpět v případě potřeby.
+
 *pStatus*<br/>
-[out] Ukazatel do umístění, kde `Undo` vrací hodnotu stavový řádek. Pokud je vrácen žádný stav *pStatus* má hodnotu null.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+[out] Ukazatel do umístění, kde `Undo` vrací hodnotu stavový řádek. Pokud je vrácen žádný stav *pStatus* má hodnotu null.
 
-Standardní HRESULT.  
-  
-### <a name="remarks"></a>Poznámky  
+### <a name="return-value"></a>Návratová hodnota
 
-Tato metoda vyžaduje, volitelné rozhraní `IRowsetUpdate`, která nemusí být podporován na všichni poskytovatelé; Pokud se v případě, vrátí metoda E_NOINTERFACE. Musíte taky nastavit `DBPROP_IRowsetUpdate` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků.  
+Standardní HRESULT.
+
+### <a name="remarks"></a>Poznámky
+
+Tato metoda vyžaduje, volitelné rozhraní `IRowsetUpdate`, která nemusí být podporován na všichni poskytovatelé; Pokud se v případě, vrátí metoda E_NOINTERFACE. Musíte taky nastavit `DBPROP_IRowsetUpdate` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků.
 
 ## <a name="update"></a> CRowset::Update
 
-Odesílá všechny neuložené změny provedené na aktuálním řádku od posledního načtení nebo `Update` zavolat.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Odesílá všechny neuložené změny provedené na aktuálním řádku od posledního načtení nebo `Update` zavolat.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT Update(DBCOUNTITEM* pcRows = NULL,   
-   HROW* phRow = NULL,   
-   DBROWSTATUS* pStatus = NULL) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT Update(DBCOUNTITEM* pcRows = NULL, 
+   HROW* phRow = NULL, 
+   DBROWSTATUS* pStatus = NULL) throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *pcRows*<br/>
-[out] Ukazatel do umístění, kde `Update` vrací počet řádků se pokusil aktualizovat, pokud je to nutné.  
-  
+[out] Ukazatel do umístění, kde `Update` vrací počet řádků se pokusil aktualizovat, pokud je to nutné.
+
 *phRow*<br/>
-[out] Ukazatel do umístění, kde `Update` vrátí popisovač řádku, který se pokusil aktualizovat. Žádný popisovač je vrácena, jestliže *phRow* má hodnotu null.  
-  
+[out] Ukazatel do umístění, kde `Update` vrátí popisovač řádku, který se pokusil aktualizovat. Žádný popisovač je vrácena, jestliže *phRow* má hodnotu null.
+
 *pStatus*<br/>
-[out] Ukazatel do umístění, kde `Update` vrací hodnotu stavový řádek. Pokud je vrácen žádný stav *pStatus* má hodnotu null.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+[out] Ukazatel do umístění, kde `Update` vrací hodnotu stavový řádek. Pokud je vrácen žádný stav *pStatus* má hodnotu null.
 
-Standardní HRESULT.  
-  
-### <a name="remarks"></a>Poznámky  
+### <a name="return-value"></a>Návratová hodnota
 
-Odesílá všechny neuložené změny provedené na aktuálním řádku od posledního načtení nebo aktualizace řádku (pomocí `Update` nebo [UpdateAll](../../data/oledb/crowset-updateall.md)). Obvykle volání [SetData](../../data/oledb/crowset-setdata.md) nastavte data hodnoty ve sloupcích za sebou, a poté zavolejte `Update` přenést tyto změny.  
-  
-Tato metoda vyžaduje, volitelné rozhraní `IRowsetUpdate`, která nemusí být podporován na všichni poskytovatelé; Pokud se v případě, vrátí metoda E_NOINTERFACE. Musíte taky nastavit `DBPROP_IRowsetUpdate` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků.  
+Standardní HRESULT.
+
+### <a name="remarks"></a>Poznámky
+
+Odesílá všechny neuložené změny provedené na aktuálním řádku od posledního načtení nebo aktualizace řádku (pomocí `Update` nebo [UpdateAll](../../data/oledb/crowset-updateall.md)). Obvykle volání [SetData](../../data/oledb/crowset-setdata.md) nastavte data hodnoty ve sloupcích za sebou, a poté zavolejte `Update` přenést tyto změny.
+
+Tato metoda vyžaduje, volitelné rozhraní `IRowsetUpdate`, která nemusí být podporován na všichni poskytovatelé; Pokud se v případě, vrátí metoda E_NOINTERFACE. Musíte taky nastavit `DBPROP_IRowsetUpdate` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků.
 
 ## <a name="updateall"></a> CRowset::UpdateAll
 
-Odesílá všechny čekající změny provedené od posledního načtení všech řádků nebo `Update` zavolat.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Odesílá všechny čekající změny provedené od posledního načtení všech řádků nebo `Update` zavolat.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,   
-   HROW** pphRow = NULL,   
-   DBROWSTATUS** ppStatus = NULL) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL, 
+   HROW** pphRow = NULL, 
+   DBROWSTATUS** ppStatus = NULL) throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *pcRows*<br/>
-[out] Ukazatel do umístění, kde `UpdateAll` vrací počet řádků se pokusil aktualizovat, pokud je to nutné.  
-  
+[out] Ukazatel do umístění, kde `UpdateAll` vrací počet řádků se pokusil aktualizovat, pokud je to nutné.
+
 *pphRow*<br/>
-[out] Ukazatel na paměť `UpdateAll` vrátí popisovač řádku, který se pokusil aktualizovat. Žádný popisovač je vrácena, jestliže *pphRow* má hodnotu null.  
-  
+[out] Ukazatel na paměť `UpdateAll` vrátí popisovač řádku, který se pokusil aktualizovat. Žádný popisovač je vrácena, jestliže *pphRow* má hodnotu null.
+
 *ppStatus*<br/>
-[out] Ukazatel do umístění, kde `Update` vrací hodnotu stavový řádek. Pokud je vrácen žádný stav *ppStatus* má hodnotu null.  
-  
-### <a name="remarks"></a>Poznámky  
+[out] Ukazatel do umístění, kde `Update` vrací hodnotu stavový řádek. Pokud je vrácen žádný stav *ppStatus* má hodnotu null.
 
-Odesílá všechny neuložené změny provedené na všechny řádky, protože tyto řádky byly posledního načtení nebo aktualizaci pomocí [aktualizace](../../data/oledb/crowset-update.md) nebo `UpdateAll`. `UpdateAll` aktualizuje všechny řádky, která byla změněna, bez ohledu na to, zda máte stále popisovač pro ně (viz *pphRow*) nebo ne.  
-  
-Například, pokud jste použili `Insert` pro vložení pět řádků v sadě řádků, můžete buď zavolat `Update` pětkrát nebo volání `UpdateAll` jednou je všechny aktualizovat.  
-  
-Tato metoda vyžaduje, volitelné rozhraní `IRowsetUpdate`, která nemusí být podporován na všichni poskytovatelé; Pokud se v případě, vrátí metoda E_NOINTERFACE. Musíte taky nastavit `DBPROP_IRowsetUpdate` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+### <a name="remarks"></a>Poznámky
 
-Standardní HRESULT.  
+Odesílá všechny neuložené změny provedené na všechny řádky, protože tyto řádky byly posledního načtení nebo aktualizaci pomocí [aktualizace](../../data/oledb/crowset-update.md) nebo `UpdateAll`. `UpdateAll` aktualizuje všechny řádky, která byla změněna, bez ohledu na to, zda máte stále popisovač pro ně (viz *pphRow*) nebo ne.
 
-## <a name="see-also"></a>Viz také  
+Například, pokud jste použili `Insert` pro vložení pět řádků v sadě řádků, můžete buď zavolat `Update` pětkrát nebo volání `UpdateAll` jednou je všechny aktualizovat.
+
+Tato metoda vyžaduje, volitelné rozhraní `IRowsetUpdate`, která nemusí být podporován na všichni poskytovatelé; Pokud se v případě, vrátí metoda E_NOINTERFACE. Musíte taky nastavit `DBPROP_IRowsetUpdate` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Standardní HRESULT.
+
+## <a name="see-also"></a>Viz také
 
 [Ukázka DBViewer](../../visual-cpp-samples.md)<br/>
 [MultiRead vzorku](../../visual-cpp-samples.md)<br/>

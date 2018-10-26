@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9142ba85a78259c0a6e5ae06f3745d414e62e908
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 58591309faaa107756739a52173ceea2f1f7b188
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425623"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069877"
 ---
 # <a name="smart-pointers-modern-c"></a>Chytré ukazatele (moderní verze jazyka C++)
 
@@ -76,11 +76,14 @@ V následující části jsou shrnuty různé druhy inteligentních ukazatelů,
 
 Tyto inteligentní ukazatele představují první volbu pro zapouzdření ukazatelů do objektů POCO.
 
-- `unique_ptr` Povolují právě jednoho vlastníka podkladového ukazatele. Použijte jako výchozí volbu pro POCO, pokud nejste jisti, že budete potřebovat `shared_ptr`. Lze je přesunout na nového vlastníka, nikoli však kopírovat nebo sdílet. Nahradí `auto_ptr`, který je zastaralý. Porovnat s `boost::scoped_ptr`. `unique_ptr` je malý a efektivní. velikost je jeden ukazatel a podporuje odkazy rvalue pro rychlé vkládání a načítání z kolekcí standardní knihovny C++. Soubor hlaviček: `<memory>`. Další informace najdete v tématu [postupy: vytváření a používání instancí ukazatelů unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md) a [unique_ptr – třída](../standard-library/unique-ptr-class.md).
+- `unique_ptr`<br/>
+   Povolují právě jednoho vlastníka podkladového ukazatele. Použijte jako výchozí volbu pro POCO, pokud nejste jisti, že budete potřebovat `shared_ptr`. Lze je přesunout na nového vlastníka, nikoli však kopírovat nebo sdílet. Nahradí `auto_ptr`, který je zastaralý. Porovnat s `boost::scoped_ptr`. `unique_ptr` je malý a efektivní. velikost je jeden ukazatel a podporuje odkazy rvalue pro rychlé vkládání a načítání z kolekcí standardní knihovny C++. Soubor hlaviček: `<memory>`. Další informace najdete v tématu [postupy: vytváření a používání instancí ukazatelů unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md) a [unique_ptr – třída](../standard-library/unique-ptr-class.md).
 
-- `shared_ptr` Referenčně započítaný inteligentního ukazatele. Tento typ je vhodný, když chcete přiřadit jeden nezpracovaný ukazatel více vlastníkům, například, když vrátíte kopii ukazatele z kontejneru, ale chcete zachovat originál. Nezpracovaný ukazatel není odstraněn, dokud všichni `shared_ptr` vlastníky nepřejdou mimo rozsah nebo jinak Nevzdají vlastnictví. Má velikost dva ukazatele; jeden pro objekt a jeden pro sdílený kontrolní blok, který obsahuje počet odkazů. Soubor hlaviček: `<memory>`. Další informace najdete v tématu [postupy: vytváření a používání instancí ukazatelů shared_ptr](../cpp/how-to-create-and-use-shared-ptr-instances.md) a [shared_ptr – třída](../standard-library/shared-ptr-class.md).
+- `shared_ptr`<br/>
+   Inteligentní ukazatel s počítáním referencí Tento typ je vhodný, když chcete přiřadit jeden nezpracovaný ukazatel více vlastníkům, například, když vrátíte kopii ukazatele z kontejneru, ale chcete zachovat originál. Nezpracovaný ukazatel není odstraněn, dokud všichni `shared_ptr` vlastníky nepřejdou mimo rozsah nebo jinak Nevzdají vlastnictví. Má velikost dva ukazatele; jeden pro objekt a jeden pro sdílený kontrolní blok, který obsahuje počet odkazů. Soubor hlaviček: `<memory>`. Další informace najdete v tématu [postupy: vytváření a používání instancí ukazatelů shared_ptr](../cpp/how-to-create-and-use-shared-ptr-instances.md) a [shared_ptr – třída](../standard-library/shared-ptr-class.md).
 
-- `weak_ptr` Zvláštní případ inteligentní ukazatel pro použití ve spojení s `shared_ptr`. A `weak_ptr` poskytuje přístup k objektu, který je vlastněn jednou nebo více `shared_ptr` instancí, ale se neúčastní počítání odkazů. Použijte ho, chcete-li objekt sledovat, ale nepotřebujete ho ponechat ve stavu alive. Potřebné v některých případech pro přerušení cyklických odkazů mezi `shared_ptr` instancí. Soubor hlaviček: `<memory>`. Další informace najdete v tématu [postupy: vytváření a používání instancí ukazatelů weak_ptr](../cpp/how-to-create-and-use-weak-ptr-instances.md) a [weak_ptr – třída](../standard-library/weak-ptr-class.md).
+- `weak_ptr`<br/>
+    Zvláštní případ inteligentní ukazatel pro použití ve spojení s `shared_ptr`. A `weak_ptr` poskytuje přístup k objektu, který je vlastněn jednou nebo více `shared_ptr` instancí, ale se neúčastní počítání odkazů. Použijte ho, chcete-li objekt sledovat, ale nepotřebujete ho ponechat ve stavu alive. Potřebné v některých případech pro přerušení cyklických odkazů mezi `shared_ptr` instancí. Soubor hlaviček: `<memory>`. Další informace najdete v tématu [postupy: vytváření a používání instancí ukazatelů weak_ptr](../cpp/how-to-create-and-use-weak-ptr-instances.md) a [weak_ptr – třída](../standard-library/weak-ptr-class.md).
 
 ### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a>Inteligentní ukazatele pro objekty COM (klasické programování v systému Windows)
 

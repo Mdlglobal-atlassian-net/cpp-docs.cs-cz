@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd53bc778b3229522d34993c72833500732323b3
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 654ddd149eb6875bede85bdef51641c359644f51
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821098"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075629"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Vytvoření projektu (ATL – tutoriál, část 1)
 
@@ -30,13 +30,13 @@ Tento kurz vás provede bez atributové projekt knihovny ATL, který vytvoří o
 > Tento kurz vytvoří stejný zdrojový kód jako ukázka mnohoúhelníku. Pokud chcete se vyhnout ručním zadáním zdrojového kódu, můžete ji stáhnout [abstraktní ukázky mnohoúhelníku](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon). Poté můžete odkázat ke zdrojovému kódu mnohoúhelníku při projít tento kurz, a použít ho ke kontrole chyb ve vašem vlastním projektu.
 > Chcete-li zkompilovat, otevřete stdafx.h a nahradit:
 > ```
-> #ifndef WINVER  
-> #define WINVER 0x0400   
+> #ifndef WINVER
+> #define WINVER 0x0400
 > #endif
 > ```
 > with
 > ```
-> #ifndef WINVER  
+> #ifndef WINVER
 > #define WINVER 0x0500
 > #define _WIN32_WINNT 0x0500
 > #endif

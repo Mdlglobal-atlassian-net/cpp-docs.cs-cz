@@ -140,12 +140,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e1fb04de4097a2cdf1dd51dc12265bef8d6c0b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c86efacf7211415bfdc2936a736d78e29dc419bf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423127"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076396"
 ---
 # <a name="crecordset-class"></a>CRecordset – třída
 
@@ -727,17 +727,14 @@ void GetFieldValue(
     CDBVariant& varValue,
     short nFieldType = DEFAULT_FIELD_TYPE);
 
-
 void GetFieldValue(
     short nIndex,
     CDBVariant& varValue,
     short nFieldType = DEFAULT_FIELD_TYPE);
 
-
 void GetFieldValue(
     short nIndex,
     CStringA& strValue);
-
 
 void GetFieldValue(
     short nIndex,
@@ -822,7 +819,6 @@ Získá informace o polích v sadě záznamů.
 void GetODBCFieldInfo(
     LPCTSTR lpszName,
     CODBCFieldInfo& fieldinfo);
-
 
 void GetODBCFieldInfo(
     short nIndex,
@@ -1538,7 +1534,7 @@ Přijměte výchozí hodnotu, AFX_DB_USE_DEFAULT_TYPE nebo použijte jednu z ná
 
 - `CRecordset::forwardOnly` Jen pro čtení záznamů s posouváním pouze vpřed.
 
-     Pro `CRecordset`, výchozí hodnota je `CRecordset::snapshot`. Mechanismus výchozích hodnot umožňuje interakci průvodců aplikace Visual C++ s třídou `CRecordset` pro rozhraní ODBC i třídou `CDaoRecordset` pro rozhraní DAO, které používají různé výchozí hodnoty.
+   Pro `CRecordset`, výchozí hodnota je `CRecordset::snapshot`. Mechanismus výchozích hodnot umožňuje interakci průvodců aplikace Visual C++ s třídou `CRecordset` pro rozhraní ODBC i třídou `CDaoRecordset` pro rozhraní DAO, které používají různé výchozí hodnoty.
 
 Další informace o těchto typech sad záznamů naleznete v článku [sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md). Související informace najdete v článku "Použití bloku a posuvný kurzorů" v sadě Windows SDK.
 
@@ -1613,7 +1609,7 @@ Při volání `Open`, dotaz, obvykle SQL **vyberte** příkaz, vybere záznamy n
 
 Obvyklým postupem je předat hodnotu NULL na `Open`; v takovém případě `Open` volání [GetDefaultSQL](#getdefaultsql). Pokud používáte odvozený `CRecordset` třídy, `GetDefaultSQL` názvy tabulek zadaných v nástroji ClassWizard. Místo toho lze zadat jiné informace v parametru `lpszSQL`.
 
-Bez ohledu na předané, `Open` vytvoří konečný řetězec SQL pro dotaz (řetězec může obsahovat SQL **kde** a **klauzule ORDER BY** klauzule připojenou k `lpszSQL` jste předali řetězec) a pak spustí dotaz. Můžete prozkoumat sestavený řetězec voláním [GetSQL](#getsql) po volání *`Open`. Další podrobnosti o tom, jak sada záznamů sestavuje příkaz SQL a vybírá záznamy, najdete v článku [sada záznamů: Jak sady záznamů vybírají záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).
+Bez ohledu na předané, `Open` vytvoří konečný řetězec SQL pro dotaz (řetězec může obsahovat SQL **kde** a **klauzule ORDER BY** klauzule připojenou k `lpszSQL` jste předali řetězec) a pak spustí dotaz. Můžete prozkoumat sestavený řetězec voláním [GetSQL](#getsql) po volání `Open`. Další podrobnosti o tom, jak sada záznamů sestavuje příkaz SQL a vybírá záznamy, najdete v článku [sada záznamů: Jak sady záznamů vybírají záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).
 
 Datové členy polí třídy sady záznamů jsou svázány se sloupci zvolených dat. Jsou-li vráceny jakékoli záznamy, první záznam se stává aktuálním záznamem.
 

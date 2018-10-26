@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35aa004a2c4f47c476175ac500777ee8eb6efb07
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1146c3e07ec6d9be4233981bcb2551a0c768c265
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028750"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054082"
 ---
 # <a name="enumerations-c"></a>Výčty (C++)
 
@@ -39,7 +39,7 @@ Výčet je uživatelem definovaný typ, který se skládá z sadu pojmenovaných
 ```
 // unscoped enum:
 enum [identifier] [: type]
-{enum-list}; 
+{enum-list}; 
 
 // scoped enum:
 enum [class|struct]
@@ -134,19 +134,19 @@ Použití implicitních převodů tímto způsobem může způsobit nežádoucí
 ```cpp
 namespace ScopedEnumConversions
 {
-    enum class Suit { Diamonds, Hearts, Clubs, Spades };
+    enum class Suit { Diamonds, Hearts, Clubs, Spades };
 
-    void AttemptConversions()
+    void AttemptConversions()
     {
-        Suit hand; 
-        hand = Clubs; // error C2065: 'Clubs' : undeclared identifier
-        hand = Suit::Clubs; //Correct.
-        int account_num = 135692;
-        hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'
-        hand = static_cast<Suit>(account_num); // OK, but probably a bug!!!
+        Suit hand; 
+        hand = Clubs; // error C2065: 'Clubs' : undeclared identifier
+        hand = Suit::Clubs; //Correct.
+        int account_num = 135692;
+        hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'
+        hand = static_cast<Suit>(account_num); // OK, but probably a bug!!!
 
-        account_num = Suit::Hearts; // error C2440: '=' : cannot convert from 'Suit' to 'int'
-        account_num = static_cast<int>(Suit::Hearts); // OK
+        account_num = Suit::Hearts; // error C2440: '=' : cannot convert from 'Suit' to 'int'
+        account_num = static_cast<int>(Suit::Hearts); // OK
 }
 ```
 
@@ -155,7 +155,6 @@ Všimněte si, že na řádku `hand = account_num;` stále způsobuje chybu, ke 
 ## <a name="no_enumerators"></a> Výčty pomocí žádné čítače
 
 **Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): definuje výčet (pravidelných nebo s vymezeným oborem) s explicitní nadřazeného typu a žádné čítače, můžete platit zavést nový celočíselný typ, který nemá implicitní převod do jakéhokoli jiného typu. Pomocí tohoto typu namísto integrovaných základního typu může eliminovat riziko drobné chyby způsobené zvyšuje ochranu před nechtěnými implicitní převody.
-
 
 ```cpp
 enum class byte : unsigned char { };

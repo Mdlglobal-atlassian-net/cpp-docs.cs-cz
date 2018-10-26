@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25116b0750016fdbb4ffd792d0b16efb6c6c1793
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9c1acf9602dedf0eef1b8d96344914c367ce5926
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711937"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073549"
 ---
 # <a name="options-atl-control-wizard"></a>Možnosti, Průvodce ovládacím prvkem ATL
 
@@ -49,11 +49,11 @@ Druh ovládacího prvku, který chcete vytvořit.
 
    - Zkušební stránku HTML obsahující složeného ovládacího prvku.
 
-     Ve výchozím nastavení, nastaví tento ovládací prvek [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) na hodnotu true označuje, že se jedná o ovládacího prvku v okně. Implementuje mapu jímky. Další informace najdete v tématu [podporu pro ovládací prvek DHTML](../../atl/atl-support-for-dhtml-controls.md).
+   Ve výchozím nastavení, nastaví tento ovládací prvek [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) na hodnotu true označuje, že se jedná o ovládacího prvku v okně. Implementuje mapu jímky. Další informace najdete v tématu [podporu pro ovládací prvek DHTML](../../atl/atl-support-for-dhtml-controls.md).
 
 - **Ovládací prvek DHTML**: ovládacího prvku ATL DHTML určuje uživatelského rozhraní pomocí jazyka HTML. Třída DHTML uživatelského rozhraní obsahuje mapu COM. Ve výchozím nastavení, nastaví tento ovládací prvek [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) na hodnotu true označuje, že se jedná o ovládacího prvku v okně.
 
-     Další informace najdete v tématu [identifikace prvků projektu ovládací prvek DHTML](../../atl/identifying-the-elements-of-the-dhtml-control-project.md).
+   Další informace najdete v tématu [identifikace prvků projektu ovládací prvek DHTML](../../atl/identifying-the-elements-of-the-dhtml-control-project.md).
 
 ### <a name="minimal-control"></a>Minimální ovládací prvek
 

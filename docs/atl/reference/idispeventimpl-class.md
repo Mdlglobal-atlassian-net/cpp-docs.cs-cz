@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 815a276cb07a91da73acb68a32cceef4b2138325
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2419b4da0cad2662a246c167938d673429afbf26
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093834"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060895"
 ---
 # <a name="idispeventimpl-class"></a>Idispeventimpl – třída
 
@@ -44,7 +44,7 @@ template <UINT nID, class T,
     const IID* pdiid = &IID_NULL,
     const GUID* plibid = &GUID_NULL,
     WORD wMajor = 0,
-    WORD wMinor = 0, 
+    WORD wMinor = 0,
     class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 ```
@@ -102,7 +102,7 @@ Třída, která slouží ke správě informace o typu *T*. Výchozí hodnota je 
 
 `IDispEventImpl` funguje ve spojení s mapou jímky událostí ve své třídě pro směrování událostí na odpovídající obslužné rutiny. Chcete-li použít tuto třídu:
 
-Přidat [SINK_ENTRY](composite-control-macros.md#sink_entry) nebo [SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex) makra mapy událostí jímky pro každou jednotlivou událost pro každý objekt, který chcete zpracovat. Při použití `IDispEventImpl` jako základní třída složeného ovládacího prvku, lze volat [AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap) při navázání připojení se zdroji událostí pro všechny položky v případě jímky mapy. V ostatních případech, nebo pro větší kontrolu, volání [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) k navázání připojení mezi zdrojovým objektem a základní třídy. Volání [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise) přerušit připojení.  
+Přidat [SINK_ENTRY](composite-control-macros.md#sink_entry) nebo [SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex) makra mapy událostí jímky pro každou jednotlivou událost pro každý objekt, který chcete zpracovat. Při použití `IDispEventImpl` jako základní třída složeného ovládacího prvku, lze volat [AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap) při navázání připojení se zdroji událostí pro všechny položky v případě jímky mapy. V ostatních případech, nebo pro větší kontrolu, volání [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) k navázání připojení mezi zdrojovým objektem a základní třídy. Volání [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise) přerušit připojení.
 
 Musí být odvozen od `IDispEventImpl` (pomocí jedinečnou hodnotu pro *nID*) pro každý objekt, pro kterou je potřeba zpracovat události. Základní třídy lze znovu použít, unadvising proti jeden zdrojový objekt pak informacemi pro objekt jiného zdroje, ale maximální počet zdrojové objekty, které mohou být zpracovány jeden objekt v jednom okamžiku je omezený počet `IDispEventImpl` základních tříd.
 
