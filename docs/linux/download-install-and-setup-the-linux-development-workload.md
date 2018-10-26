@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 4b96fca0bee594ffa441bff6b352b89ffed196f3
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 8ef0a8d3ecae6371603716ad31530776eed7ee86
+ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50068085"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143689"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Stažení, instalace a nastavení úloh Linux
 
@@ -26,7 +26,8 @@ Integrované vývojové prostředí sady Visual Studio ve Windows můžete použ
 
 ## <a name="visual-studio-setup"></a>Instalační program sady Visual Studio
 
-1. Zadejte "Instalační program sady Visual Studio" v nabídce Windows search; Podívejte se v části **aplikace** výsledky a dvojím kliknutím ho. Když se instalační program otevře, zvolte **změnit**a potom klikněte na **úlohy** kartu. Přejděte dolů k položce **další sady nástrojů** a vyberte **vývoj pro Linux v C++** pracovního vytížení.
+1. Zadejte do vyhledávacího pole Windows "Instalační program sady Visual Studio": ![Windows vyhledávacího pole](media/visual-studio-installer-search.png)
+2. Vyhledejte instalační služby v rámci **aplikace** výsledky a dvojím kliknutím ho. Když se instalační program otevře, zvolte **změnit**a potom klikněte na **úlohy** kartu. Přejděte dolů k položce **další sady nástrojů** a vyberte **vývoj pro Linux v C++** pracovního vytížení.
 
    ![Visual C++ pro úlohu vývoj pro Linux](media/linuxworkload.png)
 

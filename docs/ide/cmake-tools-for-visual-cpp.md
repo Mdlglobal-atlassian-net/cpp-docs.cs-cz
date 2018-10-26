@@ -1,7 +1,7 @@
 ---
 title: Projekty CMake v jazyce Visual C++ | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 09/26/2018
+ms.date: 10/18/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76877a0559fd954661fb3e38131796e89c41679f
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 93cfa14e943e277b5255eeb486491c831eba0da3
+ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235097"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143728"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Projekty CMake v jazyce Visual C++
 
@@ -89,7 +89,7 @@ Ne vše, co v mezipaměti je importován.  Vlastnosti, jako je generátor kódu 
 Pokud chcete vytvořit projekt CMake, máte tyto možnosti:
 
 1. Vyberte cíl **ladění** rozevírací seznam a stiskněte klávesu **F5**, nebo klikněte na tlačítko **spustit** tlačítko (zeleným trojúhelníkem). Automaticky sestavení projektu nejprve, stejně jako řešení sady Visual Studio.
-1. Klikněte pravým tlačítkem na soubor CMakeLists.txt a vyberte **sestavení** v místní nabídce. Pokud máte více cílů ve struktuře složek, můžete k vytvoření všech nebo jenom jeden konkrétní cíl, nebo
+1. Klikněte pravým tlačítkem na soubor CMakeLists.txt a vyberte **sestavení** v místní nabídce. Pokud máte více cílů ve struktuře složek, můžete všechna nebo jenom jeden konkrétní cíl sestavení.
 1. V hlavní nabídce vyberte **sestavení | Vytvoření řešení** (**F7** nebo **Ctrl + Shift + B**). Ujistěte se, že cíl CMake je už vybraná ve **položku při spuštění** rozevírací seznam v **Obecné** nástrojů.
 
 ![Vytvoření příkazu nabídky CMake](media/cmake-build-menu.png "CMake vytvoření příkazu nabídky")
@@ -215,7 +215,7 @@ Chcete-li zadat generátoru Visual Studio, otevřete CMakeSettings.json v hlavn�
 
 1. **buildRoot**: mapuje **-DCMAKE_BINARY_DIR** přepnutí a určuje, kde se vytvoří mezipaměť CMake. Pokud složka neexistuje, vytvoří se.
 
-1. **proměnné**: obsahuje dvojice název hodnota proměnné CMake, které budou získat předány jako **-D**_název_**=**_hodnotu_ do programu CMake. Pokyny k sestavení projektu CMake zadání přidání všech proměnných přímo do souboru mezipaměti CMake, se doporučuje jste je přidali tady místo. Následující příklad ukazuje, jak určit dvojice název hodnota:
+1. **proměnné**: obsahuje dvojice název hodnota proměnné CMake, které budou získat předány jako **-D** *_název_=_hodnotu_* do programu CMake. Pokyny k sestavení projektu CMake zadání přidání všech proměnných přímo do souboru mezipaměti CMake, se doporučuje jste je přidali tady místo. Následující příklad ukazuje, jak určit dvojice název hodnota:
 
 ```json
 "variables": [
@@ -285,7 +285,7 @@ CMakeSettings.json teď podporuje zděděných prostředí. Tato funkce umožňu
 
 Výše uvedený příklad je stejný jako spuštění **Developer Command Prompt for VS 2017** s **-arch = amd64 – host_arch = amd64** argumenty.
 
-V následující tabulce jsou uvedeny výchozí hodnoty a jejich ekvivalenty příkazového řádku:
+V následující tabulce jsou uvedeny výchozí hodnoty:
 
 |Název kontextu|Popis|
 |-----------|-----------------|

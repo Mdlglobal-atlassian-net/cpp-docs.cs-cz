@@ -1,7 +1,7 @@
 # [Stažení, instalace a nastavení úloh pro vývoj pro Linux](download-install-and-setup-the-linux-development-workload.md)
-# [Vytvoření nového projektu Linux](create-a-new-linux-project.md)
 # [Konfigurace projektu Linux](configure-a-linux-project.md)
 # [Konfigurace projektu Linux CMake](cmake-linux-project.md)
+# [Vytvoření nového projektu Linux](create-a-new-linux-project.md)
 # [Připojení ke vzdálenému počítači s Linuxem](connect-to-your-remote-linux-computer.md)
 # [Nasazení, spuštění a ladění projektu Linux](deploy-run-and-debug-your-linux-project.md)
 # [Odkaz na stránku vlastností projektu Linux](prop-pages-linux.md)

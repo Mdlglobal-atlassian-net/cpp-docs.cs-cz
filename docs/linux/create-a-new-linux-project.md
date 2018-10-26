@@ -12,18 +12,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 186789a94186621d2ec0103cb24dfdc17b0420cc
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 71faf00e5acb980b9ab6f5cafa6a81bb360e7ea2
+ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410678"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143637"
 ---
 # <a name="create-a-new-linux-project"></a>Vytvoření nového projektu Linux
 
 Nejprve zkontrolujte, zda máte **úlohy pro vývoj pro Linux** pro nainstalovanou sadu Visual Studio. Další informace najdete v tématu [stažení, instalace a nastavení úloh Linux](download-install-and-setup-the-linux-development-workload.md).
 
-Při psaní kódu jazyka C++ v sadě Visual Studio pro Linux, budete mít možnost vytvořit projekt sady Visual Studio nebo projekt CMake. Toto téma popisuje, jak vytvořit projekt sady Visual Studio. Informace o projekty CMake najdete v tématu [konfigurace projektu Linux CMake ](cmake-linux-project.md).
+Při vytváření nového projektu C++ v sadě Visual Studio pro Linux, máte možnost vytvořit projekt sady Visual Studio nebo projekt CMake. Toto téma popisuje, jak vytvořit projekt sady Visual Studio. Informace o vytváření a práci s existující projekty CMake najdete v tématu [konfigurace projektu Linux CMake ](cmake-linux-project.md).
 
 K vytvoření nového projektu Linux v sadě Visual Studio, postupujte takto:
 
