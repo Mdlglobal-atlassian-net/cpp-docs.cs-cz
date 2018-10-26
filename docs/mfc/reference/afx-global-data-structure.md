@@ -65,12 +65,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b6ccad2c7c6c925a2c5ef6a7270a95d8a270f0d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 935a92beb49d26240aa63f5cfbd4adc9f22d06e8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398986"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078008"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA – struktura
 
@@ -169,11 +169,9 @@ Většina dat `AFX_GLOBAL_DATA` struktura je inicializován při spuštění apl
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Struktury, styly, zpětná volání a mapy zpráv](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 
-
 ## <a name="bisosalphablendingsupport"></a> AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport
 
 Určuje, zda operační systém podporuje alfa míchání.
-
 
 ```
 BOOL  bIsOSAlphaBlendingSupport;
@@ -183,19 +181,17 @@ BOOL  bIsOSAlphaBlendingSupport;
 
 Hodnota TRUE označuje, že je podporovaný alfa míchání; v opačném případě hodnota FALSE.
 
-
 ## <a name="cleanup"></a> AFX_GLOBAL_DATA::Cleanup
 
 Uvolní prostředky, které jsou přiděleny v rámci rozhraní, jako jsou štětce, písma a knihovny DLL.
 
-
 ```
 void CleanUp();
 ```
+
 ## <a name="d2d1makerotatematrix"></a> AFX_GLOBAL_DATA::D2D1MakeRotateMatrix
 
 Vytvoří otočení transformace, který otáčí podle zadaného úhlu kolem Zadaný bod.
-
 
 ```
 HRESULT D2D1MakeRotateMatrix(
@@ -223,7 +219,6 @@ V opačném případě vrátí hodnotu S_OK v případě úspěchu nebo chybovou
 
 Nakreslí pozadí nadřazeného ovládacího prvku v určené oblasti.
 
-
 ```
 BOOL DrawParentBackground(
     CWnd* pWnd,
@@ -249,7 +244,6 @@ Hodnota TRUE, pokud tato metoda je úspěšná. v opačném případě hodnota F
 ## <a name="drawtextonglass"></a> AFX_GLOBAL_DATA::DrawTextOnGlass
 
 Vykreslí zadaný text ve vizuální styl zadaný motiv.
-
 
 ```
 BOOL DrawTextOnGlass(
@@ -319,7 +313,6 @@ Motiv určuje vizuální styl aplikace. Motiv se nepoužívá k vykreslování t
 
 Povolí nebo zakáže Microsoft Active Accessibility podporu.
 
-
 ```
 void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```
@@ -335,7 +328,6 @@ Active Accessibility je technologie založené na modelu COM, které zlepší zp
 
 Použití [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport) metodou ke zjištění, zda je povolena podpora společnosti Microsoft věnovaném usnadnění aktivní.
 
-
 ### <a name="see-also"></a>Viz také
 
 [Automatizace uživatelského rozhraní a technologie Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)<br/>
@@ -344,7 +336,6 @@ Použití [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport) met
 ## <a name="excludetag"></a> AFX_GLOBAL_DATA::ExcludeTag
 
 Odebere zadanou dvojici značky XML ze zadané vyrovnávací paměti.
-
 
 ```
 BOOL ExcludeTag(
@@ -392,7 +383,6 @@ Symboly v následující tabulce použijte ke kódování sady řídicí znaky v
 
 Načte aktuální barvu prvek zadaného uživatelského rozhraní.
 
-
 ```
 COLORREF GetColor(int nColor);
 ```
@@ -420,7 +410,6 @@ Pokud *nColor* parametr je mimo rozsah, vrácená hodnota je nula. Protože nula
 
 Vrací ukazatel na rozhraní ID2D1Factory, která je uložena v globálních datech. Pokud není inicializována rozhraní, je vytvořen a má výchozí parametry.
 
-
 ```
 ID2D1Factory* GetDirect2dFactory();
 ```
@@ -433,7 +422,6 @@ Ukazatel na rozhraní ID2D1Factory Pokud vytvoření objekt pro vytváření pro
 
 Načte předdefinované kurzor, který vypadá podobně jako na tvar ruky a jehož identifikátor je IDC_HAND.
 
-
 ```
 HCURSOR GetHandCursor();
 ```
@@ -445,7 +433,6 @@ Popisovač kurzor ručně.
 ## <a name="getnonclientmetrics"></a> AFX_GLOBAL_DATA::GetNonClientMetrics
 
 Získá metriky související s neklientskou oblast nonminimized windows.
-
 
 ```
 BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
@@ -460,7 +447,6 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 
 Hodnota TRUE, pokud metoda uspěje; v opačném případě hodnota FALSE.
 
-
 ### <a name="see-also"></a>Viz také
 
 [Struktura NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175)
@@ -468,7 +454,6 @@ Hodnota TRUE, pokud metoda uspěje; v opačném případě hodnota FALSE.
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
 
 Získá výšku textové znaky v aktuálním písmem.
-
 
 ```
 int GetTextHeight(BOOL bHorz = TRUE);
@@ -487,7 +472,6 @@ Výška aktuální písmo, které je měřená od jeho horní dotah k jeho spodn
 
 Vrací ukazatel na rozhraní IWICImagingFactory, která je uložena v globálních datech. Pokud není inicializována rozhraní, je vytvořen a má výchozí parametry.
 
-
 ```
 IWICImagingFactory* GetWICFactory();
 ```
@@ -500,7 +484,6 @@ Ukazatel na rozhraní IWICImagingFactory Pokud vytvoření objekt pro vytvářen
 
 Vrací ukazatel na rozhraní IDWriteFactory, která je uložena v globálních datech. Pokud není inicializována rozhraní, je vytvořen a má výchozí parametry.
 
-
 ```
 IDWriteFactory* GetWriteFactory();
 ```
@@ -512,7 +495,6 @@ Ukazatel na rozhraní IDWriteFactory Pokud vytvoření objekt pro vytváření p
 ## <a name="initd2d"></a> AFX_GLOBAL_DATA::InitD2D
 
 Inicializuje D2D DirectWrite a WIC továren. Tuto metodu volejte před dokončením inicializace hlavního okna.
-
 
 ```
 BOOL InitD2D(
@@ -536,10 +518,8 @@ Vrátí hodnotu TRUE, pokud továren byly intilalizrd, hodnota FALSE – v opač
 
 Označuje, zda jsou předdefinované 32-bit ikony.
 
-
 ```
 BOOL Is32BitIcons() const;
-
 
 ```
 
@@ -555,7 +535,6 @@ Tato metoda vrátí hodnotu TRUE, pokud rozhraní framework podporuje 32bitové 
 
 Určuje, zda je povolena podpora Microsoft Active Accessibility.
 
-
 ```
 BOOL IsAccessibilitySupport() const;
 ```
@@ -570,7 +549,6 @@ Microsoft Active Accessibility byl starší řešení pro zpřístupnění aplik
 
 Použití [AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport) metoda k povolení nebo zakázání Active Accessibility podpory.
 
-
 ### <a name="see-also"></a>Viz také
 
 [Automatizace uživatelského rozhraní a technologie Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
@@ -578,7 +556,6 @@ Použití [AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupp
 ## <a name="isd2dinitialized"></a> AFX_GLOBAL_DATA::IsD2DInitialized
 
 Určuje, zda byl inicializován D2D
-
 
 ```
 BOOL IsD2DInitialized() const;
@@ -591,7 +568,6 @@ Hodnota TRUE, pokud byl inicializován D2D; v opačném případě FALSE.
 ## <a name="isdwmcompositionenabled"></a> AFX_GLOBAL_DATA::IsDwmCompositionEnabled
 
 Poskytuje jednoduchý způsob, jak volat Windows [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) metody.
-
 
 ```
 BOOL IsDwmCompositionEnabled();
@@ -625,7 +601,6 @@ V režimu Vysoký kontrast – černá hrany směřující světla jsou bílé a
 
 Určuje, zda operační systém podporuje vrstvami windows.
 
-
 ```
 BOOL IsWindowsLayerSupportAvailable() const;
 ```
@@ -642,7 +617,6 @@ Pokud se vrstvený windows se podporují, *inteligentního dokování* značky p
 
 Označuje, zda rozhraní používá ikony předdefinované 32bitové barvy nebo ikony nižší rozlišení.
 
-
 ```
 BOOL  m_bUseBuiltIn32BitIcons;
 ```
@@ -656,7 +630,6 @@ Tento člen musí být nastaven na spuštění aplikace.
 ## <a name="m_busesystemfont"></a> AFX_GLOBAL_DATA::m_bUseSystemFont
 
 Určuje, zda je pro nabídky, panely nástrojů a pásů karet použít systémové písmo.
-
 
 ```
 BOOL m_bUseSystemFont;
@@ -672,7 +645,6 @@ Testování tohoto člena není jedině pro rozhraní k určení písmo použít
 
 Uloží popisovač pro kurzor ručně.
 
-
 ```
 HCURSOR m_hcurHand;
 ```
@@ -680,7 +652,6 @@ HCURSOR m_hcurHand;
 ## <a name="m_hcurstretch"></a> AFX_GLOBAL_DATA::m_hcurStretch
 
 Uloží popisovač pro vodorovné roztáhnout kurzoru.
-
 
 ```
 HCURSOR m_hcurStretch;
@@ -690,7 +661,6 @@ HCURSOR m_hcurStretch;
 
 Uloží popisovač pro vertikální roztáhnout kurzoru.
 
-
 ```
 HCURSOR m_hcurStretchVert;
 ```
@@ -699,14 +669,13 @@ HCURSOR m_hcurStretchVert;
 
 Uloží popisovač pro ikonu nástroj.
 
-
 ```
 HICON m_hiconTool;
 ```
+
 ## <a name="m_nautohidetoolbarmargin"></a> AFX_GLOBAL_DATA::m_nAutoHideToolBarMargin
 
 Určuje posun od nejvíce vlevo automaticky skrývat panel nástrojů na levou stranu panelu ukotvení.
-
 
 ```
 int  m_nAutoHideToolBarMargin;
@@ -720,7 +689,6 @@ int  m_nAutoHideToolBarMargin;
 
 Určuje mezeru mezi panely nástrojů automaticky skrývat.
 
-
 ```
 int   m_nAutoHideToolBarSpacing;
 ```
@@ -732,7 +700,6 @@ int   m_nAutoHideToolBarSpacing;
 ## <a name="m_ndragframethicknessdock"></a> AFX_GLOBAL_DATA::m_nDragFrameThicknessDock
 
 Určuje tloušťku přetáhněte rámce, který se používá k označení ukotvených stavu.
-
 
 ```
 int  m_nDragFrameThicknessDock;
@@ -746,7 +713,6 @@ int  m_nDragFrameThicknessDock;
 
 Určuje tloušťku přetáhněte rámce, který se používá k označení stavu s plovoucí desetinnou čárkou.
 
-
 ```
 int  m_nDragFrameThicknessFloat;
 ```
@@ -759,7 +725,6 @@ int  m_nDragFrameThicknessFloat;
 
 Zjistí aktuální stav nabídky animace a funkcí automatické skrývání hlavním panelu ploše.
 
-
 ```
 void OnSettingChange();
 ```
@@ -771,7 +736,6 @@ Tato metoda nastaví proměnné framework do stavu určité atributy plocha uži
 ## <a name="registerwindowclass"></a> AFX_GLOBAL_DATA::RegisterWindowClass
 
 Zaregistruje zadanou třídu okna knihovny MFC.
-
 
 ```
 CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
@@ -799,7 +763,6 @@ Vrácená hodnota je seznam oddělit středníkem *lpszClassNamePrefix* parametr
 
 Znovu inicializuje ukazatele interních funkcí, které přístup k metodám, které podporují používání motivů Windows a vizuální styly.
 
-
 ```
 BOOL Resume();
 ```
@@ -815,7 +778,6 @@ Tato metoda je volána, když obdrží rozhraní [WM_POWERBROADCAST](/windows/de
 ## <a name="setlayeredattrib"></a> AFX_GLOBAL_DATA::SetLayeredAttrib
 
 Poskytuje jednoduchý způsob, jak volat Windows [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes) metody.
-
 
 ```
 BOOL SetLayeredAttrib(
@@ -852,7 +814,6 @@ Hodnota TRUE, pokud metoda uspěje; v opačném případě hodnota FALSE.
 
 Vytvoří zadané logické písma.
 
-
 ```
 BOOL SetMenuFont(
     LPLOGFONT lpLogFont,
@@ -879,7 +840,6 @@ Tato metoda vytvoří vodorovné regulární písmo podtržené písmo, a použ�
 
 Reintializes logické písma, které se používají v rámci rozhraní.
 
-
 ```
 void UpdateFonts();
 ```
@@ -892,7 +852,6 @@ Další informace o logické písma, naleznete v tématu `CFont::CreateFontIndir
 
 Inicializuje barvy, barevnou hloubku, štětce, pera a bitové kopie, které se používají v rámci rozhraní.
 
-
 ```
 void UpdateSysColors();
 ```
@@ -900,7 +859,6 @@ void UpdateSysColors();
 ## <a name="biswindows7"></a> AFX_GLOBAL_DATA::bIsWindows7
 
 Určuje, zda aplikace se provádí v rámci Windows 7 nebo vyšší.
-
 
 ```
 BOOL bIsWindows7;
@@ -910,7 +868,6 @@ BOOL bIsWindows7;
 
 Určuje barvu barevného přechodu aktivní titulek. Obvykle se používá pro ukotvení podoken.
 
-
 ```
 COLORREF clrActiveCaptionGradient;
 ```
@@ -919,7 +876,6 @@ COLORREF clrActiveCaptionGradient;
 
 Určuje barvu barevného přechodu v neaktivním titulku. Obvykle se používá pro ukotvení podoken.
 
-
 ```
 COLORREF clrInactiveCaptionGradient;
 ```
@@ -927,7 +883,6 @@ COLORREF clrInactiveCaptionGradient;
 ## <a name="getitaskbarlist"></a> AFX_GLOBAL_DATA::GetITaskbarList
 
 Vytvoří a uloží v globálních datech ukazatel `ITaskBarList` rozhraní.
-
 
 ```
 ITaskbarList *GetITaskbarList();
@@ -941,7 +896,6 @@ Ukazatel `ITaskbarList` rozhraní, pokud bude úspěšné vytvoření úlohy pan
 
 Vytvoří a uloží v globálních datech ukazatel `ITaskBarList3` rozhraní.
 
-
 ```
 ITaskbarList3 *GetITaskbarList3();
 ```
@@ -953,7 +907,6 @@ Ukazatel `ITaskbarList3` rozhraní, pokud bude úspěšné vytvoření úlohy pa
 ## <a name="getshellautohidebars"></a> AFX_GLOBAL_DATA::GetShellAutohideBars
 
 Určuje umístění prostředí automaticky skrýt pruhy.
-
 
 ```
 int GetShellAutohideBars();
@@ -967,7 +920,6 @@ Celočíselná hodnota s kódováním příznaky, které určují umístění au
 
 Uvolní rozhraní získaných `GetITaskbarList` a `GetITaskbarList3` metody.
 
-
 ```
 void ReleaseTaskBarRefs();
 ```
@@ -975,7 +927,6 @@ void ReleaseTaskBarRefs();
 ## <a name="shellcreateitemfromparsingname"></a> AFX_GLOBAL_DATA::ShellCreateItemFromParsingName
 
 Vytvoří a inicializuje objekt prostředí položky z názvu analýzy.
-
 
 ```
 HRESULT ShellCreateItemFromParsingName(

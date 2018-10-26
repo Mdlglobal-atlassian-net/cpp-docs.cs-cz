@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa04fdee2b63f9d91d2bdd7dfd62100b3e32a2c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ae8b15431edbdd24a7afd6c7e25be6b9eadb4107
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393318"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081388"
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>Aktualizace textu na panelu stavového řádku
 
@@ -40,17 +40,17 @@ Předpokládejme například, že obsahuje jedno podokno `ID_INDICATOR_PAGE` i j
 
 1. Definování v podokně ID příkazu.
 
-     Na **zobrazení** nabídky, klikněte na tlačítko **zobrazení prostředků**. Klikněte pravým tlačítkem na projekt prostředků a klikněte na tlačítko **symbolů prostředků**. V dialogovém okně symbolů prostředků klikněte na tlačítko `New`. Zadejte název ID příkazu: například `ID_INDICATOR_PAGE`. Zadejte hodnotu pro ID nebo přijmout hodnotu navrhovanou v dialogovém okně symbolů prostředků. Například pro `ID_INDICATOR_PAGE`, přijměte výchozí hodnotu. Symboly prostředků dialogové okno zavřete.
+   Na **zobrazení** nabídky, klikněte na tlačítko **zobrazení prostředků**. Klikněte pravým tlačítkem na projekt prostředků a klikněte na tlačítko **symbolů prostředků**. V dialogovém okně symbolů prostředků klikněte na tlačítko `New`. Zadejte název ID příkazu: například `ID_INDICATOR_PAGE`. Zadejte hodnotu pro ID nebo přijmout hodnotu navrhovanou v dialogovém okně symbolů prostředků. Například pro `ID_INDICATOR_PAGE`, přijměte výchozí hodnotu. Symboly prostředků dialogové okno zavřete.
 
 1. Definujte výchozí řetězec k zobrazení v podokně.
 
-     Otevřít zobrazení prostředků, poklepejte na **tabulka řetězců** v okně, které jsou uvedeny typy prostředků pro vaši aplikaci. S **tabulka řetězců** editor otevřít, zvolte **nový řetězec** z **vložit** nabídky. V okně Vlastnosti řetězce vyberte ID do podokna příkazu (například `ID_INDICATOR_PAGE`) a zadejte výchozí hodnotu řetězce, jako je například "Stránky". Zavřete editor řetězců. (Budete potřebovat výchozí řetězec, aby se zabránilo chybu kompilátoru.)
+   Otevřít zobrazení prostředků, poklepejte na **tabulka řetězců** v okně, které jsou uvedeny typy prostředků pro vaši aplikaci. S **tabulka řetězců** editor otevřít, zvolte **nový řetězec** z **vložit** nabídky. V okně Vlastnosti řetězce vyberte ID do podokna příkazu (například `ID_INDICATOR_PAGE`) a zadejte výchozí hodnotu řetězce, jako je například "Stránky". Zavřete editor řetězců. (Budete potřebovat výchozí řetězec, aby se zabránilo chybu kompilátoru.)
 
 1. Přidat podokně tak, aby *indikátory* pole.
 
-     V souboru MAINFRM. CPP, vyhledejte *indikátory* pole. Toto pole obsahuje ID příkazu pro všechny indikátory stavového řádku v pořadí zleva doprava. V odpovídajícím bodě v poli zadejte ID do podokna příkazu, jak je znázorněno zde pro `ID_INDICATOR_PAGE`:
+   V souboru MAINFRM. CPP, vyhledejte *indikátory* pole. Toto pole obsahuje ID příkazu pro všechny indikátory stavového řádku v pořadí zleva doprava. V odpovídajícím bodě v poli zadejte ID do podokna příkazu, jak je znázorněno zde pro `ID_INDICATOR_PAGE`:
 
-     [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]
+   [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]
 
 Doporučeným způsobem zobrazování textu v podokně se má volat `SetText` členské funkce třídy `CCmdUI` ve funkci obslužné rutiny aktualizace podokna. Například můžete chtít nastavit proměnnou celého čísla *m_nPage* obsahující číslo aktuální stránky a použijte `SetText` nastavit text v podokně na řetězec verze tohoto čísla.
 
@@ -63,19 +63,19 @@ Následující postup ukazuje, jak používat funkci obslužné rutiny aktualiza
 
 1. Přidáte aktualizace obslužná rutina příkazu pro příkaz.
 
-     Ručně přidejte prototyp obslužné rutiny, jak je znázorněno zde pro `ID_INDICATOR_PAGE` (v MAINFRM. H):
+   Ručně přidejte prototyp obslužné rutiny, jak je znázorněno zde pro `ID_INDICATOR_PAGE` (v MAINFRM. H):
 
-     [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]
+   [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]
 
 1. Do odpovídajícího. CPP přidejte obslužnou rutinu definice, jak je znázorněno zde pro `ID_INDICATOR_PAGE` (v MAINFRM. CPP):
 
-     [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]
+   [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]
 
-     Poslední tři řádky z této obslužné rutiny jsou kód, který zobrazí text.
+   Poslední tři řádky z této obslužné rutiny jsou kód, který zobrazí text.
 
 1. Na mapě odpovídající zprávu přidat ON_UPDATE_COMMAND_UI – makro, jak je znázorněno zde pro `ID_INDICATOR_PAGE` (v MAINFRM. CPP):
 
-     [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]
+   [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]
 
 Jakmile definujete hodnotu *m_nPage* členské proměnné (třídy `CMainFrame`), tento postup způsobí, že číslo stránky, v podokně se zobrazí během zpracování při nečinnosti stejným způsobem, že aplikace aktualizuje další indikátory. Pokud *m_nPage* změn, změny zobrazení během další nečinné smyčky.
 

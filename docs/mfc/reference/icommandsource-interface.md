@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5071f2c6f00b3cc4aaf09974a01c4601d0078e42
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4908566a80fcad2350023f2306a952b2d97b2e62
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377954"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060673"
 ---
 # <a name="icommandsource-interface"></a>Icommandsource – rozhraní
 
@@ -103,6 +103,7 @@ void AddCommandRangeHandler(
     unsigned int cmdIDMax,
     CommandHandler^ cmdHandler);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *cmdIDMin*<br/>
@@ -124,6 +125,7 @@ void AddCommandRangeUIHandler(
     unsigned int cmdIDMax,
     CommandUIHandler^ cmdUIHandler);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *cmdIDMin*<br/>
@@ -145,6 +147,7 @@ void AddCommandUIHandler(
     unsigned int cmdID,
     CommandUIHandler^ cmdUIHandler);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *cmdID*<br/>
@@ -162,6 +165,7 @@ Odešle zprávu bez čekání na zpracování.
 ```
 void PostCommand(unsigned int command);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *Příkaz*<br/>
@@ -170,13 +174,13 @@ Identifikátor příkazu zprávy, která se má zveřejnit.
 
 Tato metoda asynchronně odešle zprávu mapovat na ID příkaz. Volá CWnd::PostMessage umístí zprávu ve frontě zpráv v okně a vrátí bez čekání na okno odpovídající zprávu.
 
-
 ## <a name="removecommandhandler"></a> ICommandSource::RemoveCommandHandler
 
 Obslužná rutina příkazu odebere ze zdrojového objektu příkazu.
 ```
 void RemoveCommandHandler(unsigned int cmdID);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *cmdID*<br/>
@@ -184,7 +188,6 @@ ID příkazu.
 ### <a name="remarks"></a>Poznámky
 
 Tato metoda odstraní obslužná rutina příkazu namapované na cmdID ze zdrojového objektu příkazu.
-
 
 ## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler
 
@@ -194,6 +197,7 @@ void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *cmdIDMin*<br/>
@@ -212,6 +216,7 @@ void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *cmdIDMin*<br/>
@@ -228,6 +233,7 @@ Obslužná rutina příkazu zprávy uživatelské rozhraní se odebere ze zdrojo
 ```
 void RemoveCommandUIHandler(unsigned int cmdID);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *cmdID*<br/>
@@ -242,6 +248,7 @@ Odešle zprávu a čeká na zpracování před vrácením.
 ```
 void SendCommand(unsigned int command);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *Příkaz*<br/>

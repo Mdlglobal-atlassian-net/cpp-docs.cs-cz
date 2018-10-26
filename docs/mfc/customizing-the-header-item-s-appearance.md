@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61c0e3e26679b2b84e3ea18a8e1bb92722d73e22
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 75e32021420848e7493d9652bb37cb12fa4df56b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442900"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055460"
 ---
 # <a name="customizing-the-header-item39s-appearance"></a>Přizpůsobení položky záhlaví&#39;vzhled
 
@@ -31,15 +31,15 @@ Tady je vzorkování styly, které můžete nastavit a jejich účel:
 
 - Chcete-li položka záhlaví vypadat jako pushbutton, použijte **HDS_BUTTONS** style.
 
-     Tento styl použijte, pokud chcete provádět akce v reakci na kliknutí myší na záhlaví položek, jako je například řazení dat podle konkrétního sloupce, jak je tomu v aplikaci Microsoft Outlook.
+   Tento styl použijte, pokud chcete provádět akce v reakci na kliknutí myší na záhlaví položek, jako je například řazení dat podle konkrétního sloupce, jak je tomu v aplikaci Microsoft Outlook.
 
 - Položky hlavičky vzhled "hot sledování" Pokud je přes ně přesunut ukazatel myši, použijte **HDS_HOTTRACK** style.
 
-     Zvýraznění zobrazí 3D osnovy jak předává ukazatel myši na položku. v opačném případě plochý panelu.
+   Zvýraznění zobrazí 3D osnovy jak předává ukazatel myši na položku. v opačném případě plochý panelu.
 
 - Chcete-li označit, že by měl být skrytý ovládací prvek hlavičky, použijte **HDS_HIDDEN** style.
 
-     **HDS_HIDDEN** styl označuje, že ovládacího prvku záhlaví je určena pro použití jako datový zásobník a není vizuální ovládací prvek. Tento styl automaticky neskrývá ovládacího prvku, ale místo toho má vliv na chování `CHeaderCtrl::Layout`. Hodnota vrácená v *cy* člena `WINDOWPOS` struktura bude nula označující, že ovládací prvek by neměly být viditelné pro uživatele.
+   **HDS_HIDDEN** styl označuje, že ovládacího prvku záhlaví je určena pro použití jako datový zásobník a není vizuální ovládací prvek. Tento styl automaticky neskrývá ovládacího prvku, ale místo toho má vliv na chování `CHeaderCtrl::Layout`. Hodnota vrácená v *cy* člena `WINDOWPOS` struktura bude nula označující, že ovládací prvek by neměly být viditelné pro uživatele.
 
 Další informace o těchto vlastnostech najdete v tématu [položky](/windows/desktop/Controls/header-controls) v sadě Windows SDK. Informace o přidávání položek do ovládacího prvku záhlaví najdete v tématu [přidávání položek do ovládacího prvku záhlaví](../mfc/adding-items-to-the-header-control.md).
 

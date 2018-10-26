@@ -8,18 +8,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdfa82580ba61ab276d6d64a9424d7043c2822f1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 742d722033d0fb2e686861d0e09fc45c73540ade
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393773"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075759"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Přehled potenciálních problémů s upgradem (Visual C++)
 
 V průběhu let kompilátor jazyka Microsoft Visual C++ prošla řadou změn, spolu se změnami samotný jazyk C++, standardní knihovny C++, C runtime (CRT) a dalších knihoven, jako je například knihovny MFC a ATL. V důsledku toho při upgradu aplikace ze starší verze sady Visual Studio můžete setkat, kompilátoru a linkeru chyby a upozornění v kódu, který dříve zkompilován čistě. Starší základní původního kódu, tím větší potenciál pro takové chyby. Tento přehled obsahuje souhrn třídy většiny běžných problémů, budete pravděpodobně dojde, a nabízí odkazy k podrobnějším informacím.
 
-> [!NOTE] 
+> [!NOTE]
 > V minulosti doporučujeme mít, upgrady, které jsou rozmístěny v několika verzích sady Visual Studio měli provádět přírůstkové jedné verze najednou. Doporučujeme, abyste už tento přístup. Zjistili jsme, že je téměř vždy jednodušší pro upgrade na nejnovější verzi sady Visual Studio bez ohledu na to, kolik základu kódu.
 
 Je možné odeslat dotazy nebo připomínky k upgradu vcupgrade@microsoft.com.
@@ -161,7 +161,7 @@ Další informace o aktuálním rozhraní API a minimální podporované operač
 
 ### <a name="windows-version"></a>Verze Windows
 
-Při upgradu program, který používá rozhraní Windows API přímo nebo nepřímo, je potřeba rozhodnout, minimální verze Windows na podporu. Windows 7 ve většině případů je dobrou volbou. Další informace najdete v části [záhlaví souboru problémy](porting-guide-spy-increment.md#header_file_problems). `WINVER` Makra definuje nejstarší verzi Windows, který program je navržený pro spouštění. Pokud váš program knihovny MFC nastaví WINVER 0x0501 (Windows XP) se zobrazí upozornění protože MFC už nepodporuje XP, přestože kompilátor sám má režim XP.  
+Při upgradu program, který používá rozhraní Windows API přímo nebo nepřímo, je potřeba rozhodnout, minimální verze Windows na podporu. Windows 7 ve většině případů je dobrou volbou. Další informace najdete v části [záhlaví souboru problémy](porting-guide-spy-increment.md#header_file_problems). `WINVER` Makra definuje nejstarší verzi Windows, který program je navržený pro spouštění. Pokud váš program knihovny MFC nastaví WINVER 0x0501 (Windows XP) se zobrazí upozornění protože MFC už nepodporuje XP, přestože kompilátor sám má režim XP.
 
 Další informace najdete v tématu [aktualizuje cílovou verzi Windows](porting-guide-spy-increment.md#updating_winver) a [více zastaralé soubory hlaviček](porting-guide-spy-increment.md#outdated_header_files).
 
@@ -188,4 +188,4 @@ Další informace najdete v tématu [Portování ze znakové sady MBCS do kódu 
 ## <a name="see-also"></a>Viz také:
 
 [Upgrade projektů z dřívějších verzí Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
-[Vylepšení shody C++ se sadou Visual Studio 2017](../cpp-conformance-improvements-2017.md)  
+[Vylepšení shody C++ se sadou Visual Studio 2017](../cpp-conformance-improvements-2017.md)

@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc19475cff0038d11131a26c36ab498a562b234c
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 7e9ec6724addeb8002eeb681f289f232520f31dc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236033"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060095"
 ---
 # <a name="hashmap-class"></a>hash_map – třída
 
@@ -277,7 +277,6 @@ Odkaz na hodnotu dat nalezeného prvku.
 ### <a name="remarks"></a>Poznámky
 
 Pokud není nalezena klíčová hodnota argumentu, pak funkce vyvolá objekt třídy [out_of_range – třída](../standard-library/out-of-range-class.md).
-
 
 ### <a name="example"></a>Příklad
 
@@ -2688,9 +2687,9 @@ Vrátí objekt funkce porovnání, která používá hash_map řazení jeho prvk
 
 ### <a name="remarks"></a>Poznámky
 
-Pro hash_map *m*, pokud dva prvky *e*1 *(k*1 *, d*1 *)* a *e*2 *(k*2 *, d*2 *)* jsou objekty typu [value_type](#value_type), kde *k*1 a *k*2 jsou jejich klíče typu [key_type](#key_type) a `d`1 a `d`2 jsou jejich data typu [mapped_type](#mapped_type), pak *m.*  `value_comp` *() (elektronická*1 *, e*2 *)* je ekvivalentní *m.* `key_comp` *() (KB*1 *, k*2 *)*. Uložený objekt definuje členskou funkci
+Pro hash_map *m*, pokud dva prvky *e1* (*k1*, *d1*) a *e2* (*k2*, *d2*) jsou objekty typu [value_type](#value_type), kde *k1* a *k2* jsou jejich klíče typu [key_type](#key_type) a *d1* a *d2* jsou jejich data typu [mapped_type](#mapped_type), pak `m.value_comp()(e1, e2)` je ekvivalentní `m.key_comp()(k1, k2)` . Uložený objekt definuje členskou funkci
 
-**BOOL – operátor**( **value_type &** `left`, **value_type &** `right`) **;**
+`bool operator(value_type& left, value_type& right);`
 
 který vrátí **true** Pokud hodnotu klíče `left` předchází a není rovno hodnotě klíče z `right` v pořadí řazení.
 

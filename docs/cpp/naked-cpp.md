@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89ab41c396f8602d16e2b2d88c3d83aeb7cdf21a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cdf77589ea39de4d17ccad1e3ef369cf4f0ca24d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46018377"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080881"
 ---
 # <a name="naked-c"></a>naked (C++)
 
@@ -39,7 +39,6 @@ __declspec(naked) declarator
 ## <a name="remarks"></a>Poznámky
 
 Protože **naked** atribut platí pouze pro definici funkce a není modifikátorem typu, musí neviditelné funkce používají rozšířenou syntaxi atributů a [__declspec](../cpp/declspec.md) – klíčové slovo.
-
 
 Kompilátor nemůže generovat vložené funkce pro funkci s atributem naked i v případě, že funkce je také označena [__forceinline](inline-functions-cpp.md) – klíčové slovo.
 

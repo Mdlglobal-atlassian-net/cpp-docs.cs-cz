@@ -43,189 +43,189 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 63bf2b36477ddc0c4088698c552b8ef734e16986
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 8919a4bb17e65ad105b49e9fd9b4945e47cbdb63
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083727"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058060"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor – třída
 
-Představuje typ přístupového objektu určený pro pokročilé uživatele.  
-  
+Představuje typ přístupového objektu určený pro pokročilé uživatele.
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-class CManualAccessor : public CAccessorBase  
-```  
+class CManualAccessor : public CAccessorBase
+```
 
-## <a name="requirements"></a>Požadavky  
+## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** také atldbcli.h  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="methods"></a>Metody  
-  
-|||  
-|-|-|  
-|[AddBindEntry –](#addbindentry)|Přidá položku vazby výstupní sloupce.|  
-|[AddParameterEntry](#addparameterentry)|Přidá položku parametru pro parametr přístupového objektu.|  
-|[CreateAccessor –](#createaccessor)|Přiděluje paměť pro sloupec struktury vazby a inicializuje sloupec datové členy.|  
-|[Createparameteraccessor –](#createparameteraccessor)|Přiděluje paměť pro parametr vazby struktury a inicializuje parametry datových členů.|  
-  
-## <a name="remarks"></a>Poznámky  
+**Záhlaví:** také atldbcli.h
 
-Pomocí `CManualAccessor`, můžete zadat parametr a výstupní vazba sloupce voláním funkce modulu runtime.  
+## <a name="members"></a>Členové
+
+### <a name="methods"></a>Metody
+
+|||
+|-|-|
+|[AddBindEntry –](#addbindentry)|Přidá položku vazby výstupní sloupce.|
+|[AddParameterEntry](#addparameterentry)|Přidá položku parametru pro parametr přístupového objektu.|
+|[CreateAccessor –](#createaccessor)|Přiděluje paměť pro sloupec struktury vazby a inicializuje sloupec datové členy.|
+|[Createparameteraccessor –](#createparameteraccessor)|Přiděluje paměť pro parametr vazby struktury a inicializuje parametry datových členů.|
+
+## <a name="remarks"></a>Poznámky
+
+Pomocí `CManualAccessor`, můžete zadat parametr a výstupní vazba sloupce voláním funkce modulu runtime.
 
 ## <a name="addbindentry"></a> CManualAccessor::AddBindEntry
 
-Přidá položku vazby výstupní sloupce.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Přidá položku vazby výstupní sloupce.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-void AddBindEntry(DBORDINAL nOrdinal,  
-   DBTYPE wType,  DBLENGTH nColumnSize,  
-   void* pData,  
-   void* pLength = NULL,  
-   void* pStatus = NULL) throw ();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+void AddBindEntry(DBORDINAL nOrdinal,
+   DBTYPE wType,  DBLENGTH nColumnSize,
+   void* pData,
+   void* pLength = NULL,
+   void* pStatus = NULL) throw ();
+```
 
-Zobrazit [DBBINDING](/previous-versions/windows/desktop/ms716845) v *referenční informace pro OLE DB programátory*.  
-  
+#### <a name="parameters"></a>Parametry
+
+Zobrazit [DBBINDING](/previous-versions/windows/desktop/ms716845) v *referenční informace pro OLE DB programátory*.
+
 *nOrdinal*<br/>
-[in] Číslo sloupce.  
-  
-*wType*<br/>
-[in] Datového typu.  
-  
-*nColumnSize*<br/>
-[in] Sloupec velikost v bajtech.  
-  
-*pData*<br/>
-[in] Ukazatel na sloupec data uložená ve vyrovnávací paměti.  
-  
-*pLength*<br/>
-[in] Ukazatel na délku pole, podle potřeby.  
-  
-*pStatus*<br/>
-[in] Ukazatel na proměnnou bylo vázané na sloupce stavu, v případě potřeby.  
-  
-### <a name="remarks"></a>Poznámky  
+[in] Číslo sloupce.
 
-Pokud chcete používat tuto funkci, nejprve je třeba volat [CreateAccessor –](../../data/oledb/cmanualaccessor-createaccessor.md). Nelze přidat více položek než počet sloupců zadaný v `CreateAccessor`. 
-  
+*wType*<br/>
+[in] Datového typu.
+
+*nColumnSize*<br/>
+[in] Sloupec velikost v bajtech.
+
+*pData*<br/>
+[in] Ukazatel na sloupec data uložená ve vyrovnávací paměti.
+
+*pLength*<br/>
+[in] Ukazatel na délku pole, podle potřeby.
+
+*pStatus*<br/>
+[in] Ukazatel na proměnnou bylo vázané na sloupce stavu, v případě potřeby.
+
+### <a name="remarks"></a>Poznámky
+
+Pokud chcete používat tuto funkci, nejprve je třeba volat [CreateAccessor –](../../data/oledb/cmanualaccessor-createaccessor.md). Nelze přidat více položek než počet sloupců zadaný v `CreateAccessor`.
+
 ## <a name="addparameterentry"></a> CManualAccessor::AddParameterEntry
 
-Přidá položku parametr struktury vstupní parametr.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Přidá položku parametr struktury vstupní parametr.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-void AddParameterEntry(DBORDINAL nOrdinal,  
-   DBTYPE wType,  DBLENGTH nColumnSize,  
-   void* pData,  
-   void* pLength = NULL,  
-   void* pStatus = NULL,  
-   DBPARAMIO eParamIO = DBPARAMIO_INPUT) throw ();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+void AddParameterEntry(DBORDINAL nOrdinal,
+   DBTYPE wType,  DBLENGTH nColumnSize,
+   void* pData,
+   void* pLength = NULL,
+   void* pStatus = NULL,
+   DBPARAMIO eParamIO = DBPARAMIO_INPUT) throw ();
+```
 
-Zobrazit [DBBINDING](/previous-versions/windows/desktop/ms716845) v *referenční informace pro OLE DB programátory*.  
-  
+#### <a name="parameters"></a>Parametry
+
+Zobrazit [DBBINDING](/previous-versions/windows/desktop/ms716845) v *referenční informace pro OLE DB programátory*.
+
 *nOrdinal*<br/>
-[in] Počet parametrů.  
-  
-*wType*<br/>
-[in] Datového typu.  
-  
-*nColumnSize*<br/>
-[in] Sloupec velikost v bajtech.  
-  
-*pData*<br/>
-[in] Ukazatel na sloupec data uložená ve vyrovnávací paměti.  
-  
-*pLength*<br/>
-[in] Ukazatel na délku pole, podle potřeby.  
-  
-*pStatus*<br/>
-[in] Ukazatel na proměnnou bylo vázané na sloupce stavu, v případě potřeby.  
-  
-*eParamIO*<br/>
-[in] Určuje, zda je parametr, ke kterému je přidružené vazby vstupní, vstup/výstup nebo výstupní parametr.  
-  
-### <a name="remarks"></a>Poznámky  
+[in] Počet parametrů.
 
-Pokud chcete používat tuto funkci, nejprve je třeba volat [createparameteraccessor –](../../data/oledb/cmanualaccessor-createparameteraccessor.md). 
+*wType*<br/>
+[in] Datového typu.
+
+*nColumnSize*<br/>
+[in] Sloupec velikost v bajtech.
+
+*pData*<br/>
+[in] Ukazatel na sloupec data uložená ve vyrovnávací paměti.
+
+*pLength*<br/>
+[in] Ukazatel na délku pole, podle potřeby.
+
+*pStatus*<br/>
+[in] Ukazatel na proměnnou bylo vázané na sloupce stavu, v případě potřeby.
+
+*eParamIO*<br/>
+[in] Určuje, zda je parametr, ke kterému je přidružené vazby vstupní, vstup/výstup nebo výstupní parametr.
+
+### <a name="remarks"></a>Poznámky
+
+Pokud chcete používat tuto funkci, nejprve je třeba volat [createparameteraccessor –](../../data/oledb/cmanualaccessor-createparameteraccessor.md).
 
 ## <a name="createaccessor"></a> CManualAccessor::CreateAccessor
 
-Přiděluje paměť pro sloupec struktury vazby a inicializuje sloupec datové členy.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Přiděluje paměť pro sloupec struktury vazby a inicializuje sloupec datové členy.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT CreateAccessor(int nBindEntries,   
-  void* pBuffer,   
-   DBLENGTH nBufferSize) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT CreateAccessor(int nBindEntries, 
+  void* pBuffer, 
+   DBLENGTH nBufferSize) throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *nBindEntries*<br/>
-[in] Počet sloupců. Tato hodnota by měla odpovídat počet volání [CManualAccessor::AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md) funkce.  
-  
+[in] Počet sloupců. Tato hodnota by měla odpovídat počet volání [CManualAccessor::AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md) funkce.
+
 *pBuffer*<br/>
-[in] Ukazatel do vyrovnávací paměti, kde se ukládají výstupní sloupce.  
-  
+[in] Ukazatel do vyrovnávací paměti, kde se ukládají výstupní sloupce.
+
 *nBufferSize*<br/>
-[in] Velikost vyrovnávací paměti v bajtech.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+[in] Velikost vyrovnávací paměti v bajtech.
 
-Jeden standardní hodnoty HRESULT.  
-  
-### <a name="remarks"></a>Poznámky  
+### <a name="return-value"></a>Návratová hodnota
 
-Voláním této funkce před voláním `CManualAccessor::AddBindEntry` funkce.  
+Jeden standardní hodnoty HRESULT.
+
+### <a name="remarks"></a>Poznámky
+
+Voláním této funkce před voláním `CManualAccessor::AddBindEntry` funkce.
 
 ## <a name="createparameteraccessor"></a> CManualAccessor::CreateParameterAccessor
 
-Přiděluje paměť pro parametr vazby struktury a inicializuje parametry datových členů.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Přiděluje paměť pro parametr vazby struktury a inicializuje parametry datových členů.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT CreateParameterAccessor(int nBindEntries,   
-   void* pBuffer,   
-   DBLENGTH nBufferSize) throw();  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT CreateParameterAccessor(int nBindEntries, 
+   void* pBuffer, 
+   DBLENGTH nBufferSize) throw();
+```
+
+#### <a name="parameters"></a>Parametry
 
 *nBindEntries*<br/>
-[in] Počet sloupců.  
-  
-*pBuffer*<br/>
-[in] Ukazatel do vyrovnávací paměti, kde jsou uložené vstupní sloupce.  
-  
-*nBufferSize*<br/>
-[in] Velikost vyrovnávací paměti v bajtech.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+[in] Počet sloupců.
 
-Jeden standardní hodnoty HRESULT.  
-  
-### <a name="remarks"></a>Poznámky  
+*pBuffer*<br/>
+[in] Ukazatel do vyrovnávací paměti, kde jsou uložené vstupní sloupce.
+
+*nBufferSize*<br/>
+[in] Velikost vyrovnávací paměti v bajtech.
+
+### <a name="return-value"></a>Návratová hodnota
+
+Jeden standardní hodnoty HRESULT.
+
+### <a name="remarks"></a>Poznámky
 
 Před voláním této funkce musíte volat [AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md).
 
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také
 
 [DBViewer](../../visual-cpp-samples.md)<br/>
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

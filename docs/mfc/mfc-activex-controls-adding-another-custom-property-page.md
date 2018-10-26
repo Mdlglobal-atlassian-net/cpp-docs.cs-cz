@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce81436781a92c8d2c9156e1d1c02513c3816dc4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1599500a775bcd1c76f2e63a1f7b20126a2fb329
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440053"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078203"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC – ovládací prvky ActiveX: Přidání další stránky přizpůsobených vlastností
 
@@ -65,7 +65,7 @@ Další informace o použití stránek vlastností v ovládacím prvku ActiveX n
 
 1. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat třídu**.
 
-     Tím se otevře [přidat třídu](../ide/add-class-dialog-box.md) dialogové okno.
+   Tím se otevře [přidat třídu](../ide/add-class-dialog-box.md) dialogové okno.
 
 1. Dvakrát klikněte **třídy knihovny MFC** šablony.
 
@@ -95,25 +95,25 @@ Dalším krokem zahrnuje vytvoření dvou nových prostředků řetězce, které
 
 1. Dvakrát klikněte **tabulka řetězců** složku a potom dvakrát klikněte na existující řetězec tabulky prostředků, ke kterému chcete přidat řetězec.
 
-     Tabulka řetězců se otevře v okně.
+   Tabulka řetězců se otevře v okně.
 
 1. Vyberte prázdný řádek na konec tabulky řetězců a zadejte text nebo caption řetězce: například "Další stránka vlastností."
 
-     Tím se otevře **vlastnosti řetězce** stránka zobrazující **titulek** a **ID** polí. **Titulek** pole obsahuje řetězec, který jste zadali.
+   Tím se otevře **vlastnosti řetězce** stránka zobrazující **titulek** a **ID** polí. **Titulek** pole obsahuje řetězec, který jste zadali.
 
 1. V **ID** vyberte nebo zadejte ID řetězce. Jakmile skončíte, stiskněte klávesu Enter.
 
-     Tento příklad používá **IDS_SAMPLE_ADDPAGE** zadejte název nové stránky vlastností.
+   Tento příklad používá **IDS_SAMPLE_ADDPAGE** zadejte název nové stránky vlastností.
 
 1. Zopakujte kroky 3 a 4 s využitím **IDS_SAMPLE_ADDPPG_CAPTION** pro ID a "Stránka Další vlastnost" pro titulek.
 
 1. V. Soubor CPP nové třídy stránky vlastností (v tomto příkladu `CAddtlPropPage`) změnit `CAddtlPropPage::CAddtlPropPageFactory::UpdateRegistry` tak, aby je předaný odkazem na IDS_SAMPLE_ADDPAGE [afxoleregisterpropertypageclass –](../mfc/reference/registering-ole-controls.md#afxoleregisterpropertypageclass), jako v následujícím příkladu:
 
-     [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]
+   [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]
 
 1. Upravit konstruktoru `CAddtlPropPage` tak, aby je předán IDS_SAMPLE_ADDPPG_CAPTION `COlePropertyPage` konstruktoru, následujícím způsobem:
 
-     [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]
+   [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]
 
 Po provedení potřebné změny znovu sestavit projekt a použít kontejner testu otestovat nové stránky vlastností. Zobrazit [testování vlastností a událostí pomocí testování kontejneru](../mfc/testing-properties-and-events-with-test-container.md) informace o tom, jak získat přístup ke kontejneru testů.
 

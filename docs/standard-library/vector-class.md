@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07dddbcfba7920efdda1f222843299ef29f19f0c
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 926a0f90f366f3644bfce33f15a0a85dd1792a85
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235786"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076748"
 ---
 # <a name="vector-class"></a>vector – třída
 
@@ -402,7 +402,6 @@ Vrátí iterátor s náhodným přístupem na první prvek ve vektoru.
 
 ```cpp
 const_iterator begin() const;
-
 
 iterator begin();
 ```
@@ -788,7 +787,6 @@ Vrací ukazatel na první prvek ve vektoru.
 
 ```cpp
 const_pointer data() const;
-
 
 pointer data();
 ```
@@ -1554,7 +1552,6 @@ Přidá prvek na konec vektoru.
 
 ```cpp
 void push_back(const T& Val);
-
 
 void push_back(T&& Val);
 ```

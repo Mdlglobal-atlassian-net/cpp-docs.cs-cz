@@ -20,16 +20,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35051c565a18ba61de53813ce57be147140cc468
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 19c3e441ff4130d30f3aeb7957c5af85576fb9e1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789547"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065860"
 ---
 # <a name="ole-db-consumer-attributes"></a>Atributy příjemce technologie OLE DB
 Atributy příjemce technologie OLE DB vložit kód, na základě [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-reference.md), chcete-li vytvořit pracovní technologie OLE DB příjemce, který provádí úlohy, jako je otevření tabulek, provádění příkazů a přístup k datům.
-  
+
 |Atribut|Popis|
 |---------------|-----------------|
 |[db_accessor](db-accessor.md)|Vytvoří vazbu sloupců v sadě řádků a sváže s odpovídající přístupového objektu map.|
@@ -38,7 +38,7 @@ Atributy příjemce technologie OLE DB vložit kód, na základě [OLE DB – š
 |[db_param](db-param.md)|Přidruží zadaný členskou proměnnou vstupní nebo výstupní parametr.|
 |[db_source](db-source.md)|Vytvoří a zapouzdřuje připojení prostřednictvím poskytovatele ke zdroji dat.|
 |[db_table](db-table.md)|Otevře se tabulku OLE DB.|
-  
+
 ## <a name="see-also"></a>Viz také
 
 [Atributy podle skupin](attributes-by-group.md)

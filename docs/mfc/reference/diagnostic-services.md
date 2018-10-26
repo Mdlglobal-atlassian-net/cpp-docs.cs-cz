@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b572af3bdfd444687af98172da9ada0736dac25
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dd420544f341159fa4281c4f837fa222d357e1b1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429510"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068694"
 ---
 # <a name="diagnostic-services"></a>Diagnostické služby
 
@@ -103,7 +103,6 @@ Kromě toho knihovny run-time jazyka C podporuje také sadu diagnostické funkce
 |-|-|
 |[_AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|Potlačí upozornění kompilátoru pro použití zastaralé funkce knihovny MFC.|
 
-
 ## <a name="afx_secure_no_warnings"></a> _AFX_SECURE_NO_WARNINGS
 
 Potlačí upozornění kompilátoru pro použití zastaralé funkce knihovny MFC.
@@ -113,6 +112,7 @@ Potlačí upozornění kompilátoru pro použití zastaralé funkce knihovny MFC
 ```
 _AFX_SECURE_NO_WARNINGS
 ```
+
 ### <a name="example"></a>Příklad
 
 Tento vzorový kód způsobí upozornění kompilátoru, pokud _AFX_SECURE_NO_WARNINGS nebyly definovány.
@@ -309,6 +309,7 @@ Slouží k ověření správnosti dat.
 ENSURE(  booleanExpression )
 ENSURE_VALID( booleanExpression  )
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *booleanExpression*<br/>
@@ -370,7 +371,6 @@ static char THIS_FILE[] = __FILE__;
 [Makra a globální prvky](mfc-macros-and-globals.md)<br/>
 [KONTROLNÍ VÝRAZ](#assert)<br/>
 [OVĚŘENÍ](#verify)
-
 
 ##  <a name="trace"></a>  TRASOVÁNÍ
 
@@ -450,7 +450,6 @@ Tato proměnná je definováno pouze v ladicí verzi knihovny MFC. Další infor
 
 **Záhlaví:** afx.h
 
-
 ## <a name="afxdump"></a> AfxDump (interní)
 
 Vnitřní funkce, která knihovna MFC používá pro výpis stavu objektu během ladění.
@@ -460,6 +459,7 @@ Vnitřní funkce, která knihovna MFC používá pro výpis stavu objektu během
 ```
 void AfxDump(const CObject* pOb);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *Poštovní přihrádka*<br/>
@@ -478,8 +478,6 @@ Váš program kód by neměl volat `AfxDump`, ale místo toho by měly volat `Du
 ### <a name="see-also"></a>Viz také
 
 [CObject::Dump](cobject-class.md#dump)
-
-
 
 ##  <a name="afxmemdf"></a>  afxmemdf –
 
@@ -597,8 +595,6 @@ Váš program kód by neměl volat `AfxDump`, ale místo toho by měly volat `Du
 ### <a name="see-also"></a>Viz také
 
 [CObject::Dump](cobject-class.md#dump)
-
-
 
 ##  <a name="afxdumpstack"></a>  Afxdumpstack –
 

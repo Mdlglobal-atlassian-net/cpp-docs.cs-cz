@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db431b80a569436aab477b89be447ee6df1932b2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e3b91d0397b1eec53988e7acd5a5b7dce61db4ec
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423998"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059880"
 ---
 # <a name="cmfcrebar-class"></a>Cmfcrebar – třída
 
@@ -117,12 +117,14 @@ BOOL AddBar(
 
 ### <a name="parameters"></a>Parametry
 
-[in] [out] *pBar* ukazatele na podřízené okno, které má být vložen do matrice. Odkazovaný objekt musí mít **WS_CHILD** styl okna.
+*pBar*<br/>
+[out v] Ukazatel na podřízené okno, které má být vložen do matrice. Odkazovaný objekt musí mít **WS_CHILD** styl okna.
 
 *pszText*<br/>
 [in] Určuje text, který se zobrazí na matrice. Text není součástí podřízené okno. Místo toho se zobrazí na matrice, samotného.
 
-[in] [out] *pbmp* Určuje rastrový obrázek, který se má zobrazit na pozadí matrice.
+*pbmp*<br/>
+[out v] Určuje rastrový obrázek, který se má zobrazit na pozadí matrice.
 
 *dwStyle*<br/>
 [in] Obsahuje styl pásma použít. Úplný seznam styly obsluhy vzdálené správy, naleznete v popisu pro `fStyle` v [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) struktura v dokumentaci Windows SDK.
@@ -151,7 +153,8 @@ BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-[in] [out] *pParentWnd* ukazatel do nadřazeného okna tohoto ovládacího prvku rebar.
+*pParentWnd*<br/>
+[out v] Ukazatel na nadřazené okno tohoto ovládacího prvku rebar.
 
 *dwCtrlStyle*<br/>
 [in] Určuje styl ovládacího prvku rebar. Výchozí hodnota stylu je **RBS_BANDBORDERS**, který zobrazí zúžit řádky k oddělení sousední pruhy v ovládacím prvku matrice. Seznam platný stylů, najdete v části [– styly ovládacího prvku Rebar](/windows/desktop/Controls/rebar-control-styles) v dokumentaci Windows SDK.
@@ -186,7 +189,6 @@ Voláním této metody lze využít výhody funkcí běžné ovládací prvek Wi
 
 ##  <a name="calcfixedlayout"></a>  CMFCReBar::CalcFixedLayout
 
-
 ```
 virtual CSize CalcFixedLayout(
     BOOL bStretch,
@@ -195,15 +197,14 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>Parametry
 
-*bStretch*<br/>
-[in] [in] *bHorz*
+[in] *bStretch*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="canfloat"></a>  CMFCReBar::CanFloat
-
 
 ```
 virtual BOOL CanFloat() const;
@@ -215,19 +216,17 @@ virtual BOOL CanFloat() const;
 
 ##  <a name="enabledocking"></a>  CMFCReBar::EnableDocking
 
-
 ```
 void EnableDocking(DWORD dwDockStyle);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *dwDockStyle*
+[in] *dwDockStyle*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="getrebarbandinfosize"></a>  CMFCReBar::GetReBarBandInfoSize
-
 
 ```
 UINT GetReBarBandInfoSize() const;
@@ -239,21 +238,19 @@ UINT GetReBarBandInfoSize() const;
 
 ##  <a name="onshowcontrolbarmenu"></a>  CMFCReBar::OnShowControlBarMenu
 
-
 ```
 virtual BOOL OnShowControlBarMenu(CPoint);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *CPoint*
+[in] *CPoint*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="ontoolhittest"></a>  CMFCReBar::OnToolHitTest
-
 
 ```
 virtual INT_PTR OnToolHitTest(
@@ -263,15 +260,14 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
-[in] [in] *pTI*
+[in] *bodu*<br/>
+[in] *pTI*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="onupdatecmdui"></a>  CMFCReBar::OnUpdateCmdUI
-
 
 ```
 virtual void OnUpdateCmdUI(
@@ -281,13 +277,12 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="parameters"></a>Parametry
 
-*pTarget*<br/>
-[in] [in] *bDisableIfNoHndler*
+[in] *pTarget*<br/>
+[in] *bDisableIfNoHndler*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
 ##  <a name="setpanealignment"></a>  CMFCReBar::SetPaneAlignment
-
 
 ```
 virtual void SetPaneAlignment(DWORD dwAlignment);
@@ -295,7 +290,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *dwAlignment*
+[in] *dwAlignment*<br/>
 
 ### <a name="remarks"></a>Poznámky
 

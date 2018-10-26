@@ -1,7 +1,7 @@
 ---
 title: hash_multimap – třída | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d34569f1b0f984a521b7d5a79221e089f1a1df0
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3796ba7b243305fbae75e64f44e14964a89a9805
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235760"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075317"
 ---
 # <a name="hashmultimap-class"></a>hash_multimap – třída
 
@@ -1497,7 +1497,6 @@ hash_multimap(
     initializer_list<Type> IList,
     const Compare& Comp);
 
-
 hash_multimap(
     initializer_list<Type> IList,
     const Compare& Comp,
@@ -2477,9 +2476,9 @@ Vrátí objekt funkce porovnání, která používá hash_multimap řazení jeho
 
 ### <a name="remarks"></a>Poznámky
 
-Pro hash_multimap *m*, pokud dva prvky *e*1 ( *k*1 *, d*1) a *e*2 ( *k*2 *, d*2) jsou objekty typu [value_type](#value_type), kde *k*1 a *k*2 jsou jejich klíče typu [key_type](#key_type) a `d`1 a `d`2 jsou jejich data typu [mapped_type](#mapped_type), pak *m.*`value_comp`() ( *e*1 *, e*2) je ekvivalentní *m.*`key_comp`() ( *k*1 *, k*2). Uložený objekt definuje členskou funkci
+Pro hash_multimap *m*, pokud dva prvky *e1* (*k1*, *d1*) a *e2*(*k2* , *d2*) jsou objekty typu [value_type](#value_type), kde *k1* a *k2* jsou jejich klíče typu [key_type](#key_type) a *d1* a *d2* jsou jejich data typu [mapped_type](#mapped_type), pak `m.value_comp()(e1, e2)` je ekvivalentní `m.key_comp()(k1, k2)` . Uložený objekt definuje členskou funkci
 
-**BOOL – operátor**( **value_type &**`left`, **value_type &** `right`);
+`bool operator( value_type& left, value_type& right);`
 
 který vrátí **true** Pokud hodnotu klíče `left` předchází a není rovno hodnotě klíče z `right` v pořadí řazení.
 

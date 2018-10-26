@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e5b2783dda3c66736a7e668186d0645cdd4b84
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 659b76a640a0dfaee75179f135fee9d1eeb5ba02
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861314"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058333"
 ---
 # <a name="storage-classes-c"></a>Třídy úložiště (C++)
 
@@ -35,7 +35,6 @@ A *třídu úložiště* deklarace proměnných v rámci jazyka C++ je specifik�
 1. [Proměnlivé](../cpp/mutable-data-members-cpp.md) – klíčové slovo lze považovat za specifikátor paměťové třídy. Je však pouze k dispozici v sezamu členů definice třídy.
 
 1. **Visual C++ 2010 nebo novějším:** **automaticky** – klíčové slovo již není specifikátorem třídy úložiště jazyka C++ a **zaregistrovat** – klíčové slovo je zastaralý. **Visual Studio 2017 verze 15.7 nebo novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **zaregistrovat** – klíčové slovo se odebere z jazyka C++.
-
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class

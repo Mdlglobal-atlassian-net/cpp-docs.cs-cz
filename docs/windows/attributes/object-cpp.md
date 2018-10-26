@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14bb20cae26ecb012362b65f86aae5e422170a1a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 8828ada429875245d583c30d65259300a01f6a5d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789357"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067433"
 ---
 # <a name="object-c"></a>object (C++)
 
@@ -63,5 +63,5 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](cp
 [Atributy rozhraní](interface-attributes.md)<br/>
 [dual](dual.md)<br/>
 [dispinterface](dispinterface.md)<br/>
-[Vlastní](custom-cpp.md)<br/>
-[__interface](../../cpp/interface.md)  
+[custom](custom-cpp.md)<br/>
+[__interface](../../cpp/interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Události (Linux C++) sestavení vzdálené | Microsoft Docs
+title: Vzdáleného buildu události (C++ pro Linux) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 9/26/2017
 ms.technology:
@@ -12,65 +12,65 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 38c036bf747115823b853d0d66077f4402a7f7ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ea01c5d92cbdb6066dc87675221eae6865af354
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338403"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070975"
 ---
-# <a name="build-event-properties-linux-c"></a>Vytvoření vlastnosti události (Linux C++) 
+# <a name="build-event-properties-linux-c"></a>Vytvořit událost vlastnosti (Linux C++)
 
-## <a name="pre-build-event"></a>Události před sestavením
+## <a name="pre-build-event"></a>Událost před sestavením
 
 Vlastnost | Popis
 --- | ---
-Příkazový řádek | Určuje příkazový řádek pro spuštění nástroje události před sestavením.
-Popis | Určuje popis události před sestavením nástroj k zobrazení.
-Použití v sestavení | Určuje, zda je tato událost sestavení vyloučen ze sestavení pro aktuální konfiguraci.
-Další soubory pro kopírování | Určuje další soubory zkopírovat do vzdáleného systému. Volitelně lze zadat seznam jako místní k párům vzdálené mapování pomocí syntaxe takto: fulllocalpath1: = fullremotepath1; fulllocalpath2: = fullremotepath2, kam lze zkopírovat do místního souboru do zadaného umístění vzdáleného do vzdáleného systému.
+Příkazový řádek | Určuje příkazový řádek, který má spustit nástroj události před sestavením.
+Popis | Určuje popis, který se má zobrazit nástroj události před sestavením.
+Použít v sestavení | Určuje, zda je tato událost sestavení vyloučena ze sestavení v aktuální konfiguraci.
+Další soubory ke zkopírování | Určuje další soubory ke zkopírování do vzdáleného systému. Volitelně můžete zadat seznamu jako místní dvojice mapování vzdálených touto syntaxí: fulllocalpath1: = fullremotepath1; fulllocalpath2: = fullremotepath2, kde místní soubor je možné zkopírovat do zadaného vzdáleného umístění ve vzdáleném systému.
 
 ## <a name="pre-link-event"></a>Událost před propojením
 
 Vlastnost | Popis
 --- | ---
-Příkazový řádek | Určuje příkazový řádek pro nástroj událost před propojením ke spuštění.
-Popis | Určuje popis nástroj událost před propojením k zobrazení.
-Použití v sestavení | Určuje, zda je tato událost sestavení vyloučen ze sestavení pro aktuální konfiguraci.
-Další soubory pro kopírování | Určuje další soubory zkopírovat do vzdáleného systému. Volitelně lze zadat seznam jako místní k párům vzdálené mapování pomocí syntaxe takto: fulllocalpath1: = fullremotepath1; fulllocalpath2: = fullremotepath2, kam lze zkopírovat do místního souboru do zadaného umístění vzdáleného do vzdáleného systému.
+Příkazový řádek | Určuje příkazový řádek, který má spustit nástroj události před propojením.
+Popis | Určuje popis, který se má zobrazit nástroj události před propojením.
+Použít v sestavení | Určuje, zda je tato událost sestavení vyloučena ze sestavení v aktuální konfiguraci.
+Další soubory ke zkopírování | Určuje další soubory ke zkopírování do vzdáleného systému. Volitelně můžete zadat seznamu jako místní dvojice mapování vzdálených touto syntaxí: fulllocalpath1: = fullremotepath1; fulllocalpath2: = fullremotepath2, kde místní soubor je možné zkopírovat do zadaného vzdáleného umístění ve vzdáleném systému.
 
-## <a name="post-build-event"></a>Události po sestavení
-
-Vlastnost | Popis
---- | ---
-Příkazový řádek | Určuje příkazový řádek pro spuštění nástroje události po sestavení.
-Popis | Určuje popis události po sestavení nástroj pro zobrazení.
-Použití v sestavení | Určuje, zda je tato událost sestavení vyloučen ze sestavení pro aktuální konfiguraci.
-Další soubory pro kopírování | Určuje další soubory zkopírovat do vzdáleného systému. Volitelně lze zadat seznam jako místní k párům vzdálené mapování pomocí syntaxe takto: fulllocalpath1: = fullremotepath1; fulllocalpath2: = fullremotepath2, kam lze zkopírovat do místního souboru do zadaného umístění vzdáleného do vzdáleného systému.
-
-## <a name="remote-pre-build-event"></a>Vzdálené události před sestavením
+## <a name="post-build-event"></a>Událost po sestavení
 
 Vlastnost | Popis
 --- | ---
-Příkazový řádek | Určuje příkazový řádek události před sestavením nástroje ke spuštění ve vzdáleném systému.
-Popis | Určuje popis události před sestavením nástroj k zobrazení.
-Použití v sestavení | Určuje, zda je tato událost sestavení vyloučen ze sestavení pro aktuální konfiguraci.
-Další soubory pro kopírování | Určuje další soubory pro kopírování ze vzdáleného systému. Volitelně lze zadat seznam jako vzdálené k párům místních mapovacích pomocí syntaxe takto: fullremotepath1: = fulllocalpath1; fullremotepath2: = fulllocalpath2, kam lze zkopírovat ke vzdálenému souboru do zadaného umístění v místním počítači.
+Příkazový řádek | Určuje příkazový řádek, který má spustit nástroj události po sestavení.
+Popis | Určuje popis, který se má zobrazit nástroj události po sestavení.
+Použít v sestavení | Určuje, zda je tato událost sestavení vyloučena ze sestavení v aktuální konfiguraci.
+Další soubory ke zkopírování | Určuje další soubory ke zkopírování do vzdáleného systému. Volitelně můžete zadat seznamu jako místní dvojice mapování vzdálených touto syntaxí: fulllocalpath1: = fullremotepath1; fulllocalpath2: = fullremotepath2, kde místní soubor je možné zkopírovat do zadaného vzdáleného umístění ve vzdáleném systému.
 
-## <a name="remote-pre-link-event"></a>Vzdálené událost před propojením
+## <a name="remote-pre-build-event"></a>Vzdálená událost před sestavením
 
 Vlastnost | Popis
 --- | ---
-Příkazový řádek | Určuje příkazový řádek pro nástroj událost před propojením ke spuštění ve vzdáleném systému.
-Popis | Určuje popis nástroj událost před propojením k zobrazení.
-Použití v sestavení | Určuje, zda je tato událost sestavení vyloučen ze sestavení pro aktuální konfiguraci.
-Další soubory pro kopírování | Určuje další soubory pro kopírování ze vzdáleného systému. Volitelně lze zadat seznam jako vzdálené k párům místních mapovacích pomocí syntaxe takto: fullremotepath1: = fulllocalpath1; fullremotepath2: = fulllocalpath2, kam lze zkopírovat ke vzdálenému souboru do zadaného umístění v místním počítači.
+Příkazový řádek | Určuje příkazový řádek pro spuštění ve vzdáleném systému nástroje pre-build event.
+Popis | Určuje popis, který se má zobrazit nástroj události před sestavením.
+Použít v sestavení | Určuje, zda je tato událost sestavení vyloučena ze sestavení v aktuální konfiguraci.
+Další soubory ke zkopírování | Určuje další soubory ke zkopírování ze vzdáleného systému. Volitelně lze zadat seznam jako vzdálené místních mapovacích dvojice touto syntaxí: fullremotepath1: = fulllocalpath1; fullremotepath2: = fulllocalpath2, kde vzdálený soubor je možné zkopírovat do zadaného umístění na místním počítači.
 
-## <a name="remote-post-build-event"></a>Vzdálené události po sestavení
+## <a name="remote-pre-link-event"></a>Vzdálená událost před propojením
+
+Vlastnost | Popis
+--- | ---
+Příkazový řádek | Určuje příkazový řádek pro nástroj události před propojením ke spuštění ve vzdáleném systému.
+Popis | Určuje popis, který se má zobrazit nástroj události před propojením.
+Použít v sestavení | Určuje, zda je tato událost sestavení vyloučena ze sestavení v aktuální konfiguraci.
+Další soubory ke zkopírování | Určuje další soubory ke zkopírování ze vzdáleného systému. Volitelně lze zadat seznam jako vzdálené místních mapovacích dvojice touto syntaxí: fullremotepath1: = fulllocalpath1; fullremotepath2: = fulllocalpath2, kde vzdálený soubor je možné zkopírovat do zadaného umístění na místním počítači.
+
+## <a name="remote-post-build-event"></a>Vzdálená událost po sestavení
 
 Vlastnost | Popis
 --- | ---
 Příkazový řádek | Určuje příkazový řádek pro nástroj události po sestavení ke spuštění ve vzdáleném systému.
-Popis | Určuje popis události po sestavení nástroj pro zobrazení.
-Použití v sestavení | Určuje, zda je tato událost sestavení vyloučen ze sestavení pro aktuální konfiguraci.
-Další soubory pro kopírování | Určuje další soubory pro kopírování ze vzdáleného systému. Volitelně lze zadat seznam jako vzdálené k párům místních mapovacích pomocí syntaxe takto: fullremotepath1: = fulllocalpath1; fullremotepath2: = fulllocalpath2, kam lze zkopírovat ke vzdálenému souboru do zadaného umístění v místním počítači.
+Popis | Určuje popis, který se má zobrazit nástroj události po sestavení.
+Použít v sestavení | Určuje, zda je tato událost sestavení vyloučena ze sestavení v aktuální konfiguraci.
+Další soubory ke zkopírování | Určuje další soubory ke zkopírování ze vzdáleného systému. Volitelně lze zadat seznam jako vzdálené místních mapovacích dvojice touto syntaxí: fullremotepath1: = fulllocalpath1; fullremotepath2: = fulllocalpath2, kde vzdálený soubor je možné zkopírovat do zadaného umístění na místním počítači.

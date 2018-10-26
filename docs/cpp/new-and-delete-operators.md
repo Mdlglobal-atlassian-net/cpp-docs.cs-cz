@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b205be3c2417453faa54c9d24ac28216ee0af5cf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 447a03cec8beba331aedc8077a44dc9090fccbc6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46060527"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078521"
 ---
 # <a name="new-and-delete-operators"></a>Operátory new a delete
 
@@ -45,7 +45,6 @@ char *pch = new char[BUFFER_SIZE];
 Pokud je požadavek pro nula bajtů úložiště, **operátor new** vrací ukazatel na konkrétní objekt (opakovaná volání **operátor new** vrátí různé ukazatele). Pokud není dostatek paměti pro požadavek na přidělení, **operátor new** vyvolá výjimku std::bad_alloc, nebo vrátí **nullptr** případě propojení v non-throwing. **operátor new** podporovat.
 
 Lze napsat rutinu, která se pokusí uvolnit paměť a opakovat přidělení; Zobrazit [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) Další informace. Podrobné informace o schématu obnovení naleznete v části zpracování není dostatek paměti tohoto tématu.
-
 
 Dva obory **operátor new** funkce jsou popsány v následující tabulce.
 

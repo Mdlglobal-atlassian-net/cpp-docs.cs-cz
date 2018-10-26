@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 519837379369f08108d3d5b5b300fe0bcb9ac5e7
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 52a2d1387fd476cffa2027ffc136b4759b591e31
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083811"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059191"
 ---
 # <a name="ccommodule-class"></a>Ccommodule – třída
 
@@ -136,7 +136,7 @@ Kromě `CComModule`, knihovna ATL poskytuje [CComAutoThreadModule](../../atl/ref
 Od verze ATL 7.0 `CComModule` je zastaralý: naleznete v tématu [ATL – třídy modulů](../../atl/atl-module-classes.md) další podrobnosti.
 
 ```
-HRESULT GetClassObject(  
+HRESULT GetClassObject(
     REFCLSID rclsid,
     REFIID riid,
     LPVOID* ppv) throw();
@@ -340,7 +340,7 @@ Odkazuje na objekt map udržuje instancí modulu.
 Od verze ATL 7.0 `CComModule` je zastaralý: naleznete v tématu [ATL – třídy modulů](../../atl/atl-module-classes.md) další podrobnosti.
 
 ```
-ATL_DEPRECATED HRESULT RegisterClassHelper(  
+ATL_DEPRECATED HRESULT RegisterClassHelper(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID,
@@ -405,7 +405,7 @@ Od verze ATL 7.0 `CComModule` je zastaralý: naleznete v tématu [ATL – tříd
 
 ```
 HRESULT RegisterServer(
-    BOOL bRegTypeLib = FALSE,  
+    BOOL bRegTypeLib = FALSE,
     const CLSID* pCLSID = NULL) throw();
 ```
 
@@ -488,7 +488,7 @@ Uvolní všechny datové členy.
 Od verze ATL 7.0 `CComModule` je zastaralý: naleznete v tématu [ATL – třídy modulů](../../atl/atl-module-classes.md) další podrobnosti.
 
 ```
-ATL_DEPRECATED HRESULT UnregisterClassHelper(  
+ATL_DEPRECATED HRESULT UnregisterClassHelper(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID);
@@ -549,7 +549,7 @@ Zobrazit [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) informace o
 Od verze ATL 7.0 `CComModule` je zastaralý: naleznete v tématu [ATL – třídy modulů](../../atl/atl-module-classes.md) další podrobnosti.
 
 ```
-ATL_DEPRECATED HRESULT UpdateRegistryClass(  
+ATL_DEPRECATED HRESULT UpdateRegistryClass(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID,
@@ -557,7 +557,7 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
     DWORD dwFlags,
     BOOL bRegister);
 
-ATL_DEPRECATED HRESULT UpdateRegistryClass(  
+ATL_DEPRECATED HRESULT UpdateRegistryClass(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID,
@@ -608,12 +608,12 @@ Zadáním [DECLARE_REGISTRY](registry-macros.md#declare_registry) – makro, `Up
 Od verze ATL 7.0 `CComModule` je zastaralý: naleznete v tématu [ATL – třídy modulů](../../atl/atl-module-classes.md) další podrobnosti.
 
 ```
-virtual HRESULT UpdateRegistryFromResourceD(  
+virtual HRESULT UpdateRegistryFromResourceD(
     LPCTSTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 
-virtual HRESULT UpdateRegistryFromResourceD(  
+virtual HRESULT UpdateRegistryFromResourceD(
     UINT nResID,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw ();
@@ -658,12 +658,12 @@ Další informace o nahraditelné parametry a skriptů, najdete v článku [The 
 Od verze ATL 7.0 `CComModule` je zastaralý: naleznete v tématu [ATL – třídy modulů](../../atl/atl-module-classes.md) další podrobnosti.
 
 ```
-virtual HRESULT UpdateRegistryFromResourceS(  
+virtual HRESULT UpdateRegistryFromResourceS(
     LPCTSTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 
-virtual HRESULT UpdateRegistryFromResourceS(  
+virtual HRESULT UpdateRegistryFromResourceS(
     UINT nResID,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();

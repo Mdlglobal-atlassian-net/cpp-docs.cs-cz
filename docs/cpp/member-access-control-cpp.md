@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dced1bd7db0f3eec9d9d070deb8cf990496116ae
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: e0ac5ceda3b979454c5d37e513cbd77a4d3e3e20
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821657"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063351"
 ---
 # <a name="member-access-control-c"></a>řízení přístupu ke členu (C++)
 
@@ -247,7 +247,6 @@ Ve svazech vícenásobné dědičnosti zahrnujících virtuální základní tř
 ![Přístup podél cest grafu dědičnosti](../cpp/media/vc38v91.gif "vc38V91") přístup podél cest grafu dědičnosti
 
 Na obrázku je název deklarovaný ve třídě `VBase` vždy dosažen prostřednictvím třídy `RightPath`. Pravá cesta je přístupnější, protože třída `RightPath` deklaruje třídu `VBase` jako veřejnou základní, zatímco třída `LeftPath` deklaruje třídu `VBase` jako soukromou.
-
 
 ## <a name="see-also"></a>Viz také
 

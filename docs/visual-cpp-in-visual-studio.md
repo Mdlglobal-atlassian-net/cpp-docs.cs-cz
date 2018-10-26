@@ -14,20 +14,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae68abc0768c0a06526af6439a8a881684ecdb15
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 8cb811ccd3291caa9b3da095310c74416fbd5799
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821277"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067940"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ v sadě Visual Studio
 
-> [!NOTE]  
-> Tato dokumentace pro vývojáře se vztahuje na Visual Studio 2015 a Visual Studio 2017. 
+> [!NOTE]
+> Tato dokumentace pro vývojáře se vztahuje na Visual Studio 2015 a Visual Studio 2017.
 
-> Pokud hledáte balíček distribuovatelných součástí Visual C++ tak, aby mohly běžet programu, pokračujte [Microsoft Download Center](http://www.microsoft.com/download/) a zadejte **Visual C++** do vyhledávacího pole.  
-  
+> Pokud hledáte balíček distribuovatelných součástí Visual C++ tak, aby mohly běžet programu, pokračujte [Microsoft Download Center](http://www.microsoft.com/download/) a zadejte **Visual C++** do vyhledávacího pole.
+
 
 Microsoft Visual C++, obvykle zkrátila na Visual C++ nebo MSVC, je název pro C++, C a jazyk sestavení vývojářské nástroje a knihovny, které jsou k dispozici jako součást sady Visual Studio ve Windows. Tyto nástroje a knihovny umožňují vytvářet aplikace pro univerzální platformu Windows (UPW), nativních aplikací stolní počítače a servery Windows, multiplatformní knihovny a aplikace, které běží na Windows, Linux, Android a iOS, stejně jako spravovaných aplikací a knihoven, které používají rozhraní .NET Architektura. Visual C++ můžete použít k zápisu cokoli z jednoduché konzolové aplikace do nejvíce propracované a komplexní aplikace pro Windows desktop z ovladačů zařízení a součástí operačního systému pro mobilní zařízení a hry pro různé platformy z nejmenší zařízení IoT k více serverů vysokovýkonného výpočetního prostředí v cloudu Azure.
 
@@ -101,7 +101,7 @@ Vyhledejte si pokyny a referenční obsah ve středisku pro vývojáře v oper
 [Desktopové aplikace (C++)](windows/desktop-applications-visual-cpp.md)<br/>
 Zjistěte, jak vytvořit tradiční nativních desktopových aplikací C++ pro Windows.
 
-[.NET – programování s C + +/ CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
+[Programování pro .NET v jazyce C++/CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 Zjistěte, jak vytvořit knihovny DLL, které umožňuje interoperabilitu mezi nativním jazyce C++ a .NET programy napsané v jazycích, jako je C# nebo Visual Basic.
 
 [Programování v systému Linux](linux/index.md)<br/>
@@ -160,7 +160,7 @@ Masivně paralelní algoritmy, které jsou spouštěny na GPU.
 [Knihovna prostředí runtime Windows (WRL)](windows/windows-runtime-cpp-template-library-wrl.md)<br/>
 Univerzální aplikace pro platformu Windows (UPW) a komponenty.
 
-[.NET – programování s C + +/ CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
+[Programování pro .NET v jazyce C++/CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 Programování pro modul Common Language Runtime (CLR).
 
 ## <a name="third-party-open-source-c-libraries"></a>Knihovny třetích stran opensourcového jazyka C++

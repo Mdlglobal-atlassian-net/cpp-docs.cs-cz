@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7bd8c505c857082732e56ff2b4bf1a5bed76647
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 913bc04533668e6576a84641937992504f49390a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420306"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080075"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX – kontejnery ovládacích prvků: Ošetření událostí v ovládacím prvku ActiveX
 
@@ -34,7 +34,6 @@ Tento článek popisuje, v okně Vlastnosti instalace obslužné rutiny událost
 
 >[!IMPORTANT]
 > ActiveX je starší technologie, která by neměla být používána při novém vývoji. Další informace o moderních technologií, které nahrazují ActiveX naleznete v tématu [ovládací prvky ActiveX](activex-controls.md).
-
 
 > [!NOTE]
 >  Tento článek používá založené na dialogu ActiveX ovládací prvek kontejneru projekt s názvem kontejneru a vloženému ovládacímu prvku s názvem KR jako příklady v procedurách a kódu.
@@ -70,7 +69,7 @@ Další informace o makra jímky událostí, naleznete v tématu [mapy jímek ud
 
 1. V okně Vlastnosti vyberte ID ovládacího prvku vloženému ovládacímu prvku ActiveX. V tomto příkladu použijte `IDC_CIRCCTRL1`.
 
-     V okně Vlastnosti se zobrazí seznam událostí, které mohou být vyvolané vloženému ovládacímu prvku ActiveX. Žádnou členskou funkci zobrazeny tučně už má přiřazenou funkce obslužné rutiny.
+   V okně Vlastnosti se zobrazí seznam událostí, které mohou být vyvolané vloženému ovládacímu prvku ActiveX. Žádnou členskou funkci zobrazeny tučně už má přiřazenou funkce obslužné rutiny.
 
 1. Vyberte událost má třídy dialogového okna pro zpracování. V tomto příkladu vyberte **klikněte na tlačítko**.
 

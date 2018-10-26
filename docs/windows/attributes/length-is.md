@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d412ac93ec9e89de8c85758d98d67fa2a7c50e92
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 37c220347070f9a2fecdda44ffe1a3971112f49f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789479"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066978"
 ---
 # <a name="lengthis"></a>length_is
 
@@ -68,4 +68,4 @@ Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.
 [first_is](first-is.md)<br/>
 [max_is](max-is.md)<br/>
 [last_is](last-is.md)<br/>
-[size_is](size-is.md)  
+[size_is](size-is.md)

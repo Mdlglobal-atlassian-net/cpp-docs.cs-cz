@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 594b02d777d87decfc218064678dbecdf8ecf0c9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: caa298ebbb96b04145bf2beb52f93838708ae50b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106347"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50088899"
 ---
 # <a name="property-map-macros"></a>Makra Map vlastností
 
@@ -39,7 +39,7 @@ Tato makra definují mapy vlastností a položek.
 |[PROP_ENTRY_TYPE](#prop_entry_type)|Popis vlastnosti DISPID a vlastnost stránky vlastností CLSID zadá do mapy vlastností.|
 |[PROP_ENTRY_TYPE_EX](#prop_entry_type_ex)|Popis vlastnosti, vlastnost DISPID, stránka vlastností CLSID, zadá a `IDispatch` IID do mapy vlastností.|
 |[PROP_PAGE](#prop_page)|Zadá identifikátor CLSID stránky vlastností do objektu map vlastností.|
-|[END_PROP_MAP](#end_prop_map)|Označuje konec mapování vlastností knihovny ATL.|  
+|[END_PROP_MAP](#end_prop_map)|Označuje konec mapování vlastností knihovny ATL.|
 
 ## <a name="requirements"></a>Požadavky
 

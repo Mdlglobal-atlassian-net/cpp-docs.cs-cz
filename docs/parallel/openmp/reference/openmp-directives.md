@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d92d196cc38e6033c6f16332e4977f2481c4496
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 98fec6659c2f4e998b946983a0bd2bdea6d0cde1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990331"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083253"
 ---
 # <a name="openmp-directives"></a>Direktivy jazyka OpenMP
 
@@ -52,19 +52,19 @@ Obsahuje odkazy na direktivy použité v rozhraní API OpenMP.
 
 Jazyk Visual C++ podporuje následující direktivy OpenMP:
 
-– Direktiva                             | Popis
-------------------------------------- | -----------------------------------------------------------------------------------------------------------------
-[atomic](#atomic)                     | Určuje, že umístění v paměti, která bude aktualizována atomicky.
-[barrier](#barrier)                   | Synchronizuje všechna vlákna v týmu; všechna vlákna pozastaví při bariéry, dokud všechna vlákna provést odbourejte překážky bránící.
-[critical](#critical)                 | Určuje, že kód je pouze spustit v jednom vlákně najednou.
-[Vyprázdnění](#flush-openmp)                | Určuje, že všechna vlákna stejným zobrazení paměti pro všechny sdílené objekty.
-[for](#for-openmp)                    | Způsobí, že práci `for` smyčky uvnitř paralelní oblasti rozdělit mezi vlákny.
-[master](#master)                     | Určuje, že by se měl spustit pouze hlavní vlákno části programu.
-[Řazení](#ordered-openmp-directives) | Určuje, že kód v části paralelizované `for` smyčky by měl být spuštěn jako sekvenční smyčka.
-[parallel](#parallel)                 | Definuje paralelní oblasti, což je kód, který spustí paralelně několik vláken.
-[Oddíly](#sections-openmp)          | Identifikuje části kódu k rozdělení mezi všemi vlákny.
-[single](#single)                     | Umožňuje určit, že část kódu by měl být provedeny v jednom vlákně, ne tedy nutně hlavní vlákno.
-[threadprivate](#threadprivate)       | Určuje, že proměnná je privátní pro vlákno.
+|– Direktiva|Popis|
+|---------|-----------|
+|[atomic](#atomic)|Určuje, že umístění v paměti, která bude aktualizována atomicky.|
+|[barrier](#barrier)|Synchronizuje všechna vlákna v týmu; všechna vlákna pozastaví při bariéry, dokud všechna vlákna provést odbourejte překážky bránící.|
+|[critical](#critical)|Určuje, že kód je pouze spustit v jednom vlákně najednou.|
+|[Vyprázdnění](#flush-openmp)|Určuje, že všechna vlákna stejným zobrazení paměti pro všechny sdílené objekty.|
+|[for](#for-openmp)|Způsobí, že práci `for` smyčky uvnitř paralelní oblasti rozdělit mezi vlákny.|
+|[master](#master)|Určuje, že by se měl spustit pouze hlavní vlákno části programu.|
+|[Řazení](#ordered-openmp-directives)|Určuje, že kód v části paralelizované `for` smyčky by měl být spuštěn jako sekvenční smyčka.|
+|[parallel](#parallel)|Definuje paralelní oblasti, což je kód, který spustí paralelně několik vláken.|
+|[Oddíly](#sections-openmp)|Identifikuje části kódu k rozdělení mezi všemi vlákny.|
+|[single](#single)|Umožňuje určit, že část kódu by měl být provedeny v jednom vlákně, ne tedy nutně hlavní vlákno.|
+|[threadprivate](#threadprivate)|Určuje, že proměnná je privátní pro vlákno.|
 
 ## <a name="atomic"></a>Atomic
 
@@ -306,13 +306,13 @@ A `for` smyčky. Způsobí nedefinované chování, pokud uživatel kód v `for`
 
 `for` Podporuje následující klauzule OpenMP – direktiva:
 
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [lastprivate](../../../parallel/openmp/reference/lastprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [Řazení](../../../parallel/openmp/reference/ordered-openmp-directives.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
-- [schedule](../../../parallel/openmp/reference/schedule.md)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [lastprivate](openmp-clauses.md#lastprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [Řazení](openmp-clauses.md#ordered-openmp-clauses)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
+- [schedule](openmp-clauses.md#schedule)
 
 Pokud `parallel` je také zadána, `clauses` může být jakékoli klauzule přijal `parallel` nebo `for` direktivy, s výjimkou `nowait`.
 
@@ -535,14 +535,14 @@ Definuje paralelní oblasti, což je kód, který spustí paralelně několik vl
 
 `parallel` Podporuje následující klauzule OpenMP – direktiva:
 
-- [copyin](../../../parallel/openmp/reference/copyin.md)
-- [default](../../../parallel/openmp/reference/default-openmp.md)
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [if](../../../parallel/openmp/reference/if-openmp.md)
-- [num_threads](../../../parallel/openmp/reference/num-threads.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
-- [Sdílet](../../../parallel/openmp/reference/shared-openmp.md)
+- [copyin](openmp-clauses.md#copyin)
+- [default](openmp-clauses.md#default-openmp)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [if](openmp-clauses.md#if-openmp)
+- [num_threads](openmp-clauses.md#num-threads)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
+- [Sdílet](openmp-clauses.md#shared-openmp)
 
 `parallel` Můžete také použít s [oddíly](#sections-openmp) a [pro](#for-openmp) direktivy.
 
@@ -603,11 +603,11 @@ Identifikuje části kódu k rozdělení mezi všemi vlákny.
 
 `sections` Podporuje následující klauzule OpenMP – direktiva:
 
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [lastprivate](../../../parallel/openmp/reference/lastprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [lastprivate](openmp-clauses.md#lastprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
 
 Pokud `parallel` je také zadána, `clauses` může být jakékoli klauzule přijal `parallel` nebo `sections` direktivy, s výjimkou `nowait`.
 
@@ -656,10 +656,10 @@ Umožňuje určit, že část kódu by měl být provedeny v jednom vlákně, ne
 
 `single` Podporuje následující klauzule OpenMP – direktiva:
 
-- [copyprivate](../../../parallel/openmp/reference/copyprivate.md)
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
+- [copyprivate](openmp-clauses.md#copyprivate)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [private](openmp-clauses.md#private-openmp)
 
 [Hlavní](#master) umožňuje určit, že část kódu by měl provést pouze v hlavní vlákno.
 
@@ -718,7 +718,7 @@ Další informace najdete v tématu [2.7.1 threadprivate – direktiva](../../..
 
 `threadprivate` Podle směrnice [vlákno](../../../cpp/thread.md) atribut, pomocí [__declspec](../../../cpp/declspec.md) – klíčové slovo; omezení `__declspec(thread)` platí pro `threadprivate`.
 
-Nemůžete použít `threadprivate` v žádné knihovny DLL, která se načtou prostřednictvím [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya).  Tento zákaz zahrnuje knihovny DLL, které načítají s [/delayload (Import odloženého načtení)](../../../build/reference/delayload-delay-load-import.md), který také používá `LoadLibrary`.
+Nemůžete použít `threadprivate` v žádné knihovny DLL, která se načtou prostřednictvím [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya).  Tento zákaz zahrnuje knihovny DLL, které načítají s [/delayload (import odloženého načtení)](../../../build/reference/delayload-delay-load-import.md), který také používá `LoadLibrary`.
 
 Můžete použít `threadprivate` v knihovně DLL, která je staticky načtená při spouštění procesu.
 
@@ -745,4 +745,4 @@ Uživatelé nemají žádnou kontrolu, když se ukončí vlákna tvořící para
 
 ### <a name="example"></a>Příklad
 
-Pro ukázkový používání `threadprivate`, naleznete v tématu [privátní](../../../parallel/openmp/reference/private-openmp.md).
+Pro ukázkový používání `threadprivate`, naleznete v tématu [privátní](openmp-clauses.md#private-openmp).

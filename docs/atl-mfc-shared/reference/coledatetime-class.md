@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92761508a5e93c7ef0d0a4099dde587987a50dad
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: b4490eef3427f66456ec79ae2f5429d309a82a54
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809158"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057398"
 ---
 # <a name="coledatetime-class"></a>COleDateTime – třída
 
@@ -228,10 +228,10 @@ A `SYSTEMTIME` struktura bude převeden na hodnotu data a času a zkopírovány 
 *filetimeSrc*<br/>
 A `FILETIME` struktura bude převeden na hodnotu data a času a zkopírovány do nového `COleDateTime` objektu. Všimněte si, že `FILETIME` používá koordinovaný světový čas (UTC), takže pokud předáte místní čas ve struktuře, vaše výsledky budou nesprávné. Zobrazit [časy](/windows/desktop/SysInfo/file-times) v sadě Windows SDK pro další informace.
 
-*nYear*, *nMonth*, *Nden*, *Nhodina*, *Nminimum*, *nSec*  
+*nYear*, *nMonth*, *Nden*, *Nhodina*, *Nminimum*, *nSec*<br/>
 Označení hodnoty data a času, které se mají zkopírovat do nové `COleDateTime` objektu.
 
-*wDosDate*, *wDosTime*  
+*wDosDate*, *wDosTime*<br/>
 Hodnoty data a času zástupného kódu MS-DOS převést na hodnotu data a času a zkopírovány do nového `COleDateTime` objektu.
 
 *dbts*<br/>
@@ -333,13 +333,13 @@ Pokud se stav tohoto `COleDateTime` objekt má hodnotu null, vrácená hodnota j
 
 Následuje stručný popis tři formuláře pro tuto funkci:
 
-`Format`( *dwFlags*, *lcid*)  
+`Format`( *dwFlags*, *lcid*)<br/>
 Tento formulář naformátuje hodnotu s použitím specifikace jazyka (ID národních prostředí) pro data a času. Použití výchozích parametrů, tento formulář vytiskne se datum a čas, pokud jako čas se 0 (půlnoc), v takovém případě vytiskne pouze datum nebo datum část je 0 (30 1899 dne), v takovém případě vytiskne jenom čas. Pokud hodnota data a času je 0 (30. prosince 1899, půlnoc), vytiskne tento formulář s výchozími parametry půlnoc.
 
-`Format`( *lpszFormat*)  
+`Format`( *lpszFormat*)<br/>
 Tento formulář naformátuje hodnotu pomocí formátovacího řetězce, který obsahuje speciální formátovacích kódech, které jsou uvozená znakem procent (%), stejně jako v `printf`. Formátovací řetězec je předat jako parametr funkce. Další informace o formátovacích kódech viz [strftime, wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) v referenční dokumentace knihoven Run-Time.
 
-`Format`( *nFormatID*)  
+`Format`( *nFormatID*)<br/>
 Tento formulář naformátuje hodnotu pomocí formátovacího řetězce, který obsahuje speciální formátovacích kódech, které jsou uvozená znakem procent (%), stejně jako v `printf`. Formátovací řetězec je prostředek. ID prostředku tento řetězec je předán jako parametr. Další informace o formátovacích kódech viz [strftime, wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) v *Run-Time Library Reference*.
 
 ### <a name="example"></a>Příklad
@@ -701,13 +701,13 @@ Vrátí stav této `COleDateTime` hodnotu. Při volání `GetStatus` na `COleDat
 Návratová hodnota je definována `DateTimeStatus` Výčtový typ, který je definován v rámci `COleDateTime` třídy.
 
 ```
-enum DateTimeStatus  
-{  
-   error = -1,  
-   valid = 0,  
-   invalid = 1,    // Invalid date (out of range, etc.)  
-   null = 2,       // Literally has no value  
-};  
+enum DateTimeStatus
+{
+   error = -1,
+   valid = 0,
+   invalid = 1,    // Invalid date (out of range, etc.)
+   null = 2,       // Literally has no value
+};
 ```
 
 Stručný popis tyto hodnoty stavu najdete v následujícím seznamu:
@@ -930,10 +930,10 @@ Tento operátor vrátí hodnotu `DATE` objekt, jehož hodnota je zkopírován z 
 Analyzuje řetězec k načtení hodnoty data a času.
 
 ```
-bool ParseDateTime(  
-LPCTSTR lpszDate,
-DWORD dwFlags = 0,
-LCID lcid = LANG_USER_DEFAULT) throw();
+bool ParseDateTime(
+    LPCTSTR lpszDate,
+    DWORD dwFlags = 0,
+    LCID lcid = LANG_USER_DEFAULT) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -991,15 +991,15 @@ Další informace o omezení a implementaci pro `COleDateTime` hodnoty, najdete 
 Nastaví datum tohoto `COleDateTime` objektu.
 
 ```
-int SetDate(  
-int nYear,
-int nMonth,
-int nDay) throw();
+int SetDate(
+    int nYear,
+    int nMonth,
+    int nDay) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nYear*, *nMonth*, *Nden*  
+*nYear*, *nMonth*, *Nden*<br/>
 Označení datum komponent, které mají být zkopírovány do tohoto `COleDateTime` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1062,18 +1062,18 @@ Další informace o hranice pro `COleDateTime` hodnoty, najdete v článku [datu
 Nastaví datum a čas tohoto `COleDateTime` objektu.
 
 ```
-int SetDateTime(  
-int nYear,
-int nMonth,
-int nDay,
-int nHour,
-int nMin,
-int nSec) throw();
+int SetDateTime(
+    int nYear,
+    int nMonth,
+    int nDay,
+    int nHour,
+    int nMin,
+    int nSec) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nYear*, *nMonth*, *Nden*, *Nhodina*, *Nminimum*, *nSec*  
+*nYear*, *nMonth*, *Nden*, *Nhodina*, *Nminimum*, *nSec*<br/>
 Označení součásti datum a čas, které se mají zkopírovat do tohoto `COleDateTime` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1170,15 +1170,15 @@ Podívejte se na příklad pro [GetStatus](#getstatus).
 Nastaví čas tohoto `COleDateTime` objektu.
 
 ```
-int SetTime(  
-int nHour,
-int nMin,
-int nSec) throw();
+int SetTime(
+    int nHour,
+    int nMin,
+    int nSec) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Nhodina*, *Nminimum*, *nSec*  
+*Nhodina*, *Nminimum*, *nSec*<br/>
 Označuje čas komponent, které mají být zkopírovány do tohoto `COleDateTime` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota

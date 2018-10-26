@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a9cc4a142a0aefc4937df493fa87552464b4294
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7115d73319dc7b76386367fb93329906cd72a027
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46043414"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073406"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Agregace a makra objektu pro vytváření tříd
 
@@ -51,7 +51,7 @@ Tato makra poskytují způsobů řízení agregace a deklarace objekty pro vytv�
 |[DECLARE_ONLY_AGGREGATABLE](#declare_only_aggregatable)|Deklaruje, že objekt musí být agregován.|
 |[DECLARE_POLY_AGGREGATABLE](#declare_poly_aggregatable)|Zkontroluje hodnotu vlastnosti vnější neznámá a deklaruje objekt agregovatelné nebo neagregovatelný, podle potřeby.|
 |[DECLARE_PROTECT_FINAL_CONSTRUCT](#declare_protect_final_construct)|Chrání před odstraněním během konstrukce objektu vnitřní vnějšího objektu.|
-|[DECLARE_VIEW_STATUS](#declare_view_status)|Určuje, které příznaky do kontejneru.|  
+|[DECLARE_VIEW_STATUS](#declare_view_status)|Určuje, které příznaky do kontejneru.|
 
 ## <a name="requirements"></a>Požadavky
 

@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 338404abe7499b6d9ff7679420f069a2857ce1e0
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: de3ca61005d0bafcc4387c793b09ec4925faf64b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494436"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064072"
 ---
 # <a name="net-programming-with-ccli-visual-c"></a>.NET – programování s C + +/ CLI (Visual C++)
 
-**Visual Studio 2015**: ve výchozím nastavení, CLR projekty vytvořené pomocí sady Visual Studio 2015 jsou určené pro rozhraní .NET Framework 4.5.2. Pro cílové rozhraní .NET Framework 4.6 při vytváření nového projektu v **nový projekt** dialogu změnit cílovou architekturu v rozevírací nabídce nahoře uprostřed dialogového okna. Chcete-li změnit cílový rámec pro existující projekt, Zavřít projekt, upravte soubor projektu (.vcxproj) a změňte hodnotu cílovou architekturu na verzi 4.6. Při příštím otevření projektu, nastavení se projeví. 
+**Visual Studio 2015**: ve výchozím nastavení, CLR projekty vytvořené pomocí sady Visual Studio 2015 jsou určené pro rozhraní .NET Framework 4.5.2. Pro cílové rozhraní .NET Framework 4.6 při vytváření nového projektu v **nový projekt** dialogu změnit cílovou architekturu v rozevírací nabídce nahoře uprostřed dialogového okna. Chcete-li změnit cílový rámec pro existující projekt, Zavřít projekt, upravte soubor projektu (.vcxproj) a změňte hodnotu cílovou architekturu na verzi 4.6. Při příštím otevření projektu, nastavení se projeví.
 
-**Visual Studio 2017**: V sadě Visual Studio 2017, je výchozí framework 4.6.1 a výběru verze rozhraní Framework je v dolní části **dialogové okno nového projektu**. C + +/ CLI není nainstalovaný ve výchozím nastavení. Pro instalaci součásti, spusťte instalační program sady Visual Studio a zvolte C + +/ CLI komponenty v jazyce Visual C++. 
+**Visual Studio 2017**: V sadě Visual Studio 2017, je výchozí framework 4.6.1 a výběru verze rozhraní Framework je v dolní části **dialogové okno nového projektu**. C + +/ CLI není nainstalovaný ve výchozím nastavení. Pro instalaci součásti, spusťte instalační program sady Visual Studio a zvolte C + +/ CLI komponenty v jazyce Visual C++.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 

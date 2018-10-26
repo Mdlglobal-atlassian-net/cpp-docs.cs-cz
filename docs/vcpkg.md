@@ -14,12 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed44479f6e6d1569a9b27a059e837cbbb924b803
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 70af45a860ff854faf244cf51ad7462262f183fe
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821420"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072690"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Správce balíčků jazyka C++ pro Windows, Linux a MacOS
 
@@ -37,11 +37,11 @@ Pokud jste vytvořili klon vcpkg privátní knihovny v kolekci porty, můžete p
 
 [1] *Poznámka: některé knihovny proprietární zdroje nejsou k dispozici. Vcpkg stáhne kompatibilní předem připravených binárních souborů v těchto případech.*
 
-## <a name="installation"></a>Instalace 
+## <a name="installation"></a>Instalace
 
 Naklonujte úložiště vcpkg z Githubu: https://github.com/Microsoft/vcpkg. Můžete stáhnout do jakéhokoli umístění složky, kterému dáváte přednost.
 
-Zaváděcí nástroj spusťte v kořenové složce: 
+Zaváděcí nástroj spusťte v kořenové složce:
 
 - **Bootstrap vcpkg.bat** (Windows)
 - **./Bootstrap-vcpkg.SH** (Linux, MacOS)
@@ -76,7 +76,7 @@ taglib      1.11.1-2   TagLib Audio Meta-Data Library
 
 Po získání názvu knihovny pomocí **vcpkg hledání**, použijete **vcpkg nainstalovat** stažení knihovny a jeho kompilace. vcpkg používá portfile knihovny v adresáři porty. Pokud není zadána žádná trojici, vcpkg nainstaluje a kompilace pro výchozí trojici pro cílovou platformu: x86 windows, x64 linux.cmake nebo x64 osx.cmake.
 
-Pro Linuxové knihovny vcpkg závisí na gcc instaluje na místním počítači. V systému MacOS používá vcpkg Clang. 
+Pro Linuxové knihovny vcpkg závisí na gcc instaluje na místním počítači. V systému MacOS používá vcpkg Clang.
 
 Pokud portfile Určuje závislosti, vcpkg stáhne a nainstaluje ty také. Po stažení si vcpkg sestavení knihovny pomocí cokoli, co sestavovací systém, který používá knihovnu. CMake a (Windows) projekty MSBuild jsou upřednostňované, ale UJISTĚTE se podporuje spolu s jakýmkoliv systémem sestavení. Pokud vcpkg nemůže najít zadaný sestavovací systém v místním počítači, stáhne a nainstaluje ho.
 
@@ -91,7 +91,7 @@ Additional packages (*) will be installed to complete this operation.
 
 ```
 
-Pro projekty CMAKE, využívat k zpřístupňování knihovny s CMAKE_TOOLCHAIN_FILE `find_package()`. Příklad:  
+Pro projekty CMAKE, využívat k zpřístupňování knihovny s CMAKE_TOOLCHAIN_FILE `find_package()`. Příklad:
 
 ```cmd
 cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)
@@ -132,14 +132,13 @@ Pokud budete muset použít konkrétní verzi knihovny, která se liší od verz
 1. Spustit **vcpkg nainstalovat \<knihovny >**.
 1. Použití **vcpkg integrovat projekt** k vytvoření balíčku NuGet, který odkazuje na tuto knihovnu na základě jednotlivých projektů.
 
-## <a name="integrate-with-visual-studio-code-linuxmacos"></a>Integrace s Visual Studio Code (Linux/MacOS) 
+## <a name="integrate-with-visual-studio-code-linuxmacos"></a>Integrace s Visual Studio Code (Linux/MacOS)
 
 Spustit **vcpkg integrovat instalace** ke konfiguraci Visual Studio Code v systému Linux nebo MacOS s umístěním vcpkg enlistement a povolení funkce IntelliSense ve zdrojových souborech.
 
 ## <a name="target-linux-from-windows-via-wsl"></a>Cíl Linux z Windows prostřednictvím WSL
 
 Linux binární soubory z počítače s Windows můžete vytvářet pomocí subsystém Windows pro Linux (WSL). Postupujte podle pokynů a [nastavení WSL ve Windows 10](/windows/wsl/install-win10)a nakonfigurujte ho [rozšíření sady Visual Studio pro Linux](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/). Můžete vložit všechny sestavené knihovny pro Windows i Linuxem do stejné složky a k němu přístup z Windows a WSL.
-
 
 ## <a name="export_binaries_per_project"></a> Export kompilované binární soubory a hlavičky
 

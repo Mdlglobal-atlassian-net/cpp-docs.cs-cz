@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f3d6042866661659102090380c95e7d04e9bcd6c
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 0e67b839b487f7bb457eeadb0f4d0385b025ebc3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789367"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080595"
 ---
 # <a name="cppquote"></a>cpp_quote
 
@@ -67,4 +67,4 @@ Další informace o kontexty atributů najdete v tématu [kontexty atributů](cp
 ## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
-[Samostatné atributy](stand-alone-attributes.md)  
+[Samostatné atributy](stand-alone-attributes.md)

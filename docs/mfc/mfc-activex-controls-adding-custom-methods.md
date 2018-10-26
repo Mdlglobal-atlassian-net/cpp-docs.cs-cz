@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 428f43d5cd1a0cfaa4b5f829b59208ce96eab85d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 652f09146ba0bb193efbf889995f6de5f53a9492
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441080"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074472"
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>MFC – ovládací prvky ActiveX: Přidání vlastních metod
 
@@ -48,7 +48,7 @@ Následující postup ukazuje přidání ptincircle – vlastní metoda kostru k
 
 1. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat metodu**.
 
-     Otevře se Průvodce přidáním metody.
+   Otevře se Průvodce přidáním metody.
 
 1. V **název metody** zadejte *ptincircle –*.
 

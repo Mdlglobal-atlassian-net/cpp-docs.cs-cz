@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50db1a8370a43b8b0c43c7c228c7b3acf9dd2c8a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 04a4c2005dc0a7e0e052002198bebb7c78267843
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082872"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059948"
 ---
 # <a name="scanf-type-field-characters"></a>Znaky pole typu scanf
 
@@ -54,7 +54,6 @@ Následující informace platí pro některý z `scanf` řadu funkcí, včetně 
 |`n`|Žádný vstup číst z datového proudu nebo vyrovnávací paměti.|Ukazatel na `int`, do které je uložený počet znaků, které úspěšně načtena z datového proudu nebo uložit do vyrovnávací paměti až k danému bodu v aktuální volání `scanf` funkce nebo `wscanf` funkce.|Ne.|
 |`s`|Řetězec, až do první prázdné znaky (mezera, kartu nebo nový řádek). Ke čtení řetězce není oddělená znaky mezery, použijte hranaté závorky (`[ ]`), jak je popsáno v [specifikace šířky scanf](../c-runtime-library/scanf-width-specification.md).|Při použití s `scanf` funkce, označuje, že pole jednobajtový znak; při použití s `wscanf` funkce, označuje, že pole širokých znaků. V obou případech musí být dostatečně velký pro vstupní pole a ukončujícího znaku null, která se automaticky připojí pole znaků.|Požadováno. Velikost zahrnuje prostor pro ukončovacího znaku null.|
 |`S`|Velikost opak řetězec znaků, až do první prázdné znaky (mezera, kartu nebo nový řádek). Ke čtení řetězce není oddělená znaky mezery, použijte hranaté závorky (`[ ]`), jak je popsáno v [specifikace šířky scanf](../c-runtime-library/scanf-width-specification.md).|Při použití s `scanf` funkce, označuje, že pole širokého znaku; při použití s `wscanf` funkce, označuje, že pole bajtů. jedním znakem. V obou případech musí být dostatečně velký pro vstupní pole a ukončujícího znaku null, která se automaticky připojí pole znaků.|Požadováno. Velikost zahrnuje prostor pro ukončovacího znaku null.|
-
 
 Argumenty velikosti v případě potřeby by měl předávat v seznamu parametrů ihned po argumentu, který se vztahují na. Například následující kód:
 

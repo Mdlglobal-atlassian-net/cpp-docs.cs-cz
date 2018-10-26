@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2241080fda6aa58dc5e70f57c83afec69a57203
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 57e685ea9ac4b1efc76f7657421d825b83f4a9b7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757335"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078619"
 ---
 # <a name="implementing-the-event-handling-interface"></a>Implementace rozhraní zpracování událostí
 
@@ -37,7 +37,7 @@ Nejběžnější způsoby implementace rozhraní pomocí knihovny ATL jsou:
 
 - Odvozování z [idispeventsimpleimpl –](../atl/reference/idispeventsimpleimpl-class.md) pro odesílacích rozhraních není popsána v knihovně typů nebo pokud chcete zvýšit efektivitu není načítání informací o typu v době běhu.
 
-Pokud implementujete vlastní nebo duální rozhraní, poraďte zdroj události voláním [AtlAdvise](reference/connection-point-global-functions.md#atladvise) nebo [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise). Je potřeba udržovat přehled o souboru cookie vrácený voláním sami. Volání [AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise) přerušit připojení.  
+Pokud implementujete vlastní nebo duální rozhraní, poraďte zdroj události voláním [AtlAdvise](reference/connection-point-global-functions.md#atladvise) nebo [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise). Je potřeba udržovat přehled o souboru cookie vrácený voláním sami. Volání [AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise) přerušit připojení.
 
 Pokud implementujete dispinterface pomocí `IDispEventImpl` nebo `IDispEventSimpleImpl`, zdroj události poraďte voláním [IDispEventSimpleImpl::DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise). Volání [IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise) přerušit připojení.
 
@@ -48,4 +48,3 @@ Pokud používáte `IDispEventImpl` jako základní třída složeného ovládac
 ## <a name="see-also"></a>Viz také
 
 [Zpracování událostí](../atl/event-handling-and-atl.md)
-

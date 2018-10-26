@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68c4b389bdd8f1121a59bce1a0ca8942f077e062
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 41ae491a851d2e9a21a57ce35a54590323060881
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377154"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070589"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Návod: Vytvoření aplikace založené na agentovi
 
@@ -64,7 +64,7 @@ Tato část ukazuje, jak vytvořit konzolovou aplikaci Visual C++, který odkazu
 
 [!code-cpp[concrt-basic-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_1.h)]
 
-     The header file agents.h contains the functionality of the [concurrency::agent](../../parallel/concrt/reference/agent-class.md) class.
+   Agents.h souboru záhlaví obsahuje funkce [concurrency::agent](../../parallel/concrt/reference/agent-class.md) třídy.
 
 1. Ověřte, že aplikace úspěšně vytvořil sestavováním a spouštěním ho. Jak vytvořit aplikaci, na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**. Je-li aplikace sestavena úspěšně, spusťte aplikaci kliknutím **spustit ladění** na **ladění** nabídky.
 
@@ -90,19 +90,19 @@ Tato část ukazuje, jak vytvořit `file_reader` třídy. Modul runtime naplánu
 
 [!code-cpp[concrt-basic-agent#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_4.h)]
 
-     The `_file_name` member is the file name that the agent reads from. The `_target` member is a [concurrency::ITarget](../../parallel/concrt/reference/itarget-class.md) object that the agent writes the contents of the file to. The `_error` member holds any error that occurs during the life of the agent.
+   `_file_name` Člen je název souboru, která agent načítá z. `_target` Člen je [concurrency::ITarget](../../parallel/concrt/reference/itarget-class.md) , že agent zapíše obsah souboru do objektu. `_error` Člena obsahuje všechny chyby, ke které dojde během existence agenta.
 
 1. Přidejte následující kód pro `file_reader` konstruktory mají být `public` část `file_reader` třídy.
 
 [!code-cpp[concrt-basic-agent#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_5.h)]
 
-     Each constructor overload sets the `file_reader` data members. The second and third constructor overload enables your application to use a specific scheduler with your agent. The first overload uses the default scheduler with your agent.
+   Nastaví jednotlivá přetížení konstruktoru `file_reader` datové členy. Druhý a třetí konstruktor přetížení umožňuje vaší aplikaci pro použití určitého plánovače s agenta. První přetížení se svým zástupcem používá výchozím plánovačem.
 
 1. Přidat `get_error` metodu pro veřejnou část `file_reader` třídy.
 
 [!code-cpp[concrt-basic-agent#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_6.h)]
 
-     The `get_error` method retrieves any error that occurs during the life of the agent.
+   `get_error` Metoda načte všechny chyby, ke které dojde během existence agenta.
 
 1. Implementace [concurrency::agent::run](reference/agent-class.md#run) metodu `protected` část vaší třídy.
 
@@ -140,7 +140,7 @@ Tato část ukazuje způsob použití `file_reader` třídy k načtení obsahu t
 
 [!code-cpp[concrt-basic-agent#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_12.cpp)]
 
-     This `call` object also sets the `event` object when it receives the empty string to signal the end of processing.
+   To `call` objekt také nastaví `event` objektu, když přijme prázdný řetězec, který signalizuje, že na konec zpracování.
 
 1. Vytvoření `file_reader` objekt, který čte ze souboru test.txt a zapíše obsah tohoto souboru do `call` objektu.
 

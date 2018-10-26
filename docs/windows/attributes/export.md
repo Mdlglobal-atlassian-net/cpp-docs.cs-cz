@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a636b7d4c943896bcd1e5e7b3580c2d3f7410fc8
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 1529f6d43c3a4543a172229abe2adf0ce6a99c49
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789339"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060192"
 ---
 # <a name="export"></a>export
 
@@ -75,4 +75,4 @@ Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.
 ## <a name="see-also"></a>Viz také
 
 [Atributy kompilátoru](compiler-attributes.md)<br/>
-[Atributy klíčových slov typedef, enum, union a struct](typedef-enum-union-and-struct-attributes.md)  
+[Atributy klíčových slov typedef, enum, union a struct](typedef-enum-union-and-struct-attributes.md)

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48cbc29685660f00665fbbb08be76779272d0fcf
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3daa42008bd385b2d45d05106162c99fb9ca0b12
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235501"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082876"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Návod: Aktualizace aplikace MFC Scribble (část 1)
 
@@ -32,7 +32,7 @@ Tento návod ukazuje, jak změnit existující aplikaci MFC použít uživatelsk
 
 Tento názorný postup upravuje classic vzorek Scribble 1.0 MFC, který vám umožní používat myš kreslit čáry. Tato část návodu ukazuje, jak upravit ukázky Scribble tak, aby zobrazil panel pásu karet. [Část 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md) přidá další tlačítka na panel pásu karet.
 
-## <a name="prerequisites"></a>Požadavky 
+## <a name="prerequisites"></a>Požadavky
 
 [Vzorek Scribble 1.0 MFC](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Nápovědu o převodu do sady Visual Studio 2017 najdete v tématu [portování průvodce: MFC Scribble](../porting/porting-guide-mfc-scribble.md).
 
@@ -146,7 +146,7 @@ Tento podrobný postup kopíruje soubory prostředků z příkladu, vytvoří v 
    1. Importovat soubor filesmall.bmp, který obsahuje jedenáct 16 x 16 (16 × 176) bitové kopie. Změna ID rastrový obrázek pro `IDB_RIBBON_FILESMALL`.
 
    > [!NOTE]
-   > Protože potřebujeme pouze prvních osm 16 x 16 imagí (16 × 128), může volitelně oříznout šířku na pravé straně tento rastrový obrázek z 176 do 128. 
+   > Protože potřebujeme pouze prvních osm 16 x 16 imagí (16 × 128), může volitelně oříznout šířku na pravé straně tento rastrový obrázek z 176 do 128.
 
    1. Importovat filelarge.bmp, který obsahuje devět 32 x 32 (32 x 288) bitové kopie. Změna ID rastrový obrázek pro `IDB_RIBBON_FILELARGE`.
 
@@ -161,7 +161,7 @@ Tento podrobný postup kopíruje soubory prostředků z příkladu, vytvoří v 
    1. Importujte panelicons.bmp rastrový obrázek, který obsahuje osm 16 x 16 imagí. V **vlastnosti** okno **editoru rastrových obrázků**, umožňuje upravit šířku rastrového obrázku na 64 (16 x 64). Změna ID rastrový obrázek pro `IDB_PANEL_ICONS`.
 
    > [!NOTE]
-   > Protože potřebujeme jenom první čtyři 16 x 16 imagí (16 x 64), může volitelně oříznout šířku na pravé straně tento rastrový obrázek z 128 až 64. 
+   > Protože potřebujeme jenom první čtyři 16 x 16 imagí (16 x 64), může volitelně oříznout šířku na pravé straně tento rastrový obrázek z 128 až 64.
 
 ##  <a name="addribbon"></a> Přidání prostředku pásu karet do projektu
 

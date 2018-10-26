@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b62de2a1e6cba6ecbb29521518f5442ab002ddf3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7907935971fae7d990c651410e5b76982b798075
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381943"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060517"
 ---
 # <a name="servers-implementing-server-documents"></a>Servery: Implementace dokumentů serveru
 
@@ -36,7 +36,7 @@ Tento článek popisuje kroky, které je třeba provést při úspěšně implem
 
 1. Implementace `OnGetEmbeddedItem` členské funkce třídy dokumentu serveru.
 
-     `OnGetEmbeddedItem` je volána, když uživatel aplikace typu kontejner vytvoří nebo upraví vloženou položku. Měla by vrátit položku představující celý dokument. Měl by to být objekt vaše `COleServerItem`-odvozené třídy.
+   `OnGetEmbeddedItem` je volána, když uživatel aplikace typu kontejner vytvoří nebo upraví vloženou položku. Měla by vrátit položku představující celý dokument. Měl by to být objekt vaše `COleServerItem`-odvozené třídy.
 
 1. Přepsat `Serialize` členskou funkci k serializaci obsahu dokumentu. Není nutné k serializaci seznam položek serveru, pokud je používáte k reprezentaci nativní data v dokumentu. Další informace najdete v tématu *implementace položky serveru* v článku [servery: serverové položky](../mfc/servers-server-items.md).
 

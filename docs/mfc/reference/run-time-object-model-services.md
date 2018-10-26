@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 163ef22563141b9365bc2c086870877c7ad2bf00
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 5979fcb76dc688bffd9ad8076f123927439e3840
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083590"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064561"
 ---
 # <a name="run-time-object-model-services"></a>Služby modelu běhového objektu
 
@@ -39,8 +39,6 @@ Další informace o těchto služeb run-time objekt a serializaci, najdete v čl
 
 ### <a name="run-time-object-model-services-macros"></a>Makra služeb modelu běhového objektu
 
-
-
 |||
 |-|-|
 |[DECLARE_DYNAMIC](#declare_dynamic)|Umožňuje přístup k informacím o třídě za běhu (musí se použít v deklaraci třídy).|
@@ -51,19 +49,11 @@ Další informace o těchto služeb run-time objekt a serializaci, najdete v čl
 |[IMPLEMENT_SERIAL](#implement_serial)|Povolení serializace a přístup k informacím o třídě za běhu (musí být použitý v implementaci třídy).|
 |[RUNTIME_CLASS](#runtime_class)|Vrátí `CRuntimeClass` struktura, která odpovídá definované třídě.|
 
-
 OLE – často vyžaduje dynamické vytváření objektů za běhu. Aplikace serveru OLE musí být například schopné dynamicky vytvořit položky OLE v reakci na požadavek od klienta. Podobně automatizační server musí být schopen vytvořit položky v reakci na požadavky klientů automatizace.
 
 Knihovny Microsoft Foundation Class poskytuje dvě makra, které jsou specifické pro OLE.
 
 ### <a name="dynamic-creation-of-ole-objects"></a>Dynamické vytváření objekty OLE
-
-
-
-
-
-
-
 
 |||
 |-|-|
@@ -85,6 +75,7 @@ Určuje, zda knihovny běžných ovládacích prvků implementuje zadané rozhra
   ```
 AFX_COMCTL32_IF_EXISTS(  proc );
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *proc*<br/>
@@ -112,6 +103,7 @@ Určuje, zda knihovny běžných ovládacích prvků implementuje zadané rozhra
 ```
 AFX_COMCTL32_IF_EXISTS2( proc );
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *proc*<br/>
@@ -129,8 +121,6 @@ afxcomctl32.h, afxcomctl32.inl
 
 [Izolace knihovny běžných ovládacích prvků MFC](../isolation-of-the-mfc-common-controls-library.md)<br/>
 [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
-
-
 
 ##  <a name="declare_dynamic"></a>  DECLARE_DYNAMIC
 
@@ -197,7 +187,6 @@ Podívejte se na příklad pro [IMPLEMENT_DYNCREATE](#implement_dyncreate).
 
 **Záhlaví:** afx.h
 
-
 ## <a name="declareolectltype"></a>DECLARE_OLECTLTYPE
 
 Deklaruje `GetUserTypeNameID` a `GetMiscStatus` členské funkce třídy vašeho ovládacího prvku.
@@ -207,6 +196,7 @@ Deklaruje `GetUserTypeNameID` a `GetMiscStatus` členské funkce třídy vašeho
 ```
 DECLARE_OLECTLTYPE( class_name )
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *$class_name*<br/>
@@ -224,7 +214,6 @@ Název třídy ovládacího prvku.
 
 [IMPLEMENT_OLECTLTYPE](#implement_olectltype)
 
-
 ## <a name="declareproppageids"></a>DECLARE_PROPPAGEIDS
 
 Deklaruje, že ovládací prvek OLE obsahuje seznam stránek vlastností zobrazíte jeho vlastnosti.
@@ -234,6 +223,7 @@ Deklaruje, že ovládací prvek OLE obsahuje seznam stránek vlastností zobraz�
 ```
 DECLARE_PROPPAGEIDS( class_name )
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *$class_name*<br/>
@@ -370,6 +360,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
     l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
 
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *$class_name*<br/>
@@ -408,7 +399,6 @@ ID třídy OLE je jedinečný identifikátor 128 bitů pro objekt. Se skládá z
 [DECLARE_OLECREATE](#declare_olecreate)<br/>
 [Klíč CLSID](/windows/desktop/com/clsid-key-hklm)
 
-
 ## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
 
 Implementuje `GetUserTypeNameID` a `GetMiscStatus` členské funkce třídy vašeho ovládacího prvku.
@@ -418,6 +408,7 @@ Implementuje `GetUserTypeNameID` a `GetMiscStatus` členské funkce třídy vaš
 ```
 DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *$class_name*<br/>

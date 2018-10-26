@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9942f0d9ca4f890965aaf7d05383beae6fa24af9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ca2a8f0a2a7a1b6c8be91902f3a239c34857252e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429445"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065639"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>Cmfctoolbarfontsizecombobox – třída
 
@@ -149,6 +149,4 @@ Předchozí platnou velikost písma lze načíst později pomocí volání [CMFC
 [CMFCFontInfo – třída](../../mfc/reference/cmfcfontinfo-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [Návod: Umístění ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b9479957fdfb4d6b92ec531941808940765a9e5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 150179fc0fd97450ba805d6957f5282bfaf8345c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116721"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071255"
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
@@ -95,7 +95,6 @@ Následující pravidla platí pro **constexpr** funkce v sadě Visual Studio 20
 - Může obsahovat místní deklarace proměnných, ale proměnná musí být inicializován, musí být typu literálu a nemůže být statická nebo místního vlákna. Místně deklarované proměnné nemusí být konstantní a může změnit.
 
 - Nestatická členská funkce constexpr není musí být implicitně const.
-
 
 ```cpp
 constexpr float exp(float x, int n)

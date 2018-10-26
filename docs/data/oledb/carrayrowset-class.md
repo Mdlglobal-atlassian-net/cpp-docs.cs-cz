@@ -54,118 +54,118 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e13f262b90ff46955d6ba63fb83a941d712b017a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5b8613372b84423a14fd995d78ca9d4c0dd1c1ae
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087874"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070372"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset – třída
 
-Přístupy prvky sady řádků pomocí syntaxe pole.  
-  
+Přístupy prvky sady řádků pomocí syntaxe pole.
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-template < class TAccessor >  
-class CArrayRowset : 
-   public CVirtualBuffer <TAccessor>, 
-   protected CBulkRowset <TAccessor>  
-```  
-  
-### <a name="parameters"></a>Parametry  
+template < class TAccessor >
+class CArrayRowset :
+   public CVirtualBuffer <TAccessor>, 
+   protected CBulkRowset <TAccessor>
+```
+
+### <a name="parameters"></a>Parametry
 
 *TAccessor*<br/>
-Typ přístupového objektu třídy, která chcete v sadě řádků používat.  
+Typ přístupového objektu třídy, která chcete v sadě řádků používat.
 
-## <a name="requirements"></a>Požadavky  
+## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** také atldbcli.h  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="methods"></a>Metody  
-  
-|||  
-|-|-|  
-|[CArrayRowset](#carrayrowset)|Konstruktor|  
-|[Snímek](#snapshot)|Celá sada řádků se načte do paměti.|  
-  
-### <a name="operators"></a>Operátory  
-  
-|||  
-|-|-|  
-|[– operátor&#91;&#93;](#operator)|Přistupuje k elementu sady řádků.|  
-  
-### <a name="data-members"></a>Datové členy  
-  
-|||  
-|-|-|  
-|[CArrayRowset::m_nRowsRead](#nrowsread)|Počet řádků, které jsou již načten.|  
-  
+**Záhlaví:** také atldbcli.h
+
+## <a name="members"></a>Členové
+
+### <a name="methods"></a>Metody
+
+|||
+|-|-|
+|[CArrayRowset](#carrayrowset)|Konstruktor|
+|[Snímek](#snapshot)|Celá sada řádků se načte do paměti.|
+
+### <a name="operators"></a>Operátory
+
+|||
+|-|-|
+|[– operátor&#91;&#93;](#operator)|Přistupuje k elementu sady řádků.|
+
+### <a name="data-members"></a>Datové členy
+
+|||
+|-|-|
+|[CArrayRowset::m_nRowsRead](#nrowsread)|Počet řádků, které jsou již načten.|
+
 ## <a name="carrayrowset"></a> CArrayRowset::CArrayRowset
 
-Vytvoří novou `CArrayRowset` objektu.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Vytvoří novou `CArrayRowset` objektu.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-CArrayRowset(int nMax = 100000);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+CArrayRowset(int nMax = 100000);
+```
+
+#### <a name="parameters"></a>Parametry
 
 *Nmaximum*<br/>
-[in] Maximální počet řádků v sadě řádků. 
+[in] Maximální počet řádků v sadě řádků.
 
 ## <a name="snapshot"></a> CArrayRowset::Snapshot
 
-Celá sada řádků se načte do paměti, vytváření bitové kopie nebo jeho snímek.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Celá sada řádků se načte do paměti, vytváření bitové kopie nebo jeho snímek.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT Snapshot() throw();  
-```  
+HRESULT Snapshot() throw();
+```
 
 ## <a name="operator"></a> CArrayRowset::operator
 
-Poskytuje syntaxi jako pole pro přistupování k řádku v sadě řádků.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Poskytuje syntaxi jako pole pro přistupování k řádku v sadě řádků.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-TAccessor & operator[](int nrow);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+TAccessor & operator[](int nrow);
+```
+
+#### <a name="parameters"></a>Parametry
 
 *TAccessor*<br/>
-Parametr bez vizuálního vzhledu, který určuje typ přístupového objektu uložená v dané sadě řádků.  
-  
+Parametr bez vizuálního vzhledu, který určuje typ přístupového objektu uložená v dané sadě řádků.
+
 *nRow*<br/>
-[in] Číslo řádku (prvek pole), které chcete získat přístup.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+[in] Číslo řádku (prvek pole), které chcete získat přístup.
 
-Obsah požadovaný řádek.  
-  
-### <a name="remarks"></a>Poznámky  
+### <a name="return-value"></a>Návratová hodnota
 
-Pokud *nRow* překračuje počet řádků v sadě řádků, je vyvolána výjimka.  
+Obsah požadovaný řádek.
+
+### <a name="remarks"></a>Poznámky
+
+Pokud *nRow* překračuje počet řádků v sadě řádků, je vyvolána výjimka.
 
 ## <a name="nrowsread"></a> CArrayRowset::m_nRowsRead
 
-Obsahuje počet řádků v sadě řádků, které již byly načteny.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Obsahuje počet řádků v sadě řádků, které již byly načteny.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-ULONG m_nRowsRead;  
-```  
-  
-## <a name="see-also"></a>Viz také  
+ULONG m_nRowsRead;
+```
+
+## <a name="see-also"></a>Viz také
 
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

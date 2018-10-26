@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e06f10114b896e2728e5a017281e54f75ce534e5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b00eb755ef0fba0037df8c6d1e99bfd25d13b263
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404628"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078411"
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>Testování vlastností a událostí pomocí testovacího kontejneru
 
@@ -56,7 +56,7 @@ V tomto okamžiku můžete otestovat, vlastnosti nebo události ovládacího prv
 
 1. Klikněte na tlačítko **Invoke** použít novou hodnotu do objektu.
 
-     Vlastnost nyní obsahuje novou hodnotu.
+   Vlastnost nyní obsahuje novou hodnotu.
 
 #### <a name="to-test-events-and-specify-the-destination-of-event-information"></a>Testovat události a zadejte cílovou složku informací o události.
 

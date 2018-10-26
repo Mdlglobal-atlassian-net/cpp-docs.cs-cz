@@ -15,29 +15,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58f3be857e0a77a62a5f2d4d1d0b650f02fd391b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 61984597d01f900faafd44352db76b2b41019809
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425519"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083461"
 ---
 # <a name="macros-and-c"></a>Makra a jazyk C++
-Jazyk C++ nabízí nové možnosti, z nichž některé nahrazují možnosti preprocesoru standardu ANSI C. Tyto nové možnosti zvyšují bezpečnost typů a předvídatelnost jazyka:  
-  
-- V jazyce C++ lze objekty deklarované jako **const** lze použít v konstantních výrazech. To programům umožňuje deklarovat konstanty, které mají informace o typu a hodnotě, a výčty, které lze symbolicky zobrazit ladicím programem. Použití direktivy `#define` preprocesoru pro definování konstant není tak přesné. Pro není přiděleno žádné úložiště **const** objektu, pokud je výraz, který přijímá jeho adresu, nalezen v programu.  
-  
-- Schopnost vložených funkcí jazyka C++ nahrazuje makra typů funkce. Výhody použití vložených funkcí oproti makrům jsou:  
-  
-    - Bezpečnost typů. Vložené funkce jsou kontrolovány stejně jako normální funkce. Makra nejsou typově bezpečná.  
-  
-    - Správná manipulace s argumenty, které mají vedlejší účinky. Vložené funkce vyhodnotí výrazy, které jsou zadány jako argumenty, před vstupem do těla funkce. Proto neexistuje možnost, že by výrazy s vedlejšími účinky byly nebezpečné.  
-  
-Další informace o vložených funkcích naleznete v tématu [inline, __inline, \__forceinline](../cpp/inline-functions-cpp.md).  
-  
-Z důvodu zpětné kompatibility jsou v jazyce C++ společnosti Microsoft zachovány všechny funkce preprocesoru, které existovaly ve standardu ANSI C a starších specifikacích jazyka C++.  
-  
-## <a name="see-also"></a>Viz také  
- 
+Jazyk C++ nabízí nové možnosti, z nichž některé nahrazují možnosti preprocesoru standardu ANSI C. Tyto nové možnosti zvyšují bezpečnost typů a předvídatelnost jazyka:
+
+- V jazyce C++ lze objekty deklarované jako **const** lze použít v konstantních výrazech. To programům umožňuje deklarovat konstanty, které mají informace o typu a hodnotě, a výčty, které lze symbolicky zobrazit ladicím programem. Použití direktivy `#define` preprocesoru pro definování konstant není tak přesné. Pro není přiděleno žádné úložiště **const** objektu, pokud je výraz, který přijímá jeho adresu, nalezen v programu.
+
+- Schopnost vložených funkcí jazyka C++ nahrazuje makra typů funkce. Výhody použití vložených funkcí oproti makrům jsou:
+
+    - Bezpečnost typů. Vložené funkce jsou kontrolovány stejně jako normální funkce. Makra nejsou typově bezpečná.
+
+    - Správná manipulace s argumenty, které mají vedlejší účinky. Vložené funkce vyhodnotí výrazy, které jsou zadány jako argumenty, před vstupem do těla funkce. Proto neexistuje možnost, že by výrazy s vedlejšími účinky byly nebezpečné.
+
+Další informace o vložených funkcích naleznete v tématu [inline, __inline, \__forceinline](../cpp/inline-functions-cpp.md).
+
+Z důvodu zpětné kompatibility jsou v jazyce C++ společnosti Microsoft zachovány všechny funkce preprocesoru, které existovaly ve standardu ANSI C a starších specifikacích jazyka C++.
+
+## <a name="see-also"></a>Viz také
+
 [Předdefinovaná makra](../preprocessor/predefined-macros.md)<br/>
 [Makra (C/C++)](../preprocessor/macros-c-cpp.md)

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 451cf4b404143ce8f9b94481dd27227f487874d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b66debe5c6401b4eee01bc81acc58b8445e20c21
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381163"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068772"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC – ovládací prvky ActiveX: Licencování ovládacích prvků ActiveX
 
@@ -84,15 +84,15 @@ Tyto členské funkce jsou:
 
 - [Verifyuserlicense –](../mfc/reference/coleobjectfactory-class.md#verifyuserlicense)
 
-     Ověřuje, že ovládací prvek umožňuje využití návrhu kontrolou systému přítomnost licenční soubor ovládacího prvku. Tato funkce se volá se rozhraním při zpracování `IClassFactory2::GetLicInfo` a `IClassFactory::CreateInstanceLic`.
+   Ověřuje, že ovládací prvek umožňuje využití návrhu kontrolou systému přítomnost licenční soubor ovládacího prvku. Tato funkce se volá se rozhraním při zpracování `IClassFactory2::GetLicInfo` a `IClassFactory::CreateInstanceLic`.
 
 - [Getlicensekey –](../mfc/reference/coleobjectfactory-class.md#getlicensekey)
 
-     Požádá o jedinečný klíč z ovládacího prvku knihovny DLL. Tento klíč je součástí aplikace typu kontejner a později, použít ve spojení s `VerifyLicenseKey`, chcete-li vytvořit instanci ovládacího prvku. Tato funkce se volá se rozhraním při zpracování `IClassFactory2::RequestLicKey`.
+   Požádá o jedinečný klíč z ovládacího prvku knihovny DLL. Tento klíč je součástí aplikace typu kontejner a později, použít ve spojení s `VerifyLicenseKey`, chcete-li vytvořit instanci ovládacího prvku. Tato funkce se volá se rozhraním při zpracování `IClassFactory2::RequestLicKey`.
 
 - [Verifylicensekey –](../mfc/reference/coleobjectfactory-class.md#verifylicensekey)
 
-     Ověří, zda vložený klíč a jedinečný klíč ovládacího prvku jsou stejné. To umožňuje kontejneru pro vytvoření instance ovládacího prvku pro jeho použití. Tato funkce se volá se rozhraním při zpracování `IClassFactory2::CreateInstanceLic` a může být potlačena za účelem poskytovat vlastní ověření licenční klíč. Výchozí implementace provádí porovnání řetězců. Další informace najdete v tématu [přizpůsobení Licensing ovládacího prvku ActiveX](#_core_customizing_the_licensing_of_an_activex_control)dále v tomto článku.
+   Ověří, zda vložený klíč a jedinečný klíč ovládacího prvku jsou stejné. To umožňuje kontejneru pro vytvoření instance ovládacího prvku pro jeho použití. Tato funkce se volá se rozhraním při zpracování `IClassFactory2::CreateInstanceLic` a může být potlačena za účelem poskytovat vlastní ověření licenční klíč. Výchozí implementace provádí porovnání řetězců. Další informace najdete v tématu [přizpůsobení Licensing ovládacího prvku ActiveX](#_core_customizing_the_licensing_of_an_activex_control)dále v tomto článku.
 
 ###  <a name="_core_header_file_modifications"></a> Úpravy souborů záhlaví
 

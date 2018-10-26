@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a502cbf61f3542c010a89b82131a95f94856cda
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 26861b11aafd4bfcd4f1d5a7cc618ed27b60e6b8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46042881"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071177"
 ---
 # <a name="cregkey-class"></a>Cregkey – třída
 
@@ -177,7 +177,7 @@ Pokud je úspěšná, vrátí ERROR_SUCCESS; v opačném případě vrátí chyb
 Volejte tuto metodu za účelem vytvoření se zadaným klíčem, pokud neexistuje jako podklíč *hKeyParent*.
 
 ```
-LONG Create(  
+LONG Create(
     HKEY hKeyParent,
     LPCTSTR lpszKeyName,
     LPTSTR lpszClass = REG_NONE,
@@ -311,7 +311,7 @@ Nastavení HKEY přidružené `CRegKey` objektu.
 Voláním této metody lze vytvořit výčet podklíčů klíče otevřít registr.
 
 ```
-LONG EnumKey(  
+LONG EnumKey(
     DWORD iIndex,
     LPTSTR pszName,
     LPDWORD pnNameLength,
@@ -361,7 +361,7 @@ Další informace najdete v tématu [RegEnumFlush](/windows/desktop/api/winreg/n
 Voláním této metody lze načíst kopii popisovače zabezpečení, ochrana otevřít klíč registru.
 
 ```
-LONG GetKeySecurity(  
+LONG GetKeySecurity(
     SECURITY_INFORMATION si,
     PSECURITY_DESCRIPTOR psd,
     LPDWORD pnBytes) throw();
@@ -409,7 +409,7 @@ CAtlTransactionManager* m_pTM;
 Tato metoda upozorní volající o změnách atributy nebo obsah otevřít klíč registru.
 
 ```
-LONG NotifyChangeKeyValue(  
+LONG NotifyChangeKeyValue(
     BOOL bWatchSubtree,
     DWORD dwNotifyFilter,
     HANDLE hEvent,
@@ -453,7 +453,7 @@ Ukázka programu a další podrobnosti najdete v tématu [funkce RegNotifyChange
 Volejte tuto metodu za účelem otevření zadaného klíče a nastavte [m_hKey](#m_hkey) ke zpracování tohoto klíče.
 
 ```
-LONG Open(  
+LONG Open(
     HKEY hKeyParent,
     LPCTSTR lpszKeyName,
     REGSAM samDesired = KEY_READ | KEY_WRITE) throw();
@@ -514,7 +514,7 @@ Tento operátor odpojí *klíč* z jeho aktuálního objektu a přiřadí ji k `
 Voláním této metody lze načíst binární data pro zadanou hodnotu názvu.
 
 ```
-LONG QueryBinaryValue(  
+LONG QueryBinaryValue(
     LPCTSTR pszValueName,
     void* pValue,
     ULONG* pnBytes) throw();
@@ -547,7 +547,7 @@ Tato metoda používá `RegQueryValueEx` a potvrdí, že se vrátí správný ty
 Volejte tuto metodu za účelem získání dat DWORD zadaná hodnota názvu.
 
 ```
-LONG QueryDWORDValue(  
+LONG QueryDWORDValue(
     LPCTSTR pszValueName,
     DWORD& dwValue) throw();
 ```
@@ -576,7 +576,7 @@ Tato metoda používá `RegQueryValueEx` a potvrdí, že se vrátí správný ty
 Volejte tuto metodu za účelem načtení dat identifikátoru GUID pro zadanou hodnotu názvu.
 
 ```
-LONG QueryGUIDValue(  
+LONG QueryGUIDValue(
     LPCTSTR pszValueName,
     GUID& guidValue) throw();
 ```
@@ -605,7 +605,7 @@ Tato metoda používá `CRegKey::QueryStringValue` a převede řetězec na ident
 Volejte tuto metodu za účelem získání nahrazován dat pro zadanou hodnotu názvu.
 
 ```
-LONG QueryMultiStringValue(  
+LONG QueryMultiStringValue(
     LPCTSTR pszValueName,
     LPTSTR pszValue,
     ULONG* pnChars) throw();
@@ -638,7 +638,7 @@ Tato metoda používá `RegQueryValueEx` a potvrdí, že se vrátí správný ty
 Volejte tuto metodu za účelem načtení dat QWORD zadanou hodnotu názvu.
 
 ```
-LONG QueryQWORDValue(  
+LONG QueryQWORDValue(
     LPCTSTR pszValueName,
     ULONGLONG& qwValue) throw();
 ```
@@ -667,7 +667,7 @@ Tato metoda používá `RegQueryValueEx` a potvrdí, že se vrátí správný ty
 Volejte tuto metodu za účelem načtení dat řetězce pro název zadanou hodnotu.
 
 ```
-LONG QueryStringValue(  
+LONG QueryStringValue(
     LPCTSTR pszValueName,
     LPTSTR pszValue,
     ULONG* pnChars) throw();
@@ -700,7 +700,7 @@ Tato metoda používá `RegQueryValueEx` a potvrdí, že se vrátí správný ty
 Voláním této metody lze načíst data pro zadanou hodnotu pole [m_hKey](#m_hkey). Dřívější verze této metody již nejsou podporovány a jsou označeny jako ATL_DEPRECATED.
 
 ```
-LONG QueryValue(  
+LONG QueryValue(
     LPCTSTR pszValueName,
     DWORD* pdwType,
     void* pData,
@@ -781,7 +781,7 @@ Pokud klíč má podklíčích, musí volat tuto metodu za účelem odstranění
 Voláním této metody lze nastavit binární hodnotu klíče registru.
 
 ```
-LONG SetBinaryValue(  
+LONG SetBinaryValue(
     LPCTSTR pszValueName,
     const void* pValue,
     ULONG nBytes) throw();
@@ -859,7 +859,7 @@ Tato metoda používá `CRegKey::SetStringValue` a převede identifikátor GUID 
 Volejte tuto metodu za účelem ukládání dat v zadané hodnotě pole zadaný klíč.
 
 ```
-LONG SetKeyValue(  
+LONG SetKeyValue(
     LPCTSTR lpszKeyName,
     LPCTSTR lpszValue,
     LPCTSTR lpszValueName = NULL) throw();
@@ -968,7 +968,7 @@ Tato metoda používá [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-reg
 Voláním této metody nastavte hodnotu řetězce klíče registru.
 
 ```
-LONG SetStringValue(  
+LONG SetStringValue(
     LPCTSTR pszValueName,
     LPCTSTR pszValue,
     DWORD dwType = REG_SZ) throw();
@@ -998,23 +998,23 @@ Tato metoda používá [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-reg
 Volejte tuto metodu za účelem ukládání dat v poli zadanou hodnotu [m_hKey](#m_hkey). Dřívější verze této metody již nejsou podporovány a jsou označeny jako ATL_DEPRECATED.
 
 ```
-LONG SetValue(  
+LONG SetValue(
     LPCTSTR pszValueName,
     DWORD dwType,
     const void* pValue,
     ULONG nBytes) throw();
 
-static LONG WINAPI SetValue(  
+static LONG WINAPI SetValue(
     HKEY hKeyParent,
     LPCTSTR lpszKeyName,
     LPCTSTR lpszValue,
     LPCTSTR lpszValueName = NULL);
 
-ATL_DEPRECATED LONG SetValue(  
+ATL_DEPRECATED LONG SetValue(
     DWORD dwValue,
     LPCTSTR lpszValueName);
 
-ATL_DEPRECATED LONG SetValue(  
+ATL_DEPRECATED LONG SetValue(
     LPCTSTR lpszValue,
     LPCTSTR lpszValueName = NULL,
     bool bMulti = false,

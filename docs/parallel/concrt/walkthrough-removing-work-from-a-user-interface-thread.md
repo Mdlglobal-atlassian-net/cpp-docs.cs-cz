@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d87fe1060756e46418411584fa6042533bbc1f2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cc766b3f5410cc52543b5d2bafc06b87d9222e4a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46385505"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077930"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Návod: Odstranění práce z vlákna uživatelského rozhraní
 
@@ -72,7 +72,7 @@ Tato část popisuje, jak vytvořit základní aplikaci knihovny MFC.
 
 1. Klikněte na tlačítko **Dokončit** vytvoření projektu a zavřete **Průvodce aplikací knihovny MFC**.
 
-     Ověřte, že aplikace úspěšně vytvořil sestavováním a spouštěním ho. Jak vytvořit aplikaci, na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**. Je-li aplikace sestavena úspěšně, spusťte aplikaci kliknutím **spustit ladění** na **ladění** nabídky.
+   Ověřte, že aplikace úspěšně vytvořil sestavováním a spouštěním ho. Jak vytvořit aplikaci, na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**. Je-li aplikace sestavena úspěšně, spusťte aplikaci kliknutím **spustit ladění** na **ladění** nabídky.
 
 ##  <a name="serial"></a> Implementace sériového portu verze Mandelbrot aplikace
 
@@ -82,37 +82,37 @@ Tato část popisuje, jak nakreslit fraktálový Mandelbrot. Tato verze nakresl�
 
 1. Ve stdafx.h přidejte následující `#include` – direktiva:
 
-     [!code-cpp[concrt-mandelbrot#1](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_1.h)]
+   [!code-cpp[concrt-mandelbrot#1](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_1.h)]
 
 1. V ChildView.h až `pragma` směrnice, definovat `BitmapPtr` typu. `BitmapPtr` Umožňuje ukazatel na typ `Bitmap` objektu, který chcete sdílet víc součástí. `Bitmap` Odstranění objektu, když je již neodkazuje libovolné součásti.
 
-     [!code-cpp[concrt-mandelbrot#2](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_2.h)]
+   [!code-cpp[concrt-mandelbrot#2](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_2.h)]
 
 1. V ChildView.h, přidejte následující kód, který `protected` část `CChildView` třídy:
 
-     [!code-cpp[concrt-mandelbrot#3](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_3.h)]
+   [!code-cpp[concrt-mandelbrot#3](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_3.h)]
 
 1. V ChildView.cpp okomentujte nebo odstraňte následující řádky.
 
-     [!code-cpp[concrt-mandelbrot#4](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_4.cpp)]
+   [!code-cpp[concrt-mandelbrot#4](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_4.cpp)]
 
-     V sestavení ladění, tento krok zabrání aplikaci od používání `DEBUG_NEW` alokátoru, který není kompatibilní s rozhraní GDI +.
+   V sestavení ladění, tento krok zabrání aplikaci od používání `DEBUG_NEW` alokátoru, který není kompatibilní s rozhraní GDI +.
 
 1. V ChildView.cpp, přidejte `using` direktivu `Gdiplus` oboru názvů.
 
-     [!code-cpp[concrt-mandelbrot#5](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_5.cpp)]
+   [!code-cpp[concrt-mandelbrot#5](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_5.cpp)]
 
 1. Následující kód přidejte konstruktor a destruktor `CChildView` třídy k inicializaci a ukončení rozhraní GDI +.
 
-     [!code-cpp[concrt-mandelbrot#6](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_6.cpp)]
+   [!code-cpp[concrt-mandelbrot#6](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_6.cpp)]
 
 1. Implementace `CChildView::DrawMandelbrot` metody. Tato metoda vykreslí fraktálový Mandelbrot do zadaného `Bitmap` objektu.
 
-     [!code-cpp[concrt-mandelbrot#7](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_7.cpp)]
+   [!code-cpp[concrt-mandelbrot#7](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_7.cpp)]
 
 1. Implementace `CChildView::OnPaint` metody. Tato metoda volá `CChildView::DrawMandelbrot` a pak zkopíruje obsah `Bitmap` objekt do okna.
 
-     [!code-cpp[concrt-mandelbrot#8](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_8.cpp)]
+   [!code-cpp[concrt-mandelbrot#8](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_8.cpp)]
 
 9. Ověřte, že aplikace byla úspěšně aktualizována sestavováním a spouštěním ho.
 
@@ -136,25 +136,25 @@ Tento příklad také používá [concurrency::unbounded_buffer](reference/unbou
 
 1. Ve stdafx.h přidejte následující `#include` direktivy:
 
-     [!code-cpp[concrt-mandelbrot#101](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_9.h)]
+   [!code-cpp[concrt-mandelbrot#101](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_9.h)]
 
 1. V ChildView.h, přidejte `task_group` a `unbounded_buffer` členské proměnné `protected` část `CChildView` třídy. `task_group` Obsahuje úlohy, které provádějí kreslení; `unbounded_buffer` dokončené Mandelbrot image obsahuje objekt.
 
-     [!code-cpp[concrt-mandelbrot#102](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_10.h)]
+   [!code-cpp[concrt-mandelbrot#102](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_10.h)]
 
 1. V ChildView.cpp, přidejte `using` direktivu `concurrency` oboru názvů.
 
-     [!code-cpp[concrt-mandelbrot#103](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_11.cpp)]
+   [!code-cpp[concrt-mandelbrot#103](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_11.cpp)]
 
 1. V `CChildView::DrawMandelbrot` po volání metody `Bitmap::UnlockBits`, volání [concurrency::send](reference/concurrency-namespace-functions.md#send) funkce předat `Bitmap` objektu vlákna uživatelského rozhraní. Potom publikovat zprávu malby na vlákno uživatelského rozhraní a zneplatnit klientské oblasti.
 
-     [!code-cpp[concrt-mandelbrot#104](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_12.cpp)]
+   [!code-cpp[concrt-mandelbrot#104](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_12.cpp)]
 
 1. Aktualizace `CChildView::OnPaint` metoda zobrazí aktualizovaný `Bitmap` objektu a nakreslete obrázek do okna klienta.
 
-     [!code-cpp[concrt-mandelbrot#105](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_13.cpp)]
+   [!code-cpp[concrt-mandelbrot#105](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_13.cpp)]
 
-     `CChildView::OnPaint` Metoda vytvoří úlohu k vytvoření bitové kopie Mandelbrot, pokud neexistuje ve vyrovnávací paměti zpráv. Nesmí obsahovat vyrovnávací paměti zpráv `Bitmap` objektu v případech, jako je například zpráva počáteční Malování a další okno se přesune před okno klienta.
+   `CChildView::OnPaint` Metoda vytvoří úlohu k vytvoření bitové kopie Mandelbrot, pokud neexistuje ve vyrovnávací paměti zpráv. Nesmí obsahovat vyrovnávací paměti zpráv `Bitmap` objektu v případech, jako je například zpráva počáteční Malování a další okno se přesune před okno klienta.
 
 1. Ověřte, že aplikace byla úspěšně aktualizována sestavováním a spouštěním ho.
 
@@ -194,37 +194,37 @@ Při zničení okno klienta je dobrým zvykem zrušit všechny aktivní úlohy v
 
 1. V ChildView.h v `protected` část `CChildView` třídy, přidejte pro deklarace `OnSize`, `OnSizing`, a `OnDestroy` funkce mapy zpráv.
 
-     [!code-cpp[concrt-mandelbrot#201](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_15.h)]
+   [!code-cpp[concrt-mandelbrot#201](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_15.h)]
 
 1. V ChildView.cpp, upravte mapování tak, aby obsahovala obslužné rutiny pro zprávy `WM_SIZE`, `WM_SIZING`, a `WM_DESTROY` zprávy.
 
-     [!code-cpp[concrt-mandelbrot#202](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_16.cpp)]
+   [!code-cpp[concrt-mandelbrot#202](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_16.cpp)]
 
 1. Implementace `CChildView::OnSizing` metody. Tato metoda zruší všechny stávající úlohy vykreslování.
 
-     [!code-cpp[concrt-mandelbrot#203](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_17.cpp)]
+   [!code-cpp[concrt-mandelbrot#203](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_17.cpp)]
 
 1. Implementace `CChildView::OnSize` metody. Tato metoda zruší všechny stávající úlohy vykreslování a vytvoří nový úkol vykreslování pro velikost okna aktualizovaného klienta.
 
-     [!code-cpp[concrt-mandelbrot#204](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_18.cpp)]
+   [!code-cpp[concrt-mandelbrot#204](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_18.cpp)]
 
 1. Implementace `CChildView::OnDestroy` metody. Tato metoda zruší všechny stávající úlohy vykreslování.
 
-     [!code-cpp[concrt-mandelbrot#205](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_19.cpp)]
+   [!code-cpp[concrt-mandelbrot#205](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_19.cpp)]
 
 1. V ChildView.cpp, definujte `scope_guard` třídy, která implementuje vzor RAII.
 
-     [!code-cpp[concrt-mandelbrot#206](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_20.cpp)]
+   [!code-cpp[concrt-mandelbrot#206](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_20.cpp)]
 
 1. Přidejte následující kód, který `CChildView::DrawMandelbrot` po volání metody `Bitmap::LockBits`:
 
-     [!code-cpp[concrt-mandelbrot#207](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_21.cpp)]
+   [!code-cpp[concrt-mandelbrot#207](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_21.cpp)]
 
-     Tento kód zpracovává zrušení tak, že vytvoříte `scope_guard` objektu. Pokud objekt opustí rozsah, odemkne rastrové bity.
+   Tento kód zpracovává zrušení tak, že vytvoříte `scope_guard` objektu. Pokud objekt opustí rozsah, odemkne rastrové bity.
 
 1. Upravit konec `CChildView::DrawMandelbrot` metoda zrušíte `scope_guard` objektu po rastrové bity jsou odemčený, ale před všechny zprávy se odesílají do vlákna uživatelského rozhraní. Tím se zajistí, že vlákno uživatelského rozhraní není aktualizován před rastrové bity jsou odemknout.
 
-     [!code-cpp[concrt-mandelbrot#208](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_22.cpp)]
+   [!code-cpp[concrt-mandelbrot#208](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_22.cpp)]
 
 9. Ověřte, že aplikace byla úspěšně aktualizována sestavováním a spouštěním ho.
 

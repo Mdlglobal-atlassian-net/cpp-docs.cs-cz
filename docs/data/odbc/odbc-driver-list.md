@@ -17,33 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 10c5a4fd9b7f15e5f6532bbaf6b5d8af4d3c86ba
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 069ecc2c743e75a120355b6c57acd5968f1de28c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46067992"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083149"
 ---
 # <a name="odbc-driver-list"></a>Seznam ovladačů ODBC
 
-ODBC – ovladače poskytuje jazyk Visual C++ pro následující databáze:  
-  
-- SQL Server  
-  
-- Microsoft Access  
-  
-- Microsoft Excel  
-  
-- dBASE  
-  
-- Paradox  
-  
-- Microsoft Oracle ODBC  
-  
-- Textové soubory  
-  
-Informace o ovladače rozhraní ODBC, které jsou k dispozici od společnosti Microsoft a jiných společností, včetně balíčku ovladačů rozhraní ODBC Kontaktujte Microsoft Product Support Services.  
-  
-## <a name="see-also"></a>Viz také  
+ODBC – ovladače poskytuje jazyk Visual C++ pro následující databáze:
+
+- SQL Server
+
+- Microsoft Access
+
+- Microsoft Excel
+
+- dBASE
+
+- Paradox
+
+- Microsoft Oracle ODBC
+
+- Textové soubory
+
+Informace o ovladače rozhraní ODBC, které jsou k dispozici od společnosti Microsoft a jiných společností, včetně balíčku ovladačů rozhraní ODBC Kontaktujte Microsoft Product Support Services.
+
+## <a name="see-also"></a>Viz také
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

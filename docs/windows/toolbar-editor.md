@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bb329b60b72aae268252ae3ddbcc2c63d4a18f6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 273893f5164c4e89b3516c43b5414e5487af376e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389682"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063208"
 ---
 # <a name="toolbar-editor-c"></a>Editor panelu nástrojů (C++)
 
@@ -43,8 +43,7 @@ S **nástrojů** editoru, můžete:
 
 **Nástrojů** okno editoru naleznete dvě zobrazení obrázku tlačítka, stejně jako okno editoru obrázků. Rozdělit pruh odděluje. Můžete přetáhnout příčku ze strany na stranu, a změnit tak relativní velikosti podoken. Aktivní podokno zobrazuje hranici výběru. Nad dvě zobrazení obrázku je panel nástrojů předmět.
 
-![Editor panelu nástrojů](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")  
-Editor panelu nástrojů
+![Editor panelu nástrojů](../mfc/media/vctoolbareditor.gif "vcToolbarEditor") Editor panelu nástrojů
 
 **Nástrojů** editoru je podobný **Image** editor ve funkcích. Položky nabídky, grafické nástroje a rastrový obrázek mřížky jsou stejná jako v **Image** editoru. Příkaz nabídky **Image** nabídky, aby bylo možné přepínat mezi **nástrojů** editoru a **Image** editoru. Další informace o používání **grafiky** nástrojů **barvy** palety, nebo **Image** nabídky, naleznete v tématu [Editor obrázků](../windows/image-editor-for-icons.md).
 

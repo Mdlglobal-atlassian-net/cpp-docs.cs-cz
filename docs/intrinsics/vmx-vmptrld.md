@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f3304106662d290a208545061bf9f71b7f30c10
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 16a61578b7512c1d9ce9d7ca217b29a3ea670657
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820942"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068486"
 ---
 # <a name="vmxvmptrld"></a>__vmx_vmptrld
 
@@ -33,22 +33,26 @@ Načte ukazatel na aktuální struktura řízení virtuálních počítačů (VM
 ## <a name="syntax"></a>Syntaxe
 
 ```
-int __vmx_vmptrld( 
-   unsigned __int64 *VmcsPhysicalAddress 
+int __vmx_vmptrld( 
+   unsigned __int64 *VmcsPhysicalAddress 
 );
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-[in] *`VmcsPhysicalAddress` adresa ukazatele VMCS se mají ukládat.
+*VmcsPhysicalAddress*<br/>
+[in] Adresa ukazatele VMCS se mají ukládat.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-0 je operace úspěšná.
+0<br/>
+Operace byla úspěšná.
 
-1 operace selhala kvůli rozšířené stav k dispozici v `VM-instruction error field` z aktuální VMCS.
+1<br/>
+Operace se nezdařila s rozšířenou stav k dispozici v `VM-instruction error field` z aktuální VMCS.
 
-2 operace se nezdařila, aniž by k dispozici.
+2<br/>
+Operace selhala, aniž by k dispozici.
 
 ## <a name="remarks"></a>Poznámky
 

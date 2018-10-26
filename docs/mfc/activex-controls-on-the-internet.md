@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6004c3acd052d1424004017941a5e4aa110c602c
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 1bf8d43d9325ff6900cd1c5cd63629ead434acbc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890333"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055512"
 ---
 # <a name="activex-controls-on-the-internet"></a>Ovládací prvky ActiveXna Internetu
 
@@ -67,7 +67,7 @@ Chcete-li zvýšit výkon své ovládací prvky, postupujte podle těchto pokyn�
 
 - Stáhněte data v malých blocích.
 
-     Při stahování velkých streamů, jako je například rastrové obrázky nebo obrazových dat, přístup k datům ovládacího prvku asynchronně ve spolupráci s kontejnerem. Načtení dat v přírůstkové, nebo progresivní způsobem spolupráce při práci s jinými ovládacími prvky, které může být načítání dat. Kód můžete stáhnout také asynchronně.
+   Při stahování velkých streamů, jako je například rastrové obrázky nebo obrazových dat, přístup k datům ovládacího prvku asynchronně ve spolupráci s kontejnerem. Načtení dat v přírůstkové, nebo progresivní způsobem spolupráce při práci s jinými ovládacími prvky, které může být načítání dat. Kód můžete stáhnout také asynchronně.
 
 - Stáhněte si kód a vlastnosti na pozadí.
 
@@ -75,15 +75,15 @@ Chcete-li zvýšit výkon své ovládací prvky, postupujte podle těchto pokyn�
 
 - Vezměte v úvahu jak trvalá data uložená, vlastnosti a velkých objemů dat objektů BLOB (například obrázek nebo video dat rastrového obrázku).
 
-     Ovládací prvky s významné množství trvalá data, jako je například velké rastrové obrázky nebo souborech AVI, vyžadují stahování metoda důkladnou pozornost. Dokumentu nebo na stránce můžete viditelná, co nejdříve a umožnit uživatelům interakci s stránky při načtení dat na pozadí ovládacích prvků.
+   Ovládací prvky s významné množství trvalá data, jako je například velké rastrové obrázky nebo souborech AVI, vyžadují stahování metoda důkladnou pozornost. Dokumentu nebo na stránce můžete viditelná, co nejdříve a umožnit uživatelům interakci s stránky při načtení dat na pozadí ovládacích prvků.
 
 - Zápis efektivní rutiny zachovat velikost kódu a čas spuštění.
 
-     Malé tlačítko a popisek ovládacích prvků, pomocí jenom pár bajtů trvalá data, jsou vhodné pro použití v prostředí sítě Internet a práce i v prohlížeči.
+   Malé tlačítko a popisek ovládacích prvků, pomocí jenom pár bajtů trvalá data, jsou vhodné pro použití v prostředí sítě Internet a práce i v prohlížeči.
 
 - Vezměte v úvahu, že probíhá jsou předávány do kontejneru.
 
-     Upozornění pro kontejner probíhá asynchronní stahování, včetně uživatele, můžete začít pracovat na stránce a po dokončení stahování. Kontejner můžete zobrazit průběh (jako procento dokončení) pro uživatele.
+   Upozornění pro kontejner probíhá asynchronní stahování, včetně uživatele, můžete začít pracovat na stránce a po dokončení stahování. Kontejner můžete zobrazit průběh (jako procento dokončení) pro uživatele.
 
 - Zvažte, jak ovládací prvky jsou registrované na klientském počítači.
 
@@ -99,7 +99,7 @@ Při vytváření nového ovládacího prvku pomocí Průvodce aplikací, může
 
 1. Na **nastavení** stránce **asynchronně načte vlastnosti**. Výběrem této možnosti nastavíte vlastnost připraveném stavu a událostí změny stavu připraveno za vás.
 
-     Můžete také vybrat další optimalizace, jako například **aktivace bez oken**, který je popsaný v [ovládací prvky ActiveX: optimalizace](../mfc/mfc-activex-controls-optimization.md).
+   Můžete také vybrat další optimalizace, jako například **aktivace bez oken**, který je popsaný v [ovládací prvky ActiveX: optimalizace](../mfc/mfc-activex-controls-optimization.md).
 
 1. Zvolte **Dokončit** pro vytvoření projektu.
 
@@ -111,15 +111,15 @@ Při vytváření nového ovládacího prvku pomocí Průvodce aplikací, může
 
 1. V této třídě přepsat `OnDataAvailable`. Tato funkce je volána pokaždé, když se data jsou k dispozici k zobrazení. Jak budou data k dispozici, je možné ji zpracovávat žádným způsobem, který zvolíte, například postupně vykreslování.
 
-     Výpis kódu níže je jednoduchý příklad postupně zobrazení dat v ovládacím prvku upravovat. Všimněte si použití příznaku **BSCF_FIRSTDATANOTIFICATION** zrušte textové pole.
+   Výpis kódu níže je jednoduchý příklad postupně zobrazení dat v ovládacím prvku upravovat. Všimněte si použití příznaku **BSCF_FIRSTDATANOTIFICATION** zrušte textové pole.
 
-     [!code-cpp[NVC_MFCActiveXControl#1](../mfc/codesnippet/cpp/activex-controls-on-the-internet_1.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#1](../mfc/codesnippet/cpp/activex-controls-on-the-internet_1.cpp)]
 
-     Všimněte si, že musí obsahovat AFXCMN. H používat `CListCtrl` třídy.
+   Všimněte si, že musí obsahovat AFXCMN. H používat `CListCtrl` třídy.
 
 1. Pokud ovládacího prvku celkový stav se změní (například v načtení do inicializovaného nebo interaktivní uživatel), volání `COleControl::InternalSetReadyState`. Pokud váš ovládací prvek má pouze jednu datovou Vlastnost path, můžete přidat kód na **BSCF_LASTDATANOTIFICATION** oznámit kontejneru dokončení stahování. Příklad:
 
-     [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]
 
 1. Přepsat `OnProgress`. V `OnProgress`, jsou předány číslo zobrazující maximální rozsah a je číslo znázorňující, jak daleko podél aktuální soubor ke stažení. Tato čísla slouží k zobrazení stavu, jako je například procento dokončení uživateli.
 
@@ -135,19 +135,19 @@ Další postup přidá vlastnost do ovládacího prvku pomocí právě odvozené
 
 1. Deklarujte proměnné člena vaší `CDataPathProperty`-odvozené třídy a třídy vašeho ovládacího prvku ActiveX.
 
-     [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]
+   [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]
 
 1. Implementace `Get/Set` metody. Pro `Get`, vrátí řetězec. Pro `Set`, načtení vlastností a volání `SetModifiedFlag`.
 
-     [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]
 
 1. V [DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange), přidejte následující řádek:
 
-     [!code-cpp[NVC_MFCActiveXControl#5](../mfc/codesnippet/cpp/activex-controls-on-the-internet_5.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#5](../mfc/codesnippet/cpp/activex-controls-on-the-internet_5.cpp)]
 
 1. Přepsat [ResetData](../mfc/reference/cdatapathproperty-class.md#resetdata) oznámit vlastnost resetování ovládacího prvku tak, že přidáte tento řádek:
 
-     [!code-cpp[NVC_MFCActiveXControl#6](../mfc/codesnippet/cpp/activex-controls-on-the-internet_6.cpp)]
+   [!code-cpp[NVC_MFCActiveXControl#6](../mfc/codesnippet/cpp/activex-controls-on-the-internet_6.cpp)]
 
 ## <a name="deciding-whether-to-derive-from-cdatapathproperty-or-ccacheddatapathproperty"></a>Rozhodování o tom, jestli se má odvodit z cdatapathproperty – nebo ccacheddatapathproperty –
 
@@ -200,8 +200,6 @@ Pokud přidáváte podporu asynchronního vlastnost do existujícího ovládací
 [!code-cpp[NVC_MFCActiveXControl#8](../mfc/codesnippet/cpp/activex-controls-on-the-internet_8.cpp)]
 
 Budete připraveni aktualizovat váš kód je stažené voláním [COleControl::InternalSetReadyState](../mfc/reference/colecontrol-class.md#internalsetreadystate). Jedno místo, které lze volat `InternalSetReadyState` z `OnProgress` přepsání `CDataPathProperty`-odvozené třídy.
-
-
 
 ## <a name="see-also"></a>Viz také
 

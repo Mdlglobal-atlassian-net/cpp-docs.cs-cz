@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cff60e5316202842b2ee22c5c6ba10813839b5d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 127e5187f2e6511279633ffe9b5e26b24014f6b2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46035848"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070644"
 ---
 # <a name="application-settings-atl-project-wizard"></a>Nastavení aplikace, Průvodce projektem ATL
 
@@ -31,15 +31,15 @@ Použití **nastavení aplikace** stránky Průvodce projektem ATL pro návrh a 
 
 Vyberte jednu ze tří typů serveru:
 
-- **Dynamická knihovna (DLL)**  
+- **Dynamická knihovna (DLL)**
 
    Vyberte vytvoření serveru v rámci procesu.
 
-- **Spustitelný soubor (EXE)**  
+- **Spustitelný soubor (EXE)**
 
    Vyberte pro vytvoření místního serveru mimo proces. Tato možnost není povolena podpora knihovny MFC nebo knihovny modelu COM + 1.0. Nepovoluje se sloučení kódu proxy/zástupné procedury.
 
-- **Služby (EXE)**  
+- **Služby (EXE)**
 
    Vyberte vytvořit aplikaci Windows, která běží na pozadí při spuštění Windows. Tuto možnost nelze povolit podporu pro knihovny MFC nebo knihovny modelu COM + 1.0 nebo neumožňuje sloučení kódu proxy/zástupné procedury.
 
@@ -48,15 +48,15 @@ Vyberte jednu ze tří typů serveru:
 > [!NOTE]
 > Všechny další možnosti jsou k dispozici pro pouze projekty knihovny DLL.
 
-- **Sloučení kódu proxy/zástupné procedury**  
+- **Sloučení kódu proxy/zástupné procedury**
 
    Vyberte **sloučení kódu proxy/zástupné procedury** zaškrtávací políčko v zájmu usnadnění práce při zařazování rozhraní je povinný. Tato možnost umístí MIDL generovaný proxy a zástupných procedur kód v rámci stejného spustitelného souboru jako server.
 
-- **Podpora knihovny MFC**  
+- **Podpora knihovny MFC**
 
    Vyberte, chcete-li určit, že váš objekt zahrnuje podporu knihovny MFC. Tato možnost propojí vaše projekty pro knihovny MFC, které můžete přístup k některé z třídy a funkce, které obsahují.
 
-- **Podpora COM + 1.0**  
+- **Podpora COM + 1.0**
 
    Vyberte, chcete-li změnit nastavení projektu sestavení pro podporu komponenty modelu COM + 1.0. Kromě standardní seznamu knihoven průvodce přidá comsvcs.lib knihovny specifické pro komponenty modelu COM + 1.0
 

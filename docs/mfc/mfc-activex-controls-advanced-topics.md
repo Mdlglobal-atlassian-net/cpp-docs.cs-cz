@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18d0a15b2fe1d61e1b7ba14d210b428f282bff4d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e2b0c4b137079d90a1f51cb852f6046c676d32b8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386363"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067927"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC – ovládací prvky ActiveX: Pokročilá témata
 
@@ -188,7 +188,7 @@ Můžete vytvořit ovládací prvky dialogového okna, které jste žádné uži
 
 - Deklarujte místní proměnné a podtřídy jako položky dialogového okna. Vložte kód, který má následující podobu (`CMyCtrl` je třídou obálky IDC_MYCTRL1 je ID ovládacího prvku):
 
-     [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
+   [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
 
 ## <a name="see-also"></a>Viz také
 

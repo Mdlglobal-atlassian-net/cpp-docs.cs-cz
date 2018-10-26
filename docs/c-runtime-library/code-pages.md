@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a81b358a89f3ed16747d27bc6401c01ad194680
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6eafdf3a140dd8a5976cf2fe8554b3b076111b74
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113718"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060504"
 ---
 # <a name="code-pages"></a>Znakové stránky
 
@@ -43,7 +43,7 @@ Běhové knihovny Microsoft používá tyto druhy znakových stránek:
     setlocale ( LC_ALL, "" );
     ```
 
-     také nastaví národní prostředí systému výchozí ANSI znakovou stránku.
+   také nastaví národní prostředí systému výchozí ANSI znakovou stránku.
 
 - Znaková stránka národního prostředí. Chování počet běhové rutiny je závislá na aktuální nastavení národního prostředí, která zahrnuje znaková stránka národního prostředí. (Další informace najdete v tématu [rutiny závislé na národním prostředí](../c-runtime-library/locale.md).) Ve výchozím nastavení používají všechny rutiny závislé na národním prostředí v knihovně Microsoft za běhu znakovou stránku, která odpovídá na národní prostředí "C". Při spuštění můžete změnit nebo dotazovat znaková stránka národního prostředí používané pro volání [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
 

@@ -21,42 +21,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b3adc22d940e79a4f86fec45c0d0e4fc3969f1a7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0ac3ad9da312ba1723fd7201b804260e11a64660
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071416"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060691"
 ---
 # <a name="caccessor-class"></a>CAccessor – třída
 
-Představuje jeden z typů přistupujícího objektu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
+Představuje jeden z typů přistupujícího objektu.
+
+## <a name="syntax"></a>Syntaxe
+
 ```cpp
-template <class T>  
-class CAccessor : public CAccessorBase, public T  
-```  
-  
-### <a name="parameters"></a>Parametry  
+template <class T>
+class CAccessor : public CAccessorBase, public T
+```
+
+### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Třída uživatelského záznamu.  
-  
-## <a name="remarks"></a>Poznámky  
+Třída uživatelského záznamu.
 
-Používá se při záznamu je staticky svázán se zdrojem dat. Záznam obsahuje vyrovnávací paměti. Tato třída podporuje několik přístupových objektů pro sadu řádků.  
-  
-Pomocí tohoto typu přístupového objektu, když víte, struktury a typ databáze.  
-  
-Pokud váš přístupový objekt obsahuje pole, které odkazují na paměť (například `BSTR` nebo rozhraní), který musí být uvolněn zavolat členskou funkci [CAccessorRowset::FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md) před další záznam pro čtení.  
-  
-## <a name="requirements"></a>Požadavky  
+## <a name="remarks"></a>Poznámky
 
-**Záhlaví:** také atldbcli.h  
-  
-## <a name="see-also"></a>Viz také  
+Používá se při záznamu je staticky svázán se zdrojem dat. Záznam obsahuje vyrovnávací paměti. Tato třída podporuje několik přístupových objektů pro sadu řádků.
+
+Pomocí tohoto typu přístupového objektu, když víte, struktury a typ databáze.
+
+Pokud váš přístupový objekt obsahuje pole, které odkazují na paměť (například `BSTR` nebo rozhraní), který musí být uvolněn zavolat členskou funkci [CAccessorRowset::FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md) před další záznam pro čtení.
+
+## <a name="requirements"></a>Požadavky
+
+**Záhlaví:** také atldbcli.h
+
+## <a name="see-also"></a>Viz také
 
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

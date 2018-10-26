@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 154f9b4835f7dc18fcf45de53b078d3d5b649e37
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f9cd49a0083081ff7152c92b731e02cfe50c7ff0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446918"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055317"
 ---
 # <a name="index-class"></a>index – třída
 
@@ -144,6 +144,7 @@ index operator--(
    int
 ) restrict(amp,cpu);
 ```
+
 ### <a name="return-values"></a>Vrácené hodnoty
 
 Pro prefixový operátor objekt indexu (* to). Pro sufixový operátor nový objekt v indexu.
@@ -157,6 +158,7 @@ index<_Rank>& operator%=(
    int _Rhs
 ) restrict(cpu, amp);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
@@ -188,6 +190,7 @@ index<_Rank>& operator/=(
    int _Rhs
 ) restrict(amp,cpu);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
@@ -237,6 +240,7 @@ index<_Rank> operator++(
    int
 ) restrict(amp,cpu);
 ```
+
 ### <a name="return-value"></a>Návratová hodnota
 
 Pro prefixový operátor objekt indexu (* to). Pro sufixový operátor nový objekt v indexu.
@@ -253,6 +257,7 @@ index<_Rank>& operator+=(
    int _Rhs
 ) restrict(amp,cpu);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
@@ -270,6 +275,7 @@ index<_Rank>& operator=(
    const index<_Rank>& _Other
 ) restrict(amp,cpu);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *Ji_né*<br/>
@@ -291,6 +297,7 @@ index<_Rank>& operator-=(
    int _Rhs
 ) restrict(amp,cpu);
 ```
+
 ### <a name="parameters"></a>Parametry
 
 *_Rhs*<br/>
@@ -305,6 +312,7 @@ Index objektu.
 ```
 static const int rank = _Rank;
 ```
+
 ## <a name="see-also"></a>Viz také
 
 [Obor názvů Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

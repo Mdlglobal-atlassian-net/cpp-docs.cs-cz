@@ -47,12 +47,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a93c36748eb01a1c647a2aa433196c7364f60744
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 8165a404924b997d70d0097c28ac7d34ade92fc3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410808"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063858"
 ---
 # <a name="hstring-class"></a>HString – třída
 
@@ -115,7 +115,7 @@ Název                                         | Popis
 Odstraní aktuální instanci aplikace `HString` třídy.
 
 ```cpp
-~HString() throw()  
+~HString() throw()
 ```
 
 ## <a name="attach"></a>Hstring::Attach –
@@ -125,7 +125,7 @@ Přidruží zadaný `HString` objektu s aktuálním `HString` objektu.
 ```cpp
 void Attach(
        HSTRING hstr
-       ) throw()  
+       ) throw()
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -157,7 +157,7 @@ Tato metoda volá [WindowsDuplicateString](https://msdn.microsoft.com/library/br
 Zruší přidružení zadaného `HString` objekt ze základní hodnoty.
 
 ```cpp
-HSTRING Detach() throw()  
+HSTRING Detach() throw()
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -169,7 +169,7 @@ Základní `HString` hodnotu před byla zahájena operace odpojení.
 Načte hodnotu podkladového popisovače HSTRING.
 
 ```cpp
-HSTRING Get() const throw()  
+HSTRING Get() const throw()
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -181,7 +181,7 @@ Hodnotu podkladového popisovače HSTRING
 Načte ukazatel na podkladové popisovač HSTRING.
 
 ```cpp
-HSTRING* GetAddressOf() throw()  
+HSTRING* GetAddressOf() throw()
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -220,7 +220,7 @@ Druhý konstruktor inicializuje novou `HString` objektu na hodnotu stávající 
 Určuje, zda aktuální `HString` objekt je prázdný, nebo ne.
 
 ```cpp
-bool IsValid() const throw()  
+bool IsValid() const throw()
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -262,7 +262,7 @@ Maximální délka *str* parametr vyrovnávací paměti pro použití v této op
 Přesune hodnotu jiného `HString` objektů na aktuální `HString` objektu.
 
 ```cpp
-HString& operator=(HString&& other) throw()  
+HString& operator=(HString&& other) throw()
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -297,7 +297,7 @@ inline bool operator==(
 
 inline bool operator==(
                  const HString& lhs,
-                 const HSTRING& rhs) throw()  
+                 const HSTRING& rhs) throw()
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -330,7 +330,7 @@ inline bool operator!=( const HSTRING& lhs,
                         const HString& rhs) throw()
 
 inline bool operator!=( const HString& lhs,
-                        const HSTRING& rhs) throw()  
+                        const HSTRING& rhs) throw()
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -352,7 +352,7 @@ Označuje, zda je první parametr je menší než druhý parametr.
 ```cpp
 inline bool operator<(
     const HString& lhs,
-    const HString& rhs) throw()  
+    const HString& rhs) throw()
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -372,7 +372,7 @@ Druhý parametr k porovnání. *Zarovnání indirekce RHS* může být odkazem n
 Odstraní hodnotu řetězce a inicializuje aktuální `HString` objektu na prázdnou hodnotu.
 
 ```cpp
-void Release() throw()  
+void Release() throw()
 ```
 
 ## <a name="set"></a>Hstring::set –

@@ -24,88 +24,88 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2e850b5ebad231b07ce7d6c7dca79126a9b2ba15
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: a4ea0536a8af87927521f88d888e19aa145f2c04
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082355"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072067"
 ---
 # <a name="crestrictions-class"></a>CRestrictions – třída
 
-Obecná třída, která vám umožní zadat omezení pro sad řádků schématu.  
-  
+Obecná třída, která vám umožní zadat omezení pro sad řádků schématu.
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-template <class T, short nRestrictions, const GUID* pguid>  
-class CRestrictions : 
-   public CSchemaRowset <T, nRestrictions>  
-```  
-  
-### <a name="parameters"></a>Parametry  
+template <class T, short nRestrictions, const GUID* pguid>
+class CRestrictions :
+   public CSchemaRowset <T, nRestrictions>
+```
+
+### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Třída použitá pro přistupující objekt.  
-  
+Třída použitá pro přistupující objekt.
+
 *nRestrictions*<br/>
-Počet sloupců omezení pro sadu řádků schématu.  
-  
+Počet sloupců omezení pro sadu řádků schématu.
+
 *pguid*<br/>
-Ukazatel na identifikátor GUID schématu.  
+Ukazatel na identifikátor GUID schématu.
 
-## <a name="requirements"></a>Požadavky  
+## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atldbsch.h 
-  
-## <a name="members"></a>Členové  
-  
-### <a name="methods"></a>Metody  
-  
-|||  
-|-|-|  
-|[Otevřít](#open)|Vrací sadu podle uživatelem zadané omezení výsledků.|   
+**Záhlaví:** atldbsch.h
+
+## <a name="members"></a>Členové
+
+### <a name="methods"></a>Metody
+
+|||
+|-|-|
+|[Otevřít](#open)|Vrací sadu podle uživatelem zadané omezení výsledků.|
 
 ## <a name="open"></a> CRestrictions::Open
 
-Vrací sadu podle uživatelem zadané omezení výsledků.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Vrací sadu podle uživatelem zadané omezení výsledků.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-HRESULT Open(const CSession& session,  
-   LPCTSTR lpszParam 1 = NULL,  
-   LPCTSTR lpszParam 2 = NULL,  
-   LPCTSTR lpszParam 3 = NULL,  
-   LPCTSTR lpszParam 4 = NULL,  
-   LPCTSTR lpszParam 5 = NULL,  
-   LPCTSTR lpszParam 6 = NULL,  
-   LPCTSTR lpszParam 7 = NULL,  
-   bool bBind = true);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+HRESULT Open(const CSession& session,
+   LPCTSTR lpszParam 1 = NULL,
+   LPCTSTR lpszParam 2 = NULL,
+   LPCTSTR lpszParam 3 = NULL,
+   LPCTSTR lpszParam 4 = NULL,
+   LPCTSTR lpszParam 5 = NULL,
+   LPCTSTR lpszParam 6 = NULL,
+   LPCTSTR lpszParam 7 = NULL,
+   bool bBind = true);
+```
+
+#### <a name="parameters"></a>Parametry
 
 *Relace*<br/>
-[in] Určuje existující relaci objekt používaný pro připojení ke zdroji dat.  
-  
+[in] Určuje existující relaci objekt používaný pro připojení ke zdroji dat.
+
 *lpszParam*<br/>
-[in] Určuje omezení na sadu řádků schématu.  
-  
+[in] Určuje omezení na sadu řádků schématu.
+
 *bBind*<br/>
-[in] Určuje, jestli se má svázat mapy sloupce automaticky. Výchozí hodnota je **true**, což způsobí, že mapování sloupce vázat automaticky. Nastavení *bBind* k **false** brání automatické vazby mapy sloupce tak, aby mohl vytvořit vazbu ručně. (Ruční vazba je zajímavé především uživatelům OLAP).  
-  
-### <a name="return-value"></a>Návratová hodnota  
+[in] Určuje, jestli se má svázat mapy sloupce automaticky. Výchozí hodnota je **true**, což způsobí, že mapování sloupce vázat automaticky. Nastavení *bBind* k **false** brání automatické vazby mapy sloupce tak, aby mohl vytvořit vazbu ručně. (Ruční vazba je zajímavé především uživatelům OLAP).
 
-Jeden standardní hodnoty HRESULT.  
-  
-### <a name="remarks"></a>Poznámky  
+### <a name="return-value"></a>Návratová hodnota
 
-Můžete zadat maximálně sedm omezení pro sadu řádků schématu.  
-  
-Zobrazit [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) informace o definovaných omezení na jednotlivých řádků schématu.  
-  
-## <a name="see-also"></a>Viz také  
+Jeden standardní hodnoty HRESULT.
+
+### <a name="remarks"></a>Poznámky
+
+Můžete zadat maximálně sedm omezení pro sadu řádků schématu.
+
+Zobrazit [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) informace o definovaných omezení na jednotlivých řádků schématu.
+
+## <a name="see-also"></a>Viz také
 
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

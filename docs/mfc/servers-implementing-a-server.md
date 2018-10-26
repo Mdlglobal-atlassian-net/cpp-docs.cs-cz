@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d024c9468b06291ba93c4e404674925202fabcad
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a1dd43b806852e578c28dc7a647cb367ad6f2780
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406787"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076617"
 ---
 # <a name="servers-implementing-a-server"></a>Servery: Implementace serveru
 
@@ -36,7 +36,7 @@ Kód serveru, který obsahuje Průvodce aplikací spadá do několika kategorií
 
    - Prostředky nabídek a panelů nástrojů použít, pokud je na místě aktivní server.
 
-     Další informace o těchto prostředků najdete v tématu [nabídky a prostředky: serverové doplňky](../mfc/menus-and-resources-server-additions.md).
+   Další informace o těchto prostředků najdete v tématu [nabídky a prostředky: serverové doplňky](../mfc/menus-and-resources-server-additions.md).
 
 - Definuje třídu položky odvozené z `COleServerItem`. Další podrobnosti o serverové položky, naleznete v tématu [servery: serverové položky](../mfc/servers-server-items.md).
 

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39cde8affc84ed879ad3731cb6c18449c60498f3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 097f6173faad4f99f64c5dac45e2a0d1292a07eb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430849"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076357"
 ---
 # <a name="cmultilock-class"></a>CMultiLock – třída
 
@@ -148,19 +148,19 @@ Pokud `Lock` selže, vrátí - 1. V případě úspěchu vrátí jednu z násled
 
 - WAIT_OBJECT_0 a WAIT_OBJECT_0 + (počet objektů,-1)
 
-     Pokud *bWaitForAll* má hodnotu TRUE, všechny objekty jsou signalizován (k dispozici). Pokud *bWaitForAll* má hodnotu FALSE, návratová hodnota – WAIT_OBJECT_0 je index v poli objektů objektu, který je signalizována (k dispozici).
+   Pokud *bWaitForAll* má hodnotu TRUE, všechny objekty jsou signalizován (k dispozici). Pokud *bWaitForAll* má hodnotu FALSE, návratová hodnota – WAIT_OBJECT_0 je index v poli objektů objektu, který je signalizována (k dispozici).
 
 - WAIT_OBJECT_0 + (počet objektů)
 
-     Události podle *dwWakeMask* je k dispozici ve vstupní frontě vlákna.
+   Události podle *dwWakeMask* je k dispozici ve vstupní frontě vlákna.
 
 - WAIT_ABANDONED_0 a WAIT_ABANDONED_0 + (počet objektů,-1)
 
-     Pokud *bWaitForAll* hodnotu TRUE, jsou všechny objekty signalizován, a nejméně jeden z objektů je objekt mutex opuštěné. Pokud *bWaitForAll* má hodnotu FALSE, návratová hodnota – WAIT_ABANDONED_0 je index v poli objektů objektu opuštěné vzájemně vyloučený přístup, který splnil čekání.
+   Pokud *bWaitForAll* hodnotu TRUE, jsou všechny objekty signalizován, a nejméně jeden z objektů je objekt mutex opuštěné. Pokud *bWaitForAll* má hodnotu FALSE, návratová hodnota – WAIT_ABANDONED_0 je index v poli objektů objektu opuštěné vzájemně vyloučený přístup, který splnil čekání.
 
 - WAIT_TIMEOUT
 
-     V zadaném časovém intervalu *dwTimeOut* bez čekání následující po vypršení platnosti.
+   V zadaném časovém intervalu *dwTimeOut* bez čekání následující po vypršení platnosti.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -174,7 +174,6 @@ Uvolní objekt synchronizace vlastněné `CMultiLock`.
 
 ```
 BOOL Unlock();
-
 
 BOOL Unlock(
     LONG lCount,
@@ -202,6 +201,4 @@ První formulář `Unlock` pokusí o odemknutí synchronizace objektem spravovan
 ## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-
-
 

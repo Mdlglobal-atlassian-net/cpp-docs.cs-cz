@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0dbdf7350eeba1a29392bafc2f099a857e212e37
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 230620a2375ac5aa822e55496d1f26751ee6f7b3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410743"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055343"
 ---
 # <a name="creating-the-provider"></a>Vytvoření zprostředkovatele
 
@@ -32,7 +32,7 @@ ms.locfileid: "49410743"
 
 1. V **přidat třídu** dialogovém okně **nainstalováno** > **Visual C++** > **ATL**, vyberte **Zprostředkovatele služeb OLEDB knihovny ATL** ikonu a pak klikněte na tlačítko **otevřít**.
 
-1. V **Průvodce zprostředkovatelem ATL OLE DB**, zadejte krátký název pro váš poskytovatel v **krátký název** pole. V následujících tématech použijte krátký název "MyProvider", ale můžete použít jiný název. Ostatní naplnit podle názvu, kterou zadáte.
+1. V **Průvodce zprostředkovatelem ATL OLE DB**, zadejte krátký název pro váš poskytovatel v **krátký název** pole. V následujících tématech použijte krátký název *vlastní*, ale můžete použít jiný název. Ostatní naplnit podle názvu, kterou zadáte.
 
 1. V případě potřeby upravte další pole názvů. Kromě názvů objektu a souboru můžete upravit následující:
 

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d86749cc8481f2472ed2ebe29dd535e05dcb2e2
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 12070bd690cc2b6228ae5f86e69d9d698bd28348
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236020"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056916"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Návod: Vytvoření jednoduché aplikace pásu karet pomocí knihovny MFC
 
@@ -38,7 +38,7 @@ Tento názorný průvodce předpokládá, že jste nastavili Visual Studio použ
 
 1. Nastavte následující možnosti **Průvodce aplikací knihovny MFC**:
 
-    1. V **typ aplikace** pod **vizuální styl a barvy**vyberte **Office 2007 (modrý motiv)**. 
+    1. V **typ aplikace** pod **vizuální styl a barvy**vyberte **Office 2007 (modrý motiv)**.
 
     1. V **Podpora složených dokumentů** části, ujistěte se, že **žádný** zaškrtnuto.
 
@@ -46,7 +46,7 @@ Tento názorný průvodce předpokládá, že jste nastavili Visual Studio použ
 
     1. V **Podpora databáze** části, ujistěte se, že **žádný** zaškrtnuto.
 
-    1. V **funkce uživatelského rozhraní** části, ujistěte se, že **použít pás karet** zaškrtnuto. 
+    1. V **funkce uživatelského rozhraní** části, ujistěte se, že **použít pás karet** zaškrtnuto.
 
     1. Ve výchozím nastavení **Průvodce aplikací knihovny MFC** přidává podporu několika podoken s podporou ukotvení. Tyto možnosti lze z aplikace odstranit, protože tento návod pouze prezentuje pás karet. V **rozšířené funkce** části, zrušte zaškrtnutí všech možností.
 

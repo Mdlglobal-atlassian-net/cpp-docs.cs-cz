@@ -1,5 +1,5 @@
 ---
-title: Třída kontejneru::end | Microsoft Docs
+title: Třída kontejneru::end | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,19 +14,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d22551a9832b18bbb246ea99dafe75dad11c361
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0062b63c839b7f7f5b3b4c16bf3779e44f7c983b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842479"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083123"
 ---
 # <a name="container-classend"></a>Třída kontejneru::end
 
 > [!NOTE]
-> Toto téma se v dokumentaci k Visual C++ jako funkční příklad kontejnery použít ve standardní knihovně C++. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
+> Toto téma je v dokumentaci k Visual C++ jako funkční příklad kontejnery používané ve standardní knihovně jazyka C++. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
 
-Vrátí iterovat této body právě přesahuje za konec sekvenci.
+Vrátí iterátor, který ukazuje za konec sekvence.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,10 +34,9 @@ Vrátí iterovat této body právě přesahuje za konec sekvenci.
 
     const_iterator end() const;
 
-
 iterator end();
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázkový kontejner – třída](../standard-library/sample-container-class.md)<br/>

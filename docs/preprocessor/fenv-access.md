@@ -18,23 +18,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeb138a8b2598c209005031a3ccd3104fead48dc
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 3c06556d47bf0c471aa7e4fab610971e2b7ad11e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42464438"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081466"
 ---
 # <a name="fenvaccess"></a>fenv_access
 Zakáže (**na**) nebo povolí (**vypnout**) příznak optimalizace, které by mohly změnit prostředí s plovoucí desetinnou čárkou, testy a změně režimu.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **#pragma fenv_access (** { **na** | **vypnout** } **)**  
+> **#pragma fenv_access (** { **na** | **vypnout** } **)**
 
 ## <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení **fenv_access** je **vypnout**. Pokud kompilátor můžete předpokládat, že váš kód získat přístup nebo manipulaci s plovoucí desetinnou čárkou prostředí a potom ho můžete provádět mnoho optimalizace plovoucí desetinné čárky kód. Nastavte **fenv_access** k **na** k informuje kompilátor, že váš kód přistupuje k s plovoucí desetinnou čárkou prostředí pro testování stavu příznaky, výjimky, nebo nastavení příznaků režim ovládacího prvku. Kompilátor zakáže tyto optimalizace tak, aby váš kód může přistupovat k prostředí s plovoucí desetinnou čárkou konzistentně. 
+Ve výchozím nastavení **fenv_access** je **vypnout**. Pokud kompilátor můžete předpokládat, že váš kód získat přístup nebo manipulaci s plovoucí desetinnou čárkou prostředí a potom ho můžete provádět mnoho optimalizace plovoucí desetinné čárky kód. Nastavte **fenv_access** k **na** k informuje kompilátor, že váš kód přistupuje k s plovoucí desetinnou čárkou prostředí pro testování stavu příznaky, výjimky, nebo nastavení příznaků režim ovládacího prvku. Kompilátor zakáže tyto optimalizace tak, aby váš kód může přistupovat k prostředí s plovoucí desetinnou čárkou konzistentně.
 
 Další informace o chování plovoucí desetinné čárky, naleznete v tématu [/fp (určení chování plovoucí desetinné čárky)](../build/reference/fp-specify-floating-point-behavior.md).
 

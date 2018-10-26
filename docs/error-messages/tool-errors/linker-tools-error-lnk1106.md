@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 719ff1a87f3f1afc19cf38736c0059c46a8a9bdc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ce6a8b2ef9ac807e48cff42186453666cebda5ee
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46110871"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055981"
 ---
 # <a name="linker-tools-error-lnk1106"></a>Chyba linkerů LNK1106
 
@@ -33,16 +33,16 @@ Nástroj nelze číst nebo zapisovat do `location` v souboru mapovaných do pam�
 
 1. Disk je plný.
 
-     Uvolněte místo na disku a znovu propojit.
+   Uvolněte místo na disku a znovu propojit.
 
 1. Chcete propojit přes síť.
 
-     Některé sítě plně nepodporuje soubory mapované paměti používané linkeru. Zkuste propojení na místním disku.
+   Některé sítě plně nepodporuje soubory mapované paměti používané linkeru. Zkuste propojení na místním disku.
 
 1. Chybný blok na disku.
 
-     I když operační systém a hardware disku by měl mít tyto došlo k chybě, můžete chtít spustit program kontroly disku.
+   I když operační systém a hardware disku by měl mít tyto došlo k chybě, můžete chtít spustit program kontroly disku.
 
 1. Nedostatek prostoru v haldě.
 
-     Zobrazit [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) Další informace.
+   Zobrazit [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) Další informace.

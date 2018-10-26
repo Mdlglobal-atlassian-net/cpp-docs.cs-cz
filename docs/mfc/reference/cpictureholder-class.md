@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e38233c5057f2cc1fa121c318330cdc7533d4fc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ef97b1340d91d672b64a403fd70cec69861a05ba
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428522"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062103"
 ---
 # <a name="cpictureholder-class"></a>Cpictureholder – třída
 
@@ -127,12 +127,10 @@ Rastrový obrázek používá k inicializaci objektu na obrázku `CPictureHolder
 BOOL CreateFromBitmap(
     UINT idResource);
 
-
 BOOL CreateFromBitmap(
     CBitmap* pBitmap,
     CPalette* pPal = NULL,
     BOOL bTransferOwnership = TRUE);
-
 
 BOOL CreateFromBitmap(
     HBITMAP hbm,
@@ -175,7 +173,6 @@ Používá ikony k inicializaci objektu na obrázku `CPictureHolder`.
 ```
 BOOL CreateFromIcon(
     UINT idResource);
-
 
 BOOL CreateFromIcon(
     HICON hIcon,

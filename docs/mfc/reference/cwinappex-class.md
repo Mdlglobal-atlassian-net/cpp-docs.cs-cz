@@ -128,12 +128,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bb7d9732751160a89e42857e77b587f79aca010
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d98030101ba71adfbb928a7415d8578de0fb69e1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440846"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079386"
 ---
 # <a name="cwinappex-class"></a>CWinAppEx – třída
 
@@ -383,7 +383,6 @@ Další informace o uživatelské nástroje a o tom, jak začlenit do vaší apl
 
 ##  <a name="exitinstance"></a>  CWinAppEx::ExitInstance
 
-
 ```
 virtual int ExitInstance();
 ```
@@ -441,7 +440,6 @@ Ukazatel na globální `CContextMenuManager` objektu.
 Pokud ccontextmenumanager – objekt není inicializován, tato funkce volá [CWinAppEx::InitContextMenuManager](#initcontextmenumanager) dříve, než vrátí ukazatel.
 
 ##  <a name="getdataversion"></a>  CWinAppEx::GetDataVersion
-
 
 ```
 int GetDataVersion() const;
@@ -900,7 +898,6 @@ Pokud už vaše aplikace má popisek manažera a zavoláte `InitTooltipManager`,
 
 ##  <a name="isresourcesmartupdate"></a>  CWinAppEx::IsResourceSmartUpdate
 
-
 ```
 BOOL IsResourceSmartUpdate() const;
 ```
@@ -949,16 +946,13 @@ BOOL LoadState(
     CMDIFrameWndEx* pFrame,
     LPCTSTR lpszSectionName = NULL);
 
-
 BOOL LoadState(
     CFrameWndEx* pFrame,
     LPCTSTR lpszSectionName = NULL);
 
-
 BOOL LoadState(
     COleIPFrameWndEx* pFrame,
     LPCTSTR lpszSectionName = NULL);
-
 
 virtual BOOL LoadState(
     LPCTSTR lpszSectionName = NULL,
@@ -1099,14 +1093,13 @@ Za účelem podpory myši vlastní chování, je nutné volat tuto funkci při z
 
 ##  <a name="onworkspaceidle"></a>  CWinAppEx::OnWorkspaceIdle
 
-
 ```
 virtual BOOL OnWorkspaceIdle(CWnd*);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-[in] *CWnd&#38;*
+[in] *CWnd&#38;*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1178,16 +1171,13 @@ virtual BOOL SaveState(
     LPCTSTR lpszSectionName = NULL,
     CFrameImpl* pFrameImpl = NULL);
 
-
 BOOL SaveState(
     CMDIFrameWndEx* pFrame,
     LPCTSTR lpszSectionName = NULL);
 
-
 BOOL SaveState(
     CFrameWndEx* pFrame,
     LPCTSTR lpszSectionName = NULL);
-
 
 BOOL SaveState(
     COleIPFrameWndEx* pFrame,

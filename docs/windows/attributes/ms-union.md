@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 720d03cbab6712e5d76c5ee22c2e12b7b1b65742
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 95a477e3d62a9ca2678101c8de51a814186c9488
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789344"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061388"
 ---
 # <a name="msunion"></a>ms_union
 
@@ -81,4 +81,4 @@ Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.
 ## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
-[Atributy klíčových slov typedef, enum, union a struct](typedef-enum-union-and-struct-attributes.md)  
+[Atributy klíčových slov typedef, enum, union a struct](typedef-enum-union-and-struct-attributes.md)

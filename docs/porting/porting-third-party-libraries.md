@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e1edc9e4a6172b3ac55e7a8bc9b21cdc571774d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 24056346520897988fe92587ab45aa7cbc754199
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42466198"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074992"
 ---
 # <a name="porting-third-party-libraries"></a>Přenos knihoven třetích stran
 
-Při upgradu projektu na aktuální verzi jazyka Visual C++, musíte také upgradovat všechny knihovny, které používá projekt tak, aby knihovny a váš projekt jsou vybaveny stejnou verzi a flavor kompilátoru. (Další informace najdete v tématu [přehled potenciálních problémů s upgradem](overview-of-potential-upgrade-issues-visual-cpp.md)). 
+Při upgradu projektu na aktuální verzi jazyka Visual C++, musíte také upgradovat všechny knihovny, které používá projekt tak, aby knihovny a váš projekt jsou vybaveny stejnou verzi a flavor kompilátoru. (Další informace najdete v tématu [přehled potenciálních problémů s upgradem](overview-of-potential-upgrade-issues-visual-cpp.md)).
 
 ## <a name="introducing-vcpkg"></a>Představujeme vcpkg
 
@@ -35,7 +35,7 @@ V minulosti byl někdy netriviální úkolů hledání a upgrade knihovny 3. str
 Pokud není k dispozici v knihovně **vcpkg** katalogu, které otevřete problém na [úložiště GitHub se vzorovými](https://github.com/Microsoft/vcpkg/issues) kde komunity a týmu Visual C++ můžete podívat, jak to a potenciálně vytvořit soubor port pro tuto knihovnu.
 
 Pro nechráněný 3 stran knihovny (není otevřený zdroj) doporučujeme, abyste se obrátili zprostředkovatele knihovny. Ale jsme chtěli vědět o žádné speciální knihovny používají a zablokuje, dejte nám vědět, které z nich záviset na (můžete kontaktujte nás na adrese vcupgrade@microsoft.com).
-  
-## <a name="see-also"></a>Viz také  
+
+## <a name="see-also"></a>Viz také
 
 [Průvodce přenosem a upgradem Visual C++](visual-cpp-porting-and-upgrading-guide.md)

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59689abec68fc6cff2a742bd4db97b58cd023af1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 91098a0a225519f9b657d9424872e99be0e86354
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316260"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065535"
 ---
 # <a name="creating-a-menu-c"></a>Vytvoření nabídky (C++)
 
@@ -37,8 +37,8 @@ ms.locfileid: "44316260"
 
 2. Vyberte **nová položka** pole (obdélník, který obsahuje "Zde typu") na panelu nabídek.
 
-   ![Nové pole položky v nabídce editoru](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")  
-Nová položka – pole
+   ![Nové pole položky v nabídce editoru](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")<br/>
+   Nová položka – pole
 
 3. Zadejte název pro vaši novou nabídku, například "File".
 
@@ -46,8 +46,8 @@ Nová položka – pole
 
    Po názvu jste udělili novou nabídku v panelu nabídek, nová položka pole posune doprava (umožňují přidat jiné nabídky) a jiného pole novou položku se otevře pod první nabídky, příkazy nabídky můžete přidat k němu.
 
-   ![Rozbalené pole novou položku](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")  
-Nové položky pole se zaměřením posune po zadejte název nabídky
+   ![Rozbalené pole novou položku](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")<br/>
+   Nové položky pole se zaměřením posune po zadejte název nabídky
 
    > [!NOTE]
    > Chcete-li vytvořit jedné položky nabídky na řádku nabídek, nastavte **automaticky otevírané okno** vlastnost **False**.

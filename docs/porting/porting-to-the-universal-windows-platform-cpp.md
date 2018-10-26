@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01efc61d08204598cbce6d875bfe2c2293d8e711
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 16fe66e6ba8ea3f6e4f88f434b58c61d46ce1edb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404264"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080647"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Přenos aplikací do Univerzální platformy Windows (C++)
 
@@ -74,7 +74,7 @@ Pokud máte aplikaci Windows 8.1 Store, můžete použít tento postup její pr�
     #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
     ```
 
-     Tyto příkazy v uvedeném pořadí se vztahují na aplikacích pro UPW, Windows Phone Store aplikace, obou nebo ani jedna (classic Win32 jenom desktopové verze). Tato makra jsou k dispozici pouze ve Windows SDK 8.1 a novější, takže pokud váš kód musí být možné zkompilovat pomocí předchozích verzí sady Windows SDK nebo pro jiné platformy kromě Windows, pak byste měli také zvážit případě že žádný z nich jsou definovány.
+   Tyto příkazy v uvedeném pořadí se vztahují na aplikacích pro UPW, Windows Phone Store aplikace, obou nebo ani jedna (classic Win32 jenom desktopové verze). Tato makra jsou k dispozici pouze ve Windows SDK 8.1 a novější, takže pokud váš kód musí být možné zkompilovat pomocí předchozích verzí sady Windows SDK nebo pro jiné platformy kromě Windows, pak byste měli také zvážit případě že žádný z nich jsou definovány.
 
 11. Spustit a ladit aplikace na emulátoru nebo fyzické zařízení, pro každý typ zařízení, které vaše aplikace podporuje. Pro spuštění emulátoru, musíte spustit aplikaci Visual Studio na fyzickém počítači, ne virtuální počítač.
 
@@ -119,4 +119,4 @@ Pokud jste vytvořili nový projekt UPW pomocí sady Visual Studio, byste neměl
 ## <a name="see-also"></a>Viz také:
 
 [Portování průvodce Visual C++](../porting/porting-to-the-universal-windows-platform-cpp.md)<br/>
-[Vývoj aplikací pro Univerzální platformu Windows (UWP)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)  
+[Vývoj aplikací pro Univerzální platformu Windows (UWP)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)

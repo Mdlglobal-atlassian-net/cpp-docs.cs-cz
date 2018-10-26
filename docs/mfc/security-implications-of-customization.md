@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 876f3b45cc9f45ab5ff1aaa7e07116482f89afc1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2035e665bd7d8cba502c3516498934f32c2b3dd0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442081"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080842"
 ---
 # <a name="security-implications-of-customization"></a>Vliv přizpůsobení na zabezpečení
 
@@ -38,7 +38,7 @@ Doporučujeme, abyste kterýmkoli z těchto tří způsobů zavřete slabá mís
 
 - Data Store v zabezpečené souboru místo v registru.
 
-     Chcete-li provést některý z těchto prvních dvou způsobů, odvoďte třídu z [csettingsstore – třída](../mfc/reference/csettingsstore-class.md) a přepsat její metody k implementaci šifrování nebo úložiště mimo registru.
+   Chcete-li provést některý z těchto prvních dvou způsobů, odvoďte třídu z [csettingsstore – třída](../mfc/reference/csettingsstore-class.md) a přepsat její metody k implementaci šifrování nebo úložiště mimo registru.
 
 - Můžete také zakázat přizpůsobení v aplikaci.
 

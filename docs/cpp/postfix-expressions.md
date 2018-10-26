@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77bcb8257fc6907b48330301cf009fa44f00578d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d28d909866808fbffb6165e552bf825bf1241771
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082528"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069812"
 ---
 # <a name="postfix-expressions"></a>Výrazy přípony
 
@@ -41,7 +41,7 @@ Výrazy přípony jsou tvořeny primárními výrazy nebo výrazy, ve kterých p
 Následující syntaxe popisuje možné výrazy přípony:
 
 ```
-primary-expression 
+primary-expression 
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )
 ```
 
@@ -83,20 +83,20 @@ Při volání funkce jsou provedeny následující úkoly:
     Func( 7 );          // Execute function call
     ```
 
-     Konceptuální inicializace provedené před voláním jsou:
+   Konceptuální inicializace provedené před voláním jsou:
 
     ```cpp
     int Temp_i = 7;
     Func( Temp_i );
     ```
 
-     Inicializace probíhá, jako kdyby byla použita syntaxe znaménka rovnosti namísto syntaxe se závorkami. Před předáním této hodnoty funkci je vytvořena kopie proměnné `i`. (Další informace najdete v tématu [inicializátory](../cpp/initializers.md) a [převody](../cpp/user-defined-type-conversions-cpp.md)).
+   Inicializace probíhá, jako kdyby byla použita syntaxe znaménka rovnosti namísto syntaxe se závorkami. Před předáním této hodnoty funkci je vytvořena kopie proměnné `i`. (Další informace najdete v tématu [inicializátory](../cpp/initializers.md) a [převody](../cpp/user-defined-type-conversions-cpp.md)).
 
-     Proto pokud prototyp funkce (deklarace) vyžaduje argument typu **dlouhé**, a pokud volající program poskytne skutečný argument typu **int**, je skutečný argument povýšen pomocí Převod standardního typu na typ **dlouhé** (viz [standardní převody](../cpp/standard-conversions.md)).
+   Proto pokud prototyp funkce (deklarace) vyžaduje argument typu **dlouhé**, a pokud volající program poskytne skutečný argument typu **int**, je skutečný argument povýšen pomocí Převod standardního typu na typ **dlouhé** (viz [standardní převody](../cpp/standard-conversions.md)).
 
-     Poskytnutí skutečného argumentu, pro který neexistuje žádný standardní nebo uživatelem definovaný převod na typ formálního argumentu, vygeneruje chybu.
+   Poskytnutí skutečného argumentu, pro který neexistuje žádný standardní nebo uživatelem definovaný převod na typ formálního argumentu, vygeneruje chybu.
 
-     Pro skutečné argumenty typu třídy je formální argument inicializován pomocí volání konstruktoru třídy. (Viz [konstruktory](../cpp/constructors-cpp.md) Další informace o těchto speciálních členských funkcích třídy.)
+   Pro skutečné argumenty typu třídy je formální argument inicializován pomocí volání konstruktoru třídy. (Viz [konstruktory](../cpp/constructors-cpp.md) Další informace o těchto speciálních členských funkcích třídy.)
 
 - Je provedeno volání funkce.
 

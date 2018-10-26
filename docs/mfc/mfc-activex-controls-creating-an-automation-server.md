@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abc9af657e790fcedf949719776581b5c1877e89
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: e37e6183ca840067ceca47dd48f3b24d7b3b98c7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48889984"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074537"
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>MFC – ovládací prvky ActiveX: Vytvoření serveru automatizace
 
@@ -43,17 +43,17 @@ Ovládací prvek ActiveX knihovny MFC můžete vyvíjet jako automatizační ser
 
 1. Na začátku `InitInstance` funkci, přidejte následující řádek:
 
-     [!code-cpp[NVC_MFC_AxCont#17](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_1.cpp)]
+   [!code-cpp[NVC_MFC_AxCont#17](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_1.cpp)]
 
 1. V zobrazení tříd klikněte pravým tlačítkem myši na uzel projektu a vyberte **přidáním tříd z knihovny typů** Import knihovny typů.
 
-     Soubory s .cpp a .h přípony názvu souboru se přidá do projektu.
+   Soubory s .cpp a .h přípony názvu souboru se přidá do projektu.
 
 1. V souboru hlaviček třídy, ve kterém bude volat jeden nebo více metod v ovládacím prvku ActiveX, přidejte následující řádek: `#include filename.h`, kde název_souboru je název souboru hlaviček, který byl vytvořen při importu knihovny typů.
 
 1. Ve funkci, ve kterém bude provedeno volání metody v ovládacím prvku ActiveX přidejte kód, který vytvoří objekt ovládacího obálkovou třídu a vytvořit objekt ActiveX. Například následující kód knihovny MFC vytvoří `CCirc` ovládacího prvku, získá vlastnost Caption a výsledek se zobrazí po kliknutí na tlačítko OK v dialogovém okně:
 
-     [!code-cpp[NVC_MFC_AxCont#18](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_2.cpp)]
+   [!code-cpp[NVC_MFC_AxCont#18](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_2.cpp)]
 
 Pokud chcete přidat metody do ovládacího prvku ActiveX po použití v aplikaci, můžete začít používat nejnovější verzi ovládacího prvku v aplikaci tak, že odstraníte soubory, které se vytvořily při importu knihovny typů. Importujte knihovny typů znovu.
 

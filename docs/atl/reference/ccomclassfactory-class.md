@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebf8112650cf1908225d0fc2c79d61d26dd606fe
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f01b333edd9dd671ce4d03176a75979e57a06bd7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46051006"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062168"
 ---
 # <a name="ccomclassfactory-class"></a>Ccomclassfactory – třída
 
@@ -33,9 +33,9 @@ Tato třída implementuje [IClassFactory](/windows/desktop/api/unknwnbase/nn-unk
 ## <a name="syntax"></a>Syntaxe
 
 ```
-class CComClassFactory 
-   : public IClassFactory,  
-     public CComObjectRootEx<CComGlobalsThreadModel>
+class CComClassFactory
+    : public IClassFactory,
+      public CComObjectRootEx<CComGlobalsThreadModel>
 ```
 
 ## <a name="members"></a>Členové

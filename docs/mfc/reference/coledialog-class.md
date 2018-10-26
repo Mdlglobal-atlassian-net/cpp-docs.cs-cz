@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c6cebf6af24de860c583398c16c87824ede0075
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1ecfe5ba4ac2144ff626d6d37d8639f1798acda8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401274"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079294"
 ---
 # <a name="coledialog-class"></a>Coledialog – třída
 
@@ -105,6 +105,4 @@ Zobrazit `DoModal` členské funkce v odvozených třídách informace o určit�
 
 [CCommonDialog – třída](../../mfc/reference/ccommondialog-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
-
-
 

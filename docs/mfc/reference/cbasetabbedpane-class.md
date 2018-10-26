@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d9a50e3dcfb82e245dcac5f57553b34fef584fa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: addbc7c81c8cd38f44b7b1004c0b4e23ca183ecb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412025"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067317"
 ---
 # <a name="cbasetabbedpane-class"></a>Cbasetabbedpane – třída
 
@@ -179,7 +179,8 @@ virtual BOOL AddTab(
 
 ### <a name="parameters"></a>Parametry
 
-[in] [out] *pNewBar* ukazatel do podokna přidat. Tento ukazatel může stát neplatnými po volání této metody. Další informace najdete v části poznámky.
+*pNewBar*<br/>
+[out v] Ukazatel na panelu Přidat. Tento ukazatel může stát neplatnými po volání této metody. Další informace najdete v části poznámky.
 
 *bVisible*<br/>
 [in] Hodnota TRUE pro zviditelnění na kartě; v opačném případě hodnota FALSE.
@@ -384,7 +385,8 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>Parametry
 
-[in] [out] *pBar* ukazatel na podokně s plovoucí desetinnou čárkou.
+*pBar*<br/>
+[out v] Ukazatel na podokně s plovoucí desetinnou čárkou.
 
 *nTabID*<br/>
 [in] Určuje index založený na nule na kartu pro plovoucí desetinnou čárkou.
@@ -594,7 +596,8 @@ virtual BOOL RemovePane(CWnd* pBar);
 
 ### <a name="parameters"></a>Parametry
 
-[in] [out] *pBar* ukazatel do podokna odebrat z podokna s kartami.
+*pBar*<br/>
+[out v] Ukazatel do podokna odebrat z podokna s kartami.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -689,7 +692,8 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 *dwAlignment*<br/>
 [in] Určuje zarovnání automatického schovávání podokno, které se má vytvořit. Seznam možných hodnot najdete v tématu [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).
 
-[in] [out] *pCurrAutoHideBar* ukazatel na aktuální automatického schovávání panelu nástrojů. Může mít hodnotu NULL.
+*pCurrAutoHideBar*<br/>
+[out v] Ukazatel na aktuální automatického schovávání panelu nástrojů. Může mít hodnotu NULL.
 
 *bUseTimer*<br/>
 [in] Určuje, zda automatického schovávání efekt použít, když uživatel přejde do režimu automatického skrytí podokna nebo skrytí podokna okamžitě.

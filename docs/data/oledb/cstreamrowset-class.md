@@ -38,82 +38,82 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8a541edb478c29fe04619dda319576717a7b9dc6
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 8a19085ae5d46396415e5b54b9acada547bc8079
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081842"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077787"
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset – třída
 
-Používáno `CCommand` nebo `CTable` deklarace.  
-  
+Používáno `CCommand` nebo `CTable` deklarace.
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-template <class TAccessor = CAccessorBase>  
-class CStreamRowset  
-```  
-  
-### <a name="parameters"></a>Parametry  
+template <class TAccessor = CAccessorBase>
+class CStreamRowset
+```
+
+### <a name="parameters"></a>Parametry
 
 *TAccessor*<br/>
-Třídu přistupujícího objektu.  
+Třídu přistupujícího objektu.
 
-## <a name="requirements"></a>Požadavky  
+## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** také atldbcli.h  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="methods"></a>Metody  
-  
-|||  
-|-|-|  
-|[CStreamRowset](#cstreamrowset)|Konstruktor Vytvoří a inicializuje `CStreamRowset` objektu.|  
-|[Zavřít](#close)|Verze [ISequentialStream](/previous-versions/windows/desktop/ms718035) ukazatel rozhraní ve třídě.|  
-  
-## <a name="remarks"></a>Poznámky  
+**Záhlaví:** také atldbcli.h
 
-Použití `CStreamRowset` ve vašich `CCommand` nebo `CTable` prohlášení, například:  
-  
-[!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/cpp/cstreamrowset-class_1.cpp)]  
-  
-or  
-  
-[!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]  
-  
-`ICommand::Execute` Vrátí `ISequentialStream` ukazatel, který je uložený v `m_spStream`. Pak použijete `Read` metodu pro načtení dat (řetězce Unicode) ve formátu XML. Příklad:  
-  
-[!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]  
-  
-SQL Server 2000 provádí XML, formátování a vrátí všechny sloupce a všechny řádky v sadě řádků jako jeden řetězec XML.  
-  
+## <a name="members"></a>Členové
+
+### <a name="methods"></a>Metody
+
+|||
+|-|-|
+|[CStreamRowset](#cstreamrowset)|Konstruktor Vytvoří a inicializuje `CStreamRowset` objektu.|
+|[Zavřít](#close)|Verze [ISequentialStream](/previous-versions/windows/desktop/ms718035) ukazatel rozhraní ve třídě.|
+
+## <a name="remarks"></a>Poznámky
+
+Použití `CStreamRowset` ve vašich `CCommand` nebo `CTable` prohlášení, například:
+
+[!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/cpp/cstreamrowset-class_1.cpp)]
+
+or
+
+[!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]
+
+`ICommand::Execute` Vrátí `ISequentialStream` ukazatel, který je uložený v `m_spStream`. Pak použijete `Read` metodu pro načtení dat (řetězce Unicode) ve formátu XML. Příklad:
+
+[!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]
+
+SQL Server 2000 provádí XML, formátování a vrátí všechny sloupce a všechny řádky v sadě řádků jako jeden řetězec XML.
+
 > [!NOTE]
->  Tato funkce funguje pouze s SQL Server 2000.  
-  
+>  Tato funkce funguje pouze s SQL Server 2000.
+
 ## <a name="cstreamrowset"></a> CStreamRowset::CStreamRowset
 
-Vytvoří a inicializuje `CStreamRowset` objektu.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Vytvoří a inicializuje `CStreamRowset` objektu.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-CStreamRowset();  
-```  
+CStreamRowset();
+```
 
 ## <a name="close"></a> CStreamRowset::Close
 
-Verze [ISequentialStream](/previous-versions/windows/desktop/ms718035) ukazatel rozhraní ve třídě.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Verze [ISequentialStream](/previous-versions/windows/desktop/ms718035) ukazatel rozhraní ve třídě.
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-void Close();   
-```  
-  
-## <a name="see-also"></a>Viz také  
+void Close();
+```
+
+## <a name="see-also"></a>Viz také
 
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d37c8c9d319495c3247bf98d9ed3c8f58063ae56
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f2c692f9055e0c2ca3657a6bba0d854209f786b8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050551"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068746"
 ---
 # <a name="snap-in-object-macros"></a>Makra objektů modulu snap-In
 
@@ -41,7 +41,7 @@ Tato makra poskytovat podporu pro rozšíření modulu snap-in.
 |[EXTENSION_SNAPIN_DATACLASS](#extension_snapin_dataclass)|Vytvoří datové členy třídy dat rozšíření modulu snap-in.|
 |[EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)|Třída dat rozšíření modulu snap-in zadá do mapování třídy modulu snap-in rozšíření dat objektu modulu Snap-In.|
 |[SNAPINMENUID](#snapinmenuid)|Deklaruje ID v místní nabídce používané tímto objektem modul Snap-In.|
-|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|Vloží panel nástrojů do panelu nástrojů mapy objektu modulu Snap-In.|  
+|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|Vloží panel nástrojů do panelu nástrojů mapy objektu modulu Snap-In.|
 
 ## <a name="requirements"></a>Požadavky
 

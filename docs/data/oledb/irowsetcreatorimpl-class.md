@@ -30,70 +30,70 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 51534ffb027e35bbab5a9473cf4190c14b384808
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 34fc1304fe4fad1196b5f204e6ba241093e03f32
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118132"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066211"
 ---
 # <a name="irowsetcreatorimpl-class"></a>IRowsetCreatorImpl – třída
 
-Provádí stejné funkce jako `IObjectWithSite` ale taky umožňuje vlastnosti OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`.  
-  
+Provádí stejné funkce jako `IObjectWithSite` ale taky umožňuje vlastnosti OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`.
+
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-template < class T >  
-class ATL_NO_VTABLE IRowsetCreatorImpl   
-   : public IObjectWithSiteImpl< T >  
-```  
-  
-### <a name="parameters"></a>Parametry  
+template < class T >
+class ATL_NO_VTABLE IRowsetCreatorImpl
+   : public IObjectWithSiteImpl< T >
+```
+
+### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Třída odvozená z `IRowsetCreator`.  
+Třída odvozená z `IRowsetCreator`.
 
-## <a name="requirements"></a>Požadavky  
+## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atldb.h  
-  
-## <a name="members"></a>Členové  
-  
-### <a name="methods"></a>Metody  
-  
-|||  
-|-|-|  
-|[SetSite](#setsite)|Nastaví lokalitu, která obsahuje objektu sady řádků.|  
-  
-## <a name="remarks"></a>Poznámky  
+**Záhlaví:** atldb.h
 
-Tato třída dědí z [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) a přepíše [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite). Vytvoří objekt příkazu nebo v jiné relaci zprostředkovatele sady řádků, volá `QueryInterface` na objektu sady řádků hledáte `IObjectWithSite` a volání `SetSite` předání objektu sady řádků `IUnkown` rozhraní jako rozhraní webu.  
+## <a name="members"></a>Členové
+
+### <a name="methods"></a>Metody
+
+|||
+|-|-|
+|[SetSite](#setsite)|Nastaví lokalitu, která obsahuje objektu sady řádků.|
+
+## <a name="remarks"></a>Poznámky
+
+Tato třída dědí z [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) a přepíše [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite). Vytvoří objekt příkazu nebo v jiné relaci zprostředkovatele sady řádků, volá `QueryInterface` na objektu sady řádků hledáte `IObjectWithSite` a volání `SetSite` předání objektu sady řádků `IUnkown` rozhraní jako rozhraní webu.
 
 ## <a name="setsite"></a> IRowsetCreatorImpl::SetSite
 
-Nastaví lokalitu, která obsahuje objektu sady řádků. Další informace najdete v tématu [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite).  
-  
-### <a name="syntax"></a>Syntaxe  
-  
+Nastaví lokalitu, která obsahuje objektu sady řádků. Další informace najdete v tématu [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite).
+
+### <a name="syntax"></a>Syntaxe
+
 ```cpp
-STDMETHOD(SetSite )(IUnknown* pCreator);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+STDMETHOD(SetSite )(IUnknown* pCreator);
+```
+
+#### <a name="parameters"></a>Parametry
 
 *pCreator*<br/>
-[in] Ukazatel `IUnknown` ukazatel rozhraní objektu sady řádků Správa lokality.  
-  
-### <a name="return-value"></a>Návratová hodnota  
+[in] Ukazatel `IUnknown` ukazatel rozhraní objektu sady řádků Správa lokality.
 
-Standardní HRESULT.  
-  
-### <a name="remarks"></a>Poznámky  
+### <a name="return-value"></a>Návratová hodnota
 
-Kromě toho `IRowsetCreatorImpl::SetSite` umožňuje OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS` vlastnosti. 
+Standardní HRESULT.
 
-## <a name="see-also"></a>Viz také  
+### <a name="remarks"></a>Poznámky
+
+Kromě toho `IRowsetCreatorImpl::SetSite` umožňuje OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS` vlastnosti.
+
+## <a name="see-also"></a>Viz také
 
 [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
