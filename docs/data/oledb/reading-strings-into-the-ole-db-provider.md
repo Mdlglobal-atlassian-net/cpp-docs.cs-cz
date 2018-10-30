@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a2a580c5ae3d80349b74e6ce7606763c32201805
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: b1730c839ab2eb87511a241c28409646a999cfd6
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50063325"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216250"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Načtení řetězců do zprostředkovatele OLE DB
 
@@ -29,8 +29,6 @@ ms.locfileid: "50063325"
 Pokud soubor nejde otevřít, `Execute` musí vracet DB_E_NOTABLE. Pokud místo toho vrátí E_FAIL, zprostředkovatel nebude fungovat u mnoha příjemci a nebudou předávat OLE DB [testů shodnosti](../../data/oledb/testing-your-provider.md).
 
 ## <a name="example"></a>Příklad
-
-Upravený `Execute` funkce vypadá takto:
 
 ```cpp
 /////////////////////////////////////////////////////////////////////////
@@ -106,4 +104,4 @@ public:
 
 ## <a name="see-also"></a>Viz také
 
-[Implementace jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/implementing-the-simple-read-only-provider.md)
+[Implementace jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/implementing-the-simple-read-only-provider.md)<br/>

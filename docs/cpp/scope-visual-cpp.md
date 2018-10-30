@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb9d21eee8e561e2caa8a7c4088774435d3ce273
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0e3d6501e969b103146aa53311069e5fdd4d048e
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080438"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204558"
 ---
 # <a name="scope-c"></a>Rozsah (C++)
 
@@ -41,7 +41,7 @@ Existuje šest druhy rozsahů:
 
 - **Místní rozsah** název deklarované v rámci funkce nebo lambda, včetně názvů parametrů mají místní rozsah. Jsou často označovány jako "místní". Jsou viditelné ze svého bodu deklarace na konec těla funkce nebo výrazu lambda. Místní rozsah je druh rozsahem bloku, která je popsána dále v tomto článku.
 
-- **Třída oboru** názvy členů třídy mají obor třídy, která rozšiřuje v rámci definice třídy bez ohledu na to deklarací. Usnadnění přístupu člena třídy je další kontrolou **veřejné**, **privátní**, a **chráněné** klíčová slova. Veřejné nebo chráněné členy jsou přístupné pouze pomocí operátorů výběru členů (**.** nebo **->**) nebo operátory pointer-to-member (**.** <strong>\*</strong> nebo **->** <strong>\*</strong>).
+- **Třída oboru** názvy členů třídy mají obor třídy, která rozšiřuje v rámci definice třídy bez ohledu na to deklarací. Usnadnění přístupu člena třídy se řídí dál **veřejné**, **privátní**, a **chráněné** klíčová slova. Veřejné nebo chráněné členy jsou přístupné pouze pomocí operátorů výběru členů (**.** nebo **->**) nebo operátory pointer-to-member (**.** <strong>\*</strong> nebo **->** <strong>\*</strong>).
 
 - **Příkaz oboru** názvy deklarované v **pro**, **Pokud**, **při**, nebo **přepnout** příkazu jsou viditelné až do konce blok příkazů.
 

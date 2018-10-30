@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a9bc7c85dccdfe095412450d5020fc8a6b42d516
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 40422ac7894523a28a2135b7f5005eb1f11d36c8
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50076968"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216367"
 ---
 # <a name="provider-wizard-generated-files"></a>Poskytovatel souborů vytvořených průvodcem
 
-Průvodce zprostředkovatelem ATL OLE DB generuje následující soubory. V následujících tématech použijte krátký název *vlastní*, ale názvy souborů závisí na volby provedené při vytváření zprostředkovatele.
+**Průvodce zprostředkovatelem ATL OLE DB** generuje následující soubory. V následujících tématech použijte krátký název *vlastní*, ale názvy souborů závisí na volby provedené při vytváření zprostředkovatele.
 
 |Název souboru|Popis|
 |---------------|-----------------|
@@ -32,8 +32,8 @@ Průvodce zprostředkovatelem ATL OLE DB generuje následující soubory. V nás
 |*Vlastní*DS.h|Implementuje objekt zdroje dat. Tento soubor hlavičky obsahuje vlastnosti zdroje dat na mapě vlastnost.|
 |*Vlastní*RS.h|Implementuje objekty příkazu a sady řádků. Tento soubor hlavičky obsahuje mapu vlastností pro sadu řádků a příkaz Vlastnosti.|
 |*Vlastní*Sess.h|Implementuje objekt relace. Tento soubor hlavičky obsahuje mapování vlastnosti pro vlastnosti relace.|
-|*Vlastní*.rgs|Obsahuje objekty registrované generované průvodcem zprostředkovatele OLE DB.|
+|*Vlastní*.rgs|Obsahuje objekty registrované generovaných **Průvodce zprostředkovatelem technologie OLE DB**.|
 
 ## <a name="see-also"></a>Viz také
 
-[Vytvoření zprostředkovatele OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
+[Vytvoření zprostředkovatele OLE DB](../../data/oledb/creating-an-ole-db-provider.md)<br/>

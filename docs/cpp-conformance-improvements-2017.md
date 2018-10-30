@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4003868609d8ffd1ea3b29074bdd24c25442ad8
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 5661ff0debb3d06947e5b8ff686cc049ebe68fee
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50054446"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204740"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Vylepšení shody C++ v sadě Visual Studio 2017 verze 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158)
 
@@ -121,7 +121,7 @@ V dřívějších verzích sady Visual Studio, kompilátor vždy přiřadil `con
 
 ### <a name="deprecating-vestigial-library-parts"></a>Vyřazení zbytkových součástí knihovny
 
-[P0174R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0174r2.html) několik funkcí knihovny C++ Standard byla nahrazena sadou novější funkce v průběhu let, jinak nebyly nalezeny nesmí být velmi užitečné nebo způsobovat problémy. Tyto funkce jsou oficiálně zastaralé v C ++ 17.
+[P0174R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0174r2.html) několik funkcí knihovny C++ Standard byla nahrazena novější funkce v průběhu let, jinak nebyly nalezeny nesmí být velmi užitečné nebo způsobovat problémy. Tyto funkce jsou oficiálně zastaralé v C ++ 17.
 
 ### <a name="removing-allocator-support-in-stdfunction"></a>Odebrání std::function Allocator podpory v
 

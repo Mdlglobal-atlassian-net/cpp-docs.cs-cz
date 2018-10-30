@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa8434230081afe0ad104853e80ba5aa28ec280e
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 5fe5bf67df643f83d555d3f2d6fc9a0aadf84b01
+ms.sourcegitcommit: 68cd127a6606f0aed2eb1bc9a75cdfb95b9b6526
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50054134"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204887"
 ---
 # <a name="handle-to-object-operator---ccli-and-ccx"></a>Operátor popisovače objektu (^) (C + +/ CLI a C + +/ CX)
 
@@ -44,7 +44,7 @@ Informace o tom, jak vytvořit instanci objektu naleznete v tématu [ref nové](
 
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)
 
-Systém používá modul CLR *systému uvolňování paměti* mechanismus pro určení, zda objekt se už nepoužívá a je možné odstranit. Modul common language runtime udržuje haldu, na které se přidělují objekty a používá spravované odkazy (proměnné) ve svém programu označení umístění objektů na haldě. Pokud objekt už nebude používat, je uvolněna paměť, která je obsazena na haldě. Pravidelně systému uvolňování paměti zkomprimuje hladu k lepšímu využití uvolněné paměti. Komprimací haldy můžete přesunout objekty do haldy, což způsobí neplatnost uvedená umístění uváděná spravovanými odkazy. Ale systému uvolňování paměti zná umístění všech spravovaných odkazů a automaticky je aktualizuje pro označení aktuálního umístění objektů na haldě.
+Systém používá modul CLR *systému uvolňování paměti* mechanismus pro určení, zda objekt se už nepoužívá a je možné odstranit. Modul common language runtime udržuje haldu, na které se přidělují objekty a používá spravované odkazy (proměnné) ve svém programu označení umístění objektů na haldě. Pokud objekt už nebude používat, je uvolněna paměť, která je obsazena na haldě. Pravidelně systému uvolňování paměti zkomprimuje hladu k lepšímu využití uvolněné paměti. Komprimací haldy můžete přesunout objekty do haldy, čímž zrušíte platnost umístění uváděná spravovanými odkazy uvedené. Ale systému uvolňování paměti zná umístění všech spravovaných odkazů a automaticky je aktualizuje pro označení aktuálního umístění objektů na haldě.
 
 Protože nativní ukazatelé C++ (`*`) a odkazy (`&`) nejsou spravované odkazy, uvolňování nemůže automaticky aktualizovat adresy, které ukazují na. Pokud chcete tento problém vyřešit, použijte deklarátor popisovače k určení proměnné, které systému uvolňování paměti je vědět a lze ji automaticky aktualizovat.
 

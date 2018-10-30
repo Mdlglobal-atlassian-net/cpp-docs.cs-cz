@@ -1,7 +1,7 @@
 ---
 title: Příkaz rozhraní objektu | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8176bad2921edd22edaab1688e38bc7de275b0bb
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: f5d09e5794b66895d4bfd6a12fe7b0e1dbeeea7f
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50074797"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216328"
 ---
 # <a name="command-object-interfaces"></a>Rozhraní příkazového objektu
 
@@ -32,4 +32,4 @@ Objekt příkazu používá `IAccessor` rozhraní k určení vazby parametru. P�
 
 ## <a name="see-also"></a>Viz také
 
-[Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

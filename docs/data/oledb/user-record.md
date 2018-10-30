@@ -19,49 +19,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1c1958604edbb2f9d9c10e58082e70c2df400b8c
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: e37ed0ac918b004513aa64308870a534a7b2af40
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50077371"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216289"
 ---
 # <a name="user-record"></a>Uživatelský záznam
 
-Záznam uživatele poskytuje strukturu kód a data, která představuje sloupci data pro sadu řádků. Uživatelský záznam lze vytvořit v době kompilace nebo za běhu. Když vytvoříte pomocí Průvodce zprostředkovatelem ATL OLE DB poskytovatele, Průvodce vytvoří výchozí uživatelský záznam, který vypadá takto (za předpokladu, že zadaný název zprostředkovatele [krátký název] z *vlastní*):
+Záznam uživatele poskytuje strukturu kód a data, která představuje sloupci data pro sadu řádků. Uživatelský záznam lze vytvořit v době kompilace nebo za běhu. Když vytvoříte poskytovatele prostřednictvím **Průvodce zprostředkovatelem ATL OLE DB**, Průvodce vytvoří výchozí uživatelský záznam, který vypadá takto (za předpokladu, že zadaný název zprostředkovatele [krátký název] z *MyProvider*):
 
 ```cpp
 class CWindowsFile:
    public WIN32_FIND_DATA
 {
 public:
-
-BEGIN_PROVIDER_COLUMN_MAP(CCustomWindowsFile)
+  
+BEGIN_PROVIDER_COLUMN_MAP(CMyProviderWindowsFile)
    PROVIDER_COLUMN_ENTRY("FileAttributes", 1, dwFileAttributes)
    PROVIDER_COLUMN_ENTRY("FileSizeHigh", 2, nFileSizeHigh)
    PROVIDER_COLUMN_ENTRY("FileSizeLow", 3, nFileSizeLow)
    PROVIDER_COLUMN_ENTRY_STR("FileName", 4, cFileName)
    PROVIDER_COLUMN_ENTRY_STR("AltFileName", 5, cAlternateFileName)
 END_PROVIDER_COLUMN_MAP()
-
+  
 };
 ```
 
-Šablony zprostředkovatele OLE DB zpracovat všechny technologie OLE DB specifika týkající se interakce s klientem. Získat sloupce data potřebná pro odpověď, volá zprostředkovatele `GetColumnInfo` funkce, která je nutné umístit v záznamu uživatele. Můžete explicitně přepsat `GetColumnInfo` v záznamu uživatele, například podle jeho deklarací v souboru .h jak je znázorněno zde:
+Šablony zprostředkovatele OLE DB zpracovat všechny specifikace technologie OLE DB na interakce s klientem. Získat sloupce data potřebná pro odpověď, volá zprostředkovatele `GetColumnInfo` funkce, která je nutné umístit v záznamu uživatele. Můžete explicitně přepsat `GetColumnInfo` v záznamu uživatele, například podle jeho deklarací v souboru .h jak je znázorněno zde:
 
 ```cpp
 template <class T>
-static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols)
+static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols) 
 ```
 
-To je ekvivalentní:
+To odpovídá:
 
 ```cpp
 static ATLCOLUMNINFO* GetColumnInfo(CommandClass* pThis, ULONG* pcCols)
 static ATLCOLUMNINFO* GetColumnInfo(RowsetClass* pThis, ULONG* pcCols)
 ```
 
-Musíte také implementovat `GetColumnInfo` v záznamu uživatele soubor .cpp.
+Poté, implementujte `GetColumnInfo` v záznamu uživatele soubor .cpp.
 
 Makra Provider Column Map pomáhají při vytváření `GetColumnInfo` funkce:
 
@@ -71,7 +71,7 @@ Makra Provider Column Map pomáhají při vytváření `GetColumnInfo` funkce:
 
 - END_PROVIDER_COLUMN_MAP zavře pole a funkce. Počet prvků pole do také umístí *pcCols* parametru.
 
-Když se vytvoří záznam uživatele v době běhu `GetColumnInfo` používá *pThis* parametr přijímat ukazatel na instanci sady řádků nebo příkaz. Příkazy a sady řádků musí podporovat `IColumnsInfo` rozhraní, takže z tohoto ukazatele lze získat informace o sloupci.
+Když se vytvoří záznam uživatele v době běhu `GetColumnInfo` používá *pThis* parametr přijímat ukazatel na instanci sady řádků nebo příkaz. Příkazy a sady řádků musí podporovat `IColumnsInfo` tak informace o sloupci můžete provést z tohoto ukazatele rozhraní.
 
 `CommandClass` a `RowsetClass` příkazu a sady řádků, které používají uživatelský záznam.
 
@@ -79,4 +79,4 @@ Podrobnější příklad toho, jak přepsat `GetColumnInfo` v záznamu uživatel
 
 ## <a name="see-also"></a>Viz také
 
-[Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

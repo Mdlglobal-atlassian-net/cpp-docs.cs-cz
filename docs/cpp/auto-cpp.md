@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e832dfa694e5d2977e6b6a4d659d373f726c0cd6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f38c4cdfcbb75cd4c2df4fadd10cfcaccda4540e
+ms.sourcegitcommit: a88d228480d4bb5834e985d7b3ead2760be95572
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059030"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50203063"
 ---
 # <a name="auto-c"></a>Automatické (C++)
 
@@ -79,22 +79,22 @@ Můžete použít **automaticky**společně s **decltype** specifikátor, abycho
 Všimněte si, že při použití **automaticky** zahodí odkazy, kvalifikátory const a volatile kvalifikátory. Vezměte v úvahu v následujícím příkladu:
 
 ```cpp
-// cl.exe /analyze /EHsc /W4
-#include <iostream>
+// cl.exe /analyze /EHsc /W4
+#include <iostream>
 
-using namespace std;
+using namespace std;
 
-int main( )
+int main( )
 {
-    int count = 10;
-    int& countRef = count;
-    auto myAuto = countRef;
+    int count = 10;
+    int& countRef = count;
+    auto myAuto = countRef;
 
-    countRef = 11;
-    cout << count << " ";
+    countRef = 11;
+    cout << count << " ";
 
-    myAuto = 12;
-    cout << count << endl;
+    myAuto = 12;
+    cout << count << endl;
 }
 
 ```
@@ -103,7 +103,7 @@ V předchozím příkladu myAuto je int, není odkaz na int, takže výstup je `
 
 ## <a name="type-deduction-with-braced-initializers-c14"></a>Odvození typu s inicializátory závorkách (C ++ 14)
 
-Exmample následující kód ukazuje, jak inicializovat proměnnou automaticky pomocí závorek. Všimněte si rozdílu mezi B a C a mezi objekt a E.
+Následující příklad kódu ukazuje, jak inicializovat proměnnou automaticky pomocí závorek. Všimněte si rozdílu mezi B a C a mezi objekt a E.
 
 ```cpp
 #include <initializer_list>

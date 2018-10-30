@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dff9f3c988e7ffdf8f15b5502bb0326e2692a128
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 4ed220aad7dd90ff2b5ca97c4cf5160fd4d00ed4
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50079035"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204571"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Kompilátor upozornění (úroveň 3) C4996
 
@@ -35,7 +35,7 @@ Toto jsou některé běžné C4996 zprávy generované běhové knihovny jazyka 
 
 - ["std::*Název_funkce*::\_Unchecked\_iterátory::\_Deprecate" volání std::*Název_funkce*s parametry, které mohou nebezpečné – toto volání spoléhá na že volající zkontroluje správnost předaných hodnot. Tato upozornění zakážete pomocí parametru -D_SCL_SECURE_NO_WARNINGS. O tom, jak používat Visual C++ Checked Iterators naleznete v dokumentaci](#unsafe-standard-library-functions)
 
-- [Tato funkce nebo proměnná byla nahrazena sadou novější funkce knihovny nebo operačního systému. Zvažte použití *new_item* místo. Najdete v online nápovědě pro podrobnosti.](#obsolete-crt-functions-and-variables)
+- [Tato funkce nebo proměnná byla nahrazena novější funkce knihovny nebo operačního systému. Zvažte použití *new_item* místo. Najdete v online nápovědě pro podrobnosti.](#obsolete-crt-functions-and-variables)
 
 ## <a name="cause"></a>příčina
 
@@ -256,7 +256,7 @@ Informace o tom, jak tato upozornění potlačit, naleznete v tématu [_AFX_SECU
 
 ### <a name="obsolete-crt-functions-and-variables"></a>Zastaralé CRT funkce a proměnné
 
-**Tato funkce nebo proměnná byla nahrazena sadou novější funkce knihovny nebo operačního systému. Zvažte použití** *new_item* **místo. Najdete v online nápovědě pro podrobnosti.**
+**Tato funkce nebo proměnná byla nahrazena novější funkce knihovny nebo operačního systému. Zvažte použití** *new_item* **místo. Najdete v online nápovědě pro podrobnosti.**
 
 Některé funkce knihovny a globální proměnné jsou zastaralé jako zastaralé. Tyto funkce a proměnné může být odebrán v budoucí verzi knihovny. Kompilátor vyvolá upozornění na zastaralost pro tyto položky a navrhne upřednostňovaná alternativa.
 

@@ -1,7 +1,7 @@
 ---
 title: Šablony zprostředkovatele OLE DB (C++) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0eef554fd6b7fbd16ff7c34434d08d917b5dcea9
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 4d4d93f656279cf5e5c548ef09bf809364c9d90e
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50080062"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216406"
 ---
 # <a name="ole-db-provider-templates-c"></a>Šablony zprostředkovatele OLE DB (C++)
 
@@ -39,25 +39,25 @@ Zprostředkovatelé můžou být jednoduché nebo složité. Zprostředkovatel m
 
 Každý poskytovatel implementuje standardní sadu objektů modelu COM pro zpracování žádosti z klienta pomocí standardní smyslu, že všechny příjemce technologie OLE DB můžou přistupovat k datům z libovolného poskytovatele, bez ohledu na jazyk (třeba C++ a Basic).
 
-Každý objekt modelu COM obsahuje několik rozhraní, z nichž některé jsou vyžadovány a některé z nich jsou volitelné. Implementací rozhraní povinné zaručuje zprostředkovatele minimální úroveň funkčnosti (volaná dodržování předpisů), který by měl být možné použít libovolného klienta. Poskytovatel může implementovat volitelné rozhraní k poskytnutí dalších funkcí. [Architektura technologie OLE DB poskytovatele šablony](../../data/oledb/ole-db-provider-template-architecture.md) popisuje podrobně těchto rozhraní. Klient musí vždy volat `QueryInterface` k zjištění, zda poskytovatel podporuje dané rozhraní.
+Každý objekt modelu COM obsahuje několik rozhraní, z nichž některé jsou vyžadovány a některé z nich jsou volitelné. Implementací rozhraní povinné zaručuje zprostředkovatele minimální úroveň funkčnosti (volaná dodržování předpisů), který by měl být možné použít libovolného klienta. Poskytovatel může implementovat volitelné rozhraní k poskytnutí dalších funkcí. [OLE DB Architektura šablon zprostředkovatele](../../data/oledb/ole-db-provider-template-architecture.md) popisuje podrobně těchto rozhraní. Klient musí vždy volat `QueryInterface` k zjištění, zda poskytovatel podporuje dané rozhraní.
 
 ## <a name="ole-db-specification-level-support"></a>Úroveň podpory specifikaci OLE DB
 
-Šablony zprostředkovatele OLE DB podporují specifikaci verze 2.7 OLE DB. Šablony zprostředkovatele OLE DB můžete implementovat kompatibilní poskytovatel úroveň 0. Ukázka poskytovatele, například používá šablony k implementaci serveru non příkaz, který provede příkaz DOS DIR k dotazování systému souborů. Ukázka poskytovatele vrátí informace o adresáře v sadě řádků, což je standardní mechanismus pro vrácení tabulkových dat OLE DB.
+Šablony zprostředkovatele OLE DB podporují specifikaci verze 2.7 OLE DB. Šablony zprostředkovatele OLE DB můžete implementovat kompatibilní poskytovatel úroveň 0. `Provider` Vzorku, například používá šablony k implementaci serveru non příkaz, který provede příkaz DOS DIR k dotazování systému souborů. `Provider` Ukázka vrátí informace o adresáře v sadě řádků, což je standardní mechanismus pro vrácení tabulkových dat OLE DB.
 
-Nejjednodušší typ zprostředkovatele nepodporuje šablony technologie OLE DB je poskytovatel jen pro čtení s žádné příkazy. Zprostředkovatelé s příkazy jsou také podporovány, jako jsou schopnosti vytváření záložek a čtení a zápisu. Čtení a zápis poskytovatele můžete implementovat psaním dalšího kódu. Aktuální verze nepodporuje dynamické sady řádků a transakce, ale pokud chcete, můžete je přidat.
+Nejjednodušší typ zprostředkovatele nepodporuje šablony technologie OLE DB je poskytovatel jen pro čtení s žádné příkazy. Zprostředkovatelé s příkazy jsou také podporovány, jako jsou funkce záložek a čtení a zápisu. Čtení a zápis poskytovatele můžete implementovat psaním dalšího kódu. Aktuální verze nepodporuje dynamické sady řádků a transakce, ale pokud chcete, můžete je přidat.
 
 ## <a name="when-do-you-need-to-create-an-ole-db-provider"></a>Když je potřeba k vytvoření zprostředkovatele OLE DB?
 
-Vždy nepotřebujete k vytvoření vlastního zprostředkovatele; Společnost Microsoft poskytuje několik předem zabalených standardní zprostředkovatelů v **vlastnosti propojení dat** dialogové okno v jazyce Visual C++. Hlavním důvodem k vytvoření zprostředkovatele OLE DB je využívat strategie univerzální přístup k datům. Mezi výhody tak patří:
+Není vždy nutné k vytvoření vlastního zprostředkovatele; Společnost Microsoft poskytuje několik předem zabalených standardní zprostředkovatelů v **vlastnosti propojení dat** dialogové okno v jazyce Visual C++. Hlavním důvodem k vytvoření zprostředkovatele OLE DB je využívat strategie univerzální přístup k datům. Mezi výhody tak patří:
 
 - Přístup k datům pomocí libovolného jazyka, jako je například C++, Basic a Visual Basic Scripting Edition. Umožňuje různé programátorům v organizaci přístup ke stejným datům stejně, bez ohledu na to, jaký jazyk používají.
 
-- Vystavení dat s jinými daty zdrojů, jako je například SQL Server, Excel a Access. To může být velmi užitečné, pokud chcete přenos dat mezi různými formáty.
+- Otevřete data k jiným zdrojům dat, jako je například SQL Server, Excel a Access. To může být užitečné, pokud chcete přenos dat mezi různými formáty.
 
-- Účasti v operacích zdrojů dat napříč (heterogenní). To může být velmi efektivní způsob, jak datové sklady. S použitím zprostředkovatelů OLE DB, můžete ponechat data v nativním formátu a mít pořád povolený přístup v rámci jednoduché operace.
+- Účasti v operacích zdrojů dat napříč (heterogenní). To může být účinný způsob datových skladů. S použitím zprostředkovatelů OLE DB, můžete ponechat data v nativním formátu a mít pořád povolený přístup v rámci jednoduché operace.
 
-- Přidání dalších možností pro vaše data, jako je zpracování dotazů.
+- Přidává další funkce k datům, jako je zpracování dotazů.
 
 - Zvýšení výkonu přístup k datům pomocí řízení, jak je zpracováván.
 
@@ -81,5 +81,5 @@ Další informace naleznete v tématu:
 ## <a name="see-also"></a>Viz také
 
 [Přístup k datům](../data-access-in-cpp.md)<br/>
-[Dokumentace k sadě SDK technologie OLE DB](/previous-versions/windows/desktop/ms722784)
-[odkaz programátora technologie OLE DB](/previous-versions/windows/desktop/ms713643)
+[Dokumentace k sadě SDK technologie OLE DB](/previous-versions/windows/desktop/ms722784)<br/>
+[Referenční informace pro OLE DB programátory](/previous-versions/windows/desktop/ms713643)<br/>

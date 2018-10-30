@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 652f09146ba0bb193efbf889995f6de5f53a9492
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 0973bb21771796f40a0464e2376101ee35a0d1a3
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50074472"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204545"
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>MFC – ovládací prvky ActiveX: Přidání vlastních metod
 

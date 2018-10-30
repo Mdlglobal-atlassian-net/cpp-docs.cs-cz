@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f69c315f78c5ce1a587f48a873c9c2517f81537b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 61e2ea655c25b15982f3434437bc3bdc3eaf310f
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441432"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204649"
 ---
 # <a name="cprintdialog-class"></a>Cprintdialog – třída
 
@@ -108,7 +108,7 @@ Společná dialogová tisku poskytují snadný způsob, jak implementovat dialog
 > [!NOTE]
 >  `CPrintDialogEx` Třídy zapouzdřuje služby poskytované seznamem vlastností tisku Windows. Další informace najdete v článku [cprintdialogex –](../../mfc/reference/cprintdialogex-class.md) Přehled.
 
-`CPrintDialog`vaší funkce je nahrazena sadou u [cpagesetupdialog –](../../mfc/reference/cpagesetupdialog-class.md), který slouží k poskytování běžným dialogovým oknem pro obě vytisknout, instalace a nastavení stránky.
+`CPrintDialog`pro funkce se nahradí u [cpagesetupdialog –](../../mfc/reference/cpagesetupdialog-class.md), který slouží k poskytování běžným dialogovým oknem pro obě vytisknout, instalace a nastavení stránky.
 
 Můžete se spolehnout na rozhraní .NET framework pro zpracování mnoho aspektů proces tisku pro vaši aplikaci. V tomto případě rozhraní automaticky zobrazí Windows běžných dialogových oken pro tisk. Můžete také mít popisovač framework tisku pro vaši aplikaci, ale přepsat běžné dialogového okna Tisk s vlastními poli dialogového okna Tisk. Další informace o použití rozhraní pro zpracování tiskové úlohy, najdete v článku [tisk](../../mfc/printing.md).
 
