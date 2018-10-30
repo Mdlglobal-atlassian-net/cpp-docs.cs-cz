@@ -13,19 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cefa28145e1a53aa4db0bd713a9835c0a35b4151
-ms.sourcegitcommit: 7838764e09819822a105accf5d773b2e37ffa0ae
+ms.openlocfilehash: 541a9d5064e9bdf9c4ddb9b410ab4dc0277626b0
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47429745"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204610"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Knihovna šablon C++ prostředí Windows Runtime (WRL)
 
 Windows Runtime C++ šablony knihovny (WRL) je knihovna šablon, která poskytuje nízké úrovně způsob vytváření a používání komponent prostředí Windows Runtime.
 
 > [!NOTE]
-> WRL je nyní nahrazena sadou C + +/ WinRT, standard C ++ 17 jazyk projekci pro rozhraní API Windows Runtime. C + +/ WinRT je k dispozici v sadě SDK Windows 10 verze 1803 dále. C + +/ WinRT je implementované jenom v souborech hlaviček a navržená tak, aby poskytují přístup k prvotřídní moderní rozhraní Windows API.
+> WRL je nyní nahrazena C + +/ WinRT, standard C ++ 17 jazyk projekci pro rozhraní API Windows Runtime. C + +/ WinRT je k dispozici v sadě SDK Windows 10 verze 1803 dále. C + +/ WinRT je implementované jenom v souborech hlaviček a navržená tak, aby poskytují přístup k prvotřídní moderní rozhraní Windows API.
 
 > Pomocí C + +/ WinRT, můžete současně využívat a vytvářet rozhraní API Windows Runtime pomocí jakékoli standardům C ++ 17 kompilátoru. C + +/ WinRT obvykle vrací lepší výsledky a vytváří menší binárních souborů než jakékoli jiné možnosti jazyka prostředí Windows Runtime. Budeme dál podporovat C + +/ CX a WRL, ale důrazně doporučujeme, aby nové aplikace pomocí C + +/ WinRT. Další informace najdete v tématu [C + +/ WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
 
