@@ -1,10 +1,6 @@
 ---
-title: forward_list – třída | Dokumentace Microsoftu
-ms.custom: ''
+title: forward_list – třída
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - forward_list/std::forward_list
 - forward_list/std::forward_list::allocator_type
@@ -44,8 +40,6 @@ f1_keywords:
 - forward_list/std::forward_list::splice_after
 - forward_list/std::forward_list::swap
 - forward_list/std::forward_list::unique
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::forward_list
 - std::forward_list::allocator_type
@@ -86,16 +80,12 @@ helpviewer_keywords:
 - std::forward_list::swap
 - std::forward_list::unique
 ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 017d5d5c2934fa687f91898b896a0ad6f1dcab6f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: a818be72266e2cb8471c2eb29a6e058b8dd3ef7d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102574"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50612040"
 ---
 # <a name="forwardlist-class"></a>forward_list – třída
 
@@ -178,7 +168,7 @@ Doplňky řízené sekvence může dojít k voláním [forward_list::insert_afte
 |[Řazení](#sort)|Uspořádá prvky ve vzestupném pořadí nebo pořadí určeném predikátem.|
 |[splice_after](#splice_after)|Restitches propojení mezi uzly.|
 |[Prohození](#swap)|Vymění prvky dvou seznamů vpřed.|
-|[Jedinečný](#unique)|Odebere sousedící prvky, které předávají zadaný testovací.|
+|[unique](#unique)|Odebere sousedící prvky, které předávají zadaný testovací.|
 
 ### <a name="operators"></a>Operátory
 

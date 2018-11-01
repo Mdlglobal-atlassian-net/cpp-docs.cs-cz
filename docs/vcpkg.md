@@ -1,25 +1,18 @@
 ---
-title: vcpkg – Správce balíčků jazyka C++ A součásti pro Windows, Linux a MacOS | Dokumentace Microsoftu
+title: vcpkg – Správce balíčků jazyka C++ A součásti pro Windows, Linux a MacOS
 description: vcpkg je Správce balíčků příkazového řádku, který výrazně zjednodušuje pořízení a instalaci všech knihoven C++ open source na Windows.
-keywords: vcpkg
 author: mikeblome
 ms.author: mblome
 ms.date: 05/14/2018
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: windows
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.topic: conceptual
-dev_langs:
-- C++
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 70af45a860ff854faf244cf51ad7462262f183fe
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 03446a9b4e1ec3a0425104b9e755efb902f79219
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50072690"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50598793"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Správce balíčků jazyka C++ pro Windows, Linux a MacOS
 

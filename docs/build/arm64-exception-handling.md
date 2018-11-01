@@ -1,22 +1,12 @@
 ---
-title: Zpracování výjimek ARM64 | Dokumentace Microsoftu
-ms.custom: ''
+title: Zpracování výjimek ARM64
 ms.date: 07/11/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fd273afaf5934313067ada55574edbaeee43929b
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 82775a61adf8437565b5bb691716451b225e72e4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861535"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620594"
 ---
 # <a name="arm64-exception-handling"></a>Zpracování výjimek ARM64
 

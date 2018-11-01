@@ -1,33 +1,23 @@
 ---
-title: -CLRHEADER | Microsoft Docs
-ms.custom: ''
+title: /CLRHEADER
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /CLRHEADER
-dev_langs:
-- C++
 helpviewer_keywords:
 - -CLRHEADER dumpbin option
 - /CLRHEADER dumpbin option
 - CLRHEADER dumpbin option
 ms.assetid: cf73424f-4541-47e2-b94e-69b95266ef2a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f6cda2f03e8a0473d2c45f54c96ca97b043d80d5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 864ecc0063716ce712e28b063714ce7c17fc294a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704438"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50627367"
 ---
 # <a name="clrheader"></a>/CLRHEADER
 
-Zobrazí informace specifické pro CLR.
+Zobrazit informace specifické pro CLR.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,21 +27,21 @@ Zobrazí informace specifické pro CLR.
 
 |||
 |-|-|
-*Soubor*| Soubor bitové kopie vytvořené s [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).
+*Soubor*| Sestavován soubor obrázku [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**/ CLRHEADER** zobrazí informace o hlavičkách .NET použít libovolné spravované aplikace. Výstup zobrazuje umístění a velikost v bajtech v záhlaví .NET a částech v hlavičce.
+**/ CLRHEADER** zobrazí informace o hlavičkách .NET použít libovolné spravované aplikace. Výstup zobrazuje umístění a velikost v bajtech, .NET záhlaví a oddílů v záhlaví.
 
-Pouze [/HEADERS](../../build/reference/headers.md) – možnost nástroje DUMPBIN je k dispozici pro použití na soubory vytvořené pomocí [/GL](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru.
+Pouze [/HEADERS](../../build/reference/headers.md) – možnost nástroje DUMPBIN je k dispozici pro použití se soubory vytvořenými pomocí [/GL](../../build/reference/gl-whole-program-optimization.md) – možnost kompilátoru.
 
-Při **/CLRHEADER** se používá na soubor, který byl kompilován s volbou/CLR, budou existovat **clr záhlaví:** části ve výstupu dumpbin. Hodnota **příznaky** označuje, která možnost/CLR byl použit:
+Při **/CLRHEADER** se používá u souboru, který byl zkompilován s parametrem/CLR, bude existovat **clr záhlaví:** část ve výstupu dumpbin. Hodnota **příznaky** označuje, která možnost/CLR. byla použita:
 
-- 0 – / CLR (image může obsahovat nativního kódu).
+- 0 – / CLR (image může obsahovat nativní kód).
 
-Můžete také programově zkontrolovat, pokud byl vytvořený bitovou kopii pro modul common language runtime.  Další informace najdete v tématu [postupy: určení, pokud bitová kopie je nativní nebo CLR](../../dotnet/how-to-determine-if-an-image-is-native-or-clr.md).
+Můžete také programově ověřit, pokud byla vytvořena image pro modul common language runtime.  Další informace najdete v tématu [postupy: určení, pokud je bitová kopie nativní nebo CLR](../../dotnet/how-to-determine-if-an-image-is-native-or-clr.md).
 
-**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017. Kód, který musí být "čistý" nebo "bezpečnou" musí být přesně do jazyka C#.
+**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017. Kód, který musí být "čistě" nebo "bezpečné" by měl být přenést do C#.
 
 ## <a name="see-also"></a>Viz také:
 

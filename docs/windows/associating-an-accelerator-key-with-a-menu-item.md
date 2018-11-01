@@ -1,27 +1,16 @@
 ---
-title: Přiřazení klíče akcelerátoru k položce nabídky (C++) | Dokumentace Microsoftu
-ms.custom: ''
+title: Přiřazení klíče akcelerátoru k položce nabídky (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: 15087bdd-3481-4ea9-9481-49f31845be70
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 2f63a29e416a0b3331cdc9e5a2153435d765aaa0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e24d226b4af8ffd1ca07d9015509c4ac7d78ac46
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407722"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640489"
 ---
 # <a name="associating-an-accelerator-key-with-a-menu-item-c"></a>Přiřazení klíče akcelerátoru k položce nabídky (C++)
 

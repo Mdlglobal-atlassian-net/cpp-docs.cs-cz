@@ -1,10 +1,6 @@
 ---
-title: _strdate_s –, _wstrdate_s – | Microsoft Docs
-ms.custom: ''
+title: _strdate_s, _wstrdate_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdate_s
 - _wstrdate_s
@@ -27,8 +23,6 @@ f1_keywords:
 - _wstrdate_s
 - strdate_s
 - _tstrdate_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - dates, copying
 - tstrdate_s function
@@ -39,20 +33,16 @@ helpviewer_keywords:
 - _strdate_s function
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8e4e9ff3783fc7a89e7af42ebf283209c034c0d6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85c9ab7dcad68f3aa4832236461cd38b07d4ae44
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414308"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629005"
 ---
 # <a name="strdates-wstrdates"></a>_strdate_s, _wstrdate_s
 
-Zkopírujte aktuální systémový datum do vyrovnávací paměti. Toto jsou verze [_strdate –, _wstrdate –](strdate-wstrdate.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Zkopírujte aktuálního systémového data do vyrovnávací paměti. Jde o verzích [_strdate – _wstrdate –](strdate-wstrdate.md) s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -78,43 +68,43 @@ errno_t _wstrdate_s(
 ### <a name="parameters"></a>Parametry
 
 *Vyrovnávací paměti*<br/>
-Ukazatel do vyrovnávací paměti, který je zadán řetězec formátovaný datum.
+Ukazatel do vyrovnávací paměti, které se vyplní řetězec formátovaná data.
 
 *numberOfElements*<br/>
 Velikost vyrovnávací paměti.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu. Vrácená hodnota je kód chyby, pokud dojde k selhání. Kódy chyb jsou definovány v kód chyby. H; v tabulce níže najdete přesné chyby generované pomocí této funkce. Další informace o kódy chyb naleznete v tématu [errno](../../c-runtime-library/errno-constants.md).
+Nula v případě úspěchu. Vrácená hodnota je kód chyby, pokud dojde k selhání. Kódy chyb jsou definovány v ERRNO. H. v tabulce níže najdete přesné chyb generovaných touto funkcí. Další informace o chybových kódech naleznete v tématu [errno](../../c-runtime-library/errno-constants.md).
 
-## <a name="error-conditions"></a>Chybové stavy
+## <a name="error-conditions"></a>Chybové podmínky
 
 |*Vyrovnávací paměti*|*numberOfElements*|Vrátí|Obsah *vyrovnávací paměti*|
 |--------------|------------------------|------------|--------------------------|
-|**HODNOTU NULL**|(všechny)|**EINVAL –**|nedojde ke změně|
-|Není **NULL** (směřující do platné vyrovnávací paměti)|0|**EINVAL –**|nedojde ke změně|
-|Není **NULL** (směřující do platné vyrovnávací paměti)|0 < *numberOfElements* < 9|**EINVAL –**|prázdný řetězec.|
-|Není **NULL** (směřující do platné vyrovnávací paměti)|*numberOfElements* > = 9|0|Aktuální datum formátu zadaný v poznámkách|
+|**HODNOTU NULL**|(žádné)|**EINVAL**|Nezměněno|
+|Není **NULL** (odkazuje na platnou vyrovnávací paměť)|0|**EINVAL**|Nezměněno|
+|Není **NULL** (odkazuje na platnou vyrovnávací paměť)|0 < *numberOfElements* < 9|**EINVAL**|Prázdný řetězec|
+|Není **NULL** (odkazuje na platnou vyrovnávací paměť)|*numberOfElements* > = 9|0|Aktuální datum ve formátu podle poznámky|
 
 ## <a name="security-issues"></a>Problémy se zabezpečením
 
-Předávání v neplatný bez **NULL** hodnota vyrovnávací paměti bude výsledkem narušení přístupu, pokud *numberOfElements* parametr je větší než 9.
+Předání neplatný bez **NULL** hodnota vyrovnávací paměti se vést k narušení přístupu-li *numberOfElements* parametr je větší než 9.
 
-Předávání hodnot pro velikost, která je větší než skutečná velikost *vyrovnávací paměti* bude mít za následek přetečení vyrovnávací paměti.
+Předávání hodnot pro velikost, která je větší než skutečná velikost *vyrovnávací paměti* způsobí přetečení vyrovnávací paměti.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce zajistit bezpečnější verzích **_strdate –** a **_wstrdate –**. **_Strdate_s –** funkce zkopíruje aktuální systémový datum do vyrovnávací paměti, na kterou odkazuje *vyrovnávací paměti*naformátovanou **mm**/**dd** / **rr**, kde **mm** je dvě číslice představující měsíc, **dd** je dvě číslice představující den, a **RR**  je poslední dvě číslice roku. Například řetězec **12/05/99** představuje 5 prosinec 1999. Vyrovnávací paměti musí mít alespoň 9 znaků.
+Poskytují bezpečnější verze těchto funkcí **_strdate –** a **_wstrdate –**. **_Strdate_s –** funkce zkopíruje aktuálního systémového data do vyrovnávací paměti, na které odkazuje *vyrovnávací paměti*naformátovanou **mm**/**dd** / **rr**, kde **mm** je dvě číslice představující měsíc, **dd** je dvě číslice představující den, a **RR**  je poslední dvě číslice v roce. Například řetězec **12/05/99** představuje 5. prosince 1999. Vyrovnávací paměť musí být alespoň 9 znaků.
 
-**_wstrdate_s –** je verze široká charakterová **_strdate_s –**; argument a vrátí hodnotu **_wstrdate_s –** jsou široká charakterová řetězce. Tyto funkce chovají stejně jako jinak.
+**_wstrdate_s –** je verze širokého znaku **_strdate_s –**; argument a návratová hodnota funkce **_wstrdate_s –** jsou širokoznaké řetězce. Tyto funkce chovají identicky jinak.
 
-Pokud *vyrovnávací paměti* je **NULL** ukazatele, nebo pokud *numberOfElements* je menší než 9 znaků, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, tyto funkce vrátí hodnotu -1 a nastavte **errno** k **einval –** Pokud vyrovnávací paměť je **NULL** nebo, pokud *numberOfElements*je menší než nebo rovna 0, nebo sady **errno** k **erange –** Pokud *numberOfElements* je menší než 9.
+Pokud *vyrovnávací paměti* je **NULL** ukazatele, nebo pokud *numberOfElements* je menší než 9 znaků, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [ Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a nastaví **errno** k **EINVAL** Pokud vyrovnávací paměť je **NULL** nebo, pokud *numberOfElements*je menší než nebo rovno 0, nebo sadu **errno** k **ERANGE** Pokud *numberOfElements* je menší než 9.
 
-V jazyce C++ pomocí těchto funkcí se zjednodušilo díky šabloně přetížení; přetížení automaticky odvození délka vyrovnávací paměti (takže není nutné zadat argument velikost) a starší, nezabezpečené funkce můžou automaticky nahradit se svými protějšky novější a zabezpečené. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky (tím eliminuje nutnost zadat argument velikosti) a dokážou automaticky nahradit starší, nezabezpečené funkce jejími novějšími, zabezpečené protějšky. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mapping"></a>Mapování obecného textu rutiny:
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstrdate_s –**|**_strdate_s**|**_strdate_s**|**_wstrdate_s**|
 
@@ -130,7 +120,7 @@ V jazyce C++ pomocí těchto funkcí se zjednodušilo díky šabloně přetíže
 
 Podívejte se na příklad pro [čas](time-time32-time64.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Správa času](../../c-runtime-library/time-management.md)<br/>
 [asctime_s, _wasctime_s](asctime-s-wasctime-s.md)<br/>

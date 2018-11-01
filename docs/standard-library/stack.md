@@ -1,32 +1,22 @@
 ---
-title: '&lt;zásobník&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;Zásobník&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <stack>
-dev_langs:
-- C++
 helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 68f16523b1fda7b8b3d6b8dca5b4d1960c5c815f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 51e350169babc3d5247fbdabab2f3b9bda717d47
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861750"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617048"
 ---
-# <a name="ltstackgt"></a>&lt;Zásobníku&gt;
+# <a name="ltstackgt"></a>&lt;Zásobník&gt;
 
-Definuje zásobníku třída šablony a podpůrné dvě šablony.
+Definuje šablonu třídy zásobníku a dvě podpůrných šablon.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,20 +29,20 @@ Definuje zásobníku třída šablony a podpůrné dvě šablony.
 
 |Operátor|Popis|
 |-|-|
-|[operator!=](../standard-library/stack-operators.md#op_neq)|Testy, pokud zásobník objekt na levé straně operátoru není stejný jako zásobníku objekt na pravé straně.|
-|[operátor <](../standard-library/stack-operators.md#op_lt)|Testy, pokud zásobník objekt na levé straně operátor je menší než zásobníku objekt na pravé straně.|
-|[Operátor\<=](../standard-library/stack-operators.md#op_lt_eq)|Pokud zásobníku objekt na levé straně operátoru testů je menší než nebo rovno zásobníku objekt na pravé straně.|
-|[operator==](../standard-library/stack-operators.md#op_eq_eq)|Testy, pokud zásobník objekt na levé straně operátoru rovná zásobníku objekt na pravé straně.|
-|[operátor >](../standard-library/stack-operators.md#op_gt)|Testy, pokud zásobník objekt na levé straně operátoru je větší než zásobníku objekt na pravé straně.|
-|[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Testy, pokud je zásobník objekt na levé straně operátoru větší než nebo rovna hodnotě zásobníku objekt na pravé straně.|
+|[operator!=](../standard-library/stack-operators.md#op_neq)|Testuje, zda je objekt stack na levé straně operátoru není roven objektu stack na pravé straně.|
+|[Operator <](../standard-library/stack-operators.md#op_lt)|Testuje, zda je objekt stack na levé straně operátoru menší než objekt stack na pravé straně.|
+|[– Operátor\<=](../standard-library/stack-operators.md#op_lt_eq)|Testuje, zda je objekt zásobníku na levé straně operátoru je menší než nebo roven objektu stack na pravé straně.|
+|[operator==](../standard-library/stack-operators.md#op_eq_eq)|Testuje, zda objekt stack na levé straně operátoru roven objektu stack na pravé straně.|
+|[Operator >](../standard-library/stack-operators.md#op_gt)|Testuje, zda je objekt stack na levé straně operátoru větší než objekt stack na pravé straně.|
+|[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Testuje, zda je objekt stack na levé straně operátoru větší než nebo roven objektu stack na pravé straně.|
 
 ### <a name="classes"></a>Třídy
 
 |Třída|Popis|
 |-|-|
-|[stack – třída](../standard-library/stack-class.md)|Třída adaptéru kontejneru šablony, která poskytuje omezení funkcí omezení přístupu k prvek naposledy přidaný do některé základní typ kontejneru.|
+|[stack – třída](../standard-library/stack-class.md)|Kontejner adaptér třídu šablony, která poskytuje omezení funkcí omezení přístupu k elementu naposledy přidaný do některé základní typy kontejnerů.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

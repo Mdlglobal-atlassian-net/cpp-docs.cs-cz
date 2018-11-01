@@ -1,10 +1,6 @@
 ---
-title: nanf – NaN, nanl | Microsoft Docs
-ms.custom: ''
+title: nan, nanf, nanl
 ms.date: 94/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - nanf
 - nan
@@ -26,27 +22,21 @@ f1_keywords:
 - nan
 - nanl
 - nanf
-dev_langs:
-- C++
 helpviewer_keywords:
 - nan function
 - nanf function
 - nanl function
 ms.assetid: 790e9158-80ab-43e0-8f5a-096198553fd9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 204d59d88c97d9b0fa161fda6f64f31267c73fd5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22b0e14094a0b6f0f3571c4d7551552210177a22
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401448"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50610259"
 ---
 # <a name="nan-nanf-nanl"></a>nan, nanf, nanl
 
-Vrátí hodnotu quiet NaN.
+Vrátí hodnotu tichý NaN.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,19 +53,19 @@ Hodnotu řetězce.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Nan** funkce vrátí hodnotu quiet NaN.
+**Nan** vrátí funkce hodnotu tichý NaN.
 
 ## <a name="remarks"></a>Poznámky
 
-**Nan** funkce vrátí hodnotu s plovoucí desetinnou čárkou, který odpovídá na NaN tichý (bez signalizaci). *Vstupní* hodnota je ignorována. Informace o tom, jak je reprezentována NaN pro výstup najdete v tématu [printf _printf_l –, wprintf, _wprintf_l –](printf-printf-l-wprintf-wprintf-l.md).
+**Nan** funkce vrátí hodnotu s plovoucí desetinnou čárkou, která odpovídá na (bez zabezpečení) tichý NaN. *Vstupní* hodnota se ignoruje. Informace o tom, jak je reprezentovaná NaN pro výstup, naleznete v tématu [printf _printf_l –, wprintf _wprintf_l –](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Hlavička C|Hlavička C++|
+|Funkce|Záhlaví C|Hlaviček jazyka C++|
 |--------------|--------------|------------------|
-|**NaN**, **nanf –**, **nanl**|\<Math.h >|\<cmath – > nebo \<math.h >|
+|**NaN**, **nanf –**, **nanl**|\<Math.h >|\<cmath > nebo \<math.h >|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [_finite, _finitef](finite-finitef.md)<br/>

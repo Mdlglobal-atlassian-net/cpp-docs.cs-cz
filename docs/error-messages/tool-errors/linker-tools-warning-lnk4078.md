@@ -1,27 +1,17 @@
 ---
-title: Upozornění Linkerů LNK4078 | Dokumentace Microsoftu
-ms.custom: ''
+title: Upozornění linkerů LNK4078
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK4078
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK4078
 ms.assetid: 5a16796d-6caf-42d9-8f65-b042843eafb8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eecd4dc17724b5c02a8ce8398f5630b691dab320
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d20eb0523ffebe9229d05b6316772259661f6020
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46109809"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614146"
 ---
 # <a name="linker-tools-warning-lnk4078"></a>Upozornění linkerů LNK4078
 

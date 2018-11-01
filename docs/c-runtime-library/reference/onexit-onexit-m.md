@@ -1,10 +1,6 @@
 ---
-title: _onexit –, _onexit_m – | Microsoft Docs
-ms.custom: ''
+title: _onexit, _onexit_m
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _onexit
 - _onexit_m
@@ -25,8 +21,6 @@ f1_keywords:
 - onexit_m
 - onexit
 - _onexit_m
-dev_langs:
-- C++
 helpviewer_keywords:
 - onexit function
 - registry, registering exit routines
@@ -36,20 +30,16 @@ helpviewer_keywords:
 - registering exit routines
 - registering to be called on exit
 ms.assetid: 45743298-0e2f-46cf-966d-1ca44babb443
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c190ce2c78135625a502d7509e56771fd670aa3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c190f777032904802f771bab9fc323ba305ff32e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401705"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609599"
 ---
 # <a name="onexit-onexitm"></a>_onexit, _onexit_m
 
-Zaregistruje rutinu, která má být volána v době ukončení.
+Registruje rutiny volat na čas ukončení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,20 +54,20 @@ _onexit_t_m _onexit_m(
 
 ### <a name="parameters"></a>Parametry
 
-*Funkce*<br/>
+*– funkce*<br/>
 Ukazatel na funkci, která se má volat při ukončení.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_onexit –** vrací ukazatel na funkci, pokud bylo úspěšné nebo **NULL** Pokud není místa k uložení ukazatel na funkci.
+**_onexit** vrací ukazatel na funkci v případě úspěchu nebo **NULL** Pokud není místo k uložení ukazatel na funkci.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Onexit –** funkce je předán na adresu funkce (*funkce*) se volá, když se program ukončí normálně. Následná volání **_onexit –** vytvořit registrace funkcí, které jsou spouštěny v pořadí LIFO (last-in-first-out). Funkce předaný **_onexit –** nepřijímají parametry.
+**_Onexit** funkce je předána adresu funkce (*funkce*) se volá, když program ukončen normálně. Následná volání **_onexit** vytvořit registr funkcí, které jsou provedeny v pořadí LIFO (last-in-first-out). Funkce předány **_onexit** nemůže mít parametry.
 
-V případě, že když **_onexit –** je volána v rámci knihovny DLL, rutiny zaregistrována **_onexit –** spustit na knihovny DLL je uvolnění po **DllMain** je volán s DLL_PROCESS_DETACH.
+V případě při **_onexit** je volána v rámci knihovny DLL, rutiny zaregistrovaného **_onexit** spustit na knihovnu DLL je po uvolnění **zpracování funkce DllMain** volána s DLL_PROCESS_DETACH.
 
-**_onexit –** je rozšíření Microsoft. Přenositelnost ANSI použít [atexit](atexit.md). **_Onexit_m –** verze funkce je pro použití ve smíšeném režimu.
+**_onexit** je rozšířením společnosti Microsoft. Přenositelnost ANSI, použijte [atexit](atexit.md). **_Onexit_m** verze funkce je pro použití ve smíšeném režimu.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -85,7 +75,7 @@ V případě, že když **_onexit –** je volána v rámci knihovny DLL, rutiny
 |-------------|---------------------|
 |**_onexit**|\<stdlib.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -139,7 +129,7 @@ This is executed first.
 This is executed next.
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)<br/>
 [atexit](atexit.md)<br/>

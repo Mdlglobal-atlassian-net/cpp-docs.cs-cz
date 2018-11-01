@@ -1,10 +1,6 @@
 ---
-title: systém, _wsystem – | Microsoft Docs
-ms.custom: ''
+title: system, _wsystem
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - system
 - _wsystem
@@ -24,8 +20,6 @@ apitype: DLLExport
 f1_keywords:
 - _tsystem
 - _wsystem
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wsystem function
 - wsystem function
@@ -35,23 +29,19 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ca44648ed378d4484b8e4c32a38a6780b3eddd53
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fa034b164a188b1b5b7ccd8a4ca71ab7ac754fa1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414699"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624663"
 ---
 # <a name="system-wsystem"></a>system, _wsystem
 
 Spustí příkaz.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,33 +56,33 @@ int _wsystem(
 
 ### <a name="parameters"></a>Parametry
 
-*příkaz*<br/>
-Příkaz, který má být proveden.
+*Příkaz*<br/>
+Příkaz, který se spustí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud *příkaz* je **NULL** a překladač příkazů je najít, vrátí nenulovou hodnotu. Pokud překladač příkazů není nalezeno, vrátí hodnotu 0 a nastaví **errno** k **enoent –**. Pokud *příkaz* není **NULL**, **systému** vrátí hodnotu, která vrátí překladač příkazů. Vrátí hodnotu 0 pouze v případě, že překladač příkazů vrátí hodnotu 0. Návratová hodnota - 1 znamená chybu, a **errno** nastaven na jednu z následujících hodnot:
+Pokud *příkaz* je **NULL** a překladač příkazů nenajde, vrátí nenulovou hodnotu. Pokud překladač příkazů nenajde, vrátí hodnotu 0 a nastaví **errno** k **ENOENT**. Pokud *příkaz* není **NULL**, **systému** vrací hodnotu, která je vrácena překladač příkazů. Vrátí hodnotu 0 pouze v případě, že překladač příkazu vrátí hodnotu 0. Návratová hodnota – 1 označuje chybu a **errno** nastavena na jednu z následujících hodnot:
 
 |||
 |-|-|
-**E2BIG –**|Seznam argumentů (což je závislé na systém) je příliš dlouhý.
-**ENOENT –**|Překladač příkazů nebyl nalezen.
-**ENOEXEC –**|Překladač příkazů soubor nelze provést, protože formát není platný.
-**ENOMEM –**|Je k dispozici ke spuštění příkazu; není dostatek paměti nebo dostupné paměti je poškozená; nebo neplatné blok neexistuje, což naznačuje, že proces, který je uskutečněním hovoru nebyla přidělena správně.
+**E2BIG**|Seznam argumentů (což je závislé na systému) je moc velká.
+**ENOENT**|Překladač příkazů nelze nalézt.
+**ENOEXEC**|Soubor překladač příkazů nelze provést, protože formát není platný.
+**ENOMEM**|Není k dispozici ke spuštění příkazu; není dostatek paměti nebo dostupná paměť byla poškozena; nebo není platný blok existuje, což znamená, že proces, který provádí volání nepřidělil se správně.
 
-V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pro další informace o těchto návratové kódy.
+Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pro další informace o těchto návratové kódy.
 
 ## <a name="remarks"></a>Poznámky
 
-**Systému** funkce předává *příkaz* k překladač příkazů, které provede řetězec jako příkaz operačního systému. **systém** používá **COMSPEC** a **cesta** proměnné prostředí najít překladač příkazů soubor CMD.exe. Pokud *příkaz* je **NULL**, funkce právě ověří, zda existuje překladač příkazů.
+**Systému** funkce předává *příkaz* překladači příkazu, která spustí řetězec příkazu operačního systému. **systém** používá **COMSPEC** a **cesta** proměnné prostředí pro vyhledání překladač příkazů souboru CMD.exe. Pokud *příkaz* je **NULL**, funkce právě kontroluje, zda existuje překladač příkazů.
 
-Musíte explicitně vyprázdnit, pomocí [fflush –](fflush.md) nebo [_flushall –](flushall.md), nebo zavřete jakýkoli proud před voláním **systému**.
+Je nutné provést explicitní vyprázdnění, s použitím [fflush –](fflush.md) nebo [_flushall –](flushall.md), nebo všechny proudy zavřít před voláním **systému**.
 
-**_wsystem –** je verze široká charakterová **systému**; *příkaz* argument **_wsystem –** je široká charakterová řetězec. Tyto funkce chovají stejně jako jinak.
+**_wsystem –** je verze širokého znaku **systému**; *příkaz* argument **_wsystem –** je širokoznaký řetězec. Tyto funkce chovají identicky jinak.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsystem –**|**Systém**|**Systém**|**_wsystem**|
 
@@ -103,7 +93,7 @@ Musíte explicitně vyprázdnit, pomocí [fflush –](fflush.md) nebo [_flushall
 |**Systém**|\<Process.h > nebo \<stdlib.h >|
 |**_wsystem**|\<Process.h > nebo \<stdlib.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -134,7 +124,7 @@ Line one.
 Line two.
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_exec, _wexec – funkce](../../c-runtime-library/exec-wexec-functions.md)<br/>

@@ -1,23 +1,13 @@
 ---
-title: Uživatelsky definované literály (C++) | Dokumentace Microsoftu
-ms.custom: ''
+title: Uživateli definované literály (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: ff4a5bec-f795-4705-a2c0-53788fd57609
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 76eac97c6d545f37ca13c640c80200e95a1938f9
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1de94b43423bb5b420be29d3cace146e265a1459
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208380"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665111"
 ---
 # <a name="user-defined-literals--c"></a>Uživateli definované literály (C++)
 

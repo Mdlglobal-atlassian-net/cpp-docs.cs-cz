@@ -1,32 +1,22 @@
 ---
-title: '&lt;CTime –&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;CTime –&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <ctime>
 - std::<ctime>
-dev_langs:
-- C++
 helpviewer_keywords:
 - ctime header
 ms.assetid: c1f7d4a4-4bfe-4e35-92cb-f63dbd3c39a8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 09ff596ef6b719e65ff38b40214a0c4f35744321
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 56c9e7a8b654d386cf9ad4aa491939dedcfab92a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842427"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650351"
 ---
 # <a name="ltctimegt"></a>&lt;CTime –&gt;
 
-Obsahuje hlavičku knihovny standardní C \<time.h > a přidá přidružené jména `std` oboru názvů.
+Obsahuje hlavičku knihovny Standard C \<time.h > a přidá názvy přidružené k `std` oboru názvů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,9 +27,9 @@ Obsahuje hlavičku knihovny standardní C \<time.h > a přidá přidružené jm�
 
 ## <a name="remarks"></a>Poznámky
 
-Včetně tuto hlavičku zajistí, že jsou názvy deklarováno s použitím externí propojení v hlavičce knihovny standardní C deklarované v `std` oboru názvů.
+Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším spojením v záhlaví knihovny Standard C jsou deklarovány v `std` oboru názvů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>

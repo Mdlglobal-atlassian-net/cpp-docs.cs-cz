@@ -1,12 +1,6 @@
 ---
-title: Výstupní parametry | Dokumentace Microsoftu
-ms.custom: ''
+title: Výstupní parametry
 ms.date: 10/24/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - OLE DB, stored procedures
 - stored procedures, calling
@@ -14,17 +8,12 @@ helpviewer_keywords:
 - procedure calls
 - procedure calls, stored procedures
 ms.assetid: 4f7c2700-1c2d-42f3-8c9f-7e83962b2442
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: d37cd1cd1facbdba1aeb4c8bc7f655bc3df954c0
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 575bc2c347275bfb96f64e60f35379629b4eac18
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50073016"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614536"
 ---
 # <a name="output-parameters"></a>Výstupní parametry
 

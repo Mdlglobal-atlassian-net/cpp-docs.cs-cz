@@ -1,10 +1,6 @@
 ---
-title: _get_timezone – | Microsoft Docs
-ms.custom: ''
+title: _get_timezone
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_timezone
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _get_timezone
 - get_timezone
-dev_langs:
-- C++
 helpviewer_keywords:
 - time zones
 - get_timezone function
 - _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 111cbff00d1f6119fbd806cc5fc3d14c28a7d7c1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26cf8114ab766bdb394d2db9ad5842622a447bd1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398273"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613912"
 ---
 # <a name="gettimezone"></a>_get_timezone
 
@@ -55,18 +45,18 @@ error_t _get_timezone(
 
 ### <a name="parameters"></a>Parametry
 
-*Sekund*<br/>
-Rozdíl v sekundách mezi místním ČASEM a.
+*sekundy*<br/>
+Rozdíl v sekundách mezi místním časem a UTC.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu nebo **errno** hodnotu, pokud dojde k chybě.
+Nula v případě úspěchu nebo s **errno** hodnotu, pokud dojde k chybě.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Get_timezone –** funkce načte rozdíl v sekundách mezi místním ČASEM a jako celé číslo. Výchozí hodnota je 28 800 sekund pro Tichomořský běžný čas (8 hodin za čas UTC).
+**_Get_timezone –** funkce načte rozdíl v sekundách mezi místním časem a UTC jako celé číslo. Výchozí hodnota je 28 800 sekund pro Tichomořský běžný čas (osm hodiny za časem UTC).
 
-Pokud *sekund* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tato funkce nastaví **errno** k **einval –** a vrátí **einval –**.
+Pokud *sekund* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce nastaví **errno** k **EINVAL** a vrátí **EINVAL**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -76,7 +66,7 @@ Pokud *sekund* je **NULL**, obslužná rutina neplatný parametr je vyvolána, j
 
 Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Správa času](../../c-runtime-library/time-management.md)<br/>
 [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

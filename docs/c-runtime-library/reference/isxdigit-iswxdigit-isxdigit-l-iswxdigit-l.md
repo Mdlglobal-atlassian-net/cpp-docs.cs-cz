@@ -1,10 +1,6 @@
 ---
-title: isxdigit –, iswxdigit –, _isxdigit_l –, _iswxdigit_l – | Microsoft Docs
-ms.custom: ''
+title: isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _iswxdigit_l
 - iswxdigit
@@ -27,8 +23,6 @@ f1_keywords:
 - iswxdigit
 - isxdigit
 - _istxdigit
-dev_langs:
-- C++
 helpviewer_keywords:
 - isxdigit function
 - istxdigit function
@@ -40,20 +34,16 @@ helpviewer_keywords:
 - hexadecimal characters
 - iswxdigit function
 ms.assetid: c8bc5146-0b58-4e3f-bee3-f2318dd0f829
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 92908e6d4c39f990da6fba5008c7ffe8af40ccc9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c7f70fedb19cca746ffb1e276c69b5fc98388b5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403329"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659703"
 ---
 # <a name="isxdigit-iswxdigit-isxdigitl-iswxdigitl"></a>isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
 
-Určuje, zda celé představuje znak, který je šestnáctková číslice.
+Určuje, zda celočíselná hodnota představuje znak šestnáctkové číslice.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -77,24 +67,24 @@ int _iswxdigit_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Celé číslo pro testování.
+Celé číslo k testování.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Všechny tyto rutiny vrátí nenulové hodnoty, pokud *c* je konkrétní reprezentace hexadecimální číslice. **isxdigit –** vrátí nenulovou hodnotu, pokud *c* je šestnáctková číslice (A - F, a - f, nebo 0 - 9). **iswxdigit –** vrátí nenulovou hodnotu, pokud *c* je široké znak, který odpovídá znak hexadecimální číslice. Všechny tyto rutiny vrátí hodnotu 0, pokud *c* nesplňuje podmínky testu.
+Každá z těchto rutin vrátí nenulovou hodnotu, pokud *c* je konkrétní reprezentace šestnáctkové číslice. **isxdigit** vrací nenulovou hodnotu, pokud *c* je šestnáctková číslice (A – F, a – f nebo 0 - 9). **iswxdigit –** vrací nenulovou hodnotu, pokud *c* je široký znak který odpovídá znaku šestnáctkového čísla. Každá z těchto rutin vrátí hodnotu 0, pokud *c* nesplňuje testovací podmínku.
 
-Pro národní prostředí "C" **iswxdigit –** funkce nepodporuje hexadecimálních znaků Unicode s plnou šířkou.
+Pro národní prostředí "C" **iswxdigit –** funkce nepodporuje šestnáctkové znaky Unicode s plnou šířkou.
 
-Verze tyto funkce, které mají **_l** používat příponu národní prostředí, je předaná místo aktuální národní prostředí pro jejich chování závislých na národním prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Verze těchto funkcí, které mají **_l** příponu použít předané národní prostředí namísto aktuálního národního prostředí pro své chování závislé na národním prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Chování **isxdigit –** a **_isxdigit_l –** není definován, pokud *c* není EOF nebo v rozsahu 0 až 0xFF (včetně). V případě použití knihovny ladění CRT a *c* není jednou z těchto hodnot, funkce raise kontrolní výrazy.
+Chování **isxdigit** a **_isxdigit_l –** není definováno, pokud *c* není konec souboru nebo v rozsahu 0 až 0xFF, včetně. Při použití ladicí CRT knihovny a *c* není jednou z těchto hodnot, funkce vyvolá kontrolní výraz.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istxdigit –**|**isxdigit**|**isxdigit**|**iswxdigit**|
 
@@ -107,9 +97,9 @@ Chování **isxdigit –** a **_isxdigit_l –** není definován, pokud *c* nen
 |**_isxdigit_l**|\<ctype.h >|
 |**_iswxdigit_l**|\<ctype.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Klasifikace znaků](../../c-runtime-library/character-classification.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>

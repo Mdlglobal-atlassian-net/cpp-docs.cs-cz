@@ -1,32 +1,22 @@
 ---
-title: common_type – třída | Microsoft Docs
-ms.custom: ''
+title: common_type – třída
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::common_type
-dev_langs:
-- C++
 helpviewer_keywords:
 - common_type class
 - common_type
 ms.assetid: 02bc4e7b-c63d-49de-9f8a-511d3a5c1e7f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 53ea9683576e891d120ce17651ed853a0f101780
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f627705109315d3fee84c1777390f00e1e2010ef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850024"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605228"
 ---
 # <a name="commontype-class"></a>common_type – třída
 
-Určuje typ běžné jeden nebo více typů.
+Určuje běžný typ jednoho nebo více typů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,11 +47,11 @@ Seznam typů, které jsou buď [dokončení typy](../c-language/incomplete-types
 
 ## <a name="remarks"></a>Poznámky
 
-`type` Člen je běžné typ, pro které všechny typy v parametru lze převést seznamu.
+`type` Člen je společný typ pro všechny typy v parametru lze převést seznam.
 
 ## <a name="example"></a>Příklad
 
-Následující program ukazuje některé scénáře správné použití a testy pro výsledky.
+Následující program ukazuje některé správného použití scénářů a testů pro zobrazení výsledků.
 
 ```cpp
 // Compile using cl.exe /EHsc
@@ -128,8 +118,8 @@ ClassType: true
 
 **Záhlaví:** \<type_traits >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<type_traits>](../standard-library/type-traits.md)<br/>

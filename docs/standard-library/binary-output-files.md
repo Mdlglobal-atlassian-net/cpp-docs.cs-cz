@@ -1,31 +1,21 @@
 ---
-title: Binární výstupní soubory | Microsoft Docs
-ms.custom: ''
+title: Binární výstupní soubory
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - I/O [C++], binary output files
 - files [C++], binary output files
 - binary data, binary output files
 ms.assetid: 180954af-8cd6-444b-9a76-2f630a3389d8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cdb101620b1a61f3a29057ee408cf9e89d38f9e8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 99445275a8f92622f451e8a88082dc2b28fb60b6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842349"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50615641"
 ---
 # <a name="binary-output-files"></a>Binární výstupní soubory
 
-Datové proudy byly původně navrženy pro text, tak, aby výchozí režim výstup textu. V režimu textových znak nového řádku (hexadecimální 10) zasahuje do znaků CR vrátit-konce řádku (pouze 16 bitů). Rozšíření může způsobit problémy, jak je vidět tady:
+Datové proudy byly původně navržen pro text, tak režim výstupu výchozí je text. V textovém režimu rozšíří znak nového řádku (hexadecimální 10) návrat na začátek řádku vrátit – znak odřádkování (pouze 16 bitů). Rozšíření může způsobit potíže, jak je znázorněno zde:
 
 ```cpp
 // binary_output_files.cpp
@@ -40,7 +30,7 @@ int main( )
 }
 ```
 
-Očekáváte může tento program k vypsání pořadí bajtů {99, 0, 10, 0}; Místo toho vyprodukuje {99, 0, 13, 10, 0}, což způsobuje problémy programu očekáván binární vstup. Pokud třeba PRAVDA binární výstup, ve kterém jsou zapsány znaky nepřeložený, budete moci zadat binární výstup pomocí [ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream) openmode – argument konstruktoru:
+Očekáváte-li tento program do výstupního sekvence bajtů {99, 0, 10, 0}; Místo toho výstupu {99, 0, 13, 10, 0}, což způsobí, že problémy pro program očekává se binární vstup. Pokud potřebujete true binární výstup, ve kterém jsou zapsány znaků zůstanou nepřevedeny, budete moci zadat binární výstup s použitím [ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream) openmode argument konstruktoru:
 
 ```cpp
 // binary_output_files2.cpp
@@ -58,6 +48,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Výstupní streamy](../standard-library/output-streams.md)<br/>

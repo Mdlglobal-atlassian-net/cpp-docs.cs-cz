@@ -1,30 +1,20 @@
 ---
-title: -KEYCONTAINER (určení kontejneru klíčů pro podpis sestavení) | Dokumentace Microsoftu
-ms.custom: ''
+title: /KEYCONTAINER (Zadat kontejner klíčů pro podpis sestavení)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.KeyContainer
 - /keycontainer
-dev_langs:
-- C++
 helpviewer_keywords:
 - KEYCONTAINER linker option
 - /KEYCONTAINER linker option
 - -KEYCONTAINER linker option
 ms.assetid: 94882d12-b77a-49c7-96d0-18a31aee001e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 850a8173dba3e69eaf52fdf174674e1dba58a4d8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3467350602d0e5b4fbb7df5f92238e18e39532bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723759"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616564"
 ---
 # <a name="keycontainer-specify-a-key-container-to-sign-an-assembly"></a>/KEYCONTAINER (Zadat kontejner klíčů pro podpis sestavení)
 
@@ -69,7 +59,7 @@ Další možnosti linkeru, které ovlivňují generování sestavení jsou:
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Viz také
 
