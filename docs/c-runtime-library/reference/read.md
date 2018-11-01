@@ -1,10 +1,6 @@
 ---
-title: _Zobrazit | Microsoft Docs
-ms.custom: ''
+title: _read
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _read
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _read
-dev_langs:
-- C++
 helpviewer_keywords:
 - data [CRT]
 - _read function
@@ -32,20 +26,16 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2c67ce8ac0e754bf3003b23c56cd1d3f428be903
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c43cbbc2681433bda02038ae73a827fad904835
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405806"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658439"
 ---
 # <a name="read"></a>_read
 
-Čte data ze souboru.
+Přečte data ze souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -60,7 +50,7 @@ int _read(
 ### <a name="parameters"></a>Parametry
 
 *FD*<br/>
-Popisovače souborů na otevření souboru.
+Popisovač souboru odkazující na otevřený soubor.
 
 *Vyrovnávací paměti*<br/>
 Umístění úložiště pro data.
@@ -70,19 +60,19 @@ Maximální počet bajtů.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_Zobrazit** vrátí počet bajtů přečtených, což může být menší než *počet* Pokud méně než *počet* left bajtů v souboru nebo pokud byl soubor otevřít v textovém režimu, v takovém případě každý znaků CR Vrátí line kanálu pár '\r\n' se nahradí znak jednoho konce řádku, \n'. Pouze jeden konce řádku znak se počítá v návratovou hodnotu. Pokud chcete nahrazení neovlivňuje ukazatele souboru.
+**_získat** vrátí počet bajtů, přečtěte si, který může být menší než *počet* Pokud jsou kratší než *počet* bajtů ponechán v souboru nebo pokud byl soubor otevřen v textovém režimu, v takovém případě každý návrat na začátek řádku return-line kanál pár "\r\n" nahrazuje jeden znak odřádkování znakem '\n'. Pouze jeden znak odřádkování znak, který se počítá v návratové hodnotě. Pokud chcete nahrazení nemá vliv na ukazatel na soubor.
 
-Pokud funkce se pokusí přečíst na konci souboru, vrátí hodnotu 0. Pokud *fd* není platný soubor není otevřen pro čtení, nebo je soubor uzamčený, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, funkce vrátí hodnotu -1 a nastaví je povoleno spuštění **errno** k **ebadf –**.
+Pokud funkce se pokusí načíst na konci souboru, vrátí hodnotu 0. Pokud *fd* není platný soubor není otevřen pro čtení, nebo je soubor uzamčen, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a nastaví **errno** k **EBADF**.
 
-Pokud *vyrovnávací paměti* je **NULL**, je volána obslužná rutina neplatný parametr. Pokud je povoleno provádění pokračovat, funkce vrátí hodnotu -1 a **errno** je nastaven na **einval –**.
+Pokud *vyrovnávací paměti* je **NULL**, je vyvolána obslužná rutina neplatného parametru. Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a **errno** je nastavena na **EINVAL**.
 
-Další informace o tomto a ostatní návratové kódy najdete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o tomto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Získat** funkce přečte maximálně *počet* bajtů do *vyrovnávací paměti* ze souboru přidružené *fd*. Operace čtení začíná na aktuální pozici přidruženou k dané soubor ukazatele souboru. Po operaci čtení ukazatele souboru odkazuje na Další nepřečtená znak.
+**_Read** funkce přečte maximálně *počet* bajtů do *vyrovnávací paměti* ze souboru spojené s *fd*. Operace čtení začíná na aktuální pozici ukazatele soubor přidružený k danému souboru. Po operaci čtení ukazatel na soubor odkazuje na další nepřečtené znak.
 
-Pokud byl soubor otevřít v textovém režimu, čtení ukončí při **_Zobrazit** zaznamená CTRL + Z znaku, který je považován za indikátor end souboru. Použití [_lseek –](lseek-lseeki64.md) zrušte end souborového indikátoru.
+Pokud soubor byl otevřen v textovém režimu, čtení skončí, když **_read** zaznamená znak CTRL + Z, která se používá jako indikátor konce souboru. Použití [_lseek –](lseek-lseeki64.md) zrušte indikátor konce souboru.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -90,11 +80,11 @@ Pokud byl soubor otevřít v textovém režimu, čtení ukončí při **_Zobrazi
 |-------------|---------------------|
 |**_read**|\<IO.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -149,7 +139,7 @@ Line two.
 Read 19 bytes from file
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [I/O nízké úrovně](../../c-runtime-library/low-level-i-o.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
