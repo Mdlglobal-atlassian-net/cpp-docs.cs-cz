@@ -1,27 +1,17 @@
 ---
-title: C3224 Chyba kompilátoru | Dokumentace Microsoftu
-ms.custom: ''
+title: C3224 chyby kompilátoru
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3224
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3224
 ms.assetid: 129be22f-8f3e-4fc6-9ccd-d27d8ef91251
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7eb7c5d9bc912eafb2c7772114448a0567d90cad
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dc64ca1aeef66eeb554be1316bf9433145b50cc3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46105034"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473164"
 ---
 # <a name="compiler-error-c3224"></a>C3224 chyby kompilátoru
 

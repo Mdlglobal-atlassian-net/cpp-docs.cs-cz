@@ -1,10 +1,6 @@
 ---
-title: _umask_s – | Microsoft Docs
-ms.custom: ''
+title: _umask_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _umask_s
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - unmask_s
 - _umask_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - masks, file-permission-setting
 - _umask_s function
@@ -33,20 +27,16 @@ helpviewer_keywords:
 - umask_s function
 - files [C++], permission settings for
 ms.assetid: 70898f61-bf2b-4d8d-8291-0ccaa6d33145
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d45cb3ded6fd2c3d7a380069a7d7f3fd79619810
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 878a22cb2884c36e792ff8dead1453582addb5b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414477"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480664"
 ---
 # <a name="umasks"></a>_umask_s
 
-Nastaví výchozí oprávnění souboru masku. Verzi [_umask –](umask.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Nastaví výchozí masku souboru oprávnění. Verze [_umask –](umask.md) s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,36 +53,36 @@ errno_t _umask_s(
 Výchozí nastavení oprávnění.
 
 *pOldMode*<br/>
-Předchozí hodnotu nastavení oprávnění.
+Předchozí hodnota nastavení oprávnění.
 
 ## <a name="return-value"></a>Návratová hodnota
 
 Vrátí kód chyby, pokud *režimu* neurčuje platný režim nebo *pOldMode* ukazatel **NULL**.
 
-### <a name="error-conditions"></a>Chybové stavy
+### <a name="error-conditions"></a>Chybové podmínky
 
 |*Režim*|*pOldMode*|Návratová hodnota|Obsah *pOldMode*|
 |------------|----------------|----------------------|--------------------------------|
-|všechny|**HODNOTU NULL**|**EINVAL –**|nedojde ke změně|
-|Neplatný režim|všechny|**EINVAL –**|nedojde ke změně|
+|Všechny|**HODNOTU NULL**|**EINVAL**|Nezměněno|
+|Neplatný režim|Všechny|**EINVAL**|Nezměněno|
 
-Pokud dojde k jedné z výše uvedených podmínek, je obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **_umask_s –** vrátí **einval –** a nastaví **errno** k **einval –**.
+Pokud dojde k jedné z výše uvedených podmínek, vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **_umask_s –** vrátí **EINVAL** a nastaví **errno** k **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Umask_s –** funkce nastaví oprávnění souborů maska aktuální proces do režimu určeného *režimu*. Oprávnění souborů maska upraví nastavení oprávnění nových souborů vytvořených **_creat –**, **_Otevřít**, nebo **_sopen –**. Pokud bit do masky je 1, příslušné bity v hodnotě souboru požadované oprávnění nastavená na hodnotu 0 (zakázáno). Pokud bit v maska je 0, odpovídající bit je ponechán beze změny. Nastavení oprávnění pro vytvoření nového souboru není nastavena, dokud soubor se zavřel poprvé.
+**_Umask_s –** funkce nastaví masky souboru oprávnění aktuálního procesu k režimu určeném *režimu*. Maska oprávnění soubor upravuje nastavení oprávnění nové soubory vytvořené v **_creat –**, **_Otevřít**, nebo **_sopen**. Pokud bit masky je 1, odpovídající bit v souboru hodnota požadovaná oprávnění nastavená na hodnotu 0 (zakázáno). Pokud bit masky na hodnotu 0, odpovídající bit zůstane beze změny. Nastavení oprávnění pro nový soubor není nastavena, dokud není zavřena soubor poprvé.
 
-Celočíselný výraz *pmode* obsahuje jedno nebo obě následující manifestu konstanty definované v SYS\STAT. V:
+Celočíselný výraz *pmode* obsahuje jednu nebo obě z následujících konstant manifestu definovaných v SYS\STAT. V:
 
 |*pmode*||
 |-|-|
-|**_S_IWRITE –**|Zápis povolen.|
-|**_S_IREAD –**|Čtení povolené.|
-|**_S_IREAD –** \| **_S_IWRITE –**|Čtení a zápis povolen.|
+|**_S_IWRITE**|Zápis povolen.|
+|**_S_IREAD**|Čtení povolené.|
+|**_S_IREAD** \| **_S_IWRITE**|Čtení a zápis povolen.|
 
-Pokud jsou zadány oba konstanty, jsou spojeny pomocí operátoru bitové operace OR ( **|** ). Pokud *režimu* argument je **_s_iread –**, čtení není povolen (soubor je jen pro zápis). Pokud *režimu* argument je **_s_iwrite –**, není povolen zápis (soubor je jen pro čtení). Pokud je bit zápisu nastavený v masce, všechny nové soubory bude třeba jen pro čtení. Upozorňujeme, že MS-DOS a operační systémy Windows, jsou všechny soubory čitelný; není možné udělit oprávnění jen pro zápis. Proto nastavení čtení bit s **_umask_s –** nemá žádný vliv na režimy v souboru.
+Když jsou uvedeny oba konstanty, jsou spojeny pomocí bitového operátoru OR – operátor ( **|** ). Pokud *režimu* argument je **_S_IREAD**, není povoleno čtení (soubor je jen pro zápis). Pokud *režimu* argument je **_S_IWRITE**, není povolen zápis (soubor je jen pro čtení). Pokud je bit zápisu nastavený v masce, všechny nové soubory bude třeba jen pro čtení. Upozorňujeme, že zástupného kódu MS-DOS a operační systémy Windows, je čitelný; všechny soubory není možné poskytnout oprávnění jen pro zápis. Proto nastavení čtení bit s **_umask_s –** nemá žádný vliv na jeho režimy.
 
-Pokud *pmode* není kombinace jednoho z manifestu konstanty nebo zahrnuje alternativní sady konstant, funkce bude ignorovat ty.
+Pokud *pmode* není kombinaci některou z konstant manifestu nebo zahrnuje alternativní sadu konstant, funkce bude jednoduše ignorovat ty.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -100,7 +90,7 @@ Pokud *pmode* není kombinace jednoho z manifestu konstanty nebo zahrnuje altern
 |-------------|---------------------|
 |**_umask_s**|\<IO.h > a \<sys/stat.h > a \<sys/types.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -136,7 +126,7 @@ int main( void )
 Oldmask = 0x0000
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zpracování souborů](../../c-runtime-library/file-handling.md)<br/>
 [I/O nízké úrovně](../../c-runtime-library/low-level-i-o.md)<br/>

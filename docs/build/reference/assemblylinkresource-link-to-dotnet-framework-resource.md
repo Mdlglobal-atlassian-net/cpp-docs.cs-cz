@@ -1,30 +1,20 @@
 ---
-title: -ASSEMBLYLINKRESOURCE (odkaz na prostředek rozhraní .NET Framework) | Dokumentace Microsoftu
-ms.custom: ''
+title: /ASSEMBLYLINKRESOURCE (Vytvořit odkaz na prostředek rozhraní .NET Framework)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /ASSEMBLYLINKRESOURCE
 - VC.Project.VCLinkerTool.AssemblyLinkResource
-dev_langs:
-- C++
 helpviewer_keywords:
 - -ASSEMBLYLINKRESOURCE linker option
 - ASSEMBLYLINKRESOURCE linker option
 - /ASSEMBLYLINKRESOURCE linker option
 ms.assetid: 8b6ad184-1b33-47a4-8513-4803cf915b64
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 36f8f6adcfe5d67b3d27b8557627725ba7295829
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7c1d78758e43bf8e0c2c281c495c81e9f62b36e7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704135"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473902"
 ---
 # <a name="assemblylinkresource-link-to-net-framework-resource"></a>/ASSEMBLYLINKRESOURCE (Vytvořit odkaz na prostředek rozhraní .NET Framework)
 
@@ -77,7 +67,7 @@ Další možnosti linkeru, které ovlivňují generování sestavení jsou:
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Viz také
 

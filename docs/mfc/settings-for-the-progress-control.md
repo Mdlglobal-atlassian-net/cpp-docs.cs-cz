@@ -1,26 +1,16 @@
 ---
-title: Nastavení pro ovládací prvek průběh | Dokumentace Microsoftu
-ms.custom: ''
+title: Nastavení pro ovládací prvek průběh
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CProgressCtrl class [MFC], settings
 - progress controls [MFC], settings
 ms.assetid: f4616e91-74fa-4000-ba0d-d3ddc0ee075b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b6b11189e3e0a8381ade372841e6c7b25a5a9fa0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 444dc45c816e0dfc2fd45bad999ad90c2acacc01
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434632"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481776"
 ---
 # <a name="settings-for-the-progress-control"></a>Nastavení pro ovládací prvek průběh
 

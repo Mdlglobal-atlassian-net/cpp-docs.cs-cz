@@ -1,35 +1,25 @@
 ---
-title: Vnitřní funkce dostupné na všech architektury | Microsoft Docs
-ms.custom: ''
+title: Vnitřní objekty dostupné ve všech architekturách
 ms.date: 04/11/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dbe070c2bae69563d65344072a56003f808d1486
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0a1331f53cd8b44c8a7bfc903216cbdbaf5fec1f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340616"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473278"
 ---
-# <a name="intrinsics-available-on-all-architectures"></a>Vnitřní funkce dostupné na všech architektury
+# <a name="intrinsics-available-on-all-architectures"></a>Vnitřní objekty dostupné ve všech architekturách
 
-Microsoft C/C++ compiler a univerzální knihoven C Runtime (UCRT) vnitřní některé funkce zpřístupnit na všechny architektury.
+Kompilátor Microsoft C/C++ a Universal C Runtime Library (UCRT) ujistěte se, některé vnitřní objekty dostupné ve všech architekturách.
 
 ## <a name="compiler-intrinsics"></a>Vnitřní funkce kompilátoru
 
-Vnitřní následující funkce jsou k dispozici s x86, AMD64 a ARM architektury:
+Následující vnitřní objekty jsou k dispozici s x86 AMD64 a architektury ARM:
 
-|Vnitřní funkce|Záhlaví|
+|Vnitřní|Záhlaví|
 |---------------|------------|
 |[_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)|intrin.h|
 |[_BitScanForward](../intrinsics/bitscanforward-bitscanforward64.md)|intrin.h|
@@ -97,15 +87,15 @@ Vnitřní následující funkce jsou k dispozici s x86, AMD64 a ARM architektury
 |[__umulh](../intrinsics/umulh.md)|intrin.h|
 |[_WriteBarrier](../intrinsics/writebarrier.md)|intrin.h|
 
-## <a name="ucrt-intrinsics"></a>Vnitřní funkce UCRT
+## <a name="ucrt-intrinsics"></a>UCRT vnitřních objektů
 
-Následující funkce UCRT mít vnitřní forms na všechny architektury:
+Následující funkce UCRT mají vnitřní formy ve všech architekturách:
 
-|Vnitřní funkce|Záhlaví|
+|Vnitřní|Záhlaví|
 |---------------|------------|
 |[Abs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
 |[_abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
-|[ACOS](../c-runtime-library/reference/acos-acosf-acosl.md)|Math.h|
+|[Funkce ACOS](../c-runtime-library/reference/acos-acosf-acosl.md)|Math.h|
 |[acosf](../c-runtime-library/reference/acos-acosf-acosl.md)|Math.h|
 |[acosl](../c-runtime-library/reference/acos-acosf-acosl.md)|Math.h|
 |[_alloca](../c-runtime-library/reference/alloca.md)|malloc.h|
@@ -121,29 +111,29 @@ Následující funkce UCRT mít vnitřní forms na všechny architektury:
 |[_byteswap_uint64](../c-runtime-library/reference/byteswap-uint64-byteswap-ulong-byteswap-ushort.md)|stdlib.h|
 |[_byteswap_ulong](../c-runtime-library/reference/byteswap-uint64-byteswap-ulong-byteswap-ushort.md)|stdlib.h|
 |[_byteswap_ushort](../c-runtime-library/reference/byteswap-uint64-byteswap-ulong-byteswap-ushort.md)|stdlib.h|
-|[ceil](../c-runtime-library/reference/ceil-ceilf-ceill.md)|Math.h|
+|[Ceil –](../c-runtime-library/reference/ceil-ceilf-ceill.md)|Math.h|
 |[ceilf –](../c-runtime-library/reference/ceil-ceilf-ceill.md)|Math.h|
 |[ceill –](../c-runtime-library/reference/ceil-ceilf-ceill.md)|Math.h|
 |[Cos](../c-runtime-library/reference/cos-cosf-cosl.md)|Math.h|
 |[cosf](../c-runtime-library/reference/cos-cosf-cosl.md)|Math.h|
-|[COSH](../c-runtime-library/reference/cosh-coshf-coshl.md)|Math.h|
+|[COSH –](../c-runtime-library/reference/cosh-coshf-coshl.md)|Math.h|
 |[coshf](../c-runtime-library/reference/cosh-coshf-coshl.md)|Math.h|
 |[coshl –](../c-runtime-library/reference/cosh-coshf-coshl.md)|Math.h|
 |[cosl –](../c-runtime-library/reference/cos-cosf-cosl.md)|Math.h|
 |[exp](../c-runtime-library/reference/exp-expf.md)|Math.h|
 |[expf](../c-runtime-library/reference/exp-expf.md)|Math.h|
 |[expl](../c-runtime-library/reference/exp-expf.md)|Math.h|
-|[fabs](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|Math.h|
+|[fabs –](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|Math.h|
 |[fabsf –](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|Math.h|
-|[Floor](../c-runtime-library/reference/floor-floorf-floorl.md)|Math.h|
+|[Dolní mez](../c-runtime-library/reference/floor-floorf-floorl.md)|Math.h|
 |[floorf](../c-runtime-library/reference/floor-floorf-floorl.md)|Math.h|
 |[floorl –](../c-runtime-library/reference/floor-floorf-floorl.md)|Math.h|
-|[fmod](../c-runtime-library/reference/fmod-fmodf.md)|Math.h|
+|[Fmod –](../c-runtime-library/reference/fmod-fmodf.md)|Math.h|
 |[fmodf](../c-runtime-library/reference/fmod-fmodf.md)|Math.h|
 |[fmodl](../c-runtime-library/reference/fmod-fmodf.md)|Math.h|
-|[Labs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
+|[Praktická cvičení](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
 |[llabs –](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
-|[Protokolu](../c-runtime-library/reference/log-logf-log10-log10f.md)|Math.h|
+|[protokol](../c-runtime-library/reference/log-logf-log10-log10f.md)|Math.h|
 |[log10](../c-runtime-library/reference/log-logf-log10-log10f.md)|Math.h|
 |[log10f](../c-runtime-library/reference/log-logf-log10-log10f.md)|Math.h|
 |[log10l](../c-runtime-library/reference/log-logf-log10-log10f.md)|Math.h|
@@ -152,7 +142,7 @@ Následující funkce UCRT mít vnitřní forms na všechny architektury:
 |[_lrotl](../c-runtime-library/reference/lrotl-lrotr.md)|stdlib.h|
 |[_lrotr](../c-runtime-library/reference/lrotl-lrotr.md)|stdlib.h|
 |[memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md)|String.h|
-|[memcpy –](../c-runtime-library/reference/memcpy-wmemcpy.md)|String.h|
+|[memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)|String.h|
 |[memset](../c-runtime-library/reference/memset-wmemset.md)|String.h|
 |[Pow](../c-runtime-library/reference/pow-powf-powl.md)|Math.h|
 |[powf –](../c-runtime-library/reference/pow-powf-powl.md)|Math.h|
@@ -163,7 +153,7 @@ Následující funkce UCRT mít vnitřní forms na všechny architektury:
 |[_rotr64](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)|stdlib.h|
 |[Sin](../c-runtime-library/reference/sin-sinf-sinl.md)|Math.h|
 |[sinf –](../c-runtime-library/reference/sin-sinf-sinl.md)|Math.h|
-|[SINH](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|Math.h|
+|[SINH –](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|Math.h|
 |[sinhf](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|Math.h|
 |[sinhl –](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|Math.h|
 |[sinl –](../c-runtime-library/reference/sin-sinf-sinl.md)|Math.h|
@@ -178,17 +168,17 @@ Následující funkce UCRT mít vnitřní forms na všechny architektury:
 |[strset –](../c-runtime-library/reference/strset-wcsset.md)|String.h|
 |[Tan](../c-runtime-library/reference/tan-tanf-tanl.md)|Math.h|
 |[tanf –](../c-runtime-library/reference/tan-tanf-tanl.md)|Math.h|
-|[TANH](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|Math.h|
+|[TANH –](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|Math.h|
 |[tanhf](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|Math.h|
-|[tanhl –](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|Math.h|
-|[tanl –](../c-runtime-library/reference/tan-tanf-tanl.md)|Math.h|
+|[tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|Math.h|
+|[tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|Math.h|
 |[wcscat](../c-runtime-library/reference/strcat-wcscat-mbscat.md)|String.h|
 |[wcscmp –](../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)|String.h|
 |[wcscpy](../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)|String.h|
 |[wcslen](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)|String.h|
 |[_wcsset](../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)|String.h|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [ARM – vnitřní prvky](../intrinsics/arm-intrinsics.md)<br/>
 [x86 – seznam vnitřních objektů](../intrinsics/x86-intrinsics-list.md)<br/>

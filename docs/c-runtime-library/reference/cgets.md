@@ -1,10 +1,6 @@
 ---
-title: cgets – | Microsoft Docs
-ms.custom: ''
+title: cgets
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cgets
 apilocation:
@@ -21,25 +17,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - cgets
-dev_langs:
-- C++
 helpviewer_keywords:
 - cgets function
 ms.assetid: 54faf257-5ed6-4301-be19-66d953e901fa
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 53a7b7b4327e7372c3f07b6ab0065ad76a225386
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22af15eca963f9c136cf41bf9737ef94aae187ef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393248"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486031"
 ---
 # <a name="cgets"></a>cgets
 
-Tato funkce POSIX je zastaralý. Používat vyhovující ISO C++ [_cgets –](../../c-runtime-library/cgets-cgetws.md) nebo rozšířené zabezpečení [_cgets_s –](cgets-s-cgetws-s.md) místo.
+Tato funkce POSIX je zastaralá. Použít splňující podmínky ISO C++ [_cgets](../../c-runtime-library/cgets-cgetws.md) nebo s rozšířeným zabezpečením [_cgets_s](cgets-s-cgetws-s.md) místo.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
