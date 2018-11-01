@@ -1,25 +1,15 @@
 ---
-title: Souhrn konstant | Dokumentace Microsoftu
-ms.custom: ''
+title: Souhrn konstant
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - constants, C
 ms.assetid: 4158234c-e189-4e25-970f-52a04bc6380a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 33367c468d8e499382c30642dd55c4cd7fd1a59a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1da2a7434ced7f38fa199e5911e01709983fda91
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760491"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50547859"
 ---
 # <a name="summary-of-constants"></a>Souhrn konstant
 
@@ -35,7 +25,7 @@ ms.locfileid: "43760491"
 
 *desetinná konstanta*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*sekvence číslic*<sub>optimalizované</sub> **.** *sekvence číslic*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*sekvence číslic***.**
+&nbsp;&nbsp;&nbsp;&nbsp;*sekvence číslic*  **.**
 
 *exponent část*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**elektronické** *přihlašování*<sub>optimalizované</sub> *sekvence číslic*<br/>
@@ -71,7 +61,7 @@ ms.locfileid: "43760491"
 
 *šestnáctkové konstanty*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0 x***šestnáctkové číslice*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**0 X***šestnáctkové číslice* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0 X***šestnáctkové číslice*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*šestnáctkové konstanty* *šestnáctkové číslice*
 
 *nenulovou číslicí*: jeden z<br/>

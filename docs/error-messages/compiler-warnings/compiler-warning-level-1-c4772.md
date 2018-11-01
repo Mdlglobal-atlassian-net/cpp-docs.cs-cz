@@ -1,40 +1,31 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4772 | Microsoft Docs
+title: Kompilátor upozornění (úroveň 1) C4772
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4772
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4772
 ms.assetid: dafe6fd8-9faf-41f5-9d66-a55838742c14
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cbdcfec8d36568c31c291a9de8f9af3aac821fc6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95243ab66d5d0296e1c316ff8dde7add75a030cd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282269"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50540020"
 ---
-# <a name="compiler-warning-level-1-c4772"></a>C4772 kompilátoru upozornění (úroveň 1)
+# <a name="compiler-warning-level-1-c4772"></a>Kompilátor upozornění (úroveň 1) C4772
 
-> \#Import odkazuje typ z chybějící knihovny typů; '*chybí typ*se používá jako zástupný znak
+> \#Import odkazovala na typ z chybějící knihovny typů; "*chybí typ*se používá jako zástupný symbol
 
-Knihovny typů bylo odkazováno s [#import](../../preprocessor/hash-import-directive-cpp.md) – direktiva. Ale knihovny typů obsahovala odkaz na jiné knihovny typů, který nebyl odkazuje s `#import`. Tento .tlb soubor nebyl nalezen kompilátorem.
+Knihovnu typů se odkazovalo se [#import](../../preprocessor/hash-import-directive-cpp.md) směrnice. Nicméně knihovny typů obsahovala odkaz na jinou knihovnu typů, na který se odkazuje pomocí `#import`. Tento .tlb soubor nebyl nalezen kompilátorem.
 
-Všimněte si, že kompilátor nebude najít knihovny typů v různých adresářích, pokud použijete [/I (Další adresáře Include)](../../build/reference/i-additional-include-directories.md) – možnost kompilátoru k určení těchto adresářů. Pokud chcete kompilátoru k nalezení knihovny typů v různých adresářích, přidejte tyto adresáře do proměnné prostředí PATH.
+Všimněte si, že kompilátor nebude najít knihovny typů v různých adresářích, pokud použijete [/I (další vložené adresáře)](../../build/reference/i-additional-include-directories.md) – možnost kompilátoru k určení těchto adresářů. Pokud chcete, aby kompilátor k nalezení knihovny typů v různých adresářích, přidejte do proměnné prostředí PATH v těchto adresářích.
 
 Ve výchozím nastavení se objeví toto upozornění za chybu. C4772 nelze potlačit s /W0.
 
 ## <a name="example"></a>Příklad
 
-Toto je první knihovny typů, které jsou potřebné pro reprodukci C4772.
+Toto je první potřebnými k zopakování C4772 knihovny typů.
 
 ```IDL
 // c4772a.idl
@@ -49,7 +40,7 @@ library C4772aLib
 };
 ```
 
-Toto je druhý knihovny typů, které jsou potřebné pro reprodukci C4772.
+Toto je druhý potřebnými k zopakování C4772 knihovny typů.
 
 ```IDL
 // c4772b.idl
