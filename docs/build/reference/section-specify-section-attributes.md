@@ -1,29 +1,19 @@
 ---
-title: / SECTION (určení atributů oddílu) | Dokumentace Microsoftu
-ms.custom: ''
+title: /SECTION (Určit atributy oddílu)
 ms.date: 12/29/2017
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /section
-dev_langs:
-- C++
 helpviewer_keywords:
 - SECTION linker option
 - -SECTION linker option
 - section attributes
 - /SECTION linker option
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bf762718e507309e47d36b06baacf54c6cb01e3e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d86dca297940da4978fe42270f444acc5f11fd82
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713722"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543694"
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION (Určit atributy oddílu)
 
@@ -97,7 +87,7 @@ Oddíl v souboru PE, která nemá E, R nebo W, nastavte je pravděpodobně nepla
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Viz také:
 

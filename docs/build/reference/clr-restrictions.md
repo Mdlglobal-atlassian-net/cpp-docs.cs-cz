@@ -1,55 +1,45 @@
 ---
-title: / CLR – omezení | Microsoft Docs
-ms.custom: ''
+title: /clr – omezení
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 34d21939f51fc3d4800d5cdd887b283b7e690db6
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 205345a4261f5db8eb80b3bda6e5ea55544a33d0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704266"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639342"
 ---
 # <a name="clr-restrictions"></a>/clr – omezení
 
-Všimněte si následujících omezení pro použití **/CLR**:
+Mějte na paměti následující omezení týkající se použití **/CLR**:
 
-- Obslužná rutina strukturovaného výjimek, existují omezení používání `_alloca` při kompilaci s **/CLR**. Další informace najdete v tématu [_alloca –](../../c-runtime-library/reference/alloca.md).
+- Strukturovanou obslužnou rutinou, existují omezení používání `_alloca` při kompilaci s **/CLR**. Další informace najdete v tématu [_alloca](../../c-runtime-library/reference/alloca.md).
 
-- Použití Kontrola chyb za běhu není platný s **/CLR**. Další informace najdete v tématu [postupy: použití nativního Run-Time kontroluje](/visualstudio/debugger/how-to-use-native-run-time-checks).
+- Použití kontroly chyb za běhu není platná s **/CLR**. Další informace najdete v tématu [postupy: použití nativních kontrol za běhu](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
-- Když **/CLR** se používá ke kompilaci program, který používá jenom standardní C++ syntaxe, platí následující pokyny pro použití vloženého sestavení:
+- Když **/CLR** se používá ke kompilaci program, který se používá pouze standardní syntaxe jazyka C++, následující pokyny se vztahují na užívání vložené sestavení:
 
-  - Kód vnořeného sestavení, která předpokládá znalost rozložení nativní zásobníku, konvence mimo aktuální funkce nebo další nízké úrovně informace o počítači volání může selhat v případě použitý znalostní báze na rámec zásobníku pro spravované funkce. Funkce obsahující kódu vnořeného sestavení jsou generovány jako nespravované funkce, jako kdyby byly umístěny v samostatný modul, který se zkompiluje bez **/CLR**.
+  - Vložený kód sestavení, která předpokládá znalost rozložení nativní zásobníku, mimo aktuální funkci nebo jiné nízké úrovně informace o počítači konvence volání může selhat, pokud použitém znalostní báze pro rámce zásobníku pro spravované funkce. Funkce obsahující vložený kód sestavení jsou generovány jako nespravované funkce, jako kdyby byly umístěny do samostatných modul, který se zkompiloval bez **/CLR**.
 
-  - Kód vnořeného sestavení v funkce, které předat parametry kopie vytvořená funkce není podporována.
+  - Vložený kód sestavení funkcí, které předávají parametry vytvořena kopie funkce není podporována.
 
-- [Vprintf – funkce](../../c-runtime-library/vprintf-functions.md) nelze volat z programu kompilovat s **/CLR**.
+- [Vprintf – funkce](../../c-runtime-library/vprintf-functions.md) nejde volat z programu kompilovaného s **/CLR**.
 
-- [Holé](../../cpp/naked-cpp.md) [__declspec](../../cpp/declspec.md) Modifikátor je ignorován v/CLR.
+- [Naked](../../cpp/naked-cpp.md) [__declspec](../../cpp/declspec.md) modifikátor se ignoruje pod parametrem/CLR.
 
-- Funkce překladač nastavena [_set_se_translator –](../../c-runtime-library/reference/set-se-translator.md) ovlivní pouze úlovky v nespravovaném kódu. V tématu [zpracování výjimek](../../windows/exception-handling-cpp-component-extensions.md) Další informace.
+- Funkce translator nastavil [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) ovlivní pouze přetáhněte aktivity catch v nespravovaném kódu. Zobrazit [zpracování výjimek](../../windows/exception-handling-cpp-component-extensions.md) Další informace.
 
-- Porovnání ukazatelů na funkce není povolena v rámci **/CLR**.
+- Porovnání ukazatelů na funkce není povolená v rámci **/CLR**.
 
-- V části není povoleno použití funkce, které nejsou plně deklaraci **/CLR**.
+- V části není povoleno použití funkce, které nejsou používat plně prototypované **/CLR**.
 
-- Nejsou podporovány následující možnosti kompilátoru s **/CLR**:
+- Následující možnosti kompilátoru nepodporuje **/CLR**:
 
-  - **/ EHsc** a **/EHs** (**/CLR** znamená **/EHa** (viz [/EH (Model zpracování výjimek)](../../build/reference/eh-exception-handling-model.md))
+  - **/ EHsc** a **/EHS** (**/CLR** znamená **/EHa** (viz [/EH (Model zpracování výjimek)](../../build/reference/eh-exception-handling-model.md))
 
-  - **/FP: striktní** a **/fp: kromě** (viz [/fp (zadejte Floating-Point chování)](../../build/reference/fp-specify-floating-point-behavior.md))
+  - **/ FP: strict** a **/FP: except** (viz [/fp (určení chování plovoucí desetinné čárky)](../../build/reference/fp-specify-floating-point-behavior.md))
 
   - [/Zd](../../build/reference/z7-zi-zi-debug-information-format.md)
 
@@ -61,40 +51,40 @@ Všimněte si následujících omezení pro použití **/CLR**:
 
   - [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)
 
-- Kombinace `_STATIC_CPPLIB` definování preprocesoru (`/D_STATIC_CPPLIB`) a **/CLR** – možnost kompilátoru není podporován. Je to tak proto definici by způsobit, že aplikace pro propojení statické vícevláknové standardní knihovna C++, což není podporováno. Další informace najdete v tématu [/MD, / MT, /LD (použít běhovou knihovnu)](../../build/reference/md-mt-ld-use-run-time-library.md) tématu.
+- Kombinace `_STATIC_CPPLIB` Definice preprocesoru (`/D_STATIC_CPPLIB`) a **/CLR** – možnost kompilátoru není podporován. Důvodem je, že definice by způsobit, že aplikace k propojení s statické s více vlákny standardní knihovny C++, což není podporováno. Další informace najdete v tématu [/ / MD, / MT, /LD (použití knihovny Run-Time)](../../build/reference/md-mt-ld-use-run-time-library.md) tématu.
 
-- Při použití **/Zi** s **/CLR**, existují ovlivnit výkon. Další informace najdete v tématu [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md).
+- Při použití **/zi** s **/CLR**, existují vliv na výkon. Další informace najdete v tématu [/zi](../../build/reference/z7-zi-zi-debug-information-format.md).
 
-- Předání široká znaková rozhraní .NET Framework výstup rutiny bez zadání také [/Zc:](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) nebo bez přetypování znak, který má `__wchar_t` způsobí, že výstup zobrazovat jako `unsigned short int`. Příklad:
+- Široký znak předá do rozhraní .NET Framework výstupu rutiny zároveň neurčí [/Zc: wchar_t](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) nebo bez přetypování znak, který má `__wchar_t` způsobí, že výstup jako `unsigned short int`. Příklad:
 
     ```cpp
     Console::WriteLine(L' ')              // Will output 32.
     Console::WriteLine((__wchar_t)L' ')   // Will output a space.
     ```
 
-- [/GS](../../build/reference/gs-buffer-security-check.md) se ignoruje při kompilaci s **/CLR**, pokud je funkce pod `#pragma` [nespravované](../../preprocessor/managed-unmanaged.md) nebo pokud funkce musí být zkompilovány v nativním režimu, v takovém případě bude generovat kompilátoru upozornění C4793, který je ve výchozím nastavení vypnutá.
+- [/GS](../../build/reference/gs-buffer-security-check.md) je ignorována při kompilaci s **/CLR**, pokud je funkce v rámci `#pragma` [nespravované](../../preprocessor/managed-unmanaged.md) nebo pokud funkce musí být zkompilována pro nativní, v takovém případě bude kompilátor generovat upozornění C4793, což je vypnuto ve výchozím nastavení.
 
-- V tématu [/Entry](../../build/reference/entry-entry-point-symbol.md) požadavky podpis funkce spravované aplikace.
+- Zobrazit [/Entry](../../build/reference/entry-entry-point-symbol.md) pro požadavky na podpis funkce spravované aplikace.
 
-- Aplikace, kompilovat s **/OpenMP** a **/CLR** lze spustit pouze v jednom objektu třídy appdomain procesu.  V tématu [/OpenMP (povolit podporu OpenMP 2.0)](../../build/reference/openmp-enable-openmp-2-0-support.md) Další informace.
+- Zkompilovaná aplikace **/OpenMP** a **/CLR** lze spustit pouze v procesu jedinou doménu appdomain.  Zobrazit [/OpenMP (povolit podporu OpenMP 2.0)](../../build/reference/openmp-enable-openmp-2-0-support.md) Další informace.
 
-- Jako nativní funkce se budou generovat funkcí, které přijímají proměnný počet argumentů (vararg). Všechny spravované datové typy argumentů s proměnnou pozici zařazeno pro nativní typy. Všimněte si, že <xref:System.String?displayProperty=fullName> typy jsou ve skutečnosti široká charakterová řetězce, ale jsou zařazené do znakovou řetězců. Proto pokud specifikátor printf %S (wchar_t *), ji budou zařazování na řetězec %s místo.
+- Jako nativní funkce se vygeneruje funkcí, které přijímají proměnný počet argumentů (vararg). Všechny spravované datové typy argumentů s proměnnou délkou pozici bude zařazeno do nativních typů. Všimněte si, že <xref:System.String?displayProperty=fullName> typy jsou ve skutečnosti širokoznaké řetězce, ale jsou zařazeny do jednobajtové znakové řetězce. Proto u printf specifikátor %S (wchar_t *) se ho budou zařazování na řetězec %s místo.
 
-- Pokud používáte va_arg – makro, můžete obdržet neočekávané výsledky, když kompilujete s **/CLR: pure**. Další informace najdete v tématu [va_arg –, va_copy –, va_end –, va_start –](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017. Kód, který musí být "čistý" nebo "bezpečnou" musí být přesně do jazyka C#.
+- Když pomocí va_arg – makro, může se zobrazit neočekávané výsledky při kompilaci s **/CLR: pure**. Další informace najdete v tématu [va_arg va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017. Kód, který musí být "čistě" nebo "bezpečné" by měl být přenést do C#.
 
-- Neměli volat ze spravovaného kódu, všechny funkce, které provede zásobníku se získat informace o parametrech (argumenty funkce); vrstva P/Invoke způsobí, že tyto informace dále dolů v zásobníku.  Například nejde kompilovat proxy/stub s **/CLR**.
+- Neměli volat ze spravovaného kódu, všechny funkce, které procházení zásobníku, chcete-li získat informace o parametrech (argumenty funkce); P/Invoke vrstvy způsobí, že tyto informace se níže do zásobníku.  Například, nejde zkompilovat proxy nebo zástupné procedury s **/CLR**.
 
-- Funkce se zkompiluje do spravovaného kódu, pokud je to možné, ale ne všechny konstrukce C++ by bylo možné převést do spravovaného kódu.  Toto rozhodnutí se provádí na základě pomocí funkcí. Pokud libovolná součást funkce nelze převést do spravovaného kódu, celý funkce bude převedena místo toho do nativního kódu. V následujících případech zabránit kompilátor generování spravovaného kódu.
+- Funkce bude zkompilována do spravovaného kódu, kdykoli je to možné, ale ne všechny konstruktory jazyka C++ lze přeložit do spravovaného kódu.  Určení se provádí na základě funkce funkce. Pokud žádnou část funkce se nedá převést na spravovaný kód, celou funkci se převedou do nativního kódu místo toho. Následujících případech zabránění kompilátoru generování spravovaného kódu.
 
-  - Generované kompilátorem převody nebo pomocných funkcí. Nativní převody jsou generovány žádné volání funkce prostřednictvím ukazatel na funkci, včetně virtuální funkce volání.
+  - Převodní rutiny generované kompilátorem nebo pomocné funkce. Nativní převodní rutiny jsou generovány pro každé volání funkce prostřednictvím ukazatele na funkci, včetně volání virtuální funkce.
 
   - Toto volání funkce `setjmp` nebo `longjmp`.
 
-  - Funkce, které přímo pracovat s prostředky počítače pomocí určitých vnitřní rutiny. Například použití `__enable` a `__disable`, `_ReturnAddress` a `_AddressOfReturnAddress`, nebo multimédií vnitřní funkce budou všechny výsledek v nativním kódu.
+  - Funkce, které používají určité vnitřní rutiny přímo manipulovat s prostředky počítače. Například použití `__enable` a `__disable`, `_ReturnAddress` a `_AddressOfReturnAddress`, nebo multimediální vnitřní objekty budou všechny výsledek v nativním kódu.
 
-  - Funkce následujících `#pragma unmanaged` – direktiva. (Všimněte si, že inverzní, `#pragma managed`, je také podporována.)
+  - Funkce, které následují `#pragma unmanaged` směrnice. (Všimněte si, že inverzní `#pragma managed`, je také podporována.)
 
-  - Funkci, která obsahuje odkazy na zarovnán typů, který je typy deklarováno s použitím `__declspec(align(...))`.
+  - Funkce, která obsahuje odkazy na zarovnané typy, to znamená, typy deklarované pomocí `__declspec(align(...))`.
 
 ## <a name="see-also"></a>Viz také:
 

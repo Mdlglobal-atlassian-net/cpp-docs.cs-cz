@@ -1,10 +1,6 @@
 ---
-title: _isatty – | Microsoft Docs
-ms.custom: ''
+title: _isatty
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isatty
 apilocation:
@@ -22,28 +18,22 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _isatty
-dev_langs:
-- C++
 helpviewer_keywords:
 - isatty function
 - character device checking
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d4be35fce0a790751683a4bf8a0cceaf938fea82
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ef0df5f859779c081df47ef4bfe938ec2601d524
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402456"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50545584"
 ---
 # <a name="isatty"></a>_isatty
 
-Určuje, zda je spojené s zařízením znak popisovače souborů.
+Určuje, zda je soubor popisovač spojen se znakovým zařízením.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,17 +44,17 @@ int _isatty( int fd );
 ### <a name="parameters"></a>Parametry
 
 *FD*<br/>
-Popisovače souborů, který odkazuje na zařízení, která má být testována.
+Popisovač souboru odkazující na testované zařízení.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_isatty –** vrátí nenulovou hodnotu, pokud je přidružen zařízení znak popisovač. V opačném **_isatty –** vrátí hodnotu 0.
+**_isatty –** vrací nenulovou hodnotu, pokud je popisovač spojen se znakovým zařízením. V opačném případě **_isatty –** vrátí hodnotu 0.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Isatty –** funkce určuje, zda *fd* souvisí s znak zařízení (terminálu, konzoly, tiskárny nebo sériového portu).
+**_Isatty –** funkce určuje, zda *fd* souvisí se znakovým zařízením (terminál, konzole, tiskárna nebo sériový port).
 
-Ověří, tato funkce *fd* parametr. Pokud *fd* ukazatel chybného souboru, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, funkce vrátí hodnotu 0 a nastaví je povoleno spuštění **errno** k **ebadf –**.
+Tato funkce ověřuje *fd* parametru. Pokud *fd* je nesprávný ukazatel souboru, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, funkce vrátí hodnotu 0 a nastaví **errno** k **EBADF**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -72,11 +62,11 @@ Ověří, tato funkce *fd* parametr. Pokud *fd* ukazatel chybného souboru, je v
 |-------------|---------------------|
 |**_isatty**|\<IO.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -104,6 +94,6 @@ int main( void )
 stdout has not been redirected to a file
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zpracování souborů](../../c-runtime-library/file-handling.md)<br/>

@@ -1,10 +1,6 @@
 ---
-title: _countof – makro | Microsoft Docs
-ms.custom: ''
+title: _countof – makro
 ms.date: 03/22/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,26 +16,20 @@ apitype: DLLExport
 f1_keywords:
 - _countof
 - countof
-dev_langs:
-- C++
 helpviewer_keywords:
 - countof macro
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f30df64b045e2af6181d343a4eafb962d22eaa05
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 60b4350d6cf14a545de67de0bdaee70ee2099006
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394740"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536133"
 ---
 # <a name="countof-macro"></a>_countof – makro
 
-Vypočítá počet prvků v poli se staticky přidělené.
+Vypočítá počet prvků v poli staticky přiřazované.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,19 +44,19 @@ Název pole.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Počet prvků v poli, vyjádřené jako **size_t –**.
+Počet prvků v poli, vyjádřené jako **size_t**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_countof –** je implementovaný jako makro preprocesoru jako funkce. Verze C++ má navíc šablony strojů detekuje v době kompilace, pokud je předán ukazatel místo staticky deklarované pole.
+**_countof** je implementovaný jako preprocesorové makro podobné funkce. Verze C++ obsahuje další šablony strojů k detekci v době kompilace, pokud je předán ukazatel místo staticky deklarovaným pole.
 
-Ujistěte se, že *pole* je ve skutečnosti pole, nikoli ukazatel. V jazyce C **_countof –** vytváří chybné výsledky, pokud *pole* ukazatel. V jazyce C++ **_countof –** nepodaří kompilovat *pole* ukazatel.  Pole, jako parametr předaný funkci *decays na ukazatel*, což znamená, že v rámci funkce, nemůžete použít **_countof –** zjistěte rozsah pole.
+Ujistěte se, že *pole* je ve skutečnosti pole, nikoli ukazatel. V jazyce C **_countof** vytváří chybné výsledky, pokud *pole* ukazatel. V jazyce C++ **_countof** nejde zkompilovat, pokud *pole* ukazatel.  Pole předána jako parametr funkce *decays na ukazatel*, což znamená, že v rámci této funkce nelze použít **_countof** k určení rozsahu objektu array.
 
 ## <a name="requirements"></a>Požadavky
 
 |– Makro|Požadovaný hlavičkový soubor|
 |-----------|---------------------|
-|**_countof –**|\<stdlib.h>|
+|**_countof**|\<stdlib.h>|
 
 ## <a name="example"></a>Příklad
 
@@ -95,6 +85,6 @@ sizeof(arr) = 40 bytes
 _countof(arr) = 20 elements
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [sizeof – operátor](../../cpp/sizeof-operator.md)<br/>

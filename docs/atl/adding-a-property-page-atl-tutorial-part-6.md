@@ -1,23 +1,14 @@
 ---
-title: Přidání stránky vlastností (ATL – tutoriál, část 6) | Dokumentace Microsoftu
+title: Přidání stránky vlastností (ATL – tutoriál, část 6)
 ms.custom: get-started-article
 ms.date: 09/27/2018
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 00390f5a5872c183fdea385158dfa5020362a06f
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: bd9386395b0655eab68a6c772c8d6216b7eeafe5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50055058"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519480"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Přidání stránky vlastností (ATL – tutoriál, část 6)
 

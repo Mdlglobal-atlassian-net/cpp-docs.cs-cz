@@ -1,10 +1,6 @@
 ---
-title: _fclose_nolock – | Microsoft Docs
-ms.custom: ''
+title: _fclose_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fclose_nolock
 apilocation:
@@ -23,27 +19,21 @@ apitype: DLLExport
 f1_keywords:
 - fclose_nolock
 - _fclose_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, closing
 - fclose_nolock function
 - _fclose_nolock function
 ms.assetid: b4af4392-5fc8-49bb-9fe2-ca7293d3ce04
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7474d195f2a04525ed2bc4cf671950308a70c7b5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 440582bb42a1795721eab17b24be3e0bc3daf80f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398955"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620958"
 ---
 # <a name="fclosenolock"></a>_fclose_nolock
 
-Zavře datového proudu bez blokování vláken.
+Zavře datového proudu bez zamčení vlákna.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,16 +45,16 @@ int _fclose_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*Datový proud*<br/>
-Ukazatel **souboru** struktura.
+*Stream*<br/>
+Ukazatel **souboru** struktury.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**fclose –** vrátí hodnotu 0, pokud datový proud je uzavřen úspěšně. Vrátí **EOF** indikující chybu.
+**fclose –** vrátí hodnotu 0, pokud datový proud je uzavřen úspěšně. Vrátí **EOF** udávající chybu.
 
 ## <a name="remarks"></a>Poznámky
 
-Tato funkce je verze bez uzamčení **fclose –**. Je identický s tím rozdílem, že není chráněn před narušení další vlákna. Může být rychlejší, protože není nesnižuje režii uzamykání jiná vlákna. Tuto funkci můžete používejte pouze v kontextu vláken jako je například aplikace nebo kde oboru volání již zpracovává izolace přístup z více vláken.
+Tato funkce je nezamykací verze **fclose –**. Je identická s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Může být rychlejší, protože narůstání režii uzamykáním ostatních vláken. Tuto funkci lze používejte pouze v kontextech bezpečných na vlákna, jako je například aplikace s jedním vláknem nebo pokud volající obor již zpracovává izolaci vláken.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -72,11 +62,11 @@ Tato funkce je verze bez uzamčení **fclose –**. Je identický s tím rozdíl
 |--------------|---------------------|
 |**_fclose_nolock**|\<stdio.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [_close](close.md)<br/>
 [_fdopen, _wfdopen](fdopen-wfdopen.md)<br/>
 [fflush](fflush.md)<br/>

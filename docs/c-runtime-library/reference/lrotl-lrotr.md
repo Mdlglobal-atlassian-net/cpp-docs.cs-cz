@@ -1,10 +1,6 @@
 ---
-title: _lrotl –, _lrotr – | Microsoft Docs
-ms.custom: ''
+title: _lrotl, _lrotr
 ms.date: 04/04/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lrotl
 - _lrotr
@@ -26,8 +22,6 @@ f1_keywords:
 - lrotl
 - _lrotr
 - _lrotl
-dev_langs:
-- C++
 helpviewer_keywords:
 - lrotl function
 - bits
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - _lrotl function
 - bits, rotating
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0182256b06a3f04acbb941d02624e2b512b22a97
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 71ca61676e4551155f9f14e792c5c1cee65ddb7e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400626"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518414"
 ---
 # <a name="lrotl-lrotr"></a>_lrotl, _lrotr
 
@@ -62,18 +52,18 @@ unsigned long _lrotr( unsigned long value, int shift );
 ### <a name="parameters"></a>Parametry
 
 *value*<br/>
-Hodnota k otočen.
+Hodnota, která otočen.
 
-*Posunutí*<br/>
-Počet bitů se posunou *hodnotu*.
+*SHIFT*<br/>
+Počet bitů, chcete-li posunout *hodnota*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Obě funkce vrátí otočený hodnotu. Neexistuje žádný návratový chyby.
+Obě funkce vrátí hodnotu otočený. Není vrácena žádná chyba.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Lrotl –** a **_lrotr –** funkce otočit *hodnotu* podle *shift* bits. **_lrotl –** otočí hodnota zbývajících směrem k více významných bitů. **_lrotr –** otočí právo hodnota směrem k méně významných bitů. Obě funkce zabalení bits otáčet vypnout jeden atribut end objektu *hodnotu* na druhém konci.
+**_Lrotl –** a **_lrotr –** otočit funkce *hodnotu* podle *shift* bits. **_lrotl –** otočí hodnoty left směrem k více významných bitů. **_lrotr –** bude otáčet doprava hodnotu směrem k méně významných bitů. Obě funkce zabalení bits otočen vypnout jeden konec *hodnota* na druhém konci.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -81,7 +71,7 @@ Obě funkce vrátí otočený hodnotu. Neexistuje žádný návratový chyby.
 |-------------|---------------------|
 |**_lrotl –**, **_lrotr –**|\<stdlib.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -107,7 +97,7 @@ int main( void )
 0xfac35791 rotated right four bits is 0x1fac3579
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [_rotl, _rotl64, _rotr, _rotr64](rotl-rotl64-rotr-rotr64.md)<br/>

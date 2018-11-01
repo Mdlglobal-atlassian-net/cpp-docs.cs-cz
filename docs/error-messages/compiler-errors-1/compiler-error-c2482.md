@@ -1,39 +1,29 @@
 ---
-title: C2482 Chyba kompilátoru | Microsoft Docs
-ms.custom: ''
+title: Chyba kompilátoru C2482
 ms.date: 09/15/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2482
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2482
 ms.assetid: 98c87da2-625c-4cc2-9bf7-78d15921e779
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c3dd23069f389d0a02e10d26edb7ee4fd3c373cb
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 481920fa2d8c32bc872e7b8805188cc674e6fe28
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34256003"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564811"
 ---
-# <a name="compiler-error-c2482"></a>C2482 chyby kompilátoru
+# <a name="compiler-error-c2482"></a>Chyba kompilátoru C2482
 
->'*identifikátor*': dynamické inicializaci není povoleno v kódu spravované nebo WinRT dat 'přístup z více vláken.
+>"*identifikátor*': dynamická inicializace není povolena v kódu spravované/WinRT data"vlákno"
 
 ## <a name="remarks"></a>Poznámky
 
-Ve spravované nebo WinRT code, proměnných deklarovaných pomocí [__declspec(thread)](../../cpp/thread.md) atribut Modifikátor třídy úložiště nebo [thread_local](../../cpp/storage-classes-cpp.md#thread_local) specifikátor třídy úložiště nemůže být inicializovaný s výrazem který vyžaduje testování za běhu. Statický výraz se vyžaduje k chybě při inicializaci `__declspec(thread)` nebo `thread_local` data v těchto prostředích modulu runtime.
+Ve spravované nebo WinRT code, proměnné deklarované s použitím [__declspec(thread)](../../cpp/thread.md) atribut Modifikátor třídy úložiště nebo [thread_local](../../cpp/storage-classes-cpp.md#thread_local) specifikátor třídy úložiště se nedá inicializovat pomocí výrazu který vyžaduje vyhodnocení za běhu. Statický výraz je potřeba inicializovat `__declspec(thread)` nebo `thread_local` data v těchto prostředích modulu runtime.
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C2482 spravovat (**/CLR**) a v WinRT (**/ZW**) kódu:
+Následující ukázka generuje C2482 v managed (**/CLR**) a WinRT (**/ZW**) kódu:
 
 ```cpp
 // C2482.cpp
@@ -46,4 +36,4 @@ int j = j;   // OK in C++; C error
 Thread int tls_i2 = sizeof( tls_i2 );   // Okay in C and C++
 ```
 
-Chcete-li tento problém vyřešit, inicializace úložiště thread-local pomocí konstantu, **constexpr**, nebo statické výraz. Proveďte všechny inicializace specifické pro vlákno samostatně.
+Chcete-li tento problém vyřešit, inicializace úložiště thread-local se pomocí konstantu, **constexpr**, nebo statický výraz. Samostatně můžete udělat všechny inicializace specifické pro vlákno.

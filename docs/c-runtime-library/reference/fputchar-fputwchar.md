@@ -1,10 +1,6 @@
 ---
-title: _fputchar –, _fputwchar – | Microsoft Docs
-ms.custom: ''
+title: _fputchar, _fputwchar
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fputchar
 - _fputwchar
@@ -28,8 +24,6 @@ f1_keywords:
 - _fputtchar
 - fputchar
 - _fputchar
-dev_langs:
-- C++
 helpviewer_keywords:
 - fputchar function
 - standard output, writing to
@@ -39,20 +33,16 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3fd5a1d60c61fdde5864f3447b5f721f409bc3a4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 57ec2350fa1d0b681c6eed0c4cfc4ec4660977e8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399589"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477971"
 ---
 # <a name="fputchar-fputwchar"></a>_fputchar, _fputwchar
 
-Zapíše znak pro **stdout**.
+Zapíše znak do **stdout**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -68,17 +58,17 @@ wint_t _fputwchar(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak, který má být zapsána.
+Znak k zapsání.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí znak zapsána. Pro **_fputchar –**, návratová hodnota **EOF** označuje chybu. Pro **_fputwchar –**, návratová hodnota **weof –** označuje chybu. Pokud je c **NULL**, tyto funkce vygeneruje výjimka neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, že budou vracet **EOF** (nebo **weof –**) a nastavte **errno** k **einval –**.
+Každá z těchto funkcí vrací napsaný znak. Pro **_fputchar**, vrácená hodnota **EOF** označuje chybu. Pro **_fputwchar –**, vrácená hodnota **WEOF** označuje chybu. Pokud je c **NULL**, tyto funkce generují výjimku neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí **EOF** (nebo **WEOF**) a nastavte **errno** k **EINVAL**.
 
-Další informace o těchto a dalších kódy chyb najdete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Obě tyto funkce zapíše jednoho znaku *c* k **stdout** a přejde na indikátor podle potřeby. **_fputchar –** je ekvivalentní `fputc( stdout )`. Je také ekvivalentní **putchar –**, ale implementována pouze jako funkci, nikoli jako funkce a makra. Na rozdíl od **fputc –** a **putchar –**, tyto funkce nejsou kompatibilní se standardem ANSI.
+Obě tyto funkce zapíše jeden znak *c* k **stdout** a posune indikátor podle potřeby. **_fputchar** je ekvivalentní `fputc( stdout )`. Je také ekvivalentní **putchar**, ale implementována pouze jako funkce, nikoli jako funkce a makro. Na rozdíl od **fputc** a **putchar**, tyto funkce nejsou kompatibilní se standardem ANSI.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -93,7 +83,7 @@ Obě tyto funkce zapíše jednoho znaku *c* k **stdout** a přejde na indikátor
 |**_fputchar**|\<stdio.h>|
 |**_fputwchar**|\<stdio.h > nebo \<wchar.h >|
 
-Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou –**stdin –**, **stdout**, a **stderr**– musí být přesměrována C běhové funkce mohli používat v aplikacích pro UPW . Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Konzole není podporována v aplikacích pro univerzální platformu Windows (UPW). Standardní datový proud popisovačů, které jsou spojeny s konzolou –**stdin**, **stdout**, a **stderr**– musí být přesměrován před funkcí jazyka C za běhu můžete použít v aplikacích pro UWP . Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -120,8 +110,8 @@ int main( void )
 This is a test of _fputchar!!
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>
 [putc, putwc](putc-putwc.md)<br/>

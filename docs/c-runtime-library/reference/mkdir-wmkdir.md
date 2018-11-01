@@ -1,10 +1,6 @@
 ---
-title: _mkdir –, _wmkdir – | Microsoft Docs
-ms.custom: ''
+title: _mkdir, _wmkdir
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wmkdir
 - _mkdir
@@ -27,8 +23,6 @@ f1_keywords:
 - _tmkdir
 - wmkdir
 - _wmkdir
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wmkdir function
 - folders [C++], creating
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 40641911af9c61285049a5943cdc8f5c21cba99b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d89e1f0930cf9131156a4691069f1f17c15c124
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402137"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496614"
 ---
 # <a name="mkdir-wmkdir"></a>_mkdir, _wmkdir
 
@@ -68,24 +58,24 @@ int _wmkdir(
 
 ### <a name="parameters"></a>Parametry
 
-*adresář*<br/>
+*DirName*<br/>
 Cesta pro nový adresář.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí hodnotu 0, pokud byl vytvořen nový adresář. Na chybu, funkce vrátí hodnotu -1 a nastaví **errno** následujícím způsobem.
+Každá z těchto funkcí vrací hodnotu 0, pokud byl vytvořen nový adresář. V chybě, vrátí funkce hodnotu -1 a nastaví **errno** následujícím způsobem.
 
-**Eexist –** adresáře nebyl vytvořen, protože *adresář* je název existující soubor, adresáře nebo zařízení.
+**EEXIST** adresáře se nevytvořil, protože *dirname* je název existujícího souboru, adresáře nebo zařízení.
 
-**Enoent –** cesta nebyla nalezena.
+**ENOENT** cesta nebyla nalezena.
 
-Další informace o těchto a dalších návratové kódy najdete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o těchto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Mkdir –** funkce vytvoří nový adresář se zadaným *adresář.* **_mkdir –** lze vytvořit pouze jeden nový adresář na volání, takže jenom poslední součástí *adresář* můžete název nového adresáře. **_mkdir –** nepřekládá cesta oddělovače. V systému Windows NT, oba zpětné lomítko ( \\) a lomítkem (/) jsou platná cesta oddělovače v znakových řetězců v běhové rutiny.
+**_Mkdir –** funkce vytvoří nový adresář se zadaným *dirname.* **_mkdir –** lze vytvořit pouze jeden nový adresář za volání, takže pouze poslední součástí *dirname* můžete název nového adresáře. **_mkdir –** nepřekládá oddělovače cesty. V systému Windows NT, zpětné lomítko ( \\) a lomítkem (/) jsou platná cesta oddělovače ve znakové řetězce v běhové rutiny.
 
-**_wmkdir –** je verze široká charakterová **_mkdir –**; *adresář* argument **_wmkdir –** je široká charakterová řetězec. **_wmkdir –** a **_mkdir –** chovat jinak shodně.
+**_wmkdir –** je verze širokého znaku **_mkdir –**; *dirname* argument **_wmkdir –** je širokoznaký řetězec. **_wmkdir –** a **_mkdir –** se jinak chovají stejně.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -100,11 +90,11 @@ Další informace o těchto a dalších návratové kódy najdete v tématu [_do
 |**_mkdir**|\<Direct.h >|
 |**_wmkdir**|\<Direct.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -147,7 +137,7 @@ Directory of C:\testtmp
 Directory '\testtmp' was successfully removed
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ovládací prvek adresáře](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>

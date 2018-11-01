@@ -1,10 +1,6 @@
 ---
-title: strcpy_s – wcscpy_s –, _mbscpy_s – | Microsoft Docs
-ms.custom: ''
+title: strcpy_s, wcscpy_s, _mbscpy_s
 ms.date: 03/22/2086
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcscpy_s
 - _mbscpy_s
@@ -28,8 +24,6 @@ f1_keywords:
 - _mbscpy_s
 - _tcscpy_s
 - wcscpy_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - strcpy_s function
 - _tcscpy_s function
@@ -39,23 +33,19 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ee648776d4c8b7df1089edf34d30b5c7e59a63c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d7deeb2d3286ca20518527df26c4765197f8a087
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416609"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616603"
 ---
 # <a name="strcpys-wcscpys-mbscpys"></a>strcpy_s, wcscpy_s, _mbscpy_s
 
-Zkopíruje řetězec. Tyto verze nástroje [strcpy – wcscpy –, _mbscpy –](strcpy-wcscpy-mbscpy.md) mít vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Zkopíruje řetězec. Tyto verze [strcpy – wcscpy –, _mbscpy –](strcpy-wcscpy-mbscpy.md) mají rozšíření zabezpečení popsaná v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbscpy_s –** nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscpy_s –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -98,44 +88,44 @@ errno_t _mbscpy_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Cíle*<br/>
-Umístění cílové vyrovnávací paměti řetězců.
+*cíl*<br/>
+Umístění cílové vyrovnávací paměti řetězce.
 
 *dest_size*<br/>
-Velikost cílové vyrovnávací paměti řetězců v **char** jednotky úzké a vícebajtové funkce, a **wchar_t** jednotky pro celou funkce. Tato hodnota musí být větší než 0 a menší nebo rovnou **RSIZE_MAX**.
+Velikost vyrovnávací paměti pro řetězec cílového v **char** jednotky pro funkce úzké a vícebajtové a **wchar_t** jednotky pro široké funkce. Tato hodnota musí být větší než nula, která není větší než **RSIZE_MAX**.
 
 *src*<br/>
-Vyrovnávací paměť řetězce ukončené hodnotou Null zdroje.
+Vyrovnávací paměti pro řetězec zakončený hodnotou Null zdroje.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěšného; jinak k chybě.
+Nula v případě úspěchu; v opačném případě chybu.
 
-### <a name="error-conditions"></a>Chybové stavy
+### <a name="error-conditions"></a>Chybové podmínky
 
-|*Cíle*|*dest_size*|*src*|Návratová hodnota|Obsah *cíle*|
+|*cíl*|*dest_size*|*src*|Návratová hodnota|Obsah *dest*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**HODNOTU NULL**|všechny|všechny|**EINVAL –**|nedojde ke změně|
-|všechny|všechny|**HODNOTU NULL**|**EINVAL –**|*cíle*[0] nastaven na 0|
-|všechny|0, nebo příliš malá|všechny|**ERANGE –**|*cíle*[0] nastaven na 0|
+|**HODNOTU NULL**|Všechny|Všechny|**EINVAL**|Nezměněno|
+|Všechny|Všechny|**HODNOTU NULL**|**EINVAL**|*DEST*[0] nastavit na hodnotu 0|
+|Všechny|0 nebo příliš malá|Všechny|**ERANGE**|*DEST*[0] nastavit na hodnotu 0|
 
 ## <a name="remarks"></a>Poznámky
 
-**Strcpy_s –** funkce zkopíruje obsah v adresu *src*, včetně ukončující znak hodnoty null do umístění, která je zadána *cíle*. Cílový řetězec musí být dostatečně velký pro uložení zdrojový řetězec a jeho ukončovací znak hodnoty null. Chování **strcpy_s –** není definován, pokud se překrývají zdrojové a cílové řetězce.
+**Strcpy_s** funkce kopíruje obsah do pole adresy ve *src*, včetně ukončujícího nulového znaku do umístění, která je zadána *dest*. Cílový řetězec musí být dostatečně velký pro zdrojový řetězec a jeho ukončující znak null. Chování **strcpy_s** není definováno, pokud se zdrojový a cílový řetězec překrývají.
 
-**wcscpy_s –** je verze široká charakterová **strcpy_s –**, a **_mbscpy_s –** je verze vícebajtových znaků. Argumenty **wcscpy_s –** jsou široká charakterová řetězce; u **_mbscpy_s –** jsou řetězců vícebajtových znaků. Tyto tři funkce chovají stejně jako jinak.
+**wcscpy_s –** je verze širokého znaku **strcpy_s**, a **_mbscpy_s –** je vícebajtová znaková verze. Argumenty **wcscpy_s –** jsou širokoznaké řetězce **_mbscpy_s –** jsou vícebajtové znakové řetězce. Tyto tři funkce chovají identicky jinak.
 
-Pokud *cíle* nebo *src* je ukazatel s hodnotou null, nebo pokud cíl řetězec velikost *dest_size* je příliš malá, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, tyto funkce vracejí **einval –** a nastavte **errno** k **einval –** při *cíle* nebo  *src* je ukazatel s hodnotou null, a že budou vracet **erange –** a nastavte **errno** k **erange –** při cílový řetězec je příliš malá.
+Pokud *dest* nebo *src* je ukazatel s hodnotou null, nebo pokud řetězec cíle velikost *dest_size* je příliš malá, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **EINVAL** a nastavte **errno** k **EINVAL** při *dest* nebo  *src* je ukazatel s hodnotou null, a vrátí **ERANGE** a nastavte **errno** k **ERANGE** Pokud cílový řetězec je příliš malá.
 
-Po úspěšné provedení cílový řetězec je vždy ukončené hodnotou null.
+Po úspěšném spuštění cílového řetězce je vždy zakončený hodnotou null.
 
-V jazyce C++ těchto funkcí se zjednodušilo díky šabloně přetížení, které lze odvodit délka vyrovnávací paměti automaticky tak, že nemusíte určit velikost argument a starší, méně bezpečné funkce můžou automaticky nahradit s jejich novější bezpečnější svými protějšky. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon, které dokážou odvodit velikost vyrovnávací paměti automaticky tak, že není nutné zadat argument velikosti, a dokážou automaticky nahradit starší, méně zabezpečené funkce s jejich novější, lépe zabezpečit protějšky. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
-Verze knihovny ladění tyto funkce nejprve vyplnit vyrovnávací paměť s Bugcheck 0xFE. Chcete-li toto chování zakázat, použijte [_crtsetdebugfillthreshold –](crtsetdebugfillthreshold.md).
+Ladicí verze knihovny z těchto funkcí nejprve naplní vyrovnávací paměť hodnotou 0xFE. Chcete-li toto chování zakázat, použijte [_crtsetdebugfillthreshold –](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscpy_s –**|**strcpy_s**|**_mbscpy_s**|**wcscpy_s**|
 
@@ -147,11 +137,11 @@ Verze knihovny ladění tyto funkce nejprve vyplnit vyrovnávací paměť s Bugc
 |**wcscpy_s**|\<String.h > nebo \<wchar.h >|
 |**_mbscpy_s**|\<Mbstring.h >|
 
-Tyto funkce jsou specifické pro společnost Microsoft. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Tyto funkce jsou specifické pro společnost Microsoft. Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Na rozdíl od kód produkční kvality Tato ukázka volá funkce zabezpečený řetězec bez kontroly chyb:
+Na rozdíl od kódu produkční kvality Tato ukázka volání funkce zabezpečený řetězec bez kontroly chyb:
 
 ```C
 // crt_strcpy_s.c
@@ -181,7 +171,7 @@ int main(void)
 String = Hello world from strcpy_s and strcat_s!
 ```
 
-Při vytváření kódu C++, může být snazší použít šablony verze.
+Při sestavování kódu jazyka C++, může být jednodušší použít verze šablony.
 
 ```cpp
 // crt_wcscpy_s.cpp
@@ -212,7 +202,7 @@ int main(void)
 String = Hello world from wcscpy_s and wcscat_s!
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md) <br/>

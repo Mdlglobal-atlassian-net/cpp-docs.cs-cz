@@ -1,10 +1,6 @@
 ---
-title: fgetc –, fgetwc – | Microsoft Docs
-ms.custom: ''
+title: fgetc, fgetwc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fgetwc
 - fgetc
@@ -25,8 +21,6 @@ f1_keywords:
 - _fgettc
 - fgetwc
 - fgetc
-dev_langs:
-- C++
 helpviewer_keywords:
 - fgettc function
 - characters, reading
@@ -36,20 +30,16 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f06c5c2f092932d97755a8f0cff63cde3a9682c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a853a46fc43106c9ea57be84b37fb46a18041ba8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401282"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639917"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc, fgetwc
 
-Znak číst z datového proudu.
+Čtení znaku z datového proudu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,28 +54,28 @@ wint_t fgetwc(
 
 ### <a name="parameters"></a>Parametry
 
-*Datový proud*<br/>
-Ukazatel na **souboru** struktura.
+*Stream*<br/>
+Ukazatel na **souboru** struktury.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**fgetc –** vrátí znak přečíst jako **int** nebo vrátí **EOF** udávajících chyba nebo konec souboru. **fgetwc –** vrátí, jako [wint_t –](../../c-runtime-library/standard-types.md), široké znak, který odpovídá znak čtení nebo vrátí **weof –** udávajících chyba nebo konec souboru. Pro obě funkce použijte **feof –** nebo **ferror –** rozlišit mezi chybu a podmínku end souboru. Pokud dojde k chybě čtení, je nastavit označení chyb pro datový proud. Pokud *datového proudu* je **NULL**, **fgetc –** a **fgetwc –** vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [parametr Ověření](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastavte tyto funkce **errno** k **einval –** a vrátit **EOF**.
+**fgetc –** vrátí znak čtený jako **int** nebo vrátí **EOF** k označení chyby nebo konce souboru. **fgetwc –** vrátí, jako [wint_t](../../c-runtime-library/standard-types.md), široký znak, který odpovídá znaku číst nebo vrátí **WEOF** k označení chyby nebo konce souboru. Pro obě funkce použijte **feof** nebo **ferror** k rozlišení mezi chybou a podmínkou end souboru. Pokud dojde k chybě čtení, je nastaven indikátor chyby pro datový proud. Pokud *stream* je **NULL**, **fgetc –** a **fgetwc –** vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [parametr Ověření](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tyto funkce nastaví **errno** k **EINVAL** a vrátit **EOF**.
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí čte jeden znak z aktuální pozici soubor přidružený k *datového proudu*. Funkce pak zvýší přidružený soubor ukazatele (je-li definována) tak, aby odkazoval na další znak. Pokud datový proud je na konci souboru, je nastavit koncové souboru indikátor pro datový proud.
+Každá z těchto funkcí načte jeden znak z aktuální pozice soubor přidružený k *stream*. Funkce potom zvýší přidružený ukazatel na soubor (je-li definován) tak, aby odkazoval na další znak. Pokud je datový proud na konci souboru, je nastaven indikátor konce souboru pro datový proud.
 
-**fgetc –** je ekvivalentní **getc**, ale je implementována pouze jako funkci, nikoli jako funkce a makra.
+**fgetc –** je ekvivalentní **getc**, ale je implementována pouze jako funkce, nikoli jako funkce a makro.
 
-**fgetwc –** je verze široká charakterová **fgetc –**; přečte **c** jako vícebajtových znaků nebo široká znaková podle jestli *datového proudu* je otevřen v režim textové nebo binárního režimu.
+**fgetwc –** je verze širokého znaku **fgetc –**; načte **c** jako vícebajtový znak nebo široký znak podle toho, zda *stream* je otevřen v textovém nebo binárním režimu.
 
-Verzi pomocí **jazyka _nolock** příponu jsou shodné s tím rozdílem, že nejsou chráněny z narušení jiná vlákna.
+Verze s **_nolock** přípona jsou stejné s tím rozdílem, že nejsou chráněny před rušením jinými vlákny.
 
-Další informace o zpracování široké znaky a více-bajtové znaky v textovém a binárním režimu najdete v tématu [vstupně-výstupní datový proud Unicode v textovém a binárním režimu](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
+Další informace o zpracování širokých znaků a vícebajtových znaků v textovém a binárním režimu najdete v tématu [vstupně-výstupní Stream kódování Unicode v textovém a binárním režimu](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_fgettc –**|**fgetc –**|**fgetc –**|**fgetwc –**|
 
@@ -96,7 +86,7 @@ Další informace o zpracování široké znaky a více-bajtové znaky v textov�
 |**fgetc –**|\<stdio.h>|
 |**fgetwc –**|\<stdio.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -149,8 +139,8 @@ Line one.
 Line two.
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc, fputwc](fputc-fputwc.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>

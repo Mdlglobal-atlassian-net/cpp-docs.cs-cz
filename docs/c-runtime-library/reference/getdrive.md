@@ -1,10 +1,6 @@
 ---
-title: _getdrive – | Microsoft Docs
-ms.custom: ''
+title: _getdrive
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getdrive
 apilocation:
@@ -23,31 +19,25 @@ apitype: DLLExport
 f1_keywords:
 - _getdrive
 - getdrive
-dev_langs:
-- C++
 helpviewer_keywords:
 - current disk drive
 - getdrive function
 - disk drives
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e99b95da8bec73475dcd1cbd71f6f5165a45d004
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d71f72c00cc384d5f4f69d8a58dbcfb7aa39332f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399849"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50470678"
 ---
 # <a name="getdrive"></a>_getdrive
 
-Získá aktuální disková jednotka.
+Získá aktuální jednotku.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,7 +47,7 @@ int _getdrive( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí aktuální jednotce (výchozí) (1 = A, 2 = B a tak dále). Neexistuje žádný návratový chyby.
+Vrátí aktuální jednotku (výchozí) (1 = A, 2 = B a tak dále). Není vrácena žádná chyba.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -65,7 +55,7 @@ Vrátí aktuální jednotce (výchozí) (1 = A, 2 = B a tak dále). Neexistuje �
 |-------------|---------------------|
 |**_getdrive**|\<Direct.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -117,7 +107,7 @@ F: (Current directory is F:\)
 G: (Current directory is G:\)
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ovládací prvek adresáře](../../c-runtime-library/directory-control.md)<br/>
 [_chdrive](chdrive.md)<br/>

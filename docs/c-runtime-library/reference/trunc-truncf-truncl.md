@@ -1,11 +1,6 @@
 ---
-title: TRUNC, truncf –, truncl | Microsoft Docs
-ms.custom: ''
+title: trunc, truncf, truncl
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - trunc
 - truncf
@@ -30,27 +25,21 @@ f1_keywords:
 - math/trunc
 - math/truncf
 - math/truncl
-dev_langs:
-- C++
 helpviewer_keywords:
 - trunc function
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 67c179065a6b2c6fc10a4ba6ba87868c8306a2aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6e023b9d894ea1b40a0e056e73b7c32f1e3cbed7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409456"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519857"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc, truncf, truncl
 
-Určuje, na nejbližší celé číslo, která je menší než nebo rovna zadané hodnotě s plovoucí desetinnou čárkou.
+Určuje, na nejbližší celé číslo menší než zadaná hodnota s plovoucí desetinnou čárkou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -68,39 +57,39 @@ float trunc( float x ); //C++ only
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Hodnota zkrátit.
+Hodnota došlo ke zkrácení.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud bylo úspěšné, vrátí metoda hodnotu *x*, zaokrouhleno směrem k nule.
+Pokud je úspěšná, vrátí celočíselnou hodnotu *x*, zaokrouhleno směrem k nule.
 
-Jinak může vrátit jednu z těchto možností:
+V opačném případě může vrátit jednu z následujících akcí:
 
 |Problém|Vrátí|
 |-----------|------------|
 |*x* = ±INFINITY|x|
 |*x* = ±0|x|
-|*x* = NaN.|NaN|
+|*x* = NaN|NaN|
 
-Vznikly chyby uvedené v [_matherr –](matherr.md).
+Jsou hlášeny chyby uvedené v [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **trunc** , přijmout a vrátit **float** a **dlouho** **dvojité** typy. V programu C **trunc** vždy provede a vrátí **dvojité**.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **trunc** , která používají a vrací **float** a **dlouhé** **double** typy. V programu jazyka C **trunc** vždy převezme a vrátí **double**.
 
-Protože největší hodnoty s plovoucí desetinnou čárkou jsou přesný celá čísla, tato funkce nebude přetečení svoje vlastní. Může ale způsobit funkce přetečení vrácením hodnotu do celočíselného typu.
+Protože největší hodnoty s plovoucí desetinnou čárkou jsou přesné celých čísel, tato funkce nebude přetečení sama o sobě. Může ale způsobit funkce přetečení vrácením hodnoty do typu integer.
 
-Vám může také zaokrouhlí dolů podle implicitní převod z s plovoucí desetinnou čárkou do integrální; to proto je však omezená na hodnoty, které mohou být uloženy ve cílový typ.
+Je možné také zaokrouhlit dolů Implicitním převodem z s plovoucí desetinnou čárkou na integrální; To uděláte tak je ale omezený na hodnoty, které mohou být uloženy v cílovém typu.
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Hlavička C|Hlavička C++|
+|Funkce|Záhlaví C|Hlaviček jazyka C++|
 |--------------|--------------|------------------|
-|**TRUNC**, **truncf –**, **truncl**|\<Math.h >|\<cmath – >|
+|**TRUNC –**, **truncf –**, **truncl**|\<Math.h >|\<cmath >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>

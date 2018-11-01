@@ -1,28 +1,18 @@
 ---
-title: Chyby CVTRES CVT1100 až CVT4001 | Microsoft Docs
-ms.custom: ''
+title: Chyby CVTRES CVT1100 až CVT4001
 ms.date: 11/17/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - cvtres
-dev_langs:
-- C++
 ms.assetid: ac94d0fb-0da3-4327-b3d9-ceaeb3fc2e4d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 79f010e39486adac8ac649f33a433d6a502791a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a76d19989ced06cf97d514b23b66d9664d32c917
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293725"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628550"
 ---
 # <a name="cvtres-errors-cvt1100-through-cvt4001"></a>Chyby CVTRES CVT1100 až CVT4001
 
-Tato část se odkaz na chyby a upozornění vygenerovaných CVTRES sestavení nástroj.
+Tato část se odkaz na chyby a upozornění vygenerovaná CVTRES nástroj sestavení.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]

@@ -1,10 +1,6 @@
 ---
-title: strspn –, wcsspn –, _mbsspn –, _mbsspn_l – | Microsoft Docs
-ms.custom: ''
+title: strspn, wcsspn, _mbsspn, _mbsspn_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsspn_l
 - wcsspn
@@ -30,8 +26,6 @@ f1_keywords:
 - _mbsspn
 - _tcsspn
 - strspn
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcsspn function
 - strings [C++], searching
@@ -46,23 +40,19 @@ helpviewer_keywords:
 - mbsspn_l function
 - _tcsspn function
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8b7d826b72a006e0a8b011d89dfc96aa8aea4690
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69463e23d0cddf4441716aacb11928f589ab2078
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415158"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477310"
 ---
 # <a name="strspn-wcsspn-mbsspn-mbsspnl"></a>strspn, wcsspn, _mbsspn, _mbsspn_l
 
-Vrátí index prvního znaku v řetězci, který nepatří do sadu znaků.
+Vrátí index prvního znaku v řetězci, který nepatří do sady znaků.
 
 > [!IMPORTANT]
-> **_mbsspn –** a **_mbsspn_l –** nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsspn –** a **_mbsspn_l –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -88,30 +78,30 @@ size_t _mbsspn_l(
 
 ### <a name="parameters"></a>Parametry
 
-*str –*<br/>
-Řetězce ukončené hodnotou Null pro vyhledávání.
+*str*<br/>
+Řetězec zakončený hodnotou Null pro hledání.
 
 *strCharSet*<br/>
-Ukončené hodnotou Null znakovou sadu.
+Sada znaků zakončených znakem null.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrací celočíselnou hodnotu určující délku podřetězce v *str* který se skládá pouze z v *strCharSet*. Pokud *str* začíná znakem není ve *strCharSet*, funkce vrátí hodnotu 0.
+Vrací celočíselnou hodnotu určující délku podřetězce v *str* , který se skládá zcela ze znaků v *strCharSet*. Pokud *str* začíná znakem, ne v *strCharSet*, funkce vrátí 0.
 
 ## <a name="remarks"></a>Poznámky
 
-**Strspn –** funkce vrátí index prvního znaku v *str* , nepatří do sady znaků v *strCharSet*. Hledání nezahrnuje ukončení znaky null.
+**Strspn –** funkce vrátí index prvního znaku v *str* , který nepatří do sady znaků v *strCharSet*. Hledání nezahrnuje ukončovací znaky null.
 
-**wcsspn –** a **_mbsspn –** jsou široká charakterová a vícebajtových znaků verze **strspn –**. Argumenty **wcsspn –** jsou široká charakterová řetězce; u **_mbsspn –** jsou řetězců vícebajtových znaků. **_mbsspn –** ověří jeho parametry. Pokud *str* nebo *strCharSet* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud chcete pokračovat, je povoleno spuštění **_mbspn** nastaví **errno** k **einval –** a vrátí hodnotu 0. **strspn –** a **wcsspn –** neověřují jejich parametrů. Tyto tři funkce chovají stejně jako jinak.
+**wcsspn –** a **_mbsspn –** jsou širokoznaké a vícebajtové verze **strspn –**. Argumenty **wcsspn –** jsou širokoznaké řetězce **_mbsspn –** jsou vícebajtové znakové řetězce. **_mbsspn –** ověří jeho parametry. Pokud *str* nebo *strCharSet* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Pokud smí provádění pokračovat, **_mbspn** nastaví **errno** k **EINVAL** a vrátí hodnotu 0. **strspn –** a **wcsspn –** neověří jejich parametry. Tyto tři funkce chovají identicky jinak.
 
-Výstupní hodnota je ovlivňován nastavením **LC_CTYPE –** kategorie nastavení národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze tyto funkce bez **_l** příponu využívání aktuální národní prostředí pro toto chování závislých na národním prostředí, verze s **_l** příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí Místo toho předaná. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze těchto funkcí bez **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí místo něho předán v. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsspn –**|**strspn**|**_mbsspn**|**wcsspn**|
 |**není k dispozici**|**není k dispozici**|**_mbsspn_l**|**není k dispozici**|
@@ -124,7 +114,7 @@ Výstupní hodnota je ovlivňován nastavením **LC_CTYPE –** kategorie nastav
 |**wcsspn**|\<String.h > nebo \<wchar.h >|
 |**_mbsspn –**, **_mbsspn_l –**|\<Mbstring.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -153,7 +143,7 @@ int main( void )
 The portion of 'cabbage' containing only a, b, or c is 5 bytes long
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>

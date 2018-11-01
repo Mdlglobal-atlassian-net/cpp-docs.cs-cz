@@ -1,10 +1,6 @@
 ---
-title: _sprintf_p –, _sprintf_p_l –, _swprintf_p –, _swprintf_p_l – | Microsoft Docs
-ms.custom: ''
+title: _sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _sprintf_p
 - _swprintf_p_l
@@ -31,8 +27,6 @@ f1_keywords:
 - swprint_p_l
 - swprintf_p
 - swprintf_p_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - sprintf_p_l function
 - swprintf_p function
@@ -48,20 +42,16 @@ helpviewer_keywords:
 - formatted text [C++]
 - _stprintf_p_l function
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 02c28da8c066f51bb4366c7ed20e04266d37b074
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c55dce7d37d63c79e8c8d9976a76adf331412812
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451409"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579587"
 ---
-# <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p –, _sprintf_p_l –, _swprintf_p –, _swprintf_p_l –
+# <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 
-Umožňuje určit pořadí, že parametry jsou použity v řetězec formátu zápisu formátovaná data na řetězec.
+Zapište formátovaná data do řetězce s možností určit pořadí, že parametry jsou použity ve formátovacím řetězci.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -106,7 +96,7 @@ Maximální počet znaků, které se mají uložit
 Řetězec řízení formátu
 
 *argument_list*<br/>
-Nepovinné argumenty řetězce formátu.
+Volitelné argumenty na řetězec formátu.
 
 *Národní prostředí*<br/>
 Národní prostředí, které se má použít
@@ -115,19 +105,19 @@ Další informace najdete v tématu [specifikace formátu](../../c-runtime-libra
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Počet znaků, které jsou zapsány nebo -1, pokud došlo k chybě.
+Počet napsaných znaků, nebo -1, pokud došlo k chybě.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Sprintf_p –** funkce naformátuje a ukládá řady znaků a hodnot v *vyrovnávací paměti*. Každý argument *argument_list* (pokud existuje) je převeden a výstup podle odpovídající specifikaci formátu v *formátu*. *Formátu* používá argument [formátu syntaxe specifikace pro funkce printf a wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Znak hodnoty null se připojí po poslední znak zapsána. Pokud ke kopírování dojde mezi řetězci, které se překrývají, chování není definováno. Rozdíl mezi **_sprintf_p –** a **sprintf_s –** je, že **_sprintf_p –** podporuje poziční parametry, které umožní určení pořadí, ve kterém jsou argumenty použít ve formátovacím řetězci. Další informace najdete v tématu [printf_p – poziční parametry](../../c-runtime-library/printf-p-positional-parameters.md).
+**_Sprintf_p** funkce formátuje a ukládá řadu znaků a hodnot v *vyrovnávací paměti*. Každý argument v *argument_list* (pokud existuje) je převeden a uložen podle odpovídající specifikace formátu v *formátu*. *Formátu* používá argument [formátování syntaxe specifikace pro funkce printf a wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Po poslední znak zapsat je připojen znak null. Pokud ke kopírování dojde mezi řetězci, které se překrývají, chování není definováno. Rozdíl mezi **_sprintf_p** a **sprintf_s –** je, že **_sprintf_p** podporuje poziční parametry, které umožňují určit pořadí, ve kterém jsou argumenty použité ve formátovacím řetězci. Další informace najdete v tématu [printf_p – poziční parametry](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**_swprintf_p –** je verze široká charakterová **_sprintf_p –**; ukazatel argumenty, které mají **_swprintf_p –** jsou široká charakterová řetězce. Detekce chyb v kódování **_swprintf_p –** se můžou lišit od v **_sprintf_p –**. **_swprintf_p –** a **fwprintf_p –** vyjma toho, že se chovají stejně jako **_swprintf_p –** zapíše výstup na řetězec, spíše než do cílového umístění v typu **souboru**, a **_swprintf_p –** vyžaduje *počet* parametru určete maximální počet znaků, který má být zapsána. Verze tyto funkce s **_l** příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí předaná místo aktuální národní prostředí vlákna.
+**_swprintf_p** je verze širokého znaku **_sprintf_p**; argumenty ukazatele pro **_swprintf_p** jsou širokoznaké řetězce. Detekce chyb kódování ve **_swprintf_p** může lišit od v **_sprintf_p**. **_swprintf_p** a **fwprintf_p –** chovají stejně, s výjimkou, že **_swprintf_p** zapíše výstup do řetězce, nikoli do cílového umístění typu **souboru**, a **_swprintf_p** vyžaduje *počet* parametru určete maximální počet znaků, které mají být zapsána. Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí předaného namísto aktuálního národní prostředí pro vlákno.
 
-**_sprintf_p –** vrátí počet bajtů, které jsou uložené v *vyrovnávací paměti*, není počítání ukončující znak hodnoty null. **_swprintf_p –** vrátí počet široké znaky, které jsou uložené v *vyrovnávací paměti*, není počítání ukončující široká znaková hodnotu null. Pokud *vyrovnávací paměti* nebo *formátu* je ukazatel s hodnotou null, nebo pokud řetězec formátu obsahuje neplatné znaky formátování, je obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru ](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, tyto funkce vrátí hodnotu -1 a nastavte **errno** k **einval –**.
+**_sprintf_p** vrátí počet bajtů uložených v *vyrovnávací paměti*, výčtu nebudou započteny ukončující znak null. **_swprintf_p** vrátí počet širokých znaků, které jsou uložené v *vyrovnávací paměti*, výčtu nebudou započteny ukončující široké znaky null. Pokud *vyrovnávací paměti* nebo *formátu* je ukazatel s hodnotou null, nebo pokud řetězec formátu obsahuje neplatné formátovací znaky, vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation ](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a nastaví **errno** k **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_stprintf_p –**|**_sprintf_p**|**_sprintf_p**|**_swprintf_p**|
 |**_stprintf_p_l –**|**_sprintf_p_l**|**_sprintf_p_l**|**_swprintf_p_l**|
@@ -136,10 +126,10 @@ Počet znaků, které jsou zapsány nebo -1, pokud došlo k chybě.
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_sprintf_p –**, **_sprintf_p_l –**|\<stdio.h>|
-|**_swprintf_p –**, **_swprintf_p_l –**|\<stdio.h > nebo \<wchar.h >|
+|**_sprintf_p**, **_sprintf_p_l**|\<stdio.h>|
+|**_swprintf_p**, **_swprintf_p_l**|\<stdio.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -216,9 +206,9 @@ Wrote 24 characters
 Wrote -1 characters
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l](printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)<br/>

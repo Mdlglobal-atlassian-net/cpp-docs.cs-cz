@@ -1,31 +1,21 @@
 ---
-title: ctype_byname – třída | Microsoft Docs
-ms.custom: ''
+title: ctype_byname – třída
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xlocale/std::ctype_byname
-dev_langs:
-- C++
 helpviewer_keywords:
 - ctype_byname class
 ms.assetid: a5cec021-a1f8-425f-8757-08e6f064b604
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a7ebfb2d5bc4543665054208e37e1f993270e5f3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d998747045ece765269ddb013b525b8c06fcdf8b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843896"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50517738"
 ---
 # <a name="ctypebyname-class"></a>ctype_byname – třída
 
-Třída odvozená šablony popisuje objekt, který může sloužit jako ctype omezující vlastnosti daného národního prostředí, povolení klasifikace znaků a převod znaků mezi případ a nativní a národní prostředí zadaný znakových sad.
+Odvozená třída šablony popisuje objekt, který může sloužit jako omezující vlastnost ctype daného národního prostředí, který umožňuje klasifikaci znaků a převod znaků mezi případ a nativní a znakovými sadami určenými pro národní prostředí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,14 +40,14 @@ protected:
 
 ## <a name="remarks"></a>Poznámky
 
-Její chování je dáno s názvem národní prostředí `_Locname`. Každý konstruktor inicializuje jeho základní objekt s [ctype](../standard-library/ctype-class.md)\<CharType > ( `_Refs`) nebo jeho ekvivalent pro základní třídu `ctype<char>`.
+Její chování je určeno s názvem národního prostředí `_Locname`. Každý konstruktor inicializuje jeho základní objekt s [ctype](../standard-library/ctype-class.md)\<CharType > ( `_Refs`) nebo jeho ekvivalent pro základní třídu `ctype<char>`.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<národní prostředí >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

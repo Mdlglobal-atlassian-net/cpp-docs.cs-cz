@@ -1,35 +1,25 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4067 | Microsoft Docs
-ms.custom: ''
+title: Kompilátor upozornění (úroveň 1) C4067
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4067
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4067
 ms.assetid: 1d10353e-8cd5-4b01-9184-a06189b965a4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ee6b48327e8754f9388e0df8f43009a5be70c97
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 012866e328433ec9511782c26a39265481ff4940
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255450"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541181"
 ---
-# <a name="compiler-warning-level-1-c4067"></a>C4067 kompilátoru upozornění (úroveň 1)
+# <a name="compiler-warning-level-1-c4067"></a>Kompilátor upozornění (úroveň 1) C4067
 
-> neočekávané tokeny následující direktivy preprocesoru - očekává nový řádek
+> neočekávané tokeny direktivě preprocesoru – očekával se nový řádek
 
 ## <a name="remarks"></a>Poznámky
 
-Kompilátor najít a další znaky následující direktivy preprocesoru ignorovány. Když obvyklou příčinou je stray středníkem po direktiva to může být způsobeno znaky neočekávané. Komentáře nezpůsobí toto upozornění. **/Za** – možnost kompilátoru umožňuje toto upozornění pro další preprocesor – direktivy než výchozí nastavení.
+Kompilátor najít a ignoruje znaky navíc direktivě preprocesoru. To může způsobovat žádné neočekávané znaky, i když běžných příčin je zapomenutý středník za direktivou. Komentáře nezpůsobí toto upozornění. **/Za** – možnost kompilátoru umožňuje toto upozornění pro další direktivy preprocesoru než výchozí hodnotu.
 
 ## <a name="example"></a>Příklad
 
@@ -49,7 +39,7 @@ int main()
 }
 ```
 
-Toto upozornění vyřešit, odstraňte stray znaky nebo přesuňte je do blok komentáře. Některé C4067 upozornění mohou být zakázány odebráním **/Za** – možnost kompilátoru.
+Pokud chcete vyřešit toto upozornění, odstranění zapomenutý znaků nebo jejich přesunutím do blok komentáře. Některé C4067 upozornění, může se zakáže odebráním **/Za** – možnost kompilátoru.
 
 ```cpp
 // C4067b.cpp
