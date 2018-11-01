@@ -1,10 +1,6 @@
 ---
-title: ceil, ceilf –, ceill – | Microsoft Docs
-ms.custom: ''
+title: ceil, ceilf, ceill
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - ceilf
 - ceil
@@ -27,28 +23,22 @@ f1_keywords:
 - ceil
 - ceilf
 - ceill
-dev_langs:
-- C++
 helpviewer_keywords:
 - calculating value ceilings
 - ceill function
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fa68ff857db09d1426fbed6ea497624e13cc362a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b128f20593d41fff3c4c50f6d68f8643798c5b66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394262"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637187"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 
-Vypočítá mezní hodnoty.
+Vypočítá horní mez hodnoty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -77,17 +67,17 @@ Hodnota s plovoucí desetinnou čárkou.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Ceil** funkce vrátí hodnotu s plovoucí desetinnou čárkou, která reprezentuje nejmenší celé číslo, které je větší než nebo rovno *x*. Neexistuje žádný návratový chyby.
+**Ceil –** funkce vrátí hodnotu s plovoucí desetinnou čárkou, která reprezentuje nejmenší celé číslo, který je větší než nebo rovna hodnotě *x*. Není vrácena žádná chyba.
 
-|Vstup|Výjimka SEH|Matherr – výjimka|
+|Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ **QNAN**, **IND**|žádná|**_DOMAIN –**|
+|ROZMEZÍ **QNAN**, **AJÍT**|žádná|**_DOMÉNA**|
 
-**ceil –** má implementace, která používá Streaming SIMD Extensions 2 (SSE2). Informace a omezení o pomocí implementace SSE2 najdete v tématu [_set_sse2_enable –](set-sse2-enable.md).
+**ceil –** má implementace, která používá Streaming SIMD Extensions 2 (SSE2). Informace a omezení týkající se použití implementace SSE2, naleznete v tématu [_set_sse2_enable –](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **ceil** trvají **float** nebo **dlouho** **dvojité** typy. V programu C **ceil** vždy provede a vrátí **dvojité**.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **ceil –** trvají **float** nebo **dlouhé** **double** typy. V programu jazyka C **ceil –** vždy převezme a vrátí **double**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -95,13 +85,13 @@ Protože C++ umožňuje, aby přetížení, můžete volat přetížení **ceil*
 |-------------|---------------------|
 |**ceil –**, **ceilf –**, **ceill –**|\<Math.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [podlaží](floor-floorf-floorl.md).
+Podívejte se na příklad pro [floor](floor-floorf-floorl.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>

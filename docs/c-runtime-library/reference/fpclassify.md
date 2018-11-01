@@ -1,8 +1,6 @@
 ---
-title: fpclassify – | Microsoft Docs
-ms.custom: ''
+title: fpclassify –
 ms.date: 04/05/2018
-ms.topic: reference
 apiname:
 - fpclassify
 apilocation:
@@ -24,20 +22,16 @@ helpviewer_keywords:
 - fpclassify macro
 - fpclassify function
 ms.assetid: bf549499-7ff9-4a58-8692-f2d1cb6bab81
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da55cb87804d178d5a305ed466aa498de4bc1ee5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 626e356cf61415e4f8212a8a12d90a72fe4576bf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398429"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613873"
 ---
 # <a name="fpclassify"></a>fpclassify –
 
-Vrátí s plovoucí desetinnou čárkou klasifikace argumentu.
+Vrátí hodnotu s plovoucí desetinnou čárkou klasifikace argumentu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -67,29 +61,29 @@ Hodnota s plovoucí desetinnou čárkou k testování.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**fpclassify –** vrací hodnotu celého čísla, která určuje třídu s plovoucí desetinnou čárkou argumentu *x*. Tato tabulka obsahuje možné hodnoty vrácené **fpclassify –**, definované v \<math.h >.
+**fpclassify –** vrací celočíselnou hodnotu, která určuje třídu s plovoucí desetinnou čárkou argumentu *x*. Tato tabulka uvádí možné hodnoty vrácené **fpclassify –** definované v \<math.h >.
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|**FP_NAN**|Tichý, signalizace nebo neurčitém NaN.|
-|**FP_INFINITE**|Kladné a záporné infinity|
-|**FP_NORMAL**|Kladné a záporné normalizovaný nenulovou hodnotu|
-|**FP_SUBNORMAL**|Kladné a záporné hodnoty nenormalizované|
-|**FP_ZERO**|Kladná nebo záporná hodnota nulová hodnota|
+|**FP_NAN**|Tichý, signalizace nebo neurčitý NaN|
+|**FP_INFINITE**|Kladné nebo záporné nekonečno|
+|**FP_NORMAL**|Kladná nebo záporná normalizované nenulová hodnota|
+|**FP_SUBNORMAL**|Kladná nebo záporná hodnota Nenormalizovaná|
+|**FP_ZERO**|Pozitivní nebo negativní nulovou hodnotu|
 
 ## <a name="remarks"></a>Poznámky
 
-V jazyce C **fpclassify –** je makro; v jazyce C++ **fpclassify –** je přetížena pomocí typy argument funkce **float**, **dvojité**, nebo **dlouho** **dvojité**. V obou případech hodnota vrácená závisí na efektivní výraz argumentu typu, nikoli na všechny zprostředkující reprezentace. Například normální **dvojité** nebo **dlouho** **dvojité** hodnota stát nekonečna, denormal nebo při převést na hodnotu nula **float**.
+V jazyce C **fpclassify –** je makro; v jazyce C++, **fpclassify –** je funkce přetížena, pomocí argumentu typu **float**, **double**, nebo **dlouhé** **double**. V obou případech se vrácená hodnota závisí na platné typu výraz argumentu a nikoli na všechny zprostředkující reprezentace. Například normální **double** nebo **dlouhé** **double** hodnota stane nekonečno, denormal nebo při převodu na hodnotu nula **float**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce/makra|Požadovaná hlavička (C)|Požadovaná hlavička (C++)|
+|Funkce nebo makra|Požadované záhlaví (C)|Požadované záhlaví (C++)|
 |---------------------|---------------------------|-------------------------------|
-|**fpclassify**|\<Math.h >|\<Math.h > nebo \<cmath – >|
+|**fpclassify**|\<Math.h >|\<Math.h > nebo \<cmath >|
 
-**Fpclassify –** makro a **fpclassify –** funkce v souladu s ISO C99 a C ++ 11 specifikace. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+**Fpclassify –** – makro a **fpclassify –** funkce v souladu s normou ISO C99 a C ++ 11 specifikace. Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

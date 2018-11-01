@@ -1,28 +1,18 @@
 ---
-title: -CLRSUPPORTLASTERROR (zachování kódu poslední chyby pro volání PInvoke) | Dokumentace Microsoftu
-ms.custom: ''
+title: /CLRSUPPORTLASTERROR (Zachovat poslední kód chyby pro volání PInvoke)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /CLRSUPPORTLASTERROR
-dev_langs:
-- C++
 helpviewer_keywords:
 - /CLRSUPPORTLASTERROR linker option
 - -CLRSUPPORTLASTERROR linker option
 ms.assetid: b7057990-4154-4b1d-9fc9-6236f7be7575
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a80adfe34677c15a36af96ac412b7934747e68bc
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e813966367b4349a95c174c59340204592b81b74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707444"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660906"
 ---
 # <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR (Zachovat poslední kód chyby pro volání PInvoke)
 
@@ -88,7 +78,7 @@ Můžete minimalizovat dopad na výkon díky propojení s **/CLRSUPPORTLASTERROR
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
 ## <a name="example"></a>Příklad
 
