@@ -1,12 +1,6 @@
 ---
-title: Kroky v typické aplikaci klienta FTP | Dokumentace Microsoftu
-ms.custom: ''
+title: Postup v typické aplikaci klienta FTP
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Internet client applications [MFC], FTP table
 - FTP (File Transfer Protocol)
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - FTP (File Transfer Protocol) [MFC], client applications
 - Internet applications [MFC], FTP client applications
 ms.assetid: 70bed7b5-6040-40d1-bc77-702e63a698f2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4ac1eef12a3f782f3ad9ba8a9bb526989876251e
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: ef772438558e5d587962242fdd7f1230cc2b2f25
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890215"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560183"
 ---
 # <a name="steps-in-a-typical-ftp-client-application"></a>Postup v typické aplikaci klienta FTP
 

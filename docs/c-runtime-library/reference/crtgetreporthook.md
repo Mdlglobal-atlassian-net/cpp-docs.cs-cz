@@ -1,10 +1,6 @@
 ---
-title: _Crtgetreporthook – | Microsoft Docs
-ms.custom: ''
+title: _CrtGetReportHook
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtGetReportHook
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - CrtGetReportHook
 - _CrtGetReportHook
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtGetReportHook function
 - _CrtGetReportHook function
 ms.assetid: 922758ed-7edd-4359-9c92-0535192dc11a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d78c176d5d4de54f4ae5eea84b0483b9e6bc3bec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b8b666093807c95312d4328ca9b3043ad1e09df
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395007"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536757"
 ---
 # <a name="crtgetreporthook"></a>_CrtGetReportHook
 
-Načte klienta definované generování sestav funkce pro zapojení do C dobu spuštění pro ladění reporting procesu (pouze ladicí verze).
+Načte klienta definované vytváření sestav funkce pro zapojení do C spuštění pro ladění reporting procesu (pouze ladicí verze).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,9 +45,9 @@ Vrátí aktuální funkci generování sestav definované klienta.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Crtgetreporthook –** umožňuje aplikaci načíst aktuální funkce vytváření sestav pro ladicí běhové knihovny jazyka C reporting procesu.
+**_Crtgetreporthook –** umožňuje aplikaci načíst aktuální funkce vytváření sestav pro knihovnu ladění za běhu C proces vytváření sestav.
 
-Další informace o použití jiných podporující háku běhové funkce a psaní vlastního klienta definované funkce háku najdete v tématu [ladění zápis funkce háku](/visualstudio/debugger/debug-hook-function-writing).
+Další informace o použití jiné funkce háku podporující za běhu a psaní vlastních klienta definované funkce háku naleznete v tématu [ladění zápis funkce háku](/visualstudio/debugger/debug-hook-function-writing).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -65,17 +55,17 @@ Další informace o použití jiných podporující háku běhové funkce a psan
 |-------------|---------------------|
 |**_CrtGetReportHook**|\<crtdbg.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Ladicí verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md) pouze.
+Ladicí verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
 
 ## <a name="example"></a>Příklad
 
-Příklad, jak pomocí **_crtsetreporthook –**, najdete v části [sestavy](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/report).
+Pro ukázku toho, jak používat **_CrtSetReportHook**, naleznete v tématu [sestavy](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/report).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Rutiny ladění](../../c-runtime-library/debug-routines.md)<br/>
 [_CrtSetReportHook](crtsetreporthook.md)<br/>

@@ -1,10 +1,6 @@
 ---
-title: Cos, cosf –, cosl – | Microsoft Docs
-ms.custom: ''
+title: Cos cosf –, cosl –
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cos
 - cosf
@@ -26,8 +22,6 @@ f1_keywords:
 - cos
 - cosf
 - cosl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cosines
 - cosl function
@@ -37,20 +31,16 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a49f8489d084b1f67bc46432970114350c56f09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b050fd98a35028b121def8b665fce62ad58ec437
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395445"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519889"
 ---
-# <a name="cos-cosf-cosl"></a>Cos, cosf –, cosl –
+# <a name="cos-cosf-cosl"></a>Cos cosf –, cosl –
 
-Výpočet kosinu.
+Vypočítá kosinus.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -72,30 +62,30 @@ long double cos( long double x );  // C++ only
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Kosinus *x*. Pokud *x* je větší než nebo rovna hodnotě 263 nebo menší než nebo rovno-263, dojde ke ztrátě násobek ve výsledku.
+Kosinus *x*. Pokud *x* je větší než nebo rovno 263 nebo menší než nebo rovna hodnotě-263, dojde ke ztrátě významu výsledku.
 
-|Vstup|Výjimka SEH|Matherr – výjimka|
+|Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ QNAN, IND|žádná|**_DOMAIN –**|
-|ROZMEZÍ INF|**NEPLATNÝ**|**_DOMAIN –**|
+|ROZMEZÍ QNAN, AJÍT|žádná|**_DOMÉNA**|
+|ROZMEZÍ INF|**NEPLATNÝ**|**_DOMÉNA**|
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **cos** , přijmout a vrátit **float** nebo **dlouho** **dvojité** hodnoty. V programu C **cos** vždy provede a vrátí **dvojité**.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **cos** , která používají a vrací **float** nebo **dlouhé** **double** hodnoty. V programu jazyka C **cos** vždy převezme a vrátí **double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaná hlavička C|Požadovaná hlavička v C++|
+|Rutina|Požadovaná hlavička C|Požadované hlaviček jazyka C++|
 |-------------|---------------------|-|
-|**Cos**, **cosh**, **cosf –**|\<Math.h >|\<cmath – > nebo \<math.h >|
+|**Cos**, **cosh**, **cosf –**|\<Math.h >|\<cmath > nebo \<math.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
 Podívejte se na příklad v [sin, sinf –, sinl –](sin-sinf-sinl.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
