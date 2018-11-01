@@ -1,10 +1,6 @@
 ---
-title: _rmtmp – | Microsoft Docs
-ms.custom: ''
+title: _rmtmp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _rmtmp
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - rmtmp
 - _rmtmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - removing temporary files
 - _rmtmp function
@@ -33,20 +27,16 @@ helpviewer_keywords:
 - files [C++], removing
 - temporary files [C++], removing
 ms.assetid: 7419501e-2587-4f2a-b469-0dca07f84736
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 050f1c93fc38b9fdf722682c9688336098a3da45
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bf4f2cff48e8660682fc8a00d10d9a1fe960a6a7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405962"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50508885"
 ---
 # <a name="rmtmp"></a>_rmtmp
 
-Odebere dočasné soubory.
+Odstraní dočasné soubory.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,7 +47,7 @@ int _rmtmp( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_rmtmp –** vrátí počet dočasné soubory, které se zavře a odstranit.
+**_rmtmp –** vrátí počet dočasné soubory uzavřen a odstraněn.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -69,19 +59,19 @@ int _rmtmp( void );
 |-------------|---------------------|
 |**_rmtmp**|\<stdio.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
 Podívejte se na příklad pro [tmpfile –](tmpfile.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [_flushall](flushall.md)<br/>
 [tmpfile](tmpfile.md)<br/>
 [_tempnam, _wtempnam, tmpnam, _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)<br/>

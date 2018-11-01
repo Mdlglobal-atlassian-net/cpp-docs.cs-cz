@@ -1,27 +1,17 @@
 ---
-title: '&lt;cstdbool&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;cstdbool&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 44ccb8b2-d808-4715-8097-58ba09ab33ed
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2aee3815748d5160678d15e1caf5635a9f3017bf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4c47cfb3e04626f8bc029a1f25b1d05fb29011db
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843181"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50510094"
 ---
 # <a name="ltcstdboolgt"></a>&lt;cstdbool&gt;
 
-Obsahuje hlavičku knihovny standardní C \<stdbool.h > a přidá přidružené jména `std` oboru názvů.
+Obsahuje hlavičku knihovny Standard C \<stdbool.h > a přidá názvy přidružené k `std` oboru názvů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,9 +22,9 @@ Obsahuje hlavičku knihovny standardní C \<stdbool.h > a přidá přidružené 
 
 ## <a name="remarks"></a>Poznámky
 
-Včetně tuto hlavičku zajistí, že jsou názvy deklarováno s použitím externí propojení v hlavičce knihovny standardní C deklarované v `std` oboru názvů.
+Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším spojením v záhlaví knihovny Standard C jsou deklarovány v `std` oboru názvů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>

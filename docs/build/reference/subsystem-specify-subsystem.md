@@ -1,32 +1,22 @@
 ---
-title: -SUBSYSTEM (určení subsystému) | Dokumentace Microsoftu
-ms.custom: ''
+title: /SUBSYSTEM (Zadat subsystém)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /subsystem
 - VC.Project.VCLinkerTool.SubSystem
 - VC.Project.VCLinkerTool.SubSystemVersion
-dev_langs:
-- C++
 helpviewer_keywords:
 - /SUBSYSTEM linker option
 - SUBSYSTEM linker option
 - -SUBSYSTEM linker option
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 75e4612104fdc57fd1442f1a35efbf317a60310d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3d808f86a9ea3b34da0dccae18ecc000ca364f0a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717090"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518388"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (Zadat subsystém)
 
@@ -93,7 +83,7 @@ Volitelné minimální a výchozí *hlavní* a *menší* čísla verzí pro subs
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SubSystem%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SubSystem%2A>.
 
 ## <a name="see-also"></a>Viz také
 

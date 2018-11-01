@@ -1,10 +1,6 @@
 ---
-title: strcat – wcscat –, _mbscat – | Microsoft Docs
-ms.custom: ''
+title: strcat, wcscat, _mbscat
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbscat
 - wcscat
@@ -29,8 +25,6 @@ f1_keywords:
 - _tcscat
 - strcat
 - wcscat
-dev_langs:
-- C++
 helpviewer_keywords:
 - concatenating strings
 - mbscat function
@@ -45,23 +39,19 @@ helpviewer_keywords:
 - appending strings
 - wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f2daf6621cb2e72c38212227da20f6b847bb08e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b49e2e39fb0acd9128a52e83bf704567bb82d532
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413411"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546387"
 ---
 # <a name="strcat-wcscat-mbscat"></a>strcat, wcscat, _mbscat
 
-Přidá řetězec. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [strcat_s – wcscat_s –, _mbscat_s –](strcat-s-wcscat-s-mbscat-s.md).
+Připojí řetězec. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [strcat_s wcscat_s –, _mbscat_s –](strcat-s-wcscat-s-mbscat-s.md).
 
 > [!IMPORTANT]
-> **_mbscat_s –** nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscat_s –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -98,29 +88,29 @@ unsigned char *_mbscat(
 ### <a name="parameters"></a>Parametry
 
 *strDestination*<br/>
-Řetězce ukončené hodnotou Null cílový.
+Řetězec cíle zakončený hodnotou Null.
 
 *strSource*<br/>
-Řetězce ukončené hodnotou Null zdroje.
+Řetězec zakončený hodnotou Null zdroje.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí řetězec cílové (*strDestination*). Žádnou návratovou hodnotu je vyhrazena indikující chybu.
+Každá z těchto funkcí vrátí na cílový řetězec (*strDestination*). Žádná návratová hodnota je vyhrazená k indikaci chyby.
 
 ## <a name="remarks"></a>Poznámky
 
-**Strcat –** funkce připojí *strSource* k *strDestination* a ukončí výsledný řetězec s znak hodnoty null. Počáteční znak *strSource* přepíše ukončující znak null *strDestination*. Chování **strcat –** není definován, pokud se překrývají zdrojové a cílové řetězce.
+**Strcat –** připojí funkce *strSource* k *strDestination* a ukončí výsledný řetězec znakem null. Počáteční znak *strSource* přepíše ukončující znak null proměnné *strDestination*. Chování **strcat –** není definováno, pokud se zdrojový a cílový řetězec překrývají.
 
 > [!IMPORTANT]
-> Protože **strcat –** nekontroluje dostatek místa v *strDestination* před připojením *strSource*, je potenciální příčinou přetečení vyrovnávací paměti. Zvažte použití [strncat –](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) místo.
+> Protože **strcat –** nekontroluje dostatek místa v *strDestination* před připojením *strSource*, jde o potenciální příčinu přetečení vyrovnávací paměti. Zvažte použití [strncat –](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) místo.
 
-**wcscat –** a **_mbscat –** jsou široká charakterová a vícebajtových znaků verze **strcat –**. Argumenty a vrací hodnotu **wcscat –** jsou široká charakterová řetězce; u **_mbscat –** jsou řetězců vícebajtových znaků. Tyto tři funkce chovají stejně jako jinak.
+**wcscat –** a **_mbscat –** jsou širokoznaké a vícebajtové verze **strcat –**. Argumenty a vrácené hodnoty **wcscat –** jsou širokoznaké řetězce **_mbscat –** jsou vícebajtové znakové řetězce. Tyto tři funkce chovají identicky jinak.
 
-V jazyce C++ tyto funkce mají šabloně přetížení, které vyvolání novější a zabezpečené svými protějšky tyto funkce. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají novější, zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscat –**|**strcat**|**_mbscat**|**wcscat**|
 
@@ -132,13 +122,13 @@ V jazyce C++ tyto funkce mají šabloně přetížení, které vyvolání nověj
 |**wcscat**|\<String.h > nebo \<wchar.h >|
 |**_mbscat**|\<Mbstring.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
 Podívejte se na příklad pro [strcpy –](strcpy-wcscpy-mbscpy.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>

@@ -1,10 +1,6 @@
 ---
-title: _Crtreportblocktype – | Microsoft Docs
-ms.custom: ''
+title: _CrtReportBlockType
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtReportBlockType
 apilocation:
@@ -22,8 +18,6 @@ apitype: DLLExport
 f1_keywords:
 - _CrtReportBlockType
 - CrtReportBlockType
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtReportBlockType function
 - BLOCK_SUBTYPE macro
@@ -32,20 +26,16 @@ helpviewer_keywords:
 - _BLOCK_SUBTYPE macro
 - BLOCK_TYPE macro
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 59f8e919ee8a3ec9cc0822420ebbf6581480a13b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 186c63ce1619d6427436ff1458ca551e464d0bce
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395562"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50516060"
 ---
 # <a name="crtreportblocktype"></a>_CrtReportBlockType
 
-Vrátí bloku přidružené ukazatel bloku haldy ladění daný typ nebo dílčí.
+Vrátí bloku přidružený ukazatel bloku haldy ladění daný typ/podtyp.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -58,17 +48,17 @@ int _CrtReportBlockType(
 ### <a name="parameters"></a>Parametry
 
 *pBlock*<br/>
-Ukazatel na blok haldy ladění platný.
+Ukazatele na blok platný ladění haldy.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Když uplyne ukazatel haldy ladění platný, **_crtreportblocktype –** funkce vrátí typ bloku a podtyp ve formě **int**. Když uplyne neplatný ukazatel, funkce vrátí hodnotu -1.
+Při předání ukazatele platný ladění haldy, **_CrtReportBlockType** funkce vrací typ bloku a podtyp ve formě **int**. Po uplynutí neplatný ukazatel, vrátí funkce hodnotu -1.
 
 ## <a name="remarks"></a>Poznámky
 
-Extrahování typ a podtyp vrácený **_crtreportblocktype –**, použijte makra **_block_type –** a **_block_subtype –** (obě definované v Crtdbg.h) na návratovou hodnotu.
+Extrahovat typem a podtypem, vrátí **_CrtReportBlockType**, použít makra **_BLOCK_TYPE** a **_BLOCK_SUBTYPE** (obojí definovanou v Crtdbg.h) na návratovou hodnotu.
 
-Informace o typech bloku přidělení a způsobu jejich použití naleznete v tématu [typy bloky v haldě ladění](/visualstudio/debugger/crt-debug-heap-details).
+Informace o typech bloku přidělení a způsob jejich použití naleznete v tématu [typy bloků na haldě ladění](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -76,11 +66,11 @@ Informace o typech bloku přidělení a způsobu jejich použití naleznete v t�
 |-------------|---------------------|
 |**_CrtReportBlockType**|\<crtdbg.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Ladicí verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md) pouze.
+Ladicí verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
 
 ## <a name="example"></a>Příklad
 
@@ -141,7 +131,7 @@ Data: <          > CD CD CD CD CD CD CD CD CD CD
 Object dump complete.
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [_CrtDoForAllClientObjects](crtdoforallclientobjects.md)<br/>
 [_CrtSetDumpClient](crtsetdumpclient.md)<br/>

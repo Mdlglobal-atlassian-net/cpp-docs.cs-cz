@@ -1,10 +1,6 @@
 ---
-title: _close – | Microsoft Docs
-ms.custom: ''
+title: _close
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _close
 apilocation:
@@ -22,27 +18,21 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _close
-dev_langs:
-- C++
 helpviewer_keywords:
 - _close function
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eabf084d2e4dd7e280c0ff730d1ec34d86f1ed98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: faea008903136e8abdc39297672b31800ada796d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394194"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528021"
 ---
 # <a name="close"></a>_close
 
-Zavře soubor.
+Soubor se zavře.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,33 +45,33 @@ int _close(
 ### <a name="parameters"></a>Parametry
 
 *FD*<br/>
-Popisovače souborů na otevření souboru.
+Popisovač souboru odkazující na otevřený soubor.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_close –** vrátí hodnotu 0, pokud soubor se zavřel úspěšně. Vrácená hodnota -1 označuje chybu.
+**_Zavřít** vrátí hodnotu 0, pokud soubor byl úspěšně uzavřen. Návratová hodnota-1 označuje chybu.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Close –** funkce zavře soubor přidružený k *fd*.
+**_Zavřít** funkce zavře soubor přidružený k *fd*.
 
-Jsou uzavřeny popisovače souborů a základní popisovač souboru. Proto není nutné volat **funkce CloseHandle** Pokud soubor byl původně otevřít pomocí funkce Win32 **CreateFile** a převést na popisovač souboru pomocí **_open_osfhandle –**.
+Popisovače souborů a podkladové popisovač souboru operačního systému jsou zavřené. Proto není nutné volat **CloseHandle** Pokud soubor byl původně otevřen použitím funkce Win32 **CreateFile** a převedeny na popisovač souboru pomocí **_open_osfhandle –**.
 
-Tato funkce ověří jeho parametry. Pokud *fd* popisovač chybného souboru, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, funkce vrátí hodnotu -1 a **errno** je nastaven na **ebadf –**.
+Tato funkce ověřuje své parametry. Pokud *fd* je popisovače souborů, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a **errno** je nastavena na **EBADF**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
 |**_close**|\<IO.h >|\<errno.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
 Podívejte se na příklad pro [_Otevřít](open-wopen.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [I/O nízké úrovně](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chsize](chsize.md)<br/>

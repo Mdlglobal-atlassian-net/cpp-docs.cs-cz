@@ -1,10 +1,6 @@
 ---
-title: 'Besselovy funkce: _j0, _j1, _jn, _y0, _y1, _yn | Microsoft Docs'
-ms.custom: ''
+title: 'Besselovy funkce: _j0, _j1, _jn, _y0, _y1, _yn'
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _j0
 - _j1
@@ -33,8 +29,6 @@ f1_keywords:
 - _y0
 - _y1
 - _yn
-dev_langs:
-- C++
 helpviewer_keywords:
 - Bessel functions
 - _j0 function
@@ -44,20 +38,16 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cf461a7737ee1f23650ff80f203524c427fb644d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 682eaa99d0be1b959152ff94cc10a86aa68d988d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393599"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531860"
 ---
 # <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Besselovy funkce: _j0, _j1, _jn, _y0, _y1, _yn
 
-Vypočítá Besselovy funkce první nebo druhé druh, objednávky 0, 1 nebo n. Besselovy funkce se běžně používají v Matematika z teoreticky elektromagnetických wave.
+Besselovy funkce takového typu, první nebo druhé objednávek vypočítá 0, 1 nebo n. Besselovy funkce se běžně používají v matematice teorie elektromagnetická wave.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -90,35 +80,35 @@ double _yn(
 Hodnota s plovoucí desetinnou čárkou.
 
 *n*<br/>
-Besselovy funkce pořadí celé číslo.
+Celé číslo pořadí Besselovy funkce.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Všechny tyto rutiny vrátí Besselovy funkce *x*. Pokud *x* záporné v **_y0**, **_y1**, nebo **_yn** funkce, rutiny nastaví **errno** k  **Edom –**, vytiskne **_domain –** chybovou zprávu **stderr**a vrátí **_HUGE_VAL**. Můžete upravit pomocí zpracování chyb **_matherr –**.
+Každá z těchto rutin vrací funkci Besselovy *x*. Pokud *x* je záporná v **_y0**, **_y1**, nebo **_yn** funkce a běžné sady **errno** k  **EDOM**, vytiskne **_DOMAIN** chybová zpráva pro **stderr**a vrátí **_HUGE_VAL**. Můžete upravit pomocí pro zpracování chyb **_matherr**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_J0**, **_j1**, a **_jn** rutiny vrátí Besselovy funkce první druhu: řadí 0, 1, n, v uvedeném pořadí.
+**_J0**, **_j1**, a **_jn** rutin vrací Besselovy funkce první druhu: orders 0, 1 nebo n, v uvedeném pořadí.
 
-|Vstup|Výjimka SEH|Matherr – výjimka|
+|Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ **QNAN**, **IND**|**NEPLATNÝ**|**_DOMAIN –**|
+|ROZMEZÍ **QNAN**, **AJÍT**|**NEPLATNÝ**|**_DOMÉNA**|
 
-**_Y0**, **_y1**, a **_yn** rutiny vrátí Besselovy funkce druhého typu: řadí 0, 1, n, v uvedeném pořadí.
+**_Y0**, **_y1**, a **_yn** rutin vrací Besselovy funkce takového typu, druhý: orders 0, 1 nebo n, v uvedeném pořadí.
 
-|Vstup|Výjimka SEH|Matherr – výjimka|
+|Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ **QNAN**, **IND**|**NEPLATNÝ**|**_DOMAIN –**|
-|± 0|**ZERODIVIDE**|**–**|
-|&#124;x&#124; < 0,0|**NEPLATNÝ**|**_DOMAIN –**|
+|ROZMEZÍ **QNAN**, **AJÍT**|**NEPLATNÝ**|**_DOMÉNA**|
+|± 0|**ZERODIVIDE**|**_SING**|
+|&#124;x&#124; < 0,0|**NEPLATNÝ**|**_DOMÉNA**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_j0**, **_j1**, **_jn**, **_y0**, **_y1**, **_yn**|\<cmath – > (C++), \<math.h > (C, C++)|
+|**_j0**, **_j1**, **_jn**, **_y0**, **_y1**, **_yn**|\<cmath > (C++), \<math.h > (C, C++)|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -161,7 +151,7 @@ Bessel functions for x = 2.387000:
    Second 4      _yn( 4, x )  -1.626833
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [_matherr](matherr.md)<br/>

@@ -1,35 +1,25 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4233 | Microsoft Docs
-ms.custom: ''
+title: Kompilátor upozornění (úroveň 4) C4233
 ms.date: 10/25/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4233
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4233
 ms.assetid: 9aa51fc6-8ef3-43b5-bafb-c9333cf60de3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a933d41fd8e7cf3b94e458efff72193b8ce5e187
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 361e00b7361aab51ea077d7e248503f3654e5e58
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297833"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50516516"
 ---
-# <a name="compiler-warning-level-4-c4233"></a>C4233 kompilátoru upozornění (úroveň 4)
+# <a name="compiler-warning-level-4-c4233"></a>Kompilátor upozornění (úroveň 4) C4233
 
-> nestandardní rozšíření používané: '*– klíčové slovo*' podporována pouze v jazyce C++, C není – klíčové slovo
+> používá se nestandardní rozšíření: '*– klíčové slovo*"– klíčové slovo pouze v jazyce C++, C není podporována
 
-Kompilátor kompilovat zdrojový kód jako C, nikoli C++ a použít klíčové slovo, které je platné jenom v C++. Kompilátor zkompiluje zdrojový soubor jako C, pokud rozšíření zdrojového souboru .c nebo použijete [/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md).
+Kompilátor kompilaci zdrojového kódu jako C a C++ a použít klíčové slovo, které platí pouze v jazyce C++. Zdrojový soubor se kompilátor zkompiluje jako C, pokud je rozšíření zdrojový soubor .c nebo používáte [/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md).
 
-Toto upozornění je automaticky povýšen na chybu. Pokud chcete-li toto chování změnit, použijte [#pragma – upozornění](../../preprocessor/warning.md). Například C4233 do problémem upozornění úroveň 4, přidáte tento řádek k souboru zdrojového kódu:
+Toto upozornění je automaticky povýšen na chybu. Pokud chcete toto chování upravit, použijte [varování #pragma](../../preprocessor/warning.md). Například převeďte C4233 na problém upozornění úrovně 4, přidejte tento řádek do souboru zdrojového kódu:
 
 ```cpp
 #pragma warning(4:4233)

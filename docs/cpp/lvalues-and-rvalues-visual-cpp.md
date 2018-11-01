@@ -1,26 +1,16 @@
 ---
-title: 'Hodnota kategorie: Hodnoty lvalue a rvalue (C++) | Dokumentace Microsoftu'
-ms.custom: ''
+title: 'Hodnota kategorie: Hodnoty lvalue a rvalue (C++)'
 ms.date: 04/06/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4f19a06ac0583dd4cb911818787408aeca30b2ec
-ms.sourcegitcommit: 2f84d56b6ab19ba745b32ecd96b193c73cd62adf
+ms.openlocfilehash: 261453d5640c122f23491304b71e53e27c06eb7a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866212"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546351"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Hodnoty lvalue a rvalue (C++)
 
@@ -30,7 +20,7 @@ Standardu C ++ 17 definuje kategorie hodnotu výrazu takto:
 
 - A *glvalue* je výraz, jehož vyhodnocení určuje identitu objektu, bitového pole nebo funkce.
 - A *hodnota, která není* je výraz, jehož vyhodnocení inicializuje objekt nebo bitové pole nebo vypočítá hodnotu operand operátoru, podle určeného kontextu, ve kterém se zobrazí.
-- *Xvalue* je glvalue, který označuje objekt nebo bitové pole, jehož prostředky jde znovu použít (obvykle, protože je na konci svého životního cyklu). [Příklad: osa x, hodnoty, jako je například volání funkce, jejíž návratový typ je odkaz rvalue nebo přetypování na odkazový typ yield určité druhy výrazy, které obsahují odkazy rvalue (8.3.2). ]
+- *Xvalue* je glvalue, který označuje objekt nebo bitové pole, jehož prostředky jde znovu použít (obvykle, protože je na konci svého životního cyklu). [Příklad: osa x, hodnoty, jako je například volání funkce, jejíž návratový typ je odkaz rvalue nebo přetypování na odkazový typ yield určité druhy výrazy, které obsahují odkazy rvalue (8.3.2). ]
 - *L-hodnoty* je glvalue, který není xvalue.
 - *Rvalue* hodnota, která není nebo xvalue.
 

@@ -1,15 +1,9 @@
 ---
-title: /Zc:sizedDealloc (Povolit globální velikosti navrácení funkce) | Microsoft Docs
-ms.custom: ''
+title: /Zc:sizedDealloc (povolení funkcí Dealokace v globálním)
 ms.date: 03/06/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - sizedDealloc
 - /Zc:sizedDealloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - -Zc compiler options (C++)
 - sizedDealloc
@@ -17,20 +11,16 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 3a73ace0-4d36-420a-b699-0ca6fc0dd134
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a912b87240ad37e29cade077b7a93aa1e7886a6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 160e90f0b068da6fe8330ac97dfd8bda52f05a38
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380960"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536601"
 ---
-# <a name="zcsizeddealloc-enable-global-sized-deallocation-functions"></a>/Zc:sizedDealloc (Povolit globální velikosti navrácení funkce)
+# <a name="zcsizeddealloc-enable-global-sized-deallocation-functions"></a>/Zc:sizedDealloc (povolení funkcí Dealokace v globálním)
 
-**/Zc:sizedDealloc** – možnost kompilátoru říká kompilátoru přednostně volat globální `operator delete` nebo `operator delete[]` funkce, které mají druhý parametr typu `size_t` Pokud velikost objektu není k dispozici. Může použít tyto funkce `size_t` parametr za účelem optimalizace výkonu deallocator.
+**/Zc:sizedDealloc** – možnost kompilátoru instruuje kompilátor, aby přednostně volání globální `operator delete` nebo `operator delete[]` funkcí, které mají druhý operátor typu `size_t` když je k dispozici velikost objektu. Tyto funkce může používat `size_t` parametr k optimalizaci výkonu dealokátor.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,27 +28,27 @@ ms.locfileid: "32380960"
 
 ## <a name="remarks"></a>Poznámky
 
-V C ++ 11 standard, může definovat statické členské funkce `operator delete` a `operator delete[]` které přebírají druhý, `size_t` parametr. Obvykle se používá v kombinaci s [new – operátor](../../cpp/new-operator-cpp.md) funkce pro implementaci efektivnější alokátorů a deallocators pro objekt. Ale C ++ 11 nedefinuje ekvivalentní sadu funkcí navrácení v globálním oboru. V C ++ 11, globální navrácení funkce, které mají druhý parametr typu `size_t` jsou považovány za funkce odstranění umístění. Se musí být explicitně volána předáním argumentem velikosti.
+V C ++ 11 standard, můžete definovat statické členské funkce `operator delete` a `operator delete[]` , které přebírají sekundy, `size_t` parametru. Obvykle se používá v kombinaci s [operátor new](../../cpp/new-operator-cpp.md) funkce implementovat efektivnější alokátorů a deallocators pro objekt. C ++ 11, ale nedefinovala ekvivalentní sadu funkcí dealokace v globálním oboru. V C ++ 11, globální funkce dealokace v, které mají druhý operátor typu `size_t` jsou považovány za funkce Odstranit umístění. Je nutné explicitně volat předáním velikost argumentu.
 
-C ++ 14 standardní mění chování kompilátoru. Když definujete globální `operator delete` a `operator delete[]` které přebírají druhý parametr typu `size_t`, kompilátor upřednostní na tyto funkce volat, když nejsou vyvolána člen oboru verze a velikost objektu je k dispozici. Kompilátor předá argument velikost implicitně. Jeden argument verze jsou volány při kompilátor nelze určit velikost objektu navrácena. Obvyklá pravidla pro výběr verze funkce navrácení k vyvolání, jinak hodnota pořád platit. Volání funkcí globální může explicitně určen předponou operátor řešení rozsahu (`::`) k volání funkce navrácení.
+C ++ 14 standardní mění chování kompilátoru. Při definování globálních `operator delete` a `operator delete[]` , které přebírají druhý operátor typu `size_t`, kompilátor dává přednost volat tyto funkce, pokud nejsou vyvolány člen rozsah verzí a velikost objektu je k dispozici. Kompilátor implicitně předá velikost argumentu. Verze jediný argument se volá se, když kompilátor nemůže určit velikost objektu navrácena. V opačném případě obvyklých pravidel pro výběr verze funkce zrušení přidělení k vyvolání stále platí. Volání globálních funkcí může být explicitně určeno předřazení operátoru rozlišení oboru (`::`) k volání funkce zrušení přidělení.
 
-Ve výchozím nastavení Visual C++ v sadě Visual Studio 2015 spouštění implementuje toto C ++ 14 standardní chování. Můžete to explicitně určit nastavením **/Zc:sizedDealloc** – možnost kompilátoru. Reprezentuje potenciálně nejnovější změny. Použít **/Zc:sizedDealloc-** možnost zachování staré chování, například když váš kód definuje operátory odstranit umístění, které používají druhý parametr typu `size_t`. Výchozí implementace knihovny sady Visual Studio globální navrácení funkce, které mají druhý parametr typu `size_t` vyvolání verze jeden parametr. Pokud váš kód poskytuje pouze jedním parametr globální delete – operátor and – operátor odstranit [], výchozí implementace knihovny funkcí globální velikostí navrácení vyvolání globální funkce.
+Ve výchozím nastavení spouští se v sadě Visual Studio 2015 Visual C++ implementuje toto C ++ 14 standardní chování. Můžete to explicitně zadat tak, že nastavíte **/Zc:sizedDealloc** – možnost kompilátoru. Reprezentuje potenciálně zásadní změnu. Použít **/Zc:sizedDealloc-** možnost pro zachování původního chování, například když váš kód definuje operátory odstranit umístění, které použijte druhý operátor typu `size_t`. Výchozí implementace knihovny sady Visual Studio globální zrušení přidělení funkce, které mají druhý operátor typu `size_t` vyvolat verze jeden parametr. Pokud váš kód poskytuje pouze jedním parametrem globální operátor delete a operátor delete [], vyvolají výchozí implementace knihovny funkce globální velikostí dealokace globální funkce.
 
-**/Zc:sizedDealloc** – možnost kompilátoru ve výchozím nastavení zapnutý. [/ Projektovou-](permissive-standards-conformance.md) možnost nemá vliv na **/Zc:sizedDealloc**.
+**/Zc:sizedDealloc** – možnost kompilátoru je ve výchozím. [/ Permissive-](permissive-standards-conformance.md) nemá vliv na možnost **/Zc:sizedDealloc**.
 
-Další informace o problémech shoda v jazyce Visual C++, najdete v části [nestandardní chování](../../cpp/nonstandard-behavior.md).
+Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete v tématu [nestandardní chování](../../cpp/nonstandard-behavior.md).
 
 ## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
-1. Z **konfigurace** rozevírací nabídce, zvolte **všechny konfigurace**.
+1. Z **konfigurace** rozevírací nabídku, vyberte **všechny konfigurace**.
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
 
-1. Změnit **další možnosti** vlastnost, aby zahrnovala **/Zc:sizedDealloc** nebo **/Zc:sizedDealloc-** a potom zvolte **OK**.
+1. Upravit **další možnosti** vlastnost, aby zahrnovala **/Zc:sizedDealloc** nebo **/Zc:sizedDealloc-** a klikněte na tlačítko **OK**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
