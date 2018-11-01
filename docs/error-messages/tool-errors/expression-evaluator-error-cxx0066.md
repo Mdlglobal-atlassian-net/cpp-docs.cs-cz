@@ -1,28 +1,18 @@
 ---
-title: Vyhodnocování výrazu CXX0066 chyba | Dokumentace Microsoftu
-ms.custom: ''
+title: Chyba při vyhodnocování výrazu CXX0066
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - CXX0066
-dev_langs:
-- C++
 helpviewer_keywords:
 - CXX0066
 - CAN0066
 ms.assetid: 1321e4e1-b441-424b-9e76-c208d4a6f6ea
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2985583b24decfbfd2da1a1a4bfb1344f57bac49
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 108f9f7e957c69140da1cda9dcc2ffafe1830ec0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46026736"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639797"
 ---
 # <a name="expression-evaluator-error-cxx0066"></a>Chyba při vyhodnocování výrazu CXX0066
 

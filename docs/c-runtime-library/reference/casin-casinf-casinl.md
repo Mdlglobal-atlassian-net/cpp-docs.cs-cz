@@ -1,11 +1,6 @@
 ---
-title: casin, casinf, casinl | Microsoft Docs
-ms.custom: ''
+title: casin casinf, casinl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - casin
 - casinf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/casin
 - complex/casinf
 - complex/casinl
-dev_langs:
-- C++
 helpviewer_keywords:
 - casin function
 - casinf function
 - casinl function
 ms.assetid: b75d1455-7b1e-43b0-bd46-c530be190be9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c977430528d8fa5834d3959cbf0645bf68165f0f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 209c3da6d6ed03cb5a5b129003c999b002a1a6b7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394574"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539617"
 ---
-# <a name="casin-casinf-casinl"></a>casin, casinf, casinl
+# <a name="casin-casinf-casinl"></a>casin casinf, casinl
 
-Načte Arkus sinus komplexního čísla, s větve kusy mimo interval [-1, + 1] pro skutečné osu.
+Načte Arkus sinus komplexního čísla s kusy větev mimo interval [-1, + 1] na skutečné ose.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -75,25 +64,25 @@ _Lcomplex casinl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Komplexní číslo, které představuje úhel v radiánech.
+Komplexní čísla, která představuje úhel v radiánech.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Arkus sinus *z*, v radiánech. Výsledkem je, bez vazby pomyslná osy a v intervalu [-pí/2 + pí/2] pro skutečné osu.
+Arkus sinus *z*, v radiánech. Výsledkem je bez vazby na ose imaginární a v intervalu [-pí/2 + pí/2] na skutečné ose.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **casin** , přijmout a vrátit **_Fcomplex** a **_Lcomplex** hodnoty. V programu C **casin** vždy provede a vrátí **_Dcomplex** hodnotu.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **casin** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **casin** vždy převezme a vrátí **_Dcomplex** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Hlavička C|Hlavička C++|
+|Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
 |**casin**, **casinf**, **casinl**|\<complex.h>|\<ccomplex >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>

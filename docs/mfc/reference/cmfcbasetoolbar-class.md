@@ -1,33 +1,23 @@
 ---
-title: Cmfcbasetoolbar – třída | Dokumentace Microsoftu
-ms.custom: ''
+title: Cmfcbasetoolbar – třída
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCBaseToolBar
 - AFXBASETOOLBAR/CMFCBaseToolBar
 - AFXBASETOOLBAR/CMFCBaseToolBar::GetDockingMode
 - AFXBASETOOLBAR/CMFCBaseToolBar::GetMinSize
 - AFXBASETOOLBAR/CMFCBaseToolBar::OnAfterChangeParent
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCBaseToolBar [MFC], GetDockingMode
 - CMFCBaseToolBar [MFC], GetMinSize
 - CMFCBaseToolBar [MFC], OnAfterChangeParent
 ms.assetid: 5d79206d-55e4-46f8-b1b8-042e34d7f9da
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 023b8d4c48d5e9f04aeb1207db2236d6ef8b7ba6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 84756eb177fcec1981f3f2ed018d57eb27df9823
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395476"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523696"
 ---
 # <a name="cmfcbasetoolbar-class"></a>Cmfcbasetoolbar – třída
 

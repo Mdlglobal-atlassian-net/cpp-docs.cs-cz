@@ -1,35 +1,25 @@
 ---
-title: Chyby a upozornění Linkerů | Microsoft Docs
-ms.custom: ''
+title: Chyby a upozornění linkerů
 ms.date: 11/17/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - errors [C++]
 - linker [C++], errors and warnings
 - errors [C++], linker
 ms.assetid: d4b12c0f-4dae-48b2-9b9e-fedf94c94cb0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f279c4e59f8eb7f655ae10f8ea99ec6ed31115ec
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 7fc68641feae286c85d6f8ebec00387cdca1a43c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569953"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521175"
 ---
 # <a name="linker-tools-errors-and-warnings"></a>Chyby a upozornění linkerů
 
-ODKAZ, LIB, DUMPBIN a nástroje EDITBIN generovat tyto chyby a upozornění.
+ODKAZ, LIB, DUMPBIN a EDITBIN vygenerovat tyto chyby a upozornění.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-## <a name="linker-errors"></a>Chybami linkeru
+## <a name="linker-errors"></a>Chyby linkeru
 
 [Chyba linkerů LNK1000](../../error-messages/tool-errors/linker-tools-error-lnk1000.md)
 
@@ -133,7 +123,7 @@ ODKAZ, LIB, DUMPBIN a nástroje EDITBIN generovat tyto chyby a upozornění.
 
 [Chyba linkerů LNK1314](../../error-messages/tool-errors/linker-tools-error-lnk1314.md)
 
-[LNK1318 chyby nástroje linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1318.md)
+[LNK1318 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk1318.md)
 
 [Chyba linkerů LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md)
 
@@ -173,7 +163,7 @@ ODKAZ, LIB, DUMPBIN a nástroje EDITBIN generovat tyto chyby a upozornění.
 
 [Chyba linkerů LNK2039](../../error-messages/tool-errors/linker-tools-error-lnk2039.md)
 
-## <a name="linker-warnings"></a>Upozornění linkerů
+## <a name="linker-warnings"></a>Upozornění linkeru
 
 [Upozornění linkerů LNK4001](../../error-messages/tool-errors/linker-tools-warning-lnk4001.md)
 
@@ -185,7 +175,7 @@ ODKAZ, LIB, DUMPBIN a nástroje EDITBIN generovat tyto chyby a upozornění.
 
 [Upozornění linkerů LNK4014](../../error-messages/tool-errors/linker-tools-warning-lnk4014.md)
 
-[Upozornění LNK4020 nástroje linkeru](../../error-messages/tool-errors/linker-tools-warning-lnk4020.md)
+[LNK4020 upozornění Linkerů](../../error-messages/tool-errors/linker-tools-warning-lnk4020.md)
 
 [Upozornění linkerů LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md)
 

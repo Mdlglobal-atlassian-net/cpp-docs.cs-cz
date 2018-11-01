@@ -1,10 +1,6 @@
 ---
-title: _status87 – _statusfp –, _statusfp2 – | Microsoft Docs
-ms.custom: ''
+title: _status87, _statusfp, _statusfp2
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _statusfp2
 - _statusfp
@@ -29,8 +25,6 @@ f1_keywords:
 - _status87
 - status87
 - statusfp
-dev_langs:
-- C++
 helpviewer_keywords:
 - floating-point functions, getting status word
 - floating-point numbers, status word
@@ -44,20 +38,16 @@ helpviewer_keywords:
 - floating-point functions
 - status word
 ms.assetid: 7ef963fa-b1fb-429d-94d6-fbf282ab7432
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 69297d7ff1e3ec40cfe4fc22dec86c356d1697d4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 271c28dd4e267e5b3b702858cc398689e3e35d6f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412553"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597516"
 ---
 # <a name="status87-statusfp-statusfp2"></a>_status87, _statusfp, _statusfp2
 
-Získá s plovoucí desetinnou čárkou stavového slova.
+Získá slovo stav s plovoucí desetinnou čárkou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -70,32 +60,32 @@ void _statusfp2(unsigned int *px86, unsigned int *pSSE2)
 ### <a name="parameters"></a>Parametry
 
 *px86*<br/>
-Tato adresa je vyplněn stavového slova pro x87 jednotku s plovoucí desetinnou čárkou.
+Tato adresa je vyplněna stavovým slovem pro x87 jednotku s plovoucí desetinnou čárkou.
 
 *pSSE2*<br/>
-Tato adresa je vyplněn stavového slova pro jednotku SSE2 s plovoucí desetinnou čárkou.
+Tato adresa je vyplněna stavovým slovem pro jednotku s plovoucí desetinnou čárkou SSE2.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pro **_status87 –** a **_statusfp –**, bity v hodnotě, která je vrácena označují stav s plovoucí desetinnou čárkou. Najdete v článku FLOAT. H zahrnují v souboru definice služby bits, které se vrátí pomocí **_statusfp –**. Mnoho funkcí knihovny math upravit s plovoucí desetinnou čárkou stavového slova, s vést k neočekávaným výsledkům. Optimalizace můžete změnit pořadí, kombinace a eliminovat s plovoucí desetinnou čárkou operations kolem volání **_status87 –**, **_statusfp –** a související funkce. Použití [/Od (zakázat (ladění))](../../build/reference/od-disable-debug.md) – možnost kompilátoru nebo [fenv_access –](../../preprocessor/fenv-access.md) – Direktiva pragma aby optimalizace, které změní pořadí operací s plovoucí desetinnou čárkou. Návratové hodnoty z **_clearfp –** a **_statusfp –** a také návratových parametrů **_statusfp2 –**, jsou větší spolehlivost, pokud jsou prováděny méně operace s plovoucí desetinnou čárkou mezi známé stavy s plovoucí desetinnou čárkou stavového slova.
+Pro **_status87 –** a **_statusfp –**, bity ve vrácené hodnotě označují stav s plovoucí desetinnou čárkou. Podívejte se FLOAT. H zahrnout soubor pro definici bitů, které jsou vrácené **_statusfp –**. Mnoho matematických knihovních funkcí upravuje s plovoucí desetinnou čárkou stavového slova s nepředvídatelnými výsledky. Optimalizace můžete změnit pořadí, kombinovat a eliminovat operací s plovoucí desetinnou čárkou kolem volání **_status87 –**, **_statusfp –** a související funkce. Použití [/Od (zakázat (ladění))](../../build/reference/od-disable-debug.md) – možnost kompilátoru nebo [fenv_access](../../preprocessor/fenv-access.md) – Direktiva pragma zabránit optimalizace, které změnit pořadí operací s plovoucí desetinnou čárkou. Návratové hodnoty z **_clearfp –** a **_statusfp –** a také vrácené parametry **_statusfp2 –**, jsou spolehlivější, pokud se provádí méně operací s plovoucí desetinnou čárkou mezi známými stavy slovo stav s plovoucí desetinnou čárkou.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Statusfp –** funkce získá s plovoucí desetinnou čárkou stavového slova. Stavové slovo je kombinací stav s plovoucí desetinnou čárkou procesoru a další podmínky zjištěný obslužné rutiny výjimek plovoucí desetinné čárky – například přetečení zásobníku s plovoucí desetinnou čárkou a podtečení. Odmaskovaná výjimky jsou zaškrtnutá políčka pro dřív, než se vrátí obsah stavového slova. To znamená, že je volající informováni o čekající na vyřízení výjimky. Na x86 platforem, **_statusfp –** vrátí kombinaci x87 a stav SSE2 s plovoucí desetinnou čárkou. Na x64 platforem, stav, který je vrácen je na základě SSE MXCSR stavu. Na platformách ARM **_statusfp –** vrátí stav z registru FPSCR.
+**_Statusfp –** funkce získá slovo stav s plovoucí desetinnou čárkou. Stavové slovo je kombinací stav procesoru s plovoucí desetinnou čárkou a dalších podmínek zjištěných obslužnou rutinou výjimky s plovoucí desetinnou čárkou, například s plovoucí desetinnou čárkou přetečení a podtečení zásobníku. Nemaskované výjimky jsou kontrolovány před vrácením obsahu stavového slova jsou vráceny. To znamená, že volající je informován o čekajících výjimkách. Na x86 platformy, **_statusfp –** vrací kombinaci x87 a stav s plovoucí desetinnou čárkou SSE2. Na x64 platformy, který je vrácen stav je založen na stavu MXCSR SSE. Na platformách ARM **_statusfp –** vrátí stav z registru fpscr.
 
-**_statusfp –** je nezávislé na platformě, přenosné verze **_status87 –**. Je stejný jako **_status87 –** na platformách Intel (x86) a také podporuje x64 a ARM platformy. K zajištění, že váš kód s plovoucí desetinnou čárkou je přenosný na všechny architektury, použijte **_statusfp –**. Pokud cílíte pouze x86 platformy, můžete použít buď **_status87 –** nebo **_statusfp –**.
+**_statusfp –** je platformě nezávislá, přenosná verze **_status87 –**. Je stejný jako **_status87 –** na platformách Intel (x86) a je také podporována x64 a ARM platformy. Chcete-li zajistit, že váš kód s plovoucí desetinnou čárkou je přenosný na všechny architektury, použijte **_statusfp –**. Pokud cílíte pouze x86 platformy, můžete použít buď **_status87 –** nebo **_statusfp –**.
 
-Doporučujeme, abyste **_statusfp2 –** pro čipy (například Pentium IV), kteří mají x87 a procesor SSE2 s plovoucí desetinnou čárkou. Pro **_statusfp2 –**, adresy jsou vyplněny v aplikaci word s plovoucí desetinnou čárkou stav x87 nebo SSE2 procesor s plovoucí desetinnou čárkou. Čip TPM podporující x87 a SSE2 s plovoucí desetinnou čárkou procesory, EM_AMBIGUOUS je nastavena na 1 v případě **_statusfp –** nebo **_controlfp –** se používá a akce se nejednoznačné, protože může odkazovat x87 nebo SSE2 s plovoucí desetinnou čárkou stavového slova. **_Statusfp2 –** funkce je podporována pouze na x86 platformy.
+Doporučujeme **_statusfp2 –** pro čipy (například Pentium IV), které mají x87 a procesor s plovoucí desetinnou čárkou SSE2. Pro **_statusfp2 –**, jsou adresy vyplněny pomocí slovo stav s plovoucí desetinnou čárkou x87 nebo procesor s plovoucí desetinnou čárkou SSE2. Pro čip, který podporuje x87 a procesory s plovoucí desetinnou čárkou SSE2, je EM_AMBIGUOUS nastavena na 1, pokud **_statusfp –** nebo **_controlfp** se používá a akce byla nejednoznačná, protože by mohla odkazovat x87 nebo SSE2 slovo stav s plovoucí desetinnou čárkou. **_Statusfp2 –** funkce je podporována pouze na x86 platformy.
 
-Tyto funkce nejsou vhodné pro [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) protože modul CLR (CLR) podporuje pouze výchozí přesnost s plovoucí desetinnou čárkou.
+Tyto funkce nejsou vhodné pro [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) protože common language runtime (CLR) podporuje pouze základní přesnost s plovoucí desetinnou čárkou.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_status87 –**, **_statusfp –**, **_statusfp2 –**|\<float.h – >|
+|**_status87 –**, **_statusfp –**, **_statusfp2 –**|\<float.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -143,8 +133,8 @@ Status = 0x00000003 - inexact, underflow
 Status = 0x00080003 - inexact, underflow, denormal
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [_clear87, _clearfp](clear87-clearfp.md)<br/>
-[_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md)<br/>
+[_control87 – _controlfp, \__control87_2](control87-controlfp-control87-2.md)<br/>

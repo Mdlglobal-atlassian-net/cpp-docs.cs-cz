@@ -1,10 +1,6 @@
 ---
-title: mbsinit – | Microsoft Docs
-ms.custom: ''
+title: mbsinit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - mbsinit
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - mbsinit
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbsinit function
 ms.assetid: 4618555b-baaa-4d04-93fa-36abae411034
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 413592bcf3af01c898a72d0ca70239364ee432f9
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 8b467ae7f705fc2f4b2b38d3f76f3936f30ec15e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450447"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597233"
 ---
 # <a name="mbsinit"></a>mbsinit
 
@@ -52,17 +42,17 @@ int mbsinit(
 ### <a name="parameters"></a>Parametry
 
 *PS*<br/>
-Ukazatel na [mbstate_t](../../c-runtime-library/standard-types.md) proměnné.
+Ukazatel [mbstate_t](../../c-runtime-library/standard-types.md) proměnné.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nenulové hodnoty v případě *ps* je **NULL** nebo, pokud není právě převodu.
+Nenulovou hodnotu, pokud *ps* je **NULL** nebo, pokud není uprostřed převod.
 
 ## <a name="remarks"></a>Poznámky
 
-Když pomocí jedné z ANSI funkcí, které přijímá **mbstate_t** ukazatele, předávání na adresu vaší **mbstate_t** vrátí informace o tom, jestli byl převeden poslední bajt ve vyrovnávací paměti.
+Při použití jednou z funkcí ANSI, které provede **mbstate_t** ukazatel předávání na adresu vaší **mbstate_t** vrátí informace o tom, zda byl převeden posledního bajtu ve vyrovnávací paměti.
 
-Odpovídající znaková stránka je potřeba nainstalovat pro podporu více-bajtové znaky.
+Na stránce odpovídající kód musí být nainstalovaný pro podporu vícebajtových znaků.
 
 ## <a name="example"></a>Příklad
 
@@ -170,6 +160,6 @@ MB String: AaBbCcxXyYzZ
 WC String: AaBbCcxXyYzZ
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Klasifikace bajtů](../../c-runtime-library/byte-classification.md)<br/>

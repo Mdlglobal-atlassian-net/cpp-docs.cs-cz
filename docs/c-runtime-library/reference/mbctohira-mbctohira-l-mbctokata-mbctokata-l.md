@@ -1,10 +1,6 @@
 ---
-title: _mbctohira –, _mbctohira_l –, _mbctokata –, _mbctokata_l – | Microsoft Docs
-ms.custom: ''
+title: _mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbctohira
 - _mbctohira_l
@@ -32,8 +28,6 @@ f1_keywords:
 - mbctokata_l
 - mbctohira_l
 - _mbctokata_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbctokata function
 - _mbctokata_l function
@@ -44,23 +38,19 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 85c5cbca9d5decee1719f575f60db725c285d607
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 11b08449a7d27015c4ffe0ce398c471bbd6069f0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403089"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637798"
 ---
 # <a name="mbctohira-mbctohiral-mbctokata-mbctokatal"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 
-Převede hiragana a katakana znaků.
+Převede mezi znaky hiragana a katakana.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -84,27 +74,27 @@ unsigned int _mbctokata_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Vícebajtové znakové převést.
+Vícebajtový znak pro převod.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí znak převedený *c*, pokud je to možné. V opačném případě vrátí znak *c* beze změny.
+Každá z těchto funkcí vrací převedený znak *c*, pokud je to možné. V opačném případě vrátí znak *c* beze změny.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Mbctohira –** a **_mbctokata –** funkce testování znak *c* a pokud je to možné, použijte jednu z následujících převody.
+**_Mbctohira –** a **_mbctokata –** funkce otestují znak *c* a pokud je to možné, použijte jednu z následujících převodů.
 
 |Rutiny|Převede|
 |--------------|--------------|
-|**_mbctohira –**, **_mbctohira_l –**|Vícebajtových katakana k vícebajtové hiragana.|
-|**_mbctokata –**, **_mbctokata_l –**|Vícebajtových hiragana na více-bajtové znaky katakana.|
+|**_mbctohira –**, **_mbctohira_l –**|Vícebajtové znaky katakana pro vícebajtové znaky hiragana.|
+|**_mbctokata –**, **_mbctokata_l –**|Vícebajtové znaky hiragana na vícebajtové znaky katakana.|
 
-Výstupní hodnota je ovlivňován nastavením **LC_CTYPE –** kategorie nastavení národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze tyto funkce jsou identické, s tím rozdílem, že ty, které nejsou mít **_l** příponu použít aktuální národní prostředí pro toto chování závislých na národním prostředí a ty, které mají **_l** přípona místo použijte parametr národního prostředí, který se předává v. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze těchto funkcí jsou identické, s tím rozdílem, ty, které nemají mít **_l** přípona používají aktuální národní prostředí pro toto chování závislé na národním prostředí a ty, které mají **_l** místo toho příponu použijte parametr národního prostředí, které je předáno. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-V dřívějších verzích **_mbctohira –** nazýval **jtohira** a **_mbctokata –** nazýval **jtokata**. Nový kód použijte nové názvy.
+V dřívějších verzích **_mbctohira –** označovala jako **jtohira** a **_mbctokata –** označovala jako **jtokata**. Pro nový kód použijte nové názvy.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -115,9 +105,9 @@ V dřívějších verzích **_mbctohira –** nazýval **jtohira** a **_mbctokat
 |**_mbctokata**|\<Mbstring.h >|
 |**_mbctokata_l**|\<Mbstring.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
 [_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l](mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)<br/>

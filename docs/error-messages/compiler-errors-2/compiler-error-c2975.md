@@ -1,33 +1,23 @@
 ---
-title: C2975 Chyba kompilátoru | Microsoft Docs
-ms.custom: ''
+title: Chyba kompilátoru C2975
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2975
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2975
 ms.assetid: 526f6b9d-6c76-4c12-9252-1b1d7c1e06c7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 53cb020dc0d456f10b7cfbae82a16b2ebe5fda6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 66b7c0d61cbc8141b9ed3e5f6eb329b68eb00477
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246980"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609752"
 ---
-# <a name="compiler-error-c2975"></a>C2975 chyby kompilátoru
+# <a name="compiler-error-c2975"></a>Chyba kompilátoru C2975
 
-> '*argument*': argument neplatný šablony pro '*typ*', očekávána konstantní výraz kompilace
+> "*argument*': Neplatný argument šablony pro"*typ*", očekával se konstantní výraz za kompilace
 
-Argument šablony neodpovídá deklaraci šablony; konstantní výraz by měl být použit v lomené závorky. Jako šablona skutečné argumenty nejsou povoleny proměnné. Zkontrolujte definici šablony najít správný typy.
+Argument šablony se neshoduje s deklarace šablony; konstantní výraz by se zobrazit v lomených závorkách. Jako argumenty šablony nejsou povoleny proměnné. Zkontrolujte definici šablony se najít správné typy.
 
 ## <a name="example"></a>Příklad
 
@@ -45,7 +35,7 @@ int main() {
 }
 ```
 
-C2975 také nastane, když používáte &#95; &#95;řádku&#95; &#95; jako konstanta kompilaci s [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md). Jedno řešení by mohla být kompilovat s [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) místo **/ZI**.
+C2975 vyvolá také při použití &#95; &#95;řádku&#95; &#95; jako konstantu kompilace s [/zi](../../build/reference/z7-zi-zi-debug-information-format.md). Jedním řešením může být pro kompilaci pomocí [/zi](../../build/reference/z7-zi-zi-debug-information-format.md) místo **/zi**.
 
 ```cpp
 // C2975b.cpp

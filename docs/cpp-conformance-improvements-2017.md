@@ -1,23 +1,19 @@
 ---
-title: Vylepšení shody C++ | Dokumentace Microsoftu
-ms.custom: ''
-ms.date: 08/15/2018
+title: Vylepšení shody C++
+ms.date: 10/31/2018
 ms.technology:
 - cpp-language
-ms.topic: conceptual
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5661ff0debb3d06947e5b8ff686cc049ebe68fee
-ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
+ms.openlocfilehash: 18e4185f1cbd8b37e0e3cc7b11abc24505980b7d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50204740"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562159"
 ---
-# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Vylepšení shody C++ v sadě Visual Studio 2017 verze 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158)
+# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159update159"></a>Vylepšení shody C++ v sadě Visual Studio 2017 verze 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158), [15.9](#update_159)
 
 Podporu pro generalizovaný specifikátor constexpr a NSDMI pro agregace je kompilátor jazyka Microsoft Visual C++ teď kompletní pro funkce přidané ve 14 standardu C ++. Mějte na paměti, že v kompilátoru stále chybí několik funkcí ze standardů C++11 a C++98. Zobrazit [shoda jazyka Visual C++](visual-cpp-language-conformance.md) pro tabulku, která se zobrazuje aktuální stav kompilátoru.
 
@@ -341,7 +337,7 @@ void bar(A<0> *p)
 
 [P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html) změny `std::traits_type` členské funkce `length`, `compare`, a `find` aby `std::string_view` použít v konstantních výrazech. (V sadě Visual Studio 2017 verze 15.6 podporovaná Clang/LLVM jenom pro. Ve verzi 15.7 Preview 2, podpora je téměř dokončení pro ClXX stejně.)
 
-## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-157update157-and-158update158"></a>Opravy chyb v sadě Visual Studio verze 15.0, [15.3](#update_153), [15.5](#update_155), [15.7](#update_157), a [15.8](#update_158)
+## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-157update157-158update158-and-159update159"></a>Opravy chyb v sadě Visual Studio verze 15.0, [15.3](#update_153), [15.5](#update_155), [15.7](#update_157), [15.8](#update_158), a [15.9](#update_159)
 
 ### <a name="copy-list-initialization"></a>Inicializace kopírování seznamu
 
@@ -1832,6 +1828,158 @@ struct X : Base<T>
         Base<T>::template foo<int>();
     }
 };
+```
+## <a name="update_159"></a> Opravy chyb a změny chování v sadě Visual Studio 2017 verze 15.9
+
+### <a name="identifiers-in-member-alias-templates"></a>Identifikátory v členské šablony aliasů
+Identifikátor používán členem definice šablony aliasu musí být deklarované před použitím. 
+
+V předchozích verzích kompilátoru byla povolena následující kód:
+
+```cpp
+template <typename... Ts>
+struct A
+{
+  public:
+    template <typename U>
+    using from_template_t = decltype(from_template(A<U>{}));
+
+  private:
+    template <template <typename...> typename Type, typename... Args>
+    static constexpr A<Args...> from_template(A<Type<Args...>>);
+
+};
+
+A<>::from_template_t<A<int>> a;
+
+```
+
+V sadě Visual Studio 2017 verze 15.9 v **/ permissive-** režimu, vyvolá kompilátor C3861: *'from_template': identifikátor se nenašel*.d
+
+Chcete-li chybu opravit, deklarujte `a` před `A`.
+
+### <a name="modules-changes"></a>Změny modulů
+
+V sadě Visual Studio 2017 verze 15.9, kompilátor vyvolá C5050 pokaždé, když se možnosti příkazového řádku pro moduly nejsou konzistentní mezi vytvořením modulu a modulu spotřeby strany. V následujícím příkladu jsou dva problémy:
+
+- na straně spotřebu (main.cpp) možnost **/EHsc** není zadán.
+- verze jazyka C++ je **/std: c ++ 17** na straně vytváření a **/std: c ++ 14** na straně spotřeby. 
+
+```cmd
+cl /EHsc /std:c++17 m.ixx /experimental:module
+cl /experimental:module /module:reference m.ifc main.cpp /std:c++14
+```
+
+Kompilátor vyvolá C5050 u obou těchto případech: *upozornění C5050: jsem možné kompatibilní prostředí při importování modulu ': Neshoda verze jazyka C++.  Aktuální verze modulu "201402" "201703"*.
+
+Kromě toho kompilátor vyvolá C7536 pokaždé, když se soubor .ifc bylo manipulováno. Záhlaví rozhraní modulu obsahuje SHA2 potvrzovaného obsahu pod ní. Při importu soubor .ifc mají hodnotu hash stejným způsobem a potom zkontrolován-the-hash zadaná v hlavičce; Pokud tyto neodpovídají žádné chyby vyvolané C7536: *ifc nepovedlo kontroly integrity.  Očekávaný SHA2: 66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6*.
+
+### <a name="partial-ordering-involving-aliases-and-non-deduced-contexts"></a>Částečné řazení zahrnující aliasů a -odvodit kontextů
+
+V částečné řazení pravidla zahrnující aliasů v kontextech odvodit není odchylkami implementace. V následujícím příkladu, GCC a kompilátor C++ společnosti Microsoft (v **/ permissive-** režimu) vyvolá chybu, zatímco Clang přijímá kód. 
+
+```cpp
+#include <utility>
+using size_t = std::size_t;
+
+template <typename T>
+struct A {};
+template <size_t, size_t>
+struct AlignedBuffer {};
+template <size_t len>
+using AlignedStorage = AlignedBuffer<len, 4>;
+
+template <class T, class Alloc>
+int f(Alloc &alloc, const AlignedStorage<T::size> &buffer)
+{
+    return 1;
+}
+
+template <class T, class Alloc>
+int f(A<Alloc> &alloc, const AlignedStorage<T::size> &buffer)
+{
+    return 2;
+}
+
+struct Alloc
+{
+    static constexpr size_t size = 10;
+};
+
+int main()
+{
+    A<void> a;
+    AlignedStorage<Alloc::size> buf;
+    if (f<Alloc>(a, buf) != 2)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
+```
+
+V předchozím příkladu vyvolává C2668:
+
+```Output
+partial_alias.cpp(32): error C2668: 'f': ambiguous call to overloaded function
+partial_alias.cpp(18): note: could be 'int f<Alloc,void>(A<void> &,const AlignedBuffer<10,4> &)'
+partial_alias.cpp(12): note: or       'int f<Alloc,A<void>>(Alloc &,const AlignedBuffer<10,4> &)'
+        with
+        [
+            Alloc=A<void>
+        ]
+partial_alias.cpp(32): note: while trying to match the argument list '(A<void>, AlignedBuffer<10,4>)'
+```
+
+Implementace odchylkami je z důvodu regrese ve standardním textu, kde řešení problému s jádrem 2235 odebrat nějaký text, který umožní tato přetížení povolujeme. Aktuální standard jazyka C++ neposkytuje mechanismus pro částečně pořadí těchto funkcí, takže jsou považovány za nejednoznačné.
+
+Jako alternativní řešení jsme doporučujeme, abyste není využívají částečné řazení, chcete-li vyřešit tento problém a místo toho použijte SFINAE odebrat konkrétní přetížení. V následujícím příkladu používáme pomocná třída `IsA` odebrat první přetížení, kdy `Alloc` je specializací `A`:
+
+```cpp
+#include <utility>
+using size_t = std::size_t;
+
+template <typename T>
+struct A {};
+template <size_t, size_t>
+struct AlignedBuffer {};
+template <size_t len>
+using AlignedStorage = AlignedBuffer<len, 4>;
+
+template <typename T> struct IsA : std::false_type {};
+template <typename T> struct IsA<A<T>> : std::true_type {};
+
+template <class T, class Alloc, typename = std::enable_if_t<!IsA<Alloc>::value>>
+int f(Alloc &alloc, const AlignedStorage<T::size> &buffer)
+{
+    return 1;
+}
+
+template <class T, class Alloc>
+int f(A<Alloc> &alloc, const AlignedStorage<T::size> &buffer)
+{
+    return 2;
+}
+
+struct Alloc
+{
+    static constexpr size_t size = 10;
+};
+
+int main()
+{
+    A<void> a;
+    AlignedStorage<Alloc::size> buf;
+    if (f<Alloc>(a, buf) != 2)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
 ```
 
 ## <a name="see-also"></a>Viz také:

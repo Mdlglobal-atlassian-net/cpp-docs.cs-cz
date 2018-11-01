@@ -1,10 +1,6 @@
 ---
-title: _strdate –, _wstrdate – | Microsoft Docs
-ms.custom: ''
+title: _strdate, _wstrdate
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdate
 - _wstrdate
@@ -27,8 +23,6 @@ f1_keywords:
 - _wstrdate
 - _strdate
 - strdate
-dev_langs:
-- C++
 helpviewer_keywords:
 - strdate function
 - dates, copying
@@ -39,20 +33,16 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8924ac1ad29408dd1d69a68c6f31d9194831fbc2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4dc2ea7f25e644c9bf7a4ddca4a625991f37d912
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411354"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639608"
 ---
 # <a name="strdate-wstrdate"></a>_strdate, _wstrdate
 
-Zkopírujte aktuální systémový datum do vyrovnávací paměti. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [_strdate_s –, _wstrdate_s –](strdate-s-wstrdate-s.md).
+Zkopírujte aktuálního systémového data do vyrovnávací paměti. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [_strdate_s – _wstrdate_s –](strdate-s-wstrdate-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -76,27 +66,27 @@ wchar_t *_wstrdate(
 ### <a name="parameters"></a>Parametry
 
 *datestr*<br/>
-Ukazatel na vyrovnávací paměť obsahující řetězec formátovaný datum.
+Ukazatel do vyrovnávací paměti obsahující datum formátovaný řetězec.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrací ukazatel na výsledný řetězec znaků *datestr*.
+Každá z těchto funkcí vrací ukazatel na výsledný řetězec znak *datestr*.
 
 ## <a name="remarks"></a>Poznámky
 
-Bezpečnější verze tyto funkce jsou k dispozici. v tématu [_strdate_s –, _wstrdate_s –](strdate-s-wstrdate-s.md). Doporučuje se, že bezpečnější funkce použít kdykoli je to možné.
+Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [_strdate_s – _wstrdate_s –](strdate-s-wstrdate-s.md). Doporučuje se, že bezpečnější funkce použít kdykoli je to možné.
 
-**_Strdate –** funkce zkopíruje aktuální systémový datum do vyrovnávací paměti, na kterou odkazuje *datestr*naformátovanou **mm**/**dd** / **rr**, kde **mm** je dvě číslice představující měsíc, **dd** je dvě číslice představující den, a **RR**  je poslední dvě číslice roku. Například řetězec **12/05/99** představuje 5 prosinec 1999. Vyrovnávací paměti musí být minimálně 9 bajtů.
+**_Strdate –** funkce zkopíruje aktuálního systémového data do vyrovnávací paměti, na které odkazuje *datestr*naformátovanou **mm**/**dd** / **rr**, kde **mm** je dvě číslice představující měsíc, **dd** je dvě číslice představující den, a **RR**  je poslední dvě číslice v roce. Například řetězec **12/05/99** představuje 5. prosince 1999. Vyrovnávací paměť musí být dlouhý aspoň 9 bajtů.
 
-Pokud *datestr* je **NULL** ukazatele, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, tyto funkce vrátí hodnotu -1 a nastavte **errno** k **einval –**.
+Pokud *datestr* je **NULL** vyvolána ukazatel, obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a nastaví **errno** k **EINVAL**.
 
-**_wstrdate –** je verze široká charakterová **_strdate –**; argument a vrátí hodnotu **_wstrdate –** jsou široká charakterová řetězce. Tyto funkce chovají stejně jako jinak.
+**_wstrdate –** je verze širokého znaku **_strdate –**; argument a návratová hodnota funkce **_wstrdate –** jsou širokoznaké řetězce. Tyto funkce chovají identicky jinak.
 
-V jazyce C++ tyto funkce mají šabloně přetížení, které vyvolání novější a zabezpečené svými protějšky tyto funkce. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají novější, zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstrdate –**|**_strdate**|**_strdate**|**_wstrdate**|
 
@@ -107,7 +97,7 @@ V jazyce C++ tyto funkce mají šabloně přetížení, které vyvolání nověj
 |**_strdate**|\<Time.h >|
 |**_wstrdate**|\<Time.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -135,7 +125,7 @@ int main()
 OS date: 04/25/03
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Správa času](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>

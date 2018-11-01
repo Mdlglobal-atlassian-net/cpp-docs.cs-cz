@@ -1,67 +1,57 @@
 ---
-title: Vlastnosti linkeru (Linux C++) | Microsoft Docs
-ms.custom: ''
+title: Vlastnosti linkerů (Linux C++)
 ms.date: 9/26/2017
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 9187222d2ced21ece2f183655591c483abc8d500
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db2fc37189ca05835888faed26b242abc0fe5fcb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333102"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580671"
 ---
-# <a name="linker-properties-linux-c"></a>Vlastnosti linkeru (Linux C++)
+# <a name="linker-properties-linux-c"></a>Vlastnosti linkerů (Linux C++)
 
 ## <a name="general"></a>Obecné
 
 Vlastnost | Popis | Možnosti
 --- | ---| ---
-Výstupní soubor | Možnost přepíše výchozí název a umístění program, který vytvoří linkeru. (-o).
-Ukázat průběh | Zprávy o průběhu Linkeru výtisků.
-Version | -Verze informuje – možnost linkeru uvést číslo verze v hlavičce ke spustitelnému souboru.
-Povolit podrobný výstup | -Verbose – možnost informuje linkeru pro výstup podrobných zpráv pro ladění.
-trasování | --Trasování informuje – možnost linkeru do výstupního vstupní soubory, jako jsou zpracovávány.
-Symboly trasování | Tisk seznamu souborů, ve kterých se zobrazí symbol. (– symbol trasování = symbol)
-Tisk – mapy | --Tisk mapy informuje – možnost linkeru do výstupního mapu odkaz.
-Odkazy na symboly nerozpoznané sestavy | Tuto možnost, pokud je povoleno oznámí odkazy na symboly nevyřešená.
-Optimalizace pro využití paměti | Optimalizujte pro využití paměti rereading tabulky symbolů podle potřeby.
-Sdílené knihovny cesty pro hledání | Umožňuje uživateli k naplnění cesta hledání sdílenou knihovnu. (link - rpath-= cesta)
-Další knihovny adresáře | Umožňuje uživateli přepsat cestu prostředí knihovny. (-L složku).
-Linkeru | Určuje program, který má být vyvolán při propojování nebo cestu k linkeru do vzdáleného systému.
-Časový limit odkaz | Vzdálené propojení vypršení časového limitu v milisekundách.
-Kopírovat výstup | Určuje, jestli zkopírujte výstupní soubor sestavení ze vzdáleného systému v místním počítači.
+Výstupní soubor | Tato možnost přepíše výchozí název a umístění programu, který vytvoří linker. (-o).
+Zobrazit průběh | Vytiskne zprávy o průběhu Linkeru.
+Version | -Version přikáže linkeru, aby vložil číslo verze v záhlaví spustitelného souboru.
+Povolit podrobný výstup | -Verbose – možnost dá linkeru pokyn, do výstupu vypisoval podrobné zprávy pro ladění.
+Trasování | --Trace možnost přikazuje linkeru, aby se po zpracování výstupu ze vstupních souborů.
+Symboly trasování | Vytiskne seznam souborů, ve kterých se objeví symbol. (--trace-symbol = symbol)
+Tisknout mapu | --Print-map přikazuje linkeru, výstup v podobě mapy odkazu.
+Hlásit nevyřešené odkazy na symboly | Povolení této možnosti budou hlásit nevyřešené odkazy na symboly.
+Optimalizovat využití paměti | Optimalizujte využití paměti opětovným čtením tabulek symbolů podle potřeby.
+Sdílené cesty pro hledání knihovny | Umožňuje uživateli naplnit cestu hledání sdílené knihovny. (- rpath - link = path)
+Další adresáře knihoven | Umožňuje uživateli přepsat cestu ke knihovně prostředí. (-L složka).
+Linker | Určuje program, který se má volat během propojování, nebo cestu k linkeru ve vzdáleném systému.
+Časový limit propojování | Časový limit vzdáleného propojování, v milisekundách.
+Kopírovat výstup | Určuje, jestli se má kopírovat výstupní soubor sestavení ze vzdáleného systému do místního počítače.
 
 ## <a name="input"></a>Vstup
 
 Vlastnost | Popis | Možnosti
 --- | ---| ---
-Ignorovat konkrétní výchozí knihovny | Určuje jeden nebo více názvů výchozí knihovny ignorovat. (--vyloučení knihovny lib, lib)
-Ignorovat výchozí knihovny | Ignorovat výchozí knihovny a vyhledávat pouze knihovny explicitně zadat.
-Vynutit odkazy na nedefinované symboly | Vynutí symbolu, které je třeba zadat ve výstupním souboru jako nedefinované symbol. (- u symbol – undefined = symbol)
-Závislosti knihovny | Tato možnost umožňuje zadat další knihovny pro přidání do příkazového řádku linkeru. Další knihovny přidá na konec příkazového řádku linkeru s předponou 'lib' a konec s příponou '.a'.  (-lFILE)
-Další závislosti | Určuje další položek, které chcete přidat do příkazového řádku odkaz.
+Ignorovat konkrétní výchozí knihovny | Určuje jeden nebo více názvů výchozích knihoven k ignorování. (--exclude-libs lib, lib)
+Ignorovat výchozí knihovny | Ignorovat výchozí knihovny a hledá jenom explicitně zadané knihovny.
+Vynutit nedefinované odkazy na symboly | Vynutit zapsání symbolu do výstupního souboru jako nedefinovaného symbolu. (- u symbol--undefined = symbol)
+Závislé položky knihoven | Tato možnost umožňuje zadat další knihovny, které mají být přidány do příkazového řádku linkeru. Další knihovna bude přidána na konec příkazového řádku linkeru s předponou "lib" a končit příponou ".a".  (-lFILE)
+Další závislosti | Určuje další položky pro přidání do příkazového řádku propojení.
 
 ## <a name="debugging"></a>Ladění
 
 Vlastnost | Popis | Možnosti
 --- | ---| ---
-Ladicí program informací o symbolu | Ladicí program informací o symbolu z výstupního souboru. | **Zahrnout všechny**<br>**Vynechat pouze informace symbolu ladicí program**<br>**Vynechat všech informací o symbolu**<br>
-Mapování názvu souboru | Možnost mapy informuje linkeru pro vytvoření souboru s mapováním se zadaným názvem uživatele. (-Mapy =)
+Informace o symbolech ladicího programu | Ladicí program informace o symbolech z výstupního souboru. | **Zahrnout všechny**<br>**Vynechat informace o symbolech ladicího programu pouze**<br>**Vynechat všechny informace o symbolech**<br>
+Název souboru mapy | Možnost Map přikazuje linkeru, aby vytvořil soubor mapy s uživatelsky definovaným názvem. (-Map =)
 
 ## <a name="advanced"></a>Upřesnit
 
 Vlastnost | Popis | Možnosti
 --- | ---| ---
-Po přemístění označte proměnné určené jen pro čtení | Tato možnost označí proměnné jen pro čtení po přemístění.
-Povolit okamžitou funkce vazby | Tato možnost označí objektu pro vazbu okamžitou funkce.
-Nevyžadují spustitelné zásobníku | Tato možnost označí výstup jako nevyžadující spustitelné zásobníku.
-Celý archivu | Celý archivu používá všechny kódu ze zdroje a další závislosti.
+Označit jen pro čtení proměnné po přemístění | Tato možnost označí proměnné jen pro čtení po přemístění.
+Povolit okamžité vázání funkcí | Tato možnost označí objekt pro okamžité vázání funkcí.
+Nevyžadují žádná spustitelný zásobník | Tato možnost určí, že výstup nevyžaduje spustitelný zásobník.
+Celý archiv | Celý archiv používá veškerý kód ze zdrojů a dalších závislostí.

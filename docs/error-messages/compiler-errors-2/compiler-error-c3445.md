@@ -1,35 +1,25 @@
 ---
-title: C3445 Chyba kompilátoru | Microsoft Docs
-ms.custom: ''
+title: Chyba kompilátoru C3445
 ms.date: 04/10/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3445
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3445
 ms.assetid: 0d272bfc-136b-4025-a9ba-5e4eea5f8215
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4c37f04b907183b883772fd144ae0179683f088f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2eddeb5a56c953ca0864e29187fbe28c53bdee24
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256763"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50574210"
 ---
-# <a name="compiler-error-c3445"></a>C3445 chyby kompilátoru
+# <a name="compiler-error-c3445"></a>Chyba kompilátoru C3445
 
-> kopie – seznam inicializace '*typ*' nelze použít explicitní konstruktor
+> kopírování Inicializace seznamu z "*typ*' nelze použít explicitní konstruktor
 
-Podle ISO standardu C ++ 17 kompilátor je potřeba vzít v úvahu explicitní konstruktor pro rozlišení přetížení v kopírování. seznam inicializace, ale musíte zvýšit chybu, pokud je ve skutečnosti vybrali této přetížení.
+Podle ISO standardu C ++ 17 kompilátor je potřeba vzít v úvahu explicitní konstruktor pro řešení přetížení v Inicializace kopírování seznamu, ale musí vyvolat chybu, pokud je ve skutečnosti zvolená tohoto přetížení.
 
-Od verze Visual Studio 2017, kompilátor vyhledá chyby související s vytvoření objektu pomocí inicializátoru seznamu, které nebyly nalezeny ve Visual Studiu 2015. Tyto chyby by mohlo vést k havárie nebo nedefinované chování za běhu.
+Spouští se v sadě Visual Studio 2017, kompilátor zjistí chyby týkající se vytvoření objektu pomocí seznamu inicializátorů, které nebyly nalezeny ve Visual Studio 2015. K těmto chybám může vést k selhání nebo nedefinované chování za běhu.
 
 ## <a name="example"></a>Příklad
 
@@ -50,7 +40,7 @@ int main()
 }
 ```
 
-Chcete-li chybu opravit, použijte místo toho přímé inicializace:
+Chcete-li opravit chybu, použijte přímé inicializace:
 
 ```cpp
 // C3445b.cpp

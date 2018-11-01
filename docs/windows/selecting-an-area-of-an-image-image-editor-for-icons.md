@@ -1,31 +1,20 @@
 ---
-title: Výběr oblasti obrázku (Editor obrázků pro ikony) | Dokumentace Microsoftu
-ms.custom: ''
+title: Výběr oblasti obrázku (editor obrázků pro ikony)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.editing
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], image selection
 - Image editor [C++], selecting images
 - images [C++], selecting
 - cursors [C++], selecting areas of
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 73a773a5633ceb38173a4181e5e3effe2329fce0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5e2522d23b30a91639e887a8761871e3df8139f4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419578"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565110"
 ---
 # <a name="selecting-an-area-of-an-image-image-editor-for-icons"></a>Výběr oblasti obrázku (editor obrázků pro ikony)
 

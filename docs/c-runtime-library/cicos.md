@@ -1,10 +1,6 @@
 ---
-title: _Cicos – | Microsoft Docs
-ms.custom: ''
+title: _CIcos
 ms.date: 04/11/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CIcos
 apilocation:
@@ -19,26 +15,20 @@ apitype: DLLExport
 f1_keywords:
 - CIcos
 - _CIcos
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CIcos intrinsic
 - CIcos intrinsic
 ms.assetid: 6fc203fb-66f3-4ead-9784-f85833c26f1b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d60c9ae40cc0a432fd5367d721a771fd0e25e66
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fc6cb9a45a7467e63129bd859817ebdfc23a0160
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386709"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497226"
 ---
 # <a name="cicos"></a>_CIcos
 
-Výpočet kosinu nejvyšší hodnotu v zásobníku s plovoucí desetinnou čárkou.
+Vypočítá kosinus nejvyšší hodnotu v zásobníku s plovoucí desetinnou čárkou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,15 +38,15 @@ void __cdecl _CIcos();
 
 ## <a name="remarks"></a>Poznámky
 
-Tato verze [cos](../c-runtime-library/reference/cos-cosf-cosl.md) funkce má specializované konvence volání, která funguje s technologií kompilátoru. Ji urychluje spuštění, protože kopie brání generován a pomáhá s přidělení registru.
+Tato verze [cos](../c-runtime-library/reference/cos-cosf-cosl.md) funkce má specializované konvence volání, které kompilátor rozpozná. Urychluje provádění, protože kopie zabraňuje generovaných a pomáhá při přidělení registru.
 
-Výsledná hodnota se posune do horní části zásobníku s plovoucí desetinnou čárkou.
+Výsledná hodnota je vloženy do horní části zásobníku s plovoucí desetinnou čárkou.
 
 ## <a name="requirements"></a>Požadavky
 
 **Platforma:** x86
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
-[Cos, cosf –, cosl –](../c-runtime-library/reference/cos-cosf-cosl.md)<br/>
+[Cos cosf –, cosl –](../c-runtime-library/reference/cos-cosf-cosl.md)<br/>

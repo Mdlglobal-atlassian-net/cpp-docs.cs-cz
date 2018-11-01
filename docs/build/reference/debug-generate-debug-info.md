@@ -1,15 +1,9 @@
 ---
-title: -DEBUG (generování ladicích informací) | Dokumentace Microsoftu
-ms.custom: ''
+title: /DEBUG (Generovat ladicí informace)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateDebugInformation
 - /debug
-dev_langs:
-- C++
 helpviewer_keywords:
 - DEBUG linker option
 - /DEBUG linker option
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - debugging [C++], linker option
 - program databases [C++]
 ms.assetid: 1af389ae-3f8b-4d76-a087-1cdf861e9103
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 50ef5ac999a84b1f7b265cd7baab873087e56107
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 579f83298fb272182cf6f1904af38c323bae2751
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705299"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50625287"
 ---
 # <a name="debug-generate-debug-info"></a>/DEBUG (Generovat ladicí informace)
 
@@ -77,7 +67,7 @@ Není možné vytvořit s příponou .exe nebo .dll, který obsahuje informace o
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-1. Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateDebugInformation%2A>.
+1. Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateDebugInformation%2A>.
 
 ## <a name="see-also"></a>Viz také
 

@@ -1,10 +1,6 @@
 ---
-title: / GENPROFILE, /FASTGENPROFILE (Generovat profilace instrumentovaného sestavení) | Microsoft Docs
-ms.custom: ''
+title: / GENPROFILE, -fastgenprofile (generování profilace instrumentovaného sestavení)
 ms.date: 03/14/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - GENPROFILE
 - FASTGENPROFILE
@@ -14,20 +10,16 @@ helpviewer_keywords:
 - GENPROFILE
 - FASTGENPROFILE
 ms.assetid: deff5ce7-46f5-448a-b9cd-a7a83a6864c6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 05d7961ff46661b8f6df2768591932699c3965d4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e703c94d4a8b7cf7c70e68071959b775987f1710
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379299"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496444"
 ---
-# <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/ GENPROFILE, /FASTGENPROFILE (Generovat profilace instrumentovaného sestavení)
+# <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/ GENPROFILE, -fastgenprofile (generování profilace instrumentovaného sestavení)
 
-Určuje generování souboru .pgd podle linkeru pro podporu optimalizace na základě profilu (PGO). **/ GENPROFILE** a **/FASTGENPROFILE** používat různé výchozí parametry. Použití **/GENPROFILE** k upřednostnit přesnost přes rychlost a použití paměti při vytváření profilu. Použití **/FASTGENPROFILE** k upřednostnit menší využití paměti a rychlost přes přesnost.
+Určuje generování souboru .pgd linkerem pro podporu profilováním řízené optimalizace (PGO). **/ GENPROFILE** a **/FASTGENPROFILE** používají různé výchozí parametry. Použití **/genprofile** , aby přesnosti upřednostnil před rychlostí a využití paměti během profilace. Použití **/FASTGENPROFILE** do menších využití paměti a rychlost upřednostnil před přesnosti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,47 +28,47 @@ Určuje generování souboru .pgd podle linkeru pro podporu optimalizace na zák
 
 ### <a name="arguments"></a>Arguments
 
-Některý z následujících argumentů může být určen k **/GENPROFILE** nebo **/FASTGENPROFILE**. Argumenty, které jsou zde uvedeny odděleny znakem (**|**) znak se vzájemně vylučují. Použít čárku (**,**) znak pro oddělení možností.
+Některý z následujících argumentů dají **/genprofile** nebo **/FASTGENPROFILE**. Zde uvedené argumenty oddělená znakem | (**|**) znaků se vzájemně vylučují. Čárkami (**,**) znak k oddělení možností.
 
 **COUNTER32** &AMP;#124; **COUNTER64**<br/>
-Použít **COUNTER32** použít, použijte 32-bit test čítačů a **COUNTER64** k určení 64-bit test čítače. Pokud zadáte **/GENPROFILE**, výchozí hodnota je **COUNTER64**. Pokud zadáte **/FASTGENPROFILE**, výchozí hodnota je **COUNTER32**.
+Použít **COUNTER32** použít, použijte 32bitový test čítačů a **COUNTER64** k určení testu 64-bit čítače. Pokud zadáte **/genprofile**, výchozí hodnota je **COUNTER64**. Pokud zadáte **/FASTGENPROFILE**, výchozí hodnota je **COUNTER32**.
 
 **PŘESNÉ** &AMP;#124; **NOEXACT**<br/>
-Použití **EXACT** k určení interlocked přírůstcích vláken pro testy paměti. **NOEXACT** určuje nechráněné přírůstek operací pro testy paměti. Výchozí hodnota je **NOEXACT**.
+Použití **EXACT** k určení propojené přírůstky bezpečným pro vlákno pro testy. **NOEXACT** určuje operace Inkrementace nechráněné pro testy. Výchozí hodnota je **NOEXACT**.
 
 **MEMMAX**=*hodnotu*, **MEMMIN**=*hodnota*<br/>
-Použití **MEMMAX** a **MEMMIN** k určení rezervace maximální a minimální velikosti pro Cvičná data v paměti. Hodnota je množství paměti tak, aby vyhradil v bajtech. Ve výchozím nastavení tyto hodnoty jsou určeny interní heuristiky.
+Použití **MEMMAX** a **MEMMIN** k určení rezervace maximální a minimální velikosti pro trénovací data v paměti. Hodnota je množství paměti pro rezervaci v bajtech. Ve výchozím nastavení tyto hodnoty jsou určeny interní heuristiky.
 
 **CESTA** &AMP;#124; **NOPATH**  <br/>
-Použití **cesta** zadat samostatnou sadu čítačů PGO pro každý jedinečný cestu na funkci. Použití **NOPATH** zadat jen jednu sadu čítačů pro každou funkci. Pokud zadáte **/GENPROFILE**, výchozí hodnota je **CESTU** . Pokud zadáte **/FASTGENPROFILE**, výchozí hodnota je **NOPATH** .
+Použití **cesta** zadat samostatnou sadu čítačů PGO pro každou jedinečnou cestu k funkci. Použití **NOPATH** zadat pouze jednu sadu čítačů pro každou funkci. Pokud zadáte **/genprofile**, výchozí hodnota je **cesta** . Pokud zadáte **/FASTGENPROFILE**, výchozí hodnota je **NOPATH** .
 
-**TRACKEH** &AMP;#124; **NOTRACKEH** <br/>
-Určuje, jestli se má používat další čítače zachovat aktuální přehled, pokud jsou výjimky vyvolány během cvičení. Použití **TRACKEH** zadat další čítače pro přesný počet. Použít **NOTRACKEH** k zadání jednoho čítače pro kód, který nepoužívá výjimka zpracování nebo které není dojde výjimky v vaše scénáře školení.  Pokud zadáte **/GENPROFILE**, výchozí hodnota je **TRACKEH** . Pokud zadáte **/FASTGENPROFILE**, výchozí hodnota je **NOTRACKEH** .
+**TRACKEH** &AMP;#124; **NOTRACKEH**  <br/>
+Určuje, jestli se má použít další čítače zachovat přesný počet, pokud jsou výjimky vyvolány během cvičení. Použití **TRACKEH** zadat další čítače pro přesný počet. Použít **NOTRACKEH** k určení jednoho čítače pro kód, který nepoužívá výjimky zpracování nebo, který není nastat výjimky ve vašich scénářích školení.  Pokud zadáte **/genprofile**, výchozí hodnota je **TRACKEH** . Pokud zadáte **/FASTGENPROFILE**, výchozí hodnota je **NOTRACKEH** .
 
 **PGD**=*filename*<br/>
-Určuje název základního souboru pro soubor .pgd. Ve výchozím nastavení používá linkeru název základní spustitelné bitové kopie souboru s příponou .pgd.
+Určuje název základního souboru pro soubor .pgd. Ve výchozím nastavení používá propojovací program spustitelná image, která základní název souboru s příponou .pgd.
 
 ## <a name="remarks"></a>Poznámky
 
-**/GENPROFILE** a **/FASTGENPROFILE** říct možnosti linkeru pro generování souboru profilování instrumentace potřeba k podpoře aplikace školení pro optimalizace na základě profilu (PGO). Tyto možnosti jsou novinkou ve Visual Studiu 2015. Dáváte přednost těchto možností zastaralé **/LTCG:PGINSTRUMENT**, **/PGD** a **/POGOSAFEMODE** možnosti a **PogoSafeMode**,  **Vcprofile_alloc_scale –** a **vcprofile_path –** proměnné prostředí. Analytické informace generované školení aplikace se používá jako vstup pro provedení cílem optimalizace celého programu během sestavení. Můžete nastavit další možnosti k ovládání různých funkcí profilování výkonu během cvičení aplikace a sestavení. Výchozí možnosti určeného **/GENPROFILE** poskytují nejpřesnější výsledky, zejména pro složitých vícevláknové aplikace. **/FASTGENPROFILE** možnost využívá různé výchozí hodnoty pro dosažení vyššího výkonu během cvičení za cenu přesnost a nižší nároky na paměť.
+**/Genprofile** a **/FASTGENPROFILE** řekněte možnosti linkeru, aby generoval soubor profilování instrumentace potřeba k podpoře aplikace školení pro optimalizace na základě profilu (PGO). Tyto možnosti jsou nové v sadě Visual Studio 2015. Preferovat tyto možnosti se zastaralou **/LTCG:PGINSTRUMENT**, **/PGD** a **/POGOSAFEMODE** možnosti a **PogoSafeMode**,  **Vcprofile_alloc_scale –** a **vcprofile_path –** proměnné prostředí. Profilování informace generované aplikace školení se používá jako vstup provádět cílené optimalizace celého programu během sestavení. Můžete nastavit další možnosti ovládání různých funkcí profilování výkonu během cvičení aplikace a sestavení. Výchozí možnosti nastavené podle **/genprofile** poskytnout nejpřesnější možné výsledky, hlavně pro velké a komplexní vícevláknové aplikace. **/FASTGENPROFILE** možnost používá různé výchozí hodnoty pro nižší paměťové nároky a vyšší výkon při školení, ovšem na úkor přesnosti.
 
-Profilace informace zachycenou při spuštění aplikace instrumentované po vytvoření pomocí **/GENPROFILE** z **/FASTGENPROFILE**. Tyto informace je zachycení, když zadáte [/USEPROFILE](useprofile.md) – možnost linkeru provést profilace krok a pak se použije pro Průvodce krok optimalizovaného sestavení. Další informace o tom, jak cvičení vaší aplikace a podrobnosti o shromažďovaných datech najdete v tématu [optimalizace na základě profilu](profile-guided-optimizations.md).
+Informace pro profilaci jsou zachyceny po spuštění instrumentované aplikace po sestavení s použitím **/genprofile** z **/FASTGENPROFILE**. Tyto informace jsou zachyceny při zadávání [/useprofile](useprofile.md) – možnost linkeru provádět profilaci krok a pak použije k provedou kroky optimalizovaných sestavení. Další informace o tom, jak trénovat vaší aplikace a podrobnosti o shromážděných datech najdete v tématu [optimalizace na základě profilu](profile-guided-optimizations.md).
 
-Musíte zadat také **/ltgc** při zadání **/GENPROFILE** nebo **/FASTGENPROFILE**.
+Musíte zadat také **parametru/LTCG** při zadání **/genprofile** nebo **/FASTGENPROFILE**.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **Linkeru** > **příkazového řádku** stránku vlastností.
 
-1. Zadejte **/GENPROFILE** nebo **/FASTGENPROFILE** možnosti a argumenty do **další možnosti** pole. Zvolte **OK** uložte provedené změny.
+1. Zadejte **/genprofile** nebo **/FASTGENPROFILE** možnosti a argumenty do **další možnosti** pole. Zvolte **OK** uložte provedené změny.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-- V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Nastavení možností linkeru](../../build/reference/setting-linker-options.md)<br/>
 [Možnosti linkeru](../../build/reference/linker-options.md)<br/>

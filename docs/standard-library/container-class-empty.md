@@ -1,32 +1,22 @@
 ---
-title: Třída kontejneru::Empty | Microsoft Docs
-ms.custom: ''
+title: Třída kontejneru::empty
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - empty method
 ms.assetid: 2055418d-3c42-4d28-a7db-111586119ed9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fa89020c701f58bc5553a0d1382682b76a9ee9ba
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b7bd8ee08c82b0f1b19f44b962e0944e6e76d82d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841977"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613629"
 ---
 # <a name="container-classempty"></a>Třída kontejneru::empty
 
 > [!NOTE]
-> Toto téma se v dokumentaci k Visual C++ jako funkční příklad kontejnery použít ve standardní knihovně C++. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
+> Toto téma je v dokumentaci k Visual C++ jako funkční příklad kontejnery používané ve standardní knihovně jazyka C++. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
 
-Vrátí **true** pro prázdný řízené sekvenci.
+Vrátí **true** pro prázdnou řízenou sekvenci.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,6 +25,6 @@ Vrátí **true** pro prázdný řízené sekvenci.
 bool empty() const;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázkový kontejner – třída](../standard-library/sample-container-class.md)<br/>

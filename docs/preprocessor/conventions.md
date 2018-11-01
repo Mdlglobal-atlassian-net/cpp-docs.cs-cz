@@ -1,26 +1,16 @@
 ---
-title: Konvence | Dokumentace Microsoftu
-ms.custom: ''
+title: Konvence
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor
 - preprocessor, conventions
 ms.assetid: 469ce448-dc6c-4d0e-ba2b-e2e7a10155e1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ccb595911ef3032b652faedf1195f95b468d30e9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 222b84739809cfbad73a0f3e8e7febeebefef694
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761953"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629798"
 ---
 # <a name="conventions"></a>Konvence
 Úmluvy používají odlišné atributy písma pro různé součásti syntaxe. Symboly a písma jsou následující:
