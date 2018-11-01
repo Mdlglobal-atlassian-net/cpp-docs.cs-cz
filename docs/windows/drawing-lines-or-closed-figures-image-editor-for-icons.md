@@ -1,27 +1,16 @@
 ---
-title: Kreslení čar nebo uzavřených obrázků (Editor obrázků pro ikony) | Dokumentace Microsoftu
-ms.custom: ''
+title: Kreslení čar nebo uzavřených obrázků (editor obrázků pro ikony)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], drawing lines
 - shapes, drawing
 ms.assetid: 7edd86db-77b1-451f-8001-bbfed9c6304f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0ab40be4843b33e98daaf0f990e10544cb966a7d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a33376529faadd2433f704505aa0be8d4cc03033
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404381"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449072"
 ---
 # <a name="drawing-lines-or-closed-figures-image-editor-for-icons"></a>Kreslení čar nebo uzavřených obrázků (editor obrázků pro ikony)
 

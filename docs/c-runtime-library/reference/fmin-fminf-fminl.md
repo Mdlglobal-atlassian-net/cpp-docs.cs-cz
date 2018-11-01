@@ -1,11 +1,6 @@
 ---
-title: Fmin, fminf –, fminl | Microsoft Docs
-ms.custom: ''
+title: fmin, fminf, fminl
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fmin
 - fminf
@@ -35,16 +30,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: abf16c4cc21d1dc396f0b81aadc8d495c6bdd4b9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f73853e18bd5d7f699cd2c3109fe5fb830859bf1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398942"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464360"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin, fminf, fminl
 
@@ -89,29 +80,29 @@ Druhá hodnota pro porovnání.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí menší z *x* nebo *y*.
+Pokud je úspěšná, vrátí menší z *x* nebo *y*.
 
 |Vstup|Výsledek|
 |-----------|------------|
-|*x* je NaN.|*y*|
-|*y* je NaN.|*x*|
-|*x* a *y* jsou NaN.|NaN|
+|*x* NaN|*y*|
+|*y* NaN|*x*|
+|*x* a *y* jsou NaN|NaN|
 
-Funkce nezpůsobí [_matherr –](matherr.md) má být volána, způsobit, že všechny výjimky, s plovoucí desetinnou čárkou nebo změňte hodnotu **errno**.
+Funkci nezpůsobí [_matherr](matherr.md) má být volána, způsobit, že všechny výjimky s plovoucí desetinnou čárkou nebo změňte hodnotu vlastnosti **errno**.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **fmin** , přijmout a vrátit **float** a **dlouho** **dvojité** typy. V programu C **fmin** vždy provede a vrátí **dvojité**.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **fmin** , která používají a vrací **float** a **dlouhé** **double** typy. V programu jazyka C **fmin** vždy převezme a vrátí **double**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**Fmin**, **fminf –**, **fminl**|C: \<math.h ><br />C++: \<math.h > nebo \<cmath – >|
+|**Fmin –**, **fminf –**, **fminl**|C: \<math.h ><br />Jazyk C++: \<math.h > nebo \<cmath >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [fmax, fmaxf, fmaxl](fmax-fmaxf-fmaxl.md)<br/>

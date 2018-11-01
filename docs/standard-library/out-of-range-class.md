@@ -1,31 +1,21 @@
 ---
-title: out_of_range – třída | Microsoft Docs
-ms.custom: ''
+title: out_of_range – třída
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - stdexcept/std::out_of_range
-dev_langs:
-- C++
 helpviewer_keywords:
 - out_of_range class
 ms.assetid: d0e14dc0-065e-4666-9ac9-51e52223c503
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aeb29538dc73ddbefe2ee443cf7f8bfa660eb528
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 59d1a0dc987ddb0dc538fb02bfe28e0b073d3a7e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852862"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449085"
 ---
 # <a name="outofrange-class"></a>out_of_range – třída
 
-Třída slouží jako základní třída pro všechny výjimky vydané nahlásit argument, který je mimo platný rozsah.
+Tato třída slouží jako základní třída pro všechny výjimky vyvolané argument, který je mimo platný rozsah hlášení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>Poznámky
 
-Hodnoty vrácené [co](../standard-library/exception-class.md) je kopie **zpráva**`.`[data](../standard-library/basic-string-class.md#data).
+Hodnota vrácená [co](../standard-library/exception-class.md) je kopie **zpráva**`.`[data](../standard-library/basic-string-class.md#data).
 
 ## <a name="example"></a>Příklad
 
@@ -77,9 +67,9 @@ Caught: invalid string position
 
 **Záhlaví:** \<stdexcept – >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [logic_error – třída](../standard-library/logic-error-class.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

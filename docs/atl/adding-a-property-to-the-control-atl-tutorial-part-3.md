@@ -1,23 +1,14 @@
 ---
-title: Přidání vlastnosti do ovládacího prvku (ATL – tutoriál, část 3) | Dokumentace Microsoftu
+title: Přidání vlastnosti do ovládacího prvku (ATL – tutoriál, část 3)
 ms.custom: get-started-article
 ms.date: 09/26/2018
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: f775fe34-103b-4f07-9999-400e987ee030
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2373d2d703f18824274df158b31023669d8df945
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 9b8744e964274acb35c32a1ace02f71d0fed5c2d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820463"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466856"
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>Přidání vlastnosti do ovládacího prvku (ATL – tutoriál, část 3)
 
