@@ -1,26 +1,16 @@
 ---
-title: Zpracování (x64) výjimek | Dokumentace Microsoftu
-ms.custom: ''
+title: Zpracování výjimek (x64)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 34695d8e0edf7a6c910173eca0c465cf01028c29
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1eafa1d0bd156e9e95f707fd25dba68bd223acd3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718741"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676210"
 ---
 # <a name="exception-handling-x64"></a>Zpracování výjimek (x64)
 

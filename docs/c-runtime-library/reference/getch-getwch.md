@@ -1,10 +1,6 @@
 ---
-title: _getch –, _getwch – | Microsoft Docs
-ms.custom: ''
+title: _getch, _getwch
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getch
 - _getwch
@@ -25,8 +21,6 @@ f1_keywords:
 - getwch
 - _getch
 - _getwch
-dev_langs:
-- C++
 helpviewer_keywords:
 - characters, getting from console
 - getch function
@@ -35,23 +29,19 @@ helpviewer_keywords:
 - _getch function
 - getwch function
 ms.assetid: cc116be7-cff2-4274-970f-5e7b18ccc05c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b69149340d2fca15071292001b9936e9d3bd5470
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b8f8ed4985810526552a3b66e81462fd656bb23
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400113"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666307"
 ---
 # <a name="getch-getwch"></a>_getch, _getwch
 
 Získá znak z konzoly bez zobrazení.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,28 +52,28 @@ wint_t _getwch( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí znak pro čtení. Neexistuje žádný návratový chyby.
+Vrátí čtení znaku. Není vrácena žádná chyba.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Getch –** a **_getwch –** funkce číst jeden znak z konzole bez zobrazení znak. Žádná z těchto funkcí můžete použít ke čtení CTRL + C. Při čtení klíče funkce nebo klávesy se šipkami, každý funkce musí být volána dvakrát; Vrátí první volání 0 nebo 0xE0, a druhé volání vrátí kód skutečné klíče.
+**_Getch** a **_getwch –** funkce přečtou jeden znak z konzoly bez zobrazení znak. Žádná z těchto funkcí slouží ke čtení CTRL + C. Při čtení funkční klávesy nebo klávesy se šipkami, musí být každá funkce volána dvakrát; první volání vrátí 0 nebo 0xE0 a druhé volání vrátí skutečný kód klávesy.
 
-Tyto funkce Uzamknout volající vlákno a proto jsou bezpečné pro přístup z více vláken. Bez uzamčení verze najdete v tématu [_getch_nolock –, _getwch_nolock –](getch-nolock-getwch-nolock.md).
+Tyto funkce uzamykají volající vlákno a proto jsou vláknově bezpečné. Nezamykací verze viz [_getch_nolock – _getwch_nolock –](getch-nolock-getwch-nolock.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_gettch**|**_getch –**|**_getch –**|**_getwch**|
+|**_gettch**|**_getch**|**_getch**|**_getwch**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_getch –**|\<conio.h >|
+|**_getch**|\<conio.h >|
 |**_getwch**|\<conio.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -121,7 +111,7 @@ abcdefy
 Type 'Y' when finished typing keys: Y
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [I/O konzoly a portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getche, _getwche](getche-getwche.md)<br/>

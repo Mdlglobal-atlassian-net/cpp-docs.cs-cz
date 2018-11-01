@@ -1,10 +1,6 @@
 ---
-title: _get_purecall_handler, _set_purecall_handler – | Microsoft Docs
-ms.custom: ''
+title: _get_purecall_handler, _set_purecall_handler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_purecall_handler
 - _set_purecall_handler_m
@@ -29,8 +25,6 @@ f1_keywords:
 - stdlib/_set_purecall_handler
 - stdlib/_get_purecall_handler
 - _get_purecall_handler
-dev_langs:
-- C++
 helpviewer_keywords:
 - _set_purecall_handler function
 - set_purecall_handler function
@@ -40,20 +34,16 @@ helpviewer_keywords:
 - _set_purecall_handler_m function
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1dca104d04546786a361c63461e502f7aa8b6127
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0009b4bc1c7bf70bd84b9a82ecdc8643789e8164
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400272"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646355"
 ---
 # <a name="getpurecallhandler-setpurecallhandler"></a>_get_purecall_handler, _set_purecall_handler
 
-Získá nebo nastaví obslužnou rutinu chyby pro volání čistý virtuální funkce.
+Získá nebo nastaví obslužnou rutinu chyby pro volání čistě virtuální funkce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -67,22 +57,22 @@ _purecall_handler __cdecl _set_purecall_handler(
 
 ### <a name="parameters"></a>Parametry
 
-*Funkce*<br/>
-Funkce, která se má volat při volání čistou virtuální funkci. A **_purecall_handler** funkce musí mít typ vrácené hodnoty void.
+*– funkce*<br/>
+Funkce, která se má volat při volání čistě virtuální funkce. A **_purecall_handler** funkce musí mít typ vrácené hodnoty void.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Předchozí **_purecall_handler**. Vrátí **nullptr** Pokud se žádná předchozí obslužná rutina.
+Předchozí **_purecall_handler**. Vrátí **nullptr** Pokud žádná předchozí obslužnou rutinou.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Get_purecall_handler** a **_set_purecall_handler –** funkce jsou specifické pro společnost Microsoft a platí pouze pro C++ – kód.
+**_Get_purecall_handler** a **_set_purecall_handler –** funkce jsou specifické pro společnost Microsoft a platí pouze pro kód jazyka C++.
 
-Volání čistou virtuální funkci se o chybu, protože nemá žádné implementace. Ve výchozím nastavení kompilátor generuje kód pro vyvolání funkce obslužné rutiny k chybě při volání čistou virtuální funkci, která ukončí program. Můžete nainstalovat funkci obslužné rutiny vlastní chyby pro volání čistou virtuální funkci, je pro ladění nebo účely vytváření sestav zachytit. Pokud chcete používat vlastní obslužnou rutinu chyby, vytvořte funkci, která má **_purecall_handler** podpis, pak použít **_set_purecall_handler –** Chcete-li obslužná rutina aktuální.
+Volání čistě virtuální funkce se o chybu, protože nemá žádnou implementaci. Ve výchozím nastavení kompilátor vygeneruje kód pro vyvolat funkci obslužné rutiny k chybě při volání čistě virtuální funkce, která ukončí program. Můžete nainstalovat vlastní funkci obslužné rutiny chyby pro volání čistě virtuální funkce, je pro ladění nebo pro účely vykazování zachytit. Pokud chcete použít vlastní obslužnou rutinu chyb, vytvořte funkci, která má **_purecall_handler** podpis, pak použít **_set_purecall_handler –** k němu aktuální obslužné rutiny.
 
-Protože je pouze jedna **_purecall_handler** pro každý proces, při volání **_set_purecall_handler –** ji okamžitě ovlivňuje všechna vlákna. Poslední volající na jakékoli vlákno nastaví obslužnou rutinu.
+Protože je jen jeden **_purecall_handler** pro každý proces, při volání **_set_purecall_handler –** okamžitě ovlivní všechna vlákna. Poslední volající v libovolném vlákně nastaví obslužnou rutinu.
 
-Chcete-li obnovit výchozí chování, volejte **_set_purecall_handler –** pomocí **nullptr** argument.
+Chcete-li obnovit výchozí chování, zavolejte **_set_purecall_handler –** pomocí **nullptr** argument.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -90,7 +80,7 @@ Chcete-li obnovit výchozí chování, volejte **_set_purecall_handler –** pom
 |-------------|---------------------|
 |**_get_purecall_handler**, **_set_purecall_handler –**|\<cstdlib – > nebo \<stdlib.h >|
 
-Informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -141,7 +131,7 @@ int _tmain(int argc, _TCHAR* argv[])
 In _purecall_handler.
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zpracování chyb](../../c-runtime-library/error-handling-crt.md)<br/>
 [_purecall](purecall.md)<br/>

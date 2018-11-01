@@ -1,10 +1,6 @@
 ---
-title: _putch –, _putwch – | Microsoft Docs
-ms.custom: ''
+title: _putch, _putwch
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _putwch
 - _putch
@@ -25,8 +21,6 @@ f1_keywords:
 - _putch
 - putwch
 - _putwch
-dev_langs:
-- C++
 helpviewer_keywords:
 - _putch function
 - characters, writing
@@ -35,23 +29,19 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a0a6e50a4cd6794e28cc59bb2b080c57c0993986
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9abd27a926e641e72595360ed3951fad9e888676
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401802"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434759"
 ---
 # <a name="putch-putwch"></a>_putch, _putwch
 
 Zapíše znak do konzoly.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -60,24 +50,24 @@ int _putch(
 int c
 );
 wint_t _putwch(
-   wchar_t c
+   wchar_t c
 );
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak, který má být výstup.
+Znak pro výstup.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí *c* v případě úspěchu. Pokud **_putch –** nezdaří, vrátí **EOF**; Pokud **_putwch –** nezdaří, vrátí **weof –**.
+Vrátí *c* v případě úspěšného ověření. Pokud **_putch** selže, vrátí **EOF**; Pokud **_putwch** selže, vrátí **WEOF**.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce zápisu znak *c* přímo, bez ukládání do vyrovnávací paměti, ke konzole. V systému Windows NT **_putwch –** zapíše na aktuální nastavení národního prostředí konzoly pomocí znaků Unicode.
+Tyto funkce vypíšou znak *c* přímo, bez ukládání do vyrovnávací paměti, do konzoly. V systému Windows NT **_putwch** zapíše znaky Unicode pomocí aktuálního národního nastavení konzoly.
 
-Verzi pomocí **jazyka _nolock** příponu jsou shodné s tím rozdílem, že nejsou chráněny z narušení jiná vlákna. Další informace najdete v tématu **_putch_nolock –**, **_putwch_nolock –**.
+Verze s **_nolock** přípona jsou stejné s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Další informace najdete v tématu **_putch_nolock**, **_putwch_nolock**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -92,17 +82,17 @@ Verzi pomocí **jazyka _nolock** příponu jsou shodné s tím rozdílem, že ne
 |**_putch**|\<conio.h >|
 |**_putwch**|\<conio.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [_getch –](getch-getwch.md).
+Podívejte se na příklad pro [_getch](getch-getwch.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [I/O konzoly a portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>

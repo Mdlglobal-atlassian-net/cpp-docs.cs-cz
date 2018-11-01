@@ -1,27 +1,17 @@
 ---
-title: Deklarace pole | Dokumentace Microsoftu
-ms.custom: ''
+title: Deklarace pole
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - multidimensional arrays
 - declaring arrays
 - arrays [C++], declaring
 ms.assetid: 5f958b97-cef0-4058-bbc6-37c460aaed9b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d776adab3404bf1244c7365e905866b4d041fc00
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 43fd2829d8a2d9984a068d74b4e7972a9f1b116c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46091906"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449917"
 ---
 # <a name="array-declarations"></a>Deklarace pole
 

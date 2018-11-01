@@ -1,10 +1,6 @@
 ---
-title: _expand_dbg – | Microsoft Docs
-ms.custom: ''
+title: _expand_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _expand_dbg
 apilocation:
@@ -22,27 +18,21 @@ apitype: DLLExport
 f1_keywords:
 - expand_dbg
 - _expand_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory blocks, changing size
 - expand_dbg function
 - _expand_dbg function
 ms.assetid: dc58c91f-72a8-48c6-b643-fe130fb6c1fd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 023bda761454a6a1e18ce68c8e7576af2759abbf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc3aa2b7e39b52eb71ac10a9b5c4a221ba6fb70c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403632"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663798"
 ---
 # <a name="expanddbg"></a>_expand_dbg
 
-Změní velikost zadaný blok paměti v haldě rozšiřování nebo smluvní blok (pouze ladicí verze).
+Změní velikost zadaný blok paměti v haldě rozbalením nebo smluvní bloku (pouze ladicí verze).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -58,38 +48,38 @@ void *_expand_dbg(
 
 ### <a name="parameters"></a>Parametry
 
-*UserData*<br/>
-Ukazatel na dříve přidělenou paměť bloku.
+*userData*<br/>
+Ukazatele na blok paměti dříve přidělené.
 
 *newSize*<br/>
-Požadovaný novou velikost bloku (v bajtech).
+Požaduje novou velikost bloku (v bajtech).
 
 *blockType*<br/>
-Požadovaný typ pro změněnou blok: **_client_block –** nebo **_normal_block –**.
+Požadovaný typ změněnou velikostí bloku: **_CLIENT_BLOCK** nebo **_NORMAL_BLOCK**.
 
 *Název souboru*<br/>
-Ukazatel na název zdrojového souboru, který vyžadují rozbalte operaci nebo **NULL**.
+Ukazatel na název zdrojového souboru, který vyžadují rozbalte operace nebo **NULL**.
 
-*lineNumber*<br/>
-Číslo řádku na zdrojový soubor, kde byla vyžádána operace rozbalte nebo **NULL**.
+*Číslo řádku*<br/>
+Číslo řádku ve zdrojovém souboru, kde byla požadovaná operace rozbalení nebo **NULL**.
 
-*Filename* a *linenumber* parametry jsou k dispozici pouze při **_expand_dbg –** explicitně volané nebo [_crtdbg_map_alloc –](../../c-runtime-library/crtdbg-map-alloc.md)preprocesoru konstanta byla definována.
+*Filename* a *linenumber* parametry jsou k dispozici pouze při **_expand_dbg –** explicitně volána nebo [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)byla definována konstanta preprocesoru.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Při úspěšném dokončení **_expand_dbg –** vrací ukazatel na blok změněnou velikostí paměti. Vzhledem k tomu, že paměť není přesunut, adresa je stejný jako userData. Pokud došlo k chybě nebo bloku nelze rozbalit na požadovanou velikost, vrátí **NULL**. Pokud dojde k selhání, **errno** je s informacemi z operačního systému, o povaze chyby. Další informace o **errno**, najdete v části [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Při úspěšném dokončení **_expand_dbg –** vrací ukazatel na blok paměti změněnou velikostí. Vzhledem k tomu, že paměť není přesunut, adresa je stejné jako userData. Pokud došlo k chybě nebo blok nelze rozbalit požadovaná velikost, vrátí hodnotu **NULL**. Pokud dojde k selhání, **errno** je s informacemi o operačním systému o povaze chyby. Další informace o **errno**, naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Expand_dbg –** funkce je ladicí verze _[rozbalte](expand.md) funkce. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, každé volání **_expand_dbg –** byla snížena volání **_rozšířit lokalitu**. Obě **_rozšířit lokalitu** a **_expand_dbg –** změnit velikost bloku paměti základní haldy, ale **_expand_dbg –** může vyrovnávat několik funkce ladění: vyrovnávací paměti na obou stranách uživatele část bloku chcete otestovat nevracení, parametr typ bloku ke sledování přidělení konkrétní typy a *filename*/*linenumber* informací k určení původu požadavků na přidělení.
+**_Expand_dbg –** funkce je ladicí verze _[rozbalte](expand.md) funkce. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, každé volání **_expand_dbg –** je omezená na volání **_expand**. Obě **_expand** a **_expand_dbg –** změnit velikost bloku paměti v haldě základní, ale **_expand_dbg –** obsáhne některé funkce pro ladění: vyrovnávací paměť po obou stranách uživatele část bloku pro testování nevracení, parametr typu blok pro sledování konkrétní přidělení typů a *filename*/*linenumber* informací pro určení původu požadavky na přidělení.
 
-**_expand_dbg –** změní velikost bloku zadaná paměťová se něco víc místa, než požadovaný *newSize*. *newSize* může být větší nebo menší než velikost bloku původně přidělenou paměť. Další prostor se používá správce haldy ladění propojení bloky paměti ladění a k poskytování aplikace s informace o ladění záhlaví a přepsat vyrovnávací paměti. Změna provádí rozšiřování či smluvní původní bloku paměti. **_expand_dbg –** nepřesouvá bloku paměti, stejně jako [_realloc_dbg –](realloc-dbg.md) funkce.
+**_expand_dbg –** změní zadaná paměťová blok s mírně více místa, než požadovaná velikost *newSize*. *newSize* může být větší nebo menší než velikost bloku původně přidělené paměti. Další místo používá správce hald ladění k propojení paměť bloků ladicího a k poskytování aplikací s informace hlavičky ladění a přepsat vyrovnávací paměti. Změnu velikosti provádí rozbalení nebo smluvní původního bloku paměti. **_expand_dbg –** nepřesouvá bloku paměti, stejně jako [_realloc_dbg –](realloc-dbg.md) funkce.
 
-Když *newSize* je větší než původní bloku je velikost bloku paměti rozšířena. Během rozšiřování, pokud blok paměti nelze rozšířit tak, aby dokázala pojmout požadovanou velikost **NULL** je vrácen. Když *newSize* je menší než původní blok velikost bloku paměti sjednané dokud novou velikost.
+Když *newSize* je větší než původní blok je rozbalená velikost bloku paměti. Během rozbalování, pokud blok paměti nelze rozšířit tak, aby vyhovovaly požadovaná velikost **NULL** je vrácena. Když *newSize* je menší než původní blok velikost bloku paměti je zakázku, dokud není dosaženo novou velikost.
 
-Informace o tom, jak jsou bloky paměti přidělené, inicializovat a spravovat ladicí verze základní heap najdete v tématu [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details). Informace o typech bloku přidělení a způsobu jejich použití naleznete v tématu [typy bloků v haldě ladění](/visualstudio/debugger/crt-debug-heap-details). Informace o rozdílech mezi volání funkce standardní haldy a jeho ladicí verze v sestavení ladicí verze aplikace, najdete v tématu [ladění verzí z funkcí přidělení haldy](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
+Informace o způsobu jsou bloky paměti přidělené, inicializovat a správy v ladicí verzi základní haldy viz [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details). Informace o typech bloku přidělení a způsob jejich použití naleznete v tématu [typy bloků na haldě ladění](/visualstudio/debugger/crt-debug-heap-details). Informace o rozdílech mezi volání funkce haldy standardní a jeho ladicí verze v sestavení pro ladění aplikace najdete v tématu [ladění verze z funkcí přidělení haldy](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
-Tato funkce ověří jeho parametry. Pokud *memblock* je ukazatel s hodnotou null, nebo pokud je větší než velikost **_heap_maxreq –**, tato funkce vyvolá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **errno** je nastaven na **einval –** a funkce vrátí hodnotu **NULL**.
+Tato funkce ověřuje své parametry. Pokud *memblock* je ukazatel s hodnotou null, nebo pokud je větší než velikost **_heap_maxreq –**, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **errno** je nastavena na **EINVAL** a funkce vrátí **NULL**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -97,11 +87,11 @@ Tato funkce ověří jeho parametry. Pokud *memblock* je ukazatel s hodnotou nul
 |-------------|---------------------|
 |**_expand_dbg**|\<crtdbg.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Ladicí verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md) pouze.
+Ladicí verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
 
 ## <a name="example"></a>Příklad
 
@@ -158,9 +148,9 @@ Size of block after _expand_dbg of 1 more long: 164
 
 ## <a name="comment"></a>Komentář
 
-Výstup tohoto programu, závisí na počítače umožňuje rozšířit všechny oddíly. Pokud jsou všechny části rozšiřovat, výstup se projeví v sekci Výstup.
+Výstup tohoto programu závisí na počítače umožňuje rozšířit všechny oddíly. Pokud všechny oddíly jsou rozbaleny, výstup se projeví v části výstupu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Rutiny ladění](../../c-runtime-library/debug-routines.md)<br/>
 [_malloc_dbg](malloc-dbg.md)<br/>

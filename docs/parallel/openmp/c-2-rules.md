@@ -1,23 +1,13 @@
 ---
-title: C.2 pravidla | Dokumentace Microsoftu
-ms.custom: ''
+title: C.2 Pravidla
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 4d52fef7-3eb7-4480-a335-8ed48681092b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c5845a9125bb32254fc0c03b03e9b6076a086d1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7c0de4c14e229716bcf764d9859be439090368b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404771"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642803"
 ---
 # <a name="c2-rules"></a>C.2 Pravidla
 
@@ -199,18 +189,18 @@ Zápis je popsaný v části 6.1 standardu C. Tento dodatek gramatiky ukazuje ro
 &nbsp;&nbsp;&nbsp;&nbsp;*threadprivate – direktiva*
 
 *Direktiva threadprivate*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**# threadprivate omp – Direktiva pragma (** *seznamu proměnné***)** *nový řádek* 
+&nbsp;&nbsp;&nbsp;&nbsp;**# threadprivate omp – Direktiva pragma (** *seznamu proměnné***)** *nový řádek*
 
 *data klauzule*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**privátní (** *seznamu proměnné* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**copyprivate (***seznamu proměnné***)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**firstprivate (***seznamu proměnné***)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**lastprivate (** *seznamu proměnné***)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**copyprivate (***seznamu proměnné***)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**firstprivate (***seznamu proměnné***)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**lastprivate (** *seznamu proměnné***)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**sdílené (** *seznamu proměnné* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Výchozí (sdílené)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Výchozí (žádné)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**snížení (***operátorem reduction***:***seznamu proměnné***)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**copyin (***seznamu proměnné***)** 
+&nbsp;&nbsp;&nbsp;&nbsp;**snížení (***operátorem reduction***:***seznamu proměnné***)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**copyin (***seznamu proměnné***)**
 
 *operátorem Reduction*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Jeden z:  **+  \* -& ^ &#124; & &&#124;&#124;**

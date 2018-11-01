@@ -1,10 +1,6 @@
 ---
-title: _fwrite_nolock – | Microsoft Docs
-ms.custom: ''
+title: _fwrite_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fwrite_nolock
 apilocation:
@@ -23,27 +19,21 @@ apitype: DLLExport
 f1_keywords:
 - _fwrite_nolock
 - fwrite_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - fwrite_nolock function
 - streams, writing data to
 - _fwrite_nolock function
 ms.assetid: 2b4ec6ce-742e-4615-8407-44a0a18ec1d7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e22f2c281b076e64419686b9f7c058e284cc5532
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c899e34e19547b30a42135f3f818f220f1bc5b7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397919"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626050"
 ---
 # <a name="fwritenolock"></a>_fwrite_nolock
 
-Zapíše data do datového proudu, bez blokování vlákno.
+Zapíše data do datového proudu bez zamčení vlákna.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,13 +52,13 @@ size_t _fwrite_nolock(
 Ukazatel na data, která mají být zapsána.
 
 *Velikost*<br/>
-Položka velikost v bajtech.
+Velikost položky v bajtech.
 
 *Počet*<br/>
-Maximální počet položek, které mají být zapsána.
+Maximální počet položek má být proveden zápis.
 
-*Datový proud*<br/>
-Ukazatel **souboru** struktura.
+*Stream*<br/>
+Ukazatel **souboru** struktury.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -76,7 +66,7 @@ Stejné jako [fwrite –](fwrite.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Tato funkce je verze bez uzamčení **fwrite –**. Je stejný jako **fwrite –** s tím rozdílem, že není chráněn před narušení další vlákna. Může být rychlejší, protože není nesnižuje režii uzamykání jiná vlákna. Tuto funkci můžete používejte pouze v kontextu vláken jako je například aplikace nebo kde oboru volání již zpracovává izolace přístup z více vláken.
+Tato funkce je nezamykací verzi **fwrite –**. Je stejný jako **fwrite –** s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Může být rychlejší, protože narůstání režii uzamykáním ostatních vláken. Tuto funkci lze používejte pouze v kontextech bezpečných na vlákna, jako je například aplikace s jedním vláknem nebo pokud volající obor již zpracovává izolaci vláken.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -84,14 +74,14 @@ Tato funkce je verze bez uzamčení **fwrite –**. Je stejný jako **fwrite –
 |--------------|---------------------|
 |**_fwrite_nolock**|\<stdio.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
 Podívejte se na příklad pro [fread –](fread.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [fread](fread.md)<br/>
 [_write](write.md)<br/>

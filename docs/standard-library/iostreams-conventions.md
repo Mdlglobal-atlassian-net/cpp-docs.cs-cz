@@ -1,46 +1,36 @@
 ---
-title: iostreams – konvence | Microsoft Docs
-ms.custom: ''
+title: iostreams – konvence
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - iostream header
 - C++ Standard Library, iostreams
 ms.assetid: 9fe5ded0-37a1-48d1-9671-c81ffc4760ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 37ba52981f317ff9929a820c42d35cde0506256f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 52cdd06385994e49ff793e40318ca4cbbbcfcda0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846451"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645559"
 ---
 # <a name="iostreams-conventions"></a>iostreams – konvence
 
-Iostreams hlavičky podporují převody mezi text a kódovaného formulářů a vstup a výstup do externích souborů:
+Záhlaví iostreams podporuje převody mezi textem a kódovaného formulářů a vstup a výstup na externí soubory:
 
 |||
 |-|-|
-|[\<fstream >](../standard-library/fstream.md)|[\<iomanip – >](../standard-library/iomanip.md)|
+|[\<fstream – >](../standard-library/fstream.md)|[\<iomanip >](../standard-library/iomanip.md)|
 |[\<IOS >](../standard-library/ios.md)|[\<iosfwd>](../standard-library/iosfwd.md)|
-|[\<iostream >](../standard-library/iostream.md)|[\<IStream on Request >](../standard-library/istream.md)|
-|[\<ostream – >](../standard-library/ostream.md)|[\<sstream – >](../standard-library/sstream.md)|
+|[\<iostream – >](../standard-library/iostream.md)|[\<IStream >](../standard-library/istream.md)|
+|[\<ostream >](../standard-library/ostream.md)|[\<sstream >](../standard-library/sstream.md)|
 |[\<streambuf – >](../standard-library/streambuf.md)|[\<strstream – >](../standard-library/strstream.md)|
 
-Nejjednodušší použití iostreams vyžaduje pouze zahrnout záhlaví [ \<iostream >](../standard-library/iostream.md). Potom můžete rozbalit hodnoty z [cin](../standard-library/iostream.md#cin) nebo [wcin](../standard-library/iostream.md#wcin) číst standardní vstup. Pravidla pro tuto činnost, jsou uvedeny v popisu třídy [basic_istream – třída](../standard-library/basic-istream-class.md). Můžete také vložit hodnoty [cout](../standard-library/iostream.md#cout) nebo [wcout](../standard-library/iostream.md#wcout) k zápisu ve standardním výstupu. Pravidla pro tuto činnost, jsou uvedeny v popisu třídy [basic_ostream – třída](../standard-library/basic-ostream-class.md). Formát společné pro extraktory i insertors správy v třídě [basic_ios – třída](../standard-library/basic-ios-class.md). Manipulace s nimi tyto informace formát guise extrahování a vkládání objektů je provincii několik manipulátory.
+Nejjednodušší použití iostreams vyžaduje pouze, že složku zahrnujete záhlaví [ \<iostream – >](../standard-library/iostream.md). Potom můžete extrahovat hodnoty ze [cin](../standard-library/iostream.md#cin) nebo [wcin](../standard-library/iostream.md#wcin) přečíst standardní vstup. Pravidla pro to uděláte tak jsou uvedeny v popisu třídy [basic_istream – třída](../standard-library/basic-istream-class.md). Můžete také vložit hodnoty [cout](../standard-library/iostream.md#cout) nebo [wcout](../standard-library/iostream.md#wcout) k zápisu ve standardním výstupu. Pravidla pro to uděláte tak jsou uvedeny v popisu třídy [basic_ostream – třída](../standard-library/basic-ostream-class.md). Formát ovládacího prvku společné pro extraktory a insertors spravuje třída [basic_ios – třída](../standard-library/basic-ios-class.md). Manipulace se tyto informace formát guise extrahování a vkládání objektů je provincie několik manipulátory.
 
-Může provádět stejné operace iostreams na soubory, které se otevřou podle názvu, pomocí třídy deklarované v [ \<fstream >](../standard-library/fstream.md). Pro převod mezi iostreams a objekty třídy [basic_string – třída](../standard-library/basic-string-class.md), použít třídy deklarované v [ \<sstream – >](../standard-library/sstream.md). Totožný s C řetězce proveďte pomocí třídy deklarované v [ \<strstream – >](../standard-library/strstream.md).
+Abyste mohli provádět stejné operace iostreams u souborů, které se otevřou podle názvu, pomocí třídy deklarované v [ \<fstream – >](../standard-library/fstream.md). K převodu mezi iostreams a objekty třídy [basic_string – třída](../standard-library/basic-string-class.md), použijte třídy deklarované v [ \<sstream >](../standard-library/sstream.md). Stejný postup provést s řetězci jazyka C, použijte třídy deklarované v [ \<strstream – >](../standard-library/strstream.md).
 
-Zbývající hlavičky poskytovat služby podpory, obvykle přímé zájmů pouze nejpokročilejší uživatele iostreams třídy.
+Záhlaví zbývající poskytovat služby podpory, obvykle s přímým přístupem zájmu nejpokročilejší uživatelům třídami iostreams.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>
 [iostream – programování](../standard-library/iostream-programming.md)<br/>

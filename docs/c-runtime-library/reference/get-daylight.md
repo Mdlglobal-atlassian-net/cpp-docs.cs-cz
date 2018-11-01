@@ -1,10 +1,6 @@
 ---
-title: _get_daylight – | Microsoft Docs
-ms.custom: ''
+title: _get_daylight
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __daylight
 - _get_daylight
@@ -24,23 +20,17 @@ apitype: DLLExport
 f1_keywords:
 - get_daylight
 - _get_daylight
-dev_langs:
-- C++
 helpviewer_keywords:
 - get_daylight function
 - daylight saving time offset
 - _get_daylight function
 ms.assetid: f85a6ba3-e187-4ca7-aed7-ffc694c8ac4c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0fbe7e36db2e5ca5365f43dc23281d9b5e79077d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03c3386e59379f460d3c07dc310153d990c02b05
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398120"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50444639"
 ---
 # <a name="getdaylight"></a>_get_daylight
 
@@ -54,20 +44,20 @@ error_t _get_daylight( int* hours );
 
 ### <a name="parameters"></a>Parametry
 
-*Hodiny*<br/>
-Posun v hodinách letní čas.
+*hodiny*<br/>
+Posun v hodinách letního času.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu nebo **errno** hodnotu, pokud dojde k chybě.
+Nula v případě úspěchu nebo s **errno** hodnotu, pokud dojde k chybě.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Get_daylight –** funkce načte počtem hodin za letní čas jako celé číslo. Pokud platí letní čas, výchozí posun je jedna hodina (i když několik oblastí sledovat posun dvou hodin).
+**_Get_daylight –** funkce zjišťuje počet hodin v rámci letního času jako celé číslo. Pokud letního času, výchozí posun je jedna hodina (i když několika málo oblastech sledovat posun dvou hodin).
 
-Pokud *hodin* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tato funkce nastaví **errno** k **einval –** a vrátí **einval –**.
+Pokud *hodin* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce nastaví **errno** k **EINVAL** a vrátí **EINVAL**.
 
-Doporučujeme, abyste tuto funkci použít místo makro **_daylight** nebo zastaralé funkce **__daylight**.
+Doporučujeme použít tuto funkci místo makro **_daylight** nebo zastaralé funkce **__daylight**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -77,7 +67,7 @@ Doporučujeme, abyste tuto funkci použít místo makro **_daylight** nebo zasta
 
 Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Správa času](../../c-runtime-library/time-management.md)<br/>
 [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

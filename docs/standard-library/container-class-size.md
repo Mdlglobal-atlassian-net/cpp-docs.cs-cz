@@ -1,32 +1,22 @@
 ---
-title: Třída kontejneru::size | Microsoft Docs
-ms.custom: ''
+title: Třída kontejneru::size
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - size method
 ms.assetid: 67073661-2699-4534-ad3b-31a906658dc5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1147f6a9ef7d71d0b512a5653b604ecb8c11af6b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e6e7d7b9a857b713efed3835515f86232ec7100
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842453"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50577369"
 ---
 # <a name="container-classsize"></a>Třída kontejneru::size
 
 > [!NOTE]
-> Toto téma se v dokumentaci k Visual C++ jako funkční příklad kontejnery použít ve standardní knihovně C++. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
+> Toto téma je v dokumentaci k Visual C++ jako funkční příklad kontejnery používané ve standardní knihovně jazyka C++. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
 
-Vrátí délku řízené sekvenci včas konstantní bez ohledu na délku řízené sekvenci.
+Vrátí délku objektu řízené sekvence v konstantním čase bez ohledu na délku řízené sekvence.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,6 +25,6 @@ Vrátí délku řízené sekvenci včas konstantní bez ohledu na délku řízen
 size_type size() const;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázkový kontejner – třída](../standard-library/sample-container-class.md)<br/>

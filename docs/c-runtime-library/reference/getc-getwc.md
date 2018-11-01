@@ -1,10 +1,6 @@
 ---
-title: getc, getwc – | Microsoft Docs
-ms.custom: ''
+title: getc, getwc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - getwc
 - getc
@@ -26,8 +22,6 @@ f1_keywords:
 - getwc
 - _gettchar
 - getc
-dev_langs:
-- C++
 helpviewer_keywords:
 - characters, reading
 - _gettc function
@@ -38,20 +32,16 @@ helpviewer_keywords:
 - getwc function
 - gettc function
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9a4908e8fa3343bb54191fe2494f738ff0edf887
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bbaee79eac6802959a11f7f1ba30eaf590ecf2f6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404328"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664864"
 ---
 # <a name="getc-getwc"></a>getc, getwc
 
-Znak číst z datového proudu.
+Čtení znaku z datového proudu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,31 +56,31 @@ wint_t getwc(
 
 ### <a name="parameters"></a>Parametry
 
-*Datový proud*<br/>
+*Stream*<br/>
 Vstupní datový proud.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí znak pro čtení. K označení došlo k chybě nebo podmínku end souborového **getc** vrátí **EOF**, a **getwc –** vrátí **weof –**. Pro **getc**, použijte **ferror –** nebo **feof –** ke kontrole pro chybu nebo pro konec souboru. Pokud *datového proudu* je **NULL**, **getc** a **getwc –** vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [parametr Ověření](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, tyto funkce vracejí **EOF** (nebo **weof –** pro **getwc –**) a nastavte **errno** k  **Einval –**.
+Vrátí čtení znaku. K označení chyby čtení nebo stavu ukončení souboru **getc** vrátí **EOF**, a **getwc –** vrátí **WEOF**. Pro **getc**, použijte **ferror** nebo **feof** zkontrolovat chybu nebo konec souboru. Pokud *stream* je **NULL**, **getc** a **getwc –** vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [parametr Ověření](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **EOF** (nebo **WEOF** pro **getwc –**) a nastavte **errno** k  **EINVAL**.
 
-V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších kódy chyb.
+Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších chybových kódech.
 
 ## <a name="remarks"></a>Poznámky
 
-Každou rutinu přečte jednoho znaku ze souboru na aktuální pozici a zvýší přidružený soubor ukazatele (je-li definována) tak, aby odkazoval na další znak. Soubor je přidružen *datového proudu*.
+Každá rutina načte jeden znak ze souboru na aktuální pozici a zvýší přidružený ukazatel na soubor (je-li definován) tak, aby odkazoval na další znak. Soubor je přidružený *stream*.
 
-Tyto funkce Uzamknout volající vlákno a proto jsou bezpečné pro přístup z více vláken. Bez uzamčení verze, najdete v části [_getc_nolock –, _getwc_nolock –](getc-nolock-getwc-nolock.md).
+Tyto funkce uzamykají volající vlákno a proto jsou vláknově bezpečné. Nezamykací verzi naleznete v tématu [_getc_nolock – _getwc_nolock –](getc-nolock-getwc-nolock.md).
 
-Postupujte podle konkrétní rutiny poznámky.
+Následují poznámky specifické pro rutinu.
 
 |Rutina|Poznámky|
 |-------------|-------------|
-|**getc**|Stejné jako **fgetc –**, ale implementovaná jako funkce a jako makra.|
-|**getwc –**|Široká charakterová verzi **getc**. Čte vícebajtových znaků nebo široká znaková podle jestli *datového proudu* je otevřen v režimu textových nebo binárního režimu.|
+|**getc**|Stejné jako **fgetc –**, ale implementovaná jako funkce a jako makro.|
+|**getwc –**|Širokoznaká verze **getc**. Přečte vícebajtový znak nebo široký znak podle toho, zda *stream* je otevřen v textovém nebo binárním režimu.|
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_gettc –**|**getc**|**getc**|**getwc –**|
 
@@ -101,7 +91,7 @@ Postupujte podle konkrétní rutiny poznámky.
 |**getc**|\<stdio.h>|
 |**getwc –**|\<stdio.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -153,9 +143,9 @@ Line two.
 Input was: Line one.
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>
 [putc, putwc](putc-putwc.md)<br/>

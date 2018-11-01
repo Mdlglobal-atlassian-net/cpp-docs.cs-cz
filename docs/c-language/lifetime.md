@@ -1,12 +1,6 @@
 ---
-title: Životnost | Dokumentace Microsoftu
-ms.custom: ''
+title: Životnost
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - local variables, lifetime
 - variables, automatic
@@ -23,18 +17,14 @@ helpviewer_keywords:
 - lifetime
 - global variables, lifetime
 ms.assetid: ff0b42cb-3f0f-49a3-a94f-d1d825d8ddfe
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 34873681d0bc33cede9cda994aa9684e04a689e4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5e5d3b852148284312d2e1fb4cee1df432ac161b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113770"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665215"
 ---
-# <a name="lifetime"></a>Doba platnosti
+# <a name="lifetime"></a>Životnost
 
 „Životnost“ je doba provádění při vykonávání programu, ve které existuje proměnná nebo funkce. Doba trvání úložiště identifikátoru určuje jeho životnost.
 

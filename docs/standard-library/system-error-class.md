@@ -1,31 +1,21 @@
 ---
-title: system_error – třída | Microsoft Docs
-ms.custom: ''
+title: system_error – třída
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - system_error/std::system_error
-dev_langs:
-- C++
 helpviewer_keywords:
 - system_error class
 ms.assetid: 2eeaacbb-8a4a-4ad7-943a-997901a77f32
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bde8e448d54be41516e65969f60b0651cacc8ef1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bad260e5372965c35517986da8feb2cfa3c0e1d2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854555"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50622258"
 ---
 # <a name="systemerror-class"></a>system_error – třída
 
-Představuje základní třídu pro všechny výjimky vydané nahlásit nízké úrovně systémové chybě.
+Představuje základní třídu pro všechny výjimky vyvolané nižší úrovně systému chybové zprávě.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -53,16 +43,16 @@ const error_code& code() const throw();
 
 ## <a name="remarks"></a>Poznámky
 
-Hodnoty vrácené `what` ve třídě [výjimka](../standard-library/exception-class.md) sestavený ze `_Message` a uložené objektu typu [error_code](../standard-library/error-code-class.md) (buď `code` nebo `error_code(_Errval, _Errcat)`).
+Hodnota vrácená `what` ve třídě [výjimka](../standard-library/exception-class.md) je vytvořen z `_Message` a uložený objekt typu [error_code](../standard-library/error-code-class.md) (buď `code` nebo `error_code(_Errval, _Errcat)`).
 
-Členská funkce `code` vrátí uložené [error_code](../standard-library/error-code-class.md) objektu.
+Členská funkce `code` vrátí uloženou [error_code](../standard-library/error-code-class.md) objektu.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<system_error – >
+**Záhlaví:** \<system_error >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<system_error>](../standard-library/system-error.md)<br/>

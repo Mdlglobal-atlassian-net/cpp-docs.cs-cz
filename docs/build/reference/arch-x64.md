@@ -1,23 +1,13 @@
 ---
-title: -arch (x64) | Dokumentace Microsoftu
-ms.custom: ''
+title: /arch (x64)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: ecda22bf-5bed-43f4-99fb-88aedd83d9d8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 553574981f445f19605d7a076594054670f2d685
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d1ee086eff73b0538390764ef26b051919d65bcf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46431005"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456794"
 ---
 # <a name="arch-x64"></a>/arch (x64)
 
@@ -55,7 +45,7 @@ Umožňuje použití Intel Advanced Vector Extensions 2 instrukcí.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>.
 
 ## <a name="see-also"></a>Viz také
 

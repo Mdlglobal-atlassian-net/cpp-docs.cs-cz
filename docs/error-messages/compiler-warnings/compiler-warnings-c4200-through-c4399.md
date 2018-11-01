@@ -1,10 +1,6 @@
 ---
-title: Upozornění kompilátoru C4200 až C4399 | Microsoft Docs
-ms.custom: ''
+title: Upozornění kompilátoru C4200 až C4399
 ms.date: 11/17/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4203
 - C4274
@@ -36,23 +32,17 @@ f1_keywords:
 - C4387
 - C4388
 - C4396
-dev_langs:
-- C++
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 41adf86af231a3f6dfc1f0ecdb14418dea78ec7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02340234fc504773a29b3d83ae606cd1eb4e09f1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302877"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50455991"
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>Upozornění kompilátoru C4200 až C4399
 
-Články v této části dokumentace vysvětlují podmnožinu zprávy upozornění, které jsou generované kompilátorem.
+Články v této části dokumentace vysvětlují podmnožinu varovné zprávy, které jsou generovány kompilátorem.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -60,163 +50,163 @@ ms.locfileid: "33302877"
 
 |Upozornění|Zpráva|
 |-------------|-------------|
-|[Upozornění kompilátoru (úrovně 2 a 4) C4200](../../error-messages/compiler-warnings/compiler-warning-levels-2-and-4-c4200.md)|nestandardní rozšíření používané: nulovou velikostí pole v struktura/sjednocení|
-|[Upozornění kompilátoru (úroveň 4) C4201](../../error-messages/compiler-warnings/compiler-warning-level-4-c4201.md)|nestandardní rozšíření používané: nameless struktura/sjednocení|
-|[Upozornění kompilátoru (úroveň 4) C4202](../../error-messages/compiler-warnings/compiler-warning-level-4-c4202.md)|nestandardní rozšíření používané: ""...": Parametr prototypu v seznamu neplatný název|
-|Upozornění C4203 kompilátoru|nestandardní rozšíření používané: union s statické členské proměnné|
-|[Upozornění kompilátoru (úroveň 4) C4204](../../error-messages/compiler-warnings/compiler-warning-level-4-c4204.md)|nestandardní rozšíření používané: agregační inicializátoru není konstantní.|
-|[Upozornění kompilátoru (úroveň 4) C4205](../../error-messages/compiler-warnings/compiler-warning-level-4-c4205.md)|nestandardní rozšíření používané: deklarace statické funkce v oboru – funkce|
-|[Upozornění kompilátoru (úroveň 4) C4206](../../error-messages/compiler-warnings/compiler-warning-level-4-c4206.md)|nestandardní rozšíření používané: překlad jednotka je prázdná|
-|[Upozornění kompilátoru (úroveň 4) C4207](../../error-messages/compiler-warnings/compiler-warning-level-4-c4207.md)|nestandardní rozšíření používané: rozšířené inicializátoru formuláře|
-|[Upozornění kompilátoru (úroveň 4) C4208](../../error-messages/compiler-warnings/compiler-warning-level-4-c4208.md)|nestandardní rozšíření používané: odstranění [exp] - exp vyhodnocen ale ignorovat|
-|[Upozornění kompilátoru (úroveň 4) C4210](../../error-messages/compiler-warnings/compiler-warning-level-4-c4210.md)|nestandardní rozšíření používané: funkce zadaný rozsah souboru|
-|[Upozornění kompilátoru (úroveň 4) C4211](../../error-messages/compiler-warnings/compiler-warning-level-4-c4211.md)|nestandardní rozšíření používané: předefinovat extern statický|
-|[Upozornění kompilátoru (úroveň 4) C4212](../../error-messages/compiler-warnings/compiler-warning-level-4-c4212.md)|nestandardní rozšíření používané: deklarace funkce používá třemi tečkami|
-|[Upozornění kompilátoru (úroveň 4) C4213](../../error-messages/compiler-warnings/compiler-warning-level-4-c4213.md)|nestandardní rozšíření používané: přetypování na hodnoty l|
-|[Upozornění kompilátoru (úroveň 4) C4214](../../error-messages/compiler-warnings/compiler-warning-level-4-c4214.md)|nestandardní rozšíření používané: bit pole jiného typu než int|
-|[Upozornění kompilátoru (úroveň 1) C4215](../../error-messages/compiler-warnings/compiler-warning-level-1-c4215.md)|nestandardní rozšíření používané: dlouho float.|
-|[Upozornění kompilátoru (úroveň 1) C4216](../../error-messages/compiler-warnings/compiler-warning-level-1-c4216.md)|nestandardní rozšíření používané: dlouho float|
-|[Upozornění kompilátoru (úroveň 1) C4218](../../error-messages/compiler-warnings/compiler-warning-level-1-c4218.md)|nestandardní rozšíření používané: musíte zadat alespoň třídu úložiště, nebo typu|
-|[Upozornění kompilátoru (úroveň 4) C4220](../../error-messages/compiler-warnings/compiler-warning-level-4-c4220.md)|vararg odpovídá zbývající parametry|
-|[Upozornění kompilátoru (úroveň 4) C4221](../../error-messages/compiler-warnings/compiler-warning-level-4-c4221.md)|nestandardní rozšíření používané: '*identifikátor*': Nelze inicializovat pomocí adresy automatické proměnné '*proměnná*.|
-|[Upozornění kompilátoru (úrovně 1 a 4) C4223](../../error-messages/compiler-warnings/compiler-warning-levels-1-and-4-c4223.md)|nestandardní rozšíření používané: bez lvalue pole převést na ukazatele|
-|[Upozornění kompilátoru (úroveň 1) C4224](../../error-messages/compiler-warnings/compiler-warning-level-1-c4224.md)|nestandardní rozšíření používané: formální parametr '*identifikátor*' byl dříve definován jako typ|
-|[C4226 kompilátoru upozornění (úroveň 1, chyba)](../../error-messages/compiler-warnings/compiler-warning-level-1-c4226.md)|nestandardní rozšíření používané: '*– klíčové slovo*' je zastaralý klíčové slovo|
-|[Upozornění kompilátoru (úroveň 1) C4227](../../error-messages/compiler-warnings/compiler-warning-level-1-c4227.md)|použít anachronism: kvalifikátory na odkaz se ignorují.|
-|[Upozornění kompilátoru (úroveň 1) C4228](../../error-messages/compiler-warnings/compiler-warning-level-1-c4228.md)|nestandardní rozšíření používané: kvalifikátory za desetinnou čárkou v seznamu deklarátor jsou ignorovány.|
-|[Upozornění kompilátoru (úroveň 1) C4229](../../error-messages/compiler-warnings/compiler-warning-level-1-c4229.md)|použít anachronism: Modifikátory na data jsou ignorovány.|
-|[Upozornění kompilátoru (úroveň 1) C4230](../../error-messages/compiler-warnings/compiler-warning-level-1-c4230.md)|použít anachronism: Modifikátory/kvalifikátory spolu; Kvalifikátor ignorovat|
-|[Upozornění kompilátoru (úroveň 4) C4232](../../error-messages/compiler-warnings/compiler-warning-level-4-c4232.md)|nestandardní rozšíření používané: '*identifikátor*': adresa dllimport '*dllimport*' nejsou statické, identity není zaručena.|
-|[C4233 kompilátoru upozornění (úroveň 4, chyba)](../../error-messages/compiler-warnings/compiler-warning-level-4-c4233.md)|nestandardní rozšíření používané: '*– klíčové slovo*' podporována pouze v jazyce C++, C není – klíčové slovo|
-|[C4234 kompilátoru upozornění (úroveň 4, chyba)](../../error-messages/compiler-warnings/compiler-warning-level-4-c4234.md)|nestandardní rozšíření používané: '*– klíčové slovo*' – klíčové slovo vyhrazený pro budoucí použití|
-|[C4235 kompilátoru upozornění (úroveň 4, chyba)](../../error-messages/compiler-warnings/compiler-warning-level-4-c4235.md)|nestandardní rozšíření používané: '*– klíčové slovo*, nejsou podporovány na této architektuře – klíčové slovo|
-|[Upozornění kompilátoru (úroveň 1) C4237](../../error-messages/compiler-warnings/compiler-warning-level-1-c4237.md)|'*– klíčové slovo*' – klíčové slovo je ještě nebyla podporována, ale vyhrazený pro budoucí použití|
-|[Upozornění kompilátoru (úroveň 4) C4238](../../error-messages/compiler-warnings/compiler-warning-level-4-c4238.md)|nestandardní rozšíření používané: použít jako lvalue rvalue – třída|
-|[Upozornění kompilátoru (úroveň 4) C4239](../../error-messages/compiler-warnings/compiler-warning-level-4-c4239.md)|nestandardní rozšíření používané: '*tokenu*': převod '*type1*'do'*type2*.|
-|[Upozornění kompilátoru (úroveň 3) C4240](../../error-messages/compiler-warnings/compiler-warning-level-3-c4240.md)|nestandardní rozšíření používané: přístup k '*classname*'nyní definována jako'*access_specifier1*', dříve byl definován jako'*access_specifier2*.|
-|[Upozornění kompilátoru (úroveň 4) C4242](../../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md)|'*identifikátor*': převod '*type1*'do'*type2*', možné ztrátě dat.|
-|[Upozornění kompilátoru (úroveň 3) C4243](../../error-messages/compiler-warnings/compiler-warning-level-3-c4243.md)|'*conversion_type*'Převod'*type1*'do'*type2*' existuje, ale je nedostupná|
-|[Upozornění kompilátoru (úroveň 2) C4244](../../error-messages/compiler-warnings/compiler-warning-level-2-c4244.md)|'*conversion_type*': převod '*type1*'do'*type2*', možné ztrátě dat.|
-|[Upozornění kompilátoru (úrovně 3 a 4) C4244](../../error-messages/compiler-warnings/compiler-warning-levels-3-and-4-c4244.md)|'*conversion_type*': převod '*type1*'do'*type2*', možné ztrátě dat.|
-|[Upozornění kompilátoru (úroveň 4) C4245](../../error-messages/compiler-warnings/compiler-warning-level-4-c4245.md)|'*conversion_type*': převod '*type1*'do'*type2*', podepsané nepodepsaných neshoda|
-|[Upozornění kompilátoru (úroveň 2) C4250](../../error-messages/compiler-warnings/compiler-warning-level-2-c4250.md)|'*classname*': dědí '*base_classname*::*člen*' prostřednictvím dominance|
-|[Upozornění kompilátoru (úroveň 1) C4251](../../error-messages/compiler-warnings/compiler-warning-level-1-c4251.md)|'*identifikátor*': '*object_type1*' '*identifier1*'musí mít knihovnu dll rozhraní má být používána klienty'*object_type*' '*identfier2*.|
-|[Upozornění kompilátoru (úroveň 4) C4254](../../error-messages/compiler-warnings/compiler-warning-level-4-c4254.md)|'*operátor*': převod '*type1*:*field_bits*'do'*type2*:*field_bits*', možné ztrátě dat.|
-|[Upozornění kompilátoru (úroveň 4) C4255](../../error-messages/compiler-warnings/compiler-warning-level-4-c4255.md)|'*funkce*': žádné funkce prototypu zadané: převádění (')' do '(void).|
-|[Upozornění kompilátoru (úroveň 4) C4256](../../error-messages/compiler-warnings/compiler-warning-level-4-c4256.md)|'*funkce*': '...' má konstruktor pro třídu s virtuální základů; volání nemusí být kompatibilní se starší verzí aplikace Visual C++|
-|[Upozornění kompilátoru (úroveň 1) C4258](../../error-messages/compiler-warnings/compiler-warning-level-1-c4258.md)|'*proměnná*': definice z pro smyčky je ignorován; slouží k definici z nadřazeného oboru|
-|[Upozornění kompilátoru (úroveň 4) C4263](../../error-messages/compiler-warnings/compiler-warning-level-4-c4263.md)|'*funkce*': členská funkce nepřepisuje všechny základní třídy člena virtuální funkce|
-|[Upozornění kompilátoru (úroveň 1) C4264](../../error-messages/compiler-warnings/compiler-warning-level-1-c4264.md)|'*virtual_function*': přepsání není k dispozici pro člena virtuální funkci z základní '*classname*'; funkce je skrytá.|
-|[Upozornění kompilátoru (úroveň 3) C4265](../../error-messages/compiler-warnings/compiler-warning-level-3-c4265.md)|'*classname*': třída má virtuální funkce, ale není destruktor nemusí být správně destructed virtual\n instance této třídy|
-|[Upozornění kompilátoru (úroveň 4) C4266](../../error-messages/compiler-warnings/compiler-warning-level-4-c4266.md)|'*virtual_function*': přepsání není k dispozici pro člena virtuální funkci z základní '*classname*'; funkce je skrytá.|
-|[Upozornění kompilátoru (úroveň 3) C4267](../../error-messages/compiler-warnings/compiler-warning-level-3-c4267.md)|'*proměnná*': převod 'size_t' do '*typ*', možné ztrátě dat.|
-|[Upozornění kompilátoru (úroveň 4) C4268](../../error-messages/compiler-warnings/compiler-warning-level-4-c4268.md)|'*identifikátor*': 'const' statické nebo globálních dat inicializován s kompilátoru generované výchozí konstruktor doplní objekt s nulami|
-|[Upozornění kompilátoru (úroveň 1) C4269](../../error-messages/compiler-warnings/compiler-warning-level-1-c4269.md)|'*identifikátor*': 'const' dat inicializován s kompilátoru generované výchozí konstruktor vytvoří nespolehlivé výsledky|
-|[Upozornění kompilátoru (úroveň 1) C4272](../../error-messages/compiler-warnings/compiler-warning-level-1-c4272.md)|'*funkce*': je označena deklarace __declspec(dllimport); musíte zadat nativní konvence volání, při importu funkce.|
-|[Upozornění kompilátoru (úroveň 1) C4273](../../error-messages/compiler-warnings/compiler-warning-level-1-c4273.md)|'*funkce*': nekonzistentní dll propojení|
-|Upozornění kompilátoru (úroveň 1) C4274|#ident ignorován; naleznete v dokumentaci k #pragma komentář (exestr, 'řetězec')|
-|[Upozornění kompilátoru (úroveň 2) C4275](../../error-messages/compiler-warnings/compiler-warning-level-2-c4275.md)|bez knihovnu dll rozhraní '*classkey*' '*identifier1*'použitý jako základní pro knihovnu dll rozhraní'*classkey*' '*identifier2*.|
-|[Upozornění kompilátoru (úroveň 1) C4276](../../error-messages/compiler-warnings/compiler-warning-level-1-c4276.md)|'*funkce*': žádné prototypu zadaný; předpokládá, že žádné parametry|
-|Upozornění kompilátoru (úroveň 1) C4277|importované položky '*classname*::*člen*' existuje jako – datový člen a členské funkce; ignorovat – datový člen|
-|[Upozornění kompilátoru (úroveň 3) C4278](../../error-messages/compiler-warnings/compiler-warning-level-3-c4278.md)|'*identifikátor*': identifikátor v knihovny typů,*knihovny*' je již makra; použít kvalifikátor 'přejmenovat.|
-|Upozornění kompilátoru (úroveň 3 a 4) C4279|'*identifikátor*': identifikátor v knihovny typů,*knihovny*' je klíčové slovo; použít kvalifikátor 'přejmenovat.|
-|[Upozornění kompilátoru (úroveň 3) C4280](../../error-messages/compiler-warnings/compiler-warning-level-3-c4280.md)|-> operátor byl vlastní rekurzivní prostřednictvím typu '*typu*.|
-|[Upozornění kompilátoru (úroveň 3) C4281](../../error-messages/compiler-warnings/compiler-warning-level-3-c4281.md)|došlo k chybě -> operátor rekurze prostřednictvím typu '*type1*.|
-|[Upozornění kompilátoru (úroveň 3) C4282](../../error-messages/compiler-warnings/compiler-warning-level-3-c4282.md)|pak prostřednictvím typu '*type2*.|
-|[Upozornění kompilátoru (úroveň 3) C4283](../../error-messages/compiler-warnings/compiler-warning-level-3-c4283.md)|a prostřednictvím typu '*typeN*.|
-|[Upozornění kompilátoru (úroveň 2) C4285](../../error-messages/compiler-warnings/compiler-warning-level-2-c4285.md)|Návratový typ pro '*identifikátor*:: -> operátor ' je rekurzivní, pokud se aplikují pomocí notace zaváděcí|
-|[Upozornění kompilátoru (úroveň 1) C4286](../../error-messages/compiler-warnings/compiler-warning-level-1-c4286.md)|'*derived_type*': je zachytila základní třídy ('*base_type*') na řádku '*line_number*.|
-|[Upozornění kompilátoru (úroveň 3) C4287](../../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md)|'*operátor*': Neshoda konstantní bez znaménka nebo záporná|
-|[Upozornění kompilátoru (úroveň 1) C4288](../../error-messages/compiler-warnings/compiler-warning-level-1-c4288.md)|nestandardní rozšíření používané: '*proměnná*': mimo obor cyklu for se používá proměnná řízení smyčky deklarované v pro smyčky; je v konfliktu s deklaraci ve vnějším oboru|
-|[Upozornění kompilátoru (úroveň 4) C4289](../../error-messages/compiler-warnings/compiler-warning-level-4-c4289.md)|nestandardní rozšíření používané: '*proměnná*': mimo obor cyklu for se používá proměnná řízení smyčky deklarované v pro – smyčky|
-|[Upozornění kompilátoru (úroveň 3) C4290](../../error-messages/compiler-warnings/compiler-warning-level-3-c4290.md)|Specifikace výjimek C++ ignorovat kromě Chcete-li určit funkce není __declspec(nothrow)|
-|[Upozornění kompilátoru (úroveň 1) C4291](../../error-messages/compiler-warnings/compiler-warning-level-1-c4291.md)|'*deklarace*': nebude uvolnit paměť, pokud se inicializace vyvolá výjimku; najít žádný odpovídající delete – operátor|
-|[Upozornění kompilátoru (úroveň 1) C4293](../../error-messages/compiler-warnings/compiler-warning-level-1-c4293.md)|'*shift_operator*': posunutí počet záporný nebo příliš velký, není definovaná chování|
-|[Upozornění kompilátoru (úroveň 4) C4295](../../error-messages/compiler-warnings/compiler-warning-level-4-c4295.md)|'*pole*': pole je příliš malá, aby zahrnují ukončující znak hodnoty null|
-|[Upozornění kompilátoru (úroveň 4) C4296](../../error-messages/compiler-warnings/compiler-warning-level-4-c4296.md)|'*operátor*': výraz je vždy "*boolean_value*.|
-|[Upozornění kompilátoru (úroveň 1) C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)|'*funkce*': funkce předpokládá, že není však výjimku|
-|Upozornění kompilátoru (úroveň 4) C4298|'*identifikátor*': identifikátor v knihovny typů,*knihovny*'je již makra; přejmenování k'*__identifier*.|
-|Upozornění kompilátoru (úroveň 4) C4299|'*identifikátor*': identifikátor v knihovny typů,*knihovny*'je klíčové slovo; přejmenování k'*__identifier*.|
-|Upozornění C4301 kompilátoru|'*derived_class*::*funkce*': přepisování virtuální funkce pouze se liší od '*base_class*::*funkce*se podle const nebo volatile Kvalifikátor|
-|[Upozornění kompilátoru (úroveň 2) C4302](../../error-messages/compiler-warnings/compiler-warning-level-2-c4302.md)|'*převod*': zkrácení z '*type1*'do'*type2*.|
-|Upozornění C4303 kompilátoru|C-style přetypování z '*type1*'do'*type2*' je zastaralý, použijte statickou\_cast. \_ \_zkuste\_vícesměrového vysílání nebo dynamické\_přetypování|
-|[Upozornění kompilátoru (úroveň 1) C4305](../../error-messages/compiler-warnings/compiler-warning-level-1-c4305.md)|'*převod*': zkrácení z '*type1*'do'*type2*.|
-|[Upozornění kompilátoru (úroveň 3) C4306](../../error-messages/compiler-warnings/compiler-warning-level-3-c4306.md)|'*převod*': převod '*type1*'do'*type2*' větší velikosti|
-|[Upozornění kompilátoru (úroveň 2) C4307](../../error-messages/compiler-warnings/compiler-warning-level-2-c4307.md)|'*operátor*': celočíselné konstantní přetečení|
-|[Upozornění kompilátoru (úroveň 2) C4308](../../error-messages/compiler-warnings/compiler-warning-level-2-c4308.md)|záporné integrální konstanta převést na typu bez znaménka|
-|[Upozornění kompilátoru (úroveň 2) C4309](../../error-messages/compiler-warnings/compiler-warning-level-2-c4309.md)|'*převod*': zkrácení konstantní hodnoty|
-|[Upozornění kompilátoru (úroveň 3) C4310](../../error-messages/compiler-warnings/compiler-warning-level-3-c4310.md)|přetypování zkrátí konstantní hodnota|
-|[Upozornění kompilátoru (úroveň 1) C4311](../../error-messages/compiler-warnings/compiler-warning-level-1-c4311.md)|'*proměnná*': zkrácení ukazatel z '*type1*'do'*type2*.|
-|[Upozornění kompilátoru (úroveň 1) C4312](../../error-messages/compiler-warnings/compiler-warning-level-1-c4312.md)|'*operace*': převod '*type1*'do'*type2*' větší velikosti|
-|[Upozornění kompilátoru (úroveň 1) C4313](../../error-messages/compiler-warnings/compiler-warning-level-1-c4313.md)|'*funkce*': '*format_specifier*'ve formátu řetězce je v konfliktu s argumentem'*argument_number*'typu'*typu*.|
-|Upozornění C4314 kompilátoru|Parametr očekávané – Direktiva pragma '32' nebo '64.|
-|Upozornění kompilátoru (úroveň 4) C4315|'*classname*":"this"ukazatele pro člena '*člen*nemusí zarovnán*zarovnání*se podle očekávání tím konstruktoru|
-|Upozornění kompilátoru (úroveň 3) C4316|'*identifikátor*': objekt přidělené v haldě nemusí být zarovnána '*zarovnání*.|
-|Upozornění kompilátoru (úroveň 1) C4317|'*printf_family*': předáno není dostatečný počet argumentů pro řetězec formátu|
-|Upozornění C4318 kompilátoru|předání konstantní nula jako délku memset –|
-|[Upozornění kompilátoru (úroveň 1) C4319](../../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md)|'*operátor*': nulové rozšíření '*type1*'do'*type2*' větší velikosti|
-|Upozornění kompilátoru (úroveň 1) C4321|Automatické generování IID pro rozhraní '*rozhraní*.|
-|Upozornění kompilátoru (úroveň 1) C4322|Automatické generování CLSID pro třídu*třída*.|
-|Upozornění kompilátoru (úroveň 1) C4323|opakované použití zaregistrován CLSID pro třídu*třída*.|
-|[Upozornění kompilátoru (úroveň 4) C4324](../../error-messages/compiler-warnings/compiler-warning-level-4-c4324.md)|'*structname*': struktura se vyplní důsledku __declspec(align())|
-|[Upozornění kompilátoru (úroveň 1) C4325](../../error-messages/compiler-warnings/compiler-warning-level-1-c4325.md)|atributy pro standardní oddíl '*části*' ignorovat|
-|[Upozornění kompilátoru (úroveň 1) C4326](../../error-messages/compiler-warnings/compiler-warning-level-1-c4326.md)|Návratový typ se*funkce*by měla být*type1*, místo provedení'*type2*.|
-|Upozornění C4327 kompilátoru|'*přiřazení*': zarovnání indirection LHS ('*alignment1*') je větší než RHS ('*alignment2*.)|
-|Upozornění C4328 kompilátoru|'*funkce*': zarovnání indirection formální parametr *parameter_number* (*parameter_alignment*) je větší než skutečná argument zarovnání (*argument_alignment*)|
-|[Upozornění kompilátoru (úroveň 1) C4329](../../error-messages/compiler-warnings/compiler-warning-level-1-c4329.md)|__declspec(align()) je na výčtu ignorována.|
-|Upozornění kompilátoru (úroveň 1) C4330|atribut '*atribut*'pro oddíl'*části*' ignorovat|
-|[Upozornění kompilátoru (úroveň 1) C4333](../../error-messages/compiler-warnings/compiler-warning-level-1-c4333.md)|'*shift_operator*': posunutí doprava o příliš velké množství, ztráty dat|
-|[Upozornění kompilátoru (úroveň 3) C4334](../../error-messages/compiler-warnings/compiler-warning-level-3-c4334.md)|'*shift_operator*': výsledek 32-bit shift implicitně převést na 64 bitů (byla určena shift 64-bit?)|
-|[Upozornění kompilátoru C4335](../../error-messages/compiler-warnings/compiler-warning-c4335.md)|Formát souboru Mac zjistil: prosím převést zdrojový soubor formátu DOS nebo UNIX|
-|[Upozornění kompilátoru (úroveň 4) C4336](../../error-messages/compiler-warnings/compiler-warning-level-4-c4336.md)|Import knihovny typů referencí '*library1*'před importem'*library2*.|
-|[Upozornění kompilátoru (úroveň 4) C4337](../../error-messages/compiler-warnings/compiler-warning-level-4-c4337.md)|knihovny typů referencí '*library1*'v'*library2*, se automaticky importují|
-|Upozornění kompilátoru (úroveň 4) C4338|#pragma *– direktiva*: standardní oddíl '*části*' se používá|
-|[Upozornění kompilátoru (úroveň 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|'*typ*': použijte nedefinované typu zjistil v ' WinRT&#124;CLR' meta-data - použití tohoto typu může vést k výjimku modulu runtime|
-|[Upozornění kompilátoru (úroveň 1) C4340](../../error-messages/compiler-warnings/compiler-warning-level-1-c4340.md)|'*hodnotu*': hodnota zabalené z kladné na zápornou hodnotu.|
-|[Upozornění kompilátoru (úroveň 1) C4342](../../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md)|Změna v chování: '*funkce*se volá, ale byla zavolána operátor členů v předchozích verzích|
-|Upozornění kompilátoru (úroveň 4) C4343|#pragma optimize("g",off) přepsání /Og – možnost|
-|[Upozornění kompilátoru (úroveň 1) C4344](../../error-messages/compiler-warnings/compiler-warning-level-1-c4344.md)|Změna v chování: použijte explicitní šablony argumenty výsledků volání '*funkce*.|
-|[Upozornění kompilátoru (úroveň 1) C4346](../../error-messages/compiler-warnings/compiler-warning-level-1-c4346.md)|'*název*': závislé název není typu|
-|[Upozornění kompilátoru (úroveň 1) C4348](../../error-messages/compiler-warnings/compiler-warning-level-1-c4348.md)|'*typ*': předefinování výchozího parametru: Parametr '*parameter_number*.|
-|[Upozornění kompilátoru (úroveň 1) C4350](../../error-messages/compiler-warnings/compiler-warning-level-1-c4350.md)|Změna v chování: '*člen1*'názvem místo'*člen2*.|
-|Upozornění kompilátoru (úroveň 1) C4352|'*identifikátor*': již definována – vnitřní funkce|
-|[Upozornění kompilátoru (úroveň 1) C4353](../../error-messages/compiler-warnings/compiler-warning-level-1-c4353.md)|nestandardní rozšíření používané: Konstanta 0 jako výraz funkce.  Místo toho použijte '__noop' – vnitřní funkce|
-|[C4355 upozornění kompilátoru](../../error-messages/compiler-warnings/compiler-warning-c4355.md)upozornění kompilátoru (úroveň 1 a 4) C4355|'this': používá základní člen inicializátoru seznamu|
-|[Upozornění kompilátoru (úroveň 2) C4356](../../error-messages/compiler-warnings/compiler-warning-level-2-c4356.md)|'*člen*': člen statických dat nelze inicializovat prostřednictvím odvozené třídy|
-|[Upozornění kompilátoru (úroveň 3) C4357](../../error-messages/compiler-warnings/compiler-warning-level-3-c4357.md)|v seznamu formální argument pro delegáta nalezen argument pole param '*delegovat*'ignorovat při generování'*funkce*.|
-|[Upozornění kompilátoru (úroveň 1) C4358](../../error-messages/compiler-warnings/compiler-warning-level-1-c4358.md)|'*operátor*': návratový typ kombinované Delegáti není 'void'; vrácená hodnota není definován|
-|[Upozornění kompilátoru (úroveň 3) C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|'*typ*': zarovnání specifikátor je menší než skutečná zarovnání ('*zarovnání*') a budou ignorovány.|
-|Upozornění kompilátoru (úroveň 2) C4362|'*typ*': zarovnání větší než 8 bajtů nepodporuje CLR|
-|[Upozornění kompilátoru (úroveň 1) C4364](../../error-messages/compiler-warnings/compiler-warning-level-1-c4364.md)|#using pro sestavení '*sestavení*'dříve zobrazit při'*umístění*' ('*line_number*') bez jako\_atribut friend; protože\_friend není použít|
-|[Upozornění kompilátoru (úroveň 4) C4365](../../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md)|'*výraz*': převod '*type1*'do'*type2*', podepsané nepodepsaných neshoda|
-|[Upozornění kompilátoru (úroveň 4) C4366](../../error-messages/compiler-warnings/compiler-warning-level-4-c4366.md)|Výsledkem unární '*operátor*' operátor může nezarovnané|
-|Upozornění kompilátoru (úroveň 3) C4367|Převod z '*type1*'do'*type2*, může způsobit, že chybné zarovnání výjimka datový typ|
-|[C4368 kompilátoru upozornění (chyba)](../../error-messages/compiler-warnings/compiler-warning-c4368.md)|nelze definovat '*člen*, jako je členem spravovaná'*typ*': smíšený typy nejsou podporovány|
-|[Upozornění kompilátoru (úroveň 1) C4369](../../error-messages/compiler-warnings/compiler-warning-level-1-c4369.md)|'*enumerátor*': hodnotu výčtu,*hodnotu*'nemůže být reprezentován jako'*typ*', hodnota je'*nová_hodnota*.|
-|Upozornění C4370 kompilátoru|'*classname*': z předchozí verze kompilátoru kvůli lepší okolních došlo ke změně rozložení – třída|
-|[Upozornění kompilátoru (úroveň 3) C4371](../../error-messages/compiler-warnings/c4371.md)|'*classname*': mohlo dojít ke změně rozložení třídy z předchozí verze kompilátoru kvůli lepší okolních člena '*člen*.|
-|Upozornění kompilátoru (úroveň 3) C4373|'*derived_class*::*funkce*': virtuální funkce přepsání*base_class*::*funkce*', předchozí verze kompilátoru přepsat při parametry pouze podle const nebo volatile kvalifikátory lišil.|
-|[Upozornění kompilátoru (úroveň 1) C4374](../../error-messages/compiler-warnings/compiler-warning-level-1-c4374.md)|'*function1*': nevirtuálních metoda nebude implementovat metodu rozhraní '*funkce2*.|
-|[Upozornění kompilátoru (úroveň 1) C4375](../../error-messages/compiler-warnings/compiler-warning-level-1-c4375.md)|Metoda neveřejný '*method2*'nepřepisuje'*method2*.|
-|[Upozornění kompilátoru (úroveň 1) C4376](../../error-messages/compiler-warnings/compiler-warning-level-1-c4376.md)|přístup k specifikátor '*old_specifier*:' již není podporována: použijte '*new_specifier*:' místo|
-|[Upozornění kompilátoru (úroveň 1) C4377](../../error-messages/compiler-warnings/compiler-warning-level-1-c4377.md)|nativní typy jsou privátní ve výchozím nastavení; -d1PrivateNativeTypes je zastaralý.|
-|[Upozornění kompilátoru (úroveň 1) C4378](../../error-messages/compiler-warnings/compiler-warning-level-1-c4378.md)|Musíte získat ukazatelů na funkce Spustit inicializátory; Vezměte v úvahu System::ModuleHandle::ResolveMethodHandle|
-|[Upozornění kompilátoru (úroveň 1) C4379](../../error-messages/compiler-warnings/compiler-warning-level-1-c4379.md)|Verze '*version_number*' common language runtime nepodporuje tento kompilátoru. Pomocí této verze může vést k neočekávaným výsledkům|
-|Upozornění kompilátoru (úroveň 1, chyba) C4380|'*třída*': výchozí konstruktor nemůže být zastaralé.|
-|[Upozornění kompilátoru (úroveň 1) C4381](../../error-messages/compiler-warnings/compiler-warning-level-1-c4381.md)|'*function1*': metoda neveřejný nebude implementovat metodu rozhraní '*funkce2*.|
-|[Upozornění kompilátoru (úroveň 1) C4382](../../error-messages/compiler-warnings/compiler-warning-level-1-c4382.md)|vyvolání '*typ*': typu s __clrcall – destruktor nebo kopírovacího konstruktoru pouze zachytit v/CLR: pure modulu|
-|[Upozornění kompilátoru (úroveň 1) C4383](../../error-messages/compiler-warnings/compiler-warning-level-1-c4383.md)|'*instance_dereference_operator*': význam vyhodnocení popisovač lze změnit, pokud definovaný uživatelem,*instance_dereference_operator*' existuje; zapsat jako statický operátor – operátor Funkce, která má být explicitní o operand|
-|[Upozornění kompilátoru (úroveň 1) C4384](../../error-messages/compiler-warnings/compiler-warning-level-1-c4384.md)|#pragma 'make_public –' musí být použit pouze v globálním oboru|
-|Upozornění kompilátoru (úroveň 3) C4387|'*alternativní*': byla považována za|
-|Upozornění kompilátoru (úroveň 4) C4388|'*výraz*': Neshoda podepsané nepodepsaných|
-|[Upozornění kompilátoru (úroveň 4) C4389](../../error-messages/compiler-warnings/compiler-warning-level-4-c4389.md)|'*operátor*': Neshoda podepsané nepodepsaných|
-|[Upozornění kompilátoru (úroveň 3) C4390](../../error-messages/compiler-warnings/compiler-warning-level-3-c4390.md)|';': prázdný řízené příkaz nalezen; je to záměr?|
-|[Upozornění kompilátoru (úroveň 1) C4391](../../error-messages/compiler-warnings/compiler-warning-level-1-c4391.md)|'*function_signature*': nesprávné návratový typ pro vnitřní, byla očekávána funkce '*typu*.|
-|[Upozornění kompilátoru (úroveň 1) C4392](../../error-messages/compiler-warnings/compiler-warning-level-1-c4392.md)|'*function_signature*': nesprávný počet argumentů pro vnitřní funkce, očekává se*argument_count*' argumenty|
-|[Upozornění kompilátoru (úroveň 1) C4393](../../error-messages/compiler-warnings/compiler-warning-level-1-c4393.md)|'*proměnná*': const nemá žádný vliv '*literálu*' – datový člen; ignorovat|
-|[Upozornění kompilátoru C4394](../../error-messages/compiler-warnings/compiler-warning-c4394.md)|'*funkce*': symbol na appdomain by nemělo být označené jako __declspec('dllexport')|
-|[Upozornění kompilátoru (úroveň 1) C4395](../../error-messages/compiler-warnings/compiler-warning-level-1-c4395.md)|'*funkce*': funkce člen, který bude vyvolán na kopii initonly datový člen '*člen*.|
-|Upozornění kompilátoru (úroveň 2) C4396|'*funkce*': specifikátor vložené nelze použít, když deklaraci friend odkazuje specializace šablony funkcí|
-|[Upozornění kompilátoru (úroveň 1) C4397](../../error-messages/compiler-warnings/compiler-warning-level-1-c4397.md)|DefaultCharSetAttribute je ignorována.|
-|[Upozornění kompilátoru (úroveň 3) C4398](../../error-messages/compiler-warnings/compiler-warning-level-3-c4398.md)|'*proměnná*': globální objektu na proces nemusí pracovat správně s více domén; zvažte použití __declspec(appdomain)|
-|[Upozornění kompilátoru (úroveň 1) C4399](../../error-messages/compiler-warnings/compiler-warning-level-1-c4399.md)|'*symbol*': symbol na proces by neměl být označené jako __declspec('dllimport'), když kompilujete s/clr: pure|
+|[Upozornění kompilátoru (úrovně 2 a 4) C4200](../../error-messages/compiler-warnings/compiler-warning-levels-2-and-4-c4200.md)|používá se nestandardní rozšíření: pole nulové velikosti ve struktuře/sjednocení|
+|[Upozornění kompilátoru (úroveň 4) C4201](../../error-messages/compiler-warnings/compiler-warning-level-4-c4201.md)|používá se nestandardní rozšíření: struktura/sjednocení nameless|
+|[Upozornění kompilátoru (úroveň 4) C4202](../../error-messages/compiler-warnings/compiler-warning-level-4-c4202.md)|používá se nestandardní rozšíření: '...': Parametr prototype v seznamu názvů je neplatný|
+|Kompilátor varování C4203|používá se nestandardní rozšíření: sjednocení s proměnnou statického členu|
+|[Upozornění kompilátoru (úroveň 4) C4204](../../error-messages/compiler-warnings/compiler-warning-level-4-c4204.md)|používá se nestandardní rozšíření: nekonstantní agregační inicializátor|
+|[Upozornění kompilátoru (úroveň 4) C4205](../../error-messages/compiler-warnings/compiler-warning-level-4-c4205.md)|používá se nestandardní rozšíření: deklarace statické funkce v oboru funkce|
+|[Upozornění kompilátoru (úroveň 4) C4206](../../error-messages/compiler-warnings/compiler-warning-level-4-c4206.md)|používá se nestandardní rozšíření: Překladová jednotka je prázdná|
+|[Upozornění kompilátoru (úroveň 4) C4207](../../error-messages/compiler-warnings/compiler-warning-level-4-c4207.md)|používá se nestandardní rozšíření: Rozšířená podoba inicializátoru|
+|[Upozornění kompilátoru (úroveň 4) C4208](../../error-messages/compiler-warnings/compiler-warning-level-4-c4208.md)|používá se nestandardní rozšíření: delete [exp] - exp vyhodnotí, ale ignoruje|
+|[Upozornění kompilátoru (úroveň 4) C4210](../../error-messages/compiler-warnings/compiler-warning-level-4-c4210.md)|používá se nestandardní rozšíření: Zadaný obor file – funkce|
+|[Upozornění kompilátoru (úroveň 4) C4211](../../error-messages/compiler-warnings/compiler-warning-level-4-c4211.md)|používá se nestandardní rozšíření: možnost extern se předefinovala na static|
+|[Upozornění kompilátoru (úroveň 4) C4212](../../error-messages/compiler-warnings/compiler-warning-level-4-c4212.md)|používá se nestandardní rozšíření: deklarace funkce se používají tři tečky|
+|[Upozornění kompilátoru (úroveň 4) C4213](../../error-messages/compiler-warnings/compiler-warning-level-4-c4213.md)|používá se nestandardní rozšíření: přetypování pro l-value.|
+|[Upozornění kompilátoru (úroveň 4) C4214](../../error-messages/compiler-warnings/compiler-warning-level-4-c4214.md)|používá se nestandardní rozšíření: jiné typy bitových polí než int.|
+|[Upozornění kompilátoru (úroveň 1) C4215](../../error-messages/compiler-warnings/compiler-warning-level-1-c4215.md)|používá se nestandardní rozšíření: long float|
+|[Upozornění kompilátoru (úroveň 1) C4216](../../error-messages/compiler-warnings/compiler-warning-level-1-c4216.md)|používá se nestandardní rozšíření: float long|
+|[Upozornění kompilátoru (úroveň 1) C4218](../../error-messages/compiler-warnings/compiler-warning-level-1-c4218.md)|používá se nestandardní rozšíření: musíte zadat alespoň jednu třídu úložiště nebo typu|
+|[Upozornění kompilátoru (úroveň 4) C4220](../../error-messages/compiler-warnings/compiler-warning-level-4-c4220.md)|VarArgs spáruje zbývající parametry|
+|[Upozornění kompilátoru (úroveň 4) C4221](../../error-messages/compiler-warnings/compiler-warning-level-4-c4221.md)|používá se nestandardní rozšíření: '*identifikátor*': Nelze inicializovat pomocí adresy automatické proměnné '*proměnnou*"|
+|[Upozornění kompilátoru (úrovně 1 a 4) C4223](../../error-messages/compiler-warnings/compiler-warning-levels-1-and-4-c4223.md)|používá se nestandardní rozšíření: pole l-hodnoty převeden na ukazatel|
+|[Upozornění kompilátoru (úroveň 1) C4224](../../error-messages/compiler-warnings/compiler-warning-level-1-c4224.md)|používá se nestandardní rozšíření: formální parametr "*identifikátor*" byl předtím definovaný jako typ.|
+|[Kompilátor upozornění (úroveň 1, chyba) C4226](../../error-messages/compiler-warnings/compiler-warning-level-1-c4226.md)|používá se nestandardní rozšíření: '*– klíčové slovo*"je zastaralé klíčové slovo|
+|[Upozornění kompilátoru (úroveň 1) C4227](../../error-messages/compiler-warnings/compiler-warning-level-1-c4227.md)|anachronismus: kvalifikátory pro odkaz se ignorují.|
+|[Upozornění kompilátoru (úroveň 1) C4228](../../error-messages/compiler-warnings/compiler-warning-level-1-c4228.md)|používá se nestandardní rozšíření: kvalifikátory za čárkou v seznamu deklarátorů se ignorují.|
+|[Upozornění kompilátoru (úroveň 1) C4229](../../error-messages/compiler-warnings/compiler-warning-level-1-c4229.md)|anachronismus: Modifikátory pro data se ignorují.|
+|[Upozornění kompilátoru (úroveň 1) C4230](../../error-messages/compiler-warnings/compiler-warning-level-1-c4230.md)|anachronismus: Modifikátory/kvalifikátory promíchaný; kvalifikátor se ignoruje.|
+|[Upozornění kompilátoru (úroveň 4) C4232](../../error-messages/compiler-warnings/compiler-warning-level-4-c4232.md)|používá se nestandardní rozšíření: '*identifikátor*': adresa dllimport "*dllimport*" není statická, identita není zaručená.|
+|[Kompilátor upozornění (úroveň 4, chyba) C4233](../../error-messages/compiler-warnings/compiler-warning-level-4-c4233.md)|používá se nestandardní rozšíření: '*– klíčové slovo*"– klíčové slovo pouze v jazyce C++, C není podporována|
+|[Kompilátor upozornění (úroveň 4, chyba) C4234](../../error-messages/compiler-warnings/compiler-warning-level-4-c4234.md)|používá se nestandardní rozšíření: '*– klíčové slovo*"vyhrazená pro budoucí použití – klíčové slovo|
+|[Kompilátor upozornění (úroveň 4, chyba) C4235](../../error-messages/compiler-warnings/compiler-warning-level-4-c4235.md)|používá se nestandardní rozšíření: '*– klíčové slovo*"– klíčové slovo není na této architektuře podporováno.|
+|[Upozornění kompilátoru (úroveň 1) C4237](../../error-messages/compiler-warnings/compiler-warning-level-1-c4237.md)|"*– klíčové slovo*" – klíčové slovo je ještě není podporované, ale vyhrazené pro budoucí použití|
+|[Upozornění kompilátoru (úroveň 4) C4238](../../error-messages/compiler-warnings/compiler-warning-level-4-c4238.md)|používá se nestandardní rozšíření: rvalue třídy se používá jako l-hodnoty.|
+|[Upozornění kompilátoru (úroveň 4) C4239](../../error-messages/compiler-warnings/compiler-warning-level-4-c4239.md)|používá se nestandardní rozšíření: '*token*': převod z '*type1*"do"*type2*"|
+|[Upozornění kompilátoru (úroveň 3) C4240](../../error-messages/compiler-warnings/compiler-warning-level-3-c4240.md)|používá se nestandardní rozšíření: přístup k '*classname*"teď definovaný jako"*access_specifier1*", dřív byl definovaný jako"*access_specifier2*.|
+|[Upozornění kompilátoru (úroveň 4) C4242](../../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md)|"*identifikátor*': převod z '*type1*"do"*type2*", může dojít ke ztrátě dat.|
+|[Upozornění kompilátoru (úroveň 3) C4243](../../error-messages/compiler-warnings/compiler-warning-level-3-c4243.md)|"*conversion_type*'Převod z'*type1*"do"*type2*' existuje, ale je nedostupný|
+|[Upozornění kompilátoru (úroveň 2) C4244](../../error-messages/compiler-warnings/compiler-warning-level-2-c4244.md)|"*conversion_type*': převod z '*type1*"do"*type2*", může dojít ke ztrátě dat.|
+|[Upozornění kompilátoru (úrovně 3 a 4) C4244](../../error-messages/compiler-warnings/compiler-warning-levels-3-and-4-c4244.md)|"*conversion_type*': převod z '*type1*"do"*type2*", může dojít ke ztrátě dat.|
+|[Upozornění kompilátoru (úroveň 4) C4245](../../error-messages/compiler-warnings/compiler-warning-level-4-c4245.md)|"*conversion_type*': převod z '*type1*"do"*type2*", podepsaný/unsigned – neshoda|
+|[Upozornění kompilátoru (úroveň 2) C4250](../../error-messages/compiler-warnings/compiler-warning-level-2-c4250.md)|"*classname*': dědí"*base_classname*::*člen*"prostřednictvím dominance|
+|[Upozornění kompilátoru (úroveň 1) C4251](../../error-messages/compiler-warnings/compiler-warning-level-1-c4251.md)|"*identifikátor*": "*object_type1*" "*identifier1*"musí mít rozhraní dll klienty"*object_type*" "*identfier2*.|
+|[Upozornění kompilátoru (úroveň 4) C4254](../../error-messages/compiler-warnings/compiler-warning-level-4-c4254.md)|"*operátor*': převod z '*type1*:*field_bits*"do"*type2*:*field_bits*", může dojít ke ztrátě dat.|
+|[Upozornění kompilátoru (úroveň 4) C4255](../../error-messages/compiler-warnings/compiler-warning-level-4-c4255.md)|"*funkce*': zadaný žádný prototyp funkce: převod '(') '(void).|
+|[Upozornění kompilátoru (úroveň 4) C4256](../../error-messages/compiler-warnings/compiler-warning-level-4-c4256.md)|"*funkce*': konstruktor pro třídu s virtuálními základy má '...'; volání nemusí být kompatibilní se staršími verzemi Visual C++|
+|[Upozornění kompilátoru (úroveň 1) C4258](../../error-messages/compiler-warnings/compiler-warning-level-1-c4258.md)|"*proměnnou*': definice z for loop se ignoruje; je použita definice z nadřazeného oboru|
+|[Upozornění kompilátoru (úroveň 4) C4263](../../error-messages/compiler-warnings/compiler-warning-level-4-c4263.md)|"*funkce*': členská funkce nepřepisuje žádnou virtuální členskou funkci základní třídy|
+|[Upozornění kompilátoru (úroveň 1) C4264](../../error-messages/compiler-warnings/compiler-warning-level-1-c4264.md)|"*virtual_function*': přepsání není k dispozici pro virtuální členskou funkci ze základní"*classname*'; funkce je skrytá.|
+|[Upozornění kompilátoru (úroveň 3) C4265](../../error-messages/compiler-warnings/compiler-warning-level-3-c4265.md)|"*classname*': třída má virtuální funkce, ale destruktor není virtual\n instance této třídy nemusí být zničené správně|
+|[Upozornění kompilátoru (úroveň 4) C4266](../../error-messages/compiler-warnings/compiler-warning-level-4-c4266.md)|"*virtual_function*': přepsání není k dispozici pro virtuální členskou funkci ze základní"*classname*'; funkce je skrytá.|
+|[Upozornění kompilátoru (úroveň 3) C4267](../../error-messages/compiler-warnings/compiler-warning-level-3-c4267.md)|"*proměnnou*': převod z parametr size_t' k"*typ*", může dojít ke ztrátě dat.|
+|[Upozornění kompilátoru (úroveň 4) C4268](../../error-messages/compiler-warnings/compiler-warning-level-4-c4268.md)|"*identifikátor*': 'const' statická/globální data inicializovaná s konstruktorem default generovaným kompilátorem vyplní objekt nulami|
+|[Upozornění kompilátoru (úroveň 1) C4269](../../error-messages/compiler-warnings/compiler-warning-level-1-c4269.md)|"*identifikátor*': 'const' automatické data inicializovaná s konstruktorem default generovaným kompilátorem vytvoří nespolehlivé výsledky|
+|[Upozornění kompilátoru (úroveň 1) C4272](../../error-messages/compiler-warnings/compiler-warning-level-1-c4272.md)|"*funkce*": je označené jako __declspec(dllimport); při importu funkce musí specifikovat nativní konvence volání.|
+|[Upozornění kompilátoru (úroveň 1) C4273](../../error-messages/compiler-warnings/compiler-warning-level-1-c4273.md)|"*funkce*': nekonzistentní propojení dll|
+|Upozornění kompilátoru (úroveň 1) C4274|#ident ignorovány; najdete v dokumentaci #pragma Comment (exestr, 'řetězec')|
+|[Upozornění kompilátoru (úroveň 2) C4275](../../error-messages/compiler-warnings/compiler-warning-level-2-c4275.md)|bez rozhraní dll '*classkey*""*identifier1*'použít jako základ pro rozhraní dll'*classkey*""*identifier2*.|
+|[Upozornění kompilátoru (úroveň 1) C4276](../../error-messages/compiler-warnings/compiler-warning-level-1-c4276.md)|"*funkce*': k dispozici žádný prototyp; předpokládá, že žádné parametry.|
+|Upozornění kompilátoru (úroveň 1) C4277|importovaná položka "*classname*::*člen*' existuje jako datový člen i jako funkční člen; datový člen ignorovat|
+|[Upozornění kompilátoru (úroveň 3) C4278](../../error-messages/compiler-warnings/compiler-warning-level-3-c4278.md)|"*identifikátor*': identifikátor v knihovně typů '*knihovny*" už je makro; použijte kvalifikátor "přejmenovat"|
+|Upozornění kompilátoru (úroveň 3 a 4) C4279|"*identifikátor*': identifikátor v knihovně typů '*knihovny*' je klíčové slovo; použijte kvalifikátor"přejmenovat"|
+|[Upozornění kompilátoru (úroveň 3) C4280](../../error-messages/compiler-warnings/compiler-warning-level-3-c4280.md)|'operator -> byl sám sobě rekurzivní prostřednictvím typu "*typ*.|
+|[Upozornění kompilátoru (úroveň 3) C4281](../../error-messages/compiler-warnings/compiler-warning-level-3-c4281.md)|došlo k rekurzi 'operator -> až po typ "*type1*.|
+|[Upozornění kompilátoru (úroveň 3) C4282](../../error-messages/compiler-warnings/compiler-warning-level-3-c4282.md)|pak pomocí typu "*type2*.|
+|[Upozornění kompilátoru (úroveň 3) C4283](../../error-messages/compiler-warnings/compiler-warning-level-3-c4283.md)|a až po typ "*typeN*.|
+|[Upozornění kompilátoru (úroveň 2) C4285](../../error-messages/compiler-warnings/compiler-warning-level-2-c4285.md)|Návratový typ pro "*identifikátor*:: operator -> ' je rekurzivní, pokud se použije infixová notace.|
+|[Upozornění kompilátoru (úroveň 1) C4286](../../error-messages/compiler-warnings/compiler-warning-level-1-c4286.md)|"*derived_type*': se zachycuje prostřednictvím základní třídy ('*base_type*") na řádku "*line_number*.|
+|[Upozornění kompilátoru (úroveň 3) C4287](../../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md)|"*operátor*': unsigned/negative – neshoda konstanty|
+|[Upozornění kompilátoru (úroveň 1) C4288](../../error-messages/compiler-warnings/compiler-warning-level-1-c4288.md)|používá se nestandardní rozšíření: '*proměnnou*': Proměnná ovládacího prvku smyčky deklarovaná ve smyčce for-loop se používá mimo obor smyčky for-loop; je v konfliktu s deklarací ve vnějším oboru|
+|[Upozornění kompilátoru (úroveň 4) C4289](../../error-messages/compiler-warnings/compiler-warning-level-4-c4289.md)|používá se nestandardní rozšíření: '*proměnnou*': Proměnná ovládacího prvku smyčky deklarovaná ve smyčce for-loop se používá mimo obor smyčky for loop|
+|[Upozornění kompilátoru (úroveň 3) C4290](../../error-messages/compiler-warnings/compiler-warning-level-3-c4290.md)|Specifikace výjimky C++ se ignorovala že funkce není not __declspec(nothrow).|
+|[Upozornění kompilátoru (úroveň 1) C4291](../../error-messages/compiler-warnings/compiler-warning-level-1-c4291.md)|"*deklarace*': nenašla se žádná odpovídající operátor delete; paměť se neuvolní, pokud při inicializaci dojde k výjimce|
+|[Upozornění kompilátoru (úroveň 1) C4293](../../error-messages/compiler-warnings/compiler-warning-level-1-c4293.md)|"*shift_operator*': záporný nebo moc velký počet operací shift je; nedefinované chování|
+|[Upozornění kompilátoru (úroveň 4) C4295](../../error-messages/compiler-warnings/compiler-warning-level-4-c4295.md)|"*pole*': pole je příliš malá, aby zahrnují ukončujícího znaku null|
+|[Upozornění kompilátoru (úroveň 4) C4296](../../error-messages/compiler-warnings/compiler-warning-level-4-c4296.md)|"*operátor*': výraz je vždy"*boolean_value*.|
+|[Upozornění kompilátoru (úroveň 1) C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)|"*funkce*': funkce předpokládá, že nechcete vytvořit výjimku, ale neobsahuje|
+|Upozornění kompilátoru (úroveň 4) C4298|"*identifikátor*': identifikátor v knihovně typů '*knihovny*"už je makro; přejmenování na"*__identifier*.|
+|Upozornění kompilátoru (úroveň 4) C4299|"*identifikátor*': identifikátor v knihovně typů '*knihovny*"je klíčové slovo; přejmenování na"*__identifier*.|
+|Kompilátor varování C4301|"*derived_class*::*funkce*': přepisující virtuální funkce jenom se liší od"*$base_class*::*funkce*"podle const/volatile Kvalifikátor|
+|[Upozornění kompilátoru (úroveň 2) C4302](../../error-messages/compiler-warnings/compiler-warning-level-2-c4302.md)|"*převod*': zkrácení z '*type1*"do"*type2*"|
+|Kompilátor varování C4303|Z přetypování C-style '*type1*"do"*type2*"je zastaralé, použijte statické\_přetypování, \_ \_zkuste\_vícesměrového vysílání nebo dynamické\_přetypování|
+|[Upozornění kompilátoru (úroveň 1) C4305](../../error-messages/compiler-warnings/compiler-warning-level-1-c4305.md)|"*převod*': zkrácení z '*type1*"do"*type2*"|
+|[Upozornění kompilátoru (úroveň 3) C4306](../../error-messages/compiler-warnings/compiler-warning-level-3-c4306.md)|"*převod*': převod z '*type1*"do"*type2*' větší velikosti|
+|[Upozornění kompilátoru (úroveň 2) C4307](../../error-messages/compiler-warnings/compiler-warning-level-2-c4307.md)|"*operátor*': přetečení celočíselné konstanty|
+|[Upozornění kompilátoru (úroveň 2) C4308](../../error-messages/compiler-warnings/compiler-warning-level-2-c4308.md)|Záporná integrální konstantou je převést na typ bez znaménka|
+|[Upozornění kompilátoru (úroveň 2) C4309](../../error-messages/compiler-warnings/compiler-warning-level-2-c4309.md)|"*převod*': zkrácení konstantní hodnoty|
+|[Upozornění kompilátoru (úroveň 3) C4310](../../error-messages/compiler-warnings/compiler-warning-level-3-c4310.md)|přetypování zkrátí konstantní hodnotu.|
+|[Upozornění kompilátoru (úroveň 1) C4311](../../error-messages/compiler-warnings/compiler-warning-level-1-c4311.md)|"*proměnnou*': zkrácení ukazatele z '*type1*"do"*type2*"|
+|[Upozornění kompilátoru (úroveň 1) C4312](../../error-messages/compiler-warnings/compiler-warning-level-1-c4312.md)|"*operace*': převod z '*type1*"do"*type2*' větší velikosti|
+|[Upozornění kompilátoru (úroveň 1) C4313](../../error-messages/compiler-warnings/compiler-warning-level-1-c4313.md)|"*funkce*": "*format_specifier*'ve formátu řetězce je v konfliktu s argumentem'*argument_number*"typu"*typ*"|
+|Kompilátor varování C4314|Parametr očekávané pragma bude mít hodnotu 32, nebo hodnotu 64.|
+|Upozornění kompilátoru (úroveň 4) C4315|"*classname*': 'this' ukazatele pro člena '*člen*"nemusí být zarovnáním"*zarovnání*" jak očekává konstruktor|
+|Upozornění kompilátoru (úroveň 3) C4316|"*identifikátor*': objekt přidělený do haldy nemusí být zarovnáním"*zarovnání*.|
+|Upozornění kompilátoru (úroveň 1) C4317|"*printf_family*': není dostatečný počet argumentů předaný pro formátovací řetězec|
+|Kompilátor varování C4318|Předejte nulovou konstantou jako délka do memset.|
+|[Upozornění kompilátoru (úroveň 1) C4319](../../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md)|"*operátor*': nulové rozšíření"*type1*"do"*type2*' větší velikosti|
+|Upozornění kompilátoru (úroveň 1) C4321|automaticky se generuje IID pro rozhraní '*rozhraní*.|
+|Upozornění kompilátoru (úroveň 1) C4322|automaticky se generuje CLSID pro třídu*třídy*.|
+|Upozornění kompilátoru (úroveň 1) C4323|opakovaně se používá zaregistrované CLSID pro třídu*třídy*.|
+|[Upozornění kompilátoru (úroveň 4) C4324](../../error-messages/compiler-warnings/compiler-warning-level-4-c4324.md)|"*structname*': struktury byla, aby bylo vytvořeno z důvodu __declspec(align())|
+|[Upozornění kompilátoru (úroveň 1) C4325](../../error-messages/compiler-warnings/compiler-warning-level-1-c4325.md)|atributy pro oddíl standard "*části*se ignoruje|
+|[Upozornění kompilátoru (úroveň 1) C4326](../../error-messages/compiler-warnings/compiler-warning-level-1-c4326.md)|Návratový typ '*funkce*by měl být*type1*"namísto z"*type2*"|
+|Kompilátor varování C4327|"*přiřazení*': zarovnání indirekce LHS ("*alignment1*") je větší než zarovnání indirekce RHS ("*alignment2*")|
+|Kompilátor varování C4328|"*funkce*': nepřímé zarovnání formálního parametru *parameter_number* (*parameter_alignment*) je větší než vlastní zarovnání argumentů (*argument_alignment*)|
+|[Upozornění kompilátoru (úroveň 1) C4329](../../error-messages/compiler-warnings/compiler-warning-level-1-c4329.md)|__declspec(align()) se pro výčet ignoruje.|
+|Upozornění kompilátoru (úroveň 1) C4330|atribut '*atribut*"pro oddíl'*části*" ignorováno|
+|[Upozornění kompilátoru (úroveň 1) C4333](../../error-messages/compiler-warnings/compiler-warning-level-1-c4333.md)|"*shift_operator*': posunutí doprava o moc velkou hodnotu, ztráta dat|
+|[Upozornění kompilátoru (úroveň 3) C4334](../../error-messages/compiler-warnings/compiler-warning-level-3-c4334.md)|"*shift_operator*': výsledek 32bitového posunu se implicitně převedl na 64 bitů (byl 64bitový posun určený?)|
+|[Upozornění kompilátoru C4335](../../error-messages/compiler-warnings/compiler-warning-c4335.md)|Zjistil se formát souborů Mac: převeďte prosím zdrojový soubor do formátu DOS nebo UNIX|
+|[Upozornění kompilátoru (úroveň 4) C4336](../../error-messages/compiler-warnings/compiler-warning-level-4-c4336.md)|Import knihovny typů s křížovými odkazy "*library1*'před importem"*library2*.|
+|[Upozornění kompilátoru (úroveň 4) C4337](../../error-messages/compiler-warnings/compiler-warning-level-4-c4337.md)|Knihovna typů s křížovými odkazy "*library1*"in"*library2*" se importuje automaticky.|
+|Upozornění kompilátoru (úroveň 4) C4338|#pragma *směrnice*: oddíl standard "*části*' se používá|
+|[Upozornění kompilátoru (úroveň 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|"*typ*': použití nedefinovaného typu v" WinRT&#124;CLR' meta-data - použití tohoto typu může vést k výjimce modulu runtime|
+|[Upozornění kompilátoru (úroveň 1) C4340](../../error-messages/compiler-warnings/compiler-warning-level-1-c4340.md)|"*hodnotu*': Obálka hodnoty z kladné na zápornou hodnotu.|
+|[Upozornění kompilátoru (úroveň 1) C4342](../../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md)|Změna chování: "*funkce*" volá se, ale operátor členu byl zavolán v předchozích verzích|
+|Upozornění kompilátoru (úroveň 4) C4343|#pragma optimize("g",off) přepíše/og – možnost|
+|[Upozornění kompilátoru (úroveň 1) C4344](../../error-messages/compiler-warnings/compiler-warning-level-1-c4344.md)|Změna chování: použití výsledků šablony explicitní argumenty při volání funkce "*funkce*.|
+|[Upozornění kompilátoru (úroveň 1) C4346](../../error-messages/compiler-warnings/compiler-warning-level-1-c4346.md)|"*název*': závislý název není typ|
+|[Upozornění kompilátoru (úroveň 1) C4348](../../error-messages/compiler-warnings/compiler-warning-level-1-c4348.md)|"*typ*': předefinování výchozího parametru: parametr"*parameter_number*.|
+|[Upozornění kompilátoru (úroveň 1) C4350](../../error-messages/compiler-warnings/compiler-warning-level-1-c4350.md)|Změna chování: "*member1*"volá namísto"*člen2*.|
+|Upozornění kompilátoru (úroveň 1) C4352|"*identifikátor*': vnitřní funkce už je definovaná|
+|[Upozornění kompilátoru (úroveň 1) C4353](../../error-messages/compiler-warnings/compiler-warning-level-1-c4353.md)|používá se nestandardní rozšíření: Konstanta 0 jako výraz funkce.  Místo toho použijte vnitřní funkce "__noop.|
+|[Upozornění kompilátoru C4355](../../error-messages/compiler-warnings/compiler-warning-c4355.md)upozornění kompilátoru (úroveň 1 a 4) C4355|'this': používá se v seznamu inicializátorů základního člena|
+|[Upozornění kompilátoru (úroveň 2) C4356](../../error-messages/compiler-warnings/compiler-warning-level-2-c4356.md)|"*člen*': Statický datový člen nejde inicializovat prostřednictvím odvozené třídy|
+|[Upozornění kompilátoru (úroveň 3) C4357](../../error-messages/compiler-warnings/compiler-warning-level-3-c4357.md)|Param array argument nalezena v seznamu formálních argumentů pro delegáta '*delegovat*"ignoruje při generování"*funkce*"|
+|[Upozornění kompilátoru (úroveň 1) C4358](../../error-messages/compiler-warnings/compiler-warning-level-1-c4358.md)|"*operátor*': návratový typ kombinovaných delegátů není"void"; vrácená hodnota není definována|
+|[Upozornění kompilátoru (úroveň 3) C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|"*typ*': specifikátor zarovnání je menší než skutečné zarovnání ("*zarovnání*") a budou ignorovány.|
+|Upozornění kompilátoru (úroveň 2) C4362|"*typ*': modul CLR nepodporuje zarovnání větší než 8 bajtů.|
+|[Upozornění kompilátoru (úroveň 1) C4364](../../error-messages/compiler-warnings/compiler-warning-level-1-c4364.md)|#using pro sestavení '*sestavení*"dřív zjištěné v:"*umístění*' ('*line_number*") bez jako\_atribut typu friend; protože\_friend není použít|
+|[Upozornění kompilátoru (úroveň 4) C4365](../../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md)|"*výraz*': převod z '*type1*"do"*type2*", podepsaný/unsigned – neshoda|
+|[Upozornění kompilátoru (úroveň 4) C4366](../../error-messages/compiler-warnings/compiler-warning-level-4-c4366.md)|Výsledek unární "*operátor*" operátor může být zarovnaný.|
+|Upozornění kompilátoru (úroveň 3) C4367|Převod z '*type1*"do"*type2*' může způsobit výjimku kvůli neshodě datového typu|
+|[Upozornění (chyba) kompilátoru C4368](../../error-messages/compiler-warnings/compiler-warning-c4368.md)|nelze definovat '*člen*'jako člen spravovaného'*typ*': smíšené typy nejsou podporovány.|
+|[Upozornění kompilátoru (úroveň 1) C4369](../../error-messages/compiler-warnings/compiler-warning-level-1-c4369.md)|"*enumerátor*': hodnota výčtu '*hodnotu*"nemůže být reprezentovaná jako"*typ*', hodnota je'*nová_hodnota*"|
+|Kompilátor varování C4370|"*classname*': má ke změně rozložení třídy z předchozí verze kompilátoru z důvodu lepšího balení|
+|[Upozornění kompilátoru (úroveň 3) C4371](../../error-messages/compiler-warnings/c4371.md)|"*classname*': může mít ke změně rozložení třídy z předchozí verze kompilátoru z důvodu lepšího balení člena '*člen*.|
+|Upozornění kompilátoru (úroveň 3) C4373|"*derived_class*::*funkce*': přepsání virtuální funkce *$base_class*::*funkce*", předchozí verze kompilátoru. nepřepsala při parametry lišily jenom podle kvalifikátory const/volatile|
+|[Upozornění kompilátoru (úroveň 1) C4374](../../error-messages/compiler-warnings/compiler-warning-level-1-c4374.md)|"*function1*': metoda rozhraní se nebude implementovat nevirtuální metody"*function2*.|
+|[Upozornění kompilátoru (úroveň 1) C4375](../../error-messages/compiler-warnings/compiler-warning-level-1-c4375.md)|oprávnění neveřejné metody "*method2*"nepřepisuje"*method2*.|
+|[Upozornění kompilátoru (úroveň 1) C4376](../../error-messages/compiler-warnings/compiler-warning-level-1-c4376.md)|přístup k specifikátor "*old_specifier*:" už není podporovaná: použijte "*new_specifier*:" místo|
+|[Upozornění kompilátoru (úroveň 1) C4377](../../error-messages/compiler-warnings/compiler-warning-level-1-c4377.md)|nativní typy jsou privátní ve výchozím nastavení; -d1PrivateNativeTypes je zastaralá.|
+|[Upozornění kompilátoru (úroveň 1) C4378](../../error-messages/compiler-warnings/compiler-warning-level-1-c4378.md)|Musí se získat ukazatele funkce pro spouštění inicializačních; Vezměte v úvahu System::ModuleHandle::ResolveMethodHandle|
+|[Upozornění kompilátoru (úroveň 1) C4379](../../error-messages/compiler-warnings/compiler-warning-level-1-c4379.md)|Verze "*version_number*" common language runtime nepodporuje tento kompilátor. Pomocí této verze může vést k neočekávaným výsledkům|
+|Upozornění kompilátoru (úroveň 1, chyba) C4380|"*třídy*': konstruktor default nemůže být zastaralý.|
+|[Upozornění kompilátoru (úroveň 1) C4381](../../error-messages/compiler-warnings/compiler-warning-level-1-c4381.md)|"*function1*': metoda rozhraní se nebude implementovat neveřejnou metodu '*function2*.|
+|[Upozornění kompilátoru (úroveň 1) C4382](../../error-messages/compiler-warnings/compiler-warning-level-1-c4382.md)|vyvolání "*typ*': typ s destruktorem __clrcall nebo kopírovacím konstuktorem se dá zachytit jedině v/CLR: pure modulu|
+|[Upozornění kompilátoru (úroveň 1) C4383](../../error-messages/compiler-warnings/compiler-warning-level-1-c4383.md)|"*instance_dereference_operator*': význam zrušení odkazu na popisovač může změnit, pokud uživatelem definované"*instance_dereference_operator*' existuje; zapište operátor jako statickou – operátor operand vyjádřit explicitně funkci|
+|[Upozornění kompilátoru (úroveň 1) C4384](../../error-messages/compiler-warnings/compiler-warning-level-1-c4384.md)|#pragma 'make_public' by měla použít jenom u globálního rozsahu|
+|Upozornění kompilátoru (úroveň 3) C4387|"*alternativní*': byla považována za|
+|Upozornění kompilátoru (úroveň 4) C4388|"*výraz*': podepsané/unsigned – neshoda|
+|[Upozornění kompilátoru (úroveň 4) C4389](../../error-messages/compiler-warnings/compiler-warning-level-4-c4389.md)|"*operátor*': podepsané/unsigned – neshoda|
+|[Upozornění kompilátoru (úroveň 3) C4390](../../error-messages/compiler-warnings/compiler-warning-level-3-c4390.md)|";': prázdný řízený příkaz nalezen. je to záměr?|
+|[Upozornění kompilátoru (úroveň 1) C4391](../../error-messages/compiler-warnings/compiler-warning-level-1-c4391.md)|"*function_signature*': nesprávný návratový typ pro vnitřní funkci, byl očekáván '*typ*.|
+|[Upozornění kompilátoru (úroveň 1) C4392](../../error-messages/compiler-warnings/compiler-warning-level-1-c4392.md)|"*function_signature*': nesprávný počet argumentů pro vnitřní funkci, byl očekáván '*argument_count*" argumenty|
+|[Upozornění kompilátoru (úroveň 1) C4393](../../error-messages/compiler-warnings/compiler-warning-level-1-c4393.md)|"*proměnnou*': const nemá žádný vliv"*literálu*"datový člen; ignorováno|
+|[Upozornění kompilátoru C4394](../../error-messages/compiler-warnings/compiler-warning-c4394.md)|"*funkce*': symbol na úrovni appdomain by neměl být označeny atributem __declspec('dllexport')|
+|[Upozornění kompilátoru (úroveň 1) C4395](../../error-messages/compiler-warnings/compiler-warning-level-1-c4395.md)|"*funkce*': členská funkce se bude volat pro kopii datového členu initonly"*člen*.|
+|Upozornění kompilátoru (úroveň 2) C4396|"*funkce*': specifikátor inline nejde použít, když deklarace friend odkazuje na specializaci šablony funkce|
+|[Upozornění kompilátoru (úroveň 1) C4397](../../error-messages/compiler-warnings/compiler-warning-level-1-c4397.md)|DefaultCharSetAttribute se ignoruje.|
+|[Upozornění kompilátoru (úroveň 3) C4398](../../error-messages/compiler-warnings/compiler-warning-level-3-c4398.md)|"*proměnnou*': globální objekt na úrovni jednotlivého procesu nemusí fungovat správně s více objektů třídy appdomains; zvažte použití možnosti __declspec(appdomain)|
+|[Upozornění kompilátoru (úroveň 1) C4399](../../error-messages/compiler-warnings/compiler-warning-level-1-c4399.md)|"*symbol*': symbol na úrovni jednotlivého procesu nesmí být označené __declspec('dllimport') při kompilaci s parametrem/CLR: pure|

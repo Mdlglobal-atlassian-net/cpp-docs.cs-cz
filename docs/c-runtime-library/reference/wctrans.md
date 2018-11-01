@@ -1,10 +1,6 @@
 ---
-title: wctrans – | Microsoft Docs
-ms.custom: ''
+title: wctrans
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wctrans
 apilocation:
@@ -22,28 +18,22 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wctrans
-dev_langs:
-- C++
 helpviewer_keywords:
 - character codes, wctrans
 - characters, codes
 - characters, converting
 - wctrans function
 ms.assetid: 215404bf-6d60-489c-9ae9-880e6b586162
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 613c3c64885f10029a8b013504d84ffa8f35d664
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c7aace7a93160d2e9a4c1523d49bcaf6ae4dc20
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410486"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656687"
 ---
 # <a name="wctrans"></a>wctrans
 
-Určuje mapování z jednu sadu kódy znaků do jiného.
+Určuje jednu sadu kódy znaků mapování.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -60,13 +50,13 @@ wctrans_t wctrans(
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud **LC_CTYPE –** kategorie aktuální národní prostředí nedefinuje mapování, jejíž název odpovídá řetězci vlastnost *vlastnost*, funkce vrátí hodnotu nula. Jinak vrátí nenulovou hodnotu vhodné pro použití jako druhý argument pro následné volání [towctrans –](towctrans.md).
+Pokud **LC_CTYPE** kategorie aktuálního národního prostředí nedefinuje mapování, jejíž název odpovídá řetězci vlastnost *vlastnost*, vrátí funkce hodnotu nula. V opačném případě se vrací nenulovou hodnotu, vhodný pro použití jako druhý argument pro následné volání [towctrans –](towctrans.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Tato funkce určuje mapování z jednu sadu kódy znaků do jiného.
+Tato funkce určuje jednu sadu kódy znaků mapování.
 
-Následující páry volání mají stejné chování ve všech národních prostředí, ale je možné definovat další mapování ani v národního prostředí "C":
+Následující páry volání mají stejné chování ve všech národních prostředích, ale je možné definovat další mapování i v národním prostředí "C":
 
 |Funkce|Stejné jako|
 |--------------|-------------|
@@ -75,11 +65,11 @@ Následující páry volání mají stejné chování ve všech národních pros
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaná hlavička|
+|Rutina|Požadované záhlaví|
 |-------------|---------------------|
 |**wctrans**|\<wctype.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -117,7 +107,7 @@ int main()
 65
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>

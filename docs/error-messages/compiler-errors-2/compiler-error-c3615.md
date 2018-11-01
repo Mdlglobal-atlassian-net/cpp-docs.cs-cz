@@ -1,36 +1,27 @@
 ---
-title: C3615 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C3615
 ms.date: 10/24/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3615
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3615
 ms.assetid: 5ce96ba9-3d31-49f3-9aa8-24e5cdf6dcfc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ce1ab43f8e15535614cedf43dba42fef882bf87a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e966295b5ab63350828ddb73d6791a9e30bb5c59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253390"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50652215"
 ---
-# <a name="compiler-error-c3615"></a>C3615 chyby kompilátoru
+# <a name="compiler-error-c3615"></a>Chyba kompilátoru C3615
 
-> Funkce constexpr '*funkce*' nemůže mít za následek konstantní výraz
+> Funkce constexpr '*funkce*' nemůže mít v konstantním výrazu
 
-Funkce *funkce* nebylo možné vyhodnotit jako `constexpr` v době kompilace. Chcete-li být `constexpr`, funkce můžete volat jenom jiné `constexpr` funkce.
+Funkce *funkce* nemůže být vyhodnocena jako `constexpr` v době kompilace. Chcete-li být `constexpr`, funkce může volat pouze jiné `constexpr` funkce.
 
 ## <a name="example"></a>Příklad
 
-Visual Studio 2017 vyvolá chybu správně, je-li levé operand podmíněně vyhodnocování operace není platná v `constexpr` kontextu. Následující kód zkompiluje v sadě Visual Studio 2015, ale není v Visual Studio 2017.
+Visual Studio 2017 správně vyvolá chybu, pokud operand na levé straně podmíněně vyhodnocování operace není platná v `constexpr` kontextu. Následující kód se zkompiluje ve Visual Studiu 2015 ale není v sadě Visual Studio 2017.
 
 ```cpp
 // C3615.cpp
@@ -48,4 +39,4 @@ constexpr bool f(const myarray<1> &arr)
 }
 ```
 
-Chcete-li tento problém vyřešit, buď deklarujte `array::size()` fungovat jako `constexpr` nebo odebrat `constexpr` kvalifikátor z `f`.
+Chcete-li tento problém vyřešit, buď deklarovat `array::size()` fungovat jako `constexpr` nebo odebrat `constexpr` kvalifikátor z `f`.

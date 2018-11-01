@@ -1,11 +1,6 @@
 ---
-title: ccosh, ccoshf, ccoshl | Microsoft Docs
-ms.custom: ''
+title: ccosh ccoshf, ccoshl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - ccosh
 - ccoshf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/ccosh
 - complex/ccoshf
 - complex/ccoshl
-dev_langs:
-- C++
 helpviewer_keywords:
 - ccosh function
 - ccoshf function
 - ccoshl function
 ms.assetid: 79667449-4edf-4948-bf6b-720adf2b3f3b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2a883869b830efbba08822b77c97fd6a156358dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c25441d4f25f9e77a0cb71d942e132f34c4c1f5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394480"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676834"
 ---
-# <a name="ccosh-ccoshf-ccoshl"></a>ccosh, ccoshf, ccoshl
+# <a name="ccosh-ccoshf-ccoshl"></a>ccosh ccoshf, ccoshl
 
-Načte hyperbolický kosinus čísla komplexní.
+Načte hyperbolický kosinus komplexního čísla.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -75,7 +64,7 @@ _Lcomplex ccoshl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Komplexní číslo, které představuje úhel v radiánech.
+Komplexní čísla, která představuje úhel v radiánech.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -83,17 +72,17 @@ Hyperbolický kosinus *z*, v radiánech.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **ccosh** , přijmout a vrátit **_Fcomplex** a **_Lcomplex** hodnoty. V programu C **ccosh** vždy provede a vrátí **_Dcomplex** hodnotu.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **ccosh** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **ccosh** vždy převezme a vrátí **_Dcomplex** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Hlavička C|Hlavička C++|
+|Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
 |**ccosh**, **ccoshf**, **ccoshl**|\<complex.h>|\<ccomplex >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>

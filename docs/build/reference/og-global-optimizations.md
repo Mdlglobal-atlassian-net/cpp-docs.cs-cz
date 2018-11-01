@@ -1,15 +1,9 @@
 ---
-title: -Og (globální optimalizace) | Dokumentace Microsoftu
-ms.custom: ''
+title: /Og (globální optimalizace)
 ms.date: 09/22/2017
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GlobalOptimizations
 - /og
-dev_langs:
-- C++
 helpviewer_keywords:
 - -Og compiler option [C++]
 - global optimizations compiler option [C++]
@@ -19,16 +13,12 @@ helpviewer_keywords:
 - common subexpression elimination
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8443ae8111476cdd3339982c8df0b4b7e3e9c475
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d6913be5bc02755730ffb6205e9f34811c9a5dbb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722524"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431938"
 ---
 # <a name="og-global-optimizations"></a>/Og (globální optimalizace)
 
@@ -100,7 +90,7 @@ Související informace naleznete v tématu [/Oi (Generovat vnitřní funkce)](.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Viz také
 
