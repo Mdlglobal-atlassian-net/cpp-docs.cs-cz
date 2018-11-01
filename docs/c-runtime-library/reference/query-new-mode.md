@@ -1,10 +1,6 @@
 ---
-title: _query_new_mode – | Microsoft Docs
-ms.custom: ''
+title: _query_new_mode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _query_new_mode
 apilocation:
@@ -23,27 +19,21 @@ apitype: DLLExport
 f1_keywords:
 - query_new_mode
 - _query_new_mode
-dev_langs:
-- C++
 helpviewer_keywords:
 - query_new_mode function
 - handler modes
 - _query_new_mode function
 ms.assetid: e185c5f9-b73b-4257-8eff-b47648374768
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8907b043e8b4441d6e5213a1d386dbc1a5a6910a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 327f22c847793316bd126721b4a66846d7da84dd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405715"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620022"
 ---
 # <a name="querynewmode"></a>_query_new_mode
 
-Vrací celočíselnou hodnotu označující nový režim obslužná rutina, která nastavuje **_set_new_mode –** pro **malloc –**.
+Vrátí celé číslo udávající nový režim obslužné rutiny nastavil **_set_new_mode** pro **malloc**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,11 +45,11 @@ int _query_new_mode(
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí aktuální novou obslužnou rutinu režim, konkrétně 0 nebo 1, pro **malloc –**. Návratová hodnota 1 značí, že při selhání při přidělování paměti, **malloc** volání nové rutiny obslužná rutina; vrácená hodnota 0 značí, že tomu tak není.
+Vrátí aktuální nový režim obslužné rutiny, konkrétně 0 nebo 1, pro **malloc**. Návratová hodnota 1 značí, že při selhání přidělení paměti, **malloc** volá nové rutiny obsluhy; vrácená hodnota 0 označuje, že tomu tak není.
 
 ## <a name="remarks"></a>Poznámky
 
-C++ **_query_new_mode –** funkce vrátí celé číslo, které označuje nový režim obslužná rutina, kterou je nastavit C++ [_set_new_mode –](set-new-mode.md) funkce pro [malloc –](malloc.md). Nový režim obslužná rutina označuje, jestli při selhání při přidělování paměti, **malloc –** je volat nové rutiny obslužných rutin jako sady pomocí [_set_new_handler –](set-new-handler.md). Ve výchozím nastavení **malloc** nevyvolá nové rutiny ovladače při selhání. Můžete použít **_set_new_mode –** toto chování potlačit, které při selhání **malloc –** volání nové rutiny obslužná rutina ve stejné způsobem **nové** operátor nepodporuje, když se nezdaří přidělení paměti. Další informace najdete v tématu diskuzi o [nové a odstraňte operátory](../../cpp/new-and-delete-operators.md) v referenční příručka jazyka C++.
+C++ **_query_new_mode –** funkce vrátí celé číslo, které označuje nový režim obslužné rutiny, který je nastaven podle jazyka C++ [_set_new_mode](set-new-mode.md) fungovat [malloc](malloc.md). Nový režim obslužné rutiny Určuje, zda je při selhání přidělení paměti, **malloc** je volat nové rutiny obsluhy úmluvu [_set_new_handler](set-new-handler.md). Ve výchozím nastavení **malloc** nevolá nové rutiny obsluhy při selhání. Můžete použít **_set_new_mode** tak přepsat toto chování, které při selhání **malloc** volá nové rutiny obsluhy ve stejném způsobu, jakým **nové** operátor provede, když se nepodaří přidělení paměti. Další informace najdete v diskuzi o [nové a odstranit operátory](../../cpp/new-and-delete-operators.md) v referenci jazyka C++.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -67,13 +57,13 @@ C++ **_query_new_mode –** funkce vrátí celé číslo, které označuje nový
 |-------------|---------------------|
 |**_query_new_mode**|\<New.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přidělení paměti](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>

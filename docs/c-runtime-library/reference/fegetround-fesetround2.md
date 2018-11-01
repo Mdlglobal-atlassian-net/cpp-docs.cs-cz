@@ -1,11 +1,6 @@
 ---
-title: fegetround fesetround | Microsoft Docs
-ms.custom: ''
+title: fegetround fesetround
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fegetround
 - fesetround
@@ -27,26 +22,20 @@ f1_keywords:
 - fesetround
 - fenv/fegetround
 - fenv/fesetround
-dev_langs:
-- C++
 helpviewer_keywords:
 - fegetround function
 - fesetround function
 ms.assetid: 596af00b-be2f-4f57-b2f5-460485f9ff0b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 137d886d557cbb1fee7db1dd60405b9557bf6bf2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 061f0c9563d284396e85c6de70a2fe0911218eb3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398081"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666801"
 ---
 # <a name="fegetround-fesetround"></a>fegetround fesetround
 
-Získá nebo nastaví aktuální režim zaokrouhlení s plovoucí desetinnou čárkou.
+Získá nebo nastaví aktuální režimu zaokrouhlení s plovoucí desetinnou čárkou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,56 +50,56 @@ int fesetround(
 ### <a name="parameters"></a>Parametry
 
 *round_mode*<br/>
-Režim zaokrouhlení nastavit jako jeden z s plovoucí desetinnou čárkou zaokrouhlení makra. Pokud hodnota není jednu s plovoucí desetinnou čárkou zaokrouhlení makra, nedojde ke změně režimu zaokrouhlení.
+Režim zaokrouhlování nastavit jako jeden z makra zaokrouhlení s plovoucí desetinnou čárkou. Pokud hodnota není roven jedné makra zaokrouhlení s plovoucí desetinnou čárkou, se nezmění režimu zaokrouhlování.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu **fegetround** vrátí hodnotu režimu zaokrouhlení jako jeden z plovoucí desetinné čárky zaokrouhlení makro hodnoty. Pokud je aktuální režim zaokrouhlení nelze určit vrátí zápornou hodnotu.
+V případě úspěchu **fegetround** vrátí režimu zaokrouhlování jako jedno zaokrouhlení – makro hodnoty s plovoucí desetinnou čárkou bodu. Pokud nelze určit aktuální režim vrátí zápornou hodnotu.
 
 V případě úspěchu **fesetround** vrátí hodnotu 0. Jinak se vrátí nenulovou hodnotu.
 
 ## <a name="remarks"></a>Poznámky
 
-Operace s plovoucí desetinnou čárkou můžete použít některou z několika režimech zaokrouhlení. Tyto řídit směru výsledky operací s plovoucí desetinnou čárkou se zaokrouhlí směrem k, když jsou uložené výsledky. Jedná se o názvy a chování s plovoucí desetinnou čárkou zaokrouhlení makra definované v \<fenv.h >:
+Operace s plovoucí desetinnou čárkou, můžete použít jednu z několika režimech zaokrouhlení. Tyto ovládací prvek směru výsledky operací s plovoucí desetinnou čárkou jsou zaokrouhleny směrem k, pokud se mají výsledky ukládat. Jedná se o názvy a chování plovoucí desetinné čárky zaokrouhlení maker definované v \<fenv.h >:
 
 |– Makro|Popis|
 |-----------|-----------------|
-|FE_DOWNWARD|Zaokrouhlí směrem záporné nekonečno.|
-|FE_TONEAREST|Zaokrouhlí směrem na nejbližší.|
+|FE_DOWNWARD|Zaokrouhlí směrem k záporné nekonečno.|
+|FE_TONEAREST|Zaokrouhlí na nejbližší.|
 |FE_TOWARDZERO|Zaokrouhlí směrem k nule.|
-|FE_UPWARD|Zaokrouhlí směrem kladné nekonečno.|
+|FE_UPWARD|Zaokrouhlí směrem k kladné nekonečno.|
 
-Výchozí chování FE_TONEAREST je zaokrouhlit výsledků uprostřed mezi reprezentovat hodnoty na nejbližší hodnotu s i (0) nejméně významný bit.
+Výchozí chování FE_TONEAREST se má zaokrouhlit výsledků uprostřed mezi reprezentovatelných hodnot na nejbližší hodnotu s i (0) nejméně významných bitů.
 
-Aktuální režim zaokrouhlení ovlivňují tyto operace:
+Aktuální režim má vliv na tyto operace:
 
-- Řetězec převody.
+- Převody typu řetězec.
 
 - Výsledky s plovoucí desetinnou čárkou aritmetické operátory mimo konstantní výrazy.
 
-- Knihovna zaokrouhlení funkce, jako například **tisknout** a **nearbyint –**.
+- Knihovna zaokrouhlení funkce, jako například **isknout** a **nearbyint –**.
 
-- Návratové hodnoty z matematické funkce standardní knihovny.
+- Vrácení hodnoty z standardní knihovnu matematických funkcí.
 
-Aktuální režim zaokrouhlení nemá vliv na tyto operace:
+Aktuální režim neovlivní tyto operace:
 
-- **Trunc**, **ceil**, **podlaží**, a **lround –** – funkce knihovny.
+- **Trunc**, **ceil –**, **floor**, a **lround –** funkce knihovny.
 
-- S plovoucí desetinnou čárkou na celé číslo implicitní přetypování a převody, které vždy zaokrouhlí směrem k nule.
+- S plovoucí desetinnou čárkou na celé číslo implicitní přetypování a převody, které vždy zaokrouhlení směrem k nule.
 
-- Výsledky s plovoucí desetinnou čárkou aritmetických operátorů v konstantní výrazy, které vždy zaokrouhlí na nejbližší hodnotu.
+- Výsledky v konstantních výrazech, které vždy zaokrouhlit na nejbližší hodnotu s plovoucí desetinnou čárkou aritmetické operátory.
 
-Použití těchto funkcí, je nutné vypnout s plovoucí desetinnou čárkou optimalizace, které může zabránit přístupu pomocí `#pragma fenv_access(on)` direktivy před volání. Další informace najdete v tématu [fenv_access –](../../preprocessor/fenv-access.md).
+Pokud chcete použít tyto funkce, je nutné vypnout s plovoucí desetinnou čárkou optimalizace, které by mohla zabránit přístupu pomocí `#pragma fenv_access(on)` direktiv před voláním. Další informace najdete v tématu [fenv_access](../../preprocessor/fenv-access.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Hlavička C|Hlavička C++|
+|Funkce|Záhlaví C|Hlaviček jazyka C++|
 |--------------|--------------|------------------|
 |**fegetround**, **fesetround**|\<fenv.h >|\<cfenv>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [nearbyint – nearbyintf –, nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)<br/>

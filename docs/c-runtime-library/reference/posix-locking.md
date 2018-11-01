@@ -1,10 +1,6 @@
 ---
-title: zamykání | Microsoft Docs
-ms.custom: ''
+title: locking
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - locking
 apilocation:
@@ -21,22 +17,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - locking
-dev_langs:
-- C++
 helpviewer_keywords:
 - locking function
 ms.assetid: 1db15308-543e-44cf-a26f-5539f8e4fb2f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1d213c86d0f96937988e45733a91019c7c1754cf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 58d63a4e5a4ec598c863deb2fd53f85becb98be7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396602"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667880"
 ---
 # <a name="locking"></a>locking
 
-Tato funkce POSIX je zastaralý. Používat vyhovující ISO C++ [_locking –](locking.md) místo.
+Tato funkce POSIX je zastaralá. Použít splňující podmínky ISO C++ [_locking –](locking.md) místo.
