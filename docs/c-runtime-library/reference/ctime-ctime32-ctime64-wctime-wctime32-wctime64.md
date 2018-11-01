@@ -1,10 +1,6 @@
 ---
-title: CTime –, _ctime32 –, _ctime64 –, _wctime –, _wctime32 –, _wctime64 – | Microsoft Docs
-ms.custom: ''
+title: ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ctime64
 - _wctime32
@@ -34,8 +30,6 @@ f1_keywords:
 - _tctime64
 - _ctime64
 - ctime
-dev_langs:
-- C++
 helpviewer_keywords:
 - tctime64 function
 - _ctime32 function
@@ -56,20 +50,16 @@ helpviewer_keywords:
 - wctime function
 - time, converting
 ms.assetid: 2423de37-a35c-4f0a-a378-3116bc120a9d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 30caa77fee7e15f91ff7c3f089f18fd51a34aa0b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d1858a36c68a2ca5cedf70a1d74d5f250cbac8df
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404906"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580817"
 ---
 # <a name="ctime-ctime32-ctime64-wctime-wctime32-wctime64"></a>ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
 
-Převést na řetězec hodnotu času a upravit nastavení místního časového pásma. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [ctime_s –, _ctime32_s –, _ctime64_s –, _wctime_s –, _wctime32_s –, _wctime64_s –](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md).
+Převeďte hodnotu času na řetězec a proveďte úpravu pro nastavení místního časového pásma. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -85,41 +75,41 @@ wchar_t *_wctime64( const __time64_t *sourceTime );
 ### <a name="parameters"></a>Parametry
 
 *sourceTime*<br/>
-Ukazatel na uložené, čas převést.
+Ukazatel na uložený čas k převedení.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na výsledném řetězci znaků. **NULL** bude vrácen, pokud:
+Ukazatel na výsledek řetězce znaků. **NULL** bude vrácen, pokud:
 
-- *sourceTime* představuje datum před půlnoc, 1. ledna 1970 UTC.
+- *sourceTime* představuje datum před půlnocí, 1. ledna 1970, UTC.
 
-- Pokud používáte **_ctime32 –** nebo **_wctime32 –** a *sourceTime* představuje datum po 23:59:59 18 leden 2038 UTC.
+- Pokud používáte **_ctime32 –** nebo **_wctime32 –** a *sourceTime* představuje datum po 23:59:59 18. ledna 2038 UTC.
 
-- Pokud používáte **_ctime64 –** nebo **_wctime64 –** a *sourceTime* představuje datum po 23:59:59, 31. prosince 3000, UTC.
+- Pokud používáte **_ctime64** nebo **_wctime64** a *sourceTime* představuje datum po 23:59:59, 31 prosince 3000 UTC.
 
-**CTime –** vložená funkce, jehož výsledkem je **_ctime64 –** a **time_t** je ekvivalentní **__time64_t –**. Pokud potřebujete vynutit kompilátoru interpretovat **time_t** jako starý 32bitovou verzi **time_t**, můžete definovat **_USE_32BIT_TIME_T**. Provedete to způsobí, že **ctime** k vyhodnocení **_ctime32 –**. Není doporučeno, protože vaše aplikace může selhat po 18. ledna 2038, a není povoleno na 64bitových platformách.
+**CTime –** je vložená funkce, která je vyhodnocena na **_ctime64** a **time_t** je ekvivalentní **__time64_t –**. Pokud je nutné donutit kompilátor k interpretaci **time_t** jako staré 32bitové **time_t**, můžete definovat **_USE_32BIT_TIME_T**. To způsobí, že to **ctime** vyhodnotilo **_ctime32 –**. Toto nastavení nedoporučujeme, protože může vaše aplikace selhat po 18. ledna 2038, a to není povoleno na 64bitových platformách.
 
 ## <a name="remarks"></a>Poznámky
 
-**CTime –** funkce převede hodnotu čas, který je uložený jako [time_t](../../c-runtime-library/standard-types.md) hodnotu na řetězec znaků. *SourceTime* hodnota se obvykle získávají z volání [čas](time-time32-time64.md), která vrátí počet sekund uběhlých od půlnoci (00: 00:00), 1. ledna 1970, koordinovaný světový čas (UTC). Návratová hodnota řetězec obsahuje přesně 26 znaků a má tvar:
+**Ctime** funkce převede hodnotu času, který je uložen jako [time_t](../../c-runtime-library/standard-types.md) hodnotu na řetězec znaků. *SourceTime* hodnota se obvykle získá z volání [čas](time-time32-time64.md), který vrátí dobu v sekundách uplynulých od půlnoci (00: 00:00), 1. ledna 1970, koordinovaného univerzálního času (UTC). Řetězec návratová hodnota obsahuje přesně 26 znaků a má formát:
 
 ```Output
 Wed Jan 02 02:03:55 1980\n\0
 ```
 
-24 hodin se používá. Všechna pole mít konstantní šířky. Znak nového řádku (\n) a znak hodnoty null (\0) zabírají posledních dvou pozic řetězce.
+Se používá 24hodinový formát. Všechna pole mají konstantní šířce. Znak nového řádku ('\n') a znak null ('\0') zabírají posledních dvou pozic řetězce.
 
-Řetězec převedený znaků se také upraví podle nastavení zóny Místní čas. Najdete v článku [čas](time-time32-time64.md), [_ftime –](ftime-ftime32-ftime64.md), a [místní čas](localtime-localtime32-localtime64.md) funkce informace o konfiguraci místní čas a [_tzset –](tzset.md) funkce pro Podrobnosti o definování časové pásmo prostředí a globální proměnné.
+Řetězec převedený znak je také upravena podle nastavení místní časové pásmo. Najdete v článku [čas](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md), a [localtime](localtime-localtime32-localtime64.md) funkce informace o konfiguraci místního času a [_tzset –](tzset.md) funkce pro Podrobnosti o definování prostředí časové pásmo a globální proměnné.
 
-Volání **CTime –** upraví jedné staticky přidělené vyrovnávací paměti používané **gmtime –** a **místní čas** funkce. Každé volání na jednu z těchto rutin zničí výsledek předchozí volání. **CTime –** sdílí statické vyrovnávací paměti s **asctime –** funkce. Proto volání **ctime** zničí výsledky všech předchozích volání **asctime –**, **místní čas**, nebo **gmtime –**.
+Volání **ctime** upraví jedné staticky přidělenou vyrovnávací paměti používané **gmtime** a **localtime** funkce. Každé volání některé z těchto rutin ničí výsledek předchozího volání. **CTime –** sdílí statické vyrovnávací paměť hodnotou **asctime –** funkce. Proto volání **ctime** zničí výsledky jakéhokoli předchozího volání **asctime –**, **localtime**, nebo **gmtime**.
 
-**_wctime –** a **_wctime64 –** jsou verze široká charakterová **ctime** a **_ctime64 –**; ukazatel vrácením široká charakterová řetězec. V opačném **_ctime64 –**, **_wctime –**, a **_wctime64 –** chovají stejně jako na **CTime –**.
+**_wctime** a **_wctime64** jsou širokoznaké verze **ctime** a **_ctime64**; vrací ukazatel na řetězec širokých znaků. V opačném případě **_ctime64**, **_wctime**, a **_wctime64** chovají stejně jako **ctime**.
 
-Tyto funkce ověřit jejich parametrů. Pokud *sourceTime* je ukazatel s hodnotou null, nebo pokud *sourceTime* je hodnota záporná, tyto funkce vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, vrátí funkce **NULL** a nastavte **errno** k **einval –**.
+Tyto funkce ověřují své parametry. Pokud *sourceTime* je ukazatel s hodnotou null, nebo pokud *sourceTime* hodnota je negativní, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí funkce **NULL** a nastavte **errno** k **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tctime –**|**CTime –**|**CTime –**|**_wctime**|
 |**_tctime32 –**|**_ctime32**|**_ctime32**|**_wctime32**|
@@ -136,7 +126,7 @@ Tyto funkce ověřit jejich parametrů. Pokud *sourceTime* je ukazatel s hodnoto
 |**_wctime32**|\<Time.h > nebo \<wchar.h >|
 |**_wctime64**|\<Time.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -165,7 +155,7 @@ int main( void )
 The time is Wed Feb 13 16:04:43 2002
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Správa času](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>

@@ -1,34 +1,25 @@
 ---
-title: C4693 upozornění kompilátoru | Microsoft Docs
+title: Upozornění kompilátoru C4693
 ms.date: 10/25/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4693
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4693
 ms.assetid: 72d8db01-5e6f-4794-8731-76107e8f064a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f8230e60d65c80b4f839cc8a1c97ccc0c7b18086
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 49d101ea56cd868e18489b6c74724a2d106c9265
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273878"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536650"
 ---
-# <a name="compiler-warning-c4693"></a>C4693 upozornění kompilátoru
+# <a name="compiler-warning-c4693"></a>Upozornění kompilátoru C4693
 
-> 'class': zapečetěné abstraktní třídy nemůže mít u členů instancí "Test"
+> 'class': zapečetěná abstraktní třída nemůže mít žádné členy instancí "Test"
 
-Pokud je označena jako typ [zapečetěné](../../windows/sealed-cpp-component-extensions.md) a [abstraktní](../../windows/abstract-cpp-component-extensions.md), může mít pouze statické členy.
+Pokud je typ označen [zapečetěné](../../windows/sealed-cpp-component-extensions.md) a [abstraktní](../../windows/abstract-cpp-component-extensions.md), může mít jenom statické členy.
 
-Toto upozornění je automaticky povýšen na chybu. Pokud chcete-li toto chování změnit, použijte [#pragma – upozornění](../../preprocessor/warning.md).
+Toto upozornění je automaticky povýšen na chybu. Pokud chcete toto chování upravit, použijte [varování #pragma](../../preprocessor/warning.md).
 
 ## <a name="example"></a>Příklad
 

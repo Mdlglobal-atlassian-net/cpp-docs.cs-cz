@@ -1,41 +1,31 @@
 ---
-title: C3861 Chyba kompilátoru | Microsoft Docs
-ms.custom: ''
+title: Chyba kompilátoru C3861
 ms.date: 03/23/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3861
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3861
 ms.assetid: 0a1eee30-b3db-41b1-b1e5-35949c3924d7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6dbfbb11184928331b94b7addc747ffb7e44d6d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ebfd3b0129e25cf543cac803a3b33fb074f3d70
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270261"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530803"
 ---
-# <a name="compiler-error-c3861"></a>C3861 chyby kompilátoru
+# <a name="compiler-error-c3861"></a>Chyba kompilátoru C3861
 
-> '*identifikátor*': nebyl nalezen identifikátor
+> "*identifikátor*': identifikátor se nenašel
 
-Kompilátor nebylo možné přeložit odkaz na identifikátor, i pomocí vyhledávání závislého na argumentu.
+Kompilátor se nepodařilo přeložit odkaz na identifikátor rozhraní i pomocí vyhledávání závislého na argumentu.
 
 ## <a name="remarks"></a>Poznámky
 
-Chcete-li tuto chybu opravit, porovnejte použití *identifikátor* identifikátor deklaraci pro případ a pravopis. Ověřte, že [oboru rozlišení operátory](../../cpp/scope-resolution-operator.md) a obor názvů [pomocí direktiv](../../cpp/namespaces-cpp.md#using_directives) používají správně. Pokud je identifikátor deklarován v záhlaví souboru, ověření hlavičku zahrnuté před identifikátor odkazuje. Pokud identifikátor měl by být externě viditelné, ujistěte se, že je deklarovaná ve zdrojovém souboru, který se používá. Také zkontrolujte, jestli není vyloučený identifikátor deklarace a definice [Podmíněná kompilace direktivy](../../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).
+Chcete-li tuto chybu opravit, porovnejte použití *identifikátor* identifikátor deklarace pro případ a kontrolu pravopisu. Ověřte, že [oboru rozlišení operátory](../../cpp/scope-resolution-operator.md) a obor názvů [direktiv using](../../cpp/namespaces-cpp.md#using_directives) správné použití. Pokud identifikátor je deklarována v souboru hlaviček, ověřte, že záhlaví zahrnuté předtím, než se odkazuje identifikátor. Pokud se bude externě viditelného identifikátoru, ujistěte se, že je deklarována v libovolného zdrojového souboru, která ji používá. Zkontrolujte také, že identifikátor deklarace nebo definice není vyloučený podle [direktivy podmíněné kompilace](../../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).
 
-Změny k odebrání zastaralé funkce běhové knihovny jazyka C v sadě Visual Studio 2015 může způsobit C3861. Chcete-li tuto chybu vyřešit, odebrat odkazy na tyto funkce nebo je nahradit jejich zabezpečený alternativy, pokud existuje. Další informace najdete v tématu [zastaralé funkce](../../c-runtime-library/obsolete-functions.md).
+Odebrat zastaralé funkce běhové knihovny jazyka C v sadě Visual Studio 2015 změny mohou způsobit C3861. Chcete-li vyřešit tuto chybu, odeberte odkazy na tyto funkce nebo je nahradit zabezpečené alternativy, pokud existuje. Další informace najdete v tématu [zastaralé funkce](../../c-runtime-library/obsolete-functions.md).
 
-Pokud se zobrazí chyba C3861 po migraci projektu ze starších verzí kompilátor, můžete mít problémy související s podporovanou verzí Windows. Visual C++ již nepodporuje cílení systému Windows 95, Windows 98, Windows ME, Windows NT nebo Windows 2000. Pokud vaše **WINVER** nebo **_WIN32_WINNT** makra se přiřadí k jednomu z těchto verzí systému Windows, musíte upravit makra. Další informace najdete v tématu [úprava WINVER a _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
+Pokud se zobrazí chyba C3861 po dokončení migrace projektu ze starších verzí kompilátoru, můžete mít problémy související s podporovanou verzí Windows. Jazyk Visual C++ již podporuje cílení na Windows 95, Windows 98, Windows ME, Windows NT nebo Windows 2000. Pokud vaše **WINVER** nebo **_WIN32_WINNT** makra se přiřadí k jednomu z těchto verzí systému Windows, je třeba upravit makra. Další informace najdete v tématu [úpravy WINVER a _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
 
 ## <a name="examples"></a>Příklady
 
@@ -54,7 +44,7 @@ int main() {
 
 ### <a name="identifier-not-in-scope"></a>Identifikátor není v oboru
 
-Následující ukázka generuje C3861, protože identifikátor je viditelné v oboru souboru jeho definice, pouze pokud je deklarovaná v jiné zdrojové soubory, které ho používají.
+Následující ukázka generuje C3861, protože identifikátor je zobrazen v rozsahu souboru definice, pouze pokud je deklarovaná v jiných zdrojových souborech, které ji používají.
 
 ```cpp
 // C3861_a1.cpp
@@ -74,7 +64,7 @@ int f() {  // declared and defined here
 }
 ```
 
-### <a name="namespace-qualification-required"></a>Kvalifikace Namespace požadované
+### <a name="namespace-qualification-required"></a>Kvalifikace Namespace vyžaduje
 
 Třídy výjimek ve standardní knihovně C++ vyžadují `std` oboru názvů.
 
@@ -94,7 +84,7 @@ int main() {
 }
 ```
 
-### <a name="obsolete-function-called"></a>Volaná zastaralé funkce
+### <a name="obsolete-function-called"></a>Zastaralé funkce, které volá
 
 Zastaralé funkce byly odebrány z knihovny CRT.
 
@@ -109,9 +99,9 @@ int main() {
 }
 ```
 
-### <a name="adl-and-friend-functions"></a>Funkce ADL a friend
+### <a name="adl-and-friend-functions"></a>ADL a Friend – funkce
 
-Následující ukázka generuje C3767, protože kompilátor nelze použít argument závislé vyhledávání pro `FriendFunc`:
+Následující ukázka generuje C3767, protože kompilátor nemůže použít argument vyhledávání závislé `FriendFunc`:
 
 ```cpp
 namespace N {
@@ -129,7 +119,7 @@ int main() {
 }
 ```
 
-Opravte chybu, deklarovat friend v rozsahu třídy a definovat v oboru názvů:
+Chcete-li chybu opravit, deklarujte přítele v rozsahu třídy a definujte jej v oboru názvů:
 
 ```cpp
 class MyClass {

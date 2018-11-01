@@ -1,11 +1,6 @@
 ---
-title: feclearexcept1 | Microsoft Docs
-ms.custom: ''
+title: feclearexcept1
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - feclearexcept
 apilocation:
@@ -24,25 +19,19 @@ apitype: DLLExport
 f1_keywords:
 - feclearexcept
 - fenv/feclearexcept
-dev_langs:
-- C++
 helpviewer_keywords:
 - feclearexcept function
 ms.assetid: ef419da3-c248-4432-b53c-8e7a475d9533
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: face2637f308a56d95baa7563a6409dd38870d73
-ms.sourcegitcommit: 2f571220e16f6c20e1fdb005f6cbc9e7ef5608f5
+ms.openlocfilehash: 3c2f037a5be903fc006debfa7319c483431fdd92
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37070074"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551109"
 ---
 # <a name="feclearexcept"></a>feclearexcept
 
-Pokusí se Vymazat příznaky výjimek plovoucí desetinné čárky určený argumentem.
+Pokusí se Vymazat příznaky výjimky s plovoucí desetinnou čárkou určený argumentem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,34 +44,34 @@ int feclearexcept(
 ### <a name="parameters"></a>Parametry
 
 *s výjimkou*<br/>
-Příznaky stavu výjimka zrušte.
+Příznaky výjimky stav vymazání.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí nula v případě *, s výjimkou* rovná nule, nebo pokud byly úspěšně vymazán všechny zadané výjimky. Jinak vrátí nenulovou hodnotu.
+Vrátí hodnotu nula, pokud *, s výjimkou* je nula, nebo pokud byly úspěšně vymazal všechny zadané výjimky. V opačném případě vrací nenulovou hodnotu.
 
 ## <a name="remarks"></a>Poznámky
 
-**Feclearexcept** funkce pokusí zrušte procedura bod příznaky stavu výjimka určeného *, s výjimkou*. Funkce podporuje tyto makra výjimek definované v fenv.h:
+**Feclearexcept** pokusí funkce zrušte plovoucí bod příznaky výjimky stav určeného *, s výjimkou*. Funkce podporuje těchto maker výjimek definovaných v fenv.h:
 
 |Výjimka – makro|Popis|
 |---------------------|-----------------|
-|FE_DIVBYZERO|V dříve s plovoucí desetinnou čárkou operace; došlo k chybě singularity nebo pólu byl vytvořen nekonečnou hodnotu.|
-|FE_INEXACT|Funkce musela být zaokrouhleno uložený výsledek dříve operace s plovoucí desetinnou čárkou.|
-|FE_INVALID|Došlo k chybě domény v dříve operaci s plovoucí desetinnou čárkou.|
-|FE_OVERFLOW|Rozsah došlo k chybě; výsledek operace s plovoucí desetinnou čárkou starší byl příliš velký a nelze je.|
-|FE_UNDERFLOW|Výsledek operace s plovoucí desetinnou čárkou starší byla příliš malé a nelze na úplné přesnost; Hodnota denormal byla vytvořena.|
-|FE_ALL_EXCEPT|Bitová hodnota OR všech podporována s plovoucí desetinnou čárkou výjimky.|
+|FE_DIVBYZERO|V dříve s plovoucí desetinnou čárkou operace; došlo k chybě singularity nebo pole byl vytvořen hodnotu nekonečno.|
+|FE_INEXACT|Funkce musela být zaokrouhlit uložený výsledek dříve operace s plovoucí desetinnou čárkou.|
+|FE_INVALID|V rámci starší operace s plovoucí desetinnou čárkou došlo k chybě domény.|
+|FE_OVERFLOW|Došlo k chybě rozsah; předchozí výsledek operace s plovoucí desetinnou čárkou byl příliš velký a nelze je reprezentovat.|
+|FE_UNDERFLOW|Předchozí výsledek operace s plovoucí desetinnou čárkou byl příliš malá, aby se dala vyjádřit v úplnou přesností; byl vytvořen nenormální hodnota.|
+|FE_ALL_EXCEPT|Bitový operátor OR všech nepodporuje výjimky s plovoucí desetinnou čárkou.|
 
-*, S výjimkou* argument může být nula nebo bitová hodnota OR jeden nebo více makra podporované výjimek. Výsledek jakoukoli jinou hodnotu argumentu není definován.
+*, S výjimkou* argument může být nula nebo bitový operátor OR jednoho nebo více z maker výjimek podporované. Výsledek libovolné jiné hodnoty argumentu není definován.
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Hlavička C|Hlavička C++|
+|Funkce|Záhlaví C|Hlaviček jazyka C++|
 |--------------|--------------|------------------|
 |**feclearexcept**|\<fenv.h >|\<cfenv>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Viz také:
 

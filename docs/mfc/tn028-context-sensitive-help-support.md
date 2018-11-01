@@ -1,29 +1,19 @@
 ---
-title: 'TN028: Podpora kontextové nápovědy | Dokumentace Microsoftu'
-ms.custom: ''
+title: 'TN028: Podpora kontextové nápovědy'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.help
-dev_langs:
-- C++
 helpviewer_keywords:
 - context-sensitive Help [MFC], MFC applications
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e2bc7b3db974a34022089facb2536cf12c49b48a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: db20cb087d70284103cd02dcfa34b2089ae09821
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394163"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533416"
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028: Podpora kontextové nápovědy
 
@@ -135,7 +125,7 @@ LOWORD(lParam) obsahuje souřadnice zařízení osy x, ve kterém bylo kliknuto 
 HIWORD(lParam) obsahuje souřadnice y.
 
 *wParam*<br/>
-se nepoužívá a bude nula. Pokud vrácená hodnota je nenulový, se nazývá WinHelp pomocí daného kontextu. Pokud vrácená hodnota je nula, je dotazován nadřazené okno o pomoc.
+Se nepoužívá a bude nula. Pokud vrácená hodnota je nenulový, se nazývá WinHelp pomocí daného kontextu. Pokud vrácená hodnota je nula, je dotazován nadřazené okno o pomoc.
 
 V mnoha případech můžete využít kód spuštění testu, které už můžete mít. Zobrazit provádění `CToolBar::OnHelpHitTest` příklad zpracování zprávy WM_HELPHITTEST (kód využívá spuštění testu kód použitý pro tlačítka a popisky v `CControlBar`).
 

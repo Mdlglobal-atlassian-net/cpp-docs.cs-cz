@@ -1,10 +1,6 @@
 ---
-title: _getch_nolock –, _getwch_nolock – | Microsoft Docs
-ms.custom: ''
+title: _getch_nolock, _getwch_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getwch_nolock
 - _getch_nolock
@@ -28,8 +24,6 @@ f1_keywords:
 - _getwch_nolock
 - _gettch_nolock
 - gettch_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - characters, getting from console
 - _getwch_nolock function
@@ -40,23 +34,19 @@ helpviewer_keywords:
 - getch_nolock function
 - gettch_nolock function
 ms.assetid: 9d248546-26ca-482c-b0c6-55812a987e83
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e742dab8f77a4f66b77c7c9fdc4b45b5ace06be0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dbfc670b70a278e97794fc19f170cef565626dbb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400701"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514293"
 ---
 # <a name="getchnolock-getwchnolock"></a>_getch_nolock, _getwch_nolock
 
-Získá znak z konzole bez echo a bez blokování vlákno.
+Získá znak z konzoly bez odezvy a uzamčení podprocesu.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -67,11 +57,11 @@ wint_t _getwch_nolock( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí znak pro čtení. Neexistuje žádný návratový chyby.
+Vrátí čtení znaku. Není vrácena žádná chyba.
 
 ## <a name="remarks"></a>Poznámky
 
-**_getch_nolock –** a **_getwch_nolock –** jsou stejné jako **_getch –** a **_getchw** s tím rozdílem, že jejich není chráněn z narušení jiná vlákna. Může být rychlejší, protože nevznikají nároky na uzamčení jiná vlákna. Tyto funkce lze používejte pouze v kontextu vláken jako je například aplikace nebo kde oboru volání již zpracovává izolace přístup z více vláken.
+**_getch_nolock –** a **_getwch_nolock –** jsou stejné jako **_getch** a **_getchw** s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Mohou být rychlejší, protože nejsou spojené režii uzamykáním ostatních vláken. Tyto funkce používejte pouze v kontextech bezpečných na vlákna, jako je například aplikace s jedním vláknem nebo pokud volající obor již zpracovává izolaci vláken.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -86,7 +76,7 @@ Vrátí znak pro čtení. Neexistuje žádný návratový chyby.
 |**_getch_nolock –**|\<conio.h >|
 |**_getwch_nolock –**|\<conio.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -124,7 +114,7 @@ abcdefy
 Type 'Y' when finished typing keys: Y
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [I/O konzoly a portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getche, _getwche](getche-getwche.md)<br/>

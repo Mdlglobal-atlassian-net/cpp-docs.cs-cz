@@ -1,15 +1,9 @@
 ---
-title: -TLBID (určení ID prostředku pro knihovnu typů) | Dokumentace Microsoftu
-ms.custom: ''
+title: /TLBID (Zadat ID zdroje pro TypeLib)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /tlbid
 - VC.Project.VCLinkerTool.TypeLibraryResourceID
-dev_langs:
-- C++
 helpviewer_keywords:
 - tlb files, specifying resource ID
 - -TLBID linker option
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - TLBID linker option
 - type libraries, specifying resource ID
 ms.assetid: 434b28a2-4656-4d52-ac82-8b18bf486fb2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e34e4d27c374fddd7710431e3a09f6a9ccfc802d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1a86c753aa94302e7f4d26c53fee2f63175d33c7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701311"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519285"
 ---
 # <a name="tlbid-specify-resource-id-for-typelib"></a>/TLBID (Zadat ID zdroje pro TypeLib)
 
@@ -58,7 +48,7 @@ Pokud toto ID prostředku je v konfliktu s některou z existujících prostředk
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-1. Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TypeLibraryResourceID%2A>.
+1. Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TypeLibraryResourceID%2A>.
 
 ## <a name="see-also"></a>Viz také
 
