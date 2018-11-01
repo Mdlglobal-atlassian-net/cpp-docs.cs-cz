@@ -1,31 +1,21 @@
 ---
-title: '&lt;cassert –&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;cassert&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <cassert>
-dev_langs:
-- C++
 helpviewer_keywords:
 - cassert header
 ms.assetid: 6ead15a3-ac45-4075-be8e-350bca995c26
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ca0440c7b144e980ef7aad5239c1a2f2d1df5496
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a1d554eedef368fe10a9f13b0b654078675e8348
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850421"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50559013"
 ---
 # <a name="ltcassertgt"></a>&lt;cassert&gt;
 
-Obsahuje hlavičku knihovny standardní C \<assert.h > a přidá přidružené jména `std` oboru názvů.
+Obsahuje hlavičku knihovny Standard C \<assert.h > a přidá názvy přidružené k `std` oboru názvů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,9 +26,9 @@ Obsahuje hlavičku knihovny standardní C \<assert.h > a přidá přidružené j
 
 ## <a name="remarks"></a>Poznámky
 
-Včetně tuto hlavičku zajistí, že jsou názvy deklarováno s použitím externí propojení v hlavičce knihovny standardní C deklarované v `std` oboru názvů.
+Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším spojením v záhlaví knihovny Standard C jsou deklarovány v `std` oboru názvů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [assert Macro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)<br/>
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>

@@ -1,10 +1,6 @@
 ---
-title: _commit – | Microsoft Docs
-ms.custom: ''
+title: _commit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _commit
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _commit
 - commit
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], flushing
 - flushing files to disk
@@ -32,20 +26,16 @@ helpviewer_keywords:
 - _commit function
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3e9bc746c347bfb60fb78edbf025b676f8218c66
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8408158cb3d4ef0d29d9af24d8a2acbd28e00192
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394828"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523068"
 ---
 # <a name="commit"></a>_commit
 
-Vyprázdnění souboru přímo na disku.
+Vyprázdnění souboru přímo na disk.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -58,27 +48,27 @@ int _commit(
 ### <a name="parameters"></a>Parametry
 
 *FD*<br/>
-Popisovače souborů na otevření souboru.
+Popisovač souboru odkazující na otevřený soubor.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_commit –** vrátí hodnotu 0, pokud soubor byl úspěšně vyprázdněn na disk. Vrácená hodnota -1 označuje chybu.
+**_potvrdit** vrátí hodnotu 0, pokud soubor byl úspěšně vyprázdněných na disk. Návratová hodnota-1 označuje chybu.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Commit –** funkce vynutí operačního systému k zápisu soubor přidružený k *fd* na disk. Toto volání zajišťuje okamžitě, vyprázdní zadaný soubor není uvážení operačního systému.
+**_Potvrdit** funkce vynutí operačního systému zápisu do souboru spojené s *fd* na disk. Toto volání se zajistí okamžitě, vyprázdní zadaný soubor není na základě vlastního uvážení operačního systému.
 
-Pokud *fd* je popisovač souboru je neplatný. obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, funkce vrátí hodnotu -1 a **errno** je nastaven na **ebadf –**.
+Pokud *fd* je neplatného popisovače souboru, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a **errno** je nastavena na **EBADF**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelné hlavičky|
+|Rutina|Požadovaný hlavičkový soubor|Volitelná záhlaví|
 |-------------|---------------------|----------------------|
 |**_commit**|\<IO.h >|\<errno.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [I/O nízké úrovně](../../c-runtime-library/low-level-i-o.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>

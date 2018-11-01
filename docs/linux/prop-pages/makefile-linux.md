@@ -1,113 +1,103 @@
 ---
-title: Obecné vlastnosti (Linux C++ projektem souboru pravidel) | Microsoft Docs
-ms.custom: ''
+title: Obecné vlastnosti (projektu souboru pravidel C++ pro Linux) | Dokumentace Microsoftu
 ms.date: 9/26/2017
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: 3dec6853-43f6-412b-9806-9bfad333a204
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 6fb23d2c7275788b05fe4450613770c268ca6c64
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: fb742d552d0b70ba5f5c406dd43bdf4cf8d1914b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705696"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524589"
 ---
 # <a name="makefile-project-properties-linux-c"></a>Vlastnosti projektu souboru pravidel (Linux C++)
 
-Toto je částečný seznam vlastností dostupných v projektu souboru pravidel Linux. Mnoho vlastností projektu souboru pravidel jsou shodné s vlastností projektu konzolové aplikace C++ Linux.
+Toto je částečný seznam vlastností dostupných v projektu souboru pravidel pro Linux. Mnoho vlastností projektu souboru pravidel jsou stejné jako vlastnosti projektu aplikace konzoly C++ Linux.
 
 ## <a name="general"></a>Obecné
 
 Vlastnost | Popis | Možnosti
 --- | ---| ---
-Výstupní adresář | Určuje relativní cestu do výstupního adresáře. soubor; může obsahovat proměnné prostředí.
-Zprostředkující adresáře | Určuje relativní cestu k adresáři pomocný soubor; může obsahovat proměnné prostředí.
-Vytvoření souboru protokolu | Určuje soubor protokolu sestavení pro zápis, když sestavení protokolování je povolena.
-Typ konfigurace | Určuje typ výstupu, který generuje tuto konfiguraci. | **Dynamické knihovny (.so)** -dynamické knihovny (.so)<br>**Statické knihovny (.a)** – statické knihovny (.a)<br>**Aplikace (.out)** -aplikace (.out)<br>**Makefile** -souboru pravidel<br>
-Počítač vzdáleného sestavení | Cílový počítač nebo zařízení, které chcete použít pro vzdálené sestavení, nasazení a ladění.
-Vzdálené sestavení kořenového adresáře | Určuje cestu k adresáři na vzdáleném počítači nebo zařízení.
-Adresáři vzdáleného sestavení projektu | Určuje cestu k adresáři na vzdáleném počítači nebo zařízení pro projekt.
+Výstupní adresář | Určuje relativní cestu k adresáři výstupního souboru; může obsahovat proměnné prostředí.
+Zprostředkující adresář | Určuje relativní cestu k adresáři přechodového souboru; může obsahovat proměnné prostředí.
+Soubor protokolu sestavení | Určuje soubor protokolu sestavení pro zápis při protokolování sestavení je povolená.
+Typ konfigurace | Určuje typ výstupu generovaného touto konfigurací. | **Dynamická knihovna (.so)** – dynamická knihovna (.so)<br>**Statická knihovna (.a)** – statická knihovna (.a)<br>**Aplikace (.out)** – aplikace (.out)<br>**Soubor pravidel** -souboru pravidel<br>
+Vzdálený sestavující počítač | Cílový počítač nebo zařízení pro vzdálené sestavení, nasazení a ladění.
+Vzdálený Buildovací kořenový adresář | Určuje cestu k adresáři na vzdáleném počítači či zařízení.
+Adresář projektu vzdáleného buildu | Určuje cestu k adresáři na vzdáleném počítači nebo zařízení pro tento projekt.
 
 ## <a name="debugging"></a>Ladění
 
-V tématu [ladicího programu vlastnosti (Linux C++)](debugging-linux.md)
+Zobrazit [ladicího programu vlastnosti (Linux C++)](debugging-linux.md)
 
 ## <a name="copy-sources"></a>Kopírovat zdroje
 
-V tématu [kopírovat zdroje vlastnosti projektu (Linux C++)](copy-sources-project.md).
+Zobrazit [kopírování vlastností projektu (C++ pro Linux) zdrojů](copy-sources-project.md).
 
 ## <a name="build-events"></a>Události sestavení
 
-### <a name="pre-build-event"></a>Události před sestavením
+### <a name="pre-build-event"></a>Událost před sestavením
 
 Vlastnost | Popis
 --- | ---
-Příkazový řádek | Určuje příkazový řádek pro spuštění nástroje události před sestavením.
-Popis | Určuje popis události před sestavením nástroj k zobrazení.
-Použití v sestavení | Určuje, zda je tato událost sestavení vyloučen ze sestavení pro aktuální konfiguraci.
-Další soubory pro kopírování | Určuje další soubory zkopírovat do vzdáleného systému. Volitelně lze zadat seznam jako místní k párům vzdálené mapování pomocí syntaxe takto: fulllocalpath1: = fullremotepath1; fulllocalpath2: = fullremotepath2, kam lze zkopírovat do místního souboru do zadaného umístění vzdáleného do vzdáleného systému.
+Příkazový řádek | Určuje příkazový řádek, který má spustit nástroj události před sestavením.
+Popis | Určuje popis, který se má zobrazit nástroj události před sestavením.
+Použít v sestavení | Určuje, zda je tato událost sestavení vyloučena ze sestavení v aktuální konfiguraci.
+Další soubory ke zkopírování | Určuje další soubory ke zkopírování do vzdáleného systému. Volitelně můžete zadat seznamu jako místní dvojice mapování vzdálených touto syntaxí: fulllocalpath1: = fullremotepath1; fulllocalpath2: = fullremotepath2, kde místní soubor je možné zkopírovat do zadaného vzdáleného umístění ve vzdáleném systému.
 
-### <a name="post-build-event"></a>Události po sestavení
-
-Vlastnost | Popis
---- | ---
-Příkazový řádek | Určuje příkazový řádek pro spuštění nástroje události po sestavení.
-Popis | Určuje popis události po sestavení nástroj pro zobrazení.
-Použití v sestavení | Určuje, zda je tato událost sestavení vyloučen ze sestavení pro aktuální konfiguraci.
-Další soubory pro kopírování | Určuje další soubory zkopírovat do vzdáleného systému. Volitelně lze zadat seznam jako místní k párům vzdálené mapování pomocí syntaxe takto: fulllocalpath1: = fullremotepath1; fulllocalpath2: = fullremotepath2, kam lze zkopírovat do místního souboru do zadaného umístění vzdáleného do vzdáleného systému.
-
-### <a name="remote-pre-build-event"></a>Vzdálené události před sestavením
+### <a name="post-build-event"></a>Událost po sestavení
 
 Vlastnost | Popis
 --- | ---
-Příkazový řádek | Určuje příkazový řádek události před sestavením nástroje ke spuštění ve vzdáleném systému.
-Popis | Určuje popis události před sestavením nástroj k zobrazení.
-Použití v sestavení | Určuje, zda je tato událost sestavení vyloučen ze sestavení pro aktuální konfiguraci.
-Další soubory pro kopírování | Určuje další soubory pro kopírování ze vzdáleného systému. Volitelně lze zadat seznam jako vzdálené k párům místních mapovacích pomocí syntaxe takto: fullremotepath1: = fulllocalpath1; fullremotepath2: = fulllocalpath2, kam lze zkopírovat ke vzdálenému souboru do zadaného umístění v místním počítači.
+Příkazový řádek | Určuje příkazový řádek, který má spustit nástroj události po sestavení.
+Popis | Určuje popis, který se má zobrazit nástroj události po sestavení.
+Použít v sestavení | Určuje, zda je tato událost sestavení vyloučena ze sestavení v aktuální konfiguraci.
+Další soubory ke zkopírování | Určuje další soubory ke zkopírování do vzdáleného systému. Volitelně můžete zadat seznamu jako místní dvojice mapování vzdálených touto syntaxí: fulllocalpath1: = fullremotepath1; fulllocalpath2: = fullremotepath2, kde místní soubor je možné zkopírovat do zadaného vzdáleného umístění ve vzdáleném systému.
 
-### <a name="remote-post-build-event"></a>Vzdálené události po sestavení
+### <a name="remote-pre-build-event"></a>Vzdálená událost před sestavením
+
+Vlastnost | Popis
+--- | ---
+Příkazový řádek | Určuje příkazový řádek pro spuštění ve vzdáleném systému nástroje pre-build event.
+Popis | Určuje popis, který se má zobrazit nástroj události před sestavením.
+Použít v sestavení | Určuje, zda je tato událost sestavení vyloučena ze sestavení v aktuální konfiguraci.
+Další soubory ke zkopírování | Určuje další soubory ke zkopírování ze vzdáleného systému. Volitelně lze zadat seznam jako vzdálené místních mapovacích dvojice touto syntaxí: fullremotepath1: = fulllocalpath1; fullremotepath2: = fulllocalpath2, kde vzdálený soubor je možné zkopírovat do zadaného umístění na místním počítači.
+
+### <a name="remote-post-build-event"></a>Vzdálená událost po sestavení
 
 Vlastnost | Popis
 --- | ---
 Příkazový řádek | Určuje příkazový řádek pro nástroj události po sestavení ke spuštění ve vzdáleném systému.
-Popis | Určuje popis události po sestavení nástroj pro zobrazení.
-Použití v sestavení | Určuje, zda je tato událost sestavení vyloučen ze sestavení pro aktuální konfiguraci.
-Další soubory pro kopírování | Určuje další soubory pro kopírování ze vzdáleného systému. Volitelně lze zadat seznam jako vzdálené k párům místních mapovacích pomocí syntaxe takto: fullremotepath1: = fulllocalpath1; fullremotepath2: = fulllocalpath2, kam lze zkopírovat ke vzdálenému souboru do zadaného umístění v místním počítači.
+Popis | Určuje popis, který se má zobrazit nástroj události po sestavení.
+Použít v sestavení | Určuje, zda je tato událost sestavení vyloučena ze sestavení v aktuální konfiguraci.
+Další soubory ke zkopírování | Určuje další soubory ke zkopírování ze vzdáleného systému. Volitelně lze zadat seznam jako vzdálené místních mapovacích dvojice touto syntaxí: fullremotepath1: = fulllocalpath1; fullremotepath2: = fulllocalpath2, kde vzdálený soubor je možné zkopírovat do zadaného umístění na místním počítači.
 
 ## <a name="cc"></a>C/C++
 
 ### <a name="intellisense"></a>IntelliSense
 
-IntelliSense vlastnosti lze nastavit na úrovni projektu nebo soubor následuje k modulu IntelliSense. Neovlivňují kompilace.
+Vlastnosti technologie IntelliSense můžete nastavit na úrovni projektu nebo soubor k poskytování příčiny modul IntelliSense. Neovlivňují kompilace.
 
 Vlastnost | Popis
 --- | ---
-Zahrnout cesty pro hledání | Určuje cestu zahrnutí vyhledávání pro vyřešení zahrnuté soubory.
-Vynutit zahrnuje | Určuje soubory, které jsou vynucené zahrnuty.
-Definice preprocesoru | Určuje, že preprocesor definuje používané ve zdrojové soubory.
-Nedefinované Definice preprocesoru | Určuje, že jeden nebo více preprocesor undefines.     (/U[macro])
-Další možnosti | Určuje dalších přepínačů, který se má použít technologii IntelliSense, při analýze souborů C++.
+Zahrnout cestu vyhledávání | Určuje cestu hledání pro zahrnuté soubory řešení.
+Vynucené zahrnuje | Určuje soubory, které jsou Vynuceně zahrnuté.
+Definice preprocesoru | Určuje direktivy preprocesoru define použité zdrojovými soubory.
+Zrušit Definice preprocesoru | Určuje že jeden nebo více nedefinovaných hodnot preprocesoru.     (/U[makro]))
+Další možnosti | Určuje další přepínače kompilátoru pro použití technologií IntelliSense při analýze souborů C++.
 
 ### <a name="build"></a>Sestavení
 
 Vlastnost | Popis
 --- | ---
-Sestavení příkazového řádku | Určuje příkazový řádek spustit pro příkaz 'Sestavení'.
-Znovu vytvořit všechny příkazového řádku | Určuje příkazový řádek spustit pro příkaz 'Znovu vytvořit všechny'.
-Vyčištění příkazového řádku | Určuje příkazový řádek spustit pro příkaz 'Vyčistit'.
+Sestavení příkazového řádku | Určuje příkazový řádek pro spuštění příkazu "Sestavení".
+Opětovné sestavení všech příkazového řádku | Určuje příkazový řádek pro spuštění příkazu "Sestavit vše znovu".
+Příkazový řádek příkazu vyčistit | Určuje příkazový řádek pro spuštění příkazu "Clean".
 
-### <a name="remote-build"></a>Vzdálené sestavení
+### <a name="remote-build"></a>Vzdálený Buildovací
 
 Vlastnost | Popis
 --- | ---
-Sestavení příkazového řádku | Určuje příkazový řádek spustit pro příkaz 'Sestavení'. Je to provést ve vzdáleném systému.
-Znovu vytvořit všechny příkazového řádku | Určuje příkazový řádek spustit pro příkaz 'Znovu vytvořit všechny'. Je to provést ve vzdáleném systému.
-Vyčištění příkazového řádku | Určuje příkazový řádek spustit pro příkaz 'Vyčistit'. Je to provést ve vzdáleném systému.
-Výstupy | Určuje výstupy generované vzdálené sestavení do vzdáleného systému.
+Sestavení příkazového řádku | Určuje příkazový řádek pro spuštění příkazu "Sestavení". Provádí se ve vzdáleném systému.
+Opětovné sestavení všech příkazového řádku | Určuje příkazový řádek pro spuštění příkazu "Sestavit vše znovu". Provádí se ve vzdáleném systému.
+Příkazový řádek příkazu vyčistit | Určuje příkazový řádek pro spuštění příkazu "Clean". Provádí se ve vzdáleném systému.
+Výstupy | Určuje výstupy generované vzdáleným sestavením ve vzdáleném systému.

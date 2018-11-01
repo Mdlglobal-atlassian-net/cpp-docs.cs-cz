@@ -1,10 +1,6 @@
 ---
-title: fsetpos – | Microsoft Docs
-ms.custom: ''
+title: fsetpos
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fsetpos
 apilocation:
@@ -22,26 +18,20 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fsetpos
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, setting position indicators
 - fsetpos function
 ms.assetid: 6d19ff48-1a2b-47b3-9f23-ed0a47b5a46e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c381cf478a97d47efe10c68096fffe3d9fd8efdf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9854c71e381da6ec9a75d440b9588e2476bada7c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399306"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528229"
 ---
 # <a name="fsetpos"></a>fsetpos
 
-Nastaví datový proud pozice indikátoru.
+Nastaví Indikátor pozice v proudu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,21 +44,21 @@ int fsetpos(
 
 ### <a name="parameters"></a>Parametry
 
-*Datový proud*<br/>
-Ukazatel na **souboru** struktura.
+*Stream*<br/>
+Ukazatel na **souboru** struktury.
 
 *POS*<br/>
-Označení pozice úložiště.
+Indikátor pozice v úložišti.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěšného **fsetpos –** vrátí hodnotu 0. Funkce vrátí nenulovou hodnotu, při selhání a nastaví **errno** na jednu z následujících manifest konstanty (definovanou v kód chyby. H): **ebadf –**, což znamená, že soubor není dostupný nebo objekt, *datového proudu* body není platný soubor struktura; nebo **einval –**, což znamená neplatnou hodnotu pro *datového proudu* nebo *pos* byl předán. Pokud není předán neplatný parametr v těchto funkcí vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md).
+V případě úspěšného ověření **fsetpos** vrátí hodnotu 0. Při selhání, funkce vrátí nenulovou hodnotu a nastaví **errno** na jednu z následujících manifest konstanty (definované v ERRNO. H): **EBADF**, což znamená, soubor není přístupný nebo objekt, který *stream* bodů není platným souborem struktury; nebo **EINVAL**, což znamená, že neplatnou hodnotu pro *stream* nebo *pos* byl předán. Pokud je předán neplatný parametr, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
-V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších návratové kódy.
+Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších návratových kódů.
 
 ## <a name="remarks"></a>Poznámky
 
-**Fsetpos –** funkce nastaví indikátor pozice souboru pro *datového proudu* na hodnotu *pos*, který byl získán v předchozí výzvy k **fgetpos –** proti *datového proudu*. Funkce vymaže indikátoru end souboru a vrátí zpět důsledky [ungetc –](ungetc-ungetwc.md) na *datového proudu*. Po volání **fsetpos –**, další operace na *datového proudu* může být buď vstup nebo výstup.
+**Fsetpos** funkce nastaví indikátor pozice v souboru pro *stream* hodnotě *pos*, získaný v předchozím volání **fgetpos**proti *stream*. Funkce vymaže indikátor konce souboru a vrátí zpět důsledky [ungetc –](ungetc-ungetwc.md) na *stream*. Po volání **fsetpos**, další operaci na *stream* může být buď vstup nebo výstup.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -76,13 +66,13 @@ V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-r
 |--------------|---------------------|
 |**fsetpos**|\<stdio.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [fgetpos –](fgetpos.md).
+Podívejte se na příklad pro [fgetpos](fgetpos.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetpos](fgetpos.md)<br/>

@@ -1,10 +1,6 @@
 ---
-title: Doba, _time32 –, _time64 – | Microsoft Docs
-ms.custom: ''
+title: time, _time32, _time64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - time
 - _time64
@@ -29,8 +25,6 @@ f1_keywords:
 - time/_time32
 - time/_time64
 - _time32
-dev_langs:
-- C++
 helpviewer_keywords:
 - time32 function
 - _time32 function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - system time
 - time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3f627f0b9cbcfea1d048122d63c56d03aa61062d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0749ecbf0f88620e7293a043130b49dbe45aaf31
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410564"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546571"
 ---
 # <a name="time-time32-time64"></a>time, _time32, _time64
 
@@ -69,21 +59,21 @@ Ukazatel na umístění úložiště pro čas.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí čas jako uplynulé sekund od půlnoci 1. ledna 1970, nebo -1 v případě k chybě.
+Vrátí čas v sekundách uplynulých od půlnoci 1. ledna 1970, nebo -1 v případě chyby.
 
 ## <a name="remarks"></a>Poznámky
 
-**Čas** funkce vrátí počet sekund uběhlých od půlnoci (00: 00:00), 1. ledna 1970, koordinovaný světový čas (UTC), podle systémových hodin. Návratová hodnota je uložen v umístění poskytují *destTime*. Tento parametr může být **NULL**, v takovém případě není uložen návratovou hodnotu.
+**Čas** funkce vrátí dobu v sekundách uplynulých od půlnoci (00: 00:00), 1. ledna 1970, koordinovaný univerzální čas (UTC), podle systémových hodin. Vrácená hodnota je uložen v umístění Dal *destTime*. Tento parametr může mít **NULL**, v takovém případě není uložený návratovou hodnotu.
 
-**čas** obálku pro **_time64 –** a **time_t** je ve výchozím nastavení odpovídá **__time64_t –**. Pokud potřebujete vynutit kompilátoru interpretovat **time_t** jako starý 32bitovou verzi **time_t**, můžete definovat **_USE_32BIT_TIME_T**. Není doporučeno, protože vaše aplikace může selhat po 18. ledna 2038; použití této makro není povolena na 64bitových platformách.
+**čas** tvoří obálku pro **_time64** a **time_t** je ve výchozím nastavení rovna **__time64_t –**. Pokud je nutné donutit kompilátor k interpretaci **time_t** jako staré 32bitové **time_t**, můžete definovat **_USE_32BIT_TIME_T**. To se nedoporučuje, protože může vaše aplikace selhat po 18. ledna 2038; Použijte toto makro není povolena na 64bitových platformách.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaná hlavička C|Požadovaná hlavička v C++|
+|Rutina|Požadovaná hlavička C|Požadované hlaviček jazyka C++|
 |-------------|---------------------|
-|**čas**, **_time32 –**, **_time64 –**|\<Time.h >|\<CTime – > nebo \<time.h >|
+|**čas**, **_time32 –**, **_time64**|\<Time.h >|\<CTime – > nebo \<time.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -237,7 +227,7 @@ Christmas            Sat Dec 25 12:00:00 1993
 Today is Friday, day 25 of April in the year 2003.
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Správa času](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>

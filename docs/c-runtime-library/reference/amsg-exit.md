@@ -1,10 +1,6 @@
 ---
-title: _amsg_exit | Microsoft Docs
-ms.custom: ''
+title: _amsg_exit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _amsg_exit
 apilocation:
@@ -21,25 +17,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _amsg_exit
-dev_langs:
-- C++
 helpviewer_keywords:
 - _amsg_exit
 ms.assetid: 146d4faf-d763-43a4-b264-12711196456b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dbb7f46bb4f3c942fd1c9e1a1d45c1ccf48739f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 87cd08a6c60a1e29b8a8e15edbfdd69d338d875d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392793"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534023"
 ---
 # <a name="amsgexit"></a>_amsg_exit
 
-Vysílá chybovou zprávu zadanou runtime a potom ukončí aplikaci s kódem chyby 255.
+Vydá chybovou zprávu zadaného modulu runtime a následně skončí aplikace s kódem chyby 255.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,11 +40,11 @@ void _amsg_exit ( int rterrnum );
 ### <a name="parameters"></a>Parametry
 
 *rterrnum*<br/>
-Identifikační číslo chybová zpráva definované systémem za běhu.
+Identifikační číslo chybovou zprávu modulu runtime definované v systému.
 
 ## <a name="remarks"></a>Poznámky
 
-Tato funkce vysílá runtime chybovou zprávu **stderr** pro konzolové aplikace a zobrazí zprávu ve zprávě pole pro aplikace pro Windows. V režimu ladění můžete vyvolat ladicího programu před ukončením.
+Tato funkce generuje runtime chybová zpráva na **stderr** pro konzolové aplikace a zobrazí zprávy ve zprávě pole pro aplikace Windows. V režimu ladění můžete vyvolat ladicí program před ukončením.
 
 ## <a name="requirements"></a>Požadavky
 

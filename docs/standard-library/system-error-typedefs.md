@@ -1,17 +1,15 @@
 ---
-title: '&lt;system_error –&gt; – definice TypeDef | Microsoft Docs'
-ms.custom: ''
+title: '&lt;system_error –&gt; – definice TypeDef'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - system_error/std::generic_errno
 ms.assetid: 28cf9f7d-9c28-4baa-a297-67c8260b07fb
-ms.openlocfilehash: 6dab6e379d2b36ff7e4c2e7cdee581bd43488e41
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 95b2cb22d4fbff4f92cf28041e70ae599c318cbc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853411"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531053"
 ---
 # <a name="ltsystemerrorgt-typedefs"></a>&lt;system_error –&gt; – definice TypeDef
 
@@ -21,7 +19,7 @@ ms.locfileid: "33853411"
 
 ## <a name="generic_errno"></a>  generic_errno
 
-Typ, který reprezentuje výčet, který poskytuje symbolický názvy pro všechny makra kód chyby definované Posix v `<errno.h>`.
+Typ, který představuje výčet, který poskytuje symbolické názvy pro všechna makra kód chyby definované v rámci specifikace Posix v `<errno.h>`.
 
 ```cpp
 typedef errc generic_error;
@@ -29,8 +27,8 @@ typedef errc generic_error;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ se jedná o synonymum [errc](../standard-library/system-error-enums.md#errc).
+Typ je synonymum pro [errc –](../standard-library/system-error-enums.md#errc).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [<system_error>](../standard-library/system-error.md)<br/>

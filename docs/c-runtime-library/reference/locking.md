@@ -1,10 +1,6 @@
 ---
-title: _locking – | Microsoft Docs
-ms.custom: ''
+title: _locking
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _locking
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _locking
-dev_langs:
-- C++
 helpviewer_keywords:
 - locking function
 - bytes [C++], locking file
@@ -31,20 +25,16 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1666f631d9bceccb8925b2002b797753e024ab9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1309d99d8e7040626384e38324c1e910e4731295
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404143"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523801"
 ---
 # <a name="locking"></a>_locking
 
-Uzamkne nebo odemkne bajtů souboru.
+Uzamyká nebo odemyká bajtů do souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -69,44 +59,44 @@ Počet bajtů, které mají zamknout.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_locking –** v případě úspěchu vrátí hodnotu 0. Vrácená hodnota -1 označuje selhání, v takovém případě [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) nastaven na jednu z následujících hodnot.
+**_locking –** v případě úspěchu vrátí hodnotu 0. Návratová hodnota-1 označuje chybu, v takovém případě [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) nastavena na jednu z následujících hodnot.
 
-|errno – hodnota|Podmínka|
+|Hodnota errno|Podmínka|
 |-|-|
-**EACCES –**|Zamykání porušení (soubor již zamčený nebo odemčený).
-**EBADF –**|Popisovač souboru je neplatný.
-**EDEADLOCK –**|Narušení uzamčení. Vrátí, když **_lk_lock –** nebo **_lk_rlck –** zadán příznak a nelze jej zamknout soubor po 10 pokusů.
-**EINVAL –**|Byl zadán neplatný argument **_locking –**.
+**EACCES**|Uzamčení porušení (soubor již zamčený nebo odemčený).
+**EBADF**|Popisovač souboru je neplatná.
+**EDEADLOCK**|Narušení uzamčení. Vrátí, když **_LK_LOCK** nebo **_LK_RLCK** příznak zadán a nelze jej uzamknout soubor po 10 pokusech.
+**EINVAL**|Byl zadán neplatný argument **_locking –**.
 
-V případě, že je chyba způsobená chybný parametr, jako je například popisovač souboru je neplatný. je obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md).
+Pokud selže z důvodu chybný parametr, jako je například neplatného popisovače souboru, vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Locking –** funkce uzamkne nebo odemkne *nbytes* bajtů soubor určený touto *fd*. Zamykací bajty v souboru brání přístupu k těchto bajtů s jinými procesy. Všechny blokování a odblokování začíná na aktuální pozici ukazatele souboru a pokračuje další *nbytes* bajtů. Je možné zámku bajtů za koncem souboru.
+**_Locking –** funkce uzamyká nebo odemyká *nbytes* bajtů do souboru určeného parametrem *fd*. Zamykací bajty v souboru brání v přístupu k těmto bajtů s jinými procesy. Všechny blokování a odblokování začne na aktuální pozici ukazatele souboru a pokračuje ještě *nbytes* bajtů. Je možné zamykací bajty za koncem souboru.
 
-*režim* musí mít jednu z následujících manifestu konstanty, které jsou definovány v Locking.h.
+*režim* musí být jedna z následujících konstant manifestu, které jsou definovány v Locking.h.
 
 |*režim* hodnota|Efekt|
 |-|-|
-**_LK_LOCK –**|Zamkne zadaný počet bajtů. Pokud počet bajtů nelze zamknout, program se okamžitě pokusí znovu po 1 sekunda. Pokud po 10 pokusy o, nelze jej zamknout počet bajtů, konstanta vrátí chybu.
-**_LK_NBLCK –**|Zamkne zadaný počet bajtů. Pokud počet bajtů nelze zamknout, konstanta vrátí chybu.
-**_LK_NBRLCK –**|Stejné jako **_lk_nblck –**.
-**_LK_RLCK –**|Stejné jako **_lk_lock –**.
-**_LK_UNLCK –**|Odemkne zadaný bajtů, které musí byla dříve uzamčena.
+**_LK_LOCK**|Zamkne zadaný počet bajtů. Pokud nelze uzamknout počet bajtů, program okamžitě pokusí znovu za 1 sekundu. Pokud po 10 pokusech, nelze uzamknout počet bajtů, konstanta vrátí chybu.
+**_LK_NBLCK**|Zamkne zadaný počet bajtů. Pokud nelze uzamknout počet bajtů, konstanta vrátí chybu.
+**_LK_NBRLCK**|Stejné jako **_LK_NBLCK**.
+**_LK_RLCK**|Stejné jako **_LK_LOCK**.
+**_LK_UNLCK**|Odemkne zadané bajtů, které musí mít dříve uzamčen.
 
-Více oblastí souboru, které se nepřekrývají může být uzamčena. V oblasti odemykají musí byla dříve uzamčena. **_locking –** nemá sloučení přiléhající oblasti; pokud jsou dva uzamčení oblasti vedle sebe, každou oblast, musí být odemknout samostatně. Oblasti má být uzamčena pouze stručně a by měl být odemčené před zavřením souboru nebo ukončení programu.
+Jde zamknout souboru více oblastí, které se nepřekrývají. Oblast odemykají musí být dříve uzamčeny. **_locking –** nemá sloučení sousední oblasti; pokud jsou dvě oblasti uzamčené vedle sebe, každou oblast, musí být odemčený samostatně. Oblastí by měl uzamknou jen krátce a by měl být odemknout před zavřením souboru nebo standardním ukončením programu.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
 |**_locking**|\<IO.h > a \<sys/locking.h >|\<errno.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -173,7 +163,7 @@ No one can change these bytes while I'm reading them
 Now I'm done. Do what you will with them
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zpracování souborů](../../c-runtime-library/file-handling.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
