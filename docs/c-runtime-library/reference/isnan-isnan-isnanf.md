@@ -1,10 +1,6 @@
 ---
-title: isNaN, _isnan –, _isnanf | Microsoft Docs
-ms.custom: ''
+title: isNaN – _isnan –, _isnanf
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isnan
 - _isnanf
@@ -29,8 +25,6 @@ f1_keywords:
 - math/_isnan
 - math/_isnanf
 - _isnanf
-dev_langs:
-- C++
 helpviewer_keywords:
 - NAN (not a number)
 - _isnan function
@@ -38,20 +32,16 @@ helpviewer_keywords:
 - Not a Number (NANs)
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: baf92397087ebbac27c7fea8cf5f524b33736b19
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce111569b7caee9d0c7b8f35352c395571ad08b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401149"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650863"
 ---
-# <a name="isnan-isnan-isnanf"></a>isNaN, _isnan –, _isnanf
+# <a name="isnan-isnan-isnanf"></a>isNaN – _isnan –, _isnanf
 
-Testy, pokud hodnotu s plovoucí desetinnou čárkou není číslo (NAN).
+Testuje, zda je hodnota s plovoucí desetinnou čárkou není číslo (NAN).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -81,28 +71,28 @@ Hodnota s plovoucí desetinnou čárkou k testování.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V jazyce C **isnan** makro a **_isnan –** a **_isnanf** vracejí nenulovou hodnotu, pokud argument *x* typu NaN; v opačném případě se Vrátí 0.
+V jazyce C **isNaN –** – makro a **_isnan –** a **_isnanf** funkce vrátí nenulovou hodnotu, pokud argument *x* je NAN; jinak vrátí hodnotu, Vrátí 0.
 
-V jazyce C++ **isnan** šablony funkce vrátí **true** Pokud argument *x* je NAN; v opačném případě, že budou vracet **false**.
+V jazyce C++ **isNaN –** šablony funkce vrátit **true** Pokud argument *x* je NAN; v opačném případě vrátí **false**.
 
 ## <a name="remarks"></a>Poznámky
 
-C **isnan** makro a **_isnan –** a **_isnanf** funkce testování s plovoucí desetinnou čárkou *x*, vrátí nenulovou hodnotu, pokud *x* je hodnota číslo (NAN). NAN se vygeneruje, když ve formátu plovoucí desetinné čárky IEEE 754 pro zadaný typ není možné vyjádřit výsledek operace s plovoucí desetinnou čárkou. Informace o tom, jak je reprezentována NAN pro výstup najdete v tématu [printf](printf-printf-l-wprintf-wprintf-l.md).
+C **isnan** – makro a **_isnan –** a **_isnanf** funkce testování s plovoucí desetinnou čárkou *x*, vrací nenulovou hodnotu, pokud *x* je hodnota číslo (NAN). NAN se vygeneruje, když ve formátu s plovoucí desetinnou čárkou IEEE 754 pro zadaný typ nelze reprezentovat výsledek operace s plovoucí desetinnou čárkou. Informace o tom, jak je reprezentovaná NAN pro výstup, naleznete v tématu [printf](printf-printf-l-wprintf-wprintf-l.md).
 
-Při kompilaci jako C++, **isnan** makro není definován a **isnan** funkce šablona je definována místo. Vrátí hodnotu typu **bool** místo celé číslo.
+Při kompilaci jako C++, **isnan** makro není definované a **isnan** místo toho je definována šablona funkce. Vrátí hodnotu typu **bool** namísto celého čísla.
 
-**_Isnan –** a **_isnanf** funkce se konkrétní společnosti Microsoft. **_Isnanf** funkce je dostupná pouze při zkompilovaném pro x64.
+**_Isnan –** a **_isnanf** funkce jsou specifické pro Microsoft. **_Isnanf** funkce dostupná jenom při kompilaci pro x64.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaná hlavička (C)|Požadovaná hlavička (C++)|
+|Rutina|Požadované záhlaví (C)|Požadované záhlaví (C++)|
 |-------------|---------------------------|-------------------------------|
-|**isNaN**, **_isnanf**|\<Math.h >|\<Math.h > nebo \<cmath – >|
-|**_isnan**|\<float.h – >|\<float.h – > nebo \<cfloat – >|
+|**isNaN –**, **_isnanf**|\<Math.h >|\<Math.h > nebo \<cmath >|
+|**_isnan**|\<float.h >|\<float.h > nebo \<cfloat – >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [_finite, _finitef](finite-finitef.md)<br/>

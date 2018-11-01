@@ -1,39 +1,29 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4382 | Microsoft Docs
-ms.custom: ''
+title: Kompilátor upozornění (úroveň 1) C4382
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4382
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4382
 ms.assetid: 34be9ad3-bae6-411a-8f80-0c8fd0d2c092
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 29afe066fb86d0dd99216a63c057046ec76de55b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: cca2f8cc13cc8317bac3736e142ef58e126ed994
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704318"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629213"
 ---
-# <a name="compiler-warning-level-1-c4382"></a>C4382 kompilátoru upozornění (úroveň 1)
+# <a name="compiler-warning-level-1-c4382"></a>Kompilátor upozornění (úroveň 1) C4382
 
-> vyvolání '*typ*': typu s __clrcall – destruktor nebo kopírovacího konstruktoru pouze zachytit v/CLR: pure modulu
+> vyvolání "*typ*': typ s destruktorem __clrcall nebo kopírovacím konstuktorem se dá zachytit jedině v/CLR: pure modulu
 
 ## <a name="remarks"></a>Poznámky
 
-**/CLR: pure** – možnost kompilátoru je zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017.
+**/CLR: pure** – možnost kompilátoru je zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
 
-Když kompilujete s **/CLR** (není **/CLR: pure**), zpracování výjimek v nativním typu být očekává členské funkce [__cdecl](../../cpp/cdecl.md) a není [__clrcall](../../cpp/clrcall.md). Nativní typy s členské funkce pomocí `__clrcall` konvence volání nemůže být zachycena v modulu kompilovat s **/CLR**.
+Při kompilaci s **/CLR** (ne **/CLR: pure**), zpracování výjimek v nativním typu bude očekává členské funkce [__cdecl](../../cpp/cdecl.md) a ne [__clrcall](../../cpp/clrcall.md). Nativní typy pomocí členské funkce pomocí `__clrcall` konvence volání nemůže být zachycena v modul zkompilovaný pomocí **/CLR**.
 
-Pokud se výjimka zachycena v modulu kompilovat s **/CLR: pure**, můžete toto upozornění ignorovat.
+Pokud výjimka bude zachycena v modul zkompilovaný pomocí **/CLR: pure**, můžete toto upozornění ignorovat.
 
 Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
 

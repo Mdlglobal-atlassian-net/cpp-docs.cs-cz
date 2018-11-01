@@ -1,10 +1,6 @@
 ---
-title: ecvt – | Microsoft Docs
-ms.custom: ''
+title: ecvt
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - ecvt
 apilocation:
@@ -21,22 +17,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - ecvt
-dev_langs:
-- C++
 helpviewer_keywords:
 - ecvt function
 ms.assetid: a24fccea-033a-4cc7-b120-4fd0f525a7e3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 15d96ea7a6c29d594ca8e93fa45f7eb40a36c09e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 655abb00251ce3fd6210c7824c9e6522b01a82cd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397090"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50585377"
 ---
 # <a name="ecvt"></a>ecvt
 
-Tato funkce POSIX je zastaralý. Používat vyhovující ISO C++ [_ecvt –](ecvt.md) nebo rozšířené zabezpečení [_ecvt_s –](ecvt-s.md) místo.
+Tato funkce POSIX je zastaralá. Použít splňující podmínky ISO C++ [_ecvt –](ecvt.md) nebo s rozšířeným zabezpečením [_ecvt_s –](ecvt-s.md) místo.

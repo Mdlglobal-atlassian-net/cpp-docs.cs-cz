@@ -1,10 +1,6 @@
 ---
-title: feof – | Microsoft Docs
-ms.custom: ''
+title: feof
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - feof
 apilocation:
@@ -22,26 +18,20 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - feof
-dev_langs:
-- C++
 helpviewer_keywords:
 - end of file, testing for
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c3162fd72acdfedc198764a92deec043cd681a10
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9c023290df601bfc48f9708af86d32d91cd52dc4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397012"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580693"
 ---
 # <a name="feof"></a>feof
 
-Testy pro koncové soubor na datový proud.
+Testy pro ukončení souboru na datový proud.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -53,20 +43,20 @@ int feof(
 
 ### <a name="parameters"></a>Parametry
 
-*Datový proud*<br/>
-Ukazatel na **souboru** struktura.
+*Stream*<br/>
+Ukazatel na **souboru** struktury.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Feof –** funkce vrátí nenulovou hodnotu, pokud při pokusu o čtení za koncem souboru má v operaci čtení; jinak vrátí 0. Pokud je ukazatel datového proudu **NULL**, funkce vyvolá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **errno** je nastaven na **einval –** a **feof –** vrátí hodnotu 0.
+**Feof** funkce vrátí nenulovou hodnotu, pokud operace čtení se pokusilo číst za koncem souboru; jinak vrátí 0. Pokud je ukazatel na datový proud **NULL**, funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **errno** je nastavena na **EINVAL** a **feof** vrátí hodnotu 0.
 
-V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších kódy chyb.
+Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších chybových kódech.
 
 ## <a name="remarks"></a>Poznámky
 
-**Feof –** rutiny (implementována jako funkce i jako makra) určuje, zda konec *datového proudu* byl předán. Když je předána na konci souboru, přečtěte si operace vracejí indikátor end souborového, dokud datový proud je uzavřen, nebo dokud [rewind](rewind.md), **fsetpos –**, [fseek](fseek-fseeki64.md), nebo  **clearerr –** je volána před ním.
+**Feof** rutiny (implementovány jako funkce i makra) určuje, zda konci *stream* byl předán. Když se na konci souboru, přečtěte si operace vrátit indikátor konce souboru, dokud je proud uzavřen, nebo dokud [rewind](rewind.md), **fsetpos**, [fseek](fseek-fseeki64.md), nebo  **clearerr –** je volána před ním.
 
-Pokud soubor obsahuje 10 bajtů a čtení 10 bajtů ze souboru, například **feof –** vrátí 0, protože přestože ukazatele souboru je na konci souboru, nebyly pokus o čtení za konec. Pouze po pokusu o čtení 11 bajtů bude **feof –** vrátí nenulovou hodnotu.
+Pokud soubor obsahuje 10 bajtů a čtení 10 bajtů ze souboru, například **feof** vrátí hodnotu 0, protože i když je ukazatel na soubor na konci souboru, můžete ještě pokusu o čtení za koncem. Pouze po pokusu o čtení 11 bajtů se **feof** vrátí nenulovou hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -74,7 +64,7 @@ Pokud soubor obsahuje 10 bajtů a čtení 10 bajtů ze souboru, například **fe
 |--------------|---------------------|
 |**feof**|\<stdio.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -129,10 +119,10 @@ Line two.
 Number of bytes read = 19
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zpracování chyb](../../c-runtime-library/error-handling-crt.md)<br/>
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [clearerr](clearerr.md)<br/>
 [_eof](eof.md)<br/>
 [ferror](ferror.md)<br/>
