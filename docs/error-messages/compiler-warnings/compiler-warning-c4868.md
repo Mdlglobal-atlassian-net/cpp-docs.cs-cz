@@ -1,38 +1,33 @@
 ---
-title: C4868 upozornění kompilátoru | Microsoft Docs
+title: Upozornění kompilátoru C4868
 ms.date: 10/26/2017
-ms.topic: error-reference
 f1_keywords:
 - C4868
 ms.assetid: fc6aa7e5-34dd-4ec2-88bd-16e430361dc7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 922a1a8434da8449758b9d55ebe89ace2f262cd5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0bc8716e53e71c52f6a31036a95d0b4cefedd79
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275239"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481314"
 ---
-# <a name="compiler-warning-level-4-c4868"></a>C4868 kompilátoru upozornění (úroveň 4)
+# <a name="compiler-warning-level-4-c4868"></a>Upozornění (úroveň 4) kompilátoru C4868
 
-> '_soubor_(*line_number*), kompilátor nemusí vynutit pořadí vyhodnocení zleva doprava v seznamu braced inicializátoru
+> "_souboru_(*line_number*)' kompilátor nemůže vynutit pořadí vyhodnocování zleva doprava v seznamu inicializátorů v závorkách
 
-Prvky braced inicializátoru seznamu mají vyhodnoceny v pořadí zleva doprava. Existují dva případy, ve kterých je kompilátor nemůže zaručit, toto pořadí: první je při některé prvky jsou objekty předaná hodnota; Druhá je při kompilaci s `/clr` a některé prvky jsou pole objektů nebo prvků pole. Když kompilátor nemůže zaručit zleva doprava vyhodnocení vydá upozornění C4868.
+Prvky seznamu inicializátorů v závorkách jsou vyhodnocovány v pořadí zleva doprava. Existují dva případy, ve kterých kompilátor nedokáže zaručit toto pořadí: první je při některé prvky jsou objekty, které jsou předávány hodnotou; Druhým je při kompilaci s `/clr` a některé prvky jsou pole objektů nebo prvků pole. Pokud kompilátor nemůže zaručit vyhodnocování zleva doprava vydá upozornění C4868.
 
-Toto upozornění můžete vygenerovaného jako výsledek kompilátoru shoda práci, kterou bylo provedeno pro Visual C++ 2015 Update 2. Kód, který zkompiluje před Visual C++ 2015 Update 2 nyní můžete generovat C4868.
+Toto upozornění mohou být generovány jako důsledek kompilátoru prací, které bylo provedeno Visual C++ 2015 Update 2. Kód, který zkompiluje před Visual C++ 2015 Update 2 teď můžete vygenerovat C4868.
 
-Toto upozornění je ve výchozím nastavení vypnutý. Použití `/Wall` aktivovat toto upozornění.
+Toto upozornění je vypnuto ve výchozím nastavení. Použití `/Wall` k aktivaci tohoto upozornění.
 
-Chcete-li vyřešit toto upozornění, nejprve zvažte, jestli je to nutné, například při vyhodnocení elementů může být vedlejší účinky závislé na pořadí vyhodnocení zleva doprava inicializátoru seznamu elementů. V mnoha případech pořadí, ve kterém jsou vyhodnocovány elementy nemá pozorovatelné vliv.
+Pokud chcete vyřešit toto upozornění, nejprve vezměte v úvahu, jestli je nezbytné, například při hodnocení prvků může vrátit vedlejší účinky závislé na pořadí vyhodnocování zleva doprava prvků seznamu inicializátorů. V mnoha případech nemá pořadí, ve kterém jsou vyhodnoceny prvky pozorovatelných vliv.
 
-Pokud pořadí vyhodnocování musí být zleva doprava, zvažte, pokud je možné předat elementy `const` referenční místo. Ke změně, například to eliminuje upozornění následující ukázka kódu.
+Pokud musí pořadí vyhodnocování zleva doprava, zvažte, pokud je možné předat prvky `const` odkazovat na místo. Změna takovou situaci eliminuje upozornění v následujícím příkladu kódu.
 
 ## <a name="example"></a>Příklad
 
-Tato ukázka generuje C4868 a ukazuje způsob, jak opravit:
+Tato ukázka generuje C4868 a ukazuje způsob, jak ho opravit:
 
 ```cpp
 // C4868.cpp

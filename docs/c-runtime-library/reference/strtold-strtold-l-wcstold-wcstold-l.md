@@ -1,10 +1,6 @@
 ---
-title: strtold, _strtold_l, wcstold, _wcstold_l | Microsoft Docs
-ms.custom: ''
+title: strtold, _strtold_l, wcstold, _wcstold_l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcstold
 - strtold
@@ -30,23 +26,17 @@ f1_keywords:
 - strtold
 - _strtold_l
 - wcstold
-dev_langs:
-- C++
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1a5018f9245da77fbadb301a8fa45d1f0f7b4117
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fce60775ee1ef6def214e559779004d4de95453c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417074"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484575"
 ---
 # <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold, _strtold_l, wcstold, _wcstold_l
 
-Převede řetězce na hodnotu s plovoucí desetinnou čárkou dlouho dvojitou přesností.
+Převede řetězce na hodnotu long dvojité přesnosti s plovoucí desetinnou čárkou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -74,42 +64,42 @@ long double wcstold_l(
 ### <a name="parameters"></a>Parametry
 
 *strSource*<br/>
-Řetězce ukončené hodnotou Null pro převod.
+Řetězec zakončený hodnotou Null pro převod.
 
 *endptr*<br/>
-Ukazatel na znak, který zastaví kontroly.
+Ukazatel na znak, který zastaví skenování.
 
 *Národní prostředí*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**strtold** vrací hodnotu číslo s plovoucí desetinnou čárkou jako **dlouho** **dvojité**, s výjimkou případů, kdy reprezentace by způsobilo přetečení – v takovém případě funkce vrátí hodnotu +/-**HUGE_VALL**. Znaménko **HUGE_VALL** odpovídá znaménko hodnotu, která není možné vyjádřit. **strtold** vrátí hodnotu 0, pokud žádný převod můžete provést, nebo dojde podtečení.
+**strtold** vrátí hodnotu čísla s plovoucí desetinnou čárkou jako **dlouhé** **double**, s výjimkou případů, kdy by reprezentace způsobila přetečení – v takovém případě funkce vrátí +/-**HUGE_VALL**. Znaménko **HUGE_VALL** odpovídá znaménku hodnoty, kterou nejde reprezentovat. **strtold** vrátí hodnotu 0, pokud převod lze provést nebo dochází k podtečení.
 
-**wcstold** vrátí hodnot analogicky na **strtold**. Pro obě funkce **errno** je nastaven na **erange –** Pokud dojde k přetečení nebo podtečení a volána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md).
+**wcstold** vrátí hodnoty analogicky k **strtold**. U obou funkcí **errno** je nastavena na **ERANGE** Pokud dojde k přetečení nebo podtečení a je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
-Další informace o návratové kódy najdete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o návratových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Jednotlivé funkce převede vstupní řetězec *strSource* k **dlouho** **dvojité**. **Strtold** funkce ukončí čtení řetězce *strSource* u prvního znaku nemůže rozpoznat jako součást číslo. To může být ukončující znak hodnoty null. Široká charakterová verzi **strtold** je **wcstold**; jeho *strSource* je argumentem široká charakterová řetězce. Tyto funkce, jinak hodnota chovají stejně jako.
+Každá funkce převede vstupní řetězec *strSource* k **dlouhé** **double**. **Strtold** funkce zastaví čtení řetězce *strSource* u prvního znaku, který nebude rozpoznán jako část čísla. Může to být ukončující znak null. Širokoznaká verze **strtold** je **wcstold**; její *strSource* argument je širokoznaký řetězec. Jinak tyto funkce chovají identicky.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcstold**|**strtold**|**strtold**|**wcstold**|
 |**_tcstold_l**|**_strtold_l**|**_strtold_l**|**_wcstold_l**|
 
-**Lc_numeric –** kategorie nastavení aktuální národní prostředí určuje rozpoznávání základ – znak v *strSource*. Další informace najdete v tématu [setlocale _wsetlocale](setlocale-wsetlocale.md). Funkce bez **_l** příponu použít aktuální národní prostředí; **_strtold_l** a **_wcstold_l** jsou stejné jako **_strtold** a **_wcstold** s tím rozdílem, že místo toho používají národní prostředí to je Předaná. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+**LC_NUMERIC** kategorie aktuálního národního prostředí určuje rozpoznávání znaku radix v *strSource*. Další informace najdete v tématu [setlocale _wsetlocale](setlocale-wsetlocale.md). Funkce bez **_l** přípona používají aktuální národní prostředí; **_strtold_l** a **_wcstold_l** jsou stejné jako **_strtold** a **_wcstold** s tím rozdílem, že místo toho používají národní prostředí, která Předaný. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Pokud *endptr* není **NULL**, ukazatel na znak, který zastavena kontroly je uložený v umístění, které ukazuje *endptr*. Pokud žádný převod lze provést (nebyly nalezeny žádné platné číslice nebo byl zadán neplatný základní), hodnota *strSource* je uložený v umístění, které ukazuje *endptr*.
+Pokud *endptr* není **NULL**, ukazatel na znak, který zastavil skenování, je uložen na umístění, které ukazuje *endptr*. Pokud žádné převody nemohou být provedeny (nebyly nalezeny žádné platné číslice nebo byla zadána neplatná základna), hodnota *strSource* je uložen v umístění, které ukazuje *endptr*.
 
-**strtold** očekává *strSource* tak, aby odkazoval na řetězec v následujícím formátu:
+**strtold** očekává, že *strSource* tak, aby odkazoval na řetězec v následujícím formátu:
 
-[*prázdné*] [*přihlašovací*] [*číslic*] [. *číslic*] [{**d** &#124; **D** &#124; **e** &#124; **E**} [*přihlášení* ]*číslic*]
+[*prázdné znaky*] [*přihlašování*] [*číslic*] [. *číslice*] [{**d** &#124; **D** &#124; **e** &#124; **E**} [*přihlašování* ]*číslic*]
 
-A *prázdné* může obsahovat místa a karta znaků, které se mají ignorovat; *přihlašovací* je buď plus (**+**) nebo minus (**-**); a *číslic* jsou jeden nebo více desetinných míst. Pokud před základ – znak, který se zobrazí žádné číslice, alespoň jeden musí být uvedena za základ – znak. Desetinných míst může následovat exponentem, který se skládá z úvodní písmeno (**d**, **D**, **e**, nebo **E**) a volitelně číslo se znaménkem. Pokud exponentu část ani základ – znak zobrazí, předpokládá se základ – znak podle poslední číslice v řetězci. První znak, který se nevejde tento formulář zastaví kontroly.
+A *prázdné znaky* může skládat ze znaků mezera a tabulátor, které jsou ignorovány; *přihlašování* je buď plus (**+**) nebo minus (**-**); a *číslic* jsou jeden nebo více desítkových číslic. Pokud se před číselnou soustavou znaků se nezobrazí žádné číslice, alespoň číslice se musí nacházet za číselnou soustavou znaků. Může být následován desítkových číslic exponentu, které se skládají z úvodního písmene (**d**, **D**, **e**, nebo **E**) a volitelně celé číslo se znaménkem. Pokud se nezobrazí část ani Číselná soustava znaků, považován za Číselná soustava znaků postupuje podle poslední číslice v řetězci. První znak, který není vhodná pro tento formulář zastaví skenování.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -118,7 +108,7 @@ A *prázdné* může obsahovat místa a karta znaků, které se mají ignorovat;
 |**strtold**, **_strtold_l**|\<stdlib.h>|
 |**wcstold**, **_wcstold_l**|\<stdlib.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -152,7 +142,7 @@ string = 3.1415926535898This stopped it
 
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>

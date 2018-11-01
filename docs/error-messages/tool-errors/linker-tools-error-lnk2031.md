@@ -1,41 +1,31 @@
 ---
-title: Chyba linkerů Lnk2031 | Microsoft Docs
-ms.custom: ''
+title: Chyba linkerů LNK2031
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK2031
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK2031
 ms.assetid: 18ed4b6e-3e75-443c-bbd8-2f6030dc89ee
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d86ea6da8a73d9ba2427e9455c4fca87cd32dd2b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 003b9a58bfb08130f034530f59e2de27efa2ae8d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34703662"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484831"
 ---
 # <a name="linker-tools-error-lnk2031"></a>Chyba linkerů LNK2031
 
-> Nelze vygenerovat p/invoke pro "*function_declaration*" *decorated_name*; chybí v metadatech konvence volání
+> nejde vygenerovat p/invoke pro "*function_declaration*" *decorated_name*; v metadatech chybí konvence volání
 
 ## <a name="remarks"></a>Poznámky
 
-Při pokusu o import nativní funkce do čistého bitové kopie, nezapomeňte, že implicitní konvence volání liší mezi nativní a čistý kompilace. Další informace o čisté bitové kopie najdete v tématu [prázdná a ověřitelný kód (C + +/ CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Při pokusu o import nativní funkce do čistého bitové kopie, mějte na paměti, že implicitní konvence volání liší mezi nativní a čisté kompilace. Další informace o čistě bitových kopiích naleznete v tématu [prázdná a ověřitelný kód (C + +/ CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-**/CLR: pure** – možnost kompilátoru je zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017.
+**/CLR: pure** – možnost kompilátoru je zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
 
 ## <a name="example"></a>Příklad
 
-Tato ukázka kódu generuje součást s funkce exportované, nativní, jejichž konvence volání je implicitně [__cdecl](../../cpp/cdecl.md).
+Tato ukázka kódu generuje komponentu s funkcí exportovaných, nativní, jejíž konvence volání je implicitně [__cdecl](../../cpp/cdecl.md).
 
 ```cpp
 // LNK2031.cpp
@@ -47,7 +37,7 @@ extern "C" {
 
 ## <a name="example"></a>Příklad
 
-Následující příklad vytvoří čistý klienta, který zpracovává nativní funkce. Ale konvence volání pod **/CLR: pure** je [__clrcall](../../cpp/clrcall.md). Následující ukázka generuje LNK2031.
+Následující příklad vytvoří čistě klienta, který využívá nativní funkce. Ale konvence volání v rámci **/CLR: pure** je [__clrcall](../../cpp/clrcall.md). Následující ukázka generuje LNK2031.
 
 ```cpp
 // LNK2031_b.cpp
@@ -62,7 +52,7 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak využívat nativní funkce z čisté bitové kopie. Poznámka: explicitní **__cdecl** volání specifikátor konvence.
+Následující příklad ukazuje, jak využívat nativní funkce z čistě image. Všimněte si, explicitní **__cdecl** volání specifikátor konvence.
 
 ```cpp
 // LNK2031_c.cpp

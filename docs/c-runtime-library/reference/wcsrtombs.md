@@ -1,10 +1,6 @@
 ---
-title: wcsrtombs – | Microsoft Docs
-ms.custom: ''
+title: wcsrtombs
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcsrtombs
 apilocation:
@@ -22,27 +18,21 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wcsrtombs
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcsrtombs function
 - string conversion, wide characters
 - wide characters, strings
 ms.assetid: a8d21fec-0d36-4085-9d81-9b1c61c7259d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0d2ea0252714803fe8cad48635486d2011275407
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 46ef195ec4685c327c4b5951ec44e5c363214b59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415465"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494416"
 ---
 # <a name="wcsrtombs"></a>wcsrtombs
 
-Široká znaková řetězec převeďte na řetězcovou reprezentaci vícebajtových znaků. Bezpečnější verze této funkce je k dispozici. v tématu [wcsrtombs_s –](wcsrtombs-s.md).
+Převeďte řetězec širokých znaků na jeho řetězcovou reprezentaci vícebajtového znaku. Bezpečnější verze této funkce je k dispozici. Zobrazit [wcsrtombs_s –](wcsrtombs-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -65,36 +55,36 @@ size_t wcsrtombs(
 ### <a name="parameters"></a>Parametry
 
 *mbstr*<br/>
-Výsledná převést vícebajtový řetězec adresu umístění.
+Výsledná převést umístění adresa vícebajtové znakové řetězce.
 
 *wcstr*<br/>
-Nepřímo odkazuje na umístění široká znaková řetězce, který má být převeden.
+Nepřímo odkazuje na umístění řetězec širokých znaků, který má být převeden.
 
 *Počet*<br/>
 Počet znaků, které má být převeden.
 
 *mbstate*<br/>
-Ukazatel na **mbstate_t** převodu stavu objektu.
+Ukazatel **mbstate_t** převodu stavu objektu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí počet bajtů úspěšně převést, včetně není null ukončení null bajtů (pokud existuje), jinak hodnota -1, pokud došlo k chybě.
+Vrátí počet bajtů úspěšně převeden, bez zahrnutí null ukončující hodnotu null bajtů (pokud existuje), jinak -1, pokud došlo k chybě.
 
 ## <a name="remarks"></a>Poznámky
 
-**Wcsrtombs –** funkce převede řetězec z široké znaky, počínaje zadanou konverzi stav obsažené v *mbstate*, z nepřímých hodnot nastavena v *wcstr*, do adresu *mbstr*. Převod bude pokračovat pro každý znak dokud: po došlo s hodnotou null se ukončuje široká znaková, když je zjištěna bez odpovídajícího znaku nebo pokud další znak by překročilo limit obsažené v *počet*. Pokud **wcsrtombs –** zaznamená znak hodnoty null široká charakterová (L '\0') před nebo po *počet* dojde, převede ji 0 8bitové a zastaví se.
+**Wcsrtombs –** funkce převede řetězec širokých znaků, počínaje Zadaný převod stavu součástí *mbstate*, z hodnoty, na nepřímé v *wcstr*, do adresy *mbstr*. Převod bude pokračovat pro jednotlivé znaky, dokud: po nalezen null ukončující široké znaky, když je zjištěn bez odpovídající znak nebo při další znak by překročilo limit součástí *počet*. Pokud **wcsrtombs –** zaznamená prázdný znak širokého znaku (L '\0') před nebo po *počet* dojde, převede ho 8 bitů 0 a zastaví.
 
-Proto řetězce vícebajtových znaků na *mbstr* je ukončené hodnotou null jenom v případě **wcsrtombs –** širokého znaku prázdný znak, zaznamená při převodu. Pokud daná pořadí na kterou odkazuje *wcstr* a *mbstr* překrývají, chování **wcsrtombs –** není definován. **wcsrtombs –** je ovlivňován LC_TYPE kategorii aktuální národní prostředí.
+Proto vícebajtové znakové řetězce na *mbstr* je zakončený hodnotou null jenom v případě **wcsrtombs –** během převodu dojde prázdný znak širokého znaku. Pokud sekvence odkazované *wcstr* a *mbstr* překrývají, chování **wcsrtombs –** není definován. **wcsrtombs –** vliv podle kategorie LC_TYPE aktuálního národního prostředí.
 
-**Wcsrtombs –** funkce se liší od [wcstombs –, _wcstombs_l –](wcstombs-wcstombs-l.md) podle jeho restartability. Stav převodu je uložený ve *mbstate* pro následující volání stejné nebo jiné funkce nabízet možnost restartování. Výsledky nejsou definovány při kombinování použití funkce nonrestartable a nabízet možnost restartování.  Například byste použili aplikaci **wcsrlen** místo **wcsnlen –**, pokud následných volání **wcsrtombs –** používaly místo **wcstombs –**.
+**Wcsrtombs –** funkce se liší od [wcstombs – _wcstombs_l –](wcstombs-wcstombs-l.md) podle jeho restartability. Stav převodu je uložen v *mbstate* pro pozdější volání na stejné nebo jiné funkce nabízet možnost restartování. Při použití funkcí restartovatelnou službu a nonrestartable případě nejsou výsledky definovány.  Například byste použili aplikaci **wcsrlen** spíše než **wcsnlen –**, pokud je následných volání **wcsrtombs –** používaly místo **wcstombs –**.
 
-Pokud *mbstr* argument je **NULL**, **wcsrtombs –** vrátí požadovaná velikost v bajtech cílový řetězec. Pokud *mbstate* má hodnotu null, interní **mbstate_t** převod stavu se používá. Pokud sekvence znaků *wchar* nemá odpovídající vícebajtových reprezentace znak, je vrácen -1 a **errno** je nastaven na **eilseq –**.
+Pokud *mbstr* argument je **NULL**, **wcsrtombs –** vrací požadovaná velikost v bajtech cílový řetězec. Pokud *mbstate* má hodnotu null, vnitřní **mbstate_t** stav převodu se používá. Pokud sekvence znaků *wchar* nemá odpovídající vícebajtové reprezentace znaku, vrátí se -1 a **errno** je nastavena na **EILSEQ**.
 
-Tato funkce v jazyce C++ má šabloně přetížení, které vyvolá novější a zabezpečené protějšku této funkce. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ má tato funkce přetížení šablon, které vyvolá novější, zabezpečené protějšky této funkce. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Výjimky
 
-**Wcsrtombs –** tak dlouho, dokud volání funkce neexistuje v aktuální vlákno je funkce s více vlákny bezpečné **setlocale** průběhu této funkce je provádění a *mbstate* není null.
+**Wcsrtombs –** funkce je bezpečné s více vlákny za předpokladu, žádné funkce v aktuálním vlákně volá **setlocale** při provádění této funkce a *mbstate* nemá hodnotu null.
 
 ## <a name="example"></a>Příklad
 
@@ -148,7 +138,7 @@ The string was successfuly converted.
 |-------------|---------------------|
 |**wcsrtombs**|\<wchar.h>|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>

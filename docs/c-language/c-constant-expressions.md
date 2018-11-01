@@ -1,57 +1,48 @@
 ---
-title: Výrazy konstant C | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
+title: Výrazy konstant v jazyce C
+ms.date: 06/14/2018
 helpviewer_keywords:
 - constant expressions, syntax
 - constant expressions
 - expressions [C++], constant
 ms.assetid: d48a6c47-e44c-4be2-9c8b-7944c7ef8de7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aaeb7ab79777d247f0bc0b2e6d749d8df5a7f8e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f6984c47ef8acde462a8e92e01b72ef26a61eddc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50490529"
 ---
 # <a name="c-constant-expressions"></a>Výrazy konstant v jazyce C
-Konstantní výraz vyhodnotí při kompilaci, není běh a je možné v jakémkoli místě lze konstanta. Konstanta, která je v rozsahu hodnot reprezentovat pro tento typ se musí vyhodnotit konstantní výraz. Operandy konstantní výraz může být konstanty typu integer, konstanty znaků, konstanty s plovoucí desetinnou čárkou, konstanty výčtu typu přetypování, `sizeof` výrazy a jiné konstantní výrazy.  
-  
-## <a name="syntax"></a>Syntaxe  
- *konstantní výraz*:  
- *podmíněného výrazu*  
-  
- *podmíněného výrazu*:  
- *logický výraz OR*  
-  
- *logický výraz OR* **?**  *výraz* **:***podmíněného výrazu*   
-  
- *výraz*:  
- *assignment-expression*  
-  
- *výraz* **,***přiřazení – výraz*   
-  
- *výraz přiřazení*:  
- *podmíněného výrazu*  
-  
- *operátor přiřazení unární výraz přiřazení – výraz*  
-  
- *operátor přiřazení*: jeden z  
- **= \*= /= %= += -= <\<= >>= &= ^= &#124;=**  
-  
- Obsahovat terminálově nezávislých deklarátor struktura, enumerátor, přímé deklarátor, přímo abstraktní deklarátor a příkaz s popiskem *konstantní výraz* nonterminal.  
-  
- Celočíselné konstantní výraz musí použít k určení velikosti členem pole bit do struktury, hodnota konstanty výčtu, velikost pole nebo hodnoty **případ** konstantní.  
-  
- Konstantní výrazy použité v preprocesor – direktivy podléhají další omezení. V důsledku toho se označují jako "s omezeným přístupem konstantní výrazy." S omezeným přístupem konstantní výraz nemůže obsahovat `sizeof` výrazy, konstanty výčtu, zadejte do jakéhokoli typu nebo konstanty s plovoucí čárkou typu přetypování. Může, ale obsahovat speciální konstantní výraz `defined (` *identifikátor*`)`.  
-  
-## <a name="see-also"></a>Viz také  
- [Operandy a výrazy](../c-language/operands-and-expressions.md)
+
+Konstantní výraz je vyhodnocen v době kompilace, ne doby běhu a můžou používat v jakémkoli místě lze konstantu. Konstantní výraz se musí vyhodnotit na konstantu, která je v rozsahu reprezentovatelných hodnot typu. Operandy a konstantní výraz může být celočíselné konstanty, znakové konstanty, konstanty s plovoucí desetinnou čárkou, výčtu konstant typu přetypování, **sizeof** výrazů a jiných konstantní výrazy.
+
+## <a name="syntax"></a>Syntaxe
+
+*konstantní výraz*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Podmíněného výrazu*
+
+*podmíněného výrazu*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logický výraz OR*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logický výraz OR* **?** *výraz* **:** *podmíněného výrazu*
+
+*výraz*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz přiřazení*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz* **,** *výrazu přiřazení*
+
+*výraz přiřazení*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Podmíněného výrazu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Unární výraz* *operátor přiřazení* *výrazu přiřazení*
+
+*operátor přiřazení*: jeden z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**=** **&#42;=** **/=** **%=** **+=** **-=** **\< \<=** **>>=** **&=** **^=** **&#124;=**
+
+Neterminály deklarátor – struktura, enumerátoru, s přímým přístupem deklarátor, přímo abstraktní deklarátor a příkaz s popiskem obsahují *konstantní výraz* neterminálu.
+
+Celočíselný konstantní výraz musí použít k určení velikosti bitového pole člena struktury, hodnota konstanty výčtu, velikost pole nebo hodnoty **případ** konstantní.
+
+Konstantní výrazy direktivy preprocesoru jsou i další omezení. V důsledku toho jsou označovány jako "s omezeným přístupem konstantní výrazy." S omezeným přístupem konstantní výraz nemůže obsahovat **sizeof** výrazy konstanty výčtu typu přetypování na typ nebo konstanty s plovoucí desetinnou čárkou typu. Může ale obsahovat speciální konstantní výraz **definované (** _identifikátor_ **)**.
+
+## <a name="see-also"></a>Viz také:
+
+- [Operandy a výrazy](../c-language/operands-and-expressions.md)

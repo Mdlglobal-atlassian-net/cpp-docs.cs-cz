@@ -1,34 +1,24 @@
 ---
-title: Přetížení &lt; &lt; operátor pro vaše vlastní třídy | Microsoft Docs
-ms.custom: ''
+title: Přetížení &lt; &lt; operátor pro vaše vlastní třídy
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - operator<<, overloading for your own classes
 - operator <<, overloading for your own classes
 ms.assetid: ad1d2c49-d84e-48a8-9c09-121f28b10bf0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b5f5129be6ebf7cac336373f00c7f9e989c23489
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 290491f7afb22873d60abb6662b470d8e7abefc1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852530"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486928"
 ---
 # <a name="overloading-the-ltlt-operator-for-your-own-classes"></a>Přetížení &lt; &lt; operátor pro vaše vlastní třídy
 
-Výstupní datové proudy použít vložení (`<<`) operátor pro standardní typy. Můžete také přetížení `<<` operátor pro vaše vlastní třídy.
+Výstupní datové proudy použít vložení (`<<`) operátor pro standardní typy. Můžete také přetížit `<<` operátor pro vaše vlastní třídy.
 
 ## <a name="example"></a>Příklad
 
-`write` Funkce příklad ukázal použití `Date` struktury. Datum je ideální volbou pro třídu C++, ve kterém jsou v zobrazení skrytá datové členy (měsíc, den a rok). Výstupní proud je logické cíl pro zobrazení této struktury. Tento kód zobrazí datum pomocí `cout` objektu:
+`write` Příklad funkce jsme si ukázali, použití `Date` struktury. Datum je ideální volbou pro třídu jazyka C++, ve kterém jsou skryté datové členy (měsíc, den a rok) ze zobrazení. Výstupní datový proud je logický cíl pro zobrazení této struktury. Tento kód zobrazí datum pomocí `cout` objektu:
 
 ```cpp
 Date dt(1, 2, 92);
@@ -36,7 +26,7 @@ Date dt(1, 2, 92);
 cout <<dt;
 ```
 
-Chcete-li získat `cout` tak, aby přijímal `Date` objektu po vložení operátor, operátor vložení rozpoznat přetížení `ostream` objekt na levé straně a `Date` na pravé straně. Přetížené `<<` operátor funkce musí být deklarován pak jako přítele třídy `Date` , má přístup k privátním dat v rámci `Date` objektu.
+Chcete-li získat `cout` tak, aby přijímal `Date` objektu po vložení operátoru, přetížit operátor vkládání rozpoznat `ostream` objekt na levé straně a `Date` na pravé straně. Přetížené `<<` by pak funkci operátoru musí být deklarována jako přátelská třída `Date` tak měl přístup k soukromým datům v rámci `Date` objektu.
 
 ```cpp
 // overload_date.cpp
@@ -74,12 +64,12 @@ int main()
 
 ## <a name="remarks"></a>Poznámky
 
-Přetížené operátor vrátí odkaz na původní `ostream` objekt, což znamená, můžete kombinovat vložení:
+Přetíženého operátoru vrátí odkaz na původní `ostream` objekt, což znamená, že zkombinujete vložené položky:
 
 ```cpp
 cout <<"The date is" <<dt <<flush;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Výstupní streamy](../standard-library/output-streams.md)<br/>

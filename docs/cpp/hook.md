@@ -1,28 +1,18 @@
 ---
-title: __hook | Dokumentace Microsoftu
-ms.custom: ''
+title: __hook
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - __hook_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - __hook keyword [C++]
 - event handlers [C++], connecting events to
 ms.assetid: f4cabb10-d293-4c0e-a1d2-4745ef9cc22c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2f839b6c9b87bb37564951d1c15935ad573e1b46
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a8a7fb6a88fb22fee5f5f8ec8c0dc215479c62fd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719287"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50489736"
 ---
 # <a name="hook"></a>__hook
 
@@ -57,7 +47,7 @@ Ukazatel na metodu události, ke kterému jste připojení metodu obslužné rut
 *interface*<br/>
 Název rozhraní, které jsou připojeny k *příjemce*, pouze pro přijímače událostí modelu COM, ve kterém *layout_dependent* parametr [event_receiver](../windows/event-receiver.md) atribut je **true**.
 
-*Zdroj*<br/>
+*source*<br/>
 Ukazatel na instanci zdroje událostí. V závislosti na kód `type` zadané v poli `event_receiver`, *zdroj* může být jedna z následujících akcí:
 
 - Ukazatel objektu zdroje nativní události.

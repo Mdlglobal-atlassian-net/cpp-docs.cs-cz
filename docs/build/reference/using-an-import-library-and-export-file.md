@@ -1,27 +1,17 @@
 ---
-title: Použití knihovny importu a souboru exportu | Dokumentace Microsoftu
-ms.custom: ''
+title: Použití knihovny importu a souboru exportu
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - circular exports
 - import libraries, using
 - export files
 ms.assetid: 2634256a-8aa5-4495-8c9e-6cde10e4ed76
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 77157ae9404e1d64aec34c897af7564511f275f8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e23b729bdca102ec24c4426e9784e3aab267bff2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717235"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484949"
 ---
 # <a name="using-an-import-library-and-export-file"></a>Použití knihovny importu a souboru exportu
 
