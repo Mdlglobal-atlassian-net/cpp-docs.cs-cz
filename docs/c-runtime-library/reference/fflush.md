@@ -1,10 +1,6 @@
 ---
-title: fflush – | Microsoft Docs
-ms.custom: ''
+title: fflush
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fflush
 apilocation:
@@ -22,27 +18,21 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fflush
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, flushing
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 72f0812e713d0d474363dcc5f79cc11eddb46020
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1d0e1b6f346481935b5b19736a8f9b41fede36e2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401162"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50527228"
 ---
 # <a name="fflush"></a>fflush
 
-Počet vyprázdnění datového proudu.
+Vyprázdní datového proudu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,27 +44,27 @@ int fflush(
 
 ### <a name="parameters"></a>Parametry
 
-*Datový proud*<br/>
-Ukazatel na **souboru** struktura.
+*Stream*<br/>
+Ukazatel na **souboru** struktury.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**fflush –** vrátí hodnotu 0, pokud vyrovnávací paměť byla byla úspěšně zapsána. Hodnota 0, se vrátí v případech, ve kterých zadaného datového proudu má bez vyrovnávací paměti nebo je otevřen jen pro čtení. Vrácená hodnota **EOF** označuje chybu.
+**fflush –** vrátí hodnotu 0, pokud byl úspěšně vyprázdní vyrovnávací paměť. Také je vrácena hodnota 0 v případech, ve kterých má bez vyrovnávací paměti nebo otevřen jen pro čtení zadaného datového proudu. Vrácená hodnota **EOF** označuje chybu.
 
 > [!NOTE]
-> Pokud **fflush –** vrátí **EOF**, data mohou být ztracena z důvodu chyby zápisu. Při nastavování obslužné rutiny kritická chyba, je nejbezpečnější vypnutí ukládání do vyrovnávací paměti s **setvbuf –** funkce nebo pomocí rutiny nízké úrovně vstupně-výstupních operací, jako například **_Otevřít**, **_close –**, a **_Write –** místo funkce datového proudu vstupně-výstupní operace.
+> Pokud **fflush –** vrátí **EOF**, data mohou být ztracena kvůli chybě zápisu. Při nastavování obslužné rutiny kritická chyba, je nejbezpečnější vypnout ukládání do vyrovnávací paměti s **setvbuf –** funkce nebo použít I/O rutiny nízké úrovně, jako **_Otevřít**, **_Zavřít**, a **_write** namísto funkce datového proudu vstupně-výstupních operací.
 
 ## <a name="remarks"></a>Poznámky
 
-**Fflush –** funkce vyprázdnění datového proudu *datového proudu*. Pokud datový proud byl otevřen v zápisu režimu, nebo byl otevřen v režimu aktualizace a poslední operace byla zápis, obsah vyrovnávací paměti datového proudu se zapisují do podkladový soubor nebo zařízení a vyrovnávací paměť se zahodí. Pokud datový proud byl otevřen v režimu pro čtení nebo datový proud má bez vyrovnávací paměti, volání **fflush –** nemá žádný vliv, a všechny vyrovnávací paměti je zachován. Volání **fflush –** Neguje účinku jakékoli předchozí volání **ungetc –** pro datový proud. Datový proud zůstane otevřený po volání.
+**Fflush –** funkce vyprázdní datový proud *stream*. Pokud byl datový proud otevřen v zápisu režimu, nebo byl otevřen v režimu aktualizace a byl poslední operaci zápisu, obsah vyrovnávací paměti datového proudu se zapisují do základního souboru nebo zařízení a vyrovnávací paměť se zahodí. Pokud byl datový proud otevřen v režimu pro čtení, nebo pokud datový proud bez vyrovnávací paměti, volání **fflush –** nemá žádný vliv, a všechny vyrovnávací paměti je zachován. Volání **fflush –** Neguje působení jakékoli předchozí volání **ungetc –** pro datový proud. Datový proud zůstane otevřený po volání.
 
-Pokud *datového proudu* je **NULL**, chování je stejné jako volání **fflush –** na každý otevřít datový proud. Všechny datové proudy otevřít v režimu zápisu a jsou vyprázdněny všechny datové proudy otevřít v režimu aktualizace kde poslední akci byla zápis. Volání nemá žádný vliv na jiné datové proudy.
+Pokud *stream* je **NULL**, chování je stejné jako volání **fflush –** na každý otevřít datový proud. Všechny datové proudy otevřen v režimu zápisu a, vyprázdní všechny datové proudy otevřen v režimu aktualizace kterých se spustil poslední operaci zápisu. Volání nemá žádný vliv na jiné datové proudy.
 
-Vyrovnávací paměti se obvykle spravuje podle operačního systému, která určuje optimální čas automaticky zapsat data na disk: Pokud vyrovnávací paměť je plná, když datový proud je uzavřen nebo když program ukončí normálně bez zavírání datového proudu. Funkce běhové knihovny k potvrzení na disku umožňuje Ujistěte se, že je důležitá data zapsána přímo na disku, nikoli do vyrovnávací paměti operačního systému. Bez přepisování existujícího programu, můžete povolit tuto funkci pomocí propojení objektu soubory programu s COMMODE.OBJ. Ve výsledném spustitelného souboru, volá, aby se **_flushall –** zapisovat obsah všech vyrovnávací paměti na disk. Pouze **_flushall –** a **fflush –** jsou ovlivněné COMMODE.OBJ.
+Vyrovnávací paměti jsou obvykle udržuje operačního systému, který určuje optimální čas automaticky zapisovat data na disk: Pokud vyrovnávací paměť je plná, když datový proud je uzavřen nebo když program skončí obvykle bez zavření datového proudu. Funkce potvrzení na disku knihovny run-time umožňuje zajistit, že důležitá data se zapisují přímo na disk, nikoli do vyrovnávací paměti operačního systému. Bez přepsání existující program, můžete povolit tuto funkci tak propojování souborů objektů programu s COMMODE.OBJ. Výsledný spustitelný soubor volá do **_flushall –** zapisovat obsah všech vyrovnávací paměti na disk. Pouze **_flushall –** a **fflush –** jsou ovlivněny COMMODE.OBJ.
 
-Informace o řízení funkce potvrzení na disku naleznete v tématu [vstupně-výstupní datový proud](../../c-runtime-library/stream-i-o.md), [fopen –](fopen-wfopen.md), a [_fdopen –](fdopen-wfdopen.md).
+Informace o řízení funkce potvrzení na disku naleznete v tématu [vstupně-výstupní operace Stream](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md), a [_fdopen –](fdopen-wfdopen.md).
 
-Tato funkce zamkne volající vlákno a je proto bezpečné pro přístup z více vláken. Bez uzamčení verze, najdete v části **_fflush_nolock –**.
+Tato funkce uzamkne volající vlákno a proto je bezpečná pro vlákno. Nezamykací verzi naleznete v tématu **_fflush_nolock –**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -82,7 +72,7 @@ Tato funkce zamkne volající vlákno a je proto bezpečné pro přístup z víc
 |--------------|---------------------|
 |**fflush**|\<stdio.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -132,9 +122,9 @@ Enter the same sentence with gets: This is a test
 This is a test
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>
 [_flushall](flushall.md)<br/>
 [setvbuf](setvbuf.md)<br/>

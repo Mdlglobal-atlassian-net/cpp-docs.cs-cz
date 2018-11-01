@@ -1,34 +1,24 @@
 ---
-title: / LTCG (generování kódu při propojování) | Dokumentace Microsoftu
-ms.custom: ''
+title: /LTCG (vytváření kódu v době propojování)
 ms.date: 03/14/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.LinkTimeCodeGeneration
 - VC.Project.VCConfiguration.WholeProgramOptimization
 - VC.Project.VCCLWCECompilerTool.WholeProgramOptimization
 - /ltcg
 - VC.Project.VCCLCompilerTool.WholeProgramOptimization
-dev_langs:
-- C++
 helpviewer_keywords:
 - link-time code generation in C++ linker
 - /LTCG linker option
 - -LTCG linker option
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0e60bb086adbb1c573b21cafb54c61203c888e9a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 68c12cc7666da489870da1cacacc5053aeca5b51
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725164"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523211"
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (vytváření kódu v době propojování)
 
@@ -158,7 +148,7 @@ Můžete také použít **parametru/LTCG** konkrétní sestavení výběrem **se
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LinkTimeCodeGeneration%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LinkTimeCodeGeneration%2A>.
 
 ## <a name="see-also"></a>Viz také:
 

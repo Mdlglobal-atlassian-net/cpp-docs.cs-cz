@@ -1,39 +1,29 @@
 ---
-title: is_bind_expression – třída | Microsoft Docs
-ms.custom: ''
+title: is_bind_expression – třída
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - functional/std::is_bind_expression
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_bind_expression class
 ms.assetid: 0715f9e9-2239-4778-a1cf-2c21f49dfd47
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 38cf4c4e9e92704e1f6ce635f2a429b4dc9bfcbb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f547b6f74a86612174cb0f510870171158678f7a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842159"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519415"
 ---
 # <a name="isbindexpression-class"></a>is_bind_expression – třída
 
-Testuje, pokud typ generovaná volání `bind`.
+Testuje, zda typ generován voláním `bind`.
 
 ## <a name="syntax"></a>Syntaxe
 
-Šablona<class Ty> struktura is_bind_expression {statické const bool hodnoty;};
+Šablona<class Ty> is_bind_expression – struktura {statické konstantní bool hodnotu;};
 
 ## <a name="remarks"></a>Poznámky
 
-Konstantní členské `value` je hodnota true, pokud typ `Ty` je typ vrácený volání `bind`, jinak hodnota false.
+Konstantní členské `value` má hodnotu true Pokud typ `Ty` je typ vrácený voláním `bind`; jinak hodnota false.
 
 ## <a name="example"></a>Příklad
 
@@ -72,8 +62,8 @@ int main()
 
 **Záhlaví:** \<funkční >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Vazby](../standard-library/functional-functions.md#bind)<br/>
+[Vytvoření vazby](../standard-library/functional-functions.md#bind)<br/>

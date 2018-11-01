@@ -1,10 +1,6 @@
 ---
-title: _Crtgetallochook – | Microsoft Docs
-ms.custom: ''
+title: _CrtGetAllocHook
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtGetAllocHook
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - CrtGetAllocHook
 - _CrtGetAllocHook
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtGetAllocHook function
 - CrtGetAllocHook function
 ms.assetid: 036acf7c-547a-4b3f-a636-80451070d7ed
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fb811353d0ac252411cc5bfc8beb408b6e707089
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b49c4cfc820a925187d0ea4d1562965295bea817
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394519"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514956"
 ---
 # <a name="crtgetallochook"></a>_CrtGetAllocHook
 
-Načte aktuální přidělení klienta definované funkce pro zapojení do procesu přidělení paměti běhové ladění C (pouze ladicí verze).
+Načte aktuální funkce klienta definované přidělení pro zapojení do proces přidělení paměti ladění za běhu jazyka C (pouze ladicí verze).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,13 +41,13 @@ _CRT_ALLOC_HOOK _CrtGetAllocHook( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí funkce háku přidělení aktuálně definovaný.
+Vrátí funkce háku aktuálně definovaných přidělení.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Crtgetallochook –** načte aktuální funkce háku klient definované aplikací pro proces k přidělení paměti C ladicí běhové knihovny.
+**_Crtgetallochook –** načte aktuální funkce háku definované klientské aplikace pro proces přidělení paměti knihovny ladění za běhu C.
 
-Další informace o použití jiných podporující háku běhové funkce a psaní vlastního klienta definované funkce háku najdete v tématu [ladění zápis funkce háku](/visualstudio/debugger/debug-hook-function-writing).
+Další informace o použití jiné funkce háku podporující za běhu a psaní vlastních klienta definované funkce háku naleznete v tématu [ladění zápis funkce háku](/visualstudio/debugger/debug-hook-function-writing).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -65,13 +55,13 @@ Další informace o použití jiných podporující háku běhové funkce a psan
 |-------------|---------------------|
 |**_CrtGetAllocHook**|\<crtdbg.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Ladicí verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md) pouze.
+Ladicí verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Rutiny ladění](../../c-runtime-library/debug-routines.md)<br/>
 [_CrtSetAllocHook](crtsetallochook.md)<br/>

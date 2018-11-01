@@ -1,31 +1,21 @@
 ---
-title: '&lt;climits –&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;climits –&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <climits>
-dev_langs:
-- C++
 helpviewer_keywords:
 - climits header
 ms.assetid: 7ca8a539-aa45-4ac3-86e8-74513be3f07e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0ffc8a1fe37f9cd9956ed7f4f21f7a9278556359
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cb7ccc4fe14a55e8ac52ab017a468d006186722c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841099"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50542854"
 ---
 # <a name="ltclimitsgt"></a>&lt;climits –&gt;
 
-Obsahuje hlavičku knihovny standardní C \<Limits.h – > a přidá přidružené jména `std` oboru názvů.
+Obsahuje hlavičku knihovny Standard C \<limits.h > a přidá názvy přidružené k `std` oboru názvů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,9 +26,9 @@ Obsahuje hlavičku knihovny standardní C \<Limits.h – > a přidá přidružen
 
 ## <a name="remarks"></a>Poznámky
 
-Včetně tuto hlavičku zajistí, že jsou názvy deklarováno s použitím externí propojení v hlavičce knihovny standardní C deklarované v `std` oboru názvů.
+Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším spojením v záhlaví knihovny Standard C jsou deklarovány v `std` oboru názvů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>
