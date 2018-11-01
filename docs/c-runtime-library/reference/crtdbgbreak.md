@@ -1,10 +1,6 @@
 ---
-title: _Crtdbgbreak – | Microsoft Docs
-ms.custom: ''
+title: _CrtDbgBreak
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtDbgBreak
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - _CrtDbgBreak
 - CrtDbgBreak
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtDbgBreak function
 - _CrtDbgBreak function
 ms.assetid: 01f8b4a2-a2c7-4e1f-9f39-e573b4a7871f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2141b3c70755eb03e77c8f66feed482b5e86b529
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4cf64daaea3193f7cf6b3aaa0b1aab031f104704
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394048"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478298"
 ---
 # <a name="crtdbgbreak"></a>_CrtDbgBreak
 
-Nastaví přerušení na konkrétní řádek kódu. (Používá se v režimu ladění jenom.)
+Nastaví přerušení na konkrétní řádek kódu. (Používané pouze v režimu ladění.)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,13 +41,13 @@ void _CrtDbgBreak( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Není k dispozici žádnou návratovou hodnotu.
+Neexistuje žádná návratová hodnota.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Crtdbgbreak –** funkce nastaví ladicích zarážek na konkrétní řádek kódu, kde se funkce nachází. Tato funkce se používá v režimu ladění pouze a závisí na **_DEBUG –** dříve definovaný.
+**_Crtdbgbreak –** funkce nastaví zarážku ladění na konkrétní řádek kódu, ve kterém se funkce nachází. Tato funkce je používán pouze v režimu ladění a je závislý na **_DEBUG** dříve definovaného.
 
-Další informace o použití jiných podporující háku běhové funkce a psaní vlastního klienta definované funkce háku najdete v tématu [zápis vaše vlastní ladění funkce háku](/visualstudio/debugger/debug-hook-function-writing).
+Další informace o použití jiné funkce háku podporující za běhu a psaní vlastních klienta definované funkce háku naleznete v tématu [zápis svůj vlastní ladění funkce háku](/visualstudio/debugger/debug-hook-function-writing).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -67,9 +57,9 @@ Další informace o použití jiných podporující háku běhové funkce a psan
 
 ## <a name="libraries"></a>Knihovny
 
-Ladicí verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md) pouze.
+Ladicí verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Rutiny ladění](../../c-runtime-library/debug-routines.md)<br/>
 [__debugbreak](../../intrinsics/debugbreak.md)<br/>

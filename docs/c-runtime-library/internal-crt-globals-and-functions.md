@@ -1,10 +1,6 @@
 ---
-title: Funkce a globální prvky interní CRT | Microsoft Docs
-ms.custom: ''
+title: Interní CRT globální proměnné a funkce
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 apiname:
 - __acrt_iob_func
 - __AdjustPointer
@@ -570,8 +566,6 @@ f1_keywords:
 - _wsopen_dispatch
 - _Xbad_alloc
 - _Xlength_error
-dev_langs:
-- C++
 helpviewer_keywords:
 - __acrt_iob_func
 - __AdjustPointer
@@ -847,22 +841,18 @@ helpviewer_keywords:
 - _Xbad_alloc
 - _Xlength_error
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 223e4860e1c7a0bd2f414b224c32818895b4398b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 64288cec680c1c10b6ee3f8b0f046fb22d25ab7c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392598"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50485611"
 ---
-# <a name="internal-crt-globals-and-functions"></a>Funkce a globální prvky interní CRT
+# <a name="internal-crt-globals-and-functions"></a>Interní CRT globální proměnné a funkce
 
-Knihovna jazyka C runtime (CRT) obsahuje funkce a globální proměnné, které se používají pouze pro podporu rozhraní veřejné knihovny. Některé z nich jsou zveřejněné v hlavičkách veřejné jako podrobnosti implementace. I když tyto funkce a globální proměnné jsou přístupné prostřednictvím veřejných exportuje, nejsou určeny pro použití ve vašem kódu. Doporučujeme změnit kód, který používá tyto funkce a proměnné místo toho použít veřejné knihovny ekvivalenty. Tato funkce může změnit v závislosti na verzi. Jsou zde uvedeny můžete identifikovat. Pokud existuje další dokumentaci, ale obecně platí, nejsou tyto podrobnosti implementace zdokumentovaný jsou k dispozici odkazy.
+Knihovny jazyka C runtime (CRT) obsahuje funkce a globální proměnné, které se používají pouze pro podporu rozhraní Veřejná knihovna. Některé z nich jsou vystaveny jako podrobnosti implementace v hlavičkách veřejné. I když tyto funkce a globální proměnné jsou přístupné prostřednictvím veřejného exporty, nejsou určeny pro použití ve vašem kódu. Doporučujeme vám, že změníte veškerý kód, který používá tyto funkce a proměnné místo toho použít Veřejná knihovna ekvivalenty. Tyto funkce může změnit v závislosti na verzi. Zde jsou uvedeny při jejich identifikaci. Pokud existuje další dokumentaci, ale obecně, tyto podrobnosti implementace nejsou uvedené, jsou uvedeny odkazy.
 
-## <a name="internal-crt-globals-and-value-macros"></a>Interní Globals CRT a hodnota makra
+## <a name="internal-crt-globals-and-value-macros"></a>Interní CRT globální proměnné a hodnotu makra
 
 Tyto globální proměnné a definice maker slouží k implementaci CRT.
 
@@ -1092,12 +1082,12 @@ Tyto funkce a funkce makra slouží k implementaci CRT a standardní knihovny C+
 |__p\__acmdln –|
 |[__p\__commode](../c-runtime-library/p-commode.md)|
 |__p\__crtAssertBusy|
-|__p\__crtbreakalloc –|
-|__p\__crtdbgflag –|
+|__p\__crtBreakAlloc|
+|__p\__crtDbgFlag|
 |__p\__daylight|
 |__p\__dstbias|
-|__p\__environ –|
-|[__p\__fmode –](../c-runtime-library/p-fmode.md)|
+|__p\__environ|
+|[__p\__fmode](../c-runtime-library/p-fmode.md)|
 |__p\__iob –|
 |__p\__mbcasemap –|
 |__p\__mbctype –|
@@ -1107,7 +1097,7 @@ Tyto funkce a funkce makra slouží k implementaci CRT a standardní knihovny C+
 |__p\__timezone|
 |__p\__tzname|
 |__p\__wcmdln –|
-|__p\__wenviron –|
+|__p\__wenviron|
 |__p\__wpgmptr –|
 |_pctype –|
 |[__pctype_func](../c-runtime-library/pctype-func.md)|
