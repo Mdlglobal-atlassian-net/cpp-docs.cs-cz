@@ -1,10 +1,6 @@
 ---
-title: _ismbbtrail –, _ismbbtrail_l – | Microsoft Docs
-ms.custom: ''
+title: _ismbbtrail, _ismbbtrail_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbtrail
 - _ismbbtrail_l
@@ -26,28 +22,22 @@ f1_keywords:
 - ismbbtrail
 - _ismbbtrail_l
 - ismbbtrail_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbbtrail_l function
 - _ismbbtrail function
 - _ismbbtrail_l function
 - ismbbtrail function
 ms.assetid: dfdd0292-960b-4c1d-bf11-146e0fc80247
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e41ad2be1447946570f10028249582225386877
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5c09884f013e878fca516388f1ad933a2a08b35a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399748"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50545935"
 ---
 # <a name="ismbbtrail-ismbbtraill"></a>_ismbbtrail, _ismbbtrail_l
 
-Určuje, zda je bajt koncové bajt vícebajtových znaků.
+Určuje, zda bajt je koncovým bajtem vícebajtového znaku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,31 +54,31 @@ int _ismbbtrail_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Na celé číslo, které má být testována.
+Celé číslo k testování.
 
 *Národní prostředí*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_ismbbtrail –** vrátí nenulovou hodnotu, pokud na celé číslo *c* je druhý bajt vícebajtových znaků. Například v kódu stránka 932 pouze, platné rozsahy jsou 0x40 k 0x7E a 0x80 k 0xFC.
+**_ismbbtrail** vrací nenulovou hodnotu, pokud celé číslo *c* je druhý bajt vícebajtového znaku. Například v kódu jsou stránky 932 pouze platné rozsahy 0x40 – 0x7E a 0x80 – 0xFC.
 
 ## <a name="remarks"></a>Poznámky
 
-**_ismbbtrail –** používá aktuální národní prostředí pro chování závislých na národním prostředí. **_ismbbtrail_l –** se shoduje s tím rozdílem, že používá národní prostředí, je předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+**_ismbbtrail** používá aktuální národní prostředí pro závislá chování. **_ismbbtrail_l –** je totožný s tím rozdílem, že používá národní prostředí, které je předáno místo. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
-|**_ismbbtrail –**|\<Mbctype.h > nebo \<mbstring.h >|\<ctype.h >, * \<Limits.h – >, \<stdlib.h >|
-|**_ismbbtrail_l**|\<Mbctype.h > nebo \<mbstring.h >|\<ctype.h >, * \<Limits.h – >, \<stdlib.h >|
+|**_ismbbtrail**|\<Mbctype.h > nebo \<mbstring.h >|\<ctype.h >, * \<limits.h >, \<stdlib.h >|
+|**_ismbbtrail_l**|\<Mbctype.h > nebo \<mbstring.h >|\<ctype.h >, * \<limits.h >, \<stdlib.h >|
 
-\* Pro manifest konstanty podmínky testu.
+\* Pro konstanty manifestu pro zkušební podmínky.
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Klasifikace bajtů](../../c-runtime-library/byte-classification.md)<br/>
 [_ismbb – rutiny](../../c-runtime-library/ismbb-routines.md)<br/>

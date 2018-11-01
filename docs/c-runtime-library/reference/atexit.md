@@ -1,10 +1,6 @@
 ---
-title: AtExit | Microsoft Docs
-ms.custom: ''
+title: atexit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atexit
 apilocation:
@@ -21,26 +17,20 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - atexit
-dev_langs:
-- C++
 helpviewer_keywords:
 - processing, at exit
 - atexit function
 ms.assetid: 92c156d2-8052-4e58-96dc-00128baac6f9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d66954348d5d812fac7eca0b231304267cc26157
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48f0fbfa1f3350f73899fcdbb3bf7922f1c6174d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393131"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556637"
 ---
 # <a name="atexit"></a>atexit
 
-Zpracuje zadané funkci na konec.
+Zpracuje zadané funkce při ukončení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,15 +47,15 @@ Funkce, která se má volat.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**AtExit** vrátí 0, pokud bylo úspěšné, nebo nenulovou hodnotu, pokud dojde k chybě.
+**AtExit** vrátí 0 v případě úspěchu nebo nenulovou hodnotu, pokud dojde k chybě.
 
 ## <a name="remarks"></a>Poznámky
 
-**Atexit** funkce je předán na adresu funkce *func* se volá, když se program ukončí normálně. Následná volání **atexit** vytvořit registrace funkcí, které jsou spouštěny v pořadí ven (LIFO) last-in. Funkce předaný **atexit** nepřijímají parametry. **AtExit** a **_onexit –** použít halda pro uložení registrace funkcí. Proto počet funkcí, které lze registrovat je omezena pouze halda paměti.
+**Atexit** funkce je předána adresu funkce *func* se volá, když program ukončen normálně. Následná volání **atexit** vytvořit registr funkcí, které jsou spouštěny popořadě poslední dovnitř, první (ven LIFO). Funkce předány **atexit** nemůže mít parametry. **AtExit** a **_onexit** použití haldy pro uložení do registru funkce. Díky tomu se počet funkcí, které mohou být registrovány je omezen pouze haldy paměti.
 
-Kód **atexit** funkce nesmí obsahovat žádné závislost na všechny knihovny DLL, které by mohly mít již zrušeno při **atexit** funkce je volána.
+Kód v **atexit** funkce by neměla obsahovat závislost na žádné knihovny DLL, které by mohly mít již uvolněna při **atexit** funkce je volána.
 
-Chcete-li vygenerovat ANSI kompatibilní aplikace, použijte standardu ANSI **atexit** – funkce (místo podobné **_onexit –** funkce).
+Chcete-li generovat aplikace vyhovující standardu ANSI, použijte standardu ANSI **atexit** – funkce (místo podobný **_onexit** funkce).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -75,7 +65,7 @@ Chcete-li vygenerovat ANSI kompatibilní aplikace, použijte standardu ANSI **at
 
 ## <a name="example"></a>Příklad
 
-Tento program nabízených oznámení čtyři funkce do zásobníku funkcí při spouštění **atexit** je volána. Při ukončení programu, tyto programy jsou spouštěny na poslední, nejprve se základ.
+Tento program nabízených oznámení v ceně čtyři funkce do zásobníku funkce, který se spustí při **atexit** je volána. Při ukončení programu tyto programy se provádějí v poslední dovnitř, první na základě.
 
 ```C
 // crt_atexit.c
@@ -119,7 +109,7 @@ This is executed first.
 This is executed next.
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](abort.md)<br/>
