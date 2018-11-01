@@ -1,16 +1,10 @@
 ---
-title: -GR (povolit informace běhového typu) | Dokumentace Microsoftu
-ms.custom: ''
+title: /GR (Povolit informace běhového typu)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /gr
 - VC.Project.VCCLWCECompilerTool.RuntimeTypeInfo
 - VC.Project.VCCLCompilerTool.RuntimeTypeInfo
-dev_langs:
-- C++
 helpviewer_keywords:
 - -Gr compiler option [C++]
 - Gr compiler option [C++]
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - /Gr compiler option [C++]
 - enable run-time type information compiler option [C++]
 ms.assetid: d1f9f850-dcec-49fd-96ef-e72d01148906
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 24ef844c716d64e609440d41bf55db20308c02f1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b0b618b1018912f1cf0172fc461ac2849c4faf5d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712241"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579345"
 ---
 # <a name="gr-enable-run-time-type-information"></a>/GR (Povolit informace běhového typu)
 
@@ -59,7 +49,7 @@ Další informace o kontrole run-time typu, najdete v části [informace o typu 
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.RuntimeTypeInfo%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.RuntimeTypeInfo%2A>.
 
 ## <a name="see-also"></a>Viz také
 

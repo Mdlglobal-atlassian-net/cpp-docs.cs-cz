@@ -1,27 +1,17 @@
 ---
-title: Nestandardní chování | Dokumentace Microsoftu
-ms.custom: ''
+title: Nestandardní chování
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - compatibility and compliance, nonstandard behavior
 - Microsoft-specific, compiler behavior
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1fec9329bbbf19f3987c0abf3dfd2ce32300df62
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b7546914f4cd417f127af56fb7342903989d8330
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46089785"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50638201"
 ---
 # <a name="nonstandard-behavior"></a>Nestandardní chování
 

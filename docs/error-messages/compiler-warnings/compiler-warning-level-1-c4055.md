@@ -1,37 +1,27 @@
 ---
-title: Kompilátoru (úroveň 1) upozornění C4052 | Microsoft Docs
-ms.custom: ''
+title: Kompilátor upozornění (úroveň 1) C4052
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4055
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4055
 ms.assetid: f9955421-16ab-46e5-8f9d-bf1639a519ef
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 47d7d8891b589dc8205b0d799f88466c1e7d8a59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9fcb4356d993d86b622fd49c4a75d587554f7c2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278977"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601315"
 ---
-# <a name="compiler-warning-level-1-c4055"></a>C4055 kompilátoru upozornění (úroveň 1)
+# <a name="compiler-warning-level-1-c4055"></a>Kompilátor upozornění (úroveň 1) C4055
 
-> '*převod*': z dat ukazatel '*type1*'to ukazatel na funkci'*type2*.
+> "*převod*': z ukazatele dat"*type1*"na ukazatel funkce"*type2*"
 
 ## <a name="remarks"></a>Poznámky
 
-**Zastaralé:** není toto upozornění vygenerovaných Visual Studio 2017 a novější verze.
+**Zastaralé:** toto upozornění negenerují tak, že Visual Studio 2017 a novějších verzích.
 
-Ukazatel dat (pravděpodobně nesprávně) vložena do ukazatel na funkci. Toto je upozornění úrovně 1 v části /Za a úroveň 4 upozornění v části /Ze.
+Ukazatel na data (pravděpodobně nesprávně) přetypováno na ukazatel na funkci. Toto je upozornění úrovně 1 v části /Za a upozornění úrovně 4 v rámci/ze.
 
 ## <a name="example"></a>Příklad
 
@@ -47,7 +37,7 @@ PFUNC f() {
 }
 ```
 
-V části /Ze Toto je upozornění úroveň 4.
+V rámci/ze Toto je upozornění úrovně 4.
 
 ```C
 // C4055b.c

@@ -1,28 +1,17 @@
 ---
-title: Obrázek nabídky (C++ Editor obrázků pro ikony) | Dokumentace Microsoftu
-ms.custom: ''
+title: Nabídka obrázku (C++ Editor obrázků pro ikony)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image menu
 ms.assetid: ac2b4d53-1919-4fd1-a0af-d3c085c45af2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 07541c31b99959616320d0b4a9526eb2ec5493a2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e015e7d3e814ce4563abc3cc75d7799eb65bd86a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425545"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596583"
 ---
 # <a name="image-menu-c-image-editor-for-icons"></a>Nabídka obrázku (C++ Editor obrázků pro ikony)
 

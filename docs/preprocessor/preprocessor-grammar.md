@@ -1,27 +1,17 @@
 ---
-title: Gramatika preprocesoru | Dokumentace Microsoftu
-ms.custom: ''
+title: Gramatika preprocesoru
 ms.date: 09/04/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 56df4d0bfdaf87ace87a9f9dcbde85166929e642
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 17768b7ec1442f2af1abf76596527d4df69b1534
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766113"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614185"
 ---
 # <a name="preprocessor-grammar"></a>Gramatika preprocesoru
 
@@ -30,7 +20,7 @@ ms.locfileid: "43766113"
 &nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>identifikátor</em>**(** *identifikátor*<sub>optimalizované</sub> **,** ... **,** *identifikátor*<sub>optimalizované</sub> **)** *řetězci tokenu*<sub>optimalizované</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *path-spec* **"**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *path-spec* **>**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#line** *sekvence číslic***"** *filename* **"**<sub>optimalizované  </sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#line** *sekvence číslic***"** *filename* **"**<sub>optimalizované</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#undef** *identifikátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#error** *řetězci tokenu*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *řetězci tokenu*

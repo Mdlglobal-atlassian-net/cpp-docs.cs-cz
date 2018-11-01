@@ -1,10 +1,6 @@
 ---
-title: _putw – | Microsoft Docs
-ms.custom: ''
+title: _putw
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _putw
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - _putw
 - putw
-dev_langs:
-- C++
 helpviewer_keywords:
 - integers, writing to streams
 - putw function
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c5e33bc207fe83795c31f6c8b61d931985760e3a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3fd18c2a8869d6b09703547f50ee6e096bd72395
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404009"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602680"
 ---
 # <a name="putw"></a>_putw
 
@@ -60,18 +50,18 @@ int _putw(
 *binint*<br/>
 Binární číslo jako výstup.
 
-*Datový proud*<br/>
-Ukazatel **souboru** struktura.
+*Stream*<br/>
+Ukazatel **souboru** struktury.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu zapsána. Vrácená hodnota **EOF** může znamenat chybu. Protože **EOF** je také legitimní celočíselná hodnota, použijte **ferror –** ověřit chybu. Pokud *datového proudu* je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tato funkce nastaví **errno** k **einval –** a vrátí **EOF**.
+Vrátí hodnotu zapsat. Vrácená hodnota **EOF** může značit chybu. Protože **EOF** je také legitimní celočíselnou hodnotu, použijte **ferror** chybu ověření. Pokud *stream* je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce nastaví **errno** k **EINVAL** a vrátí **EOF**.
 
-Informace o těchto a dalších kódy chyb naleznete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Putw –** funkce zapíše binární hodnotu typu **int** na aktuální pozici *datového proudu.* **_putw –** nemá vliv na zarovnání položek v datovém proudu ani nepodporuje předpokládá žádné speciální zarovnání. **_putw –** je kvůli kompatibilitě s předchozí knihovny. Může dojít k problémům přenositelnost s **_putw –** protože velikost **int** a pořadí bajtů v rámci **int** liší mezi systémy.
+**_Putw –** funkce zapíše binární hodnota typu **int** na aktuální pozici *datového proudu.* **_putw –** nemá vliv na zarovnání položek v datovém proudu ani neumožňuje předpokládají žádné speciální zarovnání. **_putw –** je primárně určen pro kompatibilitu s předchozím knihovny. Problémy s přenositelností dále mohla objevit při **_putw –** protože velikost **int** a pořadí bajtů v rámci **int** lišit napříč systémy.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -79,11 +69,11 @@ Informace o těchto a dalších kódy chyb naleznete v tématu [_doserrno – k�
 |-------------|---------------------|
 |**_putw**|\<stdio.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -123,7 +113,7 @@ int main( void )
 Wrote ten words
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [_getw](getw.md)<br/>

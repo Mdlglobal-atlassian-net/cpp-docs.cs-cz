@@ -1,10 +1,6 @@
 ---
-title: __max – | Microsoft Docs
-ms.custom: ''
+title: __max
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __max
 apilocation:
@@ -22,27 +18,21 @@ apitype: DLLExport
 f1_keywords:
 - max
 - __max
-dev_langs:
-- C++
 helpviewer_keywords:
 - max macro
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d223f4288ccf40646e8f560cec7243b7e8f9f649
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 32e1207ea4bb030ac5303de32c0566f98e0596a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398416"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613756"
 ---
 # <a name="max"></a>__max
 
-Makro preprocesoru, který vrací větší ze dvou hodnot.
+Makro preprocesoru, které vrátí větší ze dvou hodnot.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -53,17 +43,17 @@ Makro preprocesoru, který vrací větší ze dvou hodnot.
 ### <a name="parameters"></a>Parametry
 
 *a*, *b*<br/>
-Hodnoty všech číselného typu, který se má porovnat.
+Hodnoty libovolného číselného typu, který se má porovnat.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**__max –** vrátí větší argumentů.
+**__max** vrátí větší z jejích argumentů.
 
 ## <a name="remarks"></a>Poznámky
 
-**__Max –** makro porovná dvě hodnoty a vrátí hodnotu typu větší. Argumenty, které může být jakékoli číselný datový typ, podepsané nebo bez znaménka. Argumenty a návratová hodnota musí být stejného datového typu.
+**__Max** – makro porovná dvě hodnoty a vrátí hodnotu větší z nich. Argumenty může být libovolný číselný datový typ, podepsaný nebo nepodepsaný řetězec. Argumenty a vrácené hodnoty musí být stejného datového typu.
 
-Argument vrátil je vyhodnocován dvakrát makro. To může vést k neočekávaným výsledkům, pokud je argument výraz, který mění jeho hodnota při vyhodnotí, jako například `*p++`.
+Argument vrátil je dvakrát vyhodnocovaný makra. To může vést k neočekávaným výsledkům, pokud je argument výrazu, který se mění její hodnotu, když je vyhodnocen, jako například `*p++`.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -73,9 +63,9 @@ Argument vrátil je vyhodnocován dvakrát makro. To může vést k neočekávan
 
 ## <a name="example"></a>Příklad
 
-Další informace, podívejte se na příklad pro [__min –](min.md).
+Další informace, podívejte se na příklad pro [__min](min.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [__min](min.md)<br/>
