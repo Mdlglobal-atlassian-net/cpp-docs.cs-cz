@@ -1,35 +1,25 @@
 ---
-title: C3641 Chyba kompilátoru | Microsoft Docs
-ms.custom: ''
+title: Chyba kompilátoru C3641
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3641
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3641
 ms.assetid: e8d3613e-5e8d-46fe-a516-eb7d1de7cd21
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 99aef6bcfd8ac7ea89cb62fda37c7aec012e16de
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: f6c27067e4f07c89b4226cf4d26adf2afb0b07ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704942"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648575"
 ---
-# <a name="compiler-error-c3641"></a>C3641 chyby kompilátoru
+# <a name="compiler-error-c3641"></a>Chyba kompilátoru C3641
 
-> '*funkce*': neplatné konvenci volání 'calling_convention' pro funkci kompilovat s volbou/CLR: pure nebo/CLR: safe
+> "*funkce*': Neplatná konvence volání 'calling_convention' pro funkci zkompilovanou pomocí/clr: pure nebo/CLR: safe
 
 ## <a name="remarks"></a>Poznámky
 
-**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017.
+**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
 
 Pouze [__clrcall](../../cpp/clrcall.md) konvence volání je povoleno s [/CLR: pure](../../build/reference/clr-common-language-runtime-compilation.md).
 

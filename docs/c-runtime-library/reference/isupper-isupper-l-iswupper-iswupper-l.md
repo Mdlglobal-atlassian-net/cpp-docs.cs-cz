@@ -1,10 +1,6 @@
 ---
-title: isupper –, _isupper_l –, iswupper –, _iswupper_l – | Microsoft Docs
-ms.custom: ''
+title: isupper, _isupper_l, iswupper, _iswupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - isupper
 - iswupper
@@ -27,8 +23,6 @@ f1_keywords:
 - isupper
 - _istupper
 - iswupper
-dev_langs:
-- C++
 helpviewer_keywords:
 - istupper function
 - iswupper function
@@ -39,20 +33,16 @@ helpviewer_keywords:
 - _iswupper_l function
 - isupper function
 ms.assetid: da2bcc9f-241c-48c0-9a0e-ad273827e16a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1d58fc8e10fbc533787fe0e7b99194e282bb906f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 498644fc2de8a687e2b9b63a88591385055db6c8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402098"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588432"
 ---
 # <a name="isupper-isupperl-iswupper-iswupperl"></a>isupper, _isupper_l, iswupper, _iswupper_l
 
-Určuje, zda celé představuje velké písmeno.
+Určuje, zda celočíselná hodnota představuje znak velkého písmene.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -76,38 +66,38 @@ int _iwsupper_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Celé číslo pro testování.
+Celé číslo k testování.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Všechny tyto rutiny vrátí nenulové hodnoty, pokud *c* je konkrétní reprezentace velké písmeno. **isupper –** vrátí nenulovou hodnotu, pokud *c* je velké písmeno (A – Z). **iswupper –** vrátí nenulovou hodnotu, pokud *c* je široké znak, který odpovídá velké písmeno, nebo pokud *c* je jedním z definované implementací sadu široké znaky pro které žádný z **iswcntrl –**, **iswdigit –**, **iswpunct –**, nebo **iswspace –** nenulový. Všechny tyto rutiny vrátí hodnotu 0, pokud *c* nesplňuje podmínky testu.
+Každá z těchto rutin vrátí nenulovou hodnotu, pokud *c* je konkrétní reprezentace velkého písmene. **isupper** vrací nenulovou hodnotu, pokud *c* je znak velkého písmene (A – Z). **iswupper –** vrací nenulovou hodnotu, pokud *c* je široký znak, který odpovídá velkého písmene, nebo pokud *c* je jednou ze sad definovaných implementací širokých znaků, pro kterou žádná z hodnot **iswcntrl –**, **iswdigit –**, **iswpunct –**, nebo **iswspace –** nenulové. Každá z těchto rutin vrátí hodnotu 0, pokud *c* nesplňuje testovací podmínku.
 
-Verze tyto funkce, které mají **_l** používat příponu národní prostředí, je předaná místo aktuální národní prostředí pro jejich chování závislých na národním prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Verze těchto funkcí, které mají **_l** příponu použít předané národní prostředí namísto aktuálního národního prostředí pro své chování závislé na národním prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Chování **isupper –** a **_isupper_l –** není definován, pokud *c* není EOF nebo v rozsahu 0 až 0xFF (včetně). V případě použití knihovny ladění CRT a *c* není jednou z těchto hodnot, funkce raise kontrolní výrazy.
+Chování **isupper** a **_isupper_l –** není definováno, pokud *c* není konec souboru nebo v rozsahu 0 až 0xFF, včetně. Při použití ladicí CRT knihovny a *c* není jednou z těchto hodnot, funkce vyvolá kontrolní výraz.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_istupper –**|**isupper –**|[_ismbcupper](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**iswupper –**|
+|**_istupper –**|**isupper**|[_ismbcupper](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**iswupper –**|
 |**_istupper_l**|**_isupper_l**|[_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**_iswupper_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**isupper –**|\<ctype.h >|
+|**isupper**|\<ctype.h >|
 |**_isupper_l**|\<ctype.h >|
 |**iswupper –**|\<ctype.h > nebo \<wchar.h >|
 |**_iswupper_l**|\<ctype.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Klasifikace znaků](../../c-runtime-library/character-classification.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>

@@ -1,14 +1,8 @@
 ---
-title: -Zm (určení omezení přidělení paměti pro předkompilované hlavičky) | Dokumentace Microsoftu
-ms.custom: ''
+title: /Zm (Zadat omezení přidělení paměti pro předkompilované hlavičky)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /zm
-dev_langs:
-- C++
 helpviewer_keywords:
 - PCH files, memory allocation limit
 - Zm compiler option [C++]
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - memory allocation, Memory Allocation Limit compiler option
 - -Zm compiler option [C++]
 ms.assetid: 94c77d5e-6672-46a7-92e0-3f69e277727d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9dfd1b0525991f81736af571d2c450e0c12edfc4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ee42fc2d1065a755fa816a99563ccc9f0108e847
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702730"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50634795"
 ---
 # <a name="zm-specify-precompiled-header-memory-allocation-limit"></a>/Zm (Zadat omezení přidělení paměti pro předkompilované hlavičky)
 
@@ -76,7 +66,7 @@ Následující tabulka ukazuje jak *faktor* argument ovlivňuje limit přidělen
 
 #### <a name="to-set-the-zm-compiler-option-programmatically"></a>Programové nastavení parametru kompilátoru /Zm
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Viz také
 

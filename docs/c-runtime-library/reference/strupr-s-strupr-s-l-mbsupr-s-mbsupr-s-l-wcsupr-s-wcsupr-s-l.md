@@ -1,10 +1,6 @@
 ---
-title: _strupr_s –, _strupr_s_l –, _mbsupr_s –, _mbsupr_s_l –, _wcsupr_s –, _wcsupr_s_l – | Microsoft Docs
-ms.custom: ''
+title: _strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strupr_s
 - _strupr_s_l
@@ -41,8 +37,6 @@ f1_keywords:
 - _wcsupr_s_l
 - _strupr_s
 - _strupr_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbsupr_s_l function
 - strupr_s_l function
@@ -66,23 +60,19 @@ helpviewer_keywords:
 - _strupr_s function
 - wcsupr_s function
 ms.assetid: 82d3a273-9f6f-4a26-9560-919d891e4581
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ad2ff06320b3251e80935776246927e4cadb50c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fb0c7027ff53408ba981aa85f97c49dba054e21d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415657"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569680"
 ---
 # <a name="struprs-struprsl-mbsuprs-mbsuprsl-wcsuprs-wcsuprsl"></a>_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
 
-Převede řetězec na velká písmena, a to pomocí aktuální národní prostředí nebo zadaný národní prostředí, který se předává v. Tyto verze nástroje [_strupr –, _strupr_l –, _mbsupr –, _mbsupr_l –, _wcsupr_l –, _wcsupr –](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md) mít vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Převede řetězec na velká písmena pomocí aktuálního národního prostředí nebo zadaného národního prostředí, které je předáno. Tyto verze [_strupr – _strupr_l –, _mbsupr –, _mbsupr_l –, _wcsupr_l –, _wcsupr –](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md) mají rozšíření zabezpečení popsaná v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbsupr_s –** a **_mbsupr_s_l –** nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsupr_s –** a **_mbsupr_s_l –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -145,8 +135,8 @@ errno_t _mbsupr_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*str –*<br/>
-Řetězec k převedení na velká písmena.
+*str*<br/>
+Řetězec pro velké první písmeno.
 
 *numberOfElements*<br/>
 Velikost vyrovnávací paměti.
@@ -156,23 +146,23 @@ Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěšného; Chyba nenulový kód při selhání.
+Nula v případě úspěchu; při selhání kód chyby.
 
-Tyto funkce ověřit jejich parametrů. Pokud *str* je **NULL** ukazatele, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno spuštění chcete-li pokračovat, vrátí funkce **einval –** a nastavte **errno** k **einval –**. Pokud *numberOfElements* je menší než délka řetězce, vrátí funkce **erange –** a nastavte **errno** k **erange –**.
+Tyto funkce ověřují své parametry. Pokud *str* je **NULL** vyvolána ukazatel, obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Pokud provádění může pokračovat, vrátí funkce **EINVAL** a nastavte **errno** k **EINVAL**. Pokud *numberOfElements* je menší než délka řetězce, vrátí funkce **ERANGE** a nastavte **errno** k **ERANGE**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Strupr_s –** funkce převede na místě, každý malé písmeno v *str* na velká písmena. **_wcsupr_s –** je verze široká charakterová **_strupr_s –**. **_mbsupr_s –** je verze vícebajtové znakové **_strupr_s –**.
+**_Strupr_s –** funkce převede na místě každé malé písmeno v *str* na velká písmena. **_wcsupr_s –** je verze širokého znaku **_strupr_s –**. **_mbsupr_s –** je vícebajtová znaková verze **_strupr_s –**.
 
-Převod je dáno **LC_CTYPE –** kategorie nastavení národního prostředí. Ovlivněné nejsou jiné znaky. Další informace o **LC_CTYPE –**, najdete v části [setlocale](setlocale-wsetlocale.md). Verze tyto funkce bez **_l** přípona použití aktuální národní prostředí; vize s **_l** příponu jsou shodné s tím rozdílem, že používají místo předaná národní prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Převod je určen podle **LC_CTYPE** nastavením kategorie národního prostředí. Jiné znaky nejsou ovlivněny. Další informace o **LC_CTYPE**, naleznete v tématu [setlocale](setlocale-wsetlocale.md). Verze těchto funkcí bez **_l** přípony použití aktuálního národního prostředí; vize s **_l** přípona jsou stejné s tím rozdílem, že používají předané národní prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-V jazyce C++ pomocí těchto funkcí se zjednodušilo díky šabloně přetížení; přetížení automaticky odvození délka vyrovnávací paměti (takže není nutné zadat argument velikost) a starší, nezabezpečené funkce můžou automaticky nahradit se svými protějšky novější a zabezpečené. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky (tím eliminuje nutnost zadat argument velikosti) a dokážou automaticky nahradit starší, nezabezpečené funkce jejími novějšími, zabezpečené protějšky. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
-Ladicí verze těchto funkcí nejprve vyplnit vyrovnávací paměť s 0xFD. Chcete-li toto chování zakázat, použijte [_crtsetdebugfillthreshold –](crtsetdebugfillthreshold.md).
+Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť hodnotou 0xFD. Chcete-li toto chování zakázat, použijte [_crtsetdebugfillthreshold –](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsupr_s –**|**_strupr_s**|**_mbsupr_s –**|**_wcsupr_s**|
 |**_tcsupr_s_l –**|**_strupr_s_l**|**_mbsupr_s_l**|**_wcsupr_s_l**|
@@ -184,13 +174,13 @@ Ladicí verze těchto funkcí nejprve vyplnit vyrovnávací paměť s 0xFD. Chce
 |**_strupr_s –**, **_strupr_s_l –**|\<String.h >|
 |**_wcsupr_s –**, **_wcsupr_s_l –**, **_mbsupr_s –**, **_mbsupr_s_l –**|\<String.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [_strlwr_s –, _strlwr_s_l –, _mbslwr_s –, _mbslwr_s_l –, _wcslwr_s –, _wcslwr_s_l –](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md) .
+Podívejte se na příklad pro [_strlwr_s – _strlwr_s_l –, _mbslwr_s –, _mbslwr_s_l –, _wcslwr_s –, _wcslwr_s_l –](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md) .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
 [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

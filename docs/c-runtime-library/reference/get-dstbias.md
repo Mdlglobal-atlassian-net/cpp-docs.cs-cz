@@ -1,10 +1,6 @@
 ---
-title: _get_dstbias – | Microsoft Docs
-ms.custom: ''
+title: _get_dstbias
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_dstbias
 - __dstbias
@@ -25,24 +21,18 @@ f1_keywords:
 - __dstbias
 - _get_dstbias
 - get_dstbias
-dev_langs:
-- C++
 helpviewer_keywords:
 - __dstbias
 - daylight saving time offset
 - get_dstbias function
 - _get_dstbias function
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 82e334c6fcb282bebb003992219f6cf215ab7437
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 61807f854dc9c2f7de6f0acd5bbf4668987ce49e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397763"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579101"
 ---
 # <a name="getdstbias"></a>_get_dstbias
 
@@ -56,20 +46,20 @@ error_t _get_dstbias( int* seconds );
 
 ### <a name="parameters"></a>Parametry
 
-*Sekund*<br/>
-Posun v sekundách letní čas.
+*sekundy*<br/>
+Posun v řádu sekund letního času.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu nebo **errno** hodnotu, pokud dojde k chybě.
+Nula v případě úspěchu nebo s **errno** hodnotu, pokud dojde k chybě.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Get_dstbias –** funkce načte počtem sekund za letní čas jako celé číslo. Pokud platí letní čas, výchozí posun je 3 600 sekund, což je počet sekund za jednu hodinu (i když několik oblastí sledovat posun dvou hodin).
+**_Get_dstbias –** funkce zjišťuje počet sekund v letního času jako celé číslo. Pokud letního času, posun výchozí je 3 600 sekund, což je počet sekund za jednu hodinu (v případě, že několik oblastí sledovat posun dvou hodin).
 
-Pokud *sekund* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tato funkce nastaví **errno** k **einval –** a vrátí **einval –**.
+Pokud *sekund* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce nastaví **errno** k **EINVAL** a vrátí **EINVAL**.
 
-Doporučujeme, abyste tuto funkci použít místo makro **_dstbias** nebo zastaralé funkce **__dstbias**.
+Doporučujeme použít tuto funkci místo makro **_dstbias** nebo zastaralé funkce **__dstbias**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -79,7 +69,7 @@ Doporučujeme, abyste tuto funkci použít místo makro **_dstbias** nebo zastar
 
 Další informace najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Správa času](../../c-runtime-library/time-management.md)<br/>
 [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

@@ -1,12 +1,6 @@
 ---
-title: Šablony dokumentů a proces vytvoření Document / View | Dokumentace Microsoftu
-ms.custom: ''
+title: Šablony dokumentů a proces vytváření dokumentů a zobrazení
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - icons, for multiple document templates
 - document templates [MFC], and views
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - CDocTemplate class [MFC]
 - templates [MFC], document templates
 ms.assetid: 311ce4cd-fbdf-4ea1-a51b-5bb043abbcee
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 182cf58b3ee712ef0d45719591e967c0b81909bd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 544a9bf60ee2066688703faa7e430e2337454e66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426520"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50606346"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>Šablony dokumentů a proces tvorby v modelu dokument/zobrazení
 

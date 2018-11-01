@@ -1,10 +1,6 @@
 ---
-title: frexp – frexpf –, frexpl – | Microsoft Docs
-ms.custom: ''
+title: frexp – frexpf –, frexpl –
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - frexp
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - frexp
 - _frexpl
-dev_langs:
-- C++
 helpviewer_keywords:
 - _frexpl function
 - mantissas, floating-point variables
@@ -33,20 +27,16 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c3bf79e954274b1cedb104ed637ad14b8e1c6431
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c9e259f730d2d63d07032735be930f6f0fdb17e5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400086"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563836"
 ---
 # <a name="frexp-frexpf-frexpl"></a>frexp – frexpf –, frexpl –
 
-Získá mantisa a exponent čísla s plovoucí desetinnou čárkou.
+Načte mantisu a exponent čísla s plovoucí desetinnou čárkou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -83,13 +73,13 @@ Ukazatel na exponent uložené celé číslo.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**frexp –** vrátí mantisa. Pokud *x* je 0, funkce vrátí hodnotu 0 pro mantisa a exponent. Pokud *expptr* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tato funkce nastaví **errno** k **einval –** a vrátí hodnotu 0.
+**frexp –** vrátí mantisa. Pokud *x* je 0, funkce vrátí 0 pro mantisu a exponent. Pokud *expptr* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce nastaví **errno** k **EINVAL** a vrátí hodnotu 0.
 
 ## <a name="remarks"></a>Poznámky
 
-**Frexp –** funkce dojde-li hodnota s plovoucí desetinnou čárkou (*x*) do mantisa (*m*) a exponent (*n*), tak, aby absolutní Hodnota *m* je větší než nebo rovno 0,5 a menší než 1,0 a *x* = *m* * 2<sup>*n*</sup>. Celé číslo exponent *n* je uložený v umístění, na kterou odkazuje *expptr*.
+**Frexp –** funkce rozdělí hodnotu s plovoucí desetinnou čárkou (*x*) do mantisy (*m*) a exponent (*n*), tak, aby absolutní Hodnota *m* je větší než nebo rovna hodnotě 0,5 a nižší než 1.0, a *x* = *m* * 2<sup>*n*</sup>. Celé číslo exponent *n* je uložen v umístění, na které odkazuje *expptr*.
 
-C++ umožňuje přetížení, takže můžete volat přetížení **frexp –**. V programu C **frexp –** má vždy **dvojité** a **int** ukazatel a vrátí **dvojité**.
+Jazyk C++ umožňuje přetížení, takže můžete volat přetížení **frexp –**. V programu jazyka C **frexp –** vždy přijímá **double** a **int** ukazatele a vrátí **double**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -97,7 +87,7 @@ C++ umožňuje přetížení, takže můžete volat přetížení **frexp –**.
 |--------------|---------------------|
 |**frexp –**, **frexpf –**, **frexpl –**|\<Math.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -124,7 +114,7 @@ int main( void )
 frexp( 16.400000, &n ) = 0.512500, n = 5
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [ldexp](ldexp.md)<br/>

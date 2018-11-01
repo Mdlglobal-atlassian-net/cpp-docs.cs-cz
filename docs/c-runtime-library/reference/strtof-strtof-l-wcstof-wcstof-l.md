@@ -1,10 +1,6 @@
 ---
-title: strtof –, _strtof_l –, wcstof –, _wcstof_l – | Microsoft Docs
-ms.custom: ''
+title: strtof, _strtof_l, wcstof, _wcstof_l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strtof_l
 - wcstof
@@ -34,8 +30,6 @@ f1_keywords:
 - wcstof
 - corecrt_wstdlib/_wcstof_l
 - _wcstof_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _strtof_l function
 - _tcstof function
@@ -44,18 +38,14 @@ helpviewer_keywords:
 - _tcstof_l function
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 95db2a75d04454289b01f96680df6c5b5ab89e78
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 10a50a175685f3e8f7f1241683c7705fd9a9b142
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416830"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607919"
 ---
-# <a name="strtof-strtofl-wcstof-wcstofl"></a>strtof –, _strtof_l –, wcstof –, _wcstof_l –
+# <a name="strtof-strtofl-wcstof-wcstofl"></a>strtof, _strtof_l, wcstof, _wcstof_l
 
 Převede řetězce na hodnotu s plovoucí desetinnou čárkou jednoduchou přesností.
 
@@ -85,53 +75,53 @@ float wcstof_l(
 ## <a name="parameters"></a>Parametry
 
 *strSource*<br/>
-Řetězce ukončené hodnotou Null pro převod.
+Řetězec zakončený hodnotou Null pro převod.
 
 *endptr*<br/>
-Ukazatel na znak, který zastaví kontroly.
+Ukazatel na znak, který zastaví skenování.
 
 *Národní prostředí*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**strtof –** vrací hodnotu číslo s plovoucí desetinnou čárkou s výjimkou případů, kdy reprezentace by způsobilo přetečení, ve kterém případ funkce vrátí +/-**HUGE_VALF**. Znaménko **HUGE_VALF** odpovídá znaménko hodnotu, která není možné vyjádřit. **strtof –** vrátí hodnotu 0, pokud žádný převod můžete provést, nebo dojde podtečení.
+**strtof** vrátí hodnotu čísla s plovoucí desetinnou čárkou, s výjimkou případů, kdy by reprezentace způsobila přetečení, ve kterém takovém případě funkce vrátí +/-**HUGE_VALF**. Znaménko **HUGE_VALF** odpovídá znaménku hodnoty, kterou nejde reprezentovat. **strtof** vrátí hodnotu 0, pokud převod lze provést nebo dochází k podtečení.
 
-**wcstof –** vrátí hodnot analogicky na **strtof –**. Pro obě funkce **errno** je nastaven na **erange –** Pokud dojde k přetečení nebo podtečení a volána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md).
+**wcstof** vrátí hodnoty analogicky k **strtof**. U obou funkcí **errno** je nastavena na **ERANGE** Pokud dojde k přetečení nebo podtečení a je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
-Další informace o návratové kódy najdete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o návratových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Jednotlivé funkce převede vstupní řetězec *strSource* k **float**. **Strtof –** funkce převede *strSource* na hodnotu jednoduchou přesností. **strtof –** ukončí čtení řetězce *strSource* u prvního znaku nemůže rozpoznat jako součást číslo. To může být ukončující znak hodnoty null. **wcstof –** je verze široká charakterová **strtof –**; jeho *strSource* je argumentem široká charakterová řetězce. Tyto funkce, jinak hodnota chovají stejně jako.
+Každá funkce převede vstupní řetězec *strSource* k **float**. **Strtof** funkce převede *strSource* na hodnotu jednoduchou přesností. **strtof** zastaví čtení řetězce *strSource* u prvního znaku, který nebude rozpoznán jako část čísla. Může to být ukončující znak null. **wcstof** je verze širokého znaku **strtof**; její *strSource* argument je širokoznaký řetězec. Jinak tyto funkce chovají identicky.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcstof –**|**strtof –**|**strtof –**|**wcstof –**|
+|**_tcstof –**|**strtof**|**strtof**|**wcstof**|
 |**_tcstof_l –**|**_strtof_l**|**_strtof_l**|**_wcstof_l**|
 
-**Lc_numeric –** kategorie nastavení aktuální národní prostředí určuje rozpoznávání základ – znak v *strSource*; Další informace najdete v tématu [setlocale _wsetlocale](setlocale-wsetlocale.md). Funkce, které nemají **_l** příponu použijte aktuální národní prostředí, ty, které se přípona jsou shodné s tím rozdílem, že používají národní prostředí, je předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+**LC_NUMERIC** kategorie aktuálního národního prostředí určuje rozpoznávání znaku radix v *strSource*; Další informace najdete v tématu [setlocale _wsetlocale](setlocale-wsetlocale.md). Funkce, které nemají **_l** přípona používají aktuální národní prostředí; ty, které mají příponu jsou stejné s tím rozdílem, že používají národní prostředí, které je předáno místo. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Pokud *endptr* není **NULL**, ukazatel na znak, který zastavena kontroly je uložený v umístění, které ukazuje *endptr*. Pokud žádný převod lze provést (nebyly nalezeny žádné platné číslice nebo byl zadán neplatný základní), hodnota *strSource* je uložený v umístění, které ukazuje *endptr*.
+Pokud *endptr* není **NULL**, ukazatel na znak, který zastavil skenování, je uložen na umístění, které ukazuje *endptr*. Pokud žádné převody nemohou být provedeny (nebyly nalezeny žádné platné číslice nebo byla zadána neplatná základna), hodnota *strSource* je uložen v umístění, které ukazuje *endptr*.
 
-**strtof –** očekává *strSource* tak, aby odkazoval na řetězec v následujícím formátu:
+**strtof** očekává, že *strSource* tak, aby odkazoval na řetězec v následujícím formátu:
 
-[*prázdné*] [*přihlašovací*] [*číslic*] [__.__ *číslic*] [{**e** &#124; **E**} [*přihlašovací*] *číslic*]
+[*prázdné znaky*] [*přihlašování*] [*číslic*] [__.__ *číslic*] [{**e** &#124; **E**} [*přihlašování*] *číslic*]
 
-A *prázdné* může obsahovat místa a karta znaků, které se mají ignorovat; *přihlašovací* je buď plus (**+**) nebo minus (**-**); a *číslic* jsou jeden nebo více desetinných míst. Pokud před základ – znak, který se zobrazí žádné číslice, alespoň jeden musí být uvedena za základ – znak. Desetinných míst může následovat exponentem, který se skládá z úvodní písmeno (**e** nebo **E**) a volitelně znaménkem. Pokud exponentu část ani základ – znak zobrazí, předpokládá se základ – znak podle poslední číslice v řetězci. První znak, který se nevejde tento formulář zastaví kontroly.
+A *prázdné znaky* může skládat ze znaků mezera a tabulátor, které jsou ignorovány; *přihlašování* je buď plus (**+**) nebo minus (**-**); a *číslic* jsou jeden nebo více desítkových číslic. Pokud se před číselnou soustavou znaků se nezobrazí žádné číslice, alespoň číslice se musí nacházet za číselnou soustavou znaků. Může být následován desítkových číslic exponentu, které se skládají z úvodního písmene (**e** nebo **E**) a volitelného znaménka. Pokud se nezobrazí část ani Číselná soustava znaků, považován za Číselná soustava znaků postupuje podle poslední číslice v řetězci. První znak, který není vhodná pro tento formulář zastaví skenování.
 
-Verze UCRT tyto funkce nepodporuje převod Fortran stylu (**d** nebo **D**) exponentu písmena. Toto nestandardní rozšíření byl podporován ve starších verzích CRT a může být narušující změně kódu.
+UCRT verze těchto funkcí nepodporuje převod až po Fortran – vizuální styl (**d** nebo **D**) exponentu písmena. Toto nestandardní rozšíření je podporován v předchozích verzích CRT a může být k zásadní změně vašeho kódu.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strtof –**, **_strtof_l –**|C: \<stdlib.h > C++: &lt;cstdlib – > nebo \<stdlib.h >|
-|**wcstof –**, **_wcstof_l –**|C: \<stdlib.h > nebo \<wchar.h > C++: &lt;cstdlib – >, \<stdlib.h > nebo \<wchar.h >|
+|**strtof**, **_strtof_l**|C: \<stdlib.h > C++: &lt;cstdlib – > nebo \<stdlib.h >|
+|**wcstof**, **_wcstof_l**|C: \<stdlib.h > nebo \<wchar.h > C++: &lt;cstdlib – >, \<stdlib.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -163,7 +153,7 @@ string = 3.14159This stopped it
    Stopped scan at: This stopped it
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>

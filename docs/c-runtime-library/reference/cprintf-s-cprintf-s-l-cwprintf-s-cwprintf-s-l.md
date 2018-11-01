@@ -1,10 +1,6 @@
 ---
-title: _cprintf_s –, _cprintf_s_l –, _cwprintf_s –, _cwprintf_s_l – | Microsoft Docs
-ms.custom: ''
+title: _cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cwprintf_s_l
 - _cprintf_s_l
@@ -33,8 +29,6 @@ f1_keywords:
 - cprintf_s
 - _cwprintf_s
 - tcprintf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcprintf_s_l function
 - _cprintf_s_l function
@@ -49,23 +43,19 @@ helpviewer_keywords:
 - cprintf_s_l function
 - cwprintf_s_l function
 ms.assetid: c28504fe-0d20-4f06-8f97-ee33225922ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a2d8a2f5f80b00eef47d09a8d505f31a42a0fab2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3652587c9622c2eb9fe316782d1b1c7c9644dc8f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401341"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50606516"
 ---
 # <a name="cprintfs-cprintfsl-cwprintfs-cwprintfsl"></a>_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l
 
-Formáty a tisk do konzoly. Tyto verze nástroje [_cprintf –, _cprintf_l –, _cwprintf –, _cwprintf_l –](cprintf-cprintf-l-cwprintf-cwprintf-l.md) mít vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Formátuje a tiskne na konzolu. Tyto verze [_cprintf _cprintf_l –, _cwprintf – _cwprintf_l –](cprintf-cprintf-l-cwprintf-cwprintf-l.md) mají rozšíření zabezpečení popsaná v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -103,20 +93,20 @@ Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Počet znaků, vytisknout.
+Počet znaků, které vytisknout.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce formátování a tisk řady znaků a hodnot přímo ke konzole, pomocí **_putch –** funkce (**_putwch –** pro **_cwprintf_s –**) výstupu znaky. Každý *argument* (pokud existuje) je převeden a výstup podle odpovídající specifikaci formátu v *formátu*. Formát má stejné tvoří a fungovat jako *formátu* parametr pro [printf_s –](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) funkce. Na rozdíl od **fprintf_s –**, **printf_s –**, a **sprintf_s –** funguje, ani **_cprintf_s –** ani **_cwprintf_s –** překládá posun řádku znaků do kombinace znaků CR vrátit LF (CR-LF) při výstupu.
+Tyto funkce naformátují a vytisknou řadu znaků a hodnot přímo na konzoli pomocí **_putch** – funkce (**_putwch** pro **_cwprintf_s –**) do výstupu znaky. Každý *argument* (pokud existuje) je převeden a uložen podle odpovídající specifikace formátu v *formátu*. Formát má stejnou formu a funkci, jako *formátu* parametr pro [printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) funkce. Na rozdíl od **fprintf_s –**, **printf_s**, a **sprintf_s –** funkce ani **_cprintf_s** ani **_cwprintf_s –** LF znaků ve výrazném kombinace return-line kanál (CR-LF) návrat na začátek řádku výstupu.
 
-Zásadní rozdíl je, že **_cwprintf_s –** zobrazí znaky znakové sady Unicode, když se používá v systému Windows NT. Na rozdíl od **_cprintf_s –**, **_cwprintf_s –** používá aktuální národní prostředí konzoly
+K rozlišení je, že **_cwprintf_s –** zobrazí znaky Unicode při použití v systému Windows NT. Na rozdíl od **_cprintf_s**, **_cwprintf_s –** používá aktuální národní prostředí konzoly
 
-Verze tyto funkce s **_l** příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí předaná místo aktuální národní prostředí.
+Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí namísto aktuálního národního prostředí předaného.
 
 > [!IMPORTANT]
-> Ujistěte se, že *formát* není řetězec definovaný uživatelem.
+> Ujistěte se, že *formátu* není uživatelem definovaný řetězec.
 
-Jako verze nezabezpečeného (viz [_cprintf –, _cprintf_l –, _cwprintf –, _cwprintf_l –](cprintf-cprintf-l-cwprintf-cwprintf-l.md)), tyto funkce ověřit jejich parametrů a vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md), pokud *formát* je ukazatel s hodnotou null. Tyto funkce se liší od verze nezabezpečené v tom, že je formátovací řetězec se také ověřit. Pokud neexistují žádné neznámá nebo chybně vytvořen. formátování specifikátory, tyto funkce vyvolat obslužnou rutinu neplatný parametr. Ve všech případech, pokud chcete pokračovat, je povoleno spuštění funkce vrátí hodnotu -1 a nastavte **errno** k **einval –**.
+Podobně jako nezabezpečené verze (viz [_cprintf _cprintf_l –, _cwprintf – _cwprintf_l –](cprintf-cprintf-l-cwprintf-cwprintf-l.md)), tyto funkce ověřují své parametry a vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md), pokud *formátu* je ukazatel s hodnotou null. Tyto funkce se liší od nebezpečných verzí v tom, že samotný formátovací řetězec je také ověřován. Pokud neexistují žádné neznámé nebo chybně zformulované formátovací specifikátory, tyto funkce vyvolají obslužnou rutinu neplatného parametru. Ve všech případech, pokud provádění může pokračovat, vrátí funkce hodnotu -1 a nastaví **errno** k **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -129,14 +119,14 @@ Jako verze nezabezpečeného (viz [_cprintf –, _cprintf_l –, _cwprintf –, 
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_cprintf_s –**, **_cprintf_s_l –**|\<conio.h >|
+|**_cprintf_s**, **_cprintf_s_l –**|\<conio.h >|
 |**_cwprintf_s –**, **_cwprintf_s_l –**|\<conio.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -165,7 +155,7 @@ int main( void )
 -16  001d  62511  A Test
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [I/O konzoly a portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>

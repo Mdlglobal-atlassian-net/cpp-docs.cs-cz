@@ -1,10 +1,6 @@
 ---
-title: spawnve – | Microsoft Docs
-ms.custom: ''
+title: spawnve
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - spawnve
 apilocation:
@@ -21,25 +17,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - spawnve
-dev_langs:
-- C++
 helpviewer_keywords:
 - spawnve function
 ms.assetid: 39507df8-f15f-45fb-b2b6-01359272b147
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 06bf84348b2faf896d1067356eaaa4ca4865c74d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7aebd964589f20e119d357f295319cf6d5a993de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406209"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563914"
 ---
 # <a name="spawnve"></a>spawnve
 
-Tato funkce POSIX je zastaralý. Používat vyhovující ISO C++ [_spawnve –](spawnve-wspawnve.md) místo.
+Tato funkce POSIX je zastaralá. Použít splňující podmínky ISO C++ [_spawnve –](spawnve-wspawnve.md) místo.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

@@ -1,41 +1,31 @@
 ---
-title: C2434 Chyba kompilátoru | Microsoft Docs
-ms.custom: ''
+title: Chyba kompilátoru C2434
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2434
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2434
 ms.assetid: 01329e26-7c74-4219-b74f-69e3a40c9738
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 45f9ccdef84713883c53dab0e7caf3b1519628de
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c73a8d4fcde945ddf2495cc2d0d7dc47216f2db3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704224"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587587"
 ---
-# <a name="compiler-error-c2434"></a>C2434 chyby kompilátoru
+# <a name="compiler-error-c2434"></a>Chyba kompilátoru C2434
 
-> '*symbol*': symbol deklarovat s __declspec(process) nelze inicializovat dynamicky v/CLR: pure režimu
+> "*symbol*': symbol deklarovaný s: __declspec(process) se nedá dynamicky inicializovat v/CLR: pure režimu
 
 ## <a name="remarks"></a>Poznámky
 
-**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017.
+**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
 
-Není možné dynamicky inicializovat proměnnou na proces pod **/CLR: pure**. Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) a [proces](../../cpp/process.md).
+Není možné dynamicky inicializovat proměnnou na úrovni jednotlivého procesu v rámci **/CLR: pure**. Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) a [procesu](../../cpp/process.md).
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C2434. Chcete-li tento problém vyřešit, použijte k chybě při inicializaci konstanty `process` proměnné.
+Následující ukázka generuje C2434. Chcete-li vyřešit tento problém, použijte k inicializaci konstanty `process` proměnné.
 
 ```cpp
 // C2434.cpp

@@ -1,12 +1,6 @@
 ---
-title: Národní prostředí a kódové stránky | Dokumentace Microsoftu
-ms.custom: ''
+title: Národní prostředí a kódové stránky
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - locales [C++], about locales
 - locale IDs [C++]
@@ -21,16 +15,12 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0b148a1e1c57bb24d8ccd2651a3413524767b0d5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0015e0a7a81abbd3472a8c845a9b8c0d8caf4618
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413949"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50610534"
 ---
 # <a name="locales-and-code-pages"></a>Národní prostředí a kódové stránky
 

@@ -1,10 +1,6 @@
 ---
-title: _tempnam_dbg –, _wtempnam_dbg – | Microsoft Docs
-ms.custom: ''
+title: _tempnam_dbg, _wtempnam_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wtempnam_dbg
 - _tempnam_dbg
@@ -25,8 +21,6 @@ f1_keywords:
 - tempnam_dbg
 - _tempnam_dbg
 - _wtempnam_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - file names [C++], creating temporary
 - tempnam_dbg function
@@ -36,20 +30,16 @@ helpviewer_keywords:
 - _tempnam_dbg function
 - _wtempnam_dbg function
 ms.assetid: e3760bb4-bb01-4808-b689-2c45af56a170
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e8509d9f4b8be5771abc7dfb3d4deacc9ae61494
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 804c8ad1f17c6ee1df563cafc69ee7aef494d1cb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412046"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596453"
 ---
 # <a name="tempnamdbg-wtempnamdbg"></a>_tempnam_dbg, _wtempnam_dbg
 
-Funkce verze [_tempnam –, _wtempnam –, tmpnam –, _wtmpnam –](tempnam-wtempnam-tmpnam-wtmpnam.md) , použijte ladicí verzi **malloc –**, **_malloc_dbg –**.
+Funkce verze [_tempnam – _wtempnam –, tmpnam – _wtmpnam –](tempnam-wtempnam-tmpnam-wtmpnam.md) , které používají ladicí verze **malloc**, **_malloc_dbg**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -72,37 +62,37 @@ wchar_t *_wtempnam_dbg(
 
 ### <a name="parameters"></a>Parametry
 
-*Dir*<br/>
-Cesty použité v názvu souboru, pokud neexistuje žádná proměnná prostředí TMP, nebo pokud TMP není platný adresář.
+*adresář*<br/>
+Cesta v názvu souboru používá, pokud neexistuje žádná proměnná prostředí TMP, nebo pokud TMP není platný adresář.
 
 *prefix*<br/>
-Řetězec, který bude pre čekajícího na názvy vrácený **_tempnam –**.
+Řetězec, který bude pre čekajícího na názvy vrácené **_tempnam –**.
 
 *blockType*<br/>
-Požadovaný typ bloku paměti: **_client_block –** nebo **_normal_block –**.
+Požadovaný typ bloku paměti: **_CLIENT_BLOCK** nebo **_NORMAL_BLOCK**.
 
 *Název souboru*<br/>
 Ukazatel na název zdrojového souboru, který požadovanou operaci přidělení nebo **NULL**.
 
-*lineNumber*<br/>
-Číslo řádku na zdrojový soubor, kde byla vyžádána operace přidělení nebo **NULL**.
+*Číslo řádku*<br/>
+Číslo řádku ve zdrojovém souboru, kde byla požadována operace přidělení nebo **NULL**.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Jednotlivé funkce vrací ukazatel na název vygenerovaný nebo **NULL** Pokud dojde k selhání. Selhání může dojít, pokud je zadán neplatný adresář název proměnné prostředí TMP a v *dir* parametr.
+Každá funkce vrátí ukazatel na název generované nebo **NULL** Pokud dojde k selhání. Selhání může dojít, pokud je neplatný název adresáře zadané v proměnné prostředí TMP a v *dir* parametru.
 
 > [!NOTE]
-> **volné** (nebo **free_dbg –**) potřebuje volat pro ukazatele přidělené **_tempnam_dbg –** a **_wtempnam_dbg –**.
+> **bezplatné** (nebo **free_dbg –**) musí být volána pro ukazatele přidělaná **_tempnam_dbg –** a **_wtempnam_dbg –**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Tempnam_dbg –** a **_wtempnam_dbg –** funkce jsou stejné jako **_tempnam –** a **_wtempnam –** s tím rozdílem, že když **_DEBUG –** je definován, tyto funkce používají verzi ladění **malloc –** a **_malloc_dbg –**, přidělit paměť, pokud **NULL** je předat jako první parametr. Další informace najdete v tématu [_malloc_dbg –](malloc-dbg.md).
+**_Tempnam_dbg –** a **_wtempnam_dbg –** funkce jsou stejné jako **_tempnam –** a **_wtempnam –** s tím rozdílem, že když **_DEBUG** je definován, tyto funkce používají ladicí verze **malloc** a **_malloc_dbg**, přidělení paměti, pokud **NULL** je předán jako první parametr. Další informace najdete v tématu [_malloc_dbg](malloc-dbg.md).
 
-Není nutné explicitně volat tyto funkce ve většině případů. Místo toho můžete definovat příznak **_crtdbg_map_alloc –**. Když **_crtdbg_map_alloc –** je definován, volání **_tempnam –** a **_wtempnam –** jsou mapovány na **_tempnam_dbg –** a **_ wtempnam_dbg –**, s *blockType* nastavena na **_normal_block –**. Proto není nutné explicitně volat tyto funkce, pokud chcete označit bloky haldy jako **_client_block –**. Další informace najdete v tématu [typy bloků v haldě ladění](/visualstudio/debugger/crt-debug-heap-details).
+Chcete-li explicitně volat tyto funkce ve většině případů nepotřebujete. Místo toho můžete definovat příznak **_CRTDBG_MAP_ALLOC**. Když **_CRTDBG_MAP_ALLOC** je definován, jsou volání **_tempnam –** a **_wtempnam –** budou přemapovány na **_tempnam_dbg –** a **_ wtempnam_dbg –**, se *blockType* nastavena na **_NORMAL_BLOCK**. Proto není potřeba explicitně volat tyto funkce, pokud chcete označit jako bloky haldy **_CLIENT_BLOCK**. Další informace najdete v tématu [typy bloků na haldě ladění](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ttempnam_dbg**|**_tempnam_dbg**|**_tempnam_dbg**|**_wtempnam_dbg**|
 
@@ -112,10 +102,10 @@ Není nutné explicitně volat tyto funkce ve většině případů. Místo toho
 |-------------|---------------------|
 |**_tempnam_dbg –**, **_wtempnam_dbg –**|\<crtdbg.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [_tempnam, _wtempnam, tmpnam, _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)<br/>
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [Ladění verzí funkcí přidělení haldy](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)<br/>
