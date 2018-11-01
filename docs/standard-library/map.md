@@ -1,31 +1,21 @@
 ---
-title: '&lt;Mapa&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;Mapa&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <map>
-dev_langs:
-- C++
 helpviewer_keywords:
 - map header
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ac523342cc175721b9c1ef33a3d8ac4cad83033b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 727938b09ae60fd72a2421c2b800d8910f82934e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853362"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659846"
 ---
-# <a name="ltmapgt"></a>&lt;mapy&gt;
+# <a name="ltmapgt"></a>&lt;Mapa&gt;
 
-Definuje mapování třídy šablony kontejneru a multimap a jejich podpůrné šablony.
+Definuje kontejner šablony třídy map a objektu multimap a jejich podpůrných šablon.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,30 +28,30 @@ Definuje mapování třídy šablony kontejneru a multimap a jejich podpůrné �
 
 ### <a name="operators"></a>Operátory
 
-|Verze mapy|Multimap verze|Popis|
+|Verze mapy|Multimap – verze|Popis|
 |-----------------|----------------------|-----------------|
-|[Operator! = (map)](../standard-library/map-operators.md#op_neq)|[Operator! = (multimap)](../standard-library/map-operators.md#op_neq)|Testy, pokud není stejný jako mapy nebo multimap objekt na pravé straně mapy nebo multimap objekt na levé straně operátoru.|
-|[Operator < (map)](../standard-library/map-operators.md#op_eq_eq)|[Operator < (multimap)](../standard-library/map-operators.md#op_eq_eq)|Testy, pokud mapy nebo multimap objekt na levé straně operátoru je menší než mapy nebo multimap objekt na pravé straně.|
-|[Operator < = (map)](../standard-library/map-operators.md#op_lt)|[operátor\<= (multimap)](../standard-library/map-operators.md#op_lt)|Testy, pokud mapy nebo multimap objekt na levé straně operátoru je menší než nebo rovna hodnotě mapy nebo multimap objekt na pravé straně.|
-|[Operator == (map)](../standard-library/map-operators.md#op_eq_eq)|[operator== (multimap)](../standard-library/map-operators.md#op_eq_eq_multimap)|Testy, pokud je stejný jako mapy nebo multimap objekt na pravé straně mapy nebo multimap objekt na levé straně operátoru.|
-|[Operator > (map)](../standard-library/map-operators.md#op_gt)|[Operator > (multimap)](../standard-library/map-operators.md#op_gt_multimap)|Testy, pokud mapy nebo multimap objekt na levé straně operátoru je větší než mapy nebo multimap objekt na pravé straně.|
-|[Operator > = (map)](../standard-library/map-operators.md#op_gt_eq)|[operator>= (multimap)](../standard-library/map-operators.md#op_gt_eq_multimap)|Testy, pokud mapy nebo multimap objekt na levé straně operátoru je větší než nebo stejný jako mapy nebo multimap objekt na pravé straně.|
+|[Operator! = (map)](../standard-library/map-operators.md#op_neq)|[Operator! = (multimap)](../standard-library/map-operators.md#op_neq)|Testuje, zda je objekt map nebo multimap na levé straně operátoru není roven mapy nebo multimap objekt na pravé straně.|
+|[Operator < (map)](../standard-library/map-operators.md#op_eq_eq)|[Operator < (multimap)](../standard-library/map-operators.md#op_eq_eq)|Testuje, zda je objekt map nebo multimap na levé straně operátoru menší než mapy nebo multimap objekt na pravé straně.|
+|[Operator < = (map)](../standard-library/map-operators.md#op_lt)|[operátor\<= (multimap)](../standard-library/map-operators.md#op_lt)|Testuje, zda je objekt map nebo multimap na levé straně operátoru menší než nebo rovna hodnotě mapy nebo objektem multimap na pravé straně.|
+|[Operator == (map)](../standard-library/map-operators.md#op_eq_eq)|[operator== (multimap)](../standard-library/map-operators.md#op_eq_eq_multimap)|Testuje, zda mapování nebo multimap objekt na levé straně operátoru roven objektu map nebo multimap na pravé straně.|
+|[Operator > (map)](../standard-library/map-operators.md#op_gt)|[Operator > (multimap)](../standard-library/map-operators.md#op_gt_multimap)|Testuje, zda je objekt map nebo multimap na levé straně operátoru větší než mapy nebo multimap objekt na pravé straně.|
+|[Operator > = (map)](../standard-library/map-operators.md#op_gt_eq)|[operator>= (multimap)](../standard-library/map-operators.md#op_gt_eq_multimap)|Testuje, zda je objekt map nebo multimap na levé straně operátoru větší než nebo rovna hodnotě mapy nebo multimap objekt na pravé straně.|
 
 ### <a name="specialized-template-functions"></a>Specializované funkce šablon
 
-|Verze mapy|Multimap verze|Popis|
+|Verze mapy|Multimap – verze|Popis|
 |-----------------|----------------------|-----------------|
-|[swap (map)](../standard-library/map-functions.md#swap)|[swap (multimap)](../standard-library/map-functions.md#swap_multimap)|Elementy dvě mapy nebo multimaps výměny.|
+|[swap (map)](../standard-library/map-functions.md#swap)|[swap (multimap)](../standard-library/map-functions.md#swap_multimap)|Vymění prvky dvou mapy nebo multimaps.|
 
 ### <a name="classes"></a>Třídy
 
 |Třída|Popis|
 |-|-|
-|[value_compare – třída](../standard-library/value-compare-class-map.md)|Poskytuje objekt funkce, který můžete porovnat elementy mapy srovnáním jejich klíčů určit jejich relativní pořadí v mapě.|
-|[map – třída](../standard-library/map-class.md)|Používá pro ukládání a načítání dat z kolekce, ve kterém do jednotlivých elementů má jedinečný klíč, pomocí kterého automaticky řazení dat.|
-|[multimap – třída](../standard-library/multimap-class.md)|Používá pro ukládání a načítání dat z kolekce, ve kterém do jednotlivých elementů má klíč, pomocí kterého je automaticky seřadí data a klíčů není nutné mít jedinečné hodnoty.|
+|[value_compare – třída](../standard-library/value-compare-class-map.md)|Poskytuje objekt funkce, který může porovnat prvky objektu map porovnáním hodnot jejich klíče pro určení jejich relativního pořadí v objektu map.|
+|[map – třída](../standard-library/map-class.md)|Používá pro ukládání a načítání dat z kolekce, ve kterém každý prvek má jedinečný klíč, pomocí kterého jsou data automaticky uspořádávána.|
+|[multimap – třída](../standard-library/multimap-class.md)|Používá pro ukládání a načítání dat z kolekce, ve kterém každý prvek má klíč, pomocí kterého jsou data automaticky uspořádávána a klíče nemusí mít jedinečné hodnoty.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

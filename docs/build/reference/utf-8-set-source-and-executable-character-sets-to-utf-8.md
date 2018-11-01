@@ -1,27 +1,17 @@
 ---
-title: -utf-8 (nastavení zdrojové a spustitelné znakové sady UTF-8) | Dokumentace Microsoftu
-ms.custom: ''
+title: / UTF-8 (nastavení zdrojové a spustitelné znakové sady na UTF-8)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /utf-8
-dev_langs:
-- C++
 helpviewer_keywords:
 - /utf-8 compiler option
 ms.assetid: f0e1f3cb-6cae-46eb-9483-04ed13d9b504
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 218ea7986e37ce9cfa98aeeb1da3c209bef73f8f
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: cb71e1846348adf4cf8a8eb385e6c5f7ac2bac74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029681"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636524"
 ---
 # <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/ UTF-8 (nastavení zdrojové a spustitelné znakové sady na UTF-8)
 

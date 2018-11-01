@@ -1,16 +1,10 @@
 ---
-title: -Oi (generování vnitřních funkcí) | Dokumentace Microsoftu
-ms.custom: ''
+title: /Oi (Generovat vnitřní funkce)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnableIntrinsicFunctions
 - /oi
 - VC.Project.VCCLWCECompilerTool.EnableIntrinsicFunctions
-dev_langs:
-- C++
 helpviewer_keywords:
 - Oi compiler option [C++]
 - intrinsic functions, generate
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - -Oi compiler option [C++]
 - generate intrinsic functions compiler option [C++]
 ms.assetid: fa4a3bf6-0ed8-481b-91c0-add7636132b4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 792d1e1bc0ea2f6044bc9ad145d30c1fda3e3648
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 067b8b11b716935c684a127632a8fadaf3d9a447
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423868"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646064"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (Generovat vnitřní funkce)
 
@@ -69,7 +59,7 @@ Můžete také použít [vnitřní](../../preprocessor/intrinsic.md) vytvořit v
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableIntrinsicFunctions%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableIntrinsicFunctions%2A>.
 
 ## <a name="see-also"></a>Viz také
 

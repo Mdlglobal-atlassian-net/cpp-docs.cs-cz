@@ -1,10 +1,6 @@
 ---
-title: _ismbcgraph –, _ismbcgraph_l –, _ismbcprint –, _ismbcprint_l –, _ismbcpunct –, _ismbcpunct_l –, _ismbcblank, _ismbcblank_l, _ismbcspace –, _ismbcspace_l – | Microsoft Docs
-ms.custom: ''
+title: _ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbcpunct_l
 - _ismbcblank
@@ -42,8 +38,6 @@ f1_keywords:
 - ismbcgraph_l
 - ismbcspace
 - ismbcpunct
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbcspace_l function
 - _ismbcprint_l function
@@ -62,23 +56,19 @@ helpviewer_keywords:
 - _ismbcgraph_l function
 - _ismbcspace function
 ms.assetid: 8e0a5f47-ba64-4411-92a3-3c525d16e3be
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da9231dcf64222aa075194f72892896972e2abf7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 05946def8c4d832751554a1653afa98c9965fee9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405494"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626210"
 ---
 # <a name="ismbcgraph-ismbcgraphl-ismbcprint-ismbcprintl-ismbcpunct-ismbcpunctl-ismbcblank-ismbcblankl-ismbcspace-ismbcspacel"></a>_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
 
-Určuje, zda znak je znak grafické, zobrazení znak, interpunkční znaménko nebo znak mezery.
+Určuje, zda je znak grafický znak, znak zobrazení, znak interpunkce nebo znak mezery.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -123,28 +113,28 @@ int _ismbcspace_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak, který má být určen.
+Znak k určení.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Všechny tyto rutiny vrátí nenulovou hodnotu, pokud znak splňuje podmínky testu, nebo 0, pokud neexistuje. Pokud *c* < = 255 a existuje odpovídající **_ismbb –** rutiny (například **_ismbcalnum –** odpovídá **_ismbbalnum –**), Výsledkem je vrácenou hodnotu odpovídající **_ismbb –** rutiny.
+Každá z těchto rutin vrátí nenulovou hodnotu, pokud znak splňuje testovací podmínku, nebo 0, pokud tomu tak není. Pokud *c* < = 255 a existuje odpovídající **_ismbb –** rutina (například **_ismbcalnum –** odpovídá **_ismbbalnum –**), Výsledkem je návratová hodnota odpovídající **_ismbb –** rutiny.
 
-Verze tyto funkce jsou identické, s tím rozdílem, že ty, které mají **_l** používat příponu národní prostředí, je předaná pro jejich chování závislých na národním prostředí, místo aktuální národní prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Verze těchto funkcí jsou identické, s tím rozdílem, že ty, které mají **_l** přípona používají národní prostředí předané pro své chování závislé na národním prostředí namísto aktuálního národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí testuje dané vícebajtových znaků pro danou podmínku.
+Každá z těchto funkcí testujte daný vícebajtový znak na danou podmínku.
 
-|Rutina|Test stavu|Příklad kódu stránka 932|
+|Rutina|Testovací podmínka|Příklad znakové stránky 932|
 |-------------|--------------------|---------------------------|
-|**_ismbcgraph**|Obrázek|Vrátí nenulové hodnoty v případě a pouze v případě *c* je reprezentace jednobajtové jakémukoli ASCII nebo katakana tisknutelná znaku kromě () mezer.|
-|**_ismbcprint**|Tisknutelná|Vrátí nenulové hodnoty v případě a pouze v případě *c* je reprezentace jednobajtové libovolný ASCII nebo katakana tisknutelná znak včetně () mezer.|
-|**_ismbcpunct**|Interpunkční znaménka|Vrátí nenulové hodnoty v případě a pouze v případě *c* je reprezentace jednobajtové žádné ASCII nebo katakana interpunkční znaménko.|
-|**_ismbcblank**|Místo nebo vodorovné karta|Vrátí nenulové hodnoty v případě a pouze v případě *c* je místo nebo horizontální tabulátor: *c*= 0x20 nebo *c*= 0x09.|
-|**_ismbcspace**|Prázdné znaky|Vrátí nenulové hodnoty v případě a pouze v případě *c* je prázdný znak: *c*= 0x20 nebo 0x09 < =*c*< = 0x0D.|
+|**_ismbcgraph**|Obrázek|Vrátí nenulovou hodnotu právě tehdy *c* je jednobajtové znázornění libovolného ASCII nebo písma katakana tisknutelného znaku kromě mezery ().|
+|**_ismbcprint**|Tisknutelný|Vrátí nenulovou hodnotu právě tehdy *c* je jednobajtové znázornění jakékoli ASCII nebo písma katakana tisknutelný znak včetně mezery ().|
+|**_ismbcpunct**|Interpunkční znaménka|Vrátí nenulovou hodnotu právě tehdy *c* je jednobajtové znázornění libovolného znaku ASCII nebo písma katakana interpunkce.|
+|**_ismbcblank**|Mezera nebo horizontální tabelátor|Vrátí nenulovou hodnotu právě tehdy *c* je znak mezery nebo znak horizontálního tabulátoru: *c*= 0x20 nebo *c*= 0x09.|
+|**_ismbcspace**|Prázdné znaky|Vrátí nenulovou hodnotu právě tehdy *c* je prázdný znak: *c*= 0x20 nebo 0x09 < =*c*< = 0x0D.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -161,13 +151,13 @@ Každá z těchto funkcí testuje dané vícebajtových znaků pro danou podmín
 |**_ismbcspace**|\<Mbstring.h >|
 |**_ismbcspace_l**|\<Mbstring.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Klasifikace znaků](../../c-runtime-library/character-classification.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>

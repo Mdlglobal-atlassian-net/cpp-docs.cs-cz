@@ -1,10 +1,6 @@
 ---
-title: _strnicoll –, _wcsnicoll –, _mbsnicoll –, _strnicoll_l –, _wcsnicoll_l –, _mbsnicoll_l – | Microsoft Docs
-ms.custom: ''
+title: _strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnicoll_l
 - _mbsnicoll
@@ -40,8 +36,6 @@ f1_keywords:
 - _mbsnicoll
 - strinicoll
 - _tcsncicoll
-dev_langs:
-- C++
 helpviewer_keywords:
 - code pages, using for string comparisons
 - ftcsncicoll function
@@ -66,23 +60,19 @@ helpviewer_keywords:
 - tcsnicoll function
 - _strnicoll function
 ms.assetid: abf0c569-725b-428d-9ff2-924f430104b4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6f8592f40dda312f138351526509b69eadf9647c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b3562dd077b9aa80b9d188e9b2c43282e797af3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416524"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50606034"
 ---
 # <a name="strnicoll-wcsnicoll-mbsnicoll-strnicolll-wcsnicolll-mbsnicolll"></a>_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
 
-Porovnání řetězců pomocí informace specifické pro národní prostředí.
+Porovná řetězce pomocí informací specifických pro národní prostředí.
 
 > [!IMPORTANT]
-> **_mbsnicoll –** a **_mbsnicoll_l –** nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnicoll –** a **_mbsnicoll_l –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -125,7 +115,7 @@ int _mbsnicoll_l(
 ### <a name="parameters"></a>Parametry
 
 *řetězec1*, *řetězec2*<br/>
-Řetězce ukončené hodnotou null k porovnání
+Řetězec zakončený hodnotou Null pro srovnání
 
 *Počet*<br/>
 Počet znaků k porovnání
@@ -135,25 +125,25 @@ Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každou z těchto funkcí vrátí hodnotu, která určuje vztah podřetězce *řetězec1* a *řetězec2*, a to takto.
+Každá z těchto funkcí vrací hodnotu, která označuje vztah mezi podřetězci *řetězec1* a *řetězec2*, následujícím způsobem.
 
-|Návratová hodnota|Relace řetězec1 k řetězec2|
+|Návratová hodnota|Vztah řetězec1 k řetězec2|
 |------------------|----------------------------------------|
 |< 0|*řetězec1* menší než *řetězec2*|
-|0|*řetězec1* identické *řetězec2*|
+|0|*řetězec1* shodné s *řetězec2*|
 |> 0|*řetězec1* větší než *řetězec2*|
 
-Každá z těchto funkcí vrátí **_NLSCMPERROR**. Chcete-li použít **_NLSCMPERROR**, zahrnout buď řetězec. H nebo MBSTRING. H. **_wcsnicoll –** může selhat, pokud buď *řetězec1* nebo *řetězec2* obsahuje kódy široká charakterová mimo doménu pořadí řazení. Když dojde k chybě, **_wcsnicoll –** může nastavit **errno** k **einval –**. Zkontrolujte chybu na volání **_wcsnicoll –**, nastavte **errno** na hodnotu 0 a poté zkontrolujte **errno** po volání **_wcsnicoll –**.
+Každá z těchto funkcí vrací **_NLSCMPERROR**. Chcete-li použít **_NLSCMPERROR**, zahrnují jeden řetězec. H nebo MBSTRING. H. **_wcsnicoll –** může selhat, pokud buď *řetězec1* nebo *řetězec2* obsahuje kódy širokého znaku mimo doménu pořadí řazení. Pokud dojde k chybě, **_wcsnicoll –** může nastavit **errno** k **EINVAL**. Chcete-li zkontrolovat chyby volání **_wcsnicoll –**, nastavte **errno** na hodnotu 0 a zkontrolujte **errno** po volání **_wcsnicoll –**.
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí provádí porovnávání prvního *počet* znaky v *řetězec1* a *řetězec2* podle znakové stránky. Tyto funkce by měly používat jenom v případě, že je rozdíl mezi znak nastavit pořadí a pořadí lexicographic znak v kódu stránky a tento rozdíl je určen pro porovnání řetězců. Verze tyto funkce bez **_l** příponu pomocí aktuální stránky národního prostředí a kód. Verzi pomocí **_l** příponu jsou shodné s tím rozdílem, že používají místo předaná národní prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Každá z těchto funkcí provádí porovnávání bez prvního *počet* znaky v *řetězec1* a *řetězec2* podle kódové stránky. Tyto funkce by měla sloužit pouze v případě, že existuje rozdíl mezi znak sady a lexikografickým pořadím znaků v znakové stránce a tento rozdíl je relevantní pro porovnání řetězců. Verze těchto funkcí bez **_l** přípona pomocí aktuálního národního prostředí a znakovou stránku. Verze s **_l** přípona jsou stejné s tím rozdílem, že používají předané národní prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Všechny tyto funkce ověřit jejich parametrů. Pokud má jedna *řetězec1* nebo *řetězec2* je ukazatel s hodnotou null, nebo pokud je počet větší než **INT_MAX**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ Ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno spuštění chcete-li pokračovat, tyto funkce vracejí **_NLSCMPERROR** a nastavte **errno** k **einval –**.
+Všechny tyto funkce ověřují své parametry. Pokud *řetězec1* nebo *řetězec2* je ukazatel s hodnotou null, nebo pokud je větší než počet **INT_MAX**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [ Ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud provádění může pokračovat, vrátí tyto funkce **_NLSCMPERROR** a nastavte **errno** k **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsncicoll –**|**_strnicoll**|**_mbsnbicoll –**|**_wcsnicoll**|
 |**_tcsnicoll –**|**_strnicoll**|[_mbsnbicoll –](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|**_wcsnicoll**|
@@ -167,9 +157,9 @@ Všechny tyto funkce ověřit jejich parametrů. Pokud má jedna *řetězec1* ne
 |**_wcsnicoll –**, **_wcsnicoll_l –**|\<wchar.h > nebo \<string.h >|
 |**_mbsnicoll –**, **_mbsnicoll_l –**|\<Mbstring.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
 [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
