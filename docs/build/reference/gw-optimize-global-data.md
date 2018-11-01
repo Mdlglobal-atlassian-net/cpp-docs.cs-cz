@@ -1,28 +1,18 @@
 ---
-title: -Gw (optimalizace globálních dat) | Dokumentace Microsoftu
-ms.custom: ''
+title: /Gw (Optimalizovat globální data)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /Gw
-dev_langs:
-- C++
 helpviewer_keywords:
 - /Gw compiler option [C++]
 - -Gw compiler option [C++]
 ms.assetid: 6f90f4e9-5eb8-4c47-886e-631278a5a4a9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: edb0dc94ce7c2193717be4cdb402fdea14c99b71
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 406b1577b77f056e18753db10bae5675febe879e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712540"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506688"
 ---
 # <a name="gw-optimize-global-data"></a>/Gw (Optimalizovat globální data)
 
@@ -56,7 +46,7 @@ Další informace najdete v tématu [Představujeme /Gw přepínač kompilátoru
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Viz také
 

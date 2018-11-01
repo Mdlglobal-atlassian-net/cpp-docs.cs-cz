@@ -1,10 +1,6 @@
 ---
-title: _putc_nolock –, _putwc_nolock – | Microsoft Docs
-ms.custom: ''
+title: _putc_nolock, _putwc_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _putc_nolock
 - _putwc_nolock
@@ -28,8 +24,6 @@ f1_keywords:
 - _putwc_nolock
 - _putc_nolock
 - putc_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - puttc_nolock function
 - putc_nolock function
@@ -40,20 +34,16 @@ helpviewer_keywords:
 - _puttc_nolock function
 - _putwc_nolock function
 ms.assetid: 3cfc7f21-c9e8-4b7f-b0fb-af0d4d85e7e1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5975c25c015bb77c627eda3483566f358aedbedb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b2a30b83f0746b1b4f5ab03b4c3dfa0229656bb9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404461"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50510909"
 ---
 # <a name="putcnolock-putwcnolock"></a>_putc_nolock, _putwc_nolock
 
-Zapíše znak na datový proud, bez blokování vlákno.
+Zapíše znak do proudu bez zamčení vlákna.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -71,20 +61,20 @@ wint_t _putwc_nolock(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak, který má být zapsána.
+Znak k zapsání.
 
-*Datový proud*<br/>
-Ukazatel **souboru** struktura.
+*Stream*<br/>
+Ukazatel **souboru** struktury.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V tématu **putc –, putwc –**.
+Zobrazit **putc, putwc**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_putc_nolock –** a **_putwc_nolock –** jsou shodné s verzí bez **jazyka _nolock** přípona s tím rozdílem, že nejsou chráněny z narušení jiná vlákna. Může být rychlejší, protože nevznikají nároky na uzamčení jiná vlákna. Tyto funkce lze používejte pouze v kontextu vláken jako je například aplikace nebo kde oboru volání již zpracovává izolace přístup z více vláken.
+**_putc_nolock** a **_putwc_nolock** jsou shodné s verzemi bez **_nolock** s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Mohou být rychlejší, protože nejsou spojené režii uzamykáním ostatních vláken. Tyto funkce používejte pouze v kontextech bezpečných na vlákna, jako je například aplikace s jedním vláknem nebo pokud volající obor již zpracovává izolaci vláken.
 
-**_putwc_nolock –** je verze široká charakterová **_putc_nolock –**; dvě funkce chovají stejně jako datový proud se při otevření v režimu ANSI. **_putc_nolock –** nepodporuje aktuálně výstup do proudu kódování UNICODE.
+**_putwc_nolock** je verze širokého znaku **_putc_nolock**; tyto dvě funkce se chovají stejně jako v případě, že datový proud je otevřen v režimu ANSI. **_putc_nolock** aktuálně nepodporuje výstup do datového proudu UNICODE.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -99,11 +89,11 @@ V tématu **putc –, putwc –**.
 |**_putc_nolock**|\<stdio.h>|
 |**_putwc_nolock**|\<stdio.h > nebo \<wchar.h >|
 
-Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou, **stdin –**, **stdout**, a **stderr**, musí být přesměrována C běhové funkce mohli používat v aplikacích pro UPW . Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Konzole není podporována v aplikacích pro univerzální platformu Windows (UPW). Standardní datový proud popisovačů, které jsou spojeny s konzolou, **stdin**, **stdout**, a **stderr**, musí být přesměrován před funkcí jazyka C za běhu můžete použít v aplikacích pro UWP . Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -136,8 +126,8 @@ int main( void )
 This is the line of output
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc, fputwc](fputc-fputwc.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>

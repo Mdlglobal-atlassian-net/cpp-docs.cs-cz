@@ -1,29 +1,19 @@
 ---
-title: -MANIFEST (vytvoření manifestu sestavení vedle sebe) | Dokumentace Microsoftu
-ms.custom: ''
+title: /MANIFEST (vytvoření manifestu souběžného sestavení)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateManifest
-dev_langs:
-- C++
 helpviewer_keywords:
 - -MANIFEST linker option
 - /MANIFEST linker option
 - MANIFEST linker option
 ms.assetid: 98c52e1e-712c-4f49-b149-4d0a3501b600
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 468c41fe9cda752dd2727e6c9ec5d29781ef113d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 226deb9e8f7273e122e1b9074d2afca8970fc366
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710408"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50508053"
 ---
 # <a name="manifest-create-side-by-side-assembly-manifest"></a>/MANIFEST (vytvoření manifestu souběžného sestavení)
 
@@ -65,7 +55,7 @@ Pokud určíte volbu /MANIFEST, název souboru manifestu bude stejný jako náze
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-1. Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateManifest%2A>.
+1. Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateManifest%2A>.
 
 ## <a name="see-also"></a>Viz také
 

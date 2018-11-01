@@ -1,16 +1,10 @@
 ---
-title: -Fd (název souboru databáze programu) | Dokumentace Microsoftu
-ms.custom: ''
+title: /Fd (Název souboru databáze programu)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /FD
 - VC.Project.VCCLWCECompilerTool.ProgramDataBaseFileName
 - VC.Project.VCCLCompilerTool.ProgramDataBaseFileName
-dev_langs:
-- C++
 helpviewer_keywords:
 - /FD compiler option [C++]
 - program database file name [C++]
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - .pdb files, creating
 - FD compiler option [C++]
 ms.assetid: 3977a9ed-f0ac-45df-bf06-01cedd2ba85a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cfa59f889c472651eb40ddcf297ca51bd34f4e41
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 449b0a2be44f438c35feeb446df6d7c47f270c35
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389938"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494314"
 ---
 # <a name="fd-program-database-file-name"></a>/Fd (Název souboru databáze programu)
 
@@ -63,7 +53,7 @@ Tato možnost také názvy souboru stavu (IDB) používá pro minimální opěto
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ProgramDataBaseFileName%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ProgramDataBaseFileName%2A>.
 
 ## <a name="example"></a>Příklad
 
