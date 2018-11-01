@@ -1,15 +1,9 @@
 ---
-title: /Zc:throwingNew (Assume operátor nové vyvolává) | Microsoft Docs
-ms.custom: ''
+title: /Zc:throwingNew (že operátor new vyvolá výjimku)
 ms.date: 03/01/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - throwingNew
 - /Zc:throwingNew
-dev_langs:
-- C++
 helpviewer_keywords:
 - -Zc compiler options (C++)
 - throwingNew
@@ -17,20 +11,16 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 20ff0101-9677-4d83-8c7b-8ec9ca49f04f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f446e5c71e88be86c31e5a83ca7d23f611683af4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 782cb55d30bfb11f55a0074a5c3245dd389323ed
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383459"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561223"
 ---
-# <a name="zcthrowingnew-assume-operator-new-throws"></a>/Zc:throwingNew (Assume operátor nové vyvolává)
+# <a name="zcthrowingnew-assume-operator-new-throws"></a>/Zc:throwingNew (že operátor new vyvolá výjimku)
 
-Když **/Zc:throwingNew** je zadána možnost, kompilátor optimalizuje volání `operator new` tak, aby přeskočil kontroluje návratový ukazatel s hodnotou null. Tato možnost určuje kompilátor předpokládají, že všechny propojené implementace `operator new` a vlastní alokátorů odpovídat C++ standard a throw na došlo k chybě přidělení. Ve výchozím nastavení v sadě Visual Studio, kompilátor pessimistically generuje kontroly hodnoty null (**/Zc:throwingNew-**) pro toto volání, protože uživatele můžete propojit s na jiný vyvolávání implementace `operator new` nebo napište vlastní allocator rutiny ukazatelé s hodnotou null, které vracejí.
+Když **/Zc:throwingNew** je zadána možnost, kompilátor optimalizuje volání `operator new` přeskočit kontroly pro vrácení ukazatel s hodnotou null. Tato možnost instruuje kompilátor, aby předpokládal, že všechny propojené implementace `operator new` a vlastních alokátorů odpovídat standardu jazyka C++ a vyvolat na došlo k chybě přidělení. Ve výchozím nastavení v sadě Visual Studio, vygeneruje kompilátor pessimistically kontroly hodnoty null (**/Zc:throwingNew-**) pro toto volání, protože uživatele můžete propojit s na non-throwing. implementace `operator new` nebo napište vlastní Alokátor rutiny které vracejí ukazatele s hodnotou null.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,31 +28,31 @@ Když **/Zc:throwingNew** je zadána možnost, kompilátor optimalizuje volání
 
 ## <a name="remarks"></a>Poznámky
 
-Od ISO C ++ 98, má zadanou standardní, výchozí [new – operátor](../../standard-library/new-operators.md#op_new) vyvolá `std::bad_alloc` když dojde k selhání přidělení paměti. Verzí aplikace Visual C++ na Visual Studio 6.0 vrátil hodnotu null. ukazatel na došlo k chybě přidělení. Od verze Visual Studio 2002 `operator new` vyhovuje standardní a vyvolá při selhání. Pro podporu kód, který používá starší styl přidělení, Visual Studio poskytuje korelovat implementaci `operator new` v nothrownew.obj, který vrací ukazatele null při selhání. Ve výchozím nastavení kompilátor také generuje Obranným kontroly hodnoty null zabránit tyto starší stylu alokátorů způsobí okamžité havárií při selhání. **/Zc:throwingNew** říká kompilátoru, vynechte tyto kontroly hodnoty null, za předpokladu, že všechny propojené paměti alokátorů odpovídají standardní. To neplatí explicitní bez vyvolávání `operator new` přetížení, které jsou deklarovány s použitím další parametr typu `std::nothrow_t` a používat explicitní `noexcept` specifikace.
+Od verze ISO C ++ 98, má zadanou standardu, který výchozí [operátor new](../../standard-library/new-operators.md#op_new) vyvolá `std::bad_alloc` při selhání přidělení paměti. Verze aplikace Visual C++ do sady Visual Studio 6.0 vrátí ukazatel s hodnotou null na selhání přidělení. Od sady Visual Studio 2002, `operator new` odpovídá standardu a vyvolá výjimku při selhání. Kód, který používá starší styl přidělení, Visual Studio podporuje propojovací provádění `operator new` v nothrownew.obj, která vrací ukazatel s hodnotou null při selhání. Ve výchozím nastavení vygeneruje kompilátor také obranné kontroly hodnoty null, tyto starší styl alokátorů zabránit způsobí okamžité selhání při selhání. **/Zc:throwingNew** možnost instruuje kompilátor, aby vynechat tyto kontroly hodnoty null, za předpokladu, že všechny propojené paměti alokátorů řídí standardem. Tato akce není požadována k explicitní non-throwing. `operator new` přetížení, které jsou deklarovány pomocí další parametr typu `std::nothrow_t` a používat explicitní `noexcept` specifikace.
 
-Koncepčně, pro vytvoření objektu v úložišti volné, kompilátor generuje kód do přidělit jeho paměť a potom k vyvolání jeho konstruktoru inicializovat paměť. Protože – kompilátor Visual C++ za normálních okolností nemůže určit Pokud tento kód propojí nonkonformní, vyvolání allocator, ve výchozím nastavení také vytváří kontrolu hodnotu null. před voláním konstruktoru. Zabrání se tak ukazatele null dereference ve volání konstruktoru, pokud se nezdaří přidělení není aktivována. Ve většině případů tyto kontroly nejsou potřebné, protože výchozí `operator new` alokátorů throw místo vrácení ukazatelé s hodnotou null. Kontroly mít také velice nepříjemná vedlejší účinky. Jejich nafouknutí velikosti kódu, jejich vyplnění předpověď větve a jejich bránit jiné optimalizace kompilátoru užitečné například devirtualization nebo const šíření inicializovaný objekt. Kontroly existovat jenom pro podporu kód, který odkazuje na *nothrownew.obj* nebo má vlastní nonkonformní `operator new` implementace. Pokud nepoužijete nonkonformní `operator new`, doporučujeme použít **/Zc:throwingNew** optimalizaci kódu.
+Koncepčně, k vytvoření objektu ve volném úložišti, kompilátor vygeneruje kód pro přidělení paměti a potom k vyvolání konstruktoru inicializovat paměť. Protože kompilátor Visual C++ obvykle nemůže určit-li tento kód se propojí s alokátorem nonkonformní, které nevyvolají, ve výchozím nastavení také vygeneruje kontrolu hodnot null před voláním konstruktoru. To zabraňuje ukazatel s hodnotou null přistoupit přes ukazatel ve volání konstruktoru, pokud selže non-throwing. přidělení. Ve většině případů jsou tyto kontroly nezbytné, protože výchozí `operator new` alokátorů throw místo vrácení ukazatelé s hodnotou null. Kontroly také mít unfortunate vedlejší účinky. Jejich nafouknutí velikost kódu, že vyplnění prediktivní větev a jejich potlačení další optimalizace kompilátoru užitečné například devirtualization nebo const šíření mimo inicializaci objektu. Kontroly k dispozici pouze pro kód podpory, který odkazuje na *nothrownew.obj* nebo má vlastní nonkonformní `operator new` implementace. Pokud nepoužijete nonkonformní `operator new`, doporučujeme použít **/Zc:throwingNew** optimalizaci kódu.
 
-**/Zc:throwingNew** možnost ve výchozím nastavení a nemá vliv [/ projektovou-](permissive-standards-conformance.md) možnost.
+**/Zc:throwingNew** možnost je vypnuto ve výchozím nastavení a nemá vliv [/ permissive-](permissive-standards-conformance.md) možnost.
 
-Pokud zkompilujete pomocí generování kódu v době propojování (LTCG), není potřeba zadat **/Zc:throwingNew**. Pokud je kód zkompilován pomocí LTCG, můžete kompilátor zjistí, jestli výchozí, který odpovídá `operator new` implementace slouží. Pokud ano, kompilátor automaticky vynechány kontroly hodnoty null. Hledá linkeru **/ThrowingNew** příznak říct Pokud implementace `operator new` shoduje. Můžete zadat Tento příznak, který linkeru včetně tato direktiva ve zdroji týkající se vaší implementace nové vlastní operátor:
+Pokud kompilujete pomocí generování kódu při propojování (LTCG), není potřeba zadat **/Zc:throwingNew**. Pokud váš kód je zkompilován s použitím LTCG, může kompilátor zjistí, jestli výchozí nastavení, odpovídající `operator new` slouží k implementaci. Pokud ano, kompilátor automaticky vynechány kontroly hodnoty null. Propojovací program vyhledá **/ThrowingNew** příznak zjistit, pokud provádění `operator new` shoduje. Tento příznak do propojovacího programu můžete zadat zahrnutím této směrnice ve zdroji pro novou implementaci vlastní operátor:
 
 ```cpp
 #pragma comment(linker, "/ThrowingNew")
 ```
 
-Další informace o problémech shoda v jazyce Visual C++, najdete v části [nestandardní chování](../../cpp/nonstandard-behavior.md).
+Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete v tématu [nestandardní chování](../../cpp/nonstandard-behavior.md).
 
 ## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
-1. Z **konfigurace** rozevírací nabídce, zvolte **všechny konfigurace**.
+1. Z **konfigurace** rozevírací nabídku, vyberte **všechny konfigurace**.
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
 
-1. Změnit **další možnosti** vlastnost, aby zahrnovala **/Zc:throwingNew** nebo **/Zc:throwingNew-** a potom zvolte **OK**.
+1. Upravit **další možnosti** vlastnost, aby zahrnovala **/Zc:throwingNew** nebo **/Zc:throwingNew-** a klikněte na tlačítko **OK**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
 [Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>

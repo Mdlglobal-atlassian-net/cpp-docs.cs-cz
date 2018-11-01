@@ -1,11 +1,6 @@
 ---
-title: csinh, csinhf, csinhl | Microsoft Docs
-ms.custom: ''
+title: csinh csinhf, csinhl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - csinh
 - csinhf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/csinh
 - complex/csinhf
 - complex/csinhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - csinh function
 - csinhf function
 - csinhl function
 ms.assetid: cc616e55-d14d-4cd3-91f0-fbee03ce5edf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f620bdddb7bb86494b7981c84e12573a3ad89fa1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2ea6eaedc7eae7256310bf55b06fde0ecb2c64de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395965"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552006"
 ---
-# <a name="csinh-csinhf-csinhl"></a>csinh, csinhf, csinhl
+# <a name="csinh-csinhf-csinhl"></a>csinh csinhf, csinhl
 
-Načte hyperbolický sinus čísla komplexní.
+Načte hyperbolický sinus komplexního čísla.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -75,7 +64,7 @@ _Lcomplex csinhl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Komplexní číslo, které představuje úhel v radiánech.
+Komplexní čísla, která představuje úhel v radiánech.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -83,17 +72,17 @@ Hyperbolický sinus *z*, v radiánech.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **csinh** , přijmout a vrátit **_Fcomplex** a **_Lcomplex** hodnoty. V programu C **csinh** vždy provede a vrátí **_Dcomplex** hodnotu.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **csinh** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **csinh** vždy převezme a vrátí **_Dcomplex** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Hlavička C|Hlavička C++|
+|Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
 |**csinh**, **csinhf**, **csinhl**|\<complex.h>|\<ccomplex >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>

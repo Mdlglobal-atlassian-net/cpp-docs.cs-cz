@@ -1,32 +1,22 @@
 ---
-title: -fp (zadání chování s plovoucí desetinnou čárkou) | Microsoft Docs
-ms.custom: ''
+title: /fp (zadání chování hodnot s plovoucí desetinnou čárkou)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.floatingPointModel
 - VC.Project.VCCLWCECompilerTool.FloatingPointExceptions
 - /fp
 - VC.Project.VCCLWCECompilerTool.floatingPointModel
 - VC.Project.VCCLCompilerTool.FloatingPointExceptions
-dev_langs:
-- C++
 helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 520a6e2d675c55e47a0424ab93c6a76d521f2358
-ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
+ms.openlocfilehash: 8b948edba3244eb22089b2ef5b4c8131736e1fb3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "34422690"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452569"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (zadání chování hodnot s plovoucí desetinnou čárkou)
 
@@ -34,57 +24,57 @@ Určuje chování plovoucí desetinné čárky v souboru zdrojového kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/FP:**[**přesné** | **s výjimkou**[**-**] | **rychlé** | **striktní**]
+> **/ FP:**[**přesné** | **s výjimkou**[**-**] | **rychlé** | **striktní**]
 
 ### <a name="arguments"></a>Arguments
 
 #### <a name="precise"></a>přesné
 
-Výchozí hodnota **/fp** je **/fp: přesné**.
+Výchozí hodnota **/FP** je **/FP: precise**.
 
-**/Fp: přesné** příznak zvyšuje konzistenci s plovoucí desetinnou čárkou testování rovnosti a nerovnosti zakázáním optimalizace, které by se mohly změnit přesnost výpočtů s plovoucí desetinnou čárkou. (Zachování určité přesnosti se vyžaduje pro striktní dodržování ANSI.) Ve výchozím nastavení, v kódu pro x86 architektury, použijte x87 koprocesor pokyny, kompilátor použije koprocesor adresy 80bitová zaregistruje pro uložení mezilehlých výsledků s plovoucí desetinnou čárkou výpočtů. To zvyšuje rychlost programu a snižuje jeho velikost. Protože však výpočty zahrnují datové typy s plovoucí desetinnou čárkou reprezentované v paměti méně než 80 bity, může přenos dodatečných bitů přesnosti (80 bitů minus počet bitů v menším typu s plovoucí desetinnou čárkou) napříč delším výpočtem zapříčinit nekonzistentní výsledky.
+**/FP: precise** příznak vylepšuje konzistenci testů plovoucí desetinné čárky pro rovnost a nerovnost zakázáním optimalizací, které by se mohly změnit přesnost výpočtů s plovoucí desetinnou čárkou. (Zachování určité přesnosti se vyžaduje pro striktní dodržování ANSI.) Ve výchozím nastavení, v kódu pro x86 architektury, pokyny k použití x87 koprocesoru, kompilátor používá 80bitové uživatele 80bitové registry k uložení průběžné výsledky výpočtů s plovoucí desetinnou čárkou. To zvyšuje rychlost programu a snižuje jeho velikost. Protože však výpočty zahrnují datové typy s plovoucí desetinnou čárkou reprezentované v paměti méně než 80 bity, může přenos dodatečných bitů přesnosti (80 bitů minus počet bitů v menším typu s plovoucí desetinnou čárkou) napříč delším výpočtem zapříčinit nekonzistentní výsledky.
 
-S **/fp: přesné** na x86 procesory, kompilátor provádí zaokrouhlení v proměnné typu `float` do správné přesnost pro přiřazení a přetypování a když jsou parametry předaný funkci. Toto zaokrouhlení zaručuje, že si data nezachovají větší platnost, než je kapacita jejich typu. Program kompilovat s **/fp: přesné** může být pomalejší a větší než jedna kompilovat bez **/fp: přesné**. **/FP: přesné** vnitřní zakáže funkce; standardní běhové knihovny se místo toho používají rutiny. Další informace najdete v tématu [/Oi (Generovat vnitřní funkce)](../../build/reference/oi-generate-intrinsic-functions.md).
+S **/FP: precise** na x86 procesory, kompilátor provádí zaokrouhlí proměnné typu `float` na správnou přesnost pro přiřazení, přetypování a předání parametrů funkci. Toto zaokrouhlení zaručuje, že si data nezachovají větší platnost, než je kapacita jejich typu. Program zkompilovaný s **/FP: precise** může být pomalejší a větší než zkompilovaný bez **/FP: precise**. **/ FP: precise** zakazuje vnitřní volání; standardní knihovny run-time se místo toho používají rutiny. Další informace najdete v tématu [/Oi (Generovat vnitřní funkce)](../../build/reference/oi-generate-intrinsic-functions.md).
 
-Toto chování s plovoucí desetinnou čárkou je povolená s **/fp: přesné**:
+Je povoleno následující chování plovoucí desetinné čárky pomocí **/FP: precise**:
 
 - Zkrácení – použití složené operace, která provede pouze jedno zaokrouhlení na konci a nahrazuje více operací.
 
-- Optimalizace výrazů, které jsou neplatné pro zvláštní hodnoty (NaN, +nekonečno, -nekonečno, +0, -0), nejsou povoleny. Optimalizace x-x > 0 = x * 0 = > 0, x-0 = > x, x + 0 = > x a 0 x = > - x jsou neplatné z různých důvodů. (Viz IEEE 754 a standard C99.)
+- Optimalizace výrazů, které jsou neplatné pro zvláštní hodnoty (NaN, +nekonečno, -nekonečno, +0, -0), nejsou povoleny. Optimalizace x-x = > 0, x * 0 = > 0, x-0 = > x, x + 0 = > x a 0-x = > - x jsou z různých důvodů neplatné. (Viz IEEE 754 a standard C99.)
 
-- Kompilátor správně zpracovává porovnání, která zahrnují hodnotu NaN. Například x! = x se vyhodnocuje **true** Pokud `x` je NaN a seřazené porovnání zahrnující NaN vyvolat výjimku.
+- Kompilátor správně zpracovává porovnání, která zahrnují hodnotu NaN. Například x! = x vyhodnocen **true** Pokud `x` hodnotu NaN a vyvolávají seřazená porovnání s hodnotou NaN vyvolat výjimku.
 
 - Vyhodnocení výrazů dodržuje metodu FLT_EVAL_METHOD=2 standardu C99 s touto výjimkou: pokud je program určen pro procesory x86, považuje se to za přesnost long-double, protože jednotka FPU je nastavena na 53bitovou přesnost.
 
-- Násobení hodnotou přesně 1,0 se transformuje na použití druhého činitele. x * y\*1.0 transformována do x\*y. Podobně x\*1.0\*y transformována do x\*y.
+- Násobení hodnotou přesně 1,0 se transformuje na použití druhého činitele. x * y\*1,0 se transformuje na x\*y. Obdobně x\*1.0\*y se transformuje na x\*y.
 
-- Dělení hodnotou přesně 1,0 se transformuje na použití dělence. x * y/1.0 transformována do x\*y. Podobně x / 1.0\*y transformována do x\*y.
+- Dělení hodnotou přesně 1,0 se transformuje na použití dělence. x * y/1.0 se transformuje na x\*y. Obdobně x / 1.0\*y se transformuje na x\*y.
 
-Pomocí **/fp: přesné** při [fenv_access –](../../preprocessor/fenv-access.md) je na zakáže optimalizace například kompilaci vyhodnocení výrazů s plovoucí desetinnou čárkou. Například, pokud používáte [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) změnit režim zaokrouhlení a kompilátor provádí výpočet s plovoucí desetinnou čárkou, zaokrouhlení je zadaný režim není v platnosti Pokud `fenv_access`je ON.
+Pomocí **/FP: precise** při [fenv_access](../../preprocessor/fenv-access.md) je na zakáže optimalizace, například vyhodnocení za kompilace výrazů s plovoucí desetinnou čárkou. Například, pokud používáte [_control87 _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) ke změně režimu zaokrouhlování a kompilátor provede výpočet s plovoucí desetinnou čárkou, zadaný režim není ve skutečnosti není-li `fenv_access`nastavená na ON.
 
-**/FP: přesné** nahrazuje **/Op** – možnost kompilátoru.
+**/ FP: precise** nahradí **/Op** – možnost kompilátoru.
 
-#### <a name="fast"></a>Rychlý
+#### <a name="fast"></a>Rychlé
 
-**/Fp:fast** možnost vytvoří kód nejrychlejší ve většině případů uvolnit pravidla pro optimalizace operací s plovoucí desetinnou čárkou. To umožňuje, aby kompilátor optimalizoval kód výpočtů s plovoucí desetinnou čárkou na rychlost na úkor přesnosti a správnosti. Když **/fp:fast** je zadán, kompilátor nemusí správně zaokrouhlit na příkazy přiřazení, přiřadí typ ukazatel, nebo volání funkce a nemusí provádí zaokrouhlení zprostředkující výrazů. Kompilátor může změnit pořadí operací nebo provádět algebraické transformace – například dodržováním asociativních a distributivních pravidel – bez ohledu na vliv na konečnou přesnost výsledků. Kompilátor může operace a operandy změnit na jednoduchou přesnost a nemusí dodržovat pravidla povyšování typů jazyka C++. Optimalizace floating point konkrétní zmenšení vždy povolena ([fp_contract –](../../preprocessor/fp-contract.md) je ON). Výjimky s plovoucí desetinnou čárkou a FPU prostředí přístup, jsou zakázané (**/fp: kromě-** je implicitní a [fenv_access –](../../preprocessor/fenv-access.md) je OFF).
+**Fast** možnost vytvoří nejrychlejší kód zmírněním pravidel pro optimalizaci operací s plovoucí desetinnou čárkou ve většině případů. To umožňuje, aby kompilátor optimalizoval kód výpočtů s plovoucí desetinnou čárkou na rychlost na úkor přesnosti a správnosti. Když **Fast** není zadán, kompilátor nemusí správně zaokrouhlovat přiřazovací příkazy, zaokrouhlovat nebo volání funkcí a nemusí provádět zaokrouhlování přechodných výrazů. Kompilátor může změnit pořadí operací nebo provádět algebraické transformace – například dodržováním asociativních a distributivních pravidel – bez ohledu na vliv na konečnou přesnost výsledků. Kompilátor může operace a operandy změnit na jednoduchou přesnost a nemusí dodržovat pravidla povyšování typů jazyka C++. Optimalizace plovoucí desetinnou konkrétní zkracování jsou vždy povoleny ([fp_contract](../../preprocessor/fp-contract.md) nastavená na ON). Výjimky plovoucí desetinné čárky a přístup k prostředí FPU jsou zakázány (**/FP: except-** předpokládá a [fenv_access](../../preprocessor/fenv-access.md) je VYPNUTÝ).
 
-**/FP:Fast** nelze použít s **/fp: striktní** nebo **/fp: přesné**. Použije se poslední parametr zadaný na příkazovém řádku. Zadání obou **/fp:fast** a **/fp: kromě** generuje chybu kompilátoru.
+**Fast** nelze použít s **/FP: strict** nebo **/FP: precise**. Použije se poslední parametr zadaný na příkazovém řádku. Zadání **Fast** a **/FP: except** vygeneruje chybu kompilátoru.
 
-Určení [/Za, /Ze (zakázat jazyková rozšíření)](../../build/reference/za-ze-disable-language-extensions.md) (ANSI režim kompatibility) a **/fp:fast** může způsobit neočekávané chování. Například operace s plovoucí desetinnou čárkou s jednoduchou přesností nemusejí být zaokrouhleny na jednoduchou přesnost.
+Určení [/Za, /Ze (zakázat jazyková rozšíření)](../../build/reference/za-ze-disable-language-extensions.md) (Kompatibilita s ANSI) a **Fast** může způsobit neočekávané chování. Například operace s plovoucí desetinnou čárkou s jednoduchou přesností nemusejí být zaokrouhleny na jednoduchou přesnost.
 
 #### <a name="except"></a>S výjimkou
 
-**/Fp: kromě** možnost umožňuje model spolehlivé výjimek plovoucí desetinné čárky. Výjimky jsou vyvolány okamžitě po aktivaci. Tento parametr je standardně vypnutý. Možnosti připojování znaménkem minus (**/fp: kromě-**) explicitně zakáže ho.
+**/FP: except** možnost povolí modelu reliable výjimky s plovoucí desetinnou čárkou. Výjimky jsou vyvolány okamžitě po aktivaci. Tento parametr je standardně vypnutý. Připojením znaménka minus možnosti (**/FP: except-**) explicitně zakáže.
 
 #### <a name="strict"></a>přísné
 
-**/Fp: striktní** možnost umožňuje nejpřísnějším modelu s plovoucí desetinnou čárkou. **/FP: striktní** způsobí, že [fp_contract –](../../preprocessor/fp-contract.md) být OFF a [fenv_access –](../../preprocessor/fenv-access.md) být ON. **/FP: kromě** je implicitní a je možné zakázat explicitním zadáním **/fp: kromě-**. Při použití s **/fp: kromě-**, **/fp: striktní** vynucuje přísné s plovoucí desetinnou čárkou sémantiku, ale bez ohledu pro výjimečné události.
+**/FP: strict** možnost povolí nejpřísnější model plovoucí desetinné čárky. **/ FP: strict** způsobí, že [fp_contract](../../preprocessor/fp-contract.md) na vypnuto a [fenv_access](../../preprocessor/fenv-access.md) na zapnuto. **/ FP: except** předpokládá se lze zakázat explicitním zadáním **/FP: except-**. Při použití s **/FP: except-**, **/FP: strict** Vynutí striktní sémantiku plovoucí desetinné čárky, ale bez respektování výjimečných událostí.
 
 ## <a name="remarks"></a>Poznámky
 
-Více **/fp** možnosti lze zadat ve stejné kompilaci.
+Více **/FP** možnosti lze zadat ve stejné kompilaci.
 
-Můžete řídit chování s plovoucí desetinnou čárkou podle funkce, najdete v článku [float_control –](../../preprocessor/float-control.md) – Direktiva pragma. Přepíše **/fp** nastavení kompilátoru. Podle osvědčené technické praxe doporučujeme uložit a obnovit místní chování výpočtů s plovoucí desetinnou čárkou:
+Řízení chování plovoucí desetinné čárky pomocí funkce, najdete v článku [float_control](../../preprocessor/float-control.md) direktivy pragma. Přepíše se tím požadavek **/FP** nastavení kompilátoru. Podle osvědčené technické praxe doporučujeme uložit a obnovit místní chování výpočtů s plovoucí desetinnou čárkou:
 
 ```cpp
 #pragma float_control(precise, on, push)
@@ -92,28 +82,28 @@ Můžete řídit chování s plovoucí desetinnou čárkou podle funkce, najdete
 #pragma float_control(pop)
 ```
 
-Většina s plovoucí desetinnou čárkou optimalizace související s **/fp: striktní**, **/fp: kromě** (a jeho odpovídající direktivy) a `fp_contract` – Direktiva pragma jsou závislé na počítač. **/FP: striktní** a **/fp: kromě** nejsou kompatibilní s **/CLR**.
+Většina optimalizací plovoucí desetinné čárky související s **/FP: strict**, **/FP: except** (a jejich odpovídajících pragmat) a `fp_contract` – Direktiva pragma jsou závislé na počítači. **/ FP: strict** a **/FP: except** nejsou kompatibilní s **/CLR**.
 
-**/FP: přesné** je potřeba vyřešit většinu požadavků aplikace s plovoucí desetinnou čárkou. Můžete použít **/fp: kromě** a **/fp: striktní**, ale mohou být některé snížení výkonu. Pokud je nejdůležitější výkon, zvažte použití **/fp:fast**.
+**/ FP: precise** by měl řešit většinu požadavků aplikace s plovoucí desetinnou čárkou. Můžete použít **/FP: except** a **/FP: strict**, ale může být určitému snížení výkonu. Pokud je nejdůležitější výkon, zvažte, jestli se má použít **Fast**.
 
-**/FP: striktní**, **/fp:fast**, a **/fp: přesné** režimy přesnost (správnost). Současně může být aktivní pouze jeden. Pokud oba **/fp: striktní** a **/fp: přesné** jsou nastaveny, kompilátor použije, který zpracovává poslední. Obě **/fp: striktní** a **/fp:fast** nelze zadat.
+**/ FP: strict**, **Fast**, a **/FP: precise** jsou režimy přesnosti (správnosti). Současně může být aktivní pouze jeden. Pokud mají oba **/FP: strict** a **/FP: precise** nejsou zadány, kterou kompilátor používá ten, který je zpracován jako poslední. Obě **/FP: strict** a **Fast** nelze zadat.
 
-Další informace najdete v tématu [Microsoft Visual C++ Floating-Point optimalizace](floating-point-optimization.md).
+Další informace najdete v tématu [Microsoft Visual C++ optimalizace plovoucí desetinné čárky](floating-point-optimization.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
 1. Rozbalte **vlastnosti konfigurace** > **C/C++** > **generování kódu** stránku vlastností.
 
-1. Změnit **plovoucí modelu bodu** vlastnost.
+1. Upravit **Model plovoucí desetinné čárky** vlastnost.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.floatingPointModel%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.floatingPointModel%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Možnosti kompilátoru](compiler-options.md)
 - [Nastavení možností kompilátoru](setting-compiler-options.md)
-- [Microsoft Visual C++ plovoucí bodu optimalizace](floating-point-optimization.md)
+- [Microsoft Visual C++ optimalizace plovoucí desetinné čárky](floating-point-optimization.md)

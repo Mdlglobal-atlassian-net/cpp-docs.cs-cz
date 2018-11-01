@@ -1,10 +1,6 @@
 ---
-title: _utime –, _utime32 –, _utime64 –, _wutime –, _wutime32 –, _wutime64 – | Microsoft Docs
-ms.custom: ''
+title: _utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _utime64
 - _utime
@@ -40,8 +36,6 @@ f1_keywords:
 - _utime32
 - _tutime64
 - _wutime32
-dev_langs:
-- C++
 helpviewer_keywords:
 - tutime function
 - utime32 function
@@ -64,16 +58,12 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cd8737d6391ea1effd50e967008520b2d77707e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1e9633784ad78a2b46701e6600ad1ddb6b3318e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417708"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471087"
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 
@@ -111,64 +101,64 @@ int _wutime64(
 ### <a name="parameters"></a>Parametry
 
 *Název souboru*<br/>
-Ukazatel na řetězec, který obsahuje cesta nebo název souboru.
+Ukazatel na řetězec, který obsahuje cestu nebo název souboru.
 
-*Časy*<br/>
-Ukazatel na uložené hodnoty času.
+*časy*<br/>
+Ukazatel na uložený čas hodnoty.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí 0, pokud čas modifikace souboru byl změněn. Vrácená hodnota -1 označuje chybu. Pokud je předán neplatný parametr, je obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, tyto funkce vrátí hodnotu -1 a **errno** nastaven na jednu z následujících hodnot:
+Každá z těchto funkcí vrátí 0, pokud čas modifikace souboru byl změněn. Návratová hodnota-1 označuje chybu. Pokud je předán neplatný parametr, vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a **errno** nastavena na jednu z následujících hodnot:
 
-|errno – hodnota|Podmínka|
+|Hodnota errno|Podmínka|
 |-|-|
-**EACCES –**|Cesta Určuje adresář nebo soubor určený jen pro čtení
-**EINVAL –**|Neplatný *časy* argument
-**EMFILE –**|Příliš mnoho souborů (soubor musí být otevřené pro změnit jeho čas změny)
-**ENOENT –**|Cesta nebo název souboru nebyla nalezena
+**EACCES**|Cesta Určuje adresář nebo soubor určený jen pro čtení
+**EINVAL**|Neplatný *časy* argument
+**EMFILE**|Příliš mnoho otevřených souborů (Chcete-li změnit její čas změny musíte otevřít soubor.)
+**ENOENT**|Cesta nebo název souboru nebyl nalezen
 
-V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších návratové kódy.
+Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších návratových kódů.
 
-Datum můžete změnit pro soubor, pokud je datum změny po půlnoc 1. ledna 1970 a před datem ukončení funkce používá. **_utime –** a **_wutime –** použít hodnotu 64-bit čas tak, aby koncové datum 23:59:59, 31. prosince 3000, UTC. Pokud **_USE_32BIT_TIME_T** je definována přinutit staré chování je koncové datum 23:59:59 18 leden 2038 UTC. **_utime32 –** nebo **_wutime32 –** použít typu time 32-bit bez ohledu na to, jestli se **_USE_32BIT_TIME_T** je definovaný a mít vždy starší koncové datum. **_utime64 –** nebo **_wutime64 –** vždy používat typ času 64-bit, takže tyto funkce podporují vždy novější koncové datum.
+Data lze změnit pro soubor, pokud je datum změny po půlnoci 1. ledna 1970 a před datem ukončení funkce používá. **_utime** a **_wutime** použít 64-bit časové hodnoty, takže koncové datum 23:59:59, 31 prosince 3000 UTC. Pokud **_USE_32BIT_TIME_T** je definována pro vynucení staré chování, je koncové datum 23:59:59 18. ledna 2038 UTC. **_utime32** nebo **_wutime32** použít typ 32-bit čas bez ohledu na to, zda **_USE_32BIT_TIME_T** je definována, a mít vždy starší koncové datum. **_utime64** nebo **_wutime64** vždy použít typ času 64-bit, tak tyto funkce vždy podporují novější datum ukončení.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Utime –** funkce nastaví čas změny pro soubor určený touto *filename **.* Proces musí mít oprávnění k zápisu do souboru, chcete-li změnit čas. V operačním systému Windows, můžete změnit čas přístupu a čas změny v **_utimbuf –** struktura. Pokud *časy* je **NULL** ukazatele, čas změny nastavena na aktuálním místním časem. V opačném *časy* musí odkazovat na strukturu typu **_utimbuf –**, definované v SYS\UTIME. H.
+**_Utime** funkce nastaví čas změny pro soubor určený parametrem *filename **.* Proces musí mít oprávnění k zápisu do souboru, chcete-li změnit čas. V operačním systému Windows, můžete změnit čas přístupu a čas změny v **_utimbuf –** struktury. Pokud *časy* je **NULL** ukazatele, čas změny nastavena na aktuální místní čas. V opačném případě *časy* musí ukazovat na strukturu typu **_utimbuf –**, definované v SYS\UTIME. H.
 
-**_Utimbuf –** struktura ukládá časů přístup a změny souboru používané **_utime –** změnit data modifikace souboru. Struktura má následující pole, které jsou obě typu **time_t**:
+**_Utimbuf –** struktura ukládá časy přístupu a úpravy souborů používá **_utime** ke změně datumů úpravy souboru. Struktura obsahuje následující pole, které jsou typu **time_t**:
 
 |Pole||
 |-|-|
 **actime**|Čas přístup k souborům
 **modtime**|Čas modifikace souboru
 
-Konkrétní verze **_utimbuf –** struktury (**_utimebuf32** a **__utimbuf64 –**) jsou definovány pomocí 32bitové a 64bitové verze typu time. Ty se používají v 32bitové a 64bitové verze konkrétních verzí této funkce. **_utimbuf –** samotné ve výchozím nastavení používá typu time 64-bit, pokud **_USE_32BIT_TIME_T** je definována.
+Konkrétní verze **_utimbuf –** strukturu (**_utimebuf32** a **__utimbuf64 –**) jsou definovány pomocí 32bitové a 64bitové verze typu time. Ty se používají v 32bitové a 64bitové určité verze této funkce. **_utimbuf –** sama ve výchozím nastavení používá typu time 64-bit, není-li **_USE_32BIT_TIME_T** je definována.
 
-**_utime –** je stejný jako **_futime –** s tím rozdílem, že *filename* argument **_utime –** je název souboru nebo cestu k souboru, místo popisovač souboru Otevřete soubor.
+**_utime** je stejný jako **_futime** s tím rozdílem, že *filename* argument **_utime** je název souboru nebo cesta k souboru, nikoli popisovač souboru z Otevřete soubor.
 
-**_wutime –** je verze široká charakterová **_utime –**; *filename* argument **_wutime –** je široká charakterová řetězec. Tyto funkce chovají stejně jako jinak.
+**_wutime** je verze širokého znaku **_utime**; *filename* argument **_wutime** je širokoznaký řetězec. Tyto funkce chovají identicky jinak.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tutime –**|**_utime –**|**_utime –**|**_wutime**|
+|**_tutime –**|**_utime**|**_utime**|**_wutime**|
 |**_tutime32 –**|**_utime32**|**_utime32**|**_wutime32**|
 |**_tutime64 –**|**_utime64**|**_utime64**|**_wutime64**|
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadované hlavičky|Volitelné hlavičky|
+|Rutina|Požadované záhlaví|Volitelná záhlaví|
 |-------------|----------------------|----------------------|
-|**_utime –**, **_utime32 –**, **_utime64 –**|\<SYS/utime.h >|\<errno.h>|
+|**_utime**, **_utime32**, **_utime64**|\<SYS/utime.h >|\<errno.h>|
 |**_utime64**|\<SYS/utime.h >|\<errno.h>|
 |**_wutime**|\<utime.h > nebo \<wchar.h >|\<errno.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Tento program používá **_utime –** nastavit čas modifikace souboru na aktuální čas.
+Tento program využívá **_utime** nastavit čas modifikace souboru na aktuální čas.
 
 ```C
 // crt_utime.c
@@ -237,7 +227,7 @@ Directory of C:\test
                0 Dir(s)  20,742,955,008 bytes free
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Správa času](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>

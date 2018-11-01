@@ -1,10 +1,6 @@
 ---
-title: _itoa –, _itow – funkce | Microsoft Docs
-ms.custom: ''
+title: _itoa – _itow – funkce
 ms.date: 03/21/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - itoa
 - _itoa
@@ -83,8 +79,6 @@ f1_keywords:
 - _MAX_U64TOSTR_BASE10_COUNT
 - _MAX_U64TOSTR_BASE8_COUNT
 - _MAX_U64TOSTR_BASE2_COUNT
-dev_langs:
-- C++
 helpviewer_keywords:
 - _itot function
 - ui64toa function
@@ -104,20 +98,16 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 95aa140eae6d8a06eff84d03cbb562444c3bd552
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 182e7190554382f56d43f94fefe209fd38a7b78b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405533"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464087"
 ---
 # <a name="itoa-itoa-ltoa-ltoa-ultoa-ultoa-i64toa-ui64toa-itow-ltow-ultow-i64tow-ui64tow"></a>itoa – _itoa –, ltoa –, _ltoa –, ultoa –, _ultoa –, _i64toa –, _ui64toa –, _itow –, _ltow –, _ultow –, _i64tow –, _ui64tow –
 
-Převede na řetězec, celé číslo. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [_itoa_s –, _itow_s – funkce](itoa-s-itow-s.md).
+Převede celé číslo na řetězec. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [_itoa_s – _itow_s – funkce](itoa-s-itow-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -178,39 +168,39 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 Číslo, které má být převeden.
 
 *Vyrovnávací paměti*<br/>
-Vyrovnávací paměť, která obsahuje výsledek převodu.
+Vyrovnávací paměti, který obsahuje výsledek převodu.
 
 *radix*<br/>
-Základ pro převod *hodnotu*, která musí být v rozsahu 2 36.
+Základ pro převod *hodnota*, která musí být v rozsahu 2 až 36.
 
 *Velikost*<br/>
-Délka vyrovnávací paměti v jednotkách typu znak. Tento parametr je odvozeno z *vyrovnávací paměti* argument v jazyce C++.
+Délka vyrovnávací paměti v jednotkách, které tyto typy znaků. Tento parametr je odvozen z *vyrovnávací paměti* argument v jazyce C++.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí ukazatel na *vyrovnávací paměti*. Neexistuje žádný návratový chyby.
+Každá z těchto funkcí vrací ukazatel na *vyrovnávací paměti*. Není vrácena žádná chyba.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Itoa –**, **_ltoa –**, **_ultoa –**, **_i64toa –**, a **_ui64toa –** funkce převést číslice v dané *hodnotu* argument na řetězec znaků ukončený hodnotou null a úložiště výsledek (až 33 znaků pro **_itoa –**, **_ltoa –**, a  **_ultoa –** a 65 pro **_i64toa –** a **_ui64toa –**) v *vyrovnávací paměti*. Pokud *základ –* rovná 10 a *hodnotu* je záporná, je první znak uložené řetězce znaménka minus (**-**). **_Itow –**, **_ltow –**, **_ultow –**, **_i64tow –**, a **_ui64tow –** funkce jsou široká charakterová verze **_itoa –**, **_ltoa –**, **_ultoa –**, **_i64toa –**, a **_ui64toa –**, v uvedeném pořadí.
+**_Itoa –**, **_ltoa –**, **_ultoa –**, **_i64toa –**, a **_ui64toa –** převádějí na číslice dané *hodnotu* argument řetězec znaků zakončené znakem null a úložiště výsledků (až 33 znaků pro **_itoa –**, **_ltoa –**, a  **_ultoa –** a 65 pro **_i64toa –** a **_ui64toa –**) v *vyrovnávací paměti*. Pokud *základ číselné soustavy* rovná 10 a *hodnotu* je záporný, je první znak řetězce uložené znaménko mínus (**-**). **_Itow –**, **_ltow –**, **_ultow –**, **_i64tow –**, a **_ui64tow –** funkce jsou širokého znaku verze **_itoa –**, **_ltoa –**, **_ultoa –**, **_i64toa –**, a **_ui64toa –**, v uvedeném pořadí.
 
 > [!IMPORTANT]
-> Tyto funkce můžete napsat za koncem vyrovnávací paměť, která je příliš malá. Pokud chcete zabránit přetečení vyrovnávací paměti, ujistěte se, že *vyrovnávací paměti* je dostatečně velký pro uložení převedený číslic plus koncové znak hodnoty null a znak znaménka. Zneužití tyto funkce může způsobit problémy se zabezpečením závažné ve vašem kódu.
+> Tyto funkce můžete napsat za koncem vyrovnávací paměť je příliš malá. Pokud chcete zabránit přetečení vyrovnávací paměti, ujistěte se, že *vyrovnávací paměti* je příliš velká pro uložení převedený číslic plus koncový znak null a znak znaménka. Nesprávné použití těchto funkcí může způsobit vážné bezpečnostní problémy ve vašem kódu.
 
-Kvůli jejich potenciální problémy zabezpečení, ve výchozím nastavení, tyto funkce způsobit vyřazení upozornění [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **této funkce nebo proměnná může nebezpečný. Zvažte použití** *safe_function* **místo. Chcete-li zakázat vyřazení, použijte _CRT_SECURE_NO_WARNINGS.** Doporučujeme změnit vašeho zdrojového kódu pro použití *safe_function* navrhovaná službou upozornění. Bezpečnější funkce Nezapisovat více znaků, než zadaná velikost vyrovnávací paměti. Další informace najdete v tématu [_itoa_s –, _itow_s – funkce](itoa-s-itow-s.md).
+Z důvodu jejich potenciál pro problémy se zabezpečením, ve výchozím nastavení, tyto funkce způsobí upozornění na vyřazení [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **této funkce nebo proměnná může nebezpečné. Zvažte použití** *safe_function* **místo. Pokud chcete zakázat vyřazení, použijte _CRT_SECURE_NO_WARNINGS.** Doporučujeme změnit zdrojový kód Refaktorovat pro použití *safe_function* navrhl upozornění. Bezpečnějšími funkcemi Nezapisovat více znaků, než zadaná velikost vyrovnávací paměti. Další informace najdete v tématu [_itoa_s – _itow_s – funkce](itoa-s-itow-s.md).
 
-Chcete-li použít tyto funkce bez upozornění na zastarání, definovat **_CRT_SECURE_NO_WARNINGS** makro preprocesoru před zahrnutím všech CRT hlavičky. Můžete provést na příkazovém řádku v příkazovém řádku vývojáře přidáním **/D_CRT_SECURE_NO_WARNINGS** – možnost kompilátoru k **cl** příkaz. Jinak definujte makro ve zdrojových souborech. Pokud používáte předkompilovaných hlaviček, definujte makro v horní části předkompilovaný hlavičkový soubor, obvykle stdafx.h zahrnout. Chcete-li definovat makro ve zdrojovém kódu, použijte **#define** – direktiva před zahrnout všechny CRT záhlaví, jako v následujícím příkladu:
+Použití těchto funkcí bez upozornění na vyřazení, definujte **_CRT_SECURE_NO_WARNINGS** preprocesor makro před zahrnutím záhlaví CRT. Můžete to provést na příkazovém řádku v příkazovém řádku pro vývojáře tak, že přidáte **/D_CRT_SECURE_NO_WARNINGS** – možnost kompilátoru do **cl** příkazu. Jinak definujte makro ve zdrojových souborech. Pokud používáte předkompilovaných hlaviček, definujte makro v horní části předkompilované hlavičky zahrnout soubor stdafx.h obvykle. Chcete-li definovat makro ve zdrojovém kódu, použijte **#define** směrnice před obsahovat libovolné záhlaví CRT, jako v následujícím příkladu:
 
 ```C
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdlib.h>
 ```
 
-V jazyce C++ tyto funkce mají šabloně přetížení, které vyvolání jejich bezpečnější protějšky. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ mají tyto funkce přetížení šablon, které vyvolávají jejich protějšky bezpečnější. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
-Názvy Posix **itoa –**, **ltoa –**, a **ultoa –** existovat jako aliasy pro **_itoa –**, **_ltoa –**, a **_ultoa –** funkce. Názvy Posix jsou zastaralé, protože nepostupujte podle konvence název funkce specifické pro implementaci ISO c. Ve výchozím nastavení, tyto funkce způsobit vyřazení upozornění [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **The POSIX název pro tuto položku je zastaralý. Místo toho použijte název vyhovující ISO C a C++:** *nový_název*. Doporučujeme změnit vašeho zdrojového kódu pro použití bezpečnější verzí těchto funkcí **_itoa_s –**, **_ltoa_s –**, nebo **_ultoa_s –**. Další informace najdete v tématu [_itoa_s –, _itow_s – funkce](itoa-s-itow-s.md).
+POSIX – názvy **itoa –**, **ltoa –**, a **ultoa –** existovat jako aliasy pro **_itoa –**, **_ltoa –**, a **_ultoa –** funkce. POSIX – názvy jsou zastaralé, protože nepostupujte podle konvence název specifický pro implementaci funkce ISO c. Ve výchozím nastavení, tyto funkce způsobí upozornění na vyřazení [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **rámci specifikace POSIX název této položky je zastaralá. Místo toho použijte název splňující podmínky ISO C a C++:** *nový_název*. Doporučujeme změnit zdrojový kód používat bezpečnější verze těchto funkcí, **_itoa_s –**, **_ltoa_s –**, nebo **_ultoa_s –**. Další informace najdete v tématu [_itoa_s – _itow_s – funkce](itoa-s-itow-s.md).
 
-Pro zdrojový kód přenositelnost dáváte přednost zachovat názvy Posix ve vašem kódu. Použití těchto funkcí bez upozornění na zastarání, definovat, jak **_CRT_NONSTDC_NO_WARNINGS** a **_CRT_SECURE_NO_WARNINGS** makra preprocesoru před zahrnutím všech CRT hlavičky. Můžete provést na příkazovém řádku v příkazovém řádku vývojáře přidáním **/D_CRT_SECURE_NO_WARNINGS** a **/D_CRT_NONSTDC_NO_WARNINGS** kompilátoru možnosti k **cl**příkaz. Jinak definujte makra ve zdrojových souborech. Pokud používáte předkompilovaných hlaviček, definovat makra v horní části předkompilovaných hlaviček obsahují soubor, obvykle stdafx.h. Chcete-li definovat makra ve zdrojovém kódu, použijte **#define** direktivy před zahrnout všechny CRT záhlaví, jako v následujícím příkladu:
+Pro přenositelnost zdrojového kódu můžete chtít zachovat POSIX – názvy v kódu. Použití těchto funkcí bez upozornění na vyřazení, definovat, jak **_CRT_NONSTDC_NO_WARNINGS** a **_CRT_SECURE_NO_WARNINGS** makra preprocesoru před zahrnutím záhlaví CRT. Můžete to provést na příkazovém řádku v příkazovém řádku pro vývojáře tak, že přidáte **/D_CRT_SECURE_NO_WARNINGS** a **/D_CRT_NONSTDC_NO_WARNINGS** možností kompilátoru k **cl**příkazu. Jinak definujte makra ve zdrojových souborech. Pokud používáte předkompilovaných hlaviček, definování makra v horní části předkompilované hlavičky zahrnout soubor stdafx.h obvykle. Chcete-li definovat makra ve zdrojovém kódu, použijte **#define** direktivy před obsahovat libovolné záhlaví CRT, jako v následujícím příkladu:
 
 ```C
 #define _CRT_NONSTDC_NO_WARNINGS 1
@@ -218,22 +208,22 @@ Pro zdrojový kód přenositelnost dáváte přednost zachovat názvy Posix ve v
 #include <stdlib.h>
 ```
 
-### <a name="maximum-conversion-count-macros"></a>Převod maximální počet makra
+### <a name="maximum-conversion-count-macros"></a>Makra převodu maximální počet
 
-Vám pomůže vytvořit zabezpečený vyrovnávací paměti pro převody, CRT zahrnuje některé pohodlný makra. Tyto definovala velikost vyrovnávací paměti vyžadované k převodu Nejdelší možná hodnota každého typu integer, včetně null ukončení a podepište znak, pro několik běžných základny. Pro zajištění vaší vyrovnávací paměti převod dostatečně velký, aby se k odběru jakékoli převody základní určeného *základ –*, použijte jednu z těchto definován makra při přidělení vyrovnávací paměti. To pomáhá zabránit chyby přetečení vyrovnávací paměti při převodu celočíselných typů na řetězce. Když zahrnete stdlib.h nebo wchar.h ve zdroji jsou definovány tyto makra.
+Knihovna CRT vám pomůže vytvořit zabezpečené vyrovnávací paměti pro převody, zahrnuje některé vhodné makra. Tyto definují velikost vyrovnávací paměti vyžadované k převodu nejdelší možnou hodnotu každého celočíselného typu, včetně ukončovacího znaku null a podepsat znak, pro několik běžných základních tříd. K zajištění, že vaši převod vyrovnávací paměť je příliš velká pro získání jakýkoli převod v základu podle *základ číselné soustavy*, použijte některou z těchto definice makra při přidělení vyrovnávací paměti. To pomáhá zabránit chybám přetečení vyrovnávací paměti při převodu celočíselné typy řetězců. Tato makra jsou definovány, jakmile zahrnete stdlib.h nebo wchar.h ve zdroji.
 
-Použít jednu z těchto makra ve funkci pro převod řetězce, vaše převod vyrovnávací paměti typu příslušné znak deklarování a použití makro hodnota pro typ integer a základní jako dimenze vyrovnávací paměti. Tato tabulka uvádí makra, které jsou vhodné pro jednotlivé funkce pro uvedené základů:
+Pokud chcete použít jeden z těchto maker v funkce pro převod řetězce, vaše převod vyrovnávací paměti odpovídající znak typu deklarace a používání hodnotu makra pro typ integer a základní jako dimenze vyrovnávací paměti. Tato tabulka obsahuje makra, které jsou vhodné pro každou funkci pro uvedených základních tříd:
 
 ||||
 |-|-|-|
-|Funkce|základ –|Makra|
+|Funkce|základ číselné soustavy|Makra|
 |**_itoa –**, **_itow –**|16<br/>10<br/>8<br/>2|**_MAX_ITOSTR_BASE16_COUNT**<br/>**_MAX_ITOSTR_BASE10_COUNT**<br/>**_MAX_ITOSTR_BASE8_COUNT**<br/>**_MAX_ITOSTR_BASE2_COUNT**|
 |**_ltoa –**, **_ltow –**|16<br/>10<br/>8<br/>2|**_MAX_LTOSTR_BASE16_COUNT**<br/>**_MAX_LTOSTR_BASE10_COUNT**<br/>**_MAX_LTOSTR_BASE8_COUNT**<br/>**_MAX_LTOSTR_BASE2_COUNT**|
 |**_ultoa –**, **_ultow –**|16<br/>10<br/>8<br/>2|**_MAX_ULTOSTR_BASE16_COUNT**<br/>**_MAX_ULTOSTR_BASE10_COUNT**<br/>**_MAX_ULTOSTR_BASE8_COUNT**<br/>**_MAX_ULTOSTR_BASE2_COUNT**|
 |**_i64toa –**, **_i64tow –**|16<br/>10<br/>8<br/>2|**_MAX_I64TOSTR_BASE16_COUNT**<br/>**_MAX_I64TOSTR_BASE10_COUNT**<br/>**_MAX_I64TOSTR_BASE8_COUNT**<br/>**_MAX_I64TOSTR_BASE2_COUNT**|
 |**_ui64toa –**, **_ui64tow –**|16<br/>10<br/>8<br/>2|**_MAX_U64TOSTR_BASE16_COUNT**<br/>**_MAX_U64TOSTR_BASE10_COUNT**<br/>**_MAX_U64TOSTR_BASE8_COUNT**<br/>**_MAX_U64TOSTR_BASE2_COUNT**|
 
-Tento příklad používá makra počet převod k definování dostatečně velký, aby se tak, aby obsahovala vyrovnávací paměť **nepodepsané dlouho dlouho** v základní 2:
+Tento příklad používá k definování dostatečně velký, aby obsahovala vyrovnávací paměť počet makra převodu **unsigned long long.** v základní 2:
 
 ```cpp
 #include <wchar.h>
@@ -263,11 +253,11 @@ int main()
 |**_itoa –**, **_ltoa –**, **_ultoa –**, **_i64toa –**, **_ui64toa –**|\<stdlib.h>|
 |**_itow –**, **_ltow –**, **_ultow –**, **_i64tow –**, **_ui64tow –**|\<stdlib.h > nebo \<wchar.h >|
 
-Tyto funkce a makra jsou specifické pro společnost Microsoft. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Tyto funkce a makra jsou specifické pro společnost Microsoft. Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Tento příklad znázorňuje použití některých funkce pro převod celé číslo. Všimněte si použití **_CRT_SECURE_NO_WARNINGS** makro do nečinnosti upozornění C4996.
+Tento příklad znázorňuje použití některých funkcí převodu celého čísla. Všimněte si, **_CRT_SECURE_NO_WARNINGS** – makro do nečinnosti upozornění C4996.
 
 ```C
 // crt_itoa.c
@@ -342,7 +332,7 @@ base 3: 11112220022122120101211020120210210211220 (41 chars)
 base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 chars)
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
-[_itoa_s –, _itow_s – funkce](itoa-s-itow-s.md)<br/>
+[_itoa_s – _itow_s – funkce](itoa-s-itow-s.md)<br/>

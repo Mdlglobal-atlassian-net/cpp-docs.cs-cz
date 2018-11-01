@@ -1,10 +1,6 @@
 ---
-title: _dupenv_s_dbg –, _wdupenv_s_dbg – | Microsoft Docs
-ms.custom: ''
+title: _dupenv_s_dbg, _wdupenv_s_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _dupenv_s_dbg
 - _wdupenv_s_dbg
@@ -24,8 +20,6 @@ f1_keywords:
 - _tdupenv_s_dbg
 - _dupenv_s_dbg
 - _wdupenv_s_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tdupenv_s_dbg function
 - dupenv_s_dbg function
@@ -35,20 +29,16 @@ helpviewer_keywords:
 - wdupenv_s_dbg function
 - _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ef129cec096734c23e911a5dc77bf3bd0b2df03
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 95d8c18a0ebc543304fdb6bf51c4adde589333aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404302"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579585"
 ---
 # <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
 
-Získání hodnoty z aktuální prostředí.  Verze [_dupenv_s –, _wdupenv_s –](dupenv-s-wdupenv-s.md) , přidělit paměť s [_malloc_dbg –](malloc-dbg.md) poskytnout další informace o ladění.
+Získání hodnoty z aktuálního prostředí.  Verze [_dupenv_s – _wdupenv_s –](dupenv-s-wdupenv-s.md) , přidělení paměti s [_malloc_dbg](malloc-dbg.md) poskytnout další informace o ladění.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -74,7 +64,7 @@ errno_t _wdupenv_s_dbg(
 ### <a name="parameters"></a>Parametry
 
 *Vyrovnávací paměti*<br/>
-Vyrovnávací paměť pro uložení hodnota proměnné.
+Vyrovnávací paměť pro ukládání hodnotu proměnné.
 
 *numberOfElements*<br/>
 Velikost *vyrovnávací paměti*.
@@ -83,31 +73,31 @@ Velikost *vyrovnávací paměti*.
 Název proměnné prostředí.
 
 *blockType*<br/>
-Požadovaný typ bloku paměti: **_client_block –** nebo **_normal_block –**.
+Požadovaný typ bloku paměti: **_CLIENT_BLOCK** nebo **_NORMAL_BLOCK**.
 
 *Název souboru*<br/>
 Ukazatel na název zdrojového souboru nebo **NULL**.
 
-*lineNumber*<br/>
-Číslo řádku na zdrojový soubor nebo **NULL**.
+*Číslo řádku*<br/>
+Číslo řádku ve zdrojovém souboru nebo **NULL**.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu, kód chyby při selhání.
+Nula v případě úspěchu; při selhání kód chyby.
 
-Tyto funkce ověřit jejich parametrů; Pokud *vyrovnávací paměti* nebo *název_proměnné* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, nastavte funkce **errno** k **einval –** a vrátit **einval –**.
+Tyto funkce ověřují své parametry; Pokud *vyrovnávací paměti* nebo *název_proměnné* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, funkce nastaví **errno** k **EINVAL** a vrátit **EINVAL**.
 
-Pokud tyto funkce nemůže přidělit dostatek paměti, nastavují *vyrovnávací paměti* k **NULL** a *numberOfElements* 0, a vrátí **enomem –**.
+Pokud těmto funkcím nelze přidělit dostatek paměti, že nastavené *vyrovnávací paměti* k **NULL** a *numberOfElements* na 0 a vrátí **ENOMEM**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Dupenv_s_dbg –** a **_wdupenv_s_dbg –** funkce jsou stejné jako **_dupenv_s –** a **_wdupenv_s –** s tím rozdílem, že když **_DEBUG –** je definován, tyto funkce používají verzi ladění [malloc –](malloc.md), [_malloc_dbg –](malloc-dbg.md), přidělit paměť pro hodnotu proměnné prostředí. Informace o ladění funkce **_malloc_dbg –**, najdete v části [_malloc_dbg –](malloc-dbg.md).
+**_Dupenv_s_dbg –** a **_wdupenv_s_dbg –** funkce jsou stejné jako **_dupenv_s –** a **_wdupenv_s –** s tím rozdílem, že když **_DEBUG** je definován, tyto funkce používají ladicí verze [malloc](malloc.md), [_malloc_dbg](malloc-dbg.md), přidělení paměti pro hodnotu proměnné prostředí. Informace o ladění funkcí **_malloc_dbg**, naleznete v tématu [_malloc_dbg](malloc-dbg.md).
 
-Není nutné explicitně volat tyto funkce ve většině případů. Místo toho můžete definovat příznak **_crtdbg_map_alloc –**. Když **_crtdbg_map_alloc –** je definován, volání **_dupenv_s –** a **_wdupenv_s –** jsou mapovány na **_dupenv_s_dbg –** a **_wdupenv_s_dbg –**, s *blockType* nastavena na **_normal_block –**. Proto není nutné explicitně volat tyto funkce, pokud chcete označit bloky haldy jako **_client_block –**. Další informace o typech bloku, najdete v části [typy bloků v haldě ladění](/visualstudio/debugger/crt-debug-heap-details).
+Chcete-li explicitně volat tyto funkce ve většině případů nepotřebujete. Místo toho můžete definovat příznak **_CRTDBG_MAP_ALLOC**. Když **_CRTDBG_MAP_ALLOC** je definován, jsou volání **_dupenv_s –** a **_wdupenv_s –** budou přemapovány na **_dupenv_s_dbg –** a **_wdupenv_s_dbg –**, se *blockType* nastavena na **_NORMAL_BLOCK**. Proto není potřeba explicitně volat tyto funkce, pokud chcete označit jako bloky haldy **_CLIENT_BLOCK**. Další informace o typech bloku, naleznete v tématu [typy bloků na haldě ladění](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tdupenv_s_dbg –**|**_dupenv_s_dbg**|**_dupenv_s_dbg**|**_wdupenv_s_dbg**|
 
@@ -118,7 +108,7 @@ Není nutné explicitně volat tyto funkce ve většině případů. Místo toho
 |**_dupenv_s_dbg**|\<crtdbg.h>|
 |**_wdupenv_s_dbg**|\<crtdbg.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -149,7 +139,7 @@ pathext = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.pl
 nonexistentvariable = (null)
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)<br/>
 [Konstanty prostředí](../../c-runtime-library/environmental-constants.md)<br/>

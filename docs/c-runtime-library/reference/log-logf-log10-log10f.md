@@ -1,10 +1,6 @@
 ---
-title: protokol, logf –, logl, log10, log10f –, log10l | Microsoft Docs
-ms.custom: ''
+title: protokol, logf –, logl, log10, log10f –, log10l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - log10f
 - logf
@@ -34,8 +30,6 @@ f1_keywords:
 - log10f
 - log10l
 - log10
-dev_langs:
-- C++
 helpviewer_keywords:
 - calculating logarithms
 - log10f function
@@ -46,20 +40,16 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12f475cde27d4660f4b4936f3f7717a665b70e86
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8e3f73e61fefa7a39a6d53d63739b094d78c499
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402839"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543296"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>protokol, logf –, logl, log10, log10f –, log10l
 
-Vypočítá logaritmů.
+Výpočet logaritmů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -82,23 +72,23 @@ long double log10( long double x );  // C++ only
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Hodnota, jejíž logaritmus má být nalezen.
+Hodnota, jejíž logaritmus se má nacházet.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Protokolu** funkce vrátí přirozený logaritmus (základní *e*) z *x* v případě úspěchu. **Log10** funkce Vrátí logaritmus o základu 10. Pokud *x* je záporná, vrátí tyto funkce neomezené (IND), ve výchozím nastavení. Pokud *x* je 0, že budou vracet infinity (INF).
+**Protokolu** funkce vrátí přirozený logaritmus (základní *e*) z *x* v případě úspěšného ověření. **Log10** funkce Vrátí logaritmus o základu 10. Pokud *x* je negativní, vrátí tyto funkce neomezenou (Najít), ve výchozím nastavení. Pokud *x* je 0, vrátí nekonečno (INF).
 
-|Vstup|Výjimka SEH|Matherr – výjimka|
+|Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ QNAN, IND|žádná|_DOMAIN –|
-|± 0|ZERODIVIDE|–|
-|*x* < 0|NEPLATNÝ|_DOMAIN –|
+|ROZMEZÍ QNAN, AJÍT|žádná|_DOMÉNA|
+|± 0|ZERODIVIDE|_SING|
+|*x* < 0|NEPLATNÝ|_DOMÉNA|
 
-**protokol** a **log10** mít implementace, která používá Streaming SIMD Extensions 2 (SSE2). V tématu [_set_sse2_enable –](set-sse2-enable.md) informace a omezení používání SSE2 implementace.
+**protokol** a **log10** mít implementaci, která používá Streaming SIMD Extensions 2 (SSE2). Zobrazit [_set_sse2_enable –](set-sse2-enable.md) informace a omezení používání implementace SSE2.
 
 ## <a name="remarks"></a>Poznámky
 
-C++ umožňuje přetížení, takže můžete volat přetížení **protokolu** a **log10** , přijmout a vrátit **float** nebo **long double** hodnoty. V programu C **protokolu** a **log10** vždy přijmout a vrátit **dvojité**.
+Jazyk C++ umožňuje přetížení, takže můžete volat přetížení **protokolu** a **log10** , která používají a vrací **float** nebo **long double** hodnoty. V programu jazyka C **protokolu** a **log10** vždy převezme a vrátí **double**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -106,7 +96,7 @@ C++ umožňuje přetížení, takže můžete volat přetížení **protokolu** 
 |-------------|---------------------|
 |**protokol**, **logf –**, **logl**, **log10**, **log10f –**, **log10l**|\<Math.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -137,7 +127,7 @@ log( 9000.00 ) = 9.104980
 log10( 9000.00 ) = 3.954243
 ```
 
-Chcete-li vygenerovat logaritmů u jiných základů, použijte matematický vztah: protokolu základní b == přirozené protokolu (a) / přirozené protokolu (b).
+Chcete-li generovat logaritmů u jiných základů, použijte matematický vztah: protokolu základní b == přirozený logaritmus (o) / přirozené protokolu (b).
 
 ```cpp
 // logbase.cpp
@@ -163,7 +153,7 @@ int main()
 Log base 2 of 65536.000000 is 16.000000
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md) <br/>
 [exp, expf, expl](exp-expf.md) <br/>

@@ -1,10 +1,6 @@
 ---
-title: floorf – Floor, floorl – | Microsoft Docs
-ms.custom: ''
+title: floor, floorf, floorl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - floorf
 - floorl
@@ -27,28 +23,22 @@ f1_keywords:
 - floorl
 - _floorl
 - floorf
-dev_langs:
-- C++
 helpviewer_keywords:
 - floor function
 - floorf function
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83795c9388b3889f99c9283cbffd33755d63fcd8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 050b7ea0eedf07666fa52145eeaf43f8fde2e18b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399420"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647726"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
-Vypočítá podlaží hodnoty.
+Vypočítá dolní mez hodnoty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -77,25 +67,25 @@ Hodnota s plovoucí desetinnou čárkou.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Podlaží** funkce vrátí hodnotu s plovoucí desetinnou čárkou, která představuje největší číslo typu integer, která je menší než nebo rovno *x*. Neexistuje žádný návratový chyby.
+**Floor** funkce vrátí hodnotu s plovoucí desetinnou čárkou, která představuje největší celé číslo, které je menší než nebo rovna hodnotě *x*. Není vrácena žádná chyba.
 
-|Vstup|Výjimka SEH|Matherr – výjimka|
+|Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ QNAN, IND|žádná|_DOMAIN –|
+|ROZMEZÍ QNAN, AJÍT|žádná|_DOMÉNA|
 
-**Floor** má implementace, která používá Streaming SIMD Extensions 2 (SSE2). Informace a omezení o pomocí implementace SSE2 najdete v tématu [_set_sse2_enable –](set-sse2-enable.md).
+**dolní mez** má implementace, která používá Streaming SIMD Extensions 2 (SSE2). Informace a omezení týkající se použití implementace SSE2, naleznete v tématu [_set_sse2_enable –](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Poznámky
 
-C++ umožňuje přetížení, takže můžete volat přetížení **podlaží** , přijmout a vrátit **float** a **dlouho** **dvojité** hodnoty. V programu C **podlaží** vždy provede a vrátí **dvojité**.
+Jazyk C++ umožňuje přetížení, takže můžete volat přetížení **floor** , která používají a vrací **float** a **dlouhé** **double** hodnoty. V programu jazyka C **floor** vždy převezme a vrátí **double**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**Floor**, **floorf –**, **floorl –**|\<Math.h >|
+|**dolní mez**, **floorf –**, **floorl –**|\<Math.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -132,7 +122,7 @@ The ceil of 2.8 is 3.000000
 The ceil of -2.8 is -2.000000
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

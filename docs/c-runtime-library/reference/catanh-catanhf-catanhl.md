@@ -1,11 +1,6 @@
 ---
-title: catanh, catanhf, catanhl | Microsoft Docs
-ms.custom: ''
+title: catanh catanhf, catanhl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - catanh
 - catanhf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/catanh
 - complex/catanhf
 - complex/catanhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - catanh function
 - catanhf function
 - catanhl function
 ms.assetid: 1b6021cb-647a-41b4-9d7f-919cc8b57b86
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cd74d00e7f5be5e7631bc33fb9b7ea13eb32a407
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c71d4e44de72b54fd334fc2464ca221f36855a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393947"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646356"
 ---
-# <a name="catanh-catanhf-catanhl"></a>catanh, catanhf, catanhl
+# <a name="catanh-catanhf-catanhl"></a>catanh catanhf, catanhl
 
-Načte inverzní hyperbolický tangens čísla komplexní s větve kusy mimo interval [-1; + 1] pro skutečné osu.
+Načte inverzní hyperbolický tangens komplexního čísla s kusy větev mimo interval [-1; + 1] na skutečné ose.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -75,25 +64,25 @@ _Lcomplex catanhl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Komplexní číslo, které představuje úhel v radiánech.
+Komplexní čísla, která představuje úhel v radiánech.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Inverzní hyperbolický tangens *z*, v radiánech. Výsledkem je, bez vazby skutečné osy a v intervalu [-iπ/2; + iπ/2] pomyslná osy. Chyba domény dojde v případě *z* je mimo interval [-1, + 1]. Pokud dojde k chybě pólu *z* -1 nebo + 1.
+Inverzní hyperbolický tangens *z*, v radiánech. Výsledkem je bez vazby na skutečné ose a v intervalu [-iπ/2; + iπ/2] imaginární ose. Pokud dojde k chybě domény *z* nespadá do intervalu [-1, + 1]. Pole chyby dojde, pokud *z* -1 nebo + 1.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **catanh** , přijmout a vrátit **_Fcomplex** a **_Lcomplex** hodnoty. V programu C **catanh** vždy provede a vrátí **_Dcomplex** hodnotu.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **catanh** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **catanh** vždy převezme a vrátí **_Dcomplex** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Hlavička C|Hlavička C++|
+|Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
 |**catanh**, **catanhf**, **catanhl**|\<complex.h>|\<ccomplex >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [ctanh, ctanhf, ctanhl](ctanh-ctanhf-ctanhl.md)<br/>

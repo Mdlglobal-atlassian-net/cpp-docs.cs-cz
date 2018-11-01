@@ -1,35 +1,25 @@
 ---
-title: C3278 Chyba kompilátoru | Microsoft Docs
-ms.custom: ''
+title: Chyba kompilátoru C3278
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3278
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3278
 ms.assetid: 56f818f5-85a6-4792-843b-54fe16327658
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b993aaaee0e50eacf47ce594b4c5efa47f83dd18
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 7618336c08dd111e495d7e4102b8e61c6e927c39
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705072"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579744"
 ---
-# <a name="compiler-error-c3278"></a>C3278 chyby kompilátoru
+# <a name="compiler-error-c3278"></a>Chyba kompilátoru C3278
 
-> přímé volání rozhraní nebo čisté metoda '*metoda*' selže za běhu
+> Přímá volání metody interface nebo pure "*metoda*" selže v době běhu
 
 ## <a name="remarks"></a>Poznámky
 
-Došlo k volání metody rozhraní nebo čisté metoda, která není povolena.
+Došlo k volání metody rozhraní nebo čistě metody, což není povoleno.
 
 ## <a name="example"></a>Příklad
 

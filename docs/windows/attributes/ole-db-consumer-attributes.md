@@ -1,12 +1,6 @@
 ---
-title: Atributy příjemce technologie OLE DB (C++ COM) | Dokumentace Microsoftu
-ms.custom: ''
+title: Atributy příjemce technologie OLE DB (C++ COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - attributes [C++/CLI], database
 - attributes [C++/CLI], data access
@@ -15,17 +9,12 @@ helpviewer_keywords:
 - database attributes [C++/CLI]
 - attributes [C++/CLI], OLE DB consumer
 ms.assetid: 017b591f-8f9a-42b4-84d5-cc42a21ab0cc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 19c3e441ff4130d30f3aeb7957c5af85576fb9e1
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 036ac539fcac715ba12e4c7cf7fc83edd7a23c38
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50065860"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662936"
 ---
 # <a name="ole-db-consumer-attributes"></a>Atributy příjemce technologie OLE DB
 Atributy příjemce technologie OLE DB vložit kód, na základě [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-reference.md), chcete-li vytvořit pracovní technologie OLE DB příjemce, který provádí úlohy, jako je otevření tabulek, provádění příkazů a přístup k datům.

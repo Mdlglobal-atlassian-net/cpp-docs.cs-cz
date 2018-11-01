@@ -1,11 +1,6 @@
 ---
-title: exp2 – exp2f –, exp2l | Microsoft Docs
-ms.custom: ''
+title: exp2, exp2f, exp2l
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - exp2
 - exp2f
@@ -30,27 +25,21 @@ f1_keywords:
 - math/exp2f
 - exp2l
 - math/exp2l
-dev_langs:
-- C++
 helpviewer_keywords:
 - exp2 function
 - exp2f function
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aea847d367200635c8fecbd694f8a50be859b3ea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70a3b7eb610556d4a26de7cf0aad55affcdbdc94
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396719"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562757"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
 
-Vypočítá 2, vyvolá se zadanou hodnotou.
+Vypočítá 2 umocněné na zadanou hodnotu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -83,32 +72,32 @@ Hodnota exponent.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí exponent základu 2 *x*, který je 2<sup>x</sup>. Jinak vrátí jednu z následujících hodnot:
+Pokud je úspěšná, vrátí exponent základu 2 *x*, tedy 2<sup>x</sup>. V opačném případě vrátí jednu z následujících hodnot:
 
 |Problém|Vrátí|
 |-----------|------------|
 |*x* = ±0|1|
-|*x* = - INFINITY|+0|
-|*x* = + INFINITY|+ INFINITY|
-|*x* = NaN.|NaN|
-|Rozsah chybu přetečení|+ Huge_val – + HUGE_VALF, nebo + HUGE_VALL|
-|Podtečení rozsah chyby|Správný výsledek po zaokrouhlení|
+|*x* = - NEKONEČNO|+0|
+|*x* = + NEKONEČNO|+ NEKONEČNO|
+|*x* = NaN|NaN|
+|Chyba přetečení rozsahu|+ HUGE_VAL + HUGE_VALF, nebo + HUGE_VALL|
+|Chyba podtečení rozsahu|Správný výsledek, po zaokrouhlení|
 
-Vznikly chyby uvedené v [_matherr –](matherr.md).
+Jsou hlášeny chyby uvedené v [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **exp2 –** , přijmout a vrátit **float** a **long double** typy. V programu C **exp2 –** vždy provede a vrátí **dvojité**.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **exp2 –** , která používají a vrací **float** a **long double** typy. V programu jazyka C **exp2 –** vždy převezme a vrátí **double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Hlavička C|Hlavička C++|
+|Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
-|**Exp**, **expf –**, **expl**|\<Math.h >|\<cmath – >|
+|**Exp**, **expf –**, **expl**|\<Math.h >|\<cmath >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>

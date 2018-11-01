@@ -1,10 +1,6 @@
 ---
-title: imaxdiv – | Microsoft Docs
-ms.custom: ''
+title: imaxdiv
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - imaxdiv
 apilocation:
@@ -22,25 +18,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - imaxdiv
-dev_langs:
-- C++
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: db2a57e9b91672d39fbce5eaee061043604a0998
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 23067b2028fc11193fae707e25165fb0ce754515
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399693"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434455"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
-Vypočítá podílu a zbývající dva celočíselné hodnoty libovolnou velikost jako jednu operaci.
+Počítá podíl a zbytek dvou celočíselných hodnot všech velikostí jako jediná operace.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,18 +44,18 @@ imaxdiv_t imaxdiv(
 ### <a name="parameters"></a>Parametry
 
 *počet*<br/>
-Čítači.
+Čítač.
 
 *denom*<br/>
 Jmenovatel.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**imaxdiv –** volána s argumenty typu [intmax_t](../../c-runtime-library/standard-types.md) vrací strukturu typu [imaxdiv_t](../../c-runtime-library/standard-types.md) , zahrnuje podílu a zbytek.
+**imaxdiv** volána s argumenty typu [intmax_t](../../c-runtime-library/standard-types.md) vrátí strukturu typu [imaxdiv_t](../../c-runtime-library/standard-types.md) , která zahrnuje podíl a zbytek.
 
 ## <a name="remarks"></a>Poznámky
 
-**Imaxdiv –** funkce vydělí *kontrolních* podle *denom* a tím vypočítá podílu a zbytek. **Imaxdiv_t** struktura obsahuje podílu, **intmax_t** **potřebná**a zbývající, **intmax_t** **rem**. Znaménko podílu je stejný jako u matematickém podílu. Jeho absolutní hodnota je největší číslo typu integer, která je menší než hodnota absolutní matematickém podílu. Pokud jmenovatel hodnotu 0, program se ukončí s chybovou zprávou.
+**Imaxdiv** funkce rozdělí *číslo* podle *denom* a tím počítá podíl a zbytek. **Imaxdiv_t** struktura obsahuje podíl, **intmax_t** **quot**a zbytek **intmax_t** **rem**. Znaménko podílu je stejné jako matematický podíl. Jeho absolutní hodnota je největší celé číslo menší než absolutní hodnota matematického podílu. Je-li jmenovatelem 0, program se ukončí s chybovou zprávou.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -73,7 +63,7 @@ Jmenovatel.
 |-------------|---------------------|
 |**imaxdiv**|\<inttypes.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -103,14 +93,14 @@ int main(int argc, char *argv[])
 }
 ```
 
-Když vytvořené a pak volána s parametry příkazového řádku `9460730470000000 8766`, kód generuje tento výstup:
+Při sestavení a následném zavolání s parametry příkazového řádku `9460730470000000 8766`, kód generuje tento výstup:
 
 ```Output
 The call to imaxdiv(9460730470000000, 8766)
 results in a quotient of 1079252848505, and a remainder of 5170
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [div](div.md)<br/>

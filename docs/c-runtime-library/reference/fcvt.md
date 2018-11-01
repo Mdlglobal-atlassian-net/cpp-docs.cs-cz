@@ -1,10 +1,6 @@
 ---
-title: _fcvt – | Microsoft Docs
-ms.custom: ''
+title: _fcvt
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fcvt
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _fcvt
-dev_langs:
-- C++
 helpviewer_keywords:
 - converting floating point, to strings
 - _fcvt function
@@ -31,20 +25,16 @@ helpviewer_keywords:
 - fcvt function
 - floating-point functions
 ms.assetid: 74584c88-f0dd-4907-8fca-52da5df583f5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 272b8e4ba5e57d71b4b785bceef7e5ea2f0ac7c2
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: ae9323e3bb629fd61b35a8c844b00bfcc73235bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450417"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662056"
 ---
 # <a name="fcvt"></a>_fcvt
 
-Převede dvě desetinná čísla na řetězec. Bezpečnější verze této funkce je k dispozici. v tématu [_fcvt_s –](fcvt-s.md).
+Převede číslo s plovoucí desetinnou čárkou na řetězec. Bezpečnější verze této funkce je k dispozici. Zobrazit [_fcvt_s –](fcvt-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,28 +56,28 @@ char *_fcvt(
 Počet číslic za desetinnou čárkou.
 
 *DEC*<br/>
-Ukazatel na uložené pozici desetinné čárky.
+Ukazatel pozice uložené desetinné čárky.
 
 *sign*<br/>
-Ukazatel na uložené přihlašovací indikátoru.
+Ukazatel na ukazatel uložené přihlašování.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_fcvt –** vrací ukazatel na řetězec číslic, **NULL** k chybě.
+**_fcvt –** vrací ukazatel na řetězec číslic, **NULL** při chybě.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Fcvt –** funkce převede dvě desetinná čísla na řetězec znaků ukončený hodnotou null. *Hodnotu* parametr je číslo s plovoucí desetinnou čárkou má být převeden. **_fcvt –** ukládá číslice z *hodnotu* jako řetězec a připojí znak hodnoty null ('\0'). *Počet* parametr určuje počet číslic ukládaly za desetinnou čárkou. Jsou nadbytečné číslic zaokrouhlen *počet* umístí. Pokud máte méně než *počet* platných číslic, řetězec je doplněno nulami.
+**_Fcvt –** funkce převede číslo s plovoucí desetinnou čárkou na řetězec znaků zakončené znakem null. *Hodnotu* parametru je číslo s plovoucí desetinnou čárkou má být převeden. **_fcvt –** ukládá na číslice *hodnota* jako řetězec a připojí znak null ('\0'). *Počet* parametr určuje počet číslic, které mají být uloženy za desetinnou čárkou. Jsou nadbytečné číslic zaokrouhlena *počet* umístí. Pokud jsou kratší než *počet* číslicemi přesnosti, řetězec je doplněny nulami.
 
 Celkový počet číslic vrácený **_fcvt –** nesmí překročit **_CVTBUFSIZE**.
 
-Pouze číslice jsou uloženy v řetězci. Pozice desetinné čárky a znaménko *hodnotu* lze získat z *dec* a přihlásit po volání. *Dec* parametr odkazuje na celočíselnou hodnotu; uvádí tato hodnota celé číslo pozice od desetinné čárky s ohledem na začátku řetězce. Nula nebo záporná celočíselná hodnota označuje, zda desetinné čárky je nalevo od první číslice. Parametr *přihlašovací* odkazuje na celé číslo udávající znaménko *hodnotu*. Celé číslo nastavena na 0, pokud *hodnotu* kladné a je nastavená na nenulové číslo Pokud *hodnota* je záporná.
+Pouze číslice jsou uloženy v řetězci. Pozice desetinné čárky a znaménko *hodnotu* můžete získat *dec* a přihlašování po volání. *Dec* parametr odkazuje na celočíselnou hodnotu; poskytuje tuto hodnotu celého čísla pozici od desetinné čárky s ohledem na začátku řetězce. Nula nebo záporné celé číslo označuje, zda desetinné čárky je nalevo od první číslice. Parametr *přihlašování* odkazuje na celé číslo označující znaménko *hodnota*. Celé číslo je nastavena na 0, pokud *hodnotu* kladné a nastaven na nenulovou hodnotu, počet Pokud *hodnotu* je záporný.
 
-Rozdíl mezi **_ecvt –** a **_fcvt –** je při interpretaci *počet* parametr. **_ecvt –** interpretuje *počet* jako celkový počet číslic do výstupního řetězce, zatímco **_fcvt –** interpretuje *počet* jako počet číslic za desetinné čárky.
+Rozdíl mezi **_ecvt –** a **_fcvt –** probíhá vyhodnocení *počet* parametru. **_ecvt –** interpretuje *počet* jako celkový počet číslic ve výstupním řetězci, zatímco **_fcvt –** interpretuje *počet* jako počet číslic za desetinné čárky.
 
-**_ecvt –** a **_fcvt –** ke konverzi použijte jeden staticky přidělené vyrovnávací paměti. Každé volání na jednu z těchto rutin zničí výsledky z předchozího volání.
+**_ecvt –** a **_fcvt –** pomocí jedné staticky přidělenou vyrovnávací paměti pro převod. Každé volání některé z těchto rutin zničí výsledků z předchozího volání.
 
-Tato funkce ověří jeho parametry. Pokud *dec* nebo *přihlašovací* je **NULL**, nebo *počet* je 0, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [parametr Ověření](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **errno** je nastaven na **einval –** a **NULL** je vrácen.
+Tato funkce ověřuje své parametry. Pokud *dec* nebo *přihlašování* je **NULL**, nebo *počet* je 0, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [parametr Ověření](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **errno** je nastavena na **EINVAL** a **NULL** je vrácena.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -95,7 +85,7 @@ Tato funkce ověří jeho parametry. Pokud *dec* nebo *přihlašovací* je **NUL
 |--------------|---------------------|
 |**_fcvt**|\<stdlib.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -126,7 +116,7 @@ int main( void )
 source: 3.1415926535   buffer: '31415927'   decimal: 1   sign: 0
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>

@@ -1,10 +1,6 @@
 ---
-title: swab – | Microsoft Docs
-ms.custom: ''
+title: swab
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - swab
 apilocation:
@@ -21,22 +17,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - swab
-dev_langs:
-- C++
 helpviewer_keywords:
 - swab function
 ms.assetid: fb8b7137-420d-4485-bb65-e1ec68602905
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c5af1b73042a496f493b8f2f73208f2025c55b79
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5fd61f492e5b598c8c238182d114b6af68532dfd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397444"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468520"
 ---
 # <a name="swab"></a>swab
 
-Tato funkce POSIX je zastaralý. Používat vyhovující ISO C++ [_swab –](swab.md) místo.
+Tato funkce POSIX je zastaralá. Použít splňující podmínky ISO C++ [_swab –](swab.md) místo.

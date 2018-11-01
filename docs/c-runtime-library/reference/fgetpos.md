@@ -1,10 +1,6 @@
 ---
-title: fgetpos – | Microsoft Docs
-ms.custom: ''
+title: fgetpos
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fgetpos
 apilocation:
@@ -22,26 +18,20 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fgetpos
-dev_langs:
-- C++
 helpviewer_keywords:
 - fgetpos function
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b111a911083354c8d9478b2c914a0a5f7dfe7725
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e213c9830ffe6edf04b12a80828f14cc48f77524
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397382"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658416"
 ---
 # <a name="fgetpos"></a>fgetpos
 
-Získá datový proud pozice souboru indikátoru.
+Získá datový proud Indikátor pozice v souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,19 +44,19 @@ int fgetpos(
 
 ### <a name="parameters"></a>Parametry
 
-*Datový proud*<br/>
+*Stream*<br/>
 Cílový datový proud.
 
 *POS*<br/>
-Označení pozice úložiště.
+Indikátor pozice v úložišti.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěšného **fgetpos –** vrátí hodnotu 0. Při selhání, vrátí nenulovou hodnotu a nastaví **errno** na jednu z následujících manifest konstanty (definovanou v STDIO. H): **ebadf –**, což znamená, že zadaný datový proud není platný soubor ukazatel nebo není dostupný, nebo **einval –**, což znamená, že *datového proudu* hodnota nebo hodnota *pos* je neplatná, jako třeba když je buď ukazatele null. Pokud *datového proudu* nebo *pos* je **NULL** ukazatele, funkce vyvolá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md).
+V případě úspěšného ověření **fgetpos** vrátí hodnotu 0. Při selhání, vrátí nenulovou hodnotu a nastaví **errno** na jednu z následujících manifest konstanty (definované v STDIO. H): **EBADF**, což znamená, že zadaný datový proud není platným souborem ukazatel nebo není přístupný, nebo **EINVAL**, což znamená, že *stream* hodnotu nebo hodnotu *pos* je neplatný, třeba když buď je ukazatel s hodnotou null. Pokud *stream* nebo *pos* je **NULL** ukazatel myši, funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**Fgetpos –** funkce získá aktuální hodnotu *datového proudu* označení pozice souboru a ukládá je v objektu, na kterou odkazuje argument *pos*. **Fsetpos –** funkce můžete později použít informace uložené v *pos* resetovat *datového proudu* argumentu ukazatel na pozici v době **fgetpos –** byla volána. *Pos* hodnota je uložený ve formátu interní a je určena pro použití pouze systémem **fgetpos –** a **fsetpos –**.
+**Fgetpos** funkce získá aktuální hodnotu *stream* Indikátor pozice v souboru argumentu a ukládá ho do objektu odkazované *pos*. **Fsetpos** funkce můžete později použít informace uložené v *pos* resetovat *stream* argumentu ukazatel na pozici v době **fgetpos** byla volána. *Pos* hodnota uložená v interní formát a je určena pro použití pouze **fgetpos** a **fsetpos**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -74,7 +64,7 @@ V případě úspěšného **fgetpos –** vrátí hodnotu 0. Při selhání, vr
 |--------------|---------------------|
 |**fgetpos**|\<stdio.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -131,7 +121,7 @@ after fgetpos: gets a stream
 after fsetpos: gets a stream
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [fsetpos](fsetpos.md)<br/>

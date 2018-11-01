@@ -1,12 +1,6 @@
 ---
-title: Konvence knihovny C++ | Microsoft Docs
-ms.custom: ''
+title: Konvence knihovny C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - C++ Standard Library, conventions
 - classes [C++]
@@ -17,48 +11,44 @@ helpviewer_keywords:
 - coding conventions, C++ Standard Library
 - naming conventions [C++], C++ library
 ms.assetid: bf41b79a-2d53-4f46-8d05-779358335146
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a1140c5421f6b39498fa69199c4d7ff7ccdc2476
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f1790b75baea340d0b3ab1044290317055ac81d7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844234"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524778"
 ---
 # <a name="c-library-conventions"></a>Konvence knihovny C++
 
-Knihovna C++ dodržuje mnohem se stejnými názvů jako standardní knihovny jazyka C a navíc několik dalších podle zde uvedeného.
+Knihovny C++ dodržuje mnohem stejnými konvencemi jako standardní knihovny jazyka C a navíc několik dalších uvedených zde.
 
-Implementace má určitá zeměpisnou šířku v tom, jak uvádí typy a funkce v knihovně C++:
+Implementace má určitá zeměpisná šířka v tom, jak deklaruje typy a funkce v knihovně C++:
 
-- Názvy funkcí v knihovně standardní C může mít extern #"C++" nebo "C" propojení extern. Zahrnout hlavičku odpovídající standardní C spíše než deklarovat entity vložené knihovny.
+- Názvy funkcí v knihovně Standard C mohou mít # extern "C++" nebo propojení extern "C". Zahrňte vhodné záhlaví Standard C, spíše než deklarovat vložené entity knihovny.
 
-- Název funkce člena třídy knihovny může mít další funkce podpisy přes uvedených v tomto dokumentu. Můžete si být jisti, že volání funkce popsané v tomto poli se chová podle očekávání, ale nelze spolehlivě převzít adresu členské funkce knihovny. (Typ nemusí být očekávat.)
+- Název členské funkce v knihovně tříd může být podpisy další funkce nad hodnotami uvedenými v tomto dokumentu. Můžete si být jisti, že volání funkce je zde popsáno, jak se bude chovat podle očekávání, ale nelze spolehlivě převzetí adresy členské funkce knihovny. (Typ nemusí být co očekáváte.)
 
-- Třídy knihovny může mít nedokumentovanými (nevirtuální) základní třídy. Třída zdokumentovaný jako odvozené z jiné třídy, může ve skutečnosti být odvozen od třídy prostřednictvím jiné nedokumentovanými třídy.
+- Knihovna tříd může mít nedokumentované (nevirtuální) základní třídy. Třída zdokumentované odvozena z jiné třídy mohou ve skutečnosti odvozená z této třídy pomocí jiných nedokumentované tříd.
 
-- Typ definovaný jako synonymum pro nějaký typ celé číslo může být stejný jako jeden z několika různých celé číslo.
+- Typ definovaný jako synonymum pro nějaký typ celé číslo může být stejný jako jeden z několika rozdílnými celočíselnými typy.
 
-- Bitová maska typ se dá implementovat jako typ celé číslo nebo výčet. V obou případech můžete provádět bitové operace (například `AND` a `OR`) na hodnoty stejného typu bitové masky. Elementy `A` a `B` typu bitová maska jsou nenulové hodnoty tak, aby `A`  &  `B` je nulová.
+- Typ bitové masky je možné implementovat jako typ integer nebo výčet. V obou případech se může provedení bitové operace (například `AND` a `OR`) u hodnot typu stejný typ bitové masky. Prvky `A` a `B` typ bitové masky jsou nenulové hodnoty tak, aby `A`  &  `B` je nula.
 
-- Funkce knihovny, která nemá žádné specifikace výjimek může vyvolat výjimku libovolný, pokud jeho definice jasně omezuje tato možnost.
+- Funkce knihovny, který nemá žádné specifikace výjimky může vyvolat výjimku libovolného, pokud její definice jasně omezuje tato možnost.
 
 Na druhé straně platí určitá omezení:
 
-- Standardní knihovny jazyka C používá makra bez maskování. Jenom určité funkce, které jsou vyhrazené podpisy, nejsou to názvy funkcí sami.
+- Standardní knihovny jazyka C používá žádná makra maskování. Jenom konkrétní funkce, které jsou vyhrazená podpisy, ne názvy funkcí sami.
 
-- Název funkce knihovny mimo třídu nebude mít další, nedokumentovanými, funkce podpisy. Spolehlivě můžete využít svou adresu.
+- Název funkce knihovny mimo třídu nebudou mít další, nedokumentované, funkce podpisy. Můžete spolehlivě provést její adresu.
 
-- Základní třídy a členské funkce označen jako virtuální jsou assuredly virtuální při popsané jako nevirtuální jsou assuredly nevirtuální.
+- Základní třídy a označuje jako virtuální členské funkce jsou assuredly virtuální při těch popsaných jako nevirtuální jsou assuredly nevirtuální.
 
-- Dva typy určené knihovně C++ se liší vždy, není-li tento dokument explicitně navrhuje jinak.
+- Dva typy definované knihovnou jazyka C++ se vždy liší, není-li tento dokument explicitně navrhuje jinak.
 
-- Funkce Knihovna, včetně výchozí verze replaceable funkce, můžete vyvolat *maximálně* tyto výjimky uvedené v všechny specifikace výjimek. Žádné destruktory knihovna generování výjimek. Funkce standardní knihovny jazyka C může rozšířit výjimku, jako když `qsort` volání funkce porovnání, který vyvolá výjimku, ale není jinak vyvolají výjimky.
+- Knihovna, včetně výchozí verze nahraditelné funkcí, funkce může vyvolat *maximálně* těchto výjimek uvedené ve specifikaci žádné výjimky. Žádné destruktory knihovna vyvolávat výjimky. Funkce standardní knihovny jazyka C může propagovat výjimku, jako když `qsort` volání funkce porovnání, které vyvolá výjimku, ale jsou v opačném případě nevyvolají výjimky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

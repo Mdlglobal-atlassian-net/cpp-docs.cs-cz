@@ -1,10 +1,6 @@
 ---
-title: ctime_s –, _ctime32_s –, _ctime64_s –, _wctime_s –, _wctime32_s –, _wctime64_s – | Microsoft Docs
-ms.custom: ''
+title: ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ctime64_s
 - _wctime32_s
@@ -35,8 +31,6 @@ f1_keywords:
 - _tctime64_s
 - ctime_s
 - ctime32_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wctime32_s function
 - ctime64_s function
@@ -57,20 +51,16 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a3f9c5e6d9d6f0d910decae904cbbd75d995a6c4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0410aeda4bbec33738d01a9514181c19f351e2c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404315"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496368"
 ---
 # <a name="ctimes-ctime32s-ctime64s-wctimes-wctime32s-wctime64s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 
-Převést na řetězec hodnotu času a upravit nastavení místního časového pásma. Toto jsou verze [ctime _ctime64 –, _wctime –, _wctime64 –](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Převeďte hodnotu času na řetězec a proveďte úpravu pro nastavení místního časového pásma. Jde o verzích [ctime _ctime64, _wctime, _wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md) s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -133,55 +123,55 @@ errno_t _wctime64_s(
 ### <a name="parameters"></a>Parametry
 
 *Vyrovnávací paměti*<br/>
-Musí být dostatečně velký pro uložení 26 znaků. Ukazatel na výsledném řetězci znaků, nebo **NULL** pokud:
+Musí být dostatečně velký pro uložení 26 znaků. Ukazatel na výsledek řetězce znaků, nebo **NULL** pokud:
 
-- *sourceTime* představuje datum před půlnoc, 1. ledna 1970 UTC.
+- *sourceTime* představuje datum před půlnocí, 1. ledna 1970, UTC.
 
-- Pokud používáte **_ctime32_s –** nebo **_wctime32_s –** a *sourceTime* představuje datum po 23:59:59 18 leden 2038 UTC.
+- Pokud používáte **_ctime32_s** nebo **_wctime32_s** a *sourceTime* představuje datum po 23:59:59 18. ledna 2038 UTC.
 
-- Pokud používáte **_ctime64_s –** nebo **_wctime64_s –** a *sourceTime* představuje datum po 23:59:59, 31. prosince 3000, UTC.
+- Pokud používáte **_ctime64_s** nebo **_wctime64_s** a *sourceTime* představuje datum po 23:59:59, 31 prosince 3000 UTC.
 
-- Pokud používáte **_ctime_s** nebo **_wctime_s –**, tyto funkce jsou obálky na předchozí funkce. Najdete v části poznámky.
+- Pokud používáte **_ctime_s** nebo **_wctime_s**, tyto funkce jsou obálky pro předchozí funkce. V části poznámky.
 
 *numberOfElements*<br/>
 Velikost vyrovnávací paměti.
 
 *sourceTime*<br/>
-Ukazatel na uložené čas.
+Ukazatel na uložený čas.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu. Pokud dojde k chybě z důvodu neplatný parametr, je obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, je vrácena kód chyby. Kódy chyb jsou definovány v kód chyby. H; seznam těchto chybách naleznete v tématu [errno](../../c-runtime-library/errno-constants.md). V následující tabulce jsou uvedeny skutečné chybové kódy, vyvolána všechny chybové stavy.
+Nula v případě úspěchu. Pokud dojde k selhání z důvodu neplatného parametru, vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí se kód chyby. Kódy chyb jsou definovány v ERRNO. H. seznam těchto chyb, naleznete v tématu [errno](../../c-runtime-library/errno-constants.md). V následující tabulce jsou uvedeny kódy Skutečná chyba vyvolána všechny chybové stavy.
 
-## <a name="error-conditions"></a>Chybové stavy
+## <a name="error-conditions"></a>Chybové podmínky
 
 |*Vyrovnávací paměti*|*numberOfElements*|*sourceTime*|Vrátí|Hodnota v *vyrovnávací paměti*|
 |--------------|------------------------|------------|------------|-----------------------|
-|**HODNOTU NULL**|všechny|všechny|**EINVAL –**|nedojde ke změně|
-|Není **NULL** (odkazuje na platný paměti)|0|všechny|**EINVAL –**|nedojde ke změně|
-|není **hodnotu NULL.**|0 < velikost < 26|všechny|**EINVAL –**|prázdný řetězec.|
-|není **hodnotu NULL.**|>= 26|NULL|**EINVAL –**|prázdný řetězec.|
-|není **hodnotu NULL.**|>= 26|< 0|**EINVAL –**|prázdný řetězec.|
+|**HODNOTU NULL**|Všechny|Všechny|**EINVAL**|Nezměněno|
+|Není **NULL** (odkazuje na platný paměti)|0|Všechny|**EINVAL**|Nezměněno|
+|Není **NULL**|0 < velikost < 26|Všechny|**EINVAL**|Prázdný řetězec|
+|Není **NULL**|>= 26|NULL|**EINVAL**|Prázdný řetězec|
+|Není **NULL**|>= 26|< 0|**EINVAL**|Prázdný řetězec|
 
 ## <a name="remarks"></a>Poznámky
 
-**Ctime_s –** funkce převede hodnotu čas, který je uložený jako [time_t](../../c-runtime-library/standard-types.md) struktura na řetězec znaků. *SourceTime* hodnota se obvykle získávají z volání [čas](time-time32-time64.md), která vrátí počet sekund uběhlých od půlnoci (00: 00:00), 1. ledna 1970, koordinovaný světový čas (UTC). Návratová hodnota řetězec obsahuje přesně 26 znaků a má tvar:
+**Ctime_s** funkce převede hodnotu času, který je uložen jako [time_t](../../c-runtime-library/standard-types.md) struktury na znakové řetězce. *SourceTime* hodnota se obvykle získá z volání [čas](time-time32-time64.md), který vrátí dobu v sekundách uplynulých od půlnoci (00: 00:00), 1. ledna 1970, koordinovaného univerzálního času (UTC). Řetězec návratová hodnota obsahuje přesně 26 znaků a má formát:
 
 `Wed Jan 02 02:03:55 1980\n\0`
 
-24 hodin se používá. Všechna pole mít konstantní šířky. Znak nového řádku (\n) a znak hodnoty null (\0) zabírají posledních dvou pozic řetězce.
+Se používá 24hodinový formát. Všechna pole mají konstantní šířce. Znak nového řádku ('\n') a znak null ('\0') zabírají posledních dvou pozic řetězce.
 
-Řetězec převedený znaků se také upraví podle nastavení zóny Místní čas. Najdete v článku [čas](time-time32-time64.md), [_ftime –](ftime-ftime32-ftime64.md), a [localtime32_s –](localtime-s-localtime32-s-localtime64-s.md) funkce informace o konfiguraci místní čas a [_tzset –](tzset.md) Funkce informace o definování časové pásmo prostředí a globální proměnné.
+Řetězec převedený znak je také upravena podle nastavení místní časové pásmo. Zobrazit [čas](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md), a [localtime32_s –](localtime-s-localtime32-s-localtime64-s.md) funkce informace o konfiguraci místního času a [_tzset –](tzset.md) funkce pro informace o definování prostředí časové pásmo a globální proměnné.
 
-**_wctime32_s –** a **_wctime64_s –** jsou verze široká charakterová **_ctime32_s –** a **_ctime64_s –**; ukazatel vrácením široká charakterová řetězec. V opačném **_ctime64_s –**, **_wctime32_s –**, a **_wctime64_s –** chovají stejně jako na **_ctime32_s –**.
+**_wctime32_s** a **_wctime64_s** jsou širokoznaké verze **_ctime32_s** a **_ctime64_s**; vrací ukazatel na řetězec širokých znaků. V opačném případě **_ctime64_s**, **_wctime32_s**, a **_wctime64_s** chovají stejně jako **_ctime32_s**.
 
-**ctime_s –** je vložená funkce, která vyhodnotí jako **_ctime64_s –** a **time_t** je ekvivalentní **__time64_t –**. Pokud potřebujete vynutit kompilátoru interpretovat **time_t** jako starý 32bitovou verzi **time_t**, můžete definovat **_USE_32BIT_TIME_T**. Provedete to způsobí, že **ctime_s –** k vyhodnocení **_ctime32_s –**. Není doporučeno, protože vaše aplikace může selhat po 18. ledna 2038, a není povoleno na 64bitových platformách.
+**ctime_s** je vložená funkce, který se vyhodnotí **_ctime64_s** a **time_t** je ekvivalentní **__time64_t –**. Pokud je nutné donutit kompilátor k interpretaci **time_t** jako staré 32bitové **time_t**, můžete definovat **_USE_32BIT_TIME_T**. To způsobí, že to **ctime_s** vyhodnotilo **_ctime32_s**. Toto nastavení nedoporučujeme, protože může vaše aplikace selhat po 18. ledna 2038, a to není povoleno na 64bitových platformách.
 
-V jazyce C++ pomocí těchto funkcí se zjednodušilo díky šabloně přetížení; přetížení lze odvodit délka vyrovnávací paměti automaticky, takže není nutné zadat argument velikost. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky, takže odpadá nutnost určit velikost argumentu. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tctime_s –**|**ctime_s**|**ctime_s**|**_wctime_s**|
 |**_tctime32_s –**|**_ctime32_s**|**_ctime32_s**|**_wctime32_s**|
@@ -191,14 +181,14 @@ V jazyce C++ pomocí těchto funkcí se zjednodušilo díky šabloně přetíže
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**ctime_s –**, **_ctime32_s –**, **_ctime64_s –**|\<Time.h >|
-|**_wctime_s –**, **_wctime32_s –**, **_wctime64_s –**|\<Time.h > nebo \<wchar.h >|
+|**ctime_s**, **_ctime32_s**, **_ctime64_s**|\<Time.h >|
+|**_wctime_s**, **_wctime32_s**, **_wctime64_s**|\<Time.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -234,7 +224,7 @@ int main( void )
 The time is Fri Apr 25 13:03:39 2003
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Správa času](../../c-runtime-library/time-management.md)<br/>
 [asctime_s, _wasctime_s](asctime-s-wasctime-s.md)<br/>

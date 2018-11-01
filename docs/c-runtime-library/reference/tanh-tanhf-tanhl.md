@@ -1,10 +1,6 @@
 ---
-title: TANH, tanhf –, tanhl – | Microsoft Docs
-ms.custom: ''
+title: TANH, tanhf –, tanhl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tanh
 - tanhf
@@ -27,8 +23,6 @@ f1_keywords:
 - tanhf
 - tanhl
 - _tanhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - tanhl function
 - _tanhl function
@@ -36,20 +30,16 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 438c587099edafedbb2cc3feb4b3a285aa155a0d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b9c7269d3c945301106098fc944383bbc364e5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408517"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432383"
 ---
-# <a name="tanh-tanhf-tanhl"></a>TANH, tanhf –, tanhl –
+# <a name="tanh-tanhf-tanhl"></a>TANH, tanhf –, tanhl
 
-Vypočítá hyperbolický tangens.
+Vypočte hyperbolický tangens.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -71,23 +61,23 @@ long double tanh( long double x );  // C++ only
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Tanh** funkce Vrátí hyperbolický tangens *x*. Neexistuje žádný návratový chyby.
+**Tanh** funkce vrací hyperbolický tangens *x*. Není vrácena žádná chyba.
 
-|Vstup|Výjimka SEH|**Matherr –** výjimky|
+|Vstup|Výjimka SEH|**Matherr** výjimky|
 |-----------|-------------------|-------------------------|
-|ROZMEZÍ QNAN, IND|žádná|_DOMAIN –|
+|ROZMEZÍ QNAN, AJÍT|žádná|_DOMÉNA|
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **tanh** , přijmout a vrátit **float** nebo **dlouho** **dvojité** hodnoty. V programu C **tanh** vždy provede a vrátí **dvojité**.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **tanh** , která používají a vrací **float** nebo **dlouhé** **double** hodnoty. V programu jazyka C **tanh** vždy převezme a vrátí **double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaná hlavička (C)|Požadovaná hlavička (C)|
+|Rutina|Požadované záhlaví (C)|Požadované záhlaví (C)|
 |-------------|---------------------|-|
-|**TANH**, **tanhf –**, **tanhl –**|\<Math.h >|\<cmath – > nebo \<math.h >|
+|**TANH**, **tanhf –**, **tanhl**|\<Math.h >|\<cmath > nebo \<math.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -117,7 +107,7 @@ tan( 0.785398 ) = 1.000000
 tanh( 1.000000 ) = 0.761594
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

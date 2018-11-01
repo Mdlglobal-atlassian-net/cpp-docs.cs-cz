@@ -1,11 +1,6 @@
 ---
-title: FMA – fmaf –, fmal | Microsoft Docs
-ms.custom: ''
+title: fma, fmaf, fmal
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fma
 - fmaf
@@ -30,27 +25,21 @@ f1_keywords:
 - math/fma
 - math/fmaf
 - math/fmal
-dev_langs:
-- C++
 helpviewer_keywords:
 - fma function
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b28009a9c3cc4edceb9032660a0c2a71916dfb2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3b540a72c6f2fc2264d6366111831fbe2a02a6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401474"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529945"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
-Vynásobí dvě hodnoty společně, přidá třetí hodnota a pak zaokrouhlí výsledek, aniž by došlo ke ztrátě všech přesnost kvůli zprostředkující zaokrouhlení.
+Vynásobí dvě hodnoty společně, přidá třetí hodnotu a potom zaokrouhlí výsledek, aniž by ztratily všechny přesnost kvůli zprostředkující zaokrouhlení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -90,46 +79,46 @@ long double fmal(
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-První hodnota k násobení.
+První hodnota pro násobení.
 
 *y*<br/>
-Druhá hodnota mají vynásobit.
+Druhá hodnota pro násobení.
 
 *z*<br/>
 Hodnota k přidání.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí `(x * y) + z`. Návratová hodnota je zaokrouhlí formátu aktuální zaokrouhlení.
+Vrátí `(x * y) + z`. Návratová hodnota se zaokrouhlí formátu aktuální zaokrouhlení.
 
-Jinak může vrátit jednu z následujících hodnot:
+V opačném případě může vracet instanci jednoho z následujících hodnot:
 
 |Problém|Vrátí|
 |-----------|------------|
-|*x* = INFINITY, *y* = 0 nebo<br /><br /> *x* = 0, *y* = INFINITY|NaN|
-|*x* nebo *y* = přesný rozmezí INFINITY, *z* = INFINITY s opačným znaménkem|NaN|
-|*x* nebo *y* = NaN.|NaN|
-|Ne (*x* = 0, *y*= neomezené) a *z* = NaN.<br /><br /> Ne (*x*= neomezené, *y*= 0) a *z* = NaN.|NaN|
-|Rozsah chybu přetečení|±HUGE_VAL, ±HUGE_VALF nebo ±HUGE_VALL|
-|Podtečení rozsah chyby|správnou hodnotu po zaokrouhlení.|
+|*x* = NEKONEČNO, *y* = 0 nebo<br /><br /> *x* = 0, *y* = NEKONEČNO|NaN|
+|*x* nebo *y* = přesné rozmezí NEKONEČNO, *z* = NEKONEČNO s opačným znaménkem|NaN|
+|*x* nebo *y* = NaN|NaN|
+|Ne (*x* = 0, *y*= nekonečno) a *z* = NaN<br /><br /> Ne (*x*= nekonečno, *y*= 0) a *z* = NaN|NaN|
+|Chyba přetečení rozsahu|±HUGE_VAL, ±HUGE_VALF nebo ±HUGE_VALL|
+|Chyba podtečení rozsahu|správnou hodnotu, po zaokrouhlení.|
 
-Vznikly chyby uvedené v [_matherr –](matherr.md).
+Jsou hlášeny chyby uvedené v [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **FMA –** , přijmout a vrátit **float** a **dlouho** **dvojité** typy. V programu C **FMA –** vždy provede a vrátí **dvojité**.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **fma** , která používají a vrací **float** a **dlouhé** **double** typy. V programu jazyka C **fma** vždy převezme a vrátí **double**.
 
-Tato funkce vypočítá hodnotu, jako kdyby byly provedeny na neomezenou přesnost a pak zaokrouhlí konečný výsledek.
+Tato funkce vypočítá hodnotu jako by byly provedeny s nekonečnou přesností a zaokrouhlí pak konečný výsledek.
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Hlavička C|Hlavička C++|
+|Funkce|Záhlaví C|Hlaviček jazyka C++|
 |--------------|--------------|------------------|
-|**FMA –**, **fmaf –**, **fmal**|\<Math.h >|\<cmath – >|
+|**FMA**, **fmaf –**, **fmal**|\<Math.h >|\<cmath >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [remainder, remainderf, remainderl](remainder-remainderf-remainderl.md)<br/>
