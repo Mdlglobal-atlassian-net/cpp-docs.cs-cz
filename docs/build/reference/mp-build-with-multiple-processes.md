@@ -1,29 +1,19 @@
 ---
-title: /MP (sestavení pomocí několika procesů) | Dokumentace Microsoftu
-ms.custom: ''
+title: /MP (sestavení pomocí několika procesů)
 ms.date: 02/22/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.MultiProcessorCompilation
-dev_langs:
-- C++
 helpviewer_keywords:
 - -MP compiler option (C++)
 - /MP compiler option (C++)
 - MP compiler option (C++)
 - cl.exe compiler, multi-process build
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bb24ed970d3b02835d5545cb0eaf1d9fd8e81c7e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d0a3e50ca75535d505e46c0e454a8e0902b1ffb1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713424"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562081"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (sestavení pomocí několika procesů)
 

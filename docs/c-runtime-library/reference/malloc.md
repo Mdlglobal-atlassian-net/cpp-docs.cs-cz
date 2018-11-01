@@ -1,10 +1,6 @@
 ---
-title: malloc – | Microsoft Docs
-ms.custom: ''
+title: malloc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - malloc
 apilocation:
@@ -22,26 +18,20 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - malloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - malloc function
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f600deb7bfa9b65ed9bdf784f2a16bd037729a51
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e6a007fb6f089ebf1c9f5fc9ce59cbcbf0b13888
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405520"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50520364"
 ---
 # <a name="malloc"></a>malloc
 
-Přiděluje bloky paměti.
+Přidělí bloky paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,38 +44,38 @@ void *malloc(
 ### <a name="parameters"></a>Parametry
 
 *Velikost*<br/>
-Počet bajtů přidělit.
+Počet bajtů k přidělení.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**malloc –** vrací neplatný ukazatel na přidělené místo nebo **NULL** Pokud není k dispozici dostatek paměti. Jiné než vrátit ukazatel typu **void**, používat typ, který přetypovat na návratovou hodnotu. Prostor úložiště ukazuje návratovou hodnotu záruku, že vhodně zarovnána pro ukládání libovolného typu objektu, který má zarovnání požadavek menší než nebo rovna k u základní zarovnání. (V jazyce Visual C++, je základní zarovnání zarovnání, který se vyžaduje **dvojité**, nebo 8 bajtů. V kódu, která je cílena 64bitové platformy je 16 bajtů.) Použití [_aligned_malloc –](aligned-malloc.md) se přidělit úložiště pro objekty, které mají větší požadavek zarovnání – například typy SSE [__m128](../../cpp/m128.md) a **__m256**a typy, které jsou deklarovat pomocí `__declspec(align( n ))` kde **n** je větší než 8. Pokud *velikost* 0, **malloc** přiděluje položku nulové délky v haldě a vrací neplatný ukazatel na danou položku. Vždy zkontrolujte návratový z **malloc**i v případě, že je malá velikost paměti požadované.
+**malloc** vrací neplatný ukazatel do přiděleného místa nebo **NULL** Pokud není k dispozici dostatek paměti. Pro jiné než vrací ukazatel na typ **void**, použijte přetypování typu na návratovou hodnotu. Úložný prostor odkazovaný hodnotou return je zaručeno, že jako vhodně zarovnaný pro úložiště libovolného typu, který má požadavek na zarovnání nižší než nebo rovna na tento základní zarovnání. (V jazyce Visual C++ je je základní zarovnáním zarovnání, které je vyžadováno pro **double**, nebo 8 bajtů. V kódu, který cílí na 64bitové platformy je 16 bajtový.) Použití [_aligned_malloc](aligned-malloc.md) pro přidělení úložiště pro objekty, které mají větší požadavek na zarovnání – například typy SSE [__m128](../../cpp/m128.md) a **__m256**a typy, které jsou deklarovaná příkazem using `__declspec(align( n ))` kde **n** je větší než 8. Pokud *velikost* je 0, **malloc** přiděluje položku nulové délky v haldě a vrátí platný ukazatel na danou položku. Vždy zkontrolujte návrat z **malloc**, i když je velikost požadované paměti malá.
 
 ## <a name="remarks"></a>Poznámky
 
-**Malloc –** funkce přiděluje blok paměti alespoň *velikost* bajtů. Blok může být větší než *velikost* bajtů z důvodu místa, které je nutné pro informace o zarovnání a údržby.
+**Malloc** funkce přidělí blok paměti velikosti alespoň *velikost* bajtů. Blok může být větší než *velikost* bajtů z důvodu místa požadovaného pro informace o zarovnání a údržbě.
 
-**malloc –** nastaví **errno** k **enomem –** Pokud selže přidělení paměti nebo velikost paměti požadované překračuje **_heap_maxreq –**. Informace o tomto a dalších kódy chyb naleznete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**malloc** nastaví **errno** k **ENOMEM** Pokud selhání přidělení paměti, nebo pokud požadované množství paměti překročí **_heap_maxreq –**. Informace o tomto a dalších chybových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Kód spuštění používá **malloc –** se přidělit úložiště pro **_environ –**, *envp –*, a *argv –* proměnné. Následující funkce a jejich protějšky široká charakterová také zavolat **malloc –**.
+Spouštěcí kód používá **malloc** k přidělení úložiště pro **_environ**, *envp*, a *argv* proměnné. Následující funkce a jejich protějšky s širokými znaky také volat **malloc**.
 
 |||||
 |-|-|-|-|
 |[calloc](calloc.md)|[fscanf –](fscanf-fscanf-l-fwscanf-fwscanf-l.md)|[_getw](getw.md)|[setvbuf](setvbuf.md)|
-|[_exec – funkce](../../c-runtime-library/exec-wexec-functions.md)|[fseek](fseek-fseeki64.md)|[_popen](popen-wpopen.md)|[_spawn – funkce](../../c-runtime-library/spawn-wspawn-functions.md)|
+|[Funkce _exec](../../c-runtime-library/exec-wexec-functions.md)|[fseek](fseek-fseeki64.md)|[_popen](popen-wpopen.md)|[_spawn – funkce](../../c-runtime-library/spawn-wspawn-functions.md)|
 |[fgetc –](fgetc-fgetwc.md)|[fsetpos](fsetpos.md)|[printf](printf-printf-l-wprintf-wprintf-l.md)|[_strdup](strdup-wcsdup-mbsdup.md)|
-|[_fgetchar](fgetc-fgetwc.md)|[_fullpath –](fullpath-wfullpath.md)|[putc –](putc-putwc.md)|[Systém](system-wsystem.md)|
-|[fgets –](fgets-fgetws.md)|[fwrite](fwrite.md)|[putchar –](putc-putwc.md)|[_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
+|[_fgetchar](fgetc-fgetwc.md)|[_fullpath –](fullpath-wfullpath.md)|[putc](putc-putwc.md)|[Systém](system-wsystem.md)|
+|[fgets](fgets-fgetws.md)|[fwrite](fwrite.md)|[putchar](putc-putwc.md)|[_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
 |[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)|[getc](getc-getwc.md)|[_putenv](putenv-wputenv.md)|[ungetc –](ungetc-ungetwc.md)|
-|[fputc –](fputc-fputwc.md)|[GetChar](getc-getwc.md)|[Vloží](puts-putws.md)|[vfprintf –](vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)|
+|[fputc](fputc-fputwc.md)|[GetChar](getc-getwc.md)|[Vloží](puts-putws.md)|[vfprintf –](vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)|
 |[_fputchar](fputc-fputwc.md)|[_getcwd](getcwd-wgetcwd.md)|[_putw](putw.md)|[vprintf](vprintf-vprintf-l-vwprintf-vwprintf-l.md)|
 |[fputs –](fputs-fputws.md)|[_getdcwd](getcwd-wgetcwd.md)|[scanf](scanf-scanf-l-wscanf-wscanf-l.md)||
 |[fread](fread.md)|[Získá](../../c-runtime-library/gets-getws.md)|[_searchenv](searchenv-wsearchenv.md)||
 
-C++ [_set_new_mode –](set-new-mode.md) funkce nastaví nový režim obslužné rutiny pro **malloc –**. Nový režim obslužná rutina označuje, jestli při selhání, **malloc –** je volat nové rutiny obslužných rutin jako sady pomocí [_set_new_handler –](set-new-handler.md). Ve výchozím nastavení **malloc** nevyvolá nové rutiny ovladače při selhání při přidělování paměti. Toto výchozí chování můžete přepsat tak, aby, když **malloc –** nepodaří přidělit paměť, **malloc –** volání nové rutiny obslužná rutina ve stejné způsobem **nové** nemá operátor Když dojde k chybě ze stejného důvodu. Chcete-li přepsat výchozí nastavení, volejte `_set_new_mode(1)` časná v aplikaci nebo odkaz s NEWMODE. OBJ (viz [možnosti odkazů](../../c-runtime-library/link-options.md)).
+C++ [_set_new_mode](set-new-mode.md) funkce nastaví nový režim obslužné rutiny pro **malloc**. Nový režim obslužné rutiny Určuje, zda je při selhání, **malloc** je volat nové rutiny obsluhy úmluvu [_set_new_handler](set-new-handler.md). Ve výchozím nastavení **malloc** nevolá nové rutiny obsluhy při selhání přidělení paměti. Toto výchozí chování můžete přepsat tak, aby, když **malloc** selže přidělování paměti, **malloc** volá nové rutiny obsluhy ve stejném způsobu, jakým **nové** operátor Když selže ze stejného důvodu. Chcete-li přepsat výchozí hodnotu, zavolejte `_set_new_mode(1)` zpočátku v programu nebo propojení s knihovnou NEWMODE. OBJ (viz [možnosti propojení](../../c-runtime-library/link-options.md)).
 
-Když aplikace je spojená s verzí ladicí běhové knihovny jazyka C, **malloc –** přeloží na [_malloc_dbg –](malloc-dbg.md). Další informace o spravováni haldě ladění během najdete v tématu [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
+Když je aplikace spojena s ladicí verzí knihovny run-time C **malloc** přeloží na [_malloc_dbg](malloc-dbg.md). Další informace o tom, jak je spravována halda během procesu ladění, naleznete v tématu [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**malloc –** je označena `__declspec(noalias)` a `__declspec(restrict)`; to znamená, že funkce záruku, že není k úpravě globálních proměnných, a že ukazatele vrátí není alias. Další informace najdete v tématu [noalias](../../cpp/noalias.md) a [omezit](../../cpp/restrict.md).
+**malloc** je označen `__declspec(noalias)` a `__declspec(restrict)`; to znamená, že funkce je zaručeno, že neupraví globální proměnné a Vrácený ukazatel není alias. Další informace najdete v tématu [noalias](../../cpp/noalias.md) a [omezit](../../cpp/restrict.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -93,11 +83,11 @@ Když aplikace je spojená s verzí ladicí běhové knihovny jazyka C, **malloc
 |-------------|---------------------|
 |**malloc**|\<stdlib.h > a \<malloc.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -136,7 +126,7 @@ Memory space allocated for path name
 Memory freed
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přidělení paměti](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>

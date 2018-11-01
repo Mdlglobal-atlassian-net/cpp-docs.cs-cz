@@ -1,31 +1,21 @@
 ---
-title: '&lt;deque&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;deque –&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <deque>
-dev_langs:
-- C++
 helpviewer_keywords:
 - deque header
 ms.assetid: 4521fe92-5a91-4853-9e9f-59600bf9e46f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a0f8ce0e6078f77dc62953ed84ec42d0be26b99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 006b4f3a82fd750d99fde9db7e98445c2f2bb088
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850584"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513006"
 ---
-# <a name="ltdequegt"></a>&lt;deque&gt;
+# <a name="ltdequegt"></a>&lt;deque –&gt;
 
-Definuje deque – třída šablony kontejneru a několika podpůrné šablony.
+Definuje kontejner šablony třídy deque a několik podpůrných šablon.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,26 +28,26 @@ Definuje deque – třída šablony kontejneru a několika podpůrné šablony.
 
 |Operátor|Popis|
 |-|-|
-|[operator!=](../standard-library/deque-operators.md#op_neq)|Testy, pokud deque objekt na levé straně operátoru není stejný jako deque objekt na pravé straně.|
-|[operátor <](../standard-library/deque-operators.md#op_lt)|Testy, pokud deque objekt na levé straně operátor je menší než deque objekt na pravé straně.|
-|[Operátor\<=](../standard-library/deque-operators.md#op_gt_eq)|Pokud deque objekt na levé straně operátoru testů je menší než nebo rovna hodnotě deque objekt na pravé straně.|
-|[operator==](../standard-library/deque-operators.md#op_eq_eq)|Testy, pokud deque objekt na levé straně operátoru rovná deque objekt na pravé straně.|
-|[operátor >](../standard-library/deque-operators.md#op_gt)|Testy, pokud deque objekt na levé straně operátoru je větší než deque objekt na pravé straně.|
-|[operator>=](../standard-library/deque-operators.md#op_gt_eq)|Testy, pokud je deque objekt na levé straně operátoru větší než nebo rovna hodnotě deque objekt na pravé straně.|
+|[operator!=](../standard-library/deque-operators.md#op_neq)|Testuje, zda je objekt deque na levé straně operátoru není roven objektu deque na pravé straně.|
+|[Operator <](../standard-library/deque-operators.md#op_lt)|Testuje, zda je objekt deque na levé straně operátoru menší než objekt deque na pravé straně.|
+|[– Operátor\<=](../standard-library/deque-operators.md#op_gt_eq)|Testuje, zda je deque objekt na levé straně operátoru je menší než nebo roven objektu deque na pravé straně.|
+|[operator==](../standard-library/deque-operators.md#op_eq_eq)|Testuje, zda objekt deque na levé straně operátoru roven objektu deque na pravé straně.|
+|[Operator >](../standard-library/deque-operators.md#op_gt)|Testuje, zda je objekt deque na levé straně operátoru větší než deque objekt na pravé straně.|
+|[operator>=](../standard-library/deque-operators.md#op_gt_eq)|Testuje, zda je objekt deque na levé straně operátoru větší než nebo rovna hodnotě deque objekt na pravé straně.|
 
 ### <a name="functions"></a>Funkce
 
 |Funkce|Popis|
 |-|-|
-|[Swap](../standard-library/deque-functions.md#swap)|Elementy dvě deques výměny.|
+|[Prohození](../standard-library/deque-functions.md#swap)|Vymění prvky dvou deques.|
 
 ### <a name="classes"></a>Třídy
 
 |Třída|Popis|
 |-|-|
-|[deque – třída](../standard-library/deque-class.md)|Šablony třídy kontejnerů pořadí, které umožňuje uspořádat prvky daného typu v lineární uspořádání a jako vektory, povolí vysoká rychlost náhodného přístup k žádné elementu a efektivní vkládání a odstraňování za kontejnerem.|
+|[deque – třída](../standard-library/deque-class.md)|Třída šablony kontejnery sekvence, které uspořádat prvky daného typu v lineární uspořádání a stejně jako vektorů, umožňují rychlý náhodný přístup na libovolný element a efektivní vložení a odstranění zádi kontejneru.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
