@@ -1,28 +1,18 @@
 ---
-title: Zápis funkcí s vloženým sestavením | Dokumentace Microsoftu
-ms.custom: ''
+title: Zápis funkcí s vloženým sestavením
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - functions [C++], inline assembly
 - inline assembly [C++], writing functions
 - assembler [C++], writing functions
 - __asm keyword [C++], in functions
 ms.assetid: b5df8a04-fdc7-4622-8c9e-e4b618927497
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c8b2694d2dc5781a6ef521abdc97e98c928be92c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 7848a8f071f50f8d809a999a96a9c0f8193c480e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680825"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445185"
 ---
 # <a name="writing-functions-with-inline-assembly"></a>Zápis funkcí s vloženým sestavením
 

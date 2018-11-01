@@ -1,10 +1,6 @@
 ---
-title: _itoa_s –, _itow_s – funkce | Microsoft Docs
-ms.custom: ''
+title: _itoa_s – _itow_s – funkce
 ms.date: 03/21/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _itoa_s
 - _ltoa_s
@@ -60,8 +56,6 @@ f1_keywords:
 - ultot_s
 - i64tot_s
 - ui64tot_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ui64toa_s function
 - _itow_s function
@@ -81,20 +75,16 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 71808a65a58209f843cd65b4e53f49a1c9fd17f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47eb030790359f25a7df5275a247c071fb3d599f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404984"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441702"
 ---
 # <a name="itoas-ltoas-ultoas-i64toas-ui64toas-itows--ltows--ultows-i64tows-ui64tows"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s,  _ltow_s,  _ultow_s, _i64tow_s, _ui64tow_s
 
-Převede na řetězec, celé číslo. Toto jsou verze [_itoa –, _itow – funkce](itoa-itow.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Převede celé číslo na řetězec. Jde o verzích [_itoa – _itow – funkce](itoa-itow.md) s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -145,40 +135,40 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 Číslo, které má být převeden.
 
 *Vyrovnávací paměti*<br/>
-Výstupní vyrovnávací paměť, která obsahuje výsledek převodu.
+Výstupní vyrovnávací paměť, který obsahuje výsledek převodu.
 
 *Velikost*<br/>
-Velikost *vyrovnávací paměti* znaků nebo široké znaky.
+Velikost *vyrovnávací paměti* znaky nebo širokých znaků.
 
 *radix*<br/>
-Základ – nebo číselné základ pro převod *hodnotu*, která musí být v rozsahu 2 36.
+Základ číselné soustavy nebo číselný základ pro převod *hodnota*, která musí být v rozsahu 2 až 36.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěšného; Kód chyby při selhání. Pokud platí některá z následujících podmínek, funkce vyvolá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md).
+Nula v případě úspěchu; Kód chyby při selhání. Pokud platí kterákoli z následujících podmínek, funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
-### <a name="error-conditions"></a>Chybové stavy
+### <a name="error-conditions"></a>Chybové podmínky
 
-|value|Vyrovnávací paměti|velikost|základ –|Vrátí|
+|value|Vyrovnávací paměti|velikost|základ číselné soustavy|Vrátí|
 |-----------|------------|----------------------|-----------|------------|
-|všechny|**HODNOTU NULL**|všechny|všechny|**EINVAL –**|
-|všechny|všechny|<=0|všechny|**EINVAL –**|
-|všechny|všechny|< = délka řetězce výsledek požadované|všechny|**EINVAL –**|
-|všechny|všechny|všechny|*základ –* < 2 nebo *základ –* > 36|**EINVAL –**|
+|Všechny|**HODNOTU NULL**|Všechny|Všechny|**EINVAL**|
+|Všechny|Všechny|<=0|Všechny|**EINVAL**|
+|Všechny|Všechny|< = delka výsledném řetězci vyžaduje|Všechny|**EINVAL**|
+|Všechny|Všechny|Všechny|*základ číselné soustavy* < 2 nebo *základ číselné soustavy* > 36|**EINVAL**|
 
 ### <a name="security-issues"></a>Problémy se zabezpečením
 
-Tato funkce může vygenerovat porušení přístupu, pokud *vyrovnávací paměti* neodkazuje na platný paměti a není **NULL**, nebo pokud délka vyrovnávací paměti není dostatečně dlouhé, aby udržení výsledný řetězec.
+Tyto funkce můžete vygenerovat narušení přístupu, pokud *vyrovnávací paměti* neodkazuje na platný paměti a není **NULL**, nebo pokud délka vyrovnávací paměti není dostatečně dlouhé pro uchování výsledného řetězce.
 
 ## <a name="remarks"></a>Poznámky
 
 S výjimkou parametry a návratové hodnoty **_itoa_s –** a **_itow_s –** rodiny funkce mají stejné chování jako odpovídající méně bezpečné **_itoa –** a **_itow –** verze.
 
-V jazyce C++ pomocí těchto funkcí se zjednodušilo díky šabloně přetížení; přetížení automaticky odvození délka vyrovnávací paměti (takže není nutné zadat argument velikost) a starší, nezabezpečené funkce můžou automaticky nahradit se svými protějšky novější a zabezpečené. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky (tím eliminuje nutnost zadat argument velikosti) a dokážou automaticky nahradit starší, nezabezpečené funkce jejími novějšími, zabezpečené protějšky. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
-Verze knihovny ladění tyto funkce nejprve vyplnit vyrovnávací paměť s 0xFD. Chcete-li toto chování zakázat, použijte [_crtsetdebugfillthreshold –](crtsetdebugfillthreshold.md).
+Ladicí verze knihovny z těchto funkcí nejprve naplní vyrovnávací paměť hodnotou 0xFD. Chcete-li toto chování zakázat, použijte [_crtsetdebugfillthreshold –](crtsetdebugfillthreshold.md).
 
-CRT zahrnuje pohodlný makra definovat velikost vyrovnávací paměti vyžadované k převodu Nejdelší možná hodnota každého typu integer, včetně null ukončení a podepsat znak, pro několik běžných základny. Informace najdete v tématu [maximální převod počet makra](itoa-itow.md#maximum-conversion-count-macros).
+Knihovna CRT zahrnuje praktické makra definují velikost vyrovnávací paměti vyžadované k převodu nejdelší možnou hodnotu každého celočíselného typu, včetně ukončovacího znaku null a podepsat znak, pro několik běžných základních tříd. Informace najdete v tématu [maximální převodu počtu maker](itoa-itow.md#maximum-conversion-count-macros).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -197,11 +187,11 @@ CRT zahrnuje pohodlný makra definovat velikost vyrovnávací paměti vyžadovan
 |**_itoa_s –**, **_ltoa_s –**, **_ultoa_s –**, **_i64toa_s –**, **_ui64toa_s –**|\<stdlib.h>|
 |**_itow_s –**, **_ltow_s –**, **_ultow_s –**, **_i64tow_s –**, **_ui64tow_s –**|\<stdlib.h > nebo \<wchar.h >|
 
-Tyto funkce jsou specifické pro společnost Microsoft. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Tyto funkce jsou specifické pro společnost Microsoft. Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Tento příklad znázorňuje použití několik funkce pro převod celé číslo. Všimněte si, že [_countof –](countof-macro.md) makro lze použít pouze k určení velikosti vyrovnávací paměti, kdy deklarace pole je viditelné pro kompilátor a ne pro parametry, které mají zkažená na ukazatele.
+Tento příklad ukazuje použití některé z funkcí převodu celého čísla. Všimněte si, [_countof](countof-macro.md) – makro funguje jenom pro určení velikosti vyrovnávací paměti při deklaraci pole je viditelné kompilátoru a ne pro parametry, které mají zkažená na ukazatele.
 
 ```C
 // crt_itoa_s.c
@@ -269,7 +259,7 @@ base 3: 11112220022122120101211020120210210211220 (41 chars)
 base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 chars)
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
-[_itoa –, _itow – funkce](itoa-itow.md)<br/>
+[_itoa – _itow – funkce](itoa-itow.md)<br/>

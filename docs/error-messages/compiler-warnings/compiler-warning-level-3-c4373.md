@@ -1,41 +1,31 @@
 ---
-title: Kompilátoru (úroveň 3) upozornění C4373 | Microsoft Docs
-ms.custom: ''
+title: Kompilátor upozornění (úroveň 3) C4373
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4373
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4373
 ms.assetid: 670c0ba3-b7d6-4aed-b207-1cb84da3bcde
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fda965fe80fc26731cde7be5a71540e6454a7360
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 031b32a03d93a51f6fa00041a5b0bdf99e6eacf1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290176"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456053"
 ---
-# <a name="compiler-warning-level-3-c4373"></a>C4373 kompilátoru upozornění (úroveň 3)
+# <a name="compiler-warning-level-3-c4373"></a>Kompilátor upozornění (úroveň 3) C4373
 
-> '*funkce*': virtuální funkce přepsání*base_function*', předchozí verze kompilátoru přepsat při parametry pouze podle const nebo volatile kvalifikátory lišil.
+> "*funkce*': virtuální funkce přepíše*base_function*", předchozí verze kompilátoru nepřepsala, když se parametry lišily jenom podle kvalifikátory const/volatile
 
 ## <a name="remarks"></a>Poznámky
 
-Vaše aplikace obsahuje metodu v odvozené třídě, který přepíše virtuální metodu v základní třídě a parametry v metodě přepsání lišit pouze [const](../../cpp/const-cpp.md) nebo [volatile](../../cpp/volatile-cpp.md) kvalifikátor z parametry virtuální metody. To znamená, kompilátor musí vytvořit vazbu funkce odkaz na metodu buď základní nebo odvozené třídy.
+Vaše aplikace obsahuje metodu v odvozené třídě, která přepíše virtuální metodu v základní třídě a parametry v přepsání metody liší pouze [const](../../cpp/const-cpp.md) nebo [volatile](../../cpp/volatile-cpp.md) kvalifikátor z parametry virtuální metody. To znamená, že kompilátor musí mít vazbu funkce odkaz na metodu v některém základní nebo odvozené třídy.
 
-Verze kompilátoru před Visual Studio 2008 vazbu funkce metodu v základní třídě a potom zpráva s upozorněním. Další verze kompilátoru Ignorovat `const` nebo `volatile` kvalifikátor, vazbu funkce metodu v odvozené třídě a potom vydat varování **C4373**. Toto chování pozdější splňuje C++ standard.
+Verze kompilátoru před Visual Studio 2008 vytvořit vazbu funkce na metodu v základní třídě a potom vydat upozornění. Další verze kompilátor Ignorovat `const` nebo `volatile` kvalifikátor, vytvořit vazbu funkce na metodu v odvozené třídě a potom vydat upozornění **C4373**. Toto chování druhá možnost vyhovuje standardu jazyka C++.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad kódu generuje upozornění C4373. Chcete-li vyřešit tento problém, můžete je nastavit přepsání použít stejné odchylka nákladů kvalifikátory jako funkce základní člen nebo pokud jste nechtěli vytvořte přepsání, které poskytnete funkce v odvozené třídě jiný název.
+Následující příklad kódu vygeneruje upozornění C4373. Chcete-li vyřešit tento problém, můžete provést buď přepsat, použijte stejný kvalifikátory CV jako základní členská funkce, nebo pokud jste nechtěli vytvoříte přepsání, je můžete přidělit funkce v odvozené třídě jiný název.
 
 ```cpp
 // c4373.cpp
