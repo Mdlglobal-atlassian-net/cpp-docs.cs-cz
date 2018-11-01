@@ -1,10 +1,6 @@
 ---
-title: ungetch – | Microsoft Docs
-ms.custom: ''
+title: ungetch
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - ungetch
 apilocation:
@@ -21,25 +17,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - ungetch
-dev_langs:
-- C++
 helpviewer_keywords:
 - ungetch function
 ms.assetid: 6921232f-6317-41cd-948b-91d56a11bc0e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ff42d774418a4c1e649ff355ccc8180132e75857
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ede8c8c8a939b79132e41c2f4fd5713570c147df
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407197"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484239"
 ---
 # <a name="ungetch"></a>ungetch
 
-Tato funkce POSIX je zastaralý. Používat vyhovující ISO C++ [_ungetch –](ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md) místo.
+Tato funkce POSIX je zastaralá. Použít splňující podmínky ISO C++ [_ungetch](ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md) místo.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
