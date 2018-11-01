@@ -1,26 +1,16 @@
 ---
-title: 'Návod: Použití Concurrency Runtime v aplikaci podporou modelu COM | Dokumentace Microsoftu'
-ms.custom: ''
+title: 'Návod: Použití Concurrency Runtime v aplikaci s podporou modelu COM'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Concurrency Runtime, use with COM
 - COM, use with the Concurrency Runtime
 ms.assetid: a7c798b8-0fc8-4bee-972f-22ef158f7f48
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cb1134e88add6f4571c42627cb27f669cfd9f5c9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 227d06c74826b8936909b774d1a7e3a222ac8023
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383087"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554931"
 ---
 # <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>Návod: Použití Concurrency Runtime v aplikaci s podporou modelu COM
 

@@ -1,30 +1,21 @@
 ---
-title: -permissive - (shoda se standardy) | Dokumentace Microsoftu
+title: / permissive-(shoda se standardy)
 ms.date: 06/21/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /permissive
 - VC.Project.VCCLCompilerTool.ConformanceMode
-dev_langs:
-- C++
 helpviewer_keywords:
 - /permissive compiler options [C++]
 - -permissive compiler options [C++]
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1f2f0b1ca5351fbf2cfa2ab4b3233f8e709fae44
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 85439598ae4c3e0f9ef923f21e701e0399aefa70
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131213"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619294"
 ---
 # <a name="permissive--standards-conformance"></a>/ permissive-(shoda se standardy)
 
@@ -469,7 +460,7 @@ Ve verzích před Visual Studio 2017 verze 15.5 použijte tento postup:
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Viz také:
 

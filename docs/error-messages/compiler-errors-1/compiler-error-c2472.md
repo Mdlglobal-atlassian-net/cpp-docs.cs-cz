@@ -1,37 +1,27 @@
 ---
-title: C2472 Chyba kompilátoru | Microsoft Docs
-ms.custom: ''
+title: Chyba kompilátoru C2472
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2472
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2472
 ms.assetid: 3b36bcdc-2ba5-4357-ab88-7545ba0551cd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 43279190847322fa2154c6faababdcd41b490eef
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d2f104bb61915f8d19d5fff22eea17929c0e8d74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704857"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50632736"
 ---
-# <a name="compiler-error-c2472"></a>C2472 chyby kompilátoru
+# <a name="compiler-error-c2472"></a>Chyba kompilátoru C2472
 
-> '*funkce*' nemůže být generována ve spravovaném kódu: '*zpráva*'; kompilace s volbou/CLR ke generování smíšený bitové kopie
+> "*funkce*' nemůže generovat ve spravovaném kódu:"*zpráva*"; proveďte kompilaci s parametrem/CLR k vygenerování smíšenou bitovou kopii
 
 ## <a name="remarks"></a>Poznámky
 
-Tato chyba nastane, když typy nejsou podporované ve spravovaném kódu se používají v rámci čistý společné prostředí runtime (CLR) jazyk. Kompilovat s **/CLR** vyřešit chyby.
+K této chybě dojde při typy nepodporované ve spravovaném kódu se používají v rámci čisté prostředí common language runtime (CLR). Kompilovat s **/CLR** tuto chybu napravíme.
 
-**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017.
+**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
 
 ## <a name="example"></a>Příklad
 

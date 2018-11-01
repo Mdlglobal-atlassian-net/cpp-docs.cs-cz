@@ -1,10 +1,6 @@
 ---
-title: _fputc_nolock –, _fputwc_nolock – | Microsoft Docs
-ms.custom: ''
+title: _fputc_nolock, _fputwc_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fputwc_nolock
 - _fputc_nolock
@@ -28,8 +24,6 @@ f1_keywords:
 - fputtc_nolock
 - _fputwc_nolock
 - _fputtc_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, writing characters to
 - fputwc_nolock function
@@ -39,20 +33,16 @@ helpviewer_keywords:
 - _fputtc_nolock function
 - _fputwc_nolock function
 ms.assetid: c63eb3ad-58fa-46d0-9249-9c25f815eab9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c2ef3afffe1cbd8764e389f613b3679e3fa5a580
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 370b7e9f20bcc32f6243cff804381b5453801dbd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398552"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579763"
 ---
 # <a name="fputcnolock-fputwcnolock"></a>_fputc_nolock, _fputwc_nolock
 
-Zapíše znak na datový proud, bez blokování vlákno.
+Zapíše znak do proudu bez zamčení vlákna.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -70,35 +60,35 @@ wint_t _fputwc_nolock(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak, který má být zapsána.
+Znak k zapsání.
 
-*Datový proud*<br/>
-Ukazatel **souboru** struktura.
+*Stream*<br/>
+Ukazatel **souboru** struktury.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí znak zapsána. Informace o chybě, najdete v části [fputc –, fputwc –](fputc-fputwc.md).
+Každá z těchto funkcí vrací napsaný znak. Informace o chybě naleznete v tématu [fputc fputwc –](fputc-fputwc.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_fputc_nolock –** a **_fputwc_nolock –** jsou stejné jako **fputc –** a **fputwc –**, s tím rozdílem, že nejsou chráněny před narušení podle jiná vlákna. Může být rychlejší, protože nevznikají nároky na uzamčení jiná vlákna. Tyto funkce lze používejte pouze v kontextu vláken jako je například aplikace nebo kde oboru volání již zpracovává izolace přístup z více vláken.
+**_fputc_nolock** a **_fputwc_nolock –** jsou stejné jako **fputc** a **fputwc –** v uvedeném pořadí, s tím rozdílem, že nejsou chráněny před rušením podle ostatní vlákna. Mohou být rychlejší, protože nejsou spojené režii uzamykáním ostatních vláken. Tyto funkce používejte pouze v kontextech bezpečných na vlákna, jako je například aplikace s jedním vláknem nebo pokud volající obor již zpracovává izolaci vláken.
 
-Dvě funkce chovají stejně jako datový proud se při otevření v režimu ANSI. **_fputc_nolock –** výstup aktuálně nepodporuje do proudu kódování UNICODE.
+Tyto dvě funkce se chovají stejně jako v případě, že datový proud je otevřen v režimu ANSI. **_fputc_nolock** aktuálně nepodporuje výstup do datového proudu UNICODE.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_fputtc_nolock –**|**_fputc_nolock –**|**_fputc_nolock –**|**_fputwc_nolock –**|
+|**_fputtc_nolock –**|**_fputc_nolock**|**_fputc_nolock**|**_fputwc_nolock –**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**_fputc_nolock –**|\<stdio.h>|
+|**_fputc_nolock**|\<stdio.h>|
 |**_fputwc_nolock –**|\<stdio.h > nebo \<wchar.h >|
 
-Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou –**stdin –**, **stdout**, a **stderr**– musí být přesměrována C běhové funkce mohli používat v aplikacích pro UPW . Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Konzole není podporována v aplikacích pro univerzální platformu Windows (UPW). Standardní datový proud popisovačů, které jsou spojeny s konzolou –**stdin**, **stdout**, a **stderr**– musí být přesměrován před funkcí jazyka C za běhu můžete použít v aplikacích pro UWP . Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -125,8 +115,8 @@ int main( void )
 This is a test of _fputc_nolock!!
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>
 [putc, putwc](putc-putwc.md)<br/>

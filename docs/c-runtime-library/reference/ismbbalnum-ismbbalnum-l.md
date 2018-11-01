@@ -1,10 +1,6 @@
 ---
-title: _ismbbalnum –, _ismbbalnum_l – | Microsoft Docs
-ms.custom: ''
+title: _ismbbalnum, _ismbbalnum_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbalnum
 - _ismbbalnum_l
@@ -26,28 +22,22 @@ f1_keywords:
 - ismbbalnum
 - _ismbbalnum_l
 - ismbbalnum_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbbalnum_l function
 - ismbbalnum function
 - ismbbalnum_l function
 - _ismbbalnum function
 ms.assetid: 8025de50-a871-49fd-9ae6-f437b47aa987
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3ace530d1190de5df5eaac92d412b86f2b2cc3d4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b5f54754907c09a34b0f4c3bae3e5c27336ca36
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398705"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554840"
 ---
 # <a name="ismbbalnum-ismbbalnuml"></a>_ismbbalnum, _ismbbalnum_l
 
-Určuje, zda je zadaný znak vícebajtové alfanumerické nebo číselné.
+Určuje, zda je zadaný vícebajtový znak abecední nebo numerický.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,20 +53,20 @@ int _ismbbalnum_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Celé číslo má být testována.
+Celé číslo k testování.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_ismbbalnum –** vrátí nenulovou hodnotu, pokud výraz:
+**_ismbbalnum –** vrací nenulovou hodnotu, pokud výraz:
 
 `isalnum(c) || _ismbbkalnum(c)`
 
-je nenulové hodnoty pro *c*, nebo 0, pokud není.
+je nenulový pro *c*, nebo 0, pokud není.
 
-Verze této funkce se **_l** přípona se shoduje s tím rozdílem, že používá národní prostředí předaná místo aktuální národní prostředí pro své chování závislých na národním prostředí.
+Verze této funkce se **_l** přípona je identická s tím rozdílem, že používá národní prostředí namísto aktuálního národního prostředí pro své chování závislé na národním prostředí.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -85,13 +75,13 @@ Verze této funkce se **_l** přípona se shoduje s tím rozdílem, že použív
 |**_ismbbalnum**|\<Mbctype.h >|
 |**_ismbbalnum_l**|\<Mbctype.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Klasifikace bajtů](../../c-runtime-library/byte-classification.md)<br/>
 [_ismbb – rutiny](../../c-runtime-library/ismbb-routines.md)<br/>

@@ -1,10 +1,6 @@
 ---
-title: _set_new_handler – | Microsoft Docs
-ms.custom: ''
+title: _set_new_handler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_new_handler
 apilocation:
@@ -23,28 +19,22 @@ apitype: DLLExport
 f1_keywords:
 - _set_new_handler
 - set_new_handler
-dev_langs:
-- C++
 helpviewer_keywords:
 - _set_new_handler function
 - set_new_handler function
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 30cd0c2a991ec046b0b1f55100c58641833cb992
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bc7718503f59c69868a75cac9383286a548fc307
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409807"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640307"
 ---
 # <a name="setnewhandler"></a>_set_new_handler
 
-Přenosy ovládacího prvku na váš mechanismus zpracování chyb, pokud **nové** operátor se nepodařilo přidělit paměť.
+Přenese ovládací prvek na váš mechanismus zpracování chyb, pokud **nové** operátor selže přidělování paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,21 +45,21 @@ _PNH _set_new_handler( _PNH pNewHandler );
 ### <a name="parameters"></a>Parametry
 
 *pNewHandler*<br/>
-Ukazatel na zpracování funkce paměti zadané aplikace. Argument 0 způsobí, že novou obslužnou rutinu odeberou.
+Ukazatel na zpracování funkce paměti poskytované aplikací. Argument 0 způsobí, že novou obslužnou rutinu, která se má odebrat.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrací ukazatel na předchozí výjimku zpracování funkce registrovaných **_set_new_handler –** tak, aby předchozí funkce může být obnovena novější. Pokud byla nastavena žádná předchozí funkce, návratovou hodnotu lze použít k obnovení výchozího chování; Tato hodnota může být **NULL**.
+Vrací ukazatel na předchozí výjimku zpracování funkcí registrovaných **_set_new_handler**, takže lze později obnovit předchozí funkce. Pokud byla nastavena žádná předchozí funkce, vrácená hodnota je možné obnovit výchozí chování; Tato hodnota může být **NULL**.
 
 ## <a name="remarks"></a>Poznámky
 
-C++ **_set_new_handler –** funkce určuje funkci zpracování výjimek, získá kontrolu, pokud **nové** operátor se nepodařilo přidělit paměť. Pokud **nové** selže, spuštění systému automaticky volá funkci zpracování výjimek, který byl předán jako argument pro **_set_new_handler –**. **_Pnh –**, definované v New.h, je zde ukazatel na funkci, která vrátí typ **int** a trvá argument typu **size_t –**. Použití **size_t –** k určení množství místa, která bude přidělena.
+C++ **_set_new_handler** funkce určuje funkci zpracování výjimek, která získá kontrolu, pokud **nové** operátor selže přidělování paměti. Pokud **nové** selže, systém za běhu automaticky volá funkci zpracování výjimek, který byl předán jako argument **_set_new_handler**. **_Pnh –**, definované v New.h, je ukazatel na funkci, která vrací typ **int** a přebírá argument typu **size_t**. Použití **size_t** k určení množství místa, která bude přidělena.
 
 Neexistuje žádný výchozí obslužnou rutinu.
 
-**_set_new_handler –** je v podstatě schéma kolekce paměti. Běhu systému opakuje přidělení pokaždé, když funkce vrátí nenulovou hodnotu, se nezdaří, pokud funkce vrátí hodnotu 0.
+**_set_new_handler** je v podstatě schéma uvolnění paměti. Za běhu systému zopakuje pokus o přidělení pokaždé, když vaše funkce vrátí nenulovou hodnotu a selže, pokud funkce vrátí hodnotu 0.
 
-Výskyt **_set_new_handler –** funkce v programu zaregistruje funkci zpracování výjimek, který je uvedený v seznamu argument s běhu systému:
+Výskyt **_set_new_handler** funkce v programu zaregistruje funkci zpracování výjimek zadaných v seznamu argumentů systému za běhu:
 
 ```cpp
 // set_new_handler1.cpp
@@ -87,7 +77,7 @@ int main( void )
 }
 ```
 
-Můžete uložit adresu funkce, která naposledy byl předán **_set_new_handler –** funkce a obnovte ji později:
+Adresa funkce, která byla naposledy předána můžete uložit **_set_new_handler** fungovat a později ji obnovit:
 
 ```cpp
    _PNH old_handler = _set_new_handler( my_handler );
@@ -98,19 +88,19 @@ Můžete uložit adresu funkce, která naposledy byl předán **_set_new_handler
    // . . .
 ```
 
-C++ [_set_new_mode –](set-new-mode.md) funkce nastaví nový režim obslužné rutiny pro [malloc –](malloc.md). Nový režim obslužná rutina označuje, jestli při selhání, **malloc –** je volat nové rutiny obslužných rutin jako sady pomocí **_set_new_handler –**. Ve výchozím nastavení **malloc** nevyvolá nové rutiny ovladače při selhání při přidělování paměti. Toto výchozí chování můžete přepsat tak, aby, když **malloc –** nepodaří přidělit paměť, **malloc –** volání nové rutiny obslužná rutina ve stejné způsobem **nové** nemá operátor Když dojde k chybě ze stejného důvodu. Chcete-li přepsat výchozí nastavení, zavolejte:
+C++ [_set_new_mode](set-new-mode.md) funkce nastaví nový režim obslužné rutiny pro [malloc](malloc.md). Nový režim obslužné rutiny Určuje, zda je při selhání, **malloc** je volat nové rutiny obsluhy úmluvu **_set_new_handler**. Ve výchozím nastavení **malloc** nevolá nové rutiny obsluhy při selhání přidělení paměti. Toto výchozí chování můžete přepsat tak, aby, když **malloc** selže přidělování paměti, **malloc** volá nové rutiny obsluhy ve stejném způsobu, jakým **nové** operátor Když selže ze stejného důvodu. Pokud chcete přepsat výchozí nastavení, volání:
 
 ```cpp
 _set_new_mode(1);
 ```
 
-časná v vašeho programu nebo odkaz s Newmode.obj.
+v rané fázi vašeho programu nebo propojení s Newmode.obj.
 
-Pokud uživatelem definované `operator new` je k dispozici nové funkce obslužných rutin nejsou automaticky volána při selhání.
+Pokud uživatelem definované `operator new` je k dispozici nové funkce obslužnou rutinu nejsou volány automaticky při selhání.
 
-Další informace najdete v tématu [nové](../../cpp/new-operator-cpp.md) a [odstranit](../../cpp/delete-operator-cpp.md) v *referenční příručka jazyka C++*.
+Další informace najdete v tématu [nové](../../cpp/new-operator-cpp.md) a [odstranit](../../cpp/delete-operator-cpp.md) v *referenční dokumentace jazyka C++*.
 
-Na jeden **_set_new_handler –** obslužné rutiny pro všechny dynamicky propojené knihovny DLL nebo spustitelné soubory; i v případě, že zavoláte **_set_new_handler –** vaší obslužné rutiny může být nahrazena jinou nebo chcete nahradit Obslužná rutina nastavit jiný knihovny DLL nebo spustitelný soubor.
+Existuje jeden **_set_new_handler** obslužné rutiny pro všechny dynamicky propojené knihovny DLL nebo spustitelné soubory, i v případě, že zavoláte **_set_new_handler** vaše obslužná rutina může být nahrazena jinou nebo nahrazujete Obslužná rutina nastavením jiného souboru DLL nebo spustitelného souboru.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -118,11 +108,11 @@ Na jeden **_set_new_handler –** obslužné rutiny pro všechny dynamicky propo
 |-------------|---------------------|
 |**_set_new_handler**|\<New.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-V tomto příkladu při přidělení nezdaří, je ovládací prvek přenesen na MyNewHandler. Argument předaný MyNewHandler je počet bajtů. Hodnota vrácená z MyNewHandler je příznak označující, zda je třeba opakovat přidělení: nenulovou hodnotu označuje, že je třeba opakovat přidělení a nulová hodnota znamená, že přidělení selhala.
+V tomto příkladu když selže přidělování je kontrola předána MyNewHandler. Argument předaný MyNewHandler je počet bajtů. Hodnota vrácená z MyNewHandler je příznak označující, zda je třeba opakovat přidělení: Nenulová hodnota označuje, že je třeba opakovat přidělení a nulová hodnota označuje, že se nepodařilo přidělit.
 
 ```cpp
 // crt_set_new_handler.cpp
@@ -170,7 +160,7 @@ This application has requested the Runtime to terminate it in an unusual way.
 Please contact the application's support team for more information.
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přidělení paměti](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>

@@ -1,29 +1,19 @@
 ---
-title: Stránky vlastností nástroje Generátor dokumentů XML | Dokumentace Microsoftu
-ms.custom: ''
+title: Stránky vlastností nástroje Generátor dokumentů XML
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCXDCMakeTool.ValidateIntelliSense
 - VC.Project.VCXDCMakeTool.SuppressStartupBanner
 - VC.Project.VCXDCMakeTool.DocumentLibraryDependencies
 - VC.Project.VCXDCMakeTool.OutputDocumentFile
 - VC.Project.VCXDCMakeTool.AdditionalDocumentFiles
-dev_langs:
-- C++
 ms.assetid: 645912b5-197a-4c36-ba58-64df09444ca0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 72756a97d9d840b09d4b207cf47fedd8cddc59d8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3e97aa61715f0cda8e339a1aabc8e947170b2e90
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430760"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594230"
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>Stránky vlastností nástroje Generátor dokumentů XML
 
