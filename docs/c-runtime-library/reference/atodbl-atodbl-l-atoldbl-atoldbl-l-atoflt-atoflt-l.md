@@ -1,10 +1,6 @@
 ---
-title: _atodbl –, _atodbl_l –, _atoldbl –, _atoldbl_l –, _atoflt –, _atoflt_l – | Microsoft Docs
-ms.custom: ''
+title: _atodbl –, _atodbl_l –, _atoldbl –, _atoldbl_l –, _atoflt –, _atoflt_l –
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _atoldbl
 - _atoldbl_l
@@ -38,8 +34,6 @@ f1_keywords:
 - atoflt
 - atoldbl_l
 - _atodbl
-dev_langs:
-- C++
 helpviewer_keywords:
 - _atodbl function
 - _atoldbl_l function
@@ -55,20 +49,16 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da36dfae81f33f5fb30a1a4bc93a57437980d720
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb8d711dc8dfa912333f34603ad607f0a74143bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393586"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552032"
 ---
 # <a name="atodbl-atodbll-atoldbl-atoldbll-atoflt-atofltl"></a>_atodbl –, _atodbl_l –, _atoldbl –, _atoldbl_l –, _atoflt –, _atoflt_l –
 
-Převede řetězec na dvojitou hodnotu (**_atodbl –**), long double (**_atoldbl –**), nebo float (**_atoflt –**).
+Převede řetězec na hodnotu double (**_atodbl –**), long double (**_atoldbl –**), nebo float (**_atoflt –**).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -84,25 +74,25 @@ int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
 ### <a name="parameters"></a>Parametry
 
 *value*<br/>
-Double, dlouhé double, nebo float hodnotu, která je produkovaný převádění řetězec na hodnotu s plovoucí desetinnou čárkou. Tyto hodnoty jsou zabalená ve struktuře.
+Double, long double nebo float hodnotu, která jsou vytvořena převodem řetězce na hodnotu s plovoucí desetinnou čárkou. Tyto hodnoty jsou zabaleny ve struktuře.
 
-*str –*<br/>
-Řetězec, který má být analyzován převést na hodnotu s plovoucí desetinnou čárkou.
+*str*<br/>
+Řetězec, který se má analyzovat pro převod na hodnotu s plovoucí desetinnou čárkou.
 
 *Národní prostředí*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí hodnotu 0. Možné chybové kódy jsou **_underflow –** nebo **_overflow –**, které jsou definovány v záhlaví souboru \<math.h >.
+V případě úspěchu vrátí hodnotu 0. Možné kódy chyb jsou **_UNDERFLOW** nebo **_OVERFLOW**, která jsou definována v hlavičkovém souboru \<math.h >.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce převést řetězec na hodnotu s plovoucí desetinnou čárkou. Rozdíl mezi tyto funkce a **atof –** řady funkcí je, že tyto funkce nejsou generování kódu s plovoucí desetinnou čárkou a nezpůsobí výjimky hardwaru. Namísto toho chybové stavy jsou považovány za kódy chyb.
+Tyto funkce převádějí řetězec na hodnotu s plovoucí desetinnou čárkou. Rozdíl mezi těmito funkcemi a **atof –** řada funkcí je, že tyto funkce negenerují kód s plovoucí desetinnou čárkou a nevyvolávají hardwarové výjimky. Chybové stavy jsou místo toho hlášeny jako kódy chyb.
 
-Pokud řetězec není platný interpretaci jako hodnotu s plovoucí desetinnou čárkou *hodnota* je nastavena na nulu a návratový je hodnota nulová.
+Pokud řetězec nemá platný výklad jako hodnotu s plovoucí desetinnou čárkou a *hodnotu* je nastavena na nulu a vrácená hodnota je nula.
 
-Verze tyto funkce, které mají **_l** příponu jsou identické verze, které nemají příponu, s výjimkou toho, aby využívaly *národního prostředí* parametr, který se předává v místo aktuální vlákno národní prostředí.
+Verze těchto funkcí, které mají **_l** přípona jsou stejné verze, které nemají příponu s tím rozdílem, že používají *národní prostředí* parametr, který je předán místo aktuální vlákno národní prostředí.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -166,7 +156,7 @@ Float value: inf
 Return value: 3
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>

@@ -1,11 +1,6 @@
 ---
-title: clog10, clog10f, clog10l | Microsoft Docs
-ms.custom: ''
+title: clog10 clog10f, clog10l
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - clog10
 - clog10f
@@ -30,25 +25,19 @@ f1_keywords:
 - complex/clog10
 - complex/clog10f
 - complex/clog10l
-dev_langs:
-- C++
 helpviewer_keywords:
 - clog10 function
 - clog10f function
 - clog10l function
 ms.assetid: 2ddae00d-ef93-4441-add3-f4d58358401b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 81b082aff192a866ec46d22120806e6ba89379d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 195f4be80f0320e83cc9455a598185ce281bbf59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394678"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506909"
 ---
-# <a name="clog10-clog10f-clog10l"></a>clog10, clog10f, clog10l
+# <a name="clog10-clog10f-clog10l"></a>clog10 clog10f, clog10l
 
 Načte logaritmus o základu 10 komplexního čísla.
 
@@ -72,11 +61,11 @@ Základ logaritmu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Návratové hodnoty jsou:
+Je to možné návratové hodnoty jsou:
 
-|z parametru|Návratová hodnota|
+|parametr z|Návratová hodnota|
 |-----------------|------------------|
-|Kladné|10 logaritmus z|
+|Kladné|Logaritmus o základu 10 z z|
 |Nula|- ∞|
 |Záporný|NaN|
 |NaN|NaN|
@@ -84,17 +73,17 @@ Návratové hodnoty jsou:
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **clog10** , přijmout a vrátit **_Fcomplex** a **_Lcomplex** hodnoty. V programu C **clog10** vždy provede a vrátí **_Dcomplex** hodnotu.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **clog10** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **clog10** vždy převezme a vrátí **_Dcomplex** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Hlavička C|Hlavička C++|
+|Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
 |**clog10**, **clog10f**, **clogl**|\<complex.h>|\<ccomplex >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [cexp, cexpf, cexpl](cexp-cexpf-cexpl.md)<br/>

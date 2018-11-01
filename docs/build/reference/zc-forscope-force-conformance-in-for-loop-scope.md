@@ -1,32 +1,22 @@
 ---
-title: '/ Zc: forscope (vynutit dodržování standardu pro obor cyklu for) | Dokumentace Microsoftu'
-ms.custom: ''
+title: /Zc:forScope (Vynutit dodržování standardu pro obor cyklu for)
 ms.date: 03/06/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ForceConformanceInForLoopScope
 - VC.Project.VCCLWCECompilerTool.ForceConformanceInForLoopScope
 - /zc:forScope
-dev_langs:
-- C++
 helpviewer_keywords:
 - /Zc compiler options [C++]
 - -Zc compiler options [C++]
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: 3031f02d-3b14-4ad0-869e-22b0110c3aed
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bef68f47fe8fdc430138a6961078139b48030b3d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b800bdcc36c82dabe13418244782e82737ad9171
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723590"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50502021"
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (Vynutit dodržování standardu pro obor cyklu for)
 
@@ -79,7 +69,7 @@ Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForceConformanceInForLoopScope%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForceConformanceInForLoopScope%2A>.
 
 ## <a name="see-also"></a>Viz také:
 

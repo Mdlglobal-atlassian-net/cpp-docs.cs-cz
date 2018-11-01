@@ -1,29 +1,19 @@
 ---
-title: -DYNAMICBASE (použití adres náhodného generování rozložení prostoru) | Dokumentace Microsoftu
-ms.custom: ''
+title: /DYNAMICBASE (Použít modul pro náhodné určení rozložení adresního prostoru)
 ms.date: 06/12/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.RandomizedBaseAddress
-dev_langs:
-- C++
 helpviewer_keywords:
 - -DYNAMICBASE linker option
 - /DYNAMICBASE linker option
 - DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 896e2eca86b7694c8b3b951a8eb080a4cf9e7684
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 47d23ac6f9234e095a1733a8d4078840318cce4b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223396"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512395"
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (Použít modul pro náhodné určení rozložení adresního prostoru)
 
@@ -49,7 +39,7 @@ Ve výchozím nastavení **možnost/DynamicBase** je povolená. Chcete-li tuto m
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.RandomizedBaseAddress%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.RandomizedBaseAddress%2A>.
 
 ## <a name="see-also"></a>Viz také:
 

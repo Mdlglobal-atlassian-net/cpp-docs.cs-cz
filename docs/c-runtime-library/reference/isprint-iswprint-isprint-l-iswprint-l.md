@@ -1,10 +1,6 @@
 ---
-title: isprint –, iswprint –, _isprint_l –, _iswprint_l – | Microsoft Docs
-ms.custom: ''
+title: isprint, iswprint, _isprint_l, _iswprint_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswprint
 - isprint
@@ -27,8 +23,6 @@ f1_keywords:
 - iswprint
 - _istprint
 - isprint
-dev_langs:
-- C++
 helpviewer_keywords:
 - _istprint function
 - iswprint function
@@ -39,20 +33,16 @@ helpviewer_keywords:
 - iswprint_l function
 - _isprint_l function
 ms.assetid: a8bbcdb0-e8d0-4d8c-ae4e-56d3bdee6ca3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: af7cd775c22d4d34d7a6512938a0f612c3708940
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 826bc825824054a5a6716f8074690f18a2c3f016
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401513"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556400"
 ---
 # <a name="isprint-iswprint-isprintl-iswprintl"></a>isprint, iswprint, _isprint_l, _iswprint_l
 
-Určuje, zda celé reprezentuje tisknutelná znak.
+Určuje, zda celočíselná hodnota představuje tisknutelný znak.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -76,37 +66,37 @@ int _iswprint_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Celé číslo pro testování.
+Celé číslo k testování.
 
 *Národní prostředí*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Všechny tyto rutiny vrátí nenulové hodnoty, pokud *c* je konkrétní reprezentace tisknutelná znaku. **isprint –** vrátí nenulovou hodnotu, pokud *c* je tisknutelná znaků – to zahrnuje znak mezery (0x20 - 0x7E). **iswprint –** vrátí nenulovou hodnotu, pokud *c* je tisknutelná široká znaková – to zahrnuje celý znak místa. Všechny tyto rutiny vrátí hodnotu 0, pokud *c* nesplňuje podmínky testu.
+Každá z těchto rutin vrátí nenulovou hodnotu, pokud *c* je konkrétní reprezentace tisknutelného znaku. **isprint** vrací nenulovou hodnotu, pokud *c* je tisknutelný znak – jedná se o znak mezery (0x20 – 0x7E). **iswprint –** vrací nenulovou hodnotu, pokud *c* je tisknutelný široký znak – jedná se o širokého znaku mezery. Každá z těchto rutin vrátí hodnotu 0, pokud *c* nesplňuje testovací podmínku.
 
-Výsledek testu podmínky pro tyto funkce závisí na **LC_CTYPE –** kategorie nastavení národního prostředí; viz [setlocale _wsetlocale](setlocale-wsetlocale.md) Další informace. Verze tyto funkce, které nemají **_l** příponu využívání aktuální národní prostředí pro chování všech závislých na národním prostředí, verze, které mají **_l** příponu jsou shodné s tím rozdílem, že se používají národní prostředí, který se předává v místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Výsledek testovací podmínky pro tyto funkce závisí **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale _wsetlocale](setlocale-wsetlocale.md) Další informace. Verze těchto funkcí, které nemají **_l** používají aktuální národní prostředí pro všechna chování závislé na národním prostředí; ty, které mají **_l** přípona jsou stejné s tím rozdílem, že používají národní prostředí, které je předáno místo. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Chování **isprint –** a **_isprint_l –** není definován, pokud *c* není EOF nebo v rozsahu 0 až 0xFF (včetně). V případě použití knihovny ladění CRT a *c* není jednou z těchto hodnot, funkce raise kontrolní výrazy.
+Chování **isprint** a **_isprint_l –** není definováno, pokud *c* není konec souboru nebo v rozsahu 0 až 0xFF, včetně. Při použití ladicí CRT knihovny a *c* není jednou z těchto hodnot, funkce vyvolá kontrolní výraz.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definované|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_** **istprint –**|**isprint –**|[_ismbcprint](ismbcgraph-functions.md)|**iswprint –**|
+|**_** **istprint –**|**isprint**|[_ismbcprint](ismbcgraph-functions.md)|**iswprint –**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**isprint –**|\<ctype.h >|
+|**isprint**|\<ctype.h >|
 |**iswprint –**|\<ctype.h > nebo \<wchar.h >|
 |**_isprint_l**|\<ctype.h >|
 |**_iswprint_l**|\<ctype.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Klasifikace znaků](../../c-runtime-library/character-classification.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
