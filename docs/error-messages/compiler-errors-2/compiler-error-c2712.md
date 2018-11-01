@@ -1,53 +1,43 @@
 ---
-title: C2712 Chyba kompilátoru | Microsoft Docs
-ms.custom: ''
+title: Chyba kompilátoru C2712
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2712
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2712
 ms.assetid: f7d4ffcc-7ed2-459b-8067-a728ce647071
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 27db5f8ae3fd56078a3085c8d216e7dd34edb2fc
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 19b9c5a54bf405114bd4d596c2a2cc4708aadcc9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704253"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507910"
 ---
-# <a name="compiler-error-c2712"></a>C2712 chyby kompilátoru
+# <a name="compiler-error-c2712"></a>Chyba kompilátoru C2712
 
-> nelze použít __try ve funkcích, které vyžadují unwinding objektu
+> nelze použít __try ve funkcích, které vyžadovaly objekt vrácení zpět
 
 ## <a name="remarks"></a>Poznámky
 
-Chyba C2712 může dojít, pokud používáte [/EHsc](../../build/reference/eh-exception-handling-model.md), a funkce s zpracování strukturovaných výjimka taky obsahuje objekty, které vyžadují unwinding (odstraňování).
+Chyba C2712 může dojít, pokud používáte [/EHsc](../../build/reference/eh-exception-handling-model.md), a funkce se také zpracování strukturovaných výjimek má objektů, které vyžadují odvíjení (odstranění).
 
 Možná řešení:
 
-- Přesunout kód, který vyžaduje jinou funkci SEH
+- Přesunout kód, který vyžaduje SEH do jiné funkce
 
-- Přepisování funkcí, které pomocí SEH nepoužívejte místní proměnné a parametry, které mají destruktory. Nepoužívejte SEH v konstruktorech nebo destruktorů
+- Přepisování funkcí, které používají SEH vyhnout se použití místních proměnných a parametry, které mají destruktory. Nepoužívejte SEH v konstruktory a destruktory
 
-- Kompilovat bez /EHsc
+- Proveďte kompilaci bez/EHsc
 
-Chyba C2712 může také nastat, pokud při volání metody deklarovat pomocí [__event](../../cpp/event.md) – klíčové slovo. Vzhledem k tomu, že událost může použít v prostředí s více vlákny, kompilátor generuje kód, který brání manipulaci s podkladového objektu událostí a poté uzavře generovaný kód do SEH [try-finally – příkaz](../../cpp/try-finally-statement.md). V důsledku toho dojde chybě C2712, pokud volání metody událostí a předáte hodnotu argument jehož typ má destruktor. V takovém případě je předat argument jako konstantní odkaz jedno řešení.
+Chyba C2712 může také dojít, pokud volání metody deklarované pomocí [__event](../../cpp/event.md) – klíčové slovo. Vzhledem k tomu, že událost může použít v prostředí s více vlákny, kompilátor generuje kód, který brání manipulaci s základního objektu události a poté uzavře generovaného kódu v SEH [try-finally – příkaz](../../cpp/try-finally-statement.md). V důsledku toho C2712 dojde k chybě Pokud zavoláte metodu události a předat hodnotu argument, jehož typ má destruktor. Předat argument jako konstantní odkaz v tomto případě je jedním z řešení.
 
-C2712 může také dojít, když kompilujete s **/CLR: pure** a deklarovat statické pole ukazatele na funkce v `__try` bloku. Statický člen vyžaduje kompilátor používat dynamické inicializace pod **/CLR: pure**, což naznačuje zpracovávání výjimek v jazyce C++. Však není povolen zpracovávání výjimek v jazyce C++ v `__try` bloku.
+C2712 může také dojít, pokud kompilujete s **/CLR: pure** a deklarujete statického pole ukazatelů na funkce v `__try` bloku. Statického člena, který vyžaduje, aby kompilátor používat dynamická inicializace v rámci **/CLR: pure**, což znamená zpracování výjimek jazyka C++. Nicméně zpracování výjimek jazyka C++ nepovoluje `__try` bloku.
 
-**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017.
+**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C2712 a ukazuje, jak ji odstranit.
+Následující ukázka generuje C2712 a ukazuje, jak ho opravit.
 
 ```cpp
 // C2712.cpp

@@ -1,11 +1,6 @@
 ---
-title: ilogb – ilogbf –, ilogbl2 | Microsoft Docs
-ms.custom: ''
+title: ilogb – ilogbf –, ilogbl2
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - ilogb
 - ilogbf
@@ -35,20 +30,16 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1436874e1ab35cc72dc40390adf5597529d3bf57
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63e04246d29fde50c745a5f353829bd337a814ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398176"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551980"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 
-Načte celé číslo, které představuje neposunutého exponent základní-2 se zadanou hodnotou.
+Načte celé číslo, které představuje nevyváženého exponentu base-2 zadané hodnoty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -82,32 +73,32 @@ Zadaná hodnota.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí exponent základu 2 *x* jako přihlášeni **int** hodnotu.
+Pokud je úspěšná, vrátí exponent základu 2 *x* jako podepsané **int** hodnotu.
 
-Jinak vrátí jednu z následujících hodnot, které jsou definované v \<math.h >:
+V opačném případě vrátí jednu z následujících hodnot, podle \<math.h >:
 
 |Vstup|Výsledek|
 |-----------|------------|
 |±0|FP_ILOGB0|
-|±INF, ±nan neomezené|FP_ILOGBNAN|
+|±INF ±nan nekonečno|FP_ILOGBNAN|
 
-Vznikly chyby uvedené v [_matherr –](matherr.md).
+Jsou hlášeny chyby uvedené v [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **ilogb –** , přijmout a vrátit **float** a **dlouho** **dvojité** typy. V programu C **ilogb –** vždy provede a vrátí **dvojité**.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **ilogb –** , která používají a vrací **float** a **dlouhé** **double** typy. V programu jazyka C **ilogb –** vždy převezme a vrátí **double**.
 
-Volání této funkce je podobná volání ekvivalent **logb –** funkce a potom přetypování návratovou hodnotu pro **int**.
+Volání této funkce je podobný voláním ekvivalentní **logb –** funkce a pak přetypování návratová hodnota rovna **int**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Hlavička C|Hlavička C++|
+|Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
-|**ilogb –**, **ilogbf –**, **ilogbl**|\<Math.h >|\<cmath – >|
+|**ilogb –**, **ilogbf –**, **ilogbl**|\<Math.h >|\<cmath >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [frexp](frexp.md)<br/>

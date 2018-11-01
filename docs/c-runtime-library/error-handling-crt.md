@@ -1,48 +1,38 @@
 ---
-title: Zpracování chyb (CRT) | Microsoft Docs
-ms.custom: ''
+title: Zpracování chyb (CRT)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.errors
-dev_langs:
-- C++
 helpviewer_keywords:
 - error handling, C routines for
 - logic errors
 - error handling, library routines
 - testing, for program errors
 ms.assetid: 125ac697-9eb0-4152-a440-b7842f23d97f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f39fe3743c023bb0c4cb3130400e9bcb7b97db1b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 7b3a5676c9297b1d7805f92b3a15cc71518ecd65
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704844"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551213"
 ---
 # <a name="error-handling-crt"></a>Zpracování chyb (CRT)
 
-Použijte tyto rutiny pro zpracování chyby programu.
+Tyto rutiny použijte ke zpracování chyby programu.
 
 ## <a name="error-handling-routines"></a>Rutiny zpracování chyb
 
 |Rutina|Použití|
 |-------------|---------|
-|[Assert –](../c-runtime-library/reference/assert-macro-assert-wassert.md) – makro|Test pro programování logické chyby; k dispozici ve verzi a ladění verze běhové knihovny.|
-|[_ASSERT, _asserte –](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) makra|Podobně jako **assert**, ale k dispozici pouze ve verzích ladicí běhové knihovny.|
-|[clearerr](../c-runtime-library/reference/clearerr.md)|Resetování označení chyb. Volání metody **rewind** nebo ukončování datového proudu také obnoví označení chyb.|
-|[_eof](../c-runtime-library/reference/eof.md)|Zkontrolujte, zda konec souboru v nízké úrovně vstupně-výstupních operací.|
-|[feof](../c-runtime-library/reference/feof.md)|Test pro konec souboru. Konec souboru je také uvedeno, kdy **_Zobrazit** vrátí hodnotu 0.|
-|[ferror](../c-runtime-library/reference/ferror.md)|Testování pro datový proud vstupně-výstupní chyby.|
-|[_RPT, _RPTF](../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) makra|Vygenerování sestavy podobná **printf**, ale k dispozici pouze ve verzích ladicí běhové knihovny.|
-|[_set_error_mode](../c-runtime-library/reference/set-error-mode.md)|Upraví **__error_mode** určit jiné než výchozí umístění, kde C běh zapíše chybovou zprávu pro chybu, která se pravděpodobně ukončí program.|
-|[_set_purecall_handler](../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md)|Nastaví obslužnou rutinu pro volání čistý virtuální funkce.|
+|[vyhodnocení](../c-runtime-library/reference/assert-macro-assert-wassert.md) – makro|Test pro programování logických chyb; k dispozici ve verzi a ladicí verze knihovny run-time.|
+|[_ASSERT, _asserte –](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) makra|Podobně jako **vyhodnocení**, ale k dispozici pouze v ladicí verze knihovny run-time.|
+|[clearerr](../c-runtime-library/reference/clearerr.md)|Resetování označení chyb. Volání **rewind** nebo zavření datového proudu také obnoví označení chyb.|
+|[_eof](../c-runtime-library/reference/eof.md)|Kontrola pro konec souboru začal v vstupně-výstupních operací nízké úrovně.|
+|[feof](../c-runtime-library/reference/feof.md)|Test konce souboru. Konec souboru se také uvedeno, kdy **_read** vrátí hodnotu 0.|
+|[ferror](../c-runtime-library/reference/ferror.md)|Testování chyb datového proudu vstupně-výstupních operací.|
+|[_RPT, _RPTF](../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) makra|Vygenerovat sestavu podobný **printf**, ale k dispozici pouze v ladicí verze knihovny run-time.|
+|[_set_error_mode](../c-runtime-library/reference/set-error-mode.md)|Upraví **__error_mode** určit jiné než výchozí umístění, kde C běhu zapíše chybovou zprávu pro chybu, která bude pravděpodobně ukončit program.|
+|[_set_purecall_handler](../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md)|Nastaví obslužnou rutinu volání čistě virtuální funkce.|
 
 ## <a name="see-also"></a>Viz také:
 

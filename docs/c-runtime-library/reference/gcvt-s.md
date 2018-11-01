@@ -1,10 +1,6 @@
 ---
-title: _gcvt_s – | Microsoft Docs
-ms.custom: ''
+title: _gcvt_s
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _gcvt_s
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _gcvt_s
 - gcvt_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _gcvt_s function
 - _CVTBUFSIZE
@@ -35,20 +29,16 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a2bd12a63db064bca0c880484f99a2df9d210f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 168e0657150d072bbe41cd0ad6e914ca1f53e512
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403765"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554958"
 ---
 # <a name="gcvts"></a>_gcvt_s
 
-Převede hodnotu s plovoucí desetinnou čárkou na řetězec. Toto je verze [_gcvt –](gcvt.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Převede hodnotu s plovoucí desetinnou čárkou na řetězec. Toto je verze [_gcvt –](gcvt.md) s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -70,48 +60,48 @@ errno_t _gcvt_s(
 ### <a name="parameters"></a>Parametry
 
 *Vyrovnávací paměti*<br/>
-Vyrovnávací paměť pro uložení výsledek převodu.
+Vyrovnávací paměť pro ukládání výsledku převodu.
 
 *sizeInBytes*<br/>
 Velikost vyrovnávací paměti.
 
 *value*<br/>
-Hodnota má být převeden.
+Hodnota k převedení.
 
 *číslice*<br/>
 Počet platných číslic, které jsou uložené.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu. Pokud dojde k chybě z důvodu neplatný parametr (v následující tabulce najdete neplatné hodnoty), obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, je vrácena kód chyby. Kódy chyb jsou definovány v Errno.h. Seznam těchto chybách naleznete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Nula v případě úspěchu. Pokud dojde k chybě z důvodu neplatného parametru (viz následující tabulka neplatné hodnoty), je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí se kód chyby. Kódy chyb jsou definovány v Errno.h. Seznam těchto chyb, naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-### <a name="error-conditions"></a>Chybové stavy
+### <a name="error-conditions"></a>Chybové podmínky
 
 |*Vyrovnávací paměti*|*sizeInBytes*|*value*|*číslice*|Vrátí|Hodnota v *vyrovnávací paměti*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
-|**HODNOTU NULL**|všechny|všechny|všechny|**EINVAL –**|Nedojde ke změně.|
-|Není **NULL** (odkazuje na platný paměti)|nula|všechny|všechny|**EINVAL –**|Nedojde ke změně.|
-|Není **NULL** (odkazuje na platný paměti)|všechny|všechny|>= *sizeInBytes*|**EINVAL –**|Nedojde ke změně.|
+|**HODNOTU NULL**|Všechny|Všechny|Všechny|**EINVAL**|Nedojde ke změně.|
+|Není **NULL** (odkazuje na platný paměti)|nula|Všechny|Všechny|**EINVAL**|Nedojde ke změně.|
+|Není **NULL** (odkazuje na platný paměti)|Všechny|Všechny|>= *sizeInBytes*|**EINVAL**|Nedojde ke změně.|
 
 **Problémy se zabezpečením**
 
-**_gcvt_s –** může vygenerovat porušení přístupu, pokud *vyrovnávací paměti* neodkazuje na platný paměti a není **NULL**.
+**_gcvt_s –** můžete vygenerovat narušení přístupu, pokud *vyrovnávací paměti* neodkazuje na platný paměti a není **NULL**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Gcvt_s –** funkce převede s plovoucí desetinnou čárkou *hodnotu* na řetězec znaků (která zahrnuje desetinné čárky a možné přihlašovací bajtů) a ukládá řetězec v *vyrovnávací paměti* . *vyrovnávací paměť* by měl být dostatečně velký na to, aby dokázala pojmout převedená hodnota plus ukončující prázdný znak, který se automaticky připojí. Vyrovnávací paměť délky **_CVTBUFSIZE** je dostatečná pro všechny plovoucí bodu hodnotu. Pokud velikost vyrovnávací paměti *číslic* + 1 se používá, funkce nepřepíše do konce vyrovnávací paměti, takže je nutné zadat dostatečná vyrovnávací paměti pro tuto operaci. **_gcvt_s –** pokusí vytvořit *číslic* číslic ve formátu desetinného čísla. Pokud ne, vyvolá *číslic* číslic v exponenciálním formátu. Koncové nuly lze potlačit v převodu.
+**_Gcvt_s –** funkce převede plovoucí desetinné čárky *hodnotu* na řetězec znaků (která zahrnuje desetinné čárky a možné podepsat bajtů) a uloží řetězec v *vyrovnávací paměti* . *vyrovnávací paměť* by měl být dostatečně velký, aby odpovídala převedená hodnota plus ukončujícího znaku null, která se automaticky připojí. Vyrovnávací paměť o délce **_CVTBUFSIZE** je dostatečná pro všechny plovoucí desetinnou čárkou. Pokud vyrovnávací paměť o velikosti *číslic* + 1 se používá, funkci nepřepíše konce vyrovnávací paměti, takže je nutné poskytnout dostatek vyrovnávací paměti pro tuto operaci. **_gcvt_s –** pokusí vytvořit *číslic* číslic ve formátu desetinného čísla. V případě nedostupnosti vznikne *číslic* číslic v exponenciálním formátu. Koncové nuly jde potlačit v převodu.
 
-V jazyce C++ pomocí této funkce se zjednodušilo díky šabloně přetížení; přetížení lze odvodit délka vyrovnávací paměti automaticky, takže není nutné zadat argument velikost. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ je použití touto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit velikost vyrovnávací paměti automaticky, takže odpadá nutnost určit velikost argumentu. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
-Ladicí verze této funkce nejprve doplní vyrovnávací paměti s 0xFD. Chcete-li toto chování zakázat, použijte [_crtsetdebugfillthreshold –](crtsetdebugfillthreshold.md).
+Ladicí verze této funkce nejprve naplní vyrovnávací paměť hodnotou 0xFD. Chcete-li toto chování zakázat, použijte [_crtsetdebugfillthreshold –](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
 |**_gcvt_s**|\<stdlib.h>|\<Error.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -144,7 +134,7 @@ int main()
 Converted value: 1.2
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>

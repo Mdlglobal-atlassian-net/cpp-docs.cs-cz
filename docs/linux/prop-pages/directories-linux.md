@@ -1,29 +1,19 @@
 ---
-title: Adresáře VC ++ (Linux C++) | Microsoft Docs
-ms.custom: ''
+title: Adresáře VC ++ (Linux C++)
 ms.date: 9/26/2017
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: 12d45b93-0a5c-455e-b12a-9b9aad9a6d6c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 4ad9fb198dd5c0f816d05e4b9a87cff969331d8c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 35417eeb4dbfc429d51dafe83013ea40b791ccb7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705644"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50538044"
 ---
 # <a name="vc-directories-linux-c"></a>Adresáře VC ++ (Linux C++)
 
 Vlastnost | Popis
 --- | ---
-Zahrnout adresáře | Cesta k použít při hledání zahrnout soubory při sestavování projektu VC ++.  Odpovídá proměnné prostředí zahrnout.
-Adresáře knihovny | Cesta k použít při hledání soubory knihovny při sestavování projektu VC ++.  Odpovídá proměnná prostředí LIB.
-Adresáře zdrojových souborů | Cesta k použít při hledání pro zdrojové soubory pro IntelliSense.
-Vyloučit adresáře | Cesta k při hledání pro závislosti kontrolu přeskočit.
+Adresáře souborů k zahrnutí | Cesta pro vyhledávání vložených souborů během sestavování projektu VC ++.  Odpovídá proměnné prostředí INCLUDE.
+Adresáře knihoven | Cesta pro vyhledávání souborů knihoven při sestavování projektu VC ++.  Odpovídá proměnné prostředí LIB.
+Adresáře zdrojových souborů | Cesta pro vyhledávání zdrojových souborů pro nástroj IntelliSense.
+Vyloučené adresáře | Cesta, na které nebudou vyhledávány závilosti.
