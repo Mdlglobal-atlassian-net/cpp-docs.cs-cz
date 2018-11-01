@@ -1,11 +1,6 @@
 ---
-title: csqrt, csqrtf, csqrtl | Microsoft Docs
-ms.custom: ''
+title: csqrt csqrtf, csqrtl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - csqrt
 - csqrtf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/csqrt
 - complex/csqrtf
 - complex/csqrtl
-dev_langs:
-- C++
 helpviewer_keywords:
 - csqrt function
 - csqrtf function
 - csqrtl function
 ms.assetid: b65f086b-0f55-4622-a7a3-4e79d9c9c05c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 143bb55180b3394f8ac32b36f7641503dd346b76
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00fe12d4f9c136278e56ceaf3fa62443092d0ec4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396307"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449878"
 ---
-# <a name="csqrt-csqrtf-csqrtl"></a>csqrt, csqrtf, csqrtl
+# <a name="csqrt-csqrtf-csqrtl"></a>csqrt csqrtf, csqrtl
 
-Načte druhou odmocninu čísla komplexní s větev vyjmout záporné skutečné osy.
+Načte odmocninu komplexního čísla s větví vyjmout skutečné ose záporné.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -79,26 +68,26 @@ Komplexní čísla.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Druhou odmocninu čísla *z*. Výsledkem je v pravé polovině roviny.
+Druhou odmocninu *z*. Výsledkem je v pravé polovině roviny.
 
-|Vstup|Výjimka SEH|**_matherr –** výjimky|
+|Vstup|Výjimka SEH|**_matherr** výjimky|
 |-----------|-------------------|--------------------------|
-|ROZMEZÍ QNAN, IND|žádná|_DOMAIN –|
-|- ∞|žádná|_DOMAIN –|
+|ROZMEZÍ QNAN, AJÍT|žádná|_DOMÉNA|
+|- ∞|žádná|_DOMÉNA|
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **csqrt** , přijmout a vrátit **_Fcomplex** a **_Lcomplex** hodnoty. V programu C **csqrt** vždy provede a vrátí **_Dcomplex** hodnotu.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **csqrt** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **csqrt** vždy převezme a vrátí **_Dcomplex** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Hlavička C|Hlavička C++|
+|Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
 |**csqrt**, **csqrtf**, **csqrtl**|\<complex.h>|\<ccomplex >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>

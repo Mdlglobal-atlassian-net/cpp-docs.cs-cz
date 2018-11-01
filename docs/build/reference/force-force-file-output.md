@@ -1,31 +1,21 @@
 ---
-title: -FORCE (vynucení výstupu souboru) | Dokumentace Microsoftu
-ms.custom: ''
+title: /FORCE (Vynutit výstup souboru)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.ForceLink
 - /force
-dev_langs:
-- C++
 helpviewer_keywords:
 - FORCE linker option
 - file output in linker
 - /FORCE linker option
 - -FORCE linker option
 ms.assetid: b1e9a218-a5eb-4e60-a4a4-65b4be15e5da
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 95a746a37183f26585fd013327a964b922589221
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5555a76cc792c15bea9c6c393debbd0fb38e30e8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699762"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445653"
 ---
 # <a name="force-force-file-output"></a>/FORCE (Vynutit výstup souboru)
 
@@ -61,7 +51,7 @@ Pokud modulu je kompilována s **/CLR**, **/FORCE** nevytvoří bitovou kopii.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Viz také
 

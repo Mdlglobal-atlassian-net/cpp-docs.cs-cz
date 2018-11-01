@@ -1,10 +1,6 @@
 ---
-title: spawnlpe – | Microsoft Docs
-ms.custom: ''
+title: spawnlpe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - spawnlpe
 apilocation:
@@ -21,25 +17,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - spawnlpe
-dev_langs:
-- C++
 helpviewer_keywords:
 - spawnlpe function
 ms.assetid: 379143a7-f3d0-41de-83cc-2b4321146390
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d3b9e970a5cf83cefe754143ecd7e5fc019d5610
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e071ebc447ac732fa5924d43270f88fd2e9d99fc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406128"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464126"
 ---
 # <a name="spawnlpe"></a>spawnlpe
 
-Tato funkce POSIX je zastaralý. Používat vyhovující ISO C++ [_spawnlpe –](spawnlpe-wspawnlpe.md) místo.
+Tato funkce POSIX je zastaralá. Použít splňující podmínky ISO C++ [_spawnlpe –](spawnlpe-wspawnlpe.md) místo.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

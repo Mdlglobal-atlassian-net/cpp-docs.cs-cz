@@ -1,32 +1,22 @@
 ---
-title: Třída kontejneru::max_size | Microsoft Docs
-ms.custom: ''
+title: Třída kontejneru::max_size
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - max_size method
 ms.assetid: 56754753-9911-48fd-b463-ac06b2fa1aab
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3ab90fdbf890e60f5aea2c961b200e6d5e78b5bd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3b0347ae160286ca97d16063ac893943e0d63da8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842401"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50455780"
 ---
 # <a name="container-classmaxsize"></a>Třída kontejneru::max_size
 
 > [!NOTE]
-> Toto téma se v dokumentaci k Visual C++ jako funkční příklad kontejnery použít ve standardní knihovně C++. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
+> Toto téma je v dokumentaci k Visual C++ jako funkční příklad kontejnery používané ve standardní knihovně jazyka C++. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
 
-Vrátí délku nejdelší pořadí, které můžete řídit objekt včas konstantní bez ohledu na délku řízené sekvenci.
+Vrátí délku, nejdelší sekvence, která můžete řídit objektu v konstantním čase bez ohledu na délku řízené sekvence.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,6 +25,6 @@ Vrátí délku nejdelší pořadí, které můžete řídit objekt včas konstan
 size_type max_size() const;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ukázkový kontejner – třída](../standard-library/sample-container-class.md)<br/>

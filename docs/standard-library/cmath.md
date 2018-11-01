@@ -1,31 +1,21 @@
 ---
-title: '&lt;cmath –&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;cmath&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <cmath>
-dev_langs:
-- C++
 helpviewer_keywords:
 - cmath header
 ms.assetid: 80df1dba-60ca-4918-9c2e-fbf446eaa7d6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2c26ab3c507210df6988c1c79ac163ad466c407d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4981853b914260c9b8f65cd5079192f441ec5d24
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840785"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451737"
 ---
 # <a name="ltcmathgt"></a>&lt;cmath&gt;
 
-Obsahuje hlavičku knihovny standardní C \<math.h > a přidá přidružené jména `std` oboru názvů.
+Obsahuje hlavičku knihovny Standard C \<math.h > a přidá názvy přidružené k `std` oboru názvů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,9 +26,9 @@ Obsahuje hlavičku knihovny standardní C \<math.h > a přidá přidružené jm�
 
 ## <a name="remarks"></a>Poznámky
 
-Včetně tuto hlavičku zajistí, že jsou názvy deklarováno s použitím externí propojení v hlavičce knihovny standardní C deklarované v `std` oboru názvů.
+Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším spojením v záhlaví knihovny Standard C jsou deklarovány v `std` oboru názvů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>

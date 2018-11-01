@@ -1,33 +1,23 @@
 ---
-title: '/ Zc: implicitnoexcept (specifikátory implicitních výjimek) | Microsoft Docs'
-ms.custom: ''
+title: /Zc:implicitNoexcept (specifikátory implicitních výjimek)
 ms.date: 03/06/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /Zc:implicitNoexcept
-dev_langs:
-- C++
 helpviewer_keywords:
 - /Zc:implicitNoexcept
 - Zc:implicitNoexcept
 - -Zc:implicitNoexcept
 ms.assetid: 71807652-6f9d-436b-899e-f52daa6f500b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e420017056d6857a2809ce6eb85fe99b6f3866f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0ca03cc2a3afa0d5665f217ccb0d41eb1e41d3be
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379182"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480926"
 ---
 # <a name="zcimplicitnoexcept-implicit-exception-specifiers"></a>/Zc:implicitNoexcept (specifikátory implicitních výjimek)
 
-Když **/Zc: implicitnoexcept** je zadána možnost, kompilátor přidá implicitní [noexcept](../../cpp/noexcept-cpp.md) specifikátor výjimky kompilátoru definované speciální členské funkce a uživatelem definované destruktory a deallocators. Ve výchozím nastavení **/Zc: implicitnoexcept** je povoleno tak, aby odpovídala ISO C ++ 11 standardní. Vypnutí této možnosti vypnout zakáže implicitní `noexcept` na uživatelem definované destruktory a dealloacators a definované kompilátoru speciální členské funkce.
+Když **/Zc: implicitnoexcept** je zadána možnost, že kompilátor přidává implicitní [noexcept](../../cpp/noexcept-cpp.md) specifikátor výjimky definované kompilátorem zvláštní členské funkce a destruktory a deallocators. Ve výchozím nastavení **/Zc: implicitnoexcept** je tak, aby odpovídal ISO C ++ 11 standard povoleno. Zapnutí této možnosti zakáže implicitní `noexcept` na destruktory a dealloacators a speciální členské funkce definované kompilátoru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,15 +25,15 @@ Když **/Zc: implicitnoexcept** je zadána možnost, kompilátor přidá implici
 
 ## <a name="remarks"></a>Poznámky
 
-**/ Zc: implicitnoexcept** říká kompilátoru podle části 15.4 ISO C ++ 11 standardní. Implicitně přidá `noexcept` výjimka specifikátor každý implicitně deklarovaný nebo explicitně uvedena speciální členské funkce – výchozí konstruktor, zkopírujte konstruktor, konstruktor move, destruktor, operátor přiřazení pro kopírování nebo přesunutí přiřazení operátor – a jednotlivé uživatelské destruktor nebo deallocator funkce. Uživatelem definované deallocator má implicitní `noexcept(true)` specifikátor výjimka. Uživatelem definované destruktory specifikátor implicitní výjimka je `noexcept(true)` Pokud třída obsažené členů nebo základní třída má destruktor, který není `noexcept(true)`. Pro generované kompilátorem speciální členské funkce, pokud žádné funkce přímo vyvolat tato funkce je efektivně `noexcept(false)`, specifikátor implicitní výjimka je `noexcept(false)`. Jinak specifikátor implicitní výjimka je `noexcept(true)`.
+**/ Zc: implicitnoexcept** instruuje kompilátor, aby pomocí postupu v části 15.4 ISO standardu C ++ 11. Implicitně přidá `noexcept` výjimka specifikátor každý deklarován implicitně nebo explicitně přednastavené zvláštní členské funkce – výchozí konstruktor kopírování, konstruktor, konstruktor přesunutí, destruktor, operátor přiřazení kopie nebo přesunutí přiřazení operátor – a každá uživatelem definovaný destruktor nebo dealokátor funkce. Uživatelem definované dealokátor má implicitní `noexcept(true)` specifikátor výjimky. Pro destruktory definované uživatelem, je specifikátor implicitní výjimka `noexcept(true)` Pokud třída obsaženého člena nebo základní třída má destruktor, který není `noexcept(true)`. Pro kompilátorem generované zvláštní členské funkce, pokud žádné funkce přímo vyvolávat tato funkce je v podstatě `noexcept(false)`, je specifikátor implicitní výjimka `noexcept(false)`. V opačném případě je specifikátor implicitní výjimka `noexcept(true)`.
 
-Kompilátor negeneruje specifikátor implicitní výjimky pro funkce deklarovat pomocí explicitní `noexcept` nebo `throw` specifikátory nebo `__declspec(nothrow)` atribut.
+Kompilátor negeneruje specifikátor implicitní výjimky pro funkce deklarované s použitím explicitní `noexcept` nebo `throw` specifikátory nebo `__declspec(nothrow)` atribut.
 
-Ve výchozím nastavení **/Zc: implicitnoexcept** je povoleno. [/ Projektovou-](permissive-standards-conformance.md) možnost nemá vliv na **/Zc: implicitnoexcept**.
+Ve výchozím nastavení **/Zc: implicitnoexcept** je povolená. [/ Permissive-](permissive-standards-conformance.md) nemá vliv na možnost **/Zc: implicitnoexcept**.
 
-Pokud tato možnost je vypnuta zadáním **/Zc:implicitNoexcept-**, žádné specifikátory implicitních výjimek jsou generované kompilátorem. Toto chování je stejné jako Visual Studio 2013, pokud by mohla mít destruktory a deallocators, které neměl specifikátory výjimek `throw` příkazy. Ve výchozím nastavení a kdy **/Zc: implicitnoexcept** je zadán, pokud `throw` je příkaz zjistil v době běhu ve funkci s implicitní `noexcept(true)` specifikátor, dojde k vyvolání okamžitou `std::terminate`, a Normální unwinding chování pro obslužné rutiny výjimek není zaručena. Aby bylo možné identifikovat tuto situaci, kompilátor vygeneruje [upozornění kompilátoru (úroveň 1) C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md). Pokud `throw` je záměrné, doporučujeme změnit své deklaraci funkce tak, aby měl explicitního `noexcept(false)` specifikátor místo použití **/Zc:implicitNoexcept-**.
+Pokud tato možnost je vypnuta zadáním **/Zc:implicitNoexcept-**, žádné specifikátory implicitních výjimek jsou generovány kompilátorem. Toto chování je stejné jako Visual Studio 2013, pokud by mohla mít destruktory a deallocators, u kterých nebylo specifikátory výjimek `throw` příkazy. Ve výchozím nastavení a kdy **/Zc: implicitnoexcept** není zadán, pokud `throw` příkaz dochází za běhu ve funkci s implicitní `noexcept(true)` specifikátor, způsobí, že okamžité vyvolání `std::terminate`, a Normální odvíjení chování pro obslužné rutiny výjimek není zaručena. K identifikaci této situaci, kompilátor generuje [upozornění kompilátoru (úroveň 1) C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md). Pokud `throw` je úmyslné, doporučujeme změnit váš deklarace funkce mít explicitní `noexcept(false)` specifikátor namísto použití **/Zc:implicitNoexcept-**.
 
-Tento příklad ukazuje, jak – destruktor definovaný uživatelem, který má žádné explicitní výjimka specifikátor chová, kdy **/Zc: implicitnoexcept** je možnost nastavit nebo zakázána. Chcete-li zobrazit chování Pokud nastavíte, zkompilovat pomocí `cl /EHsc /W4 implicitNoexcept.cpp`. Zobrazit chování, pokud je zakázán, zkompilovat pomocí `cl /EHsc /W4 /Zc:implicitNoexcept- implicitNoexcept.cpp`.
+Tato ukázka předvádí, jak uživatelem definovaný destruktor, který nemá žádné explicitní výjimky specifikátor chová, když **/Zc: implicitnoexcept** možností je nastavit nebo zakázáno. Chcete-li zobrazit chování při nastavení, kompilovat s použitím `cl /EHsc /W4 implicitNoexcept.cpp`. Chcete-li zobrazit chování, pokud je zakázán, kompilovat s použitím `cl /EHsc /W4 /Zc:implicitNoexcept- implicitNoexcept.cpp`.
 
 ```cpp
 // implicitNoexcept.cpp
@@ -119,7 +109,7 @@ int main()
 }
 ```
 
-Při kompilaci pomocí výchozí nastavení **/Zc: implicitnoexcept**, ukázky generuje tento výstup:
+Při kompilaci pomocí výchozí nastavení **/Zc: implicitnoexcept**, ukázka generuje tento výstup:
 
 ```Output
 ~B Exception caught
@@ -127,7 +117,7 @@ Unexpected throw caused std::terminate
 Exit returning EXIT_FAILURE
 ```
 
-Při kompilaci pomocí nastavení **/Zc:implicitNoexcept-**, ukázky generuje tento výstup:
+Při kompilaci pomocí nastavení **/Zc:implicitNoexcept-**, ukázka generuje tento výstup:
 
 ```Output
 ~B Exception caught
@@ -135,19 +125,19 @@ Při kompilaci pomocí nastavení **/Zc:implicitNoexcept-**, ukázky generuje te
 Exit returning EXIT_SUCCESS
 ```
 
-Další informace o problémech shoda v jazyce Visual C++, najdete v části [nestandardní chování](../../cpp/nonstandard-behavior.md).
+Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete v tématu [nestandardní chování](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
 
-1. Změnit **další možnosti** vlastnost, aby zahrnovala **/Zc: implicitnoexcept** nebo **/Zc:implicitNoexcept-** a potom zvolte **OK**.
+1. Upravit **další možnosti** vlastnost, aby zahrnovala **/Zc: implicitnoexcept** nebo **/Zc:implicitNoexcept-** a klikněte na tlačítko **OK**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [/Zc (shoda)](../../build/reference/zc-conformance.md)<br/>
 [noexcept](../../cpp/noexcept-cpp.md)<br/>
 [Specifikace výjimek (throw)](../../cpp/exception-specifications-throw-cpp.md)<br/>
-[Ukončení](../../standard-library/exception-functions.md#terminate)<br/>
+[ukončit](../../standard-library/exception-functions.md#terminate)<br/>

@@ -1,10 +1,6 @@
 ---
-title: strcspn –, wcscspn –, _mbscspn –, _mbscspn_l – | Microsoft Docs
-ms.custom: ''
+title: strcspn, wcscspn, _mbscspn, _mbscspn_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbscspn_l
 - wcscspn
@@ -30,8 +26,6 @@ f1_keywords:
 - wcscspn
 - _ftcscspn
 - _tcscspn
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], searching
 - ftcscspn function
@@ -45,23 +39,19 @@ helpviewer_keywords:
 - mbscspn function
 - _tcscspn function
 ms.assetid: f73f51dd-b533-4e46-ba29-d05c553708a6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e282aa9d796f06e2682278e08dfae4f24b7a65c4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bcb1699f9a3f3c4d9e5ee040fdcb2e999397ac30
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415171"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446446"
 ---
 # <a name="strcspn-wcscspn-mbscspn-mbscspnl"></a>strcspn, wcscspn, _mbscspn, _mbscspn_l
 
-Vrátí index prvního výskytu řetězce, znaku, který patří do sady znaků.
+Vrátí index prvního výskytu hodnoty v řetězci znaku, který patří do sady znaků.
 
 > [!IMPORTANT]
-> **_mbschr –** a **_mbschr_l –** nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbschr –** a **_mbschr_l –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -87,32 +77,32 @@ size_t _mbscspn_l(
 
 ### <a name="parameters"></a>Parametry
 
-*str –*<br/>
-Vyhledávaná řetězce ukončené hodnotou Null.
+*str*<br/>
+Hledaný řetězec zakončený hodnotou Null.
 
 *strCharSet*<br/>
-Ukončené hodnotou Null znakovou sadu.
+Sada znaků zakončených znakem null.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Tyto funkce vrátí index prvního znaku v *str* který se v *strCharSet*. Pokud není k dispozici znaků v *str* v *strCharSet*, pak vrácená hodnota je délka *str*.
+Tyto funkce vrátí index prvního znaku v *str* , který je v *strCharSet*. Pokud žádný ze znaků v *str* probíhá *strCharSet*, pak je návratová hodnota délka *str*.
 
-Žádnou návratovou hodnotu je vyhrazena indikující chybu.
+Žádná návratová hodnota je vyhrazená k indikaci chyby.
 
 ## <a name="remarks"></a>Poznámky
 
-**wcscspn –** a **_mbscspn –** jsou široká charakterová a vícebajtových znaků verze **strcspn –**. Argumenty **wcscspn –** jsou široká charakterová řetězce; u **_mbscspn –** jsou řetězců vícebajtových znaků.
+**wcscspn –** a **_mbscspn –** jsou širokoznaké a vícebajtové verze **strcspn –**. Argumenty **wcscspn –** jsou širokoznaké řetězce **_mbscspn –** jsou vícebajtové znakové řetězce.
 
-**_mbscspn –** ověří jeho parametry. Pokud má jedna *str* nebo *strCharSet* je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, funkce vrátí hodnotu 0 a nastaví je povoleno spuštění **errno** k **einval –**. **strcspn –** a **wcscspn –** neověřují jejich parametrů. Tyto tři funkce chovají stejně jako jinak.
+**_mbscspn –** ověří jeho parametry. Pokud *str* nebo *strCharSet* je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, funkce vrátí hodnotu 0 a nastaví **errno** k **EINVAL**. **strcspn –** a **wcscspn –** neověří jejich parametry. Tyto tři funkce chovají identicky jinak.
 
-Výstupní hodnota je ovlivňován nastavením **LC_CTYPE –** kategorie nastavení národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze tyto funkce bez **_l** příponu využívání aktuální národní prostředí pro toto chování závislých na národním prostředí, verze s **_l** příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí Místo toho předaná. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze těchto funkcí bez **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí místo něho předán v. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscspn –**|**strcspn –**|**_mbscspn**|**wcscspn**|
 |není k dispozici|není k dispozici|**_mbscspn_l**|není k dispozici|
@@ -125,7 +115,7 @@ Výstupní hodnota je ovlivňován nastavením **LC_CTYPE –** kategorie nastav
 |**wcscspn**|\<String.h > nebo \<wchar.h >|
 |**_mbscspn –**, **_mbscspn_l –**|\<Mbstring.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -161,7 +151,7 @@ strcspn( "", "abc" ) = 0
 strcspn( "", "" ) = 0
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>

@@ -1,11 +1,6 @@
 ---
-title: cproj, cprojf, cprojl | Microsoft Docs
-ms.custom: ''
+title: cproj cprojf, cprojl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cproj
 - cprojf
@@ -30,25 +25,19 @@ f1_keywords:
 - complex/cproj
 - complex/cprojf
 - complex/cprojl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cproj function
 - cprojf function
 - cprojl function
 ms.assetid: 32b49623-13bf-4cae-802e-7912d75030fe
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e47536df4efa083d3d07827bb7fbf66a8669793
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1054172a7b5afde134ce9fa735a7eeda3bddafb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394938"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445666"
 ---
-# <a name="cproj-cprojf-cprojl"></a>cproj, cprojf, cprojl
+# <a name="cproj-cprojf-cprojl"></a>cproj cprojf, cprojl
 
 Načte projekce komplexního čísla v oblasti jsou při výpočtu.
 
@@ -83,20 +72,20 @@ Projekci *z* v oblasti jsou při výpočtu.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **cproj** , přijmout a vrátit **_Fcomplex** a **_Lcomplex** hodnoty. V programu C **cproj** vždy provede a vrátí **_Dcomplex** hodnotu.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **cproj** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **cproj** vždy převezme a vrátí **_Dcomplex** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Hlavička C|Hlavička C++|
+|Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
 |**cproj**, **cprojf**, **cprojl**|\<complex.h>|\<ccomplex >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
-[Norm, normf, norml](norm-normf-norml1.md)<br/>
+[Norm a normf, norml](norm-normf-norml1.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>
 [conj, conjf, conjl](conj-conjf-conjl.md)<br/>
 [cimag, cimagf, cimagl](cimag-cimagf-cimagl.md)<br/>

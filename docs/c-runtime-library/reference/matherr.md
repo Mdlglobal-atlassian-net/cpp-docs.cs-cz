@@ -1,10 +1,6 @@
 ---
-title: _matherr – | Microsoft Docs
-ms.custom: ''
+title: _matherr
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _matherr
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - _matherr
 - matherr
-dev_langs:
-- C++
 helpviewer_keywords:
 - _matherr function
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5f8cba1887fe806c3a6cfa795437d3d60ed7f31e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 980bf8a14ceace82a76562cc47d353f78dbca582
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402322"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445718"
 ---
 # <a name="matherr"></a>_matherr
 
-Zpracovává matematické chyby.
+Matematické chyby zpracovává.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -56,17 +46,17 @@ Ukazatel na strukturu obsahující informace o chybě.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_matherr –** vrátí hodnotu 0 indikující chybu nebo nenulovou hodnotu, čímž indikuje úspěšné provedení. Pokud **_matherr –** vrátí hodnotu 0, chybovou zprávu lze zobrazit a **errno** je nastaven na hodnotu odpovídající chyby. Pokud **_matherr –** vrátí nenulovou hodnotu, žádná chybová zpráva se zobrazí a **errno** zůstává beze změny.
+**_matherr** vrátí hodnotu 0 označující chybu nebo nenulovou hodnotu, čímž indikuje úspěšné provedení. Pokud **_matherr** vrátí hodnotu 0, chybová zpráva je možné zobrazit a **errno** je nastavena na hodnotu odpovídající chyba. Pokud **_matherr** vrátí nenulovou hodnotu, žádná chybová zpráva se zobrazí a **errno** zůstane beze změny.
 
-Další informace o návratové kódy najdete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Matherr –** funkce zpracovává chyby generované funkce plovoucí desetinné čárky matematické knihovny. Tyto funkce volání **_matherr –** když je zjištěna chyba.
+**_Matherr** funkce zpracovává chyby generované funkce s plovoucí desetinnou čárkou matematické knihovny. Volání těchto funkcí **_matherr** při rozpoznání chyby.
 
-Speciální při zpracování chyb, můžete zadat různé definice **_matherr –**. Pokud používáte dynamicky propojené verzi běhové knihovny jazyka C (CRT), můžete nahradit výchozí **_matherr –** rutiny v klientovi spustitelný soubor s verzí definovaný uživatelem. Však nelze nahradit výchozí **_matherr –** rutiny v klientovi knihovny DLL knihovny CRT DLL.
+Pro zpracování chyb speciální, můžete zadat jinou definici **_matherr**. Pokud používáte verzi dynamicky propojené knihovny run-time jazyka C (CRT), můžete nahradit výchozí **_matherr** rutiny v spustitelného souboru pomocí uživatelem definované verze klienta. Však nelze nahradit výchozí **_matherr** rutiny v klientovi knihovny DLL CRT knihovny DLL.
 
-Když dojde k chybě v rutině matematické **_matherr –** je volán s ukazatel na **_exception –** zadejte struktury (definované v \<math.h >) jako argument. **_Exception –** struktura obsahuje následující prvky.
+Když dojde k chybě v rutině matematické, **_matherr** je volána pomocí ukazatele na **_snímky** strukturu typu (definované v \<math.h >) jako argument. **_Snímky** struktura obsahuje následující prvky.
 
 ```C
 struct _exception
@@ -79,20 +69,20 @@ struct _exception
 };
 ```
 
-**Typ** člen Určuje typ matematické chyby. Jde o jeden z následujících hodnot, definované v \<math.h >:
+**Typ** člen Určuje typ matematické chyby. Představuje jednu z následujících hodnot podle \<math.h >:
 
 |– Makro|Význam|
 |-|-|
-**_DOMAIN –**|Chyba argument domény
-**–**|Argument singularity
-**_OVERFLOW –**|Rozsah chybu přetečení
-**_PLOSS –**|Částečné ztrátě násobek.
-**_TLOSS –**|Celkový počet ztrátě násobek.
-**_UNDERFLOW –**|Výsledkem je, a nelze je příliš malá. (Tento stav se aktuálně nepodporuje.)
+**_DOMÉNA**|Chyba argumentu domény
+**_SING**|Argument singularity
+**_OVERFLOW**|Chyba přetečení rozsahu
+**_PLOSS**|Částečné ztrátě významu
+**_TLOSS**|Celkový počet ke ztrátě významu
+**_UNDERFLOW**|Výsledek je příliš malá, aby se dala vyjádřit. (Tento stav se aktuálně nepodporuje.)
 
-Struktura člen **název** je ukazatel na obsahující název funkce, které chybu způsobilo řetězce ukončené hodnotou null. Členové struktury **arg1** a **arg2** zadejte hodnoty, které chybu způsobilo. Pokud jenom jeden argument je zadána, je uložen v **arg1**.
+Člen struktury **název** je ukazatel na řetězec zakončený hodnotou null obsahující název funkce, která způsobila chybu. Členové struktury **arg1** a **arg2** zadejte hodnoty, které způsobily chybu. Pokud pouze jeden argument je zadána, je uložena v **arg1**.
 
-Vrátí výchozí hodnota pro danou chybu **retval**. Pokud změníte návratovou hodnotu, zadejte, zda ve skutečnosti došlo k chybě.
+Výchozí návratová hodnota pro danou chybu **retval**. Pokud změníte návratovou hodnotu, musí určovat, zda skutečně došlo k chybě.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -100,7 +90,7 @@ Vrátí výchozí hodnota pro danou chybu **retval**. Pokud změníte návratovo
 |-------------|---------------------|
 |**_matherr**|\<Math.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -164,6 +154,6 @@ log10( -5.0 ) = 6.989700e-01
 Normal: log( 0.0 ) = -inf
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>

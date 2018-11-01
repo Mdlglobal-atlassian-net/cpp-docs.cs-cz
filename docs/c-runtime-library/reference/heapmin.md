@@ -1,10 +1,6 @@
 ---
-title: _heapmin – | Microsoft Docs
-ms.custom: ''
+title: _heapmin
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _heapmin
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _heapmin
 - heapmin
-dev_langs:
-- C++
 helpviewer_keywords:
 - heap memory
 - minimizing heaps
@@ -33,20 +27,16 @@ helpviewer_keywords:
 - _heapmin function
 - heapmin function
 ms.assetid: c0bccdf6-2d14-4d7b-a7ff-d6a17bdb410f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ec73905c6361d025b9f29c8cf4543ed200a4abbf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 130986894d1e2a68415e6ab9218641eff484ffd1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397980"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50455468"
 ---
 # <a name="heapmin"></a>_heapmin
 
-Uvolní paměť nepoužívané haldy v operačním systému.
+Uvolní paměť nevyužité haldy v operačním systému.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -56,23 +46,23 @@ int _heapmin( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěšného **_heapmin –** vrátí hodnotu 0; jinak, funkce vrátí hodnotu -1 a nastaví **errno** k **ENOSYS**.
+V případě úspěšného ověření **_heapmin –** vrátí hodnotu 0; v opačném případě vrátí funkce hodnotu -1 a nastaví **errno** k **ENOSYS**.
 
-Další informace o tomto a ostatní návratové kódy najdete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o tomto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Heapmin –** funkce minimalizuje halda uvolněním nepoužívané halda paměti operačního systému. Pokud operační systém nepodporuje **_heapmin –**(například Windows 98), funkce vrátí hodnotu -1 a nastaví **errno** k **ENOSYS**.
+**_Heapmin –** funkce minimalizuje haldy uvolněním nevyužité haldy paměti pro operační systém. Pokud operační systém nepodporuje **_heapmin –**(například Windows 98), vrátí funkce hodnotu -1 a nastaví **errno** k **ENOSYS**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
 |**_heapmin**|\<malloc.h >|\<errno.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přidělení paměti](../../c-runtime-library/memory-allocation.md)<br/>
 [free](free.md)<br/>

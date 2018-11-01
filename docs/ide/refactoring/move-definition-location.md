@@ -1,21 +1,13 @@
 ---
-title: Přesunout umístění definice | Dokumentace Microsoftu
-ms.custom: ''
+title: Přesunout umístění definice
 ms.date: 11/16/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 ms.assetid: c6d507ac-c61e-4da2-95c8-d504b42e2520
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5058e0b3bab1fb5fb5e8d52b55e3fa7c37fd8a4e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fd4fe2fb755919656fba935c29ab8a8591426bea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430042"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462358"
 ---
 # <a name="move-definition-location"></a>Přesunout umístění definice
 **Co:** umožňuje okamžitě přesunutí definice funkce pro odpovídající soubor záhlaví.

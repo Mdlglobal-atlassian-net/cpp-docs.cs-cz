@@ -1,28 +1,17 @@
 ---
-title: Dialogové okno vlastní obrázek (Editor obrázků pro ikony) (C++) | Dokumentace Microsoftu
-ms.custom: ''
+title: Dialogové okno vlastní obrázek (Editor obrázků pro ikony) (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.customimage
-dev_langs:
-- C++
 helpviewer_keywords:
 - Custom Image dialog box [C++]
 ms.assetid: 68e2cc5c-19de-428e-bc25-ec6b260247d0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 13e3f621bafad08694e8e930835ecc62562db013
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 0cd35e9ccff46ac6b074d67799b1c753d3af3ffa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50071677"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50479739"
 ---
 # <a name="custom-image-dialog-box-c-image-editor-for-icons"></a>Dialogové okno vlastní obrázek (Editor obrázků pro ikony) (C++)
 

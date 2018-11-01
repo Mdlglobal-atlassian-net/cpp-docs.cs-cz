@@ -1,10 +1,6 @@
 ---
-title: _pipe – | Microsoft Docs
-ms.custom: ''
+title: _pipe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _pipe
 apilocation:
@@ -23,31 +19,25 @@ apitype: DLLExport
 f1_keywords:
 - pipe
 - _pipe
-dev_langs:
-- C++
 helpviewer_keywords:
 - pipes, creating
 - _pipe function
 - pipes
 - pipe function
 ms.assetid: 8d3e9800-4041-44b5-9e93-2df0b0354a75
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e3e636bc5aac889e3c3a16b856525d4d7268e262
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c5db59fecd84ae291e5651b1cec1be31c815e53a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405124"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50453977"
 ---
 # <a name="pipe"></a>_pipe
 
-Vytvoří kanálu pro čtení a zápis.
+Vytvoří kanál pro čtení a zápis.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,60 +51,60 @@ int _pipe(
 
 ### <a name="parameters"></a>Parametry
 
-*diagramů procesů*<br/>
-Ukazatele na pole dva **int** k uložení pro čtení a zápisu popisovače souborů.
+*Tyto diagramy*<br/>
+Ukazatel na pole dvou **int** podržte čtení a zápis popisovače souborů.
 
 *psize*<br/>
-Množství paměti rezervovat.
+Množství paměti pro rezervaci.
 
 *v textovém režimu*<br/>
 Režim souboru.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí hodnotu 0. Vrátí hodnotu -1 indikující chybu. V případě chyby **errno** nastaven na jednu z těchto hodnot:
+V případě úspěchu vrátí hodnotu 0. Vrátí hodnotu -1 označuje chybu. Při chybě **errno** nastavena na jednu z těchto hodnot:
 
-- **Emfile –**, což naznačuje, že jsou k dispozici žádné další popisovače souborů.
+- **EMFILE**, což znamená, že nejsou k dispozici žádné další popisovače souboru.
 
-- **ENFILE**, což naznačuje přetečení tabulce systému souborů.
+- **ENFILE**, který označuje přetečení tabulce systému souborů.
 
-- **Einval –**, což znamená, že buď pole *diagramů procesů* je ukazatel s hodnotou null nebo neplatnou hodnotu pro *v textovém režimu* byla předána.
+- **EINVAL**, což znamená, že buď pole *tyto diagramy* je ukazatel s hodnotou null nebo neplatná hodnota pro *v textovém režimu* byla předána.
 
-Další informace o těchto a dalších návratové kódy najdete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o těchto a dalších návratových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Pipe –** funkce vytvoří *kanálu*, což je umělé vstupně-výstupního kanálu, který program používá k předávání informací do jiných programů. Protože jsou popisovače souborů, ukazatele souboru nebo obojí, a může číst nebo zapisovat do pomocí standardní knihovna vstup a výstup funkce se podobá svislicí soubor. Svislicí však nepředstavuje konkrétní soubor nebo zařízení. Místo toho představuje dočasné úložiště v paměti, která je nezávislá vlastní paměti programu a řídí zcela operačního systému.
+**_Pipe –** vytvoří funkci *kanálu*, což je umělý vstupně-výstupní kanál, který program používá k předávání informací do jiných programů. Kanál se podobá souboru, protože má ukazatel souboru, popisovač souboru nebo obojí, a může číst nebo zapisovat do pomocí standardní knihovny vstupu a výstupu funkcí. Kanál však nepředstavuje konkrétní soubor nebo zařízení. Místo toho představuje dočasné úložiště v paměti, která je nezávislá vlastní paměti programu a je řízeno výhradně operačním systémem.
 
-**_pipe –** vypadá takto: **_Otevřít** ale otevře kanál pro čtení a zápis a vrátí dva popisovače místo jeden soubor. Program můžete použít obě strany kanálu nebo zavřete ten, který nepotřebuje. Například procesor příkazů ve Windows vytváří kanál, jakmile je spuštěn příkaz například **PROGRAM1** | **PROGRAM2**.
+**_pipe –** se podobá **_Otevřít** ale otevře kanál pro čtení a zápis a vrátí dva popisovače souboru místo jednoho. Program můžete používat obě strany kanálu nebo zavřít ten, který nepotřebuje. Například procesor příkazu v Windows vytváří kanál, když je spuštěn příkaz jako **PROGRAM1** | **PROGRAM2**.
 
-Standardní výstupní popisovač **PROGRAM1** je připojen k popisovač zápisu do kanálu. Standardní vstupní popisovač **PROGRAM2** je připojen k popisovač pro čtení kanálu. Tím se eliminuje potřebu vytvářet dočasné soubory předávat informace do jiných programů.
+Standardní výstupní popisovač **PROGRAM1** se připojuje k popisovači zápisu kanálu. Standardní vstupní popisovač **PROGRAM2** se připojuje k popisovači čtení kanálu. To eliminuje potřebu vytvářet dočasné soubory k předávání informací do jiných programů.
 
-**_Pipe –** funkce vrátí do kanálu v dva popisovače souborů *diagramů procesů* argument. Element *diagramů procesů*[0] obsahuje popisovač pro čtení a element *diagramů procesů*[1] obsahuje popisovač zápisu. Popisovače souborů kanálu se používají stejným způsobem jako ostatní popisovače souborů. (Nízké úrovně vstupní a výstupní funkce **_získat** a **_Write –** může číst a zapisovat do kanálu.) Ke zjištění podmínky end kanálu, zkontrolujte **_získat** požadavek, který vrátí hodnotu 0, jako je počet přečtených bajtů.
+**_Pipe –** funkce vrátí dva popisovače souborů kanálu v *tyto diagramy* argument. Element *tyto diagramy*[0] obsahuje popisovače čtení a prvek *tyto diagramy*[1] obsahuje popisovač zápisu. Popisovače souborů kanálu se používají stejným způsobem jako ostatní popisovače souborů. (Nižší vstupní a výstupní funkce **_read** a **_write** může číst z a zapisovat do kanálu.) Ke zjištění stavu ukončení kanálu, vyhledávat **_read** žádosti, která vrátí hodnotu 0 jako počet přečtených bajtů.
 
-*Psize* argument určuje množství paměti, v bajtech, můžete vyhradit pro kanál. *v textovém režimu* argument určuje režim překladu pro kanál. Manifestu konstanta **_o_text –** Určuje text překlad a konstantu **_o_binary –** Určuje binární překlad. (Viz [fopen –, _wfopen –](fopen-wfopen.md) popis textové a binární režimy.) Pokud *v textovém režimu* argument je 0, **_pipe –** používá výchozí režim překladu, která je zadána proměnná výchozí režim [_fmode –](../../c-runtime-library/fmode.md).
+*Psize* argument určuje množství paměti v bajtech, která chcete vyhradit pro kanál. *v textovém režimu* argument určuje režim překladu pro kanál. Konstanta manifestu **_O_TEXT** určuje překlad textu a konstanta **_O_BINARY** Určuje binární překlad. (Viz [fopen _wfopen –](fopen-wfopen.md) popis textu a binárních režimů.) Pokud *v textovém režimu* argument je 0, **_pipe –** používá výchozí režim překladu určený proměnnou výchozího režimu [_fmode](../../c-runtime-library/fmode.md).
 
-Žádné uzamčení se provádí v programy s více vlákny. Popisovače souborů, které jsou vráceny jsou nově otevřené a jakékoli vlákno až po nesmí odkazovat **_pipe –** volání je dokončena.
+Žádné uzamčení se neprovádí v programech s více vlákny. Popisovače souborů, které jsou vráceny, jsou nově otevřeny a neměly by být odkazovány z žádného vlákna do po **_pipe –** dokončení volání.
 
-Použít **_pipe –** funkce pro komunikaci mezi procesem nadřazeného a podřízeného procesu, jednotlivých procesů musí mít jenom jeden popisovač otevřít v kanálu. Popisovače musí být opposites: Pokud má nadřazená otevřít popisovač pro čtení, pak podřízený objekt musí mít otevřete popisovač zápisu. Nejjednodušším způsobem je do bitové nebo (**|**) **_O_NOINHERIT** příznak s *v textovém režimu*. Poté použijte **_dup –** nebo **_dup2 –** vytvořit zděditelné kopii popisovač kanálu, který chcete předat podřízená. Zavřete původní popisovač a pak vytvořit podřízeného procesu. Na vrácení z volání spawn, zavřete duplicitní popisovač v nadřazené procesu. Další informace najdete v tématu příklad 2 později v tomto článku.
+Použít **_pipe –** funkce ke komunikaci mezi nadřazeným a podřízený proces, musí mít každý proces na kanálu otevřený pouze jeden popisovač. Popisovače musí být opaky: Pokud má nadřazená otevřený popisovač pro čtení, pak musí mít podřízený prvek otevřený popisovač zápisu. Nejjednodušší způsob je do bitového nebo (**|**) **_O_NOINHERIT** s příznakem *v textovém režimu*. Potom použijte **_dup –** nebo **_dup2 –** vytvořte dědičnou kopii popisovače kanálu, které chcete předat do podřízeného. Zavřete původní popisovač a pak spusťte podřízený proces. Při návratu z volání vzniku zavřete duplicitní popisovač v nadřazeném procesu. Další informace naleznete v příkladu 2 dále v tomto článku.
 
-V operačním systému Windows znakem | zničena při všechny jeho popisovače bylo ukončeno. (Pokud jste uzavřeli všechny čtení popisovače na kanálu, pak zápisu do kanálu způsobí, že k chybě.) Všechny čtení a zápisu operací na kanálu Počkejte, dokud není k dispozici dostatek dat nebo dostatek místa vyrovnávací paměti pro dokončení požadavku vstupně-výstupních operací.
+V operačním systému Windows je kanál zničen, když všechny jeho popisovače uzavřeny. (Pokud jsou uzavřené, všechny popisovače čtení na kanálu, pak zápis do kanálu způsobí chybu.) Všechny operace čtení a zápisu na kanálu čekají dokud není k dispozici dostatek dat nebo dostatek vyrovnávací paměti k dokončení požadavku vstupně-výstupních operací.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
 |**_pipe**|\<IO.h >|\<fcntl.h>,1 \<errno.h>2|
 
-1 pro **_o_binary –** a **_o_text –** definice.
+1 pro **_O_BINARY** a **_O_TEXT** definice.
 
 2 **errno** definice.
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example-1"></a>Příklad 1
 
@@ -223,7 +213,7 @@ Dad, the square root of 8000 is 89.44.
 
 ## <a name="example-2"></a>Příklad 2
 
-Toto je základní filtru aplikací. Crt_pipe_beeper aplikace se vytvoří po vytvoření kanálu, který přesměruje vytvořená aplikace stdout filtru. Filtr odebere znaky ASCII 7 (zvukového signálu).
+Toto je základní aplikace filtru. To vzniknout aplikaci crt_pipe_beeper po vytvoření kanálu, který přesměruje stdout vytvořené aplikace do filtru. Filtr odstraní znaky ASCII 7 (zvukový signál).
 
 ```C
 // crt_pipe_beeper.c
@@ -242,7 +232,7 @@ int main()
 }
 ```
 
-Skutečné filtru aplikací:
+Aktuální aplikace filtru:
 
 ```C
 // crt_pipe_BeepFilter.C
@@ -350,7 +340,7 @@ This is speaker beep number 9...
 This is speaker beep number 10...
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>

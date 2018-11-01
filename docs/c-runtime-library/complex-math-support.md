@@ -1,112 +1,102 @@
 ---
-title: Podpora komplexní matematické C | Microsoft Docs
-ms.custom: ''
+title: Podpora komplexní matematiky C
 ms.date: 03/30/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.complex
-dev_langs:
-- C++
 helpviewer_keywords:
 - complex numbers, math routines
 - math routines
 - complex numbers
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 661e1367ea64713cf7a143f276cd195d54fecf85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 12ba858993d3712cbf390288df60faedc602c90a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392075"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452608"
 ---
-# <a name="c-complex-math-support"></a>Podpora komplexní matematické C
+# <a name="c-complex-math-support"></a>Podpora komplexní matematiky C
 
-Knihovna Microsoft C Runtime (CRT) poskytuje komplexní matematické funkce knihovny, včetně všech těchto vyžadovanou ISO C99. Kompilátor nepodporuje přímo **komplexní** nebo **_complex –** – klíčové slovo, proto implementace Microsoft používá typy struktur k reprezentaci komplexní čísla.
+Knihovna Microsoft C Runtime (CRT) poskytuje složitých matematických knihovních funkcí, včetně všech funkcí, které jsou vyžadované ISO C99. Kompilátor nepodporuje přímo **komplexní** nebo **_Complex** – klíčové slovo, proto implementace společnosti Microsoft používá typy struktur k reprezentaci komplexní čísla.
 
-Tyto funkce jsou implementované vyvážit výkonu s správnost. Vzhledem k vytváření správně zaokrouhlené výsledek může být výtažkovými, tyto funkce jsou navrženy pro efektivní vytvořit blízká aproximace správně zaokrouhlené výsledek. Ve většině případů výsledku vytvořeného je v rámci +/-1 ulp správně zaokrouhlené výsledku, i když může být případech níž se nachází větší nepřesnost.
+Tyto funkce jsou implementované vyvážit výkon s správnosti. Protože vytváření správně zakulacený výsledky mohou být nepřekonatelně drahé, tyto funkce jsou navržené tak efektivně vytvářet aproximace správně zakulacený výsledek. Ve většině případů výsledek vytvořený je v rámci +/-1 ulp výsledku správně zakulacený, ale můžou nastat případy, ve kterých je větší nepřesnost.
 
-Komplexní matematické rutiny spoléhají na procedura bodu matematické funkce knihovny pro jejich implementaci. Tyto funkce mají různé implementace pro různé architektury procesoru. Například x86 32-bit CRT může mít jinou implementaci než 64-bit x64 CRT. Kromě toho některé funkce mohou mít více implementace pro danou architekturu procesoru. Nejúčinnější implementace je vybrán dynamicky za běhu v závislosti na sady instrukcí nepodporuje procesoru. Například v x86 32-bit CRT, některé funkce mají obě x87 implementaci a SSE2 implementace. Při spuštění na procesor, který podporuje SSE2, rychlejší implementace SSE2 se používá. Při spuštění na procesor, který nepodporuje SSE2, pomalejší x87, které slouží k implementaci. Protože různými implementacemi matematické funkce knihovny může používat jinou pokyny procesoru a různé algoritmy nepřineslo jejich výsledky, funkce mohou mít různé výsledky mezi procesory. Ve většině případů jsou výsledky v rámci +/-1 ulp správně zaokrouhlené výsledek, ale skutečný výsledek se může lišit mezi procesory.
+Složité matematické operace závisí na plovoucí bodu matematických knihovních funkcí pro jejich implementaci. Tyto funkce mají různé implementace pro jinou architekturu procesoru. Například x86 32-bit CRT může mít jinou implementaci než 64-bit x64 CRT. Kromě toho některé funkce mohou mít několik implementací pro danou architekturu procesoru. Nejúčinnější implementace je vybrán dynamicky za běhu v závislosti na instrukční sadu podporovaných procesoru. Například v 32bitové x86 CRT, některé funkce mají obě x87 provádění a implementaci SSE2. Při spuštění na procesor, který podporuje SSE2, se používá rychlejší provádění SSE2. Když se používá Procesorem, který nepodporuje SSE2, pomalejší x87 použita implementace. Protože různé implementace matematických knihovních funkcí může pomocí různých procesorů pokyny a různé algoritmy jejich výsledky, funkce mohou mít různé výsledky mezi procesory. Ve většině případů jsou výsledky v rámci +/-1 ulp výsledku správně zakulacený, ale skutečné výsledky se mohou lišit mezi procesory.
 
-## <a name="types-used-in-complex-math"></a>Typy používané v komplexní matematické
+## <a name="types-used-in-complex-math"></a>Typy používané v komplexní matematiky
 
-Implementace Microsoft complex.h hlavičky, která definuje tyto typy jako ekvivalenty pro C99 standardní nativní komplexní typy:
+Implementace Microsoft hlavičky complex.h definuje jako ekvivalenty C99 standardní nativní komplexní typy těchto typů:
 
 |Standardní typ|Typ Microsoft|
 |-|-|
-|**float komplexní** nebo **float _complex –**|**_FComplex**|
-|**dvojité komplexní** nebo **dvojité _complex –**|**_DComplex**|
-|**long double komplexní** nebo **_complex – long double**|**_LComplex**|
+|**komplexní float** nebo **float _Complex**|**_FComplex**|
+|**dvojité komplexní** nebo **double _Complex**|**_DComplex**|
+|**long double komplexní** nebo **_Complex long double**|**_LComplex**|
 
-Záhlaví math.h definuje samostatný typ, **_complex – struktura**používané k [_cabs –](../c-runtime-library/reference/cabs.md) funkce. **_Complex – struktura** typ není používán ekvivalentní komplexní matematické funkce [soubory CAB, cabsf, cabsl –](../c-runtime-library/reference/cabs-cabsf-cabsl.md).
+Hlaviček math.h definuje samostatný typ, **struktura _complex**, která se používá pro [_cabs](../c-runtime-library/reference/cabs.md) funkce. **Struktura _complex** typ není používán ekvivalentní složité matematické funkce [soubory CAB, cabsf, cabsl –](../c-runtime-library/reference/cabs-cabsf-cabsl.md).
 
 ## <a name="complex-constants-and-macros"></a>Komplexní konstanty a makra
 
-**I** je definován jako **float** komplexní typ **_FComplex** iniciovány `{ 0.0f, 1.0f }`.
+**Můžu** je definován jako **float** komplexní typ **_FComplex** inicializoval `{ 0.0f, 1.0f }`.
 
 ## <a name="trigonometric-functions"></a>Trigonometrické funkce
 
 |Funkce|Popis|
 |-|-|
-|[cacos, cacosf, cacosl](../c-runtime-library/reference/cacos-cacosf-cacosl.md)|Výpočetní komplexní oblouk kosinus komplexní čísla|
-|[casin, casinf, casinl](../c-runtime-library/reference/casin-casinf-casinl.md)|Výpočetní komplexní oblouk sinus komplexní čísla|
-|[catan, catanf, catanl](../c-runtime-library/reference/catan-catanf-catanl.md)|Výpočetní komplexní oblouk tangens komplexní čísla|
-|[ccos, ccosf, ccosl](../c-runtime-library/reference/ccos-ccosf-ccosl.md)|Výpočetní komplexní kosinus komplexní čísla|
-|[csin, csinf, csinl](../c-runtime-library/reference/csin-csinf-csinl.md)|Výpočetní komplexní sinus reprezentující komplexní čísla|
-|[ctan, ctanf, ctanl](../c-runtime-library/reference/ctan-ctanf-ctanl.md)|Výpočetní komplexní tangens reprezentující komplexní čísla|
+|[cacos, cacosf, cacosl](../c-runtime-library/reference/cacos-cacosf-cacosl.md)|COMPUTE komplexní Arkus kosinus komplexního čísla|
+|[casin, casinf, casinl](../c-runtime-library/reference/casin-casinf-casinl.md)|COMPUTE komplexní Arkus sinus komplexního čísla|
+|[catan, catanf, catanl](../c-runtime-library/reference/catan-catanf-catanl.md)|COMPUTE komplexní Arkus tangens komplexního čísla|
+|[ccos, ccosf, ccosl](../c-runtime-library/reference/ccos-ccosf-ccosl.md)|Vypočítat kosinus komplexní komplexního čísla|
+|[csin, csinf, csinl](../c-runtime-library/reference/csin-csinf-csinl.md)|COMPUTE komplexní hodnotu sinus tohoto komplexního čísla|
+|[ctan, ctanf, ctanl](../c-runtime-library/reference/ctan-ctanf-ctanl.md)|Vypočítat tangens komplexní komplexního čísla|
 
 ## <a name="hyperbolic-functions"></a>Hyperbolické funkce
 
 |Funkce|Popis|
 |-|-|
-|[cacosh, cacoshf, cacoshl](../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)|Výpočetní komplexní oblouk hyperbolický kosinus reprezentující komplexní čísla|
-|[casinh, casinhf, casinhl](../c-runtime-library/reference/casinh-casinhf-casinhl.md)|Výpočetní komplexní oblouk hyperbolický sinus reprezentující komplexní čísla|
-|[catanh, catanhf, catanhl](../c-runtime-library/reference/catanh-catanhf-catanhl.md)|Výpočetní komplexní oblouk hyperbolický tangens reprezentující komplexní čísla|
-|[ccosh, ccoshf, ccoshl](../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)|Výpočetní komplexní hyperbolický kosinus reprezentující komplexní čísla|
-|[csinh, csinhf, csinhl](../c-runtime-library/reference/csinh-csinhf-csinhl.md)|Výpočetní komplexní hyperbolický sinus reprezentující komplexní čísla|
-|[ctanh, ctanhf, ctanhl](../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)|Výpočetní komplexní hyperbolický tangens reprezentující komplexní čísla|
+|[cacosh, cacoshf, cacoshl](../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)|COMPUTE komplexní oblouk hyperbolický kosinus komplexního čísla|
+|[casinh, casinhf, casinhl](../c-runtime-library/reference/casinh-casinhf-casinhl.md)|COMPUTE komplexní oblouk hyperbolický sinus komplexního čísla|
+|[catanh, catanhf, catanhl](../c-runtime-library/reference/catanh-catanhf-catanhl.md)|COMPUTE komplexní hyperbolický arkustangens komplexního čísla|
+|[ccosh, ccoshf, ccoshl](../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)|COMPUTE komplexní hyperbolický kosinus komplexního čísla|
+|[csinh, csinhf, csinhl](../c-runtime-library/reference/csinh-csinhf-csinhl.md)|COMPUTE komplexní hyperbolický sinus komplexního čísla|
+|[ctanh, ctanhf, ctanhl](../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)|COMPUTE komplexní hyperbolický tangens komplexního čísla|
 
-## <a name="exponential-and-logarithmic-functions"></a>Exponenciální a logaritmické funkce
-
-|Funkce|Popis|
-|-|-|
-|[cexp, cexpf, cexpl](../c-runtime-library/reference/cexp-cexpf-cexpl.md)|Výpočetní komplexní základní -*e* exponenciální komplexního čísla.|
-|[clog, clogf, clogl](../c-runtime-library/reference/clog-clogf-clogl.md)|Výpočetní komplexní přirozený (základní -*e*) logaritmus komplexní čísla|
-|[clog10, clog10f, clog10l](../c-runtime-library/reference/clog10-clog10f-clog10l.md)|Výpočetní komplexní základu 10 logaritmus komplexní čísla|
-
-## <a name="power-and-absolute-value-functions"></a>Napájení a absolutní hodnota funkce
+## <a name="exponential-and-logarithmic-functions"></a>Exponenciální a hodnota funkce
 
 |Funkce|Popis|
 |-|-|
-|[cabs, cabsf, cabsl](../c-runtime-library/reference/cabs-cabsf-cabsl.md)|Výpočetní komplexní absolutní hodnotu (také nazývané norm, numerického zbytku nebo rozsahem) reprezentující komplexní čísla|
-|[cpow, cpowf, cpowl](../c-runtime-library/reference/cpow-cpowf-cpowl.md)|Výpočetní funkci komplexní power x<sup>y</sup>|
-|[csqrt, csqrtf, csqrtl](../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)|Výpočetní komplexní druhou odmocninu komplexního čísla.|
+|[cexp, cexpf, cexpl](../c-runtime-library/reference/cexp-cexpf-cexpl.md)|COMPUTE komplexní základní -*e* exponenciální komplexního čísla|
+|[clog, clogf, clogl](../c-runtime-library/reference/clog-clogf-clogl.md)|COMPUTE komplexní přirozený (základní -*e*) logaritmus komplexního čísla|
+|[clog10, clog10f, clog10l](../c-runtime-library/reference/clog10-clog10f-clog10l.md)|COMPUTE komplexní základ 10 logaritmus komplexního čísla|
+
+## <a name="power-and-absolute-value-functions"></a>Výkon a absolutní hodnota funkce
+
+|Funkce|Popis|
+|-|-|
+|[cabs, cabsf, cabsl](../c-runtime-library/reference/cabs-cabsf-cabsl.md)|Výpočtu komplexní absolutní hodnoty (také nazývané norm, modulus nebo velikost) komplexního čísla|
+|[cpow, cpowf, cpowl](../c-runtime-library/reference/cpow-cpowf-cpowl.md)|Výpočetní funkce komplexní power x<sup>y</sup>|
+|[csqrt, csqrtf, csqrtl](../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)|COMPUTE komplexní odmocninu komplexního čísla|
 
 ## <a name="manipulation-functions"></a>Funkce pro zpracování
 
 |Funkce|Popis|
 |-|-|
-|[_Cbuild, _FCbuild, _LCbuild](../c-runtime-library/reference/cbuild-fcbuild-lcbuild.md)|Vytvořit komplexní číslo od skutečné a pomyslná částí|
-|[carg, cargf, cargl](../c-runtime-library/reference/carg-cargf-cargl.md)|Výpočetní argument (také nazývané úhel fáze) komplexního čísla.|
-|[cimag, cimagf, cimagl](../c-runtime-library/reference/cimag-cimagf-cimagl.md)|Výpočetní pomyslná součástí reprezentující komplexní čísla|
-|[conj, conjf, conjl](../c-runtime-library/reference/conj-conjf-conjl.md)|Výpočetní sdružené reprezentující komplexní čísla|
-|[cproj, cprojf, cprojl](../c-runtime-library/reference/cproj-cprojf-cprojl.md)|Výpočetní projekci komplexního čísla do oblasti Riemannův|
-|[creal, crealf, creall](../c-runtime-library/reference/creal-crealf-creall.md)|Výpočetní skutečné součástí reprezentující komplexní čísla|
-|[Norm, normf, norml](../c-runtime-library/reference/norm-normf-norml1.md)|Výpočetní kvadratických odhad reprezentující komplexní čísla|
+|[_Cbuild, _FCbuild, _LCbuild](../c-runtime-library/reference/cbuild-fcbuild-lcbuild.md)|Vytvoření komplexního čísla z reálné a imaginární části|
+|[carg, cargf, cargl](../c-runtime-library/reference/carg-cargf-cargl.md)|COMPUTE argument komplexní čísla (také nazývané úhel fáze)|
+|[cimag, cimagf, cimagl](../c-runtime-library/reference/cimag-cimagf-cimagl.md)|COMPUTE imaginární části komplexního čísla|
+|[conj, conjf, conjl](../c-runtime-library/reference/conj-conjf-conjl.md)|COMPUTE sdružené komplexního čísla|
+|[cproj, cprojf, cprojl](../c-runtime-library/reference/cproj-cprojf-cprojl.md)|Projekce komplexního čísla do oblasti Riemannův COMPUTE|
+|[creal, crealf, creall](../c-runtime-library/reference/creal-crealf-creall.md)|COMPUTE skutečné součástí komplexního čísla|
+|[Norm a normf, norml](../c-runtime-library/reference/norm-normf-norml1.md)|COMPUTE ve čtverci velikost komplexního čísla|
 
 ## <a name="operation-functions"></a>Operace funkce
 
-Protože komplexní čísla nejsou nativního typu v kompilátoru Microsoft, standardní aritmetické operátory nejsou definované v komplexní typy. Pro usnadnění práce jsou k dispozici tyto funkce knihovny math komplexní povolit omezený zpracování komplexní čísla v uživatelském kódu:
+Protože komplexní čísla nejsou nativní typ v kompilátor společnosti Microsoft, standardní aritmetické operátory nejsou definované v komplexních typů. Pro usnadnění práce jsou k dispozici tyto složitých matematických knihovních funkcí umožňující manipulaci s omezenou komplexních čísel v uživatelském kódu:
 
 |Funkce|Popis|
 |-|-|
-|[_Cmulcc, _FCmulcc, _LCmulcc](../c-runtime-library/reference/cmulcc-fcmulcc-lcmulcc.md)|Vynásobit dvě komplexní čísla|
-|[_Cmulcr, _FCmulcr, _LCmulcr](../c-runtime-library/reference/cmulcr-fcmulcr-lcmulcr.md)|Násobit komplexní a číslem s plovoucí desetinnou čárkou|
+|[_Cmulcc, _FCmulcc, _LCmulcc](../c-runtime-library/reference/cmulcc-fcmulcc-lcmulcc.md)|Vynásobí dvě komplexní čísla|
+|[_Cmulcr, _FCmulcr, _LCmulcr](../c-runtime-library/reference/cmulcr-fcmulcr-lcmulcr.md)|Vynásobit komplexní a číslo s plovoucí desetinnou čárkou|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Rutiny UCRT (Universal C runtime) podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>

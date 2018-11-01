@@ -1,10 +1,6 @@
 ---
-title: _fflush_nolock – | Microsoft Docs
-ms.custom: ''
+title: _fflush_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fflush_nolock
 apilocation:
@@ -23,28 +19,22 @@ apitype: DLLExport
 f1_keywords:
 - fflush_nolock
 - _fflush_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - fflush_nolock function
 - _fflush_nolock function
 - streams, flushing
 - flushing
 ms.assetid: 5e33c4a1-b10c-4001-ad01-210757919291
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 635d0339125483b385a49e8d42cc7c67b2fb92ba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 721098899525df02dc3b3d121cf894f8056fcb98
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395588"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464100"
 ---
 # <a name="fflushnolock"></a>_fflush_nolock
 
-Vyprázdnění datového proudu bez blokování vlákno.
+Vyprázdní datového proudu bez zamčení vlákna.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -56,16 +46,16 @@ int _fflush_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*Datový proud*<br/>
-Ukazatel **souboru** struktura.
+*Stream*<br/>
+Ukazatel **souboru** struktury.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V tématu [fflush –](fflush.md).
+Zobrazit [fflush –](fflush.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Tato funkce je verze bez uzamčení **fflush –**. Je stejný jako **fflush –** s tím rozdílem, že není chráněn před narušení další vlákna. Může být rychlejší, protože není nesnižuje režii uzamykání jiná vlákna. Tuto funkci můžete používejte pouze v kontextu vláken jako je například aplikace nebo kde oboru volání již zpracovává izolace přístup z více vláken.
+Tato funkce je nezamykací verzi **fflush –**. Je stejný jako **fflush –** s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Může být rychlejší, protože narůstání režii uzamykáním ostatních vláken. Tuto funkci lze používejte pouze v kontextech bezpečných na vlákna, jako je například aplikace s jedním vláknem nebo pokud volající obor již zpracovává izolaci vláken.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -73,11 +63,11 @@ Tato funkce je verze bez uzamčení **fflush –**. Je stejný jako **fflush –
 |--------------|---------------------|
 |**_fflush_nolock**|\<stdio.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>
 [_flushall](flushall.md)<br/>
 [setvbuf](setvbuf.md)<br/>
