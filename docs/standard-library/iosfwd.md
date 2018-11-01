@@ -1,31 +1,21 @@
 ---
-title: '&lt;iosfwd –&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;iosfwd –&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <iosfwd>
-dev_langs:
-- C++
 helpviewer_keywords:
 - iosfwd header
 ms.assetid: 964442eb-17f1-43ef-a0e0-c5bb77f9c187
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e7e4d382250a559a3c597c008a3b6a285b3842ab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6b259a0c2eaf816effaf72104e4cdf344a43c71c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844956"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619307"
 ---
 # <a name="ltiosfwdgt"></a>&lt;iosfwd –&gt;
 
-Deklaruje dopředného odkazy na několik tříd šablon používaných v celém iostreams. Všechny tyto třídy šablony jsou definovány v jiné standardní hlavičky. Explicitně zahrnete tuto hlavičku pouze v případě potřeby jedním z jeho deklarace, ale ne jeho definice.
+Deklaruje dopředné odkazy na několik tříd šablon používaný v celém iostreams. Všechny tyto třídy šablony jsou definovány v jiné standardní záhlaví. Explicitně zahrnete tuto hlavičku jenom v případě, že budete potřebovat jeden z jeho deklarace, ale ne jeho definici.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -73,7 +63,7 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 };
 ```
 
-## <a name="forward-declarationstemplate-classes"></a>Předávání tříd deklarace nebo šablon
+## <a name="forward-declarationstemplate-classes"></a>Dopředné deklarace/šablony třídy
 
 ```cpp
 template <class _Statetype>
@@ -137,7 +127,7 @@ template <class Elem, class Tr = char_traits<Elem>>
 class basic_fstream;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

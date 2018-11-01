@@ -1,10 +1,6 @@
 ---
-title: _strninc –, _wcsninc –, _mbsninc –, _mbsninc_l – | Microsoft Docs
-ms.custom: ''
+title: _strninc, _wcsninc, _mbsninc, _mbsninc_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsninc
 - _mbsninc_l
@@ -34,8 +30,6 @@ f1_keywords:
 - _ftcsninc
 - _wcsninc
 - _mbsninc
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbsninc_l function
 - mbsninc function
@@ -48,23 +42,19 @@ helpviewer_keywords:
 - mbsninc_l function
 - _tcsninc function
 ms.assetid: 6caace64-f9e4-48c0-afa8-ea51824ad723
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 21218c411ad8bab9e3e4bd73eea266d0889f6c7d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ef30a9f57f0b8c84199befb00f3edc13342a1eaf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411329"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643180"
 ---
 # <a name="strninc-wcsninc-mbsninc-mbsnincl"></a>_strninc, _wcsninc, _mbsninc, _mbsninc_l
 
-Posune ukazatel řetězec podle **n** znaků.
+Přesune ukazatel řetězce podle **n** znaků.
 
 > [!IMPORTANT]
-> **_mbsninc –** a **_mbsninc_l –** nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsninc –** a **_mbsninc_l –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -90,22 +80,22 @@ unsigned char *_mbsninc(
 
 ### <a name="parameters"></a>Parametry
 
-*str –*<br/>
+*str*<br/>
 Zdrojový řetězec.
 
 *Počet*<br/>
-Počet znaků se zvýší ukazatel řetězec.
+Počet znaků, které mají zvýšit ukazatel na řetězec.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Všechny tyto rutiny vrátí ukazatel na *str* po *str* byla zvýšena pomocí *počet* znaků nebo **NULL** Pokud zadaných ukazatel **NULL**. Pokud *počet* je větší než nebo rovno počet znaků v *str*, výsledkem nedefinovaný.
+Každá z těchto rutin vrací ukazatel na *str* po *str* byl navýšen o *počet* znaky nebo **NULL** Pokud zadané ukazatel **NULL**. Pokud *počet* je větší než nebo rovno počtu znaků v *str*, výsledek nedefinován.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Mbsninc –** funkce přírůstcích *str* podle *počet* více-bajtové znaky. **_mbsninc –** rozpozná vícebajtových znaků pořadí podle [vícebajtové znakové stránky](../../c-runtime-library/code-pages.md) aktuálně používán.
+**_Mbsninc –** funkce přírůstky *str* podle *počet* vícebajtových znaků. **_mbsninc –** rozpozná vícebajtové znakové sekvence podle [vícebajtové znakové stránky](../../c-runtime-library/code-pages.md) aktuálně používán.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -113,9 +103,9 @@ Všechny tyto rutiny vrátí ukazatel na *str* po *str* byla zvýšena pomocí *
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsninc –**|**_strninc**|**_mbsninc –**|**_wcsninc**|
 
-**_strninc –** a **_wcsninc –** jsou jedním znaková řetězec a verze široká charakterová řetězec **_mbsninc –**. **_wcsninc –** a **_strninc –** jsou k dispozici pouze pro toto mapování a v opačném případě by se neměla používat. Další informace najdete v tématu [použití mapování obecného textu](../../c-runtime-library/using-generic-text-mappings.md) a [mapování obecného textu](../../c-runtime-library/generic-text-mappings.md).
+**_strninc –** a **_wcsninc –** jsou řetězce jedním jednobajtového znaku a verze řetězce širokého znaku **_mbsninc –**. **_wcsninc –** a **_strninc –** jsou k dispozici pouze pro toto mapování a nesmí být použity jinak. Další informace najdete v tématu [použití mapování obecného textu](../../c-runtime-library/using-generic-text-mappings.md) a [mapování obecného textu](../../c-runtime-library/generic-text-mappings.md).
 
-**_mbsninc_l –** se shoduje s tím rozdílem, že používá parametr národního prostředí předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+**_mbsninc_l –** je totožný s tím rozdílem, že používá Předaný parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -126,9 +116,9 @@ Všechny tyto rutiny vrátí ukazatel na *str* po *str* byla zvýšena pomocí *
 |**_strninc**|\<tchar.h>|
 |**_wcsninc**|\<tchar.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>

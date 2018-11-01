@@ -1,26 +1,16 @@
 ---
-title: Operátory preprocesoru | Dokumentace Microsoftu
-ms.custom: ''
+title: Operátory preprocesoru
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor operators
 - operators [C++], preprocessor
 ms.assetid: 884126d1-0ce2-48b6-9e06-8a2d7c4a9656
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c1bc364f0b24ed0f2e561ff9f452018faf2cfab6
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 3573ce2d86f38193a4f8f7c1c0f310283f304648
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50066458"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50584389"
 ---
 # <a name="preprocessor-operators"></a>Operátory preprocesoru
 Čtyři operátory specifické pro preprocesor se používají v souvislosti s direktivou `#define` (shrnutí každého viz následující seznam). V následujících třech částech jsou popsány operátory převádějící na řetězec, převádějící na znak a vkládající token. Informace o tom, `defined` operátoru, naleznete v tématu [#if, #elif, #else a #endif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).

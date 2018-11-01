@@ -1,10 +1,6 @@
 ---
-title: div, ldiv –, lldiv – | Microsoft Docs
-ms.custom: ''
+title: div, ldiv, lldiv
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - div
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - div
-dev_langs:
-- C++
 helpviewer_keywords:
 - div function
 - quotients, computing
@@ -31,20 +25,16 @@ helpviewer_keywords:
 - dividing integers
 - remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3ba1625105adf6edbc6419bd4fdabc8bda5d0e98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0ee1b3b6a5d7b15470ffe1e667b4077d1f9581e4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396589"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50653424"
 ---
-# <a name="div-ldiv-lldiv"></a>div, ldiv –, lldiv –
+# <a name="div-ldiv-lldiv"></a>div, ldiv, lldiv
 
-Vypočítá podílu a zbývající dva celočíselné hodnoty.
+Počítá podíl a zbytek dvou celočíselných hodnot.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -77,28 +67,28 @@ lldiv_t div(
 ### <a name="parameters"></a>Parametry
 
 *počet*<br/>
-Čítači.
+Čítač.
 
 *denom*<br/>
 Jmenovatel.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**div** volat pomocí argumenty typu **int** vrací strukturu typu **div_t –**, což zahrnuje podílu a zbytek. Návratová hodnota s argumenty typu **dlouho** je **ldiv_t –** a návratovou hodnotu s argumenty typu **dlouho** **dlouho** je **lldiv_t**. **div_t –**, **ldiv_t –**, a **lldiv_t** jsou definovány v \<stdlib.h >.
+**div** volaná pomocí argumentů typu **int** vrátí strukturu typu **div_t**, která zahrnuje podíl a zbytek. Návratová hodnota s argumenty typu **dlouhé** je **ldiv_t**a návratová hodnota s argumenty typu **dlouhé** **dlouhé** je **lldiv_t**. **div_t**, **ldiv_t**, a **lldiv_t** jsou definovány v \<stdlib.h >.
 
 ## <a name="remarks"></a>Poznámky
 
-**Div** funkce vydělí *kontrolních* podle *denom* a tím vypočítá podílu a zbytek. [Div_t –](../../c-runtime-library/standard-types.md) struktura obsahuje podílu, **potřebná**a zbývající, **rem**. Znaménko podílu je stejný jako u matematickém podílu. Jeho absolutní hodnota je největší číslo typu integer, která je menší než hodnota absolutní matematickém podílu. Pokud jmenovatel hodnotu 0, program se ukončí s chybovou zprávou.
+**Div** funkce rozdělí *číslo* podle *denom* a tím počítá podíl a zbytek. [Div_t](../../c-runtime-library/standard-types.md) struktura obsahuje podíl, **quot**a zbytek **rem**. Znaménko podílu je stejné jako matematický podíl. Jeho absolutní hodnota je největší celé číslo menší než absolutní hodnota matematického podílu. Je-li jmenovatelem 0, program se ukončí s chybovou zprávou.
 
-Přetížení **div** které přebírají argumenty typu **dlouho** nebo **dlouho** **dlouho** jsou dostupné jenom pro C++ – kód. Návratové typy [ldiv_t –](../../c-runtime-library/standard-types.md) a [lldiv_t](../../c-runtime-library/standard-types.md) obsahuje členy **potřebná** a **rem**, které mají stejný význam jako členové **div_t –**.
+Přetížení **div** , která přijímají argumenty typu **dlouhé** nebo **dlouhé** **dlouhé** jsou dostupné pouze pro kód jazyka C++. Návratové typy [ldiv_t](../../c-runtime-library/standard-types.md) a [lldiv_t](../../c-runtime-library/standard-types.md) obsahuje členy **quot** a **rem**, které mají stejný význam jako členové **div_t**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**div**, **ldiv –**, **lldiv –**|\<stdlib.h>|
+|**div**, **ldiv**, **lldiv**|\<stdlib.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -138,7 +128,7 @@ x is 876, y is 13
 The quotient is 67, and the remainder is 5
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv, lldiv](ldiv-lldiv.md)<br/>

@@ -1,39 +1,29 @@
 ---
-title: Jednobajtové a vícebajtové znakové sady | Microsoft Docs
-ms.custom: ''
+title: Jednobajtové a vícebajtové znakové sady
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.character.multibyte
-dev_langs:
-- C++
 helpviewer_keywords:
 - SBCS (single byte character set)
 - MBCS [C++], about MBCS
 - character sets [C++], multibyte
 - character sets [C++], single byte
 ms.assetid: 2cbc78ea-33c0-4cfb-b0df-7ce2458431ce
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 54a702c0e87cefb9d241b1031f65da6a2df3fbe5
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 1870fed732e5b940edb7690f9c3b58bb39c24572
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451885"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645377"
 ---
 # <a name="single-byte-and-multibyte-character-sets"></a>Jednobajtové a vícebajtové znakové sady
 
-Znaková sada ASCII definuje znaky v rozsahu 0x00 – 0x7F. Existuje několik dalších znakových sad, především Evropské, které definují znaky v rozsahu 0x00 – 0x7F stejně jako na znaků ASCII, nastavte a také definovat rozšířené znakové sady z 0x80 - 0xFF. Proto je dostačující k reprezentaci znaková sada ASCII, jakož i znakové sady mnoha evropských jazyků 8bitové, jedním znaková sada (SBCS). Ale některé neevropské znakových sad, jako je například japonské Kanji, zahrnují mnoho více znaků, než může být reprezentován ve schématu kódování jednobajtové a vyžadují proto, že vícebajtové znakové sady (MBCS) kódování.
+Znaková sada ASCII definuje znaky v rozsahu 0x00 – 0x7F. Existuje mnoho jiných množin znaků, především jazyky, které definují znaky v rozsahu 0x00 – 0x7F stejně jako na znak ASCII nastavit a také definovat rozšířené znakové sadě od 0x80 – 0xFF. Proto 8 bitů, jedním jednobajtového znaku sady (SBCS) je dostačující k reprezentaci znakové sady ASCII, jakož i znakových sad mnoha evropských jazyků. Ale některé neevropské znakových sad, jako je například japonská Kanji obsahovat mnoho více znaků, než je možné znázornit na schéma kódování jednobajtové a proto vyžadují vícebajtové znakové sady (MBCS s) kódováním.
 
 > [!NOTE]
-> Mnoho SBCS rutiny v běhové knihovny Microsoft zpracovávat vícebajtové bajtů, znaky a řetězce podle potřeby. Mnoho vícebajtových znakových sad definovat jako část sady ASCII. V mnoha vícebajtových znakových sad každý znak v rozsahu 0x00 – 0x7F je stejný jako znak, který má stejnou hodnotu ve znakové sadě ASCII. V řetězce znaků ASCII a MBCS, například znak hodnoty null jeden bajtů (\0) má hodnotu 0x00 a označuje ukončující znak hodnoty null.
+> Mnoho SBCS rutin v knihovně Microsoft za běhu zpracování vícebajtových bajtů, znaků a řetězce podle potřeby. Mnoho vícebajtových znakových sad definovat sadu jako podmnožinu znaků ASCII. V mnoha vícebajtové znakové sady každý znak v rozsahu 0x00 – 0x7F je stejný jako znak, který má stejnou hodnotu ve znakové sadě ASCII. V řetězce znaků ASCII a znakové sady MBCS, například jeden bajtové znak null ('\0') má hodnotu 0x00 a označuje ukončujícího znaku null.
 
-Vícebajtové znakové sady může obsahovat jeden bajt a dvoubajtových znaků. Řetězce vícebajtových znaků, proto může obsahovat kombinaci jednobajtové a dvoubajtové znaky. Dva bajtů vícebajtových znaků má úvodní bajt a druhý bajt. V sadě konkrétní vícebajtových znaků úvodní bajty spadá do určitého rozsahu, jako druhé bajty. Pokud tyto rozsahy překrývají, může být nutné vyhodnotit konkrétní kontext k určení, zda je daný bajt funguje jako úvodní bajt nebo druhý bajt.
+Vícebajtové znakové sady může obsahovat jednobajtových a dvoubajtových znaků. Řetězec vícebajtového znaku zakončeného proto může obsahovat kombinaci jednobajtových a dvoubajtových znaků. Dvoubajtový vícebajtový znak je vedoucí bajt a druhý bajt. V konkrétní vícebajtové znakové sady úvodní bajty spadají do určitého rozsahu, stejně jako záznam pro bajty. Pokud tyto rozsahy překrývají, může být potřeba vyhodnotit konkrétní kontext k určení, zda je dané bajtové funguje jako vedoucí bajt nebo druhý bajt.
 
 ## <a name="see-also"></a>Viz také
 

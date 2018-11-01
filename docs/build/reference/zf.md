@@ -1,28 +1,21 @@
 ---
-title: /ZF (vytváření rychlejší PDB) | Microsoft Docs
+title: /ZF (rychlejší generování souborů PDB)
 ms.date: 03/29/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /Zf
-dev_langs:
-- C++
 helpviewer_keywords:
 - /Zf
 - -Zf
-author: corob-msft
-ms.author: corob
-ms.openlocfilehash: 968ce17302fa608888c7ae2fedf695946b0119bd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2c3f8d08f59c3a6803eda67126ef8a8f9ba6b1fc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379962"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595729"
 ---
-# <a name="zf-faster-pdb-generation"></a>/ZF (vytváření rychlejší PDB)
+# <a name="zf-faster-pdb-generation"></a>/ZF (rychlejší generování souborů PDB)
 
-Minimalizace volání RPC mspdbsrv.exe povolte rychlejší vytváření PDB v paralelní sestavení.
+Povolte rychlejší generování souborů PDB v paralelních sestaveních minimalizací volání RPC mspdbsrv.exe.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,21 +23,21 @@ Minimalizace volání RPC mspdbsrv.exe povolte rychlejší vytváření PDB v pa
 
 ## <a name="remarks"></a>Poznámky
 
-**/Zf** možnost umožňuje podpora kompilátoru pro rychlejší generování soubory PDB při použití [/MP (sestavení pomocí několika procesů)](mp-build-with-multiple-processes.md) možnost, nebo pokud systém sestavení (například [nástroje MSBuild ](/visualstudio/msbuild/msbuild-reference) nebo [CMake](../../ide/cmake-tools-for-visual-cpp.md)) může spustit víc cl.exe kompilátoru procesy ve stejnou dobu. Tato možnost způsobí, že kompilátoru front-end zpoždění generování indexy typu pro každý typ záznam v souboru PDB až do konce kompilace a potom požadavky je vše v jednom volání protokolu RPC do mspdbsrv.exe, místo provedení žádost RPC pro každý záznam. Podstatně tím lze vylepšit sestavení propustnost méně zatěžuje proces mspdbsrv.exe v prostředí, kde se současně spustit více procesů kompilátoru cl.exe RPC.
+**/Zf** možnost umožňuje podporu kompilátoru pro rychlejší generování souborů PDB při použití [/MP (sestavení pomocí několika procesů)](mp-build-with-multiple-processes.md) možnost, nebo když systém sestavení (například [MSBuild ](/visualstudio/msbuild/msbuild-reference) nebo [CMake](../../ide/cmake-tools-for-visual-cpp.md)) může spouštět více cl.exe kompilátoru procesy ve stejnou dobu. Tato možnost způsobí, že kompilátor front-endu pro odložené generování indexů typu. pro každý typ záznam do souboru PDB až do konce kompilace a vyžádá všechno v jednom volání RPC do mspdbsrv.exe místo provedení požadavek RPC pro každý záznam. Podstatně tím lze vylepšit vysokou propustnost sestavování snižování zatížení protokolu RPC procesu mspdbsrv.exe v prostředí, kde více procesů kompilátor cl.exe spouštět souběžně.
 
-Protože **/Zf** možnost se vztahuje pouze na generování PDB, vyžaduje [/Zi](z7-zi-zi-debug-information-format.md) nebo [/ZI](z7-zi-zi-debug-information-format.md) možnost.
+Vzhledem k tomu, **/Zf** možnost se vztahuje pouze na generování souborů PDB, vyžaduje [/zi](z7-zi-zi-debug-information-format.md) nebo [/zi](z7-zi-zi-debug-information-format.md) možnost.
 
-**/Zf** možnost je k dispozici od verze Visual Studio 2017 verze 15.1, kde je vypnuto ve výchozím nastavení. Od verze Visual Studio 2017 verze 15.7 Preview 3, tato možnost je na ve výchozím nastavení při **/Zi** nebo **/ZI** možnost je povolená.
+**/Zf** možnost je k dispozici od verze Visual Studio 2017 verze 15.1, kde je vypnuto ve výchozím nastavení. Spouští se v sadě Visual Studio 2017 verze 15.7 ve verzi Preview 3, tato možnost zapnutá ve výchozím nastavení při **/zi** nebo **/zi** je povolená možnost.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
 
-1. Změnit **další možnosti** vlastnost, aby zahrnovala **/Zf** a potom zvolte **OK**.
+1. Upravit **další možnosti** vlastnost, aby zahrnovala **/Zf** a klikněte na tlačítko **OK**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Možnosti kompilátoru (abecední pořadí)](compiler-options-listed-alphabetically.md)<br/>
 [/MP (sestavení pomocí několika procesů)](mp-build-with-multiple-processes.md)<br/>

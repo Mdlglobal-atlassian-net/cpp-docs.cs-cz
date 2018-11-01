@@ -1,26 +1,16 @@
 ---
-title: 'Postupy: vytváření agentů využívajících specifické zásady plánovače | Dokumentace Microsoftu'
-ms.custom: ''
+title: 'Postupy: Vytváření agentů využívajících specifické zásady plánovače'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - scheduler policies, agents [Concurrency Runtime]
 - creating agents that use specific policies [Concurrency Runtime]
 ms.assetid: 46a3e265-0777-4ec3-a142-967bafc49d67
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5205f46a6be872a1065dfafc38ae8cbefec7b49b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 955b1043800c8c10a24abff71a7764d0878b89d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444889"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663369"
 ---
 # <a name="how-to-create-agents-that-use-specific-scheduler-policies"></a>Postupy: Vytváření agentů využívajících specifické zásady plánovače
 
