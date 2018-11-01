@@ -1,41 +1,31 @@
 ---
-title: C2441 Chyba kompilátoru | Microsoft Docs
-ms.custom: ''
+title: Chyba kompilátoru C2441
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2441
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2441
 ms.assetid: ffbd6573-777a-48dd-892f-5cf4a758dcab
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6d4224d9090f3ace43f61a10c599fafa78d21600
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 7fcf333f62253eb676c0f0ada1c927ab962ae1ca
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705277"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551249"
 ---
-# <a name="compiler-error-c2441"></a>C2441 chyby kompilátoru
+# <a name="compiler-error-c2441"></a>Chyba kompilátoru C2441
 
-> '*proměnná*': symbol deklarovat s __declspec(process) musí být const v/CLR: pure režimu
+> "*proměnnou*': symbol deklarovaný s: __declspec(process), musí být const v/CLR: pure režimu
 
 ## <a name="remarks"></a>Poznámky
 
-**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017.
+**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
 
-Ve výchozím nastavení, proměnné jsou v každé doméně aplikace v rámci **/CLR: pure**. Proměnné označené `__declspec(process)` pod **/CLR: pure** jsou náchylné na chyby, pokud je upravena v doméně jednu aplikaci a číst v jiném.
+Ve výchozím nastavení, jsou proměnné pro doménu aplikace v rámci **/CLR: pure**. Proměnné označené `__declspec(process)` pod **/CLR: pure** jsou náchylné na chyby, pokud se změnil v jeden aplikační domény a číst v jiném.
 
-Proto kompilátor vynucuje podle procesu, proměnné se `const` pod **/CLR: pure**, provádění je číst pouze ve všech doménách aplikace.
+Proto kompilátor vynucuje proces proměnné `const` pod **/CLR: pure**, provedení je číst pouze ve všech doménách aplikace.
 
-Další informace najdete v tématu [proces](../../cpp/process.md) a [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+Další informace najdete v tématu [procesu](../../cpp/process.md) a [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Příklad
 

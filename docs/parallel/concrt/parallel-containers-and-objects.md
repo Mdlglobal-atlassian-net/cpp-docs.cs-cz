@@ -1,27 +1,17 @@
 ---
-title: Paralelní kontejnery a objekty | Dokumentace Microsoftu
-ms.custom: ''
+title: Paralelní kontejnery a objekty
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - parallel objects
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cb06cf0c4e3e5868a0dadeefb30c2e75158d4e32
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0d3d883fa2199096d4dc880e2d8e78cff6d9830c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433377"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50542555"
 ---
 # <a name="parallel-containers-and-objects"></a>Paralelní kontejnery a objekty
 
@@ -285,7 +275,7 @@ V následující tabulce jsou uvedeny některé důležité metody `combinable` 
 
 |Metoda|Popis|
 |------------|-----------------|
-|[místní](reference/combinable-class.md#local)|Získá odkaz na místní proměnnou, která je přidružena aktuální kontext vlákna.|
+|[local](reference/combinable-class.md#local)|Získá odkaz na místní proměnnou, která je přidružena aktuální kontext vlákna.|
 |[Vymazat](reference/combinable-class.md#clear)|Odebere všechny místní proměnné vlákna z `combinable` objektu.|
 |[kombinování](reference/combinable-class.md#combine)<br /><br /> [combine_each](reference/combinable-class.md#combine_each)|Zadané kombinační funkcí používá ke generování konečnou hodnotu ze sady všechny výpočty místního vlákna.|
 

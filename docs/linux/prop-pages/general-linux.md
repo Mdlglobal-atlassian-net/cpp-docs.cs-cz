@@ -1,37 +1,27 @@
 ---
-title: Obecné vlastnosti (Linux C++ projekt) | Microsoft Docs
-ms.custom: ''
+title: Obecné vlastnosti (projektu C++ Linux) | Dokumentace Microsoftu
 ms.date: 9/26/2017
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: 56c800a9-3df9-4196-87b2-81adb00e4767
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 82dbdb4b2978860faba4e31c756ab0b69928e080
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc4eb39d2d735f8f7f782d2827bf2b938c5c2457
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331614"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50461331"
 ---
 # <a name="general-properties-linux-c"></a>Obecné vlastnosti (Linux C++)
 
 Vlastnost | Popis | Možnosti
 --- | ---| ---
-Výstupní adresář | Určuje relativní cestu do výstupního adresáře. soubor; může obsahovat proměnné prostředí.
-Zprostředkující adresáře | Určuje relativní cestu k adresáři pomocný soubor; může obsahovat proměnné prostředí.
-Cílový název | Určuje název souboru, který bude generovat tento projekt.
-Přípona cílového | Určuje příponu souboru, která bude vytvářet tento projekt. (Příklad: .a)
-Rozšíření k odstranění na vyčištění | Oddělte středníkem oddělené specifikace zástupný znak, pro které soubory v adresáři zprostředkující odstranit na čištění nebo znovu vytvořit.
-Vytvoření souboru protokolu | Určuje soubor protokolu sestavení pro zápis, když sestavení protokolování je povolena.
-Sada nástrojů platformy | Určuje sada nástrojů používá pro vytváření aktuální konfiguraci; Není-li se používá sada, výchozí sady nástrojů
-Počítač vzdáleného sestavení | Cílový počítač nebo zařízení, které chcete použít pro vzdálené sestavení, nasazení a ladění.
-Vzdálené sestavení kořenového adresáře | Určuje cestu k adresáři na vzdáleném počítači nebo zařízení.
-Adresáři vzdáleného sestavení projektu | Určuje cestu k adresáři na vzdáleném počítači nebo zařízení pro projekt.
-Typ konfigurace | Určuje typ výstupu, který generuje tuto konfiguraci. | **Dynamické knihovny (.so)** -dynamické knihovny (.so)<br>**Statické knihovny (.a)** – statické knihovny (.a)<br>**Aplikace (.out)** -aplikace (.out)<br>**Makefile** -souboru pravidel<br>
-Použití STL | Určuje, které standardní knihovna C++ pro tuto konfiguraci. | **Sdílené GNU standardní knihovna C++**<br>**Standardní knihovna C++ statické GNU (-statické)**<br>
+Výstupní adresář | Určuje relativní cestu k adresáři výstupního souboru; může obsahovat proměnné prostředí.
+Zprostředkující adresář | Určuje relativní cestu k adresáři přechodového souboru; může obsahovat proměnné prostředí.
+Cílový název | Určuje název souboru, který bude tento projekt generovat.
+Cílová přípona | Určuje rozšíření souboru, který bude tento projekt generovat. (Příklad: .a)
+Přípony odstraňované při čištění | Středníkem oddělená specifikace zástupných znaků určujících, které soubory v přechodovém adresáři odstranit při čištění nebo opětovném sestavení.
+Soubor protokolu sestavení | Určuje soubor protokolu sestavení pro zápis při protokolování sestavení je povolená.
+Sada nástrojů platformy | Určuje, nástrojů pro sestavení aktuální konfigurace. Pokud není využito set, výchozí sady nástrojů
+Vzdálený sestavující počítač | Cílový počítač nebo zařízení pro vzdálené sestavení, nasazení a ladění.
+Vzdálený Buildovací kořenový adresář | Určuje cestu k adresáři na vzdáleném počítači či zařízení.
+Adresář projektu vzdáleného buildu | Určuje cestu k adresáři na vzdáleném počítači nebo zařízení pro tento projekt.
+Typ konfigurace | Určuje typ výstupu generovaného touto konfigurací. | **Dynamická knihovna (.so)** – dynamická knihovna (.so)<br>**Statická knihovna (.a)** – statická knihovna (.a)<br>**Aplikace (.out)** – aplikace (.out)<br>**Soubor pravidel** -souboru pravidel<br>
+Použití STL | Určuje, která standardní knihovna C++ použít pro tuto konfiguraci. | **Knihovna sdílené GNU Standard C++**<br>**Knihovna statické GNU Standard C++ (-statické)**<br>

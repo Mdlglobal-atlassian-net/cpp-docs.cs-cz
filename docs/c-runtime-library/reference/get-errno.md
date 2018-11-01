@@ -1,10 +1,6 @@
 ---
-title: _get_errno – | Microsoft Docs
-ms.custom: ''
+title: _get_errno
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_errno
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _get_errno
-dev_langs:
-- C++
 helpviewer_keywords:
 - get_errno function
 - errno global variable
 - _get_errno function
 ms.assetid: b3fd5ebc-f41b-4314-a2f4-2f2d79d6e740
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fec59334ff6585e2385295c58c284df7e602ca1c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6ffb76bb31fe1633af78ee73423bb06857e0b893
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397408"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50535717"
 ---
 # <a name="geterrno"></a>_get_errno
 
@@ -47,23 +37,23 @@ Získá aktuální hodnotu errno – globální proměnná.
 ## <a name="syntax"></a>Syntaxe
 
 ```C
-errno_t _get_errno( 
-   int * pValue 
+errno_t _get_errno( 
+   int * pValue 
 );
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *pValue*<br/>
-Ukazatel na celé číslo, aby byla vyplněna s aktuální hodnota **errno** proměnné.
+Ukazatel na celé číslo tankujeme aktuální hodnota **errno** proměnné.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí nula v případě úspěšného; Kód chyby při selhání. Pokud *pValue* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tato funkce nastaví **errno** k **einval –** a vrátí **einval –**.
+Vrátí nulu v případě úspěchu; Kód chyby při selhání. Pokud *pValue* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce nastaví **errno** k **EINVAL** a vrátí **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-Možné hodnoty **errno** jsou definovány v Errno.h. Další informace naleznete v [errno – konstanty](../../c-runtime-library/errno-constants.md).
+Možné hodnoty **errno** jsou definovány v Errno.h. Viz také [errno – konstanty](../../c-runtime-library/errno-constants.md).
 
 ## <a name="example"></a>Příklad
 
@@ -93,13 +83,13 @@ fyi, ENOENT = 2
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
 |**_get_errno**|\<stdlib.h>|\<errno.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [_set_errno](set-errno.md)<br/>
 [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
