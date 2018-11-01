@@ -1,10 +1,6 @@
 ---
-title: _ftime_s – _ftime32_s –, _ftime64_s – | Microsoft Docs
-ms.custom: ''
+title: _ftime_s, _ftime32_s, _ftime64_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ftime_s
 - _ftime64_s
@@ -29,8 +25,6 @@ f1_keywords:
 - _ftime32_s
 - ftime32_s
 - ftime64_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - ftime32_s function
 - ftime_s function
@@ -41,20 +35,16 @@ helpviewer_keywords:
 - _ftime_s function
 - _ftime32_s function
 ms.assetid: d03080d9-a520-45be-aa65-504bdb197e8b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1a23b31fb88b60b05e587bf62ab07ec7e72de869
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 696b461cdb6b8d58bb668b996a99c5d0bb774d6c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402985"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435474"
 ---
 # <a name="ftimes-ftime32s-ftime64s"></a>_ftime_s, _ftime32_s, _ftime64_s
 
-Získá aktuální čas. Toto jsou verze [_ftime – _ftime32 –, _ftime64 –](ftime-ftime32-ftime64.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Získá aktuální čas. Jde o verzích [_ftime _ftime32, _ftime64](ftime-ftime32-ftime64.md) s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -67,28 +57,28 @@ errno_t _ftime64_s( struct __timeb64 *timeptr );
 ### <a name="parameters"></a>Parametry
 
 *timeptr*<br/>
-Ukazatel na **_timeb –**, **__timeb32**, nebo **__timeb64 –** struktura.
+Ukazatel **_timeb –**, **__timeb32**, nebo **__timeb64 –** struktury.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu, kód chyby při selhání. Pokud *timeptr* je **NULL**, je vrácenou hodnotou **einval –**.
+Nula v případě úspěchu, při selhání kód chyby. Pokud *timeptr* je **NULL**, bude návratovou hodnotou **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Ftime_s –** funkce získá aktuálním místním časem a uloží je ve struktuře, na kterou odkazuje *timeptr*. **_Timeb –**, **__timeb32**, a **__timeb64 –** struktury jsou definovány v SYS\Timeb.h. Obsahují čtyři pole, které jsou uvedeny v následující tabulce.
+**_Ftime_s** funkce získá aktuálním místním časem a uloží ho do struktury, na které odkazuje *timeptr*. **_Timeb –**, **__timeb32**, a **__timeb64 –** struktury jsou definovány v SYS\Timeb.h. Obsahují čtyři pole, které jsou uvedeny v následující tabulce.
 
 |Pole|Popis|
 |-|-|
-|**dstflag**|Nenulové hodnoty, pokud letní čas je aktuálně platí pro místní časovou zónu. (Viz [_tzset –](tzset.md) Další informace o tom, jak je určen letní čas.)|
-|**millitm**|Část sekundy v milisekundách.|
-|**Čas**|Čas v sekundách od půlnoc (00: 00:00), 1. ledna 1970, koordinovaný světový čas (UTC).|
-|**Časové pásmo**|Rozdíl v minutách, westward, přesun mezi místním ČASEM a. Hodnota **časové pásmo** nastavena z hodnoty globální proměnné **_timezone** (najdete v části **_tzset –**).|
+|**dstflag**|Nenulové, pokud letní čas je aktuálně používána pro místní časové pásmo. (Viz [_tzset –](tzset.md) pro vysvětlení, jak se určují letní čas.)|
+|**millitm**|Zlomek sekundy v milisekundách.|
+|**čas**|Čas v řádu sekund od půlnoci (00: 00:00), 1. ledna 1970, koordinovaného univerzálního času (UTC).|
+|**časové pásmo**|Rozdíl v řádech minut, přesun westward, mezi místním časem a UTC. Hodnota **časové pásmo** nastavit hodnotu globální proměnné **_timezone** (viz **_tzset –**).|
 
-**_Ftime64_s –** funkci, která používá **__timeb64 –** struktury, umožňuje vytvoření souboru data, která se vyjádřit až do 23:59:59, 31. prosince 3000, UTC; zatímco **_ftime32_s –** pouze představuje datům až 23:59:59 18 leden 2038 UTC. Půlnoc, 1. ledna 1970, je dolní mez rozsahu kalendářních dat pro všechny tyto funkce.
+**_Ftime64_s** funkci, která používá **__timeb64 –** struktury, umožňuje vytvoření souboru data vyjadřují až do 23:59:59, 31 prosince 3000 UTC, zatímco **_ftime32_s** pouze představuje data do 23:59:59 18. ledna 2038 UTC. Půlnoc 1. ledna 1970 je dolní mez rozsahu kalendářních dat pro všechny tyto funkce.
 
-**_Ftime_s –** funkce je ekvivalentní volání **_ftime64_s –**, a **_timeb –** obsahuje 64-bit čas, pokud **_USE_32BIT_TIME_T** je definován, v takovém případě staré chování je v platnosti; **_ftime_s –** používá čas 32bitová verze a **_timeb –** obsahuje 32-bit čas.
+**_Ftime_s** funkce je ekvivalentní volání **_ftime64_s**, a **_timeb –** obsahuje čas 64-bit, není-li **_USE_32BIT_TIME_T** je definováno, v takovém případě staré chování je v platnosti; **_ftime_s** používá čas 32bitová verze a **_timeb –** obsahuje čas 32-bit.
 
-**_ftime_s –** ověří jeho parametry. Pokud předány ukazatele null jako *timeptr*, funkce vyvolá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastaví funkci **errno** k **einval –**.
+**_ftime_s** ověří jeho parametry. Je-li předán ukazatel s hodnotou null jako *timeptr*, funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, funkce nastaví **errno** k **EINVAL**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -98,11 +88,11 @@ Nula v případě úspěchu, kód chyby při selhání. Pokud *timeptr* je **NUL
 |**_ftime32_s**|\<SYS/Types.h > a \<sys/timeb.h >|
 |**_ftime64_s**|\<SYS/Types.h > a \<sys/timeb.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -157,7 +147,7 @@ Daylight savings time flag (1 means Daylight time is in effect): 1
 The time is Mon Apr 28 11:08:54.230 2003
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Správa času](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>

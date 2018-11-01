@@ -1,12 +1,6 @@
 ---
-title: Základní informace o funkci pomocné rutiny | Dokumentace Microsoftu
-ms.custom: ''
+title: Základní informace o podpůrné funkci
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - delayed loading of DLLs, helper function
 - __delayLoadHelper2 function
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - delayimp.h
 - helper functions
 ms.assetid: 6279c12c-d908-4967-b0b3-cabfc3e91d3d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 90ca214b28296417ab80341232c08a55b92adff4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ee2a8b66eaf4a8ba29ba3de7e63407bea738d626
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725480"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440141"
 ---
 # <a name="understanding-the-helper-function"></a>Základní informace o podpůrné funkci
 

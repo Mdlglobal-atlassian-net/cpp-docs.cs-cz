@@ -1,10 +1,6 @@
 ---
-title: _execvpe –, _wexecvpe – | Microsoft Docs
-ms.custom: ''
+title: _execvpe, _wexecvpe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execvpe
 - _wexecvpe
@@ -26,31 +22,25 @@ f1_keywords:
 - execvpe
 - _wexecvpe
 - _execvpe
-dev_langs:
-- C++
 helpviewer_keywords:
 - wexecvpe function
 - execvpe function
 - _wexecvpe function
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 97020ba4e1b20bfc95f48eaa1afe6fa111a9b769
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 064f8b94a9a97795015c09c11cd56e0370dcc60c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401227"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431691"
 ---
 # <a name="execvpe-wexecvpe"></a>_execvpe, _wexecvpe
 
-Načte a spustí novou podřízené procesy.
+Načte a spustí nový podřízený proces.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -70,49 +60,49 @@ intptr_t _wexecvpe(
 ### <a name="parameters"></a>Parametry
 
 *cmdname*<br/>
-Cesta k souboru provést.
+Cesta k souboru pro spuštění.
 
-*argv –*<br/>
-Pole ukazatele na parametry.
+*argv*<br/>
+Pole ukazatelů na parametry.
 
-*envp –*<br/>
-Pole ukazatele na nastavení prostředí.
+*envp*<br/>
+Pole ukazatelů do nastavení prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud bylo úspěšné, nevrátí se tyto funkce pro proces volání. Vrácená hodnota -1 označuje chybu, v takovém případě **errno** globální proměnná je nastavená.
+V případě úspěchu se tato funkce nevrací do volajícího procesu. Návratová hodnota-1 označuje chybu, v takovém případě **errno** je nastavena globální proměnná.
 
 |**errno** hodnota|Popis|
 |-------------------|-----------------|
-|**E2BIG –**|Místo, které je nutné pro argumenty a nastavení prostředí větší než 32 KB.|
-|**EACCES –**|Zadaný soubor došlo k narušení uzamčení nebo sdílení.|
-|**EMFILE –**|Je otevřeno příliš mnoho souborů. (K určení, zda je spustitelný soubor musí otevřít zadaný soubor.)|
-|**ENOENT –**|Soubor nebo cesta nebyla nalezena.|
-|**ENOEXEC –**|Zadaný soubor není spustitelný soubor nebo má neplatný formát souboru spustitelný soubor.|
-|**ENOMEM –**|Nedostatek paměti je k dispozici pro spuštění nový proces; dostupná paměť je poškozená; nebo neplatný bloku existuje, což naznačuje, že proces volání nebyla přidělena správně.|
+|**E2BIG**|Místa požadovaného pro argumenty a nastavení prostředí je větší než 32 KB.|
+|**EACCES**|Zadaný soubor má narušení uzamčení nebo sdílení.|
+|**EMFILE**|Je otevřeno příliš mnoho souborů. (Zadaný soubor musí být otevřen pro určení, zda je spustitelný soubor.)|
+|**ENOENT**|Soubor nebo cesta nebyla nalezena.|
+|**ENOEXEC**|Zadaný soubor není spustitelný soubor nebo má neplatný formát spustitelného souboru.|
+|**ENOMEM**|Není k dispozici ke spuštění nového procesu; není dostatek paměti dostupná paměť byla poškozena; nebo existuje neplatný blok, což znamená, že volající proces nebyl správně přiděleny.|
 
-Další informace o těchto a dalších návratové kódy najdete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o těchto a dalších návratových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí načte a spustí nový proces a předá pole ukazatele argumenty příkazového řádku a pole ukazatele na nastavení prostředí. Použijte tyto funkce **cesta** proměnnou prostředí najít soubor provést.
+Každá z těchto funkcí načte a spustí nový proces a předá pole ukazatelů do argumentů příkazového řádku a pole ukazatelů do nastavení prostředí. Tyto funkce používají **cesta** proměnnou prostředí k vyhledání souboru pro spuštění.
 
-**_Execvpe –** funkcí ověření jejich parametrů. Pokud *cmdname* je ukazatel s hodnotou null, nebo pokud *argv –* ukazatele null, je ukazatel na prázdné pole nebo odkazy na pole, které obsahuje prázdný řetězec jako první argument, tyto funkce vyvolání neplatný Obslužná rutina parametru, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastavte tyto funkce **errno** k **einval –** a vrátí hodnotu -1. Žádný proces se spustí.
+**_Execvpe** funkce ověřují své parametry. Pokud *cmdname* je ukazatel s hodnotou null, nebo pokud *argv* je nulový ukazatel, ukazatel na prázdné pole nebo ukazatel na pole, které obsahuje prázdný řetězec jako první argument, tyto funkce vyvolají neplatné Obslužná rutina parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tyto funkce nastaví **errno** k **EINVAL** a vrátí hodnotu -1. Není spuštěn žádný proces.
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|
+|Funkce|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |--------------|---------------------|---------------------|
 |**_execvpe**|\<Process.h >|\<errno.h>|
 |**_wexecvpe**|\<Process.h > nebo \<wchar.h >|\<errno.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad v [_exec, _wexec – funkce](../../c-runtime-library/exec-wexec-functions.md).
+Podívejte se na příklad v [funkce _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_exec, _wexec – funkce](../../c-runtime-library/exec-wexec-functions.md)<br/>

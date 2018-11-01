@@ -1,29 +1,19 @@
 ---
-title: __Func__ | Microsoft Docs
-ms.custom: ''
+title: __Func__
 ms.date: 10/19/2017
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - __func__
-dev_langs:
-- C++
 ms.assetid: a5299b8d-f0ee-4af2-91dd-8fb165e68798
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d78a249fe5b111c17c29895edcdc3fa5ba2f27a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eecd3efea6239c92a8bc81c0ed13a9563e5b87d2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413590"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438581"
 ---
 # <a name="func"></a>__Func__
 
-**(C ++ 11)**  Identifikátor předdefinované &#95; &#95;func&#95; &#95; je implicitně definováno jako řetězec, který obsahuje název nekvalifikované a prostým nadřazených funkce. &#95;&#95;Func&#95; &#95; je vyžadováno ve standardní C++ a není rozšíření Microsoft.
+**(C ++ 11)**  Předdefinovaný identifikátor &#95; &#95;func&#95; &#95; je implicitně definovaný jako řetězec, který obsahuje nekvalifikovaný, prostý název nadřazené funkce. &#95;&#95;Func&#95; &#95; je vyžadováno podle standardu jazyka C++ a není rozšířením společnosti Microsoft.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,7 +23,7 @@ __func__
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí ukončené hodnotou null const char pole znaků obsahující název funkce.
+Vrátí zakončený hodnotou null const char pole znaků, který obsahuje název funkce.
 
 ## <a name="example"></a>Příklad
 

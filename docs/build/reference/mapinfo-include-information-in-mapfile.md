@@ -1,32 +1,22 @@
 ---
-title: -MAPINFO (zahrnutí informaci do souboru mapování) | Dokumentace Microsoftu
-ms.custom: ''
+title: /MAPINFO (Zahrnout informace do souboru mapování)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.MapLines
 - VC.Project.VCLinkerTool.MapInfoFixups
 - VC.Project.VCLinkerTool.MapExports
 - /mapinfo
-dev_langs:
-- C++
 helpviewer_keywords:
 - /MAPINFO linker option
 - MAPINFO linker option
 - -MAPINFO linker option
 ms.assetid: 533d2bce-f9b7-4fea-ae1c-0b4864c9d10b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f52e044962007c4a820bf234d45b5cb9ffd584f6
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bfb8273a8299349ea9aa0b78f1ee14a6cbb6276c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723083"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440310"
 ---
 # <a name="mapinfo-include-information-in-mapfile"></a>/MAPINFO (Zahrnout informace do souboru mapování)
 
@@ -50,7 +40,7 @@ Parametr/MapInfo přikazuje linkeru, aby začlenil zadané informace do souboru 
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MapExports%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MapExports%2A>.
 
 ## <a name="see-also"></a>Viz také
 

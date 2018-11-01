@@ -1,11 +1,6 @@
 ---
-title: catan, catanf, catanl | Microsoft Docs
-ms.custom: ''
+title: catan catanf, catanl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - catan
 - catanf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/catan
 - complex/catanf
 - complex/catanl
-dev_langs:
-- C++
 helpviewer_keywords:
 - catan function
 - catanf function
 - catanl function
 ms.assetid: 8415ed9c-7909-4d08-b532-4630bafdc7e8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a66781ad1b9962a8d6a1792ad0b77abf853f2559
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 99acdccca1b83be2fa667b5e5ef6e5181dc1ba81
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393934"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50455221"
 ---
-# <a name="catan-catanf-catanl"></a>catan, catanf, catanl
+# <a name="catan-catanf-catanl"></a>catan catanf, catanl
 
-Načte Arkus tangens komplexní číslo s větve kusy mimo interval [-1; + 1] pro pomyslná osu.
+Načte Arkus tangens komplexního čísla s kusy větev mimo interval [-1; + 1] na imaginární ose.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -68,25 +57,25 @@ _Lcomplex catan( _Lcomplex z );  // C++ only
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Komplexní číslo, které představuje úhel v radiánech.
+Komplexní čísla, která představuje úhel v radiánech.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Arkus tangens *z*, v radiánech. Výsledkem je, bez vazby pomyslná osy a v intervalu [-pí/2; + pí/2] pro skutečné osu.
+Arkus tangens *z*, v radiánech. Výsledkem je bez vazby na ose imaginární a v intervalu [-pí/2; + pí/2] na skutečné ose.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **catan** , přijmout a vrátit **_Fcomplex** a **_Lcomplex** hodnoty. V programu C **catan** vždy provede a vrátí **_Dcomplex** hodnotu.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **catan** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **catan** vždy převezme a vrátí **_Dcomplex** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Hlavička C|Hlavička C++|
+|Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
 |**catan**, **catanf**, **catanl**|\<complex.h>|\<ccomplex >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>

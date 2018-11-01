@@ -1,29 +1,19 @@
 ---
-title: uses_allocator – struktura | Microsoft Docs
-ms.custom: ''
+title: uses_allocator – struktura
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - future/std::uses_allocator
-dev_langs:
-- C++
 ms.assetid: c418f002-62e9-4806-b70c-41c663cae583
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f46512279273ad8f85be23edd172345c896a4401
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9046f27397ba04c601dd8af361d47cc0ea94926d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855624"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432588"
 ---
 # <a name="usesallocator-structure"></a>uses_allocator – struktura
 
-Specializací, které mají vždy hodnotu true.
+Specializace, které mají vždy hodnotu true.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,9 +28,9 @@ struct uses_allocator<packaged_task<Ty>, Alloc> : true_type;
 
 **Záhlaví:** \<budoucí >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<budoucí >](../standard-library/future.md)<br/>
+[\<Další >](../standard-library/future.md)<br/>

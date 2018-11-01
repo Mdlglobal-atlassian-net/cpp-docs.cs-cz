@@ -1,31 +1,21 @@
 ---
-title: '&lt;cstdio –&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;cstdio –&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <cstdio>
-dev_langs:
-- C++
 helpviewer_keywords:
 - cstdio header
 ms.assetid: 838ca50b-dea5-4ee3-a39c-e7c23a6ee016
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 68203718377af6502daa95d3ceab4fa66507e164
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d3fdb6ac4e3dc9fa7333ffac1bb8a11c0412df3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841951"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443222"
 ---
 # <a name="ltcstdiogt"></a>&lt;cstdio –&gt;
 
-Obsahuje hlavičku knihovny standardní C \<stdio.h > a přidá přidružené jména `std` oboru názvů.
+Obsahuje hlavičku knihovny Standard C \<stdio.h > a přidá názvy přidružené k `std` oboru názvů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,9 +26,9 @@ Obsahuje hlavičku knihovny standardní C \<stdio.h > a přidá přidružené jm
 
 ## <a name="remarks"></a>Poznámky
 
-Včetně tuto hlavičku zajistí, že jsou názvy deklarováno s použitím externí propojení v hlavičce knihovny standardní C deklarované v `std` oboru názvů.
+Včetně této hlavičky zajišťuje, že názvy deklarované s vnějším spojením v záhlaví knihovny Standard C jsou deklarovány v `std` oboru názvů.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>

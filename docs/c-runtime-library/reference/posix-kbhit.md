@@ -1,10 +1,6 @@
 ---
-title: kbhit – | Microsoft Docs
-ms.custom: ''
+title: kbhit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - kbhit
 apilocation:
@@ -21,25 +17,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - kbhit
-dev_langs:
-- C++
 helpviewer_keywords:
 - kbhit function
 ms.assetid: 73f1eed7-b3ef-4887-8ec6-755367de1d7d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 494f39a5262deb8a75b2d5852327a982deac2a37
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5894fdd778742d2804a518842660d1a1ac5c55aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398260"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431041"
 ---
 # <a name="kbhit"></a>kbhit
 
-Tato funkce POSIX je zastaralý. Používat vyhovující ISO C++ [_kbhit –](kbhit.md) místo.
+Tato funkce POSIX je zastaralá. Použít splňující podmínky ISO C++ [_kbhit –](kbhit.md) místo.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

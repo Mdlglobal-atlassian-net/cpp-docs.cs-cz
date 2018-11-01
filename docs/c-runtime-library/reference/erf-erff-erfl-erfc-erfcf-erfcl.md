@@ -1,10 +1,6 @@
 ---
-title: ERF –, erff –, erfl –, erfc, erfcf –, erfcl | Microsoft Docs
-ms.custom: ''
+title: erf, erff, erfl, erfc, erfcf, erfcl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - erff
 - erfl
@@ -26,27 +22,21 @@ f1_keywords:
 - erfl
 - erf
 - erff
-dev_langs:
-- C++
 helpviewer_keywords:
 - erfl function
 - erff function
 - erf function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3b7ab1448c3f1d77ab79266858a19d822b1cdb4f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5723286add75a57844f177b9df5d86eb15080229
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396154"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50450043"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
 
-Vypočítá chybovou funkci nebo funkce doplňkovou chybovou hodnotu.
+Vypočítá chybovou funkci nebo doplňkovou chybovou funkci hodnoty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -90,26 +80,26 @@ Hodnota s plovoucí desetinnou čárkou.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**ERF –** funkce vrátit gaussech Chyba funkce *x*. **ERFC –** funkce vrátí doplňkové gaussech Chyba funkce *x*.
+**Erf** funkce vrátí Gauss chybovou funkci *x*. **Erfc** vrátí funkce Gauss doplňkovou chybovou funkci *x*.
 
 ## <a name="remarks"></a>Poznámky
 
-**ERF –** funkce Vypočítat gaussech Chyba funkce *x*, který je definován jako:
+**Erf** funkce vypočítá chybovou funkci Gauss z *x*, který je definován jako:
 
 ![Chyba funkce x](media/crt_erf_formula.PNG "CRT_erf_formula")
 
-Doplňkové funkce gaussech chyba je definován jako 1 - erf(x). **ERF –** funkce vrátí hodnotu v rozsahu-1.0 1.0. Neexistuje žádný návratový chyby. **Erfc** funkce vrátí hodnotu v rozsahu 0 až 2. Pokud *x* je příliš velký pro **ERFC –**, **errno** proměnná je nastavená na **erange –**.
+Doplňková chybová funkce Gauss je definována jako 1 – erf(x). **Erf** vrátí funkce hodnotu v rozsahu-1.0 1.0. Není vrácena žádná chyba. **Erfc** vrátí funkce hodnotu v rozsahu 0 až 2. Pokud *x* je příliš velká pro **erfc**, **errno** proměnná je nastavená na **ERANGE**.
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **ERF –** a **ERFC –** , přijmout a vrátit **float** a **dlouho** **dvojité** typy. V programu C **ERF –** a **ERFC –** vždy přijmout a vrátit **dvojité**.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **erf** a **erfc** , která používají a vrací **float** a **dlouhé** **double** typy. V programu jazyka C **erf** a **erfc** vždy převezme a vrátí **double**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**ERF –**, **erff –**, **erfl –**, **ERFC –**, **erfcf –**, **erfcl**|\<Math.h >|
+|**ERF –**, **erff –**, **erfl –**, **erfc**, **erfcf –**, **erfcl**|\<Math.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>

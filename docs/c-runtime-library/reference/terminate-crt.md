@@ -1,10 +1,6 @@
 ---
-title: ukončit (CRT) | Microsoft Docs
-ms.custom: ''
+title: terminate (CRT)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - terminate
 apilocation:
@@ -22,26 +18,20 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - terminate
-dev_langs:
-- C++
 helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c743439b487f091b760e3747c47b471832e1ff3d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1f655d328b4d97a2989ad49005ed8a9f44fd9d79
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408671"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438634"
 ---
 # <a name="terminate-crt"></a>terminate (CRT)
 
-Volání [abort](abort.md) nebo funkci, můžete zadat pomocí **set_terminate –**.
+Volání [přerušit](abort.md) nebo funkce, které zadáte pomocí **set_terminate**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,23 +41,23 @@ void terminate( void );
 
 ## <a name="remarks"></a>Poznámky
 
-**Ukončit** funkce se používá s zpracovávání výjimek v jazyce C++ a je volána v následujících případech:
+**Ukončit** funkce se používá s zpracování výjimek jazyka C++ a je volána v následujících případech:
 
-- Pro vyvolaná výjimka C++ nebyl nalezen odpovídající obslužná rutina catch.
+- Nelze nalézt odpovídající obslužné rutiny catch pro vyvolanou výjimku C++.
 
-- Podle funkce destruktor během zásobníku unwind je vyvolána výjimka.
+- Pomocí funkce destruktoru je vyvolána výjimka během odvíjení zásobníku.
 
-- Po vyvolání výjimky je poškozený zásobníku.
+- Zásobník je poškozený po vyvolání výjimky.
 
-**Ukončit** volání [abort](abort.md) ve výchozím nastavení. Toto výchozí nastavení můžete změnit tak, že zápis ukončení funkce a volání **set_terminate –** s názvem funkce jako její argument. **Ukončit** volá funkci naposledy zadaný jako argument pro **set_terminate –**. Další informace najdete v tématu [neošetřené výjimky jazyka C++](../../cpp/unhandled-cpp-exceptions.md).
+**Ukončit** volání [přerušit](abort.md) ve výchozím nastavení. Toto výchozí nastavení můžete změnit tak, že zápis ukončení funkce a volání **set_terminate** s názvem funkce jako svůj argument. **Ukončit** volá poslední funkci předána jako argument pro **set_terminate**. Další informace najdete v tématu [neošetřené výjimky jazyka C++](../../cpp/unhandled-cpp-exceptions.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**Ukončení**|\<eh.h>|
+|**ukončit**|\<eh.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -115,7 +105,7 @@ void term_func()
 term_func() was called by terminate().
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Rutiny zpracování výjimek](../../c-runtime-library/exception-handling-routines.md)<br/>
 [abort](abort.md)<br/>

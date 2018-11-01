@@ -1,29 +1,19 @@
 ---
-title: common_type – struktura | Microsoft Docs
-ms.custom: ''
+title: common_type – struktura
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - chrono/std::common_type
-dev_langs:
-- C++
 ms.assetid: 2b42722c-c3dc-4d62-8613-0271e52b6f00
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0abe4480c95e598706365060db500661a2b48b24
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4d2f1fe6ebf5b8f35f65fb9b551e6e7d473615a4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843142"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435331"
 ---
 # <a name="commontype-structure"></a>common_type – struktura
 
-Popisuje specializací třídy šablony [common_type](../standard-library/common-type-class.md) pro instancí možnosti [doba trvání](../standard-library/duration-class.md) a [time_point](../standard-library/time-point-class.md).
+Popisuje specializace třídy šablony [common_type](../standard-library/common-type-class.md) pro konkretizací [doba trvání](../standard-library/duration-class.md) a [time_point](../standard-library/time-point-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,11 +33,11 @@ chrono::time_point<Clock, Duration2>>;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<typu chrono >
+**Záhlaví:** \<chrono >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [\<chrono>](../standard-library/chrono.md)<br/>

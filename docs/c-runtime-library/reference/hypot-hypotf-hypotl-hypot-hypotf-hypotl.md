@@ -1,10 +1,6 @@
 ---
-title: hypot –, hypotf –, hypotl –, _hypot –, _hypotf, _hypotl | Microsoft Docs
-ms.custom: ''
+title: hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _hypotf
 - hypot
@@ -32,8 +28,6 @@ f1_keywords:
 - hypot
 - _hypot
 - _hypotf
-dev_langs:
-- C++
 helpviewer_keywords:
 - hypotenuse calculation
 - hypot function
@@ -43,20 +37,16 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3a8488b160c10eb29f0448127c44d3514f8debf3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea25ea87a0ec23a0e98dbdc7bb92ce691fc2fa0f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400200"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50439530"
 ---
 # <a name="hypot-hypotf-hypotl-hypot-hypotf-hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 
-Vypočítá přepony.
+Výpočet přepony.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -94,15 +84,15 @@ Hodnoty s plovoucí desetinnou čárkou.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěšného **hypot –** vrátí délku přepony; na přetečení, **hypot –** vrátí INF (infinity) a **errno** proměnná je nastavená na **erange –** . Můžete použít **_matherr –** k úpravě zpracování chyb.
+V případě úspěšného ověření **hypot –** vrátí délku přepony; při přetečení **hypot –** vrátí INF (nekonečno) a **errno** proměnná je nastavená na **ERANGE** . Můžete použít **_matherr** k úpravě zpracování chyb.
 
-Další informace o návratové kódy najdete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o návratových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**Hypot –** funkce Vypočítat délka přepony trojúhelníku vpravo, zadána délka sociálními *x* a *y* (jinými slovy, druhou odmocninu čísla *x*<sup>2</sup> + *y*<sup>2</sup>).
+**Hypot –** funkce Vypočítat délku přepony pravoúhlého trojúhelníku, zadané délky dvou stran *x* a *y* (jinými slovy, druhou odmocninu *x*<sup>2</sup> + *y*<sup>2</sup>).
 
-Verze funkcí, které mají počáteční podtržítka jsou k dispozici pro kompatibilitu s dřívější standardů. Jejich chování je stejná jako verze, které nemají úvodní podtržítka. Doporučujeme používat verze bez úvodní podtržítka pro nový kód.
+Verze funkcí, které mají úvodní podtržítka jsou k dispozici pro kompatibilitu se staršími standardy. Jejich chování je stejné jako ty, které nemají úvodní podtržítka. Doporučujeme používat verze bez úvodních podtržítek pro nový kód.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -110,7 +100,7 @@ Verze funkcí, které mají počáteční podtržítka jsou k dispozici pro komp
 |-------------|---------------------|
 |**hypot –**, **hypotf –**, **hypotl –**, **_hypot –**, **_hypotf**, **_hypotl**|\<Math.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -134,7 +124,7 @@ int main( void )
 If a right triangle has sides 3.0 and 4.0, its hypotenuse is 5.0
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [_cabs](cabs.md)<br/>

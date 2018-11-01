@@ -1,10 +1,6 @@
 ---
-title: _get_wpgmptr – | Microsoft Docs
-ms.custom: ''
+title: _get_wpgmptr
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_wpgmptr
 apilocation:
@@ -23,49 +19,43 @@ apitype: DLLExport
 f1_keywords:
 - get_wpgmptr
 - _get_wpgmptr
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wpgmptr global variable
 - get_wpgmptr function
 - wpgmptr global variable
 - _get_wpgmptr function
 ms.assetid: a77cdd13-2303-4b7c-9a60-8debdbef2011
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9393351174477a4da43d0b3bd49e107430e68ece
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0e49bc35f43ed6ed5a5f86e6c76c51854ab71add
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398767"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50436332"
 ---
 # <a name="getwpgmptr"></a>_get_wpgmptr
 
-Získá aktuální hodnotu **_wpgmptr –** – globální proměnná.
+Získá aktuální hodnotu **_wpgmptr –** globální proměnné.
 
 ## <a name="syntax"></a>Syntaxe
 
 ```C
-errno_t _get_wpgmptr( 
-   wchar_t **pValue 
+errno_t _get_wpgmptr( 
+   wchar_t **pValue 
 );
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *pValue*<br/>
-Ukazatel na řetězec tak, aby byla vyplněna s aktuální hodnota **_wpgmptr –** proměnné.
+Ukazatel na řetězec tankujeme aktuální hodnota **_wpgmptr –** proměnné.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí nula v případě úspěšného; Kód chyby při selhání. Pokud *pValue* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tato funkce nastaví **errno** k **einval –** a vrátí **einval –**.
+Vrátí nulu v případě úspěchu; Kód chyby při selhání. Pokud *pValue* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce nastaví **errno** k **EINVAL** a vrátí **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-Volat pouze **_get_wpgmptr –** Pokud má program široké vstupní bod, třeba **wmain()** nebo **wWinMain()**. **_Wpgmptr –** – globální proměnná obsahuje úplnou cestu ke spustitelnému souboru spojených s procesem jako řetězec znaků celou. Další informace najdete v tématu [_pgmptr –, _wpgmptr –](../../c-runtime-library/pgmptr-wpgmptr.md).
+Volat pouze **_get_wpgmptr –** váš program obsahuje širokou vstupního bodu, jako jsou **wmain()** nebo **wWinMain()**. **_Wpgmptr –** globální proměnná obsahuje úplnou cestu ke spustitelnému souboru spojených s procesem jako řetězec širokých znaků. Další informace najdete v tématu [_pgmptr – _wpgmptr –](../../c-runtime-library/pgmptr-wpgmptr.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -73,8 +63,8 @@ Volat pouze **_get_wpgmptr –** Pokud má program široké vstupní bod, třeba
 |-------------|---------------------|
 |**_get_wpgmptr**|\<stdlib.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [_get_pgmptr](get-pgmptr.md)<br/>

@@ -1,30 +1,20 @@
 ---
-title: -DELAYSIGN (částečně podepsané sestavení) | Dokumentace Microsoftu
-ms.custom: ''
+title: /DELAYSIGN (částečně podepsané sestavení)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /delaysign
 - VC.Project.VCLinkerTool.DelaySign
-dev_langs:
-- C++
 helpviewer_keywords:
 - /DELAYSIGN linker option
 - DELAYSIGN linker option
 - -DELAYSIGN linker option
 ms.assetid: 15244d30-3ecb-492f-a408-ffe81f38de20
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7f1551789c800e298396d932a4cc8c4f65aa6c79
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 233a41a3e55ff2726712541b0af9db1f5e55eb56
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699800"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435617"
 ---
 # <a name="delaysign-partially-sign-an-assembly"></a>/DELAYSIGN (částečně podepsané sestavení)
 
@@ -73,7 +63,7 @@ Další možnosti linkeru, které ovlivňují generování sestavení jsou:
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Viz také
 

@@ -1,10 +1,6 @@
 ---
-title: pointer_traits – struktura | Microsoft Docs
-ms.custom: ''
+title: pointer_traits – struktura
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - memory/std::pointer_traits::element_type
 - memory/std::pointer_traits::pointer
@@ -17,23 +13,17 @@ f1_keywords:
 - xmemory0/std::pointer_traits::difference_type
 - xmemory0/std::pointer_traits::rebind
 - memory/std::pointer_traits::pointer_to
-dev_langs:
-- C++
 ms.assetid: 545aecf1-3561-4859-8b34-603c079fe1b3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d1485441dbea92f534314dafd9d86ab0ef8a4e69
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b661d4b36ce48a08faba6638c5114f3f4e6981a6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856446"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434785"
 ---
 # <a name="pointertraits-struct"></a>pointer_traits – struktura
 
-Poskytuje informace, které je potřeba v objektu třídy šablony `allocator_traits` k popisu allocator s ukazatel typu `Ptr`.
+Poskytuje informace, které je potřeba pro objekt třídy šablony `allocator_traits` k popisu přidělování s ukazatelem typu `Ptr`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,7 +34,7 @@ struct pointer_traits;
 
 ## <a name="remarks"></a>Poznámky
 
-PTR může být nezpracovaná ukazatel typu `Ty *` nebo třídy s následujícími vlastnostmi.
+PTR může být nezpracovaný ukazatel typu `Ty *` nebo třídu s následujícími vlastnostmi.
 
 ```cpp
 struct Ptr
@@ -63,37 +53,37 @@ struct Ptr
 
 |Název|Popis|
 |----------|-----------------|
-|`typedef T2 difference_type`|Typ `T2` je `Ptr::difference_type` pokud existuje tento typ, jinak `ptrdiff_t`. Pokud `Ptr` nezpracovaná ukazatel, typ je `ptrdiff_t`.|
-|`typedef T1 element_type`|Typ `T1` je `Ptr::element_type` pokud existuje tento typ, jinak `Ty`. Pokud `Ptr` nezpracovaná ukazatel, typ je `Ty`.|
+|`typedef T2 difference_type`|Typ `T2` je `Ptr::difference_type` Pokud daný typ existuje, jinak `ptrdiff_t`. Pokud `Ptr` je nezpracovaný ukazatel, je typ `ptrdiff_t`.|
+|`typedef T1 element_type`|Typ `T1` je `Ptr::element_type` Pokud daný typ existuje, jinak `Ty`. Pokud `Ptr` je nezpracovaný ukazatel, je typ `Ty`.|
 |`typedef Ptr pointer`|Typ je `Ptr`.|
 
 ### <a name="structs"></a>Struktury
 
 |Název|Popis|
 |----------|-----------------|
-|`pointer_traits::rebind`|Pokusí se převést základní ukazatele na zadaný typ typ.|
+|`pointer_traits::rebind`|Typ, který zadaného typu pokusí převést základního ukazatele.|
 
 ### <a name="methods"></a>Metody
 
 |Název|Popis|
 |----------|-----------------|
-|[pointer_to](#pointer_to)|Převede libovolný odkaz na objekt třídy `Ptr`.|
+|[pointer_to](#pointer_to)|Převede libovolného odkazu na objekt třídy `Ptr`.|
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** \<paměti >
 
-**Namespace:** – std
+**Namespace:** std
 
 ## <a name="pointer_to"></a>  pointer_to
 
-Statickou metodu, která vrací `Ptr::pointer_to(obj)`v případě, že funkce existuje. Jinak, není možné převést libovolný odkaz na objekt třídy `Ptr`. Pokud `Ptr` je nezpracované ukazatel, vrátí tato metoda `addressof(obj)`.
+Statická metoda, která vrátí `Ptr::pointer_to(obj)`, pokud existuje, že fungují. V opačném případě není možné převést libovolný odkaz na objekt třídy `Ptr`. Pokud `Ptr` je nezpracovaný ukazatel, vrátí tato metoda `addressof(obj)`.
 
 ```cpp
 static pointer pointer_to(element_type& obj);
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<paměť >](../standard-library/memory.md)<br/>
 [allocator_traits – třída](../standard-library/allocator-traits-class.md)<br/>

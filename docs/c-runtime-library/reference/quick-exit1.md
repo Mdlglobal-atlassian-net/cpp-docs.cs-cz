@@ -1,11 +1,6 @@
 ---
-title: quick_exit1 | Microsoft Docs
-ms.custom: ''
+title: quick_exit1
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - quick_exit
 apilocation:
@@ -25,25 +20,19 @@ f1_keywords:
 - quick_exit
 - process/quick_exit
 - stdlib/quick_exit
-dev_langs:
-- C++
 helpviewer_keywords:
 - quick_exit function
 ms.assetid: ecfbdae6-01c4-45fa-aaeb-b368e1de2a9c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: de3eb88093db0eea470a0c1d775516574c466ddd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 50f1ee72cce04c2bebc8f7396a2b6fad98301dd7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405728"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429012"
 ---
 # <a name="quickexit"></a>quick_exit
 
-Způsobí ukončení normální programu proběhnout.
+Způsobí, že ukončení normální programu dojde k.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -56,19 +45,19 @@ __declspec(noreturn) void quick_exit(
 ### <a name="parameters"></a>Parametry
 
 *Stav*<br/>
-Kód stavu se vraťte do prostředí hostitele.
+Stavový kód se vraťte do hostitelského prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Quick_exit** funkce nelze vrátit k jeho volajícího.
+**Quick_exit** funkce nemůže vracet volajícímu.
 
 ## <a name="remarks"></a>Poznámky
 
-**Quick_exit** funkce způsobí ukončení normální programu. Zavolá žádné funkce registrovaných **atexit**, **_onexit –** nebo signál registrovaných obslužné rutiny **signál** funkce. Pokud není definován chování **quick_exit** nazývá více než jednou, nebo pokud **ukončete** je volána funkce.
+**Quick_exit** funkce způsobí ukončení normální programu. Volá žádné funkce registrovaných **atexit**, **_onexit** nebo registrovaných obslužné rutiny signálu **signál** funkce. Chování není definováno, pokud **quick_exit** je volána více než jednou, nebo pokud **ukončit** funkce se také nazývá.
 
-**Quick_exit** funkce volání v last-in, pořadí ven (LIFO), funkce registrovaných **at_quick_exit**, s výjimkou pro tyto funkce už voláno, když byl zaregistrován funkce.  Pokud není definován chování [longjmp](longjmp.md) přišla v průběhu hovoru registrovaná funkce, která by ukončit volání funkce.
+**Quick_exit** volání v poslední dovnitř, první (ven LIFO) objednávky, funkce registrované pomocí funkcí **at_quick_exit**, s výjimkou pro tyto funkce již voláno, když byl zaregistrován funkce.  Chování není definováno, pokud [longjmp](longjmp.md) přišla během volání registrované funkci, která by jej měla ukončit volání funkce.
 
-Po zavolání registrovaná funkce **quick_exit** vyvolá **_exit –** pomocí *stav* hodnota vrátit kontrolu hostitelské prostředí.
+Po zavolání funkce registrované **quick_exit** vyvolá **_Exit** pomocí *stav* hodnoty k vrácení ovládacího prvku do hostitelského prostředí.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -76,9 +65,9 @@ Po zavolání registrovaná funkce **quick_exit** vyvolá **_exit –** pomocí 
 |-------------|---------------------|
 |**quick_exit**|\<Process.h > nebo \<stdlib.h >|
 
-Další informace o kompatibilitě najdete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](abort.md)<br/>

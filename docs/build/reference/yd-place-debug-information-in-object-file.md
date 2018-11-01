@@ -1,30 +1,20 @@
 ---
-title: -Yd (umístění informací o ladění do souboru objektu) | Dokumentace Microsoftu
-ms.custom: ''
+title: /Yd (Umístit informace o ladění do souboru objektu)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /yd
-dev_langs:
-- C++
 helpviewer_keywords:
 - /Yd compiler option [C++]
 - -Yd compiler option [C++]
 - debugging [C++], debug information files
 - Yd compiler option [C++]
 ms.assetid: c5a699fe-65ce-461e-964c-7f5eb2a8320a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 38d678e6a16f9c87aace611e33cbc792d2a3b59e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: eda3dd38449f89d9b8d767b460970d659f6c9dc9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713554"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430014"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (Umístit informace o ladění do souboru objektu)
 
@@ -64,7 +54,7 @@ Další informace o předkompilovaných hlaviček naleznete v tématu:
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="examples"></a>Příklady
 

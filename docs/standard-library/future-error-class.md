@@ -1,29 +1,19 @@
 ---
-title: future_error – třída | Microsoft Docs
-ms.custom: ''
+title: future_error – třída
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - future/std::future_error
-dev_langs:
-- C++
 ms.assetid: 6071c545-ac2a-49ef-9967-07b0125da861
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4e5d5c24a658f53dbef4075d68f5aead5454356b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2b3f754c0ceb7384d99c6a657de214d30aca24b3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845008"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430469"
 ---
 # <a name="futureerror-class"></a>future_error – třída
 
-Popisuje výjimka objekt, který může být vyvolána metodami typů, které spravují [budoucí](../standard-library/future-class.md) objekty.
+Popisuje objekt výjimky, které mohou být vyvolány pomocí jiných metod typů, které spravují [budoucí](../standard-library/future-class.md) objekty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,9 +33,9 @@ const char *what() const throw();
 
 **Záhlaví:** \<budoucí >
 
-**Namespace:** – std
+**Namespace:** std
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [logic_error – třída](../standard-library/logic-error-class.md)<br/>

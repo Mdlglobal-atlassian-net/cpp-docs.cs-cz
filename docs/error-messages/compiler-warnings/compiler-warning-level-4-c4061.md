@@ -1,39 +1,29 @@
 ---
-title: Kompilátoru (úroveň 4) upozornění C4061 | Microsoft Docs
-ms.custom: ''
+title: Kompilátor upozornění (úroveň 4) C4061
 ms.date: 11/30/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4061
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4061
 ms.assetid: a99cf88e-7941-4519-8b1b-f6889d914b2f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2d0086ea5e590c7183024bc4dcc93e2f2522f483
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b730d561134b8b7ca4454ee74f99216fbc72cb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292617"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50453267"
 ---
-# <a name="compiler-warning-level-4-c4061"></a>C4061 kompilátoru upozornění (úroveň 4)
+# <a name="compiler-warning-level-4-c4061"></a>Kompilátor upozornění (úroveň 4) C4061
 
-> Enumerátor '*identifikátor*'v přepínači výčtu'*– výčet*' není explicitně zpracovávaných případu štítek
+> Enumerátor "*identifikátor*"v přepnutí výčtu'*výčet*' není explicitně zpracován popisek případu
 
-Enumerátor nemá žádné přidruženou obslužnou rutinu v `switch` příkaz.
+Enumerátor nemá žádná přidružená obslužná rutina `switch` příkazu.
 
-Toto upozornění je ve výchozím nastavení vypnutý. V tématu [kompilátoru upozornění, že jsou vypnout ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.
+Toto upozornění je vypnuto ve výchozím nastavení. Zobrazit [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C4061; Přidání případu pro chybí enumerátor vyřešit:
+Následující ukázka generuje C4061; přidáte případ pro chybí enumerátor opravit:
 
 ```cpp
 // C4061.cpp
