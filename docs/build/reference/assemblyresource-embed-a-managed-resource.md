@@ -1,15 +1,9 @@
 ---
-title: -ASSEMBLYRESOURCE (vložení spravovaného prostředku) | Dokumentace Microsoftu
-ms.custom: ''
+title: /ASSEMBLYRESOURCE (integrovaný spravovaný zdroj)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.EmbedManagedResourceFile
 - /ASSEMBLYRESOURCE
-dev_langs:
-- C++
 helpviewer_keywords:
 - ASSEMBLYRESOURCE linker option
 - assemblies [C++]
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - assemblies [C++], linking resource files
 - /ASSEMBLYRESOURCE linker option
 ms.assetid: 0ce6e1fb-921b-4b1b-a59c-d35388d789f2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ec883aa1b6d9fb6ea354e218f5924e9c3562c585
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 566a667ababaa67c7aff71861b111416abbbd878
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720600"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486603"
 ---
 # <a name="assemblyresource-embed-a-managed-resource"></a>/ASSEMBLYRESOURCE (integrovaný spravovaný zdroj)
 
@@ -80,7 +70,7 @@ Další možnosti linkeru, které ovlivňují generování sestavení jsou:
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-1. Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EmbedManagedResourceFile%2A>.
+1. Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EmbedManagedResourceFile%2A>.
 
 ## <a name="see-also"></a>Viz také
 

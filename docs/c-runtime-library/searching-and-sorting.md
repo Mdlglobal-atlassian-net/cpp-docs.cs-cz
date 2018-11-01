@@ -1,47 +1,37 @@
 ---
-title: Vyhledávání a třídění | Microsoft Docs
-ms.custom: ''
+title: Vyhledávání a třídění
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.programs
-dev_langs:
-- C++
 helpviewer_keywords:
 - sorting data
 - data [CRT], searching
 - searching [C++], CRT search functions
 - searching [C++]
 ms.assetid: 15e984f0-e155-46f5-8542-51c458792f54
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 58cb583ed09e0caeaec6c4ce155fa66ce3fc4090
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7bdef8712d729195a948f616b2bde07c6be975c5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410392"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497080"
 ---
 # <a name="searching-and-sorting"></a>Vyhledávání a třídění
 
-Použíjte následující funkce pro hledání a řazení.
+Použíjte následující funkce pro vyhledávání a řazení.
 
-## <a name="searching-and-sorting-functions"></a>Vyhledávání a třídění funkce
+## <a name="searching-and-sorting-functions"></a>Vyhledávání a třídění funkcí
 
-|Funkce|Hledání nebo řazení|
+|Funkce|Vyhledávání a řazení|
 |--------------|--------------------|
 |[bsearch](../c-runtime-library/reference/bsearch.md)|Binární vyhledávání|
-|[bsearch_s](../c-runtime-library/reference/bsearch-s.md)|Bezpečnější verzi **bsearch –**|
-|[_lfind](../c-runtime-library/reference/lfind.md)|Lineární hledání pro danou hodnotu|
-|[_lfind_s](../c-runtime-library/reference/lfind-s.md)|Bezpečnější verzi **_lfind –**|
-|[_lsearch](../c-runtime-library/reference/lsearch.md)|Lineární hledání pro danou hodnotu, která se přidá do pole, pokud není nalezen|
-|[_lsearch_s](../c-runtime-library/reference/lsearch-s.md)|Bezpečnější verzi **_lsearch –**|
+|[bsearch_s](../c-runtime-library/reference/bsearch-s.md)|Bezpečnější verze **bsearch –**|
+|[_lfind](../c-runtime-library/reference/lfind.md)|Lineární hledání pro danou hodnotou.|
+|[_lfind_s](../c-runtime-library/reference/lfind-s.md)|Bezpečnější verze **_lfind –**|
+|[_lsearch](../c-runtime-library/reference/lsearch.md)|Lineární hledání zadaná hodnota, která se přidá do pole, pokud není nalezen|
+|[_lsearch_s](../c-runtime-library/reference/lsearch-s.md)|Bezpečnější verze **_lsearch –**|
 |[qsort](../c-runtime-library/reference/qsort.md)|Rychlé řazení|
-|[qsort_s](../c-runtime-library/reference/qsort-s.md)|Bezpečnější verzi **qsort –**|
+|[qsort_s](../c-runtime-library/reference/qsort-s.md)|Bezpečnější verze **qsort –**|
 
 ## <a name="see-also"></a>Viz také
 
