@@ -1,10 +1,6 @@
 ---
-title: Sqrt, sqrtf –, sqrtl – | Microsoft Docs
-ms.custom: ''
+title: Sqrt sqrtf –, sqrtl –
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - sqrtl
 - sqrtf
@@ -26,8 +22,6 @@ f1_keywords:
 - sqrt
 - sqrtf
 - _sqrtl
-dev_langs:
-- C++
 helpviewer_keywords:
 - sqrtf function
 - sqrt function
@@ -36,18 +30,14 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a6eefbbf3269ad809cdf30dd3ea034f7ca6c8ad8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c44f8813812b2aeffc2680a0a666d968bb2b4da6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407298"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560573"
 ---
-# <a name="sqrt-sqrtf-sqrtl"></a>Sqrt, sqrtf –, sqrtl –
+# <a name="sqrt-sqrtf-sqrtl"></a>Sqrt sqrtf –, sqrtl –
 
 Vypočítá druhou odmocninu.
 
@@ -78,25 +68,25 @@ Nezáporná hodnota s plovoucí desetinnou čárkou
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **sqrt** trvají **float** nebo **dlouho** **dvojité** typy. V programu C **sqrt** vždy provede a vrátí **dvojité**.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **sqrt** trvají **float** nebo **dlouhé** **double** typy. V programu jazyka C **sqrt** vždy převezme a vrátí **double**.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Sqrt** funkce vrátí druhou odmocninu výsledku *x*. Ve výchozím nastavení pokud *x* záporné, **sqrt** vrátí neomezené NaN.
+**Sqrt** funkce vrátí druhou odmocninu z *x*. Ve výchozím nastavení pokud *x* je záporný, **sqrt** vrátí nekonečno hodnotu NaN.
 
-|Vstup|Výjimka SEH|**_matherr –** výjimky|
+|Vstup|Výjimka SEH|**_matherr** výjimky|
 |-----------|-------------------|--------------------------|
-|ROZMEZÍ QNAN, IND|žádná|_DOMAIN –|
-|- ∞|žádná|_DOMAIN –|
-|x<0|žádná|_DOMAIN –|
+|ROZMEZÍ QNAN, AJÍT|žádná|_DOMÉNA|
+|- ∞|žádná|_DOMÉNA|
+|x<0|žádná|_DOMÉNA|
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Hlavička C|Hlavička C++|
+|Funkce|Záhlaví C|Hlaviček jazyka C++|
 |--------------|--------------|------------------|
-|**Sqrt**, **sqrtf –**, **sqrtl –**|\<Math.h >|\<cmath – >|
+|**Sqrt**, **sqrtf –**, **sqrtl –**|\<Math.h >|\<cmath >|
 
-Informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -123,7 +113,7 @@ int main( void )
 The square root of 45.35 is 6.73
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>

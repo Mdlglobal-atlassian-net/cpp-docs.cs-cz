@@ -1,14 +1,8 @@
 ---
-title: Upozornění (úroveň 1 a 3) C4793 kompilátoru | Microsoft Docs
-ms.custom: ''
+title: Upozornění kompilátoru (úroveň 1 a 3) C4793
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4793
-dev_langs:
-- C++
 helpviewer_keywords:
 - C6634
 - C6635
@@ -21,40 +15,36 @@ helpviewer_keywords:
 - C6637
 - C4793
 ms.assetid: 819ada53-1d9c-49b8-a629-baf8c12314e6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e3942d09e823fc6bd2f370a8c8ee72b8d00e9a98
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: e7ca3b10e09b0d6818fbc7f5607ebc9c95c7f15c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704929"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623246"
 ---
 # <a name="compiler-warning-level-1-and-3-c4793"></a>Upozornění kompilátoru (úroveň 1 a 3) C4793
 
-> '*funkce*': funkce kompiluje v nativním kódu: '*důvod*.
+> "*funkce*': funkce se zkompilovat jako nativní kód:"*důvod*"
 
 ## <a name="remarks"></a>Poznámky
 
-Kompilátor nelze kompilovat *funkce* do spravovaného kódu, i když [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) je zadána možnost kompilátoru. Místo toho kompilátor vydá upozornění C4793 a vysvětlující pokračování zprávu a pak zkompiluje *funkce* do nativního kódu. Pokračování zpráva obsahuje *důvod* text, který vysvětluje, proč *funkce* nelze kompilovat, k `MSIL`.
+Kompilátor nemůže kompilovat *funkce* do spravovaného kódu, i když [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) je zadána možnost kompilátoru. Místo toho kompilátor vydá upozornění C4793 a vysvětlující pokračování zprávu a pak zkompiluje *funkce* do nativního kódu. Pokračování zpráva obsahuje *důvod* text, který vysvětluje, proč *funkce* nemohou být zkompilovány do `MSIL`.
 
-Toto je upozornění úrovně 1 při zadávání **/CLR: pure** – možnost kompilátoru.  **/CLR: pure** – možnost kompilátoru je zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017.
+Toto je upozornění úrovně 1 při zadávání **/CLR: pure** – možnost kompilátoru.  **/CLR: pure** – možnost kompilátoru je zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
 
-Následující tabulka uvádí všechny možné pokračování zprávy.
+V následující tabulce jsou uvedeny všechny možné pokračování zprávy.
 
-|Důvod zpráv|Poznámky|
+|Důvod zprávy|Poznámky|
 |--------------------|-------------|
-|Zarovnaný datové typy nejsou podporovány ve spravovaném kódu|Modul CLR musí být schopen přidělit data podle potřeby, která nemusí být možné v případě, že data je zarovnáno s deklaracemi, jako [__m128](../../cpp/m128.md) nebo [zarovnat](../../cpp/align-cpp.md).|
-|Funkce, které používají '__ImageBase' nejsou podporovány ve spravovaném kódu|`__ImageBase` je speciální linkeru symbol, který se obvykle používá pouze pomocí nízké úrovně nativní kód pro načtení knihovny DLL.|
-|vararg nejsou podporovány ' / clr' – možnost kompilátoru|Nativní funkce nelze volat spravované funkce, které mají [seznam argumentů s proměnnou délkou](../../cpp/functions-with-variable-argument-lists-cpp.md) (vararg) vzhledem k tomu, že funkce mají různé zásobníku rozložení požadavky. Ale pokud zadáte **/CLR: pure** – možnost kompilátoru, seznamy jsou podporována, protože sestavení může obsahovat jenom spravované funkce argumentů proměnných. Další informace najdete v tématu [prázdná a ověřitelný kód (C + +/ CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).|
-|64bitová verze CLR nepodporuje data deklarovat s __ptr32 – modifikátor|Ukazatel musí mít stejnou velikost jako nativní ukazatel na aktuální platformě. Další informace najdete v tématu [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md).|
-|32bitová verze CLR nepodporuje data deklarovat s __ptr64 – modifikátor|Ukazatel musí mít stejnou velikost jako nativní ukazatel na aktuální platformě. Další informace najdete v tématu [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md).|
-|Jeden nebo více vnitřní funkce není podporována ve spravovaném kódu|Název vnitřní není k dispozici v době, kdy jsou vydávány zprávy. Vnitřní, které obvykle způsobí, že tato zpráva však představuje instrukce nízké úrovně počítače.|
-|Nativní vloženého sestavení (__asm) není podporována ve spravovaném kódu|[Kód vnořeného sestavení](../../assembler/inline/asm.md) může obsahovat libovolný nativní kód, který se nedá spravovat.|
-|Virtuální funkce převodu bez __clrcall musí být zkompilovány jako nativní|Jinou hodnotu než[__clrcall](../../cpp/clrcall.md) virtuální funkce převodu musí používat adresu nespravované.|
-|Funkce pomocí '_setjmp' musí být zkompilovány jako nativní|Modul CLR musí být schopné řídit spuštění programu. Ale [setjmp](../../cpp/using-setjmp-longjmp.md) funkce obchází provádění pravidelných programu ukládání a obnovení nízké úrovně informace, jako je stav spuštění a zaregistruje.|
+|Zarovnané datové typy nejsou ve spravovaném kódu podporované.|Modul CLR musí být schopen přidělení dat podle potřeby, což nemusí být možné dat je v souladu s deklaracemi, jako v případě [__m128](../../cpp/m128.md) nebo [zarovnat](../../cpp/align-cpp.md).|
+|Funkce, které používají ": __ImageBase" nejsou ve spravovaném kódu podporované.|`__ImageBase` je speciální linkeru symbol, který je obvykle používána pouze nízké úrovně nativní kód pro načtení knihovny DLL.|
+|Funkce VarArgs nejsou podporovány "/ clr' – možnost kompilátoru|Nativní funkce nelze volat spravované funkce, které mají [seznamy argumentů proměnných](../../cpp/functions-with-variable-argument-lists-cpp.md) (vararg) vzhledem k tomu, že nemají tyto funkce požadavkům na rozložení jiný zásobník. Ale pokud zadáte **/CLR: pure** – možnost kompilátoru, seznamy jsou podporované, protože sestavení může obsahovat jenom spravované funkce argumentů s proměnnou délkou. Další informace najdete v tématu [prázdná a ověřitelný kód (C + +/ CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).|
+|64bitový modul CLR nepodporuje data deklarovaný s modifikátorem __ptr32|Ukazatel musí mít stejnou velikost jako nativní ukazatel na aktuální platformě. Další informace najdete v tématu [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md).|
+|32bitová verze CLR nepodporuje data deklarovaný s modifikátorem __ptr64|Ukazatel musí mít stejnou velikost jako nativní ukazatel na aktuální platformě. Další informace najdete v tématu [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md).|
+|Jeden nebo více vnitřních objektů není ve spravovaném kódu podporované.|Název vnitřní objekt není k dispozici v době, kdy je vygenerován zprávy. Vnitřní objekt, který způsobí, že tato zpráva obvykle však představuje nízké úrovně počítače instrukce.|
+|Vložené nativní sestavení (__asm) není ve spravovaném kódu podporované.|[Vložený kód sestavení](../../assembler/inline/asm.md) může obsahovat libovolný nativní kód, který není možné spravovat.|
+|Převodní rutina virtuální funkci bez __clrcall musí kompilovat jako nativní.|Non -[__clrcall](../../cpp/clrcall.md) virtuální funkce převodní rutina musí používat adresu nespravované.|
+|Funkce pomocí "_setjmp" musí kompilovat jako nativní.|Modul CLR musí být schopni řídit vykonávání programu. Ale [setjmp](../../cpp/using-setjmp-longjmp.md) funkce obchází provádění pravidelných programu pomocí ukládání a obnova nízké úrovně informace, jako je registry a stav provádění.|
 
 ## <a name="example"></a>Příklad
 

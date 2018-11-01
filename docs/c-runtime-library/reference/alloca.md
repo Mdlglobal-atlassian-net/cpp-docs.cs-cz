@@ -1,10 +1,6 @@
 ---
-title: _alloca – | Microsoft Docs
-ms.custom: ''
+title: _alloca
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _alloca
 apilocation:
@@ -22,27 +18,21 @@ apitype: DLLExport
 f1_keywords:
 - _alloca
 - alloca
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory allocation, stack
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fdc595d33bdc5ce464df1aed86cf885e5673ddc9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7c083e791301d3224709a5fc6c711ceaa6397d38
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394113"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668068"
 ---
 # <a name="alloca"></a>_alloca
 
-Přidělí paměť v zásobníku. Tato funkce je zastaralý, protože bezpečnější verze je k dispozici. v tématu [_malloca –](malloca.md).
+Přidělí paměť v zásobníku. Tato funkce je zastaralá, protože bezpečnější verze je k dispozici. Zobrazit [_malloca](malloca.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,32 +45,32 @@ void *_alloca(
 ### <a name="parameters"></a>Parametry
 
 *Velikost*<br/>
-Počet bajtů přidělování v zásobníku.
+Bajtů, které mají být přiděleny ze zásobníku.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_Alloca –** rutiny vrátí **void** ukazatel na přidělené místa, což záruku, že se vhodně zarovnána pro ukládání jakéhokoli typu objektu. Pokud *velikost* 0, **_alloca –** přiděluje položku s nulovou délkou a vrací neplatný ukazatel na danou položku.
+**_Alloca** rutinní vrátí **void** ukazatel do přiděleného místa, což je zaručeno, že jako vhodně zarovnaný pro úložiště libovolného typu objektu. Pokud *velikost* je 0, **_alloca** přiděluje položku nulové délky a vrátí platný ukazatel na danou položku.
 
-Pokud nelze přidělit prostor, je vygenerována výjimce přetečení zásobníku. Výjimce přetečení zásobníku není C++ výjimka; je strukturovaného výjimek. Místo použití zpracovávání výjimek v jazyce C++, je nutné použít [strukturované zpracování výjimek](../../cpp/structured-exception-handling-c-cpp.md) (SEH).
+Pokud nelze přidělit místo, vygeneruje se k výjimce přetečení zásobníku. Výjimku přetečení zásobníku není výjimky jazyka C++; je strukturovaných výjimek. Místo používání zpracování výjimek jazyka C++, je nutné použít [strukturovaného zpracování výjimek](../../cpp/structured-exception-handling-c-cpp.md) (SEH).
 
 ## <a name="remarks"></a>Poznámky
 
-**_alloca –** přiděluje *velikost* bajtů z programu zásobníku. Přidělené místo automaticky uvolněno při ukončení volání funkce (není při přidělení předá jenom mimo rozsah). Proto nepředávejte ukazatel hodnoty vrácené **_alloca –** jako argument pro [volné](free.md).
+**_alloca** přiděluje *velikost* bajtů ze zásobníku programu. Do přiděleného místa je automaticky uvolněn při ukončení volání funkce (ne už při přidělení předává pouze mimo rozsah). Proto, nepředávejte hodnotu ukazatele vrácené **_alloca** jako argument [bezplatné](free.md).
 
-Existují omezení explicitně volání **_alloca –** v obslužné rutiny výjimek (EH). EH rutiny, které běží na procesory x86 – třída fungovat ve vlastním rámečku paměti: jejich vykonávat úkoly v paměti, který není založen na aktuální umístění ukazatele zásobníku nadřazených funkce. Většina běžné implementace patří zpracování (SEH) systému Windows NT strukturovaná výjimek a výrazy klauzule catch C++. Proto explicitně volání **_alloca –** v některém z následujících scénářů výsledků v programu selhání při návratu do volání rutiny EH:
+Existují omezení explicitně voláním **_alloca** v obslužné rutiny výjimek (EH). Rutiny EH, na kterých běží na procesorech x86 třídy pracovat v rámci své vlastní paměti: provádějí své úkoly v paměti, který není založen na aktuální umístění ukazatel zásobníku nadřazené funkce. Většina běžných implementací zahrnují zpracování (SEH) systému Windows NT strukturovaných výjimek a výrazy klauzule catch C++. Proto se explicitně voláním **_alloca** v některém z následujících výsledků scénáře selhání programu při vrácení volání rutiny EH:
 
-- Výraz filtru SEH systému Windows NT výjimka: `__except ( _alloca() )`
+- Výraz filtru výjimky SEH Windows NT: `__except ( _alloca() )`
 
-- Obslužná rutina systému Windows NT SEH poslední výjimky: `__finally { _alloca() }`
+- Windows NT SEH poslední obslužnou rutinu: `__finally { _alloca() }`
 
 - Výraz klauzule catch C++ EH
 
-Ale **_alloca –** je možné volat přímo z v rutiny EH nebo z zadané aplikaci zpětné volání, které volán v jednom ze scénářů EH dříve uvedené.
+Ale **_alloca** mohou být volány přímo z v rámci rutiny EH nebo ze zpětného volání s poskytované aplikací, která získá vyvolá jednu z výše uvedených scénářů EH.
 
 > [!IMPORTANT]
-> V systému Windows XP Pokud **_alloca –** nazývá uvnitř bloku try/catch musí volat [_resetstkoflw –](resetstkoflw.md) v bloku catch.
+> Ve Windows XP Pokud **_alloca** je volána uvnitř bloku try/catch, je nutné volat [_resetstkoflw](resetstkoflw.md) v bloku catch.
 
-Kromě výše uvedené omezení, při použití[/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) možnost **_alloca –** nelze použít v **__except** bloky. Další informace najdete v tématu [/CLR – omezení](../../build/reference/clr-restrictions.md).
+Kromě výše uvedená omezení při použití[/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) možnost **_alloca** nelze použít v **__except** bloky. Další informace najdete v tématu [/CLR – omezení](../../build/reference/clr-restrictions.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -146,7 +136,7 @@ int main()
 Allocated 1000 bytes of stack at 0x0012FB50
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přidělení paměti](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>

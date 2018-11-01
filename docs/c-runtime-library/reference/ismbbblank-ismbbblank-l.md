@@ -1,10 +1,6 @@
 ---
-title: _ismbbblank _ismbbblank_l | Microsoft Docs
-ms.custom: ''
+title: _ismbbblank _ismbbblank_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbblank_l
 - _ismbbblank
@@ -21,26 +17,20 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 apitype: DLLExport
-dev_langs:
-- C++
 ms.assetid: d21b2e41-7206-41f5-85bb-9c9ab4f3e21b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d4d2849eca58c7fa3d7fc8250ab3bad0d346e4a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c6709d5a5870c44d200b704e4a34043ff9c37226
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399482"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646261"
 ---
 # <a name="ismbbblank-ismbbblankl"></a>_ismbbblank _ismbbblank_l
 
-Určuje, zda je zadaný znak vícebajtové je prázdný znak.
+Určuje, zda je zadaný vícebajtový znak je prázdný znak.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,14 +47,14 @@ int _ismbbblank_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Celé číslo má být testována.
+Celé číslo k testování.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_ismbbblank** vrátí nenulovou hodnotu, pokud *c* představuje znak mezery (0x20), horizontální tabulátor (0x09) nebo místního znak, který slouží k oddělení slova v rámci řádku textu, pro které **isspace –** true; jinak hodnota, vrátí hodnotu 0. **_ismbbblank** používá aktuální národní prostředí pro chování všech závislých na národním prostředí. **_ismbbblank_l** se shoduje s tím rozdílem, že místo toho používá národní prostředí, je předaná. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+**_ismbbblank** vrací nenulovou hodnotu, pokud *c* představuje znak mezery (0x20), znak horizontálního tabulátoru (0x09) nebo znak specifických pro národní prostředí, který se používá k oddělení slov na řádku textu, pro které **isspace** je true; jinak vrátí hodnotu, vrátí hodnotu 0. **_ismbbblank** používá aktuální národní prostředí pro všechna závislá chování. **_ismbbblank_l** je totožný s tím rozdílem, že místo toho používá národní prostředí, které je předáno. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -73,9 +63,9 @@ Národní prostředí použít.
 |**_ismbbblank**|\<Mbctype.h >|
 |**_ismbbblank_l**|\<Mbctype.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Klasifikace bajtů](../../c-runtime-library/byte-classification.md)<br/>
 [_ismbb – rutiny](../../c-runtime-library/ismbb-routines.md)<br/>

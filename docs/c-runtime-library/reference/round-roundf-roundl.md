@@ -1,10 +1,6 @@
 ---
-title: roundf – ZAOKROUHLIT, roundl – | Microsoft Docs
-ms.custom: ''
+title: round, roundf, roundl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - round
 - roundl
@@ -26,27 +22,21 @@ f1_keywords:
 - roundf
 - roundl
 - round
-dev_langs:
-- C++
 helpviewer_keywords:
 - roundl function
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83c157793b80ec851f2c6159a5454f7101d2baed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 126c6bace2b79123094a7f8bcc8f3d3378391d96
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407236"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591769"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
-Zaokrouhlí na nejbližší celé číslo s plovoucí desetinnou čárkou hodnotu.
+Zaokrouhlí hodnotu s plovoucí desetinnou čárkou na nejbližší celé číslo.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -71,27 +61,27 @@ long double roundl(
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Hodnota s plovoucí desetinnou čárkou má být zaokrouhleno.
+Hodnota s plovoucí desetinnou čárkou k zaokrouhlení.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**ZAOKROUHLIT** funkce vrátí hodnotu s plovoucí desetinnou čárkou, která představuje na nejbližší celé číslo na *x*. Uprostřed hodnoty jsou zaokrouhleny směrem od nuly, bez ohledu na nastavení režimu zaokrouhlení s plovoucí desetinnou čárkou. Neexistuje žádný návratový chyby.
+**ZAOKROUHLIT** funkce vrátí hodnotu s plovoucí desetinnou čárkou, která představuje na nejbližší celé číslo k *x*. Středové hodnoty jsou zaokrouhleny směrem od nuly bez ohledu na nastavení režimu zaokrouhlení s plovoucí desetinnou čárkou. Není vrácena žádná chyba.
 
-|Vstup|Výjimka SEH|Matherr – výjimka|
+|Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ **QNAN**, **IND**|žádná|**_DOMAIN –**|
+|ROZMEZÍ **QNAN**, **AJÍT**|žádná|**_DOMÉNA**|
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **ZAOKROUHLIT** , přijmout a vrátit **float** a **dlouho** **dvojité** hodnoty. V programu C **ZAOKROUHLIT** vždy provede a vrátí **dvojité**.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **ZAOKROUHLIT** , která používají a vrací **float** a **dlouhé** **double** hodnoty. V programu jazyka C **ZAOKROUHLIT** vždy převezme a vrátí **double**.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**Zaokrouhlí**, **roundf –**, **roundl –**|\<Math.h >|
+|**ZAOKROUHLIT**, **roundf –**, **roundl –**|\<Math.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -129,7 +119,7 @@ roundl(2.500000) is 3
 roundl(-2.500000) is -3
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

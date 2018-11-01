@@ -1,11 +1,6 @@
 ---
-title: carg, cargf, cargl | Microsoft Docs
-ms.custom: ''
+title: carg cargf, cargl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - carg
 - cargf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/carg
 - complex/cargf
 - complex/cargl
-dev_langs:
-- C++
 helpviewer_keywords:
 - carg function
 - cargf function
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 34a5e55b4261c68d90c3bcb28cf2f0e7be1a2c50
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 584732594cd9ca9579907986e3dc3b5f3dbf52c0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393469"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665592"
 ---
-# <a name="carg-cargf-cargl"></a>carg, cargf, cargl
+# <a name="carg-cargf-cargl"></a>carg cargf, cargl
 
-Načte argument komplexního čísla, s větev vyjmout záporné skutečné osy.
+Načte argument komplexního čísla s větví vyjmout skutečné ose záporné.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -79,24 +68,24 @@ Komplexní čísla.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Argument (také označované jako fázi) *z*. Výsledkem je v intervalu [-pí, + pí].
+Argument (označované také jako fáze) *z*. Výsledkem je v intervalu [-pí, + pí].
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **carg** trvají **_Fcomplex** nebo **_Lcomplex** hodnoty a vrátí **float** nebo **dlouho** **dvojité** hodnoty. V programu C **carg** má vždy **_Dcomplex** hodnotu a vrátí **dvojité** hodnotu.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **carg** trvají **_Fcomplex** nebo **_Lcomplex** hodnoty a návrat **float** nebo **dlouhé** **double** hodnoty. V programu jazyka C **carg** vždy přijímá **_Dcomplex** hodnotu a vrátí **double** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Hlavička C|Hlavička C++|
+|Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
 |**carg**, **cargf**, **cargl**|\<complex.h>|\<ccomplex >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
-[Norm, normf, norml](norm-normf-norml1.md)<br/>
+[Norm a normf, norml](norm-normf-norml1.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>
 [cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
 [conj, conjf, conjl](conj-conjf-conjl.md)<br/>
