@@ -1,16 +1,10 @@
 ---
-title: -vmm, - vms, - vmv (obecná reprezentace) | Dokumentace Microsoftu
-ms.custom: ''
+title: / VMM, - vms, - vmv (obecná reprezentace)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /vms
 - /vmm
 - /vmv
-dev_langs:
-- C++
 helpviewer_keywords:
 - Virtual Inheritance compiler option
 - general purpose representation compiler options
@@ -25,16 +19,12 @@ helpviewer_keywords:
 - Single Inheritance compiler option
 - -vmv compiler option [C++]
 ms.assetid: 0fcd7ae0-3031-4c62-a2a8-e154c8685dae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9cd0fb1eae8638f91ad97aec2ef24e0a578e7d7a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4dd7b47245e3359bbc938578f2bcd07b8b295909
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46385544"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578435"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv (obecná reprezentace)
 
@@ -72,7 +62,7 @@ Pokud chcete zadat jednu z těchto možností model dědičnosti, tohoto modelu 
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Viz také
 

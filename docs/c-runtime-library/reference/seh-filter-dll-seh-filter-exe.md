@@ -1,10 +1,6 @@
 ---
-title: _seh_filter_dll _seh_filter_exe | Microsoft Docs
-ms.custom: ''
+title: _seh_filter_dll, _seh_filter_exe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _XcptFilter
 - _seh_filter_dll
@@ -29,28 +25,22 @@ f1_keywords:
 - _seh_filter_exe
 - corecrt_startup/_seh_filter_exe
 - corecrt_startup/_seh_filter_dll
-dev_langs:
-- C++
 helpviewer_keywords:
 - XcptFilter function
 - _XcptFilter function
 - _seh_filter_dll function
 - _seh_filter_exe function
 ms.assetid: 747e5963-3a12-4bf5-b5c4-d4c1b6068e15
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 75b5b1b22067566d0096aa7ab616fb32c3850998
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51d6a21b3867eb830a7d9f9b4b9b0ac844cd5aa1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406473"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50573026"
 ---
 # <a name="sehfilterdll-sehfilterexe"></a>_seh_filter_dll, _seh_filter_exe
 
-Identifikuje výjimku a související provést akci.
+Identifikuje výjimku a související akci, která se mají provést.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -75,29 +65,29 @@ Ukazatel na informace o výjimce.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Celé číslo, které určuje akce, které mají být provedeny, na základě výsledku zpracování výjimky.
+Celé číslo, které určuje akce, která má být provedena, na základě výsledku zpracování výjimek.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto metody jsou volány výraz filtru výjimek [zkuste-except – příkaz](../../cpp/try-except-statement.md). Metoda zajímají konstantní interní tabulku pro identifikaci výjimky a určení příslušné akce, jak je vidět tady. Čísla výjimky jsou definovány v souboru winnt.h a signál čísla, která jsou definována v signal.h.
+Tyto metody jsou volány výrazu filtru výjimky [zkuste-except – příkaz](../../cpp/try-except-statement.md). Metoda consults konstantní interní tabulku k identifikaci výjimky a proveďte příslušnou akci, jak je znázorněno zde. Čísla výjimky jsou definovány v souboru winnt.h a čísla signálu jsou definovány v souboru signal.h.
 
-|Číslo výjimky (dlouho bez znaménka)|Číslo signál|
+|Počet výjimek (unsigned long)|Číslo signálu|
 |----------------------------------------|-------------------|
-|STATUS_ACCESS_VIOLATION|SIGSEGV –|
-|STATUS_ILLEGAL_INSTRUCTION|SIGILL –|
-|STATUS_PRIVILEGED_INSTRUCTION|SIGILL –|
-|STATUS_FLOAT_DENORMAL_OPERAND|SIGFPE –|
-|STATUS_FLOAT_DIVIDE_BY_ZERO|SIGFPE –|
-|STATUS_FLOAT_INEXACT_RESULT|SIGFPE –|
-|STATUS_FLOAT_INVALID_OPERATION|SIGFPE –|
-|STATUS_FLOAT_OVERFLOW|SIGFPE –|
-|STATUS_FLOAT_STACK_CHECK|SIGFPE –|
-|STATUS_FLOAT_UNDERFLOW|SIGFPE –|
+|STATUS_ACCESS_VIOLATION|SIGSEGV|
+|STATUS_ILLEGAL_INSTRUCTION|SIGILL|
+|STATUS_PRIVILEGED_INSTRUCTION|SIGILL|
+|STATUS_FLOAT_DENORMAL_OPERAND|SIGFPE|
+|STATUS_FLOAT_DIVIDE_BY_ZERO|SIGFPE|
+|STATUS_FLOAT_INEXACT_RESULT|SIGFPE|
+|STATUS_FLOAT_INVALID_OPERATION|SIGFPE|
+|STATUS_FLOAT_OVERFLOW|SIGFPE|
+|STATUS_FLOAT_STACK_CHECK|SIGFPE|
+|STATUS_FLOAT_UNDERFLOW|SIGFPE|
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** corecrt_startup.h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>

@@ -1,10 +1,6 @@
 ---
-title: _chsize – | Microsoft Docs
-ms.custom: ''
+title: _chsize
 ms.date: 03/29/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _chsize
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _chsize
-dev_langs:
-- C++
 helpviewer_keywords:
 - size
 - _chsize function
@@ -31,20 +25,16 @@ helpviewer_keywords:
 - files [C++], changing size
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eb40d218439ebe308e7d7cf01ab5043a2ebb3b1e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5c60f3aa08a405eb9a83dc6ba8636cd316a32925
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395751"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50600639"
 ---
 # <a name="chsize"></a>_chsize
 
-Změní velikost souboru. Bezpečnější verze je k dispozici. v tématu [_chsize_s –](chsize-s.md).
+Změní velikost souboru. Bezpečnější verze je k dispozici. Zobrazit [_chsize_s –](chsize-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -58,30 +48,30 @@ int _chsize(
 ### <a name="parameters"></a>Parametry
 
 *FD*<br/>
-Odkaz na soubor otevřený popisovač souboru.
+Popisovač souboru odkazující na otevřený soubor.
 
 *Velikost*<br/>
-Nové délka souboru v bajtech.
+Novou velikost souboru v bajtech.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_chsize –** vrátí hodnotu 0, pokud velikost souboru je úspěšně změnit. Vrácená hodnota -1 označuje chybu: **errno** je nastaven na **eacces –** Pokud zadaný soubor je jen pro čtení nebo je zadaný soubor uzamčen před přístupem, na **ebadf –** Pokud Popisovač je neplatná, **enospc –** Pokud žádné místa v zařízení, nebo **einval –** Pokud *velikost* je menší než nula.
+**_chsize –** vrací hodnotu 0, pokud je úspěšně změněna velikost souboru. Návratová hodnota-1 označuje chybu: **errno** je nastavena na **EACCES** Pokud zadaný soubor je jen pro čtení nebo zadaný soubor je uzamčen před přístupem, do **EBADF** Pokud Popisovač je neplatný, **ENOSPC** Pokud již není místo na zařízení, nebo **EINVAL** Pokud *velikost* je menší než nula.
 
-V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších návratové kódy.
+Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších návratových kódů.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Chsize –** funkce rozšiřuje nebo zkrátí soubor přidružený k *fd* na délku určeného *velikost*. Soubor musí být otevřený v režimu, která umožňuje zápis. Znaky Null (\0) jsou připojeny, pokud je soubor rozšířeno. Soubor se zkrátí, dojde ke ztrátě všech dat od konce souboru zkrácená na původní délku souboru.
+**_Chsize –** rozšiřuje funkce nebo zkrátí soubor přidružený k *fd* délce určené *velikost*. Soubor musí být otevřen v režimu, který umožňuje zápis. Znaky s hodnotou Null ('\0') se připojují, pokud je soubor rozšířeno. Soubor je zkrácen, dojde ke ztrátě všech dat od konce zkrácený soubor původní délku souboru.
 
-Tato funkce ověří jeho parametry. Pokud *velikost* je menší než nula nebo *fd* popisovač chybného souboru, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md).
+Tato funkce ověřuje své parametry. Pokud *velikost* je menší než nula nebo *fd* je popisovače souborů, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
 |**_chsize**|\<IO.h >|\<errno.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -123,7 +113,7 @@ Size successfully changed
 File length after:  329678
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zpracování souborů](../../c-runtime-library/file-handling.md)<br/>
 [_close](close.md)<br/>

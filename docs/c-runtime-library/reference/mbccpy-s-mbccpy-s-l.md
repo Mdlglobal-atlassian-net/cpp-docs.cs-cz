@@ -1,10 +1,6 @@
 ---
-title: _mbccpy_s –, _mbccpy_s_l – | Microsoft Docs
-ms.custom: ''
+title: _mbccpy_s, _mbccpy_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbccpy_s
 - _mbccpy_s_l
@@ -26,8 +22,6 @@ f1_keywords:
 - mbccpy_s_l
 - mbccpy_s
 - _mbccpy_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - tccpy_s_l function
 - _tccpy_s function
@@ -38,23 +32,19 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a3a52314209b62c818623e315757dcd358ec491
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f9a7554630bd3b46196358c01c21b99978c53e53
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404025"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575040"
 ---
 # <a name="mbccpys-mbccpysl"></a>_mbccpy_s, _mbccpy_s_l
 
-Zkopíruje jeden vícebajtových znaků z řetězce na jiný řetězec. Tyto verze nástroje [_mbccpy –, _mbccpy_l –](mbccpy-mbccpy-l.md) mít vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Zkopíruje jeden vícebajtový znak z řetězce do jiného řetězce. Tyto verze [_mbccpy _mbccpy_l –](mbccpy-mbccpy-l.md) mají rozšíření zabezpečení popsaná v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -89,51 +79,51 @@ errno_t _mbccpy_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Cíle*<br/>
+*cíl*<br/>
 Cíl kopírování.
 
 *buffSizeInBytes*<br/>
 Velikost cílové vyrovnávací paměti.
 
 *pCopied*<br/>
-Naplní se počet bajtů zkopírovaný (1 nebo 2 v případě úspěšného). Předat **NULL** Pokud vám nezáleží číslo.
+Vyplněno počtem bajtů zkopírovaný (1 nebo 2 v případě úspěchu). Předejte **NULL** Pokud vám nezáleží číslo.
 
 *src*<br/>
-Vícebajtové znakové ke kopírování.
+Vícebajtový znak pro kopírování.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěšného; Kód chyby při selhání. Pokud *src* nebo *cíle* je **NULL**, nebo pokud se více než **buffSizeinBytes** bajtů zkopírován do *cíle*, pak je volána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, vrátí funkce **einval –** a **errno** je nastaven na **einval –**.
+Nula v případě úspěchu; Kód chyby při selhání. Pokud *src* nebo *dest* je **NULL**, nebo pokud více než **buffSizeinBytes** bajtů má být zkopírováno do *dest*, pak je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí funkce **EINVAL** a **errno** je nastavena na **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Mbccpy_s –** funkce zkopíruje jeden vícebajtových znaků z *src* k *cíle*. Pokud *src* neukazuje na zájemce bajt vícebajtových znaků určeného implicitní volání [_ismbblead –](ismbblead-ismbblead-l.md), pak jeden bajt, *src* zkopíruje body. Pokud *src* bodů úvodní bajt, ale následující bajtu je 0 a proto neplatný pak 0 se zkopíruje do *cíle*, **errno** je nastaven na **eilseq –** a Funkce vrátí **eilseq –**.
+**_Mbccpy_s –** funkce kopíruje jeden vícebajtový znak *src* k *dest*. Pokud *src* neodkazuje na úvodní bajt vícebajtového znaku, jako je určeno implicitním voláním [_ismbblead](ismbblead-ismbblead-l.md), jeden bajt, který *src* odkazuje na zkopírován. Pokud *src* ukazuje na vedoucí bajt, ale následující bajt je 0 a tedy neplatný, pak 0 je zkopírována do *dest*, **errno** je nastavena na **EILSEQ**a Funkce vrátí **EILSEQ**.
 
-**_mbccpy_s –** není připojit zakončením hodnotu null, nicméně pokud *src* odkazuje na prázdný znak, pak tuto hodnotu null se zkopíruje do *cíle* (Toto je právě regulární jednobajtové kopie).
+**_mbccpy_s –** není znak zakončení null; nicméně, pokud *src* odkazuje na prázdný znak, pak tato hodnota null je zkopírována do *dest* (to je jen regulární jednobajtová kopie).
 
-Hodnota v *pCopied* , naplní se počet bajtů, které jsou zkopírovány. Možné hodnoty jsou 1 a 2, pokud byla operace úspěšná. Pokud **NULL** je předán, je tento parametr ignorován.
+Hodnota v *pCopied* je vyplněna počtem zkopírovaných. Možné hodnoty jsou 1 a 2, pokud je operace úspěšná. Pokud **NULL** je předán, tento parametr je ignorován.
 
-|*src*|zkopírovat do *cíle*|*pCopied*|Návratová hodnota|
+|*src*|zkopírovat do *dest*|*pCopied*|Návratová hodnota|
 |-----------|----------------------|---------------|------------------|
-|úvodní bajt|úvodní bajt|1|0|
+|vedoucí bajt|vedoucí bajt|1|0|
 |0|0|1|0|
-|Následuje jiný 0 bajtů realizace|Následuje jiný 0 bajtů realizace|2|0|
-|Následuje 0 bajtů realizace|0|1|**EILSEQ –**|
+|vedoucí znak následovaný jiným znakem než 0|vedoucí znak následovaný jiným znakem než 0|2|0|
+|vedoucí znak následovaný 0|0|1|**EILSEQ**|
 
-Všimněte si, druhý řádek je právě ve speciálním případě první. Také Upozorňujeme, že v tabulce předpokládá *buffSizeInBytes* >= *pCopied*.
+Všimněte si, že druhý řádek je pouze zvláštním případem prvního. Všimněte si také, že tabulka předpokládá *buffSizeInBytes* >= *pCopied*.
 
-**_mbccpy_s –** používá aktuální národní prostředí pro chování všech závislých na národním prostředí. **_mbccpy_s_l –** je stejný jako **_mbccpy_s –** s tím rozdílem, že **_mbccpy_s_l –** používá národní prostředí předaná chování všech závislých na národním prostředí.
+**_mbccpy_s –** používá aktuální národní prostředí pro všechna závislá chování. **_mbccpy_s_l –** je stejný jako **_mbccpy_s –** s tím rozdílem, že **_mbccpy_s_l –** používá pro všechna chování závislé na národním prostředí předané národní prostředí.
 
-V jazyce C++ pomocí těchto funkcí se zjednodušilo díky šabloně přetížení; přetížení lze odvodit délka vyrovnávací paměti automaticky, takže není nutné zadat argument velikost. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky, takže odpadá nutnost určit velikost argumentu. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tccpy_s –**|Mapuje makro nebo vložené funkce.|**_mbccpy_s**|Mapuje makro nebo vložené funkce.|
+|**_tccpy_s –**|Mapuje se na makro nebo vloženou funkci.|**_mbccpy_s**|Mapuje se na makro nebo vloženou funkci.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -142,9 +132,9 @@ V jazyce C++ pomocí těchto funkcí se zjednodušilo díky šabloně přetíže
 |**_mbccpy_s**|\<Mbstring.h >|
 |**_mbccpy_s_l**|\<Mbstring.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
 [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

@@ -1,39 +1,29 @@
 ---
-title: Závažná chyba C1189 | Microsoft Docs
-ms.custom: ''
+title: Závažná chyba C1189
 ms.date: 04/27/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C1189
-dev_langs:
-- C++
 helpviewer_keywords:
 - C1189
 ms.assetid: 2e5c8a78-edd4-411c-b619-558a96be148a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 051b7eb965526d12311dfacaeae7a00e4fbe4e75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06d42316a0109ac063bba43cefebd9aab71c2e72
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199791"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565526"
 ---
 # <a name="fatal-error-c1189"></a>Závažná chyba C1189
 
-> **\#Chyba:** *uživatelem dodaný chybová zpráva*
+> **\#Chyba:** *uživatelem zadaná chybová zpráva*
 
 ## <a name="remarks"></a>Poznámky
 
-Je generován C1189 `#error` – direktiva. Vývojáři, který kódy direktiva Určuje text chybové zprávy. Další informace najdete v tématu [#error – direktiva (C/C++)](../../preprocessor/hash-error-directive-c-cpp.md).
+Je generován C1189 `#error` směrnice. Vývojář, který kódů direktiva Určuje text chybové zprávy. Další informace najdete v tématu [#error – direktiva (C++)](../../preprocessor/hash-error-directive-c-cpp.md).
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C1189. V ukázce vývojář problémy vlastní chybové zprávy, protože `_WIN32` identifikátor není definován:
+Následující ukázka generuje C1189. V ukázce vývojář vydá vlastní chybovou zprávu vzhledem k tomu, `_WIN32` identifikátor není definován:
 
 ```cpp
 // C1189.cpp
@@ -43,6 +33,6 @@ Následující ukázka generuje C1189. V ukázce vývojář problémy vlastní c
 #endif
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [#define – direktiva (C++)](../../preprocessor/hash-define-directive-c-cpp.md)

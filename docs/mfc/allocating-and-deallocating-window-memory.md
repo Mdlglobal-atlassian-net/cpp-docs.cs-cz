@@ -1,12 +1,6 @@
 ---
-title: Přidělování a rušení přidělení paměti okna | Dokumentace Microsoftu
-ms.custom: ''
+title: Přidělování a rušení přidělení paměti okna
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory allocation, window objects
 - memory deallocation
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - window objects [MFC], deallocating memory for
 - storage for window objects [MFC], allocating
 ms.assetid: 7c962539-8461-4846-b5ca-fe3b15c313dc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 149a8e860913515551fc85be9b49675856d7e129
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a9bbf92a586a910dfa4e81774ce4817c9cf458e9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415187"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50582491"
 ---
 # <a name="allocating-and-deallocating-window-memory"></a>Přidělování a rušení přidělení paměti okna
 

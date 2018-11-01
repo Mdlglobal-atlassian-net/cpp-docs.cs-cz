@@ -1,10 +1,6 @@
 ---
-title: mbsrtowcs_s – | Microsoft Docs
-ms.custom: ''
+title: mbsrtowcs_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - mbsrtowcs_s
 apilocation:
@@ -22,25 +18,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - mbsrtowcs_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbsrtowcs_s function
 ms.assetid: 4ee084ec-b15d-4e5a-921d-6584ec3b5a60
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a8885d11c7fca10c63077464020a8bbab2b6f3ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a935b5181078f3b08ba5f2f89c581ed8cce8ded5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405442"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588822"
 ---
 # <a name="mbsrtowcss"></a>mbsrtowcs_s
 
-Převod řetězce vícebajtových znaků v aktuální národní prostředí na jeho široká znaková řetězcová reprezentace. Verzi [mbsrtowcs –](mbsrtowcs.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Převeďte řetězec vícebajtového znaku v aktuální národní prostředí na jeho řetězcovou reprezentaci širokého znaku. Verze [mbsrtowcs –](mbsrtowcs.md) s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,70 +56,70 @@ errno_t mbsrtowcs_s(
 ### <a name="parameters"></a>Parametry
 
 *pReturnValue*<br/>
-Počet znaků převést.
+Počet znaků, převodu.
 
 *wcstr*<br/>
-Adresa vyrovnávací paměti k uložení výsledná převést řetězec široké znaků.
+Adresa vyrovnávací paměť pro ukládání výsledný převést řetězec širokých znaků.
 
 *sizeInWords*<br/>
-Velikost *wcstr* v slova (široké znaky).
+Velikost *wcstr* slovy (širokých znaků).
 
 *mbstr*<br/>
-Nepřímý odkaz na umístění řetězce vícebajtových znaků, který má být převeden.
+Nepřímý odkaz na umístění vícebajtový řetězec, který má být převeden.
 
 *Počet*<br/>
-Maximální počet široké znaky a uložit v *wcstr* vyrovnávací paměti není včetně ukončující null, nebo [_truncate –](../../c-runtime-library/truncate.md).
+Maximální počet širokých znaků k ukládání *wcstr* vyrovnávací paměti, bez ukončujícího znaku null, nebo [_TRUNCATE](../../c-runtime-library/truncate.md).
 
 *mbstate*<br/>
-Ukazatel na **mbstate_t** převodu stavu objektu. Pokud tato hodnota je ukazatel s hodnotou null, použije se objekt statické vnitřní převod stavu. Protože interní **mbstate_t** objekt není bezpečné pro přístup z více vláken, doporučujeme, aby vždy předáte vlastní *mbstate* parametr.
+Ukazatel **mbstate_t** převodu stavu objektu. Pokud tato hodnota je ukazatel s hodnotou null, použije se statické interní převodu stav objektu. Protože vnitřní **mbstate_t** objektu není bezpečná pro vlákno, doporučujeme vám vždy předání vlastní *mbstate* parametru.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud převod úspěšný 0 pro nulu nebo kód chyby při selhání.
+Nula v případě, že převod je úspěšný, nebo při selhání kód chyby.
 
-|Chybový stav|Vrátí hodnotu a **kód chyby**|
+|Chybový stav|Vrátí hodnotu a **errno**|
 |---------------------|------------------------------|
-|*wcstr* je ukazatel s hodnotou null a *sizeInWords* > 0|**EINVAL –**|
-|*mbstr* je ukazatel s hodnotou null|**EINVAL –**|
-|Řetězec nepřímo na kterou odkazuje *mbstr* obsahuje posloupnost vícebajtové, který není platný pro aktuální národní prostředí.|**EILSEQ –**|
-|Cílová vyrovnávací paměť je příliš malá tak, aby obsahovala převedený řetězec (Pokud *počet* je **_truncate –**; Další informace najdete v tématu poznámky)|**ERANGE –**|
+|*wcstr* je ukazatel s hodnotou null a *sizeInWords* > 0|**EINVAL**|
+|*mbstr* je ukazatel s hodnotou null|**EINVAL**|
+|Řetězec nepřímo odkazované *mbstr* obsahuje vícebajtové sekvence, která není platná pro aktuální národní prostředí.|**EILSEQ**|
+|Cílová vyrovnávací paměť je příliš malá tak, aby obsahovala převedený řetězec (není-li *počet* je **_TRUNCATE**; Další informace viz poznámky)|**ERANGE**|
 
-Pokud dojde k některé z těchto podmínek, jak je popsáno v vyvolání výjimky neplatný parametr [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno provádění pokračovat, funkce vrátí kód chyby a nastaví **errno** , které je uvedené v tabulce.
+Pokud dojde k jedné z těchto podmínek, je vyvolána výjimku neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Pokud smí provádění pokračovat, funkce vrátí chybový kód a nastaví **errno** jak je uvedeno v tabulce.
 
 ## <a name="remarks"></a>Poznámky
 
-**Mbsrtowcs_s –** funkce převede řetězec vícebajtové znaky, na kterou nepřímo odkazuje *mbstr* do široké znaky, které jsou uložené ve vyrovnávací paměti, na kterou odkazuje *wcstr*, pomocí použití stavu převod obsažené v *mbstate*. Převod bude pokračovat pro jednotlivé znaky, dokud je splněna jedna z těchto podmínek:
+**Mbsrtowcs_s –** funkce převede řetězec vícebajtových znaků nepřímo odkazované *mbstr* do široké znaky, které jsou uloženy ve vyrovnávací paměti, na které odkazuje *wcstr*, použití stavu převodu součástí *mbstate*. Převod bude pokračovat pro jednotlivé znaky, dokud nebude splněna jedna z těchto podmínek:
 
-- Vyskytl se vícebajtových znaků hodnotu null
+- Zjistil se vícebajtový znak null
 
-- Je zjištěna neplatná vícebajtových znaků
+- Zjistil se neplatný vícebajtový znak
 
-- Počet široké znaky, které jsou uložené v *wcstr* vyrovnávací paměti je rovno *počet*.
+- Počet širokých znaků, které jsou uložené v *wcstr* vyrovnávací paměti je rovno *počet*.
 
-Cílový řetězec *wcstr* je vždy ukončené hodnotou null i v případě chybu, pokud *wcstr* je ukazatel s hodnotou null.
+Cílový řetězec *wcstr* je vždy zakončený hodnotou null, i v případě chybu, pokud *wcstr* je ukazatel s hodnotou null.
 
-Pokud *počet* je speciální hodnota [_truncate –](../../c-runtime-library/truncate.md), **mbsrtowcs_s –** převede co nejvíc řetězec jako bude začlenit do cílové vyrovnávací paměti, a přesto nechat místnosti s hodnotou Null ukončovací znak.
+Pokud *počet* je zvláštní hodnota [_TRUNCATE](../../c-runtime-library/truncate.md), **mbsrtowcs_s –** převede největší část řetězce, jako se vejde do cílové vyrovnávací paměti a stále ponechají prostor s hodnotou Null ukončovací znak.
 
-Pokud **mbsrtowcs_s –** úspěšně převede zdrojový řetězec, uloží je velikost v široké znaky převedený řetězec a null ukončení do  *&#42;pReturnValue*, zadaný  *pReturnValue* není nulový ukazatel. K tomu dojde i v případě *wcstr* argument je ukazatel s hodnotou null a vám umožní určit velikost požadované vyrovnávací paměti. Všimněte si, že pokud *wcstr* je ukazatel s hodnotou null, *počet* je ignorována.
+Pokud **mbsrtowcs_s –** úspěšně převede zdrojový řetězec, uloží je v široké znaky převedený řetězec a ukončovacího znaku null do velikosti  *&#42;pReturnValue*, k dispozici  *pReturnValue* není ukazatel s hodnotou null. K tomu dojde i v případě, *wcstr* argument je ukazatel s hodnotou null a vám umožní určit velikost požadované vyrovnávací paměti. Všimněte si, že pokud *wcstr* je ukazatel s hodnotou null, *počet* se ignoruje.
 
-Pokud *wcstr* ukazatel s hodnotou null, není objekt ukazatel na kterou odkazuje *mbstr* je přiřazen ukazatele null, pokud převod zastavena, protože bylo dosaženo ukončující znak hodnoty null. Pokud existuje, jinak hodnota je přiřazen pouze posledních adresu převést poslední vícebajtových znaků. To umožňuje volání funkce následné restartování převodu, kde byla zastavena toto volání.
+Pokud *wcstr* není nulový ukazatel, ukazatel objektu odkazované *mbstr* se přiřadí ukazatel s hodnotou null, pokud převod zastavena, protože bylo dosaženo ukončujícího znaku null. V opačném případě je přiřazena adresa pouze posledních převést poslední vícebajtového znaku, případné. To umožňuje volání další funkce restartovat převod, kde toto volání zastavení.
 
-Pokud *mbstate* je ukazatel s hodnotou null, interní knihovna **mbstate_t** převodu stavu statické objekt se používá. Protože tato interní statické objekt není bezpečné pro přístup z více vláken, doporučujeme, předáte vlastní *mbstate* hodnotu.
+Pokud *mbstate* je ukazatel s hodnotou null, interní knihovny **mbstate_t** převodu stavu statický objekt se používá. Vzhledem k tomu, že tato interní statického objektu není bezpečná pro vlákno, doporučujeme, že předáte vlastní *mbstate* hodnotu.
 
-Pokud **mbsrtowcs_s –** zaznamená vícebajtových znaků, který není platný pro aktuální prostředí, odešle -1 do  *&#42;pReturnValue*, nastaví cílové vyrovnávací paměti *wcstr* prázdný řetězec, nastaví **errno** k **eilseq –** a vrátí **eilseq –**.
+Pokud **mbsrtowcs_s –** zaznamená vícebajtového znaku, který není platný v aktuálním národním prostředí, -1 se vloží do  *&#42;pReturnValue*, nastaví cílové vyrovnávací paměti *wcstr* na prázdný řetězec, nastaví **errno** k **EILSEQ**a vrátí **EILSEQ**.
 
-Pokud daná pořadí na kterou odkazuje *mbstr* a *wcstr* překrývají, chování **mbsrtowcs_s –** není definován. **mbsrtowcs_s –** je ovlivňován LC_TYPE kategorii aktuální národní prostředí.
+Pokud sekvence odkazované *mbstr* a *wcstr* překrývají, chování **mbsrtowcs_s –** není definován. **mbsrtowcs_s –** vliv podle kategorie LC_TYPE aktuálního národního prostředí.
 
 > [!IMPORTANT]
-> Ujistěte se, že *wcstr* a *mbstr* se nepřekrývají a že *počet* správně odpovídá počtu více-bajtové znaky převést.
+> Ujistěte se, že *wcstr* a *mbstr* nepřekrývají a že *počet* správně odráží číslo k převodu vícebajtových znaků.
 
-**Mbsrtowcs_s –** funkce se liší od [mbstowcs_s –, _mbstowcs_s_l –](mbstowcs-s-mbstowcs-s-l.md) podle jeho restartability. Stav převodu je uložený ve *mbstate* pro následující volání stejné nebo jiné funkce nabízet možnost restartování. Výsledky nejsou definovány při kombinování použití funkce nonrestartable a nabízet možnost restartování. Například by měla použít aplikace **mbsrlen** místo **mbslen –**, pokud následných volání **mbsrtowcs_s –** se používá místo **mbstowcs_s –**.
+**Mbsrtowcs_s –** funkce se liší od [mbstowcs_s _mbstowcs_s_l –](mbstowcs-s-mbstowcs-s-l.md) podle jeho restartability. Stav převodu je uložen v *mbstate* pro pozdější volání na stejné nebo jiné funkce nabízet možnost restartování. Při použití funkcí restartovatelnou službu a nonrestartable případě nejsou výsledky definovány. Například by měla aplikace použít **mbsrlen** místo **mbslen –**, pokud je následných volání **mbsrtowcs_s –** se použije namísto **mbstowcs_s**.
 
-V jazyce C++ pomocí této funkce se zjednodušilo díky šabloně přetížení; přetížení automaticky odvození délka vyrovnávací paměti (což eliminuje požadavek na zadat argument velikost) a starší, nezabezpečené funkce můžou automaticky nahradit pomocí jejich protějšky novější a zabezpečené. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ je použití této funkce zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky (eliminuje požadavek na zadat argument velikosti) a dokážou automaticky nahradit starší, nezabezpečené funkce jejími novějšími, zabezpečené protějšky pomocí. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Výjimky
 
-**Mbsrtowcs_s –** Pokud žádná funkce v aktuálním volání vláken je funkce s více vlákny bezpečné **setlocale** tak dlouho, dokud tato funkce je prováděna a *mbstate* argument je ukazatele není null.
+**Mbsrtowcs_s –** funkce je s více vlákny bezpečné, pokud žádné funkce v aktuální vlákno vyvolá **setlocale** tak dlouho, dokud tato funkce provádí a *mbstate* argument je není ukazatel s hodnotou null.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -137,7 +127,7 @@ V jazyce C++ pomocí této funkce se zjednodušilo díky šabloně přetížení
 |-------------|---------------------|
 |**mbsrtowcs_s**|\<wchar.h>|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
