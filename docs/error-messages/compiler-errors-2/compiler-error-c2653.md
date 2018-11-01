@@ -1,41 +1,31 @@
 ---
-title: C2653 Chyba kompilátoru | Microsoft Docs
-ms.custom: ''
+title: Chyba kompilátoru C2653
 ms.date: 11/30/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2653
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2653
 ms.assetid: 3f49e731-affd-43a0-a8d0-181db7650bc3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a8e1df7dd6337b1a3e363a5744181b12d94c879b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4a3a8a74483317b87e16458f44016f0aeca1379
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234964"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471146"
 ---
-# <a name="compiler-error-c2653"></a>C2653 chyby kompilátoru
+# <a name="compiler-error-c2653"></a>Chyba kompilátoru C2653
 
-> '*identifikátor*': není třída nebo obor názvů
+> "*identifikátor*': není název třídy nebo oboru názvů
 
-Syntaxe jazyka vyžaduje třídy, struktury, sjednocení nebo zde název oboru názvů.
+Syntaxe jazyka vyžaduje třídy, struktury, sjednocení nebo název oboru názvů.
 
-Této chybě může dojít, pokud použijete název, který nebyl deklarován jako třídy, struktury, sjednocení nebo obor názvů před operátor rozsahu. Chcete-li tento problém vyřešit, deklarovat název nebo obsahovat záhlaví, který deklaruje název, než bude použit.
+Této chybě může dojít, pokud použijete název, který nebyl deklarován jako třídy, struktury, sjednocení nebo obor názvů před operátor rozsahu. Chcete-li vyřešit tento problém, deklarovat název nebo zahrnout záhlaví, který deklaruje název, než bude použit.
 
-C2653 je také možné, pokud se pokusíte definovat *složené obor názvů*, obor názvů, který obsahuje jeden nebo více názvy vnořené oboru názvů. Složené obor názvů, který definice nejsou povoleny v jazyce C++ před C ++ 17. Složené obory názvů jsou podporované počínaje Visual Studio 2015 Update 3, když zadáte [/std: c ++ nejnovější](../../build/reference/std-specify-language-standard-version.md) – možnost kompilátoru. Od verze Visual C++ 2017 verze 15,5, kompilátor podporuje složené obor názvů definice při [/std: c ++ 17](../../build/reference/std-specify-language-standard-version.md) je zadána možnost.
+C2653 je také možné, pokud se pokusíte k definování *složené obor názvů*, obor názvů, který obsahuje jeden nebo více názvů vnořené oboru názvů. Složené obor názvů, který definice nejsou povoleny v jazyce C++ před C ++ 17. Složené obory názvů jsou podporované od verze Visual Studio 2015 Update 3 při zadávání [/std: c ++ nejnovější](../../build/reference/std-specify-language-standard-version.md) – možnost kompilátoru. Počínaje verzí Visual C++ 2017 verze 15.5, kompilátor podporuje definice oboru názvů složené při [/std: c ++ 17](../../build/reference/std-specify-language-standard-version.md) je zadána možnost.
 
 ## <a name="examples"></a>Příklady
 
-Tato ukázka generuje C2653, protože název oboru je použít, ale není deklarován. Kompilátor očekává třídy, struktury, sjednocení nebo název oboru názvů před operátor rozsahu (:).
+Tato ukázka vygeneruje C2653, protože název oboru se používá, ale není deklarovaná. Kompilátor očekává, že třídy, struktury, sjednocení nebo název oboru názvů před operátoru oboru (::).
 
 ```cpp
 // C2653.cpp
@@ -48,7 +38,7 @@ void xx::func1(int m) {}   // C2653, xx is not declared
 void yy::func1(int m) {}   // OK
 ```
 
-V kódu, který není zkompilovaném pro C ++ 17 nebo novější standardů musí vnořené obory názvů pomocí deklarace oboru názvů explicitní na každou úroveň vnoření:
+V kódu, který není zkompilován pro C ++ 17 a novějších standardy musí vnořené obory názvů pomocí deklarace oboru názvů explicitní na každou úroveň vnoření:
 
 ```cpp
 // C2653b.cpp

@@ -1,10 +1,6 @@
 ---
-title: _Crtsetreporthook – | Microsoft Docs
-ms.custom: ''
+title: _CrtSetReportHook
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetReportHook
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetReportHook
 - CrtSetReportHook
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtSetReportHook function
 - _CrtSetReportHook function
 ms.assetid: 1ae7c64f-8c84-4797-9574-b59f00f7a509
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1ef76fe0b7befb99b5bf0e8bb69fa1a1229782de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7dcb916ea920751618ffa6a4afbcde8df5e35cba
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398786"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478335"
 ---
 # <a name="crtsetreporthook"></a>_CrtSetReportHook
 
-Nainstaluje klienta definované funkce vytváření sestav tak, že zapojování do procesu vytváření sestav běhové ladění C (pouze ladicí verze).
+Nainstaluje klienta definované funkce vytváření sestav tak, že zapojení do procesu vytváření sestav ladění za běhu jazyka C (pouze ladicí verze).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,32 +44,32 @@ _CRT_REPORT_HOOK _CrtSetReportHook(
 ### <a name="parameters"></a>Parametry
 
 *reportHook*<br/>
-Nový klient definované generování sestav funkce připojí do běhu C ladění procesu generování sestav.
+Nový klient definované generování sestav funkce k připojení do C run-time ladění procesu vytváření sestav.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí předchozí klientský definované funkce vytváření sestav.
+Vrátí předchozí klienta definované funkce vytváření sestav.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Crtsetreporthook –** umožňuje aplikaci používat vlastní reporting funkce do ladicí běhové knihovny jazyka C reporting procesu. Výsledkem je, vždy, když [_crtdbgreport –](crtdbgreport-crtdbgreportw.md) je volána k vygenerování sestavy ladění, je reporting funkce je volána nejprve aplikace. Tato funkce umožňuje aplikaci k provedení operací, jako je například filtrování sestavy ladění tak, aby se zaměřit na konkrétní přidělení typy nebo poslat zprávu cíle není k dispozici pomocí **_crtdbgreport –**. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, volání **_crtsetreporthook –** jsou odebrány při předběžném zpracování.
+**_CrtSetReportHook** umožňuje aplikaci používat vlastní vytváření sestav funkce do knihovny ladění za běhu C proces vytváření sestav. V důsledku, vždy, když [_CrtDbgReport](crtdbgreport-crtdbgreportw.md) nazývá Pokud chcete vygenerovat sestavu ladění, je aplikace reporting nejdříve volána. Tato funkce umožňuje aplikaci k provedení operace, jako je filtrování sestavy ladění, tak můžete zaměřit na konkrétní přidělení typy nebo odeslání hlášení o cíle není k dispozici pomocí **_CrtDbgReport**. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, jsou volání **_CrtSetReportHook** odstraněna během předběžného zpracování.
 
-Robustnější verzi **_crtsetreporthook –**, najdete v části [_crtsetreporthook2 –](crtsetreporthook2-crtsetreporthookw2.md).
+Robustnější verzi **_CrtSetReportHook**, naleznete v tématu [_crtsetreporthook2 –](crtsetreporthook2-crtsetreporthookw2.md).
 
-**_Crtsetreporthook –** funkce nainstaluje nový klient definované reporting zadanou ve funkci *reportHook* a vrátí hák předchozí definované klienta. Následující příklad ukazuje, jak by měla být deklaraci háku klient definované sestavy:
+**_CrtSetReportHook** funkce nainstaluje nový klient definovaný podle funkce vytváření sestav *reportHook* a vrátí předchozí volání definované klienta. Následující příklad ukazuje, jak by měla být prototypem háku sestavy definované klienta:
 
 ```C
 int YourReportHook( int reportType, char *message, int *returnValue );
 ```
 
-kde *reportType* je typ sestavy ladění (**_CRT_WARN**, **_CRT_ERROR**, nebo **_CRT_ASSERT**), *zpráva* je zpráva již sestavených ladění uživatele mají být obsažena v sestavě, a **returnValue** je hodnotu zadanou pomocí klienta definované generování sestav funkce, která má být vrácen podle **_ Crtdbgreport –**. Úplný popis typů sestav k dispozici, najdete v článku [_crtsetreportmode –](crtsetreportmode.md) funkce.
+kde *reportType* je typ sestavy ladění (**_CRT_WARN**, **_CRT_ERROR**, nebo **_CRT_ASSERT**), *zpráva* sestaveném ladění zpráva uživateli mají být obsažena v sestavě, a **returnValue** je hodnotu zadanou pomocí klienta definované funkce vytváření sestav, který by měl být vrácen **_ Crtdbgreport –**. Úplný popis typů sestav k dispozici, najdete v článku [_CrtSetReportMode](crtsetreportmode.md) funkce.
 
-Pokud funkci generování sestav definované klienta úplně zpracovává zprávy ladění tak, aby další vykazování se nevyžaduje, pak by měla vrátit funkce **TRUE**. Když funkce vrátí hodnotu **FALSE**, **_crtdbgreport –** je volána při generování sestav o ladění pomocí aktuální nastavení pro typ sestavy, režimu a souboru. Kromě toho zadáním **_crtdbgreport –** vrátit hodnotu v **returnValue**, aplikace můžete taky řídit, jestli zalomení ladění. Úplný popis jak nakonfigurovaný a vygenerovat sestavu ladění, najdete v části **_crtsetreportmode –**, [_crtsetreportfile –](crtsetreportfile.md), a **_crtdbgreport –**.
+Pokud klient uživatelsky definovaná funkce generování sestav zcela zpracovává zprávy ladění tak, aby další vykazování se nevyžaduje, pak by měl vrátit funkci **TRUE**. Pokud funkce vrátí **FALSE**, **_CrtDbgReport** je volána k vygenerují sestavu ladění pomocí aktuální nastavení pro typ sestavy, režimu a soubor. Kromě toho, že zadáte **_CrtDbgReport** návratová hodnota v **returnValue**, aplikace můžete také určit, zda dojde k přerušení ladění. Úplný popis fungování nakonfigurovaný a vygeneruje sestavu ladění, naleznete v tématu **_CrtSetReportMode**, [_CrtSetReportFile](crtsetreportfile.md), a **_CrtDbgReport**.
 
-Další informace o použití jiných podporující háku běhové funkce a psaní vlastního klienta definované funkce háku najdete v tématu [ladění zápis funkce háku](/visualstudio/debugger/debug-hook-function-writing).
+Další informace o použití jiné funkce háku podporující za běhu a psaní vlastních klienta definované funkce háku naleznete v tématu [ladění zápis funkce háku](/visualstudio/debugger/debug-hook-function-writing).
 
 > [!NOTE]
-> Pokud vaše aplikace je kompilovat s **/CLR** a vytváření sestav funkce je volána po aplikaci byl ukončen hlavní, modul CLR bude vyvolána výjimka, pokud žádné funkce CRT volá funkci generování sestav.
+> Pokud vaše aplikace je kompilována s **/CLR** a vytváření sestav funkce se volá, když má aplikace se ukončila hlavní, modul CLR vyvolá výjimku, pokud žádné funkce CRT volá funkci generování sestav.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -87,13 +77,13 @@ Další informace o použití jiných podporující háku běhové funkce a psan
 |-------------|---------------------|
 |**_CrtSetReportHook**|\<crtdbg.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Ladicí verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md) pouze.
+Ladicí verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Rutiny ladění](../../c-runtime-library/debug-routines.md)<br/>
 [_CrtGetReportHook](crtgetreporthook.md)<br/>

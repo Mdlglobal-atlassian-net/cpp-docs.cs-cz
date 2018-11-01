@@ -1,10 +1,6 @@
 ---
-title: fread – | Microsoft Docs
-ms.custom: ''
+title: fread
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fread
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fread
-dev_langs:
-- C++
 helpviewer_keywords:
 - reading data [C++], from input streams
 - fread function
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 819ec0b494b6e800f858e2e5647164567531ab0b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d3516dc67047064b9293b1bb289888596736ed47
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400925"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468832"
 ---
 # <a name="fread"></a>fread
 
@@ -62,25 +52,25 @@ size_t fread(
 Umístění úložiště pro data.
 
 *Velikost*<br/>
-Položka velikost v bajtech.
+Velikost položky v bajtech.
 
 *Počet*<br/>
-Maximální počet položek ke čtení.
+Maximální počet položek, které chcete načíst.
 
-*Datový proud*<br/>
-Ukazatel na **souboru** struktura.
+*Stream*<br/>
+Ukazatel na **souboru** struktury.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**fread –** vrátí počet položek úplné ve skutečnosti čtení, které můžou být menší než *počet* Pokud dojde k chybě, nebo pokud je nalezen konec souboru dříve, než dorazila *počet*. Použití **feof –** nebo **ferror –** funkce k rozlišení chybu čtení z podmínku end souboru. Pokud *velikost* nebo *počet* 0, **fread –** vrátí 0 a obsah vyrovnávací paměti jsou stejné. Pokud *datového proudu* nebo *vyrovnávací paměti* je ukazatel s hodnotou null, **fread –** volá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tato funkce nastaví **errno** k **einval –** a vrátí hodnotu 0.
+**fread –** vrátí počet celé položky ve skutečnosti čtení, které mohou být menší než *počet* Pokud dojde k chybě nebo pokud je nalezen konec souboru před dosažením *počet*. Použití **feof** nebo **ferror** funkce k rozlišení chybu čtení z podmínku ukončení souboru. Pokud *velikost* nebo *počet* je 0, **fread –** vrátí 0 a obsah vyrovnávací paměti jsou beze změny. Pokud *stream* nebo *vyrovnávací paměti* je ukazatel s hodnotou null, **fread –** vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce nastaví **errno** k **EINVAL** a vrátí hodnotu 0.
 
-V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších kódy chyb.
+Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších chybových kódech.
 
 ## <a name="remarks"></a>Poznámky
 
-**Fread –** funkce přečte až *počet* položky *velikost* bajtů ze vstupu *datového proudu* a ukládá je v *vyrovnávací paměti* . Ukazatele souboru přidružené *datového proudu* (pokud existuje) je zvýšit počet bajtů ve skutečnosti číst. S daným datovým proudem se při otevření v textovém režimu, páry vrátit-konce řádku znaků CR jsou nahrazeny znaky konce řádku jeden. Pokud chcete nahrazení nemá žádný vliv na ukazatele souboru nebo návratovou hodnotu. Pozice ukazatele souboru je neurčitou, pokud dojde k chybě. Hodnota částečně čtení položky nelze určit.
+**Fread –** funkce přečte až *počet* položky *velikost* bajtů ze vstupu *stream* a ukládá je v *vyrovnávací paměti* . Ukazatel na soubor přidružený k *stream* (pokud existuje) je zvýšen počet skutečně přečtených bajtů. Pokud daný datový proud je otevřen v textovém režimu, páry znaků CR návratový znak odřádkování jsou nahrazeny znaky jeden znak odřádkování. Pokud chcete nahrazení nemá žádný vliv na ukazatel na soubor nebo návratovou hodnotu. Ukazatel na soubor pozice je neurčité, pokud dojde k chybě. Hodnota částečně čtení položky nelze určit.
 
-Tato funkce zamezí jiná vlákna. Pokud potřebujete bez uzamčení verzi, použijte **_fread_nolock –**.
+Tato funkce zamezí jiných vláken. Pokud potřebujete nezamykací verzi, použijte **_fread_nolock –**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -88,7 +78,7 @@ Tato funkce zamezí jiná vlákna. Pokud potřebujete bez uzamčení verzi, pou�
 |--------------|---------------------|
 |**fread**|\<stdio.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -140,8 +130,8 @@ Number of items read = 25
 Contents of buffer = zyxwvutsrqponmlkjihgfedcb
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>
 [_read](read.md)<br/>
