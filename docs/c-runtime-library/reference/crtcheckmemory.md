@@ -1,10 +1,6 @@
 ---
-title: _Crtcheckmemory – | Microsoft Docs
-ms.custom: ''
+title: _CrtCheckMemory
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtCheckMemory
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtCheckMemory
 - _CrtCheckMemory
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtCheckMemory function
 - CrtCheckMemory function
 ms.assetid: 457cc72e-60fd-4177-ab5c-6ae26a420765
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0b6d4b84fd717525e7206956964204794fe6b88c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cb39a76c140934dabdd1269c02aba6018691f917
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396661"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537147"
 ---
 # <a name="crtcheckmemory"></a>_CrtCheckMemory
 
@@ -52,21 +42,21 @@ int _CrtCheckMemory( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěšného **_crtcheckmemory –** vrátí hodnotu TRUE; jinak hodnota, funkce vrátí hodnotu FALSE.
+V případě úspěšného ověření **_CrtCheckMemory** vrátí hodnotu TRUE; v opačném případě vrátí hodnotu FALSE.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Crtcheckmemory –** funkce ověří paměti přidělené správcem haldy ladění ověření základní základní haldy a zkontrolujete každých bloku paměti. Pokud je v haldě základní základní, informace hlavičky ladění nebo přepsat vyrovnávací paměti, chyby nebo paměť nekonzistence **_crtcheckmemory –** generuje sestavy ladicí informace popisující chybu. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, volání **_crtcheckmemory –** jsou odebrány při předběžném zpracování.
+**_CrtCheckMemory** funkce ověřuje paměti přidělí správce hald ladění ověřování základní základní haldy a kontrola každý blok paměti. Pokud je v podkladové základní haldy, informace hlavičky ladění nebo přepsat vyrovnávací paměti, chyby nebo paměti nekonzistence **_CrtCheckMemory** generuje sestavu ladění s informace, které popisují chybového stavu. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, jsou volání **_CrtCheckMemory** odstraněna během předběžného zpracování.
 
-Chování **_crtcheckmemory –** se dá nastavit podle nastavení pole bit [_crtdbgflag –](../../c-runtime-library/crtdbgflag.md) příznak pomocí [_crtsetdbgflag –](crtsetdbgflag.md) funkce. Zapnutí **_crtdbg_check_always_df –** bit ON výsledky v poli **_crtcheckmemory –** volané pokaždé, když je požadovaná operace na přidělení paměti. I když tato metoda zpomaluje spuštění, je vhodné pro zachytávání chyb rychle. Zapnutí **_crtdbg_alloc_mem_df –** bit pole OFF příčiny **_crtcheckmemory –** není ověřte halda a okamžitě vrátit **TRUE**.
+Chování **_CrtCheckMemory** můžete řídit pomocí nastavení bitové pole [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) příznak pomocí [_CrtSetDbgFlag](crtsetdbgflag.md) funkce. Zapíná **_CRTDBG_CHECK_ALWAYS_DF** bit ON výsledky v poli **_CrtCheckMemory** volána pokaždé, když se požadovaná operace přidělení paměti. I když tato metoda se zpomalí provádění, je užitečné pro rychlé zachycení chyb. Zapíná **_CRTDBG_ALLOC_MEM_DF** bitová pole OFF způsobí, že **_CrtCheckMemory** se ověřit haldy a ihned vrátit **TRUE**.
 
-Protože funkce vrátí hodnotu **TRUE** nebo **FALSE**, mohla být předána do jednoho z [_ASSERT](assert-asserte-assert-expr-macros.md) makra pro vytváření jednoduchých ladění chyba mechanismu pro zpracování. Následující příklad způsobí, že výraz je neplatný. Pokud bylo zjištěno poškození haldy:
+Protože tato funkce vrací **TRUE** nebo **FALSE**, mohou být předány do jednoho z [_ASSERT](assert-asserte-assert-expr-macros.md) makra vytvořit jednoduchý mechanismus zpracování ladění chyb. Následující příklad způsobí selhání kontrolního výrazu, pokud bylo zjištěno poškození haldy:
 
 ```C
 _ASSERTE( _CrtCheckMemory( ) );
 ```
 
-Další informace o tom, **_crtcheckmemory –** lze použít s další funkce ladění najdete v tématu [funkce vytváření sestav stavu haldy](/visualstudio/debugger/crt-debug-heap-details). Přehled správy paměti a haldy ladění, najdete v tématu [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
+Další informace o tom, **_CrtCheckMemory** lze použít s jinými funkcemi ladění, naleznete v tématu [funkce vykazování stavu haldy](/visualstudio/debugger/crt-debug-heap-details). Přehled správy paměti a halda ladění, naleznete v tématu [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -74,17 +64,17 @@ Další informace o tom, **_crtcheckmemory –** lze použít s další funkce l
 |-------------|---------------------|
 |**_CrtCheckMemory**|\<crtdbg.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Ladicí verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md) pouze.
+Ladicí verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
 
 ## <a name="example"></a>Příklad
 
-Příklad, jak pomocí **_crtcheckmemory –**, najdete v části [crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1).
+Pro ukázku toho, jak používat **_CrtCheckMemory**, naleznete v tématu [crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Rutiny ladění](../../c-runtime-library/debug-routines.md)<br/>
 [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)<br/>

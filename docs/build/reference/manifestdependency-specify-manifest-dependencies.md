@@ -1,29 +1,19 @@
 ---
-title: -MANIFESTDEPENDENCY (určení závislostí manifestu) | Dokumentace Microsoftu
-ms.custom: ''
+title: /MANIFESTDEPENDENCY (Určit závislosti manifestu)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.AdditionalManifestDependencies
-dev_langs:
-- C++
 helpviewer_keywords:
 - MANIFESTDEPENDENCY linker option
 - /MANIFESTDEPENDENCY linker option
 - -MANIFESTDEPENDENCY linker option
 ms.assetid: e4b68313-33a2-4c3e-908e-ac2b9f7d6a73
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5b82bd32bec0e665f815563ccea2ee05f6ae5172
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: aba4bd1b36bfda35be9e567851596fbedecf38ca
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315415"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50654913"
 ---
 # <a name="manifestdependency-specify-manifest-dependencies"></a>/MANIFESTDEPENDENCY (Určit závislosti manifestu)
 
@@ -79,7 +69,7 @@ Linker se shromažďování /MANIFESTDEPENDENCY komentáře, odstranění duplic
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-1. Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalManifestDependencies%2A>.
+1. Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalManifestDependencies%2A>.
 
 ## <a name="see-also"></a>Viz také
 

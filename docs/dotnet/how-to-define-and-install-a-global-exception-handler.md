@@ -1,26 +1,15 @@
 ---
-title: 'Postupy: definování a instalace globální obslužné rutiny výjimek | Dokumentace Microsoftu'
-ms.custom: ''
+title: 'Postupy: Definování a instalace globální obslužné rutiny výjimek'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: ff91a742b1a6641fbc689968587f0472c333e16a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9c6f355bc43fc53d2b8d27a1ee69c059d0f50692
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423354"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534534"
 ---
 # <a name="how-to-define-and-install-a-global-exception-handler"></a>Postupy: Definování a instalace globální obslužné rutiny výjimek
 
