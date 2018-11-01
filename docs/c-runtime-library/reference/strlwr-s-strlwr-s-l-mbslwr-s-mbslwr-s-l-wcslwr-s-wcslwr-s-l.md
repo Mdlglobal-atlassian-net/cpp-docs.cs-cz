@@ -1,10 +1,6 @@
 ---
-title: _strlwr_s –, _strlwr_s_l –, _mbslwr_s –, _mbslwr_s_l –, _wcslwr_s –, _wcslwr_s_l – | Microsoft Docs
-ms.custom: ''
+title: _strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strlwr_s_l
 - _mbslwr_s_l
@@ -41,8 +37,6 @@ f1_keywords:
 - _mbslwr_s_l
 - wcslwr_s
 - _mbslwr_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tcslwr_s function
 - wcslwr_s function
@@ -66,23 +60,19 @@ helpviewer_keywords:
 - tcslwr_s_l function
 - strings [C++], converting case
 ms.assetid: 4883d31b-bdac-4049-83a1-91dfdeceee79
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 61f3db37a61a30909e8deadee96c3bfbe2c46bb5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7eb9d81b1269018cd41c80c1f9c15aa92a4f85a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415336"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497253"
 ---
 # <a name="strlwrs-strlwrsl-mbslwrs-mbslwrsl-wcslwrs-wcslwrsl"></a>_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
 
-Převede řetězec na malá písmena pomocí aktuálního národního prostředí nebo objektu, který je předán. Tyto verze nástroje [_strlwr –, _wcslwr –, _mbslwr –, _strlwr_l –, _wcslwr_l –, _mbslwr_l –](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md) mít vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Převede řetězec na malá písmena pomocí aktuálního národního prostředí nebo objektu, který je předán. Tyto verze [_strlwr _wcslwr –, _mbslwr –, _strlwr_l –, _wcslwr_l –, _mbslwr_l –](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md) mají rozšíření zabezpečení popsaná v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbslwr_s –** a **_mbslwr_s_l –** nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbslwr_s –** a **_mbslwr_s_l –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -145,8 +135,8 @@ errno_t _wcslwr_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*str –*<br/>
-Ukončené hodnotou Null řetězec převést na malá písmena.
+*str*<br/>
+Řetězec zakončený hodnotou Null pro převod na malá písmena.
 
 *numberOfElements*<br/>
 Velikost vyrovnávací paměti.
@@ -156,23 +146,23 @@ Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěšného; Chyba nenulový kód při selhání.
+Nula v případě úspěchu; při selhání kód chyby.
 
-Tyto funkce ověřit jejich parametrů. Pokud *str* není platný řetězec ukončené hodnotou null, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno spuštění chcete-li pokračovat, vrátí funkce **einval –** a nastavte **errno** k **einval –**. Pokud *numberOfElements* je menší než délka řetězce, funkce se taky vrátit **einval –** a nastavte **errno** k **einval –**.
+Tyto funkce ověřují své parametry. Pokud *str* není platný řetězec zakončený hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Pokud provádění může pokračovat, vrátí funkce **EINVAL** a nastavte **errno** k **EINVAL**. Pokud *numberOfElements* je menší než délka řetězce, vrátí funkce **EINVAL** a nastavte **errno** k **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Strlwr_s –** funkce převede na místě, všechny velká písmena v *str* na malá písmena. **_mbslwr_s –** je verze vícebajtové znakové **_strlwr_s –**. **_wcslwr_s –** je verze široká charakterová **_strlwr_s –**.
+**_Strlwr_s –** funkce převede na místě každé malé písmeno v *str* na malá písmena. **_mbslwr_s –** je vícebajtová znaková verze **_strlwr_s –**. **_wcslwr_s –** je verze širokého znaku **_strlwr_s –**.
 
-Výstupní hodnota je ovlivňován nastavením **LC_CTYPE –** kategorie nastavení národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze tyto funkce bez **_l** příponu využívání aktuální národní prostředí pro toto chování závislých na národním prostředí, verze s **_l** příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí Místo toho předaná. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze těchto funkcí bez **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí místo něho předán v. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-V jazyce C++ pomocí těchto funkcí se zjednodušilo díky šabloně přetížení; přetížení automaticky odvození délka vyrovnávací paměti (takže není nutné zadat argument velikost) a starší, nezabezpečené funkce můžou automaticky nahradit se svými protějšky novější a zabezpečené. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky (tím eliminuje nutnost zadat argument velikosti) a dokážou automaticky nahradit starší, nezabezpečené funkce jejími novějšími, zabezpečené protějšky. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
-Ladicí verze těchto funkcí nejprve vyplnit vyrovnávací paměť s 0xFD. Chcete-li toto chování zakázat, použijte [_crtsetdebugfillthreshold –](crtsetdebugfillthreshold.md).
+Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť hodnotou 0xFD. Chcete-li toto chování zakázat, použijte [_crtsetdebugfillthreshold –](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcslwr_s –**|**_strlwr_s**|**_mbslwr_s**|**_wcslwr_s**|
 |**_tcslwr_s_l –**|**_strlwr_s_l**|**_mbslwr_s_l**|**_wcslwr_s_l**|
@@ -185,7 +175,7 @@ Ladicí verze těchto funkcí nejprve vyplnit vyrovnávací paměť s 0xFD. Chce
 |**_mbslwr_s –**, **_mbslwr_s_l –**|\<Mbstring.h >|
 |**_wcslwr_s –**, **_wcslwr_s_l –**|\<String.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -225,7 +215,7 @@ Lower: the string to end all strings!
 Upper: THE STRING TO END ALL STRINGS!
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>

@@ -1,11 +1,6 @@
 ---
-title: ccos, ccosf, ccosl | Microsoft Docs
-ms.custom: ''
+title: ccos ccosf, ccosl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - ccos
 - ccosf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/ccos
 - complex/ccosf
 - complex/ccosl
-dev_langs:
-- C++
 helpviewer_keywords:
 - ccos function
 - ccosf function
 - ccosl function
 ms.assetid: 4ab936ac-ff85-49ac-9418-2b69cf5d4696
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4345926f3eebb6c65c8f70f65cd37f1add956ed5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d1a94f7ad0bbd525480d344fa8ac5b3ee591a1b2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394541"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50489684"
 ---
-# <a name="ccos-ccosf-ccosl"></a>ccos, ccosf, ccosl
+# <a name="ccos-ccosf-ccosl"></a>ccos ccosf, ccosl
 
-Načte kosinus komplexního čísla.
+Načte hodnotu kosinus tohoto komplexního čísla.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -75,7 +64,7 @@ _Lcomplex ccosl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Komplexní číslo, které představuje úhel v radiánech.
+Komplexní čísla, která představuje úhel v radiánech.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -83,17 +72,17 @@ Kosinus *z*, v radiánech.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **ccos** , přijmout a vrátit **_Fcomplex** a **_Lcomplex** hodnoty. V programu C **ccos** vždy provede a vrátí **_Dcomplex** hodnotu.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **ccos** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **ccos** vždy převezme a vrátí **_Dcomplex** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Hlavička C|Hlavička C++|
+|Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
 |**ccos**, **ccosf**, **ccosl**|\<complex.h>|\<ccomplex >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>

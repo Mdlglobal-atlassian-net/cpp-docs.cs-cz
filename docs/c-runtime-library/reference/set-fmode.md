@@ -1,10 +1,6 @@
 ---
-title: _set_fmode – | Microsoft Docs
-ms.custom: ''
+title: _set_fmode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_fmode
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - _set_fmode
 - set_fmode
-dev_langs:
-- C++
 helpviewer_keywords:
 - file translation [C++], default mode
 - _set_fmode function
 - file translation [C++], setting mode
 - set_fmode function
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 64b8be6d678a6907fc63018c99dd38d2fc8407ea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: df6efcf3fd89ec87ad098200d1d9ba3d6b52c7e4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406391"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500357"
 ---
 # <a name="setfmode"></a>_set_fmode
 
@@ -49,33 +39,33 @@ Nastaví výchozí režim překladu souboru pro vstupně-výstupní operace.
 ## <a name="syntax"></a>Syntaxe
 
 ```C
-errno_t _set_fmode( 
-   int mode 
+errno_t _set_fmode( 
+   int mode 
 );
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *Režim*<br/>
-Režim překladu souboru požadovaného: **_o_text –** nebo **_o_binary –**.
+Režim překladu souboru požadovaného: **_O_TEXT** nebo **_O_BINARY**.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí nula v případě úspěchu, kód chyby při selhání. Pokud *režimu* není **_o_text –** nebo **_o_binary –** nebo **_O_WTEXT**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tato funkce nastaví **errno** k **einval –** a vrátí **einval –**.
+Nula v případě úspěchu vrátí hodnotu, při selhání kód chyby. Pokud *režimu* není **_O_TEXT** nebo **_O_BINARY** nebo **_O_WTEXT**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce nastaví **errno** k **EINVAL** a vrátí **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-Nastaví funkce [_fmode –](../../c-runtime-library/fmode.md) – globální proměnná. Tato proměnná Určuje výchozí režim překladu souboru pro vstupně-výstupní operace **_Otevřít** a **_pipe –**.
+Funkce sady [_fmode](../../c-runtime-library/fmode.md) globální proměnné. Tato proměnná Určuje výchozí režim překladu souboru pro vstupně-výstupní operace **_Otevřít** a **_pipe –**.
 
-**_O_text –** a **_o_binary –** jsou definovány v Fcntl.h. **Einval –** je definována v Errno.h.
+**_O_TEXT** a **_O_BINARY** jsou definovány v Fcntl.h. **EINVAL** je definována v hlavičkovém souboru Errno.h.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
 |**_set_fmode**|\<stdlib.h>|\<fcntl.h>, \<errno.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -140,7 +130,7 @@ Default Mode is binary
 A   B   C   D   E   F   G   H   I   J   K   L
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [_fmode](../../c-runtime-library/fmode.md)<br/>
 [_get_fmode](get-fmode.md)<br/>

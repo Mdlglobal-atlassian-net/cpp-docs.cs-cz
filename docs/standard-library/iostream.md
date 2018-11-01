@@ -1,10 +1,6 @@
 ---
-title: '&lt;iostream&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;iostream –&gt;'
 ms.date: 09/20/2017
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <iostream>
 - iostream/std::cerr
@@ -15,25 +11,19 @@ f1_keywords:
 - iostream/std::wcin
 - iostream/std::wclog
 - iostream/std::wcout
-dev_langs:
-- C++
 helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ed484dcfdb94b60545a84563c77a3f242cc6c316
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: aabdc761cc55507f4718a63a0c082325ae1badf7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850649"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50504283"
 ---
-# <a name="ltiostreamgt"></a>&lt;iostream&gt;
+# <a name="ltiostreamgt"></a>&lt;iostream –&gt;
 
-Deklaruje objekty, které řídí čtení a zápis do standardní datových proudů. Tento problém je často jenom hlavičky, kterou je nutné zahrnout provést vstup a výstup z programu C++.
+Deklaruje objekty, které určují čtení a zápis do standardních datových proudů. To je často jediným hlavičky, které je potřeba zahrnout provádět vstup a výstup z programu v jazyce C++.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,17 +36,17 @@ Deklaruje objekty, které řídí čtení a zápis do standardní datových prou
 
 Objekty lze rozdělit do dvou skupin:
 
-- [CIN](#cin), [cout](#cout), [cerr](#cerr), a [clog](#clog) jsou bajtů zaměřené na konkrétní, provádění konvenční bajtů na čas přenosů.
+- [CIN](#cin), [cout](#cout), [cerr](#cerr), a [clog](#clog) jsou bajtů orientované na provádění konvenční přenosy bajtů v čase.
 
-- [wcin](#wcin), [wcout](#wcout), [wcerr](#wcerr), a [wclog](#wclog) jsou celý orientované překladu do a z široké znaky, které program zpracovává interně.
+- [wcin](#wcin), [wcout](#wcout), [wcerr](#wcerr), a [wclog](#wclog) orientovány široké, převod na a z široké znaky, které program pracuje interně.
 
-Jakmile provádění některých operací na datový proud, jako je například standardní vstupní, nelze provádět operace jinou orientaci na stejného datového proudu. Proto program nemůže pracovat zcela zaměnitelným významem obě [cin](#cin) a [wcin](#wcin), např.
+Po provedení určitých operací v datovém proudu, jako je například standardní vstup nejde provést operace jinou orientaci pro stejný datový proud. Proto program nemůže pracovat Zaměnitelně obě [cin](#cin) a [wcin](#wcin), např.
 
-Všechny objekty v této sdílené složce záhlaví deklarována odborností společných vlastností – můžete předpokládat, jsou vytvořené před všechny statické objekty, které definujete v překlad jednotku, která obsahuje \<iostream >. Stejným způsobem můžete předpokládat, že nejsou tyto objekty zničen před destruktory pro tyto statické objekty, které definujete. (Výstupní datové proudy jsou, ale vyprázdněných při ukončení programu.) Proto může bezpečně číst nebo zapisovat do standardní datové proudy před spuštění programu a po ukončení programu.
+Všechny objekty deklarované v této sdílené složce hlavičky specifické vlastnosti – jsou vytvořeny před všechny statické objekty definujete v jednotce překladu, který obsahuje, můžete předpokládat \<iostream – >. Stejnou měrou můžete předpokládat, že tyto objekty nejsou zničeny, před destruktory pro takové statických objektů, které definujete. (Výstupní datové proudy, ale vyprázdní při ukončení programu.) Proto může bezpečně číst nebo zapisovat do standardních streamů před spuštěním programu a po ukončení programu.
 
-Tato záruka není univerzální, ale. Statický konstruktor může volat funkci v jiné jednotce překlad. Volaná funkce nelze předpokládat, že s danou neurčitém pořadí, ve které překlad jednotky účastnit statické konstrukce mít byl vytvořený objekty deklarované v této hlavičce. V takové kontextu použít tyto objekty, je nutné nejprve vytvořit objekt třídy [ios_base::Init](../standard-library/ios-base-class.md#init).
+Tuto záruku však není univerzální. Statický konstruktor může volat funkci v jiné jednotce překladu. Volaná funkce nelze předpokládat, že objekty deklarované v této hlavičky mají byl vytvořen, daný neurčitém pořadí, ve které překlad jednotky účastnit statické konstrukce. Pokud chcete použít tyto objekty v této souvislosti, je nutné nejprve vytvořit objekt třídy [ios_base::Init](../standard-library/ios-base-class.md#init).
 
-### <a name="global-stream-objects"></a>Objekty globálních datových proudů
+### <a name="global-stream-objects"></a>Stream globální objekty
 
 |||
 |-|-|
@@ -71,7 +61,7 @@ Tato záruka není univerzální, ale. Statický konstruktor může volat funkci
 
 ###  <a name="cerr"></a>  cerr
 
-Objekt `cerr` řídí výstup do vyrovnávací paměti datový proud přidružený k objektu `stderr`, deklarované v \<cstdio – >.
+Objekt `cerr` řídí výstup do vyrovnávací paměti datového proudu přidružená k objektu `stderr`, které jsou deklarovány v \<cstdio – >.
 
 ```cpp
 extern ostream cerr;
@@ -79,11 +69,11 @@ extern ostream cerr;
 
 #### <a name="return-value"></a>Návratová hodnota
 
-[Ostream –](../standard-library/ostream-typedefs.md#ostream) objektu.
+[Ostream](../standard-library/ostream-typedefs.md#ostream) objektu.
 
 #### <a name="remarks"></a>Poznámky
 
-Objekt řídí bez vyrovnávací paměti vložení standardní chyba výstupu pomocí datového proudu bajtů. Jakmile je objekt vytvořený, výraz `cerr.` [příznaky](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) je nenulové hodnoty, a `cerr.tie() == &cout`.
+Objekt ovládacích prvků bez vyrovnávací paměti vložení do standardní chybový výstup jako datový proud bajtů. Po vytvoření objektu výraz `cerr.` [příznaky](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) nenulové, a `cerr.tie() == &cout`.
 
 #### <a name="example"></a>Příklad
 
@@ -125,15 +115,15 @@ extern istream cin;
 
 #### <a name="return-value"></a>Návratová hodnota
 
-[IStream on Request](../standard-library/istream-typedefs.md#istream) objektu.
+[Istream](../standard-library/istream-typedefs.md#istream) objektu.
 
 #### <a name="remarks"></a>Poznámky
 
-Objekt řídí extrakce ze standardního vstupu jako datový proud bajtů. Jakmile je objekt vytvořený, volání `cin.` [tie](../standard-library/basic-ios-class.md#tie) vrátí `&` [cout](#cout).
+Objekt ovládacích prvků ze standardního vstupu extrakce jako datový proud bajtů. Po vytvoření objektu volání `cin.` [tie](../standard-library/basic-ios-class.md#tie) vrátí `&` [cout](#cout).
 
 #### <a name="example"></a>Příklad
 
-V tomto příkladu `cin` nastaví selhání bit v datovém proudu, pokud se setká s jiné než číselné znaky. Program vymaže bit služeb při selhání a odstraní neplatný znak z datového proudu, aby bylo možné pokračovat.
+V tomto příkladu `cin` nastaví selhání bit v datovém proudu, pokud se setká s jiné než číselné znaky. Program vymaže bit selhání a odstraní neplatný znak z datového proudu, aby bylo možné pokračovat.
 
 ```cpp
 // iostream_cin.cpp
@@ -178,15 +168,15 @@ extern ostream clog;
 
 #### <a name="return-value"></a>Návratová hodnota
 
-[Ostream –](../standard-library/ostream-typedefs.md#ostream) objektu.
+[Ostream](../standard-library/ostream-typedefs.md#ostream) objektu.
 
 #### <a name="remarks"></a>Poznámky
 
-Ovládací prvky objektu do vyrovnávací paměti vložení standardní chyba výstupu pomocí datového proudu bajtů.
+Ovládací prvky objektu ukládány do vyrovnávací paměti vložení do standardní chybový výstup jako datový proud bajtů.
 
 #### <a name="example"></a>Příklad
 
-V tématu [cerr](#cerr) příklad použití `clog`.
+Zobrazit [cerr](#cerr) pro příklad použití `clog`.
 
 ###  <a name="cout"></a>  cout
 
@@ -198,7 +188,7 @@ extern ostream cout;
 
 #### <a name="return-value"></a>Návratová hodnota
 
-[Ostream –](../standard-library/ostream-typedefs.md#ostream) objektu.
+[Ostream](../standard-library/ostream-typedefs.md#ostream) objektu.
 
 #### <a name="remarks"></a>Poznámky
 
@@ -206,7 +196,7 @@ Objekt řídí vložení do standardního výstupního datového proudu bajtů.
 
 #### <a name="example"></a>Příklad
 
-V tématu [cerr](#cerr) příklad použití `cout`.
+Zobrazit [cerr](#cerr) pro příklad použití `cout`.
 
 ###  <a name="wcerr"></a>  wcerr
 
@@ -218,15 +208,15 @@ extern wostream wcerr;
 
 #### <a name="return-value"></a>Návratová hodnota
 
-A [wostream –](../standard-library/ostream-typedefs.md#wostream) objektu.
+A [wostream](../standard-library/ostream-typedefs.md#wostream) objektu.
 
 #### <a name="remarks"></a>Poznámky
 
-Objekt řídí bez vyrovnávací paměti vložení standardní chyba výstupu pomocí široké datového proudu. Jakmile je objekt vytvořený, výraz `wcerr.` [příznaky](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) nenulový.
+Objekt ovládacích prvků bez vyrovnávací paměti vložení do standardní chybový výstup jako široké datového proudu. Po vytvoření objektu výraz `wcerr.` [příznaky](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) nenulové.
 
 #### <a name="example"></a>Příklad
 
-V tématu [cerr](#cerr) příklad použití `wcerr`.
+Zobrazit [cerr](#cerr) pro příklad použití `wcerr`.
 
 ###  <a name="wcin"></a>  wcin
 
@@ -242,11 +232,11 @@ A [wistream](../standard-library/istream-typedefs.md#wistream) objektu.
 
 #### <a name="remarks"></a>Poznámky
 
-Objekt řídí extrakce ze standardního vstupu jako široké datový proud. Jakmile je objekt vytvořený, volání `wcin.` [tie](../standard-library/basic-ios-class.md#tie) vrátí `&` [wcout](#wcout).
+Objekt ovládacích prvků ze standardního vstupu extrakce jako široké datového proudu. Po vytvoření objektu volání `wcin.` [tie](../standard-library/basic-ios-class.md#tie) vrátí `&` [wcout](#wcout).
 
 #### <a name="example"></a>Příklad
 
-V tématu [cerr](#cerr) příklad použití `wcin`.
+Zobrazit [cerr](#cerr) pro příklad použití `wcin`.
 
 ###  <a name="wclog"></a>  wclog
 
@@ -258,15 +248,15 @@ extern wostream wclog;
 
 #### <a name="return-value"></a>Návratová hodnota
 
-A [wostream –](../standard-library/ostream-typedefs.md#wostream) objektu.
+A [wostream](../standard-library/ostream-typedefs.md#wostream) objektu.
 
 #### <a name="remarks"></a>Poznámky
 
-Ovládací prvky objektu do vyrovnávací paměti vložení do výstupu standardní chyba pomocí široké datového proudu.
+Ovládací prvky objektu ukládány do vyrovnávací paměti vložení do standardní chybový výstup jako široké datový proud.
 
 #### <a name="example"></a>Příklad
 
-V tématu [cerr](#cerr) příklad použití `wclog`.
+Zobrazit [cerr](#cerr) pro příklad použití `wclog`.
 
 ###  <a name="wcout"></a>  wcout
 
@@ -278,17 +268,17 @@ extern wostream wcout;
 
 #### <a name="return-value"></a>Návratová hodnota
 
-A [wostream –](../standard-library/ostream-typedefs.md#wostream) objektu.
+A [wostream](../standard-library/ostream-typedefs.md#wostream) objektu.
 
 #### <a name="remarks"></a>Poznámky
 
-Objekt řídí vložení ve standardním výstupu pomocí široké datového proudu.
+Objekt určuje vložení do standardního výstupu jako široké datový proud.
 
 #### <a name="example"></a>Příklad
 
-V tématu [cerr](#cerr) příklad použití `wcout`.
+Zobrazit [cerr](#cerr) pro příklad použití `wcout`.
 
-`CString` instance v `wcout` musí být příkaz přetypovat `const wchar_t*`, jak je znázorněno v následujícím příkladu.
+`CString` instance `wcout` příkazu musí být přetypovat na `const wchar_t*`, jak je znázorněno v následujícím příkladu.
 
 ```
 
@@ -297,9 +287,9 @@ V tématu [cerr](#cerr) příklad použití `wcout`.
     wcout <<(const wchar_t*) cs <<endl;
 ```
 
-Další informace najdete v tématu [základní operace CString](../atl-mfc-shared/basic-cstring-operations.md).
+Další informace najdete v tématu [základních operací CString](../atl-mfc-shared/basic-cstring-operations.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

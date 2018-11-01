@@ -1,25 +1,15 @@
 ---
-title: IDL – atributy, Průvodce přidáním vlastnosti | Dokumentace Microsoftu
-ms.custom: ''
+title: IDL – atributy, Průvodce přidáním vlastnosti
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.prop.idlattributes
-dev_langs:
-- C++
 ms.assetid: 356ed666-79d0-4bd9-a5e7-cda679cbadbd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ce3597f656d46da85faee3f6ec51b89257d25d05
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d2a7448675be6a9d8cfc290d648413643aa4681c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426351"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514280"
 ---
 # <a name="idl-attributes-add-property-wizard"></a>IDL – atributy, Průvodce přidáním vlastnosti
 
@@ -50,7 +40,7 @@ Některé možnosti jsou k dispozici pro všechny typy vlastností.
 |**defaultcollelem**|Označuje, že je vlastnost přístupovou funkci pro prvek výchozí kolekce. Zobrazit [defaultcollelem](/windows/desktop/Midl/defaultcollelem) v *MIDL odkazu*.|
 |**nonbrowsable**|Značky na rozhraní nebo dispinterface člena, který nebude se zobrazovat v prohlížeči vlastností. Zobrazit [nonbrowsable](/windows/desktop/Midl/nonbrowsable) v *MIDL odkazu*.|
 |**requestedit**|Označuje, že vlastnost podporuje **OnRequestEdit** oznámení najdete v tématu [requestedit –](/windows/desktop/Midl/requestedit) v *MIDL odkazu*. Pro implementaci vlastnosti tato možnost je ve výchozím nastavení a nejde změnit.|
-|**Zdroj**|Označuje, že je člen vlastnost Zdroj událostí. Zobrazit [zdroj](/windows/desktop/Midl/source) v *MIDL odkazu*.|
+|**source**|Označuje, že je člen vlastnost Zdroj událostí. Zobrazit [zdroj](/windows/desktop/Midl/source) v *MIDL odkazu*.|
 |**hidden**|Označuje, že vlastnost existuje, ale nebude se zobrazovat v prohlížeči uživatele. Zobrazit [skryté](/windows/desktop/Midl/hidden) v *MIDL odkazu*.|
 |**restricted**|Určuje, že vlastnost se nedá volat libovolně. Zobrazit [s omezeným přístupem](/windows/desktop/Midl/restricted) v *MIDL odkazu*.|
 |`local`|Určuje kompilátor MIDL o tom, že vlastnost není vzdálený. Zobrazit [místní](/windows/desktop/Midl/local) v *MIDL odkazu*.|

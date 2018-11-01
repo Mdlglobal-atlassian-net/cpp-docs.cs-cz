@@ -1,10 +1,6 @@
 ---
-title: _set_controlfp – | Microsoft Docs
-ms.custom: ''
+title: _set_controlfp
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_controlfp
 apilocation:
@@ -23,27 +19,21 @@ apitype: DLLExport
 f1_keywords:
 - set_controlfp
 - _set_controlfp
-dev_langs:
-- C++
 helpviewer_keywords:
 - set_controlfp function
 - floating-point functions, setting control word
 - _set_controlfp function
 ms.assetid: e0689d50-f68a-4028-a9c1-fb23eedee4ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a2647e9719c2aa3fe303393fcc1da55de0385581
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1187502f09849d7ca4d8e595c237cfa511d00c6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406417"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499002"
 ---
 # <a name="setcontrolfp"></a>_set_controlfp
 
-Nastaví s plovoucí desetinnou čárkou řídicího slova.
+Nastaví slovo ovládacího prvku s plovoucí desetinnou čárkou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,10 +47,10 @@ void __cdecl _set_controlfp(
 ### <a name="parameters"></a>Parametry
 
 *newControl*<br/>
-Nové hodnoty bit řídicího slova.
+Nové bitové hodnoty kontrolního slova.
 
 *Maska*<br/>
-Maska pro novou službu bits řídicího slova nastavit.
+Maska pro nové bity ovládacího slova, chcete-li nastavit.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -68,19 +58,19 @@ Maska pro novou službu bits řídicího slova nastavit.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Set_controlfp –** funkce je podobná **_control87 –**, ale jenom nastaví s plovoucí desetinnou čárkou řídicího slova *newControl*. Bity v hodnoty označují stav ovládacího prvku s plovoucí desetinnou čárkou. Stav s plovoucí desetinnou čárkou řízení umožňuje program, který chcete změnit přesnost, zaokrouhlení a infinity režimy v s plovoucí desetinnou čárkou matematického balíku. Můžete také maskování nebo odmaskujte s plovoucí desetinnou čárkou výjimky pomocí **_set_controlfp –**. Další informace najdete v tématu [_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md).
+**_Set_controlfp –** funkce je podobná **_control87**, ale pouze nastaví slovo ovládacího prvku s plovoucí desetinnou čárkou na *newControl*. Bity v hodnotách označují stav ovládacího prvku s plovoucí desetinnou čárkou. Stav ovládacího prvku s plovoucí desetinnou čárkou umožňuje programu změnit přesnost, zaokrouhlení a režimy nekonečna matematickém s plovoucí desetinnou čárkou balíčku. Můžete také maskování nebo odmaskování výjimek plovoucí desetinné čárky pomocí **_set_controlfp –**. Další informace najdete v tématu [_control87 _controlfp, \__control87_2](control87-controlfp-control87-2.md).
 
-Tato funkce je zastaralý, když kompilujete s [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) protože modul common language runtime podporuje pouze výchozí přesnost s plovoucí desetinnou čárkou.
+Tato funkce je zastaralá při kompilaci s [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) protože modul CLR podporuje pouze základní přesnost s plovoucí desetinnou čárkou.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|Kompatibilita|
 |-------------|---------------------|-------------------|
-|**_set_controlfp**|\<float.h – >|x86 pouze procesoru|
+|**_set_controlfp**|\<float.h >|x86 pouze procesoru|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [_clear87, _clearfp](clear87-clearfp.md)<br/>

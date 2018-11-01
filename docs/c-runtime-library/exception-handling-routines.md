@@ -1,41 +1,31 @@
 ---
-title: Rutiny zpracování výjimek | Microsoft Docs
-ms.custom: ''
+title: Rutiny zpracování výjimek
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.exceptions
-dev_langs:
-- C++
 helpviewer_keywords:
 - exception handling, routines
 ms.assetid: f60548c6-850a-4e1e-a79b-a2a6a541ab62
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eea92c5bfdb54b6c15ae2ae643b2d23b397a3bf6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 09d58e49d3c9dc9b4b8ef40f725e927603e3e47c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389072"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507455"
 ---
 # <a name="exception-handling-routines"></a>Rutiny zpracování výjimek
 
-Zpracování výjimek funkcí jazyka C++ použijte k obnovení z neočekávané události při spuštění programu.
+Funkce zpracování výjimek jazyka C++ použijte k zotavení z neočekávaných událostí během provádění programu.
 
-## <a name="exception-handling-functions"></a>Zpracování výjimek – funkce
+## <a name="exception-handling-functions"></a>Funkce pro zpracování výjimek
 
 |Funkce|Použití|
 |--------------|---------|
-|[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)|Win32 zpracování výjimek (C strukturovaná výjimky) jako C++ zadali výjimky|
-|[set_terminate](../c-runtime-library/reference/set-terminate-crt.md)|Nainstalovat rutiny vlastní ukončení má být volána **ukončení**|
-|[set_unexpected](../c-runtime-library/reference/set-unexpected-crt.md)|Instalace funkce vlastní ukončení má být volána **neočekávané**|
-|[Ukončení](../c-runtime-library/reference/terminate-crt.md)|Volá automaticky za určitých okolností se po vyvolání výjimky. **Ukončit** volání funkce **abort** nebo funkci, můžete zadat pomocí **set_terminate –**|
-|[unexpected](../c-runtime-library/reference/unexpected-crt.md)|Volání **ukončit** nebo funkci, můžete zadat pomocí **set_unexpected –**. **Neočekávané** funkce ještě není používáno ve aktuální implementace zpracování výjimek Microsoft C++|
+|[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)|Win32 zpracování výjimek (strukturované výjimky jazyka C) jako C++ typu výjimky|
+|[set_terminate](../c-runtime-library/reference/set-terminate-crt.md)|Nainstalujte si vlastní rutinu ukončení, které jsou volány **ukončit**|
+|[set_unexpected](../c-runtime-library/reference/set-unexpected-crt.md)|Nainstalovat vlastní funkci ukončení má být volána **neočekávané**|
+|[ukončit](../c-runtime-library/reference/terminate-crt.md)|Volá automaticky za určitých okolností se po vyvolání výjimky. **Ukončit** volání funkce **přerušit** nebo funkce, které zadáte pomocí **set_terminate**|
+|[unexpected](../c-runtime-library/reference/unexpected-crt.md)|Volání **ukončit** nebo funkce, které zadáte pomocí **set_unexpected**. **Neočekávané** funkce se nepoužívá v aktuální implementaci zpracování výjimek C++ společnosti Microsoft|
 
 ## <a name="see-also"></a>Viz také
 

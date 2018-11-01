@@ -1,29 +1,19 @@
 ---
-title: __unhook | Dokumentace Microsoftu
-ms.custom: ''
+title: __unhook
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - __unhook
 - __unhook_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - event handlers [C++], dissociating events
 - __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3efdce5bb7a9ab093a53b6a005492aecd509f560
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f6e5031cb77729ede053b275c90fa93bf251fcb6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117293"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486772"
 ---
 # <a name="unhook"></a>__unhook
 
@@ -60,7 +50,7 @@ long  __unhook(
 *interface*<br/>
 Název rozhraní se unhooked z *příjemce*, pouze pro přijímače událostí modelu COM, ve kterém *layout_dependent* parametr [event_receiver](../windows/event-receiver.md) atribut je **true**.
 
-*Zdroj*<br/>
+*source*<br/>
 Ukazatel na instanci zdroje událostí. V závislosti na kód `type` zadané v poli `event_receiver`, *zdroj* může být jedna z následujících akcí:
 
 - Ukazatel objektu zdroje nativní události.

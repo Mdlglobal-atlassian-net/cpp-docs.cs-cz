@@ -1,29 +1,19 @@
 ---
-title: '&lt;algoritmus&gt; | Dokumentace Microsoftu'
-ms.custom: ''
+title: '&lt;algoritmus&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <algorithm>
-dev_langs:
-- C++
 helpviewer_keywords:
 - algorithm header [C++]
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9de7d5606d2bb178dd786d22bb0e5ab890fd16ff
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 042523cddf640e7cf6fd7f9a1dac9f3adbc360b6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964233"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484068"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algoritmus&gt;
 
@@ -137,7 +127,7 @@ Numerické algoritmy standardní knihovny C++, které jsou k dispozici pro numer
 |[Prohození](../standard-library/algorithm-functions.md#swap)|Vymění hodnoty prvků mezi dvěma typy objektů, obsah prvního objektu přiřadí ke druhému objektu a obsah druhého k prvnímu objektu.|
 |[swap_ranges](../standard-library/algorithm-functions.md#swap_ranges)|Vymění prvky z jednoho rozsahu za prvky druhého rozsahu o stejné velikosti.|
 |[Transformace](../standard-library/algorithm-functions.md#transform)|Aplikuje zadaný objekt funkce na každý prvek ve zdrojovém rozsahu nebo na dvojici prvků ze dvou zdrojových rozsahů a zkopíruje vrácené hodnoty objektu funkce do cílového rozsahu.|
-|[Jedinečný](../standard-library/algorithm-functions.md#unique)|Odstraní duplicitní prvky, které v zadaném rozsahu sousedí.|
+|[unique](../standard-library/algorithm-functions.md#unique)|Odstraní duplicitní prvky, které v zadaném rozsahu sousedí.|
 |[unique_copy](../standard-library/algorithm-functions.md#unique_copy)|Zkopíruje prvky ze zdrojového rozsahu do cílového rozsahu s výjimkou sousedících duplicitních prvků.|
 |[upper_bound –](../standard-library/algorithm-functions.md#upper_bound)|Najde pozici prvního prvku v seřazeném rozsahu, který má hodnotu větší než zadaná hodnota, kde kritérium pořadí může být určeno binárním predikátem.|
 

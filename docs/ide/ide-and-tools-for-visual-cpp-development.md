@@ -1,26 +1,16 @@
 ---
-title: IDE a nástroje pro vývoj v jazyce Visual C++ | Dokumentace Microsoftu
+title: IDE a nástroje pro vývoj v jazyce Visual C++
 description: Integrované vývojové prostředí sady Visual Studio podporuje vývoj v jazyce C++ ve Windows, Linux, Android a iOS pomocí editoru kódu, ladicí program, testovacích architektur, statické analyzátory a jiných programovacích nástrojích.
-ms.custom: ''
 ms.date: 09/27/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, development tools
 ms.assetid: 56eabafb-1956-4f0f-bec5-29b887763559
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 99fdb8f9c08845c5f440fc4ae1f100f8afd832e2
-ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
+ms.openlocfilehash: e24ba58cf0cf94f1505adaf056f64580b8f7829e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50136156"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473356"
 ---
 # <a name="ide-and-compiler-tools-for-visual-c-development"></a>Integrované vývojové prostředí a kompilačních nástrojů pro vývoj v jazyce Visual C++
 

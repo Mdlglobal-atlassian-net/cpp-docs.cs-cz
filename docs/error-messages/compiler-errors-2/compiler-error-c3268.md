@@ -1,37 +1,27 @@
 ---
-title: C3268 Chyba kompilátoru | Microsoft Docs
-ms.custom: ''
+title: Chyba kompilátoru C3268
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3268
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3268
 ms.assetid: d74a630c-daea-4e29-9759-83efef7fb184
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eac0c4e7c25df466ecf1e7e28bccf9ee2a2e2953
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c766488b29273f321feffa8e38a97e54454db7b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705254"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480532"
 ---
-# <a name="compiler-error-c3268"></a>C3268 chyby kompilátoru
+# <a name="compiler-error-c3268"></a>Chyba kompilátoru C3268
 
-> '*funkce*': Obecné funkce nebo členské funkce obecné třídy nemůže mít seznam proměnných parametrů
+> "*funkce*': obecná funkce nebo členská funkce obecné třídy nemůže mít seznam parametrů proměnných
 
 ## <a name="remarks"></a>Poznámky
 
-**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017.
+**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
 
-V tématu [obecné typy](../../windows/generics-cpp-component-extensions.md) Další informace.
+Zobrazit [obecných typů](../../windows/generics-cpp-component-extensions.md) Další informace.
 
 ## <a name="example"></a>Příklad
 

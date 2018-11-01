@@ -1,29 +1,20 @@
 ---
-title: / JMC (ladění pouze můj kód) | Dokumentace Microsoftu
-ms.custom: 08/20/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
+title: / JMC (ladění pouze můj kód)
+ms.date: 08/20/2018
 f1_keywords:
 - /JMC
-dev_langs:
-- C++
 helpviewer_keywords:
 - /JMC compiler option [C++]
 - Just my code [C++]
 - -JMC compiler option [C++]
 - User code, debugging
 - JMC compiler option [C++]
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1da60b43bd151a776278b51a5ee8a22de7ef3b4c
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: a81292b590d96ef93446f9bb59af305c7eda2ef9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "40242841"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50516854"
 ---
 # <a name="jmc-just-my-code-debugging"></a>/ JMC (ladění pouze můj kód)
 
@@ -53,7 +44,7 @@ Další informace najdete v tématu [pouze můj kód C++](/visualstudio/debugger
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Viz také
 

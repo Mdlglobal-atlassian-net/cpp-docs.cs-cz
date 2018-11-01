@@ -1,24 +1,14 @@
 ---
-title: Vlastnosti C/C++ (C++ pro Linux) | Dokumentace Microsoftu
-ms.custom: ''
+title: Vlastnosti C/C++ (C++ pro Linux)
 ms.date: 9/26/2017
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: 4bb8894b-c874-4a68-935e-b127d54e484f
-author: mikeblome
-ms.author: mblome
 f1_keywords: []
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 78918acc70bddb25841b2bcaaf8f7cd7b627d63b
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 4719f02b1050472f35375b921fd1a6bd670c11c0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50061557"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50498119"
 ---
 # <a name="cc-properties-linux-c"></a>Vlastnosti C/C++ (C++ pro Linux)
 

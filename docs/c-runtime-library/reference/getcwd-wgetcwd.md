@@ -1,10 +1,6 @@
 ---
-title: _getcwd –, _wgetcwd – | Microsoft Docs
-ms.custom: ''
+title: _getcwd, _wgetcwd
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wgetcwd
 - _getcwd
@@ -28,8 +24,6 @@ f1_keywords:
 - _wgetcwd
 - tgetcwd
 - _tgetcwd
-dev_langs:
-- C++
 helpviewer_keywords:
 - getcwd function
 - working directory
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 10f242569579680c8e388b84bdcaca235a142a34
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4c533f0e716cb9a13c152b9be3c46f60291118d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405286"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50520234"
 ---
 # <a name="getcwd-wgetcwd"></a>_getcwd, _wgetcwd
 
@@ -70,26 +60,26 @@ wchar_t *_wgetcwd(
 ### <a name="parameters"></a>Parametry
 
 *Vyrovnávací paměti*<br/>
-Umístění úložiště pro cestu.
+Umístění úložiště pro danou cestu.
 
 *MAXLEN*<br/>
-Maximální délka cesty ve znacích: **char** pro **_getcwd –** a **wchar_t** pro **_wgetcwd –**.
+Maximální délka cesty ve znacích: **char** pro **_getcwd** a **wchar_t** pro **_wgetcwd –**.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí ukazatel na *vyrovnávací paměti*. A **NULL** návratová hodnota určuje chybu, a **errno** nastavený buď na **enomem –**, označující, že je nedostatek paměti k přidělení *maxlen* bajtů (při **NULL** argument je zadána jako *vyrovnávací paměti*), nebo **erange –**, která znamená, že cesta je delší než *maxlen*  znaků. Pokud *maxlen* je menší než nebo rovna nule, tato funkce vyvolá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md).
+Vrací ukazatel na *vyrovnávací paměti*. A **NULL** vrátit hodnota označuje chybu, a **errno** je nastaven buď na **ENOMEM**, označující, že není dostatek paměti k přidělení *maxlen* bajtů (když **NULL** argument je zadána jako *vyrovnávací paměti*), nebo **ERANGE**, označující, že cesta je delší než *maxlen*  znaků. Pokud *maxlen* je menší než nebo rovna hodnotě nula, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
-Další informace o těchto a dalších návratové kódy najdete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o těchto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Getcwd –** funkce získá úplnou cestu aktuálního pracovního adresáře pro výchozí jednotce a ukládá je v *vyrovnávací paměti*. Argument celé číslo *maxlen* určuje maximální délku cesty. Pokud překročí délka cesty (včetně ukončující znak hodnoty null), dojde k chybě *maxlen*. *Vyrovnávací paměti* argument může být **NULL**; vyrovnávací paměti o velikosti alespoň *maxlen* (více pouze v případě potřeby) je automaticky přiděleno, pomocí **malloc –**, k uložení cestu. Této vyrovnávací paměti může být uvolněno později voláním **volné** a předání **_getcwd –** vrátit hodnotu (ukazatel na přidělené vyrovnávací paměti).
+**_Getcwd** funkce získá celou cestu aktuálního pracovního adresáře na výchozí jednotce a ukládá ji do *vyrovnávací paměti*. Argument typu celé číslo *maxlen* určuje maximální délku cesty. Pokud délka cesty (včetně ukončujícího znaku null) překročí, dojde k chybě *maxlen*. *Vyrovnávací paměti* argument může být **NULL**; vyrovnávací paměť o velikosti alespoň *maxlen* (více pouze v případě potřeby) automaticky přiřazen, pomocí **malloc**, pro uložení této cesty. Tuto vyrovnávací paměť může být později uvolněna voláním **bezplatné** a předají se jí **_getcwd** návratovou hodnotu (ukazatel do přidělené vyrovnávací paměti).
 
-**_getcwd –** vrátí řetězec, který představuje cestu aktuálního pracovního adresáře. Pokud aktuální pracovní adresář je kořenový adresář, řetězec končí zpětné lomítko ( **\\** ). Pokud je aktuální pracovní adresář nastaven na jiný adresář než kořenový, řetězec končí názvem adresáře, nikoli zpětným lomítkem.
+**_getcwd** vrátí řetězec, který představuje cestu aktuálního pracovního adresáře. Pokud je aktuální pracovní adresář nastaven na kořen, řetězec končí zpětným lomítkem ( **\\** ). Pokud je aktuální pracovní adresář nastaven na jiný adresář než kořenový, řetězec končí názvem adresáře, nikoli zpětným lomítkem.
 
-**_wgetcwd –** je verze široká charakterová **_getcwd –**; *vyrovnávací paměti* argument a vrátí hodnotu **_wgetcwd –** jsou široká charakterová řetězce. **_wgetcwd –** a **_getcwd –** chovat jinak shodně.
+**_wgetcwd –** je verze širokého znaku **_getcwd**; *vyrovnávací paměti* argument a návratová hodnota funkce **_wgetcwd –** jsou širokoznaké řetězce. **_wgetcwd –** a **_getcwd** se jinak chovají stejně.
 
-Když **_DEBUG –** a **_crtdbg_map_alloc –** jsou definovány, volání **_getcwd –** a **_wgetcwd –** jsou nahrazovány volání **_ getcwd_dbg –** a **_wgetcwd_dbg –** umožňující ladění přidělení paměti. Další informace najdete v tématu [_getcwd_dbg –, _wgetcwd_dbg –](getcwd-dbg-wgetcwd-dbg.md).
+Když **_DEBUG** a **_CRTDBG_MAP_ALLOC** jsou definovány, volání **_getcwd** a **_wgetcwd –** jsou nahrazena voláními funkcí **_ getcwd_dbg –** a **_wgetcwd_dbg** umožňuje ladit přidělování paměti. Další informace najdete v tématu [_getcwd_dbg _wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -104,7 +94,7 @@ Když **_DEBUG –** a **_crtdbg_map_alloc –** jsou definovány, volání **_g
 |**_getcwd**|\<Direct.h >|
 |**_wgetcwd**|\<Direct.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -139,7 +129,7 @@ int main( void )
 C:\Code
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ovládací prvek adresáře](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>
