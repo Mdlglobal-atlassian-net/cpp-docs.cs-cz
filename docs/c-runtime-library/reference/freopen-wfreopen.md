@@ -1,10 +1,6 @@
 ---
-title: freopen –, _wfreopen – | Microsoft Docs
-ms.custom: ''
+title: freopen, _wfreopen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - freopen
 - _wfreopen
@@ -25,8 +21,6 @@ f1_keywords:
 - _wfreopen
 - _tfreopen
 - freopen
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wfreopen function
 - file pointers [C++], reassigning
@@ -35,20 +29,16 @@ helpviewer_keywords:
 - tfreopen function
 - wfreopen function
 ms.assetid: de4b73f8-1043-4d62-98ee-30d2022da885
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1d3c121dbe80f2eb6def9e1040b03a7b04d03689
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4fa5afb1baea33178c987b45e8b7dace4e4515eb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405585"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50649524"
 ---
 # <a name="freopen-wfreopen"></a>freopen, _wfreopen
 
-Znovu přiřadí ukazatel souboru. Bezpečnější verze tyto funkce jsou k dispozici. v tématu [freopen_s –, _wfreopen_s –](freopen-s-wfreopen-s.md).
+Znovu přiřadí ukazatel souboru. Bezpečnější verze těchto funkcí jsou k dispozici. Zobrazit [freopen_s – _wfreopen_s –](freopen-s-wfreopen-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -71,67 +61,67 @@ FILE *_wfreopen(
 Cesta k novému souboru.
 
 *Režim*<br/>
-Typ přístupu povolena.
+Typ přístupu povolený.
 
-*Datový proud*<br/>
-Ukazatel na **souboru** struktura.
+*Stream*<br/>
+Ukazatel na **souboru** struktury.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrací ukazatel na nově otevřený soubor. Pokud dojde k chybě, původní soubor se zavře a funkce vrátí hodnotu **NULL** hodnota ukazatele s hodnotou. Pokud *cesta*, *režimu*, nebo *datového proudu* je ukazatel s hodnotou null, nebo pokud *filename* je prázdný řetězec, tyto funkce vyvolání neplatný parametr obslužné rutiny, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastavte tyto funkce **errno** k **einval –** a vrátit **NULL**.
+Každá z těchto funkcí vrací ukazatel na nově otevřeném souboru. Pokud dojde k chybě, původní soubor uzavřen a funkce vrátí **NULL** hodnotou ukazatele. Pokud *cesta*, *režimu*, nebo *stream* je ukazatel s hodnotou null, nebo pokud *filename* je prázdný řetězec, tyto funkce vyvolají neplatný parametr obslužné rutiny, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tyto funkce nastaví **errno** k **EINVAL** a vrátit **NULL**.
 
-V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších kódy chyb.
+Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších chybových kódech.
 
 ## <a name="remarks"></a>Poznámky
 
-Bezpečnější verzích tyto funkce neexistuje, najdete v části [freopen_s –, _wfreopen_s –](freopen-s-wfreopen-s.md).
+Existují bezpečnější verze těchto funkcí naleznete v tématu [freopen_s – _wfreopen_s –](freopen-s-wfreopen-s.md).
 
-**Freopen –** funkce zavře soubor aktuálně přidružen *datového proudu* a znovu přidělí *datového proudu* do souboru určeného *cestu*. **_wfreopen –** je verze široká charakterová **_freopen**; *cesta* a *režimu* argumenty, které mají **_wfreopen –** jsou široká charakterová řetězce. **_wfreopen –** a **_freopen** chovat jinak shodně.
+**Freopen** funkce zavře soubor, který aktuálně přiřazen k *stream* a znovu přiřadí *stream* do souboru určeného *cesta*. **_wfreopen** je verze širokého znaku **_freopen**; *cesta* a *režimu* argumenty **_wfreopen** jsou řetězce širokého znaku. **_wfreopen** a **_freopen** se jinak chovají stejně.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tfreopen –**|**freopen –**|**freopen –**|**_wfreopen**|
+|**_tfreopen –**|**freopen**|**freopen**|**_wfreopen**|
 
-**freopen –** se obvykle používá pro přesměrování předem otevřených souborů **stdin –**, **stdout**, a **stderr** na soubory zadané uživatelem. Nový soubor přidružený k *datového proudu* je otevřen s *režimu*, což je řetězec znaků určující typ přístupu, které jsou požadované pro soubor, následujícím způsobem:
+**freopen** se obvykle používá k přesměrování dříve otevřených souborů **stdin**, **stdout**, a **stderr** na soubory zadané uživatelem. Nový soubor spojený s *stream* se otevře s *režimu*, což je řetězec znaků určující typ požadovaného přístupu k souboru, následujícím způsobem:
 
 |*Režim*|Access|
 |-|-|
-**"r"**|Otevře pro čtení. Pokud soubor neexistuje nebo nebyl nalezen, **freopen –** volání selže.
-**"w"**|Otevře se prázdný soubor pro zápis. Pokud je daný soubor existuje, její obsah se způsobem zničena.
-**"a"**|Otevře pro zápis na konec souboru (připojení) bez odebrání značky end souboru (EOF) před nová data jsou zapsána do souboru. Pokud neexistuje, vytvoří soubor.
+**"r"**|Otevře pro čtení. Pokud soubor neexistuje nebo nebyl nalezen, **freopen** volání selže.
+**"w"**|Otevře prázdný soubor pro zápis. Pokud daný soubor existuje, jeho obsah zničen.
+**"a"**|Otevře se pro zápis na konci souboru (přidávání) bez odstranění značky end file (EOF) před zápisem do souboru. Vytvoří soubor, pokud neexistuje.
 **"r +"**|Otevře pro čtení i zápis. Soubor musí existovat.
-**"w +"**|Otevře se prázdný soubor pro čtení i zápis. Pokud soubor existuje, její obsah se způsobem zničena.
-**"+"**|Otevře pro čtení a připojením. Připojování operaci zahrnuje odebrání značky EOF před nová data jsou zapsána do souboru. Po dokončení zápisu, nedojde k obnovení EOF značky. Pokud neexistuje, vytvoří soubor.
+**"w +"**|Otevře prázdný soubor pro čtení i zápis. Pokud soubor existuje, jeho obsah zničen.
+**"a +"**|Otevře pro čtení a připojení. Operace zobrazení zahrnuje odstranění značky EOF před zápisem do souboru. Nedojde k obnovení značky EOF po dokončení zápisu. Vytvoří soubor, pokud neexistuje.
 
-Použití **"w"** a **"w +"** typy opatrně, protože zničí existující soubory.
+Použití **"w"** a **"w +"** typy opatrně, protože mohou zničit existující soubory.
 
-Při otevření souboru s **"a"** nebo **"+"** přistupovat typu, všechny zápisu operace dojde na konci souboru. I když ukazatele souboru můžete změnit jejich umístění pomocí [fseek](fseek-fseeki64.md) nebo [rewind](rewind.md), ukazatele souboru je vždycky přesunuta zpět na konec souboru před všechny zápisu operace provádí. Žádná existující data proto nemohou být přepsána.
+Při otevření souboru se **"a"** nebo **"a +"** získat přístup k typu, všechny operace zápisu na konci souboru. Přestože lze ukazatel na soubor přesunout pomocí [fseek](fseek-fseeki64.md) nebo [rewind](rewind.md), ukazatel na soubor vždy přesunut na konec souboru před jakékoli zápisu operace provádí. Žádná existující data proto nemohou být přepsána.
 
-**"A"** režimu neodebere značky EOF před připojením k souboru. Po připojení došlo k chybě, MS-DOS typ příkazu se zobrazí pouze data až původní EOF značky a není žádná data připojen k souboru. **"+"** Režimu odebrat značky EOF před připojením k souboru. Po připojení, zobrazí příkaz MS-DOS typ všechna data v tomto souboru. **"+"** Režim je vyžadován pro připojení do datového proudu souboru, který je byla ukončena s CTRL + Z EOF značky.
+**"A"** režimu neodstraní značku EOF před připojením k souboru. Po připojení došlo k chybě, příkaz MS-DOS TYPE zobrazí pouze data až po původní značku EOF, nikoliv data připojená k souboru. **"A +"** režimu odstranění značky EOF před připojením k souboru. Po připojení zobrazí příkaz MS-DOS TYPE všechna data v souboru. **"A +"** režim je vyžadován pro připojení k souboru datového proudu, který je přerušen skrze značku EOF CTRL + Z.
 
-Když **"r +"**, **"w +"**, nebo **"+"** byl zadán typ přístupu, jsou povoleny pro čtení i zápis (soubor říká, že je třeba otevřít pro "update"). Ale při přepínání mezi čtení a zápis, musí být uplynulého [fsetpos –](fsetpos.md), [fseek](fseek-fseeki64.md), nebo [rewind](rewind.md) operaci. Aktuální pozice lze [fsetpos –](fsetpos.md) nebo [fseek](fseek-fseeki64.md) operace, v případě potřeby. Kromě výše uvedené hodnoty, jednu z následujících znaků může být součástí *režimu* řetězec k určení režim překladu pro nové řádky.
+Když **"r +"**, **"w +"**, nebo **"a +"** je zadán přístupový typ, je povoleno čtení i zápis (Tento soubor říká, že je otevřen pro "úpravy"). Ale při přepínání mezi čtení a zápis, musí existovat podílející [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md), nebo [rewind](rewind.md) operace. Aktuální pozici, je možné zadat pro [fsetpos](fsetpos.md) nebo [fseek](fseek-fseeki64.md) operace, v případě potřeby. Kromě výše uvedených hodnot, jeden z následujících znaků může být součástí *režimu* řetězec k určení režimu překladu nových řádků.
 
-|*režim* – modifikátor|Režim překladu|
+|*režim* modifikátor|Režim překladu|
 |-|-|
-**t**|Otevřete v textu (přeložit) režimu.
-**b**|Otevřete v binárním režimu (nepřeložený); jsou potlačovány překlady zahrnující znaky CR a konce řádku.
+**t**|Otevřít v textovém (přeloženém) režimu.
+**b**|Otevřít v binárním (nepřeloženém) režimu; překlady typů návrat na začátek řádku a znak odřádkování jsou potlačeny.
 
-V režimu textových (přeložit) jsou kombinace vrátit-nový řádek (CR-LF) znaků CR přeložit na jednu nový řádek (LF) znaků na vstup; LF znaky jsou převedeny na znaky CR LF kombinace na výstup. Příkaz CTRL+Z je na vstupu interpretován jako znak konce souboru. V souborech otevřen pro čtení nebo zápis a čtení s **"+"**, běhové knihovny kontroluje CTRL + Z na konci souboru a odstraní ji, pokud je to možné. To je provést, protože používá [fseek](fseek-fseeki64.md) a [ftell –](ftell-ftelli64.md) přesunout v souboru může způsobit [fseek](fseek-fseeki64.md) chovat nesprávně blíží konec souboru. **t** možnost je rozšířením Microsoft, které by se neměla používat, kde je žádoucí přenositelnost ANSI.
+V textovém (přeloženém) režimu jsou kombinace návratový znak odřádkování (CR-LF) návrat na začátek řádku přeloženy do jednoho konce řádku (LF) znaků na vstupu; LF jsou přeloženy na výstupu jako kombinace CR-LF. Příkaz CTRL+Z je na vstupu interpretován jako znak konce souboru. V souborech otevřených pro čtení nebo zápis a čtení s **"a +"**, knihovny run-time kontroluje CTRL + Z na konci souboru a odstraní ji, pokud je to možné. Toto je provedeno z důvodu použití [fseek](fseek-fseeki64.md) a [ftell –](ftell-ftelli64.md) pro přesun v rámci souboru mohou způsobit [fseek](fseek-fseeki64.md) nesprávné chování na konci souboru. **t** možnost je rozšířením společnosti Microsoft, který by se neměly kde je žádoucí přenositelnost ANSI.
 
-Pokud **t** nebo **b** není uveden v *režimu*, je výchozí režim překladu definované globální proměnná [_fmode –](../../c-runtime-library/fmode.md). Pokud **t** nebo **b** předponou argument, funkce selže a vrátí je **NULL**.
+Pokud **t** nebo **b** není uveden v *režimu*, je výchozí režim překladu definován pomocí globální proměnné [_fmode](../../c-runtime-library/fmode.md). Pokud **t** nebo **b** předponou argumentu, funkce selže a vrátí **NULL**.
 
-Informace o textovém a binárním režimu, najdete v části [Text a vstupně-výstupní soubor binárního režimu](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
+Diskuzi o textovém a binárním režimu, najdete v článku [textového a binárního režimu souboru vstupně-výstupních operací](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**freopen –**|\<stdio.h>|
+|**freopen**|\<stdio.h>|
 |**_wfreopen**|\<stdio.h > nebo \<wchar.h >|
 
-Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou, **stdin –**, **stdout**, a **stderr**, musí být přesměrována C běhové funkce mohli používat v aplikacích pro UPW . Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Konzole není podporována v aplikacích pro univerzální platformu Windows (UPW). Standardní datový proud popisovačů, které jsou spojeny s konzolou, **stdin**, **stdout**, a **stderr**, musí být přesměrován před funkcí jazyka C za běhu můžete použít v aplikacích pro UWP . Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -168,9 +158,9 @@ successfully reassigned
 This will go to the file 'freopen.out'
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>
 [_fdopen, _wfdopen](fdopen-wfdopen.md)<br/>
 [_fileno](fileno.md)<br/>

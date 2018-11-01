@@ -1,27 +1,18 @@
 ---
-title: Závažná méně závažná chyba nástroje ML A2078 | Dokumentace Microsoftu
-ms.custom: ''
+title: Méně závažná chyba nástroje ML A2078
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
 ms.topic: error-reference
 f1_keywords:
 - A2078
-dev_langs:
-- C++
 helpviewer_keywords:
 - A2078
 ms.assetid: 42ac48fd-ac7f-4e74-a11e-20181d443faf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eb059f9deffb55775ba2b392a0ab725453c64b81
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 92383d0a4b560241bf9534cc15b3fec4f067fe72
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43689672"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50582673"
 ---
 # <a name="ml-nonfatal-error-a2078"></a>Méně závažná chyba nástroje ML A2078
 

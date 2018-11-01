@@ -1,10 +1,6 @@
 ---
-title: _dupenv_s –, _wdupenv_s – | Microsoft Docs
-ms.custom: ''
+title: _dupenv_s, _wdupenv_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _dupenv_s
 - _wdupenv_s
@@ -28,8 +24,6 @@ f1_keywords:
 - dupenv_s
 - _tdupenv_s
 - _wdupenv_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _dupenv_s function
 - _tdupenv_s function
@@ -39,23 +33,19 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5a918b866b0b43fb0e6b31e2deb5d9861dabe9a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bc8af3282b57c9fa411aac97f5fa4d414bc3305b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402111"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646495"
 ---
 # <a name="dupenvs-wdupenvs"></a>_dupenv_s, _wdupenv_s
 
-Získá hodnotu z aktuální prostředí.
+Získá hodnotu z aktuálního prostředí.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -75,7 +65,7 @@ errno_t _wdupenv_s(
 ### <a name="parameters"></a>Parametry
 
 *Vyrovnávací paměti*<br/>
-Vyrovnávací paměť pro uložení hodnota proměnné.
+Vyrovnávací paměť pro ukládání hodnotu proměnné.
 
 *numberOfElements*<br/>
 Velikost *vyrovnávací paměti*.
@@ -85,32 +75,32 @@ Název proměnné prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu, kód chyby při selhání.
+Nula v případě úspěchu; při selhání kód chyby.
 
-Tyto funkce ověřit jejich parametrů; Pokud *vyrovnávací paměti* nebo *název_proměnné* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, nastavte funkce **errno** k **einval –** a vrátit **einval –**.
+Tyto funkce ověřují své parametry; Pokud *vyrovnávací paměti* nebo *název_proměnné* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, funkce nastaví **errno** k **EINVAL** a vrátit **EINVAL**.
 
-Pokud tyto funkce nemůže přidělit dostatek paměti, nastavují *vyrovnávací paměti* k **NULL** a *numberOfElements* 0, a vrátí **enomem –**.
+Pokud těmto funkcím nelze přidělit dostatek paměti, že nastavené *vyrovnávací paměti* k **NULL** a *numberOfElements* na 0 a vrátí **ENOMEM**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Dupenv_s –** funkce vyhledá seznamu proměnných prostředí pro *název_proměnné*. Pokud je nalezena proměnná, **_dupenv_s –** přiděluje vyrovnávací paměť a zkopíruje hodnota proměnné do vyrovnávací paměti. Adresa a délka vyrovnávací paměti na jsou vráceny v *vyrovnávací paměti* a *numberOfElements*. Přidělí vyrovnávací paměť samostatně, **_dupenv_s –** poskytuje pohodlnější alternativa k [getenv_s –, _wgetenv_s –](getenv-s-wgetenv-s.md).
+**_Dupenv_s –** funkce prohledává seznam proměnných prostředí pro *název_proměnné*. Pokud proměnná není nalezena, **_dupenv_s –** přidělí vyrovnávací paměť a kopíruje do vyrovnávací paměti hodnotu proměnné. Adresu a délku vyrovnávací paměti jsou vráceny v *vyrovnávací paměti* a *numberOfElements*. Přidělením samotné vyrovnávací paměti **_dupenv_s –** poskytuje pohodlnější alternativu k [getenv_s – _wgetenv_s –](getenv-s-wgetenv-s.md).
 
 > [!NOTE]
-> Odpovídá volací program uvolnit paměť voláním [volné](free.md).
+> Je odpovědností volajícího programu uvolnit paměť pomocí volání [bezplatné](free.md).
 
-Pokud není nalezena proměnná, pak *vyrovnávací paměti* je nastaven na **NULL**, *numberOfElements* je nastaven na hodnotu 0, a návratová hodnota je 0, protože tato situace se nepovažuje za chybu Podmínka.
+Pokud není nalezena proměnné, pak *vyrovnávací paměti* je nastavena na **NULL**, *numberOfElements* je nastavena na hodnotu 0, a návratová hodnota je 0, protože tato situace není považována za chybu Podmínka.
 
-Pokud si nejste zájem o velikost vyrovnávací paměti můžete předat **NULL** pro *numberOfElements*.
+Pokud si nejste zájem o velikost vyrovnávací paměti lze předat **NULL** pro *numberOfElements*.
 
-**_dupenv_s –** není malá a velká písmena v operačním systému Windows. **_dupenv_s –** používá kopii ukazující na globální proměnnou prostředí **_environ –** pro přístup k prostředí. V části poznámky v [getenv_s –, _wgetenv_s –](getenv-s-wgetenv-s.md) diskuzi o **_environ –**.
+**_dupenv_s –** není malá a velká písmena v operačním systému Windows. **_dupenv_s –** použije kopii prostředí, na které odkazuje globální proměnnou **_environ** pro přístup k prostředí. Viz poznámky v [getenv_s – _wgetenv_s –](getenv-s-wgetenv-s.md) diskuzi o **_environ**.
 
-Hodnota v *vyrovnávací paměti* je kopie hodnota proměnné prostředí; jeho změnou nemá žádný vliv na prostředí. Použití [_putenv_s –, _wputenv_s –](putenv-s-wputenv-s.md) funkce ke změně hodnoty proměnné prostředí.
+Hodnota v *vyrovnávací paměti* je kopie hodnoty proměnné prostředí; její změna nemá žádný vliv na prostředí. Použití [_putenv_s _wputenv_s –](putenv-s-wputenv-s.md) funkce ke změně hodnoty proměnné prostředí.
 
-**_wdupenv_s –** je verze široká charakterová **_dupenv_s –**; argumenty **_wdupenv_s –** jsou široká charakterová řetězce. **_Wenviron –** – globální proměnná je verze široká charakterová **_environ –**. V části poznámky v [getenv_s –, _wgetenv_s –](getenv-s-wgetenv-s.md) Další informace o **_wenviron –**.
+**_wdupenv_s –** je verze širokého znaku **_dupenv_s –**; argumenty **_wdupenv_s –** jsou širokoznaké řetězce. **_Wenviron** globální proměnná je verze širokého znaku **_environ**. Viz poznámky v [getenv_s – _wgetenv_s –](getenv-s-wgetenv-s.md) pro další informace o **_wenviron**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tdupenv_s –**|**_dupenv_s**|**_dupenv_s**|**_wdupenv_s**|
 
@@ -121,7 +111,7 @@ Hodnota v *vyrovnávací paměti* je kopie hodnota proměnné prostředí; jeho 
 |**_dupenv_s**|\<stdlib.h>|
 |**_wdupenv_s**|\<stdlib.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -149,7 +139,7 @@ pathext = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.pl
 nonexistentvariable = (null)
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)<br/>
 [Konstanty prostředí](../../c-runtime-library/environmental-constants.md)<br/>

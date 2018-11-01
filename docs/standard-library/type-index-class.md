@@ -1,33 +1,23 @@
 ---
-title: type_index – třída | Microsoft Docs
-ms.custom: ''
+title: type_index – třída
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - typeindex/std::type_index
-dev_langs:
-- C++
 helpviewer_keywords:
 - type_index class
 ms.assetid: db366119-74cb-43e8-aacf-9679e561fa2f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e301b8d47c1a054a5b80bff105950d876d90b047
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8807a041ab1c6ef47a9c3c12dac2688f121f6cfa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853993"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650488"
 ---
 # <a name="typeindex-class"></a>type_index – třída
 
-`type_index` Třída zabalí ukazatel na [type_info – třída](../cpp/type-info-class.md) pomoct indexování tyto objekty.
+`type_index` Třídy zabalí ukazatel na [type_info – třída](../cpp/type-info-class.md) pomáhat při indexování tyto objekty.
 
-type_index – třída {veřejné: type_index (const type_info & tinfo); const char *name() const; size_t – hash_code() const; bool – operátor == (const type_info & doprava) const; bool – operátor! = (const type_info & doprava) const; <(const type_ bool – operátor informace o & doprava) const; BOOL – operátor\<= (const type_info & doprava) const; bool – operátor > (const type_info & doprava) const; bool – operátor > = (const type_info & doprava) const;};
+type_index – třída {public: type_index – (const type_info & tinfo); const char *name() const, size_t hash_code() const, bool – operátor == (const type_info & rava) const; bool – operátor! = (const type_info & pravé) const; <(const type_ bool – operátor informace o & rava) const; BOOL – operátor\<= (const type_info & pravé) const; bool – operátor > (const type_info & rava) const; bool – operátor > = (const type_info & pravé) const;};
 
 Konstruktor inicializuje `ptr` k `&tinfo`.
 
@@ -47,7 +37,7 @@ Konstruktor inicializuje `ptr` k `&tinfo`.
 
 `operator>=` Vrátí `!(*this < right)`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Informace o typu modulu runtime](../cpp/run-time-type-information.md)<br/>
 [\<typeindex >](../standard-library/typeindex.md)<br/>

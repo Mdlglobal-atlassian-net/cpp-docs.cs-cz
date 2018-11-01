@@ -1,11 +1,6 @@
 ---
-title: ctan, ctanf, ctanl | Microsoft Docs
-ms.custom: ''
+title: ctan ctanf, ctanl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - ctan
 - ctanf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/ctan
 - complex/ctanf
 - complex/ctanl
-dev_langs:
-- C++
 helpviewer_keywords:
 - ctan function
 - ctanf function
 - ctanl function
 ms.assetid: d3cbd25c-1e93-4a6d-8154-da42921f7223
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c272e34202f81a9f16eab5b57da35c548790c417
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2d4da5a39658e46bc633ae3bd9c8f6f0a01555aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396424"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50661744"
 ---
-# <a name="ctan-ctanf-ctanl"></a>ctan, ctanf, ctanl
+# <a name="ctan-ctanf-ctanl"></a>ctan ctanf, ctanl
 
-Načte tangens čísla komplexní.
+Načte tangens komplexního čísla.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -75,30 +64,30 @@ _Lcomplex ctanl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Komplexní číslo, které představuje úhel v radiánech.
+Komplexní čísla, která představuje úhel v radiánech.
 
 ## <a name="return-value"></a>Návratová hodnota
 
 Tangens *z*.
 
-|Vstup|Výjimka SEH|**_matherr –** výjimky|
+|Vstup|Výjimka SEH|**_matherr** výjimky|
 |-----------|-------------------|--------------------------|
-|ROZMEZÍ ∞, QNAN, IND|žádná|_DOMAIN –|
-|∞ rozmezí (**tan**, **tanf –**)|NEPLATNÝ|_DOMAIN –|
+|ROZMEZÍ ∞, QNAN, AJÍT|žádná|_DOMÉNA|
+|Rozmezí ∞ (**tan**, **tanf –**)|NEPLATNÝ|_DOMÉNA|
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **ctan** , přijmout a vrátit **_Fcomplex** a **_Lcomplex** hodnoty. V programu C **ctan** vždy provede a vrátí **_Dcomplex** hodnotu.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **ctan** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **ctan** vždy převezme a vrátí **_Dcomplex** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Hlavička C|Hlavička C++|
+|Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
 |**ctan**, **ctanf**, **ctanl**|\<complex.h>|\<ccomplex >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>
