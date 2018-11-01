@@ -1,10 +1,6 @@
 ---
-title: _fileno – | Microsoft Docs
-ms.custom: ''
+title: _fileno
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fileno
 apilocation:
@@ -22,28 +18,22 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _fileno
-dev_langs:
-- C++
 helpviewer_keywords:
 - file handles [C++], getting from streams
 - fileno function
 - _fileno function
 - streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9bc03bcd92eb8040b7eefadd0c109e4e887f7304
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 682ab4b01a663bd9a6314138aa692b1c05b7437a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398862"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646603"
 ---
 # <a name="fileno"></a>_fileno
 
-Získá popisovače souborů, které jsou přidružené k datového proudu.
+Získá popisovač souboru přidruženého datového proudu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,21 +45,21 @@ int _fileno(
 
 ### <a name="parameters"></a>Parametry
 
-*Datový proud*<br/>
-Ukazatel **souboru** struktura.
+*Stream*<br/>
+Ukazatel **souboru** struktury.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_fileno –** vrátí popisovač souboru. Neexistuje žádný návratový chyby. Pokud není definován výsledek *datového proudu* neurčuje soubor otevřený. Pokud datový proud je **NULL**, **_fileno –** volá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, tato funkce vrátí hodnotu -1 a nastaví je povoleno spuštění **errno** k **einval –**.
+**_fileno** vrátí popisovač souboru. Není vrácena žádná chyba. Výsledek není definován, pokud *stream* neurčuje otevřený soubor. Pokud je datový proud **NULL**, **_fileno** vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce vrátí hodnotu -1 a nastaví **errno** k **EINVAL**.
 
-Další informace o těchto a dalších kódy chyb najdete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 > [!NOTE]
-> Pokud **stdout** nebo **stderr** není spojen s výstupní proud (například v aplikaci Windows bez okna konzoly), je popisovače souborů vrátil -2. V předchozích verzích byla popisovače souborů, vrátí hodnotu -1. Tato změna umožňuje aplikacím rozlišit tuto podmínku z k chybě.
+> Pokud **stdout** nebo **stderr** není spojen s výstupní datový proud (například v aplikaci Windows bez okna konzoly), je popisovač souboru vrátil -2. V předchozích verzích byla popisovač souboru, vrátí -1. Tato změna umožňuje aplikace dokázaly rozlišit k tomuto stavu z chyby.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Fileno –** rutina vrátí popisovače souborů, které jsou aktuálně přidružen *datového proudu*. Tato rutina je implementováno jako funkce i jako makra. Informace o výběru buď implementace najdete v tématu [výběru mezi funkcemi a makry](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).
+**_Fileno** rutina vrátí popisovač souboru, který je aktuálně přiřazen k *stream*. Tato rutina se implementuje jako funkce i makra. Informace o výběru některé implementace naleznete v tématu [výběru mezi funkcemi a makry](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -77,7 +67,7 @@ Další informace o těchto a dalších kódy chyb najdete v tématu [_doserrno 
 |--------------|---------------------|
 |**_fileno**|\<stdio.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -103,9 +93,9 @@ The file descriptor for stdout is 1
 The file descriptor for stderr is 2
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [_fdopen, _wfdopen](fdopen-wfdopen.md)<br/>
 [_filelength, _filelengthi64](filelength-filelengthi64.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>

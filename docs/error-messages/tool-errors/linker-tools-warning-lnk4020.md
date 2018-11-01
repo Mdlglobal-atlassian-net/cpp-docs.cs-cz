@@ -1,31 +1,21 @@
 ---
-title: LNK4020 upozornění Linkerů | Microsoft Docs
-ms.custom: ''
+title: LNK4020 upozornění Linkerů
 ms.date: 05/29/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK4020
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK4020
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e55239b90910f6c151949c53939d4f8ed7c15c5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 7810fd9a97a8f6e22ad362819a024358a9f4b07c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34570900"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609739"
 ---
-# <a name="linker-tools-warning-lnk4020"></a>Upozornění LNK4020 nástroje linkeru
+# <a name="linker-tools-warning-lnk4020"></a>LNK4020 upozornění Linkerů
 
-> Typ záznamu v '*filename*' je poškozený; některé symboly a typy nemusí být dostupný z ladicího programu
+> záznam typu v "*filename*' je poškozen; některé symboly a typy nemusejí být dostupné z ladicího programu
 
-Soubor PDB *filename* má poškozená typu záznamu.
+Soubor PDB *filename* má poškozený typ záznamu.
 
-Tento problém je často sekundární s jinými problémy sestavení; Pokud se jedná o první problém hlášené sestavení, řešit s chybami a upozorněními první. Pokud je to první vykazuje problém, musíte k vyčištění sestavení adresáře a znovu sestavte projekt. Pokud chcete použít paralelní sestavení procesy, najdete v části Pokud chyba přetrvává při serializaci buildu.
+Tento problém je často sekundární další problémy se sestavením; Pokud je první problém ohlášené sestavení, řešit tyto chyby a upozornění na první. Pokud je toto první nahlášeného problému, budete muset čištění adresáře sestavení a znovu sestavte projekt. Pokud používáte procesy paralelního buildu, přečtěte si Pokud chyba přetrvává při serializaci sestavení.

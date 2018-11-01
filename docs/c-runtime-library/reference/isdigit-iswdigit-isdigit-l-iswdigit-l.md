@@ -1,10 +1,6 @@
 ---
-title: IsDigit –, iswdigit –, _isdigit_l –, _iswdigit_l – | Microsoft Docs
-ms.custom: ''
+title: isdigit, iswdigit, _isdigit_l, _iswdigit_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isdigit_l
 - iswdigit
@@ -30,8 +26,6 @@ f1_keywords:
 - isdigit
 - _istdigit
 - _istdigit_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - iswdigit function
 - iswdigit_l function
@@ -44,20 +38,16 @@ helpviewer_keywords:
 - _ismbcdigit_l function
 - _isdigit_l function
 ms.assetid: 350b0093-843a-47b0-954e-c1776e8a3853
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7701b287d6ec4de757249aca5ccd252b38c58267
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0bffe54bb68eaf7a26c338ad52522ff9b48335aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401295"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636576"
 ---
 # <a name="isdigit-iswdigit-isdigitl-iswdigitl"></a>isdigit, iswdigit, _isdigit_l, _iswdigit_l
 
-Určuje, zda celé představuje znak desetinných číslic.
+Určuje, zda celočíselná hodnota představuje znak desítkové číslice.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -81,38 +71,38 @@ int _iswdigit_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Celé číslo pro testování.
+Celé číslo k testování.
 
 *Národní prostředí*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Všechny tyto rutiny vrátí nenulové hodnoty, pokud *c* je konkrétní reprezentace znaku desetinných číslic. **IsDigit –** vrátí nenulovou hodnotu, pokud *c* je desítková číslice (0 - 9). **iswdigit –** vrátí nenulovou hodnotu, pokud *c* je široké znak, který odpovídá znak desetinných číslic. Všechny tyto rutiny vrátí hodnotu 0, pokud *c* nesplňuje podmínky testu.
+Každá z těchto rutin vrátí nenulovou hodnotu, pokud *c* je konkrétní reprezentace znaku desítkové číslice. **IsDigit** vrací nenulovou hodnotu, pokud *c* je desítková číslice (0 - 9). **iswdigit –** vrací nenulovou hodnotu, pokud *c* je široký znak odpovídající znaku desítkové číslice. Každá z těchto rutin vrátí hodnotu 0, pokud *c* nesplňuje testovací podmínku.
 
-Verze tyto funkce, které mají **_l** používat příponu národní prostředí, je předaná místo aktuální národní prostředí pro jejich chování závislých na národním prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Verze těchto funkcí, které mají **_l** příponu použít předané národní prostředí namísto aktuálního národního prostředí pro své chování závislé na národním prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-Chování **IsDigit –** a **_isdigit_l –** není definován, pokud *c* není EOF nebo v rozsahu 0 až 0xFF (včetně). V případě použití knihovny ladění CRT a *c* není jednou z těchto hodnot, funkce raise kontrolní výrazy.
+Chování **isdigit** a **_isdigit_l –** není definováno, pokud *c* není konec souboru nebo v rozsahu 0 až 0xFF, včetně. Při použití ladicí CRT knihovny a *c* není jednou z těchto hodnot, funkce vyvolá kontrolní výraz.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_istdigit –**|**IsDigit –**|[_ismbcdigit](ismbcalnum-functions.md)|**iswdigit –**|
+|**_istdigit –**|**IsDigit**|[_ismbcdigit](ismbcalnum-functions.md)|**iswdigit –**|
 |**_istdigit_l –**|**_isdigit_l**|[_ismbcdigit_l](ismbcalnum-functions.md)|**_iswdigit_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**IsDigit –**|\<ctype.h >|
+|**IsDigit**|\<ctype.h >|
 |**iswdigit –**|\<ctype.h > nebo \<wchar.h >|
 |**_isdigit_l**|\<ctype.h >|
 |**_iswdigit_l**|\<ctype.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Klasifikace znaků](../../c-runtime-library/character-classification.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>

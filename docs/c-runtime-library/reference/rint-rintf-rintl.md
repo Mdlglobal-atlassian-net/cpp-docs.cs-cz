@@ -1,10 +1,6 @@
 ---
-title: tisknout, rintf, rintl | Microsoft Docs
-ms.custom: ''
+title: rint, rintf, rintl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - rintf
 - rintl
@@ -26,27 +22,21 @@ f1_keywords:
 - rintf
 - rintl
 - rint
-dev_langs:
-- C++
 helpviewer_keywords:
 - rintf function
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 784a540982c41ba7aa144559d3846746b59481f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9e0e3875b7484735b5439c6c0e0a7252940d4552
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407285"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609479"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
-Zaokrouhlí na nejbližší celé číslo s plovoucí desetinnou čárkou formát hodnotu s plovoucí desetinnou čárkou.
+Zaokrouhlí hodnotu s plovoucí desetinnou čárkou na nejbližší celé číslo ve formátu s plovoucí desetinnou čárkou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,28 +54,28 @@ long double rint( long double x );  // C++ only
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Hodnota s plovoucí desetinnou čárkou má být zaokrouhleno.
+Hodnota s plovoucí desetinnou čárkou k zaokrouhlení.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Tisknout** funkce vrátí hodnotu s plovoucí desetinnou čárkou, která představuje na nejbližší celé číslo na *x*. Uprostřed hodnoty jsou zaokrouhleny podle aktuálního nastavení režimu zaokrouhlení s plovoucí desetinnou čárkou, stejně jako **nearbyint –** funkce. Na rozdíl od **nearbyint –** funkce, **tisknout** může vyvolat funkce **FE_INEXACT** výjimek plovoucí desetinné čárky, pokud výsledek se liší v hodnotě v argumentu. Neexistuje žádný návratový chyby.
+**Isknout** funkce vrátí hodnotu s plovoucí desetinnou čárkou, která představuje na nejbližší celé číslo k *x*. Středové hodnoty jsou zaokrouhleny podle aktuálního nastavení režimu zaokrouhlení s plovoucí desetinnou čárkou, stejné jako **nearbyint –** funkce. Na rozdíl od **nearbyint –** funkce, **isknout** funkce může vyvolat **FE_INEXACT** výjimek plovoucí desetinné čárky, pokud výsledek se liší v hodnotě z argumentu. Není vrácena žádná chyba.
 
-|Vstup|Výjimka SEH|**_matherr –** výjimky|
+|Vstup|Výjimka SEH|**_matherr** výjimky|
 |-----------|-------------------|--------------------------|
-|ROZMEZÍ ∞, QNAN, IND|žádná|žádná|
+|ROZMEZÍ ∞, QNAN, AJÍT|žádná|žádná|
 |Denormals|EXCEPTION_FLT_UNDERFLOW|žádná|
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **tisknout** , přijmout a vrátit **float** a **dlouho** **dvojité** hodnoty. V programu C **tisknout** vždy provede a vrátí **dvojité**.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **isknout** , která používají a vrací **float** a **dlouhé** **double** hodnoty. V programu jazyka C **isknout** vždy převezme a vrátí **double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Hlavička C|Hlavička C++|
+|Funkce|Záhlaví C|Hlaviček jazyka C++|
 |--------------|--------------|------------------|
-|**Tisknout**, **rintf**, **rintl**|\<Math.h >|\<cmath – >|
+|**rint**, **rintf**, **rintl**|\<Math.h >|\<cmath >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -123,7 +113,7 @@ rintl(2.500000) is 3
 rintl(-2.500000) is -3
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

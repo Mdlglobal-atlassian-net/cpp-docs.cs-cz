@@ -1,32 +1,22 @@
 ---
-title: unchecked_array_iterator – třída | Microsoft Docs
-ms.custom: ''
+title: unchecked_array_iterator – třída
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - stdext::unchecked_array_iterator
-dev_langs:
-- C++
 ms.assetid: 693b3b30-4e3a-465b-be06-409700bc50b1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a483d1509ce14a9192c237c5475ec9b8e65d24e6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9b3db474bedca50922334bd4dbd09c71d4e6e987
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856186"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626197"
 ---
 # <a name="uncheckedarrayiterator-class"></a>unchecked_array_iterator – třída
 
-`unchecked_array_iterator` Třída umožňuje zabalit do nezaškrtnuté iterator pole nebo ukazatel. Tato třída slouží jako obálku (pomocí [make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator) funkce) pro nezpracovanou ukazatele nebo pole jako cílové způsob, jak spravovat upozornění nezaškrtnuté ukazatel místo globálně silencing tato upozornění. Pokud je to možné, raději zaškrtnuté verze této třídy [checked_array_iterator –](../standard-library/checked-array-iterator-class.md).
+`unchecked_array_iterator` Třída umožňuje zabalit pole nebo ukazatel do nekontrolovaného iterátoru. Použijte tuto třídu jako obálku (pomocí [make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator) funkce) pro nezpracované ukazatele nebo pole jako cílený způsob, jak spravovat Nezkontrolovaná upozornění ukazatele namísto globálního umlčení těchto upozornění. Pokud je to možné, upřednostněte kontrolovanou verzi této třídy, [checked_array_iterator](../standard-library/checked-array-iterator-class.md).
 
 > [!NOTE]
-> Tato třída je rozšíření Microsoft standardní knihovny jazyka C++. Kód implementovaný pomocí této funkce není přenosný do standardního prostředí pro sestavování v jazyce C++, která toto rozšíření společnosti Microsoft nepodporují.
+> Tato třída je rozšířením společnosti Microsoft pro standardní knihovnu jazyka C++. Kód implementovaný pomocí této funkce není přenosný do standardního prostředí pro sestavování v jazyce C++, která toto rozšíření společnosti Microsoft nepodporují.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,17 +27,17 @@ class unchecked_array_iterator;
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída je definována v [stdext –](../standard-library/stdext-namespace.md) oboru názvů.
+Tato třída je definována v [stdext](../standard-library/stdext-namespace.md) oboru názvů.
 
-Toto je zaškrtnuté políčko verzi [checked_array_iterator – třída](../standard-library/checked-array-iterator-class.md) a podporuje všechny stejné přetížení a členy. Další informace o funkci zaškrtnuté iterator s příklady kódu najdete v tématu [zaškrtnutí iterátory](../standard-library/checked-iterators.md).
+Toto je nekontrolovaná verze [třídy checked_array_iterator](../standard-library/checked-array-iterator-class.md) a podporuje všechna stejná přetížení a členy. Další informace o funkci kontrolovaného iterátoru s příklady kódu naleznete v tématu [Checked Iterators](../standard-library/checked-iterators.md).
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<iterator >
+**Záhlaví:** \<iterátor >
 
-**Namespace:** stdext –
+**Namespace:** stdext
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[\<iterator >](../standard-library/iterator.md)<br/>
+[\<iterátor >](../standard-library/iterator.md)<br/>
 [Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)<br/>

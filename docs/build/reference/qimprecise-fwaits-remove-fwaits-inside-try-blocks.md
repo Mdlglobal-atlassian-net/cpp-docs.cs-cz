@@ -1,28 +1,18 @@
 ---
-title: -Qimprecise_fwaits (odebrání příkazů fwaits z bloků Try) | Dokumentace Microsoftu
-ms.custom: ''
+title: /Qimprecise_fwaits (odebrání příkazů fwaits z bloků Try)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /Qimprecise_fwaits
-dev_langs:
-- C++
 helpviewer_keywords:
 - -Qimprecise_fwaits compiler option (C++)
 - /Qimprecise_fwaits compiler option (C++)
 ms.assetid: b1501f21-7e08-4fea-95e8-176ec03a635b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cad23ebdd2289791b50b0e956368b934fe0f1087
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: eb01d39ccbbdac60d629f95b9eb821ca0f2f5731
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46385193"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662394"
 ---
 # <a name="qimprecisefwaits-remove-fwaits-inside-try-blocks"></a>/Qimprecise_fwaits (odebrání příkazů fwaits z bloků Try)
 
@@ -50,7 +40,7 @@ Tato možnost nemá žádný vliv, pokud **/FP: except** není zároveň zadaná
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Viz také
 

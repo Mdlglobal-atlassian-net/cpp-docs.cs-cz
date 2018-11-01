@@ -1,10 +1,6 @@
 ---
-title: Iresourcemanager – struktura | Dokumentace Microsoftu
-ms.custom: ''
+title: IResourceManager – struktura
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - IResourceManager
 - CONCRTRM/concurrency::IResourceManager
@@ -15,21 +11,15 @@ f1_keywords:
 - CONCRTRM/concurrency::IResourceManager::IResourceManager::Reference
 - CONCRTRM/concurrency::IResourceManager::IResourceManager::RegisterScheduler
 - CONCRTRM/concurrency::IResourceManager::IResourceManager::Release
-dev_langs:
-- C++
 helpviewer_keywords:
 - IResourceManager structure
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 26181c12bd3775a4fee0086be8459251ddf25afd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7c6ed48c8896b54faa8418719f0ab7c7fa1df7c1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413663"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50657195"
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager – struktura
 
@@ -165,7 +155,7 @@ virtual ISchedulerProxy *RegisterScheduler(
 *pScheduler*<br/>
 `IScheduler` Rozhraní pro scheduler k registraci.
 
-*Verze*<br/>
+*version*<br/>
 Verze rozhraní komunikace Plánovač používá ke komunikaci s Resource Managerem. S použitím verze umožňuje Resource Manageru vyvíjí komunikačního rozhraní zároveň vám umožní získat přístup do starší funkce plánovače. Plánovačům, které chcete používat funkce služby Správce prostředků k dispozici v sadě Visual Studio 2010 měli používat verzi `CONCRT_RM_VERSION_1`.
 
 ### <a name="return-value"></a>Návratová hodnota
