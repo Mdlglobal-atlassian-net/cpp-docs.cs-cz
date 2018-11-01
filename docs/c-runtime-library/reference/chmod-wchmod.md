@@ -1,10 +1,6 @@
 ---
-title: _chmod –, _wchmod – | Microsoft Docs
-ms.custom: ''
+title: _chmod, _wchmod
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _chmod
 - _wchmod
@@ -25,8 +21,6 @@ f1_keywords:
 - _chmod
 - _wchmod
 - wchmod
-dev_langs:
-- C++
 helpviewer_keywords:
 - _chmod function
 - wchmod function
@@ -35,20 +29,16 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0e4944f871195b276189014ed9d5d294b9b445fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7f3133aac1548be5cb497fe32ae4f9f1c0e238d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399945"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595127"
 ---
 # <a name="chmod-wchmod"></a>_chmod, _wchmod
 
-Změní nastavení oprávnění souborů.
+Změní nastavení souboru oprávnění.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -60,30 +50,30 @@ int _wchmod( const wchar_t *filename, int pmode );
 ### <a name="parameters"></a>Parametry
 
 *Název souboru*<br/>
-Název existující soubor.
+Název existujícího souboru.
 
 *pmode*<br/>
-Nastavení oprávnění u souboru.
+Nastavení oprávnění k souboru.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Tyto funkce vrátí 0, pokud se úspěšně změnil nastavení oprávnění. Vrácená hodnota -1 označuje selhání. Pokud zadaný soubor nebyl nalezen, **errno** je nastaven na **enoent –**; Pokud je parametr platný **errno** je nastaven na **einval –**.
+Tyto funkce vrátí 0, pokud na nastavení oprávnění se úspěšně změnil. Návratová hodnota-1 označuje chybu. Pokud zadaný soubor nebyl nalezen, **errno** je nastavena na **ENOENT**; Pokud parametr není platný, **errno** je nastavena na **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Chmod –** funkce změní nastavení oprávnění souboru určeného *filename*. Nastavení oprávnění ovládací prvky pro čtení a zápis do souboru. Celočíselný výraz *pmode* obsahuje jedno nebo obě následující manifestu konstanty definované v SYS\Stat.h.
+**_Chmod –** funkce změní nastavení oprávnění souboru určeném *filename*. Nastavení oprávnění řídit čtení a zápis do souboru. Celočíselný výraz *pmode* obsahuje jednu nebo obě z následujících konstant manifestu definovaných v SYS\Stat.h.
 
 |*pmode*|Význam|
 |-|-|
-**_S_IREAD –**|Pouze čtení povolené.
-**_S_IWRITE –**|Zápis povolen. (Ve skutečnosti povoluje čtení a zápis.)
-**_S_IREAD –** &AMP;#124; **_S_IWRITE –**|Čtení a zápis povolen.
+**_S_IREAD**|Povoleno jen čtení.
+**_S_IWRITE**|Zápis povolen. (V podstatě povoluje čtení a zápis.)
+**_S_IREAD** &AMP;#124; **_S_IWRITE**|Čtení a zápis povolen.
 
-Pokud jsou zadány oba konstanty, jsou spojeny s bitové hodnotě or – operátor (**|**). Není-li oprávnění k zápisu, soubor je jen pro čtení. Upozorňujeme, že všechny soubory jsou vždy čitelný; není možné udělit oprávnění jen pro zápis. Proto režimů **_s_iwrite –** a **_s_iread –** | **_s_iwrite –** odpovídají.
+Když jsou uvedeny oba konstanty, jsou spojeny s bitový operátor or (**|**). Pokud tento parametr není zadaný oprávnění k zápisu, soubor je jen pro čtení. Všimněte si, že všechny soubory budou vždy číst; není možné poskytnout oprávnění jen pro zápis. Proto režimy **_S_IWRITE** a **_S_IREAD** | **_S_IWRITE** jsou ekvivalentní.
 
-**_wchmod –** je verze široká charakterová **_chmod –**; *filename* argument **_wchmod –** je široká charakterová řetězec. **_wchmod –** a **_chmod –** chovat jinak shodně.
+**_wchmod –** je verze širokého znaku **_chmod –**; *filename* argument **_wchmod –** je širokoznaký řetězec. **_wchmod –** a **_chmod –** se jinak chovají stejně.
 
-Tato funkce ověří jeho parametry. Pokud *pmode* není kombinace jednoho z manifestu konstanty nebo zahrnuje alternativní sady konstant, funkce jednoduše přeskočí ty. Pokud *filename* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **errno** je nastaven na **einval –** a funkce vrátí hodnotu -1.
+Tato funkce ověřuje své parametry. Pokud *pmode* není kombinaci některou z konstant manifestu nebo zahrnuje alternativní sadu konstant, funkce jednoduše ignoruje ty. Pokud *filename* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **errno** je nastavena na **EINVAL** a funkce vrátí hodnotu -1.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -93,12 +83,12 @@ Tato funkce ověří jeho parametry. Pokud *pmode* není kombinace jednoho z man
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
 |**_chmod –**|\<IO.h >|\<SYS/Types.h >, \<sys/stat.h >, \<errno.h >|
 |**_wchmod**|\<IO.h > nebo \<wchar.h >|\<SYS/Types.h >, \<sys/stat.h >, \<errno.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -177,7 +167,7 @@ Access is denied.
 Mode set to read/write
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zpracování souborů](../../c-runtime-library/file-handling.md)<br/>
 [_access, _waccess](access-waccess.md)<br/>

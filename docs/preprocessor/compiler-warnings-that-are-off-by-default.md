@@ -1,25 +1,16 @@
 ---
-title: Upozornění kompilátoru, které jsou ve výchozím nastavení vypnuta | Dokumentace Microsoftu
+title: Upozornění kompilátoru, která jsou ve výchozím natavení vypnuta.
 ms.date: 05/30/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c7b48b2382ee22cc5d11c1145dc494aca4e7997f
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 48c18ce5af758e1329f149bc49969dad733af88f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083188"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50651370"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Upozornění kompilátoru, které jsou ve výchozím nastavení vypnuta
 Kompilátor obsahuje upozornění, která jsou vypnuté ve výchozím nastavení, protože většina vývojářů nechcete k jejich zobrazení. V některých případech, představují stylistické podle vlastní volby, nebo jsou společné idiomy ve starším kódu nebo využít výhod rozšíření společnosti Microsoft pro jazyk. V ostatních případech označují oblast, ve které programátoři často vytvářet nesprávné předpoklady, které mohou vést k neočekávaným nebo nedefinované chování. Některá tato upozornění může být velmi hlučného v záhlaví knihovny. Knihovny runtime jazyka C a standardní knihovny C++ jsou určeny k emitování žádná upozornění pouze na úrovni upozornění [/W4](../build/reference/compiler-option-warning-level.md).

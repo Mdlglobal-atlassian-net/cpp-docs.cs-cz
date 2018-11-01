@@ -1,10 +1,6 @@
 ---
-title: ungetc –, ungetwc – | Microsoft Docs
-ms.custom: ''
+title: ungetc, ungetwc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - ungetwc
 - ungetc
@@ -25,8 +21,6 @@ f1_keywords:
 - _ungettc
 - ungetwc
 - ungetc
-dev_langs:
-- C++
 helpviewer_keywords:
 - ungetwc function
 - ungettc function
@@ -34,20 +28,16 @@ helpviewer_keywords:
 - _ungettc function
 - ungetc function
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6618e3e92d605d9e706331b44b352b41d29d6a61
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 95d2160ba4d008ab67f443d4e9dda7180d62b590
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414579"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50633581"
 ---
 # <a name="ungetc-ungetwc"></a>ungetc, ungetwc
 
-Vynutí znak zpět do datového proudu.
+Posune znak zpět do datového proudu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -65,32 +55,32 @@ wint_t ungetwc(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak, který má poslat.
+Znak k posunutí.
 
-*Datový proud*<br/>
-Ukazatel na **souboru** struktura.
+*Stream*<br/>
+Ukazatel na **souboru** struktury.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud úspěšné, každá z těchto funkcí vrátí znak argument *c*. Pokud *c* nelze posunuto nebo žádné znak byl načten, vstupního datového proudu je zrušeno a **ungetc –** vrátí ** EOF`; **ungetwc` vrátí **weof –**. Pokud *datového proudu* je **NULL**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **EOF** nebo **weof –** je vrácen a **errno** je nastaven na **einval –**.
+Pokud úspěšná, každá z těchto funkcí vrátí argument znaku *c*. Pokud *c* nemůže být posunut zpět nebo pokud byl načten žádný znak, vstupního datového proudu je beze změny a **ungetc –** vrátí ** EOF`; **ungetwc` vrátí **WEOF**. Pokud *stream* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **EOF** nebo **WEOF** je vrácena a **errno** je nastavena na **EINVAL**.
 
-Informace o těchto a dalších kódy chyb naleznete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**Ungetc –** funkce nabízených oznámení znak *c* zpět do *datového proudu* a vymaže end souborového indikátoru. Datový proud musí být otevřen pro čtení. Následné operace čtení na *datového proudu* začíná *c*. Pokus o push **EOF** do datového proudu pomocí **ungetc –** je ignorována.
+**Ungetc –** funkce posune znak *c* zpět do *stream* a vymaže indikátor konce souboru. Datový proud musí být otevřen pro čtení. Následná operace čtení na *stream* začíná *c*. Pokus posunout **EOF** na datový proud pomocí **ungetc –** se ignoruje.
 
-Znaky umístěné v datovém proudu podle **ungetc –** může vymazat, pokud **fflush –**, [fseek](fseek-fseeki64.md), **fsetpos –**, nebo [rewind](rewind.md) je volána před znak, který je pro čtení z datového proudu. Indikátor pozice souboru bude mít hodnotu, který byl před znaky byly poslat zpět. Odpovídající do datového proudu externího úložiště se nezmění. Na úspěšně **ungetc –** volání proti datový proud text indikátoru pozice souboru neurčené dokud všechny poslat zpět znaky jsou přečteny nebo zahozeny. Na každém úspěšném **ungetc –** volání proti binární datový proud indikátoru pozice souboru se odečte; pokud její hodnota je 0 před voláním, hodnota není definován po volání.
+Znaky umístěny v datovém proudu podle **ungetc –** mohou být vymazány, pokud **fflush –**, [fseek](fseek-fseeki64.md), **fsetpos**, nebo [rewind](rewind.md) je volána před čtením znaku z datového proudu. Indikátor pozice v souboru bude mít hodnotu, kterou měl před zpětným posunutím znaků. Externí úložiště odpovídající datovému proudu je beze změny. Při úspěšném **ungetc –** volání proti textovému proudu Indikátor pozice v souboru není zadána, dokud všechny znaky posunuté zpět přečteny nebo zahozeny. Na každém úspěšném **ungetc –** volání proti binárnímu datovému proudu Indikátor pozice v souboru snížen; Pokud byla jeho hodnota 0 před voláním, hodnota je po volání nedefinovaná.
 
-Výsledky mohou být nepředvídatelné Pokud **ungetc –** je volána dvakrát bez čtení nebo umístění souboru operace mezi dvěma volání. Po volání **fscanf –**, volání **ungetc –** může selhat, pokud jiné operace čtení (například **getc**) nebylo provedeno. Důvodem je, že **fscanf –** samotné volá **ungetc –**.
+Výsledky nepředvídatelné Pokud **ungetc –** je volána dvakrát bez operace umístění v souboru mezi dvěma voláními nebo čtení. Po volání **fscanf –**, volání **ungetc –** může selhat, pokud jiná operace čtení (například **getc**) byla provedena. Důvodem je, že **fscanf –** sama volá **ungetc –**.
 
-**ungetwc –** je verze široká charakterová **ungetc –**. Však na každém úspěšné **ungetwc –** volání na text nebo binární datový proud, hodnota indikátoru pozice souboru neurčené dokud všechny poslat zpět znaky jsou přečteny nebo zahozeny.
+**ungetwc –** je verze širokého znaku **ungetc –**. Ale na každém úspěšném **ungetwc –** volání proti textovému nebo binárnímu proudu, hodnota indikátoru pozice v souboru není zadán dokud všechny znaky posunuté zpět přečteny nebo zahozeny.
 
-Tyto funkce jsou bezpečné pro přístup z více vláken a zamknout citlivá data během provádění. Bez uzamčení verze, najdete v části [_ungetc_nolock –, _ungetwc_nolock –](ungetc-nolock-ungetwc-nolock.md).
+Tyto funkce jsou bezpečné na vlákno a zamykají citlivá data při spuštění. Nezamykací verzi naleznete v tématu [_ungetc_nolock – _ungetwc_nolock –](ungetc-nolock-ungetwc-nolock.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ungettc –**|**ungetc –**|**ungetc –**|**ungetwc –**|
 
@@ -101,7 +91,7 @@ Tyto funkce jsou bezpečné pro přístup z více vláken a zamknout citlivá da
 |**ungetc –**|\<stdio.h>|
 |**ungetwc –**|\<stdio.h > nebo \<wchar.h >|
 
-Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou, **stdin –**, **stdout**, a **stderr**, musí být přesměrována C běhové funkce mohli používat v aplikacích pro UPW . Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Konzole není podporována v aplikacích pro univerzální platformu Windows (UPW). Standardní datový proud popisovačů, které jsou spojeny s konzolou, **stdin**, **stdout**, a **stderr**, musí být přesměrován před funkcí jazyka C za běhu můžete použít v aplikacích pro UWP . Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -137,8 +127,8 @@ int main( void )
 Next character in stream = 'a'
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>
 [putc, putwc](putc-putwc.md)<br/>

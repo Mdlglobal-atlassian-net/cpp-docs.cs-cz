@@ -1,28 +1,18 @@
 ---
-title: Mapování obecného textu | Dokumentace Microsoftu
-ms.custom: ''
+title: Mapování obecného textu
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.mappings
-dev_langs:
-- C++
 helpviewer_keywords:
 - generic-text mappings
 - mappings, generic-text
 ms.assetid: 1ed02e02-3649-42dd-a697-e1b4af25bb02
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7a33029e7c7a326efcc35166587ea0f94db3f074
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 892f36c104a6754b4168860f3d72153ed03d8f1f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46033846"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658910"
 ---
 # <a name="generic-text-mappings"></a>Mapování obecného textu
 

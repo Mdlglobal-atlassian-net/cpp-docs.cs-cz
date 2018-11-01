@@ -1,36 +1,26 @@
 ---
-title: 'Unicode: Široká Charakterová sada | Microsoft Docs'
-ms.custom: ''
+title: 'Unicode: široká charakterová sada'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.international
-dev_langs:
-- C++
 helpviewer_keywords:
 - Unicode [C++], wide character set
 - wide characters [C++], Unicode
 ms.assetid: b6a05a21-59a5-4d30-8c85-2dbe185f7a74
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4fcd1c874c1701f471026deec73ab596971d3ad4
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 0432de1203d595947eb958a032870a929f00aeb0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450794"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618293"
 ---
 # <a name="unicode-the-wide-character-set"></a>Unicode: široká charakterová sada
 
-Široká znaková je kód 2bajtová vícejazyčné znaků. Libovolný znak v použití moderní počítačů po celém světě, včetně technických symbolů a speciálních znaků pro publikování, může být reprezentován podle specifikace Unicode jako široký znak. Vyvíjí a udržuje velké Consortium, která zahrnuje Microsoft, standardu Unicode je nyní široce přijat.
+Široký znak je znak vícejazyčné 2bajtových kód. Libovolný znak používaných moderní výpočetní po celém světě, včetně technických symbolů a speciálních znaků pro publikování, může být reprezentován podle specifikace Unicode jako širokého znaku. Vyvíjí a udržuje tak velké consortium, který zahrnuje Microsoft, Unicode standard je teď široce přijat.
 
-Široká znaková je typu **wchar_t**. Řetězec široká charakterová je reprezentován jako **[wchar_t]** pole a ukazuje `wchar_t*` ukazatel. Může představovat libovolný znak ASCII jako široký znak přidáním prefixu písmena **L** znaku. Například L '\0' je ukončující znak hodnoty null celou (16 bitů). Podobně může představovat libovolný ASCII řetězcový literál jako široká charakterová řetězcový literál jednoduše tak, že prefixu písmena L k literál ASCII (L "Hello").
+Široký znak je typu **wchar_t**. Řetězec širokého znaku je vyjádřena jako **wchar_t []** pole a odkazuje `wchar_t*` ukazatel. Může představovat libovolný znak ASCII jako širokého znaku jsou písmeno **L** znak. Například L '\0' je ukončující znak null celou (16 bitů). Podobně může představovat libovolný řetězec ASCII literál širokého znaku řetězcový literál, jednoduše tak, že jsou písmeno L na literál ASCII (L "Hello").
 
-Obecně platí široké znaky trvat až další místo v paměti, než vícebajtové znaky, ale jsou rychlejší ke zpracování. Navíc jenom jeden národního prostředí může být reprezentován v daný okamžik v vícebajtové kódování, zatímco všechny znakové sady na světě jsou reprezentována současně reprezentace kódování Unicode.
+Obecně platí široké znaky trvat i více místa v paměti vícebajtových znaků, ale jsou rychlejší ke zpracování. Kromě toho národní prostředí pouze jeden lze znázornit v daný okamžik v vícebajtové kódování, že všechny znakové sady v celém světě jsou reprezentovány současně reprezentace Unicode.
 
 ## <a name="see-also"></a>Viz také
 

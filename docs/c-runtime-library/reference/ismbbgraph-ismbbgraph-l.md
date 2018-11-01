@@ -1,10 +1,6 @@
 ---
-title: _ismbbgraph –, _ismbbgraph_l – | Microsoft Docs
-ms.custom: ''
+title: _ismbbgraph, _ismbbgraph_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbgraph_l
 - _ismbbgraph
@@ -26,28 +22,22 @@ f1_keywords:
 - _ismbbgraph_l
 - ismbbgraph
 - ismbbgraph_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbbgraph_l function
 - ismbbgraph_l function
 - _ismbbgraph function
 - ismbbgraph function
 ms.assetid: b60db718-134f-4796-acc1-592d0b9efbb7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6336beee17759ac01667d7c2aac65be419d9e170
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d5b5dace39e674744148a1ddf0c692692fb889f8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399248"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662872"
 ---
 # <a name="ismbbgraph-ismbbgraphl"></a>_ismbbgraph, _ismbbgraph_l
 
-Určuje, zda je konkrétní vícebajtových znaků grafické znak.
+Určuje, zda je určitý vícebajtový znak grafickým znakem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,18 +54,18 @@ int _ismbbgraph_l (
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Celé číslo má být testována.
+Celé číslo k testování.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí nenulovou hodnotu, pokud výraz:
+Vrací nenulovou hodnotu, pokud výraz:
 
 `isctype(c, ( _PUNCT | _UPPER | _LOWER | _DIGIT )) || _ismbbkprint(c)`
 
-je nenulové hodnoty pro *c*, nebo 0, pokud není. **_ismbbgraph –** používá aktuální národní prostředí pro chování všech závislých na národním prostředí. **_ismbbgraph_l –** se shoduje s tím rozdílem, že používá národní prostředí předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+je nenulový pro *c*, nebo 0, pokud není. **_ismbbgraph –** používá aktuální národní prostředí pro všechna závislá chování. **_ismbbgraph_l –** je stejná s tím rozdílem, že používá národní prostředí předané. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -84,13 +74,13 @@ je nenulové hodnoty pro *c*, nebo 0, pokud není. **_ismbbgraph –** použív�
 |**_ismbbgraph**|\<Mbctype.h >|
 |**_ismbbgraph_l**|\<Mbctype.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Klasifikace bajtů](../../c-runtime-library/byte-classification.md)<br/>
 [_ismbb – rutiny](../../c-runtime-library/ismbb-routines.md)<br/>
