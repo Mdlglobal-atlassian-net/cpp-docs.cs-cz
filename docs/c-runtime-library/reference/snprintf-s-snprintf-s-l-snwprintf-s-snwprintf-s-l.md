@@ -1,10 +1,6 @@
 ---
-title: _snprintf_s –, _snprintf_s_l –, _snwprintf_s –, _snwprintf_s_l – | Microsoft Docs
-ms.custom: ''
+title: _snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _snprintf_s
 - _snprintf_s_l
@@ -35,8 +31,6 @@ f1_keywords:
 - snwprintf_s
 - sntprintf_s
 - sntprintf_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _snprintf_s_l function
 - _snwprintf_s_l function
@@ -52,20 +46,16 @@ helpviewer_keywords:
 - _snwprintf_s function
 - formatted text [C++]
 ms.assetid: 9336ab86-13e5-4a29-a3cd-074adfee6891
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f3744fc543cd5c478ffba01e3abca9b152145be6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5918ab1dd9b7108248e638f267ceb8757802231a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416436"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560027"
 ---
 # <a name="snprintfs-snprintfsl-snwprintfs-snwprintfsl"></a>_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
 
-Zapisuje formátovaná data do řetězce. Toto jsou verze [snprintf –, _snprintf –, _snprintf_l –, _snwprintf –, _snwprintf_l –](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Zapisuje formátovaná data do řetězce. Jde o verzích [snprintf – _snprintf, _snprintf_l –, _snwprintf, _snwprintf_l –](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -122,10 +112,10 @@ int _snwprintf_s(
 Umístění úložiště pro výstup
 
 *sizeOfBuffer*<br/>
-Velikost umístění úložiště pro výstup. Velikost v **bajtů** pro **_snprintf_s –** nebo velikost v **slova** pro **_snwprintf_s –**.
+Velikost úložiště pro výstup. Velikost v **bajtů** pro **_snprintf_s** nebo velikost v **slova** pro **_snwprintf_s**.
 
 *Počet*<br/>
-Maximální počet znaků k uložení, nebo [_truncate –](../../c-runtime-library/truncate.md).
+Maximální počet znaků k uložení, nebo [_TRUNCATE](../../c-runtime-library/truncate.md).
 
 *Formát*<br/>
 Řetězec řízení formátu
@@ -138,28 +128,28 @@ Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_snprintf_s –** vrátí počet znaků, které jsou uložené v *vyrovnávací paměti*, není počítání ukončující znak hodnoty null. **_snwprintf_s –** vrátí počet široké znaky, které jsou uložené v *vyrovnávací paměti*, není počítání ukončující široká znaková hodnotu null.
+**_snprintf_s** vrátí počet znaků, které jsou uložené v *vyrovnávací paměti*, výčtu nebudou započteny ukončující znak null. **_snwprintf_s** vrátí počet širokých znaků, které jsou uložené v *vyrovnávací paměti*, výčtu nebudou započteny ukončující široké znaky null.
 
-Pokud překročí úložiště potřebné pro uložení dat a ukončující null *sizeOfBuffer*, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud pokračuje v provádění po obslužná rutina neplatný parametr, nastavte tyto funkce *vyrovnávací paměti* na prázdný řetězec, nastavte **errno** k **erange –** a vrátí hodnotu -1.
+Pokud úložiště potřebné pro ukládání dat a ukončujícího znaku null překročí *sizeOfBuffer*, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud po obslužnou rutinu neplatného parametru pokračuje v provádění, tyto funkce nastaví *vyrovnávací paměti* na prázdný řetězec, nastavit **errno** k **ERANGE**a vrátí hodnotu -1.
 
-Pokud *vyrovnávací paměti* nebo *formátu* je **NULL** ukazatele, nebo pokud *počet* je menší než nebo rovna nule, je volána obslužná rutina neplatný parametr. Pokud je povoleno spuštění pokračovat, nastavte tyto funkce **errno** k **einval –** a vrátí hodnotu -1.
+Pokud *vyrovnávací paměti* nebo *formátu* je **NULL** ukazatele, nebo pokud *počet* je menší než nebo rovna nule, je vyvolána obslužná rutina neplatného parametru. Pokud smí provádění pokračovat, tyto funkce nastaví **errno** k **EINVAL** a vrátí hodnotu -1.
 
-Informace o těchto a dalších kódy chyb naleznete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Snprintf_s –** funkce formáty a úložišť *počet* nebo méně znaků v *vyrovnávací paměti* a připojí ukončující hodnotu null. Každý argument (pokud existuje) je převést a výstup podle odpovídající specifikaci formátu v *formátu*. Formátování, které je v souladu s **printf** řady funkcí; viz [syntaxe specifikace formátu: funkce printf a wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Pokud ke kopírování dojde mezi řetězci, které se překrývají, chování není definováno.
+**_Snprintf_s** funkce formátuje a ukládá *počet* nebo méně znaků *vyrovnávací paměti* a připojí ukončující znak null. Každý argument (pokud existuje) je převeden a uložen podle odpovídající specifikace formátu v *formátu*. Formátování je v souladu s **printf** rodinu funkcí; viz [syntaxe specifikace formátu: funkce printf a wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Pokud ke kopírování dojde mezi řetězci, které se překrývají, chování není definováno.
 
-Pokud *počet* je [_truncate –](../../c-runtime-library/truncate.md), pak **_snprintf_s –** zápisy co nejvíc řetězec jako se vešla do *vyrovnávací paměti* a nechat místo pro ukončuje hodnotu null. Pokud celý řetězec (s ukončující null) se vejde *vyrovnávací paměti*, pak **_snprintf_s –** vrátí počet znaků, které jsou zapsány (včetně není ukončující null); jinak **_snprintf_s –**  vrátí hodnotu -1 označíte, že zkrácení došlo k chybě.
+Pokud *počet* je [_TRUNCATE](../../c-runtime-library/truncate.md), pak **_snprintf_s** zápisy největší část řetězce, jako se vejdou *vyrovnávací paměti* a ponechají prostor pro ukončující hodnotu null. Pokud se vejde celý řetězec (s ukončujícím znakem null) *vyrovnávací paměti*, pak **_snprintf_s** vrátí počet znaků zapsaných (nezahrnuje ukončující znak null); v opačném případě **_snprintf_s**  vrátí -1 pro označení této zkrácení došlo k chybě.
 
 > [!IMPORTANT]
-> Ujistěte se, že *formát* není řetězec definovaný uživatelem.
+> Ujistěte se, že *formátu* není uživatelem definovaný řetězec.
 
-**_snwprintf_s –** je verze široká charakterová **_snprintf_s –**; ukazatel argumenty, které mají **_snwprintf_s –** jsou široká charakterová řetězce. Detekce chyb v kódování **_snwprintf_s –** může lišit od v **_snprintf_s –**. **_snwprintf_s –**, například **swprintf_s –**, zapíše výstup na řetězec, spíše než do cílového umístění v typu **soubor**.
+**_snwprintf_s** je verze širokého znaku **_snprintf_s**; argumenty ukazatele pro **_snwprintf_s** jsou širokoznaké řetězce. Detekce chyb kódování ve **_snwprintf_s** může lišit od v **_snprintf_s**. **_snwprintf_s**, třeba **swprintf_s –**, zapíše výstup do řetězce, nikoli do cílového umístění typu **souboru**.
 
-Verze tyto funkce s **_l** příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí předaná místo aktuální národní prostředí vlákna.
+Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí předaného namísto aktuálního národní prostředí pro vlákno.
 
-V jazyce C++ pomocí těchto funkcí se zjednodušilo díky šabloně přetížení; přetížení automaticky odvození délka vyrovnávací paměti (takže není nutné zadat argument velikost) a starší, nezabezpečené funkce můžou automaticky nahradit se svými protějšky novější a zabezpečené. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky (tím eliminuje nutnost zadat argument velikosti) a dokážou automaticky nahradit starší, nezabezpečené funkce jejími novějšími, zabezpečené protějšky. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -172,10 +162,10 @@ V jazyce C++ pomocí těchto funkcí se zjednodušilo díky šabloně přetíže
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_snprintf_s –**, **_snprintf_s_l –**|\<stdio.h>|
-|**_snwprintf_s –**, **_snwprintf_s_l –**|\<stdio.h > nebo \<wchar.h >|
+|**_snprintf_s**, **_snprintf_s_l**|\<stdio.h>|
+|**_snwprintf_s**, **_snwprintf_s_l**|\<stdio.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -305,10 +295,10 @@ Invalid parameter handler invoked: ("Buffer too small", 0)
     new contents of dest: ''
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
-[sprintf, _sprintf_l –, swprintf –, _swprintf_l –, \__swprintf_l –](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[sprintf _sprintf_l –, swprintf, _swprintf_l –, \__swprintf_l –](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>

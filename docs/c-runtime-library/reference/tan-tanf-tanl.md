@@ -1,10 +1,6 @@
 ---
-title: Tan, tanf –, tanl – | Microsoft Docs
-ms.custom: ''
+title: Tan, tanf –, tanl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tan
 - tanf
@@ -27,8 +23,6 @@ f1_keywords:
 - tanf
 - _tanl
 - tanl
-dev_langs:
-- C++
 helpviewer_keywords:
 - tanl function
 - _tanl function
@@ -38,18 +32,14 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d6c0108e6d72e35a253e31df6ec96cbff19113c0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 79a374142a914e8c2c7cf5c094d443b16e4bce88
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409625"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564019"
 ---
-# <a name="tan-tanf-tanl"></a>Tan, tanf –, tanl –
+# <a name="tan-tanf-tanl"></a>Tan, tanf –, tanl
 
 Vypočítá tangens.
 
@@ -73,24 +63,24 @@ long double tan( long double x );  // C++ only
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Tan** funkce vrátí tangens *x*. Pokud *x* je větší než nebo rovna hodnotě 263 nebo menší než nebo rovno-263, dojde ke ztrátě násobek ve výsledku.
+**Tan** funkce vrátí tangens *x*. Pokud *x* je větší než nebo rovno 263 nebo menší než nebo rovna hodnotě-263, dojde ke ztrátě významu výsledku.
 
-|Vstup|Výjimka SEH|**Matherr –** výjimky|
+|Vstup|Výjimka SEH|**Matherr** výjimky|
 |-----------|-------------------|-------------------------|
-|ROZMEZÍ QNAN, IND|žádná|_DOMAIN –|
-|ROZMEZÍ INF|**NEPLATNÝ**|_DOMAIN –|
+|ROZMEZÍ QNAN, AJÍT|žádná|_DOMÉNA|
+|ROZMEZÍ INF|**NEPLATNÝ**|_DOMÉNA|
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **tan** , přijmout a vrátit **float** nebo **dlouho** **dvojité** hodnoty. V programu C **tan** vždy provede a vrátí **dvojité**.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **tan** , která používají a vrací **float** nebo **dlouhé** **double** hodnoty. V programu jazyka C **tan** vždy převezme a vrátí **double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaná hlavička (C)|Požadovaná hlavička (C++)|
+|Rutina|Požadované záhlaví (C)|Požadované záhlaví (C++)|
 |-------------|---------------------|-|
-|**Tan**, **tanf –**, **tanl –**|\<Math.h >|\<cmath – > nebo \<math.h >|
+|**Tan**, **tanf –**, **tanl**|\<Math.h >|\<cmath > nebo \<math.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -116,12 +106,12 @@ int main( void )
 tan( 0.785398 ) = 1.000000
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
-[Cos, cosf –, cosl –](cos-cosf-cosl.md)<br/>
+[Cos cosf –, cosl –](cos-cosf-cosl.md)<br/>
 [sin, sinf, sinl](sin-sinf-sinl.md)<br/>
 [_CItan](../../c-runtime-library/citan.md)<br/>
