@@ -1,42 +1,32 @@
 ---
-title: stdext – Namespace | Microsoft Docs
-ms.custom: ''
+title: stdext – obor názvů
 ms.date: 09/06/2017
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - stdext
-dev_langs:
-- C++
 helpviewer_keywords:
 - _DEFINE_DEPRECATED_HASH_CLASSES symbol
 - stdext namespace
 ms.assetid: 3e94fc89-0584-424f-bc09-081b73379545
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 302d5b696a3413e36dd76cb931556a3fae7e7615
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: aeba486393e6b45481108f967f3de8eb73a0adea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859196"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468481"
 ---
 # <a name="stdext-namespace"></a>stdext – obor názvů
 
-Členové [ \<hash_map >](../standard-library/hash-map.md) a [ \<hash_set >](../standard-library/hash-set.md) soubory hlaviček aktuálně nejsou součástí standardu ISO C++. Proto tyto typy a členy byly přesunuté z `std` oboru názvů do oboru názvů `stdext`, zůstat shoduje s C++ standard.
+Členové [ \<hash_map >](../standard-library/hash-map.md) a [ \<hash_set >](../standard-library/hash-set.md) hlavičkové soubory nejsou aktuálně součástí standardu ISO C++. Proto tyto typy a členy byly přesunuté z `std` oboru názvů do oboru názvů `stdext`, zůstane splňující podmínky standardu C++.
 
-Při kompilaci s [/Ze](../build/reference/za-ze-disable-language-extensions.md), což je výchozí, kompilátor upozorní na použití `std` pro členy \<hash_map > a \<hash_set > soubory hlaviček. Chcete-li zakázat upozornění, použijte [upozornění](../preprocessor/warning.md) – Direktiva pragma.
+Při kompilaci s [/Ze](../build/reference/za-ze-disable-language-extensions.md), což je výchozí, kompilátor zobrazí upozornění týkající se použití `std` členů \<hash_map > a \<hash_set > hlavičkové soubory. Chcete-li toto upozornění zakážete, použijte [upozornění](../preprocessor/warning.md) direktivy pragma.
 
-Tak, aby měl kompilátoru chybovou zprávu pro použití `std` pro členy \<hash_map > a \<hash_set > hlavičkové soubory s **/Ze**, přidejte následující direktivu před `#include` soubory hlaviček všechny standardní knihovna C++.
+Aby kompilátor generuje chybu pro použití `std` pro členy programu \<hash_map > a \<hash_set – > hlavičkové soubory s **/Ze**, přidejte následující direktivy před `#include` všechny soubory v záhlaví standardní knihovny C++.
 
 ```cpp
 #define _DEFINE_DEPRECATED_HASH_CLASSES 0
 ```
 
-Při kompilaci s **/Za**, kompilátor, vygeneruje se chyba.
+Při kompilaci s **/Za**, kompilátor vygeneruje chybu.
 
 ## <a name="see-also"></a>Viz také
 

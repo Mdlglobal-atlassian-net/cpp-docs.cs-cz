@@ -1,10 +1,6 @@
 ---
-title: wctype – | Microsoft Docs
-ms.custom: ''
+title: wctype
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wctype
 apilocation:
@@ -21,26 +17,20 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wctype
-dev_langs:
-- C++
 helpviewer_keywords:
 - wctype function
 - wide characters
 ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0bb5003db02ed27c2906ebc3619313489e40e5fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 81caf8e1ab04635d205d7b01af2d4c2896eec01c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411897"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456898"
 ---
 # <a name="wctype"></a>wctype
 
-Určuje pravidla klasifikace pro široká charakterová kódy.
+Určuje pravidlo klasifikace pro kódy širokého znaku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -53,29 +43,29 @@ wctype_t wctype(
 ### <a name="parameters"></a>Parametry
 
 *property*<br/>
-Vlastnost řetězec.
+Vlastnost řetězce.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud **LC_CTYPE –** kategorie aktuální národní prostředí nedefinuje pravidla klasifikace, jejíž název odpovídá řetězci vlastnost *vlastnost*, funkce vrátí hodnotu nula. Jinak vrátí nenulovou hodnotu vhodné pro použití jako druhý argument pro následné volání [towctrans –](towctrans.md).
+Pokud **LC_CTYPE** kategorie aktuálního národního prostředí nedefinuje pravidlo klasifikace, jejíž název odpovídá řetězci vlastnost *vlastnost*, vrátí funkce hodnotu nula. V opačném případě se vrací nenulovou hodnotu, vhodný pro použití jako druhý argument pro následné volání [towctrans –](towctrans.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce určuje pravidla klasifikace pro široká charakterová kódy. Následující páry volání mají stejné chování ve všech národních prostředí (ale implementace můžete definovat pravidla další klasifikace i v národním prostředí "C"):
+Funkce určuje pravidla klasifikace pro kódy širokého znaku. Následující páry volání mají stejné chování ve všech národních prostředích (ale implementace můžete definovat další klasifikační pravidla i v národním prostředí "C"):
 
 |Funkce|Stejné jako|
 |--------------|-------------|
-|iswalnum(c)|iswctype – (c, wctype – ("alnum"))|
-|iswalpha(c)|iswctype – (c, wctype – ("Alfa"))|
-|iswcntrl(c)|iswctype – (c, wctype – ("stisknutím kláves CTRL +"))|
-|iswdigit(c)|iswctype – (c, wctype – ("číslice"))|
-|iswgraph(c)|iswctype – (c, wctype – ("grafu"))|
-|iswlower(c)|iswctype – (c, wctype – ("malá"))|
-|iswprint(c)|iswctype – (c, wctype – ("Tisk"))|
-|iswpunct(c)|iswctype – (c, wctype – ("punct"))|
-|iswspace(c)|iswctype – (c, wctype – ("místo"))|
-|iswupper(c)|iswctype – (c, wctype – ("horní"))|
-|iswxdigit(c)|iswctype – (c, wctype – ("xdigit"))|
+|iswalnum(c)|iswctype (c, wctype ("alnum"))|
+|iswalpha(c)|iswctype (c, wctype ("Alfa"))|
+|iswcntrl(c)|iswctype (c, wctype ("stisknutím kláves CTRL +"))|
+|iswdigit(c)|iswctype (c, wctype ("číslice"))|
+|iswgraph(c)|iswctype (c, wctype ("graf"))|
+|iswlower(c)|iswctype (c, wctype ("malé"))|
+|iswprint(c)|iswctype (c, wctype ("print"))|
+|iswpunct(c)|iswctype (c, wctype ("punct"))|
+|iswspace(c)|iswctype (c, wctype ("místo"))|
+|iswupper(c)|iswctype (c, wctype ("horní"))|
+|iswxdigit(c)|iswctype (c, wctype ("xdigit"))|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -83,9 +73,9 @@ Funkce určuje pravidla klasifikace pro široká charakterová kódy. Následuj�
 |-------------|---------------------|
 |**wctype**|\<wctype.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>

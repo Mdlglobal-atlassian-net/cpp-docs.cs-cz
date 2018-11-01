@@ -1,30 +1,20 @@
 ---
-title: Příklady zarovnání struktur | Microsoft Docs
-ms.custom: ''
+title: Příklady zarovnání struktur
 ms.date: 03/26/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - structure alignment
 - examples [C++], structure alignment
 ms.assetid: 03d137bf-5cc4-472e-9583-6498f2534199
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a9c4e8cb27d02777e40af56217bd82dec6e647b6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 27f7e89b1c7faec06347d8760247a76a33e0b91e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367739"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466241"
 ---
 # <a name="examples-of-structure-alignment"></a>Příklady zarovnání struktur
 
-Následující čtyři příklady každý deklarovat, že zarovnávání struktur nebo sjednocení a odpovídající následující obrázky znázorňují rozložení těchto struktur nebo spojení v paměti. Každý sloupec v obrázku představuje bajtů paměti, a číslo ve sloupci označuje posuv tohoto bajtu. Název ve druhém řádku každý obrázek odpovídá názvu proměnné v deklaraci. Šedou barvou sloupce označují odsazení, které je potřebné k dosažení zadané zarovnání.
+Následující čtyři příklady každou deklaraci že zarovnané struktury nebo sjednocení a odpovídající obrázky znázorňují rozložení této struktury nebo sjednocení v paměti. Každý sloupec v elementu figure reprezentuje bajt paměti a číslo ve sloupci určuje posunutí daného bajtu. Název ve druhém řádku každý obrázek odpovídá názvu proměnné v prohlášení. Sloupců indikoval odsazení, která je potřebná k dosažení zadané zarovnání.
 
 ## <a name="example-1"></a>Příklad 1
 
@@ -67,7 +57,7 @@ _declspec(align(4)) struct {
 
 ![Příklad převodu AMD](../build/media/vcamd_conv_ex_3_block.png "vcAmd_conv_ex_3")
 
-## <a name="example-4"></a>Příklad 4
+## <a name="example-4"></a>Příklad 4:
 
 ```C
 // Total size = 8 bytes, alignment = 8 bytes (quadword).
@@ -81,6 +71,6 @@ _declspec(align(8)) union {
 
 ![Příklad převodu AMD](../build/media/vcamd_conv_ex_4_block.png "vcAmd_conv_ex_4")
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Typy a úložiště](../build/types-and-storage.md)<br/>

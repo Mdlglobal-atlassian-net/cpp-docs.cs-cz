@@ -1,10 +1,6 @@
 ---
-title: _Crtsetreportfile – | Microsoft Docs
-ms.custom: ''
+title: _CrtSetReportFile
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetReportFile
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - CrtSetReportFile
 - _CrtSetReportFile
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtSetReportFile function
 - _CrtSetReportFile function
 ms.assetid: 3126537e-511b-44af-9c1c-0605265eabc4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a3df4f54ad8e191dac7110a914bdde1cec888ff9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 32a560e09c47468daf48c185e23d6e289c6d1d9b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402335"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464243"
 ---
 # <a name="crtsetreportfile"></a>_CrtSetReportFile
 
-Po použití [_crtsetreportmode –](crtsetreportmode.md) k určení **_CRTDBG_MODE_FILE**, můžete zadat popisovač souboru přijímat textové zprávy. **_Crtsetreportfile –** používá také [_crtdbgreport –, _crtdbgreportw –](crtdbgreport-crtdbgreportw.md) k určení cílového textu (pouze ladicí verze).
+Když použijete [_CrtSetReportMode](crtsetreportmode.md) k určení **_CRTDBG_MODE_FILE**, můžete zadat popisovač souboru k přijetí textu zprávy. **_CrtSetReportFile** také používá [_CrtDbgReport _crtdbgreportw –](crtdbgreport-crtdbgreportw.md) k určení cíle textu (pouze ladicí verze).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,17 +52,17 @@ Nový soubor sestavy pro *reportType*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Při úspěšném dokončení **_crtsetreportfile –** vrací předchozího souboru sestavy definované pro typ sestavy zadané v *reportType*. Pokud je předána neplatná hodnota *reportType*, tato funkce vyvolá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **errno** je nastaven na **einval –** a funkce vrátí hodnotu **_CRTDBG_HFILE_ERROR**. Další informace najdete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Při úspěšném dokončení **_CrtSetReportFile** vrátí předchozí soubor sestavy definovaný pro typ sestavy určený v *reportType*. Pokud je předána neplatná hodnota *reportType*, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **errno** je nastavena na **EINVAL** a funkce vrátí **_CRTDBG_HFILE_ERROR**. Další informace najdete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Crtsetreportfile –** se používá s [_crtsetreportmode –](crtsetreportmode.md) funkce můžete definovat cíl nebo cíle pro konkrétní typ sestavy generované **_crtdbgreport –**. Když **_crtsetreportmode –** byla volána přiřadit **_CRTDBG_MODE_FILE** reporting režim pro konkrétní typ sestavy, **_crtsetreportfile –** by měla být volána poté do Definujte konkrétní soubor nebo datový proud použít jako cíl. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, volání **_crtsetreportfile –** jsou odebrány při předběžném zpracování.
+**_CrtSetReportFile** se používá s [_CrtSetReportMode](crtsetreportmode.md) funkce k definování cíle nebo cílů pro typ konkrétní sestavy generované **_CrtDbgReport**. Když **_CrtSetReportMode** byla volána přiřadit **_CRTDBG_MODE_FILE** reporting režim pro konkrétní typ sestavy, **_CrtSetReportFile** by měla být volána pro definování konkrétního souboru nebo datový proud použít jako cíl. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, jsou volání **_CrtSetReportFile** odstraněna během předběžného zpracování.
 
-V následujícím seznamu jsou k dispozici možnosti pro *reportFile* a jejich výsledné chování z **_crtdbgreport –**. Tyto možnosti jsou definovány jako bitové příznaky v Crtdbg.h.
+Následující seznam ukazuje dostupné možnosti pro *reportFile* a výsledné chování **_CrtDbgReport**. Tyto možnosti jsou definovány jako bitové příznaky v souboru Crtdbg.h.
 
 - **popisovač souboru**
 
-   Popisovač pro soubor, který bude cíl zprávy. Žádný pokus se uskuteční k ověření platnosti popisovač. Musíte otevřít a zavřít popisovač souboru. Příklad:
+   Popisovač souboru, který bude cílem pro zprávy. Ověření platnosti popisovače nejsou provedeny žádné pokusy. Musíte otevřít a zavřít popisovač souboru. Příklad:
 
    ```C
    HANDLE hLogFile;
@@ -88,7 +78,7 @@ V následujícím seznamu jsou k dispozici možnosti pro *reportFile* a jejich v
 
 - **_CRTDBG_FILE_STDERR**
 
-   Zápisy zprávu **stderr**, což může být přesměrován následujícím způsobem:
+   Zapíše zprávu do **stderr**, který může být přesměrován takto:
 
    ```C
    freopen( "c:\\log2.txt", "w", stderr);
@@ -100,24 +90,24 @@ V následujícím seznamu jsou k dispozici možnosti pro *reportFile* a jejich v
 
 - **_CRTDBG_FILE_STDOUT**
 
-   Zápisy zprávu **stdout**, které může přesměrovat.
+   Zapíše zprávu do **stdout**, který lze přesměrovat.
 
 - **_CRTDBG_REPORT_FILE**
 
    Vrátí aktuální režim sestavy.
 
-Soubor sestavy používá každý typ sestavy můžete řídit samostatně. Například je možné určit, že *reportType* z **_CRT_ERROR** , se nahlásí **stderr**, zatímco *reportType* z **_CRT_ASSERT** ohlášena popisovač uživatelem definované souboru nebo datový proud.
+Soubor sestavy používaný každý typ sestavy lze ovládat samostatně. Například je možné určit, že *reportType* z **_CRT_ERROR** hlášené pro **stderr**, zatímco *reportType* z **_CRT_ASSERT** oznámený popisovač uživatelem definovaného souboru nebo datového proudu.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
 |**_CrtSetReportFile**|\<crtdbg.h>|\<errno.h>|
 
-Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou, **stdin –**, **stdout**, a **stderr**, musí být přesměrována C běhové funkce mohli používat v aplikacích pro UPW . Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Konzole není podporována v aplikacích pro univerzální platformu Windows (UPW). Standardní datový proud popisovačů, které jsou spojeny s konzolou, **stdin**, **stdout**, a **stderr**, musí být přesměrován před funkcí jazyka C za běhu můžete použít v aplikacích pro UWP . Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 **Knihovny:** ladicí verze [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md) pouze.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Rutiny ladění](../../c-runtime-library/debug-routines.md)<br/>

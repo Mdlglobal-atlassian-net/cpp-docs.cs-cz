@@ -1,10 +1,6 @@
 ---
-title: _fpieee_flt – | Microsoft Docs
-ms.custom: ''
+title: _fpieee_flt
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fpieee_flt
 apilocation:
@@ -23,28 +19,22 @@ apitype: DLLExport
 f1_keywords:
 - fpieee_flt
 - _fpieee_flt
-dev_langs:
-- C++
 helpviewer_keywords:
 - _fpieee_flt function
 - exception handling, floating-point
 - floating-point exception handling
 - fpieee_flt function
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 412eef6e3999c18901792643fa7a57ce18d19520
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a49ec403b1cb95407b0a366accf1d9374d9cb22
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403362"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50458614"
 ---
 # <a name="fpieeeflt"></a>_fpieee_flt
 
-Vyvolá obslužnou rutinu depeše uživatelem definované výjimky plovoucí desetinné čárky IEEE.
+Vyvolá uživatelem definované obslužné rutiny pro výjimky s plovoucí desetinnou čárkou IEEE.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,29 +52,29 @@ int _fpieee_flt(
 Kód výjimky.
 
 *excInfo*<br/>
-Ukazatel na strukturu systému Windows NT výjimka informace.
+Ukazatel na strukturu informace výjimky Windows NT.
 
-*obslužné rutiny*<br/>
-Ukazatel na rutiny obslužných rutin depeše IEEE uživatele.
+*Obslužná rutina*<br/>
+Ukazatel na uživatele IEEE depeše obslužné rutině.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Návratová hodnota **_fpieee_flt –** je hodnoty vrácené *obslužná rutina*. Jako takový rutiny filtru IEEE může být používány kromě klauzule mechanismus strukturované zpracování výjimek (SEH).
+Návratová hodnota **_fpieee_flt** je hodnoty vrácené *obslužná rutina*. V důsledku toho rutina IEEE filtru sloužící k s výjimkou klauzulí mechanismus strukturovaného zpracování výjimek (SEH).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Fpieee_flt –** funkce vyvolá obslužnou rutinu depeše uživatelem definované výjimky plovoucí desetinné čárky IEEE a poskytuje všechny potřebné informace. Tato rutina slouží jako filtr výjimek v SEH mechanismus, který vyvolá vlastní IEEE obslužná rutina výjimky Pokud je to nezbytné.
+**_Fpieee_flt** funkce vyvolá uživatelem definované obslužné rutiny pro výjimky s plovoucí desetinnou čárkou IEEE a poskytuje všechny relevantní informace. Tato rutina slouží jako filtr výjimek v SEH mechanismus, který vyvolá vlastní IEEE obslužná rutina výjimky v případě potřeby.
 
-**_Fpieee_record –** struktuře, které jsou definované v Fpieee.h, obsahuje informace týkající se výjimku IEEE s plovoucí desetinnou čárkou. Tato struktura je předán obslužná rutina uživatelem definované depeše podle **_fpieee_flt –**.
+**_Fpieee_record –** struktury definované v Fpieee.h, obsahuje informace týkající se výjimky s plovoucí desetinnou čárkou IEEE. Tato struktura je předán do uživatelem definované obslužné rutiny ve **_fpieee_flt**.
 
 |_Fpieee_record – pole|Popis|
 |----------------------------|-----------------|
-|**RoundingMode**<br/>**přesnost**|Tyto **nepodepsané** **int** obsahují informace o prostředí s plovoucí desetinnou čárkou v době se vyskytla výjimka.|
-|**operace**|To **nepodepsané** **int** pole určuje typ operace, která způsobila, že depeše. Pokud je typ porovnání (**_FpCodeCompare**), můžete zadat jednu z speciální **_FPIEEE_COMPARE_RESULT** hodnoty (podle definice v Fpieee.h) ve **Result.Value** pole. Typ převodu (**_FpCodeConvert**) označuje, že depeše došlo k chybě během operace převody plovoucí desetinné čárky. Můžete si prohlédnout **Operand1** a **výsledek** typy určit typ převodu Probíhá pokus o provedení.|
-|**operand1**<br/>**operand2**<br/>**výsledek**|Tyto **_FPIEEE_VALUE** struktury znamenat typy a hodnoty navrhované výsledek a operandy. Každá struktura obsahuje tato pole:<br /><br /> **OperandValid** – příznak označující, zda odpovídá hodnota je platná.<br />**Formát** – datový typ s odpovídající hodnotou. Typ formátu může být vrácena, i když odpovídající hodnota není platná.<br />**Hodnota** -výsledek nebo operand hodnotu data.|
-|**Příčina**<br/>**Povolit**<br/>**Status**|**_FPIEEE_EXCEPTION_FLAGS** obsahuje jeden bit pole na každý typ plovoucí bodu výjimka. Je korespondence mezi těmito poli a argumenty použít k maskování výjimky zadaný do [_controlfp –](control87-controlfp-control87-2.md). Přesný význam každý bit záviset na kontextu:<br /><br /> **Příčina** – každá nastavit chvíli indikuje konkrétní výjimku, která byla vyvolána.<br />**Povolit** -každé chvíli nastavit označuje, že je aktuálně odmaskovaná určité výjimky.<br />**Stav** -každé chvíli nastavit označuje, že konkrétní výjimka je momentálně neprobíhá. To zahrnuje výjimky, které nebyly bylo vyvoláno, protože byly maskovat pomocí **_controlfp –**.|
+|**RoundingMode**<br/>**Přesnost**|Tyto **bez znaménka** **int** pole obsahují informace o prostředí s plovoucí desetinnou čárkou v době došlo k výjimce.|
+|**Operace**|To **bez znaménka** **int** pole určuje typ operace, která způsobila depeše. Pokud je typ porovnání (**_FpCodeCompare**), můžete zadat jednu zvláštní **_FPIEEE_COMPARE_RESULT** hodnoty (jak jsou definovány v Fpieee.h) v **Result.Value** pole. Typ převodu (**_FpCodeConvert**) označuje, že depeše došlo k chybě během operace s plovoucí desetinnou čárkou převodu. Můžete si prohlédnout **Operand1** a **výsledek** typy určit typ převodu Probíhá pokus o.|
+|**Operand1**<br/>**Operand2**<br/>**výsledek**|Tyto **_FPIEEE_VALUE** struktury určit typy a hodnoty navrhované výsledek a operandů. Každá struktura obsahuje tato pole:<br /><br /> **OperandValid** – příznak označující, zda odpovídá hodnota je platná.<br />**Formát** – datový typ odpovídající hodnoty. Typ formátu může být vrácena, i v případě, že odpovídající hodnota není platná.<br />**Hodnota** – výsledek nebo operand hodnotu data.|
+|**Příčina**<br/>**Enable**<br/>**Status**|**_FPIEEE_EXCEPTION_FLAGS** obsahuje jeden bitové pole za typ s plovoucí desetinnou čárkou bodu výjimku. Neexistuje shoda mezi tato pole a jsou argumenty použity k maskování výjimky zadaný pro [_controlfp](control87-controlfp-control87-2.md). Přesné význam každý bit závisí na kontextu:<br /><br /> **Příčina** – každá nastaveného bitu indikuje konkrétní výjimky, ke které došlo.<br />**Povolit** – každá nastaveného bitu indikuje, že je aktuálně odmaskovaná konkrétní výjimce.<br />**Stav** – každá nastaveného bitu indikuje, že konkrétní výjimce čeká na vyřízení. Jedná se o výjimky, které dosud bylo vyvoláno, protože byly maskovaná **_controlfp**.|
 
-Čekající na vyřízení výjimky, které jsou zakázány se vyvolá, když je povolit. To může vést k nedefinované chování při použití **_fpieee_flt –** jako filtr výjimek. Vždy volat [_clearfp –](clear87-clearfp.md) před povolením plovoucí bodu výjimky.
+Čekajících výjimkách, které jsou zakázány jsou vyvolány, když je povolit. To může způsobit nedefinované chování při použití **_fpieee_flt** jako filtr výjimek. Vždy volat [_clearfp –](clear87-clearfp.md) před povolením výjimky s plovoucí desetinnou čárkou.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -92,7 +82,7 @@ Návratová hodnota **_fpieee_flt –** je hodnoty vrácené *obslužná rutina*
 |--------------|---------------------|
 |**_fpieee_flt**|\<fpieee.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -161,8 +151,8 @@ int main( void )
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
-[_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md)<br/>
+[_control87 – _controlfp, \__control87_2](control87-controlfp-control87-2.md)<br/>
 [_controlfp_s](controlfp-s.md)<br/>
