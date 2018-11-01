@@ -1,10 +1,6 @@
 ---
-title: _pclose – | Microsoft Docs
-ms.custom: ''
+title: _pclose
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _pclose
 apilocation:
@@ -23,30 +19,24 @@ apitype: DLLExport
 f1_keywords:
 - _pclose
 - pclose
-dev_langs:
-- C++
 helpviewer_keywords:
 - _pclose function
 - pclose function
 - pipes, closing
 ms.assetid: e2e31a9e-ba3a-4124-bcbb-c4040110b3d3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 01e58c23bc91e8819abb3cd24f1ed01ee161ff8f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb0f54ec27992cd0e62b11d8fec5bd54c3daea4b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401773"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507715"
 ---
 # <a name="pclose"></a>_pclose
 
-Čeká na nové procesor příkazů a zavře datový proud v přidružené kanálu.
+Čeká na nový příkazový procesor a zavře datový proud na přidruženého kanálu.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -58,18 +48,18 @@ FILE *stream
 
 ### <a name="parameters"></a>Parametry
 
-*Datový proud*<br/>
+*Stream*<br/>
 Návratová hodnota z předchozího volání **_popen –**.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí stav ukončení ukončující procesor příkazů nebo -1, pokud dojde k chybě. Formát návratová hodnota je stejný jako pro **_cwait –**, s výjimkou jsou vzájemně zaměněny nejnižší a vysokou pořadí bajtů. Pokud datový proud je **NULL**, **_pclose –** nastaví **errno** k **einval –** a vrátí hodnotu -1.
+Vrátí stav ukončení procesoru ukončujícího příkazu nebo -1, pokud dojde k chybě. Formát vrácené hodnota je stejný jako u **_cwait**, s tím rozdílem, nejnižší a nejvyšší bajty jsou vyměněny. Pokud je datový proud **NULL**, **_pclose –** nastaví **errno** k **EINVAL** a vrátí hodnotu -1.
 
-Informace o těchto a dalších kódy chyb naleznete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Pclose –** funkce vyhledá proces ID spuštění přiřazeným procesor příkazů (Cmd.exe) **_popen –** volání, spustí [_cwait –](cwait.md) volání na nový příkaz procesor a zavře datový proud v přidružené kanálu.
+**_Pclose –** funkce vyhledá ID procesu příkazového procesoru (Cmd.exe) spuštěného přidruženým **_popen –** volání, spustí [_cwait](cwait.md) volání na nový příkaz procesor a zavře datový proud na přidruženého kanálu.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -77,13 +67,13 @@ Informace o těchto a dalších kódy chyb naleznete v tématu [_doserrno – k�
 |-------------|---------------------|
 |**_pclose**|\<stdio.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_pipe](pipe.md)<br/>

@@ -1,28 +1,18 @@
 ---
-title: ATL COM + 1.0 součást Průvodce | Dokumentace Microsoftu
-ms.custom: ''
+title: Průvodce komponentami 1.0 knihovny ATL modelu COM +
 ms.date: 10/03/2018
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.mts.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL projects, adding components
 - ATL COM+ 1.0 Component Wizard
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 102ec4f85c8915cf6afb70f03d470cec4e9e807f
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: 227dda9518b67b410f52db8c6efb33bbc2c8f1b5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250403"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513773"
 ---
 # <a name="atl-com-10-component-wizard"></a>Průvodce komponentami 1.0 knihovny ATL modelu COM +
 

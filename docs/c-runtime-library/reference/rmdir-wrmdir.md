@@ -1,10 +1,6 @@
 ---
-title: _rmdir –, _wrmdir – | Microsoft Docs
-ms.custom: ''
+title: _rmdir, _wrmdir
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wrmdir
 - _rmdir
@@ -27,8 +23,6 @@ f1_keywords:
 - wrmdir
 - _rmdir
 - _wrmdir
-dev_langs:
-- C++
 helpviewer_keywords:
 - _rmdir function
 - directories [C++], deleting
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 11e6521060932bd1273b6a3888332ac2c8b2bb7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1169405ae2f03a1e6affe2fcc00d594912e08ae1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406986"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511121"
 ---
 # <a name="rmdir-wrmdir"></a>_rmdir, _wrmdir
 
@@ -67,26 +57,26 @@ int _wrmdir(
 
 ### <a name="parameters"></a>Parametry
 
-*adresář*<br/>
-Cestu k adresáři odeberou.
+*DirName*<br/>
+Cesta adresáře, která se má odebrat.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí 0, pokud se úspěšně odstranil adresář. Vrácená hodnota -1 označuje chybu a **errno** nastaven na jednu z následujících hodnot:
+Každá z těchto funkcí vrátí 0, pokud adresáře se úspěšně odstranil. Návratová hodnota-1 označuje chybu a **errno** nastavena na jednu z následujících hodnot:
 
-|errno – hodnota|Podmínka|
+|Hodnota errno|Podmínka|
 |-|-|
-**ENOTEMPTY**|Zadaná cesta není adresář, adresář není prázdný, nebo adresář je aktuální pracovní adresář nebo kořenový adresář.
-**ENOENT –**|Cesta je neplatná.
-**EACCES –**|Program má otevřený popisovač k adresáři.
+**ENOTEMPTY**|Danou cestu není adresář, adresář není prázdný nebo adresář je aktuální pracovní adresář nebo kořenový adresář.
+**ENOENT**|Cesta je neplatná.
+**EACCES**|Program má otevřený popisovač do adresáře.
 
-Další informace o těchto a dalších návratové kódy najdete v tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o těchto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Rmdir –** funkce odstraní adresář zadaný *adresář*. Adresář musí být prázdný a nesmí být aktuální pracovní adresář nebo kořenový adresář.
+**_Rmdir –** funkce odstraní adresář zadaný *dirname*. Adresář musí být prázdný a nesmí být aktuálního pracovního adresáře nebo do kořenového adresáře.
 
-**_wrmdir –** je verze široká charakterová **_rmdir –**; *adresář* argument **_wrmdir –** je široká charakterová řetězec. **_wrmdir –** a **_rmdir –** chovat jinak shodně.
+**_wrmdir –** je verze širokého znaku **_rmdir –**; *dirname* argument **_wrmdir –** je širokoznaký řetězec. **_wrmdir –** a **_rmdir –** se jinak chovají stejně.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -101,17 +91,17 @@ Další informace o těchto a dalších návratové kódy najdete v tématu [_do
 |**_rmdir**|\<Direct.h >|
 |**_wrmdir**|\<Direct.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
 Podívejte se na příklad pro [_mkdir –](mkdir-wmkdir.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ovládací prvek adresáře](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>

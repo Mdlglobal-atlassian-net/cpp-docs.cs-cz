@@ -1,10 +1,6 @@
 ---
-title: _mbctombb –, _mbctombb_l – | Microsoft Docs
-ms.custom: ''
+title: _mbctombb, _mbctombb_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbctombb_l
 - _mbctombb
@@ -26,31 +22,25 @@ f1_keywords:
 - _mbctombb
 - mbctombb_l
 - mbctombb
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbctombb function
 - mbctombb_l function
 - mbctombb function
 - _mbctombb_l function
 ms.assetid: d90970b8-71ff-4586-b6a2-f9ceb811f776
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: adb233b489b5f4c190a4015805b07ab36770a283
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7395d94a6ec18f989d4a7153425b7af406a0bf45
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402901"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519831"
 ---
 # <a name="mbctombb-mbctombbl"></a>_mbctombb, _mbctombb_l
 
-Převede na odpovídající vícebajtových znaků jednobajtové dvoubajtové vícebajtových znaků.
+Převede dvoubajtový vícebajtový znak na odpovídající jednobajtový vícebajtový znak.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -67,20 +57,20 @@ unsigned int _mbctombb_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Vícebajtové znakové převést.
+Vícebajtový znak pro převod.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěšného **_mbctombb –** a **_mbctombb_l –** vrátí jednobajtové znak, který odpovídá *c*; v opačném případě vrátí *c* .
+V případě úspěšného ověření **_mbctombb –** a **_mbctombb_l –** vrátí jednobajtový znak, který odpovídá *c*; v opačném případě vrátí *c* .
 
 ## <a name="remarks"></a>Poznámky
 
-**_Mbctombb –** a **_mbctombb_l –** funkce převést na odpovídající vícebajtových znaků jednobajtové dané vícebajtových znaků. Znaky musí odpovídat jednobajtové znaky v rozsahu 0x20-0x7E nebo 0xA1 - 0xDF má být převeden.
+**_Mbctombb –** a **_mbctombb_l –** převádějí daný vícebajtový znak na odpovídající jednobajtový vícebajtový znak. Znaky musí odpovídat jednobajtovým znakům v rozsahu 0x20 – 0x7E nebo 0xA1 – 0xDF, který má být převeden.
 
-Výstupní hodnota je ovlivňován nastavením **LC_CTYPE –** kategorie nastavení národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze této funkce bez **_l** příponu používá aktuální národní prostředí pro toto chování závislých na národním prostředí; na verzi s **_l** přípona se shoduje s tím rozdílem, že se používat Předaný parametr národního prostředí v místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze této funkce bez **_l** příponu používá aktuální národní prostředí pro toto chování závislé na národním prostředí verze s **_l** přípona je identická s tím rozdílem, že používá Předaný parametr národního prostředí v místo. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 V předchozích verzích **_mbctombb –** byla volána **zentohan**. Použití **_mbctombb –** místo.
 
@@ -91,9 +81,9 @@ V předchozích verzích **_mbctombb –** byla volána **zentohan**. Použití 
 |**_mbctombb –**|\<Mbstring.h >|
 |**_mbctombb_l**|\<Mbstring.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
 [_mbbtombc, _mbbtombc_l](mbbtombc-mbbtombc-l.md)<br/>

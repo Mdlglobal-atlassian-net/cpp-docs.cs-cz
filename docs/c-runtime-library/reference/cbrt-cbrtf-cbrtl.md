@@ -1,10 +1,6 @@
 ---
-title: cbrt – cbrtf –, cbrtl | Microsoft Docs
-ms.custom: ''
+title: cbrt, cbrtf, cbrtl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cbrt
 - cbrtf
@@ -26,27 +22,21 @@ f1_keywords:
 - cbrtl
 - cbrt
 - cbrtf
-dev_langs:
-- C++
 helpviewer_keywords:
 - cbrtl function
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 29dee00f35c2b4d75e838e5abe2ee24de9753013
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c395a063cfa07cdfb7e841f19bc64fb1c57ca796
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393612"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505531"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 
-Vypočítá kořenu datové krychle.
+Vypočítá kořenové datové krychle.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -75,23 +65,23 @@ Hodnota s plovoucí desetinnou čárkou
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Cbrt –** funkce vrátí kořenu datové krychle z *x*.
+**Cbrt –** vrátí funkce datové krychle kořen *x*.
 
-|Vstup|Výjimka SEH|**_matherr –** výjimky|
+|Vstup|Výjimka SEH|**_matherr** výjimky|
 |-----------|-------------------|--------------------------|
-|ROZMEZÍ ∞, QNAN, IND|žádná|žádná|
+|ROZMEZÍ ∞, QNAN, AJÍT|žádná|žádná|
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **cbrt –** trvají **float** nebo **dlouho** **dvojité** typy. V programu C **cbrt –** vždy provede a vrátí **dvojité**.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **cbrt –** trvají **float** nebo **dlouhé** **double** typy. V programu jazyka C **cbrt –** vždy převezme a vrátí **double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Hlavička C|Hlavička C++|
+|Funkce|Záhlaví C|Hlaviček jazyka C++|
 |--------------|--------------|------------------|
-|**cbrt –**, **cbrtf –**, **cbrtl**|\<Math.h >|\<cmath – >|
+|**cbrt –**, **cbrtf –**, **cbrtl**|\<Math.h >|\<cmath >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -117,7 +107,7 @@ int main( void )
 The cube root of -64.64 is -4.013289
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>

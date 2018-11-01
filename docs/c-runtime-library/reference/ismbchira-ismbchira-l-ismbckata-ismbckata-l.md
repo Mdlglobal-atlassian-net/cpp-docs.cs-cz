@@ -1,10 +1,6 @@
 ---
-title: _ismbchira –, _ismbchira_l –, _ismbckata –, _ismbckata_l – | Microsoft Docs
-ms.custom: ''
+title: _ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbckata
 - _ismbchira_l
@@ -32,8 +28,6 @@ f1_keywords:
 - ismbchira_l
 - _ismbchira_l
 - _ismbchira
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbckata function
 - _ismbchira function
@@ -46,23 +40,19 @@ helpviewer_keywords:
 - Hiragana
 - ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0fe2b9c824fcc45eb2d0fda82cd350d3a9435b94
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d2a5d0336e5ed4ad8bbb19f8a259128ab33d004e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403726"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506584"
 ---
 # <a name="ismbchira-ismbchiral-ismbckata-ismbckatal"></a>_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 
-**Stránka 932 konkrétní funkce kódu**
+**Funkce kódu specifické pro stránku 932**
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -86,29 +76,29 @@ int _ismbckata_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak, který má být testována.
+Znak k testování.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Všechny tyto rutiny vrátí nenulovou hodnotu, pokud znak splňuje podmínky testu nebo 0, pokud neexistuje. Pokud *c* < = 255 a existuje odpovídající **_ismbb –** rutiny (například **_ismbcalnum –** odpovídá **_ismbbalnum –**), Výsledkem je vrácenou hodnotu odpovídající **_ismbb –** rutiny.
+Každá z těchto rutin vrátí nenulovou hodnotu, pokud znak splňuje testovací podmínku, nebo 0, pokud tomu tak není. Pokud *c* < = 255 a existuje odpovídající **_ismbb –** rutina (například **_ismbcalnum –** odpovídá **_ismbbalnum –**), Výsledkem je návratová hodnota odpovídající **_ismbb –** rutiny.
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí testuje dané vícebajtových znaků pro danou podmínku.
+Každá z těchto funkcí testujte daný vícebajtový znak na danou podmínku.
 
-Verze tyto funkce s **_l** příponu jsou shodné s tím rozdílem, že používají národní prostředí předaná místo aktuální národní prostředí pro jejich chování závislých na národním prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že používají národní prostředí namísto aktuálního národního prostředí pro své chování závislé na národním prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-|Rutina|Test stavu (pouze znaková stránka 932)|
+|Rutina|Testovací podmínka (pouze znaková stránky 932)|
 |-------------|-------------------------------------------|
-|**_ismbchira**|Dvoubajtové Hiragana: 0x829F < =*c*< = 0x82F1.|
-|**_ismbchira_l**|Dvoubajtové Hiragana: 0x829F < =*c*< = 0x82F1.|
-|**_ismbckata**|Dvoubajtové katakana: 0x8340 < =*c*< = 0x8396.|
-|**_ismbckata_l**|Dvoubajtové katakana: 0x8340 < =*c*< = 0x8396.|
+|**_ismbchira**|Dvoubajtové znaky Hiragana: 0x829F < =*c*< = 0x82F1.|
+|**_ismbchira_l**|Dvoubajtové znaky Hiragana: 0x829F < =*c*< = 0x82F1.|
+|**_ismbckata**|Dvoubajtové znaky katakana: 0x8340 < =*c*< = 0x8396.|
+|**_ismbckata_l**|Dvoubajtové znaky katakana: 0x8340 < =*c*< = 0x8396.|
 
-**End kódu konkrétní stránka 932**
+**End specifické pro kódovou stránku 932**
 
 ## <a name="requirements"></a>Požadavky
 
@@ -119,9 +109,9 @@ Verze tyto funkce s **_l** příponu jsou shodné s tím rozdílem, že použív
 |**_ismbckata**|\<Mbstring.h >|
 |**_ismbckata_l**|\<Mbstring.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Klasifikace znaků](../../c-runtime-library/character-classification.md)<br/>
 [_ismbc – rutiny](../../c-runtime-library/ismbc-routines.md)<br/>
