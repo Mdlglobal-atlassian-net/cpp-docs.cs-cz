@@ -1,10 +1,6 @@
 ---
-title: nebo | Microsoft Docs
-ms.custom: ''
+title: or
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,25 +17,19 @@ f1_keywords:
 - std::or
 - std.or
 - Or
-dev_langs:
-- C++
 helpviewer_keywords:
 - or function
 ms.assetid: 6523b3ac-0a18-44ec-9e9a-b9bab8525ead
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f9894d2925f4d1dba03442d5d117a5eb83abfa3a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a8eeab252e1eada962c374a4ec6e2a5744930be0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397864"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676665"
 ---
 # <a name="or"></a>or
 
-Alternativu k &#124; &#124; operátor.
+Alternativa k &#124; &#124; operátor.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,7 +41,7 @@ Alternativu k &#124; &#124; operátor.
 
 ## <a name="remarks"></a>Poznámky
 
-Makro vypočítá operátor &#124; &#124;.
+Makro provede operátor &#124; &#124;.
 
 ## <a name="example"></a>Příklad
 
@@ -83,4 +73,4 @@ true
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<iso646.h – >
+**Záhlaví:** \<soubor iso646.h >

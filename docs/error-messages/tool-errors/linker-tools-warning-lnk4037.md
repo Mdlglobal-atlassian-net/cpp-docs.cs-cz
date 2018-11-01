@@ -1,33 +1,23 @@
 ---
-title: LNK4037 upozornění Linkerů | Microsoft Docs
-ms.custom: ''
+title: Upozornění Linkerů LNK4037
 ms.date: 10/04/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK4037
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK4037
 ms.assetid: 9ba02fd3-b04f-4679-bab9-26fa82cf09bb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6b87f0a415d6ae7d282e29c2ca67fda043c2a901
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a8121617e622fc12efe5bd26aac23faf2530f24
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302432"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607399"
 ---
-# <a name="linker-tools-warning-lnk4037"></a>Upozornění LNK4037 nástroje linkeru
+# <a name="linker-tools-warning-lnk4037"></a>Upozornění Linkerů LNK4037
 
->'*symbol*' neexistuje; ignorovat
+>"*symbol*' neexistuje; ignoruje se.
 
-Upravený název *symbol* nelze provést řazení podle pomocí [/pořadí](../../build/reference/order-put-functions-in-order.md) možnost, protože nebyl nalezen v programu. Zkontrolujte specifikaci *symbol* v souboru odpovědí, pořadí. Další informace najdete v tématu [/ORDER (Put funkcí v pořadí)](../../build/reference/order-put-functions-in-order.md) – možnost linkeru.
+Upravený název *symbol* nelze provést řazení podle pomocí [/ORDER](../../build/reference/order-put-functions-in-order.md) možnost, protože nebyl nalezen v programu. Zkontrolujte si specifikace *symbol* v souboru odpovědí pořadí. Další informace najdete v tématu [/Order (Put funkcí v pořadí)](../../build/reference/order-put-functions-in-order.md) – možnost linkeru.
 
 > [!NOTE]
-> ODKAZ nelze pořadí statické funkce, protože nejsou statické funkce názvy názvy veřejných symbolů. Když **/pořadí** je zadán, tento linkeru upozornění se vygeneruje pro každý symbol v pořadí souboru odpovědí, který je buď nebo nebyl nalezen.
+> ODKAZ nelze řadit statické funkce, protože názvy statickou funkci nejsou názvy veřejných symbolů. Když **/ORDER** je zadaný, vygeneruje se tento linker upozornění pro každý symbolů v souboru odpovědí pořadí, který je buď statický, nebo nebyl nalezen.

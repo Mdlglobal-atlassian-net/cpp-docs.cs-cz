@@ -1,10 +1,6 @@
 ---
-title: _set_doserrno – | Microsoft Docs
-ms.custom: ''
+title: _set_doserrno
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_doserrno
 apilocation:
@@ -23,43 +19,37 @@ apitype: DLLExport
 f1_keywords:
 - _set_doserrno
 - set_doserrno
-dev_langs:
-- C++
 helpviewer_keywords:
 - _set_doserrno function
 - doserrno global variable
 - set_doserrno function
 - _doserrno global variable
 ms.assetid: 8686c159-3797-4705-a53e-7457869ca6f3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1bb3a8e7503ae27177fded4ff240bbf5ec5a670e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a99d63b03aebd4a54ac50e98d5e5752e741fec85
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406115"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607295"
 ---
 # <a name="setdoserrno"></a>_set_doserrno
 
-Nastaví hodnotu [_doserrno –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) – globální proměnná.
+Nastaví hodnotu vlastnosti [_doserrno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) globální proměnné.
 
 ## <a name="syntax"></a>Syntaxe
 
 ```C
-errno_t _set_doserrno( int error_value );
+errno_t _set_doserrno( int error_value );
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *error_value*<br/>
-Nová hodnota **_doserrno –**.
+Nová hodnota **_doserrno**.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu nula, pokud bylo úspěšné.
+Nula v případě úspěchu vrátí hodnotu.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -67,13 +57,13 @@ Možné hodnoty jsou definovány v Errno.h.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
 |**_set_doserrno**|\<stdlib.h>|\<errno.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [_get_doserrno](get-doserrno.md)<br/>
 [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

@@ -1,11 +1,6 @@
 ---
-title: log1p – log1pf –, log1pl2 | Microsoft Docs
-ms.custom: ''
+title: log1p – log1pf –, log1pl2
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - log1p
 - log1pf
@@ -35,20 +30,16 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 650fb8f7567b4f2f3b0b9032397c2b54a99013dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7984367aa4244a927bb9dabc5533a807d74ac1a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402745"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524992"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p – log1pf –, log1pl
 
-Vypočítá přirozený logaritmus 1 plus zadanou hodnotu.
+Vypočítá přirozený logaritmus 1 a zadané hodnoty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -78,44 +69,44 @@ long double log1pl(
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Argumentem s plovoucí desetinnou čárkou.
+Argument s plovoucí desetinnou čárkou.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí přirozený (základní -*e*) protokolu systému (*x* + 1).
+V případě úspěchu vrátí fyzická (základní -*e*) z protokolu (*x* + 1).
 
-Jinak může vrátit jednu z následujících hodnot:
+V opačném případě může vracet instanci jednoho z následujících hodnot:
 
-|Vstup|Výsledek|Výjimka SEH|Kód chyby|
+|Vstup|Výsledek|Výjimka SEH|errno|
 |-----------|------------|-------------------|-----------|
 |+ inf|+ inf|||
 |Denormals|Stejné jako vstup|PODTEČENÍ||
 |±0|Stejné jako vstup|||
-|-1|-inf|DIVBYZERO|ERANGE –|
-|< -1|NaN.|NEPLATNÝ|EDOM –|
-|-inf|NaN.|NEPLATNÝ|EDOM –|
+|-1|-inf|DIVBYZERO|ERANGE|
+|< -1|NaN|NEPLATNÝ|EDOM|
+|-inf|NaN|NEPLATNÝ|EDOM|
 |±SNaN|Stejné jako vstup|NEPLATNÝ||
-|±QNaN neomezené|Stejné jako vstup|||
+|±QNaN nekonečno|Stejné jako vstup|||
 
-**Errno** hodnota nastavena na erange – Pokud *x* = -1. **Errno** nastavena na hodnotu **edom –** Pokud *x* < -1.
+**Errno** hodnota nastavená na ERANGE Pokud *x* = -1. **Errno** nastavena na hodnotu **EDOM** Pokud *x* < -1.
 
 ## <a name="remarks"></a>Poznámky
 
-**Log1p –** funkce může být přesnější, než pomocí `log(x + 1)` při *x* blíží 0.
+**Log1p –** funkce mohou mít přesnější, než pomocí `log(x + 1)` při *x* blíží 0.
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **log1p –** , přijmout a vrátit **float** a **dlouho** **dvojité** typy. V programu C **log1p –** vždy provede a vrátí **dvojité**.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **log1p –** , která používají a vrací **float** a **dlouhé** **double** typy. V programu jazyka C **log1p –** vždy převezme a vrátí **double**.
 
-Pokud *x* přirozený číslo, vrátí tato funkce logaritmus faktoriál (*x* - 1).
+Pokud *x* přirozené číslo, je tato funkce vrací logaritmus faktoriál (*x* – 1).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Hlavička C|Hlavička C++|
+|Funkce|Záhlaví C|Hlaviček jazyka C++|
 |--------------|--------------|------------------|
-|**log1p –**, **log1pf –**, **log1pl**|\<Math.h >|\<cmath – >|
+|**log1p –**, **log1pf –**, **log1pl**|\<Math.h >|\<cmath >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [log2, log2f, log2l](log2-log2f-log2l.md)<br/>

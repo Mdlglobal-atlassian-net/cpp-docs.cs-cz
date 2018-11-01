@@ -1,23 +1,13 @@
 ---
-title: Konfigurace Visual C++ pro procesory ARM | Dokumentace Microsoftu
-ms.custom: ''
+title: Konfigurace Visual C++ pro procesory ARM
 ms.date: 07/11/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 3d95f221-656a-480d-9651-9ad263895747
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fbdf882367deb34570dd5b5ebb1b4001be739297
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9238bf9342984e788d3abe6d7da8b0974a78ac24
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373854"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594217"
 ---
 # <a name="configure-visual-c-for-arm-processors"></a>Konfigurace Visual C++ pro procesory ARM
 

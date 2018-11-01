@@ -1,10 +1,6 @@
 ---
-title: _memicmp –, _memicmp_l – | Microsoft Docs
-ms.custom: ''
+title: _memicmp, _memicmp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _memicmp_l
 - _memicmp
@@ -25,28 +21,22 @@ f1_keywords:
 - _memicmp
 - memicmp_l
 - _memicmp_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - memicmp function
 - _memicmp function
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a3ddd09fbfbfd4de095bfbc67bc669cf9c794dee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8beb632c8bd2cfac486fc58fc930b94490bdecbc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403050"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636810"
 ---
 # <a name="memicmp-memicmpl"></a>_memicmp, _memicmp_l
 
-Porovná dva vyrovnávací paměti (velká a malá písmena) znaků.
+Porovná znaky ve dvou vyrovnávacích pamětech (velká a malá písmena).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -76,26 +66,26 @@ Druhá vyrovnávací paměť.
 Počet znaků.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
 Návratová hodnota označuje vztah mezi vyrovnávacími pamětmi.
 
-|Návratová hodnota|Vztah první počet bajtů buf1 a buf2|
+|Návratová hodnota|Vztah prvních počet bajtů proměnných buf1 a buf2|
 |------------------|--------------------------------------------------------|
 |< 0|*buffer1* menší než *buffer2*.|
-|0|*buffer1* identické *buffer2*.|
+|0|*buffer1* shodné s *buffer2*.|
 |> 0|*buffer1* větší než *buffer2*.|
 |**_NLSCMPERROR**|Došlo k chybě.|
 
 ## <a name="remarks"></a>Poznámky
 
-**_Memicmp –** funkce Porovná první *počet* znaky dvou vyrovnávacích pamětí *buffer1* a *buffer2* bajtů podle bajtů. Porovnání nerozlišuje malá a velká písmena.
+**_Memicmp –** funkce porovnává první z nich *počet* znaky ze dvou vyrovnávacích pamětech *buffer1* a *buffer2* bajt po bajtu. Porovnání nerozlišuje velká a malá písmena.
 
-Pokud má jedna *buffer1* nebo *buffer2* je ukazatel s hodnotou null, funkce vyvolá obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, funkce vrátí hodnotu **_NLSCMPERROR** a nastaví **errno** k **einval –**.
+Pokud *buffer1* nebo *buffer2* je ukazatel s hodnotou null, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí **_NLSCMPERROR** a nastaví **errno** k **EINVAL**.
 
-**_memicmp –** používá aktuální národní prostředí pro chování závislých na národním prostředí; **_memicmp_l –** se shoduje s tím rozdílem, že používá národní prostředí předaná místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+**_memicmp –** používá aktuální národní prostředí pro chování závislé na národním prostředí **_memicmp_l –** je stejná s tím rozdílem, že používá národní prostředí předané. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -104,7 +94,7 @@ Pokud má jedna *buffer1* nebo *buffer2* je ukazatel s hodnotou null, funkce vyv
 |**_memicmp**|\<Memory.h > nebo \<string.h >|
 |**_memicmp_l**|\<Memory.h > nebo \<string.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -141,7 +131,7 @@ Compare 'Those Who Will Not Learn from' to 'THOSE WHO WILL NOT LEARN FROM'
 First is equal to second.
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zacházení s vyrovnávací pamětí](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>

@@ -1,26 +1,16 @@
 ---
-title: Ošetření tlačítka použít | Dokumentace Microsoftu
-ms.custom: ''
+title: Ošetření tlačítka Použít
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Apply button in property sheet
 - property sheets, Apply button
 ms.assetid: 7e977015-59b8-406f-b545-aad0bfd8d55b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8286bc15d3bbc3716263bf76b0eea953366b0947
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7402f99148f20be4ce56c44b5ce7f66f0c24bd36
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405915"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591259"
 ---
 # <a name="handling-the-apply-button"></a>Ošetření tlačítka Použít
 

@@ -1,25 +1,15 @@
 ---
-title: Možné chyby při předávání objektů CRT přes hranice knihovny DLL | Dokumentace Microsoftu
-ms.custom: ''
+title: Možné chyby při předávání objektů CRT přes hranice knihovny DLL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - DLL conflicts [C++]
 ms.assetid: c217ffd2-5d9a-4678-a1df-62a637a96460
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0b9bc03e0d69492f7e46165f6f754f4a4ca3625d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c90303db63724bbcf584340147555814d9a92f83
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031899"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562770"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Možné chyby při předávání objektů CRT přes hranice knihovny DLL
 

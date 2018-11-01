@@ -1,14 +1,8 @@
 ---
-title: -V (číslo verze) | Dokumentace Microsoftu
-ms.custom: ''
+title: /V (Číslo verze)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /v
-dev_langs:
-- C++
 helpviewer_keywords:
 - embedding version strings
 - /V compiler option [C++]
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - V compiler option [C++]
 - -V compiler option [C++]
 ms.assetid: 3e93fb7a-5dfd-49a6-bd49-3dca8052e0f3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c4ad42a72a874537a6307cfc547852f812f4aaaa
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 23c6ebfc0d67c6d00ed0e26d2e23806234cbb6af
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707964"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463827"
 ---
 # <a name="v-version-number"></a>/V (Číslo verze)
 
@@ -62,7 +52,7 @@ Můžete také použít [komentáře (C/C++)](../../preprocessor/comment-c-cpp.m
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Viz také
 

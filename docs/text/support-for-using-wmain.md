@@ -1,36 +1,26 @@
 ---
-title: Podpora použití funkce wmain | Dokumentace Microsoftu
-ms.custom: ''
+title: Podpora použití funkce wmain
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - wWinMain
-dev_langs:
-- C++
 helpviewer_keywords:
 - wide characters [C++], wmain function
 - wWinMain function
 - wmain function
 ms.assetid: 41213c41-668c-40a4-8a1e-77d9eded720d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bde65550b5c6561356fa5888b0985f6aee4702f7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 06ec38abb97088f1364a4370efdebb67a04d9294
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441704"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50583778"
 ---
 # <a name="support-for-using-wmain"></a>Podpora použití funkce wmain
 
 Jazyk Visual C++ podporuje definování **wmain** funkce a předávání argumentů širokého znaku Unicode aplikace. Deklarovat formální parametry **wmain**, pomocí ve formátu podobném `main`. Následně je možné do aplikace předat argumenty širokých znaků a volitelně ukazatel prostředí širokých znaků. `argv` a `envp` parametry **wmain** jsou typu `wchar_t*`. Příklad:
 
 ```cpp
-wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
+wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
 ```
 
 > [!NOTE]

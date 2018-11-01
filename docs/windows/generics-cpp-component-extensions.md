@@ -1,29 +1,19 @@
 ---
-title: Obecné typy (C + +/ CLI a C + +/ CX) | Dokumentace Microsoftu
-ms.custom: ''
+title: Obecné typy (C + +/ CLI a C + +/ CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - generic_cpp
 - generic
-dev_langs:
-- C++
 helpviewer_keywords:
 - generics [C++]
 ms.assetid: c7ccc316-a411-4c00-b2e2-f0c0eadc6cfd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8bb0c6bc3459ff0b86200502b1a31ee341078280
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 5c00d8ece7d08adbb6e60cccd75cbe84487a9ecd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327672"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477607"
 ---
 # <a name="generics--ccli-and-ccx"></a>Obecné typy (C + +/ CLI a C + +/ CX)
 
@@ -36,10 +26,10 @@ Obecné typy jsou parametrizované typy a metody. V této části přečtěte si
 [Přehled obecných typů v jazyce C + +/ CLI](../windows/overview-of-generics-in-visual-cpp.md)<br/>
 Informace o obecných typů jsou motivace pro funkci jazyk definice termíny používané k popisu obecné typy a informace o používání typy odkazů a typy hodnot jako parametry typu pro obecné typy.
 
-[Obecná rozhraní (C + +/ CLI)](../windows/generic-interfaces-visual-cpp.md)<br/>
+[Obecná rozhraní (C++/CLI)](../windows/generic-interfaces-visual-cpp.md)<br/>
 Informace o definování a použití obecných rozhraní.
 
-[Obecní delegáti (C + +/ CLI)](../windows/generic-delegates-visual-cpp.md)<br/>
+[Obecní delegáti (C++/CLI)](../windows/generic-delegates-visual-cpp.md)<br/>
 Informace o definování a používání obecných delegátů.
 
 [Omezení parametrů obecných typů (C++/CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)<br/>
@@ -48,7 +38,7 @@ Informace o použití omezení v obecných typech.
 [Použití obecných typů (C++/CLI)](../windows/consuming-generics-cpp-cli.md)<br/>
 Informace o použití obecných typů definované v sestavení .NET, může být vytvořená v jiných jazycích, v jazyce C + +/ CLI.
 
-[Obecné typy a šablony (C + +/ CLI)](../windows/generics-and-templates-visual-cpp.md)<br/>
+[Obecné typy a šablony (C++/CLI)](../windows/generics-and-templates-visual-cpp.md)<br/>
 Porovnání obecné typy a šablony pro použití každou a jak kombinovat úspěšně.
 
 ### <a name="supported-by-the-common-language-runtime"></a>Podporuje modul Common Language Runtime

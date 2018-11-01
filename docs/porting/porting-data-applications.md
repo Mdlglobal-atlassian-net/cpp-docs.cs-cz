@@ -1,12 +1,6 @@
 ---
-title: Přenos datových aplikací | Dokumentace Microsoftu
-ms.custom: ''
+title: Přenos datových aplikací
 ms.date: 05/12/2017
-ms.technology:
-- devlang-cpp
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC [C++], data access applications
 - databases [C++], MFC
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 8d10c285-c13f-4e6e-a09e-5ee0f2666b44
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 51b041c60cd1bb8f866a6174e3cbb41ad613acc0
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: ccdd4c05537991ab7605d29c6d2eba1a22851a10
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50078164"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663928"
 ---
 # <a name="porting-data-applications"></a>Přenos datových aplikací
 V průběhu let Visual C++ poskytuje několik způsobů, jak pracovat s databází. V roce 2011 společnost Microsoft oznámila, že to je zarovnání na rozhraní ODBC jako preferované technologie pro přístup k systému SQL Server produkty z nativního kódu. ODBC je oborový standard, a pomocí něj získat maximální přenositelnost kódu nad velkým množstvím platforem a zdroje dat. Většinu produktů, které databáze SQL a NoSQL výrobky podpora rozhraní ODBC. Rozhraní ODBC můžete použít přímo pomocí volání rozhraní ODBC API nízké úrovně, nebo můžete použít obálkové třídy knihovny MFC rozhraní ODBC nebo knihovny třetích stran obálky C++.

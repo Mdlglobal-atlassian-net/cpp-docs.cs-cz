@@ -1,37 +1,27 @@
 ---
-title: C3768 Chyba kompilátoru | Microsoft Docs
-ms.custom: ''
+title: Chyba kompilátoru C3768
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3768
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3768
 ms.assetid: 091f0d53-1dff-43fd-813d-5c43c85b6ab0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5e6b7a2d1617591609f75b2b07f1a94983ee22f4
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: e9c385fd178dc967e72f5e0ca7fab27b28ad962f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704955"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676728"
 ---
-# <a name="compiler-error-c3768"></a>C3768 chyby kompilátoru
+# <a name="compiler-error-c3768"></a>Chyba kompilátoru C3768
 
-> nelze převést na adresu virtuální vararg – funkce v čistě spravovaného kódu
+> nejde převzít adresu virtuální funkce vararg v čistě spravovaném kódu.
 
 ## <a name="remarks"></a>Poznámky
 
-**/CLR: pure** – možnost kompilátoru je zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017.
+**/CLR: pure** – možnost kompilátoru je zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
 
-Při kompilaci s **/CLR: pure**, nelze převést na adresu virtuální `vararg` funkce.
+Při kompilaci s **/CLR: pure**, nelze převzít adresu proměnné virtuální `vararg` funkce.
 
 ## <a name="example"></a>Příklad
 

@@ -1,10 +1,6 @@
 ---
-title: _getchar_nolock –, _getwchar_nolock – | Microsoft Docs
-ms.custom: ''
+title: _getchar_nolock, _getwchar_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getchar_nolock
 - _getwchar_nolock
@@ -25,8 +21,6 @@ f1_keywords:
 - _getwchar_nolock
 - _getchar_nolock
 - getchar_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - _getwchar_nolock function
 - getwchar_nolock function
@@ -35,20 +29,16 @@ helpviewer_keywords:
 - getchar_nolock function
 - standard input, reading from
 ms.assetid: dc49ba60-0647-4ae9-aa9a-a0618b1666de
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83388f8c8d1788fa42f193030a45bf97c3472e23
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: feeda65d06dbcfecb6ea5adc60934abf3d0df415
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400395"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50600135"
 ---
 # <a name="getcharnolock-getwcharnolock"></a>_getchar_nolock, _getwchar_nolock
 
-Čte znak z standardní vstup.
+Přečte znak ze standardního vstupu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,11 +49,11 @@ wint_t _getwchar_nolock( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V tématu [getchar getwchar –](getchar-getwchar.md).
+Zobrazit [getchar getwchar –](getchar-getwchar.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_getchar_nolock –** a **_getwchar_nolock –** jsou stejné jako **getchar** a **getwchar –** s tím rozdílem, že nejsou chráněny před narušení jiná vláken. Může být rychlejší, protože nevznikají nároky na uzamčení jiná vlákna. Tyto funkce lze používejte pouze v kontextu vláken jako je například aplikace nebo kde oboru volání již zpracovává izolace přístup z více vláken.
+**_getchar_nolock –** a **_getwchar_nolock –** jsou stejné jako **getchar** a **getwchar –** s tím rozdílem, že nejsou chráněny před rušením z jiných vlákna. Mohou být rychlejší, protože nejsou spojené režii uzamykáním ostatních vláken. Tyto funkce používejte pouze v kontextech bezpečných na vlákna, jako je například aplikace s jedním vláknem nebo pokud volající obor již zpracovává izolaci vláken.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -78,7 +68,7 @@ V tématu [getchar getwchar –](getchar-getwchar.md).
 |**_getchar_nolock**|\<stdio.h>|
 |**_getwchar_nolock**|\<stdio.h > nebo \<wchar.h >|
 
-Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou, **stdin –**, **stdout**, a **stderr**, musí být přesměrována C běhové funkce mohli používat v aplikacích pro UPW . Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Konzole není podporována v aplikacích pro univerzální platformu Windows (UPW). Standardní datový proud popisovačů, které jsou spojeny s konzolou, **stdin**, **stdout**, a **stderr**, musí být přesměrován před funkcí jazyka C za běhu můžete použít v aplikacích pro UWP . Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -111,9 +101,9 @@ int main()
 This textInput was: This text
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

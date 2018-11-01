@@ -1,10 +1,6 @@
 ---
-title: _cprintf_p –, _cprintf_p_l –, _cwprintf_p –, _cwprintf_p_l – | Microsoft Docs
-ms.custom: ''
+title: _cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cprintf_p_l
 - _cwprintf_p_l
@@ -33,8 +29,6 @@ f1_keywords:
 - _cwprintf_p
 - _tcprintf_p
 - cprintf_p_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _cwprintf_p_l function
 - cwprintf_p function
@@ -49,23 +43,19 @@ helpviewer_keywords:
 - tcprintf_p function
 - cprintf_p function
 ms.assetid: 1f82fd7d-13c8-4c4a-a3e4-db0df3873564
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 328e6fba2854e2cee82bdb9b7ccfe2e62e7c1ddc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ef4ac6a89749c2784e4935fcf83810e81b61ae11
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402644"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658455"
 ---
 # <a name="cprintfp-cprintfpl-cwprintfp-cwprintfpl"></a>_cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l
 
-Naformátuje a vytiskne ke konzole a podporuje poziční parametry ve formátovacím řetězci.
+Formátuje a tiskne na konzolu a podporuje parametry pozice ve formátovacím řetězci.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -103,20 +93,20 @@ Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Počet znaků, vytisknout nebo záporná, pokud dojde k chybě.
+Počet vytištěných znaků nebo záporná hodnota, pokud dojde k chybě.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce formátování a tisk řady znaků a hodnot přímo do konzoly, pomocí **_putch –** a **_putwch –** funkce výstup znaků. Každý *argument* (pokud existuje) je převeden a výstup podle odpovídající specifikaci formátu v *formátu*. Formát má stejné tvoří a fungovat jako *formátu* parametr pro [printf_p –](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) funkce. Rozdíl mezi **_cprintf_p –** a **cprintf_s –** je, že **_cprintf_p –** podporuje poziční parametry, které umožní určení pořadí, ve kterém jsou argumenty použít ve formátovacím řetězci. Další informace najdete v tématu [printf_p – poziční parametry](../../c-runtime-library/printf-p-positional-parameters.md).
+Tyto funkce naformátují a vytisknou řadu znaků a hodnot přímo na konzoli pomocí **_putch** a **_putwch** funguje na výstupní znaky. Každý *argument* (pokud existuje) je převeden a uložen podle odpovídající specifikace formátu v *formátu*. Formát má stejnou formu a funkci, jako *formátu* parametr pro [printf_p –](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) funkce. Rozdíl mezi **_cprintf_p –** a **cprintf_s –** je, že **_cprintf_p –** podporuje poziční parametry, které umožňují určit pořadí, ve kterém jsou argumenty použité ve formátovacím řetězci. Další informace najdete v tématu [printf_p – poziční parametry](../../c-runtime-library/printf-p-positional-parameters.md).
 
-Na rozdíl od **fprintf_p –**, **printf_p –**, a **sprintf_p –** funguje, ani **_cprintf_p –** ani **_cwprintf_p –** překládá posun řádku znaků do kombinace znaků CR vrátit LF (CR-LF) při výstupu. Zásadní rozdíl je, že **_cwprintf_p –** zobrazí znaky znakové sady Unicode, když se používá v systému Windows NT. Na rozdíl od **_cprintf_p –**, **_cwprintf_p –** používá aktuální nastavení národního prostředí konzoly.
+Na rozdíl od **fprintf_p –**, **printf_p –**, a **sprintf_p –** funkce ani **_cprintf_p –** ani **_cwprintf_p –** LF znaků ve výrazném kombinace return-line kanál (CR-LF) návrat na začátek řádku výstupu. K rozlišení je, že **_cwprintf_p –** zobrazí znaky Unicode při použití v systému Windows NT. Na rozdíl od **_cprintf_p –**, **_cwprintf_p –** používá aktuální nastavení národního prostředí konzoly.
 
-Verze tyto funkce s **_l** příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí předaná místo aktuální národní prostředí.
+Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí namísto aktuálního národního prostředí předaného.
 
 > [!IMPORTANT]
-> Ujistěte se, že *formát* není řetězec definovaný uživatelem.
+> Ujistěte se, že *formátu* není uživatelem definovaný řetězec.
 
-Také jako **_cprintf_s –** a **_cwprintf_s –**, jejich ověření vstupu ukazatele a řetězec formátu. Pokud *formátu* nebo *argument* jsou **NULL**, nebo formátu řetězec obsahuje neplatné znaky formátování, tyto funkce vyvolat obslužnou rutinu neplatný parametr, jako popsané v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, tyto funkce vrátí hodnotu -1 a nastavte **errno** k **einval –**.
+Také, jako jsou **_cprintf_s** a **_cwprintf_s –**, ověřují vstupní ukazatel a formátovací řetězec. Pokud *formátu* nebo *argument* jsou **NULL**, nebo řetězec formátu obsahuje neplatné formátovací znaky, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jako popsané v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a nastaví **errno** k **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -132,7 +122,7 @@ Také jako **_cprintf_s –** a **_cwprintf_s –**, jejich ověření vstupu uk
 |**_cprintf_p –**, **_cprintf_p_l –**|\<conio.h >|
 |**_cwprintf_p –**, **_cwprintf_p_l –**|\<conio.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -162,7 +152,7 @@ int main( void )
 -16  001d  62511  A Test
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [I/O konzoly a portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>

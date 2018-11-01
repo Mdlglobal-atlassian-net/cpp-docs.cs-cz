@@ -1,10 +1,6 @@
 ---
-title: memmove_s –, wmemmove_s – | Microsoft Docs
-ms.custom: ''
+title: memmove_s, wmemmove_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wmemmove_s
 - memmove_s
@@ -24,26 +20,20 @@ apitype: DLLExport
 f1_keywords:
 - wmemmove_s
 - memmove_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 39fde456dd2e45d38bdd1b6ba8d9d7eb9811dd05
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b60174c3a06e60301a3e9123434220227f4f426
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403892"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561184"
 ---
 # <a name="memmoves-wmemmoves"></a>memmove_s, wmemmove_s
 
-Přesune na jiný jednu vyrovnávací paměti. Toto jsou verze [memmove –, wmemmove –](memmove-wmemmove.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Jeden vyrovnávací paměti přesune do jiné. Jde o verzích [memmove wmemmove –](memmove-wmemmove.md) s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,7 +54,7 @@ errno_t wmemmove_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Cíle*<br/>
+*cíl*<br/>
 Cílový objekt.
 
 *numberOfElements*<br/>
@@ -78,21 +68,21 @@ Počet bajtů (**memmove_s –**) nebo znaky (**wmemmove_s –**) ke kopírován
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěšného; Kód chyby při selhání
+Nula v případě úspěchu; při selhání kód chyby
 
-### <a name="error-conditions"></a>Chybové stavy
+### <a name="error-conditions"></a>Chybové podmínky
 
-|*Cíle*|*numberOfElements*|*src*|Návratová hodnota|Obsah *cíle*|
+|*cíl*|*numberOfElements*|*src*|Návratová hodnota|Obsah *dest*|
 |------------|------------------------|-----------|------------------|------------------------|
-|**HODNOTU NULL**|všechny|všechny|**EINVAL –**|nedojde ke změně|
-|všechny|všechny|**HODNOTU NULL**|**EINVAL –**|nedojde ke změně|
-|všechny|< *Počet*|všechny|**ERANGE –**|nedojde ke změně|
+|**HODNOTU NULL**|Všechny|Všechny|**EINVAL**|Nezměněno|
+|Všechny|Všechny|**HODNOTU NULL**|**EINVAL**|Nezměněno|
+|Všechny|< *Počet*|Všechny|**ERANGE**|Nezměněno|
 
 ## <a name="remarks"></a>Poznámky
 
-Kopie *počet* bajtů znaky z *src* k *cíle*. Pokud se některé oblasti oblasti zdroj a cíl překrývají, **memmove_s –** zajistí, že původní zdrojový bajtů v překrývající se oblasti zkopírovaly před přepsáním.
+Kopie *počet* bajtů ze znaků *src* k *dest*. Pokud se některé oblasti oblasti zdroj a cíl překrývají, **memmove_s –** zajistí, že se zkopírují původní zdroj bajtů překrývající se oblasti před přepsáním.
 
-Pokud *cíle* nebo, pokud *src* je ukazatel s hodnotou null, nebo pokud cílový řetězec je příliš malá, tyto funkce vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud je povoleno spuštění chcete-li pokračovat, tyto funkce vracejí **einval –** a nastavte **errno** k **einval –**.
+Pokud *dest* nebo, pokud *src* je ukazatel s hodnotou null, nebo pokud cílový řetězec je moc malé, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Pokud provádění může pokračovat, vrátí tyto funkce **EINVAL** a nastavte **errno** k **EINVAL**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -101,7 +91,7 @@ Pokud *cíle* nebo, pokud *src* je ukazatel s hodnotou null, nebo pokud cílový
 |**memmove_s –**|\<String.h >|
 |**wmemmove_s**|\<wchar.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -139,7 +129,7 @@ Before: 0123456789
 After: 0012345789
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zacházení s vyrovnávací pamětí](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>

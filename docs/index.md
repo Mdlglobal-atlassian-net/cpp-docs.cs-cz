@@ -1,18 +1,15 @@
 ---
 layout: HubPage
-ms.topic: conceptual
-title: Dokumentace k Visual C++ | Dokumentace Microsoftu
+title: Dokumentace k Visual C++
 description: Další informace o použití jazyka C++ pro vývoj aplikací, služeb a nástrojů pro vaše platformy a zařízení.
 author: mikeblome
 ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8a64fd3c15f589fdd677354c43c9a5bb9a3484aa
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: b4e660af273fac320fcebed19c135d8e37d1a50f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50082538"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677861"
 ---
 <div id="main" class="v2">
     <div class="container">

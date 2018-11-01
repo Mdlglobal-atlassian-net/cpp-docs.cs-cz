@@ -1,15 +1,9 @@
 ---
-title: -BASE (základní adresa) | Dokumentace Microsoftu
-ms.custom: ''
+title: /BASE (základní adresa)
 ms.date: 09/05/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /base
 - VC.Project.VCLinkerTool.BaseAddress
-dev_langs:
-- C++
 helpviewer_keywords:
 - base addresses [C++]
 - programs [C++], preventing relocation
@@ -26,16 +20,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - at sign symbol for base address
 ms.assetid: 00b9f6fe-0bd2-4772-a69c-7365eb199069
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 28e4e2ea0118d79e2746db93ba30478ed2563434
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 00bac7b15263d976fa840e22406f4be4c7836962
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860534"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551707"
 ---
 # <a name="base-base-address"></a>/BASE (základní adresa)
 
@@ -56,7 +46,7 @@ Linker vyvolá chybu, pokud *adresu* není násobkem 64 kB. Volitelně můžete 
 
 Na příkazovém řádku je další způsob, jak zadat základní adresu pomocí souboru odpovědí. základní adresa. Soubor odpovědí základní adresa je textový soubor, který obsahuje základní adresy a volitelné velikostí všechny knihovny DLL váš program bude používat a text jedinečný klíč pro každou základní adresu. Chcete-li zadat základní adresu pomocí souboru odpovědí, použijte zavináč (**\@**) následovaný názvem souboru odpovědí *filename*následovaný čárku, pak bude *klíč*hodnotu pro základní adresa pro použití v souboru. Propojovací program hledá *filename* buď na zadané cestě, nebo pokud není zadaná žádná cesta, v adresářích určených proměnnou prostředí LIB. Každý řádek v *filename* představuje jednu knihovnu DLL a má následující syntaxi:
 
-> *klíč* *adresu* [*velikost*] **;** *komentář*
+> *klíč* *adresu* [*velikost*] **;** *komentář*
 
 *Klíč* je řetězec alfanumerických znaků a není malá a velká písmena. To je obvykle název knihovny DLL, ale nemusí být. *Klíč* následuje základní *adresu* v jazyce C, hexadecimální nebo desítkové soustavě a volitelné maximální *velikost*. Všechny tři argumenty oddělené mezerami či tabulátory. Linker vydá upozornění, pokud zadaný *velikost* je menší než požadované programem virtuální adresní prostor. A *komentář* je určená středník (**;**) a může být na stejném nebo na samostatném řádku. Propojovací program ignoruje veškerý text z středník na konec řádku. Tento příklad ukazuje část takový soubor:
 
@@ -84,7 +74,7 @@ Dalším způsobem, jak nastavit základní adresu, je pomocí *základní* argu
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.BaseAddress%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.BaseAddress%2A>.
 
 ## <a name="see-also"></a>Viz také
 

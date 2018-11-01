@@ -1,10 +1,6 @@
 ---
-title: Operator! = | Microsoft Docs
-ms.custom: ''
+title: operator!=
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - std::!=
 - '!='
@@ -12,28 +8,22 @@ f1_keywords:
 - std.operator!=
 - std.!=
 - operator!=
-dev_langs:
-- C++
 helpviewer_keywords:
 - '!= operator'
 - operator!=
 - operator !=
 ms.assetid: ef2be7f0-1c94-4edc-b65c-731fddd519f4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 35495f6435bf448325ee4556366e47d8e566aadb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3a750565f16a0a01770cea16bf91918887095f4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853583"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50574239"
 ---
 # <a name="operator"></a>operator!=
 
 > [!NOTE]
-> Toto téma se v dokumentaci k Visual C++ jako funkční příklad kontejnery použít ve standardní knihovně C++. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
+> Toto téma je v dokumentaci k Visual C++ jako funkční příklad kontejnery používané ve standardní knihovně jazyka C++. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
 
 Přetížení `operator!=` k porovnání dvou objektů třídy šablony [kontejneru](../standard-library/sample-container-class.md).
 
@@ -50,6 +40,6 @@ bool operator!=(
 
 Vrátí `!(left == right)`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<Ukázkový kontejner >](../standard-library/sample-container.md)<br/>

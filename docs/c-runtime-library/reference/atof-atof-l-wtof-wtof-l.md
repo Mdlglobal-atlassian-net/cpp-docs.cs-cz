@@ -1,10 +1,6 @@
 ---
-title: atof –, _atof_l –, _wtof –, _wtof_l – | Microsoft Docs
-ms.custom: ''
+title: atof, _atof_l, _wtof, _wtof_l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wtof_l
 - atof
@@ -36,8 +32,6 @@ f1_keywords:
 - corecrt_wstdlib/_wtof
 - _wtof_l
 - corecrt_wstdlib/_wtof_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tstof function
 - atof_l function
@@ -52,20 +46,16 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d78fe14783200e1e145c39b9b274d9e7e3ddb6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c2ec158ac0b75a861b5b226d33de113d76988cb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396807"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471172"
 ---
 # <a name="atof-atofl-wtof-wtofl"></a>atof, _atof_l, _wtof, _wtof_l
 
-Převeďte řetězec na hodnotu double.
+Převod řetězce na double.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -88,37 +78,37 @@ double _wtof_l(
 
 ## <a name="parameters"></a>Parametry
 
-*str –*<br/>
+*str*<br/>
 Řetězec, který má být převeden.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Jednotlivé funkce vrátí **dvojité** hodnota vyprodukované interpretace vstupu znaky jako číslo. Vrácená hodnota je 0,0, pokud vstupní nelze převést na hodnotu typu.
+Každá funkce vrátí **double** hodnotu interpretací vstupních znaků jako číslo. Vrácená hodnota je 0,0, pokud vstup nelze převést na hodnotu daného typu.
 
-Ve všech případech out-of-range **errno** je nastaven na **erange –**. Pokud parametr byl předán v **NULL**, obslužná rutina neplatný parametr je vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, nastavte tyto funkce **errno** k **einval –** a vrátí 0.
+Ve všech případech mimo rozsah **errno** je nastavena na **ERANGE**. Pokud parametr předaný **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tyto funkce nastaví **errno** k **EINVAL** a vrátí 0.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce převést znakového řetězce na hodnotu Dvojitá přesnost, s plovoucí desetinnou čárkou.
+Tyto funkce převádějí řetězec znaků na hodnotu s dvojitou přesností a plovoucí desetinnou čárkou.
 
-Vstupní řetězec je posloupnost znaků, které lze interpretovat jako hodnotu zadaného typu. Funkce zastaví čtení vstupní řetězec u prvního znaku, který nelze rozpoznat jako součást číslo. Tento znak může být znak hodnoty null ('\0' nebo L '\0') ukončující řetězec.
+Vstupní řetězec je posloupnost znaků, které lze interpretovat jako hodnotu zadaného typu. Funkce zastaví čtení vstupního řetězce u prvního znaku, který nebude rozpoznán jako část čísla. Tento znak může být znak null ('\0' nebo L '\0') řetězce se ukončuje.
 
 *Str* argument **atof –** a **_wtof –** má následující formát:
 
-[*prázdné*] [*přihlašovací*] [*číslic*] [__.__ *číslic*] [{**e** &#124; **E** } [*přihlašovací*]*číslic*]
+[*prázdné znaky*] [*přihlašování*] [*číslic*] [__.__ *číslic*] [{**e** &#124; **E** } [*přihlašování*]*číslic*]
 
-A *prázdné* se skládá z místa nebo kartě znaků, které se mají ignorovat; *přihlašovací* je buď plus (+) nebo minus (-) a *číslic* jsou jeden nebo více desetinných míst. Pokud se zobrazí bez číslic od desetinné čárky, alespoň jeden musí být uvedena za desetinnou čárkou. Desetinných míst může následovat exponentem, který se skládá z úvodní písmeno (**e**, nebo **E**) a volitelně podepsaný desítkové celé číslo.
+A *prázdné znaky* se skládá ze znaků mezera nebo tabulátor, které jsou ignorovány; *přihlašování* je buď plus (+) nebo minus (-); a *číslic* jsou jeden nebo více desítkových číslic. Pokud se nezobrazí žádné číslic od desetinné čárky, alespoň číslice se musí nacházet za desetinnou čárkou. Může být následován desítkových číslic exponentu, které se skládají z úvodního písmene (**e**, nebo **E**) a volitelně podepsaný desítkové celé číslo.
 
-Verze UCRT tyto funkce nepodporuje převod Fortran stylu (**d** nebo **D**) exponentu písmena. Toto nestandardní rozšíření byl podporován ve starších verzích CRT a může být narušující změně kódu.
+UCRT verze těchto funkcí nepodporuje převod až po Fortran – vizuální styl (**d** nebo **D**) exponentu písmena. Toto nestandardní rozšíření je podporován v předchozích verzích CRT a může být k zásadní změně vašeho kódu.
 
-Verze tyto funkce s **_l** příponu jsou shodné s tím rozdílem, že se používají *národního prostředí* parametr byl předán v místo aktuální národní prostředí.
+Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že používají *národní prostředí* předán parametr namísto aktuálního národního prostředí.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstof –**|**atof –**|**atof –**|**_wtof**|
 |**_ttof –**|**atof –**|**atof –**|**_wtof**|
@@ -127,12 +117,12 @@ Verze tyto funkce s **_l** příponu jsou shodné s tím rozdílem, že se použ
 
 |Routine(s)|Požadovaný hlavičkový soubor|
 |------------------|---------------------|
-|**atof –**, **_atof_l –**|C: \<math.h > nebo \<stdlib.h > C++: \<cstdlib – >, \<stdlib.h >, \<cmath – > nebo \<math.h >|
+|**atof –**, **_atof_l –**|C: \<math.h > nebo \<stdlib.h > C++: \<cstdlib – >, \<stdlib.h >, \<cmath > nebo \<math.h >|
 |**_wtof –**, **_wtof_l –**|C: \<stdlib.h > nebo \<wchar.h > C++: \<cstdlib – >, \<stdlib.h > nebo \<wchar.h >|
 
 ## <a name="example"></a>Příklad
 
-Tento program ukazuje, jak lze převést čísla uložená jako řetězce do číselných hodnot pomocí **atof –** a **_atof_l –** funkce.
+Tento program ukazuje, jak lze převést čísel uložených jako řetězce na číselné hodnoty pomocí **atof –** a **_atof_l –** funkce.
 
 ```C
 // crt_atof.c
@@ -181,7 +171,7 @@ Function: atof("  -2,309e-25") = -2.000000e+00
 Function: _atof_l("  -2,309e-25", fr)) = -2.309000e-25
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
