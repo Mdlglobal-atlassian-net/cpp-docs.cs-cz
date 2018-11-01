@@ -1,10 +1,6 @@
 ---
-title: _kbhit – | Microsoft Docs
-ms.custom: ''
+title: _kbhit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _kbhit
 apilocation:
@@ -24,8 +20,6 @@ f1_keywords:
 - _kbhit
 - kbhit
 - conio/_kbhit
-dev_langs:
-- C++
 helpviewer_keywords:
 - keyboard input
 - user input, checking for keyboard
@@ -36,23 +30,19 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f414403774a6f2dbd5e21b70d707ab8c8b20c63f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9133d73e92438327bb2381e3293fd37076dd27ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399046"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667989"
 ---
 # <a name="kbhit"></a>_kbhit
 
 Zkontroluje konzolu na vstup z klávesnice.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,11 +53,11 @@ int _kbhit( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_kbhit –** vrátí nenulovou hodnotu, pokud byla stisknutí klávesy. Jinak vrací 0.
+**_kbhit –** vrací nenulovou hodnotu, pokud se stiskla klávesa. Jinak vrací 0.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Kbhit –** funkce ověří v konzole poslední klávesu. Pokud tato funkce vrátí nenulovou hodnotu, stisk klávesy čeká ve vyrovnávací paměti. Potom můžete volat program **_getch –** nebo **_getche –** získat klávesu.
+**_Kbhit –** funkce zkontroluje konzolu na poslední stisk klávesy. Pokud tato funkce vrátí nenulovou hodnotu, stisk klávesy čeká ve vyrovnávací paměti. Potom můžete zavolat program **_getch** nebo **_getche** Chcete-li tento stisk klávesy získat.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -75,11 +65,11 @@ int _kbhit( void );
 |-------------|---------------------|
 |**_kbhit**|\<conio.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -113,6 +103,6 @@ Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!!
 Key struck was 'q'
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [I/O konzoly a portu](../../c-runtime-library/console-and-port-i-o.md)<br/>

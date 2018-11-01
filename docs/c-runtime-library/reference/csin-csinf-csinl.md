@@ -1,11 +1,6 @@
 ---
-title: csin, csinf, csinl | Microsoft Docs
-ms.custom: ''
+title: csin csinf, csinl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - csin
 - csinf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/csin
 - complex/csinf
 - complex/csinl
-dev_langs:
-- C++
 helpviewer_keywords:
 - csin function
 - csinf function
 - csinl function
 ms.assetid: 3ed475e8-9aae-42ba-a25c-7ae656a0fd4d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 572220af53fe937dd0d5306f0e0e7d287b1d41b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 66483c9121750c3333850d6244704b89b8893cad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397311"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50633490"
 ---
-# <a name="csin-csinf-csinl"></a>csin, csinf, csinl
+# <a name="csin-csinf-csinl"></a>csin csinf, csinl
 
-Načte sinus komplexního čísla.
+Načte hodnotu sinus tohoto komplexního čísla.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -75,7 +64,7 @@ _Lcomplex csinl(
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Komplexní číslo, které představuje úhel v radiánech.
+Komplexní čísla, která představuje úhel v radiánech.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -83,17 +72,17 @@ Sinus *z*, v radiánech.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **csin** , přijmout a vrátit **_Fcomplex** a **_Lcomplex** hodnoty. V programu C **csin** vždy provede a vrátí **_Dcomplex** hodnotu.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **csin** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **csin** vždy převezme a vrátí **_Dcomplex** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Hlavička C|Hlavička C++|
+|Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
 |**csin**, **csinf**, **csinl**|\<complex.h>|\<ccomplex >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>

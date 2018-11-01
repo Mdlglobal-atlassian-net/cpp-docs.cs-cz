@@ -1,10 +1,6 @@
 ---
-title: _ftell_nolock –, _ftelli64_nolock – | Microsoft Docs
-ms.custom: ''
+title: _ftell_nolock, _ftelli64_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ftelli64_nolock
 - _ftell_nolock
@@ -26,8 +22,6 @@ f1_keywords:
 - ftelli64_nolock
 - ftell_nolock
 - _ftell_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - ftelli64_nolock function
 - _ftelli64_nolock function
@@ -35,20 +29,16 @@ helpviewer_keywords:
 - ftell_nolock function
 - file pointers [C++], getting current position
 ms.assetid: 84e68b0a-32f8-4c4a-90ad-3f2387685ede
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 15d1001b1f0465273771649404de306153edf920
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 58bfc8c7a8b8e820fdec09d52e24dfcb07f328f8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398448"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580840"
 ---
 # <a name="ftellnolock-ftelli64nolock"></a>_ftell_nolock, _ftelli64_nolock
 
-Získá aktuální umístění ukazatele souboru, bez blokování vlákno.
+Získá aktuální pozici ukazatel souboru bez zamčení vlákna.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,29 +53,29 @@ __int64 _ftelli64_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*Datový proud*<br/>
-Cíl **souboru** struktura.
+*Stream*<br/>
+Cíl **souboru** struktury.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Stejné jako **ftell –** a **_ftelli64 –**. Další informace najdete v tématu [ftell –, _ftelli64 –](ftell-ftelli64.md).
+Stejné jako **ftell –** a **_ftelli64 –**. Další informace najdete v tématu [ftell – _ftelli64 –](ftell-ftelli64.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce jsou bez uzamčení verzích **ftell –** a **_ftelli64 –**, v uvedeném pořadí. Jsou identické **ftell –** a **_ftelli64 –** s tím rozdílem, že nejsou chráněny z narušení jiná vlákna. Tato funkce může být rychlejší, protože nevznikají nároky na uzamčení jiná vlákna. Tyto funkce lze používejte pouze v kontextu vláken jako je například aplikace nebo kde oboru volání již zpracovává izolace přístup z více vláken.
+Tyto funkce jsou nezamykací verze **ftell –** a **_ftelli64 –** v uvedeném pořadí. Jsou stejné jako **ftell –** a **_ftelli64 –** s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Tyto funkce může být rychlejší, protože nejsou spojené režii uzamykáním ostatních vláken. Tyto funkce používejte pouze v kontextech bezpečných na vlákna, jako je například aplikace s jedním vláknem nebo pokud volající obor již zpracovává izolaci vláken.
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|
+|Funkce|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |--------------|---------------------|---------------------|
 |**ftell_nolock –**|\<stdio.h>|\<errno.h>|
 |**_ftelli64_nolock**|\<stdio.h>|\<errno.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetpos](fgetpos.md)<br/>
 [fseek, _fseeki64](fseek-fseeki64.md)<br/>
 [_lseek, _lseeki64](lseek-lseeki64.md)<br/>

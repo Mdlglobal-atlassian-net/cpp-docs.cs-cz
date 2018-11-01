@@ -1,31 +1,21 @@
 ---
-title: '&lt;fronty&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;fronty&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <queue>
-dev_langs:
-- C++
 helpviewer_keywords:
 - queue header
 ms.assetid: 24fcf350-eb0e-48cf-9fef-978be1aeda1f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7ba139e2b50f1dd7c9887701a522a002173c21ee
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4f22212819ddea6f851360f7534495b679160022
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853674"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50653362"
 ---
-# <a name="ltqueuegt"></a>&lt;Fronty&gt;
+# <a name="ltqueuegt"></a>&lt;fronty&gt;
 
-Definuje priority_queue třídy šablony a fronty a několik podpůrných šablon.
+Definuje priority_queue – šablony třídy a fronty a několik podpůrných šablon.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,21 +28,21 @@ Definuje priority_queue třídy šablony a fronty a několik podpůrných šablo
 
 |Operátor|Popis|
 |-|-|
-|[operator!=](../standard-library/queue-operators.md#op_neq)|Testy, pokud objekt fronty na levé straně operátoru není stejný jako fronty objekt na pravé straně.|
-|[operátor <](../standard-library/queue-operators.md#op_lt)|Testy, pokud je objekt fronty na levé straně operátoru menší než fronty objekt na pravé straně.|
-|[Operátor\<=](../standard-library/queue-operators.md#op_gt_eq)|Pokud fronty objekt na levé straně operátoru testů je menší než nebo rovna hodnotě objekt fronty na pravé straně.|
-|[operator==](../standard-library/queue-operators.md#op_eq_eq)|Testy, pokud je objekt fronty na levé straně operátoru rovná objektu fronty na pravé straně.|
-|[operátor >](../standard-library/queue-operators.md#op_gt)|Testy, pokud je objekt fronty na levé straně operátoru větší než fronty objekt na pravé straně.|
-|[operator>=](../standard-library/queue-operators.md#op_gt_eq)|Testy, pokud je objekt fronty na levé straně operátoru větší než nebo rovna hodnotě objekt fronty na pravé straně.|
+|[operator!=](../standard-library/queue-operators.md#op_neq)|Testuje, zda je objekt fronty na levé straně operátoru není roven objektu fronty na pravé straně.|
+|[Operator <](../standard-library/queue-operators.md#op_lt)|Testuje, zda je objekt fronty na levé straně operátoru menší než objekt fronty na pravé straně.|
+|[– Operátor\<=](../standard-library/queue-operators.md#op_gt_eq)|Testuje, zda je objekt fronty na levé straně operátoru je menší než nebo rovna hodnotě objekt fronty na pravé straně.|
+|[operator==](../standard-library/queue-operators.md#op_eq_eq)|Testuje, zda je objekt fronty na levé straně operátoru roven objektu fronty na pravé straně.|
+|[Operator >](../standard-library/queue-operators.md#op_gt)|Testuje, zda je objekt fronty na levé straně operátoru větší než objekt fronty na pravé straně.|
+|[operator>=](../standard-library/queue-operators.md#op_gt_eq)|Testuje, zda je objekt fronty na levé straně operátoru větší než nebo rovna hodnotě objekt fronty na pravé straně.|
 
 ### <a name="classes"></a>Třídy
 
 |Třída|Popis|
 |-|-|
-|[queue – třída](../standard-library/queue-class.md)|Třída adaptéru kontejneru šablony, která poskytuje omezení funkcí omezení přístupu k přední a zadní elementy některé základní typ kontejneru.|
-|[priority_queue – třída](../standard-library/priority-queue-class.md)|Třída adaptéru kontejneru šablony, která poskytuje omezení funkcí omezení přístupu na hlavní prvek některé základní typ kontejneru, který je vždycky na největší.|
+|[queue – třída](../standard-library/queue-class.md)|Kontejner adaptér třídu šablony, která poskytuje omezení funkcí omezení přístupu na přední a zadní prvky některé základní typy kontejnerů.|
+|[priority_queue – třída](../standard-library/priority-queue-class.md)|Kontejner adaptér třídu šablony, která poskytuje omezení funkcí omezíte přístup k prvku na vrcholu některé základní typ kontejneru, který je vždycky největší.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
