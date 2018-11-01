@@ -1,27 +1,17 @@
 ---
-title: 'Kontejnery: Oznámení klientských položek | Dokumentace Microsoftu'
-ms.custom: ''
+title: 'Kontejnery: Oznámení klientských položek'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - notifications [MFC], container client item
 - OLE containers [MFC], client-item notifications
 - client items and OLE containers
 ms.assetid: e1f1c427-01f5-45f2-b496-c5bce3d76340
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5db5170b6c946e4bfeda99a3275f045a07fc9beb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b59ba84c27d9ed4c964bd308cf69f9f729eb3c39
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435217"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528892"
 ---
 # <a name="containers-client-item-notifications"></a>Kontejnery: Oznámení klientských položek
 
