@@ -1,11 +1,6 @@
 ---
-title: tgamma – tgammaf –, tgammal | Microsoft Docs
-ms.custom: ''
+title: tgamma, tgammaf, tgammal
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - tgamma
 - tgammaf
@@ -30,27 +25,21 @@ f1_keywords:
 - math/tgamma
 - math/tgammaf
 - math/tgammal
-dev_langs:
-- C++
 helpviewer_keywords:
 - tgamma function
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7861b297646f4a704134e0d874fad8c924a7ebc8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6cfe455b0e9e83cd5283d36fed33ca168bc97d0a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409872"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570661"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 
-Určuje funkce gamma zadané hodnoty.
+Určuje funkce gamma zadanou hodnotu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -84,39 +73,39 @@ Hodnota k vyhledání gama z.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí gama z *x*.
+Pokud je úspěšná, vrátí funkce gamma z *x*.
 
-Rozsah chybě může dojít, pokud odhad *x* je příliš velký či příliš malý pro datový typ. Chyba domény nebo rozsah chybě může dojít, pokud *x* < = 0.
+Rozsah chybě může dojít, pokud velikost *x* je příliš velký či příliš malý datového typu. Chyba domény nebo rozsah chybě může dojít, pokud *x* < = 0.
 
 |Problém|Vrátí|
 |-----------|------------|
 |x = ±0|±INFINITY|
 |x = záporné celé číslo|NaN|
-|x = - INFINITY|NaN|
-|x = + INFINITY|+ INFINITY|
-|x = NaN.|NaN|
+|x = - NEKONEČNO|NaN|
+|x =, + NEKONEČNO|+ NEKONEČNO|
+|x = NaN|NaN|
 |chyby domény|NaN|
-|Chyba pólu|±HUGE_VAL, ±HUGE_VALF nebo ±HUGE_VALL|
-|Rozsah chybu přetečení|±HUGE_VAL, ±HUGE_VALF nebo ±HUGE_VALL|
-|Podtečení rozsah chyby|správnou hodnotu, po zaokrouhlení.|
+|Chyba pole|±HUGE_VAL, ±HUGE_VALF nebo ±HUGE_VALL|
+|Chyba přetečení rozsahu|±HUGE_VAL, ±HUGE_VALF nebo ±HUGE_VALL|
+|Chyba podtečení rozsahu|správnou hodnotu, po zaokrouhlení.|
 
-Vznikly chyby uvedené v [_matherr –](matherr.md).
+Jsou hlášeny chyby uvedené v [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **tgamma –** , přijmout a vrátit **float** a **dlouho** **dvojité** typy. V programu C **tgamma –** vždy provede a vrátí **dvojité**.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **tgamma –** , která používají a vrací **float** a **dlouhé** **double** typy. V programu jazyka C **tgamma –** vždy převezme a vrátí **double**.
 
-Pokud x je číslo přirozený, vrátí tato funkce faktoriál (x-1).
+Pokud x je přirozené číslo, tato funkce Vrátí faktoriál čísla (x-1).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Hlavička C|Hlavička C++|
+|Funkce|Záhlaví C|Hlaviček jazyka C++|
 |--------------|--------------|------------------|
-|**tgamma –**, **tgammaf –**, **tgammal**|\<Math.h >|\<cmath – >|
+|**tgamma –**, **tgammaf –**, **tgammal**|\<Math.h >|\<cmath >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [lgamma, lgammaf, lgammal](lgamma-lgammaf-lgammal.md)<br/>

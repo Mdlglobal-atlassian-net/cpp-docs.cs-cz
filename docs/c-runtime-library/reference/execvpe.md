@@ -1,10 +1,6 @@
 ---
-title: execvpe – | Microsoft Docs
-ms.custom: ''
+title: execvpe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - execvpe
 apilocation:
@@ -21,25 +17,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - execvpe
-dev_langs:
-- C++
 helpviewer_keywords:
 - execvpe function
 ms.assetid: ee657071-c459-4bb6-82a2-8925c888f624
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b851a21a58ea81d817f58b446d550a52bb8e0880
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 55457b245927db0aabe34e89d5b4dfd59f0efb43
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394275"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560001"
 ---
 # <a name="execvpe"></a>execvpe
 
-Tato funkce POSIX je zastaralý. Používat vyhovující ISO C++ [_execvpe –](execvpe-wexecvpe.md) místo.
+Tato funkce POSIX je zastaralá. Použít splňující podmínky ISO C++ [_execvpe](execvpe-wexecvpe.md) místo.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

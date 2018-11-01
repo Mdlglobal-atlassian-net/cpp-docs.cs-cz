@@ -1,28 +1,18 @@
 ---
-title: / NXCOMPAT (kompatibilní s předcházením spuštění dat) | Dokumentace Microsoftu
-ms.custom: ''
+title: /NXCOMPAT (kompatibilní s předcházením spuštění dat)
 ms.date: 12/29/2017
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /NXCOMPAT
-dev_langs:
-- C++
 helpviewer_keywords:
 - /NXCOMPAT linker option
 - -NXCOMPAT linker option
 - NXCOMPAT linker option
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 431cd954845041a7a186a967c83df7ffb1aac788
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 815719468e7dcf9325d19efe879b8f4ace040094
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821670"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50490490"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (kompatibilní s předcházením spuštění dat)
 
@@ -56,7 +46,7 @@ Další informace o zabránění spuštění dat najdete v těchto článcích:
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Viz také:
 

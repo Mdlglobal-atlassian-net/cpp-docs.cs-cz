@@ -1,28 +1,18 @@
 ---
-title: / POGOSAFEMODE (PGO spuštění v nouzovém režimu vlákno) | Microsoft Docs
-ms.custom: ''
+title: / POGOSAFEMODE (spustit PGO v nouzovém režimu vlákno)
 ms.date: 03/14/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 f1_keywords:
 - POGOSAFEMODE
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 81392c67b47a0fa90c057ee4295667a054e34498
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f210884d693ef0d778943580b9c5a7b2ec2ea336
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377330"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544427"
 ---
-# <a name="pogosafemode-run-pgo-in-thread-safe-mode"></a>/ POGOSAFEMODE (PGO spuštění v nouzovém režimu přístup z více vláken)
+# <a name="pogosafemode-run-pgo-in-thread-safe-mode"></a>/ POGOSAFEMODE (spustit PGO v nouzovém režimu vlákno)
 
-**Možnost /POGOSAFEMODE je zastaralé od ve Visual Studiu 2015**. Použití [/GENPROFILE: PŘESNÝ](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) a **/GENPROFILE:NOEXACT** možnosti místo. **/POGOSAFEMODE** – možnost linkeru Určuje, že je pro použití režimu vláken pro data zaznamenání profilu během optimalizace na základě profilu (PGO) cvičení spustí vytvořen instrumentovaného sestavení.
+**Možnost /POGOSAFEMODE je zastaralé od verze Visual Studio 2015**. Použití [/genprofile: přesné](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) a **/GENPROFILE:NOEXACT** místo možnosti. **/POGOSAFEMODE** – možnost linkeru, určuje, že se vytvoří instrumentované sestavení pro použití režimu bezpečné pro vlákna pro data zaznamenání profilů během profilováním řízené optimalizace (PGO) tréninková spuštění.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,21 +20,21 @@ ms.locfileid: "32377330"
 
 ## <a name="remarks"></a>Poznámky
 
-Optimalizace na základě profilu (PGO) má dva možné režimy profilování fázi: *rychlého režimu* a *nouzovém režimu*. Při vytváření profilu je v rychlého režimu, používá přírůstek instrukce ke zvýšení dat čítače. Instrukce přírůstek je rychlejší, ale není bezpečné pro přístup z více vláken. Při vytváření profilu je v nouzovém režimu, používá propojený přírůstek instrukce ke zvýšení dat čítače. Tento pokyn má stejné funkce jako pokyn přírůstek a bezpečné pro přístup z více vláken, ale je pomalejší.
+Profilově řízené optimalizace (PGO) má během fáze vytváření profilů dva možné režimy: *rychlém režimu* a *Nouzový režim*. Když je profilování v rychlém režimu, používá pokyn přírůstek na zvýšení počtu čítačů dat. Instrukce přírůstek je rychlejší, ale není bezpečná pro vlákno. Když je profilování v nouzovém režimu, používá pokyn propojené přírůstek na zvýšení počtu čítačů dat. Tento pokyn má stejné funkce jako instrukce přírůstek má a je bezpečná pro vlákno, ale je pomalejší.
 
-**/POGOSAFEMODE** možnost nastaví instrumentovaného sestavení pomocí nouzového režimu. Tuto možnost lze použít, když zastaralé [/LTCG:PGINSTRUMENT](ltcg-link-time-code-generation.md) je zadán během fáze PGO instrumentace linkeru.
+**/POGOSAFEMODE** parametr nastaví instrumentované sestavení pomocí nouzového režimu. Tato možnost může být pouze nepoužívá, pokud se zastaralou [/LTCG:PGINSTRUMENT](ltcg-link-time-code-generation.md) specifikovaném během fáze instrumentace linkeru PGO.
 
-Ve výchozím nastavení vytváření profilů PGO funguje v rychlého režimu. **/ POGOSAFEMODE** je požadován, pouze pokud budete chtít použít nouzový režim.
+Ve výchozím nastavení PGO profilování pracuje v rychlém režimu. **/ POGOSAFEMODE** je vyžadováno pouze pokud budete chtít použít nouzový režim.
 
-Chcete-li spustit PGO profilace v nouzovém režimu, musíte použít buď **/GENPROFILE: PŘESNÝ** (doporučeno), nebo použijte proměnnou prostředí [PogoSafeMode](environment-variables-for-profile-guided-optimizations.md) nebo přepínač linkeru **/POGOSAFEMODE**, v závislosti na systému. Pokud provádíte profilace na x64 počítače, je potřeba použít přepínač linkeru. Pokud provádíte profilace na x86 počítače, můžete použít přepínač linkeru nebo definujte proměnnou prostředí na jakoukoli hodnotu před zahájením procesu instrumentace PGO.
+Pokud chcete spustit profilování PGO v nouzovém režimu, je nutné použít buď **/genprofile: přesné** (upřednostňováno), nebo použít proměnnou prostředí [PogoSafeMode](environment-variables-for-profile-guided-optimizations.md) nebo přepínač linker **/POGOSAFEMODE**, v závislosti na systému. Pokud provádíte profilaci na x x64 počítače, je potřeba použít přepínač linkeru. Pokud provádíte profilaci na x x86 počítače, můžete použít přepínač linkeru nebo definovat proměnné prostředí na libovolnou hodnotu před zahájením procesu instrumentace PGO.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru linkeru ve vývojovém prostředí sady Visual Studio
 
-1. Otevření projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [nastavení vlastností projektu Visual C++](../../ide/working-with-project-properties.md).
 
 1. Vyberte **vlastnosti konfigurace** > **Linkeru** > **optimalizace** stránku vlastností.
 
-1. V **vytvoření kódu v době odkaz** vlastnost, zvolte **profil optimalizace - nástrojích (nebo LTCG:PGInstrument)**.
+1. V **generování kódu při propojování** vlastnost, zvolte **optimalizace na základě profilu - instrumentovat (/ LTCG: pginstrument)**.
 
 1. Vyberte **vlastnosti konfigurace** > **Linkeru** > **příkazového řádku** stránku vlastností.
 
@@ -52,9 +42,9 @@ Chcete-li spustit PGO profilace v nouzovém režimu, musíte použít buď **/GE
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-- V tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [/ GENPROFILE a /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/LTCG](ltcg-link-time-code-generation.md)<br/>

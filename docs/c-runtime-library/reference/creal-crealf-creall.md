@@ -1,11 +1,6 @@
 ---
-title: creal, crealf, creall | Microsoft Docs
-ms.custom: ''
+title: creal crealf, creall
 ms.date: 03/30/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - creal
 - crealf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/creal
 - complex/crealf
 - complex/creall
-dev_langs:
-- C++
 helpviewer_keywords:
 - creal function
 - crealf function
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6b8d3ca02aeb0f3f9b12c8b82cbb27d9bd3ad3aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 32fd0898ccac80b74b467dbfe0a136eef139e642
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400857"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50604301"
 ---
-# <a name="creal-crealf-creall"></a>creal, crealf, creall
+# <a name="creal-crealf-creall"></a>creal crealf, creall
 
-Načte skutečné součástí komplexního čísla.
+Získá skutečný součástí komplexního čísla.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -76,21 +65,21 @@ Skutečné součástí *z*.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **creal** trvají **_Fcomplex** nebo **_Lcomplex** hodnoty a vrátí **float** nebo **long double** hodnoty. V programu C **creal** má vždy **_Dcomplex** hodnotu a vrátí **dvojité** hodnotu.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **creal** trvají **_Fcomplex** nebo **_Lcomplex** hodnoty a návrat **float** nebo **long double** hodnoty. V programu jazyka C **creal** vždy přijímá **_Dcomplex** hodnotu a vrátí **double** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Hlavička C|Hlavička C++|
+|Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
 |**creal**, **crealf**, **creall**|\<complex.h>|\<ccomplex >|
 
-**_Fcomplex**, **_Dcomplex**, a **_Lcomplex** typy jsou specifické pro společnost Microsoft ekvivalenty neimplementované nativní typy C99 **float _complex –** , **dvojité _complex –**, a **_complex long double –**, v uvedeném pořadí. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+**_Fcomplex**, **_Dcomplex**, a **_Lcomplex** typy jsou specifické pro společnost Microsoft ekvivalenty neimplementovaná nativní typy C99 **float _Complex** , **double _Complex**, a **long double _Complex**v uvedeném pořadí. Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [_Cbuild, _FCbuild, _LCbuild](cbuild-fcbuild-lcbuild.md)<br/>
-[Norm, normf, norml](norm-normf-norml1.md)<br/>
+[Norm a normf, norml](norm-normf-norml1.md)<br/>
 [cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
 [conj, conjf, conjl](conj-conjf-conjl.md)<br/>
 [cimag, cimagf, cimagl](cimag-cimagf-cimagl.md)<br/>

@@ -1,10 +1,6 @@
 ---
-title: _mbctolower –, _mbctolower_l –, _mbctoupper –, _mbctoupper_l – | Microsoft Docs
-ms.custom: ''
+title: _mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbctolower_l
 - _mbctoupper_l
@@ -32,8 +28,6 @@ f1_keywords:
 - mbctoupper
 - mbctolower
 - _mbctoupper_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbctolower function
 - mbctolower_l function
@@ -48,23 +42,19 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1af1ae33d9f3b752ed58aaa7bd3dd3e22f7de8c2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e620af526e5f0af02868bba4ba635e9ed6e34ff6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403658"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539682"
 ---
 # <a name="mbctolower-mbctolowerl-mbctoupper-mbctoupperl"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 
-Testuje a převede malá vícebajtových znaků.
+Testuje a převádí velikost vícebajtového znaku.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -88,27 +78,27 @@ unsigned int _mbctoupper_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Vícebajtové znakové převést.
+Vícebajtový znak pro převod.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí znak převedený *c*, pokud je to možné. V opačném případě vrátí znak *c* beze změny.
+Každá z těchto funkcí vrací převedený znak *c*, pokud je to možné. V opačném případě vrátí znak *c* beze změny.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce testovat znak *c* a pokud je to možné, použijte jednu z následujících převody.
+Funkce otestují znak *c* a pokud je to možné, použijte jednu z následujících převodů.
 
 |Rutiny|Převede|
 |--------------|--------------|
-|**_mbctolower –**, **_mbctolower_l –**|Velké písmeno na malá písmena znak.|
+|**_mbctolower –**, **_mbctolower_l –**|Velké znak malého písmene.|
 |**_mbctoupper –**, **_mbctoupper_l –**|Malé písmeno na velká písmena znak.|
 
-Výstupní hodnota je ovlivňován nastavením **LC_CTYPE –** kategorie nastavení národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze této funkce bez **_l** příponu používá aktuální národní prostředí pro toto chování závislých na národním prostředí; na verzi s **_l** přípona se shoduje s tím rozdílem, že používá parametr národního prostředí Místo toho předaná. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze této funkce bez **_l** příponu používá aktuální národní prostředí pro toto chování závislé na národním prostředí verze s **_l** přípona je identická s tím rozdílem, že používá parametr národního prostředí místo něho předán v. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-V předchozích verzích **_mbctolower –** byla volána **jtolower**, a **_mbctoupper –** byla volána **jtoupper**. Pro nový kód použijte místo toho nové názvy.
+V předchozích verzích **_mbctolower –** byla volána **jtolower**, a **_mbctoupper –** byla volána **jtoupper**. Pro nový kód použijte nové názvy.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -126,9 +116,9 @@ V předchozích verzích **_mbctolower –** byla volána **jtolower**, a **_mbc
 |**_mbctolower –**, **_mbctolower_l –**|\<Mbstring.h >|
 |**_mbctoupper –**, **_mbctoupper_l –**|\<Mbstring.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
 [_mbbtombc, _mbbtombc_l](mbbtombc-mbbtombc-l.md)<br/>

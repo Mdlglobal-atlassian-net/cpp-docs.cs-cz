@@ -1,26 +1,16 @@
 ---
-title: Přidání metody (Visual C++) | Dokumentace Microsoftu
-ms.custom: ''
+title: Přidání metody (Visual C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Add Method Wizard [C++]
 - methods [C++], adding
 ms.assetid: 4ba4e45f-fa38-4d5e-af44-cbec0a7ab558
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1b0082ef7df5ddcc698741ebd4f3fb5455b6614d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c3fb7fd7d3b725589492625c678ab55600568ee4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390705"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50540475"
 ---
 # <a name="adding-a-method--visual-c"></a>Přidání metody (Visual C++)
 

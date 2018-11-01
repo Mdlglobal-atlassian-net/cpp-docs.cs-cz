@@ -1,28 +1,18 @@
 ---
-title: ODBC – třídy | Dokumentace Microsoftu
-ms.custom: ''
+title: ODBC – třídy
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.classes.data
-dev_langs:
-- C++
 helpviewer_keywords:
 - database classes [MFC], ODBC
 - ODBC classes [MFC]
 ms.assetid: 6c40fca8-3033-4873-9abe-7f51725de0e0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 97bbdb74d122e633574dcf76876f0907de8ef2c4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f0ff337a7193093456ab4f5de2f6087d88ca12df
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46400574"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518518"
 ---
 # <a name="odbc-classes"></a>ODBC – třídy
 
