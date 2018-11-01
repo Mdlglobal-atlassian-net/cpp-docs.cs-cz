@@ -1,10 +1,6 @@
 ---
-title: _ungetch –, _ungetwch –, _ungetch_nolock –, _ungetwch_nolock – | Microsoft Docs
-ms.custom: ''
+title: _ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ungetch_nolock
 - _ungetwch_nolock
@@ -34,8 +30,6 @@ f1_keywords:
 - _ungettch_nolock
 - _ungettch
 - _ungetwch_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ungetch function
 - ungetwch function
@@ -50,23 +44,19 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c9c6f09c3bd6ce679662d9ea77f8a7b360521b9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7407d26606bd5242c430961faa4f60090b83f036
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411293"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430300"
 ---
 # <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
-Vynutí zpět poslední znak, který je pro čtení z konzoly.
+Posune zpět poslední znak, který je přečten z konzoly.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -88,21 +78,21 @@ wint_t _ungetwch_nolock(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak, který má poslat.
+Znak k posunutí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Obě funkce vrátí znak *c* v případě úspěchu. Pokud dojde k chybě **_ungetch –** vrací hodnotu **EOF** a **_ungetwch –** vrátí **weof –**.
+Obě funkce vrátí znak *c* v případě úspěšného ověření. Pokud dojde k chybě **_ungetch** vrací hodnotu **EOF** a **_ungetwch –** vrátí **WEOF**.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce nabízené znak *c* zpět do konzoly nástroje způsobuje *c* jako další znak číst **_getch –** nebo **_getche –** (nebo **_getwch –** nebo **_getwche –**). **_ungetch –** a **_ungetwch –** nezdaří, pokud jsou volaná víc než jednou před další čtení. *c* argument nesmí být **EOF** (nebo **weof –**).
+Tyto funkce vrátí znak *c* zpět do konzoly, což způsobí *c* bude další znak přečtený **_getch** nebo **_getche** (nebo **_getwch –** nebo **_getwche –**). **_ungetch** a **_ungetwch –** selhat, pokud jsou volány více než jednou před dalším čtením. *c* nemusí být argument **EOF** (nebo **WEOF**).
 
-Verzi pomocí **jazyka _nolock** příponu jsou shodné s tím rozdílem, že nejsou chráněny z narušení jiná vlákna. Může být rychlejší, protože nevznikají nároky na uzamčení jiná vlákna. Tyto funkce lze používejte pouze v kontextu vláken jako je například aplikace nebo kde oboru volání již zpracovává izolace přístup z více vláken.
+Verze s **_nolock** přípona jsou stejné s tím rozdílem, že nejsou chráněny před rušením jinými vlákny. Může být rychlejší, protože nejsou spojené režii uzamykáním ostatních vláken. Tyto funkce používejte pouze v kontextech bezpečných na vlákna, jako je například aplikace s jedním vláknem nebo pokud volající obor již zpracovává izolaci vláken.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ungettch –**|**_ungetch**|**_ungetch**|**_ungetwch**|
 |**_ungettch_nolock –**|**_ungetch_nolock –**|**_ungetch_nolock –**|**_ungetwch_nolock –**|
@@ -111,10 +101,10 @@ Verzi pomocí **jazyka _nolock** příponu jsou shodné s tím rozdílem, že ne
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_ungetch –**, **_ungetch_nolock –**|\<conio.h >|
+|**_ungetch**, **_ungetch_nolock –**|\<conio.h >|
 |**_ungetwch –**, **_ungetwch_nolock –**|\<conio.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -158,7 +148,7 @@ int main( void )
 Whitetoken = White
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [I/O konzoly a portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>

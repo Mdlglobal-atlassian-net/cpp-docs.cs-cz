@@ -1,10 +1,6 @@
 ---
-title: _Crtsetbreakalloc – | Microsoft Docs
-ms.custom: ''
+title: _CrtSetBreakAlloc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetBreakAlloc
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtSetBreakAlloc
 - _CrtSetBreakAlloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtSetBreakAlloc function
 - _CrtSetBreakAlloc function
 ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 32e8fedcd70d0e901c63cd5e794773451f436326
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bbc4b0de553533dde95f37675b3c9234569e3505
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395432"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487825"
 ---
 # <a name="crtsetbreakalloc"></a>_CrtSetBreakAlloc
 
@@ -62,11 +52,11 @@ Vrátí předchozí číslo pořadí přidělení objektů, které mělo nastave
 
 ## <a name="remarks"></a>Poznámky
 
-**_Crtsetbreakalloc –** umožňuje aplikaci k provedení zjišťování nevracení paměti ukončování řádků v určitém bodě přidělování paměti a trasování zpět na počátek požadavku. Tato funkce používá sekvenční číslo pořadí přidělení objektu přiřazené bloku paměti při přidělení na haldě. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, volání **_crtsetbreakalloc –** jsou odebrány při předběžném zpracování.
+**_CrtSetBreakAlloc** umožňuje aplikaci provést detekci úniků paměti pomocí zastavení na určitém bodě přidělení paměti a trasování zpět k původu žádosti. Tato funkce používá sekvenční číslo pořadí přidělení objektu přiřazené bloku paměti při přidělení na haldě. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, jsou volání **_CrtSetBreakAlloc** odstraněna během předběžného zpracování.
 
-Objekt přidělení pořadové číslo je uložen v *lRequest* pole z **_crtmemblockheader –** struktuře, které jsou definované v Crtdbg.h. Při hlášení informace o paměti bloku pomocí jedné z funkce výpisu ladění, je toto číslo uzavřené do složených závorek, jako například {36}.
+Číslo pořadí přidělení objektu je uložen v *lRequest* pole **_CrtMemBlockHeader** struktury definované v souboru Crtdbg.h. Když se informace o bloku paměti hlášeny jednou z funkcí s výpisem ladění, je toto číslo uzavřeno ve složených závorkách, jako například {36}.
 
-Další informace o tom, **_crtsetbreakalloc –** lze použít s další funkce správy paměti najdete v tématu [sledování požadavků na přidělení haldy](/visualstudio/debugger/crt-debug-heap-details). Další informace o tom, jak jsou bloky paměti přidělené, inicializovat a spravovat ladicí verze základní heap najdete v tématu [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
+Další informace o tom, **_CrtSetBreakAlloc** jde použít s dalšími funkcemi správy paměti naleznete v tématu [sledování požadavků na přidělení haldy](/visualstudio/debugger/crt-debug-heap-details). Další informace o způsobu jsou bloky paměti přidělené, inicializovat a správy v ladicí verzi základní haldy viz [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -74,11 +64,11 @@ Další informace o tom, **_crtsetbreakalloc –** lze použít s další funkce
 |-------------|---------------------|
 |**_CrtSetBreakAlloc**|\<crtdbg.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Ladicí verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md) pouze.
+Ladicí verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
 
 ## <a name="example"></a>Příklad
 
@@ -126,6 +116,6 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Rutiny ladění](../../c-runtime-library/debug-routines.md)<br/>

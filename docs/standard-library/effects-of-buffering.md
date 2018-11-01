@@ -1,30 +1,20 @@
 ---
-title: Účinky ukládání do vyrovnávací paměti | Microsoft Docs
-ms.custom: ''
+title: Účinky ukládání do vyrovnávací paměti
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - buffers, effects of buffering
 - buffering, effects of
 ms.assetid: 5d544812-e95e-4f28-b15a-edef3f3414fd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c28deb0f5e30d3ec28fac4805a86645bebf27f22
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e10b28edffdfe3411f86c031bfd12ea886410e20
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842375"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631436"
 ---
 # <a name="effects-of-buffering"></a>Účinky ukládání do vyrovnávací paměti
 
-Následující příklad ukazuje účinky ukládání do vyrovnávací paměti. By se dalo očekávat program při `please wait`, počkejte 5 sekund a poté pokračujte. Nebude fungovat nutně tímto způsobem, ale protože výstup do vyrovnávací paměti.
+Následující příklad ukazuje účinky ukládání do vyrovnávací paměti. Očekáváte-li program k vytištění `please wait`, počkejte 5 sekund a pak pokračujte. Nebude to fungovat nutně tímto způsobem, ale protože výstup do vyrovnávací paměti.
 
 ```cpp
 // effects_buffering.cpp
@@ -43,14 +33,14 @@ int main( )
 }
 ```
 
-Nastavit, aby program logicky, fungovat `cout` objekt musí prázdný samotné při zpráva se má zobrazit. Vyprázdnění `ostream` objektu, odešle `flush` manipulator:
+Chcete-li program logicky, pracovat `cout` objektu musí prázdný samotné se zobrazí zpráva. Vyprázdnit `ostream` objektu, odeslat ho `flush` manipulátor:
 
 ```cpp
 cout <<"Please wait..." <<flush;
 ```
 
-Tento krok vyprázdní vyrovnávací paměť, pro zajištění, že před dobu zobrazí zpráva. Můžete také `endl` manipulator, která vyprázdní vyrovnávací paměť a výstupy vrátit-konce znaků CR řádku, nebo můžete použít `cin` objektu. Tento objekt (s `cerr` nebo `clog` objekty) je obvykle vázaný na `cout` objektu. Proto jakékoli použití `cin` (nebo `cerr` nebo `clog` objekty) vyprázdnění `cout` objektu.
+Tento krok vyprázdní vyrovnávací paměť, pro zajištění, že před čekání se zobrazí zpráva. Můžete také použít `endl` manipulátor, která vyprázdní vyrovnávací paměť a vypíše vrátit návrat na začátek řádku-odřádkování, nebo můžete použít `cin` objektu. Tento objekt (s `cerr` nebo `clog` objekty) je obvykle svázány se `cout` objektu. Díky tomu se jakékoli použití `cin` (nebo `cerr` nebo `clog` objekty) vyprázdní `cout` objektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Výstupní streamy](../standard-library/output-streams.md)<br/>

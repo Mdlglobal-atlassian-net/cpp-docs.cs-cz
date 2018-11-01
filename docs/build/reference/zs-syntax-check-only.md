@@ -1,30 +1,20 @@
 ---
-title: -Zs (pouze kontrola syntaxe) | Dokumentace Microsoftu
-ms.custom: ''
+title: /Zs (pouze kontrola syntaxe)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /zs
-dev_langs:
-- C++
 helpviewer_keywords:
 - -Zs compiler option [C++]
 - Syntax Check Only compiler option
 - Zs compiler option
 - /Zs compiler option [C++]
 ms.assetid: b4b41e6a-3f41-4d09-9cb6-fde5aa2cfecf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0e2f8d9f711309d7039672cbf3f92aa49b906fc3
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5cdd52ba6c221cbfa1526c19f3d6cfaf26a96e51
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706482"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429793"
 ---
 # <a name="zs-syntax-check-only"></a>/Zs (pouze kontrola syntaxe)
 
@@ -54,7 +44,7 @@ Při použití této možnosti žádný výstupní soubory jsou vytvořeny a chy
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Viz také
 

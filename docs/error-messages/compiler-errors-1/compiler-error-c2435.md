@@ -1,39 +1,29 @@
 ---
-title: C2435 Chyba kompilátoru | Microsoft Docs
-ms.custom: ''
+title: Chyba kompilátoru C2435
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2435
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2435
 ms.assetid: be6aa8f8-579b-42ea-bdd8-2d01393646ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ddf078420da8aba170bbd21a0db775f9246cea4
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 5cd7a83575da7ab2a30401406d0c2ccf6c1b603e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34703639"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438530"
 ---
-# <a name="compiler-error-c2435"></a>C2435 chyby kompilátoru
+# <a name="compiler-error-c2435"></a>Chyba kompilátoru C2435
 
-> '*var*': dynamické inicializace vyžaduje spravované CRT, nelze kompilovat s/clr: safe
+> "*var*': dynamická inicializace vyžaduje spravované CRT; nejde kompilovat s/clr: safe
 
 ## <a name="remarks"></a>Poznámky
 
-**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017.
+**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
 
-Inicializace proměnné globální pro aplikační doménu vyžaduje CRT kompilovat s `/clr:pure`, který nevytváří ověřitelný bitové kopie.
+Inicializace proměnné globální domény na aplikaci vyžaduje CRT zkompilovaná `/clr:pure`, který nevytváří ověřitelný bitové kopie.
 
-Další informace najdete v tématu [appdomain](../../cpp/appdomain.md) a [proces](../../cpp/process.md).
+Další informace najdete v tématu [appdomain](../../cpp/appdomain.md) a [procesu](../../cpp/process.md).
 
 ## <a name="example"></a>Příklad
 

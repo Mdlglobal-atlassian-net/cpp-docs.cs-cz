@@ -1,10 +1,6 @@
 ---
-title: COSH, coshf –, coshl – | Microsoft Docs
-ms.custom: ''
+title: COSH – coshf –, coshl –
 ms.date: 04/11/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cosh
 - coshf
@@ -26,28 +22,22 @@ f1_keywords:
 - cosh
 - coshf
 - coshl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cosh function
 - coshf function
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d77bb1d1b8f055bb4fe11d4c44c48fb3bf3be535
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f55e084e760cb6d04dbe7ec4fefb5e2ac1d79fd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395468"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609531"
 ---
-# <a name="cosh-coshf-coshl"></a>COSH, coshf –, coshl –
+# <a name="cosh-coshf-coshl"></a>COSH – coshf –, coshl –
 
-Vypočítá hyperbolický kosinus.
+Vypočte hyperbolický kosinus.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -71,30 +61,30 @@ long double cosh( long double x );  // C++ only
 
 Hyperbolický kosinus *x*.
 
-Ve výchozím nastavení, pokud je výsledek příliš velké **cosh**, **coshf –**, nebo **coshl –** volat, funkce vrátí hodnotu **huge_val –** a nastaví **errno** k **erange –**.
+Ve výchozím nastavení, pokud je výsledek příliš velké **cosh**, **coshf –**, nebo **coshl –** volání funkce vrátí **HUGE_VAL** a nastaví **errno** k **ERANGE**.
 
-|Vstup|Výjimka SEH|Matherr – výjimka|
+|Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ **QNAN**, **IND**|žádná|**_DOMAIN –**|
-|*x* ≥ 7.104760e + 002|**NEPŘESNÝ**+**PŘETEČENÍ**|**PŘETEČENÍ**|
+|ROZMEZÍ **QNAN**, **AJÍT**|žádná|**_DOMÉNA**|
+|*x* ≥ 7.104760e + 002|**NEPŘESNÉ**+**PŘETEČENÍ**|**PŘETEČENÍ**|
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **cosh** , přijmout a vrátit **float** nebo **dlouho** **dvojité** hodnoty. V programu C **cosh** vždy provede a vrátí **dvojité**.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **cosh** , která používají a vrací **float** nebo **dlouhé** **double** hodnoty. V programu jazyka C **cosh** vždy převezme a vrátí **double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaná hlavička (C)|Požadovaná hlavička (C++)|
+|Rutina|Požadované záhlaví (C)|Požadované záhlaví (C++)|
 |-------------|---------------------|-|
-|**coshf –**, **cosl –**, **coshl –**|\<Math.h >|\<cmath – > nebo \<math.h >|
+|**coshf –**, **cosl –**, **coshl –**|\<Math.h >|\<cmath > nebo \<math.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad v [sinh, sinhf –, sinhl –](sinh-sinhf-sinhl.md).
+Podívejte se na příklad v [sinh sinhf –, sinhl –](sinh-sinhf-sinhl.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

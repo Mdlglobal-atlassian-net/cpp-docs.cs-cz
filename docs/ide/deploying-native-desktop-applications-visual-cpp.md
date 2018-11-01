@@ -1,12 +1,6 @@
 ---
-title: Nasazení nativních aplikací klasické pracovní plochy (Visual C++) | Microsoft Docs
-ms.custom: ''
+title: Nasazení nativních aplikací klasické pracovní plochy (Visual C++)
 ms.date: 05/11/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - deploying applications [C++]
 - application deployment [C++]
@@ -15,28 +9,24 @@ helpviewer_keywords:
 - deploying applications [C++], about deploying applications
 - distributing applications [C++]
 ms.assetid: 37f1691e-d67c-41e4-926e-528a237a9bac
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4f4aa355c132b4c94f085cbdf7aa73785357d0f0
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ca3949c0cc2a505148da2a1edb8f07eaf1b6a1f7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34259241"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662680"
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>Nasazení nativních aplikací klasické pracovní plochy (Visual C++)
 
-Nasazení je proces, pomocí kterého distribuujete dokončenou aplikaci nebo součásti k instalaci na jiných počítačích. Plánování nasazení spustí, když aplikace je vytvořena na počítači pro vývojáře. Nasazení končí, když je aplikace nainstalované a připravené ke spuštění v počítači uživatele.
+Nasazení je proces, pomocí kterého můžete distribuovat dokončenou aplikaci nebo součásti nainstalovat na jiných počítačích. Plánování nasazení se spustí při vytvoření aplikace na počítači pro vývojáře. Nasazení končí, když je aplikace nainstalované a připravené ke spuštění v počítači uživatele.
 
-Visual Studio poskytuje různé technologie pro nasazení aplikace systému Windows. Ty zahrnují nasazení ClickOnce a instalační služba systému Windows.
+Visual Studio nabízí různé technologie pro nasazení aplikací pro Windows. Patří mezi ně nasazení ClickOnce a nasazení Instalační služby systému Windows.
 
-- ClickOnce lze použít k nasazení aplikací C++, které cílí common language runtime (CLR) – smíšené, čisté a ověřitelné sestavení. I když instalační služba systému Windows můžete nasadit spravované aplikace, doporučujeme použít ClickOnce, protože ho využívá funkce zabezpečení rozhraní .NET Framework například podepsání manifestu. ClickOnce nepodporuje nasazení nativních aplikací C++. Další informace najdete v tématu [ClickOnce – nasazení pro aplikace Visual C++](../ide/clickonce-deployment-for-visual-cpp-applications.md).
+- ClickOnce umožňuje nasazení aplikací v jazyce C++, které se zaměřují na modul CLR (CLR) – sestavení smíšené, čisté a ověřitelné. I když instalační služby systému Windows můžete použít k nasazení spravované aplikace, doporučujeme použít ClickOnce, protože využívá funkce zabezpečení rozhraní .NET Framework, jako jsou podepsání manifestu. Technologie ClickOnce nepodporuje nasazení aplikací v nativním jazyce C++. Další informace najdete v tématu [ClickOnce – nasazení pro aplikace Visual C++](../ide/clickonce-deployment-for-visual-cpp-applications.md).
 
-- Technologie Instalační služby systému Windows můžete použít k nasazení nativních aplikací C++ nebo aplikací C++ cílených modulu CLR.
+- Technologie instalačního programu Windows lze použít k nasazení nativních aplikací v jazyce C++ nebo aplikací v jazyce C++, které se zaměřují modulu CLR.
 
-Články v této části dokumentace popisuje zajistit, že na libovolném počítači, který poskytuje podporované cílovou platformu, soubory, které je nutné zahrnout instalační balíček a doporučené způsoby, jak funguje nativní aplikace Visual C++ znovu distribuovat součásti, které vaše aplikace závisí.
+Články v této části dokumentace popíšeme, jak zajistit, že na každém počítači, který poskytuje podporované cílové platformy, které soubory je třeba zahrnout instalačního balíčku a doporučené způsoby, jak funguje nativní aplikace Visual C++ Redistribuce součástí, které vaše aplikace závisí.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
@@ -50,7 +40,7 @@ Visual Studio poskytuje různé technologie pro nasazení aplikace systému Wind
 
 - [Volba metody nasazení](../ide/choosing-a-deployment-method.md)
 
-- [Universal CRT nasazení](universal-crt-deployment.md).
+- [Nasazení Universal CRT](universal-crt-deployment.md).
 
 - [Redistribuce souborů Visual C++](../ide/redistributing-visual-cpp-files.md)
 
@@ -60,7 +50,7 @@ Visual Studio poskytuje různé technologie pro nasazení aplikace systému Wind
 
 - [ClickOnce – nasazení pro aplikace Visual C++](../ide/clickonce-deployment-for-visual-cpp-applications.md)
 
-- [C++/CLR aplikace spuštěné v předchozí verzi modulu Runtime](../ide/running-a-cpp-clr-application-on-a-previous-runtime-version.md)
+- [Spuštění aplikace C++/CLR v předchozí verzi modulu Runtime](../ide/running-a-cpp-clr-application-on-a-previous-runtime-version.md)
 
 ## <a name="related-sections"></a>Související oddíly
 

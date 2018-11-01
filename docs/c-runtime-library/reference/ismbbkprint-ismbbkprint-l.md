@@ -1,10 +1,6 @@
 ---
-title: _ismbbkprint –, _ismbbkprint_l – | Microsoft Docs
-ms.custom: ''
+title: _ismbbkprint, _ismbbkprint_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbkprint
 - _ismbbkprint_l
@@ -26,28 +22,22 @@ f1_keywords:
 - ismbbkprint
 - _ismbbkprint
 - ismbbkprint_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbbkprint function
 - ismbbkprint_l function
 - ismbbkprint function
 - _ismbbkprint_l function
 ms.assetid: 8d1d3258-1e34-4365-81ed-97c95de25475
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a1a6a215bac14f81d29d83a856313133fb4e88a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d30abb0bcb587aeb15087ceb80d60d54ac1bebe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399498"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645975"
 ---
 # <a name="ismbbkprint-ismbbkprintl"></a>_ismbbkprint, _ismbbkprint_l
 
-Určuje, zda je konkrétní vícebajtových znaků interpunkční symbol.
+Určuje, zda je určitý vícebajtový znak interpunkčním znaménkem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,14 +54,14 @@ int _ismbbkprint_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Celé číslo má být testována.
+Celé číslo k testování.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_ismbbkprint –** vrátí nenulovou hodnotu, pokud na celé číslo *c* je jiné než ASCII text nebo symbol interpunkce jiné sady než ASCII nebo 0, pokud není. Například v pouze znaková stránka 932 **_ismbbkprint –** testů pro katakana alfanumerické nebo katakana interpunkce (rozsah: 0xA1 - 0xDF). **_ismbbkprint –** používá aktuální národní prostředí pro nastavení znaků závislých na národním prostředí. **_ismbbkprint_l –** se shoduje s tím rozdílem, že používá předaná národní prostředí. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+**_ismbbkprint –** vrací nenulovou hodnotu, pokud celé číslo *c* je jiné než ASCII text nebo ne ASCII interpunkční symbol nebo 0, pokud není. Například pouze v kódové stránce 932 **_ismbbkprint –** testy pro alfanumerické znaky katakana nebo interpunkční znaky katakana (rozsah: 0xA1 – 0xDF). **_ismbbkprint –** používá aktuální národní prostředí pro nastavení závislé na národním prostředí znak. **_ismbbkprint_l –** je stejná s tím rozdílem, že používá Předaný parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -80,9 +70,9 @@ Národní prostředí použít.
 |**_ismbbkprint**|\<Mbctype.h >|
 |**_ismbbkprint_l**|\<Mbctype.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Klasifikace bajtů](../../c-runtime-library/byte-classification.md)<br/>
 [_ismbb – rutiny](../../c-runtime-library/ismbb-routines.md)<br/>

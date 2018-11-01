@@ -1,11 +1,6 @@
 ---
-title: _Cmulcc, _FCmulcc, _LCmulcc | Microsoft Docs
-ms.custom: ''
+title: _Cmulcc _FCmulcc, _LCmulcc
 ms.date: 03/30/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - _Cmulcc
 - _FCmulcc
@@ -30,26 +25,20 @@ f1_keywords:
 - complex/_Cmulcc
 - complex/_FCmulcc
 - complex/_LCmulcc
-dev_langs:
-- C++
 helpviewer_keywords:
 - _Cmulcc function
 - _FCmulcc function
 - _LCmulcc function
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f1c4290c7e1f7a1ec917f2b2a197f787d28b9cd9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f81ccb641a80ab264e8bc54ba1987e2c2c8469f1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394981"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656765"
 ---
-# <a name="cmulcc-fcmulcc-lcmulcc"></a>_Cmulcc, _FCmulcc, _LCmulcc
+# <a name="cmulcc-fcmulcc-lcmulcc"></a>_Cmulcc _FCmulcc, _LCmulcc
 
-Vynásobí dvě komplexní čísla.
+Vynásobí dvě čísla komplexní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,33 +51,33 @@ _Lcomplex _LCmulcc( _Lcomplex x, _Lcomplex y );
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Jeden z komplexní operandy mají vynásobit.
+Jeden z operandů komplexní pro násobení.
 
 *y*<br/>
-Další komplexní operand mají vynásobit.
+Další složité operand pro násobení.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-A **_Dcomplex**, **_Fcomplex**, nebo **_Lcomplex** struktura, která představuje komplexní produkt komplexní čísla *x* a *y*.
+A **_Dcomplex**, **_Fcomplex**, nebo **_Lcomplex** struktura, která představuje komplexní produktu komplexní čísla *x* a *y*.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože integrované aritmetické operátory nefungují na implementaci Microsoft komplexních typů **_Cmulcc**, **_FCmulcc**, a **_LCmulcc** funkce zjednodušení násobení komplexních typů.
+Protože předdefinovaných aritmetických operátorů, nebudou fungovat v implementaci společnosti Microsoft komplexní typy, **_Cmulcc**, **_FCmulcc**, a **_LCmulcc** funkce zjednodušení násobení komplexních typů.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Hlavička C|Hlavička C++|
+|Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
 |**_Cmulcc**, **_FCmulcc**, **_LCmulcc**|\<complex.h>|\<complex.h>|
 
-Tyto funkce jsou specifické pro společnost Microsoft. Typy **_Dcomplex**, **_Fcomplex**, a **_Lcomplex** jsou specifické pro společnost Microsoft – ekvivalenty k neimplementované nativní typy C99 **dvojité _complex –** , **float _complex –**, a **_complex long double –**, v uvedeném pořadí. Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Tyto funkce jsou specifické pro společnost Microsoft. Typy **_Dcomplex**, **_Fcomplex**, a **_Lcomplex** jsou specifické pro společnost Microsoft – ekvivalenty k neimplementovaná C99 nativní typy **double _Complex** , **float _Complex**, a **long double _Complex**v uvedeném pořadí. Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [_Cbuild, _FCbuild, _LCbuild](cbuild-fcbuild-lcbuild.md)<br/>
 [_Cmulcr, _FCmulcr, _LCmulcr](cmulcr-fcmulcr-lcmulcr.md)<br/>
-[Norm, normf, norml](norm-normf-norml1.md)<br/>
+[Norm a normf, norml](norm-normf-norml1.md)<br/>
 [cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
 [conj, conjf, conjl](conj-conjf-conjl.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>

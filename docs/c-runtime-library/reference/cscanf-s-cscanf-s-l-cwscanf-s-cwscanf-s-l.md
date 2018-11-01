@@ -1,10 +1,6 @@
 ---
-title: _cscanf_s –, _cscanf_s_l –, _cwscanf_s –, _cwscanf_s_l – | Microsoft Docs
-ms.custom: ''
+title: _cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cwscanf_s_l
 - _cwscanf_s
@@ -35,8 +31,6 @@ f1_keywords:
 - _tcscanf_s_l
 - tcscanf_s
 - tcscanf_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - cscanf_s function
 - _cwscanf_s_l function
@@ -54,23 +48,19 @@ helpviewer_keywords:
 - _tcscanf_s function
 - tcscanf_s_l function
 ms.assetid: 9ccab74d-916f-42a6-93d8-920525efdf4b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ca65c4746256611ed6958bc76d8779cd36ae1ff
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b49c464c7262a60bb7744a68c0144234e152edd3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403271"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463697"
 ---
 # <a name="cscanfs-cscanfsl-cwscanfs-cwscanfsl"></a>_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
 
-Čtení formátovaných dat z konzoly. Tyto další zabezpečené verzích [_cscanf –, _cscanf_l –, _cwscanf –, _cwscanf_l –](cscanf-cscanf-l-cwscanf-cwscanf-l.md) mít vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Čtení formátovaných dat z konzoly. Tyto bezpečnější verze [_cscanf _cscanf_l –, _cwscanf – _cwscanf_l –](cscanf-cscanf-l-cwscanf-cwscanf-l.md) mají rozšíření zabezpečení popsaná v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -108,20 +98,20 @@ Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Počet polí, které byly úspěšně převést a přiřadit. Návratová hodnota nezahrnuje pole, které byly pro čtení, ale není přiřazen. Vrácená hodnota je **EOF** pro pokus o čtení na konci souboru. Tato situace může nastat, když vstup z klávesnice přesměrována na úrovni příkazového řádku operačního systému. Vrácená hodnota 0 znamená, že byly přiřazené žádné pole.
+Počet polí, které byly úspěšně převedeny a přiřazeny. Vrácená hodnota nezahrnuje pole, která byla načtena, ale nejsou přiřazena. Vrácená hodnota je **EOF** pro pokus o čtení na konci souboru. Tato situace může nastat, když je vstup z klávesnice přesměrován na úrovni příkazového řádku operačního systému. Vrácená hodnota 0 znamená, že nebyla přiřazena žádná pole.
 
-Tyto funkce ověřit jejich parametrů. Pokud *formátu* je ukazatel s hodnotou null, tyto funkce vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění chcete-li pokračovat, tyto funkce vracejí **EOF** a **errno** je nastaven na **einval –**.
+Tyto funkce ověřují své parametry. Pokud *formátu* je ukazatel s hodnotou null, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **EOF** a **errno** je nastavena na **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Cscanf_s –** funkce čte data přímo z konzoly do umístění určeného vlastností *argument*. [_Getche –](getch-getwch.md) funkce slouží k načtení znaků. Všechny volitelné parametry musí být ukazatel na proměnnou s typem, který odpovídá specifikátor typu v *formátu*. Ovládací prvky formátu výklad vstupní pole a má stejnou tvoří a fungovat jako *formátu* parametr pro [scanf_s –](scanf-scanf-l-wscanf-wscanf-l.md) funkce. Při **_cscanf_s –** normálně vrátí vstupní znak ji není provést, pokud byl posledním volání do **_ungetch –**.
+**_Cscanf_s –** funkce čte data přímo z konzoly do míst daných argumentem *argument*. [_Getche](getch-getwch.md) funkce se použije ke čtení znaků. Každý volitelný parametr musí být ukazatel na proměnnou typu, který odpovídá specifikátoru typů ve *formátu*. Formát řídí interpretaci vstupních polí a má stejnou formu a funkci jako *formátu* parametr [scanf_s](scanf-scanf-l-wscanf-wscanf-l.md) funkce. Zatímco **_cscanf_s –** obvykle vrátí vstupní znak, neučiní tak pokud poslední volání bylo **_ungetch**.
 
-Jako další bezpečné verze funkcí v **scanf** rodiny, **_cscanf_s –** a **_cswscanf_s** vyžadovat velikosti argumenty pro znaky pole typu **c** , **C**, **s**, **S**, a **[**. Další informace najdete v tématu [specifikace šířky scanf](../../c-runtime-library/scanf-width-specification.md).
+Podobně jako jiné bezpečné verze funkcí v **scanf** řady **_cscanf_s –** a **_cswscanf_s** vyžadují argumenty velikosti pro znaky pole typu **c** , **C**, **s**, **S**, a **[**. Další informace najdete v tématu [specifikace šířky scanf](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
-> Parametr velikosti je typu **nepodepsané**, nikoli **size_t –**.
+> Velikost parametru je typu **bez znaménka**, nikoli **size_t**.
 
-Verze tyto funkce s **_l** příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí předaná místo aktuální národní prostředí vlákna.
+Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí předaného namísto aktuálního národní prostředí pro vlákno.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -137,11 +127,11 @@ Verze tyto funkce s **_l** příponu jsou shodné s tím rozdílem, že použív
 |**_cscanf_s –**, **_cscanf_s_l –**|\<conio.h >|
 |**_cwscanf_s –**, **_cwscanf_s_l –**|\<conio.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -178,7 +168,7 @@ int main( void )
 You entered 1 2 3
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [I/O konzoly a portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>

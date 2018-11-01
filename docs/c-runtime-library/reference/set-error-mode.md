@@ -1,10 +1,6 @@
 ---
-title: _set_error_mode – | Microsoft Docs
-ms.custom: ''
+title: _set_error_mode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_error_mode
 apilocation:
@@ -23,29 +19,23 @@ apitype: DLLExport
 f1_keywords:
 - set_error_mode
 - _set_error_mode
-dev_langs:
-- C++
 helpviewer_keywords:
 - _set_error_mode function
 - set_error_mode function
 ms.assetid: f0807be5-73d1-4a32-a701-3c9bdd139c5c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 130e9fee13401c8b598a5d6eef7d1fab3ed80ae9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c95ed45423b791a688f05ea30f48e188826a797
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406492"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50502307"
 ---
 # <a name="seterrormode"></a>_set_error_mode
 
-Upraví **__error_mode** určit jiné než výchozí umístění, kde C runtime zapíše chybovou zprávu pro chybu, která může ukončení programu.
+Upraví **__error_mode** určit jiné než výchozí umístění, kde modul runtime jazyka C zapíše chybovou zprávu pro chybu, která může ukončit program.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,24 +52,24 @@ Cíl chybové zprávy.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí staré nastavení nebo -1, pokud dojde k chybě.
+Vrátí původní nastavení nebo -1, pokud dojde k chybě.
 
 ## <a name="remarks"></a>Poznámky
 
-Ovládací prvky výstupní jímku chyba nastavením hodnotu **__error_mode**. Můžete například přesměrujte výstup do standardní chyba nebo použít **MessageBox** rozhraní API.
+Určuje výstupní jímky chyby tak, že nastavíte hodnotu **__error_mode**. Můžete například přesměrujte výstup do standardní chyby nebo použít **MessageBox** rozhraní API.
 
 *Mode_val* parametr můžete nastavit na jedno z následujících hodnot.
 
 |Parametr|Popis|
 |---------------|-----------------|
-|**_OUT_TO_DEFAULT**|Chyba podřízený je dáno **__app_type**.|
-|**_OUT_TO_STDERR**|Chyba podřízený je standardní chyba.|
-|**_OUT_TO_MSGBOX**|Podřízený chyba se zprávou.|
+|**_OUT_TO_DEFAULT**|Chyba jímky se určuje podle **__app_type**.|
+|**_OUT_TO_STDERR**|Chyba jímkou je standardní chyby.|
+|**_OUT_TO_MSGBOX**|Chyba jímkou je okno se zprávou.|
 |**_REPORT_ERRMODE**|Sestavy aktuální **__error_mode** hodnotu.|
 
-Pokud je předaná hodnota nejsou uvedeny, je obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **_set_error_mode –** nastaví **errno** k **einval –** a vrátí hodnotu -1.
+Pokud je předána hodnota nejsou uvedeny, vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **_set_error_mode –** nastaví **errno** k **EINVAL** a vrátí hodnotu -1.
 
-Pokud se používá s [assert](assert-macro-assert-wassert.md), **_set_error_mode –** v dialogovém okně zobrazí příkaz neúspěšné a vám zvolit **Ignorovat** tlačítko, aby bylo možné Pokračujte ke spuštění programu.
+Při použití s [vyhodnocení](assert-macro-assert-wassert.md), **_set_error_mode –** selhání příkazu se zobrazí v dialogovém okně a dá vám možnost výběru **Ignorovat** tlačítko, abyste mohli Pokračujte ke spuštění programu.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -109,6 +99,6 @@ This application has requested the Runtime to terminate it in an unusual way.
 Please contact the application's support team for more information.
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [assert Macro, _assert, _wassert](assert-macro-assert-wassert.md)<br/>

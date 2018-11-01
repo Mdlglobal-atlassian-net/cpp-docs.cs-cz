@@ -1,88 +1,78 @@
 ---
-title: Konstanty typu Integer jazyka C | Microsoft Docs
-ms.custom: ''
+title: Konstanty typu Integer jazyka C
 ms.date: 02/27/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - integer constants
 ms.assetid: fcf6b83c-2038-49ec-91ca-3d5ca1f83037
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eef5ba48d28b898ffc624d5790b0f414a8c112c3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4a3d6b945f3611b8e51029c0a5ec5dc77b2cbaa0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389751"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620217"
 ---
 # <a name="c-integer-constants"></a>Konstanty typu Integer jazyka C
 
-*Celočíselná konstanta* desetinné číslo (se základem 10), osmičkové (základ 8), nebo je číslo šestnáctkové (základ 16), které představuje celočíselné hodnoty. Konstanty typu integer znázornit celočíselné hodnoty, které nelze změnit.
+*Celočíselná konstanta* desetinné číslo (se základem 10), osmičkové (základní 8) nebo šestnáctkové (základní 16) číslo, které představuje celé číslo. Konstanty typu integer použijte k vyjádření celočíselných hodnot, která se nedá změnit.
 
 ## <a name="syntax"></a>Syntaxe
 
 *celočíselná konstanta*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Decimal – konstanta* *celé číslo příponu*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*osmičkové konstanta* *celé číslo příponu*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimální konstanta* *celé číslo příponu*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*desetinná konstanta* *číselnou příponou*<sub>optimalizované</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*osmičkové konstanty* *číselnou příponou*<sub>optimalizované</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*šestnáctkové konstanty* *číselnou příponou*<sub>optimalizované</sub><br/>
 
-*Decimal – konstanta*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*nenulové hodnoty číslice*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Decimal – konstanta* *číslice*<br/>
+*desetinná konstanta*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*nenulovou číslicí.*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*desetinná konstanta* *číslice*<br/>
 
-*osmičkové konstanta*:<br/>
+*osmičkové konstanty*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*osmičkové konstanta* *osmičková číslice*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*osmičkové konstanty* *uveden jako osmičková číslice*<br/>
 
-*hexadecimální konstanta*:<br/>
+*šestnáctkové konstanty*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-prefix* *hexadecimal-digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimální konstanta* *šestnáctková číslice*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*šestnáctkové konstanty* *šestnáctkové číslice*<br/>
 
-*hexadecimální předponu*: jeden z<br/>
+*Předpona šestnáctkové*: jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0x**  **0X**<br/>
 
-*nenulové hodnoty v řádu*: jeden z<br/>
+*nenulovou číslicí*: jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**1 2 3 4 5 6 7 8 9**<br/>
 
-*osmičková číslice*: jeden z<br/>
+*uveden jako osmičková číslice*: jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7**<br/>
 
-*hexadecimální číslice*: jeden z<br/>
+*šestnáctkové číslice*: jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**b c d e f**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**A B C D E F**<br/>
 
 *integer-suffix*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*nepodepsané příponu* *dlouho příponu*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*nepodepsané příponu* *dlouho. dlouho příponu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*nepodepsané příponu* *64-bit-celé číslo příponu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Long příponu* *nepodepsané příponu*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Long long – přípona* *nepodepsané příponu*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *long-suffix*<sub>optimalizované</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *long long-suffix*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *64 bit číselnou příponou*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Long-suffix* *unsigned-suffix*<sub>optimalizované</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Long long-suffix* *unsigned-suffix*<sub>optimalizované</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*64-bit-integer-suffix*<br/>
 
-*nepodepsané příponu*: jeden z<br/>
+*unsigned-suffix*: jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**u U**<br/>
 
-*Long příponu*: jeden z<br/>
+*Long-suffix*: jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**l L**<br/>
 
-*Long long – přípona*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Le le**<br/>
+*Long long-suffix*: jeden z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**ll, LL**<br/>
 
-*64-bit-celé číslo přípona*: jeden z<br/>
+*64-bit číselnou příponou*: jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**I64 I64**<br/>
 
 **I64** a **I64** přípony jsou specifické pro společnost Microsoft.
 
-Konstanty typu Integer jsou kladné, pokud jsou sebou znaménkem minus (**-**). Mínus interpretována jako operátor unární aritmetické negace. (Viz [unární aritmetické operátory](../c-language/unary-arithmetic-operators.md) informace o tento operátor.)
+Celočíselné konstanty jsou kladné, pokud jsou uvozená znakem minus (**-**). Znaménko minus je interpretován jako operátor unární aritmetické negace. (Viz [unární aritmetické operátory](../c-language/unary-arithmetic-operators.md) informace o tomto operátoru.)
 
-Pokud začíná celočíselná konstanta **0 x** nebo **0 X**, je hexadecimální. Pokud začíná číslice **0**, je osmičková. Jinak se předpokládá, být decimal.
+Pokud celočíselná konstanta začíná **0 x** nebo **0 X**, je šestnáctková. Pokud začíná číslice **0**, je osmičkové soustavě. V opačném případě se předpokládá být desítkové.
 
 Následující konstanty typu integer jsou ekvivalentní:
 
@@ -92,7 +82,7 @@ Následující konstanty typu integer jsou ekvivalentní:
 034    /* = Octal representation for decimal 28 */
 ```
 
-Bez prázdných znaků můžete oddělit číslice celočíselná konstanta. Tyto příklady ukazují některé platné desetinné, osmičkových a šestnáctkových konstanty.
+Žádné prázdné znaky mohou oddělit číslic celočíselná konstanta. Tyto příklady ukazují některé platné desetinné, osmičkovým a šestnáctkovým konstantám.
 
 ```C
     /* Decimal Constants */
@@ -126,6 +116,6 @@ Bez prázdných znaků můžete oddělit číslice celočíselná konstanta. Tyt
     unsigned __int64    hex_ui64   = 0x8a44000000000040Ui64;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Konstanty jazyka C](../c-language/c-constants.md)<br/>

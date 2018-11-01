@@ -1,49 +1,39 @@
 ---
-title: Bezpečnost vlákna v standardní knihovně C++ | Microsoft Docs
-ms.custom: ''
+title: Bezpečný přístup z více vláken ve standardní knihovně C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - thread safety
 - C++ Standard Library, thread safety
 - thread safety, C++ Standard Library
 ms.assetid: 9351c8fb-4539-4728-b0e9-226e2ac4284b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fc39fd944c035c0e8dfa5f5b66cc045a115185ed
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 27ac930e567521b12dfc35e2f8c4c389c35ae47d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855231"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607633"
 ---
 # <a name="thread-safety-in-the-c-standard-library"></a>Bezpečný přístup z více vláken ve standardní knihovně C++
 
-Platí následující pravidla bezpečný přístup z více vláken na všechny třídy v standardní knihovna C++ – to zahrnuje `shared_ptr`, jak je popsáno níže.  Někdy jsou k dispozici větší záruku – například standardní iostream objekty, jak je popsáno níže a typy určený speciálně pro více vláken, jako jsou ty v [ \<atomic >](../standard-library/atomic.md).
+Platí následující pravidla bezpečný přístup z více vláken na všechny třídy ve standardní knihovně C++ – jedná se o `shared_ptr`, jak je popsáno níže.  Někdy jsou k dispozici větší záruku – třeba standardní iostream – objekty, jak je popsáno níže a typy určený speciálně pro multithreading, jako ty v [ \<atomické >](../standard-library/atomic.md).
 
-Objekt je bezpečné pro přístup z více vláken pro čtení z více vláken. Například zadána objekt A je bezpečné číst A z vlákna 1 a z vlákna 2 současně.
+Objekt je bezpečná pro vlákno pro čtení z více vláken. Například daný objekt A je bezpečné A z vlákna 1 a čtení z vlákna 2 současně.
 
-Pokud objekt zapisuje jedním vláknem, pak všechny čte a zapisuje tento objekt na stejné nebo jiná vlákna musí být chráněny. Například zadána objekt A, pokud se o přístup z více vláken 1 zápis A pak vlákno 2, musí být zabránit čtení nebo zápisu do A.
+Pokud objekt se zápisem do jedním vláknem, pak všechny čte a zapisuje do tohoto objektu na stejné nebo jiných vláken musí být chráněné. Například zadaný objekt A, pokud vlákno 1 zapisuje do A, pak vlákno 2 musí být zabránily čtení nebo zápisu do A.
 
-Je bezpečné číst a zapisovat do jedné instance typu i v případě jiné vlákno je čtení nebo zápisu do jiné instance stejného typu. Například zadané objekty A a B stejného typu, je bezpečné při ve vláknu 1 probíhá zápis A a B je načítán ve vláknu 2.
+Je bezpečné ke čtení a zápisu na jednu instanci typu, přestože jiné vlákno je čtení a zápis do jiné instance stejného typu. Například s ohledem objekty A a B stejného typu, je bezpečné při ve vlákně 1 se zápisem A a B je čten ve vlákně 2.
 
 ## <a name="sharedptr"></a>shared_ptr
 
-Více vláken současně může číst a zapisovat jiné [shared_ptr](../standard-library/shared-ptr-class.md) objekty, i když jsou tyto objekty kopií, které sdílejí vlastnictví.
+Více vláken může současně číst a zapisovat různé [shared_ptr](../standard-library/shared-ptr-class.md) objektů, i když jsou objekty kopie, které sdílejí vlastnictví.
 
 ## <a name="iostream"></a>iostream
 
-Objekty standardní iostream `cin`, `cout`, `cerr`, `clog`, `wcin`, `wcout`, `wcerr`, a `wclog` stejným pravidlům jako jiné třídy, se tato výjimka: je bezpečné zápis do objektu z více vláken. Například může vlákno 1 zapsat do [cout](../standard-library/iostream.md#cout) ve stejnou dobu jako vláken 2. Ale to může způsobit výstup z dvěma vlákny na být Smíšeného.
+Iostream – standardní objekty `cin`, `cout`, `cerr`, `clog`, `wcin`, `wcout`, `wcerr`, a `wclog` řídit stejnými pravidly jako ostatní třídy, s touto výjimkou: je bezpečné zápis do objektu z více vláken. Například může zapisovat vlákno 1 [cout](../standard-library/iostream.md#cout) ve stejnou dobu jako vlákno 2. Nicméně to může způsobit výstup ze dvou vláken být Smíšeného.
 
 > [!NOTE]
-> Čtení z datového proudu vyrovnávací paměti se nepovažuje za operace čtení. Místo toho považuje za operaci zápisu, protože se změnil stav třídy.
+> Čtení z vyrovnávací paměti datového proudu se nepovažuje za operace čtení. Místo toho bude považován být operace zápisu, protože se změnil stav třídy.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Standardní knihovna C++ – přehled](../standard-library/cpp-standard-library-overview.md)<br/>

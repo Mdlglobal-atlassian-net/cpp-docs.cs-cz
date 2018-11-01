@@ -1,10 +1,6 @@
 ---
-title: _getmaxstdio – | Microsoft Docs
-ms.custom: ''
+title: _getmaxstdio
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getmaxstdio
 apilocation:
@@ -23,28 +19,22 @@ apitype: DLLExport
 f1_keywords:
 - _getmaxstdio
 - getmaxstdio
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], number open
 - _getmaxstdio function
 - getmaxstdio function
 - open files, getting number
 ms.assetid: 700ca8ce-4a8c-4e00-9467-dfa9d6b831a0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f2030937806eedbf1abe671032da75c531fdd5ca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea8e516b4c0806230376ea52e399c9fa1f9a858a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396781"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618335"
 ---
 # <a name="getmaxstdio"></a>_getmaxstdio
 
-Vrátí počet současně otevřených souborů, které jsou v úrovni vstupně-výstupní datový proud.
+Vrátí počet souběžně otevřených souborů je povolená úroveň vstupně-výstupních operací datového proudu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,11 +44,11 @@ int _getmaxstdio( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrací číslo představující počet současně otevřených souborů, které jsou aktuálně povoleny v **stdio** úroveň.
+Vrací číslo představující počet souběžně otevřených souborů, které jsou aktuálně je povolená **stdio** úroveň.
 
 ## <a name="remarks"></a>Poznámky
 
-Použití [_setmaxstdio –](setmaxstdio.md) konfigurace počet současně otevřených souborů v **stdio** úroveň.
+Použití [_setmaxstdio –](setmaxstdio.md) nakonfigurovat počet souběžně otevřených souborů je povolená **stdio** úroveň.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -66,7 +56,7 @@ Použití [_setmaxstdio –](setmaxstdio.md) konfigurace počet současně otev�
 |-------------|---------------------|
 |**_getmaxstdio**|\<stdio.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -93,6 +83,6 @@ int main()
 2048
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>

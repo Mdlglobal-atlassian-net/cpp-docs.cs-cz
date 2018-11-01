@@ -1,11 +1,6 @@
 ---
-title: cexp, cexpf, cexpl | Microsoft Docs
-ms.custom: ''
+title: cexp cexpf, cexpl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cexp
 - cexpf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/cepx
 - complex/cexpf
 - complex/cexpl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cexp function
 - cexpl function
 - cexpf function
 ms.assetid: f27fd5a9-70c7-4957-a7ee-5256d19bd1da
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3a54dc0c25fd0b476887914778278ec83c19fe8e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 401dd30b326fcd6caef7cae6f1ecbdc43ed5dd5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393989"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462930"
 ---
-# <a name="cexp-cexpf-cexpl"></a>cexp, cexpf, cexpl
+# <a name="cexp-cexpf-cexpl"></a>cexp cexpf, cexpl
 
-Výpočetní základní e exponenciální komplexního čísla.
+Výpočetní základu e exponenciální komplexního čísla.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -68,25 +57,25 @@ _Lcomplex cexp( _Lcomplex z );  // C++ only
 ### <a name="parameters"></a>Parametry
 
 *z*<br/>
-Komplexní číslo, které představuje exponent.
+Komplexní čísla, která představuje exponent.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Hodnota **e** umocněné z *z*.
+Hodnota **e** umocněné na sílu *z*.
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **cexp** , přijmout a vrátit **_Fcomplex** a **_Lcomplex** hodnoty. V programu C **cexp** vždy provede a vrátí **_Dcomplex** hodnotu.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **cexp** , která používají a vrací **_Fcomplex** a **_Lcomplex** hodnoty. V programu jazyka C **cexp** vždy převezme a vrátí **_Dcomplex** hodnotu.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Hlavička C|Hlavička C++|
+|Rutina|Záhlaví C|Hlaviček jazyka C++|
 |-------------|--------------|------------------|
 |**cexp**, **cexpf**, **cexpl**|\<complex.h>|\<complex.h>|
 
-Informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [cpow, cpowf, cpowl](cpow-cpowf-cpowl.md)<br/>

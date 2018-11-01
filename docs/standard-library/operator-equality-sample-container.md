@@ -1,10 +1,6 @@
 ---
-title: Operator == (&lt;ukázkový kontejner&gt;) | Microsoft Docs
-ms.custom: ''
+title: Operator == (&lt;ukázkový kontejner&gt;)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - std.==
 - std::==
@@ -12,28 +8,22 @@ f1_keywords:
 - std.operator==
 - std::operator==
 - ==
-dev_langs:
-- C++
 helpviewer_keywords:
 - operator ==, containers
 - operator==, containers
 - == operator, with specific standard C++ objects
 ms.assetid: d3d8754e-5157-4b8b-bf9c-da41856f5eed
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 360c4f38b0c740d1c23b1fa9c0712eaf6657d495
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c49c58bdc168385d421cf942735b7473de70925f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853245"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613496"
 ---
 # <a name="operator-ltsample-containergt"></a>Operator == (&lt;ukázkový kontejner&gt;)
 
 > [!NOTE]
-> Toto téma se v dokumentaci k Visual C++ jako funkční příklad kontejnery použít ve standardní knihovně C++. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
+> Toto téma je v dokumentaci k Visual C++ jako funkční příklad kontejnery používané ve standardní knihovně jazyka C++. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
 
 Přetížení `operator==` k porovnání dvou objektů třídy šablony [kontejneru](../standard-library/sample-container-class.md).
 
@@ -50,6 +40,6 @@ bool operator==(
 
 Vrátí `left.` [velikost](../standard-library/container-class-size.md) ` == right.size && equal(left.` [začít](../standard-library/container-class-begin.md)`, left.`[end](../standard-library/container-class-end.md)`, right.begin)`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<Ukázkový kontejner >](../standard-library/sample-container.md)<br/>

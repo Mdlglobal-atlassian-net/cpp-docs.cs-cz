@@ -1,10 +1,6 @@
 ---
-title: přejmenovat, _wrename – | Microsoft Docs
-ms.custom: ''
+title: rename, _wrename
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - rename
 - _wrename
@@ -25,8 +21,6 @@ f1_keywords:
 - _wrename
 - _trename
 - Rename
-dev_langs:
-- C++
 helpviewer_keywords:
 - trename function
 - directories [C++], renaming
@@ -40,20 +34,16 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f02829b394649b86dfda9baad7c5792853fce746
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70793dee54460b6372bfbe815115aa9211670c6f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407470"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463983"
 ---
 # <a name="rename-wrename"></a>rename, _wrename
 
-Přejmenujte soubor nebo adresář.
+Přejmenování souboru nebo adresáře.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -78,40 +68,40 @@ Ukazatel na nový název.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí 0, pokud je úspěšné. Funkce vrátí nenulovou hodnotu, při chybě a nastaví **errno** na jednu z následujících hodnot:
+Každá z těchto funkcí vrátí 0, pokud je úspěšné. V případě chyby, funkce vrátí nenulovou hodnotu a nastaví **errno** na jednu z následujících hodnot:
 
-|errno – hodnota|Podmínka|
+|Hodnota errno|Podmínka|
 |-|-|
-**EACCES –**|Soubor nebo adresář zadaný *newname* již existuje nebo nebylo možné vytvořit (neplatná cesta); nebo *oldname* je adresář a *newname* Určuje jinou cestu.
-**ENOENT –**|Soubor nebo cesta zadaná položkou *oldname* nebyl nalezen.
-**EINVAL –**|Název obsahuje neplatné znaky.
+**EACCES**|Soubor nebo adresář zadaný *newname* již existuje nebo jej nelze vytvořit (neplatná cesta); nebo *oldname* je adresář a *newname* Určuje jinou cestu.
+**ENOENT**|Soubor nebo cesta zadaná položkou *oldname* nebyl nalezen.
+**EINVAL**|Název obsahuje neplatné znaky.
 
-Možné vrácené hodnoty, najdete v části [_doserrno – _errno, syserrlist a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Je to možné návratové hodnoty, najdete v části [_doserrno, _errno, syserrlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**Přejmenovat** funkce přejmenuje soubor nebo adresář zadaný *oldname* na daný název podle *newname*. Starý název musí být cesta existující soubor nebo adresář. Nový název nesmí být název existující soubor nebo adresář. Můžete použít **přejmenovat** přesunout soubor z jednoho adresáře nebo zařízení do jiné tím, že jiné cestě *newname* argument. Ale nemůžete použít **přejmenovat** k přesunutí adresáře. Adresáře můžete přejmenovat, ale není přesunut.
+**Přejmenovat** funkce přejmenuje soubor nebo adresář zadaný *oldname* na název Dal *newname*. Starý název musí být cesta k existující soubor nebo adresář. Nový název nesmí být název existujícího souboru nebo adresáře. Můžete použít **přejmenovat** přesunout soubor do jiného zadáním jiné cestě z jednoho adresáře nebo zařízení *newname* argument. Však nelze používat **přejmenovat** přejděte do adresáře. Adresáře můžete přejmenovat, ale nepřesunuli.
 
-**_wrename –** je verze široká charakterová **_rename**; argumenty, které mají **_wrename –** jsou široká charakterová řetězce. **_wrename –** a **_rename** chovat jinak shodně.
+**_wrename –** je verze širokého znaku **_rename**; argumenty, které mají **_wrename –** jsou širokoznaké řetězce. **_wrename –** a **_rename** se jinak chovají stejně.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_trename –**|**Přejmenování**|**Přejmenování**|**_wrename**|
+|**_trename –**|**Přejmenovat**|**Přejmenovat**|**_wrename**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**Přejmenování**|\<IO.h > nebo \<stdio.h >|
+|**Přejmenovat**|\<IO.h > nebo \<stdio.h >|
 |**_wrename**|\<stdio.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -145,6 +135,6 @@ int main( void )
 File 'CRT_RENAMER.OBJ' renamed to 'CRT_RENAMER.JBO'
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zpracování souborů](../../c-runtime-library/file-handling.md)<br/>
