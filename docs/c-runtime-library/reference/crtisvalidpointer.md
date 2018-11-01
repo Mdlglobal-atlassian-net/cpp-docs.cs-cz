@@ -1,10 +1,6 @@
 ---
-title: _Crtisvalidpointer – | Microsoft Docs
-ms.custom: ''
+title: _CrtIsValidPointer
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtIsValidPointer
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - CrtlsValidPointer
 - _CrtIsValidPointer
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtIsValidPointer function
 - _CrtIsValidPointer function
 ms.assetid: 91c35590-ea5e-450f-a15d-ad8d62ade1fa
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1bb78f8dee494fd213df6db16e2800cb9090bdf3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 64197d460cdb7dd26d22196c08151be09df48573
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397263"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429244"
 ---
 # <a name="crtisvalidpointer"></a>_CrtIsValidPointer
 
-Ověřuje, že ukazatel není null. Ve verzích běhové knihovny jazyka C před Visual Studio 2010 ověřuje, že zadaná paměťová rozsah je platný pro čtení a zápis (pouze ladicí verze).
+Ověřuje, že ukazatel není null. Ve verzích běhové knihovny jazyka C před Visual Studio 2010 ověří, zda je zadaná paměťová rozsahu platný pro čtení a zápis (pouze ladicí verze).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -56,7 +46,7 @@ int _CrtIsValidPointer(
 ### <a name="parameters"></a>Parametry
 
 *Adresa*<br/>
-Bodů na začátek rozsahu paměti k testování platnosti.
+Odkazuje na začátku rozsahu paměti pro testování platnosti.
 
 *Velikost*<br/>
 Velikost zadaná paměťová rozsahu (v bajtech).
@@ -66,19 +56,19 @@ Usnadnění přístupu pro čtení a zápis k určení rozsahu paměti.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_Crtisvalidpointer –** vrátí hodnotu TRUE, pokud není zadaný ukazatele null. Ve verzi knihovny CRT před Visual Studio 2010 vrátí hodnotu TRUE, pokud paměti rozsah je platný pro zadanou operaci nebo operace. Funkce, jinak vrátí hodnotu FALSE.
+**_Crtisvalidpointer –** vrátí TRUE, pokud není zadaný ukazatel null. Ve verzi knihovny CRT před Visual Studio 2010 vrátí hodnotu TRUE, pokud je platný pro zadanou operaci nebo operace oblasti paměti. V opačném případě vrátí funkce hodnotu FALSE.
 
 ## <a name="remarks"></a>Poznámky
 
-Od verze knihovny CRT v sadě Visual Studio 2010 *velikost* a *přístup* parametry jsou ignorovány, a **_crtisvalidpointer –** pouze ověřuje, že zadaný *adresu* není null. Protože tento test je snadné provést sami, nedoporučujeme používat tuto funkci. Ve verzi před Visual Studio 2010, funkce ověřuje, že rozsah paměti začínající na *adresu* a rozšíření pro *velikost* bajty je platný pro zadaný usnadnění operaci nebo operace. Když *přístup* je nastavena na hodnotu TRUE, rozsah paměti ověření pro čtení i zápis. Když *přístup* hodnotu FALSE, rozsah paměti je ověřen pouze pro čtení. Když [_DEBUG –](../../c-runtime-library/debug.md) není definován, volání **_crtisvalidpointer –** jsou odebrány při předběžném zpracování.
+Spouští se pomocí knihovny CRT v sadě Visual Studio 2010 *velikost* a *přístup* parametry budou ignorovány, a **_crtisvalidpointer –** pouze ověří, zda zadaný *adresu* nemá hodnotu null. Protože tento test je snadné provést sami, nedoporučujeme používat tuto funkci. Ve verzích před Visual Studio 2010, funkce ověří, zda rozsah paměti začínající na *adresu* a rozšíření pro *velikost* bajtů je platný pro zadaný usnadnění operaci nebo operace. Když *přístup* je nastavena na hodnotu TRUE, rozsahu paměti je ověřený pro čtení i zápis. Když *přístup* má hodnotu FALSE, rozsahu paměti proběhne pouze pro čtení. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, jsou volání **_crtisvalidpointer –** odstraněna během předběžného zpracování.
 
-Protože tato funkce vrátí hodnotu TRUE nebo FALSE, mohla být předána do jednoho z [_ASSERT](assert-asserte-assert-expr-macros.md) makra pro vytváření jednoduchých ladění chyba mechanismu pro zpracování. Následující příklad způsobí, že výraz je neplatný. Pokud oblast paměti není platná pro čtení i zápis operace:
+Protože tato funkce vrací hodnotu TRUE nebo FALSE, může být předán do jednoho z [_ASSERT](assert-asserte-assert-expr-macros.md) makra vytvořit jednoduchý mechanismus zpracování ladění chyb. Následující příklad způsobí selhání kontrolního výrazu, je-li paměť rozsah není platný pro čtení i zápis operace:
 
 ```C
 _ASSERTE( _CrtIsValidPointer( address, size, TRUE ) );
 ```
 
-Další informace o tom, **_crtisvalidpointer –** lze použít s další funkce ladění a makra najdete v tématu [makra pro vytváření sestav](/visualstudio/debugger/macros-for-reporting). Informace o tom, jak jsou bloky paměti přidělené, inicializovat a spravovat ladicí verze základní heap najdete v tématu [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
+Další informace o tom, **_crtisvalidpointer –** jde použít s další funkce ladění a makra, najdete v článku [makra pro vytváření sestav](/visualstudio/debugger/macros-for-reporting). Informace o způsobu jsou bloky paměti přidělené, inicializovat a správy v ladicí verzi základní haldy viz [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -86,16 +76,16 @@ Další informace o tom, **_crtisvalidpointer –** lze použít s další funkc
 |-------------|---------------------|
 |**_CrtIsValidPointer**|\<crtdbg.h>|
 
-**_Crtisvalidpointer –** je rozšíření Microsoft. Informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+**_Crtisvalidpointer –** je rozšířením společnosti Microsoft. Informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Ladicí verze [běhové knihovny jazyka C](../../c-runtime-library/crt-library-features.md) pouze.
+Ladicí verze [běhových knihoven C](../../c-runtime-library/crt-library-features.md) pouze.
 
 ## <a name="example"></a>Příklad
 
-Podívejte se příklad [_crtisvalidheappointer –](crtisvalidheappointer.md) tématu.
+Podívejte se na příklad pro [_crtisvalidheappointer –](crtisvalidheappointer.md) tématu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Rutiny ladění](../../c-runtime-library/debug-routines.md)<br/>

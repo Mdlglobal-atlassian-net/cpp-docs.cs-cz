@@ -1,44 +1,34 @@
 ---
-title: Vstupní výstupní alternativy | Microsoft Docs
-ms.custom: ''
+title: Vstupně výstupní alternativy
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - I/O [C++], alternatives
 ms.assetid: 9f8401c7-d90d-4285-8918-63573df74a80
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 28e61dbbd7db6737cd39337acc9925c669cff61d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bc595b64c991ada8e958e71e13f8cb9d134adb8a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843961"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50439686"
 ---
 # <a name="inputoutput-alternatives"></a>Vstupní/výstupní alternativy
 
-Visual C++ nabízí další pro programování vstupně-výstupních operací:
+Visual C++ poskytuje několik alternativ pro vstupně/výstupní programování:
 
-- C běhové knihovny přímé, bez vyrovnávací paměti vstupně-výstupní operace.
+- C knihovny run-time s přímým přístupem, bez vyrovnávací paměti vstupně-výstupních operací.
 
-- Datový proud běhové knihovny ANSI C vstupně-výstupní operace.
+- ANSI C knihovny run-time stream vstupně-výstupních operací.
 
-- Konzoly a portu přímé vstupy/výstupy.
+- I/O konzoly a portu s přímým přístupem.
 
-- Microsoft Foundation Class Library.
+- Knihovny Microsoft Foundation Class.
 
-- Microsoft standardní knihovna C++.
+- Knihovny Standard C++ společnosti Microsoft.
 
-Iostream, které jsou užitečné pro třídy uložená do vyrovnávací paměti, formátovaný text vstupně-výstupní operace. Jsou užitečné také pro vstupně-výstupní operace bez vyrovnávací paměti nebo binary Pokud potřebujete programovací rozhraní jazyka C++ a nechcete používat knihovny Microsoft Foundation Class (MFC). Iostream – třídy jsou alternativou objektově orientované vstupně-výstupních operací na běhové funkce C.
+Iostream – třídy jsou užitečné pro ukládány do vyrovnávací paměti, formátovaný text vstupně-výstupních operací. Jsou také užitečná pro vstupně-výstupní operace bez vyrovnávací paměti nebo binární Pokud potřebujete C++ rozhraní pro programování a rozhodnot nepoužívat knihovny Microsoft Foundation Class (MFC). Iostream – třídy jsou alternativou objektově orientované vstupně-výstupních operací pro funkce jazyka C za běhu.
 
-Iostream – třídy můžete použít s operačním systémem Microsoft Windows. Datové proudy řetězec a soubor fungovat bez omezení, ale objekty znakového režimu datového proudu `cin`, `cout`, `cerr`, a `clog` nejsou konzistentní s grafické uživatelské rozhraní systému Windows. Můžete také odvozovat vlastní datový proud třídy, které komunikovat přímo s prostředí systému Windows.
+Iostream – třídy lze použít s operačním systémem Microsoft Windows. Řetězec a souborů datových proudů fungovat bez omezení, ale objekty znakového režimu datového proudu `cin`, `cout`, `cerr`, a `clog` nejsou konzistentní s grafické uživatelské rozhraní Windows. Můžete také provádět odvozování třídy pro vlastní datové proudy, které komunikují přímo s prostředím Windows.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Co je stream](../standard-library/what-a-stream-is.md)<br/>

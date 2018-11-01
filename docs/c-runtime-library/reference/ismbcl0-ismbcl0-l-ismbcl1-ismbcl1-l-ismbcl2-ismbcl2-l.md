@@ -1,10 +1,6 @@
 ---
-title: _ismbcl0 –, _ismbcl0_l –, _ismbcl1 –, _ismbcl1_l –, _ismbcl2 –, _ismbcl2_l – | Microsoft Docs
-ms.custom: ''
+title: _ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbcl2
 - _ismbcl1
@@ -38,8 +34,6 @@ f1_keywords:
 - _ismbcl0_l
 - _ismbcl2
 - ismbcl2_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbcl0_l function
 - _ismbcl2 function
@@ -54,23 +48,19 @@ helpviewer_keywords:
 - _ismbcl2_l function
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 29d80c6d26171d9ac347aae1ac488d1fcadb1fec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b4ea5a165e5fb06229c3fdf69c53cdf82c4f35f4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403154"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430885"
 ---
 # <a name="ismbcl0-ismbcl0l-ismbcl1-ismbcl1l-ismbcl2-ismbcl2l"></a>_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
 
-**Kód stránka 932 konkrétní funkce**, pomocí aktuální národní prostředí nebo zadané kategorii LC_CTYPE – převod stavu.
+**Kódu stránky 932 specifické funkce**, pomocí aktuálního národního prostředí nebo zadané kategorie stavu převodu LC_CTYPE.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -101,33 +91,33 @@ int _ismbcl2_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak, který má být testována.
+Znak k testování.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Všechny tyto rutiny vrátí nenulovou hodnotu, pokud znak splňuje podmínky testu nebo 0, pokud neexistuje. Pokud *c* < = 255 a existuje odpovídající **_ismbb –** rutiny (například **_ismbcalnum –** odpovídá **_ismbbalnum –**), Výsledkem je vrácenou hodnotu odpovídající **_ismbb –** rutiny.
+Každá z těchto rutin vrátí nenulovou hodnotu, pokud znak splňuje testovací podmínku, nebo 0, pokud tomu tak není. Pokud *c* < = 255 a existuje odpovídající **_ismbb –** rutina (například **_ismbcalnum –** odpovídá **_ismbbalnum –**), Výsledkem je návratová hodnota odpovídající **_ismbb –** rutiny.
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto funkcí testuje dané vícebajtových znaků pro danou podmínku.
+Každá z těchto funkcí testujte daný vícebajtový znak na danou podmínku.
 
-Výstupní hodnota je ovlivňován nastavením **LC_CTYPE –** kategorie nastavení národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze tyto funkce bez **_l** příponu využívání aktuální národní prostředí pro toto chování závislých na národním prostředí, verze s **_l** příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí Místo toho předaná. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze těchto funkcí bez **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí místo něho předán v. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-|Rutina|Test stavu (pouze znaková stránka 932)|
+|Rutina|Testovací podmínka (pouze znaková stránky 932)|
 |-------------|-------------------------------------------|
 |**_ismbcl0**|Bez JIS-Kanji: 0x8140 < =*c*< = 0x889E.|
 |**_ismbcl0_l**|Bez JIS-Kanji: 0x8140 < =*c*< = 0x889E.|
-|**_ismbcl1**|Úroveň 1 JIS: 0x889F < =*c*< = 0x9872.|
-|**_ismbcl1_l**|Úroveň 1 JIS: 0x889F < =*c*< = 0x9872.|
-|**_ismbcl2**|Úroveň 2 JIS: 0x989F < =*c*< = 0xEAA4.|
-|**_ismbcl2_l**|Úroveň 2 JIS: 0x989F < =*c*< = 0xEAA4.|
+|**_ismbcl1**|1. úrovně JIS: 0x889F < =*c*< = 0x9872.|
+|**_ismbcl1_l**|1. úrovně JIS: 0x889F < =*c*< = 0x9872.|
+|**_ismbcl2**|2. úrovně JIS: 0x989F < =*c*< = 0xEAA4.|
+|**_ismbcl2_l**|2. úrovně JIS: 0x989F < =*c*< = 0xEAA4.|
 
-Funkce zkontrolujte, zda zadaná hodnota *c* odpovídá podmínky testu popsané výše, ale není, zkontrolujte *c* je platný vícebajtových znaků. Pokud nižší bajt je v oblastech 0x00-0x3F, 0x7F nebo 0xFD - 0xFF, tyto funkce vrátí nenulovou hodnotu, která určuje, že znak, který splňuje podmínky testu. Použití [_ismbbtrail –](ismbbtrail-ismbbtrail-l.md) k ověření, zda je definována vícebajtových znaků.
+Funkce ověří, zda zadaná hodnota *c* odpovídá zkušebním podmínkám popsaným výše, ale nekontrolují, zda *c* je platný vícebajtový znak. Pokud nižší bajt je v rozsahu 0x00 – 0x3F, 0x7F nebo 0xFD – 0xFF, tyto funkce vrátí nenulovou hodnotu, která udává, že znak splňuje testovací podmínku. Použití [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) k ověření, zda je vícebajtový znak definován.
 
-**End kódu konkrétní stránka 932**
+**End specifické pro kódovou stránku 932**
 
 ## <a name="requirements"></a>Požadavky
 
@@ -140,9 +130,9 @@ Funkce zkontrolujte, zda zadaná hodnota *c* odpovídá podmínky testu popsané
 |**_ismbcl2**|\<Mbstring.h >|
 |**_ismbcl2_l**|\<Mbstring.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Klasifikace znaků](../../c-runtime-library/character-classification.md)<br/>
 [_ismbc – rutiny](../../c-runtime-library/ismbc-routines.md)<br/>

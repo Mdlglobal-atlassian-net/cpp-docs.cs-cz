@@ -1,10 +1,6 @@
 ---
-title: Sin, sinf –, sinl – | Microsoft Docs
-ms.custom: ''
+title: Sin sinf –, sinl –
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - sinl
 - sinf
@@ -27,8 +23,6 @@ f1_keywords:
 - sinf
 - sinl
 - sin
-dev_langs:
-- C++
 helpviewer_keywords:
 - _sinl function
 - sinl function
@@ -37,20 +31,16 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f99e7792e177c6203d38a368f3dd4125fe848a76
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7006d7246837e5dc69733a007b3f7dab1c55280e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407574"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430359"
 ---
-# <a name="sin-sinf-sinl"></a>Sin, sinf –, sinl –
+# <a name="sin-sinf-sinl"></a>Sin sinf –, sinl –
 
-Vypočítá sinus hodnotu s plovoucí desetinnou čárkou.
+Vypočítá sinus hodnoty s plovoucí desetinnou čárkou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -72,26 +62,26 @@ long double sin(long double x);  // C++ only
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Sin** funkce vrátí sinus *x*. Pokud *x* je větší než nebo rovna hodnotě 263 nebo menší než nebo rovno-263, dojde ke ztrátě násobek ve výsledku.
+**Sin** funkce vrátí sinus *x*. Pokud *x* je větší než nebo rovno 263 nebo menší než nebo rovna hodnotě-263, dojde ke ztrátě významu výsledku.
 
-|Vstup|Výjimka SEH|Matherr – výjimka|
+|Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ QNAN, IND|Žádné|_DOMAIN –|
-|∞ rozmezí (sin, sinf – sinl –.)|NEPLATNÝ|_DOMAIN –|
+|ROZMEZÍ QNAN, AJÍT|Žádné|_DOMÉNA|
+|Rozmezí ∞ (sin, sinf – sinl –.)|NEPLATNÝ|_DOMÉNA|
 
-Další informace o návratové kódy najdete v tématu [errno, _doserrno –, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o návratových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **sin** , přijmout a vrátit **float** nebo **dlouho** **dvojité** hodnoty. V programu C **sin** vždy provede a vrátí **dvojité**.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **sin** , která používají a vrací **float** nebo **dlouhé** **double** hodnoty. V programu jazyka C **sin** vždy převezme a vrátí **double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaná hlavička (C)|Požadovaná hlavička (C++)|
+|Rutina|Požadované záhlaví (C)|Požadované záhlaví (C++)|
 |-|-|-|
-|**Sin**, **sinf –**, **sinl –**|\<Math.h >|\<cmath – > nebo \<math.h >|
+|**Sin**, **sinf –**, **sinl –**|\<Math.h >|\<cmath > nebo \<math.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -121,12 +111,12 @@ sin( 1.570796 ) = 1.000000
 cos( 1.570796 ) = 0.000000
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
-[Cos, cosf –, cosl –](cos-cosf-cosl.md)<br/>
+[Cos cosf –, cosl –](cos-cosf-cosl.md)<br/>
 [tan, tanf, tanl](tan-tanf-tanl.md)<br/>
 [_CIsin](../../c-runtime-library/cisin.md)<br/>

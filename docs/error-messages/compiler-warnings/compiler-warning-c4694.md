@@ -1,36 +1,27 @@
 ---
-title: C4694 upozornění kompilátoru | Microsoft Docs
+title: Upozornění kompilátoru C4694
 ms.date: 10/25/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4694
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4694
 ms.assetid: 5ca122bb-34f3-43ee-a21f-95802cd515f7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 33852b76f23e007625f86969119a22ee81305187
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6eaaa4c1f16e2ac2c5029511430a145fd9b943e2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271452"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50428337"
 ---
-# <a name="compiler-warning-c4694"></a>C4694 upozornění kompilátoru
+# <a name="compiler-warning-c4694"></a>Upozornění kompilátoru C4694
 
-> '*třída*': zapečetěné abstraktní třídy nemají základní třídy*base_class*.
+> "*třídy*': zapečetěná abstraktní třída nemůže mít je třídou base *$base_class*.
 
-Třídu abstraktní a uzavřené nemůže Zdědit z typu odkazu; uzavřený a abstraktní třídu můžete implementovat funkce základní třídy ani mohl použít jako základní třída.
+Abstraktní a uzavřené třídy nemůže dědit z typu odkazu uzavřený a abstraktní třída může implementovat funkce základní třídy ani mohl použít jako základní třídu.
 
 Další informace najdete v tématu [abstraktní](../../windows/abstract-cpp-component-extensions.md), [zapečetěné](../../windows/sealed-cpp-component-extensions.md), a [třídy a struktury](../../windows/classes-and-structs-cpp-component-extensions.md).
 
-Toto upozornění je automaticky povýšen na chybu. Pokud chcete-li toto chování změnit, použijte [#pragma – upozornění](../../preprocessor/warning.md).
+Toto upozornění je automaticky povýšen na chybu. Pokud chcete toto chování upravit, použijte [varování #pragma](../../preprocessor/warning.md).
 
 ## <a name="example"></a>Příklad
 

@@ -1,27 +1,17 @@
 ---
-title: Funkce uživatelského rozhraní, Průvodce aplikací knihovny MFC | Dokumentace Microsoftu
-ms.custom: ''
+title: Funkce uživatelského rozhraní, Průvodce aplikací MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.ui
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC Application Wizard, user interface features
 ms.assetid: 59e7b829-a665-42eb-be23-3f2a36eb2dad
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e18cc1f57bbbeb004fcbfc98f3671e29595f1329
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 99785e2e6ef1c0644833d582774380bff792ac9c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415132"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429273"
 ---
 # <a name="user-interface-features-mfc-application-wizard"></a>Funkce uživatelského rozhraní, Průvodce aplikací MFC
 
