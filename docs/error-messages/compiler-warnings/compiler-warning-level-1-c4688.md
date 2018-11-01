@@ -1,27 +1,17 @@
 ---
-title: Upozornění (úroveň 1) C4688 kompilátoru | Dokumentace Microsoftu
-ms.custom: ''
+title: Kompilátor upozornění (úroveň 1) C4688
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4688
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4688
 ms.assetid: a027df3c-b2b8-4c49-8539-c2bc42db74e8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aff10e34fd2dde20059ccbe2845b199486beb865
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f37b5ed43d375c5ee31eb233ce49f7ec88200155
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46027827"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50559923"
 ---
 # <a name="compiler-warning-level-1-c4688"></a>Kompilátor upozornění (úroveň 1) C4688
 

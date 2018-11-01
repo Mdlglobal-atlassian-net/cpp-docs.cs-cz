@@ -1,36 +1,26 @@
 ---
-title: swap (&lt;ukázkový kontejner&gt;) | Microsoft Docs
-ms.custom: ''
+title: swap (&lt;ukázkový kontejner&gt;)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - std.swap
 - std::swap
 - swap
-dev_langs:
-- C++
 helpviewer_keywords:
 - swap function
 ms.assetid: d8dd6436-fb97-46ed-bec5-052cfd710462
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e890a0a12828701b3fd91df6b65488221ef08f50
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0bbb86e4300b76c7166e880f514bc9526f5a4a6a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853762"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50576811"
 ---
 # <a name="swap-ltsample-containergt"></a>swap (&lt;ukázkový kontejner&gt;)
 
 > [!NOTE]
-> Toto téma se v dokumentaci k Visual C++ jako funkční příklad kontejnery použít ve standardní knihovně C++. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
+> Toto téma je v dokumentaci k Visual C++ jako funkční příklad kontejnery používané ve standardní knihovně jazyka C++. Další informace najdete v tématu [kontejnery standardní knihovny C++](../standard-library/stl-containers.md).
 
-Provede `left.` [swap](../standard-library/container-class-swap.md)`(right)`.
+Spustí `left.` [prohození](../standard-library/container-class-swap.md)`(right)`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,6 +31,6 @@ void swap(
     Container <Ty>& right);
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [\<Ukázkový kontejner >](../standard-library/sample-container.md)<br/>

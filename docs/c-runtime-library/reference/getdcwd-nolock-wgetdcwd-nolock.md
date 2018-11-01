@@ -1,10 +1,6 @@
 ---
-title: _getdcwd_nolock –, _wgetdcwd_nolock – | Microsoft Docs
-ms.custom: ''
+title: _getdcwd_nolock, _wgetdcwd_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wgetdcwd_nolock
 - _getdcwd_nolock
@@ -27,8 +23,6 @@ f1_keywords:
 - _getdcwd_nolock
 - _tgetdcwd_nolock
 - getdcwd_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - getdcwd_nolock function
 - _tgetdcwd_nolock function
@@ -40,23 +34,19 @@ helpviewer_keywords:
 - _wgetdcwd_nolock function
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aa969bb756754c1a6e1d28ac1b029ee443666ea0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47938c387ba30d7bcba038145c2dff9c7b59b750
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401575"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563683"
 ---
 # <a name="getdcwdnolock-wgetdcwdnolock"></a>_getdcwd_nolock, _wgetdcwd_nolock
 
-Získá úplnou cestu aktuálního pracovního adresáře na určené jednotce.
+Získá celou cestu aktuálního pracovního adresáře na zadané jednotce.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -75,22 +65,22 @@ wchar_t *_wgetdcwd_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*Jednotka*<br/>
-Diskové jednotce.
+*Jednotky*<br/>
+Disková jednotka.
 
 *Vyrovnávací paměti*<br/>
-Umístění úložiště pro cestu.
+Umístění úložiště pro danou cestu.
 
 *MAXLEN*<br/>
 Maximální délka cesty ve znacích: **char** pro **_getdcwd –** a **wchar_t** pro **_wgetdcwd –**.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V tématu [_getdcwd –, _wgetdcwd –](getdcwd-wgetdcwd.md).
+Zobrazit [_getdcwd – _wgetdcwd –](getdcwd-wgetdcwd.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_getdcwd_nolock –** a **_wgetdcwd_nolock –** jsou stejné jako **_getdcwd –** a **_wgetdcwd –**, s tím rozdílem, že nejsou chráněny před rušení další vlákna. Může být rychlejší, protože nevznikají nároky na uzamčení jiná vlákna. Tyto funkce lze používejte pouze v kontextu vláken jako je například aplikace nebo kde oboru volání již zpracovává izolace přístup z více vláken.
+**_getdcwd_nolock –** a **_wgetdcwd_nolock –** jsou stejné jako **_getdcwd –** a **_wgetdcwd –** v uvedeném pořadí, s tím rozdílem, že nejsou chráněny před před rušením jinými vlákny. Mohou být rychlejší, protože nejsou spojené režii uzamykáním ostatních vláken. Tyto funkce používejte pouze v kontextech bezpečných na vlákna, jako je například aplikace s jedním vláknem nebo pokud volající obor již zpracovává izolaci vláken.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -105,9 +95,9 @@ V tématu [_getdcwd –, _wgetdcwd –](getdcwd-wgetdcwd.md).
 |**_getdcwd_nolock**|\<Direct.h >|
 |**_wgetdcwd_nolock**|\<Direct.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ovládací prvek adresáře](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>

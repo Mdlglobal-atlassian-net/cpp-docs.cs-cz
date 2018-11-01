@@ -1,29 +1,19 @@
 ---
-title: '&lt;typeindex&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;typeindex&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <typeindex>
-dev_langs:
-- C++
 ms.assetid: a9551137-f74b-4f02-af64-ff00214cea1f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 189fb7cd3757a3f71a50badc682b7b4db611b4e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e22ce63c01185112ed512217156470e6f2948cd5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855107"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566618"
 ---
 # <a name="lttypeindexgt"></a>&lt;typeindex&gt;
 
-Zahrnují standardní hlavičku \<typeindex > Chcete-li definovat třídy a funkce, které podporují indexování objekty třídy [type_info](../cpp/type-info-class.md).
+Zahrnout standardní hlavička \<typeindex > k definování třídy a funkce, které podporují indexování objekty třídy [type_info](../cpp/type-info-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,11 +23,11 @@ Zahrnují standardní hlavičku \<typeindex > Chcete-li definovat třídy a funk
 
 ## <a name="remarks"></a>Poznámky
 
-[Hash – struktura](../standard-library/hash-structure.md) definuje `hash function` který je vhodný pro mapování hodnoty typu [type_index](../standard-library/type-index-class.md) k distribučnímu index hodnot.
+[Hash – struktura](../standard-library/hash-structure.md) definuje `hash function` , která je vhodná pro mapování hodnot typu [type_index –](../standard-library/type-index-class.md) k distribuci hodnot indexu.
 
-`type_index` Třída zabalí ukazatel na `type_info` objekt, který má být užitečné při indexování.
+`type_index` Zabalí ukazatele na třídy `type_info` objektu, které pomáhají při indexování.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

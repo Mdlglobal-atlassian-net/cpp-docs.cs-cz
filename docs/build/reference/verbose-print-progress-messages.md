@@ -1,15 +1,9 @@
 ---
-title: -VERBOSE (Tisk zpráv průběhu) | Dokumentace Microsoftu
-ms.custom: ''
+title: /VERBOSE (tisk zpráv průběhu)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /verbose
 - VC.Project.VCLinkerTool.ShowProgress
-dev_langs:
-- C++
 helpviewer_keywords:
 - -VERBOSE linker option
 - linking [C++], session progress information
@@ -19,16 +13,12 @@ helpviewer_keywords:
 - dependencies [C++], dependency information in linker output
 - VERBOSE linker option
 ms.assetid: 9c347d98-4c37-4724-a39e-0983934693ab
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6acffba952ad46e2b6051aed7effeb4a613bfc65
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 41a8ee835a65a7c9a17df9bb9c155267cae29baf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725605"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575614"
 ---
 # <a name="verbose-print-progress-messages"></a>/VERBOSE (tisk zpráv průběhu)
 
@@ -62,7 +52,7 @@ Linker odesílá informace o průběhu relace propojení do **výstup** okna. Na
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ShowProgress%2A>.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ShowProgress%2A>.
 
 ## <a name="see-also"></a>Viz také
 

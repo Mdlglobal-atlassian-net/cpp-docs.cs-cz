@@ -1,34 +1,25 @@
 ---
-title: Upozornění (úroveň 1) C4462 kompilátoru | Microsoft Docs
+title: Upozornění kompilátoru (úroveň 1) C4462
 ms.date: 10/25/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4462
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4462
 ms.assetid: 4e20aca4-293e-4c75-a83d-961c27ab7840
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 105a78fe9f8a8d2b6442c9b403af0266de53d3b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 801a440f131e9428c7f217346a6fd26c72cc1374
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281398"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50582322"
 ---
 # <a name="compiler-warning-level-1-c4462"></a>Upozornění kompilátoru (úroveň 1) C4462
 
 > Nelze určit identifikátor GUID tohoto typu. Program může při běhu selhat.
 
-Upozornění C4462 dojde v prostředí Windows Runtime aplikace nebo součást při veřejné `TypedEventHandler` odkazuje jako jeden z jeho parametry typu na nadřazených tříd.
+Upozornění c4462 v aplikaci Windows Runtime nebo komponenty, pokud veřejná `TypedEventHandler` má jako jeden ze svých parametrů odkaz na ohraničující třídy.
 
-Toto upozornění je automaticky povýšen na chybu. Pokud chcete-li toto chování změnit, použijte [#pragma – upozornění](../../preprocessor/warning.md). Například C4462 do problémem upozornění úroveň 4, přidáte tento řádek k souboru zdrojového kódu:
+Toto upozornění je automaticky povýšen na chybu. Pokud chcete toto chování upravit, použijte [varování #pragma](../../preprocessor/warning.md). Například převeďte C4462 na problém upozornění úrovně 4, přidejte tento řádek do souboru zdrojového kódu:
 
 ```cpp
 #pragma warning(4:4462)
@@ -36,23 +27,23 @@ Toto upozornění je automaticky povýšen na chybu. Pokud chcete-li toto chová
 
 ## <a name="example"></a>Příklad
 
-Tato ukázka generuje upozornění C4462:
+Tato ukázka vygeneruje upozornění C4462:
 
 ```cpp
 namespace N
 {
-       public ref struct EventArgs sealed {};
-       public ref struct R sealed
-       {
-              R() {}
-              event Windows::Foundation::TypedEventHandler<R ^, EventArgs^>^ e;
-       };
+       public ref struct EventArgs sealed {};
+       public ref struct R sealed
+       {
+              R() {}
+              event Windows::Foundation::TypedEventHandler<R ^, EventArgs^>^ e;
+       };
 }
 
 [Platform::MTAThread]
 int main()
 {
-     auto x = ref new N::R();
+     auto x = ref new N::R();
 }
 ```
 
@@ -76,4 +67,4 @@ public ref struct R sealed : [Windows::Foundation::Metadata::Default] IR
 };
 ```
 
-Identifikátor GUID typu `Windows::Foundation::TypedEventHandler<R^, EventArgs^>^` se používá pouze při přístupu k typ z jiné komponenty. První zástupné řešení funguje, protože k němu lze získat přístup pouze v rámci vlastní komponenty. V opačném případě musí kompilátor předpokládat nejhorší případ a vydat upozornění.
+Identifikátor GUID typu `Windows::Foundation::TypedEventHandler<R^, EventArgs^>^` se používá pouze při typu přistupuje z jiné součásti. První zástupné řešení funguje, protože k němu lze získat přístup pouze v rámci vlastní komponenty. V opačném případě musí kompilátor předpokládat nejhorší případ a vydat upozornění.

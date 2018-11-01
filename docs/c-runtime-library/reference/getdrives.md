@@ -1,10 +1,6 @@
 ---
-title: _getdrives – | Microsoft Docs
-ms.custom: ''
+title: _getdrives
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getdrives
 apilocation:
@@ -23,30 +19,24 @@ apitype: DLLExport
 f1_keywords:
 - getdrives
 - _getdrives
-dev_langs:
-- C++
 helpviewer_keywords:
 - _getdrives function
 - getdrives function
 - disk drives
 ms.assetid: 869bb51f-4209-4328-846e-3aadebaceb9c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ec2834e9f755a8039326ea6fb193c4bc591355ac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d34b03e307a9c619fab077973e4cc0a4c644de6c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399942"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597255"
 ---
 # <a name="getdrives"></a>_getdrives
 
-Vrátí bitová maska, která představuje aktuálně k dispozici disky.
+Vrátí bitová maska, která představuje aktuálně k dispozici diskové jednotky.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -56,7 +46,7 @@ unsigned long _getdrives( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud funkci úspěšné, je vrácenou hodnotu bitová maska, která představuje aktuálně k dispozici disky. Bit pozice 0 (nejmenší významných bitů) jednotce A, je bit pozici 1 jednotka B se bit pozici 2 jednotce C a tak dále. Pokud funkce selže, je vrácenou hodnotu nula. Chcete-li získat rozšířené informace o chybě, volejte **GetLastError**.
+Pokud funkce uspěje, vrácená hodnota je bitová maska, která představuje aktuálně k dispozici diskové jednotky. Bitová pozice 0 (nejméně významných bitů) je jednotce A, bitová pozice 1 je jednotka B, bitová pozice 2 je jednotce C a tak dále. Pokud funkce selže, vrácená hodnota je nula. Chcete-li získat rozšířené informace o chybě, volejte **GetLastError**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -64,7 +54,7 @@ Pokud funkci úspěšné, je vrácenou hodnotu bitová maska, která představuj
 |-------------|---------------------|
 |**_getdrives**|\<Direct.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -112,6 +102,6 @@ D:
 E:
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Ovládací prvek adresáře](../../c-runtime-library/directory-control.md)<br/>

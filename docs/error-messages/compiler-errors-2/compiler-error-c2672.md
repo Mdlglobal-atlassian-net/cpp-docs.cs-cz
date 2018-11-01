@@ -1,40 +1,31 @@
 ---
-title: C2672 Chyba kompilátoru | Microsoft Docs
+title: Chyba kompilátoru C2672
 ms.date: 10/24/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2672
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2672
 ms.assetid: 7e86338a-2d4b-40fe-9dd2-ac6886f3f31a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98c569c8b9b1466f184b44d345e76341d1476935
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df0f656c9db23739ec62629088b9cc5f7950a92d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236115"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570440"
 ---
-# <a name="compiler-error-c2672"></a>C2672 chyby kompilátoru
+# <a name="compiler-error-c2672"></a>Chyba kompilátoru C2672
 
-> '*funkce*': funkce najít žádný odpovídající přetížený.
+> "*funkce*': žádná odpovídající Přetížená funkce nalezen
 
-Přetížené funkce, která odpovídá zadanou funkci nelze nalézt kompilátoru. Nebyla nalezena žádná funkce, že trvá odpovídající parametry, nebo žádná odpovídající funkce má požadované usnadnění v kontextu.
+Kompilátor nemůže najít přetížené funkce, který odpovídá zadané funkce. Žádná funkce nebyla nalezena, má odpovídající parametry, nebo žádná odpovídající funkce má požadované usnadnění přístupu v kontextu.
 
-Při použití určitých standardní knihovna kontejnery nebo algoritmy, musí vaše typy poskytovat dostupné členy nebo funkcí friend, které splňují požadavky na kontejneru nebo algoritmus. Například vaše iterator typy by měl být odvozen z `std::iterator<>`. Operace porovnání nebo použití jiných operátorů na typy elementů kontejner může vyžadovat typ považovat za levé a pravé operand. Použijte typu pravém operand může vyžadovat implementace operátoru jako funkce třetí typu.
+Při použití určitých kontejnery standardní knihovny nebo algoritmů, musíte zadat vaše typy dostupné členy nebo spřátelené funkce, které splňují požadavky kontejneru nebo algoritmus. Například vaše typy iterátoru musí být odvozený z: `std::iterator<>`. Operace porovnání nebo použití jiných operátorů na typy elementů kontejneru může vyžadovat považovat za typ jako levé straně a zpracovával pravý operand. Použití typu zpracovával pravý operand může vyžadovat implementace operátoru jako funkce bez členů typu.
 
 ## <a name="example"></a>Příklad
 
-Verze kompilátoru než Visual Studio 2017 nebyla provedena kontrola na kvalifikované názvy v některých kontextech šablony přístup. To může narušovat očekávané chování sfinae u výrazů, kde je očekávána nahrazování selhání kvůli inaccessibility názvu. To může potenciálně způsobit selhání nebo neočekávané chování za běhu z důvodu kompilátoru nesprávně volání nesprávný přetížení operátoru. V aplikaci Visual Studio 2017 je vyvolána chyba kompilátoru.
+Verze kompilátoru Visual Studio 2017 neprovedli přístup kontrolujeme kvalifikované názvy v některých kontextech šablony. To může narušit očekávané chování SFINAE, kde se očekává selhat z důvodu inaccessibility název nahrazení. To může potenciálně způsobit selhání nebo neočekávané chování za běhu z důvodu kompilátor nesprávně volání nesprávné přetížení operátoru. V sadě Visual Studio 2017 se vyvolá chybu kompilátoru.
 
-Tento příklad zkompiluje v sadě Visual Studio 2015, ale vyvolá chybu v Visual Studio 2017. Chcete-li tento problém vyřešit, zkontrolujte parametr člen šablony, které jsou přístupné, kde je vyhodnocena.
+V tomto příkladu zkompiluje ve Visual Studiu 2015 ale vyvolá chybu v sadě Visual Studio 2017. Chcete tento problém vyřešit, upravte člena parametr šablony přístupné, kde je vyhodnocen.
 
 ```cpp
 #include <type_traits>
