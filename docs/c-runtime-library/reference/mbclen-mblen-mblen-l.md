@@ -1,10 +1,6 @@
 ---
-title: _mbclen – mblen –, _mblen_l – | Microsoft Docs
-ms.custom: ''
+title: _mbclen, mblen, _mblen_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbclen
 - mblen
@@ -31,8 +27,6 @@ f1_keywords:
 - _ftclen
 - _tclen
 - mbclen
-dev_langs:
-- C++
 helpviewer_keywords:
 - tclen function
 - _mblen_l function
@@ -42,23 +36,19 @@ helpviewer_keywords:
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 932695b9d3474f892460e222fd1d9cc2b34c0dd6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dddf7d3a1705460d2c8d42cc1b36230d7bdaf942
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403206"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434383"
 ---
 # <a name="mbclen-mblen-mblenl"></a>_mbclen, mblen, _mblen_l
 
-Získá délku a určí, platnost vícebajtových znaků.
+Získá délku a určí platnost vícebajtového znaku.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -80,34 +70,34 @@ int _mblen_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Vícebajtových znaků.
+Vícebajtový znak.
 
 *mbstr*<br/>
-Adresa pořadí bajtů vícebajtových znaků.
+Adresa vícebajtové znakové sekvence.
 
 *Počet*<br/>
 Počet bajtů ke kontrole.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_mbclen** vrátí 1 nebo 2, podle jestli vícebajtových znaků *c* délce 1 nebo 2 bajty. Neexistuje žádná chyba návratový pro **_mbclen**. Pokud *mbstr* není **NULL**, **mblen –** vrátí délku v bajtech vícebajtových znaků. Pokud *mbstr* je **NULL** nebo odkazuje na celou znaku prázdný znak, **mblen –** vrátí hodnotu 0. Pokud objekt, *mbstr* body netvoří platnou vícebajtových znaků v rámci první *počet* znaky, **mblen –** vrátí hodnotu -1.
+**_mbclen** vrátí hodnotu 1 nebo 2, podle toho, zda vícebajtový znak *c* je 1 nebo 2 bajty dlouhý. Neexistuje žádná chybová zpráva pro vrácení **_mbclen**. Pokud *mbstr* není **NULL**, **mblen –** vrátí délku v bajtech vícebajtového znaku. Pokud *mbstr* je **NULL** nebo odkazuje na prázdný znak širokého znaku, **mblen –** vrátí hodnotu 0. Pokud objekt, který *mbstr* odkazuje na netvoří platné vícebajtové znaky v prvních *počet* znaků, **mblen –** vrátí hodnotu -1.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Mbclen** funkce vrátí délku v bajtech vícebajtových znaků *c*. Pokud *c* neukazuje na zájemce bajt vícebajtových znaků určeného implicitní volání **_ismbblead –**, výsledek **_mbclen** předpovědět.
+**_Mbclen** funkce vrátí délku v bajtech vícebajtového znaku *c*. Pokud *c* neodkazuje na úvodní bajt vícebajtového znaku, jako je určeno implicitním voláním **_ismbblead**, výsledek **_mbclen** nepředvídatelné.
 
-**mblen –** vrátí délku v bajtech *mbstr* , pokud je platný vícebajtových znaků a určuje platnosti vícebajtových znaků, které jsou přidružené k znaková stránka. **mblen –** prozkoumá *počet* nebo méně bajtů obsažených v *mbstr*, ale ne víc než **mb_cur_max –** bajtů.
+**mblen –** vrátí délku v bajtech *mbstr* , pokud je platný vícebajtový znak a určuje platnost vícebajtového znaku zakončeného přidružené znakovou stránku. **mblen –** prozkoumá *počet* nebo menší počet bajtů obsažených v *mbstr*, ale ne více než **MB_CUR_MAX** bajtů.
 
-Výstupní hodnota je ovlivňován nastavením **LC_CTYPE –** kategorie nastavení národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze tyto funkce bez **_l** příponu využívání aktuální národní prostředí pro toto chování závislých na národním prostředí, verze s **_l** příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí Místo toho předaná. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze těchto funkcí bez **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí místo něho předán v. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tclen –**|Mapuje makro nebo vložené funkce|**_mbclen**|Mapuje makro nebo vložené funkce|
+|**_tclen –**|Mapuje se na makro nebo vloženou funkci|**_mbclen**|Mapuje se na makro nebo vloženou funkci|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -117,7 +107,7 @@ Výstupní hodnota je ovlivňován nastavením **LC_CTYPE –** kategorie nastav
 |**mblen –**|\<stdlib.h>|
 |**_mblen_l**|\<stdlib.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -158,7 +148,7 @@ Length in bytes of multibyte character 61: 1
 Length in bytes of NULL multibyte character 0: 0
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Klasifikace znaků](../../c-runtime-library/character-classification.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>

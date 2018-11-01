@@ -1,12 +1,7 @@
 ---
-title: Přípony komponent pro .NET a UPW | Dokumentace Microsoftu
-ms.custom: ''
+title: Přípony komponent pro .NET a UPW
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - what's new [C++], keywords
 - what's new [C++], language features
@@ -14,17 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 45f83fbaaa867e2f58e329d8531259fa3751a521
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 3b29b2e8b00aa436d1687cdbbd5f299f4787c71b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328412"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432355"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Přípony komponent pro .NET a UPW
 
@@ -54,7 +44,7 @@ Následující tabulka obsahuje seznam klíčových slov v rozšíření jazyka 
 |**Třída rozhraní**<br /><br /> **Struktura rozhraní**|Ne|Deklaruje rozhraní.|[Třída rozhraní](../windows/interface-class-cpp-component-extensions.md)|
 |**Třída výčtu**<br /><br /> **Struktura výčet**|Ne|Deklaruje výčet.|[Třída výčtu](../windows/enum-class-cpp-component-extensions.md)|
 |**property**|Ano|Deklaruje vlastnost.|[property](../windows/property-cpp-component-extensions.md)|
-|**delegate**|Ano|Deklaruje delegáta.|[Delegate (C + +/ CLI a C + +/ CX)](../windows/delegate-cpp-component-extensions.md)|
+|**delegate**|Ano|Deklaruje delegáta.|[delegate (C++/CLI a C++/CX)](../windows/delegate-cpp-component-extensions.md)|
 |**event**|Ano|Deklaruje událost.|[event](../windows/event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>override – specifikátory
