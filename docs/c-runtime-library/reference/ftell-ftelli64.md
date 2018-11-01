@@ -1,10 +1,6 @@
 ---
-title: ftell –, _ftelli64 – | Microsoft Docs
-ms.custom: ''
+title: ftell, _ftelli64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ftelli64
 - ftell
@@ -24,8 +20,6 @@ apitype: DLLExport
 f1_keywords:
 - _ftelli64
 - ftell
-dev_langs:
-- C++
 helpviewer_keywords:
 - ftell function
 - ftelli64 function
@@ -33,20 +27,16 @@ helpviewer_keywords:
 - file pointers [C++], getting current position
 - file pointers [C++]
 ms.assetid: 40149cd8-65f2-42ff-b70c-68e3e918cdd7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d09d29abc4d1406bd85187ceb5c6661be98229be
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc76ad0776ae82637b95d32cdc6254d3c40da5b5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402430"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660522"
 ---
 # <a name="ftell-ftelli64"></a>ftell, _ftelli64
 
-Získá aktuální umístění ukazatele souboru.
+Získá aktuální pozici ukazatele souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,33 +51,33 @@ __int64 _ftelli64(
 
 ### <a name="parameters"></a>Parametry
 
-*Datový proud*<br/>
-Cíl **souboru** struktura.
+*Stream*<br/>
+Cíl **souboru** struktury.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**ftell –** a **_ftelli64 –** vrátí aktuální pozice v souboru. Hodnoty vrácené **ftell –** a **_ftelli64 –** nemusí odrážet posun fyzické bajtů pro datové proudy otevřít v textovém režimu, protože režim textové způsobí, že překlad znaků CR vrátit-konce řádku. Použití **ftell –** s [fseek](fseek-fseeki64.md) nebo **_ftelli64 –** s [_fseeki64 –](fseek-fseeki64.md) se vraťte do umístění souborů správně. V případě chyby **ftell –** a **_ftelli64 –** vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, tyto funkce vrátí hodnotu-1 L a sadu **errno** na jednu z dvě konstanty, definované v kód chyby. H. **Ebadf –** Konstanta znamená *datového proudu* argument není platný soubor hodnota ukazatele nebo neodkazuje na otevření souboru. **Einval –** znamená neplatný *datového proudu* funkci byl předán argument. Na zařízeních nepodporující vyhledávání (jako jsou terminály a tiskárny) nebo když *datového proudu* neodkazuje na soubor otevřít, není definován návratovou hodnotu.
+**ftell –** a **_ftelli64 –** vrátit aktuální pozici souboru. Hodnota vrácená **ftell –** a **_ftelli64 –** nemusí odrážet fyzické bajtovým posunem pro datové proudy otevřít v textovém režimu, protože režim textu způsobí, že překlad návratový znak odřádkování návrat na začátek řádku. Použití **ftell –** s [fseek](fseek-fseeki64.md) nebo **_ftelli64 –** s [_fseeki64 –](fseek-fseeki64.md) se vraťte do umístění souborů správně. Při chybě **ftell –** a **_ftelli64 –** vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tyto funkce vrátí hodnotu-1 L a nastaví **errno** na jednu ze dvou konstant, definované v ERRNO. H. **EBADF** – Konstanta znamená, že *stream* argument není platný soubor hodnota ukazatele nebo neodkazuje na otevřený soubor. **EINVAL** znamená, že neplatný *stream* funkci byl předán argument. Na zařízeních nepodporující vyhledávání (například terminálech a tiskárnách) nebo když *datového proudu* neodkazuje na otevřený soubor, vrácená hodnota je definováno.
 
-V tématu [_doserrno – kód chyby, _sys_errlist – a _sys_nerr –](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších návratové kódy.
+Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších návratových kódů.
 
 ## <a name="remarks"></a>Poznámky
 
-**Ftell –** a **_ftelli64 –** funkce načíst aktuální pozici ukazatele souboru (pokud existuje) přidružené k *datového proudu*. Pozice se vyjadřuje jako posun vůči začátkem datového proudu.
+**Ftell –** a **_ftelli64 –** funkce načíst aktuální pozice ukazatel na soubor (pokud existuje) přidružené k *stream*. Pozice je vyjádřena jako posun vzhledem k začátku datového proudu.
 
-Všimněte si, že po otevření souboru pro připojování dat aktuální pozice v souboru je určen poslední vstupně-výstupní operace, nikoli kde bude probíhat další zápisu. Například pokud soubor, je otevřené připojení a poslední operace byla pro čtení, pozice v souboru je bod, kde další operace čtení by spustit, kde by spustit další zápisu. (Po otevření souboru pro připojování pozice v souboru přesunout na konec souboru před všechny operace zápisu.) Pokud žádná vstupně-výstupní operace došlo k ještě v souboru otevřen pro přidávání, pozice v souboru je začátku souboru.
+Všimněte si, že pokud je soubor otevřen pro připojení dat, aktuální pozici souboru je určeno poslední vstupně-výstupní operace, ne, podle kterých by dojít k další zápis. Například pokud je soubor otevřen pro připojení a byl poslední operaci čtení, pozice v souboru je místo, kde další operaci čtení začne, kde další zápis nespustí. (Když je soubor otevřen pro přidávání, pozice v souboru přesunut na konec souboru před každou operací zápisu.) Pokud nemá žádné vstupně-výstupní operace, ale došlo k chybě na soubor otevřen pro přidávání, pozice v souboru je začátku souboru.
 
-V režimu textových CTRL + Z interpretována jako znak end souboru na vstup. V souborech otevřít pro čtení/zápis **fopen –** a všechny související rutiny vyhledávat CTRL + Z na konci souboru a pokud je to možné jej odebrat. To je provést, protože pomocí kombinace **ftell –** a [fseek](fseek-fseeki64.md) nebo **_ftelli64 –** a [_fseeki64 –](fseek-fseeki64.md), chcete-li přesunout v souboru, který končí CTRL + Z může způsobit **ftell –** nebo **_ftelli64 –** chovat nesprávně blíží konec souboru.
+V textovém režimu je CTRL + Z interpretováno jako endovém souborovém znak na vstupu. V souborech otevřených pro čtení/zápis **fopen** a všechny související rutiny kontrolovat CTRL + Z na konci souboru a pokud je to možné ho odebrat. To se provádí, protože používá kombinaci **ftell –** a [fseek](fseek-fseeki64.md) nebo **_ftelli64 –** a [_fseeki64 –](fseek-fseeki64.md), pro přesun v rámci souboru, který končí CTRL + Z může způsobit, že **ftell –** nebo **_ftelli64 –** nesprávné chování na konci souboru.
 
-Tato funkce zamkne volající vlákno během provádění a je proto bezpečné pro přístup z více vláken. Bez uzamčení verze, najdete v části **_ftell_nolock –**.
+Tato funkce uzamkne volající vlákno během spuštění a proto je bezpečná pro vlákno. Nezamykací verzi naleznete v tématu **_ftell_nolock –**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Požadovaný hlavičkový soubor|Volitelné hlavičky|
+|Funkce|Požadovaný hlavičkový soubor|Volitelná záhlaví|
 |--------------|---------------------|----------------------|
 |**ftell –**|\<stdio.h>|\<errno.h>|
 |**_ftelli64**|\<stdio.h>|\<errno.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -123,9 +113,9 @@ int main( void )
 Position after trying to read 100 bytes: 100
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [fgetpos](fgetpos.md)<br/>
 [fseek, _fseeki64](fseek-fseeki64.md)<br/>

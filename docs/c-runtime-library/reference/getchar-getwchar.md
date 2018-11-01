@@ -1,10 +1,6 @@
 ---
-title: GetChar getwchar – | Microsoft Docs
-ms.custom: ''
+title: getchar, getwchar
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - getchar
 - getwchar
@@ -24,8 +20,6 @@ apitype: DLLExport
 f1_keywords:
 - getwchar
 - GetChar
-dev_langs:
-- C++
 helpviewer_keywords:
 - gettchar function
 - characters, reading
@@ -33,20 +27,16 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7c05fca568c8d69d34aa1386030eef3f2cb09f11
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f8d7dbeb35c8818706eb6070df613df8654feb6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399618"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626600"
 ---
 # <a name="getchar-getwchar"></a>getchar, getwchar
 
-Čte znak z standardní vstup.
+Přečte znak ze standardního vstupu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,17 +47,17 @@ wint_t getwchar();
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí znak pro čtení. K označení došlo k chybě nebo podmínku end souborového **getchar** vrátí **EOF**, a **getwchar –** vrátí **weof –**. Pro **getchar**, použijte **ferror –** nebo **feof –** ke kontrole pro chybu nebo pro konec souboru.
+Vrátí čtení znaku. K označení chyby čtení nebo stavu ukončení souboru **getchar** vrátí **EOF**, a **getwchar –** vrátí **WEOF**. Pro **getchar**, použijte **ferror** nebo **feof** zkontrolovat chybu nebo konec souboru.
 
 ## <a name="remarks"></a>Poznámky
 
-Každou rutinu čte jeden znak z **stdin –** a zvýší ukazatele přidružený soubor tak, aby odkazoval na další znak. **GetChar** je stejný jako [_fgetchar –](fgetc-fgetwc.md), ale jsou implementované jako funkce a jako makra.
+Každá rutina načte jeden znak z **stdin** a zvýší přidružený ukazatel na soubor tak, aby odkazoval na další znak. **GetChar** je stejný jako [_fgetchar](fgetc-fgetwc.md), ale je implementována jako funkce a jako makro.
 
-Tyto funkce Uzamknout volající vlákno a proto jsou bezpečné pro přístup z více vláken. Bez uzamčení verze, najdete v části [_getchar_nolock –, _getwchar_nolock –](getchar-nolock-getwchar-nolock.md).
+Tyto funkce uzamykají volající vlákno a proto jsou vláknově bezpečné. Nezamykací verzi naleznete v tématu [_getchar_nolock – _getwchar_nolock –](getchar-nolock-getwchar-nolock.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_gettchar –**|**GetChar**|**GetChar**|**getwchar –**|
 
@@ -78,7 +68,7 @@ Tyto funkce Uzamknout volající vlákno a proto jsou bezpečné pro přístup z
 |**GetChar**|\<stdio.h>|
 |**getwchar –**|\<stdio.h > nebo \<wchar.h >|
 
-Konzole není podporována v aplikacích pro univerzální platformu Windows (UWP). Standardní datový proud obslužných rutin, které jsou spojeny s konzolou, **stdin –**, **stdout**, a **stderr**, musí být přesměrována C běhové funkce mohli používat v aplikacích pro UPW . Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Konzole není podporována v aplikacích pro univerzální platformu Windows (UPW). Standardní datový proud popisovačů, které jsou spojeny s konzolou, **stdin**, **stdout**, a **stderr**, musí být přesměrován před funkcí jazyka C za běhu můžete použít v aplikacích pro UWP . Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -110,9 +100,9 @@ int main()
 This textInput was: This text
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

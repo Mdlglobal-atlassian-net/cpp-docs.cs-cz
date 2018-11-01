@@ -1,84 +1,74 @@
 ---
-title: Proměnné prostředí pro optimalizace na základě profilu | Microsoft Docs
-ms.custom: ''
+title: Proměnné prostředí pro optimalizace na základě profilu
 ms.date: 03/14/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - profile-guided optimizations, environment variables
 ms.assetid: f95a6d1e-49a4-4802-a144-092026b600a3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 19edc9c8a2702e5b7ac9ae4a49364718f19d3900
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2d69019f01a59f170aeeee22ef10b1af0de07a68
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379442"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595660"
 ---
 # <a name="environment-variables-for-profile-guided-optimizations"></a>Proměnné prostředí pro optimalizace na základě profilu
 
-Existují tři proměnné prostředí, které ovlivňují testovací scénáře na bitovou kopii vytvořené pomocí **/LTCG:PGI** pro optimalizace na základě profilu:
+Existují tři proměnné prostředí, které mají vliv na image vytvořené pomocí testovacích scénářů **/LTCG:PGI** pro optimalizace na základě profilu:
 
-- **PogoSafeMode** Určuje, jestli se má použít rychlého režimu nebo v nouzovém režimu pro profilace aplikací.
+- **PogoSafeMode** Určuje, jestli se má použít pro vytvoření profilu aplikace rychlého režimu nebo nouzového režimu.
 
-- **Vcprofile_alloc_scale –** přidá další paměť pro použití profileru.
+- **Vcprofile_alloc_scale –** přidává další paměť pro použití pomocí profileru.
 
-- **Vcprofile_path –** umožňuje určit složku pro soubory .pgc.
+- **Vcprofile_path –** vám umožní zadat složku pro soubory .pgc.
 
-**Proměnné prostředí PogoSafeMode a vcprofile_alloc_scale – jsou zastaralé od verze sady Visual Studio 2015.** Možnosti linkeru [/GENPROFILE nebo /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) a [/USEPROFILE](useprofile.md) zadejte stejné chování linkeru jako těchto proměnných prostředí.
+**Proměnné prostředí PogoSafeMode a vcprofile_alloc_scale – jsou zastaralé od verze Visual Studio 2015.** Možnosti linkeru [/genprofile nebo /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) a [/useprofile](useprofile.md) zadat stejné chování linkeru jako tyto proměnné prostředí.
 
 ## <a name="pogosafemode"></a>PogoSafeMode
 
-Tato proměnná prostředí je zastaralý. Použití **EXACT** nebo **NOEXACT** argumenty, které mají **/GENPROFILE** nebo **/FASTGENPROFILE** za účelem řízení.
+Tato proměnná prostředí je zastaralá. Použití **EXACT** nebo **NOEXACT** argumenty **/genprofile** nebo **/FASTGENPROFILE** řízení tohoto chování.
 
-Vymazat nebo nastavte **PogoSafeMode** proměnnou prostředí a určit, jestli se má použít pro profilace aplikací na x86 rychlého režimu nebo v nouzovém režimu systémy.
+Vymazat nebo nastavit **PogoSafeMode** proměnnou prostředí k určení, jestli se má použít pro vytvoření profilu aplikace na x86 rychlého režimu nebo nouzového režimu systémy.
 
-Optimalizace na základě profilu (PGO) má dva možné režimy profilování fázi: *rychlého režimu* a *nouzovém režimu*. Při vytváření profilu je v rychlého režimu, použije **INC** instrukce ke zvýšení dat čítače. **INC** instrukce je rychlejší, ale není bezpečné pro přístup z více vláken. Při vytváření profilu je v nouzovém režimu, použije **ZÁMKU INC** instrukce ke zvýšení dat čítače. **INC ZÁMKU** instrukce má stejné funkce jako **INC** instrukce a bezpečné pro přístup z více vláken, ale je nižší než **INC** instrukcí.
+Profilově řízené optimalizace (PGO) má během fáze vytváření profilů dva možné režimy: *rychlém režimu* a *Nouzový režim*. Když je profilování v rychlém režimu, používá **celkové** instrukce ke zvýšení počtu čítačů dat. **Celkové** instrukce je rychlejší, ale není bezpečná pro vlákno. Když je profilování v nouzovém režimu, používá **ZÁMEK celkové** instrukce ke zvýšení počtu čítačů dat. **ZÁMEK celkové** instrukce má stejné funkce jako **celkové** instrukce má a je bezpečná pro vlákno, ale je pomalejší, než **celkové** instrukce.
 
-Ve výchozím nastavení vytváření profilů PGO funguje v rychlého režimu. **PogoSafeMode** je požadován, pouze pokud budete chtít použít nouzový režim.
+Ve výchozím nastavení PGO profilování pracuje v rychlém režimu. **PogoSafeMode** je vyžadováno pouze pokud budete chtít použít nouzový režim.
 
-Pokud chcete spustit PGO profilace v nouzovém režimu, je nutné použít proměnné prostředí **PogoSafeMode** nebo přepínač linkeru **/PogoSafeMode**, v závislosti na systému. Pokud provádíte profilace na x64 počítače, je potřeba použít přepínač linkeru. Pokud provádíte profilace na x86 počítače, můžete použít linkeru přepínač, nebo nastavte **PogoSafeMode** proměnnou prostředí na jakoukoli hodnotu před zahájením procesu optimalizace.
+Pokud chcete spustit profilování PGO v nouzovém režimu, je nutné použít proměnnou prostředí **PogoSafeMode** nebo přepínač linker **/PogoSafeMode**, v závislosti na systému. Pokud provádíte profilaci na x x64 počítače, je potřeba použít přepínač linkeru. Pokud provádíte profilaci na x x86 počítače, můžete použít linkeru přepnout nebo nastavit **PogoSafeMode** proměnné prostředí na libovolnou hodnotu před zahájením procesu optimalizace.
 
 ### <a name="pogosafemode-syntax"></a>Syntaxe PogoSafeMode
 
-> **nastavit PogoSafeMode**[**=**_hodnotu_]
+> **Nastavte PogoSafeMode**[**=**_hodnotu_]
 
-Nastavit **PogoSafeMode** na jakoukoli hodnotu Povolit nouzovém režimu. Nastavit bez hodnoty a vymazat předchozí hodnotu a znovu povolit rychlého režimu.
+Nastavte **PogoSafeMode** na libovolnou hodnotu Povolit Nouzový režim. Nastavit bez hodnoty a smažte předchozí hodnotu a znovu povolit rychlém režimu.
 
 ## <a name="vcprofileallocscale"></a>VCPROFILE_ALLOC_SCALE
 
-Tato proměnná prostředí je zastaralý. Použití **MEMMIN** a **MEMMAX** argumenty, které mají **/GENPROFILE** nebo **/FASTGENPROFILE** za účelem řízení.
+Tato proměnná prostředí je zastaralá. Použití **MEMMIN** a **MEMMAX** argumenty **/genprofile** nebo **/FASTGENPROFILE** řízení tohoto chování.
 
-Změnit **vcprofile_alloc_scale –** proměnné prostředí, chcete-li změnit množství paměti přidělené pro všechna data profilu. Ve výjimečných případech, nebude dostatek paměti k dispozici pro podporu shromažďování dat profilu při spouštění testovací scénáře. V takových případech můžete zvýšit množství paměti nastavením **vcprofile_alloc_scale –**. Pokud se zobrazí chybová zpráva během spustit test, který označuje, zda máte dostatek paměti, přiřadit hodnotu větší na **vcprofile_alloc_scale –**, dokud se test spustí dokončeno bez chyb z důvodu nedostatku paměti.
+Upravit **vcprofile_alloc_scale –** proměnné prostředí, chcete-li změnit velikost paměti přidělené pro uchovávání dat profilu. Ve výjimečných případech nebude k dispozici pro podporu dostatek paměti při spuštění testu scénáře shromažďování dat profilu. V takových případech můžete zvýšit množství paměti tak, že nastavíte **vcprofile_alloc_scale –**. Pokud se zobrazí chybová zpráva během testovacího běhu, který označuje, že máte dostatek paměti, přiřadit větší hodnotu **vcprofile_alloc_scale –**, dokud se test nespustí dokončena bez chyb na více instancí z důvodu nedostatku paměti.
 
 ### <a name="vcprofileallocscale-syntax"></a>Vcprofile_alloc_scale – syntaxe
 
-> **nastavit vcprofile_alloc_scale –**[__=__*scale_value*]
+> **Nastavte vcprofile_alloc_scale –**[__=__*scale_value*]
 
-*Scale_value* parametr je měřítko pro velikost paměti, které chcete použít pro spuštění scénáře testování.  Výchozí hodnota je 1. Například tento příkaz nastaví měřítko na 2:
+*Scale_value* parametr je měřítko velikost paměti, které chcete použít pro spuštění testovacích scénářů.  Výchozí hodnota je 1. Třeba tento příkaz nastaví měřítko na 2:
 
 `set VCPROFILE_ALLOC_SCALE=2`
 
 ## <a name="vcprofilepath"></a>VCPROFILE_PATH
 
-Použití **vcprofile_path –** adresář, který chcete vytvořit soubory .pgc proměnné prostředí. Ve výchozím nastavení se ve stejném adresáři jako binární profilovaný vytváří soubory .pgc. Ale pokud absolutní cesta binárního souboru neexistuje, jako při spuštění profilu scénáře na jiný počítač, ze které byla vytvořena binárního souboru může být případ, můžete nastavit **vcprofile_path –** na cestu, která existuje v cílovém počítači.
+Použití **vcprofile_path –** proměnnou prostředí k určení adresář, který chcete vytvořit soubory .pgc. Ve výchozím nastavení jsou soubory .pgc vytvoří ve stejném adresáři jako binární právě profilována. Nicméně, pokud se absolutní cesta binární soubor neexistuje, jak může být případ, kdy spustit scénáře profilu na jiném počítači než ve kterém byla vytvořena binární soubor, můžete nastavit **vcprofile_path –** na cestu, která existuje v cílovém počítači.
 
 ### <a name="vcprofilepath-syntax"></a>Vcprofile_path – syntaxe
 
-> **nastavit vcprofile_path –**[**=**_cesta_]
+> **Nastavte vcprofile_path –**[**=**_cesta_]
 
-Nastavte *cesta* parametr cesta k adresáři, do kterého chcete přidat .pgc soubory. Například tento příkaz nastaví složku C:\profile:
+Nastavte *cesta* parametr cestu k adresáři, do kterého chcete přidat soubory .pgc. Třeba tento příkaz nastaví složku C:\profile:
 
 `set VCPROFILE_PATH=c:\profile`
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Optimalizace na základě profilu](../../build/reference/profile-guided-optimizations.md)<br/>
 [/ GENPROFILE a /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
-[/ USEPROFILE](useprofile.md)<br/>
+[/USEPROFILE](useprofile.md)<br/>

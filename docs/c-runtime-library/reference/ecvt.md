@@ -1,10 +1,6 @@
 ---
-title: _ecvt – | Microsoft Docs
-ms.custom: ''
+title: _ecvt
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ecvt
 apilocation:
@@ -22,28 +18,22 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _ecvt
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ecvt function
 - numbers, converting
 - converting double numbers
 - ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 63514db5abe0a7cd531590dd419aa4b5931e7729
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 36c9cb2e8cd9eb4dd67bb91e9e4dbd36d8d1fc8e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450960"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605723"
 ---
 # <a name="ecvt"></a>_ecvt
 
-Převede **dvojité** čísel na řetězec. Bezpečnější verze této funkce je k dispozici. v tématu [_ecvt_s –](ecvt-s.md).
+Převede **double** číslo na řetězec. Bezpečnější verze této funkce je k dispozici. Zobrazit [_ecvt_s –](ecvt-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -65,10 +55,10 @@ char *_ecvt(
 Počet číslic, které jsou uložené.
 
 *DEC*<br/>
-Uložené pozice desetinné čárky.
+Pozice uložené desetinné čárky.
 
 *sign*<br/>
-Znak převedený číslo.
+Znak převedený čísla.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -76,17 +66,17 @@ Znak převedený číslo.
 
 ## <a name="remarks"></a>Poznámky
 
-**_Ecvt –** funkce převede na řetězec znaků číslo s plovoucí desetinnou čárkou. *Hodnotu* parametr je číslo s plovoucí desetinnou čárkou má být převeden. Tato funkce ukládá až *počet* číslice *hodnotu* jako řetězec a připojí znak hodnoty null ('\0'). Pokud počet číslic v *hodnotu* překračuje *počet*, se zaokrouhlí na nejnižší číslici. Pokud máte méně než *počet* číslic, řetězec je doplněno nulami.
+**_Ecvt –** funkce převede číslo s plovoucí desetinnou čárkou na řetězec znaků. *Hodnotu* parametru je číslo s plovoucí desetinnou čárkou má být převeden. Tato funkce ukládá až *počet* číslic *hodnota* jako řetězec a připojí znak null ('\0'). Pokud počet číslic v *hodnotu* překračuje *počet*, poloměr zaoblení číslice nižšího řádu. Pokud jsou kratší než *počet* číslic, řetězec je doplněny nulami.
 
 Celkový počet číslic vrácený **_ecvt –** nesmí překročit **_CVTBUFSIZE**.
 
-Pouze číslice jsou uloženy v řetězci. Pozice desetinné čárky a znaménko *hodnotu* lze získat z *dec* a *přihlašovací* po volání. *Dec* parametr odkazuje na celočíselnou hodnotu poskytnutí pozici od desetinné čárky s ohledem na začátku řetězce. Hodnota 0 nebo záporné celé číslo označuje, zda desetinné čárky je nalevo od první číslice. *Přihlašovací* parametr odkazuje na celé číslo, které označuje znak převedený číslo. Pokud je hodnota celé číslo 0, je kladné číslo. Jinak je číslo záporné.
+Pouze číslice jsou uloženy v řetězci. Pozice desetinné čárky a znaménko *hodnotu* můžete získat *dec* a *přihlašování* po volání. *Dec* parametr odkazuje na celočíselnou hodnotu poskytuje pozici od desetinné čárky s ohledem na začátku řetězce. Hodnota 0 nebo záporné celé číslo označuje, že desetinné čárky je nalevo od první číslice. *Přihlašování* parametr odkazuje na celé číslo označující znaménko převedený číslo. Pokud je hodnota celého čísla 0, je kladné číslo. V opačném případě je číslo záporné.
 
-Rozdíl mezi **_ecvt –** a **_fcvt –** je při interpretaci *počet* parametr. **_ecvt –** interpretuje *počet* jako celkový počet číslic do výstupního řetězce, zatímco **_fcvt –** interpretuje *počet* jako počet číslic za desetinné čárky.
+Rozdíl mezi **_ecvt –** a **_fcvt –** probíhá vyhodnocení *počet* parametru. **_ecvt –** interpretuje *počet* jako celkový počet číslic ve výstupním řetězci, zatímco **_fcvt –** interpretuje *počet* jako počet číslic za desetinné čárky.
 
-**_ecvt –** a **_fcvt –** ke konverzi použijte jeden staticky přidělené vyrovnávací paměti. Každé volání na jednu z těchto rutin zničí výsledek předchozí volání.
+**_ecvt –** a **_fcvt –** pomocí jedné staticky přidělenou vyrovnávací paměti pro převod. Každé volání některé z těchto rutin ničí výsledek předchozího volání.
 
-Tato funkce ověří jeho parametry. Pokud *dec* nebo *přihlašovací* je **NULL**, nebo *počet* je 0, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [parametr Ověření](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **errno** je nastaven na **einval –** a **NULL** je vrácen.
+Tato funkce ověřuje své parametry. Pokud *dec* nebo *přihlašování* je **NULL**, nebo *počet* je 0, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [parametr Ověření](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **errno** je nastavena na **EINVAL** a **NULL** je vrácena.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -94,7 +84,7 @@ Tato funkce ověří jeho parametry. Pokud *dec* nebo *přihlašovací* je **NUL
 |--------------|---------------------|
 |**_ecvt**|\<stdlib.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -125,7 +115,7 @@ int main( void )
 source: 3.1415926535   buffer: '3141592654'  decimal: 1  sign: 0
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>

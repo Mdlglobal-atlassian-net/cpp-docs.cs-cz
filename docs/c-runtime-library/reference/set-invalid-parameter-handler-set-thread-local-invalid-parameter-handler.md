@@ -1,10 +1,6 @@
 ---
-title: _set_invalid_parameter_handler –, _set_thread_local_invalid_parameter_handler | Microsoft Docs
-ms.custom: ''
+title: _set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_invalid_parameter_handler
 - _set_thread_local_invalid_parameter_handler
@@ -25,28 +21,22 @@ f1_keywords:
 - set_invalid_parameter_handler
 - _set_invalid_parameter_handler
 - _set_thread_local_invalid_parameter_handler
-dev_langs:
-- C++
 helpviewer_keywords:
 - invalid parameter handler
 - set_invalid_parameter_handler function
 - _set_invalid_parameter_handler function
 - _set_thread_local_invalid_parameter_handler function
 ms.assetid: c0e67934-1a41-4016-ad8e-972828f3ac11
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d4808367c94ec6c869c7f3bcafd2965a317553a6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1df876d6df9327e817d5d2c401e0abe97ad7a548
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407600"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617032"
 ---
 # <a name="setinvalidparameterhandler-setthreadlocalinvalidparameterhandler"></a>_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
 
-Nastaví funkci, která se má volat při CRT zjistí neplatný argument.
+Nastaví funkce, která se má volat při CRT zjistí neplatný argument.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,19 +52,19 @@ _invalid_parameter_handler _set_thread_local_invalid_parameter_handler(
 ### <a name="parameters"></a>Parametry
 
 *pNew*<br/>
-Ukazatel funkce na nový popisovač neplatný parametr.
+Ukazatel funkce na novou obslužnou rutinu neplatného parametru.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na obslužnou rutinu neplatný parametr před voláním.
+Ukazatel na obslužnou rutinu neplatného parametru, před voláním.
 
 ## <a name="remarks"></a>Poznámky
 
-Mnoho funkcí jazyka C runtime kontrolu platnosti argumentů předaných na ně. Pokud není předán neplatný argument funkce můžete nastavit **errno** číslo chyby nebo return chybový kód. V takových případech se také nazývá obslužná rutina neplatný parametr. C runtime poskytuje globální neplatný parametr výchozí obslužnou rutinu, která ukončí program a zobrazí se chybová zpráva modulu runtime. Můžete použít **_set_invalid_parameter_handler –** nastavit vlastní funkce jako obslužná rutina globální neplatný parametr. C runtime také podporuje obslužná rutina specifická pro přístup z více vláken neplatný parametr. Pokud obslužná rutina specifická pro přístup z více vláken parametr nastavená v podprocesu pomocí **_set_thread_local_invalid_parameter_handler**, funkce C runtime volat z vlákna používat tuto obslužnou rutinu místo globální obslužná rutina. Jenom jednu funkci lze zadat jako obslužná rutina globální neplatný argument najednou. Jako obslužná rutina specifická pro přístup z více vláken neplatný argument na vlákno lze zadat pouze jednu funkci, ale různých vláknech může mít jiný místní obslužné rutiny. To vám umožní změnit obslužná rutina používá v jedné části kódu, aniž by to ovlivnilo chování jiná vlákna.
+Mnoho funkcí jazyka C runtime zkontroloval platnosti identifikátoru argumenty předané do nich. Pokud je předán neplatný argument, funkce lze nastavit **errno** číslo chyby nebo vrátí chybový kód. V takových případech se také nazývá obslužnou rutinu neplatného parametru. Modul runtime jazyka C poskytuje výchozí obslužná rutina globální neplatného parametru, který ukončí program a zobrazí chybovou zprávu modulu runtime. Můžete použít **_set_invalid_parameter_handler –** nastavit svoji vlastní funkci jako globální neplatný parametr obslužné rutiny. Modul runtime jazyka C podporuje také obslužnou rutinu neplatného parametru místního vlákna. Pokud je obslužná rutina parametru místního vlákna nastavení ve vlákně s použitím **_set_thread_local_invalid_parameter_handler**, místo globální obslužná rutina volat z vlákna funkce modulu runtime jazyka C použít tuto obslužnou rutinu. Pouze jedna funkce lze zadat jako obslužná rutina globální neplatný argument najednou. Pouze jedna funkce lze zadat jako místního vlákna neplatný argument obslužné rutiny na vlákno, ale různých vláken může mít jiné obslužné rutiny místního vlákna. To umožňuje změnit obslužnou rutinu použít v jedné části kódu, aniž by to ovlivnilo chování ostatních vláken.
 
-Když modul runtime volá funkci neplatný parametr, obvykle to znamená, že došlo k neobnovitelné chybě. Neplatný parametr obslužné rutiny, které zadáte měli uložit všechna data, může a pak k přerušení. Ovládací prvek je by neměla vrátit do hlavní funkce, pokud si nejste jisti, že je chyba použitelná pro obnovení.
+Když modul runtime volá funkci neplatného parametru, obvykle to znamená, že došlo k neobnovitelné chybě. Neplatný parametr obslužné rutiny, které zadáte by měl uložte si veškerá data, můžete a potom zrušit. Pokud si nejste jisti, že je chyba obnovitelné ho by neměly vracet ovládacího prvku k funkci main.
 
-Neplatný parametr obslužné rutiny musí mít následující prototyp:
+Funkce obslužnou rutinu neplatného parametru, musíte mít následující prototyp:
 
 ```C
 void _invalid_parameter(
@@ -86,19 +76,19 @@ void _invalid_parameter(
 );
 ```
 
-*Výraz* argument je široké řetězcovou reprezentaci argument výrazu, který vyvolal chybu. *Funkce* argument je název funkce CRT, který přijal neplatný argument. *Souboru* argument je název CRT zdrojový soubor, který obsahuje funkce. *Řádku* argument je číslo řádku v tomto souboru. Poslední argument je vyhrazena. Všechny parametry mají hodnotu **NULL** Pokud ladicí verze knihovny CRT se má použít.
+*Výraz* argument je široké řetězcové vyjádření výraz argumentu, který vyvolal chybu. *Funkce* argumentem je název funkce CRT, který přijal neplatný argument. *Souboru* argumentem je název zdrojového souboru CRT, který obsahuje funkci. *Řádku* argument je číslo řádku v tomto souboru. Poslední argument je vyhrazená. Všechny parametry mají hodnotu **NULL** jedině v případě používá ladicí verzi knihovny CRT.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_set_invalid_parameter_handler –**, **_set_thread_local_invalid_parameter_handler**|C: \<stdlib.h ><br /><br /> C++: \<cstdlib – > nebo \<stdlib.h >|
+|**_set_invalid_parameter_handler –**, **_set_thread_local_invalid_parameter_handler**|C: \<stdlib.h ><br /><br /> Jazyk C++: \<cstdlib – > nebo \<stdlib.h >|
 
-**_Set_invalid_parameter_handler –** a **_set_thread_local_invalid_parameter_handler** funkce se konkrétní společnosti Microsoft. Informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+**_Set_invalid_parameter_handler –** a **_set_thread_local_invalid_parameter_handler** funkce jsou specifické pro Microsoft. Informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-V následujícím příkladu se obslužná rutina neplatný parametr používá k vytištění funkce, která dostali CRT zdroje neplatný parametr a soubor a řádku. Při použití knihovny ladění CRT neplatný parametr chyby zároveň vyvolává kontrolní výrazy, který je zakázaný tento příklad pomocí [_crtsetreportmode –](crtsetreportmode.md).
+V následujícím příkladu obslužná rutina neplatného parametru chyby slouží k tisku, který přijal neplatný parametr a souboru a řádku ve zdrojích CRT funkce. Při použití ladicí CRT knihovny neplatný parametr chyby také vyvolat kontrolní výraz, který je zakázaný v tomto příkladu pomocí [_CrtSetReportMode](crtsetreportmode.md).
 
 ```C
 // crt_set_invalid_parameter_handler.c
@@ -142,7 +132,7 @@ Invalid parameter detected in function common_vfprintf. File: minkernel\crts\ucr
 Expression: format != nullptr
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler](get-invalid-parameter-handler-get-thread-local-invalid-parameter-handler.md)<br/>
 [Verze funkcí CRT se zdokonaleným zabezpečením](../../c-runtime-library/security-enhanced-versions-of-crt-functions.md)<br/>

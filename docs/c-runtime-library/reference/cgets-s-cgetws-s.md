@@ -1,10 +1,6 @@
 ---
-title: _cgets_s –, _cgetws_s – | Microsoft Docs
-ms.custom: ''
+title: _cgets_s, _cgetws_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cgetws_s
 - _cgets_s
@@ -26,8 +22,6 @@ f1_keywords:
 - cgets_s
 - cgetws_s
 - _cgetws_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], getting from console
 - console, getting strings from
@@ -36,23 +30,19 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 48b00f9eee699b7e556c2fcc3f88abd8d783a261
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8341b775df3b9cbaececdfaa1f17e075d7c7416c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396794"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588536"
 ---
 # <a name="cgetss-cgetwss"></a>_cgets_s, _cgetws_s
 
-Získá řetězec znaků z konzoly. Tyto verze nástroje [_cgets – a _cgetws –](../../c-runtime-library/cgets-cgetws.md) mít vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Získá znak řetězce z konzoly. Tyto verze [_cgets a _cgetws –](../../c-runtime-library/cgets-cgetws.md) mají rozšíření zabezpečení popsaná v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -85,30 +75,30 @@ errno_t _cgetws_s(
 Umístění úložiště pro data.
 
 *numberOfElements*<br/>
-Velikost vyrovnávací paměti v jednobajtové nebo široké znaky, což je také maximální počet znaků ke čtení.
+Velikost vyrovnávací paměti v jednobajtové nebo široké znaky, které je taky maximální počet znaků pro čtení.
 
 *pSizeRead*<br/>
-Počet znaků, ve skutečnosti přečíst.
+Počet znaků, které skutečně číst.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrácená hodnota je nula v případě úspěšného; k chybě, jinak hodnota kódu, pokud dojde k chybě.
+Vrácená hodnota je nula v případě úspěchu; v opačném případě chybu kódu, pokud dojde k chybě.
 
-### <a name="error-conditions"></a>Chybové stavy
+### <a name="error-conditions"></a>Chybové podmínky
 
 |*Vyrovnávací paměti*|*numberOfElements*|*pSizeRead*|Vrátí|Obsah *vyrovnávací paměti*|
 |--------------|------------------------|-----------------|------------|--------------------------|
-|**HODNOTU NULL**|všechny|všechny|**EINVAL –**|není k dispozici|
-|není **hodnotu NULL.**|nula|všechny|**EINVAL –**|nedojde ke změně|
-|není **hodnotu NULL.**|všechny|**HODNOTU NULL**|**EINVAL –**|řetězec nulové délky|
+|**HODNOTU NULL**|Všechny|Všechny|**EINVAL**|není k dispozici|
+|Není **NULL**|nula|Všechny|**EINVAL**|Nezměněno|
+|Není **NULL**|Všechny|**HODNOTU NULL**|**EINVAL**|řetězec nulové délky|
 
 ## <a name="remarks"></a>Poznámky
 
-**_cgets_s –** a **_cgetws_s –** Přečtěte řetězec z konzoly a zkopírujte řetězec (s hodnotou null ukončovací znak) do *vyrovnávací paměti*. **_cgetws_s –** je široká znaková verze funkce; jiného, než je stejný jako velikost znak chování tyto dvě funkce. Maximální velikost řetězce čtení, je předaná jako *numberOfElements* parametr. Tato velikost by měla obsahovat jeden znak pro ukončující hodnotu null. Skutečný počet znaků pro čtení je umístěn v *pSizeRead*.
+**_cgets_s** a **_cgetws_s –** čtení řetězce z konzoly a zkopírujte řetězec (s ukončovací znak null) do *vyrovnávací paměti*. **_cgetws_s –** je verze širokého znaku funkce; jiné, než je stejný jako znak velikost, chování tyto dvě funkce. Maximální velikost řetězce ke čtení je předán jako *numberOfElements* parametru. Tato velikost by měla obsahovat znak navíc pro ukončující znak null. Skutečný počet znaků, přečtěte si je umístěn v *pSizeRead*.
 
-Pokud dojde k chybě během operace nebo při ověřování parametry, je obslužná rutina neplatný parametr vyvolána, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md) . Pokud chcete pokračovat, je povoleno spuštění **errno** je nastaven na **einval –** a **einval –** je vrácen.
+Pokud dojde k chybě během operace nebo při ověřování parametrů, vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md) . Pokud smí provádění pokračovat, **errno** je nastavena na **EINVAL** a **EINVAL** je vrácena.
 
-V jazyce C++ použití tyto funkce se zjednodušilo díky šabloně přetížení; přetížení lze odvodit automaticky, a tím, takže není nutné zadat argument velikost délka vyrovnávací paměti a starší, méně bezpečné funkce můžou automaticky nahradit se svými protějšky novější, bezpečnější. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky, a tím eliminuje nutnost zadat argument velikosti a dokážou automaticky nahradit starší, méně zabezpečené funkce jejími novějšími, bezpečnějšími protějšky. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -123,9 +113,9 @@ V jazyce C++ použití tyto funkce se zjednodušilo díky šabloně přetížen�
 |**_cgets_s**|\<conio.h >|
 |**_cgetws_s**|\<conio.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [I/O konzoly a portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

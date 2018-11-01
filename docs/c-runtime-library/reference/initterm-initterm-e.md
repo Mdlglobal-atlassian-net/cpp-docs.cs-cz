@@ -1,10 +1,6 @@
 ---
-title: _initterm –, _initterm_e – | Microsoft Docs
-ms.custom: ''
+title: _initterm, _initterm_e
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _initterm_e
 - _initterm
@@ -26,30 +22,24 @@ f1_keywords:
 - initterm
 - _initterm
 - initterm_e
-dev_langs:
-- C++
 helpviewer_keywords:
 - initterm function
 - initterm_e function
 - _initterm function
 - _initterm_e function
 ms.assetid: 85131efe-c747-429a-8897-bcdedb000172
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 470ad6cbf13efb170f61aa12f7859f2baa248c2b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 65963e95507d4d6444ebcc9038b5b8cf797f9feb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395832"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620711"
 ---
 # <a name="initterm-initterme"></a>_initterm, _initterm_e
 
-Vnitřní metody, které provede tabulku ukazatelů na funkce a jejich inicializace.
+Vnitřní metody, které vás tabulku ukazatelů na funkce a jejich inicializaci.
 
-První ukazatele počáteční umístění v tabulce a koncová umístění je druhý ukazatel.
+Počáteční umístění v tabulce je ukazatel na první a druhý ukazatel je konečné umístění.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -67,14 +57,14 @@ int __cdecl _initterm_e(
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Kód chyby nenulové Pokud inicializaci selže a vyvolá chybu; 0, pokud nedojde k žádné chybě.
+Pokud se inicializace nezdaří a vyvolá chybu; kód chyby 0, pokud nenastane žádná chyba.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto metody jsou volána interně pouze během inicializace programu C++. Nevolejte tyto metody v programu.
+Tyto metody jsou volány interně pouze během inicializace programu v jazyce C++. Tyto metody volat není v programu.
 
-Pokud tyto metody provede tabulku funkce položky, přeskočí **NULL** položky a pokračovat.
+Když tyto metody Procházet tabulku funkce položky, přeskočí **NULL** položky a pokračovat.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>

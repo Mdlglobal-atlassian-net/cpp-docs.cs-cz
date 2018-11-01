@@ -1,37 +1,27 @@
 ---
-title: C3808 Chyba kompilátoru | Microsoft Docs
-ms.custom: ''
+title: Chyba kompilátoru C3808
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3808
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3808
 ms.assetid: 2ee8ac97-3ea4-417a-8710-be73a7f98cf4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 40668b8b2cc1a1f85b0ad4a7ef63d89956e922b3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 0a1b0b82241c6e48d2c1941ff8122697d11492eb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705202"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587730"
 ---
-# <a name="compiler-error-c3808"></a>C3808 chyby kompilátoru
+# <a name="compiler-error-c3808"></a>Chyba kompilátoru C3808
 
-> '*typ*': třídu s atributem ComImport nejde definovat člen '*člen*' dllimport funkce jsou povoleny, nebo pouze abstraktní
+> "*typ*': třída s atributem ComImport nemůže definovat člen"*člen*' jsou povoleny funkce dllimport, nebo pouze abstraktní
 
 ## <a name="remarks"></a>Poznámky
 
-Typ, který je odvozen od <xref:System.Runtime.InteropServices.ComImportAttribute> nelze definovat *člen*.
+Typ, který je odvozen z <xref:System.Runtime.InteropServices.ComImportAttribute> nelze definovat *člen*.
 
-**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a nepodporované v Visual Studio 2017.
+**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
 
 ## <a name="example"></a>Příklad
 

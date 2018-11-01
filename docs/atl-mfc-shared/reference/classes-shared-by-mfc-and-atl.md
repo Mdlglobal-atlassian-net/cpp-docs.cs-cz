@@ -1,25 +1,15 @@
 ---
-title: Třídy sdílené mezi MFC a ATL | Dokumentace Microsoftu
-ms.custom: ''
+title: Třídy sdílené mezi MFC a ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - shared classes, classes
 ms.assetid: ca8b4b6b-744d-430b-b31f-d5b2f17bf210
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 50295c9d296449e36ed4a305b568d2e0aaed10a3
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 6e63664020508252a61682c46439af85033cf068
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327905"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50583869"
 ---
 # <a name="classes-shared-by-mfc-and-atl"></a>Třídy sdílené mezi MFC a ATL
 

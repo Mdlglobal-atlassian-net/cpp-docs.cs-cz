@@ -1,10 +1,6 @@
 ---
-title: isspace –, iswspace –, _isspace_l –, _iswspace_l – | Microsoft Docs
-ms.custom: ''
+title: isspace, iswspace, _isspace_l, _iswspace_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswspace
 - _isspace_l
@@ -27,8 +23,6 @@ f1_keywords:
 - iswspace
 - _istspace
 - isspace
-dev_langs:
-- C++
 helpviewer_keywords:
 - iswspace function
 - isspace function
@@ -39,20 +33,16 @@ helpviewer_keywords:
 - _istspace function
 - istspace function
 ms.assetid: b851e0c0-36bb-4dac-a1a3-533540939035
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 404fee8d74cec18c277f6c076a7cc41065a8b242
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cd93b196c23be5e91852e8c02d75055c1051b912
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402244"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590449"
 ---
 # <a name="isspace-iswspace-isspacel-iswspacel"></a>isspace, iswspace, _isspace_l, _iswspace_l
 
-Určuje, zda celé představuje znak mezery.
+Určuje, zda celočíselná hodnota představuje znak mezery.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -76,37 +66,37 @@ int _iswspace_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Celé číslo pro testování.
+Celé číslo k testování.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Všechny tyto rutiny vrátí nenulové hodnoty, pokud *c* je konkrétní reprezentace mezerou. **isspace –** vrátí nenulovou hodnotu, pokud *c* je prázdný znak (0x09-0x0D nebo 0x20). Výsledek testu podmínky pro **isspace –** funkce závisí na **LC_CTYPE –** kategorie nastavení národního prostředí; viz [setlocale _wsetlocale](setlocale-wsetlocale.md) Další informace. Verze tyto funkce, které nemají **_l** příponu využívání aktuální národní prostředí pro chování všech závislých na národním prostředí, verze, které mají **_l** příponu jsou shodné s tím rozdílem, že se používají národní prostředí, který se předává v místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Každá z těchto rutin vrátí nenulovou hodnotu, pokud *c* je konkrétní reprezentace znaku mezery. **isspace** vrací nenulovou hodnotu, pokud *c* je prázdný znak (0x09 – 0x0D nebo 0x20). Výsledek testovací podmínky pro **isspace** funkce závisí **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale _wsetlocale](setlocale-wsetlocale.md) Další informace. Verze těchto funkcí, které nemají **_l** používají aktuální národní prostředí pro všechna chování závislé na národním prostředí; ty, které mají **_l** přípona jsou stejné s tím rozdílem, že používají národní prostředí, které je předáno místo. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-**iswspace –** vrátí nenulovou hodnotu, pokud *c* je široké znak, který odpovídá standardní prázdný znak.
+**iswspace –** vrací nenulovou hodnotu, pokud *c* je široký znak který odpovídá standardnímu znaku prázdný znak.
 
-Chování **isspace –** a **_isspace_l –** není definován, pokud *c* není EOF nebo v rozsahu 0 až 0xFF (včetně). V případě použití knihovny ladění CRT a *c* není jednou z těchto hodnot, funkce raise kontrolní výrazy.
+Chování **isspace** a **_isspace_l –** není definováno, pokud *c* není konec souboru nebo v rozsahu 0 až 0xFF, včetně. Při použití ladicí CRT knihovny a *c* není jednou z těchto hodnot, funkce vyvolá kontrolní výraz.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_** **istspace –**|**isspace –**|[_ismbcspace](ismbcgraph-functions.md)|**iswspace –**|
+|**_** **istspace –**|**isspace**|[_ismbcspace](ismbcgraph-functions.md)|**iswspace –**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**isspace –**|\<ctype.h >|
+|**isspace**|\<ctype.h >|
 |**iswspace –**|\<ctype.h > nebo \<wchar.h >|
 |**_isspace_l**|\<ctype.h >|
 |**_iswspace_l**|\<ctype.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Klasifikace znaků](../../c-runtime-library/character-classification.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>

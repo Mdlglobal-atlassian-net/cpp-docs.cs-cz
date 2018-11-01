@@ -1,14 +1,8 @@
 ---
-title: Vstup a výstup | Microsoft Docs
-ms.custom: ''
+title: Vstup a výstup
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.io
-dev_langs:
-- C++
 helpviewer_keywords:
 - input routines
 - I/O [CRT]
@@ -16,29 +10,25 @@ helpviewer_keywords:
 - I/O [CRT], routines
 - output routines
 ms.assetid: 1c177301-e341-4ca0-aedc-0a87fe1c75ae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e62319d040275d96314ee824f9fea020a4004974
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26d527f7afad544b051a2ad765af09c430782083
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389388"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590382"
 ---
 # <a name="input-and-output"></a>Vstup a výstup
 
-Funkce vstupně-výstupní operace čtení a zápisu dat do a z soubory a zařízení. Soubor vstupně-výstupních operací provést v režimu textových nebo binární. Běhové knihovny Microsoft má tři typy vstupně-výstupních operací funkce:
+Funkce vstupně-výstupních operací čtení a zápis dat do a ze souborů a zařízení. Soubor vstupně-výstupní operace můžou probíhat v textovém nebo binárním režimu. Běhové knihovny Microsoft má tři typy vstupních/výstupních funkcí:
 
-- [Stream vstupně-výstupních operací](../c-runtime-library/stream-i-o.md) funkce považovat za datový proud jednotlivých znaků.
+- [Stream vstupně-výstupních operací](../c-runtime-library/stream-i-o.md) funkce zacházet s daty jako datový proud jednotlivých znaků.
 
-- [I/O nízké úrovně](../c-runtime-library/low-level-i-o.md) vyvolání funkce operačního systému přímo pro operaci nižší úrovni než poskytované datového proudu vstupně-výstupní operace.
+- [I/O nízké úrovně](../c-runtime-library/low-level-i-o.md) funkce vyvolání operačního systému přímo pro operaci nižší úrovně, než poskytuje datový proud vstupně-výstupních operací.
 
-- [Konzoly a portu vstupně-výstupních operací](../c-runtime-library/console-and-port-i-o.md) funkce číst nebo zapisovat přímo do konzoly (klávesnice a obrazovky) nebo k portu vstupně-výstupní operace (například port tiskárny).
+- [Konzoly a portu vstupně-výstupních operací](../c-runtime-library/console-and-port-i-o.md) funkce číst nebo zapisovat přímo do konzoly (klávesnice a obrazovky) nebo port vstupně-výstupních operací (například port tiskárny).
 
    > [!NOTE]
-   > Protože jsou tyto funkce datového proudu do vyrovnávací paměti a nízké úrovně funkce nejsou, jsou tyto dva typy funkcí obecně kompatibilní. Pro zpracování určitého souboru, použijte výlučně datový proud nebo funkce na nižší úrovni.
+   > Protože jsou tyto funkce datového proudu do vyrovnávací paměti a nejsou funkce nízké úrovně, tyto dva typy funkcí jsou obecně kompatibilní. Pro zpracováním určitého souboru, použijte výhradně datového proudu nebo funkce nízké úrovně.
 
 ## <a name="see-also"></a>Viz také
 
