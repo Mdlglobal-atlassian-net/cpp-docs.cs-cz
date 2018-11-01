@@ -1,10 +1,6 @@
 ---
-title: asinh – asinhf –, asinhl | Microsoft Docs
-ms.custom: ''
+title: asinh, asinhf, asinhl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - asinh
 - asinhf
@@ -26,23 +22,17 @@ f1_keywords:
 - asinhf
 - asinhl
 - asinh
-dev_langs:
-- C++
 helpviewer_keywords:
 - asinh function
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1387e44b885d0f1ed58113b87d26ba5928768c18
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f6100268b77178487b7a7aa1cc3f10ac3ea7e9dc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393287"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662953"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -68,23 +58,23 @@ Hodnota s plovoucí desetinnou čárkou.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Asinh –** funkce vrátí hyberbolic inverzní sinus (oblouk hyperbolický sinus) *x*. Tato funkce je platný doménou, s plovoucí desetinnou čárkou. Pokud *x* quiet NaN, neomezené, nebo infinity, je vrácena stejnou hodnotu.
+**Asinh –** funkce vrátí hyberbolic inverzní sinus (hyperbolický Arkus sinus) *x*. Tato funkce je platný v doméně s plovoucí desetinnou čárkou. Pokud *x* je tichý NaN, nekonečno, nebo nekonečno, je vrácena stejnou hodnotu.
 
-|Vstup|Výjimka SEH|**_matherr –** výjimky|
+|Vstup|Výjimka SEH|**_matherr** výjimky|
 |-----------|-------------------|--------------------------|
-|INF QNAN, IND PŘESNOSTÍ|žádná|žádná|
+|ROZMEZÍ QNAN, AJÍT INF|žádná|žádná|
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud používáte C++, můžete volat přetížení **asinh –** , přijmout a vrátit **float** nebo **dlouho** **dvojité** hodnoty. V programu C **asinh –** vždy provede a vrátí **dvojité**.
+Při použití jazyka C++, můžete volat přetížení **asinh –** , která používají a vrací **float** nebo **dlouhé** **double** hodnoty. V programu jazyka C **asinh –** vždy převezme a vrátí **double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Požadovaná hlavička C|Požadovaná hlavička v C++|
+|Funkce|Požadovaná hlavička C|Požadované hlaviček jazyka C++|
 |--------------|--------------|------------------|
-|**asinh –**, **asinhf –**, **asinhl**|\<Math.h >|\<cmath – > nebo \<math.h <|
+|**asinh –**, **asinhf –**, **asinhl**|\<Math.h >|\<cmath > nebo \<math.h <|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -114,7 +104,7 @@ sinh( 0.785398 ) = 0.868671
 asinh( 0.868671 ) = 0.785398
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>
