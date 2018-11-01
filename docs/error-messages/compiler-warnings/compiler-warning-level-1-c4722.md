@@ -1,27 +1,17 @@
 ---
-title: Upozornění (úroveň 1) C4722 kompilátoru | Dokumentace Microsoftu
-ms.custom: ''
+title: Kompilátor upozornění (úroveň 1) C4722
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4722
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4722
 ms.assetid: d8660710-f67b-4f59-a5fd-59259475529e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0f450120ff05c7e13888bf4b4ce4425405525b4c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 320061c2daf2be042afe45828af637638399beaf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46112496"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50469469"
 ---
 # <a name="compiler-warning-level-1-c4722"></a>Kompilátor upozornění (úroveň 1) C4722
 

@@ -1,10 +1,6 @@
 ---
-title: _fprintf_p –, _fprintf_p_l –, _fwprintf_p –, _fwprintf_p_l – | Microsoft Docs
-ms.custom: ''
+title: _fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fwprintf_p
 - _fprintf_p_l
@@ -29,8 +25,6 @@ f1_keywords:
 - _fwprintf_p
 - fprintf_p
 - ftprintf_p
-dev_langs:
-- C++
 helpviewer_keywords:
 - fprintf_p_l function
 - fprintf_p function
@@ -47,16 +41,12 @@ helpviewer_keywords:
 - ftprintf_p_l function
 - fwprintf_p_l function
 ms.assetid: 46b082e1-45ba-4383-9ee4-97015aa50bc6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ef748590f412afc10b5046691c982ed1d5ccabb8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: db9e9a746193c7bf35913d6792d87aa9ba85fa79
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404425"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462774"
 ---
 # <a name="fprintfp-fprintfpl-fwprintfp-fwprintfpl"></a>_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l
 
@@ -91,8 +81,8 @@ int _fwprintf_p_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Datový proud*<br/>
-Ukazatel **souboru** struktura.
+*Stream*<br/>
+Ukazatel **souboru** struktury.
 
 *Formát*<br/>
 Řetězec řízení formátu
@@ -105,20 +95,20 @@ Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_fprintf_p –** a **_fwprintf_p –** vrátí počet znaků, které jsou zapsány nebo může vracet záporná při výskytu chyby výstupu.
+**_fprintf_p –** a **_fwprintf_p –** vrátí počet napsaných znaků nebo vrátí zápornou hodnotu, když dojde k chybě výstupu.
 
 ## <a name="remarks"></a>Poznámky
 
-**_fprintf_p –** naformátuje a vytiskne řady znaků a hodnot pro výstup *datového proudu*. Jednotlivé funkce *argument* (pokud existuje) je převeden a výstup podle odpovídající specifikaci formátu v *formátu*. Pro **_fprintf_p –**, *formátu* argument má stejnou syntaxi a použití, který má v **_printf_p –**. Tyto funkce podporují poziční parametry, což znamená, že lze změnit pořadí parametrů používaných řetězec formátu. Další informace o poziční parametry najdete v tématu [printf_p – poziční parametry](../../c-runtime-library/printf-p-positional-parameters.md).
+**_fprintf_p –** formátuje a vytiskne řadu znaků a hodnot do výstupu *stream*. Každá funkce *argument* (pokud existuje) je převeden a uložen podle odpovídající specifikace formátu v *formátu*. Pro **_fprintf_p –**, *formátu* argument má stejnou syntaxi a použití, který má v **_printf_p –**. Tyto funkce podporuje poziční parametry, což znamená, že můžete změnit pořadí parametrů použitých ve formátovacím řetězci. Další informace o poziční parametry, naleznete v tématu [printf_p – poziční parametry](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**_fwprintf_p –** je verze široká charakterová **_fprintf_p –**; v **_fwprintf_p –**, *formát* je široká charakterová řetězec. Tyto funkce chovají stejně jako datový proud se při otevření v režimu ANSI. **_fprintf_p –** nepodporuje aktuálně výstup do proudu kódování UNICODE.
+**_fwprintf_p –** je verze širokého znaku **_fprintf_p –**; v **_fwprintf_p –**, *formátu* je širokoznaký řetězec. Tyto funkce chovají stejně jako v případě, že datový proud je otevřen v režimu ANSI. **_fprintf_p –** aktuálně nepodporuje výstup do datového proudu UNICODE.
 
-Verze tyto funkce s **_l** příponu jsou shodné s tím rozdílem, že používají parametr národního prostředí předaná místo aktuální národní prostředí.
+Verze těchto funkcí s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí namísto aktuálního národního prostředí předaného.
 
 > [!IMPORTANT]
-> Ujistěte se, že *formát* není řetězec definovaný uživatelem.
+> Ujistěte se, že *formátu* není uživatelem definovaný řetězec.
 
-Jako verze nezabezpečeného (najdete v části [fprintf, _fprintf_l –, fwprintf –, _fwprintf_l –](fprintf-fprintf-l-fwprintf-fwprintf-l.md)), tyto funkce ověřit jejich parametrů a vyvolat obslužnou rutinu neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md), pokud má jedna *datového proudu* nebo *formát* je ukazatel s hodnotou null nebo pokud nejsou žádné formátování specifikátory neznámý nebo chybně vytvořený. Pokud je povoleno provádění pokračovat, funkce vrátí hodnotu -1 a nastavte **errno** k **einval –**.
+Podobně jako nezabezpečené verze (viz [fprintf _fprintf_l –, fwprintf – _fwprintf_l –](fprintf-fprintf-l-fwprintf-fwprintf-l.md)), tyto funkce ověřují své parametry a vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md), pokud buď *stream* nebo *formátu* je ukazatel s hodnotou null, nebo pokud neexistují žádné neznámé nebo chybně zformulované formátovací specifikátory. Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a nastaví **errno** k **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -136,7 +126,7 @@ Další informace najdete v tématu [specifikace formátu](../../c-runtime-libra
 |**_fprintf_p –**, **_fprintf_p_l –**|\<stdio.h>|
 |**_fwprintf_p –**, **_fwprintf_p_l –**|\<stdio.h > nebo \<wchar.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -182,12 +172,12 @@ this is a string
 1.500000
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
-[sprintf, _sprintf_l –, swprintf –, _swprintf_l –, \__swprintf_l –](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf _sprintf_l –, swprintf, _swprintf_l –, \__swprintf_l –](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [printf_p – poziční parametry](../../c-runtime-library/printf-p-positional-parameters.md)<br/>
 [_cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l](cprintf-p-cprintf-p-l-cwprintf-p-cwprintf-p-l.md)<br/>
 [_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l](cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)<br/>

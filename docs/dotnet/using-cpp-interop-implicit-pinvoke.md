@@ -1,12 +1,6 @@
 ---
-title: Pomocí zprostředkovatele komunikace C++ (implicitní služba PInvoke) | Microsoft Docs
-ms.custom: ''
+title: Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - blittable types [C++]
 - platform invoke [C++], implicit
@@ -26,51 +20,46 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: a095f252c4e46e212e42a7ab4cf3cb8d5ef6f53d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ffe4aaeecc3e0f65851a87840cd21f81c4806fb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704289"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464581"
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>Použití zprostředkovatele komunikace C++ (implicitní služba PInvoke)
 
-Na rozdíl od jiných jazyků .NET, Visual C++ má interoperabilita podpory, který umožňuje spravovanými a nespravovanými kód existovat ve stejné aplikaci a to i ve stejném souboru (s [spravované, nespravované](../preprocessor/managed-unmanaged.md) direktivy). To umožňuje vývojářům Visual C++ integrovat funkce .NET do stávajících aplikací Visual C++ bez narušení zbývající aplikace.
+Na rozdíl od jiných jazyků .NET, Visual C++ podporuje interoperabilitu, která umožňuje spravovaným a nespravovaným kódem existovat ve stejné aplikaci a dokonce i ve stejném souboru (s [spravované, nespravované](../preprocessor/managed-unmanaged.md) direktivy pragma). To umožňuje vývojářům Visual C++ integrovat funkce rozhraní .NET do stávajících aplikací Visual C++ bez narušení zbývajících částí aplikace.
 
-Nespravované funkce můžete také volat z spravované kompilace pomocí [dllexport, dllimport](../cpp/dllexport-dllimport.md).
+Můžete také volat nespravované funkce pomocí spravované kompilantu [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
-Implicitní PInvoke je užitečné, když není potřeba zadat jak zařazeno parametry funkce nebo některé podrobnosti, které je možné zadat při explicitním volání DllImportAttribute.
+Implicitní služba PInvoke je užitečné, když není potřeba určit, jak budou zařazovat parametry funkce nebo některé podrobnosti, které lze zadat, pokud explicitně voláním DllImportAttribute.
 
-Visual C++ nabízí dva způsoby, kterými spravovaných a nespravovaných funkcí pro spolupráci:
+Visual C++ poskytuje dva způsoby, jak spravovaných a nespravovaných funkcí pro spolupráci:
 
 - [Použití explicitního volání PInvoke v jazyce C++ (atribut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
 
-Explicitního volání PInvoke podporuje rozhraní .NET Framework a je dostupný ve většině jazyků .NET. Ale jak již název napovídá, zprostředkovatele komunikace C++ je specifické pro aplikaci Visual C++.
+Explicitního volání PInvoke je podporována rozhraním .NET Framework a je k dispozici ve většině jazyků .NET. Ale jak již název napovídá, zprostředkovatele komunikace C++ je specifické pro Visual C++.
 
 ## <a name="c-interop"></a>interoperabilita C++
 
-Interoperabilita C++ se doporučuje namísto explicitního volání PInvoke, protože poskytuje lepší zabezpečení typů, je obvykle méně náročná na implementaci, je více forgiving, pokud nespravovaného rozhraní API se mění a umožňuje vylepšení výkonu, které nejsou možné pomocí explicitní PInvoke. Interoperabilita C++ však není možné, pokud není k dispozici nespravovaný zdrojový kód.
+Interoperabilita C++ se doporučuje přes explicitního volání PInvoke, protože poskytuje lepší zabezpečení typů, je obvykle méně náročná na implementaci, je více forgiving nespravované rozhraní API se mění a umožňuje vylepšení výkonu, které nejsou možné s explicitní PInvoke. Zprostředkovatele komunikace C++ však není možné v případě nespravovaného kódu není k dispozici.
 
 ## <a name="c-com-interop"></a>interoperabilita C++ COM
 
-Funkce interoperability podporované Visual C++ nabízí konkrétní výhody oproti jinými jazyky rozhraní .NET, pokud jde o vzájemné spolupráci se službou COM – součásti. Namísto omezení rozhraní .NET Framework [Tlbimp.exe (Importér knihovny)](/dotnet/framework/tools/tlbimp-exe-type-library-importer), jako je například omezenou podporu pro datové typy a povinné vystavení každého člena každé rozhraní modelu COM, umožňuje Interoperabilita C++ COM součástí získat přístup na adrese bude a nevyžaduje samostatnou spolupráce – sestavení. Na rozdíl od jazyka Visual Basic a C#, Visual C++, můžete použít objekty COM přímo pomocí obvyklé mechanismy COM (například **CoCreateInstance** a **QueryInterface**). To je možné z důvodu funkce interoperability C++, které způsobí kompilátoru automatického vkládání kódu přechod k přesunutí ze spravovaných do nespravovaných funkcí a zpět.
+Vzájemná funkční spolupráce funkcí podporovaných jazykem Visual C++ nabízí konkrétní výhody oproti jinými jazyky rozhraní .NET při rozhodování o vzájemné spolupráci se službou komponenty modelu COM. Namísto omezení rozhraní .NET Framework [Tlbimp.exe (Importér knihovny typů)](/dotnet/framework/tools/tlbimp-exe-type-library-importer), jako je například omezenou podporu pro datové typy a povinné vystavení každého člena každé rozhraní modelu COM, zprostředkovatele komunikace C++ umožňuje modelu COM komponenty získat přístup na adrese, který se už nevyžadují samostatné sestavení vzájemné spolupráce. Na rozdíl od jazyka Visual Basic a C#, Visual C++ můžete použít přímo pomocí obvyklých mechanismů COM objekty COM (například **CoCreateInstance** a **QueryInterface**). To je možné z důvodu funkce zprostředkovatele komunikace C++, které způsobit, že kompilátor automatického vkládání kódu přechod k přesunutí ze spravovaných do nespravovaných funkcí a zpět.
 
-Pomocí zprostředkovatele komunikace C++, COM – součásti lze použít jako běžně se používá nebo může být uzavřen do třídy jazyka C++. Tyto třídy obálky se označují jako vlastní běhové obálky s možností nebo CRCWs a mají dva výhod oproti použití COM přímo v kódu aplikace:
+Pomocí zprostředkovatele komunikace C++, komponenty modelu COM lze použít jako se obvykle používají nebo se dá zabalit uvnitř třídy jazyka C++. Tyto obálkové třídy se nazývají obálek volatelných za běhu vlastní nebo CRCWs a mají dvě výhody oproti použití přímo v kódu aplikace modelu COM:
 
-- Výsledný třídu můžete použít z jiných jazyků než Visual C++.
+- Výsledné třídy lze použít z jiných jazyků než Visual C++.
 
-- Podrobnosti o rozhraní modelu COM, může být skryté z klienta spravovaného kódu. Jde použít místo nativní typy .NET datové typy a podrobnosti o zařazování dat lze provést transparentně uvnitř CRCW.
+- Podrobnosti o rozhraní modelu COM lze skrýt z klienta spravovaného kódu. Datové typy .NET může být zastoupen nativní typy a podrobnosti o zařazování dat můžete uvnitř CRCW poskytováno transparentně.
 
-Bez ohledu na to, jestli je COM používat přímo nebo prostřednictvím CRCW musí být zařazené typy argumentů než jednoduché, přenositelné typy.
+Bez ohledu na to, zda COM se používají přímo nebo prostřednictvím CRCW musí zařazovat typy argumentů než jednoduché, přenositelné typy.
 
 ## <a name="blittable-types"></a>Přenositelné typy
 
-Pro nespravovaná rozhraní API, používat jednoduché, vlastní typy (viz [přenositelné a Non-přenositelné typy](/dotnet/framework/interop/blittable-and-non-blittable-types)), není vyžadováno žádné speciální kódování, protože tyto typy dat mají stejnou reprezentaci v paměti, ale vyžadují komplexnější datové typy explicitní dat – zařazování. Příklad, naleznete v části [postupy: volání nativních knihoven DLL ze spravovaného kódu pomocí PInvoke](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md).
+Pro nespravovaná rozhraní API, používat jednoduché a vnitřní typy (viz [přenositelné a Non-přenositelné typy](/dotnet/framework/interop/blittable-and-non-blittable-types)), není vyžadováno žádné zvláštní kódování, protože tyto typy dat mají stejnou reprezentaci v paměti, ale vyžadují komplexnější datové typy explicitní zařazování dat. Příklad najdete v tématu [postupy: volání nativních knihoven DLL ze spravovaného kódu pomocí PInvoke](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md).
 
 ## <a name="example"></a>Příklad
 
@@ -142,7 +131,7 @@ Done
 
 - [Postupy: Uchování odkazu na objekt v nespravované paměti](../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md)
 
-- [Postupy: zjištění kompilaci/CLR](../dotnet/how-to-detect-clr-compilation.md)
+- [Postupy: zjištění kompilace/CLR](../dotnet/how-to-detect-clr-compilation.md)
 
 - [Postupy: Převody mezi hodnotami System::Guid a _GUID](../dotnet/how-to-convert-between-system-guid-and-guid.md)
 
@@ -154,7 +143,7 @@ Done
 
 - [Postupy: Zabalení nativních tříd pro použití v jazyce C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
-Informace o použití delegátů ve scénáři interoperability najdete v tématu [delegáta (rozšíření komponent C++)](../windows/delegate-cpp-component-extensions.md).
+Informace o použití delegátů ve scénáři spolupráce naleznete v tématu [delegate (rozšíření komponent C++)](../windows/delegate-cpp-component-extensions.md).
 
 ## <a name="see-also"></a>Viz také:
 
