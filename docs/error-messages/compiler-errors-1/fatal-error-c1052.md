@@ -1,36 +1,26 @@
 ---
-title: Závažná chyba C1052 | Microsoft Docs
-ms.custom: ''
+title: Závažná chyba C1052
 ms.date: 05/08/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C1052
-dev_langs:
-- C++
 helpviewer_keywords:
 - C1052
 ms.assetid: f2c09a2f-d3c1-4420-9501-ffcb65caf87b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d8d272b71a527763245ccf7c8d69bd11a915eab7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b381cc3cfe27d4c4a9d744a6b854a0e43727fe71
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225850"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50479765"
 ---
 # <a name="fatal-error-c1052"></a>Závažná chyba C1052
 
-> soubor databáze programu '*filename*', vygenerovalo linkeru s /DEBUG:fastlink; kompilátoru nelze aktualizovat tyto soubory PDB; prosím odstraňte ji nebo zadejte jiný název souboru PDB pomocí /Fd
+> soubor databáze programu "*filename*', byl vygenerován linkerem s/Debug: fastlink; kompilátor nemůže takovéto soubory PDB aktualizovat, odstraňte jej nebo použijte parametr /Fd a zadejte jiný název souboru PDB
 
-Kompilátor nelze aktualizovat stejné soubory databáze (PDB) programu, které jsou generované linkeru při [/DEBUG:fastlink](../../build/reference/debug-generate-debug-info.md) je zadána možnost. Za normálních okolností PDB soubory generované kompilátorem a PDB soubory generované linkeru mít odlišné názvy. Pokud jsou nastavená používat stejné názvy, může vést k této chybě.
+Kompilátor nemůže aktualizovat stejné soubory databáze (PDB) programu, které se generují pomocí linkeru při [/Debug: fastlink](../../build/reference/debug-generate-debug-info.md) je zadána možnost. Soubory generované kompilátorem PDB a soubory PDB linkerem generovaných obvykle mít odlišné názvy. Pokud jsou nastavená na stejné názvy, může dojít k této chybě.
 
-Chcete-li tento problém vyřešit, můžete explicitně odstranit soubory PDB před zkompilujete znovu, nebo můžete vytvořit různé názvy pro soubory PDB generované kompilátorem a generované linkeru.
+Chcete-li vyřešit tento problém, explicitně lze odstranit soubory PDB předtím, než znovu zkompilovat, nebo můžete vytvořit různé názvy souborů PDB vygenerovaný kompilátorem a vytvořeného v propojovacím programu.
 
-Chcete-li název souboru PDB generované kompilátorem zadejte na příkazovém řádku, použijte [/Fd](../../build/reference/fd-program-database-file-name.md) – možnost kompilátoru. Chcete-li zadat název souboru PDB generované kompilátorem v prostředí IDE, otevřete **stránky vlastností** dialogové okno pro svůj projekt a v **vlastnosti konfigurace**, **C/C++**,  **Výstupní soubory** nastavte **název souboru databáze programu** vlastnost. Ve výchozím nastavení, tato vlastnost je `$(IntDir)vc$(PlatformToolsetVersion).pdb`.
+Chcete-li zadat název souboru PDB generované kompilátorem v příkazovém řádku, použijte [/Fd](../../build/reference/fd-program-database-file-name.md) – možnost kompilátoru. Chcete-li zadat název souboru PDB generované kompilátorem v integrovaném vývojovém prostředí, otevřete **stránky vlastností** dialogové okno pro váš projekt a **vlastnosti konfigurace**, **C/C++**,  **Výstupní soubory** nastavte **název souboru databáze programu** vlastnost. Ve výchozím nastavení, tato vlastnost je `$(IntDir)vc$(PlatformToolsetVersion).pdb`.
 
-Alternativně můžete nastavit název souboru PDB generované linkeru. Chcete-li zadat název souboru PDB generované linkeru na příkazovém řádku, použijte [/PDB](../../build/reference/pdb-use-program-database.md) – možnost linkeru. Chcete-li zadat název souboru PDB generované linkeru v prostředí IDE, otevřete **stránky vlastností** dialogové okno pro svůj projekt a v **vlastnosti konfigurace**, **Linkeru**,  **Ladění** nastavte **generování souboru databáze programu** vlastnost. Ve výchozím nastavení je tato vlastnost nastavena `$(OutDir)$(TargetName).pdb`.
+Alternativně můžete nastavit název souboru PDB vytvořeného v propojovacím programu. Chcete-li zadat název souboru PDB vytvořeného v propojovacím programu na příkazovém řádku, použijte [/PDB](../../build/reference/pdb-use-program-database.md) – možnost linkeru. Chcete-li zadat název souboru PDB vytvořeného v propojovacím programu v prostředí IDE, otevřete **stránky vlastností** dialogové okno pro váš projekt a **vlastnosti konfigurace**, **Linkeru**,  **Ladění** nastavte **generovat soubor databáze programu** vlastnost. Ve výchozím nastavení, tato vlastnost nastavena na `$(OutDir)$(TargetName).pdb`.

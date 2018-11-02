@@ -1,10 +1,6 @@
 ---
-title: tmpfile – | Microsoft Docs
-ms.custom: ''
+title: tmpfile
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tmpfile
 apilocation:
@@ -22,27 +18,21 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - tmpfile
-dev_langs:
-- C++
 helpviewer_keywords:
 - temporary files
 - tmpfile function
 - temporary files, creating
 ms.assetid: c4a4dc24-70da-438d-ae4e-98352d88e375
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ebcad2a25af2f2acb0056d882c4191f1a51293d3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 98afcb7a3e04a96a1b08bc1b975634153e550839
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409066"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530322"
 ---
 # <a name="tmpfile"></a>tmpfile
 
-Vytvoří dočasný soubor. Tato funkce je zastaralý, protože bezpečnější verze je k dispozici. v tématu [tmpfile_s –](tmpfile-s.md).
+Vytvoří dočasný soubor. Tato funkce je zastaralá, protože bezpečnější verze je k dispozici. Zobrazit [tmpfile_s –](tmpfile-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,15 +42,15 @@ FILE *tmpfile( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěšného **tmpfile –** vrací ukazatel datového proudu. Funkce **NULL** ukazatel.
+V případě úspěšného ověření **tmpfile –** vrátí ukazatel streamu. V opačném případě vrátí **NULL** ukazatele.
 
 ## <a name="remarks"></a>Poznámky
 
-**Tmpfile –** funkce vytvoří dočasný soubor a vrátí ukazatel do tohoto datového proudu. Dočasný soubor se vytvoří v kořenovém adresáři. Chcete-li vytvořit dočasný soubor v adresáři, než je kořenový adresář, použijte [tmpnam –](tempnam-wtempnam-tmpnam-wtmpnam.md) nebo [tempnam –](tempnam-wtempnam-tmpnam-wtmpnam.md) ve spojení s [fopen –](fopen-wfopen.md).
+**Tmpfile –** funkce vytvoří dočasný soubor a vrátí ukazatel na tento stream. Dočasný soubor se vytvoří v kořenovém adresáři. Chcete-li vytvořit dočasný soubor v jiný adresář než kořenový, použijte [tmpnam –](tempnam-wtempnam-tmpnam-wtmpnam.md) nebo [tempnam –](tempnam-wtempnam-tmpnam-wtmpnam.md) ve spojení s [fopen](fopen-wfopen.md).
 
-Pokud soubor nelze otevřít, **tmpfile –** vrátí **NULL** ukazatel. Toto dočasný soubor bude odstraněn automaticky při zavření souboru, když program ukončí normálně, nebo když **_rmtmp –** je volána, za předpokladu, že aktuální pracovní adresář se nemění. Dočasný soubor je otevřen v **w + b** režimu (binární čtení a zápis).
+Pokud soubor nejde otevřít, **tmpfile –** vrátí **NULL** ukazatele. Tento dočasný soubor automaticky odstraní při zavření souboru, když program skončí normálně, ani když **_rmtmp –** je volána, za předpokladu, že aktuální pracovní adresář nezmění. Dočasný soubor je otevřen v **w + b** režimu (binární čtení a zápis).
 
-Selhání může dojít, pokud se pokusíte více než tmp_max – (viz STDIO. H) volání s **tmpfile –**.
+Selhání může dojít, pokud při pokusu o více než TMP_MAX (viz STDIO. H) volání s **tmpfile –**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -68,12 +58,12 @@ Selhání může dojít, pokud se pokusíte více než tmp_max – (viz STDIO. H
 |-------------|---------------------|
 |**tmpfile**|\<stdio.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
 > [!NOTE]
-> Tento příklad vyžaduje administrativní oprávnění ke spouštění v systému Windows Vista.
+> Tento příklad vyžaduje oprávnění správce pro spuštění v systému Windows Vista.
 
 ```C
 // crt_tmpfile.c
@@ -109,8 +99,8 @@ Temporary file 3 was created
 3 temporary files deleted
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [_rmtmp](rmtmp.md)<br/>
 [_tempnam, _wtempnam, tmpnam, _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)<br/>

@@ -1,12 +1,6 @@
 ---
-title: Vytvoření prostředku dialogového okna | Dokumentace Microsoftu
-ms.custom: ''
+title: Vytvoření prostředku dialogového okna
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - dialog resources
 - MFC dialog boxes [MFC], creating
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - resources [MFC], creating dialog boxes
 - MFC dialog boxes [MFC], dialog resource
 ms.assetid: 0b83bd33-14d3-4611-8129-fccdae18053e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c68f8f48ec08446a9fca20524a8309b041607a92
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8f9371ebfe352f0ab7dbed2e201ce212387b85a5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401586"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50517699"
 ---
 # <a name="creating-the-dialog-resource"></a>Vytvoření prostředku dialogového okna
 

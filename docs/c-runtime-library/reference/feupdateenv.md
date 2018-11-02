@@ -1,11 +1,6 @@
 ---
-title: feupdateenv | Microsoft Docs
-ms.custom: ''
+title: feupdateenv
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - feupdateenv
 apilocation:
@@ -23,25 +18,19 @@ apitype: HeaderDef
 f1_keywords:
 - feupdateenv
 - fenv/feupdateenv
-dev_langs:
-- C++
 helpviewer_keywords:
 - feupdateenv function
 ms.assetid: 3d170042-dfd5-4e4f-a55f-038cf2296cc9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1d88284717aec7a19c936d7ed8d87da96006d7ed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6d553d6899f55f5bdfb3ff313e88abfcb56ab4ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397591"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605104"
 ---
 # <a name="feupdateenv"></a>feupdateenv
 
-Uloží aktuálně vyvolané výjimky s plovoucí desetinnou čárkou, obnoví stav zadaného prostředí s plovoucí desetinnou čárkou a poté vyvolá uložené výjimky s plovoucí desetinnou čárkou.
+Uloží aktuálně vyvolanou výjimky s plovoucí desetinnou čárkou, obnoví stav zadané prostředí s plovoucí desetinnou čárkou a poté vyvolá uložené výjimky s plovoucí desetinnou čárkou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,27 +43,27 @@ int feupdateenv(
 ### <a name="parameters"></a>Parametry
 
 *penv*<br/>
-Ukazatel na **fenv_t** objekt, který obsahuje prostředí s plovoucí desetinnou čárkou jako sada voláním [fegetenv](fegetenv1.md) nebo [feholdexcept](feholdexcept2.md). Použití makra FE_DFL_ENV, můžete také zadat výchozí spouštěcí prostředí s plovoucí desetinnou čárkou.
+Ukazatel **fenv_t** objekt, který obsahuje prostředí s plovoucí desetinnou čárkou jako sada voláním [fegetenv](fegetenv1.md) nebo [feholdexcept](feholdexcept2.md). Pomocí makra FE_DFL_ENV můžete zadat také výchozí spouštěcí prostředí s plovoucí desetinnou čárkou.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu 0, pokud se všechny akce úspěšně dokončit. Jinak vrátí nenulovou hodnotu.
+Vrátí hodnotu 0, pokud všechny akce úspěšně dokončila. V opačném případě vrací nenulovou hodnotu.
 
 ## <a name="remarks"></a>Poznámky
 
-**Feupdateenv** funkce provádí různé akce. Nejprve ukládá aktuální stav příznaky výjimky vyvolané s plovoucí desetinnou čárkou v automatické úložiště. Potom nastaví z s hodnotou uloženou v aktuálním prostředí s plovoucí desetinnou čárkou **fenv_t** objektu na kterou odkazuje *penv*. Pokud *penv* není **FE_DFL_ENV** nebo neodkazuje na platný **fenv_t** objektu následné chování není definován. Nakonec **feupdateenv** vyvolá místně uložené výjimky s plovoucí desetinnou čárkou.
+**Feupdateenv** funkce provádí různé akce. Nejprve uloží aktuální stav příznaky vyvolanou výjimku plovoucí desetinné čárky v automatického úložiště. Potom nastaví aktuální prostředí s plovoucí desetinnou čárkou z hodnoty uložené v **fenv_t** objekt, který odkazuje *penv*. Pokud *penv* není **FE_DFL_ENV** nebo neodkazuje na platnou **fenv_t** objektu, následné chování není definováno. Nakonec **feupdateenv** vyvolá místně uložené výjimky s plovoucí desetinnou čárkou.
 
-Chcete-li tuto funkci použít, je nutné vypnout s plovoucí desetinnou čárkou optimalizace, které může zabránit přístupu pomocí `#pragma fenv_access(on)` direktivy před volání. Další informace najdete v tématu [fenv_access –](../../preprocessor/fenv-access.md).
+Pokud chcete používat tuto funkci, musíte vypnout s plovoucí desetinnou čárkou optimalizace, které by mohla zabránit přístupu pomocí `#pragma fenv_access(on)` direktiv před voláním. Další informace najdete v tématu [fenv_access](../../preprocessor/fenv-access.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Hlavička C|Hlavička C++|
+|Funkce|Záhlaví C|Hlaviček jazyka C++|
 |--------------|--------------|------------------|
 |**feupdateenv**|\<fenv.h >|\<cfenv>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [fegetenv](fegetenv1.md)<br/>
 [feclearexcept](feclearexcept1.md)<br/>

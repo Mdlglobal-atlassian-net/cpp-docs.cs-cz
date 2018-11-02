@@ -1,10 +1,6 @@
 ---
-title: Atan atanf –, atanl –, atan2, atan2f –, atan2l – | Microsoft Docs
-ms.custom: ''
+title: atan, atanf, atanl, atan2, atan2f, atan2l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atan2f
 - atan2l
@@ -32,8 +28,6 @@ f1_keywords:
 - atanl
 - atanf
 - atan2f
-dev_langs:
-- C++
 helpviewer_keywords:
 - atan function
 - atanf function
@@ -44,20 +38,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5e1f8b60c25c57e3e2eb6a9a964fd80664e3aa4c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59a67b0d213a11630f551fd7582b44aab60e314f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393895"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541723"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
-Vypočítá Arkus tangens **x** (**atan**, **atanf –**, a **atanl –**) nebo Arkus tangens **y** / **x** (**atan2**, **atan2f –**, a **atan2l –**).
+Vypočítá arkustangens výrazu **x** (**atan**, **atanf –**, a **atanl –**) nebo Arkus tangens **y** / **x** (**atan2**, **atan2f –**, a **atan2l –**).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -86,27 +76,27 @@ Všechna čísla.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Atan** vrátí Arkus tangens *x* v rozsahu - pí/2 do pí/2 radiánech. **ATAN2** vrátí Arkus tangens *y*/*x* v rozsahu - pí do pí radiánech. Pokud *x* 0, **atan** vrátí hodnotu 0. Pokud oba parametry **atan2** mají hodnotu 0, funkce vrátí hodnotu 0. Všechny výsledky jsou v radiánech.
+**Atan** vrátí Arkus tangens *x* v rozsahu - pí/2 do pí/2 radiánů. **ATAN2** vrátí Arkus tangens *y*/*x* v rozsahu - pí na radiány pí. Pokud *x* je 0, **atan** vrátí hodnotu 0. Pokud se oba parametry **atan2** mají hodnotu 0, funkce vrátí 0. Všechny výsledky jsou v radiánech.
 
-**ATAN2** známky oba parametry používá k určení kvadrantu návratovou hodnotu.
+**ATAN2** používá známky oba parametry k určení do kvadrantu návratovou hodnotu.
 
-|Vstup|Výjimka SEH|Matherr – výjimka|
+|Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|ROZMEZÍ **QNAN**, **IND**|žádná|**_DOMAIN –**|
+|ROZMEZÍ **QNAN**, **AJÍT**|žádná|**_DOMÉNA**|
 
 ## <a name="remarks"></a>Poznámky
 
-**Atan** funkce vypočítá Arkus tangens (inverzní funkce tangens) *x*. **ATAN2** vypočítá Arkus tangens *y*/*x* (Pokud *x* rovná 0, **atan2** vrátí pí/2, pokud *y* kladné, pokud - pí/2 *y* je záporný nebo 0, pokud *y* je 0.)
+**Atan** funkce vypočítá arkustangens (inverzní funkce tangens) *x*. **ATAN2** vypočítá arkustangens výrazu *y*/*x* (Pokud *x* rovná 0, **atan2** Pokud vrátí hodnotu pí/2 *y* kladné, if - pí/2 *y* je záporný nebo 0, pokud *y* je 0.)
 
-**Atan** má implementace, která používá Streaming SIMD Extensions 2 (SSE2). Informace a omezení o pomocí implementace SSE2 najdete v tématu [_set_sse2_enable –](set-sse2-enable.md).
+**Atan** má implementace, která používá Streaming SIMD Extensions 2 (SSE2). Informace a omezení týkající se použití implementace SSE2, naleznete v tématu [_set_sse2_enable –](set-sse2-enable.md).
 
-Protože C++ umožňuje, aby přetížení, můžete volat přetížení **atan** a **atan2** trvají **float** nebo **dlouho** **double**  argumenty. V programu C **atan** a **atan2** vždy provést **dvojité** argumenty a vraťte se **dvojité**.
+Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **atan** a **atan2** trvají **float** nebo **dlouhé** **double**  argumenty. V programu jazyka C **atan** a **atan2** vždy provést **double** argumenty a vraťte se **double**.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaná hlavička (C)|Požadovaná hlavička (C++)|
+|Rutina|Požadované záhlaví (C)|Požadované záhlaví (C++)|
 |-------------|---------------------|-|
-|**Atan**, **atan2**, **atanf –**, **atan2f –**, **atanl –**, **atan2l –**|\<Math.h >|\<cmath – > nebo \<math.h >|
+|**Atan**, **atan2**, **atanf –**, **atan2f –**, **atanl –**, **atan2l –**|\<Math.h >|\<cmath > nebo \<math.h >|
 
 ## <a name="example"></a>Příklad
 
@@ -139,12 +129,12 @@ Arctangent of 5.000000: 1.373401
 Arctangent of 0.500000 / 5.000000: 0.099669
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>
-[Cos, cosf –, cosl –](cos-cosf-cosl.md)<br/>
+[Cos cosf –, cosl –](cos-cosf-cosl.md)<br/>
 [_matherr](matherr.md)<br/>
 [sin, sinf, sinl](sin-sinf-sinl.md)<br/>
 [tan, tanf, tanl](tan-tanf-tanl.md)<br/>

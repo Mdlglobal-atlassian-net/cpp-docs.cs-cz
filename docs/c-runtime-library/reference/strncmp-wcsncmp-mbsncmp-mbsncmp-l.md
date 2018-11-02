@@ -1,10 +1,6 @@
 ---
-title: strncmp –, wcsncmp –, _mbsncmp –, _mbsncmp_l – | Microsoft Docs
-ms.custom: ''
+title: strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strncmp
 - _mbsncmp
@@ -33,8 +29,6 @@ f1_keywords:
 - strncmp
 - _mbsncmp
 - wcsncmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tcsnccmp function
 - ftcsncmp function
@@ -54,23 +48,19 @@ helpviewer_keywords:
 - characters [C++], comparing
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a64d7248151287f4f2af38e666db62f9a15d833f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b8b5472289bacc940bb0cbea7876f246243660bf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417350"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523761"
 ---
 # <a name="strncmp-wcsncmp-mbsncmp-mbsncmpl"></a>strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 
 Porovná až do zadaného počtu znaků dva řetězce.
 
 > [!IMPORTANT]
-> **_mbsncmp –** a **_mbsncmp_l –** nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncmp –** a **_mbsncmp_l –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -111,37 +101,37 @@ int _mbsncmp_l(
 Počet znaků, které mají být porovnány.
 
 *Národní prostředí*<br/>
-Národní prostředí použít.
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Návratová hodnota označuje vztah podřetězce *řetězec1* a *řetězec2* následujícím způsobem.
+Návratová hodnota označuje vztah mezi podřetězci *řetězec1* a *řetězec2* následujícím způsobem.
 
 |Návratová hodnota|Popis|
 |------------------|-----------------|
-|< 0|*řetězec1* substring menší než *řetězec2* dílčí řetězec|
-|0|*řetězec1* substring identické *řetězec2* dílčí řetězec|
-|> 0|*řetězec1* substring větší než *řetězec2* dílčí řetězec|
+|< 0|*řetězec1* podřetězec menší než *řetězec2* dílčí řetězec|
+|0|*řetězec1* podřetězec shodný s *řetězec2* dílčí řetězec|
+|> 0|*řetězec1* větší než podřetězec *řetězec2* dílčí řetězec|
 
-Parametr chyby ověření **_mbsncmp –** a **_mbsncmp_l –** vrátit **_NLSCMPERROR**, která je definována v \<string.h > a \< Mbstring.h >.
+Na chybu ověření parametru **_mbsncmp –** a **_mbsncmp_l –** vrátit **_NLSCMPERROR**, který je definován v \<string.h > a \< Mbstring.h >.
 
 ## <a name="remarks"></a>Poznámky
 
-**Strncmp –** funkce provádí ordinální porovnávání maximálně prvního *počet* znaky v *řetězec1* a *řetězec2* a Vrátí hodnotu, která určuje vztah mezi dílčích řetězců. **strncmp –** je malá a velká písmena verze **_strnicmp –**. **wcsncmp –** a **_mbsncmp –** se malá a velká písmena verzích **_wcsnicmp –** a **_mbsnicmp –**.
+**Strncmp –** funkce provádí řadové porovnání nanejvýš prvních *počet* znaky v *řetězec1* a *řetězec2* a Vrátí hodnotu, která označuje vztah mezi podřetězci. **strncmp –** je velká a malá písmena verze **_strnicmp –**. **wcsncmp –** a **_mbsncmp –** jsou malá a velká písmena verze **_wcsnicmp –** a **_mbsnicmp –**.
 
-**wcsncmp –** a **_mbsncmp –** jsou široká charakterová a vícebajtových znaků verze **strncmp –**. Argumenty **wcsncmp –** jsou široká charakterová řetězce; u **_mbsncmp –** jsou řetězců vícebajtových znaků. **_mbsncmp –** rozpozná sekvencí vícebajtových znaků podle vícebajtové znakové stránky a vrátí **_NLSCMPERROR** na chybu.
+**wcsncmp –** a **_mbsncmp –** jsou širokoznaké a vícebajtové verze **strncmp –**. Argumenty **wcsncmp –** jsou širokoznaké řetězce **_mbsncmp –** jsou vícebajtové znakové řetězce. **_mbsncmp –** rozpozná vícebajtové znakové sekvence podle vícebajtové znakové stránce a vrátí **_NLSCMPERROR** v případě chyby.
 
-Navíc **_mbsncmp –** a **_mbsncmp_l –** ověřte parametry. Pokud *řetězec1* nebo *řetězec2* je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatný parametr, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud chcete pokračovat, je povoleno spuštění **_mbsncmp –** a **_mbsncmp_l –** vrátit **_NLSCMPERROR** a nastavte **errno** k  **Einval –**. **strncmp –** a **wcsncmp –** neověřují jejich parametrů. Tyto funkce chovají stejně jako jinak.
+Navíc **_mbsncmp –** a **_mbsncmp_l –** ověřte parametry. Pokud *řetězec1* nebo *řetězec2* je ukazatel s hodnotou null, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **_mbsncmp –** a **_mbsncmp_l –** vrátit **_NLSCMPERROR** a nastavte **errno** k  **EINVAL**. **strncmp –** a **wcsncmp –** neověří jejich parametry. Tyto funkce chovají identicky jinak.
 
-Porovnání chování **_mbsncmp –** a **_mbsncmp_l –** je ovlivňován nastavením **LC_CTYPE –** kategorie nastavení národního prostředí. Tato volba určuje detekce úvodní a koncové bajtů více-bajtové znaky. Další informace najdete v tématu [setlocale](setlocale-wsetlocale.md). **_Mbsncmp –** funkce používá aktuální národní prostředí pro toto chování závislých na národním prostředí. **_Mbsncmp_l –** funkce se shoduje s tím rozdílem, že se používá *národního prostředí* parametr místo. Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md). Pokud národní prostředí je národní prostředí jednobajtové, chování těchto funkcí je stejný jako **strncmp –**.
+Chování porovnání **_mbsncmp –** a **_mbsncmp_l –** je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí. Tato volba určuje detekce úvodní a koncové bajty vícebajtových znaků. Další informace najdete v tématu [setlocale](setlocale-wsetlocale.md). **_Mbsncmp –** funkce používá aktuální národní prostředí pro toto chování závislé na národním prostředí. **_Mbsncmp_l –** funkce je totožný s tím rozdílem, že používá *národní prostředí* parametr místo. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md). Pokud se národní prostředí je národní prostředí jednobajtové, chování těchto funkcí je stejný jako **strncmp –**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definován|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsnccmp –**|**strncmp –**|**_mbsncmp**|**wcsncmp –**|
 |**_tcsncmp –**|**strncmp –**|**_mbsnbcmp**|**wcsncmp –**|
-|**_tccmp**|Mapuje makro nebo vložené funkce|**_mbsncmp**|Mapuje makro nebo vložené funkce|
+|**_tccmp**|Mapuje se na makro nebo vloženou funkci|**_mbsncmp**|Mapuje se na makro nebo vloženou funkci|
 |**Není k dispozici**|**Není k dispozici**|**_mbsncmp_l**|**Není k dispozici**|
 
 ## <a name="requirements"></a>Požadavky
@@ -152,7 +142,7 @@ Porovnání chování **_mbsncmp –** a **_mbsncmp_l –** je ovlivňován nast
 |**wcsncmp –**|\<String.h > nebo \<wchar.h >|
 |**_mbsncmp –**, **_mbsncmp_l –**|\<Mbstring.h >|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -203,7 +193,7 @@ Function:   strnicmp _strnicmp (first 10 characters only)
 Result:      String 1 is equal to string 2
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
