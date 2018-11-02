@@ -1,10 +1,6 @@
 ---
-title: _malloca – | Microsoft Docs
-ms.custom: ''
+title: _malloca
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _malloca
 apilocation:
@@ -22,27 +18,21 @@ apitype: DLLExport
 f1_keywords:
 - malloca
 - _malloca
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory allocation, stack
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3c6f6b731bce5667ca992e7181518bf0a9eb2b87
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c8ce8bdf8ab40cae45ecec9c4b182bdf3d6bc82
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403284"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563979"
 ---
 # <a name="malloca"></a>_malloca
 
-Přidělí paměť v zásobníku. Toto je verze [_alloca –](alloca.md) vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Přidělí paměť v zásobníku. Toto je verze [_alloca](alloca.md) s rozšířeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,32 +45,32 @@ void *_malloca(
 ### <a name="parameters"></a>Parametry
 
 *Velikost*<br/>
-Počet bajtů přidělování v zásobníku.
+Bajtů, které mají být přiděleny ze zásobníku.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_Malloca –** rutiny vrátí **void** ukazatel na přidělené místa, což záruku, že se vhodně zarovnána pro ukládání jakéhokoli typu objektu. Pokud *velikost* 0, **_malloca –** přiděluje položku s nulovou délkou a vrací neplatný ukazatel na danou položku.
+**_Malloca** rutinní vrátí **void** ukazatel do přiděleného místa, což je zaručeno, že jako vhodně zarovnaný pro úložiště libovolného typu objektu. Pokud *velikost* je 0, **_malloca** přiděluje položku nulové délky a vrátí platný ukazatel na danou položku.
 
-Pokud nelze přidělit prostor, je vygenerována výjimce přetečení zásobníku. Výjimce přetečení zásobníku není C++ výjimka; je strukturovaného výjimek. Místo použití zpracovávání výjimek v jazyce C++, je nutné použít [strukturované zpracování výjimek](../../cpp/structured-exception-handling-c-cpp.md) (SEH).
+Pokud nelze přidělit místo, vygeneruje se k výjimce přetečení zásobníku. Výjimku přetečení zásobníku není výjimky jazyka C++; je strukturovaných výjimek. Místo používání zpracování výjimek jazyka C++, je nutné použít [strukturovaného zpracování výjimek](../../cpp/structured-exception-handling-c-cpp.md) (SEH).
 
 ## <a name="remarks"></a>Poznámky
 
-**_malloca –** přiděluje *velikost* bajtů z zásobník program nebo haldě, pokud je tato žádost překračuje velikost v bajtech poskytují **_ALLOCA_S_THRESHOLD**. Rozdíl mezi **_malloca –** a **_alloca –** je, že **_alloca –** vždy přiděluje v zásobníku, bez ohledu na velikost. Na rozdíl od **_alloca –**, který nevyžaduje ani povolit volání **volné** uvolnit paměť, takže přiděleno, **_malloca –** vyžaduje použití [_freea –](freea.md)na uvolnění paměti. V režimu ladění **_malloca –** vždy přidělí paměť z haldě.
+**_malloca** přiděluje *velikost* bajtů ze zásobníku programu nebo haldy, pokud požadavek překračuje velikost v bajtech Dal **_ALLOCA_S_THRESHOLD**. Rozdíl mezi **_malloca** a **_alloca** je, že **_alloca** vždy přiděluje v zásobníku, bez ohledu na velikost. Na rozdíl od **_alloca**, který nevyžaduje nebo povolit volání **bezplatné** uvolnit tak přidělené paměti **_malloca** vyžaduje použití [_freea –](freea.md)k uvolnění paměti. V režimu ladění **_malloca** vždy přidělí paměť z haldy.
 
-Existují omezení explicitně volání **_malloca –** v obslužné rutiny výjimek (EH). EH rutiny, které běží na procesory x86 – třída fungovat ve vlastním rámečku paměti: jejich vykonávat úkoly v paměti, který není založen na aktuální umístění ukazatele zásobníku nadřazených funkce. Většina běžné implementace patří zpracování (SEH) systému Windows NT strukturovaná výjimek a výrazy klauzule catch C++. Proto explicitně volání **_malloca –** v některém z následujících scénářů výsledků v programu selhání při návratu do volání rutiny EH:
+Existují omezení explicitně voláním **_malloca** v obslužné rutiny výjimek (EH). Rutiny EH, na kterých běží na procesorech x86 třídy pracovat v rámci své vlastní paměti: provádějí své úkoly v paměti, který není založen na aktuální umístění ukazatel zásobníku nadřazené funkce. Většina běžných implementací zahrnují zpracování (SEH) systému Windows NT strukturovaných výjimek a výrazy klauzule catch C++. Proto se explicitně voláním **_malloca** v některém z následujících výsledků scénáře selhání programu při vrácení volání rutiny EH:
 
-- Výraz filtru výjimek SEH systému Windows NT: **__except** (`_malloca ()` )
+- Výraz filtru výjimky SEH Windows NT: **__except** (`_malloca ()` )
 
-- Obslužná rutina systému Windows NT SEH poslední výjimky: **__finally** {`_malloca ()` }
+- Obslužná rutina poslední výjimky SEH Windows NT: **__finally** {`_malloca ()` }
 
 - Výraz klauzule catch C++ EH
 
-Ale **_malloca –** je možné volat přímo z v rutiny EH nebo z zadané aplikaci zpětné volání, které volán v jednom ze scénářů EH dříve uvedené.
+Ale **_malloca** mohou být volány přímo z v rámci rutiny EH nebo ze zpětného volání s poskytované aplikací, která získá vyvolá jednu z výše uvedených scénářů EH.
 
 > [!IMPORTANT]
-> V systému Windows XP Pokud **_malloca –** nazývá uvnitř bloku try/catch musí volat [_resetstkoflw –](resetstkoflw.md) v bloku catch.
+> Ve Windows XP Pokud **_malloca** je volána uvnitř bloku try/catch, je nutné volat [_resetstkoflw](resetstkoflw.md) v bloku catch.
 
-Kromě výše uvedené omezení, při použití [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) možnost **_malloca –** nelze použít v **__except** bloky. Další informace najdete v tématu [/CLR – omezení](../../build/reference/clr-restrictions.md).
+Kromě výše uvedená omezení při použití [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) možnost **_malloca** nelze použít v **__except** bloky. Další informace najdete v tématu [/CLR – omezení](../../build/reference/clr-restrictions.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -180,7 +170,7 @@ int main()
 Enter the number of bytes to allocate using _malloca: 1000
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přidělení paměti](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
