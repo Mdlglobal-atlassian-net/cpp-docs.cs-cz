@@ -1,10 +1,6 @@
 ---
-title: _mbbtype –, _mbbtype_l – | Microsoft Docs
-ms.custom: ''
+title: _mbbtype, _mbbtype_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbbtype
 - _mbbtype_l
@@ -26,31 +22,25 @@ f1_keywords:
 - mbbtype
 - mbbtype_l
 - _mbbtype
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbbtype function
 - _mbbtype_l function
 - mbbtype function
 - mbbtype_l function
 ms.assetid: b8e34b40-842a-4298-aa39-0bd2d8e51c2a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 91b78b0dc57873810f96a793288da3f1457299de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a6d17b99e4314c2ab836a16129ab8a0e6ac7720e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404412"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50467168"
 ---
 # <a name="mbbtype-mbbtypel"></a>_mbbtype, _mbbtype_l
 
-Vrátí typ bajtů podle předchozích bajtů.
+Vrátí typ bajtu podle předchozí bajtů.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spuštěny v prostředí Windows Runtime. Další informace najdete v tématu [CRT – funkce není podporována v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -69,45 +59,45 @@ int _mbbtype_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak, který se má testovat.
+Znak k testování.
 
 *Typ*<br/>
-Typ bajtů, které chcete otestovat.
+Typ bajtu pro test.
 
 *Národní prostředí*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_mbbtype –** vrátí typ bajtů v řetězci. Toto rozhodnutí je kontextová jako zadanou hodnotou *typu*, který poskytuje testovací podmínky řízení. *typ* je typ předchozí bajtů v řetězci. Manifestu konstanty v následující tabulce jsou definovány v Mbctype.h.
+**_mbbtype –** vrátí typ bajtu v řetězci. Toto rozhodnutí je kontextové, jak je uvedeno hodnotou *typ*, který obsahuje testovací podmínku ovládacího prvku. *typ* je typ předchozí bajtů v řetězci. Konstanty manifestu v následující tabulce jsou definovány v souboru Mbctype.h.
 
-|Hodnota *typu*|**_mbbtype –** testů pro|Návratová hodnota|*c*|
+|Hodnota *typu*|**_mbbtype –** testy pro|Návratová hodnota|*c*|
 |---------------------|--------------------------|------------------|---------|
-|Libovolná hodnota s výjimkou 1|Platný jednoho bajtu nebo úvodní bajt|**_MBC_SINGLE** (0)|Jeden bajt (0x20 - 0x7E, 0xA1 - 0xDF)|
-|Libovolná hodnota s výjimkou 1|Platný jednoho bajtu nebo úvodní bajt|**_MBC_LEAD** (1)|Vést bajt vícebajtových znaků (0x81 - 0x9F, 0xE0 - 0xFC)|
-|Libovolná hodnota s výjimkou 1|Platnou bajtovou jednobajtové nebo nepovedou|**_MBC_ILLEGAL**<br /><br /> ( -1)|Neplatný znak (všechny hodnota s výjimkou 0x20 - 0x7E, 0xA1 - 0xDF, 0x81 - 0x9F, 0xE0 - 0xFC|
-|1|Platný bajt|**_MBC_TRAIL** (2)|Koncové bajt vícebajtových znaků (0x40 - 0x7E, 0x80 - 0xFC)|
-|1|Platný bajt|**_MBC_ILLEGAL**<br /><br /> ( -1)|Neplatný znak (všechny hodnota s výjimkou 0x20 - 0x7E, 0xA1 - 0xDF, 0x81 - 0x9F, 0xE0 - 0xFC|
+|Žádná hodnota kromě 1|Platný jednobajtový nebo vedoucí bajt|**_MBC_SINGLE** (0)|Jeden bajt (0x20 – 0x7E, 0xA1 – 0xDF)|
+|Žádná hodnota kromě 1|Platný jednobajtový nebo vedoucí bajt|**_MBC_LEAD** (1)|Vedoucí bajt vícebajtového znaku (0x81 – 0x9F, 0xE0 – 0xFC)|
+|Žádná hodnota kromě 1|Platný jednobajtové nebo vedoucí bajt|**_MBC_ILLEGAL**<br /><br /> ( -1)|Neplatný znak (všechny hodnoty s výjimkou 0x20 – 0x7E, 0xA1 – 0xDF, 0x81 – 0x9F, 0xE0 – 0xFC|
+|1|Platný bajt|**_MBC_TRAIL** (2)|Koncový bajt vícebajtového znaku (0x40 – 0x7E, 0x80 – 0xFC)|
+|1|Platný bajt|**_MBC_ILLEGAL**<br /><br /> ( -1)|Neplatný znak (všechny hodnoty s výjimkou 0x20 – 0x7E, 0xA1 – 0xDF, 0x81 – 0x9F, 0xE0 – 0xFC|
 
 ## <a name="remarks"></a>Poznámky
 
-**_Mbbtype –** funkce určuje typ bajtů v vícebajtových znaků. Pokud hodnota *typ* je jakákoli hodnota s výjimkou 1, **_mbbtype –** testů pro platný jednobajtové nebo nepovedou bajt vícebajtových znaků. Pokud hodnota *typ* je 1, **_mbbtype –** testů pro platný bajt vícebajtových znaků.
+**_Mbbtype –** funkce určuje typ bajtu ve vícebajtovém znaku. Pokud hodnota *typ* je libovolná hodnota s výjimkou 1, **_mbbtype –** testy pro platné jednobajtové nebo vedoucí bajt vícebajtového znaku. Pokud hodnota *typ* 1, **_mbbtype –** testy pro platný bajt vícebajtového znaku.
 
-Výstupní hodnota je ovlivňován nastavením **LC_CTYPE –** kategorie nastavení národního prostředí; viz [setlocale _wsetlocale](setlocale-wsetlocale.md) Další informace. **_Mbbtype –** verze této funkce používá aktuální národní prostředí pro toto chování závislých na národním prostředí; **_mbbtype_l –** verze je stejná s tím rozdílem, že ji, použijte parametr národního prostředí, je předaná místo . Další informace najdete v tématu [národního prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale _wsetlocale](setlocale-wsetlocale.md) Další informace. **_Mbbtype –** verze této funkce používá aktuální národní prostředí pro toto chování závislé na národním prostředí **_mbbtype_l –** verze je stejná s tím rozdílem, že používá parametr národního prostředí, které je předáno místo . Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
-V dřívějších verzích **_mbbtype –** nazýval **chkctype**. Nový kód, použijte **_mbbtype –** místo.
+V dřívějších verzích **_mbbtype –** označovala jako **chkctype**. Pro nový kód, použijte **_mbbtype –** místo.
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Nepovinné hlavičkové|
+|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
 |-------------|---------------------|---------------------|
 |**_mbbtype –**|\<Mbstring.h >|\<Mbctype.h > *|
 |**_mbbtype_l**|\<Mbstring.h >|\<Mbctype.h > *|
 
-\* Definice manifestu konstanty, které se používají jako návratové hodnoty.
+\* Definice konstanty manifestu používané jako vrácené hodnoty.
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Klasifikace bajtů](../../c-runtime-library/byte-classification.md)<br/>

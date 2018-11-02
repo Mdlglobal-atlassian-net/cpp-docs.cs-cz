@@ -1,31 +1,21 @@
 ---
-title: '&lt;nastavit&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;set&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <set>
-dev_langs:
-- C++
 helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aacfbda591755af86857da6c7d0b7891d2e72ebb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f5f33cbb179e3d0304f8128066dc04d6c3927d8d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857048"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565370"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 
-Definuje sadu kontejneru šablony třídy a multiset a jejich podpůrné šablony.
+Definuje kontejner šablony třídy sady a multiset a jejich podpůrných šablon.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,29 +28,29 @@ Definuje sadu kontejneru šablony třídy a multiset a jejich podpůrné šablon
 
 ### <a name="operators"></a>Operátory
 
-|Nastavit verzi|Multiset verze|Popis|
+|Nastavit verzi|Multiset – verze|Popis|
 |-----------------|----------------------|-----------------|
-|[Operator! = (set)](../standard-library/set-operators.md#op_neq)|[Operator! = (multiset)](../standard-library/set-operators.md#op_neq)|Testy, pokud set / multiset objekt na levé straně operátor není rovno set / multiset objekt na pravé straně.|
-|[Operator < (set)](../standard-library/set-operators.md#op_lt)|[Operator < (multiset)](../standard-library/set-operators.md#op_lt_multiset)|Testy, pokud set / multiset objekt na levé straně operátor je menší než set / multiset objekt na pravé straně.|
-|[Operator < = (set)](../standard-library/set-operators.md#op_lt_eq)|[operátor\<= (multiset)](../standard-library/set-operators.md#op_lt_eq_multiset)|Testy, pokud set / multiset objekt na levé straně operátor je menší než nebo rovna hodnotě set / multiset objekt na pravé straně.|
-|[Operator == (set)](../standard-library/set-operators.md#op_eq_eq)|[operator== (multiset)](../standard-library/set-operators.md#op_eq_eq_multiset)|Testy, pokud set / multiset objekt na levé straně operátoru rovná set / multiset objekt na pravé straně.|
-|[Operator > (set)](../standard-library/set-operators.md#op_gt)|[Operator > (multiset)](../standard-library/set-operators.md#op_gt_multiset)|Testy, pokud set / multiset objekt na levé straně operátoru je větší než set / multiset objekt na pravé straně.|
-|[Operator > = (set)](../standard-library/set-operators.md#op_gt_eq)|[operator>= (multiset)](../standard-library/set-operators.md#op_gt_eq_multiset)|Testy, pokud je sada nebo multiset objekt na levé straně operátor větší než nebo rovna hodnotě set / multiset objekt na pravé straně.|
+|[Operator! = (set)](../standard-library/set-operators.md#op_neq)|[Operator! = (multiset)](../standard-library/set-operators.md#op_neq)|Testuje, zda sada nebo multiset – objekt na levé straně operátoru není roven set nebo multiset – objekt na pravé straně.|
+|[Operator < (set)](../standard-library/set-operators.md#op_lt)|[Operator < (multiset)](../standard-library/set-operators.md#op_lt_multiset)|Testuje, zda sada nebo multiset – objekt na levé straně operátoru menší než sada nebo multiset – objekt na pravé straně.|
+|[Operator < = (set)](../standard-library/set-operators.md#op_lt_eq)|[operátor\<= (multiset)](../standard-library/set-operators.md#op_lt_eq_multiset)|Testuje, zda sada nebo multiset – objekt na levé straně operátoru menší než nebo rovna hodnotě set nebo multiset – objekt na pravé straně.|
+|[Operator == (set)](../standard-library/set-operators.md#op_eq_eq)|[operator== (multiset)](../standard-library/set-operators.md#op_eq_eq_multiset)|Testuje, zda sada nebo multiset – objekt na levé straně operátoru roven set nebo multiset – objekt na pravé straně.|
+|[Operator > (set)](../standard-library/set-operators.md#op_gt)|[Operator > (multiset)](../standard-library/set-operators.md#op_gt_multiset)|Testuje, zda sada nebo multiset – objekt na levé straně operátoru větší než sada nebo multiset – objekt na pravé straně.|
+|[Operator > = (set)](../standard-library/set-operators.md#op_gt_eq)|[operator>= (multiset)](../standard-library/set-operators.md#op_gt_eq_multiset)|Testuje, zda sada nebo multiset – objekt na levé straně operátoru větší než nebo rovna hodnotě set nebo multiset – objekt na pravé straně.|
 
 ### <a name="specialized-template-functions"></a>Specializované funkce šablon
 
-|Nastavit verzi|Multiset verze|Popis|
+|Nastavit verzi|Multiset – verze|Popis|
 |-----------------|----------------------|-----------------|
-|[Swap](../standard-library/set-functions.md#swap)|[swap (multiset)](../standard-library/set-functions.md#swap_multiset)|Elementy dvě sady nebo multisets výměny.|
+|[Prohození](../standard-library/set-functions.md#swap)|[swap (multiset)](../standard-library/set-functions.md#swap_multiset)|Vymění prvky dvou sad nebo multisets.|
 
 ### <a name="classes"></a>Třídy
 
 |Třída|Popis|
 |-|-|
-|[set – třída](../standard-library/set-class.md)|Používá pro ukládání a načítání dat z kolekce, ve kterém jsou jedinečné hodnoty elementů obsažených a sloužit jako klíčové hodnoty, podle které data automaticky řazení.|
-|[multiset – třída](../standard-library/multiset-class.md)|Používá pro ukládání a načítání dat z kolekce, v kterém hodnoty elementů obsažených nemusí být jedinečný a které budou sloužit jako klíčové hodnoty, podle které data automaticky řazení.|
+|[set – třída](../standard-library/set-class.md)|Používá pro ukládání a načítání dat z kolekce, ve kterém hodnoty elementů obsažených jsou jedinečné a slouží jako klíčové hodnoty, podle kterých jsou data automaticky uspořádávána.|
+|[multiset – třída](../standard-library/multiset-class.md)|Používá pro ukládání a načítání dat z kolekce, ve kterém hodnoty elementů obsažených nemusí být jedinečný a ve které slouží jako klíčové hodnoty, podle kterých jsou data automaticky uspořádávána.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Odkaz na soubory hlaviček](../standard-library/cpp-standard-library-header-files.md)<br/>
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

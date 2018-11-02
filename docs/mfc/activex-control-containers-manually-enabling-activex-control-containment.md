@@ -1,27 +1,17 @@
 ---
-title: 'Kontejnery ovládacích prvků ActiveX: Ruční povolení uzavření ovládacího prvku ActiveX | Dokumentace Microsoftu'
-ms.custom: ''
+title: 'ActiveX – kontejnery ovládacích prvků: Ruční povolení uzavření ovládacího prvku ActiveX'
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - AfxEnableControlContainer method [MFC]
 - ActiveX control containers [MFC], enabling
 - ActiveX controls [MFC], enabling containers
 ms.assetid: 833bcde9-c9ad-4709-ad12-2fc2150fb6a5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9fc9b97e47b64f9f4d60bf45afe9628b11c657c8
-ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
+ms.openlocfilehash: 1fdf27975516715ea350af1f917eb43179f3e6d3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50204675"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50510116"
 ---
 # <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>ActiveX – kontejnery ovládacích prvků: Ruční povolení uzavření ovládacího prvku ActiveX
 

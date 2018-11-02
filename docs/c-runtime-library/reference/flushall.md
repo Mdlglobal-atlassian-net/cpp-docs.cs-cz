@@ -1,10 +1,6 @@
 ---
-title: _flushall – | Microsoft Docs
-ms.custom: ''
+title: _flushall
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _flushall
 apilocation:
@@ -22,28 +18,22 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _flushall
-dev_langs:
-- C++
 helpviewer_keywords:
 - flushall function
 - flushing streams
 - streams, flushing
 - _flushall function
 ms.assetid: 2cd73562-6d00-4ca2-b13c-80d0ae7870b5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7fb094e2f99e0554320df69946470f42f461819d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: de8caf30568816f41441f5d9487293c346d2bff1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398019"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466235"
 ---
 # <a name="flushall"></a>_flushall
 
-Počet vyprázdnění všechny datové proudy; Vymaže všechny vyrovnávací paměti.
+Vyprázdní všechny datové proudy; Vymaže všechny vyrovnávací paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -53,17 +43,17 @@ int _flushall( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_flushall –** vrátí počet otevřete datových proudů (vstup a výstup). Neexistuje žádný návratový chyby.
+**_flushall –** vrátí počet otevřených datových proudů (vstup a výstup). Není vrácena žádná chyba.
 
 ## <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení **_flushall –** funkce zapisuje do příslušné soubory obsahu vyrovnávacích pamětí všechny přidružené otevřít výstupní datové proudy. Všechny vyrovnávací paměti přidružené otevřete vstupní datové proudy vyjmuty z jejich aktuálního obsahu. (Tyto vyrovnávací paměti se obvykle spravuje podle operačního systému, která určuje optimální čas automaticky zapsat data na disk: Pokud vyrovnávací paměť je plná, když datový proud je uzavřen nebo když program ukončí normálně bez zavření datové proudy.)
+Ve výchozím nastavení **_flushall –** funkce zapíše do příslušné soubory obsah všech vyrovnávacích pamětí přidružený otevřený výstupní datové proudy. Zrušte zaškrtnutí všech vyrovnávacích pamětí přidružený otevřený vstupní datové proudy jejich aktuální obsah. (Tyto vyrovnávací paměti jsou obvykle udržuje operačního systému, který určuje optimální čas automaticky zapisovat data na disk: Pokud vyrovnávací paměť je plná, když datový proud je uzavřen nebo když program skončí obvykle bez zavření datové proudy.)
 
-Pokud pro čtení a následně **_flushall –**, nová data načítají z vstupní soubory do vyrovnávací paměti. Všechny datové proudy zůstanou otevřené po zavolání **_flushall –**.
+Pokud se čtení následuje volání **_flushall –**, je nová data číst ze vstupních souborů do vyrovnávací paměti. Všechny datové proudy zůstaly otevřené po volání **_flushall –**.
 
-Funkce běhové knihovny k potvrzení na disku umožňuje Ujistěte se, že je důležitá data zapsána přímo na disku, nikoli do vyrovnávací paměti operačního systému. Bez přepisování existujícího programu, můžete povolit tuto funkci pomocí propojení objektu soubory programu s Commode.obj. Ve výsledném spustitelného souboru, volá, aby se **_flushall –** zapisovat obsah všech vyrovnávací paměti na disk. Pouze **_flushall –** a [fflush –](fflush.md) jsou ovlivněné Commode.obj.
+Funkce potvrzení na disku knihovny run-time umožňuje zajistit, že důležitá data se zapisují přímo na disk, nikoli do vyrovnávací paměti operačního systému. Bez přepsání existující program, můžete povolit tuto funkci tak propojování souborů objektů programu s Commode.obj. Výsledný spustitelný soubor volá do **_flushall –** zapisovat obsah všech vyrovnávací paměti na disk. Pouze **_flushall –** a [fflush –](fflush.md) jsou ovlivněny Commode.obj.
 
-Informace o řízení funkce potvrzení na disku naleznete v tématu [vstupně-výstupní datový proud](../../c-runtime-library/stream-i-o.md), [fopen –](fopen-wfopen.md), a [_fdopen –](fdopen-wfdopen.md).
+Informace o řízení funkce potvrzení na disku naleznete v tématu [vstupně-výstupní operace Stream](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md), a [_fdopen –](fdopen-wfdopen.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -71,7 +61,7 @@ Informace o řízení funkce potvrzení na disku naleznete v tématu [vstupně-v
 |--------------|---------------------|
 |**_flushall**|\<stdio.h>|
 
-Další informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -95,9 +85,9 @@ int main( void )
 There were 3 streams flushed
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Datový proud vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
 [_commit](commit.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>
 [fflush](fflush.md)<br/>

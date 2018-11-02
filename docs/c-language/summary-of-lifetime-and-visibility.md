@@ -1,26 +1,16 @@
 ---
-title: Souhrn doby platnosti a viditelnosti | Dokumentace Microsoftu
-ms.custom: ''
+title: Souhrn doby platnosti a viditelnosti
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6ef73c7e9592f1365e946d32d2aecc5894899316
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5bb53db4d6bcb9b4694fddd9abd5471c6c6197c7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061523"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50474799"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>Souhrn doby platnosti a viditelnosti
 
@@ -28,7 +18,7 @@ V následující tabulce je uveden seznam vlastností doby platnosti a viditelno
 
 ### <a name="summary-of-lifetime-and-visibility"></a>Souhrn doby platnosti a viditelnosti
 
-|Atributy:<br /><br /> úroveň|Položka|Třída úložiště<br /><br /> Specifikátor|Výsledek:<br /><br /> Doba platnosti|Viditelnost|
+|Atributy:<br /><br /> úroveň|Položka|Třída úložiště<br /><br /> Specifikátor|Výsledek:<br /><br /> Životnost|Viditelnost|
 |---------------------------|----------|----------------------------------|--------------------------|----------------|
 |Rozsah souboru|Definice proměnných|**static**|Globální|Zbývající část zdrojového souboru, ve kterém se vyskytuje|
 ||Deklarace proměnné|**extern**|Globální|Zbývající část zdrojového souboru, ve kterém se vyskytuje|

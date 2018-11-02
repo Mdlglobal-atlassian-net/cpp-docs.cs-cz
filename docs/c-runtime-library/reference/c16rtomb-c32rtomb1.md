@@ -1,11 +1,6 @@
 ---
-title: c16rtomb c32rtomb1 | Microsoft Docs
-ms.custom: ''
+title: c16rtomb c32rtomb1
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - c16rtomb
 - c32rtomb
@@ -27,26 +22,20 @@ f1_keywords:
 - c32rtomb
 - uchar/c16rtomb
 - uchar/c32rtomb
-dev_langs:
-- C++
 helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3282fb13e5b59ad3214c67410eef5186687114e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d735363bbb317b06c1ebc73a2b0678479a243ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394537"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536588"
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb c32rtomb
 
-Převeďte UTF-16 nebo UTF-32 široká znaková vícebajtových znaků v aktuální národní prostředí.
+Převeďte na UTF-16 nebo UTF-32 širokého znaku vícebajtového znaku v aktuálním národním prostředí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,25 +55,25 @@ size_t c32rtomb(
 ### <a name="parameters"></a>Parametry
 
 *mbchar*<br/>
-Ukazatel na pole k uložení vícebajtových znaků převeden.
+Ukazatel na pole pro uložení převedený vícebajtového znaku.
 
 *wchar*<br/>
-Široká znaková převést.
+Široký znak pro převod.
 
 *Stav*<br/>
-Ukazatel na **mbstate_t** objektu.
+Ukazatel **mbstate_t** objektu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Počet bajtů, které jsou uložené v objektu pole *mbchar*, včetně jakýchkoli pořadí shift. Pokud *wchar* není platný znak široké, hodnota (**size_t –**)(-1) se vrátí, **errno** je nastaven na **eilseq –** a hodnota *stavu* není zadáno.
+Počet bajtů uložených v objektu array *mbchar*, včetně nějaké sekvence shift. Pokud *wchar* není platný široký znak, hodnotu (**size_t**)(-1) je vrácena, **errno** je nastavena na **EILSEQ**a hodnota *stavu* není zadána.
 
 ## <a name="remarks"></a>Poznámky
 
-**C16rtomb** slouží k převodu znakové sady UTF-16 znaků *wchar* ekvivalentní vícebajtových znaků úzké pořadí v aktuální národní prostředí. Pokud *mbchar* není ukazatele null, funkce úložiště převedený pořadí v poli objektu, na kterou odkazuje *mbchar*. Až **mb_cur_max –** bajtů, které jsou uložené v *mbchar*, a *stavu* nastavena na výsledný stav vícebajtové shift.    Pokud *wchar* je null široká znaková potřeba posloupnost obnovení je uložený stav počáteční shift, v případě potřeby následuje znak hodnoty null a *stavu* nastavena do stavu počáteční převod. **C32rtomb** je stejný jako funkce, ale převádí znak znakové sady UTF-32.
+**C16rtomb** funkce převede znak kódování UTF-16 *wchar* pořadí ekvivalentních vícebajtového znaku úzký v aktuálním národním prostředí. Pokud *mbchar* není ukazatel s hodnotou null, funkce úložiště převedený pořadí v objektu pole odkazované *mbchar*. Až **MB_CUR_MAX** bajty jsou uloženy v *mbchar*, a *stavu* je nastavena na výsledný stav vícebajtové shift.    Pokud *wchar* je null široký znak, pořadí požadované pro obnovení stav počáteční posun je uložen, v případě potřeby, za nímž následuje znak null a *stavu* nastavena do stavu počáteční převodu. **C32rtomb** funkcí jsou identické, ale převede znak kódování UTF-32.
 
-Pokud *mbchar* je ukazatel s hodnotou null, chování je ekvivalentní volání funkce, která nahradí vnitřní vyrovnávací paměť pro *mbchar* a široké znak hodnoty null pro *wchar*.
+Pokud *mbchar* je ukazatel s hodnotou null, je ekvivalentní volání funkce, která nahradí vnitřní vyrovnávací paměť pro chování *mbchar* a široké znaky null, pro *wchar*.
 
-*Stavu* objekt převod stavu lze provést následující volání této funkce a dalších funkcí s možností restartování, které Udržovat stav shift výstup vícebajtové znaky. Výsledky nejsou definovány, když kombinovat používání funkcí s možností restartování a bez nabízet možnost restartování, nebo pokud volání **setlocale** se mezi volání funkcí s možností restartování.
+*Stavu* převodu stav objektu umožňuje zajistit následných volání této funkce a další restartovatelnou službu funkcí, které zajišťují shift stav výstupní vícebajtové znaky. Výsledky nejsou definovány, když je kombinovat použití funkcí restartování a bez restartování, nebo pokud volání **setlocale** mezi restartovatelnou službu funkce volání.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -92,9 +81,9 @@ Pokud *mbchar* je ukazatel s hodnotou null, chování je ekvivalentní volání 
 |-------------|---------------------|
 |**c16rtomb**, **c32rtomb**|C, C++: \<uchar.h >|
 
-Informace o kompatibilitě, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
+Informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>

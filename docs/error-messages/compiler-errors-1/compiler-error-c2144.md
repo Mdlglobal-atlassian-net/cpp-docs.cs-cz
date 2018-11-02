@@ -1,43 +1,33 @@
 ---
-title: C2144 Chyba kompilátoru | Microsoft Docs
-ms.custom: ''
+title: Chyba kompilátoru C2144
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2144
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 60a6b0a6019ab6ddf1a403d2cbd4f6ef96b2a865
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f6472fc70ee4a86bed1422941e758127009f14cb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171143"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50483327"
 ---
-# <a name="compiler-error-c2144"></a>C2144 chyby kompilátoru
+# <a name="compiler-error-c2144"></a>Chyba kompilátoru C2144
 
-> Chyba syntaxe: '*typ*'musí předcházet'*tokenu*.
+> Chyba syntaxe: "*typ*"musí předcházet párový příkaz"*token*.
 
-Kompilátor očekává *tokenu* a najít *typ* místo.
+Kompilátor očekává *token* a zjistili jsme *typ* místo.
 
-Tato chyba může být způsobeno chybí pravé složené závorce, pravé závorky nebo středníkem.
+Tato chyba může být způsobeno chybí pravá složená závorka, pravá závorka nebo středníkem.
 
-C2144 může dojít také při pokusu vytvořit od CLR klíčové slovo, které obsahuje prázdný znak.
+C2144 může dojít také při pokusu o vytvoření makra z – klíčové slovo CLR, který obsahuje prázdný znak.
 
-C2144 také může zobrazit, pokud se pokoušíte předávání typů. V tématu [předávání typu (C + +/ CLI)](../../windows/type-forwarding-cpp-cli.md) Další informace.
+C2144 také může zobrazit, pokud se pokoušíte předávání typů. Zobrazit [předávání typu (C + +/ CLI)](../../windows/type-forwarding-cpp-cli.md) Další informace.
 
 ## <a name="examples"></a>Příklady
 
-Následující ukázka generuje C2144 a ukazuje způsob, jak opravit:
+Následující ukázka generuje C2144 a ukazuje způsob, jak ho opravit:
 
 ```cpp
 // C2144.cpp
@@ -50,7 +40,7 @@ REF struct MyStruct0;   // C2144
 REF1 MyStruct1;
 ```
 
-Následující ukázka generuje C2144 a ukazuje způsob, jak opravit:
+Následující ukázka generuje C2144 a ukazuje způsob, jak ho opravit:
 
 ```cpp
 // C2144_2.cpp

@@ -1,38 +1,28 @@
 ---
-title: Univerzální C runtime rutiny podle kategorie | Microsoft Docs
-ms.custom: ''
+title: Universal C runtime rutiny podle kategorie
 ms.date: 04/06/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.runtime
-dev_langs:
-- C++
 helpviewer_keywords:
 - routines, run-time
 - functions [CRT], run-time
 - categories, run-time functions
 - functions [CRT]
 ms.assetid: de6f5ac4-2226-4dad-be9f-deeb31138c9d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fd18cf5cfdd2583e866045000ddcc992a573b199
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f81ad76a535cc4e4f5aa740e1501d3ffd323e2f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412368"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499577"
 ---
-# <a name="universal-c-runtime-routines-by-category"></a>Univerzální C runtime rutiny podle kategorie
+# <a name="universal-c-runtime-routines-by-category"></a>Universal C runtime rutiny podle kategorie
 
-Tato část uvádí a popisuje Universal C runtime (UCRT) knihovny rutiny podle kategorie. Pro usnadnění práce odkaz jsou uvedeny některé rutiny ve více než jednu kategorii. Rutiny vícebajtových znaků a široká charakterová rutiny jsou seskupené se svými protějšky znakovou, pokud existují.
+Tato část uvádí a popisuje rutiny knihoven Universal C runtime (UCRT) podle kategorie. Pro usnadnění práce odkaz jsou uvedeny některé rutiny ve více než jednu kategorii. Vícebajtové a širokého znaku rutiny jsou seskupeny protějšky jednobajtový znak, pokud existují.
 
-## <a name="ucrt-library-routine-categories"></a>UCRT knihovny běžných kategorií
+## <a name="ucrt-library-routine-categories"></a>Kategorie rutiny UCRT knihovny
 
-Hlavní kategorie rutiny knihovny UCRT jsou:
+Jsou hlavní kategorie rutiny UCRT knihoven:
 
 |||
 |-|-|
@@ -49,6 +39,6 @@ Hlavní kategorie rutiny knihovny UCRT jsou:
 |[Vyhledávání a třídění](../c-runtime-library/searching-and-sorting.md)|[Zacházení s řetězci](../c-runtime-library/string-manipulation-crt.md)|
 |[Systémová volání](../c-runtime-library/system-calls.md)|[Správa času](../c-runtime-library/time-management.md)|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace knihovny CRT](../c-runtime-library/c-run-time-library-reference.md)<br/>
