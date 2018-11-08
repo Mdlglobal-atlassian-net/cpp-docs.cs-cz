@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dynamic column binding
 - providers [C++], dynamic column binding
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
-ms.openlocfilehash: 5ceb3b21d59bef3dcbe9d5b53e6a9b779b8b381f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f681907360812f51b34b187ee0ece776816cc82
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509315"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51264603"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>Dynamické vazby sloupců ve zprostředkovateli
 
@@ -19,7 +19,7 @@ Ujistěte se, že si opravdu potřebujete dynamická vazba sloupců. To může b
 
 - Sady řádků sloupců nejsou definovány v době kompilace.
 
-- Podporujete element jako je například záložky, který přidá sloupce.
+- Podporujete element jako je například záložku, která přidá sloupce.
 
 ## <a name="to-implement-dynamic-column-binding"></a>K implementaci dynamická vazba sloupců
 

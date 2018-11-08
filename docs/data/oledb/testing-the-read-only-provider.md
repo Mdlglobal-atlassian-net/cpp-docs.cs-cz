@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB providers, calling
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-ms.openlocfilehash: 18edc1ae13ef66f9646edbcf1d0fdfdbe0586cff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cda4efcdb26499f910ad875b2bf7b7504a825cf6
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611208"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265097"
 ---
 # <a name="testing-the-read-only-provider"></a>Testování zprostředkovatele pouze pro čtení
 
@@ -24,11 +24,11 @@ V příkladu v tomto tématu vytvoří aplikaci výchozí Průvodce aplikací kn
 
 1. Na **souboru** nabídky, klikněte na tlačítko **nový**a potom klikněte na tlačítko **projektu**.
 
-1. V **typy projektů** podokně, vyberte **projekty Visual C++** složky. V **šablony** vyberte **aplikace knihovny MFC**.
+1. V **typy projektů** podokně, vyberte **nainstalováno** > **Visual C++** > **MFC nebo ATL** složky. V **šablony** vyberte **aplikace knihovny MFC**.
 
 1. Název projektu zadejte *TestProv*a potom klikněte na tlačítko **OK**.
 
-   Zobrazí se Průvodce aplikací knihovny MFC.
+   **Aplikace knihovny MFC** průvodce se zobrazí.
 
 1. Na **typ aplikace** stránce **na bázi dialogu**.
 
@@ -37,13 +37,14 @@ V příkladu v tomto tématu vytvoří aplikaci výchozí Průvodce aplikací kn
 > [!NOTE]
 > Aplikace nevyžaduje podporu automatizace, pokud chcete přidat `CoInitialize` v `CTestProvApp::InitInstance`.
 
-Můžete zobrazit a upravit **TestProv** dialogové okno (IDD_TESTPROV_DIALOG) tak, že ho vyberete **zobrazení prostředků**. V dialogovém okně umístěte dvě pole se seznamem, jeden pro každý řetězec v dané sadě řádků. Vypnout vlastnost řazení pro oba seznamy stisknutím kombinace kláves **Alt**+**Enter** Pokud vybraný seznam, kliknutím na tlačítko **styly** kartu a vymazání  **Řazení** zaškrtávací políčko. Také, umístěte **spustit** tlačítko v dialogovém okně Načíst soubor. Dokončené **TestProv** dialogové okno by měl mít dvě pole se seznamem označeny jako "Řetězce 1" a "Řetězec 2"; má také **OK**, **zrušit**, a **spuštění**  tlačítka.
+Můžete zobrazit a upravit **TestProv** dialogové okno (IDD_TESTPROV_DIALOG) tak, že ho vyberete **zobrazení prostředků**. V dialogovém okně umístěte dvě pole se seznamem, jeden pro každý řetězec v dané sadě řádků. Vypnout vlastnost řazení pro oba seznamy stisknutím kombinace kláves **Alt**+**Enter** při výběru pole se seznamem a nastavení **řazení** vlastnost **False**. Také, umístěte **spustit** tlačítko v dialogovém okně Načíst soubor. Dokončené **TestProv** dialogové okno by měl mít dvě pole se seznamem označeny jako "Řetězce 1" a "Řetězec 2"; má také **OK**, **zrušit**, a **spuštění**  tlačítka.
 
 Otevřete soubor hlaviček pro třídu dialogového okna (v tomto případě TestProvDlg.h). Přidejte následující kód do souboru hlaviček (mimo všechny deklarace tříd):
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
 // TestProvDlg.h
+#include <atldbcli.h>  
 
 class CProvider
 {
@@ -68,11 +69,11 @@ Přidat obslužnou rutinu pro **spustit** tlačítko stisknutím kombinace kláv
 ///////////////////////////////////////////////////////////////////////
 // TestProvDlg.cpp
 
-void CtestProvDlg::OnRun()
+void CTestProvDlg::OnRun()
 {
    CCommand<CAccessor<CProvider>> table;
    CDataSource source;
-   CSession   session;
+   CSession session;
 
    if (source.Open("Custom.Custom.1", NULL) != S_OK)
       return;
@@ -91,36 +92,17 @@ void CtestProvDlg::OnRun()
 }
 ```
 
-`CCommand`, `CDataSource`, A `CSession` třídy, které patří k šablonám příjemců OLE DB. Každá třída napodobuje objekt modelu COM ve zprostředkovateli. `CCommand` Přebírá objekt `CProvider` třídy deklarované v souboru hlaviček, jako parametr šablony. `CProvider` Představuje parametr vazby, které používáte pro přístup k datům od poskytovatele. Tady je `Open` kód pro zdroj dat, relace a příkaz:
-
-```cpp
-if (source.Open("Custom.Custom.1", NULL) != S_OK)
-   return;
-
-if (session.Open(source) != S_OK)
-   return;
-
-if (table.Open(session, _T("c:\\samples\\myprov\\myData.txt")) != S_OK)
-   return;
-```
+`CCommand`, `CDataSource`, A `CSession` třídy, které patří k šablonám příjemců OLE DB. Každá třída napodobuje objekt modelu COM ve zprostředkovateli. `CCommand` Přebírá objekt `CProvider` třídy deklarované v souboru hlaviček, jako parametr šablony. `CProvider` Představuje parametr vazby, které používáte pro přístup k datům od poskytovatele. 
 
 Řádky, které se otevřete každý tříd vytváření každý objekt modelu COM ve zprostředkovateli. Chcete-li vyhledat poskytovatele, použijte `ProgID` poskytovatele. Můžete získat `ProgID` z registru systému nebo nahlédněte do souboru Custom.rgs (otevřete adresář poskytovatele, vyhledejte `ProgID` klíč).
 
-Je součástí souboru MyData.txt `MyProv` vzorku. Vytvoříte vlastní soubor, použijte editor a napište sudý počet řetězců, stisknutím klávesy ENTER mezi každého řetězce. Pokud přesunete soubor, změňte název cesty.
+Je součástí souboru MyData.txt `MyProv` vzorku. Vytvořte soubor sami, použití editoru a zadejte sudý počet řetězců, stisknutím klávesy **Enter** mezi každého řetězce. Pokud přesunete soubor, změňte název cesty.
 
 Předat řetězec "c:\\\samples\\\myprov\\\MyData.txt" v `table.Open` řádku. Pokud můžete krokovat s vnořením `Open` volání, uvidíte, že je tento řetězec předat `SetCommandText` metoda ve zprostředkovateli. Všimněte si, `ICommandText::Execute` metodu použít tento řetězec.
 
-Chcete-li načíst data, zavolejte `MoveNext` v tabulce. `MoveNext` volání `IRowset::GetNextRows`, `GetRowCount`, a `GetData` funkce. Pokud neexistují žádné další řádky (to znamená, je větší než aktuální pozici v dané sadě řádků `GetRowCount`), ukončí smyčku:
+Chcete-li načíst data, zavolejte `MoveNext` v tabulce. `MoveNext` volání `IRowset::GetNextRows`, `GetRowCount`, a `GetData` funkce. Pokud neexistují žádné další řádky (to znamená, je větší než aktuální pozici v dané sadě řádků `GetRowCount`), ukončí smyčku.
 
-```cpp
-while (table.MoveNext() == S_OK)
-{
-   m_ctlString1.AddString(table.szField1);
-   m_ctlString2.AddString(table.szField2);
-}
-```
-
-Všimněte si, že pokud nejsou žádné další řádky, vrátí DB_S_ENDOFROWSET. Hodnota DB_S_ENDOFROWSET není chyba. Vždy byste měli zkontrolovat S_OK smyčce načtení dat a není použití makra SUCCEEDED.
+Pokud neexistují žádné další řádky, vrátí DB_S_ENDOFROWSET. Hodnota DB_S_ENDOFROWSET není chyba. Vždy byste měli zkontrolovat S_OK smyčce načtení dat a není použití makra SUCCEEDED.
 
 Teď by měl být možné vytvářet a testovat program.
 

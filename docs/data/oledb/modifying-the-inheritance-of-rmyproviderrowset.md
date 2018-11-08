@@ -6,18 +6,18 @@ helpviewer_keywords:
 - inheritance [C++]
 - RCustomRowset
 ms.assetid: 33089c90-98a4-43e7-8e67-d4bb137e267e
-ms.openlocfilehash: 51cca65b6b55de8b628cb5d233ab06f0101f466d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34eb07611ebfff09918d62273d4ca4a8c9cf4f7b
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637954"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265149"
 ---
 # <a name="modifying-the-inheritance-of-rcustomrowset"></a>Úprava dědičnosti třídy RCustomRowset
 
-Chcete-li přidat `IRowsetLocate` rozhraní příklad jednoduchého zprostředkovatele pouze pro čtení, změňte dědičnost `RCustomRowset`. Na začátku `RCustomRowset` dědí z `CRowsetImpl`. Je potřeba upravit tak, aby dědí `CRowsetBaseImpl`.
+Chcete-li přidat `IRowsetLocate` rozhraní příklad jednoduchého zprostředkovatele pouze pro čtení, změňte dědičnost `CCustomRowset`. Na začátku `CCustomRowset` dědí z `CRowsetImpl`. Je potřeba upravit tak, aby dědí `CRowsetBaseImpl`.
 
-Chcete-li to provést, vytvořte novou třídu, `CCustomRowsetImpl`, v CustomRS.h:
+Chcete-li to provést, vytvořte novou třídu, `CCustomRowsetImpl`v *vlastní*RS.h:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -42,13 +42,13 @@ END_COM_MAP()
 
 Tento kód vytvoří mapu rozhraní modelu COM, která říká `CMyRowsetImpl` volat `QueryInterface` pro obě `IRowset` a `IRowsetLocate` rozhraní. Chcete-li získat všechny ostatní sady řádků implementace třídy, odkazy mapy `CMyRowsetImpl` třídy zpět na `CRowsetBaseImpl` třídy definované šablony technologie OLE DB; na mapě používá makro COM_INTERFACE_ENTRY_CHAIN, který informuje šablony technologie OLE DB kontrolovat mapy modelu COM v `CRowsetBaseImpl` v reakci `QueryInterface` volání.
 
-Nakonec propojit `RAgentRowset` k `CMyRowsetBaseImpl` úpravou `RAgentRowset` dědit z `CMyRowsetImpl`, následujícím způsobem:
+Nakonec propojit `CCustomRowset` k `CMyRowsetBaseImpl` úpravou `CCustomRowset` dědit z `CMyRowsetImpl`, následujícím způsobem:
 
 ```cpp
-class RAgentRowset : public CMyRowsetImpl<RAgentRowset, CAgentMan, CCustomCommand>
+class CCustomRowset : public CMyRowsetImpl<CCustomRowset, CCustomWindowsFile, CCustomCommand>
 ```
 
-`RAgentRowset` Teď můžete použít `IRowsetLocate` rozhraní s využitím rest implementace třídy sady řádků.
+`CCustomRowset` Teď můžete použít `IRowsetLocate` rozhraní s využitím rest implementace třídy sady řádků.
 
 Když to uděláte, můžete [dynamické určování sloupců vrácených příjemci](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).
 

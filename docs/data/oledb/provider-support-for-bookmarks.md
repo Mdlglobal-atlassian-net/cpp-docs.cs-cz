@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-ms.openlocfilehash: 4a0a0ea51cf6ac347cd79cb777f9cb6a51670063
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 326a52805cb78a3f31141d3eac6a0942a7fee477
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584623"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51264720"
 ---
 # <a name="provider-support-for-bookmarks"></a>Podpora zprostředkovatele pro záložky
 
@@ -60,7 +60,7 @@ Je také potřeba připojit mapu do `CRowsetImpl` třídy. Přidat připojení v
 
 A konečně, zpracovat `IColumnsInfo::GetColumnsInfo` volání. Obvykle by k tomu použít makra PROVIDER_COLUMN_ENTRY. Příjemce však může být vhodné použít záložky. Musíte změnit sloupce, které vrátí poskytovateli v závislosti na tom, zda uživatel požádá o záložku.
 
-Pro zpracování `IColumnsInfo::GetColumnsInfo` volání, odstraňte `PROVIDER_COLUMN` si namapují `CTextData` třídy. Makro Provider Column Map definuje funkci `GetColumnInfo`. Je třeba definovat vlastní `GetColumnInfo` funkce. Deklarace funkce by měl vypadat nějak takto:
+Zpracování `IColumnsInfo::GetColumnsInfo` volání, odstraňte PROVIDER_COLUMN mapu v `CTextData` třídy. Makro Provider Column Map definuje funkci `GetColumnInfo`. Definujte svoji vlastní `GetColumnInfo` funkce. Deklarace funkce by měl vypadat nějak takto:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -78,7 +78,7 @@ class CTextData
 };
 ```
 
-Pak implementovat `GetColumnInfo` funkce v souboru CustomRS.cpp následujícím způsobem:
+Pak implementovat `GetColumnInfo` fungovat v *vlastní*RS.cpp souboru následujícím způsobem:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////
@@ -119,7 +119,6 @@ ATLCOLUMNINFO* CommonGetColInfo(IUnknown* pPropsUnk, ULONG* pcCols)
                         DBCOLUMNFLAGS_ISBOOKMARK)
          ulCols++;
       }
-
    }
 
    // Next set the other columns up.
@@ -151,9 +150,9 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 
 `GetColumnInfo` nejprve zkontroluje, zda vlastnost s názvem `DBPROP_IRowsetLocate` nastavena. OLE DB má vlastnosti pro každý volitelný rozhraní mimo objektu sady řádků. Pokud chcete použít jeden z těchto volitelných rozhraní chce příjemce, nastaví vlastnost na hodnotu true. Zprostředkovatel můžete zkontrolovat tuto vlastnost a zvláštní akci na jejím základě.
 
-Ve vaší implementaci získat vlastnost pomocí ukazatele na objekt příkazu. `pThis` Ukazatel představuje třídu příkazu nebo sady řádků. Vzhledem k tomu, že používáte šablony, musíte předat to jako `void` ukazatel nebo kód nebude zkompilován.
+Ve vaší implementaci získat vlastnost pomocí ukazatele na objekt příkazu. `pThis` Ukazatel představuje třídu příkazu nebo sady řádků. Vzhledem k tomu, že používáte šablony, musíte předat to jako **void** ukazatel nebo kód nebude kompilovat.
 
-Zadejte statického pole obsahující informace o sloupci. Pokud uživatel nechce sloupec záložky, položky v poli nevyužité. Můžou dynamicky alokovat toto pole, ale je třeba Ujistěte se, že ke zničení správně. Tento příklad definuje a používá makra ADD_COLUMN_ENTRY a ADD_COLUMN_ENTRY_EX vložení informací do pole. Makra můžete přidat do souboru CustomRS.H, jak je znázorněno v následujícím kódu:
+Zadejte statického pole pro uložení informace o sloupci. Pokud uživatel nechce sloupec záložky, položky v poli nevyužité. Můžou dynamicky alokovat toto pole, ale je třeba Ujistěte se, že ke zničení správně. Tento příklad definuje a používá makra ADD_COLUMN_ENTRY a ADD_COLUMN_ENTRY_EX vložení informací do pole. Můžete přidat maker *vlastní*RS. H souboru, jak je znázorněno v následujícím kódu:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -236,9 +235,9 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 }
 ```
 
-**Při** smyčka obsahuje kód pro volání `Compare` metodu `IRowsetLocate` rozhraní. Kód, který máte by měly vždy předat, protože při porovnávání přesně stejné záložky. Uložte také jednu záložku v dočasné proměnné tak, aby ho po můžete použít **při** smyčky dokončí volání `MoveToBookmark` funkce v šablonách příjemců. `MoveToBookmark` Volání funkce `GetRowsAt` metoda ve `IRowsetLocate`.
+**Při** smyčka obsahuje kód pro volání `Compare` metodu `IRowsetLocate` rozhraní. Protože je srovnání přesně stejné záložky, by měly vždy předat kód, který máte. Uložte také jednu záložku v dočasné proměnné tak, aby ho po můžete použít **při** smyčky dokončí volání `MoveToBookmark` funkce v šablonách příjemců. `MoveToBookmark` Volání funkce `GetRowsAt` metoda ve `IRowsetLocate`.
 
-Také musíte aktualizovat záznam uživatele v příjemci. Přidejte záznam do třídy pro zpracování záložky a položky v `COLUMN_MAP`:
+Také musíte aktualizovat záznam uživatele v příjemci. Přidejte záznam do třídy pro zpracování záložku a položku v COLUMN_MAP:
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////

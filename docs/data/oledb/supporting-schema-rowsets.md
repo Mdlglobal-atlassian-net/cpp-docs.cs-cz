@@ -7,16 +7,16 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: 79eafef2f73d95c645eb12855c1918a39b76d26e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8c96021b93a35ae9fd10503e78401bbac8abeb7
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512525"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51264889"
 ---
 # <a name="supporting-schema-rowsets"></a>Podpora sad řádků schématu
 
-Sady řádků schématu povolení uživatelům získat informace o úložišti dat bez znalosti jeho základní strukturu nebo schéma. Úložiště dat může mít například tabulky, které jsou uspořádány do uživatelem definované hierarchie, aby se žádný způsob, jak zajistit znalosti o schématu s výjimkou tím, že jeho čtení. (Další příklad, mějte na paměti, že průvodců aplikace Visual C++ pomocí sad řádků schématu generovat přístupové objekty pro spotřebitele.) Objekt relace poskytovatele umožňující příjemci k tomu zveřejňuje metody na [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) rozhraní. V aplikacích Visual C++, použijte [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) třídu pro implementaci `IDBSchemaRowset`.
+Sady řádků schématu umožní uživatelům získat informace o úložišti dat bez znalosti jeho základní strukturu nebo schéma. Úložiště dat může mít například tabulky, které jsou uspořádány do uživatelem definované hierarchie, aby se žádný způsob, jak zajistit znalosti o schématu s výjimkou tím, že jeho čtení. (Jako například průvodců aplikace Visual C++ pomocí sad řádků schématu generovat přístupové objekty pro spotřebitele.) Objekt relace poskytovatele umožňující příjemci k tomu zveřejňuje metody na [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) rozhraní. V aplikacích Visual C++, použijte [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) třídu pro implementaci `IDBSchemaRowset`.
 
 `IDBSchemaRowsetImpl` podporuje následující způsoby:
 
@@ -32,7 +32,7 @@ Sady řádků schématu povolení uživatelům získat informace o úložišti d
 
 ## <a name="atl-ole-db-provider-wizard-support"></a>Podpora průvodce pro zprostředkovatele ATL OLE DB
 
-Průvodce zprostředkovatelem ATL OLE DB vytvoří tři třídy schématu v hlavičkovém souboru relace:
+**Průvodce zprostředkovatelem ATL OLE DB** vytvoří tři třídy schématu v hlavičkovém souboru relace:
 
 - **C**<em>ShortName</em>**SessionTRSchemaRowset**
 
@@ -42,11 +42,11 @@ Průvodce zprostředkovatelem ATL OLE DB vytvoří tři třídy schématu v hlav
 
 Tyto třídy reagovat na žádosti uživatelů pro informace o schématu; Všimněte si, že specifikaci OLE DB vyžaduje podporovat tyto tři sady řádků schématu:
 
-- **C**<em>ShortName</em>**SessionTRSchemaRowset** zpracovává požadavky pro informace o tabulce ( `DBSCHEMA_TABLES` sada řádků schématu).
+- **C**<em>ShortName</em>**SessionTRSchemaRowset** zpracovává požadavky pro informace o tabulce (DBSCHEMA_TABLES sadu řádků schématu).
 
-- **C**<em>ShortName</em>**SessionColSchemaRowset** zpracovává požadavky pro informace o sloupcích ( `DBSCHEMA_COLUMNS` sada řádků schématu). Průvodce poskytuje ukázková implementace pro tyto třídy, které vracejí informace o schématu pro zprostředkovatele DOS.
+- **C**<em>ShortName</em>**SessionColSchemaRowset** zpracovává požadavky pro informace o sloupcích (sada řádků schématu DBSCHEMA_COLUMNS). Průvodce poskytuje ukázková implementace pro tyto třídy, které vracejí informace o schématu pro zprostředkovatele DOS.
 
-- **C**<em>ShortName</em>**SessionPTSchemaRowset** zpracovává požadavky schématu informace o typu zprostředkovatele rozhraní ( `DBSCHEMA_PROVIDER_TYPES` sada řádků schématu). Vrátí výchozí implementace zadaným průvodcem `S_OK`.
+- **C**<em>ShortName</em>**SessionPTSchemaRowset** zpracovává požadavky schématu informace o typu zprostředkovatele rozhraní (DBSCHEMA_PROVIDER_TYPES sadu řádků schématu). Výchozí implementace zadaným průvodcem vrátí hodnotu S_OK.
 
 Můžete přizpůsobit tyto třídy pro zpracování informací o schématu pro poskytovatele:
 
@@ -70,9 +70,9 @@ BEGIN_SCHEMA_MAP(CUpdateSession)
 END_SCHEMA_MAP()
 ```
 
-Pro podporu `IDBSchemaRowset`, musí podporovat `DBSCHEMA_TABLES`, `DBSCHEMA_COLUMNS`, a `DBSCHEMA_PROVIDER_TYPES`. Můžete přidat další sady řádků schématu na vašem uvážení.
+Pro podporu `IDBSchemaRowset`, musí podporovat DBSCHEMA_TABLES DBSCHEMA_COLUMNS a DBSCHEMA_PROVIDER_TYPES. Můžete přidat další sady řádků schématu na vašem uvážení.
 
-Deklarovat třídu sady řádků schématu s `Execute` metody, jako `CUpdateSessionTRSchemaRowset` v UpdatePV:
+Deklarovat třídu sady řádků schématu s `Execute` metody, jako `CUpdateSessionTRSchemaRowset` v `UpdatePV`:
 
 ```cpp
 class CUpdateSessionTRSchemaRowset :
@@ -84,33 +84,33 @@ class CUpdateSessionTRSchemaRowset :
                     ULONG cRestrictions, const VARIANT* rgRestrictions)
 ```
 
-Všimněte si, že `CUpdateSession` dědí z `IDBSchemaRowsetImpl`, takže má metody zpracování omezení. Pomocí `CSchemaRowsetImpl`, deklarujte tři podřízené třídy (uvedené v mapě schématu výše): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset`, a `CUpdateSessionPTSchemaRowset`. Každá z těchto podřízených tříd má `Execute` metoda, která zpracovává jeho odpovídající sadu omezení (kritéria vyhledávání). Každý `Execute` metoda srovnává hodnoty `cRestrictions` a `rgRestrictions` parametry. Zobrazit popis těchto parametrů v [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).
+`CUpdateSession` dědí z `IDBSchemaRowsetImpl`, takže má metody zpracování omezení. Pomocí `CSchemaRowsetImpl`, deklarujte tři podřízené třídy (uvedené v mapě schématu výše): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset`, a `CUpdateSessionPTSchemaRowset`. Každá z těchto podřízených tříd má `Execute` metoda, která zpracovává jeho odpovídající sadu omezení (kritéria vyhledávání). Každý `Execute` metoda srovnává hodnoty *cRestrictions* a *rgRestrictions* parametry. Zobrazit popis těchto parametrů v [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).
 
-Další informace o tom, které odpovídají omezení řádků konkrétní schématu naleznete v tabulce sada řádků schématu GUID v [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) v *OLE DB referenční informace pro programátory* v Windows SDK.
+Další informace o tom, které odpovídají omezení řádků konkrétní schématu naleznete v tabulce sada řádků schématu GUID v [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) v **OLE DB referenční informace pro programátory** v sadě Windows SDK .
 
-Například, pokud je podporována **TABLE_NAME** omezení `DBSCHEMA_TABLES`, provedli byste následující:
+Například pokud se podporuje omezení TABLE_NAME na DBSCHEMA_TABLES, provedli byste následující:
 
-Nejprve vyhledat `DBSCHEMA_TABLES` a podívejte se, že podporuje čtyři omezení (v pořadí).
+Nejprve vyhledat DBSCHEMA_TABLES a podívejte se, že podporuje čtyři omezení (v pořadí).
 
 |Omezení sady řádků schématu|Hodnota omezení|
 |-------------------------------|-----------------------|
-|**TABLE_CATALOG**|0x1 (binární 1)|
-|**TABLE_SCHEMA**|0x2 (binární 10)|
-|**TABLE_NAME**|0x4 (binární 100)|
-|**TABLE_TYPE**|0x8 (binární 1000)|
+|TABLE_CATALOG|0x1 (binární 1)|
+|TABLE_SCHEMA|0x2 (binární 10)|
+|TABLE_NAME|0x4 (binární 100)|
+|TABLE_TYPE|0x8 (binární 1000)|
 
-V dalším kroku Všimněte si, že jeden bit pro každé omezení. Vzhledem k tomu, že chcete zajistit podporu **TABLE_NAME** pouze vracel 0x4 v `rgRestrictions` elementu. Pokud je podporovaná **TABLE_CATALOG** a **TABLE_NAME**, by vrátil 0x5 (binární 101).
+V dalším kroku je jeden bit pro každé omezení. Vzhledem k tomu, že chcete podporovat pouze TABLE_NAME, vracel 0x4 v `rgRestrictions` elementu. Pokud je Podporovaná TABLE_CATALOG a TABLE_NAME, vracel 0x5 (binární 101).
 
 Ve výchozím nastavení implementace, vrátí hodnotu 0 (nepodporuje žádné omezení) u všech žádostí. UpdatePV je příkladem zprostředkovatele, který nepodporuje omezení.
 
 ### <a name="example"></a>Příklad
 
-Tento kód je převzatý z [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) vzorku. UpdatePv podporuje tři požadované sady řádků schématu: `DBSCHEMA_TABLES`, `DBSCHEMA_COLUMNS`, a `DBSCHEMA_PROVIDER_TYPES`. Jako příklad toho, jak implementovat podporu schématu ve zprostředkovateli, toto téma vás provede implementací `DBSCHEMA_TABLE` sady řádků.
+Tento kód je převzatý z [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) vzorku. `UpdatePv` podporuje tři požadované sady řádků schématu: DBSCHEMA_TABLES DBSCHEMA_COLUMNS a DBSCHEMA_PROVIDER_TYPES. Jako příklad toho, jak implementovat podporu schématu ve zprostředkovateli Toto téma vás provede implementací DBSCHEMA_TABLE sady řádků.
 
 > [!NOTE]
 > Vzorový kód se mohou lišit od zde; uvedeného vzorový kód by měl považovat za aktuálnější verzi.
 
-Prvním krokem při přidávání podpora schématu je určit, která omezení, které chcete podporovat. Pokud chcete zjistit, která omezení jsou k dispozici pro vaši sadu řádků schématu, podívejte se na specifikaci OLE DB pro definici `IDBSchemaRowset`. Následující definici hlavní zobrazí tabulku obsahující název sady řádků schématu, počet omezení a omezení sloupce. Vyberte sadu řádků schématu, které chcete podporovat a poznamenejte si počet omezení a omezení sloupce. Například `DBSCHEMA_TABLES` podporuje čtyři omezení (**TABLE_CATALOG**, **TABLE_SCHEMA**, **TABLE_NAME**, a **TABLE_TYPE** ):
+Prvním krokem při přidávání podpory schématu je určit, která omezení budete podporovat. Pokud chcete zjistit, která omezení jsou k dispozici pro vaši sadu řádků schématu, podívejte se na specifikaci OLE DB pro definici `IDBSchemaRowset`. Následující definici hlavní zobrazí tabulku obsahující název sady řádků schématu, počet omezení a omezení sloupce. Vyberte sadu řádků schématu, které chcete podporovat a poznamenejte si počet omezení a omezení sloupce. Například DBSCHEMA_TABLES podporuje čtyři omezení (TABLE_CATALOG TABLE_SCHEMA, TABLE_NAME a TABLE_TYPE):
 
 ```cpp
 void SetRestrictions(ULONG cRestrictions, GUID* rguidSchema,
@@ -129,25 +129,25 @@ void SetRestrictions(ULONG cRestrictions, GUID* rguidSchema,
 }
 ```
 
-Bit představuje každý sloupec omezení. Pokud chcete zajistit podporu omezení (to znamená, můžete zadávat dotazy pomocí ní), nastavte tento bit na hodnotu 1. Pokud nechcete podporu omezení, nastavte tento bit na hodnotu nula. V řádku výše uvedený kód UpdatePV podporuje **TABLE_NAME** a **TABLE_TYPE** omezení `DBSCHEMA_TABLES` sady řádků. Toto jsou třetí (bitová maska 100) a čtvrtý omezení (bitová maska 1000). Proto je bitové masky pro UpdatePv 1100 (nebo 0x0C):
+Bit představuje každý sloupec omezení. Pokud chcete zajistit podporu omezení (to znamená, můžete zadávat dotazy pomocí ní), nastavte tento bit na hodnotu 1. Pokud nechcete, aby pro podporu omezení, nastavte tento bit na hodnotu nula. Z řádku kódu výše `UpdatePV` podporuje omezení TABLE_NAME a TABLE_TYPE pro DBSCHEMA_TABLES řádků. Toto jsou třetí (bitová maska 100) a čtvrtý omezení (bitová maska 1000). Proto bitové masky pro `UpdatePv` 1100 (nebo 0x0C):
 
 ```cpp
 if (InlineIsEqualGUID(rguidSchema[l], DBSCHEMA_TABLES))
     rgRestrictions[l] = 0x0C;
 ```
 
-Následující `Execute` funkce je podobné těm v pravidelných sady řádků. Budete mít tři argumenty: *pcRowsAffected*, *cRestrictions*, a *rgRestrictions*. *PcRowsAffected* proměnná je výstupní parametr, že zprostředkovatel může vrátit počet řádků v sadě řádků schématu. *CRestrictions* parametr je vstupní parametr obsahující počet omezení uživatelem je předána zprostředkovateli. *RgRestrictions* parametr je pole `VARIANT` hodnoty, které obsahují hodnoty omezení.
+Následující `Execute` funkce je podobné těm v pravidelných sady řádků. Budete mít tři argumenty: *pcRowsAffected*, *cRestrictions*, a *rgRestrictions*. *PcRowsAffected* proměnná je výstupní parametr, že zprostředkovatel může vrátit počet řádků v sadě řádků schématu. *CRestrictions* parametr je vstupní parametr obsahující počet omezení uživatelem je předána zprostředkovateli. *RgRestrictions* je parametr pole hodnot typu VARIANT, které obsahují hodnoty omezení.
 
 ```cpp
 HRESULT Execute(DBROWCOUNT* pcRowsAffected, ULONG cRestrictions,
                 const VARIANT* rgRestrictions)
 ```
 
-`cRestrictions` Je proměnná založená na celkovém počtu omezení pro sadu řádků schématu, bez ohledu na to, zda je zprostředkovatel podporuje. Protože UpdatePv podporuje dvě omezení (třetí a čtvrtý), tento kód jenom vyhledá `cRestrictions` hodnotu větší než nebo rovna hodnotě tři.
+*CRestrictions* je proměnná založená na celkovém počtu omezení pro sadu řádků schématu, bez ohledu na to, zda je zprostředkovatel podporuje. Protože UpdatePv podporuje dvě omezení (třetí a čtvrtý), tento kód jenom vyhledá *cRestrictions* hodnotu větší než nebo rovna hodnotě tři.
 
-Hodnota **TABLE_NAME** omezení je uložen v `rgRestrictions[2]` (třetí omezení v pole s nulovým základem je opět, 2). Je potřeba zkontrolovat, že omezení není VT_EMPTY ve skutečnosti se na ně. Všimněte si, že není roven VT_EMPTY VT_NULL. VT_NULL Určuje platnou hodnotu omezení.
+Hodnota pro omezení TABLE_NAME je uložena v *rgRestrictions [2]* (třetí omezení v pole s nulovým základem je opět, 2). Zkontrolujte, že omezení není VT_EMPTY ve skutečnosti se na ně. Všimněte si, že není roven VT_EMPTY VT_NULL. VT_NULL Určuje platnou hodnotu omezení.
 
-Definice UpdatePv název tabulky není plně kvalifikovaná cesta název do textového souboru. Extrahuje hodnotu omezení a pak se pokusíte otevřít soubor a ujistěte se, že soubor skutečně existuje. Pokud soubor neexistuje, vrátí hodnotu S_OK. To může zdát trochu zpětně ale jaký kód je ve skutečnosti sděluje příjemce je, že nebyly žádné podporované tabulky pomocí zadaného názvu. Vrátit hodnotu S_OK znamená, že se kód správně spustil.
+`UpdatePv` Definice název tabulky není plně kvalifikovaná cesta název do textového souboru. Extrahuje hodnotu omezení a poté otevřete soubor a ujistěte se, že soubor skutečně existuje. Pokud soubor neexistuje, vrátí hodnotu S_OK. To může zdát trochu zpětně ale jaký kód je ve skutečnosti sděluje příjemce je, že nebyly žádné podporované tabulky pomocí zadaného názvu. Vrátit hodnotu S_OK znamená, že se kód správně spustil.
 
 ```cpp
 USES_CONVERSION;
@@ -184,7 +184,7 @@ if (cRestrictions >= 3 && rgRestrictions[2].vt != VT_EMPTY)
 }
 ```
 
-Podpora čtvrtý omezení (**TABLE_TYPE**) je podobný třetí omezení. Zkontrolujte, zda hodnota není VT_EMPTY. Toto omezení se vrátí jenom typ tabulky **tabulky**. K určení platné hodnoty pro `DBSCHEMA_TABLES`, vyhledejte v dodatku B *OLE DB referenční informace pro programátory* v **tabulky** část sady řádků.
+Podpora čtvrtý omezení (TABLE_TYPE) je podobný třetí omezení. Zkontrolujte, zda hodnota není VT_EMPTY. Toto omezení vrátí pouze typ tabulky tabulky. Chcete-li určit platné hodnoty pro DBSCHEMA_TABLES, podívejte **dodatku B** z **OLE DB referenční informace pro programátory** v části sady řádků tabulky.
 
 ```cpp
 // TABLE_TYPE restriction:
@@ -203,7 +203,7 @@ if (cRestrictions >=4 && rgRestrictions[3].vt != VT_EMPTY)
 }
 ```
 
-Toto je ve skutečnosti vytvoříte položku řádku v sadě řádků. Proměnná `trData` odpovídá `CTABLESRow`, struktuře definované v šablonách OLE DB poskytovatele. `CTABLESRow` odpovídá **tabulky** definici sady řádků v dodatku B specifikace technologie OLE DB. Máte jenom jeden řádek přidat, protože najednou může podporovat jenom jedna tabulka.
+Toto je ve skutečnosti vytvoříte položku řádku v sadě řádků. Proměnná `trData` odpovídá `CTABLESRow`, struktuře definované v šablonách OLE DB poskytovatele. `CTABLESRow` odpovídá definici sady řádků tabulky v **dodatku B** specifikace OLE DB. Máte jenom jeden řádek přidat, protože najednou může podporovat jenom jedna tabulka.
 
 ```cpp
 // Bring over the data:
@@ -214,7 +214,7 @@ wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());
 ```
 
-Nastaví UpdatePV pouze tři sloupce: **TABLE_NAME**, **TABLE_TYPE**, a **popis**. Měli byste si poznamenejte si sloupce, které vrací informace, protože tyto informace budete potřebovat, Pokud implementujete `GetDBStatus`:
+`UpdatePV` Nastaví pouze tři sloupce: název_tabulky TABLE_TYPE a popis. Poznamenejte si sloupců, které vrací informace, protože tyto informace budete potřebovat, Pokud implementujete `GetDBStatus`:
 
 ```cpp
     _ATLTRY
@@ -232,7 +232,7 @@ Nastaví UpdatePV pouze tři sloupce: **TABLE_NAME**, **TABLE_TYPE**, a **popis*
 }
 ```
 
-`GetDBStatus` Funkce je velmi důležité pro správné fungování sady řádků schématu. Protože nevracejí data pro každý sloupec v **tabulky** sady řádků, je třeba zadat sloupce, které vrací data pro a které ne.
+`GetDBStatus` Funkce je důležitá pro správné fungování sady řádků schématu. Protože data pro každý sloupec nevracejte v sadě řádků tabulky, budete muset určit sloupce, které vrátí data pro a které ne.
 
 ```cpp
 virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)
@@ -253,9 +253,9 @@ virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)
 }
 ```
 
-Protože vaše `Execute` funkce vrátí data **TABLE_NAME**, **TABLE_TYPE**, a **popis** pole z **tabulky**sady řádků, můžete hledat v dodatku B specifikace technologie OLE DB a určit (podle počtu shora), že jsou řadové číslovky 3, 4 a 6. Pro každý z těchto sloupců vrátí DBSTATUS_S_OK. Pro všechny ostatní sloupce vrátí DBSTATUS_S_ISNULL. Je důležité se vraťte tento stav, protože příjemce je nemusí umět, že se vrátíte hodnotu NULL nebo něco jiného. Znovu Všimněte si, že hodnota NULL není shodná s prázdnou.
+Protože vaše `Execute` funkce vrátí data pro pole TABLE_NAME TABLE_TYPE a popis z řádků tabulky, můžete se podívat **dodatku B** specifikace OLE DB a určit (podle počtu shora) že jsou to řadové číslovky 3, 4 a 6. Pro každý z těchto sloupců vrátí DBSTATUS_S_OK. Pro všechny ostatní sloupce vrátí DBSTATUS_S_ISNULL. Je důležité se vraťte tento stav, protože příjemce je nemusí umět, že se vrátíte hodnotu NULL nebo něco jiného. Znovu si všimněte, že není shodná s prázdnou hodnotu NULL.
 
-Další informace o rozhraní OLE DB schématu sady řádků, najdete v článku [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) rozhraní OLE DB programátora odkazu.
+Další informace o rozhraní OLE DB schématu sady řádků, najdete v článku [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) rozhraní v **OLE DB referenční informace pro programátory**.
 
 Informace o tom, jak můžou zákazníci používají `IDBSchemaRowset` metody, naleznete v tématu [získávání metadat pomocí sad řádků schématu](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).
 

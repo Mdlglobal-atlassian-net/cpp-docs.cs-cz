@@ -4,47 +4,53 @@ ms.date: 10/26/2018
 helpviewer_keywords:
 - user records, editing
 ms.assetid: 36cb9635-067c-4cad-8f85-962f28026f6a
-ms.openlocfilehash: b1bc7ca74ce114f9d901fc5771a376df973f54a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54dfdb347c621cf6f8645feb6d13742f32503f9f
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652332"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51264616"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>Ukládání řetězců ve zprostředkovateli OLE DB
 
-V souboru MyProviderRS.h **Průvodce zprostředkovatelem ATL OLE DB** vytvoří výchozí uživatelský záznam nazvaný `CWindowsFile`. Chcete-li zpracovat dva řetězce, buď upravte `CWindowsFile` nebo přidejte záznam uživatele, jak je znázorněno v následujícím kódu:
+V *vlastní*RS.h, **Průvodce zprostředkovatelem ATL OLE DB** vytvoří výchozí uživatelský záznam nazvaný `CWindowsFile`. Chcete-li zpracovat dva řetězce, upravte `CWindowsFile` jak je znázorněno v následujícím kódu:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
-class CAgentMan: 
+class CCustomWindowsFile:
    public WIN32_FIND_DATA
-   DWORD dwBookmark;              // Add this
-   TCHAR szCommand[256];          // Add this
-   TCHAR szText[256];             // Add this
-   TCHAR szCommand2[256];         // Add this
-   TCHAR szText2[256];            // Add this
-  
 {
 public:
-BEGIN_PROVIDER_COLUMN_MAP()
-   PROVIDER_COLUMN_ENTRY_STR(OLESTR("Command"), 1, 256, GUID_NULL, CAgentMan, szCommand)
-   PROVIDER_COLUMN_ENTRY_STR(OLESTR("Text"), 2, 256, GUID_NULL, CAgentMan, szText) 
-   PROVIDER_COLUMN_ENTRY_STR(OLESTR("Command2"), 3, 256, GUID_NULL, CAgentMan, szCommand2)
-   PROVIDER_COLUMN_ENTRY_STR(OLESTR("Text2"),4, 256, GUID_NULL, CAgentMan, szText2)
+DWORD dwBookmark;
+static const int iSize = 256;    // Add this
+TCHAR szCommand[iSize];          // Add this
+TCHAR szText[iSize];             // Add this
+TCHAR szCommand2[iSize];         // Add this
+TCHAR szText2[iSize];            // Add this
+
+BEGIN_PROVIDER_COLUMN_MAP(CCustomWindowsFile)
+   PROVIDER_COLUMN_ENTRY("FileAttributes", 1, dwFileAttributes)
+   PROVIDER_COLUMN_ENTRY("FileSizeHigh", 2, nFileSizeHigh)
+   PROVIDER_COLUMN_ENTRY("FileSizeLow", 3, nFileSizeLow)
+   PROVIDER_COLUMN_ENTRY_STR("FileName", 4, cFileName)
+   PROVIDER_COLUMN_ENTRY_STR("AltFileName", 5, cAlternateFileName)
+
+   PROVIDER_COLUMN_ENTRY_STR("Command", 6, szCommand)    // Add this
+   PROVIDER_COLUMN_ENTRY_STR("Text", 7, szText)          // Add this
+   PROVIDER_COLUMN_ENTRY_STR("Command2", 8, szCommand2)  // Add this
+   PROVIDER_COLUMN_ENTRY_STR("Text2", 9, szText2)        // Add this
 END_PROVIDER_COLUMN_MAP()
-   bool operator==(const CAgentMan& am) // This is optional 
+
+   bool operator==(const CCustomWindowsFile& am) // This is optional
    {
-      return (lstrcmpi(cFileName, wf.cFileName) == 0);
+      return (lstrcmpi(cFileName, am.cFileName) == 0);
    }
 };
 ```
 
 Datové členy `szCommand` a `szText` představují dva řetězce s `szCommand2` a `szText2` s další sloupce v případě potřeby. Datový člen `dwBookmark` pro tohoto jednoduchého zprostředkovatele pouze pro čtení není potřeba, ale se později používá k přidání `IRowsetLocate` rozhraní; viz [rozšíření jednoduchého číst pouze zprostředkovatele](../../data/oledb/enhancing-the-simple-read-only-provider.md). `==` Operátor porovná instancí (implementace tohoto operátoru je volitelný).
 
-Když to uděláte, váš poskytovatel by měl být připraveni zkompilovat a spustit. Testování zprostředkovatele, budete potřebovat příjemce s odpovídající funkce. [Implementace jednoduchého příjemce](../../data/oledb/implementing-a-simple-consumer.md) ukazuje, jak vytvořit testovací příjemce. Spusťte test příjemce s tímto poskytovatelem. Ověřte, že příjemce testů obdrží správné řetězce od poskytovatele po kliknutí **spustit** tlačítko **zkušební příjemce** dialogové okno.
-
-Pokud jste úspěšně otestovat poskytovatele, může být vhodné k vylepšení svých funkcí implementací další rozhraní. Příklad je uveden v [rozšíření jednoduchého zprostředkovatele pouze pro čtení](../../data/oledb/enhancing-the-simple-read-only-provider.md).
+Když to uděláte, můžete přidat funkce [načtení řetězců do zprostředkovatele OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).
 
 ## <a name="see-also"></a>Viz také
 
