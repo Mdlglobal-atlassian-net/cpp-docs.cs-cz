@@ -4,7 +4,7 @@ ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
 ms.openlocfilehash: 7066b5bd8ea0fcd7cc7cda34ca05588199cbaef5
 ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/31/2018
 ms.locfileid: "50499616"
@@ -1391,7 +1391,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     };
    ```
 
-   Nejprve vytvořte soubor *.idl; vc140.idl vygeneruje soubor lze použít k získání \*obsahující rozhraní a poznámky souboru IDL.
+   Nejprve vytvořte soubor \*.idl; vc140\*.idl vygeneruje soubor lze použít k získání obsahující rozhraní a poznámky souboru IDL.
 
    V dalším kroku přidejte krok MIDL vašeho sestavení, abyste měli jistotu, že jsou generovány definice rozhraní C++.
 
@@ -1763,7 +1763,7 @@ Zápis testů jednotek C++ pomocí novém rozhraní testování částí C++ v s
 
 #### <a name="architecture-dependency-graphs"></a>Grafy závislosti architektury
 
-Pro lepší pochopení kódu teď můžete generovat grafy závislosti pro binární, třídy a oboru názvů a zahrnout soubory v řešení. V panelu nabídky zvolte **architektura** > **Generovat graf závislosti**a potom **pro řešení** nebo **pro soubor zahrnutí**vygenerujte graf závislosti. Po dokončení generování grafu můžete prozkoumat rozbalením každého uzlu, další vztahů závislosti díky přesunu mezi uzly a procházení zdrojového kódu výběrem **zobrazit obsah** na místní nabídku pro uzel. Generovat graf závislostí pro zahrnuté soubory v místní nabídce pro \*zdrojový soubor .cpp nebo \*záhlaví .h souborů, zvolte **Generovat graf vložených souborů**.
+Pro lepší pochopení kódu teď můžete generovat grafy závislosti pro binární, třídy a oboru názvů a zahrnout soubory v řešení. V panelu nabídky zvolte **architektura** > **Generovat graf závislosti**a potom **pro řešení** nebo **pro soubor zahrnutí**vygenerujte graf závislosti. Po dokončení generování grafu můžete prozkoumat rozbalením každého uzlu, další vztahů závislosti díky přesunu mezi uzly a procházení zdrojového kódu výběrem **zobrazit obsah** na místní nabídku pro uzel. Generovat graf závislostí pro zahrnuté soubory v místní nabídce pro zdrojový soubor \*.cpp nebo záhlaví \*.h souborů, zvolte **Generovat graf vložených souborů**.
 
 #### <a name="architecture-explorer"></a>Průzkumník architektury
 
