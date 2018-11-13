@@ -1,12 +1,6 @@
 ---
-title: Algoritmy | Dokumentace Microsoftu
-ms.custom: ''
+title: Algoritmy
 ms.date: 10/18/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - libraries [C++], C++ algorithm conventions
 - algorithms [C++], C++
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0388a3c21fec2d902b74856e4a0ca596b4b3bcca
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: a0a1165d731e44568d530e3ed919d73e2a3e8e5e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50063019"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648025"
 ---
 # <a name="algorithms"></a>Algoritmy
 
@@ -35,7 +25,7 @@ Popis jednotlivých funkcí šablony algoritmus využívat několik Zkrácený t
 
 - Fráze "v rozsahu \[ *A*, *B*)" znamená, že posloupnost nula nebo více jednotlivých hodnot počínaje *A* až, ale bez zahrnutí *B* . Rozsah je platný pouze tehdy, pokud *B* dosažitelný z *A;* můžete ukládat *A* v objektu *N* (*N*  =  *A*), zvýší objekt nulakrát nebo vícekrát (++*N*), a mít objekt rovnají *B* po konečné číslo navyšuje (*N*   ==  *B*).
 
-- Fráze "každý *N* v rozsahu \[ *A*, *B*)" znamená, že *N* začíná hodnotou ** a je zvýšen nulakrát nebo vícekrát, dokud se rovná hodnotě *B*. Tento případ *N* == *B* není v rozsahu.
+- Fráze "každý *N* v rozsahu \[ *A*, *B*)" znamená, že *N* začíná hodnotou *A*a je zvýšen nulakrát nebo vícekrát, dokud se rovná hodnotě *B*. Tento případ *N* == *B* není v rozsahu.
 
 - Fráze "nejnižší hodnotu *N* v rozsahu \[ *A*, *B*) tak, aby *X*" znamená, že podmínka *X* je určen pro každou *N* v rozsahu \[ *A*, *B*) až do podmínky *X*je splněna.
 
