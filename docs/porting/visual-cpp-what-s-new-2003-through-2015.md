@@ -2,12 +2,12 @@
 title: Visual C++ co&#39;s novou 2003 – 2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 7066b5bd8ea0fcd7cc7cda34ca05588199cbaef5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 6d79406e07b8839e196f15d9bc3aed96cbc3dca8
+ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499616"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51520173"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s novou 2003 – 2015
 
@@ -260,7 +260,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
    Předpokládejme například, že váš kód definuje, jak **umístění nového** a **umístění operátoru delete**:
 
    ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
    ```
 
@@ -306,15 +306,15 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
    jsou teď další splňující podmínky standardu. Předchozí verze kompilátoru generované představují explicitní konstruktor a destruktor pro anonymní sjednocení. Odstraní se v sadě Visual Studio 2015.
 
    ```cpp
-    struct S {
-      S();
-     };
+   struct S {
+      S();
+   };
 
-     union {
-      struct {
-       S s;
-      };
-     } u; // C2280
+   union {
+      struct {
+         S s;
+      };
+   } u; // C2280
    ```
 
    Předchozí kód generuje následující chybu v sadě Visual Studio 2015:
@@ -328,14 +328,14 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
 
    ```cpp
     struct S {
-    // Provide a default constructor by adding an empty function body.
-    S() {}
+       // Provide a default constructor by adding an empty function body.
+       S() {}
     };
 
     union {
-    struct {
-    S s;
-    };
+       struct {
+          S s;
+       };
     } u;
    ```
 
@@ -552,7 +552,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     }
    ```
 
-  -nebo-
+  \-nebo –
 
    ```cpp
     class base;  // as above
@@ -586,7 +586,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     void * __cdecl operator new(size_t cb, const std::nothrow_t&)  // removed 'static inline'
    ```
 
-      Additionally, although the compiler doesn't give a specific diagnostic, inline operator new is considered ill-formed.
+   Kromě toho Ačkoli kompilátor nedává zvláštní diagnostiky, vložené operátor new se považuje za chybně vytvořený.
 
 - **Volání ' – operátor *typ*() "(uživatelem definovaný převod) na typech bez třídy** předchozí verze kompilátoru povolené" – operátor *typ*() "k volání na typech bez třídy při bezobslužném režimu ignoruje se. Toto chování staré vytvořili riziko generování tiché chybného kódu, což vede k modulu runtime nepředvídatelné chování. Kompilátor už přijímá kódu napsaného v tímto způsobem a místo toho vystavuje Chyba kompilátoru C2228.
 
@@ -1673,10 +1673,10 @@ Tato vylepšená podpora standardů ISO C/C++ mohou vyžadovat změny existujíc
 - S vymezeným oborem výčty podporují. Enum – klíč třídy výčtu C++ se teď podporuje. Následující kód ukazuje, jak tento klíč výčtu se liší od předchozí chování výčtu.
 
    ```cpp
-enum class Element { Hydrogen, Helium, Lithium, Beryllium };
-void func1(Element e);
-func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
-func1(Element::Helium); // OK
+  enum class Element { Hydrogen, Helium, Lithium, Beryllium };
+  void func1(Element e);
+  func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
+  func1(Element::Helium); // OK
    ```
 
 ### <a name="windows-runtime-app-development-support"></a>Podpora pro vývoj aplikací pro modul Runtime Windows

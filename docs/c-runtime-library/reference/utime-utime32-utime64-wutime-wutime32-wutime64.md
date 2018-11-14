@@ -58,12 +58,12 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-ms.openlocfilehash: f1e9633784ad78a2b46701e6600ad1ddb6b3318e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e52845a828e272ff3b8458b299c3757b8def748
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471087"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524628"
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 
@@ -112,10 +112,10 @@ Každá z těchto funkcí vrátí 0, pokud čas modifikace souboru byl změněn.
 
 |Hodnota errno|Podmínka|
 |-|-|
-**EACCES**|Cesta Určuje adresář nebo soubor určený jen pro čtení
-**EINVAL**|Neplatný *časy* argument
-**EMFILE**|Příliš mnoho otevřených souborů (Chcete-li změnit její čas změny musíte otevřít soubor.)
-**ENOENT**|Cesta nebo název souboru nebyl nalezen
+| **EACCES** | Cesta Určuje adresář nebo soubor určený jen pro čtení |
+| **EINVAL** | Neplatný *časy* argument |
+| **EMFILE** | Příliš mnoho otevřených souborů (Chcete-li změnit její čas změny musíte otevřít soubor.) |
+| **ENOENT** | Cesta nebo název souboru nebyl nalezen |
 
 Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších návratových kódů.
 
@@ -123,14 +123,14 @@ Data lze změnit pro soubor, pokud je datum změny po půlnoci 1. ledna 1970 a p
 
 ## <a name="remarks"></a>Poznámky
 
-**_Utime** funkce nastaví čas změny pro soubor určený parametrem *filename **.* Proces musí mít oprávnění k zápisu do souboru, chcete-li změnit čas. V operačním systému Windows, můžete změnit čas přístupu a čas změny v **_utimbuf –** struktury. Pokud *časy* je **NULL** ukazatele, čas změny nastavena na aktuální místní čas. V opačném případě *časy* musí ukazovat na strukturu typu **_utimbuf –**, definované v SYS\UTIME. H.
+**_Utime** funkce nastaví čas změny pro soubor určený parametrem *filename*. Proces musí mít oprávnění k zápisu do souboru, chcete-li změnit čas. V operačním systému Windows, můžete změnit čas přístupu a čas změny v **_utimbuf –** struktury. Pokud *časy* je **NULL** ukazatele, čas změny nastavena na aktuální místní čas. V opačném případě *časy* musí ukazovat na strukturu typu **_utimbuf –**, definované v SYS\UTIME. H.
 
 **_Utimbuf –** struktura ukládá časy přístupu a úpravy souborů používá **_utime** ke změně datumů úpravy souboru. Struktura obsahuje následující pole, které jsou typu **time_t**:
 
-|Pole||
-|-|-|
-**actime**|Čas přístup k souborům
-**modtime**|Čas modifikace souboru
+| Pole |   |
+|-------|---|
+| **actime** | Čas přístup k souborům |
+| **modtime** | Čas modifikace souboru |
 
 Konkrétní verze **_utimbuf –** strukturu (**_utimebuf32** a **__utimbuf64 –**) jsou definovány pomocí 32bitové a 64bitové verze typu time. Ty se používají v 32bitové a 64bitové určité verze této funkce. **_utimbuf –** sama ve výchozím nastavení používá typu time 64-bit, není-li **_USE_32BIT_TIME_T** je definována.
 

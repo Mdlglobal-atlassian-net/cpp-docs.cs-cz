@@ -100,12 +100,12 @@ helpviewer_keywords:
 - END_PARAM_MAP macro
 - SET_PARAM_TYPE macro
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-ms.openlocfilehash: 95d39b6068405a88a20b311a5851e593591a24db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4254c2637c4ed937a3196310ffa83c48504911af
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445497"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51557112"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Makra a globální funkce pro šablony příjemců OLE DB
 
@@ -366,7 +366,7 @@ Tady je ukázka sloupce a parametr mapy:
 
 ### <a name="blob_entry"></a> BLOB_ENTRY
 
-BEGIN_COLUMN_MAP a END_COLUMN_MAP používá k vytvoření vazby binární rozsáhlý objekt ([BLOB](/previous-versions/windows/desktop/ms711511)).
+BEGIN_COLUMN_MAP a END_COLUMN_MAP používá k vytvoření vazby binární rozsáhlý objekt ([BLOB](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85))).
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -394,7 +394,7 @@ Zobrazit [Jak můžu k načtení objektu BLOB?](../../data/oledb/retrieving-a-bl
 
 ### <a name="blob_entry_length"></a> BLOB_ENTRY_LENGTH
 
-BEGIN_COLUMN_MAP a END_COLUMN_MAP používá k vytvoření vazby binární rozsáhlý objekt ([BLOB](/previous-versions/windows/desktop/ms711511)). Podobně jako [BLOB_ENTRY](../../data/oledb/blob-entry.md), s tím rozdílem, že toto makro také získá délku v bajtech sloupce objektů BLOB.
+BEGIN_COLUMN_MAP a END_COLUMN_MAP používá k vytvoření vazby binární rozsáhlý objekt ([BLOB](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85))). Podobně jako [BLOB_ENTRY](../../data/oledb/blob-entry.md), s tím rozdílem, že toto makro také získá délku v bajtech sloupce objektů BLOB.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -425,7 +425,7 @@ Zobrazit [Jak můžu k načtení objektu BLOB?](../../data/oledb/retrieving-a-bl
 
 ### <a name="blob_entry_length_status"></a> BLOB_ENTRY_LENGTH_STATUS
 
-BEGIN_COLUMN_MAP a END_COLUMN_MAP používá k vytvoření vazby binární rozsáhlý objekt ([BLOB](/previous-versions/windows/desktop/ms711511)). Podobně jako [BLOB_ENTRY](../../data/oledb/blob-entry.md), s tím rozdílem, že toto makro se také o získání délky a stavu ve sloupci objektu BLOB.
+BEGIN_COLUMN_MAP a END_COLUMN_MAP používá k vytvoření vazby binární rozsáhlý objekt ([BLOB](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85))). Podobně jako [BLOB_ENTRY](../../data/oledb/blob-entry.md), s tím rozdílem, že toto makro se také o získání délky a stavu ve sloupci objektu BLOB.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -465,7 +465,7 @@ Zobrazit [Jak můžu k načtení objektu BLOB?](../../data/oledb/retrieving-a-bl
 
 ### <a name="blob_entry_status"></a> BLOB_ENTRY_STATUS
 
-Použít k vytvoření vazby binární rozsáhlý objekt s BEGIN_COLUMN_MAP nebo BEGIN_ACCESSOR_MAP ([BLOB](/previous-versions/windows/desktop/ms711511)). Podobně jako [BLOB_ENTRY](../../data/oledb/blob-entry.md), s tím rozdílem, že toto makro také umožňuje získat stav sloupci objektů BLOB.
+Použít k vytvoření vazby binární rozsáhlý objekt s BEGIN_COLUMN_MAP nebo BEGIN_ACCESSOR_MAP ([BLOB](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85))). Podobně jako [BLOB_ENTRY](../../data/oledb/blob-entry.md), s tím rozdílem, že toto makro také umožňuje získat stav sloupci objektů BLOB.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -496,7 +496,7 @@ Zobrazit [Jak můžu k načtení objektu BLOB?](../../data/oledb/retrieving-a-bl
 
 ### <a name="blob_name"></a> BLOB_NAME
 
-BEGIN_COLUMN_MAP a END_COLUMN_MAP používá k vytvoření vazby binární rozsáhlý objekt ([BLOB](/previous-versions/windows/desktop/ms711511)). Podobně jako [BLOB_ENTRY](../../data/oledb/blob-entry.md), s tím rozdílem, že toto makro přijímá název sloupce namísto číslo sloupce.
+BEGIN_COLUMN_MAP a END_COLUMN_MAP používá k vytvoření vazby binární rozsáhlý objekt ([BLOB](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85))). Podobně jako [BLOB_ENTRY](../../data/oledb/blob-entry.md), s tím rozdílem, že toto makro přijímá název sloupce namísto číslo sloupce.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -524,7 +524,7 @@ Zobrazit [Jak můžu k načtení objektu BLOB?](../../data/oledb/retrieving-a-bl
 
 ### <a name="blob_name_length"></a> BLOB_NAME_LENGTH
 
-BEGIN_COLUMN_MAP a END_COLUMN_MAP používá k vytvoření vazby binární rozsáhlý objekt ([BLOB](/previous-versions/windows/desktop/ms711511)). Podobně jako [BLOB_NAME](../../data/oledb/blob-name.md), s tím rozdílem, že toto makro také získá délku v bajtech sloupce dat objektů BLOB.
+BEGIN_COLUMN_MAP a END_COLUMN_MAP používá k vytvoření vazby binární rozsáhlý objekt ([BLOB](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85))). Podobně jako [BLOB_NAME](../../data/oledb/blob-name.md), s tím rozdílem, že toto makro také získá délku v bajtech sloupce dat objektů BLOB.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -551,7 +551,7 @@ BLOB_NAME_LENGTH(pszName, IID, flags, data, length )
 
 ### <a name="blob_name_length_status"></a> BLOB_NAME_LENGTH_STATUS
 
-BEGIN_COLUMN_MAP a END_COLUMN_MAP používá k vytvoření vazby binární rozsáhlý objekt ([BLOB](/previous-versions/windows/desktop/ms711511)). Podobně jako [BLOB_NAME](../../data/oledb/blob-name.md), s tím rozdílem, že toto makro se také o získání délky a stavu sloupce dat objektů BLOB.
+BEGIN_COLUMN_MAP a END_COLUMN_MAP používá k vytvoření vazby binární rozsáhlý objekt ([BLOB](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85))). Podobně jako [BLOB_NAME](../../data/oledb/blob-name.md), s tím rozdílem, že toto makro se také o získání délky a stavu sloupce dat objektů BLOB.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -581,7 +581,7 @@ BLOB_NAME_LENGTH_STATUS(pszName, IID, flags, data, length, status )
 
 ### <a name="blob_name_status"></a> BLOB_NAME_STATUS
 
-BEGIN_COLUMN_MAP a END_COLUMN_MAP používá k vytvoření vazby binární rozsáhlý objekt ([BLOB](/previous-versions/windows/desktop/ms711511)). Podobně jako [BLOB_NAME](../../data/oledb/blob-name.md), s tím rozdílem, že toto makro také umožňuje získat stav sloupce dat objektů BLOB.
+BEGIN_COLUMN_MAP a END_COLUMN_MAP používá k vytvoření vazby binární rozsáhlý objekt ([BLOB](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85))). Podobně jako [BLOB_NAME](../../data/oledb/blob-name.md), s tím rozdílem, že toto makro také umožňuje získat stav sloupce dat objektů BLOB.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -672,7 +672,7 @@ END_COLUMN_MAP()
 #### <a name="see-also"></a>Viz také
 
 [CBookmark – třída](../../data/oledb/cbookmark-class.md)<br/>
-[DBPROP_BOOKMARKS](/previous-versions/windows/desktop/ms709728)
+[DBPROP_BOOKMARKS](https://docs.microsoft.com/previous-versions/windows/desktop/ms709728(v=vs.85))
 
 ### <a name="column_entry"></a> COLUMN_ENTRY
 
@@ -686,7 +686,7 @@ COLUMN_ENTRY(nOrdinal, data)
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [DBBINDING](/previous-versions/windows/desktop/ms716845) v *referenční informace pro OLE DB programátory*.
+Zobrazit [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 *nOrdinal*<br/>
 [in] Číslo sloupce.
@@ -720,7 +720,7 @@ COLUMN_ENTRY_EX(nOrdinal, wType, nLength, nPrecision, nScale, data, length, stat
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [DBBINDING](/previous-versions/windows/desktop/ms716845) v *referenční informace pro OLE DB programátory*.
+Zobrazit [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 *nOrdinal*<br/>
 [in] Číslo sloupce.
@@ -772,7 +772,7 @@ COLUMN_ENTRY_LENGTH(nOrdinal, data, length)
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [DBBINDING](/previous-versions/windows/desktop/ms716845) v *referenční informace pro OLE DB programátory*.
+Zobrazit [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 *nOrdinal*<br/>
 [in] Číslo sloupce s některou. Záložka odpovídá sloupci nula.
@@ -805,7 +805,7 @@ COLUMN_ENTRY_LENGTH_STATUS(nOrdinal, data, length, status)
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [DBBINDING](/previous-versions/windows/desktop/ms716845) v *referenční informace pro OLE DB programátory*.
+Zobrazit [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 *nOrdinal*<br/>
 [in] Číslo sloupce.
@@ -841,7 +841,7 @@ COLUMN_ENTRY_PS(nOrdinal, nPrecision, nScale, data)
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [DBBINDING](/previous-versions/windows/desktop/ms716845) v *referenční informace pro OLE DB programátory*.
+Zobrazit [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 *nOrdinal*<br/>
 [in] Číslo sloupce.
@@ -877,7 +877,7 @@ COLUMN_ENTRY_PS_LENGTH(nOrdinal, nPrecision, nScale, data, length)
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [DBBINDING](/previous-versions/windows/desktop/ms716845) v *referenční informace pro OLE DB programátory*.
+Zobrazit [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 *nOrdinal*<br/>
 [in] Číslo sloupce s některou. Záložka odpovídá sloupci nula.
@@ -916,7 +916,7 @@ COLUMN_ENTRY_PS_LENGTH_STATUS(nOrdinal, nPrecision, nScale, data, length, status
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [DBBINDING](/previous-versions/windows/desktop/ms716845) v *referenční informace pro OLE DB programátory*.
+Zobrazit [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 *nOrdinal*<br/>
 [in] Číslo sloupce.
@@ -958,7 +958,7 @@ COLUMN_ENTRY_PS_STATUS(nOrdinal, nPrecision, nScale, data, status)
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [DBBINDING](/previous-versions/windows/desktop/ms716845) v *referenční informace pro OLE DB programátory*.
+Zobrazit [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 *nOrdinal*<br/>
 [in] Číslo sloupce.
@@ -997,7 +997,7 @@ COLUMN_ENTRY_STATUS(nOrdinal, data, status)
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [DBBINDING](/previous-versions/windows/desktop/ms716845) v *referenční informace pro OLE DB programátory*.
+Zobrazit [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 *nOrdinal*<br/>
 [in] Číslo sloupce.
@@ -1547,7 +1547,7 @@ BEGIN_PARAM_MAP(x)
 
 #### <a name="remarks"></a>Poznámky
 
-Parametry jsou používány [příkazy](/previous-versions/windows/desktop/ms724608).
+Parametry jsou používány [příkazy](https://docs.microsoft.com/previous-versions/windows/desktop/ms724608(v=vs.85)).
 
 #### <a name="example"></a>Příklad
 
@@ -1584,7 +1584,7 @@ SET_PARAM_TYPE(type)
 
 #### <a name="remarks"></a>Poznámky
 
-Podporují pouze vstupní a výstupní typy parametrů podkladový zdroj dat nepodporuje. Typ je kombinace jedné nebo více `DBPARAMIO` hodnoty (viz [DBBINDING struktury](/previous-versions/windows/desktop/ms716845) v *OLE DB referenční informace pro programátory*):
+Podporují pouze vstupní a výstupní typy parametrů podkladový zdroj dat nepodporuje. Typ je kombinace jedné nebo více `DBPARAMIO` hodnoty (viz [DBBINDING struktury](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) v *OLE DB referenční informace pro programátory*):
 
 - `DBPARAMIO_NOTPARAM` Přistupující objekt nemá žádné parametry. Obvykle nastavena `eParamIO` na tuto hodnotu v řádku přístupové objekty pro upozornit uživatele, že parametry budou ignorovány.
 

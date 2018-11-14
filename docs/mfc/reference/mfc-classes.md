@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-ms.openlocfilehash: 40294e0d0af3f5181ffe295a2a6c625fa5223f5b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c35d7bf16b851fe9a96bdd896babfa450c726374
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463385"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525273"
 ---
 # <a name="mfc-classes"></a>MFC – třídy
 
@@ -1012,7 +1012,7 @@ Používá se pro OLE vizuálních úprav servery, automatizační servery a pro
 Používá pro zvláštní případ dialogového okna upravení odkazů OLE, která se má použít, když potřebujete aktualizovat pouze existující propojené nebo vložené objekty v dokumentu.
 
 [COleVariant – třída](../../mfc/reference/colevariant-class.md)<br/>
-Zapouzdřuje [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) datového typu.
+Zapouzdřuje [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) datového typu.
 
 [CPagerCtrl – třída](../../mfc/reference/cpagerctrl-class.md)<br/>
 `CPagerCtrl` Třídy obaluje ovládací prvek stránkování Windows, který můžete přejít do zobrazení obsaženého okna obsahujícího okna nevejde.

@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 9509b122e271ac22529c1b8a7b8e8d0b4b50025b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91cf9b2035bf24c16007ed6021772c7d5344fc68
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641100"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333264"
 ---
 # <a name="ccombobox-class"></a>CComboBox – třída
 
@@ -208,7 +208,7 @@ Pokud chcete zpracovávat Windows oznamující zprávy odeslal pole se seznamem 
 
 Každá položka mapování zpráv má následující podobu:
 
-**ON_** oznámení **(**`id`**,**`memberFxn`**)**
+**DÁLE\_**_oznámení_ **(** _id_, _memberFxn_ **)**
 
 kde `id` Určuje ID podřízeného okna ovládacího prvku pole se seznamem zasílání oznámení a `memberFxn` je název nadřazené členské funkce mají napsané tak, aby oznámení.
 

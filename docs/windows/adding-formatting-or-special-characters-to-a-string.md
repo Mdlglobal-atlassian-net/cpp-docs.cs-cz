@@ -7,12 +7,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: c40f394a-8b2c-4896-ab30-6922863ddbb5
-ms.openlocfilehash: 740bf02d40dfcb236eef0dccbf55201dd79aec4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b60f48983913f4dc146af1b4645710cd1393d072
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493844"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328328"
 ---
 # <a name="adding-formatting-or-special-characters-to-a-string-resource-c"></a>Přidání formátovacích nebo speciálních znaků do řetězce prostředků (C++)
 
@@ -29,12 +29,12 @@ ms.locfileid: "50493844"
 
    |Chcete-li získat tento|Zadejte toto|
    |-----------------|---------------|
-   |Nový řádek|\n|
-   |Návrat na začátek řádku|\r|
-   |Tabulátor|\t|
-   |Zpětné lomítko (\\)|\\\|
-   |Znak ASCII|\ddd (osmičkové soustavě)|
-   |upozornění (zvonek)|\a|
+   | Nový řádek | \\n |
+   | Návrat na začátek řádku | \\r |
+   | Tabulátor | \\t |
+   | Zpětné lomítko (\\) | \\\\ |
+   | Znak ASCII | \\ddd (osmičkové soustavě) |
+   | upozornění (zvonek) | \\A |
 
 > [!NOTE]
 > **Řetězec** editor nepodporuje kompletní řídicí znaky ASCII. Můžete použít pouze ty uvedené výše.

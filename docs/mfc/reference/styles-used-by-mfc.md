@@ -196,12 +196,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: dc70059e2de054e4b1aac4800e1d61c58bc9b467
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a0aef399b734ad5b15a9a2d4028be3fde3f02505
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642907"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525299"
 ---
 # <a name="styles-used-by-mfc"></a>Styly využívané prostředím MFC
 
@@ -338,7 +338,7 @@ Styly seznamů platí pro [clistbox – třída](../../mfc/reference/clistbox-cl
 |LBS_HASSTRINGS|Určuje pole se seznamem vykreslené vlastníkem, který obsahuje položky skládající se z řetězců. Pole se seznamem udržuje paměti a ukazatele pro řetězce, aby aplikace mohly používat `GetText` členské funkce lze získat text pro určité položky.|
 |LBS_MULTICOLUMN|Určuje vícesloupcový seznam, který je vodorovně posuvný. `SetColumnWidth` Členskou funkci nastavuje šířku sloupce.|
 |LBS_MULTIPLESEL|Výběr řetězec přepne pokaždé, když uživatel klepne nebo dvakrát klikne řetězec. Můžete vybrat libovolný počet řetězců.|
-|LBS_NODATA|Určuje seznam žádná data. Pokud počet položek v seznamu překročí tisíc, zadejte tento styl. Pole se seznamem bez dat musí mít také LBS_OWNERDRAWFIXED styl, ale nesmí mít LBS_SORT nebo LBS_HASSTRINGS style. <br />< /br / > bez dat seznamu se podobá vlastníkem vykreslený seznam s tím rozdílem, že neobsahuje žádná data string nebo bitmap pro položku. Příkazy, které chcete přidat, vložení nebo odstranění položky vždy ignorovat každá položka dat požadavky k vyhledání řetězce v rámci pole se seznamem vždy nezdaří. Systém odešle zprávu WM_DRAWITEM nadřazenému oknu, když je nutné vykreslit položku. Člen itemID `DRAWITEMSTRUCT` struktura Předaná zpráva WM_DRAWITEM určuje počet řádků položka, která má být vykreslen. Pole se seznamem bez dat neodesílá WM_DELETEITEM zprávy.|
+|LBS_NODATA|Určuje seznam žádná data. Pokud počet položek v seznamu překročí tisíc, zadejte tento styl. Pole se seznamem bez dat musí mít také LBS_OWNERDRAWFIXED styl, ale nesmí mít LBS_SORT nebo LBS_HASSTRINGS style.<br/><br/> Pole se seznamem bez dat vypadá podobně jako vlastníkem vykreslený seznam s tím rozdílem, že neobsahuje žádná data string nebo bitmap pro položku. Příkazy, které chcete přidat, vložení nebo odstranění položky vždy ignorovat každá položka dat požadavky k vyhledání řetězce v rámci pole se seznamem vždy nezdaří. Systém odešle zprávu WM_DRAWITEM nadřazenému oknu, když je nutné vykreslit položku. Člen itemID `DRAWITEMSTRUCT` struktura Předaná zpráva WM_DRAWITEM určuje počet řádků položka, která má být vykreslen. Pole se seznamem bez dat neodesílá WM_DELETEITEM zprávy.|
 |LBS_NOINTEGRALHEIGHT|Je velikost seznamu přesně velikost určená aplikací po vytvoření pole se seznamem. Obvykle Windows velikosti pole se seznamem tak, aby pole se seznamem nezobrazuje částečných položek.|
 |LBS_NOREDRAW|Zobrazení seznamu oken není aktualizován, když dojde ke změně. Tento styl můžete kdykoli změnit odesláním WM_SETREDRAW zprávy.|
 |LBS_NOSEL|Určuje, že pole se seznamem obsahuje položky, které můžete zobrazit, ale nejsou vybrány.|
@@ -350,7 +350,7 @@ Styly seznamů platí pro [clistbox – třída](../../mfc/reference/clistbox-cl
 |LBS_USETABSTOPS|Umožňuje seznam rozpoznávat a rozšiřovat znaky tabulátoru při kreslení jeho řetězce. Pozice výchozí kartu jsou 32 jednotkách dialogového okna. (Jednotky dialogu je vodorovném nebo svislém distance. 1 jednotka vodorovné dialogového okna je rovna čtvrtinu aktuální jednotku základní šířky dialogového okna. Dialogové okno základní jednotky se vypočítávají na základě výšku a šířku aktuální systémové písmo. Tím `GetDialogBaseUnits` Windows funkce vrátí aktuální dialogové okno základní jednotky v pixelech.) Tímto stylem by neměl být použit s LBS_OWNERDRAWFIXED.|
 |LBS_WANTKEYBOARDINPUT|Vlastník seznamu přijímá zprávy WM_VKEYTOITEM nebo WM_CHARTOITEM pokaždé, když uživatel stiskne klávesu, zatímco pole se seznamem má vstupní fokus. To umožňuje aplikaci provést zvláštní zpracování na vstupu klávesnice.|
 
-##<a name="message-box-styles"></a>  Styly oken zpráv
+## <a name="message-box-styles"></a>  Styly oken zpráv
 
 Styly oken zpráv použít pro [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) položky. Určuje kombinaci styly *nTyp* parametr `AfxMessageBox`. Další informace o styly oken zpráv ve Windows najdete v tématu [MessageBox – funkce (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox).
 
@@ -383,6 +383,7 @@ Tyto styly oken zpráv jsou k dispozici.
 |MB_ICONINFORMATION|V okně se zprávou se zobrazí ikona skládající se z "I" v kruhu.|
 |MB_ICONQUESTION|Ikona otazníku se zobrazí v okně se zprávou.|
 |MB_ICONSTOP|Stop-sign ikona se zobrazuje v okně se zprávou.|
+
 ### <a name="message-box-default-buttons"></a>Okno se zprávou výchozí tlačítka
 
 |Styl|Popis|

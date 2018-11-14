@@ -26,12 +26,12 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-ms.openlocfilehash: 244ef9ce93e39bef23a9d5d6792a10ca25355f5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99e10a0330ba4880ea181e9fe3d56f3fb6bd6493
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648380"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326040"
 ---
 # <a name="configthreadlocale"></a>_configthreadlocale
 
@@ -56,11 +56,11 @@ Předchozí stav národního prostředí pro vlákno (**_DISABLE_PER_THREAD_LOCA
 
 **_Configurethreadlocale** funkce se používá k řízení používání národní prostředí specifické pro vlákno. Použijte jednu z těchto *per_thread_locale_type* možností k určení stavu národního prostředí pro vlákno:
 
-|||
+| Možnost | Popis |
 |-|-|
-**_ENABLE_PER_THREAD_LOCALE**|Zkontrolujte aktuální národní prostředí pro vlákno použijte specifické pro vlákno. Následující volání **setlocale** v tomto vlákně ovlivňují pouze vlastní národní prostředí vlákna.
-**_DISABLE_PER_THREAD_LOCALE**|Zkontrolujte aktuální vlákno používalo globální národní prostředí. Následující volání **setlocale** v tomto vlákně ovlivňují ostatní vlákna používající globální národní prostředí.
-**0**|Načte aktuální nastavení pro toto konkrétní vlákno.
+| **_ENABLE_PER_THREAD_LOCALE** | Zkontrolujte aktuální národní prostředí pro vlákno použijte specifické pro vlákno. Následující volání **setlocale** v tomto vlákně ovlivňují pouze vlastní národní prostředí vlákna. |
+| **_DISABLE_PER_THREAD_LOCALE** | Zkontrolujte aktuální vlákno používalo globální národní prostředí. Následující volání **setlocale** v tomto vlákně ovlivňují ostatní vlákna používající globální národní prostředí. |
+| **0** | Načte aktuální nastavení pro toto konkrétní vlákno. |
 
 Tyto funkce ovlivňují chování **setlocale**, **_tsetlocale –**, **_wsetlocale**, a **_setmbcp**. Pokud je národní prostředí pro vlákno zakázáno, všechna následná volání **setlocale** nebo **_wsetlocale** změní národní prostředí všech vláken, které používají globální národní prostředí. Když je povoleno národní prostředí pro vlákno, **setlocale** nebo **_wsetlocale** ovlivní pouze národního prostředí aktuálního vlákna.
 

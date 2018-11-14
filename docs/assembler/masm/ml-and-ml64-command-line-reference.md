@@ -54,12 +54,12 @@ helpviewer_keywords:
 - command line, reference [ML]
 - /Ta MASM compiler option
 ms.assetid: 712623c6-f77e-47ea-a945-089e57c50b40
-ms.openlocfilehash: 64d56ea5eb29162e65782998e91fc1ff70cbf73b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a452bab03e31436ee5dde476117bce8b73c7571f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430222"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331253"
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>Referenční dokumentace pro použití nástroje ML a ML64 v příkazovém řádku
 
@@ -69,9 +69,9 @@ Další informace o ml64.exe najdete v tématu [MASM pro x64 (ml64.exe)](../../a
 
 ## <a name="syntax"></a>Syntaxe
 
-> ML [[*možnosti*]] *filename* [[[[*možnosti*]] *filename*]]
-
-> Ml64 v příkazovém [[*možnosti*]] *filename* [[[[*možnosti*]] *filename*]]... [[/ link *linkoptions*]]
+> ML \[ *možnosti*] *filename* \[ \[ *možnosti*] *filename*]
+>
+> Ml64 v příkazovém \[ *možnosti*] *filename* \[ \[ *možnosti*] *filename*]... \[/link *linkoptions*]
 
 ### <a name="parameters"></a>Parametry
 

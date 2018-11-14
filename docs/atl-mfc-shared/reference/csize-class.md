@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dimensions
 - CSize class
 ms.assetid: fb2cf85a-0bc1-46f8-892b-309c108b52ae
-ms.openlocfilehash: a0245862fe90c108b8ffc038b723a8b5bb62a665
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7451b462087d6430c642ddbe3b7cf8141a792f2e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431908"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329368"
 ---
 # <a name="csize-class"></a>Csize – třída
 
@@ -173,11 +173,17 @@ CRect operator+(const RECT* lpRect) const throw();
 
 V následujících popisech jednotlivé operátory:
 
-- **operátor + (** `size` **)** tato operace přidá dvě `CSize` hodnoty.
+- **operátor + (** *velikost* **)**
 
-- **operátor + (** `point` **)** tuto operaci posun (přesun) [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) (nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) hodnotu situace `CSize` hodnotu. **Cx** a **cy** členy tohoto `CSize` hodnoty se přidají do **x** a **y** datové členy **bodu**  hodnotu. Je obdobou verzi [CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) , která přijímá [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) parametru.
+  Tato operace přidá dvě `CSize` hodnoty.
 
-- **operátor + (** `lpRect` **)** tuto operaci posun (přesun) [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) (nebo [crect –](../../atl-mfc-shared/reference/crect-class.md)) hodnotu situace `CSize` hodnotu. **Cx** a **cy** členy tohoto `CSize` hodnoty se přidají do **levé**, **horní**, **vpravo**, a **dolní** datové členy `RECT` hodnotu. Je obdobou verzi [CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add) , která přijímá [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) parametru.
+- **operátor + (** *bodu* **)**
+
+  Tato operace posun (přesun) [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) (nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) hodnotu situace `CSize` hodnotu. `cx` a `cy` členy tohoto `CSize` hodnoty se přidají do `x` a `y` datové členy `POINT` hodnotu. Je obdobou verzi [CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) , která přijímá [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) parametru.
+
+- **operátor + (** *lprect –* **)**
+
+   Tato operace posun (přesun) [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) (nebo [crect –](../../atl-mfc-shared/reference/crect-class.md)) hodnotu situace `CSize` hodnotu. `cx` a `cy` členy tohoto `CSize` hodnoty se přidají do `left`, `top`, `right`, a `bottom` datové členy `RECT` hodnotu. Je obdobou verzi [CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add) , která přijímá [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) parametru.
 
 ### <a name="example"></a>Příklad
 
@@ -198,13 +204,21 @@ CSize operator-() const throw();
 
 Čtvrtý operátor Unární minus, změní znaménko `CSize` hodnotu. V následujících popisech jednotlivé operátory:
 
-- **operátor-(** `size` **)** tuto operaci odečte dvě `CSize` hodnoty.
+- **operátor-(** *velikost* **)**
 
-- **operátor-(** `point` **)** tuto operaci posun (přesun) [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) hodnoty additive inverzní to `CSize` hodnota. **Cx** a **cy** tohoto `CSize` jsou hodnota odečtena od **x** a **y** datové členy **bodu**  hodnotu. Je obdobou verzi [CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) , která přijímá [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) parametr.
+  Tato operace odečte dvě `CSize` hodnoty.
 
-- **operátor-(** `lpRect` **)** tuto operaci posun (přesun) [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) hodnoty additive inverzní to `CSize` hodnotu. **Cx** a **cy** členy tohoto `CSize` jsou hodnota odečtena od **levé**, **horní**, **vpravo**, a **dolní** datové členy `RECT` hodnotu. Je obdobou verzi [CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-) , která přijímá [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) parametr.
+- **operátor-(** *bodu* **)**
 
-- **operátor-()** tato operace Vrátí inverzní additive tohoto `CSize` hodnotu.
+  Tato operace posun (přesun) [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) hodnoty additive inverzní to `CSize` hodnotu. `cx` a `cy` tohoto `CSize` jsou hodnota odečtena od `x` a `y` datové členy `POINT` hodnotu. Je obdobou verzi [CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) , která přijímá [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) parametr.
+
+- **operátor-(** *lprect –* **)**
+
+  Tato operace posun (přesun) [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) hodnoty additive inverzní to `CSize` hodnotu. `cx` a `cy` členy tohoto `CSize` jsou hodnota odečtena od `left`, `top`, `right`, a `bottom` datové členy `RECT` hodnotu. Je obdobou verzi [CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-) , která přijímá [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) parametr.
+
+- **operátor-)**
+
+  Tato operace Vrátí inverzní additive tohoto `CSize` hodnotu.
 
 ### <a name="example"></a>Příklad
 

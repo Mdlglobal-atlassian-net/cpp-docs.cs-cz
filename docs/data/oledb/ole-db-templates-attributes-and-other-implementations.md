@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB templates, about OLE DB templates
 - OLE DB templates
 ms.assetid: 0c780c1b-9bba-4788-8c33-8552d9f120ac
-ms.openlocfilehash: 97924110d6dd59e59eda9492713518dedf68af55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 079ec68afe2e538a40920fb2c6524f8d5b8aae89
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596596"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520634"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>OLE DB – šablony, atributy a jiné implementace technologie
 
@@ -25,7 +25,7 @@ Tato šablona knihovny obsahuje dvě části:
 
 - **Šablony zprostředkovatele technologie OLE DB** používaný k implementaci aplikace serveru (poskytovatel) technologie OLE DB.
 
-Použití šablony technologie OLE DB, byste měli vědět, jak šablon jazyka C++, COM a rozhraní OLE DB. Pokud nejste obeznámeni s OLE DB, přečtěte si téma [OLE DB referenční informace pro programátory](/previous-versions/windows/desktop/ms713643).
+Použití šablony technologie OLE DB, byste měli vědět, jak šablon jazyka C++, COM a rozhraní OLE DB. Pokud nejste obeznámeni s OLE DB, přečtěte si téma [OLE DB referenční informace pro programátory](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming).
 
 Další informace můžete:
 
@@ -37,7 +37,7 @@ Další informace můžete:
 
 - Zobrazit seznam [OLE DB – Ukázky šablon](https://github.com/Microsoft/VCSamples).
 
-- Zobrazit [referenční informace pro OLE DB programátory](/previous-versions/windows/desktop/ms713643) (ve Windows SDK).
+- Zobrazit [referenční informace pro OLE DB programátory](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming) (ve Windows SDK).
 
 ## <a name="ole-db-attributes"></a>Atributy technologie OLE DB
 
@@ -49,7 +49,7 @@ Knihovna MFC má jednu třídu, [COleDBRecordView](../../mfc/reference/coledbrec
 
 ## <a name="ole-db-sdk-interfaces"></a>Rozhraní OLE DB SDK
 
-V případech, kdy šablony technologie OLE DB nepodporují funkci OLE DB budete muset použít samotné rozhraní OLE DB. Další informace najdete v tématu [OLE DB referenční informace pro programátory](/previous-versions/windows/desktop/ms713643) v sadě Windows SDK.
+V případech, kdy šablony technologie OLE DB nepodporují funkci OLE DB budete muset použít samotné rozhraní OLE DB. Další informace najdete v tématu [OLE DB referenční informace pro programátory](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming) v sadě Windows SDK.
 
 ## <a name="see-also"></a>Viz také
 

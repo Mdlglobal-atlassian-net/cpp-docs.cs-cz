@@ -14,23 +14,23 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: d4fb67d68a77b9af21229be00808bd7b05db9f6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6b2abc97a44117c0fdd7c08c61de7ba900d1115
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528957"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556306"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl – třída
 
-Poskytuje implementaci [ISessionProperties](/previous-versions/windows/desktop/ms713721) rozhraní.
+Poskytuje implementaci [ISessionProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms713721(v=vs.85)) rozhraní.
 
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
 template <class T, class PropClass = T>
 class ATL_NO_VTABLE ISessionPropertiesImpl :
-   public ISessionProperties,  
+   public ISessionProperties, 
    public CUtlProps<PropClass>
 ```
 
@@ -66,15 +66,15 @@ Vrátí seznam vlastností v `DBPROPSET_SESSION` skupiny vlastností, které jso
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-STDMETHOD(GetProperties)(ULONG cPropertyIDSets, 
-   const DBPROPIDSET rgPropertyIDSets[], 
-   ULONG * pcPropertySets, 
+STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
+   const DBPROPIDSET rgPropertyIDSets[],
+   ULONG * pcPropertySets,
    DBPROPSET ** prgPropertySets);
 ```
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643) v *referenční informace pro OLE DB programátory*.
+Zobrazit [ISessionProperties::GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723643(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="setproperties"></a> ISessionPropertiesImpl::SetProperties
 
@@ -83,13 +83,13 @@ Nastaví vlastnosti `DBPROPSET_SESSION` skupiny vlastností.
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-STDMETHOD(SetProperties)(ULONG cPropertySets, 
+STDMETHOD(SetProperties)(ULONG cPropertySets,
    DBPROPSET rgPropertySets[]);
 ```
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405) v *referenční informace pro OLE DB programátory*.
+Zobrazit [ISessionProperties::SetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms714405(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="see-also"></a>Viz také
 

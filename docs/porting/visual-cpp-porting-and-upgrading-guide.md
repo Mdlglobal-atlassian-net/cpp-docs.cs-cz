@@ -2,12 +2,12 @@
 title: Průvodce přenosem a upgradováním Visual C++
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: c1f4114be236e5e3707113bc19779bb50f358ca8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39b0e716ae6dbc1210130908b27cfa1d06f86ec6
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478088"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556865"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Průvodce přenosem a upgradováním Visual C++
 
@@ -63,7 +63,7 @@ Kromě změn, které není možné vyhnout se z důvodu chyb kompilátoru někte
 
 3. Může vyžadovat aktualizaci kódu pro použití nových funkcí jazyka, které zjednodušuje kód, zvýšit výkon svých programů nebo aktualizovat kód v souladu s moderních standardů a osvědčených postupů a používat moderní knihovny.
 
-Po upgradu a testování projektu, může být také vhodné zvažte vylepšení další kód nebo plánovat budoucí směr kódu nebo dokonce zvažte architekturu vašeho projektu. Obdrží jeho aktuálnímu vývoji? Stane se důležité pro váš kód pro spuštění na jiných platformách?  Pokud ano, jaké platformy?  C++ je standardizovaná langauge s přenositelností a vývoj pro různé platformy v úvahu a ještě kód pro spoustu aplikací na Windows silnou vazbu na platformu Windows. Opravdu chcete Refaktorovat kód, k tomu oddělit tyto součásti, které jsou více svázané na platformu Windows?
+Po upgradu a testování projektu, může být také vhodné zvažte vylepšení další kód nebo plánovat budoucí směr kódu nebo dokonce zvažte architekturu vašeho projektu. Obdrží jeho aktuálnímu vývoji? Stane se důležité pro váš kód pro spuštění na jiných platformách?  Pokud ano, jaké platformy?  C++ je standardizovaná jazyk určený přenositelnost a vývoj pro různé platformy v úvahu a ještě kód pro spoustu aplikací na Windows silnou vazbu na platformu Windows. Opravdu chcete Refaktorovat kód, k tomu oddělit tyto součásti, které jsou více svázané na platformu Windows?
 
 A co uživatelského rozhraní? Pokud používáte knihovnu MFC, můžete chtít aktualizovat uživatelské rozhraní. Používáte novější funkce MFC, které byly zavedeny v 2008 jako Feature Pack? Pokud chcete poskytnout novější vzhled a chování vaší aplikace bez přepsání celé aplikace, můžete zvážit použití rozhraní API na pásu karet v prostředí MFC, nebo pomocí některé z nových funkcí knihovny MFC.
 

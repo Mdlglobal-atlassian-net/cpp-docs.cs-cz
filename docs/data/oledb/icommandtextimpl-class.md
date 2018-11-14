@@ -22,16 +22,16 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: fafd1198776c558ff39ef35c0b7beca538e976ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d05af932d5f531a4dab02e7e0ca171f4484891a3
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677692"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556319"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl – třída
 
-Poskytuje implementaci pro [ICommandText](/previous-versions/windows/desktop/ms714914) rozhraní.
+Poskytuje implementaci pro [ICommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms714914(v=vs.85)) rozhraní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -76,13 +76,13 @@ Vrátí text příkazu nastavil poslední volání [SetCommandText –](../../da
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-STDMETHOD(GetCommandText)(GUID * pguidDialect, 
+STDMETHOD(GetCommandText)(GUID * pguidDialect,
    LPOLESTR * ppwszCommand);
 ```
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825) v *referenční informace pro OLE DB programátory*. *PguidDialect* ve výchozím nastavení je parametr ignorován.
+Zobrazit [ICommandText::GetCommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms709825(v=vs.85)) v *referenční informace pro OLE DB programátory*. *PguidDialect* ve výchozím nastavení je parametr ignorován.
 
 ## <a name="setcommandtext"></a> ICommandTextImpl::SetCommandText
 
@@ -91,13 +91,13 @@ Nastaví text příkazu, nahraďte existující text příkazu.
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-STDMETHOD(SetCommandText)(REFGUID rguidDialect, 
+STDMETHOD(SetCommandText)(REFGUID rguidDialect,
    LPCOLESTR pwszCommand);
 ```
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757) v *referenční informace pro OLE DB programátory*.
+Zobrazit [ICommandText::SetCommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms709757(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="strcommandtext"></a> ICommandTextImpl::m_strCommandText
 

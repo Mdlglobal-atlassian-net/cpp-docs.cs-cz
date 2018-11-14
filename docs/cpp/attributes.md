@@ -2,12 +2,12 @@
 title: Atributy v jazyce C++
 ms.date: 06/01/2018
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: a4d24324165f3cce60d259adf6e3d21638296cf8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 444abf2ddf6d4563dcbeb5b683adc52f903bd97f
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471822"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520787"
 ---
 # <a name="attributes-in-c"></a>Atributy v jazyce C++
 
@@ -45,16 +45,16 @@ Atributy představují standardizované alternativou k rozšíření specifické
 
 - `[[nodiscard]]` **Visual Studio 2017 verze 15.3 nebo novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) určuje, že návratová hodnota funkce není určena pro zahodí. Vyvolá upozornění C4834, jak je znázorněno v tomto příkladu:
 
-   ```cpp
-   [[nodiscard]]
-   int foo(int i) { return i * i; }
+    ```cpp
+    [[nodiscard]]
+    int foo(int i) { return i * i; }
 
-   int main()
-   {
-       foo(42); //warning C4834: discarding return value of function with 'nodiscard' attribute
-       return 0;
-   }
-   ```
+    int main()
+    {
+        foo(42); //warning C4834: discarding return value of function with 'nodiscard' attribute
+        return 0;
+    }
+    ```
 
 - `[[maybe_unused]]` **Visual Studio 2017 verze 15.3 nebo novější:** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) určuje, že proměnné, funkce, třídy, definice typedef, nestatický datový člen, výčtu nebo specializace šablony záměrně nelze použít. Kompilátor nevyvolá upozornění při označení entity `[[maybe_unused]]` se nepoužívá. Entita, která je deklarována bez atributu můžete později se znova deklarovat s atributem a naopak. Entity se považuje za označené po jeho první deklaraci, která je označena se analyzují a zbytek překlad aktuální překladové jednotce.
 
@@ -75,12 +75,12 @@ Atributy představují standardizované alternativou k rozšíření specifické
     }
     ```
 
-   V příkladu vyvolává tato upozornění:
+  V příkladu vyvolává tato upozornění:
 
-   - 26494 (typ pravidla 5: objekt vždy inicializujte.)
+  - 26494 (typ pravidla 5: objekt vždy inicializujte.)
 
-   - 26485 (rozsah pravidla 3: rozklad pole na ukazatel.)
+  - 26485 (rozsah pravidla 3: rozklad pole na ukazatel.)
 
-   - 26481 (hranice Rule 1: Nepoužívejte aritmetiku ukazatele. Použijte rozsah.)
+  - 26481 (hranice Rule 1: Nepoužívejte aritmetiku ukazatele. Použijte rozsah.)
 
-   První dva upozornění vyvolat při kompilaci tohoto kódu s nástrojem analýza kódu CppCoreCheck nainstalovaná a aktivovaná. Ale třetí upozornění neaktivuje z důvodu atribut. Celý profil můžete potlačit pomocí zápisu [[gsl::suppress(bounds)]] bez zahrnutí příslušné pravidlo číslo. Podle dokumentu C++ Core Guidelines jsou navrženy k usnadnění psaní kódu lepší a bezpečnější. Atribut potlačit usnadňuje Chcete-li vypnout upozornění, pokud nejsou potřebná.
+  První dva upozornění vyvolat při kompilaci tohoto kódu s nástrojem analýza kódu CppCoreCheck nainstalovaná a aktivovaná. Ale třetí upozornění neaktivuje z důvodu atribut. Celý profil můžete potlačit pomocí zápisu [[gsl::suppress(bounds)]] bez zahrnutí příslušné pravidlo číslo. Podle dokumentu C++ Core Guidelines jsou navrženy k usnadnění psaní kódu lepší a bezpečnější. Atribut potlačit usnadňuje Chcete-li vypnout upozornění, pokud nejsou potřebná.

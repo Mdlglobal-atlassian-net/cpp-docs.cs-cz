@@ -2,12 +2,12 @@
 title: Explicitně přednastavené a odstraněné funkce
 ms.date: 11/04/2016
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
-ms.openlocfilehash: a090bd1b1a60dd7a5a5350fcf81dec7f17e083c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa03ca826eebe467e45e2bb7e0bc47537d40f366
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662602"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327015"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Explicitně přednastavené a odstraněné funkce
 
@@ -36,12 +36,12 @@ Tato možnost je pohodlná pro jednoduché typy, ale komplexní typy často defi
    - Žádný operátor přiřazení přesunu není automaticky vygenerován.
 
 > [!NOTE]
->  Kromě toho standardu C ++ 11 určuje následující další pravidla:
+> Kromě toho standardu C ++ 11 určuje následující další pravidla:
 >
 > - Pokud je kopírovací konstruktor nebo destruktor výslovně deklarovány, automatické generování operátor přiřazení kopie je zastaralý.
 > - Pokud operátor přiřazení kopie nebo destruktor je explicitně deklarované, pak automatické generování kopírovací konstruktor je zastaralý.
 >
->  V obou případech se Visual Studio nadále automaticky generovat nezbytné funkce implicitně a negeneruje upozornění.
+> V obou případech se Visual Studio nadále automaticky generovat nezbytné funkce implicitně a negeneruje upozornění.
 
 Důsledky tato pravidla mohou také způsobit únik těchto do hierarchie objektů. Například, pokud z nějakého důvodu nepodaří mít výchozí konstruktor, který lze volat z odvozená třída základní třídy – to znamená, **veřejné** nebo **chráněné** konstruktor, který nepřijímá žádné parametry – potom třídy která je odvozena od nemůže automaticky generovat vlastní výchozí konstruktor.
 

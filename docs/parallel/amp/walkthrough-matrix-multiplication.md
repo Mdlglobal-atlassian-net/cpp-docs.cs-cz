@@ -1,13 +1,13 @@
 ---
 title: 'Návod: Násobení matic'
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: a8f43f5b9df0726c9c01f940965b77b856e35430
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9516cf79b738ec03dd98133a4603b47f75eb2c8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647448"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327106"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Návod: Násobení matic
 
@@ -27,15 +27,15 @@ Než začnete:
 
 1. V panelu nabídek v sadě Visual Studio zvolte **souboru** > **nový** > **projektu**.
 
-2. V části **nainstalováno** v podokně šablony vyberte **Visual C++**.
+1. V části **nainstalováno** v podokně šablony vyberte **Visual C++**.
 
-3. Vyberte **prázdný projekt**, zadejte `MatrixMultiply` v **název** pole a klikněte na tlačítko **OK** tlačítko.
+1. Vyberte **prázdný projekt**, zadejte *MatrixMultiply* v **název** pole a klikněte na tlačítko **OK** tlačítko.
 
-4. Zvolte **Další** tlačítko.
+1. Zvolte **Další** tlačítko.
 
-5. V **Průzkumníka řešení**, otevřete místní nabídku pro **zdrojové soubory**a klikněte na tlačítko **přidat** > **nová položka**.
+1. V **Průzkumníka řešení**, otevřete místní nabídku pro **zdrojové soubory**a klikněte na tlačítko **přidat** > **nová položka**.
 
-6. V **přidat novou položku** dialogu **soubor C++ (.cpp)**, zadejte `MatrixMultiply.cpp` v **název** pole a klikněte na tlačítko **přidat** tlačítko.
+1. V **přidat novou položku** dialogu **soubor C++ (.cpp)**, zadejte *MatrixMultiply.cpp* v **název** pole a klikněte na tlačítko  **Přidat** tlačítko.
 
 ## <a name="multiplication-without-tiling"></a>Násobení bez dělení do bloků
 
@@ -47,7 +47,7 @@ V této části vezměte v úvahu Násobení dvou matice A a B, které jsou defi
 
 Matice 3 2 je A a B je 2 x 3 matice. Součin hodnot a b je následující matice 3 číslem 3. Produkt se počítá vynásobením řádků A sloupců B prvek po prvku.
 
-![3&#45;podle&#45;3 matice](../../parallel/amp/media/campmatrixproductnontiled.png "campmatrixproductnontiled")
+![3&#45;podle&#45;3 matice](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;podle&#45;3 matice")
 
 ### <a name="to-multiply-without-using-c-amp"></a>Pokud chcete vynásobit bez používání modelu C++ AMP
 
@@ -79,13 +79,13 @@ void main() {
 }
 ```
 
-    The algorithm is a straightforward implementation of the definition of matrix multiplication. It does not use any parallel or threaded algorithms to reduce the computation time.
+   Algoritmus je jednoduchá implementace definice násobení matic. Zkrátit čas výpočtu nepoužívá žádné algoritmy paralelní nebo vláken.
 
-2. V panelu nabídky zvolte **souboru** > **Uložit vše**.
+1. V panelu nabídky zvolte **souboru** > **Uložit vše**.
 
-3. Zvolte **F5** klávesovou zkratku pro spuštění ladění a ověřte, zda výstup je správná.
+1. Zvolte **F5** klávesovou zkratku pro spuštění ladění a ověřte, zda výstup je správná.
 
-4. Zvolte **Enter** ukončíte aplikaci.
+1. Zvolte **Enter** ukončíte aplikaci.
 
 ### <a name="to-multiply-by-using-c-amp"></a>Pro násobení pomocí jazyka C++ AMP
 
@@ -124,16 +124,16 @@ void MultiplyWithAMP() {
 }
 ```
 
-    The AMP code resembles the non-AMP code. The call to `parallel_for_each` starts one thread for each element in `product.extent`, and replaces the `for` loops for row and column. The value of the cell at the row and column is available in `idx`. You can access the elements of an `array_view` object by using either the `[]` operator and an index variable, or the `()` operator and the row and column variables. The example demonstrates both methods. The `array_view::synchronize` method copies the values of the `product` variable back to the `productMatrix` variable.
+   Kód AMP se podobá kódu bez AMP. Volání `parallel_for_each` spouští jedno vlákno pro každý prvek v `product.extent`a nahradí `for` smyčky pro řádků a sloupců. Hodnota buňky v řádku a sloupce je k dispozici v `idx`. Dostanete prvky `array_view` s použitím buď `[]` operátor a indexovaná proměnná, nebo `()` řádků a sloupců proměnných a operátor. Tento příklad ukazuje obě metody. `array_view::synchronize` Metoda zkopíruje hodnoty `product` proměnné zpět `productMatrix` proměnné.
 
-2. Přidejte následující `include` a `using` příkazů v horní části MatrixMultiply.cpp.
+1. Přidejte následující `include` a `using` příkazů v horní části MatrixMultiply.cpp.
 
 ```cpp
 #include <amp.h>
 using namespace concurrency;
 ```
 
-3. Upravit `main` metoda se má volat `MultiplyWithAMP` metody.
+1. Upravit `main` metoda se má volat `MultiplyWithAMP` metody.
 
 ```cpp
 void main() {
@@ -143,9 +143,9 @@ void main() {
 }
 ```
 
-4. Zvolte **Ctrl**+**F5** klávesovou zkratku pro spuštění ladění a ověřte, zda výstup je správná.
+1. Zvolte **Ctrl**+**F5** klávesovou zkratku pro spuštění ladění a ověřte, zda výstup je správná.
 
-5. Zvolte **MEZERNÍK** ukončíte aplikaci.
+1. Zvolte **MEZERNÍK** ukončíte aplikaci.
 
 ## <a name="multiplication-with-tiling"></a>Násobení s dělení do bloků
 
@@ -159,23 +159,23 @@ Dělení do bloků je technika, ve kterém můžete dělit data do stejné velik
 
 Pro využití dělení do bloku v násobení matic musí algoritmus rozdělit matici na dlaždice a potom zkopírujte data dlaždice do `tile_static` proměnné pro rychlejší přístup. V tomto příkladu je rozdělená matici na submatrices stejnou velikost. Produkt je tak, submatrices nalezen. Jsou dva matice a jejich produktů v tomto příkladu:
 
-![4&#45;podle&#45;4 matice](../../parallel/amp/media/campmatrixatiled.png "campmatrixatiled")
+![4&#45;podle&#45;4 matice](../../parallel/amp/media/campmatrixatiled.png "4&#45;podle&#45;matice 4")
 
-![4&#45;podle&#45;4 matice](../../parallel/amp/media/campmatrixbtiled.png "campmatrixbtiled")
+![4&#45;podle&#45;4 matice](../../parallel/amp/media/campmatrixbtiled.png "4&#45;podle&#45;4 matice B")
 
-![4&#45;podle&#45;4 matice](../../parallel/amp/media/campmatrixproducttiled.png "campmatrixproducttiled")
+![4&#45;podle&#45;4 matice](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;podle&#45;4 matice produktu")
 
 Matricí jsou rozdělené do matice čtyři 2 x 2, které jsou definovány takto:
 
-![4&#45;podle&#45;4 matice rozdělená na 2&#45;podle&#45;2 sub&#45;matice](../../parallel/amp/media/campmatrixapartitioned.png "campmatrixapartitioned")
+![4&#45;podle&#45;4 matice rozdělená na 2&#45;podle&#45;2 sub&#45;matice](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;podle&#45;4 matice rozdělená na 2&#45;podle&#45;2 sub&#45;matice")
 
-![4&#45;podle&#45;4 matice rozdělená na 2&#45;podle&#45;2 sub&#45;matice](../../parallel/amp/media/campmatrixbpartitioned.png "campmatrixbpartitioned")
+![4&#45;podle&#45;4 matice rozdělená na 2&#45;podle&#45;2 sub&#45;matice](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;podle&#45;4 matice rozdělená na 2&#45;podle&#45;2 sub&#45;matice")
 
 Produkt A a B teď může zapisovat a vypočítávány následujícím způsobem:
 
-![4&#45;podle&#45;4 matice rozdělená na 2&#45;podle&#45;2 sub&#45;matice](../../parallel/amp/media/campmatrixproductpartitioned.png "campmatrixproductpartitioned")
+![4&#45;podle&#45;4 matice rozdělená na 2&#45;podle&#45;2 sub&#45;matice](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;podle&#45;4 matice produktu A a B")
 
-Protože matice `a` prostřednictvím `h` jsou maticích 2 x 2, všechny produkty a součtů z nich jsou také maticích 2 x 2. Také vyplývá, že A * B je matice 4 x 4, podle očekávání. Můžete rychle zjistit, že algoritmus, vypočítá hodnotu elementu v prvním řádku, první sloupec v rámci produktu. V příkladu, bylo by hodnota elementu v prvním řádku a první sloupec `ae + bg`. Stačí vypočítat prvního sloupce, první řádek `ae` a `bg` ke každému termínu. Tuto hodnotu pro `ae` je `1*1 + 2*5 = 11`. Hodnota pro `bg` je `3*1 + 4*5 = 23`. Konečná hodnota je `11 + 23 = 34`, která je správná.
+Protože matice `a` prostřednictvím `h` jsou maticích 2 x 2, všechny produkty a součtů z nich jsou také maticích 2 x 2. Také vyplývá, že produkt A a B je matice 4 x 4, podle očekávání. Můžete rychle zjistit, že algoritmus, vypočítá hodnotu elementu v prvním řádku, první sloupec v rámci produktu. V příkladu, bylo by hodnota elementu v prvním řádku a první sloupec `ae + bg`. Stačí vypočítat prvního sloupce, první řádek `ae` a `bg` ke každému termínu. Tuto hodnotu pro `ae` je `(1 * 1) + (2 * 5) = 11`. Hodnota pro `bg` je `(3 * 1) + (4 * 5) = 23`. Konečná hodnota je `11 + 23 = 34`, která je správná.
 
 K implementaci tento algoritmus, kód:
 

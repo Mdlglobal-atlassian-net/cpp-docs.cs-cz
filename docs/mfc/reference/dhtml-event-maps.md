@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DHTML events [MFC], event map
 - DHTML events [MFC]
 ms.assetid: 9a2c8ae7-7216-4a5e-bc60-6b98695be0c6
-ms.openlocfilehash: 329b4176ad4d24651a41b5321c26318cf2af30e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75ceaf3d0532a557f5227e64edece2155aacb72f
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547196"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519865"
 ---
 # <a name="dhtml-event-maps"></a>DHTML – mapa událostí
 
@@ -441,7 +441,6 @@ Zpracovává (na úrovni dokumentu) `ondatasetcomplete` událost pochází podle
 
 ```
 DHTML_EVENT_ONDATASETCOMPLETE(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -514,7 +513,6 @@ Zpracovává (na úrovni dokumentu) `onerrorupdate` událost pochází podle prv
 
 ```
 DHTML_EVENT_ONERRORUPDATE(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -540,7 +538,6 @@ Zpracovává (na úrovni dokumentu) `onfilterchange` událost pochází podle pr
 ```
 
 DHTML_EVENT_ONFILTERCHANGE(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -566,7 +563,6 @@ Zpracovává (na úrovni prvku) `onfocus` událostí. Toto je nonbubbling událo
 ```
 
 DHTML_EVENT_ONFOCUS(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -592,7 +588,6 @@ Zpracovává (na úrovni dokumentu) `onhelp` událost pochází podle prvku HTML
 ```
 
 DHTML_EVENT_ONHELP(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -618,7 +613,6 @@ Zpracovává (na úrovni dokumentu) `onkeydown` událost pochází podle prvku H
 ```
 
 DHTML_EVENT_ONKEYDOWN(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -644,7 +638,6 @@ Zpracovává (na úrovni dokumentu) `onkeypress` událost pochází podle prvku 
 ```
 
 DHTML_EVENT_ONKEYPRESS(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -670,7 +663,6 @@ Zpracovává (na úrovni dokumentu) `onkeyup` událost pochází podle prvku HTM
 ```
 
 DHTML_EVENT_ONKEYUP(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -696,7 +688,6 @@ Zpracovává (na úrovni dokumentu) `onmousedown` událost pochází podle prvku
 ```
 
 DHTML_EVENT_ONMOUSEDOWN(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -722,7 +713,6 @@ Zpracovává (na úrovni dokumentu) `onmousemove` událost pochází podle prvku
 ```
 
 DHTML_EVENT_ONMOUSEMOVE(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -748,7 +738,6 @@ Zpracovává (na úrovni dokumentu) `onmouseout` událost pochází podle prvku 
 ```
 
 DHTML_EVENT_ONMOUSEOUT(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -774,7 +763,6 @@ Zpracovává (na úrovni dokumentu) `onmouseover` událost pochází podle prvku
 ```
 
 DHTML_EVENT_ONMOUSEOVER(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -800,7 +788,6 @@ Zpracovává (na úrovni dokumentu) `onmouseup` událost pochází podle prvku H
 ```
 
 DHTML_EVENT_ONMOUSEUP(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -826,7 +813,6 @@ Zpracovává (na úrovni prvku) `onresize` událostí. Toto je nonbubbling udál
 ```
 
 DHTML_EVENT_ONRESIZE(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -852,7 +838,6 @@ Zpracovává (na úrovni dokumentu) `onrowenter` událost pochází podle prvku 
 ```
 
 DHTML_EVENT_ONROWENTER(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -878,7 +863,6 @@ Zpracovává (na úrovni dokumentu) `onrowexit` událost pochází podle prvku H
 ```
 
 DHTML_EVENT_ONROWEXIT(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -904,7 +888,6 @@ Zpracovává (na úrovni dokumentu) `onselectstart` událost pochází podle prv
 ```
 
 DHTML_EVENT_ONSELECTSTART(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -972,7 +955,6 @@ Spustí vícestránkové dialogové okno Definice DHTML a adresu URL mapa událo
 
 ```
 BEGIN_DHTML_URL_EVENT_MAP()
-
 ```
 
 ### <a name="remarks"></a>Poznámky
@@ -993,7 +975,6 @@ Definice vložené DHTML – mapa událostí se spustí v vícestránkové dialo
 
 ```
 BEGIN_EMBED_DHTML_EVENT_MAP(className, mapName)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -1026,7 +1007,6 @@ Definice objektu map vstupní události adresy URL se spustí v vícestránkové
 
 ```
 BEGIN_URL_ENTRIES(className)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -1052,7 +1032,6 @@ Deklaruje DHTML a adresu URL mapa událostí v definici třídy.
 
 ```
 DECLARE_DHTML_URL_EVENT_MAP()
-
 ```
 
 ### <a name="remarks"></a>Poznámky
@@ -1071,7 +1050,6 @@ Označuje konec DHTML a adresu URL mapa událostí.
 
 ```
 END_DHTML_URL_EVENT_MAP(className)
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -1093,7 +1071,6 @@ Označuje konec vložený DHTML – mapa událostí.
 
 ```
 END_EMBED_DHTML_EVENT_MAP()
-
 ```
 
 ### <a name="example"></a>Příklad
@@ -1110,7 +1087,6 @@ Označuje konec mapování adresy URL události vstupu.
 
 ```
 END_URL_ENTRIES()
-
 ```
 
 ### <a name="example"></a>Příklad

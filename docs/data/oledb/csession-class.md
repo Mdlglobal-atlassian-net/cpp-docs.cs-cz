@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: 317e24708a6f4e5666c59c0db870440895173d7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3b77823608376fdfc12beacf7cab5dd810c415e
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550316"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556787"
 ---
 # <a name="csession-class"></a>CSession – třída
 
@@ -85,14 +85,14 @@ Ukončí transakce.
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT Abort(BOID* pboidReason = NULL, 
-   BOOL bRetaining = FALSE, 
+HRESULT Abort(BOID* pboidReason = NULL,
+   BOOL bRetaining = FALSE,
    BOOL bAsync = FALSE) const throw();
 ```
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ITransaction::Abort](/previous-versions/windows/desktop/ms709833) v *referenční informace pro OLE DB programátory*.
+Zobrazit [ITransaction::Abort](https://docs.microsoft.com/previous-versions/windows/desktop/ms709833(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -119,14 +119,14 @@ potvrzení transakce.
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT Commit(BOOL bRetaining = FALSE, 
-   DWORD grfTC = XACTTC_SYNC, 
+HRESULT Commit(BOOL bRetaining = FALSE,
+   DWORD grfTC = XACTTC_SYNC,
    DWORD grfRM = 0) const throw();
 ```
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ITransaction::Commit](/previous-versions/windows/desktop/ms713008) v *referenční informace pro OLE DB programátory*.
+Zobrazit [ITransaction::Commit](https://docs.microsoft.com/previous-versions/windows/desktop/ms713008(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -134,7 +134,7 @@ Standardní HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [ITransaction::Commit](/previous-versions/windows/desktop/ms713008).
+Další informace najdete v tématu [ITransaction::Commit](https://docs.microsoft.com/previous-versions/windows/desktop/ms713008(v=vs.85)).
 
 ## <a name="gettransactioninfo"></a> CSession::GetTransactionInfo
 
@@ -148,7 +148,7 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975) v *referenční informace pro OLE DB programátory*.
+Zobrazit [ITransaction::GetTransactionInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms714975(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -156,7 +156,7 @@ Standardní HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975) v *OLE DB referenční informace pro programátory*.
+Další informace najdete v tématu [ITransaction::GetTransactionInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms714975(v=vs.85)) v *OLE DB referenční informace pro programátory*.
 
 ## <a name="open"></a> CSession::Open
 
@@ -176,10 +176,10 @@ HRESULT Open(const CDataSource& ds,
 [in] Zdroj dat, pro který má být otevřeno relace.
 
 *pPropSet*<br/>
-[in] Ukazatel na pole [DBPROPSET](/previous-versions/windows/desktop/ms714367) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](/previous-versions/windows/desktop/ms713696) v *referenční informace pro OLE DB programátory* ve Windows SDK.
+[in] Ukazatel na pole [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) v *referenční informace pro OLE DB programátory* ve Windows SDK.
 
 *ulPropSets*<br/>
-[in] Počet [DBPROPSET](/previous-versions/windows/desktop/ms714367) struktury předané *pPropSet* argument.
+[in] Počet [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury předané *pPropSet* argument.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -204,7 +204,7 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786) v *referenční informace pro OLE DB programátory*.
+Zobrazit [ITransactionLocal::StartTransaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms709786(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -212,7 +212,7 @@ Standardní HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786) v *OLE DB referenční informace pro programátory*.
+Další informace najdete v tématu [ITransactionLocal::StartTransaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms709786(v=vs.85)) v *OLE DB referenční informace pro programátory*.
 
 ## <a name="see-also"></a>Viz také
 

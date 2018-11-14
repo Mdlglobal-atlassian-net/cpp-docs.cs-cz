@@ -6,12 +6,12 @@ helpviewer_keywords:
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-ms.openlocfilehash: 47e77e1709322abaa2607677bf21c9cfe4a3e6ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f37a539c74b995b1dce5f68344c555a679a87991
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580203"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333368"
 ---
 # <a name="function-overloading"></a>Přetížení funkcí
 
@@ -253,12 +253,12 @@ V následující tabulce jsou uvedeny skupiny převodů, volá triviální přev
 |-----------------------|---------------------|
 |*Název typu*|*Název typu* **&**|
 |*Název typu* **&**|*Název typu*|
-|*Název typu* **[] č.**|*type-name\***|
-|*Název typu* **(** *seznam argumentů* **)**|**(**  *\*název typu* **) (** *seznam argumentů* **)**|
+|*Název typu* **[] č.**|*Název typu* __\*__|
+|*Název typu* **(** *seznam argumentů* **)**|**(** __\*__ *název typu* **) (** *seznam argumentů* **)**|
 |*Název typu*|**Const** *název typu*|
 |*Název typu*|**volatile** *název typu*|
-|*type-name\***|**Const** *název typu\***|
-|*type-name\***|**volatile** *název typu\**|
+|*Název typu* __\*__|**Const** *název typu* __\*__|
+|*Název typu* __\*__|**volatile** *název typu* __\*__|
 
 Pořadí, ve kterém nedochází k pokusům o převody vypadá takto:
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: a35188e0194a57ac399610f3130634132addf8f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3ca469058ba65f83b0df60a93c63895e34f916e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644818"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332215"
 ---
 # <a name="ltstringgt-operators"></a>&lt;řetězec&gt; operátory
 
@@ -115,7 +115,7 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="remarks"></a>Poznámky
 
-Přetížení funkce jednotlivých `operator+` ke zřetězení dvou objektů třídy šablony [basic_string – třída](../standard-library/basic-string-class.md). Všechny účinně návratový `basic_string` \< **CharType**, **osobnostní rysy**, **alokátoru**> (_ *vlevo*). [připojit](../standard-library/basic-string-class.md#append)(\_ *vpravo*).
+Přetížení funkce jednotlivých `operator+` ke zřetězení dvou objektů třídy šablony [basic_string – třída](../standard-library/basic-string-class.md). Všechny účinně návratový `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Další informace najdete v tématu [připojit](../standard-library/basic-string-class.md#append).
 
 ### <a name="example"></a>Příklad
 
@@ -575,7 +575,7 @@ Zapíše hodnotu zadaného řetězce do výstupního datového proudu *_Ostr*.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce přetížení šablon **operátor <<** vložit pomocí objektu _ *Str* třídy šablony [basic_string](../standard-library/basic-string-class.md) do datového proudu \_  *Ostr.* Funkce vrátí efektivně \_ *Ostr*. **zápis**( \_ *Str*. [c_str](../standard-library/basic-string-class.md#c_str), \_ *Str*. [velikost](../standard-library/basic-string-class.md#size)).
+Funkce přetížení šablon **operátor <<** k vložení objektu *str* třídy šablony [basic_string](../standard-library/basic-string-class.md) do datového proudu  *\_ Ostr*. Funkce vrátí efektivně `_Ostr.write( str.c_str, str.size )`.
 
 ## <a name="op_gt"></a>  – Operátor&gt;
 

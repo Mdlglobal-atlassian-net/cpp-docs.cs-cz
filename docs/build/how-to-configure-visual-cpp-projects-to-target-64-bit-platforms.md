@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: 3df2252e1879fbbcdf6cc950fa8dd637894ba3f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0c734648b084c3f58577cb56984e3ea003a6a8e
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664552"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523934"
 ---
 # <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>Postupy: Konfigurace projektů Visual C++ pro cílení 64-Bit, x64 platformy
 
@@ -43,18 +43,18 @@ Konfigurace projektu v integrovaném vývojovém prostředí sady Visual Studio 
 
 - Když **nová platforma řešení** dialogové okno je otevřený, když nastavíte projekt, aby mířil 64bitové platformě v **Kopírovat nastavení z:** rozevíracího seznamu vyberte **Win32**. Tato nastavení projektu se automaticky aktualizují na úrovni projektu:
 
-   - [/MACHINE](../build/reference/machine-specify-target-platform.md) – možnost linkeru nastavená na **/MACHINE:X 64**.
+  - [/MACHINE](../build/reference/machine-specify-target-platform.md) – možnost linkeru nastavená na **/MACHINE:X 64**.
 
-   - **Registrovat výstup** je vypnuté. Další informace najdete v tématu [stránky vlastností Linkeru](../ide/linker-property-pages.md).
+  - **Registrovat výstup** je vypnuté. Další informace najdete v tématu [stránky vlastností Linkeru](../ide/linker-property-pages.md).
 
-   - **Cílové prostředí** je nastavena na **/env x64**. Další informace najdete v tématu [MIDL – stránky vlastností: Obecné](../ide/midl-property-pages-general.md).
+  - **Cílové prostředí** je nastavena na **/env x64**. Další informace najdete v tématu [MIDL – stránky vlastností: Obecné](../ide/midl-property-pages-general.md).
 
-   - **Ověřit parametry** je vymazána a resetovat na výchozí hodnotu. Další informace najdete v tématu [MIDL – stránky vlastností: Upřesnit](../ide/midl-property-pages-advanced.md).
+  - **Ověřit parametry** je vymazána a resetovat na výchozí hodnotu. Další informace najdete v tématu [MIDL – stránky vlastností: Upřesnit](../ide/midl-property-pages-advanced.md).
 
-   - Pokud **formát informací o ladění** byl nastaven na **/zi** v konfiguraci projektu Win32, pak bude nastaven **/zi** v konfiguraci projektu 64-bit. Další informace najdete v tématu [/Z7, / zi, /ZI (formát informací o ladění)](../build/reference/z7-zi-zi-debug-information-format.md).
+  - Pokud **formát informací o ladění** byl nastaven na **/zi** v konfiguraci projektu Win32, pak bude nastaven **/zi** v konfiguraci projektu 64-bit. Další informace najdete v tématu [/Z7, / zi, /ZI (formát informací o ladění)](../build/reference/z7-zi-zi-debug-information-format.md).
 
-   > [!NOTE]
-   > Žádná z těchto vlastností projektu se změní, pokud jsou přepsány na úrovni souboru.
+  > [!NOTE]
+  > Žádná z těchto vlastností projektu se změní, pokud jsou přepsány na úrovni souboru.
 
 ## <a name="see-also"></a>Viz také
 

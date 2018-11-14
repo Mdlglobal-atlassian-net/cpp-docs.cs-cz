@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-ms.openlocfilehash: f118f55ddaa4a2dbc8a4a3ad1e596ec461a2b078
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8707ac716a010ea1d3dc0fa51740e76a5822462
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615056"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329297"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (model zpracování výjimek)
 
@@ -29,12 +29,17 @@ Určuje druh zpracování výjimek v kompilátoru, když k optimalizaci tokeny v
 
 ## <a name="arguments"></a>Arguments
 
-|||
-|-|-|
-**a**|Model ošetření výjimek, který zachytává asynchronní (strukturované) a synchronní výjimky (C++) pomocí jazyka C++ `catch(...)` syntaxe.
-**s**|Model ošetření výjimek, který zachytává pouze synchronní výjimky (C++) a instruuje kompilátor, aby předpokládal, že funkce deklarované jako **extern "C"** může vyvolat výjimku.
-**c**|Pokud je použita s **s** (**/EHsc**), zachytává pouze výjimky jazyka C++ a instruuje kompilátor, aby předpokládal, že funkce deklarované jako **extern "C"** nikdy nevyvolají výjimku C++. **/ EHca** je ekvivalentní **/EHa**.
-**r**|Instruuje kompilátor, aby vždy generovat kontroly ukončení za běhu pro všechny **noexcept** funkce. Ve výchozím nastavení, modul runtime vyhledává **noexcept** může být optimalizován okamžitě, pokud kompilátor zjistí funkce volá pouze non-throwing. funkce.
+**a**<br/>
+Model ošetření výjimek, který zachytává asynchronní (strukturované) a synchronní výjimky (C++) pomocí jazyka C++ `catch(...)` syntaxe.
+
+**s**<br/>
+Model ošetření výjimek, který zachytává pouze synchronní výjimky (C++) a instruuje kompilátor, aby předpokládal, že funkce deklarované jako **extern "C"** může vyvolat výjimku.
+
+**c**<br/>
+Pokud je použita s **s** (**/EHsc**), zachytává pouze výjimky jazyka C++ a instruuje kompilátor, aby předpokládal, že funkce deklarované jako **extern "C"** nikdy nevyvolají výjimku C++. **/ EHca** je ekvivalentní **/EHa**.
+
+**r**<br/>
+Instruuje kompilátor, aby vždy generovat kontroly ukončení za běhu pro všechny **noexcept** funkce. Ve výchozím nastavení, modul runtime vyhledává **noexcept** může být optimalizován okamžitě, pokud kompilátor zjistí funkce volá pouze non-throwing. funkce.
 
 ## <a name="remarks"></a>Poznámky
 

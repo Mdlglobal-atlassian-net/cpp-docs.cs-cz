@@ -8,12 +8,12 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: ac8a1b43b3bf8bde8f910e72b601bf7d94e0d19d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a15e519be14d9a05cb30a8c9282baccc87a5f35e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480285"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326963"
 ---
 # <a name="pointers-to-members"></a>Ukazatelé na členy
 
@@ -25,28 +25,40 @@ Deklarace ukazatelů na členy jsou zvláštní případy deklarace ukazatelů. 
 ```
 
 1. Specifikátor deklarace:
-  - Volitelný specifikátor paměťové třídy.
 
-  - Volitelné **const** a/nebo **volatile** specifikátorů.
+   - Volitelný specifikátor paměťové třídy.
 
-  - Specifikátor typu: název typu.  Jedná se o typ členu, který chcete zdůraznit, ne na třídu.
+   - Volitelné **const** a/nebo **volatile** specifikátorů.
+
+   - Specifikátor typu: název typu.  Jedná se o typ členu, který chcete zdůraznit, ne na třídu.
 
 1. Deklarátor:
 
-  - Volitelný specifický modifikátor Microsoft. Další informace najdete v tématu [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md).
-1. Kvalifikovaný název třídy obsahující odkazovala na členy.
-  - :: Operator.
-  - <strong>\*</strong> Operátor.
-  - Volitelné **const** a/nebo **volatile** specifikátorů.
-  - Identifikátor pojmenování ukazatel na člen.
+   - Volitelný specifický modifikátor Microsoft. Další informace najdete v tématu [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-  - Volitelný inicializátor:
-  - **=** Operátor.
-  - **&** Operátor.
-  - Kvalifikovaný název třídy.
-  - Operátor `::`.
-  - Název Nestatický člen třídy příslušného typu.
-  - Jako vždy víc deklarátorů. (a všechny přidružené inicializátory) jsou povoleny v jedné deklaraci.
+   - Kvalifikovaný název třídy obsahující odkazovala na členy.
+
+   - __::__ Operátor.
+
+   - __\*__ Operátor.
+
+   - Volitelné **const** a/nebo **volatile** specifikátorů.
+
+   - Identifikátor pojmenování ukazatel na člen.
+
+1. Volitelný inicializátor:
+
+   - **=** Operátor.
+
+   - **&** Operátor.
+
+   - Kvalifikovaný název třídy.
+
+   - __::__ Operátor.
+
+   - Název Nestatický člen třídy příslušného typu.
+
+Jako vždy víc deklarátorů. (a všechny přidružené inicializátory) jsou povoleny v jedné deklaraci.
 
 Ukazatel na člen třídy, se liší od normální ukazatel, protože obsahuje informace o typu pro typ člena a třídy, do které patří člena. Identifikuje normální ukazatel (má adresu) pouze jeden objekt v paměti. Ukazatel na člen třídy identifikuje člena v jakékoli instance třídy. Následující příklad deklaruje třídu, `Window`a některé ukazatele na člen data.
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LABEL directive
 ms.assetid: 39ec44e8-91e6-4f3c-8cf0-b66479974e42
-ms.openlocfilehash: a1058600ff657df71d7117a4733bebd4685d569f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b90dd4b9c1a0a02526b63f98467a037aff484cd
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641646"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51325819"
 ---
 # <a name="label-masm"></a>Popisek (MASM)
 
@@ -20,8 +20,8 @@ Vytvoří nový popisek tak, že přiřadíte hodnotu aktuální umístění č�
 ## <a name="syntax"></a>Syntaxe
 
 > *název* popisek *typu*
-
-> *název* POPISKU [[NEAR | POKUD | PTR PROC]] [[*typ*]]
+>
+> *název* popisek \[NEAR | POKUD | PROC] PTR \[ *typ*]
 
 ## <a name="see-also"></a>Viz také:
 

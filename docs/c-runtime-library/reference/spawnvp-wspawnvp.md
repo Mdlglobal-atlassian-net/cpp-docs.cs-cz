@@ -30,12 +30,12 @@ helpviewer_keywords:
 - process creation
 - _spawnvp function
 ms.assetid: 8d8774ec-6ad4-4680-a5aa-440cde1e0249
-ms.openlocfilehash: 5470c88ea0c39c421f027d219af5d3465324b1ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b697eabd7a45eedbf9c892acee570a9e8b818d1b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649537"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330720"
 ---
 # <a name="spawnvp-wspawnvp"></a>_spawnvp, _wspawnvp
 
@@ -76,11 +76,11 @@ Návratová hodnota ze synchronního **_spawnvp** nebo **_wspawnvp –** (**_P_W
 
 |||
 |-|-|
-**E2BIG**|Seznam argumentů přesahuje 1024 bajtů.
-**EINVAL**|*režim* argument je neplatný.
-**ENOENT**|Soubor nebo cesta nebyla nalezena.
-**ENOEXEC**|Zadaný soubor není spustitelný soubor nebo má neplatný formát spustitelného souboru.
-**ENOMEM**|Nedostatek paměti je k dispozici ke spuštění nového procesu.
+| **E2BIG** | Seznam argumentů přesahuje 1024 bajtů. |
+| **EINVAL** | *režim* argument je neplatný. |
+| **ENOENT** | Soubor nebo cesta nebyla nalezena. |
+| **ENOEXEC** | Zadaný soubor není spustitelný soubor nebo má neplatný formát spustitelného souboru. |
+| **ENOMEM** | Nedostatek paměti je k dispozici ke spuštění nového procesu. |
 
 Další informace o těchto a dalších návratové kódy naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-ms.openlocfilehash: 69e365c0f0bbee7014b6d754c920bd6241064fdf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36769fa531decaee81c73a4751f5c6ed24008ffc
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495555"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525010"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Návod: Připojení pomocí úloh a žádostí XML HTTP
 
-Tento příklad ukazuje způsob použití [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) a [IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) spolu s úkoly odesílajícími požadavky HTTP GET a POST na webovou službu v Universal Windows Platform (UPW ) aplikace. Propojením požadavku `IXMLHTTPRequest2` s úkoly můžete psát kód, který lze kombinovat s ostatními úkoly. Například můžete použít úlohu stahování jako součást posloupnosti úkolů. Úloha stažení můžete také odpovídat při práci se zruší.
+Tento příklad ukazuje způsob použití [IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) a [IXMLHTTPRequest2Callback](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) spolu s úkoly odesílajícími požadavky HTTP GET a POST na webovou službu v Universal Windows Platform (UPW ) aplikace. Propojením požadavku `IXMLHTTPRequest2` s úkoly můžete psát kód, který lze kombinovat s ostatními úkoly. Například můžete použít úlohu stahování jako součást posloupnosti úkolů. Úloha stažení můžete také odpovídat při práci se zruší.
 
 > [!TIP]
 >  C++ REST SDK můžete použít také k provádění požadavků protokolu HTTP z aplikace pro UPW pomocí aplikace jazyka C++ nebo z desktopové aplikace jazyka C++. Další informace najdete v tématu [C++ REST SDK (kódový název "Casablanca")](https://github.com/Microsoft/cpprestsdk).
@@ -69,35 +69,34 @@ Tato část popisuje způsob použití `HttpRequest` třídy v aplikaci UWP. Apl
 
    [!code-xml[concrt-using-ixhr2#A1](../../parallel/concrt/codesnippet/xaml/walkthrough-connecting-using-tasks-and-xml-http-requests_4.xaml)]
 
-1. V MainPage.xaml.h přidejte tuto `#include` – direktiva:
+2. V MainPage.xaml.h přidejte tuto `#include` – direktiva:
 
    [!code-cpp[concrt-using-ixhr2#A2](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_5.h)]
 
-1. V MainPage.xaml.h přidejte tyto `private` členské proměnné `MainPage` třídy:
+3. V MainPage.xaml.h přidejte tyto `private` členské proměnné `MainPage` třídy:
 
    [!code-cpp[concrt-using-ixhr2#A3](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_6.h)]
 
-1. V MainPage.xaml.h deklarovat `private` metoda `ProcessHttpRequest`:
+4. V MainPage.xaml.h deklarovat `private` metoda `ProcessHttpRequest`:
 
    [!code-cpp[concrt-using-ixhr2#A4](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_7.h)]
 
-1. V souboru MainPage.xaml.cpp přidejte tyto `using` příkazy:
+5. V souboru MainPage.xaml.cpp přidejte tyto `using` příkazy:
 
    [!code-cpp[concrt-using-ixhr2#A5](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_8.cpp)]
 
-1. Ve MainPage.xaml.cpp implementujte `GetButton_Click`, `PostButton_Click`, a `CancelButton_Click` metody `MainPage` třídy.
+6. Ve MainPage.xaml.cpp implementujte `GetButton_Click`, `PostButton_Click`, a `CancelButton_Click` metody `MainPage` třídy.
 
    [!code-cpp[concrt-using-ixhr2#A6](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_9.cpp)]
 
-    > [!TIP]
-
-    >  Pokud vaše aplikace nevyžaduje podporu zrušení, předejte [concurrency::cancellation_token:: žádný](reference/cancellation-token-class.md#none) k `HttpRequest::GetAsync` a `HttpRequest::PostAsync` metody.
+   > [!TIP]
+   > Pokud vaše aplikace nevyžaduje podporu zrušení, předejte [concurrency::cancellation_token:: žádný](reference/cancellation-token-class.md#none) k `HttpRequest::GetAsync` a `HttpRequest::PostAsync` metody.
 
 1. Ve MainPage.xaml.cpp implementujte `MainPage::ProcessHttpRequest` metody.
 
    [!code-cpp[concrt-using-ixhr2#A7](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_10.cpp)]
 
-1. Ve vlastnostech projektu v rámci **Linkeru**, **vstup**, zadejte `shcore.lib` a `msxml6.lib`.
+8. Ve vlastnostech projektu v rámci **Linkeru**, **vstup**, zadejte `shcore.lib` a `msxml6.lib`.
 
 Tady je spuštěné aplikaci:
 

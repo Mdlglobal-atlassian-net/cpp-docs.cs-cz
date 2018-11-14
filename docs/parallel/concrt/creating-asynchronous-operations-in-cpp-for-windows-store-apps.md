@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: ecef168d2162adf3a478268ec08b0a61f35c6260
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4824180ec0ff9f7adb7c2d0a9b505a2abb58c20b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563199"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333329"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Vytváření asynchronních operací v jazyce C++ pro aplikace pro UPW
 
@@ -148,11 +148,10 @@ Můžete předat `task_continuation_context` objektu [Task::Then –](reference/
 Následující části zobrazuje aplikaci, která načte soubor z disku, najde nejčastější slova v tomto souboru a potom zobrazí výsledky v uživatelském rozhraní. Poslední operaci aktualizace uživatelského rozhraní, dochází na vlákně UI.
 
 > [!IMPORTANT]
->  Toto chování je specifické pro aplikace UWP. Pro aplikace klasické pracovní plochy ne řídit, ve kterém se spouští pokračování. Místo toho Plánovač zvolí pracovní vlákno, ve kterém se spustí každý pokračování.
+> Toto chování je specifické pro aplikace UWP. Pro aplikace klasické pracovní plochy ne řídit, ve kterém se spouští pokračování. Místo toho Plánovač zvolí pracovní vlákno, ve kterém se spustí každý pokračování.
 
 > [!IMPORTANT]
-
->  Nevolejte [Concurrency::Task:: wait](reference/task-class.md#wait) v těle pokračování, které běží v STA. V opačném případě modul runtime vyvolá [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) vzhledem k tomu, že tato metoda blokuje aktuální vlákno a může způsobit, že aplikace přestane reagovat. Můžete však volat [Concurrency::Task:: Get](reference/task-class.md#get) metody pro získání výsledku předchozího úkolu v pokračování založeném na úkolech.
+> Nevolejte [Concurrency::Task:: wait](reference/task-class.md#wait) v těle pokračování, které běží v STA. V opačném případě modul runtime vyvolá [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) vzhledem k tomu, že tato metoda blokuje aktuální vlákno a může způsobit, že aplikace přestane reagovat. Můžete však volat [Concurrency::Task:: Get](reference/task-class.md#get) metody pro získání výsledku předchozího úkolu v pokračování založeném na úkolech.
 
 ##  <a name="example-app"></a> Příklad: Řízení provádění v aplikaci Windows Runtime s C++ a XAML
 

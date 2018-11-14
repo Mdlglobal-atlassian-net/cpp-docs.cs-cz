@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
-ms.openlocfilehash: 6592352e2afc02d3689f328ab37db6f289880cec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc9aa57ffd68630d0a4209f8f8611882f8f36fc3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522184"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524167"
 ---
 # <a name="xml-file-processing"></a>Zpracování souboru XML
 
@@ -23,50 +23,50 @@ Při generování ID řetězce, kompilátor dodržuje následující pravidla:
 
 - První část řetězec ID identifikuje typ členu, identifikují se jeden znak následovaný dvojtečkou. Se používají následující typy členů:
 
-   |Znak|Popis|
-   |---------------|-----------------|
-   |N|– obor názvů<br /><br /> Dokumentační komentáře nelze přidat do oboru názvů, je možné cref odkazy na obor názvů.|
-   |T|Typ: třída, rozhraní, struktury, výčtu, delegát|
-   |D|– definice typedef|
-   |F|pole|
-   |P|vlastnosti (včetně indexery nebo jiných indexované vlastnosti)|
-   |M|(včetně speciálních metod, jako konstruktory, operátory a tak dále) – metoda|
-   |E|event|
-   |!|Text chyby<br /><br /> Zbývající řetězec poskytuje informace o této chybě. Kompilátor Visual C++ generuje informace o chybě pro odkazy, které nelze rozpoznat.|
+  | Znak | Popis |
+  |---------------|-----------------|
+  | N | – obor názvů<br /><br /> Dokumentační komentáře nelze přidat do oboru názvů, je možné cref odkazy na obor názvů. |
+  | T | Typ: třída, rozhraní, struktury, výčtu, delegát |
+  | D | – definice typedef |
+  | F | pole |
+  | P | vlastnosti (včetně indexery nebo jiných indexované vlastnosti) |
+  | M | (včetně speciálních metod, jako konstruktory, operátory a tak dále) – metoda |
+  | E | event |
+  | ! | Text chyby<br /><br /> Zbývající řetězec poskytuje informace o této chybě. Kompilátor Visual C++ generuje informace o chybě pro odkazy, které nelze rozpoznat. |
 
 - Druhá část řetězce je plně kvalifikovaný název položky, počínaje kořenový obor názvů. Název položky, jeho nadřazeného typu nebo typů a obor názvů jsou odděleny tečkami. Pokud má název samotné položky období, budou nahrazeny jako znak hash (#). Předpokládá se, že nemá žádná položka znak hash přímo ve svém názvu. Například plně kvalifikovaný název `String` konstruktor by "System.String.#ctor".
 
 - Vlastnosti a metody Pokud jsou argumenty metody, uzavřený do závorek seznamu argumentů se řídí. Pokud neexistují žádné argumenty, jsou k dispozici žádné závorky. Argumenty jsou odděleny čárkami. Kódování každý argument následuje přímo jak je zakódovaný v rozhraní .NET Framework podpisu:
 
-   - Základní typy. Pravidelné typy (za řetězcem ELEMENT_TYPE_CLASS nebo ELEMENT_TYPE_VALUETYPE) jsou reprezentovány ve formě plně kvalifikovaný název typu.
+  - Základní typy. Pravidelné typy (za řetězcem ELEMENT_TYPE_CLASS nebo ELEMENT_TYPE_VALUETYPE) jsou reprezentovány ve formě plně kvalifikovaný název typu.
 
-   - Vnitřní typy (například ELEMENT_TYPE_I4 ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF. a ELEMENT_TYPE_VOID) jsou reprezentovány ve formě plně kvalifikovaný název odpovídající úplný typ, například **System.Int32** nebo **System.TypedReference**.
+  - Vnitřní typy (například ELEMENT_TYPE_I4 ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF. a ELEMENT_TYPE_VOID) jsou reprezentovány ve formě plně kvalifikovaný název odpovídající úplný typ, například **System.Int32** nebo **System.TypedReference**.
 
-   - Typ ELEMENT_TYPE_PTR je vyjádřena jako "*" následující typ změny.
+  - Typ ELEMENT_TYPE_PTR je vyjádřena jako "*" následující typ změny.
 
-   - ELEMENT_TYPE_BYREF je vyjádřena jako "\@' následující typ změny.
+  - ELEMENT_TYPE_BYREF je vyjádřena jako "\@' následující typ změny.
 
-   - ELEMENT_TYPE_PINNED je vyjádřena jako ' ^' následující typ změny. Kompilátor Visual C++ generuje nikdy to.
+  - ELEMENT_TYPE_PINNED je vyjádřena jako ' ^' následující typ změny. Kompilátor Visual C++ generuje nikdy to.
 
-   - ELEMENT_TYPE_CMOD_REQ je vyjádřena jako "&#124;" a plně kvalifikovaný název třídy modifikátor následující typ změny. Kompilátor Visual C++ generuje nikdy to.
+  - ELEMENT_TYPE_CMOD_REQ je vyjádřena jako "&#124;" a plně kvalifikovaný název třídy modifikátor následující typ změny. Kompilátor Visual C++ generuje nikdy to.
 
-   - ELEMENT_TYPE_CMOD_OPT je vyjádřena jako '!' a plně kvalifikovaný název třídy modifikátor následující typ změny.
+  - ELEMENT_TYPE_CMOD_OPT je vyjádřena jako '!' a plně kvalifikovaný název třídy modifikátor následující typ změny.
 
-   - ELEMENT_TYPE_SZARRAY je reprezentován jako "[]" za typ prvku pole.
+  - ELEMENT_TYPE_SZARRAY je reprezentován jako "[]" za typ prvku pole.
 
-   - "[?]" Představuje ELEMENT_TYPE_GENERICARRAY následující typ prvku pole. Kompilátor Visual C++ generuje nikdy to.
+  - "[?]" Představuje ELEMENT_TYPE_GENERICARRAY následující typ prvku pole. Kompilátor Visual C++ generuje nikdy to.
 
-   - ELEMENT_TYPE_ARRAY je vyjádřena jako [*dolní hranice*:`size`,*dolní hranice*:`size`] kde je počet čárkami pořadí - 1 a dolní meze a velikosti jednotlivých rozměrů, pokud známé, jsou reprezentovány v desítkové soustavě. Pokud není zadán dolní mez nebo velikost, je jednoduše vynechán. Pokud jsou vynechány dolní mez a velikosti pro konkrétní dimenzi, ":" je také vynechán. Je třeba 2rozměrné pole s 1 jako dolní mez a neurčené formáty [1:, 1:].
+  - ELEMENT_TYPE_ARRAY je vyjádřena jako [*dolní hranice*:`size`,*dolní hranice*:`size`] kde je počet čárkami pořadí - 1 a dolní meze a velikosti jednotlivých rozměrů, pokud známé, jsou reprezentovány v desítkové soustavě. Pokud není zadán dolní mez nebo velikost, je jednoduše vynechán. Pokud jsou vynechány dolní mez a velikosti pro konkrétní dimenzi, ":" je také vynechán. Je třeba 2rozměrné pole s 1 jako dolní mez a neurčené formáty [1:, 1:].
 
-   - Typ ELEMENT_TYPE_FNPTR je reprezentován jako "= FUNC:`type`(*podpis*)", kde `type` je návratový typ a *podpis* je argumenty metody. Pokud neexistují žádné argumenty, jsou vynechány závorky. Kompilátor Visual C++ generuje nikdy to.
+  - Typ ELEMENT_TYPE_FNPTR je reprezentován jako "= FUNC:`type`(*podpis*)", kde `type` je návratový typ a *podpis* je argumenty metody. Pokud neexistují žádné argumenty, jsou vynechány závorky. Kompilátor Visual C++ generuje nikdy to.
 
-   Následující součásti podpis nejsou zastoupeny, protože se používají nikdy odlišující přetížené metody:
+  Následující součásti podpis nejsou zastoupeny, protože se používají nikdy odlišující přetížené metody:
 
-   - Konvence volání
+  - Konvence volání
 
-   - Návratový typ
+  - Návratový typ
 
-   - TYP ELEMENT_TYPE_SENTINEL
+  - TYP ELEMENT_TYPE_SENTINEL
 
 - Pro operátory převodu je návratová hodnota metody zakódován jako "~" a návratový typ jako již kódovaný.
 
@@ -76,9 +76,9 @@ Při generování ID řetězce, kompilátor dodržuje následující pravidla:
     <member name="T:MyClass`2">
     ```
 
-   Pro typ, který je definován jako `public class MyClass<T, U>`.
+  Pro typ, který je definován jako `public class MyClass<T, U>`.
 
-   Pro metody, přičemž obecné typy jako parametry, parametry obecného typu jsou zadané jako čísla začíná back značky (například \`0, \`1).  Každé číslo představující zápis založený na nule pole pro parametry obecného typu.
+  Pro metody, přičemž obecné typy jako parametry, parametry obecného typu jsou zadané jako čísla začíná back značky (například \`0, \`1).  Každé číslo představující zápis založený na nule pole pro parametry obecného typu.
 
 ## <a name="example"></a>Příklad
 

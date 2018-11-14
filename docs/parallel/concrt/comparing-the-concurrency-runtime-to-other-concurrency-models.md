@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 0b5c24761f176d9c256c1ef6aee85b25231cea2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82e1dca1345b909919320b911c4c107e965c9850
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655842"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332670"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Porovnání modelu Concurrency Runtime s jinými modely souběžného zpracování
 
@@ -33,7 +33,7 @@ Preemptive modelu a kooperativní plánování modely jsou dvě běžné způsob
 
 ### <a name="preemptive-and-cooperative-scheduling"></a>Plánování preemptive a spolupráce
 
-*Preemptive plánování* je kruhové dotazování, na základě priority mechanismus, který poskytuje každý úkol výhradní přístup k výpočetnímu prostředku pro zadané časové období a pak přepne na jiné úlohy. Preemptive plánování je běžné v multitaskingu operační systémy jako Windows *. Plánování spolupráce* virtuálních sítí je mechanismus, která poskytuje každý úkol výhradní přístup k výpočetnímu prostředku, dokud neskončí úloha nebo dokud se úloha provede jeho přístup k prostředku. Modul Concurrency Runtime používá k dosažení maximální využití prostředků zpracování kooperativní plánování spolu s plánovači preemptive operačního systému.
+*Preemptive plánování* je kruhové dotazování, na základě priority mechanismus, který poskytuje každý úkol výhradní přístup k výpočetnímu prostředku pro zadané časové období a pak přepne na jiné úlohy. Preemptive plánování je běžné v multitaskingu operační systémy jako Windows. *Plánování spolupráce* virtuálních sítí je mechanismus, která poskytuje každý úkol výhradní přístup k výpočetnímu prostředku, dokud neskončí úloha nebo dokud se úloha provede jeho přístup k prostředku. Modul Concurrency Runtime používá k dosažení maximální využití prostředků zpracování kooperativní plánování spolu s plánovači preemptive operačního systému.
 
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>Rozdíly mezi plánovači Preemptive a spolupráce
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-ms.openlocfilehash: fdea70f8d87604ca0665baa64c8652c14295a670
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f58a33a0c43cb0d70d98f3f2ae33f766058b1c23
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506571"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331266"
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>Sada záznamů: Parametrizace sady záznamů (ODBC)
 
@@ -54,7 +54,7 @@ Obvyklá využití pro parametry patří:
 
    Řetězec filtru sady záznamů, které jsou uložené v `m_strFilter`, může vypadat třeba takto:
 
-    ```
+    ```cpp
     "StudentID = ?"
     ```
 
@@ -62,7 +62,7 @@ Obvyklá využití pro parametry patří:
 
    Hodnota parametru také přiřadíte tímto způsobem:
 
-    ```
+    ```cpp
     strInputID = "100";
     ...
     m_strParam = strInputID;
@@ -70,7 +70,7 @@ Obvyklá využití pro parametry patří:
 
    Chcete by se nastavit řetězec filtru tímto způsobem:
 
-    ```
+    ```cpp
     m_strFilter = "StudentID = 100";   // 100 is incorrectly quoted
                                        // for some drivers
     ```
@@ -79,15 +79,15 @@ Obvyklá využití pro parametry patří:
 
    Hodnota tohoto parametru je pokaždé jiný requery záznamů pro nové ID studenta.
 
-    > [!TIP]
-    >  Pomocí parametru je mnohem efektivnější než jednoduše filtr. Pro parametry sady záznamů, musí zpracovat databázi SQL **vyberte** příkaz pouze jednou. Pro filtrovanou sadu záznamů bez parametrů **vyberte** je potřeba zpracovat příkaz pokaždé, když `Requery` s novou hodnotu filtru.
+   > [!TIP]
+   > Pomocí parametru je mnohem efektivnější než jednoduše filtr. Pro parametry sady záznamů, musí zpracovat databázi SQL **vyberte** příkaz pouze jednou. Pro filtrovanou sadu záznamů bez parametrů **vyberte** je potřeba zpracovat příkaz pokaždé, když `Requery` s novou hodnotu filtru.
 
 Další informace o filtrech najdete v tématu [sada záznamů: filtrování záznamů (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
 
 ##  <a name="_core_parameterizing_your_recordset_class"></a> Parametrizace vaší třídy sady záznamů
 
 > [!NOTE]
->  Tato část se týká objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud používáte hromadné načítání řádků, implementace parametry je podobný proces. Další informace najdete v tématu [sada záznamů: načítání hromadné záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Tato část se týká objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud používáte hromadné načítání řádků, implementace parametry je podobný proces. Další informace najdete v tématu [sada záznamů: načítání hromadné záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Než vytvoříte třídu sady záznamů, zjistit, jaké parametry se budete potřebovat, jaké jsou jejich datové typy a jak je využívá sadu záznamů.
 
@@ -116,7 +116,7 @@ Než vytvoříte třídu sady záznamů, zjistit, jaké parametry se budete pot�
 
 1. Upravit [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) definice členské funkce v souboru .cpp. Přidejte volání funkce RFX pro každý parametr datový člen, který jste přidali do třídy. Informace o vytváření funkcí RFX najdete v tématu [výměna polí záznamu: jak funkce RFX pracuje](../../data/odbc/record-field-exchange-how-rfx-works.md). Předcházejte volání funkce RFX parametrů pomocí jediného volání pro:
 
-    ```
+    ```cpp
     pFX->SetFieldType( CFieldExchange::param );
     // RFX calls for parameter data members
     ```
@@ -130,11 +130,10 @@ Než vytvoříte třídu sady záznamů, zjistit, jaké parametry se budete pot�
    V době běhu "?" jsou vyplněny zástupné symboly v pořadí, ve hodnoty parametrů můžete předat. Po první datový člen parametr nastavit [SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) volání nahradí první "?"v řetězci SQL, druhý parametr datový člen nahradí druhý"?", a tak dále.
 
 > [!NOTE]
->  Je důležité pořadí parametrů: pořadí RFX volání pro parametry v vaše `DoFieldExchange` funkce musí odpovídat pořadí parametrů zástupné symboly v řetězce jazyka SQL.
+> Je důležité pořadí parametrů: pořadí RFX volání pro parametry v vaše `DoFieldExchange` funkce musí odpovídat pořadí parametrů zástupné symboly v řetězce jazyka SQL.
 
 > [!TIP]
-
->  Nejpravděpodobnější řetězec pro práci s je řetězec zadáte (pokud existuje) pro danou třídu [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) datový člen, ale některé ovladače rozhraní ODBC mohou povolit parametry v jiných klauzulích SQL.
+> Nejpravděpodobnější řetězec pro práci s je řetězec zadáte (pokud existuje) pro danou třídu [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) datový člen, ale některé ovladače rozhraní ODBC mohou povolit parametry v jiných klauzulích SQL.
 
 ##  <a name="_core_passing_parameter_values_at_run_time"></a> Předávání hodnot parametrů v době běhu
 

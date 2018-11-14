@@ -108,12 +108,12 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-ms.openlocfilehash: 3c9b1081a7e2ccd45c64c1cbcd833dcda9470f7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8911c3763e6a0c861c162611e1b2617ec26f0cf9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648666"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333348"
 ---
 # <a name="iosbase-class"></a>ios_base – třída
 
@@ -914,7 +914,7 @@ Předchozí příznaky formátu
 
 ### <a name="remarks"></a>Poznámky
 
-První členská funkce efektivně volá [příznaky](#flags)(_ *maska* &#124; \_ *příznaky*) (nastavení vybrané bits) a potom vrátí předchozí příznaky formátu. Druhá členská funkce efektivně volá **příznaky**(\_ *maska* **& fmtfl, příznaky & ~**`_Mask`) (nahradit vybrané bity v části masku) a pak vrátí předchozí příznaky formátu.
+První členská funkce efektivně volá [příznaky](#flags)(  *\_maska* &#124;  *\_příznaky*) (nastavení vybrané bits) a potom se vrátí předchozí příznaky formátu. Druhá členská funkce efektivně volá `flags(_Mask & fmtfl, flags & ~_Mask)` (nahradit vybrané bity v části masku) a potom vrátí předchozí příznaky formátu.
 
 ### <a name="example"></a>Příklad
 

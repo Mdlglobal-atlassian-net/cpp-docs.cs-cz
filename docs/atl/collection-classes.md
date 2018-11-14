@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - collection classes
 ms.assetid: eff95de6-78ef-4212-9d7d-1dacbdd4cc58
-ms.openlocfilehash: 21c77f71fb576177a6e61ef38d1ef0459f14ab05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a67afdf00f0a524a94b50643d6541251feca2c2c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625170"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520254"
 ---
 # <a name="collection-classes"></a>Třídy kolekce
 
@@ -32,9 +32,9 @@ Následující třídy poskytují podporu pro pole, seznamy, mapy a také metody
 
 - [Ccomqiptrelementtraits –](../atl/reference/ccomqiptrelementtraits-class.md) Tato třída poskytuje metody, statické funkce a definice TypeDef, které jsou užitečné při vytváření kolekce COM rozhraní ukazatele.
 
-- [Ccomsafearray –](../atl/reference/ccomsafearray-class.md) Tato třída představuje obálku pro [datový typ SAFEARRAY](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) struktury.
+- [Ccomsafearray –](../atl/reference/ccomsafearray-class.md) Tato třída představuje obálku pro [datový typ SAFEARRAY](/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) struktury.
 
-- [Ccomsafearraybound –](../atl/reference/ccomsafearraybound-class.md) tvoří obálku pro tuto třídu [SAFEARRAYBOUND](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound) struktury.
+- [Ccomsafearraybound –](../atl/reference/ccomsafearraybound-class.md) tvoří obálku pro tuto třídu [SAFEARRAYBOUND](/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound) struktury.
 
 - [Ccomunkarray –](../atl/reference/ccomunkarray-class.md) této třídy ukládá **IUnknown** ukazatele a je určený jako parametr, který se použije [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) šablony třídy.
 

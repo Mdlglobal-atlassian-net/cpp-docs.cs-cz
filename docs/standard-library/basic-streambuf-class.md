@@ -94,12 +94,12 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsgetn
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
-ms.openlocfilehash: d15e38c63e335dbd574ad2d1c1ee23e0d5a70a30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 581652ea39d0729079666dc675b7214b4b3a4da3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565721"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524674"
 ---
 # <a name="basicstreambuf-class"></a>basic_streambuf – třída
 
@@ -457,7 +457,7 @@ Pokud funkce nemůže být úspěšná, vrátí **traits_type::eof** nebo vyvol�
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud _ *Meta* není výsledkem porovnání **traits_type::eof**, chcete-li vložit element endeavors chráněná virtuální členská funkce **traits_type::**[k_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) do výstupního datového proudu. To lze provést různými způsoby:
+Pokud  *\_Meta* není výsledkem porovnání **traits_type::eof**, chcete-li vložit element endeavors chráněná virtuální členská funkce **traits_type::** [ to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*) do výstupního datového proudu. To lze provést různými způsoby:
 
 - Pokud `write position` je k dispozici, může ukládat element na pozici zápisu a zvýšit další ukazatele pro výstupní vyrovnávací paměť.
 
@@ -492,7 +492,7 @@ Pokud funkce nemůže být úspěšná, vrátí **traits_type::eof** nebo vyvol�
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud _ *Meta* porovná rovno **traits_type::eof**, elementu, který chcete vložit zpět je v podstatě je již ve službě stream před aktuální prvek. V opačném případě se nahrazuje tento prvek **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*). Funkci lze vrátit zpět element různými způsoby:
+Pokud  *\_Meta* porovná rovno **traits_type::eof**, elementu, který chcete vložit zpět je v podstatě je již ve službě stream před aktuální prvek. V opačném případě se nahrazuje tento prvek **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*). Funkci lze vrátit zpět element různými způsoby:
 
 - Pokud putback – pozice je k dispozici, můžete uložit prvek na místo putback – a snížení další ukazatele pro vstupní vyrovnávací paměť.
 
@@ -689,15 +689,12 @@ int main( )
 }
 ```
 
-```Output
-
+```Input
 3
-
 ```
 
 ```Output
-
-      33
+33
 51
 ```
 
@@ -967,14 +964,11 @@ int main( )
 }
 ```
 
-```Output
-
+```Input
 aa
-
 ```
 
 ```Output
-
 aa97
 ```
 

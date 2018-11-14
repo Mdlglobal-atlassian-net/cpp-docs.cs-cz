@@ -29,12 +29,12 @@ helpviewer_keywords:
 - single OpenMP directive
 - threadprivate OpenMP directive
 ms.assetid: 0562c263-344c-466d-843e-de830d918940
-ms.openlocfilehash: eb371f4a2a16ea851b075d7e3819260e68945ffb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a61e74bda4e508bac3c4afd183fa2ab204c629d1
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542958"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333238"
 ---
 # <a name="openmp-directives"></a>Direktivy jazyka OpenMP
 
@@ -578,7 +578,7 @@ Identifikuje části kódu k rozdělení mezi všemi vlákny.
    #pragma omp section
    {
       code_block
-   } 
+   }
 }
 ```
 
@@ -631,7 +631,7 @@ Hello from thread 0
 Umožňuje určit, že část kódu by měl být provedeny v jednom vlákně, ne tedy nutně hlavní vlákno.
 
 ```
-#pragma omp single [clauses] 
+#pragma omp single [clauses]
 {
    code_block
 }

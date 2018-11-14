@@ -31,12 +31,12 @@ helpviewer_keywords:
 - wspawnl function
 - process creation
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
-ms.openlocfilehash: 4dbc8fab611d98f7f87529196b0e10e85196faa9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 11ff3447487fcaf1a4225825c222b873005b2a1c
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518076"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326976"
 ---
 # <a name="spawnl-wspawnl"></a>_spawnl, _wspawnl
 
@@ -83,11 +83,11 @@ Návratová hodnota ze synchronního **_spawnl** nebo **_wspawnl –** (**_P_WAI
 
 |||
 |-|-|
-**E2BIG**|Seznam argumentů přesahuje 1024 bajtů.
-**EINVAL**|*režim* argument je neplatný.
-**ENOENT**|Soubor nebo cesta nebyla nalezena.
-**ENOEXEC**|Zadaný soubor není spustitelný soubor nebo má neplatný formát spustitelného souboru.
-**ENOMEM**|Nedostatek paměti je k dispozici ke spuštění nového procesu.
+| **E2BIG** | Seznam argumentů přesahuje 1024 bajtů. |
+| **EINVAL** | *režim* argument je neplatný. |
+| **ENOENT** | Soubor nebo cesta nebyla nalezena. |
+| **ENOEXEC** | Zadaný soubor není spustitelný soubor nebo má neplatný formát spustitelného souboru. |
+| **ENOMEM** | Nedostatek paměti je k dispozici ke spuštění nového procesu. |
 
 Další informace o těchto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

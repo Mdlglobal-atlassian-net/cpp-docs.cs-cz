@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-ms.openlocfilehash: 6e8ebad0f99e086387bf9946323a2c1ef864f391
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1a1e7fe00218efe7514fe59ea78ea30b33b878f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523795"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329563"
 ---
 # <a name="caxwindow-class"></a>Caxwindow – třída
 
@@ -136,7 +136,7 @@ Ukazatel na řetězec vytvoření ovládacího prvku. Musí být ve formátu v j
 
 - Identifikátor CLSID, jako je například "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Adresa URL, jako "http://www.microsoft.com"
+- Adresa URL, jako "<http://www.microsoft.com>"
 
 - Odkaz na aktivní dokument jako například "file://\\\Documents\MyDoc.doc"
 
@@ -203,7 +203,7 @@ Ukazatel na řetězec vytvoření ovládacího prvku. Musí být ve formátu v j
 
 - Identifikátor CLSID, jako je například "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Adresa URL, jako "http://www.microsoft.com"
+- Adresa URL, jako "<http://www.microsoft.com>"
 
 - Odkaz na aktivní dokument jako například "file://\\\Documents\MyDoc.doc"
 

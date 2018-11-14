@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: 5af2a520a8f4ad584098d5831558b063fb37633e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: daaddf6de79411aea58b79feb0fbfd0f8ff56f5c
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466667"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332605"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray –&gt; operátory
 
@@ -46,7 +46,7 @@ ms.locfileid: "50466667"
 |[– Operátor&gt;=](#op_gt_eq)|[– Operátor&lt;](#op_lt)|[– Operátor&lt;&lt;](#op_lt_lt)|
 |[– Operátor&lt;=](#op_lt_eq)|[Operator *](#op_star)|[Operator +](#op_add)|
 |[Operator-](#operator-)|[Operator /](#op_div)|[operator==](#op_eq_eq)|
-|[operátor ^](#op_xor)|[– operátor|](#op_or)|[– operátor||](#op_lor)|
+|[operátor ^](#op_xor)|[operator&#124;](#op_or)|[operator&#124;&#124;](#op_lor)|
 
 ## <a name="op_neq"></a>  Operator! =
 

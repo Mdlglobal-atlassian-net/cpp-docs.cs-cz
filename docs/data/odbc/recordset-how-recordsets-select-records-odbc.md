@@ -9,12 +9,12 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-ms.openlocfilehash: 9e39929b4e669b6d7ed5662484ee71f762b4ea42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e7bbaad949b5f4456ce4c8aea60099792deb786
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618449"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329464"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>Sada záznamů: Jak sady záznamů vybírají záznamy (ODBC)
 
@@ -61,9 +61,8 @@ Při volání objektu sady záznamů [otevřít](../../mfc/reference/crecordset-
 
 - [Řazení](../../data/odbc/recordset-sorting-records-odbc.md) pořadí záznamů, pokud existuje, součástí [m_strSort](../../mfc/reference/crecordset-class.md#m_strsort) datový člen. Rozhraní tento řetězec používá k vytvoření SQL **klauzule ORDER BY** klauzuli.
 
-
-    > [!TIP]
-    >  Použití SQL **Group** klauzuli (a případně **HAVING** klauzule), připojte na konec řetězce filtru klauzule.
+   > [!TIP]
+   > Použití SQL **Group** klauzuli (a případně **HAVING** klauzule), připojte na konec řetězce filtru klauzule.
 
 - Hodnot ve všech [parametry datových členů](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) zadáte pro třídu. Nastavit hodnoty parametrů těsně před voláním `Open` nebo `Requery`. Rozhraní vazby hodnoty parametru "?" zástupné texty v řetězci SQL. V době kompilace můžete zadat řetězec se zástupnými symboly. V době běhu vyplní rozhraní podrobnosti na základě hodnot parametrů, které můžete předat.
 

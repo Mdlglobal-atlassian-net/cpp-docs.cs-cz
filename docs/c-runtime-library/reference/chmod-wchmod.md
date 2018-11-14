@@ -29,12 +29,12 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-ms.openlocfilehash: 7f3133aac1548be5cb497fe32ae4f9f1c0e238d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 278ee1e6dda9e153b55676ce5c0ca389f383efd1
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595127"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518408"
 ---
 # <a name="chmod-wchmod"></a>_chmod, _wchmod
 
@@ -63,13 +63,13 @@ Tyto funkce vrátí 0, pokud na nastavení oprávnění se úspěšně změnil. 
 
 **_Chmod –** funkce změní nastavení oprávnění souboru určeném *filename*. Nastavení oprávnění řídit čtení a zápis do souboru. Celočíselný výraz *pmode* obsahuje jednu nebo obě z následujících konstant manifestu definovaných v SYS\Stat.h.
 
-|*pmode*|Význam|
+| *pmode* | Význam |
 |-|-|
-**_S_IREAD**|Povoleno jen čtení.
-**_S_IWRITE**|Zápis povolen. (V podstatě povoluje čtení a zápis.)
-**_S_IREAD** &AMP;#124; **_S_IWRITE**|Čtení a zápis povolen.
+| **\_S\_IREAD** | Povoleno jen čtení. |
+| **\_S\_IWRITE** | Zápis povolen. (V podstatě povoluje čtení a zápis.) |
+| **\_S\_IREAD** &AMP;#124;  **\_S\_IWRITE** | Čtení a zápis povolen. |
 
-Když jsou uvedeny oba konstanty, jsou spojeny s bitový operátor or (**|**). Pokud tento parametr není zadaný oprávnění k zápisu, soubor je jen pro čtení. Všimněte si, že všechny soubory budou vždy číst; není možné poskytnout oprávnění jen pro zápis. Proto režimy **_S_IWRITE** a **_S_IREAD** | **_S_IWRITE** jsou ekvivalentní.
+Když jsou uvedeny oba konstanty, jsou spojeny s bitový operátor or (**\|**). Pokud tento parametr není zadaný oprávnění k zápisu, soubor je jen pro čtení. Všimněte si, že všechny soubory budou vždy číst; není možné poskytnout oprávnění jen pro zápis. Proto režimy **_S_IWRITE** a **_S_IREAD** \| **_S_IWRITE** jsou ekvivalentní.
 
 **_wchmod –** je verze širokého znaku **_chmod –**; *filename* argument **_wchmod –** je širokoznaký řetězec. **_wchmod –** a **_chmod –** se jinak chovají stejně.
 
@@ -157,7 +157,6 @@ int main( void )
 ```Output
 
 A line of text.
-
 ```
 
 ```Output

@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 28b2f929e9f8695904bcd3f02dd2d315ab3ca349
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd8fefd3424ab5ec422adb352972ba846e45139d
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483405"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525493"
 ---
 # <a name="cstringt-class"></a>Cstringt – třída
 
@@ -94,13 +94,10 @@ Tato třída reprezentuje `CStringT` objektu.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-
 template<typename BaseType, class StringTraits>
 class CStringT :
-public CSimpleStringT<BaseType,
-                      _CSTRING_IMPL_::_MFCDLLTraitsCheck<BaseType, StringTraits>
-                      ::c_bIsMFCDLLTraits>
-
+    public CSimpleStringT<BaseType,
+        _CSTRING_IMPL_::_MFCDLLTraitsCheck<BaseType, StringTraits>::c_bIsMFCDLLTraits>
 ```
 
 #### <a name="parameters"></a>Parametry
@@ -117,19 +114,19 @@ Znakový typ třída string. Může být jedna z následujících akcí:
 *StringTraits*<br/>
 Určuje, zda třída string, potřebuje podpora knihovny Run-Time C (CRT) a kde jsou umístěny prostředky řetězců. Může být jedna z následujících akcí:
 
-- **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**
+- **StrTraitATL < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; **char** &#124;  **TCHAR >>**
 
    Třída vyžaduje podporu CRT a vyhledá zdrojové řetězce v modul specifikovaný údajem `m_hInstResource` (člen třídy modulu aplikace).
 
-- **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; `char` &#124; **TCHAR >>**
+- **StrTraitATL < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; **char** &#124;  **TCHAR >>**
 
    Třída nevyžaduje CRT podpory a vyhledá zdrojové řetězce v modul specifikovaný údajem `m_hInstResource` (člen třídy modulu aplikace).
 
-- **StrTraitMFC < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**
+- **StrTraitMFC < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; **char** &#124;  **TCHAR >>**
 
    Třída vyžaduje podporu CRT a vyhledá zdrojové řetězce pomocí standardní vyhledávacího algoritmu knihovny MFC.
 
-- **StrTraitMFC < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; `char` &#124; **TCHAR >>**
+- **StrTraitMFC < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; **char** &#124;  **TCHAR >>**
 
    Třída nevyžaduje CRT podpory a vyhledá zdrojové řetězce pomocí standardní vyhledávacího algoritmu knihovny MFC.
 
@@ -295,9 +292,9 @@ Nově přidělenou řetězec.
 
 V aplikacích MFC [cmemoryexception – třída](../../mfc/reference/cmemoryexception-class.md) je vyvolána, pokud existuje dostatek paměti. V aplikacích knihovny ATL [catlexception –](../../atl/reference/catlexception-class.md) je vyvolána výjimka. Tato funkce se obvykle používá k vrácení řetězce pro automatizaci.
 
-Obecně Pokud se tento řetězec je předán do funkce modelu COM jako [in] vyžaduje parametr, pak by se volajícím uvolnit řetězec. To můžete udělat pomocí [SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring), jak je popsáno v sadě Windows SDK. Další informace najdete v tématu [Allocating a uvolňování paměti pro BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md).
+Obecně Pokud se tento řetězec je předán do funkce modelu COM jako [in] vyžaduje parametr, pak by se volajícím uvolnit řetězec. To můžete udělat pomocí [SysFreeString](/windows/desktop/api/oleauto/nf-oleauto-sysfreestring), jak je popsáno v sadě Windows SDK. Další informace najdete v tématu [Allocating a uvolňování paměti pro BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md).
 
-Další informace o funkcích přidělení OLE ve Windows najdete v tématu [SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) v sadě Windows SDK.
+Další informace o funkcích přidělení OLE ve Windows najdete v tématu [SysAllocString](/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) v sadě Windows SDK.
 
 ### <a name="example"></a>Příklad
 

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - files [C++], opening
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
-ms.openlocfilehash: b5ac5203f2246a7ede31bcbc9a34c4632772a14c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1309f991b8251bde7d614aa274d8d2e9da7a8ed3
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636108"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333343"
 ---
 # <a name="fopens-wfopens"></a>fopen_s, _wfopen_s
 
@@ -131,12 +131,12 @@ Pokud *režimu* je **", ccs =**_kódování_**"**, **fopen_s** poprvé pokusí o
 
 |*Režim*|Access|
 |-|-|
-**"r"**|Otevře pro čtení. Pokud soubor neexistuje nebo nebyl nalezen, **fopen_s** volání selže.
-**"w"**|Otevře prázdný soubor pro zápis. Pokud daný soubor existuje, jeho obsah zničen.
-**"a"**|Otevře se pro zápis na konci souboru (přidávání) bez odstranění značky end file (EOF) před zápisem do souboru. Vytvoří soubor, pokud neexistuje.
-**"r +"**|Otevře pro čtení i zápis. Soubor musí existovat.
-**"w +"**|Otevře prázdný soubor pro čtení i zápis. Pokud soubor existuje, jeho obsah zničen.
-**"a +"**|Otevře pro čtení a připojení. Operace zobrazení zahrnuje odstranění značky EOF před zápisem do souboru. Nedojde k obnovení značky EOF po dokončení zápisu. Vytvoří soubor, pokud neexistuje.
+| **"r"** | Otevře pro čtení. Pokud soubor neexistuje nebo nebyl nalezen, **fopen_s** volání selže. |
+| **"w"** | Otevře prázdný soubor pro zápis. Pokud daný soubor existuje, jeho obsah zničen. |
+| **"a"** | Otevře se pro zápis na konci souboru (přidávání) bez odstranění značky end file (EOF) před zápisem do souboru. Vytvoří soubor, pokud neexistuje. |
+| **"r +"** | Otevře pro čtení i zápis. Soubor musí existovat. |
+| **"w +"** | Otevře prázdný soubor pro čtení i zápis. Pokud soubor existuje, jeho obsah zničen. |
+| **"a +"** | Otevře pro čtení a připojení. Operace zobrazení zahrnuje odstranění značky EOF před zápisem do souboru. Nedojde k obnovení značky EOF po dokončení zápisu. Vytvoří soubor, pokud neexistuje. |
 
 Když je soubor otevřen pomocí **"a"** nebo **"a +"** získat přístup k typu, všechny zápisu operace dojít na konci souboru. Ukazatel na soubor lze přesunout pomocí [fseek](fseek-fseeki64.md) nebo [rewind](rewind.md), ale to je vždy přesunut na konec souboru před jakékoli zápisu operace provádí, takže existující data nelze přepsat.
 
@@ -148,8 +148,8 @@ Kromě výše uvedených hodnot, mohou být součástí následující znaky *re
 
 |*režim* modifikátor|Režim překladu|
 |-|-|
-**t**|Otevřít v textovém (přeloženém) režimu.
-**b**|Otevřít v binárním (nepřeloženém) režimu; překlady typů návrat na začátek řádku a znak odřádkování jsou potlačeny.
+| **t** | Otevřít v textovém (přeloženém) režimu. |
+| **b** | Otevřít v binárním (nepřeloženém) režimu; překlady typů návrat na začátek řádku a znak odřádkování jsou potlačeny. |
 
 V textovém (přeloženém) režimu je CTRL + Z interpretováno jako endovém souborovém znak na vstupu. V souborech otevřených pro čtení/zápis s **"a +"**, **fopen_s** vyhledává CTRL + Z na konci souboru a odstraní ji, pokud je to možné. Toto je provedeno z důvodu použití [fseek](fseek-fseeki64.md) a **ftell –** pro přesun v rámci souboru, který končí CTRL + Z, může způsobit, že [fseek](fseek-fseeki64.md) nesprávné chování na konci souboru.
 
@@ -161,14 +161,14 @@ Další informace o používání textové a binární režimy v kódování Uni
 
 |*režim* modifikátor|Chování|
 |-|-|
-**c**|Povolte příznak pro zápis pro přidružený *filename* tak, aby se obsah vyrovnávací paměti souboru zapsán přímo na disk, pokud **fflush –** nebo **_flushall –** je volána.
-**n**|Resetovat příznak pro zápis pro přidružený *filename* na "Neukládat." Toto nastavení je výchozí. Přepíše také globální, pokud propojení s COMMODE.OBJ. Výchozí globální příznak je "Neukládat", pokud výslovně nedojde k propojení programu s COMMODE. OBJ (viz [možnosti propojení](../../c-runtime-library/link-options.md)).
-**N**|Určuje, že soubor není děděný podřízenými procesy.
-**S**|Určuje, že je mezipaměť optimalizovaná pro, ale nikoliv omezená, sekvenčním přístupem z disku.
-**R**|Určuje, že je mezipaměť optimalizovaná pro, ale nikoliv omezená, náhodný přístup z disku.
-**T**|Určuje soubor jako dočasný. Pokud je to možné, není zapsán na disk.
-**D**|Určuje soubor jako dočasný. Je smazán po uzavření posledního ukazatele na soubor.
-**CCS =**_kódování_|Určuje kódovaného znakovou sadu (jeden z **UTF-8**, **UTF-16LE**, nebo **UNICODE**) pro tento soubor. Ponechte nevyplněné, pokud chcete, aby kódování ANSI.
+| **c** | Povolte příznak pro zápis pro přidružený *filename* tak, aby se obsah vyrovnávací paměti souboru zapsán přímo na disk, pokud **fflush –** nebo **_flushall –** je volána. |
+| **n** | Resetovat příznak pro zápis pro přidružený *filename* na "Neukládat." Toto nastavení je výchozí. Přepíše také globální, pokud propojení s COMMODE.OBJ. Výchozí globální příznak je "Neukládat", pokud výslovně nedojde k propojení programu s COMMODE. OBJ (viz [možnosti propojení](../../c-runtime-library/link-options.md)). |
+| **N** | Určuje, že soubor není děděný podřízenými procesy. |
+| **S** | Určuje, že je mezipaměť optimalizovaná pro, ale nikoliv omezená, sekvenčním přístupem z disku. |
+| **R** | Určuje, že je mezipaměť optimalizovaná pro, ale nikoliv omezená, náhodný přístup z disku. |
+| **T** | Určuje soubor jako dočasný. Pokud je to možné, není zapsán na disk. |
+| **D** | Určuje soubor jako dočasný. Je smazán po uzavření posledního ukazatele na soubor. |
+| **CCS =**_kódování_ | Určuje kódovaného znakovou sadu (jeden z **UTF-8**, **UTF-16LE**, nebo **UNICODE**) pro tento soubor. Ponechte nevyplněné, pokud chcete, aby kódování ANSI. |
 
 Platné znaky pro *režimu* řetězec použitý v **fopen_s** a [_fdopen –](fdopen-wfdopen.md) odpovídají *oflag* argumenty použité v [_ Otevřete](open-wopen.md) a [_sopen](sopen-wsopen.md), následujícím způsobem.
 

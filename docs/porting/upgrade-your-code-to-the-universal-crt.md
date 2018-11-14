@@ -2,12 +2,12 @@
 title: Upgrade kódu na Universal CRT
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: 5e417df380ff2239b7c09ba32cc02b784e9343d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41b33698c1617cef02f1b98a654d3403843215d8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668608"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331747"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Upgrade kódu na Universal CRT
 
@@ -37,7 +37,7 @@ Vzhledem k tomu, UCRT je teď součástí operačního systému Microsoft Window
 
 Můžete použít UCRT na libovolnou verzi systému Windows podporuje Visual Studio 2015 nebo Visual Studio 2017. Můžete znovu distribuovat pomocí balíčku pro balíček vcredist pro podporované verze systému Windows než Windows 10. Balíčky vcredist UCRT komponenty a automaticky nainstalují operačních systémech Windows, které nemají je ve výchozím nastavení nainstalovaná. Další informace najdete v tématu [Redistribuce souborů Visual C++](../ide/redistributing-visual-cpp-files.md).
 
-Aplikace – místní nasazení UCRT se podporuje, ale nedoporučuje se z důvodů výkonu a zabezpečení. Knihovny DLL pro nasazení místní aplikace jsou zahrnuté jako součást sady Windows SDK, v části **redist** podadresáře. Požadované knihovny DLL obsahovat ucrtbase.dll a sadu **APISet předávání** knihovny DLL s názvem rozhraní api-ms-win -_dílčí_.dll. Sadu knihoven DLL vyžaduje na všech operačních systémech liší, proto je vhodné zahrnout všechny knihovny DLL při použití aplikace místní nasazení. Upozornění o nasazení aplikace místní a další podrobnosti najdete v tématu [nasazení v jazyce Visual C++](../ide/deployment-in-visual-cpp.md).
+Aplikace – místní nasazení UCRT se podporuje, ale nedoporučuje se z důvodů výkonu a zabezpečení. Knihovny DLL pro nasazení místní aplikace jsou zahrnuté jako součást sady Windows SDK, v části **redist** podadresáře. Požadované knihovny DLL obsahovat ucrtbase.dll a sadu **APISet předávání** knihovny DLL s názvem rozhraní api-ms-win -_dílčí_.dll. Sadu knihoven DLL vyžaduje na všech operačních systémech liší, proto je vhodné zahrnout všechny knihovny DLL při použití aplikace místní nasazení. Upozornění o nasazení aplikace místní a další podrobnosti najdete v tématu [nasazení v jazyce Visual C++](../ide/deployment-in-visual-cpp.md).
 
 ## <a name="changes-to-the-universal-crt-functions-and-macros"></a>Změny na Universal CRT funkcemi a makry
 

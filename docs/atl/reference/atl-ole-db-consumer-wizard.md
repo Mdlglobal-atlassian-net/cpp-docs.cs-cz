@@ -8,12 +8,12 @@ helpviewer_keywords:
 - connection strings [C++], OLE DB consumers
 - ATL OLE DB Consumer Wizard
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: 835b3e6246741c3859f51e017686531f450db194
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59ad635f62ab7a20a31de7255ec4522136e102ec
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499564"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524128"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Průvodce příjemcem ATL OLE DB
 
@@ -84,13 +84,13 @@ Tento průvodce nastaví třída příjemce technologie OLE DB pomocí datové v
 
       **Ostatní:** v **časový limit připojení**, zadejte dobu v sekundách nečinnosti před dojde k vypršení časového limitu. V **přístupová oprávnění**, zadejte oprávnění k přístupu na datové připojení.
 
-       Další informace o vlastnostech pokročilé inicializace naleznete v dokumentaci dodávané s každou zprostředkovatele OLE DB.
+      Další informace o vlastnostech pokročilé inicializace naleznete v dokumentaci dodávané s každou zprostředkovatele OLE DB.
 
    - **Všechny** kartu
 
       Tato karta zobrazuje souhrn inicializační vlastnosti pro zdroj dat a připojení, které jste zadali. Můžete upravit tyto hodnoty.
 
-   Klikněte na tlačítko **OK** na dokončení. **Vyberte databázový objekt** zobrazí se dialogové okno. V tomto dialogovém okně vyberte tabulky, zobrazení nebo uložené procedury, která bude používat příjemce.
+      Klikněte na tlačítko **OK** na dokončení. **Vyberte databázový objekt** zobrazí se dialogové okno. V tomto dialogovém okně vyberte tabulky, zobrazení nebo uložené procedury, která bude používat příjemce.
 
 - **Třída**
 

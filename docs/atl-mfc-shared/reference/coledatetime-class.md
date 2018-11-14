@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 2f63535210110e699daedd39a0b5a5ac25fc53c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9791f1c59bb393f7de64ffb16ccb95e99928b04c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505895"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525337"
 ---
 # <a name="coledatetime-class"></a>COleDateTime – třída
 
@@ -104,7 +104,7 @@ class COleDateTime
 
 `COleDateTime` nemá základní třídu.
 
-Je jedním z možných typů [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) datovým typem automatizace OLE. A `COleDateTime` hodnota představuje absolutní hodnotu data a času.
+Je jedním z možných typů [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) datovým typem automatizace OLE. A `COleDateTime` hodnota představuje absolutní hodnotu data a času.
 
 `DATE` Typ je implementován jako hodnotu s plovoucí desetinnou čárkou. Dny jsou měřená od 30. prosince 1899 půlnoci. V následující tabulce jsou uvedeny některé kalendářních dat a jejich přidružené hodnoty:
 
@@ -828,7 +828,7 @@ Zkopírování těchto přetížených operátorech přiřazení zdrojová hodno
 
 - **Operator = (** `dateSrc` **)** hodnotu a stav operandu jsou zkopírovány do tohoto `COleDateTime` objektu.
 
-- **operátor = (** *varSrc* **)** Pokud převodu [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) hodnotu (nebo [COleVariant](../../mfc/reference/colevariant-class.md) objekt) pro datum/čas (typ VT_ DATUM) proběhne úspěšně, převedená hodnota se zkopíruje do tohoto `COleDateTime` objektu a jeho stav je nastaven na platný. Pokud převod není úspěšné, je hodnota tohoto objektu nastavena na nula (30. prosince 1899, půlnoc) a její stav na neplatný.
+- **operátor = (** *varSrc* **)** Pokud převodu [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) hodnotu (nebo [COleVariant](../../mfc/reference/colevariant-class.md) objekt) pro datum/čas (typ VT_ DATUM) proběhne úspěšně, převedená hodnota se zkopíruje do tohoto `COleDateTime` objektu a jeho stav je nastaven na platný. Pokud převod není úspěšné, je hodnota tohoto objektu nastavena na nula (30. prosince 1899, půlnoc) a její stav na neplatný.
 
 - **Operator = (** `dtSrc` **)** `DATE` zkopírování hodnoty do tohoto `COleDateTime` objektu a jeho stav je nastaven na platný.
 
@@ -836,11 +836,11 @@ Zkopírování těchto přetížených operátorech přiřazení zdrojová hodno
 
 - **Operator = (** *systimeSrc* **)** [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) hodnota převedena a zkopírovány do tohoto `COleDateTime` objektu. Pokud převod není úspěšné, stav tohoto objektu nastavena platná. Pokud úspěšné, je nastaven na neplatný.
 
-- **Operator = (** `udate` **)** `UDATE` hodnota převedena a zkopírovány do tohoto `COleDateTime` objektu. Pokud převod není úspěšné, stav tohoto objektu nastavena platná. Pokud úspěšné, je nastaven na neplatný. A `UDATE` struktura představuje "rozbalené" datum. Podívat se na funkci [VarDateFromUdate](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate) další podrobnosti.
+- **Operator = (** `udate` **)** `UDATE` hodnota převedena a zkopírovány do tohoto `COleDateTime` objektu. Pokud převod není úspěšné, stav tohoto objektu nastavena platná. Pokud úspěšné, je nastaven na neplatný. A `UDATE` struktura představuje "rozbalené" datum. Podívat se na funkci [VarDateFromUdate](/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate) další podrobnosti.
 
 - **Operator = (** `filetimeSrc` **)** [hodnota FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) hodnota převedena a zkopírovány do tohoto `COleDateTime` objektu. Pokud převod není úspěšné, stav tohoto objektu nastavena platná. v opačném případě je nastavena na neplatný. `FILETIME` Koordinovaný světový čas (UTC), používá, pokud předáte čas UTC ve struktuře, vaše výsledky se převedou na místní čas od času UTC, takže se budou ukládat jako varianty čas. Toto chování je stejné jako v aplikaci Visual C++ 6.0 a Visual C++ .NET 2003 SP2. Zobrazit [časy](/windows/desktop/SysInfo/file-times) v sadě Windows SDK pro další informace.
 
-Další informace najdete v tématu [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) položku v sadě Windows SDK.
+Další informace najdete v tématu [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) položku v sadě Windows SDK.
 
 Další informace o `time_t` datový typ, najdete v článku [čas](../../c-runtime-library/reference/time-time32-time64.md) fungovat v *Run-Time Library Reference*.
 
@@ -1083,7 +1083,7 @@ V následující tabulce najdete hranice pro hodnoty parametrů:
 |*Nminimum*|0 - 59|
 |*záznamy nSec*|0 - 59|
 
-Pokud přetečení den v měsíci, je převeden na správný den následujícího měsíce a měsíc nebo rok se zvýší odpovídajícím způsobem. Den hodnota nula znamená poslední den předchozího měsíce. Chování je stejné jako [SystemTimeToVariantTime](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-systemtimetovarianttime).
+Pokud přetečení den v měsíci, je převeden na správný den následujícího měsíce a měsíc nebo rok se zvýší odpovídajícím způsobem. Den hodnota nula znamená poslední den předchozího měsíce. Chování je stejné jako [SystemTimeToVariantTime](/windows/desktop/api/oleauto/nf-oleauto-systemtimetovarianttime).
 
 Pokud hodnota data nebo času zadanou parametry není platná, že stav tohoto objektu nastavena na platný a hodnota tohoto objektu se nemění.
 

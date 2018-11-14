@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: f30194d552f8bafb4d52597aeb53dbe02a780213
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b37cff8bd3eb3bd05bc7030c4cc12b9b84568b1f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438113"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333638"
 ---
 # <a name="chtmlview-class"></a>CHtmlView – třída
 
@@ -1194,7 +1194,7 @@ Ukazatel na řetězec, který se vyhodnotí na adresu URL ve formátu UNC soubor
 
 Ne všechny rámce se aktivuje tuto událost, ale každý snímek, který se aktivuje [OnDownloadBegin](#ondownloadbegin) událost se aktivuje odpovídající `OnDocumentComplete` událostí.
 
-Adresa URL označená *lpszURL* může lišit od adresu URL, kterou prohlížeč se některého přejděte do umístění, protože tato adresa URL je adresa URL kanonizovaného a kvalifikovaný. Například, pokud aplikace určuje adresu URL "www.microsoft.com" ve volání do [Navigovat](#navigate) nebo [Navigate2](#navigate2), adresa URL předaná `OnNavigateComplete2` bude "http://www.microsoft.com/". Také pokud server má v prohlížeči přesměrován na jinou adresu URL, přesměrovaného adresy URL se zobrazí tady.
+Adresa URL označená *lpszURL* může lišit od adresu URL, kterou prohlížeč se některého přejděte do umístění, protože tato adresa URL je adresa URL kanonizovaného a kvalifikovaný. Například, pokud aplikace určuje adresu URL "www.microsoft.com" ve volání do [Navigovat](#navigate) nebo [Navigate2](#navigate2), adresa URL předaná `OnNavigateComplete2` bude "<http://www.microsoft.com/>". Také pokud server má v prohlížeči přesměrován na jinou adresu URL, přesměrovaného adresy URL se zobrazí tady.
 
 ##  <a name="ondocwindowactivate"></a>  CHtmlView::OnDocWindowActivate
 
@@ -1458,7 +1458,7 @@ Výraz řetězce, který se vyhodnotí na adresu URL ve formátu UNC název soub
 
 Parametr adresy URL může být PIDL v případě entity název místa prostředí, pro který neexistuje žádná adresa URL reprezentace.
 
-Všimněte si, že adresa URL součástí *%{strurl/* může lišit od adresu URL, kterou prohlížeč se některého přejděte do umístění, protože tato adresa URL je adresa URL kanonizovaného a kvalifikovaný. Například, pokud aplikace určuje adresu URL "www.microsoft.com" ve volání do [Navigovat](#navigate) nebo [Navigate2](#navigate2), adresa URL předaná `OnNavigateComplete2` bude "http://www.microsoft.com/". Také pokud server má v prohlížeči přesměrován na jinou adresu URL, přesměrovaného adresy URL se zobrazí tady.
+Všimněte si, že adresa URL součástí *%{strurl/* může lišit od adresu URL, kterou prohlížeč se některého přejděte do umístění, protože tato adresa URL je adresa URL kanonizovaného a kvalifikovaný. Například, pokud aplikace určuje adresu URL "www.microsoft.com" ve volání do [Navigovat](#navigate) nebo [Navigate2](#navigate2), adresa URL předaná `OnNavigateComplete2` bude "<http://www.microsoft.com/>". Také pokud server má v prohlížeči přesměrován na jinou adresu URL, přesměrovaného adresy URL se zobrazí tady.
 
 ##  <a name="onnavigateerror"></a>  CHtmlView::OnNavigateError
 

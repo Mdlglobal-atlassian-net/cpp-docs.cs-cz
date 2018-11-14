@@ -28,12 +28,12 @@ helpviewer_keywords:
 - standard output, writing to
 - putwchar function
 ms.assetid: 93657c7f-cca1-4032-8e3a-cd6ab6193748
-ms.openlocfilehash: 69ae5d7a24d7cf440d1dfb5ad716ee106f91576c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: becee3d79f58ac018d1161c1af36e9a4646640bf
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483345"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327054"
 ---
 # <a name="putchar-putwchar"></a>putchar, putwchar
 
@@ -57,7 +57,7 @@ Znak k zapsání.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí zapsaný znak. K označení chyby nebo stavu ukončení souboru **putc** a **putchar** vrátit ** EOF`; **putwc` a **putwchar** vrátit **WEOF**. Pro všechny čtyři rutiny použijte [ferror](ferror.md) nebo [feof](feof.md) zkontrolovat chyby nebo konce souboru. Je-li předán ukazatel s hodnotou null *stream*, tyto funkce generují výjimku neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí **EOF** nebo **WEOF** a nastavte **errno** k **EINVAL**.
+Vrátí zapsaný znak. K označení chyby nebo stavu ukončení souboru **putc** a **putchar** vrátit **EOF**; **putwc** a **putwchar** vrátit **WEOF**. Pro všechny čtyři rutiny použijte [ferror](ferror.md) nebo [feof](feof.md) zkontrolovat chyby nebo konce souboru. Je-li předán ukazatel s hodnotou null *stream*, tyto funkce generují výjimku neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí **EOF** nebo **WEOF** a nastavte **errno** k **EINVAL**.
 
 Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších chybových kódech.
 

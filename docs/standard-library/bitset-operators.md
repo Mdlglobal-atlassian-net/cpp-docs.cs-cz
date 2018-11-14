@@ -12,19 +12,19 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: c51bc5ecf2bc3a74b25a06320f0ca8fd64749f5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1c4c1b6f6c023514a1d3ae46f6670247e4bf99d4
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531141"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331729"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset –&gt; operátory
 
 ||||
 |-|-|-|
 |[– Operátor&amp;](#op_amp)|[– Operátor&gt;&gt;](#op_gt_gt)|[– Operátor&lt;&lt;](#op_lt_lt)|
-|[operátor ^](#op_xor)|[– operátor|](#op_or)|
+|[operátor ^](#op_xor)|[operator&#124;](#op_or)| |
 
 ## <a name="op_amp"></a>  – Operátor&amp;
 
@@ -83,7 +83,6 @@ bitset 3: 0001
 Vloží textové znázornění sekvence bit do výstupního datového proudu.
 
 ```
-
 template <class CharType, class Traits, size_t N>
 basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& ostr,
@@ -141,7 +140,6 @@ int main( )
 Načte řetězec rozšířené znaky do bitset –.
 
 ```
-
 template <class CharType, class Traits, size_t Bits>
 basic_istream<CharType, Traits>& operator>> (
     basic_istream<CharType, Traits>&
@@ -275,7 +273,7 @@ bitset 2: 0011
 bitset 3: 0110
 ```
 
-## <a name="op_or"></a>  operátor |
+## <a name="op_or"></a>  – operátor&#124;
 
 Provádí logické bitové `OR` mezi dvěma bitsets.
 

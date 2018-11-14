@@ -1,15 +1,15 @@
 ---
 title: Možnosti kompilátoru uvedené podle kategorie
-ms.date: 08/20/2018
+ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 20dab3e4ec1d0a409d591e2b470e127e20156a8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa93158e518950efa9d1f2f8092aeabbc3c7724c
+ms.sourcegitcommit: 99437d7da4528ce72cabe6b6a65a9be5dfd090f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532948"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51598818"
 ---
 # <a name="compiler-options-listed-by-category"></a>Možnosti kompilátoru uvedené podle kategorie
 
@@ -46,7 +46,7 @@ Tento článek obsahuje seznam kategorií možností kompilátoru. Abecední sez
 |[/Gh](gh-enable-penter-hook-function.md)|Zavolá funkci připojení `_penter`.|
 |[/GH](gh-enable-pexit-hook-function.md)|Zavolá funkci připojení `_pexit`.|
 |[/GL](gl-whole-program-optimization.md)|Povolí optimalizaci celého programu.|
-|[/Gm](gm-enable-minimal-rebuild.md)|Povolí minimální opětovné sestavení.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Zastaralé Povolí minimální opětovné sestavení.|
 |[/GR](gr-enable-run-time-type-information.md)|Povolí informace běhového typu (RTTI).|
 |[/GR](gd-gr-gv-gz-calling-convention.md)|Používá `__fastcall` konvence volání. (pouze x86)|
 |[/GS](gs-buffer-security-check.md)|Zkontroluje zabezpečení vyrovnávací paměti.|
@@ -202,6 +202,7 @@ Tento článek obsahuje seznam kategorií možností kompilátoru. Abecední sez
 |[/CLR:noAssembly](clr-common-language-runtime-compilation.md)|Zastaralé Použití [/LN (vytvoření modulu MSIL)](ln-create-msil-module.md) místo.|
 |[/FR](fr-fr-create-dot-sbr-file.md)|Zastaralé Vytvoří soubor informací o procházení bez místních proměnných.|
 |[/Ge](ge-enable-stack-probes.md)|Zastaralé Aktivuje sondy zásobníku. Na ve výchozím nastavení.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Zastaralé Povolí minimální opětovné sestavení.|
 |[/GX](gx-enable-exception-handling.md)|Zastaralé Povolí synchronní zpracování výjimek. Použití [/EH](eh-exception-handling-model.md) místo.|
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Zastaralé Povolí rychlé kontroly. Použití [RTC1](rtc-run-time-error-checks.md) místo.|
 |[/H](h-restrict-length-of-external-names.md)|Zastaralé Omezí délku externích (veřejných) názvů.|

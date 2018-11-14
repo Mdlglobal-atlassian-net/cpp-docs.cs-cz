@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: 72038e119f7d4483dcd6c6b343d20fd3655856b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3bf93a876f9092d5615b75ca45fea71341d3557
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533871"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327340"
 ---
 # <a name="cchecklistbox-class"></a>Cchecklistbox – třída
 
@@ -80,13 +80,13 @@ Pokud chcete zpracovávat Windows oznamující zprávy odeslal seznamu k nadřaz
 
 Každá položka mapování zpráv má následující podobu:
 
-**ON_** oznámení **(**`id`, `memberFxn` **)**
+**DÁLE\_**_oznámení_ **(** _id_, _memberFxn_ **)**
 
 kde `id` určuje Identifikátor podřízené okno ovládacího prvku odesílání oznámení a `memberFxn` je název nadřazené členské funkce mají napsané tak, aby oznámení.
 
 Prototyp funkce nadřazeného objektu je následujícím způsobem:
 
-**afx_msg** `void` `memberFxn` **();**
+`afx_msg void memberFxn();`
 
 Existuje pouze jedna položka mapování zpráv, které se vztahují speciálně na `CCheckListBox` (ale také zobrazit položky mapy zpráv pro [clistbox –](../../mfc/reference/clistbox-class.md)):
 

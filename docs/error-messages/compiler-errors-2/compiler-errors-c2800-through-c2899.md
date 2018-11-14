@@ -42,12 +42,12 @@ helpviewer_keywords:
 - C2895
 - C2899
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
-ms.openlocfilehash: 1c1b001e4d55c913cd2b9a50ee2e4bb4d2915523
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c35cd91f836070ff45faa489e1c16c40909f922
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601105"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332072"
 ---
 # <a name="compiler-errors-c2800-through-c2899"></a>Chyby kompilátoru C2800 až C2899
 
@@ -74,7 +74,7 @@ ms.locfileid: "50601105"
 |[Chyba kompilátoru C2812](compiler-error-c2812.md)|#import není podporovaná s možnostmi/CLR: pure a/CLR: safe|
 |[Chyba kompilátoru C2813](compiler-error-c2813.md)|#import není podporováno s možností/MP|
 |[Chyba kompilátoru C2814](compiler-error-c2814.md)|"*člen*': nativní typ nemůže být vnořený v rámci typu spravované/WinRT"*třídy*.|
-|[Chyba kompilátoru C2815](compiler-error-c2815.md)|operátor delete: první formální parametr musí být "void *", ale "* typ *' byla použita|
+|[Chyba kompilátoru C2815](compiler-error-c2815.md)|operátor delete: první formální parametr musí být "void \*", ale "*typ*' byl použit|
 |C2816 chyby kompilátoru|Zastaralé.|
 |[Chyba kompilátoru C2817](compiler-error-c2817.md)|Návratový typ pro operátor delete musí být void.|
 |[Chyba kompilátoru C2818](compiler-error-c2818.md)|použití přetíženého operátoru operator ->' je rekurzivní prostřednictvím typu "*třídy*.|
@@ -83,7 +83,7 @@ ms.locfileid: "50601105"
 |[Chyba kompilátoru C2821](compiler-error-c2821.md)|prvním formálním parametrem pro operator new musí být parametr size_t.|
 |C2822 chyby kompilátoru|místní uvolnění není na této platformě podporována.|
 |[Chyba kompilátoru C2823](compiler-error-c2823.md)|šablony/obecný definice typedef je neplatné.|
-|[Chyba kompilátoru C2824](compiler-error-c2824.md)|Návratový typ pro operátor new musí být "void *.|
+|[Chyba kompilátoru C2824](compiler-error-c2824.md)|Návratový typ pro operátor new musí být "void \*.|
 |[Chyba kompilátoru C2825](compiler-error-c2825.md)|'*identifikátor*': musí být třída nebo obor názvů v případě, že následuje '::'|
 |C2826 chyby kompilátoru|Zastaralé.|
 |[Chyba kompilátoru C2827](compiler-error-c2827.md)|' operator *operátor*"nedá globálně přepsat jeho unární podobou.|

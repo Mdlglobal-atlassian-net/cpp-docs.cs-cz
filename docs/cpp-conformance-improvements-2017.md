@@ -6,12 +6,12 @@ ms.technology:
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 18e4185f1cbd8b37e0e3cc7b11abc24505980b7d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5dca047f6de1ee77734be8842f0ac68402b7dbfc
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562159"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524245"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159update159"></a>Vylepšení shody C++ v sadě Visual Studio 2017 verze 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158), [15.9](#update_159)
 
@@ -223,9 +223,9 @@ Následující příklad ukazuje chování C ++ 14 splňující podmínky:
 struct Derived;
 
 struct Base {
-    friend struct Derived;
+    friend struct Derived;
 private:
-    Base() {}
+    Base() {}
 };
 
 struct Derived : Base {};
@@ -243,9 +243,9 @@ Následující příklad ukazuje v sadě Visual Studio verze 15.7 v C ++ 17 chov
 struct Derived;
 
 struct Base {
-    friend struct Derived;
+    friend struct Derived;
 private:
-    Base() {}
+    Base() {}
 };
 
 struct Derived : Base {
@@ -1371,7 +1371,7 @@ Constexpr statické datové členy se teď implicitně vloženě, což znamená,
 
 ```cpp
 struct X {
-    static constexpr int size = 3;
+    static constexpr int size = 3;
 };
 const int X::size; // C5041
 ```
@@ -1600,7 +1600,6 @@ int main() {
     };
     return 0;
 }
-
 ```
 
 V sadě Visual Studio 2017 verze 15.7 s aktualizací 3 nebo novější, nyní z předchozího příkladu vyvolává *C2078 moc velký počet inicializátorů*. Následující příklad ukazuje, jak kód opravit. Při inicializaci `std::array` s vnořených závorek init-lists poskytnout vnitřní pole braced seznam vlastní:
@@ -1619,7 +1618,6 @@ int main() {
     }}; // note double braces
     return 0;
 }
-
 ```
 
 ## <a name="update_158"></a> Opravy chyb a změny chování v sadě Visual Studio 2017 verze 15.8
@@ -1675,7 +1673,6 @@ struct S : Base<T> {
         return base_value;
     }
 };
-
 ```
 
 Chcete-li chybu opravit, změňte `return` příkazu `return this->base_value;`.
@@ -1851,7 +1848,6 @@ struct A
 };
 
 A<>::from_template_t<A<int>> a;
-
 ```
 
 V sadě Visual Studio 2017 verze 15.9 v **/ permissive-** režimu, vyvolá kompilátor C3861: *'from_template': identifikátor se nenašel*.d
@@ -1917,7 +1913,6 @@ int main()
 
     return 0;
 }
-
 ```
 
 V předchozím příkladu vyvolává C2668:
@@ -1979,7 +1974,6 @@ int main()
 
     return 0;
 }
-
 ```
 
 ## <a name="see-also"></a>Viz také:

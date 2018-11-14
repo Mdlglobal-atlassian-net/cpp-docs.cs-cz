@@ -5,12 +5,12 @@ helpviewer_keywords:
 - servers, implementing
 - OLE server applications [MFC], implementing OLE servers
 ms.assetid: 5bd57e8e-3b23-4f23-9597-496fac2d24b5
-ms.openlocfilehash: bd5967fe07670bd4b3bd076ca23fda62b02b2177
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5c89ff1256d557ef417b9e53ce76bbf1b5d6196
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566751"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518954"
 ---
 # <a name="servers-implementing-a-server"></a>Servery: Implementace serveru
 
@@ -22,11 +22,11 @@ Kód serveru, který obsahuje Průvodce aplikací spadá do několika kategorií
 
 - Definování prostředků serveru:
 
-   - Prostředek nabídky, který se používá při serveru upravuje vloženou položku v samostatném okně.
+  - Prostředek nabídky, který se používá při serveru upravuje vloženou položku v samostatném okně.
 
-   - Prostředky nabídek a panelů nástrojů použít, pokud je na místě aktivní server.
+  - Prostředky nabídek a panelů nástrojů použít, pokud je na místě aktivní server.
 
-   Další informace o těchto prostředků najdete v tématu [nabídky a prostředky: serverové doplňky](../mfc/menus-and-resources-server-additions.md).
+  Další informace o těchto prostředků najdete v tématu [nabídky a prostředky: serverové doplňky](../mfc/menus-and-resources-server-additions.md).
 
 - Definuje třídu položky odvozené z `COleServerItem`. Další podrobnosti o serverové položky, naleznete v tématu [servery: serverové položky](../mfc/servers-server-items.md).
 

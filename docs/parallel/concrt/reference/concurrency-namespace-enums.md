@@ -12,12 +12,12 @@ f1_keywords:
 - CONCRT/concurrency::join_type
 - CONCRT/concurrency::message_status Enumeration
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-ms.openlocfilehash: 97d2e9fd8e64475d9194bb8b2ab12fdee315e176
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 342655e290167315b7f10caba979804461e10658
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677341"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521073"
 ---
 # <a name="concurrency-namespace-enums"></a>výčty oboru názvů Concurrency
 
@@ -164,6 +164,7 @@ enum DynamicProgressFeedbackType;
 |----------|-----------------|
 |`ProgressFeedbackDisabled`|Plánovač není shromažďovat informace o průběhu. Opětovné vyvážení se provádí na základě výhradně na úrovni předplatného podkladové vlákno hardwaru. Další informace na úrovni předplatného najdete v tématu [iexecutionresource::currentsubscriptionlevel –](IExecutionResource-structure.md).<br /><br /> Tato hodnota je rezervovaná pro použití modulem runtime.|
 |`ProgressFeedbackEnabled`|Plánovač shromažďuje informace o průběhu a předává je do resource Manageru. Tyto statistické informace k obnovení rovnováhy prostředkům jménem Plánovač kromě úroveň předplatného podkladové vlákno hardwaru se využívat resource Manageru. Další informace na úrovni předplatného najdete v tématu [iexecutionresource::currentsubscriptionlevel –](IExecutionResource-structure.md).|
+
 ##  <a name="join_type"></a>  join_type – výčet
 
 Typ `join` blok zpráv.

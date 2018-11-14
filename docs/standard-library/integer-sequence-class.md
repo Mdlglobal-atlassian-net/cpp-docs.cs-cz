@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-ms.openlocfilehash: f9ce63aeba4db7c49aee36bc9b847e6832d26f8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c996fdc2756ee489dc3b0abf9321a1d9ce47aded
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638711"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332397"
 ---
 # <a name="integersequence-class"></a>integer_sequence – třída
 
@@ -45,7 +45,7 @@ Sada parametrů bez typu, který představuje sekvenci hodnot celočíselného t
 |||
 |-|-|
 |`static size_t size() noexcept`|Počet prvků v sekvenci.|
-|value_type – TypeDef T|Typ jednotlivých prvků v sekvenci. Musí být celočíselného typu.|
+|`typedef T value_type`|Typ jednotlivých prvků v sekvenci. Musí být celočíselného typu.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -57,10 +57,9 @@ Následující příklad je založen na původní návrh [N3658](http://open-std
 
 V `a2t` funkce, `index_sequence` je alias pro `integer_sequence` na základě `size_t` celočíselného typu. `make_index_sequence` je alias, který v době kompilace vytvoří nulovým základem `index_sequence` stejný počet elementů jako pole, které je předáno volajícím. `a2t` předává `index_sequence` podle hodnoty do `a2t_` , kde výraz `a[I]...` rozbalí `I`, a pak se se elementy zobrazí `make_tuple` které spotřebovává, je jako jednotlivé argumenty. Například, pokud pořadí obsahuje tři prvky, pak `make_tuple` je volána jako make_tuple – ([0], [1]; a[2]). Prvky pole, sami samozřejmě může být libovolného typu.
 
-Použít funkce přijme [std::tuple](../standard-library/tuple-class.md)a vytvoří se soubor integer_sequence pomocí `tuple_size` pomocná třída. Všimněte si, že [std::decay_t](../standard-library/decay-class.md)_is nezbytné protože [tuple_size –](../standard-library/tuple-size-class-tuple.md) nefunguje s typy odkazů. `apply_` Funkce rozbalí členy řazené kolekce členů a předává je jako samostatné argumenty pro volání funkce. V tomto příkladu je funkce jednoduché lambda výraz, který vytiskne hodnoty.
+Použít funkce přijme [std::tuple](../standard-library/tuple-class.md)a vytvoří se soubor `integer_sequence` pomocí `tuple_size` pomocná třída. Všimněte si, že [std::decay_t](../standard-library/decay-class.md) je nezbytné, protože [tuple_size –](../standard-library/tuple-size-class-tuple.md) nefunguje s typy odkazů. `apply_` Funkce rozbalí členy řazené kolekce členů a předává je jako samostatné argumenty pro volání funkce. V tomto příkladu je funkce jednoduché lambda výraz, který vytiskne hodnoty.
 
-```
-
+```cpp
 #include <stddef.h>
 #include <iostream>
 #include <tuple>
@@ -114,7 +113,6 @@ int main()
     char c;
     cin >> c;
 }
-
 ```
 
 Chcete-li `index_sequence` sadu parametrů, použijte `index_sequence_for` \<T... > což je alias pro `make_index_sequence` \<sizeof... (T) >

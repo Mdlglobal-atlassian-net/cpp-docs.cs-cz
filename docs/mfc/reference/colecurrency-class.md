@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: d831353c72c40ab4f35b64046ab5d5236aa9644a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3b0a369071571fb343d1b5030eebbf7c471bc81
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553488"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519188"
 ---
 # <a name="colecurrency-class"></a>COleCurrency – třída
 
@@ -132,11 +132,11 @@ Všechny tyto konstruktory vytvořit nový `COleCurrency` objekty inicializován
 
 - COleCurrency (`curSrc`) sestaví `COleCurrency` objekt z existující `COleCurrency` objektu. Nový objekt je stejného stavu jako zdrojový objekt.
 
-- COleCurrency (`varSrc`) sestaví `COleCurrency` objektu. Se pokusí převést [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) struktury nebo `COleVariant` objektu na hodnotu měny (VT_CY). Pokud tento převod je úspěšný, převedená hodnota zkopírován do nové `COleCurrency` objektu. Pokud ne, je hodnota `COleCurrency` objektu je nastavena na nulu (0) a její stav na neplatný.
+- COleCurrency (`varSrc`) sestaví `COleCurrency` objektu. Se pokusí převést [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) struktury nebo `COleVariant` objektu na hodnotu měny (VT_CY). Pokud tento převod je úspěšný, převedená hodnota zkopírován do nové `COleCurrency` objektu. Pokud ne, je hodnota `COleCurrency` objektu je nastavena na nulu (0) a její stav na neplatný.
 
 - `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a `COleCurrency "objekt ze zadané číselné součásti. Pokud absolutní hodnota zlomkové části je větší než 10 000 operací, je vhodné úpravy provedené s jednotkami. Všimněte si, že jsou určeny jednotky a desetinná část dlouhé hodnoty se znaménkem.
 
-Další informace najdete v tématu [měny](/windows/desktop/api/wtypes/ns-wtypes-tagcy) a [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) položky v sadě Windows SDK.
+Další informace najdete v tématu [měny](/windows/desktop/api/wtypes/ns-wtypes-tagcy) a [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) položky v sadě Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -314,7 +314,7 @@ Následuje stručný popis jednotlivých operátorů:
 
 - **operátor = (** *varSrc* **)** Pokud převod `VARIANT` hodnotu (nebo [COleVariant](../../mfc/reference/colevariant-class.md) objekt) do měny ( `VT_CY`) je úspěšné, převedená hodnota se zkopíruje do tohoto `COleCurrency` objektu a jeho stav je nastaven na platný. Pokud neproběhne úspěšně, převod hodnoty `COleCurrency` objektu je nastavena na 0 a její stav na neplatný.
 
-Další informace najdete v tématu [měny](/windows/desktop/api/wtypes/ns-wtypes-tagcy) a [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) položky v sadě Windows SDK.
+Další informace najdete v tématu [měny](/windows/desktop/api/wtypes/ns-wtypes-tagcy) a [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) položky v sadě Windows SDK.
 
 ### <a name="example"></a>Příklad
 

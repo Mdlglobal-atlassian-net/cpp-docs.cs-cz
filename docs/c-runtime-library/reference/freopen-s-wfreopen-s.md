@@ -29,12 +29,12 @@ helpviewer_keywords:
 - wfreopen_s function
 - freopen_s function
 ms.assetid: ad25a4da-6ad4-476b-a86d-660b221ca84d
-ms.openlocfilehash: 44e1cb14032d004e63825bf7b551d5f43ae400d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2cdc16f21882c32933868000c6fd1d66accc74b8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567593"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326509"
 ---
 # <a name="freopens-wfreopens"></a>freopen_s, _wfreopen_s
 
@@ -91,12 +91,12 @@ Pokud některý z *pFile*, *cesta*, *režimu*, nebo *stream* jsou **NULL**, nebo
 
 |*Režim*|Access|
 |-|-|
-**"r"**|Otevře pro čtení. Pokud soubor neexistuje nebo nebyl nalezen, **freopen_s –** volání selže.
-**"w"**|Otevře prázdný soubor pro zápis. Pokud daný soubor existuje, jeho obsah zničen.
-**"a"**|Otevře se pro zápis na konci souboru (přidávání) bez odstranění značky end file (EOF) před zápisem do souboru. Vytvoří soubor, pokud neexistuje.
-**"r +"**|Otevře pro čtení i zápis. Soubor musí existovat.
-**"w +"**|Otevře prázdný soubor pro čtení i zápis. Pokud soubor existuje, jeho obsah zničen.
-**"a +"**|Otevře pro čtení a připojení. Operace zobrazení zahrnuje odstranění značky EOF před zápisem do souboru. Nedojde k obnovení značky EOF po dokončení zápisu. Vytvoří soubor, pokud neexistuje.
+| **"r"** | Otevře pro čtení. Pokud soubor neexistuje nebo nebyl nalezen, **freopen_s –** volání selže. |
+| **"w"** | Otevře prázdný soubor pro zápis. Pokud daný soubor existuje, jeho obsah zničen. |
+| **"a"** | Otevře se pro zápis na konci souboru (přidávání) bez odstranění značky end file (EOF) před zápisem do souboru. Vytvoří soubor, pokud neexistuje. |
+| **"r +"** | Otevře pro čtení i zápis. Soubor musí existovat. |
+| **"w +"** | Otevře prázdný soubor pro čtení i zápis. Pokud soubor existuje, jeho obsah zničen. |
+| **"a +"** | Otevře pro čtení a připojení. Operace zobrazení zahrnuje odstranění značky EOF před zápisem do souboru. Nedojde k obnovení značky EOF po dokončení zápisu. Vytvoří soubor, pokud neexistuje. |
 
 Použití **"w"** a **"w +"** typy opatrně, protože mohou zničit existující soubory.
 
@@ -108,8 +108,8 @@ Když **"r +"**, **"w +"**, nebo **"a +"** je zadán přístupový typ, je povol
 
 |*režim* modifikátor|Režim překladu|
 |-|-|
-**t**|Otevřít v textovém (přeloženém) režimu.
-**b**|Otevřít v binárním (nepřeloženém) režimu; překlady typů návrat na začátek řádku a znak odřádkování jsou potlačeny.
+| **t** | Otevřít v textovém (přeloženém) režimu. |
+| **b** | Otevřít v binárním (nepřeloženém) režimu; překlady typů návrat na začátek řádku a znak odřádkování jsou potlačeny. |
 
 V textovém (přeloženém) režimu jsou kombinace návratový znak odřádkování (CR-LF) návrat na začátek řádku přeloženy do jednoho konce řádku (LF) znaků na vstupu; LF jsou přeloženy na výstupu jako kombinace CR-LF. Příkaz CTRL+Z je na vstupu interpretován jako znak konce souboru. V souborech otevřených pro čtení nebo zápis a čtení s **"a +"**, knihovny run-time kontroluje CTRL + Z na konci souboru a odstraní ji, pokud je to možné. Toto je provedeno z důvodu použití [fseek](fseek-fseeki64.md) a [ftell –](ftell-ftelli64.md) pro přesun v rámci souboru mohou způsobit [fseek](fseek-fseeki64.md) nesprávné chování na konci souboru. **t** možnost je rozšířením společnosti Microsoft, který by se neměly kde je žádoucí přenositelnost ANSI.
 

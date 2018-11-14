@@ -10,12 +10,12 @@ helpviewer_keywords:
 - linker [C++], DEPENDENTLOADFLAG
 - DEPENDENTLOADFLAG linker option
 - /DEPENDENTLOADFLAG linker option
-ms.openlocfilehash: 80065bb4e67674c49761d0832395ae535bbfbf24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0bdf2542d641f751f40757079eb576f2c97540dc
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604266"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326157"
 ---
 # <a name="dependentloadflag-set-default-dependent-load-flags"></a>/ DEPENDENTLOADFLAG (sada výchozích závislé zatížení příznaků)
 
@@ -27,9 +27,8 @@ Nastaví výchozí příznaky zatížení použít, pokud `LoadLibrary` slouží
 
 ### <a name="arguments"></a>Arguments
 
-|||
-|-|-|
-*loadflags*|Volitelná hodnota "C" stylu 16bitové celé číslo v desítkové, osmičkové s počáteční nulou nebo šestnáctkové s úvodní `0x`, který určuje příznaky závislé zatížení chcete použít pro všechny [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) volání. Výchozí hodnota je 0.
+*loadflags*<br/>
+Volitelná hodnota "C" stylu 16bitové celé číslo v desítkové, osmičkové s počáteční nulou nebo šestnáctkové s úvodní `0x`, který určuje příznaky závislé zatížení chcete použít pro všechny [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) volání. Výchozí hodnota je 0.
 
 ## <a name="remarks"></a>Poznámky
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - runtime [MFC], class information
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
-ms.openlocfilehash: 54f47fd931374df0e9f71c0d946845d8d5b16695
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 83c10d5a87c7d5782505fcd93e46c678a97b8b5d
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452699"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521955"
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass – struktura
 
@@ -123,7 +123,6 @@ Voláním této funkce k určení, pokud je volání třída odvozena z třídy 
 
 ```
 BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
-
 ```
 
 ### <a name="parameters"></a>Parametry

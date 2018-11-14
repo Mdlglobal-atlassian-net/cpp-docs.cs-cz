@@ -8,12 +8,12 @@ helpviewer_keywords:
 - operator .
 - . operator
 ms.assetid: 468ea0c8-5b08-47be-991b-38abacb77611
-ms.openlocfilehash: 1bfb7ccb83ae5391657d88b91013a541dde2aa2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75eccec0c65cba093d84e9d71107247e5b697287
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658572"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330830"
 ---
 # <a name="operator-"></a>. – operátor
 
@@ -21,9 +21,9 @@ První operátor vrací *výraz* plus posun *pole* v rámci jeho strukturu nebo 
 
 ## <a name="syntax"></a>Syntaxe
 
-> *Výraz*<br/> . *pole* [[. *pole*]]...
-
-> [*zaregistrovat*]. *pole* [[. *pole*]]...
+> *výraz* __.__ *pole* \[ __.__ *pole*]...
+>
+> __\[__*Zaregistrujte*__]__ __.__ *pole* \[ __.__ *pole*]...
 
 ## <a name="see-also"></a>Viz také:
 

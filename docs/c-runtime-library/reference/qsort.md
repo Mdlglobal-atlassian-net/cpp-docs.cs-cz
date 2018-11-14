@@ -25,12 +25,12 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: e912a7a53619e9347cf2c0cd40adf0f9162b314b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd2fc9cd789b02f1fa1e0b9969b597aa51aceedd
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618488"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327548"
 ---
 # <a name="qsort"></a>qsort
 
@@ -41,7 +41,7 @@ Provádí rychlé řazení. Bezpečnější verze této funkce je k dispozici. Z
 ```C
 void qsort(
    void *base,
-   size_t num,
+   size_t number,
    size_t width,
    int (__cdecl *compare )(const void *, const void *)
 );
@@ -49,7 +49,7 @@ void qsort(
 
 ### <a name="parameters"></a>Parametry
 
-<br/>
+*base*<br/>
 Spuštění cílového pole.
 
 *Číslo*<br/>
@@ -68,7 +68,7 @@ Ukazatel na uživatelem zadané rutinou, která porovná dva prvky pole a vrát�
 **qsort –** volání *porovnání* rutinní jeden nebo více krát během řazení a předá dva prvky pole ukazatelů na každé volání.
 
 ```C
-compare( (void *) & elem1, (void *) & elem2 );
+compare( (void *) & elem1, (void *) & elem2 );
 ```
 
 Rutina porovná prvky a vrátí jednu z následujících hodnot.
@@ -81,7 +81,7 @@ Rutina porovná prvky a vrátí jednu z následujících hodnot.
 
 Pole je seřazený ve vzestupném pořadí, jak je definováno ve funkci porovnání. Chcete-li seřadit pole v sestupném pořadí, zaměňte význam "větší než" a "menší než" ve funkci porovnání.
 
-Tato funkce ověřuje své parametry. Pokud *porovnání* nebo *číslo* je **NULL**, nebo pokud *základní* je **NULL** a **číslo* je nenulová nebo pokud *šířka* je menší než nula, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí a **errno** je nastavena na **EINVAL**.
+Tato funkce ověřuje své parametry. Pokud *porovnání* nebo *číslo* je **NULL**, nebo pokud *základní* je **NULL** a *číslo* je nenulová nebo pokud *šířka* je menší než nula, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí a **errno** je nastavena na **EINVAL**.
 
 ## <a name="requirements"></a>Požadavky
 

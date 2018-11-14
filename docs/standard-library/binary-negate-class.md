@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - binary_negate class
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
-ms.openlocfilehash: a2aa5e2521eafbdd5ab7be93ad133f118a8d9356
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ac5ebc991174ca5f835d30571b4995bedb5dea2
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536633"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329771"
 ---
 # <a name="binarynegate-class"></a>binary_negate – třída
 
@@ -49,7 +49,7 @@ Negace binární funkce.
 
 ## <a name="remarks"></a>Poznámky
 
-Třída šablony ukládá jejich kopii _ objekt binární funkce *Func*. Definuje jeho členskou funkci `operator()` jako vracející **!**\_ *Func (levý, pravý).*
+Třída šablony ukládá jejich kopii objekt binární funkce *Func*. Definuje jeho členskou funkci `operator()` jako vracející `!Func(left, right)`.
 
 Konstruktor třídy `binary_negate` je zřídka se používá přímo. Pomocná funkce [not2 –](../standard-library/functional-functions.md#not2) se obvykle dává přednost před deklarování a použití **binary_negator** adaptér predikátu.
 

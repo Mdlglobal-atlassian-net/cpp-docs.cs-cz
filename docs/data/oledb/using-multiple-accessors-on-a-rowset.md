@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rowsets [C++], multiple accessors
 - accessors [C++], rowsets
 ms.assetid: 80d4dc5d-4940-4a28-a4ee-d8602f71d2a6
-ms.openlocfilehash: 2f88213fce0c5aa1d91f94d7fbeb26eab6432207
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ce150375b98c697c32767001911eade53ed2f8c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483288"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522022"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Použití více přístupových objektů pro sadu řádků
 
@@ -20,19 +20,19 @@ Existují tři základní scénáře, ve kterých je potřeba použít několik 
 
 - **Více sad řádků pro čtení a zápisu.** V tomto scénáři máte tabulku s primárním klíčem. Chcete být schopni číst všechny sloupce v řádku, včetně primární klíč. Chcete být schopni zapisovat data pro všechny sloupce kromě primárního klíče (protože nelze zapisovat do sloupec primárního klíče). V takovém případě můžete nastavit dva přistupující objekty:
 
-   - Přistupující objekt 0 obsahuje všechny sloupce.
+  - Přistupující objekt 0 obsahuje všechny sloupce.
 
-   - Přistupující objekt 1 obsahuje všechny sloupce kromě primární klíč.
+  - Přistupující objekt 1 obsahuje všechny sloupce kromě primární klíč.
 
 - **Výkon.** V tomto scénáři jste jeden nebo více sloupců velké množství dat, například grafika, zvuk nebo video soubory. Pokaždé, když se přesunete na řádek, pravděpodobně nechcete načíst sloupec se souborem velkých objemů dat, protože to uděláte tak by zpomalit výkon vaší aplikace.
 
-   Můžete nastavit samostatný přístupové objekty, ve kterých první přistupující objekt obsahuje všechny sloupce kromě toho s velkými daty a automaticky; načítá data z těchto sloupců první přistupující objekt je automaticky přistupujícího objektu. Druhý přístupový objekt načte pouze sloupec obsahující velkých objemů dat, ale jeho nenačítá data z tohoto sloupce automaticky. Může mít jiné metody, aktualizaci nebo načítání velkých dat na vyžádání.
+  Můžete nastavit samostatný přístupové objekty, ve kterých první přistupující objekt obsahuje všechny sloupce kromě toho s velkými daty a automaticky; načítá data z těchto sloupců první přistupující objekt je automaticky přistupujícího objektu. Druhý přístupový objekt načte pouze sloupec obsahující velkých objemů dat, ale jeho nenačítá data z tohoto sloupce automaticky. Může mít jiné metody, aktualizaci nebo načítání velkých dat na vyžádání.
 
-   - Přistupující objekt 0 je automatické přistupující objekt; načte všechny sloupce kromě toho s velkými daty.
+  - Přistupující objekt 0 je automatické přistupující objekt; načte všechny sloupce kromě toho s velkými daty.
 
-   - Přístupový objekt automatické; není přístupového objektu 1 načte sloupec s velkými daty.
+  - Přístupový objekt automatické; není přístupového objektu 1 načte sloupec s velkými daty.
 
-   Argument automaticky použijte k určení, zda je automaticky přistupujícího objektu.
+  Argument automaticky použijte k určení, zda je automaticky přistupujícího objektu.
 
 - **Více ISequentialStream sloupců.** V tomto scénáři jste více než jeden sloupec podniku `ISequentialStream` data. Každý přistupující objekt je však omezená na jednu `ISequentialStream` datového proudu. Pokud chcete tento problém vyřešit, nastavte několik přístupových objektů, každý mají jedno `ISequentialStream` ukazatele.
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ismbc routines
 - _ismbc routines
 ms.assetid: b8995391-7857-4ac3-9a1e-de946eb4464d
-ms.openlocfilehash: 707287ea7abe255409911f5388cd1f96d976802b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 97094c6773ee6b67655dacc557335ed222fed311
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454632"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326729"
 ---
 # <a name="ismbc-routines"></a>_ismbc – rutiny
 
@@ -42,7 +42,7 @@ Výstupní hodnota je ovlivněna `LC_CTYPE` nastavením kategorie národního pr
 |Rutina|Testovací podmínka|Příklad znakové stránky 932|
 |-------------|--------------------|---------------------------|
 |[_ismbcalnum – _ismbcalnum_l –](../c-runtime-library/reference/ismbcalnum-functions.md)|Alfanumerické znaky|Vrátí nenulovou hodnotu právě tehdy `c` je jednobajtové znázornění písmena anglické abecedy ASCII: viz příklady pro `_ismbcdigit` a `_ismbcalpha`.|
-|[_ismbcalpha – _ismbcalpha –\_](../c-runtime-library/reference/ismbcalnum-functions.md)|Abecedy|Vrátí nenulovou hodnotu právě tehdy `c` je jednobajtové znázornění písmena anglické abecedy ASCII: viz příklady pro `_ismbcupper` a `_ismbclower`; nebo písma katakana písmeno: 0xA6 < =`c`< = 0xDF.|
+|[_ismbcalpha – _ismbcalpha_l –](../c-runtime-library/reference/ismbcalnum-functions.md)|Abecedy|Vrátí nenulovou hodnotu právě tehdy `c` je jednobajtové znázornění písmena anglické abecedy ASCII: viz příklady pro `_ismbcupper` a `_ismbclower`; nebo písma katakana písmeno: 0xA6 < =`c`< = 0xDF.|
 |[_ismbcdigit – _ismbcdigit_l –](../c-runtime-library/reference/ismbcalnum-functions.md)|číslice|Vrátí nenulovou hodnotu právě tehdy `c` je jednobajtové znázornění číslic ASCII: 0x30 < =`c`< = 0x39.|
 |[_ismbcgraph – _ismbcgraph_l –](../c-runtime-library/reference/ismbcgraph-functions.md)|Obrázek|Vrátí nenulovou hodnotu právě tehdy `c` je jednobajtové znázornění libovolného ASCII nebo písma katakana tisknutelného znaku kromě mezery (). Viz příklady pro `_ismbcdigit`, `_ismbcalpha`, a `_ismbcpunct`.|
 |[_ismbclegal – _ismbclegal_l –](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|Platné vícebajtové znaky|Vrátí nenulovou hodnotu, pokud a pouze tehdy, pokud první bajt `c` je v rozsahu 0x81 – 0x9F nebo 0xE0 – 0xFC, zatímco druhý bajt je v rozsahu 0x40 – 0x7E nebo 0x80 – FC.|

@@ -90,12 +90,12 @@ helpviewer_keywords:
 - wfindfirst64i32 function
 - _wfindfirst64 function
 ms.assetid: 9bb46d1a-b946-47de-845a-a0b109a33ead
-ms.openlocfilehash: eaecf466617669e6abf156370854b88d16fc4086
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ceaa8fea4414bab4bbb035aa4525b415ca7ac0b8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542076"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331435"
 ---
 # <a name="findfirst-findfirst32-findfirst32i64-findfirst64-findfirst64i32-findfirsti64-wfindfirst-wfindfirst32-wfindfirst32i64-wfindfirst64-wfindfirst64i32-wfindfirsti64"></a>_findfirst, _findfirst32 –, _findfirst32i64 –, _findfirst64 –, _findfirst64i32 –, _findfirsti64 –, _wfindfirst –, _wfindfirst32 –, _wfindfirst32i64 –, _wfindfirst64 –, _wfindfirst64i32 –, _wfindfirsti64 –
 
@@ -166,12 +166,12 @@ Informace o vyrovnávací paměti souboru.
 
 V případě úspěšného ověření **_findfirst** vrátí popisovač jedinečný hledání souboru nebo skupiny souborů, které odpovídají *nezačíná* specifikace, které lze použít v následných volání [_ FindNext](findnext-functions.md) nebo [_findclose –](findclose.md). V opačném případě **_findfirst** vrátí hodnotu -1 a nastaví **errno** na jednu z následujících hodnot.
 
-|Hodnota errno|Podmínka|
+| Hodnota errno | Podmínka |
 |-|-|
-**EINVAL**|Neplatný parametr: *nezačíná* nebo *fileinfo* byl **NULL**. Nebo operační systém vrátil neočekávanou chybu.
-**ENOENT**|Specifikace souboru, který se neshoduje.
-**ENOMEM**|Nedostatek paměti.
-**EINVAL**|Neplatný soubor specifikace názvu nebo názvu souboru byla větší než **MAX_PATH**.
+| **EINVAL** | Neplatný parametr: *nezačíná* nebo *fileinfo* byl **NULL**. Nebo operační systém vrátil neočekávanou chybu. |
+| **ENOENT** | Specifikace souboru, který se neshoduje. |
+| **ENOMEM** | Nedostatek paměti. |
+| **EINVAL** | Neplatný soubor specifikace názvu nebo názvu souboru byla větší než **MAX_PATH**. |
 
 Další informace o těchto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

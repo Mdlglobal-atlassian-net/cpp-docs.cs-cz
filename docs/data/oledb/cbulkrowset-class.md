@@ -102,12 +102,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: c62dd4ba7f4f91371378b7c1a6b0295edb3625e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb7f7ee0b4c190889daf661816a9e1c96575a052
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431067"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51557086"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset – třída
 
@@ -154,7 +154,7 @@ Následující příklad ukazuje použití `CBulkRowset` třídy.
 
 ## <a name="addrefrows"></a> CBulkRowset::AddRefRows
 
-Volání [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) se zvýší počet odkazů pro všechny řádky, které jsou aktuálně získaných v hromadné sadě řádků.
+Volání [IRowset::AddRefRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719619(v=vs.85)) se zvýší počet odkazů pro všechny řádky, které jsou aktuálně získaných v hromadné sadě řádků.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -253,7 +253,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Zobrazit [IRowset::GetData](/previous-versions/windows/desktop/ms716988) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IRowset::GetData](https://docs.microsoft.com/previous-versions/windows/desktop/ms716988(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="movetoratio"></a> CBulkRowset::MoveToRatio
 
@@ -284,11 +284,11 @@ Standardní HRESULT.
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-Kde `RowsetSize` je velikost řádků, měřený v řádcích. Přesnost tohoto vzorce závisí na konkrétního zprostředkovatele. Podrobnosti najdete v tématu [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602) v *OLE DB referenční informace pro programátory*.
+Kde `RowsetSize` je velikost řádků, měřený v řádcích. Přesnost tohoto vzorce závisí na konkrétního zprostředkovatele. Podrobnosti najdete v tématu [IRowsetScroll::GetRowsAtRatio](https://docs.microsoft.com/previous-versions/windows/desktop/ms709602(v=vs.85)) v *OLE DB referenční informace pro programátory*.
 
 ## <a name="releaserows"></a> CBulkRowset::ReleaseRows
 
-Volání [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) se sníží počet odkazů pro všechny řádky, které jsou aktuálně získaných v hromadné sadě řádků.
+Volání [IRowset::ReleaseRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719771(v=vs.85)) se sníží počet odkazů pro všechny řádky, které jsou aktuálně získaných v hromadné sadě řádků.
 
 ### <a name="syntax"></a>Syntaxe
 

@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - IDispEventImpl class
 ms.assetid: a64b5288-35cb-4638-aad6-2d15b1c7cf7b
-ms.openlocfilehash: a07cf577ec6be2c6d2d895a85f49f44318596ded
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75946005acc22874b17ee806cd89ec99095f9c35
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497456"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524297"
 ---
 # <a name="idispeventimpl-class"></a>Idispeventimpl – třída
 
@@ -151,7 +151,7 @@ Standardní hodnoty HRESULT.
 
 ##  <a name="getidsofnames"></a>  IDispEventImpl::GetIDsOfNames
 
-Namapuje na odpovídající sadu celočíselné hodnoty dispID, které je možné použít v následných voláních na jednoho člena a volitelná sada názvy argumentů [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke).
+Namapuje na odpovídající sadu celočíselné hodnoty dispID, které je možné použít v následných voláních na jednoho člena a volitelná sada názvy argumentů [IDispatch::Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke).
 
 ```
 STDMETHOD(GetIDsOfNames)(
@@ -164,7 +164,7 @@ STDMETHOD(GetIDsOfNames)(
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IDispatch::GetIDsOfNames](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) ve Windows SDK.
+Zobrazit [IDispatch::GetIDsOfNames](/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) ve Windows SDK.
 
 ##  <a name="gettypeinfo"></a>  IDispEventImpl::GetTypeInfo
 
@@ -189,7 +189,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IDispatch::GetTypeInfoCount](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) ve Windows SDK.
+Zobrazit [IDispatch::GetTypeInfoCount](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) ve Windows SDK.
 
 ##  <a name="getuserdefinedtype"></a>  IDispEventImpl::GetUserDefinedType
 
@@ -204,7 +204,7 @@ VARTYPE GetUserDefinedType(
 ### <a name="parameters"></a>Parametry
 
 *pTI*<br/>
-[in] Ukazatel [ITypeInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) rozhraní obsahující uživatelem definovaného typu.
+[in] Ukazatel [ITypeInfo](/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) rozhraní obsahující uživatelem definovaného typu.
 
 *hrt*<br/>
 [in] Popisovač pro popis typu, který se má načíst.
@@ -215,7 +215,7 @@ Typ variant.
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [volání ITypeInfo::GetRefTypeInfo](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-itypeinfo-getreftypeinfo).
+Zobrazit [volání ITypeInfo::GetRefTypeInfo](/windows/desktop/api/oaidl/nf-oaidl-itypeinfo-getreftypeinfo).
 
 ##  <a name="idispeventimpl"></a>  IDispEventImpl::IDispEventImpl
 

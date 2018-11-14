@@ -2,16 +2,17 @@
 title: Souhrn klíčových slov
 ms.date: 11/04/2016
 ms.assetid: 341d8297-03eb-4351-9ed0-138ec59b375c
-ms.openlocfilehash: 0a21e6e81efb19d7895abb4df903b4156df165b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 780cb80a3c311239eed825101bb1d12be0b58a56
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495599"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51325900"
 ---
 # <a name="summary-of-keywords"></a>Souhrn klíčových slov
 
-*klíčové slovo* : jeden z<br/>
+*klíčové slovo* : jeden z
+
 |||||
 |-|-|-|-|
 |**auto**|**double**|**int**|**struct**|

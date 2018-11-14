@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms [C++], hosting as MFC Dialog
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
-ms.openlocfilehash: 44123e3cbad3115dc990cd8dc9f1316994560656
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6b7b7b3d1cb5ed9f3cd2b3655b45aaac8d8d195
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580918"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524921"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Hostitelské poskytování uživatelského ovládacího prvku modelu Windows Form jako dialogového okna knihovny MFC
 
@@ -68,7 +68,7 @@ Ukázková aplikace, která ukazuje použití s knihovnou MFC modelu Windows For
 
    Dále přidáte kód ke sledování stavu ovládacího prvku Windows Forms z aplikace knihovny MFC.
 
-9. Přidejte obslužnou rutinu pro OnInitDialog.
+1. Přidejte obslužnou rutinu pro OnInitDialog.
 
    Zobrazení **vlastnosti** okno (F4). V **zobrazení tříd**, vyberte CHostForWinForm. V **vlastnosti** okna, vyberte možnost přepsání a v řádku pro OnInitDialog klikněte v levém sloupci a vyberte \< Přidat >. Tím přidáte následující řádek do CHostForWinForm.h:
 
@@ -76,9 +76,9 @@ Ukázková aplikace, která ukazuje použití s knihovnou MFC modelu Windows For
     virtual BOOL OnInitDialog();
     ```
 
-10. Definujte OnInitDialog (v CHostForWinForm.cpp) takto:
+1. Definujte OnInitDialog (v CHostForWinForm.cpp) takto:
 
-    ```
+    ```cpp
     BOOL CHostForWinForm::OnInitDialog() {
        CWinFormsDialog<WindowsControlLibrary1::UserControl1>::OnInitDialog();
        GetControl()->button1->Click += MAKE_DELEGATE(System::EventHandler, OnButton1);
@@ -86,9 +86,9 @@ Ukázková aplikace, která ukazuje použití s knihovnou MFC modelu Windows For
     }
     ```
 
-11. Dále přidejte obslužnou rutinu OnButton1. Přidejte následující řádky do veřejné sekce třídy CHostForWinForm v CHostForWinForm.h:
+1. Dále přidejte obslužnou rutinu OnButton1. Přidejte následující řádky do veřejné sekce třídy CHostForWinForm v CHostForWinForm.h:
 
-    ```
+    ```cpp
     virtual void OnButton1( System::Object^ sender, System::EventArgs^ e );
 
     BEGIN_DELEGATE_MAP( CHostForWinForm )
@@ -98,41 +98,41 @@ Ukázková aplikace, která ukazuje použití s knihovnou MFC modelu Windows For
 
    V CHostForWinForm.cpp přidejte tuto definici:
 
-    ```
+    ```cpp
     void CHostForWinForm::OnButton1( System::Object^ sender, System::EventArgs^ e )
     {
        System::Windows::Forms::MessageBox::Show("test");
     }
     ```
 
-12. Sestavte a spusťte projekt. Když kliknete na tlačítko, které je ve formuláři Windows se spustí kód v aplikaci knihovny MFC.
+1. Sestavte a spusťte projekt. Když kliknete na tlačítko, které je ve formuláři Windows se spustí kód v aplikaci knihovny MFC.
 
-   Dále přidáte kód k zobrazení hodnoty z kódu MFC, do textového pole ve formuláři Windows.
+    Dále přidáte kód k zobrazení hodnoty z kódu MFC, do textového pole ve formuláři Windows.
 
-13. Do veřejné sekce třídy CHostForWinForm v CHostForWinForm.h přidejte následující deklarace:
+1. Do veřejné sekce třídy CHostForWinForm v CHostForWinForm.h přidejte následující deklarace:
 
-    ```
+    ```cpp
     CString m_sEditBoxOnWinForm;
     ```
 
-14. V definici DoDataExchange v CHostForWinForm.cpp přidejte následující tři řádky na konec funkce:
+1. V definici DoDataExchange v CHostForWinForm.cpp přidejte následující tři řádky na konec funkce:
 
-    ```
+    ```cpp
     if (pDX->m_bSaveAndValidate)
        m_sEditBoxOnWinForm = CString( GetControl()->textBox1->Text);
     else
        GetControl()->textBox1->Text = gcnew System::String(m_sEditBoxOnWinForm);
     ```
 
-15. V definici OnButton1 v CHostForWinForm.cpp přidejte následující tři řádky na konec funkce:
+1. V definici OnButton1 v CHostForWinForm.cpp přidejte následující tři řádky na konec funkce:
 
-    ```
+    ```cpp
     this->UpdateData(TRUE);
     System::String ^ z = gcnew System::String(m_sEditBoxOnWinForm);
     System::Windows::Forms::MessageBox::Show(z);
     ```
 
-16. Sestavte a spusťte projekt.
+1. Sestavte a spusťte projekt.
 
 ## <a name="see-also"></a>Viz také
 

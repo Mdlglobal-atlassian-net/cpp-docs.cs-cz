@@ -4,12 +4,12 @@ ms.date: 06/01/2018
 helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 396b1fe9f879e7adcdfe9a69fee5c9e1916ff545
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6354cc656d501d1611219378f72831cc2fa94389
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542009"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523992"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Otevřete složku projekty v jazyce Visual C++
 
@@ -33,7 +33,8 @@ Můžete použít libovolný systém sestavení v jazyce Visual C++ a přesto vy
 ## <a name="configuring-open-folder-projects"></a>Konfigurace projektů otevřít složku
 
 Projekt otevřít složku můžete přizpůsobit prostřednictvím tři soubory JSON:
-|||
+
+| | |
 |-|-|
 |CppProperties.json|Zadejte vlastní konfigurační informace pro procházení. Vytvořte tento soubor v případě potřeby v kořenové složce projektu.|
 |launch.vs.json|Zadejte argumenty příkazového řádku. Přístup přes **Průzkumníka řešení** položka kontextové nabídky **nastavení ladění a spouštění**.|
@@ -58,6 +59,7 @@ Technologie IntelliSense a procházení chování částečně závisí na konfi
   ]
 }
 ```
+
 Konfigurace může mít některou z následujících vlastností:
 
 |||
@@ -135,6 +137,7 @@ Můžete definovat vlastní proměnné prostředí v CppProperties.json buď glo
   ]
 }
 ```
+
 Můžete také definujte **prostředí** uvnitř konfiguraci tak, že platí pouze pro tuto konfiguraci a přepíše všechny globální proměnné se stejným názvem vlastnosti. V následujícím příkladu x64 konfigurace definuje místní **zahrnout** proměnné, která přepíše globální hodnotu:
 
 ```json
@@ -186,6 +189,7 @@ Všechny vlastní a výchozí proměnné prostředí jsou také k dispozici v ta
 #### <a name="macros"></a>Makra
 
 Máte přístup k následující předdefinované makra v CppProperties.json:
+
 |||
 |-|-|
 |`${workspaceRoot}`| Úplná cesta ke složce pracovního prostoru|
@@ -258,11 +262,13 @@ To vytvoří (nebo se otevře) `tasks.vs.json` souboru ve složce .vs, který sa
   ]
 }
 ```
+
 Po uložení tasks.vs.json, klikněte pravým tlačítkem na libovolný soubor .cpp ve složce, vyberte **Echo filename** z místní nabídky a najdete ve výstupním okně zobrazí název souboru.
 
 #### <a name="appliesto"></a>AppliesTo –
 
 Můžete vytvářet úkoly pro kterýkoli soubor nebo složku tak, že zadáte jeho název `appliesTo` pole, například `"appliesTo" : "hello.cpp"`. Následující masky souboru můžete použít jako hodnoty:
+
 |||
 |-|-|
 |`"*"`| Úloha je k dispozici pro všechny soubory a složky v pracovním prostoru|
@@ -340,4 +346,3 @@ Při ukládání tohoto souboru, nová konfigurace se zobrazí v rozevíracím s
 ## <a name="see-also"></a>Viz také
 
 [Integrované vývojové prostředí a nástroje pro vývoj v jazyce Visual C++](ide-and-tools-for-visual-cpp-development.md)
-

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - date functions
 - time functions
 ms.assetid: 93599220-c011-45d5-978f-12182abfdd2f
-ms.openlocfilehash: e7b34101e6c09238316d7dc0ebb223ede25d60bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67b993325c7f9c649d1509ce2c1ecf09a2404bc8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623766"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328926"
 ---
 # <a name="time-management"></a>Správa času
 
@@ -29,7 +29,7 @@ Tyto funkce můžete použijte k získání aktuální čas a převést, upravte
 |[asctime, _wasctime – –](../c-runtime-library/reference/asctime-wasctime.md), [asctime_s, _wasctime_s – –](../c-runtime-library/reference/asctime-s-wasctime-s.md)|Převod z typu času **struktura tm** na řetězec znaků. Verze těchto funkcí s **_Malá** přípona jsou bezpečnější.|
 |[clock](../c-runtime-library/reference/clock.md)|Vrátí skutečný uplynulý čas pro proces.|
 |[CTime – _ctime32 –, _ctime64, _wctime, _wctime32 –, _wctime64](../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md), [_ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)|Převod z typu času **time_t**, **__time32_t** nebo **__time64_t –** na řetězec znaků. Verze těchto funkcí s **_Malá** přípona jsou bezpečnější.|
-|[difftime, _difftime32, _difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|Vypočítat rozdíl mezi dvěma časy.|[System::DateTime:: odečíst](https://msdn.microsoft.com/library/system.datetime.subtract.aspx)|
+|[difftime, _difftime32, _difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|Vypočítat rozdíl mezi dvěma časy.|
 |[_ftime _ftime32, _ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md),[_ftime_s _ftime32_s, _ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)|Store aktuální systémový čas v proměnné typu **_timeb – struktura** nebo typ **__timeb64 – struktura** verze těchto funkcí s **_Malá** přípona jsou bezpečnější.|
 |[_futime, _futime32, _futime64](../c-runtime-library/reference/futime-futime32-futime64.md)|Nastavte čas změny na otevřený soubor|
 |[gmtime, _gmtime32, _gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md), [gmtime_s – _gmtime32_s –, _gmtime64_s –](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)|Čas převést z typu **time_t** k **tm – struktura** nebo z typu **__time64_t –** k **struktura tm**. Verze těchto funkcí s **_Malá** přípona jsou bezpečnější.|

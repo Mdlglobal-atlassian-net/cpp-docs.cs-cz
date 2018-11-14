@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _matherr function
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
-ms.openlocfilehash: 980bf8a14ceace82a76562cc47d353f78dbca582
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b830dc940fa2abb131f70130033d27b057412137
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445718"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329628"
 ---
 # <a name="matherr"></a>_matherr
 
@@ -73,12 +73,12 @@ struct _exception
 
 |– Makro|Význam|
 |-|-|
-**_DOMÉNA**|Chyba argumentu domény
-**_SING**|Argument singularity
-**_OVERFLOW**|Chyba přetečení rozsahu
-**_PLOSS**|Částečné ztrátě významu
-**_TLOSS**|Celkový počet ke ztrátě významu
-**_UNDERFLOW**|Výsledek je příliš malá, aby se dala vyjádřit. (Tento stav se aktuálně nepodporuje.)
+| **_DOMÉNA** | Chyba argumentu domény |
+| **_SING** | Argument singularity |
+| **_OVERFLOW** | Chyba přetečení rozsahu |
+| **_PLOSS** | Částečné ztrátě významu |
+| **_TLOSS** | Celkový počet ke ztrátě významu |
+| **_UNDERFLOW** | Výsledek je příliš malá, aby se dala vyjádřit. (Tento stav se aktuálně nepodporuje.) |
 
 Člen struktury **název** je ukazatel na řetězec zakončený hodnotou null obsahující název funkce, která způsobila chybu. Členové struktury **arg1** a **arg2** zadejte hodnoty, které způsobily chybu. Pokud pouze jeden argument je zadána, je uložena v **arg1**.
 

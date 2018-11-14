@@ -15,12 +15,12 @@ helpviewer_keywords:
 - ??! trigraph
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
-ms.openlocfilehash: 2106f7dda6ecc71478b29cfad3f15dfee0483025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f84e5c1a1455e35992aa4b118c345bc1fa6ae587
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523897"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331617"
 ---
 # <a name="trigraphs"></a>Trigraphs
 
@@ -34,29 +34,29 @@ Následující tabulka obsahuje devět sekvencí trigrafů. Všechny výskyty zn
 
 ### <a name="trigraph-sequences"></a>Sekvence trigraf
 
-|Trigraf|Znak interpunkce|
-|--------------|---------------------------|
-|??=|#|
-|??(|[|
-|??/|\|
-|??)|]|
-|??'|^|
-|??\<|{|
-|??!|&#124;|
-|??>|}|
-|??-|~|
+| Trigraf | Znak interpunkce |
+|----------|-----------------------|
+| ??= | # |
+| ??( | \[ |
+| ??/ | \\ |
+| ??) | ] |
+| ??' | ^ |
+| ??\< | { |
+| ??! | &#124; |
+| ??> | } |
+| ??- | ~ |
 
 Trigraf je vždy považován za jediný zdrojový znak. Převod trigrafů probíhá v první [fáze překladu](../preprocessor/phases-of-translation.md), před rozpoznáním řídicích znaků v řetězcových literálech a znakových konstantách. V tabulce výše je rozpoznáno pouze devět trigrafů. Všechny ostatní sekvence znaků zůstanou nepřevedeny.
 
 Řídicí sekvence znaku  **\\?**, zabraňuje špatnému vyhodnocení sekvencí znaků podobných. (Informace o řídicích sekvencích naleznete v tématu [řídicí sekvence](../c-language/escape-sequences.md).) Například, pokud se pokusíte vypsat řetězec `What??!` pomocí tohoto příkazu `printf`
 
-```
+```C
 printf( "What??!\n" );
 ```
 
 Vypíše se řetězec `What|` protože `??!` je sekvence trigrafu, která je nahrazena `|` znak. Chcete-li tento řetězec vypsat správně, napište příkaz takto:
 
-```
+```C
 printf( "What?\?!\n" );
 ```
 

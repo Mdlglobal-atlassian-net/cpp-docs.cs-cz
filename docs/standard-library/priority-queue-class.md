@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-ms.openlocfilehash: 1b276f427fc127fb04f4f8e09f0278033ef64754
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8f2b4ab788c82e531d1121f04dd0d422efb17cd
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677172"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333212"
 ---
 # <a name="priorityqueue-class"></a>priority_queue – třída
 
@@ -224,9 +224,9 @@ Priority_queue –, který je prázdný nebo který je kopii tohoto rozsahu zák
 ```cpp
 priority_queue();
 
-explicit priority_queue(const Traits&_comp);
+explicit priority_queue(const Traits& _comp);
 
-priority_queue(const Traits&_comp, const container_type& _Cont);
+priority_queue(const Traits& _comp, const container_type& _Cont);
 
 priority_queue(const priority_queue& right);
 
@@ -234,15 +234,15 @@ template <class InputIterator>
 priority_queue(InputIterator first, InputIterator last);
 
 template <class InputIterator>
-priority_queue(InputIterator first, InputIterator last, const Traits&_comp);
+priority_queue(InputIterator first, InputIterator last, const Traits& _comp);
 
 template <class InputIterator>
-priority_queue(InputIterator first, InputIterator last, const Traits&_comp, const container_type& _Cont);
+priority_queue(InputIterator first, InputIterator last, const Traits& _comp, const container_type& _Cont);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*kompozice _*<br/>
+*_comp*<br/>
 Funkce porovnání typu **constTraits** používají k seřazení prvků v priority_queue –, kde je použit výchozí porovnání funkce základní kontejneru.
 
 *_Cont*<br/>
@@ -263,7 +263,7 @@ Každý z první tři konstruktory prázdný počáteční priority_queue –, d
 
 Čtvrtý konstruktor určuje kopii priority_queue – *správné*.
 
-Poslední tři konstruktory kopírují rozsah [* první, poslední *) některé kontejneru objektů a použít hodnoty pro inicializaci priority_queue – se zvyšující se explicitností v určování typu funkce porovnání třídy **osobnostní rysy** a `container_type`.
+Poslední tři konstruktory kopírují rozsah \[ *první*, *poslední*) některé kontejneru objektů a použít k inicializaci priority_queue – se zvyšující se explicitností v určování typu hodnoty funkce porovnání třídy `Traits` a `container_type`.
 
 ### <a name="example"></a>Příklad
 

@@ -16,16 +16,16 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: b1411f3df97aeaf66abcccc5be78c734e3a71f19
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6736eac040b2186ddb1b1dc1c5c3a5b6b957d20
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603486"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556150"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl – třída
 
-Poskytuje implementaci [ICommandProperties](/previous-versions/windows/desktop/ms723044) rozhraní.
+Poskytuje implementaci [ICommandProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723044(v=vs.85)) rozhraní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -67,15 +67,15 @@ Vrátí všechny požadované vlastnosti sady pomocí příkazu Vlastnosti mapy.
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-STDMETHOD(GetProperties)(const ULONG cPropertyIDSets, 
-   const DBPROPIDSET rgPropertyIDSets[], 
-   ULONG * pcPropertySets, 
+STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
+   const DBPROPIDSET rgPropertyIDSets[],
+   ULONG * pcPropertySets,
    DBPROPSET ** prgPropertySets);
 ```
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ICommandProperties::GetProperties](/previous-versions/windows/desktop/ms723119) v *referenční informace pro OLE DB programátory*.
+Zobrazit [ICommandProperties::GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723119(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -88,13 +88,13 @@ Nastaví vlastnosti pro objekt příkazu.
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-STDMETHOD(SetProperties)(ULONG cPropertySets, 
+STDMETHOD(SetProperties)(ULONG cPropertySets,
    DBPROPSET rgPropertySets[]);
 ```
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ICommandProperties::SetProperties](/previous-versions/windows/desktop/ms711497) v *referenční informace pro OLE DB programátory*.
+Zobrazit [ICommandProperties::SetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms711497(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="see-also"></a>Viz také
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: f6e52d993619929666d61f019c1f6d5d28243ab1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d0ffba2e8b682a33dc435b0968c59844a858c72
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569216"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524934"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver – třída
 
@@ -258,7 +258,7 @@ void AFX_CDECL InvokeHelper(
 Určuje metodu nebo vlastnost má být volána.
 
 *wFlags*<br/>
-Příznaky popisující kontext volání `IDispatch::Invoke`. . Seznam možných hodnot, najdete v článku *wFlags* parametr [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) v sadě Windows SDK.
+Příznaky popisující kontext volání `IDispatch::Invoke`. . Seznam možných hodnot, najdete v článku *wFlags* parametr [IDispatch::Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) v sadě Windows SDK.
 
 *vtRet*<br/>
 Určuje typ vrácené hodnoty. Možné hodnoty najdete v části poznámky.
@@ -296,9 +296,9 @@ Možné hodnoty pro *vtRet* argument pocházejí ze výčet VARENUM. Možné hod
 
 *PbParamInfo* argument je místo oddělený seznam **VTS_** konstanty. Jeden nebo více z těchto hodnot oddělených mezerami (ne středníky), určuje seznam parametrů funkce. Možné hodnoty jsou seřazeny [EVENT_CUSTOM](event-maps.md#event_custom) – makro.
 
-Tato funkce převede parametry VARIANTARG hodnoty a potom vyvolá [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) metody. Pokud volání `Invoke` selže, tato funkce vyvolá výjimku. Pokud SCODE (stavový kód) vrácené `IDispatch::Invoke` DISP_E_EXCEPTION, je tato funkce vyvolá [coleexception –](../../mfc/reference/coleexception-class.md) objektu; v opačném případě vyvolá [coledispatchexception –](../../mfc/reference/coledispatchexception-class.md).
+Tato funkce převede parametry VARIANTARG hodnoty a potom vyvolá [IDispatch::Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) metody. Pokud volání `Invoke` selže, tato funkce vyvolá výjimku. Pokud SCODE (stavový kód) vrácené `IDispatch::Invoke` DISP_E_EXCEPTION, je tato funkce vyvolá [coleexception –](../../mfc/reference/coleexception-class.md) objektu; v opačném případě vyvolá [coledispatchexception –](../../mfc/reference/coledispatchexception-class.md).
 
-Další informace najdete v tématu [VARIANTARG](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface), [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke), a [struktury z modelu COM chybové kódy](/windows/desktop/com/structure-of-com-error-codes) ve Windows SDK.
+Další informace najdete v tématu [VARIANTARG](/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface), [IDispatch::Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke), a [struktury z modelu COM chybové kódy](/windows/desktop/com/structure-of-com-error-codes) ve Windows SDK.
 
 ### <a name="example"></a>Příklad
 

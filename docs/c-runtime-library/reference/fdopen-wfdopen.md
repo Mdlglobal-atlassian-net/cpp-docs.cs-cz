@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _tfdopen function
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
-ms.openlocfilehash: c68bc835adf19df7f1538d30b2be162fe6dc6021
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0cde110bf1dd12c23a6b0b658809502743d9edd3
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584454"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327158"
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen, _wfdopen
 
@@ -85,25 +85,25 @@ Předaná do popisovače souboru **_fdopen –** patří ve vráceném **souboru
 
 *Režimu* řetězec znaků určuje typ souboru požadovaného přístupu k souboru:
 
-|*Režim*|Access|
-|-|-|
-**"r"**|Otevře pro čtení. Pokud soubor neexistuje nebo nebyl nalezen, **fopen** volání selže.
-**"w"**|Otevře prázdný soubor pro zápis. Pokud daný soubor existuje, jeho obsah zničen.
-**"a"**|Otevře se pro zápis na konci souboru (připojením). Vytvoří soubor, pokud neexistuje.
-**"r +"**|Otevře pro čtení i zápis. Soubor musí existovat.
-**"w +"**|Otevře prázdný soubor pro čtení i zápis. Pokud soubor existuje, jeho obsah zničen.
-**"a +"**|Otevře pro čtení a připojení. Vytvoří soubor, pokud neexistuje.
+| *Režim* | Access |
+|--------|--------|
+| **"r"** | Otevře pro čtení. Pokud soubor neexistuje nebo nebyl nalezen, **fopen** volání selže. |
+| **"w"** | Otevře prázdný soubor pro zápis. Pokud daný soubor existuje, jeho obsah zničen. |
+| **"a"** | Otevře se pro zápis na konci souboru (připojením). Vytvoří soubor, pokud neexistuje. |
+| **"r +"** | Otevře pro čtení i zápis. Soubor musí existovat. |
+| **"w +"** | Otevře prázdný soubor pro čtení i zápis. Pokud soubor existuje, jeho obsah zničen. |
+| **"a +"** | Otevře pro čtení a připojení. Vytvoří soubor, pokud neexistuje. |
 
 Při otevření souboru se **"a"** nebo **"a +"** získat přístup k typu, všechny zápisu operace dojít na konci souboru. Ukazatel na soubor lze přesunout pomocí [fseek](fseek-fseeki64.md) nebo [rewind](rewind.md), ale to je vždy přesunut na konec souboru před jakékoli zápisu operace provádí. Žádná existující data proto nemohou být přepsána. Když **"r +"**, **"w +"**, nebo **"a +"** je zadán přístupový typ, je povoleno čtení i zápis (Tento soubor říká, že je otevřen pro "úpravy"). Ale při přepínání mezi čtení a zápis, musí existovat podílející [fflush –](fflush.md), [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md), nebo [rewind](rewind.md) operace. Můžete určit aktuální pozici pro [fsetpos](fsetpos.md) nebo [fseek](fseek-fseeki64.md) operace, pokud chcete.
 
 Kromě výše uvedených hodnot, tyto znaky můžou být i součástí *režimu* pro určení režimu překladu pro znaky nového řádku:
 
-|*režim* modifikátor|Chování|
-|-|-|
-**t**|Otevřít v textovém (přeloženém) režimu. V tomto režimu kombinace návrat na začátek řádku return-line kanál (CR-LF) jsou přeloženy do jedné odřádkování (LF) na vstupu a LF jsou přeloženy na výstupu jako kombinace CR-LF. Také Ctrl + Z je interpretován jako znak koncové souboru na vstupu.
-**b**|Otevřít v binárním (nepřeloženém) režimu. Překlady z **t** režimu jsou potlačeny.
-**c**|Povolte příznak pro zápis pro přidružený *filename* tak, aby se obsah vyrovnávací paměti souboru zapsán přímo na disk, pokud **fflush –** nebo **_flushall –** je volána.
-**n**|Resetovat příznak pro zápis pro přidružený *filename* na "Neukládat." Toto nastavení je výchozí. Přepíše také globální, pokud propojení s Commode.obj. Výchozí globální příznak je "Neukládat", pokud výslovně nedojde k propojení s Commode.obj.
+| *režim* modifikátor | Chování |
+|-----------------|----------|
+| **t** | Otevřít v textovém (přeloženém) režimu. V tomto režimu kombinace návrat na začátek řádku return-line kanál (CR-LF) jsou přeloženy do jedné odřádkování (LF) na vstupu a LF jsou přeloženy na výstupu jako kombinace CR-LF. Také Ctrl + Z je interpretován jako znak koncové souboru na vstupu. |
+| **b** | Otevřít v binárním (nepřeloženém) režimu. Překlady z **t** režimu jsou potlačeny. |
+| **c** | Povolte příznak pro zápis pro přidružený *filename* tak, aby se obsah vyrovnávací paměti souboru zapsán přímo na disk, pokud **fflush –** nebo **_flushall –** je volána. |
+| **n** | Resetovat příznak pro zápis pro přidružený *filename* na "Neukládat." Toto nastavení je výchozí. Přepíše také globální, pokud propojení s Commode.obj. Výchozí globální příznak je "Neukládat", pokud výslovně nedojde k propojení s Commode.obj. |
 
 **t**, **c**, a **n** *režimu* možnosti jsou rozšíření Microsoft pro **fopen** a **_fdopen –**. Nepoužívejte je, pokud chcete zachovat přenositelnost ANSI.
 

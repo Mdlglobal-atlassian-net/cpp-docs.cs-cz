@@ -40,12 +40,12 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
-ms.openlocfilehash: 5cf3cbb0cbff10deb029e81945f63921495bd0de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2045d2d1c6a848378ac55114b61177d386b14fab
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522266"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523920"
 ---
 # <a name="accelerator-class"></a>accelerator – třída
 
@@ -282,7 +282,6 @@ Vrátí velikost vyhrazené paměti pro `accelerator`, v kilobajtech.
 
 ```
 size_t get_dedicated_memory() const;
-
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -295,7 +294,6 @@ Získá výchozí access_type procesoru pro vyrovnávací paměti vytvořené na
 
 ```
 access_type get_default_cpu_access_type() const;
-
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -308,7 +306,6 @@ Vrátí výchozí `accelerator_view` objekt, který je přidružený `accelerato
 
 ```
 accelerator_view get_default_view() const;
-
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -321,7 +318,6 @@ Vrátí krátký popis `accelerator` zařízení.
 
 ```
 std::wstring get_description() const;
-
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -334,7 +330,6 @@ Vrátí cestu k akcelerátoru. Cesta je jedinečná v systému.
 
 ```
 std::wstring get_device_path() const;
-
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -347,7 +342,6 @@ Vrátí logickou hodnotu, která určuje, zda `accelerator` zvládne výstup na 
 
 ```
 bool get_has_display() const;
-
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -360,7 +354,6 @@ Určuje, zda `accelerator` má povolenu vrstvu DEBUG pro rozsáhlé hlášení c
 
 ```
 bool get_is_debug() const;
-
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -373,7 +366,6 @@ Určuje, zda `accelerator` je emulován.
 
 ```
 bool get_is_emulated() const;
-
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -386,7 +378,6 @@ Vrátí logickou hodnotu označující, zda akcelerátor podporuje paměť dostu
 
 ```
 bool get_supports_cpu_shared_memory() const;
-
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -399,7 +390,6 @@ Vrátí logickou hodnotu, která určuje, zda akcelerátor podporuje výpočty s
 
 ```
 bool get_supports_double_precision() const;
-
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -412,7 +402,6 @@ Vrátí logickou hodnotu, která určuje, zda má akcelerátor omezenou podporu 
 
 ```
 bool get_supports_limited_double_precision() const;
-
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -425,7 +414,6 @@ Vrátí verzi `accelerator`.
 
 ```
 unsigned int get_version() const;
-
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -462,7 +450,6 @@ Porovná tento `accelerator` objekt s jiným a vrátí **false** případě, že
 
 ```
 bool operator!= (const accelerator& _Other) const;
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -497,7 +484,6 @@ Porovná tento `accelerator` objekt s jiným a vrátí **true** případě, že 
 
 ```
 bool operator== (const accelerator& _Other) const;
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -636,7 +622,6 @@ Vrátí `accelerator` objekt pro [accelerator_view](accelerator-view-class.md) o
 
 ```
 accelerator get_accelerator() const;
-
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -649,7 +634,6 @@ Vrátí logickou hodnotu, která určuje, zda modul runtime automaticky vybere o
 
 ```
 bool get_is_auto_selection() const;
-
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -662,7 +646,6 @@ Vrátí logickou hodnotu, která určuje, zda [accelerator_view](accelerator-vie
 
 ```
 bool get_is_debug() const;
-
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -675,7 +658,6 @@ Vrátí režim zařazování do fronty pro [accelerator_view](accelerator-view-c
 
 ```
 queuing_mode get_queuing_mode() const;
-
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -688,7 +670,6 @@ Vrátí verzi [accelerator_view](accelerator-view-class.md).
 
 ```
 unsigned int get_version() const;
-
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -717,7 +698,6 @@ Porovná tento [accelerator_view](accelerator-view-class.md) objekt s jiným a v
 
 ```
 bool operator!= (const accelerator_view& _Other) const;
-
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -752,7 +732,6 @@ Porovná tento [accelerator_view](accelerator-view-class.md) objekt s jiným a v
 
 ```
 bool operator== (const accelerator_view& _Other) const;
-
 ```
 
 ### <a name="parameters"></a>Parametry

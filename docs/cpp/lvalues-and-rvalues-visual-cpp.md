@@ -5,12 +5,12 @@ helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-ms.openlocfilehash: 261453d5640c122f23491304b71e53e27c06eb7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 301e6140699c921ee1b1229b9183c8555992f716
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546351"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330605"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Hodnoty lvalue a rvalue (C++)
 
@@ -20,7 +20,7 @@ Standardu C ++ 17 definuje kategorie hodnotu výrazu takto:
 
 - A *glvalue* je výraz, jehož vyhodnocení určuje identitu objektu, bitového pole nebo funkce.
 - A *hodnota, která není* je výraz, jehož vyhodnocení inicializuje objekt nebo bitové pole nebo vypočítá hodnotu operand operátoru, podle určeného kontextu, ve kterém se zobrazí.
-- *Xvalue* je glvalue, který označuje objekt nebo bitové pole, jehož prostředky jde znovu použít (obvykle, protože je na konci svého životního cyklu). [Příklad: osa x, hodnoty, jako je například volání funkce, jejíž návratový typ je odkaz rvalue nebo přetypování na odkazový typ yield určité druhy výrazy, které obsahují odkazy rvalue (8.3.2). ]
+- *Xvalue* je glvalue, který označuje objekt nebo bitové pole, jehož prostředky jde znovu použít (obvykle, protože je na konci svého životního cyklu). Příklad: Některé druhy výrazy, které obsahují odkazy rvalue (8.3.2) yield osa x, hodnoty, jako je například přetypování na odkazový typ nebo volání funkce, jejíž návratový typ je odkaz rvalue.
 - *L-hodnoty* je glvalue, který není xvalue.
 - *Rvalue* hodnota, která není nebo xvalue.
 

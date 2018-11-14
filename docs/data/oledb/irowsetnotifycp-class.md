@@ -24,16 +24,16 @@ helpviewer_keywords:
 - Fire_OnRowChange method
 - Fire_OnRowsetChange method
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
-ms.openlocfilehash: de27bef1131081ddfc244fe0d787a85b468cc7e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 119cc79cf0f3ed5784e1b3b291fce52f06695d36
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523679"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556280"
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP – třída
 
-Implementuje poskytovatele lokality pro bod připojení rozhraní [IRowsetNotify](/previous-versions/windows/desktop/ms712959).
+Implementuje poskytovatele lokality pro bod připojení rozhraní [IRowsetNotify](https://docs.microsoft.com/previous-versions/windows/desktop/ms712959(v=vs.85)).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -85,7 +85,7 @@ Podrobné informace o implementaci oznámení, naleznete v části "Podpora ozn�
 
 ## <a name="onfieldchange"></a> IRowsetNotifyCP::Fire_OnFieldChange
 
-Vysílá [onfieldchange –](/previous-versions/windows/desktop/ms715961) událost oznámení příjemci změnu hodnoty sloupce.
+Vysílá [onfieldchange –](https://docs.microsoft.com/previous-versions/windows/desktop/ms715961(v=vs.85)) událost oznámení příjemci změnu hodnoty sloupce.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -101,11 +101,11 @@ HRESULT Fire_OnFieldChange(IRowset* pRowset,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IRowsetNotify::OnFieldChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715961(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="onrowchange"></a> IRowsetNotifyCP::Fire_OnRowChange
 
-Vysílá [onrowchange –](/previous-versions/windows/desktop/ms722694) události pro všechny posluchače v bodě připojení `IID_IRowsetNotify` oznámit příjemci změny ovlivňující řádky.
+Vysílá [onrowchange –](https://docs.microsoft.com/previous-versions/windows/desktop/ms722694(v=vs.85)) události pro všechny posluchače v bodě připojení `IID_IRowsetNotify` oznámit příjemci změny ovlivňující řádky.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -120,11 +120,11 @@ HRESULT Fire_OnRowChange(IRowset* pRowset,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IRowsetNotify::OnRowChange](/previous-versions/windows/desktop/ms722694) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IRowsetNotify::OnRowChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722694(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="onrowsetchange"></a> IRowsetNotifyCP::Fire_OnRowsetChange
 
-Vysílá [onrowsetchange –](/previous-versions/windows/desktop/ms722669) události pro všechny posluchače v bodě připojení `IID_IRowsetNotify` oznámit příjemci změny, které mají vliv celá sada řádků.
+Vysílá [onrowsetchange –](https://docs.microsoft.com/previous-versions/windows/desktop/ms722669(v=vs.85)) události pro všechny posluchače v bodě připojení `IID_IRowsetNotify` oznámit příjemci změny, které mají vliv celá sada řádků.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -137,7 +137,7 @@ HRESULT Fire_OnRowsetChange(IRowset* pRowset,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IRowsetNotify::OnRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722669(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="see-also"></a>Viz také
 

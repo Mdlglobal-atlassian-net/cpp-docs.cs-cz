@@ -25,12 +25,12 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-ms.openlocfilehash: 1309d99d8e7040626384e38324c1e910e4731295
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90327ed3388d4f18e0f64f92c33112c9ddd800f5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523801"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327041"
 ---
 # <a name="locking"></a>_locking
 
@@ -63,10 +63,10 @@ Počet bajtů, které mají zamknout.
 
 |Hodnota errno|Podmínka|
 |-|-|
-**EACCES**|Uzamčení porušení (soubor již zamčený nebo odemčený).
-**EBADF**|Popisovač souboru je neplatná.
-**EDEADLOCK**|Narušení uzamčení. Vrátí, když **_LK_LOCK** nebo **_LK_RLCK** příznak zadán a nelze jej uzamknout soubor po 10 pokusech.
-**EINVAL**|Byl zadán neplatný argument **_locking –**.
+| **EACCES** | Uzamčení porušení (soubor již zamčený nebo odemčený). |
+| **EBADF** | Popisovač souboru je neplatná. |
+| **EDEADLOCK** | Narušení uzamčení. Vrátí, když **_LK_LOCK** nebo **_LK_RLCK** příznak zadán a nelze jej uzamknout soubor po 10 pokusech. |
+| **EINVAL** | Byl zadán neplatný argument **_locking –**. |
 
 Pokud selže z důvodu chybný parametr, jako je například neplatného popisovače souboru, vyvolán obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
@@ -78,11 +78,11 @@ Pokud selže z důvodu chybný parametr, jako je například neplatného popisov
 
 |*režim* hodnota|Efekt|
 |-|-|
-**_LK_LOCK**|Zamkne zadaný počet bajtů. Pokud nelze uzamknout počet bajtů, program okamžitě pokusí znovu za 1 sekundu. Pokud po 10 pokusech, nelze uzamknout počet bajtů, konstanta vrátí chybu.
-**_LK_NBLCK**|Zamkne zadaný počet bajtů. Pokud nelze uzamknout počet bajtů, konstanta vrátí chybu.
-**_LK_NBRLCK**|Stejné jako **_LK_NBLCK**.
-**_LK_RLCK**|Stejné jako **_LK_LOCK**.
-**_LK_UNLCK**|Odemkne zadané bajtů, které musí mít dříve uzamčen.
+| **_LK_LOCK** | Zamkne zadaný počet bajtů. Pokud nelze uzamknout počet bajtů, program okamžitě pokusí znovu za 1 sekundu. Pokud po 10 pokusech, nelze uzamknout počet bajtů, konstanta vrátí chybu. |
+| **_LK_NBLCK** | Zamkne zadaný počet bajtů. Pokud nelze uzamknout počet bajtů, konstanta vrátí chybu. |
+| **_LK_NBRLCK** | Stejné jako **_LK_NBLCK**. |
+| **_LK_RLCK** | Stejné jako **_LK_LOCK**. |
+| **_LK_UNLCK** | Odemkne zadané bajtů, které musí mít dříve uzamčen. |
 
 Jde zamknout souboru více oblastí, které se nepřekrývají. Oblast odemykají musí být dříve uzamčeny. **_locking –** nemá sloučení sousední oblasti; pokud jsou dvě oblasti uzamčené vedle sebe, každou oblast, musí být odemčený samostatně. Oblastí by měl uzamknou jen krátce a by měl být odemknout před zavřením souboru nebo standardním ukončením programu.
 

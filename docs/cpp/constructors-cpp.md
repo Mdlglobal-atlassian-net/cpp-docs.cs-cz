@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 66edab2950a752e00767e10e7b8c36a3a01240ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91d85f62917ff722a61ecbc87c58379a00016b83
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460876"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523153"
 ---
 # <a name="constructors-c"></a>Konstruktory (C++)
 
@@ -127,7 +127,6 @@ Kompilátor může zabránit generování implicitní výchozí konstruktor tak,
 ```cpp
     // Default constructor
     Box() = delete;
-
 ```
 
 Odstranit, pokud nejsou žádné členy třídy constructible výchozí konstruktor vygenerovaný kompilátorem default budou definovány. Například všechny členy typu třídy a jejich členy typu třídy, musí mít výchozí konstruktor a destruktory, které jsou k dispozici. Zadejte všechny datové členy odkazu, stejně jako **const** členy musí mít výchozí inicializátor členu.

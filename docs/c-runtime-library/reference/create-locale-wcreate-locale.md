@@ -28,12 +28,12 @@ helpviewer_keywords:
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-ms.openlocfilehash: 0ede14d56dc093b83078bf28eb01f5b5c55d8949
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 109a1d93692d0c65269b40fd0559381907ce1cab
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545922"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326560"
 ---
 # <a name="createlocale-wcreatelocale"></a>_create_locale, _wcreate_locale
 
@@ -70,16 +70,16 @@ Pokud platné *národní prostředí* a *kategorie* jsou uvedeny, vrátí zadan�
 
 **_wcreate_locale** je verze širokého znaku **_create_locale**; *národní prostředí* argument **_wcreate_locale** je širokoznaký řetězec. **_wcreate_locale** a **_create_locale** se jinak chovají stejně.
 
-*Kategorie* argument určuje části chování specifického pro národní prostředí, které tím ovlivníte. Příznaky použité pro *kategorie* a části programu, které ovlivňují, jak je znázorněno v následující tabulce jsou.
+*Kategorie* argument určuje části chování specifického pro národní prostředí, které tím ovlivníte. Příznaky použité pro *kategorie* a části programu, které ovlivňují, jsou uvedené v této tabulce:
 
-|*kategorie* příznak|Ovlivňuje|
-|-|-|
-**LC_ALL**|Všechny kategorie, jak je uvedeno níže.
-**LC_COLLATE**|**Strcoll –**, **_stricoll –**, **wcscoll –**, **_wcsicoll –**, **strxfrm –**, **_ strncoll –**, **_strnicoll –**, **_wcsncoll –**, **_wcsnicoll –**, a **wcsxfrm –** funkce.
-**LC_CTYPE**|Funkce zpracování znaků (s výjimkou **isdigit**, **isxdigit**, **mbstowcs**, a **mbtowc**, které nejsou ovlivněny).
-**LC_MONETARY**|Informace o formátování měny vrácené **localeconv** funkce.
-**LC_NUMERIC**|Znak pro rutiny formátovaného výstupu desetinné čárky (například **printf**), pro rutiny převodu dat a informace nefinančního formátování vrácené **localeconv**. Kromě znaku desetinné čárky **LC_NUMERIC** nastaví oddělovač tisíců a seskupení vrácený řetězec řídící [localeconv](localeconv.md).
-**LC_TIME**|**Strftime** a **wcsftime** funkce.
+| *kategorie* příznak | Ovlivňuje |
+|-----------------|---------|
+| **LC_ALL** |Všechny kategorie, jak je uvedeno níže. |
+| **LC_COLLATE** |**Strcoll –**, **_stricoll –**, **wcscoll –**, **_wcsicoll –**, **strxfrm –**, **_ strncoll –**, **_strnicoll –**, **_wcsncoll –**, **_wcsnicoll –**, a **wcsxfrm –** funkce. |
+| **LC_CTYPE** | Funkce zpracování znaků (s výjimkou **isdigit**, **isxdigit**, **mbstowcs**, a **mbtowc**, které nejsou ovlivněny). |
+| **LC_MONETARY** | Informace o formátování měny vrácené **localeconv** funkce. |
+| **LC_NUMERIC** | Znak pro rutiny formátovaného výstupu desetinné čárky (například **printf**), pro rutiny převodu dat a informace nefinančního formátování vrácené **localeconv**. Kromě znaku desetinné čárky **LC_NUMERIC** nastaví oddělovač tisíců a seskupení vrácený řetězec řídící [localeconv](localeconv.md). |
+| **LC_TIME** | **Strftime** a **wcsftime** funkce. |
 
 Tato funkce ověřuje *kategorie* a *národní prostředí* parametry. Pokud parametr kategorie není jedna z hodnot uvedených v předchozí tabulce, nebo pokud *národní prostředí* je **NULL**, funkce vrátí **NULL**.
 

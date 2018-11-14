@@ -50,12 +50,12 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: bf22c0e4775ef93b1965a7c9d61f024441bea821
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18f42f8e5bcd69872e4300d154eb72f489015e36
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509679"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519675"
 ---
 # <a name="ltiosgt-functions"></a>&lt;IOS&gt; funkce
 
@@ -213,7 +213,7 @@ Odkaz na objekt, ze které _ *Str* pochází.
 
 `fixed` je výchozí zobrazení notace pro čísla s plovoucí desetinnou čárkou. [vědecké](../standard-library/ios-functions.md#scientific) způsobí, že s plovoucí desetinnou čárkou čísla, který se má zobrazit pomocí vědeckého zápisu.
 
-Efektivně volá manipulátor * str.*[setf](../standard-library/ios-base-class.md#setf)( `ios_base::fixed`, `ios_base::floatfield`) a vrátí *str*.
+Efektivně volá manipulátor *str*.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::fixed`, `ios_base::floatfield` ) a vrátí *str*.
 
 ### <a name="example"></a>Příklad
 
@@ -872,15 +872,13 @@ int main( )
 }
 ```
 
-```Output
-
+```Input
 1 2 3
-
 ```
 
 ```Output
-
-      1 2 3.1.
+Enter three characters: 1 2 3
+.1.
 .2.
 .3.
 ```

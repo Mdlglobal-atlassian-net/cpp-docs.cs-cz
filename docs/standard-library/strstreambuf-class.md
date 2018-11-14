@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::strstreambuf [C++], str
 - std::strstreambuf [C++], underflow
 ms.assetid: b040b8ea-0669-4eba-8908-6a9cc159c54b
-ms.openlocfilehash: 5a9fa47ab19a5935bf0c7c36dea37b3cfe6180ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75c9a96b727ef60280055536296f850f492d16ac
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512382"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327301"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf – třída
 
@@ -186,11 +186,11 @@ Znak k vložení do vyrovnávací paměti, nebo `EOF`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud funkce nemůže být úspěšná, vrátí `EOF`. Jinak, pokud _ *Meta* == `EOF`, vrátí některá z hodnot jiných než `EOF`. V opačném případě vrátí \_ *Meta*.
+Pokud funkce nemůže být úspěšná, vrátí `EOF`. Jinak, pokud  *\_Meta* == `EOF`, vrátí některá z hodnot jiných než `EOF`. V opačném případě vrátí  *\_Meta*.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud _ *Meta* ! = `EOF`, chráněná virtuální členská funkce se pokusí vložit element ( `char`)\_ *Meta* do výstupní vyrovnávací paměť. To lze provést různými způsoby:
+Pokud  *\_Meta* ! = `EOF`, chráněná virtuální členská funkce se pokusí vložit element `(char)_Meta` do výstupní vyrovnávací paměť. To lze provést různými způsoby:
 
 - Pokud pozici zápisu je k dispozici, můžete uložit prvek na pozici zápisu a zvýšit další ukazatele pro výstupní vyrovnávací paměť.
 
@@ -211,13 +211,13 @@ Znak k vložení do vyrovnávací paměti, nebo `EOF`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud funkce nemůže být úspěšná, vrátí `EOF`. Jinak, pokud _ *Meta* == `EOF`, vrátí některá z hodnot jiných než `EOF`. V opačném případě vrátí \_ *Meta*.
+Pokud funkce nemůže být úspěšná, vrátí `EOF`. Jinak, pokud  *\_Meta* == `EOF`, vrátí některá z hodnot jiných než `EOF`. V opačném případě vrátí  *\_Meta*.
 
 ### <a name="remarks"></a>Poznámky
 
 Chráněná virtuální členská funkce se pokusí vrátit elementu do vstupní vyrovnávací paměť a nastavte ji aktuálního elementu (ukazuje další ukazatel).
 
-Pokud _ *Meta* == `EOF`, elementu, který chcete vložit zpět je v podstatě je již ve službě stream před aktuální prvek. V opačném případě se nahrazuje tento prvek **ch** = ( `char`)\_ *Meta*. Funkci lze vrátit zpět element různými způsoby:
+Pokud  *\_Meta* == `EOF`, elementu, který chcete vložit zpět je v podstatě je již ve službě stream před aktuální prvek. V opačném případě se nahrazuje tento prvek `ch = (char)_Meta`. Funkci lze vrátit zpět element různými způsoby:
 
 - Pokud putback – pozice je k dispozici a element v ní uloženy při porovnání rovna `ch`, je snížení další ukazatele pro vstupní vyrovnávací paměť.
 
@@ -289,15 +289,15 @@ Chráněná virtuální členská funkce endeavors ke změně aktuální pozice 
 
 Na nové pozici je stanoven následujícím způsobem:
 
-- Pokud `_Way`  ==  `ios_base::beg`, na nové pozici je začátku datového proudu a _ *vypnout*.
+- Pokud `_Way == ios_base::beg`, na nové pozici je začátku datového proudu plus *_Off*.
 
-- Pokud `_Way`  ==  `ios_base::cur`, na nové pozici je aktuální pozici v datovém proudu a _ *vypnout*.
+- Pokud `_Way == ios_base::cur`, na nové pozici, je aktuální pozici v datovém proudu plus *_Off*.
 
-- Pokud `_Way`  ==  `ios_base::end`, na nové pozici je konec datového proudu a _ *vypnout*.
+- Pokud `_Way == ios_base::end`, na nové pozici je konec datového proudu plus *_Off*.
 
-Pokud `_Which`  &  **ios_base::in** je nenulová a neexistuje vstupní vyrovnávací paměť, funkce mění na další pozici pro čtení ve vstupní vyrovnávací paměti. Pokud `_Which`  &  **ios_base::out** je nenulová `_Way` ! = **ios_base::cur**a existuje výstupní vyrovnávací paměť, funkce nastaví také další pozici pro zápis tak, aby odpovídaly Další pozici ke čtení.
+Pokud `_Which & ios_base::in` je nenulová a neexistuje vstupní vyrovnávací paměť, funkce mění na další pozici pro čtení ve vstupní vyrovnávací paměti. Pokud `_Which & ios_base::out` je nenulová `_Way != ios_base::cur`a existuje výstupní vyrovnávací paměť, funkce nastaví také další pozici pro zápis do odpovídá další pozici ke čtení.
 
-Jinak, pokud `_Which`  &  `ios_base::out` je nenulová a existuje výstupní vyrovnávací paměť, funkce mění na další pozici pro zápis do výstupní vyrovnávací paměť. V opačném případě umístění operace se nezdaří. Umístění operace úspěšná musí být v řízené sekvenci od výsledný pozici v datovém proudu.
+Jinak, pokud `_Which & ios_base::out` je nenulová a existuje výstupní vyrovnávací paměť, funkce mění na další pozici pro zápis do výstupní vyrovnávací paměť. V opačném případě umístění operace se nezdaří. Umístění operace úspěšná musí být v řízené sekvenci od výsledný pozici v datovém proudu.
 
 ## <a name="seekpos"></a>  strstreambuf::seekpos
 
@@ -321,7 +321,7 @@ Pokud funkce uspěje v změna buď nebo obojí datového proudu pozic, vrátí p
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná virtuální členská funkce endeavors ke změně aktuální pozice řízené datových proudů. Pro objekt strstreambuf – třída pozici v datovém proudu se skládá čistě posun datového proudu. Posunutí nula označí první prvek řízené sekvence. Nové umístění je určeno _ *Sp*.
+Chráněná virtuální členská funkce endeavors ke změně aktuální pozice řízené datových proudů. Pro objekt strstreambuf – třída pozici v datovém proudu se skládá čistě posun datového proudu. Posunutí nula označí první prvek řízené sekvence. Je určená na nové pozici *_Sp*.
 
 Pokud `_Which`  &  **ios_base::in** je nenulová a existuje vstupní vyrovnávací paměť, funkce mění na další pozici pro čtení ve vstupní vyrovnávací paměti. Pokud `_Which`  &  `ios_base::out` je nenulová a existuje výstupní vyrovnávací paměť, funkce nastaví také další pozici pro zápis do odpovídá další pozici ke čtení. Jinak, pokud `_Which`  &  `ios_base::out` je nenulová a existuje výstupní vyrovnávací paměť, funkce mění na další pozici pro zápis do výstupní vyrovnávací paměť. V opačném případě umístění operace se nezdaří. Umístění operace úspěšná musí být v řízené sekvenci od výsledný pozici v datovém proudu.
 
@@ -398,7 +398,7 @@ Vyrovnávací paměť pro výstup.
 
 První konstruktor uloží ukazatel s hodnotou null v všechny ukazatele řízení vstupní vyrovnávací paměť, vyrovnávací paměti výstupních a strstreambuf – přidělení. Nastaví režim uložené strstreambuf – aby řízené sekvence upravitelnými a prodloužit. Přijímá také *počet* jako navrhované přidělení počáteční velikost.
 
-Druhý konstruktor se chová jako první, s tím rozdílem, že ukládá _ *Allocfunc* jako ukazatel na funkci, která má být volána pro přidělení úložiště a \_ *Freefunc* jako ukazatel na funkci na volání k uvolnění tohoto úložiště.
+Druhý konstruktor se chová jako první, s tím rozdílem, že ukládá  *\_Allocfunc* jako ukazatel na funkci, která má být volána pro přidělení úložiště a  *\_Freefunc* jako ukazatel do funkce volání k uvolnění tohoto úložiště.
 
 Tři konstruktory:
 

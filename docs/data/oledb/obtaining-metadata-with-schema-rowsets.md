@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, getting provider metadata
 - metadata, getting (OLE DB Templates)
 ms.assetid: 6b448461-82fb-4acf-816b-3cbb0ca1d186
-ms.openlocfilehash: cb0f7813a351f272d5417955fb98719d889a64ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9717649c1bd4f956da8bc926e8f492f4eccff74
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561210"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556839"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Získávání metadat pomocí sad řádků schématu
 
@@ -52,7 +52,7 @@ CRestrictions<CAccessor<CColumnsInfo>
 
 [CRestrictions](../../data/oledb/crestrictions-class.md) poskytuje podporu omezení třídy. Po vytvoření instance sady řádků schématu volat [CRestrictions::Open](../../data/oledb/crestrictions-open.md). Tato metoda vrátí sadu výsledků dotazu na základě omezení, které zadáte.
 
-Chcete-li zadat omezení, přečtěte si [sad řádků schématu příloha B:](/previous-versions/windows/desktop/ms712921) a vyhledání řádků, které používáte. Například `CColumns` odpovídá [sady řádků sloupců](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); Toto téma obsahuje seznam sloupců omezení v sadě řádků sloupců: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Je třeba dodržet toto pořadí v zadání vašeho omezení.
+Chcete-li zadat omezení, přečtěte si [sad řádků schématu příloha B:](https://docs.microsoft.com/previous-versions/windows/desktop/ms712921(v=vs.85)) a vyhledání řádků, které používáte. Například `CColumns` odpovídá [sady řádků sloupců](https://docs.microsoft.com/previous-versions/windows/desktop/ms723052(v=vs.85)\(v%3dvs.85\)); Toto téma obsahuje seznam sloupců omezení v sadě řádků sloupců: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Je třeba dodržet toto pořadí v zadání vašeho omezení.
 
 Ano, pokud chcete omezit tím, že název tabulky, TABLE_NAME je například třetí sloupec omezení a poté zavolejte `Open`, zadáte název požadované tabulky jako třetí parametr omezení, jak je znázorněno v následujícím příkladu.
 
@@ -82,7 +82,7 @@ Ano, pokud chcete omezit tím, že název tabulky, TABLE_NAME je například tř
 
 Pro odkaz na sadu řádků schématu definiční třídy typů součástí šablony technologie OLE DB (viz [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)).
 
-Další informace o sad řádků schématu technologie OLE DB, včetně sloupců omezení, najdete v části [sad řádků schématu příloha B:](/previous-versions/windows/desktop/ms712921) v **OLE DB referenční informace pro programátory**.
+Další informace o sad řádků schématu technologie OLE DB, včetně sloupců omezení, najdete v části [sad řádků schématu příloha B:](https://docs.microsoft.com/previous-versions/windows/desktop/ms712921(v=vs.85)) v **OLE DB referenční informace pro programátory**.
 
 Složitější příklady toho, jak pomocí třídy sady řádků schématu, najdete v článku [CatDB](https://github.com/Microsoft/VCSamples) a [DBViewer](https://github.com/Microsoft/VCSamples) ukázky.
 

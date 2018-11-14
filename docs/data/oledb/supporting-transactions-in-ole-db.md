@@ -9,12 +9,12 @@ helpviewer_keywords:
 - databases [C++], transactions
 - distributed transactions [C++]
 ms.assetid: 3d72e583-ad38-42ff-8f11-e2166d60a5a7
-ms.openlocfilehash: 58316a6f09fcd60aae8b8de41e22af138ae88813
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 647112f480f6470f7d893ecd1d5177618dc23708
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527163"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556260"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Podpora transakcí v prostředí OLE DB
 
@@ -22,11 +22,11 @@ A [transakce](../../data/transactions-mfc-data-access.md) je způsob, jak seskup
 
 OLE DB podporuje transakce pomocí následujících tří metod:
 
-- [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786)
+- [ITransactionLocal::StartTransaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms709786(v=vs.85))
 
-- [ITransaction::Commit](/previous-versions/windows/desktop/ms713008)
+- [ITransaction::Commit](https://docs.microsoft.com/previous-versions/windows/desktop/ms713008(v=vs.85))
 
-- [ITransaction::Abort](/previous-versions/windows/desktop/ms709833)
+- [ITransaction::Abort](https://docs.microsoft.com/previous-versions/windows/desktop/ms709833(v=vs.85))
 
 ## <a name="relationship-of-sessions-and-transactions"></a>Vztah mezi relacemi a transakce
 
@@ -48,7 +48,7 @@ Volání `ITransaction::Commit` nebo `ITransaction::Abort` končí transakce. `C
 
 ## <a name="nested-transactions"></a>Vnořené transakce
 
-A [vnořená transakce](/previous-versions/windows/desktop/ms716985) nastane, pokud se spuštění nové místní transakce v aktivní transakci již. Nové transakce je spuštěn jako vnořenou transakci pod aktuální transakce. Pokud zprostředkovatel nepodporuje vnořené transakce, volání `StartTransaction` již existuje aktivní transakce v relaci vrátí XACT_E_XTIONEXISTS.
+A [vnořená transakce](https://docs.microsoft.com/previous-versions/windows/desktop/ms716985(v=vs.85)) nastane, pokud se spuštění nové místní transakce v aktivní transakci již. Nové transakce je spuštěn jako vnořenou transakci pod aktuální transakce. Pokud zprostředkovatel nepodporuje vnořené transakce, volání `StartTransaction` již existuje aktivní transakce v relaci vrátí XACT_E_XTIONEXISTS.
 
 ## <a name="distributed-transactions"></a>Distribuované transakce
 

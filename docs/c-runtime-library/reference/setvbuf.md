@@ -23,12 +23,12 @@ helpviewer_keywords:
 - stream buffering
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
-ms.openlocfilehash: b2a5cfc08da7812e32ad84940ab4c78288017720
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4336c6cc478a035fcc0b9b059a7161d58bc4442
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445770"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328094"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -75,9 +75,9 @@ Musí být v režimu **_IOFBF**, **_IOLBF**, nebo **_IONBF**. Pokud *režimu* je
 
 |*režim* hodnota|Význam|
 |-|-|
-**_IOFBF**|Úplné ukládání do vyrovnávací paměti; To znamená *vyrovnávací paměti* slouží jako vyrovnávací paměť a *velikost* se používá jako velikost vyrovnávací paměti. Pokud *vyrovnávací paměti* je **NULL**, automaticky přidělené vyrovnávací paměti *velikost* bajty se používá.
-**_IOLBF**|U některých systémů získáte řádku ukládání do vyrovnávací paměti. Ale pro Win32, chování je stejné jako **_IOFBF** – úplné ukládání do vyrovnávací paměti.
-**_IONBF**|Žádné vyrovnávací paměť je použit, bez ohledu na to *vyrovnávací paměti* nebo *velikost*.
+| **_IOFBF** | Úplné ukládání do vyrovnávací paměti; To znamená *vyrovnávací paměti* slouží jako vyrovnávací paměť a *velikost* se používá jako velikost vyrovnávací paměti. Pokud *vyrovnávací paměti* je **NULL**, automaticky přidělené vyrovnávací paměti *velikost* bajty se používá. |
+| **_IOLBF** | U některých systémů získáte řádku ukládání do vyrovnávací paměti. Ale pro Win32, chování je stejné jako **_IOFBF** – úplné ukládání do vyrovnávací paměti. |
+| **_IONBF** | Žádné vyrovnávací paměť je použit, bez ohledu na to *vyrovnávací paměti* nebo *velikost*. |
 
 ## <a name="requirements"></a>Požadavky
 

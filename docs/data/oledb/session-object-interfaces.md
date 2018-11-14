@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interfaces, session object
 - interfaces, list of
 ms.assetid: ac01a958-6dde-4bd7-8b63-94459e488335
-ms.openlocfilehash: 19a2830ba97038624072ce4d9b8eca573ddd7d28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b4748b804572c72b75f63b8ea2473818bdac989
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588718"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556618"
 ---
 # <a name="session-object-interfaces"></a>Rozhraní objektu relace
 
@@ -21,24 +21,24 @@ V následující tabulce jsou uvedeny povinných a volitelných rozhraní defino
 
 |Rozhraní|Povinné?|Šablony technologie OLE DB implementované?|
 |---------------|---------------|--------------------------------------|
-|[IGetDataSource](/previous-versions/windows/desktop/ms709721)|Povinné|Ano|
-|[IOpenRowset](/previous-versions/windows/desktop/ms716946)|Povinné|Ano|
-|[ISessionProperties](/previous-versions/windows/desktop/ms713721)|Povinné|Ano|
-|[IAlterIndex](/previous-versions/windows/desktop/ms714943)|volitelná,|Ne|
-|[IAlterTable](/previous-versions/windows/desktop/ms719764)|volitelná,|Ne|
-|[IBindResource](/previous-versions/windows/desktop/ms714936)|volitelná,|Ne|
-|[ICreateRow](/previous-versions/windows/desktop/ms716832)|volitelná,|Ne|
-|[IDBCreateCommand](/previous-versions/windows/desktop/ms711625)|volitelná,|Ano|
-|[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686)|volitelná,|Ano|
-|[IIndexDefinition](/previous-versions/windows/desktop/ms711593)|volitelná,|Ne|
-|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816)|volitelná,|Ano|
-|[ITableCreation](/previous-versions/windows/desktop/ms713639)|volitelná,|Ne|
-|[ITableDefinition](/previous-versions/windows/desktop/ms714277)|volitelná,|Ne|
-|[ITableDefinitionWithConstraints](/previous-versions/windows/desktop/ms720947)|volitelná,|Ne|
-|[ITransaction](/previous-versions/windows/desktop/ms723053)|volitelná,|Ne|
-|[ITransactionJoin](/previous-versions/windows/desktop/ms718071)|volitelná,|Ne|
-|[ITransactionLocal](/previous-versions/windows/desktop/ms714893)|volitelná,|Ne|
-|[ITransactionObject](/previous-versions/windows/desktop/ms713659)|volitelná,|Ne|
+|[IGetDataSource](https://docs.microsoft.com/previous-versions/windows/desktop/ms709721(v=vs.85))|Povinné|Ano|
+|[IOpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716946(v=vs.85))|Povinné|Ano|
+|[ISessionProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms713721(v=vs.85))|Povinné|Ano|
+|[IAlterIndex](https://docs.microsoft.com/previous-versions/windows/desktop/ms714943(v=vs.85))|volitelná,|Ne|
+|[IAlterTable](https://docs.microsoft.com/previous-versions/windows/desktop/ms719764(v=vs.85))|volitelná,|Ne|
+|[IBindResource](https://docs.microsoft.com/previous-versions/windows/desktop/ms714936(v=vs.85))|volitelná,|Ne|
+|[ICreateRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms716832(v=vs.85))|volitelná,|Ne|
+|[IDBCreateCommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms711625(v=vs.85))|volitelná,|Ano|
+|[IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85))|volitelná,|Ano|
+|[IIndexDefinition](https://docs.microsoft.com/previous-versions/windows/desktop/ms711593(v=vs.85))|volitelná,|Ne|
+|[ISupportErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms715816(v=vs.85))|volitelná,|Ano|
+|[ITableCreation](https://docs.microsoft.com/previous-versions/windows/desktop/ms713639(v=vs.85))|volitelná,|Ne|
+|[ITableDefinition](https://docs.microsoft.com/previous-versions/windows/desktop/ms714277(v=vs.85))|volitelná,|Ne|
+|[ITableDefinitionWithConstraints](https://docs.microsoft.com/previous-versions/windows/desktop/ms720947(v=vs.85))|volitelná,|Ne|
+|[ITransaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms723053(v=vs.85))|volitelná,|Ne|
+|[ITransactionJoin](https://docs.microsoft.com/previous-versions/windows/desktop/ms718071(v=vs.85))|volitelná,|Ne|
+|[ITransactionLocal](https://docs.microsoft.com/previous-versions/windows/desktop/ms714893(v=vs.85))|volitelná,|Ne|
+|[ITransactionObject](https://docs.microsoft.com/previous-versions/windows/desktop/ms713659(v=vs.85))|volitelná,|Ne|
 
 Objekt relace vytváří objektu sady řádků. Pokud zprostředkovatel podporuje příkazy, relace také vytvoří příkazový objekt (`CCommand`, implementace rozhraní OLE DB `TCommand`). Implementuje objekt příkazu `ICommand` rozhraní a používá `ICommand::Execute` metodu provést příkazy pro řádků, jak je znázorněno na následujícím obrázku.
 

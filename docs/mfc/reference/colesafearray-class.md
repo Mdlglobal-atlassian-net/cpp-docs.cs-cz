@@ -60,12 +60,12 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: efffa6057f6322f3de3d9d0bfe050d6d2021d9b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07e507f0546849a64625ccd67a0f7463cd510841
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648094"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525402"
 ---
 # <a name="colesafearray-class"></a>Colesafearray – třída
 
@@ -408,7 +408,7 @@ Základní `VARIANT` hodnotu `COleSafeArray` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce odpojí data v bezpečné pole tak, že nastavíte VARTYPE objektu VT_EMPTY. Je odpovědností volajícího uvolnit voláním funkce Windows pole [VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear).
+Funkce odpojí data v bezpečné pole tak, že nastavíte VARTYPE objektu VT_EMPTY. Je odpovědností volajícího uvolnit voláním funkce Windows pole [VariantClear](/windows/desktop/api/oleauto/nf-oleauto-variantclear).
 
 Při chybě, funkce vyvolá [coleexception –](../../mfc/reference/coleexception-class.md).
 
@@ -674,7 +674,7 @@ Ukazatel na data, která mají přiřadit k poli. VT_DISPATCH VT_UNKNOWN a VT_BS
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce automaticky volá funkce Windows [SafeArrayLock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraylock) a [SafeArrayUnlock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearrayunlock) před a po přiřazení elementu. Pokud datový element je řetězec, objekt nebo typ variant, funkce zkopíruje ho správně, a pokud existující prvek je řetězec, objekt nebo typ variant, není správně zaškrtnuté.
+Tato funkce automaticky volá funkce Windows [SafeArrayLock](/windows/desktop/api/oleauto/nf-oleauto-safearraylock) a [SafeArrayUnlock](/windows/desktop/api/oleauto/nf-oleauto-safearrayunlock) před a po přiřazení elementu. Pokud datový element je řetězec, objekt nebo typ variant, funkce zkopíruje ho správně, a pokud existující prvek je řetězec, objekt nebo typ variant, není správně zaškrtnuté.
 
 Všimněte si, že máte několika zámky na pole, tak prvky můžete umístit do pole uzamčeném pole pomocí dalších operací.
 

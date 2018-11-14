@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - RFX (ODBC), implementing
 ms.assetid: ada8f043-37e6-4d41-9db3-92c997a61957
-ms.openlocfilehash: e1ecb43226c9e21f3b13c2d5b7c2a0f93b72f3cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d8ba1e66c1ffc46429b5c0e987be833aef2e72f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469547"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328523"
 ---
 # <a name="record-field-exchange-using-rfx"></a>Výměna polí záznamu: Použití funkce RFX
 
@@ -30,10 +30,13 @@ V následující tabulce jsou uvedeny vaši roli ve vztahu k rámci udělá za v
 
 |Vy|Rozhraní framework|
 |---------|-------------------|
-
-| Deklarace třídy sady záznamů s průvodce. Zadejte názvy a datové typy pole datových členů. | Průvodce odvozuje `CRecordset` třídy a zápisy [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) přepsat za vás, včetně RFX volání pro každé pole datového člena funkce. | | () Volitelné) přidejte ručně, které je třeba parametr datové členy třídy. Ručně přidejte volání funkce RFX `DoFieldExchange` pro každý parametr datový člen, přidejte volání do [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) pro skupinu parametrů a zadejte celkový počet parametrů v [m_nParams ](../../mfc/reference/crecordset-class.md#m_nparams). Zobrazit [sada záznamů: Parametrizace sady záznamů (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md). || | () Volitelné) ruční svázání další sloupce na pole datové členy. Zvyšte ručně [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields). Zobrazit [sada záznamů: dynamické vazby datových sloupců (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). ||
-
-| Sestavte objekt třídy sady záznamů. Před použitím objektu, nastavte hodnoty parametru datové členy, pokud existuje. | Z důvodu efektivity rozhraní znovu naváže parametry, pomocí ovladače ODBC. Při předávání hodnot parametrů, předává je rozhraní ke zdroji dat. Pouze hodnoty parametrů jsou odesílány pro zopakování dotazu, pokud jste změnili řazení a/nebo filtr řetězce. | | Vytvořit objekt sady záznamů prostřednictvím [CRecordset::Open](../../mfc/reference/crecordset-class.md#open). | Provede dotaz sadu záznamů, váže sloupce pole data členů sady záznamů a volání `DoFieldExchange` pro výměnu dat mezi první vybraný záznam a sady záznamů pole datových členů. | | Posouvání záznamů pomocí [CRecordset::Move](../../mfc/reference/crecordset-class.md#move) nebo příkaz nabídky nebo panelu nástrojů. | Volání `DoFieldExchange` k přenosu dat do datové členy polí z nové aktuální záznam. | | Přidávání, aktualizace a odstraňování záznamů. | Volání `DoFieldExchange` posílat data do zdroje dat. |
+|Deklarace třídy sady záznamů s průvodce. Zadejte názvy a datové typy pole datových členů.|Průvodce odvozuje `CRecordset` třídy a zapíše [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) přepsat za vás, včetně RFX volání pro každé pole datového člena funkce.|
+|(Volitelné) Ručně přidáte všechny potřebné parametry datových členů třídy. Ručně přidejte volání funkce RFX `DoFieldExchange` pro každý parametr datový člen, přidejte volání do [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) pro skupinu parametrů a zadejte celkový počet parametrů v [m_nParams ](../../mfc/reference/crecordset-class.md#m_nparams). Zobrazit [sada záznamů: Parametrizace sady záznamů (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).||
+|(Volitelné) Ruční svázání další sloupce na pole datové členy. Zvyšte ručně [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields). Zobrazit [sada záznamů: dynamické vazby datových sloupců (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).||
+|Sestavte objekt třídy sady záznamů. Před použitím objektu, nastavte hodnoty parametru datové členy, pokud existuje.|Z důvodu efektivity rozhraní znovu naváže parametry, pomocí ovladače ODBC. Při předávání hodnot parametrů, předává je rozhraní ke zdroji dat. Pouze hodnoty parametrů jsou odesílány pro zopakování dotazu, pokud jste změnili řazení a/nebo filtr řetězce.|
+|Vytvořit objekt sady záznamů prostřednictvím [CRecordset::Open](../../mfc/reference/crecordset-class.md#open).|Provede dotaz sadu záznamů, váže sloupce pole data členů sady záznamů a volání `DoFieldExchange` pro výměnu dat mezi první vybraný záznam a sady záznamů pole datových členů.|
+|Posouvání záznamů pomocí [CRecordset::Move](../../mfc/reference/crecordset-class.md#move) nebo příkaz nabídky nebo panelu nástrojů.|Volání `DoFieldExchange` k přenosu dat do datové členy polí z nové aktuální záznam.|
+|Přidat, aktualizovat a odstraňovat záznamy.|Volání `DoFieldExchange` posílat data do zdroje dat.|
 
 ## <a name="see-also"></a>Viz také
 

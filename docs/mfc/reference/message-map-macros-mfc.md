@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 8d4caca4d5a0b5c12b0af5a948b17b7e2ad05221
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4012f1f0729ff0f46a8504c44f27a37cd55c77e5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474266"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327444"
 ---
 # <a name="message-map-macros-mfc"></a>Makra map zpráv (MFC)
 
@@ -250,27 +250,8 @@ Název funkce obslužná rutina zprávy, ke které je mapován tento příkaz.
 
 ### <a name="remarks"></a>Poznámky
 
-Vyžaduje rozšířený formát obslužné rutiny zpráv příkaz je k dispozici pro rozšířené použití. ON_COMMAND_EX – makro se používá pro tyto obslužné rutiny zpráv a nabízí nadmnožinu funkcí [ON_COMMAND] (#on_command).  Rozšířené obslužná rutina příkazu členské funkce vyžadovat jeden parametr, UINT, obsahující Identifikátor příkazu a vrátit logickou hodnotu. Návratová hodnota by měla být hodnota TRUE pro
-
-Toto makro mapuje zprávou příkazu rozšířené obslužná rutina příkazu členské funkce.
-
-### <a name="syntax"></a>Syntaxe
-
-```
-ON_COMMAND_EX(id,  memberFxn);
-```
-
-### <a name="parameters"></a>Parametry
-
-*id*<br/>
-ID příkazu.
-
-*memberFxn*<br/>
-Název funkce obslužná rutina zprávy, ke které je mapován tento příkaz.
-
-### <a name="remarks"></a>Poznámky
-
 Vyžaduje rozšířený formát obslužné rutiny zpráv příkaz je k dispozici pro rozšířené použití. ON_COMMAND_EX – makro se používá pro tyto obslužné rutiny zpráv a nabízí nadmnožinu [ON_COMMAND](message-map-macros-mfc.md#on_command) funkce. Rozšířené obslužná rutina příkazu členské funkce vyžadovat jeden parametr, UINT, obsahující Identifikátor příkazu a vrátit logickou hodnotu. Vrácená hodnota musí být TRUE označuje, že byla zpracována příkazu; jinak směrování bude pokračovat na další příkaz cílové objektů.
+
 Další informace viz technická Poznámka [TN006: mapy zpráv] tm006. zpráva maps.md).
 
 ### <a name="requirements"></a>Požadavky

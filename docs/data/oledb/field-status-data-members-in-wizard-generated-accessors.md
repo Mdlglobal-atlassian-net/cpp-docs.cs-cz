@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: 25bb370c0714bfef97bc6659deae2fbd21aed23f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 46cf285e07bffe178874546d13d196b5165cb28b
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664565"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524355"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Datoví členové stavu pole v přístupových objektech generovaných průvodcem
 
@@ -58,7 +58,7 @@ Můžete použít hodnoty stavu pro účely ladění. Pokud kód vytvořen **pr�
 
 Hodnoty stavu můžete použít také k nastavení hodnoty NULL pro určité pole. To vám pomůže v případech, ve kterých chcete odlišit hodnotu pole jako hodnotu NULL, spíše než nula. Je jenom na vás rozhodnout, zda je platná hodnota nebo hodnota NULL a rozhodnout, jak vaše aplikace bude pracovat. OLE DB definuje DBSTATUS_S_ISNULL jako správný způsob určení na obecné hodnotě NULL. Pokud příjemce čte data a hodnota je null, pole stavu nastavená na DBSTATUS_S_ISNULL. Pokud uživatel chce nastavit hodnotu NULL, příjemce nastaví stav hodnotu DBSTATUS_S_ISNULL před voláním metody zprostředkovatele.
 
-Dále otevřete Oledb.h a vyhledejte DBSTATUSENUM. Pak můžete porovnat číselnou hodnotu nenulovou stavu proti DBSTATUSENUM hodnot výčtu. Pokud název výčtu nestačí říct, co je špatně, přečtěte si téma **stav** tématu **vazby hodnoty dat** část [Příručka programátora technologie OLE DB](/previous-versions/windows/desktop/ms713643). Toto téma obsahuje tabulky stav hodnot použitá při načtení nebo nastavení data. Informace o délce hodnot najdete v tématu **délka** tématu ve stejném oddílu.
+Dále otevřete Oledb.h a vyhledejte DBSTATUSENUM. Pak můžete porovnat číselnou hodnotu nenulovou stavu proti DBSTATUSENUM hodnot výčtu. Pokud název výčtu nestačí říct, co je špatně, přečtěte si téma **stav** tématu **vazby hodnoty dat** část [Příručka programátora technologie OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming). Toto téma obsahuje tabulky stav hodnot použitá při načtení nebo nastavení data. Informace o délce hodnot najdete v tématu **délka** tématu ve stejném oddílu.
 
 ## <a name="retrieving-the-length-or-status-of-a-column"></a>Načítání délku nebo stav sloupce
 

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], str
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
-ms.openlocfilehash: 87ea8150e13076d176665bc3ddcc04482d639b79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ed9deee46f7c99750ee3260a6b2a8de1f0f3397
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462022"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329641"
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf – třída
 
@@ -183,7 +183,7 @@ Pokud funkce nemůže být úspěšná, vrátí `traits_type::eof`. V opačném 
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud _ *Meta* není výsledkem porovnání **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), chráněná virtuální členská funkce se pokusí vložit element **traits_type::** [ to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) do výstupní vyrovnávací paměť. To lze provést různými způsoby:
+Pokud  *\_Meta* není výsledkem porovnání **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), chráněná virtuální členská funkce se pokusí vložit element  **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*) do výstupní vyrovnávací paměť. To lze provést různými způsoby:
 
 - Pokud pozici zápisu je k dispozici, můžete uložit prvek na pozici zápisu a zvýšit další ukazatele pro výstupní vyrovnávací paměť.
 

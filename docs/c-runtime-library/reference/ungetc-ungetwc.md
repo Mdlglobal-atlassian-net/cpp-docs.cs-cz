@@ -28,12 +28,12 @@ helpviewer_keywords:
 - _ungettc function
 - ungetc function
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
-ms.openlocfilehash: 95d2160ba4d008ab67f443d4e9dda7180d62b590
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c504540f8fbbe14961fa051bb93ebef350c2c1da
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633581"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332384"
 ---
 # <a name="ungetc-ungetwc"></a>ungetc, ungetwc
 
@@ -62,7 +62,7 @@ Ukazatel na **souboru** struktury.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud úspěšná, každá z těchto funkcí vrátí argument znaku *c*. Pokud *c* nemůže být posunut zpět nebo pokud byl načten žádný znak, vstupního datového proudu je beze změny a **ungetc –** vrátí ** EOF`; **ungetwc` vrátí **WEOF**. Pokud *stream* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **EOF** nebo **WEOF** je vrácena a **errno** je nastavena na **EINVAL**.
+Pokud úspěšná, každá z těchto funkcí vrátí argument znaku *c*. Pokud *c* nemůže být posunut zpět nebo pokud byl načten žádný znak, vstupního datového proudu je beze změny a **ungetc –** vrátí **EOF**; **ungetwc –** vrátí **WEOF**. Pokud *stream* je **NULL**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **EOF** nebo **WEOF** je vrácena a **errno** je nastavena na **EINVAL**.
 
 Informace o těchto a dalších chybových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

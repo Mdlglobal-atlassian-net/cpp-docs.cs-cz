@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - RW2003
 ms.assetid: 9dc0ba70-6776-4aef-b316-5f1711d8e42e
-ms.openlocfilehash: 2e0a7d2d5b7e8fc4603b10450ba30dbf014e02cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f359c1f71f03ce0d946579776230398fb31d046f
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583165"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520605"
 ---
 # <a name="resource-compiler-error-rw2003"></a>Chyba kompilátoru prostředků RW2003
 
@@ -51,10 +51,10 @@ Chyba generování
 
    Windows 3.1 prostředek nesmí přesáhnout přibližně 65000 bajtů. Pokud je váš prostředek, pak nebudete mít pro kompilaci pomocí jazyka Visual C++ nebo nástroje příkazového řádku resource compiler. Toto omezení se nevztahuje na kurzory, ikony, bitmapy nebo další souborové prostředky.
 
-9. **Soubor prostředků není ve formátu 3.00**
+1. **Soubor prostředků není ve formátu 3.00**
 
    Kurzor nebo ikona používá starší než verze 3.00 formátu. Prostředek musí být převedená nebo přepracované ve formátu verze 3.00 nebo novější.
 
-10. **Nepodařilo se otevřít dočasný soubor**
+1. **Nepodařilo se otevřít dočasný soubor**
 
    Kompilátor/Visual C++ prostředků se nepodařilo otevřít dočasný soubor. Nejpravděpodobnější příčinou je, že nemáte oprávnění k zápisu pro adresář nebo že adresář neexistuje. Prostředek kompilátoru/Visual C++ se pokouší použít tyto soubory v adresáři určeném argumentem **TMP** proměnné prostředí nebo aktuálního adresáře, pokud není zadaný žádný.

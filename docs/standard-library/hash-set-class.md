@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_set::upper_bound
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
-ms.openlocfilehash: 12f177887552cb14edba6ae8cfeeab1abe24a45b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0668342468e30733f8257ccd2682bfe785551857
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657506"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333599"
 ---
 # <a name="hashset-class"></a>hash_set – třída
 
@@ -565,7 +565,7 @@ Klíč prvky lze porovnat z hash_set.
 
 Členská funkce vrátí počet prvků v následujícím rozsahu:
 
-[ **lower_bound** (_ *klíč* ), **upper_bound** (\_ *klíč* )).
+\[ lower_bound (*klíč*), upper_bound (*klíč*)).
 
 ### <a name="example"></a>Příklad
 
@@ -1534,7 +1534,7 @@ Další informace o *osobnostní rysy* najdete v článku [hash_set – třída]
 
 Uložený objekt definuje členskou funkci:
 
-**BOOL – operátor**( **const Key &** _ *xVal*, **const Key &** \_ `yVal`);
+`bool operator( const Key& _xVal, const Key& _yVal );`
 
 který vrátí **true** Pokud `_xVal` předchází a není rovno `_yVal` v pořadí řazení.
 
@@ -2296,7 +2296,7 @@ Další informace o *porovnání*, najdete v části poznámky [hash_set – tř
 
 Uložený objekt definuje členskou funkci:
 
-**BOOL – operátor**( **const Key &** _ *xVal*, **const Key &** \_ `yVal`);
+`bool operator( const Key& _xVal, const Key& _yVal );`
 
 který vrátí **true** Pokud `_xVal` předchází a není rovno `_yVal` v pořadí řazení.
 

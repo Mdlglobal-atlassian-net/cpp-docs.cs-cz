@@ -52,16 +52,16 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: a3520ed34f356c70163b9063178df48e4bc66a7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5e599b437f7660801a1eb40618eb49bee84a918
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583583"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556813"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl – třída
 
-Poskytuje implementaci pro [rozhraní ICommand](/previous-versions/windows/desktop/ms709737) rozhraní.
+Poskytuje implementaci pro [rozhraní ICommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms709737(v=vs.85)) rozhraní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -119,7 +119,7 @@ STDMETHOD(Cancel)();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [ICommand::Cancel](/previous-versions/windows/desktop/ms714402) v *referenční informace pro OLE DB programátory*.
+Zobrazit [ICommand::Cancel](https://docs.microsoft.com/previous-versions/windows/desktop/ms714402(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="cancelexecution"></a> ICommandImpl::CancelExecution
 
@@ -178,7 +178,7 @@ Standardní hodnoty HRESULT. Zobrazit `ICommand::Execute` seznam typické hodnot
 
 Chcete-li vytvořit více než jedné sady řádků nebo poskytnout vlastní podmínky pro vytváření různých sad řádků, umístěte volání různých `CreateRowset` zevnitř `Execute`.
 
-Zobrazit [ICommand::Execute](/previous-versions/windows/desktop/ms718095) v *referenční informace pro OLE DB programátory.*
+Zobrazit [ICommand::Execute](https://docs.microsoft.com/previous-versions/windows/desktop/ms718095(v=vs.85)) v *referenční informace pro OLE DB programátory.*
 
 ## <a name="execute"></a> ICommandImpl::Execute
 
@@ -196,7 +196,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ICommand::Execute](/previous-versions/windows/desktop/ms718095) v *referenční informace pro OLE DB programátory*.
+Zobrazit [ICommand::Execute](https://docs.microsoft.com/previous-versions/windows/desktop/ms718095(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -217,7 +217,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622) v *referenční informace pro OLE DB programátory*.
+Zobrazit [ICommand::GetDBSession](https://docs.microsoft.com/previous-versions/windows/desktop/ms719622(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ### <a name="remarks"></a>Poznámky
 

@@ -1,12 +1,12 @@
 ---
 title: Zpracování výjimek ARM64
 ms.date: 07/11/2018
-ms.openlocfilehash: 82775a61adf8437565b5bb691716451b225e72e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5189c399a4cbff071d2ec846008229ba76306882
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620594"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333586"
 ---
 # <a name="arm64-exception-handling"></a>Zpracování výjimek ARM64
 
@@ -56,7 +56,7 @@ Následují předpoklady v popisu zpracování výjimek:
 
 Pro funkce rámce zřetězené lze uložit dvojice fp a lr v jakékoliv pozici v oblasti místní proměnné v závislosti na důležité informace o optimalizaci. Cílem je maximalizovat počet místních hodnot, které mohou být dosažitelný podle jedna jediná instrukce založené na ukazatel na rámec (r29) nebo ukazatel zásobníku (sp). Ale pro `alloca` funkce, musí být zřetězené a r29 musí odkazovat na konec zásobníku. Umožňující lepší pokrytí register pár – adresování – režim, zaregistrujte stálé aave, které oblasti jsou umístěny v horní části zásobníku místní síti. Tady jsou příklady, které ilustrují několik nejúčinnější sekvence prologu. Z důvodu přehlednosti a lepší umístění mezipaměti pořadí ukládání volaný – uložené registry ve všech canonical Prology je popořadě "rostoucí up". `#framesz` níže představuje velikost vším, co (s výjimkou oblasti alloca). `#localsz` a `#outsz` označení velikost místní síti (včetně uložení oblast pro \<r29, lr > pár) a odchozí velikost parametru v uvedeném pořadí.
 
-1. Zřetězené #localsz < = 512
+1. Zřetězené #localsz \<= 512
 
     ```asm
         stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -95,7 +95,7 @@ Pro funkce rámce zřetězené lze uložit dvojice fp a lr v jakékoliv pozici v
         sub    sp,#framesz-72           // allocate the remaining local area
     ```
 
-   Všechny místní hodnoty jsou přístupné podle SP. \<R29, lr > odkazuje na předchozí snímek. Pro velikost rámce < = 512, "sub sp,..." lze vypuštěn když oblasti regs uložit se přesune do dolní části zásobníku. Nevýhodou, který je, že to není konzistentní s jiné rozložení výše a uložené regs trvat součástí rozsahu pro dvojice regs a provedení před instrumentací a po ní indexované režim odsazení adresování.
+   Všechny místní hodnoty jsou přístupné podle SP. \<R29, lr > odkazuje na předchozí snímek. Pro velikost rámce \<= 512, "sub sp,..." lze vypuštěn když oblasti regs uložit se přesune do dolní části zásobníku. Nevýhodou, který je, že to není konzistentní s jiné rozložení výše a uložené regs trvat součástí rozsahu pro dvojice regs a provedení před instrumentací a po ní indexované režim odsazení adresování.
 
 1. Funkce unchained, mimo úroveň listu (lr je uložen v oblasti Int uložit)
 
@@ -131,7 +131,7 @@ Pro funkce rámce zřetězené lze uložit dvojice fp a lr v jakékoliv pozici v
 
    Všechny místní hodnoty jsou přístupné podle SP. \<R29 > odkazuje na předchozí snímek.
 
-1. Zřetězené #framesz < = 512 #outsz = 0
+1. Zřetězené #framesz \<= 512 #outsz = 0
 
     ```asm
         stp    r29, lr, [sp, -#framesz]!    // pre-indexed, save <r29,lr>
@@ -283,40 +283,40 @@ Pokud výjimky byla zaručeno, že vždy jen ke kterým dochází v těle funkce
 
 Podle následující tabulky jsou kódovány kódy unwind. Všechny kódy unwind jsou jedním/double byte, kromě toho, který přiděluje obrovské zásobníku. Existují zcela 21 unwind kód. Každý unwind kód mapy přesně jeden instrukce v kódu prologu/epilogu aby bylo možné povolit pro uvolnění částečně prováděnou Prology a epilogu funkce.
 
-Uvolnění kódu|Služba BITS a interpretace
+|Uvolnění kódu|Služba BITS a interpretace|
 |-|-|
-`alloc_s`|000xxxxx: přidělovat malé zásobník velikost < 512 (2 ^ 5 * 16).
-`save_r19r20_x`|    001zzzzz: Uložit \<r19 r20 > pár [Z sp-# * 8]!, posun předem indexované > =-248
-`save_fplr`|        01zzzzzz: Uložit \<r29, lr > spárovat na [sp + #Z * 8], posun < = 504.
-`save_fplr_x`|        10zzzzzz: Uložit \<r29, lr > spárovat na [sp-(#Z + 1) * 8]!, posun předem indexované > = – 512
-`alloc_m`|        11000xxx\|xxxxxxxx: přidělení zásobníku velké velikosti 16 kB < (2 ^ 11 * 16).
-`save_regp`|        110010xx\|xxzzzzzz: uložit dvojice r(19+#X) na [sp + #Z * 8], posun < = 504
-`save_regp_x`|        110011xx\|xxzzzzzz: uložit dvojice r(19+#X) na [sp-(#Z + 1) * 8]!, posun předem indexované > = – 512
-`save_reg`|        110100xx\|xxzzzzzz: uložit reg r(19+#X) na [sp + #Z * 8], posun < = 504
-`save_reg_x`|        1101010 x\|xxxzzzzz: uložit reg r(19+#X) na [sp-(#Z + 1) * 8]!, posun předem indexované > =-256
-`save_lrpair`|         1101011 x\|xxzzzzzz: uložit dvojice \<r19 + 2 *#X, lr > na [sp + #Z*8], posun < = 504
-`save_fregp`|        1101100 x\|xxzzzzzz: uložit dvojice d(8+#X) na [sp + #Z * 8], posun < = 504
-`save_fregp_x`|        1101101 x\|xxzzzzzz: uložit dvojice d(8+#X) na [sp-(#Z + 1) * 8]!, posun předem indexované > = – 512
-`save_freg`|        1101110 x\|xxzzzzzz: uložit reg d(8+#X) na [sp + #Z * 8], posun < = 504
-`save_freg_x`|        11011110\|xxxzzzzz: uložit reg d(8+#X) na [sp-(#Z + 1) * 8]!, posun předem indexované > =-256
-`alloc_l`|         11100000\|xxxxxxxx\|xxxxxxxx\|xxxxxxxx: přidělit velké zásobníku s velikostí < 256 M (2 ^ 24 * 16)
-`set_fp`|        11100001: nastavení r29: s: mov r29 sp
-`add_fp`|        11100010\|xxxxxxxx: nastavení r29 s: Přidat r29, sp, #x * 8
-`nop`|            11100011: žádné unwind operace je povinný.
-`end`|            11100100: konec unwind kód. Zahrnuje ret v epilogu.
-`end_c`|        11100101: konec unwind kódu v aktuálním oboru zřetězených.
-`save_next`|        11100110: uložit další stálé Int nebo registr FP pár.
-`arithmetic(add)`|    11100111\| 000zxxxx: přidání souboru cookie reg(z) lr (0 = x28, 1 = sp); přidat lr, lr, reg(z)
-`arithmetic(sub)`|    11100111\| 001zxxxx: sub reg(z) soubor cookie z lr (0 = x28, 1 = sp); sub lr, lr, reg(z)
-`arithmetic(eor)`|    11100111\| 010zxxxx: eor lr pomocí souboru cookie reg(z) (0 = x28, 1 = sp); eor lr, lr, reg(z)
-`arithmetic(rol)`|    11100111\| 0110xxxx: simulované rol lr pomocí souboru cookie reg (x28); xip0 = neg x28; zkoušeného lr, xip0
-`arithmetic(ror)`|    11100111\| 100zxxxx: zkoušeného lr pomocí souboru cookie reg(z) (0 = x28, 1 = sp); zkoušeného lr, lr, reg(z)
-||            11100111: xxxz---:---vyhrazené
-||              11101xxx: vyhrazené pro níže uvedené případy vlastní zásobníku, generují jenom pro asm rutiny
-||              11101001: vlastní zásobníku pro MSFT_OP_TRAP_FRAME
-||              11101010: vlastní zásobníku pro MSFT_OP_MACHINE_FRAME
-||              11101011: vlastní zásobníku pro MSFT_OP_CONTEXT
-||              1111xxxx: vyhrazené
+|`alloc_s`|000xxxxx: přidělovat malé zásobníku s velikostí \< 512 (2 ^ 5 * 16).|
+|`save_r19r20_x`|    001zzzzz: Uložit \<r19 r20 > pár [Z sp-# * 8]!, posun předem indexované > =-248 |
+|`save_fplr`|        01zzzzzz: Uložit \<r29, lr > spárovat na [sp + #Z * 8], posun \<= 504. |
+|`save_fplr_x`|        10zzzzzz: Uložit \<r29, lr > spárovat na [sp-(#Z + 1) * 8]!, posun předem indexované > = – 512 |
+|`alloc_m`|        11000xxx "xxxxxxxx: přidělit velké zásobníku s velikostí \< 16 kB (2 ^ 11 * 16). |
+|`save_regp`|        110010xx "xxzzzzzz: uložit dvojice r(19+#X) na [sp + #Z * 8], posun \<= 504 |
+|`save_regp_x`|        110011xx "xxzzzzzz: uložit dvojice r(19+#X) na [sp-(#Z + 1) * 8]!, posun předem indexované > = – 512 |
+|`save_reg`|        110100xx "xxzzzzzz: uložit reg r(19+#X) na [sp + #Z * 8], posun \<= 504 |
+|`save_reg_x`|        1101010 x'xxxzzzzz: uložit reg r(19+#X) na [sp-(#Z + 1) * 8]!, posun předem indexované > =-256 |
+|`save_lrpair`|         1101011 x'xxzzzzzz: uložit dvojice \<r19 + 2 *#X, lr > na [sp + #Z*8], posun \<= 504 |
+|`save_fregp`|        1101100 x'xxzzzzzz: uložit dvojice d(8+#X) na [sp + #Z * 8], posun \<= 504 |
+|`save_fregp_x`|        1101101 x'xxzzzzzz: uložit dvojice d(8+#X) na [sp-(#Z + 1) * 8]!, posun předem indexované > = – 512 |
+|`save_freg`|        1101110 x'xxzzzzzz: uložit reg d(8+#X) na [sp + #Z * 8], posun \<= 504 |
+|`save_freg_x`|        11011110' xxxzzzzz: uložit reg d(8+#X) na [sp-(#Z + 1) * 8]!, posun předem indexované > =-256 |
+|`alloc_l`|         'xxxxxxxx"xxxxxxxx xxxxxxxx 11100000': přidělit velké zásobníku s velikostí \< 256 M (2 ^ 24 * 16) |
+|`set_fp`|        11100001: nastavení r29: s: mov r29 sp |
+|`add_fp`|        11100010' xxxxxxxx: nastavení r29 s: Přidat r29, sp, #x * 8 |
+|`nop`|            11100011: žádné unwind operace je povinný. |
+|`end`|            11100100: konec unwind kód. Zahrnuje ret v epilogu. |
+|`end_c`|        11100101: konec unwind kódu v aktuálním oboru zřetězených. |
+|`save_next`|        11100110: uložit další stálé Int nebo registr FP pár. |
+|`arithmetic(add)`|    11100111' 000zxxxx: přidání souboru cookie reg(z) lr (0 = x28, 1 = sp); Přidat lr, lr, reg(z) |
+|`arithmetic(sub)`|    11100111' 001zxxxx: sub reg(z) soubor cookie z lr (0 = x28, 1 = sp); Sub lr, lr, reg(z) |
+|`arithmetic(eor)`|    11100111' 010zxxxx: eor lr pomocí souboru cookie reg(z) (0 = x28, 1 = sp); eor lr, lr, reg(z) |
+|`arithmetic(rol)`|    11100111' 0110xxxx: simulované rol lr pomocí souboru cookie reg (x28); xip0 = neg x28; zkoušeného lr, xip0 |
+|`arithmetic(ror)`|    11100111' 100zxxxx: zkoušeného lr pomocí souboru cookie reg(z) (0 = x28, 1 = sp); zkoušeného lr, lr, reg(z) |
+| |            11100111: xxxz---:---vyhrazené |
+| |              11101xxx: vyhrazené pro níže uvedené případy vlastní zásobníku, generují jenom pro asm rutiny |
+| |              11101001: vlastní zásobníku pro MSFT_OP_TRAP_FRAME |
+| |              11101010: vlastní zásobníku pro MSFT_OP_MACHINE_FRAME |
+| |              11101011: vlastní zásobníku pro MSFT_OP_CONTEXT |
+| |              1111xxxx: vyhrazené |
 
 Nejvýznamnější bity pokyny s velkými hodnotami, které pokrývají více bajtů, jsou uloženy nejprve. Kódy unwind výše jsou navržené tak, aby jednoduše vyhledá první bajt kód, je možné vědět, celková velikost v bajtech kódu unwind. Vzhledem k tomu, že jednotlivé kódy unwind přesně je namapována na instrukce v kódu prologu/epilogu, Vypočítat velikost kódu prologu nebo epilogu, vše, co je potřeba udělat je pro vás od samého začátku pořadí za účelem použití vyhledávací tabulky nebo podobné zařízení k určení, jak dlouho se oprava odpovídá operační kód je.
 
@@ -382,7 +382,7 @@ Krok #|Nastavení příznaku|# instrukcí|Operační kód|Uvolnění kódu
 5d|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz < =. 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
 5e|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz >. 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
-\*: Pokud **CR** == 01 a **RegI** je číslo liché, krok 2 a poslední save_rep v kroku 1 jsou sloučeny do jednoho save_regp.
+\* Pokud **CR** == 01 a **RegI** je číslo liché, krok 2 a poslední save_rep v kroku 1 jsou sloučeny do jednoho save_regp.
 
 \*\* Pokud **RegI** == **CR** == 0, a **RegF** ! = 0, první stp pro plovoucí desetinné čárky snížením.
 

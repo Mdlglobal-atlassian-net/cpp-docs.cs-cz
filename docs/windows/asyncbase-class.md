@@ -25,7 +25,6 @@ f1_keywords:
 - async/Microsoft::WRL::AsyncBase::put_Id
 - async/Microsoft::WRL::AsyncBase::PutOnComplete
 - async/Microsoft::WRL::AsyncBase::PutOnProgress
-- async/Microsoft::WRL::AsyncBase::Start
 - async/Microsoft::WRL::AsyncBase::TryTransitionToCompleted
 - async/Microsoft::WRL::AsyncBase::TryTransitionToError
 helpviewer_keywords:
@@ -51,16 +50,15 @@ helpviewer_keywords:
 - Microsoft::WRL::AsyncBase::put_Id method
 - Microsoft::WRL::AsyncBase::PutOnComplete method
 - Microsoft::WRL::AsyncBase::PutOnProgress method
-- Microsoft::WRL::AsyncBase::Start method
 - Microsoft::WRL::AsyncBase::TryTransitionToCompleted method
 - Microsoft::WRL::AsyncBase::TryTransitionToError method
 ms.assetid: 64259b9b-f427-4ffd-a611-e7a2f82362b2
-ms.openlocfilehash: 71839fbea4300560dbf2b9617fe7b8d3864676b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19c4779dbd4d39260d5fe03967e8c0a530a75026
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599665"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556917"
 ---
 # <a name="asyncbase-class"></a>AsyncBase – třída
 
@@ -116,7 +114,7 @@ Název                                         | Popis
 [Asyncbase::put_id –](#put-id)                 | Nastaví popisovač asynchronní operace.
 [Asyncbase::putoncomplete –](#putoncomplete)   | Nastaví adresu obslužné rutiny události dokončení se zadanou hodnotou.
 [Asyncbase::putonprogress –](#putonprogress)   | Nastaví adresu průběh obslužné rutiny události se zadanou hodnotou.
-[Asyncbase::Start –](#start)                   | Spustí asynchronní operaci.
+
 
 ### <a name="protected-methods"></a>Chráněné metody
 
@@ -130,6 +128,7 @@ Název                                                                         |
 [Asyncbase::oncancel –](#oncancel)                                             | Při přepisu v odvozené třídě, zruší asynchronní operace.
 [Asyncbase::onclose –](#onclose)                                               | Při přepisu v odvozené třídě, ukončí asynchronní operaci.
 [Asyncbase::ONSTART –](#onstart)                                               | Při přepisu v odvozené třídě, spustí asynchronní operaci.
+[Asyncbase::Start –](#start)                                                   | Spustí asynchronní operaci.
 [Asyncbase::trytransitiontocompleted –](#trytransitiontocompleted)             | Určuje, zda aktuální asynchronní operace byla dokončena.
 [Asyncbase::trytransitiontoerror –](#trytransitiontoerror)                     | Určuje, zda kód zadanou chybovou můžete upravit stavu došlo k vnitřní chybě.
 
@@ -504,7 +503,7 @@ S_OK Pokud operaci spuštění nebo je již spuštěna; v opačném případě E
 
 ### <a name="remarks"></a>Poznámky
 
-`Start()` je výchozí implementace `IAsyncInfo::Start`, a nemá žádné samotnou práci. Ve skutečnosti spuštění asynchronní operace, přepsat `OnStart()` čistě virtuální metody.
+`Start()` je chráněný, který není externě viditelný, protože asynchronní operace "horkými start" před vrácením řízení volajícímu metody.
 
 ## <a name="trytransitiontocompleted"></a>Asyncbase::trytransitiontocompleted –
 

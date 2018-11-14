@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 1025b3469611ee1e880a2abd5a4e553a1317a0d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1070a330e40c0bf73f3713783b3f126d0848cbc
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570713"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525519"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>2003 – 2015 historie změn Visual C++
 
@@ -64,19 +64,19 @@ Kromě toho probíhající vylepšení shoda s kompilátorem prostředí můžet
 
    Funkce, které byly přesunuty:
 
-   - dvojité abs(float) abs(double) a plovoucí desetinnou čárkou
+  - dvojité abs(float) abs(double) a plovoucí desetinnou čárkou
 
-   - Double pow (double, int), float pow (float, float), float pow (float, int), long dvakrát pow (long double, long double), long dvakrát pow (long double, int).
+  - Double pow (double, int), float pow (float, float), float pow (float, int), long dvakrát pow (long double, long double), long dvakrát pow (long double, int).
 
-   - plovoucí desetinnou čárkou a long double verze s plovoucí desetinnou čárkou bodu funkce acos, acosh –, asin, asinh –, atan, atanh –, atan2, cbrt –, ceil –, copysign –, cos, cosh, ERF –, erfc, exp, exp2 –, expm1 –, fabs –, fdim –, floor, fma, fmax, fmin, fmod, frexp –, hypot –, ilogb –, ldexp –, lgamma –, llrint, llround –, protokolu , log10, log1p –, log2, lrint, lround –, modf –, nearbyint –, nextafter –, nexttoward, zbývající, remquo –, tisknout, kruhové, scalbln, scalbn –, sin, sinh, sqrt, tan, tanh, tgamma –, TRUNC –
+  - plovoucí desetinnou čárkou a long double verze s plovoucí desetinnou čárkou bodu funkce acos, acosh –, asin, asinh –, atan, atanh –, atan2, cbrt –, ceil –, copysign –, cos, cosh, ERF –, erfc, exp, exp2 –, expm1 –, fabs –, fdim –, floor, fma, fmax, fmin, fmod, frexp –, hypot –, ilogb –, ldexp –, lgamma –, llrint, llround –, protokolu , log10, log1p –, log2, lrint, lround –, modf –, nearbyint –, nextafter –, nexttoward, zbývající, remquo –, tisknout, kruhové, scalbln, scalbn –, sin, sinh, sqrt, tan, tanh, tgamma –, TRUNC –
 
-   Pokud máte kód, že bod používá abs s plovoucí typ, který obsahuje jenom hlaviček math.h, s plovoucí desetinnou čárkou verze se už již nebudou dostupné, takže bod argument volání i s plovoucí, teď se překládá na abs(int). Výsledkem chyba:
+  Pokud máte kód, že bod používá abs s plovoucí typ, který obsahuje jenom hlaviček math.h, s plovoucí desetinnou čárkou verze se už již nebudou dostupné, takže bod argument volání i s plovoucí, teď se překládá na abs(int). Výsledkem chyba:
 
     ```Output
     warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
     ```
 
-   Oprava pro toto upozornění je nahraďte volání `abs` s plovoucí verze bodu `abs`, jako `fabs` double argument nebo `fabsf` pro argument typu float, nebo zahrnout cmath – hlavička a pokračovat v používání `abs`.
+  Oprava pro toto upozornění je nahraďte volání `abs` s plovoucí verze bodu `abs`, jako `fabs` double argument nebo `fabsf` pro argument typu float, nebo zahrnout cmath – hlavička a pokračovat v používání `abs`.
 
 - **Shoda s plovoucí desetinnou čárkou bodu**
 
@@ -116,7 +116,7 @@ Kromě toho probíhající vylepšení shoda s kompilátorem prostředí můžet
 
    Chcete-li přidat tuto knihovnu pro váš vstup linkeru v integrovaném vývojovém prostředí, otevřete kontextovou nabídku pro uzel projektu, zvolte **vlastnosti**, pak v **vlastnosti projektu** dialogového okna zvolte **Linkeru**a upravit **vstup Linkeru** přidat `legacy_stdio_definitions.lib` do seznamu středníkem-colon oddělených čárkami.
 
-   Pokud váš projekt odkazuje statických knihoven, které byly zkompilovány pomocí verze sady Visual Studio starší než 2015, linker hlásit nevyřešené externí symbol. K těmto chybám může odkazovat na interní stdio definice pro _iob –, _iob_func nebo související importy pro určité funkce stdio ve formě\_*. Společnost Microsoft doporučuje, když upgradujete projekt překompilovat všechny statické knihovny se zmírněními hrozeb nejnovější verzi kompilátoru jazyka C++ a knihoven. Pokud je knihovna knihovny třetích stran pro zdroj, který není k dispozici, by měla buď vyžádat aktualizované binární od třetích stran nebo zapouzdření využití této knihovny do samostatných knihovny DLL, které při kompilaci s starší verzi kompilátoru a knihovny .
+   Pokud váš projekt odkazuje statických knihoven, které byly zkompilovány pomocí verze sady Visual Studio starší než 2015, linker hlásit nevyřešené externí symbol. K těmto chybám může odkazovat na interní stdio definice pro `_iob`, `_iob_func`, nebo související importy pro určité funkce stdio ve formě _imp_\*. Společnost Microsoft doporučuje, když upgradujete projekt překompilovat všechny statické knihovny se zmírněními hrozeb nejnovější verzi kompilátoru jazyka C++ a knihoven. Pokud je knihovna knihovny třetích stran pro zdroj, který není k dispozici, by měla buď vyžádat aktualizované binární od třetích stran nebo zapouzdření využití této knihovny do samostatných knihovny DLL, které při kompilaci s starší verzi kompilátoru a knihovny .
 
     > [!WARNING]
     > Pokud vytváříte propojení s Windows SDK 8.1 nebo starší, může dojít k těmto chybám nerozpoznaný externí symbol. V takovém případě by měla vyřešit chybu tak, že přidáte legacy_stdio_definitions.lib linkeru, zadejte, jak je popsáno výše.
@@ -139,27 +139,27 @@ Kromě toho probíhající vylepšení shoda s kompilátorem prostředí můžet
 
    V předchozích verzích nekonečno a hodnoty NaN by být formátována pomocí sadu řetězců sentinel konkrétní MSVC.
 
-   - Nekonečno: 1. #INF
+  - Nekonečno: 1. #INF
 
-   - Tichý NaN: 1. #QNAN
+  - Tichý NaN: 1. #QNAN
 
-   - Signalizace NaN: 1. #SNAN
+  - Signalizace NaN: 1. #SNAN
 
-   - Neomezené NaN: 1. #IND
+  - Neomezené NaN: 1. #IND
 
-   Některé z těchto může mít předponu znakem a může mít formátována mírně liší v závislosti na šířku pole a přesnosti (někdy s neobvyklou účinky, například `printf("%.2f\n", INFINITY)` vytiskne 1. #J vzhledem k tomu, #INF by "zaokrouhlované" s přesností na 2 číslice). C99 zavedeny nové požadavky toho, jak se má být formátováno nekonečno a hodnoty NaN. Implementace MSVC nyní splňuje tyto požadavky. Nové řetězce jsou následující:
+  Některé z těchto může mít předponu znakem a může mít formátována mírně liší v závislosti na šířku pole a přesnosti (někdy s neobvyklou účinky, například `printf("%.2f\n", INFINITY)` vytiskne 1. #J vzhledem k tomu, #INF by "zaokrouhlované" s přesností na 2 číslice). C99 zavedeny nové požadavky toho, jak se má být formátováno nekonečno a hodnoty NaN. Implementace MSVC nyní splňuje tyto požadavky. Nové řetězce jsou následující:
 
-   - Nekonečno: inf
+  - Nekonečno: inf
 
-   - Quiet NaN: nan
+  - Quiet NaN: nan
 
-   - Signalizace NaN: nan(snan)
+  - Signalizace NaN: nan(snan)
 
-   - Neomezené NaN:nan(ind)
+  - Neomezené NaN:nan(ind)
 
-   Některé z těchto může začínat znakem. Pokud je specifikátor formátu kapitálových používali (%F místo %f) řetězce jsou vypsány velkými písmeny (INF místo inf), jako je povinný.
+  Některé z těchto může začínat znakem. Pokud je specifikátor formátu kapitálových používali (%F místo %f) řetězce jsou vypsány velkými písmeny (INF místo inf), jako je povinný.
 
-   [Scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) funkce se upravila tak analyzovat tyto nové řetězce, takže bude mít odezvu prostřednictvím printf a scanf, tyto řetězce.
+  [Scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) funkce se upravila tak analyzovat tyto nové řetězce, takže bude mít odezvu prostřednictvím printf a scanf, tyto řetězce.
 
 - **Plovoucí desetinná čárka, formátování a analýzu**
 
@@ -171,8 +171,16 @@ Kromě toho probíhající vylepšení shoda s kompilátorem prostředí můžet
     printf("%.0f\n", pow(2.0, 80))
     ```
 
+   Staré výstup:
+
     ```Output
-        Old:  1208925819614629200000000    New:  1208925819614629174706176
+    1208925819614629200000000
+    ```
+
+   Nový výstup:
+
+    ```Output
+    1208925819614629174706176
     ```
 
    Staré analýzy algoritmy byste měli považovat jenom až 17 platných číslic ze vstupního řetězce a by zrušit zbývající číslice. To stačí pro generovat velmi aproximace Hodnota reprezentovaná tímto řetězcem a výsledkem je obvykle velmi blízko správně zakulacený výsledek. Novou implementaci bere v úvahu všechny číslice k dispozici a správně zakulacený výsledek pro všechny vstupy (až 768 číslic). Kromě toho tyto funkce nyní respektují režim (dát řídit přes fesetround).  Toto je potenciálně zásadní chování změnit, protože tyto funkce může být výstup odlišné výsledky. Nové výsledky jsou vždy více než starých výsledků.
@@ -641,7 +649,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
    Předpokládejme například, že váš kód definuje, jak **umístění nového** a **umístění operátoru delete**:
 
     ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
     ```
 
@@ -2576,7 +2584,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     };
     ```
 
-   Nejprve vytvořte soubor *.idl; vc140.idl vygeneruje soubor lze použít k získání \*obsahující rozhraní a poznámky souboru IDL.
+   Nejprve vytvořte soubor \*.idl; vc140\*.idl vygeneruje soubor lze použít k získání obsahující rozhraní a poznámky souboru IDL.
 
    V dalším kroku přidejte krok MIDL vašeho sestavení, abyste měli jistotu, že jsou generovány definice rozhraní C++.
 

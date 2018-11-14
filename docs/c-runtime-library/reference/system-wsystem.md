@@ -29,12 +29,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: fa034b164a188b1b5b7ccd8a4ca71ab7ac754fa1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 46c4949fcc8cfbe4a3477e66b57d8fc6fc97ed73
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624663"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328653"
 ---
 # <a name="system-wsystem"></a>system, _wsystem
 
@@ -65,10 +65,10 @@ Pokud *příkaz* je **NULL** a překladač příkazů nenajde, vrátí nenulovou
 
 |||
 |-|-|
-**E2BIG**|Seznam argumentů (což je závislé na systému) je moc velká.
-**ENOENT**|Překladač příkazů nelze nalézt.
-**ENOEXEC**|Soubor překladač příkazů nelze provést, protože formát není platný.
-**ENOMEM**|Není k dispozici ke spuštění příkazu; není dostatek paměti nebo dostupná paměť byla poškozena; nebo není platný blok existuje, což znamená, že proces, který provádí volání nepřidělil se správně.
+| **E2BIG** | Seznam argumentů (což je závislé na systému) je moc velká. |
+| **ENOENT** | Překladač příkazů nelze nalézt. |
+| **ENOEXEC** | Soubor překladač příkazů nelze provést, protože formát není platný. |
+| **ENOMEM** | Není k dispozici ke spuštění příkazu; není dostatek paměti nebo dostupná paměť byla poškozena; nebo není platný blok existuje, což znamená, že proces, který provádí volání nepřidělil se správně. |
 
 Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pro další informace o těchto návratové kódy.
 

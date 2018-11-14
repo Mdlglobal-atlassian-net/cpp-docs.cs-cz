@@ -4,21 +4,22 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - XML documentation, delimiters
 ms.assetid: debfbdd9-63fa-4c58-a18e-a4d203d241d7
-ms.openlocfilehash: ecc6018ef22b9c6b0ac64e379365555fb6b3d12f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 709c17138032a98ec2f8ff978d9b8364241989b1
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589433"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326475"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Oddělovače pro dokumentační značky ve Visual C++
 
 Použití dokumentační značky vyžaduje oddělovače, které označují kompilátoru kde Dokumentační komentář začíná a končí.
 
 Můžete použít následující typy oddělovače se značkami dokumentace XML:
-|||
+
+| | |
 |-|-|
-|`///`  | Toto je formulář, který je uvedeno v dokumentaci příklady a používá šablony projektů Visual C++.  |
+| `///` | Toto je formulář, který je uvedeno v dokumentaci příklady a používá šablony projektů Visual C++.  |
 | `/** */`  | Jedná se o Víceřádkový oddělovače.  |
 
 Existují některé formátování při použití pravidla `/** */` oddělovače:

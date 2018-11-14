@@ -6,12 +6,12 @@ helpviewer_keywords:
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-ms.openlocfilehash: 0d3d883fa2199096d4dc880e2d8e78cff6d9830c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b406bc194735a2796f03f1e9d6cf0cf2ae2e6f86
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542555"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333283"
 ---
 # <a name="parallel-containers-and-objects"></a>Paralelní kontejnery a objekty
 
@@ -95,15 +95,19 @@ V následující tabulce jsou uvedeny běžné `concurrent_vector` metody a oper
 
 ||||
 |-|-|-|
-
-|[na](reference/concurrent-vector-class.md#at)|[end](reference/concurrent-vector-class.md#end)|[operátor&#91;&#93;](reference/concurrent-vector-class.md#operator_at)||[ Začněte](reference/concurrent-vector-class.md#begin)|[přední](reference/concurrent-vector-class.md#front)|[push_back](reference/concurrent-vector-class.md#push_back)||[ zpět](reference/concurrent-vector-class.md#back)|[grow_by –](reference/concurrent-vector-class.md#grow_by)|[rbegin –](reference/concurrent-vector-class.md#rbegin)||[ kapacita](reference/concurrent-vector-class.md#capacity)|[grow_to_at_least –](reference/concurrent-vector-class.md#grow_to_at_least)|[rend](reference/concurrent-vector-class.md#rend)||[ prázdný](reference/concurrent-vector-class.md#empty)|[max_size](reference/concurrent-vector-class.md#max_size)|[velikost](reference/concurrent-vector-class.md#size)|
+|[at](reference/concurrent-vector-class.md#at)|[ukončení](reference/concurrent-vector-class.md#end)|[– operátor&#91;&#93;](reference/concurrent-vector-class.md#operator_at)|
+|[začít](reference/concurrent-vector-class.md#begin)|[Přední](reference/concurrent-vector-class.md#front)|[push_back](reference/concurrent-vector-class.md#push_back)|
+|[Zpět](reference/concurrent-vector-class.md#back)|[grow_by –](reference/concurrent-vector-class.md#grow_by)|[rbegin –](reference/concurrent-vector-class.md#rbegin)|
+|[Kapacita](reference/concurrent-vector-class.md#capacity)|[grow_to_at_least](reference/concurrent-vector-class.md#grow_to_at_least)|[rend –](reference/concurrent-vector-class.md#rend)|
+|[prázdný](reference/concurrent-vector-class.md#empty)|[max_size](reference/concurrent-vector-class.md#max_size)|[Velikost](reference/concurrent-vector-class.md#size)|
 
 Operace, které poskytuje modul runtime pro kompatibilitu s standardní knihovny C++, například `reserve`, nejsou bezpečná pro souběžnost. V následující tabulce jsou uvedeny běžné metody a operátory, které nejsou bezpečná pro souběžnost.
 
 |||
 |-|-|
-
-|[přiřadit](reference/concurrent-vector-class.md#assign)|[rezervovat](reference/concurrent-vector-class.md#reserve)||[ Vymazat](reference/concurrent-vector-class.md#clear)|[změnit velikost](reference/concurrent-vector-class.md#resize)||[ operátor =](reference/concurrent-vector-class.md#operator_eq)|[shrink_to_fit –](reference/concurrent-vector-class.md#shrink_to_fit)|
+|[přiřazení](reference/concurrent-vector-class.md#assign)|[Rezervovat](reference/concurrent-vector-class.md#reserve)|
+|[Vymazat](reference/concurrent-vector-class.md#clear)|[Změna velikosti](reference/concurrent-vector-class.md#resize)|
+|[operátor =](reference/concurrent-vector-class.md#operator_eq)|[shrink_to_fit](reference/concurrent-vector-class.md#shrink_to_fit)|
 
 Operace, které mění hodnotu prvků existující nejsou bezpečná pro souběžnost. Například použít objekt synchronizace [reader_writer_lock –](../../parallel/concrt/reference/reader-writer-lock-class.md) objektu, který chcete synchronizovat souběžné čtení a operací zápisu na stejný datový element. Další informace o synchronizaci objektů najdete v tématu [synchronizačních datových struktur](../../parallel/concrt/synchronization-data-structures.md).
 

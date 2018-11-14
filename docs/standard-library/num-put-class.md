@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::num_put [C++], do_put
 - std::num_put [C++], put
 ms.assetid: 36c5bffc-8283-4201-8ed4-78c4d81f8a17
-ms.openlocfilehash: c6866358cde7d381ec8a703d50aeb3193bef9d5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ede0ccd85f116f300939c819ae8209435da72b7
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441857"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327327"
 ---
 # <a name="numput-class"></a>num_put – třída
 
@@ -258,7 +258,7 @@ virtual iter_type do_put(iter_type next,
 
 chová se stejně jako první, s tím rozdílem, že generuje logická výstupního pole z *val*.
 
-Logická výstupního pole má jednu z těchto dvou tvarů. Pokud **iosbase**. **příznaky** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) je **false**, členská funkce vrátí `do_put`(_ *Další*, \_ *Iosbase*, \_ *vyplnit*, ( **dlouhé**) `val`), které obvykle vytváří generovaného sekvenčního buď 0 (pro **false**) nebo 1 (pro **true**). V opačném případě generovaného sekvenčního je buď **fac**. [falsename –](../standard-library/numpunct-class.md#falsename) `)` (pro **false**), nebo **fac**. [truename –](../standard-library/numpunct-class.md#truename) (pro **true**).
+Logická výstupního pole má jednu z těchto dvou tvarů. Pokud `iosbase.flags & ios_base::` [boolalpha](../standard-library/ios-functions.md#boolalpha) je **false**, členská funkce vrátí `do_put(_Next, _Iosbase, _Fill, (long)val)`, což obvykle vytváří generovaného sekvenčního buď 0 (pro **false**) nebo 1 (pro **true**). V opačném případě generovaného sekvenčního je buď *fac*.[ falsename –](../standard-library/numpunct-class.md#falsename) (pro **false**), nebo *fac*.[ truename –](../standard-library/numpunct-class.md#truename) (pro **true**).
 
 Sedmý chráněná virtuální členská funkce:
 

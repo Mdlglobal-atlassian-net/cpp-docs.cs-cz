@@ -106,12 +106,12 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-ms.openlocfilehash: 316012479ec374cc5f40061384475008fe04e331
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9272cd4596a54a38e1ba21ac92b038c2da0d207
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637278"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331201"
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 
@@ -228,17 +228,17 @@ Tato funkce ověřuje své parametry. Pokud *cesta* nebo *vyrovnávací paměti*
 
 |Pole||
 |-|-|
-**st_gid**|Číselný identifikátor skupiny, která je vlastníkem souboru (specifické pro systém UNIX) Toto pole bude vždy nula v systémech Windows. Přesměrované soubor je klasifikován jako soubor Windows.
-**st_atime**|Čas posledního přístupu k souboru. Diskové jednotky naformátované platné v systému souborů NTFS, ale ne v systému souborů FAT.
-**st_ctime**|Čas vytvoření souboru. Diskové jednotky naformátované platné v systému souborů NTFS, ale ne v systému souborů FAT.
-**st_dev**|Číslo disku obsahující soubor jednotky (stejné jako **st_rdev**).
-**st_ino**|Počet uzlu informace ( **uzlů**) pro soubor (specifické pro systém UNIX). V systémech souborů UNIX **uzlů** popisuje data souborů a časová razítka, oprávnění a obsah. Pokud jsou soubory pevných – vzájemně propojený, sdílejí stejné **uzlů**. **Uzlů**a proto **st_ino**, nemá žádný význam v systémech souborů FAT, HPFS nebo systému souborů NTFS.
-**st_mode –**|Bitová maska informace režim souboru. **_S_IFDIR** bit nastaven, pokud *cesta* Určuje adresář; **_S_IFREG** bit nastaven, pokud *cesta* Určuje běžný soubor nebo zařízení. Podle režimu oprávnění k souboru; jsou nastaveny bity pro čtení a zápis uživatele uživatel spustit bity jsou nastaveny podle příponu názvu souboru.
-**st_mtime**|Čas poslední změny souboru.
-**st_nlink**|Vždy 1 v systémech souborů než NTFS.
-**st_rdev**|Číslo disku obsahující soubor jednotky (stejné jako **st_dev**).
-**st_size**|Velikost souboru v bajtech; 64bitové celé číslo pro změny s **i64** příponu.
-**st_uid**|Číselný identifikátor uživatele, který je vlastníkem souboru (specifické pro systém UNIX). Toto pole bude vždy nula v systémech Windows. Přesměrované soubor je klasifikován jako soubor Windows.
+| **st_gid** | Číselný identifikátor skupiny, která je vlastníkem souboru (specifické pro systém UNIX) Toto pole bude vždy nula v systémech Windows. Přesměrované soubor je klasifikován jako soubor Windows. |
+| **st_atime** | Čas posledního přístupu k souboru. Diskové jednotky naformátované platné v systému souborů NTFS, ale ne v systému souborů FAT. |
+| **st_ctime** | Čas vytvoření souboru. Diskové jednotky naformátované platné v systému souborů NTFS, ale ne v systému souborů FAT. |
+| **st_dev** | Číslo disku obsahující soubor jednotky (stejné jako **st_rdev**). |
+| **st_ino** | Počet uzlu informace ( **uzlů**) pro soubor (specifické pro systém UNIX). V systémech souborů UNIX **uzlů** popisuje data souborů a časová razítka, oprávnění a obsah. Pokud jsou soubory pevných – vzájemně propojený, sdílejí stejné **uzlů**. **Uzlů**a proto **st_ino**, nemá žádný význam v systémech souborů FAT, HPFS nebo systému souborů NTFS. |
+| **st_mode –** | Bitová maska informace režim souboru. **_S_IFDIR** bit nastaven, pokud *cesta* Určuje adresář; **_S_IFREG** bit nastaven, pokud *cesta* Určuje běžný soubor nebo zařízení. Podle režimu oprávnění k souboru; jsou nastaveny bity pro čtení a zápis uživatele uživatel spustit bity jsou nastaveny podle příponu názvu souboru. |
+| **st_mtime** | Čas poslední změny souboru. |
+| **st_nlink** | Vždy 1 v systémech souborů než NTFS. |
+| **st_rdev** | Číslo disku obsahující soubor jednotky (stejné jako **st_dev**). |
+| **st_size** | Velikost souboru v bajtech; 64bitové celé číslo pro změny s **i64** příponu. |
+| **st_uid** | Číselný identifikátor uživatele, který je vlastníkem souboru (specifické pro systém UNIX). Toto pole bude vždy nula v systémech Windows. Přesměrované soubor je klasifikován jako soubor Windows. |
 
 Pokud *cesta* odkazuje na zařízení, **st_size**, různá pole čas **st_dev**, a **st_rdev** pole **_stat –**  struktura nemají smysl. Protože STAT. H používá [_dev_t](../../c-runtime-library/standard-types.md) typ, který je definovaný v typy. H, musí obsahovat typy. H před STAT. H ve vašem kódu.
 

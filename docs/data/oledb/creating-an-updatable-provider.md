@@ -6,12 +6,12 @@ helpviewer_keywords:
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-ms.openlocfilehash: 39e0fffa10af560537a932d503946ec2469bef5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04db02bc8ad4db0c669e07a0bcf1b60ffa22e8ad
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570583"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521398"
 ---
 # <a name="creating-an-updatable-provider"></a>Vytvoření aktualizovatelného zprostředkovatele
 
@@ -40,7 +40,7 @@ Všimněte si, že `IRowsetUpdateImpl` je odvozena z `IRowsetChangeImpl`. Proto 
 
 1. Ve své třídě řádků dědit z `IRowsetChangeImpl` nebo `IRowsetUpdateImpl`. Tyto třídy poskytují vhodné rozhraní pro Změna úložiště dat:
 
-     **Přidání IRowsetChange**
+   **Přidání IRowsetChange**
 
    Přidat `IRowsetChangeImpl` k použití této formy řetězec dědičnosti:
 
@@ -50,7 +50,7 @@ Všimněte si, že `IRowsetUpdateImpl` je odvozena z `IRowsetChangeImpl`. Proto 
 
    Přidejte také `COM_INTERFACE_ENTRY(IRowsetChange)` k `BEGIN_COM_MAP` oddílu ve své třídě sady řádků.
 
-     **Přidání IRowsetUpdate**
+   **Přidání IRowsetUpdate**
 
    Přidat `IRowsetUpdate` k použití této formy řetězec dědičnosti:
 
@@ -58,22 +58,27 @@ Všimněte si, že `IRowsetUpdateImpl` je odvozena z `IRowsetChangeImpl`. Proto 
     IRowsetUpdateImpl< rowset-name, storage>
     ```
 
-    > [!NOTE]
-    > Měli byste odebrat `IRowsetChangeImpl` řádek z vašeho řetězu dědičnosti. Jedinou výjimkou je to výše zmíněné musí obsahovat kód `IRowsetChangeImpl`.
+   > [!NOTE]
+   > Měli byste odebrat `IRowsetChangeImpl` řádek z vašeho řetězu dědičnosti. Jedinou výjimkou je to výše zmíněné musí obsahovat kód `IRowsetChangeImpl`.
 
 1. Přidejte následující do mapy modelu COM (`BEGIN_COM_MAP ... END_COM_MAP`):
 
-    |Pokud se rozhodnete implementovat|Přidejte do mapy modelu COM.|
-    |----------------------|--------------------|
-    |`IRowsetChangeImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)`|
-    |`IRowsetUpdateImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)COM_INTERFACE_ENTRY(IRowsetUpdate)`|
+   |  Pokud se rozhodnete implementovat   |           Přidejte do mapy modelu COM.             |
+   |---------------------|--------------------------------------|
+   | `IRowsetChangeImpl` | `COM_INTERFACE_ENTRY(IRowsetChange)` |
+   | `IRowsetUpdateImpl` | `COM_INTERFACE_ENTRY(IRowsetUpdate)` |
+
+   | Pokud se rozhodnete implementovat | Přidejte do mapy sady vlastností |
+   |----------------------|-----------------------------|
+   | `IRowsetChangeImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)` |
+   | `IRowsetUpdateImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)` |
 
 1. V příkazu, přidejte následující mapy set vlastnosti (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`):
 
-    |Pokud se rozhodnete implementovat|Přidejte do mapy sady vlastností|
-    |----------------------|-----------------------------|
-    |`IRowsetChangeImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`|
-    |`IRowsetUpdateImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)`|
+   |  Pokud se rozhodnete implementovat   |                                             Přidejte do mapy sady vlastností                                              |
+   |---------------------|------------------------------------------------------------------------------------------------------------------|
+   | `IRowsetChangeImpl` |                            `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`                             |
+   | `IRowsetUpdateImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)` |
 
 1. V mapě sadu vlastností měli byste také zahrnout všechna následující nastavení, jak se objeví pod:
 
@@ -97,41 +102,41 @@ Všimněte si, že `IRowsetUpdateImpl` je odvozena z `IRowsetChangeImpl`. Proto 
 
    Můžete najít hodnoty použité v těchto volání makra vyhledáváním v Atldb.h identifikátory vlastnosti a hodnoty (Pokud Atldb.h se liší v online dokumentaci ke službě, nahrazuje Atldb.h dokumentaci).
 
-    > [!NOTE]
-    > Mnoho `VARIANT_FALSE` a `VARIANT_TRUE` vyžaduje nastavení šablony technologie OLE DB; specifikaci OLE DB uvádí, že můžou být r/w, ale šablony technologie OLE DB podporuje pouze jednu hodnotu.
+   > [!NOTE]
+   > Mnoho `VARIANT_FALSE` a `VARIANT_TRUE` vyžaduje nastavení šablony technologie OLE DB; specifikaci OLE DB uvádí, že můžou být r/w, ale šablony technologie OLE DB podporuje pouze jednu hodnotu.
 
-     **Pokud se rozhodnete implementovat IRowsetChangeImpl**
+   **Pokud se rozhodnete implementovat IRowsetChangeImpl**
 
    Pokud se rozhodnete implementovat `IRowsetChangeImpl`, musíte nastavit následující vlastnosti ve zprostředkovateli služby. Tyto vlastnosti se primárně používají k žádosti rozhraní prostřednictvím `ICommandProperties::SetProperties`.
 
-    - `DBPROP_IRowsetChange`: Nastavení tomto automaticky nastaví `DBPROP_IRowsetChange`.
+   - `DBPROP_IRowsetChange`: Nastavení tomto automaticky nastaví `DBPROP_IRowsetChange`.
 
-    - `DBPROP_UPDATABILITY`: Bitová maska zadání podporovaných metod na `IRowsetChange`: `SetData`, `DeleteRows`, nebo `InsertRow`.
+   - `DBPROP_UPDATABILITY`: Bitová maska zadání podporovaných metod na `IRowsetChange`: `SetData`, `DeleteRows`, nebo `InsertRow`.
 
-    - `DBPROP_CHANGEINSERTEDROWS`: Příjemce může volat `IRowsetChange::DeleteRows` nebo `SetData` nově vložených řádků.
+   - `DBPROP_CHANGEINSERTEDROWS`: Příjemce může volat `IRowsetChange::DeleteRows` nebo `SetData` nově vložených řádků.
 
-    - `DBPROP_IMMOBILEROWS`: Sada řádků nebude pořadí vložené nebo aktualizované řádky.
+   - `DBPROP_IMMOBILEROWS`: Sada řádků nebude pořadí vložené nebo aktualizované řádky.
 
-     **Pokud se rozhodnete implementovat IRowsetUpdateImpl**
+   **Pokud se rozhodnete implementovat IRowsetUpdateImpl**
 
    Pokud se rozhodnete implementovat `IRowsetUpdateImpl`, musíte nastavit následující vlastnosti ve zprostředkovateli služby, navíc k nastavením vlastností pro `IRowsetChangeImpl` výše uvedených:
 
-    - `DBPROP_IRowsetUpdate`.
+   - `DBPROP_IRowsetUpdate`.
 
-    - `DBPROP_OWNINSERT`: Musí být a VARIANT_TRUE READ_ONLY.
+   - `DBPROP_OWNINSERT`: Musí být a VARIANT_TRUE READ_ONLY.
 
-    - `DBPROP_OWNUPDATEDELETE`: Musí být a VARIANT_TRUE READ_ONLY.
+   - `DBPROP_OWNUPDATEDELETE`: Musí být a VARIANT_TRUE READ_ONLY.
 
-    - `DBPROP_OTHERINSERT`: Musí být a VARIANT_TRUE READ_ONLY.
+   - `DBPROP_OTHERINSERT`: Musí být a VARIANT_TRUE READ_ONLY.
 
-    - `DBPROP_OTHERUPDATEDELETE`: Musí být a VARIANT_TRUE READ_ONLY.
+   - `DBPROP_OTHERUPDATEDELETE`: Musí být a VARIANT_TRUE READ_ONLY.
 
-    - `DBPROP_REMOVEDELETED`: Musí být a VARIANT_TRUE READ_ONLY.
+   - `DBPROP_REMOVEDELETED`: Musí být a VARIANT_TRUE READ_ONLY.
 
-    - `DBPROP_MAXPENDINGROWS`.
+   - `DBPROP_MAXPENDINGROWS`.
 
-        > [!NOTE]
-        > Pokud podporujete oznámení, může být také některé také další vlastnosti; naleznete v části `IRowsetNotifyCP` pro tento seznam.
+   > [!NOTE]
+   > Pokud podporujete oznámení, může být také některé také další vlastnosti; naleznete v části `IRowsetNotifyCP` pro tento seznam.
 
 ##  <a name="vchowwritingtothedatasource"></a> Zápis do zdroje dat.
 

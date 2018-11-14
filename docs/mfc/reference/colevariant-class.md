@@ -20,16 +20,16 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: 528b46f1b370f8679b86e3d734712f936a153b9c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b37105cf1afdcf966176a2e2615f9c141022088d
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624991"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520515"
 ---
 # <a name="colevariant-class"></a>COleVariant – třída
 
-Zapouzdřuje [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) datového typu.
+Zapouzdřuje [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) datového typu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -68,14 +68,14 @@ class COleVariant : public tagVARIANT
 
 ## <a name="remarks"></a>Poznámky
 
-Tento datový typ se používá v automatizace OLE. Konkrétně [DISPPARAMS](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagdispparams) struktura obsahuje ukazatel na pole typu VARIANT struktur. A `DISPPARAMS` struktura se používá k předání parametrů [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke).
+Tento datový typ se používá v automatizace OLE. Konkrétně [DISPPARAMS](/windows/desktop/api/oaidl/ns-oaidl-tagdispparams) struktura obsahuje ukazatel na pole typu VARIANT struktur. A `DISPPARAMS` struktura se používá k předání parametrů [IDispatch::Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke).
 
 > [!NOTE]
 > Tato třída je odvozena z `VARIANT` struktury. To znamená, že můžete předat `COleVariant` parametrem, který volá `VARIANT` a datové členy `VARIANT` struktury jsou dostupné datové členy `COleVariant`.
 
 Dvě třídy MFC související [COleCurrency](../../mfc/reference/colecurrency-class.md) a [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) zapouzdření variant – datové typy měny ( `VT_CY`) data a času ( `VT_DATE`). `COleVariant` Třídy je často používána ve třídách rozhraní DAO, viz tyto třídy pro typická využití této třídy, například [cdaoquerydef –](../../mfc/reference/cdaoquerydef-class.md) a [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).
 
-Další informace najdete v tématu [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [měny](/windows/desktop/api/wtypes/ns-wtypes-tagcy), [DISPPARAMS](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagdispparams), a [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) položky v sadě Windows SDK.
+Další informace najdete v tématu [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [měny](/windows/desktop/api/wtypes/ns-wtypes-tagcy), [DISPPARAMS](/windows/desktop/api/oaidl/ns-oaidl-tagdispparams), a [IDispatch::Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) položky v sadě Windows SDK.
 
 Další informace o `COleVariant` třídy a jeho použití v automatizace OLE, naleznete v tématu "Předání parametrů v OLE Automation" v článku [automatizace](../../mfc/automation.md).
 
@@ -91,7 +91,7 @@ Další informace o `COleVariant` třídy a jeho použití v automatizace OLE, n
 
 ##  <a name="attach"></a>  COleVariant::Attach
 
-Voláním této funkce se připojit daný [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) objektů na aktuální `COleVariant` objektu.
+Voláním této funkce se připojit daný [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) objektů na aktuální `COleVariant` objektu.
 
 ```
 void Attach(VARIANT& varSrc);
@@ -106,7 +106,7 @@ Existující `VARIANT` objektu, který chcete připojit k aktuální `COleVarian
 
 Tato funkce nastaví VARTYPE z *varSrc* VT_EMPTY.
 
-Další informace najdete v tématu [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) a [VARENUM](/windows/desktop/api/wtypes/ne-wtypes-varenum) položky v sadě Windows SDK.
+Další informace najdete v tématu [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) a [VARENUM](/windows/desktop/api/wtypes/ne-wtypes-varenum) položky v sadě Windows SDK.
 
 ##  <a name="colevariant"></a>  COleVariant::COleVariant
 
@@ -222,11 +222,11 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 VARTYPE to `COleVariant` objektu.
 
 *pSrc*<br/>
-Ukazatel [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) objekt k převodu. Pokud je tato hodnota NULL, to `COleVariant` objekt se používá jako zdroj pro převod.
+Ukazatel [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) objekt k převodu. Pokud je tato hodnota NULL, to `COleVariant` objekt se používá jako zdroj pro převod.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [VARENUM](/windows/desktop/api/wtypes/ne-wtypes-varenum), a [VariantChangeType](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantchangetype) položky v sadě Windows SDK.
+Další informace najdete v tématu [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [VARENUM](/windows/desktop/api/wtypes/ne-wtypes-varenum), a [VariantChangeType](/windows/desktop/api/oleauto/nf-oleauto-variantchangetype) položky v sadě Windows SDK.
 
 ##  <a name="clear"></a>  COleVariant::Clear
 
@@ -244,7 +244,7 @@ Další informace najdete v tématu `VARIANT`, VARTYPE, a `VariantClear` položk
 
 ##  <a name="detach"></a>  COleVariant::Detach
 
-Odpojí základní [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) objektu z tohoto `COleVariant` objektu.
+Odpojí základní [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) objektu z tohoto `COleVariant` objektu.
 
 ```
 VARIANT Detach();
@@ -257,7 +257,7 @@ Tato funkce nastaví VARTYPE to `COleVariant` objekt VT_EMPTY.
 > [!NOTE]
 >  Po volání `Detach`, je odpovědností volajícího k volání `VariantClear` na výslednou `VARIANT` struktury.
 
-Další informace najdete v tématu [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [VARENUM](/windows/desktop/api/wtypes/ne-wtypes-varenum), a [VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear) položky v sadě Windows SDK.
+Další informace najdete v tématu [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [VARENUM](/windows/desktop/api/wtypes/ne-wtypes-varenum), a [VariantClear](/windows/desktop/api/oleauto/nf-oleauto-variantclear) položky v sadě Windows SDK.
 
 ##  <a name="getbytearrayfromvariantarray"></a>  COleVariant::GetByteArrayFromVariantArray
 
@@ -344,7 +344,7 @@ Následuje stručný popis jednotlivých operátorů:
 
 - **operátor = (** *lbSrc* **)** kopie [CLongBinary](../../mfc/reference/clongbinary-class.md) objektu do tohoto `COleVariant` objektu.
 
-Další informace najdete v tématu [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) a [VARENUM](/windows/desktop/api/wtypes/ne-wtypes-varenum) položky v sadě Windows SDK.
+Další informace najdete v tématu [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) a [VARENUM](/windows/desktop/api/wtypes/ne-wtypes-varenum) položky v sadě Windows SDK.
 
 ##  <a name="operator_eq_eq"></a>  COleVariant::operator ==
 

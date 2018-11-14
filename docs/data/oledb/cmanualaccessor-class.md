@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: d6a910f53d15e637ead31235380b27fe608a792c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3d4a1a6f4680579adafec7c1fcf5f4372f9918e
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470314"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556709"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor – třída
 
@@ -84,7 +84,7 @@ void AddBindEntry(DBORDINAL nOrdinal,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [DBBINDING](/previous-versions/windows/desktop/ms716845) v *referenční informace pro OLE DB programátory*.
+Zobrazit [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 *nOrdinal*<br/>
 [in] Číslo sloupce.
@@ -125,7 +125,7 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [DBBINDING](/previous-versions/windows/desktop/ms716845) v *referenční informace pro OLE DB programátory*.
+Zobrazit [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 *nOrdinal*<br/>
 [in] Počet parametrů.
@@ -159,8 +159,8 @@ Přiděluje paměť pro sloupec struktury vazby a inicializuje sloupec datové �
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT CreateAccessor(int nBindEntries, 
-  void* pBuffer, 
+HRESULT CreateAccessor(int nBindEntries,
+  void* pBuffer,
    DBLENGTH nBufferSize) throw();
 ```
 
@@ -190,8 +190,8 @@ Přiděluje paměť pro parametr vazby struktury a inicializuje parametry datov�
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT CreateParameterAccessor(int nBindEntries, 
-   void* pBuffer, 
+HRESULT CreateParameterAccessor(int nBindEntries,
+   void* pBuffer,
    DBLENGTH nBufferSize) throw();
 ```
 

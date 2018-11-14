@@ -23,12 +23,12 @@ helpviewer_keywords:
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-ms.openlocfilehash: 33fd1cc0a618fccc4a59e5aff059d3f2cdeec8fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6312297e6daa9b4790674bd26d21812d5bee34c6
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661757"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330252"
 ---
 # <a name="tzset"></a>_tzset
 
@@ -51,11 +51,11 @@ void _tzset( void );
 
 |Parametr|Popis|
 |-|-|
-*tzn*|Třípísmenný název časového pásma, například PST. Je nutné zadat správný posun od místního času na čas UTC.
-*hh*|Rozdíl v hodinách mezi místním časem a UTC. Znaménko (+) pro kladné hodnoty volitelné.
-*mm*|Minut. Oddělená od *hh* dvojtečkou (**:**).
-*ss*|Sekundy. Oddělená od *mm* dvojtečkou (**:**).
-*dzn*|Zóna letního času tří písmen jako je například PDT. Pokud letní čas nepoužívá v oblasti, nastavit **TZ** bez hodnoty pro *dzn*. Knihovny run-time jazyka C předpokládá použita pravidla Spojených států pro implementaci výpočtu letního času (DST).
+| *tzn* | Třípísmenný název časového pásma, například PST. Je nutné zadat správný posun od místního času na čas UTC. |
+| *hh* | Rozdíl v hodinách mezi místním časem a UTC. Znaménko (+) pro kladné hodnoty volitelné. |
+| *mm* | Minut. Oddělená od *hh* dvojtečkou (**:**). |
+| *ss* | Sekundy. Oddělená od *mm* dvojtečkou (**:**). |
+| *dzn* | Zóna letního času tří písmen jako je například PDT. Pokud letní čas nepoužívá v oblasti, nastavit **TZ** bez hodnoty pro *dzn*. Knihovny run-time jazyka C předpokládá použita pravidla Spojených států pro implementaci výpočtu letního času (DST). |
 
 > [!NOTE]
 > Dejte si pozor při výpočtu znaménka časového rozdílu. Protože časový rozdíl je posun od místního času na čas UTC (spíše než naopak), jeho znaménko může být opakem toho, co intuitivně očekáváte. Pro časová pásma před časem UTC je časový rozdíl záporný; pro ta za UTC je rozdíl kladný.

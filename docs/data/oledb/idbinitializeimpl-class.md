@@ -39,16 +39,16 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: b8411dd204eb3fbeb23508913eea6a580c655530
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d9499262d0b4167d7c3941113f49bfa23e0467b
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512685"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556761"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl – třída
 
-Poskytuje implementaci pro [IDBInitialize](/previous-versions/windows/desktop/ms713706) rozhraní.
+Poskytuje implementaci pro [IDBInitialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms713706(v=vs.85)) rozhraní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -118,7 +118,7 @@ STDMETHOD(Initialize)(void);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IDBInitialize::Initialize](/previous-versions/windows/desktop/ms718026) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IDBInitialize::Initialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms718026(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="uninitialize"></a> IDBInitializeImpl::Uninitialize
 
@@ -132,7 +132,7 @@ STDMETHOD(Uninitialize)(void);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IDBInitialize::Uninitialize](/previous-versions/windows/desktop/ms719648) v *referenční informace pro OLE DB programátory*.
+Zobrazit [IDBInitialize::Uninitialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms719648(v=vs.85)) v *referenční informace pro OLE DB programátory*.
 
 ## <a name="dwstatus"></a> IDBInitializeImpl::m_dwStatus
 

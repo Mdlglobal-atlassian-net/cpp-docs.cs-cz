@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CDocument class [MFC], space requirements
 - views [MFC], applications without
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
-ms.openlocfilehash: 5a9026ca400c3e7c403ff8f2b86f486bcde79cf8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b4da7df691837b47daa35c4b474711062d4e5c7
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569777"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523166"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternativy k architektuře dokument/zobrazení
 
@@ -48,15 +48,15 @@ Důrazně doporučujeme použít Průvodce aplikací knihovny MFC k vytváření
 
    Deklarované v `CDocument`:
 
-   - Dvě `CString` objekty.
+  - Dvě `CString` objekty.
 
-   - Tři **BOOL**s.
+  - Tři **BOOL**s.
 
-   - Jeden `CDocTemplate` ukazatele.
+  - Jeden `CDocTemplate` ukazatele.
 
-   - Jeden `CPtrList` objektu, který obsahuje seznam zobrazení dokumentu.
+  - Jeden `CPtrList` objektu, který obsahuje seznam zobrazení dokumentu.
 
-   Kromě toho dokumentů vyžaduje základní množství času vytvořit objekt dokumentu, jeho zobrazení objektů, okno rámce a objekt šablony dokumentu.
+  Kromě toho dokumentů vyžaduje základní množství času vytvořit objekt dokumentu, jeho zobrazení objektů, okno rámce a objekt šablony dokumentu.
 
 - Považovat za dokument a zobrazení postranní nepoužité řetězce. Vložte kód pro vykreslování a správy dat v okně rámce místo zobrazení. Tento přístup je blíž ke jazyka C programovací model.
 

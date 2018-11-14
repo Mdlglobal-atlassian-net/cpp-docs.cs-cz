@@ -1,6 +1,6 @@
 ---
 title: /hotpatch (Vytvořit bitovou kopii s možností provádění oprav za běhu)
-ms.date: 11/04/2016
+ms.date: 11/12/2018
 f1_keywords:
 - /hotpatch
 - VC.Project.VCCLCompilerTool.CreateHotpatchableImage
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /hotpatch compiler option [C++]
 - hotpatching
 ms.assetid: aad539b6-c053-4c78-8682-853d98327798
-ms.openlocfilehash: b304edffc024fac084338789134269745111ba00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c3431067f04ff36c63143f7d0e7483efa5376ba
+ms.sourcegitcommit: 99437d7da4528ce72cabe6b6a65a9be5dfd090f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581438"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51598792"
 ---
 # <a name="hotpatch-create-hotpatchable-image"></a>/hotpatch (Vytvořit bitovou kopii s možností provádění oprav za běhu)
 
@@ -48,10 +48,6 @@ Protože pokyny jsou vždy dva bajty nebo více v ARM architektuře a protože x
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
 - Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
-
-## <a name="guidance"></a>Doprovodné materiály
-
-Další informace o správě aktualizací najdete v tématu "Bezpečnostní pokyny pro správu aktualizací" na [ http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx ](http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx).
 
 ## <a name="see-also"></a>Viz také
 

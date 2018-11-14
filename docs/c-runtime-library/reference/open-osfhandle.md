@@ -24,12 +24,12 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: e8b7dc097c1af60894c627b8b660c4d9d81361db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f45ca46cae459c8606f88a98d03b64c40e5d5f01
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519454"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327860"
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
@@ -64,10 +64,10 @@ Tyto konstanty manifestu jsou definovány v \<fcntl.h >:
 
 |||
 |-|-|
-**\_O\_PŘIPOJENÍ**|Umístí ukazatel souboru na konec souboru před každou operaci zápisu.
-**\_O\_RDONLY**|Otevře se soubor jen pro čtení.
-**\_O\_TEXT**|Otevře soubor v textovém (přeloženém) režimu.
-**\_O\_WTEXT**|Otevře soubor v režimu Unicode (přeloženého UTF-16).
+| **\_O\_PŘIPOJENÍ** | Umístí ukazatel souboru na konec souboru před každou operaci zápisu. |
+| **\_O\_RDONLY** | Otevře se soubor jen pro čtení. |
+| **\_O\_TEXT** | Otevře soubor v textovém (přeloženém) režimu. |
+| **\_O\_WTEXT** | Otevře soubor v režimu Unicode (přeloženého UTF-16). |
 
 **_Open_osfhandle –** volání převede vlastnictví popisovač souboru Win32 do popisovače souboru. Zavřete soubor otevřít s **_open_osfhandle –**, volání [ \_zavřete](close.md). Volání také uzavřel podkladové popisovač souboru operačního systému **_Zavřít**, takže není nutné volat funkci Win32 **CloseHandle** na původní popisovač. Pokud popisovač souboru je vlastněna **souboru &#42;**  datový proud a následným voláním [fclose –](fclose-fcloseall.md) zabývat **souboru &#42;**  stream také uzavře popisovač souboru a základní popisovač. V takovém případě Nevolejte **_Zavřít** na popisovač souboru.
 

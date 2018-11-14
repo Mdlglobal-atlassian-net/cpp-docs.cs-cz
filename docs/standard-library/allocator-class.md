@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: dbae9ef71927fd5b781488258bf801cf19f4fb90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40e99901d4d4105902010a9e5b71ed3edf7d00db
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450671"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518863"
 ---
 # <a name="allocator-class"></a>allocator – třída
 
@@ -63,7 +63,7 @@ Všechny kontejnery standardní knihovny C++ mají parametr šablony, která jak
 
 Například objekt alokátoru může přidělit úložiště na privátní haldy nebo ve sdílené paměti, nebo může optimalizovat pro objekt malé nebo velké velikosti. To může také určit, prostřednictvím definice typu, který poskytne, aby prvky přístupná prostřednictvím speciální přistupující objekty, které spravovat sdílené paměti nebo provést automatické uvolňování paměti. Třídu, která přiděluje úložiště pomocí objekt alokátoru proto by měl používat tyto typy deklarace ukazatele a odkazovat na objekty, stejně jako kontejnery ve standardní knihovně C++.
 
-**(C_ ++ 98/03 jenom)** Pokud odvozujete od třídy allocator, je nutné zadat [rebind](#rebind) – struktura, jejíž `_Other` definice typu odkazuje na vaše nově odvozených tříd.
+<strong>(C ++ 98/03 jenom)</strong>  Pokud odvozujete od třídy allocator, je nutné zadat [rebind](#rebind) – struktura, jejíž `_Other` definice typu odkazuje na vaše nově odvozených tříd.
 
 Díky tomu se přidělování definuje následující typy:
 

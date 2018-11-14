@@ -49,12 +49,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-ms.openlocfilehash: 2cec64e408b326dccc7b950656d0aa699c084f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36d8b0d6480266f86136119a470fb7af5859a5b8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677783"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331240"
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 
@@ -107,14 +107,14 @@ Vrátí hodnotu 0, pokud je získat informace o stavu souboru. Návratová hodno
 
 |Pole|Význam|
 |-|-|
-**st_atime**|Čas posledního přístupu k souboru.
-**st_ctime**|Čas vytvoření souboru.
-**st_dev**|Pokud zařízení, *fd*; jinak 0.
-**st_mode –**|Bitová maska informace režim souboru. **_S_IFCHR** bit nastaven, pokud *fd* odkazuje na zařízení. **_S_IFREG** bit nastaven, pokud *fd* odkazuje na soubor běžné. Bits pro čtení a zápis nastaveny podle režimu oprávnění k souboru. **_S_IFCHR** a ostatní konstanty jsou definovány v SYS\Stat.h.
-**st_mtime**|Čas poslední změny souboru.
-**st_nlink**|Vždy 1 v systémech souborů než NTFS.
-**st_rdev**|Pokud zařízení, *fd*; jinak 0.
-**st_size**|Velikost souboru v bajtech.
+| **st_atime** | Čas posledního přístupu k souboru. |
+| **st_ctime** | Čas vytvoření souboru. |
+| **st_dev** | Pokud zařízení, *fd*; jinak 0. |
+| **st_mode –** | Bitová maska informace režim souboru. **_S_IFCHR** bit nastaven, pokud *fd* odkazuje na zařízení. **_S_IFREG** bit nastaven, pokud *fd* odkazuje na soubor běžné. Bits pro čtení a zápis nastaveny podle režimu oprávnění k souboru. **_S_IFCHR** a ostatní konstanty jsou definovány v SYS\Stat.h. |
+| **st_mtime** | Čas poslední změny souboru. |
+| **st_nlink** | Vždy 1 v systémech souborů než NTFS. |
+| **st_rdev** | Pokud zařízení, *fd*; jinak 0. |
+| **st_size** | Velikost souboru v bajtech. |
 
 Pokud *fd* odkazuje na zařízení, **st_atime**, **st_ctime**, **st_mtime**, a **st_size** pole jsou nemá význam.
 

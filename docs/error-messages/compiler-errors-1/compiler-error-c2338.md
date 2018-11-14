@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2338
 ms.assetid: 49bba575-1de4-4963-86c6-ce3226a2ba51
-ms.openlocfilehash: 4ca3feb2a71efa60229afdbf918109a5d5d59cad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a76ecaf78b117b0c1acabd9fcd50c9ae0f73b98
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539591"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332059"
 ---
 # <a name="compiler-error-c2338"></a>Chyba kompilátoru C2338
 
@@ -21,11 +21,11 @@ Tuto chybu může způsobovat `static_assert` chyby během kompilace. Poskytl se
 
 Tato chybová zpráva může být také generován externí zprostředkovatele pro kompilátor. Ve většině případů jsou tyto chyby ohlásil podle poskytovatele atributu knihovny DLL, jako je například ATLPROV. Některé běžné formuláře této zprávy zahrnout:
 
-> "*atribut*" atribut poskytovatele Atl: Chyba ATL*číslo* *zprávy*
+- "*atribut*" atribut poskytovatele Atl: Chyba ATL*číslo* *zprávy*
 
-> Nesprávné použití atributu '*atribut*.
+- Nesprávné použití atributu '*atribut*.
 
-> "*využití*': nesprávný formát pro atribut 'využití.
+- "*využití*': nesprávný formát pro atribut 'využití.
 
 Tyto chyby jsou často neopravitelné a může být následován znakem závažná chyba kompilátoru.
 

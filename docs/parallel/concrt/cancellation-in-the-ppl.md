@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-ms.openlocfilehash: b776aedb71f81d7dc27f9322ed87fd080c8819a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1a762f97cf144c39043203dbf68d927b2cbd0e4
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558722"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327418"
 ---
 # <a name="cancellation-in-the-ppl"></a>Zrušení v knihovně PPL
 
@@ -90,13 +90,12 @@ Následující příklad ukazuje první základní vzor pro zrušení úlohy. T�
 `cancel_current_task` Funkce vyvolá výjimku, proto není potřeba explicitně vrátit z aktuální smyčku nebo funkce.
 
 > [!TIP]
-
->  Alternativně můžete volat [concurrency::interruption_point](reference/concurrency-namespace-functions.md#interruption_point) místo funkce `cancel_current_task`.
+> Alternativně můžete volat [concurrency::interruption_point](reference/concurrency-namespace-functions.md#interruption_point) místo funkce `cancel_current_task`.
 
 Je potřeba volat `cancel_current_task` kdy můžete reagovat na zrušení protože přechází na zrušeném stavu úlohy. Pokud jste již v rané fázi vrátíte namísto volání metody `cancel_current_task`, operace přejde do dokončeného stavu a spouštějí se všechny pokračování založené na hodnotách.
 
 > [!CAUTION]
->  Nikdy nevyvolají `task_canceled` z vašeho kódu. Volání `cancel_current_task` místo.
+> Nikdy nevyvolají `task_canceled` z vašeho kódu. Volání `cancel_current_task` místo.
 
 Pokud úkol skončí ve zrušeném stavu [Concurrency::Task:: Get](reference/task-class.md#get) vyvolá metoda výjimku [concurrency::task_canceled](../../parallel/concrt/reference/task-canceled-class.md). (A naopak, [Concurrency::Task:: wait](reference/task-class.md#wait) vrátí [task_status::canceled](reference/concurrency-namespace-enums.md#task_group_status) a nevyvolá.) Následující příklad ukazuje toto chování pro pokračování podle úloh. Pokračování podle úloh je volána vždy, i když je předchozí úloha se zruší.
 
@@ -107,8 +106,7 @@ Proto, že pokračování založené na hodnotách zdědí token svého předcho
 [!code-cpp[concrt-task-canceled#2](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_4.cpp)]
 
 > [!CAUTION]
-
->  Pokud nelze předat token zrušení pro `task` konstruktor nebo [concurrency::create_task](reference/concurrency-namespace-functions.md#create_task) funkce, tento úkol není zrušitelný. Kromě toho je nutné předat stejný token zrušení do konstruktoru všech vnořených úloh (to znamená, úkoly, které jsou vytvořeny v těle jiný úkol) k zrušení všech úloh současně.
+> Pokud nelze předat token zrušení pro `task` konstruktor nebo [concurrency::create_task](reference/concurrency-namespace-functions.md#create_task) funkce, tento úkol není zrušitelný. Kromě toho je nutné předat stejný token zrušení do konstruktoru všech vnořených úloh (to znamená, úkoly, které jsou vytvořeny v těle jiný úkol) k zrušení všech úloh současně.
 
 Můžete chtít spustit libovolný kód, když je zrušen token zrušení. Například, pokud uživatel klikne **zrušit** tlačítko v uživatelském rozhraní na tlačítko Storno, může zakázat toto tlačítko, dokud uživatel spustí jiná operace. Následující příklad ukazuje způsob použití [concurrency::cancellation_token::register_callback](reference/cancellation-token-class.md#register_callback) metody pro registraci funkce zpětného volání, která se spustí, když je zrušen token zrušení.
 
@@ -123,11 +121,10 @@ Dokument [paralelismus](../../parallel/concrt/task-parallelism-concurrency-runti
 Těchto projevů nejsou ovlivněny chybnou úkolu (to znamená, vyvolá výjimku). V takovém případě se zrušila, pokračování založené na hodnotách; pokračování podle úloh není zrušena.
 
 > [!CAUTION]
->  Úloha, která je vytvořena v jiném úkolu (jinými slovy, vnořené úlohy) nedědí token zrušení nadřazeného úkolu. Pouze pokračování založené na hodnotách zdědí token zrušení svého předchozího úkolu.
+> Úloha, která je vytvořena v jiném úkolu (jinými slovy, vnořené úlohy) nedědí token zrušení nadřazeného úkolu. Pouze pokračování založené na hodnotách zdědí token zrušení svého předchozího úkolu.
 
 > [!TIP]
-
->  Použití [concurrency::cancellation_token:: žádný](reference/cancellation-token-class.md#none) metody při volání konstruktoru nebo funkce, která přijímá `cancellation_token` objektů a nechcete, aby operace zrušit.
+> Použití [concurrency::cancellation_token:: žádný](reference/cancellation-token-class.md#none) metody při volání konstruktoru nebo funkce, která přijímá `cancellation_token` objektů a nechcete, aby operace zrušit.
 
 Můžete také zadat token zrušení pro konstruktor třídy `task_group` nebo `structured_task_group` objektu. Důležitou součástí to je, že podřízené skupiny úloh zdědí tento token zrušení. Příklad, který tento koncept demonstruje pomocí [concurrency::run_with_cancellation_token](reference/concurrency-namespace-functions.md#run_with_cancellation_token) spouštění pro volání funkce `parallel_for`, naleznete v tématu [zrušení paralelních algoritmů](#algorithms) dále v tomto dokument.
 

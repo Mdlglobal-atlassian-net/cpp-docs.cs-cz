@@ -4,12 +4,12 @@ ms.date: 10/18/2018
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 07c32e30aa36d6e59122340da0b1026e7025780d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a4f7b3931dc8ed8bd7206c7f30ce4b65633f08b6
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612495"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518981"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Projekty CMake v jazyce Visual C++
 
@@ -38,8 +38,11 @@ Spouští se v sadě Visual Studio 2017 **nástroje Visual C++ pro CMake** kompo
 Pokud zvolíte **soubor | Otevřít | Složka** otevřete složku obsahující soubor CMakeLists.txt, se stane následujících věcí:
 
 - Visual Studio přidá **CMake** položky nabídky do hlavní nabídky, s příkazy pro prohlížení a úpravy skriptů CMake.
+
 - **Průzkumník řešení** zobrazí strukturu složek a souborů.
+
 - Visual Studio spustí CMake.exe a generuje mezipaměť CMake pro výchozí *konfigurace*, což je x86 ladění. CMake příkazového řádku se zobrazí v **okno výstup**, společně s další výstup z CMake.  **Visual Studio 2017 verze 15.7 nebo novější**: mezipaměť automatické generování můžete zakázat na **nástroje | Možnosti | CMake | Obecné** dialogového okna.
+
 - Na pozadí spustí aplikace Visual Studio k indexování zdrojové soubory, které chcete povolit technologii IntelliSense, informací o procházení, refaktoring a tak dále. Při práci, Visual Studio sleduje změny v editoru a taky na disku pro synchronizaci jeho indexů se zdroji.
 
 Můžete otevřít složek, které neobsahují libovolný počet projekty CMake. Visual Studio zjistí a nakonfiguruje všechny soubory "root" soubor CMakeLists.txt ve vašem pracovním prostoru. Operace CMake (konfigurovat, vytvářet, ladit) stejně jako C++ IntelliSense a procházení jsou k dispozici pro všechny projekty CMake v pracovním prostoru.
@@ -77,7 +80,9 @@ Ne vše, co v mezipaměti je importován.  Vlastnosti, jako je generátor kódu 
 Pokud chcete vytvořit projekt CMake, máte tyto možnosti:
 
 1. Vyberte cíl **ladění** rozevírací seznam a stiskněte klávesu **F5**, nebo klikněte na tlačítko **spustit** tlačítko (zeleným trojúhelníkem). Automaticky sestavení projektu nejprve, stejně jako řešení sady Visual Studio.
+
 1. Klikněte pravým tlačítkem na soubor CMakeLists.txt a vyberte **sestavení** v místní nabídce. Pokud máte více cílů ve struktuře složek, můžete všechna nebo jenom jeden konkrétní cíl sestavení.
+
 1. V hlavní nabídce vyberte **sestavení | Vytvoření řešení** (**F7** nebo **Ctrl + Shift + B**). Ujistěte se, že cíl CMake je už vybraná ve **položku při spuštění** rozevírací seznam v **Obecné** nástrojů.
 
 ![Vytvoření příkazu nabídky CMake](media/cmake-build-menu.png "CMake vytvoření příkazu nabídky")
@@ -182,20 +187,25 @@ Následující příklad ukazuje ukázkové konfiguraci, která slouží jako v�
       "buildCommandArgs": "-v",
       "ctestCommandArgs": ""
     },
-
 ```
 
 1. **název**: název, který se zobrazí v rozevírací nabídce konfigurace C++. Hodnota této vlastnosti může také sloužit jako makra, `${name}`, zadat jiné hodnoty vlastností. Příklad najdete v tématu **buildRoot** definice v souboru CMakeSettings.json.
 
 1. **Generátor**: mapuje **- G** přepnutí a určuje generátor, který se má použít. Tato vlastnost slouží také jako makra, `${generator}`, a tím pomáhá určit jiné hodnoty vlastností. Visual Studio v současné době podporuje následující generátorů CMake:
 
-    - "Ninja"
-    - "Visual Studio 14 2015"
-    - "Visual Studio 14 2015 ARM"
-    - "Visual Studio 14 2015 Win64"
-    - "Visual Studio 15 2017"
-    - "Visual Studio 15 2017 ARM"
-    - "Visual Studio 15 2017 Win64"
+   - "Ninja"
+
+   - "Visual Studio 14 2015"
+
+   - "Visual Studio 14 2015 ARM"
+
+   - "Visual Studio 14 2015 Win64"
+
+   - "Visual Studio 15 2017"
+
+   - "Visual Studio 15 2017 ARM"
+
+   - "Visual Studio 15 2017 Win64"
 
 Protože Ninja je určená pro rychlé sestavení rychlosti místo flexibilitu a funkce, je nastavit jako výchozí. Některé projekty CMake, ale možná nebudete moct správně programujte Ninja. Pokud k tomu dojde, můžete dát pokyn CMake pro generování projektu sady Visual Studio místo.
 
@@ -232,11 +242,17 @@ CMakeSettings.json také podporuje používání proměnných prostředí v něk
 Máte také přístup k předdefinované makra v tomto souboru:
 
 - `${workspaceRoot}` – poskytuje úplnou cestu složky pracovního prostoru
+
 - `${workspaceHash}` – Hodnota hash umístění pracovního prostoru. užitečné pro vytváření jedinečný identifikátor pro aktuální pracovní prostor (například pro použití v cesty ke složkám)
+
 - `${projectFile}` – Úplná cesta kořenového souboru CMakeLists.txt
+
 - `${projectDir}` – Úplná cesta ke složce kořenového souboru CMakeLists.txt
+
 - `${thisFile}` – úplnou cestu souboru CMakeSettings.json
+
 - `${name}` – Název konfigurace
+
 - `${generator}` – Název generátoru CMake použít v této konfiguraci
 
 ### <a name="ninja-command-line-arguments"></a>Argumenty příkazového řádku ninja
@@ -393,9 +409,11 @@ Pokud potřebujete další informace o stavu mezipaměti CMake k diagnostice pro
 ![Kompilace jednoho souboru CMake](media/cmake-single-file-compile.png)
 
 ## <a name="run-cmake-from-the-command-line"></a>Spuštění CMake z příkazového řádku
+
 Pokud jste nainstalovali CMake z instalačního programu sady Visual Studio, můžete ji spustit z příkazového řádku pomocí následujících kroků:
 
 1. Spusťte příslušné vsdevcmd.bat (x86/x64). Zobrazit [sestavení na příkazovém řádku](../build/building-on-the-command-line.md) Další informace.
-1. Přepnout do výstupní složky.
-1. Spuštění CMake, sestavení a konfiguraci vaší aplikace.
 
+1. Přepnout do výstupní složky.
+
+1. Spuštění CMake, sestavení a konfiguraci vaší aplikace.

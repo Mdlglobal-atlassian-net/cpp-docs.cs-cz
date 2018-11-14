@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: cf1f519521d86f2b7782fb93ed3b4aca4ecd5b24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b6713a80244d7063baac2c75ffead76fe93facc
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643440"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326496"
 ---
 # <a name="iterators"></a>Iterátory
 
@@ -41,7 +41,7 @@ for (auto num : vec)
 
 Existuje pět kategorií iterátorů. V pořadí podle zvýšení výkonu kategorie jsou:
 
-- **Výstup**. *Výstupního iterátoru* `X` můžete Iterujte vpřed přes posloupnosti pomocí **++** operátorů a můžete napsat jenom jednou, elementu s použitím **&ast;** operátor.
+- **Výstup**. *Výstupního iterátoru* `X` můžete Iterujte vpřed přes posloupnosti pomocí **++** operátorů a můžete napsat jenom jednou, elementu s použitím __\*__ operátor.
 
 - **Vstup**. *Vstupní iterátor* `X` můžete Iterujte vpřed přes posloupnosti pomocí ++ operátor a může číst prvek libovolný počet pokusů s použitím **&ast;** operátor. Můžete porovnat vstupní iterátory s použitím **++** a **! =** operátory. Po zvýšit libovolné kopii vstupní iterátor žádné další kopie lze bezpečně porovnat, přes ukazatel nebo zvýšena po tomto datu.
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - GetXMLColumnData method
 - GetXMLRowData method
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
-ms.openlocfilehash: ff72d672db963a166284c9ea0f7e3e8c1a89d5e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d57251e48f2496b07a4eb4f94976c7a44b165f9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594711"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328510"
 ---
 # <a name="cxmlaccessor-class"></a>CXMLAccessor – třída
 
@@ -98,7 +98,7 @@ Načte celý obsah tabulky jako řetězec ve formátu XML dat po řádku.
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetXMLRowData(CSimpleStringW& strOutput, 
+HRESULT GetXMLRowData(CSimpleStringW& strOutput,
    bool bAppend = false) throw();
 ```
 

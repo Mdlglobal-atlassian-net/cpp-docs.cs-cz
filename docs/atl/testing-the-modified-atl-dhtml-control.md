@@ -1,17 +1,17 @@
 ---
 title: Testování ovládacího prvku ATL DHTML upravené
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 helpviewer_keywords:
 - HTML controls, testing
 - testing controls
 - DHTML controls, testing
 ms.assetid: 42316118-9433-410f-9d8a-0efcc1eff824
-ms.openlocfilehash: f0fec3e2430fd5956e3cc48cd64532efee30926d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99f55807a7da647af0961f73c600ae0e31166cdc
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501670"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330967"
 ---
 # <a name="testing-the-modified-atl-dhtml-control"></a>Testování ovládacího prvku ATL DHTML upravené
 
@@ -31,13 +31,13 @@ Teď otestujte metody, které nejsou součástí uživatelského rozhraní.
 
 1. Zvýrazněte ovládacího prvku, tak se aktivuje ohraničení.
 
-1. Na **ovládací prvek** nabídky, klikněte na tlačítko **vyvolání metody**.
+1. Na **ovládací prvek** nabídce zvolte **vyvolání metody**.
 
-Metody v seznamu s názvem **název metody** jsou metody, které můžete volat kontejneru: `MethodInvoked` a `GoToURL`. Všechny ostatní metody se řídí uživatelské rozhraní.
+   Metody v seznamu s názvem **název metody** jsou metody, které můžete volat kontejneru: `MethodInvoked` a `GoToURL`. Všechny ostatní metody se řídí uživatelské rozhraní.
 
-1. Vyberte metodu invoke a klikněte na tlačítko `Invoke` zobrazit okno se zprávou metody nebo přejděte na www.microsoft.com.
+1. Vyberte metodu invoke, a zvolte **Invoke** zobrazit okno se zprávou metody nebo přejděte na `www.microsoft.com`.
 
-1. V **vyvolání metody** dialogové okno, klikněte na tlačítko **Zavřít**.
+1. V **vyvolání metody** dialogového okna zvolte **Zavřít**.
 
 Další informace o různých prvků a soubory, které tvoří ovládacího prvku ATL DHTML, naleznete v tématu [identifikace prvků projektu ovládací prvek DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md).
 

@@ -3,12 +3,12 @@ title: Ošetření chyb a výjimek (moderní verze jazyka C++)
 ms.date: 09/17/2018
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: 8f5e0070f3e52d20293ddd624a0d0de57660e316
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6192ab800667ceb35bf2e18dcbdc0be95ec70f5
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667987"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523285"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Ošetření chyb a výjimek (moderní verze jazyka C++)
 
@@ -58,7 +58,6 @@ int main()
     //...
     return 0;
 }
-
 ```
 
 Výjimky v C++ se podobají těm v jazycích, jako je C# nebo Java. V **zkuste** blokovat, pokud je výjimka *vyvolána* bude *zachycena* prvním přiřazeným **catch** bloku, jehož typ odpovídá typu došlo k výjimce. Jinými slovy spuštění přejde z **throw** příkazu **catch** příkazu. Pokud není nalezen žádný použitelný blok catch, `std::terminate` je vyvolána a program je ukončen. V jazyce C++ může být vyvolán libovolný typ; ale doporučujeme, abyste vyvolali typ odvozený přímo nebo nepřímo ze `std::exception`. V předchozím příkladu, typ výjimky [invalid_argument](../standard-library/invalid-argument-class.md), je definován ve standardní knihovně v [ \<stdexcept – >](../standard-library/stdexcept.md) hlavičkový soubor. C++ neposkytuje a nevyžaduje, **nakonec** blok k Ujistěte se, že jsou všechny prostředky uvolněny, pokud je vyvolána výjimka. Získávání prostředků je idiom inicializace (RAII), který používá inteligentní ukazatele, poskytuje požadované funkce vyčištění prostředků. Další informace najdete v tématu [postupy: návrh pro bezpečnost výjimek](../cpp/how-to-design-for-exception-safety.md). Informace o mechanismu uvolnění zásobníku C++ naleznete v tématu [výjimky a Unwinding zásobníku](../cpp/exceptions-and-stack-unwinding-in-cpp.md).

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: 6b0c0f018d5d66ea62b29b971e5390751a69e3c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55d22951c4203c582f7823fef033a0476f8c9a52
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631800"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326914"
 ---
 # <a name="try-finally-statement"></a>try-finally – příkaz
 
@@ -33,27 +33,26 @@ ms.locfileid: "50631800"
 
 Následující syntaxe popisuje **try-finally** – příkaz:
 
-```cpp
-__try {
-   // guarded code
-}
-__finally {
-   // termination code
-}
-```
+> **\_\_Zkuste**<br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;strážené kódu<br/>
+> }<br/>
+> **\_\_Nakonec**<br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;ukončení programu<br/>
+> }<br/>
 
 ## <a name="grammar"></a>Gramatika
 
-*try-finally-statement*: **__try** *compound-statement*
-
-**__finally** *compound-statement*
+*try-finally-statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**\_\_Zkuste** *compound-statement*  **\_ \_nakonec** *compound-statement*
 
 **Try-finally** příkaz je rozšířením společnosti Microsoft pro jazyky C a C++, které umožňuje cílovým aplikacím zaručit spuštění kódu čištění, když dojde k přerušení vykonání bloku kódu. Čištění se skládá z úlohy, jako jsou rušení přidělení paměti, zavírání souborů a uvolněním popisovačů souborů. **Try-finally** příkaz je užitečné hlavně pro rutiny, které mají několika místech, kde se provede kontrola pro chybu, která by mohla způsobit předčasné vrátit z rutiny.
 
 Související informace a ukázky kódu najdete v tématu [zkuste-except – příkaz](../cpp/try-except-statement.md). Další informace o obecně zpracování strukturovaných výjimek naleznete v tématu [strukturovaného zpracování výjimek](../cpp/structured-exception-handling-c-cpp.md). Další informace o zpracování výjimek ve spravovaných aplikacích najdete v tématu [zpracování výjimek v/CLR](../windows/exception-handling-cpp-component-extensions.md).
 
 > [!NOTE]
->  Strukturované zpracování výjimek funguje na architektuře Win32 pro zdrojové soubory jazyka C i C++. Pro jazyk C++ však není výslovně navrženo. Větší přenositelnost kódu lze zajistit použitím zpracování výjimek jazyka C++. Zpracování výjimek jazyka C++ je také více flexibilní, jelikož dokáže zpracovat výjimky libovolného typu. Pro programy C++ je doporučeno použití mechanismu zpracování výjimek jazyka C++ ([try, catch a throw](../cpp/try-throw-and-catch-statements-cpp.md) příkazů).
+> Strukturované zpracování výjimek funguje na architektuře Win32 pro zdrojové soubory jazyka C i C++. Pro jazyk C++ však není výslovně navrženo. Větší přenositelnost kódu lze zajistit použitím zpracování výjimek jazyka C++. Zpracování výjimek jazyka C++ je také více flexibilní, jelikož dokáže zpracovat výjimky libovolného typu. Pro programy C++ je doporučeno použití mechanismu zpracování výjimek jazyka C++ ([try, catch a throw](../cpp/try-throw-and-catch-statements-cpp.md) příkazů).
 
 Složený příkaz za **__try** klauzule je chráněná část. Složený příkaz za **__finally** klauzule je obslužná rutina ukončení. Obslužná rutina udává sadu akcí, které jsou spouštěny, když byl ukončen chráněné části, bez ohledu na to, zda je výjimka (abnormální ukončení) nebo standardní fall prostřednictvím (normální ukončení) byl ukončen chráněné části.
 
@@ -72,7 +71,7 @@ Předpokládejme například, řadu volání funkcí propojení funkce A funkce 
 ![Pořadí ukončení&#45;provádění obslužné rutiny](../cpp/media/vc38cx1.gif "vc38CX1") pořadí provádění obslužné rutiny ukončení
 
 > [!NOTE]
->  Try-finally chování se liší od jiných jazycích, které podporují použití **nakonec**, jako je C#.  Jediný **__try** může obsahovat buď, ale ne obě sady **__finally** a **__except**.  Pokud jsou obě být použity současně, vnějším zkuste – s výjimkou příkaz musíte uzavřít vnitřní příkaz try-finally.  Pravidla určující při každý blok se spustí se také liší.
+> Try-finally chování se liší od jiných jazycích, které podporují použití **nakonec**, jako je C#.  Jediný **__try** může obsahovat buď, ale ne obě sady **__finally** a **__except**.  Pokud jsou obě být použity současně, vnějším zkuste – s výjimkou příkaz musíte uzavřít vnitřní příkaz try-finally.  Pravidla určující při každý blok se spustí se také liší.
 
 Z důvodu kompatibility s předchozími verzemi **_try**, **_finally**, a **_leave** jsou synonyma pro **__try**, **__ Nakonec**, a **__leave** Pokud – možnost kompilátoru [/Za \(zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md) určena.
 
