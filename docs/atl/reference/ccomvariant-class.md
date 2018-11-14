@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CComVariant class
 - VARIANT macro, ATL
 ms.assetid: 4d31149c-d005-44b5-a509-10f84afa2b61
-ms.openlocfilehash: dd53bdea211610b208516860b29c1b0094f5a4da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a6ad49533028dbcb8c45b63c55a51090533137e
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523263"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522481"
 ---
 # <a name="ccomvariant-class"></a>CComVariant – třída
 
@@ -98,7 +98,7 @@ HRESULT Attach(VARIANT* pSrc);
 ### <a name="parameters"></a>Parametry
 
 *pSrc*<br/>
-[in] Odkazuje [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) bude připojený k objektu.
+[in] Odkazuje [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) bude připojený k objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -242,7 +242,7 @@ HRESULT Copy(const VARIANT* pSrc);
 ### <a name="parameters"></a>Parametry
 
 *pSrc*<br/>
-[in] Ukazatel [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) ke zkopírování.
+[in] Ukazatel [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) ke zkopírování.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -342,7 +342,7 @@ CComVariant& operator=(char cSrc) throw();
 ### <a name="parameters"></a>Parametry
 
 *varSrc*<br/>
-[in] `CComVariant` Nebo [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) přiřazení `CComVariant` objektu. Obsah objektu variant zdroje se zkopíruje do cíle bez převodu.
+[in] `CComVariant` Nebo [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) přiřazení `CComVariant` objektu. Obsah objektu variant zdroje se zkopíruje do cíle bez převodu.
 
 *bstrSrc*<br/>
 [in] BSTR má být přiřazena k `CComVariant` objektu. Typ `CComVariant` objekt se bude VT_BSTR.

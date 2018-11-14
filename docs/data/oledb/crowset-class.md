@@ -238,12 +238,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: 6af7b30ef7055fbf5b3c998dba6f3b84d0129c31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb2f66474f9700ed7bfdc2e1063865734e4e991a
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543062"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51557008"
 ---
 # <a name="crowset-class"></a>CRowset – třída
 
@@ -273,16 +273,16 @@ Třídu přistupujícího objektu. Výchozí hodnota je `CAccessorBase`.
 |-|-|
 |[Addrefrows –](#addrefrows)|Zvýší počet odkazů spojené s aktuálním řádku.|
 |[Zavřít](#close)|Uvolní řádků a aktuální `IRowset` rozhraní.|
-|[Compare](#compare)|Porovná dvě záložky pomocí [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539).|
+|[Compare](#compare)|Porovná dvě záložky pomocí [IRowsetLocate::Compare](https://docs.microsoft.com/previous-versions/windows/desktop/ms709539(v=vs.85)).|
 |[CRowset –](#crowset)|Vytvoří novou `CRowset` objektu a přidruží ji k (volitelně) `IRowset` rozhraní zadanou jako parametr.|
-|[Delete](#delete)|Odstraní řádky z řádků pomocí [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)).|
+|[Delete](#delete)|Odstraní řádky z řádků pomocí [IRowsetChange:DeleteRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)).|
 |[FindNextRow](#findnextrow)|Vyhledá další odpovídající řádek po zadanou záložkou.|
 |[Getapproximateposition –](#getapproximateposition)|Vrátí přibližné pozici řádku odpovídající záložku.|
 |[GetData](#getdata)|Načte data z dané sadě řádků kopii řádku.|
 |[GetDataHere](#getdatahere)|Načte data ze zadané vyrovnávací paměti.|
 |[GetOriginalData](#getoriginaldata)|Načte data naposledy načtených z nebo přeneseno do zdroje dat, ignoruje se čekající změny.|
 |[GetRowStatus –](#getrowstatus)|Vrátí stav všech řádků.|
-|[Vložit](#insert)|Vytvoří a vloží nový řádek pomocí [IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921).|
+|[Vložit](#insert)|Vytvoří a vloží nový řádek pomocí [IRowsetChange:InsertRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms716921(v=vs.85)).|
 |[Issamerow –](#issamerow)|Porovná zadaný řádek s aktuálním řádkem.|
 |[MoveFirst](#movefirst)|Přemístí další načtení umístění na počáteční pozici.|
 |[MoveLast](#movelast)|Přejde na poslední záznam.|
@@ -290,8 +290,8 @@ Třídu přistupujícího objektu. Výchozí hodnota je `CAccessorBase`.
 |[MovePrev](#moveprev)|Přesune na předchozí záznam.|
 |[MoveToBookmark](#movetobookmark)|Načte řádek označený záložkou nebo řádek na zadaný posun z tuto záložku.|
 |[Movetoratio –](#movetoratio)|Načte řádky začínající od desetinné pozice v dané sadě řádků.|
-|[Releaserows –](#releaserows)|Volání [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) uvolnit popisovač aktuálního řádku.|
-|[SetData](#setdata)|Nastaví hodnoty dat v řádku použití jednoho nebo více sloupců [IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232).|
+|[Releaserows –](#releaserows)|Volání [IRowset::ReleaseRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719771(v=vs.85)) uvolnit popisovač aktuálního řádku.|
+|[SetData](#setdata)|Nastaví hodnoty dat v řádku použití jednoho nebo více sloupců [IRowsetChange:SetData](https://docs.microsoft.com/previous-versions/windows/desktop/ms721232(v=vs.85)).|
 |[Vrácení zpět](#undo)|Vrátí zpět všechny změny provedené od posledního načtení řádek nebo [aktualizace](../../data/oledb/crowset-update.md).|
 |[Aktualizace](#update)|Odesílá všechny neuložené změny provedené od posledního načtení nebo aktualizace na aktuálním řádku.|
 |[UpdateAll](#updateall)|Odesílá všechny neuložené změny provedené od posledního načtení nebo aktualizace pro všechny řádky.|
@@ -304,7 +304,7 @@ Tato třída není určena k vytvoření instance, ale spíše předán jako par
 
 ## <a name="addrefrows"></a> CRowset::AddRefRows
 
-Volání [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) přírůstku (jeden) počet odkazů spojené s aktuálním popisovač řádku.
+Volání [IRowset::AddRefRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719619(v=vs.85)) přírůstku (jeden) počet odkazů spojené s aktuálním popisovač řádku.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -322,7 +322,7 @@ Tato metoda zvýší počet odkazů pro popisovač aktuálního řádku. Volán�
 
 ## <a name="close"></a> CRowset::Close
 
-Uvolní řádků a aktuální [IRowset](/previous-versions/windows/desktop/ms720986) rozhraní.
+Uvolní řádků a aktuální [IRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms720986(v=vs.85)) rozhraní.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -336,13 +336,13 @@ Tato metoda uvolní všechny řádky aktuálně v dané sadě řádků.
 
 ## <a name="compare"></a> CRowset::Compare
 
-Porovná dvě záložky pomocí [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539).
+Porovná dvě záložky pomocí [IRowsetLocate::Compare](https://docs.microsoft.com/previous-versions/windows/desktop/ms709539(v=vs.85)).
 
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT Compare(const CBookmarkBase& bookmark1, 
-   const CBookmarkBase& bookmark2, 
+HRESULT Compare(const CBookmarkBase& bookmark1,
+   const CBookmarkBase& bookmark2,
    DBCOMPARE* pComparison) const throw();
 ```
 
@@ -369,12 +369,12 @@ Informace o používání záložek v příjemci najdete v tématu [pomocí zál
 
 ## <a name="crowset"></a> CRowset::CRowset
 
-Vytvoří novou `CRowset` objektu a přidruží ji k (volitelně) [IRowset](/previous-versions/windows/desktop/ms720986) rozhraní zadanou jako parametr.
+Vytvoří novou `CRowset` objektu a přidruží ji k (volitelně) [IRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms720986(v=vs.85)) rozhraní zadanou jako parametr.
 
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-CRowset(); 
+CRowset();
 
 CRowset(IRowset* pRowset);
 ```
@@ -386,7 +386,7 @@ CRowset(IRowset* pRowset);
 
 ## <a name="delete"></a> CRowset::Delete
 
-Volání [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)) odstranit aktuální řádek ze sady řádků.
+Volání [IRowsetChange::DeleteRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)) odstranit aktuální řádek ze sady řádků.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -405,35 +405,35 @@ Vyhledá další odpovídající řádek po zadanou záložkou.
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT FindNextRow(DBCOMPAREOP op, 
-   BYTE* pData, 
-   DBTYPE wType, 
-   DBLENGTH nLength, 
-   BYTE bPrecision, 
-   BYTE bScale, 
-   BOOL bSkipCurrent = TRUE, 
+HRESULT FindNextRow(DBCOMPAREOP op,
+   BYTE* pData,
+   DBTYPE wType,
+   DBLENGTH nLength,
+   BYTE bPrecision,
+   BYTE bScale,
+   BOOL bSkipCurrent = TRUE,
    CBookmarkBase* pBookmark = NULL) throw();
 ```
 
 #### <a name="parameters"></a>Parametry
 
 *OP*<br/>
-[in] Operace pro použití v porovnávání hodnot řádků. Hodnoty, najdete v části [IRowsetFind::FindNextRow](/previous-versions/windows/desktop/ms723091).
+[in] Operace pro použití v porovnávání hodnot řádků. Hodnoty, najdete v části [IRowsetFind::FindNextRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms723091(v=vs.85)).
 
 *pData*<br/>
 [in] Ukazatel na hodnotu, která si měly odpovídat.
 
 *wType*<br/>
-[in] Určuje datový typ z část hodnoty vyrovnávací paměti. Informace o typ ukazatele, naleznete v tématu [datové typy](/previous-versions/windows/desktop/ms723969) v *OLE DB referenční informace pro programátory* v sadě Windows SDK.
+[in] Určuje datový typ z část hodnoty vyrovnávací paměti. Informace o typ ukazatele, naleznete v tématu [datové typy](https://docs.microsoft.com/previous-versions/windows/desktop/ms723969(v=vs.85)) v *OLE DB referenční informace pro programátory* v sadě Windows SDK.
 
 *nLength*<br/>
-[in] Délka v bajtech, datové struktury příjemce přidělené pro hodnotu data. Podrobnosti najdete v tématu Popis `cbMaxLen` v [DBBINDING struktury](/previous-versions/windows/desktop/ms716845) v *OLE DB referenční informace pro programátory.*
+[in] Délka v bajtech, datové struktury příjemce přidělené pro hodnotu data. Podrobnosti najdete v tématu Popis `cbMaxLen` v [DBBINDING struktury](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) v *OLE DB referenční informace pro programátory.*
 
 *bPrecision*<br/>
-[in] Při získávání dat maximální přesnost. Používá pouze tehdy, pokud *wType* je DBTYPE_NUMERIC. Další informace najdete v tématu [převody zahrnující DBTYPE_NUMERIC nebo DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714) v *OLE DB referenční informace pro programátory*.
+[in] Při získávání dat maximální přesnost. Používá pouze tehdy, pokud *wType* je DBTYPE_NUMERIC. Další informace najdete v tématu [převody zahrnující DBTYPE_NUMERIC nebo DBTYPE_DECIMAL](https://docs.microsoft.com/previous-versions/windows/desktop/ms719714(v=vs.85)) v *OLE DB referenční informace pro programátory*.
 
 *bScale*<br/>
-[in] Při získávání dat stupnice. Používá pouze tehdy, pokud *wType* DBTYPE_NUMERIC nebo DBTYPE_DECIMAL. Další informace najdete v tématu [převody zahrnující DBTYPE_NUMERIC nebo DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714) v *OLE DB referenční informace pro programátory*.
+[in] Při získávání dat stupnice. Používá pouze tehdy, pokud *wType* DBTYPE_NUMERIC nebo DBTYPE_DECIMAL. Další informace najdete v tématu [převody zahrnující DBTYPE_NUMERIC nebo DBTYPE_DECIMAL](https://docs.microsoft.com/previous-versions/windows/desktop/ms719714(v=vs.85)) v *OLE DB referenční informace pro programátory*.
 
 *bSkipCurrent*<br/>
 [in] Počet řádků ze záložky, ve kterém se má spustit vyhledávání.
@@ -458,8 +458,8 @@ Vrátí přibližné pozici řádku odpovídající záložku.
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark, 
-   DBCOUNTITEM* pPosition, 
+HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark,
+   DBCOUNTITEM* pPosition,
    DBCOUNTITEM* pcRows) throw();
 ```
 
@@ -491,7 +491,7 @@ Načte data z dané sadě řádků kopii řádku.
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetData() throw(); 
+HRESULT GetData() throw();
 
 HRESULT GetData(int nAccessor) throw();
 ```
@@ -516,7 +516,7 @@ Načte data z aktuální řádek a umístí jej do zadané vyrovnávací paměti
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT GetDataHere(int nAccessor, 
+HRESULT GetDataHere(int nAccessor,
    void* pBuffer) throw();
 ```
 
@@ -586,7 +586,7 @@ Vytvoří a inicializuje nový řádek pomocí dat z přistupujícího objektu.
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT Insert(int nAccessor = 0, 
+HRESULT Insert(int nAccessor = 0,
    bool bGetHRow = false) throw();
 ```
 
@@ -633,7 +633,7 @@ HRESULT IsSameRow(HROW hRow) const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní HRESULT. S_OK označuje, že řádky jsou stejné. Další hodnoty, najdete v části [IRowsetIndentity::IsSameRow](/previous-versions/windows/desktop/ms719629) v *OLE DB referenční informace pro programátory* v sadě Windows SDK.
+Standardní HRESULT. S_OK označuje, že řádky jsou stejné. Další hodnoty, najdete v části [IRowsetIndentity::IsSameRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms719629(v=vs.85)) v *OLE DB referenční informace pro programátory* v sadě Windows SDK.
 
 ## <a name="movefirst"></a> CRowset::MoveFirst
 
@@ -651,7 +651,7 @@ Standardní HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877) můžete přemístit další načtení umístění na počáteční pozici (umístění, která se další načítání umístění při vytváření v sadě řádků) a načte počáteční řádek.
+Volání [IRowset::RestartPosition](https://docs.microsoft.com/previous-versions/windows/desktop/ms712877(v=vs.85)) můžete přemístit další načtení umístění na počáteční pozici (umístění, která se další načítání umístění při vytváření v sadě řádků) a načte počáteční řádek.
 
 ## <a name="movelast"></a> CRowset::MoveLast
 
@@ -669,7 +669,7 @@ Standardní HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877) můžete přemístit další načtení umístění na poslední pozici a načte poslední řádek.
+Volání [IRowset::RestartPosition](https://docs.microsoft.com/previous-versions/windows/desktop/ms712877(v=vs.85)) můžete přemístit další načtení umístění na poslední pozici a načte poslední řádek.
 
 Tato metoda vyžaduje, že jste nastavili `DBPROP_CANSCROLLBACKWARDS` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků. (Pro lepší výkon, může být také nastavena `DBPROP_QUICKRESTART` k VARIANT_TRUE.)
 
@@ -682,7 +682,7 @@ Přesune kurzor na další záznam.
 ```cpp
 HRESULT MoveNext() throw();
 
-HRESULT MoveNext(LONG lSkip, 
+HRESULT MoveNext(LONG lSkip,
    bool bForward= true) throw();
 ```
 
@@ -735,7 +735,7 @@ Načte řádek označený záložku nebo řádek na zadaný posun (*lSkip*) z tu
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT MoveToBookmark(const CBookmarkBase& bookmark, 
+HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
    LONG lSkip = 0) throw();
 ```
 
@@ -764,7 +764,7 @@ Načte řádky začínající od desetinné pozice v dané sadě řádků.
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT MoveToRatio(DBCOUNTITEM nNumerator, 
+HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
    DBCOUNTITEM nDenominator,bool bForward = true) throw();
 ```
 
@@ -789,13 +789,13 @@ Standardní HRESULT.
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-Kde `RowsetSize` je velikost řádků, měřený v řádcích. Přesnost tohoto vzorce závisí na konkrétního zprostředkovatele. Podrobnosti najdete v tématu [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602).
+Kde `RowsetSize` je velikost řádků, měřený v řádcích. Přesnost tohoto vzorce závisí na konkrétního zprostředkovatele. Podrobnosti najdete v tématu [IRowsetScroll::GetRowsAtRatio](https://docs.microsoft.com/previous-versions/windows/desktop/ms709602(v=vs.85)).
 
 Tato metoda vyžaduje, volitelné rozhraní `IRowsetScroll`, která nemusí být podporován na všichni poskytovatelé; Pokud se v případě, vrátí metoda E_NOINTERFACE. Musíte taky nastavit `DBPROP_IRowsetScroll` k VARIANT_TRUE před voláním `Open` v tabulce nebo příkaz, který obsahuje sadu řádků.
 
 ## <a name="releaserows"></a> CRowset::ReleaseRows
 
-Volání [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) uvolnit popisovač aktuálního řádku.
+Volání [IRowset::ReleaseRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719771(v=vs.85)) uvolnit popisovač aktuálního řádku.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -814,7 +814,7 @@ Nastaví hodnoty dat do jednoho nebo více sloupců řádků.
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT SetData() const throw(); 
+HRESULT SetData() const throw();
 
 HRESULT SetData(int nAccessor) const throw();
 ```
@@ -843,8 +843,8 @@ Vrátí zpět všechny změny provedené od posledního načtení řádek nebo [
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT Undo(DBCOUNTITEM* pcRows = NULL, 
-   HROW* phRow = NULL, 
+HRESULT Undo(DBCOUNTITEM* pcRows = NULL,
+   HROW* phRow = NULL,
    DBROWSTATUS* pStatus = NULL) throw();
 ```
 
@@ -874,8 +874,8 @@ Odesílá všechny neuložené změny provedené na aktuálním řádku od posle
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT Update(DBCOUNTITEM* pcRows = NULL, 
-   HROW* phRow = NULL, 
+HRESULT Update(DBCOUNTITEM* pcRows = NULL,
+   HROW* phRow = NULL,
    DBROWSTATUS* pStatus = NULL) throw();
 ```
 
@@ -907,8 +907,8 @@ Odesílá všechny čekající změny provedené od posledního načtení všech
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL, 
-   HROW** pphRow = NULL, 
+HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,
+   HROW** pphRow = NULL,
    DBROWSTATUS** ppStatus = NULL) throw();
 ```
 

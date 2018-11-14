@@ -6,12 +6,12 @@ helpviewer_keywords:
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: 53f9d1ca823385c17bf2b235d844e40886092e44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c12cd50dd92e728c88945cd83029f7e5e62816da
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618359"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524154"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Návod: Sestavení projektu (C++)
 
@@ -27,15 +27,15 @@ V tomto podrobném návodu se záměrně zavést chybu syntaxe jazyka Visual C++
 
 1. V Game.cpp odstraňte středník na posledním řádku tak, aby se podobá příkaz:
 
-    `return 0`
+   `return 0`
 
 1. V panelu nabídky zvolte **sestavení** > **sestavit řešení**.
 
 1. Zpráva v **seznam chyb** okno znamená, že došlo k chybě při tvorbě projektu. Popis vypadá podobně jako chybová zpráva:
 
-    `error C2143: syntax error: missing ';' before '}'`
+   `error C2143: syntax error: missing ';' before '}'`
 
-  Chcete-li zobrazit informace nápovědy o této chybě, zvýrazněte ho v **seznam chyb** okno a klikněte na tlačítko **F1** klíč.
+   Chcete-li zobrazit informace nápovědy o této chybě, zvýrazněte ho v **seznam chyb** okno a klikněte na tlačítko **F1** klíč.
 
 1. Přidejte středník zpět do konce řádku, který obsahuje chybu syntaxe:
 
@@ -43,7 +43,7 @@ V tomto podrobném návodu se záměrně zavést chybu syntaxe jazyka Visual C++
 
 1. V panelu nabídky zvolte **sestavení** > **sestavit řešení**.
 
-  Zpráva v **výstup** okno znamená, že sestavení projektu zdařilo.
+   Zpráva v **výstup** okno znamená, že sestavení projektu zdařilo.
 
     ```Output
     1>------ Build started: Project: Game, Configuration: Debug Win32 ------

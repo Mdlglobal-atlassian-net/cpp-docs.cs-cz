@@ -8,12 +8,12 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-ms.openlocfilehash: 43af08f3be75bff7621cd2f57b9d50b658420f26
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9f18dfd1498538ce3700fd73a27ce6f6088ee42
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630422"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331214"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Funkční paralelismus (Concurrency Runtime)
 
@@ -22,8 +22,7 @@ V modulu Runtime souběžnosti *úloh* je jednotka práce, která provádí urč
 Úkoly se používají při psaní asynchronního kódu a chcete některé operace nastat po dokončení asynchronní operace. Můžete například použít úkol pro asynchronní čtení ze souboru a potom použít jiný úkol – *úkol pokračování*, což je vysvětleno dále v tomto dokumentu – zpracování dat po jejich zpřístupnění. Naopak můžete použít úkoly skupiny k rozložení paralelní práce na menší části. Předpokládejme například, že máte rekurzivní algoritmus, který rozdělí zbývající práce na dva oddíly. Skupiny úloh můžete použít k souběžnému spouštění těchto oddílů a potom počkejte na dokončení rozdělené práce.
 
 > [!TIP]
-
->  Pokud chcete použít stejnou rutinu pro každý prvek kolekce paralelně, použijte paralelní algoritmus, například [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for), místo úkolu nebo skupiny úkolů. Další informace o paralelních algoritmech naleznete v tématu [paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md).
+> Pokud chcete použít stejnou rutinu pro každý prvek kolekce paralelně, použijte paralelní algoritmus, například [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for), místo úkolu nebo skupiny úkolů. Další informace o paralelních algoritmech naleznete v tématu [paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md).
 
 ## <a name="key-points"></a>Klíčové body
 
@@ -205,7 +204,6 @@ Vezměte v úvahu aplikace pro UPW, která používá C++ a XAML a zapíše sadu
 1. Ve MainPage.xaml.cpp implementujte `WriteFilesAsync` jak je znázorněno v příkladu.
 
 > [!TIP]
-
 > `when_all` je neblokující funkce, která vytváří `task` jako svůj výsledek. Na rozdíl od [task::wait](reference/task-class.md#wait), je bezpečné volat tuto funkci v aplikaci UWP ve vlákně ASTA (Application STA).
 
 ###  <a name="when-any"></a> When_any – funkce
@@ -229,14 +227,14 @@ Stejně jako u `when_all`, je běžné použití pokračování, které má `whe
 V tomto příkladu můžete také určit `task<pair<int, size_t>>` k výrobě pokračování podle úloh.
 
 > [!NOTE]
->  Stejně jako u `when_all`, úlohy, které můžete předat `when_any` musí všichni vrátit stejný typ.
+> Stejně jako u `when_all`, úlohy, které můžete předat `when_any` musí všichni vrátit stejný typ.
 
 Můžete také použít `||` syntaxe pro vytvoření úlohy, která skončí po dokončení první úlohy v sadě úloh, jak je znázorněno v následujícím příkladu.
 
 `auto t = t1 || t2; // same as when_any`
 
 > [!TIP]
->  Stejně jako u `when_all`, `when_any` je neblokující a je bezpečné volat v aplikaci UWP ve vlákně ASTA.
+> Stejně jako u `when_all`, `when_any` je neblokující a je bezpečné volat v aplikaci UWP ve vlákně ASTA.
 
 ##  <a name="delayed-tasks"></a> Zpožděné provedení úlohy
 
@@ -257,8 +255,7 @@ PPL používá [concurrency::task_group](reference/task-group-class.md) a [concu
 PPL dělí skupiny úkolů na těchto dvou kategorií: *nestrukturované skupiny úkolů* a *strukturované skupiny úkolů*. PPL používá `task_group` pro reprezentaci nestrukturované skupiny úkolů a `structured_task_group` pro reprezentaci strukturované skupiny úkolů.
 
 > [!IMPORTANT]
-
->  PPL také definuje [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmus, který používá `structured_task_group` třídu pro spuštění sady úkolů současně. Vzhledem k tomu, `parallel_invoke` algoritmus využívající dlaždice má stručnější syntaxi, doporučujeme použít místo něj `structured_task_group` třídy, pokud je to možné. Téma [paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md) popisuje `parallel_invoke` podrobněji.
+> PPL také definuje [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmus, který používá `structured_task_group` třídu pro spuštění sady úkolů současně. Vzhledem k tomu, `parallel_invoke` algoritmus využívající dlaždice má stručnější syntaxi, doporučujeme použít místo něj `structured_task_group` třídy, pokud je to možné. Téma [paralelní algoritmy](../../parallel/concrt/parallel-algorithms.md) popisuje `parallel_invoke` podrobněji.
 
 Použití `parallel_invoke` Pokud máte několik nezávislých úloh, které chcete provést současně, a je nutné počkat na dokončení, než budete pokračovat všech úloh. Tato technika je často označuje jako *rozvětvení a spojení* paralelismu. Použití `task_group` Pokud máte několik nezávislých úloh, které chcete provést současně, ale chcete počkat na dokončení později. Například můžete přidat úkoly `task_group` objektu a počkejte na dokončení v jiné funkci nebo z jiného vlákna úloh.
 

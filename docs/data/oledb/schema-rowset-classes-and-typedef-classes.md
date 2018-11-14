@@ -1072,12 +1072,12 @@ helpviewer_keywords:
 - m_szTableCatalog
 - m_szTableName
 ms.assetid: 4bd881b3-26ca-4bdb-9226-d67560864f29
-ms.openlocfilehash: 2af15d1cf3d42af82d2dc04901301f3f30ff9211
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6899f6edf87f2d81f31fac40ac78ba5798d8d8c
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515112"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51557099"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Třídy sady řádků schématu a definiční třídy typů
 
@@ -1085,42 +1085,42 @@ Schéma je kolekce databázové objekty, které jsou ve vlastnictví nebo byly v
 
 Sady řádků schématu jsou předdefinované sady řádků představující metadat. Sady řádků schématu se obecně používají v dynamické programování, kde není struktura databáze v době kompilace znám. Tyto sady řádků schématu můžete použít k získání informací o databázi v době běhu.
 
-Pomocí třídy definice typedef pro vytvoření instance sady řádků schématu. Odpovídající definice typedef a třídy sady řádků schématu jsou uvedeny níže. Je nutné volat [CRestrictions::Open](../../data/oledb/crestrictions-open.md) po vytvoření instance sady řádků schématu. Tato metoda vrátí sadu výsledků dotazu na základě omezení, které zadáte. Zobrazit [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) informace o omezení sloupce spojené s každou sada řádků schématu.
+Pomocí třídy definice typedef pro vytvoření instance sady řádků schématu. Odpovídající definice typedef a třídy sady řádků schématu jsou uvedeny níže. Je nutné volat [CRestrictions::Open](../../data/oledb/crestrictions-open.md) po vytvoření instance sady řádků schématu. Tato metoda vrátí sadu výsledků dotazu na základě omezení, které zadáte. Zobrazit [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) informace o omezení sloupce spojené s každou sada řádků schématu.
 
 Následující tabulka zobrazuje každou OLE DB sada řádků schématu a odpovídající šablony technologie OLE DB – třída definice typedef a informace o třídě.
 
 |Sada řádků schématu technologie OLE DB|– Třída definice TypeDef|Informace o třídě|
 |--------------------------|-------------------|----------------|
-|[KONTROLNÍ VÝRAZY](/previous-versions/windows/desktop/ms719776)|[CAssertions](#assertion)|[CAssertionInfo](#assertion)|
-|[CATALOGS](/previous-versions/windows/desktop/ms721241)|[CCatalogs](#catalog)|[CCatalogInfo](#catalog)|
-|[CHARACTER_SETS](/previous-versions/windows/desktop/ms722638)|[CCharacterSets](#characterset)|[CCharacterSetInfo](#characterset)|
-|[KOLACE](/previous-versions/windows/desktop/ms715783)|[CCollations](#collation)|[Ccollationinfo –](#collation)|
-|[COLUMN_PRIVILEGES](/previous-versions/windows/desktop/ms715800)|[CColumnPrivileges](#columnprivilege)|[Ccolumnprivilegeinfo –](#columnprivilege)|
-|[SLOUPCE](/previous-versions/windows/desktop/ms723052)|[CColumns](#columns)|[Ccolumnsinfo –](#columns)|
-|[CONSTRAINT_COLUMN_USAGE](/previous-versions/windows/desktop/ms724522)|[CConstraintColumnUsage](#constraintcolumnusage)|[Cconstraintcolumnusageinfo –](#constraintcolumnusage)|
-|[CONSTRAINT_TABLE_USAGE](/previous-versions/windows/desktop/ms713710)|[CConstraintTableUsage](#constrainttableusage)|[Cconstrainttableusageinfo –](#constrainttableusage)|
-|[CHECK_CONSTRAINTS](/previous-versions/windows/desktop/ms712845)|[CCheckConstraints](#checkconstraint)|[Ccheckconstraintinfo –](#checkconstraint)|
-|[COLUMN_DOMAIN_USAGE](/previous-versions/windows/desktop/ms711240)|[CColumnDomainUsage](#columndomainusage)|[Ccolumndomainusageinfo –](#columndomainusage)|
-|[FOREIGN_KEYS](/previous-versions/windows/desktop/ms711276)|[CForeignKeys](#foreignkeys)|[Cforeignkeysinfo –](#foreignkeys)|
-|[INDEXY](/previous-versions/windows/desktop/ms709712)|[CIndexes](#index)|[Cindexinfo –](#index)|
-|[KEY_COLUMN_USAGE](/previous-versions/windows/desktop/ms712990)|[CKeyColumn](#keycolumn)|[Ckeycolumninfo –](#keycolumn)|
-|[PRIMARY_KEYS](/previous-versions/windows/desktop/ms714362)|[CPrimaryKeys](#primarykey)|[CPrimaryKeyInfo](#primarykey)|
-|[POSTUPY](/previous-versions/windows/desktop/ms724021)|[CProcedures](#procedure)|[CProcedureInfo](#procedure)|
-|[PROCEDURE_COLUMNS](/previous-versions/windows/desktop/ms723092)|[CProcedureColumns](#procedurecolumn)|[CProcedureColumnInfo](#procedurecolumn)|
-|[PROCEDURE_PARAMETERS](/previous-versions/windows/desktop/ms713623)|[CProcedureParameters](#procedureparam)|[CProcedureParameterInfo](#procedureparam)|
-|[PROVIDER_TYPES](/previous-versions/windows/desktop/ms709785)|[CProviderTypes](#provider)|[CProviderInfo](#provider)|
-|[REFERENTIAL_CONSTRAINTS](/previous-versions/windows/desktop/ms719737)|[CReferentialConstraints](#referentialconstraint)|[Creferentialconstraintinfo –](#referentialconstraint)|
-|[SCHÉMAT](/previous-versions/windows/desktop/ms716887)|[CSchemata](#schemata)|[Cschematainfo –](#schemata)|
-|[SQL_LANGUAGES](/previous-versions/windows/desktop/ms714374)|[CSQLLanguages](#sqllanguage)|[CSQLLanguageInfo](#sqllanguage)|
-|[STATISTIKY](/previous-versions/windows/desktop/ms715957)|[CStatistics](#statistic)|[Cstatisticinfo –](#statistic)|
-|[TABLE_CONSTRAINTS](/previous-versions/windows/desktop/ms715921)|[CTableConstraints](#tableconstraint)|[CTableConstraintInfo](#tableconstraint)|
-|[TABULKY](/previous-versions/windows/desktop/ms716980)|[CTables](#table)|[Ctableinfo –](#table)|
-|[TABLE_PRIVILEGES](/previous-versions/windows/desktop/ms725428)|[CTablePrivileges](#tableprivilege)|[Ctableprivilegeinfo –](#tableprivilege)|
-|[PŘEKLADY](/previous-versions/windows/desktop/ms725365)|[CTranslations](#translation)|[CTranslationInfo](#translation)|
-|[USAGE_PRIVILEGES](/previous-versions/windows/desktop/ms722743)|[CUsagePrivileges](#usageprivilege)|[CUsagePrivilegeInfo](#usageprivilege)|
-|[VIEW_COLUMN_USAGE](/previous-versions/windows/desktop/ms714896)|[CViewColumnUsage](#viewcolumn)|[Cviewcolumninfo –](#viewcolumn)|
-|[ZOBRAZENÍ](/previous-versions/windows/desktop/ms723122)|[CViews](#view)|[Cviewinfo –](#view)|
-|[VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727)|[CViewTableUsage](#viewtable)|[Cviewtableinfo –](#viewtable)|
+|[KONTROLNÍ VÝRAZY](https://docs.microsoft.com/previous-versions/windows/desktop/ms719776(v=vs.85))|[CAssertions](#assertion)|[CAssertionInfo](#assertion)|
+|[CATALOGS](https://docs.microsoft.com/previous-versions/windows/desktop/ms721241(v=vs.85))|[CCatalogs](#catalog)|[CCatalogInfo](#catalog)|
+|[CHARACTER_SETS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722638(v=vs.85))|[CCharacterSets](#characterset)|[CCharacterSetInfo](#characterset)|
+|[KOLACE](https://docs.microsoft.com/previous-versions/windows/desktop/ms715783(v=vs.85))|[CCollations](#collation)|[Ccollationinfo –](#collation)|
+|[COLUMN_PRIVILEGES](https://docs.microsoft.com/previous-versions/windows/desktop/ms715800(v=vs.85))|[CColumnPrivileges](#columnprivilege)|[Ccolumnprivilegeinfo –](#columnprivilege)|
+|[SLOUPCE](https://docs.microsoft.com/previous-versions/windows/desktop/ms723052(v=vs.85))|[CColumns](#columns)|[Ccolumnsinfo –](#columns)|
+|[CONSTRAINT_COLUMN_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms724522(v=vs.85))|[CConstraintColumnUsage](#constraintcolumnusage)|[Cconstraintcolumnusageinfo –](#constraintcolumnusage)|
+|[CONSTRAINT_TABLE_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms713710(v=vs.85))|[CConstraintTableUsage](#constrainttableusage)|[Cconstrainttableusageinfo –](#constrainttableusage)|
+|[CHECK_CONSTRAINTS](https://docs.microsoft.com/previous-versions/windows/desktop/ms712845(v=vs.85))|[CCheckConstraints](#checkconstraint)|[Ccheckconstraintinfo –](#checkconstraint)|
+|[COLUMN_DOMAIN_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms711240(v=vs.85))|[CColumnDomainUsage](#columndomainusage)|[Ccolumndomainusageinfo –](#columndomainusage)|
+|[FOREIGN_KEYS](https://docs.microsoft.com/previous-versions/windows/desktop/ms711276(v=vs.85))|[CForeignKeys](#foreignkeys)|[Cforeignkeysinfo –](#foreignkeys)|
+|[INDEXY](https://docs.microsoft.com/previous-versions/windows/desktop/ms709712(v=vs.85))|[CIndexes](#index)|[Cindexinfo –](#index)|
+|[KEY_COLUMN_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms712990(v=vs.85))|[CKeyColumn](#keycolumn)|[Ckeycolumninfo –](#keycolumn)|
+|[PRIMARY_KEYS](https://docs.microsoft.com/previous-versions/windows/desktop/ms714362(v=vs.85))|[CPrimaryKeys](#primarykey)|[CPrimaryKeyInfo](#primarykey)|
+|[POSTUPY](https://docs.microsoft.com/previous-versions/windows/desktop/ms724021(v=vs.85))|[CProcedures](#procedure)|[CProcedureInfo](#procedure)|
+|[PROCEDURE_COLUMNS](https://docs.microsoft.com/previous-versions/windows/desktop/ms723092(v=vs.85))|[CProcedureColumns](#procedurecolumn)|[CProcedureColumnInfo](#procedurecolumn)|
+|[PROCEDURE_PARAMETERS](https://docs.microsoft.com/previous-versions/windows/desktop/ms713623(v=vs.85))|[CProcedureParameters](#procedureparam)|[CProcedureParameterInfo](#procedureparam)|
+|[PROVIDER_TYPES](https://docs.microsoft.com/previous-versions/windows/desktop/ms709785(v=vs.85))|[CProviderTypes](#provider)|[CProviderInfo](#provider)|
+|[REFERENTIAL_CONSTRAINTS](https://docs.microsoft.com/previous-versions/windows/desktop/ms719737(v=vs.85))|[CReferentialConstraints](#referentialconstraint)|[Creferentialconstraintinfo –](#referentialconstraint)|
+|[SCHÉMAT](https://docs.microsoft.com/previous-versions/windows/desktop/ms716887(v=vs.85))|[CSchemata](#schemata)|[Cschematainfo –](#schemata)|
+|[SQL_LANGUAGES](https://docs.microsoft.com/previous-versions/windows/desktop/ms714374(v=vs.85))|[CSQLLanguages](#sqllanguage)|[CSQLLanguageInfo](#sqllanguage)|
+|[STATISTIKY](https://docs.microsoft.com/previous-versions/windows/desktop/ms715957(v=vs.85))|[CStatistics](#statistic)|[Cstatisticinfo –](#statistic)|
+|[TABLE_CONSTRAINTS](https://docs.microsoft.com/previous-versions/windows/desktop/ms715921(v=vs.85))|[CTableConstraints](#tableconstraint)|[CTableConstraintInfo](#tableconstraint)|
+|[TABULKY](https://docs.microsoft.com/previous-versions/windows/desktop/ms716980(v=vs.85))|[CTables](#table)|[Ctableinfo –](#table)|
+|[TABLE_PRIVILEGES](https://docs.microsoft.com/previous-versions/windows/desktop/ms725428(v=vs.85))|[CTablePrivileges](#tableprivilege)|[Ctableprivilegeinfo –](#tableprivilege)|
+|[PŘEKLADY](https://docs.microsoft.com/previous-versions/windows/desktop/ms725365(v=vs.85))|[CTranslations](#translation)|[CTranslationInfo](#translation)|
+|[USAGE_PRIVILEGES](https://docs.microsoft.com/previous-versions/windows/desktop/ms722743(v=vs.85))|[CUsagePrivileges](#usageprivilege)|[CUsagePrivilegeInfo](#usageprivilege)|
+|[VIEW_COLUMN_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms714896(v=vs.85))|[CViewColumnUsage](#viewcolumn)|[Cviewcolumninfo –](#viewcolumn)|
+|[ZOBRAZENÍ](https://docs.microsoft.com/previous-versions/windows/desktop/ms723122(v=vs.85))|[CViews](#view)|[Cviewinfo –](#view)|
+|[VIEW_TABLE_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms719727(v=vs.85))|[CViewTableUsage](#viewtable)|[Cviewtableinfo –](#viewtable)|
 
 ## <a name="assertion"></a> CAssertions, CAssertionInfo
 
@@ -1132,7 +1132,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída identifikuje kontrolní výrazy definovány v katalogu, které jsou vlastníkem daného uživatele.
 
-V následující tabulce jsou uvedeny datové členy třídy pro `CAssertionInfo` a jejich odpovídající OLE DB sloupce. V tématu [kontrolních výrazů řádků](/previous-versions/windows/desktop/ms719776) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy pro `CAssertionInfo` a jejich odpovídající OLE DB sloupce. V tématu [kontrolních výrazů řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms719776(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1153,7 +1153,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída identifikuje fyzické atributy přidružené k přístupný ze správce databáze katalogů.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [KATALOGY řádků](/previous-versions/windows/desktop/ms721241) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [KATALOGY řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms721241(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1170,7 +1170,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída identifikuje znakových sad, definované v katalogu, které jsou přístupné pro daného uživatele.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [CHARACTER_SETS řádků](/previous-versions/windows/desktop/ms722638) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [CHARACTER_SETS řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms722638(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1193,7 +1193,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída identifikuje omezení check, definované v katalogu, které jsou vlastníkem daného uživatele. Omezení check určuje hodnoty dat nebo formáty, které jsou přípustné v jedné nebo více sloupců v tabulce.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [CHECK_CONSTRAINTS řádků](/previous-versions/windows/desktop/ms712845) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [CHECK_CONSTRAINTS řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms712845(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1213,7 +1213,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída identifikuje znak kolace, definované v katalogu, které jsou přístupné pro daného uživatele.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [KOLACE řádků](/previous-versions/windows/desktop/ms715783) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [KOLACE řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms715783(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1235,7 +1235,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída identifikuje sloupce definované v katalogu, které jsou závislé na doméně definované v katalogu a vlastníkem daného uživatele.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [COLUMN_DOMAIN_USAGE řádků](/previous-versions/windows/desktop/ms711240) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [COLUMN_DOMAIN_USAGE řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms711240(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1259,7 +1259,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída určuje oprávnění na sloupce tabulky definované v katalogu, které jsou k dispozici nebo udělená daným uživatelem.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [COLUMN_PRIVILEGES řádků](/previous-versions/windows/desktop/ms715800) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [COLUMN_PRIVILEGES řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms715800(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1284,7 +1284,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída identifikuje sloupce tabulky definované v katalogu, které jsou přístupné pro daného uživatele.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. Zobrazit [sady řádků sloupců](/previous-versions/windows/desktop/ms723052) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. Zobrazit [sady řádků sloupců](https://docs.microsoft.com/previous-versions/windows/desktop/ms723052(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1327,7 +1327,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída identifikuje sloupce používané referenční omezení, unikátních omezení, omezení check a kontrolní výrazy, definované v katalogu a vlastníkem daného uživatele.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [CONSTRAINT_COLUMN_USAGE řádků](/previous-versions/windows/desktop/ms724522) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [CONSTRAINT_COLUMN_USAGE řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms724522(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1351,7 +1351,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída identifikuje tabulky používají referenční omezení, unikátních omezení, omezení check a kontrolní výrazy, definované v katalogu a vlastníkem daného uživatele.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [CONSTRAINT_TABLE_USAGE řádků](/previous-versions/windows/desktop/ms724522) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [CONSTRAINT_TABLE_USAGE řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms724522(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1372,7 +1372,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída identifikuje sloupce cizích klíčů definované daným uživatelem v katalogu.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [FOREIGN_KEYS řádků](/previous-versions/windows/desktop/ms711276) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [FOREIGN_KEYS řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms711276(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1402,7 +1402,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída identifikuje indexy, definované v katalogu, které jsou vlastníkem daného uživatele.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [indexy řádků](/previous-versions/windows/desktop/ms709712) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [indexy řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms709712(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1441,7 +1441,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída identifikuje sloupce definované v katalogu, které jsou omezeny daného uživatele jako klíče.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [KEY_COLUMN_USAGE řádků](/previous-versions/windows/desktop/ms712990) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [KEY_COLUMN_USAGE řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms712990(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1466,7 +1466,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída identifikuje sloupce primárních klíčů definované daným uživatelem v katalogu.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [PRIMARY_KEYS řádků](/previous-versions/windows/desktop/ms714362) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [PRIMARY_KEYS řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms714362(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1488,7 +1488,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída vrátí informace o sloupcích sady řádků vrácených postupy.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [PROCEDURE_COLUMNS řádků](/previous-versions/windows/desktop/ms723092) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [PROCEDURE_COLUMNS řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms723092(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1519,7 +1519,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída vrátí informace o parametry a návratové kódy z postupů.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [PROCEDURE_PARAMETERS řádků](/previous-versions/windows/desktop/ms713623) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [PROCEDURE_PARAMETERS řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms713623(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1549,7 +1549,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída identifikuje postupy definované v katalogu, které jsou vlastníkem daného uživatele.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [řádků PROCEDUR](/previous-versions/windows/desktop/ms724021) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [řádků PROCEDUR](https://docs.microsoft.com/previous-versions/windows/desktop/ms724021(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1570,7 +1570,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída identifikuje (základní) datové typy podporované poskytovatelem dat.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [PROVIDER_TYPES řádků](/previous-versions/windows/desktop/ms709785) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [PROVIDER_TYPES řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms709785(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1605,7 +1605,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída identifikuje referenční omezení, definované v katalogu, které jsou vlastníkem daného uživatele.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [REFERENTIAL_CONSTRAINTS řádků](/previous-versions/windows/desktop/ms719737) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [REFERENTIAL_CONSTRAINTS řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms719737(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1630,7 +1630,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída identifikuje schémata, které jsou vlastníkem daného uživatele.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [SCHÉMAT řádků](/previous-versions/windows/desktop/ms716887) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [SCHÉMAT řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms716887(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1651,7 +1651,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída identifikuje úrovně shoda, možnosti a dialekty podporované zpracování dat SQL – implementace definované v katalogu.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [SQL_LANGUAGES řádků](/previous-versions/windows/desktop/ms714374) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [SQL_LANGUAGES řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms714374(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1673,7 +1673,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída identifikuje statistiky, definované v katalogu, které jsou vlastněny daného uživatele.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [statistiky řádků](/previous-versions/windows/desktop/ms715957) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [statistiky řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms715957(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1692,7 +1692,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída identifikuje tabulky omezení, definovaná v katalogu, které jsou vlastníkem daného uživatele.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [TABLE_CONSTRAINTS řádků](/previous-versions/windows/desktop/ms715921) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [TABLE_CONSTRAINTS řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms715921(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1717,7 +1717,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída identifikuje tabulky definované v katalogu, které jsou přístupné pro daného uživatele.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [TABLE_PRIVILEGES řádků](/previous-versions/windows/desktop/ms725428) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [TABLE_PRIVILEGES řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms725428(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1739,7 +1739,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída určuje oprávnění na tabulek definovaných v katalogu, které jsou k dispozici nebo poskytované daného uživatele.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. Zobrazit [řádků tabulky](/previous-versions/windows/desktop/ms716980) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. Zobrazit [řádků tabulky](https://docs.microsoft.com/previous-versions/windows/desktop/ms716980(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1760,7 +1760,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída identifikuje znak překladů definovaném v katalogu, které jsou přístupné pro daného uživatele.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [PŘEKLADY řádků](/previous-versions/windows/desktop/ms725365) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [PŘEKLADY řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms725365(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1784,7 +1784,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída identifikuje využití oprávnění na objekty definované v katalogu, které jsou k dispozici nebo poskytované daného uživatele.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [USAGE_PRIVILEGES řádků](/previous-versions/windows/desktop/ms722743) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [USAGE_PRIVILEGES řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms722743(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1807,7 +1807,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída identifikuje sloupce v zobrazení tabulek definovaných v katalogu, která daný uživatel vlastní, jsou závislé.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [VIEW_COLUMN_USAGE řádků](/previous-versions/windows/desktop/ms714896) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [VIEW_COLUMN_USAGE řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms714896(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1831,7 +1831,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída identifikuje tabulky v zobrazení tabulek definovaných v katalogu, která daný uživatel vlastní, jsou závislé.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. Zobrazit [zobrazení řádků](/previous-versions/windows/desktop/ms723122) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. Zobrazit [zobrazení řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms723122(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|
@@ -1853,7 +1853,7 @@ Zobrazit [třídy sady řádků schématu a definiční třídy typů](../../dat
 
 Tato třída identifikuje zobrazení tabulky, definované v katalogu, které jsou přístupné pro daného uživatele.
 
-V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [VIEW_TABLE_USAGE řádků](/previous-versions/windows/desktop/ms719727) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
+V následující tabulce jsou uvedeny datové členy třídy a jejich odpovídající OLE DB sloupce. V tématu [VIEW_TABLE_USAGE řádků](https://docs.microsoft.com/previous-versions/windows/desktop/ms719727(v=vs.85)) v *OLE DB referenční informace pro programátory* Další informace o schématu a sloupce.
 
 |Datové členy|Sloupce OLE DB|
 |------------------|--------------------|

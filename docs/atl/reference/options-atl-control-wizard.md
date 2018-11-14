@@ -6,16 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-ms.openlocfilehash: 932661227daa216934c061a8b6807b05ca8270ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e607e35b2b3970f329692ba8d2c612d7f6a6591b
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443755"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522308"
 ---
 # <a name="options-atl-control-wizard"></a>Možnosti, Průvodce ovládacím prvkem ATL
-
-Sem vložte "Výsledky hledání" souhrnu.
 
 Pomocí této stránky v průvodci můžete definovat typ ovládacího prvku, který vytváříte a úroveň podpory rozhraní, které obsahuje.
 
@@ -29,17 +27,17 @@ Druh ovládacího prvku, který chcete vytvořit.
 
 - **Složený ovládací prvek**: ovládací prvek ActiveX, který může obsahovat (podobně jako do dialogového okna) jiné ovládací prvky ActiveX nebo ovládací prvky Windows. Složený ovládací prvek obsahuje následující:
 
-   - Šablona pro dialogové okno, které implementuje složeného ovládacího prvku.
+  - Šablona pro dialogové okno, které implementuje složeného ovládacího prvku.
 
-   - Vlastní prostředek REGISTRU, který automaticky registruje složeného ovládacího prvku při vyvolání.
+  - Vlastní prostředek REGISTRU, který automaticky registruje složeného ovládacího prvku při vyvolání.
 
-   - Třída C++, který implementuje složeného ovládacího prvku.
+  - Třída C++, který implementuje složeného ovládacího prvku.
 
-   - Rozhraní modelu COM, vystavené složeného ovládacího prvku.
+  - Rozhraní modelu COM, vystavené složeného ovládacího prvku.
 
-   - Zkušební stránku HTML obsahující složeného ovládacího prvku.
+  - Zkušební stránku HTML obsahující složeného ovládacího prvku.
 
-   Ve výchozím nastavení, nastaví tento ovládací prvek [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) na hodnotu true označuje, že se jedná o ovládacího prvku v okně. Implementuje mapu jímky. Další informace najdete v tématu [podporu pro ovládací prvek DHTML](../../atl/atl-support-for-dhtml-controls.md).
+    Ve výchozím nastavení, nastaví tento ovládací prvek [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) na hodnotu true označuje, že se jedná o ovládacího prvku v okně. Implementuje mapu jímky. Další informace najdete v tématu [podporu pro ovládací prvek DHTML](../../atl/atl-support-for-dhtml-controls.md).
 
 - **Ovládací prvek DHTML**: ovládacího prvku ATL DHTML určuje uživatelského rozhraní pomocí jazyka HTML. Třída DHTML uživatelského rozhraní obsahuje mapu COM. Ve výchozím nastavení, nastaví tento ovládací prvek [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) na hodnotu true označuje, že se jedná o ovládacího prvku v okně.
 

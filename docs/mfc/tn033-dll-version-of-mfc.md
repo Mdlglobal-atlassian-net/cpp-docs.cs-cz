@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLL version of MFC [MFC]
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
-ms.openlocfilehash: 89a9fddd6f12f92d18bcd6fc75f117beb14746f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17ffc8b46060e742449c9612424b1cd06dd8a9d3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571818"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523959"
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033: DLL verze knihovny MFC
 
@@ -174,7 +174,6 @@ protected: \
     public: \
     static AFX_DATA CRuntimeClass class##class_name; \
     virtual CRuntimeClass* GetRuntimeClass() const; \
-
 ```
 
 Řádek, který začíná "statické `AFX_DATA`" je deklarace statických objektů uvnitř vaší třídy. K exportu této třídy správně a přístup k informacím o modulu runtime z klienta. Soubor EXE, je nutné exportovat tento statický objekt. Protože má statický objekt je deklarována s modifikátorem `AFX_DATA`, budete muset definovat `AFX_DATA` bude `__declspec(dllexport)` při vytváření knihovny DLL a definujte jej jako `__declspec(dllimport)` při vytváření vašeho klientského spustitelného souboru.

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - debug macros
 - debugging [CRT], runtime routines
 ms.assetid: cb4d2664-10f3-42f7-a516-595558075471
-ms.openlocfilehash: f8ceb25f7ccdd10ff2b6dc7529563616b2fd0da6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1281b578435086dc7de04c7962145c2b265277a
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452179"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329461"
 ---
 # <a name="debug-routines"></a>Rutiny ladění
 
@@ -63,7 +63,7 @@ Chcete-li použít tyto rutiny [_DEBUG](../c-runtime-library/debug.md) příznak
 |[_calloc_dbg](../c-runtime-library/reference/calloc-dbg.md)|Přidělit zadaný počet paměťových bloků na haldě s další místo pro ladění záhlaví a přepsat vyrovnávací paměti|
 |[_expand_dbg](../c-runtime-library/reference/expand-dbg.md)|Změna velikosti zadaný blok paměti v haldě rozbalením nebo smluvní bloku|
 |[_free_dbg](../c-runtime-library/reference/free-dbg.md)|Bezplatné blok paměti v haldě|
-|[_fullpath_dbg, _wfullpath_dbg](../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md)|Vytvoření názvu absolutní nebo úplnou cestu pro zadanou cestu relativní název, pomocí [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) přidělení paměti.|[System::IO::file:: vytvořit](https://msdn.microsoft.com/library/system.io.file.create.aspx)|
+|[_fullpath_dbg, _wfullpath_dbg](../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md)|Vytvoření názvu absolutní nebo úplnou cestu pro zadanou cestu relativní název, pomocí [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) přidělení paměti.|
 |[_getcwd_dbg, _wgetcwd_dbg](../c-runtime-library/reference/getcwd-dbg-wgetcwd-dbg.md)|Získání aktuálního pracovního adresáře a pomocí [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) přidělení paměti.|
 |[_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md)|Přidělení bloku paměti v haldě s další místo pro ladění záhlaví a přepsat vyrovnávací paměti|
 |[_msize_dbg](../c-runtime-library/reference/msize-dbg.md)|Vypočítat velikost bloku paměti v haldě|
