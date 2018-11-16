@@ -6,12 +6,12 @@ helpviewer_keywords:
 - drag and drop [MFC], CTreeCtrl
 - tree controls [MFC], drag and drop operations
 ms.assetid: 3cf78b4c-4579-4fe1-9bc9-c5ab876e4af1
-ms.openlocfilehash: 5dc498008c6b019635cd361a950c6d2926e26541
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf0adce847c514a41389d3c6a0a86651ee9dc486
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519363"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693305"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>Operace přetažení u ovládacího prvku strom
 
@@ -19,7 +19,7 @@ Ovládací prvek stromu ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) odeš
 
 Získat obrázek, který se zobrazí během operace přetažení voláním [CreateDragImage](../mfc/reference/ctreectrl-class.md#createdragimage) členskou funkci. Do ovládacího prvku stromu vytvoří přetahování rastrového obrázku na základě štítku položky právě přetáhli. Pak do ovládacího prvku stromu vytvoří seznam obrázků, přidá rastrového obrázku nastaven na ni a vrací ukazatel na [atributu CImageList](../mfc/reference/cimagelist-class.md) objektu.
 
-Je nutné zadat kód, který ve skutečnosti přetáhne položku. To obvykle zahrnuje pomocí přetahování možností funkce seznam obrázků a zpracování [wm_mousemove a](/windows/desktop/inputdev/wm-mousemove) a [WM_LBUTTONUP](/windows/desktop/inputdev/wm-lbuttonup) (nebo [WM_RBUTTONUP](/windows/desktop/inputdev/wm-rbuttonup)) zprávy odeslané po zahájení operace přetažení. Další informace o funkcích seznamu image, najdete v části [atributu CImageList](../mfc/reference/cimagelist-class.md) v *odkaz knihovny MFC* a [seznamy obrázků](https://msdn.microsoft.com/library/windows/desktop/bb761389) v sadě Windows SDK. Další informace o přetahování položky ovládacího prvku stromu, naleznete v tématu [přetažením položka stromového zobrazení](/windows/desktop/Controls/tree-view-controls), také v sadě Windows SDK.
+Je nutné zadat kód, který ve skutečnosti přetáhne položku. To obvykle zahrnuje pomocí přetahování možností funkce seznam obrázků a zpracování [wm_mousemove a](/windows/desktop/inputdev/wm-mousemove) a [WM_LBUTTONUP](/windows/desktop/inputdev/wm-lbuttonup) (nebo [WM_RBUTTONUP](/windows/desktop/inputdev/wm-rbuttonup)) zprávy odeslané po zahájení operace přetažení. Další informace o funkcích seznamu image, najdete v části [atributu CImageList](../mfc/reference/cimagelist-class.md) v *odkaz knihovny MFC* a [seznamy obrázků](/windows/desktop/controls/image-lists) v sadě Windows SDK. Další informace o přetahování položky ovládacího prvku stromu, naleznete v tématu [přetažením položka stromového zobrazení](/windows/desktop/Controls/tree-view-controls), také v sadě Windows SDK.
 
 Pokud jsou položky v ovládacím prvku strom cíli operace přetažení myší, musíte vědět, kdy je ukazatel myši na cílovou položku. Můžete zjistit pomocí volání [hitTest –](../mfc/reference/ctreectrl-class.md#hittest) členskou funkci. Zadejte bod a celé číslo nebo adresu [TVHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtvhittestinfo) strukturu, která obsahuje aktuální souřadnic ukazatele myši. Po návratu funkce celé číslo nebo struktura obsahuje příznak označující umístění ukazatele myši relativně vzhledem k stromové struktury. Pokud je kurzor na položku v ovládacím prvku stromu, struktura obsahuje popisovač předmětu také.
 

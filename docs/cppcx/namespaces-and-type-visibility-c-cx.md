@@ -2,12 +2,12 @@
 title: Obory názvů a viditelnost typů (C + +/ CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-ms.openlocfilehash: e9efc207fe0ed49fecf30366d265019e7a3ee009
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02a73f84314d4406c5fb8e9b8635a307c30e4c3d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440518"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693891"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Obory názvů a viditelnost typů (C + +/ CX)
 
@@ -40,7 +40,7 @@ Pomocí následující modifikátory přístupu můžete řídit viditelnost met
 
 ## <a name="windows-runtime-namespaces"></a>Obory názvů Windows Runtime
 
-Rozhraní Windows API se skládá z typů, které jsou deklarovány v Windows::\* obory názvů. Tyto obory názvů jsou vyhrazené pro Windows a typy nelze přidat k nim. V **prohlížeče objektů**, zobrazí se tyto obory názvů v souboru windows.winmd. Dokumentaci o těchto oborech názvů najdete v tématu [rozhraní Windows API](https://msdn.microsoft.com/library/windows/apps/br211377).
+Rozhraní Windows API se skládá z typů, které jsou deklarovány v Windows::\* obory názvů. Tyto obory názvů jsou vyhrazené pro Windows a typy nelze přidat k nim. V **prohlížeče objektů**, zobrazí se tyto obory názvů v souboru windows.winmd. Dokumentaci o těchto oborech názvů najdete v tématu [rozhraní Windows API](/uwp/api/).
 
 ## <a name="ccx-namespaces"></a>C + +/ CX obory názvů
 

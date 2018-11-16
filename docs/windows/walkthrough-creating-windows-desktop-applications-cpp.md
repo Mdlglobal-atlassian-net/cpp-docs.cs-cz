@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: fc2080470e3292a459325679a6c5dc00c01d6b35
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da95b1dac2f058de67719b4754d2df6dbeb6f7f0
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528375"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694046"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Návod: Vytvoření tradiční aplikace klasické pracovní plochy Windows (C++)
 
@@ -132,7 +132,7 @@ V dalším kroku se dozvíte, jak vytvořit kód pro aplikace klasické pracovn�
 
    V této funkci, napište kód pro zpracování *zprávy* , která přijímá aplikace z Windows při *události* dojít. Například pokud uživatel vybere tlačítko OK v aplikaci, Windows odešle zprávu, a můžete napsat kód uvnitř vaší `WndProc` funkce, která provádí práci je vhodné. Je volána *zpracování* událost. Pouze zpracování událostí, které jsou relevantní pro vaši aplikaci.
 
-   Další informace najdete v tématu [procedury okna](https://msdn.microsoft.com/library/windows/desktop/ms632593).
+   Další informace najdete v tématu [procedury okna](/windows/desktop/winmsg/window-procedures).
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>Přidání funkčnosti do funkce WinMain
 
@@ -157,7 +157,7 @@ V dalším kroku se dozvíte, jak vytvořit kód pro aplikace klasické pracovn�
 
    Informace o polích struktury výše najdete v tématu [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577).
 
-1. Zaregistrujte `WNDCLASSEX` s Windows tak, že ví o okně aplikace a jak odesílat zprávy do něj. Použití [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) fungovat a předejte strukturu třídy okna jako argument. `_T` – Makro se používá, protože používáme `TCHAR` typu.
+1. Zaregistrujte `WNDCLASSEX` s Windows tak, že ví o okně aplikace a jak odesílat zprávy do něj. Použití [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa) fungovat a předejte strukturu třídy okna jako argument. `_T` – Makro se používá, protože používáme `TCHAR` typu.
 
    ```cpp
    if (!RegisterClassEx(&wcex))
@@ -237,7 +237,7 @@ V dalším kroku se dozvíte, jak vytvořit kód pro aplikace klasické pracovn�
    return (int) msg.wParam;
    ```
 
-   Další informace o strukturách a funkcích ve smyčce zpráv naleznete v tématu [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), [GetMessage](https://msdn.microsoft.com/library/windows/desktop/ms644936), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage), a [DispatchMessage ](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
+   Další informace o strukturách a funkcích ve smyčce zpráv naleznete v tématu [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage), a [DispatchMessage ](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
 
    V tomto okamžiku `WinMain` funkce by měla vypadat podobně jako následující kód.
 

@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: eef6c6e08fec3b0ee89046aae19db9c23849f91f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1de59e4404960ed99dedaadfa576168bc31da444
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525415"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694787"
 ---
 # <a name="cbasepane-class"></a>Cbasepane – třída
 
@@ -1566,7 +1566,7 @@ Popisovač pro strukturu pozice odložené okna, nebo hodnota NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud předáte hodnotu NULL, jako *hdwp* parametru, tato metoda obvykle přesouvá okno. Pokud předáte popisovač, tato metoda provádí přesun odložené okna. Popisovač lze získat voláním [BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672) nebo uložením na návratový typ předchozí volání této metody.
+Pokud předáte hodnotu NULL, jako *hdwp* parametru, tato metoda obvykle přesouvá okno. Pokud předáte popisovač, tato metoda provádí přesun odložené okna. Popisovač lze získat voláním [BeginDeferWindowPos](/windows/desktop/api/winuser/nf-winuser-begindeferwindowpos) nebo uložením na návratový typ předchozí volání této metody.
 
 ##  <a name="onafterchangeparent"></a>  CBasePane::OnAfterChangeParent
 

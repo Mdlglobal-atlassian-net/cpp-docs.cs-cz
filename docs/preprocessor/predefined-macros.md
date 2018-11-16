@@ -1,7 +1,7 @@
 ---
 title: Předdefinovaná makra
 ms.custom: update_every_version
-ms.date: 04/30/2018
+ms.date: 11/12/2018
 f1_keywords:
 - _ATL_VER
 - __ATOM__
@@ -143,12 +143,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: 42b81431ca69de84a5d38cca3eaa088bb7255656
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ebc23545817de0f249185700454237c66610c13
+ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660457"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678351"
 ---
 # <a name="predefined-macros"></a>Předdefinovaná makra
 
@@ -378,6 +378,8 @@ Microsoft Visual C++ podporuje tyto dodatečné předdefinovaná makra.
    |Visual Studio 2017 verze 15.5|1912|
    |Visual Studio 2017 verze 15.6|1913|
    |Visual Studio 2017 verze 15.7|roku 1914|
+   |Visual Studio 2017 verze 15.8|1915|
+   |Visual Studio 2017 verze 15.9|1916|
 
    K otestování verzemi kompilátoru. nebo aktualizace v dané verzi sady Visual Studio nebo později, použijte **>=** – operátor (větší nebo rovno) k porovnání  **&#95;MSC&#95;VER** proti, který označuje verze. Pokud máte několik verzí pro porovnání vzájemně se vylučující způsobem, doporučujeme, abyste že si objednat vaše porovnání v sestupném pořadí podle čísla verze. Například tento kód kontroluje kompilátory, které jsou všeobecně dostupné v sadě Visual Studio 2015 a novější, pak kompilátory vydané v nebo po sadu Visual Studio 2013, pak provede akci pro všechny kompilátory vydané dřív než Visual Studio 2013:
 

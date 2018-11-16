@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tree controls [MFC], image lists
 - CTreeCtrl class [MFC], image lists
 ms.assetid: f560c4f2-20d2-4d28-ac33-4017e65fb0a6
-ms.openlocfilehash: 2b680ece131df434b65f02501f78f0cdb6507f08
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e42e601fbf803f8ccfe359a10664149ac8f11086
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551759"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693242"
 ---
 # <a name="tree-control-image-lists"></a>Seznamy obrázků v ovládacím prvku strom
 
@@ -25,7 +25,7 @@ Pokud je zadán seznam obrázků stavu, ovládací prvek stromu rezervuje prosto
 
 Zadáním **I_IMAGECALLBACK** hodnotu místo index image, může pozdržet zadávání vybrané nebo nevybrané image, dokud se má položka přibližně vyžadovaly překreslení. **I_IMAGECALLBACK** přesměruje do ovládacího prvku stromu k dotazování aplikací pro index odesláním [TVN_GETDISPINFO](/windows/desktop/Controls/tvn-getdispinfo) zprávy oznámení.
 
-[GetImageList](../mfc/reference/ctreectrl-class.md#getimagelist) členskou funkci načte popisovač ovládací prvek stromu seznamu obrázků. Tato funkce je užitečná, pokud je potřeba přidat další Image do seznamu. Další informace o seznamech image, najdete v části [používání atributu CImageList](../mfc/using-cimagelist.md), [atributu CImageList](../mfc/reference/cimagelist-class.md) v *odkaz knihovny MFC*, a [seznamy obrázků](https://msdn.microsoft.com/library/windows/desktop/bb761389) v Windows SDK.
+[GetImageList](../mfc/reference/ctreectrl-class.md#getimagelist) členskou funkci načte popisovač ovládací prvek stromu seznamu obrázků. Tato funkce je užitečná, pokud je potřeba přidat další Image do seznamu. Další informace o seznamech image, najdete v části [používání atributu CImageList](../mfc/using-cimagelist.md), [atributu CImageList](../mfc/reference/cimagelist-class.md) v *odkaz knihovny MFC*, a [seznamy obrázků](/windows/desktop/controls/image-lists) v Windows SDK.
 
 ## <a name="see-also"></a>Viz také
 

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: 6b8f84966ed58c5b031518bdf5e9f42cf7cedb48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2617113f2805f8d1c56e7fa6cbebfe669709c100
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429209"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694033"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Cprivateobjectsecuritydesc – třída
 
@@ -101,7 +101,7 @@ Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda se pokusí zjistit, zda seznam ACE volitelný řízení přístupu (DACL) a systému seznam řízení přístupu (SACL) popisovače zabezpečení aktuální byly Zdědit z nadřazené popisovač zabezpečení. Volá [ConvertToAutoInheritPrivateObjectSecurity](https://msdn.microsoft.com/library/windows/desktop/aa376403) funkce.
+Tato metoda se pokusí zjistit, zda seznam ACE volitelný řízení přístupu (DACL) a systému seznam řízení přístupu (SACL) popisovače zabezpečení aktuální byly Zdědit z nadřazené popisovač zabezpečení. Volá [ConvertToAutoInheritPrivateObjectSecurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity) funkce.
 
 ##  <a name="cprivateobjectsecuritydesc"></a>  CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc
 
@@ -181,7 +181,7 @@ Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda volá [CreatePrivateObjectSercurity](https://msdn.microsoft.com/library/windows/desktop/aa376405) nebo [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581).
+Tato metoda volá [CreatePrivateObjectSercurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity) nebo [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581).
 
 Druhá metoda umožňuje určit typ objektu identifikátor GUID nového objektu nebo řízení, jak jsou zděděné položky řízení přístupu.
 

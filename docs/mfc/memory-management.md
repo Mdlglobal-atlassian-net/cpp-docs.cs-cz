@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory [MFC], managing
 - memory allocation [MFC], MFC
 ms.assetid: 934ac81b-d630-4232-88e5-ea74f7187987
-ms.openlocfilehash: b5b91245d08c6c4a17c9ba96a0ca4dcf19932d9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22c5c2c835872a189fe342093a737d7887538256
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461379"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692740"
 ---
 # <a name="memory-management"></a>Správa paměti
 
@@ -21,7 +21,7 @@ Tato skupina článků popisuje, jak využít univerzální služby z třídy kn
 
 Jedním z hlavních rozdílů mezi dvěma přidělení techniky je, že s přidělení rámce, které většinou pracují s skutečná paměť blokovat, zatímco s přidělení haldy jsou vždy uvedeny ukazatele na blok paměti. Další hlavní rozdíl mezi dvě schémata je, že rámec objekty jsou automaticky odstraní, zatímco objektů haldy se musí explicitně odstranit programátorem.
 
-MFC – informace o správě paměti v aplikacích pro Windows najdete v tématu [Správa paměti](https://msdn.microsoft.com/library/windows/desktop/aa366779) v sadě Windows SDK.
+MFC – informace o správě paměti v aplikacích pro Windows najdete v tématu [Správa paměti](/windows/desktop/memory/memory-management) v sadě Windows SDK.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
 

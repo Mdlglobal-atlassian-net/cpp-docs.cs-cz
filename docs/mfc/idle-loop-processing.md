@@ -16,18 +16,18 @@ helpviewer_keywords:
 - processing [MFC]
 - background processing [MFC]
 ms.assetid: 5c7c46c1-6107-4304-895f-480983bb1e44
-ms.openlocfilehash: 1eff76e2e5fd98e63dccb9110882656f69da6539
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35078b944412142a07906791e74209fd5dab06d3
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604261"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693435"
 ---
 # <a name="idle-loop-processing"></a>Zpracování smyčky nečinnosti
 
 Mnoho aplikací provádění dlouhé zpracování "v pozadí." Někdy otázky výkonu při diktování pomocí multithreadingu pro takové činnosti. Vlákna zahrnují náklady na vývoj navíc, proto se nedoporučují pro jednoduché úlohy, jako je pracovní doba nečinnosti, který nemá MFC [OnIdle](../mfc/reference/cwinthread-class.md#onidle) funkce. Tento článek se zaměřuje na zpracování při nečinnosti. Další informace o multithreading, najdete v tématu [Témata multithreadingu](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-Některé druhy zpracování na pozadí jsou odpovídajícím způsobem provést během intervalů, které uživatel nijak jinak v aplikaci. V aplikace vyvinutá pro operační systém Microsoft Windows aplikace může provádět zpracování doby nečinnosti rozdělením časově náročný proces na mnoha malých fragmenty. Po zpracování každého fragment, aplikace provede spuštění ovládacích prvků do Windows pomocí [PeekMessage](https://msdn.microsoft.com/library/windows/desktop/ms644943) smyčky.
+Některé druhy zpracování na pozadí jsou odpovídajícím způsobem provést během intervalů, které uživatel nijak jinak v aplikaci. V aplikace vyvinutá pro operační systém Microsoft Windows aplikace může provádět zpracování doby nečinnosti rozdělením časově náročný proces na mnoha malých fragmenty. Po zpracování každého fragment, aplikace provede spuštění ovládacích prvků do Windows pomocí [PeekMessage](/windows/desktop/api/winuser/nf-winuser-peekmessagea) smyčky.
 
 Tento článek vysvětluje, dva způsoby, jak nečinnosti zpracování ve vaší aplikaci:
 
@@ -37,7 +37,7 @@ Tento článek vysvětluje, dva způsoby, jak nečinnosti zpracování ve vaší
 
 ##  <a name="_core_peekmessage_in_the_mfc_message_loop"></a> PeekMessage ve smyčce zpráv knihovny MFC
 
-V aplikace vyvinuté pomocí knihovny MFC, hlavní zprávy smyčky v `CWinThread` třída obsahuje smyčku, která volá [PeekMessage](https://msdn.microsoft.com/library/windows/desktop/ms644943) rozhraní API systému Win32. Smyčka také volání `OnIdle` členskou funkci `CWinThread` mezi zprávy. Aplikace může zpracovávat zprávy v této době nečinnosti tak, že přepíšete `OnIdle` funkce.
+V aplikace vyvinuté pomocí knihovny MFC, hlavní zprávy smyčky v `CWinThread` třída obsahuje smyčku, která volá [PeekMessage](/windows/desktop/api/winuser/nf-winuser-peekmessagea) rozhraní API systému Win32. Smyčka také volání `OnIdle` členskou funkci `CWinThread` mezi zprávy. Aplikace může zpracovávat zprávy v této době nečinnosti tak, že přepíšete `OnIdle` funkce.
 
 > [!NOTE]
 >  `Run`, `OnIdle`, a některé další členské funkce jsou nyní členy třídy `CWinThread` , nikoli z třídy `CWinApp`. `CWinApp` je odvozen z `CWinThread`.

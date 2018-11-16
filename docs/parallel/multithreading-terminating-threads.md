@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-ms.openlocfilehash: c92d95bc2aa63d78c98d10e25de79344fe1ee0f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37a7a6fc443e172f80cc7c30c462ec4d69b3e8de
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484016"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693292"
 ---
 # <a name="multithreading-terminating-threads-in-mfc"></a>Multithreading: Ukončení vláken v prostředí MFC
 
@@ -34,7 +34,7 @@ Dvě běžné situace způsobí ukončení vlákna: existuje řídící funkce n
 
 U pracovního vlákna je normální ukončení vlákna jednoduché: Ukončí řídící funkci a vrátí hodnotu, která označuje důvod ukončení. Můžete použít buď [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) funkce nebo **vrátit** příkazu. Obvykle 0 znamená úspěšné dokončení, ale to je jenom na vás.
 
-Pro vlákno uživatelského rozhraní je proces stejně tak jednoduchý: prostřednictvím vlákna uživatelského rozhraní volejte [PostQuitMessage](https://msdn.microsoft.com/library/windows/desktop/ms644945) v sadě Windows SDK. Jediným parametrem, který `PostQuitMessage` přijímá, je ukončovací kód vlákna. Jako u pracovních vláken 0 obvykle znamená úspěšné dokončení.
+Pro vlákno uživatelského rozhraní je proces stejně tak jednoduchý: prostřednictvím vlákna uživatelského rozhraní volejte [PostQuitMessage](/windows/desktop/api/winuser/nf-winuser-postquitmessage) v sadě Windows SDK. Jediným parametrem, který `PostQuitMessage` přijímá, je ukončovací kód vlákna. Jako u pracovních vláken 0 obvykle znamená úspěšné dokončení.
 
 ##  <a name="_core_premature_thread_termination"></a> Předčasné ukončení vlákna
 

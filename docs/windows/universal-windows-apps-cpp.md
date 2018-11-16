@@ -2,12 +2,12 @@
 title: Univerzální aplikace pro Windows (C++)
 ms.date: 03/30/2018
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
-ms.openlocfilehash: e6e294b45e183e5e8baebcaad65cece846adb07e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ffcc38dfd849c9cd5eaf9e6466d53731becdd9a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481897"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693084"
 ---
 # <a name="universal-windows-apps-c"></a>Univerzální aplikace pro Windows (C++)
 
@@ -32,8 +32,9 @@ C + +/ WinRT je nový, pouze záhlaví založený na knihovně C++ language proj
 
 ## <a name="uwp-apps-that-use-the-windows-runtime-c-template-library-wrl"></a>Aplikace UWP, které používají knihovna šablon C++ Windows Runtime (WRL)
 
-Knihovna šablon C++ Windows Runtime nabízí nízkoúrovňová rozhraní modelu COM, podle kterých může kód ISO C++ přístup k prostředí Windows Runtime v prostředí bez výjimek. Ve většině případů doporučujeme použít C + +/ WinRT nebo C + +/ CX místo Windows Runtime knihovny šablon jazyka C++ pro vývoj aplikací pro UPW. Informace o knihovna šablon C++ Runtime Windows najdete v tématu [Windows Runtime C++ šablony knihovny (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
+Knihovna šablon C++ Windows Runtime nabízí nízkoúrovňová rozhraní modelu COM, podle kterých může kód ISO C++ přístup k prostředí Windows Runtime v prostředí bez výjimek. Ve většině případů doporučujeme použít C + +/ WinRT nebo C + +/ CX místo Windows Runtime knihovny šablon jazyka C++ pro vývoj aplikací pro UPW. Informace o knihovna šablon C++ Runtime Windows najdete v tématu [Windows Runtime C++ šablony knihovny (WRL)](windows-runtime-cpp-template-library-wrl.md).
 
 ## <a name="see-also"></a>Viz také:
 
 [Visual C++](../visual-cpp-in-visual-studio.md)<br/>
+[Přehled programování v C++ v systému Windows](overview-of-windows-programming-in-cpp.md)<br/>

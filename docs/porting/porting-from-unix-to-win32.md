@@ -10,12 +10,12 @@ helpviewer_keywords:
 - porting to Win32 [C++]
 - Win32 applications [C++], migrating from UNIX
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: ac1fb2304c6d06a6d3e1638fa7ded8a6903ee9fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70cbff207931ada378a89b978acf13fadb3a8744
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467778"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694085"
 ---
 # <a name="porting-from-unix-to-win32"></a>Portování ze systému UNIX do Win32
 
@@ -61,7 +61,7 @@ Server jiného výrobce pro společnost poskytující softwarem, který podporuj
 
 Další možností je přenesení aplikací systému UNIX do Win32 přímo. Pomocí knihovny ANSI jazyka C/C++ a obchodní knihovny kompilátoru jazyka C, řadu tradiční systém, který volá spoléhal na podle aplikací systému UNIX jsou k dispozici v aplikacích Win32.
 
-Výstupní model **stdio**– na základě aplikací není potřeba změnit od konzoly Win32 API napodobují **stdio** model a verze *curses* existují, které používají rozhraní API konzoly Win32. Další informace najdete v tématu [SetConsoleCursorPosition](https://msdn.microsoft.com/library/windows/desktop/ms686025).
+Výstupní model **stdio**– na základě aplikací není potřeba změnit od konzoly Win32 API napodobují **stdio** model a verze *curses* existují, které používají rozhraní API konzoly Win32. Další informace najdete v tématu [SetConsoleCursorPosition](/windows/console/setconsolecursorposition).
 
 Aplikace založené na soketu Berkeley potřebovat velmi málo změny pracovních jako aplikace typu Win32. Rozhraní Windows Sockets je navržená pro přenositelnost sokety BSD, s minimálními změnami, které jsou popsány v úvodní části specifikace rozhraní WinSock.
 
@@ -69,7 +69,7 @@ Windows podporuje CLS DCE, který RPC, tak, aby byly snadno použitelné aplikac
 
 Jedna z největších oblastí rozdíl je v modelu procesu. Se systémem UNIX `fork`; Win32 je nepodporuje. V závislosti na využívání `fork` a kódové základny Win32 má dvě rozhraní API, které je možné: `CreateProcess` a `CreateThread`. Aplikace systému UNIX, která větve více kopií sebe sama, může být přepracována v systému Win32 má více procesů nebo jednoho procesu s více vlákny. Pokud jsou používány více procesů, existují různé způsoby IPC, který slouží ke komunikaci mezi procesy, které (a možná se aktualizovat kód a data nového procesu vypadal nadřazeným prvkem, pokud funkce, která `fork` poskytuje je potřeba). Další informace o IPC najdete v tématu [meziprocesová komunikace](/windows/desktop/ipc/interprocess-communications).
 
-Windows a UNIX Grafické modely se velmi liší. UNIX používá X okno systému grafického uživatelského rozhraní, zatímco Windows používá rozhraní GDI. Když je to podobný koncept, neexistuje jednoduchý mapování rozhraní API X GDI rozhraní API. Podpora OpenGL je ale k dispozici pro migraci aplikací založené na OpenGL systému UNIX. A jsou X klienti a servery pro Windows X. Zobrazit [kontexty zařízení](https://msdn.microsoft.com/library/windows/desktop/dd183553) informace o rozhraní GDI.
+Windows a UNIX Grafické modely se velmi liší. UNIX používá X okno systému grafického uživatelského rozhraní, zatímco Windows používá rozhraní GDI. Když je to podobný koncept, neexistuje jednoduchý mapování rozhraní API X GDI rozhraní API. Podpora OpenGL je ale k dispozici pro migraci aplikací založené na OpenGL systému UNIX. A jsou X klienti a servery pro Windows X. Zobrazit [kontexty zařízení](/windows/desktop/gdi/device-contexts) informace o rozhraní GDI.
 
 Základní aplikace v systému UNIX, včetně mnoha aplikace CGI, by měl port snadno do prostředí Visual C++, které běží na Windows. Funkce jako `open`, `fopen`, `read`, `write` a ostatní jsou k dispozici v knihovně runtime Visual C++. Navíc existuje mapování 1: 1 mezi rozhraním API systému UNIX C a rozhraní API systému Win32: `open` k `CreateFile`, `read` k `ReadFile`, `write` k `WriteFile`, `ioctl` k `DeviceIOControl`, `close` k `CloseFile`, a tak dále.
 

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - WNDCLASS [MFC]
 - AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
-ms.openlocfilehash: 92d55780ad309a9c8392cf86e7fa4eaefc5f407a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f16480d238ca2a3e683219984c54d67159f806d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619151"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693854"
 ---
 # <a name="tn001-window-class-registration"></a>TN001: Registrace tříd oken
 
-Tato poznámka popisuje rutiny knihovny MFC, které registrují zvláštní [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)es vyžadované Microsoft Windows. Konkrétní `WNDCLASS` jsou uvedeny atributy použité v rámci MFC a Windows.
+Tato poznámka popisuje rutiny knihovny MFC, které registrují zvláštní [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)es vyžadované Microsoft Windows. Konkrétní `WNDCLASS` jsou uvedeny atributy použité v rámci MFC a Windows.
 
 ## <a name="the-problem"></a>Problém
 

@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 495d30f9fabcb3a9586504282dee881362988c3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9b6a462cf359bbd31958509c4fe7d0d71e490d11
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523478"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694306"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA – struktura
 
@@ -259,10 +259,10 @@ Použití [OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemedata)
 [in] Ukazatel na kontext zařízení.
 
 *iPartId*<br/>
-[in] Ovládací prvek součást, která má vzhled požadovaný text. Další informace najdete v tématu části sloupce v tabulce v [částí a stavy](https://msdn.microsoft.com/library/windows/desktop/bb773210). Pokud tato hodnota je 0, text je vykreslen v výchozí písmo nebo písmo vybrané do kontextu zařízení.
+[in] Ovládací prvek součást, která má vzhled požadovaný text. Další informace najdete v tématu části sloupce v tabulce v [částí a stavy](/windows/desktop/controls/parts-and-states). Pokud tato hodnota je 0, text je vykreslen v výchozí písmo nebo písmo vybrané do kontextu zařízení.
 
 *iStateId*<br/>
-[in] Stav ovládacího prvku, která má vzhled požadovaný text. Další informace najdete v tématu stavy sloupec tabulky v [částí a stavy](https://msdn.microsoft.com/library/windows/desktop/bb773210).
+[in] Stav ovládacího prvku, která má vzhled požadovaný text. Další informace najdete v tématu stavy sloupec tabulky v [částí a stavy](/windows/desktop/controls/parts-and-states).
 
 *strText*<br/>
 [in] Text, chcete-li nakreslit.
@@ -293,7 +293,7 @@ Motiv určuje vizuální styl aplikace. Motiv se nepoužívá k vykreslování t
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [COLORREF](/windows/desktop/gdi/colorref)<br/>
-[Části a stavy](https://msdn.microsoft.com/library/windows/desktop/bb773210)<br/>
+[Části a stavy](/windows/desktop/controls/parts-and-states)<br/>
 [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)<br/>
 [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
 [Správce oken plochy](/windows/desktop/dwm/dwm-overview)<br/>
@@ -431,7 +431,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ### <a name="parameters"></a>Parametry
 
 *Informace o*<br/>
-[out v] A [NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175) strukturu, která obsahuje škálovatelné metriky související s neklientské oblasti okna nonminimized.
+[out v] A [NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa) strukturu, která obsahuje škálovatelné metriky související s neklientské oblasti okna nonminimized.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -439,7 +439,7 @@ Hodnota TRUE, pokud metoda uspěje; v opačném případě hodnota FALSE.
 
 ### <a name="see-also"></a>Viz také
 
-[Struktura NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175)
+[Struktura NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)
 
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
 

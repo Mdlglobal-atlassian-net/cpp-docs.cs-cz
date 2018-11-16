@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: c1eeb649917e8457af5a3a27324ae65ae8259ac8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f6c41b3675251df6b07e44003215fa67fb7e795
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477317"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694189"
 ---
 # <a name="cwinthread-class"></a>CWinThread – třída
 
@@ -445,7 +445,7 @@ Nenulové, pokud je úspěšná. jinak 0.
 Publikovaná zpráva mapováno makra map zpráv ON_THREAD_MESSAGE obslužnou rutinu správné zprávy.
 
 > [!NOTE]
-> Při volání [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946), zprávy, nachází ve frontě zpráv vlákna. Ale protože zprávy zveřejněné tímto způsobem nejsou přidružené časového období, MFC nebude jejich vypravování do obslužné rutiny příkazu nebo zprávy. Ke zpracování těchto zpráv, přepište `PreTranslateMessage()` funkce vaše CWinApp odvozené třídy a ručně ke zpracování zpráv.
+> Při volání [PostThreadMessage](/windows/desktop/api/winuser/nf-winuser-postthreadmessagea), zprávy, nachází ve frontě zpráv vlákna. Ale protože zprávy zveřejněné tímto způsobem nejsou přidružené časového období, MFC nebude jejich vypravování do obslužné rutiny příkazu nebo zprávy. Ke zpracování těchto zpráv, přepište `PreTranslateMessage()` funkce vaše CWinApp odvozené třídy a ručně ke zpracování zpráv.
 
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage
 

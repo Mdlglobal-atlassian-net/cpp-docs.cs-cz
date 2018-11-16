@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 1ab89c860813996360cddbf0caf5d4ebc395603d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ec5b734b23a27522fe430d24d2a65eebcca3dd3
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452712"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694722"
 ---
 # <a name="chotkeyctrl-class"></a>Chotkeyctrl – třída
 
@@ -67,7 +67,7 @@ Tento ovládací prvek (a tedy `CHotKeyCtrl` třídy) je dostupná jenom pro pro
 
 Když uživatel se rozhodl kombinaci kláves, můžete aplikaci načíst zadanou kombinaci kláves z ovládacího prvku a pomocí WM_SETHOTKEY nastavení klávesové zkratky v systému. Vždy, když uživatel stiskne klávesovou zkratku po tomto datu, z jakékoliv části systému, určená ve zprávě WM_SETHOTKEY okno obdrží zprávu WM_SYSCOMMAND zadání SC_HOTKEY. Tato zpráva aktivuje okně, které obdrží. Klávesové zkratky zůstane platný až do aplikace, která volá WM_SETHOTKEY ukončí.
 
-Tento mechanismus je odlišný od výměně klíčů podporu, která závisí na zprávu WM_HOTKEY a Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) a [UnregisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646327) funkce.
+Tento mechanismus je odlišný od výměně klíčů podporu, která závisí na zprávu WM_HOTKEY a Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) a [UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey) funkce.
 
 Další informace o používání `CHotKeyCtrl`, naleznete v tématu [ovládací prvky](../../mfc/controls-mfc.md) a [používání atributu CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).
 

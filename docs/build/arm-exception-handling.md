@@ -2,12 +2,12 @@
 title: Zpracování výjimek ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: b2b6b9b3508dd7a4dd42a2e22ad1052851c7c0c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6df8afd453f7e71d1ecc2ebb188c079a3aad02a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522265"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694345"
 ---
 # <a name="arm-exception-handling"></a>Zpracování výjimek ARM
 
@@ -15,7 +15,7 @@ Windows na ARM používá stejné strukturovaného zpracování mechanismus pro 
 
 ## <a name="arm-exception-handling"></a>Zpracování výjimek ARM
 
-Používá Windows na ARM *parsovat kódy unwind* řídit během odvíjení zásobníku [strukturované zpracování výjimek](https://msdn.microsoft.com/library/windows/desktop/ms680657) (SEH). Unwind kódy jsou posloupnost bajtů, které jsou uložené v části .xdata spustitelné bitové kopie. Popisují operace kód prologu a epilogu funkce abstraktní způsobem tak, aby efekty prologu funkce může být v rámci přípravy odvíjení rámce zásobníku volajícího vrátit zpět.
+Používá Windows na ARM *parsovat kódy unwind* řídit během odvíjení zásobníku [strukturované zpracování výjimek](/windows/desktop/debug/structured-exception-handling) (SEH). Unwind kódy jsou posloupnost bajtů, které jsou uložené v části .xdata spustitelné bitové kopie. Popisují operace kód prologu a epilogu funkce abstraktní způsobem tak, aby efekty prologu funkce může být v rámci přípravy odvíjení rámce zásobníku volajícího vrátit zpět.
 
 EABI ARM (vložené aplikace binary interface) určuje parsovat kódy unwind odvíjení model výjimek, který používá, ale nepostačuje pro SEH odvíjení ve Windows, které musí zpracovat asynchronní případech, kdy procesor je uprostřed prologu nebo epilogu funkce. Windows také odděluje odvíjení řízení na odvíjení úrovni funkcí a uvolnění oboru specifické pro jazyk, který unified v ARM EABI. Z těchto důvodů Windows na ARM Určuje další podrobnosti pro data a procedura odvíjení.
 

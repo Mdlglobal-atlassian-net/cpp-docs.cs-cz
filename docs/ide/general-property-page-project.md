@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: 5479b892a2cb97fb645dba4ffac70dd9ac4aeffe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f7af0f3dd9ff373a458a6f93fb78fda443bd8e9
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594512"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520475"
 ---
 # <a name="general-property-page-project"></a>Obecná stránka vlastností (projekt)
 
@@ -110,29 +110,29 @@ Vlastnosti v oddíle Výchozí projektu představují výchozí vlastnosti, kter
 
 - **Typ konfigurace**
 
-   Existují vybírat z několika typů konfigurace:
+  Existují vybírat z několika typů konfigurace:
 
-   - **Aplikace (.exe)**
+  - **Aplikace (.exe)**
 
-      Zobrazí sadu nástrojů linkeru (kompilátor C/C++, MIDL, kompilátor prostředků, Linker, BSCMake, generátor Proxy webové služby XML, vlastní sestavení, události prebuild, prelink a postbuild).
+     Zobrazí sadu nástrojů linkeru (kompilátor C/C++, MIDL, kompilátor prostředků, Linker, BSCMake, generátor Proxy webové služby XML, vlastní sestavení, události prebuild, prelink a postbuild).
 
-   - **Dynamická knihovna (.dll)**
+  - **Dynamická knihovna (.dll)**
 
-      Zobrazí sadu nástrojů linkeru, určuje možnost/DLL linkeru a přidá definici _windll do CL.
+     Zobrazí sadu nástrojů linkeru, určuje možnost/DLL linkeru a přidá definici _windll do CL.
 
-   - **Soubor pravidel**
+  - **Soubor pravidel**
 
-      Zobrazí sadu nástrojů makefile (NMake).
+     Zobrazí sadu nástrojů makefile (NMake).
 
-   - **Statická knihovna (.lib)**
+  - **Statická knihovna (.lib)**
 
-      Zobrazí sadu nástrojů librarian (stejné jako sadu nástrojů linkeru, s výjimkou nahrazení nástroje librarian pro linker a vynechání generátoru Proxy webové služby XML).
+     Zobrazí sadu nástrojů librarian (stejné jako sadu nástrojů linkeru, s výjimkou nahrazení nástroje librarian pro linker a vynechání generátoru Proxy webové služby XML).
 
-   - **Nástroj**
+  - **Nástroj**
 
-      Zobrazí sadu nástrojů nástroje (MIDL, vlastní sestavení, události prebuild, postbuild).
+     Zobrazí sadu nástrojů nástroje (MIDL, vlastní sestavení, události prebuild, postbuild).
 
-   Programový přístup k této vlastnosti, najdete v článku <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>.
+  Programový přístup k této vlastnosti, najdete v článku <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>.
 
 - **Použití knihovny MFC**
 

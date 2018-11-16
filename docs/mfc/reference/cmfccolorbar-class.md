@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: 6dc3044d1ca402ca099184eced2e5615ff161804
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e6ce3f48e2b0a7b0aa8396047eb4a52015f364d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636875"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694839"
 ---
 # <a name="cmfccolorbar-class"></a>Cmfccolorbar – třída
 
@@ -129,7 +129,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 |[CMFCColorBar::AllowChangeTextLabels](#allowchangetextlabels)|Označuje, zda lze změnit označení textového barvu tlačítka.|
 |[CMFCColorBar::AllowShowOnList](#allowshowonlist)|Označuje, zda lze během procesu přizpůsobení panelu nástrojů seznamu zobrazit objekt ovládacího prvku pruhu barev.|
 |[CMFCColorBar::CalcSize](#calcsize)|Volá se rozhraním, jako součást procesu výpočet rozložení.|
-|[CMFCColorBar::CreatePalette](#createpalette)|Initalizes barevnou paletu barev v určeném poli barvy.|
+|[CMFCColorBar::CreatePalette](#createpalette)|Inicializuje barevnou paletu barev v určeném poli barvy.|
 |[CMFCColorBar::GetColorGridSize](#getcolorgridsize)|Vypočítá počet řádků a sloupců v mřížce ovládací prvek pruhu barev.|
 |[CMFCColorBar::GetExtraHeight](#getextraheight)|Vypočítá dalších výška vyžadující aktuální panelu barev. Chcete-li zobrazit prvky různé uživatelského rozhraní, jako **jiných** tlačítko barvy dokumentu a tak dále.|
 |[CMFCColorBar::InitColors](#initcolors)|Inicializuje pole barvy, barvy v paletu zadaný nebo výchozí palety systému.|

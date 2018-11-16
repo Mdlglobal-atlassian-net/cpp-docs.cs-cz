@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 71b5eb9c97b8c6370a08281fdf4be7074a579f8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d5216cd399943cda67bc9387ea37c938e5cab48
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596661"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694332"
 ---
 # <a name="application-information-and-management"></a>Informace o aplikacích a správa aplikací
 
@@ -646,7 +646,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
 ### <a name="parameters"></a>Parametry
 
 *lpWndClass*<br/>
-Ukazatel [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struktura obsahující informace o třídě okna k registraci. Další informace o této struktuře naleznete v tématu Windows SDK.
+Ukazatel [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) struktura obsahující informace o třídě okna k registraci. Další informace o této struktuře naleznete v tématu Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -681,7 +681,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 ### <a name="parameters"></a>Parametry
 
 *nClassStyle*<br/>
-Určuje styl třídu Windows nebo kombinace stylů, vytvořené pomocí bitového operátoru OR ( **&#124;**) operátoru pro třídu okna. Seznam tříd stylů, najdete v článku [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struktura v sadě Windows SDK. Pokud má hodnotu NULL, výchozí hodnoty nastavte následujícím způsobem:
+Určuje styl třídu Windows nebo kombinace stylů, vytvořené pomocí bitového operátoru OR ( **&#124;**) operátoru pro třídu okna. Seznam tříd stylů, najdete v článku [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) struktura v sadě Windows SDK. Pokud má hodnotu NULL, výchozí hodnoty nastavte následujícím způsobem:
 
 - Nastaví styl myši CS_DBLCLKS, která odešle dvakrát klikněte na panel zpráv pro proceduru okna při poklepání myši.
 

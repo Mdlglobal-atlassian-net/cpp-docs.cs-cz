@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: ffe7b975443b8bdc050bcb19af4f990b2e5ffafa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50fb7da1a59d35d96f1f65428b3a361e3a226607
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576628"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694451"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd – třída
 
@@ -142,7 +142,7 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *lpszClassName*<br/>
-Odkazuje na řetězec znaků zakončené znakem null, který názvy třídy Windows ( [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struktura). Název třídy může být jakýkoli název zaregistrované [afxregisterwndclass –](application-information-and-management.md#afxregisterwndclass) globální funkce. By měl mít hodnotu NULL pro standardní `CMDIChildWnd`.
+Odkazuje na řetězec znaků zakončené znakem null, který názvy třídy Windows ( [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) struktura). Název třídy může být jakýkoli název zaregistrované [afxregisterwndclass –](application-information-and-management.md#afxregisterwndclass) globální funkce. By měl mít hodnotu NULL pro standardní `CMDIChildWnd`.
 
 *lpszWindowName*<br/>
 Odkazuje na řetězec znaků zakončené znakem null představující název okna. Používá jako text záhlaví.

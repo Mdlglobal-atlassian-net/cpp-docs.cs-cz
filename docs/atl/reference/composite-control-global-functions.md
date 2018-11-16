@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 6438b9d125cc2b44c6c4525dcfa5a2bd95763304
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3b4abc1afc99a00d83c25574df06ebfb27141c65
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524427"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694176"
 ---
 # <a name="composite-control-global-functions"></a>Globální funkce složených ovládacích prvků
 
@@ -490,7 +490,7 @@ Vždy vrátí hodnotu TRUE.
 
 ### <a name="remarks"></a>Poznámky
 
-Jednoduše volá tuto funkci [UnregisterClass](https://msdn.microsoft.com/library/windows/desktop/ms644899) jak je popsáno v sadě Windows SDK.
+Jednoduše volá tuto funkci [UnregisterClass](/windows/desktop/api/winuser/nf-winuser-unregisterclassa) jak je popsáno v sadě Windows SDK.
 
 Voláním této funkce Vyčištění po všechny existující hostitele windows nejsou zničeny, pokud jste volali [AtlAxWinInit](#atlaxwininit) a už nebude potřeba vytvořit hostitele windows. Pokud není voláním této funkce, třídy okna se odregistrovat automaticky při ukončení procesu.
 

@@ -37,12 +37,12 @@ f1_keywords:
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_HANDLER
 ms.assetid: eefdd546-8934-4a30-b263-9c06a8addcbd
-ms.openlocfilehash: 5502dae40392679f47b691a822260accbf597dc0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a246e907d401167011b5a3e1306c146a338e233a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555100"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694371"
 ---
 # <a name="message-map-macros-atl"></a>Makra Map zpráv (ATL)
 
@@ -607,7 +607,7 @@ Mapování sady zpráv `bHandled` na hodnotu TRUE před `MessageHandler` je vol�
 > [!NOTE]
 >  Vždy začínají mapy zpráv s [BEGIN_MSG_MAP](#begin_msg_map). Pak může deklarovat mapy následující alternativní zpráv s [ALT_MSG_MAP](#alt_msg_map). [END_MSG_MAP](#end_msg_map) – makro označuje konec mapování zprávy. Mapování každé zprávy musí mít přesně jednu instanci BEGIN_MSG_MAP a END_MSG_MAP.
 
-Kromě MESSAGE_HANDLER, můžete použít [COMMAND_HANDLER](#command_handler) a [NOTIFY_HANDLER](#notify_handler) mapovat [wm_command –](/windows/desktop/menurc/wm-command) a [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) zprávy , v uvedeném pořadí.
+Kromě MESSAGE_HANDLER, můžete použít [COMMAND_HANDLER](#command_handler) a [NOTIFY_HANDLER](#notify_handler) mapovat [wm_command –](/windows/desktop/menurc/wm-command) a [WM_NOTIFY](/windows/desktop/controls/wm-notify) zprávy , v uvedeném pořadí.
 
 Další informace o používání mapy zpráv v ATL naleznete v tématu [mapy zpráv](../../atl/message-maps-atl.md).
 
@@ -644,7 +644,7 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 
 ##  <a name="notify_code_handler"></a>  NOTIFY_CODE_HANDLER
 
-Podobně jako [NOTIFY_HANDLER](#notify_handler), ale mapuje [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) zprávy pouze na základě oznámení kódu.
+Podobně jako [NOTIFY_HANDLER](#notify_handler), ale mapuje [WM_NOTIFY](/windows/desktop/controls/wm-notify) zprávy pouze na základě oznámení kódu.
 
 ```
 NOTIFY_CODE_HANDLER(cd, func)
@@ -683,7 +683,7 @@ NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="remarks"></a>Poznámky
 
-Mapuje NOTIFY_HANDLER [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) zpráva zadaná obslužná rutina funkce, na základě kód upozornění a identifikátor ovládacího prvku.
+Mapuje NOTIFY_HANDLER [WM_NOTIFY](/windows/desktop/controls/wm-notify) zpráva zadaná obslužná rutina funkce, na základě kód upozornění a identifikátor ovládacího prvku.
 
 Všechny funkce uvedené v makru NOTIFY_HANDLER musí být definován následujícím způsobem:
 
@@ -708,7 +708,7 @@ Další informace o používání mapy zpráv v ATL naleznete v tématu [mapy zp
 
 ##  <a name="notify_id_handler"></a>  NOTIFY_ID_HANDLER
 
-Podobně jako [NOTIFY_HANDLER](#notify_handler), ale mapuje [wm_notify –](https://msdn.microsoft.com/library/windows/desktop/bb775583) zprávy podle pouze identifikátor ovládacího prvku.
+Podobně jako [NOTIFY_HANDLER](#notify_handler), ale mapuje [wm_notify –](/windows/desktop/controls/wm-notify) zprávy podle pouze identifikátor ovládacího prvku.
 
 ```
 NOTIFY_ID_HANDLER( id, func )
@@ -728,7 +728,7 @@ NOTIFY_ID_HANDLER( id, func )
 
 ##  <a name="notify_range_code_handler"></a>  NOTIFY_RANGE_CODE_HANDLER
 
-Podobně jako [NOTIFY_RANGE_HANDLER](#notify_range_handler), ale mapuje [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) zprávy s kódem konkrétní oznámení z celou řadu ovládacích prvků na funkci jedna obslužná rutina.
+Podobně jako [NOTIFY_RANGE_HANDLER](#notify_range_handler), ale mapuje [WM_NOTIFY](/windows/desktop/controls/wm-notify) zprávy s kódem konkrétní oznámení z celou řadu ovládacích prvků na funkci jedna obslužná rutina.
 
 ```
 NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
@@ -758,7 +758,7 @@ Tento rozsah je na základě identifikátoru odesílání zprávy ovládacího p
 
 ##  <a name="notify_range_handler"></a>  NOTIFY_RANGE_HANDLER
 
-Podobně jako [NOTIFY_HANDLER](#notify_handler), ale mapuje [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) zprávy z celou řadu ovládacích prvků na funkci jedna obslužná rutina.
+Podobně jako [NOTIFY_HANDLER](#notify_handler), ale mapuje [WM_NOTIFY](/windows/desktop/controls/wm-notify) zprávy z celou řadu ovládacích prvků na funkci jedna obslužná rutina.
 
 ```
 NOTIFY_RANGE_HANDLER( idFirst, idLast, func )

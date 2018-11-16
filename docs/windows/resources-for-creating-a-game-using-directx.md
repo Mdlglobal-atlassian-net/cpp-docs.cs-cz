@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [C++], games
 - DirectX [C++]
 ms.assetid: 863090ed-6091-45db-aabb-7fd02f76c1df
-ms.openlocfilehash: d76db600c5cec1099daa195324e7102ed5cdbd24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f17b2ddcc6db68f2045d9887a799555fa6ed0643
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586794"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692590"
 ---
 # <a name="resources-for-creating-a-c-game-using-directx"></a>Prostředky pro vytvoření hry s C++ pomocí DirectX
 
@@ -25,7 +25,7 @@ Pro Windows 8.1 a novější sady SDK rozhraní DirectX je součástí sady Wind
 
 Vytvoření aplikací rozhraní DirectX pro Windows 7, Windows Vista nebo Windows XP, si můžete stáhnout samostatné [rozhraní DirectX SDK](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).
 
-[Grafika DirectX a hraní her](https://msdn.microsoft.com/library/windows/desktop/ee663274) obsahuje informace a ukázky, které vám pomůžou začít pracovat s rozhraním DirectX programování.
+[Grafika DirectX a hraní her](/windows/desktop/directx) obsahuje informace a ukázky, které vám pomůžou začít pracovat s rozhraním DirectX programování.
 
 [Win32 – aplikace Windows](../windows/windows-desktop-applications-cpp.md) obsahuje články, které popisují, jak vytvořit základní aplikaci klasické pracovní plochy Windows.
 

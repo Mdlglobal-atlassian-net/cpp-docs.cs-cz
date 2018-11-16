@@ -2,14 +2,15 @@
 title: Převést na literál nezpracovaného řetězce
 ms.date: 11/16/2016
 ms.assetid: fffbfee4-66ee-42ba-aeb9-df07fb702c51
-ms.openlocfilehash: 508ab52dc1ca41a97dd8c24df5c5d45c379ea265
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf492e6796b9d2342b5952abb093bddd5ede114b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509510"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692589"
 ---
 # <a name="convert-to-raw-string-literal"></a>Převést na literál nezpracovaného řetězce
+
 **Co:** umožňuje proměnit libovolný řetězec C++ nezpracovaný řetězcový literál.
 
 **Kdy:** řetězec s řídicí znaky, které by neměly být zpracován jako řídicí znaky.

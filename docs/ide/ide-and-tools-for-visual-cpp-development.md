@@ -1,16 +1,16 @@
 ---
 title: IDE a nástroje pro vývoj v jazyce Visual C++
 description: Integrované vývojové prostředí sady Visual Studio podporuje vývoj v jazyce C++ ve Windows, Linux, Android a iOS pomocí editoru kódu, ladicí program, testovacích architektur, statické analyzátory a jiných programovacích nástrojích.
-ms.date: 09/27/2018
+ms.date: 11/18/2018
 helpviewer_keywords:
 - Visual C++, development tools
 ms.assetid: 56eabafb-1956-4f0f-bec5-29b887763559
-ms.openlocfilehash: e24ba58cf0cf94f1505adaf056f64580b8f7829e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5dd7f681d05d36215c4086165165122a05be23c
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473356"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693955"
 ---
 # <a name="ide-and-compiler-tools-for-visual-c-development"></a>Integrované vývojové prostředí a kompilačních nástrojů pro vývoj v jazyce Visual C++
 
@@ -105,14 +105,24 @@ Můžete taky nasadit nativní C++ desktop do jiného počítače pro další in
 
 Další informace o nasazení a C + +/ CLI programu, najdete v článku [Průvodce nasazením pro vývojáře](/dotnet/framework/deployment/deployment-guide-for-developers),
 
+## <a name="in-this-section"></a>V tomto oddílu
+
+|||
+|-|-|
+|[Psaní a refaktoring kódu (C++)](writing-and-refactoring-code-cpp.md)| Jak používat editor kódu jazyka C++ psát, refaktoring a navigace v kódu.|
+|[Nástroje a funkce Visual C++ v různých edicích sady Visual Studio](visual-cpp-tools-and-features-in-visual-studio-editions.md)|Ukazuje, jaké funkce jsou k dispozici v různých edicích sady Visual Studio.|
+|[Projekty pro otevřenou složku C++ v sadě Visual Studio](non-msbuild-projects.md).|Popisuje, jak použít sestavovací systém libovolného C++ libovolné ze sady Visual Studio.|
+|[Projekty CMake v jazyce Visual C++](cmake-tools-for-visual-cpp.md).|Popisuje, jak vytvářet projekty CMake v sadě Visual Studio.|
+|[Vytvářet a spravovat projekty využívající MSBuild](creating-and-managing-visual-cpp-projects.md)|Poskytuje přehled o projekty využívající C++ MSBuild v sadě Visual Studio a odkazy na další články, které popisují, jak vytvořit a spravovat je.|
+|[Nasazení aplikací klasické pracovní plochy](deploying-native-desktop-applications-visual-cpp.md)|Poskytuje přehled o nasazení aplikací v jazyce C++ a odkazy na další články, které popisují nasazení podrobně.|
+|[Přidání funkce pomocí Průvodců kódem (C++)](adding-functionality-with-code-wizards-cpp.md)| Přidání třídy, soubory nebo prvky uživatelského rozhraní do projektu pomocí průvodců a provede vás.|
+|[XML dokumentace (Visual C++)](xml-documentation-visual-cpp.md)| Vytvoření dokumentace XML pro vaše rozhraní API.|
+|[Sestavení projektů C++ v sadě Visual Studio](building-cpp-projects-in-visual-studio.md)|Jak používat Visual Studio IDE k sestavení projektů.|
+
 ## <a name="related-articles"></a>Související články
 
 |||
 |-|-|
-|[Nástroje a funkce Visual C++ v různých edicích sady Visual Studio](visual-cpp-tools-and-features-in-visual-studio-editions.md)|Ukazuje, jaké funkce jsou k dispozici v různých edicích sady Visual Studio.|
-|[Vytvářet a spravovat projekty využívající MSBuild](creating-and-managing-visual-cpp-projects.md)|Poskytuje přehled o projekty využívající C++ MSBuild v sadě Visual Studio a odkazy na další články, které popisují, jak vytvořit a spravovat je.|
-|[Projekty CMake v jazyce Visual C++](cmake-tools-for-visual-cpp.md).|Popisuje, jak sestavit CMake nebo jiné projekty jiné než MSBuild v jazyce Visual C++.|
-|[Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)|Popisuje, jak vytvářet projekty C++.|
-|[Nasazení aplikací klasické pracovní plochy](deploying-native-desktop-applications-visual-cpp.md)|Poskytuje přehled o nasazení aplikací v jazyce C++ a odkazy na další články, které popisují nasazení podrobně.|
+|[Sestavování programů v jazyce C/C++](../build/building-c-cpp-programs.md)|Podrobné informace o sestavení projektů C++.|
 |[Průvodce přenosem a upgradem Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)|Podrobné informace o tom, jak upgradovat aplikací v jazyce C++, které byly vytvořeny v dřívějších verzích sady Visual Studio a postupu při migraci aplikací, které byly vytvořeny pomocí jiných nástrojů než Visual Studio.|
 |[Visual C++](../visual-cpp-in-visual-studio.md)|Popisuje klíčové funkce jazyka Visual C++ v systému Visual Studio a odkazy na zbytek dokumentace k jazyku Visual C++.|

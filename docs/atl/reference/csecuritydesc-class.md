@@ -34,12 +34,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-ms.openlocfilehash: d06ec86b4a049daba945c347f4b424b5987010f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 615c9a409b66ca0f515b15fbb55fd794102524fd
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605801"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694072"
 ---
 # <a name="csecuritydesc-class"></a>Csecuritydesc – třída
 
@@ -186,7 +186,7 @@ Vrátí true, pokud metoda uspěje, false Pokud selže.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda volá [GetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa446647).
+Tato metoda volá [GetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-getsecuritydescriptorcontrol).
 
 ##  <a name="getdacl"></a>  CSecurityDesc::GetDacl
 
@@ -553,7 +553,7 @@ bool SetControl(
 ### <a name="parameters"></a>Parametry
 
 *ControlBitsOfInterest*<br/>
-SECURITY_DESCRIPTOR_CONTROL maska, která označuje nastavované řídicí bity. Seznam příznaků, které je možné nastavit, najdete v části [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582).
+SECURITY_DESCRIPTOR_CONTROL maska, která označuje nastavované řídicí bity. Seznam příznaků, které je možné nastavit, najdete v části [SetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
 
 *ControlBitsToSet*<br/>
 Masku SECURITY_DESCRIPTOR_CONTROL, která určuje nové hodnoty řídicích bitů určených maskou *ControlBitsOfInterest* masky. Tento parametr může být kombinací příznaků uvedených pro *ControlBitsOfInterest* parametru.
@@ -564,7 +564,7 @@ Při úspěchu vrátí hodnotu true, při neúspěchu hodnotu false.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda volá [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582).
+Tato metoda volá [SetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
 
 ##  <a name="setdacl"></a>  CSecurityDesc::SetDacl
 

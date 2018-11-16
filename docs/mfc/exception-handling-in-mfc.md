@@ -33,12 +33,12 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: fcc233b2cc0bfeeb589fec10c94343839f2c8032
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b520072bd0c07e261f2cf4baf51d7ea3d14a5ab
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623441"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694553"
 ---
 # <a name="exception-handling-in-mfc"></a>Zpracování výjimek v prostředí MFC
 
@@ -103,7 +103,7 @@ V následující tabulce jsou uvedeny předdefinované výjimky, které jsou k d
 |[CUserException – třída](../mfc/reference/cuserexception-class.md)|Výjimka, která upozorní uživatele s okno se zprávou, potom vyvolá obecný [cexception – třída](../mfc/reference/cexception-class.md)|
 
 > [!NOTE]
->  MFC podporuje výjimky jazyka C++ a maker výjimek prostředí MFC. MFC přímo nepodporuje Windows NT strukturované obslužných rutin výjimek (SEH), jak je popsáno v [strukturovaného zpracování výjimek](https://msdn.microsoft.com/library/windows/desktop/ms680657).
+>  MFC podporuje výjimky jazyka C++ a maker výjimek prostředí MFC. MFC přímo nepodporuje Windows NT strukturované obslužných rutin výjimek (SEH), jak je popsáno v [strukturovaného zpracování výjimek](/windows/desktop/debug/structured-exception-handling).
 
 ##  <a name="_core_further_reading_about_exceptions"></a> Další informace o výjimkách
 

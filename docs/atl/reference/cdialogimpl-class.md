@@ -17,12 +17,12 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: 3ac8037e032112e269332d2bbf9c2065ade84ded
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04acfb9c653df85be8958d7248bafd93f3e0a30b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572089"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693656"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl – třída
 
@@ -93,7 +93,7 @@ kde `MyDlg` je **krátký název** zadali v průvodci **názvy** stránky.
 |Vytváření ovládacích prvků|[ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md)|
 |Pomocí dialogových oken v ATL|[ATL – třídy oken](../../atl/atl-window-classes.md)|
 |Průvodce projektem ATL|[Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)|
-|Dialogová okna|[Dialogová okna](https://msdn.microsoft.com/library/windows/desktop/ms632588) a dalších tématech v sadě Windows SDK|
+|Dialogová okna|[Dialogová okna](/windows/desktop/dlgbox/dialog-boxes) a dalších tématech v sadě Windows SDK|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -197,7 +197,7 @@ INT_PTR DoModal(
 ### <a name="parameters"></a>Parametry
 
 *hWndParent*<br/>
-[in] Popisovač nadřazenému oknu. Výchozí hodnota je vrácená hodnota [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) funkci Win32.
+[in] Popisovač nadřazenému oknu. Výchozí hodnota je vrácená hodnota [GetActiveWindow](/windows/desktop/api/winuser/nf-winuser-getactivewindow) funkci Win32.
 
 *dwInitParam*<br/>
 [in] Určuje hodnotu pro předání do dialogového okna aplikace *lParam* parametr nezavěsíte zprávu.

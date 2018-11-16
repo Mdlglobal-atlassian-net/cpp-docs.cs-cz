@@ -19,12 +19,12 @@ helpviewer_keywords:
 - ON_COMMAND_EX macro [MFC]
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
-ms.openlocfilehash: 91d1793999c12951bd80e0f592772bbae1e2d679
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab08476923f253d666e024d8944aec64ed0af8da
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463297"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693651"
 ---
 # <a name="tn006-message-maps"></a>TN006: Mapy zpráv
 
@@ -237,7 +237,7 @@ Pokročilé využití [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_
 > [!NOTE]
 > ClassWizard nepodporuje vytvoření obslužné rutiny ON_CONTROL nebo ON_CONTROL_RANGE v uživatelském rozhraní. Musíte je ručně zadat v textovém editoru. ClassWizard bude parsovat tyto položky a umožňují procházet stejně jako všechny ostatní položky mapování zprávy.
 
-Použití běžných ovládacích prvků Windows výkonnějšího [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) pro komplexní řízení oznámení. Tato verze knihovny MFC má přímou podporu pro tuto novou zprávu pomocí ON_NOTIFY a on_notify_range – makra. Další informace o těchto makrech v dokumentaci produktu.
+Použití běžných ovládacích prvků Windows výkonnějšího [WM_NOTIFY](/windows/desktop/controls/wm-notify) pro komplexní řízení oznámení. Tato verze knihovny MFC má přímou podporu pro tuto novou zprávu pomocí ON_NOTIFY a on_notify_range – makra. Další informace o těchto makrech v dokumentaci produktu.
 
 ## <a name="see-also"></a>Viz také:
 

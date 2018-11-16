@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 14018a1bf3265642f8ab06af51eea51eb1125dc8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 745b04751c96e79c6bfa332ebdde15b254578137
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333534"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694800"
 ---
 # <a name="cbutton-class"></a>CButton – třída
 
@@ -384,7 +384,7 @@ Nenulové, pokud je úspěšná. jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkčnost BCM_GETIDEALSIZE zprávu, jak je popsáno v [tlačítka](https://msdn.microsoft.com/library/windows/desktop/bb775943) část sady Windows SDK.
+Tato členská funkce emuluje funkčnost BCM_GETIDEALSIZE zprávu, jak je popsáno v [tlačítka](/windows/desktop/controls/buttons) část sady Windows SDK.
 
 ##  <a name="getimagelist"></a>  CButton::GetImageList
 
@@ -405,7 +405,7 @@ Nenulové, pokud je úspěšná. jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkčnost BCM_GETIMAGELIST zprávu, jak je popsáno v [tlačítka](https://msdn.microsoft.com/library/windows/desktop/bb775943) část sady Windows SDK.
+Tato členská funkce emuluje funkčnost BCM_GETIMAGELIST zprávu, jak je popsáno v [tlačítka](/windows/desktop/controls/buttons) část sady Windows SDK.
 
 ##  <a name="getnote"></a>  CButton::GetNote
 
@@ -617,7 +617,7 @@ Nenulové, pokud je úspěšná. jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkčnost BCM_GETTEXTMARGIN zprávu, jak je popsáno v [tlačítka](https://msdn.microsoft.com/library/windows/desktop/bb775943) část sady Windows SDK.
+Tato členská funkce emuluje funkčnost BCM_GETTEXTMARGIN zprávu, jak je popsáno v [tlačítka](/windows/desktop/controls/buttons) část sady Windows SDK.
 
 ##  <a name="setbitmap"></a>  CButton::SetBitmap
 
@@ -870,7 +870,7 @@ Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkčnost BCM_SETIMAGELIST zprávu, jak je popsáno v [tlačítka](https://msdn.microsoft.com/library/windows/desktop/bb775943) část sady Windows SDK.
+Tato členská funkce emuluje funkčnost BCM_SETIMAGELIST zprávu, jak je popsáno v [tlačítka](/windows/desktop/controls/buttons) část sady Windows SDK.
 
 ##  <a name="setnote"></a>  CButton::SetNote
 
@@ -1112,7 +1112,7 @@ Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkčnost BCM_SETTEXTMARGIN zprávu, jak je popsáno v [tlačítka](https://msdn.microsoft.com/library/windows/desktop/bb775943) část sady Windows SDK.
+Tato členská funkce emuluje funkčnost BCM_SETTEXTMARGIN zprávu, jak je popsáno v [tlačítka](/windows/desktop/controls/buttons) část sady Windows SDK.
 
 ## <a name="see-also"></a>Viz také
 

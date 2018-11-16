@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 59258864eddb251b24f2e191d309707abf3736a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ce3c93c7cb8c26ae6008516c93faa8c8a5b37fb
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441103"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694592"
 ---
 # <a name="cwindow-class"></a>Cwindow – třída
 
@@ -388,7 +388,7 @@ UINT ArrangeIconicWindows() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [ArrangeIconicWindows](https://msdn.microsoft.com/library/windows/desktop/ms632671) ve Windows SDK.
+Zobrazit [ArrangeIconicWindows](/windows/desktop/api/winuser/nf-winuser-arrangeiconicwindows) ve Windows SDK.
 
 ##  <a name="attach"></a>  CWindow::Attach
 
@@ -433,7 +433,7 @@ BOOL BringWindowToTop() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [BringWindowToTop](https://msdn.microsoft.com/library/windows/desktop/ms632673) ve Windows SDK.
+Zobrazit [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop) ve Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -509,7 +509,7 @@ HWND ChildWindowFromPoint(POINT point) const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [ChildWindowFromPoint](https://msdn.microsoft.com/library/windows/desktop/ms632676) ve Windows SDK.
+Zobrazit [ChildWindowFromPoint](/windows/desktop/api/winuser/nf-winuser-childwindowfrompoint) ve Windows SDK.
 
 ##  <a name="childwindowfrompointex"></a>  CWindow::ChildWindowFromPointEx
 
@@ -578,7 +578,7 @@ HWND Create(
 [in] Proměnné typu [_u_menuorid –](../../atl/reference/u-menuorid-class.md) určující popisovač nabídky nebo identifikátor okna. Výchozí hodnota je 0U.
 
 *lpCreateParam*<br/>
-Ukazatel na vytvoření okna data obsažená v [soubor CREATESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632603) struktury.
+Ukazatel na vytvoření okna data obsažená v [soubor CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) struktury.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -813,7 +813,7 @@ BOOL EnableWindow(BOOL bEnable = TRUE) throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [EnableWindow](https://msdn.microsoft.com/library/windows/desktop/ms646291) ve Windows SDK.
+Zobrazit [EnableWindow](/windows/desktop/api/winuser/nf-winuser-enablewindow) ve Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -857,7 +857,7 @@ BOOL GetClientRect(LPRECT lpRect) const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [GetClientRect](https://msdn.microsoft.com/library/windows/desktop/ms633503) ve Windows SDK.
+Zobrazit [GetClientRect](/windows/desktop/api/winuser/nf-winuser-getclientrect) ve Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1109,7 +1109,7 @@ HWND GetLastActivePopup() const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [GetLastActivePopup](https://msdn.microsoft.com/library/windows/desktop/ms633507) ve Windows SDK.
+Zobrazit [GetLastActivePopup](/windows/desktop/api/winuser/nf-winuser-getlastactivepopup) ve Windows SDK.
 
 ##  <a name="getmenu"></a>  CWindow::GetMenu
 
@@ -1157,7 +1157,7 @@ HWND GetParent() const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [getparent –](https://msdn.microsoft.com/library/windows/desktop/ms633510) ve Windows SDK.
+Zobrazit [getparent –](/windows/desktop/api/winuser/nf-winuser-getparent) ve Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1268,7 +1268,7 @@ HWND GetTopWindow() const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [GetTopWindow](https://msdn.microsoft.com/library/windows/desktop/ms633514) ve Windows SDK.
+Zobrazit [GetTopWindow](/windows/desktop/api/winuser/nf-winuser-gettopwindow) ve Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1363,7 +1363,7 @@ LONG_PTR GetWindowLongPtr(int nIndex) const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [GetWindowLongPtr](https://msdn.microsoft.com/library/windows/desktop/ms633585) ve Windows SDK.
+Zobrazit [GetWindowLongPtr](/windows/desktop/api/winuser/nf-winuser-getwindowlongptra) ve Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1384,7 +1384,7 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT FAR* lpwndpl) const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [GetWindowPlacement](https://msdn.microsoft.com/library/windows/desktop/ms633518) ve Windows SDK.
+Zobrazit [GetWindowPlacement](/windows/desktop/api/winuser/nf-winuser-getwindowplacement) ve Windows SDK.
 
 ##  <a name="getwindowprocessid"></a>  CWindow::GetWindowProcessID
 
@@ -1396,7 +1396,7 @@ DWORD GetWindowProcessID() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [GetWindowThreadProcessID](https://msdn.microsoft.com/library/windows/desktop/ms633522) ve Windows SDK.
+Zobrazit [GetWindowThreadProcessID](/windows/desktop/api/winuser/nf-winuser-getwindowthreadprocessid) ve Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1412,7 +1412,7 @@ BOOL GetWindowRect(LPRECT lpRect) const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [getwindowrect –](https://msdn.microsoft.com/library/windows/desktop/ms633519) ve Windows SDK.
+Zobrazit [getwindowrect –](/windows/desktop/api/winuser/nf-winuser-getwindowrect) ve Windows SDK.
 
 ##  <a name="getwindowrgn"></a>  CWindow::GetWindowRgn
 
@@ -1470,7 +1470,7 @@ int GetWindowTextLength() const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [GetWindowTextLength](https://msdn.microsoft.com/library/windows/desktop/ms633521) ve Windows SDK.
+Zobrazit [GetWindowTextLength](/windows/desktop/api/winuser/nf-winuser-getwindowtextlengtha) ve Windows SDK.
 
 ##  <a name="getwindowthreadid"></a>  CWindow::GetWindowThreadID
 
@@ -1482,7 +1482,7 @@ DWORD GetWindowThreadID() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [GetWindowThreadProcessID](https://msdn.microsoft.com/library/windows/desktop/ms633522) ve Windows SDK.
+Zobrazit [GetWindowThreadProcessID](/windows/desktop/api/winuser/nf-winuser-getwindowthreadprocessid) ve Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1599,7 +1599,7 @@ BOOL IsChild(const HWND hWnd) const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [ischild –](https://msdn.microsoft.com/library/windows/desktop/ms633524) ve Windows SDK.
+Zobrazit [ischild –](/windows/desktop/api/winuser/nf-winuser-ischild) ve Windows SDK.
 
 ##  <a name="isdialogmessage"></a>  CWindow::IsDialogMessage
 
@@ -1635,7 +1635,7 @@ BOOL IsIconic() const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IsIconic](https://msdn.microsoft.com/library/windows/desktop/ms633527) ve Windows SDK.
+Zobrazit [IsIconic](/windows/desktop/api/winuser/nf-winuser-isiconic) ve Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1663,7 +1663,7 @@ BOOL IsWindow() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IsWindow](https://msdn.microsoft.com/library/windows/desktop/ms633528) ve Windows SDK.
+Zobrazit [IsWindow](/windows/desktop/api/winuser/nf-winuser-iswindow) ve Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1679,7 +1679,7 @@ BOOL IsWindowEnabled() const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IsWindowEnabled](https://msdn.microsoft.com/library/windows/desktop/ms646303) ve Windows SDK.
+Zobrazit [IsWindowEnabled](/windows/desktop/api/winuser/nf-winuser-iswindowenabled) ve Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1695,7 +1695,7 @@ BOOL IsWindowVisible() const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IsWindowVisible](https://msdn.microsoft.com/library/windows/desktop/ms633530) ve Windows SDK.
+Zobrazit [IsWindowVisible](/windows/desktop/api/winuser/nf-winuser-iswindowvisible) ve Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1711,7 +1711,7 @@ BOOL IsWindowUnicode() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IsWindowUnicode](https://msdn.microsoft.com/library/windows/desktop/ms633529) ve Windows SDK.
+Zobrazit [IsWindowUnicode](/windows/desktop/api/winuser/nf-winuser-iswindowunicode) ve Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -1727,7 +1727,7 @@ BOOL IsZoomed() const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [IsZoomed](https://msdn.microsoft.com/library/windows/desktop/ms633531) ve Windows SDK.
+Zobrazit [IsZoomed](/windows/desktop/api/winuser/nf-winuser-iszoomed) ve Windows SDK.
 
 ##  <a name="killtimer"></a>  CWindow::KillTimer
 
@@ -1739,7 +1739,7 @@ BOOL KillTimer(UINT nIDEvent) throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [KillTimer](https://msdn.microsoft.com/library/windows/desktop/ms644903) ve Windows SDK.
+Zobrazit [KillTimer](/windows/desktop/api/winuser/nf-winuser-killtimer) ve Windows SDK.
 
 ##  <a name="lockwindowupdate"></a>  CWindow::LockWindowUpdate
 
@@ -1978,7 +1978,7 @@ BOOL PostMessage(
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [zpravy](https://msdn.microsoft.com/library/windows/desktop/ms644944) ve Windows SDK.
+Zobrazit [zpravy](/windows/desktop/api/winuser/nf-winuser-postmessagea) ve Windows SDK.
 
 Vrátí bez čekání na vlákno zpracovat zprávu.
 
@@ -2206,7 +2206,7 @@ static LRESULT SendMessage(
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [SendMessage](https://msdn.microsoft.com/library/windows/desktop/ms644950) ve Windows SDK.
+Zobrazit [SendMessage](/windows/desktop/api/winuser/nf-winuser-sendmessage) ve Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -2255,7 +2255,7 @@ BOOL SendNotifyMessage(
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [SendNotifyMessage](https://msdn.microsoft.com/library/windows/desktop/ms644953) ve Windows SDK.
+Zobrazit [SendNotifyMessage](/windows/desktop/api/winuser/nf-winuser-sendnotifymessagea) ve Windows SDK.
 
 Pokud volající vlákno, byla vytvořena v okně `SendNotifyMessage` nevrací dokud proceduru okna zpracovala zpráva. V opačném případě okamžitě jej vrátí.
 
@@ -2269,7 +2269,7 @@ HWND SetActiveWindow() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [SetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646311) ve Windows SDK.
+Zobrazit [SetActiveWindow](/windows/desktop/api/winuser/nf-winuser-setactivewindow) ve Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -2285,7 +2285,7 @@ HWND SetCapture() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [SetCapture](https://msdn.microsoft.com/library/windows/desktop/ms646262) ve Windows SDK.
+Zobrazit [SetCapture](/windows/desktop/api/winuser/nf-winuser-setcapture) ve Windows SDK.
 
 ##  <a name="setclipboardviewer"></a>  CWindow::SetClipboardViewer
 
@@ -2353,7 +2353,7 @@ HWND SetFocus() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [SetFocus](https://msdn.microsoft.com/library/windows/desktop/ms646312) ve Windows SDK.
+Zobrazit [SetFocus](/windows/desktop/api/winuser/nf-winuser-setfocus) ve Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -2441,7 +2441,7 @@ HWND SetParent(HWND hWndNewParent) throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [setparent –](https://msdn.microsoft.com/library/windows/desktop/ms633541) ve Windows SDK.
+Zobrazit [setparent –](/windows/desktop/api/winuser/nf-winuser-setparent) ve Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -2527,7 +2527,7 @@ UINT SetTimer(
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [SetTimer](https://msdn.microsoft.com/library/windows/desktop/ms644906) ve Windows SDK.
+Zobrazit [SetTimer](/windows/desktop/api/winuser/nf-winuser-settimer) ve Windows SDK.
 
 ##  <a name="setwindowcontexthelpid"></a>  CWindow::SetWindowContextHelpId
 
@@ -2566,7 +2566,7 @@ LONG_PTR SetWindowLongPtr(int nIndex, LONG_PTR dwNewLong) throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [SetWindowLongPtr](https://msdn.microsoft.com/library/windows/desktop/ms644898) ve Windows SDK.
+Zobrazit [SetWindowLongPtr](/windows/desktop/api/winuser/nf-winuser-setwindowlongptra) ve Windows SDK.
 
 Tato funkce nahrazuje `CWindow::SetWindowLong` metody. Chcete-li napsat kód, který je kompatibilní s 32bitové a 64bitové verze Windows, použijte `CWindow::SetWindowLongPtr`.
 
@@ -2580,7 +2580,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT FAR* lpwndpl);
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [SetWindowPlacement](https://msdn.microsoft.com/library/windows/desktop/ms633544) ve Windows SDK.
+Zobrazit [SetWindowPlacement](/windows/desktop/api/winuser/nf-winuser-setwindowplacement) ve Windows SDK.
 
 ##  <a name="setwindowpos"></a>  CWindow::SetWindowPos
 
@@ -2673,7 +2673,7 @@ BOOL ShowOwnedPopups(BOOL bShow = TRUE) throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [ShowOwnedPopups](https://msdn.microsoft.com/library/windows/desktop/ms633547) ve Windows SDK.
+Zobrazit [ShowOwnedPopups](/windows/desktop/api/winuser/nf-winuser-showownedpopups) ve Windows SDK.
 
 ##  <a name="showscrollbar"></a>  CWindow::ShowScrollBar
 
@@ -2697,7 +2697,7 @@ BOOL ShowWindow(int nCmdShow) throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [ShowWindow](https://msdn.microsoft.com/library/windows/desktop/ms633548) ve Windows SDK.
+Zobrazit [ShowWindow](/windows/desktop/api/winuser/nf-winuser-showwindow) ve Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -2713,7 +2713,7 @@ BOOL ShowWindowAsync(int nCmdShow) throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [ShowWindowAsync](https://msdn.microsoft.com/library/windows/desktop/ms633549) ve Windows SDK.
+Zobrazit [ShowWindowAsync](/windows/desktop/api/winuser/nf-winuser-showwindowasync) ve Windows SDK.
 
 ##  <a name="updatewindow"></a>  CWindow::UpdateWindow
 

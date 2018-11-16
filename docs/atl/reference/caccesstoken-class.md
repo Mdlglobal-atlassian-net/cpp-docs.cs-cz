@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: faa715e8f5333a717689d281ccb89bd2369e9929
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8fadb6825bbdc970e952d2ea6c26a27b4837dfc
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661263"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694527"
 ---
 # <a name="caccesstoken-class"></a>Caccesstoken – třída
 
@@ -254,7 +254,7 @@ Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-`CreatePrimaryToken` volání [DuplicateTokenEx](https://msdn.microsoft.com/library/windows/desktop/aa446617) k vytvoření nové primární tokenu.
+`CreatePrimaryToken` volání [DuplicateTokenEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetokenex) k vytvoření nové primární tokenu.
 
 ##  <a name="createprocessasuser"></a>  CAccessToken::CreateProcessAsUser
 
@@ -289,7 +289,7 @@ Ukazatel [PROCESS_INFORMATION](/windows/desktop/api/processthreadsapi/ns-process
 Ukazatel [OBVYKLE](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_startupinfoa) struktura, která určuje, jak by měl vypadat hlavního okna pro nový proces.
 
 *dwCreationFlags*<br/>
-Určuje další příznaky, které řídí s prioritou a vytvoření procesu. Podívat se na funkci Win32 [CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429) seznam příznaky.
+Určuje další příznaky, které řídí s prioritou a vytvoření procesu. Podívat se na funkci Win32 [CreateProcessAsUser](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera) seznam příznaky.
 
 *bLoadProfile*<br/>
 Při hodnotě TRUE se načtení profilu uživatele s [LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea).
@@ -312,7 +312,7 @@ Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-`CreateProcessAsUser` používá `CreateProcessAsUser` Win32 funkci, která vytvoří nový proces, na kterém běží v kontextu zabezpečení uživatele reprezentován `CAccessToken` objektu. Viz popis [CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429) funkce pro úplnou diskusi o požadované parametry.
+`CreateProcessAsUser` používá `CreateProcessAsUser` Win32 funkci, která vytvoří nový proces, na kterém běží v kontextu zabezpečení uživatele reprezentován `CAccessToken` objektu. Viz popis [CreateProcessAsUser](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera) funkce pro úplnou diskusi o požadované parametry.
 
 Pro tuto metodu za účelem úspěšné `CAccessToken` objektu musí obsahovat AssignPrimaryToken (pokud to není omezený token) a IncreaseQuota oprávnění.
 
@@ -348,7 +348,7 @@ Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-`CreateRestrictedToken` používá [CreateRestrictedToken](https://msdn.microsoft.com/library/windows/desktop/aa446583) funkci Win32 k vytvoření nového `CAccessToken` objektu s omezeními.
+`CreateRestrictedToken` používá [CreateRestrictedToken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createrestrictedtoken) funkci Win32 k vytvoření nového `CAccessToken` objektu s omezeními.
 
 > [!IMPORTANT]
 >  Při použití `CreateRestrictedToken`, zajistěte následující: existující token je platný (a není zadaný uživatel) a *SidsToDisable* a *PrivilegesToDelete* jsou platné (a není zadaná uživatelem). Pokud metoda vrátí hodnotu FALSE, zakažte funkce.

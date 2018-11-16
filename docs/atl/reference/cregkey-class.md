@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 33ca9e1c07dc350845104a6027166e511b3bbe4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf2f97c1c3b389d0ee2b3d4bcdd2d9da2dbb3c8d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605075"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694852"
 ---
 # <a name="cregkey-class"></a>Cregkey – třída
 
@@ -892,7 +892,7 @@ Určuje součásti nastavit popisovač zabezpečení. Hodnota může být kombin
 |DACL_SECURITY_INFORMATION|Nastaví seznam klíče volitelný řízení přístupu (DACL). Klíč musí mít přístup WRITE_DAC nebo volající proces musí být vlastníkem daného objektu.|
 |GROUP_SECURITY_INFORMATION|Nastaví identifikátor klíče primární skupinu zabezpečení (SID). Klíč musí mít přístup zápis_vlastníka nebo volající proces musí být vlastníkem daného objektu.|
 |OWNER_SECURITY_INFORMATION|Nastaví SID vlastníka klíče. Klíč musí mít přístup zápis_vlastníka, nebo musí být vlastníka objektu nebo mít povolené oprávnění SE_TAKE_OWNERSHIP_NAME volající proces.|
-|SACL_SECURITY_INFORMATION|Nastaví seznam klíče systému řízení přístupu (SACL). Klíč musí mít ACCESS_SYSTEM_SECURITY přístup. Správný způsob, jak získat tento přístup je povolit SE_SECURITY_NAME [oprávnění](https://msdn.microsoft.com/library/windows/desktop/aa379306) v přístupovém tokenu aktuální volajícího otevřít popisovač pro ACCESS_SYSTEM_SECURITY přístup a potom zakažte oprávnění.|
+|SACL_SECURITY_INFORMATION|Nastaví seznam klíče systému řízení přístupu (SACL). Klíč musí mít ACCESS_SYSTEM_SECURITY přístup. Správný způsob, jak získat tento přístup je povolit SE_SECURITY_NAME [oprávnění](/windows/desktop/secauthz/privileges) v přístupovém tokenu aktuální volajícího otevřít popisovač pro ACCESS_SYSTEM_SECURITY přístup a potom zakažte oprávnění.|
 
 *PSD*<br/>
 Ukazatel [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) struktura, která určuje atributy zabezpečení k nastavení pro zadaný klíč.

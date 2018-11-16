@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: 92a81e318c74f1acd39fbfe870a7ad1277b25125
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05545051b145f3beb11e4b48e8f93fd7908a783a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501631"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694241"
 ---
 # <a name="ccomboboxex-class"></a>Ccomboboxex – třída
 
@@ -247,7 +247,7 @@ Počet zbývajících v ovládacím prvku položek. Pokud *iIndex* je neplatný,
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje funkce zprávy [CBEM_DELETEITEM](/windows/desktop/Controls/cbem-deleteitem), jak je popsáno v sadě Windows SDK. Při volání DeleteItem, [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) se pošle zpráva s oznámením CBEN_DELETEITEM do nadřazeného okna.
+Tato členská funkce implementuje funkce zprávy [CBEM_DELETEITEM](/windows/desktop/Controls/cbem-deleteitem), jak je popsáno v sadě Windows SDK. Při volání DeleteItem, [WM_NOTIFY](/windows/desktop/controls/wm-notify) se pošle zpráva s oznámením CBEN_DELETEITEM do nadřazeného okna.
 
 ##  <a name="getcomboboxctrl"></a>  CComboBoxEx::GetComboBoxCtrl
 
@@ -373,7 +373,7 @@ Index, ve kterém byl vložen novou položku v případě úspěchu; v opačném
 
 ### <a name="remarks"></a>Poznámky
 
-Při volání `InsertItem`, [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) zprávy s [CBEN_INSERTITEM](/windows/desktop/Controls/cben-insertitem) oznámení se odešlou do nadřazeného okna.
+Při volání `InsertItem`, [WM_NOTIFY](/windows/desktop/controls/wm-notify) zprávy s [CBEN_INSERTITEM](/windows/desktop/Controls/cben-insertitem) oznámení se odešlou do nadřazeného okna.
 
 ##  <a name="setextendedstyle"></a>  CComboBoxEx::SetExtendedStyle
 

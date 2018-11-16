@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MessageHandler function
 ms.assetid: 8a0acf97-1b0d-4226-91b9-75446634a03c
-ms.openlocfilehash: 3627dadde60a5ba0ece90497b85e2085f33e0919
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d7b1af3f96f34be91c9e4616e0ac3a084689b2a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448396"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693149"
 ---
 # <a name="messagehandler"></a>MessageHandler
 
@@ -54,4 +54,4 @@ Příklad použití této obslužné rutiny zpráv v mapování zprávy, nalezne
 
 [Implementace okna](../atl/implementing-a-window.md)<br/>
 [Mapy zpráv](../atl/message-maps-atl.md)<br/>
-[WM_NOTIFY –](https://msdn.microsoft.com/library/windows/desktop/bb775583)
+[WM_NOTIFY –](/windows/desktop/controls/wm-notify)
