@@ -1,18 +1,18 @@
 ---
 title: Kontejnery pro aktivní dokument
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - active documents [MFC], containers
 - active document containers [MFC]
 - containers [MFC], active document
 - MFC COM, active document containment
 ms.assetid: ba20183a-8b4c-440f-9031-e5fcc41d391b
-ms.openlocfilehash: ec2e4d11e00040cf0b94957db8466d127e0b5420
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bfd4018496f1516f8016bb56da2406f2e4b04c08
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510835"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176780"
 ---
 # <a name="active-document-containers"></a>Kontejnery pro aktivní dokument
 
@@ -54,7 +54,7 @@ Orámovat objekt zobrazit objekty a objekt kontejneru může volitelně implemen
 
 Následující obrázek znázorňuje koncepční vztah mezi kontejneru a jeho součástí (vlevo) a aktivní dokument a jeho zobrazení (vpravo). Aktivní dokument spravuje úložiště a data a zobrazí nebo volitelně vypíše data zobrazení. Rozhraní tučným písmem jsou povinné pro aktivní dokument účast; tučné písmo a kurzíva jsou volitelné. Všechny ostatní rozhraní jsou povinné.
 
-![Rozhraní kontejner aktivního dokumentu](../mfc/media/vc37gj1.gif "vc37gj1")
+![Rozhraní kontejner aktivního dokumentu](../mfc/media/vc37gj1.gif "rozhraní kontejner aktivního dokumentu")
 
 Dokument, který podporuje pouze jedno zobrazení můžete implementovat součásti zobrazení i dokumentu (to znamená, že jejich odpovídající rozhraní) na jednu konkrétní třídu. Kontejner lokality, která podporuje pouze jedno zobrazení najednou kromě toho můžete kombinovat webu dokumentů a zobrazení webu do jedné lokality konkrétní třídy. Orámovat objekt kontejneru, ale musí zůstat distinct a součást dokumentu kontejneru pouze zde zahrnuta poskytnout ucelený přehled o architektuře; není ovlivněna architektura zahrnutí aktivního dokumentu.
 

@@ -1,18 +1,18 @@
 ---
 title: Mapy odvozených zpráv
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - message handling [MFC], derived message handlers
 - messages, routing
 - message maps [MFC], derived
 - derived message maps
 ms.assetid: 21829556-6e64-40c3-8279-fed85d99de77
-ms.openlocfilehash: 1413290bc04af37a6d3204150dff5244e1dcb5c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ae536a53a43472a4fb81d30e685fbc3faaa603f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662524"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175598"
 ---
 # <a name="derived-message-maps"></a>Mapy odvozených zpráv
 
@@ -20,7 +20,8 @@ Během zpráva zpracování, kontrola zprávu třídy vlastní mapy není konec 
 
 Mějte na paměti, která `CView`, základní třída `CMyView`, je zase odvozen z `CWnd`. Proto `CMyView` *je* `CView` a *je* `CWnd`. Každý z těchto tříd má vlastní mapu zpráv. Obrázek "A zobrazit hierarchii" níže zobrazuje hierarchický vztah tříd, ale mějte na paměti, že `CMyView` objektu je jeden objekt, který má vlastnosti všechny tři třídy.
 
-![Hierarchie zobrazení](../mfc/media/vc38621.gif "vc38621") A zobrazit hierarchii
+![Hierarchie zobrazení](../mfc/media/vc38621.gif "hierarchie zobrazení") <br/>
+Zobrazit hierarchii
 
 Pokud nejde spárovat zprávu ve třídě `CMyView`na mapu zpráv, rozhraní také prohledává mapy zpráv z přímé základní třídy. `BEGIN_MESSAGE_MAP` – Makro na začátku mapu zpráv určuje názvy dvou tříd jako argumenty:
 

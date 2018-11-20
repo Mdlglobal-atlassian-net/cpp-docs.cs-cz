@@ -1,21 +1,21 @@
 ---
 title: 'Postupy: Přizpůsobení panelu nástrojů Rychlý přístup'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-ms.openlocfilehash: d9bdc523218c7fad217d066eabd518aaff011df3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aced2e732b68f838c679518ef67b1d6bdd361964
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558480"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176325"
 ---
 # <a name="how-to-customize-the-quick-access-toolbar"></a>Postupy: Přizpůsobení panelu nástrojů Rychlý přístup
 
 Panel nástrojů Rychlý přístup (QAT) je přizpůsobitelný panel nástrojů, který obsahuje sadu příkazů, které jsou buď zobrazí vedle tlačítka, aplikace nebo na kartách kategorie. Následující obrázek znázorňuje typický panelu nástrojů Rychlý přístup.
 
-![MFC pásu panelu nástrojů Rychlý přístup](../mfc/media/quick_access_toolbar.png "quick_access_toolbar")
+![Panel nástrojů Rychlý přístup pásu karet MFC](../mfc/media/quick_access_toolbar.png "panel nástrojů Rychlý přístup knihovny MFC pásu karet")
 
 Přizpůsobení panelu nástrojů Rychlý přístup, otevřete ho **vlastnosti** okna, upravte příkazy a pak zobrazte náhled ovládacího prvku pásu karet.
 
@@ -55,4 +55,3 @@ Rychlé příkazy nástrojů přístup se nezobrazují na návrhové ploše. K j
 ## <a name="see-also"></a>Viz také
 
 [Návrhář pásu karet (MFC)](../mfc/ribbon-designer-mfc.md)
-

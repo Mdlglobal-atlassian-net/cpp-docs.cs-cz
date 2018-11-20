@@ -1,16 +1,16 @@
 ---
 title: Příklady zarovnání struktur
-ms.date: 03/26/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - structure alignment
 - examples [C++], structure alignment
 ms.assetid: 03d137bf-5cc4-472e-9583-6498f2534199
-ms.openlocfilehash: 27f7e89b1c7faec06347d8760247a76a33e0b91e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c4b3ae29674e9c4fc27e8e175867339001b9a0d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466241"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175337"
 ---
 # <a name="examples-of-structure-alignment"></a>Příklady zarovnání struktur
 
@@ -26,7 +26,7 @@ _declspec(align(2)) struct {
 }
 ```
 
-![Příklad převodu AMD](../build/media/vcamd_conv_ex_1_block.png "vcAmd_conv_ex_1")
+![Rozložení struktury – Příklad 1 převod AMD](../build/media/vcamd_conv_ex_1_block.png "AMD převod – Příklad 1 struktuře rozložení")
 
 ## <a name="example-2"></a>Příklad 2
 
@@ -40,7 +40,7 @@ _declspec(align(8)) struct {
 }
 ```
 
-![Příklad převodu AMD](../build/media/vcamd_conv_ex_2_block.png "vcAmd_conv_ex_2")
+![Rozložení struktury příklad 2 převod AMD](../build/media/vcamd_conv_ex_2_block.png "AMD převod příklad 2 struktuře rozložení")
 
 ## <a name="example-3"></a>Příklad 3
 
@@ -55,7 +55,7 @@ _declspec(align(4)) struct {
 }
 ```
 
-![Příklad převodu AMD](../build/media/vcamd_conv_ex_3_block.png "vcAmd_conv_ex_3")
+![Rozložení struktury příklad 2 převod AMD](../build/media/vcamd_conv_ex_3_block.png "AMD převod příklad 2 struktuře rozložení")
 
 ## <a name="example-4"></a>Příklad 4:
 
@@ -69,7 +69,7 @@ _declspec(align(8)) union {
 }
 ```
 
-![Příklad převodu AMD](../build/media/vcamd_conv_ex_4_block.png "vcAmd_conv_ex_4")
+![Sjednocení layouit příklad 4: AMD převod](../build/media/vcamd_conv_ex_4_block.png "sjednocení layouit AMD převod příklad 4:")
 
 ## <a name="see-also"></a>Viz také:
 

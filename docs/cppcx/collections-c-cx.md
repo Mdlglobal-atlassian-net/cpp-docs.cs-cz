@@ -1,13 +1,13 @@
 ---
 title: Kolekce (C + +/ CX)
-ms.date: 01/22/2017
+ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: d139bcfc6cdf61940a40ca069dd157c1805e2034
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d256e333ddf31bdb637680b70718af85e753a21d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531585"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176390"
 ---
 # <a name="collections-ccx"></a>Kolekce (C + +/ CX)
 
@@ -15,7 +15,7 @@ V jazyce C + +/ CX program, můžete provést bezplatné použití knihovny STL 
 
 Modul Windows Runtime definuje rozhraní pro kolekce a souvisejících typů a C + +/ CX poskytuje konkrétní implementace jazyka C++ v hlavičkovém souboru collection.h. Tento obrázek znázorňuje vztahy mezi typy kolekcí:
 
-![C&#43;&#43;&#47;CX strom dědičnosti pro typy kolekcí](../cppcx/media/cppcxcollectionsinheritancetree.png "CPPCXCollectionsInheritanceTree")
+![C&#43;&#43;&#47;CX strom dědičnosti pro typy kolekcí](../cppcx/media/cppcxcollectionsinheritancetree.png "C&#43;&#43;&#47;CX strom dědičnosti pro typy kolekcí")
 
 - [Platform::Collections:: Vector – třída](../cppcx/platform-collections-vector-class.md) vypadá podobně jako [std::vector třídy](../standard-library/vector-class.md).
 
@@ -63,7 +63,7 @@ Při použití `range for` ve smyčce `IVector` kontejnery, používají `auto&&
 
 Následující ilustrace ukazuje `range for` ve smyčce `IVector<Person^>`. Všimněte si, že na zarážku na řádku 64 zastavením spuštění. **QuickWatch** okno zobrazuje proměnná iterátoru `p` ve skutečnosti `VectorProxy<Person^>` , který má `m_v` a `m_i` členské proměnné. Ale při volání `GetType` na tuto proměnnou, vrátí stejné typ, který má `Person` instance `p2`. Je hlavní, co vyplývá, že ačkoli `VectorProxy` a `ArrowProxy` se může objevit **QuickWatch**, ladicí program některých chyb kompilátoru, nebo z jiných míst, obvykle není nutné je explicitně kód.
 
-![VectorProxy v rozsahu&#45;u smyčky založených na](../cppcx/media/vectorproxy-1.png "VectorProxy_1")
+![VectorProxy v rozsahu&#45;u smyčky založených na](../cppcx/media/vectorproxy-1.png "VectorProxy v rozsahu&#45;na základě smyčku for")
 
 Jeden scénář, ve kterém budete muset kód kolem objektu proxy serveru je, když je nutné provést `dynamic_cast` na prvcích – například při hledání pro objekty určitého typu v XAML `UIElement` kolekci elementů. V takovém případě musíte nejdříve přetypována elementu, který chcete [Platform::Object](../cppcx/platform-object-class.md)^ a pak proveďte dynamické přetypování:
 

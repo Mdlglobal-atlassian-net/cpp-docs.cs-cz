@@ -1,15 +1,15 @@
 ---
 title: Paralelní algoritmy
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
-ms.openlocfilehash: 0ad7f67016dcb7d4638de0f159feb23cd1282b19
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8a08919ce6792babb9b8b1b809e242465a200f9
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445588"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176442"
 ---
 # <a name="parallel-algorithms"></a>Paralelní algoritmy
 
@@ -247,7 +247,7 @@ Následující tabulka shrnuje důležité vlastnosti tři paralelní algoritmy 
 
 Následující obrázek znázorňuje důležité vlastnosti tři paralelní algoritmy řazení více graficky.
 
-![Porovnání řazení algoritmů](../../parallel/concrt/media/concrt_parallel_sorting.png "concrt_parallel_sorting")
+![Porovnání řazení algoritmů](../../parallel/concrt/media/concrt_parallel_sorting.png "porovnání řazení algoritmů")
 
 Tyto paralelní algoritmy řazení podle pravidel zrušení a zpracování výjimek. Další informace o zrušení a zpracování výjimek v Concurrency Runtime naleznete v tématu [zrušení paralelních algoritmů](../../parallel/concrt/cancellation-in-the-ppl.md#algorithms) a [zpracování výjimek](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 

@@ -1,24 +1,24 @@
 ---
 title: Návrhář pásu karet (MFC)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - vc.editors.ribbon.F1
 helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 3b28783cb12aeeb03bf1687e5922b276af0d52c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 903adc96f4c9bc092ac23787781a76c0e7e3714c
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521395"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175831"
 ---
 # <a name="ribbon-designer-mfc"></a>Návrhář pásu karet (MFC)
 
 Návrhář pásu karet umožňuje vytvořit a upravit pásy karet v aplikacích MFC. Pás karet je prvek uživatelského rozhraní (UI), který umožňuje uspořádat příkazy do logických skupin. Tyto skupiny se zobrazí v samostatných kartách v pruhu v horní části okna. Pás karet nahrazuje nabídky a panely nástrojů. Pás karet může výrazně zlepšit použitelnost aplikace. Další informace najdete v tématu [pásů karet](/windows/desktop/uxguide/cmd-ribbons). Následující ilustrace znázorňuje pás karet.
 
-![Ovládací prvek prostředku pásu karet MFC](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")
+![Ovládací prvek prostředku pásu karet MFC](../mfc/media/ribbon_no_callouts.png "ovládacího prvku prostředku pásu karet MFC")
 
 V dřívějších verzích sady Visual Studio musel být karet vytvořen napsáním kódu, který používá třídy pásu karet MFC jako [CMFCRibbonBar – třída](../mfc/reference/cmfcribbonbar-class.md). V sadě Visual Studio 2010 a novější poskytuje Návrhář pásu karet alternativní metodu pro vytváření pásů karet. Nejprve vytvořte a přizpůsobte pás karet jako prostředek. Pak načtení prostředku pásu karet z kódu v aplikaci knihovny MFC. Dokonce můžete prostředky z pásu karet a třídy pásu karet MFC dohromady. Můžete například vytvořit prostředek pásu karet a potom programově přidat další prvky k němu za běhu pomocí kódu.
 
@@ -71,7 +71,7 @@ Chcete-li otevřít pás karet v Návrháři pásu karet, dvakrát klikněte na 
 
 Následující obrázek znázorňuje různé součásti v Návrháři pásu karet.
 
-![Návrhář pásu karet MFC](../mfc/media/ribbon_designer.png "ribbon_designer")
+![Návrhář pásu karet MFC](../mfc/media/ribbon_designer.png "Návrháře pásu karet MFC")
 
 - **Panel nástrojů:** obsahuje ovládací prvky, které lze přetáhnout do návrhové ploše.
 
@@ -95,7 +95,7 @@ Následující témata popisují, jak používat funkce v Návrháři pásu kare
 
 ## <a name="definitions-of-ribbon-elements"></a>Definice prvků pásu karet
 
-![Pás karet MFC](../mfc/media/ribbon.png "pásu karet")
+![Pás karet MFC](../mfc/media/ribbon.png "pásu karet MFC")
 
 - **Tlačítko aplikace:** tlačítka, které se zobrazí v levém horním rohu pásu karet. Tlačítko aplikace nahrazuje nabídku Soubor a je viditelný i v případě, že je pás karet minimalizovaný. Po kliknutí na tlačítko se zobrazí nabídka, která obsahuje seznam příkazů.
 

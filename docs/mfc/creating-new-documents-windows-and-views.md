@@ -1,6 +1,6 @@
 ---
 title: Vytváření nových dokumentů, oken a zobrazení
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - MDI [MFC], creating windows
 - window objects [MFC], creating
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - views [MFC], overriding default behavior
 - initializing views [MFC]
 ms.assetid: 88aa1f5f-2078-4603-b16b-a2b4c7b4a2a3
-ms.openlocfilehash: 20bc94c7a688d3cf88fa89fff060ab155d327606
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57e558848ce76a7c74b5715529661ad24c9cbb8e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643895"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175389"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Vytváření nových dokumentů, oken a zobrazení
 
@@ -37,11 +37,14 @@ Na následujících obrázcích poskytují přehled o procesu vytváření pro d
 
 Po dokončení tohoto procesu spolupracující objekty existují a uložte ukazatele na sebe navzájem. Následující obrázky znázorňují pořadí, ve kterém jsou vytvořeny objekty. Můžete postupovat podle pořadí z obrázku na obrázek.
 
-![Pořadí pro vytvoření dokumentu](../mfc/media/vc387l1.gif "vc387l1") pořadí při vytváření dokumentu
+![Pořadí pro vytvoření dokumentu](../mfc/media/vc387l1.gif "pořadí pro vytvoření dokumentu") <br/>
+Pořadí při vytváření dokumentu
 
-![Posloupnost vytvoření okna rámce](../mfc/media/vc387l2.png "vc387l2") posloupnost vytvoření okna rámce
+![Posloupnost vytvoření okna rámce](../mfc/media/vc387l2.png "posloupnost vytvoření okna rámce") <br/>
+Posloupnost vytvoření okna rámce
 
-![Pořadí pro vytvoření zobrazení](../mfc/media/vc387l3.gif "vc387l3") pořadí při vytváření zobrazení
+![Pořadí pro vytvoření zobrazení](../mfc/media/vc387l3.gif "pořadí pro vytvoření zobrazení") <br/>
+Pořadí při vytváření zobrazení
 
 Informace o tom, jak rozhraní inicializuje nového dokumentu, zobrazení a oken s rámečkem objektů, naleznete v tématu třídy [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), a [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) v odkazu knihovny MFC. Viz také [Technická poznámka 22](../mfc/tn022-standard-commands-implementation.md), která vysvětluje v rámci jeho diskuze v rámci standardní příkazy pro další procesy vytváření a inicializace **nový** a **otevřete** položky na **souboru** nabídky.
 

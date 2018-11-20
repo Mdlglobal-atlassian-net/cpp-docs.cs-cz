@@ -1,6 +1,6 @@
 ---
 title: 'Sada záznamů: Dynamické vazby datových sloupců (ODBC)'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - ODBC recordsets [C++], binding columns dynamically
 - data binding [C++], recordset columns
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: 0284fbeed23c5fdad47cafd29af7a47251b923a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2fc870ba08bbec0a886b3d77281f3c697ae09fe
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469677"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175662"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Sada záznamů: Dynamické vazby datových sloupců (ODBC)
 
@@ -78,7 +78,7 @@ Dynamické vazby přidat sloupce za běhu vyžaduje následující kroky:
 
    Jedním z přístupů je vytvořit jeden nebo více dynamických seznamů, jeden pro názvy nových sloupců, jiné pro jejich výsledné hodnoty a třetí pro jejich datové typy (v případě potřeby). Tyto seznamy, zejména seznam hodnot, zadejte informace a potřebné úložiště pro vazbu. Následující obrázek ukazuje vytváření seznamů.
 
-   ![Vytváření seznamů sloupce, které chcete vytvořit vazbu dynamicky](../../data/odbc/media/vc37w61.gif "vc37w61")<br/>
+   ![Vytváření seznamů sloupce, které chcete vytvořit vazbu dynamicky](../../data/odbc/media/vc37w61.gif "vytváření seznamů sloupce, které chcete vytvořit vazbu dynamicky")<br/>
    Vytváření seznam sloupců k vytvoření dynamické vazby
 
 1. Přidejte volání funkce RFX v hlavních záznamů `DoFieldExchange` funkci pro každý přidaný sloupec. Tato volání funkce RFX práci načítání záznam, včetně dalších sloupců a vazba sloupce na sadu záznamů datové členy nebo do úložiště dynamicky zadaný pro ně.

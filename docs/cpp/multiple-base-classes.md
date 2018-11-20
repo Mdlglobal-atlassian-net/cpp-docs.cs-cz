@@ -1,18 +1,18 @@
 ---
 title: Vícenásobné třídy Base
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - base classes [C++], multiple
 - derived classes [C++], multiple bases
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-ms.openlocfilehash: fbbe6d6194b878b4851cbde84b55d71b9e4fc02c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b58c238da37fbbaf7c2c2913b652c26d98fbd96e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483457"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176356"
 ---
 # <a name="multiple-base-classes"></a>Vícenásobné třídy Base
 
@@ -52,11 +52,13 @@ Při deklaraci virtuální základní třídy **virtuální** – klíčové slo
 
 Prohlédněte si hierarchii tříd na následujícím obrázku, který znázorňuje simulovanou frontu na oběd.
 
-![Graf s Simulovaná frontu na oběd](../cpp/media/vc38xp1.gif "vc38XP1") simulované grafu na oběd
+![Graf s Simulovaná frontu na oběd](../cpp/media/vc38xp1.gif "graf s Simulovaná frontu na oběd") <br/>
+Graf simulované na oběd
 
 Na obrázku je třída `Queue` základní třídou pro třídu `CashierQueue` i `LunchQueue`. Jsou-li však obě třídy kombinovány do třídy `LunchCashierQueue`, nastane následující problém: nová třída obsahuje dva podobjekty typu `Queue`, jeden z třídy `CashierQueue` a druhý z třídy `LunchQueue`. Následující obrázek ukazuje koncepční rozložení paměti (skutečné rozložení paměti může být optimalizováno).
 
-![Simulované oběd&#45;objektu řádek](../cpp/media/vc38xp2.gif "vc38XP2") simulované objektu na oběd
+![Simulované oběd&#45;objektu řádek](../cpp/media/vc38xp2.gif "simulované oběd&#45;objektu řádek") <br/>
+Objekt simulované oběd
 
 Povšimněte si, že v objektu `Queue` existují dva podobjekty `LunchCashierQueue`. Následující kód deklaruje základní třídu `Queue` jako virtuální:
 
@@ -71,15 +73,18 @@ class LunchCashierQueue : public LunchQueue, public CashierQueue {};
 
 **Virtuální** – klíčové slovo zajišťuje, že pouze jedna kopie podobjektu `Queue` je součástí (viz následující obrázek).
 
-![Simulované oběd&#45;objektu řádek, virtuálními základními třídami](../cpp/media/vc38xp3.gif "vc38XP3") simulované objekt oběd s virtuálními základními třídami
+![Simulované oběd&#45;objektu řádek, virtuálními základními třídami](../cpp/media/vc38xp3.gif "simulované oběd&#45;objektu řádek, virtuální třídy base") <br/>
+Objekt simulované oběd s virtuálními základními třídami
 
 Třída může mít virtuální i nevirtuální komponentu daného typu. K tomu dojde za podmínek znázorněných na následujícím obrázku.
 
-![Virtuální a nevirtuální komponenty třídy](../cpp/media/vc38xp4.gif "vc38XP4") virtuální a nevirtuální komponenty jedné třídy
+![Virtuální a jiných&#45;součásti virtuální třídy](../cpp/media/vc38xp4.gif "virtuální a jiných&#45;součásti virtuální třídy") <br/>
+Virtuální a nevirtuální komponenty jedné třídy
 
 Na obrázku používají třídy `CashierQueue` a `LunchQueue` třídu `Queue` jako virtuální základní třídu. Třída `TakeoutQueue` však třídu `Queue` určuje jako základní třídu, nikoli jako virtuální základní třídu. Proto má třída `LunchTakeoutCashierQueue` dva podobjekty typu `Queue`: jeden z cesty dědičnosti obsahující třídu `LunchCashierQueue` a jeden z cesty obsahující třídu `TakeoutQueue`. To je znázorněno na následujícím obrázku.
 
-![Virtuální a nevirtuální dědičnosti v rozložení objektů](../cpp/media/vc38xp5.gif "vc38XP5") rozložení objektů s virtuální a nevirtuální dědičnosti
+![Virtuální & bez&#45;virtuální dědičnost v rozložení objektů](../cpp/media/vc38xp5.gif "virtuální & bez&#45;virtuální dědičnost v rozložení objektů") <br/>
+Rozložení objektů s virtuální a nevirtuální dědičností
 
 > [!NOTE]
 >  Virtuální dědičnost poskytuje v porovnání s nevirtuální dědičností významné výhody ve velikosti. Může však zavést další režii zpracování.
@@ -187,7 +192,8 @@ Explicitní a implicitní převody z ukazatelů na typy tříd mohou způsobit n
 
 - Efekt explicitního převodu ukazatele získaného pomocí operátoru adresy z typu základní třídy `A`. Vynucení adresy objektu na typ `A*` vždy neposkytuje kompilátoru dostatek informací o tom, ke kterému podřízenému objektu typu `A` provést výběr. V tomto případě existují dva podřízené objekty.
 
-![Nejednoznačný převod ukazatelů na základní třídy](../cpp/media/vc38xt1.gif "vc38XT1") nejednoznačný převod ukazatelů na základní třídy
+![Nejednoznačný převod ukazatelů na základní třídy](../cpp/media/vc38xt1.gif "nejednoznačný převod ukazatelů na základní třídy") <br/>
+Nejednoznačný převod ukazatelů na základní třídy
 
 Převod na typ `A*` (ukazatel na `A`) je nejednoznačný, protože neexistuje žádný způsob, jak ověřit, který z podřízených objektů typu `A` je správný. Nejednoznačnosti se lze vyhnout explicitní specifikací podřízeného zamýšleného objektu následujícím způsobem:
 
@@ -202,7 +208,8 @@ Pokud jsou používány virtuální základní třídy, funkce, objekty, typy a 
 
 Následující obrázek ukazuje, jak jsou objekty složeny pomocí virtuální a nevirtuální dědičnosti.
 
-![Odvození virtuální a nevirtuální odvození](../cpp/media/vc38xr1.gif "vc38XR1") virtuální vs. Nevirtuální odvození
+![Virtuální odvození a jiných&#45;virtuálního odvození](../cpp/media/vc38xr1.gif "virtuální odvození a jiných&#45;virtuálního odvození") <br/>
+Virtuální a nevirtuální odvození
 
 Na obrázku způsobí přístup k libovolnému členu třídy `A` prostřednictvím nevirtuální základní třídy nejednoznačnost. Kompilátor nemá žádné informace, které vysvětlují použití podobjektu souvisejícího s třídou `B` nebo podobjektu souvisejícího s třídou `C`. Nicméně, když je třída `A` zadána jako virtuální základní třída, je jasné, ke kterému podobjektu je přistupováno.
 

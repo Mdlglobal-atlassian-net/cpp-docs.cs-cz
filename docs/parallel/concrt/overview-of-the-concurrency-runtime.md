@@ -1,18 +1,18 @@
 ---
 title: Přehled Concurrency Runtime
-ms.date: 07/20/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Concurrency Runtime, requirements
 - Concurrency Runtime, architecture
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-ms.openlocfilehash: dab4860bcc69780fa6a6390e2ef111216642637a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: ffaf560361da2fd54febb5e38af121ad5149f012
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693637"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176663"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Přehled Concurrency Runtime
 
@@ -60,10 +60,10 @@ Modulu Runtime souběžnosti je rozdělena do čtyř komponent: Knihovna paralel
 
 **Architektura modulu Runtime souběžnosti**
 
-![Architektura modulu Runtime souběžnosti](../../parallel/concrt/media/concurrencyrun.png "concurrencyrun")
+![Architektura modulu Runtime souběžnosti](../../parallel/concrt/media/concurrencyrun.png "architektura modulu Runtime souběžnosti")
 
 > [!IMPORTANT]
->  Součástí plánovače úloh a Resource Manageru nejsou k dispozici z aplikace pro univerzální platformu Windows (UPW) nebo při použití třídy úkolu nebo jiné typy v ppltasks.h.
+> Součástí plánovače úloh a Resource Manageru nejsou k dispozici z aplikace pro univerzální platformu Windows (UPW) nebo při použití třídy úkolu nebo jiné typy v ppltasks.h.
 
 Modulu Runtime souběžnosti je vysoce *sestavitelné*, to znamená, můžete kombinovat existující funkce lepší. Modulu Runtime souběžnosti lze kombinovat mnoho funkcí, jako je například paralelní algoritmy, ze součástí nižší úrovně.
 

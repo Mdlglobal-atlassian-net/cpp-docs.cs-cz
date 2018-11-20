@@ -1,6 +1,6 @@
 ---
 title: Správa údajů o stavu modulů knihovny MFC
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - global state [MFC]
 - data management [MFC], MFC modules
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - multiple modules [MFC]
 - module state restored [MFC]
 ms.assetid: 81889c11-0101-4a66-ab3c-f81cf199e1bb
-ms.openlocfilehash: 757fe9d8b4c9985cd3fa36d399cdc92057c03011
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1bed6f3b0dddf0d4ae5e8309d683e52c9e82410
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562211"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174866"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>Správa údajů o stavu modulů knihovny MFC
 
@@ -28,11 +28,13 @@ Tento článek popisuje data o stavu modulů knihovny MFC a způsob, jakým je t
 
 Jak je znázorněno na následujícím obrázku, knihovna MFC má data o stavu jednotlivých modulů použít v aplikaci. Mezi tato data patří například popisovače instance Windows (používané pro načítání prostředků), ukazatele na aktuální `CWinApp` a `CWinThread` objekty aplikace, počty odkazů modulu OLE a širokou škálu mapy, které udržují připojení mezi Obslužné rutiny a odpovídající instance objektů MFC objektů Windows. Ale když aplikace využívá více modulů, jsou data o stavu každého modulu, není aplikační široké. Místo toho každého modulu, který má vlastní soukromá kopie dat o stavu MFC.
 
-![Stav data jeden modul &#40;aplikace&#41;](../mfc/media/vc387n1.gif "vc387n1") Data o stavu jednoho modulu (aplikace)
+![Stav data modulu single &#40;aplikace&#41;](../mfc/media/vc387n1.gif "dat jeden modul stavu &#40;aplikace&#41;") <br/>
+Stav Data modulu Single (aplikace)
 
 Data o stavu modulu je obsažen ve struktuře a je vždy k dispozici prostřednictvím ukazatele na danou strukturu. Tok provádění zadá konkrétního modulu, jak je znázorněno na následujícím obrázku, musí být stav tímto modulem stavu "aktuální" nebo "efektivní". Proto se každý objekt vlákna má ukazatel na strukturu efektivní stavu této aplikace. Udržování tento ukazatel aktualizován vůbec časy je důležité pro správu globální stav aplikace a zachování integrity stavu každého modulu. Nesprávný správy globální stav může způsobit nepředvídatelné chování aplikací.
 
-![Stav data z více modulů](../mfc/media/vc387n2.gif "vc387n2") stavu dat více modulů
+![Stav data z více modulů](../mfc/media/vc387n2.gif "více modulů data o stavu") <br/>
+Více modulů stavových dat
 
 Každý modul jinými slovy, zodpovídá za správně přepínání mezi stavy modulů ve všech jeho vstupní body. "Vstupního bodu" je jakéhokoli místa, kde tok spouštění můžete zadat kód modulu. Vstupní body patří:
 
@@ -45,4 +47,3 @@ Každý modul jinými slovy, zodpovídá za správně přepínání mezi stavy m
 ## <a name="see-also"></a>Viz také
 
 [Obecná témata MFC](../mfc/general-mfc-topics.md)
-

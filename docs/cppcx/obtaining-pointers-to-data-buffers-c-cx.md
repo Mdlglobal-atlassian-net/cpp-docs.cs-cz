@@ -1,13 +1,13 @@
 ---
 title: Získání ukazatelů do vyrovnávací paměti dat (C + +/ CX)
-ms.date: 12/30/2016
+ms.date: 11/19/2018
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-ms.openlocfilehash: 6fc136af4098659779b4b4ff7fb8878e1cea6590
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2cd99019d75272f4362518de78b729cd7a2549f3
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514267"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175103"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Získání ukazatelů do vyrovnávací paměti dat (C + +/ CX)
 
@@ -15,7 +15,7 @@ V modulu Windows Runtime [Windows::Storage::Streams::IBuffer](https://msdn.micro
 
 Následující diagram znázorňuje obrázek prvek XAML, jejichž zdrojem je [Windows::UI::Xaml::Media::Imaging WriteableBitmap](https://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx). Klientskou aplikaci, která je napsána v libovolném jazyce můžete předat odkaz na `WriteableBitmap` c++ kódu a pak C++ pomocí odkazu zobrazíte na základní vyrovnávací paměti. V aplikaci univerzální platformy Windows, která je napsána v jazyce C++ můžete použít funkci v následujícím příkladu přímo ve zdrojovém kódu bez balení v součásti prostředí Windows Runtime.
 
-![C&#43; &#43; kód přímo přístup k datům pixel](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")
+![C&#43; &#43; kód, který přistupuje k datům pixel přímo](../cppcx/media/ibufferbyteaccessdiagram.png "C&#43; &#43; kód, který přistupuje k datům pixel přímo")
 
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData
 

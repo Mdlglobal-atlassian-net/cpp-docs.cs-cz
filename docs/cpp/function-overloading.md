@@ -1,17 +1,17 @@
 ---
 title: Přetížení funkcí
-ms.date: 1/25/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-ms.openlocfilehash: f37a539c74b995b1dce5f68344c555a679a87991
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c05e4b840a02b3d9bbcd4ed259509be4c35c22c2
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333368"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176299"
 ---
 # <a name="function-overloading"></a>Přetížení funkcí
 
@@ -280,7 +280,8 @@ Pořadí, ve kterém nedochází k pokusům o převody vypadá takto:
 
    - Převod z ukazatele na odvozenou třídu na ukazatel na základní třídu vytváří lepší shodu, čím blíž je základní třídou přímou základní třídu. Předpokládejme, že hierarchie tříd je, jak je znázorněno na následujícím obrázku.
 
-![Upřednostňovaný převody](../cpp/media/vc391t1.gif "vc391T1") graf ilustrující převody upřednostňované
+![Graf upřednostňované převody](../cpp/media/vc391t1.gif "grafu upřednostňované převody") <br/>
+Graf s informacemi o upřednostňovaný převody
 
 Převod z typu `D*` na typ `C*` je vhodnější pro převod z typu `D*` na typ `B*`. Podobně, převod z typu `D*` na typ `B*` je vhodnější pro převod z typu `D*` na typ `A*`.
 
@@ -290,7 +291,8 @@ Tato stejná pravidla platí pro převody ukazatele na člena. Převod z typu `T
 
 Předchozí pravidlo se vztahuje pouze na dané cestě odvození. Vezměte v úvahu graf je znázorněno na následujícím obrázku.
 
-![Více&#45;dědičnosti, který zobrazuje upřednostňované převody](../cpp/media/vc391t2.gif "vc391T2") vícenásobné dědičnosti graf ilustrující upřednostňované převody
+![Více&#45;dědičnosti, který zobrazuje upřednostňované převody](../cpp/media/vc391t2.gif "více&#45;dědičnosti, který zobrazuje upřednostňované převody") <br/>
+Graf vícenásobné dědičnosti, který zobrazuje upřednostňované převody
 
 Převod z typu `C*` na typ `B*` je vhodnější pro převod z typu `C*` na typ `A*`. Důvodem je, že jsou na stejné cestě a `B*` nejblíže. Ale převod z typu `C*` na typ `D*` není vhodnější pro převod na typ `A*`; není žádná předvolba, protože převody podle různých cest.
 

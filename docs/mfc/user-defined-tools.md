@@ -1,15 +1,15 @@
 ---
 title: Uživatelem definované nástroje
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - user-defined tools (MFC Extensions)
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
-ms.openlocfilehash: 5c5773cdbbd641b30f39494b2d11c282d2d43954
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df8ba98fa1986052bae82b2afbdf40725298bef7
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607074"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175727"
 ---
 # <a name="user-defined-tools"></a>Uživatelem definované nástroje
 
@@ -17,7 +17,8 @@ MFC podporuje uživatelem definované nástroje. Uživatelsky definovaného nás
 
 Pokud je povolena podpora uživatelem definované nástroje, dialogové okno přizpůsobení automaticky zahrne **nástroje** kartu. Je vidět na následujícím obrázku **nástroje** stránky.
 
-![V dialogovém okně vlastní kartě nástroje](../mfc/media/custdialogboxtoolstab.png "custdialogboxtoolstab") přizpůsobení dialogové okno nástrojů, karta
+![V dialogovém okně vlastní kartě nástroje](../mfc/media/custdialogboxtoolstab.png "kartu Nástroje v dialogovém okně přizpůsobení") <br/>
+Přizpůsobení dialogové okno nástrojů, karta
 
 ## <a name="enabling-user-defined-tools-support"></a>Povolení uživatelem definované nástroje podpory
 
@@ -57,4 +58,3 @@ Pokud chcete pro předdefinování některé nástroje při spuštění aplikace
 [CUserTool – třída](../mfc/reference/cusertool-class.md)<br/>
 [CUserToolsManager – třída](../mfc/reference/cusertoolsmanager-class.md)<br/>
 [CWinAppEx – třída](../mfc/reference/cwinappex-class.md)
-

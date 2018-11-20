@@ -1,6 +1,6 @@
 ---
 title: Identifikátory objektů uživatelského rozhraní a příkazů
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - keyboard shortcuts, associating with IDs
 - MFC, command routing
@@ -11,24 +11,25 @@ helpviewer_keywords:
 - command routing [MFC], MFC
 - command handling [MFC], user-interface objects
 ms.assetid: 4ea19e9b-ed1e-452e-bd33-7f509107a45b
-ms.openlocfilehash: 508e7076797d48e0940b509afa3b94a7b766ebf3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75bd3a8fb562b45289107c8eb01ee3745045462d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615355"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176832"
 ---
 # <a name="user-interface-objects-and-command-ids"></a>Identifikátory objektů uživatelského rozhraní a příkazů
 
 Položky nabídky, tlačítek panelu nástrojů a přístupové klávesy "objektů uživatelského rozhraní" jsou schopné generování příkazů. Každý takový objekt uživatelského rozhraní nemá identifikátor. Přidružíte objekt uživatelského rozhraní pomocí příkazu přiřazením stejné ID objektu a příkazu. Jak je vysvětleno v [zprávy](../mfc/messages.md), příkazy jsou implementovány jako speciální zprávy. Obrázek "Příkazy v rámci" níže ukazuje, jak rozhraní framework spravuje příkazy. Když objekt uživatelského rozhraní generuje příkazu, například `ID_EDIT_CLEAR_ALL`, jeden z objektů v aplikace zpracovává příkaz – na obrázku níže, objekt dokumentu `OnEditClearAll` přes mapu zpráv dokumentu je volána funkce.
 
-![Příkazy v rámci](../mfc/media/vc385p1.gif "vc385p1") příkazy v rámci
+![Příkazy v rámci](../mfc/media/vc385p1.gif "příkazy v rámci") <br/>
+Příkazy v rámci
 
 "Příkaz aktualizace v rámci" následující obrázek ukazuje, jak MFC aktualizace objektů uživatelského rozhraní, jako je například položky nabídky a tlačítka panelu nástrojů. Předtím, než nabídka se rozbalí nebo během nečinné smyčky v případě tlačítka na panelu nástrojů MFC směruje příkazu k aktualizaci. Na následujícím obrázku, objekt dokumentu volá příkaz její aktualizační rutina `OnUpdateEditClearAll`, můžete povolit nebo zakázat objekt uživatelského rozhraní.
 
-![Příkaz aktualizace v rámci](../mfc/media/vc385p2.png "vc385p2") příkaz aktualizace v rámci
+![Příkaz aktualizace v rámci](../mfc/media/vc385p2.png "aktualizace v rámci příkazu") <br/>
+Příkaz aktualizace v rámci
 
 ## <a name="see-also"></a>Viz také
 
 [Zprávy a příkazy v prostředí .NET Framework](../mfc/messages-and-commands-in-the-framework.md)
-

@@ -2,16 +2,16 @@
 title: Instalace podpory jazyka C++ v sadě Visual Studio 2017
 description: Nainstalovat Visual Studio – podpora pro Visual C++
 ms.custom: mvc
-ms.date: 09/17/2018
+ms.date: 11/19/2018
 ms.topic: tutorial
 ms.devlang: C++
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 019eadee35829bb546de0a69707520dc98f4077e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0dd1c25cd17c67c310840396c80fe05dfc2b7e1
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507234"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175740"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Instalace podpory jazyka C++ v sadě Visual Studio
 
@@ -45,11 +45,11 @@ Obecně platí důrazně doporučujeme použít Visual Studio 2017, i v případ
 
 1. Najdete soubor Instalační program stáhnout a spustit ho. Může se zobrazit v prohlížeči, nebo může být pro vás ve složce stažené soubory. Instalační program potřebuje správce oprávnění ke spuštění. Může se zobrazit **řízení uživatelských účtů** dialogové okno s výzvou, abyste udělili oprávnění, aby instalační program provádět změny systému, zvolte **Ano**. Pokud máte potíže, vyhledejte stažený soubor v Průzkumníku souborů klikněte pravým tlačítkem na ikonu instalační program a zvolte **spustit jako správce** v místní nabídce.
 
-   ![Spusťte instalační program sady Visual Studio 2017](../build/media/vscpp-concierge-run-installer.gif "spusťte instalační program sady Visual Studio")
+   ![Stáhněte a nainstalujte Instalační program sady Visual Studio](../build/media/vscpp-concierge-run-installer.gif "stáhnout a nainstalovat Instalační program sady Visual Studio")
 
 1. Instalační program vám nabídne seznam úloh, které jsou skupiny související možnosti jsou pro vývoj pro konkrétní oblasti. Podpora jazyka C++ je teď součástí volitelné úlohy, které ve výchozím nastavení nenainstalují.
 
-   ![Vývoj desktopových aplikací pomocí C++](../build/media/desktop-development-with-cpp.png "vývoj desktopových aplikací pomocí C++")
+   ![Vývoj desktopových aplikací pomocí úlohy pro C++](../build/media/desktop-development-with-cpp.png "vývoj desktopových aplikací pomocí C++")
 
    Pro jazyk C++, vyberte **vývoj desktopových aplikací pomocí C++** úloh a klikněte na tlačítko **nainstalovat**.
 

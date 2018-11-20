@@ -1,17 +1,17 @@
 ---
 title: dynamic_cast – operátor
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - dynamic_cast_cpp
 helpviewer_keywords:
 - dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
-ms.openlocfilehash: 75085fe6dd1478fee769e23938c55c6300429d86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b359885eb72f9272fb1efe14afe9a6cbe6ddb30
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529152"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176962"
 ---
 # <a name="dynamiccast-operator"></a>dynamic_cast – operátor
 
@@ -121,7 +121,8 @@ int main() {
 }
 ```
 
-![Hierarchie, která zobrazuje vícenásobná dědičnost třídy](../cpp/media/vc39011.gif "vc39011") třídy hierarchie zobrazuje vícenásobná dědičnost
+![Hierarchie, která zobrazuje vícenásobná dědičnost třídy](../cpp/media/vc39011.gif "hierarchie, která zobrazuje vícenásobná dědičnost třídy") <br/>
+Hierarchie tříd, který zobrazuje vícenásobná dědičnost
 
 Ukazatel na objekt typu `D` lze jej bezpečně přetypovat tak `B` nebo `C`. Ale pokud `D` přetypovat tak, aby odkazovala na `A` objektu, která instance `A` , by stálo? To způsobí chybu nejednoznačný přetypování. Chcete-li tento problém vyřešit, můžete provádět dvěma jednoznačný přetypování. Příklad:
 
@@ -141,13 +142,15 @@ void f() {
 
 Použijete-li virtuální základní třídy je možné vytvářet další nejednoznačnosti. Vezměte v úvahu hierarchii tříd znázorněnou na následujícím obrázku.
 
-![Třída hierarchie, která ukazuje virtuální základní třídy](../cpp/media/vc39012.gif "vc39012") třídy hierarchie zobrazuje virtuální třídy Base
+![Třída hierarchie, která ukazuje virtuální základní třídy](../cpp/media/vc39012.gif "třídy hierarchie, která ukazuje virtuální třídy base") <br/>
+Hierarchie tříd, který ukazuje virtuální třídy base
 
 V této hierarchii `A` je virtuální základní třídy. Dána instance třídy `E` a ukazatel `A` podobjekt, **dynamic_cast** na ukazatel na `B` se nezdaří z důvodu nejednoznačnosti. Nejprve musíte přetypovat zpět na úplnou `E` a pak nahlíželi zpět nahoru hierarchii jednoznačně, k dosažení správné `B` objektu.
 
 Vezměte v úvahu hierarchii tříd znázorněnou na následujícím obrázku.
 
-![Hierarchie, která zobrazuje duplicitní základní třídy třídy](../cpp/media/vc39013.gif "vc39013") třídy hierarchie zobrazuje duplicitní základní třídy
+![Hierarchie, která zobrazuje duplicitní základní třídy třídy](../cpp/media/vc39013.gif "třídy hierarchie, která ukazuje duplicitní základní třídy") <br/>
+Hierarchie tříd, který zobrazuje duplicitní základní třídy
 
 Zadaný objekt typu `E` a ukazatel `D` podobjekt přejít z `D` podobjekt k nejvíce vlevo `A` podobjekt, můžete provést tři převody. Můžete provádět **dynamic_cast** převod `D` ukazatel na `E` ukazatele a pak převod (buď **dynamic_cast** nebo implicitní převod) z `E`k `B`a nakonec implicitní převod z `B` k `A`. Příklad:
 

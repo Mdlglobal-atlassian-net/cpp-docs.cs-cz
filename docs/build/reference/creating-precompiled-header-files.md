@@ -1,6 +1,6 @@
 ---
 title: Vytváření předkompilovaných hlavičkových souborů
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - pch
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 3014b2da9f9d9e03e9ea791c9a97ff59f842e8ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b570b76328ee9824610aac495d97cede19189cf9
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482612"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176429"
 ---
 # <a name="creating-precompiled-header-files"></a>Vytváření předkompilovaných hlavičkových souborů
 
@@ -42,8 +42,6 @@ Toto téma obsahuje následující témata předkompilované hlavičky:
 
 Referenční informace o možnostech kompilátoru související s předkompilovaných hlaviček, naleznete v tématu [/Y (předkompilované hlavičky)](../../build/reference/y-precompiled-headers.md).
 
-<a name="when-to-precompile-source-code"></a>
-
 ## <a name="when-to-precompile-source-code"></a>Kdy předkompilovat zdrojový kód
 
 Předkompilovaný kód se hodí při vývojový cyklus zkrátit čas, kompilace, zejména v případě:
@@ -57,11 +55,9 @@ První kompilace – ten, který vytvoří soubor předkompilované hlavičky (P
 Můžete předkompilovat programů jazyka C a C++. V jazyce C++ programování je běžnou praxí k oddělení informace o rozhraní třídy do záhlaví souborů. Tyto soubory záhlaví mohou být součástí později programy, které používají třídy. Předkompilace tato záhlaví, můžete snížit čas, který program pro kompilaci.
 
 > [!NOTE]
->  I když každý zdrojový soubor, můžete použít pouze jeden soubor předkompilované hlavičky (pch), můžete použít více soubory v projektu.
+> I když každý zdrojový soubor, můžete použít pouze jeden soubor předkompilované hlavičky (pch), můžete použít více soubory v projektu.
 
-<a name="two-choices-for-precompiling-code"></a>
-
-# <a name="two-choices-for-precompiling-code"></a>Dvě možnosti pro předkompilaci kódu
+## <a name="two-choices-for-precompiling-code"></a>Dvě možnosti pro předkompilaci kódu
 
 V jazyce Visual C++ můžete předkompilovat jakýkoli kód jazyka C nebo C++; nejste omezeni předkompilace jenom hlavičkové soubory.
 
@@ -73,13 +69,9 @@ Možnosti předkompilovaných hlaviček jsou [/Yc (Vytvořit předkompilovaný h
 
 Referenční témata – možnost kompilátoru pro **/Yu** a **/Yc** popíšeme, jak získat přístup k této funkci ve vývojovém prostředí.
 
-<a name="precompiled-header-consistency-rules"></a>
-
 ## <a name="precompiled-header-consistency-rules"></a>Pravidla konzistence předkompilovaných hlaviček
 
 Soubory PCH obsahovat informace o prostředí počítače a paměti adresu informace o programu, byste měli používat jenom soubor PCH na počítači, kde se vytvořila.
-
-<a name="consistency-rules-for-per-file-use-of-precompiled-headers"></a>
 
 ## <a name="consistency-rules-for-per-file-use-of-precompiled-headers"></a>Pravidla konzistence pro použití předkompilovaných hlaviček podle souborů
 
@@ -134,8 +126,6 @@ Direktivy pragma jsou zachovány jako součást předkompilovanou hlavičku a m�
 |`data_seg`|`intrinsic`|`warning`|
 |`function`|`optimize`||
 
-<a name="consistency-rules-for-yc-and-yu"></a>
-
 ## <a name="consistency-rules-for-yc-and-yu"></a>Pravidla konzistence pro /Yc a /Yu
 
 Při použití předkompilované hlavičky vytvořené pomocí /Yc a /Yu kompilátor porovná aktuální kompilace prostředí tak, aby ten, který existoval, když jste vytvořili soubor PCH. Nezapomeňte zadat prostředí konzistentní s předchozím histogramem (pomocí možnosti kompilátoru konzistentní vzhledem k aplikacím, direktivy pragma a tak dále) pro aktuální kompilaci. Pokud kompilátor zjistí nekonzistence, vydá upozornění a identifikuje nekonzistencí, kde je to možné. Tato upozornění není nutně znamenat problém s souboru PCH; upozorňují jednoduše je možné je v konfliktu. Následující části popisují požadavky na konzistence předkompilovaných hlaviček.
@@ -155,15 +145,11 @@ Tato tabulka shrnuje možnosti kompilátoru, které můžou aktivovat upozorněn
 > [!NOTE]
 >  Předkompilované hlavičky zařízení je určena pro použití pouze ve zdrojových souborech jazyka C a C++.
 
-<a name="using-precompiled-headers-in-a-project"></a>
-
 ## <a name="using-precompiled-headers-in-a-project"></a>Použití předkompilovaných hlaviček v projektu
 
 Předchozí části jsou uvedeny základní informace o předkompilované hlavičky: /Yc a /Yu, možnost/fp a [hdrstop](../../preprocessor/hdrstop.md) direktivy pragma. Tato část popisuje způsob pro použití ruční možnosti předkompilovaných hlaviček v projektu. končí příklad souboru pravidel a kód, který spravuje.
 
 Pro další postup pro použití ruční možnosti předkompilovaných hlaviček v projektu studovat mezi soubory pravidel v adresáři MFC\SRC, který se vytvoří během instalace výchozí jazyka Visual C++. Tyto soubory pravidel trvat podobný přístup je uvedené v této části, ale větší využití maker Microsoft Program údržby Utility (NMAKE) a nabízí větší kontrolu nad procesu sestavení.
-
-<a name="pch-files-in-the-build-process"></a>
 
 ## <a name="pch-files-in-the-build-process"></a>Soubory PCH v procesu sestavení
 
@@ -171,8 +157,8 @@ Kódové základny softwarového projektu je obvykle součástí více C nebo C+
 
 Na obrázku používá tři graficky zařízení kvůli znázornění toku procesu sestavení. S názvem obdélníky představují všechny soubory nebo makra. tři makra představují jeden nebo více souborů. Vystínovanou oblasti představují všechny kompilace nebo odkaz akce. Šipky zobrazují, které soubory a makra jsou zkombinované během kompilace nebo proces propojení.
 
-![Soubor pravidel, která používá soubor předkompilované hlavičky](../../build/reference/media/vc30ow1.gif "strukturu souboru pravidel, která používá soubor předkompilované hlavičky")
-##### <a name="structure-of-a-makefile-that-uses-a-precompiled-header-file"></a>Struktura souboru pravidel, která používá soubor předkompilované hlavičky
+![Struktura souboru pravidel, která používá soubor předkompilované hlavičky](../../build/reference/media/vc30ow1.gif "strukturu souboru pravidel, která používá soubor předkompilované hlavičky") <br/>
+Struktura souboru pravidel, která používá soubor předkompilované hlavičky
 
 Od horní části diagramu STABLEHDRS a AUTONOMNÍHO jsou makra NMAKE, ve kterých je seznam souborů není pravděpodobně potřebovat opětovnou kompilaci. Tyto soubory jsou kompilovány pomocí řetězec příkazu
 
@@ -187,8 +173,6 @@ Pokračování dolů diagramu, APPLIB.obj představuje kód podpory, který pou�
 MYAPP.obj představuje poslední aplikace. Je vytvořený z MYAPP.cpp, soubory uvedené v makru UNSTABLEHDRS a předkompilovaný kód z předkompilované hlavičky.
 
 A konečně spustitelný soubor (MYAPP. Propojování souborů uvedených v makru OBJS (APPLIB.obj a MYAPP.obj) vytvoří (EXE).
-
-<a name="sample-makefile-for-pch"></a>
 
 ## <a name="sample-makefile-for-pch"></a>Ukázkový soubor pravidel pro PCH
 
@@ -254,8 +238,6 @@ NMAKE DEBUG=0
 ```
 
 Další informace o soubory pravidel najdete v tématu [NMake – odkaz](../../build/nmake-reference.md). Viz také [– možnosti kompilátoru](../../build/reference/compiler-options.md) a [možnosti Linkeru](../../build/reference/linker-options.md).
-
-<a name="example-code-for-pch"></a>
 
 ## <a name="example-code-for-pch"></a>Ukázkový kód pro PCH
 

@@ -1,6 +1,6 @@
 ---
 title: Přetypování
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - casting [C++]
 - coercion [C++]
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - polymorphic classes [C++]
 - classes [C++], polymorphism
 ms.assetid: 3dbeb06e-2f4b-4693-832d-624bc8ec95de
-ms.openlocfilehash: eb309319a4af6d604d8558552ce313ba1d0fb629
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02ade663ee92d3a301fda95bb385c3ffa48ead12
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560794"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175545"
 ---
 # <a name="casting"></a>Přetypování
 
@@ -23,11 +23,13 @@ Jazyk C++ udává, že je-li třída odvozena ze základní třídy obsahující
 
 Jelikož odvozená třída obsahuje všechny definice všech základních tříd, z nichž byla odvozena, lze ukazatel přetypovat na libovolnou z těchto tříd vyskytujících se výše v jejich hierarchii. Je-li dán ukazatel na základní třídu, může být bezpečné přetypovat ukazatel na třídu umístěnou v hierarchii níže. Přetypování je bezpečné, pokud objekt, na který ukazatel ukazuje, je ve skutečnosti typem odvozeným ze základní třídy. V takovém případě se skutečný objekt nazývá „kompletním objektem“. O ukazateli na základní třídu se říká, že ukazuje na „podobjekt“ kompletního objektu. Vezměte v úvahu například hierarchii tříd znázorněnou na následujícím obrázku.
 
-![Hierarchie třídy](../cpp/media/vc38zz1.gif "vc38ZZ1") hierarchie tříd
+![Hierarchie třídy](../cpp/media/vc38zz1.gif "hierarchie třídy") <br/>
+Hierarchie tříd
 
 Objekt typu `C` lze vizualizovat tak, jak ukazuje následující obrázek.
 
-![Třída C s sub&#45;objekty B a A](../cpp/media/vc38zz2.gif "vc38ZZ2") třídy C s Podobjekty B a A podobjekt
+![Třída C s sub&#45;objekty B a A](../cpp/media/vc38zz2.gif "třídy C s sub&#45;objekty B a A") <br/>
+Třída C s objekty dílčí B a A
 
 Je-li dána instance třídy `C`, existuje podobjekt `B` a podobjekt `A`. Instance třídy `C`, včetně podobjektů `A` a `B`, je „kompletním objektem“.
 

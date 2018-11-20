@@ -1,13 +1,13 @@
 ---
 title: Používání bloků
-ms.date: 06/28/2018
+ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: 02a6f35801c30ce5e25e79a4e736e6c08776a1da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ede62c80a83b5f5fc1d691bf52dde67140e68246
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588511"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176091"
 ---
 # <a name="using-tiles"></a>Používání bloků
 
@@ -27,7 +27,7 @@ Pro využití dělení do bloku musí algoritmus rozdělit výpočetní doménu 
 
 Následující diagram reprezentuje matici 8 x 9 data, která jsou uspořádána v dlaždicích 2 x 3.
 
-![8&#45;podle&#45;9 matice dělí 2&#45;podle&#45;3 dlaždice](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")
+![8&#45;podle&#45;9 matice dělí 2&#45;podle&#45;3 dlaždice](../../parallel/amp/media/usingtilesmatrix.png "8&#45;podle&#45;9 matice dělí 2&#45;podle&#45;3 dlaždice")
 
 Následující příklad ukazuje globální, blokové a místní indexy této blokové matice. `array_view` Za použití prvků typu je vytvořen objekt `Description`. `Description` Udržuje globální, dlaždice a místní indexy prvků matice. Kód ve volání `parallel_for_each` nastaví hodnotu globálního, blokového a místního indexu každého prvku. Výstup zobrazuje hodnoty `Description` struktury.
 

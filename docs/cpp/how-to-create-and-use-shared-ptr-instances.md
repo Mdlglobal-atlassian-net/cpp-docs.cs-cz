@@ -1,15 +1,15 @@
 ---
 title: 'Postupy: Vytváření a používání instancí ukazatelů shared_ptr'
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: f437ccb476456a8081fa3be293bf67adb4fb2d0e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79d85de6859096bdff3e2bc17357b721e5ce5846
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606645"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176273"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>Postupy: Vytváření a používání instancí ukazatelů shared_ptr
 
@@ -17,33 +17,33 @@ Typ `shared_ptr` je inteligentní ukazatel ve standardní knihovně jazyka C++ u
 
 Následující obrázek znázorňuje několik instancí typu `shared_ptr`, které odkazují na jedno umístění v paměti.
 
-[![Sdílený ukazatel](../cpp/media/shared_ptr.png "shared_ptr")]
+![Sdílený ukazatel diagram](../cpp/media/shared_ptr.png "diagram sdílený ukazatel")
 
-## <a name="example"></a>Příklad
+## <a name="example-1"></a>Příklad 1
 
 Kdykoli je to možné, použijte [make_shared](../standard-library/memory-functions.md#make_shared) funkci, která vytvoří `shared_ptr` kdy je prostředek paměti vytvořen poprvé. Funkce `make_shared` zaručuje bezpečnost výjimek. Používá stejné volání pro přidělení paměti řídicímu bloku a prostředku a tím snižuje zatížení při jejich konstrukci. Pokud funkci `make_shared` nepoužijete, je pro vytvoření objektu před jeho předáním konstruktoru typu `shared_ptr` nutné použít explicitní nový výraz. Následující příklad ukazuje různé způsoby deklarace a inicializace instancí typu `shared_ptr` společně s novým objektem.
 
 [!code-cpp[stl_smart_pointers#1](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
 
-## <a name="example"></a>Příklad
+## <a name="example-2"></a>Příklad 2
 
 Následující příklad ukazuje deklaraci a inicializaci instancí typu `shared_ptr`, jež převezmou sdílené vlastnictví objektu, který již byl vytvořen jinou instancí typu `shared_ptr`. Předpokládejme, že proměnná `sp2` je inicializována instancí typu `shared_ptr`.
 
 [!code-cpp[stl_smart_pointers#2](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]
 
-## <a name="example"></a>Příklad
+## <a name="example-3"></a>Příklad 3
 
 `shared_ptr` je také užitečný v kontejnery standardní knihovny C++ při použití algoritmů, které kopírují prvky. Prvky lze zabalit do instance typu `shared_ptr` a poté je zkopírovat do jiných kontejnerů s vědomím, že základní paměť je platná tak dlouho, dokud ji potřebujete a ne déle. Následující příklad ukazuje, jak použít algoritmus `replace_copy_if` s instancemi typu `shared_ptr` v instanci typu vector.
 
 [!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]
 
-## <a name="example"></a>Příklad
+## <a name="example-4"></a>Příklad 4:
 
 K přetypování instance typu `dynamic_pointer_cast` lze použít funkce `static_pointer_cast`, `const_pointer_cast` a `shared_ptr`. Tyto funkce se podobají operátorům `dynamic_cast`, `static_cast` a `const_cast`. Následující příklad ukazuje, jak otestovat odvozený typ základních tříd každého prvku vektoru instancí typu `shared_ptr` a poté tyto prvky zkopírovat a zobrazit o nich informace.
 
 [!code-cpp[stl_smart_pointers#5](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_4.cpp)]
 
-## <a name="example"></a>Příklad
+## <a name="example-5"></a>Příklad 5
 
 Instanci typu `shared_ptr` lze předat jiné funkci následujícími způsoby:
 
@@ -59,7 +59,7 @@ Instanci typu `shared_ptr` lze předat jiné funkci následujícími způsoby:
 
 - Někdy, například pro typ `std:vector<shared_ptr<T>>`, bude pravděpodobně nutné předat každou instanci typu `shared_ptr` tělu výrazu lambda nebo objektu pojmenované funkce. Pokud výraz lambda nebo funkce tento ukazatel neukládá, předejte instanci typu `shared_ptr` odkazem, abyste zabránili volání kopie konstruktoru pro každý prvek.
 
-## <a name="example"></a>Příklad
+## <a name="example-6"></a>Příklad 6
 
 Následující příklad ukazuje, jak typ `shared_ptr` přetěžuje různé operátory porovnání, což umožňuje porovnání ukazatelů na paměť, která je vlastněna instancemi typu `shared_ptr`.
 

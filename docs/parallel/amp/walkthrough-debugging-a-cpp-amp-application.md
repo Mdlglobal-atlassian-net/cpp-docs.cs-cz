@@ -1,18 +1,18 @@
 ---
 title: 'Návod: Ladění aplikace C++ AMP'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - debugging, C++ Accelerated Massive Parallelism
 - C++ AMP, debugging
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 4f8cdc315b561b5cbb4538e8486208d6278af9df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 610cf317982204715d55d12ece510cb477543f4d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579900"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176689"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Návod: Ladění aplikace C++ AMP
 
@@ -201,7 +201,8 @@ V tomto postupu použijete místní ladicí program Windows abyste měli jistotu
 
 4. Nastavte zarážky na řádcích kódu je znázorněno na následujícím obrázku (přibližně 67 řádků řádek 70).
 
-     ![Procesor zarážky](../../parallel/amp/media/campcpubreakpoints.png "campcpubreakpoints") procesoru zarážky
+   ![Procesor zarážky](../../parallel/amp/media/campcpubreakpoints.png "procesoru zarážky") <br/>
+   Procesor zarážky
 
 5. V panelu nabídky zvolte **ladění** > **spustit ladění**.
 
@@ -229,7 +230,8 @@ Tato část ukazuje, jak na ladění kódu GPU, což je kód obsažen v `sum_ker
 
 6. Nastavte zarážku na řádky 30, jak je znázorněno na následujícím obrázku.
 
-     ![Zarážky GPU](../../parallel/amp/media/campgpubreakpoints.png "campgpubreakpoints") zarážky GPU
+   ![Zarážky GPU](../../parallel/amp/media/campgpubreakpoints.png "zarážky GPU") <br/>
+   Zarážky GPU
 
 7. V panelu nabídky zvolte **ladění** > **spustit ladění**. Zarážky v kódu procesoru na řádcích 67 a 70 nebudou provedeny během ladění, protože tyto řádky kódu jsou spouštěny na CPU GPU.
 
@@ -241,7 +243,8 @@ Tato část ukazuje, jak na ladění kódu GPU, což je kód obsažen v `sum_ker
 
 2. Ukotvit **vlákna GPU** okno v dolní části sady Visual Studio. Zvolte **rozbalte přepínač vlákno** tlačítko zobrazíte textová pole a vlákno. **Vlákna GPU** okno zobrazuje celkový počet aktivních a blokovaná vlákna GPU, jak je znázorněno na následujícím obrázku.
 
-     ![Vlákna GPU – okno s 4 aktivní vlákna](../../parallel/amp/media/campc.png "campc") vlákna GPU – okno
+   ![Vlákna GPU – okno s 4 aktivní vlákna](../../parallel/amp/media/campc.png "vlákna GPU – okno s 4 aktivní vlákna") <br/>
+   Okno vláken GPU
 
    Existují 313 dlaždice přidělených pro tento výpočet. Každá dlaždice obsahuje 32 vláken. Protože místní ladění GPU na emulátoru softwaru dojde, existují čtyři aktivní vlákna GPU. Čtyři vlákna současného provádění pokynů a poté přesuňte společně do další instrukci.
 
@@ -263,13 +266,15 @@ Tato část ukazuje, jak na ladění kódu GPU, což je kód obsažen v `sum_ker
 
 3. Ujistěte se, že **vlákna** je vybrán v seznamu v levém horním rohu. Na následujícím obrázku **paralelní zásobníky** zobrazení zásobníku volání, zaměřuje vlákna GPU, které jste viděli v okně se zobrazí **vlákna GPU** okna.
 
-     ![Okno paralelních zásobníků s 4 aktivní vlákna](../../parallel/amp/media/campd.png "campd") okna paralelní zásobníky
+   ![Okno paralelních zásobníků s 4 aktivní vlákna](../../parallel/amp/media/campd.png "okna paralelní zásobníky s 4 aktivní vlákna") <br/>
+   Okno paralelních zásobníků
 
    32 vláken se nepovedlo z `_kernel_stub` na příkaz lambda v `parallel_for_each` volání funkce a pak `sum_kernel_tiled` funkce, kde dochází k paralelní redukci. 28 mimo 32 vláken pokročila do [tile_barrier::wait](reference/tile-barrier-class.md#wait) příkazu a zůstat blokovaných na řádku 22, zatímco 4 vlákna zůstaly aktivní v `sum_kernel_tiled` funkce na řádku 30.
 
    Můžete si prohlédnout vlastnosti vlákna GPU, které jsou k dispozici v **vlákna GPU** okna v bohaté datového tipu sady **paralelní zásobníky** okna. Chcete-li to provést, umístěte ukazatel myši na rámec zásobníku **sum_kernel_tiled**. Následující obrázek znázorňuje DataTip.
 
-     ![Datového tipu pro okna paralelní zásobníky](../../parallel/amp/media/campe.png "campe") vlákna GPU datového tipu
+   ![Datového tipu pro okna paralelní zásobníky](../../parallel/amp/media/campe.png "datového tipu pro okna paralelní zásobníky") <br/>
+   Vlákna GPU datového tipu
 
    Další informace o **paralelní zásobníky** okna, naleznete v tématu [použití okna paralelní zásobníky](/visualstudio/debugger/using-the-parallel-stacks-window).
 
@@ -291,7 +296,8 @@ Tato část ukazuje, jak na ladění kódu GPU, což je kód obsažen v `sum_ker
 
    Vyberte **localA [localIdx [0]]** záhlaví sloupce seřadí hodnoty ve sloupci. Následující obrázek ukazuje výsledky řazení podle **localA [localIdx [0]]**.
 
-     ![Paralelního kukátka s seřazených výsledků](../../parallel/amp/media/campf.png "campf") výsledky řazení
+   ![Paralelního kukátka s seřazených výsledků](../../parallel/amp/media/campf.png "okno paralelního sledování pomocí seřazených výsledků") <br/>
+   Výsledky řazení
 
    Můžete exportovat obsah **paralelní sledování** okno do Excelu výběrem **Excel** tlačítko a pak zvolíte **otevřít v aplikaci Excel**. Pokud máte ve svém vývojovém počítači nainstalována aplikace Excel, tím se otevře, který obsahuje obsah Excelového listu.
 
@@ -313,7 +319,8 @@ Můžete označit konkrétní vlákna GPU označením je **vlákna GPU** okně *
 
    Následující obrázek znázorňuje čtyři aktivní vlákna s příznakem v **vlákna GPU** okna.
 
-     ![Okno vláken GPU s vlákna s příznakem](../../parallel/amp/media/campg.png "campg") aktivní vlákna v okně vlákna GPU
+   ![Okno vláken GPU s vlákna s příznakem](../../parallel/amp/media/campg.png "okno vlákna GPU s vlákna s příznakem") <br/>
+   Aktivní vlákna v okně vlákna GPU
 
    **Paralelní sledování** okno a datového tipu sady **paralelní zásobníky** okno obou označení vlákna s příznakem.
 
@@ -321,8 +328,8 @@ Můžete označit konkrétní vlákna GPU označením je **vlákna GPU** okně *
 
    Zvolte **zobrazit pouze s příznakem** tlačítko na jakémkoli systému windows nebo na **umístění ladění** nástrojů. Je vidět na následujícím obrázku **zobrazit pouze s příznakem** tlačítko **umístění ladění** nástrojů.
 
-     ![Panel nástrojů ladit umístění s ikonou zobrazit pouze označená příznakem](../../parallel/amp/media/camph.png "camph")
-**zobrazit pouze s příznakem** tlačítko
+   ![Panel nástrojů ladit umístění s ikonou zobrazit pouze označená příznakem](../../parallel/amp/media/camph.png "panelu nástrojů umístění ladění s ikonou zobrazit pouze označená příznakem") <br/>
+   **Zobrazit pouze s příznakem** tlačítko
 
    Nyní **vlákna GPU**, **paralelní sledování**, a **paralelní zásobníky** windows zobrazit pouze vlákna s příznakem.
 
@@ -340,7 +347,8 @@ Můžete ukotvit (Pozastavit) a uvolnit vlákna GPU (pokračovat) buď z **vlák
 
    Na následující ilustraci **vlákna GPU** okno zobrazuje, že všechny čtyři vlákna jsou zmražená.
 
-     ![Vlákna GPU windows zobrazující zmrazené vlákna](../../parallel/amp/media/campk.png "campk") zmrazené vlákna **vlákna GPU** okna
+   ![Vlákna GPU windows zobrazující zmrazené vlákna](../../parallel/amp/media/campk.png "vlákna GPU windows zobrazující zmrazené vláken") <br/>
+   Zmrazené vlákna **vlákna GPU** okna
 
    Podobně **paralelní sledování** okno zobrazuje, že všechny čtyři vlákna jsou zmražená.
 
@@ -356,7 +364,8 @@ Můžete ukotvit (Pozastavit) a uvolnit vlákna GPU (pokračovat) buď z **vlák
 
    Vlákna **vlákna GPU** okna jsou seskupené podle adres. Adresa odpovídá podle pokynů ve zpětném překladu, ve kterém je každá skupina vlákna umístěna. na řádku 22 jsou vlákna 24 kde [tile_barrier::wait – metoda](reference/tile-barrier-class.md#wait) provádí. 12 vlákna jsou podle instrukce pro odbourejte překážky bránící na řádku 32. Čtyři tato vlákna s příznakem. Osm vlákna jsou na zarážku na řádky 30. Čtyři tato vlákna jsou zmražená. Následující obrázek znázorňuje seskupená vlákna **vlákna GPU** okna.
 
-     ![Vlákna GPU – okno s vlákny seskupené podle adres](../../parallel/amp/media/campl.png "campl") seskupená vlákna **vlákna GPU** okna
+   ![Vlákna GPU – okno s vlákny seskupené podle adres](../../parallel/amp/media/campl.png "vlákna GPU – okno s vlákny seskupené podle adres") <br/>
+   Seskupená vlákna **vlákna GPU** okna
 
 2. Můžete také provést **Group By** operace tak, že otevřete místní nabídku pro mřížky dat **paralelní sledování** okně Výběr **Group By**a následným výběrem možnosti v nabídce Položka, která odpovídá jak mají být seskupeny vlákna.
 

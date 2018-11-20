@@ -1,6 +1,6 @@
 ---
 title: Dialogové pruhy
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - MFC, control bars
 - CDialogBar class [MFC], dialog bars
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dialog bars
 - dialog bars [MFC], about dialog bars
 ms.assetid: 485c8055-6bb0-4051-8417-dd2971499321
-ms.openlocfilehash: 3a3276e9b5d0e1ab8d8e77fae983d24ff1e4b4e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 800cc208df7299cf440508c2705b0b0ddb9ae665
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557393"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175350"
 ---
 # <a name="dialog-bars"></a>Dialogové pruhy
 
@@ -21,7 +21,8 @@ Panel dialogového okna je panel nástrojů, typ z [ovládací panel](../mfc/con
 
 Existuje několik klíčových rozdílů mezi panelu nástrojů a `CDialogBar` objektu. A `CDialogBar` objekt je vytvořen z prostředků šablony dialogového okna, které můžete vytvořit pomocí editoru dialogového okna Visual C++ a který může obsahovat jakýkoli typ ovládacího prvku Windows. Uživatel může kartu z ovládacího prvku na ovládací prvek. A můžete zadat na zarovnání styl, zarovnání dialogového pruhu s libovolnou část nadřazené okno rámce, nebo dokonce ponechte na místě, pokud je velikost nadřazené. Následující obrázek znázorňuje dialogového pruhu s širokou škálu ovládacích prvků.
 
-![Panel dialogového okna VC](../mfc/media/vc378t1.gif "vc378t1") panel dialogového okna
+![Panel dialogového okna VC](../mfc/media/vc378t1.gif "VC panel dialogového okna") <br/>
+Panel dialogového okna
 
 V ostatních ohledech, práci s `CDialogBar` objektu je podobné jako u nemodální dialogové okno. Použití editoru dialogových oken pro návrh a vytvoření prostředku dialogového okna.
 

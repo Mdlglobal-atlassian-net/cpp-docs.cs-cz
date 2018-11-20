@@ -1,6 +1,6 @@
 ---
 title: Třída CWnd
-ms.date: 08/27/2018
+ms.date: 11/19/2018
 f1_keywords:
 - CWnd
 - AFXWIN/CWnd
@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 365ecea539d47892b8697bb7b6ce2015bc18cda3
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f1d418cadd2739b840efd14874fd4bbd6afeb4c5
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694891"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177105"
 ---
 # <a name="cwnd-class"></a>Třída CWnd
 
@@ -5688,10 +5688,10 @@ Následující obrázek znázorňuje různé systémové ikony, které je možn�
 
 |||
 |-|-|
-|![Zastavit &#40;x&#41; ikonu](../../mfc/reference/media/vc364f1.gif "vc364f1")|MB_ICONHAND MB_ICONSTOP a MB_ICONERROR|
-|![Nápověda &#40; &#41; ikonu](../../mfc/reference/media/vc364f2.gif "vc364f2")|MB_ICONQUESTION|
-|![Důležité &#40; &#33; &#41; ikonu](../../mfc/reference/media/vc364f3.gif "vc364f3")|MB_ICONEXCLAMATION a MB_ICONWARNING|
-|![Informace o &#40;můžu&#41; ikonu](../../mfc/reference/media/vc364f4.gif "vc364f4")|MB_ICONASTERISK a MB_ICONINFORMATION|
+|![Zastavit &#40;x&#41; ikonu](../../mfc/reference/media/vc364f1.gif "Zastavit &#40;x&#41; ikonu")|MB_ICONHAND MB_ICONSTOP a MB_ICONERROR|
+|![Nápověda &#40;? &#41; ikonu](../../mfc/reference/media/vc364f2.gif "pomáhají &#40;?&#41; ikonu")|MB_ICONQUESTION|
+|![Důležité &#40; &#33; &#41; ikonu](../../mfc/reference/media/vc364f3.gif "důležité &#40; &#33; &#41; ikonu")|MB_ICONEXCLAMATION a MB_ICONWARNING|
+|![Informace o &#40;můžu&#41; ikonu](../../mfc/reference/media/vc364f4.gif "informace &#40;můžu&#41; ikonu")|MB_ICONASTERISK a MB_ICONINFORMATION|
 
 ### <a name="example"></a>Příklad
 

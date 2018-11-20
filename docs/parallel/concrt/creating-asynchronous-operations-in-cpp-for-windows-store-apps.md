@@ -1,16 +1,16 @@
 ---
 title: Vytváření asynchronních operací v jazyce C++ pro aplikace pro UPW
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 4824180ec0ff9f7adb7c2d0a9b505a2abb58c20b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 59630c7702dffc4b606943e174e44fdba6aecfe8
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333329"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176949"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Vytváření asynchronních operací v jazyce C++ pro aplikace pro UPW
 
@@ -124,7 +124,7 @@ Tyto metody používají `async` a `await` klíčových slov pro aktualizaci už
 
 Je vidět na následujícím obrázku `Primes` aplikace po jednotlivých možností byla vybrána.
 
-![Aplikace Windows Runtime základen](../../parallel/concrt/media/concrt_windows_primes.png "concrt_windows_primes")
+![Prostředí Windows Runtime základen aplikace](../../parallel/concrt/media/concrt_windows_primes.png "základen modulu Windows Runtime aplikace")
 
 Příklady, které používají `create_async` pro vytváření asynchronních úloh určených pro jiné jazyky, naleznete v tématu [pomocí C++ v příklad optimalizace cesty mapy Bing](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) a [asynchronní operace systému Windows 8 v jazyce C++ pomocí úlohy PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).
 
@@ -186,7 +186,7 @@ Upravit `MainPage` konstruktor pro vytvoření řetězec pokračujících úloh,
 
 Následující obrázek ukazuje výsledky `CommonWords` aplikace.
 
-![Aplikace Windows Runtime CommonWords](../../parallel/concrt/media/concrt_windows_common_words.png "concrt_windows_common_words")
+![Aplikace Windows Runtime CommonWords](../../parallel/concrt/media/concrt_windows_common_words.png "Windows Runtime CommonWords aplikace")
 
 V tomto příkladu je možné pro podporu zrušení, protože `task` objektů, které podporují `create_async` použít token implicitní zrušení. Definujte svoji pracovní funkci provést `cancellation_token` objektu, pokud vaše úkoly potřebují reagovat na způsob spolupráce za zrušení. Další informace o zrušení v knihovně PPL naleznete v tématu [zrušení v knihovně PPL](cancellation-in-the-ppl.md)
 

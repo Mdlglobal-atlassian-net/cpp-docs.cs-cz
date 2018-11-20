@@ -1,6 +1,6 @@
 ---
 title: Body připojení
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - IConnectionPoint
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - CCmdTarget class [MFC], and connection points
 - sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
-ms.openlocfilehash: cddbdb30cbc5f5ddb5fa98524ad067655f262be1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf21e7bf591a5b1977784db1542053817a73e6cd
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517634"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175480"
 ---
 # <a name="connection-points"></a>Body připojení
 
@@ -30,7 +30,8 @@ V minulosti, definované modelu COM (Component Object) obecný mechanismus (`IUn
 
 Připojení má dvě části: objekt volání rozhraní jako zdroj a objekt implementující rozhraní, nazývá jímky. Spojovací bod je rozhraní vystavené ve zdroji. Zveřejněním spojovací bod umožňuje zdroji jímky k navázání připojení k samotné (zdroj). Prostřednictvím připojení příkaz mechanismus ( `IConnectionPoint` rozhraní), je předán ukazatel na rozhraní stoku se zdrojovým objektem. This – ukazatel poskytuje zdroj s přístupem k implementaci jímky sadu členské funkce. Chcete-li vyvolat událost implementované jímka zdroji můžete volat, odpovídající metodu jímky implementace. Následující obrázek ukazuje připojení bodu právě popsanou.
 
-![Implementovat bod připojení](../mfc/media/vc37lh1.gif "vc37lh1") implementovat přípojný bod
+![Implementovat bod připojení](../mfc/media/vc37lh1.gif "implementovat bod připojení") <br/>
+Implementovaný bod připojení
 
 Knihovna MFC implementuje tento model [cconnectionpoint –](../mfc/reference/cconnectionpoint-class.md) a [CCmdTarget –](../mfc/reference/ccmdtarget-class.md) třídy. Třídy odvozené z `CConnectionPoint` implementovat `IConnectionPoint` rozhraní, používá k vystavení spojovací body na jiné objekty. Třídy odvozené z `CCmdTarget` implementovat `IConnectionPointContainer` rozhraní, které můžete vytvořit výčet všech body k dispozici připojení objektu nebo vyhledejte konkrétní spojovací bod.
 
@@ -54,7 +55,8 @@ Nakonec přidejte volání do `EnableConnections` v konstruktoru třídy. Přík
 
 Jakmile tento kód byl vložen, vaše `CCmdTarget`-odvozené třídě poskytuje bod připojení pro `ISampleSink` rozhraní. Následující obrázek ukazuje tento příklad.
 
-![Spojovací bod implementovaná pomocí knihovny MFC](../mfc/media/vc37lh2.gif "vc37lh2") A připojení bodu implementovaná pomocí knihovny MFC
+![Spojovací bod implementovaná pomocí knihovny MFC](../mfc/media/vc37lh2.gif "spojovací bod implementovaná pomocí knihovny MFC") <br/>
+Spojovací bod implementovaná pomocí knihovny MFC
 
 Obvykle spojovací body podporují "vícesměrové vysílání" – možnost vysílání více jímky připojené ke stejnému rozhraní. Následující příklad fragmentu ukazuje, jak vícesměrového vysílání podle iterace v rámci každé jímky najdete v bodě připojení:
 

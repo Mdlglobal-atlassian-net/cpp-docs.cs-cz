@@ -1,23 +1,24 @@
 ---
 title: Zdroje dat a relace
-ms.date: 10/22/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - data sources [C++], OLE DB
 - connections [C++], data source
 - OLE DB consumer templates [C++], data sources
 ms.assetid: 6ee52216-e082-4869-a1d6-ce561cfb76e5
-ms.openlocfilehash: 04b274677d98f1a544bcc190ce7155c00c4ee8d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c43061ccb462fe472821c76251430b5e3b0f0809
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650325"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175298"
 ---
 # <a name="data-sources-and-sessions"></a>Zdroje dat a relace
 
 Následující obrázek ukazuje třídy, které podporují připojení k a přístup ke zdroji dat. Každá třída je založen na standardní součástí implementace technologie OLE DB.
 
-![Datové zdroje a relace třídy](../../data/oledb/media/vcdatasourcesessionclasses.gif "vcdatasourcesessionclasses") zdroje dat a relace tříd
+![Datové zdroje a relace třídy](../../data/oledb/media/vcdatasourcesessionclasses.gif "datové zdroje a relace třídy") <br/>
+Zdroj dat a relace tříd
 
 Třídy jsou:
 

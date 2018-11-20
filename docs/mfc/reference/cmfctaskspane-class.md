@@ -1,6 +1,6 @@
 ---
 title: Cmfctaskspane – třída
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPane
 - AFXTASKSPANE/CMFCTasksPane
@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: e11d1f95cf44756a39ab52fcd4dfeb87addc6e17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aaf0e68391dd1273c3f973315ac58fe0d6bd1c24
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563654"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176806"
 ---
 # <a name="cmfctaskspane-class"></a>Cmfctaskspane – třída
 
@@ -350,11 +350,11 @@ Použít `CMFCTasksPane` ovládací prvek ve vaší aplikaci, postupujte podle t
 
 Následující obrázek znázorňuje podokno typických úloh ovládacího prvku. První skupina je *speciální* skupiny a její popisek je tmavší barva. Je třetí skupina sbalena. Poslední skupinu je zarovnán do spodní části podokna úloh a nemá žádný titulek a poslední úlohy ve skupině je jednoduchý popisku:
 
-![Příklad podokno úloh](../../mfc/reference/media/nexttaskpane.png "nexttaskpane")
+![Příklad podokno úloh](../../mfc/reference/media/nexttaskpane.png "příkladu podokna úloh")
 
 Úpravou různých okrajů a odsazení můžete přizpůsobit vzhled podokna úloh. Na následujícím obrázku vysvětluje význam těchto proměnných:
 
-![Vlastní skupina úloh](../../mfc/reference/media/nexttaskgrpcustom.png "nexttaskgrpcustom")
+![Vlastní skupina úloh](../../mfc/reference/media/nexttaskgrpcustom.png "vlastní skupiny úloh")
 
 ## <a name="example"></a>Příklad
 

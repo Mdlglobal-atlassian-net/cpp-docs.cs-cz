@@ -1,29 +1,34 @@
 ---
 title: Správce vizualizace
-ms.date: 06/28/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Visualization Manager
 ms.assetid: c9dd1365-27ac-42e5-8caa-1004525b4129
-ms.openlocfilehash: befff860f50677f9c70c0fbb6b45ac528c36e773
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c9dc19266d80d56f696953c5f5896eb9d99cc8b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521369"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175571"
 ---
 # <a name="visualization-manager"></a>Správce vizualizace
 
 Správce vzhledu je objekt, který řídí vzhled aplikaci jako celek. Jako jednu třídu funguje, kde můžete ukládat výkresu kódu pro vaši aplikaci. Knihovna MFC obsahuje několik vizuální vedoucí. Můžete také vytvořit vlastní správce vzhledu, pokud chcete vytvořit vlastní zobrazení pro vaši aplikaci. Následující obrázky znázorňují tu samou aplikaci, pokud jsou povolené vizuální vedoucí jiné:
 
-![Moje aplikace podle vykreslení CMFCVisualManagerWindows](../mfc/media/vmwindows.png "vmwindows") Moje aplikace, která používá správce vzhledu CMFCVisualManagerWindows –
+![Moje aplikace podle vykreslení CMFCVisualManagerWindows](../mfc/media/vmwindows.png "MyApp podle vykreslení CMFCVisualManagerWindows –") <br/>
+Moje aplikace, která používá správce vzhledu CMFCVisualManagerWindows –
 
-![Moje aplikace podle vykreslení CMFCVisualManagerVS2005](../mfc/media/vmvs2005.png "vmvs2005") Moje aplikace, která používá správce vzhledu CMFCVisualManagerVS2005 –
+![Moje aplikace podle vykreslení CMFCVisualManagerVS2005](../mfc/media/vmvs2005.png "MyApp podle vykreslení CMFCVisualManagerVS2005 –") <br/>
+Moje aplikace, která používá správce vzhledu CMFCVisualManagerVS2005 –
 
-![Moje aplikace podle vykreslení CMFCVisualManagerOfficeXP](../mfc/media/vmofficexp.png "vmofficexp") Moje aplikace, která používá správce vzhledu CMFCVisualManagerOfficeXP –
+![Moje aplikace podle vykreslení CMFCVisualManagerOfficeXP](../mfc/media/vmofficexp.png "MyApp podle vykreslení CMFCVisualManagerOfficeXP –") <br/>
+Moje aplikace, která používá správce vzhledu CMFCVisualManagerOfficeXP –
 
-![Moje aplikace podle vykreslení cmfcvisualmanageroffice2003 –](../mfc/media/vmoffice2003.png "vmoffice2003") Moje aplikace, která používá správce vzhledu cmfcvisualmanageroffice2003 –
+![Moje aplikace podle vykreslení cmfcvisualmanageroffice2003 –](../mfc/media/vmoffice2003.png "MyApp podle vykreslení cmfcvisualmanageroffice2003 –") <br/>
+Moje aplikace, která používá správce vzhledu cmfcvisualmanageroffice2003 –
 
-![Moje aplikace podle vykreslení cmfcvisualmanageroffice2007 –](../mfc/media/msoffice2007.png "msoffice2007") Moje aplikace, která používá správce vzhledu cmfcvisualmanageroffice2007 –
+![Moje aplikace podle vykreslení cmfcvisualmanageroffice2007 –](../mfc/media/msoffice2007.png "MyApp podle vykreslení cmfcvisualmanageroffice2007 –") <br/>
+Moje aplikace, která používá správce vzhledu cmfcvisualmanageroffice2007 –
 
 Ve výchozím nastavení udržuje správce vzhledu kód pro vykreslování. pro více prvků grafického uživatelského rozhraní. Pokud chcete zadat vlastní elementy uživatelského rozhraní, budete muset přepsání metody související výkresu správce vzhledu. Seznam těchto metod najdete v tématu [cmfcvisualmanager – třída](../mfc/reference/cmfcvisualmanager-class.md). Metody, které můžete přepsat poskytnout vlastní vzhled jsou všechny metody, které začínají `OnDraw`.
 

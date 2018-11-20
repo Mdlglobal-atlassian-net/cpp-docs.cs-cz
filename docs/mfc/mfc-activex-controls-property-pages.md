@@ -1,6 +1,6 @@
 ---
 title: 'MFC – ovládací prvky ActiveX: Stránky vlastností'
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - DDP_ functions [MFC]
 - MFC ActiveX controls [MFC], properties
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CPropertyPageDialog class [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
-ms.openlocfilehash: 764590b5d7162d7f10a60dda24649adde9e090c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7027a58960e07903c9d774e07379c8050bc489b8
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656180"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176455"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC – ovládací prvky ActiveX: Stránky vlastností
 
@@ -32,7 +32,8 @@ Stránky vlastností ovládacího prvku ActiveX jsou zobrazeny dvěma způsoby:
 
 Dialogové okno Vlastnosti (znázorněný na následujícím obrázku) se skládá z oblasti pro zobrazení aktuální stránka vlastností karty pro přepínání mezi sadu tlačítek, provádět běžné úkoly, jako je například zavření dialogové okno stránky vlastností a stránek vlastností ruší se všechny změny provedené nebo okamžitě použití změn do ovládacího prvku ActiveX.
 
-![Dialogové okno Vlastnosti pro Circ3 –](../mfc/media/vc373i1.gif "vc373i1") dialogové okno Vlastnosti
+![Dialogové okno Vlastnosti pro Circ3 –](../mfc/media/vc373i1.gif "pro Circ3 – dialogové okno Vlastnosti") <br/>
+Dialogové okno Vlastnosti
 
 Tento článek obsahuje témata týkající se použití stránek vlastností v ovládacím prvku ActiveX. Zde jsou některé z nich:
 

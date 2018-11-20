@@ -1,14 +1,14 @@
 ---
 title: C++ – systém typů (moderní verze jazyka C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: ba24a4a739e4eb13d983202943ca046f857422d2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 476ebabc4bfc19f995119649d6f012d4b39d8369
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521089"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176338"
 ---
 # <a name="c-type-system-modern-c"></a>C++ – systém typů (moderní verze jazyka C++)
 
@@ -59,7 +59,7 @@ Základní typy jsou rozpoznávány kompilátorem, který má vestavěná pravid
 
 Následující ilustrace znázorňuje relativní velikosti předdefinovaných typů:
 
-![Velikost v bajtech vytvořené&#45;v typech](../cpp/media/built-intypesizes.png "předdefinované inTYpeSizes")
+![Velikost v bajtech vytvořené&#45;v typech](../cpp/media/built-intypesizes.png "velikost v bajtech vytvořené&#45;v typech")
 
 V následující tabulce jsou uvedeny nejčastěji používané základní typy:
 
@@ -70,13 +70,13 @@ V následující tabulce jsou uvedeny nejčastěji používané základní typy
 |bool|1 bajt|Představuje hodnoty, které mohou být „true“ nebo „false“.|
 |char|1 bajt|Používá se pro znaky standardu ASCII ve starších řetězcích stylu C nebo objektů std::string, které nikdy nebude nutné převést do kódování UNICODE.|
 |wchar_t|2 bajty|Představuje hodnoty „širokých“ znaků, které mohou být kódovány ve formátu UNICODE (UTF-16 v systému Windows, v jiných operačních systémech se může lišit). Toto je typ znaku, který se používá v řetězcích typu `std::wstring`.|
-|unsigned char|1 bajt|Jazyk C++ nemá žádný předdefinovaný `byte` typu.  Umožňuje znázornit hodnotu bajtu pomocí unsigned char.|
+|bez znaménka&nbsp;char|1 bajt|Jazyk C++ nemá žádný předdefinovaný `byte` typu.  Umožňuje znázornit hodnotu bajtu pomocí unsigned char.|
 |unsigned int|4 bajty|Výchozí volba pro bitové příznaky.|
 |long long|8 bajtů|Představuje hodnoty tvořené vysokým celým číslem.|
 
 ## <a name="the-void-type"></a>Typ void
 
-**Void** typ je speciální typ; nemůžete deklarovat proměnnou typu **void**, ale můžete deklarovat proměnnou typu `void *` (ukazatel na **void**), což je někdy nezbytné při přidělování nezpracované (netypové) paměti. Nicméně ukazatele na **void** nejsou typově bezpečné a obecně jejich použití je silně nedoporučeno v moderním jazyce C++. V deklaraci funkce **void** návratová hodnota znamená, že funkce nevrátí hodnotu; to je běžné a přijatelné použití typu **void**. Přestože jazyk C vyžaduje funkce, které mají nulové parametry pro deklaraci **void** v seznamu parametrů, třeba `fou(void)`, tato praxe se nedoporučuje v moderním jazyce C++ a by měly být deklarovány `fou()`. Další informace najdete v tématu [převody a bezpečnost typů](../cpp/type-conversions-and-type-safety-modern-cpp.md).
+**Void** typ je speciální typ; nemůžete deklarovat proměnnou typu **void**, ale můžete deklarovat proměnnou typu __void \*__  (ukazatel na **void**), což je někdy nezbytné při přidělování nezpracované (netypové) paměti. Nicméně ukazatele na **void** nejsou typově bezpečné a obecně jejich použití je silně nedoporučeno v moderním jazyce C++. V deklaraci funkce **void** návratová hodnota znamená, že funkce nevrátí hodnotu; to je běžné a přijatelné použití typu **void**. Přestože jazyk C vyžaduje funkce, které mají nulové parametry pro deklaraci **void** v seznamu parametrů, třeba `fou(void)`, tato praxe se nedoporučuje v moderním jazyce C++ a by měly být deklarovány `fou()`. Další informace najdete v tématu [převody a bezpečnost typů](../cpp/type-conversions-and-type-safety-modern-cpp.md).
 
 ## <a name="const-type-qualifier"></a>Kvalifikátor typu const
 

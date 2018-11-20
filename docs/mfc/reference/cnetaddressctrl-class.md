@@ -1,6 +1,6 @@
 ---
 title: CNetAddressCtrl – třída
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CNetAddressCtrl
 - AFXCMN/CNetAddressCtrl
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 09dfdb57fb22b958edc64ec8cbdce95527a304d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee44c05fa6417aaca367798d7a94a900d521b896
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654671"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176235"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl – třída
 
@@ -64,7 +64,7 @@ Ovládacího prvku síťové adresy ověří, zda je správný formát, který u
 
 Následující obrázek znázorňuje dialogového okna, která obsahuje ovládací prvek sítě. Textového pole (1) pro ovládacího prvku síťové adresy obsahuje neplatný síťovou adresu. Pokud síťová adresa není platná, zobrazí se zpráva informační Tip (2).
 
-![Dialogové okno s ovládacím prvkem síťové adresy a informační tip. ](../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")
+![Dialogové okno s ovládacím prvkem síťové adresy a informační tip. ](../../mfc/reference/media/cnetaddctrl.png "Dialogové okno s ovládacím prvkem síťové adresy a informační tip.")
 
 ## <a name="example"></a>Příklad
 

@@ -1,6 +1,6 @@
 ---
 title: CMFCImageEditorDialog – třída
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCImageEditorDialog
 - AFXIMAGEEDITORDIALOG/CMFCImageEditorDialog
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCImageEditorDialog [MFC], CMFCImageEditorDialog
 ms.assetid: 6a7d08f3-1ec2-4062-9b79-a0c2776b58d1
-ms.openlocfilehash: 84bbe72abeedc03f19f06a1f8498023ff54be95e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68cfa663f9be9f190a6d3425a2ebf6ceb73e2007
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503061"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175070"
 ---
 # <a name="cmfcimageeditordialog-class"></a>CMFCImageEditorDialog – třída
 
@@ -47,7 +47,7 @@ class CMFCImageEditorDialog : public CDialogEx
 
 Následující obrázek znázorňuje dialogové okno editoru obrázků.
 
-![Dialogové okno CMFCImageEditorDialog](../../mfc/reference/media/imageedit.png "imageedit")
+![Dialogové okno CMFCImageEditorDialog](../../mfc/reference/media/imageedit.png "CMFCImageEditorDialog – dialogové okno")
 
 Jeden ze způsobů použití `CMFCImageEditorDialog` objekt je komunikace `CBitmap` obrázek, který se upravovat. Nevytvářejte velký obrázek, protože image oblast úprav má omezenou velikost a velikost logických pixel je upravit podle oblasti. Volání `DoModal` metoda spuštění modální dialogové okno.
 

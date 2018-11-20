@@ -1,6 +1,6 @@
 ---
 title: Dokumenty, zobrazení a framework
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - document templates [MFC], template objects
 - applications [MFC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - MFC object relationships
 - thread objects [MFC]
 ms.assetid: 409ddd9b-66ad-4625-84f7-bf55a41d697b
-ms.openlocfilehash: f9397c2a16d8411fe91cbf6c1c1de3ecdffbeae7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e59e8b69dcdf0bf3b22d4286ba4692558a11e096
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662368"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175753"
 ---
 # <a name="documents-views-and-the-framework"></a>Dokumenty, zobrazení a framework
 
@@ -59,7 +59,8 @@ Jsou klíčové objekty v běžící aplikaci:
 
 Ve spuštěné aplikaci tyto objekty kooperativně reagovat na akce uživatele, jsou technologicky propojené, tak, že příkazy a další zprávy. Objekt jednu aplikaci spravuje jeden nebo více šablon dokumentů. Každé šablony dokumentu vytvoří a spravuje jeden nebo více dokumentů (v závislosti na tom, zda je aplikace SDI nebo MDI). Uživatel prohlíží a provádí úpravy dokumentu prostřednictvím zobrazení obsaženo uvnitř okna rámce. Následující obrázek znázorňuje vztahy mezi těmito objekty pro aplikace SDI.
 
-![Objekty v běžící aplikaci SDI](../mfc/media/vc386v1.gif "vc386v1") objektů v aplikaci SDI systémem
+![Objekty v běžící aplikaci SDI](../mfc/media/vc386v1.gif "objekty v běžící aplikaci SDI") <br/>
+Objekty v běžící aplikaci SDI
 
 Zbývající část Tato řada článků vysvětluje, jak rozhraní framework nástroje, Průvodce aplikací knihovny MFC a editory prostředků vytvořit tyto objekty, jak spolu fungují a jak využít váš programování v. Dokumenty, zobrazení a oken s rámečkem jsou popsány podrobněji [objekty oken](../mfc/window-objects.md) a [architekturu Document/View](../mfc/document-view-architecture.md).
 

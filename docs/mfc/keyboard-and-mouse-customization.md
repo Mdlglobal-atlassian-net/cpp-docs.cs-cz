@@ -1,16 +1,16 @@
 ---
 title: Přizpůsobení klávesnice a myši
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - customizations [MFC], keyboard and mouse (MFC Extensions)
 - keyboard and mouse customizations (MFC Extensions)
 ms.assetid: 1f789f1b-5f2e-4b11-b974-e3e2a2e49d82
-ms.openlocfilehash: 8bb685974ed4020611ffe275ba504951d132afac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ccbe83185c48439273024a97c881f1c32a2ddc7
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487384"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175676"
 ---
 # <a name="keyboard-and-mouse-customization"></a>Přizpůsobení klávesnice a myši
 
@@ -22,7 +22,8 @@ V **přizpůsobení** dialogové okno, uživatel může změnit vlastní ovláda
 
 Je vidět na následujícím obrázku **klávesnice** karty **přizpůsobení** dialogové okno.
 
-![Na kartě klávesnice v dialogovém okně přizpůsobení](../mfc/media/mfcnextkeyboardtab.png "mfcnextkeyboardtab") kartu přizpůsobení klávesnice
+![Na kartě klávesnice v dialogovém okně přizpůsobení](../mfc/media/mfcnextkeyboardtab.png "kartu klávesnice v dialogovém okně přizpůsobení") <br/>
+Na kartě přizpůsobení klávesnice
 
 Uživatel pracuje se na kartě klávesnice přiřazení jednoho nebo více klávesových zkratek k příkazu. Dostupné příkazy jsou uvedené na levé straně karty. Uživatel může vybrat všechny dostupné příkazy v nabídce. Jenom příkazy nabídky můžou být spojené s klávesové zkratky. Poté, co uživatel zadá nového zástupce **přiřadit** aktivuje tlačítko. Po kliknutí na toto tlačítko, přidruží aplikaci tato zkratka vybraný příkaz.
 
@@ -36,7 +37,8 @@ Pokud použijete průvodce k vytvoření aplikace, průvodce se inicializace spr
 
 Je vidět na následujícím obrázku **myši** karty **přizpůsobení** dialogové okno.
 
-![Kartu Myš v dialogovém okně přizpůsobení](../mfc/media/mfcnextmousetab.png "mfcnextmousetab") myši přizpůsobení karty
+![Kartu Myš v dialogovém okně přizpůsobení](../mfc/media/mfcnextmousetab.png "kartu Myš v dialogovém okně přizpůsobení") <br/>
+Přizpůsobení kartu Myš
 
 Uživatel pracuje se na této kartě přiřadit nabídky příkazu myši dvakrát klikněte na akci. Uživatel vybere zobrazení na levé straně okna a potom pomocí ovládacích prvků na pravé straně přidružit akce dvakrát klikněte na příkaz. Když uživatel klikne na tlačítko **Zavřít**, aplikace provede přidružený příkaz pokaždé, když uživatel poklepe kdekoli v zobrazení.
 

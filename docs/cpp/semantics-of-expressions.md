@@ -1,18 +1,18 @@
 ---
 title: Sémantika výrazů
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - grammar, expressions
 - expressions [C++], semantics
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: df86f73aa38ad9393adcbf193390cd785c934115
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2ce510478bcf1574429c85f704552e6b73100ea
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490958"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175781"
 ---
 # <a name="semantics-of-expressions"></a>Sémantika výrazů
 
@@ -43,7 +43,8 @@ int main()
 54
 ```
 
-![Pořadí vyhodnocení ve výrazech](../cpp/media/vc38zv1.gif "vc38ZV1") pořadí vyhodnocení výrazu
+![Pořadí vyhodnocení ve výrazech](../cpp/media/vc38zv1.gif "pořadí vyhodnocení ve výrazu") <br/>
+Pořadí vyhodnocení výrazu
 
 Pořadí, ve kterém je výraz podle výše uvedeného obrázku vyhodnocen, se stanoví pomocí přednosti a asociativity operátorů:
 
@@ -55,7 +56,8 @@ Pořadí, ve kterém je výraz podle výše uvedeného obrázku vyhodnocen, se s
 
 Použití závorek k seskupení podvýrazů mění prioritu a také pořadí, ve kterém je výraz vyhodnocen, jak je znázorněno na následujícím obrázku.
 
-![Pořadí vyhodnocení výrazu v závorkách](../cpp/media/vc38zv2.gif "vc38ZV2") pořadí vyhodnocení výrazu v závorkách
+![Pořadí vyhodnocení výrazu v závorkách](../cpp/media/vc38zv2.gif "pořadí vyhodnocení výrazu v závorkách") <br/>
+Pořadí vyhodnocení výrazu v závorkách
 
 Výrazy, například na výše uvedeném obrázku, jsou vyhodnoceny výhradně z hlediska jejich vedlejších účinků, v tomto případě pro přenos informací na standardní výstup zařízení.
 
@@ -68,7 +70,7 @@ Jazyk C++ určuje určité kompatibility při zadávání operandy. Následujíc
 |Očekával se typ.|Povolené typy|
 |-------------------|-------------------|
 |*Typ*|`const` *Typ*<br /> `volatile` *Typ*<br /> *Typ*&<br /> `const` *Typ*&<br /> `volatile` *Typ*&<br /> `volatile const` *Typ*<br /> `volatile const` *Typ*&|
-|*Typ*\*|*Typ*\*<br /> `const` *Typ*\*<br /> `volatile` *Typ*\*<br /> `volatile const` *Typ*\*|
+|*Typ* \*|*Typ* \*<br /> `const` *Typ* \*<br /> `volatile` *Typ* \*<br /> `volatile const` *Typ* \*|
 |`const` *Typ*|*Typ*<br /> `const` *Typ*<br />`const` *Typ*&|
 |`volatile` *Typ*|*Typ*<br /> `volatile` *Typ*<br /> `volatile` *Typ*&|
 

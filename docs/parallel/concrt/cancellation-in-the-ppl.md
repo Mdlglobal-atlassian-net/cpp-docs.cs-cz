@@ -1,6 +1,6 @@
 ---
 title: Zrušení v knihovně PPL
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - parallel algorithms, canceling [Concurrency Runtime]
 - canceling parallel algorithms [Concurrency Runtime]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-ms.openlocfilehash: b1a762f97cf144c39043203dbf68d927b2cbd0e4
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 1cb5404ff8c18492b940f7396ab4c8f4154d69e6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327418"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177014"
 ---
 # <a name="cancellation-in-the-ppl"></a>Zrušení v knihovně PPL
 
@@ -57,7 +57,7 @@ Tento dokument popisuje roli zrušení v knihovna paralelních vzorů (PPL), jak
 
 PPL používá úloh a skupin úloh pro správu jemně úkoly a výpočty. Skupiny úloh do formuláře můžete vnořit *stromů* paralelní práce. Následující obrázek znázorňuje stromové struktuře paralelní práce. Na tomto obrázku `tg1` a `tg2` reprezentaci skupin úkolů; `t1`, `t2`, `t3`, `t4`, a `t5` představují práci, kterou vytvořili skupiny úloh.
 
-![Stromové struktuře paralelní práce](../../parallel/concrt/media/parallelwork_trees.png "parallelwork_trees")
+![Stromové struktuře paralelní práce](../../parallel/concrt/media/parallelwork_trees.png "stromové struktuře paralelní práce")
 
 Následující příklad ukazuje kód, který je potřebný k vytvoření stromu na obrázku. V tomto příkladu `tg1` a `tg2` jsou [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) objekty; `t1`, `t2`, `t3`, `t4`, a `t5` jsou [concurrency::task_handle](../../parallel/concrt/reference/task-handle-class.md) objekty.
 

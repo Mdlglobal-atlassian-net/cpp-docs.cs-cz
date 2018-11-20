@@ -1,15 +1,15 @@
 ---
 title: Implementace stránky vlastností (ATL)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 6eb65ca3ddff79262c2f2b53d84d2f964f273c9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a76a0f49e8b0ec7458b781785cd5030d2c523f0b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669089"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176468"
 ---
 # <a name="example-implementing-a-property-page"></a>Příklad: Implementace stránky vlastností
 
@@ -58,7 +58,7 @@ Klikněte na tlačítko **OK** má průvodce vytvořit stránky vlastností.
 
 Teď, když byl vytvořen stránky vlastností, budete muset přidat několik ovládacích prvků do dialogu prostředků představující vaše stránky. Přidejte do textového pole, ovládací prvek statický text a zaškrtávací políčko a nastavení jejich ID, jak je znázorněno níže:
 
-![Úprava prostředku dialogového okna](../atl/media/ppgresourcelabeled.gif "ppgresourcelabeled")
+![Úprava prostředku dialogového okna](../atl/media/ppgresourcelabeled.gif "úpravy prostředku dialogového okna")
 
 Tyto ovládací prvky se použije k zobrazovaný název souboru dokumentu a jeho stav jen pro čtení.
 

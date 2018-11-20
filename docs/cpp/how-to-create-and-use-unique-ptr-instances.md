@@ -1,15 +1,15 @@
 ---
 title: 'Postupy: Vytváření a používání instancí ukazatelů unique_ptr'
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
-ms.openlocfilehash: 13823b34042d8658d0d690e6657e1f41db50f788
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3e5705b47a4cfdf17b9a4b4829f1e13565dd7ce
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610246"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174869"
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>Postupy: Vytváření a používání instancí ukazatelů unique_ptr
 
@@ -17,7 +17,7 @@ A [unique_ptr](../standard-library/unique-ptr-class.md) nesdílí jeho ukazatel.
 
 Následující diagram znázorňuje převod vlastnictví mezi dvěma `unique_ptr` instancí.
 
-![Přesunutí vlastnictví jedinečný&#95;ptr](../cpp/media/unique_ptr.png "unique_ptr")
+![Přesunutí vlastnictví jedinečný&#95;ptr](../cpp/media/unique_ptr.png "přesun vlastnictví jedinečný&#95;ptr")
 
 `unique_ptr` je definován v `<memory>` záhlaví ve standardní knihovně jazyka C++. To je přesně tak efektivní jako nezpracovaný ukazatel a lze použít v kontejnery standardní knihovny C++. Přidání `unique_ptr` instance pro kontejnery standardní knihovny C++ je efektivnější protože konstruktor přesunu `unique_ptr` eliminuje potřebu operace kopírování.
 

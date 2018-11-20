@@ -1,17 +1,17 @@
 ---
 title: Architektura šablon zprostředkovatele OLE DB
-ms.date: 10/24/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - OLE DB [C++], object model
 - architecture [C++], OLE DB Provider
 - OLE DB provider templates, object model
 ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
-ms.openlocfilehash: 6256328caa11d188f3a50445f62df096b6f6acb3
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 099c29e141d721645c416e60be240c22d22cd869
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557034"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175636"
 ---
 # <a name="ole-db-provider-template-architecture"></a>Architektura šablon zprostředkovatele OLE DB
 
@@ -19,7 +19,7 @@ ms.locfileid: "51557034"
 
 Architektura zprostředkovatele OLE DB zahrnuje objekt zdroje dat a jednu nebo více relací. Objekt zdroje dat je počáteční objekt, který musí vytvořit instanci každý zprostředkovatele. Když aplikace příjemce vyžaduje data, společně vytvoří objekt zdroje dat spustit zprostředkovatele. Objekt zdroje dat vytvoří objekt relace (pomocí `IDBCreateSession` rozhraní) přes který uživatel připojí k objektu zdroje dat. Programátoři rozhraní ODBC si můžete představit jako ekvivalentní objekt zdroje dat `HENV` a objekt relace jako ekvivalentní `HDBC`.
 
-![Architektura zprostředkovatele](../../data/oledb/media/vc4twb1.gif "vc4twb1")
+![Architektura zprostředkovatele](../../data/oledb/media/vc4twb1.gif "Architektura zprostředkovatele")
 
 Spolu s zdrojové soubory vytvořené **Průvodce zprostředkovatelem technologie OLE DB**, implementovat objekt zdroje dat šablony technologie OLE DB. Relace je objekt, který odpovídá OLE DB `TSession`.
 

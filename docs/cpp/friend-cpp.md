@@ -1,6 +1,6 @@
 ---
 title: friend (C++)
-ms.date: 07/02/2018
+ms.date: 11/19/2018
 f1_keywords:
 - friend_cpp
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - friend classes [C++]
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
-ms.openlocfilehash: 46027692bfa4a7245418ab032168b5b3c107e839
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 769720877cc58de530791b268811d7d01adad3e6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480519"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176715"
 ---
 # <a name="friend-c"></a>friend (C++)
 
@@ -230,7 +230,8 @@ Přátelství není zděděno, což znamená, že třídy odvozené z `YourOther
 
 Následující obrázek znázorňuje čtyři deklarace třídy: `Base`, `Derived`, `aFriend` a `anotherFriend`. Pouze třída `aFriend` má přímý přístup k soukromým členům `Base` (a ke všem členům, které byly zděděny `Base`).
 
-![Vliv na relace typu friend](../cpp/media/vc38v41.gif "vc38V41") důsledky přátelské relace
+![Vliv na relace typu friend](../cpp/media/vc38v41.gif "vliv na relace typu friend") <br/>
+Vliv na relace typu friend
 
 ## <a name="inline-friend-definitions"></a>Definice vloženého typu friend
 

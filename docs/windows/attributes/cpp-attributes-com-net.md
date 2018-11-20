@@ -1,17 +1,17 @@
 ---
 title: Atributy C++ COM a .NET
 ms.custom: index-page
-ms.date: 10/02/2018
+ms.date: 11/19/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: bacfd4cb78c5bf65422fb4472a4563776041a87b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a37542bd69926572e44322c406862117560affe
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589277"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175766"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Atributy C++ COM a .NET
 
@@ -55,7 +55,7 @@ Jako dříve, při sestavení projektu, kompilátor analyzuje každý zdrojový 
 
 Následující obrázek ukazuje vztah mezi kompilátoru a poskytovatele atributu.
 
-![Atribut komunikace komponent](../media/vccompattrcomm.gif "vcCompAttrComm")
+![Atribut komunikace komponent](../media/vccompattrcomm.gif "komunikace atribut komponent")
 
 > [!NOTE]
 > Použití atributu nezmění obsah zdrojového souboru. Kód vygenerovaný atributu je viditelné se pouze během relace ladění. Kromě toho pro každý zdrojový soubor v projektu, můžete vygenerovat textový soubor, který zobrazuje výsledky atribut nahrazení. Další informace o tomto postupu najdete v tématu [/Fx (sloučení vloženého kódu)](../../build/reference/fx-merge-injected-code.md) a [ladění vloženého kódu](/visualstudio/debugger/how-to-debug-injected-code).

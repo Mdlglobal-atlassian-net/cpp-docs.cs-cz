@@ -1,6 +1,6 @@
 ---
 title: Šablony dokumentů a proces vytváření dokumentů a zobrazení
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - icons, for multiple document templates
 - document templates [MFC], and views
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CDocTemplate class [MFC]
 - templates [MFC], document templates
 ms.assetid: 311ce4cd-fbdf-4ea1-a51b-5bb043abbcee
-ms.openlocfilehash: 544a9bf60ee2066688703faa7e430e2337454e66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29575166a188b0691465bef0a72810d2e3d97624
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606346"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174873"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>Šablony dokumentů a proces tvorby v modelu dokument/zobrazení
 
@@ -24,7 +24,8 @@ Rozhraní pro správu složitého procesu vytváření dokumentů s jejich přid
 
 Některé aplikace podporují více typů dokumentů. Aplikace může například podporovat dokumenty textu a grafiky dokumenty. V takové aplikace když uživatel vybere nový příkaz v nabídce Soubor dialogové okno zobrazuje seznam možných typů nový dokument otevřít. Pro každý typ podporovaného dokumentu aplikace používá objekt šablony odlišné dokumentu. Následující obrázek znázorňuje konfiguraci aplikace MDI, která podporuje dva typy dokumentu a ukazuje několik otevřené dokumenty.
 
-![Aplikace MDI, která má dva typy dokumentu](../mfc/media/vc387h1.gif "vc387h1") aplikace MDI dva typy dokumentů
+![Aplikace MDI, která má dva typy dokumentu](../mfc/media/vc387h1.gif "aplikace MDI, která má dva typy dokumentů") <br/>
+Aplikace MDI dva typy dokumentů
 
 Šablony dokumentů jsou vytvářené a udržované pomocí objektu aplikace. Jeden z klíčů úlohy prováděné během vaší aplikace `InitInstance` funkce, je vytvořit jednu nebo více šablon dokumentů odpovídající typu. Tato funkce je popsána v [vytváření šablon dokumentů](../mfc/document-template-creation.md). Objekt aplikace ukládá ukazatel na každou šablonu dokumentu ve svém seznamu šablon a poskytuje rozhraní pro přidání šablony dokumentů.
 

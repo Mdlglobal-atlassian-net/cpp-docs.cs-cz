@@ -1,13 +1,13 @@
 ---
 title: 'Návod: Násobení matic'
-ms.date: 11/06/2018
+ms.date: 11/19/2018
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: d9516cf79b738ec03dd98133a4603b47f75eb2c8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: ae86ff5a111348404616c8bb4fecd3bf22afc90c
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327106"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176156"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Návod: Násobení matic
 
@@ -41,13 +41,13 @@ Než začnete:
 
 V této části vezměte v úvahu Násobení dvou matice A a B, které jsou definovány takto:
 
-![3&#45;podle&#45;2 matice](../../parallel/amp/media/campmatrixanontiled.png "campmatrixanontiled")
+![3&#45;podle&#45;2 matice](../../parallel/amp/media/campmatrixanontiled.png "3&#45;podle&#45;2 matice")
 
-![2&#45;podle&#45;3 matice](../../parallel/amp/media/campmatrixbnontiled.png "campmatrixbnontiled")
+![2&#45;podle&#45;3 matice B](../../parallel/amp/media/campmatrixbnontiled.png "2&#45;podle&#45;3 matice B")
 
 Matice 3 2 je A a B je 2 x 3 matice. Součin hodnot a b je následující matice 3 číslem 3. Produkt se počítá vynásobením řádků A sloupců B prvek po prvku.
 
-![3&#45;podle&#45;3 matice](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;podle&#45;3 matice")
+![3&#45;podle&#45;3 produktu matice](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;podle&#45;3 produktu matice")
 
 ### <a name="to-multiply-without-using-c-amp"></a>Pokud chcete vynásobit bez používání modelu C++ AMP
 
@@ -159,21 +159,21 @@ Dělení do bloků je technika, ve kterém můžete dělit data do stejné velik
 
 Pro využití dělení do bloku v násobení matic musí algoritmus rozdělit matici na dlaždice a potom zkopírujte data dlaždice do `tile_static` proměnné pro rychlejší přístup. V tomto příkladu je rozdělená matici na submatrices stejnou velikost. Produkt je tak, submatrices nalezen. Jsou dva matice a jejich produktů v tomto příkladu:
 
-![4&#45;podle&#45;4 matice](../../parallel/amp/media/campmatrixatiled.png "4&#45;podle&#45;matice 4")
+![4&#45;podle&#45;matice 4](../../parallel/amp/media/campmatrixatiled.png "4&#45;podle&#45;matice 4")
 
-![4&#45;podle&#45;4 matice](../../parallel/amp/media/campmatrixbtiled.png "4&#45;podle&#45;4 matice B")
+![4&#45;podle&#45;4 matice B](../../parallel/amp/media/campmatrixbtiled.png "4&#45;podle&#45;4 matice B")
 
-![4&#45;podle&#45;4 matice](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;podle&#45;4 matice produktu")
+![4&#45;podle&#45;matice 4 produktu](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;podle&#45;matice 4 produktu")
 
 Matricí jsou rozdělené do matice čtyři 2 x 2, které jsou definovány takto:
 
-![4&#45;podle&#45;4 matice rozdělená na 2&#45;podle&#45;2 sub&#45;matice](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;podle&#45;4 matice rozdělená na 2&#45;podle&#45;2 sub&#45;matice")
+![4&#45;podle&#45;4 matice A rozdělené do 2&#45;podle&#45;2 sub&#45;matice](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;podle&#45;4 matice A rozdělené do 2&#45;podle&#45;2 sub&#45;matice")
 
-![4&#45;podle&#45;4 matice rozdělená na 2&#45;podle&#45;2 sub&#45;matice](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;podle&#45;4 matice rozdělená na 2&#45;podle&#45;2 sub&#45;matice")
+![4&#45;podle&#45;4 matice B rozdělená na 2&#45;podle&#45;2 sub&#45;matice](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;podle&#45;4 matice B rozdělená na 2&#45;podle&#45;2 sub&#45;matice")
 
 Produkt A a B teď může zapisovat a vypočítávány následujícím způsobem:
 
-![4&#45;podle&#45;4 matice rozdělená na 2&#45;podle&#45;2 sub&#45;matice](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;podle&#45;4 matice produktu A a B")
+![4&#45;podle&#45;4 matice A B rozdělená na 2&#45;podle&#45;2 sub&#45;matice](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;podle&#45;4 matice A B rozdělená na 2&#45;podle&#45;2 sub&#45;matice")
 
 Protože matice `a` prostřednictvím `h` jsou maticích 2 x 2, všechny produkty a součtů z nich jsou také maticích 2 x 2. Také vyplývá, že produkt A a B je matice 4 x 4, podle očekávání. Můžete rychle zjistit, že algoritmus, vypočítá hodnotu elementu v prvním řádku, první sloupec v rámci produktu. V příkladu, bylo by hodnota elementu v prvním řádku a první sloupec `ae + bg`. Stačí vypočítat prvního sloupce, první řádek `ae` a `bg` ke každému termínu. Tuto hodnotu pro `ae` je `(1 * 1) + (2 * 5) = 11`. Hodnota pro `bg` je `(3 * 1) + (4 * 5) = 23`. Konečná hodnota je `11 + 23 = 34`, která je správná.
 

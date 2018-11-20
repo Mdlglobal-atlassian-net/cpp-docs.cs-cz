@@ -1,16 +1,16 @@
 ---
 title: 'Návod: Vytvoření sítě pro zpracování obrázků'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-ms.openlocfilehash: 4eb1d6f9e5bc0055a1a4b4be5e18497b20c3a73a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93a20ca9967c8730e1563a653c8f4546d94161fb
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643633"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176169"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Návod: Vytvoření sítě pro zpracování obrázků
 
@@ -134,7 +134,7 @@ Pokud vaše aplikace vyžaduje víc zprávy blokuje procesu zprávy, ne jen jedn
 
 Následující ilustrace znázorňuje sítě pro zpracování obrazu:
 
-![Sítě pro zpracování obrazu](../../parallel/concrt/media/concrt_imageproc.png "concrt_imageproc")
+![Sítě pro zpracování obrazu](../../parallel/concrt/media/concrt_imageproc.png "sítě pro zpracování obrázků")
 
 `countdown_event` Objekt v tomto příkladu povolí obrazu sítě pro zpracování informovat hlavní aplikace, když byly zpracovány všechny bitové kopie. `countdown_event` Třídy používá [concurrency::event](../../parallel/concrt/reference/event-class.md) objekt, který signalizuje, že když hodnota čítače dosáhne nuly. Hlavní aplikace zvýší čítač pokaždé, když se odešle název souboru k síti. Terminálu uzlu sítě dekrementuje čítače po zpracování každého obrázku. Po hlavní aplikace prochází přes zadaného adresáře, počká na `countdown_event` objektu na signál, že jeho čítač bylo dosaženo nula.
 
@@ -152,7 +152,7 @@ Následující kód ukazuje kompletní příklad. `wmain` Spravuje – funkce ro
 
 Ukázkový výstup ukazuje následující obrázek. Každá zdrojová image je vyšší než jeho odpovídající upravenou image.
 
-![Ukázkový výstup například](../../parallel/concrt/media/concrt_imageout.png "concrt_imageout")
+![Ukázkový výstup například](../../parallel/concrt/media/concrt_imageout.png "ukázkový výstup například")
 
 `Lighthouse` je autorem vlastní Alphin a je proto převedena na ve stupních šedi. `Chrysanthemum`, `Desert`, `Koala`, a `Tulips` mít červenou jako převládající barvy a proto máte odebrat modrá a zelená barevným a jsou ztmaví. `Hydrangeas`, `Jellyfish`, a `Penguins` odpovídat výchozím kritériím a proto je sépiový tón toned.
 

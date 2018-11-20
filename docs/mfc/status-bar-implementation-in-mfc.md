@@ -1,6 +1,6 @@
 ---
 title: Implementace stavového řádku v prostředí MFC
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - COldStatusBar
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - status indicators
 - status bars [MFC], Windows 95 implementation
 ms.assetid: be5cd876-38e3-4d5c-b8cb-16d57a16a142
-ms.openlocfilehash: 25848e4467a0d767c40ffb00a1bd4d50a062d3a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 521b24646b673159d14e89bd57ea698a7ba73381
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496276"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175366"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>Implementace stavového řádku v prostředí MFC
 
@@ -33,7 +33,8 @@ Od verze knihovny MFC verze 4.0, stavové řádky jsou implementovány pomocí t
 
 Následující obrázek znázorňuje stavového řádku, který se zobrazí několik ukazatelů.
 
-![Stavový řádek](../mfc/media/vc37dy1.gif "vc37dy1") A stavový řádek
+![Stavový řádek](../mfc/media/vc37dy1.gif "stavového řádku") <br/>
+Stavový řádek
 
 Jako je panel nástrojů stavového objektu se vloží do jeho nadřazenému oknu rámce a je automaticky vytvořen, když je okno rámce. Stavový řádek, stejně jako všechny ovládací pruhy, je zničen automaticky i při zničení nadřazeného rámce.
 

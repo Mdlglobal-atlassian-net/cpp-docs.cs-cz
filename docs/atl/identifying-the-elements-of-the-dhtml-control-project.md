@@ -1,16 +1,16 @@
 ---
 title: Identifikace prvků projektu ovládací prvek DHTML
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - HTML controls, ATL support
 - DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
-ms.openlocfilehash: bb7fa67e6a3009922596c225895032bfb2f4fbb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e38b94e200754ce9dd37df2bfb17dfaa32cafe49
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533689"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175703"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>Identifikace prvků projektu ovládací prvek DHTML
 
@@ -26,7 +26,7 @@ Ovládací prvek DHTML je podobný s žádným ovládacím prvkem ATL s výjimko
 
 Následující obrázek znázorňuje vztah mezi knihovnou DLL, ovládací prvek DHTML, webový prohlížeč a prostředku HTML.
 
-![Prvky projektu ovládací prvek DHTML](../atl/media/vc52en1.gif "vc52en1")
+![Prvky projektu ovládací prvek DHTML](../atl/media/vc52en1.gif "prvků projektu ovládací prvek DHTML")
 
 > [!NOTE]
 >  Názvy na tomto obrázku jsou zástupné symboly. Název prostředku HTML a vystavených ovládacího prvku jsou založeny na názvy, které můžete přiřadit v Průvodce ovládacími prvky ATL.
@@ -47,7 +47,7 @@ Na tomto obrázku jsou prvky:
 
 Průvodce ovládacími prvky ATL generuje ve zdroji HTML a soubor .cpp ovládacího prvku pomocí výchozího kódu. Můžete zkompilovat a spustit ovládací prvek, protože generované průvodcem knihovnou a pak zobrazit ovládací prvek ve webovém prohlížeči nebo kontejner testu ovládacího prvku ActiveX. Následující obrázek ukazuje výchozí ovládacího prvku ATL DHTML s tři tlačítka zobrazí v kontejneru testů:
 
-![Ovládacího prvku ATL DHTML](../atl/media/vc52en2.gif "vc52en2")
+![Ovládacího prvku ATL DHTML](../atl/media/vc52en2.gif "ovládacího prvku ATL DHTML")
 
 Zobrazit [vytvoření ovládacího prvku ATL DHTML](../atl/creating-an-atl-dhtml-control.md) začít sestavovat ovládací prvek DHTML. Zobrazit [testování vlastností a událostí pomocí testovacího kontejneru](../mfc/testing-properties-and-events-with-test-container.md) informace o tom, jak získat přístup ke kontejneru testů.
 

@@ -1,6 +1,6 @@
 ---
 title: 'MFC – ovládací prvky ActiveX: Použití písem'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - OnFontChanged
 - HeadingFont
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 6a647f67849d84119d58186fc71ec1b412713734
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9fb7668f65b04372b87059034c3ec6cd20abc48d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608909"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175818"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC – ovládací prvky ActiveX: Použití písem
 
@@ -204,7 +204,8 @@ Ve většině případů je potřeba vědět, kdy byly upraveny vlastnosti objek
 
 Pokud ovládací prvek používá vlastnost běžného písma, jsou zpracovávány jeho oznámení `OnFontChanged` členskou funkci `COleControl`. Při přidání vlastního písma vlastnosti budete moci používat stejné implementaci. V příkladu v předchozí části se toho dosáhlo tím, že předáte &*m_xFontNotification* při inicializaci *m_fontHeading* členské proměnné.
 
-![Implementace rozhraní více objektů písma](../mfc/media/vc373q1.gif "vc373q1") implementovat více rozhraní objektu písma
+![Implementace rozhraní více objektů písma](../mfc/media/vc373q1.gif "implementovat více rozhraní objektu písma") <br/>
+Implementace rozhraní více objektů písma
 
 Zobrazit čáry na obrázku výše, že oba objekty písmo budou používat stejné provádění `IFontNotification`. To může způsobit problémy, kdybyste chtěli změnit písmo rozlišení.
 

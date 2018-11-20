@@ -1,6 +1,6 @@
 ---
 title: 'MFC – ovládací prvky ActiveX: Použití datových vazeb v ovládacím prvku ActiveX'
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 f1_keywords:
 - bindable
 - requestedit
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: 9efac8ba0889d648def622ca045b9398c8eeef11
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a5cb73496cd6678e3f45500d9d53c2127b0fb17c
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518486"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175805"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC – ovládací prvky ActiveX: Použití datových vazeb v ovládacím prvku ActiveX
 
@@ -30,7 +30,8 @@ Jednou z výkonnější používá ovládací prvky ActiveX je datové vazby, kt
 
 Tento článek popisuje úlohy na straně ovládacího prvku. Implementace interakcích vazeb dat s databází zodpovídá za kontejnerem ovládacího prvku. Jak spravovat interakce databáze ve vašem kontejneru je nad rámec této dokumentace. Jak připravit ovládacího prvku pro vytváření datových vazeb jsou vysvětleny v zbývající část tohoto článku.
 
-![Koncepční schéma celé datové&#45;vázaného ovládacího prvku](../mfc/media/vc374v1.gif "vc374v1") koncepční Diagram ovládací prvek vázaný na Data
+![Koncepční schéma celé datové&#45;vázaného ovládacího prvku](../mfc/media/vc374v1.gif "koncepční schéma celé datové&#45;vázaného ovládacího prvku") <br/>
+Koncepční Diagram ovládací prvek vázaný na Data
 
 `COleControl` Třída obsahuje dva členské funkce, které usnadňují vytváření datových vazeb jednoduchý proces k implementaci. První funkce [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit), slouží k vyžádání oprávnění ke změně hodnoty vlastnosti. [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged), druhá funkce se volá, když úspěšně změně hodnoty vlastnosti.
 

@@ -1,16 +1,16 @@
 ---
 title: Knihovna asynchronních agentů
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Agents Library
 - Asynchronous Agents Library
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
-ms.openlocfilehash: 9086734b22523d395022299fb75b7a130a8e7a16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b4e8e6489e98aadb6ea41d32d5a9ba14efe2668
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629278"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175857"
 ---
 # <a name="asynchronous-agents-library"></a>Knihovna asynchronních agentů
 
@@ -26,7 +26,7 @@ Knihovna agentů se skládá ze tří komponent: *asynchronních agentů*, *asyn
 
 Následující obrázek znázorňuje způsob dva agenti blokům zpráv použití a funkce předávání zpráv pro komunikaci. Na tomto obrázku `agent1` odešle zprávu do `agent2` pomocí [concurrency::send](reference/concurrency-namespace-functions.md#send) funkce a [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) objektu. `agent2` používá [concurrency::receive](reference/concurrency-namespace-functions.md#receive) funkci na čtení zprávy. `agent2` stejnou metodu používá k odesílání zpráv do `agent1`. Přerušované šipky představují tok dat mezi agenty. Solid šipky připojení agentů k blokům zpráv, které zápisu nebo čtení z.
 
-![Součásti knihovna agentů](../../parallel/concrt/media/agent_librarycomp.png "agent_librarycomp")
+![Součásti knihovna agentů](../../parallel/concrt/media/agent_librarycomp.png "komponenty knihovna agentů")
 
 Příklad kódu, který implementuje tento obrázek je uveden dále v tomto tématu.
 

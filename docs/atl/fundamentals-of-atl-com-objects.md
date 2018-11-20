@@ -1,24 +1,24 @@
 ---
 title: Základy ATL – objekty COM
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - COM, and ATL
 - ATL, COM
 - ATL COM objects
 - COM objects, ATL
 ms.assetid: 0f9c9d98-cc28-45da-89ac-dc94cee422fe
-ms.openlocfilehash: 243b7f84fc20e1c002e866ae0720ab9521d24748
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6af732b381ab0c6c507d1d651b096e3976ab2d4b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437230"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176494"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Základy ATL – objekty COM
 
 Následující ilustrace znázorňuje vztah mezi třídy a rozhraní, které se používají k definování objekt knihovny ATL modelu COM.
 
-![Struktura knihovny ATL](../atl/media/vc307y1.gif "vc307y1")
+![Struktura knihovny ATL](../atl/media/vc307y1.gif "ATL – struktura")
 
 > [!NOTE]
 >  Tento diagram znázorňuje, že `CComObject` je odvozen z `CYourClass` vzhledem k tomu `CComAggObject` a `CComPolyObject` zahrnují `CYourClass` jako členské proměnné.

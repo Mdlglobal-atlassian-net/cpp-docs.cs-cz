@@ -1,6 +1,6 @@
 ---
 title: Inicializátory
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - array-element initializers
 - initializing arrays [C++], initializers
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - declarators, as initializers
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: 2948e65538359815da151a540e96227e56bbea6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1890899fb2ad63bff06d514ae8b18f9dc3ff9e21
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544661"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176286"
 ---
 # <a name="initializers"></a>Inicializátory
 
@@ -528,7 +528,8 @@ Proměnné typu odkazu mohou být deklarovány bez použití inicializátorů po
 
 Při inicializaci proměnné typu odkazu používá kompilátor graf rozhodnutí zobrazený na následujícím obrázku pro výběr mezi vytvořením odkazu na objekt nebo vytvořením dočasného objektu, na který odkaz směřuje.
 
-![Graf rozhodnutí inicializace typů ref](../cpp/media/vc38s71.gif "vc38S71") graf rozhodnutí inicializace typů odkazů
+![Graf rozhodnutí inicializace typů odkazů](../cpp/media/vc38s71.gif "graf rozhodnutí inicializace typů odkazů") <br/>
+Graf rozhodnutí inicializace typů odkazů
 
 Odkazy na **volatile** typy (deklarované jako **volatile** *typename* <strong>&</strong> *identifikátor*) mohou být inicializovány pomocí **volatile** objekty stejného typu nebo objekty, které nejsou deklarovány jako **volatile**. Nelze je však, inicializovat pomocí **const** objekty daného typu. Podobně, odkazy na **const** typy (deklarované jako **const** *typename* <strong>&</strong> *identifikátor* ) mohou být inicializovány pomocí **const** objekty stejného typu (nebo čímkoli, kde existuje převod na daný typ nebo pomocí objektů, které nejsou deklarovány jako **const**). Nelze je však, inicializovat pomocí **volatile** objekty daného typu.
 

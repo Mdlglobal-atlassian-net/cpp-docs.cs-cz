@@ -1,6 +1,6 @@
 ---
 title: 'Windows Sockets: Jak pracují sokety s archivy'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Windows Sockets [MFC], synchronous
 - sockets [MFC], synchronous operation
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
-ms.openlocfilehash: e87ee1467946003580ffa75e36e39b2c747892b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6101193c85e41fbf82681b0b2ae1e09e4162f87
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510757"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174909"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: Jak pracují sokety s archivy
 
@@ -30,7 +30,8 @@ Třídy `CSocketFile` je odvozena z `CFile`, ale nepodporuje [cfile –](../mfc/
 
 Následující obrázek znázorňuje vztahy mezi těmito objekty na obou stranách komunikace.
 
-![CArchive – csocketfile – a csocket –](../mfc/media/vc38ia1.gif "vc38ia1") CArchive csocketfile – a csocket –
+![CArchive – csocketfile – a csocket –](../mfc/media/vc38ia1.gif "CArchive csocketfile – a csocket –") <br/>
+CArchive – csocketfile – a csocket –
 
 Účelem této zřejmý složitost je vás chrání před nutností správy podrobnosti soketu sami. Vytvoření soketu, souboru a archivu a následným zahájením odesílání nebo přijímání dat vložením do archivu nebo extrahování z archivu. [CArchive –](../mfc/reference/carchive-class.md), [csocketfile –](../mfc/reference/csocketfile-class.md), a [csocket –](../mfc/reference/csocket-class.md) Správa podrobností na pozadí.
 
@@ -41,7 +42,7 @@ A `CSocket` objekt je ve skutečnosti objekt dvou stavů: v některých případ
 Pokud `CSocket` nejsou implementované jako objekt dvou stavů, je možné přijímat další oznámení pro stejný druh událostí během byly zpracování předchozí oznámení. Například se mohou zobrazovat `OnReceive` oznámení při zpracování `OnReceive`. Ve fragmentu kódu výše, extrahování `str` z archivu, které by mohly vést k rekurzi. Přepnutím státy, `CSocket` brání rekurze zabráněním další oznámení. Obecné pravidlo není žádná oznámení v rámci oznámení.
 
 > [!NOTE]
->  A `CSocketFile` slouží také jako soubor (omezený) bez `CArchive` objektu. Ve výchozím nastavení `CSocketFile` konstruktoru *bArchiveCompatible* parametr **TRUE**. Určuje, že objekt souboru je pro použití s archivu. Pokud chcete použít soubor objektu bez archiv, předejte **FALSE** v *bArchiveCompatible* parametru.
+> A `CSocketFile` slouží také jako soubor (omezený) bez `CArchive` objektu. Ve výchozím nastavení `CSocketFile` konstruktoru *bArchiveCompatible* parametr **TRUE**. Určuje, že objekt souboru je pro použití s archivu. Pokud chcete použít soubor objektu bez archiv, předejte **FALSE** v *bArchiveCompatible* parametru.
 
 V režimu "archivu compatible" `CSocketFile` objekt poskytuje lepší výkon a snižuje nebezpečí "zablokování." K zablokování dochází tehdy, jsou čekání na sebe navzájem a odesílající sokety, nebo čeká na běžné prostředek. Tato situace může nastat, pokud `CArchive` objektu ve spolupráci s `CSocketFile` tak, jak to funguje se službou `CFile` objektu. S `CFile`, archivu můžete předpokládat, že pokud obdrží méně bajtů než je požadováno, na konci souboru se dosáhlo. S `CSocketFile`, ale data jsou zprávy na základě; vyrovnávací paměti může obsahovat více zpráv, tak přijímá méně než počet bajtů neznamená konec souboru. Aplikace není v tomto případě blokování, jak se může stát, že se `CFile`, a můžete pokračovat, přečte zprávy z vyrovnávací paměti, dokud vyrovnávací paměť je prázdná. [IsBufferEmpty](../mfc/reference/carchive-class.md#isbufferempty) fungovat v `CArchive` je užitečný pro sledování stavu archivu vyrovnávací paměti v takovém případě.
 
@@ -51,4 +52,3 @@ Další informace najdete v tématu [rozhraní Windows Sockets: použití soket�
 
 [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)<br/>
 [CObject::Serialize](../mfc/reference/cobject-class.md#serialize)
-

@@ -1,13 +1,13 @@
 ---
 title: Optimalizace na základě profilu v centru pro výkon a diagnostiku
-ms.date: 03/14/2018
+ms.date: 11/19/2018
 ms.assetid: dc3a1914-dbb6-4401-bc63-10665a8c8943
-ms.openlocfilehash: 57e0c32b401f2c1c3216a120bc86efa649ee0104
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a8c0467e1a3051609f52053894ea59064e40a3ac
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580853"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176195"
 ---
 # <a name="profile-guided-optimization-in-the-visual-studio-2013-performance-and-diagnostics-hub"></a>Profilově řízené optimalizace výkon sady Visual Studio 2013 a Centrum diagnostiky
 
@@ -45,21 +45,21 @@ Dále nastavte konfiguraci sestavení vaší aplikace na verzi na připraveno pr
 
 Otevřete centru pro výkon a Diagnostika – v panelu nabídky zvolte **analyzovat**, **výkon a Diagnostika**. Otevře se stránka relace diagnostiky, obsahující analytické nástroje, které jsou k dispozici pro váš typ projektu.
 
-![PGO v Centrum pro výkon a Diagnostika](../../build/reference/media/pgofig0hub.png "PGOFig0Hub")
+![PGO v Centrum pro výkon a Diagnostika](../../build/reference/media/pgofig0hub.png "PGO v Centrum pro výkon a Diagnostika")
 
 V **dostupných nástrojů**, vyberte **optimalizace na základě profilu** zaškrtávací políčko. Zvolte **Start** tlačítko pro spuštění modulu plug-in PGO.
 
-![Úvodní stránka PGO](../../build/reference/media/pgofig1start.png "PGOFig1Start")
+![Úvodní stránka PGO](../../build/reference/media/pgofig1start.png "PGO úvodní stránka")
 
 **Optimalizace na základě profilu** stránka popisuje kroky, které modul plug-in používá ke zlepšení výkonu vaší aplikace. Zvolte **Start** tlačítko.
 
-![Stránka instrumentace PGO](../../build/reference/media/pgofig2instrument.png "PGOFig2Instrument")
+![Stránka instrumentace PGO](../../build/reference/media/pgofig2instrument.png "PGO instrumentace stránky")
 
 V **instrumentace** části použijete **školení je zpočátku povoleno** – možnost zvolit, jestli se mají zahrnout jako součást přípravy fáze spuštění vaší aplikace. Pokud tato možnost není vybraná, trénovacích dat, není zaznamenána v běžící aplikaci instrumentované dokud explicitně povolit školení.
 
 Zvolte **instrumentace** tlačítko k sestavení aplikace s využitím speciální sadu možností kompilátoru. Kompilátor vloží test pokyny v generovaném kódu. Tyto pokyny zaznamenávat data profilace během fáze školení.
 
-![Stránka instrumentované sestavení PGO](../../build/reference/media/pgofig3build.PNG "PGOFig3Build")
+![Stránka instrumentované sestavení PGO](../../build/reference/media/pgofig3build.PNG "PGO instrumentované sestavení stránky")
 
 Po dokončení instrumentované sestavení vaší aplikace je aplikace spuštěna automaticky.
 
@@ -67,22 +67,22 @@ Pokud během sestavování dojde k nějaké chyby nebo varování, opravte je a 
 
 Při spuštění aplikace, můžete použít **spustit Trénovací** a **pozastavení školení** odkazů v **školení** části k řízení, když se zaznamená profilování informace. Můžete použít **zastavit aplikaci** a **spustit** odkazy na zastavte a restartujte aplikaci.
 
-![Stránka školení PGO](../../build/reference/media/pgofig4training.PNG "PGOFig4Training")
+![Stránka školení PGO](../../build/reference/media/pgofig4training.PNG "PGO školení stránky")
 
 Při školení, projděte si vaše uživatelské scénáře k zaznamenání, kterou je potřeba optimalizovat kód modulu plug-in PGO profilování informací. Po dokončení se školení, zavřete vaši aplikaci nebo zvolte **zastavit aplikaci** odkaz. Zvolte **analyzovat** tlačítko pro spuštění analýzy kroku.
 
 Po dokončení analýzy **analýzy** oddíl se zobrazí sestava profilace informací, která se zaznamenala v průběhu fáze školení uživatelský scénář. Tato sestava slouží k prozkoumání, který funguje jako většina a strávený nejvíce času v aplikaci. Modul plug-in PGO používá informace k určení, která aplikace fungovat tak, aby optimalizovat rychlost a které optimalizovat pro velikost. Modul plug-in PGO nakonfiguruje optimalizace sestavení k vytvoření aplikace nejrychlejší, nejmenší pro uživatelské scénáře, které jste si poznamenali během cvičení.
 
-![Stránka analýza PGO](../../build/reference/media/pgofig5analyze.png "PGOFig5Analyze")
+![Stránka analýza PGO](../../build/reference/media/pgofig5analyze.png "PGO analýzy stránky")
 
 Pokud školení zachycena očekávaná profilování informace, můžete zvolit **uložit změny** k uložení dat analyzovaný profilu ve vašem projektu a optimalizovat budoucí sestavení. Chcete-li zahodit data profilu a vzdělávání začít od začátku, zvolte **znovu školení**.
 
 Soubor dat profilu je uložen ve vašem projektu v **PGO Trénovacích dat** složky. Tato data slouží k řízení nastavení optimalizace kompilátoru sestavení ve vaší aplikaci.
 
-![PGO datového souboru v Průzkumníku řešení](../../build/reference/media/pgofig6data.png "PGOFig6Data")
+![PGO datového souboru v Průzkumníku řešení](../../build/reference/media/pgofig6data.png "PGO datového souboru v Průzkumníku řešení")
 
 Po dokončení analýzy PGO modul plug-in nastaví možnosti sestavení ve vašem projektu a selektivně optimalizovat aplikaci během kompilace pomocí dat profilu. Můžete nadále upravovat a vytvářet aplikace s využitím stejných dat profilu. Při vytváření aplikace, výstupní sestavení sestavy, jak mnoho funkcí a pokyny se optimalizovalo pomocí dat profilu.
 
-![PGO výstup diagnostiky](../../build/reference/media/pgofig7diagnostics.png "PGOFig7Diagnostics")
+![PGO výstup diagnostiky](../../build/reference/media/pgofig7diagnostics.png "PGO výstup diagnostiky")
 
 Pokud provedete změny významné kódu během vývoje, budete muset přeučování vaši aplikaci, abyste získali nejlepší optimalizace. Doporučujeme, abyste přeučování vaší aplikace, když výstup sestavení hlásí, že méně než 80 procent funkcí nebo pokyny se optimalizovalo pomocí dat profilu.

@@ -1,6 +1,6 @@
 ---
 title: Správa podřízených oken MDI
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - MDICLIENT
 helpviewer_keywords:
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child windows [MFC]
 - MDI [MFC], frame windows
 ms.assetid: 1828d96e-a561-48ae-a661-ba9701de6bee
-ms.openlocfilehash: 2055c215392c6805791de729ff6ab8c6a9057308
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4b6ccf8a75cc7679f78fba48314073bc53b66a5
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629408"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176793"
 ---
 # <a name="managing-mdi-child-windows"></a>Správa podřízených oken MDI
 
@@ -25,7 +25,8 @@ Okna hlavního rámce MDI, (jeden na aplikaci) obsahují speciální podřízen�
 
 V okně rámce MDI spravuje oknem rámce okno MDICLIENT přemístění ve spojení s ovládací panely. Okno MDICLIENT zase slouží ke správě všech podřízených oken rámce MDI. Následující obrázek ukazuje vztah mezi okna rámce MDI, jeho okno MDICLIENT a jeho podřízených oken rámce dokumentu.
 
-![Podřízená okna v okně rámce MDI](../mfc/media/vc37gb1.gif "vc37gb1") rámce Windows MDI a podřízené položky
+![Podřízená okna v okně rámce MDI](../mfc/media/vc37gb1.gif "podřízená okna v okně rámce MDI") <br/>
+Rámce Windows MDI a podřízené položky
 
 Okna rámce MDI je také funguje ve spojení s aktuální podřízené okno MDI, pokud existuje. Okno rámce MDI deleguje příkaz zprávy do podřízeného MDI předtím, než se pokusí zpracovat samotný.
 

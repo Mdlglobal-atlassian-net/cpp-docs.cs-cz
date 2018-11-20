@@ -1,13 +1,13 @@
 ---
 title: 'Průvodce přenosem: MFC Scribble'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: b41689b1e0207029f4494cfd91c261705789a733
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 353dc8fb42b73ec7e0ee748ef9fefd030c073703
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539760"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175649"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Průvodce přenosem: MFC Scribble
 
@@ -31,7 +31,7 @@ Všimněte si, že můžete také spustit devenv do příkazového řádku pomoc
 
 Když otevřete starý soubor projektu v sadě Visual Studio 2017, Visual Studio nabízí převést soubor projektu na nejnovější verzi, která můžeme přijmout. Objevily se následující dialogové okno:
 
-![Zkontrolovat změny projektu a řešení](../porting/media/scribbleprojectupgrade.PNG "ScribbleProjectUpgrade")
+![Zkontrolovat změny projektu a řešení](../porting/media/scribbleprojectupgrade.PNG "zkontrolovat změny projektu a řešení")
 
 To, že nám, že cíl Itanium není k dispozici a nebudou převedeny došlo k chybě.
 
@@ -43,7 +43,7 @@ V době, kdy byla vytvořena předchozí Scribble projekt byla Itanium důležit
 
 Visual Studio pak zobrazí sestavu migrace výpis všechny problémy s původní soubor projektu.
 
-![Zpráva o inovaci](../porting/media/scribblemigrationreport.PNG "ScribbleMigrationReport")
+![Zpráva o inovaci](../porting/media/scribblemigrationreport.PNG "zpráva o inovaci")
 
 V tomto případě problémy se všechna upozornění a sady Visual Studio provedli odpovídající změny v souboru projektu. Rozdíl jde projektu je, že nástroj pro sestavení se změnil z vcbuild nástroji MSBuild. Tato změna byla poprvé zavedena v sadě Visual Studio 2010. Další změny patří některé změny uspořádání pořadí prvků v samotném souboru projektu. Žádné problémy nutná další pozornost pro tento jednoduchý projekt.
 

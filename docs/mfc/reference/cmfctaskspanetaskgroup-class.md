@@ -1,6 +1,6 @@
 ---
 title: Cmfctaskspanetaskgroup – třída
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPaneTaskGroup
 - AFXTASKSPANE/CMFCTasksPaneTaskGroup
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCTasksPaneTaskGroup [MFC], m_rectGroup
 - CMFCTasksPaneTaskGroup [MFC], m_strName
 ms.assetid: 2111640b-a46e-4b27-b033-29e88632b86a
-ms.openlocfilehash: 25e714aa617cdccc4e02e288f1a24f636e05cb0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ed50950bc62a0c2f382e42782c58a0d7354116f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539604"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176585"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Cmfctaskspanetaskgroup – třída
 
@@ -72,19 +72,19 @@ class CMFCTasksPaneTaskGroup : public CObject
 
 Následující obrázek znázorňuje skupinu rozšířené úloh:
 
-![Skupiny úloh, rozbalení](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")
+![Skupiny úloh, rozbalení](../../mfc/reference/media/nexttaskgrpexpand.png "skupiny úloh, rozbalení")
 
 Následující obrázek znázorňuje úkolu sbalené skupiny:
 
-![Skupina úloh sbalený](../../mfc/reference/media/nexttaskgrpcollapse.png "nexttaskgrpcollapse")
+![Skupina úloh sbalené](../../mfc/reference/media/nexttaskgrpcollapse.png "sbalené skupiny úloh")
 
 Následující obrázek znázorňuje skupinu úloh bez titulku:
 
-![Skupina úloh bez titulku](../../mfc/reference/media/nexttaskgrpnocapt.png "nexttaskgrpnocapt")
+![Skupina úloh bez titulku](../../mfc/reference/media/nexttaskgrpnocapt.png "skupiny úloh bez titulku")
 
 Následující obrázek znázorňuje dvě skupiny úloh. První skupiny úloh, která je označena jako speciální tak, že nastavíte `m_bIsSpecial` příznak na hodnotu TRUE, zatímco druhý úkol skupiny není speciální. Všimněte si, jak je o něco tmavší než druhé skupině úloh titulek pro první skupina úloh:
 
-![Skupina úloh speciální](../../mfc/reference/media/nexttaskgrpspecial.png "nexttaskgrpspecial")
+![Skupina úloh speciální](../../mfc/reference/media/nexttaskgrpspecial.png "zvláštní skupina úloh")
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 

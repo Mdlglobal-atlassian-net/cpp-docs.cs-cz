@@ -1,6 +1,6 @@
 ---
 title: try-finally – příkaz
-ms.date: 10/09/2018
+ms.date: 11/19/2018
 f1_keywords:
 - __try
 - _try
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: 55d22951c4203c582f7823fef033a0476f8c9a52
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: d05e1d113f4fc661cb6e2e2905fbd8c9dcdd7e2d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326914"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175918"
 ---
 # <a name="try-finally-statement"></a>try-finally – příkaz
 
@@ -68,7 +68,8 @@ Pokud dojde k výjimce v **__try** blok, operační systém musí najít obsluž
 
 Předpokládejme například, řadu volání funkcí propojení funkce A funkce D, jak je znázorněno na následujícím obrázku. Každá funkce má jednu obslužnou rutinu ukončení. Pokud je výjimka vyvolána ve funkci D a zpracovávány v A, jsou volány obslužné rutiny ukončení v tomto pořadí jako systém unwinds zásobníku: D, C, B.
 
-![Pořadí ukončení&#45;provádění obslužné rutiny](../cpp/media/vc38cx1.gif "vc38CX1") pořadí provádění obslužné rutiny ukončení
+![Pořadí ukončení&#45;provádění obslužné rutiny](../cpp/media/vc38cx1.gif "pořadí ukončení&#45;provádění obslužné rutiny") <br/>
+Pořadí provádění obslužné rutiny ukončení
 
 > [!NOTE]
 > Try-finally chování se liší od jiných jazycích, které podporují použití **nakonec**, jako je C#.  Jediný **__try** může obsahovat buď, ale ne obě sady **__finally** a **__except**.  Pokud jsou obě být použity současně, vnějším zkuste – s výjimkou příkaz musíte uzavřít vnitřní příkaz try-finally.  Pravidla určující při každý blok se spustí se také liší.

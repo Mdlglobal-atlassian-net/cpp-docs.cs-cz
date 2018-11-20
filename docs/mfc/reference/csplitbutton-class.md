@@ -1,6 +1,6 @@
 ---
 title: Csplitbutton – třída
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CSplitButton
 - AFXCMN/CSplitButton
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: ca4899714fa336d058b2a53bcd5103c5b0c993e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56c006eaa9b0c9860a973727602fd29a33d7ec43
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547274"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176625"
 ---
 # <a name="csplitbutton-class"></a>Csplitbutton – třída
 
@@ -58,7 +58,7 @@ class CSplitButton : public CButton
 
 Následující obrázek znázorňuje dialogové okno, které obsahuje ovládací prvek stránkování a ovládací tlačítko rozdělení (1). Již bylo kliknuto na šipku rozevíracího seznamu (2) a zobrazí se podnabídky (3).
 
-![Dialogové okno s ovládacím prvkem a stránkovacím. ](../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")
+![Dialogové okno s ovládacím prvkem a stránkovacím. ](../../mfc/reference/media/splitbutton_pager.png "Dialogového okna pomocí ovládacího prvku splitbutton a stránkování.")
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -188,7 +188,7 @@ void SetDropDownMenu(CMenu* pMenu);
 
 Následující obrázek znázorňuje dialogové okno, které obsahuje ovládací prvek stránkování a ovládací tlačítko rozdělení (1). Již bylo kliknuto na šipku rozevíracího seznamu (2) a zobrazí se podnabídky (3).
 
-![Dialogové okno s ovládacím prvkem a stránkovacím. ](../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")
+![Dialogové okno s ovládacím prvkem a stránkovacím. ](../../mfc/reference/media/splitbutton_pager.png "Dialogového okna pomocí ovládacího prvku splitbutton a stránkování.")
 
 ### <a name="example"></a>Příklad
 

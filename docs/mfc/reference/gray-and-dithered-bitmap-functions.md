@@ -1,6 +1,6 @@
 ---
 title: Funkce Gray a Dithered pro bitové mapy
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - AFXWIN/AfxDrawGrayBitmap
 - AFXWIN/AfxGetGrayBitmap
@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-ms.openlocfilehash: 1134cde55fbe5addac34b9c0433ff11df4c9bdc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e1d4bd0e851a14680a46d7d6ae79dcf4bd190e4
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490893"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176728"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>Funkce Gray a Dithered pro bitové mapy
 
@@ -22,7 +22,7 @@ ms.locfileid: "50490893"
 
 Knihovna MFC poskytuje dvě funkce pro poskytování rastrový obrázek vzhledu ovládacího prvku zakázané.
 
-![Porovnání ikonu šedé a původní verzí](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+![Porovnání ikonu šedé a původní verzí](../../mfc/reference/media/vcgraybitmap.gif "porovnání ikonu šedé a původní verzí")
 
 |||
 |-|-|
@@ -33,7 +33,7 @@ Knihovna MFC poskytuje dvě funkce pro poskytování rastrový obrázek vzhledu 
 
 Knihovna MFC poskytuje dvě funkce také pro nahrazení vzoru dithered pro bitové rastrový obrázek na pozadí.
 
-![Porovnání ikonu dithered pro bitové a původní verzí](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
+![Porovnání ikonu dithered pro bitové a původní verzí](../../mfc/reference/media/vcditheredbitmap.gif "porovnání ikonu dithered pro bitové a původní verzí")
 
 |||
 |-|-|
@@ -74,7 +74,7 @@ Nová barva pozadí (obvykle zašedlé, jako je například COLOR_MENU).
 
 Rastrový obrázek nakreslit `AfxDrawGrayBitmap` bude mít vzhled zablokovaný ovládací prvek.
 
-![Porovnání ikonu šedé a původní verzí](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+![Porovnání ikonu šedé a původní verzí](../../mfc/reference/media/vcgraybitmap.gif "porovnání ikonu šedé a původní verzí")
 
 ### <a name="example"></a>Příklad
 
@@ -110,7 +110,7 @@ Nová barva pozadí (obvykle zašedlé, jako je například COLOR_MENU).
 
 Rastrový obrázek zkopírováno spolu s `AfxGetGrayBitmap` bude mít vzhled zablokovaný ovládací prvek.
 
-![Porovnání ikonu šedé a původní verzí](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+![Porovnání ikonu šedé a původní verzí](../../mfc/reference/media/vcgraybitmap.gif "porovnání ikonu šedé a původní verzí")
 
 ### <a name="example"></a>Příklad
 
@@ -158,7 +158,7 @@ Další tónování barvu, obvykle světle šedá (COLOR_MENU).
 
 Zdrojovou bitmapu je vykreslen na cílový řadič domény s dvěma barvami (*cr1* a *cr2*) šachovnicová mřížka vzor nahrazení rastrového obrázku na pozadí. Pozadí zdrojovou bitmapu je definován jako jeho bílé pixelů a všechny obrazové body odpovídající barva pixel v levém horním rohu rastrového obrázku.
 
-![Porovnání ikonu dithered pro bitové a původní verzí](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
+![Porovnání ikonu dithered pro bitové a původní verzí](../../mfc/reference/media/vcditheredbitmap.gif "porovnání ikonu dithered pro bitové a původní verzí")
 
 ### <a name="example"></a>Příklad
 

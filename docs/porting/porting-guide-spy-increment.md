@@ -1,13 +1,13 @@
 ---
 title: 'Průvodce přenosem: Spy++'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 9e36bbefb2ab851350e17c0561addb680593f457
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bd69853b13d58ff79910eafcc601b0507d5a9ad
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487812"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177001"
 ---
 # <a name="porting-guide-spy"></a>Průvodce přenosem: Spy++
 
@@ -25,7 +25,7 @@ Soubor projektu, dvě staré .dsw soubory Visual C++ 6.0, jednoduše převést b
 
 Po provedení upgradu dvou projektů, vypadal náš řešení toto:
 
-![Nástroji Spy&#43; &#43; řešení](../porting/media/spyxxsolution.PNG "SpyxxSolution")
+![Nástroji Spy&#43; &#43; řešení](../porting/media/spyxxsolution.PNG "Spy&#43; &#43; řešení")
 
 Máme dva projekty, jednu s velkým množstvím souborů C++ a další knihovny DLL, která je napsána v jazyce C.
 

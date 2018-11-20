@@ -1,6 +1,6 @@
 ---
 title: Crecttracker – třída
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CRectTracker
 - AFXEXT/CRectTracker
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: 519f88a3706812ae77d7dbd77e199b3e3ef4e97a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c82b06903f0705a79a15b263b1dbdfc6aee4c8ca
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473369"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176507"
 ---
 # <a name="crecttracker-class"></a>Crecttracker – třída
 
@@ -237,7 +237,7 @@ Maska `CRectTracker` úchyty pro změnu velikosti položky.
 
 Obdélník má číslované 0-7 8 úchyty pro změnu velikosti. Každý úchyt pro změnu velikosti je reprezentován trochu v masce; Hodnota této verze je 2 ^ *n*, kde *n* je číslo popisovač změny velikosti. Služba BITS 0 – 3 odpovídají úchyty pro změnu velikosti roh, počínaje nahoře vlevo přesunutí po směru hodinových ručiček. BITS 4 – 7 odpovídají na straně změnit velikost v horní části po směru hodinových ručiček od obslužné rutiny. Následující obrázek znázorňuje úchyty pro změnu velikosti obdélníku a jejich odpovídající velikost popisovač čísla a hodnoty:
 
-![Změnit velikost čísla popisovač](../../mfc/reference/media/vc35dp1.gif "vc35dp1")
+![Změnit velikost čísla popisovač](../../mfc/reference/media/vc35dp1.gif "čísla popisovač změny velikosti")
 
 Výchozí implementace `GetHandleMask` vrátí maska bitů tak, aby zobrazily úchyty pro změnu velikosti. Pokud jeden bit zapnutý, bude vykreslen odpovídající úchyt pro změnu velikosti.
 

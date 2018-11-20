@@ -1,6 +1,6 @@
 ---
 title: MFC – ovládací prvky ActiveX
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 f1_keywords:
 - MFC ActiveX Controls (MFC)
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
-ms.openlocfilehash: 95e1e1cc47d9c14448635fae5d6a9added8e15e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 10ad0645e873a1a745168be9b839bbf97a1c05a6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553268"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174865"
 ---
 # <a name="mfc-activex-controls"></a>MFC – ovládací prvky ActiveX
 
@@ -39,7 +39,8 @@ Lze vytvořit ovládací prvky ActiveX bez oken či prvky, které po své aktiva
 
 Ovládací prvek ActiveX je implementován jako server uvnitř procesu (obvykle malý objekt), který lze použít v libovolném kontejneru OLE. Povšimněte si, že všechny funkce ovládacího prvku ActiveX jsou dostupné pouze v případě, že je použit uvnitř kontejneru OLE navrženého pro komunikaci s prvky ActiveX. Zobrazit [přenos ovládacích prvků ActiveX do jiných aplikací](../mfc/containers-for-activex-controls.md) seznam kontejnerů podporujících ovládací prvky ActiveX. Tento typ kontejneru, dále jen „kontejner ovládacího prvku“, dokáže pracovat s ovládacím prvkem ActiveX pomocí jeho vlastností a metod a přijímá od něj oznámení ve formě událostí. Následující obrázek znázorňuje tuto interakci.
 
-![Mezi kontejnerem ovládacího prvku ActiveX a ovládací prvek](../mfc/media/vc37221.gif "vc37221") interakce mezi kontejneru ovládacího prvku ActiveX a ovládacím prvku ActiveX
+![Mezi kontejnerem ovládacího prvku ActiveX a ovládací prvek](../mfc/media/vc37221.gif "kontejneru ovládacího prvku ActiveX souhra grafů a ovládací prvek") <br/>
+Interakce mezi kontejnerem ovládacího prvku ActiveX a ovládacím prvkem ActiveX v okně
 
 Některé aktuální informace o optimalizaci ovládacích prvků ActiveX naleznete v tématu [knihovny MFC – ovládací prvky ActiveX: optimalizace](../mfc/mfc-activex-controls-optimization.md).
 
@@ -69,7 +70,8 @@ Posledním prvkem je mapa odeslání, která se používá k vystavení sady fun
 
 Je-li ovládací prvek použit uvnitř kontejneru ovládacího prvku, používá pro komunikaci dva mechanismy: vystavuje vlastnosti a metody a vyvolává události. Následující obrázek ukazuje, jak jsou tyto dva mechanismy implementovány.
 
-![Ovládací prvek ActiveX komunikuje s jejím kontejnerem](../mfc/media/vc37222.gif "vc37222") komunikace mezi kontejneru ovládacího prvku ActiveX a ovládacím prvku ActiveX
+![Ovládací prvek ActiveX komunikuje s jejím kontejnerem](../mfc/media/vc37222.gif "ovládacího prvku ActiveX komunikuje s jejím kontejnerem") <br/>
+Komunikace mezi kontejnerem ovládacího prvku ActiveX a prvkem samotným
 
 Předchozí obrázek znázorňuje také způsob, jakým ovládací prvek zpracovává jiná rozhraní OLE (kromě automatizace a událostí).
 
@@ -83,7 +85,8 @@ Když [ovládací prvek bez oken](../mfc/providing-windowless-activation.md) sv�
 
 Ovládací prvek s oknem je po své aktivaci schopen plně spolupracovat s kontejnerem ovládacího prvku, uživatelem a systémem Windows. Obrázek níže ukazuje komunikační kanály mezi ovládacím prvkem ActiveX, kontejnerem ovládacího prvku a operačním systémem.
 
-![Zpráva zpracování v aktivním ovládacím prvku ActiveX](../mfc/media/vc37223.gif "vc37223") Windows zpracování zprávy v ovládacím prvku ActiveX (Pokud aktivní)
+![Zpráva zpracování v aktivním ovládacím prvku ActiveX](../mfc/media/vc37223.gif "Msg zpracování v aktivním ovládacím prvku ActiveX") <br/>
+Zpracování zpráv systému Windows v ovládacím prvku ActiveX s oknem (je-li aktivní)
 
 ##  <a name="_core_serializing_activex_elements"></a> Serializace
 

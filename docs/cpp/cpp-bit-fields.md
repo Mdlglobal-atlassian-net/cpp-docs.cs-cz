@@ -1,17 +1,17 @@
 ---
 title: Bitová pole jazyka C++
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - bitfields [C++]
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-ms.openlocfilehash: df4e5a068f76c35dc22b3915ad7e4ace421ca10b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 747920378472cc091928a080e303a0543e287aaa
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644958"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175090"
 ---
 # <a name="c-bit-fields"></a>Bitová pole jazyka C++
 
@@ -43,7 +43,8 @@ struct Date {
 
 Koncepční rozvržení paměti objektu typu `Date` je znázorněno na následujícím obrázku.
 
-![Rozložení paměti objektu date](../cpp/media/vc38uq1.png "vc38UQ1") rozložení paměti objektu Date
+![Rozložení paměti objektu date](../cpp/media/vc38uq1.png "rozložení paměti objektu date") <br/>
+Rozložení paměti objektu Date
 
 Všimněte si, že `nYear` je 8 bitů dlouhý a přeteče hranice slova deklarovaného typu **bez znaménka** **krátký**. Proto je zahájen na začátku nového **bez znaménka** **krátký**. Není nutné, aby se všechna bitová pole vešla do jednoho objektu použitého typu. Nové jednotky úložiště jsou přidělovány podle vyžadovaného počtu bitů v deklaraci.
 
@@ -69,7 +70,8 @@ struct Date {
 
 potom rozložení paměti je, jak je znázorněno na následujícím obrázku:
 
-![Rozložení objektu Date s nulovou&#45;bitové pole délky](../cpp/media/vc38uq2.png "vc38UQ2") rozložení z objektu Date s nulovou délkou bitového pole
+![Rozložení objektu Date s nulovou&#45;bitové pole délky](../cpp/media/vc38uq2.png "rozložení datum objektu s nulou&#45;délkou bitového pole") <br/>
+Rozložení objektu Date s nulovou délkou bitového pole
 
 Základní typ bitového pole musí být integrálního typu, jak je popsáno v [základní typy](../cpp/fundamental-types-cpp.md).
 

@@ -1,6 +1,6 @@
 ---
 title: CMFCPropertySheet – třída
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCPropertySheet
 - AFXPROPERTYSHEET/CMFCPropertySheet
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 8e643474d577c606e80f5f34c6166a59753610f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1168375606ef86061269454aa361a076efa331a4
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531609"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176403"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet – třída
 
@@ -112,15 +112,15 @@ Proveďte následující kroky a použít `CMFCPropertySheet` ve vaší aplikaci
 
 Následující obrázek znázorňuje seznam vlastností, která je ve stylu integrovaném panelu nástrojů aplikace Microsoft Outlook. Panel nástrojů aplikace Outlook se zobrazí na levé straně seznam vlastností.
 
-![Barva CMFCPropertySheet – ovládací prvky](../../mfc/reference/media/cmfcpropertysheet_color.png "cmfcpropertysheet_color")
+![Barva CMFCPropertySheet – ovládací prvky](../../mfc/reference/media/cmfcpropertysheet_color.png "barva CMFCPropertySheet – ovládací prvky")
 
 Následující obrázek znázorňuje seznam vlastností, která obsahuje [cmfcpropertygridctrl – třída](../../mfc/reference/cmfcpropertygridctrl-class.md) objektu. Tento objekt je seznam vlastností ve stylu standardní společný seznam vlastností ovládacích prvků.
 
-![CMFCPropertySheet – seznam a vlastnosti ovládacích prvků](../../mfc/reference/media/cmfcpropertysheet_list.png "cmfcpropertysheet_list")
+![CMFCPropertySheet – seznam a vlastnosti ovládacích prvků](../../mfc/reference/media/cmfcpropertysheet_list.png "CMFCPropertySheet – seznam a vlastnosti ovládacích prvků")
 
 Následující obrázek znázorňuje seznam vlastností, která je ve stylu ovládacího prvku stromu.
 
-![Strom](../../mfc/reference/media/proptree.png "proptree")
+![Vlastnost stromu](../../mfc/reference/media/proptree.png "vlastnost stromu")
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 

@@ -1,21 +1,21 @@
 ---
 title: 'Postupy: Přizpůsobení tlačítka aplikace'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-ms.openlocfilehash: e556e9e6509179b692e4c86b67d59ff2e2ec0f02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba29e9ad65e0bb1d2163e4051c7c7b53664d8817
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592787"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175324"
 ---
 # <a name="how-to-customize-the-application-button"></a>Postupy: Přizpůsobení tlačítka aplikace
 
 Po kliknutí na tlačítko aplikace, zobrazí se nabídka příkazy. Obvykle se nabídka obsahuje příkazy, vztahující se k souboru, jako **otevřít**, **Uložit**, **tisk**, a **ukončovací**.
 
-![Tlačítko aplikace pásu karet MFC](../mfc/media/application_button.png "application_button")
+![Tlačítko aplikace pásu karet MFC](../mfc/media/application_button.png "tlačítko pásu karet aplikace knihovny MFC")
 
 Chcete-li přizpůsobení tlačítka aplikace, otevřete ho v **vlastnosti** okně upravit její vlastnosti a pak zobrazte náhled ovládacího prvku pásu karet.
 
@@ -57,4 +57,3 @@ Na nabídku aplikace se nezobrazí na návrhové ploše. Zobrazit, musíte zobra
 ## <a name="see-also"></a>Viz také
 
 [Návrhář pásu karet (MFC)](../mfc/ribbon-designer-mfc.md)
-

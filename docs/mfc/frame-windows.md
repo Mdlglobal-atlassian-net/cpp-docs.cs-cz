@@ -1,6 +1,6 @@
 ---
 title: Okna s rámečkem
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - document frame windows [MFC]
 - windows [MFC], MDI
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
-ms.openlocfilehash: 09db7bab392778297f17c14f7bb807f91af4d896
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76c2f303713644c5f78f20d2ea868bd67b9eae71
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619931"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175372"
 ---
 # <a name="frame-windows"></a>Okna s rámečkem
 
@@ -30,7 +30,8 @@ Pokud je aplikace spuštěna v rámci Windows, kterou uživatel komunikuje dokum
 
 Rozhraní MFC používá tak, aby obsahovala zobrazení oken s rámečkem. Dvě komponenty – rámce a obsah, jsou reprezentovány a spravuje dvěma různými třídami v knihovně MFC. Třídy oken s rámečkem spravuje rámce a zobrazit třídu spravuje obsah. V okně zobrazení je podřízeným oknem rámce. Vykreslování a další interakce uživatele s dokumentem probíhat v klientské oblasti zobrazení, nikoli klientské oblasti okna rámce. Okno rámce poskytuje viditelná rámeček kolek zobrazení, včetně záhlaví a standardní okno Ovládací prvky, jako je například ovládací prvek nabídky, tlačítka Minimalizovat a maximalizujte okno a ovládací prvky pro změnu velikosti okna. "Obsah" skládají z klientské oblasti okna, plně obsazenou podřízené okno – zobrazení. Následující obrázek ukazuje vztah mezi okno rámce a zobrazení.
 
-![Rámeček okna zobrazení](../mfc/media/vc37fx1.gif "vc37fx1") okno rámce a zobrazení
+![Rámeček okna zobrazení](../mfc/media/vc37fx1.gif "rámec okna zobrazení") <br/>
+Okno rámce a zobrazení
 
 ## <a name="frame-windows-and-splitter-windows"></a>Rámce Windows a Windows rozdělovač
 

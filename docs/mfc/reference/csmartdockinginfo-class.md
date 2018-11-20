@@ -1,6 +1,6 @@
 ---
 title: Csmartdockinginfo – třída
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CSmartDockingInfo
 - AFXDOCKINGMANAGER/CSmartDockingInfo
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CSmartDockingInfo [MFC], m_uiMarkerBmpResID
 - CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
-ms.openlocfilehash: 885af55987c2d1e78cd0145fcee5ca0f4ef67dc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8931af856bc75bd499d8237278998adfcdb02a6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524656"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176767"
 ---
 # <a name="csmartdockinginfo-class"></a>Csmartdockinginfo – třída
 
@@ -75,7 +75,7 @@ class CSmartDockingInfo : public CObject
 
 Framework zpracovává inteligentní značky dokovací interně. Následující obrázek znázorňuje standardních značek inteligentního dokování:
 
-![Standardní značky pro inteligentního dokování](../../mfc/reference/media/nextsdmarkers.png "nextsdmarkers")
+![Standardní značky pro inteligentního dokování](../../mfc/reference/media/nextsdmarkers.png "standardní značky pro inteligentní ukotvení")
 
 Na tomto obrázku zobrazuje obrázek na levé straně centrální skupina inteligentní dokovací značku, která nemá ukotvení na kartu povolena. Uprostřed obrázku značky pravého okraje inteligentní ukotvení. Na pravé straně obrázku centrální skupina inteligentní dokovací značku, na kterém ukotvení na kartu povolena. Inteligentní značky centrální skupina dokovací má hlavní rastrový obrázek a pět inteligentní dokovací rastrové obrázky značky.
 
@@ -93,7 +93,7 @@ Můžete přizpůsobit následující parametry značek inteligentního dokován
 
 Následující obrázek znázorňuje příklad značek inteligentního dokování, které byly upraveny:
 
-![Vlastní značky pro inteligentního dokování](../../mfc/reference/media/nextsdmarkerscustom.png "nextsdmarkerscustom")
+![Vlastní značky pro inteligentního dokování](../../mfc/reference/media/nextsdmarkerscustom.png "vlastní značky pro inteligentní ukotvení")
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 

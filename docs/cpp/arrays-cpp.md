@@ -1,17 +1,17 @@
 ---
 title: Pole (C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - declaring arrays [C++], about declaring arrays
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-ms.openlocfilehash: 746a6b5a2122a7ccdd207d278d285af3e448d7ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 176e358bd0217ac914eb4ee6079126d3f429b6dd
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550667"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176876"
 ---
 # <a name="arrays-c"></a>Pole (C++)
 
@@ -75,7 +75,8 @@ int i2[5][7];
 
 Určuje pole typu **int**koncepčně uspořádané v dvojrozměrné matici po pěti řádcích a sedmi sloupcích, jak je znázorněno na následujícím obrázku:
 
-![Rámcové rozložení vícenásobné&#45;jednorozměrné pole](../cpp/media/vc38rc1.gif "vc38RC1") koncepční rozložení z multidimenzionálního pole
+![Rámcové rozložení vícenásobné&#45;jednorozměrné pole](../cpp/media/vc38rc1.gif "rámcové rozložení vícenásobné&#45;jednorozměrné pole.") <br/>
+Rámcové rozložení vícerozměrné pole
 
 V deklaracích vícerozměrných polí, která mají seznam inicializátorů (jak je popsáno v [inicializátory](../cpp/initializers.md)), konstantní výraz, který určuje hranice pro první dimenzi lze vynechat. Příklad:
 

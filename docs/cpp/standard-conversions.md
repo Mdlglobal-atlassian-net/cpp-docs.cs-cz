@@ -1,17 +1,17 @@
 ---
 title: Standardní převody
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - standard conversions, categories of
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-ms.openlocfilehash: 7a42a4f35a29489fe23327c6b34ed49197a64724
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aee100bdc7e8ba6dd7d06c6bca9ed39c09cf2d97
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575445"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176975"
 ---
 # <a name="standard-conversions"></a>Standardní převody
 
@@ -189,7 +189,8 @@ První případem je, pokud zadaná základní třída je přístupná a převod
 
 Určuje, zda je dostupná základní třídu, závisí na druh dědičnosti používaných pro odvození. Vezměte v úvahu dědičnosti znázorněné na následujícím obrázku.
 
-![Graf dědičnosti, který znázorňuje základní&#45;třídy usnadnění](../cpp/media/vc38xa1.gif "vc38XA1") grafu dědičnosti pro usnadnění obrázek základní třídy
+![Graf dědičnosti, který znázorňuje základní&#45;třídy usnadnění](../cpp/media/vc38xa1.gif "graf dědičnosti, který znázorňuje základní&#45;třídy usnadnění přístupu") <br/>
+Graf dědičnosti pro ilustraci usnadnění základní třídy
 
 V následující tabulce jsou uvedeny základní třídy usnadnění pro situace znázorněna na obrázku.
 

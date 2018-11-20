@@ -1,6 +1,6 @@
 ---
 title: Přístupové objekty a sady řádků
-ms.date: 10/22/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - accessors [C++]
 - OLE DB consumer templates, rowset support
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-ms.openlocfilehash: 74a839d36f96b115d1f4e0c35532bd76d998a4b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d29c409f2ed410d9f697419e9a98b675eee7a69d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651253"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175710"
 ---
 # <a name="accessors-and-rowsets"></a>Přístupové objekty a sady řádků
 
@@ -34,7 +34,7 @@ Všechny přistupující objekty jsou odvozeny z [CAccessorBase](../../data/oled
 
 Následující obrázek znázorňuje typy přístupového objektu.
 
-![Typy přístupového objektu](../../data/oledb/media/vcaccessortypes.gif "vcaccessortypes")<br/>
+![Typy přístupového objektu](../../data/oledb/media/vcaccessortypes.gif "typy přístupového objektu")<br/>
 Přístupový objekt třídy
 
 - [CAccessor –](../../data/oledb/caccessor-class.md) použijte tento přistupující objekt, když víte struktury zdroje databáze v době návrhu. `CAccessor` staticky váže záznam v databázi, která obsahuje vyrovnávací paměti, ke zdroji dat.
@@ -63,7 +63,7 @@ Následující tabulka shrnuje podporu typy přístupového objektu šablony tec
 
 Následující obrázek znázorňuje typy sady řádků.
 
-![Obrázek %{rowsettype/](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")<br/>
+![Obrázek %{rowsettype/](../../data/oledb/media/vcrowsettypes.gif "%{rowsettype/ grafiky")<br/>
 Třídy sady řádků
 
 [Sady řádků schématu](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) nemáte přístup k datům v data ukládat, ale místo toho přístup k informacím o úložišti dat označovaném jako metadata. Sady řádků schématu se obvykle používá v situacích, ve kterých struktura databáze není v době kompilace znám a musí být získány v době běhu.

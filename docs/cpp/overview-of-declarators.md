@@ -1,21 +1,22 @@
 ---
 title: Přehled deklarátorů
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
-ms.openlocfilehash: 66f1068fd3f69d3e4546f159ec22b34024bd2057
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e651b4422a159bf947e364c82cc4aac1b888d30d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326755"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177079"
 ---
 # <a name="overview-of-declarators"></a>Přehled deklarátorů
 
 Deklarátory jsou ty součásti deklarace, které určují názvy objektů a funkcí. Určují také, zda je pojmenovaný objekt objektem, ukazatelem, referencí nebo polem.  Ačkoli deklarátory neurčují základní typ, upravují informace o typu v základním typu a určují tak odvozené typy jako ukazatele, reference a pole.  Deklarátor použitý ve funkci spolupracuje se specifikátorem typu na plném určení návratového typu funkce jako objekt, ukazatel nebo reference. (Specifikátory diskutované v [deklarace a definice](declarations-and-definitions-cpp.md), poskytují informace o vlastnostech, jako je například typ nebo třída úložiště. Modifikátory diskutované v této části a v [Modifikátory specifické pro společnost Microsoft](../cpp/microsoft-specific-modifiers.md), upravují deklarátory.) Následující obrázek ukazuje kompletní deklaraci funkce `MyFunction` a označuje komponenty deklarace.
 
-![Modifikátory specifikátorů a deklarátorů](../cpp/media/vc38qy1.gif "vc38QY1") specifikátory, modifikátory a Deklarátory
+![Modifikátory specifikátorů a deklarátorů](../cpp/media/vc38qy1.gif "modifikátory specifikátorů a deklarátorů") <br/>
+Specifikátory, modifikátory a deklarátory
 
 **Specifické pro Microsoft**
 

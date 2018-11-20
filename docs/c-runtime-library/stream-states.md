@@ -1,21 +1,21 @@
 ---
 title: Stavy proudu
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - streams, states
 ms.assetid: 5f28c968-f132-403f-968c-8417ff315e52
-ms.openlocfilehash: d51f24b82c10d58e91f5d20b6656eb16621004ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43d28fa504c64fcb25d5c7cd3ee2c6ed906acd7e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481169"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175558"
 ---
 # <a name="stream-states"></a>Stavy proudu
 
 Na následujícím obrázku jsou uvedeny platné stavy a přechody stavu pro datový proud.
 
-![Stream](../c-runtime-library/media/stream.gif "datového proudu")
+![Diagram stavu Stream](../c-runtime-library/media/stream.gif "diagramu stavu Stream")
 
 Každý z kruhů označuje stabilního stavu. Každý řádek znamená přechod, který může nastat v důsledku volání funkce, která pracuje v datovém proudu. Pět skupin funkce může způsobit přechodů mezi stavy.
 

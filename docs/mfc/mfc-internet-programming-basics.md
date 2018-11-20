@@ -1,6 +1,6 @@
 ---
 title: Základy internetového programování v prostředí MFC
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - ISAPI extensions, programming with ISAPI
 - Internet applications [MFC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 9d44d78474ccb030184c6e79ed2f257ffb00a068
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bb6a1d379ed754ed96637dfe5b3e4da983edb9f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509458"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175584"
 ---
 # <a name="mfc-internet-programming-basics"></a>Základy internetového programování v prostředí MFC
 
@@ -30,7 +30,7 @@ Společnost Microsoft poskytuje řadu rozhraní API pro programování klientsk�
 >[!IMPORTANT]
 > ActiveX je starší technologie, která by neměla být používána při novém vývoji. Další informace najdete v tématu [ovládací prvky ActiveX](activex-controls.md).
 
-![Klientské a serverové aplikace](../mfc/media/vc38bq1.gif "vc38bq1")
+![Klientské a serverové aplikace](../mfc/media/vc38bq1.gif "klientské a serverové aplikace")
 
 Knihovna MFC poskytuje třídy, které podporují programování na Internetu. Můžete použít [COleControl](../mfc/reference/colecontrol-class.md) a [cdocobjectserver –](../mfc/reference/cdocobjectserver-class.md) a související třídy knihovny MFC k tvorbě ovládacích prvků ActiveX a aktivní dokumenty. MFC – třídy můžete použít například [cinternetsession –](../mfc/reference/cinternetsession-class.md), [cftpconnection –](../mfc/reference/cftpconnection-class.md), a [casyncmonikerfile –](../mfc/reference/casyncmonikerfile-class.md) načíst soubory a informace, pomocí protokolů sítě Internet, jako je například FTP, HTTP a gopher.
 
