@@ -7,16 +7,16 @@ helpviewer_keywords:
 - STL/CLR, redistribution
 - cliext directory
 ms.assetid: a9d9ca00-7bf2-48c1-b205-3ae6f8c25f82
-ms.openlocfilehash: b1628ebc315dd0e94b54f6d0c7847d46e002351e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6914b61597e38c94a214089ecc3aeed17aec46d3
+ms.sourcegitcommit: 984fb4814a2dd9bcea5ec88c9528707f17a7cffa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539461"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51949515"
 ---
 # <a name="stlclr-library-reference"></a>STL/CLR – Referenční dokumentace knihoven
 
-Knihovna STL/CLR poskytuje rozhraní podobně jako kontejnery standardní knihovny C++ pro použití s C++ a .NET Framework common language runtime (CLR). Je zcela nezávislý Microsoft implementuje standardní knihovně C++ STL/CLR. STL/CLR je zachován z důvodu stále podporuje starší verze, ale není pořád aktuální standardu C++. Důrazně doporučujeme používat nativní [standardní knihovny C++](../standard-library/cpp-standard-library-reference.md) kontejnery místo STL/CLR, kdykoli je to možné.
+Knihovna STL/CLR poskytuje rozhraní podobně jako kontejnery standardní knihovny C++ pro použití s C++ a .NET Framework common language runtime (CLR). STL/CLR je zcela oddělená od implementace standardní knihovny C++ společnosti Microsoft. STL/CLR je zachován z důvodu stále podporuje starší verze, ale není pořád aktuální standardu C++. Důrazně doporučujeme používat nativní [standardní knihovny C++](../standard-library/cpp-standard-library-reference.md) kontejnery místo STL/CLR, kdykoli je to možné.
 
 Použití STL/CLR:
 

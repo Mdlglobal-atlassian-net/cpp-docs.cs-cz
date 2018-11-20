@@ -4,7 +4,7 @@
 ## [Binární kompatibilita C++ 2015–2017](binary-compat-2015-2017.md)
 ## [Přehled potenciálních problémů s upgradem (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)
 ## [Přenos knihoven třetích stran](porting-third-party-libraries.md)
-## [Přenos datových aplikací](porting-data-applications.md)
+## [Přenos datových aplikací](../data/data-access-programming-mfc-atl.md)
 ## [Přenos a upgrade: Příklady a případové studie](porting-and-upgrading-examples-and-case-studies.md)
 ### [Průvodce přenosem: MFC Scribble](porting-guide-mfc-scribble.md)
 ### [Průvodce přenosem: COM Spy](porting-guide-com-spy.md)
