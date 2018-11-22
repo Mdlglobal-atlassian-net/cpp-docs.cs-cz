@@ -2,12 +2,12 @@
 title: Změnit signaturu
 ms.date: 11/16/2016
 ms.assetid: 8daaa060-7305-4035-99d2-8b460b4f4454
-ms.openlocfilehash: 97f70f7fdf6cb8a130427d8920152d44c1cb1349
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: ec42fd00ecf48fb700042f02543e3fe194fe6975
+ms.sourcegitcommit: 7c05ebd2c75e9326fe774e95cbce7f150ba2eeba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693528"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52281945"
 ---
 # <a name="change-signature"></a>Změnit signaturu
 
@@ -38,7 +38,7 @@ ms.locfileid: "51693528"
    | Tlačítko | Popis
    | ------ | ---
    | **Směrem nahoru nebo dolů**    | Přesunout vybraný parametr nahoru a dolů v seznamu
-   | **Add**        | Přidání nových parametrů do seznamu
+   | **Add**        | Přidání nového parametru do seznamu
    | **odebrat**     | Odebrat vybraný parametr ze seznamu
    | **Upravit**     | Upravit vybraný parametr tak, že změníte její typ, název a určuje, zda je volitelné a co by byla hodnotou vloženého
    | **Vrátit zpět**     | Obnovení původního stavu vybraný parametr
