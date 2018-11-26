@@ -16,7 +16,7 @@ ms.locfileid: "50570531"
 
 ||||
 |-|-|-|
-|[delete – operátor](#op_delete)|[Operator delete]](#op_delete_arr)|[new – operátor](#op_new)|
+|[delete – operátor](#op_delete)|[delete[] – operátor](#op_delete_arr)|[new – operátor](#op_new)|
 |[new [] – operátor](#op_new_arr)|
 
 ## <a name="op_delete"></a>  delete – operátor
