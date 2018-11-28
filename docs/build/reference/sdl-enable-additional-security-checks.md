@@ -1,15 +1,15 @@
 ---
 title: /sdl (Povolit další kontroly zabezpečení)
-ms.date: 11/04/2016
+ms.date: 11/26/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
-ms.openlocfilehash: 84e3b7b80727c359e711f182e2f06a7332989549
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49ac57f81ef07eb2a9c1e11280e160f0c48fce73
+ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587457"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389939"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (Povolit další kontroly zabezpečení)
 
@@ -49,7 +49,17 @@ Když **/SDL** je povoleno, kompilátor vygeneruje kód k provedení těchto kon
 
 - Provádí sanitizace omezené ukazatele. Ve výrazech, které nezahrnují přístupů přes ukazatel, a v typy, které mají žádný uživatelem definovaný destruktor, odkazy na ukazatele nastavte k neplatné adrese po volání `delete`. To pomáhá zabránit opětovnému použití zastaralé ukazatele odkazů.
 
-- Provede inicializaci členů třídy. Automaticky inicializuje všechny členy třídy na hodnotu nula při vytváření instance objektu (před spuštěním konstruktoru). To pomáhá zabránit používání neinicializovaná data související s členy třídy, které konstruktor explicitně neinicializuje.
+- Provede inicializaci ukazatele člena třídy. Automaticky inicializuje členy typu ukazatele na třídy **nullptr** při vytváření instance objektu (před spuštěním konstruktoru). To pomáhá zabránit použití neinicializovaného ukazatele, které konstruktor explicitně neinicializuje. Inicializace ukazatele kompilátorem generované členské nazývá tak dlouho, dokud:
+
+  - Objekt není přidělena pomocí vlastní (definovaný uživatelem) `operator new`
+
+  - Objekt není přidělená jako součást pole (například `new A[x]`)
+
+  - Třída není spravované ani importován
+
+  - Třída má uživatelem definovaný výchozí konstruktor.
+
+  Chcete-li inicializovat pomocí funkce inicializace kompilátorem generované třídy, musí být členem ukazatel a není vlastnost nebo – konstanta.
 
 ## <a name="remarks"></a>Poznámky
 

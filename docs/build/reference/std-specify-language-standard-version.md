@@ -6,12 +6,12 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: 28796826a7c312b92b3ec0510513ad4804800ca1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 7c91f02fe044b5e6afccfc075c5d73ec004b8222
+ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476035"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389952"
 ---
 # <a name="std-specify-language-standard-version"></a>/ STD (určení standardní jazykové verze)
 
@@ -19,11 +19,11 @@ Povolit podporovány funkcí jazyka C++ z určenou verzi standard jazyka C++.
 
 ## <a name="syntax"></a>Syntaxe
 
-> / std: [c ++ 14 | c ++ 17 | c ++ latest]
+> / std:\[c ++ 14\|c ++ 17\|c ++ latest]
 
 ## <a name="remarks"></a>Poznámky
 
-**/Std** možnost je k dispozici v sadě Visual Studio 2017 a novější. Používá se k řízení programovací jazyk standardní funkce povolené během kompilace kódu specifické pro verzi ISO C++. Tato možnost umožňuje zakázat podporu pro některé nové funkce jazyka a knihovny, které mohou přestat fungovat existující kód, který odpovídá konkrétní verzi jazyka standard. Ve výchozím nastavení **/std: c ++ 14** není zadána, která zakáže jazyka a funkce standardní knihovny, které jsou součástí standardní novější verze jazyka C++. Použití **/std: c ++ 17** povolení C ++ 17 specifické pro standardní funkce a chování. Chcete-li explicitně povolit nejnovější podporované kompilátor a standardní knihovna funkcí, použijte **/std: c ++ nejnovější**.
+**/Std** možnost je k dispozici v sadě Visual Studio 2017 a novější. Používá se k řízení programovací jazyk standardní funkce povolené během kompilace kódu specifické pro verzi ISO C++. Tato možnost umožňuje zakázat podporu pro některé nové funkce jazyka a knihovny, které mohou přestat fungovat existující kód, který odpovídá konkrétní verzi jazyka standard. Ve výchozím nastavení **/std: c ++ 14** není zadána, která zakáže jazyka a funkce standardní knihovny, které jsou součástí standardní novější verze jazyka C++. Použití **/std: c ++ 17** povolení C ++ 17 specifické pro standardní funkce a chování. Chcete-li explicitně povolit aktuální implementace kompilátoru a standardní knihovny funkce navrhuje se pro následující normy, použijte **/std: c ++ nejnovější**.
 
 Výchozí hodnota **/std: c ++ 14** možnost povolí sadu funkcí C ++ 14 implementované kompilátorem jazyka Visual C++. Tato možnost zakáže kompilátoru a standardní knihovny podpora pro funkce, které se mění nebo nové v novějších verzích jazyka standard, s výjimkou některé funkce C ++ 17 již implementováno v předchozích verzích kompilátoru jazyka Visual C++. Aby se zabránilo zásadní změny pro uživatele, kteří už udělali závislosti na funkcích, které jsou k dispozici od verze Visual Studio 2015 Update 2, tyto funkce zůstat zapnuté, kdy **/std: c ++ 14** je zadána možnost:
 
@@ -41,7 +41,10 @@ Další informace o jaké funkce C ++ 14 a C ++ 17 jsou povolené při **/std: c
 
 **/Std: c ++ 17** možnost povolí úplnou sadu funkcí C ++ 17 implementované kompilátorem jazyka Visual C++. Tato možnost zakáže kompilátoru a standardní knihovny podpora pro funkce, které se mění nebo nového ve verzích konceptu práce a defect aktualizace standardu jazyka C++ za C ++ 17.
 
-**/Std: c ++ nejnovější** možnost povolí sadu funkcí jazyka a knihovny C++ implementované ve Visual C++ pro sledování nejvíce C ++ 20 práce koncept a defect nejnovější úrovně Standard C++, které nejsou součástí C ++ 17. Pomocí tohoto přepínače můžete získat příspěvku-funkcí C ++ 17 jazyka podporovaná modulem kompilátoru a standardní knihovny. Seznam podporovaného jazyka a funkce knihovny najdete v tématu [co je nového v jazyce Visual c++](../../what-s-new-for-visual-cpp-in-visual-studio.md). **/Std: c ++ nejnovější** možnost nepovolíte funkce strážený **/ experimentální** přepnout.
+**/Std: c ++ nejnovější** možnost povolí příspěvku-C ++ 17 funkcí jazyka a knihovny aktuálně implementováno v kompilátoru a knihovny. To může zahrnovat funkce z C ++ 20 práce koncept a defect aktualizace standardu C++, které nejsou zahrnuty v C ++ 17, jakož i experimentální návrhy koncept standardu. Seznam podporovaného jazyka a funkce knihovny najdete v tématu [co je nového v jazyce Visual c++](../../what-s-new-for-visual-cpp-in-visual-studio.md). **/Std: c ++ nejnovější** možnost nepovolíte funkce strážený **/ experimentální** přepínač, ale může být nutné je povolit.
+
+> [!IMPORTANT]
+> Kompilátor a knihovny Funkce povolené **/std: c ++ nejnovější** jsou k dispozici jako-je a bez podpory. Jsou v souladu s nebo bez předchozího upozornění. Jsou určeny jako verze preview funkcí jazyka, které se mohou objevit v příští verzi standard, ale standardní je ve vývoji. Použít **/std: c ++ 17** chcete používat funkce v nejnovější standardu ISO C++.
 
 **/Std** možnost platit během kompilace jazyka C++ lze zjistit pomocí [ \_MSVC\_LANG](../../preprocessor/predefined-macros.md) makro preprocesoru. Další informace najdete v tématu [makra preprocesoru](../../preprocessor/predefined-macros.md).
 
