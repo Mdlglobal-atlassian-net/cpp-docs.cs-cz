@@ -36,7 +36,7 @@ Toto téma uvádí rutiny exchange (DDX) dat standardního dialogového okna pro
 |[DDX_MonthCalCtrl](#ddx_monthcalctrl)|Inicializuje nebo načte aktuální hodnotu ovládací prvek měsíční kalendář.|
 |[DDX_Radio](#ddx_radio)|Inicializuje nebo načte index založený na 0 v ovládacím prvku přepínač, který je aktuálně zaškrtnutých v rámci skupiny ovládacích prvků přepínačů.|
 |[DDX_Scroll](#ddx_scroll)|Inicializuje nebo načte aktuální pozice posuvníku ovládacího prvku thumb.|
-|[Ddx_slider –](#ddx_slider)|Inicializuje nebo načte aktuální pozice posuvníku ovládacího prvku thumb.|
+|[DDX_Slider](#ddx_slider)|Inicializuje nebo načte aktuální pozice posuvníku ovládacího prvku thumb.|
 |[DDX_Text](#ddx_text)|Inicializuje nebo načte aktuální hodnota ovládacího prvku pro úpravy.|
 
 ##  <a name="ddx_cbindex"></a>  DDX_CBIndex
@@ -187,7 +187,7 @@ void AFXAPI DDX_Control(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [cdataexchange –](../../mfc/reference/cdataexchange-class.md) objektu.
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu.
 
 *nIDC*<br/>
 ID prostředku ovládacího prvku na má rozčlenit do podtříd.
@@ -229,7 +229,7 @@ void AFXAPI DDX_DateTimeCtrl(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [cdataexchange –](../../mfc/reference/cdataexchange-class.md) objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr. Není nutné odstranit tento objekt.
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr. Není nutné odstranit tento objekt.
 
 *nIDC*<br/>
 ID prostředku datum a čas pro výběr ovládacího prvku přidruženého k členské proměnné.
@@ -386,7 +386,7 @@ Odkaz na proměnnou člena dialogové okno, zobrazení formuláře nebo objekt z
 
 ### <a name="remarks"></a>Poznámky
 
-Když `DDX_LBString` je volána k přenosu dat do seznamu ovládacího prvku pole, první položky v ovládacím prvku, jehož začátku odpovídá *hodnotu* zaškrtnuto. (Tak, aby odpovídaly celé položky, ne jenom předpony, použijte [ddx_lbstringexact –](#ddx_lbstringexact).) Pokud neexistují žádné odpovídající položky, nejsou vybrané žádné položky. Porovnání se velká a malá písmena.
+Když `DDX_LBString` je volána k přenosu dat do seznamu ovládacího prvku pole, první položky v ovládacím prvku, jehož začátku odpovídá *hodnotu* zaškrtnuto. (Tak, aby odpovídaly celé položky, ne jenom předpony, použijte [DDX_LBStringExact](#ddx_lbstringexact).) Pokud neexistují žádné odpovídající položky, nejsou vybrané žádné položky. Porovnání se velká a malá písmena.
 
 Když `DDX_LBString` je volána k přenosu dat z ovládacího prvku seznamu pole *hodnotu* je nastavena na aktuální výběr v seznamu. Pokud není vybrána žádná položka *hodnotu* nastavený na řetězec o nulové délce.
 
@@ -423,7 +423,7 @@ Odkaz na proměnnou člena dialogové okno, zobrazení formuláře nebo objekt z
 
 ### <a name="remarks"></a>Poznámky
 
-Když `DDX_LBStringExact` je volána k přenosu dat do seznamu ovládacího prvku pole, první položky v ovládacím prvku, který odpovídá *hodnotu* zaškrtnuto. (Vyhledání pouze předponu místo celé položky [ddx_lbstring –](#ddx_lbstring).) Pokud neexistují žádné odpovídající položky, nejsou vybrané žádné položky. Porovnání se velká a malá písmena.
+Když `DDX_LBStringExact` je volána k přenosu dat do seznamu ovládacího prvku pole, první položky v ovládacím prvku, který odpovídá *hodnotu* zaškrtnuto. (Vyhledání pouze předponu místo celé položky [DDX_LBString](#ddx_lbstring) Pokud neexistují žádné odpovídající položky, nejsou vybrané žádné položky. Porovnání se velká a malá písmena.
 
 Když `DDX_CBStringExact` je volána k přenosu dat z ovládacího prvku seznamu pole *hodnotu* je nastavena na aktuální výběr v seznamu. Pokud není vybrána žádná položka *hodnotu* nastavený na řetězec o nulové délce.
 
@@ -455,7 +455,7 @@ void AFXAPI DDX_MonthCalCtrl(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [cdataexchange –](../../mfc/reference/cdataexchange-class.md) objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr. Není nutné odstranit tento objekt.
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr. Není nutné odstranit tento objekt.
 
 *nIDC*<br/>
 ID prostředku v ovládacím prvku měsíční kalendář přidružený k proměnné členů.
@@ -556,7 +556,7 @@ void AFXAPI DDX_Slider(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [cdataexchange –](../../mfc/reference/cdataexchange-class.md) objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
 
 *nIDC*<br/>
 ID prostředku v ovládacím prvku posuvník.
@@ -638,7 +638,7 @@ void AFXAPI DDX_Text(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [cdataexchange –](../../mfc/reference/cdataexchange-class.md) objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
 
 *nIDC*<br/>
 ID ovládacího prvku v dialogovém okně, formulářové zobrazení nebo objekt ovládacího prvku zobrazení pro úpravy.
