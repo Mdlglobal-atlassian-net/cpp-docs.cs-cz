@@ -8,9 +8,9 @@ Dokumentace pro Visual Basic a Visual C# jsou umístěné v samostatné úloži�
 
 ## <a name="contributing-to-the-documentation"></a>Přispívání do dokumentace
 
-Vítáme vaše příspěvky v Pomozte nám zlepšovat kvalitu dokumentace jazyka Visual C++. Komplexní pokyny k přispívání na web docs.microsoft.com, najdete v tématu [Přehled Průvodce pro přispěvatele Microsoftu Docs](https://docs.microsoft.com/contribute). Podrobnosti o tom, jak přispívat do dokumentace k Visual C++, najdete [využité](CONTRIBUTING.md) průvodce.
+Vítáme vaše příspěvky v Pomozte nám zlepšovat kvalitu dokumentace jazyka Visual C++. Komplexní pokyny k přispívání na web docs.microsoft.com, najdete v tématu [Přehled Průvodce pro přispěvatele Microsoftu Docs](https://docs.microsoft.com/contribute). Podrobnosti o tom, jak přispívat do dokumentace k Visual C++, najdete [využité průvodce](CONTRIBUTING.md).
 
-Některé oblasti funkcí jazyka Visual C++ mají jejich vlastních složek v tomto úložišti, jako například `standard-library` témata týkající se standardní knihovny C++ `ide` témata specifických pro C++ v sadě Visual Studio interaktivní vývojové prostředí (IDE) a tak dále. `/media` Podsložku v každé složky obsahuje soubory s obrázky pro témata. [Využité](CONTRIBUTING.md) příručka obsahuje další informace.
+Některé oblasti funkcí jazyka Visual C++ mají jejich vlastních složek v tomto úložišti, jako například `standard-library` témata týkající se standardní knihovny C++ `ide` témata specifických pro C++ v sadě Visual Studio interaktivní vývojové prostředí (IDE) a tak dále. `/media` Podsložku v každé složky obsahuje soubory s obrázky pro témata. [Využité průvodce](CONTRIBUTING.md) obsahuje další informace.
 
 ## <a name="microsoft-open-source-code-of-conduct"></a>Zdrojový kód Microsoft Open chování
 

@@ -1,6 +1,6 @@
 ---
 title: fread
-ms.date: 11/04/2016
+ms.date: 11/28/2018
 apiname:
 - fread
 apilocation:
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-ms.openlocfilehash: d3516dc67047064b9293b1bb289888596736ed47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4f9cb6940d1708dffd5d5ca03fac28397f1db846
+ms.sourcegitcommit: 53bfb772c43319d49686c167f492606348ad362b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468832"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819693"
 ---
 # <a name="fread"></a>fread
 
@@ -64,11 +64,13 @@ Ukazatel na **souboru** struktury.
 
 **fread –** vrátí počet celé položky ve skutečnosti čtení, které mohou být menší než *počet* Pokud dojde k chybě nebo pokud je nalezen konec souboru před dosažením *počet*. Použití **feof** nebo **ferror** funkce k rozlišení chybu čtení z podmínku ukončení souboru. Pokud *velikost* nebo *počet* je 0, **fread –** vrátí 0 a obsah vyrovnávací paměti jsou beze změny. Pokud *stream* nebo *vyrovnávací paměti* je ukazatel s hodnotou null, **fread –** vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, tato funkce nastaví **errno** k **EINVAL** a vrátí hodnotu 0.
 
-Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších chybových kódech.
+Zobrazit [ \_doserrno –, errno, \_sys\_errlist, a \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto chybových kódech.
 
 ## <a name="remarks"></a>Poznámky
 
-**Fread –** funkce přečte až *počet* položky *velikost* bajtů ze vstupu *stream* a ukládá je v *vyrovnávací paměti* . Ukazatel na soubor přidružený k *stream* (pokud existuje) je zvýšen počet skutečně přečtených bajtů. Pokud daný datový proud je otevřen v textovém režimu, páry znaků CR návratový znak odřádkování jsou nahrazeny znaky jeden znak odřádkování. Pokud chcete nahrazení nemá žádný vliv na ukazatel na soubor nebo návratovou hodnotu. Ukazatel na soubor pozice je neurčité, pokud dojde k chybě. Hodnota částečně čtení položky nelze určit.
+**Fread –** funkce přečte až *počet* položky *velikost* bajtů ze vstupu *stream* a ukládá je v *vyrovnávací paměti* . Ukazatel na soubor přidružený k *stream* (pokud existuje) je zvýšen počet skutečně přečtených bajtů. Pokud daný datový proud je otevřen v [textovém režimu](../../c-runtime-library/text-and-binary-mode-file-i-o.md), vložení znaků newline Windows-style se převedou na vložení znaků newline stylu systému Unix. To znamená páry znaků CR návratový znak odřádkování (CRLF) jsou nahrazeny jednoho konce řádku (LF) znaků. Pokud chcete nahrazení nemá žádný vliv na ukazatel na soubor nebo návratovou hodnotu. Ukazatel na soubor pozice je neurčité, pokud dojde k chybě. Hodnota částečně čtení položky nelze určit.
+
+Při použití režimu textového datového proudu, pokud požadované množství dat (to znamená *velikost* \* *počet*) je větší než nebo rovna hodnotě vnitřní **souboru** \*velikost vyrovnávací paměti (výchozí hodnota je 4096 bajtů, konfigurovat pomocí [setvbuf –](../../c-runtime-library/reference/setvbuf.md)), streamování dat je zkopírován přímo do uživatelem zadaného vyrovnávací paměti a nového řádku převod se provádí ve vyrovnávací paměti. Protože převedená data mohou být kratší než streamování dat zkopírována do mezipaměti, data posledních *vyrovnávací paměti*\[*return_ value* \* *velikost*] () kde *return_ value* je návratová hodnota z **fread –**) mohou obsahovat nepřevedeném data ze souboru. Z tohoto důvodu doporučujeme vám – s ukončením null znaková data na *vyrovnávací paměti*\[*return_ value* \* *velikost*] Pokud je cílem vyrovnávací paměti aby se choval jako řetězec stylu C. Zobrazit [fopen](fopen-wfopen.md) podrobnosti o důsledcích režimu textového a binárního režimu.
 
 Tato funkce zamezí jiných vláken. Pokud potřebujete nezamykací verzi, použijte **_fread_nolock –**.
 
@@ -133,5 +135,7 @@ Contents of buffer = zyxwvutsrqponmlkjihgfedcb
 ## <a name="see-also"></a>Viz také:
 
 [Stream vstupně-výstupních operací](../../c-runtime-library/stream-i-o.md)<br/>
+[Textové a binární soubor vstupně-výstupních operací](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br />
+[fopen –](fopen-wfopen.md)<br />
 [fwrite](fwrite.md)<br/>
 [_read](read.md)<br/>
