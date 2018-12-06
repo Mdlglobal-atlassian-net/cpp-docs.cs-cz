@@ -22,12 +22,12 @@ helpviewer_keywords:
 - aligned_offset_realloc_dbg function
 - _aligned_offset_realloc_dbg function
 ms.assetid: 64e30a12-887e-453b-aea8-aed793fca9d8
-ms.openlocfilehash: e5ffb37227e1e20f32e065290056da05e7dcd065
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7684a752f489eb726b2105b1055b6da1e86e9cd1
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625859"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977820"
 ---
 # <a name="alignedoffsetreallocdbg"></a>_aligned_offset_realloc_dbg
 
@@ -72,7 +72,7 @@ Ukazatel na název zdrojového souboru, který vyžadují **aligned_offset_reall
 
 ## <a name="remarks"></a>Poznámky
 
-**_aligned_offset_realloc_dbg –** je ladicí verzi [_aligned_offset_realloc –](aligned-offset-realloc.md) funkce. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, každé volání **_aligned_offset_realloc_dbg –** je omezená na volání **_aligned_offset_realloc –**. Obě **_aligned_offset_realloc –** a **_aligned_offset_realloc_dbg –** přidělení bloku paměti v haldě základní, ale **_aligned_offset_realloc_dbg –** obsáhne Některé funkce pro ladění: vyrovnávací paměť po obou stranách část uživatele bloku pro testování nevracení, parametr typu blok pro sledování konkrétní přidělení typů a *filename*/*číslo řádku*  informací pro určení původu požadavků na přidělení.
+**_aligned_offset_realloc_dbg –** je ladicí verzi [_aligned_offset_realloc –](aligned-offset-realloc.md) funkce. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, každé volání **_aligned_offset_realloc_dbg –** je omezená na volání **_aligned_offset_realloc –**. Obě **_aligned_offset_realloc –** a **_aligned_offset_realloc_dbg –** přidělení bloku paměti v haldě základní, ale **_aligned_offset_realloc_dbg –** obsáhne Některé funkce pro ladění: vyrovnávací paměť po obou stranách část blok, který má test pro přetečení s uživatelským a *filename*/*linenumber* informací pro určení původu požadavky na přidělení. Sledování přidělování konkrétní typy s parametrem typu blok není podporovaný ladicí funkce pro zarovnané přidělení. Zobrazí se zarovnané přidělení jako _normal_block – blok typu.
 
 Stejně jako [_aligned_offset_malloc –](aligned-offset-malloc.md), **_aligned_offset_realloc_dbg –** umožňuje struktura zarovnaný na posunu v rámci struktury.
 

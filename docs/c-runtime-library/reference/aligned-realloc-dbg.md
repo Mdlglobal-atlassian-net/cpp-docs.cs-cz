@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _aligned_realloc_dbg function
 - aligned_realloc_dbg function
 ms.assetid: 8aede920-991e-44cd-867f-83dc2165db47
-ms.openlocfilehash: 2a261b3e578bef5464bbfda8528ffd8b491acb23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 136edf6b5c95149302920af0c8a8dc9c07458e3b
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545948"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977768"
 ---
 # <a name="alignedreallocdbg"></a>_aligned_realloc_dbg
 
@@ -70,7 +70,7 @@ Jedná se o chybu znovu přidělit paměti a změnit zarovnání do bloku.
 
 ## <a name="remarks"></a>Poznámky
 
-**_aligned_realloc_dbg –** je ladicí verzi [_aligned_realloc –](aligned-realloc.md) funkce. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, každé volání **_aligned_realloc_dbg –** je omezená na volání **_aligned_realloc –**. Obě **_aligned_realloc –** a **_aligned_realloc_dbg –** přidělení bloku paměti v haldě základní, ale **_aligned_realloc_dbg –** obsáhne některé funkce pro ladění : vyrovnávací paměť po obou stranách část uživatele bloku pro testování nevracení, parametr typu blok pro sledování konkrétní přidělení typů a *filename*/*linenumber* informace k určení původu požadavků na přidělení.
+**_aligned_realloc_dbg –** je ladicí verzi [_aligned_realloc –](aligned-realloc.md) funkce. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, každé volání **_aligned_realloc_dbg –** je omezená na volání **_aligned_realloc –**. Obě **_aligned_realloc –** a **_aligned_realloc_dbg –** přidělení bloku paměti v haldě základní, ale **_aligned_realloc_dbg –** obsáhne některé funkce pro ladění : vyrovnávací paměť po obou stranách část blok, který má test pro přetečení s uživatelským a *filename*/*linenumber* informací pro určení původu požadavků na přidělení. Sledování přidělování konkrétní typy s parametrem typu blok není podporovaný ladicí funkce pro zarovnané přidělení. Zobrazí se zarovnané přidělení jako _normal_block – blok typu.
 
 **_aligned_realloc_dbg –** znovu alokuje blok zadaná paměťová s mírně více místa požadovaného *newSize*. *newSize* může být větší nebo menší než velikost bloku původně přidělené paměti. Další místo používá správce hald ladění k propojení paměť bloků ladicího a k poskytování aplikací s informace hlavičky ladění a přepsat vyrovnávací paměti. Přerozdělení může způsobit přechod původního paměťového bloku na jiné místo v haldě, jakož i změníte velikost bloku paměti. Pokud se přesune blok paměti obsah původního bloku jsou přepsány.
 

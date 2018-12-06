@@ -22,12 +22,12 @@ helpviewer_keywords:
 - aligned_recalloc_dbg function
 - _aligned_recalloc_dbg function
 ms.assetid: 55c3c27e-561c-4d6b-9bf9-1e34cc556e4b
-ms.openlocfilehash: 85af821aaa873b6e71341823d47085996f697235
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0f0cacc5efa5e63cbe05b481f922b35742e3924
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664695"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977781"
 ---
 # <a name="alignedrecallocdbg"></a>_aligned_recalloc_dbg
 
@@ -74,7 +74,7 @@ Jedná se o chybu znovu přidělit paměti a změnit zarovnání do bloku.
 
 ## <a name="remarks"></a>Poznámky
 
-**_aligned_recalloc_dbg –** je ladicí verzi [_aligned_recalloc –](aligned-recalloc.md) funkce. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, každé volání **_aligned_recalloc_dbg –** je omezená na volání **_aligned_recalloc –**. Obě **_aligned_recalloc –** a **_aligned_recalloc_dbg –** přidělení bloku paměti v haldě základní, ale **_aligned_recalloc_dbg –** obsáhne několik ladění funkce: vyrovnávací paměť po obou stranách část uživatele bloku pro testování nevracení, parametr typu blok pro sledování konkrétní přidělení typů a *filename*/*linenumber* informace k určení původu požadavků na přidělení.
+**_aligned_recalloc_dbg –** je ladicí verzi [_aligned_recalloc –](aligned-recalloc.md) funkce. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, každé volání **_aligned_recalloc_dbg –** je omezená na volání **_aligned_recalloc –**. Obě **_aligned_recalloc –** a **_aligned_recalloc_dbg –** přidělení bloku paměti v haldě základní, ale **_aligned_recalloc_dbg –** obsáhne několik ladění funkce: vyrovnávací paměť po obou stranách část blok, který má test pro přetečení s uživatelským a *filename*/*linenumber* informací pro určení původu přidělení požadavky. Sledování přidělování konkrétní typy s parametrem typu blok není podporovaný ladicí funkce pro zarovnané přidělení. Zobrazí se zarovnané přidělení jako _normal_block – blok typu.
 
 **_aligned_recalloc_dbg –** znovu alokuje blok paměti zadaná s trochu více místa, než požadovaná velikost (*číslo* * *velikost*) který může být větší nebo menší než velikost bloku původně přidělené paměti. Další místo používá správce hald ladění k propojení paměť bloků ladicího a k poskytování aplikací s informace hlavičky ladění a přepsat vyrovnávací paměti. Přerozdělení může způsobit přechod původního paměťového bloku na jiné místo v haldě, jakož i změníte velikost bloku paměti. Část uživatele bloku je vyplněny hodnotou 0xCD a přepsat vyrovnávací paměti jsou vyplněny 0xFD.
 

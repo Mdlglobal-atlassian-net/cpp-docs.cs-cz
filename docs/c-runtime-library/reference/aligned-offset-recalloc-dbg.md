@@ -22,12 +22,12 @@ helpviewer_keywords:
 - aligned_offset_recalloc_dbg function
 - _aligned_offset_recalloc_dbg function
 ms.assetid: 7ab719c3-77e0-4d2e-934f-01529d062fbf
-ms.openlocfilehash: 0b314b4aca080877b4e41723a8d2010fd8e835ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 671635e6cdc0f3f9bcd140de40500ed49beb4a8f
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627965"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977794"
 ---
 # <a name="alignedoffsetrecallocdbg"></a>_aligned_offset_recalloc_dbg
 
@@ -76,7 +76,7 @@ Ukazatel na název zdrojového souboru, který požadovanou operaci realloc nebo
 
 ## <a name="remarks"></a>Poznámky
 
-**_aligned_offset_realloc_dbg –** je ladicí verzi [_aligned_offset_recalloc –](aligned-offset-recalloc.md) funkce. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, každé volání **_aligned_offset_recalloc_dbg –** je omezená na volání **_aligned_offset_recalloc –**. Obě **_aligned_offset_recalloc –** a **_aligned_offset_recalloc_dbg –** přidělení bloku paměti v haldě základní, ale **_aligned_offset_recalloc_dbg –** obsáhne Některé funkce pro ladění: vyrovnávací paměť po obou stranách část uživatele bloku pro testování nevracení, parametr typu blok pro sledování konkrétní přidělení typů a *filename*/*číslo řádku*  informací pro určení původu požadavků na přidělení.
+**_aligned_offset_realloc_dbg –** je ladicí verzi [_aligned_offset_recalloc –](aligned-offset-recalloc.md) funkce. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, každé volání **_aligned_offset_recalloc_dbg –** je omezená na volání **_aligned_offset_recalloc –**. Obě **_aligned_offset_recalloc –** a **_aligned_offset_recalloc_dbg –** přidělení bloku paměti v haldě základní, ale **_aligned_offset_recalloc_dbg –** obsáhne Některé funkce pro ladění: vyrovnávací paměť po obou stranách část blok, který má test pro přetečení s uživatelským a *filename*/*linenumber* informací pro určení původu požadavky na přidělení. Sledování přidělování konkrétní typy s parametrem typu blok není podporovaný ladicí funkce pro zarovnané přidělení. Zobrazí se zarovnané přidělení jako _normal_block – blok typu.
 
 **_aligned_offset_realloc_dbg –** znovu alokuje blok zadaná paměťová s mírně více místa požadovaného *newSize*. *newSize* může být větší nebo menší než velikost bloku původně přidělené paměti. Další místo používá správce hald ladění k propojení paměť bloků ladicího a k poskytování aplikací s informace hlavičky ladění a přepsat vyrovnávací paměti. Přerozdělení může způsobit přechod původního paměťového bloku na jiné místo v haldě, jakož i změníte velikost bloku paměti. Pokud se přesune blok paměti obsah původního bloku jsou přepsány.
 

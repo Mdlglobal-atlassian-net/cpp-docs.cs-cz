@@ -22,12 +22,12 @@ helpviewer_keywords:
 - aligned_malloc_dbg function
 - _aligned_malloc_dbg function
 ms.assetid: fb0429c3-685d-4826-9075-2515c5bdc5c6
-ms.openlocfilehash: 4fc6789e5fecda38678052c7e805728a49219bc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb58313c892ffe13e9f8e34e98b7940022899d14
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631866"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977807"
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -64,7 +64,7 @@ Ukazatele na blok paměti, která byla přidělena nebo hodnota NULL, pokud oper
 
 ## <a name="remarks"></a>Poznámky
 
-**_aligned_malloc_dbg –** je ladicí verzi [_aligned_malloc](aligned-malloc.md) funkce. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, každé volání **_aligned_malloc_dbg –** je omezená na volání `_aligned_malloc`. Obě `_aligned_malloc` a **_aligned_malloc_dbg –** přidělení bloku paměti v haldě základní, ale **_aligned_malloc_dbg –** nabízí některé funkce pro ladění: vyrovnávací paměť po obou stranách část s uživatelským blok pro testování nevracení, a *filename*/*linenumber* informací pro určení původu požadavků na přidělení.
+**_aligned_malloc_dbg –** je ladicí verzi [_aligned_malloc](aligned-malloc.md) funkce. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, každé volání **_aligned_malloc_dbg –** je omezená na volání `_aligned_malloc`. Obě `_aligned_malloc` a **_aligned_malloc_dbg –** přidělení bloku paměti v haldě základní, ale **_aligned_malloc_dbg –** nabízí některé funkce pro ladění: vyrovnávací paměť po obou stranách část s uživatelským blok pro testování nevracení, a *filename*/*linenumber* informací pro určení původu požadavků na přidělení. Sledování přidělování konkrétní typy s parametrem typu blok není podporovaný ladicí funkce pro zarovnané přidělení. Zobrazí se zarovnané přidělení jako _normal_block – blok typu.
 
 **_aligned_malloc_dbg –** přiděluje blok paměti se trochu více místa požadovaného *velikost*. Další místo používá správce hald ladění k propojení paměť bloků ladicího a k poskytování aplikací s informace hlavičky ladění a přepsat vyrovnávací paměti. Při přidělení bloku část uživatele bloku je vyplněny hodnotou 0xCD a každý z vyrovnávací paměti přepsání jsou vyplněny 0xFD.
 

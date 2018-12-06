@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _aligned_offset_malloc_dbg function
 - aligned_offset_malloc_dbg function
 ms.assetid: 6c242307-c59e-4d63-aae5-d8cbec8e021c
-ms.openlocfilehash: 481109a5ed7d137aa2d10c77955a2f460cba43c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96fe9e7fda0d0cdfdbfa5462e4f601e3649e2233
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507533"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977716"
 ---
 # <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
 
@@ -68,7 +68,7 @@ Ukazatele na blok paměti, která byla přidělena nebo **NULL** Pokud se operac
 
 ## <a name="remarks"></a>Poznámky
 
-**_aligned_offset_malloc_dbg –** je ladicí verzi [_aligned_offset_malloc –](aligned-offset-malloc.md) funkce. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, každé volání **_aligned_offset_malloc_dbg –** je omezená na volání **_aligned_offset_malloc –**. Obě **_aligned_offset_malloc –** a **_aligned_offset_malloc_dbg –** přidělení bloku paměti v haldě základní, ale **_aligned_offset_malloc_dbg –** nabízí několik funkce ladění: vyrovnávací paměť po obou stranách část uživatele bloku pro testování nevracení, parametr typu blok pro sledování konkrétní přidělení typů a *filename*/*linenumber* informací pro určení původu požadavků na přidělení.
+**_aligned_offset_malloc_dbg –** je ladicí verzi [_aligned_offset_malloc –](aligned-offset-malloc.md) funkce. Když [_DEBUG](../../c-runtime-library/debug.md) není definován, každé volání **_aligned_offset_malloc_dbg –** je omezená na volání **_aligned_offset_malloc –**. Obě **_aligned_offset_malloc –** a **_aligned_offset_malloc_dbg –** přidělení bloku paměti v haldě základní, ale **_aligned_offset_malloc_dbg –** nabízí několik funkce ladění: vyrovnávací paměť po obou stranách část blok, který má test pro přetečení s uživatelským a *filename*/*linenumber* informací pro určení původu požadavky na přidělení. Sledování přidělování konkrétní typy s parametrem typu blok není podporovaný ladicí funkce pro zarovnané přidělení. Zobrazí se zarovnané přidělení jako _normal_block – blok typu.
 
 **_aligned_offset_malloc_dbg –** přiděluje blok paměti se trochu více místa požadovaného *velikost*. Další místo používá správce hald ladění k propojení paměť bloků ladicího a k poskytování aplikací s informace hlavičky ladění a přepsat vyrovnávací paměti. Při přidělení bloku část uživatele bloku je vyplněny hodnotou 0xCD a každý z vyrovnávací paměti přepsání jsou vyplněny 0xFD.
 
