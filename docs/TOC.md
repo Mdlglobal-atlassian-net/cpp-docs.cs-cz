@@ -1,6 +1,6 @@
 # [Visual C++ v sadě Visual Studio 2017](visual-cpp-in-visual-studio.md)
 # [Novinky v jazyce Visual C++ v sadě Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md)
-# [Kurz jazyka Visual C++](build/vscpp-step-0-installation.md)
+# Kurz jazyka Visual C++
 ## [Instalace podpory jazyka C++ v sadě Visual Studio](build/vscpp-step-0-installation.md)
 ## [Vytvoření projektu aplikace konzoly C++](build/vscpp-step-1-create.md)
 ## [Sestavení a spuštění projektu aplikace konzoly C++](build/vscpp-step-2-build.md)
