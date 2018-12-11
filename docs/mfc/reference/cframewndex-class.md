@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: 9489e1a36eac89ccff510c3c0fae467c2bb2deab
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: a0e6861ecf3a6704ddb31c39f7bb2c44cb75ccd8
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694618"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179003"
 ---
 # <a name="cframewndex-class"></a>Cframewndex – třída
 
@@ -1062,7 +1062,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpCreateStruct*<br/>
-[in] Ukazatel [createstruct – struktura](../../mfc/reference/createstruct-structure.md) pro nový rámec.
+[in] Ukazatel [createstruct – struktura](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) pro nový rámec.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1704,7 +1704,7 @@ afx_msg void OnSizing(
 [in] Okraji rámečku, která je přesunuta. Zobrazit parametr *wParam* v [WM_SIZING oznámení](/windows/desktop/winmsg/wm-sizing).
 
 *pRect*<br/>
-[out v] Ukazatel [crect –](../../atl-mfc-shared/reference/crect-class.md) nebo [RECT](../../mfc/reference/rect-structure1.md) strukturu, která obsahuje souřadnice rámce.
+[out v] Ukazatel [crect –](../../atl-mfc-shared/reference/crect-class.md) nebo [RECT](/windows/desktop/api/windef/ns-windef-tagrect) strukturu, která obsahuje souřadnice rámce.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1874,7 +1874,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS FAR* lpwndpos);
 ### <a name="parameters"></a>Parametry
 
 *lpwndpos*<br/>
-[in] Ukazatel [windowpos –](../../mfc/reference/windowpos-structure1.md) strukturu, která obsahuje novou velikost a umístění.
+[in] Ukazatel [windowpos –](/windows/desktop/api/winuser/ns-winuser-tagwindowpos) strukturu, která obsahuje novou velikost a umístění.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1934,7 +1934,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Parametry
 
 *pMsg*<br/>
-[in] Ukazatel [MSG](../../mfc/reference/msg-structure1.md) struktura, která obsahuje zprávu zpracovat.
+[in] Ukazatel [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) struktura, která obsahuje zprávu zpracovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 

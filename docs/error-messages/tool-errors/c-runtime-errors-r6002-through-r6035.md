@@ -4,18 +4,18 @@ ms.date: 11/17/2017
 f1_keywords:
 - c.errors
 ms.assetid: 78019050-9a30-4b61-8250-a5702e0e2393
-ms.openlocfilehash: 06d1885d01b5b3808a150e54ac68257b747c9764
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74494a92d9ac8d84da64af7a896f3c32913afc40
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530930"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178253"
 ---
 # <a name="c-runtime-errors-r6002-through-r6035"></a>C Runtime chyby R6002 až R6035
 
 Tato část se odkaz na chyby, které mohou být generovány pomocí knihovny C Runtime (CRT), když je načíst nebo spuštěné aplikace. I v případě, že zprávy se odkazuje na modul runtime Microsoft Visual C++, tyto chyby označuje chybu v kódu vaší aplikace nebo podmínku, která nemůže zpracovat knihovny runtime, jako je nedostatek paměti. Koncovým uživatelům vaší aplikace může zobrazit tyto chyby Pokud není kód vaší aplikaci, aby zabránila podmínky, které způsobit nebo psaní kódu a zaznamenat tyto chyby uživatelům k dispozici přátelskou zprávou.
 
-Můžete zjistit další pomoc pro chyby a upozornění na veřejných fórech od Microsoftu. Můžete vyhledat chyby nebo číslo upozornění na [komunity vývojářů](https://developercommunity.visualstudio.com) lokality. [Visual C++ General](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vcgeneral) je fórum pro otázky týkající se jazyka Visual C++, které nejsou popsány na jiných fórech. Můžete také vyhledat chyby a upozornění a Ptejte se na [Stack Overflow](http://stackoverflow.com/) najít řešení.
+Můžete zjistit další pomoc pro chyby a upozornění na veřejných fórech od Microsoftu. Můžete vyhledat chyby nebo číslo upozornění na [komunity vývojářů](https://developercommunity.visualstudio.com) lokality. [Visual C++ General](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vcgeneral) je fórum pro otázky týkající se jazyka Visual C++, které nejsou popsány na jiných fórech. Můžete také vyhledat chyby a upozornění a Ptejte se na [Stack Overflow](http://stackoverflow.com/) najít řešení.
 
 Odkazy na další pomoc a zdroje poskytované komunitou, naleznete v části [Nápověda pro Visual C++ a komunity](../../visual-cpp-help-and-community.md).
 

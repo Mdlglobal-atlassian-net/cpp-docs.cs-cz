@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: 4faa067f95f43939d6dbd05837f961b3baa7f17f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 938df6599ca3bfec3e08e77d7a60106133f54324
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593242"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178535"
 ---
 # <a name="ctoolbar-class"></a>Ctoolbar – třída
 
@@ -141,7 +141,7 @@ Vytvořit tlačítko, zaškrtávací políčko, přiřaďte ji styl TBBS_CHECKBO
 
 Chcete-li vytvořit přepínací tlačítko, zavolejte [ccmdui –](../../mfc/reference/ccmdui-class.md) objektu [setradio –](../../mfc/reference/ccmdui-class.md#setradio) členskou funkci ze obslužnou rutinu ON_UPDATE_COMMAND_UI. Předejte `SetRadio` argument 0 není zaškrtnuto nebo nenulovou hodnotu pro zaškrtnutí. Aby bylo možné poskytovat chování vzájemně se vylučující skupiny přepínačů, musí mít ON_UPDATE_COMMAND_UI obslužné rutiny pro všechna tlačítka ve skupině.
 
-Další informace o používání `CToolBar`, najdete v článku [implementace panelu nástrojů v prostředí MFC](../../mfc/mfc-toolbar-implementation.md) a [Technická poznámka 31: ovládací pruhy](../../mfc/tn031-control-bars.md).
+Další informace o používání `CToolBar`, najdete v článku [implementace panelu nástrojů v prostředí MFC](../../mfc/mfc-toolbar-implementation.md) a [Technická poznámka 31: Ovládací pruhy](../../mfc/tn031-control-bars.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -406,7 +406,7 @@ virtual void GetItemRect(
 Index položky (tlačítko nebo oddělovač), jehož souřadnice obdélník se mají načíst.
 
 *lprect –*<br/>
-Adresa [RECT](../../mfc/reference/rect-structure1.md) struktura, která bude obsahovat souřadnice položky.
+Adresa [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktura, která bude obsahovat souřadnice položky.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -565,7 +565,7 @@ Nový index obrázku tlačítka v rámci rastrového obrázku.
 Pro oddělovače, které mají styl TBBS_SEPARATOR, tato funkce nastaví oddělovač šířku v pixelech na hodnotu uloženou v *iImage*.
 
 > [!NOTE]
->  Můžete také nastavit pomocí stavy tlačítka *nStyle* parametr, nicméně protože stavy tlačítka se řídí [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) obslužnou rutinu, státy, které jste nastavili pomocí `SetButtonInfo` ztratí během na další zpracování při nečinnosti. Zobrazit [aktualizace objektů uživatelského rozhraní](../../mfc/how-to-update-user-interface-objects.md) a [TN031: ovládací pruhy](../../mfc/tn031-control-bars.md) Další informace.
+>  Můžete také nastavit pomocí stavy tlačítka *nStyle* parametr, nicméně protože stavy tlačítka se řídí [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) obslužnou rutinu, státy, které jste nastavili pomocí `SetButtonInfo` ztratí během na další zpracování při nečinnosti. Zobrazit [aktualizace objektů uživatelského rozhraní](../../mfc/how-to-update-user-interface-objects.md) a [TN031: Ovládací pruhy](../../mfc/tn031-control-bars.md) Další informace.
 
 Informace o rastrové obrázky a tlačítka, najdete v článku [ctoolbar –](../../mfc/reference/ctoolbar-class.md) přehled a [CToolBar::LoadBitmap](#loadbitmap).
 
@@ -640,7 +640,7 @@ Styl tohoto tlačítka Určuje, jak je zobrazeno tlačítko a jak reagovat na vs
 Před voláním `SetButtonStyle`, zavolejte [GetButtonStyle](#getbuttonstyle) členské funkce lze získat styl tlačítka nebo oddělovač.
 
 > [!NOTE]
->  Můžete také nastavit pomocí stavy tlačítka *nStyle* parametr, nicméně protože stavy tlačítka se řídí [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) obslužnou rutinu, státy, které jste nastavili pomocí `SetButtonStyle` ztratí během na další zpracování při nečinnosti. Zobrazit [aktualizace objektů uživatelského rozhraní](../../mfc/how-to-update-user-interface-objects.md) a [TN031: ovládací pruhy](../../mfc/tn031-control-bars.md) Další informace.
+>  Můžete také nastavit pomocí stavy tlačítka *nStyle* parametr, nicméně protože stavy tlačítka se řídí [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) obslužnou rutinu, státy, které jste nastavili pomocí `SetButtonStyle` ztratí během na další zpracování při nečinnosti. Zobrazit [aktualizace objektů uživatelského rozhraní](../../mfc/how-to-update-user-interface-objects.md) a [TN031: Ovládací pruhy](../../mfc/tn031-control-bars.md) Další informace.
 
 ##  <a name="setbuttontext"></a>  CToolBar::SetButtonText
 

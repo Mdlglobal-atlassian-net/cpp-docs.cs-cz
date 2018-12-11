@@ -6,12 +6,12 @@ ms.technology:
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 3b01c58349aa1dff1c782b051156250fd495df91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5aee74c9fee1480d2bb61c36abba97edc5c5d4cf
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460005"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178093"
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ – nápověda a komunita
 
@@ -45,4 +45,4 @@ Mnoho částí dokumentace jsou také k dispozici ve formátu PDF. Tato sekce ma
 |[Blog týmu Visual C++](https://blogs.msdn.microsoft.com/vcblog/)|Obsahuje příspěvky na různá témata od specialistů na produktového týmu Visual C++.|
 |[Channel 9](https://channel9.msdn.com/)|Obsahuje videorozhovory a přednášek. K vyhledání obsahu C++, použijte vyhledávací pole na domovské stránce webu Channel 9.|
 |[Visual Studio](https://visualstudio.microsoft.com/)|Obsahuje články a novinky o službě Visual Studio a související vývojářské nástroje.|
-|[Fóra na webu MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=visualc) a [komunity vývojářů](https://developercommunity.visualstudio.com)|Oficiální web fór společnosti Microsoft ve kterém můžete posílat otázky o jazyce C++ a získejte odpovědi od Microsoftu a od odborníků v komunitě.|
+|[Fóra na webu MSDN](https://social.msdn.microsoft.com/Forums/home?category=visualc) a [komunity vývojářů](https://developercommunity.visualstudio.com)|Oficiální web fór společnosti Microsoft ve kterém můžete posílat otázky o jazyce C++ a získejte odpovědi od Microsoftu a od odborníků v komunitě.|

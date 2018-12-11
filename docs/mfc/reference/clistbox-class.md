@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 38463d5e7daf86c40cdef429cd80b18598e19025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad9f945a91a96c40afe614240a847a028ba5b5d9
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656089"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178613"
 ---
 # <a name="clistbox-class"></a>Clistbox – třída
 
@@ -339,7 +339,7 @@ Dlouhým ukazatelem na `COMPAREITEMSTRUCT` struktury.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Označuje relativní polohu dvě položky podle [compareitemstruct –](../../mfc/reference/compareitemstruct-structure.md) struktury. To může být libovolná z následujících hodnot:
+Označuje relativní polohu dvě položky podle [compareitemstruct –](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct) struktury. To může být libovolná z následujících hodnot:
 
 |Hodnota|Význam|
 |-----------|-------------|
@@ -426,7 +426,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpDeleteItemStruct*<br/>
-Dlouhým ukazatelem na Windows [deleteitemstruct –](../../mfc/reference/deleteitemstruct-structure.md) strukturu, která obsahuje informace o odstraněné položky.
+Dlouhým ukazatelem na Windows [deleteitemstruct –](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct) strukturu, která obsahuje informace o odstraněné položky.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -511,7 +511,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpDrawItemStruct*<br/>
-Dlouhým ukazatelem na [drawitemstruct –](../../mfc/reference/drawitemstruct-structure.md) strukturu, která obsahuje informace o typu kreslení vyžaduje.
+Dlouhým ukazatelem na [drawitemstruct –](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) strukturu, která obsahuje informace o typu kreslení vyžaduje.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -770,7 +770,7 @@ int GetItemRect(
 Určuje index založený na nule položky.
 
 *lprect –*<br/>
-Určuje dlouhým ukazatelem na [Rect – struktura](../../mfc/reference/rect-structure1.md) , který přijímá pole se seznamem klienta souřadnice položky.
+Určuje dlouhým ukazatelem na [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) , který přijímá pole se seznamem klienta souřadnice položky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -991,7 +991,7 @@ Voláním této funkce před přidáním velký počet položek, které chcete `
 
 Tato funkce pomáhá zrychlit inicializace pole se seznamem, které mají velký počet položek (více než 100). Preallocates zadaného množství paměti, takže to následné [addstring –](#addstring), [InsertString](#insertstring), a [Dir](#dir) funkce přijímají nejkratší možné době. Odhad můžete použít pro parametry. Pokud jste overestimate, je přidělen některé další paměť. Pokud jste příliš nízko, normální rozdělení se používá pro položky, které překračují předběžně přidělená velikost.
 
-Windows 95/98 pouze: *nItems* je omezená na 16bitové hodnoty parametru. To znamená, že pole se seznamem nemůže obsahovat více než 32 767 položky. I když je počet položek, které s omezeným přístupem, celková velikost položky v seznamu je omezen pouze dostupnou paměť.
+Windows 95/98 pouze: *NItems* je omezená na 16bitové hodnoty parametru. To znamená, že pole se seznamem nemůže obsahovat více než 32 767 položky. I když je počet položek, které s omezeným přístupem, celková velikost položky v seznamu je omezen pouze dostupnou paměť.
 
 ### <a name="example"></a>Příklad
 
@@ -1068,7 +1068,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpMeasureItemStruct*<br/>
-Dlouhým ukazatelem na [measureitemstruct –](../../mfc/reference/measureitemstruct-structure.md) struktury.
+Dlouhým ukazatelem na [measureitemstruct –](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct) struktury.
 
 ### <a name="remarks"></a>Poznámky
 

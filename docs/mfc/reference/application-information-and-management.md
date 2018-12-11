@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 9d5216cd399943cda67bc9387ea37c938e5cab48
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: c1e742d3320dae4140cc4886c47d34dbe9b6071f
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694332"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178340"
 ---
 # <a name="application-information-and-management"></a>Informace o aplikacích a správa aplikací
 
@@ -114,7 +114,7 @@ První formulář `AfxBeginThread` vytvoří pracovní vlákno. Druhý formulá�
 
 Multithreading musí být povolen v aplikaci; v opačném případě tato funkce se nezdaří. Další informace o povolení multithreadingu naleznete [/ / MD, / MT, /LD (použití knihovny Run-Time)](../../build/reference/md-mt-ld-use-run-time-library.md) pod *Visual C++ – možnosti kompilátoru*.
 
-Další informace o `AfxBeginThread`, najdete v článcích [Multithreading: vytváření pracovních vláken](../../parallel/multithreading-creating-worker-threads.md) a [Multithreading: vytváření vláken uživatelského rozhraní](../../parallel/multithreading-creating-user-interface-threads.md).
+Další informace o `AfxBeginThread`, najdete v článcích [Multithreading: Vytváření pracovních vláken](../../parallel/multithreading-creating-worker-threads.md) a [Multithreading: Vytváření vláken uživatelského rozhraní](../../parallel/multithreading-creating-user-interface-threads.md).
 
 ### <a name="example"></a>Příklad
 
@@ -164,7 +164,7 @@ Odstraní objekt vlákna z paměti.
 
 Musí být volána z v rámci vlákno ukončeno.
 
-Další informace o `AfxEndThread`, najdete v článku [Multithreading: ukončení vláken](../../parallel/multithreading-terminating-threads.md).
+Další informace o `AfxEndThread`, najdete v článku [Multithreading: Ukončení vláken](../../parallel/multithreading-terminating-threads.md).
 
 ### <a name="requirements"></a>Požadavky
 
@@ -567,9 +567,9 @@ Pokud nezadáte cestu a příponu názvu souboru je vynechán, je výchozí př�
 
 - Aktuální adresář.
 
-- **Windows 95/98:** systémový adresář Windows. **Windows NT:** systémový adresář Windows 32-bit. Název tohoto adresáře je SYSTEM32.
+- **Windows 95/98:** Systémový adresář Windows. **Windows NT:** Systémový adresář Windows 32-bit. Název tohoto adresáře je SYSTEM32.
 
-- **Pouze Windows NT:** systémový adresář Windows 16 bitů. Neexistuje žádná funkce Win32, který získá cestu tohoto adresáře, ale je prohledána. Název tohoto adresáře je systém.
+- **Pouze Windows NT:** Systémový adresář Windows 16 bitů. Neexistuje žádná funkce Win32, který získá cestu tohoto adresáře, ale je prohledána. Název tohoto adresáře je systém.
 
 - Adresář Windows.
 
@@ -715,7 +715,7 @@ Název zaregistrovat pro třídu podle `AfxRegisterWndClass` závisí výhradně
 
 Při volání `AfxRegisterWndClass` pro více třídy odvozené z CWnd s shodné parametry místo zobrazování samostatném okně třídy pro každou třídu, každá třída sdílí stejnou třídu okna. Pokud se používá třída stylu CS_CLASSDC to může způsobovat problémy. Místo více tříd oken CS_CLASSDC skončíte se jednu třídu okna CS_CLASSDC a všechny systémy windows C++, které používají tuto sdílenou složku třídy stejné řadič domény. Chcete-li tomuto problému vyhnout, zavolejte [afxregisterclass –](#afxregisterclass) registrovat třídu.
 
-Odkazovat na technická Poznámka [TN001: registrace tříd oken](../../mfc/tn001-window-class-registration.md) Další informace o registrace tříd oken a `AfxRegisterWndClass` funkce.
+Odkazovat na technická Poznámka [TN001: Registrace tříd oken](../../mfc/tn001-window-class-registration.md) Další informace o registrace tříd oken a `AfxRegisterWndClass` funkce.
 
 ### <a name="example"></a>Příklad
 
@@ -802,7 +802,7 @@ BOOL AfxSocketInit(WSADATA* lpwsaData = NULL);
 ### <a name="parameters"></a>Parametry
 
 *lpwsaData*<br/>
-Ukazatel [wsadata –](../../mfc/reference/wsadata-structure.md) struktury. Pokud *lpwsaData* není shodný s hodnotou NULL, pak adresu `WSADATA` struktura je vyplněna voláním `WSAStartup`. Tato funkce také zajišťuje, že `WSACleanup` je volána pro vás předtím, než se aplikace ukončí.
+Ukazatel [wsadata –](/windows/desktop/api/winsock2/ns-winsock2-wsadata) struktury. Pokud *lpwsaData* není shodný s hodnotou NULL, pak adresu `WSADATA` struktura je vyplněna voláním `WSAStartup`. Tato funkce také zajišťuje, že `WSACleanup` je volána pro vás předtím, než se aplikace ukončí.
 
 ### <a name="return-value"></a>Návratová hodnota
 

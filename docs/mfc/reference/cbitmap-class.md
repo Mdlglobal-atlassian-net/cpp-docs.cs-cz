@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 295f61ed120e957bc0d5ec1746e7d3bdfbb6d001
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6722011bf343a391fcc7180558eead5c039afc59
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624598"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178171"
 ---
 # <a name="cbitmap-class"></a>Cbitmap – třída
 
@@ -155,7 +155,7 @@ I když pro zobrazovací zařízení nelze přímo vybrat rastrový obrázek, ji
 
 Po dokončení se `CBitmap` objekt vytvořený pomocí `CreateBitmap` funkci, nejprve vybrat rastrový obrázek mimo kontext zařízení a pak odstranit `CBitmap` objektu.
 
-Další informace najdete v popisu `bmBits` pole `BITMAP` struktury. [Rastrový OBRÁZEK](../../mfc/reference/bitmap-structure.md) struktura je popsaný v části [CBitmap::CreateBitmapIndirect](#createbitmapindirect) členskou funkci.
+Další informace najdete v popisu `bmBits` pole `BITMAP` struktury. [Rastrový OBRÁZEK](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) struktura je popsaný v části [CBitmap::CreateBitmapIndirect](#createbitmapindirect) členskou funkci.
 
 ##  <a name="createbitmapindirect"></a>  CBitmap::CreateBitmapIndirect
 
@@ -168,7 +168,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="parameters"></a>Parametry
 
 *lpBitmap*<br/>
-Odkazuje [rastrový OBRÁZEK](../../mfc/reference/bitmap-structure.md) strukturu, která obsahuje informace o rastrového obrázku.
+Odkazuje [rastrový OBRÁZEK](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) strukturu, která obsahuje informace o rastrového obrázku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -286,7 +286,7 @@ int GetBitmap(BITMAP* pBitMap);
 ### <a name="parameters"></a>Parametry
 
 *pBitMap*<br/>
-Ukazatel [struktura rastrový OBRÁZEK](../../mfc/reference/bitmap-structure.md) struktura, která se zobrazí vlastnosti bitové kopie. Tento parametr nesmí mít hodnotu NULL.
+Ukazatel [rastrový OBRÁZEK](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) struktura, která se zobrazí vlastnosti bitové kopie. Tento parametr nesmí mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 

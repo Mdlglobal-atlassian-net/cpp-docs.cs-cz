@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-ms.openlocfilehash: 79d696f89ca7474220559abbf5464f32b6e684c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb88cc39ddaffe51b80484bbe8460507a1d0aecb
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543322"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178444"
 ---
 # <a name="cprintdialogex-class"></a>Cprintdialogex – třída
 
@@ -154,7 +154,7 @@ Tato členská funkce pouze vytvoří objekt. Použití `DoModal` členské funk
 
 ##  <a name="createprinterdc"></a>  CPrintDialogEx::CreatePrinterDC
 
-Vytvoří kontext zařízení tiskárny (DC) z [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) a [DEVNAMES –](../../mfc/reference/devnames-structure.md) struktury.
+Vytvoří kontext zařízení tiskárny (DC) z [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) a [DEVNAMES –](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) struktury.
 
 ```
 HDC CreatePrinterDC();
@@ -216,9 +216,9 @@ TRUE, pokud je úspěšná, jinak hodnota FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Vytvoří kontext zařízení tiskárny (DC) z [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) a [DEVNAMES –](../../mfc/reference/devnames-structure.md) struktury.
+Vytvoří kontext zařízení tiskárny (DC) z [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) a [DEVNAMES –](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) struktury.
 
-`GetDefaults` nezobrazuje seznamem vlastností tisku. Místo toho se nastaví `hDevNames` a `hDevMode` členy [m_pdex](#m_pdex) do popisovače [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) a [DEVNAMES –](../../mfc/reference/devnames-structure.md) struktury, které jsou inicializovány pro výchozí tiskárna systému. Obě `hDevNames` a `hDevMode` musí mít hodnotu NULL, nebo `GetDefaults` selže.
+`GetDefaults` nezobrazuje seznamem vlastností tisku. Místo toho se nastaví `hDevNames` a `hDevMode` členy [m_pdex](#m_pdex) do popisovače [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) a [DEVNAMES –](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) struktury, které jsou inicializovány pro výchozí tiskárna systému. Obě `hDevNames` a `hDevMode` musí mít hodnotu NULL, nebo `GetDefaults` selže.
 
 Pokud je nastavený příznak PD_RETURNDC, tato funkce nebude vrátit pouze `hDevNames` a `hDevMode` (umístěné v `m_pdex.hDevNames` a `m_pdex.hDevMode`) volajícímu, ale také vrátí tiskárnu řadiče domény v `m_pdex.hDC`. Je odpovědností volajícího k odstranění tiskárny řadiče domény a volat Windows [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree) funkce s popisovači po dokončení se `CPrintDialogEx` objektu.
 

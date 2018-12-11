@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-ms.openlocfilehash: e773d270c302ef71a6f6527061ba13c870fa4500
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f04029e47ee7d262cdc5e2eab463799acd7d943
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557817"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178405"
 ---
 # <a name="tn014-custom-controls"></a>TN014: Vlastní ovládací prvky
 
@@ -88,7 +88,7 @@ S použitím vlastní vykreslení ovládacích prvků můžete vytvářet opakov
     // insert code to delete an item from this combo box
     ```
 
-Další informace o strukturách vykreslené vlastníkem. ([drawitemstruct –](../mfc/reference/drawitemstruct-structure.md), [measureitemstruct –](../mfc/reference/measureitemstruct-structure.md), [compareitemstruct –](../mfc/reference/compareitemstruct-structure.md), a [deleteitemstruct –](../mfc/reference/deleteitemstruct-structure.md)) najdete v dokumentaci knihovny MFC pro `CWnd::OnDrawItem`, `CWnd::OnMeasureItem`, `CWnd::OnCompareItem`, a `CWnd::OnDeleteItem` v uvedeném pořadí.
+Další informace o strukturách vykreslené vlastníkem. ([drawitemstruct –](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct), [measureitemstruct –](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct), [compareitemstruct –](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct), a [deleteitemstruct –](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct)) najdete v dokumentaci knihovny MFC pro `CWnd::OnDrawItem`, `CWnd::OnMeasureItem`, `CWnd::OnCompareItem`, a `CWnd::OnDeleteItem` v uvedeném pořadí.
 
 ## <a name="using-self-draw-controls-and-menus"></a>Pomocí nabídky a místním vykreslení ovládacích prvků
 

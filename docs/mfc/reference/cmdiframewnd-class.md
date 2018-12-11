@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: a565e1c9d9c9e4d3773763b0ee78c49f61696723
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d9a2d33f61aa9033bb17c090989b4f08ee82bd7
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617539"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178379"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd – třída
 
@@ -160,7 +160,7 @@ virtual BOOL CreateClient(
 ### <a name="parameters"></a>Parametry
 
 *lpCreateStruct*<br/>
-Dlouhým ukazatelem na [soubor CREATESTRUCT](../../mfc/reference/createstruct-structure.md) struktury.
+Dlouhým ukazatelem na [soubor CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) struktury.
 
 *pWindowMenu*<br/>
 Ukazatel na místní nabídka okna.
@@ -276,7 +276,7 @@ void MDICascade(int nType);
 ### <a name="parameters"></a>Parametry
 
 *nTyp*<br/>
-Určuje příznak cascade. Je možné zadat pouze následující příznak: MDITILE_SKIPDISABLED, což zabrání se kaskádových zakázané podřízených oken MDI.
+Určuje příznak cascade. Lze zadat pouze příznak následující: MDITILE_SKIPDISABLED, což zabrání se kaskádových zakázané podřízených oken MDI.
 
 ### <a name="remarks"></a>Poznámky
 

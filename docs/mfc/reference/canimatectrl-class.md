@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: 5bbd59101815d18cae92b9996aff54f0cadaf9ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a22c88e1a19cd1aef1bbfacd7f255adc2b19d0e
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608426"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178252"
 ---
 # <a name="canimatectrl-class"></a>Canimatectrl – třída
 
@@ -152,7 +152,7 @@ virtual BOOL Create(
 Určuje styl ovládacího prvku animace. Použít libovolnou kombinaci systému windows, styly, které jsou popsány v následující části poznámky a – styly ovládacích prvků animace popsané v [– styly ovládacích prvků animace](/windows/desktop/Controls/animation-control-styles) v sadě Windows SDK.
 
 *Rect*<br/>
-Určuje pozici a velikost ovládacího prvku animace. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](../../mfc/reference/rect-structure1.md) struktury.
+Určuje pozici a velikost ovládacího prvku animace. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury.
 
 *pParentWnd*<br/>
 Určuje nadřazené okno ovládacího prvku animace, obvykle `CDialog`. Nesmí být NULL.

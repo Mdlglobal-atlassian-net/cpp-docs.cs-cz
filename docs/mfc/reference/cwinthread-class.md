@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 0f6c41b3675251df6b07e44003215fa67fb7e795
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 9c2b393354f65195e0d0060a08b83e321e3d5b1d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694189"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178418"
 ---
 # <a name="cwinthread-class"></a>CWinThread – třída
 
@@ -126,7 +126,7 @@ Chcete-li vytvořit vlákno, volejte [AfxBeginThread](application-information-an
 
 Namísto volání metody `AfxBeginThread`, můžete vytvořit `CWinThread`-odvozené objekt a poté zavolejte `CreateThread`. Tato metoda dvoufázová konstrukce je užitečná, pokud chcete znovu použít `CWinThread` objektu mezi po sobě jdoucích vytváření a ukončení vlákna provádění.
 
-Další informace o `CWinThread`, najdete v článcích [Multithreading s C++ a knihovnou MFC](../../parallel/multithreading-with-cpp-and-mfc.md), [Multithreading: vytváření vláken uživatelského rozhraní](../../parallel/multithreading-creating-user-interface-threads.md), [Multithreading: vytváření pracovních procesů Vlákna](../../parallel/multithreading-creating-worker-threads.md), a [Multithreading: jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Další informace o `CWinThread`, najdete v článcích [Multithreading s C++ a knihovnou MFC](../../parallel/multithreading-with-cpp-and-mfc.md), [Multithreading: Vytváření vláken uživatelského rozhraní](../../parallel/multithreading-creating-user-interface-threads.md), [Multithreading: Vytváření pracovních vláken](../../parallel/multithreading-creating-worker-threads.md), a [Multithreading: Jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -458,7 +458,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Parametry
 
 *pMsg*<br/>
-Odkazuje [msg – struktura](../../mfc/reference/msg-structure1.md) obsahující zprávu zpracovat.
+Odkazuje [msg – struktura](/windows/desktop/api/winuser/ns-winuser-tagmsg) obsahující zprávu zpracovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -484,7 +484,7 @@ virtual BOOL ProcessMessageFilter(
 Určuje kód zavěšení. Tato členská funkce kód používá k určení způsobu zpracování *lpMsg.*
 
 *lpMsg*<br/>
-Ukazatel Windows [msg – struktura](../../mfc/reference/msg-structure1.md).
+Ukazatel Windows [msg – struktura](/windows/desktop/api/winuser/ns-winuser-tagmsg).
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -512,7 +512,7 @@ virtual LRESULT ProcessWndProcException(
 Odkazuje na neošetřené výjimce.
 
 *pMsg*<br/>
-Odkazuje [msg – struktura](../../mfc/reference/msg-structure1.md) obsahující informace o zprávě systému windows, která způsobila rozhraní vyvolá výjimku.
+Odkazuje [msg – struktura](/windows/desktop/api/winuser/ns-winuser-tagmsg) obsahující informace o zprávě systému windows, která způsobila rozhraní vyvolá výjimku.
 
 ### <a name="return-value"></a>Návratová hodnota
 

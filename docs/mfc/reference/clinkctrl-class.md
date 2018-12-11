@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemState
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
-ms.openlocfilehash: 79c6aa9f0448ed399554d634d48f666aaaf60566
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b24b92006b73dff2ae9f091256ef8401efc64fe9
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597558"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178042"
 ---
 # <a name="clinkctrl-class"></a>Clinkctrl – třída
 
@@ -134,7 +134,7 @@ Ukazatel na řetězec ukončit nulou, který obsahuje označené text k zobrazen
 Určuje styl ovládacího prvku odkaz. Použijte libovolnou kombinaci – styly ovládacího prvku. V tématu [– styly běžných ovládacích prvků](/windows/desktop/Controls/common-control-styles) v `Windows SDK` Další informace.
 
 *Rect*<br/>
-Určuje velikost a umístění ovládacího prvku odkaz. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](../../mfc/reference/rect-structure1.md) struktury.
+Určuje velikost a umístění ovládacího prvku odkaz. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury.
 
 *pParentWnd*<br/>
 Určuje nadřazené okno ovládacího prvku odkaz. Nesmí být NULL.
@@ -196,7 +196,7 @@ Určuje rozšířený styl ovládacího prvku odkaz. Seznam rozšířené styly 
 Určuje styl ovládacího prvku odkaz. Použijte libovolnou kombinaci – styly ovládacího prvku. Další informace najdete v tématu [– styly běžných ovládacích prvků](/windows/desktop/Controls/common-control-styles) v sadě Windows SDK.
 
 *Rect*<br/>
-Určuje velikost a umístění ovládacího prvku odkaz. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](../../mfc/reference/rect-structure1.md) struktury.
+Určuje velikost a umístění ovládacího prvku odkaz. Může být buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury.
 
 *pParentWnd*<br/>
 Určuje nadřazené okno ovládacího prvku odkaz. Nesmí být NULL.
@@ -245,7 +245,7 @@ int GetIdealSize(
 |Parametr|Popis|
 |---------------|-----------------|
 |*cxMaxWidth*|[in] Maximální šířka propojení v pixelech.|
-|[out] \* *pSize*|Ukazatel Windows [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury. Po návratu tato metoda *cy* člena `SIZE` struktura obsahuje text výška ideální odkaz pro šířku textu odkazu, která je zadána *cxMaxWidth*. *Cx* členu struktury obsahuje šířku text odkazu, který je skutečně potřeba.|
+|[out] \* *pSize*|Ukazatel Windows [velikost](/windows/desktop/api/windef/ns-windef-tagsize) struktury. Po návratu tato metoda *cy* člena `SIZE` struktura obsahuje text výška ideální odkaz pro šířku textu odkazu, která je zadána *cxMaxWidth*. *Cx* členu struktury obsahuje šířku text odkazu, který je skutečně potřeba.|
 
 ### <a name="return-value"></a>Návratová hodnota
 

@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 176c076027a0b1b315fbcef3edd4104bad66ae34
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef44c917411efefeb6719af95185ddf7993fbab1
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534131"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179016"
 ---
 # <a name="colecontrol-class"></a>COleControl – třída
 
@@ -556,7 +556,7 @@ V ovládacím prvku bez oken, byste měli vždy používat `COleControl` člensk
 
 Objekty ovládacího prvku OLE můžete také vytvořit časové období, až po své aktivaci, ale množství práce potřebné pro přechod aktivní aktivní přejde a rychlost přechod ocitne mimo provoz. Existují případy, kdy tento problém je: jako příklad, zvažte mřížky textových polí. Při kurzor směrem nahoru a dolů ve sloupci, každý ovládací prvek musí být místní aktivaci a potom deaktivovat. Rychlost aktivní/aktivní přechod přímo ovlivní rychlost posouvání.
 
-Další informace o vývoji rozšiřovatelnou platformu pro ovládací prvek OLE, najdete v článcích [ovládací prvky MFC ActiveX](../../mfc/mfc-activex-controls.md) a [přehled: vytvoření aplikace ovládací prvek ActiveX knihovny MFC](../../mfc/reference/mfc-activex-control-wizard.md). Informace o optimalizaci ovládacích prvků OLE, včetně ovládací prvky bez oken a blikání, naleznete v tématu [knihovny MFC – ovládací prvky ActiveX: optimalizace](../../mfc/mfc-activex-controls-optimization.md).
+Další informace o vývoji rozšiřovatelnou platformu pro ovládací prvek OLE, najdete v článcích [ovládací prvky MFC ActiveX](../../mfc/mfc-activex-controls.md) a [přehled: Vytvoření aplikace ovládací prvek ActiveX knihovny MFC](../../mfc/reference/mfc-activex-control-wizard.md). Informace o optimalizaci ovládacích prvků OLE, včetně ovládací prvky bez oken a blikání, naleznete v tématu [knihovny MFC – ovládací prvky ActiveX: Optimalizace](../../mfc/mfc-activex-controls-optimization.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -848,7 +848,7 @@ BOOL ClipCaretRect(LPRECT lpRect);
 ### <a name="parameters"></a>Parametry
 
 *lprect –*<br/>
-Na vstupní ukazatel [RECT](../../mfc/reference/rect-structure1.md) strukturu, která obsahuje blikající kurzor oblasti, kterou chcete upravit. Na výstupní oblasti upravené blikajícího kurzoru nebo hodnota NULL, pokud je zcela zahrnutých obdélník blikající kurzor o.
+Na vstupní ukazatel [RECT](/windows/desktop/api/windef/ns-windef-tagrect) strukturu, která obsahuje blikající kurzor oblasti, kterou chcete upravit. Na výstupní oblasti upravené blikajícího kurzoru nebo hodnota NULL, pokud je zcela zahrnutých obdélník blikající kurzor o.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -902,7 +902,7 @@ virtual void DisplayError(
 ### <a name="parameters"></a>Parametry
 
 *SCODE*<br/>
-Hodnota kódu stavu hlášeny. Úplný seznam možných kódů, najdete v článku [ovládací prvky ActiveX: témata pokročilé](../../mfc/mfc-activex-controls-advanced-topics.md).
+Hodnota kódu stavu hlášeny. Úplný seznam možných kódů, najdete v článku [ovládací prvky ActiveX: Pokročilá témata](../../mfc/mfc-activex-controls-advanced-topics.md).
 
 *lpszDescription*<br/>
 Popis chyby hlásí.
@@ -934,7 +934,7 @@ void DoClick();
 
 Možné overridable `COleControl::OnClick` členská funkce se volá a akcie klikněte na událost se aktivuje, pokud se podporuje v ovládacím prvku.
 
-Tato funkce je podporována `COleControl` základní třídu jako základní metoda volána DoClick. Další informace najdete v článku [ovládací prvky ActiveX: metody](../../mfc/mfc-activex-controls-methods.md).
+Tato funkce je podporována `COleControl` základní třídu jako základní metoda volána DoClick. Další informace najdete v článku [ovládací prvky ActiveX: Metody](../../mfc/mfc-activex-controls-methods.md).
 
 ##  <a name="dopropexchange"></a>  COleControl::DoPropExchange
 
@@ -953,7 +953,7 @@ Ukazatel `CPropExchange` objektu. Architektura dodává tento objekt k vytvořen
 
 Díky této funkci obvykle volání **PX_** řady funkcí k načtení nebo uložení konkrétní uživatelem definované vlastnosti ovládacího prvku OLE.
 
-Pokud Průvodce ovládacím prvkem se použil k vytvoření projektu ovládacího prvku OLE, přepsaného verze této funkce se serializovat uložených vlastnostech podporovaných `COleControl` voláním funkce základní třídy `COleControl::DoPropExchange`. Při přidávání uživatelem definované vlastnosti do ovládacího prvku OLE je potřeba upravit tuto funkci k serializaci nové vlastnosti. Další informace o serializaci naleznete v článku [ovládací prvky ActiveX: serializace](../../mfc/mfc-activex-controls-serializing.md).
+Pokud Průvodce ovládacím prvkem se použil k vytvoření projektu ovládacího prvku OLE, přepsaného verze této funkce se serializovat uložených vlastnostech podporovaných `COleControl` voláním funkce základní třídy `COleControl::DoPropExchange`. Při přidávání uživatelem definované vlastnosti do ovládacího prvku OLE je potřeba upravit tuto funkci k serializaci nové vlastnosti. Další informace o serializaci naleznete v článku [ovládací prvky ActiveX: Serializace](../../mfc/mfc-activex-controls-serializing.md).
 
 ##  <a name="dosuperclasspaint"></a>  COleControl::DoSuperclassPaint
 
@@ -977,7 +977,7 @@ Oblast, ve které je potřeba vykreslit ovládací prvek.
 
 Voláním této funkce správně zpracováno neaktivní ovládacího prvku OLE. Tato funkce by měla použít pouze v případě OLE řídit podtřídy ovládacího prvku Windows a by měla být volána `OnDraw` funkce ovládacího prvku.
 
-Další informace o této funkci a vytvoření podtřídy ovládacího prvku Windows najdete v článku [ovládací prvky ActiveX: vytvoření podtřídy ovládacího prvku Windows](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
+Další informace o této funkci a vytvoření podtřídy ovládacího prvku Windows najdete v článku [ovládací prvky ActiveX: Vytvoření podtřídy ovládacího prvku Windows](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
 
 ##  <a name="drawcontent"></a>  COleControl::DrawContent
 
@@ -1099,7 +1099,7 @@ Nenulový funkce bylo úspěšné; jinak 0.
 
 Obvykle, bude první funkci volanou třídou přepsání ovládacího prvku `COleControl::DoPropExchange`. Při načítání, tato funkce čte číslo verze trvalá data a nastaví atribut verze [cpropexchange –](../../mfc/reference/cpropexchange-class.md) objektu odpovídajícím způsobem. Při ukládání, tato funkce zapíše číslo verze trvalá data.
 
-Další informace o trvalosti a správy verzí, najdete v článku [ovládací prvky ActiveX: serializace](../../mfc/mfc-activex-controls-serializing.md).
+Další informace o trvalosti a správy verzí, najdete v článku [ovládací prvky ActiveX: Serializace](../../mfc/mfc-activex-controls-serializing.md).
 
 ##  <a name="fireclick"></a>  COleControl::FireClick
 
@@ -1143,7 +1143,7 @@ void FireError(
 ### <a name="parameters"></a>Parametry
 
 *SCODE*<br/>
-Hodnota kódu stavu hlášeny. Úplný seznam možných kódů, najdete v článku [ovládací prvky ActiveX: témata pokročilé](../../mfc/mfc-activex-controls-advanced-topics.md).
+Hodnota kódu stavu hlášeny. Úplný seznam možných kódů, najdete v článku [ovládací prvky ActiveX: Pokročilá témata](../../mfc/mfc-activex-controls-advanced-topics.md).
 
 *lpszDescription*<br/>
 Popis chyby hlásí.
@@ -1690,7 +1690,7 @@ Ve výchozím nastavení `GetControlFlags` vrátí `fastBeginPaint | clipPaintDC
 |`windowlessActivate`|Pokud nastavení, označuje ovládací prvek používá aktivace bez oken.|
 |`canOptimizeDraw`|Pokud nastaveno, označuje, že ovládací prvek provede optimalizované vykreslení, pokud kontejner podporuje.|
 
-Další informace o `GetControlFlags` a další optimalizace ovládací prvky OLE, najdete v článku [ovládací prvky ActiveX: optimalizace](../../mfc/mfc-activex-controls-optimization.md).
+Další informace o `GetControlFlags` a další optimalizace ovládací prvky OLE, najdete v článku [ovládací prvky ActiveX: Optimalizace](../../mfc/mfc-activex-controls-optimization.md).
 
 ##  <a name="getcontrolsize"></a>  COleControl::GetControlSize
 
@@ -1808,7 +1808,7 @@ Ukazatel na rozhraní odbavení písmo z ovládacího prvku stock Font – vlast
 
 ### <a name="remarks"></a>Poznámky
 
-Všimněte si, že volající musí uvolnit po dokončení daný objekt. V rámci implementace ovládacího prvku použijte `InternalGetFont` pro přístup k skladový objekt Font ovládacího prvku. Další informace o použití písem v ovládacím prvku, naleznete v článku [ovládací prvky ActiveX: použití písem v ovládacím prvku ActiveX](../../mfc/mfc-activex-controls-using-fonts.md).
+Všimněte si, že volající musí uvolnit po dokončení daný objekt. V rámci implementace ovládacího prvku použijte `InternalGetFont` pro přístup k skladový objekt Font ovládacího prvku. Další informace o použití písem v ovládacím prvku, naleznete v článku [ovládací prvky ActiveX: Použití písem v ovládacím prvku ActiveX](../../mfc/mfc-activex-controls-using-fonts.md).
 
 ##  <a name="getfonttextmetrics"></a>  COleControl::GetFontTextMetrics
 
@@ -3565,7 +3565,7 @@ void Refresh();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je podporována `COleControl` základní třídu jako základní metodu, nazvanou aktualizace. To umožňuje uživatelům ovládacího prvku OLE překreslit ovládací prvek v určitém čase. Další informace o tuto metodu, najdete v článku [ovládací prvky ActiveX: metody](../../mfc/mfc-activex-controls-methods.md).
+Tato funkce je podporována `COleControl` základní třídu jako základní metodu, nazvanou aktualizace. To umožňuje uživatelům ovládacího prvku OLE překreslit ovládací prvek v určitém čase. Další informace o tuto metodu, najdete v článku [ovládací prvky ActiveX: Metody](../../mfc/mfc-activex-controls-methods.md).
 
 ##  <a name="releasecapture"></a>  COleControl::ReleaseCapture
 
@@ -3636,9 +3636,9 @@ void ResetStockProps();
 
 ### <a name="remarks"></a>Poznámky
 
-Vlastnosti jsou: vzhled, BackColor, BorderStyle, titulek, povoleno, písmo, barva popředí, hWnd a Text. Popis uložených vlastností najdete v tématu [ovládací prvky ActiveX: Přidání uložené vlastnosti](../../mfc/mfc-activex-controls-adding-stock-properties.md).
+Mezi vlastnosti patří: Vzhled, barva pozadí, BorderStyle, titulek, povoleno, písmo, barva popředí, hWnd a Text. Popis uložených vlastností najdete v tématu [ovládací prvky ActiveX: Přidání uložených vlastností](../../mfc/mfc-activex-controls-adding-stock-properties.md).
 
-Ovládací prvek binární inicializace výkon lze zvýšit pomocí `ResetStockProps` a `ResetVersion` přepsat `COleControl::OnResetState`. Podívejte se na téma níže uvedený příklad. Další informace o optimalizaci inicializace naleznete v tématu [ovládací prvky ActiveX: optimalizace](../../mfc/mfc-activex-controls-optimization.md).
+Ovládací prvek binární inicializace výkon lze zvýšit pomocí `ResetStockProps` a `ResetVersion` přepsat `COleControl::OnResetState`. Podívejte se na téma níže uvedený příklad. Další informace o optimalizaci inicializace naleznete v tématu [ovládací prvky ActiveX: Optimalizace](../../mfc/mfc-activex-controls-optimization.md).
 
 ### <a name="example"></a>Příklad
 
@@ -3659,7 +3659,7 @@ void ResetVersion(DWORD dwVersionDefault);
 
 ### <a name="remarks"></a>Poznámky
 
-Ovládací prvek binární inicializace výkon lze zvýšit pomocí `ResetVersion` a `ResetStockProps` přepsat `COleControl::OnResetState`. Podívejte se na příklad na [ResetStockProps](#resetstockprops). Další informace o optimalizaci inicializace naleznete v tématu [ovládací prvky ActiveX: optimalizace](../../mfc/mfc-activex-controls-optimization.md).
+Ovládací prvek binární inicializace výkon lze zvýšit pomocí `ResetVersion` a `ResetStockProps` přepsat `COleControl::OnResetState`. Podívejte se na příklad na [ResetStockProps](#resetstockprops). Další informace o optimalizaci inicializace naleznete v tématu [ovládací prvky ActiveX: Optimalizace](../../mfc/mfc-activex-controls-optimization.md).
 
 ##  <a name="scrollwindow"></a>  COleControl::ScrollWindow
 
@@ -3741,7 +3741,7 @@ A `CArchive` objektu určeného k serializaci nebo odchozí.
 
 ### <a name="remarks"></a>Poznámky
 
-Ovládací prvek binární trvalost výkon lze zvýšit pomocí `SerializeExtent`, `SerializeStockProps`, a `SerializeVersion` přepsat `COleControl::Serialize`. Podívejte se na téma níže uvedený příklad. Další informace o optimalizaci inicializace naleznete v tématu [ovládací prvky ActiveX: optimalizace](../../mfc/mfc-activex-controls-optimization.md).
+Ovládací prvek binární trvalost výkon lze zvýšit pomocí `SerializeExtent`, `SerializeStockProps`, a `SerializeVersion` přepsat `COleControl::Serialize`. Podívejte se na téma níže uvedený příklad. Další informace o optimalizaci inicializace naleznete v tématu [ovládací prvky ActiveX: Optimalizace](../../mfc/mfc-activex-controls-optimization.md).
 
 ### <a name="example"></a>Příklad
 
@@ -3749,7 +3749,7 @@ Ovládací prvek binární trvalost výkon lze zvýšit pomocí `SerializeExtent
 
 ##  <a name="serializestockprops"></a>  COleControl::SerializeStockProps
 
-Serializuje a inicializuje stav `COleControl` uložené vlastností: vzhled, BackColor, BorderStyle, titulek, povoleno, písmo, barva popředí a Text.
+Serializuje a inicializuje stav `COleControl` uložené vlastností: Vzhled, BackColor, BorderStyle, titulek, povolené, písmo, barva popředí a Text.
 
 ```
 void SerializeStockProps(CArchive& ar);
@@ -3762,9 +3762,9 @@ A `CArchive` objektu určeného k serializaci nebo odchozí.
 
 ### <a name="remarks"></a>Poznámky
 
-Popis uložených vlastností najdete v tématu [ovládací prvky ActiveX: Přidání uložené vlastnosti](../../mfc/mfc-activex-controls-adding-stock-properties.md).
+Popis uložených vlastností najdete v tématu [ovládací prvky ActiveX: Přidání uložených vlastností](../../mfc/mfc-activex-controls-adding-stock-properties.md).
 
-Ovládací prvek binární trvalost výkon lze zvýšit pomocí `SerializeStockProps`, `SerializeExtent`, a `SerializeVersion` přepsat `COleControl::Serialize`. Příklad najdete v tématu kód na [SerializeExtent](#serializeextent). Další informace o optimalizaci inicializace naleznete v tématu [ovládací prvky ActiveX: optimalizace](../../mfc/mfc-activex-controls-optimization.md).
+Ovládací prvek binární trvalost výkon lze zvýšit pomocí `SerializeStockProps`, `SerializeExtent`, a `SerializeVersion` přepsat `COleControl::Serialize`. Příklad najdete v tématu kód na [SerializeExtent](#serializeextent). Další informace o optimalizaci inicializace naleznete v tématu [ovládací prvky ActiveX: Optimalizace](../../mfc/mfc-activex-controls-optimization.md).
 
 ##  <a name="serializeversion"></a>  COleControl::SerializeVersion
 
@@ -3794,7 +3794,7 @@ Určuje, zda trvalá data mají být převedeny na nejnovější formát po ulo�
 
 ### <a name="remarks"></a>Poznámky
 
-Ovládací prvek binární trvalost výkon lze zvýšit pomocí `SerializeVersion`, `SerializeExtent`, a `SerializeStockProps` přepsat `COleControl::Serialize`. Příklad najdete v tématu kód na [SerializeExtent](#serializeextent). Další informace o optimalizaci inicializace naleznete v tématu [ovládací prvky ActiveX: optimalizace](../../mfc/mfc-activex-controls-optimization.md).
+Ovládací prvek binární trvalost výkon lze zvýšit pomocí `SerializeVersion`, `SerializeExtent`, a `SerializeStockProps` přepsat `COleControl::Serialize`. Příklad najdete v tématu kód na [SerializeExtent](#serializeextent). Další informace o optimalizaci inicializace naleznete v tématu [ovládací prvky ActiveX: Optimalizace](../../mfc/mfc-activex-controls-optimization.md).
 
 ##  <a name="setappearance"></a>  COleControl::SetAppearance
 
@@ -3811,7 +3811,7 @@ A **krátký** (VT_I2) hodnota má být použit pro vzhled ovládacího prvku. H
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o uložených vlastnostech naleznete v tématu [ovládací prvky ActiveX: vlastnosti](../../mfc/mfc-activex-controls-properties.md).
+Další informace o uložených vlastnostech naleznete v tématu [ovládací prvky ActiveX: Vlastnosti](../../mfc/mfc-activex-controls-properties.md).
 
 ##  <a name="setbackcolor"></a>  COleControl::SetBackColor
 
@@ -3828,7 +3828,7 @@ Hodnota typu OLE_COLOR má být použit pro vykreslení ovládacího prvku na po
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o použití této vlastnosti a další související vlastnosti, najdete v článku [ovládací prvky ActiveX: vlastnosti](../../mfc/mfc-activex-controls-properties.md).
+Další informace o použití této vlastnosti a další související vlastnosti, najdete v článku [ovládací prvky ActiveX: Vlastnosti](../../mfc/mfc-activex-controls-properties.md).
 
 ##  <a name="setborderstyle"></a>  COleControl::SetBorderStyle
 
@@ -3952,7 +3952,7 @@ Hodnota typu OLE_COLOR má být použit pro popředí vykreslování ovládacíh
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o použití této vlastnosti a další související vlastnosti, najdete v článku [ovládací prvky ActiveX: vlastnosti](../../mfc/mfc-activex-controls-properties.md).
+Další informace o použití této vlastnosti a další související vlastnosti, najdete v článku [ovládací prvky ActiveX: Vlastnosti](../../mfc/mfc-activex-controls-properties.md).
 
 ##  <a name="setinitialdataformats"></a>  COleControl::SetInitialDataFormats
 
@@ -4086,7 +4086,7 @@ void ThrowError(
 ### <a name="parameters"></a>Parametry
 
 *sc*<br/>
-Hodnota kódu stavu hlášeny. Úplný seznam možných kódů, najdete v článku [ovládací prvky ActiveX: témata pokročilé](../../mfc/mfc-activex-controls-advanced-topics.md).
+Hodnota kódu stavu hlášeny. Úplný seznam možných kódů, najdete v článku [ovládací prvky ActiveX: Pokročilá témata](../../mfc/mfc-activex-controls-advanced-topics.md).
 
 *nDescriptionID*<br/>
 ID zdroje řetězce výjimky uvedená.

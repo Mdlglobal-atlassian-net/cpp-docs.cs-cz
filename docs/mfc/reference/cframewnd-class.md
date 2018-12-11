@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 2294890ad18d88efaf4d5dd54cad319565a23e02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3259780d73004c9d1654c26434b55627923cfe23
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481442"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178789"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd – třída
 
@@ -844,7 +844,7 @@ Obsahuje nejméně jednu z následujících hodnot z `enum BorderCmd`:
 - `borderSet` = 3
 
 *lpRectBorder*<br/>
-Ukazatel [RECT](../../mfc/reference/rect-structure1.md) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který určuje souřadnice ohraničení.
+Ukazatel [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který určuje souřadnice ohraničení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -902,7 +902,7 @@ virtual BOOL OnCreateClient(
 ### <a name="parameters"></a>Parametry
 
 *lpcs*<br/>
-Ukazatel Windows [soubor CREATESTRUCT](../../mfc/reference/createstruct-structure.md) struktury.
+Ukazatel Windows [soubor CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) struktury.
 
 *pContext*<br/>
 Ukazatel [ccreatecontext –](../../mfc/reference/ccreatecontext-structure.md) struktury.

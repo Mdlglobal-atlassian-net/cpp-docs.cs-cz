@@ -21,12 +21,12 @@ helpviewer_keywords:
 - CMainFrame class [MFC]
 - styles [MFC], windows
 ms.assetid: 77fa4f03-96b4-4687-9ade-41e46f7e4b0a
-ms.openlocfilehash: ebef671a34d2b50bd547a2fd9e484581df8ee3e8
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 19ff4e41f3b8c73e7ae62fbf264ea955b42bbc1a
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693215"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177901"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>Změna stylů okna vytvořeného rozhraním MFC
 
@@ -46,7 +46,7 @@ Pro systém windows hlavního rámce můžete určit, zda má okno systémové n
 
 Pokud chcete změnit okno atributů v existující aplikaci, postupujte podle pokynů ve zbývající části tohoto článku.
 
-Chcete-li změnit výchozí atributy okno používá rozhraní framework aplikace vytvořené pomocí Průvodce aplikací, přepsat v okně [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) virtuální členskou funkci. `PreCreateWindow` umožňuje aplikaci získat přístup v procesu vytváření obvykle spravováno interně službou [CDocTemplate](../mfc/reference/cdoctemplate-class.md) třídy. Rámec volá `PreCreateWindow` pouze před vytvořením okna. Úpravou [soubor CREATESTRUCT](../mfc/reference/createstruct-structure.md) předané do `PreCreateWindow`, vaše aplikace může změnit atributy použité k vytvoření okna. Například Ujistěte se, že okno nepoužívá titulek, použijte následující bitová operace:
+Chcete-li změnit výchozí atributy okno používá rozhraní framework aplikace vytvořené pomocí Průvodce aplikací, přepsat v okně [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) virtuální členskou funkci. `PreCreateWindow` umožňuje aplikaci získat přístup v procesu vytváření obvykle spravováno interně službou [CDocTemplate](../mfc/reference/cdoctemplate-class.md) třídy. Rámec volá `PreCreateWindow` pouze před vytvořením okna. Úpravou [soubor CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) předané do `PreCreateWindow`, vaše aplikace může změnit atributy použité k vytvoření okna. Například Ujistěte se, že okno nepoužívá titulek, použijte následující bitová operace:
 
 [!code-cpp[NVC_MFCDocView#15](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_1.cpp)]
 

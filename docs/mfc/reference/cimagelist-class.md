@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: d311c064d9b91967a60823fc3fd0e43f22a119c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bcf815fce4123ca1014e1679fd810c1ce321be4
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500760"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178587"
 ---
 # <a name="cimagelist-class"></a>Cimagelist – třída
 
@@ -694,7 +694,7 @@ Z nuly vycházející index image, které chcete kreslit.
 A [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktury obsahující souřadnic x a y – kde bude vykreslen na obrázku.
 
 *Sz*<br/>
-A [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktura určující velikost bitové kopie, které chcete kreslit.
+A [velikost](/windows/desktop/api/windef/ns-windef-tagsize) struktura určující velikost bitové kopie, které chcete kreslit.
 
 *ptOrigin*<br/>
 A [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) struktury obsahující souřadnic x a y-zadání levý horní roh kreslení s ohledem na samotný obrázek. Nejsou vykreslit pixelů bitové kopie, které jsou nalevo souřadnice x a nad souřadnice na ose y.

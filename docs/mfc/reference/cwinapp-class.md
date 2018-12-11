@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: c25d79dc1fb201d10e090f512a5a96f649efbcfe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f9afdf18fcaff0d3613b4204d8690f915079e7d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542360"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178938"
 ---
 # <a name="cwinapp-class"></a>CWinApp – třída
 
@@ -347,7 +347,7 @@ Kromě `CWinApp` členské funkce knihovny Microsoft Foundation Class poskytuje 
 
 - [Afxgetappname –](application-information-and-management.md#afxgetappname) získá ukazatel na řetězec obsahující název aplikace. Případně pokud máte ukazatel na `CWinApp` objektu, použijte `m_pszExeName` získat název aplikace.
 
-Naleznete v tématu [CWinApp: třída aplikace](../../mfc/cwinapp-the-application-class.md) pro další informace o `CWinApp` třídy, včetně přehledu z následujících akcí:
+Zobrazit [CWinApp: Třída aplikace](../../mfc/cwinapp-the-application-class.md) pro další informace o `CWinApp` třídy, včetně přehledu z následujících akcí:
 
 - `CWinApp`-odvozené kódu napsaného pomocí Průvodce aplikací.
 
@@ -1060,7 +1060,7 @@ Nenulové, pokud se inicializace je úspěšná. jinak 0.
 
 Inicializace aplikace je koncepčně rozdělený do dvou částí: Inicializace jednorázové aplikace, která probíhá první čas spuštění programu a inicializaci instance, který spouští každý čas kopii program se spustí, včetně poprvé. Implementace rozhraní framework `WinMain` volá tuto funkci.
 
-Přepsat `InitInstance` inicializovat každou novou instanci vaší aplikace běžící pod Windows. Obvykle je přepsat `InitInstance` konstrukce objektu hlavní okno a nastavit `CWinThread::m_pMainWnd` datový člen tak, aby odkazoval na toto okno. Další informace o přepsání tato členská funkce, najdete v části [CWinApp: třída aplikace](../../mfc/cwinapp-the-application-class.md).
+Přepsat `InitInstance` inicializovat každou novou instanci vaší aplikace běžící pod Windows. Obvykle je přepsat `InitInstance` konstrukce objektu hlavní okno a nastavit `CWinThread::m_pMainWnd` datový člen tak, aby odkazoval na toto okno. Další informace o přepsání tato členská funkce, najdete v části [CWinApp: Třída aplikace](../../mfc/cwinapp-the-application-class.md).
 
 > [!NOTE]
 > Aplikace MFC musí být inicializovány jako jednovláknový objekt apartment (STA). Při volání [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) ve vašich `InitInstance` přepsání, určete COINIT_APARTMENTTHREADED (spíše než COINIT_MULTITHREADED).
@@ -1793,7 +1793,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Parametry
 
 *pMsg*<br/>
-Ukazatel [MSG](../../mfc/reference/msg-structure1.md) struktura, která obsahuje zprávu zpracovat.
+Ukazatel [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) struktura, která obsahuje zprávu zpracovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1815,7 +1815,7 @@ virtual BOOL ProcessMessageFilter(
 Určuje kód zavěšení. Tato členská funkce kód používá k určení způsobu zpracování *lpMsg.*
 
 *lpMsg*<br/>
-Ukazatel Windows [MSG](../../mfc/reference/msg-structure1.md) struktury.
+Ukazatel Windows [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) struktury.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1886,7 +1886,7 @@ virtual LRESULT ProcessWndProcException(
 Ukazatel na vydá nezachycenou výjimku.
 
 *pMsg*<br/>
-A [MSG](../../mfc/reference/msg-structure1.md) strukturu, která obsahuje informace o zprávě systému windows, která způsobila rozhraní vyvolá výjimku.
+A [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) strukturu, která obsahuje informace o zprávě systému windows, která způsobila rozhraní vyvolá výjimku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2086,7 +2086,7 @@ Nenulové, pokud byla nalezena možnost; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud jsou k dispozici, je možnost odebrat z příkazového řádku. Další informace o vkládání najdete v článku [servery: implementace serveru](../../mfc/servers-implementing-a-server.md).
+Pokud jsou k dispozici, je možnost odebrat z příkazového řádku. Další informace o vkládání najdete v článku [serverů: Implementace serveru](../../mfc/servers-implementing-a-server.md).
 
 ##  <a name="saveallmodified"></a>  CWinApp::SaveAllModified
 
@@ -2118,7 +2118,7 @@ void SelectPrinter(
 ### <a name="parameters"></a>Parametry
 
 *hDevNames je*<br/>
-Popisovač [DEVNAMES –](../../mfc/reference/devnames-structure.md) strukturu, která identifikuje ovladač, zařízení a výstupní port názvy konkrétní tiskárnu.
+Popisovač [DEVNAMES –](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) strukturu, která identifikuje ovladač, zařízení a výstupní port názvy konkrétní tiskárnu.
 
 *hDevMode*<br/>
 Popisovač [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) struktura, která určuje informace o inicializaci zařízení a prostředí tiskárny.
@@ -2168,7 +2168,7 @@ ID prostředku řetězců obsahující název klíče registru.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce nastaví *m_pszRegistryKey*, který se potom využijí `GetProfileInt`, `GetProfileString`, `WriteProfileInt`, a `WriteProfileString` členské funkce `CWinApp`. Pokud byla tato funkce volána, seznam nejčastěji naposledy použitých souborů (MRU) také uložen v registru. Klíč registru je obvykle název společnosti. Je uložena v klíči v následujícím formátu: HKEY_CURRENT_USER\Software\\< název společnosti\>\\< název_aplikace\>\\< název oddílu\>\\< hodnota název\>.
+Tato funkce nastaví *m_pszRegistryKey*, který se potom využijí `GetProfileInt`, `GetProfileString`, `WriteProfileInt`, a `WriteProfileString` členské funkce `CWinApp`. Pokud byla tato funkce volána, seznam nejčastěji naposledy použitých souborů (MRU) také uložen v registru. Klíč registru je obvykle název společnosti. Je uložena v klíči v následujícím formátu: HKEY_CURRENT_USER\Software\\< název společnosti\>\\< název_aplikace\>\\< název oddílu\>\\< název hodnoty\>.
 
 ##  <a name="supportsapplicationrecovery"></a>  CWinApp::SupportsApplicationRecovery
 
@@ -2395,4 +2395,4 @@ Určuje ID modelu uživatele aplikace.
 
 [CWinThread – třída](../../mfc/reference/cwinthread-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[Postupy: Přidání podpory správce restartování](../../mfc/how-to-add-restart-manager-support.md)
+[Jak: Přidání podpory správce restartování](../../mfc/how-to-add-restart-manager-support.md)

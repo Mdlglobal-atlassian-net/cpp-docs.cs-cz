@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: bcaf24c14938bcf56eb083ad2dd79e4c245c7c84
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2834de457ce9e2a71537e706f0fdf84463b16a8d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613678"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178916"
 ---
 # <a name="cmenu-class"></a>Cmenu – třída
 
@@ -322,7 +322,7 @@ Určuje, jak zkontrolovat položky nabídky a jak určit pozici položky v nabí
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Předchozí stav položky: MF_CHECKED nebo MF_UNCHECKED, nebo hodnotu 0xFFFFFFFF, pokud neexistuje položka nabídky.
+Předchozí stav položky: MF_CHECKED nebo MF_UNCHECKED nebo hodnotu 0xFFFFFFFF, pokud neexistuje položka nabídky.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -551,7 +551,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpDrawItemStruct*<br/>
-Ukazatel [drawitemstruct –](../../mfc/reference/drawitemstruct-structure.md) strukturu, která obsahuje informace o typu kreslení vyžaduje.
+Ukazatel [drawitemstruct –](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) strukturu, která obsahuje informace o typu kreslení vyžaduje.
 
 ### <a name="remarks"></a>Poznámky
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CPaintDC [MFC], m_ps
 - CPaintDC [MFC], m_hWnd
 ms.assetid: 7e245baa-bf9b-403e-a637-7218adf28fab
-ms.openlocfilehash: 991ea39ccf03cd4f2921a759d3278576c7a1fd92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4e6ded945bac15b6584eadc21d8648f1a0f9ab3
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525746"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178327"
 ---
 # <a name="cpaintdc-class"></a>Cpaintdc – třída
 
@@ -41,7 +41,7 @@ class CPaintDC : public CDC
 
 |Název|Popis|
 |----------|-----------------|
-|[CPaintDC::m_ps](#m_ps)|Obsahuje [paintstruct –](../../mfc/reference/paintstruct-structure.md) použita k vyplnění klientské oblasti.|
+|[CPaintDC::m_ps](#m_ps)|Obsahuje [paintstruct –](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct) použita k vyplnění klientské oblasti.|
 
 ### <a name="protected-data-members"></a>Chránění členové dat
 
@@ -71,7 +71,7 @@ Další informace o používání `CPaintDC`, naleznete v tématu [kontexty zař
 
 ##  <a name="cpaintdc"></a>  CPaintDC::CPaintDC
 
-Vytvoří `CPaintDC` připraví okna aplikace pro kreslení objektu a ukládá [paintstruct –](../../mfc/reference/paintstruct-structure.md) struktury v [m_ps](#m_ps) členské proměnné.
+Vytvoří `CPaintDC` připraví okna aplikace pro kreslení objektu a ukládá [paintstruct –](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct) struktury v [m_ps](#m_ps) členské proměnné.
 
 ```
 explicit CPaintDC(CWnd* pWnd);
@@ -108,7 +108,7 @@ HWND m_hWnd;
 
 ##  <a name="m_ps"></a>  CPaintDC::m_ps
 
-`m_ps` je veřejné členské proměnné typu [paintstruct –](../../mfc/reference/paintstruct-structure.md).
+`m_ps` je veřejné členské proměnné typu [paintstruct –](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct).
 
 ```
 PAINTSTRUCT m_ps;

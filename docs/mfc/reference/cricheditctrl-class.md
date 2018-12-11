@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 756f50afd9b67e4895d8d1b15652602630c24918
-ms.sourcegitcommit: 984fb4814a2dd9bcea5ec88c9528707f17a7cffa
+ms.openlocfilehash: c42f7b77c04b2c94923908fa8b9542bea313b154
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51949541"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178990"
 ---
 # <a name="cricheditctrl-class"></a>Cricheditctrl – třída
 
@@ -427,7 +427,7 @@ virtual BOOL Create(
 Určuje styl textové pole. Použít kombinaci styly oken, které jsou uvedeny v **poznámky** části níže, a [styly ovládacího prvku pro úpravy](/windows/desktop/Controls/edit-control-styles), které jsou popsány v sadě Windows SDK.
 
 *Rect*<br/>
-Určuje velikost a umístění textové pole. Může být [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](../../mfc/reference/rect-structure1.md) struktury.
+Určuje velikost a umístění textové pole. Může být [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury.
 
 *pParentWnd*<br/>
 Určuje nadřazené okno ovládacího prvku úprav (často [CDialog](../../mfc/reference/cdialog-class.md)). Nesmí být NULL.
@@ -552,7 +552,7 @@ BOOL DisplayBand(LPRECT pDisplayRect);
 ### <a name="parameters"></a>Parametry
 
 *pDisplayRect*<br/>
-Ukazatel [RECT](../../mfc/reference/rect-structure1.md) nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) určující oblasti zařízení pro zobrazení potřebného textu.
+Ukazatel [RECT](/windows/desktop/api/windef/ns-windef-tagrect) nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) určující oblasti zařízení pro zobrazení potřebného textu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -973,7 +973,7 @@ void GetRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parametry
 
 *lprect –*<br/>
-[Crect –](../../atl-mfc-shared/reference/crect-class.md) nebo ukazatel [RECT](../../mfc/reference/rect-structure1.md) přijímat formátování obdélník tohoto `CRichEditCtrl` objektu.
+[Crect –](../../atl-mfc-shared/reference/crect-class.md) nebo ukazatel [RECT](/windows/desktop/api/windef/ns-windef-tagrect) přijímat formátování obdélník tohoto `CRichEditCtrl` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1855,7 +1855,7 @@ void SetRect(LPCRECT lpRect);
 ### <a name="parameters"></a>Parametry
 
 *lprect –*<br/>
-[Crect –](../../atl-mfc-shared/reference/crect-class.md) nebo ukazatel [RECT](../../mfc/reference/rect-structure1.md) , která označuje nové hranice pro formátování obdélník.
+[Crect –](../../atl-mfc-shared/reference/crect-class.md) nebo ukazatel [RECT](/windows/desktop/api/windef/ns-windef-tagrect) , která označuje nové hranice pro formátování obdélník.
 
 ### <a name="remarks"></a>Poznámky
 

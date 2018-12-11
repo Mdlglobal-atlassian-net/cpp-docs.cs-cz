@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: c27bcfa88ec5ba8b330a62f6ecfbad7e10a54d6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8728c876badcf6648740cc842a1f289789bf0f4
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547482"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178236"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl – třída
 
@@ -111,10 +111,10 @@ inline BOOL CreateManagedControl(
 Datový typ ovládacího prvku, který má být vytvořen. Musí být [typ](https://msdn.microsoft.com/library/system.type) datového typu.
 
 *dwStyle*<br/>
-Styl okna pro ovládací prvek. Určuje kombinaci [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles). V současné době jsou podporovány pouze následující styly: WS_TABSTOP, WS_VISIBLE, WS_DISABLED a WS_GROUP.
+Styl okna pro ovládací prvek. Určuje kombinaci [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles). V současné době jsou podporovány pouze následující styly: WS_TABSTOP WS_VISIBLE, WS_DISABLED a WS_GROUP.
 
 *Rect*<br/>
-A [Rect – struktura](../../mfc/reference/rect-structure1.md) , který definuje souřadnice levého a pravého dolního rohu ovládacího prvku (první přetížení pouze).
+A [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) , který definuje souřadnice levého a pravého dolního rohu ovládacího prvku (první přetížení pouze).
 
 *nPlaceHolderID*<br/>
 Obslužná rutina ovládacího prvku držitel statické místo umístěné v editoru prostředků. Nově vytvořený ovládací prvek Windows Forms nahradí statický ovládací prvek, za předpokladu, že jeho umístění, pořadí vykreslování a styly (druhé přetížení pouze).

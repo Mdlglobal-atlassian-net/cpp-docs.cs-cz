@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 91cf9b2035bf24c16007ed6021772c7d5344fc68
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e7472b808d8b5d743d884d9e3806df7ffe499836
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333264"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178776"
 ---
 # <a name="ccombobox-class"></a>CComboBox – třída
 
@@ -331,7 +331,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpCompareItemStruct*<br/>
-Dlouhým ukazatelem na [compareitemstruct –](../../mfc/reference/compareitemstruct-structure.md) struktury.
+Dlouhým ukazatelem na [compareitemstruct –](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct) struktury.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -383,7 +383,7 @@ virtual BOOL Create(
 Určuje styl pole se seznamem. Použít libovolnou kombinaci [pole se seznamem stylů](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) do pole.
 
 *Rect*<br/>
-Odkazuje na umístění a velikost pole se seznamem. Může být [Rect – struktura](../../mfc/reference/rect-structure1.md) nebo `CRect` objektu.
+Odkazuje na umístění a velikost pole se seznamem. Může být [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) nebo `CRect` objektu.
 
 *pParentWnd*<br/>
 Určuje nadřazené okno ovládacího prvku pole se seznamem (obvykle `CDialog`). Nesmí být NULL.
@@ -450,7 +450,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpDeleteItemStruct*<br/>
-Dlouhým ukazatelem na Windows [deleteitemstruct –](../../mfc/reference/deleteitemstruct-structure.md) strukturu, která obsahuje informace o odstraněné položky. Zobrazit [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) popis této struktury.
+Dlouhým ukazatelem na Windows [deleteitemstruct –](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct) strukturu, která obsahuje informace o odstraněné položky. Zobrazit [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) popis této struktury.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -542,7 +542,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpDrawItemStruct*<br/>
-Ukazatel [drawitemstruct –](../../mfc/reference/drawitemstruct-structure.md) strukturu, která obsahuje informace o typu kreslení vyžaduje.
+Ukazatel [drawitemstruct –](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) strukturu, která obsahuje informace o typu kreslení vyžaduje.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -715,7 +715,7 @@ void GetDroppedControlRect(LPRECT lprect) const;
 ### <a name="parameters"></a>Parametry
 
 *lprect –*<br/>
-Odkazuje [Rect – struktura](../../mfc/reference/rect-structure1.md) , která má obdržet souřadnice.
+Odkazuje [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) , která má obdržet souřadnice.
 
 ### <a name="example"></a>Příklad
 
@@ -1028,7 +1028,7 @@ Pokud úspěšné, maximální počet položek, které pole se seznamem část p
 
 Voláním této funkce před přidáním velký počet položek na část pole se seznamem `CComboBox`.
 
-Windows 95/98 pouze: *wParam* je omezená na 16bitové hodnoty parametru. To znamená, že pole se seznamem nemůže obsahovat více než 32 767 položky. I když je počet položek, které s omezeným přístupem, celková velikost položky v seznamu je omezen pouze dostupnou paměť.
+Windows 95/98 pouze: *WParam* je omezená na 16bitové hodnoty parametru. To znamená, že pole se seznamem nemůže obsahovat více než 32 767 položky. I když je počet položek, které s omezeným přístupem, celková velikost položky v seznamu je omezen pouze dostupnou paměť.
 
 Tato funkce pomáhá zrychlit inicializace pole se seznamem, které mají velký počet položek (více než 100). Preallocates zadaného množství paměti, takže to následné [addstring –](#addstring), [InsertString](#insertstring), a [Dir](#dir) funkce přijímají nejkratší možné době. Odhad můžete použít pro parametry. Pokud jste overestimate, je přidělen některé další paměť. Pokud jste příliš nízko, normální rozdělení se používá pro položky, které překračují předběžně přidělená velikost.
 
@@ -1107,7 +1107,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpMeasureItemStruct*<br/>
-Dlouhým ukazatelem na [measureitemstruct –](../../mfc/reference/measureitemstruct-structure.md) struktury.
+Dlouhým ukazatelem na [measureitemstruct –](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct) struktury.
 
 ### <a name="remarks"></a>Poznámky
 

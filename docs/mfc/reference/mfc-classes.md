@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-ms.openlocfilehash: c35d7bf16b851fe9a96bdd896babfa450c726374
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: ee64ca259f2466bb02f7dd650a10dc18f8d8f8a1
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525273"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178951"
 ---
 # <a name="mfc-classes"></a>MFC – třídy
 
@@ -1099,7 +1099,7 @@ Představuje sadu záznamů ze zdroje dat vybrané.
 Zobrazení, které zobrazuje záznamy databáze v ovládacích prvcích.
 
 [CRect – třída](../../atl-mfc-shared/reference/crect-class.md)<br/>
-Podobně jako Windows [Rect – struktura](rect-structure.md).
+Podobně jako Windows [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect).
 
 [CRectTracker – třída](../../mfc/reference/crecttracker-class.md)<br/>
 Umožňuje položku, která má být zobrazen, přesouvat a různými způsoby se změněnou velikostí.
@@ -1165,7 +1165,7 @@ Zapouzdřuje přechod se sinusovým rozsahem, který má daný rozsah oscilace.
 Zapouzdřuje přechod se sinusovou, který má amplitudu určenou počáteční rychlostí proměnné animace.
 
 [CSize – třída](../../atl-mfc-shared/reference/csize-class.md)<br/>
-Podobně jako Windows [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktura, která implementuje relativní souřadnice nebo pozici.
+Podobně jako Windows [velikost](/windows/desktop/api/windef/ns-windef-tagsize) struktura, která implementuje relativní souřadnice nebo pozici.
 
 [CSliderCtrl – třída](../../mfc/reference/csliderctrl-class.md)<br/>
 Poskytuje funkce pro Windows běžný ovládací prvek posuvník.

@@ -25,12 +25,12 @@ helpviewer_keywords:
 - CTime class
 - shared classes, CTime
 ms.assetid: 0a299544-485b-48dc-9d3c-fdc30f57d612
-ms.openlocfilehash: bed403e4bc1cca1d31a394be7157de9e65abff95
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cedd1bfd4ea955f920e13b5d01beb3a478656b69
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519441"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178119"
 ---
 # <a name="ctime-class"></a>CTime – třída
 
@@ -169,10 +169,10 @@ Určuje, zda je v platnosti letní čas. Může mít jednu ze tří hodnot:
 Hodnoty data a času zástupného kódu MS-DOS převést na hodnotu data a času a zkopírovány do nového `CTime` objektu.
 
 *St*<br/>
-A [SYSTEMTIME](../../mfc/reference/systemtime-structure.md) struktura bude převeden na hodnotu data a času a zkopírovány do nového `CTime` objektu.
+A [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktura bude převeden na hodnotu data a času a zkopírovány do nového `CTime` objektu.
 
 *FT*<br/>
-A [hodnota FILETIME](../../mfc/reference/filetime-structure.md) struktura bude převeden na hodnotu data a času a zkopírovány do nového `CTime` objektu.
+A [hodnota FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktura bude převeden na hodnotu data a času a zkopírovány do nového `CTime` objektu.
 
 *dbts*<br/>
 Odkaz na DBTIMESTAMP strukturu obsahující aktuální místní čas.

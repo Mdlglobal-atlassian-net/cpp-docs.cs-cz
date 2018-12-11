@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: f1d418cadd2739b840efd14874fd4bbd6afeb4c5
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 0a27b78d873b0a561b84b13cc16c67aef9ff2e8b
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177105"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179081"
 ---
 # <a name="cwnd-class"></a>Třída CWnd
 
@@ -1554,7 +1554,7 @@ CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
 ### <a name="parameters"></a>Parametry
 
 *lpPaint*<br/>
-Odkazuje [paintstruct –](../../mfc/reference/paintstruct-structure.md) struktura, která je k přijetí informací o Malování.
+Odkazuje [paintstruct –](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct) struktura, která je k přijetí informací o Malování.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1854,10 +1854,10 @@ void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) 
 ### <a name="parameters"></a>Parametry
 
 *lppoint –*<br/>
-Odkazuje [POINT – struktura](../../mfc/reference/point-structure1.md) nebo `CPoint` koordinuje objekt, který obsahuje klienta má být převeden.
+Odkazuje [POINT – struktura](/windows/desktop/api/windef/ns-windef-tagpoint) nebo `CPoint` koordinuje objekt, který obsahuje klienta má být převeden.
 
 *lprect –*<br/>
-Odkazuje [Rect – struktura](../../mfc/reference/rect-structure1.md) nebo `CRect` koordinuje objekt, který obsahuje klienta má být převeden.
+Odkazuje [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) nebo `CRect` koordinuje objekt, který obsahuje klienta má být převeden.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2061,13 +2061,13 @@ Ukazatel na text, který se zobrazí v ovládacím prvku. Nastaví hodnotu vlast
 Styly Windows. Dostupné styly jsou uvedeny v části poznámky.
 
 *Rect*<br/>
-Určuje velikost a umístění ovládacího prvku. Může se jednat buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [Rect – struktura](../../mfc/reference/rect-structure1.md).
+Určuje velikost a umístění ovládacího prvku. Může se jednat buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect).
 
 *ppt*<br/>
-Odkazuje [POINT – struktura](../../mfc/reference/point-structure1.md) nebo `CPoint` objekt, který obsahuje levém horním rohu ovládacího prvku.
+Odkazuje [POINT – struktura](/windows/desktop/api/windef/ns-windef-tagpoint) nebo `CPoint` objekt, který obsahuje levém horním rohu ovládacího prvku.
 
 *pSize*<br/>
-Odkazuje [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo `CSize` objekt, který obsahuje velikost ovládacího prvku
+Odkazuje [velikost](/windows/desktop/api/windef/ns-windef-tagsize) struktury nebo `CSize` objekt, který obsahuje velikost ovládacího prvku
 
 *pParentWnd*<br/>
 Určuje nadřazené okno ovládacího prvku. Nesmí být NULL.
@@ -2977,7 +2977,7 @@ void EndPaint(LPPAINTSTRUCT lpPaint);
 ### <a name="parameters"></a>Parametry
 
 *lpPaint*<br/>
-Odkazuje [paintstruct –](../../mfc/reference/paintstruct-structure.md) struktura, která obsahuje informace o vykreslování pomocí [BeginPaint](#beginpaint) členskou funkci.
+Odkazuje [paintstruct –](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct) struktura, která obsahuje informace o vykreslování pomocí [BeginPaint](#beginpaint) členskou funkci.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -3710,7 +3710,7 @@ void GetClientRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parametry
 
 *lprect –*<br/>
-Odkazuje [Rect – struktura](../../mfc/reference/rect-structure1.md) nebo `CRect` objektu získat souřadnice klienta. `left` a `top` členové budou 0. `right` a `bottom` bude obsahovat členy, šířku a výšku okna.
+Odkazuje [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) nebo `CRect` objektu získat souřadnice klienta. `left` a `top` členové budou 0. `right` a `bottom` bude obsahovat členy, šířku a výšku okna.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -3784,7 +3784,7 @@ static const MSG* PASCAL GetCurrentMessage();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrací ukazatel na [MSG](../../mfc/reference/msg-structure1.md) strukturu, která obsahuje zprávy v okně se právě zpracovává. By měla být volána pouze při **na**<em>zpráva</em> obslužné rutiny.
+Vrací ukazatel na [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) strukturu, která obsahuje zprávy v okně se právě zpracovává. By měla být volána pouze při **na**<em>zpráva</em> obslužné rutiny.
 
 ### <a name="example"></a>Příklad
 
@@ -4491,7 +4491,7 @@ Adresa proměnné, která bude, který obdrží hodnotu vlastnosti. Musí odpov�
 > [!NOTE]
 > Tato funkce by měla být volána pouze na `CWnd` objekt, který reprezentuje ovládací prvek ActiveX.
 
-Další informace o použití tato členská funkce se ActiveX – kontejnery ovládacích prvků, najdete v článku [ActiveX – kontejnery ovládacích prvků: programování ovládacích prvků ActiveX v kontejneru ovládacího prvku ActiveX](../../mfc/programming-activex-controls-in-a-activex-control-container.md).
+Další informace o použití tato členská funkce se ActiveX – kontejnery ovládacích prvků, najdete v článku [ActiveX – kontejnery ovládacích prvků: Programování ovládacích prvků ActiveX v kontejneru ovládacího prvku ActiveX](../../mfc/programming-activex-controls-in-a-activex-control-container.md).
 
 ##  <a name="getrendertarget"></a>  CWnd::GetRenderTarget
 
@@ -4864,7 +4864,7 @@ BOOL GetUpdateRect(
 ### <a name="parameters"></a>Parametry
 
 *lprect –*<br/>
-Odkazuje `CRect` objektu nebo [Rect – struktura](../../mfc/reference/rect-structure1.md) , která má obdržet souřadnice klienta, který obklopuje oblast aktualizace aktualizace.
+Odkazuje `CRect` objektu nebo [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) , která má obdržet souřadnice klienta, který obklopuje oblast aktualizace aktualizace.
 
 Tento parametr nastavit na hodnotu NULL k určení, zda existuje určitá aktualizace oblast v rámci `CWnd`. Pokud *lprect –* má hodnotu NULL, `GetUpdateRect` členská funkce vrátí nenulovou hodnotu, pokud existuje určitá aktualizace oblast a 0, pokud jeden není. To poskytuje způsob, jak určit, zda je zprávu WM_PAINT výsledkem neplatnou oblast. Nenastavujte tento parametr na hodnotu NULL ve Windows verze 3.0 a starší.
 
@@ -5050,7 +5050,7 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-`flags` Člena [windowplacement –](../../mfc/reference/windowplacement-structure.md) struktura načíst touto funkcí je vždy 0. Pokud `CWnd` maximalizuje, `showCmd` členem `WINDOWPLACEMENT` je SW_SHOWMAXIMIZED. V okně je minimalizován, SW_SHOWMINIMIZED je. V opačném případě je SW_SHOWNORMAL.
+`flags` Člena [windowplacement –](/windows/desktop/api/winuser/ns-winuser-tagwindowplacement) struktura načíst touto funkcí je vždy 0. Pokud `CWnd` maximalizuje, `showCmd` členem `WINDOWPLACEMENT` je SW_SHOWMAXIMIZED. V okně je minimalizován, SW_SHOWMINIMIZED je. V opačném případě je SW_SHOWNORMAL.
 
 ##  <a name="getwindowrect"></a>  CWnd::GetWindowRect
 
@@ -5063,7 +5063,7 @@ void GetWindowRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parametry
 
 *lprect –*<br/>
-Odkazuje `CRect` objektu nebo [Rect – struktura](../../mfc/reference/rect-structure1.md) , který se zobrazí obrazovka souřadnice levého a pravého dolního rohu.
+Odkazuje `CRect` objektu nebo [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) , který se zobrazí obrazovka souřadnice levého a pravého dolního rohu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -5286,7 +5286,7 @@ void InvalidateRect(
 ### <a name="parameters"></a>Parametry
 
 *lprect –*<br/>
-Odkazuje na `CRect` objektu nebo [Rect – struktura](../../mfc/reference/rect-structure1.md) obdélníku (v souřadnice klienta), který obsahuje být přidán do oblasti aktualizace. Pokud *lprect –* má hodnotu NULL, celé oblasti klienta se přidá do oblasti.
+Odkazuje na `CRect` objektu nebo [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) obdélníku (v souřadnice klienta), který obsahuje být přidán do oblasti aktualizace. Pokud *lprect –* má hodnotu NULL, celé oblasti klienta se přidá do oblasti.
 
 *bErase*<br/>
 Určuje, zda je na pozadí v rámci oblasti aktualizace jsou vymazány.
@@ -5370,7 +5370,7 @@ Tato funkce převede parametry VARIANTARG hodnoty a potom vyvolá `IDispatch::In
 > [!NOTE]
 > Tato funkce by měla být volána pouze na `CWnd` objekt, který reprezentuje ovládací prvek ActiveX.
 
-Další informace o použití tato členská funkce se ActiveX – kontejnery ovládacích prvků, najdete v článku [ActiveX – kontejnery ovládacích prvků: programování ovládacích prvků ActiveX v kontejneru ovládacího prvku ActiveX](../../mfc/programming-activex-controls-in-a-activex-control-container.md).
+Další informace o použití tato členská funkce se ActiveX – kontejnery ovládacích prvků, najdete v článku [ActiveX – kontejnery ovládacích prvků: Programování ovládacích prvků ActiveX v kontejneru ovládacího prvku ActiveX](../../mfc/programming-activex-controls-in-a-activex-control-container.md).
 
 ##  <a name="ischild"></a>  CWnd::IsChild
 
@@ -5416,7 +5416,7 @@ BOOL IsDialogMessage(LPMSG lpMsg);
 ### <a name="parameters"></a>Parametry
 
 *lpMsg*<br/>
-Odkazuje na [MSG](../../mfc/reference/msg-structure1.md) strukturu, která obsahuje zprávy, která se má zkontrolovat.
+Odkazuje na [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) strukturu, která obsahuje zprávy, která se má zkontrolovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -5649,7 +5649,7 @@ Identifikuje v okně, ke kterému se převedou body. Pokud má parametr hodnotu 
 Určuje obdélníku, jehož body se má převést. První verze této funkce je k dispozici jenom pro Windows verze 3.1 nebo novější.
 
 *lppoint –*<br/>
-Ukazatel na pole [POINT – struktura](../../mfc/reference/point-structure1.md) , které obsahují sadu bodů má být převeden.
+Ukazatel na pole [POINT – struktura](/windows/desktop/api/windef/ns-windef-tagpoint) , které obsahují sadu bodů má být převeden.
 
 *nCount*<br/>
 Určuje počet `POINT` struktury v poli odkazované *lppoint –*.
@@ -5827,7 +5827,7 @@ Určuje novou výšku `CWnd`.
 Určuje, zda `CWnd` má být překreslit. Při hodnotě TRUE se `CWnd` obdrží [WM_PAINT](/windows/desktop/gdi/wm-paint) zprávy v jeho [OnPaint](#onpaint) obslužné rutiny zpráv jako obvykle. Pokud má parametr hodnotu FALSE, žádné překreslení jakéhokoli druhu vyvolá. To platí pro klientské oblasti, do oblasti myši v neklientské oblasti (včetně pruhy nadpis a posunout) a žádné části odvozeného nadřazené okno zjištěných kvůli `CWnd`je přesunout. Pokud tento parametr hodnotu FALSE, aplikace musí explicitně zneplatnit nebo ho překreslit některé části `CWnd` a nadřazené okno, které musí být překreslení.
 
 *lprect –*<br/>
-[Crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [Rect – struktura](../../mfc/reference/rect-structure1.md) , který určuje novou velikost a umístění.
+[Crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) , který určuje novou velikost a umístění.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -6338,7 +6338,7 @@ afx_msg int OnCompareItem(
 Identifikátor ovládacího prvku, který odeslal zprávu WM_COMPAREITEM.
 
 *lpCompareItemStruct*<br/>
-Obsahuje dlouhým ukazatelem na [compareitemstruct –](../../mfc/reference/compareitemstruct-structure.md) datová struktura, která obsahuje identifikátory a poskytované aplikací dat pro dvě položky v poli se seznamem nebo seznamu.
+Obsahuje dlouhým ukazatelem na [compareitemstruct –](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct) datová struktura, která obsahuje identifikátory a poskytované aplikací dat pro dvě položky v poli se seznamem nebo seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -6446,7 +6446,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpCreateStruct*<br/>
-Odkazuje na [soubor CREATESTRUCT](../../mfc/reference/createstruct-structure.md) strukturu, která obsahuje informace o `CWnd` objekt vytváří.
+Odkazuje na [soubor CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) strukturu, která obsahuje informace o `CWnd` objekt vytváří.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -6581,7 +6581,7 @@ afx_msg void OnDeleteItem(
 Identifikátor ovládacího prvku, který odeslal zprávu WM_DELETEITEM.
 
 *lpDeleteItemStruct*<br/>
-Určuje dlouhým ukazatelem na [deleteitemstruct –](../../mfc/reference/deleteitemstruct-structure.md) datová struktura, která obsahuje informace o odstraněných položek pole.
+Určuje dlouhým ukazatelem na [deleteitemstruct –](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct) datová struktura, která obsahuje informace o odstraněných položek pole.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -6749,7 +6749,7 @@ Určuje dlouhým ukazatelem na `DRAWITEMSTRUCT` datová struktura, která obsahu
 
 ### <a name="remarks"></a>Poznámky
 
-`itemAction` Člena [drawitemstruct –](../../mfc/reference/drawitemstruct-structure.md) struktury definuje výkresu operaci, která se má provést. Data v tento člen umožňuje vlastníkovi ovládacího prvku určit, co vykreslování je potřeba udělat.
+`itemAction` Člena [drawitemstruct –](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) struktury definuje výkresu operaci, která se má provést. Data v tento člen umožňuje vlastníkovi ovládacího prvku určit, co vykreslování je potřeba udělat.
 
 Před návratem z zpracování této zprávy, aplikace by měly zajistit kontextu zařízení identifikován *hDC* člena `DRAWITEMSTRUCT` struktura se obnoví do výchozího stavu.
 
@@ -7018,7 +7018,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO* lpMMI);
 ### <a name="parameters"></a>Parametry
 
 *lpMMI*<br/>
-Odkazuje `MINMAXINFO` strukturu, která obsahuje informace o časové období je maximalizované, velikost a umístění a jeho sledování minimální a maximální velikost. Další informace o této struktuře naleznete v tématu [minmaxinfo –](../../mfc/reference/minmaxinfo-structure.md) struktury.
+Odkazuje `MINMAXINFO` strukturu, která obsahuje informace o časové období je maximalizované, velikost a umístění a jeho sledování minimální a maximální velikost. Další informace o této struktuře naleznete v tématu [minmaxinfo –](/windows/desktop/api/winuser/ns-winuser-tagminmaxinfo) struktury.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -7502,7 +7502,7 @@ Určuje x a y souřadnici kurzoru. Tyto souřadnice jsou vždy relativní k lev�
 
 ### <a name="remarks"></a>Poznámky
 
-Pouze systému windows, které mají CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) styl obdrží `OnLButtonDblClk` volání. Toto je výchozí pro windows Microsoft Foundation Class. Volání Windows `OnLButtonDblClk` když uživatel stiskne, uvolní a potom stiskne levé tlačítko myši znovu v rámci systému, klikněte dvakrát na časový limit. Dvojitým kliknutím levého tlačítka myši ve skutečnosti generuje čtyři události: [WM_LBUTTONDOWN](#onlbuttondown), [WM_LBUTTONUP](#onlbuttonup) zprávy, volání WM_LBUTTONDBLCLK a jiné WM_LBUTTONUP zprávy, když je tlačítko všeobecně dostupné.
+Pouze systému windows, které mají CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) styl obdrží `OnLButtonDblClk` volání. Toto je výchozí pro windows Microsoft Foundation Class. Volání Windows `OnLButtonDblClk` když uživatel stiskne, uvolní a potom stiskne levé tlačítko myši znovu v rámci systému, klikněte dvakrát na časový limit. Dvojitým kliknutím levého tlačítka myši vygeneruje ve skutečnosti čtyři události: [WM_LBUTTONDOWN](#onlbuttondown), [WM_LBUTTONUP](#onlbuttonup) zprávy, WM_LBUTTONDBLCLK volání a další WM_LBUTTONUP zprávu, když se uvolní tlačítko.
 
 > [!NOTE]
 > Tato členská funkce se volá se rozhraním, aby vaše aplikace, aby se zpracovala zpráva Windows. Parametry předané do funkce zahrnují parametry přijata rozhraním, když byla přijata zpráva. Pokud bude volat implementaci základní třídy tuto funkci, použije tuto implementaci parametry původně předána funkci s zpráva a ne parametrů, které zadáte.
@@ -7601,7 +7601,7 @@ Určuje x a y souřadnici kurzoru. Tyto souřadnice jsou vždy relativní k lev�
 
 ### <a name="remarks"></a>Poznámky
 
-Pouze systému windows, které mají CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) styl obdrží `OnMButtonDblClk` volání. Toto je výchozí pro všechny systémy windows Microsoft Foundation Class. Generuje Windows `OnMButtonDblClk` volat, pokud uživatel stiskne, vydání a potom stisknutí prostřední tlačítko myši tlačítko znovu v rámci systému, klikněte dvakrát na časový limit. Dvojitým kliknutím prostřední tlačítko myši. ve skutečnosti generuje čtyři události: [WM_MBUTTONDOWN](#onmbuttondown) a [WM_MBUTTONUP](#onmbuttonup) zprávy, WM_MBUTTONDBLCLK volání a další WM_MBUTTONUP zprávu.
+Pouze systému windows, které mají CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) styl obdrží `OnMButtonDblClk` volání. Toto je výchozí pro všechny systémy windows Microsoft Foundation Class. Generuje Windows `OnMButtonDblClk` volat, pokud uživatel stiskne, vydání a potom stisknutí prostřední tlačítko myši tlačítko znovu v rámci systému, klikněte dvakrát na časový limit. Dvojitým kliknutím prostřední tlačítko myši, generuje se ve skutečnosti čtyři události: [WM_MBUTTONDOWN](#onmbuttondown) a [WM_MBUTTONUP](#onmbuttonup) zprávy, WM_MBUTTONDBLCLK volání a další WM_MBUTTONUP zprávu.
 
 > [!NOTE]
 > Tato členská funkce se volá se rozhraním, aby vaše aplikace, aby se zpracovala zpráva Windows. Parametry předané do funkce zahrnují parametry přijata rozhraním, když byla přijata zpráva. Pokud bude volat implementaci základní třídy tuto funkci, použije tuto implementaci parametry původně předána funkci s zpráva a ne parametrů, které zadáte.
@@ -7714,7 +7714,7 @@ afx_msg void OnMeasureItem(
 ID ovládacího prvku.
 
 *lpMeasureItemStruct*<br/>
-Odkazuje [measureitemstruct –](../../mfc/reference/measureitemstruct-structure.md) datová struktura, která obsahuje dimenze ovládacím prvku vykresleném vlastníkem.
+Odkazuje [measureitemstruct –](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct) datová struktura, která obsahuje dimenze ovládacím prvku vykresleném vlastníkem.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -8149,7 +8149,7 @@ afx_msg void OnMoving(
 K okraji okna přesunout.
 
 *lprect –*<br/>
-Adresa [crect –](../../atl-mfc-shared/reference/crect-class.md) nebo [Rect – struktura](../../mfc/reference/rect-structure1.md) , která bude obsahovat souřadnice položky.
+Adresa [crect –](../../atl-mfc-shared/reference/crect-class.md) nebo [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) , která bude obsahovat souřadnice položky.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -8196,7 +8196,7 @@ afx_msg void OnNcCalcSize(
 Určuje, jestli aplikace měla určit, kterou část oblasti klienta obsahuje platné informace. Windows zkopíruje do zadané oblasti v rámci nové klientské oblasti platné informace. Pokud tento parametr má hodnotu TRUE, aplikace by měl určit, kterou část oblasti klienta je platný.
 
 *lpncsp*<br/>
-Odkazuje [nccalcsize_params –](../../mfc/reference/nccalcsize-params-structure.md) datová struktura, která obsahuje informace o aplikaci můžete použít k výpočtu novou velikost a umístění `CWnd` obdélník (včetně klientské oblasti, ohraničení, titulků, posuvníky a tak dále) .
+Odkazuje [nccalcsize_params –](/windows/desktop/api/winuser/ns-winuser-tagnccalcsize_params) datová struktura, která obsahuje informace o aplikaci můžete použít k výpočtu novou velikost a umístění `CWnd` obdélník (včetně klientské oblasti, ohraničení, titulků, posuvníky a tak dále) .
 
 ### <a name="remarks"></a>Poznámky
 
@@ -8222,7 +8222,7 @@ afx_msg BOOL OnNcCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpCreateStruct*<br/>
-Odkazuje [soubor CREATESTRUCT](../../mfc/reference/createstruct-structure.md) datové struktury pro `CWnd`.
+Odkazuje [soubor CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) datové struktury pro `CWnd`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -8791,7 +8791,7 @@ afx_msg void OnPaintClipboard(
 Určuje ukazatel na okno aplikace schránky. Ukazatel může být dočasné a neměl by být uložen pro pozdější použití.
 
 *hPaintStruct*<br/>
-Identifikuje [paintstruct –](../../mfc/reference/paintstruct-structure.md) datová struktura, která definuje, jaká část oblasti klienta k vykreslení.
+Identifikuje [paintstruct –](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct) datová struktura, která definuje, jaká část oblasti klienta k vykreslení.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -9048,7 +9048,7 @@ Určuje x a y souřadnice kurzoru. Tyto souřadnice jsou vždy relativní k lev�
 
 ### <a name="remarks"></a>Poznámky
 
-Pouze systému windows, které mají CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) styl může přijímat `OnRButtonDblClk` volání. Toto je výchozí pro windows v rámci knihovny Microsoft Foundation Class. Volání Windows `OnRButtonDblClk` když uživatel stiskne, uvolní a poté znovu stiskne pravé tlačítko myši v rámci systému, klikněte dvakrát na časový limit. Dvojitým kliknutím pravým tlačítkem myši ve skutečnosti generuje čtyři události: [WM_RBUTTONDOWN](#onrbuttondown) a [WM_RBUTTONUP](#onrbuttonup) zprávy, `OnRButtonDblClk` volání a jiné WM_RBUTTONUP zprávy, když je tlačítko všeobecně dostupné.
+Pouze systému windows, které mají CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) styl může přijímat `OnRButtonDblClk` volání. Toto je výchozí pro windows v rámci knihovny Microsoft Foundation Class. Volání Windows `OnRButtonDblClk` když uživatel stiskne, uvolní a poté znovu stiskne pravé tlačítko myši v rámci systému, klikněte dvakrát na časový limit. Dvojitým kliknutím pravým tlačítkem myši, generuje se ve skutečnosti čtyři události: [WM_RBUTTONDOWN](#onrbuttondown) a [WM_RBUTTONUP](#onrbuttonup) zprávy, `OnRButtonDblClk` volání a další WM_RBUTTONUP zprávu, když se uvolní tlačítko.
 
 > [!NOTE]
 > Tato členská funkce se volá se rozhraním, aby vaše aplikace, aby se zpracovala zpráva Windows. Parametry předané do funkce zahrnují parametry přijata rozhraním, když byla přijata zpráva. Pokud bude volat implementaci základní třídy tuto funkci, použije tuto implementaci parametry původně předána funkci s zpráva a ne parametrů, které zadáte.
@@ -9410,7 +9410,7 @@ afx_msg void OnSizing(
 K okraji okna přesunout.
 
 *lprect –*<br/>
-Adresa [crect –](../../atl-mfc-shared/reference/crect-class.md) nebo [Rect – struktura](../../mfc/reference/rect-structure1.md) , která bude obsahovat souřadnice položky.
+Adresa [crect –](../../atl-mfc-shared/reference/crect-class.md) nebo [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) , která bude obsahovat souřadnice položky.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -9961,7 +9961,7 @@ afx_msg void OnUniChar(
 |---------------|-----------------|
 |*nChar*|[in] Určuje kód znaku klávesy.|
 |*nRepCnt*|[in] Určuje počet opakování pro aktuální zprávu. Hodnota je počet pokusů, které je stisknutí kláves autorepeated v důsledku uživatele podržíte klávesu. Pokud stisknutí klávesy se nachází dostatečně dlouhé, jsou odeslány více zpráv. Ale není kumulativní počet opakování.|
-|*nFlags*|[in] Příznaky, které určují kontroly kódu, delší klíče, kód kontextu, předchozí klíče stavu a stavu přechodu, jak je znázorněno v následující tabulce:<br /><br /> **0-7:** určuje kontroly kódu. Hodnota závisí na výrobce OEM (OEM).<br /><br /> **8:** určí klíč pro rozšířené, třeba pravém klávesy ALT a CTRL, které se zobrazují v rozšířené klávesnice 101 a 102 klávesami. Příznak je 1, pokud je klíč klíčem rozšířené; v opačném případě je 0.<br /><br /> **9-12:** interně jej využívá Windows.<br /><br /> **13:** určuje kontext kódu. Příznak je 1, pokud je klávesa ALT stisknuta stisknutí klíč; v opačném případě hodnota je 0.<br /><br /> **14:** určuje předchozí klíče stavu. Příznak je 1, pokud klíč je mimo provoz, před odesláním zprávy, nebo 0, pokud je klíč nahoru.<br /><br /> **15:** Určuje přechodový stav. Příznak je 1, pokud je vydán klíči, nebo 0, pokud bylo stisknuto klíč.|
+|*nFlags*|[in] Příznaky, které určují kontroly kódu, delší klíče, kód kontextu, předchozí klíče stavu a stavu přechodu, jak je znázorněno v následující tabulce:<br /><br /> **0-7:** Určuje kód kontroly. Hodnota závisí na výrobce OEM (OEM).<br /><br /> **8:** Určuje rozšířený klíč, třeba pravém klávesy ALT a CTRL, které se zobrazují v rozšířené klávesnice 101 a 102 klávesami. Příznak je 1, pokud je klíč klíčem rozšířené; v opačném případě je 0.<br /><br /> **9 – 12:**  Interně ve Windows.<br /><br /> **13:**  Určuje kontext kódu. Příznak je 1, pokud je klávesa ALT stisknuta stisknutí klíč; v opačném případě hodnota je 0.<br /><br /> **14:**  Určuje předchozí klíče stavu. Příznak je 1, pokud klíč je mimo provoz, před odesláním zprávy, nebo 0, pokud je klíč nahoru.<br /><br /> **15:**  Určuje přechodový stav. Příznak je 1, pokud je vydán klíči, nebo 0, pokud bylo stisknuto klíč.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -10202,7 +10202,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
 ### <a name="parameters"></a>Parametry
 
 *lpwndpos*<br/>
-Odkazuje [windowpos –](../../mfc/reference/windowpos-structure1.md) datová struktura, která obsahuje informace o nové velikosti a pozice okna.
+Odkazuje [windowpos –](/windows/desktop/api/winuser/ns-winuser-tagwindowpos) datová struktura, která obsahuje informace o nové velikosti a pozice okna.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -10226,7 +10226,7 @@ Odkazuje `WINDOWPOS` datová struktura, která obsahuje informace o nové veliko
 
 ### <a name="remarks"></a>Poznámky
 
-Aplikace můžete zabránit změnám v okně zaškrtnutím nebo zrušením odpovídající bity **příznaky** členem [windowpos –](../../mfc/reference/windowpos-structure1.md) struktury.
+Aplikace můžete zabránit změnám v okně zaškrtnutím nebo zrušením odpovídající bity **příznaky** členem [windowpos –](/windows/desktop/api/winuser/ns-winuser-tagwindowpos) struktury.
 
 Pro okno s [WS_OVERLAPPED](styles-used-by-mfc.md#window-styles) nebo [WS_THICKFRAME](styles-used-by-mfc.md#window-styles) styl, odešle výchozí implementace [WM_GETMINMAXINFO](/windows/desktop/winmsg/wm-getminmaxinfo) zprávu do okna. To se provádí ověření novou velikost a pozice okna a vynutit CS_BYTEALIGNCLIENT a CS_BYTEALIGN styly klienta. Aplikace můžete přepsat tato funkce není voláním její základní třídě.
 
@@ -10549,7 +10549,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ### <a name="parameters"></a>Parametry
 
 *cs*<br/>
-A [soubor CREATESTRUCT](../../mfc/reference/createstruct-structure.md) struktury.
+A [soubor CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) struktury.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -10597,7 +10597,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Parametry
 
 *pMsg*<br/>
-Odkazuje [MSG](../../mfc/reference/msg-structure1.md) struktura, která obsahuje zprávu zpracovat.
+Odkazuje [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) struktura, která obsahuje zprávu zpracovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -10719,7 +10719,7 @@ BOOL RedrawWindow(
 ### <a name="parameters"></a>Parametry
 
 *lpRectUpdate*<br/>
-Odkazuje [Rect – struktura](../../mfc/reference/rect-structure1.md) obsahující souřadnice obdélník aktualizace. Tento parametr se ignoruje, pokud *prgnUpdate* obsahuje oblast platný popisovač.
+Odkazuje [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) obsahující souřadnice obdélník aktualizace. Tento parametr se ignoruje, pokud *prgnUpdate* obsahuje oblast platný popisovač.
 
 *prgnUpdate*<br/>
 Identifikuje oblast aktualizace. Pokud mají oba *prgnUpdate* a *lpRectUpdate* hodnotu Null, celé oblasti klienta se přidá do oblasti aktualizace.
@@ -10889,10 +10889,10 @@ Může mít jednu z následujících hodnot:
 - `CWnd::reposExtra` Přidá hodnoty *lpRectParam* klientskou oblast *nIDLast* a také provádí rozložení.
 
 *lpRectParam*<br/>
-Odkazuje [Rect – struktura](../../mfc/reference/rect-structure1.md); využití závisí na hodnotě *načit*.
+Odkazuje [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect); využití závisí na hodnotě *načit*.
 
 *lpRectClient*<br/>
-Odkazuje [Rect – struktura](../../mfc/reference/rect-structure1.md) obsahující dostupné klientské oblasti. Pokud má hodnotu NULL, použije se klientské oblasti okna.
+Odkazuje [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) obsahující dostupné klientské oblasti. Pokud má hodnotu NULL, použije se klientské oblasti okna.
 
 *bStretch*<br/>
 Určuje, zda panel by měl roztažen tak, aby velikost rámce.
@@ -10939,10 +10939,10 @@ void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) 
 ### <a name="parameters"></a>Parametry
 
 *lppoint –*<br/>
-Odkazuje [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu nebo [POINT – struktura](../../mfc/reference/point-structure1.md) obsahující souřadnice obrazovky, který má být převeden.
+Odkazuje [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu nebo [POINT – struktura](/windows/desktop/api/windef/ns-windef-tagpoint) obsahující souřadnice obrazovky, který má být převeden.
 
 *lprect –*<br/>
-Odkazuje [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [Rect – struktura](../../mfc/reference/rect-structure1.md) obsahující souřadnice obrazovky, který má být převeden.
+Odkazuje [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) obsahující souřadnice obrazovky, který má být převeden.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -10973,7 +10973,7 @@ Určuje velikost v jednotkách, zařízení, které vodorovného posouvání. Te
 Určuje velikost v jednotkách, zařízení, které svislé posouvání. Tento parametr musí být záporná hodnota posunout nahoru.
 
 *lprect –*<br/>
-Odkazuje na [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [Rect – struktura](../../mfc/reference/rect-structure1.md) , který určuje část oblasti klienta k posouvat. Pokud *lprect –* má hodnotu NULL, přešli celé oblasti klienta. Blikající kurzor přemístí, pokud kurzor obdélník protíná obdélník posuvníku.
+Odkazuje na [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) , který určuje část oblasti klienta k posouvat. Pokud *lprect –* má hodnotu NULL, přešli celé oblasti klienta. Blikající kurzor přemístí, pokud kurzor obdélník protíná obdélník posuvníku.
 
 *lpClipRect*<br/>
 Odkazuje `CRect` objektu nebo `RECT` struktura, která určuje obdélník oříznutí posouvat. Pouze služba bits uvnitř tohoto obdélníku jsou možnosti posouvat určitý objekt. I když jsou v to nebude mít vliv BITS mimo tento obdélník *lprect –* obdélník. Pokud *lpClipRect* má hodnotu NULL, žádný výstřižek se provádí na posuvníku obdélník.
@@ -11012,7 +11012,7 @@ Určuje velikost v jednotkách, zařízení, které vodorovného posouvání. Te
 Určuje velikost v jednotkách, zařízení, které svislé posouvání. Tento parametr musí mít zápornou hodnotu Posun nahoru.
 
 *lpRectScroll*<br/>
-Odkazuje [Rect – struktura](../../mfc/reference/rect-structure1.md) , který určuje část oblasti klienta k posouvat. Pokud má parametr hodnotu NULL, je posunul celé oblasti klienta.
+Odkazuje [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) , který určuje část oblasti klienta k posouvat. Pokud má parametr hodnotu NULL, je posunul celé oblasti klienta.
 
 *lpRectClip*<br/>
 Odkazuje `RECT` struktura, která určuje obdélník oříznutí posouvat. Tato struktura má přednost před obdélník, který ukazuje *lpRectScroll*. Pouze služba bits uvnitř tohoto obdélníku jsou možnosti posouvat určitý objekt. I když jsou v to nebude mít vliv BITS mimo tento obdélník *lpRectScroll* obdélník. Pokud má parametr hodnotu NULL, žádný výstřižek se provádí na posuvníku obdélník.
@@ -11588,7 +11588,7 @@ Jeden parametr typu určeného *vtProp*.
 > [!NOTE]
 > Tato funkce by měla být volána pouze na `CWnd` objekt, který reprezentuje ovládací prvek OLE.
 
-Další informace o použití s kontejnery OLE tato členská funkce, najdete v článku [ActiveX – kontejnery ovládacích prvků: programování ovládacích prvků ActiveX v kontejneru ovládacího prvku ActiveX](../../mfc/programming-activex-controls-in-a-activex-control-container.md).
+Další informace o použití s kontejnery OLE tato členská funkce, najdete v článku [ActiveX – kontejnery ovládacích prvků: Programování ovládacích prvků ActiveX v kontejneru ovládacího prvku ActiveX](../../mfc/programming-activex-controls-in-a-activex-control-container.md).
 
 ##  <a name="setredraw"></a>  CWnd::SetRedraw
 
@@ -11811,7 +11811,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT* lpwndpl);
 ### <a name="parameters"></a>Parametry
 
 *lpwndpl*<br/>
-Odkazuje [windowplacement –](../../mfc/reference/windowplacement-structure.md) struktura, která určuje nové zobrazení stavu a umístění.
+Odkazuje [windowplacement –](/windows/desktop/api/winuser/ns-winuser-tagwindowplacement) struktura, která určuje nové zobrazení stavu a umístění.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -12304,7 +12304,7 @@ void ValidateRect(LPCRECT lpRect);
 ### <a name="parameters"></a>Parametry
 
 *lprect –*<br/>
-Odkazuje [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [Rect – struktura](../../mfc/reference/rect-structure1.md) obsahující souřadnice klienta obdélníku odeberou z oblasti aktualizace. Pokud *lprect –* má hodnotu NULL, je ověřen celé okno.
+Odkazuje [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) obsahující souřadnice klienta obdélníku odeberou z oblasti aktualizace. Pokud *lprect –* má hodnotu NULL, je ověřen celé okno.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -12342,7 +12342,7 @@ static CWnd* PASCAL WindowFromPoint(POINT point);
 ### <a name="parameters"></a>Parametry
 
 *Bod*<br/>
-Určuje [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu nebo [bodu](../../mfc/reference/point-structure1.md) datová struktura, která definuje bod, která se má zkontrolovat.
+Určuje [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu nebo [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) datová struktura, která definuje bod, která se má zkontrolovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -12420,7 +12420,7 @@ BOOL RegisterTouchWindow(
 Hodnota TRUE označuje registr Windows podpora; dotykového ovládání FALSE v opačném případě.
 
 *ulFlags*<br/>
-Sadu bitových příznaků, které určují volitelné změny. V tomto poli může být 0 nebo jednu z následujících hodnot: TWF_FINETOUCH, TWF_WANTPALM.
+Sadu bitových příznaků, které určují volitelné změny. Toto pole může obsahovat 0 nebo jednu z následujících hodnot: TWF_FINETOUCH, TWF_WANTPALM.
 
 ### <a name="return-value"></a>Návratová hodnota
 

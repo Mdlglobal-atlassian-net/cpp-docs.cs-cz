@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 3ec5b734b23a27522fe430d24d2a65eebcca3dd3
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 9a06f3bd8a8c5646f384c3f788518078b121bfe1
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694722"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178132"
 ---
 # <a name="chotkeyctrl-class"></a>Chotkeyctrl – třída
 
@@ -111,7 +111,7 @@ virtual BOOL Create(
 Určuje styl výměně klíčů ovládacího prvku. Použijte libovolnou kombinaci – styly ovládacího prvku. Zobrazit [– styly běžných ovládacích prvků](/windows/desktop/Controls/common-control-styles) v sadě Windows SDK pro další informace.
 
 *Rect*<br/>
-Určuje velikost a umístění výměně klíčů ovládacího prvku. Může se jednat buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [Rect – struktura](../../mfc/reference/rect-structure1.md).
+Určuje velikost a umístění výměně klíčů ovládacího prvku. Může se jednat buď [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect).
 
 *pParentWnd*<br/>
 Určuje, výměně klíčů nadřazené okno ovládacího prvku, obvykle [CDialog](../../mfc/reference/cdialog-class.md). Nesmí být NULL.

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CBrush [MFC], FromHandle
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
-ms.openlocfilehash: 4f6b5db22b956584507a2979a517ff26d5364a0c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dbc5e36fdf613f1db2818ac6193709829e3bd001
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661640"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178704"
 ---
 # <a name="cbrush-class"></a>Cbrush – třída
 
@@ -185,7 +185,7 @@ BOOL CreateDIBPatternBrush(
 Určuje objekt globální paměť obsahující komprimovat komprimovaný objekt bitmap nezávislých na zařízení (DIB).
 
 *Npoužití*<br/>
-Určuje, zda `bmiColors[]` pole [bitmapinfo –](../../mfc/reference/bitmapinfo-structure.md) struktury dat (část z "komprimace DIB") obsahují explicitní hodnoty RGB nebo indexů do aktuálně realizované logickou paletu. Parametr musí být jedna z následujících hodnot:
+Určuje, zda `bmiColors[]` pole [bitmapinfo –](/windows/desktop/api/wingdi/ns-wingdi-tagbitmapinfo) struktury dat (část z "komprimace DIB") obsahují explicitní hodnoty RGB nebo indexů do aktuálně realizované logickou paletu. Parametr musí být jedna z následujících hodnot:
 
 - DIB_PAL_COLORS tabulku barvy se skládá z pole indexů 16 bitů.
 

@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 2eebfe18275aa63ac26c0c898a5d796300860db8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8cfaef2c8b064cb9faa8c0f6bf65a8868eed7cc7
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476608"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178737"
 ---
 # <a name="cricheditview-class"></a>Cricheditview – třída
 
@@ -787,7 +787,7 @@ virtual void OnFindNext(
 Řetězec, který se má najít.
 
 *bNext*<br/>
-Směr hledání: hodnota TRUE označuje; FALSE provoz.
+Směr hledání: Hodnota TRUE označuje FALSE provoz.
 
 *bCase*<br/>
 Označuje, zda hledání rozlišovat velikost písmen.
@@ -933,7 +933,7 @@ virtual void OnReplaceSel(
 Text, který má být nahrazen.
 
 *bNext*<br/>
-Určuje směr hledání: je TRUE. FALSE provoz.
+Určuje směr hledání: Hodnota TRUE je mimo provoz; FALSE provoz.
 
 *bCase*<br/>
 Určuje, zda je hledání malá a velká písmena.
@@ -1050,7 +1050,7 @@ long PrintInsideRect(
 Ukazatel na kontext zařízení pro výstupní oblasti.
 
 *rectLayout*<br/>
-[Rect –](../../mfc/reference/rect-structure1.md) nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) určující výstupní oblasti.
+[Rect –](/windows/desktop/api/windef/ns-windef-tagrect) nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) určující výstupní oblasti.
 
 *nIndexStart*<br/>
 Z nuly vycházející index prvního znaku, který má být formátováno.

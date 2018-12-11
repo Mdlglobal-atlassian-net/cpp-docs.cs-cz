@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: e0095f2c490ebde10d20ec0705b1297b976b76b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e853a770dd1f98b1e7f06afd814962f3b3805ceb
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528658"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177872"
 ---
 # <a name="ceditview-class"></a>Ceditview – třída
 
@@ -110,7 +110,7 @@ Každý `CEditView` text ovládacího prvku se ukládají v jeho vlastní globá
 
 Vytvořit objekty tohoto typu `CEditView` Pokud chcete oknem upravit s přidané funkce uvedené výše, nebo pokud chcete funkčnost jednoduchého textového editoru. A `CEditView` objekt může zabírat celý klientské oblasti okna. Vlastní odvozovat z `CEditView` přidávat nebo upravovat základní funkce, nebo pro deklaraci třídy, které lze přidat do šablony dokumentu.
 
-Výchozí implementace třídy `CEditView` zpracovává následující příkazy: id_edit_select_all – ID_EDIT_FIND, id_edit_replace –, id_edit_repeat – a ID_FILE_PRINT.
+Výchozí implementace třídy `CEditView` zpracovává následující příkazy: Id_edit_select_all – ID_EDIT_FIND, id_edit_replace –, id_edit_repeat – a ID_FILE_PRINT.
 
 Výchozí omezení počtu znaků pro `CEditView` je (1024 \* 1024-1 = 1048575). To lze změnit pomocí volání funkce EM_LIMITTEXT ovládacích prvků pro základní úpravy. Však omezení se liší v závislosti na operační systém a typ upravit ovládací prvek (jednoduchá nebo víceřádkové). Další informace o těchto omezeních najdete v tématu [EM_LIMITTEXT](/windows/desktop/Controls/em-limittext).
 
@@ -401,7 +401,7 @@ UINT PrintInsideRect(
 Ukazatel na kontext zařízení tiskárny.
 
 *rectLayout*<br/>
-Odkaz [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [Rect – struktura](../../mfc/reference/rect-structure1.md) zadání obdélník, ve kterém má být vykreslen text.
+Odkaz [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) zadání obdélník, ve kterém má být vykreslen text.
 
 *nIndexStart*<br/>
 Index v rámci prvního znaku, které mají být vykresleny vyrovnávací paměti.

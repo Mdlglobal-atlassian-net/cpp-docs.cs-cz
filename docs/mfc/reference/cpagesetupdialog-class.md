@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 136f172dcd406e323afddae87d6fb234b5d4b273
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d3fdcfa664de93f62b8b4dbcbc6184d08fdf591c
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544882"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178079"
 ---
 # <a name="cpagesetupdialog-class"></a>Cpagesetupdialog – třída
 
@@ -142,7 +142,7 @@ Jeden nebo více příznaků, které vám umožní přizpůsobit nastavení dial
 
 - PSD_DISABLEORIENTATION zakáže ovládací prvek dialogového okna orientace stránky.
 
-- Způsobí, že PSD_RETURNDEFAULT `CPageSetupDialog` vrátit [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) a [DEVNAMES –](../../mfc/reference/devnames-structure.md) struktury, které jsou inicializovány pro výchozí tiskárna systému bez zobrazení dialogového okna. Předpokládá se, jak `hDevNames` a `hDevMode` hodnotu Null; v opačném případě vrátí chybu. Pokud se výchozí tiskárna systému je podporována staré ovladače tiskárny (dřívější než Windows verze 3.0), pouze `hDevNames` je vrácena. `hDevMode` má hodnotu NULL.
+- Způsobí, že PSD_RETURNDEFAULT `CPageSetupDialog` vrátit [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) a [DEVNAMES –](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) struktury, které jsou inicializovány pro výchozí tiskárna systému bez zobrazení dialogového okna. Předpokládá se, jak `hDevNames` a `hDevMode` hodnotu Null; v opačném případě vrátí chybu. Pokud se výchozí tiskárna systému je podporována staré ovladače tiskárny (dřívější než Windows verze 3.0), pouze `hDevNames` je vrácena. `hDevMode` má hodnotu NULL.
 
 - PSD_DISABLEPAPER zakáže ovládacího prvku pro výběr dokumentu.
 
@@ -171,7 +171,7 @@ Použití [DoModal](../../mfc/reference/cdialog-class.md#domodal) funkce k zobra
 
 ##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC
 
-Vytvoří kontext zařízení tiskárny ze [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) a [DEVNAMES –](../../mfc/reference/devnames-structure.md) struktury.
+Vytvoří kontext zařízení tiskárny ze [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) a [DEVNAMES –](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) struktury.
 
 ```
 HDC CreatePrinterDC();
@@ -262,7 +262,7 @@ void GetMargins(
 ### <a name="parameters"></a>Parametry
 
 *lpRectMargins*<br/>
-Ukazatel [RECT](rect-structure.md) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který popisuje (v palcích 1/1 000 nebo 1/100 mm) okrajů tisku pro aktuálně vybrané tiskárny. Pro tento parametr předejte hodnotu NULL, pokud vás nezajímají v obdélníku.
+Ukazatel [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který popisuje (v palcích 1/1 000 nebo 1/100 mm) okrajů tisku pro aktuálně vybrané tiskárny. Pro tento parametr předejte hodnotu NULL, pokud vás nezajímají v obdélníku.
 
 *lpRectMinMargins*<br/>
 Ukazatel `RECT` struktury nebo `CRect` objekt, který popisuje (v palcích 1/1 000 nebo 1/100 mm) minimální okrajů tisku pro aktuálně vybrané tiskárny. Pro tento parametr předejte hodnotu NULL, pokud vás nezajímají v obdélníku.
@@ -341,7 +341,7 @@ Určuje zprávu, s upozorněním oblasti na stránce se vykreslí. Může být j
 - WM_PSD_YAFULLPAGERECT oblast pro reprezentaci návratovou hodnotu. Tato oblast se rozšiřuje na okraji oblasti ukázkové stránky.
 
 *lprect –*<br/>
-Ukazatel [crect –](../../atl-mfc-shared/reference/crect-class.md) nebo [RECT](rect-structure.md) objekt, který obsahuje souřadnice oblasti pro kreslení.
+Ukazatel [crect –](../../atl-mfc-shared/reference/crect-class.md) nebo [RECT](/windows/desktop/api/windef/ns-windef-tagrect) objekt, který obsahuje souřadnice oblasti pro kreslení.
 
 ### <a name="return-value"></a>Návratová hodnota
 

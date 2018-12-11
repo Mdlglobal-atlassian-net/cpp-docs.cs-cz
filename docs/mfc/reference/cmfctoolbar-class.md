@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: d1677716db42f7f2e3b74e63562d00527291c144
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98de92a9473d64a87b9b7a9f2891adf4263e1951
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524663"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178964"
 ---
 # <a name="cmfctoolbar-class"></a>Cmfctoolbar – třída
 
@@ -519,7 +519,7 @@ Začlenit `CMFCToolBar` objektu do své aplikace, postupujte podle těchto krok�
 
 1. Volání [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) určit styl ukotvení.
 
-Vložit speciální tlačítko, jako je například pole se seznamem a rozevírací seznam nástrojů, rezervovat zástupné tlačítko v nadřazeném prostředku a nahraďte zástupné tlačítko za běhu pomocí [CMFCToolBar::ReplaceButton](#replacebutton). Další informace najdete v tématu [návod: vložení ovládacích prvků na panely nástrojů](../walkthrough-putting-controls-on-toolbars.md).
+Vložit speciální tlačítko, jako je například pole se seznamem a rozevírací seznam nástrojů, rezervovat zástupné tlačítko v nadřazeném prostředku a nahraďte zástupné tlačítko za běhu pomocí [CMFCToolBar::ReplaceButton](#replacebutton). Další informace najdete v tématu [názorný postup: Vkládání ovládacích prvků na panely nástrojů](../walkthrough-putting-controls-on-toolbars.md).
 
 `CMFCToolBar` je základní třída pro třídy knihovny MFC [cmfcmenubar – třída](../../mfc/reference/cmfcmenubar-class.md), [cmfcpopupmenubar – třída](../../mfc/reference/cmfcpopupmenubar-class.md), a [CMFCDropDownToolbar – třída](../../mfc/reference/cmfcdropdowntoolbar-class.md).
 
@@ -1242,7 +1242,7 @@ void EnableReflections(BOOL bEnable = TRUE);
 
 Volejte tuto metodu za účelem povolení reflexe příkaz pro tlačítka panelu nástrojů, které obsahují vložené ovládací prvky, jako je například pole se seznamem.
 
-Další informace o reflexi příkazu najdete v tématu [TN062: reflexe zprávy pro Windows prvky](../../mfc/tn062-message-reflection-for-windows-controls.md).
+Další informace o reflexi příkazu najdete v tématu [TN062: Zpráva reflexe pro ovládací prvky Windows](../../mfc/tn062-message-reflection-for-windows-controls.md).
 
 ##  <a name="enabletextlabels"></a>  CMFCToolBar::EnableTextLabels
 
@@ -2491,7 +2491,7 @@ Hodnota TRUE, pokud poslední příkaz byl odeslán z tlačítka, který *pButto
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda získá ukazatel [msg – struktura](../../mfc/reference/msg-structure1.md) voláním `CWnd::GetCurrentMessage`. Poté porovná HWND. tlačítko s `MSG::lParam` a `MSG::hwnd` členy k určení, zda byla tlačítka zdroji příkazu.
+Tato metoda získá ukazatel [msg – struktura](/windows/desktop/api/winuser/ns-winuser-tagmsg) voláním `CWnd::GetCurrentMessage`. Poté porovná HWND. tlačítko s `MSG::lParam` a `MSG::hwnd` členy k určení, zda byla tlačítka zdroji příkazu.
 
 ##  <a name="islocked"></a>  CMFCToolBar::IsLocked
 
@@ -3905,5 +3905,5 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
 [CMFCMenuBar – třída](../../mfc/reference/cmfcmenubar-class.md)<br/>
 [CMFCPopupMenuBar – třída](../../mfc/reference/cmfcpopupmenubar-class.md)<br/>
 [CMFCDropDownToolBar – třída](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
-[Návod: Umístění ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+[Návod: Vkládání ovládacích prvků na panely nástrojů](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 

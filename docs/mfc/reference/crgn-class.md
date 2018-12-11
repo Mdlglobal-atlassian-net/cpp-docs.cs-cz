@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 9c08b679f1423b499a5b95b260fd0fac9ddeaf9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74ee046e81e0f55e5550220166c957317c2bf6cd
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467977"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178548"
 ---
 # <a name="crgn-class"></a>Crgn – třída
 
@@ -78,13 +78,13 @@ class CRgn : public CGdiObject
 |[CRgn::CombineRgn](#combinergn)|Nastaví `CRgn` objektu tak, aby je ekvivalentní k sjednocení dvou zadaný `CRgn` objekty.|
 |[CRgn::CopyRgn](#copyrgn)|Nastaví `CRgn` objektu tak, že jde o kopii zadaného `CRgn` objektu.|
 |[CRgn::CreateEllipticRgn](#createellipticrgn)|Inicializuje `CRgn` objektu s elipsy oblastí.|
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Inicializuje `CRgn` objekt elipsy oblast určené [RECT](../../mfc/reference/rect-structure1.md) struktury.|
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Inicializuje `CRgn` objekt elipsy oblast určené [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury.|
 |[CRgn::CreateFromData](#createfromdata)|Vytvoří z dané oblasti a transformace dat v oblasti.|
 |[CRgn::CreateFromPath](#createfrompath)|Vytvoří oblast cesty, který je vybraný v kontextu daného zařízení.|
 |[CRgn::CreatePolygonRgn](#createpolygonrgn)|Inicializuje `CRgn` objektu s mnohoúhelníkové oblastí. Systém mnohoúhelníku se automaticky zavře, v případě potřeby kreslením řádku od posledního vrcholu první.|
 |[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|Inicializuje `CRgn` objektu s oblastí, který se skládá z řady uzavřené mnohoúhelníky. Může být polygonů nesouvislý, nebo mohou překrývat.|
 |[CRgn::CreateRectRgn](#createrectrgn)|Inicializuje `CRgn` objekt s obdélníková oblast.|
-|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Inicializuje `CRgn` objekt s obdélníková oblast určené [RECT](../../mfc/reference/rect-structure1.md) struktury.|
+|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Inicializuje `CRgn` objekt s obdélníková oblast určené [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury.|
 |[CRgn::CreateRoundRectRgn](#createroundrectrgn)|Inicializuje `CRgn` objekt s oblasti obdélníkový zaoblené rohy.|
 |[CRgn::EqualRgn](#equalrgn)|Zkontroluje dvě `CRgn` objekty k určení, zda jsou ekvivalentní.|
 |[CRgn::FromHandle](#fromhandle)|Vrací ukazatel `CRgn` objektu, když je zadaný popisovač do oblasti Windows.|
@@ -297,13 +297,13 @@ BOOL CreateFromData(
 ### <a name="parameters"></a>Parametry
 
 *lpXForm*<br/>
-Odkazuje na [xform –](../../mfc/reference/xform-structure.md) datová struktura, která definuje transformaci provést v oblasti. Pokud tento ukazatel je NULL, použije se identita transformaci.
+Odkazuje na [xform –](/windows/desktop/api/wingdi/ns-wingdi-tagxform) datová struktura, která definuje transformaci provést v oblasti. Pokud tento ukazatel je NULL, použije se identita transformaci.
 
 *nCount*<br/>
 Určuje počet bajtů, na které odkazuje *pRgnData*.
 
 *pRgnData*<br/>
-Odkazuje [rgndata –](../../mfc/reference/rgndata-structure.md) datová struktura, která obsahuje data oblasti.
+Odkazuje [rgndata –](/windows/desktop/api/wingdi/ns-wingdi-_rgndata) datová struktura, která obsahuje data oblasti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -631,7 +631,7 @@ int GetRegionData(
 ### <a name="parameters"></a>Parametry
 
 *lpRgnData*<br/>
-Odkazuje [rgndata –](../../mfc/reference/rgndata-structure.md) datová struktura, která přijímá informace. Pokud má parametr hodnotu NULL, návratová hodnota obsahuje počet bajtů potřebných pro datové oblasti.
+Odkazuje [rgndata –](/windows/desktop/api/wingdi/ns-wingdi-_rgndata) datová struktura, která přijímá informace. Pokud má parametr hodnotu NULL, návratová hodnota obsahuje počet bajtů potřebných pro datové oblasti.
 
 *nCount*<br/>
 Určuje velikost v bajtech, *lpRgnData* vyrovnávací paměti.

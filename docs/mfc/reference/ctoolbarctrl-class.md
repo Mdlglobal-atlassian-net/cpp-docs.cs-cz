@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: d2214af96f3eba7d1b1d3c8e52f0c82873b982d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e2df5117f6cbb96c69f54fe9e21f85b45218d6d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463004"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178977"
 ---
 # <a name="ctoolbarctrl-class"></a>Ctoolbarctrl – třída
 
@@ -1106,7 +1106,7 @@ BOOL GetMaxSize(LPSIZE pSize) const;
 ### <a name="parameters"></a>Parametry
 
 *pSize*<br/>
-Ukazatel [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktura, která přijímá velikost položek.
+Ukazatel [velikost](/windows/desktop/api/windef/ns-windef-tagsize) struktura, která přijímá velikost položek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1247,7 +1247,7 @@ Informace o stavu na tlačítko v případě úspěchu nebo – 1 jinak. Informa
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je obzvláště užitečné, pokud chcete načíst více než jeden stavy tlačítka. K načtení jenom jeden stav, použijte jednu z následujících členské funkce: [IsButtonEnabled](#isbuttonenabled), [IsButtonChecked](#isbuttonchecked), [IsButtonPressed](#isbuttonpressed), [IsButtonHidden ](#isbuttonhidden), nebo [IsButtonIndeterminate](#isbuttonindeterminate). Ale `GetState` členská funkce je jediný způsob, jak zjišťovat TBSTATE_WRAP tlačítko.
+Tato funkce je obzvláště užitečné, pokud chcete načíst více než jeden stavy tlačítka. K načtení jenom jeden stav, použijte jednu z následujících členské funkce: [IsButtonEnabled](#isbuttonenabled), [IsButtonChecked](#isbuttonchecked), [IsButtonPressed](#isbuttonpressed), [IsButtonHidden](#isbuttonhidden), nebo [IsButtonIndeterminate](#isbuttonindeterminate). Ale `GetState` členská funkce je jediný způsob, jak zjišťovat TBSTATE_WRAP tlačítko.
 
 ##  <a name="getstring"></a>  CToolBarCtrl::GetString
 
@@ -2335,7 +2335,7 @@ Nenulové, pokud je úspěšná. jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je obzvláště užitečné, pokud chcete nastavit více než jeden stavy tlačítka. Stačí nastavit jeden stav, použijte jednu z následujících členské funkce: [enablebutton –](#enablebutton), [CheckButton](#checkbutton), [HideButton](#hidebutton), [Neurčitost](#indeterminate), nebo [PressButton](#pressbutton).
+Tato funkce je obzvláště užitečné, pokud chcete nastavit více než jeden stavy tlačítka. Stačí nastavit jeden stav, použijte jednu z následujících členské funkce: [Enablebutton –](#enablebutton), [CheckButton](#checkbutton), [HideButton](#hidebutton), [neurčitý](#indeterminate), nebo [PressButton](#pressbutton).
 
 ##  <a name="setstyle"></a>  CToolBarCtrl::SetStyle
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMetaFileDC [MFC], Create
 - CMetaFileDC [MFC], CreateEnhanced
 ms.assetid: ffce60fa-4181-4d46-9832-25e46fad4db4
-ms.openlocfilehash: 343ab1a5d0c38ab0d17c609fbfc134b144502553
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bfbe03c5c81b2c7d6517dff7ce4e5f88b7c076bc
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471809"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178301"
 ---
 # <a name="cmetafiledc-class"></a>Cmetafiledc – třída
 
@@ -186,7 +186,7 @@ Identifikuje odkazovacího zařízení pro rozšířený metasoubor.
 Odkazuje na řetězec znaků zakončené znakem null. Určuje název souboru pro rozšířený metasoubor, který se má vytvořit. Pokud má parametr hodnotu NULL, je rozšířený metasoubor paměti na základě a její obsah, mimo jiné ušlých při zničení objektu, nebo když Win32 `DeleteEnhMetaFile` funkce je volána.
 
 *lpBounds*<br/>
-Odkazuje [RECT](../../mfc/reference/rect-structure1.md) datová struktura nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který určuje rozměry v jednotkách HIMETRIC (v přírůstcích po.01 milimetru) obrázku, který bude uložen do rozšířený metasoubor.
+Odkazuje [RECT](/windows/desktop/api/windef/ns-windef-tagrect) datová struktura nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objekt, který určuje rozměry v jednotkách HIMETRIC (v přírůstcích po.01 milimetru) obrázku, který bude uložen do rozšířený metasoubor.
 
 *lpszDescription*<br/>
 Odkazuje na řetězec ukončit nulou, který určuje název aplikace, která vytvoří na obrázku, stejně jako na obrázku názvu.

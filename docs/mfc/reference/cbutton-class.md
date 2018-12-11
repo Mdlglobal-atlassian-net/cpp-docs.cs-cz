@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 745b04751c96e79c6bfa332ebdde15b254578137
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 26dcf50cc3dc48fec5d6e4957ffd1ef340ad1dbf
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694800"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178640"
 ---
 # <a name="cbutton-class"></a>CButton – třída
 
@@ -265,7 +265,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpDrawItemStruct*<br/>
-Dlouhým ukazatelem na [drawitemstruct –](../../mfc/reference/drawitemstruct-structure.md) struktury. Struktura obsahuje informace o položka, která má být vykreslena a typ kresby vyžaduje.
+Dlouhým ukazatelem na [drawitemstruct –](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) struktury. Struktura obsahuje informace o položka, která má být vykreslena a typ kresby vyžaduje.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -532,7 +532,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*pSize*|[out] Ukazatel [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktura, která přijímá popis obdélníku.|
+|*pSize*|[out] Ukazatel [velikost](/windows/desktop/api/windef/ns-windef-tagsize) struktura, která přijímá popis obdélníku.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1006,7 +1006,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*pSize*|[in] Ukazatel [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktura, která popisuje ohraničující obdélník.|
+|*pSize*|[in] Ukazatel [velikost](/windows/desktop/api/windef/ns-windef-tagsize) struktura, která popisuje ohraničující obdélník.|
 
 ### <a name="return-value"></a>Návratová hodnota
 

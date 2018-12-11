@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: b33c4c89276b99b6b5f8a4129ef17f809f058ac5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a82793ce29765bf01e8c52c94257bd3150187505
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547313"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178457"
 ---
 # <a name="cmfcbutton-class"></a>Cmfcbutton – třída
 
@@ -567,7 +567,7 @@ virtual void OnDraw(
 [in] Odkaz na obdélník, který za rozsahem tlačítka.
 
 *uiState*<br/>
-[in] Aktuální stav tlačítka. Další informace najdete v tématu `itemState` člena [drawitemstruct – struktura](../../mfc/reference/drawitemstruct-structure.md) tématu.
+[in] Aktuální stav tlačítka. Další informace najdete v tématu `itemState` člena [drawitemstruct – struktura](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) tématu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -593,7 +593,7 @@ virtual void OnDrawBorder(
 [in] Odkaz na obdélník, který za rozsahem tlačítka.
 
 *uiState*<br/>
-[in] Aktuální stav tlačítka. Další informace najdete v tématu `itemState` člena [drawitemstruct – struktura](../../mfc/reference/drawitemstruct-structure.md) tématu.
+[in] Aktuální stav tlačítka. Další informace najdete v tématu `itemState` člena [drawitemstruct – struktura](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) tématu.
 
 ### <a name="remarks"></a>Poznámky
 

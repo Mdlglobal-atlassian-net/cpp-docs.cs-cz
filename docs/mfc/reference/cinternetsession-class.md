@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: 3b820ea3687fd52947eff48e4814ab4173fd95c7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 216f3bf0ce62eb6e69ad0650289c4c2d91f95159
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519290"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178158"
 ---
 # <a name="cinternetsession-class"></a>Cinternetsession – třída
 
@@ -98,7 +98,7 @@ Pokud je otevřít na adresu URL na serveru Internetu pomocí `OpenURL`, si mů�
 
 `CInternetSession` Členské funkce [SetCookie](#setcookie), [GetCookie](#getcookie), a [GetCookieLength](#getcookielength) poskytují způsob, jak spravovat databázi souboru cookie Win32, pomocí kterého spravovat servery a skripty informace o klientské pracovní stanice stavu.
 
-Další informace o základní Internet programovacích úloh, najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md). Obecné informace o pomocí tříd WinInet knihovny MFC, najdete v článku [Internet programování pomocí rozhraní WinInet](../../mfc/win32-internet-extensions-wininet.md).
+Další informace o základní Internet programovacích úloh, najdete v článku [Internet první kroky: Wininet –](../../mfc/wininet-basics.md). Obecné informace o pomocí tříd WinInet knihovny MFC, najdete v článku [Internet programování pomocí rozhraní WinInet](../../mfc/win32-internet-extensions-wininet.md).
 
 > [!NOTE]
 > `CInternetSession` vyvolá výjimku [afxthrownotsupportedexception –](exception-processing.md#afxthrownotsupportedexception) pro typy nepodporované služeb. Aktuálně jsou podporovány pouze následující typy služeb: FTP, HTTP, gopher a soubor.
@@ -152,7 +152,7 @@ Název proxy upřednostňované CERN Pokud *dwAccessType* je nastaven jako INTER
 Ukazatel na řetězec obsahující volitelný seznam adres serveru. Tyto adresy může obejít, při použití proxy serveru přístup. Pokud není zadána hodnota NULL, seznam obcházení bude číst z registru. Tento parametr má smysl pouze v případě *dwAccessType* je nastavena na INTERNET_OPEN_TYPE_PROXY.
 
 *dwFlags*<br/>
-Určuje různé možnosti ukládání do mezipaměti. Výchozí hodnota je nastavena na hodnotu 0. Možné hodnoty:
+Určuje různé možnosti ukládání do mezipaměti. Výchozí hodnota je nastavena na hodnotu 0. Mezi možné hodnoty patří:
 
 - INTERNET_FLAG_DONT_CACHE Neukládat do mezipaměti dat, místně nebo v veškeré servery brány.
 
@@ -223,7 +223,7 @@ Definované aplikací kontextu identifikátor.
 
 [Onstatuscallback –](#onstatuscallback) používá vrácené ID kontextu `GetContext` informuje o stavu konkrétní aplikaci. Například když uživatel aktivuje požadavek na Internetu, která zahrnuje vracení informací o stavu, stav zpětného volání používá ID kontextu účelem nahlášení stavu tohoto konkrétního požadavku. Pokud uživatel aktivuje dva samostatné Internet požadavků, obojí zahrnuje vracení informací o stavu `OnStatusCallback` pomocí identifikátorů kontextu návratový stav týkající se jejich odpovídajících požadavků. V důsledku toho identifikátor kontextu se používá pro všechny operace stav zpětného volání a je přidružená k relaci, dokud relace se ukončí.
 
-Další informace o asynchronních operací, najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md).
+Další informace o asynchronních operací, najdete v článku [Internet první kroky: Wininet –](../../mfc/wininet-basics.md).
 
 ## <a name="getcookie"></a>  CInternetSession::GetCookie
 
@@ -457,7 +457,7 @@ Nejprve je třeba volat [EnableStatusCallback](#enablestatuscallback) výhod sta
 |-----------|-------------|
 |INTERNET_STATUS_RESOLVING_NAME|Vyhledávání IP adresu jméno obsažené v *lpvStatusInformation*.|
 |INTERNET_STATUS_NAME_RESOLVED|Úspěšně našli adresu IP názvu součástí *lpvStatusInformation*.|
-|INTERNET_STATUS_CONNECTING_TO_SERVER|Připojení k soketu adresu ([sockaddr –](../../mfc/reference/sockaddr-structure.md)) ukazuje *lpvStatusInformation*.|
+|INTERNET_STATUS_CONNECTING_TO_SERVER|Připojení k soketu adresu ([sockaddr –](/windows/desktop/winsock/sockaddr-2)) ukazuje *lpvStatusInformation*.|
 |INTERNET_STATUS_CONNECTED_TO_SERVER|Úspěšně připojeno k adresy soketu (sockaddr –), na které odkazuje *lpvStatusInformation*.|
 |INTERNET_STATUS_SENDING_REQUEST|Žádost o informace se odesílají na server. *LpvStatusInformation* parametr hodnotu NULL.|
 |INTERNET_STATUS_ REQUEST_SENT|Úspěšně se odeslal žádost o informace k serveru. *LpvStatusInformation* parametr hodnotu NULL.|
@@ -475,7 +475,7 @@ Potlačí tuto členskou funkci tak, aby vyžadovala některé akce před spušt
 
 [!code-cpp[NVC_MFCHtmlHttp#8](../../mfc/reference/codesnippet/cpp/cinternetsession-class_1.cpp)]
 
-Další informace o asynchronních operací, najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md).
+Další informace o asynchronních operací, najdete v článku [Internet první kroky: Wininet –](../../mfc/wininet-basics.md).
 
 ## <a name="openurl"></a>  CInternetSession::OpenURL
 
@@ -612,7 +612,7 @@ Délka *lpBuffer* nebo velikost *dwValue*.
 DWORD, který obsahuje nastavení možnosti.
 
 *dwFlags*<br/>
-Určuje různé možnosti ukládání do mezipaměti. Výchozí hodnota je nastavena na hodnotu 0. Možné hodnoty:
+Určuje různé možnosti ukládání do mezipaměti. Výchozí hodnota je nastavena na hodnotu 0. Mezi možné hodnoty patří:
 
 - INTERNET_FLAG_DONT_CACHE Neukládat do mezipaměti dat, místně nebo v veškeré servery brány.
 

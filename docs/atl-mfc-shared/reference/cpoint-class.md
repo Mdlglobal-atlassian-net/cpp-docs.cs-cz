@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: 5df8dbe03a59f899f2157eff842218e91e8f40dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4f6ab15f80ac448b4e7383e2db92f22262c20d08
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500617"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178066"
 ---
 # <a name="cpoint-class"></a>Cpoint – třída
 
@@ -55,9 +55,9 @@ class CPoint : public tagPOINT
 
 ## <a name="remarks"></a>Poznámky
 
-Zahrnuje také členské funkce pro manipulaci s `CPoint` a [bodu](../../mfc/reference/point-structure.md) struktury.
+Zahrnuje také členské funkce pro manipulaci s `CPoint` a [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury.
 
-A `CPoint` objektu lze použít všude, kde `POINT` struktura se používá. Operátory, které pracují s "velikost" této třídy buď přijměte [CSize](../../atl-mfc-shared/reference/csize-class.md) objekty nebo [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktur, protože zaměnitelné.
+A `CPoint` objektu lze použít všude, kde `POINT` struktura se používá. Operátory, které pracují s "velikost" této třídy buď přijměte [CSize](../../atl-mfc-shared/reference/csize-class.md) objekty nebo [velikost](/windows/desktop/api/windef/ns-windef-tagsize) struktur, protože zaměnitelné.
 
 > [!NOTE]
 >  Tato třída je odvozena z `tagPOINT` struktury. (Název `tagPOINT` je název ne tak často používaná pro `POINT` struktura.) To znamená, že datové členy `POINT` strukturu, `x` a `y`, jsou dostupné datové členy `CPoint`.
@@ -96,10 +96,10 @@ Určuje hodnotu `x` člen `CPoint`.
 Určuje hodnotu `y` člen `CPoint`.
 
 *initPt*<br/>
-[BOD](../../mfc/reference/point-structure.md) struktury nebo `CPoint` určující hodnoty použité k inicializaci `CPoint`.
+[BOD](/windows/desktop/api/windef/ns-windef-tagpoint) struktury nebo `CPoint` určující hodnoty použité k inicializaci `CPoint`.
 
 *initSize*<br/>
-[VELIKOST](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) určující hodnoty použité k inicializaci `CPoint`.
+[VELIKOST](/windows/desktop/api/windef/ns-windef-tagsize) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) určující hodnoty použité k inicializaci `CPoint`.
 
 *dwPoint*<br/>
 Nastaví `x` člen pro nižší řád slova *dwPoint* a `y` člena na vyšší řád slova *dwPoint*.
@@ -154,10 +154,10 @@ Určuje velikost odsazení `x` člena `CPoint`.
 Určuje velikost odsazení `y` člena `CPoint`.
 
 *Bod*<br/>
-Určuje dobu ( [bodu](../../mfc/reference/point-structure.md) nebo `CPoint`) pro posun `CPoint`.
+Určuje dobu ( [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) nebo `CPoint`) pro posun `CPoint`.
 
 *Velikost*<br/>
-Určuje dobu ( [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) nebo [CSize](../../atl-mfc-shared/reference/csize-class.md)) pro posun `CPoint`.
+Určuje dobu ( [velikost](/windows/desktop/api/windef/ns-windef-tagsize) nebo [CSize](../../atl-mfc-shared/reference/csize-class.md)) pro posun `CPoint`.
 
 ### <a name="example"></a>Příklad
 
@@ -174,7 +174,7 @@ BOOL operator==(POINT point) const throw();
 ### <a name="parameters"></a>Parametry
 
 *Bod*<br/>
-Obsahuje [bodu](../../mfc/reference/point-structure.md) struktury nebo `CPoint` objektu.
+Obsahuje [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury nebo `CPoint` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -195,7 +195,7 @@ BOOL operator!=(POINT point) const throw();
 ### <a name="parameters"></a>Parametry
 
 *Bod*<br/>
-Obsahuje [bodu](../../mfc/reference/point-structure.md) struktury nebo `CPoint` objektu.
+Obsahuje [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury nebo `CPoint` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -217,10 +217,10 @@ void operator+=(POINT point) throw();
 ### <a name="parameters"></a>Parametry
 
 *Velikost*<br/>
-Obsahuje [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.
+Obsahuje [velikost](/windows/desktop/api/windef/ns-windef-tagsize) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.
 
 *Bod*<br/>
-Obsahuje [bodu](../../mfc/reference/point-structure.md) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.
+Obsahuje [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -246,10 +246,10 @@ void operator-=(POINT point) throw();
 ### <a name="parameters"></a>Parametry
 
 *Velikost*<br/>
-Obsahuje [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.
+Obsahuje [velikost](/windows/desktop/api/windef/ns-windef-tagsize) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.
 
 *Bod*<br/>
-Obsahuje [bodu](../../mfc/reference/point-structure.md) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.
+Obsahuje [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -276,13 +276,13 @@ CRect operator+(const RECT* lpRect) const throw();
 ### <a name="parameters"></a>Parametry
 
 *Velikost*<br/>
-Obsahuje [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.
+Obsahuje [velikost](/windows/desktop/api/windef/ns-windef-tagsize) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.
 
 *Bod*<br/>
-Obsahuje [bodu](../../mfc/reference/point-structure.md) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.
+Obsahuje [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.
 
 *lprect –*<br/>
-Obsahuje ukazatel [RECT](../../mfc/reference/rect-structure.md) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu.
+Obsahuje ukazatel [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -312,13 +312,13 @@ CPoint operator-() const throw();
 ### <a name="parameters"></a>Parametry
 
 *Bod*<br/>
-A [bodu](../../mfc/reference/point-structure.md) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.
+A [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.
 
 *Velikost*<br/>
-A [velikost](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.
+A [velikost](/windows/desktop/api/windef/ns-windef-tagsize) struktury nebo [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu.
 
 *lprect –*<br/>
-Ukazatel [RECT](../../mfc/reference/rect-structure.md) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu.
+Ukazatel [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struktury nebo [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -344,7 +344,7 @@ Operátor unární negate bod. Například použití s bodem unární operátor 
 
 [Ukázky knihovny MFC MDI](../../visual-cpp-samples.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[POINT – struktura](../../mfc/reference/point-structure.md)<br/>
+[POINT – struktura](/windows/desktop/api/windef/ns-windef-tagpoint)<br/>
 [CRect – třída](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CSize – třída](../../atl-mfc-shared/reference/csize-class.md)
 
