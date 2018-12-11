@@ -4,12 +4,12 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: aa93158e518950efa9d1f2f8092aeabbc3c7724c
-ms.sourcegitcommit: 99437d7da4528ce72cabe6b6a65a9be5dfd090f8
+ms.openlocfilehash: ef61ebbfad62e6a7bf764bad35204247e47d8ddb
+ms.sourcegitcommit: 6990f842fefc27b522b15cf352f3517b319d78da
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51598818"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53248569"
 ---
 # <a name="compiler-options-listed-by-category"></a>Možnosti kompilátoru uvedené podle kategorie
 
@@ -62,7 +62,7 @@ Tento článek obsahuje seznam kategorií možností kompilátoru. Abecední sez
 |[/ homeparams](homeparams-copy-register-parameters-to-stack.md)|Přinutí parametry předané do registrů k zápisu do jejich umístění v zásobníku při vstupu funkce. Tato možnost kompilátoru je pouze pro x64 kompilátory (nativní a křížové kompilování).|
 |[/ hotpatch](hotpatch-create-hotpatchable-image.md)|Vytvoří bitovou kopii opravitelnou za provozu.|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Vytvoří rychlé transcendentals.|
-|[QIfist](qifist-suppress-ftol.md)|Zastaralé Potlačí volání funkce nápovědy `_ftol` při převodu z typu s plovoucí desetinnou čárkou na celočíselný typ vyžádáním. (pouze x86)|
+|[/ QIfist](qifist-suppress-ftol.md)|Zastaralé Potlačí volání funkce nápovědy `_ftol` při převodu z typu s plovoucí desetinnou čárkou na celočíselný typ vyžádáním. (pouze x86)|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Odebere `fwait` příkazy uvnitř `try` bloky.|
 |[/ Qpar](qpar-auto-parallelizer.md)|Povolí automatickou paralelizaci smyček.|
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|Povolí protokolování úrovní pro automatickou paralelizaci.|
@@ -207,7 +207,7 @@ Tento článek obsahuje seznam kategorií možností kompilátoru. Abecední sez
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Zastaralé Povolí rychlé kontroly. Použití [RTC1](rtc-run-time-error-checks.md) místo.|
 |[/H](h-restrict-length-of-external-names.md)|Zastaralé Omezí délku externích (veřejných) názvů.|
 |[/Og](og-global-optimizations.md)|Zastaralé Používá globální optimalizace.|
-|[QIfist](qifist-suppress-ftol.md)|Zastaralé Jednou použít k určení jak převést z typu s plovoucí desetinnou čárkou na celočíselný typ.|
+|[/ QIfist](qifist-suppress-ftol.md)|Zastaralé Jednou použít k určení jak převést z typu s plovoucí desetinnou čárkou na celočíselný typ.|
 |[/V](v-version-number.md)|Zastaralé Nastaví řetězec verze souboru .obj.|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|Zastaralé. Zjistí problémy s 64bitovou přenositelností.|
 |[/Yd](yd-place-debug-information-in-object-file.md)|Zastaralé Umístí úplnou informaci o ladění do všech objektových souborů. Použití [/zi](z7-zi-zi-debug-information-format.md) místo.|
