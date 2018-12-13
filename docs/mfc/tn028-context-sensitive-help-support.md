@@ -20,7 +20,7 @@ ms.locfileid: "51520153"
 Tato poznámka popisuje pravidla pro přiřazování ID kontextů nápovědy a další problémy nápovědy v knihovně MFC. Podpora kontextové nápovědy vyžaduje kompilátor nápovědy, která je k dispozici v jazyce Visual C++.
 
 > [!NOTE]
->  Kromě provádění WinHelp pomocí kontextové nápovědy, MFC také podporuje přes nabídku Nápověda jazyka HTML. Další informace o tuto podporu a programování s nápovědou HTML naleznete v tématu [HTML Help: Context-Sensitive Help for Your Programs](../mfc/html-help-context-sensitive-help-for-your-programs.md).
+>  Kromě provádění WinHelp pomocí kontextové nápovědy, MFC také podporuje přes nabídku Nápověda jazyka HTML. Další informace o tuto podporu a programování s nápovědou HTML naleznete v tématu [Nápověda HTML: Kontextová nápověda pro vaše programy](../mfc/html-help-context-sensitive-help-for-your-programs.md).
 
 ## <a name="types-of-help-supported"></a>Typy podporované nápovědy
 

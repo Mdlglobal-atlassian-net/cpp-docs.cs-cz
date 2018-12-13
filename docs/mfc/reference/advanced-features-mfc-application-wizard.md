@@ -21,7 +21,7 @@ Toto téma obsahuje seznam doplňkových funkcí pro vaše aplikace, jako je nap
 
    Generuje sadu souborů pro kontextovou nápovědu, která je k dispozici po stisknutí klávesy F1 nebo v nabídce Nápověda nebo kliknutím **pomáhají** tlačítko v dialogovém okně. Podpora nápovědy vyžaduje kompilátor nápovědy. Pokud nemáte kompilátor nápovědy, můžete jej nainstalovat opětovným spuštěním instalace.
 
-   Zobrazit [HTML Help: Context-Sensitive Help for Your Programs](../../mfc/html-help-context-sensitive-help-for-your-programs.md) a [soubory nápovědy (Nápověda jazyka HTML)](../../ide/help-files-html-help.md) Další informace.
+   Zobrazit [Nápověda HTML: Kontextová nápověda pro vaše programy](../../mfc/html-help-context-sensitive-help-for-your-programs.md)[soubory nápovědy (Nápověda jazyka HTML)](../../ide/help-files-html-help.md) Další informace.
 
 - **Náhled tisku a tisk**
 

@@ -162,7 +162,7 @@ class array;
 |Operátor|Popis|
 |-|-|
 |[Array::Operator =](#op_eq)|Nahradí řízené sekvence.|
-|[Array::Operator]](#op_at)|Přistupuje k element na určené pozici.|
+|[Array::Operator[]](#op_at)|Přistupuje k element na určené pozici.|
 
 ## <a name="remarks"></a>Poznámky
 
