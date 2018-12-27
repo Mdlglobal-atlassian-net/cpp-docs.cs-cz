@@ -36,7 +36,7 @@ expression % expression
 
 Operátory násobení jsou:
 
-- Násobení (<strong>\**</strong>)
+- Násobení (<strong>\*</strong>)
 
 - Dělení (**/**)
 
