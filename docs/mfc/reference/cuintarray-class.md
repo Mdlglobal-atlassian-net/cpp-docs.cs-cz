@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: d71f3d8f-ef9f-4e48-9b69-7782c0e2ddf7
-ms.openlocfilehash: ccbd3d5ff708b12fd557b8c3470fb270303678f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebe221cf38be563b2fc9e3c0f41ad3ef2c95caf1
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657883"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657328"
 ---
 # <a name="cuintarray-class"></a>Cuintarray – třída
 
@@ -101,7 +101,7 @@ například se přeloží na
 
 |Název|Popis|
 |----------|-----------------|
-|[[] Č. CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|Nastaví nebo získá prvek na zadaném indexu.|
+|[CObArray::operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|Nastaví nebo získá prvek na zadaném indexu.|
 
 ## <a name="remarks"></a>Poznámky
 

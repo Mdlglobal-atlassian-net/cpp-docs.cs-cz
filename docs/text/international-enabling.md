@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-ms.openlocfilehash: 4476b0805c8806d344a9290ba190aed7c7697a8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51d85991fdab273d1cdad4e99400d1ad8ed6324c
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514631"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627424"
 ---
 # <a name="international-enabling"></a>Podpora národních prostředí
 
@@ -27,7 +27,7 @@ Většina tradičních kód jazyka C a C++ díky předpoklady o znaků a práci 
 
    - Použijte stejné přenosná běhové funkce, které usnadňují přenositelných pod buď prostředí MFC.
 
-   - Vytvořte řetězcové literály a znaky přenositelných pod buď prostředí pomocí `_T` – makro. Další informace najdete v tématu [mapování obecného textu v souboru Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+   - Vytvořte řetězcové literály a znaky přenositelných pod buď prostředí pomocí `_T` – makro. Další informace najdete v tématu [mapování obecného textu v souboru tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
    - Při analýze řetězce v rámci znakové sady MBCS opatření. Tato opatření nejsou potřebné v kódování Unicode. Další informace najdete v tématu [MBCS – tipy pro programování](../text/mbcs-programming-tips.md).
 

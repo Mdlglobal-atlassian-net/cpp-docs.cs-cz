@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
-ms.openlocfilehash: bfb1a8b779f741360b406d9a5c24a36bca5e54f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32a5f9d20999740d4368f7901c797d87acce0be9
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662511"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657458"
 ---
 # <a name="matchresults-class"></a>match_results – třída
 
@@ -80,7 +80,7 @@ Třída šablony popisuje objekt, který řídí neupravitelnými sekvence eleme
 |Operátor|Popis|
 |-|-|
 |[operátor =](#op_eq)|Match_results – objekt kopírovat.|
-|[Operator [].](#op_at)|Přístup k podřízeným objektům.|
+|[– Operátor\[\]](#op_at)|Přístup k podřízeným objektům.|
 
 ## <a name="requirements"></a>Požadavky
 

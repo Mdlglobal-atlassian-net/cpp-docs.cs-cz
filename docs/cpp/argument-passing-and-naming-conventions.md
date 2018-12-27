@@ -1,6 +1,6 @@
 ---
 title: Konvence předávání a pojmenování argumentů
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 helpviewer_keywords:
 - argument passing [C++], conventions
 - arguments [C++], widening
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - passing arguments [C++], conventions
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
-ms.openlocfilehash: 735e703e3e7d3ddb55a04fb0d29b3899682fe24e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca09d31d3d8d50ca94543c5e02262edd7b2deefc
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473291"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627238"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>Konvence předávání a pojmenování argumentů
 
@@ -31,11 +31,11 @@ Na x86 platformách, všechny argumenty jsou rozšířeny na 32 bitů, pokud jso
 Kompilátor generuje kódu prologu a epilogu k uložení a obnovení registrů ESI, EDI, EBX a EBP zaregistruje, pokud jsou použity ve funkci.
 
 > [!NOTE]
->  Pokud struktura, unie nebo třída je vrácen z funkce hodnotou, všechny definice typu musí být stejné, jinak program může v době běhu selhat.
+> Pokud struktura, unie nebo třída je vrácen z funkce hodnotou, všechny definice typu musí být stejné, jinak program může v době běhu selhat.
 
 Informace o tom, jak definovat vlastní kód prologu a epilogu funkce naleznete v tématu [volání nahé funkce](../cpp/naked-function-calls.md).
 
-Informace o výchozích konvencích volání v kódu, který najdete v článku cíle x64 platformy [přehled x64 konvence volání](../build/overview-of-x64-calling-conventions.md). Informace o potížích konvence volání v kódu, který cílí na platformy ARM naleznete v tématu [běžné Visual C++ ARM problémy s migrací](../build/common-visual-cpp-arm-migration-issues.md).
+Informace o výchozích konvencích volání v kódu, který najdete v článku cíle x64 platformy [x64 konvence volání](../build/x64-calling-convention.md). Informace o potížích konvence volání v kódu, který cílí na platformy ARM naleznete v tématu [běžné Visual C++ ARM problémy s migrací](../build/common-visual-cpp-arm-migration-issues.md).
 
 Kompilátor Visual C/C++ jsou podporovány následující konvence volání.
 

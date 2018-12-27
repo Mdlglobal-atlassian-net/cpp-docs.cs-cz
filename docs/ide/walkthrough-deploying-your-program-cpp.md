@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Nasazení programu (C++)'
+title: 'Průvodce: Nasazení programu (C++)'
 ms.date: 09/14/2018
 helpviewer_keywords:
 - deploying applications [C++], walkthroughs
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 43e6b9320fb52fc17f65b27b06e2c6f4d4851528
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7170fe3ae058f832e452089021d9f863f1791f14
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496431"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657510"
 ---
-# <a name="walkthrough-deploying-your-program-c"></a>Návod: Nasazení programu (C++)
+# <a name="walkthrough-deploying-your-program-c"></a>Průvodce: Nasazení programu (C++)
 
 Teď, když jste vytvořili aplikaci provedením dříve související návody, které jsou uvedeny v [pomocí integrovaného vývojového prostředí sady Visual Studio pro vývoj v jazyce C++ Desktop](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md), posledním krokem je vytvoření instalátoru, mohli ostatní uživatelé Nainstalujte aplikaci na svých počítačích. Pro instalační program přidáte nový projekt do existujícího řešení. Výstup tohoto nového projektu je soubor setup.exe, který nainstaluje vaši aplikaci na jiném počítači.
 
@@ -62,9 +62,9 @@ Návodu ukazuje způsob použití Instalační služby systému Windows pro nasa
 
 1. V **Průzkumníka řešení**, vyberte **instalátor hry** projekt a zvolte **zobrazení** > **okno vlastností** nebo stiskněte tlačítko  **F4** otevřít **vlastnosti** okna.
 
-1. Zadejte další podrobnosti, jak chcete, aby se objevily v instalačním programu.  Například použít *Contoso* pro **výrobce**, *instalátor hry* pro **název produktu**, a *http://www.contoso.com* pro **SupportUrl**.
+1. Zadejte další podrobnosti, jak chcete, aby se objevily v instalačním programu.  Například použít *Contoso* pro **výrobce**, *instalátor hry* pro **název produktu**, a *http\:/ / www.contoso.com* pro **SupportUrl**.
 
-1. V panelu nabídky zvolte **sestavení** > **nástroje Configuration Manager**. V **projektu** tabulky v části **sestavení** sloupců, zaškrtněte políčko u **instalátor hry**. Klikněte na tlačítko **Zavřít**.
+1. V panelu nabídky zvolte **sestavení** > **nástroje Configuration Manager**. V **projektu** tabulky v části **sestavení** sloupců, zaškrtněte políčko u **instalátor hry**. Klikněte na **Zavřít**.
 
 1. V panelu nabídky zvolte **sestavení** > **sestavit řešení** sestavit projekt hry a projektu instalátor hry.
 
@@ -72,7 +72,7 @@ Návodu ukazuje způsob použití Instalační služby systému Windows pro nasa
 
 ## <a name="next-steps"></a>Další kroky
 
-**Předchozí:** [návod: ladění projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
+**Předchozí:** [Návod: Ladění projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>Viz také
 

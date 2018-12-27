@@ -1,18 +1,18 @@
 ---
 title: align (C++)
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - align_cpp
 helpviewer_keywords:
 - align __declspec keyword
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
-ms.openlocfilehash: f5353354a334f6ee597bca3e49dfa2b4f98a0005
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1bfe6e7a4646be8cea622078b4d85f20f458e1c5
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440440"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627329"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -78,9 +78,9 @@ Další informace naleznete v tématu:
 
 - [Jak align spolupracuje s balením dat](#vclrfhowalignworkswithdatapacking)
 
-- [Příklady zarovnání struktur](../build/examples-of-structure-alignment.md) (x64 konkrétní)
+- [Příklady zarovnání struktur](../build/x64-software-conventions.md#examples-of-structure-alignment) (x64 konkrétní)
 
-##  <a name="vclrfalignexamples"></a> Příklady zarovnání
+## <a name="vclrfalignexamples"></a> Příklady zarovnání
 
 Následující příklady ukazují jak `__declspec(align(#))` ovlivňuje velikost a zarovnání datových struktur. V příkladech se předpokládají následující definice:
 
@@ -171,7 +171,7 @@ void fn() {
 
 Zarovnání, když je paměť přidělena v haldě, závisí na která funkce přidělení bude volána.  Například, pokud používáte `malloc`, výsledek závisí na velikosti operandu. Pokud *arg* > = 8, je paměť vrácena zarovnán na 8 bajtů. Pokud *arg* < 8, zarovnání paměti vrátí se o první mocninu 2 menší než *arg*. Například pokud používáte malloc(7), zarovnání je 4 bajty.
 
-##  <a name="vclrf_declspecaligntypedef"></a> Definování nových typů pomocí __declspec(align(#))
+## <a name="vclrf_declspecaligntypedef"></a> Definování nových typů pomocí __declspec(align(#))
 
 Můžete definovat typ s charakteristickým zarovnáním.
 
@@ -184,7 +184,7 @@ typedef __declspec(align(32)) struct aType bType;
 
 Nyní `aType` a `bType` jsou stejné velikosti (8 bajtů), ale proměnné typu `bType` jsou zarovnána na 32 bajtů.
 
-##  <a name="vclrfthreadlocalstorageallocation"></a> Zarovnávání dat v místním úložišti vláken
+## <a name="vclrfthreadlocalstorageallocation"></a> Zarovnávání dat v místním úložišti vláken
 
 Statické úložiště thread local (TLS) vytvořené pomocí `__declspec(thread)` atribut a vložit ho do části TLS v obraze umožňuje zarovnání úplně stejně jako normální statická data. Pokud chcete vytvořit data protokolu TLS, operační systém přiděluje paměť velikosti sekce TLS a respektuje atributu zarovnání sekce TLS.
 
@@ -207,7 +207,7 @@ struct CACHE_ALIGN S9 {
 __declspec(thread) struct S9 a;
 ```
 
-##  <a name="vclrfhowalignworkswithdatapacking"></a> Jak align spolupracuje s balením dat
+## <a name="vclrfhowalignworkswithdatapacking"></a> Jak align spolupracuje s balením dat
 
 `/Zp` – Možnost kompilátoru a `pack` – Direktiva pragma mají vliv na dodací údaje pro členy struktury a sjednocení. Tento příklad ukazuje, jak `/Zp` a `__declspec(align(#))` spolupracují:
 
@@ -244,4 +244,4 @@ Posun objektu je založeno na posunu na předchozí objekt a aktuální nastaven
 
 [__declspec](../cpp/declspec.md)<br/>
 [Přehled konvencí ARM ABI](../build/overview-of-arm-abi-conventions.md)<br/>
-[Přehled konvencí volání v prostředí x64](../build/overview-of-x64-calling-conventions.md)
+[x64 softwarové konvence](../build/x64-software-conventions.md)

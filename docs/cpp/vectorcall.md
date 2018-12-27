@@ -1,6 +1,6 @@
 ---
 title: __vectorcall
-ms.date: 10/10/2018
+ms.date: 12/17/2018
 f1_keywords:
 - __vectorcall_cpp
 - __vectorcall
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - __vectorcall keyword
 - __vectorcall
 ms.assetid: 1c95ed59-86c6-4857-b4ed-10519193f851
-ms.openlocfilehash: ab542a7fbae286a7f39b66bb4857cd8e8ff6ab59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55c383c4bdf83ddb5fdf1c4990d5f2e47b4d819a
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507221"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627416"
 ---
 # <a name="vectorcall"></a>__vectorcall
 
 **Specifické pro Microsoft**
 
-**__Vectorcall** konvence volání Určuje, že argumenty funkcí mají být předány v registrech, pokud je to možné. **__vectorcall** používá více registrů pro argumenty než [__fastcall](../cpp/fastcall.md) nebo výchozí hodnotu [x64 konvence volání](../build/overview-of-x64-calling-conventions.md) použít. **__Vectorcall** konvence volání je podporována pouze v nativním kódu x86 a x64 procesorů, které obsahují Streaming SIMD Extensions 2 (SSE2) a vyšší. Použití **__vectorcall** k urychlení funkcí, které předávají několik s plovoucí desetinnou čárkou nebo SIMD vektorovým argumentům a provádět operace, které využívají argumenty načtené do registrů. Následující seznam obsahuje funkce, které jsou společné pro implementace x86 a x64 **__vectorcall**. Rozdíly jsou vysvětleny dále v tomto článku.
+**__Vectorcall** konvence volání Určuje, že argumenty funkcí mají být předány v registrech, pokud je to možné. **__vectorcall** používá více registrů pro argumenty než [__fastcall](../cpp/fastcall.md) nebo výchozí hodnotu [x64 konvence volání](../build/x64-calling-convention.md) použít. **__Vectorcall** konvence volání je podporována pouze v nativním kódu x86 a x64 procesorů, které obsahují Streaming SIMD Extensions 2 (SSE2) a vyšší. Použití **__vectorcall** k urychlení funkcí, které předávají několik s plovoucí desetinnou čárkou nebo SIMD vektorovým argumentům a provádět operace, které využívají argumenty načtené do registrů. Následující seznam obsahuje funkce, které jsou společné pro implementace x86 a x64 **__vectorcall**. Rozdíly jsou vysvětleny dále v tomto článku.
 
 |Prvek|Implementace|
 |-------------|--------------------|

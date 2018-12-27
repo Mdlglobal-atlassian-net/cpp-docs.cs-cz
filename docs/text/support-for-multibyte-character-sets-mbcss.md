@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - MBCS [C++]
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
-ms.openlocfilehash: b6c8dc5548eb1082866b7a069fb38fd329effc75
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f309f6d7147b37691564d3d72c151da90055c6a
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437248"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627342"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>Podpora vícebajtových znakových sad (MBCS)
 
@@ -46,7 +46,7 @@ Podpora knihovny run-time jazyka C a MFC jednobajtové znakové sady MBCS a Unic
 
 ### <a name="mbcsunicode-portability"></a>Přenositelnosti znakové sady MBCS/Unicode
 
-Pomocí souboru Tchar.h záhlaví, můžete vytvořit jednobajtové znakové sady MBCS a Unicode aplikace ze stejného zdroje. Tchar.h definuje předponu makra *_tcs* , které mapují na `str`, `_mbs`, nebo `wcs` funkcí, podle potřeby. Pokud chcete vytvořit znakové sady MBCS, definujte symbol `_MBCS`. Chcete-li sestavit Unicode, definujte symbol `_UNICODE`. Ve výchozím nastavení `_MBCS` je definováno pro aplikace knihovny MFC. Další informace najdete v tématu [mapování obecného textu v souboru Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+Pomocí souboru tchar.h záhlaví, můžete vytvořit jednobajtové znakové sady MBCS a Unicode aplikace ze stejného zdroje. Tchar.h definuje předponu makra *_tcs* , které mapují na `str`, `_mbs`, nebo `wcs` funkcí, podle potřeby. Pokud chcete vytvořit znakové sady MBCS, definujte symbol `_MBCS`. Chcete-li sestavit Unicode, definujte symbol `_UNICODE`. Ve výchozím nastavení `_UNICODE` je definováno pro aplikace knihovny MFC. Další informace najdete v tématu [mapování obecného textu v souboru tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
 > [!NOTE]
 >  Chování není definováno, pokud definujete obě `_UNICODE` a `_MBCS`.

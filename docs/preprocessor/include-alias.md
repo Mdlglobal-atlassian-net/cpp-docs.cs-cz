@@ -1,6 +1,6 @@
 ---
 title: include_alias
-ms.date: 11/04/2016
+ms.date: 12/16/2018
 f1_keywords:
 - vc-pragma.include_alias
 - include_alias_CPP
@@ -8,25 +8,25 @@ helpviewer_keywords:
 - pragmas, include_alias
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
-ms.openlocfilehash: 616672d713a9f0ac6eab4be8bce9b178d2510723
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d32cad2533b6044348651797d0278bcbebcafd6
+ms.sourcegitcommit: ae2f71fe0d64f1a90ef722759fe93c82abc064ab
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573161"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53587873"
 ---
 # <a name="includealias"></a>include_alias
 
-Určuje, že *short_filename* má být použit jako alias pro *long_filename*.
+Určuje, kdy *alias_filename* se nachází v `#include` direktiv, kompilátor nahradí *actual_filename* na příslušné místo.
 
 ## <a name="syntax"></a>Syntaxe
 
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>include_alias – Direktiva pragma ("*long_filename*","*short_filename*")
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>include_alias – Direktiva pragma (*long_filename*, *short_filename*)
+> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>include_alias – Direktiva pragma ("*alias_filename*","*actual_filename*")
+> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>include_alias – Direktiva pragma (\<*alias_filename*>, \< *actual_filename*>)
 
 ## <a name="remarks"></a>Poznámky
 
-Některé systémy souborů povolují delší názvy souborů hlaviček než omezení 8.3 systému souborů FAT. Kompilátor nemůže jednoduše zkrátit delší názvy na formát 8.3, protože prvních 8 znaků delšího názvu souboru hlaviček nemusí být jedinečných. Vždy, když kompilátor narazí *long_filename* řetězec, nahradí *short_filename*a hledá soubor hlaviček *short_filename* místo. Tato direktiva pragma se musí vyskytovat před odpovídajícími direktivami `#include`. Příklad:
+**Include_alias** – Direktiva pragma umožňuje nahradit soubory, které mají jiné názvy nebo cesty pro názvy souborů, které jsou zahrnuté ve zdrojových souborech. Například některé systémy souborů povolují delší názvy souborů hlaviček než omezení 8.3 systému souborů FAT. Kompilátor nemůže jednoduše zkrátit delší názvy na formát 8.3, protože prvních 8 znaků delšího názvu souboru hlaviček nemusí být jedinečných. Vždy, když kompilátor narazí *alias_filename* řetězec, nahradí *actual_filename*a hledá soubor hlaviček *actual_filename* místo. Tato direktiva pragma se musí vyskytovat před odpovídajícími direktivami `#include`. Příklad:
 
 ```cpp
 // First eight characters of these two files not unique.
@@ -83,8 +83,8 @@ Následující direktiva dále způsobí chybu:
 Všimněte si, že název souboru uvedený v chybových zprávách nebo jako hodnotu z předdefinovaných `__FILE__` název souboru je makro, po provedení nahrazení. Například po následujících direktivách zobrazit výstup:
 
 ```cpp
-#pragma include_alias( "VeryLongFileName.H", "myfile.h" )
-#include "VeryLongFileName.H"
+#pragma include_alias( "VERYLONGFILENAME.H", "myfile.h" )
+#include "VERYLONGFILENAME.H"
 ```
 
 Chyba v VERYLONGFILENAME. H, vytvoří se následující chybová zpráva:
@@ -101,7 +101,7 @@ Povšimněte si také, že není podporována přenositelnost. Jsou-li dány ná
 #include "one.h"
 ```
 
-kompilátor hledá namísto souboru THREE.H soubor TWO.H.
+Kompilátor vyhledá souboru three.h soubor Two.h.
 
 ## <a name="see-also"></a>Viz také
 

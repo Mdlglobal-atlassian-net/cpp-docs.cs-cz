@@ -11,12 +11,12 @@ helpviewer_keywords:
 - character sets [C++], international programming strategies
 - localization [C++], character sets
 ms.assetid: b09d9854-0709-4b9a-a00c-b0b8bc4199b1
-ms.openlocfilehash: 615ad42d5a1e4cb6076877e1d1b5de4bd11fdf83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91f4805152944202b7d3f7f45fce494f7e9d81af
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501319"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626679"
 ---
 # <a name="internationalization-strategies"></a>Strategie internacionalizace
 
@@ -30,7 +30,7 @@ V závislosti na cílové operačních systémů a trhy máte několik Strategie
 
    Můžete používat funkce specifické znakové sady MBCS. Řetězce mohou obsahovat jednobajtové znaky, dvoubajtové znaky nebo obojí. Knihovny run-time jazyka C poskytuje funkce, makra a datové typy znakové sady MBCS – pouze pro programování. Knihovna MFC je plně podporují znakové sady MBCS.
 
-- Zdrojový kód pro vaše aplikace je určené pro dokončení přenositelnost – opětovnou kompilací symbol `_UNICODE` nebo symbol `_MBCS` definována, můžete vytvářet verze, které buď použít. Další informace najdete v tématu [mapování obecného textu v souboru Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+- Zdrojový kód pro vaše aplikace je určené pro dokončení přenositelnost – opětovnou kompilací symbol `_UNICODE` nebo symbol `_MBCS` definována, můžete vytvářet verze, které buď použít. Další informace najdete v tématu [mapování obecného textu v souboru tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
    Můžete použít plně přenositelné C Runtime functions, makra a datové typy. Flexibilita knihovny MFC podporuje některý z těchto strategií.
 

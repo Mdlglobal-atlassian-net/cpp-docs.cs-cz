@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-ms.openlocfilehash: a0d8fa733a5da14e8ee16acf2623df07c9974893
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d33c54e82e9bc228b97bff4802c9231a98f51033
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523367"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657484"
 ---
 # <a name="arrayview-class"></a>array_view – třída
 
@@ -94,7 +94,7 @@ Datový typ prvků v `array_view` objektu.
 |Název|Popis|
 |----------|-----------------|
 |[Operator()](#operator_call)|Vrátí hodnotu prvku určeného parametrem nebo parametry.|
-|[Operator [].](#operator_at)|Vrátí hodnotu prvku určeného parametry.|
+|[– Operátor\[\]](#operator_at)|Vrátí hodnotu prvku určeného parametry.|
 |[operátor =](#operator_eq)|Zkopíruje obsah zadaného `array_view` do tohoto objektu.|
 
 ### <a name="public-constants"></a>Veřejné konstanty
@@ -151,7 +151,7 @@ Obě akce upozorní `array_view` objektu, že se změní příslušné nativní 
 
 **Záhlaví:** amp.h
 
-**Namespace:** souběžnosti
+**Namespace:** Souběžnost
 
 ##  <a name="dtor"></a> ~ array_view
 

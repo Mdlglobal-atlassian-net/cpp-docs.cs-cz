@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 4b70aa57a6485fefe0dbb678e72ba127502c89e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78fa83c30bc55d82ffa5d2ba1e7d65472643f86b
+ms.sourcegitcommit: ee0103752884425843556a19cf418a504dc3cd02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481923"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53737621"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migrace z OpenMP do Concurrency Runtime
 
@@ -34,7 +34,7 @@ Může být výhodné k migraci existujícího kódu OpenMP na využití modulu 
 |Budete potřebovat podporu zpracování výjimek.|PPL umožňuje zachytit výjimky uvnitř i vně paralelní oblasti nebo smyčky. V OpenMP musí zpracovat výjimku v rámci paralelní oblasti nebo smyčky.|
 |Budete potřebovat mechanismu zrušení.|PPL umožňuje aplikacím zrušit jednotlivé úkoly a paralelní pracovní stromy. OpenMP – vyžaduje, aby aplikace implementovat vlastní mechanismus zrušení.|
 |Je potřeba dokončit v jiném kontextu, ze kterého se spouští paralelní kód.|Modul Concurrency Runtime umožňuje spustit úlohu v jednom kontextu a potom počkat nebo zrušit tuto úlohu v jiném kontextu. V OpenMP musíte dokončit všechny paralelně prováděných úloh v kontextu, ze kterého se spouští.|
-|Budete potřebovat lepší podporu ladění.|Visual Studio poskytuje **paralelní zásobníky** a **paralelní úlohy** windows tak, aby můžete snadněji ladit aplikace s více vlákny.<br /><br /> Další informace o ladění podpora modulu Runtime souběžnosti, naleznete v tématu [Using the Tasks Window](/visualstudio/debugger/using-the-tasks-window), [použití okna paralelní zásobníky](/visualstudio/debugger/using-the-parallel-stacks-window), a [návod: ladění paralelní Aplikace](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).|
+|Budete potřebovat lepší podporu ladění.|Visual Studio poskytuje **paralelní zásobníky** a **paralelní úlohy** windows tak, aby můžete snadněji ladit aplikace s více vlákny.<br /><br /> Další informace o ladění podpora modulu Runtime souběžnosti, naleznete v tématu [Using the Tasks Window](/visualstudio/debugger/using-the-tasks-window), [použití okna paralelní zásobníky](/visualstudio/debugger/using-the-parallel-stacks-window), a [názorný postup: Ladění paralelní aplikace](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).|
 
 ## <a name="when-not-to-migrate-from-openmp-to-the-concurrency-runtime"></a>Kdy nepoužívat migrace z OpenMP do Concurrency Runtime
 
@@ -48,14 +48,14 @@ Následujících případech popsat, ale nemusí být vhodné k migraci existuj�
 
 ## <a name="related-topics"></a>Související témata
 
-[Postupy: Převedení paralelní smyčky for v OpenMP na využití modulu Concurrency Runtime](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
+[Postupy: Převedení OpenMP paralelní smyčky na využití modulu Concurrency Runtime](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
 
 Zadaný základní smyčku, která se používá OpenMP [paralelní](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) a [pro](../../parallel/openmp/reference/for-openmp.md) direktivy, ukazuje, jak převést jej na využití modulu Concurrency Runtime [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmus.
 
 [Postupy: Převedení smyčky OpenMP využívající zrušení na využití modulu Concurrency Runtime](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
 Zadaný OpenMP [paralelní](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[pro](../../parallel/openmp/reference/for-openmp.md) smyčku, která nevyžaduje všech iterací ke spuštění, ukazuje, jak převeďte ho na použití mechanismu zrušení Concurrency Runtime.
 
-[Postupy: Převedení smyčky OpenMP využívající zpracování výjimek na využití modulu Concurrency Runtime](../../parallel/concrt/convert-an-openmp-loop-that uses-exception-handling.md)<br/>
+[Postupy: Převedení smyčky OpenMP využívající zpracování výjimek na využití modulu Concurrency Runtime](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
 Zadaný OpenMP [paralelní](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[pro](../../parallel/openmp/reference/for-openmp.md) smyčku, která provádí zpracování výjimek, ukazuje, jak ho použít mechanismus zpracování výjimek Concurrency Runtime převést.
 
 [Postupy: Převedení smyčky OpenMP využívající redukční proměnnou na využití modulu Concurrency Runtime](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - portability [C++], character sets
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
-ms.openlocfilehash: bb658db157433aadce183e7fab437f15251ff54c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6083fcf9db8236df15d1cb5e7de4cc15fe5916e
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631293"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626718"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Text a řetězce v jazyce Visual C++
 
@@ -46,10 +46,10 @@ Popisuje kódování Unicode, specifikace pro podporu všech znakových sad, vč
 [Podpora vícebajtových znakových sad (MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)<br/>
 Tento článek popisuje znakové sady MBCS, o alternativu k kódování Unicode pro podporu znakové sady, jako například japonštinu a čínštinu, které nelze reprezentovat jediným bajtem.
 
-[Mapování obecného textu v souboru Tchar.h](../text/generic-text-mappings-in-tchar-h.md)<br/>
+[Mapování obecného textu v souboru tchar.h](../text/generic-text-mappings-in-tchar-h.md)<br/>
 Mapování obecného textu specifické pro společnost Microsoft poskytuje pro mnoho typů dat, rutiny a dalších objektů.
 
-[Postupy: Převody mezi různými typy řetězců](../text/how-to-convert-between-various-string-types.md)<br/>
+[Postupy: Převést mezi různými typy řetězců](../text/how-to-convert-between-various-string-types.md)<br/>
 Ukazuje, jak převést různé řetězcové typy jazyka Visual C++ do jiných řetězců.
 
 ## <a name="related-sections"></a>Související oddíly

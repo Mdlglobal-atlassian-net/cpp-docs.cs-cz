@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: f09b44c5b898ee0d583db45ca63ee67c3d1c5b47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c6d20279792788c1013df8540080b2715ade1f2
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494858"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657380"
 ---
 # <a name="ctypedptrmap-class"></a>Ctypedptrmap – třída
 
@@ -58,7 +58,7 @@ Třída objekt uložený v objektu map.
 
 |Název|Popis|
 |----------|-----------------|
-|[[] Č. CTypedPtrMap::operator](#operator_at)|Vloží prvek do objektu map.|
+|[CTypedPtrMap::operator \[ \]](#operator_at)|Vloží prvek do objektu map.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -127,7 +127,7 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 *$BASE_CLASS*<br/>
 Parametr šablony určující základní třídy tuto mapu třídy.
 
-*Klíč*<br/>
+*key*<br/>
 Klíč elementu, který chcete vyhledávat.
 
 *HODNOTA*<br/>
@@ -160,7 +160,7 @@ Parametr šablony určující typ hodnot uložených na této mapě.
 *$BASE_CLASS*<br/>
 Parametr šablony určující základní třídy tuto mapu třídy.
 
-*Klíč*<br/>
+*key*<br/>
 Klíč elementu, který chcete vyhledávat nebo vytvořili v objektu map.
 
 ### <a name="remarks"></a>Poznámky
@@ -180,7 +180,7 @@ BOOL RemoveKey(KEY key);
 *KEY*<br/>
 Parametr šablony určující typ klíče na mapě.
 
-*Klíč*<br/>
+*key*<br/>
 Klíč elementu, který chcete odebrat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -204,7 +204,7 @@ void SetAt(KEY key, VALUE newValue);
 *KEY*<br/>
 Parametr šablony určující typ klíče na mapě.
 
-*Klíč*<br/>
+*key*<br/>
 Určuje hodnotu klíče newValue.
 
 *newValue*<br/>

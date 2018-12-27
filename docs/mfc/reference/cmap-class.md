@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 3991ae4c7455aa8e6eb377112cb89c057e9567e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88ca218d4cb4e70dcc46ba04bbdfb7a9d12eb808
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627315"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657575"
 ---
 # <a name="cmap-class"></a>Cmap – třída
 
@@ -106,7 +106,7 @@ Datový typ používaný pro *hodnotu* argumenty; obvykle odkaz na *hodnota*.
 
 |Název|Popis|
 |----------|-----------------|
-|[[] Č. CMap::operator](#operator_at)|Vloží prvek do mapy – operátor nahrazení pro `SetAt`.|
+|[CMap::operator \[ \]](#operator_at)|Vloží prvek do mapy – operátor nahrazení pro `SetAt`.|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -116,7 +116,7 @@ Proměnné typu umístění se používá pro alternativní přístup k položk�
 
 Určité členské funkce třídy volání globální pomocné funkce, které je nutné upravit pro většina použití `CMap` třídy. Zobrazit [pomocné rutiny třídy kolekce](../../mfc/reference/collection-class-helpers.md) v části makra a globální prvky **odkaz knihovny MFC**.
 
-`CMap` přepíše [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) na podporu serializace a výpis z jeho prvků. Pokud je mapy uložen do archivu pomocí `Serialize`, pak serializován každý prvek mapy. Výchozí implementace `SerializeElements` pomocnou funkci neodpovídá bitové operace zápisu. Pro informace o serializaci položek kolekce ukazatel odvozen od `CObject` nebo jiné typy definované uživatelem, najdete v článku [jak: typově bezpečné kolekce](../../mfc/how-to-make-a-type-safe-collection.md).
+`CMap` přepíše [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) na podporu serializace a výpis z jeho prvků. Pokud je mapy uložen do archivu pomocí `Serialize`, pak serializován každý prvek mapy. Výchozí implementace `SerializeElements` pomocnou funkci neodpovídá bitové operace zápisu. Pro informace o serializaci položek kolekce ukazatel odvozen od `CObject` nebo jiné typy definované uživatelem, najdete v článku [jak: Typově bezpečné kolekce](../../mfc/how-to-make-a-type-safe-collection.md).
 
 Pokud potřebujete diagnostiky s výpisem paměti jednotlivých prvků v objektu map (klíče a hodnoty), nastavte na 1 nebo větší hloubky kontextu s výpisem paměti.
 
@@ -338,7 +338,7 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 *ARG_KEY*<br/>
 Parametr šablony určující typ *klíč* hodnotu.
 
-*Klíč*<br/>
+*key*<br/>
 Určuje klíč, který identifikuje elementu, který chcete vyhledávat.
 
 *HODNOTA*<br/>
@@ -375,7 +375,7 @@ Parametr šablony určující typ hodnoty mapování.
 *ARG_KEY*<br/>
 Parametr šablony určující typ hodnoty klíče.
 
-*Klíč*<br/>
+*key*<br/>
 Klíč používaný k načtení hodnoty z mapy.
 
 ### <a name="remarks"></a>Poznámky
@@ -447,7 +447,7 @@ CPair* PLookup(ARG_KEY key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč elementu, který chcete vyhledávat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -491,7 +491,7 @@ BOOL RemoveKey(ARG_KEY key);
 *ARG_KEY*<br/>
 Parametr šablony určující typ klíče.
 
-*Klíč*<br/>
+*key*<br/>
 Klíč elementu, který chcete odebrat.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -519,7 +519,7 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
 *ARG_KEY*<br/>
 Parametr šablony určující typ *klíč* parametru.
 
-*Klíč*<br/>
+*key*<br/>
 Určuje klíč nového elementu.
 
 *ARG_VALUE*<br/>

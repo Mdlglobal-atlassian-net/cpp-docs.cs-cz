@@ -17,12 +17,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: ad89dfa29df6e4ef500e01e53f203fa3c401602b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a6fa8b9c923ff697831c29b8004ce360baf7d77
+ms.sourcegitcommit: ae2f71fe0d64f1a90ef722759fe93c82abc064ab
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638227"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53587886"
 ---
 # <a name="opt-optimizations"></a>/OPT (optimalizace)
 
@@ -67,7 +67,7 @@ Ve výchozím nastavení **/OPT:LBR** možnost je nastavena, když není zapnuto
 
 ## <a name="remarks"></a>Poznámky
 
-Při použití příkazového řádku linkeru výchozí **OPT: ICF, LBR**. Pokud **/DEBUG** není zadán, výchozí hodnota je **noref NOICR, NOLBR**.
+Při použití příkazového řádku linkeru výchozí **OPT: ICF, LBR**. Pokud **/DEBUG** není zadán, výchozí hodnota je **noref, NOICF, NOLBR**.
 
 **/OPT** optimalizace obecně zmenšit velikost bitové kopie a zvyšují rychlost aplikace. Tato vylepšení může být významné v větších programů, což je důvod, proč je povoleno standardně pro prodejní buildy.
 

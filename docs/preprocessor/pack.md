@@ -1,6 +1,6 @@
 ---
 title: pack
-ms.date: 09/17/2018
+ms.date: 12/17/2018
 f1_keywords:
 - pack_CPP
 - vc-pragma.pack
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 0067b30c5c2eae9391defeea11c722d455ec8f1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b959c161a933cc76590cfbd65d295aad36f07d7
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507598"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627444"
 ---
 # <a name="pack"></a>pack
 Určuje zarovnání zabalení pro struktury, sjednocení a členy třídy.
@@ -57,7 +57,7 @@ Další informace o úpravách zarovnání naleznete v následujících tématec
 
 - [__unaligned](../cpp/unaligned.md)
 
-- [Příklady zarovnání struktur](../build/examples-of-structure-alignment.md) (x64 konkrétní)
+- [Příklady zarovnání struktur](../build/x64-software-conventions.md#examples-of-structure-alignment) (x64 konkrétní)
 
    > [!WARNING]
    > Všimněte si, že v sadě Visual Studio 2015 a novější můžete použít operátory alignof a alignas standardní které, na rozdíl od `__alignof` a `declspec( align )` přenositelnosti napříč kompilátory. Standard jazyka C++ neřeší balení, takže je nutné použít **pack** (nebo odpovídající rozšíření na jiné kompilátory) k určení zarovnání menší než velikost cílové architektury aplikace word.

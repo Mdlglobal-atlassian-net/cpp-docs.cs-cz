@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-ms.openlocfilehash: 7543249719cd7fab10bac7824e69023fefbc35f1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 93ef654bb71a342a6215ce5cd60786f36cadedf7
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523725"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657549"
 ---
 # <a name="array-class"></a>array – třída
 
@@ -77,7 +77,7 @@ Typ elementu data.
 |----------|-----------------|
 |[operátor std::vector&lt;value_type&gt;](#operator_vec)|Používá `copy(*this, vector)` implicitně převést pole std::[vektoru](../../../standard-library/vector-class.md) objektu.|
 |[Operator()](#operator_call)|Vrátí hodnotu prvku určeného parametry.|
-|[Operator [].](#operator_at)|Vrátí prvek, který je v zadaném indexu.|
+|[– Operátor\[\]](#operator_at)|Vrátí prvek, který je v zadaném indexu.|
 |[operátor =](#operator_eq)|Zkopíruje obsah zadaného `array` do tohoto objektu.|
 
 ### <a name="public-constants"></a>Veřejné konstanty
@@ -121,7 +121,7 @@ Pole jsou logicky považovány za hodnotové typy, protože když objekt array z
 
 **Záhlaví:** amp.h
 
-**Namespace:** souběžnosti
+**Namespace:** Souběžnost
 
 ##  <a name="dtor"></a> ~ pole
 

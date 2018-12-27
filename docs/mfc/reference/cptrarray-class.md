@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: c23b87a3-bf84-49d6-a66b-61e999d0938a
-ms.openlocfilehash: 47b30f1da0d22b63e06a6eee93c905630f5990f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b83620dd7ee41e72997a2c08fb124395c065d5b4
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648211"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657393"
 ---
 # <a name="cptrarray-class"></a>Cptrarray – třída
 
@@ -101,7 +101,7 @@ například se přeloží na
 
 |Název|Popis|
 |----------|-----------------|
-|[[] Č. CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|Nastaví nebo získá prvek na zadaném indexu.|
+|[CObArray::operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|Nastaví nebo získá prvek na zadaném indexu.|
 
 ## <a name="remarks"></a>Poznámky
 

@@ -1,6 +1,6 @@
 ---
 title: __fastcall
-ms.date: 10/09/2018
+ms.date: 12/17/2018
 f1_keywords:
 - __fastcall_cpp
 - __fastcall
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __fastcall keyword [C++]
 ms.assetid: bb5b9c8a-dfad-450c-9119-0ac2bc59544f
-ms.openlocfilehash: 19cc8efb98660e8cdb3f6d9b03f0b7bd85a34949
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e7cd4b1202ee717abf9a9767785ed8abe96bd69
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480038"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627361"
 ---
 # <a name="fastcall"></a>__fastcall
 
@@ -29,11 +29,11 @@ ms.locfileid: "50480038"
 |Konvence pro posunutí|Neprovádí se žádné posunutí.|
 
 > [!NOTE]
->  Budoucí verze kompilátoru mohou používat různé registry k uložení parametrů.
+> Budoucí verze kompilátoru mohou používat různé registry k uložení parametrů.
 
 Použití [GR](../build/reference/gd-gr-gv-gz-calling-convention.md) – možnost kompilátoru způsobí, že každá funkce v modulu je kompilována jako **__fastcall** Pokud není funkce deklarována s konfliktním atributem použitím nebo název funkce `main` .
 
-**__Fastcall** – klíčové slovo je přijato a ignorováno kompilátory, které se zaměřují ARM a x64 architektury; x x64 čip, podle úmluvy první čtyři argumenty předány v registrech, pokud je to možné a další argumenty jsou předány v zásobníku. Další informace najdete v tématu [přehled x64 konvence volání](../build/overview-of-x64-calling-conventions.md). Čipu ARM až čtyři celočíselné argumenty a osm argumentů s plovoucí desetinnou čárkou mohou být předány v registrech a další argumenty jsou předány v zásobníku.
+**__Fastcall** – klíčové slovo je přijato a ignorováno kompilátory, které se zaměřují ARM a x64 architektury; x x64 čip, podle úmluvy první čtyři argumenty předány v registrech, pokud je to možné a další argumenty jsou předány v zásobníku. Další informace najdete v tématu [x64 konvence volání](../build/x64-calling-convention.md). Čipu ARM až čtyři celočíselné argumenty a osm argumentů s plovoucí desetinnou čárkou mohou být předány v registrech a další argumenty jsou předány v zásobníku.
 
 U funkcí nestatické třídy platí, že je-li funkce definovaná mimo řádek, modifikátor konvence volání není nutné určit na definici mimo řádek. To znamená, že pro členské nestatické metody třídy se konvence volání zadaná během deklarace přejme během definice. Při této definici třídy:
 

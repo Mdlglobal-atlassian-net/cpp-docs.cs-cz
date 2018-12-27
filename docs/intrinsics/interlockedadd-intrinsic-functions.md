@@ -1,6 +1,6 @@
 ---
 title: Vnitřní funkce _InterlockedAdd
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - _InterlockedAdd64_acq_cpp
 - _InterlockedAdd64_acq
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: 0952a7727a433a718eac2f1873249327647599dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 473d113ff9af3b009075dfef657082034b1bbcb6
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461591"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626903"
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>Vnitřní funkce _InterlockedAdd
 
 **Specifické pro Microsoft**
 
-Provádění atomických sčítání, což zajistí, že operace úspěšně dokončí v případě více vláken, máte přístup ke sdílené proměnné.
+Tyto funkce provádět atomické toho, které zajišťuje, že operace úspěšně dokončí po více než jedno vlákno má přístup do sdílené proměnné.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -105,13 +105,13 @@ Obě funkce vrátí výsledek součtu.
 
 ## <a name="remarks"></a>Poznámky
 
-Verze těchto funkcí s `_acq` nebo `_rel` přípony provedení propojené dodatek následující sémantika získání nebo vydání. Získejte sémantiku znamená, že výsledek operace jsou dostupná pro všechna vlákna a procesory než všechny následné paměti čte a zapisuje. Získání je užitečné, když zadáte kritický oddíl. Sémantika vydání znamená, že se všechny paměti přečtených a zapsaných nuceni nastavena jako viditelná pro všechny vlákna a procesory než výsledek operace jsou dostupná vlastní. Verze je užitečné při opuštění kritický oddíl. Vnitřní objekty s `_nf` příponu ("žádná ohrazení") nefungují jako překážku paměti.
+Verze těchto funkcí s `_acq` nebo `_rel` přípony provedení propojené dodatek následující sémantika získání nebo vydání. *Sémantika získání* znamená, že výsledek operace jsou dostupná pro všechna vlákna a procesory než vyšší paměti operace čtení a zápisu. Získání je užitečné, když zadáte kritický oddíl. *Uvolnění sémantiku* nastavena jako viditelná pro všechny vlákna a procesory než výsledek operace jsou dostupná vlastní prostředky, které všechny paměti čte a zapisuje budou ukončeny. Verze je užitečné při opuštění kritický oddíl. Vnitřní objekty s `_nf` příponu ("žádná ohrazení") doby něco neuděláte jako překážku paměti.
 
 Tyto rutiny jsou dostupné jenom jako vnitřní funkce.
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // interlockedadd.cpp
 // Compile with: /Oi /EHsc
 // processor: ARM
@@ -132,13 +132,13 @@ int main()
 
 ## <a name="output"></a>Výstup
 
-```
+```Output
 0xffffff00 0xff0000 0xffffff00
 ```
 
 ## <a name="example"></a>Příklad
 
-```
+```cpp
 // interlockedadd64.cpp
 // compile with: /Oi /EHsc
 // processor: ARM
@@ -162,7 +162,7 @@ int main()
 
 ## <a name="output"></a>Výstup
 
-```
+```Output
 ff0000000000 + ff0000ffffffff = ffff00ffffffff
 Return value: ffff00ffffffff
 ```
@@ -172,4 +172,4 @@ Return value: ffff00ffffffff
 ## <a name="see-also"></a>Viz také
 
 [Vnitřní funkce kompilátoru](../intrinsics/compiler-intrinsics.md)<br/>
-[Konflikty s kompilátorem x86](../build/conflicts-with-the-x86-compiler.md)
+[Konflikty s kompilátorem x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
