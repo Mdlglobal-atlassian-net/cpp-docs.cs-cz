@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-ms.openlocfilehash: 67a071ecd457495510b2015f05466e1aa9bfc989
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da493ceb1a0b751e302d296a9840b668e446ff62
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477347"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978332"
 ---
 # <a name="optimization-best-practices"></a>Doporučené postupy optimalizace
 
@@ -34,7 +34,7 @@ Pokud je to možné vydání finální verze sestavení by měl být zkompilová
 
 Propojení v prostředích 64-bit, doporučuje se použít **OPT, ICF** – možnost linkeru a v prostředích s 32-bit **OPT** se doporučuje. Další informace najdete v tématu [/OPT (optimalizace)](../../build/reference/opt-optimizations.md).
 
-Také důrazně se doporučuje generovat symboly ladění, dokonce i u sestavení pro vydání optimalizované. To nemá vliv generovaného kódu, a to usnadňuje velké snadněji ladit aplikaci, pokud musí být.
+Také důrazně se doporučuje generovat symboly ladění, dokonce i u sestavení pro vydání optimalizované. Neovlivňuje generovaný kód a umožňuje snadněji ladit aplikaci, pokud mnoho musí být.
 
 ### <a name="floating-point-switches"></a>Přepínače s plovoucí desetinnou čárkou
 

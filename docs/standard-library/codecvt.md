@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-ms.openlocfilehash: 2c21173b556938514ea06aa2fa5db70826cfa746
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 56cd4263d3dcddd23246a05466275b8b7d370b95
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518422"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978241"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt –&gt;
 
@@ -60,7 +60,7 @@ Pro datové proudy bajtů (uložené v souboru, jako sekvence bajtů nepřenáš
 
 **Záhlaví:** \<codecvt – >
 
-**Namespace:** stdt
+**Namespace:** std
 
 ## <a name="see-also"></a>Viz také:
 

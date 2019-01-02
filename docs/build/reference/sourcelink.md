@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - /SOURCELINK linker option
 - /SOURCELINK
-ms.openlocfilehash: 5c742a37803f450aa6084c862800583f70bcedde
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5a01ca56a49791a608c5c836312c7728e9328c3
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480987"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978280"
 ---
-# <a name="sourcelink-include-sourcelink-file-in-pdb"></a>/ SOURCELINK (Sourcelink zahrnout soubor PDB)
+# <a name="sourcelink-include-source-link-file-in-pdb"></a>/ SOURCELINK (zahrnout odkaz na zdroj souboru PDB)
 
-Určuje konfigurační soubor SourceLink zahrnout do souboru PDB vygenerován linkerem.
+Určuje konfigurační soubor zdrojového odkazu pro zahrnutí souboru PDB vygenerován linkerem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,7 +28,7 @@ Určuje konfiguraci ve formátu JSON soubor, který obsahuje jednoduché mapová
 
 ## <a name="remarks"></a>Poznámky
 
-SourceLink je nezávislá systém správy jazyka a zdroje pro poskytování ladění zdrojového kód pro binární soubory. SourceLink se podporuje pro nativní binární soubory C++ v sadě Visual Studio 2017 verze 15.8 spuštění. Přehled SourceLink, naleznete v tématu [odkazu na zdroj](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md). Informace o tom, jak používat SourceLink ve vašich projektech a jak vygenerovat soubor SourceLink jako součást vašeho projektu, naleznete v tématu [pomocí SourceLink](https://github.com/dotnet/sourcelink#using-sourcelink).
+Odkaz na zdroj je jazyk a zdrojového nezávislá systém pro poskytování ladění zdrojového kód pro binární soubory. Zdrojový odkaz se podporuje pro nativní binární soubory C++ v sadě Visual Studio 2017 verze 15.8 spuštění. Přehled odkazu na zdroj, naleznete v tématu [odkazu na zdroj](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md). Informace o tom, jak používat odkaz na zdroj ve vašich projektech a jak vygenerovat soubor SourceLink jako součást projektu, naleznete v tématu [pomocí zdrojového odkazu](https://github.com/dotnet/sourcelink#using-source-link-in-c-projects).
 
 ### <a name="to-set-the-sourcelink-linker-option-in-visual-studio"></a>Nastavení parametru linkeru/sourcelink v sadě Visual Studio
 

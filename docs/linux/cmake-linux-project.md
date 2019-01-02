@@ -3,12 +3,12 @@ title: Konfigurace projektu Linux CMake v sadě Visual Studio
 description: Konfigurace projektu Linux CMake v sadě Visual Studio
 ms.date: 07/20/2018
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 32d69e28c0991adc6117b7f9496eeb1022943ef2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28902f0a2938fe653eb4dfbb6e512367b1052b8c
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585039"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978319"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Konfigurace projektu Linux CMake
 
@@ -18,7 +18,7 @@ Pokud jste si nainstalovali úlohu Linux C++ pro Visual Studio, je standardně v
 Toto téma předpokládá, že máte základní znalosti podpora CMake v sadě Visual Studio. Další informace najdete v tématu [nástroje CMake pro Visual C++](../ide/cmake-tools-for-visual-cpp.md). Další informace o CMake samotný najdete v tématu [sestavení, testování a balíček svůj Software s CMake](https://cmake.org/).
 
 > [!NOTE]
-> Podpora CMake v sadě Visual Studio vyžaduje režim podporu serveru, která byla zavedena v CMake 3.8. Hodnotu typu variant poskytovaný společností Microsoft CMake stáhnout nejnovější předem připravených binární soubory na [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases).
+> Podpora CMake v sadě Visual Studio vyžaduje režim podporu serveru, která byla zavedena v CMake 3.8. Hodnotu typu variant poskytovaný společností Microsoft CMake stáhnout nejnovější předem připravených binární soubory na [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases). V aplikaci Visual Studio 2019 předem připravených binární soubory dají automaticky nasazovat (viz [stažení předem připravených binární soubory CMake](#download-prebuilt-cmake-binaries)).
 
 ## <a name="open-a-folder"></a>Otevřít složku
 
@@ -109,6 +109,9 @@ Tyto možnosti umožňují spuštění příkazů v okně vzdáleného před a p
 ## <a name="download-prebuilt-cmake-binaries"></a>Stáhněte si předem připravených binární soubory CMake
 
 Vaší distribuce Linuxu mohou mít starší verzi CMake. Podpora CMake v sadě Visual Studio vyžaduje režim podporu serveru, která byla zavedena v CMake 3.8. Hodnotu typu variant poskytovaný společností Microsoft CMake stáhnout nejnovější předem připravených binární soubory na [ https://github.com/Microsoft/CMake/releases ](https://github.com/Microsoft/CMake/releases).
+
+**Visual Studio 2019**<br/>
+Pokud ve vzdáleném počítači nebyl nalezen platný CMake informačního panelu se zobrazí a poskytnout možnost výběru automaticky nasadit předem sestavené binární soubory CMake. Binární soubory se nainstalují pro `~/.vs/cmake`. Po nasazení binárních souborů, bude automaticky obnovit váš projekt. Mějte na paměti, že pokud CMake určené `cmakeExecutable` pole `CMakeSettings.json` je neplatný (neexistuje nebo má nepodporovanou verzi) a předem připravených binární soubory jsou k dispozici sady Visual Studio bude ignorovat `cmakeExecutable` a použijte předem sestavené binární soubory.
 
 ## <a name="see-also"></a>Viz také
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: 1b8568d69fea002e59925e1e9354407457954e42
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 9ebe4fec06996e908c619b6ac14af098b1c07a01
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176260"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978306"
 ---
 # <a name="lambda-expressions-in-c"></a>Výrazy lambda v jazyce C++
 
@@ -55,7 +55,7 @@ Tento obrázek ukazuje část výrazu lambda:
 
 1. *trailing-return-type* volitelné.
 
-1. *hlavní část výrazu lambda*)
+1. *hlavní část výrazu lambda*.
 
 ### <a name="capture-clause"></a>Klauzule zachycení
 
@@ -102,9 +102,9 @@ void f(Args... args) {
 
 Chcete-li použít výrazy lambda v těle metody třídy, předejte **to** ukazatele klauzuli zachycení zajistíte přístup k metodám a datovým členům ohraničující třídy.
 
-**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **to** ukazatele může být zachyceno hodnotou zadáním `*this` v klauzuli zachycení. Zaznamenávání hodnota znamená, že celý *uzavření*, které je objekt anonymní funkce tohoto encapulates výraz lambda, je zkopírován do každé volání webu, kde vyvolání lambda. Zachycení podle hodnoty je užitečné, když bude výraz lambda vykonán v paralelní a asynchronní operace, zejména u určité architektury hardwaru, jako je například technologie NUMA.
+**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **To** ukazatele může být zachyceno hodnotou zadáním `*this` v klauzuli zachycení. Zaznamenávání hodnota znamená, že celý *uzavření*, které je objekt anonymní funkce tohoto encapulates výraz lambda, je zkopírován do každé volání webu, kde vyvolání lambda. Zachycení podle hodnoty je užitečné, když bude výraz lambda vykonán v paralelní a asynchronní operace, zejména u určité architektury hardwaru, jako je například technologie NUMA.
 
-Příklad, který ukazuje, jak použít výrazy lambda s metodami tříd naleznete v části "Příklad: Lambda výrazu v metodou" v [Examples of Lambda Expressions](../cpp/examples-of-lambda-expressions.md).
+Příklad, který ukazuje, jak použít výrazy lambda s metodami tříd naleznete v části "Příklad: Použití výrazu Lambda v metodě"v [příklady výrazů Lambda](../cpp/examples-of-lambda-expressions.md).
 
 Použijete-li klauzuli zachycení, doporučujeme ponechat tyto body na paměti, zejména při použití lambd s multithreading:
 
@@ -324,7 +324,7 @@ Další informace najdete v tématu [generate_n](../standard-library/algorithm-f
 
 ## <a name="constexpr-lambda-expressions"></a>výrazy lambda constexpr.
 
-**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): výraz lambda může být deklarována jako `constexpr` nebo použít v konstantním výrazu při inicializaci každý datový člen se zaznamená nebo zavádí je povolený v konstantním výrazu.
+**Visual Studio 2017 verze 15.3 nebo novější** (k dispozici [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Výraz lambda může být deklarována jako `constexpr` nebo při inicializaci každého datového člena, který zachycuje nebo zavádí je povolený v konstantním výrazu v konstantním výrazu.
 
 ```cpp
     int y = 32;
