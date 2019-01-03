@@ -18,6 +18,6 @@
 #### [Porovnávání znaků](character-comparison.md)
 #### [Přetečení vyrovnávací paměti](buffer-overflow.md)
 ## [Podpora standardu ANSI](support-for-ansi.md)
-## [Mapování obecného textu v souboru Tchar.h](generic-text-mappings-in-tchar-h.md)
+## [Mapování obecného textu v souboru tchar.h](generic-text-mappings-in-tchar-h.md)
 ### [Použití datových typů TCHAR.H s kódováním _MBCS](using-tchar-h-data-types-with-mbcs-code.md)
-## [Postupy: Převody mezi různými typy řetězců](how-to-convert-between-various-string-types.md)
+## [Postupy: Převody různých typů řetězců](how-to-convert-between-various-string-types.md)
