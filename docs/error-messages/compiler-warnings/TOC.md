@@ -508,6 +508,7 @@
 ## [Upozornění kompilátoru (úroveň 1) C4838](compiler-warning-level-1-c4838.md)
 ## [Upozornění kompilátoru (úroveň 3) C4839](compiler-warning-level-3-c4839.md)
 ## [Upozornění kompilátoru (úroveň 4) C4840](compiler-warning-level-4-c4840.md)
+## [Upozornění kompilátoru (úroveň 4) C4866](c4866.md)
 ## [Upozornění kompilátoru C4867](compiler-warning-c4867.md)
 ## [Upozornění kompilátoru C4868](compiler-warning-c4868.md)
 ## [Upozornění kompilátoru (úroveň 1) C4900](compiler-warning-level-1-c4900.md)

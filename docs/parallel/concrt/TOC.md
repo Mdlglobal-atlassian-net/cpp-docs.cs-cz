@@ -7,7 +7,7 @@
 ## [Migrace z OpenMP do Concurrency Runtime](migrating-from-openmp-to-the-concurrency-runtime.md)
 ### [Postupy: Převedení paralelní smyčky for v OpenMP na využití modulu Concurrency Runtime](how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
 ### [Postupy: Převedení smyčky OpenMP využívající zrušení na využití modulu Concurrency Runtime](convert-an-openmp-loop-that-uses-cancellation.md)
-### [Postupy: Převedení smyčky OpenMP využívající zpracování výjimek na využití modulu Concurrency Runtime](convert-an-openmp-loop-that uses-exception-handling.md)
+### [Postupy: Převedení smyčky OpenMP využívající zpracování výjimek na využití modulu Concurrency Runtime](convert-an-openmp-loop-that-uses-exception-handling.md)
 ### [Postupy: Převedení smyčky OpenMP využívající redukční proměnnou na využití modulu Concurrency Runtime](convert-an-openmp-loop-that-uses-a-reduction-variable.md)
 # [Knihovna PPL (Parallel Patterns Library)](parallel-patterns-library-ppl.md)
 ## [Funkční paralelismus (Concurrency Runtime)](task-parallelism-concurrency-runtime.md)

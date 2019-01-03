@@ -1,5 +1,5 @@
 # [MFC – třídy](mfc-classes.md)
-## [CAccelerateDecelerateTransition – třída1](cacceleratedeceleratetransition-class1.md)
+## [CAccelerateDecelerateTransition – třída](cacceleratedeceleratetransition-class.md)
 ## [CAnimateCtrl – třída](canimatectrl-class.md)
 ## [CAnimationBaseObject – třída](canimationbaseobject-class.md)
 ## [CAnimationColor – třída](canimationcolor-class.md)

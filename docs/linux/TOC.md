@@ -12,5 +12,6 @@
 ## [Vlastnosti C/C++ (Linux)](prop-pages/c-cpp-linux.md)
 ## [Vlastnosti linkerů (Linux)](prop-pages/linker-linux.md)
 ## [Vlastnosti události sestavení (Linux)](prop-pages/build-events-linux.md)
-## [Vlastnosti vlastního kroku sestavení (Linux)](prop-pages/custom-build-step-linux.md) 
+## [Vlastnosti vlastního kroku sestavení (Linux)](prop-pages/custom-build-step-linux.md)
 ## [Vlastnosti projektu souboru pravidel (Linux)](prop-pages/makefile-linux.md)
+## [Vlastnosti vzdáleného archivu (Linux)](prop-pages/remote-ar-linux.md)

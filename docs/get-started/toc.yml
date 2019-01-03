@@ -1,0 +1,41 @@
+items:
+- name: C++ v sadě Visual Studio
+  href: index.yml
+  items:
+  - name: Přehled
+    items:
+    - name: O sadě Visual Studio 2017
+      href: visual-studio-ide-cpp.md
+    - name: O editoru kódu
+      href: /visualstudio/get-started/tutorial-editor
+    - name: O projektech a řešeních
+      href: /visualstudio/get-started/tutorial-projects-solutions
+    - name: Další funkce sady Visual Studio
+      href: /visualstudio/ide/advanced-feature-overview?toc=/cpp/get-started/toc.json&bc=/cpp/get-started/breadcrumb/toc.json
+  - name: Kurzy
+    items:
+    - name: Vytvoření první aplikace jazyka C++
+      href: tutorial-console-cpp.md
+    - name: Vytvoření aplikace pro UPW
+      href: /windows/uwp/cpp-and-winrt-apis/get-started
+    - name: Vytvoření desktopové aplikace pro Windows
+      href: /windows/desktop/learnwin32/learn-to-program-for-windows
+    - name: Vytvoření hry v DirectX
+      href: /windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game
+    expanded: true
+  - name: Learn Visual Studio
+    items:
+    - name: Psaní kódu a jeho úpravy
+      href: /visualstudio/get-started/tutorial-editor
+    - name: Kompilace a sestavení
+      href: /visualstudio/ide/compiling-and-building-in-visual-studio
+    - name: Ladění kódu
+      href: /visualstudio/debugger/getting-started-with-the-debugger-cpp
+    - name: Nasazení projektu
+      href: /visualstudio/deployment/index
+ms.openlocfilehash: 98c2cd9f86825506fcc8ef44c22188026fda9bea
+ms.sourcegitcommit: 235d974c14ad3ffa7a3b29dec3e320a52fb291b2
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53440313"
