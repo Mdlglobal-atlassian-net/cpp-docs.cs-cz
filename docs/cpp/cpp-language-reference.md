@@ -8,16 +8,16 @@ helpviewer_keywords:
 - language reference, Visual C++
 - Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 69b244a1559a4570cc00a72d86426a7929ffc474
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d184e70e6a7284d07e706ce8b8c247c96442750
+ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469378"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031262"
 ---
 # <a name="c-language-reference"></a>Reference jazyka C++
 
-Tento přehled popisuje programovací jazyk C++ tak, jak je implementován v sadě Microsoft Visual C++. Organizace je založena na *The manuálu C++ s poznámkami odkaz* od Margaret Ellis a Bjarne Stroustrup a ANSI/ISO C++ mezinárodním standardu (ISO/IEC FDIS 14882). Součástí jsou implementace funkcí jazyka C++ specifické pro společnost Microsoft.
+Tento přehled popisuje programovací jazyk C++ tak, jak je implementován v sadě Microsoft Visual C++. Organizace je založena na [ *The manuálu C++ s poznámkami odkaz* ](http://www.stroustrup.com/arm.html) od Margaret Ellis a Bjarne Stroustrup a ANSI/ISO C++ mezinárodním standardu (ISO/IEC FDIS 14882). Součástí jsou implementace funkcí jazyka C++ specifické pro společnost Microsoft.
 
 Přehled programovací postupy v moderním jazyce C++, naleznete v tématu [Vítejte zpět do C++](welcome-back-to-cpp-modern-cpp.md).
 

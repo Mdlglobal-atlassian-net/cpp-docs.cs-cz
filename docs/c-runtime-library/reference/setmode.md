@@ -26,12 +26,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 887936299dce0a13738f9dd891a168785d17c979
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67cca27ba03a99d7e192d438a98f1bb3a93845ee
+ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617435"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031275"
 ---
 # <a name="setmode"></a>_setmode
 
@@ -66,7 +66,12 @@ Další informace o těchto a dalších návratových kódech naleznete v témat
 
 **_Setmode** funkce nastaví *režimu* režim překladu souboru Dal *fd*. Předání **_O_TEXT** jako *režimu* nastaví text (který je, přeloženém) režimu. Návrat na začátek řádku return-line informačního kanálu kombinace (CR-LF) jsou přeloženy do jednoho kanálu znak na vstupním řádku. Znaky informačního kanálu řádků jsou přeloženy do na výstupu jako kombinace CR-LF. Předání **_O_BINARY** sady binárním (nepřeloženém) režimu, ve kterém jsou tyto překlady potlačeny.
 
-Můžete také předat **_O_U16TEXT**, **_O_U8TEXT**, nebo **_O_WTEXT** pro povolení režimu Unicode, jak je uvedeno v druhém příkladu dále v tomto dokumentu. **_setmode** se obvykle používá k úpravě výchozí režim překladu **stdin** a **stdout**, ale můžete ji použít na jakýkoli soubor. Pokud použijete **_setmode** pro popisovače souborů pro datový proud, volejte **_setmode** před provedením jakékoli operace vstupní nebo výstupní v datovém proudu.
+Můžete také předat **_O_U16TEXT**, **_O_U8TEXT**, nebo **_O_WTEXT** pro povolení režimu Unicode, jak je uvedeno v druhém příkladu dále v tomto dokumentu.
+
+> [!CAUTION]
+> Režim kódování Unicode je pro funkce široký tisku (například `wprintf`) a není podporována pro úzké funkce tisku. Použití funkce úzký tisk v režimu datového proudu Unicode aktivuje assert.
+
+**_setmode** se obvykle používá k úpravě výchozí režim překladu **stdin** a **stdout**, ale můžete ji použít na jakýkoli soubor. Pokud použijete **_setmode** pro popisovače souborů pro datový proud, volejte **_setmode** před provedením jakékoli operace vstupní nebo výstupní v datovém proudu.
 
 > [!CAUTION]
 > Pokud zapíšete data do datového proudu souboru explicitně vyprázdnění kód pomocí [fflush –](fflush.md) před použitím **_setmode** ke změně režimu. Pokud není vyprázdnění kód, může se zobrazit neočekávané chování. Pokud jste nenapsali data do datového proudu, není nutné vyprázdnit kód.
