@@ -3,12 +3,12 @@ title: C++ – systém typů (moderní verze jazyka C++)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 476ebabc4bfc19f995119649d6f012d4b39d8369
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ea4d8da9af10df2fb930daaad8374d70b6704d28
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176338"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220670"
 ---
 # <a name="c-type-system-modern-c"></a>C++ – systém typů (moderní verze jazyka C++)
 
@@ -16,9 +16,9 @@ Koncept *typ* je v jazyce C++ velmi důležitý. Všechny proměnné, argumenty 
 
 ## <a name="terminology"></a>Terminologie
 
-**Proměnné**: symbolický název množství dat tak, aby název lze použít pro přístup k datům, na který odkazuje v rámci rozsahu kódu, kde je definován. V jazyce C++ *proměnnou* se obecně používá k označování instancí skalárních datových typů, že instance ostatních typů se obvykle nazývají *objekty*.
+**Proměnné**: Symbolický název množství dat tak, aby název lze použít pro přístup k datům, na který odkazuje v rámci rozsahu kódu, kde je definován. V jazyce C++ *proměnnou* se obecně používá k označování instancí skalárních datových typů, že instance ostatních typů se obvykle nazývají *objekty*.
 
-**Objekt**: kvůli jednoduchosti a přehlednosti, tento článek používá termín *objekt* k odkazování na jakoukoli instanci třídy nebo struktury a používá se v obecném smyslu tento pojem zahrnuje všechny typy, včetně skalárních proměnných.
+**Objekt**: Kvůli jednoduchosti a přehlednosti, tento článek používá termín *objekt* k odkazování na jakoukoli instanci třídy nebo struktury a používá se v obecném smyslu tento pojem zahrnuje všechny typy, včetně skalárních proměnných.
 
 **Typ POD** (obyčejná stará data): Tato neformální kategorie datových typů jazyka C++ odkazuje na Skalární typy (viz oddíl základní typy) nebo jsou *třídy POD*. Třída POD nemá žádné statické datové členy, které nejsou rovněž POD, a nemá žádné uživatelem definované konstruktory, destruktory ani operátory přiřazení. Třída POD navíc nemá žádné virtuální funkce, žádnou základní třídu a žádné soukromé ani chráněné nestatické datové členy. Typy POD se často používají pro výměnu externích dat, například s modulem napsaným v jazyce C (který má pouze typy POD).
 
@@ -170,6 +170,6 @@ Další informace o systému typů v jazyce C++ naleznete v následujících 
 
 ## <a name="see-also"></a>Viz také:
 
-[C++ vás vítá zpět](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++ vás vítá zpět (moderní verze jazyka C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)

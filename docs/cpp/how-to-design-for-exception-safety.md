@@ -1,17 +1,17 @@
 ---
-title: 'Postupy: Návrh s ohledem na bezpečnost výjimek'
+title: 'Postupy: Návrh pro bezpečnost výjimek'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: f384da3eee0c7bca80d8d6c61f8d8cf0cfaece92
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 2dada25ea712b7bb6d48d80525c824a0457b18cf
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327002"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220545"
 ---
-# <a name="how-to-design-for-exception-safety"></a>Postupy: Návrh s ohledem na bezpečnost výjimek
+# <a name="how-to-design-for-exception-safety"></a>Postupy: Návrh pro bezpečnost výjimek
 
 Jednou z výhod mechanismu výjimek je, že vykonávání spolu s daty o výjimce přejde přímo z příkazu, který výjimku vyvolal, na první příkaz catch, který tuto výjimku zpracuje. Tato obslužná rutina může být v zásobníku volání o libovolný počet úrovní výše. Funkce, které se volají mezi příkazem try a příkazem throw, nemusí o vyvolání této výjimky nic vědět.  Avšak musí být navrženy tak, aby se v jakémkoli bodě, kde se výjimka může šířit výše, mohly „nečekaně“ dostat mimo rozsah, a to bez zanechání částečně vytvořených objektů, úniku paměti nebo datových struktur, které jsou v nepoužitelném stavu.
 
@@ -95,7 +95,7 @@ Obvykle je bezpečnost výjimek popisována v pojmech tří záruk výjimky, kte
 
 Záruka žádného selhání (nebo „bez vyvolání výjimky“) je nejsilnější záruka, kterou funkce může poskytnout. Uvádí, že funkce nevyvolá výjimku a žádné výjimce nepovolí šíření. Takovou záruku však nelze spolehlivě poskytnout, pokud (a) nejsou všechny funkce, které tato funkce volá, také se zárukou žádného selhání nebo (b) nejsou všechny vyvolané výjimky zachyceny předtím, než dosáhnou této funkce nebo (c) nejsou všechny výjimky, které mohou dosáhnout tuto funkci, zachyceny a správně zpracovány.
 
-Silná i základní záruka se spoléhají na předpoklad, že destruktory jsou se zárukou žádného selhání. Všechny kontejnery a typy ve standardní knihovně zaručují, že jejich destruktory nevyvolají výjimku. Existuje také požadavek, že standardní knihovna vyžaduje, aby uživatelské typy, jako například argumenty šablony, měly destruktory, které nevyvolají výjimku.
+Silná i základní záruka se spoléhají na předpoklad, že destruktory jsou se zárukou žádného selhání. Všechny kontejnery a typy ve standardní knihovně zaručují, že jejich destruktory nevyvolají výjimku. Existuje také požadavek konverzace: Standardní knihovna vyžaduje, aby uživatelem definované typy, které jsou uvedené –, jako například argumenty šablony, musí mít non-throwing. destruktory.
 
 ### <a name="strong-guarantee"></a>Silná záruka
 
@@ -121,5 +121,5 @@ Předdefinované typy jsou všechny se zárukou žádného selhání a typy stan
 
 ## <a name="see-also"></a>Viz také:
 
-[Ošetření chyb a výjimek](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Ošetření chyb a výjimek (moderní verze jazyka C++)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [Postupy: Rozhraní mezi kódem výjimek a ostatním kódem](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)

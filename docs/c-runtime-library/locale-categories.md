@@ -21,19 +21,18 @@ helpviewer_keywords:
 - LC_NUMERIC constant
 - LC_COLLATE constant
 ms.assetid: 868f1493-fe5d-4722-acab-bfcd374a063a
-ms.openlocfilehash: 4c46f4803c7b6ff226fc41ddce7f8e4493b0db40
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 841ff5a31bfe9ee5513f76970d3b834f698b92cc
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521346"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220189"
 ---
 # <a name="locale-categories"></a>Kategorie národního prostředí
 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-
 #include <locale.h>
 ```
 
@@ -45,7 +44,7 @@ Kategorie národního prostředí jsou konstanty manifestu používané rutiny l
 |---------------------|-------------------------------|
 |`LC_ALL`|Všechny chování specifické pro národní prostředí (všechny kategorie)|
 |`LC_COLLATE`|Chování `strcoll` a `strxfrm` funkce|
-|`LC_CTYPE`|Chování funkce zpracování znaků (s výjimkou **isdigit**, `isxdigit`, `mbstowcs`, a `mbtowc`, které nejsou ovlivněny)|
+|`LC_CTYPE`|Chování funkce zpracování znaků (s výjimkou `isdigit`, `isxdigit`, `mbstowcs`, a `mbtowc`, které nejsou ovlivněny)|
 |`LC_MAX`|Stejné jako `LC_TIME`|
 |`LC_MIN`|Stejné jako `LC_ALL`|
 |`LC_MONETARY`|Vrácené informace o formátování měny `localeconv` – funkce|

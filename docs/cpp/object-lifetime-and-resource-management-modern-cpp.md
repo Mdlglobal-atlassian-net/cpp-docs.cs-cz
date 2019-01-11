@@ -3,12 +3,12 @@ title: Životní cyklus objektů a správa prostředků (moderní verze jazyka C
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
-ms.openlocfilehash: d7bf45881ef82ecf0d11892e5ddf3d3c16a437cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5964078960a5b241cb5af369aeddba45a06e48ad
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609934"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220624"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>Životní cyklus objektů a správa prostředků (moderní verze jazyka C++)
 
@@ -22,7 +22,7 @@ Důležitá věc, kterou ve správě životního cyklu objektu je zapouzdření,
 
 Dalším důležitým konceptem ve správě životního cyklu: destruktory. Destruktory zapouzdření uvolnění prostředků.  (Obvykle použila se mnemotechnika je RRID uvolnění prostředků je zničení.)  Prostředek je něco, co můžete získat z "systém" a dát později.  Paměť je nejběžnější prostředků, ale existují také soubory, sokety, textury a jiné než paměťových prostředků. "Vlastnit" prostředek znamená, že můžete použít, když ho potřebujete, ale taky je potřeba ji uvolnit, až budete hotovi s ním.  Pokud objekt je zničen, jeho destruktor uvolní prostředky, které jej vlastní.
 
-Poslední koncept je orientovaného acyklického grafu (orientovaného Acyklického grafu).  Struktura vlastnictví v aplikaci tvoří DAG. Žádný objekt může vlastnit sebe sama –, který je nejen nemožné, ale také ze své podstaty nemá význam. Ale dva objekty můžou sdílet vlastnictví třetí objekt.  Několik druhů odkazy je možné ve skupině DAG takto: A je členem skupiny B (B vlastníkem A), úložiště jazyka C `vector<D>` (C vlastní každý prvek D), ukládá E `shared_ptr<F>` (E sdílí vlastnictví F, případně s jinými objekty), a tak dále.  Za předpokladu, neexistují žádné cykly a každý odkaz v tomto orientovaném acyklickém grafu je reprezentován objektem, který má destruktor (namísto nezpracovaný ukazatel, popisovač nebo jiný mechanismus) a potom nedostatku prostředků jsou nemožné, protože jazyk se nedají. Uvolnění prostředků ihned poté, co jste už nepotřebujete, bez systému uvolňování paměti spuštěna. Sledování životnosti je režie bez pro obor zásobníku, základních tříd, členů a související případy a cenově dostupné pro `shared_ptr`.
+Poslední koncept je orientovaného acyklického grafu (orientovaného Acyklického grafu).  Struktura vlastnictví v aplikaci tvoří DAG. Žádný objekt může vlastnit sebe sama –, který je nejen nemožné, ale také ze své podstaty nemá význam. Ale dva objekty můžou sdílet vlastnictví třetí objekt.  Několik druhů odkazy je možné ve skupině DAG takto: Je členem skupiny B A (B vlastníkem A), úložiště jazyka C `vector<D>` (C vlastní každý prvek D), úložiště E `shared_ptr<F>` (E sdílí vlastnictví F, případně s jinými objekty), a tak dále.  Za předpokladu, neexistují žádné cykly a každý odkaz v tomto orientovaném acyklickém grafu je reprezentován objektem, který má destruktor (namísto nezpracovaný ukazatel, popisovač nebo jiný mechanismus) a potom nedostatku prostředků jsou nemožné, protože jazyk se nedají. Uvolnění prostředků ihned poté, co jste už nepotřebujete, bez systému uvolňování paměti spuštěna. Sledování životnosti je režie bez pro obor zásobníku, základních tříd, členů a související případy a cenově dostupné pro `shared_ptr`.
 
 ### <a name="heap-based-lifetime"></a>Doba života haldy
 
@@ -85,6 +85,6 @@ Používejte opatrně statickou životnost (globální statické, místní stati
 
 ## <a name="see-also"></a>Viz také:
 
-[C++ vás vítá zpět](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++ vás vítá zpět (moderní verze jazyka C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)

@@ -3,12 +3,12 @@ title: Ošetření chyb a výjimek (moderní verze jazyka C++)
 ms.date: 09/17/2018
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: d6192ab800667ceb35bf2e18dcbdc0be95ec70f5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: c3def77d8b7a22be05259784e3b80562c8728c15
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523285"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220566"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Ošetření chyb a výjimek (moderní verze jazyka C++)
 
@@ -60,7 +60,7 @@ int main()
 }
 ```
 
-Výjimky v C++ se podobají těm v jazycích, jako je C# nebo Java. V **zkuste** blokovat, pokud je výjimka *vyvolána* bude *zachycena* prvním přiřazeným **catch** bloku, jehož typ odpovídá typu došlo k výjimce. Jinými slovy spuštění přejde z **throw** příkazu **catch** příkazu. Pokud není nalezen žádný použitelný blok catch, `std::terminate` je vyvolána a program je ukončen. V jazyce C++ může být vyvolán libovolný typ; ale doporučujeme, abyste vyvolali typ odvozený přímo nebo nepřímo ze `std::exception`. V předchozím příkladu, typ výjimky [invalid_argument](../standard-library/invalid-argument-class.md), je definován ve standardní knihovně v [ \<stdexcept – >](../standard-library/stdexcept.md) hlavičkový soubor. C++ neposkytuje a nevyžaduje, **nakonec** blok k Ujistěte se, že jsou všechny prostředky uvolněny, pokud je vyvolána výjimka. Získávání prostředků je idiom inicializace (RAII), který používá inteligentní ukazatele, poskytuje požadované funkce vyčištění prostředků. Další informace najdete v tématu [postupy: návrh pro bezpečnost výjimek](../cpp/how-to-design-for-exception-safety.md). Informace o mechanismu uvolnění zásobníku C++ naleznete v tématu [výjimky a Unwinding zásobníku](../cpp/exceptions-and-stack-unwinding-in-cpp.md).
+Výjimky v C++ se podobají těm v jazycích, jako je C# nebo Java. V **zkuste** blokovat, pokud je výjimka *vyvolána* bude *zachycena* prvním přiřazeným **catch** bloku, jehož typ odpovídá typu došlo k výjimce. Jinými slovy spuštění přejde z **throw** příkazu **catch** příkazu. Pokud není nalezen žádný použitelný blok catch, `std::terminate` je vyvolána a program je ukončen. V jazyce C++ může být vyvolán libovolný typ; ale doporučujeme, abyste vyvolali typ odvozený přímo nebo nepřímo ze `std::exception`. V předchozím příkladu, typ výjimky [invalid_argument](../standard-library/invalid-argument-class.md), je definován ve standardní knihovně v [ \<stdexcept – >](../standard-library/stdexcept.md) hlavičkový soubor. C++ neposkytuje a nevyžaduje, **nakonec** blok k Ujistěte se, že jsou všechny prostředky uvolněny, pokud je vyvolána výjimka. Získávání prostředků je idiom inicializace (RAII), který používá inteligentní ukazatele, poskytuje požadované funkce vyčištění prostředků. Další informace najdete v tématu [jak: Návrh pro bezpečnost výjimek](../cpp/how-to-design-for-exception-safety.md). Informace o mechanismu uvolnění zásobníku C++ naleznete v tématu [výjimky a Unwinding zásobníku](../cpp/exceptions-and-stack-unwinding-in-cpp.md).
 
 ## <a name="basic-guidelines"></a>Základní pokyny
 
@@ -70,7 +70,7 @@ Robustní zpracování chyby je o něco náročnější v jakémkoli programovac
 
 - Použijte výjimky, pokud kód, který zpracuje chybu, může být oddělen od kódu, který rozpozná chybu podle jednoho nebo více síťová volání funkce. Zvažte, zda radši nepoužít kódy chyb ve smyčkách výkonově kritického po kód, který zpracovává chyby, těsně spjat s kódem, který je rozpoznává.
 
-- Pro každou funkci, která může vyvolat nebo propagovat výjimku, poskytuje jednu ze tří záruk výjimky: silnou záruku, základní záruku nebo záruku nothrow (noexcept). Další informace najdete v tématu [postupy: návrh pro bezpečnost výjimek](../cpp/how-to-design-for-exception-safety.md).
+- Pro každou funkci, která může vyvolat nebo propagovat výjimku, poskytuje jednu ze tří záruk výjimky: silnou záruku, základní záruku nebo záruku nothrow (noexcept). Další informace najdete v tématu [jak: Návrh pro bezpečnost výjimek](../cpp/how-to-design-for-exception-safety.md).
 
 - Vyvolání výjimky podle hodnoty, jejich zachycení podle reference. Nezachycujte, co nemůžete zpracovat.
 
@@ -101,6 +101,6 @@ Specifikace výjimek byly zavedeny v C++ jako způsob, jak určit výjimky, kter
 ## <a name="see-also"></a>Viz také:
 
 [Postupy: Rozhraní mezi kódem výjimek a ostatním kódem](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
-[C++ vás vítá zpět](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++ vás vítá zpět (moderní verze jazyka C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)

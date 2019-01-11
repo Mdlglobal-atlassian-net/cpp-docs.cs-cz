@@ -41,19 +41,18 @@ helpviewer_keywords:
 - EXDEV constant
 - EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
-ms.openlocfilehash: c7c623b81d626b3d653dbd731521ffe2649671ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d092f9c1626f48dcdb006e18ece2a45bfeed36e
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645598"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220605"
 ---
 # <a name="errno-constants"></a>errno – konstanty
 
 ## <a name="syntax"></a>Syntaxe
 
 ```
-
 #include <errno.h>
 ```
 
@@ -73,7 +72,7 @@ Následující **errno** hodnoty jsou podporovány:
 |**EAGAIN**|Žádné další procesy. Pokus o vytvoření nového procesu se nezdařila, protože neexistují žádné další proces sloty, nebo není dostatek paměti nebo bylo dosaženo maximální úrovně vnoření.|
 |**E2BIG**|Seznam argumentů je příliš dlouhý.|
 |**EACCES**|Oprávnění byla odepřena. Nastavení oprávnění k souboru neumožňuje zadaný přístup. Tato chyba označuje, že byl proveden pokus o přístup k souboru (nebo v některých případech se do adresáře) v způsobem, který je kompatibilní s atributy souboru.<br/><br/>Této chybě může dojít například při pokusu o čtení ze souboru, který není otevřený, otevřete existující soubor jen pro čtení pro zápis, nebo otevřete adresář, nikoli soubor. V části zástupného kódu MS-DOS verze operačních systémů, 3.0 a vyšší **EACCES** může také znamenat uzamčení nebo narušení sdílení.<br/><br/>Této chybě může dojít také při pokusu o přejmenování souboru nebo adresáře nebo odstranění existující adresář.|
-|**EBADF**|Chybné číslo souboru. Existují dva možné příčiny: 1) popisovače zadaný soubor není platnou hodnotou nebo neodkazuje na otevřený soubor. 2) byl k pokusu o zápis do souboru nebo zařízení pro přístup jen pro čtení.|
+|**EBADF**|Chybné číslo souboru. Existují dva možné příčiny: (1) popisovač zadaný soubor není platnou hodnotou nebo neodkazuje na otevřený soubor. 2) byl k pokusu o zápis do souboru nebo zařízení pro přístup jen pro čtení.|
 |**EDEADLOCK**|By k vzájemnému zablokování prostředků. Argument matematické funkce není v doméně funkce.|
 |**EDOM**|Matematický argument.|
 |**EEXIST**|Soubory existují. Byl proveden pokus o vytvoření souboru, který již existuje. Například **_O_CREAT** a **_O_EXCL** příznaky jsou určené v **_Otevřít** volání, ale soubor s názvem již existuje.|

@@ -1,17 +1,17 @@
 ---
-title: 'Postupy: Vytváření a používání instancí ukazatelů weak_ptr'
+title: 'Postupy: Vytvoření a používání instancí ukazatelů weak_ptr'
 ms.custom: how-to
 ms.date: 07/12/2018
 ms.topic: conceptual
 ms.assetid: 8dd6909b-b070-4afa-9696-f2fc94579c65
-ms.openlocfilehash: c3f788a23acf30fac84757f8cd4430f128df67af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a0e2880e97a77a0c9975553631a6024072745f0
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478192"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220319"
 ---
-# <a name="how-to-create-and-use-weakptr-instances"></a>Postupy: Vytváření a používání instancí ukazatelů weak_ptr
+# <a name="how-to-create-and-use-weakptr-instances"></a>Postupy: Vytvoření a používání instancí ukazatelů weak_ptr
 
 Někdy musí objekt uložit cestu pro přístup k objektu `shared_ptr` aniž by došlo k navýšení počtu odkazů. Obvykle k této situaci dochází, když máte cyklické odkazy mezi `shared_ptr` instancí.
 
@@ -86,4 +86,4 @@ Jako experiment upravte vektor `others` bude `vector<shared_ptr<Controller>>`a p
 
 ## <a name="see-also"></a>Viz také:
 
-[Inteligentní ukazatele](../cpp/smart-pointers-modern-cpp.md)
+[Chytré ukazatele (moderní verze jazyka C++)](../cpp/smart-pointers-modern-cpp.md)

@@ -1,17 +1,17 @@
 ---
-title: 'Postupy: Vytváření a používání instancí ukazatelů unique_ptr'
+title: 'Postupy: Vytvoření a používání instancí ukazatelů unique_ptr'
 ms.custom: how-to
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
-ms.openlocfilehash: a3e5705b47a4cfdf17b9a4b4829f1e13565dd7ce
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 48e459b69592bf4c231407c2a378a7b7e01ff4ae
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174869"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220579"
 ---
-# <a name="how-to-create-and-use-uniqueptr-instances"></a>Postupy: Vytváření a používání instancí ukazatelů unique_ptr
+# <a name="how-to-create-and-use-uniqueptr-instances"></a>Postupy: Vytvoření a používání instancí ukazatelů unique_ptr
 
 A [unique_ptr](../standard-library/unique-ptr-class.md) nesdílí jeho ukazatel. Nemůže být zkopírován do jiného `unique_ptr`, předán podle hodnoty do funkce, nebo použit v libovolném algoritmu standardní knihovny C++, který vyžaduje vytvoření kopií, které budou. A `unique_ptr` lze pouze přesunout. To znamená, že vlastnictví prostředku paměti je převedeno do jiného `unique_ptr` a původní `unique_ptr` není nadále jeho vlastníkem. Doporučujeme omezit objekt na jednoho vlastníka, protože více vlastnictví zkomplikuje programovou logiku. Proto, když budete potřebovat inteligentní ukazatel pro prostý objekt jazyka C++, použijte `unique_ptr`, a při sestavování `unique_ptr`, použijte [make_unique](../standard-library/memory-functions.md#make_unique) pomocnou funkci.
 
@@ -53,5 +53,5 @@ Další příklady najdete v tématu [make_unique](../standard-library/memory-fu
 
 ## <a name="see-also"></a>Viz také:
 
-[Inteligentní ukazatele](../cpp/smart-pointers-modern-cpp.md)<br/>
+[Chytré ukazatele (moderní verze jazyka C++)](../cpp/smart-pointers-modern-cpp.md)<br/>
 [make_unique](../standard-library/memory-functions.md#make_unique)
