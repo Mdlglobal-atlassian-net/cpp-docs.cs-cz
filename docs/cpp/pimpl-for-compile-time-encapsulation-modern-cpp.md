@@ -3,12 +3,12 @@ title: Ukazatel na implementaci pro zapouzdření za kompilace (moderní verze j
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c3e8a90a-b328-4990-82bb-e1b147f76e07
-ms.openlocfilehash: 9a73ea1df099003061081d108a3f3f6eef601fb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e114e2802dd4b2e5d1497867e2224be90c4752d
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594360"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220683"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Ukazatel na implementaci pro zapouzdření za kompilace (moderní verze jazyka C++)
 
@@ -59,6 +59,6 @@ Zvažte, jestli se má přidat podporu pro specializaci non-throwing. prohození
 
 ## <a name="see-also"></a>Viz také:
 
-[C++ vás vítá zpět](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++ vás vítá zpět (moderní verze jazyka C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)

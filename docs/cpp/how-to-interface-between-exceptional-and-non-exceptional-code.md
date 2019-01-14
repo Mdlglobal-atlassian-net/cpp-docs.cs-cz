@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
-ms.openlocfilehash: b6da1142ee04668033a516f2c20c4a2354ff5598
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8ff92f965f48faa7954ae0364ec7877428e519c
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576680"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220620"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Postupy: Rozhraní mezi kódem výjimek a ostatním kódem
 
@@ -19,7 +19,7 @@ Někdy musí modul C++ pracovat s kódem, který nepoužívá výjimky (kód bez
 
 ## <a name="calling-non-exceptional-functions-from-c"></a>Volání Nevýjimečné funkce z jazyka C++
 
-Při volání nevýjimečné funkce z jazyka C++, myšlenka je zabalit tuto funkci ve funkci jazyka C++, který zjistí všechny chyby a pak případně vyvolá výjimku. Při návrhu takové funkce obálky, nejdřív se rozhodněte, který typ záruky výjimky chcete poskytnout: bez vyvolávání, silný nebo základní. Za druhé Navrhněte funkci tak, aby všechny prostředky, například obslužné rutiny souborů, byly správně uvolněny, pokud je vyvolána výjimka. Obvykle to znamená použít inteligentní ukazatele nebo podobné správce prostředků pro vlastnění zdrojů. Další informace o zvažování návrhu naleznete v tématu [postupy: návrh pro bezpečnost výjimek](../cpp/how-to-design-for-exception-safety.md).
+Při volání nevýjimečné funkce z jazyka C++, myšlenka je zabalit tuto funkci ve funkci jazyka C++, který zjistí všechny chyby a pak případně vyvolá výjimku. Při návrhu takové funkce obálky, nejdřív se rozhodněte, který typ záruky výjimky chcete poskytnout: bez vyvolávání, silný nebo základní. Za druhé Navrhněte funkci tak, aby všechny prostředky, například obslužné rutiny souborů, byly správně uvolněny, pokud je vyvolána výjimka. Obvykle to znamená použít inteligentní ukazatele nebo podobné správce prostředků pro vlastnění zdrojů. Další informace o zvažování návrhu naleznete v tématu [jak: Návrh pro bezpečnost výjimek](../cpp/how-to-design-for-exception-safety.md).
 
 ### <a name="example"></a>Příklad
 
@@ -236,5 +236,5 @@ Další informace o výrazech lambda naleznete v tématu [výrazy Lambda](../cpp
 
 ## <a name="see-also"></a>Viz také:
 
-[Ošetření chyb a výjimek](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Postupy: Návrh s ohledem na bezpečnost výjimek](../cpp/how-to-design-for-exception-safety.md)<br/>
+[Ošetření chyb a výjimek (moderní verze jazyka C++)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Postupy: Návrh pro bezpečnost výjimek](../cpp/how-to-design-for-exception-safety.md)<br/>

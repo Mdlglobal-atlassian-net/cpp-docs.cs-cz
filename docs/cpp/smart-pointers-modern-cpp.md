@@ -3,12 +3,12 @@ title: Chytré ukazatele (moderní verze jazyka C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
-ms.openlocfilehash: 5f04a4ab23241d63fc1694d419f85d8b694b7fff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c976f9ec72929f2c8ff91fb9f9594d91c7457365
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616902"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220657"
 ---
 # <a name="smart-pointers-modern-c"></a>Chytré ukazatele (moderní verze jazyka C++)
 
@@ -68,23 +68,23 @@ V následující části jsou shrnuty různé druhy inteligentních ukazatelů,
 Tyto inteligentní ukazatele představují první volbu pro zapouzdření ukazatelů do objektů POCO.
 
 - `unique_ptr`<br/>
-   Povolují právě jednoho vlastníka podkladového ukazatele. Použijte jako výchozí volbu pro POCO, pokud nejste jisti, že budete potřebovat `shared_ptr`. Lze je přesunout na nového vlastníka, nikoli však kopírovat nebo sdílet. Nahradí `auto_ptr`, který je zastaralý. Porovnat s `boost::scoped_ptr`. `unique_ptr` je malý a efektivní. velikost je jeden ukazatel a podporuje odkazy rvalue pro rychlé vkládání a načítání z kolekcí standardní knihovny C++. Soubor hlaviček: `<memory>`. Další informace najdete v tématu [postupy: vytváření a používání instancí ukazatelů unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md) a [unique_ptr – třída](../standard-library/unique-ptr-class.md).
+   Povolují právě jednoho vlastníka podkladového ukazatele. Použijte jako výchozí volbu pro POCO, pokud nejste jisti, že budete potřebovat `shared_ptr`. Lze je přesunout na nového vlastníka, nikoli však kopírovat nebo sdílet. Nahradí `auto_ptr`, který je zastaralý. Porovnat s `boost::scoped_ptr`. `unique_ptr` je malý a efektivní. velikost je jeden ukazatel a podporuje odkazy rvalue pro rychlé vkládání a načítání z kolekcí standardní knihovny C++. Soubor hlaviček: `<memory>`. Další informace najdete v tématu [jak: Vytvoření a používání instancí ukazatelů unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md) a [unique_ptr – třída](../standard-library/unique-ptr-class.md).
 
 - `shared_ptr`<br/>
-   Inteligentní ukazatel s počítáním referencí Tento typ je vhodný, když chcete přiřadit jeden nezpracovaný ukazatel více vlastníkům, například, když vrátíte kopii ukazatele z kontejneru, ale chcete zachovat originál. Nezpracovaný ukazatel není odstraněn, dokud všichni `shared_ptr` vlastníky nepřejdou mimo rozsah nebo jinak Nevzdají vlastnictví. Má velikost dva ukazatele; jeden pro objekt a jeden pro sdílený kontrolní blok, který obsahuje počet odkazů. Soubor hlaviček: `<memory>`. Další informace najdete v tématu [postupy: vytváření a používání instancí ukazatelů shared_ptr](../cpp/how-to-create-and-use-shared-ptr-instances.md) a [shared_ptr – třída](../standard-library/shared-ptr-class.md).
+   Inteligentní ukazatel s počítáním referencí Tento typ je vhodný, když chcete přiřadit jeden nezpracovaný ukazatel více vlastníkům, například, když vrátíte kopii ukazatele z kontejneru, ale chcete zachovat originál. Nezpracovaný ukazatel není odstraněn, dokud všichni `shared_ptr` vlastníky nepřejdou mimo rozsah nebo jinak Nevzdají vlastnictví. Má velikost dva ukazatele; jeden pro objekt a jeden pro sdílený kontrolní blok, který obsahuje počet odkazů. Soubor hlaviček: `<memory>`. Další informace najdete v tématu [jak: Vytvoření a používání instancí ukazatelů shared_ptr](../cpp/how-to-create-and-use-shared-ptr-instances.md) a [shared_ptr – třída](../standard-library/shared-ptr-class.md).
 
 - `weak_ptr`<br/>
-    Zvláštní případ inteligentní ukazatel pro použití ve spojení s `shared_ptr`. A `weak_ptr` poskytuje přístup k objektu, který je vlastněn jednou nebo více `shared_ptr` instancí, ale se neúčastní počítání odkazů. Použijte ho, chcete-li objekt sledovat, ale nepotřebujete ho ponechat ve stavu alive. Potřebné v některých případech pro přerušení cyklických odkazů mezi `shared_ptr` instancí. Soubor hlaviček: `<memory>`. Další informace najdete v tématu [postupy: vytváření a používání instancí ukazatelů weak_ptr](../cpp/how-to-create-and-use-weak-ptr-instances.md) a [weak_ptr – třída](../standard-library/weak-ptr-class.md).
+    Zvláštní případ inteligentní ukazatel pro použití ve spojení s `shared_ptr`. A `weak_ptr` poskytuje přístup k objektu, který je vlastněn jednou nebo více `shared_ptr` instancí, ale se neúčastní počítání odkazů. Použijte ho, chcete-li objekt sledovat, ale nepotřebujete ho ponechat ve stavu alive. Potřebné v některých případech pro přerušení cyklických odkazů mezi `shared_ptr` instancí. Soubor hlaviček: `<memory>`. Další informace najdete v tématu [jak: Vytvoření a používání instancí ukazatelů weak_ptr](../cpp/how-to-create-and-use-weak-ptr-instances.md) a [weak_ptr – třída](../standard-library/weak-ptr-class.md).
 
 ### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a>Inteligentní ukazatele pro objekty COM (klasické programování v systému Windows)
 
 Při práci s objekty COM zabalte ukazatele rozhraní do příslušného typu inteligentního ukazatele. Knihovna ATL definuje řadu inteligentních ukazatelů pro různé účely. Můžete také použít `_com_ptr_t` typ inteligentního ukazatele, který kompilátor používá při vytváření obálkových tříd ze souborů .tlb. Jedná se o nejlepší volbu, pokud nechcete zahrnovat hlavičkové soubory ATL.
 
 [CComPtr – třída](../atl/reference/ccomptr-class.md)<br/>
-Tuto volbu použijte, dokud nenastane situace, že nemůžete použít knihovnu ATL. Provede součet odkazů pomocí `AddRef` a `Release` metody. Další informace najdete v tématu [postupy: vytvoření a používání instancí objektů CComPtr a CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
+Tuto volbu použijte, dokud nenastane situace, že nemůžete použít knihovnu ATL. Provede součet odkazů pomocí `AddRef` a `Release` metody. Další informace najdete v tématu [jak: Vytvoření a používání objektů CComPtr a CComQIPtr instance](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
 
 [CComQIPtr – třída](../atl/reference/ccomqiptr-class.md)<br/>
-Se podobá `CComPtr` , ale také poskytuje zjednodušenou syntaxi pro volání `QueryInterface` v objektech com. Další informace najdete v tématu [postupy: vytvoření a používání instancí objektů CComPtr a CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
+Se podobá `CComPtr` , ale také poskytuje zjednodušenou syntaxi pro volání `QueryInterface` v objektech com. Další informace najdete v tématu [jak: Vytvoření a používání objektů CComPtr a CComQIPtr instance](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
 
 [CComHeapPtr – třída](../atl/reference/ccomheapptr-class.md)<br/>
 Inteligentní ukazatel na objekty, které používají `CoTaskMemFree` k uvolnění paměti.
@@ -116,6 +116,6 @@ Třída, která zapouzdřuje metody pro práci se seznamem `CAutoPtr` uzly.
 
 ## <a name="see-also"></a>Viz také:
 
-[C++ vás vítá zpět](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++ vás vítá zpět (moderní verze jazyka C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Standardní knihovna C++](../standard-library/cpp-standard-library-reference.md)
