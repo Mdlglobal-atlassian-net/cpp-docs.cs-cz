@@ -200,46 +200,46 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 5fdb5a89bc475cf2d6a358768b84b8542da5e0e8
-ms.sourcegitcommit: d94714522428834a02ede6e6884572f0f6ca9824
+ms.openlocfilehash: 260b2ee780956550678fcb01b3a018a60fb58deb
+ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597561"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54334674"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algoritmus&gt; funkce
 
 ||||
 |-|-|-|
-|[Přesunutí](#alg_move)|[adjacent_find](#adjacent_find)|[all_of](#all_of)|
+|[move](#alg_move)|[adjacent_find](#adjacent_find)|[all_of](#all_of)|
 |[any_of](#any_of)|[binary_search](#binary_search)|[kopírování](#copy)|
 |[copy_backward](#copy_backward)|[copy_if](#copy_if)|[copy_n](#copy_n)|
 |[Počet](#count)|[count_if](#count_if)|[rovno](#equal)|
 |[equal_range](#equal_range)|[Výplň](#fill)|[fill_n](#fill_n)|
-|[Najít](#find)|[find_end –](#find_end)|[find_first_of](#find_first_of)|
+|[Najít](#find)|[find_end](#find_end)|[find_first_of](#find_first_of)|
 |[find_if](#find_if)|[find_if_not](#find_if_not)|[for_each](#for_each)|
 |[Generovat](#generate)|[generate_n](#generate_n)|[zahrnuje](#includes)|
-|[inplace_merge –](#inplace_merge)|[is_heap](#is_heap)|[is_heap_until –](#is_heap_until)|
+|[inplace_merge](#inplace_merge)|[is_heap](#is_heap)|[is_heap_until](#is_heap_until)|
 |[is_partitioned](#is_partitioned)|[is_permutation](#is_permutation)|[is_sorted](#is_sorted)|
-|[is_sorted_until –](#is_sorted_until)|[iter_swap](#iter_swap)|[lexicographical_compare](#lexicographical_compare)|
+|[is_sorted_until](#is_sorted_until)|[iter_swap](#iter_swap)|[lexicographical_compare](#lexicographical_compare)|
 |[lower_bound –](#lower_bound)|[make_heap](#make_heap)|[max](#max)|
 |[max_element](#max_element)|[sloučení](#merge)|[min](#min)|
 |[min_element](#min_element)|[minmax](#minmax)|[minmax_element](#minmax_element)|
-|[Neshoda](#mismatch)|[move_backward](#move_backward)|[next_permutation](#next_permutation)|
-|[none_of](#none_of)|[nth_element –](#nth_element)|[partial_sort](#partial_sort)|
-|[partial_sort_copy](#partial_sort_copy)|[oddíl](#partition)|[partition_copy –](#partition_copy)|
-|[partition_point](#partition_point)|[pop_heap –](#pop_heap)|[prev_permutation](#prev_permutation)|
-|[push_heap –](#push_heap)|[random_shuffle](#random_shuffle)|[remove](#remove)|
+|[mismatch](#mismatch)|[move_backward](#move_backward)|[next_permutation](#next_permutation)|
+|[none_of](#none_of)|[nth_element](#nth_element)|[partial_sort](#partial_sort)|
+|[partial_sort_copy](#partial_sort_copy)|[partition](#partition)|[partition_copy](#partition_copy)|
+|[partition_point](#partition_point)|[pop_heap](#pop_heap)|[prev_permutation](#prev_permutation)|
+|[push_heap](#push_heap)|[random_shuffle](#random_shuffle)|[remove](#remove)|
 |[remove_copy](#remove_copy)|[remove_copy_if](#remove_copy_if)|[remove_if](#remove_if)|
-|[nahradit](#replace)|[replace_copy –](#replace_copy)|[replace_copy_if –](#replace_copy_if)|
-|[replace_if –](#replace_if)|[reverzní](#reverse)|[reverse_copy –](#reverse_copy)|
-|[Otočit o](#rotate)|[rotate_copy –](#rotate_copy)|[search](#search)|
+|[nahradit](#replace)|[replace_copy](#replace_copy)|[replace_copy_if](#replace_copy_if)|
+|[replace_if](#replace_if)|[reverzní](#reverse)|[reverse_copy](#reverse_copy)|
+|[Otočit o](#rotate)|[rotate_copy](#rotate_copy)|[search](#search)|
 |[search_n](#search_n)|[set_difference](#set_difference)|[set_intersection](#set_intersection)|
 |[set_symmetric_difference](#set_symmetric_difference)|[set_union](#set_union)|[Řazení](#sort)|
-|[sort_heap –](#sort_heap)|[stable_partition –](#stable_partition)|[stable_sort](#stable_sort)|
-|[Shuffle](#shuffle)|[Prohození](#swap)|[swap_ranges](#swap_ranges)|
-|[Transformace](#transform)|[unique](#unique)|[unique_copy](#unique_copy)|
-|[upper_bound –](#upper_bound)|
+|[sort_heap](#sort_heap)|[stable_partition](#stable_partition)|[stable_sort](#stable_sort)|
+|[Shuffle](#shuffle)|[swap](#swap)|[swap_ranges](#swap_ranges)|
+|[transform](#transform)|[unique](#unique)|[unique_copy](#unique_copy)|
+|[upper_bound](#upper_bound)|
 
 ## <a name="adjacent_find"></a>  adjacent_find –
 
@@ -263,10 +263,10 @@ ForwardIterator adjacent_find(
 *první*<br/>
 Dopředný iterátor, který adresuje umístění prvního prvku v rozsahu pro hledání.
 
-*poslední*<br/>
+*last*<br/>
 Dopředný iterátor, který adresuje umístění jedno místo za posledním prvkem v oblasti pro hledání.
 
-*Kompozice*<br/>
+*comp*<br/>
 Binární predikát, který poskytuje podmínku, která má být splněno hodnoty sousedících prvků v prohledávaný rozsah.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -358,10 +358,10 @@ bool all_of(
 *první*<br/>
 Vstupní iterátor, který označuje, kde začít kontrolují určitou podmínku. Iterátoru označuje, kde celou řadu prvků spustí.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor, který označuje konec rozsahu prvků, které se kontrolují určitou podmínku.
 
-*Kompozice*<br/>
+*comp*<br/>
 Podmínka pro testování. Toto je objekt funkce predikátu definovaný uživatelem, který definuje podmínku, která má být uspokojen prvkem kontroluje. Predikát přijímá jeden argument a vrátí **true** nebo **false**.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -389,10 +389,10 @@ bool any_of(
 *první*<br/>
 Vstupní iterátor, který označuje, kde zahájí kontrolu rozsahu prvků podmínku.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor, který označuje konec rozsahu prvků, které se kontrolují určitou podmínku.
 
-*Kompozice*<br/>
+*comp*<br/>
 Podmínka pro testování. To poskytuje objekt funkce predikátu definovaný uživatelem. Predikát definuje podmínku, která má vyhovět pomocí elementu testován. Predikát přijímá jeden argument a vrátí **true** nebo **false**.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -429,13 +429,13 @@ bool binary_search(
 *první*<br/>
 Dopředný iterátor, který adresuje umístění prvního prvku v rozsahu pro hledání.
 
-*poslední*<br/>
+*last*<br/>
 Dopředný iterátor, který adresuje umístění jedno místo za posledním prvkem v oblasti pro hledání.
 
 *value*<br/>
 Hodnota požadovaná k porovnání s hodnotou elementu nebo která musí splňovat podmínku s hodnotou elementu zadanou binárním predikátem.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje smysl, ve kterém jeden prvek je menší než jiný. Binární predikát přijímá dva argumenty a vrací **true** při splnění a **false** pokud nevyhovují.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -553,7 +553,7 @@ OutputIterator copy(
 *první*<br/>
 Vstupní iterátor, který adresuje umístění prvního prvku ve zdrojové oblasti.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor adresující pozici, která je jedno místo za posledním prvkem ve zdrojové oblasti.
 
 *destBeg*<br/>
@@ -646,7 +646,7 @@ BidirectionalIterator2 copy_backward(
 *první*<br/>
 Obousměrný iterátor, který adresuje umístění prvního prvku ve zdrojové oblasti.
 
-*poslední*<br/>
+*last*<br/>
 Obousměrný iterátor, který adresuje umístění jedno místo za posledním prvkem ve zdrojové oblasti.
 
 *destEnd*<br/>
@@ -737,10 +737,10 @@ OutputIterator copy_if(
 *první*<br/>
 Vstupní iterátor, který označuje začátek rozsahu ke kontrole stavu.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor, který označuje konec rozsahu.
 
-*cíl*<br/>
+*dest*<br/>
 Výstupní iterátor, který určuje cíl pro zkopírované elementy.
 
 *_Pred*<br/>
@@ -778,7 +778,7 @@ Vstupní iterátor, který určuje, kam chcete kopírovat prvky z.
 *Počet*<br/>
 Typ celého čísla se znaménkem nebo bez znaménka určující počet prvků ke zkopírování.
 
-*cíl*<br/>
+*dest*<br/>
 Výstupní iterátor, který označuje, kde pro kopírování prvků do.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -806,7 +806,7 @@ typename iterator_traits<InputIterator>::difference_type count(
 *první*<br/>
 Vstupní iterátor adresující pozici prvního prvku v rozsahu Procházet.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor adresuje umístění jedno místo za posledním prvkem v rozsahu Procházet.
 
 *Val*<br/>
@@ -859,7 +859,7 @@ v1 = ( 10 20 10 40 10 )
 The number of 10s in v2 is: 3.
 ```
 
-## <a name="count_if"></a>  count_if –
+## <a name="count_if"></a>  count_if
 
 Vrátí počet prvků v rozsahu, jehož hodnoty splňují zadanou podmínku.
 
@@ -876,7 +876,7 @@ typename iterator_traits<InputIterator>::difference_type count_if(
 *první*<br/>
 Vstupní iterátor adresující pozici prvního prvku v rozsahu pro hledání.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor adresuje umístění jedno místo za posledním prvkem v oblasti pro hledání.
 
 *_Pred*<br/>
@@ -1057,13 +1057,13 @@ pair<ForwardIterator, ForwardIterator> equal_range(
 *první*<br/>
 Dopředný iterátor, který adresuje umístění prvního prvku v rozsahu pro hledání.
 
-*poslední*<br/>
+*last*<br/>
 Dopředný iterátor, který adresuje umístění jedno místo za posledním prvkem v oblasti pro hledání.
 
 *Val*<br/>
 Hodnota prohledávána v rozsahu příkazu.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje smysl, ve kterém jeden prvek je menší než jiný.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1216,7 +1216,7 @@ void fill(
 *první*<br/>
 Dopředný iterátor, který adresuje umístění prvního prvku v rozsahu na Procházet.
 
-*poslední*<br/>
+*last*<br/>
 Dopředný iterátor, který adresuje umístění jedno místo za posledním prvkem v rozsahu na Procházet.
 
 *Val*<br/>
@@ -1363,7 +1363,7 @@ InputIterator find(
 *první*<br/>
 Vstupní iterátor adresující pozici prvního prvku v rozsahu pro hledání pro zadanou hodnotu.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor adresující jedna pozice za posledním prvkem v oblasti pro hledání pro zadanou hodnotu.
 
 *Val*<br/>
@@ -1549,16 +1549,16 @@ ForwardIterator1 find_first_of(
 *first1*<br/>
 Dopředný iterátor, který adresuje umístění prvního prvku v rozsahu pro hledání.
 
-*Příjmení1*<br/>
+*last1*<br/>
 Dopředný iterátor, který adresuje umístění jedno místo za posledním prvkem v oblasti pro hledání.
 
 *first2*<br/>
 Dopředný iterátor, který adresuje umístění prvního prvku v rozsahu lze porovnat.
 
-*Příjmení2*<br/>
+*last2*<br/>
 Dopředný iterátor, který adresuje umístění jedno místo za posledním prvkem v rozsahu lze porovnat.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje podmínku, která má být splněny, pokud jsou dva prvky mají být provedeny, jako ekvivalentní. Binární predikát přijímá dva argumenty a vrací **true** při splnění a **false** pokud nevyhovují.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1687,7 +1687,7 @@ InputIterator find_if(
 *první*<br/>
 Vstupní iterátor adresující pozici prvního prvku v rozsahu pro hledání.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor adresuje umístění jedno místo za posledním prvkem v oblasti pro hledání.
 
 *Před*<br/>
@@ -1803,7 +1803,7 @@ InputIterator find_if_not(
 *první*<br/>
 Vstupní iterátor adresující pozici prvního prvku v rozsahu pro hledání.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor adresuje umístění jedno místo za posledním prvkem v oblasti pro hledání.
 
 *Před*<br/>
@@ -1836,7 +1836,7 @@ Function for_each(
 *první*<br/>
 Vstupní iterátor adresující pozici prvního prvku v rozsahu, který chcete ho zpracovat.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor adresuje umístění jedno místo za posledním prvkem v rozsahu zpracovat.
 
 *_Func*<br/>
@@ -1984,7 +1984,7 @@ void generate(
 *první*<br/>
 Dopředný iterátor, který adresuje umístění prvního prvku v rozsahu, do které se mají přiřadit hodnoty.
 
-*poslední*<br/>
+*last*<br/>
 Dopředný iterátor, který adresuje umístění jedno místo za poslední prvek v rozsahu, do které se mají přiřadit hodnoty.
 
 *_Gen*<br/>
@@ -2141,16 +2141,16 @@ bool includes(
 *first1*<br/>
 Vstupní iterátor, který adresuje umístění prvního prvku v prvních dvou seřazených zdrojových rozsahů má být testována pro Určuje, zda jsou všechny prvky druhé obsaženy v prvním.
 
-*Příjmení1*<br/>
+*last1*<br/>
 Vstupní iterátor adresuje umístění jedno místo za posledním prvkem v první ze dvou seřazených zdrojových rozsahů ověřovat, jestli jsou všechny prvky druhé obsaženy v prvním.
 
 *first2*<br/>
 Vstupní iterátor adresující pozici prvního prvku v druhé dvě po sobě jdoucích seřazené zdrojových rozsahů do ověřovat, jestli jsou všechny prvky druhé obsaženy v prvním.
 
-*Příjmení2*<br/>
+*last2*<br/>
 Vstupní iterátor, který adresuje umístění jedno místo za posledním prvkem v druhé dvě po sobě následujících seřazených zdrojových rozsahů do ověřovat, jestli jsou všechny prvky druhé obsaženy v prvním.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje smysl, ve kterém jeden prvek je menší než jiný. Binární predikát přijímá dva argumenty a vrací **true** při splnění a **false** pokud nevyhovují.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2347,10 +2347,10 @@ Obousměrný iterátor, který adresuje umístění prvního prvku v prvních dv
 *střední*<br/>
 Obousměrný iterátor, který adresuje umístění prvního prvku v druhé dvě po sobě jdoucích seřazené rozsahy kombinovat a rozděleny na jeden rozsah.
 
-*poslední*<br/>
+*last*<br/>
 Obousměrný iterátor, který adresuje umístění jedno místo za posledním prvkem v druhé dvě po sobě jdoucích seřazené rozsahy kombinovat a rozděleny na jeden rozsah.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje smysl, ve kterém jeden prvek je větší než jiný. Binární predikát přijímá dva argumenty a by měl vrátit **true** při prvním prvkem je menší než druhý prvek a **false** jinak.
 
 ### <a name="remarks"></a>Poznámky
@@ -2494,10 +2494,10 @@ bool is_heap(
 *první*<br/>
 Iterátor náhodného přístupu, který označuje začátek rozsahu ke kontrole haldy.
 
-*poslední*<br/>
+*last*<br/>
 Iterátor náhodného přístupu, který označuje konec rozsahu.
 
-*Kompozice*<br/>
+*comp*<br/>
 Podmínky testování pořadí elementů. Binární predikát přijímá jeden argument a vrátí **true** nebo **false**.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2567,10 +2567,10 @@ bool is_partitioned(
 *první*<br/>
 Vstupní iterátor, který označuje, kde se oblast začne kontrolují určitou podmínku.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor, který označuje konec rozsahu.
 
-*Kompozice*<br/>
+*comp*<br/>
 Podmínka pro testování. To poskytuje objekt funkce predikátu definovaný uživatelem, který definuje podmínku, která má být splněno elementu vyhledávaná. Predikát přijímá jeden argument a vrátí **true** nebo **false**.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2723,10 +2723,10 @@ bool is_sorted(
 *první*<br/>
 Dopředný iterátor, který označuje, kde začíná rozsahu, který chcete zkontrolovat.
 
-*poslední*<br/>
+*last*<br/>
 Dopředný iterátor, který označuje konec rozsahu.
 
-*Kompozice*<br/>
+*comp*<br/>
 Chcete-li určit pořadí mezi dvěma prvky testovanou podmínku. Predikát přijímá jeden argument a vrátí **true** nebo **false**. Provede stejnou úlohu jako `operator<`.
 
 ### <a name="remarks"></a>Poznámky
@@ -2758,10 +2758,10 @@ ForwardIterator is_sorted_until(
 *první*<br/>
 Dopředný iterátor, který označuje, kde začíná rozsahu, který chcete zkontrolovat.
 
-*poslední*<br/>
+*last*<br/>
 Dopředný iterátor, který označuje konec rozsahu.
 
-*Kompozice*<br/>
+*comp*<br/>
 Chcete-li určit pořadí mezi dvěma prvky testovanou podmínku. Predikát přijímá jeden argument a vrátí **true** nebo **false**.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2774,7 +2774,7 @@ První šablona funkce vrátí poslední iterátoru `next` v `[` `first ,` `last
 
 Druhá funkce šablony se chová stejně s tím rozdílem, že ji nahradí `operator<(X, Y)` s `comp (X, Y)`.
 
-## <a name="iter_swap"></a>  iter_swap –
+## <a name="iter_swap"></a>  iter_swap
 
 Vymění dvě hodnoty odkazované dvojicí zadaných iterátorů.
 
@@ -2956,16 +2956,16 @@ bool lexicographical_compare(
 *first1*<br/>
 Vstupní iterátor adresuje umístění prvního prvku v první oblasti, která chcete porovnat.
 
-*Příjmení1*<br/>
+*last1*<br/>
 Vstupní iterátor adresující jedna pozice za posledním prvkem v první oblasti, která k porovnání.
 
 *first2*<br/>
 Vstupní iterátor adresující pozici prvního prvku v druhé rozsahu k porovnání.
 
-*Příjmení2*<br/>
+*last2*<br/>
 Vstupní iterátor adresuje umístění jedno místo za posledním prvek v druhého rozsahu k porovnání.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje smysl, ve kterém jeden prvek je menší než jiný. Binární predikát přijímá dva argumenty a vrací **true** při splnění a **false** pokud nevyhovují.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3101,13 +3101,13 @@ ForwardIterator lower_bound(
 *první*<br/>
 Dopředný iterátor, který adresuje umístění prvního prvku v rozsahu pro hledání.
 
-*poslední*<br/>
+*last*<br/>
 Dopředný iterátor, který adresuje umístění jedno místo za posledním prvkem v oblasti pro hledání.
 
 *value*<br/>
 Hodnota, jejíž první pozice nebo možná první pozice je prohledávána v rozsahu příkazu.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje smysl, ve kterém jeden prvek je menší než jiný. Binární predikát přijímá dva argumenty a vrací **true** při splnění a **false** pokud nevyhovují.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3238,10 +3238,10 @@ void make_heap(
 *první*<br/>
 Iterátor náhodného přístupu, který adresuje umístění prvního prvku v rozsahu, který chcete převést na haldu.
 
-*poslední*<br/>
+*last*<br/>
 Iterátor náhodného přístupu, který adresuje umístění jedno místo za poslední prvek v rozsahu, který chcete převést na haldu.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje smysl, ve kterém jeden prvek je menší než jiný. Binární predikát přijímá dva argumenty a vrací **true** při splnění a **false** pokud nevyhovují.
 
 ### <a name="remarks"></a>Poznámky
@@ -3329,7 +3329,7 @@ První dva objekty, který se porovnává.
 *doprava*<br/>
 Druhý dvou porovnávaných objektů.
 
-*Kompozice*<br/>
+*comp*<br/>
 Binární predikát, který používá k porovnání dvou objektů.
 
 *_IList*<br/>
@@ -3528,10 +3528,10 @@ constexpr ForwardIterator max_element(ForwardIterator first, ForwardIterator las
 *první*<br/>
 Dopředný iterátor, který adresuje umístění prvního prvku v rozsahu má být vyhledán největšího prvku.
 
-*poslední*<br/>
+*last*<br/>
 Dopředný iterátor, který adresuje umístění jedno místo za poslední prvek v rozsahu má být vyhledán největšího prvku.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje smysl, ve kterém jeden prvek je větší než jiný. Binární predikát přijímá dva argumenty a by měl vrátit **true** při prvním prvkem je menší než druhý prvek a **false** jinak.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3672,19 +3672,19 @@ OutputIterator merge(
 *first1*<br/>
 Vstupní iterátor, který adresuje umístění prvního prvku v první ze dvou seřazených zdrojových rozsahů do kombinované a rozděleny na jeden rozsah.
 
-*Příjmení1*<br/>
+*last1*<br/>
 Vstupní iterátor, který adresuje umístění jedno místo za posledním prvkem v první ze dvou seřazených zdrojových rozsahů do kombinované a rozděleny na jeden rozsah.
 
 *first2*<br/>
 Vstupní iterátor, který adresuje umístění prvního prvku v druhé dvě po sobě následujících seřazených zdrojových rozsahů kombinovat a rozděleny na jeden rozsah.
 
-*Příjmení2*<br/>
+*last2*<br/>
 Vstupní iterátor, který adresuje umístění jedno místo za posledním prvkem v druhé dvě po sobě následujících seřazených zdrojových rozsahů kombinovat a rozděleny na jeden rozsah.
 
 *výsledek*<br/>
 Výstupní iterace adresující pozici prvního prvku v cílové oblasti, kde jsou dva zdrojových rozsahů a nelze jej zkombinovat do jednoho seřazeného rozsahu.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje smysl, ve kterém jeden prvek je větší než jiný. Binární predikát přijímá dva argumenty a by měl vrátit **true** při prvním prvkem je menší než druhý prvek a **false** jinak.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -3848,7 +3848,7 @@ První dva objekty, který se porovnává.
 *doprava*<br/>
 Druhý dvou porovnávaných objektů.
 
-*Kompozice*<br/>
+*comp*<br/>
 Binární predikát, který používá k porovnání dvou objektů.
 
 *_IList*<br/>
@@ -4049,10 +4049,10 @@ constexpr ForwardIterator min_element(
 *první*<br/>
 Dopředný iterátor, který adresuje umístění prvního prvku v rozsahu má být vyhledán nejmenší element.
 
-*poslední*<br/>
+*last*<br/>
 Dopředný iterátor, který adresuje umístění jedno místo za poslední prvek v rozsahu má být vyhledán nejmenší element.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje smysl, ve kterém jeden prvek je větší než jiný. Binární predikát přijímá dva argumenty a by měl vrátit **true** při prvním prvkem je menší než druhý prvek a **false** jinak.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4196,10 +4196,10 @@ constexpr pair<ForwardIterator, ForwardIterator> minmax_element(
 *první*<br/>
 Dopředný iterátor, který označuje začátek rozsahu.
 
-*poslední*<br/>
+*last*<br/>
 Dopředný iterátor, který označuje konec rozsahu.
 
-*Kompozice*<br/>
+*comp*<br/>
 Volitelné test, který používá pořadí elementů.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4253,7 +4253,7 @@ První dva objekty, který se porovnává.
 *doprava*<br/>
 Druhý dvou porovnávaných objektů.
 
-*Kompozice*<br/>
+*comp*<br/>
 Binární predikát, který používá k porovnání dvou objektů.
 
 *_IList*<br/>
@@ -4452,10 +4452,10 @@ OutputIterator move(
 *první*<br/>
 Vstupní iterátor, který označuje, kde začít rozsahu prvků, které chcete přesunout.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor, který označuje konec rozsahu prvků, které se přesunout.
 
-*cíl*<br/>
+*dest*<br/>
 Výstupní iterátor, který bude obsahovat přesunutých prvků.
 
 ### <a name="remarks"></a>Poznámky
@@ -4479,7 +4479,7 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
 *první*<br/>
 Iterátor, který označuje začátek rozsahu se mají přesunout prvky z.
 
-*poslední*<br/>
+*last*<br/>
 Iterátor, který označuje konec rozsahu se mají přesunout prvky z. Tento prvek nebyl přesunut.
 
 *destEnd*<br/>
@@ -4508,10 +4508,10 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, B
 *první*<br/>
 Obousměrný iterátor odkazující na pozici prvního prvku v rozsahu pro být permutovanou funkci.
 
-*poslední*<br/>
+*last*<br/>
 Obousměrný iterátor odkazující na umístění jedno místo za posledním prvkem v rozsahu pro být permutovanou funkci.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje kritérium porovnání vyhovět pomocí po sobě jdoucí prvky v pořadí. Binární predikát přijímá dva argumenty a vrací **true** při splnění a **false** pokud nevyhovují.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4685,10 +4685,10 @@ Iterátor s náhodným přístupem adresuje umístění prvního prvku v rozsahu
 *_Nth*<br/>
 Náhodný přístup iterátor adresující umístění prvku správné seřazení na hranici oddílu.
 
-*poslední*<br/>
+*last*<br/>
 Náhodným přístupem iterátor, který adresuje umístění jedno místo za poslední prvek v rozsahu k rozdělení na oddíly.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje kritérium porovnání vyhovět pomocí po sobě jdoucí prvky v pořadí. Binární predikát přijímá dva argumenty a vrací **true** při splnění a **false** pokud nevyhovují.
 
 ### <a name="remarks"></a>Poznámky
@@ -4781,10 +4781,10 @@ bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);
 *první*<br/>
 Vstupní iterátor, který označuje, kde začít kontrolovat rozsah prvků podmínku.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor, který označuje konec rozsahu prvků.
 
-*Kompozice*<br/>
+*comp*<br/>
 Podmínka pro testování. To poskytuje objekt funkce predikátu definovaný uživatelem, který definuje podmínku. Predikát přijímá jeden argument a vrátí **true** nebo **false**.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4822,10 +4822,10 @@ Iterátor s náhodným přístupem adresuje umístění prvního prvku v rozsahu
 *sortEnd*<br/>
 Náhodným přístupem iterátor, který adresuje umístění jedno místo za posledním prvkem v dílčí sadu který se má seřadit.
 
-*poslední*<br/>
+*last*<br/>
 Iterátor s náhodným přístupem adresuje umístění jedno místo za posledním prvkem v rozsahu do částečně seřazeny.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje kritérium porovnání vyhovět pomocí po sobě jdoucí prvky v pořadí. Binární predikát přijímá dva argumenty a vrací **true** při splnění a **false** pokud nevyhovují.
 
 ### <a name="remarks"></a>Poznámky
@@ -4909,7 +4909,7 @@ Partially resorted (UDgreater) vector:
 v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )
 ```
 
-## <a name="partial_sort_copy"></a>  partial_sort_copy –
+## <a name="partial_sort_copy"></a>  partial_sort_copy
 
 Zkopíruje prvky ze zdrojového rozsahu do cílového rozsahu, kde zdrojové prvky jsou seřazeny buď podle binárního predikátu „menší než“ nebo jiného určeného binárního predikátu.
 
@@ -4935,16 +4935,16 @@ RandomAccessIterator partial_sort_copy(
 *first1*<br/>
 Vstupní iterátor, který adresuje umístění prvního prvku ve zdrojové oblasti.
 
-*Příjmení1*<br/>
+*last1*<br/>
 Vstupní iterátor, který adresuje umístění jedno místo za posledním prvkem ve zdrojové oblasti.
 
 *first2*<br/>
 Iterátor náhodného přístupu, který adresuje umístění prvního prvku v seřazeného cílového rozsahu.
 
-*Příjmení2*<br/>
+*last2*<br/>
 Iterátor náhodného přístupu, který adresuje umístění jedno místo za posledním prvkem v seřazeného cílového rozsahu.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje podmínku, která má být splněny, pokud jsou dva prvky mají být provedeny, jako ekvivalentní. Binární predikát přijímá dva argumenty a vrací **true** při splnění a **false** pokud nevyhovují.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -5050,10 +5050,10 @@ BidirectionalIterator partition(
 *první*<br/>
 Obousměrný iterátor adresuje umístění prvního prvku v rozsahu k rozdělení na oddíly.
 
-*poslední*<br/>
+*last*<br/>
 Obousměrný iterátor adresuje umístění jedno místo za poslední prvek v rozsahu k rozdělení na oddíly.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje podmínku, která má být splněny, pokud element má být klasifikované. Predikát přijímá jeden argument a vrátí **true** nebo **false**.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -5127,7 +5127,7 @@ pair<OutputIterator1, OutputIterator2>
 *první*<br/>
 Vstupní iterátor, který označuje začátek rozsahu mají kontrolují určitou podmínku.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor, který označuje konec rozsahu.
 
 *dest1*<br/>
@@ -5160,10 +5160,10 @@ ForwardIterator partition_point(
 *první*<br/>
 A `ForwardIterator` , který označuje začátek rozsahu mají kontrolují určitou podmínku.
 
-*poslední*<br/>
+*last*<br/>
 A `ForwardIterator` , který označuje konec rozsahu.
 
-*Kompozice*<br/>
+*comp*<br/>
 Podmínka pro testování. To poskytuje objekt funkce predikátu definovaný uživatelem, který definuje podmínku, která má být splněno elementu vyhledávaná. Predikát přijímá jeden argument a vrátí **true** nebo **false**.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -5191,10 +5191,10 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
 *první*<br/>
 Iterátor náhodného přístupu, který adresuje umístění prvního prvku v haldě.
 
-*poslední*<br/>
+*last*<br/>
 Iterátor náhodného přístupu, který adresuje umístění jedno místo za posledním prvkem v haldě.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje smysl, ve kterém jeden prvek je menší než jiný. Binární predikát přijímá dva argumenty a vrací **true** při splnění a **false** pokud nevyhovují.
 
 ### <a name="remarks"></a>Poznámky
@@ -5277,7 +5277,7 @@ int main()  {
 }
 ```
 
-## <a name="prev_permutation"></a>  prev_permutation –
+## <a name="prev_permutation"></a>  prev_permutation
 
 Znovu uspořádá prvky v rozsahu tak, aby původní pořadí bylo nahrazeno lexikograficky předchozí větší permutací pokud existuje, kde představu o předchozí může být určen binárním predikátem.
 
@@ -5299,10 +5299,10 @@ bool prev_permutation(
 *první*<br/>
 Obousměrný iterátor odkazující na pozici prvního prvku v rozsahu pro být permutovanou funkci.
 
-*poslední*<br/>
+*last*<br/>
 Obousměrný iterátor odkazující na umístění jedno místo za posledním prvkem v rozsahu pro být permutovanou funkci.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje kritérium porovnání vyhovět pomocí po sobě jdoucí prvky v pořadí. Binární predikát přijímá dva argumenty a vrací **true** při splnění a **false** pokud nevyhovují.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -5468,10 +5468,10 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
 *první*<br/>
 Iterátor náhodného přístupu, který adresuje umístění prvního prvku v haldě.
 
-*poslední*<br/>
+*last*<br/>
 Iterátor náhodného přístupu, který adresuje umístění jedno místo za poslední prvek v rozsahu, který chcete převést na haldu.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje smysl, ve kterém jeden prvek je menší než jiný. Binární predikát přijímá dva argumenty a vrací **true** při splnění a **false** pokud nevyhovují.
 
 ### <a name="remarks"></a>Poznámky
@@ -5561,7 +5561,7 @@ int main() {
 
 ## <a name="random_shuffle"></a>  random_shuffle –
 
-Zastaralé funkce std::random_shuffle() nahrazuje [std::shuffle](../standard-library/algorithm-functions.md#shuffle). Příklad kódu a další informace najdete v tématu [ \<náhodné >](../standard-library/random.md) a účtování Stackoverflow [Proč jsou metody std::random_shuffle zastaralé v C ++ 14?](http://go.microsoft.com/fwlink/p/?linkid=397954).
+Zastaralé funkce std::random_shuffle() nahrazuje [std::shuffle](../standard-library/algorithm-functions.md#shuffle). Příklad kódu a další informace najdete v tématu [ \<náhodné >](../standard-library/random.md) a Stack Overflow příspěvek [Proč jsou metody std::random_shuffle zastaralé v C ++ 14?](http://go.microsoft.com/fwlink/p/?linkid=397954).
 
 ## <a name="remove"></a>  odebrat
 
@@ -5577,7 +5577,7 @@ ForwardIterator remove(ForwardIterator first, ForwardIterator last, const Type& 
 *první*<br/>
 Dopředný iterátor, který adresuje umístění prvního prvku v rozsahu, ze kterého budou odebrány elementy.
 
-*poslední*<br/>
+*last*<br/>
 Dopředný iterátor, který adresuje umístění jedno za posledním prvkem v rozsahu, ze kterého budou odebrány elementy.
 
 *Val*<br/>
@@ -5645,7 +5645,7 @@ int main() {
 }
 ```
 
-## <a name="remove_copy"></a>  remove_copy –
+## <a name="remove_copy"></a>  remove_copy
 
 Zkopíruje prvky ze zdrojového rozsahu do cílového rozsahu. Prvky zadané hodnoty zkopírovány nejsou. Nenaruší pořadí zbývajících prvků a nevrátí konec nového cílového rozsahu.
 
@@ -5659,7 +5659,7 @@ OutputIterator remove_copy(InputIterator first, InputIterator last, OutputIterat
 *první*<br/>
 Vstupní iterátor, který adresuje umístění prvního prvku v rozsahu, ze kterého budou odebrány elementy.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor adresující jedna pozice za posledním prvkem v rozsahu, ze kterého budou odebrány elementy.
 
 *výsledek*<br/>
@@ -5727,7 +5727,7 @@ int main() {
 }
 ```
 
-## <a name="remove_copy_if"></a>  remove_copy_if –
+## <a name="remove_copy_if"></a>  remove_copy_if
 
 Zkopíruje prvky ze zdrojového rozsahu do cílového rozsahu. Prvky splňující predikát zkopírovány nejsou. Nenaruší pořadí zbývajících prvků a nevrátí konec nového cílového rozsahu.
 
@@ -5741,7 +5741,7 @@ OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIte
 *první*<br/>
 Vstupní iterátor, který adresuje umístění prvního prvku v rozsahu, ze kterého budou odebrány elementy.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor adresující jedna pozice za posledním prvkem v rozsahu, ze kterého budou odebrány elementy.
 
 *výsledek*<br/>
@@ -5818,7 +5818,7 @@ int main() {
 }
 ```
 
-## <a name="remove_if"></a>  remove_if –
+## <a name="remove_if"></a>  remove_if
 
 Odstraní prvky, které splňují predikát, z daného rozsahu bez narušení pořadí zbývajících prvků a vrácení konce nového rozsahu, který neobsahuje zadanou hodnotu.
 
@@ -5835,7 +5835,7 @@ ForwardIterator remove_if(
 *první*<br/>
 Dopředný iterátor odkazující na pozici prvního prvku v rozsahu, ze kterého budou odebrány elementy.
 
-*poslední*<br/>
+*last*<br/>
 Dopředný iterátor odkazující na jedna pozice za posledním prvkem v rozsahu, ze kterého budou odebrány elementy.
 
 *_Pred*<br/>
@@ -5925,7 +5925,7 @@ void replace(
 *první*<br/>
 Dopředný iterátor odkazující na pozici prvního prvku v rozsahu, ze kterého se nahrazují elementy.
 
-*poslední*<br/>
+*last*<br/>
 Dopředný iterátor odkazující na jedna pozice za posledním prvkem v rozsahu, ze kterého se nahrazují elementy.
 
 *_OldVal*<br/>
@@ -6001,7 +6001,7 @@ OutputIterator replace_copy(
 *první*<br/>
 Vstupní iterátor odkazující na pozici prvního prvku v rozsahu, ze kterého se nahrazují elementy.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor odkazující na umístění jedno místo za posledním prvkem v rozsahu, ze kterého se nahrazují elementy.
 
 *výsledek*<br/>
@@ -6103,7 +6103,7 @@ OutputIterator replace_copy_if(
 *první*<br/>
 Vstupní iterátor odkazující na pozici prvního prvku v rozsahu, ze kterého se nahrazují elementy.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor odkazující na umístění jedno místo za posledním prvkem v rozsahu, ze kterého se nahrazují elementy.
 
 *výsledek*<br/>
@@ -6211,7 +6211,7 @@ void replace_if(
 *první*<br/>
 Dopředný iterátor odkazující na pozici prvního prvku v rozsahu, ze kterého se nahrazují elementy.
 
-*poslední*<br/>
+*last*<br/>
 Iterátorem ukazujícím na jednu pozici za posledním prvkem v rozsahu, ze kterého se nahrazují elementy.
 
 *_Pred*<br/>
@@ -6290,7 +6290,7 @@ void reverse(BidirectionalIterator first, BidirectionalIterator last);
 *první*<br/>
 Obousměrný iterátor odkazující na pozici prvního prvku v rozsahu, ve kterém prvky jsou právě permutovanou funkci.
 
-*poslední*<br/>
+*last*<br/>
 Obousměrný iterátor odkazující na umístění jedno místo za posledním prvkem v rozsahu, ve kterém prvky jsou právě permutovanou funkci.
 
 ### <a name="remarks"></a>Poznámky
@@ -6356,7 +6356,7 @@ OutputIterator reverse_copy(
 *první*<br/>
 Obousměrný iterátor odkazující na pozici první prvek ve zdrojovém rozsahu, ve kterém prvky jsou právě permutovanou funkci.
 
-*poslední*<br/>
+*last*<br/>
 Obousměrný iterátor odkazující na umístění jedno místo za posledním prvkem ve zdrojové oblasti, ve kterém prvky jsou právě permutovanou funkci.
 
 *výsledek*<br/>
@@ -6635,16 +6635,16 @@ ForwardIterator1 search(
 *first1*<br/>
 Dopředný iterátor, který adresuje umístění prvního prvku v rozsahu pro hledání.
 
-*Příjmení1*<br/>
+*last1*<br/>
 Dopředný iterátor, který adresuje umístění jedno místo za posledním prvkem v oblasti pro hledání.
 
 *first2*<br/>
 Dopředný iterátor, který adresuje umístění prvního prvku v rozsahu lze porovnat.
 
-*Příjmení2*<br/>
+*last2*<br/>
 Dopředný iterátor, který adresuje umístění jedno místo za posledním prvkem v rozsahu lze porovnat.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje podmínku, která má být splněny, pokud jsou dva prvky mají být provedeny, jako ekvivalentní. Binární predikát přijímá dva argumenty a vrací **true** při splnění a **false** pokud nevyhovují.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -6783,7 +6783,7 @@ ForwardIterator1 search_n(
 *first1*<br/>
 Dopředný iterátor, který adresuje umístění prvního prvku v rozsahu pro hledání.
 
-*Příjmení1*<br/>
+*last1*<br/>
 Dopředný iterátor, který adresuje umístění jedno místo za posledním prvkem v oblasti pro hledání.
 
 *Počet*<br/>
@@ -6792,7 +6792,7 @@ Velikost k dílčí sekvenci vyhledaly.
 *Val*<br/>
 Hodnota prvků v sekvenci vyhledaly.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje podmínku, která má být splněny, pokud jsou dva prvky mají být provedeny, jako ekvivalentní. Binární predikát přijímá dva argumenty a vrací **true** při splnění a **false** pokud nevyhovují.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -6918,19 +6918,19 @@ OutputIterator set_difference(
 *first1*<br/>
 Vstupní iterátor, který adresuje umístění prvního prvku v prvních dvou seřazených zdrojových rozsahů spojené a rozděleny na jeden rozsah představující rozdíl dvou zdrojových rozsahů.
 
-*Příjmení1*<br/>
+*last1*<br/>
 Vstupní iterátor adresuje umístění jedno místo za posledním prvkem v první ze dvou seřazených zdrojových rozsahů spojené a rozděleny na jeden rozsah představující rozdíl dvou zdrojových rozsahů.
 
 *first2*<br/>
 Vstupní iterátor adresující pozici prvního prvku v druhé dvě po sobě jdoucích seřazené zdrojových rozsahů spojené a rozděleny na jeden rozsah představující rozdíl dvou zdrojových rozsahů.
 
-*Příjmení2*<br/>
+*last2*<br/>
 Vstupní iterátor adresující poslední jedna pozice po posledním prvku v druhé dvě po sobě jdoucích seřazené zdrojových rozsahů spojené a rozděleny na jeden rozsah představující rozdíl dvou zdrojových rozsahů.
 
 *výsledek*<br/>
 Výstupní iterace adresující pozici prvního prvku v cílové oblasti, ve kterém mají být spojeny do jednoho seřazeného rozsahu představuje rozdíl dvou zdrojových rozsahů dvou zdrojových rozsahů.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje smysl, ve kterém jeden prvek je větší než jiný. Binární predikát přijímá dva argumenty a by měl vrátit **true** při prvním prvkem je menší než druhý prvek a **false** jinak.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -7098,18 +7098,18 @@ OutputIterator set_intersection(
 *first1*<br/>
 Vstupní iterátor, který adresuje umístění prvního prvku v prvních dvou seřazených zdrojových rozsahů spojené a rozděleny na jeden rozsah představující průnik dvou zdrojových rozsahů.
 
-*Příjmení1*<br/>
+*last1*<br/>
 Vstupní iterátor adresuje umístění jedno místo za posledním prvkem v první ze dvou seřazených zdrojových rozsahů spojené a rozděleny na jeden rozsah představující průnik dvou zdrojových rozsahů.
 
 *first2*<br/>
 Vstupní iterátor adresující pozici prvního prvku v druhé dvě po sobě jdoucích seřazené zdrojových rozsahů spojené a rozděleny na jeden rozsah představující průnik dvou zdrojových rozsahů.
 
-*Příjmení2*<br/>
+*last2*<br/>
 Vstupní iterátor adresující poslední jedna pozice po posledním prvku v druhé dvě po sobě jdoucích seřazené zdrojových rozsahů spojené a rozděleny na jeden rozsah představující průnik dvou zdrojových rozsahů.
 
 **_** *Výsledek* výstupní iterace adresující pozici prvního prvku v cílové oblasti, kde obě zdrojové rozsahy mají být spojeny do jednoho seřazeného rozsahu představující průnik dvou zdroje rozsahy.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje smysl, ve kterém jeden prvek je větší než jiný. Binární predikát přijímá dva argumenty a by měl vrátit **true** při prvním prvkem je menší než druhý prvek a **false** jinak.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -7243,7 +7243,7 @@ int main() {
 }
 ```
 
-## <a name="set_symmetric_difference"></a>  set_symmetric_difference –
+## <a name="set_symmetric_difference"></a>  set_symmetric_difference
 
 Sjednotí všechny prvky, které náleží do jednoho, ale nikoli obou seřazených zdrojových rozsahů, do jednoho seřazeného cílového rozsahu, kde kritérium pořadí může být určeno binárním predikátem.
 
@@ -7271,18 +7271,18 @@ OutputIterator set_symmetric_difference(
 *first1*<br/>
 Vstupní iterátor, který adresuje umístění prvního prvku v prvních dvou seřazených zdrojových rozsahů spojené a rozděleny na jeden rozsah představující symetrický rozdíl dvou zdrojových rozsahů.
 
-*Příjmení1*<br/>
+*last1*<br/>
 Vstupní iterátor adresuje umístění jedno místo za posledním prvkem v první ze dvou seřazených zdrojových rozsahů spojené a rozděleny na jeden rozsah představující symetrický rozdíl dvou zdrojových rozsahů.
 
 *first2*<br/>
 Vstupní iterátor adresující pozici prvního prvku v druhé dvě po sobě jdoucích seřazené zdrojových rozsahů spojené a rozděleny na jeden rozsah představující symetrický rozdíl dvou zdrojových rozsahů.
 
-*Příjmení2*<br/>
+*last2*<br/>
 Vstupní iterátor adresující poslední jedna pozice po posledním prvku v druhé dvě po sobě jdoucích seřazené zdrojových rozsahů spojené a rozděleny na jeden rozsah představující symetrický rozdíl dvou zdrojových rozsahů.
 
 **_** *Výsledek* výstupní iterace adresující pozici prvního prvku v cílové oblasti, kde obě zdrojové rozsahy mají být spojeny do jednoho seřazeného rozsahu představující symetrický rozdíl dvou zdrojové rozsahy.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje smysl, ve kterém jeden prvek je větší než jiný. Binární predikát přijímá dva argumenty a by měl vrátit **true** při prvním prvkem je menší než druhý prvek a **false** jinak.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -7422,7 +7422,7 @@ int main()
 }
 ```
 
-## <a name="set_union"></a>  set_union –
+## <a name="set_union"></a>  set_union
 
 Sjednotí všechny prvky, které náleží alespoň do jednoho ze dvou seřazených zdrojových rozsahů, do jednoho seřazeného cílového rozsahu, kde kritérium pořadí může být určeno binárním predikátem.
 
@@ -7450,18 +7450,18 @@ OutputIterator set_union(
 *first1*<br/>
 Vstupní iterátor, který adresuje umístění prvního prvku v prvních dvou seřazených zdrojových rozsahů spojené a rozděleny na jeden rozsah představující sjednocení dvou zdrojových rozsahů.
 
-*Příjmení1*<br/>
+*last1*<br/>
 Vstupní iterátor adresuje umístění jedno místo za posledním prvkem v první ze dvou seřazených zdrojových rozsahů spojené a rozděleny na jeden rozsah představující sjednocení dvou zdrojových rozsahů.
 
 *first2*<br/>
 Vstupní iterátor adresující pozici prvního prvku v druhé dvě po sobě jdoucích seřazené zdrojových rozsahů spojené a rozděleny na jeden rozsah představující sjednocení dvou zdrojových rozsahů.
 
-*Příjmení2*<br/>
+*last2*<br/>
 Vstupní iterátor adresující poslední jedna pozice po posledním prvku v druhé dvě po sobě jdoucích seřazené zdrojových rozsahů spojené a rozděleny na jeden rozsah představující sjednocení dvou zdrojových rozsahů.
 
 **_** *Výsledek* výstupní iterace adresující pozici prvního prvku v cílové oblasti, kde obě zdrojové rozsahy mají být spojeny do jednoho seřazeného rozsahu představující sjednocení dvou zdrojových rozsahů.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje smysl, ve kterém jeden prvek je větší než jiný. Binární predikát přijímá dva argumenty a by měl vrátit **true** při prvním prvkem je menší než druhý prvek a **false** jinak.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -7617,7 +7617,7 @@ void shuffle(RandomAccessIterator first,
 *první*<br/>
 Iterátor na první prvek v rozsahu přeházenou metodou Shuffle, včetně. Musí splňovat požadavky `RandomAccessIterator` a `ValueSwappable`.
 
-*poslední*<br/>
+*last*<br/>
 Iterátor na poslední prvek v rozsahu přeházenou metodou Shuffle, vylučují. Musí splňovat požadavky `RandomAccessIterator` a `ValueSwappable`.
 
 *Obecné*<br/>
@@ -7649,10 +7649,10 @@ template<class RandomAccessIterator, class Predicate>
 *první*<br/>
 Iterátor s náhodným přístupem adresuje umístění prvního prvku v rozsahu který se má seřadit.
 
-*poslední*<br/>
+*last*<br/>
 Iterátor s náhodným přístupem adresuje umístění jedno místo za poslední prvek v rozsahu který se má seřadit.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje kritérium porovnání vyhovět pomocí po sobě jdoucí prvky v pořadí. Tento binární predikát přijímá dva argumenty a vrací **true** Pokud jsou dva argumenty v pořadí a **false** jinak. Tato funkce porovnání musí uložit přísné slabé seřazení na dvojice prvků z posloupnosti. Další informace najdete v tématu [algoritmy](../standard-library/algorithms.md).
 
 ### <a name="remarks"></a>Poznámky
@@ -7753,10 +7753,10 @@ template<class RandomAccessIterator, class Predicate>
 *první*<br/>
 Iterátor pro náhodný přístup adresuje umístění prvního prvku v cílové haldy.
 
-*poslední*<br/>
+*last*<br/>
 Iterátor pro náhodný přístup adresuje umístění jedno za posledním prvkem v cílové haldy.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje smysl, ve kterém jeden prvek je menší než jiný. Binární predikát přijímá dva argumenty a vrací **true** při splnění a **false** pokud nevyhovují.
 
 ### <a name="remarks"></a>Poznámky
@@ -7844,7 +7844,7 @@ BidirectionalIterator stable_partition(
 *první*<br/>
 Obousměrný iterátor adresuje umístění prvního prvku v rozsahu k rozdělení na oddíly.
 
-*poslední*<br/>
+*last*<br/>
 Obousměrný iterátor adresuje umístění jedno místo za poslední prvek v rozsahu k rozdělení na oddíly.
 
 *_Pred*<br/>
@@ -7925,10 +7925,10 @@ void stable_sort(
 *první*<br/>
 Obousměrný iterátor adresuje umístění prvního prvku v rozsahu který se má seřadit.
 
-*poslední*<br/>
+*last*<br/>
 Obousměrný iterátor adresuje umístění jedno místo za poslední prvek v rozsahu který se má seřadit.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje kritérium porovnání vyhovět pomocí po sobě jdoucí prvky v pořadí. Binární predikát přijímá dva argumenty a vrací **true** při splnění a **false** pokud nevyhovují.
 
 ### <a name="remarks"></a>Poznámky
@@ -8106,7 +8106,7 @@ ForwardIterator2 swap_ranges(
 *first1*<br/>
 Dopředný iterátor odkazující na první pozici první rozsahu, jehož prvky se mají vyměnit.
 
-*Příjmení1*<br/>
+*last1*<br/>
 Dopředný iterátor odkazující na jedno místo za posledním pozici první rozsahu, jehož prvky se mají vyměnit.
 
 *first2*<br/>
@@ -8209,7 +8209,7 @@ OutputIterator transform(
 *first1*<br/>
 Vstupní iterátor, který adresuje umístění prvního prvku v první zdrojového rozsahu do ho zpracovat.
 
-*Příjmení1*<br/>
+*last1*<br/>
 Vstupní iterátor adresující jedna pozice za posledním prvkem ve zdrojové oblasti první zpracovat.
 
 *first2*<br/>
@@ -8342,10 +8342,10 @@ template<class ForwardIterator, class Predicate>
 *první*<br/>
 Dopředný iterátor, který adresuje umístění prvního prvku v rozsahu, který chcete vyhledávat duplicitní odebrání.
 
-*poslední*<br/>
+*last*<br/>
 Dopředný iterátor, který adresuje umístění jedno místo za posledním prvkem v rozsahu, který chcete vyhledávat odstranění duplicit.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje podmínku, která má být splněny, pokud jsou dva prvky mají být provedeny, jako ekvivalentní. Binární predikát přijímá dva argumenty a vrací **true** při splnění a **false** pokud nevyhovují.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -8475,13 +8475,13 @@ OutputIterator unique_copy( InputIterator first,
 *první*<br/>
 Dopředný iterátor, který adresuje umístění prvního prvku ve zdrojovém rozsahu ke zkopírování.
 
-*poslední*<br/>
+*last*<br/>
 Dopředný iterátor, který adresuje umístění jedno místo za posledním prvkem ve zdrojovém rozsahu ke zkopírování.
 
 *výsledek*<br/>
 Výstupní iterace adresující pozici prvního prvku v cílovém rozsahu, který se přidává kopie s po sobě jdoucích duplicity se odeberou.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje podmínku, která má být splněny, pokud jsou dva prvky mají být provedeny, jako ekvivalentní. Binární predikát přijímá dva argumenty a vrací **true** při splnění a **false** pokud nevyhovují.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -8594,13 +8594,13 @@ template<class ForwardIterator, class Type, class Predicate>
 *první*<br/>
 Pozice prvního prvku v rozsahu, který chcete prohledat.
 
-*poslední*<br/>
+*last*<br/>
 Jedna pozice za posledním prvkem v rozsahu, který chcete prohledat.
 
 *value*<br/>
 Hodnota v seřazeném rozsahu, který musí být překročena hodnotou elementu řešenou vráceným iterátorem.
 
-*Kompozice*<br/>
+*comp*<br/>
 Objekt funkce predikátu definovaný uživatelem, který definuje smysl, ve kterém jeden prvek je menší než jiný. Binární predikát přijímá dva argumenty a vrací **true** při splnění a **false** pokud nevyhovují.
 
 ### <a name="return-value"></a>Návratová hodnota
