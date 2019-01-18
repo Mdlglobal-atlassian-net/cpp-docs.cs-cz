@@ -1,32 +1,105 @@
 ---
 title: 4. Proměnné prostředí
-ms.date: 11/04/2016
+ms.date: 01/16/2019
 ms.assetid: 4ec7ed81-e9ca-46a1-84f8-8f9ce4587346
-ms.openlocfilehash: 0dec302762ad22fc3c7f6691ef63df1b07d5940d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d08031c252d1f3c45fc45c021d24476b393fe33
+ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456599"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397326"
 ---
 # <a name="4-environment-variables"></a>4. Proměnné prostředí
 
-Tato kapitola popisuje rozhraní API C++ a C OpenMP – proměnné prostředí (nebo ekvivalentní mechanismů specifická pro platformu), které nastavují spuštění paralelního kódu.  Názvy proměnných prostředí musí být uváděny velkými písmeny. Hodnoty přiřazené k jejich jsou malá a velká písmena a může obsahovat úvodní a koncové prázdné znaky.  Úpravy hodnot po spuštění programu se ignorují.
+Tato kapitola popisuje rozhraní API C++ a C OpenMP – proměnné prostředí (nebo podobné mechanismy specifické pro platformu), které nastavují spuštění paralelního kódu.  Názvy proměnných prostředí musí být uváděny velkými písmeny. Hodnoty přiřazené k jejich jsou malá a velká písmena a může obsahovat úvodní a koncové prázdné znaky.  Úpravy hodnot po spuštění programu se ignorují.
 
 Proměnné prostředí jsou následující:
 
-- **OMP_SCHEDULE** nastaví velikost typu a bloků dat za běhu plánu.
+- [OMP_SCHEDULE](#41-omp_schedule) nastaví velikost typu a bloků dat za běhu plánu.
+- [OMP_NUM_THREADS](#42-omp_num_threads) nastaví počet vláken během provádění.
+- [OMP_DYNAMIC](#43-omp_dynamic) povolí nebo zakáže dynamické úpravy počtu vláken.
+- [OMP_NESTED](#44-omp_nested) povolí nebo zakáže vnořené paralelismu.
 
-- **OMP_NUM_THREADS** nastaví počet vláken během provádění.
+Příklady v této kapitole pouze ukazují, jak tyto proměnné může být nastaveno v prostředích Unix C prostředí (kontextová nápověda). V prostředí DOS a Korn prostředí jsou podobné akce:
 
-- **OMP_DYNAMIC** povolí nebo zakáže dynamické úpravy počtu vláken.
+Kontextová nápověda:  
+`setenv OMP_SCHEDULE "dynamic"`
 
-- **OMP_NESTED** povolí nebo zakáže vnořené paralelismu.
+ksh:  
+`export OMP_SCHEDULE="dynamic"`
 
-Příklady v této kapitole pouze ukazují, jak tyto proměnné může být nastaveno v prostředích Unix C prostředí (kontextová nápověda). V Korn prostředí a prostředí DOS akce, které jsou podobné, následujícím způsobem:
+DOS:  
+`set OMP_SCHEDULE="dynamic"`
 
-Kontextová nápověda: setenv OMP_SCHEDULE "dynamické"
+## <a name="41-ompschedule"></a>4.1 OMP_SCHEDULE
 
-ksh: export OMP_SCHEDULE = "dynamické"
+`OMP_SCHEDULE` platí jenom pro `for` a `parallel for` direktivy, které mají typ plánu `runtime`. Plán typ a bloků velikosti takové smyčky můžete nastavit v době běhu. Nastavení této proměnné prostředí na libovolný typ rozpoznaný plánu a volitelně *chunk_size*.
 
-DOS: nastavte OMP_SCHEDULE = "dynamické"
+Pro `for` a `parallel for` direktivy, které mají typ plánu jiné než `runtime`, `OMP_SCHEDULE` se ignoruje. Výchozí hodnota pro tuto proměnnou prostředí je definován implementací. Pokud volitelný *chunk_size* nastaven, hodnota musí být kladná. Pokud *chunk_size* není nastaven, je použita hodnota 1, s výjimkou případu, kdy plán `static`. Pro `static` , výchozí velikost bloku je naplánováno do prostoru iterace smyčky vydělí počtem vláken u smyčky.
+
+Příklad:
+
+```csh
+setenv OMP_SCHEDULE "guided,4"
+setenv OMP_SCHEDULE "dynamic"
+```
+
+### <a name="cross-references"></a>Křížové odkazy
+
+- [pro](2-4-1-for-construct.md) – direktiva
+- [paralelní pro](2-5-1-parallel-for-construct.md) – direktiva
+
+## <a name="42-ompnumthreads"></a>4.2 OMP_NUM_THREADS
+
+`OMP_NUM_THREADS` Proměnné prostředí nastavuje výchozí počet vláken během provádění. `OMP_NUM_THREADS` se ignoruje, pokud toto číslo je explicitně změněno pomocí volání `omp_set_num_threads` rutina knihovny. Je také ignoruje, pokud je explicitní `num_threads` klauzuli `parallel` směrnice.
+
+Hodnota `OMP_NUM_THREADS` proměnné prostředí musí být kladné celé číslo. Jeho dopad závisí na tom, zda je povolena dynamické úpravy počtu vláken. Pro komplexní sadu pravidel o interakci mezi `OMP_NUM_THREADS` prostředí proměnné a dynamické úpravy vláken, najdete v části 2.3.
+
+Počet vláken je implementace definováno, pokud:
+
+- `OMP_NUM_THREADS` proměnná prostředí není zadán,
+- Zadaná hodnota není kladné celé číslo, nebo
+- hodnota je větší než maximální počet vláken, která může systém podporovat.
+
+Příklad:
+
+```csh
+setenv OMP_NUM_THREADS 16
+```
+
+### <a name="cross-references"></a>Křížové odkazy
+
+- [num_threads](2-3-parallel-construct.md) – klauzule
+- [omp_set_num_threads –](3-1-1-omp-set-num-threads-function.md) – funkce
+- [omp_set_dynamic](3-1-7-omp-set-dynamic-function.md) function
+
+## <a name="43-ompdynamic"></a>4.3 OMP_DYNAMIC
+
+`OMP_DYNAMIC` Proměnnou prostředí povolí nebo zakáže dynamické úpravy počtu vláken, které jsou k dispozici k provádění paralelních oblastí. `OMP_DYNAMIC` se ignoruje, pokud je dynamické úpravy explicitně povoleno nebo zakázáno voláním `omp_set_dynamic` rutina knihovny. Musí být jeho hodnota `TRUE` nebo `FALSE`.
+
+Pokud `OMP_DYNAMIC` je nastavena na `TRUE`, počet vláken, která se používají k provádění paralelních oblastí může být upravit tak, že prostředí runtime tak, aby co nejlépe využívat systémové prostředky.  Pokud `OMP_DYNAMIC` je nastavena na `FALSE`, dynamické přizpůsobení je zakázaná. Výchozí stav je definován implementací.
+
+Příklad:
+
+```csh
+setenv OMP_DYNAMIC TRUE
+```
+
+### <a name="cross-references"></a>Křížové odkazy
+
+- [Paralelních oblastí](2-3-parallel-construct.md)
+- [omp_set_dynamic](3-1-7-omp-set-dynamic-function.md) function
+
+## <a name="44-ompnested"></a>4.4 OMP_NESTED
+
+`OMP_NESTED` Proměnnou prostředí povolí nebo zakáže vnořené paralelismu, pokud je povoleno nebo zakázáno voláním vnořené paralelismu `omp_set_nested` rutina knihovny. Pokud `OMP_NESTED` je nastavena na `TRUE`, je povoleno vnořené paralelismu. Pokud `OMP_NESTED` je nastavena na `FALSE`vnořené paralelismu je zakázaná. Výchozí hodnota je `FALSE`.
+
+Příklad:
+
+```csh
+setenv OMP_NESTED TRUE
+```
+
+### <a name="cross-reference"></a>Křížových odkazů
+
+- [omp_set_nested –](3-1-9-omp-set-nested-function.md) – funkce
