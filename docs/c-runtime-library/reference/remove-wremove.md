@@ -30,12 +30,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: d5636912ea36fd1b1412a556d516ac3e8184e0b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05f1c5b6760520e5a982777faa903b3c5116ad05
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613965"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417600"
 ---
 # <a name="remove-wremove"></a>remove, _wremove
 
@@ -59,7 +59,7 @@ Cesta k souboru má být odebrán.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí 0, pokud soubor se úspěšně odstranil. V opačném případě vrátí hodnotu -1 a nastaví **errno** buď **EACCES** k označení, že cesta Určuje soubor jen pro čtení nebo je soubor otevřen, nebo **ENOENT** označuje, že Název souboru nebo cesta nebyla nalezena nebo že cesta Určuje adresář.
+Každá z těchto funkcí vrátí 0, pokud soubor se úspěšně odstranil. V opačném případě vrátí hodnotu -1 a nastaví **errno** buď **EACCES** k označení, že cesta Určuje soubor jen pro čtení, určuje adresář, nebo je soubor otevřen, nebo **ENOENT** k označení, že název souboru nebo cesta nebyla nalezena.
 
 Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších návratových kódech.
 
@@ -71,7 +71,7 @@ Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/er
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tremove –**|**remove**|**remove**|**_wremove**|
+|**_tremove**|**remove**|**remove**|**_wremove**|
 
 ## <a name="requirements"></a>Požadavky
 

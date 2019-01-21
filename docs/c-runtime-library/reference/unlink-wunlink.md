@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-ms.openlocfilehash: 7565679c58af83d64fd59419e8e841ee48133edf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec59a02f1302fe4a2149889cf1b48090d061d6b2
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544193"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417613"
 ---
 # <a name="unlink-wunlink"></a>_unlink, _wunlink
 
@@ -61,7 +61,7 @@ Název souboru se má odebrat.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí 0 v případě úspěšného ověření. V opačném případě vrátí funkce hodnotu -1 a sady **errno** k **EACCES**, to znamená, že cesta Určuje soubor jen pro čtení nebo **ENOENT**, což znamená, že soubor nebo cesta nebyla nalezena nebo cesty zadaný adresář.
+Každá z těchto funkcí vrátí 0 v případě úspěšného ověření. V opačném případě vrátí funkce hodnotu -1 a nastaví **errno** k **EACCES**, což znamená, že cesta Určuje jen pro čtení souboru nebo adresáře, nebo **ENOENT**, což znamená, že soubor nebo cesta nebyl nalezen.
 
 Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Další informace o těchto a dalších návratových kódů.
 
@@ -73,13 +73,13 @@ Zobrazit [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/er
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tunlink –**|**_unlink**|**_unlink**|**_wunlink**|
+|**_tunlink**|**_unlink**|**_unlink**|**_wunlink**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_unlink**|\<IO.h > a \<stdio.h >|
+|**_unlink**|\<io.h> and \<stdio.h>|
 |**_wunlink**|\<IO.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

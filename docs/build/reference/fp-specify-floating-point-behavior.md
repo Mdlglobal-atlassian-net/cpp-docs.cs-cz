@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: 78abe5e3b491ec0d658a40628dadc81e334c212f
-ms.sourcegitcommit: d94714522428834a02ede6e6884572f0f6ca9824
+ms.openlocfilehash: 77e6d0c97f1d0381fe32ae23f8d7e8bd02ddf219
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597535"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417639"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (zadání chování plovoucí desetinné čárky)
 
@@ -71,13 +71,13 @@ Více **/FP** možnosti lze zadat na stejném příkazovém řádku kompilátoru
 
 ### <a name="using-pragmas-to-control-floating-point-behavior"></a>Pomocí direktivy pragma pro řízení chování plovoucí desetinné čárky
 
-Kompilátor poskytuje tři directivess – Direktiva pragma přepsat chování plovoucí desetinné čárky, který je zadán v příkazovém řádku: [float_control](../../preprocessor/float-control.md), [fenv_access](../../preprocessor/fenv-access.md), a [fp_contract](../../preprocessor/fp-contract.md). Direktivy pragma můžete řídit chování plovoucí desetinné čárky na úrovni funkcí, není ve funkci. Všimněte si, že direktivy pragma neodpovídají přímo **/FP** možnosti. Tato tabulka ukazuje, jak **/FP** možnosti a direktivy pragma se mapují k sobě navzájem. Další informace najdete v dokumentaci pro jednotlivé možnosti a direktivy pragma.
+Kompilátor poskytuje tři direktivy pragma přepsat chování plovoucí desetinné čárky, který je zadán v příkazovém řádku: [float_control](../../preprocessor/float-control.md), [fenv_access](../../preprocessor/fenv-access.md), a [fp_contract](../../preprocessor/fp-contract.md). Direktivy pragma můžete řídit chování plovoucí desetinné čárky na úrovni funkcí, není ve funkci. Všimněte si, že direktivy pragma neodpovídají přímo **/FP** možnosti. Tato tabulka ukazuje, jak **/FP** možnosti a direktivy pragma se mapují k sobě navzájem. Další informace najdete v dokumentaci pro jednotlivé možnosti a direktivy pragma.
 
-||float_control(Precise)|float_control(EXCEPT)|fenv_access|fp_contract|
+||float_control(Precise)|float_control(except)|fenv_access|fp_contract|
 |-|-|-|-|-|
-|**Fast**|Vypnout|Vypnout|Vypnout|on|
-|**/ FP: precise**|on|Vypnout|Vypnout|on|
-|**/ FP: except**|on|on|on|Vypnout|
+|**Fast**|vypnuto|vypnuto|vypnuto|on|
+|**/ FP: precise**|on|vypnuto|vypnuto|on|
+|**/fp:except**|on|on|on|vypnuto|
 
 ### <a name="the-default-floating-point-environment"></a>Výchozí prostředí s plovoucí desetinnou čárkou bodu
 
