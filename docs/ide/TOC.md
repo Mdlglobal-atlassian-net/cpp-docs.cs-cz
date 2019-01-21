@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 429e20c77c2a5715d1d45b74b3d020ee52daec97
+ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397365"
+---
 # [Integrované vývojové prostředí a nástroje pro vývoj v jazyce Visual C++](ide-and-tools-for-visual-cpp-development.md)
 # [Psaní a refaktoring kódu (C++)](writing-and-refactoring-code-cpp.md)
 ## [Změnit signaturu](refactoring/change-signature.md)
@@ -31,10 +39,6 @@
 ##### [Nastavení aplikace, Průvodce projektem souboru pravidel](application-settings-makefile-project-wizard.md)
 #### [Postupy: Povolení technologie IntelliSense pro projekty souborů pravidel](how-to-enable-intellisense-for-makefile-projects.md)
 ### [Postupy: Vytvoření projektu jazyka C++ z existujícího kódu](how-to-create-a-cpp-project-from-existing-code.md)
-#### [Zadání umístění projektu a zdrojových souborů, Průvodce vytvořením nového projektu z existujících souborů kódu](specify-project-location-and-source-files.md)
-#### [Specifikace nastavení projektu, Průvodce vytvořením nového projektu z existujících souborů kódu](specify-project-settings-create-new-project-from-existing-code-files-wizard.md)
-#### [Specifikace konfigurace nastavení pro ladění, Průvodce vytvořením nového projektu z existujících souborů kódu](specify-debug-configuration-settings.md)
-#### [Specifikace konfigurace nastavení pro vydání, Průvodce vytvoření nového projektu z existujících souborů kódu](specify-release-configuration.md)
 ## [Práce s vlastnostmi projektu](working-with-project-properties.md)
 ### [Stránky vlastností (Visual C++)](property-pages-visual-cpp.md)
 #### [Obecná stránka vlastností (projekt)](general-property-page-project.md)
