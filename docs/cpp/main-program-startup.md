@@ -1,5 +1,5 @@
 ---
-title: 'main: nastavení programu'
+title: 'hlavní: Spuštění programu'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.main.startup
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - startup code, main function
 - main function, program startup
 ms.assetid: f9581cd6-93f7-4bcd-99ec-d07c3c107dd4
-ms.openlocfilehash: 76c580d4b48e1651803ae9bf62f0e2346e19e06c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 358ae8ec88281bab741393b1196ee2a1e615e896
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603278"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894299"
 ---
-# <a name="main-program-startup"></a>main: nastavení programu
+# <a name="main-program-startup"></a>hlavní: Spuštění programu
 
 Speciální funkce s názvem **hlavní** je výchozím bodem provádění všech programů jazyka C a C++. Pokud jste psaní kódu, který splňuje programovací model Unicode, můžete použít `wmain`, což je verze širokého znaku **hlavní**.
 
@@ -51,7 +51,7 @@ nebo v případě potřeby
 int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);
 ```
 
-Můžete také použít `_tmain`, která je definovaná v souboru TCHAR.h. `_tmain` přeloží na **hlavní** Pokud _UNICODE je definována. V takovém případě `_tmain` přeloží na `wmain`.
+Můžete také použít `_tmain`, která je definovaná v souboru tchar.h. `_tmain` přeloží na **hlavní** Pokud _UNICODE je definována. V takovém případě `_tmain` přeloží na `wmain`.
 
 Další možností **hlavní** a `wmain` funkce mohou být deklarovány jako návratová **void** (žádnou návratovou hodnotu). Pokud deklarujete **hlavní** nebo `wmain` jako vracející **void**, nejde vrátit kód ukončení nadřazenému procesu nebo operačního systému pomocí [vrátit](../cpp/return-statement-in-program-termination-cpp.md) příkazu. Vrátit východ kódu, kdy **hlavní** nebo `wmain` je deklarován jako **void**, je nutné použít [ukončit](../cpp/exit-function.md) funkce.
 

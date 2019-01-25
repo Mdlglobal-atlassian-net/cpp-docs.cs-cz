@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CFileTime class
 - shared classes, CFileTime
 ms.assetid: 1a358a65-1383-4124-b0d4-59b026e6860f
-ms.openlocfilehash: 5d3c81a31d49a2817b4605f734d5348dc518076a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42c89bcfa064bbb151f9d110cbd25763dbd44185
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614224"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893935"
 ---
 # <a name="cfiletime-class"></a>Cfiletime – třída
 
@@ -124,7 +124,7 @@ CFileTime(ULONGLONG nTime) throw();
 ### <a name="parameters"></a>Parametry
 
 *FT*<br/>
-A [hodnota FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury.
+A [hodnota FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktury.
 
 *nTime*<br/>
 Datum a čas vyjádřený jako hodnotu 64-bit.
@@ -236,7 +236,7 @@ CFileTimeSpan operator-(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*<br/>
+*span*<br/>
 A `CFileTimeSpan` objektu.
 
 *FT*<br/>
@@ -273,7 +273,7 @@ CFileTime operator+(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*<br/>
+*span*<br/>
 A `CFileTimeSpan` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -290,7 +290,7 @@ CFileTime& operator+=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*<br/>
+*span*<br/>
 A `CFileTimeSpan` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -362,7 +362,7 @@ CFileTime& operator-=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*<br/>
+*span*<br/>
 A `CFileTimeSpan` objekt, který obsahuje relativní časové se má odečíst.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -475,7 +475,7 @@ Podívejte se na příklad pro [CFileTime::Millisecond](#millisecond).
 
 ## <a name="see-also"></a>Viz také
 
-[FILETIME –](https://msdn.microsoft.com/library/windows/desktop/ms724284)<br/>
+[FILETIME –](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)<br/>
 [CFileTimeSpan – třída](../../atl-mfc-shared/reference/cfiletimespan-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Sdílené třídy ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

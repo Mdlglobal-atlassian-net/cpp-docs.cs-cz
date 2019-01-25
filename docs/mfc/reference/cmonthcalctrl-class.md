@@ -1,5 +1,5 @@
 ---
-title: Cmonthcalctrl – třída
+title: CMonthCalCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMonthCalCtrl
@@ -90,14 +90,14 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 26a0feadfd6603f74ce222e4850f0da9cf71e7d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48b02843cc957994aa3f3109a82cb2188dd9acff
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509584"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894195"
 ---
-# <a name="cmonthcalctrl-class"></a>Cmonthcalctrl – třída
+# <a name="cmonthcalctrl-class"></a>CMonthCalCtrl Class
 
 Zapouzdřuje funkce ovládací prvek měsíční kalendář.
 
@@ -229,7 +229,7 @@ Určuje kombinaci styly Windows použité pro ovládací prvek měsíční kalen
 *Rect*<br/>
 Odkaz na [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Obsahuje umístění a velikost ovládací prvek měsíční kalendář.
 
-*PT*<br/>
+*pt*<br/>
 Odkaz na [bodu](https://msdn.microsoft.com/library/windows/desktop/dd162805) strukturu, která identifikuje umístění ovládací prvek měsíční kalendář.
 
 *pParentWnd*<br/>
@@ -412,7 +412,7 @@ BOOL GetCurSel(LPSYSTEMTIME pDateTime) const;
 Odkaz na [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objektu nebo [CTime](../../atl-mfc-shared/reference/ctime-class.md) objektu. Získá aktuální čas.
 
 *pDateTime*<br/>
-Ukazatel [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktura, která se zobrazí informace o aktuálně vybrané datum. Tento parametr musí být platnou adresou a nesmí mít hodnotu NULL.
+Ukazatel [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktura, která se zobrazí informace o aktuálně vybrané datum. Tento parametr musí být platnou adresou a nesmí mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -579,7 +579,7 @@ Odkaz na [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) ne
 Odkaz na `COleDateTime` nebo `CTime` objekt, který obsahuje maximální povolené datum.
 
 *pMinRange*<br/>
-Ukazatel [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury obsahující data na nejnižší konec rozsahu.
+Ukazatel [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktury obsahující data na nejnižší konec rozsahu.
 
 *pMaxRange*<br/>
 Ukazatel `SYSTEMTIME` struktury obsahující datum v nejvyšší konec rozsahu.
@@ -625,10 +625,10 @@ DWORD GetRange(
 ### <a name="parameters"></a>Parametry
 
 *pMinRange*<br/>
-Ukazatel na `COleDateTime` objektu, `CTime` objektu, nebo [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury obsahující data na nejnižší konec rozsahu.
+Ukazatel na `COleDateTime` objektu, `CTime` objektu, nebo [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktury obsahující data na nejnižší konec rozsahu.
 
 *pMaxRange*<br/>
-Ukazatel na `COleDateTime` objektu, `CTime` objektu, nebo [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury obsahující datum v nejvyšší konec rozsahu.
+Ukazatel na `COleDateTime` objektu, `CTime` objektu, nebo [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktury obsahující datum v nejvyšší konec rozsahu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -674,7 +674,7 @@ Odkaz na [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) ne
 Odkaz na `COleDateTime` nebo `CTime` objekt, který obsahuje maximální povolené datum.
 
 *pMinRange*<br/>
-Ukazatel [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury obsahující data na nejnižší konec rozsahu.
+Ukazatel [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktury obsahující data na nejnižší konec rozsahu.
 
 *pMaxRange*<br/>
 Ukazatel `SYSTEMTIME` struktury obsahující datum v nejvyšší konec rozsahu.
@@ -705,7 +705,7 @@ BOOL GetToday(LPSYSTEMTIME pDateTime) const;
 Odkaz na [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) nebo [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který označuje aktuální den.
 
 *pDateTime*<br/>
-Ukazatel [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktura, která se zobrazí informace o datu. Tento parametr musí být platnou adresou a nesmí mít hodnotu NULL.
+Ukazatel [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktura, která se zobrazí informace o datu. Tento parametr musí být platnou adresou a nesmí mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -953,7 +953,7 @@ BOOL SetCurrentView(DWORD dwNewView);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*dwNewView*|[in] Jeden z následujících hodnot, které určuje měsíční, roční, deset nebo zobrazení století.<br /><br /> MCMV_MONTH: Zobrazení měsíčního<br /><br /> MCMV_YEAR: Roční zobrazení<br /><br /> MCMV_DECADE: Zobrazení desetiletí<br /><br /> MCMV_CENTURY: Zobrazení století|
+|*dwNewView*|[in] Jeden z následujících hodnot, které určuje měsíční, roční, deset nebo zobrazení století.<br /><br /> MCMV_MONTH: Měsíční zobrazení<br /><br /> MCMV_YEAR: Roční zobrazení<br /><br /> MCMV_DECADE: Dekáda zobrazení<br /><br /> MCMV_CENTURY: Zobrazení století|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -979,7 +979,7 @@ BOOL SetCurSel(const CTime& refDateTime);
 Odkaz na [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) nebo [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který označuje ovládací prvek aktuálně vybrané měsíční kalendář.
 
 *pDateTime*<br/>
-Ukazatel [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) strukturu, která obsahuje datum nastavit jako aktuální výběr.
+Ukazatel [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) strukturu, která obsahuje datum nastavit jako aktuální výběr.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1079,7 +1079,7 @@ BOOL SetMaxSelCount(int nMax);
 
 ### <a name="parameters"></a>Parametry
 
-*Nmaximum*<br/>
+*nMax*<br/>
 Hodnota, která bude nastavena na představuje maximální počet volitelných dnů.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1104,7 +1104,7 @@ int SetMonthDelta(int iDelta);
 
 ### <a name="parameters"></a>Parametry
 
-*položky iDelta*<br/>
+*iDelta*<br/>
 Počet měsíců nastavit jako míra ovládacího prvku posuvníku. Pokud tato hodnota je nula, rozdílového měsíc resetuje na výchozí, což je počet měsíců zobrazí v ovládacím prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1164,7 +1164,7 @@ BOOL SetRange(
 ### <a name="parameters"></a>Parametry
 
 *pMinRange*<br/>
-Ukazatel na `COleDateTime` objektu, `CTime` objektu, nebo [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury obsahující data na nejnižší konec rozsahu.
+Ukazatel na `COleDateTime` objektu, `CTime` objektu, nebo [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktury obsahující data na nejnižší konec rozsahu.
 
 *pMaxRange*<br/>
 Ukazatel na `COleDateTime` objektu, `CTime` objektu, nebo `SYSTEMTIME` struktury obsahující datum v nejvyšší konec rozsahu.
@@ -1202,7 +1202,7 @@ BOOL SetSelRange(
 ### <a name="parameters"></a>Parametry
 
 *pMinRange*<br/>
-Ukazatel na `COleDateTime` objektu, `CTime` objektu, nebo [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury obsahující data na nejnižší konec rozsahu.
+Ukazatel na `COleDateTime` objektu, `CTime` objektu, nebo [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktury obsahující data na nejnižší konec rozsahu.
 
 *pMaxRange*<br/>
 Ukazatel na `COleDateTime` objektu, `CTime` objektu, nebo `SYSTEMTIME` struktury obsahující datum v nejvyšší konec rozsahu.
@@ -1231,7 +1231,7 @@ void SetToday(const CTime* pDateTime);
 Odkaz na [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objekt, který obsahuje aktuální datum.
 
 *pDateTime*<br/>
-V druhou verzi, ukazatel [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který obsahuje informace o aktuálním datem. Ve třetí verzi ukazatel [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) strukturu, která obsahuje informace o aktuálním datem.
+V druhou verzi, ukazatel [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který obsahuje informace o aktuálním datem. Ve třetí verzi ukazatel [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) strukturu, která obsahuje informace o aktuálním datem.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1290,7 +1290,7 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*lprect –*|[in] Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která definuje obdélník, který obsahuje požadované číslo kalendáře.|
+|*lpRect*|[in] Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturu, která definuje obdélník, který obsahuje požadované číslo kalendáře.|
 
 ### <a name="return-value"></a>Návratová hodnota
 

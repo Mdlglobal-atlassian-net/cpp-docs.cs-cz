@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 9a06f3bd8a8c5646f384c3f788518078b121bfe1
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 0b673c873f773844c13894d3f0448536f297dc53
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178132"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894507"
 ---
 # <a name="chotkeyctrl-class"></a>Chotkeyctrl – třída
 
@@ -67,7 +67,7 @@ Tento ovládací prvek (a tedy `CHotKeyCtrl` třídy) je dostupná jenom pro pro
 
 Když uživatel se rozhodl kombinaci kláves, můžete aplikaci načíst zadanou kombinaci kláves z ovládacího prvku a pomocí WM_SETHOTKEY nastavení klávesové zkratky v systému. Vždy, když uživatel stiskne klávesovou zkratku po tomto datu, z jakékoliv části systému, určená ve zprávě WM_SETHOTKEY okno obdrží zprávu WM_SYSCOMMAND zadání SC_HOTKEY. Tato zpráva aktivuje okně, které obdrží. Klávesové zkratky zůstane platný až do aplikace, která volá WM_SETHOTKEY ukončí.
 
-Tento mechanismus je odlišný od výměně klíčů podporu, která závisí na zprávu WM_HOTKEY a Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) a [UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey) funkce.
+Tento mechanismus je odlišný od výměně klíčů podporu, která závisí na zprávu WM_HOTKEY a Windows [RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey) a [UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey) funkce.
 
 Další informace o používání `CHotKeyCtrl`, naleznete v tématu [ovládací prvky](../../mfc/controls-mfc.md) a [používání atributu CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).
 
@@ -232,7 +232,7 @@ static CString GetKeyName(
 
 ### <a name="parameters"></a>Parametry
 
-*Vk*<br/>
+*vk*<br/>
 Virtuální kód.
 
 *fExtended*<br/>
@@ -300,13 +300,13 @@ Pole příznaky, které určuje neplatný kombinace kláves. Může být kombina
 
 - HKCOMB_C CTRL
 
-- HKCOMB_CA CTRL + ALT
+- HKCOMB_CA CTRL+ALT
 
 - Bez úprav HKCOMB_NONE klíče
 
 - HKCOMB_S SHIFT
 
-- HKCOMB_SA SHIFT + ALT
+- HKCOMB_SA SHIFT+ALT
 
 - HKCOMB_SC SHIFT + CTRL
 

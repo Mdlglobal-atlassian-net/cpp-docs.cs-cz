@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
-ms.openlocfilehash: 9b70a4caea2b9aa5d86c0e97b97eae784594ec87
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 78d3df4a96cb769cb31760c53c8486c86189e00c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326105"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893337"
 ---
 # <a name="struct-c"></a>struct (C++)
 
@@ -20,7 +20,7 @@ ms.locfileid: "51326105"
 ## <a name="syntax"></a>Syntaxe
 
 ```
-[template-spec] struct[ms-decl-spec] [tag [: base-list ]]
+[template-spec] struct [ms-decl-spec] [tag [: base-list ]]
 {
    member-list
 } [declarators];
@@ -29,26 +29,26 @@ ms.locfileid: "51326105"
 
 #### <a name="parameters"></a>Parametry
 
-*specifikace šablony*<br/>
+*template-spec*<br/>
 Volitelné specifikace šablony. Další informace najdete v [specifikace šablony](templates-cpp.md).
 
 *struct*<br/>
 **Struktura** – klíčové slovo.
 
-*MS-decl-spec*<br/>
+*ms-decl-spec*<br/>
 Volitelná specifikace paměťové třídy. Další informace najdete [__declspec](../cpp/declspec.md) – klíčové slovo.
 
 *Značka*<br/>
 Název typu daný pro strukturu. Značka se změní na vyhrazené slovo v rámci struktury. Značka je volitelná. Pokud je tento argument vynechán, je definována anonymní struktura. Další informace najdete v tématu [anonymní typy třídy](../cpp/anonymous-class-types.md).
 
-*Base-list*<br/>
+*base-list*<br/>
 Volitelný seznam tříd nebo struktur, ze kterých tato struktura odvodí svoje členy. Zobrazit [základní třídy](../cpp/base-classes.md) Další informace. Každý název základní třídy nebo struktury může být uvozen specifikátorem přístupu ([veřejné](../cpp/public-cpp.md), [privátní](../cpp/private-cpp.md), [chráněné](../cpp/protected-cpp.md)) a [virtuální](../cpp/virtual-cpp.md) klíčové slovo. Viz tabulka pro přístup ke členu [řízení přístupu ke členům třídy](member-access-control-cpp.md) Další informace.
 
 *seznam členů*<br/>
 Seznam členů struktury. Odkazovat na [přehled členů třídy](../cpp/class-member-overview.md) Další informace. Jediný rozdíl zde je, že **struktura** je použito místo **třídy**.
 
-*deklarátory*<br/>
-Seznam deklarátoru určující názvy třídy. Seznam deklarátoru deklarující jednu nebo více instancí typu struktura. Deklarátory mohou obsahovat inicializační seznamy, pokud jsou všechny datové členy třídy **veřejné**. Inicializační seznamy jsou běžné ve strukturách, protože datoví členové mají **veřejné** ve výchozím nastavení.  Zobrazit [přehled Deklarátorů](../cpp/overview-of-declarators.md) Další informace.
+*declarators*<br/>
+Seznam deklarátoru určující názvy struktury. Seznam deklarátoru deklarující jednu nebo více instancí typu struktura. Deklarátory mohou obsahovat inicializační seznamy, pokud jsou všechny datové členy struktury **veřejné**. Inicializační seznamy jsou běžné ve strukturách, protože datoví členové mají **veřejné** ve výchozím nastavení.  Zobrazit [přehled Deklarátorů](../cpp/overview-of-declarators.md) Další informace.
 
 ## <a name="remarks"></a>Poznámky
 

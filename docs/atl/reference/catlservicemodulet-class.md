@@ -1,5 +1,5 @@
 ---
-title: Catlservicemodulet – třída
+title: CAtlServiceModuleT Class
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlServiceModuleT
@@ -35,14 +35,14 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: b577ee002e34fa051b6e1dd5ffca71f935d93433
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad682980fbc885d79598b41a5dcc094bb65db8cf
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619138"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893532"
 ---
-# <a name="catlservicemodulet-class"></a>Catlservicemodulet – třída
+# <a name="catlservicemodulet-class"></a>CAtlServiceModuleT Class
 
 Tato třída implementuje služby.
 
@@ -76,7 +76,7 @@ Identifikátor prostředku služby.
 
 |Název|Popis|
 |----------|-----------------|
-|[Catlservicemodulet::Handler –](#handler)|Rutina obslužné rutiny pro službu.|
+|[CAtlServiceModuleT::Handler](#handler)|Rutina obslužné rutiny pro službu.|
 |[CAtlServiceModuleT::InitializeSecurity](#initializesecurity)|Poskytuje výchozí nastavení zabezpečení pro službu.|
 |[CAtlServiceModuleT::Install](#install)|Nainstaluje a vytvoří službu.|
 |[CAtlServiceModuleT::IsInstalled](#isinstalled)|Potvrdí, že je nainstalovaná služba.|
@@ -90,10 +90,10 @@ Identifikátor prostředku služby.
 |[CAtlServiceModuleT::ParseCommandLine](#parsecommandline)|Analyzuje příkazového řádku a provádí registraci v případě potřeby.|
 |[CAtlServiceModuleT::PreMessageLoop](#premessageloop)|Tato metoda je volána těsně před zadáním smyčky zpráv.|
 |[CAtlServiceModuleT::RegisterAppId](#registerappid)|Registruje službu v registru.|
-|[Catlservicemodulet::Run –](#run)|Spouští službu.|
-|[Catlservicemodulet::servicemain –](#servicemain)|Metoda ve správci řízení služeb.|
+|[CAtlServiceModuleT::Run](#run)|Spouští službu.|
+|[CAtlServiceModuleT::ServiceMain](#servicemain)|Metoda ve správci řízení služeb.|
 |[CAtlServiceModuleT::SetServiceStatus](#setservicestatus)|Aktualizuje stav služby.|
-|[Catlservicemodulet::Start –](#start)|Volané `CAtlServiceModuleT::WinMain` při spuštění služby.|
+|[CAtlServiceModuleT::Start](#start)|Volané `CAtlServiceModuleT::WinMain` při spuštění služby.|
 |[CAtlServiceModuleT::Uninstall](#uninstall)|Zastaví a odebere službu.|
 |[CAtlServiceModuleT::Unlock](#unlock)|Dekrementuje počet zámků služby.|
 |[CAtlServiceModuleT::UnregisterAppId](#unregisterappid)|Odebere službu z registru.|
@@ -119,7 +119,7 @@ Nahradí tato třída zastaralá [ccommodule – třída](../../atl/reference/cc
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)
 
-[Catlmodule –](../../atl/reference/catlmodule-class.md)
+[CAtlModule](../../atl/reference/catlmodule-class.md)
 
 [CAtlModuleT](../../atl/reference/catlmodulet-class.md)
 
@@ -432,7 +432,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>Parametry
 
 *nShowCmd*<br/>
-Určuje, jak má být zobrazen v okně. Tento parametr může být jedna z hodnot podrobněji popsána [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) oddílu. Výchozí hodnota je SW_HIDE.
+Určuje, jak má být zobrazen v okně. Tento parametr může být jedna z hodnot podrobněji popsána [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) oddílu. Výchozí hodnota je SW_HIDE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -492,7 +492,7 @@ HRESULT Start(int nShowCmd) throw();
 ### <a name="parameters"></a>Parametry
 
 *nShowCmd*<br/>
-Určuje, jak má být zobrazen v okně. Tento parametr může být jedna z hodnot podrobněji popsána [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) oddílu.
+Určuje, jak má být zobrazen v okně. Tento parametr může být jedna z hodnot podrobněji popsána [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) oddílu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -553,7 +553,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>Parametry
 
 *nShowCmd*<br/>
-Určuje, jak má být zobrazen v okně. Tento parametr může být jedna z hodnot podrobněji popsána [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) oddílu.
+Určuje, jak má být zobrazen v okně. Tento parametr může být jedna z hodnot podrobněji popsána [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) oddílu.
 
 ### <a name="return-value"></a>Návratová hodnota
 

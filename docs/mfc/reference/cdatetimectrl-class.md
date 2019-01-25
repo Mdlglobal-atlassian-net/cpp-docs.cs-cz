@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: 36ef44534803e35d3544b53dbeeca75a7fb3f475
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 5acac454bd0b22b994b74a052bd3cf0b0eee2614
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178522"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894338"
 ---
 # <a name="cdatetimectrl-class"></a>Cdatetimectrl – třída
 
@@ -353,7 +353,7 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 V první verzi odkaz na [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objekt, který se zobrazí informace o času systému. V druhém verzi odkaz na [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který se zobrazí informace o času systému.
 
 *pTimeDest*<br/>
-Ukazatel [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktura přijímat informace o času systému. Nesmí mít hodnotu NULL.
+Ukazatel [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktura přijímat informace o času systému. Nesmí mít hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -583,7 +583,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 Odkaz na [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objekt obsahující které ovládací prvek nastavit.
 
 *pTimeNew*<br/>
-V druhé verzi výše, ukazatel [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který obsahuje čas, ke kterému bude ovládací prvek nastavit. Ve třetí verzi výše, ukazatel [SYSTEMTIME –](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury obsahující čas, ke kterému bude ovládací prvek nastavit.
+V druhé verzi výše, ukazatel [CTime](../../atl-mfc-shared/reference/ctime-class.md) objekt, který obsahuje čas, ke kterému bude ovládací prvek nastavit. Ve třetí verzi výše, ukazatel [SYSTEMTIME –](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktury obsahující čas, ke kterému bude ovládací prvek nastavit.
 
 ### <a name="return-value"></a>Návratová hodnota
 

@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CFileFind [MFC], CloseContext
 - CFileFind [MFC], m_pTM
 ms.assetid: 9990068c-b023-4114-9580-a50182d15240
-ms.openlocfilehash: 983c8c46100312947f9b5c357df23b51d6eaabc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9eb192e546bcfbba385beea4f1716ce03bbc8ade
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462151"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894052"
 ---
 # <a name="cfilefind-class"></a>Cfilefind – třída
 
@@ -155,7 +155,7 @@ CFileFind(CAtlTransactionManager* pTM);
 
 ### <a name="parameters"></a>Parametry
 
-*Druh*<br/>
+*pTM*<br/>
 Ukazatel na catltransactionmanager – objekt
 
 ### <a name="example"></a>Příklad
@@ -332,7 +332,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parametry
 
 *pTimeStamp*<br/>
-Ukazatel [hodnota FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury obsahující čas vytvoření souboru.
+Ukazatel [hodnota FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktury obsahující čas vytvoření souboru.
 
 *refTime*<br/>
 Odkaz na [CTime](../../atl-mfc-shared/reference/ctime-class.md) objektu.
@@ -473,7 +473,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 Odkaz na [CTime](../../atl-mfc-shared/reference/ctime-class.md) objektu.
 
 *pTimeStamp*<br/>
-Ukazatel [hodnota FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury obsahující čas posledního přístupu k souboru.
+Ukazatel [hodnota FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktury obsahující čas posledního přístupu k souboru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -502,7 +502,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parametry
 
 *pTimeStamp*<br/>
-Ukazatel [hodnota FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury obsahující času posledního zápisu souboru na.
+Ukazatel [hodnota FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktury obsahující času posledního zápisu souboru na.
 
 *refTime*<br/>
 Odkaz na [CTime](../../atl-mfc-shared/reference/ctime-class.md) objektu.

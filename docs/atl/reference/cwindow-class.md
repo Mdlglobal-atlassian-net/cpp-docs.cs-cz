@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 4ce3c93c7cb8c26ae6008516c93faa8c8a5b37fb
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f420715f0e90cbdf811d9a4f731885bd4f382d11
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694592"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894455"
 ---
 # <a name="cwindow-class"></a>Cwindow – třída
 
@@ -521,7 +521,7 @@ HWND ChildWindowFromPoint(POINT point, UINT uFlags) const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [ChildWindowFromPointEx](https://msdn.microsoft.com/library/windows/desktop/ms632677) ve Windows SDK.
+Zobrazit [ChildWindowFromPointEx](/windows/desktop/api/winuser/nf-winuser-childwindowfrompointex) ve Windows SDK.
 
 ##  <a name="clienttoscreen"></a>  CWindow::ClientToScreen
 
@@ -669,7 +669,7 @@ HDWP DeferWindowPos(
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [DeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632681) ve Windows SDK.
+Zobrazit [DeferWindowPos](/windows/desktop/api/winuser/nf-winuser-deferwindowpos) ve Windows SDK.
 
 ##  <a name="destroywindow"></a>  CWindow::DestroyWindow
 
@@ -928,7 +928,7 @@ HRESULT GetDlgControl(
 *nID*<br/>
 [in] ID prostředku Probíhá načítání ovládacího prvku.
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] ID rozhraní, které chcete získat z ovládacího prvku.
 
 *ppCtrl*<br/>
@@ -970,7 +970,7 @@ HRESULT GetDlgHost(
 *nID*<br/>
 [in] ID prostředku Probíhá načítání ovládacího prvku.
 
-*identifikátor IID*<br/>
+*iid*<br/>
 [in] ID rozhraní, které chcete získat z ovládacího prvku.
 
 *ppHost*<br/>
@@ -1456,7 +1456,7 @@ Pokud text byl úspěšně zkopírován, vrácená hodnota je TRUE jinak vrácen
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [getwindowtext –](https://msdn.microsoft.com/library/windows/desktop/ms633520) ve Windows SDK.
+Zobrazit [getwindowtext –](/windows/desktop/api/winuser/nf-winuser-getwindowtexta) ve Windows SDK.
 
 Druhá verze této metody můžete uložit text do BSTR; třetí verzi umožňuje uloží výsledek v [CString](../../atl-mfc-shared/reference/cstringt-class.md), protože `CSimpleString` je základní třída `CString`.
 
@@ -1751,7 +1751,7 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Blok*<br/>
+*bLock*<br/>
 [in] Pokud hodnotu TRUE (výchozí hodnota), v okně se uzamkne. V opačném případě je odemknuté.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2629,7 +2629,7 @@ BOOL SetWindowText(LPCTSTR lpszString) throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [SetWindowText](https://msdn.microsoft.com/library/windows/desktop/ms633546) ve Windows SDK.
+Zobrazit [SetWindowText](/windows/desktop/api/winuser/nf-winuser-setwindowtexta) ve Windows SDK.
 
 ### <a name="example"></a>Příklad
 

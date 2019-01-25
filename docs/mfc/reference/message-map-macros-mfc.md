@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 4012f1f0729ff0f46a8504c44f27a37cd55c77e5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 6c6364dcf5d558bcdd25a2957721df1863d1f73f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327444"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893662"
 ---
 # <a name="message-map-macros-mfc"></a>Makra map zpráv (MFC)
 
@@ -135,7 +135,7 @@ Toto makro je podobný [BEGIN_MESSAGE_MAP](message-map-macros-mfc.md#begin_messa
 
 V části způsob implementace třídy začněte mapu zpráv BEGIN_TEMPLATE_MESSAGE_MAP makra. pak přidejte – makro položky pro každou z metod vaše obslužná rutina zprávy, jako byste to udělali pro mapování standardní zprávy. S BEGIN_MESSAGE_MAP – makro dokončení mapu zpráv šablonu s [END_MESSAGE_MAP](message-map-macros-mfc.md#end_message_map) – makro.
 
-Další informace o implementaci mapy zpráv pro šablony třídy najdete [postupy: vytvoření mapy zpráv pro třídu šablony](../how-to-create-a-message-map-for-a-template-class.md).
+Další informace o implementaci mapy zpráv pro šablony třídy najdete [jak: Vytvoření mapy zpráv pro třídu šablony](../how-to-create-a-message-map-for-a-template-class.md).
 
 ### <a name="requirements"></a>Požadavky
 
@@ -252,7 +252,7 @@ Název funkce obslužná rutina zprávy, ke které je mapován tento příkaz.
 
 Vyžaduje rozšířený formát obslužné rutiny zpráv příkaz je k dispozici pro rozšířené použití. ON_COMMAND_EX – makro se používá pro tyto obslužné rutiny zpráv a nabízí nadmnožinu [ON_COMMAND](message-map-macros-mfc.md#on_command) funkce. Rozšířené obslužná rutina příkazu členské funkce vyžadovat jeden parametr, UINT, obsahující Identifikátor příkazu a vrátit logickou hodnotu. Vrácená hodnota musí být TRUE označuje, že byla zpracována příkazu; jinak směrování bude pokračovat na další příkaz cílové objektů.
 
-Další informace viz technická Poznámka [TN006: mapy zpráv] tm006. zpráva maps.md).
+Další informace viz technická Poznámka [TN006: Mapy zpráv] tm006 – zpráva maps.md).
 
 ### <a name="requirements"></a>Požadavky
 
@@ -275,7 +275,7 @@ ON_CONTROL( wNotifyCode, id, memberFxn )
 
 ### <a name="parameters"></a>Parametry
 
-*funkci wNotifyCode*<br/>
+*wNotifyCode*<br/>
 Kód upozornění ovládacího prvku.
 
 *id*<br/>
@@ -389,19 +389,19 @@ Odešle příkaz pro vymazání upravit. Implementovat jako:
 
 `ON_OLECMD(NULL, OLECMDID_CLEARSELECTION, ID_EDIT_CLEAR)`
 
-**ON_OLECMD_COPY)**
+**ON_OLECMD_COPY( )**
 
 Odešle příkaz Upravit kopii. Implementovat jako:
 
 `ON_OLECMD(NULL, OLECMDID_COPY, ID_EDIT_COPY)`
 
-**ON_OLECMD_CUT)**
+**ON_OLECMD_CUT( )**
 
 Odešle příkaz Upravit vyjmout. Implementovat jako:
 
 `ON_OLECMD(NULL, OLECMDID_CUT, ID_EDIT_CUT)`
 
-**ON_OLECMD_NEW)**
+**ON_OLECMD_NEW( )**
 
 Odešle příkaz Nový soubor. Implementovat jako:
 
@@ -413,67 +413,67 @@ Odešle příkaz Otevřít soubor. Implementovat jako:
 
 `ON_OLECMD(NULL, OLECMDID_OPEN, ID_FILE_OPEN)`
 
-**ON_OLECMD_PAGESETUP)**
+**ON_OLECMD_PAGESETUP( )**
 
 Odešle příkaz souboru nastavení stránky. Implementovat jako:
 
 `ON_OLECMD(NULL, OLECMDID_PAGESETUP, ID_FILE_PAGE_SETUP)`
 
-**ON_OLECMD_PASTE)**
+**ON_OLECMD_PASTE( )**
 
 Odešle příkaz Upravit vložit. Implementovat jako:
 
 `ON_OLECMD(NULL, OLECMDID_PASTE, ID_EDIT_PASTE)`
 
-**ON_OLECMD_PASTESPECIAL)**
+**ON_OLECMD_PASTESPECIAL( )**
 
 Odešle příkaz Upravit Vložit jinak. Implementovat jako:
 
 `ON_OLECMD(NULL, OLECMDID_PASTESPECIAL, ID_EDIT_PASTE_SPECIAL)`
 
-**ON_OLECMD_PRINT)**
+**ON_OLECMD_PRINT( )**
 
 Odešle příkaz Tisk souboru. Implementovat jako:
 
 `ON_OLECMD(NULL, OLECMDID_PRINT, ID_FILE_PRINT)`
 
-**ON_OLECMD_PRINTPREVIEW)**
+**ON_OLECMD_PRINTPREVIEW( )**
 
 Odešle příkaz Náhled tisku souboru. Implementovat jako:
 
 `ON_OLECMD(NULL, OLECMDID_PRINTPREVIEW, ID_FILE_PRINT_PREVIEW)`
 
-**ON_OLECMD_REDO)**
+**ON_OLECMD_REDO( )**
 
 Odešle příkaz upravit znovu. Implementovat jako:
 
 `ON_OLECMD(NULL, OLECMDID_REDO, ID_EDIT_REDO)`
 
-**ON_OLECMD_SAVE)**
+**ON_OLECMD_SAVE( )**
 
 Odešle zprávu příkazu soubor uložit. Implementovat jako:
 
 `ON_OLECMD(NULL, OLECMDID_SAVE, ID_FILE_SAVE)`
 
-**ON_OLECMD_SAVE_AS)**
+**ON_OLECMD_SAVE_AS( )**
 
 Odešle zprávu příkazu Uložit jako. Implementovat jako:
 
 `ON_OLECMD(NULL, OLECMDID_SAVEAS, ID_FILE_SAVE_AS)`
 
-**ON_OLECMD_SAVE_COPY_AS)**
+**ON_OLECMD_SAVE_COPY_AS( )**
 
 Odešle zprávu příkazu soubor uložit kopii jako. Implementovat jako:
 
 `ON_OLECMD(NULL, OLECMDID_SAVECOPYAS, ID_FILE_SAVE_COPY_AS)`
 
-**ON_OLECMD_SELECTALL)**
+**ON_OLECMD_SELECTALL( )**
 
 Odešle příkaz Upravit vybrat vše. Implementovat jako:
 
 `ON_OLECMD(NULL, OLECMDID_SELECTALL, ID_EDIT_SELECT_ALL)`
 
-**ON_OLECMD_UNDO)**
+**ON_OLECMD_UNDO( )**
 
 Odešle příkaz vrátit zpět úpravy. Implementovat jako:
 
@@ -528,7 +528,7 @@ END_MESSAGE_MAP()
 
 ### <a name="see-also"></a>Viz také
 
-[RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)<br/>
+[RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)<br/>
 [Uživatelem definované obslužné rutiny](user-defined-handlers.md)
 
 ## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE
@@ -627,10 +627,10 @@ ON_COMMAND_RANGE( id1, id2, memberFxn )
 
 ### <a name="parameters"></a>Parametry
 
-*ID 1*<br/>
+*id1*<br/>
 ID příkazu na začátku souvislý rozsah ID příkazů.
 
-*s ID 2*<br/>
+*id2*<br/>
 ID příkazu, na konci souvislý rozsah ID příkazů.
 
 *memberFxn*<br/>
@@ -682,10 +682,10 @@ ON_UPDATE_COMMAND_UI_RANGE( id1, id2, memberFxn )
 
 ### <a name="parameters"></a>Parametry
 
-*ID 1*<br/>
+*id1*<br/>
 ID příkazu na začátku souvislý rozsah ID příkazů.
 
-*s ID 2*<br/>
+*id2*<br/>
 ID příkazu, na konci souvislý rozsah ID příkazů.
 
 *memberFxn*<br/>
@@ -713,13 +713,13 @@ ON_CONTROL_RANGE( wNotifyCode, id1, id2, memberFxn )
 
 ### <a name="parameters"></a>Parametry
 
-*funkci wNotifyCode*<br/>
+*wNotifyCode*<br/>
 Kód upozornění, ke které je vaše obslužná rutina reagovat.
 
-*ID 1*<br/>
+*id1*<br/>
 ID příkazu na začátku souvislý rozsah ID ovládacích prvků.
 
-*s ID 2*<br/>
+*id2*<br/>
 ID příkazu, na konci souvislý rozsah ID ovládacích prvků.
 
 *memberFxn*<br/>

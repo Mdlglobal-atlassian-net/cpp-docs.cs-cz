@@ -1,5 +1,5 @@
 ---
-title: Caccesstoken – třída
+title: CAccessToken Class
 ms.date: 11/04/2016
 f1_keywords:
 - CAccessToken
@@ -52,14 +52,14 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: e8fadb6825bbdc970e952d2ea6c26a27b4837dfc
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: e53160860211ba09114f2d4d101a2eaaf7de941f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694527"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894237"
 ---
-# <a name="caccesstoken-class"></a>Caccesstoken – třída
+# <a name="caccesstoken-class"></a>CAccessToken Class
 
 Tato třída představuje obálku pro přístupový token.
 
@@ -157,7 +157,7 @@ Popisovač do tokenu přístupu.
 
 V sestavení ladění, dojde k chybě kontrolního výrazu Pokud `CAccessToken` objektu již je vlastnictví přístupový token.
 
-##  <a name="dtor"></a>  Caccesstoken –:: ~ caccesstoken –
+##  <a name="dtor"></a>  CAccessToken::~CAccessToken
 
 Destruktor.
 
@@ -224,7 +224,7 @@ Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-`CreateImpersonationToken` volání [DuplicateToken](https://msdn.microsoft.com/library/windows/desktop/aa446616) vytvořit nový token zosobnění.
+`CreateImpersonationToken` volání [DuplicateToken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetoken) vytvořit nový token zosobnění.
 
 ##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken
 
@@ -569,7 +569,7 @@ bool GetLogonSid(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*psid má*<br/>
+*pSid*<br/>
 Ukazatel [CSID – třída](../../atl/reference/csid-class.md) objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -590,7 +590,7 @@ bool GetOwner(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*psid má*<br/>
+*pSid*<br/>
 Ukazatel [CSID – třída](../../atl/reference/csid-class.md) objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -611,7 +611,7 @@ bool GetPrimaryGroup(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*psid má*<br/>
+*pSid*<br/>
 Ukazatel [CSID – třída](../../atl/reference/csid-class.md) objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -661,7 +661,7 @@ Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání [OpenProcessToken](https://msdn.microsoft.com/library/aa379295) funkci Win32.
+Volání [OpenProcessToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) funkci Win32.
 
 ##  <a name="getprofile"></a>  CAccessToken::GetProfile
 
@@ -802,7 +802,7 @@ bool GetUser(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*psid má*<br/>
+*pSid*<br/>
 Ukazatel [CSID – třída](../../atl/reference/csid-class.md) objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1093,7 +1093,7 @@ Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Když `PrivilegeCheck` vrátí, `Attributes` členem všech [LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes) struktury nastavená na SE_PRIVILEGE_USED_FOR_ACCESS, pokud je povolené odpovídající oprávnění. Tato metoda volá [PrivilegeCheck](https://msdn.microsoft.com/library/windows/desktop/aa379304) funkci Win32.
+Když `PrivilegeCheck` vrátí, `Attributes` členem všech [LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes) struktury nastavená na SE_PRIVILEGE_USED_FOR_ACCESS, pokud je povolené odpovídající oprávnění. Tato metoda volá [PrivilegeCheck](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-privilegecheck) funkci Win32.
 
 ##  <a name="revert"></a>  CAccessToken::Revert
 

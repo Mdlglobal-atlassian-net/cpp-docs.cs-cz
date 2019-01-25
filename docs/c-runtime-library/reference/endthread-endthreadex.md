@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-ms.openlocfilehash: 48a2ce90b6bc90d40f6071898e1e5182502e938f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f54ca9c4cd5e863ca960f1d9c3634b85e7896dd
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597480"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893298"
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
 
@@ -62,7 +62,7 @@ Můžete volat **_endthread** nebo **_endthreadex** explicitně k ukončení pod
 > [!NOTE]
 > Pro spustitelný soubor propojeného s Libcmt.lib Nevolejte rozhraní Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) API; to zabrání systému za běhu recyklovat přidělené prostředky. **_endthread** a **_endthreadex** uvolní prostředky přidělené vláknu a následně zavolat **ExitThread**.
 
-**_endthread** automaticky uzavře popisovač vlákna. (Toto chování se liší od rozhraní Win32 **ExitThread** rozhraní API.) Proto při použití **_beginthread** a **_endthread**, explicitně nezavře popisovač vlákna voláním rozhraní Win32 [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) rozhraní API.
+**_endthread** automaticky uzavře popisovač vlákna. (Toto chování se liší od rozhraní Win32 **ExitThread** rozhraní API.) Proto při použití **_beginthread** a **_endthread**, explicitně nezavře popisovač vlákna voláním rozhraní Win32 [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) rozhraní API.
 
 Win32, jako jsou **ExitThread** rozhraní API, **_endthreadex** nezavře popisovač vlákna. Proto při použití **_beginthreadex** a **_endthreadex**, je nutné zavřít popisovač vlákna voláním rozhraní Win32 **CloseHandle** rozhraní API.
 
@@ -73,8 +73,8 @@ Win32, jako jsou **ExitThread** rozhraní API, **_endthreadex** nezavře popisov
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**_endthread**|\<Process.h >|
-|**_endthreadex**|\<Process.h >|
+|**_endthread**|\<process.h>|
+|**_endthreadex**|\<process.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

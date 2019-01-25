@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: d7e98ae38d91fbc0c1d428e94c6fa29fd8651e85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d70d2fb0ecb647d4854a6277d6c69cd9886e072f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626782"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894208"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -79,7 +79,7 @@ Počáteční adresa rutiny, která začíná spuštění nového vlákna. Pro *
 *stack_size*<br/>
 Velikost zásobníku pro nové vlákno, nebo 0.
 
-*seznam_argumentů*<br/>
+*arglist*<br/>
 Seznam argumentů, které se mají předat nové vlákno, nebo **NULL**.
 
 *Zabezpečení*<br/>
@@ -121,7 +121,7 @@ Je bezpečnější používat **_beginthreadex** než **_beginthread**. Pokud po
 
 Můžete volat [_endthread](endthread-endthreadex.md) nebo **_endthreadex** explicitně k ukončení podprocesu; nicméně **_endthread** nebo **_endthreadex** nazývá automaticky při podproces vrací z rutiny, která je předána jako parametr. Ukončení vlákna s voláním **_endthread** nebo **_endthreadex** pomáhá zajistit správné obnovení prostředků, které jsou k vláknu přiděleny.
 
-**_endthread** automaticky uzavře popisovač vlákna, zatímco **_endthreadex** tak není. Proto při použití **_beginthread** a **_endthread**, explicitně nezavře popisovač vlákna voláním rozhraní Win32 [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) rozhraní API. Toto chování se liší od rozhraní Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) rozhraní API.
+**_endthread** automaticky uzavře popisovač vlákna, zatímco **_endthreadex** tak není. Proto při použití **_beginthread** a **_endthread**, explicitně nezavře popisovač vlákna voláním rozhraní Win32 [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) rozhraní API. Toto chování se liší od rozhraní Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) rozhraní API.
 
 > [!NOTE]
 > Pro spustitelný soubor propojeného s Libcmt.lib Nevolejte rozhraní Win32 **ExitThread** rozhraní API, abyste nezabránili systému za běhu z recyklovat přidělené prostředky. **_endthread** a **_endthreadex** uvolní prostředky přidělené vláknu a následně zavolat **ExitThread**.
@@ -138,8 +138,8 @@ Pro **/CLR** kódu, **_beginthread** a **_beginthreadex** mají dvě přetížen
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_beginthread**|\<Process.h >|
-|**_beginthreadex**|\<Process.h >|
+|**_beginthread**|\<process.h>|
+|**_beginthreadex**|\<process.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

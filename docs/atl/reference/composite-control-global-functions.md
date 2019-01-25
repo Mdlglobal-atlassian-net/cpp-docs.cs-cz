@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 3b4abc1afc99a00d83c25574df06ebfb27141c65
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 26d8d004c933e48833047f85727ae6282c4b43d7
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694176"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893857"
 ---
 # <a name="composite-control-global-functions"></a>Globální funkce složených ovládacích prvků
 
@@ -77,7 +77,7 @@ ATLAPI_(int) AtlAxDialogBox(
 [in] Identifikuje okna, který vlastní dialogové okno.
 
 *lpDialogProc*<br/>
-[in] Odkazuje na pole proceduru dialogového okna. Další informace o poli proceduru dialogového okna, naleznete v tématu [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).
+[in] Odkazuje na pole proceduru dialogového okna. Další informace o poli proceduru dialogového okna, naleznete v tématu [DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc).
 
 *dwInitParam*<br/>
 [in] Určuje hodnotu pro předání do dialogového okna aplikace *lParam* parametr nezavěsíte zprávu.
@@ -95,7 +95,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-Další informace o úpravách skripty prostředků najdete v tématu [postupy: otevření souboru skriptu prostředků v textovém formátu](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Další informace o řídicí příkazy definice prostředků najdete v tématu [společné parametry ovládací prvek](/windows/desktop/menurc/common-control-parameters) v rámci sady Windows SDK: SDK Tools.
+Další informace o úpravách skripty prostředků najdete v tématu [jak: Otevření souboru skriptu prostředků v textovém formátu](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Další informace o řídicí příkazy definice prostředků najdete v tématu [společné parametry ovládací prvek](/windows/desktop/menurc/common-control-parameters) v rámci sady Windows SDK: SDK Tools.
 
 Další informace v dialogových oknech v Obecné [DialogBox](/windows/desktop/api/winuser/nf-winuser-dialogboxa) a [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) v sadě Windows SDK.
 
@@ -124,7 +124,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 [in] Identifikuje okna, který vlastní dialogové okno.
 
 *lpDialogProc*<br/>
-[in] Odkazuje na pole proceduru dialogového okna. Další informace o poli proceduru dialogového okna, naleznete v tématu [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).
+[in] Odkazuje na pole proceduru dialogového okna. Další informace o poli proceduru dialogového okna, naleznete v tématu [DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc).
 
 *dwInitParam*<br/>
 [in] Určuje hodnotu pro předání do dialogového okna aplikace *lParam* parametr nezavěsíte zprávu.
@@ -413,7 +413,7 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 *h*<br/>
 [in] Popisovač okna, které je hostitelem ovládacího prvku.
 
-*str*<br/>
+*pp*<br/>
 [out] `IUnknown` Kontejneru ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -433,7 +433,7 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 *h*<br/>
 [in] Popisovač okna, které je hostitelem ovládacího prvku.
 
-*str*<br/>
+*pp*<br/>
 [out] `IUnknown` Hostované ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -476,7 +476,7 @@ Nenulové, pokud inicializaci řídicího hostitelského kódu byla úspěšná.
 
 Tato funkce musí být volána před pomocí ovládacího prvku ATL – hostování rozhraní API. Následující volání této funkce **"AtlAxWin"** třídy okna je možné ve voláních [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) nebo [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa), jak je popsáno v sadě Windows SDK.
 
-##  <a name="atlaxwinterm"></a>  Call AtlAxWinTerm
+##  <a name="atlaxwinterm"></a>  AtlAxWinTerm
 
 Tato funkce zruší inicializaci ATL řídicího hostitelského kódu při zrušení registrace **"AtlAxWin80"** a **"AtlAxWinLic80"** tříd oken.
 

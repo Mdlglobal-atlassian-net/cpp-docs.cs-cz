@@ -1,5 +1,5 @@
 ---
-title: Canimationcontroller – třída
+title: CAnimationController Class
 ms.date: 11/04/2016
 f1_keywords:
 - CAnimationController
@@ -103,14 +103,14 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: bd0bdd1a3f423257b2f73745d7260d1fac12a0d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93189c5c9301e513cfbdf110cf7753e211420fef
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556660"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894130"
 ---
-# <a name="canimationcontroller-class"></a>Canimationcontroller – třída
+# <a name="canimationcontroller-class"></a>CAnimationController Class
 
 Implementuje řadič animace, který poskytuje centrální rozhraní pro vytváření a správu animací.
 
@@ -127,7 +127,7 @@ class CAnimationController : public CObject;
 |Název|Popis|
 |----------|-----------------|
 |[CAnimationController::CAnimationController](#canimationcontroller)|Vytvoří řadič animace.|
-|[Canimationcontroller –:: ~ canimationcontroller –](#canimationcontroller__~canimationcontroller)|Destruktor. Volá se, když se likviduje objektu řadiče animace.|
+|[CAnimationController::~CAnimationController](#canimationcontroller__~canimationcontroller)|Destruktor. Volá se, když se likviduje objektu řadiče animace.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -224,7 +224,7 @@ CAnimationGroup* AddAnimationObject(CAnimationBaseObject* pObject);
 
 ### <a name="parameters"></a>Parametry
 
-*odstraněný objekt*<br/>
+*pObject*<br/>
 Ukazatel na objekt animace.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -419,7 +419,7 @@ Hodnota TRUE, pokud obslužná rutina byla úspěšně nastavena nebo vydání.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je nastavena obslužná rutina (povoleno) animace Windows volá následující virtuální metody v závislosti na dwHandlerType: OnHasPriorityCancel OnHasPriorityConclude, OnHasPriorityTrim, OnHasPriorityCompress. dwHandler může obsahovat kombinaci následující příznaky: UI_ANIMATION_PHT_NONE – verze všechny obslužné rutiny UI_ANIMATION_PHT_CANCEL - nastavit Storno nastavena obslužná rutina porovnání UI_ANIMATION_PHT_CONCLUDE – obslužná rutina porovnání Conclude UI_ANIMATION_PHT_COMPRESS – nastavení Obslužná rutina porovnání komprimovat UI_ANIMATION_PHT_TRIM - nastavování obslužné rutiny uvolnění dočasné paměti porovnání UI_ANIMATION_PHT_CANCEL_REMOVE - odebrat porovnání obslužný podproces příkazu Storno UI_ANIMATION_PHT_CONCLUDE_REMOVE - odebrat obslužnou rutinu porovnání Conclude UI_ANIMATION_PHT_COMPRESS_ Odebrat – odebrat obslužnou rutinu porovnání komprimovat UI_ANIMATION_PHT_TRIM_REMOVE - Trim porovnání odebrat obslužnou rutinu
+Pokud obslužná rutina je sada (povoleno) animace Windows volání následující virtuální metody v závislosti na dwHandlerType: OnHasPriorityCancel, OnHasPriorityConclude OnHasPriorityTrim, OnHasPriorityCompress. dwHandler může obsahovat kombinaci následujících příznaků: UI_ANIMATION_PHT_NONE – verze všechny obslužné rutiny UI_ANIMATION_PHT_CANCEL - nastavit Storno nastavena obslužná rutina porovnání UI_ANIMATION_PHT_CONCLUDE - Conclude nastavena obslužná rutina porovnání UI_ANIMATION_PHT_COMPRESS – obslužná rutina porovnání komprimovat UI_ANIMATION_PHT_TRIM – nastavení Trim obslužná rutina porovnání UI_ANIMATION_PHT_CANCEL_REMOVE – odebrat Storno porovnání obslužná rutina UI_ANIMATION_PHT_CONCLUDE_REMOVE - odebrat obslužnou rutinu porovnání Conclude UI_ANIMATION_PHT_COMPRESS_REMOVE - odebrat obslužnou rutinu porovnání komprimovat UI_ANIMATION_PHT _TRIM_REMOVE - Trim porovnání odebrat obslužnou rutinu
 
 ##  <a name="enablestoryboardeventhandler"></a>  CAnimationController::EnableStoryboardEventHandler
 
@@ -713,7 +713,7 @@ virtual void OnAnimationIntegerValueChanged(
 *pGroup*<br/>
 Ukazatel na skupinu animace, která obsahuje objekt animace, jehož hodnota se změnila.
 
-*odstraněný objekt*<br/>
+*pObject*<br/>
 Ukazatel na objekt animace, který obsahuje proměnnou animace, jehož hodnota se změnila.
 
 *Proměnná*<br/>
@@ -810,7 +810,7 @@ virtual void OnAnimationValueChanged(
 *pGroup*<br/>
 Ukazatel na skupinu animace, která obsahuje objekt animace, jehož hodnota se změnila.
 
-*odstraněný objekt*<br/>
+*pObject*<br/>
 Ukazatel na objekt animace, který obsahuje proměnnou animace, jehož hodnota se změnila.
 
 *Proměnná*<br/>
@@ -871,7 +871,7 @@ By měl vrací TRUE, pokud scénář vlastněné pGroupNew má prioritu. By měl
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána, pokud povolíte Priorita porovnávání události pomocí CAnimationController::EnablePriorityComparisonHandler a zadejte UI_ANIMATION_PHT_CANCEL. Ho bude možné přepsat v odvozené třídě akce specifické pro aplikaci. Dokumentace k API animace Windows ke čtení pro další informace o [konflikt správu](https://msdn.microsoft.com/library/dd371759).
+Tato metoda je volána, pokud povolíte Priorita porovnávání události pomocí CAnimationController::EnablePriorityComparisonHandler a zadejte UI_ANIMATION_PHT_CANCEL. Ho bude možné přepsat v odvozené třídě akce specifické pro aplikaci. Dokumentace k API animace Windows ke čtení pro další informace o [konflikt správu](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority).
 
 ##  <a name="onhasprioritycompress"></a>  CAnimationController::OnHasPriorityCompress
 
@@ -901,7 +901,7 @@ By měl vrací TRUE, pokud scénář vlastněné pGroupNew má prioritu. By měl
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána, pokud povolíte Priorita porovnávání události pomocí CAnimationController::EnablePriorityComparisonHandler a zadejte UI_ANIMATION_PHT_COMPRESS. Ho bude možné přepsat v odvozené třídě akce specifické pro aplikaci. Dokumentace k API animace Windows ke čtení pro další informace o [konflikt správu](https://msdn.microsoft.com/library/dd371759).
+Tato metoda je volána, pokud povolíte Priorita porovnávání události pomocí CAnimationController::EnablePriorityComparisonHandler a zadejte UI_ANIMATION_PHT_COMPRESS. Ho bude možné přepsat v odvozené třídě akce specifické pro aplikaci. Dokumentace k API animace Windows ke čtení pro další informace o [konflikt správu](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority).
 
 ##  <a name="onhaspriorityconclude"></a>  CAnimationController::OnHasPriorityConclude
 
@@ -931,7 +931,7 @@ By měl vrací TRUE, pokud scénář vlastněné pGroupNew má prioritu. By měl
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána, pokud povolíte Priorita porovnávání události pomocí CAnimationController::EnablePriorityComparisonHandler a zadejte UI_ANIMATION_PHT_CONCLUDE. Ho bude možné přepsat v odvozené třídě akce specifické pro aplikaci. Dokumentace k API animace Windows ke čtení pro další informace o [konflikt správu](https://msdn.microsoft.com/library/dd371759).
+Tato metoda je volána, pokud povolíte Priorita porovnávání události pomocí CAnimationController::EnablePriorityComparisonHandler a zadejte UI_ANIMATION_PHT_CONCLUDE. Ho bude možné přepsat v odvozené třídě akce specifické pro aplikaci. Dokumentace k API animace Windows ke čtení pro další informace o [konflikt správu](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority).
 
 ##  <a name="onhasprioritytrim"></a>  CAnimationController::OnHasPriorityTrim
 
@@ -961,7 +961,7 @@ By měl vrací TRUE, pokud scénář vlastněné pGroupNew má prioritu. By měl
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána, pokud povolíte Priorita porovnávání události pomocí CAnimationController::EnablePriorityComparisonHandler a zadejte UI_ANIMATION_PHT_TRIM. Ho bude možné přepsat v odvozené třídě akce specifické pro aplikaci. Dokumentace k API animace Windows ke čtení pro další informace o [konflikt správu](https://msdn.microsoft.com/library/dd371759).
+Tato metoda je volána, pokud povolíte Priorita porovnávání události pomocí CAnimationController::EnablePriorityComparisonHandler a zadejte UI_ANIMATION_PHT_TRIM. Ho bude možné přepsat v odvozené třídě akce specifické pro aplikaci. Dokumentace k API animace Windows ke čtení pro další informace o [konflikt správu](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority).
 
 ##  <a name="onstoryboardstatuschanged"></a>  CAnimationController::OnStoryboardStatusChanged
 
@@ -1047,7 +1047,7 @@ void RemoveAnimationObject(
 
 ### <a name="parameters"></a>Parametry
 
-*odstraněný objekt*<br/>
+*pObject*<br/>
 Ukazatel na objekt animace.
 
 *bNoDelete*<br/>

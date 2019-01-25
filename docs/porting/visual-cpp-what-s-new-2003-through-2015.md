@@ -2,12 +2,12 @@
 title: Visual C++ co&#39;s novou 2003 – 2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 6d79406e07b8839e196f15d9bc3aed96cbc3dca8
-ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
+ms.openlocfilehash: bc0092aeb8910f960befc174c1f71ce05c4eb131
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51520173"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894351"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s novou 2003 – 2015
 
@@ -552,7 +552,7 @@ I když váš zdrojový kód nebo jiných artefaktů sestavení, můžete tyto r
     }
    ```
 
-  \-nebo –
+  \-or-
 
    ```cpp
     class base;  // as above
@@ -1733,7 +1733,7 @@ Kromě **paralelní úlohy** okno a **paralelní zásobníky** okně Visual Stud
 
 **C + +/ CLI IntelliSense.** C + +/ CLI nyní obsahuje plnou podporu technologie IntelliSense. Funkce technologie IntelliSense, jako je rychlé informace, parametr nápovědy, seznam členů a automatické dokončování prováděna pro C + +/ CLI. Kromě toho další technologie IntelliSense a prostředí IDE vylepšení uvedených v tomto dokumentu fungovat i pro C + +/ CLI.
 
-**Podrobnější popisy technologie IntelliSense.** Popisky rychlé informace technologie IntelliSense jazyka C++ nyní zobrazit informace o stylu bohatší dokumentační komentáře XML. Pokud používáte rozhraní API z knihovny – například C++ AMP –, který se dokumentační komentáře XML a popisu tlačítka technologie IntelliSense zobrazí další informace než jenom deklarace. Také pokud váš kód obsahuje komentáře dokumentace XML, popisy technologie IntelliSense se zobrazí podrobnější informace.
+**Richer IntelliSense Tooltips.** Popisky rychlé informace technologie IntelliSense jazyka C++ nyní zobrazit informace o stylu bohatší dokumentační komentáře XML. Pokud používáte rozhraní API z knihovny – například C++ AMP –, který se dokumentační komentáře XML a popisu tlačítka technologie IntelliSense zobrazí další informace než jenom deklarace. Také pokud váš kód obsahuje komentáře dokumentace XML, popisy technologie IntelliSense se zobrazí podrobnější informace.
 
 **Konstrukce kódu jazyka C++.** Kostru kód je k dispozici pro přepínač, if-else, smyčky a další základní konstrukcí, v rozevíracím seznamu pro seznam členů. Vyberte část kódu, ze seznamu a vložit ho do svého kódu a potom vyplňte požadované logiku. Můžete také vytvořit vlastní vlastní části kódu pro použití v editoru.
 
@@ -1797,13 +1797,13 @@ Trigraf se skládá ze dvou po sobě jdoucími otazníky (?) následovaný znake
 
 **Nové nostdlib – možnost Common Language Runtime (CLR).** Přidána nová možnost pro `/clr` (kompilace Common Language Runtime). Pokud různé verze stejné knihovny jsou zahrnuty, objeví se chyba při kompilaci. Nová možnost umožňuje vyloučit výchozí knihovny CLR tak, aby váš program můžete použít zadanou verzi.
 
-**Nové detect_mistmatch direktivy pragma.** Detect_mismatch direktiv pragma umožňuje umístit klíčové slovo ve vašich souborech, které je ve srovnání další značky, které mají stejný název. Pokud existuje více hodnot stejného názvu, vyvolá linker chybu.
+**Nové direktivy detect_mismatch – Direktiva pragma.** Detect_mismatch direktiv pragma umožňuje umístit klíčové slovo ve vašich souborech, které je ve srovnání další značky, které mají stejný název. Pokud existuje více hodnot stejného názvu, vyvolá linker chybu.
 
 **Vnitřní funkce XOP, Fma4 a LWP vnitřních objektů.** Nový vnitřní funkce byly přidány pro podporu XOP vnitřní objekty přidány pro Visual Studio 2010 SP1, přidá FMA4 vnitřních objektů pro Visual Studio 2010 SP1 a přidali LWP vnitřních objektů pro Visual Studio 2010 SP1 procesoru technologie. Použijte __cpuid __cpuidex k určení, které procesor technologie jsou podporovány v určitém počítači.
 
 ### <a name="visual-c-projects-and-the-build-system"></a>Projekty Visual C++ a systému sestavení
 
-**Nástroj MSBuild.** Visual C++ řešení a projekty jsou nyní integrovány pomocí MSBuild.exe, která nahrazuje VCBuild.exe. Nástroj MSBuild je stejný nástroj pro sestavení flexibilní, rozšiřitelné a založený na formátu XML, který se používá v jiných jazycích sady Visual Studio a typy projektů. Z důvodu této změny soubory projektu Visual C++ teď použít formát souboru XML a mají příponu názvu souboru .vcxproj. Soubory projektu Visual C++ z předchozích verzí sady Visual Studio se automaticky převedou na nový formát souboru.
+**MSBuild.** Visual C++ řešení a projekty jsou nyní integrovány pomocí MSBuild.exe, která nahrazuje VCBuild.exe. Nástroj MSBuild je stejný nástroj pro sestavení flexibilní, rozšiřitelné a založený na formátu XML, který se používá v jiných jazycích sady Visual Studio a typy projektů. Z důvodu této změny soubory projektu Visual C++ teď použít formát souboru XML a mají příponu názvu souboru .vcxproj. Soubory projektu Visual C++ z předchozích verzí sady Visual Studio se automaticky převedou na nový formát souboru.
 
 **Adresáře VC ++.** Nastavení adresáře VC ++ se nyní nachází na dvou místech. Pomocí stránky vlastností projektu můžete nastavit hodnoty jednotlivých projektů pro adresáře VC ++. Použití **Správce vlastností** a seznam vlastností pro globální nastavení podle konfigurace hodnoty adresáře VC ++.
 
@@ -1836,7 +1836,7 @@ Trigraf se skládá ze dvou po sobě jdoucími otazníky (?) následovaný znake
 
 **Sledování vysokých hodnot DPI.** Ve výchozím nastavení nyní jsou vysoce rozlišením DPI aplikace MFC Pokud je stav aplikace vysokých hodnot DPI (vysoká bodů na palec) vědět, můžete škálovat operačního systému windows, text a další prvky uživatelského rozhraní pro aktuální rozlišení obrazovky. Tento znamená, že škálován image je pravděpodobně být správně rozloží a není oříznut nebo pixelován.
 
-**Restartujte správce.** Správce restartování automaticky ukládá dokumenty a restartování aplikace, pokud se neočekávaně zavře nebo restartuje. Například můžete použít správce restartování spusťte aplikaci po zavření automatických aktualizací. Další informace o tom, jak nakonfigurovat svoji aplikaci pomocí Správce restartování najdete v tématu **postupy: Přidání podpory správce restartování**.
+**Restartujte správce.** Správce restartování automaticky ukládá dokumenty a restartování aplikace, pokud se neočekávaně zavře nebo restartuje. Například můžete použít správce restartování spusťte aplikaci po zavření automatických aktualizací. Další informace o tom, jak nakonfigurovat svoji aplikaci pomocí Správce restartování najdete v tématu **jak: Přidání podpory správce restartování**.
 
 **CTaskDialog.** `CTaskDialog` Třídy je možné použít místo standardní `AfxMessageBox` okno se zprávou. `CTaskDialog` Třída zobrazuje a shromažďuje informace než standardní zprávou.
 
@@ -1854,7 +1854,7 @@ Většina `/analyze` upozornění (analýzy kódu Enterprise) byly odebrány z k
 
 #### <a name="animation-and-d2d-support"></a>Animace a D2D podpory
 
-MFC teď podporuje animace a grafické rozhraní Direct2D. Knihovna MFC má několik nových tříd knihovny MFC a funkcí pro podporu této funkce. Existují také dva nové návody, které ukazují, jak přidat objekt D2D a objekt animace do projektu. Tyto kurzy jsou **návod: přidání objektu D2D do projektu MFC** a **návod: Přidání animace do projektu MFC**.
+MFC teď podporuje animace a grafické rozhraní Direct2D. Knihovna MFC má několik nových tříd knihovny MFC a funkcí pro podporu této funkce. Existují také dva nové návody, které ukazují, jak přidat objekt D2D a objekt animace do projektu. Tyto kurzy jsou **názorný postup: Přidání objektu D2D do projektu MFC** a **názorný postup: Přidání animace do projektu MFC**.
 
 ### <a name="ide"></a>IDE – integrované vývojové prostředí
 
@@ -2197,7 +2197,7 @@ Rozbíjející změny v této verzi má kompilátor.
 
 - Informace o tom, jak spustit spravovaného rozšíření jazyka C++ aplikaci vytvořenou v aktuální verzi kompilátoru v předchozí verzi modulu runtime.
 - Spravovaná rozšíření pro C++ – nejčastější dotazy.
-- Byla přidána názorný postup ukazuje, jak přenést existující, nativní aplikace pro použití spravovaného rozšíření jazyka C++: názorný postup: přenos stávající nativní aplikace C++ do Interoperate pomocí součásti rozhraní .NET Framework.
+- Byla přidána názorný postup ukazuje, jak přenést existující, nativní aplikace pro použití spravovaného rozšíření jazyka C++: Průvodce: Portování stávající nativní kód C++ aplikace pro spolupráci s součásti rozhraní .NET Framework.
 - Nyní můžete vytvořit delegáta pro metodu hodnotového typu.
 - Kompilátoru soulad se standardem jazyka C++ je výrazně Vylepšená Visual C++ .NET 2003.
 - `/arch` – možnost kompilátoru je přidána.

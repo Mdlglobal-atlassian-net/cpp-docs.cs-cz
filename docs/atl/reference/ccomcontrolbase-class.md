@@ -80,12 +80,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-ms.openlocfilehash: def8334cf0ed9b6b2ee821e1e0f1a717d90f2163
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 67d2be23aa6209c36b1a72eca3322efd1e977447
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694579"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894429"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase – třída
 
@@ -113,7 +113,7 @@ class ATL_NO_VTABLE CComControlBase
 |Název|Popis|
 |----------|-----------------|
 |[CComControlBase::CComControlBase](#ccomcontrolbase)|Konstruktor|
-|[CComControlBase –:: ~ CComControlBase –](#dtor)|Destruktor.|
+|[CComControlBase::~CComControlBase](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -124,7 +124,7 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::DoesVerbUIActivate](#doesverbuiactivate)|Kontroluje, zda *iVerb* parametr používané `IOleObjectImpl::DoVerb` způsobí, že ovládacího prvku uživatelského rozhraní k aktivaci a vrátí hodnotu TRUE.|
 |[CComControlBase::DoVerbProperties](#doverbproperties)|Zobrazí stránky vlastností ovládacího prvku.|
 |[CComControlBase::FireViewChange](#fireviewchange)|Volání této metody pro překreslení ovládacího prvku kontejneru, nebo upozornit jímky registrované doporučení, které došlo ke změně zobrazení ovládacího prvku.|
-|[CComControlBase::GetAmbientAppearance](#getambientappearance)|Načte DISPID_AMBIENT_APPEARANCE, aktuální nastavení pro ovládací prvek vzhled: 0 pro paušální a 1 pro 3D.|
+|[CComControlBase::GetAmbientAppearance](#getambientappearance)|Načte DISPID_AMBIENT_APPEARANCE vzhled aktuální nastavení pro ovládací prvek: 0 pro paušální a 1 pro 3D.|
 |[CComControlBase::GetAmbientAutoClip](#getambientautoclip)|Načte DISPID_AMBIENT_AUTOCLIP příznak označující, zda kontejner podporuje automatické výstřižek oblasti ovládacího prvku zobrazení.|
 |[CComControlBase::GetAmbientBackColor](#getambientbackcolor)|Načte DISPID_AMBIENT_BACKCOLOR, barva okolí pozadí pro všechny ovládací prvky určené kontejneru.|
 |[CComControlBase::GetAmbientCharSet](#getambientcharset)|Načte DISPID_AMBIENT_CHARSET okolí znakovou sadu pro všechny ovládací prvky určené kontejneru.|
@@ -235,7 +235,7 @@ Popisovač okna přidružený k ovládacímu prvku.
 
 Inicializuje velikost ovládacího prvku na 5080 X 5080 jednotkách HIMETRIC (2 "X 2") a inicializuje `CComControlBase` hodnoty datových členů na hodnotu NULL nebo FALSE.
 
-##  <a name="dtor"></a>  CComControlBase –:: ~ CComControlBase –
+##  <a name="dtor"></a>  CComControlBase::~CComControlBase
 
 Destruktor.
 
@@ -258,7 +258,7 @@ virtual HRESULT ControlQueryInterface(const IID& iid,
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor IID*<br/>
+*iid*<br/>
 Identifikátor GUID se požadované rozhraní.
 
 *ppv*<br/>
@@ -358,7 +358,7 @@ Pokud je aktivní ovládací prvek (datový člen třídy ovládacího prvku [CC
 
 ##  <a name="getambientappearance"></a>  CComControlBase::GetAmbientAppearance
 
-Načte DISPID_AMBIENT_APPEARANCE, aktuální nastavení pro ovládací prvek vzhled: 0 pro paušální a 1 pro 3D.
+Načte DISPID_AMBIENT_APPEARANCE vzhled aktuální nastavení pro ovládací prvek: 0 pro paušální a 1 pro 3D.
 
 ```
 HRESULT GetAmbientAppearance(short& nAppearance);
@@ -404,7 +404,7 @@ HRESULT GetAmbientBackColor(OLE_COLOR& BackColor);
 
 ### <a name="parameters"></a>Parametry
 
-*Barva pozadí*<br/>
+*BackColor*<br/>
 Vlastnost DISPID_AMBIENT_BACKCOLOR.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -511,7 +511,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
 ### <a name="parameters"></a>Parametry
 
 *ppFont*<br/>
-Ukazatele do kontejneru v okolí [IFontDisp](https://msdn.microsoft.com/library/windows/desktop/ms692695) rozhraní odbavení.
+Ukazatele do kontejneru v okolí [IFontDisp](/windows/desktop/api/ocidl/nn-ocidl-ifontdisp) rozhraní odbavení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -531,7 +531,7 @@ HRESULT GetAmbientForeColor(OLE_COLOR& ForeColor);
 
 ### <a name="parameters"></a>Parametry
 
-*Barva popředí*<br/>
+*ForeColor*<br/>
 Vlastnost DISPID_AMBIENT_FORECOLOR.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -603,7 +603,7 @@ HRESULT GetAmbientProperty(DISPID dispid, VARIANT& var);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor DISPID*<br/>
+*dispid*<br/>
 Identifikátor vlastnosti kontejneru se má načíst.
 
 *var*<br/>
@@ -1477,7 +1477,7 @@ HRESULT SendOnRename(IMoniker* pmk);
 
 ### <a name="parameters"></a>Parametry
 
-*životnosti klíče PMK*<br/>
+*pmk*<br/>
 Ukazatel na novou zástupný název ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1517,7 +1517,7 @@ HRESULT SendOnViewChange(DWORD dwAspect, LONG lindex = -1);
 *dwAspect*<br/>
 Aspekt nebo zobrazení ovládacího prvku.
 
-*index*<br/>
+*lindex*<br/>
 Část zobrazení, které se změnily. Je platný pouze hodnotu -1.
 
 ### <a name="return-value"></a>Návratová hodnota

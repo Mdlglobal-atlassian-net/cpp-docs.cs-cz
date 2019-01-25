@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 0a27b78d873b0a561b84b13cc16c67aef9ff2e8b
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ebb0d0abcff069deca4597ffb5a3a2d4e67cab9c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179081"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894533"
 ---
 # <a name="cwnd-class"></a>Třída CWnd
 
@@ -1816,7 +1816,7 @@ CWnd* ChildWindowFromPoint(
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 Určuje souřadnice bodu klienta má být testována.
 
 *nflags*<br/>
@@ -1853,10 +1853,10 @@ void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) 
 
 ### <a name="parameters"></a>Parametry
 
-*lppoint –*<br/>
+*lpPoint*<br/>
 Odkazuje [POINT – struktura](/windows/desktop/api/windef/ns-windef-tagpoint) nebo `CPoint` koordinuje objekt, který obsahuje klienta má být převeden.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) nebo `CRect` koordinuje objekt, který obsahuje klienta má být převeden.
 
 ### <a name="remarks"></a>Poznámky
@@ -2084,7 +2084,7 @@ Určuje, zda data v *pPersist* by měl být interpretován jako IStorage nebo IS
 *bstrLicKey*<br/>
 Volitelné licenční klíče data. Tato data je potřeba jenom pro vytváření ovládacích prvků, které vyžadují za běhu licenční klíč. Pokud ovládací prvek podporuje licencování, je nutné zadat licenční klíč pro vytvoření ovládacího prvku na úspěšné. Výchozí hodnota je NULL.
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 Třída jedinečné ID ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2655,7 +2655,7 @@ BOOL DragDetect(POINT pt) const;
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pt*<br/>
 Počáteční pozice myši, v souřadnicovém systému obrazovky. Funkce určuje souřadnice obdélník pomocí tohoto bodu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -2711,7 +2711,7 @@ BOOL DrawCaption(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel na kontext zařízení. Funkce kreslení titulek okna v tomto kontextu zařízení.
 
 *lprc*<br/>
@@ -3086,7 +3086,7 @@ Zpracování nadřazenému oknu, jehož podřízená okna se mají prohledat.
 Zpracování na podřízené okno. Hledání začne s další podřízené okno v pořadí. Podřízené okno musí být přímé podřízené okno *hwndParent*, nejen potomků okna.
 
 *lpszClass*<br/>
-Ukazatel na řetězec zakončený hodnotou null, který určuje název třídy nebo formát atom třídy vytvořili podle předchozího volání [RegisterClass](https://msdn.microsoft.com/library/windows/desktop/ms633586) nebo [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa).
+Ukazatel na řetězec zakončený hodnotou null, který určuje název třídy nebo formát atom třídy vytvořili podle předchozího volání [RegisterClass](/windows/desktop/api/winuser/nf-winuser-registerclassa) nebo [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa).
 
 *lpszWindow*<br/>
 Ukazatel na řetězec zakončený hodnotou null, který určuje název okna (název okna). Pokud tento parametr hodnotu NULL, všechny názvy oken shodovat.
@@ -3709,7 +3709,7 @@ void GetClientRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) nebo `CRect` objektu získat souřadnice klienta. `left` a `top` členové budou 0. `right` a `bottom` bude obsahovat členy, šířku a výšku okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -4354,7 +4354,7 @@ CWnd* GetNextWindow(UINT nFlag = GW_HWNDNEXT) const;
 
 ### <a name="parameters"></a>Parametry
 
-*načit*<br/>
+*nFlag*<br/>
 Určuje, zda funkce vrací ukazatel na okno Další nebo předchozí okno. Může to být buď GW_HWNDNEXT, která vrátí okna, který následuje `CWnd` objekt v seznamu Správce oken nebo GW_HWNDPREV, která vrátí předchozí okno Správce oken seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -4774,7 +4774,7 @@ BOOL GetTitleBarInfo(PTITLEBARINFO pti) const;
 
 ### <a name="parameters"></a>Parametry
 
-*PTI*<br/>
+*pti*<br/>
 Ukazatel [TITLEBARINFO](/windows/desktop/api/winuser/ns-winuser-tagtitlebarinfo) struktura, která přijímá informace.
 
 ### <a name="remarks"></a>Poznámky
@@ -4863,7 +4863,7 @@ BOOL GetUpdateRect(
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje `CRect` objektu nebo [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) , která má obdržet souřadnice klienta, který obklopuje oblast aktualizace aktualizace.
 
 Tento parametr nastavit na hodnotu NULL k určení, zda existuje určitá aktualizace oblast v rámci `CWnd`. Pokud *lprect –* má hodnotu NULL, `GetUpdateRect` členská funkce vrátí nenulovou hodnotu, pokud existuje určitá aktualizace oblast a 0, pokud jeden není. To poskytuje způsob, jak určit, zda je zprávu WM_PAINT výsledkem neplatnou oblast. Nenastavujte tento parametr na hodnotu NULL ve Windows verze 3.0 a starší.
@@ -5062,7 +5062,7 @@ void GetWindowRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje `CRect` objektu nebo [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) , který se zobrazí obrazovka souřadnice levého a pravého dolního rohu.
 
 ### <a name="remarks"></a>Poznámky
@@ -5285,7 +5285,7 @@ void InvalidateRect(
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje na `CRect` objektu nebo [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) obdélníku (v souřadnice klienta), který obsahuje být přidán do oblasti aktualizace. Pokud *lprect –* má hodnotu NULL, celé oblasti klienta se přidá do oblasti.
 
 *bErase*<br/>
@@ -5645,10 +5645,10 @@ void MapWindowPoints(
 *pwndTo*<br/>
 Identifikuje v okně, ke kterému se převedou body. Pokud má parametr hodnotu NULL, tyto body se převedou na souřadnice obrazovky.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Určuje obdélníku, jehož body se má převést. První verze této funkce je k dispozici jenom pro Windows verze 3.1 nebo novější.
 
-*lppoint –*<br/>
+*lpPoint*<br/>
 Ukazatel na pole [POINT – struktura](/windows/desktop/api/windef/ns-windef-tagpoint) , které obsahují sadu bodů má být převeden.
 
 *nCount*<br/>
@@ -5673,7 +5673,7 @@ Odkazuje `CString` objektu nebo řetězec zakončený hodnotou null obsahující
 *lpszCaption*<br/>
 Odkazuje `CString` objektu nebo řetězec zakončený hodnotou null se použije pro titulek okno se zprávou. Pokud *lpszCaption* má hodnotu NULL, výchozí titulek "Chyba" se používá.
 
-*nTyp*<br/>
+*nType*<br/>
 Určuje obsah a chování okna se zprávou.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -5826,7 +5826,7 @@ Určuje novou výšku `CWnd`.
 *bRepaint*<br/>
 Určuje, zda `CWnd` má být překreslit. Při hodnotě TRUE se `CWnd` obdrží [WM_PAINT](/windows/desktop/gdi/wm-paint) zprávy v jeho [OnPaint](#onpaint) obslužné rutiny zpráv jako obvykle. Pokud má parametr hodnotu FALSE, žádné překreslení jakéhokoli druhu vyvolá. To platí pro klientské oblasti, do oblasti myši v neklientské oblasti (včetně pruhy nadpis a posunout) a žádné části odvozeného nadřazené okno zjištěných kvůli `CWnd`je přesunout. Pokud tento parametr hodnotu FALSE, aplikace musí explicitně zneplatnit nebo ho překreslit některé části `CWnd` a nadřazené okno, které musí být překreslení.
 
-*lprect –*<br/>
+*lpRect*<br/>
 [Crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) , který určuje novou velikost a umístění.
 
 ### <a name="remarks"></a>Poznámky
@@ -5878,7 +5878,7 @@ afx_msg void OnActivate(
 
 ### <a name="parameters"></a>Parametry
 
-*nInformace*<br/>
+*nState*<br/>
 Určuje, zda `CWnd` je se aktivuje nebo deaktivuje. Může být jeden z následujících hodnot:
 
 - V okně WA_INACTIVE je právě deaktivována.
@@ -5941,7 +5941,7 @@ virtual BOOL OnAmbientProperty(
 *pSite*<br/>
 Ukazatel na webu ovládacího prvku, který požaduje vedlejší vlastnost.
 
-*identifikátor DISPID*<br/>
+*dispid*<br/>
 ID odbavení požadovaný vedlejší vlastnost.
 
 *pvar*<br/>
@@ -6022,7 +6022,7 @@ afx_msg void OnCancelMode();
 
 Pokud `CWnd` objektu má fokus, jeho `OnCancelMode` členská funkce se volá, když se zobrazí dialogové okno nebo okno se zprávou. Díky tomu `CWnd` příležitostí ke zrušení režimech, např. zachycení myši.
 
-Výchozí implementace jsou reaguje při volání [ReleaseCapture](https://msdn.microsoft.com/library/windows/desktop/ms646261) funkce Windows. Tato členská funkce ve vaší odvozené třídy za účelem zpracování jiné režimy přepište.
+Výchozí implementace jsou reaguje při volání [ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture) funkce Windows. Tato členská funkce ve vaší odvozené třídy za účelem zpracování jiné režimy přepište.
 
 ##  <a name="oncapturechanged"></a>  CWnd::OnCaptureChanged
 
@@ -6039,7 +6039,7 @@ Ukazatel na okno k získání zachycení myši
 
 ### <a name="remarks"></a>Poznámky
 
-Okno obdrží tuto zprávu i v případě, že volá [ReleaseCapture](https://msdn.microsoft.com/library/windows/desktop/ms646261) samotný. Aplikace by se neměly pokoušet nastavit zachycení myši v reakci na tuto zprávu. Když přijme tuto zprávu, časového období by měl překreslit, v případě potřeby tak, aby odrážely nový stav zachycení myši.
+Okno obdrží tuto zprávu i v případě, že volá [ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture) samotný. Aplikace by se neměly pokoušet nastavit zachycení myši v reakci na tuto zprávu. Když přijme tuto zprávu, časového období by měl překreslit, v případě potřeby tak, aby odrážely nový stav zachycení myši.
 
 Zobrazit sady Windows SDK pro informace na `ReleaseCapture` funkce Windows.
 
@@ -6391,7 +6391,7 @@ afx_msg void OnContextMenu(
 *pWnd*<br/>
 Popisovač okna, ve kterém klikněte pravým tlačítkem myši uživatel klikl na tlačítko myši. To může být podřízené okno příjem zprávy okna. Další informace o zpracování této zprávy najdete v části poznámky.
 
-*POS*<br/>
+*pos*<br/>
 Klikněte na pozici kurzoru, v souřadnicovém systému obrazovky, v době myši.
 
 ### <a name="remarks"></a>Poznámky
@@ -6476,7 +6476,7 @@ afx_msg HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Obsahuje ukazatel na kontext zobrazení pro podřízené okno. Může být dočasné.
 
 *pWnd*<br/>
@@ -6710,7 +6710,7 @@ virtual void OnDrawIconicThumbnailOrLivePreview(
 
 ### <a name="parameters"></a>Parametry
 
-*řadič domény*<br/>
+*dc*<br/>
 Určuje kontext zařízení.
 
 *Rect*<br/>
@@ -6896,7 +6896,7 @@ afx_msg BOOL OnEraseBkgnd(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Určuje objekt kontextu zařízení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -6999,7 +6999,7 @@ Určující, jaký typ vstupu aplikace zpracovává jeden nebo více z následuj
 
 - Všechny DLGC_WANTMESSAGE vstup z klávesnice. Aplikace předá tuto zprávu do ovládacího prvku.
 
-- DLGC_WANTTAB tabulátorem.
+- DLGC_WANTTAB TAB key.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -7119,7 +7119,7 @@ afx_msg void OnHotKey(
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda přijímá [WM_HOTKEY](/windows/desktop/inputdev/wm-hotkey) oznámení, která je popsána v sadě Windows SDK. Tato zpráva je umístěn v horní části stránky fronty zpráv, které jsou spojené s vláknem, které registrované klávesovou zkratku. Použití [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) funkce k registraci systémová klávesovou zkratku.
+Tato metoda přijímá [WM_HOTKEY](/windows/desktop/inputdev/wm-hotkey) oznámení, která je popsána v sadě Windows SDK. Tato zpráva je umístěn v horní části stránky fronty zpráv, které jsou spojené s vláknem, které registrované klávesovou zkratku. Použití [RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey) funkce k registraci systémová klávesovou zkratku.
 
 > [!NOTE]
 > Tato členská funkce se volá se rozhraním, aby vaše aplikace, aby se zpracovala zpráva Windows. Parametry předané do funkce zahrnují parametry přijata rozhraním, když byla přijata zpráva. Pokud bude volat implementaci základní třídy tuto funkci, použije tuto implementaci parametry původně předána funkci s zpráva a ne parametrů, které zadáte.
@@ -7158,7 +7158,7 @@ Určuje, že kód posuvníku, která označuje, že uživatel je posouvání po�
 
 - Přetáhněte SB_THUMBTRACK posuvníku na určené pozici. Je určená aktuální pozice *nPos* parametru.
 
-*nPos –*<br/>
+*nPos*<br/>
 Určuje pozici posuvníku, pokud je kód posuvníku SB_THUMBPOSITION nebo SB_THUMBTRACK; v opačném případě se nepoužívá. V závislosti na rozsahu počáteční posuvníku *nPos* může být záporný a by měl být přetypovat na **int** v případě potřeby.
 
 *pScrollBar*<br/>
@@ -7212,7 +7212,7 @@ Určuje jeden z následujících posuvníku kódů v nižší řád slova:
 
 - Posuňte se SB_TOP vlevo nahoře.
 
-*nPos –*<br/>
+*nPos*<br/>
 Obsahuje pozice posuvníku – Pokud je kód posuvníku SB_THUMBPOSITION; v opačném případě se nepoužívá.
 
 ### <a name="remarks"></a>Poznámky
@@ -7232,7 +7232,7 @@ afx_msg void OnIconEraseBkgnd(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Určuje objekt kontextu zařízení ikony. Může být dočasné a neměl by být uložen pro pozdější použití.
 
 ### <a name="remarks"></a>Poznámky
@@ -7497,7 +7497,7 @@ Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může b�
 
 - MK_SHIFT nastavte, pokud klávesy SHIFT je mimo provoz.
 
-*Bod*<br/>
+*point*<br/>
 Určuje x a y souřadnici kurzoru. Tyto souřadnice jsou vždy relativní k levém horním rohu okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -7532,7 +7532,7 @@ Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může b�
 
 - MK_SHIFT nastavte, pokud klávesy SHIFT je mimo provoz.
 
-*Bod*<br/>
+*point*<br/>
 Určuje x a y souřadnici kurzoru. Tyto souřadnice jsou vždy relativní k levém horním rohu okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -7563,7 +7563,7 @@ Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může b�
 
 - MK_SHIFT nastavte, pokud klávesy SHIFT je mimo provoz.
 
-*Bod*<br/>
+*point*<br/>
 Určuje x a y souřadnici kurzoru. Tyto souřadnice jsou vždy relativní k levém horním rohu okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -7596,7 +7596,7 @@ Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může b�
 
 - MK_SHIFT nastavte, pokud klávesy SHIFT je mimo provoz.
 
-*Bod*<br/>
+*point*<br/>
 Určuje x a y souřadnici kurzoru. Tyto souřadnice jsou vždy relativní k levém horním rohu okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -7631,7 +7631,7 @@ Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může b�
 
 - MK_SHIFT nastavte, pokud klávesy SHIFT je mimo provoz.
 
-*Bod*<br/>
+*point*<br/>
 Určuje x a y souřadnici kurzoru. Tyto souřadnice jsou vždy relativní k levém horním rohu okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -7662,7 +7662,7 @@ Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může b�
 
 - MK_SHIFT nastavte, pokud klávesy SHIFT je mimo provoz.
 
-*Bod*<br/>
+*point*<br/>
 Určuje x a y souřadnici kurzoru. Tyto souřadnice jsou vždy relativní k levém horním rohu okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -7786,7 +7786,7 @@ afx_msg UINT OnMenuDrag(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*nPos –*|[in] Index pozice položky nabídky po zahájení operace přetažení.|
+|*nPos*|[in] Index pozice položky nabídky po zahájení operace přetažení.|
 |*pMenu*|[in] Ukazatel [cmenu –](../../mfc/reference/cmenu-class.md) objekt, který obsahuje položky nabídky.|
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -7845,7 +7845,7 @@ afx_msg void OnMenuRButtonUp(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*nPos –*|[in] Index pozice položky nabídky, když byl uvolní pravé tlačítko myši.|
+|*nPos*|[in] Index pozice položky nabídky, když byl uvolní pravé tlačítko myši.|
 |*pMenu*|[in] Ukazatel [cmenu –](../../mfc/reference/cmenu-class.md) objekt, který obsahuje položky nabídky.|
 
 ### <a name="remarks"></a>Poznámky
@@ -7964,7 +7964,7 @@ afx_msg void OnMouseHover(
 |Parametr|Popis|
 |---------------|-----------------|
 |*nFlags*|[in] Bitová kombinace (nebo) příznaků, které označují, která modifikátor stisknutí kláves. Příznak MK_CONTROL například označuje, že byla klávesa CTRL stisknuta.|
-|*Bod*|[in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje, *x* a *y* souřadnice kurzor vzhledem k levého horního rohu oblasti klienta.|
+|*point*|[in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje, *x* a *y* souřadnice kurzor vzhledem k levého horního rohu oblasti klienta.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -8002,7 +8002,7 @@ afx_msg void OnMouseHWheel(
 |---------------|-----------------|
 |*nFlags*|[in] Bitová kombinace (nebo) příznaků, které označují, která modifikátor stisknutí kláves. Příznak MK_CONTROL například označuje, že byla klávesa CTRL stisknuta.<br /><br /> Seznam příznaků, najdete v části "Parametry zpráv" položky v [o vstup z myši](/windows/desktop/inputdev/about-mouse-input).|
 |*zDelta*|[in] Určuje vzdálenost, o kterou otáčí kolečkem vyjádřené v násobky nebo divize WHEEL_DELTA, což je 120. Kladná hodnota označuje, že jsme si ukázali kolečka zprava. Záporná hodnota označuje, že jsme si ukázali kolečka na levé straně.|
-|*PT*|[in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje, *x* a *y* souřadnice kurzor vzhledem k levého horního rohu oblasti klienta.|
+|*pt*|[in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje, *x* a *y* souřadnice kurzor vzhledem k levého horního rohu oblasti klienta.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -8051,7 +8051,7 @@ Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může b�
 
 - MK_SHIFT nastavte, pokud klávesy SHIFT je mimo provoz.
 
-*Bod*<br/>
+*point*<br/>
 Určuje x a y souřadnici kurzoru. Tyto souřadnice jsou vždy relativní k levém horním rohu okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -8090,7 +8090,7 @@ Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může b�
 *zDelta*<br/>
 Určuje vzdálenost otočen. *ZDelta* hodnota je vyjádřena v násobky nebo divize WHEEL_DELTA, což je 120. Hodnotu menší než nula znamená otáčení zpět (směrem k uživateli) při hodnotu větší než nula znamená otáčení vpřed (od uživatele). Uživatel může vrátit tuto odpověď změnou nastavení kolečko myši softwaru. Viz poznámky pro další informace o tomto parametru.
 
-*PT*<br/>
+*pt*<br/>
 Určuje x a y souřadnici kurzoru. Tyto souřadnice jsou vždy relativní k levého horního rohu obrazovky.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -8148,7 +8148,7 @@ afx_msg void OnMoving(
 *nSide*<br/>
 K okraji okna přesunout.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Adresa [crect –](../../atl-mfc-shared/reference/crect-class.md) nebo [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) , která bude obsahovat souřadnice položky.
 
 ### <a name="remarks"></a>Poznámky
@@ -8257,7 +8257,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 Obsahuje souřadnic x a y-kurzoru. Tyto souřadnice jsou vždy souřadnice obrazovky.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -8284,7 +8284,7 @@ afx_msg void OnNcLButtonDblClk(
 *nHitTest*<br/>
 Určuje, [kód pro spuštění testu](#onnchittest). Ověření pozice je test, který určuje umístění kurzoru.
 
-*Bod*<br/>
+*point*<br/>
 Určuje `CPoint` objekt, který obsahuje x a y pozice kurzoru souřadnice obrazovky. Tyto souřadnice jsou vždy relativní k levého horního rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
@@ -8309,7 +8309,7 @@ afx_msg void OnNcLButtonDown(
 *nHitTest*<br/>
 Určuje, [kód pro spuštění testu](#onnchittest). Ověření pozice je test, který určuje umístění kurzoru.
 
-*Bod*<br/>
+*point*<br/>
 Určuje `CPoint` objekt, který obsahuje x a y pozice kurzoru souřadnice obrazovky. Tyto souřadnice jsou vždy relativní k levého horního rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
@@ -8334,7 +8334,7 @@ afx_msg void OnNcLButtonUp(
 *nHitTest*<br/>
 Určuje, [kód pro spuštění testu](#onnchittest). Ověření pozice je test, který určuje umístění kurzoru.
 
-*Bod*<br/>
+*point*<br/>
 Určuje `CPoint` objekt, který obsahuje x a y pozice kurzoru souřadnice obrazovky. Tyto souřadnice jsou vždy relativní k levého horního rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
@@ -8359,7 +8359,7 @@ afx_msg void OnNcMButtonDblClk(
 *nHitTest*<br/>
 Určuje, [kód pro spuštění testu](#onnchittest). Ověření pozice je test, který určuje umístění kurzoru.
 
-*Bod*<br/>
+*point*<br/>
 Určuje `CPoint` objekt, který obsahuje x a y pozice kurzoru souřadnice obrazovky. Tyto souřadnice jsou vždy relativní k levého horního rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
@@ -8382,7 +8382,7 @@ afx_msg void OnNcMButtonDown(
 *nHitTest*<br/>
 Určuje, [kód pro spuštění testu](#onnchittest). Ověření pozice je test, který určuje umístění kurzoru.
 
-*Bod*<br/>
+*point*<br/>
 Určuje `CPoint` objekt, který obsahuje x a y pozice kurzoru souřadnice obrazovky. Tyto souřadnice jsou vždy relativní k levého horního rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
@@ -8405,7 +8405,7 @@ afx_msg void OnNcMButtonUp(
 *nHitTest*<br/>
 Určuje, [kód pro spuštění testu](#onnchittest). Ověření pozice je test, který určuje umístění kurzoru.
 
-*Bod*<br/>
+*point*<br/>
 Určuje `CPoint` objekt, který obsahuje x a y pozice kurzoru souřadnice obrazovky. Tyto souřadnice jsou vždy relativní k levého horního rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
@@ -8428,7 +8428,7 @@ afx_msg void OnNcMouseHover(
 |Parametr|Popis|
 |---------------|-----------------|
 |*nHitTest*|[in] Spuštění testu hodnoty vrácené [CWnd::DefWindowProc](#defwindowproc) fungovat jako výsledek zpracování [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) zprávy.|
-|*Bod*|[in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje, *x* a *y* souřadnice kurzor vzhledem k levého horního rohu obrazovky.|
+|*point*|[in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje, *x* a *y* souřadnice kurzor vzhledem k levého horního rohu obrazovky.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -8467,7 +8467,7 @@ afx_msg void OnNcMouseMove(
 *nHitTest*<br/>
 Určuje, [kód pro spuštění testu](#onnchittest). Ověření pozice je test, který určuje umístění kurzoru.
 
-*Bod*<br/>
+*point*<br/>
 Určuje `CPoint` objekt, který obsahuje x a y pozice kurzoru souřadnice obrazovky. Tyto souřadnice jsou vždy relativní k levého horního rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
@@ -8506,7 +8506,7 @@ afx_msg void OnNcRButtonDblClk(
 *nHitTest*<br/>
 Určuje, [kód pro spuštění testu](#onnchittest). Ověření pozice je test, který určuje umístění kurzoru.
 
-*Bod*<br/>
+*point*<br/>
 Určuje `CPoint` objekt, který obsahuje x a y pozice kurzoru souřadnice obrazovky. Tyto souřadnice jsou vždy relativní k levého horního rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
@@ -8529,7 +8529,7 @@ afx_msg void OnNcRButtonDown(
 *nHitTest*<br/>
 Určuje, [kód pro spuštění testu](#onnchittest). Ověření pozice je test, který určuje umístění kurzoru.
 
-*Bod*<br/>
+*point*<br/>
 Určuje `CPoint` objekt, který obsahuje x a y pozice kurzoru souřadnice obrazovky. Tyto souřadnice jsou vždy relativní k levého horního rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
@@ -8552,7 +8552,7 @@ afx_msg void OnNcRButtonUp(
 *nHitTest*<br/>
 Určuje, [kód pro spuštění testu](#onnchittest). Ověření pozice je test, který určuje umístění kurzoru.
 
-*Bod*<br/>
+*point*<br/>
 Určuje `CPoint` objekt, který obsahuje x a y pozice kurzoru souřadnice obrazovky. Tyto souřadnice jsou vždy relativní k levého horního rohu obrazovky.
 
 ### <a name="remarks"></a>Poznámky
@@ -8598,7 +8598,7 @@ void OnNcXButtonDblClk(
 |---------------|-----------------|
 |*nHitTest*|[in] Spuštění testu hodnoty vrácené [CWnd::DefWindowProc](#defwindowproc) fungovat jako výsledek zpracování [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) zprávy.|
 |*nButton*|[in] Hodnotu XBUTTON1 při poklepání na první tlačítko Microsoft Intellimouse X nebo XBUTTON2 pokud druhé tlačítko X je dvojitému kliknutí.|
-|*Bod*|[in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje, *x* a *y* souřadnice kurzor vzhledem k levého horního rohu oblasti klienta.|
+|*point*|[in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje, *x* a *y* souřadnice kurzor vzhledem k levého horního rohu oblasti klienta.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -8624,7 +8624,7 @@ afx_msg void OnNcXButtonDown(
 |---------------|-----------------|
 |*nHitTest*|[in] Spuštění testu hodnoty vrácené [CWnd::DefWindowProc](#defwindowproc) fungovat jako výsledek zpracování [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) zprávy.|
 |*nButton*|[in] Hodnota XBUTTON1, pokud se stiskne tlačítko myši X první nebo XBUTTON2 Pokud druhém stisknutí tlačítka X.|
-|*Bod*|[in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje, *x* a *y* souřadnice kurzor vzhledem k levého horního rohu obrazovky.|
+|*point*|[in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje, *x* a *y* souřadnice kurzor vzhledem k levého horního rohu obrazovky.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -8650,7 +8650,7 @@ afx_msg void OnNcXButtonUp(
 |---------------|-----------------|
 |*nHitTest*|[in] Spuštění testu hodnoty vrácené [CWnd::DefWindowProc](#defwindowproc) fungovat jako výsledek zpracování [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) zprávy.|
 |*nButton*|[in] Hodnotu XBUTTON1, pokud se uvolní první tlačítko myši X nebo XBUTTON2 pokud druhé tlačítko X, se uvolní.|
-|*Bod*|[in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje, *x* a *y* souřadnice kurzor vzhledem k levého horního rohu obrazovky.|
+|*point*|[in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje, *x* a *y* souřadnice kurzor vzhledem k levého horního rohu obrazovky.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -8732,7 +8732,7 @@ afx_msg UINT OnNotifyFormat(
 |Parametr|Popis|
 |---------------|-----------------|
 |*pWnd*|[in] Ukazatel na `CWnd` objekt představující okno odesílání [WM_NOTIFY](/windows/desktop/controls/wm-notify) zprávy.<br /><br /> Tento parametr je ukazatel myši na ovládací prvek, pokud *Npříkaz* parametr je NF_QUERY nebo ukazatel na nadřazené okno ovládacího prvku v případě *Npříkaz* je NF_REQUERY.|
-|*Npříkaz*|[in] Hodnota příkazu, který se specializuje wm_notify – zprávy. Možné hodnoty jsou:<br /><br /> -NF_QUERY-<br />     Zpráva se dotaz, který určí, zda má být použit struktury ANSI nebo Unicode v wm_notify – zprávy. Tato zpráva se odesílá z ovládacího prvku nezašle nadřazenému oknu při vytvoření ovládacího prvku a v reakci na formuláři NF_REQUERY této zprávy.<br />-NF_REQUERY-<br />     Zprávu je žádost určená pro ovládací prvek pro odeslání formuláře NF_QUERY této zprávy nezašle nadřazenému oknu. Tento požadavek se pošle z nadřazené okno a požádá ovládacího prvku, aby requery nadřazené o typ struktury pro použití v wm_notify – zprávy. Pokud *Npříkaz* NF_REQUERY je parametr, návratová hodnota je výsledek operace znova poslal dotaz.|
+|*Npříkaz*|[in] Hodnota příkazu, který se specializuje wm_notify – zprávy. Možné hodnoty jsou:<br /><br /> - NF_QUERY -<br />     Zpráva se dotaz, který určí, zda má být použit struktury ANSI nebo Unicode v wm_notify – zprávy. Tato zpráva se odesílá z ovládacího prvku nezašle nadřazenému oknu při vytvoření ovládacího prvku a v reakci na formuláři NF_REQUERY této zprávy.<br />-NF_REQUERY-<br />     Zprávu je žádost určená pro ovládací prvek pro odeslání formuláře NF_QUERY této zprávy nezašle nadřazenému oknu. Tento požadavek se pošle z nadřazené okno a požádá ovládacího prvku, aby requery nadřazené o typ struktury pro použití v wm_notify – zprávy. Pokud *Npříkaz* NF_REQUERY je parametr, návratová hodnota je výsledek operace znova poslal dotaz.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -9043,7 +9043,7 @@ Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může b�
 
 - MK_SHIFT nastavte, pokud klávesy SHIFT je mimo provoz.
 
-*Bod*<br/>
+*point*<br/>
 Určuje x a y souřadnice kurzoru. Tyto souřadnice jsou vždy relativní k levém horním rohu okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -9078,7 +9078,7 @@ Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může b�
 
 - MK_SHIFT nastavte, pokud klávesy SHIFT je mimo provoz.
 
-*Bod*<br/>
+*point*<br/>
 Určuje x a y souřadnice kurzoru. Tyto souřadnice jsou vždy relativní k levém horním rohu okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -9108,7 +9108,7 @@ Označuje, zda jsou různé virtuální klávesy dolů. Tento parametr může b�
 
 - MK_SHIFT nastavte, pokud klávesy SHIFT je mimo provoz.
 
-*Bod*<br/>
+*point*<br/>
 Určuje x a y souřadnice kurzoru. Tyto souřadnice jsou vždy relativní k levém horním rohu okna.
 
 ### <a name="remarks"></a>Poznámky
@@ -9337,7 +9337,7 @@ afx_msg void OnSize(
 
 ### <a name="parameters"></a>Parametry
 
-*nTyp*<br/>
+*nType*<br/>
 Určuje typ změny velikosti požadovaný. Tento parametr může být jeden z následujících hodnot:
 
 - Okno SIZE_MAXIMIZED byla maximalizované.
@@ -9350,10 +9350,10 @@ Určuje typ změny velikosti požadovaný. Tento parametr může být jeden z n�
 
 - Všechny automaticky otevíraná okna je odeslána zpráva SIZE_MAXSHOW, když některá okna se obnovila na původní velikost.
 
-*CX*<br/>
+*cx*<br/>
 Určuje šířku nové klientské oblasti.
 
-*CY*<br/>
+*cy*<br/>
 Určuje výšku nové klientské oblasti.
 
 ### <a name="remarks"></a>Poznámky
@@ -9409,7 +9409,7 @@ afx_msg void OnSizing(
 *nSide*<br/>
 K okraji okna přesunout.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Adresa [crect –](../../atl-mfc-shared/reference/crect-class.md) nebo [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) , která bude obsahovat souřadnice položky.
 
 ### <a name="remarks"></a>Poznámky
@@ -9468,7 +9468,7 @@ Určuje, zda v okně Rozšířené nebo aktivované styly změnily. Tento parame
 - GWL_STYLE v okně aktivované styly změnily.
 
 *lpStyleStruct*<br/>
-Odkazuje [STYLESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632607) strukturu, která obsahuje nové styly okna. Aplikace můžete zkontrolovat styly, ale nedá se změnit jejich.
+Odkazuje [STYLESTRUCT](/windows/desktop/api/winuser/ns-winuser-stylestruct) strukturu, která obsahuje nové styly okna. Aplikace můžete zkontrolovat styly, ale nedá se změnit jejich.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -9495,7 +9495,7 @@ Určuje, zda v okně Rozšířené nebo aktivované styly změnily. Tento parame
 - GWL_STYLE v okně aktivované styly změnily.
 
 *lpStyleStruct*<br/>
-Odkazuje [STYLESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632607) strukturu, která obsahuje nové styly okna. Aplikace může zkoumat stylů a měnit.
+Odkazuje [STYLESTRUCT](/windows/desktop/api/winuser/ns-winuser-stylestruct) strukturu, která obsahuje nové styly okna. Aplikace může zkoumat stylů a měnit.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -9860,7 +9860,7 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 Určuje x a y souřadnici kurzoru. Tyto souřadnice jsou vždy relativní k levém horním rohu okna
 
 *pTI*<br/>
@@ -9902,7 +9902,7 @@ virtual BOOL OnTouchInput(
 
 ### <a name="parameters"></a>Parametry
 
-*PT*<br/>
+*pt*<br/>
 Bod, kde má byla dotyku obrazovky (v souřadnicích klienta).
 
 *nInputNumber*<br/>
@@ -9961,7 +9961,7 @@ afx_msg void OnUniChar(
 |---------------|-----------------|
 |*nChar*|[in] Určuje kód znaku klávesy.|
 |*nRepCnt*|[in] Určuje počet opakování pro aktuální zprávu. Hodnota je počet pokusů, které je stisknutí kláves autorepeated v důsledku uživatele podržíte klávesu. Pokud stisknutí klávesy se nachází dostatečně dlouhé, jsou odeslány více zpráv. Ale není kumulativní počet opakování.|
-|*nFlags*|[in] Příznaky, které určují kontroly kódu, delší klíče, kód kontextu, předchozí klíče stavu a stavu přechodu, jak je znázorněno v následující tabulce:<br /><br /> **0-7:** Určuje kód kontroly. Hodnota závisí na výrobce OEM (OEM).<br /><br /> **8:** Určuje rozšířený klíč, třeba pravém klávesy ALT a CTRL, které se zobrazují v rozšířené klávesnice 101 a 102 klávesami. Příznak je 1, pokud je klíč klíčem rozšířené; v opačném případě je 0.<br /><br /> **9 – 12:**  Interně ve Windows.<br /><br /> **13:**  Určuje kontext kódu. Příznak je 1, pokud je klávesa ALT stisknuta stisknutí klíč; v opačném případě hodnota je 0.<br /><br /> **14:**  Určuje předchozí klíče stavu. Příznak je 1, pokud klíč je mimo provoz, před odesláním zprávy, nebo 0, pokud je klíč nahoru.<br /><br /> **15:**  Určuje přechodový stav. Příznak je 1, pokud je vydán klíči, nebo 0, pokud bylo stisknuto klíč.|
+|*nFlags*|[in] Příznaky, které určují kontroly kódu, delší klíče, kód kontextu, předchozí klíče stavu a stavu přechodu, jak je znázorněno v následující tabulce:<br /><br /> **0-7:** Určuje kód kontroly. Hodnota závisí na výrobce OEM (OEM).<br /><br /> **8:** Určuje rozšířený klíč, třeba pravém klávesy ALT a CTRL, které se zobrazují v rozšířené klávesnice 101 a 102 klávesami. Příznak je 1, pokud je klíč klíčem rozšířené; v opačném případě je 0.<br /><br /> **9-12:**  Interně ve Windows.<br /><br /> **13:**  Určuje kontext kódu. Příznak je 1, pokud je klávesa ALT stisknuta stisknutí klíč; v opačném případě hodnota je 0.<br /><br /> **14:**  Určuje předchozí klíče stavu. Příznak je 1, pokud klíč je mimo provoz, před odesláním zprávy, nebo 0, pokud je klíč nahoru.<br /><br /> **15:**  Určuje přechodový stav. Příznak je 1, pokud je vydán klíči, nebo 0, pokud bylo stisknuto klíč.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -10110,7 +10110,7 @@ Určuje, že kód posuvníku, která označuje, že uživatel je posouvání po�
 
 - SB_TOP posunout nahoru.
 
-*nPos –*<br/>
+*nPos*<br/>
 Obsahuje aktuální pozice posuvníku – Pokud je kód posuvníku SB_THUMBPOSITION nebo SB_THUMBTRACK; v opačném případě se nepoužívá. V závislosti na rozsahu počáteční posuvníku *nPos* může být záporný a by měl být přetypovat na **int** v případě potřeby.
 
 *pScrollBar*<br/>
@@ -10160,7 +10160,7 @@ Určuje jeden z následujících hodnot posuvníku:
 
 - SB_TOP posunout nahoru.
 
-*nPos –*<br/>
+*nPos*<br/>
 Obsahuje pozice posuvníku – Pokud je kód posuvníku SB_THUMBPOSITION; v opačném případě *nPos* se nepoužívá.
 
 ### <a name="remarks"></a>Poznámky
@@ -10312,7 +10312,7 @@ afx_msg void OnXButtonDblClk(
 |---------------|-----------------|
 |*nFlags*|[in] Bitová kombinace (nebo) příznaků, které označují, která modifikátor stisknutí kláves. Příznak MK_CONTROL například označuje, že byla klávesa CTRL stisknuta.|
 |*nButton*|[in] Hodnotu XBUTTON1 při poklepání na první tlačítko Microsoft Intellimouse X nebo XBUTTON2 pokud druhé tlačítko X je dvojitému kliknutí.|
-|*Bod*|[in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje, *x* a *y* souřadnice kurzor vzhledem k levého horního rohu oblasti klienta.|
+|*point*|[in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje, *x* a *y* souřadnice kurzor vzhledem k levého horního rohu oblasti klienta.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -10350,7 +10350,7 @@ afx_msg void OnXButtonDown(
 |---------------|-----------------|
 |*nFlags*|[in] Bitová kombinace (nebo) příznaků, které označují, která modifikátor stisknutí kláves. Příznak MK_CONTROL například označuje, že byla klávesa CTRL stisknuta.|
 |*nButton*|[in] Hodnota XBUTTON1, pokud došlo ke kliknutí na první tlačítko Microsoft Intellimouse X nebo XBUTTON2 Pokud druhá došlo ke kliknutí na tlačítko X.|
-|*Bod*|[in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje, *x* a *y* souřadnice kurzor vzhledem k levého horního rohu oblasti klienta.|
+|*point*|[in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje, *x* a *y* souřadnice kurzor vzhledem k levého horního rohu oblasti klienta.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -10388,7 +10388,7 @@ afx_msg void OnXButtonUp(
 |---------------|-----------------|
 |*nFlags*|[in] Bitová kombinace (nebo) příznaků, které označují, která modifikátor stisknutí kláves. Příznak MK_CONTROL například označuje, že byla klávesa CTRL stisknuta.|
 |*nButton*|[in] Hodnotu XBUTTON1, pokud byl dvojitému kliknutí na první tlačítko Microsoft Intellimouse X nebo XBUTTON2 pokud druhé tlačítko X byl dvojitému kliknutí.|
-|*Bod*|[in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje, *x* a *y* souřadnice kurzor vzhledem k levého horního rohu oblasti klienta.|
+|*point*|[in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který určuje, *x* a *y* souřadnice kurzor vzhledem k levého horního rohu oblasti klienta.|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -10483,7 +10483,7 @@ BOOL PaintWindowlessControls(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Kontext zařízení, na kterém chcete-li nakreslit ovládací prvky bez oken.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -10615,7 +10615,7 @@ void Print(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel na kontext zařízení.
 
 *dwFlags*<br/>
@@ -10661,7 +10661,7 @@ void PrintClient(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel na kontext zařízení.
 
 *dwFlags*<br/>
@@ -10691,7 +10691,7 @@ BOOL PrintWindow(
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Ukazatel na kontext zařízení, který má být zobrazeny.
 
 *nFlags*<br/>
@@ -10841,7 +10841,7 @@ int ReleaseDC(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 Určuje kontext zařízení uvolnit.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -10879,7 +10879,7 @@ ID poslední v šabloně celou řadu ovládacích panelů k změňte umístění
 *nIDLeftOver*<br/>
 Určuje ID stavového řádku, který vyplňuje zbývající část oblasti klienta.
 
-*načit*<br/>
+*nFlag*<br/>
 Může mít jednu z následujících hodnot:
 
 - `CWnd::reposDefault` Provádí rozložení ovládacích panelů. *lpRectParam* se nepoužívá a může mít hodnotu NULL.
@@ -10938,10 +10938,10 @@ void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) 
 
 ### <a name="parameters"></a>Parametry
 
-*lppoint –*<br/>
+*lpPoint*<br/>
 Odkazuje [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu nebo [POINT – struktura](/windows/desktop/api/windef/ns-windef-tagpoint) obsahující souřadnice obrazovky, který má být převeden.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) obsahující souřadnice obrazovky, který má být převeden.
 
 ### <a name="remarks"></a>Poznámky
@@ -10972,7 +10972,7 @@ Určuje velikost v jednotkách, zařízení, které vodorovného posouvání. Te
 *yAmount*<br/>
 Určuje velikost v jednotkách, zařízení, které svislé posouvání. Tento parametr musí být záporná hodnota posunout nahoru.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje na [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) , který určuje část oblasti klienta k posouvat. Pokud *lprect –* má hodnotu NULL, přešli celé oblasti klienta. Blikající kurzor přemístí, pokud kurzor obdélník protíná obdélník posuvníku.
 
 *lpClipRect*<br/>
@@ -11005,7 +11005,7 @@ int ScrollWindowEx(
 
 ### <a name="parameters"></a>Parametry
 
-*DX*<br/>
+*dx*<br/>
 Určuje velikost v jednotkách, zařízení, které vodorovného posouvání. Tento parametr musí mít zápornou hodnotu stránku posunout, aby levé straně.
 
 *dy*<br/>
@@ -11044,7 +11044,7 @@ Pokud [SW_INVALIDATE](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) a 
 
 Pokud má okno [WS_CLIPCHILDREN](/windows/desktop/api/winuser/nf-winuser-createwindowa) styl, vrácený oblasti určené *prgnUpdate* a *lpRectUpdate* představují oblasti celkem roloval okna, které musí aktualizovat, včetně všechny oblasti v podřízených oken, které je nutné aktualizovat.
 
-Pokud [SW_SCROLLCHILDREN](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) označen příznakem, Windows nebudou správně aktualizovat obrazovku Pokud posunul součástí podřízené okno. Součást roloval podřízené okno, které leží mimo zdrojového obdélníku smazání a aktivním správně v jeho nové místo. Použití [DeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632681) funkce Windows k přesunutí podřízených oken, které se nenacházejí zcela v rámci *lpRectScroll* obdélník. Kurzor přemístí, pokud je nastavený příznak SW_SCROLLCHILDREN a obdélník blikající kurzor o protíná obdélník posuvníku.
+Pokud [SW_SCROLLCHILDREN](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) označen příznakem, Windows nebudou správně aktualizovat obrazovku Pokud posunul součástí podřízené okno. Součást roloval podřízené okno, které leží mimo zdrojového obdélníku smazání a aktivním správně v jeho nové místo. Použití [DeferWindowPos](/windows/desktop/api/winuser/nf-winuser-deferwindowpos) funkce Windows k přesunutí podřízených oken, které se nenacházejí zcela v rámci *lpRectScroll* obdélník. Kurzor přemístí, pokud je nastavený příznak SW_SCROLLCHILDREN a obdélník blikající kurzor o protíná obdélník posuvníku.
 
 Všechny vstupní a výstupní souřadnice (pro *lpRectScroll*, *lpRectClip*, *lpRectUpdate*, a *prgnUpdate*) jsou považovány za umístěné v souřadnice klienta, bez ohledu na to, jestli má okno CS_OWNDC nebo CS_CLASSDC styl třídy. Použití [LPtoDP](/windows/desktop/api/wingdi/nf-wingdi-lptodp) a [DPtoLP](/windows/desktop/api/wingdi/nf-wingdi-dptolp) Windows funkce pro převod do a z logické souřadnice, v případě potřeby.
 
@@ -11247,7 +11247,7 @@ Ukazatel na objekt okna, která se dřív zobrazila všechny vstup myši. Pokud 
 
 ### <a name="remarks"></a>Poznámky
 
-Když `CWnd` už nevyžaduje veškeré události myši, by aplikace měla zavolat [ReleaseCapture](https://msdn.microsoft.com/library/windows/desktop/ms646261) fungovat tak, aby ostatní okna můžete dostávat vstup z myši.
+Když `CWnd` už nevyžaduje veškeré události myši, by aplikace měla zavolat [ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture) fungovat tak, aby ostatní okna můžete dostávat vstup z myši.
 
 Když je vstup z myši zachycena, nejsou odesílány žádné zprávy WM_NCHITTEST nebo ovládací prvky WM_SETCURSOR aktivní okno.
 
@@ -11261,7 +11261,7 @@ static void PASCAL SetCaretPos(POINT point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 Určuje novou x a y souřadnice (v souřadnicích klienta) blikajícího kurzoru.
 
 ### <a name="remarks"></a>Poznámky
@@ -11331,7 +11331,7 @@ void SetDlgItemInt(
 *nID*<br/>
 Určuje celé číslo ID ovládacího prvku na změnit.
 
-*nHodnota*<br/>
+*nValue*<br/>
 Určuje hodnotu celého čísla sloužící ke generování textu položky.
 
 *bSigned*<br/>
@@ -11672,7 +11672,7 @@ Určuje posuvníku, která se má nastavit. Tento parametr může být jedna z n
 
 - SB_VERT nastaví pozice posuvníku v svislý posuvník v okně.
 
-*nPos –*<br/>
+*nPos*<br/>
 Určuje novou polohu jezdce. Musí být v rozsahu posouvání.
 
 *bRedraw*<br/>
@@ -11852,10 +11852,10 @@ Určuje novou pozici levé části okna.
 *y*<br/>
 Určuje novou pozici horní části okna.
 
-*CX*<br/>
+*cx*<br/>
 Určuje novou šířku okna.
 
-*CY*<br/>
+*cy*<br/>
 Určuje nový výšku okna.
 
 *nFlags*<br/>
@@ -12303,7 +12303,7 @@ void ValidateRect(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lprect –*<br/>
+*lpRect*<br/>
 Odkazuje [crect –](../../atl-mfc-shared/reference/crect-class.md) objektu nebo [Rect – struktura](/windows/desktop/api/windef/ns-windef-tagrect) obsahující souřadnice klienta obdélníku odeberou z oblasti aktualizace. Pokud *lprect –* má hodnotu NULL, je ověřen celé okno.
 
 ### <a name="remarks"></a>Poznámky
@@ -12341,7 +12341,7 @@ static CWnd* PASCAL WindowFromPoint(POINT point);
 
 ### <a name="parameters"></a>Parametry
 
-*Bod*<br/>
+*point*<br/>
 Určuje [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu nebo [bodu](/windows/desktop/api/windef/ns-windef-tagpoint) datová struktura, která definuje bod, která se má zkontrolovat.
 
 ### <a name="return-value"></a>Návratová hodnota

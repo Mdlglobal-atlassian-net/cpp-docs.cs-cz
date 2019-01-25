@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CFindReplaceDialog [MFC], SearchDown
 - CFindReplaceDialog [MFC], m_fr
 ms.assetid: 610f0b5d-b398-4ef6-8c05-e9d6641e50a8
-ms.openlocfilehash: e891a6694f0a85715a7d76d196865e3238695753
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: abf230f8c9e68365f8d1db8b654174ad3e152862
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571181"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894403"
 ---
 # <a name="cfindreplacedialog-class"></a>Cfindreplacedialog – třída
 
@@ -89,7 +89,7 @@ Jednou `CFindReplaceDialog` objekt byl vytvořen, je třeba zavolat [vytvořit](
 
 Použití [m_fr](#m_fr) struktura inicializace dialogových oken před voláním `Create`. `m_fr` Struktury je typu [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea). Další informace o této struktuře naleznete v tématu Windows SDK.
 
-Aby nadřazené okno upozornit najít/nahradit požadavky, je nutné použít Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) fungovat a využívat [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) makra map zpráv v rámce okno, která zpracovává tuto zprávu registrovaný.
+Aby nadřazené okno upozornit najít/nahradit požadavky, je nutné použít Windows [RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) fungovat a využívat [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) makra map zpráv v rámce okno, která zpracovává tuto zprávu registrovaný.
 
 Můžete určit, zda uživatel se rozhodl ukončí dialogové okno s `IsTerminating` členskou funkci.
 
@@ -111,7 +111,7 @@ Další informace o používání `CFindReplaceDialog`, naleznete v tématu [spo
 
 [CDialog](../../mfc/reference/cdialog-class.md)
 
-[Ccommondialog –](../../mfc/reference/ccommondialog-class.md)
+[CCommonDialog](../../mfc/reference/ccommondialog-class.md)
 
 `CFindReplaceDialog`
 
@@ -175,7 +175,7 @@ Nenulové, pokud objekt dialog box byl úspěšně vytvořen; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Aby nadřazené okno upozornit najít/nahradit požadavky, je nutné použít Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) funkce, vrácená hodnota je zpráva číslo jedinečné pro instanci aplikace. Okno rámce by měl mít položku mapování zpráv, který deklaruje funkci zpětného volání ( `OnFindReplace` v následujícím příkladu), která zpracovává tuto zprávu registrovaný. Následující fragment kódu je příklad toho, jak to provést u okna rámce třídy s názvem `CMyRichEditView`:
+Aby nadřazené okno upozornit najít/nahradit požadavky, je nutné použít Windows [RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) funkce, vrácená hodnota je zpráva číslo jedinečné pro instanci aplikace. Okno rámce by měl mít položku mapování zpráv, který deklaruje funkci zpětného volání ( `OnFindReplace` v následujícím příkladu), která zpracovává tuto zprávu registrovaný. Následující fragment kódu je příklad toho, jak to provést u okna rámce třídy s názvem `CMyRichEditView`:
 
 [!code-cpp[NVC_MFCDocView#171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]
 

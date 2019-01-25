@@ -1,5 +1,5 @@
 ---
-title: Csnapinitemimpl – třída
+title: CSnapInItemImpl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CSnapInItemImpl
@@ -27,14 +27,14 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-ms.openlocfilehash: 19c957ae80267efda89a3b151f57c453ecb935bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff7336d393ca4680b4d448b9c775888063125b86
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609406"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893610"
 ---
-# <a name="csnapinitemimpl-class"></a>Csnapinitemimpl – třída
+# <a name="csnapinitemimpl-class"></a>CSnapInItemImpl Class
 
 Tato třída poskytuje metody pro implementaci modulu snap-in uzel objektu.
 
@@ -106,7 +106,7 @@ Hodnota TRUE, pokud objekt je rozšíření modulu snap-in; v opačném případ
 
 ##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems
 
-Tato metoda implementuje funkci Win32 [IExtendContextMenu::AddMenuItems](https://msdn.microsoft.com/library/aa814841).
+Tato metoda implementuje funkci Win32 [IExtendContextMenu::AddMenuItems](/windows/desktop/api/mmc/nf-mmc-iextendcontextmenu-addmenuitems).
 
 ```
 AddMenuItems(
@@ -131,7 +131,7 @@ AddMenuItems(
 
 - V nabídce Zobrazit panel nástrojů nebo v podnabídce zobrazení místní nabídky podokna výsledků lze vložit CCM_INSERTIONALLOWED_VIEW položky.
 
-*Typ*<br/>
+*type*<br/>
 [in] Určuje typ objektu. Může mít jednu z následujících hodnot:
 
 - CCT_SCOPE datový objekt oboru podokno kontextu.
@@ -144,7 +144,7 @@ AddMenuItems(
 
 ##  <a name="command"></a>  CSnapInItemImpl::Command
 
-Tato metoda implementuje funkci Win32 [IExtendContextMenu::Command](https://msdn.microsoft.com/library/aa814842).
+Tato metoda implementuje funkci Win32 [IExtendContextMenu::Command](/windows/desktop/api/mmc/nf-mmc-iextendcontextmenu-command).
 
 ```
 Command(long lCommandID, DATA_OBJECT_TYPES type);
@@ -155,7 +155,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 *lCommandID*<br/>
 [in] Určuje identifikátor příkazu položky nabídky.
 
-*Typ*<br/>
+*type*<br/>
 [in] Určuje typ objektu. Může mít jednu z následujících hodnot:
 
 - CCT_SCOPE datový objekt oboru podokno kontextu.
@@ -168,7 +168,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 
 ##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages
 
-Tato metoda implementuje funkci Win32 [IExtendPropertySheet::CreatePropertyPages](https://msdn.microsoft.com/library/aa814846).
+Tato metoda implementuje funkci Win32 [IExtendPropertySheet::CreatePropertyPages](/windows/desktop/api/mmc/nn-mmc-iextendpropertysheet2).
 
 ```
 CreatePropertyPages(
@@ -183,13 +183,13 @@ CreatePropertyPages(
 *lpProvider*<br/>
 [in] Ukazatel `IPropertySheetCallback` rozhraní.
 
-*Popisovač*<br/>
+*handle*<br/>
 [in] Určuje popisovač používaný ke směrování zprávy oznámení MMCN_PROPERTY_CHANGE na třídu příslušná data.
 
 *pUnk*<br/>
 [in] Ukazatel `IExtendPropertySheet` rozhraní na objekt, který obsahuje informace o kontextu uzlu.
 
-*Typ*<br/>
+*type*<br/>
 [in] Určuje typ objektu. Může mít jednu z následujících hodnot:
 
 - CCT_SCOPE datový objekt oboru podokno kontextu.
@@ -218,7 +218,7 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 
 ### <a name="parameters"></a>Parametry
 
-*CF*<br/>
+*cf*<br/>
 [in] Formát (text, formátovaný text nebo formátovaný text položky OLE) do schránky.
 
 *pStream*<br/>
@@ -294,7 +294,7 @@ SCOPEDATAITEM m_scopeDataItem;
 
 ##  <a name="m_resultdataitem"></a>  CSnapInItemImpl::m_resultDataItem
 
-[RESULTDATAITEM](https://msdn.microsoft.com/library/aa815165) struktura modul snap-in datového objektu.
+[RESULTDATAITEM](/windows/desktop/api/mmc/ns-mmc-resultdataitem) struktura modul snap-in datového objektu.
 
 ```
 RESULTDATAITEM m_resultDataItem;
@@ -350,7 +350,7 @@ STDMETHOD(Notify)(
 *arg*<br/>
 [in] Závisí na typu oznámení.
 
-*Param*<br/>
+*param*<br/>
 [in] Závisí na typu oznámení.
 
 *pComponentData*<br/>
@@ -359,7 +359,7 @@ STDMETHOD(Notify)(
 *pComponent*<br/>
 [out] Ukazatel na objekt, který implementuje `IComponent`. Tento parametr hodnotu NULL, pokud není se předalo oznámení `IComponent::Notify`.
 
-*Typ*<br/>
+*type*<br/>
 [in] Určuje typ objektu. Může mít jednu z následujících hodnot:
 
 - CCT_SCOPE datový objekt oboru podokno kontextu.

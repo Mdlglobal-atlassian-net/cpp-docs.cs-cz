@@ -25,12 +25,12 @@ helpviewer_keywords:
 - CTime class
 - shared classes, CTime
 ms.assetid: 0a299544-485b-48dc-9d3c-fdc30f57d612
-ms.openlocfilehash: cedd1bfd4ea955f920e13b5d01beb3a478656b69
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: a73baab3e43467b76c1b4e3592314a4323d22ffb
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178119"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893974"
 ---
 # <a name="ctime-class"></a>CTime – třída
 
@@ -57,7 +57,7 @@ class CTime
 |[CTime::Format](#format)|Převede `CTime` do formátovaný řetězec objektu – podle místního časového pásma.|
 |[CTime::FormatGmt](#formatgmt)|Převede `CTime` do formátovaný řetězec objektu – podle standardu UTC.|
 |[CTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|Převede čas informací uložených v `CTime` objektu na strukturu DBTIMESTAMP Win32 kompatibilní.|
-|[CTime::GetAsSystemTime](#getassystemtime)|Převede čas informací uložených v `CTime` objekt Win32 kompatibilní [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury.|
+|[CTime::GetAsSystemTime](#getassystemtime)|Převede čas informací uložených v `CTime` objekt Win32 kompatibilní [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktury.|
 |[CTime::GetCurrentTime](#getcurrenttime)|Vytvoří `CTime` objekt, který představuje aktuální čas (statické členské funkce).|
 |[CTime::GetDay](#getday)|Vrátí den představují podle `CTime` objektu.|
 |[CTime::GetDayOfWeek](#getdayofweek)|Vrátí den v týdnu, reprezentovaný `CTime` objektu.|
@@ -168,11 +168,11 @@ Určuje, zda je v platnosti letní čas. Může mít jednu ze tří hodnot:
 *wDosDate*, *wDosTime*<br/>
 Hodnoty data a času zástupného kódu MS-DOS převést na hodnotu data a času a zkopírovány do nového `CTime` objektu.
 
-*St*<br/>
-A [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktura bude převeden na hodnotu data a času a zkopírovány do nového `CTime` objektu.
+*st*<br/>
+A [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktura bude převeden na hodnotu data a času a zkopírovány do nového `CTime` objektu.
 
 *FT*<br/>
-A [hodnota FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktura bude převeden na hodnotu data a času a zkopírovány do nového `CTime` objektu.
+A [hodnota FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktura bude převeden na hodnotu data a času a zkopírovány do nového `CTime` objektu.
 
 *dbts*<br/>
 Odkaz na DBTIMESTAMP strukturu obsahující aktuální místní čas.
@@ -193,10 +193,10 @@ Níže je popsána jednotlivých konstruktor:
    |---------------|-----------|
    |*nYear*|1970-3000|
    |*nMonth*|1-12|
-   |*Nden*|1-31|
-   |*Nhodina*|0-23|
-   |*Nminimum*|0-59|
-   |*záznamy nSec*|0-59|
+   |*nDay*|1-31|
+   |*nHour*|0-23|
+   |*nMin*|0-59|
+   |*nSec*|0-59|
 
    Tento konstruktor vytvoří odpovídající převod na standard UTC. Ladicí verze knihovny Microsoft Foundation Class vyhodnotí, pokud jeden nebo více součástí času jsou mimo rozsah. Musíte ověřit argumenty před voláním. Tento konstruktor očekává, že místní čas.
 
@@ -209,7 +209,7 @@ Níže je popsána jednotlivých konstruktor:
    > [!NOTE]
    > Pomocí konstruktoru `DBTIMESTAMP` parametr je k dispozici, pouze když OLEDB.h je součástí.
 
-Další informace najdete v tématu [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) a [hodnota FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktura v sadě Windows SDK. Viz také [zástupného kódu MS-DOS datum a čas](/windows/desktop/SysInfo/ms-dos-date-and-time) položku v sadě Windows SDK.
+Další informace najdete v tématu [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) a [hodnota FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktura v sadě Windows SDK. Viz také [zástupného kódu MS-DOS datum a čas](/windows/desktop/SysInfo/ms-dos-date-and-time) položku v sadě Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -304,7 +304,7 @@ Uloží výsledný čas v odkazované *dbts* struktury. `DBTIMESTAMP` Datová st
 
 ##  <a name="getassystemtime"></a>  CTime::GetAsSystemTime
 
-Voláním této členské funkce pro převod čas informací uložených v `CTime` objekt Win32 kompatibilní [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktura.
+Voláním této členské funkce pro převod čas informací uložených v `CTime` objekt Win32 kompatibilní [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktura.
 
 ```
 bool GetAsSystemTime(SYSTEMTIME& st) const throw();
@@ -313,7 +313,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
 ### <a name="parameters"></a>Parametry
 
 *timeDest*<br/>
-Odkaz na [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktura, která bude obsahovat hodnota převedená data a času `CTime` objektu.
+Odkaz na [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktura, která bude obsahovat hodnota převedená data a času `CTime` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -393,7 +393,7 @@ struct tm* GetGmtTm(struct tm* ptm) const;
 
 ### <a name="parameters"></a>Parametry
 
-*druh*<br/>
+*ptm*<br/>
 Body do vyrovnávací paměti, která bude dostávat časové údaje. Pokud tento ukazatel je NULL, je vyvolána výjimka.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -440,7 +440,7 @@ struct tm* GetLocalTm(struct tm* ptm) const;
 
 ### <a name="parameters"></a>Parametry
 
-*druh*<br/>
+*ptm*<br/>
 Body do vyrovnávací paměti, která bude dostávat časové údaje. Pokud tento ukazatel je NULL, je vyvolána výjimka.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -586,7 +586,7 @@ CTimeSpan operator-(CTime time) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Časový interval*<br/>
+*timeSpan*<br/>
 `CTimeSpan` Objekt, který se má přičíst nebo odečíst.
 
 *čas*<br/>
@@ -615,7 +615,7 @@ CTime& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*<br/>
+*span*<br/>
 `CTimeSpan` Objekt, který se má přičíst nebo odečíst.
 
 ### <a name="return-value"></a>Návratová hodnota

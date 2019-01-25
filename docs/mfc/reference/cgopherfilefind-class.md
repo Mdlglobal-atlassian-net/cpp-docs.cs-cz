@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CGopherFileFind [MFC], GetScreenName
 - CGopherFileFind [MFC], IsDots
 ms.assetid: 8465a979-6323-496d-ab4b-e81383fb999d
-ms.openlocfilehash: 7d5c8ceeaeb87b2e0f099ac027bbacc744598e8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dafa313d9d2c7aae13e83a891c79d437ac276e08
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662407"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894494"
 ---
 # <a name="cgopherfilefind-class"></a>Cgopherfilefind – třída
 
@@ -95,7 +95,7 @@ Další informace o tom, jak používat `CGopherFileFind` a jiných tříd WinIn
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cfilefind –](../../mfc/reference/cfilefind-class.md)
+[CFileFind](../../mfc/reference/cfilefind-class.md)
 
 `CGopherFileFind`
 
@@ -123,7 +123,7 @@ Identifikátor kontextu operace. Zobrazit **poznámky** Další informace o *dwC
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí hodnota pro *dwContext* odesílají knihovny MFC pro `CGopherFileFind` objektu z [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objekt vytvořený `CGopherFileFind` objektu. Při sestavování `CGopherFileFind` objektu, můžete přepsat výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytnout stav objektu, pomocí kterého je identifikován. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.
+Výchozí hodnota pro *dwContext* odesílají knihovny MFC pro `CGopherFileFind` objektu z [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objekt vytvořený `CGopherFileFind` objektu. Při sestavování `CGopherFileFind` objektu, můžete přepsat výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytnout stav objektu, pomocí kterého je identifikován. Přečtěte si článek [Internet první kroky: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.
 
 ##  <a name="findfile"></a>  CGopherFileFind::FindFile
 
@@ -191,7 +191,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parametry
 
 *pTimeStamp*<br/>
-Ukazatel [hodnota FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury obsahující čas vytvoření souboru.
+Ukazatel [hodnota FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktury obsahující čas vytvoření souboru.
 
 *refTime*<br/>
 Odkaz na [CTime](../../atl-mfc-shared/reference/ctime-class.md) objektu.
@@ -222,7 +222,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 Odkaz na [CTime](../../atl-mfc-shared/reference/ctime-class.md) objektu.
 
 *pTimeStamp*<br/>
-Ukazatel [hodnota FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury obsahující čas posledního přístupu k souboru.
+Ukazatel [hodnota FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktury obsahující čas posledního přístupu k souboru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -247,7 +247,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parametry
 
 *pTimeStamp*<br/>
-Ukazatel [hodnota FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury obsahující času posledního zápisu souboru na.
+Ukazatel [hodnota FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktury obsahující času posledního zápisu souboru na.
 
 *refTime*<br/>
 Odkaz na [CTime](../../atl-mfc-shared/reference/ctime-class.md) objektu.

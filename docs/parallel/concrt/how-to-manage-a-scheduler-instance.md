@@ -1,22 +1,22 @@
 ---
-title: 'Postupy: Správa instance plánovače'
+title: 'Postupy: Správa Instance plánovače'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - managing a scheduler instance [Concurrency Runtime]
 - scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
-ms.openlocfilehash: 8c19eb801c7761b85580526e1ff8bed89112cc5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8e79f7c132abd8e43f661f4dc7c7bb758cb2a6d
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437814"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893987"
 ---
-# <a name="how-to-manage-a-scheduler-instance"></a>Postupy: Správa instance plánovače
+# <a name="how-to-manage-a-scheduler-instance"></a>Postupy: Správa Instance plánovače
 
 Instance plánovače umožňují specifické zásady plánování přidružit různé druhy úloh. Toto téma obsahuje dvě základní příklady ukazují, jak vytvořit a Správa instance plánovače.
 
-Příklady vytvoření plánovače, které používají výchozí plánovač zásady. Pro příklad, který vytvoří plánovače, která používá vlastní zásady, najdete v článku [postupy: určení specifické zásady plánovače](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).
+Příklady vytvoření plánovače, které používají výchozí plánovač zásady. Pro příklad, který vytvoří plánovače, která používá vlastní zásady, najdete v článku [jak: Určení specifických zásad plánovače](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).
 
 ### <a name="to-manage-a-scheduler-instance-in-your-application"></a>Správa instance plánovače v aplikaci
 
@@ -38,7 +38,7 @@ Příklady vytvoření plánovače, které používají výchozí plánovač zá
 
 1. Popisovač předat událost, abyste [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) funkce počkat, aby vypnout.
 
-1. Volání [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211) funkce zavřít popisovač objektu události.
+1. Volání [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) funkce zavřít popisovač objektu události.
 
 ## <a name="example"></a>Příklad
 
@@ -73,7 +73,7 @@ Current scheduler id: 0
 
 Zkopírujte ukázkový kód a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `scheduler-instance.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
 
-**cl.exe/EHsc scheduler-instance.cpp**
+**cl.exe /EHsc scheduler-instance.cpp**
 
 ## <a name="see-also"></a>Viz také
 

@@ -1,5 +1,5 @@
 ---
-title: Ctooltipctrl – třída
+title: CToolTipCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CToolTipCtrl
@@ -72,14 +72,14 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 808d8b5f023e88b67458c514e871692aac94ccd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 177f6eeada942440c33f7dd0a0cbc6d9e59d867c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500409"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894143"
 ---
-# <a name="ctooltipctrl-class"></a>Ctooltipctrl – třída
+# <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
 Zapouzdřuje funkce ovládacího prvku"nástroj tip," malého vyskakovacího okna, která zobrazuje jeden řádek textu popisujícího účel nástroje v aplikaci.
 
@@ -616,7 +616,7 @@ BOOL HitTest(
 *pWnd*<br/>
 Ukazatel na okno, které obsahuje nástroj.
 
-*PT*<br/>
+*pt*<br/>
 Ukazatel `CPoint` objekt, který obsahuje souřadnice bodu má být testována.
 
 *lpToolInfo*<br/>
@@ -693,7 +693,7 @@ void RelayEvent(LPMSG lpMsg);
 ### <a name="parameters"></a>Parametry
 
 *lpMsg*<br/>
-Ukazatel [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) strukturu, která obsahuje zprávy k přenosu.
+Ukazatel [MSG](/windows/desktop/api/winuser/ns-winuser-msg) strukturu, která obsahuje zprávy k přenosu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -866,7 +866,7 @@ Ukazatel na okno, které obsahuje nástroj.
 *nIDTool*<br/>
 ID tohoto nástroje.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktura zadání nového ohraničující obdélník.
 
 ##  <a name="setwindowtheme"></a>  CToolTipCtrl::SetWindowTheme

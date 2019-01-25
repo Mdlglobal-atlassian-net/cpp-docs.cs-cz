@@ -1,19 +1,19 @@
 ---
-title: 'Návod: Vytvoření tradiční aplikace klasické pracovní plochy Windows (C++)'
+title: 'Průvodce: Vytvořte tradiční aplikace klasické pracovní plochy Windows (C++)'
 ms.custom: get-started-article
 ms.date: 09/18/2018
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: da95b1dac2f058de67719b4754d2df6dbeb6f7f0
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 07da91ea092b4e7bee974b0387e72ea0cacaec8e
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694046"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893896"
 ---
-# <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Návod: Vytvoření tradiční aplikace klasické pracovní plochy Windows (C++)
+# <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Průvodce: Vytvořte tradiční aplikace klasické pracovní plochy Windows (C++)
 
 Tento návod ukazuje, jak vytvořit tradiční desktopové aplikace Windows v sadě Visual Studio. Ukázková aplikace, které vytvoříte pomocí rozhraní API Windows zobrazí "Hello, plochu Windows!" v okně. Můžete použít kód vyvinutý v tomto názorném postupu jako vzor pro vytvoření jiných aplikací klasické pracovní plochy Windows.
 
@@ -26,7 +26,7 @@ Rozhraní API Windows (označované také jako rozhraní Win32 API, rozhraní AP
 
 - Počítač, na kterém běží Microsoft Windows 7 nebo novější verze. Doporučujeme pro nejlepší vývojové prostředí Windows 10.
 
-- Kopie sady Visual Studio 2017. Informace o tom, jak stáhnout a nainstalovat sadu Visual Studio najdete v tématu [instalace sady Visual Studio](/visualstudio/install/install-visual-studio). Když spustíte instalační program, ujistěte se, že **vývoj desktopových aplikací pomocí C++** úlohy je zaškrtnuté políčko. Nedělejte si starosti, pokud je tato úloha nenainstaloval při instalaci sady Visual Studio. Můžete znovu spustit instalační program a jeho instalaci.
+- A copy of Visual Studio 2017. Informace o tom, jak stáhnout a nainstalovat sadu Visual Studio najdete v tématu [instalace sady Visual Studio](/visualstudio/install/install-visual-studio). Když spustíte instalační program, ujistěte se, že **vývoj desktopových aplikací pomocí C++** úlohy je zaškrtnuté políčko. Nedělejte si starosti, pokud je tato úloha nenainstaloval při instalaci sady Visual Studio. Můžete znovu spustit instalační program a jeho instalaci.
 
    ![Vývoj desktopových aplikací pomocí C++](../build/media/desktop-development-with-cpp.png "vývoj desktopových aplikací pomocí C++")
 
@@ -107,7 +107,7 @@ V dalším kroku se dozvíte, jak vytvořit kód pro aplikace klasické pracovn�
    );
    ```
 
-   Informace o parametrech a vrácených hodnotách této funkce najdete v tématu [WinMain vstupní bod](https://msdn.microsoft.com/library/windows/desktop/ms633559).
+   Informace o parametrech a vrácených hodnotách této funkce najdete v tématu [WinMain vstupní bod](/windows/desktop/api/winbase/nf-winbase-winmain).
 
    > [!NOTE]
    > Co jsou všechny tyto nadbytečná slova, jako je například `CALLBACK`, nebo `HINSTANCE`, nebo `_In_`? Tradiční rozhraní Windows API používá – definice TypeDef a makra preprocesoru pro abstrakci některé podrobnosti typů a specifické pro platformu. kód, jako je například konvence volání, **__declspec** deklarace a pragma kompilátoru. V sadě Visual Studio, můžete použít technologie IntelliSense [rychlé informace](/visualstudio/ide/using-intellisense#quick-info) funkce naleznete v tématu co definování těchto funkcí TypeDef a makra. Umístěte ukazatel myši nad slovo, které vás zajímají, nebo ho vyberte a stiskněte klávesu **Ctrl**+**K**, **Ctrl**+**můžu** pro malého vyskakovacího okna, který obsahuje definici. Další informace najdete v tématu [pomocí technologie IntelliSense](/visualstudio/ide/using-intellisense). Parametry a návratové typy často používají *poznámky SAL* umožňují catch programovací chyby. Další informace najdete v tématu [použití anotací SAL k omezení defektů kódu C/C++](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
@@ -136,7 +136,7 @@ V dalším kroku se dozvíte, jak vytvořit kód pro aplikace klasické pracovn�
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>Přidání funkčnosti do funkce WinMain
 
-1. V `WinMain` funkce, naplnění strukturu typu [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577). Struktura obsahuje informace o okně, například ikonu aplikace, barvy pozadí okna, název má být zobrazen v záhlaví a co je důležité, ukazatel na funkci procedury okna. Následující příklad ukazuje typickou `WNDCLASSEX` struktury.
+1. V `WinMain` funkce, naplnění strukturu typu [WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa). Struktura obsahuje informace o okně, například ikonu aplikace, barvy pozadí okna, název má být zobrazen v záhlaví a co je důležité, ukazatel na funkci procedury okna. Následující příklad ukazuje typickou `WNDCLASSEX` struktury.
 
    ```cpp
    WNDCLASSEX wcex;
@@ -155,7 +155,7 @@ V dalším kroku se dozvíte, jak vytvořit kód pro aplikace klasické pracovn�
    wcex.hIconSm        = LoadIcon(wcex.hInstance, IDI_APPLICATION);
    ```
 
-   Informace o polích struktury výše najdete v tématu [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577).
+   Informace o polích struktury výše najdete v tématu [WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa).
 
 1. Zaregistrujte `WNDCLASSEX` s Windows tak, že ví o okně aplikace a jak odesílat zprávy do něj. Použití [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa) fungovat a předejte strukturu třídy okna jako argument. `_T` – Makro se používá, protože používáme `TCHAR` typu.
 
@@ -237,7 +237,7 @@ V dalším kroku se dozvíte, jak vytvořit kód pro aplikace klasické pracovn�
    return (int) msg.wParam;
    ```
 
-   Další informace o strukturách a funkcích ve smyčce zpráv naleznete v tématu [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage), a [DispatchMessage ](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
+   Další informace o strukturách a funkcích ve smyčce zpráv naleznete v tématu [MSG](/windows/desktop/api/winuser/ns-winuser-msg), [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage), a [DispatchMessage ](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
 
    V tomto okamžiku `WinMain` funkce by měla vypadat podobně jako následující kód.
 

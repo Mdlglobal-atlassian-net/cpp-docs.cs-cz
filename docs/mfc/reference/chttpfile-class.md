@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequest
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
-ms.openlocfilehash: 1fa1b63ed045c176841565473476185bb15999e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ee92a6cb627cee701b9b98a8a32666a0877f62c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564453"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893649"
 ---
 # <a name="chttpfile-class"></a>Chttpfile – třída
 
@@ -75,11 +75,11 @@ Další informace o tom, `CHttpFile` funguje s jinými třídami MFC Internetu n
 
 [Třídy CObject](../../mfc/reference/cobject-class.md)
 
-[Cfile –](../../mfc/reference/cfile-class.md)
+[CFile](../../mfc/reference/cfile-class.md)
 
-[Cstdiofile –](../../mfc/reference/cstdiofile-class.md)
+[CStdioFile](../../mfc/reference/cstdiofile-class.md)
 
-[Cinternetfile –](../../mfc/reference/cinternetfile-class.md)
+[CInternetFile](../../mfc/reference/cinternetfile-class.md)
 
 `CHttpFile`
 
@@ -157,7 +157,7 @@ CHttpFile(
 
 ### <a name="parameters"></a>Parametry
 
-*hfile –*<br/>
+*hFile*<br/>
 Popisovač souboru k Internetu.
 
 *hSession*<br/>
@@ -182,7 +182,7 @@ Ukazatel [chttpconnection –](../../mfc/reference/chttpconnection-class.md) obj
 
 Nikdy sestavit `CHttpFile` objektu přímo; místo toho volat [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) nebo [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) místo.
 
-Výchozí hodnota pro `dwContext` odesílají knihovny MFC pro `CHttpFile` objektu z [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objekt vytvořený `CHttpFile` objektu. Při volání `CInternetSession::OpenURL` nebo `CHttpConnection` k vytvoření `CHttpFile` objektu, můžete přepsat výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytnout stav objektu, pomocí kterého je identifikován. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.
+Výchozí hodnota pro `dwContext` odesílají knihovny MFC pro `CHttpFile` objektu z [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objekt vytvořený `CHttpFile` objektu. Při volání `CInternetSession::OpenURL` nebo `CHttpConnection` k vytvoření `CHttpFile` objektu, můžete přepsat výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytnout stav objektu, pomocí kterého je identifikován. Přečtěte si článek [Internet první kroky: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.
 
 ##  <a name="endrequest"></a>  CHttpFile::EndRequest
 
@@ -212,7 +212,7 @@ Nenulové, pokud je úspěšná. jinak 0. Pokud volání selže, zjistěte pří
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí hodnota pro *dwContext* odesílají knihovny MFC pro `CHttpFile` objektu z [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objekt vytvořený `CHttpFile` objektu. Při volání [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) nebo [chttpconnection –](../../mfc/reference/chttpconnection-class.md) k vytvoření `CHttpFile` objektu, můžete přepsat výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytnout stav objektu, pomocí kterého je identifikován. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.
+Výchozí hodnota pro *dwContext* odesílají knihovny MFC pro `CHttpFile` objektu z [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objekt vytvořený `CHttpFile` objektu. Při volání [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) nebo [chttpconnection –](../../mfc/reference/chttpconnection-class.md) k vytvoření `CHttpFile` objektu, můžete přepsat výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytnout stav objektu, pomocí kterého je identifikován. Najdete v článku [Internet první kroky: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.
 
 ##  <a name="getfileurl"></a>  CHttpFile::GetFileURL
 
@@ -293,7 +293,7 @@ Kombinace atribut, který chcete dotaz a následující příznaky, které urču
 
 - Obvykle HTTP_QUERY_FLAG_REQUEST_HEADERS aplikace dotazy hlaviček odpovědí, ale aplikace můžete také zadávat dotazy hlavičky žádosti pomocí tohoto příznaku.
 
-- HTTP_QUERY_FLAG_SYSTEMTIME pro tyto hlavičky, jehož hodnota je řetězec data a času, například "Poslední upravil běhu," Tento příznak vrací hodnotu hlavičky jako standardním Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktura, která nevyžaduje, aby aplikace analyzovat data. Pokud použijete tento příznak, můžete použít `SYSTEMTIME` přepsání funkce.
+- HTTP_QUERY_FLAG_SYSTEMTIME pro tyto hlavičky, jehož hodnota je řetězec data a času, například "Poslední upravil běhu," Tento příznak vrací hodnotu hlavičky jako standardním Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktura, která nevyžaduje, aby aplikace analyzovat data. Pokud použijete tento příznak, můžete použít `SYSTEMTIME` přepsání funkce.
 
 - HTTP_QUERY_FLAG_NUMBER pro tyto hlavičky, jehož hodnota je číslo, například stavový kód, tento příznak vrátí data jako 32bitová čísla.
 
@@ -315,7 +315,7 @@ Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt př�
 Hodnota indexu. Zobrazit *lpdwIndex*.
 
 *pSysTime*<br/>
-Ukazatel na Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) struktury.
+Ukazatel na Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) struktury.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -506,7 +506,7 @@ Tato funkce umožňuje aplikaci posílat data pomocí [zápisu](../../mfc/refere
 
 Poté, co je napsán obsah do souboru, volejte [EndRequest](#endrequest) pro ukončení operace.
 
-Výchozí hodnota pro *dwContext* odesílají knihovny MFC pro `CHttpFile` objektu z [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objekt vytvořený `CHttpFile` objektu. Při volání [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) nebo [chttpconnection –](../../mfc/reference/chttpconnection-class.md) k vytvoření `CHttpFile` objektu, můžete přepsat výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytnout stav objektu, pomocí kterého je identifikován. Najdete v článku [první kroky Internet: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.
+Výchozí hodnota pro *dwContext* odesílají knihovny MFC pro `CHttpFile` objektu z [cinternetsession –](../../mfc/reference/cinternetsession-class.md) objekt vytvořený `CHttpFile` objektu. Při volání [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) nebo [chttpconnection –](../../mfc/reference/chttpconnection-class.md) k vytvoření `CHttpFile` objektu, můžete přepsat výchozí identifikátor kontextu nastavena na hodnotu podle vašeho výběru. Identifikátor kontextu se vrátí do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytnout stav objektu, pomocí kterého je identifikován. Přečtěte si článek [Internet první kroky: WinInet](../../mfc/wininet-basics.md) Další informace o identifikátor kontextu.
 
 ### <a name="example"></a>Příklad
 

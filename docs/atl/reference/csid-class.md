@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 57edb46047021d0ede04164584e79748028e05b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6fcff646a577500fd05b7c938b2c336ebe725957
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465361"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894312"
 ---
 # <a name="csid-class"></a>CSID – třída
 
@@ -54,7 +54,7 @@ class CSid
 |Název|Popis|
 |----------|-----------------|
 |[CSid::CSid](#csid)|Konstruktor|
-|[Identifikační číslo volané stanice:: ~ identifikační číslo volané stanice](#dtor)|Destruktor.|
+|[CSid::~CSid](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -161,7 +161,7 @@ Název účtu.
 *pszSystem*<br/>
 Název systému. Tento řetězec může být název vzdáleného počítače. Pokud tento řetězec hodnotu NULL, použije se místo toho místní systém.
 
-*psid má*<br/>
+*pSid*<br/>
 Ukazatel `SID` struktury.
 
 ### <a name="remarks"></a>Poznámky
@@ -170,7 +170,7 @@ Konstruktor inicializuje `CSid` objekt nastavení na interní datový člen *Sid
 
 Jestliže se inicializace nezdaří, vyvolá výjimku konstruktoru [catlexception – třída](../../atl/reference/catlexception-class.md).
 
-##  <a name="dtor"></a>  Identifikační číslo volané stanice:: ~ identifikační číslo volané stanice
+##  <a name="dtor"></a>  CSid::~CSid
 
 Destruktor.
 
@@ -232,7 +232,7 @@ Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [EqualPrefixSid](https://msdn.microsoft.com/library/windows/desktop/aa446621) v sadě Windows SDK pro další podrobnosti.
+Zobrazit [EqualPrefixSid](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-equalprefixsid) v sadě Windows SDK pro další podrobnosti.
 
 ##  <a name="getlength"></a>  CSid::GetLength
 
@@ -359,7 +359,7 @@ Název účtu.
 *pszSystem*<br/>
 Název systému. Tento řetězec může být název vzdáleného počítače. Pokud tento řetězec hodnotu NULL, použije se místo toho místní systém.
 
-*psid má*<br/>
+*pSid*<br/>
 Ukazatel [SID](/windows/desktop/api/winnt/ns-winnt-_sid) struktury.
 
 ### <a name="return-value"></a>Návratová hodnota

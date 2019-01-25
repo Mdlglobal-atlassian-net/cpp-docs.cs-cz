@@ -19,12 +19,12 @@ helpviewer_keywords:
 - ON_COMMAND_EX macro [MFC]
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
-ms.openlocfilehash: ab08476923f253d666e024d8944aec64ed0af8da
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 3536cb215da04fb7114853d3fa5d764585cbb58e
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693651"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894078"
 ---
 # <a name="tn006-message-maps"></a>TN006: Mapy zpráv
 
@@ -121,7 +121,7 @@ Rozsah definovaný uživatelem zprávy, které tuto metodu použijte, musí být
 
 ## <a name="registered-windows-messages"></a>Zprávy Windows registrované
 
-[RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) funkce se používá k definování novou zprávu okna, která je zaručeně jedinečná v celém systému. ON_REGISTERED_MESSAGE makro se používá ke zpracování těchto zpráv. Toto makro přijímá název *UINT TÉMĚŘ* proměnnou, která obsahuje windows registrované ID zprávy. Příklad
+[RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) funkce se používá k definování novou zprávu okna, která je zaručeně jedinečná v celém systému. ON_REGISTERED_MESSAGE makro se používá ke zpracování těchto zpráv. Toto makro přijímá název *UINT TÉMĚŘ* proměnnou, která obsahuje windows registrované ID zprávy. Příklad
 
 ```cpp
 class CMyWnd : public CMyParentWndClass
@@ -213,7 +213,7 @@ Příklady z těchto forem:
     }
     ```
 
-Pokročilí uživatelé dokáže zpracovat celou řadu příkazů pomocí jednoho příkazu rutiny: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) nebo ON_COMMAND_RANGE_EX. Další informace o těchto makrech v dokumentaci produktu.
+Pokročilí uživatelé mohou zpracovávat širokou paletu příkazů pomocí jednoho příkazu rutiny: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) nebo ON_COMMAND_RANGE_EX. Další informace o těchto makrech v dokumentaci produktu.
 
 > [!NOTE]
 > ClassWizard podporuje vytváření ON_COMMAND a ON_UPDATE_COMMAND_UI obslužné rutiny, ale nepodporuje vytváření ON_COMMAND_EX nebo ON_COMMAND_RANGE obslužné rutiny. Průvodce třídami však bude parsovat a umožňují procházet všechny varianty obslužná rutina příkazu čtyři.

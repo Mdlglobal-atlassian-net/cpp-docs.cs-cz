@@ -1,5 +1,5 @@
 ---
-title: Catlfilemappingbase – třída
+title: CAtlFileMappingBase Class
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlFileMappingBase
@@ -16,14 +16,14 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: 71b3b8621f4148f680337e9bce6ef469b90de746
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12a8159cbf28c64efe36357761f4f404ccff9541
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614373"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894013"
 ---
-# <a name="catlfilemappingbase-class"></a>Catlfilemappingbase – třída
+# <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase Class
 
 Tato třída reprezentuje soubor mapovaných do paměti.
 
@@ -43,7 +43,7 @@ class CAtlFileMappingBase
 |Název|Popis|
 |----------|-----------------|
 |[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)|Konstruktor|
-|[Catlfilemappingbase –:: ~ catlfilemappingbase –](#dtor)|Destruktor.|
+|[CAtlFileMappingBase::~CAtlFileMappingBase](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -96,7 +96,7 @@ Vytvoří nový objekt mapování souboru, případně můžete použít existuj
 
 [!code-cpp[NVC_ATL_Utilities#71](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]
 
-##  <a name="dtor"></a>  Catlfilemappingbase –:: ~ catlfilemappingbase –
+##  <a name="dtor"></a>  CAtlFileMappingBase::~CAtlFileMappingBase
 
 Destruktor.
 
@@ -180,7 +180,7 @@ HRESULT MapFile(
 
 ### <a name="parameters"></a>Parametry
 
-*hfile –*<br/>
+*hFile*<br/>
 Popisovač souboru, ve kterém chcete vytvořit objekt mapování. *hfile –* musí být platný a nejde ji nastavit na INVALID_HANDLE_VALUE.
 
 *nMappingSize*<br/>
@@ -193,7 +193,7 @@ Posunu souboru, kde má začít mapování. Hodnota posunutí musí být násobk
 Ochrana požadovanou pro zobrazení souborů při mapování souboru. Zobrazit *flProtect* v [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) v sadě Windows SDK.
 
 *dwViewDesiredAccess*<br/>
-Určuje typ přístupu k zobrazení souborů a proto ochrany na stránkách namapovány v souboru. Zobrazit *dwDesiredAccess* v [mapviewoffileex –](https://msdn.microsoft.com/library/windows/desktop/aa366763) v sadě Windows SDK.
+Určuje typ přístupu k zobrazení souborů a proto ochrany na stránkách namapovány v souboru. Zobrazit *dwDesiredAccess* v [mapviewoffileex –](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -201,7 +201,7 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Po vytvoření objektu mapování souboru, velikost souboru nesmí překročit velikost objekt mapování souboru. Pokud ano, ne veškerý obsah souboru nebudou k dispozici pro sdílení. Další podrobnosti najdete v tématu [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) a [mapviewoffileex –](https://msdn.microsoft.com/library/windows/desktop/aa366763) v sadě Windows SDK.
+Po vytvoření objektu mapování souboru, velikost souboru nesmí překročit velikost objekt mapování souboru. Pokud ano, ne veškerý obsah souboru nebudou k dispozici pro sdílení. Další podrobnosti najdete v tématu [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) a [mapviewoffileex –](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) v sadě Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -239,7 +239,7 @@ Ukazatel `SECURITY_ATTRIBUTES` struktura, která určuje, zda lze Vrácený popi
 Ochrana požadovaného pro zobrazení souborů, když je namapován soubor. Zobrazit *flProtect* v `CreateFileMapping` v sadě Windows SDK.
 
 *dwViewDesiredAccess*<br/>
-Určuje typ přístupu k zobrazení souborů a proto ochrany na stránkách namapovány v souboru. Zobrazit *dwDesiredAccess* v [mapviewoffileex –](https://msdn.microsoft.com/library/windows/desktop/aa366763) v sadě Windows SDK.
+Určuje typ přístupu k zobrazení souborů a proto ochrany na stránkách namapovány v souboru. Zobrazit *dwDesiredAccess* v [mapviewoffileex –](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -273,7 +273,7 @@ Velikost mapování. Pokud je 0, je maximální velikost objektu mapování soub
 Posunu souboru, kde má začít mapování. Hodnota posunutí musí být násobkem členitosti přidělení paměti v systému.
 
 *dwViewDesiredAccess*<br/>
-Určuje typ přístupu k zobrazení souborů a proto ochrany na stránkách namapovány v souboru. Zobrazit *dwDesiredAccess* v [mapviewoffileex –](https://msdn.microsoft.com/library/windows/desktop/aa366763) v sadě Windows SDK.
+Určuje typ přístupu k zobrazení souborů a proto ochrany na stránkách namapovány v souboru. Zobrazit *dwDesiredAccess* v [mapviewoffileex –](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -314,7 +314,7 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [UnmapViewOfFile](https://msdn.microsoft.com/library/windows/desktop/aa366882) v sadě Windows SDK pro další podrobnosti.
+Zobrazit [UnmapViewOfFile](/windows/desktop/api/memoryapi/nf-memoryapi-unmapviewoffile) v sadě Windows SDK pro další podrobnosti.
 
 ## <a name="see-also"></a>Viz také
 

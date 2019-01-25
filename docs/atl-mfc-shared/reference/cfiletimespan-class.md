@@ -11,12 +11,12 @@ helpviewer_keywords:
 - shared classes, CFileTimeSpan
 - CFileTimeSpan class
 ms.assetid: 5856fb39-9c82-4027-8ccf-8760890491ec
-ms.openlocfilehash: dc59a300fc48f180fb593500ed85ee1a4c34c07e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d384ced5de588a348eb72b9852697694b370ee4
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468923"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894156"
 ---
 # <a name="cfiletimespan-class"></a>Cfiletimespan – třída
 
@@ -83,7 +83,7 @@ CFileTimeSpan(LONGLONG nSpan) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*<br/>
+*span*<br/>
 Existující objekt `CFileTimeSpan`.
 
 *nSpan*<br/>
@@ -115,7 +115,7 @@ CFileTimeSpan operator-(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*<br/>
+*span*<br/>
 A `CFileTimeSpan` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -132,7 +132,7 @@ bool operator!=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*<br/>
+*span*<br/>
 `CFileTimeSpan` Objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -149,7 +149,7 @@ CFileTimeSpan operator+(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*<br/>
+*span*<br/>
 A `CFileTimeSpan` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -166,7 +166,7 @@ CFileTimeSpan& operator+=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*<br/>
+*span*<br/>
 A `CFileTimeSpan` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -183,7 +183,7 @@ bool operator<(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*<br/>
+*span*<br/>
 `CFileTimeSpan` Objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -200,7 +200,7 @@ bool operator<=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*<br/>
+*span*<br/>
 `CFileTimeSpan` Objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -217,7 +217,7 @@ CFileTimeSpan& operator=(const CFileTimeSpan& span) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*<br/>
+*span*<br/>
 A `CFileTimeSpan` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -234,7 +234,7 @@ CFileTimeSpan& operator-=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*<br/>
+*span*<br/>
 A `CFileTimeSpan` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -251,7 +251,7 @@ bool operator==(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*<br/>
+*span*<br/>
 `CFileTimeSpan` Objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -268,7 +268,7 @@ bool operator>(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*<br/>
+*span*<br/>
 `CFileTimeSpan` Objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -285,7 +285,7 @@ bool operator>=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*značka span*<br/>
+*span*<br/>
 `CFileTimeSpan` Objekt k porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -307,7 +307,7 @@ Nová hodnota pro časový interval v milisekundách.
 
 ## <a name="see-also"></a>Viz také
 
-[FILETIME –](https://msdn.microsoft.com/library/windows/desktop/ms724284)<br/>
+[FILETIME –](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)<br/>
 [CFileTime – třída](../../atl-mfc-shared/reference/cfiletime-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Sdílené třídy ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
-ms.openlocfilehash: cec3a0fce1147ca58f2ee2c51b9d728d81dddda4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d31dd9ed1d30633b8f7078794dad06d51ec119f2
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601406"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893431"
 ---
 # <a name="catlexemodulet-class"></a>Catlexemodulet – třída
 
@@ -52,7 +52,7 @@ Vaše třída odvozena od `CAtlExeModuleT`.
 |Název|Popis|
 |----------|-----------------|
 |[CAtlExeModuleT::CAtlExeModuleT](#catlexemodulet)|Konstruktor|
-|[Catlexemodulet –:: ~ catlexemodulet –](#dtor)|Destruktor.|
+|[CAtlExeModuleT::~CAtlExeModuleT](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -92,7 +92,7 @@ Další informace o modulech v ATL naleznete v tématu [ATL – třídy modulů]
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)
 
-[Catlmodule –](../../atl/reference/catlmodule-class.md)
+[CAtlModule](../../atl/reference/catlmodule-class.md)
 
 [CAtlModuleT](../../atl/reference/catlmodulet-class.md)
 
@@ -284,7 +284,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>Parametry
 
 *nShowCmd*<br/>
-Určuje, jak má být zobrazen v okně. Tento parametr může být jedna z hodnot podrobněji popsána [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) oddílu. Výchozí hodnota je SW_HIDE.
+Určuje, jak má být zobrazen v okně. Tento parametr může být jedna z hodnot podrobněji popsána [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) oddílu. Výchozí hodnota je SW_HIDE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -341,7 +341,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>Parametry
 
 *nShowCmd*<br/>
-Určuje, jak má být zobrazen v okně. Tento parametr může být jedna z hodnot podrobněji popsána [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) oddílu.
+Určuje, jak má být zobrazen v okně. Tento parametr může být jedna z hodnot podrobněji popsána [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) oddílu.
 
 ### <a name="return-value"></a>Návratová hodnota
 

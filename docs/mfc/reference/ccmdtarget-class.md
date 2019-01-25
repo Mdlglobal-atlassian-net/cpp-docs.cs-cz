@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 0415fb98cec6b1d92f6a5a43ff705f1b5a7cd348
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 4e93f167b9cb28a83c42220fa58b17d5c4845a75
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523816"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894286"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget – třída
 
@@ -163,12 +163,12 @@ BOOL DoOleVerb(
 Číselný identifikátor příkazu.
 
 *lpMsg*<br/>
-Ukazatel [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) struktura popisující události (jako je například poklepání), která vyvolá příkaz.
+Ukazatel [MSG](/windows/desktop/api/winuser/ns-winuser-msg) struktura popisující události (jako je například poklepání), která vyvolá příkaz.
 
 *hWndParent*<br/>
 Popisovač okna dokumentu obsahující objekt.
 
-*lprect –*<br/>
+*lpRect*<br/>
 Ukazatel [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury obsahující souřadnice, v pixelech, které definují objekt ohraničovacího rámečku v *hwndParent*.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -411,7 +411,7 @@ virtual BOOL IsInvokeAllowed(DISPID dispid);
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor DISPID*<br/>
+*dispid*<br/>
 ID odbavení
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -486,10 +486,10 @@ Pokud přepíšete `OnCmdMsg`, je nutné zadat má hodnotu vhodnou pro *nCode*, 
 
 |*nCode* hodnota|*pExtra* hodnota|
 |-------------------|--------------------|
-|CN_COMMAND|[Ccmdui –](../../mfc/reference/ccmdui-class.md)\*|
+|CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)\*|
 |CN_EVENT|AFX_EVENT\*|
-|CN_UPDATE_COMMAND_UI|Ccmdui –\*|
-|CN_OLECOMMAND|[Colecmdui –](../../mfc/reference/colecmdui-class.md)\*|
+|CN_UPDATE_COMMAND_UI|CCmdUI\*|
+|CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)\*|
 |CN_OLE_UNREGISTER|NULL|
 
 ### <a name="example"></a>Příklad

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: 5692e07e71683b1c24f86a43e989ee3df1fbe904
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bafdb65f255ddf33964d22e5ea80a62446c2ad45
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570609"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893519"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -25,7 +25,7 @@ Bloku knihovny definuje v souboru IDL.
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*<br/>
+*type*<br/>
 (Volitelné) Může být jedna z následujících akcí:
 
 - `dll` Přidá se funkcí a tříd, které umožňují výslednou knihovnu DLL, aby fungoval jako server COM v procesu. Jedná se o výchozí hodnotu.
@@ -99,13 +99,13 @@ Pokud tento atribut se používá v rámci projektu, který používá knihovny 
 
    [Catldllmodulet –](../../atl/reference/catldllmodulet-class.md) slouží jako základní třídu a standardní knihovny DLL vstupní body požadované pro COM server. Tyto vstupní body jsou [DllMain](/windows/desktop/Dlls/dllmain), [DllRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllregisterserver), [DllUnRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllunregisterserver), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), a [ DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891).
 
-- `type` = **soubor EXE**
+- `type` = **exe**
 
-   [Catlexemodulet –](../../atl/reference/catlexemodulet-class.md) slouží jako základní třídy a standardní spustitelný soubor vstupního bodu [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
+   [Catlexemodulet –](../../atl/reference/catlexemodulet-class.md) slouží jako základní třídy a standardní spustitelný soubor vstupního bodu [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain).
 
 - `type` = **Služba**
 
-   [Catlservicemodulet –](../../atl/reference/catlservicemodulet-class.md) slouží jako základní třídy a standardní spustitelný soubor vstupního bodu [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
+   [Catlservicemodulet –](../../atl/reference/catlservicemodulet-class.md) slouží jako základní třídy a standardní spustitelný soubor vstupního bodu [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain).
 
 - `type` = **Tento parametr zadán**
 
@@ -154,8 +154,8 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 |-|-|
 |**Platí pro**|Kdekoli|
 |**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádné|
+|**Vyžadované atributy**|Žádná|
+|**Neplatné atributy**|Žádná|
 
 Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 

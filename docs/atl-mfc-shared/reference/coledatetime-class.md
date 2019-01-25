@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 9791f1c59bb393f7de64ffb16ccb95e99928b04c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a49b886bcf9c25642b1f7b8e843be11baf2d2d00
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525337"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894104"
 ---
 # <a name="coledatetime-class"></a>COleDateTime – třída
 
@@ -65,7 +65,7 @@ class COleDateTime
 |----------|-----------------|
 |[COleDateTime::Format](#format)|Generuje formátovaný řetězec představující `COleDateTime` objektu.|
 |[COleDateTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|Volejte tuto metodu za účelem získání čas v `COleDateTime` objektu jako `DBTIMESTAMP` datové struktury.|
-|[COleDateTime::GetAsSystemTime](#getassystemtime)|Volat tuto metodu za účelem získání čas v `COleDateTime` objektu jako [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) datové struktury.|
+|[COleDateTime::GetAsSystemTime](#getassystemtime)|Volat tuto metodu za účelem získání čas v `COleDateTime` objektu jako [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) datové struktury.|
 |[COleDateTime::GetAsUDATE](#getasudate)|Volejte tuto metodu za účelem získání čas v `COleDateTime` jako `UDATE` datové struktury.|
 |[COleDateTime::GetCurrentTime](#getcurrenttime)|Vytvoří `COleDateTime` objekt, který představuje aktuální čas (statické členské funkce).|
 |[COleDateTime::GetDay](#getday)|Vrátí den `COleDateTime` objekt představuje (1-31).|
@@ -233,8 +233,8 @@ Tyto konstruktory vytvořit nový `COleDateTime` objekty inicializovány na zada
 
 |Komponenta data a času|Platný rozsah|
 |--------------------------|-----------------|
-|Rok|100 - 9999|
-|Měsíc|0 - 12|
+|rok|100 - 9999|
+|měsíc|0 - 12|
 |den|0 - 31|
 |Hodina|0 - 23|
 |Minuta|0 - 59|
@@ -264,7 +264,7 @@ Tady je stručný popis jednotlivých konstruktor:
 
 Další informace o `time_t` datový typ, najdete v článku [čas](../../c-runtime-library/reference/time-time32-time64.md) fungovat v *Run-Time Library Reference*.
 
-Další informace najdete v tématu [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) a [hodnota FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury v sadě Windows SDK.
+Další informace najdete v tématu [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) a [hodnota FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktury v sadě Windows SDK.
 
 Další informace o hranice pro `COleDateTime` hodnoty, najdete v článku [datum a čas: Podpora automatizace](../../atl-mfc-shared/date-and-time-automation-support.md).
 
@@ -371,8 +371,8 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*systime –*<br/>
-Odkaz na [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) strukturu pro příjem hodnota převedená data a času z `COleDateTime` objektu.
+*sysTime*<br/>
+Odkaz na [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) strukturu pro příjem hodnota převedená data a času z `COleDateTime` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -445,7 +445,7 @@ Informace o dalších členských funkcí, které se dotazují hodnota tohoto `C
 
 - [GetSecond](#getsecond)
 
-- [Metodu GetDayOfWeek](#getdayofweek)
+- [GetDayOfWeek](#getdayofweek)
 
 - [GetDayOfYear](#getdayofyear)
 
@@ -519,7 +519,7 @@ Informace o dalších členských funkcí, které se dotazují hodnota tohoto `C
 
 - [GetSecond](#getsecond)
 
-- [Metodu GetDayOfWeek](#getdayofweek)
+- [GetDayOfWeek](#getdayofweek)
 
 ### <a name="example"></a>Příklad
 
@@ -553,7 +553,7 @@ Informace o dalších členských funkcí, které se dotazují hodnota tohoto `C
 
 - [GetSecond](#getsecond)
 
-- [Metodu GetDayOfWeek](#getdayofweek)
+- [GetDayOfWeek](#getdayofweek)
 
 - [GetDayOfYear](#getdayofyear)
 
@@ -589,7 +589,7 @@ Informace o dalších členských funkcí, které se dotazují hodnota tohoto `C
 
 - [GetSecond](#getsecond)
 
-- [Metodu GetDayOfWeek](#getdayofweek)
+- [GetDayOfWeek](#getdayofweek)
 
 - [GetDayOfYear](#getdayofyear)
 
@@ -625,7 +625,7 @@ Informace o dalších členských funkcí, které se dotazují hodnota tohoto `C
 
 - [GetSecond](#getsecond)
 
-- [Metodu GetDayOfWeek](#getdayofweek)
+- [GetDayOfWeek](#getdayofweek)
 
 - [GetDayOfYear](#getdayofyear)
 
@@ -666,7 +666,7 @@ Informace o dalších členských funkcí, které se dotazují hodnota tohoto `C
 
 - [GetMinute](#getminute)
 
-- [Metodu GetDayOfWeek](#getdayofweek)
+- [GetDayOfWeek](#getdayofweek)
 
 - [GetDayOfYear](#getdayofyear)
 
@@ -726,7 +726,7 @@ Stav `COleDateTime` objekt není platný v následujících případech:
 
 Další informace o operacích, které může nastavit stav na neplatné, viz následující členské funkce:
 
-- [COleDateTime –](#coledatetime)
+- [COleDateTime](#coledatetime)
 
 - [SetDateTime](#setdatetime)
 
@@ -768,7 +768,7 @@ Informace o dalších členských funkcí, které se dotazují hodnota tohoto `C
 
 - [GetSecond](#getsecond)
 
-- [Metodu GetDayOfWeek](#getdayofweek)
+- [GetDayOfWeek](#getdayofweek)
 
 - [GetDayOfYear](#getdayofyear)
 
@@ -834,17 +834,17 @@ Zkopírování těchto přetížených operátorech přiřazení zdrojová hodno
 
 - **Operator = (** `timeSrc` **)** `time_t` nebo `__time64_t` hodnota převedena a zkopírovány do tohoto `COleDateTime` objektu. Pokud převod není úspěšné, stav tohoto objektu nastavena platná. Pokud úspěšné, je nastaven na neplatný.
 
-- **Operator = (** *systimeSrc* **)** [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) hodnota převedena a zkopírovány do tohoto `COleDateTime` objektu. Pokud převod není úspěšné, stav tohoto objektu nastavena platná. Pokud úspěšné, je nastaven na neplatný.
+- **Operator = (** *systimeSrc* **)** [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) hodnota převedena a zkopírovány do tohoto `COleDateTime` objektu. Pokud převod není úspěšné, stav tohoto objektu nastavena platná. Pokud úspěšné, je nastaven na neplatný.
 
 - **Operator = (** `udate` **)** `UDATE` hodnota převedena a zkopírovány do tohoto `COleDateTime` objektu. Pokud převod není úspěšné, stav tohoto objektu nastavena platná. Pokud úspěšné, je nastaven na neplatný. A `UDATE` struktura představuje "rozbalené" datum. Podívat se na funkci [VarDateFromUdate](/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate) další podrobnosti.
 
-- **Operator = (** `filetimeSrc` **)** [hodnota FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) hodnota převedena a zkopírovány do tohoto `COleDateTime` objektu. Pokud převod není úspěšné, stav tohoto objektu nastavena platná. v opačném případě je nastavena na neplatný. `FILETIME` Koordinovaný světový čas (UTC), používá, pokud předáte čas UTC ve struktuře, vaše výsledky se převedou na místní čas od času UTC, takže se budou ukládat jako varianty čas. Toto chování je stejné jako v aplikaci Visual C++ 6.0 a Visual C++ .NET 2003 SP2. Zobrazit [časy](/windows/desktop/SysInfo/file-times) v sadě Windows SDK pro další informace.
+- **Operator = (** `filetimeSrc` **)** [hodnota FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) hodnota převedena a zkopírovány do tohoto `COleDateTime` objektu. Pokud převod není úspěšné, stav tohoto objektu nastavena platná. v opačném případě je nastavena na neplatný. `FILETIME` Koordinovaný světový čas (UTC), používá, pokud předáte čas UTC ve struktuře, vaše výsledky se převedou na místní čas od času UTC, takže se budou ukládat jako varianty čas. Toto chování je stejné jako v aplikaci Visual C++ 6.0 a Visual C++ .NET 2003 SP2. Zobrazit [časy](/windows/desktop/SysInfo/file-times) v sadě Windows SDK pro další informace.
 
 Další informace najdete v tématu [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) položku v sadě Windows SDK.
 
 Další informace o `time_t` datový typ, najdete v článku [čas](../../c-runtime-library/reference/time-time32-time64.md) fungovat v *Run-Time Library Reference*.
 
-Další informace najdete v tématu [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) a [hodnota FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) struktury v sadě Windows SDK.
+Další informace najdete v tématu [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) a [hodnota FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) struktury v sadě Windows SDK.
 
 Další informace o hranice pro `COleDateTime` hodnoty, najdete v článku [datum a čas: Podpora automatizace](../../atl-mfc-shared/date-and-time-automation-support.md).
 
@@ -1006,7 +1006,7 @@ V následující tabulce najdete hranice pro hodnoty parametrů:
 |---------------|------------|
 |*nYear*|100 - 9999|
 |*nMonth*|1 - 12|
-|*Nden*|0 - 31|
+|*nDay*|0 - 31|
 
 Pokud přetečení den v měsíci, je převeden na správný den následujícího měsíce a měsíc nebo rok se zvýší odpovídajícím způsobem. Den hodnota nula znamená poslední den předchozího měsíce. Chování je stejné jako `SystemTimeToVariantTime`.
 
@@ -1014,7 +1014,7 @@ Pokud data hodnotu zadanou pomocí parametrů není platná, je nastaven stav to
 
 Tady jsou některé příklady s hodnotami kalendářních dat:
 
-|*nYear*|*nMonth*|*Nden*|Hodnota|
+|*nYear*|*nMonth*|*nDay*|Hodnota|
 |-------------|--------------|------------|-----------|
 |2000|2|29|29. února 2000|
 |1776|7|4|4. července 1776|
@@ -1037,7 +1037,7 @@ Informace o členských funkcí, které se dotazují hodnota tohoto `COleDateTim
 
 - [GetSecond](#getsecond)
 
-- [Metodu GetDayOfWeek](#getdayofweek)
+- [GetDayOfWeek](#getdayofweek)
 
 - [GetDayOfYear](#getdayofyear)
 
@@ -1078,10 +1078,10 @@ V následující tabulce najdete hranice pro hodnoty parametrů:
 |---------------|------------|
 |*nYear*|100 - 9999|
 |*nMonth*|1 - 12|
-|*Nden*|0 - 31|
-|*Nhodina*|0 - 23|
-|*Nminimum*|0 - 59|
-|*záznamy nSec*|0 - 59|
+|*nDay*|0 - 31|
+|*nHour*|0 - 23|
+|*nMin*|0 - 59|
+|*nSec*|0 - 59|
 
 Pokud přetečení den v měsíci, je převeden na správný den následujícího měsíce a měsíc nebo rok se zvýší odpovídajícím způsobem. Den hodnota nula znamená poslední den předchozího měsíce. Chování je stejné jako [SystemTimeToVariantTime](/windows/desktop/api/oleauto/nf-oleauto-systemtimetovarianttime).
 
@@ -1089,7 +1089,7 @@ Pokud hodnota data nebo času zadanou parametry není platná, že stav tohoto o
 
 Tady jsou některé příklady hodnot času:
 
-|*Nhodina*|*Nminimum*|*záznamy nSec*|Hodnota|
+|*nHour*|*nMin*|*nSec*|Hodnota|
 |-------------|------------|------------|-----------|
 |1|3|3|01:03:03|
 |23|45|0|23:45:00|
@@ -1098,7 +1098,7 @@ Tady jsou některé příklady hodnot času:
 
 Tady jsou některé příklady s hodnotami kalendářních dat:
 
-|*nYear*|*nMonth*|*Nden*|Hodnota|
+|*nYear*|*nMonth*|*nDay*|Hodnota|
 |-------------|--------------|------------|-----------|
 |1995|4|15|15. dubna 1995|
 |1789|7|14|17. července 1789|
@@ -1121,7 +1121,7 @@ Informace o členských funkcí, které se dotazují hodnota tohoto `COleDateTim
 
 - [GetSecond](#getsecond)
 
-- [Metodu GetDayOfWeek](#getdayofweek)
+- [GetDayOfWeek](#getdayofweek)
 
 - [GetDayOfYear](#getdayofyear)
 
@@ -1141,7 +1141,7 @@ void SetStatus(DateTimeStatus status) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Stav*<br/>
+*status*<br/>
 Nová hodnota pro tento stav `COleDateTime` objektu.
 
 ### <a name="remarks"></a>Poznámky
@@ -1168,7 +1168,7 @@ int SetTime(
 
 ### <a name="parameters"></a>Parametry
 
-*Nhodina*, *Nminimum*, *nSec*<br/>
+*nHour*, *nMin*, *nSec*<br/>
 Označuje čas komponent, které mají být zkopírovány do tohoto `COleDateTime` objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1183,15 +1183,15 @@ V následující tabulce najdete hranice pro hodnoty parametrů:
 
 |Parametr|Hranice|
 |---------------|------------|
-|*Nhodina*|0 - 23|
-|*Nminimum*|0 - 59|
-|*záznamy nSec*|0 - 59|
+|*nHour*|0 - 23|
+|*nMin*|0 - 59|
+|*nSec*|0 - 59|
 
 Pokud čas, který není platný, hodnoty určené parametry stav tohoto objektu nastavena na platný a hodnota tohoto objektu se nemění.
 
 Tady jsou některé příklady hodnot času:
 
-|*Nhodina*|*Nminimum*|*záznamy nSec*|Hodnota|
+|*nHour*|*nMin*|*nSec*|Hodnota|
 |-------------|------------|------------|-----------|
 |1|3|3|01:03:03|
 |23|45|0|23:45:00|
@@ -1214,7 +1214,7 @@ Informace o členských funkcí, které se dotazují hodnota tohoto `COleDateTim
 
 - [GetSecond](#getsecond)
 
-- [Metodu GetDayOfWeek](#getdayofweek)
+- [GetDayOfWeek](#getdayofweek)
 
 - [GetDayOfYear](#getdayofyear)
 

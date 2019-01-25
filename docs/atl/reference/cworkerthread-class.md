@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
-ms.openlocfilehash: 9469770dc0538b968cfaafa2de45f28bd864193c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ecde92cbd9fb9e028e79c9a0ce75859ce85790a
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531999"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893454"
 ---
 # <a name="cworkerthread-class"></a>Cworkerthread – třída
 
@@ -54,7 +54,7 @@ Třída poskytující funkce vytvoření vláken, jako například [crtthreadtra
 |Název|Popis|
 |----------|-----------------|
 |[CWorkerThread::CWorkerThread](#cworkerthread)|Konstruktor pro pracovní vlákno.|
-|[Cworkerthread –:: ~ cworkerthread –](#dtor)|Destruktor pro pracovní vlákno.|
+|[CWorkerThread::~CWorkerThread](#dtor)|Destruktor pro pracovní vlákno.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
@@ -248,7 +248,7 @@ Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Když se odebere popisovač [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) bude volána při přidruženého objektu, který byl předán [AddHandle](#addhandle). Pokud se toto volání se nezdaří, `CWorkerThread` zavolá Windows [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211) funkce na popisovač.
+Když se odebere popisovač [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) bude volána při přidruženého objektu, který byl předán [AddHandle](#addhandle). Pokud se toto volání se nezdaří, `CWorkerThread` zavolá Windows [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) funkce na popisovač.
 
 ##  <a name="shutdown"></a>  CWorkerThread::Shutdown
 
