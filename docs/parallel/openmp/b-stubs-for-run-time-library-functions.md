@@ -1,24 +1,24 @@
 ---
 title: B. Zástupné procedury funkcí běhové knihovny
-ms.date: 11/04/2016
+ms.date: 01/22/2019
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
-ms.openlocfilehash: 3b2d48155a3baf4d317d3114bb5ae5a8ed306bef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e8d439eefad005c673cfb6c4ea12399b8236fb5
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551447"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087259"
 ---
 # <a name="b-stubs-for-run-time-library-functions"></a>B. Zástupné procedury funkcí běhové knihovny
 
 Tato část obsahuje zástupné procedury pro funkce knihovny run-time definované v OpenMP – C a C++ API. Zástupné procedury jsou k dispozici umožňující přenositelnost na platformách, které nepodporují OpenMP – C a C++ API. Na těchto platformách OpenMP programy musí být spojen s knihovnou obsahující tyto zástupné procedury funkcí. Zástupné procedury funkcí se předpokládá, že jsou ignorovány direktivy OpenMP programu. V důsledku toho emulovat sémantiku sériového portu.
 
 > [!NOTE]
->  Proměnná zámek, který se zobrazí funkce zamykání musí přistupovat výhradně prostřednictvím těchto funkcí. By neměl být inicializován nebo jinak upravit v aplikaci uživatele. Uživatelé by neměl vytvářet předpoklady o mechanismus používaný k implementaci zámky založené na schématu použít zástupné procedury funkcí implementací OpenMP – C a C++.
+> Proměnná zámek, který se zobrazí funkce zamykání musí přistupovat výhradně prostřednictvím těchto funkcí. By neměl být inicializován nebo jinak upravit v aplikaci uživatele. Uživatelé by neměl vytvářet předpoklady o mechanismus používaný k implementaci zámky založené na schématu použít zástupné procedury funkcí implementací OpenMP – C a C++.
 
-### <a name="code"></a>Kód
+## <a name="code"></a>Kód
 
-```
+```cpp
 #include <stdio.h>
 #include <stdlib.h>
 #include "omp.h"

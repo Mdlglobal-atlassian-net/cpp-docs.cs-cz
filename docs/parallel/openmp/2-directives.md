@@ -2,12 +2,12 @@
 title: 2. Direktivy
 ms.date: 01/18/2019
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
-ms.openlocfilehash: bf96d5ee6963a76c2b2462d5b3a0639c1141ea15
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 125d2d83b277e62d007e3a208e426ea717d52790
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894239"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087337"
 ---
 # <a name="2-directives"></a>2. Direktivy
 
@@ -60,7 +60,7 @@ Následující direktiva definuje paralelní oblasti, která je oblast programu,
 - `default(shared | none)`
 - `shared(` *Proměnná list* `)`
 - `copyin(` *Proměnná list* `)`
-- `reduction(` *operátor* `:` *seznamu proměnné*  `)`
+- `reduction(` *operátor* `:` *seznamu proměnné* `)`
 - `num_threads(` *integer-expression* `)`
 
 Když vlákno dostane do paralelní konstrukce, tým vláken se vytvoří, pokud je splněna jedna z následujících případech:
@@ -111,12 +111,12 @@ Omezení `parallel` směrnice jsou následující:
 ### <a name="cross-references"></a>Křížové odkazy
 
 - `private`, `firstprivate`, `default`, `shared`, `copyin`, a `reduction` klauzule ([části 2.7.2](#272-data-sharing-attribute-clauses))
-- [OMP_NUM_THREADS](4-2-omp-num-threads.md) proměnné prostředí
-- [omp_set_dynamic –](3-1-7-omp-set-dynamic-function.md) funkce knihovny
-- [OMP_DYNAMIC](4-3-omp-dynamic.md) proměnné prostředí
-- [omp_set_nested –](3-1-9-omp-set-nested-function.md) – funkce
-- [OMP_NESTED](4-4-omp-nested.md) proměnné prostředí
-- [omp_set_num_threads –](3-1-1-omp-set-num-threads-function.md) funkce knihovny
+- [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads) proměnné prostředí
+- [omp_set_dynamic –](3-run-time-library-functions.md#317-omp_set_dynamic-function) funkce knihovny
+- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic) proměnné prostředí
+- [omp_set_nested –](3-run-time-library-functions.md#319-omp_set_nested-function) – funkce
+- [OMP_NESTED](4-environment-variables.md#44-omp_nested) proměnné prostředí
+- [omp_set_num_threads –](3-run-time-library-functions.md#311-omp_set_num_threads-function) funkce knihovny
 
 ## <a name="24-work-sharing-constructs"></a>2.4 konstrukce pro sdílení práce
 
@@ -227,7 +227,7 @@ Omezení `for` směrnice jsou následující:
 #### <a name="cross-references"></a>Křížové odkazy
 
 - `private`, `firstprivate`, `lastprivate`, a `reduction` klauzule ([části 2.7.2](#272-data-sharing-attribute-clauses))
-- [OMP_SCHEDULE](4-1-omp-schedule.md) proměnné prostředí
+- [OMP_SCHEDULE](4-environment-variables.md#41-omp_schedule) proměnné prostředí
 - [seřazené](#266-ordered-construct) sestavení
 - [plán](d-using-the-schedule-clause.md) – klauzule
 
@@ -250,7 +250,7 @@ V klauzuli je jedním z následujících akcí:
 - `private(` *Proměnná list* `)`
 - `firstprivate(` *Proměnná list* `)`
 - `lastprivate(` *Proměnná list* `)`
-- `reduction(` *operátor* `:` *seznamu proměnné*  `)`
+- `reduction(` *operátor* `:` *seznamu proměnné* `)`
 - `nowait`
 
 Každý oddíl předchází `section` směrnice, i když `section` – direktiva je nepovinné pro první část. `section` Direktivy musí být použit v lexikálním rozsahu `sections` směrnice. Na konci je implicitní bariéry `sections` sestavit, pokud `nowait` určena.
@@ -520,7 +520,7 @@ Omezení `ordered` směrnice jsou následující:
 
 Tato část představuje direktivu a několik klauzulí pro řízení prostředí dat během provádění paralelních oblastí, následujícím způsobem:
 
-- A `threadprivate` – direktiva (viz následující část) je k dispozici tak, aby rozsahu souboru, rozsahu oboru názvů nebo oboru bloku statických proměnných místního vlákna.
+- A [threadprivate](#271-threadprivate-directive) – direktiva je k dispozici tak, aby rozsahu souboru, rozsahu oboru názvů nebo oboru bloku statických proměnných místního vlákna.
 
 - Klauzule, které může být určen direktivami řízení sdílení atributy proměnné po dobu trvání konstrukce paralelní nebo sdílení práce jsou popsány v [části 2.7.2](#272-data-sharing-attribute-clauses).
 
@@ -582,8 +582,8 @@ void f(int n) {
 
 #### <a name="cross-references"></a>Křížové odkazy
 
-- [dynamické vláken](3-1-7-omp-set-dynamic-function.md)
-- [OMP_DYNAMIC](4-3-omp-dynamic.md) proměnné prostředí
+- [dynamické vláken](3-run-time-library-functions.md#317-omp_set_dynamic-function)
+- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic) proměnné prostředí
 
 ### <a name="272-data-sharing-attribute-clauses"></a>2.7.2 atribut data-sharing klauzule
 

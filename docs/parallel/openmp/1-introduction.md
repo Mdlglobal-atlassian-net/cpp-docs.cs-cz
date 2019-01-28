@@ -2,12 +2,12 @@
 title: 1. Úvod
 ms.date: 01/16/2019
 ms.assetid: c42e72bc-0e31-4b1c-b670-cd82673c0c5a
-ms.openlocfilehash: 99020e9cf8c38bcfaeefdf5c31663b3e66352556
-ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.openlocfilehash: 8c735408bdf9f9a13693bd0ad25df185bb1db42a
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397300"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087272"
 ---
 # <a name="1-introduction"></a>1. Úvod
 
@@ -117,7 +117,7 @@ OpenMP – C a C++ API je rozšířením základní jazyk, který podporuje impl
 
 Všechny standardní funkce knihovny C a C++ a předdefinované funkce (to znamená, funkce, které kompilátor nemá specifické znalosti) musí být bezpečné pro vlákna. Nesynchronizované použití těchto funkcí bezpečné pro vlákna v různých vláknech uvnitř paralelní oblasti nemá za následek nedefinované chování. Chování však nemusí být stejný jako v sériových oblastech. (Náhodné číslo funkce generování je příklad).
 
-Rozhraní API jazyka C/C++ OpenMP – Určuje, že určité chování *definované implementací.* Vyhovující implementace OpenMP – je potřeba definovat a dokumentovat jeho chování v těchto případech. Seznam chování definované implementací najdete v tématu [příloha E](e-implementation-defined-behaviors-in-openmp-c-cpp.md).
+Rozhraní API jazyka C/C++ OpenMP – Určuje, že určité chování *definované implementací.* Vyhovující implementace OpenMP – je potřeba definovat a dokumentovat jeho chování v těchto případech. Seznam chování definované implementací najdete v tématu [příloha E:](e-implementation-defined-behaviors-in-openmp-c-cpp.md).
 
 ## <a name="15-normative-references"></a>1.5 normativní odkazy
 
@@ -134,4 +134,4 @@ Pokud tato specifikace rozhraní API OpenMP odkazuje na C, se odkazuje na zákla
 - [Funkce knihovny run-time](3-run-time-library-functions.md)
 - [Proměnné prostředí](4-environment-variables.md)
 - [Chování definované implementací v OpenMP – C/C++](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
-- [Nové funkce ve verzi 2.0 OpenMP – C/C++](f-new-features-and-clarifications-in-version-2-0.md)
+- [Nové funkce v OpenMP – C/C++ verze 2.0](f-new-features-and-clarifications-in-version-2-0.md)

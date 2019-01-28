@@ -2,12 +2,12 @@
 title: 3. Funkce knihovny run-time
 ms.date: 01/17/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 7d48338683037c06ca208bff32c5c2e9b546a9fe
-ms.sourcegitcommit: 774db6a005a85e2a1268ca34309b993792701819
+ms.openlocfilehash: 4e72d2d74bb26f8eeeb422881cabf92630cced43
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065019"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087311"
 ---
 # <a name="3-run-time-library-functions"></a>3. Funkce knihovny run-time
 
@@ -49,7 +49,7 @@ Funkce popsané v této části vliv a sledovat vlákna, procesory a paralelní 
 void omp_set_num_threads(int num_threads);
 ```
 
-Hodnota parametru *num_threads* musí být kladné celé číslo. Jeho dopad závisí na tom, zda je povolena dynamické úpravy počtu vláken. Pro komplexní sadu pravidel o interakci mezi `omp_set_num_threads` funkce a dynamické úpravy vláken, najdete v části 2.3.
+Hodnota parametru *num_threads* musí být kladné celé číslo. Jeho dopad závisí na tom, zda je povolena dynamické úpravy počtu vláken. Pro komplexní sadu pravidel o interakci mezi `omp_set_num_threads` funkce a dynamické přizpůsobení vlákna, naleznete v tématu [části 2.3](2-directives.md#23-parallel-construct).
 
 Tato funkce má důsledky je popsáno výše, při volání z část programu, kde `omp_in_parallel` vrátí funkce hodnotu nula. Pokud je volána z část programu, kde `omp_in_parallel` funkce vrátí nenulovou hodnotu, nedefinované chování této funkce.
 
@@ -60,7 +60,7 @@ Toto volání má vyšší prioritu než `OMP_NUM_THREADS` proměnné prostřed�
 - [omp_set_dynamic](#317-omp_set_dynamic-function) function
 - [omp_get_dynamic](#318-omp_get_dynamic-function) function
 - [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads) proměnné prostředí
-- [num_threads](2-3-parallel-construct.md) – klauzule
+- [num_threads](2-directives.md#23-parallel-construct) – klauzule
 
 ### <a name="312-ompgetnumthreads-function"></a>3.1.2 omp_get_num_threads – funkce
 
@@ -78,8 +78,8 @@ Pokud počet vláken není nastavený explicitně uživatelem, výchozí hodnota
 #### <a name="cross-references"></a>Křížové odkazy
 
 - [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads)
-- [num_threads](2-3-parallel-construct.md)
-- [parallel](2-3-parallel-construct.md)
+- [num_threads](2-directives.md#23-parallel-construct)
+- [parallel](2-directives.md#23-parallel-construct)
 
 ### <a name="313-ompgetmaxthreads-function"></a>3.1.3 omp_get_max_threads – funkce
 
@@ -107,7 +107,7 @@ Všimněte si, že pokud jiné paralelní oblasti používá `num_threads` klauz
 - [omp_get_num_threads](#312-omp_get_num_threads-function)
 - [omp_set_num_threads](#311-omp_set_num_threads-function)
 - [omp_set_dynamic](#317-omp_set_dynamic-function)
-- [num_threads](2-3-parallel-construct.md)
+- [num_threads](2-directives.md#23-parallel-construct)
 
 ### <a name="314-ompgetthreadnum-function"></a>3.1.4 omp_get_thread_num – funkce
 
