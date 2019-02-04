@@ -1,9 +1,10 @@
 ---
-title: strcmp, wcscmp, _mbscmp
-ms.date: 11/04/2016
+title: strcmp, wcscmp, _mbscmp, _mbscmp_l
+ms.date: 01/22/2019
 apiname:
 - wcscmp
 - _mbscmp
+- _mbscmp_l
 - strcmp
 apilocation:
 - msvcrt.dll
@@ -23,6 +24,7 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _mbscmp
+- _mbscmp_l
 - wcscmp
 - strcmp
 - _tcscmp
@@ -34,24 +36,25 @@ helpviewer_keywords:
 - mbscmp function
 - string comparison [C++]
 - _mbscmp function
+- _mbscmp_l function
 - wcscmp function
 - _tcscmp function
 - _ftcscmp function
 - ftcscmp function
 ms.assetid: 5d216b57-7a5c-4cb3-abf0-0f4facf4396d
-ms.openlocfilehash: b7d8614fffc96a600c0d1f92b85503259cfc5cbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dae5e04809ac7312097cb418ab5ffd561fdbd1d1
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600522"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703152"
 ---
-# <a name="strcmp-wcscmp-mbscmp"></a>strcmp, wcscmp, _mbscmp
+# <a name="strcmp-wcscmp-mbscmp-mbscmpl"></a>strcmp, wcscmp, _mbscmp, _mbscmp_l
 
 Porovnávání řetězců.
 
 > [!IMPORTANT]
-> **_mbscmp –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscmp –** a **_mbscmp_l** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -68,12 +71,20 @@ int _mbscmp(
    const unsigned char *string1,
    const unsigned char *string2
 );
+int _mbscmp_l(
+   const unsigned char *string1,
+   const unsigned char *string2,
+   _locale_t locale
+);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*řetězec1*, *řetězec2*<br/>
+*string1*, *string2*<br/>
 Řetězec zakončený hodnotou Null pro srovnání.
+
+*Národní prostředí*<br/>
+Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -85,17 +96,17 @@ Návratová hodnota pro každou z těchto funkcí označuje ordinální vztah *�
 |0|*řetězec1* je stejný jako *řetězec2*|
 |> 0|*řetězec1* je větší než *řetězec2*|
 
-Na chybu ověření parametru **_mbscmp –** vrátí **_NLSCMPERROR**, který je definován v \<string.h > a \<mbstring.h >.
+Na chybu ověření parametru **_mbscmp –** a **_mbscmp_l** vrátit **_NLSCMPERROR**, který je definován v \<string.h > a \< Mbstring.h >.
 
 ## <a name="remarks"></a>Poznámky
 
-**Strcmp –** funkce provádí řadové porovnání z *řetězec1* a *řetězec2* a vrátí hodnotu, která určuje jejich vzájemný vztah. **wcscmp –** a **_mbscmp –** , jsou širokoznaké a vícebajtové verze **strcmp –**. **_mbscmp –** rozpozná vícebajtové znakové sekvence podle aktuální vícebajtové znakové stránce a vrátí **_NLSCMPERROR** v případě chyby. Další informace najdete v tématu [znakové stránky](../../c-runtime-library/code-pages.md). Navíc pokud *řetězec1* nebo *řetězec2* je ukazatel s hodnotou null, **_mbscmp –** vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **_mbscmp –** vrátí **_NLSCMPERROR** a nastaví **errno** k **EINVAL**. **strcmp –** a **wcscmp –** neověří jejich parametry. Tyto tři funkce chovají identicky jinak.
+**Strcmp –** funkce provádí řadové porovnání z *řetězec1* a *řetězec2* a vrátí hodnotu, která určuje jejich vzájemný vztah. **wcscmp –** a **_mbscmp –** , jsou širokoznaké a vícebajtové verze **strcmp –**. **_mbscmp –** rozpozná vícebajtové znakové sekvence podle aktuální vícebajtové znakové stránce a vrátí **_NLSCMPERROR** v případě chyby. **_mbscmp_l** má stejné chování, ale používá Předaný parametr národního prostředí namísto aktuálního národního prostředí. Další informace najdete v tématu [znakové stránky](../../c-runtime-library/code-pages.md). Navíc pokud *řetězec1* nebo *řetězec2* je ukazatel s hodnotou null, **_mbscmp –** vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **_mbscmp –** a **_mbscmp_l** vrátit **_NLSCMPERROR** a nastavte **errno** k **EINVAL** . **strcmp –** a **wcscmp –** neověří jejich parametry. Tyto funkce chovají identicky jinak.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcscmp –**|**strcmp –**|**_mbscmp**|**wcscmp –**|
+|**_tcscmp**|**strcmp**|**_mbscmp**|**wcscmp**|
 
 **Strcmp –** funkce se liší od **strcoll –** funkce v dané **strcmp –** porovnání podle pořadového čísla jsou a nejsou ovlivněná národním prostředím. **strcoll –** lexikograficky porovná řetězce pomocí **LC_COLLATE** kategorie aktuálního národního prostředí. Další informace o **LC_COLLATE** kategorie, naleznete v tématu [setlocale _wsetlocale](setlocale-wsetlocale.md).
 
@@ -103,14 +114,14 @@ Pořadí znaků ve znakové sadě (znaková sada ASCII) v národním prostředí
 
 V prostředí, pro které se liší znakové sady a lexikografickým pořadím znaků, můžete použít **strcoll –** místo **strcmp –** pro lexikografického porovnání řetězců. Alternativně můžete použít **strxfrm –** na původním řetězců a pak použijte **strcmp –** na výsledného řetězce.
 
-**Strcmp –** funkce jsou malá a velká písmena. **_stricmp –**, **_wcsicmp –**, a **_mbsicmp –** porovnávání řetězců převedením první na malá písmena formuláře. Dva řetězce, které obsahují znaky umístěné mezi "Z" a "a" v tabulce ASCII ('[','\\","] "," ^ ","_"a"\`") porovnávají různě v závislosti na velikosti jejich písmen. Například dva řetězce "ABCDE" a "ABCD ^" porovnávají jeden ze způsobů, pokud je výsledkem porovnávání malá písmena ("abcde" > "abcd ^") a jiným způsobem ("ABCDE" < "ABCD ^") je-li porovnání velká písmena.
+**Strcmp –** funkce jsou malá a velká písmena. **\_stricmp –**,  **\_wcsicmp –**, a  **\_mbsicmp –** porovnávání řetězců převedením první na malá písmena formuláře. Dva řetězce, které obsahují znaky umístěné mezi "Z" a "a" v tabulce ASCII ('[','\\","] "," ^ ","_"a"\`") porovnávají různě v závislosti na velikosti jejich písmen. Například dva řetězce "ABCDE" a "ABCD ^" porovnávají jeden ze způsobů, pokud je výsledkem porovnávání malá písmena ("abcde" > "abcd ^") a jiným způsobem ("ABCDE" < "ABCD ^") je-li porovnání velká písmena.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strcmp –**|\<String.h >|
-|**wcscmp –**|\<String.h > nebo \<wchar.h >|
+|**strcmp**|\<string.h>|
+|**wcscmp**|\<String.h > nebo \<wchar.h >|
 |**_mbscmp**|\<Mbstring.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

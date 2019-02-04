@@ -1,9 +1,10 @@
 ---
-title: strcpy_s, wcscpy_s, _mbscpy_s
-ms.date: 03/22/2086
+title: strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
+ms.date: 01/22/2019
 apiname:
 - wcscpy_s
 - _mbscpy_s
+- _mbscpy_s_l
 - strcpy_s
 apilocation:
 - msvcrt.dll
@@ -22,30 +23,32 @@ apitype: DLLExport
 f1_keywords:
 - strcpy_s
 - _mbscpy_s
+- _mbscpy_s_l
 - _tcscpy_s
 - wcscpy_s
 helpviewer_keywords:
 - strcpy_s function
 - _tcscpy_s function
 - _mbscpy_s function
+- _mbscpy_s_l function
 - copying strings
 - strings [C++], copying
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: d7deeb2d3286ca20518527df26c4765197f8a087
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5dec0c44519b78a3c4a98c51f8b8ca9bc3f54a7c
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616603"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702710"
 ---
-# <a name="strcpys-wcscpys-mbscpys"></a>strcpy_s, wcscpy_s, _mbscpy_s
+# <a name="strcpys-wcscpys-mbscpys-mbscpysl"></a>strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 
 Zkopíruje řetězec. Tyto verze [strcpy – wcscpy –, _mbscpy –](strcpy-wcscpy-mbscpy.md) mají rozšíření zabezpečení popsaná v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbscpy_s –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscpy_s –** a **_mbscpy_s_l** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,6 +67,12 @@ errno_t _mbscpy_s(
    unsigned char *dest,
    rsize_t dest_size,
    const unsigned char *src
+);
+errno_t _mbscpy_s_l(
+   unsigned char *dest,
+   rsize_t dest_size,
+   const unsigned char *src,
+   _locale_t locale
 );
 ```
 
@@ -84,11 +93,17 @@ errno_t _mbscpy_s(
    unsigned char (&dest)[size],
    const unsigned char *src
 ); // C++ only
+template <size_t size>
+errno_t _mbscpy_s_l(
+   unsigned char (&dest)[size],
+   const unsigned char *src,
+   _locale_t locale
+); // C++ only
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*cíl*<br/>
+*dest*<br/>
 Umístění cílové vyrovnávací paměti řetězce.
 
 *dest_size*<br/>
@@ -97,23 +112,26 @@ Velikost vyrovnávací paměti pro řetězec cílového v **char** jednotky pro 
 *src*<br/>
 Vyrovnávací paměti pro řetězec zakončený hodnotou Null zdroje.
 
+*Národní prostředí*<br/>
+Národní prostředí.
+
 ## <a name="return-value"></a>Návratová hodnota
 
 Nula v případě úspěchu; v opačném případě chybu.
 
 ### <a name="error-conditions"></a>Chybové podmínky
 
-|*cíl*|*dest_size*|*src*|Návratová hodnota|Obsah *dest*|
+|*dest*|*dest_size*|*src*|Návratová hodnota|Obsah *dest*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**HODNOTU NULL**|Všechny|Všechny|**EINVAL**|Nezměněno|
-|Všechny|Všechny|**HODNOTU NULL**|**EINVAL**|*DEST*[0] nastavit na hodnotu 0|
+|**NULL**|Všechny|Všechny|**EINVAL**|Nezměněno|
+|Všechny|Všechny|**NULL**|**EINVAL**|*DEST*[0] nastavit na hodnotu 0|
 |Všechny|0 nebo příliš malá|Všechny|**ERANGE**|*DEST*[0] nastavit na hodnotu 0|
 
 ## <a name="remarks"></a>Poznámky
 
 **Strcpy_s** funkce kopíruje obsah do pole adresy ve *src*, včetně ukončujícího nulového znaku do umístění, která je zadána *dest*. Cílový řetězec musí být dostatečně velký pro zdrojový řetězec a jeho ukončující znak null. Chování **strcpy_s** není definováno, pokud se zdrojový a cílový řetězec překrývají.
 
-**wcscpy_s –** je verze širokého znaku **strcpy_s**, a **_mbscpy_s –** je vícebajtová znaková verze. Argumenty **wcscpy_s –** jsou širokoznaké řetězce **_mbscpy_s –** jsou vícebajtové znakové řetězce. Tyto tři funkce chovají identicky jinak.
+**wcscpy_s –** je verze širokého znaku **strcpy_s**, a **_mbscpy_s –** je vícebajtová znaková verze. Argumenty **wcscpy_s –** jsou širokoznaké řetězce **_mbscpy_s –** a **_mbscpy_s_l** jsou vícebajtové znakové řetězce. Tyto funkce chovají identicky jinak. **_mbscpy_s_l** je stejný jako **_mbscpy_s –** s tím rozdílem, že používá parametr národního prostředí namísto aktuálního národního prostředí předaného. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 Pokud *dest* nebo *src* je ukazatel s hodnotou null, nebo pokud řetězec cíle velikost *dest_size* je příliš malá, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **EINVAL** a nastavte **errno** k **EINVAL** při *dest* nebo  *src* je ukazatel s hodnotou null, a vrátí **ERANGE** a nastavte **errno** k **ERANGE** Pokud cílový řetězec je příliš malá.
 
@@ -127,13 +145,13 @@ Ladicí verze knihovny z těchto funkcí nejprve naplní vyrovnávací paměť h
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcscpy_s –**|**strcpy_s**|**_mbscpy_s**|**wcscpy_s**|
+|**_tcscpy_s**|**strcpy_s**|**_mbscpy_s**|**wcscpy_s**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strcpy_s**|\<String.h >|
+|**strcpy_s**|\<string.h>|
 |**wcscpy_s**|\<String.h > nebo \<wchar.h >|
 |**_mbscpy_s**|\<Mbstring.h >|
 
@@ -205,8 +223,8 @@ String = Hello world from wcscpy_s and wcscat_s!
 ## <a name="see-also"></a>Viz také:
 
 [Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md) <br/>
-[strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md) <br/>
-[strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md) <br/>
+[strcat, wcscat, _mbscat, _mbscat_l](strcat-wcscat-mbscat.md) <br/>
+[strcmp, wcscmp, _mbscmp, _mbscmp_l](strcmp-wcscmp-mbscmp.md) <br/>
 [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) <br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md) <br/>
 [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md) <br/>

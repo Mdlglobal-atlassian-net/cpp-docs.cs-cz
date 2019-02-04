@@ -5,12 +5,12 @@ helpviewer_keywords:
 - x64 coding conventions
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
-ms.openlocfilehash: eea2059a8c06a8ba4d032b87fb41d7d51bc8eac2
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 55be8f381b39ee566b389350ff70a9b0a3fe7694
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627296"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702065"
 ---
 # <a name="x64-software-conventions"></a>x64 softwarové konvence
 
@@ -59,7 +59,7 @@ I když je možné získat přístup k datům pomocí jakékoli zarovnání, dop
 |**FP64 (Dvojitá přesnost)**|**double**|8|Quadword|
 |**UKAZATEL**|__\*__|8|Quadword|
 |**__m64**|**__m64 – struktura**|8|Quadword|
-|**__m128**|**__m128 – struktura**|16|Octaword|
+|**__m128**|**struct __m128**|16|Octaword|
 
 ### <a name="aggregates-and-unions"></a>Agregace a sjednocení
 
@@ -94,7 +94,7 @@ V následující tabulce jsou uvedeny důrazně doporučené zarovnání skalár
 |**FP64 (Dvojitá přesnost)**|**double**|Quadword|
 |**UKAZATEL**|<strong>\*</strong>|Quadword|
 |**__m64**|**__m64 – struktura**|Quadword|
-|**__m128**|**__m128 – struktura**|Octaword|
+|**__m128**|**struct __m128**|Octaword|
 
 Platí následující pravidla agregační zarovnání:
 
@@ -141,7 +141,7 @@ _declspec(align(8)) struct {
 #### <a name="example-3"></a>Příklad 3
 
 ```C
-// Total size = 22 bytes, alignment = 4 bytes (doubleword).
+// Total size = 12 bytes, alignment = 4 bytes (doubleword).
 
 _declspec(align(4)) struct {
     char a;       // +0; size = 1 byte
@@ -209,10 +209,10 @@ Následující tabulka popisuje, jak každý registr se používá ve volání f
 |XMM0, YMM0|Volatile|První argument FP první argument typu vector při `__vectorcall` slouží|
 |XMM1, YMM1|Volatile|Druhý argument FP; druhý argument typ vektoru při `__vectorcall` slouží|
 |XMM2, YMM2|Volatile|Třetí argument FP třetí argument typ vektoru při `__vectorcall` slouží|
-|XMM3 YMM3|Volatile|Čtvrtý argument FP čtvrtý argument typ vektoru při `__vectorcall` slouží|
-|XMM4 YMM4|Volatile|Musí být zachovány podle potřeby volajícím; pátý argument typ vektoru při `__vectorcall` slouží|
-|XMM5 YMM5|Volatile|Musí být zachovány podle potřeby volajícím; šestý argument typ vektoru při `__vectorcall` slouží|
-|XMM6:XMM15 YMM6:YMM15|Stálé (XMM) Volatile (horní polovinu YMM)|Musí být zachovány volaným. Podle potřeby volající musí být zachovány registrech YMM.|
+|XMM3, YMM3|Volatile|Čtvrtý argument FP čtvrtý argument typ vektoru při `__vectorcall` slouží|
+|XMM4, YMM4|Volatile|Musí být zachovány podle potřeby volajícím; pátý argument typ vektoru při `__vectorcall` slouží|
+|XMM5, YMM5|Volatile|Musí být zachovány podle potřeby volajícím; šestý argument typ vektoru při `__vectorcall` slouží|
+|XMM6:XMM15, YMM6:YMM15|Stálé (XMM) Volatile (horní polovinu YMM)|Musí být zachovány volaným. Podle potřeby volající musí být zachovány registrech YMM.|
 
 Při ukončení funkce a na položku funkce a volání knihovny Runtime jazyka C a systému Windows, příznak směru v procesoru příznaky registrace má zůstat nezaškrtnutá.
 

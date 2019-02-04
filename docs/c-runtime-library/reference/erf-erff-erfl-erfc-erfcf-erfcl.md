@@ -1,10 +1,13 @@
 ---
 title: erf, erff, erfl, erfc, erfcf, erfcl
-ms.date: 11/19/2018
+ms.date: 01/31/2019
 apiname:
 - erff
 - erfl
 - erf
+- erfc
+- erfcf
+- erfcl
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,17 +25,23 @@ f1_keywords:
 - erfl
 - erf
 - erff
+- erfc
+- erfcf
+- erfcl
 helpviewer_keywords:
 - erfl function
 - erff function
 - erf function
+- erfcl function
+- erfcf function
+- erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: 5c64a7ac6c3a4d79c221ff1ca5f9460e9e6bdea6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 4270d8366686ea282a4dd37741d9f8e37991b88f
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176819"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702658"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
 
@@ -96,7 +105,7 @@ Protože jazyk C++ umožňuje přetížení, můžete volat přetížení **erf*
 
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
-|**ERF –**, **erff –**, **erfl –**, **erfc**, **erfcf –**, **erfcl**|\<Math.h >|
+|**erf**, **erff**, **erfl**, **erfc**, **erfcf**, **erfcl**|\<math.h>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

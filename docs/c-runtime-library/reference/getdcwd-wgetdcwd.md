@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-environment-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - wgetdcwd
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-ms.openlocfilehash: 87cccec82ce648498c2bd3a7ac0ecbe436cb9baf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 464a254775d9a1d2488247d6dafb4b85cd763f10
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677016"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702931"
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd, _wgetdcwd
 
@@ -61,26 +62,26 @@ wchar_t *_wgetdcwd(
 
 ### <a name="parameters"></a>Parametry
 
-*Jednotky*<br/>
+*drive*<br/>
 Nezáporné celé číslo, které určuje jednotku (0 = výchozí jednotka, 1 = A, 2 = B a tak dále).
 
-Pokud zadaná jednotka není k dispozici, nebo druh jednotky (například vyměnitelný, pevný, CD-ROM, RAM disk nebo síťová jednotka) nelze určit obslužnou rutinu neplatného parametru, která je popsána v [Parameter Validation](../../c-runtime-library/parameter-validation.md), je vyvolat.
+Pokud zadaná jednotka není k dispozici, nebo druh jednotky (například vyměnitelný, pevný, CD-ROM, RAM disk nebo síťová jednotka) nelze určit, je vyvolána obslužná rutina neplatného parametru. Další informace najdete v tématu [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
 *Vyrovnávací paměti*<br/>
 Umístění úložiště pro cestu, nebo **NULL**.
 
 Pokud **NULL** není zadána, tato funkce přidělí vyrovnávací paměť alespoň *maxlen* velikost pomocí **malloc**a návratová hodnota **_getdcwd –** je ukazatel do přidělené vyrovnávací paměti. Vyrovnávací paměť lze uvolnit voláním **bezplatné** a jeho předáním ukazateli.
 
-*MAXLEN*<br/>
+*maxlen*<br/>
 Nenulové kladné celé číslo, které určuje maximální délku cesty ve znacích: **char** pro **_getdcwd –** a **wchar_t** pro **_wgetdcwd –**.
 
-Pokud *maxlen* není větší než nula, obslužnou rutinu neplatného parametru, která je popsána v [Parameter Validation](../../c-runtime-library/parameter-validation.md), je vyvolána.
+Pokud *maxlen* je menší než nebo rovna hodnotě nula, je vyvolána obslužná rutina neplatného parametru. Další informace najdete v tématu [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="return-value"></a>Návratová hodnota
 
 Ukazatel na řetězec, který představuje úplnou cestu aktuálního pracovního adresáře na zadané jednotce nebo **NULL**, což znamená chybu.
 
-Pokud *vyrovnávací paměti* je zadán jako **NULL** a není dostatek paměti k přidělení *maxlen* znaky, dojde k chybě a **errno** je Nastavte na **ENOMEM**. Délka cesty, která zahrnuje ukončující znak null, překročí-li *maxlen*, dojde k chybě a **errno** je nastavena na **ERANGE**. Další informace o těchto chybových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Pokud *vyrovnávací paměti* je zadán jako **NULL** a není dostatek paměti k přidělení *maxlen* znaky, dojde k chybě a **errno** je Nastavte na **ENOMEM**. Pokud délka cesty, včetně ukončujícího znaku null překročí *maxlen*, dojde k chybě, a **errno** je nastavena na **ERANGE**. Další informace o těchto chybových kódech naleznete v tématu [errno _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
@@ -104,7 +105,7 @@ Když **_DEBUG** a **_CRTDBG_MAP_ALLOC** jsou definovány, volání **_getdcwd �
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_getdcwd**|\<Direct.h >|
+|**_getdcwd**|\<direct.h>|
 |**_wgetdcwd**|\<Direct.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

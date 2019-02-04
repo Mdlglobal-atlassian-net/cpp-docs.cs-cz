@@ -20,6 +20,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - _strlwr
@@ -55,12 +56,12 @@ helpviewer_keywords:
 - strings [C++], converting case
 - _mbslwr_l function
 ms.assetid: d279181d-2e7d-401f-ab44-6e7c2786a046
-ms.openlocfilehash: a442afd0ede8d9c6e892f50c12153b22f80733b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b4d02c7176c779703e2025cd2ab5f6fa9c3b1db
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505687"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703022"
 ---
 # <a name="strlwr-wcslwr-mbslwr-strlwrl-wcslwrl-mbslwrl"></a>_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 
@@ -148,16 +149,16 @@ V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají nověj
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcslwr –**|**_strlwr**|**_mbslwr**|**_wcslwr**|
-|**_tcslwr_l –**|**_strlwr_l**|**_mbslwr_l**|**_wcslwr_l**|
+|**_tcslwr**|**_strlwr**|**_mbslwr**|**_wcslwr**|
+|**_tcslwr_l**|**_strlwr_l**|**_mbslwr_l**|**_wcslwr_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_strlwr**, **_strlwr_l –**|\<String.h >|
-|**_wcslwr –**, **_wcslwr_l –**|\<String.h > nebo \<wchar.h >|
-|**_mbslwr –**, **_mbslwr_l –**|\<Mbstring.h >|
+|**_strlwr**, **_strlwr_l**|\<string.h>|
+|**_wcslwr**, **_wcslwr_l**|\<String.h > nebo \<wchar.h >|
+|**_mbslwr**, **_mbslwr_l**|\<Mbstring.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

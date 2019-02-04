@@ -1,9 +1,10 @@
 ---
-title: strcat_s, wcscat_s, _mbscat_s
-ms.date: 11/04/2016
+title: strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
+ms.date: 01/22/2019
 apiname:
 - strcat_s
 - _mbscat_s
+- _mbscat_s_l
 - wcscat_s
 apilocation:
 - msvcrt.dll
@@ -23,27 +24,29 @@ f1_keywords:
 - strcat_s
 - wcscat_s
 - _mbscat_s
+- _mbscat_s_l
 helpviewer_keywords:
 - wcscat_s function
 - strcat_s function
 - mbscat_s function
 - strings [C++], appending
 - _mbscat_s function
+- _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: 7b622fbefc690317a4b57e3fd1bb54712b84f2a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 92829421cc0adac0ff9bbd2354fe4438a7b22871
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621309"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702918"
 ---
-# <a name="strcats-wcscats-mbscats"></a>strcat_s, wcscat_s, _mbscat_s
+# <a name="strcats-wcscats-mbscats-mbscatsl"></a>strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
 
 Připojí řetězec. Tyto verze [strcat – wcscat –, _mbscat –](strcat-wcscat-mbscat.md) mají rozšíření zabezpečení popsaná v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbscat_s –** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscat_s –** a **_mbscat_s_l** nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,6 +66,12 @@ errno_t _mbscat_s(
    size_t numberOfElements,
    const unsigned char *strSource
 );
+errno_t _mbscat_s_l(
+   unsigned char *strDestination,
+   size_t numberOfElements,
+   const unsigned char *strSource,
+   _locale_t locale
+);
 template <size_t size>
 errno_t strcat_s(
    char (&strDestination)[size],
@@ -78,6 +87,12 @@ errno_t _mbscat_s(
    unsigned char (&strDestination)[size],
    const unsigned char *strSource
 ); // C++ only
+template <size_t size>
+errno_t _mbscat_s_l(
+   unsigned char (&strDestination)[size],
+   const unsigned char *strSource,
+   _locale_t locale
+); // C++ only
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -91,6 +106,9 @@ Velikost vyrovnávací paměti cílového řetězce.
 *strSource*<br/>
 Vyrovnávací paměti pro řetězec zakončený hodnotou Null zdroje.
 
+*Národní prostředí*<br/>
+Národní prostředí.
+
 ## <a name="return-value"></a>Návratová hodnota
 
 Nula v případě úspěchu; Kód chyby při selhání.
@@ -100,7 +118,7 @@ Nula v případě úspěchu; Kód chyby při selhání.
 |*strDestination*|*numberOfElements*|*strSource*|Návratová hodnota|Obsah *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
 |**NULL** nebo neukončený|Všechny|Všechny|**EINVAL**|Nezměněno|
-|Všechny|Všechny|**HODNOTU NULL**|**EINVAL**|*strDestination*[0] nastavit na hodnotu 0|
+|Všechny|Všechny|**NULL**|**EINVAL**|*strDestination*[0] nastavit na hodnotu 0|
 |Všechny|0 nebo příliš malá|Všechny|**ERANGE**|*strDestination*[0] nastavit na hodnotu 0|
 
 ## <a name="remarks"></a>Poznámky
@@ -120,6 +138,8 @@ strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 
 Pokud *strDestination* je ukazatel s hodnotou null nebo není ukončený hodnotou null, nebo pokud *strSource* je **NULL** ukazatele, nebo pokud cílový řetězec je příliš malá, neplatný parametr je vyvolána obslužná rutina, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **EINVAL** a nastavte **errno** k **EINVAL**.
 
+Verze funkcí, které mají **_l** přípony mají stejné chování, ale používá parametr národního prostředí, které je předáno namísto aktuálního národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+
 V jazyce C++ je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky (tím eliminuje nutnost zadat argument velikosti) a dokážou automaticky nahradit starší, nezabezpečené funkce jejími novějšími, zabezpečené protějšky. Další informace najdete v tématu [přetížení zabezpečení šablony](../../c-runtime-library/secure-template-overloads.md).
 
 Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť hodnotou 0xFD. Chcete-li toto chování zakázat, použijte [_crtsetdebugfillthreshold –](crtsetdebugfillthreshold.md).
@@ -134,7 +154,7 @@ Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť hodnotou 0xF
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strcat_s**|\<String.h >|
+|**strcat_s**|\<string.h>|
 |**wcscat_s**|\<String.h > nebo \<wchar.h >|
 |**_mbscat_s**|\<Mbstring.h >|
 

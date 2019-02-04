@@ -1,10 +1,11 @@
 ---
-title: _mbclen, mblen, _mblen_l
-ms.date: 11/04/2016
+title: _mbclen, mblen –, _mblen_l –, _mbclen_l
+ms.date: 01/22/2019
 apiname:
 - _mbclen
 - mblen
 - _mblen_l
+- _mbclen_l
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,6 +24,7 @@ f1_keywords:
 - mblen
 - ftclen
 - _mbclen
+- _mbclen_l
 - tclen
 - _ftclen
 - _tclen
@@ -33,17 +35,18 @@ helpviewer_keywords:
 - _tclen function
 - mblen_l function
 - _mbclen function
+- _mbclen_l function
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-ms.openlocfilehash: dddf7d3a1705460d2c8d42cc1b36230d7bdaf942
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7888b0b8c87a632dcbb63f54ade11080c7a309a
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434383"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702957"
 ---
-# <a name="mbclen-mblen-mblenl"></a>_mbclen, mblen, _mblen_l
+# <a name="mbclen-mblen-mblenl-mbclenl"></a>_mbclen, mblen –, _mblen_l –, _mbclen_l
 
 Získá délku a určí platnost vícebajtového znaku.
 
@@ -55,6 +58,10 @@ Získá délku a určí platnost vícebajtového znaku.
 ```C
 size_t _mbclen(
    const unsigned char *c
+);
+size_t _mbclen_l(
+   unsigned char const* c,
+   _locale_t locale
 );
 int mblen(
    const char *mbstr,
@@ -83,7 +90,7 @@ Národní prostředí.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_mbclen** vrátí hodnotu 1 nebo 2, podle toho, zda vícebajtový znak *c* je 1 nebo 2 bajty dlouhý. Neexistuje žádná chybová zpráva pro vrácení **_mbclen**. Pokud *mbstr* není **NULL**, **mblen –** vrátí délku v bajtech vícebajtového znaku. Pokud *mbstr* je **NULL** nebo odkazuje na prázdný znak širokého znaku, **mblen –** vrátí hodnotu 0. Pokud objekt, který *mbstr* odkazuje na netvoří platné vícebajtové znaky v prvních *počet* znaků, **mblen –** vrátí hodnotu -1.
+**_mbclen** vrátí hodnotu 1 nebo 2, podle toho, zda vícebajtový znak *c* je 1 nebo 2 bajty dlouhý. Neexistuje žádná chybová zpráva pro vrácení **_mbclen**. Pokud *mbstr* není **NULL**, **mblen –** vrátí délku v bajtech vícebajtového znaku. Pokud *mbstr* je **NULL** nebo odkazuje na prázdný znak širokého znaku, **mblen –** vrátí hodnotu 0. Pokud objekt, který *mbstr* odkazuje na nemá formu platné vícebajtové znaky v prvních *počet* znaků, **mblen –** vrátí hodnotu -1.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -91,13 +98,13 @@ Národní prostředí.
 
 **mblen –** vrátí délku v bajtech *mbstr* , pokud je platný vícebajtový znak a určuje platnost vícebajtového znaku zakončeného přidružené znakovou stránku. **mblen –** prozkoumá *počet* nebo menší počet bajtů obsažených v *mbstr*, ale ne více než **MB_CUR_MAX** bajtů.
 
-Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze těchto funkcí bez **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s **_l** přípona jsou stejné s tím rozdílem, že používají parametr národního prostředí místo něho předán v. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna **LC_CTYPE** nastavením kategorie národního prostředí; viz [setlocale](setlocale-wsetlocale.md) Další informace. Verze těchto funkcí bez **_l** přípona používají aktuální národní prostředí pro toto chování závislé na národním prostředí. **_L** příponami verzích se chová stejně, ale používají Předaný parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tclen –**|Mapuje se na makro nebo vloženou funkci|**_mbclen**|Mapuje se na makro nebo vloženou funkci|
+|**_tclen**|Mapuje se na makro nebo vloženou funkci|**_mbclen**|Mapuje se na makro nebo vloženou funkci|
 
 ## <a name="requirements"></a>Požadavky
 

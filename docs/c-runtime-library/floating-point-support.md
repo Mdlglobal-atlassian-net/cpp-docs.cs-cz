@@ -1,6 +1,6 @@
 ---
 title: Matematické a podpora plovoucí desetinné čárky
-ms.date: 04/06/2018
+ms.date: 01/31/2019
 f1_keywords:
 - c.math
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: 9e1baeb7236e5b1144b52df0bd83cc0f4a4b7796
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d03333dee12989af5897c34ba96484930a39673
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558233"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703126"
 ---
 # <a name="math-and-floating-point-support"></a>Matematické a podpora plovoucí desetinné čárky
 
@@ -35,19 +35,19 @@ Předchozí verze 16bitové Microsoft C/C++ a Microsoft Visual C++ nepodporuje *
 [atan, atanf, atanl, atan2, atan2f, atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|Vypočítá arkustangens
 [atanh, atanhf, atanhl](../c-runtime-library/reference/atanh-atanhf-atanhl.md)|Vypočte hyperbolický Arkus tangens
 [_atodbl, _atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Převede řetězec na specifických pro národní prostředí **double**
-[atof – _atof_l –](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Převede řetězec na **double**
-[_atoflt –, _atoflt_l –, _atoldbl –, _atoldbl_l –](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Převede řetězec na specifických pro národní prostředí **float** nebo **long double**
+[atof, _atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Převede řetězec na **double**
+[_atoflt, _atoflt_l, _atoldbl, _atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Převede řetězec na specifických pro národní prostředí **float** nebo **long double**
 [cbrt, cbrtf, cbrtl](../c-runtime-library/reference/cbrt-cbrtf-cbrtl.md)|Vypočítá kořenové datové krychle
 [ceil, ceilf, ceill](../c-runtime-library/reference/ceil-ceilf-ceill.md)|Vypočítá horní mez
 [_chgsign, _chgsignf, _chgsignl](../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)|Vypočítá inverzní additive
 [_clear87, _clearfp](../c-runtime-library/reference/clear87-clearfp.md)|Načte a vymaže stav s plovoucí desetinnou čárkou registru
-[_control87 –, \__control87_2 _controlfp](../c-runtime-library/reference/control87-controlfp-control87-2.md)|Získá a nastaví slovo ovládacího prvku s plovoucí desetinnou čárkou
+[_control87, \__control87_2, _controlfp](../c-runtime-library/reference/control87-controlfp-control87-2.md)|Získá a nastaví slovo ovládacího prvku s plovoucí desetinnou čárkou
 [_controlfp_s](../c-runtime-library/reference/controlfp-s.md)|Zabezpečené verze **_controlfp**
 [copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl](../c-runtime-library/reference/copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)|Vrátí hodnotu, která má velikost jednoho argumentu a znaménko druhého
 [Cos cosf –, cosl –](../c-runtime-library/reference/cos-cosf-cosl.md)|Vypočítá sinus
 [cosh, coshf, coshl](../c-runtime-library/reference/cosh-coshf-coshl.md)|Vypočte hyperbolický sinus
 [div, ldiv, lldiv](../c-runtime-library/reference/div.md)|Počítá podíl a zbytek dvou celočíselných hodnot
-[_ecvt –](../c-runtime-library/reference/ecvt.md), [ecvt –](../c-runtime-library/reference/posix-ecvt.md)|Převede **double** na řetězec
+[_ecvt](../c-runtime-library/reference/ecvt.md), [ecvt](../c-runtime-library/reference/posix-ecvt.md)|Převede **double** na řetězec
 [_ecvt_s](../c-runtime-library/reference/ecvt-s.md)|Zabezpečené verze **_ecvt –**
 [ERF – erff –, erfl –](../c-runtime-library/reference/erf-erff-erfl-erfc-erfcf-erfcl.md)|Vypočítá chybovou funkci
 [ERFC – erfcf –, erfcl](../c-runtime-library/reference/erf-erff-erfl-erfc-erfcf-erfcl.md)|Vypočítá doplňkovou chybovou funkci
@@ -55,7 +55,7 @@ Předchozí verze 16bitové Microsoft C/C++ a Microsoft Visual C++ nepodporuje *
 [exp2, exp2f, exp2l](../c-runtime-library/reference/exp2-exp2f-exp2l.md)|Vypočítá exponenciální 2<sup>x</sup>
 [expm1, expm1f, expm1l](../c-runtime-library/reference/expm1-expm1f-expm1l.md)|Vypočítá *e*<sup>x</sup>-1
 [fabs, fabsf, fabsl](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|Vypočítá absolutní hodnotu s plovoucí desetinnou čárkou
-[_fcvt –](../c-runtime-library/reference/fcvt.md), [fcvt –](../c-runtime-library/reference/posix-fcvt.md)|Převede číslo s plovoucí desetinnou čárkou na řetězec
+[_fcvt](../c-runtime-library/reference/fcvt.md), [fcvt](../c-runtime-library/reference/posix-fcvt.md)|Převede číslo s plovoucí desetinnou čárkou na řetězec
 [_fcvt_s](../c-runtime-library/reference/fcvt-s.md)|Zabezpečené verze **_fcvt –**
 [fdim, fdimf, fdiml](../c-runtime-library/reference/fdim-fdimf-fdiml.md)|Určuje pozitivní rozdíl mezi dvěma hodnotami
 [feclearexcept](../c-runtime-library/reference/feclearexcept1.md)|Vymaže zadané výjimky s plovoucí desetinnou čárkou
@@ -69,7 +69,6 @@ Předchozí verze 16bitové Microsoft C/C++ a Microsoft Visual C++ nepodporuje *
 [fesetround](../c-runtime-library/reference/fegetround-fesetround2.md)|Nastaví zadanou režimu zaokrouhlení s plovoucí desetinnou čárkou
 [fetestexcept](../c-runtime-library/reference/fetestexcept1.md)|Určuje stav příznacích výjimky s plovoucí desetinnou čárkou jsou nastavené.
 [feupdateenv](../c-runtime-library/reference/feupdateenv.md)|Obnoví prostředí s plovoucí desetinnou čárkou a vyvolává předchozí výjimky
-[_finite, _finitef](../c-runtime-library/reference/finite-finitef.md)|Určuje, zda hodnota je omezené
 [floor, floorf, floorl](../c-runtime-library/reference/floor-floorf-floorl.md)|Vypočítá dolní mez
 [fma, fmaf, fmal](../c-runtime-library/reference/fma-fmaf-fmal.md)|Vypočítá roztaveného přičti
 [fmax, fmaxf, fmaxl](../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)|Vypočítá maximální počet argumentů
@@ -80,16 +79,20 @@ Předchozí verze 16bitové Microsoft C/C++ a Microsoft Visual C++ nepodporuje *
 [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md)|Nastaví obslužnou rutinu výjimky s plovoucí desetinnou čárkou
 [_fpreset](../c-runtime-library/reference/fpreset.md)|Nastaví výchozí hodnoty s plovoucí desetinnou čárkou prostředí
 [frexp – frexpf –, frexpl –](../c-runtime-library/reference/frexp.md)|Načte mantisu a exponent čísla s plovoucí desetinnou čárkou
-[_gcvt –](../c-runtime-library/reference/gcvt.md), [gcvt –](../c-runtime-library/reference/posix-gcvt.md)|Převede číslo s plovoucí desetinnou čárkou na řetězec
+[_gcvt](../c-runtime-library/reference/gcvt.md), [gcvt](../c-runtime-library/reference/posix-gcvt.md)|Převede číslo s plovoucí desetinnou čárkou na řetězec
 [_gcvt_s](../c-runtime-library/reference/gcvt-s.md)|Zabezpečené verze **_gcvt –**
 [_get_FMA3_enable, _set_FMA3_enable](../c-runtime-library/reference/get-fma3-enable-set-fma3-enable.md)|Získá nebo nastaví příznak pro použití instrukcí FMA3 x64
 [hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl](../c-runtime-library/reference/hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)|Vypočítá přepony
-[ilogb – ilogbf –, ilogbl](../c-runtime-library/reference/ilogb-ilogbf-ilogbl2.md)|Vypočítá základní 2 exponent celé číslo
+[ilogb, ilogbf, ilogbl](../c-runtime-library/reference/ilogb-ilogbf-ilogbl2.md)|Vypočítá základní 2 exponent celé číslo
 [imaxabs](../c-runtime-library/reference/imaxabs.md)|Vypočítá absolutní hodnotu celočíselného typu.
 [imaxdiv](../c-runtime-library/reference/imaxdiv.md)|Počítá podíl a zbytek dvou celočíselných hodnot
+[isfinite, _finite, _finitef](../c-runtime-library/reference/finite-finitef.md)|Určuje, zda hodnota je omezené
+[isgreater isgreaterequal, isless, islessequal, islessgreater, isunordered](../c-runtime-library/reference/floating-point-ordering.md)|Porovnání pořadí dvě hodnoty plovoucího bodu
+[isinf –](../c-runtime-library/reference/isinf.md)|Určuje, zda je nekonečnou hodnotu s plovoucí desetinnou čárkou
 [isnan, _isnan, _isnanf](../c-runtime-library/reference/isnan-isnan-isnanf.md)|Testy s plovoucí desetinnou čárkou hodnota NaN
+[isnormal](../c-runtime-library/reference/isnormal.md)|Testuje, jestli hodnotu s plovoucí desetinnou čárkou je omezené a ne subnormal
 [_j0, _j1, _jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Vypočítá Besselovy funkce
-[ldexp – ldexpf –, ldexpl](../c-runtime-library/reference/ldexp.md)|Vypočítá x * 2<sup>n</sup>
+[ldexp – ldexpf –, ldexpl](../c-runtime-library/reference/ldexp.md)|Computes x*2<sup>n</sup>
 [lgamma, lgammaf, lgammal](../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)|Vypočítá absolutní hodnotu funkce gamma přirozený logaritmus
 [llrint llrintf, llrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)|Zaokrouhlí hodnotu s plovoucí desetinnou čárkou na nejbližší **long long** hodnota
 [llround – llroundf –, llroundl –](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)|Zaokrouhlí hodnotu s plovoucí desetinnou čárkou na nejbližší **long long** hodnota
@@ -107,7 +110,7 @@ Předchozí verze 16bitové Microsoft C/C++ a Microsoft Visual C++ nepodporuje *
 [nan, nanf, nanl](../c-runtime-library/reference/nan-nanf-nanl.md)|Vrátí hodnotu tichý NaN
 [nearbyint – nearbyintf –, nearbyintl](../c-runtime-library/reference/nearbyint-nearbyintf-nearbyintl1.md)|Vrátí zaoblenými hodnota
 [nextafter –, nextafterf –, nextafterl, _nextafter –, _nextafterf](../c-runtime-library/reference/nextafter-functions.md)|Vrátí následující reprezentovatelnou hodnotu s plovoucí desetinnou čárkou
-[nexttoward nexttowardf, nexttowardl](../c-runtime-library/reference/nextafter-functions.md)|Vrátí následující reprezentovatelnou hodnotu s plovoucí desetinnou čárkou
+[nexttoward, nexttowardf, nexttowardl](../c-runtime-library/reference/nextafter-functions.md)|Vrátí následující reprezentovatelnou hodnotu s plovoucí desetinnou čárkou
 [pow, powf, powl](../c-runtime-library/reference/pow-powf-powl.md)|Vrátí hodnotu *x*<sup>*y*</sup>
 [remainder, remainderf, remainderl](../c-runtime-library/reference/remainder-remainderf-remainderl.md)|Vypočítá zbytek z podílu dvou hodnot s plovoucí desetinnou čárkou
 [remquo, remquof, remquol](../c-runtime-library/reference/remquo-remquof-remquol.md)|Vypočítá zbytek dvou celočíselných hodnot
@@ -118,12 +121,13 @@ Předchozí verze 16bitové Microsoft C/C++ a Microsoft Visual C++ nepodporuje *
 [scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl](../c-runtime-library/reference/scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)|Vynásobí číslo s plovoucí desetinnou čárkou integrální sílu **FLT_RADIX**
 [_set_controlfp](../c-runtime-library/reference/set-controlfp.md)|Nastaví slovo ovládacího prvku s plovoucí desetinnou čárkou
 [_set_SSE2_enable](../c-runtime-library/reference/set-sse2-enable.md)|Povolí nebo zakáže SSE2 pokyny
+[signbit –](../c-runtime-library/reference/signbit.md)|Testuje na bit znaménka s plovoucí desetinnou čárkou
 [sin, sinf, sinl](../c-runtime-library/reference/sin-sinf-sinl.md)|Vypočítá sinus
 [sinh, sinhf, sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|Vypočte hyperbolický sinus
 [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Vypočítá druhou odmocninu
 [_status87, _statusfp, _statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|Získá slovo stav s plovoucí desetinnou čárkou
 [strtof, _strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|Převede řetězec na **plovoucí desetinnou čárkou**
-[strtold _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Převede řetězec na **dlouhé** **double**
+[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Převede řetězec na **dlouhé** **double**
 [tan, tanf, tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|Vypočítá tangens
 [tanh, tanhf, tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|Vypočte hyperbolický tangens
 [tgamma, tgammaf, tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)|Vypočítá funkce gamma
@@ -134,3 +138,4 @@ Předchozí verze 16bitové Microsoft C/C++ a Microsoft Visual C++ nepodporuje *
 ## <a name="see-also"></a>Viz také:
 
 [Rutiny UCRT (Universal C runtime) podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[S plovoucí desetinnou čárkou primitiv](../c-runtime-library/reference/floating-point-primitives.md)<br/>

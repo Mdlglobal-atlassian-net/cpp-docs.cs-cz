@@ -1,15 +1,15 @@
 ---
 title: Referenční dokumentace funkcí abecedně UCRT
-ms.date: 04/11/2018
+ms.date: 01/31/2019
 f1_keywords:
 - vc.tables.runtime
 ms.assetid: c2169b0e-cd86-489a-a2fa-2ee15c03b5c2
-ms.openlocfilehash: c8c16b0f3eeb21bc9ad665bffee9fac15607f21f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 855af5b7518ba36418d58f1dc2ac5f0bb6e54208
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520458"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703113"
 ---
 # <a name="ucrt-alphabetical-function-reference"></a>Referenční dokumentace funkcí abecedně UCRT
 
@@ -19,21 +19,21 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [abort](abort.md)
 
-[Abs](abs-labs-llabs-abs64.md)
+[abs](abs-labs-llabs-abs64.md)
 
 [_abs64](abs-labs-llabs-abs64.md)
 
-[Přístup](access-crt.md)
+[access](access-crt.md)
 
 [_access](access-waccess.md)
 
 [_access_s](access-s-waccess-s.md)
 
-[Funkce ACOS](acos-acosf-acosl.md)
+[acos](acos-acosf-acosl.md)
 
 [acosf](acos-acosf-acosl.md)
 
-[acosh –](acosh-acoshf-acoshl.md)
+[acosh](acosh-acoshf-acoshl.md)
 
 [acoshf](acosh-acoshf-acoshl.md)
 
@@ -81,17 +81,17 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [and_eq](and-eq.md)
 
-[asctime –](asctime-wasctime.md)
+[asctime](asctime-wasctime.md)
 
 [asctime_s](asctime-s-wasctime-s.md)
 
-[ASIN](asin-asinf-asinl.md)
+[asin](asin-asinf-asinl.md)
 
 [asinf –](asin-asinf-asinl.md)
 
-[asinh –](asinh-asinhf-asinhl.md)
+[asinh](asinh-asinhf-asinhl.md)
 
-[asinhf –](asinh-asinhf-asinhl.md)
+[asinhf](asinh-asinhf-asinhl.md)
 
 [asinhl](asinh-asinhf-asinhl.md)
 
@@ -107,21 +107,21 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_ASSERTE](assert-asserte-assert-expr-macros.md)
 
-[Atan](atan-atanf-atanl-atan2-atan2f-atan2l.md)
+[atan](atan-atanf-atanl-atan2-atan2f-atan2l.md)
 
 [atan2](atan-atanf-atanl-atan2-atan2f-atan2l.md)
 
 [atan2f](atan-atanf-atanl-atan2-atan2f-atan2l.md)
 
-[atan2l –](atan-atanf-atanl-atan2-atan2f-atan2l.md)
+[atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)
 
 [atanf –](atan-atanf-atanl-atan2-atan2f-atan2l.md)
 
-[atanh –](atanh-atanhf-atanhl.md)
+[atanh](atanh-atanhf-atanhl.md)
 
-[atanhf –](atanh-atanhf-atanhl.md)
+[atanhf](atanh-atanhf-atanhl.md)
 
-[atanhl –](atanh-atanhf-atanhl.md)
+[atanhl](atanh-atanhf-atanhl.md)
 
 [atanl –](atan-atanf-atanl-atan2-atan2f-atan2l.md)
 
@@ -131,7 +131,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_atodbl_l](atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)
 
-[atof –](atof-atof-l-wtof-wtof-l.md)
+[atof](atof-atof-l-wtof-wtof-l.md)
 
 [_atof_l](atof-atof-l-wtof-wtof-l.md)
 
@@ -139,7 +139,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_atoflt_l](atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)
 
-[atoi –](atoi-atoi-l-wtoi-wtoi-l.md)
+[atoi](atoi-atoi-l-wtoi-wtoi-l.md)
 
 [_atoi_l](atoi-atoi-l-wtoi-wtoi-l.md)
 
@@ -147,7 +147,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_atoi64_l](atoi64-atoi64-l-wtoi64-wtoi64-l.md)
 
-[Atol –](atol-atol-l-wtol-wtol-l.md)
+[atol](atol-atol-l-wtol-wtol-l.md)
 
 [_atol_l](atol-atol-l-wtol-wtol-l.md)
 
@@ -191,7 +191,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_cabs](cabs.md)
 
-[soubory CAB](cabs-cabsf-cabsl.md)
+[cabs](cabs-cabsf-cabsl.md)
 
 [cabsf](cabs-cabsf-cabsl.md)
 
@@ -263,7 +263,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [ccosl](ccos-ccosf-ccosl.md)
 
-[Ceil –](ceil-ceilf-ceill.md)
+[ceil](ceil-ceilf-ceill.md)
 
 [ceilf –](ceil-ceilf-ceill.md)
 
@@ -297,7 +297,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [chmod](chmod.md)
 
-[_chmod –](chmod-wchmod.md)
+[_chmod](chmod-wchmod.md)
 
 [chsize](posix-chsize.md)
 
@@ -349,7 +349,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [conjl](conj-conjf-conjl.md)
 
-[_control87 –](control87-controlfp-control87-2.md)
+[_control87](control87-controlfp-control87-2.md)
 
 [__control87_2](control87-controlfp-control87-2.md)
 
@@ -361,7 +361,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_copysign](copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)
 
-[copysignf –](copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)
+[copysignf](copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)
 
 [_copysignf](copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)
 
@@ -369,17 +369,17 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_copysignl](copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)
 
-[Cos](cos-cosf-cosl.md)
+[cos](cos-cosf-cosl.md)
 
 [cosf](cos-cosf-cosl.md)
 
-[COSH –](cosh-coshf-coshl.md)
+[cosh](cosh-coshf-coshl.md)
 
 [coshf](cosh-coshf-coshl.md)
 
-[coshl –](cosh-coshf-coshl.md)
+[coshl](cosh-coshf-coshl.md)
 
-[cosl –](cos-cosf-cosl.md)
+[cosl](cos-cosf-cosl.md)
 
 [_countof](countof-macro.md)
 
@@ -411,7 +411,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [cputs](cputs.md)
 
-[_cputs –](cputs-cputws.md)
+[_cputs](cputs-cputws.md)
 
 [_cputws](cputs-cputws.md)
 
@@ -545,7 +545,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_cwprintf_p_l](cprintf-p-cprintf-p-l-cwprintf-p-cwprintf-p-l.md)
 
-[_cwprintf_s –](cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)
+[_cwprintf_s](cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)
 
 [_cwprintf_s_l](cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)
 
@@ -569,13 +569,13 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [div](div.md)
 
-[_dup –](dup-dup2.md)
+[_dup](dup-dup2.md)
 
 [DUP](posix-dup-dup2.md)
 
 [_dup2](dup-dup2.md)
 
-[dup2 –](posix-dup-dup2.md)
+[dup2](posix-dup-dup2.md)
 
 [_dupenv_s](dupenv-s-wdupenv-s.md)
 
@@ -607,7 +607,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [erff](erf-erff-erfl-erfc-erfcf-erfcl.md)
 
-[erfl –](erf-erff-erfl-erfc-erfcf-erfcl.md)
+[erfl](erf-erff-erfl-erfc-erfcf-erfcl.md)
 
 [execl](execl.md)
 
@@ -623,7 +623,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [execlpe](execlpe.md)
 
-[_execlpe –](execlpe-wexeclpe.md)
+[_execlpe](execlpe-wexeclpe.md)
 
 [execv](execv.md)
 
@@ -641,7 +641,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_execvpe](execvpe-wexecvpe.md)
 
-[ukončení](exit-exit-exit.md)
+[exit](exit-exit-exit.md)
 
 [_Exit](exit-exit-exit.md)
 
@@ -665,7 +665,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [expm1f](expm1-expm1f-expm1l.md)
 
-[expm1l –](expm1-expm1f-expm1l.md)
+[expm1l](expm1-expm1f-expm1l.md)
 
 ## <a name="f"></a>F
 
@@ -687,9 +687,9 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_fcvt_s](fcvt-s.md)
 
-[fdim –](fdim-fdimf-fdiml.md)
+[fdim](fdim-fdimf-fdiml.md)
 
-[fdimf –](fdim-fdimf-fdiml.md)
+[fdimf](fdim-fdimf-fdiml.md)
 
 [fdiml](fdim-fdimf-fdiml.md)
 
@@ -739,7 +739,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [fgets](fgets-fgetws.md)
 
-[fgetwc –](fgetc-fgetwc.md)
+[fgetwc](fgetc-fgetwc.md)
 
 [_fgetwc_nolock](fgetc-nolock-fgetwc-nolock.md)
 
@@ -749,9 +749,9 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [filelength](filelength.md)
 
-[_filelength –](filelength-filelengthi64.md)
+[_filelength](filelength-filelengthi64.md)
 
-[_filelengthi64 –](filelength-filelengthi64.md)
+[_filelengthi64](filelength-filelengthi64.md)
 
 [fileno](posix-fileno.md)
 
@@ -783,7 +783,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_findnexti64](findnext-functions.md)
 
-[_finite –](finite-finitef.md)
+[_finite](finite-finitef.md)
 
 [_finitef](finite-finitef.md)
 
@@ -799,7 +799,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [fma](fma-fmaf-fmal.md)
 
-[fmaf –](fma-fmaf-fmal.md)
+[fmaf](fma-fmaf-fmal.md)
 
 [fmal](fma-fmaf-fmal.md)
 
@@ -821,7 +821,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [fopen –](fopen-wfopen.md)
 
-[fopen_s –](fopen-s-wfopen-s.md)
+[fopen_s](fopen-s-wfopen-s.md)
 
 [_fpclass](fpclass-fpclassf.md)
 
@@ -841,7 +841,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_fprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)
 
-[fprintf_s –](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)
+[fprintf_s](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)
 
 [_fprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)
 
@@ -855,9 +855,9 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [fputs –](fputs-fputws.md)
 
-[fputwc –](fputc-fputwc.md)
+[fputwc](fputc-fputwc.md)
 
-[_fputwc_nolock –](fputc-nolock-fputwc-nolock.md)
+[_fputwc_nolock](fputc-nolock-fputwc-nolock.md)
 
 [_fputwchar](fputchar-fputwchar.md)
 
@@ -881,7 +881,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [freopen](freopen-wfreopen.md)
 
-[freopen_s –](freopen-s-wfreopen-s.md)
+[freopen_s](freopen-s-wfreopen-s.md)
 
 [frexp](frexp.md)
 
@@ -903,7 +903,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [fsetpos](fsetpos.md)
 
-[_fsopen –](fsopen-wfsopen.md)
+[_fsopen](fsopen-wfsopen.md)
 
 [_fstat](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)
 
@@ -949,7 +949,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [fwide](fwide.md)
 
-[fwprintf –](fprintf-fprintf-l-fwprintf-fwprintf-l.md)
+[fwprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)
 
 [_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)
 
@@ -957,7 +957,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)
 
-[fwprintf_s –](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)
+[fwprintf_s](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)
 
 [_fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)
 
@@ -1019,15 +1019,15 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [getc](getc-getwc.md)
 
-[_getc_nolock –](getc-nolock-getwc-nolock.md)
+[_getc_nolock](getc-nolock-getwc-nolock.md)
 
 [getch](getch.md)
 
 [_getch](getch-getwch.md)
 
-[_getch_nolock –](getch-nolock-getwch-nolock.md)
+[_getch_nolock](getch-nolock-getwch-nolock.md)
 
-[GetChar](getchar-getwchar.md)
+[getchar](getchar-getwchar.md)
 
 [_getchar_nolock](getchar-nolock-getwchar-nolock.md)
 
@@ -1055,7 +1055,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_getdrives](getdrives.md)
 
-[GETENV](getenv-wgetenv.md)
+[getenv](getenv-wgetenv.md)
 
 [getenv_s](getenv-s-wgetenv-s.md)
 
@@ -1067,21 +1067,21 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [getpid](posix-getpid.md)
 
-[gets_s –](gets-s-getws-s.md)
+[gets_s](gets-s-getws-s.md)
 
 [_getw](getw.md)
 
 [getw](posix-getw.md)
 
-[getwc –](getc-getwc.md)
+[getwc](getc-getwc.md)
 
-[_getwc_nolock –](getc-nolock-getwc-nolock.md)
+[_getwc_nolock](getc-nolock-getwc-nolock.md)
 
 [_getwch](getch-getwch.md)
 
-[_getwch_nolock –](getch-nolock-getwch-nolock.md)
+[_getwch_nolock](getch-nolock-getwch-nolock.md)
 
-[getwchar –](getchar-getwchar.md)
+[getwchar](getchar-getwchar.md)
 
 [_getwchar_nolock](getchar-nolock-getwchar-nolock.md)
 
@@ -1111,15 +1111,15 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_heapwalk](heapwalk.md)
 
-[hypot –](hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)
+[hypot](hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)
 
 [_hypot](hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)
 
-[hypotf –](hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)
+[hypotf](hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)
 
 [_hypotf](hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)
 
-[hypotl –](hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)
+[hypotl](hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)
 
 [_hypotl](hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)
 
@@ -1133,7 +1133,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_i64tow_s](itoa-s-itow-s.md)
 
-[ilogb –](ilogb-ilogbf-ilogbl2.md)
+[ilogb](ilogb-ilogbf-ilogbl2.md)
 
 [ilogbf](ilogb-ilogbf-ilogbl2.md)
 
@@ -1143,7 +1143,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [imaxdiv](imaxdiv.md)
 
-[_initterm –](initterm-initterm-e.md)
+[_initterm](initterm-initterm-e.md)
 
 [_initterm_e](initterm-initterm-e.md)
 
@@ -1181,31 +1181,45 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [__iscsym](iscsym-functions.md)
 
-[iscsym –](iscsym-functions.md)
+[iscsym](iscsym-functions.md)
 
 [_iscsym_l](iscsym-functions.md)
 
 [__iscsymf](iscsym-functions.md)
 
-[iscsymf –](iscsym-functions.md)
+[iscsymf](iscsym-functions.md)
 
 [_iscsymf_l](iscsym-functions.md)
 
-[_isctype –](isctype-iswctype-isctype-l-iswctype-l.md)
+[_isctype](isctype-iswctype-isctype-l-iswctype-l.md)
 
 [_isctype_l](isctype-iswctype-isctype-l-iswctype-l.md)
 
-[IsDigit](isdigit-iswdigit-isdigit-l-iswdigit-l.md)
+[isdigit](isdigit-iswdigit-isdigit-l-iswdigit-l.md)
 
 [_isdigit_l](isdigit-iswdigit-isdigit-l-iswdigit-l.md)
+
+[isfinite](finite-finitef.md)
 
 [isgraph](isgraph-iswgraph-isgraph-l-iswgraph-l.md)
 
 [_isgraph_l](isgraph-iswgraph-isgraph-l-iswgraph-l.md)
 
-[isleadbyte –](isleadbyte-isleadbyte-l.md)
+[isgreater](floating-point-ordering.md)
+
+[isgreaterequal](floating-point-ordering.md)
+
+[isinf –](isinf.md)
+
+[isleadbyte](isleadbyte-isleadbyte-l.md)
 
 [_isleadbyte_l](isleadbyte-isleadbyte-l.md)
+
+[isless](floating-point-ordering.md)
+
+[islessequal](floating-point-ordering.md)
+
+[islessgreater](floating-point-ordering.md)
 
 [islower](islower-iswlower-islower-l-iswlower-l.md)
 
@@ -1335,11 +1349,13 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_ismbstrail_l](ismbslead-ismbstrail-ismbslead-l-ismbstrail-l.md)
 
-[isNaN –](isnan-isnan-isnanf.md)
+[isnan](isnan-isnan-isnanf.md)
 
 [_isnan](isnan-isnan-isnanf.md)
 
 [_isnanf](isnan-isnan-isnanf.md)
+
+[isnormal](isnormal.md)
 
 [isprint](isprint-iswprint-isprint-l-iswprint-l.md)
 
@@ -1353,15 +1369,17 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_isspace_l](isspace-iswspace-isspace-l-iswspace-l.md)
 
+[isunordered](floating-point-ordering.md)
+
 [isupper](isupper-isupper-l-iswupper-iswupper-l.md)
 
 [_isupper_l](isupper-isupper-l-iswupper-iswupper-l.md)
 
-[iswalnum –](isalnum-iswalnum-isalnum-l-iswalnum-l.md)
+[iswalnum](isalnum-iswalnum-isalnum-l-iswalnum-l.md)
 
 [_iswalnum_l](isalnum-iswalnum-isalnum-l-iswalnum-l.md)
 
-[iswalpha –](isalpha-iswalpha-isalpha-l-iswalpha-l.md)
+[iswalpha](isalpha-iswalpha-isalpha-l-iswalpha-l.md)
 
 [_iswalpha_l](isalpha-iswalpha-isalpha-l-iswalpha-l.md)
 
@@ -1371,7 +1389,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_iswblank_l](isblank-iswblank-isblank-l-iswblank-l.md)
 
-[iswcntrl –](iscntrl-iswcntrl-iscntrl-l-iswcntrl-l.md)
+[iswcntrl](iscntrl-iswcntrl-iscntrl-l-iswcntrl-l.md)
 
 [_iswcntrl_l](iscntrl-iswcntrl-iscntrl-l-iswcntrl-l.md)
 
@@ -1387,31 +1405,31 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_iswctype_l](isctype-iswctype-isctype-l-iswctype-l.md)
 
-[iswdigit –](isdigit-iswdigit-isdigit-l-iswdigit-l.md)
+[iswdigit](isdigit-iswdigit-isdigit-l-iswdigit-l.md)
 
 [_iswdigit_l](isdigit-iswdigit-isdigit-l-iswdigit-l.md)
 
-[iswgraph –](isgraph-iswgraph-isgraph-l-iswgraph-l.md)
+[iswgraph](isgraph-iswgraph-isgraph-l-iswgraph-l.md)
 
 [_iswgraph_l](isgraph-iswgraph-isgraph-l-iswgraph-l.md)
 
-[iswlower –](islower-iswlower-islower-l-iswlower-l.md)
+[iswlower](islower-iswlower-islower-l-iswlower-l.md)
 
 [_iswlower_l](islower-iswlower-islower-l-iswlower-l.md)
 
-[iswprint –](isprint-iswprint-isprint-l-iswprint-l.md)
+[iswprint](isprint-iswprint-isprint-l-iswprint-l.md)
 
 [_iswprint_l](isprint-iswprint-isprint-l-iswprint-l.md)
 
-[iswpunct –](ispunct-iswpunct-ispunct-l-iswpunct-l.md)
+[iswpunct](ispunct-iswpunct-ispunct-l-iswpunct-l.md)
 
 [_iswpunct_l](ispunct-iswpunct-ispunct-l-iswpunct-l.md)
 
-[iswspace –](isspace-iswspace-isspace-l-iswspace-l.md)
+[iswspace](isspace-iswspace-isspace-l-iswspace-l.md)
 
 [_iswspace_l](isspace-iswspace-isspace-l-iswspace-l.md)
 
-[iswupper –](isupper-isupper-l-iswupper-iswupper-l.md)
+[iswupper](isupper-isupper-l-iswupper-iswupper-l.md)
 
 [_iswupper_l](isupper-isupper-l-iswupper-iswupper-l.md)
 
@@ -1455,7 +1473,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 ## <a name="l"></a>L
 
-[Praktická cvičení](abs-labs-llabs-abs64.md)
+[labs](abs-labs-llabs-abs64.md)
 
 [ldexp](ldexp.md)
 
@@ -1473,7 +1491,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [lgammal](lgamma-lgammaf-lgammal.md)
 
-[llabs –](abs-labs-llabs-abs64.md)
+[llabs](abs-labs-llabs-abs64.md)
 
 [lldiv](ldiv-lldiv.md)
 
@@ -1485,7 +1503,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [llround –](lround-lroundf-lroundl-llround-llroundf-llroundl.md)
 
-[llroundf –](lround-lroundf-lroundl-llround-llroundf-llroundl.md)
+[llroundf](lround-lroundf-lroundl-llround-llroundf-llroundl.md)
 
 [llroundl –](lround-lroundf-lroundl-llround-llroundf-llroundl.md)
 
@@ -1493,7 +1511,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [localtime](localtime-localtime32-localtime64.md)
 
-[localtime_s –](localtime-s-localtime32-s-localtime64-s.md)
+[localtime_s](localtime-s-localtime32-s-localtime64-s.md)
 
 [_localtime32](localtime-localtime32-localtime64.md)
 
@@ -1509,13 +1527,13 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_locking](locking.md)
 
-[protokol](log-logf-log10-log10f.md)
+[log](log-logf-log10-log10f.md)
 
 [log10](log-logf-log10-log10f.md)
 
 [log10f](log-logf-log10-log10f.md)
 
-[log1p –](log1p-log1pf-log1pl2.md)
+[log1p](log1p-log1pf-log1pl2.md)
 
 [log1pf](log1p-log1pf-log1pl2.md)
 
@@ -1527,17 +1545,17 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [log2l](log2-log2f-log2l.md)
 
-[logb –](logb-logbf-logbl-logb-logbf.md)
+[logb](logb-logbf-logbl-logb-logbf.md)
 
 [_logb](logb-logbf-logbl-logb-logbf.md)
 
-[logbf –](logb-logbf-logbl-logb-logbf.md)
+[logbf](logb-logbf-logbl-logb-logbf.md)
 
 [_logbf](logb-logbf-logbl-logb-logbf.md)
 
-[logbl –](logb-logbf-logbl-logb-logbf.md)
+[logbl](logb-logbf-logbl-logb-logbf.md)
 
-[logf –](log-logf-log10-log10f.md)
+[logf](log-logf-log10-log10f.md)
 
 [longjmp](longjmp.md)
 
@@ -1553,7 +1571,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [lround –](lround-lroundf-lroundl-llround-llroundf-llroundl.md)
 
-[lroundf –](lround-lroundf-lroundl-llround-llroundf-llroundl.md)
+[lroundf](lround-lroundf-lroundl-llround-llroundf-llroundl.md)
 
 [lroundl –](lround-lroundf-lroundl-llround-llroundf-llroundl.md)
 
@@ -1599,7 +1617,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_mbbtombc_l](mbbtombc-mbbtombc-l.md)
 
-[_mbbtype –](mbbtype-mbbtype-l.md)
+[_mbbtype](mbbtype-mbbtype-l.md)
 
 [_mbbtype_l](mbbtype-mbbtype-l.md)
 
@@ -1611,15 +1629,17 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_mbccpy_s_l](mbccpy-s-mbccpy-s-l.md)
 
-[_mbcjistojms –](mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)
+[_mbcjistojms](mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)
 
 [_mbcjistojms_l](mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)
 
-[_mbcjmstojis –](mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)
+[_mbcjmstojis](mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)
 
 [_mbcjmstojis_l](mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)
 
 [_mbclen](mbclen-mblen-mblen-l.md)
+
+[_mbclen_l](mbclen-mblen-mblen-l.md)
 
 [_mbctohira](mbctohira-mbctohira-l-mbctokata-mbctokata-l.md)
 
@@ -1629,15 +1649,15 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_mbctokata_l](mbctohira-mbctohira-l-mbctokata-mbctokata-l.md)
 
-[_mbctolower –](mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)
+[_mbctolower](mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)
 
 [_mbctolower_l](mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)
 
-[_mbctombb –](mbctombb-mbctombb-l.md)
+[_mbctombb](mbctombb-mbctombb-l.md)
 
 [_mbctombb_l](mbctombb-mbctombb-l.md)
 
-[_mbctoupper –](mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)
+[_mbctoupper](mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)
 
 [_mbctoupper_l](mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)
 
@@ -1653,7 +1673,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [mbrtowc](mbrtowc.md)
 
-[_mbsbtype –](mbsbtype-mbsbtype-l.md)
+[_mbsbtype](mbsbtype-mbsbtype-l.md)
 
 [_mbsbtype_l](mbsbtype-mbsbtype-l.md)
 
@@ -1661,19 +1681,25 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_mbscat_s](strcat-s-wcscat-s-mbscat-s.md)
 
+[_mbscat_s_l](strcat-s-wcscat-s-mbscat-s.md)
+
 [_mbschr](strchr-wcschr-mbschr-mbschr-l.md)
 
 [_mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)
 
 [_mbscmp](strcmp-wcscmp-mbscmp.md)
 
-[_mbscoll –](strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)
+[_mbscmp_l](strcmp-wcscmp-mbscmp.md)
+
+[_mbscoll](strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)
 
 [_mbscoll_l](strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)
 
 [_mbscpy](strcpy-wcscpy-mbscpy.md)
 
 [_mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)
+
+[_mbscpy_s_l](strcpy-s-wcscpy-s-mbscpy-s.md)
 
 [_mbscspn](strcspn-wcscspn-mbscspn-mbscspn-l.md)
 
@@ -1685,11 +1711,11 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_mbsdup](strdup-wcsdup-mbsdup.md)
 
-[_mbsicmp –](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)
+[_mbsicmp](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)
 
 [_mbsicmp_l](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)
 
-[_mbsicoll –](stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)
+[_mbsicoll](stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)
 
 [_mbsicoll_l](stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)
 
@@ -1727,7 +1753,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_mbsnbcnt_l](strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)
 
-[_mbsnbcoll –](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)
+[_mbsnbcoll](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)
 
 [_mbsnbcoll_l](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)
 
@@ -1743,7 +1769,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_mbsnbicmp_l](mbsnbicmp-mbsnbicmp-l.md)
 
-[_mbsnbicoll –](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)
+[_mbsnbicoll](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)
 
 [_mbsnbicoll_l](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)
 
@@ -1787,19 +1813,19 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_mbsnextc_l](strnextc-wcsnextc-mbsnextc-mbsnextc-l.md)
 
-[_mbsnicmp –](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)
+[_mbsnicmp](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)
 
 [_mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)
 
-[_mbsnicoll –](strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)
+[_mbsnicoll](strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)
 
 [_mbsnicoll_l](strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)
 
-[_mbsninc –](strninc-wcsninc-mbsninc-mbsninc-l.md)
+[_mbsninc](strninc-wcsninc-mbsninc-mbsninc-l.md)
 
 [_mbsninc_l](strninc-wcsninc-mbsninc-mbsninc-l.md)
 
-[_mbsnlen –](strnlen-strnlen-s.md)
+[_mbsnlen](strnlen-strnlen-s.md)
 
 [_mbsnlen_l](strnlen-strnlen-s.md)
 
@@ -1847,7 +1873,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_mbsstr_l](strstr-wcsstr-mbsstr-mbsstr-l.md)
 
-[_mbstok –](strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md)
+[_mbstok](strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md)
 
 [_mbstok_l](strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md)
 
@@ -1859,23 +1885,23 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_mbstowcs_l](mbstowcs-mbstowcs-l.md)
 
-[mbstowcs_s –](mbstowcs-s-mbstowcs-s-l.md)
+[mbstowcs_s](mbstowcs-s-mbstowcs-s-l.md)
 
 [_mbstowcs_s_l](mbstowcs-s-mbstowcs-s-l.md)
 
-[_mbstrlen –](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)
+[_mbstrlen](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)
 
-[_mbstrlen_l –](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)
+[_mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)
 
-[_mbstrnlen –](strnlen-strnlen-s.md)
+[_mbstrnlen](strnlen-strnlen-s.md)
 
 [_mbstrnlen_l](strnlen-strnlen-s.md)
 
-[_mbsupr –](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md)
+[_mbsupr](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md)
 
 [_mbsupr_l](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md)
 
-[_mbsupr_s –](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)
+[_mbsupr_s](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)
 
 [_mbsupr_s_l](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)
 
@@ -1903,7 +1929,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [memmove](memmove-wmemmove.md)
 
-[memmove_s –](memmove-s-wmemmove-s.md)
+[memmove_s](memmove-s-wmemmove-s.md)
 
 [memset](memset-wmemset.md)
 
@@ -1931,7 +1957,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_mktime64](mktime-mktime32-mktime64.md)
 
-[modf –](modf-modff-modfl.md)
+[modf](modf-modff-modfl.md)
 
 [modff](modf-modff-modfl.md)
 
@@ -1953,7 +1979,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)
 
-[nextafter –](nextafter-functions.md)
+[nextafter](nextafter-functions.md)
 
 [_nextafter](nextafter-functions.md)
 
@@ -2009,9 +2035,9 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [Pow](pow-powf-powl.md)
 
-[powf –](pow-powf-powl.md)
+[powf](pow-powf-powl.md)
 
-[powl –](pow-powf-powl.md)
+[powl](pow-powf-powl.md)
 
 [printf](printf-printf-l-wprintf-wprintf-l.md)
 
@@ -2111,7 +2137,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [remquof](remquo-remquof-remquol.md)
 
-[remquol –](remquo-remquof-remquol.md)
+[remquol](remquo-remquof-remquol.md)
 
 [Přejmenovat](rename-wrename.md)
 
@@ -2267,15 +2293,17 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [signal](signal.md)
 
-[Sin](sin-sinf-sinl.md)
+[signbit –](signbit.md)
+
+[sin](sin-sinf-sinl.md)
 
 [sinf –](sin-sinf-sinl.md)
 
-[SINH –](sinh-sinhf-sinhl.md)
+[sinh](sinh-sinhf-sinhl.md)
 
 [sinhf](sinh-sinhf-sinhl.md)
 
-[sinhl –](sinh-sinhf-sinhl.md)
+[sinhl](sinh-sinhf-sinhl.md)
 
 [sinl –](sin-sinf-sinl.md)
 
@@ -2317,7 +2345,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_sopen](sopen-wsopen.md)
 
-[_sopen_s –](sopen-s-wsopen-s.md)
+[_sopen_s](sopen-s-wsopen-s.md)
 
 [spawnl](spawnl.md)
 
@@ -2409,11 +2437,11 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [strchr](strchr-wcschr-mbschr-mbschr-l.md)
 
-[strcmp –](strcmp-wcscmp-mbscmp.md)
+[strcmp](strcmp-wcscmp-mbscmp.md)
 
 [strcmpi](strcmpi.md)
 
-[strcoll –](strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)
+[strcoll](strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)
 
 [_strcoll_l](strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)
 
@@ -2421,7 +2449,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)
 
-[strcspn –](strcspn-wcscspn-mbscspn-mbscspn-l.md)
+[strcspn](strcspn-wcscspn-mbscspn-mbscspn-l.md)
 
 [_strdate](strdate-wstrdate.md)
 
@@ -2431,7 +2459,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_strdup](strdup-wcsdup-mbsdup.md)
 
-[StrDup](strdup-wcsdup.md)
+[strdup](strdup-wcsdup.md)
 
 [_strdup_dbg](strdup-dbg-wcsdup-dbg.md)
 
@@ -2443,13 +2471,13 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_strerror_s](strerror-s-strerror-s-wcserror-s-wcserror-s.md)
 
-[STRFTIME](strftime-wcsftime-strftime-l-wcsftime-l.md)
+[strftime](strftime-wcsftime-strftime-l-wcsftime-l.md)
 
 [_strftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)
 
 [_stricmp](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)
 
-[stricmp –](stricmp-wcsicmp.md)
+[stricmp](stricmp-wcsicmp.md)
 
 [_stricmp_l](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)
 
@@ -2459,7 +2487,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_strinc](strinc-wcsinc-mbsinc-mbsinc-l.md)
 
-[strlen –](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)
+[strlen](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)
 
 [_strlwr](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md)
 
@@ -2479,7 +2507,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_strncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)
 
-[strncmp –](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)
+[strncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)
 
 [_strncnt](strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)
 
@@ -2499,7 +2527,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_strnicmp](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)
 
-[strnicmp –](strnicmp-wcsnicmp.md)
+[strnicmp](strnicmp-wcsnicmp.md)
 
 [_strnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)
 
@@ -2509,9 +2537,9 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_strninc](strninc-wcsninc-mbsninc-mbsninc-l.md)
 
-[strnlen –](strnlen-strnlen-s.md)
+[strnlen](strnlen-strnlen-s.md)
 
-[strnlen_s –](strnlen-strnlen-s.md)
+[strnlen_s](strnlen-strnlen-s.md)
 
 [_strnset](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)
 
@@ -2533,7 +2561,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_strset](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)
 
-[strset –](strset-wcsset.md)
+[strset](strset-wcsset.md)
 
 [_strset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)
 
@@ -2545,7 +2573,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_strspnp](strspnp-wcsspnp-mbsspnp-mbsspnp-l.md)
 
-[strstr –](strstr-wcsstr-mbsstr-mbsstr-l.md)
+[strstr](strstr-wcsstr-mbsstr-mbsstr-l.md)
 
 [_strtime](strtime-wstrtime.md)
 
@@ -2567,7 +2595,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_strtoimax_l](strtoimax-strtoimax-l-wcstoimax-wcstoimax-l.md)
 
-[strtok –](strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md)
+[strtok](strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md)
 
 [_strtok_l](strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md)
 
@@ -2575,7 +2603,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_strtok_s_l](strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md)
 
-[strtol –](strtol-wcstol-strtol-l-wcstol-l.md)
+[strtol](strtol-wcstol-strtol-l-wcstol-l.md)
 
 [_strtol_l](strtol-wcstol-strtol-l-wcstol-l.md)
 
@@ -2583,7 +2611,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_strtold_l](strtold-strtold-l-wcstold-wcstold-l.md)
 
-[strtoll –](strtoll-strtoll-l-wcstoll-wcstoll-l.md)
+[strtoll](strtoll-strtoll-l-wcstoll-wcstoll-l.md)
 
 [_strtoll_l](strtoll-strtoll-l-wcstoll-wcstoll-l.md)
 
@@ -2591,21 +2619,21 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_strtoui64_l](strtoui64-wcstoui64-strtoui64-l-wcstoui64-l.md)
 
-[strtoul –](strtoul-strtoul-l-wcstoul-wcstoul-l.md)
+[strtoul](strtoul-strtoul-l-wcstoul-wcstoul-l.md)
 
 [_strtoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)
 
-[strtoull –](strtoull-strtoull-l-wcstoull-wcstoull-l.md)
+[strtoull](strtoull-strtoull-l-wcstoull-wcstoull-l.md)
 
 [_strtoull_l](strtoull-strtoull-l-wcstoull-wcstoull-l.md)
 
-[strtoumax –](strtoumax-strtoumax-l-wcstoumax-wcstoumax-l.md)
+[strtoumax](strtoumax-strtoumax-l-wcstoumax-wcstoumax-l.md)
 
 [_strtoumax_l](strtoumax-strtoumax-l-wcstoumax-wcstoumax-l.md)
 
 [_strupr](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md)
 
-[strupr –](strupr-wcsupr.md)
+[strupr](strupr-wcsupr.md)
 
 [_strupr_l](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md)
 
@@ -2631,11 +2659,11 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_swprintf_p_l](sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)
 
-[swprintf_s –](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)
+[swprintf_s](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)
 
 [_swprintf_s_l](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)
 
-[swscanf –](sscanf-sscanf-l-swscanf-swscanf-l.md)
+[swscanf](sscanf-sscanf-l-swscanf-swscanf-l.md)
 
 [_swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)
 
@@ -2643,7 +2671,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)
 
-[Systém](system-wsystem.md)
+[system](system-wsystem.md)
 
 ## <a name="t"></a>T
 
@@ -2651,7 +2679,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [tanf –](tan-tanf-tanl.md)
 
-[TANH –](tanh-tanhf-tanhl.md)
+[tanh](tanh-tanhf-tanhl.md)
 
 [tanhf](tanh-tanhf-tanhl.md)
 
@@ -2701,33 +2729,33 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [__toascii](toascii-toascii.md)
 
-[ToAscii –](toascii-toascii.md)
+[toascii](toascii-toascii.md)
 
-[ToLower](tolower-tolower-towlower-tolower-l-towlower-l.md)
+[tolower](tolower-tolower-towlower-tolower-l-towlower-l.md)
 
-[_tolower –](tolower-tolower-towlower-tolower-l-towlower-l.md)
+[_tolower](tolower-tolower-towlower-tolower-l-towlower-l.md)
 
 [_tolower_l](tolower-tolower-towlower-tolower-l-towlower-l.md)
 
-[ToUpper](toupper-toupper-towupper-toupper-l-towupper-l.md)
+[toupper](toupper-toupper-towupper-toupper-l-towupper-l.md)
 
-[_toupper –](toupper-toupper-towupper-toupper-l-towupper-l.md)
+[_toupper](toupper-toupper-towupper-toupper-l-towupper-l.md)
 
 [_toupper_l](toupper-toupper-towupper-toupper-l-towupper-l.md)
 
 [towctrans](towctrans.md)
 
-[towlower –](tolower-tolower-towlower-tolower-l-towlower-l.md)
+[towlower](tolower-tolower-towlower-tolower-l-towlower-l.md)
 
 [_towlower_l](tolower-tolower-towlower-tolower-l-towlower-l.md)
 
-[towupper –](toupper-toupper-towupper-toupper-l-towupper-l.md)
+[towupper](toupper-toupper-towupper-toupper-l-towupper-l.md)
 
 [_towupper_l](toupper-toupper-towupper-toupper-l-towupper-l.md)
 
-[TRUNC –](trunc-truncf-truncl.md)
+[trunc](trunc-truncf-truncl.md)
 
-[truncf –](trunc-truncf-truncl.md)
+[truncf](trunc-truncf-truncl.md)
 
 [truncl](trunc-truncf-truncl.md)
 
@@ -2747,7 +2775,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [ultoa](itoa-itow.md)
 
-[_ultoa –](itoa-itow.md)
+[_ultoa](itoa-itow.md)
 
 [_ultoa_s](itoa-s-itow-s.md)
 
@@ -2765,23 +2793,23 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [unexpected](unexpected-crt.md)
 
-[ungetc –](ungetc-ungetwc.md)
+[ungetc](ungetc-ungetwc.md)
 
-[_ungetc_nolock –](ungetc-nolock-ungetwc-nolock.md)
+[_ungetc_nolock](ungetc-nolock-ungetwc-nolock.md)
 
 [ungetch](ungetch.md)
 
 [_ungetch](ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)
 
-[_ungetch_nolock –](ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)
+[_ungetch_nolock](ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)
 
-[ungetwc –](ungetc-ungetwc.md)
+[ungetwc](ungetc-ungetwc.md)
 
-[_ungetwc_nolock –](ungetc-nolock-ungetwc-nolock.md)
+[_ungetwc_nolock](ungetc-nolock-ungetwc-nolock.md)
 
 [_ungetwch](ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)
 
-[_ungetwch_nolock –](ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)
+[_ungetwch_nolock](ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)
 
 [unlink](unlink.md)
 
@@ -2825,11 +2853,11 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_vcwprintf_p_l](vcprintf-p-vcprintf-p-l-vcwprintf-p-vcwprintf-p-l.md)
 
-[_vcwprintf_s –](vcprintf-s-vcprintf-s-l-vcwprintf-s-vcwprintf-s-l.md)
+[_vcwprintf_s](vcprintf-s-vcprintf-s-l-vcwprintf-s-vcwprintf-s-l.md)
 
 [_vcwprintf_s_l](vcprintf-s-vcprintf-s-l-vcwprintf-s-vcwprintf-s-l.md)
 
-[vfprintf –](vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)
+[vfprintf](vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)
 
 [_vfprintf_l](vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)
 
@@ -2845,7 +2873,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [vfscanf_s](vfscanf-s-vfwscanf-s.md)
 
-[vfwprintf –](vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)
+[vfwprintf](vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)
 
 [_vfwprintf_l](vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)
 
@@ -2853,7 +2881,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_vfwprintf_p_l](vfprintf-p-vfprintf-p-l-vfwprintf-p-vfwprintf-p-l.md)
 
-[vfwprintf_s –](vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md)
+[vfwprintf_s](vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md)
 
 [_vfwprintf_s_l](vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md)
 
@@ -2893,13 +2921,13 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_vscwprintf_p_l](vscprintf-p-vscprintf-p-l-vscwprintf-p-vscwprintf-p-l.md)
 
-[vsnprintf –](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)
+[vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)
 
 [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)
 
 [_vsnprintf_l](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)
 
-[vsnprintf_s –](vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)
+[vsnprintf_s](vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)
 
 [_vsnprintf_s](vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)
 
@@ -2913,7 +2941,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_vsnwprintf_s_l](vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)
 
-[vsprintf –](vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md)
+[vsprintf](vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md)
 
 [_vsprintf_l](vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md)
 
@@ -2929,7 +2957,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [vsscanf_s](vsscanf-s-vswscanf-s.md)
 
-[vswprintf –](vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md)
+[vswprintf](vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md)
 
 [_vswprintf_l](vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md)
 
@@ -2939,15 +2967,15 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_vswprintf_p_l](vsprintf-p-vsprintf-p-l-vswprintf-p-vswprintf-p-l.md)
 
-[vswprintf_s –](vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)
+[vswprintf_s](vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)
 
 [_vswprintf_s_l](vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)
 
-[vswscanf –](vsscanf-vswscanf.md)
+[vswscanf](vsscanf-vswscanf.md)
 
 [vswscanf_s](vsscanf-s-vswscanf-s.md)
 
-[vwprintf –](vprintf-vprintf-l-vwprintf-vwprintf-l.md)
+[vwprintf](vprintf-vprintf-l-vwprintf-vwprintf-l.md)
 
 [_vwprintf_l](vprintf-vprintf-l-vwprintf-vwprintf-l.md)
 
@@ -2955,7 +2983,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_vwprintf_p_l](vprintf-p-vprintf-p-l-vwprintf-p-vwprintf-p-l.md)
 
-[vwprintf_s –](vprintf-s-vprintf-s-l-vwprintf-s-vwprintf-s-l.md)
+[vwprintf_s](vprintf-s-vprintf-s-l-vwprintf-s-vwprintf-s-l.md)
 
 [_vwprintf_s_l](vprintf-s-vprintf-s-l-vwprintf-s-vwprintf-s-l.md)
 
@@ -2993,7 +3021,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [wcschr](strchr-wcschr-mbschr-mbschr-l.md)
 
-[wcscmp –](strcmp-wcscmp-mbscmp.md)
+[wcscmp](strcmp-wcscmp-mbscmp.md)
 
 [wcscoll –](strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)
 
@@ -3009,7 +3037,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_wcsdup](strdup-wcsdup-mbsdup.md)
 
-[wcsdup –](strdup-wcsdup.md)
+[wcsdup](strdup-wcsdup.md)
 
 [_wcsdup_dbg](strdup-dbg-wcsdup-dbg.md)
 
@@ -3027,7 +3055,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_wcsicmp](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)
 
-[wcsicmp –](stricmp-wcsicmp.md)
+[wcsicmp](stricmp-wcsicmp.md)
 
 [_wcsicmp_l](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)
 
@@ -3051,7 +3079,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)
 
-[wcsncat –](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)
+[wcsncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)
 
 [_wcsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)
 
@@ -3059,7 +3087,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_wcsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)
 
-[wcsncmp –](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)
+[wcsncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)
 
 [_wcsncnt](strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)
 
@@ -3067,7 +3095,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_wcsncoll_l](strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)
 
-[wcsncpy –](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)
+[wcsncpy](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)
 
 [_wcsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)
 
@@ -3079,7 +3107,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_wcsnicmp](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)
 
-[wcsnicmp –](strnicmp-wcsnicmp.md)
+[wcsnicmp](strnicmp-wcsnicmp.md)
 
 [_wcsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)
 
@@ -3089,13 +3117,13 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_wcsninc](strninc-wcsninc-mbsninc-mbsninc-l.md)
 
-[wcsnlen –](strnlen-strnlen-s.md)
+[wcsnlen](strnlen-strnlen-s.md)
 
-[wcsnlen_s –](strnlen-strnlen-s.md)
+[wcsnlen_s](strnlen-strnlen-s.md)
 
 [_wcsnset](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)
 
-[wcsnset –](strnset-wcsnset.md)
+[wcsnset](strnset-wcsnset.md)
 
 [_wcsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)
 
@@ -3103,7 +3131,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_wcsnset_s_l](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md)
 
-[wcspbrk –](strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)
+[wcspbrk](strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)
 
 [wcsrchr](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)
 
@@ -3129,9 +3157,9 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_wcsspnp](strspnp-wcsspnp-mbsspnp-mbsspnp-l.md)
 
-[wcsstr –](strstr-wcsstr-mbsstr-mbsstr-l.md)
+[wcsstr](strstr-wcsstr-mbsstr-mbsstr-l.md)
 
-[wcstod –](strtod-strtod-l-wcstod-wcstod-l.md)
+[wcstod](strtod-strtod-l-wcstod-wcstod-l.md)
 
 [_wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)
 
@@ -3143,11 +3171,11 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_wcstoi64_l](strtoi64-wcstoi64-strtoi64-l-wcstoi64-l.md)
 
-[wcstoimax –](strtoimax-strtoimax-l-wcstoimax-wcstoimax-l.md)
+[wcstoimax](strtoimax-strtoimax-l-wcstoimax-wcstoimax-l.md)
 
 [_wcstoimax_l](strtoimax-strtoimax-l-wcstoimax-wcstoimax-l.md)
 
-[wcstok –](strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md)
+[wcstok](strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md)
 
 [_wcstok_l](strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md)
 
@@ -3155,7 +3183,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_wcstok_s_l](strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md)
 
-[wcstol –](strtol-wcstol-strtol-l-wcstol-l.md)
+[wcstol](strtol-wcstol-strtol-l-wcstol-l.md)
 
 [_wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)
 
@@ -3167,7 +3195,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_wcstoll_l](strtoll-strtoll-l-wcstoll-wcstoll-l.md)
 
-[wcstombs –](wcstombs-wcstombs-l.md)
+[wcstombs](wcstombs-wcstombs-l.md)
 
 [_wcstombs_l](wcstombs-wcstombs-l.md)
 
@@ -3179,7 +3207,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_wcstoui64_l](strtoui64-wcstoui64-strtoui64-l-wcstoui64-l.md)
 
-[wcstoul –](strtoul-strtoul-l-wcstoul-wcstoul-l.md)
+[wcstoul](strtoul-strtoul-l-wcstoul-wcstoul-l.md)
 
 [_wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)
 
@@ -3187,13 +3215,13 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_wcstoull_l](strtoull-strtoull-l-wcstoull-wcstoull-l.md)
 
-[wcstoumax –](strtoumax-strtoumax-l-wcstoumax-wcstoumax-l.md)
+[wcstoumax](strtoumax-strtoumax-l-wcstoumax-wcstoumax-l.md)
 
 [_wcstoumax_l](strtoumax-strtoumax-l-wcstoumax-wcstoumax-l.md)
 
 [_wcsupr](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md)
 
-[wcsupr –](strupr-wcsupr.md)
+[wcsupr](strupr-wcsupr.md)
 
 [_wcsupr_l](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md)
 
@@ -3219,11 +3247,11 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [wctob](wctob.md)
 
-[wctomb –](wctomb-wctomb-l.md)
+[wctomb](wctomb-wctomb-l.md)
 
 [_wctomb_l](wctomb-wctomb-l.md)
 
-[wctomb_s –](wctomb-s-wctomb-s-l.md)
+[wctomb_s](wctomb-s-wctomb-s-l.md)
 
 [_wctomb_s_l](wctomb-s-wctomb-s-l.md)
 
@@ -3285,7 +3313,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_wfreopen_s](freopen-s-wfreopen-s.md)
 
-[_wfsopen –](fsopen-wfsopen.md)
+[_wfsopen](fsopen-wfsopen.md)
 
 [_wfullpath](fullpath-wfullpath.md)
 
@@ -3317,7 +3345,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [wmemcpy_s](memcpy-s-wmemcpy-s.md)
 
-[wmemmove –](memmove-wmemmove.md)
+[wmemmove](memmove-wmemmove.md)
 
 [wmemmove_s](memmove-s-wmemmove-s.md)
 
@@ -3471,7 +3499,7 @@ Referenční dokumentace knihovny Universal C Runtime (UCRT, často pouze CRT) j
 
 [_y1](bessel-functions-j0-j1-jn-y0-y1-yn.md)
 
-[Y1](y0-y1-yn.md)
+[y1](y0-y1-yn.md)
 
 [_yn](bessel-functions-j0-j1-jn-y0-y1-yn.md)
 

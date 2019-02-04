@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: fb5f78411521dcbaddefda6c621b7fe44ce91736
-ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
+ms.openlocfilehash: 9c7a7fed8eabc38f1a0a67587d495e75ba8fa3d8
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031288"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702905"
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 
@@ -82,7 +82,7 @@ Vždy Zkontrolujte návratovou hodnotu, zda ukazatel je NULL, před provedením 
 
 **fopen –** podporuje datové proudy souborů Unicode. Chcete-li otevřít soubor Unicode, předejte **ccs** příznak, který určuje požadované kódování **fopen**, následujícím způsobem.
 
-> **SOUBOR *fp = fopen ("novýsoubor.txt", "rt + ccs =**_kódování_**");**
+> **SOUBOR \*fp = fopen ("novýsoubor.txt", "rt + ccs =**_kódování_**");**
 
 Povolené hodnoty parametru *kódování* jsou **UNICODE**, **UTF-8**, a **UTF-16LE**.
 
@@ -111,7 +111,7 @@ Pokud *režimu* je **", ccs =**_kódování_**"**, **fopen** poprvé pokusí ote
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tfopen –**|**fopen –**|**fopen –**|**_wfopen**|
+|**_tfopen**|**fopen –**|**fopen –**|**_wfopen**|
 
 Řetězec znaků *režimu* určuje druh přístupu, které jsou požadovány pro soubor, následujícím způsobem.
 
@@ -156,18 +156,18 @@ Tyto možnosti lze připojit k *režimu* zadat další chování.
 | **R** | Určuje, že je mezipaměť optimalizovaná pro, ale nikoliv omezená, náhodný přístup z disku. |
 | **T** | Určuje soubor jako dočasný. Pokud je to možné, není zapsán na disk. |
 | **D** | Určuje soubor jako dočasný. Je smazán po uzavření posledního ukazatele na soubor. |
-| **CCS =**_kódování_ | Určuje kódovaného znakovou sadu (jeden z **UTF-8**, **UTF-16LE**, nebo **UNICODE**) pro tento soubor. Ponechte nevyplněné, pokud chcete, aby kódování ANSI. |
+| **ccs=**_encoding_ | Určuje kódovaného znakovou sadu (jeden z **UTF-8**, **UTF-16LE**, nebo **UNICODE**) pro tento soubor. Ponechte nevyplněné, pokud chcete, aby kódování ANSI. |
 
 Platné znaky pro *režimu* řetězec, který se používá v **fopen** a **_fdopen –** odpovídají *oflag* argumenty, které se používají v [_Otevřít](open-wopen.md) a [_sopen](sopen-wsopen.md), následujícím způsobem.
 
 |Znaky v *režimu* řetězec|Ekvivalentní *oflag* hodnota \_otevřít /\_sopen –|
 |-------------------------------|----------------------------------------------------|
 |**a**|**\_O\_WRONLY** &#124;  **\_O\_APPEND** (obvykle  **\_O\_WRONLY** &#124;  **\_O\_CREAT** &#124;  **\_O\_APPEND**)|
-|**a +**|**\_O\_RDWR** &#124;  **\_O\_APPEND** (obvykle  **\_O\_RDWR** &#124;  **\_ O\_APPEND** &#124;  **\_O\_CREAT** )|
+|**a+**|**\_O\_RDWR** &#124;  **\_O\_APPEND** (obvykle  **\_O\_RDWR** &#124;  **\_ O\_APPEND** &#124;  **\_O\_CREAT** )|
 |**r**|**\_O\_RDONLY**|
-|**r +**|**\_O\_RDWR**|
+|**r+**|**\_O\_RDWR**|
 |**w**|**\_O\_WRONLY** (obvykle  **\_O\_WRONLY** &#124;  **\_O\_CREAT** &#124;  **\_O\_TRUNC**)|
-|**w +**|**\_O\_RDWR** (obvykle  **\_O\_RDWR** &#124;  **\_O\_CREAT** &#124;  **\_ O\_TRUNC**)|
+|**w+**|**\_O\_RDWR** (obvykle  **\_O\_RDWR** &#124;  **\_O\_CREAT** &#124;  **\_ O\_TRUNC**)|
 |**b**|**\_O\_BINÁRNÍ**|
 |**t**|**\_O\_TEXT**|
 |**c**|Žádná|
@@ -176,9 +176,9 @@ Platné znaky pro *režimu* řetězec, který se používá v **fopen** a **_fdo
 |**R**|**\_O\_RANDOM**|
 |**T**|**\_O\_SHORTLIVED**|
 |**D**|**\_O\_DOČASNÉ**|
-|**CCS = kódování UNICODE**|**\_O\_WTEXT**|
-|**CCS = UTF-8**|**\_O\_UTF8**|
-|**CCS = UTF-16LE**|**\_O\_UTF16**|
+|**ccs=UNICODE**|**\_O\_WTEXT**|
+|**ccs=UTF-8**|**\_O\_UTF8**|
+|**ccs=UTF-16LE**|**\_O\_UTF16**|
 
 Pokud používáte **rb** režimu, není nutné k portu váš kód a očekávat větší část velkého souboru nebo nejsou obavy o výkon sítě, můžete také zvážit, zda použití paměti soubory typu Win32 namapované jako možnost.
 

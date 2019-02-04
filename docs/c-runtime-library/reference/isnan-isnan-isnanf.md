@@ -1,6 +1,6 @@
 ---
 title: isNaN – _isnan –, _isnanf
-ms.date: 04/05/2018
+ms.date: 01/31/2019
 apiname:
 - _isnan
 - _isnanf
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - Not a Number (NANs)
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
-ms.openlocfilehash: ce111569b7caee9d0c7b8f35352c395571ad08b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a907dd33803cebd7bc5d71789834d115333b6a0
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650863"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703087"
 ---
 # <a name="isnan-isnan-isnanf"></a>isNaN – _isnan –, _isnanf
 
@@ -73,21 +73,21 @@ Hodnota s plovoucí desetinnou čárkou k testování.
 
 V jazyce C **isNaN –** – makro a **_isnan –** a **_isnanf** funkce vrátí nenulovou hodnotu, pokud argument *x* je NAN; jinak vrátí hodnotu, Vrátí 0.
 
-V jazyce C++ **isNaN –** šablony funkce vrátit **true** Pokud argument *x* je NAN; v opačném případě vrátí **false**.
+V jazyce C++ **isNaN –** funkce šablony vrátí **true** Pokud argument *x* je NaN; v opačném případě vrátí **false**.
 
 ## <a name="remarks"></a>Poznámky
 
-C **isnan** – makro a **_isnan –** a **_isnanf** funkce testování s plovoucí desetinnou čárkou *x*, vrací nenulovou hodnotu, pokud *x* je hodnota číslo (NAN). NAN se vygeneruje, když ve formátu s plovoucí desetinnou čárkou IEEE 754 pro zadaný typ nelze reprezentovat výsledek operace s plovoucí desetinnou čárkou. Informace o tom, jak je reprezentovaná NAN pro výstup, naleznete v tématu [printf](printf-printf-l-wprintf-wprintf-l.md).
+Protože hodnota NaN není výsledkem porovnání jako jakákoli jiná hodnota NaN, musíte použít některý z těchto funkcí nebo makra rozpoznat jeden. NaN se vygeneruje, když ve formátu s plovoucí desetinnou čárkou IEEE 754 pro zadaný typ nelze reprezentovat výsledek operace s plovoucí desetinnou čárkou. Informace o tom, jak je reprezentovaná NaN pro výstup, naleznete v tématu [printf](printf-printf-l-wprintf-wprintf-l.md).
 
-Při kompilaci jako C++, **isnan** makro není definované a **isnan** místo toho je definována šablona funkce. Vrátí hodnotu typu **bool** namísto celého čísla.
+Při kompilaci jako C++, **isnan** makro není definované a **isnan** místo toho je definována šablona funkce. Jak se bude chovat stejně jako makra, ale vrátí hodnotu typu **bool** namísto celého čísla.
 
-**_Isnan –** a **_isnanf** funkce jsou specifické pro Microsoft. **_Isnanf** funkce dostupná jenom při kompilaci pro x64.
+**_Isnan –** a **_isnanf** funkce jsou specifické pro společnost Microsoft. **_Isnanf** funkce dostupná jenom při kompilaci pro x64.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadované záhlaví (C)|Požadované záhlaví (C++)|
 |-------------|---------------------------|-------------------------------|
-|**isNaN –**, **_isnanf**|\<Math.h >|\<Math.h > nebo \<cmath >|
+|**isnan**, **_isnanf**|\<math.h>|\<Math.h > nebo \<cmath >|
 |**_isnan**|\<float.h >|\<float.h > nebo \<cfloat – >|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
@@ -95,5 +95,8 @@ Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-r
 ## <a name="see-also"></a>Viz také:
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
-[_finite, _finitef](finite-finitef.md)<br/>
+[fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
+[isfinite, _finite, _finitef](finite-finitef.md)<br/>
+[isinf –](isinf.md)<br/>
+[isnormal](isnormal.md)<br/>
