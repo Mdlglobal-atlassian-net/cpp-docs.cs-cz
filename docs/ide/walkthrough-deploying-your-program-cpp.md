@@ -62,7 +62,7 @@ Návodu ukazuje způsob použití Instalační služby systému Windows pro nasa
 
 1. V **Průzkumníka řešení**, vyberte **instalátor hry** projekt a zvolte **zobrazení** > **okno vlastností** nebo stiskněte tlačítko  **F4** otevřít **vlastnosti** okna.
 
-1. Zadejte další podrobnosti, jak chcete, aby se objevily v instalačním programu.  Například použít *Contoso* pro **výrobce**, *instalátor hry* pro **název produktu**, a *http\:/ / www.contoso.com* pro **SupportUrl**.
+1. Zadejte další podrobnosti, jak chcete, aby se objevily v instalačním programu.  Například použít *Contoso* pro **výrobce**, *instalátor hry* pro **název produktu**, a *http\://www.contoso.com* pro **SupportUrl**.
 
 1. V panelu nabídky zvolte **sestavení** > **nástroje Configuration Manager**. V **projektu** tabulky v části **sestavení** sloupců, zaškrtněte políčko u **instalátor hry**. Klikněte na **Zavřít**.
 
