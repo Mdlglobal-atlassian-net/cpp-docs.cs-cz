@@ -1,6 +1,6 @@
 ---
 title: '&lt;paměť&gt; funkce'
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - memory/std::addressof
 - memory/std::align
@@ -74,12 +74,12 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: e0a62b7afd215a9cad62ba1d0469f68459e6f403
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 71cae7bfbb8bfc0bef79a087d4450505c2880e5c
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519175"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55763931"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;paměť&gt; funkce
 
@@ -135,7 +135,7 @@ Zarovnání čekající na pokus.
 *Velikost*<br/>
 Velikost v bajtech pro zarovnané úložiště.
 
-*PTR*<br/>
+*Ptr*<br/>
 Počáteční adresa dostupného nepřetržitého fondu úložiště, který chcete použít. Tento parametr je také výstupní parametr a je nastavena na obsahovat novou počáteční adresu, pokud je zarovnání úspěšné. Pokud `align()` je neúspěšné, nebude tento parametr změněn.
 
 *místo*<br/>
@@ -196,7 +196,7 @@ Nula nebo více argumentů, které se stanou objekty.
 
 Funkce vytvoří objekt `shared_ptr<Type>`, ukazatel na `Type(Args...)` jak byl alokován a vytvořen *alokační*.
 
-## <a name="const_pointer_cast"></a>  const_pointer_cast –
+## <a name="const_pointer_cast"></a>  const_pointer_cast
 
 Const cast na shared_ptr.
 
@@ -299,7 +299,7 @@ struct default_delete {
 
 ### <a name="parameters"></a>Parametry
 
-*PTR*<br/>
+*Ptr*<br/>
 Ukazatel na objekt, který chcete odstranit.
 
 *Jiné*<br/>
@@ -327,7 +327,7 @@ Typ řízený vrácené sdílený ukazatel.
 *Jiné*<br/>
 Typ řízený sdíleným ukazatelem argumentu.
 
-*SP*<br/>
+*sp*<br/>
 Sdílený ukazatel argument.
 
 ### <a name="remarks"></a>Poznámky
@@ -370,7 +370,7 @@ int main()
 sp1->val == 3
 ```
 
-## <a name="get_deleter"></a>  get_deleter –
+## <a name="get_deleter"></a>  get_deleter
 
 Získáte odstraňovač z shared_ptr.
 
@@ -387,7 +387,7 @@ Typ odstraňovače.
 *Ty*<br/>
 Typ řízený sdíleným ukazatelem.
 
-*SP*<br/>
+*sp*<br/>
 Sdílený ukazatel.
 
 ### <a name="remarks"></a>Poznámky
@@ -647,13 +647,13 @@ Počet elementů k přidělení místa pro nové pole.
 
 ### <a name="remarks"></a>Poznámky
 
-První přetížení se používá pro jednotlivé objekty, druhé přetížení je vyvoláno pro pole a třetí přetížení zabraňuje zabrání v zadání velikost pole v argumentu typu (make_unique\<T [N] >); Tato konstrukce není podporován. aktuální Standard. Při použití `make_unique` k vytvoření `unique_ptr` pro pole, je třeba inicializovat prvky pole zvlášť. Pokud uvažujete o tomto přetížení, možná je vhodnější, je použít [std::vector](../standard-library/vector-class.md).
+První přetížení se používá pro jednotlivé objekty, druhé přetížení je vyvoláno pro pole a třetí přetížení zabraňuje určení velikosti pole v argumentu typu (make_unique\<T [N] >); Tato konstrukce není podporována aktuální Standard. Při použití `make_unique` k vytvoření `unique_ptr` pro pole, je třeba inicializovat prvky pole zvlášť. Pokud uvažujete o tomto přetížení, možná je vhodnější, je použít [std::vector](../standard-library/vector-class.md).
 
 Protože `make_unique` pečlivě je implementována pro bezpečnost výjimek, doporučujeme, abyste použili `make_unique` místo přímého volání `unique_ptr` konstruktory.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak používat `make_unique`. Další příklady najdete v tématu [postupy: vytváření a používání instancí ukazatelů unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md).
+Následující příklad ukazuje, jak používat `make_unique`. Další příklady najdete v tématu [jak: Vytvoření a používání instancí ukazatelů unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md).
 
 [!code-cpp[stl_smart_pointers#214](../cpp/codesnippet/CPP/memory-functions_1.cpp)]
 
@@ -700,7 +700,7 @@ struct owner_less<weak_ptr<Type>>
 
 ### <a name="parameters"></a>Parametry
 
-*_vlevo*<br/>
+*_left*<br/>
 Sdílené nebo slabý ukazatel.
 
 *doprava*<br/>
@@ -956,10 +956,10 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 *první*<br/>
 Vstupní iterátor adresující první prvek ve zdrojovém rozsahu.
 
-*poslední*<br/>
+*last*<br/>
 Vstupní iterátor adresující poslední prvek ve zdrojovém rozsahu.
 
-*cíl*<br/>
+*dest*<br/>
 Dopředný iterátor, který adresuje první prvek v cílovém rozsahu.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1067,7 +1067,7 @@ Vstupní iterátor odkazující na objekt, který chcete kopírovat.
 *Počet*<br/>
 Typ celého čísla se znaménkem nebo bez znaménka udávající, kolikrát se má objekt kopírovat.
 
-*cíl*<br/>
+*dest*<br/>
 Dopředný iterátor odkazující na umístění nových kopií.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1101,7 +1101,7 @@ void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type&
 *první*<br/>
 Dopředný iterátor adresující první prvek v cílovém rozsahu, který má být zahájeno.
 
-*poslední*<br/>
+*last*<br/>
 Dopředný iterátor adresující poslední prvek v cílovém rozsahu, který má být zahájeno.
 
 *Val*<br/>
@@ -1225,4 +1225,4 @@ int main() {
 
 ## <a name="see-also"></a>Viz také:
 
-[\<paměť >](../standard-library/memory.md)<br/>
+[\<memory>](../standard-library/memory.md)<br/>

@@ -1,13 +1,13 @@
 ---
 title: U aplikací pro UPW, prostředí Windows Runtime a C Run-Time
-ms.date: 11/04/2016
+ms.date: 02/02/2019
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
-ms.openlocfilehash: ea6e3e5017fcbef997a1e844e9f84e9c385bd31d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae57390dc916116b8d799b9f937ff882abaef970
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441129"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55763885"
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>U aplikací pro UPW, prostředí Windows Runtime a C Run-Time
 
@@ -24,10 +24,6 @@ Modul Windows Runtime nepodporuje následující funkce CRT:
 - Většina vícebajtové znakové a řetězcové funkce.
 
    Text kódování Unicode a ANSI jsou však podporovány.
-
-- Aplikace konzoly a argumenty příkazového řádku.
-
-   Aplikace klasické pracovní plochy, ale stále podporu konzoly a argumenty příkazového řádku.
 
 - Proměnné prostředí.
 
@@ -48,3 +44,4 @@ Modul Windows Runtime nepodporuje následující funkce CRT:
 [Kompatibilita](../c-runtime-library/compatibility.md)<br/>
 [Nepodporované funkce CRT prostředí Windows Runtime](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)<br/>
 [Rutiny UCRT (Universal C runtime) podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Vytvoření konzolové aplikace univerzální platformy Windows](/windows/uwp/launch-resume/console-uwp)

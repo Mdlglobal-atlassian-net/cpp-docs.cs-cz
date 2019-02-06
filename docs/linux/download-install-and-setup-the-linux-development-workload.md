@@ -1,14 +1,14 @@
 ---
 title: Nainstalujte úlohu C++ Linux v sadě Visual Studio
 description: Popisuje, jak stáhnout, nainstalovat a nastavit Linux úlohy pro C++ v sadě Visual Studio.
-ms.date: 10/12/2018
+ms.date: 02/06/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 2fa4036ece6dd161c73a5176740870c5593f4669
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c01c8ddeeb8439a7610c0f6c7c11b608ab3675d8
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441922"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55763881"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Stažení, instalace a nastavení úloh Linux
 
@@ -27,7 +27,7 @@ Integrované vývojové prostředí sady Visual Studio ve Windows můžete použ
 
 ## <a name="options-for-creating-a-linux-environment"></a>Možnosti pro vytvoření prostředí s Linuxem
 
-Pokud ještě nemáte počítač s Linuxem, můžete vytvořit virtuální počítač s Linuxem v Azure. Další informace najdete v tématu [rychlý start: vytvoření virtuálního počítače s Linuxem na webu Azure Portal](/azure/virtual-machines/linux/quick-create-portal).
+Pokud ještě nemáte počítač s Linuxem, můžete vytvořit virtuální počítač s Linuxem v Azure. Další informace najdete v tématu [rychlý start: Vytvoření virtuálního počítače s Linuxem na webu Azure Portal](/azure/virtual-machines/linux/quick-create-portal).
 
 Další možností, ve Windows 10, je k aktivaci subsystém Windows pro Linux. Další informace najdete v tématu [Průvodce instalací systému Windows 10](/windows/wsl/install-win10).
 
@@ -53,7 +53,7 @@ Cílový počítač s Fedora používá **dnf** balíček Instalační služby. 
 
 1. V příkazovém řádku shell na počítači s Linuxem spusťte:
 
-   `sudo dnf install openssh-server g++ gdb gdbserver zip`
+   `sudo dnf install openssh-server gcc-g++ gdb gdb-gdbserver zip`
 
    Můžete být vyzváni k kořenové heslo z důvodu příkazu sudo.  Pokud ano, zadejte ho a pokračovat. Jakmile budete hotovi, se nainstalují požadované služby a nástroje.
 
