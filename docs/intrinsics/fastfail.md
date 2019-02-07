@@ -2,16 +2,16 @@
 title: __fastfail
 ms.date: 11/04/2016
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
-ms.openlocfilehash: b05c86148014a4a34d852d1a00caeb71ee136548
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e96d981be5c5186d6cc472cc8f4dffcbf1c2b7bf
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521382"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849473"
 ---
 # <a name="fastfail"></a>__fastfail
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Okamžitě ukončí volající proces s minimální režií.
 
@@ -23,7 +23,7 @@ void __fastfail(unsigned int code);
 
 #### <a name="parameters"></a>Parametry
 
-*kód*<br/>
+*code*<br/>
 [in] A `FAST_FAIL_<description>` Symbolická konstanta ze souboru winnt.h nebo wdm.h, který označuje důvod ukončení procesu.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -39,8 +39,9 @@ Interně `__fastfail` je implementovaný s využitím několik mechanismů speci
 |Architektura|Instrukce|Umístění kódu argumentu|
 |------------------|-----------------|-------------------------------|
 |x86|int 0x29|ecx|
-|x64|int 0x29|RCX|
+|x64|int 0x29|rcx|
 |ARM|Operační kód 0xDEFB|r0|
+|ARM64|Operační kód 0xF003|x0|
 
 Žádost o rychlé převzetí služeb při je samostatný a obvykle vyžaduje právě dva pokyny ke spuštění. Jakmile byl proveden požadavek rychlé převzetí služeb při jádra pak provede příslušnou akci. V kódu v uživatelském režimu neexistují žádné závislosti paměti nad rámec samotné ukazatele na instrukci při rychlé převzetí služeb při událost se vyvolá. Tím se maximalizuje jeho spolehlivost i v případě, že se jedná o poškození závažné paměti.
 
@@ -56,7 +57,7 @@ Podpora pro nativní rychlé převzetí služeb při mechanismus začalo v syst�
 
 |Vnitřní|Architektura|
 |---------------|------------------|
-|`__fastfail`|x86, x 64, ARM|
+|`__fastfail`|x86, x64, ARM, ARM64|
 
 **Soubor hlaviček** \<intrin.h >
 

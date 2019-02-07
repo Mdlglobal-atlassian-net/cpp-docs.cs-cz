@@ -13,12 +13,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: d44928d9fda20082496df1c475d8b3ab05ba4fc4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8b40afbfcc453a4908b434dc53b7b86959673453
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522073"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55851679"
 ---
 # <a name="exception-processing"></a>Zpracování výjimek
 
@@ -54,13 +54,13 @@ Příklady a další podrobnosti najdete v článku [výjimky](../../mfc/excepti
 
 |||
 |-|-|
-|[Afxthrowarchiveexception –](#afxthrowarchiveexception)|Vyvolá výjimku archivu.|
-|[Afxthrowfileexception –](#afxthrowfileexception)|Vyvolá výjimku souborů.|
+|[AfxThrowArchiveException](#afxthrowarchiveexception)|Vyvolá výjimku archivu.|
+|[AfxThrowFileException](#afxthrowfileexception)|Vyvolá výjimku souborů.|
 |[AfxThrowInvalidArgException](#afxthrowinvalidargexception)|Vyvolá výjimku neplatný argument.|
-|[Afxthrowmemoryexception –](#afxthrowmemoryexception)|Vyvolá výjimku paměti.|
-|[Afxthrownotsupportedexception –](#afxthrownotsupportedexception)|Vyvolá výjimka není podporován.|
-|[Afxthrowresourceexception –](#afxthrowresourceexception)|Výjimku Windows prostředků nebyla nalezena.|
-|[Afxthrowuserexception –](#afxthrowuserexception)|Vyvolá výjimku v rámci akce zahájená uživatelem programu.|
+|[AfxThrowMemoryException](#afxthrowmemoryexception)|Vyvolá výjimku paměti.|
+|[AfxThrowNotSupportedException](#afxthrownotsupportedexception)|Vyvolá výjimka není podporován.|
+|[AfxThrowResourceException](#afxthrowresourceexception)|Výjimku Windows prostředků nebyla nalezena.|
+|[AfxThrowUserException](#afxthrowuserexception)|Vyvolá výjimku v rámci akce zahájená uživatelem programu.|
 
 Knihovna MFC poskytuje dvě funkce vyvolávání výjimek speciálně pro výjimky OLE:
 
@@ -68,8 +68,8 @@ Knihovna MFC poskytuje dvě funkce vyvolávání výjimek speciálně pro výjim
 
 |||
 |-|-|
-|[Afxthrowoledispatchexception –](#afxthrowoledispatchexception)|Vyvolá výjimku v rámci funkce automatizace OLE.|
-|[Afxthrowoleexception –](#afxthrowoleexception)|Vyvolá výjimku OLE.|
+|[AfxThrowOleDispatchException](#afxthrowoledispatchexception)|Vyvolá výjimku v rámci funkce automatizace OLE.|
+|[AfxThrowOleException](#afxthrowoleexception)|Vyvolá výjimku OLE.|
 
 Pro podporu výjimky databáze, databáze třídy poskytují dvě třídy výjimek, `CDBException` a `CDaoException`a globální funkce pro podporu typů výjimek:
 
@@ -77,8 +77,8 @@ Pro podporu výjimky databáze, databáze třídy poskytují dvě třídy výjim
 
 |||
 |-|-|
-|[Afxthrowdaoexception –](#afxthrowdaoexception)|Vyvolá výjimku [cdaoexception –](../../mfc/reference/cdaoexception-class.md) z vlastního kódu.|
-|[Afxthrowdbexception –](#afxthrowdbexception)|Vyvolá výjimku [CDBException](../../mfc/reference/cdbexception-class.md) z vlastního kódu.|
+|[AfxThrowDAOException](#afxthrowdaoexception)|Vyvolá výjimku [cdaoexception –](../../mfc/reference/cdaoexception-class.md) z vlastního kódu.|
+|[AfxThrowDBException](#afxthrowdbexception)|Vyvolá výjimku [CDBException](../../mfc/reference/cdbexception-class.md) z vlastního kódu.|
 
 Knihovna MFC poskytuje následující funkce ukončení:
 
@@ -86,7 +86,7 @@ Knihovna MFC poskytuje následující funkce ukončení:
 
 |||
 |-|-|
-|[Afxabort –](#afxabort)|Volá se, k ukončení aplikace při závažné chybě dochází.|
+|[AfxAbort](#afxabort)|Volá se, k ukončení aplikace při závažné chybě dochází.|
 
 ##  <a name="try"></a>  ZKUSTE
 
@@ -372,12 +372,6 @@ Tato funkce je volána, když se používají neplatné argumenty.
 
 **Záhlaví:** afx.h
 
-### <a name="see-also"></a>Viz také
-
-[Makra a globální prvky](mfc-macros-and-globals.md)<br/>
-[CInvalidArgException – třída](cinvalidargexception-class.md)<br/>
-[VYVOLÁNÍ VÝJIMKY](#throw)
-
 ##  <a name="afxthrowmemoryexception"></a>  Afxthrowmemoryexception –
 
 Vyvolá výjimku paměti.
@@ -394,7 +388,7 @@ Voláním této funkce, pokud volání základní systémové paměti alokátory
 
   **Hlavička** afx.h
 
-##  <a name="afxthrownotsupportedexception"></a>  Afxthrownotsupportedexception –
+##  <a name="afxthrownotsupportedexception"></a>  AfxThrowNotSupportedException
 
 Vyvolá výjimku, která je výsledkem požadavku nepodporované funkce.
 
@@ -406,7 +400,7 @@ void AfxThrowNotSupportedException();
 
   **Hlavička** afx.h
 
-##  <a name="afxthrowresourceexception"></a>  Afxthrowresourceexception –
+##  <a name="afxthrowresourceexception"></a>  AfxThrowResourceException
 
 Vyvolá výjimku prostředků.
 
@@ -422,7 +416,7 @@ Nelze načíst prostředek Windows je obvykle voláním této funkce.
 
   **Hlavička** afx.h
 
-##  <a name="afxthrowuserexception"></a>  Afxthrowuserexception –
+##  <a name="afxthrowuserexception"></a>  AfxThrowUserException
 
 Vyvolá výjimku pro ukončení operace koncového uživatele.
 
@@ -456,7 +450,7 @@ void AFXAPI AfxThrowOleDispatchException(
 
 ### <a name="parameters"></a>Parametry
 
-*WCode*<br/>
+*wCode*<br/>
 Kód chyby specifický pro aplikaci.
 
 *lpszDescription*<br/>
@@ -505,7 +499,7 @@ Verze, která přijímá HRESULT jako argument převede na odpovídající SCODE
 
   **Hlavička** afxdao.h
 
-##  <a name="afxthrowdaoexception"></a>  Afxthrowdaoexception –
+##  <a name="afxthrowdaoexception"></a>  AfxThrowDaoException
 
 Voláním této funkce vyvolá výjimku typu [cdaoexception –](../../mfc/reference/cdaoexception-class.md) z vlastního kódu.
 
@@ -520,20 +514,20 @@ void AFXAPI AfxThrowDaoException(
 *nAfxDaoError*<br/>
 Celočíselnou hodnotu představující DAO rozšířené kód chyby, které může být jedna z hodnot uveden v části [CDaoException::m_nAfxDaoError](../../mfc/reference/cdaoexception-class.md#m_nafxdaoerror).
 
-*SCODE*<br/>
+*scode*<br/>
 OLE – kód chyby z rozhraní DAO, typu SCODE. Informace najdete v tématu [CDaoException::m_scode](../../mfc/reference/cdaoexception-class.md#m_scode).
 
 ### <a name="remarks"></a>Poznámky
 
 Rozhraní volá také `AfxThrowDaoException`. Ve volání můžete předat jeden z parametrů nebo obojí. Například pokud chcete vyvolat jeden z chyby podle **CDaoException::nAfxDaoError** vám nevadí, ale *scode* parametr předat platný kód v *nAfxDaoError* parametr a přijměte výchozí hodnotu pro *scode*.
 
-Informace o výjimkách týkající se tříd DAO knihovny MFC naleznete v tématu třídy `CDaoException` v této knihy a článek [výjimky: výjimky databáze](../../mfc/exceptions-database-exceptions.md).
+Informace o výjimkách týkající se tříd DAO knihovny MFC naleznete v tématu třídy `CDaoException` v této knihy a článek [výjimky: Výjimky databáze](../../mfc/exceptions-database-exceptions.md).
 
 ### <a name="requirements"></a>Požadavky
 
   **Hlavička** afxdb.h
 
-##  <a name="afxthrowdbexception"></a>  Afxthrowdbexception –
+##  <a name="afxthrowdbexception"></a>  AfxThrowDBException
 
 Voláním této funkce vyvolá výjimku typu `CDBException` z vlastního kódu.
 
@@ -549,10 +543,10 @@ void AfxThrowDBException(
 *nRetCode*<br/>
 Hodnotu typu RETCODE definuje typ chyby, která způsobila vyvolání výjimky.
 
-*soubor PDB*<br/>
+*pdb*<br/>
 Ukazatel `CDatabase` objekt, který reprezentuje připojení zdroje dat, ke kterému je přidružené výjimky.
 
-*HSTMT*<br/>
+*hstmt*<br/>
 Obslužná rutina HSTMT rozhraní ODBC, který určuje popisovač příkazu, ke kterému je přidružené výjimky.
 
 ### <a name="remarks"></a>Poznámky
@@ -587,5 +581,6 @@ Podívejte se na příklad pro [CATCH](#catch).
 
 ## <a name="see-also"></a>Viz také
 
-[Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)<br/>
-[CException – třída](../../mfc/reference/cexception-class.md)
+[Makra a globální prvky](mfc-macros-and-globals.md)<br/>
+[CException – třída](cexception-class.md)<br/>
+[CInvalidArgException – třída](cinvalidargexception-class.md)

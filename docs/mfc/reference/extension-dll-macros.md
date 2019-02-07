@@ -4,12 +4,12 @@ ms.date: 04/03/2017
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 66c3477c7f2901cd9986a8b52e3d9287191e7b4b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 1d0cbd1f702a1d26dd2eaafd88efcfd61f52ff78
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329589"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850213"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Makra a funkce pro správu knihoven DLL
 
@@ -17,12 +17,12 @@ ms.locfileid: "51329589"
 |-|-|
 |[AFX_EXT_CLASS](#afx_ext_class)]|Export tříd.|
 |[AFX_MANAGE_STATE](#afx_manage_state)|Ochrana exportované funkce v knihovně DLL.|
-|[AfxOleInitModule –](#afxoleinitmodule)|Poskytuje podporu technologie OLE z běžné knihovny MFC DLL staticky propojené do MFC.|
-|[Afxnetinitmodule –](#afxnetinitmodule)|Poskytuje podporu soketů knihovny MFC z běžné knihovny MFC DLL staticky propojené do MFC.|
-|[Afxgetambientactctx –](#afxgetambientactctx)|Získá aktuální stav příznaku-module stavu.|
-|[Afxgetstaticmodulestate –](#afxgetstaticmodulestate)|Nastaví stav modulu před inicializací a/nebo po vyčištění obnovit předchozí stav modulu.|
+|[AfxOleInitModule](#afxoleinitmodule)|Poskytuje podporu technologie OLE z běžné knihovny MFC DLL staticky propojené do MFC.|
+|[AfxNetInitModule](#afxnetinitmodule)|Poskytuje podporu soketů knihovny MFC z běžné knihovny MFC DLL staticky propojené do MFC.|
+|[AfxGetAmbientActCtx](#afxgetambientactctx)|Získá aktuální stav příznaku-module stavu.|
+|[AfxGetStaticModuleState](#afxgetstaticmodulestate)|Nastaví stav modulu před inicializací a/nebo po vyčištění obnovit předchozí stav modulu.|
 |[AfxInitExtensionModule]()#afxinitextensionmodule|Inicializuje knihovnu DLL.|
-|[Afxsetambientactctx –](#afxsetambientactctx)|nastavte příznak stavu na modul, který má vliv na chování WinSxS knihovny MFC.|
+|[AfxSetAmbientActCtx](#afxsetambientactctx)|nastavte příznak stavu na modul, který má vliv na chování WinSxS knihovny MFC.|
 |[AfxTermExtensionModule]()#afxtermextensionmodule)|Umožňuje MFC vyčištění MFC – rozšiřující knihovny DLL při každém odpojení procesu z knihovny DLL.|
 
 ## <a name="afx_ext_class"></a>  AFX_EXT_CLASS
@@ -46,7 +46,7 @@ Další informace najdete v tématu [Export a Import pomocí AFX_EXT_CLASS](../.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxv_dll.h
+**Header:** afxv_dll.h
 
 ## <a name="afx_manage_state"></a>  AFX_MANAGE_STATE
 
@@ -85,11 +85,7 @@ Další informace o stavy modulů a knihovna MFC naleznete v části "Správa th
 
 **Záhlaví:** afxstat_.h
 
-### <a name="see-also"></a>Viz také
-
-[Afxgetstaticmodulestate –](#afxgetstaticmodulestate)
-
-## <a name="a-nameafxoleinitmodulea-afxoleinitmodule"></a><a name="afxoleinitmodule"><a/> AfxOleInitModule –
+## <a name="a-nameafxoleinitmodulea-afxoleinitmodule"></a><a name="afxoleinitmodule"><a/> AfxOleInitModule
 
 Pro podporu technologie OLE z běžné knihovny MFC DLL staticky propojené do MFC, volejte tuto funkce ve vaší běžné knihovny MFC DLL `CWinApp::InitInstance` funkce lze inicializovat OLE Knihovnu MFC.
 
@@ -107,14 +103,9 @@ Pokud vytváříte ovládacího prvku OLE a používáte `COleControlModule`, ne
 
 ### <a name="requirements"></a>Požadavky
 
-**Hlavička**: \<afxdll_.h >
+**Header**: \<afxdll_.h>
 
-### <a name="see-also"></a>Viz také
-
-[Makra a globální prvky](mfc-macros-and-globals.md)<br/>
-[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)
-
-## <a name="afxnetinitmodule"></a>  Afxnetinitmodule –
+## <a name="afxnetinitmodule"></a>  AfxNetInitModule
 
 Pro podporu soketů knihovny MFC z běžné knihovny MFC DLL staticky propojené do MFC, přidejte volání pro tuto funkci ve vaší běžné knihovny MFC DLL `CWinApp::InitInstance` funkce za účelem inicializace soketů knihovny MFC DLL.
 
@@ -130,14 +121,9 @@ Rozšiřující knihovny DLL; MFC je soketů knihovny MFC DLL aby rozšiřujíc�
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<afxdll_.h >
+**Header:** \<afxdll_.h>
 
-### <a name="see-also"></a>Viz také
-
-[Makra a globální prvky](mfc-macros-and-globals.md)<br/>
-[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)
-
-## <a name="afxgetambientactctx"></a> Afxgetambientactctx –
+## <a name="afxgetambientactctx"></a> AfxGetAmbientActCtx
 
 Tuto funkci použijte, chcete-li získat aktuální stav, stav příznaku-module, který má vliv na chování WinSxS knihovny MFC.
 
@@ -161,16 +147,9 @@ Kontext modulu je určen z manifestu, obvykle vložený do prostředků modulu.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxcomctl32.h
+**Header:** afxcomctl32.h
 
-### <a name="see-also"></a>Viz také
-
-[Makra a globální prvky](mfc-macros-and-globals.md)<br/>
-[AFX_MANAGE_STATE](#afx_manage_state)<br/>
-[Správa údajů o stavu modulů knihovny MFC](../managing-the-state-data-of-mfc-modules.md)<br/>
-[Afxsetambientactctx –](#setambientactctx)
-
-## <a name="afxgetstaticmodulestate"></a> Afxgetstaticmodulestate –
+## <a name="afxgetstaticmodulestate"></a> AfxGetStaticModuleState
 
 Voláním této funkce nastavit stav modulu před inicializací a/nebo po vyčištění obnovit předchozí stav modulu.
 
@@ -214,7 +193,7 @@ BOOL AFXAPI AfxInitExtensionModule( AFX_EXTENSION_MODULE& state,  HMODULE hModul
 
 ### <a name="parameters"></a>Parametry
 
-*Stav*<br/>
+*state*<br/>
 Odkaz na [AFX_EXTENSION_MODULE – struktura](afx-extension-module-structure.md) struktura, která bude obsahovat stavu modul knihovny DLL MFC rozšíření po inicializaci. Stav zahrnuje kopírování objektů tříd modulu runtime, které byly inicializovány pomocí MFC – rozšiřující knihovny DLL jako součást normální statický objekt konstrukce spuštěny před `DllMain` zadání.
 
 *hModule*<br/>
@@ -259,12 +238,7 @@ Můžete volat `AfxTermExtensionModule` vyčistit MFC – rozšiřující knihov
 
 **Záhlaví:** afxdll_.h
 
-### <a name="see-also"></a>Viz také
-
-[Makra a globální prvky](mfc-macros-and-globals.md)<br/>
-[AfxTermExtensionModule](#afxtermextensionmodule)
-
-## <a name="afxsetambientactctx"></a>  Afxsetambientactctx –
+## <a name="afxsetambientactctx"></a>  AfxSetAmbientActCtx
 
 Pomocí této funkce můžete nastavit příznak stavu na modul, který má vliv na chování WinSxS knihovny MFC.
 
@@ -297,14 +271,7 @@ BOOL CMFCListViewApp::InitInstance()
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxcomctl32.h
-
-### <a name="see-also"></a>Viz také
-
-[Makra a globální prvky](mfc-macros-and-globals.md)<br/>
-[Afxgetambientactctx –](#afxgetambientactctx)<br/>
-[AFX_MANAGE_STATE](#afx_manage_state)<br/>
-[Správa údajů o stavu modulů knihovny MFC](../managing-the-state-data-of-mfc-modules.md)
+**Header:** afxcomctl32.h
 
 ## <a name="afxtermextensionmodule"></a>  AfxTermExtensionModule
 
@@ -318,7 +285,7 @@ void AFXAPI AfxTermExtensionModule(  AFX_EXTENSION_MODULE& state,  BOOL bAll  = 
 
 ### <a name="parameters"></a>Parametry
 
-*Stav*<br/>
+*state*<br/>
 Odkaz na [AFX_EXTENSION_MODULE](afx-extension-module-structure.md) struktura, která obsahuje informace o stavu modulu MFC DLL rozšíření.
 
 *Koule*<br/>
@@ -366,7 +333,8 @@ MFC – rozšiřující knihovny DLL musí volat [AfxInitExtensionModule](#afxin
 
 **Záhlaví:** afxdll_.h
 
-### <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Makra a globální prvky](mfc-macros-and-globals.md)<br/>
-[AfxInitExtensionModule](#afxinitextensionmodule)
+[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)<br/>
+[Správa údajů o stavu modulů knihovny MFC](../managing-the-state-data-of-mfc-modules.md)<br/>

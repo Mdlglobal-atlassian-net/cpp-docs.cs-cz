@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-ms.openlocfilehash: 06153a72ce6ed6e5422022255eec333110709778
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 374618aba297fb2c055ce02f93d0c7c93b38dc06
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618306"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850174"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Rutiny výměny dat standardního dialogového okna
 
@@ -69,7 +69,7 @@ Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových o
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
 ##  <a name="ddx_cbstring"></a>  DDX_CBString
 
@@ -104,7 +104,7 @@ Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových o
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
 ##  <a name="ddx_cbstringexact"></a>  DDX_CBStringExact
 
@@ -139,7 +139,7 @@ Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových o
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
 ##  <a name="ddx_check"></a>  DDX_Check
 
@@ -171,7 +171,7 @@ Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových o
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
 ##  <a name="ddx_control"></a>  DDX_Control
 
@@ -203,7 +203,7 @@ Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových o
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
 ##  <a name="ddx_datetimectrl"></a>  DDX_DateTimeCtrl
 
@@ -247,7 +247,7 @@ Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových o
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
 ## <a name="ddx_managedcontrol"></a>  DDX_ManagedControl
 
@@ -278,16 +278,11 @@ Odkaz na [CWinFormsControl – třída](cwinformscontrol-class.md) objektu.
 
 `DDX_ManagedControl` volání [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) vytvořit ovládací prvek s odpovídajícím ID prostředku ovládacího prvku. Použití `DDX_ManagedControl` k vytvoření ovládacích prvků z ID prostředku v [CDialog::OnInitDialog](cdialog-class.md#oninitdialog). Pro data systému exchange není potřeba používat funkce DDX/DDV s ovládacími prvky Windows Forms.
 
-Další informace najdete v tématu [jak: proveďte DDX/DDV datové vazby pomocí Windows Forms](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
+Další informace najdete v tématu [jak: DDX/DDV datové vazby pomocí Windows Forms](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
 
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxwinforms.h
-
-### <a name="see-also"></a>Viz také
-
-[CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
-[CDialog::OnInitDialog](cdialog-class.md#oninitdialog)
 
 ##  <a name="ddx_ipaddress"></a>  DDX_IPAddress
 
@@ -328,7 +323,7 @@ Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových o
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
 ##  <a name="ddx_lbindex"></a>  DDX_LBIndex
 
@@ -360,7 +355,7 @@ Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových o
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
 ##  <a name="ddx_lbstring"></a>  DDX_LBString
 
@@ -397,7 +392,7 @@ Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových o
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
 ##  <a name="ddx_lbstringexact"></a>  DDX_LBStringExact
 
@@ -434,7 +429,7 @@ Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových o
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
 ##  <a name="ddx_monthcalctrl"></a>  DDX_MonthCalCtrl
 
@@ -474,7 +469,7 @@ Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových o
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
 ##  <a name="ddx_radio"></a>  DDX_Radio
 
@@ -508,7 +503,7 @@ Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových o
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
 ##  <a name="ddx_scroll"></a>  DDX_Scroll
 
@@ -540,7 +535,7 @@ Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových o
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
 ##  <a name="ddx_slider"></a>  DDX_Slider
 
@@ -572,7 +567,7 @@ Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových o
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
 ##  <a name="ddx_text"></a>  DDX_Text
 
@@ -652,9 +647,11 @@ Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových o
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
 ## <a name="see-also"></a>Viz také
 
-[Rutiny ověřování dat standardního dialogového okna](../../mfc/reference/standard-dialog-data-validation-routines.md)<br/>
-[Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)
+[Rutiny ověřování dat standardního dialogového okna](standard-dialog-data-validation-routines.md)<br/>
+[Makra a globální prvky](mfc-macros-and-globals.md)<br/>
+[CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
+[CDialog::OnInitDialog](cdialog-class.md#oninitdialog)

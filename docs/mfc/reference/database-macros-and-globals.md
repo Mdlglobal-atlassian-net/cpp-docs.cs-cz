@@ -13,12 +13,12 @@ helpviewer_keywords:
 - global functions [MFC], database functions
 - macros [MFC], MFC database
 ms.assetid: 5b9b9e61-1cf9-4345-9f29-3807dd466488
-ms.openlocfilehash: d3df96c92c39b9fdc05a019ed1ada033dc36d05e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a546c821690bcbe1afedd4909810317553e3b283
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536549"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849749"
 ---
 # <a name="database-macros-and-globals"></a>Databázová makra a globální prvky
 
@@ -38,10 +38,10 @@ Před 4.2 knihovny MFC, makra `AFX_SQL_ASYNC` a `AFX_SQL_SYNC` přiřadil asynch
 
 |||
 |-|-|
-|[AfxDbInitModule –](#afxdbinitmodule)|Přidá podporu databáze pro běžné knihovny MFC DLL staticky propojené do MFC.|
+|[AfxDbInitModule](#afxdbinitmodule)|Přidá podporu databáze pro běžné knihovny MFC DLL staticky propojené do MFC.|
 |[AfxGetHENV](#afxgethenv)|Načte popisovače prostředí ODBC aktuálně používána knihovnou MFC. Můžete použít tento ovladač v přímého volání rozhraní ODBC.|
 
-## <a name="afxdbinitmodule"></a> AfxDbInitModule –
+## <a name="afxdbinitmodule"></a> AfxDbInitModule
 
 Z běžné knihovny MFC DLL staticky propojené do MFC podpory databáze knihovny MFC (nebo rozhraní DAO), přidejte volání pro tuto funkci ve vaší běžné knihovny MFC DLL `CWinApp::InitInstance` databáze funkci za účelem inicializace knihovny MFC DLL.
 
@@ -57,11 +57,7 @@ Ujistěte se, že k tomuto volání před voláním třídy base ani v žádném
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<afxdll_.h >
-
-### <a name="see-also"></a>Viz také
-
-[Makra a globální prvky](mfc-macros-and-globals.md)
+**Header:** \<afxdll_.h>
 
 ##  <a name="afx_odbc_call"></a>  AFX_ODBC_CALL
 

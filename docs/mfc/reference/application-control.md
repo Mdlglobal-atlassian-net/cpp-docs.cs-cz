@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
-ms.openlocfilehash: 55a5dcad21502e7aff7427dbdad41d25298356e7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: e4944c1cf1114bbd009ebc62b776628ba86b3b4d
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518915"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850308"
 ---
 # <a name="application-control"></a>Řízení aplikace
 
@@ -21,16 +21,16 @@ OLE vyžaduje podstatné kontrolu nad aplikacemi a objekty. OLE systémové knih
 
 |||
 |-|-|
-|[Afxolecanexitapp –](#afxolecanexitapp)|Určuje, zda lze ukončit aplikaci.|
+|[AfxOleCanExitApp](#afxolecanexitapp)|Určuje, zda lze ukončit aplikaci.|
 |[AfxOleGetMessageFilter](#afxolegetmessagefilter)|Načte aktuální filtr zpráv aplikace.|
-|[Afxolegetuserctrl –](#afxolegetuserctrl)|Načte aktuální příznak uživatelského ovládacího prvku.|
-|[Afxolesetuserctrl –](#afxolesetuserctrl)|Nastaví nebo vymaže příznak uživatelského ovládacího prvku.|
+|[AfxOleGetUserCtrl](#afxolegetuserctrl)|Načte aktuální příznak uživatelského ovládacího prvku.|
+|[AfxOleSetUserCtrl](#afxolesetuserctrl)|Nastaví nebo vymaže příznak uživatelského ovládacího prvku.|
 |[AfxOleLockApp](#afxolelockapp)|Zvýší počet globální v rámci počtu aktivních objektů v aplikaci.|
-|[Afxolelockcontrol –](#afxolelockcontrol)| Zamkne objekt pro vytváření tříd zadaného prvku. |
-|[Funkci AfxOleUnlockApp](#afxoleunlockapp)|Sníží počet rozhraní framework, které se počet aktivních objektů v aplikaci.|
-|[Afxoleunlockcontrol –](#afxoleunlockcontrol)| Odemkne objekt pro vytváření tříd zadaného prvku. |
-|[Afxoleregisterserverclass –](#afxoleregisterserverclass)|Zaregistruje server v registru systému OLE.|
-|[Afxoleseteditmenu –](#afxoleseteditmenu)|Implementuje uživatelské rozhraní pro *typename* objekt příkazu.|
+|[AfxOleLockControl](#afxolelockcontrol)| Zamkne objekt pro vytváření tříd zadaného prvku. |
+|[AfxOleUnlockApp](#afxoleunlockapp)|Sníží počet rozhraní framework, které se počet aktivních objektů v aplikaci.|
+|[AfxOleUnlockControl](#afxoleunlockcontrol)| Odemkne objekt pro vytváření tříd zadaného prvku. |
+|[AfxOleRegisterServerClass](#afxoleregisterserverclass)|Zaregistruje server v registru systému OLE.|
+|[AfxOleSetEditMenu](#afxoleseteditmenu)|Implementuje uživatelské rozhraní pro *typename* objekt příkazu.|
 
 ##  <a name="afxolecanexitapp"></a>  Afxolecanexitapp –
 
@@ -54,7 +54,7 @@ Aplikace by neměl ukončit, pokud existují zbývajících odkazů na objekty. 
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička**: afxdisp.h
+**Header**: afxdisp.h
 
 ##  <a name="afxolegetmessagefilter"></a>  AfxOleGetMessageFilter
 
@@ -82,7 +82,7 @@ Voláním této funkce pro přístup k aktuálním `COleMessageFilter`-odvozené
 
 **Hlavička**: afxwin.h
 
-##  <a name="afxolegetuserctrl"></a>  Afxolegetuserctrl –
+##  <a name="afxolegetuserctrl"></a>  AfxOleGetUserCtrl
 
 Načte aktuální příznak uživatelského ovládacího prvku.
 
@@ -100,9 +100,9 @@ Uživatel je v ovládacím prvku aplikace, když uživatel explicitně otevřít
 
 ### <a name="requirements"></a>Požadavky
 
-**Hlavička**: afxdisp.h
+**Header**: afxdisp.h
 
-##  <a name="afxolesetuserctrl"></a>  Afxolesetuserctrl –
+##  <a name="afxolesetuserctrl"></a>  AfxOleSetUserCtrl
 
 Nastaví nebo vymaže příznak uživatelský ovládací prvek, který je vysvětlen v referenční dokumentaci pro `AfxOleGetUserCtrl`.
 
@@ -123,7 +123,7 @@ Voláním této funkce, když se další akce v aplikaci by měl uživatel v ovl
 
 ### <a name="requirements"></a>Požadavky
 
-**Hlavička**: afxdisp.h
+**Header**: afxdisp.h
 
 ##  <a name="afxolelockapp"></a>  AfxOleLockApp
 
@@ -147,7 +147,7 @@ Volání `AfxOleLockApp` z libovolného objektu, který zpřístupňuje rozhran�
 
 ### <a name="requirements"></a>Požadavky
 
-**Hlavička**: afxdisp.h
+**Header**: afxdisp.h
 
 ##  <a name="afxoleunlockapp"></a>  Funkci AfxOleUnlockApp
 
@@ -169,7 +169,7 @@ Podívejte se na příklad pro [AfxOleLockApp](#afxolelockapp).
 
 ### <a name="requirements"></a>Požadavky
 
-**Hlavička**: afxdisp.h
+**Header**: afxdisp.h
 
 ## <a name="afxolelockcontrol"></a>AfxOleLockControl
 
@@ -184,7 +184,7 @@ BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 Třída jedinečné ID ovládacího prvku.
 
 *lpszProgID*<br/>
@@ -212,12 +212,7 @@ AfxOleLockControl(_T("MSCAL.Calendar"));
 
 **Záhlaví:** afxwin.h
 
-### <a name="see-also"></a>Viz také
-
-[Makra a globální prvky](mfc-macros-and-globals.md)<br/>
-[Afxoleunlockcontrol –](#afxoleunlockcontrol)
-
-##  <a name="afxoleregisterserverclass"></a>  Afxoleregisterserverclass –
+##  <a name="afxoleregisterserverclass"></a>  AfxOleRegisterServerClass
 
 Tato funkce umožňuje registraci serveru v registru systému OLE.
 
@@ -234,7 +229,7 @@ BOOL AFXAPI AfxOleRegisterServerClass(
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 Odkaz na ID serveru OLE – třídy.
 
 *lpszClassName*<br/>
@@ -285,9 +280,9 @@ Symboly jsou vyplněna následujícím způsobem:
 
 ### <a name="requirements"></a>Požadavky
 
-**Hlavička**: afxdisp.h
+**Header**: afxdisp.h
 
-##  <a name="afxoleseteditmenu"></a>  Afxoleseteditmenu –
+##  <a name="afxoleseteditmenu"></a>  AfxOleSetEditMenu
 
 Implementuje uživatelské rozhraní pro *typename* objekt příkazu.
 
@@ -327,17 +322,13 @@ Pokud server rozpozná pouze primární požadavek, položka nabídky stane "př
 
 Musíte mít následující příkaz ve skriptu prostředků aplikace vašeho klienta (. Soubor RC):
 
-**#include \<afxolecl.rc >**
+**#include \<afxolecl.rc>**
 
 ### <a name="requirements"></a>Požadavky
 
 **Hlavička**: afxole.h
 
-## <a name="see-also"></a>Viz také
-
-[Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)
-
-## <a name="afxoleunlockcontrol"></a> Afxoleunlockcontrol –
+## <a name="afxoleunlockcontrol"></a> AfxOleUnlockControl
 
 Odemkne objekt pro vytváření tříd zadaného prvku.
 
@@ -350,7 +341,7 @@ BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );
 
 ### <a name="parameters"></a>Parametry
 
-*identifikátor CLSID*<br/>
+*clsid*<br/>
 Třída jedinečné ID ovládacího prvku.
 
 *lpszProgID*<br/>
@@ -376,8 +367,6 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 
 **Záhlaví:** afxwin.h
 
-### <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Makra a globální prvky](mfc-macros-and-globals.md)<br/>
-[Afxolelockcontrol –](#afxolelockcontrol)
-

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event map macros [MFC]
 - interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
-ms.openlocfilehash: cd1f38236baf2caca9f2a2a426f28f797291fb13
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8f48b916f7130551fc8d4da5bb2ebc75d8d728d5
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524648"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850200"
 ---
 # <a name="delegate-and-interface-map-macros"></a>Makra map delegátů a rozhraní
 
@@ -50,10 +50,6 @@ Toto makro označuje konec seznamu položek delegáta, které tvoří mapu deleg
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** msclr\event.h
-
-### <a name="see-also"></a>Viz také
-
-[Postupy: Zpracování událostí modelu Windows Forms z nativních tříd jazyka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
 ##  <a name="begin_interface_map"></a>BEGIN_INTERFACE_MAP
 
@@ -102,17 +98,13 @@ ID příkazu.
 
 Tento delegát zaregistruje zpětné volání metody se zdrojem příkazu. Když do zdrojového objektu příkazu přidáte delegáta, stane se metoda zpětného volání obslužné rutiny pro příkazy pocházející ze zadaného zdroje.
 
-Další informace najdete v tématu [postupy: přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
+Další informace najdete v tématu [jak: Příkaz přidat ovládací prvek směrování Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
 
 Další informace o používání formulářů Windows, naleznete v tématu [použití uživatelského ovládacího prvku Windows Form v prostředí MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxwinforms.h (definované v sestavení atlmfc\lib\mfcmifc80.dll)
-
-### <a name="see-also"></a>Viz také
-
-[Postupy: Přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
 
 ##  <a name="commanduihandler"></a>Commanduihandler –
 
@@ -142,11 +134,6 @@ Další informace o používání formulářů Windows, naleznete v tématu [pou
 
 **Záhlaví:** afxwinforms.h (definované v sestavení atlmfc\lib\mfcmifc80.dll)
 
-### <a name="see-also"></a>Viz také
-
-[Postupy: Přidání směrování příkazů do ovládacího prvku Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
-[CommandHandler](#commandhandler)
-
 ##  <a name="end_delegate_map"></a>END_DELEGATE_MAP
 
 Ukončí mapu delegáta.
@@ -165,10 +152,6 @@ Toto makro označuje konec seznamu položek delegáta, které tvoří mapu deleg
 
 **Záhlaví:** msclr\event.h
 
-### <a name="see-also"></a>Viz také
-
-[Postupy: Zpracování událostí modelu Windows Forms z nativních tříd jazyka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
-
 ##  <a name="end_interface_map"></a>END_INTERFACE_MAP
 
 Ukončí mapy rozhraní v souboru implementace.
@@ -186,11 +169,6 @@ Další informace o mapy rozhraní najdete v tématu [technická Poznámka: 38](
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxwin.h
-
-### <a name="see-also"></a>Viz také
-
-[Makra a globální prvky](mfc-macros-and-globals.md)<br/>
-[BEGIN_INTERFACE_MAP](#begin_interface_map)
 
 ##  <a name="event_delegate_entry"></a>EVENT_DELEGATE_ENTRY
 
@@ -219,7 +197,7 @@ Každá položka v mapě delegáta odpovídá obslužné rutiny delegáta spravo
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu ukazuje, jak můžete vytvořit položku v objektu map delegátů pro EVENT_DELEGATE_ENTRY `OnClick` obslužné rutiny události; také naleznete v příkladu kódu v MAKE_DELEGATE. Další informace najdete v tématu [jak: jímky událostí modelu Windows Forms z nativních tříd jazyka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).
+Následující příklad kódu ukazuje, jak můžete vytvořit položku v objektu map delegátů pro EVENT_DELEGATE_ENTRY `OnClick` obslužné rutiny události; také naleznete v příkladu kódu v MAKE_DELEGATE. Další informace najdete v tématu [jak: Zpracování událostí modelu Windows Forms z nativních tříd jazyka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).
 
 ```cpp
 BEGIN_DELEGATE_MAP(CMyView)
@@ -230,12 +208,6 @@ END_DELEGATE_MAP()
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** msclr\event.h
-
-### <a name="see-also"></a>Viz také
-
-[MAKE_DELEGATE](#make_delegate)<br/>
-[BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
-[END_DELEGATE_MAP](#end_delegate_map)
 
 ##  <a name="interface_part"></a>INTERFACE_PART
 
@@ -251,7 +223,7 @@ INTERFACE_PART( theClass, iid, localClass)
 
 *theClass*<br/>
 Název třídy, která obsahuje mapu rozhraní.
-*identifikátor IID*<br/>
+*iid*<br/>
 Identifikátor IID, který se má namapovat na vloženou třídu.
 *localClass*<br/>
 Název místní třídy.
@@ -290,7 +262,7 @@ Toto makro vytvoří delegát obslužné rutiny spravovaná událost typu *deleg
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu ukazuje, jak volat `MAKE_DELEGATE` připojit `OnClick` obslužnou rutinu události pro ovládací prvek MFC `MyControl`. Širší vysvětlení fungování toto makro v aplikaci knihovny MFC, najdete v článku [jak: jímky událostí modelu Windows Forms z nativních tříd jazyka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).
+Následující příklad kódu ukazuje, jak volat `MAKE_DELEGATE` připojit `OnClick` obslužnou rutinu události pro ovládací prvek MFC `MyControl`. Širší vysvětlení fungování toto makro v aplikaci knihovny MFC, najdete v článku [jak: Zpracování událostí modelu Windows Forms z nativních tříd jazyka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).
 
 ```cpp
 // CMyView derives from CWinFormsView.
@@ -306,9 +278,8 @@ void CMyView::OnInitialUpdate()
 
 **Záhlaví:** msclr\event.h
 
-### <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
-[END_DELEGATE_MAP](#end_delegate_map)<br/>
-[EVENT_DELEGATE_ENTRY](#event_delegate_entry)
-
+[Postupy: Zpracování jímky událostí modelu Windows Forms z nativních tříd jazyka C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)<br/>
+[Postupy: Přidání směrování příkazů do ovládacího prvku modelu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
+[Makra a globální prvky](mfc-macros-and-globals.md)<br/>

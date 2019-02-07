@@ -1,6 +1,6 @@
 ---
 title: / Execution-Charset (nastavení znakové sady spuštění)
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - execution-charset
 - /execution-charset
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /execution-charset compiler option
 - -execution-charset compiler option
 ms.assetid: 0e02f487-2236-45bc-95f3-5760933a8f96
-ms.openlocfilehash: 3535b60d7aad50f7efc5d1f32726560431ac86a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 13ff185cf7026f1b42f732aae26c11e98d13e9a2
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663967"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849606"
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/ Execution-Charset (nastavení znakové sady spuštění)
 
@@ -47,7 +47,7 @@ Pokud chcete nastavit zdrojové znakové sady a znakové sady spuštění na UTF
 
 1. Rozbalte **vlastnosti konfigurace**, **C/C++**, **příkazového řádku** složky.
 
-1. V **rozšířené možnosti**, přidejte **/Execution-Charset** možnosti a určete upřednostňované kódování.
+1. V **další možnosti**, přidejte **/Execution-Charset** možnosti a určete upřednostňované kódování.
 
 1. Zvolte **OK** uložte provedené změny.
 

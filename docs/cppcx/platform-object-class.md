@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 6d5f3e21e14c34ffbeb335bc1ec4feebd5148c7f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 00f2b57bdf63f9f8bcfd9e544bebab2805ff7f65
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493610"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850088"
 ---
 # <a name="platformobject-class"></a>Platform::Object – třída
 
@@ -57,7 +57,7 @@ public ref class Object : Object
 
 **Záhlaví:** vccorlib.h
 
-**Namespace:** platformy
+**Namespace:** Platforma
 
 ## <a name="equals"></a> Object::Equals – metoda
 
@@ -124,12 +124,6 @@ Použití [typeid](../windows/typeid-cpp-component-extensions.md) operátor se v
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ```
 
-## <a name="see-also"></a>Viz také
-
-[Platform::Type – třída](../cppcx/platform-type-class.md)<br/>
-[Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)<br/>
-[Typ System] (.. /cppcx/Type-System-c-CX.MD
-
 ## <a name="ctor"></a>  Object::Object konstruktor
 
 Inicializuje novou instanci třídy objektu.
@@ -191,4 +185,6 @@ public:
 
 ## <a name="see-also"></a>Viz také
 
-[Platforma Namespace](platform-namespace-c-cx.md)
+[Platforma Namespace](platform-namespace-c-cx.md)<br/>
+[Platform::Type – třída](platform-type-class.md)<br/>
+[Systém typů](type-system-c-cx.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: fb5d35782e70924605fd344e2c330e18d611f44c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fce6fb938b501da7bc9251de51c71714e4613fd5
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519201"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850282"
 ---
 # <a name="run-time-object-model-services"></a>Služby modelu běhového objektu
 
@@ -25,7 +25,7 @@ Vytváření dynamických objektů můžete vytvořit objekt z dané třídy v d
 
 Následující tabulka uvádí, které podporují run-time třída informace, serializace a dynamické vytváření makra MFC.
 
-Další informace o těchto služeb run-time objekt a serializaci, najdete v článku [CObject – třída: přístup k informacím o třídě Run-Time](../../mfc/accessing-run-time-class-information.md).
+Další informace o těchto služeb run-time objekt a serializaci, najdete v článku [CObject – třída: Přístup k informacím o Run-Time třída](../../mfc/accessing-run-time-class-information.md).
 
 ### <a name="run-time-object-model-services-macros"></a>Makra služeb modelu běhového objektu
 
@@ -79,11 +79,6 @@ Použijte toto makro k určení, zda knihovny běžných ovládacích prvků fun
 
 afxcomctl32.h, afxcomctl32.inl
 
-### <a name="see-also"></a>Viz také
-
-[Izolace knihovny běžných ovládacích prvků MFC](../isolation-of-the-mfc-common-controls-library.md)<br/>
-[AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)
-
 ## <a name="afx_comctl32_if_exists2"></a>  AFX_COMCTL32_IF_EXISTS2
 
 Určuje, zda knihovny běžných ovládacích prvků implementuje zadané rozhraní API (Toto je verze Unicode [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)).
@@ -107,11 +102,6 @@ Použijte toto makro k určení, zda knihovny běžných ovládacích prvků fun
 
 afxcomctl32.h, afxcomctl32.inl
 
-### <a name="see-also"></a>Viz také
-
-[Izolace knihovny běžných ovládacích prvků MFC](../isolation-of-the-mfc-common-controls-library.md)<br/>
-[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
-
 ##  <a name="declare_dynamic"></a>  DECLARE_DYNAMIC
 
 Přidá schopnost přístupu k běhových informací o třídě objektu při odvození třídy z `CObject`.
@@ -122,7 +112,7 @@ DECLARE_DYNAMIC(class_name)
 
 ### <a name="parameters"></a>Parametry
 
-*$class_name*<br/>
+*class_name*<br/>
 Skutečný název třídy.
 
 ### <a name="remarks"></a>Poznámky
@@ -153,7 +143,7 @@ DECLARE_DYNCREATE(class_name)
 
 ### <a name="parameters"></a>Parametry
 
-*$class_name*<br/>
+*class_name*<br/>
 Skutečný název třídy.
 
 ### <a name="remarks"></a>Poznámky
@@ -189,7 +179,7 @@ DECLARE_OLECTLTYPE( class_name )
 
 ### <a name="parameters"></a>Parametry
 
-*$class_name*<br/>
+*class_name*<br/>
 Název třídy ovládacího prvku.
 
 ### <a name="remarks"></a>Poznámky
@@ -199,10 +189,6 @@ Název třídy ovládacího prvku.
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxctl.h
-
-### <a name="see-also"></a>Viz také
-
-[IMPLEMENT_OLECTLTYPE](#implement_olectltype)
 
 ## <a name="declareproppageids"></a>DECLARE_PROPPAGEIDS
 
@@ -216,23 +202,18 @@ DECLARE_PROPPAGEIDS( class_name )
 
 ### <a name="parameters"></a>Parametry
 
-*$class_name*<br/>
+*class_name*<br/>
 Název třídy ovládacího prvku, který vlastní stránky vlastností.
 
 ### <a name="remarks"></a>Poznámky
 
 Použití `DECLARE_PROPPAGEIDS` – makro na konci deklaraci vaší třídy. Potom v souboru .cpp, který definuje členské funkce třídy, použijte `BEGIN_PROPPAGEIDS` – makro, makro položky pro všechny stránky vlastností ovládacího prvku a `END_PROPPAGEIDS` – makro, chcete-li deklarovat konec stránky seznamu vlastností.
 
-Další informace na stránkách vlastností, najdete v článku [ovládací prvky ActiveX: stránky vlastností](../mfc-activex-controls-property-pages.md).
+Další informace na stránkách vlastností, najdete v článku [ovládací prvky ActiveX: Stránky vlastností](../mfc-activex-controls-property-pages.md).
 
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxctl.h
-
-### <a name="see-also"></a>Viz také
-
-[BEGIN_PROPPAGEIDS](#begin_proppageids)<br/>
-[END_PROPPAGEIDS](#end_proppageids)
 
 ##  <a name="declare_serial"></a>  DECLARE_SERIAL
 
@@ -244,7 +225,7 @@ DECLARE_SERIAL(class_name)
 
 ### <a name="parameters"></a>Parametry
 
-*$class_name*<br/>
+*class_name*<br/>
 Skutečný název třídy.
 
 ### <a name="remarks"></a>Poznámky
@@ -281,10 +262,10 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
 
 ### <a name="parameters"></a>Parametry
 
-*$class_name*<br/>
+*class_name*<br/>
 Skutečný název třídy.
 
-*BASE_CLASS_NAME*<br/>
+*base_class_name*<br/>
 Název základní třídy.
 
 ### <a name="remarks"></a>Poznámky
@@ -313,10 +294,10 @@ IMPLEMENT_DYNCREATE(class_name, base_class_name)
 
 ### <a name="parameters"></a>Parametry
 
-*$class_name*<br/>
+*class_name*<br/>
 Skutečný název třídy.
 
-*BASE_CLASS_NAME*<br/>
+*base_class_name*<br/>
 Skutečný název základní třídy.
 
 ### <a name="remarks"></a>Poznámky
@@ -352,7 +333,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 
 ### <a name="parameters"></a>Parametry
 
-*$class_name*<br/>
+*class_name*<br/>
 Skutečný název třídy.
 
 *external_name*<br/>
@@ -380,13 +361,7 @@ ID třídy OLE je jedinečný identifikátor 128 bitů pro objekt. Se skládá z
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdisp.h
-
-### <a name="see-also"></a>Viz také
-
-[Makra a globální prvky](mfc-macros-and-globals.md)<br/>
-[DECLARE_OLECREATE](#declare_olecreate)<br/>
-[Klíč CLSID](/windows/desktop/com/clsid-key-hklm)
+**Header:** afxdisp.h
 
 ## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
 
@@ -400,7 +375,7 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 
 ### <a name="parameters"></a>Parametry
 
-*$class_name*<br/>
+*class_name*<br/>
 Název třídy ovládacího prvku.
 
 *idsUserTypeName*<br/>
@@ -416,16 +391,11 @@ Kromě IMPLEMENT_OLECTLTYPE musíte přidat DECLARE_OLECTLTYPE – makro do dekl
 `GetUserTypeNameID` Členská funkce vrátí řetězec prostředku, který identifikuje třídy vašeho ovládacího prvku. `GetMiscStatus` Vrátí OLEMISC bity ovládacího prvku. Tento výčet Určuje soubor nastavení popisující různé vlastnosti ovládacího prvku. Úplný popis OLEMISC nastavení najdete v tématu [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) v sadě Windows SDK.
 
 > [!NOTE]
->  Výchozí nastavení používané ActiveX ControlWizard: OLEMISC_ACTIVATEWHENVISIBLE OLEMISC_SETCLIENTSITEFIRST, OLEMISC_INSIDEOUT, OLEMISC_CANTLINKINSIDE a OLEMISC_RECOMPOSEONRESIZE.
+>  Výchozí nastavení ActiveX ControlWizard jsou: OLEMISC_ACTIVATEWHENVISIBLE OLEMISC_SETCLIENTSITEFIRST, OLEMISC_INSIDEOUT, OLEMISC_CANTLINKINSIDE a OLEMISC_RECOMPOSEONRESIZE.
 
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxctl.h
-
-### <a name="see-also"></a>Viz také
-
-[Makra a globální prvky](mfc-macros-and-globals.md)<br/>
-[DECLARE_OLECTLTYPE](#declare_olectltype)
 
 ##  <a name="implement_serial"></a>  IMPLEMENT_SERIAL
 
@@ -437,10 +407,10 @@ IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)
 
 ### <a name="parameters"></a>Parametry
 
-*$class_name*<br/>
+*class_name*<br/>
 Skutečný název třídy.
 
-*BASE_CLASS_NAME*<br/>
+*base_class_name*<br/>
 Název základní třídy.
 
 *wSchema*<br/>
@@ -474,7 +444,7 @@ RUNTIME_CLASS(class_name)
 
 ### <a name="parameters"></a>Parametry
 
-*$class_name*<br/>
+*class_name*<br/>
 Skutečný název třídy (není uzavřená v uvozovkách).
 
 ### <a name="remarks"></a>Poznámky
@@ -501,7 +471,7 @@ DECLARE_OLECREATE(class_name)
 
 ### <a name="parameters"></a>Parametry
 
-*$class_name*<br/>
+*class_name*<br/>
 Skutečný název třídy.
 
 ### <a name="remarks"></a>Poznámky
@@ -514,7 +484,7 @@ DECLARE_OLECREATE je zahrnuta v deklaraci třídy, musí IMPLEMENT_OLECREATE zah
 
 ### <a name="requirements"></a>Požadavky
 
-**Hlavička**: afxdisp.h
+**Header**: afxdisp.h
 
 ##  <a name="implement_olecreate"></a>  IMPLEMENT_OLECREATE
 
@@ -526,7 +496,7 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
 
 ### <a name="parameters"></a>Parametry
 
-*$class_name*<br/>
+*class_name*<br/>
 Skutečný název třídy.
 
 *external_name*<br/>
@@ -545,9 +515,11 @@ ID třídy OLE je jedinečný identifikátor 128 bitů pro objekt. Se skládá z
 
 ### <a name="requirements"></a>Požadavky
 
-**Hlavička**: afxdisp.h
+**Header**: afxdisp.h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)
+[Makra a globální prvky](mfc-macros-and-globals.md)<br/>
+[Izolace knihovny běžných ovládacích prvků MFC](../isolation-of-the-mfc-common-controls-library.md)<br/>
+[Klíč CLSID](/windows/desktop/com/clsid-key-hklm)
 

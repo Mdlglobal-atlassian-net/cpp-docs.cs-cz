@@ -7,12 +7,12 @@ helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-ms.openlocfilehash: 8765a0712fc79ee60041f9142fbd25f744246ac8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 144ca5cddb70dd04bf25d790c493d15d75b8163a
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477152"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850131"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Analýzu internetových adres URL a pomocné rutiny
 
@@ -22,17 +22,17 @@ Když klient odešle dotaz na Internet server, můžete použít jednu adresu UR
 
 |||
 |-|-|
-|[Afxparseurl –](#afxparseurl)|Analyzuje řetězec adresy URL a vrátí typu a jeho komponenty.|
-|[Afxparseurlex –](#afxparseurlex)|Analyzuje řetězec adresy URL a vrátí typ služby a jeho komponenty, jakož i uživatelské jméno a heslo.|
+|[AfxParseURL](#afxparseurl)|Analyzuje řetězec adresy URL a vrátí typu a jeho komponenty.|
+|[AfxParseURLEx](#afxparseurlex)|Analyzuje řetězec adresy URL a vrátí typ služby a jeho komponenty, jakož i uživatelské jméno a heslo.|
 
 ## <a name="other-internet-helpers"></a>Další pomocníci Internet
 
 |||
 |-|-|
-|[Afxthrowinternetexception –](#afxthrowinternetexception)|Vyvolá výjimku týkající se připojení k Internetu.|
-|[Afxgetinternethandletype –](#afxgetinternethandletype)|Určuje typ internetového popisovače.|
+|[AfxThrowInternetException](#afxthrowinternetexception)|Vyvolá výjimku týkající se připojení k Internetu.|
+|[AfxGetInternetHandleType](#afxgetinternethandletype)|Určuje typ internetového popisovače.|
 
-##  <a name="afxparseurl"></a>  Afxparseurl –
+##  <a name="afxparseurl"></a>  AfxParseURL
 
 Tuto globální se používá v [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).
 
@@ -86,7 +86,7 @@ Určuje typ služby sítě Internet. Možné hodnoty jsou následující:
 *strServer*<br/>
 První segment adresy URL následující typ služby.
 
-*%{strobject/*<br/>
+*strObject*<br/>
 Adresa URL odkazující na objekt (může být prázdné).
 
 *nPort*<br/>
@@ -104,7 +104,7 @@ Například `AfxParseURL` analyzuje adresy URL ve formátu *service://server/dir
 
 *strServer* == "server"
 
-*%{strobject/* == "/ dir/dir/object/object.ext"
+*strObject* == "/dir/dir/object/object.ext"
 
 *nPort* == #port
 
@@ -117,7 +117,7 @@ Například `AfxParseURL` analyzuje adresy URL ve formátu *service://server/dir
 
   **Hlavička** afxinet.h
 
-##  <a name="afxparseurlex"></a>  Afxparseurlex –
+##  <a name="afxparseurlex"></a>  AfxParseURLEx
 
 Tato globální funkce je rozšířenou verzi [afxparseurl –](#afxparseurl) a používá se [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).
 
@@ -174,7 +174,7 @@ Určuje typ služby sítě Internet. Možné hodnoty jsou následující:
 *strServer*<br/>
 První segment adresy URL následující typ služby.
 
-*%{strobject/*<br/>
+*strObject*<br/>
 Adresa URL odkazující na objekt (může být prázdné).
 
 *nPort*<br/>
@@ -214,11 +214,7 @@ Analyzuje řetězec adresy URL a vrátí typ služby a jeho komponenty, jakož i
 
   **Hlavička** afxinet.h
 
-## <a name="see-also"></a>Viz také
-
-[Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)
-
-## <a name="afxgetinternethandletype"></a>  Afxgetinternethandletype –
+## <a name="afxgetinternethandletype"></a>  AfxGetInternetHandleType
 
 Pomocí této globální funkce určit typ internetového popisovače.
 
@@ -274,12 +270,7 @@ Následující seznam obsahuje možných typů Internet vrácený `AfxGetInterne
 
 **Záhlaví:** afxinet.h
 
-### <a name="see-also"></a>Viz také
-
-[Makra a globální prvky](mfc-macros-and-globals.md)<br/>
-[Afxparseurl –](internet-url-parsing-globals.md#afxparseurl)
-
-## <a name="afxthrowinternetexception"></a>  Afxthrowinternetexception –
+## <a name="afxthrowinternetexception"></a>  AfxThrowInternetException
 
 Vyvolá výjimku Internet.
 
@@ -308,9 +299,9 @@ Je odpovědností zjistit příčinu založené na kód chyby operačního syst�
 
 **Záhlaví:** afxinet.h
 
-### <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Makra a globální prvky](mfc-macros-and-globals.md)<br/>
 [CInternetException – třída](cinternetexception-class.md)<br/>
-[VYVOLÁNÍ VÝJIMKY](#throw)
+[AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
 

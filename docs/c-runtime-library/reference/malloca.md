@@ -23,12 +23,12 @@ helpviewer_keywords:
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-ms.openlocfilehash: 8c8ce8bdf8ab40cae45ecec9c4b182bdf3d6bc82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22a63002c900d69e8a7706a54acedf0b4b4f6376
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563979"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850407"
 ---
 # <a name="malloca"></a>_malloca
 
@@ -51,13 +51,13 @@ Bajtů, které mají být přiděleny ze zásobníku.
 
 **_Malloca** rutinní vrátí **void** ukazatel do přiděleného místa, což je zaručeno, že jako vhodně zarovnaný pro úložiště libovolného typu objektu. Pokud *velikost* je 0, **_malloca** přiděluje položku nulové délky a vrátí platný ukazatel na danou položku.
 
-Pokud nelze přidělit místo, vygeneruje se k výjimce přetečení zásobníku. Výjimku přetečení zásobníku není výjimky jazyka C++; je strukturovaných výjimek. Místo používání zpracování výjimek jazyka C++, je nutné použít [strukturovaného zpracování výjimek](../../cpp/structured-exception-handling-c-cpp.md) (SEH).
+Pokud *velikost* je větší než **_ALLOCA_S_THRESHOLD**, pak **_malloca** pokusí o přidělení na haldě a vrátí ukazatel s hodnotou null, pokud nelze přidělit prostor. Pokud *velikost* je menší než nebo rovna hodnotě **_ALLOCA_S_THRESHOLD**, pak **_malloca** pokusy o přidělení zásobníku a k výjimce přetečení zásobníku se generuje, pokud nelze v prostoru přidělit. Výjimky jazyka C++; není výjimce přetečení zásobníku je strukturovaných výjimek. Místo používání zpracování výjimek jazyka C++, je nutné použít [strukturovaného zpracování výjimek](../../cpp/structured-exception-handling-c-cpp.md) (SEH) pro zachycení této výjimky.
 
 ## <a name="remarks"></a>Poznámky
 
 **_malloca** přiděluje *velikost* bajtů ze zásobníku programu nebo haldy, pokud požadavek překračuje velikost v bajtech Dal **_ALLOCA_S_THRESHOLD**. Rozdíl mezi **_malloca** a **_alloca** je, že **_alloca** vždy přiděluje v zásobníku, bez ohledu na velikost. Na rozdíl od **_alloca**, který nevyžaduje nebo povolit volání **bezplatné** uvolnit tak přidělené paměti **_malloca** vyžaduje použití [_freea –](freea.md)k uvolnění paměti. V režimu ladění **_malloca** vždy přidělí paměť z haldy.
 
-Existují omezení explicitně voláním **_malloca** v obslužné rutiny výjimek (EH). Rutiny EH, na kterých běží na procesorech x86 třídy pracovat v rámci své vlastní paměti: provádějí své úkoly v paměti, který není založen na aktuální umístění ukazatel zásobníku nadřazené funkce. Většina běžných implementací zahrnují zpracování (SEH) systému Windows NT strukturovaných výjimek a výrazy klauzule catch C++. Proto se explicitně voláním **_malloca** v některém z následujících výsledků scénáře selhání programu při vrácení volání rutiny EH:
+Existují omezení explicitně voláním **_malloca** v obslužné rutiny výjimek (EH). Rutiny EH, na kterých běží na procesorech x86 třídy pracovat v rámci své vlastní paměti: Provádějí své úkoly v paměti, který není založen na aktuální umístění ukazatel zásobníku nadřazené funkce. Většina běžných implementací zahrnují zpracování (SEH) systému Windows NT strukturovaných výjimek a výrazy klauzule catch C++. Proto se explicitně voláním **_malloca** v některém z následujících výsledků scénáře selhání programu při vrácení volání rutiny EH:
 
 - Výraz filtru výjimky SEH Windows NT: **__except** (`_malloca ()` )
 
@@ -76,7 +76,7 @@ Kromě výše uvedená omezení při použití [/CLR (kompilace Common Language 
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_malloca**|\<malloc.h >|
+|**_malloca**|\<malloc.h>|
 
 ## <a name="example"></a>Příklad
 

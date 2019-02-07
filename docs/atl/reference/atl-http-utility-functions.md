@@ -2,12 +2,12 @@
 title: Funkce nástrojů ATL HTTP
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-ms.openlocfilehash: 43813d91daf572ad6094a5a9fe070234e5086593
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be38dc8b8547574ea47021f8b14f21060a0755f0
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481711"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849645"
 ---
 # <a name="atl-http-utility-functions"></a>Funkce nástrojů ATL HTTP
 
@@ -75,10 +75,6 @@ Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
 ### <a name="remarks"></a>Poznámky
 
 Se chová jako aktuální verze [InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla) ale nevyžaduje WinInet nebo Internet Explorer k instalaci.
-
-### <a name="see-also"></a>Viz také
-
-[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)
 
 ## <a name="atlcombineurl"></a> AtlCombineUrl
 
@@ -250,7 +246,7 @@ bool inline RGBToHtml(
 
 ### <a name="parameters"></a>Parametry
 
-*Barva*<br/>
+*color*<br/>
 Hodnota barvy RGB.
 
 *pbOut*<br/>
@@ -279,7 +275,7 @@ inline void SystemTimeToHttpDate(
 
 ### <a name="parameters"></a>Parametry
 
-*St*<br/>
+*st*<br/>
 Systémový čas získána jako řetězec ve formátu HTTP.
 
 *strTime*<br/>
@@ -287,5 +283,6 @@ Odkaz na proměnnou s řetězcem přijímat HTTP datum a čas, jak jsou definov�
 
 ## <a name="see-also"></a>Viz také
 
-[Koncepty](../../atl/active-template-library-atl-concepts.md)<br/>
-[Desktopové komponenty ATL objektů COM](../../atl/atl-com-desktop-components.md)
+[Koncepty](../active-template-library-atl-concepts.md)<br/>
+[Desktopové komponenty ATL objektů COM](../atl-com-desktop-components.md)<br/>
+[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)

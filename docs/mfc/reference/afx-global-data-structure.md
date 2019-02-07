@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 9b6a462cf359bbd31958509c4fe7d0d71e490d11
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 0fd8143564beecccd8943f3ceba531e8697151d1
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694306"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850321"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA – struktura
 
@@ -85,7 +85,7 @@ struct AFX_GLOBAL_DATA
 
 |Název|Popis|
 |----------|-----------------|
-|[AFX_GLOBAL_DATA::Cleanup](#cleanup)|Uvolní prostředky, které jsou přiděleny v rámci rozhraní, jako jsou štětce, písma a knihovny DLL.|
+|[AFX_GLOBAL_DATA::CleanUp](#cleanup)|Uvolní prostředky, které jsou přiděleny v rámci rozhraní, jako jsou štětce, písma a knihovny DLL.|
 |[AFX_GLOBAL_DATA::D2D1MakeRotateMatrix](#d2d1makerotatematrix)|Vytvoří otočení transformace, který otáčí podle zadaného úhlu kolem Zadaný bod.|
 |[AFX_GLOBAL_DATA::DrawParentBackground](#drawparentbackground)|Nakreslí pozadí nadřazeného ovládacího prvku v určené oblasti.|
 |[AFX_GLOBAL_DATA::DrawTextOnGlass](#drawtextonglass)|Vykreslí zadaný text ve vizuální styl zadaný motiv.|
@@ -154,11 +154,6 @@ Většina dat `AFX_GLOBAL_DATA` struktura je inicializován při spuštění apl
 
 **Záhlaví:** afxglobals.h
 
-### <a name="see-also"></a>Viz také
-
-[Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[Struktury, styly, zpětná volání a mapy zpráv](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
-
 ## <a name="bisosalphablendingsupport"></a> AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport
 
 Určuje, zda operační systém podporuje alfa míchání.
@@ -171,7 +166,7 @@ BOOL  bIsOSAlphaBlendingSupport;
 
 Hodnota TRUE označuje, že je podporovaný alfa míchání; v opačném případě hodnota FALSE.
 
-## <a name="cleanup"></a> AFX_GLOBAL_DATA::Cleanup
+## <a name="cleanup"></a> AFX_GLOBAL_DATA::CleanUp
 
 Uvolní prostředky, které jsou přiděleny v rámci rozhraní, jako jsou štětce, písma a knihovny DLL.
 
@@ -195,7 +190,7 @@ HRESULT D2D1MakeRotateMatrix(
 *úhel*<br/>
 Úhel po směru hodinových ručiček otočení ve stupních.
 
-*System Center*<br/>
+*center*<br/>
 Bod o tom, které otočí.
 
 *matice*<br/>
@@ -221,10 +216,10 @@ BOOL DrawParentBackground(
 *pWnd*<br/>
 [in] Ukazatel na okno ovládacího prvku.
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
-*lprect –*<br/>
+*lpRect*<br/>
 [in] Ukazatel na obdélník, který oblasti pro kreslení za rozsahem. Výchozí hodnota je NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -255,7 +250,7 @@ BOOL DrawTextOnGlass(
 
 Použití [OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemedata) metodu pro vytvoření HTHEME.
 
-*primární řadič domény*<br/>
+*pDC*<br/>
 [in] Ukazatel na kontext zařízení.
 
 *iPartId*<br/>
@@ -289,16 +284,6 @@ Hodnota TRUE, pokud, motiv se používá k nakreslení zadaný text; v opačném
 
 Motiv určuje vizuální styl aplikace. Motiv se nepoužívá k vykreslování textu, pokud *hTheme* parametr hodnotu NULL, nebo pokud [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex) metoda není podporována, nebo pokud [Správce oken plochy](/windows/desktop/dwm/dwm-overview) složení (DWM) je zakázané.
 
-### <a name="see-also"></a>Viz také
-
-[Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[COLORREF](/windows/desktop/gdi/colorref)<br/>
-[Části a stavy](/windows/desktop/controls/parts-and-states)<br/>
-[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)<br/>
-[DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
-[Správce oken plochy](/windows/desktop/dwm/dwm-overview)<br/>
-[Povolit a řídit kompozici DWM](/windows/desktop/dwm/composition-ovw)
-
 ## <a name="enableaccessibilitysupport"></a> AFX_GLOBAL_DATA::EnableAccessibilitySupport
 
 Povolí nebo zakáže Microsoft Active Accessibility podporu.
@@ -317,11 +302,6 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 Active Accessibility je technologie založené na modelu COM, které zlepší způsob, jakým programy a pracovní operačního systému Windows společně s produktů využívajících technologie usnadnění. Poskytuje spolehlivé metody pro odhalení informací o prvky uživatelského rozhraní. Novější model usnadnění volá automatizace uživatelského rozhraní Microsoft je však nyní k dispozici. Porovnání dvou technologie najdete v tématu [automatizace uživatelského rozhraní a Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility).
 
 Použití [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport) metodou ke zjištění, zda je povolena podpora společnosti Microsoft věnovaném usnadnění aktivní.
-
-### <a name="see-also"></a>Viz také
-
-[Automatizace uživatelského rozhraní a technologie Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)<br/>
-[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)
 
 ## <a name="excludetag"></a> AFX_GLOBAL_DATA::ExcludeTag
 
@@ -361,13 +341,13 @@ Symboly v následující tabulce použijte ke kódování sady řídicí znaky v
 
 |Symbol|Řídicí znak|
 |------------|----------------------|
-|_T ("\\\t")|_T("\t")|
+|_T("\\\t")|_T("\t")|
 |_T ("\\\n")|_T("\n")|
-|_T ("\\\r")|_T("\r")|
-|_T ("\\\b")|_T("\b")|
-|_T("LT")|_T ("\<")|
-|_T("GT")|_T("&GT;")|
-|_T("AMP")|_T("&AMP;")|
+|_T("\\\r")|_T("\r")|
+|_T("\\\b")|_T("\b")|
+|_T("LT")|_T("\<")|
+|_T("GT")|_T(">")|
+|_T("AMP")|_T("&")|
 
 ## <a name="getcolor"></a> AFX_GLOBAL_DATA::GetColor
 
@@ -389,12 +369,6 @@ Hodnota barvy RGB elementu zadaného uživatelského rozhraní. Další informac
 ### <a name="remarks"></a>Poznámky
 
 Pokud *nColor* parametr je mimo rozsah, vrácená hodnota je nula. Protože nula je také platné hodnoty RGB, tuto metodu nelze použít k určení, zda je podporován systémové barvy podle aktuálního operačního systému. Místo toho použijte [GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush) metodu, která vrátí hodnotu NULL, pokud není podporovaná barvu.
-
-### <a name="see-also"></a>Viz také
-
-[GetSysColor – funkce](/windows/desktop/api/winuser/nf-winuser-getsyscolor)<br/>
-[COLORREF](/windows/desktop/gdi/colorref)<br/>
-[GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)
 
 ## <a name="getdirect2dfactory"></a> AFX_GLOBAL_DATA::GetDirect2dFactory
 
@@ -430,16 +404,12 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 
 ### <a name="parameters"></a>Parametry
 
-*Informace o*<br/>
+*info*<br/>
 [out v] A [NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa) strukturu, která obsahuje škálovatelné metriky související s neklientské oblasti okna nonminimized.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Hodnota TRUE, pokud metoda uspěje; v opačném případě hodnota FALSE.
-
-### <a name="see-also"></a>Viz také
-
-[Struktura NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)
 
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
 
@@ -538,10 +508,6 @@ Microsoft Active Accessibility byl starší řešení pro zpřístupnění aplik
 
 Použití [AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport) metoda k povolení nebo zakázání Active Accessibility podpory.
 
-### <a name="see-also"></a>Viz také
-
-[Automatizace uživatelského rozhraní a technologie Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
-
 ## <a name="isd2dinitialized"></a> AFX_GLOBAL_DATA::IsD2DInitialized
 
 Určuje, zda byl inicializován D2D
@@ -565,11 +531,6 @@ BOOL IsDwmCompositionEnabled();
 ### <a name="return-value"></a>Návratová hodnota
 
 Hodnota TRUE v případě [Správce oken plochy](/windows/desktop/dwm/dwm-overview) složené je povoleno; jinak FALSE.
-
-### <a name="see-also"></a>Viz také
-
-[Správce oken plochy](/windows/desktop/dwm/dwm-overview)<br/>
-[Povolit a řídit kompozici DWM](/windows/desktop/dwm/composition-ovw)
 
 ## <a name="ishighcontrastmode"></a> AFX_GLOBAL_DATA::IsHighContrastMode
 
@@ -743,11 +704,6 @@ Kvalifikovaný název registrované třídy, pokud tato metoda bude úspěšná;
 
 Vrácená hodnota je seznam oddělit středníkem *lpszClassNamePrefix* parametr řetězce a reprezentace šestnáctkového textu zpracovává aktuální instance aplikace; aplikace kurzor, který je na šipku kurzor, jehož identifikátor je IDC_ARROW; a štětec pozadí. Další informace o registrace tříd oken MFC naleznete v tématu [afxregisterclass –](../../mfc/reference/application-information-and-management.md#afxregisterclass).
 
-### <a name="see-also"></a>Viz také
-
-[Afxregisterclass –](../../mfc/reference/application-information-and-management.md#afxregisterclass)<br/>
-[Afxthrowresourceexception –](../../mfc/reference/exception-processing.md#afxthrowresourceexception)
-
 ## <a name="resume"></a> AFX_GLOBAL_DATA::Resume
 
 Znovu inicializuje ukazatele interních funkcí, které přístup k metodám, které podporují používání motivů Windows a vizuální styly.
@@ -793,11 +749,6 @@ BOOL SetLayeredAttrib(
 ### <a name="return-value"></a>Návratová hodnota
 
 Hodnota TRUE, pokud metoda uspěje; v opačném případě hodnota FALSE.
-
-### <a name="see-also"></a>Viz také
-
-[COLORREF](/windows/desktop/gdi/colorref)<br/>
-[SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)
 
 ## <a name="setmenufont"></a> AFX_GLOBAL_DATA::SetMenuFont
 
@@ -903,7 +854,7 @@ int GetShellAutohideBars();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Celočíselná hodnota s kódováním příznaky, které určují umístění automaticky skrýt pruhy. To může kombinovat následující hodnoty: AFX_AUTOHIDE_BOTTOM AFX_AUTOHIDE_TOP, AFX_AUTOHIDE_LEFT, AFX_AUTOHIDE_RIGHT.
+Celočíselná hodnota s kódováním příznaky, které určují umístění automaticky skrýt pruhy. To může kombinovat následující hodnoty: AFX_AUTOHIDE_BOTTOM AFX_AUTOHIDE_TOP, AFX_AUTOHIDE_LEFT AFX_AUTOHIDE_RIGHT.
 
 ## <a name="releasetaskbarrefs"></a> AFX_GLOBAL_DATA::ReleaseTaskBarRefs
 
@@ -943,3 +894,20 @@ Odkaz na identifikátor rozhraní.
 
 Vrátí hodnotu S_OK v případě úspěchu; jinak chybovou hodnotu.
 
+## <a name="see-also"></a>Viz také:
+
+[Graf hierarchie](../hierarchy-chart.md)<br/>
+[Struktury, styly, zpětná volání a mapy zpráv](structures-styles-callbacks-and-message-maps.md)<br/>
+[COLORREF](/windows/desktop/gdi/colorref)<br/>
+[Části a stavy](/windows/desktop/controls/parts-and-states)<br/>
+[CDC::DrawText](cdc-class.md#drawtext)<br/>
+[DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
+[Správce oken plochy](/windows/desktop/dwm/dwm-overview)<br/>
+[Povolit a řídit kompozici DWM](/windows/desktop/dwm/composition-ovw)<br/>
+[Automatizace uživatelského rozhraní a technologie Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)<br/>
+[GetSysColor – funkce](/windows/desktop/api/winuser/nf-winuser-getsyscolor)<br/>
+[GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)<br/>
+[Struktura NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)<br/>
+[AfxRegisterClass](application-information-and-management.md#afxregisterclass)<br/>
+[AfxThrowResourceException](exception-processing.md#afxthrowresourceexception)<br/>
+[SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)

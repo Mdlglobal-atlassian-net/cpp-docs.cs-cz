@@ -20,12 +20,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: dbb243453b6d869082a4232b12b27f5510d84aa5
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: a4979ab7bbc0e396de5629fba1b86f3bfb602dcf
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657627"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850437"
 ---
 # <a name="diagnostic-services"></a>Diagnostické služby
 
@@ -66,26 +66,26 @@ Kromě toho knihovny run-time jazyka C podporuje také sadu diagnostické funkce
 |||
 |-|-|
 |[afxDump](#afxdump)|Globální proměnné, která odesílá [CDumpContext](../../mfc/reference/cdumpcontext-class.md) informace v okně výstupu ladicího programu, nebo do terminálu ladění.|
-|[afxmemdf –](#afxmemdf)|Globální proměnné, které ovládá chování ladění přidělení paměti.|
-|[Afxcheckerror –](#afxcheckerror)|Globální proměnné, které se použily k testování předaný SCODE zobrazíte, pokud se jedná se o chybu a pokud ano, zobrazí odpovídající chybu.|
-|[Afxcheckmemory –](#afxcheckmemory)|Ověří že integritu všechny aktuálně přidělené paměti.|
-|[Afxdebugbreak –](#afxdebugbreak)|Způsobí přerušení provádění.|
-|[afxDump](#cdumpcontext_in_mfc)|Pokud je volána v ladicím programu, vypíše stav objektu během ladění.|
-|[afxDump](#afxdump)|Vnitřní funkce, která Vypíše stav objektu během ladění.|
-|[Afxdumpstack –](#afxdumpstack)|Vygenerujte snímek aktuálního zásobníku. Tato funkce je vždy propojovat staticky.|
-|[Afxenablememoryleakdump –](#afxenablememoryleakdump)|Umožňuje výpis paměti.|
-|[Afxenablememorytracking –](#afxenablememorytracking)|Zapne sledování zapnutí a vypnutí paměti.|
-|[Afxismemoryblock –](#afxismemoryblock)|Ověřuje, že byl správně přidělen blok paměti.|
-|[Afxisvalidaddress –](#afxisvalidaddress)|Ověří, zda rozsah adres paměti v rámci programu hranice.|
-|[Afxisvalidstring –](#afxisvalidstring)|Určuje, zda je platný ukazatel na řetězec.|
-|[Afxsetallochook –](#afxsetallochook)|Umožňuje volání funkce na každý přidělení paměti.|
+|[afxMemDF](#afxmemdf)|Globální proměnné, které ovládá chování ladění přidělení paměti.|
+|[AfxCheckError](#afxcheckerror)|Globální proměnné, které se použily k testování předaný SCODE zobrazíte, pokud se jedná se o chybu a pokud ano, zobrazí odpovídající chybu.|
+|[AfxCheckMemory](#afxcheckmemory)|Ověří že integritu všechny aktuálně přidělené paměti.|
+|[AfxDebugBreak](#afxdebugbreak)|Způsobí přerušení provádění.|
+|[AfxDump](#cdumpcontext_in_mfc)|Pokud je volána v ladicím programu, vypíše stav objektu během ladění.|
+|[AfxDump](#afxdump)|Vnitřní funkce, která Vypíše stav objektu během ladění.|
+|[AfxDumpStack](#afxdumpstack)|Vygenerujte snímek aktuálního zásobníku. Tato funkce je vždy propojovat staticky.|
+|[AfxEnableMemoryLeakDump](#afxenablememoryleakdump)|Umožňuje výpis paměti.|
+|[AfxEnableMemoryTracking](#afxenablememorytracking)|Zapne sledování zapnutí a vypnutí paměti.|
+|[AfxIsMemoryBlock](#afxismemoryblock)|Ověřuje, že byl správně přidělen blok paměti.|
+|[AfxIsValidAddress](#afxisvalidaddress)|Ověří, zda rozsah adres paměti v rámci programu hranice.|
+|[AfxIsValidString](#afxisvalidstring)|Určuje, zda je platný ukazatel na řetězec.|
+|[AfxSetAllocHook](#afxsetallochook)|Umožňuje volání funkce na každý přidělení paměti.|
 
 ### <a name="mfc-object-diagnostic-functions"></a>Diagnostické funkce objektů MFC
 
 |||
 |-|-|
-|[AfxDoForAllClasses –](#afxdoforallclasses)|Provede zadanou funkci na všech `CObject`-odvozené třídy, které podporují, kontrolu typu za běhu.|
-|[Afxdoforallobjects –](#afxdoforallobjects)|Provede zadanou funkci na všech `CObject`-odvozené objekty, které byly přiděleny s **nové**.|
+|[AfxDoForAllClasses](#afxdoforallclasses)|Provede zadanou funkci na všech `CObject`-odvozené třídy, které podporují, kontrolu typu za běhu.|
+|[AfxDoForAllObjects](#afxdoforallobjects)|Provede zadanou funkci na všech `CObject`-odvozené objekty, které byly přiděleny s **nové**.|
 
 ### <a name="mfc-compilation-macros"></a>MFC – makra kompilace
 
@@ -183,10 +183,10 @@ ASSERT_KINDOF(classname, pobject)
 
 ### <a name="parameters"></a>Parametry
 
-*Název třídy*<br/>
+*classname*<br/>
 Název `CObject`-odvozené třídy.
 
-*odstraněný objekt*<br/>
+*pobject*<br/>
 Ukazatel na objekt třídy.
 
 ### <a name="remarks"></a>Poznámky
@@ -218,7 +218,7 @@ ASSERT_VALID(pObject)
 
 ### <a name="parameters"></a>Parametry
 
-*odstraněný objekt*<br/>
+*pObject*<br/>
 Určuje objekt třídy odvozené z `CObject` , který má přepsání verze `AssertValid` členskou funkci.
 
 ### <a name="remarks"></a>Poznámky
@@ -320,12 +320,6 @@ Pokud selže některý z těchto testů, se zobrazí upozornění stejným způs
 
 **Záhlaví:** afx.h
 
-### <a name="see-also"></a>Viz také
-
-[Makra a globální prvky](mfc-macros-and-globals.md)<br/>
-[OVĚŘENÍ](#verify)<br/>
-[ATLENSURE](#altensure)
-
 ## <a name="this_file"></a> THIS_FILE
 
 Rozšíří na název souboru, který je kompilován.
@@ -355,12 +349,6 @@ static char THIS_FILE[] = __FILE__;
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afx.h
-
-### <a name="see-also"></a>Viz také
-
-[Makra a globální prvky](mfc-macros-and-globals.md)<br/>
-[KONTROLNÍ VÝRAZ](#assert)<br/>
-[OVĚŘENÍ](#verify)
 
 ##  <a name="trace"></a>  TRASOVÁNÍ
 
@@ -452,7 +440,7 @@ void AfxDump(const CObject* pOb);
 
 ### <a name="parameters"></a>Parametry
 
-*Poštovní přihrádka*<br/>
+*pOb*<br/>
 Ukazatel na objekt třídy odvozené z `CObject`.
 
 ### <a name="remarks"></a>Poznámky
@@ -465,11 +453,7 @@ Váš program kód by neměl volat `AfxDump`, ale místo toho by měly volat `Du
 
 **Záhlaví:** afx.h
 
-### <a name="see-also"></a>Viz také
-
-[CObject::Dump](cobject-class.md#dump)
-
-##  <a name="afxmemdf"></a>  afxmemdf –
+##  <a name="afxmemdf"></a>  afxMemDF
 
 Tato proměnná je přístupný z ladicího programu nebo aplikace a umožňuje ladit přidělování diagnostiky.
 
@@ -522,7 +506,7 @@ Tato funkce je možné zkontrolovat vrácené hodnoty volání funkce OLE ve va�
 
 **Záhlaví:** afx.h
 
-##  <a name="afxcheckmemory"></a>  Afxcheckmemory –
+##  <a name="afxcheckmemory"></a>  AfxCheckMemory
 
 Tato funkce ověří volné paměti fondu a vytiskne chybové zprávy podle potřeby.
 
@@ -569,7 +553,7 @@ void AfxDump(const CObject* pOb);
 
 ### <a name="parameters"></a>Parametry
 
-*Poštovní přihrádka*<br/>
+*pOb*<br/>
 Ukazatel na objekt třídy odvozené z `CObject`.
 
 ### <a name="remarks"></a>Poznámky
@@ -581,10 +565,6 @@ Váš program kód by neměl volat `AfxDump`, ale místo toho by měly volat `Du
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afx.h
-
-### <a name="see-also"></a>Viz také
-
-[CObject::Dump](cobject-class.md#dump)
 
 ##  <a name="afxdumpstack"></a>  Afxdumpstack –
 
@@ -661,7 +641,7 @@ Chcete-li úspěšně používat tuto funkci:
 
 **Záhlaví:** afx.h
 
-##  <a name="afxenablememoryleakdump"></a>  Afxenablememoryleakdump –
+##  <a name="afxenablememoryleakdump"></a>  AfxEnableMemoryLeakDump
 
 Povolí nebo zakáže výpis paměti v destruktoru AFX_DEBUG_STATE.
 
@@ -691,7 +671,7 @@ Pokud se vaše aplikace načte jiné knihovny než knihovnu MFC, budou některé
 
 **Záhlaví:** afx.h
 
-##  <a name="afxenablememorytracking"></a>  Afxenablememorytracking –
+##  <a name="afxenablememorytracking"></a>  AfxEnableMemoryTracking
 
 Sledování diagnostiky paměti je obvykle povolené v ladicí verzi knihovny MFC.
 
@@ -725,7 +705,7 @@ Další informace o `AfxEnableMemoryTracking`, naleznete v tématu [ladění apl
 
 **Záhlaví:** afx.h
 
-##  <a name="afxismemoryblock"></a>  Afxismemoryblock –
+##  <a name="afxismemoryblock"></a>  AfxIsMemoryBlock
 
 Testuje adresu paměti, abyste měli jistotu, představuje bloku paměti aktuálně aktivní, která byla přidělena diagnostických verzí **nové**.
 
@@ -763,7 +743,7 @@ Také zkontroluje zadané velikosti oproti původní přidělená velikost. Poku
 
 **Záhlaví:** afx.h
 
-##  <a name="afxisvalidaddress"></a>  Afxisvalidaddress –
+##  <a name="afxisvalidaddress"></a>  AfxIsValidAddress
 
 Testuje libovolnou adresu paměti k zajištění, že je obsažen zcela v rámci programu paměťový prostor.
 
@@ -776,7 +756,7 @@ BOOL AfxIsValidAddress(
 
 ### <a name="parameters"></a>Parametry
 
-*LP*<br/>
+*lp*<br/>
 Odkazuje na adresu paměti má být testována.
 
 *nBytes*<br/>
@@ -803,7 +783,7 @@ Adresa není omezen na bloky přidělaná **nové**.
 
 **Záhlaví:** afx.h
 
-##  <a name="afxisvalidstring"></a>  Afxisvalidstring –
+##  <a name="afxisvalidstring"></a>  AfxIsValidString
 
 Tuto funkci použijte k určení, zda je platný ukazatel na řetězec.
 
@@ -835,7 +815,7 @@ V sestaveních bez ladění nenulovou hodnotu, pokud *lpsz* není NULL; jinak 0.
 
 **Záhlaví:** afx.h
 
-##  <a name="afxsetallochook"></a>  Afxsetallochook –
+##  <a name="afxsetallochook"></a>  AfxSetAllocHook
 
 Nastaví hák, která umožňuje voláním zadanou funkci před každý blok paměti je přidělen.
 
@@ -873,7 +853,7 @@ Všimněte si, že AFXAPI konvence volání znamená, že volaný musí odebrat 
 
 **Záhlaví:** afx.h
 
-##  <a name="afxdoforallclasses"></a>  AfxDoForAllClasses –
+##  <a name="afxdoforallclasses"></a>  AfxDoForAllClasses
 
 Volá funkci zadané iteraci pro všechny serializovatelný `CObject`-odvozené třídy v paměti aplikace.
 
@@ -909,7 +889,7 @@ Serializovatelné `CObject`-odvozené třídy jsou třídy odvozeny pomocí DECL
 
 **Záhlaví:** afx.h
 
-##  <a name="afxdoforallobjects"></a>  Afxdoforallobjects –
+##  <a name="afxdoforallobjects"></a>  AfxDoForAllObjects
 
 Spustí funkci zadané iteraci pro všechny objekty odvozené z `CObject` , který byl přidělen s **nové**.
 
@@ -940,6 +920,7 @@ Zásobník, globální, nebo vložené objekty nejsou uvedené. Ukazatel předan
 
 [!code-cpp[NVC_MFCCollections#116](../../mfc/codesnippet/cpp/diagnostic-services_19.cpp)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)
+[Makra a globální prvky](mfc-macros-and-globals.md)<br/>
+[CObject::Dump](cobject-class.md#dump)

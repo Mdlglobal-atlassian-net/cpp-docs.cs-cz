@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-ms.openlocfilehash: b5813600bbf8eb2a7b25992b3e1b020fcf8dfa02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dce982f76e25da424c02d621c1b760ec29e88918
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513942"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850161"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Rutiny ověřování dat standardního dialogového okna
 
@@ -22,23 +22,23 @@ Toto téma uvádí rutiny ověřování (DDV) dat standardního dialogového okn
 
 |||
 |-|-|
-|[Ddv_maxchars –](#ddv_maxchars)|Ověřuje, že počet znaků v hodnotě daný ovládací prvek není delší než daný maximum.|
-|[Ddv_minmaxbyte –](#ddv_minmaxbyte)|Ověří nepřekročí hodnotu daného ovládacího prvku daný **BAJTŮ** rozsahu.|
-|[Ddv_minmaxdatetime –](#ddv_minmaxdatetime)|Ověřuje, že daný ovládací prvek hodnotu nepřekročí za dané časové období.|
-|[Ddv_minmaxdouble –](#ddv_minmaxdouble)|Ověří nepřekročí hodnotu daného ovládacího prvku daný **double** rozsahu.|
-|[Ddv_minmaxdword –](#ddv_minmaxdword)|Ověří nepřekročí hodnotu daný ovládací prvek daného **DWORD** rozsahu.|
-|[Ddv_minmaxfloat –](#ddv_minmaxfloat)|Ověří nepřekročí hodnotu daného ovládacího prvku daný **float** rozsahu.|
-|[Ddv_minmaxint –](#ddv_minmaxint)|Ověří nepřekročí hodnotu daný ovládací prvek daného **int** rozsahu.|
-|[Ddv_minmaxlong –](#ddv_minmaxlong)|Ověří nepřekročí hodnotu daného ovládacího prvku daný **dlouhé** rozsahu.|
+|[DDV_MaxChars](#ddv_maxchars)|Ověřuje, že počet znaků v hodnotě daný ovládací prvek není delší než daný maximum.|
+|[DDV_MinMaxByte](#ddv_minmaxbyte)|Ověří nepřekročí hodnotu daného ovládacího prvku daný **BAJTŮ** rozsahu.|
+|[DDV_MinMaxDateTime](#ddv_minmaxdatetime)|Ověřuje, že daný ovládací prvek hodnotu nepřekročí za dané časové období.|
+|[DDV_MinMaxDouble](#ddv_minmaxdouble)|Ověří nepřekročí hodnotu daného ovládacího prvku daný **double** rozsahu.|
+|[DDV_MinMaxDWord](#ddv_minmaxdword)|Ověří nepřekročí hodnotu daný ovládací prvek daného **DWORD** rozsahu.|
+|[DDV_MinMaxFloat](#ddv_minmaxfloat)|Ověří nepřekročí hodnotu daného ovládacího prvku daný **float** rozsahu.|
+|[DDV_MinMaxInt](#ddv_minmaxint)|Ověří nepřekročí hodnotu daný ovládací prvek daného **int** rozsahu.|
+|[DDV_MinMaxLong](#ddv_minmaxlong)|Ověří nepřekročí hodnotu daného ovládacího prvku daný **dlouhé** rozsahu.|
 |[DDV_MinMaxLongLong](#ddv_minmaxlonglong)|Ověří nepřekročí hodnotu daný ovládací prvek daného **LONGLONG** rozsahu.|
-|[Ddv_minmaxmonth –](#ddv_minmaxmonth)|Ověřuje, že hodnota daný ovládací prvek není delší než daný rozsah.|
+|[DDV_MinMaxMonth](#ddv_minmaxmonth)|Ověřuje, že hodnota daný ovládací prvek není delší než daný rozsah.|
 |[DDV_MinMaxShort](#ddv_minmaxshort)|Ověří nepřekročí hodnotu daného ovládacího prvku daný **krátký** rozsahu.|
-|[Ddv_minmaxslider –](#ddv_minmaxslider)|Ověřuje, že hodnota ovládacího prvku posuvník dané spadá do daného rozsahu.|
+|[DDV_MinMaxSlider](#ddv_minmaxslider)|Ověřuje, že hodnota ovládacího prvku posuvník dané spadá do daného rozsahu.|
 |[DDV_MinMaxUInt](#ddv_minmaxuint)|Ověří nepřekročí hodnotu daný ovládací prvek daného **UINT** rozsahu.|
-|[Ddv_minmaxunsigned –](#ddv_minmaxuint)|Ověřuje, že hodnota daný ovládací prvek leží mezi dvěma zadanými hodnotami.|
+|[DDV_MinMaxUnsigned](#ddv_minmaxuint)|Ověřuje, že hodnota daný ovládací prvek leží mezi dvěma zadanými hodnotami.|
 |[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|Ověří nepřekročí hodnotu daný ovládací prvek daného **ULONGLONG** rozsahu.|
 
-##  <a name="ddv_maxchars"></a>  Ddv_maxchars –
+##  <a name="ddv_maxchars"></a>  DDV_MaxChars
 
 Volání `DDV_MaxChars` k ověření, že počet znaků v ovládacím prvku přidružené *hodnotu* nepřekročí *nChars*.
 
@@ -66,9 +66,9 @@ Další informace o DDV najdete v tématu [výměna dat dialogových oken a ově
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
-##  <a name="ddv_minmaxbyte"></a>  Ddv_minmaxbyte –
+##  <a name="ddv_minmaxbyte"></a>  DDV_MinMaxByte
 
 Volání `DDV_MinMaxByte` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi *minVal* a *maxVal*.
 
@@ -100,9 +100,9 @@ Další informace o DDV najdete v tématu [výměna dat dialogových oken a ově
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
-##  <a name="ddv_minmaxdatetime"></a>  Ddv_minmaxdatetime –
+##  <a name="ddv_minmaxdatetime"></a>  DDV_MinMaxDateTime
 
 Volání `DDV_MinMaxDateTime` k ověření, že ovládací prvek hodnotu času a data v výběr data a času ( [atributu CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) přidružené k *refValue* leží mezi *refMinRange*a *refMaxRange*.
 
@@ -123,7 +123,7 @@ void AFXAPI DDV_MinMaxDateTime(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [cdataexchange –](../../mfc/reference/cdataexchange-class.md) objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr. Není nutné odstranit tento objekt.
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr. Není nutné odstranit tento objekt.
 
 *refValue*<br/>
 Odkaz na [CTime](../../atl-mfc-shared/reference/ctime-class.md) nebo [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objekt přidružený k proměnné člena dialogové okno, zobrazení formuláře nebo ovládací prvek zobrazení objektu. Tento objekt obsahuje data, která mají být ověřen.
@@ -140,9 +140,9 @@ Další informace o DDV najdete v tématu [výměna dat dialogových oken a ově
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
-##  <a name="ddv_minmaxdouble"></a>  Ddv_minmaxdouble –
+##  <a name="ddv_minmaxdouble"></a>  DDV_MinMaxDouble
 
 Volání `DDV_MinMaxDouble` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi *minVal* a *maxVal*.
 
@@ -174,9 +174,9 @@ Další informace o DDV najdete v tématu [výměna dat dialogových oken a ově
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
-##  <a name="ddv_minmaxdword"></a>  Ddv_minmaxdword –
+##  <a name="ddv_minmaxdword"></a>  DDV_MinMaxDWord
 
 Volání `DDV_MinMaxDWord` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi *minVal* a *maxVal*.
 
@@ -208,7 +208,7 @@ Další informace o DDV najdete v tématu [výměna dat dialogových oken a ově
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
 ##  <a name="ddv_minmaxfloat"></a>  Ddv_minmaxfloat –
 
@@ -242,9 +242,9 @@ Další informace o DDV najdete v tématu [výměna dat dialogových oken a ově
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
-##  <a name="ddv_minmaxint"></a>  Ddv_minmaxint –
+##  <a name="ddv_minmaxint"></a>  DDV_MinMaxInt
 
 Volání `DDV_MinMaxInt` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi *minVal* a *maxVal*.
 
@@ -276,9 +276,9 @@ Další informace o DDV najdete v tématu [výměna dat dialogových oken a ově
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
-##  <a name="ddv_minmaxlong"></a>  Ddv_minmaxlong –
+##  <a name="ddv_minmaxlong"></a>  DDV_MinMaxLong
 
 Volání `DDV_MinMaxLong` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi *minVal* a *maxVal*.
 
@@ -310,7 +310,7 @@ Další informace o DDV najdete v tématu [výměna dat dialogových oken a ově
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
 ##  <a name="ddv_minmaxlonglong"></a>  DDV_MinMaxLongLong
 
@@ -344,9 +344,9 @@ Další informace o DDV najdete v tématu [výměna dat dialogových oken a ově
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
-##  <a name="ddv_minmaxmonth"></a>  Ddv_minmaxmonth –
+##  <a name="ddv_minmaxmonth"></a>  DDV_MinMaxMonth
 
 Volání `DDV_MinMaxMonth` k ověření, že hodnota času a data v měsíčním kalendáři ovládací prvek ( [atributu CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) přidružené k *refValue* leží mezi *refMinRange* a *refMaxRange*.
 
@@ -367,7 +367,7 @@ void AFXAPI DDV_MinMaxMonth(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [cdataexchange –](../../mfc/reference/cdataexchange-class.md) objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
 
 *refValue*<br/>
 Odkaz na objekt typu `CTime` nebo `COleDateTime` přidružený k členské proměnné dialogového okna, zobrazení formuláře nebo ovládací prvek zobrazení objektu. Tento objekt obsahuje data, která mají být ověřen. Předá MFC to odkazovat při `DDV_MinMaxMonth` je volána.
@@ -384,7 +384,7 @@ Další informace o DDV najdete v tématu [výměna dat dialogových oken a ově
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
 ##  <a name="ddv_minmaxshort"></a>  DDV_MinMaxShort
 
@@ -418,9 +418,9 @@ Další informace o DDV najdete v tématu [výměna dat dialogových oken a ově
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
-##  <a name="ddv_minmaxslider"></a>  Ddv_minmaxslider –
+##  <a name="ddv_minmaxslider"></a>  DDV_MinMaxSlider
 
 Volání `DDV_MinMaxSlider` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi *minVal* a *maxVal*.
 
@@ -435,7 +435,7 @@ void AFXAPI DDV_MinMaxSlider(
 ### <a name="parameters"></a>Parametry
 
 *pDX*<br/>
-Ukazatel [cdataexchange –](../../mfc/reference/cdataexchange-class.md) objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
 
 *value*<br/>
 Odkaz na hodnotu, která má být ověřen. Tento parametr obsahuje nebo nastaví aktuální pozici thumb ovládacího prvku posuvník.
@@ -452,7 +452,7 @@ Další informace o DDV najdete v tématu [výměna dat dialogových oken a ově
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
 ##  <a name="ddv_minmaxuint"></a>  DDV_MinMaxUInt
 
@@ -486,7 +486,7 @@ Další informace o DDV najdete v tématu [výměna dat dialogových oken a ově
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
+  **Header** afxdd_.h
 
 ##  <a name="ddv_minmaxulonglong"></a>  DDV_MinMaxULongLong
 
@@ -520,12 +520,7 @@ Další informace o DDV najdete v tématu [výměna dat dialogových oken a ově
 
 ### <a name="requirements"></a>Požadavky
 
-  **Hlavička** afxdd_.h
-
-## <a name="see-also"></a>Viz také
-
-[Rutiny výměny dat standardního dialogového okna](../../mfc/reference/standard-dialog-data-exchange-routines.md)<br/>
-[Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)
+  **Header** afxdd_.h
 
 ## <a name="ddvminmaxunsigned"></a>DDV_MinMaxUnsigned
 
@@ -563,9 +558,10 @@ Další informace o DDV najdete v tématu [výměna dat dialogových oken a ově
 
 **Záhlaví:** afxdd_.h
 
-### <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
+[Rutiny výměny dat standardního dialogového okna](standard-dialog-data-exchange-routines.md)<br/>
 [Makra a globální prvky](mfc-macros-and-globals.md)<br/>
-[Ddx_slider –](#ddx_slider)<br/>
-[DDX_FieldSlider](#ddx_fieldslider)
+[DDX_Slider](standard-dialog-data-exchange-routines.md#ddx_slider)<br/>
+[DDX_FieldSlider](dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md#ddx_fieldslider)
 

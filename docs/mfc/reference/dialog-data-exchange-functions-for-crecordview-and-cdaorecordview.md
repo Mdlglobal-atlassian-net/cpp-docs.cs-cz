@@ -20,12 +20,12 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 7a6de35f9e3154b6d182eddcc51fd7a14cbd0dd5
-ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
+ms.openlocfilehash: 36341a1b122e6dcb1c475f2f95e03d384c3a034f
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55764009"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850032"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funkce výměny dat dialogových oken pro třídy CRecordView a CDaoRecordView
 
@@ -527,10 +527,6 @@ Zobrazit [DDX_FieldText](#ddx_fieldtext) obecné DDX_Field – příklad. Volán
 
 **Záhlaví:** afxdao.h
 
-### <a name="see-also"></a>Viz také
-
-[Makra a globální prvky](mfc-macros-and-globals.md)
-
 ##  <a name="ddx_fieldtext"></a>  DDX_FieldText
 
 `DDX_FieldText` Funkce spravuje přenos **int**, **krátký**, **dlouhé**, DWORD, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **double**, **BOOL**, nebo **BAJTŮ** data mezi ovládací prvek úprav a datové členy polí sady záznamů.
@@ -679,4 +675,4 @@ Následující `DoDataExchange` fungovat [CRecordView](../../mfc/reference/creco
 
 ## <a name="see-also"></a>Viz také
 
-[Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)
+[Makra a globální prvky](mfc-macros-and-globals.md)
