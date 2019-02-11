@@ -6,16 +6,16 @@ ms.date: 12/12/2017
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: c47298b0432936b39de9658d93b815ec30fd8786
-ms.sourcegitcommit: 235d974c14ad3ffa7a3b29dec3e320a52fb291b2
+ms.openlocfilehash: 49fc20f3040f50ddc1b8014cc4dcf8df20f7af87
+ms.sourcegitcommit: 966e4466f10c93fc12faf33d28e03b39489423fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53440364"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55987063"
 ---
 # <a name="create-a-c-console-app-project"></a>Vytvoření projektu aplikace konzoly C++
 
-Obvyklým výchozím bodem pro programátor C++ je "Hello, world!" aplikace, která běží na příkazovém řádku. To je, co vytvoříte v sadě Visual Studio v tomto kroku.
+Obvyklým výchozím bodem pro programátor C++ je "Hello, world!" aplikace, která běží na příkazovém řádku. To je, co vytvoříte v sadě Visual Studio v tomto článku.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -383,7 +383,7 @@ Pojďme dělení nulou více elegantně zpracovat, to uživateli umožní pochop
 
 Blahopřejeme! Dokončení kódu pro aplikaci kalkulačky a integrované a ladit v sadě Visual Studio.
 
-   ![Aplikace konzoly Kalkulačka](./media/calculator-app.gif "Kalkulačka konzolové aplikace")
+![Aplikace konzoly Kalkulačka](./media/calculator-app.gif "Kalkulačka konzolové aplikace")
 
 ## <a name="next-steps"></a>Další kroky
 
