@@ -7,12 +7,12 @@ helpviewer_keywords:
 - bitwise-shift operators
 - operators [C++], shift
 ms.assetid: d0485785-5c72-47e1-a7c0-0adde03ade23
-ms.openlocfilehash: d0873e3975e69bbfac01d437006561f0bf88ee31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: acf31fbfbe534e3f7eba1492c5aaf173fcb8b31c
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485355"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150412"
 ---
 # <a name="bitwise-shift-operators"></a>Operátory bitového posunutí
 
@@ -20,10 +20,10 @@ Operátory posunutí posunutí prvního operandu vlevo (**&lt;&lt;**) nebo dopra
 
 ## <a name="syntax"></a>Syntaxe
 
-*SHIFT-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Additive-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*SHIFT-expression* **&lt; &lt;** *additive-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*SHIFT-expression* **>>** *additive-expression*
+*shift-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression* **&lt;&lt;** *additive-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression* **>>** *additive-expression*
 
 Oba operandy musí být integrální hodnoty. Tyto operátory provádějí obvyklé aritmetické převody Typ výsledku je typ levého operandu po převodu.
 
@@ -60,6 +60,6 @@ Posunutí záporné hodnoty doprava dává polovinu původní hodnoty zaokrouhle
 
 Posun doprava zachovává bit znaménka. Posune-li se celé číslo se znaménkem doprava, zůstane nejvýznamnější bit nastaven. Posune-li se celé číslo bez znaménka doprava, je nejvýznamnější bit vymazán.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Operátory posunu vlevo a vpravo (>> a <<)](../cpp/left-shift-and-right-shift-operators-input-and-output.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - switch keyword [C]
 ms.assetid: fbede014-23bd-4ab1-8094-c8d9d9cb963a
-ms.openlocfilehash: 5bd2f3a4d17f991853de104b9f491b0ba77b07a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f781147bf4ed020cf925ca29c2ba1b0f601cde1
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515372"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148189"
 ---
 # <a name="switch-statement-c"></a>switch – příkaz (C)
 
@@ -102,7 +102,7 @@ case 'f' :  hexcvt(c);
 
 V tomto příkladu Pokud *konstantní výraz* rovná žádné písmeno mezi `'a'` a `'f'`, `hexcvt` funkce je volána.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Microsoft C neomezuje počet případových hodnoty v `switch` příkazu. Počet je omezen pouze dostupnou paměť. ANSI C vyžaduje alespoň 257 povolených popisků případu v `switch` příkazu.
 
@@ -110,6 +110,6 @@ Výchozí nastavení pro Microsoft C je, že jsou povolena rozšíření společ
 
 **Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [switch – příkaz (C++)](../cpp/switch-statement-cpp.md)

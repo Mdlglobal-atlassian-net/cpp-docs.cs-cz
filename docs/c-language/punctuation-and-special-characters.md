@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '# preprocessor operator'
 - special characters
 ms.assetid: e239633e-36f6-4967-939c-bf2799323778
-ms.openlocfilehash: 16ed4880bc76bd8ecac09033632a8b45dd42f00c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3594ca0f2dfcc294fa7a3d44268150ac5507e547
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528593"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149567"
 ---
 # <a name="punctuation-and-special-characters"></a>Interpunkce a speciální znaky
 
@@ -25,6 +25,6 @@ Interpunkce a speciální znaky ve znakové sadě C mají různé možnosti pou�
 
 Tyto znaky mají speciální význam v jazyce C. Jejich použití jsou popsané v této knize. Symbol křížku (**#**) může dojít pouze v [direktivy předběžného zpracování](../preprocessor/preprocessor-directives.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Elementy jazyka C](../c-language/elements-of-c.md)

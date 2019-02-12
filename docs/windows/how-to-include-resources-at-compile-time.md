@@ -20,15 +20,17 @@ helpviewer_keywords:
 - directories [C++], specifying include paths for resources
 - include files [C++], specifying for resources
 - resources [C++], including in projects
+- symbols [C++], finding
+- resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: 52145d2a656a7cac0d07a43ceaf298fbebb5ad40
-ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
+ms.openlocfilehash: 8df5a8ee6583b1e9f5c50a428b69babb0d56961b
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55764074"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152375"
 ---
-# <a name="how-to-include-resources-at-compile-time"></a>Postupy: Zahrnutí prostředků v době kompilace
+# <a name="how-to-include-resources-at-compile-time-c"></a>Postupy: Zahrnutí prostředků v době kompilace (C++)
 
 Obvykle je snadný a pohodlný pro práci s výchozí uspořádání všech prostředků v jednom souboru prostředku skriptů (.rc). Ale můžete přidat prostředky v jiných souborech do aktuálního projektu v době kompilace v jejich uvedení v seznamu **směrnice času kompilace** pole **prostředek zahrnuje** dialogové okno.
 
@@ -42,7 +44,7 @@ Tady je několik důvodů umístit prostředky do souboru než hlavní .rc soubo
 
 - Chcete zahrnout prostředky, které se používají v několika různých projektech, nebo jsou součástí systému správy verzí zdrojového kódu a tedy musí existovat v centrálním umístění, kde změny bude mít vliv na všechny projekty.
 
-- Chcete zahrnout prostředky (jako jsou například prostředky RCDATA), které jsou ve vlastním formátu. RCDATA prostředky mohou mít zvláštní požadavky. Například nelze použít výraz jako hodnotu pro pole nameID. V dokumentaci Windows SDK pro další informace.
+- Chcete zahrnout prostředky (jako jsou například prostředky RCDATA), které jsou ve vlastním formátu. RCDATA prostředky mohou mít zvláštní požadavky. Například nelze použít výraz jako hodnotu pro pole nameID. Další informace najdete v dokumentaci Windows SDK.
 
 Pokud máte oddíly v existujících souborech .rc, které splňují kterákoli z těchto podmínek, měli byste umístit v oddílech v jednom nebo více samostatných souborů .rc a zahrnout je do projektu pomocí **prostředek zahrnuje** dialogové okno. *Projectname*.rc2 soubor vytvořený v podadresáři \res nový projekt se používá pro tento účel.
 
@@ -59,7 +61,7 @@ Chcete-li otevřít **prostředek zahrnuje** dialogové okno, klikněte pravým 
 > [!NOTE]
 > Zobrazí položky v těchto textových polí v souboru .rc, které jsou označené nástrojem `TEXTINCLUDE 1`, `TEXTINCLUDE 2`, a `TEXTINCLUDE 3` v uvedeném pořadí. Další informace najdete v tématu [TN035: Použití více zdrojových souborů a hlavičkových souborů v jazyce Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md).
 
-Jakmile se změny provedené pomocí souboru prostředků **prostředek zahrnuje** dialogové okno, budete muset zavřít soubor .rc a znovu ho, aby se změny projevily. Další informace najdete v tématu [včetně prostředků v době kompilace](../windows/how-to-include-resources-at-compile-time.md).
+Jakmile se změny provedené pomocí souboru prostředků **prostředek zahrnuje** dialogové okno, budete muset zavřít soubor .rc a znovu ho, aby se změny projevily.
 
 Informace o přidávání prostředků do spravovaných projektů naleznete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v rozhraní .NET Framework Developer's Guide.
 
@@ -73,11 +75,27 @@ Informace o přidávání prostředků do spravovaných projektů naleznete v t�
 
    Prostředky v souborech tímto způsobem jsou součástí vašeho spustitelného souboru k v době kompilace. Nejsou přímo k dispozici pro úpravy nebo změny při práci na souboru .rc hlavního projektu. Otevřete soubory zahrnuté .rc odděleně. Všechny soubory, které jsou zahrnuty, ale nemají příponou .rc nebude možné upravovat podle editory prostředků.
 
-## <a name="to-specify-include-directories-for-a-specific-resource-rc-file-c"></a>K určení adresářů include pro konkrétní prostředek (soubor .rc) (C++)
+## <a name="to-specify-include-directories-for-a-specific-resource-rc-file"></a>K určení adresářů include pro konkrétní prostředek (soubor .rc)
 
 1. Klikněte pravým tlačítkem na soubor .rc v Průzkumníku řešení a vyberte **vlastnosti** z místní nabídky.
 
 1. V **stránky vlastností** dialogové okno, vyberte **prostředky** uzlu v levém podokně, pak zadejte další adresáře include **Další zahrnuté adresáře**vlastnost.
+
+## <a name="to-find-symbols-in-resources"></a>Chcete-li najít symboly v prostředcích
+
+1. Z **upravit** nabídce zvolte **najít Symbol**.
+
+1. V [dialogového okna Najít Symbol](/visualstudio/ide/go-to)v **najít** pole, vyberte předchozí hledaný řetězec z rozevíracího seznamu nebo zadejte klíče akcelerátoru, které chcete najít (například ID_ACCEL1).
+
+   > [!TIP]
+   > Použití [regulární výrazy](/visualstudio/ide/using-regular-expressions-in-visual-studio) pro hledání, je nutné použít [najít v souborech – příkaz](/visualstudio/ide/reference/find-command) z **upravit** nabídky místo **najít Symbol**příkazu. Pokud chcete povolit regulárních výrazů, musíte mít **použití: Regulární výrazy** zaškrtnuto políčko [dialogové okno hledání](/visualstudio/ide/finding-and-replacing-text). Potom můžete vybrat tlačítko se šipkou vpravo na pravé straně **najít** pole k zobrazení seznamu hledání regulárních výrazů. Když vyberete výrazu z tohoto seznamu, je nahrazen jako hledaný text v **najít** pole.
+
+1. Vyberte některou z **najít** možnosti.
+
+1. Zvolte **najít další**.
+
+> [!NOTE]
+> Nelze hledat symboly v řetězci, akcelerátoru nebo binární prostředky.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -87,5 +105,4 @@ Win32
 
 [Soubory prostředků](../windows/resource-files-visual-studio.md)<br/>
 [Editory prostředků](../windows/resource-editors.md)<br/>
-[TN035: Použití více zdrojových souborů a hlavičkových souborů v jazyce Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)<br/>
 [Symboly: Identifikátory prostředků](../windows/symbols-resource-identifiers.md)<br/>

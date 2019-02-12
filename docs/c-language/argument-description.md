@@ -8,12 +8,12 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 91c2cbe3-9aca-4277-afa1-6137eb8fb704
-ms.openlocfilehash: 64c94798587ad64f369ca0ed03a7251d0eb9acb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71301bd5eedf2806e97b8d24d95beaf2843427ad
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447148"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148501"
 ---
 # <a name="argument-description"></a>Popis argumentu
 
@@ -27,12 +27,12 @@ Podle konvence `argv` **[0]** příkaz, kterým je vyvolán program.  Nicméně 
 
 Poslední ukazatel (`argv[argc]`) je **NULL**. (Viz [getenv](../c-runtime-library/reference/getenv-wgetenv.md) v *Run-Time Library Reference* alternativní metody pro získání informací o proměnné prostředí.)
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 `envp` Parametru je ukazatel na pole řetězců zakončený hodnotou null, které představují hodnoty nastavené v proměnné prostředí uživatele. `envp` Parametru lze deklarovat jako pole ukazatelů na `char` (`char *envp[]`) nebo jako ukazatel na ukazatele na `char` (`char **envp`). V **wmain** funkce, `envp` parametru lze deklarovat jako pole ukazatelů na `wchar_t` (`wchar_t *envp[]`) nebo jako ukazatel na ukazatele na `wchar_t` (`wchar_t **envp`). Konec pole je označeno **NULL** \*ukazatele. Všimněte si, že blok prostředí předaný **hlavní** nebo **wmain** je "zmrazená" kopie aktuálního prostředí. Pokud později změníte prostředí prostřednictvím volání _**putenv** nebo `_wputenv`, aktuální prostředí (vrácené `getenv` / `_wgetenv` a `_environ` nebo `_wenviron` proměnné) se změní, ale blok odkazované `envp` nedojde ke změně. `envp` Parametr je ANSI kompatibilní v jazyce C, ale ne v jazyce C++.
 
 **Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [main – spuštění funkce a programu](../c-language/main-function-and-program-execution.md)

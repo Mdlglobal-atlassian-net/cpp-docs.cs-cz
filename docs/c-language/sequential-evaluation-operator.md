@@ -6,12 +6,12 @@ helpviewer_keywords:
 - sequential-evaluation operator
 - comma operator
 ms.assetid: 587514f4-c8e2-44e9-81a8-7a553ce1453a
-ms.openlocfilehash: 1da8c64ad12d794178ec2e24c3b6c2d587d029e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2cbffc51fb7113ae442dbfcd1db01bbf27a67746
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527185"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149125"
 ---
 # <a name="sequential-evaluation-operator"></a>Operátor sekvenčního vyhodnocení
 
@@ -20,7 +20,7 @@ Operátor sekvenčního vyhodnocení, také nazývané "operátor čárka," vyho
 ## <a name="syntax"></a>Syntaxe
 
 *výraz*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz přiřazení*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*výraz* **,** *výrazu přiřazení*
 
 Operátor sekvenčního vyhodnocení levý operand je vyhodnocen jako `void` výrazu. Výsledek operace má stejnou hodnotu a typ jako pravý operand. Každý operand může být libovolného typu. Operátor sekvenčního vyhodnocení neprovádí převodech typů mezi jeho operandy a nevydává l hodnotou. Po prvním operandem, což znamená, že před zahájením vyhodnocení pravého operandu jsou dokončeny všechny vedlejší účinky vyhodnocení levý operand je bod sekvence. Zobrazit [body sekvence](../c-language/c-sequence-points.md) Další informace.
@@ -46,6 +46,6 @@ func_two( (x--, y + 2), z );
 
 Ve volání funkce do `func_one`, jsou předány tři argumenty oddělené čárkami: `x`, `y + 2`, a `z`. Ve volání funkce `func_two` donutí závorky kompilátor interpretovat první čárku jako operátor sekvenčního vyhodnocení. Toto volání funkce předává do funkce `func_two` dva argumenty. Prvním argumentem je výsledek operace sekvenčního vyhodnocení `(x--, y + 2)`, který má hodnotu a typ výrazu `y + 2`, druhým argumentem je proměnná `z`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Operátor čárka: ,](../cpp/comma-operator.md)

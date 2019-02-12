@@ -2,12 +2,12 @@
 title: Rozsah této příručky
 ms.date: 11/04/2016
 ms.assetid: 406e7cc0-27cb-46b4-b38e-c200f3fddafd
-ms.openlocfilehash: eca379daa1fff9c90491bdd0be1ea03fc770f0b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac5003e24a7f0965107b712da7db0549b28831f1
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453349"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148904"
 ---
 # <a name="scope-of-this-manual"></a>Rozsah této příručky
 
@@ -15,6 +15,6 @@ Jazyk C je flexibilní jazyk, který mnoho rozhodnutí o programování necháv�
 
 Tato kniha nepojednává o programování v jazyce C++. Zobrazit [referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md) informace o jazyce C++.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Organizace referenční dokumentace jazyka C](../c-language/organization-of-the-c-language-reference.md)

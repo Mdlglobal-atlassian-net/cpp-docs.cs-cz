@@ -11,12 +11,12 @@ helpviewer_keywords:
 - if keyword [C], if statement syntax
 - nested statements
 ms.assetid: d7fc16a0-fdbc-4f39-b596-76e1ca4ad4a5
-ms.openlocfilehash: 3561bcb4edde35b72c6db801f5c32f3f0cfdf6fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b6df50d483a6e2958de3100a07c18b89b0c4f12f
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555035"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152609"
 ---
 # <a name="if-statement-c"></a>if – příkaz (C)
 
@@ -70,6 +70,6 @@ else
 
 Složené závorky kolem vnitřního **Pokud** proveďte příkaz v tomto příkladu **else** část klauzule vnějšího **Pokud** příkaz. Pokud `i` je menší než nebo rovno 0, `i` přiřazen `x`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [if-else – příkaz (C++)](../cpp/if-else-statement-cpp.md)

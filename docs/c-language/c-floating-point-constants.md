@@ -9,12 +9,12 @@ helpviewer_keywords:
 - floating-point constants, about floating-point constants
 - double data type, floating-point constants
 ms.assetid: e1bd9b44-d6ab-470c-93e5-07142c7a2062
-ms.openlocfilehash: 2bde8ecdfa7e93160a86829c466ab9a78b71d48e
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 5e17490926ee328c3a4ca03b1de9cb6e752959a0
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220371"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148696"
 ---
 # <a name="c-floating-point-constants"></a>Konstanty jazyka C s plovoucí desetinnou čárkou
 
@@ -22,7 +22,7 @@ ms.locfileid: "54220371"
 
 ## <a name="syntax"></a>Syntaxe
 
-*konstanta plovoucí desetinnou*:<br/>
+*floating-point-constant*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*desetinná konstanta* *exponent část*<sub>optimalizované</sub> *s plovoucí desetinnou čárkou přípona*<sub>optimalizované</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*sekvence číslic* *exponent část* *s plovoucí desetinnou čárkou přípona*<sub>optimalizované</sub>
 
@@ -30,7 +30,7 @@ ms.locfileid: "54220371"
 &nbsp;&nbsp;&nbsp;&nbsp;*sekvence číslic*<sub>optimalizované</sub> **.** *sekvence číslic*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*sekvence číslic*  **.**
 
-*exponent část*:<br/>
+*exponent-part*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**elektronické** *přihlašování*<sub>optimalizované</sub> *sekvence číslic*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**elektronické** *přihlašování*<sub>optimalizované</sub> *sekvence číslic*
 
@@ -38,7 +38,7 @@ ms.locfileid: "54220371"
 &nbsp;&nbsp;&nbsp;&nbsp;**+ -**
 
 *sekvence číslic*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*číslice*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*sekvence číslic* *číslice*
 
 *číslo s plovoucí čárkou přípona*: jeden z<br/>
@@ -76,6 +76,6 @@ Vynechat celočíselnou část konstanty s plovoucí desetinnou čárkou, jak je
 75e-2
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Konstanty jazyka C](../c-language/c-constants.md)

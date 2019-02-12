@@ -9,12 +9,12 @@ helpviewer_keywords:
 - identifiers, case sensitivity
 - symbols, case sensitivity
 ms.assetid: d02edbbc-85a0-4118-997b-84ee6b972eb6
-ms.openlocfilehash: 6ec1fc7303a6f5600837e919d96904abde7987e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f3abf304e6fda52e2571d0bccb8d4db5a414dfe
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474137"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152583"
 ---
 # <a name="c-identifiers"></a>Identifikátory jazyka C
 
@@ -39,20 +39,20 @@ Zvláštní druh identifikátoru, volá příkaz popisek, lze použít v `goto` 
 ## <a name="syntax"></a>Syntaxe
 
 *identifikátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*nenumerickému*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*nondigit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifikátor* *nenumerickému*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifikátor* *číslice*
 
 *nenumerickému*: jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**_ b c d e f g h můžu j k l mn o p q r s t u v w, x y z**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**A B C D E F G H MŮŽU J K L MN O P Q R S T U V W, X Y Z**
+&nbsp;&nbsp;&nbsp;&nbsp;**A B C D E F G H I J K L MN O P Q R S T U V W X Y Z**
 
 *číslice*: jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
 
 První znak název identifikátoru musí být `nondigit` (to znamená, první znak musí být podtržítkem nebo velké nebo malé písmeno). ANSI umožňuje šest důležité znaky v názvu identifikátor externí a 31 pro názvy identifikátorů vnitřní (uvnitř funkce). Externí identifikátory (těch, které jsou deklarovány v globálním oboru nebo s třídou úložiště deklarovány `extern`) můžou stát terčem další omezení názvů, protože tyto identifikátory musí zpracovat jiným softwarem, jako je například linkers.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Přestože ANSI umožňuje 6 významných znaků v názvech externí identifikátor a 31 pro názvy identifikátorů vnitřní (uvnitř funkce), kompilátor Microsoft C umožňuje 247 znaků v názvu identifikátor interní nebo externí. Pokud nejste obeznámeni s kompatibility ANSI, můžete změnit toto výchozí nastavení na hodnotu menší nebo větší pomocí /H (omezit délku externích názvů) možnost.
 
@@ -67,7 +67,7 @@ Add
 aDD
 ```
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Nesmí být zvolen názvy identifikátorů začínajících dvěma podtržítky nebo podtržítkem, za nímž následuje velké písmeno. Standard ANSI C umožňuje názvy identifikátorů, které začínají tyto kombinace znaků, které budou rezervovány pro použití kompilátoru. Identifikátory s rozsahem souboru úrovni nesmí mít jako první dvě písmena názvy také s podtržítkem a malé písmeno. Názvy identifikátorů, které začínají tyto znaky jsou také vyhrazené. Podle konvence společnost Microsoft používá symbol podtržítka a velkého písmene zahájíte názvy maker a dvou podtržítek pro názvy klíčových slov specifických pro společnost Microsoft. Aby se zabránilo konfliktům pojmenování, vždy vyberte názvy identifikátorů, které nezačínají jednu nebo dvě podtržítka nebo názvy začínající podtržítkem, za nímž následuje velké písmeno.
 
@@ -84,7 +84,7 @@ skip12
 LastNum
 ```
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 I když identifikátory ve zdrojových souborech se ve výchozím nastavení rozlišují malá a velká písmena, symboly v souborech objektů nejsou. Microsoft C zpracovává identifikátory v rámci kompilační jednotky jako malá a velká písmena.
 
@@ -96,6 +96,6 @@ Propojovací program společnosti Microsoft je velká a malá písmena. Je nutn�
 
 Má identifikátor "rozsah", což je oblast, ve kterém se označuje programu a "propojení", která určuje, zda se stejným názvem v jiném oboru odkazuje na stejný identifikátor. Tato témata jsou vysvětlené v [životnost, rozsah, viditelnost a propojení](../c-language/lifetime-scope-visibility-and-linkage.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Elementy jazyka C](../c-language/elements-of-c.md)

@@ -2,12 +2,12 @@
 title: Znaková sada ASCII
 ms.date: 11/04/2016
 ms.assetid: 2390fd40-5fe2-4410-a06c-ccc0fea2709b
-ms.openlocfilehash: 85ec88af65a1a719da1871c2c64409f9a918a03f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 637f605f839b363dd85278f4b85fd832ca5f8e08
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661560"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147163"
 ---
 # <a name="ascii-character-set"></a>Znaková sada ASCII
 
@@ -18,6 +18,6 @@ Zdrojová znaková sada je sada platných znaků, které se mohou objevit ve zdr
 > [!NOTE]
 >  **Upozornění** protože ovladače klávesnice a konzoly mohou změnit mapování znakové sady, programy určené k mezinárodní distribuci by měly kontrolovat kód země/oblasti.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Znaky](../c-language/characters.md)

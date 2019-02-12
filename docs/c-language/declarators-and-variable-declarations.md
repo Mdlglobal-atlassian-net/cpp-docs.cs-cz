@@ -6,12 +6,12 @@ helpviewer_keywords:
 - declarators, definition
 - declaring variables, declaration statements
 ms.assetid: 5fd67a6a-3a6a-4ec9-b257-3f7390a48d40
-ms.openlocfilehash: 711c0eb4e0b652f86de74803d5725c5dc3054b31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 928de4b1724577a9fdb282f5109b4b5d0b31c4e6
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562783"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147487"
 ---
 # <a name="declarators-and-variable-declarations"></a>Deklarátor a deklarace proměnné
 
@@ -28,7 +28,7 @@ Zbytek tohoto oddílu popisuje formulář opravdu zavřít a význam deklarace p
 
 Deklarátor je součástí deklarace, která určuje název, který má být zavedena do programu. Modifikátory může obsahovat například <strong>\*</strong> (ukazatel-do) a klíčových slov Microsoft konvence volání.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 V deklarátoru
 
@@ -45,16 +45,16 @@ Chcete-li deklarovat pole hodnot, ukazatele na hodnoty a funkce, která vrátí 
 ## <a name="syntax"></a>Syntaxe
 
 *deklarátor*:<br/>
-&nbsp;&nbsp;*ukazatel*<sub>optimalizované</sub> *direct-declarator*
+&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
-*přímé declarator*:<br/>
+*direct-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**(***deklarátor***)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator***[***konstantní výraz*<sub>optimalizované</sub> **]** <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator***(***seznam parametrů typu***)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator***(***seznam identifikátorů*<sub>optimalizované</sub> **)**
 
-*ukazatel*:<br/>
+*pointer*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *seznam typů kvalifikátor*<sub>optimalizované</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *seznam typů kvalifikátor*<sub>optimalizované</sub> *ukazatele*
 
@@ -79,12 +79,12 @@ double func( void ); // Declares a function named func, with no
 int *aptr[10] // Declares an array of 10 pointers
 ```
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Kompilátor Microsoft C neomezuje počet deklarátory, které můžete upravit aritmetický, struktura nebo typu sjednocení. Počet je omezen pouze dostupnou paměť.
 
 **Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Deklarace a typy](../c-language/declarations-and-types.md)

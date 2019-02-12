@@ -8,12 +8,12 @@ helpviewer_keywords:
 - structure members
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
-ms.openlocfilehash: 5c557b3db2e58001fa0b7a1a5bef5b1043e2cd86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a17bb996f13fdbe11bb569c8af5669a9d0c5363f
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607282"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152284"
 ---
 # <a name="structure-declarations"></a>Deklarace struktury
 
@@ -21,11 +21,11 @@ ms.locfileid: "50607282"
 
 ## <a name="syntax"></a>Syntaxe
 
-*struct – nebo – sjednocení specifikátor*:<br/>
+*struct-or-union-specifier*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Struktura nebo sjednocení* *identifikátor*<sub>optimalizované</sub> **{** *struct-declaration-list* **}**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Struktura nebo sjednocení* *identifikátor*
 
-*Struktura nebo sjednocení*:<br/>
+*struct-or-union*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**– Struktura**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**sjednocení**
 
@@ -40,10 +40,10 @@ ms.locfileid: "50607282"
 &nbsp;&nbsp;&nbsp;&nbsp;*Specifikátor typu* *specifikátor seznam kvalifikátorů-*<sub>optimalizované</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Kvalifikátor typu* *specifikátor seznam kvalifikátorů-*<sub>optimalizované</sub>
 
-*Struktura declarator-list*:<br/>
+*struct-declarator-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Struktura declarator* *struct-declarator-list* **,** *deklarátor – struktura*
 
-*Struktura declarator*:<br/>
+*struct-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Deklarátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Specifikátor typu* *deklarátor*<sub>optimalizované</sub> **:** *konstantního výrazu.*
 
@@ -145,7 +145,7 @@ struct somestruct
 } w;
 ```
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Kompilátor umožňuje jako poslední člen struktury pole bez velikosti nebo s nulovou velikostí. To může být užitečné, pokud se velikost pole s konstantní liší při použití v různých situacích. Deklarace takové struktury vypadá takto:
 
@@ -175,6 +175,6 @@ Zobrazit [členy struktury a sjednocení](../c-language/structure-and-union-memb
 
 **Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Deklarátor a deklarace proměnné](../c-language/declarators-and-variable-declarations.md)

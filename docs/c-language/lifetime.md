@@ -17,12 +17,12 @@ helpviewer_keywords:
 - lifetime
 - global variables, lifetime
 ms.assetid: ff0b42cb-3f0f-49a3-a94f-d1d825d8ddfe
-ms.openlocfilehash: 5e5d3b852148284312d2e1fb4cee1df432ac161b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 962e5ef4cae1be142091d2a209b4c60c0b789e74
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665215"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149437"
 ---
 # <a name="lifetime"></a>Životnost
 
@@ -42,6 +42,6 @@ Přestože identifikátor s globální životností existuje během spuštění 
 
 Paměť lze rozdělit podle potřeby (dynamicky), pokud je vytvářena pomocí speciálních rutin knihovny, jako je `malloc`. Jelikož dynamické přidělování paměti používá rutiny knihoven, není považováno za součást jazyka. Najdete v článku [malloc](../c-runtime-library/reference/malloc.md) fungovat v *Run-Time Library Reference*.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Doba platnosti, rozsah, viditelnost a propojení](../c-language/lifetime-scope-visibility-and-linkage.md)

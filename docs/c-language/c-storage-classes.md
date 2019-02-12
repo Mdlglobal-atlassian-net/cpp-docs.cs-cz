@@ -9,12 +9,12 @@ helpviewer_keywords:
 - storage class specifiers, C storage classes
 - storage duration
 ms.assetid: 893fb929-f7a9-43dc-a0b3-29cb1ef845c1
-ms.openlocfilehash: cb472ea0db67e0fd8d7f2a8e2af4513ffb0fbe1c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85eb11397b2336363fe4f55da26623fac720faf3
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466180"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151790"
 ---
 # <a name="c-storage-classes"></a>Třídy úložiště jazyka C
 
@@ -26,9 +26,9 @@ Jazyk C poskytuje následující specifikátory třídy úložiště:
 
 ## <a name="syntax"></a>Syntaxe
 
-*Storage-class-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Automaticky**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Registrace**<br/>
+*storage-class-specifier*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**auto**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**register**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Statická**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Definice TypeDef**<br/>
@@ -50,6 +50,6 @@ Přesné význam jednotlivých – specifikátor třídy úložiště závisí n
 
 [Specifikátory třídy úložiště pro deklarace na externí úrovni](../c-language/storage-class-specifiers-for-external-level-declarations.md) a [specifikátory třídy úložiště pro deklarace na interní úrovni](../c-language/storage-class-specifiers-for-internal-level-declarations.md) popisují *storage-class-specifier* terminály v každý druh deklarace a výchozí chování při *storage-class-specifier* je vynecháno z proměnné. [Specifikátory třídy úložiště s deklaracemi funkce](../c-language/storage-class-specifiers-with-function-declarations.md) popisuje specifikátory třídy úložiště použít s funkcemi.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Deklarace a typy](../c-language/declarations-and-types.md)

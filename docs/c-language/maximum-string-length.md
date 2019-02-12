@@ -7,16 +7,16 @@ helpviewer_keywords:
 - maximum string length
 - strings [C++], length
 ms.assetid: 99a80e4a-6212-47b7-a6bd-bdf99bd44928
-ms.openlocfilehash: f2e5461c433a0d195682c1a0f4312a71a8ff5032
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 650088249e4c6abd515c29b873a9f09dc1d2a60a
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483981"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148306"
 ---
 # <a name="maximum-string-length"></a>Maximální délka řetězce
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Kompatibilita se standardem ANSI vyžaduje, aby kompilátor v textovém literálu po zřetězení přijal až 509 znaků. Maximální povolená délka textového literálu v jazyce Microsoft C je přibližně 2 048 bajtů. Avšak pokud se textový literál skládá z částí uzavřených v uvozovkách, preprocesor spojí tyto části do jednoho řetězce a pro každý zřetězený řádek přidá k celkovému počtu bajtů dodatečný bajt.
 
@@ -26,6 +26,6 @@ Zatímco jednotlivé řetězce v uvozovkách nesmějí být delší než 2 048 b
 
 **Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Textové literály jazyka C](../c-language/c-string-literals.md)

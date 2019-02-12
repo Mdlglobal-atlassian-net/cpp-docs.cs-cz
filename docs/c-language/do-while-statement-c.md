@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - do-while keyword [C]
 ms.assetid: f2ac20a6-10c7-4a08-b5e3-c3b3639dbeaf
-ms.openlocfilehash: f2548ec60c7ee36d46d385cd7e7dda7bcfc2758d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 052b02beca49f5de19c6f68cc475edb5f5daf6e2
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462904"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147500"
 ---
 # <a name="do-while-statement-c"></a>do-while – příkaz (C)
 
@@ -44,6 +44,6 @@ do
 
 V tomto *proveďte – zatímco* prohlášení, dva příkazy `y = f( x );` a `x--;` jsou spouštěny, bez ohledu na počáteční hodnotu `x`. Potom `x > 0` vyhodnocena. Pokud `x` je větší než 0, je tělo příkazu spustit znovu a `x > 0` je již znovu. Tělo příkazu je proveden opakovaně tak dlouho, dokud `x` zůstane větší než 0. Provádění *proveďte – zatímco* příkaz skončí, když `x` stane 0 nebo záporná. Tělo smyčky je provedena alespoň jednou.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [do-while – příkaz (C++)](../cpp/do-while-statement-cpp.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-ms.openlocfilehash: b424f07fb139e3ece48da7bfb5cff94f7b84334c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c75db3e1550927af57054a2cc1561d9df1567a4
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596804"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148801"
 ---
 # <a name="function-prototypes"></a>Prototypy funkcí
 
@@ -32,15 +32,15 @@ Deklarace funkce předchází definici funkce a určuje název, návratový typ,
 &nbsp;&nbsp;&nbsp;&nbsp;*Kvalifikátor typu* *specifikátory deklarace*<sub>optimalizované</sub>
 
 *init-declarator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Init-declarator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Init-declarator-list***,***init-declarator*
 
-*Init-declarator*:<br/>
+*init-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Deklarátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarátor* **=** *inicializátor*
 
 *deklarátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ukazatel*<sub>optimalizované</sub> *direct-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
 *přímé declarator*: /\* deklarátorem funkce \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator***(***seznam parametrů typu***)**   / \* deklarátor nový styl \*/<br/>
@@ -85,6 +85,6 @@ void func1( struct S * );
 
 V části **/Ze**, značky se stále zadá v globálním oboru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Funkce](../c-language/functions-c.md)

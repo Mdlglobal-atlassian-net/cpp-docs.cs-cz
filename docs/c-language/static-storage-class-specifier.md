@@ -6,12 +6,12 @@ helpviewer_keywords:
 - storage classes, static
 - static storage class specifiers
 ms.assetid: 9bce361e-919b-46b9-8148-40d7ab0eb024
-ms.openlocfilehash: 2596e257ae6e22e207451b97b0361aecdfffba03
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef85ee4d757cb9579431427fba7b46a0e5ac905f
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594035"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148228"
 ---
 # <a name="static-storage-class-specifier"></a>Statický specifikátor třídy úložiště
 
@@ -21,7 +21,7 @@ Proměnná deklarovaná na vnitřní úrovni **statické** – specifikátor tř
 
 Pokud neinicializujete explicitně **statické** proměnné, je inicializován na 0 ve výchozím nastavení. Uvnitř funkce **statické** způsobí, že je přiděleno úložiště a slouží jako definice. Vnitřní statické proměnné poskytují trvalé soukromé úložiště, které je viditelné pouze jedinou funkcí.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy úložiště jazyka C](c-storage-classes.md)<br/>
 [Třídy úložiště (C++)](../cpp/storage-classes-cpp.md)

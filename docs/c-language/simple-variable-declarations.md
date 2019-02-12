@@ -5,12 +5,12 @@ helpviewer_keywords:
 - untyped variables
 - declaring variables, simple
 ms.assetid: b07adf9d-9e79-4b64-8a34-e6fe1c7eccec
-ms.openlocfilehash: be6a60d5765954efbc4a1cc6b991ac989e20b8f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27710dabe512332564ee557a9d022457d9fddc5c
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615316"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149983"
 ---
 # <a name="simple-variable-declarations"></a>Deklarace jednoduchých proměnných
 
@@ -21,13 +21,13 @@ Třídy úložiště nebo typy (nebo obojí) se vyžadují v deklaracích promě
 ## <a name="syntax"></a>Syntaxe
 
 *deklarátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ukazatel*<sub>optimalizované</sub> *direct-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
-*přímé declarator*:<br/>
+*direct-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*
 
 *identifikátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*nenumerickému*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*nondigit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifikátor* *nenumerickému*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifikátor* *číslice*
 
@@ -51,6 +51,6 @@ unsigned long reply, flag; /* Declares two variables
 
 V tomto příkladu, proměnných, `reply` a `flag`, mají `unsigned long` zadejte a podržte nepodepsaných integrálních hodnot.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Deklarátor a deklarace proměnné](../c-language/declarators-and-variable-declarations.md)

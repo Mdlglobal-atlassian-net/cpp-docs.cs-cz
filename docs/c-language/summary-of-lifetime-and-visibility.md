@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-ms.openlocfilehash: 5bb53db4d6bcb9b4694fddd9abd5471c6c6197c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 438dd855fbbfec01a31a8d4a1a53078e3c44658c
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474799"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151777"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>Souhrn doby platnosti a viditelnosti
 
@@ -26,7 +26,7 @@ V následující tabulce je uveden seznam vlastností doby platnosti a viditelno
 ||Prototyp funkce|**extern**|Globální|Zbývající část zdrojového souboru|
 |Rozsah bloku|Deklarace proměnné|**extern**|Globální|Blok|
 ||Definice proměnných|**static**|Globální|Blok|
-||Definice proměnných|**Automatické** nebo **zaregistrovat**|místní|Blok|
+||Definice proměnných|**Automatické** nebo **zaregistrovat**|Místní|Blok|
 
 ## <a name="example"></a>Příklad
 
@@ -66,6 +66,6 @@ int main()  // main function defined at external level
 
 V tomto příkladu jsou čtyři úrovně viditelnosti: na externí úrovni nebo na tři bloku. Na obrazovku, jak je uvedeno v komentářích následujících každého příkazu jsou vypsány hodnoty.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Doba platnosti, rozsah, viditelnost a propojení](../c-language/lifetime-scope-visibility-and-linkage.md)

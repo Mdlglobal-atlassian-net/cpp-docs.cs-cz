@@ -5,12 +5,12 @@ helpviewer_keywords:
 - bitfields
 - bit fields
 ms.assetid: 9faf74c4-7fd5-4b44-ad18-04485193d06e
-ms.openlocfilehash: ffcc622135a9a4d9b46cf6ab62604f9965ac6d47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 62c982fa078182cb1902b6770f0a3713ca4ff7a8
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666225"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150230"
 ---
 # <a name="c-bit-fields"></a>Bitová pole jazyka C
 
@@ -18,7 +18,7 @@ Kromě deklarátory členů struktury nebo sjednocení může být deklarátorem
 
 ## <a name="syntax"></a>Syntaxe
 
-*Struktura declarator*:<br/>
+*struct-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Deklarátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Specifikátor typu* *deklarátor*<sub>optimalizované</sub> **:** *konstantního výrazu.*
 
@@ -49,7 +49,7 @@ Pole obsahuje 2 000 prvků. Každý prvek je struktury jednotlivých, který obs
 
 Bitová pole mají stejnou sémantiku jako typ celé číslo. To znamená, že bitové pole se používá ve výrazech stejným způsobem jako proměnnou stejné základní typ by použít, bez ohledu na to, kolik bitů v bitové pole.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Bitová pole, které jsou definované jako `int` je považován za podepsaný. Rozšíření standardu ANSI C společnosti Microsoft umožňuje `char` a **dlouhé** typy (obojí **podepsané** a `unsigned`) u bitových polí. Nepojmenované bitové pole se základním typem **dlouhé**, **krátký**, nebo `char` (**podepsané** nebo `unsigned`) vynutí zarovnání na hranici vhodné základního typu.
 
@@ -82,6 +82,6 @@ Jelikož procesory řady 8086 ukládají nižší bajt celočíselných hodnot p
 
 **Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Deklarace struktury](../c-language/structure-declarations.md)

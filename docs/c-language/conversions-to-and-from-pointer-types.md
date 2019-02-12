@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type casts, involving pointers
 - void pointers
 ms.assetid: 3facc56f-06d3-4570-b1a2-7d4927b83086
-ms.openlocfilehash: c7487cb4fd268edf1db7531a2a40b5535cd425f8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d907dbcf4f826d364fb68ce65f7d44c6cfe97cd
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623402"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147240"
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>Převod na a z typů ukazatele
 
@@ -36,6 +36,6 @@ Celočíselný typ lze naopak převést na typ ukazatele dle následujících pr
 
 Celočíselný konstantní výraz s hodnotou 0 nebo takový výraz přetypovaný na typ **void** <strong>\*</strong> lze převést přetypováním, přiřazením nebo porovnáním ukazatelem libovolného typu. Tím dojde k vytvoření nulového ukazatele, který je roven jinému nulovému ukazateli stejného typu, avšak tento nulový ukazatel není roven jinému ukazateli na funkci nebo objekt. Celá čísla jiná než konstantní 0 lze převést na typ ukazatele, ale výsledek není přenosný.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Převody přiřazení](../c-language/assignment-conversions.md)

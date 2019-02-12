@@ -9,12 +9,12 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-ms.openlocfilehash: e975f09b62ffbb536790c13eb8614453b1c1e8b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d16f8a5b7b6b23ad90aad886bbb9654e706549cb
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610428"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151037"
 ---
 # <a name="main-function-and-program-execution"></a>main – spuštění funkce a programu
 
@@ -36,7 +36,7 @@ Pokud chcete předat informace **hlavní** funkce, parametry jsou tradičně poj
 
 Zobrazit [použití funkce wmain](../c-language/using-wmain.md) popis širokoznaké verze **hlavní**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[main: spuštění programu](../cpp/main-program-startup.md)<br/>
+[hlavní: Spuštění programu](../cpp/main-program-startup.md)<br/>
 [Analýza argumentů příkazového řádku jazyka C](../c-language/parsing-c-command-line-arguments.md)

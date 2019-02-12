@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lexical conventions
 - conventions, lexical
 ms.assetid: 20668a49-cab7-4153-a6d9-7439aac3ff3b
-ms.openlocfilehash: d6aa0e4b8ec3efb0b4212168d05b829e25bf9f69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af220854f71a84902d9ad417242b6d037d4ba0f2
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451633"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148072"
 ---
 # <a name="elements-of-c"></a>Elementy jazyka C
 
@@ -38,6 +38,6 @@ Jsou popsány v následujících tématech:
 
 Operátory jsou znaky (jednotlivé znaky a kombinace znaků), které určují, jak se hodnoty manipulovat. Každý symbol je interpretován jako celek, volá se token. Další informace najdete v tématu [operátory](../c-language/c-operators.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace jazyka C](../c-language/c-language-reference.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - IEEE floating-point representation
 - lengths, exponent
 ms.assetid: 706e332b-17a0-4a30-b7d8-5d6cd372524b
-ms.openlocfilehash: 0a618433f08f832c5e69f52e8a5c1804e3dd70c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61bfd094801165e0c3e41e5de6fcbfb0c5e59504
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430788"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151270"
 ---
 # <a name="type-float"></a>Float – typ
 
@@ -80,6 +80,6 @@ V následujícím příkladu (která používá deklarace z předchozího přík
 f_longer = f_short * f_short;
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Úložiště základních typů](../c-language/storage-of-basic-types.md)

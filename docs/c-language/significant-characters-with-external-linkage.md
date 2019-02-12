@@ -2,12 +2,12 @@
 title: Důležité znaky s externím propojením
 ms.date: 11/04/2016
 ms.assetid: 6f3b7e26-3fb0-4975-a95d-23a2072c1186
-ms.openlocfilehash: ff4562361d6e0c86c7b2e82cfb7ce6004e45ccf1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 46113c41ddc3ef860c1da5b26509eaa39c616c55
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632841"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148917"
 ---
 # <a name="significant-characters-with-external-linkage"></a>Důležité znaky s externím propojením
 
@@ -15,6 +15,6 @@ ms.locfileid: "50632841"
 
 Identifikátory deklarované jako `extern` v programech zkompilovaných pomocí jazyka Microsoft C jsou významné pro 247 znaků. Toto výchozí nastavení lze změnit na menší hodnotu pomocí možnosti /H (omezení délky externích názvů).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Používání příkazu extern pro specifikaci propojení](../cpp/using-extern-to-specify-linkage.md)

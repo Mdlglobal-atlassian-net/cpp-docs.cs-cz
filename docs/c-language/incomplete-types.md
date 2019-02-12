@@ -10,12 +10,12 @@ helpviewer_keywords:
 - void keyword [C]
 - structures, incomplete
 ms.assetid: 01bc0cf6-9fa7-458c-9371-ecbe54ea6aee
-ms.openlocfilehash: 9f0df4c28fc0da860d5a903b3f2833a328312dd7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7a5cd7624b55e7bce0fbd09451ab42426f5bc37
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50433498"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151725"
 ---
 # <a name="incomplete-types"></a>Neúplné typy
 
@@ -56,6 +56,6 @@ ms.locfileid: "50433498"
     char a[25]; /* a now has complete type */
     ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Deklarace a typy](../c-language/declarations-and-types.md)

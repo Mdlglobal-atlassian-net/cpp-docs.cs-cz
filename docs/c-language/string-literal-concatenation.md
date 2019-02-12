@@ -5,12 +5,12 @@ helpviewer_keywords:
 - concatenating strings
 - strings [C++], concatenating
 ms.assetid: 51486b1f-4b1e-4061-9add-1aa38c6cdb3c
-ms.openlocfilehash: 167ebd2cf9f7f8f2f073b5de68f36aebd1a3951a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cdd9a7811635bf43cd76ecbc84d8ab364e7f9dab
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654493"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152570"
 ---
 # <a name="string-literal-concatenation"></a>Zřetězení textového literálu
 
@@ -59,6 +59,6 @@ printf_s( "%s" , string ) ;
 
 Ve fázi překladu 6 jsou vícebajtové znakové sekvence určené libovolnou sekvencí sousedních textových literálů nebo sousedních literálů širokých řetězců zřetězeny do jediné vícebajtové sekvence znaků. Proto nenavrhujte programy umožňující změnu textových literálů během provádění. Standard ANSI jazyka C určuje, že výsledek změny řetězce není definován.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Textové literály jazyka C](../c-language/c-string-literals.md)

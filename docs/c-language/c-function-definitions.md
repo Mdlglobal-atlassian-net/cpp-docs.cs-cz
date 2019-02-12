@@ -12,12 +12,12 @@ helpviewer_keywords:
 - function body
 - declaring functions, variables
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
-ms.openlocfilehash: dd396cb182aeae9ef587ab58f04893cf0283a8a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61662caf28fad2f961a580cf280799711a6909bb
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507208"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147682"
 ---
 # <a name="c-function-definitions"></a>Definice funkcí jazyka C
 
@@ -26,8 +26,8 @@ Definice funkce určuje název funkce, typy a počet parametrů, které se oček
 ## <a name="syntax"></a>Syntaxe
 
 *translation-unit*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*externí deklarace* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*jednotka překladu* *externí deklarace*
+&nbsp;&nbsp;&nbsp;&nbsp;*external-declaration* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*
 
 *externí deklarace*: /\* povolený jenom v oboru externí (soubor) \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*definice funkce*<br/>
@@ -50,7 +50,7 @@ Prototyp parametry jsou:
 &nbsp;&nbsp;&nbsp;&nbsp;*seznam deklarací* *deklarace*
 
 *deklarátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ukazatel*<sub>optimalizované</sub> *direct-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
 *přímé declarator*: /\* deklarátorem funkce \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator***(***seznam parametrů typu***)**  / \* deklarátor nový styl \*/<br/>
@@ -93,6 +93,6 @@ A *deklarace* v *seznam deklarací* ve funkci nemůže obsahovat definice *stora
 
 V částech [atributy funkce](../c-language/function-attributes.md), [třídu úložiště](../c-language/storage-class.md), [návratový typ](../c-language/return-type.md), [parametry](../c-language/parameters.md), a [tělo funkce](../c-language/function-body.md) součástí definice funkce podrobně popisují.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Funkce](../c-language/functions-c.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - compound statements
 - statements, compound
 ms.assetid: be231a92-c712-464e-ae25-a4becb20f7f5
-ms.openlocfilehash: c7ae46278fa76f2ca1a6f24a376f84dd77a97b16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4f308864e6e85f74e40d9c9df200a0254fea366a
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477893"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152622"
 ---
 # <a name="blocks"></a>Bloky
 
@@ -20,6 +20,6 @@ Sekvence deklarací, definic a příkazů, které jsou uzavřeny ve složených 
 
 I když jsou všechny složené příkazy uzavřeny ve složených závorkách, ne vše, co je uzavřeno ve složených závorkách, představuje složený příkaz. Ačkoli se například může uvnitř složených závorek objevit specifikace prvků pole, struktury nebo výčtu, nejedná se o složené příkazy.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zdrojové soubory a zdrojové programy](../c-language/source-files-and-source-programs.md)

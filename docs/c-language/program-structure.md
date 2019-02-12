@@ -6,12 +6,12 @@ helpviewer_keywords:
 - programs [C++], structure
 - C, program structure
 ms.assetid: b713b5a1-21a2-4e6f-9481-5f8594f1859e
-ms.openlocfilehash: 210c3dcd020de2acd999792b876873478982cfef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 891207ac19da99f2f1b2b651e661560a0ab02d9f
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563888"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150191"
 ---
 # <a name="program-structure"></a>Struktura programu
 
@@ -29,6 +29,6 @@ Tato část poskytuje přehled programů jazyka C a vykonávání programu. Podm
 
 Vzhledem k tomu, že v této části je uveden přehled, obsahují tato témata pouze úvodní materiály. Chcete-li získat podrobnější popis, je třeba zobrazit informace s křížovými odkazy.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace jazyka C](../c-language/c-language-reference.md)

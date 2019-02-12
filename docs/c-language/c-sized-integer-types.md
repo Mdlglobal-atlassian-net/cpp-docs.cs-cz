@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - sized integer types
 ms.assetid: 0d6199b4-d0ab-4e8c-a769-785f5afb92eb
-ms.openlocfilehash: 3ced46b401296045909f5c812ca09abd3a5887f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 136065466d3adb4017cf18f2baf8c3387ffbd035
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432094"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150685"
 ---
 # <a name="c-sized-integer-types"></a>Typy Integer jazyka C s nastavenou velikostí
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Jazyk Microsoft C obsahuje podporu pro celočíselné typy s velikostí. Je možné deklarovat 8, 16, 32- a 64bitové celočíselné proměnné pomocí __int*n* zadejte specifikátor, kde *n* velikost, v bitech celočíselné proměnné. Hodnota *n* může být 8, 16, 32 nebo 64. Následující příklad deklaruje jednu proměnnou každého ze čtyř celočíselných typů s velikostí:
 
@@ -28,6 +28,6 @@ První tři typy celočíselných typů s velikostí jsou synonyma pro typy ANSI
 
 **Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Úložiště základních typů](../c-language/storage-of-basic-types.md)

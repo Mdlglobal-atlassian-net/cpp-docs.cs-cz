@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ellipses (...), parameters
 - '... ellipsis'
 ms.assetid: 8f2b8026-78b5-4e21-86a3-bf0f91f05689
-ms.openlocfilehash: 2b4b549ae6059cddf3ab868950cda215fb043d8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0652fe6076899020050d94378649018721b4b188
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506935"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147227"
 ---
 # <a name="parameters"></a>Parametry
 
@@ -31,7 +31,7 @@ Argumenty jsou názvy hodnotu předanou funkci volání funkce. Parametry jsou h
 /\* *sekvence atributů* je specifické pro Microsoft \*/
 
 *deklarátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ukazatel*<sub>optimalizované</sub> *direct-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
 *přímé declarator*: /\* deklarátorem funkce \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator***(***seznam parametrů typu***)**  / \* deklarátor nový styl \*/<br/>
@@ -74,6 +74,6 @@ Pořadí a typ parametrů, včetně veškeré jeho používání tento zápis t�
 
 Kompilátor nezávisle na sobě provádí běžné aritmetické převody na každého parametru a na každý argument v případě potřeby. Po převodu je bez parametru kratší než `int`, a nemá žádný parametr **float** zadejte typ parametru není explicitně určena jako **float** v prototypu. To znamená, třeba deklarovat jako parametr `char` má stejný účinek jako ji jako deklarace `int`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Definice funkcí jazyka C](../c-language/c-function-definitions.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compound assignment operators
 - assignment operators, compound
 ms.assetid: db7b5893-cd56-4f1c-9981-5a024200ab63
-ms.openlocfilehash: 102f53378430074a59636eb18488a7ab51289731
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39a9391e2a62a59c5e7fd7937c1f3d12509b76ad
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445133"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148761"
 ---
 # <a name="c-compound-assignment"></a>Složené přiřazení jazyka C
 
@@ -35,6 +35,6 @@ n &= MASK;
 
 V tomto příkladu se provádí operace logického bitového AND na `n` a `MASK` a výsledek je přiřazen k `n`. Konstanta manifestu `MASK` je definována s [#define](../preprocessor/hash-define-directive-c-cpp.md) direktiva preprocesoru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Operátory přiřazení v jazyce C](../c-language/c-assignment-operators.md)

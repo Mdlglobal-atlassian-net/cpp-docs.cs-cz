@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - floating-point numbers, truncation
 ms.assetid: 051a6e22-c636-4af8-9ac4-40160f4affca
-ms.openlocfilehash: 15f3ab62ad89ab5b571c528160b9ccd86ab93c5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bc46577c5ab304346d88f8522e584d1e54ca265
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430801"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152453"
 ---
 # <a name="truncation-of-floating-point-values"></a>Zkrácení hodnot s plovoucí desetinnou čárkou
 
@@ -17,6 +17,6 @@ ms.locfileid: "50430801"
 
 Kdykoli dojde k podtečení, hodnota proměnné s plovoucí desetinnou čárkou je zaokrouhlena na nulu. Přetečení může způsobit chybu modulu runtime nebo vytvořit nepředvídatelnou hodnotu v závislosti na určených optimalizacích.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Matematika s plovoucí desetinnou čárkou](../c-language/floating-point-math.md)

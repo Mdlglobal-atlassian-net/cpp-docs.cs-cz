@@ -7,12 +7,12 @@ helpviewer_keywords:
 - source files, specifying in compiler
 - source programs
 ms.assetid: 18bb2826-17da-48e5-92a2-10e649f1bc9f
-ms.openlocfilehash: c9a7c17c5cf52cb263d61fe79baa331c5b4d57a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4562f8397e9d2d3e044086b8da8d56ba25047ebd
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637138"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152531"
 ---
 # <a name="source-files-and-source-programs"></a>Zdrojové soubory a zdrojové programy
 
@@ -21,10 +21,10 @@ Zdrojový program lze rozdělit do jednoho nebo více „zdrojových souborů“
 ## <a name="syntax"></a>Syntaxe
 
 *translation-unit*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*externí deklarace* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*jednotka překladu* *externí deklarace*
+&nbsp;&nbsp;&nbsp;&nbsp;*external-declaration* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*
 
-*externí deklarace*:<br/>
+*external-declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*definice funkce*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarace*
 
@@ -39,6 +39,6 @@ Součásti jednotky převodu jsou externí deklarace obsahující definice funkc
 
 Zdrojové soubory nemusí obsahovat spustitelné příkazy. Může být například užitečné umístit definice proměnných do jednoho zdrojového souboru, a potom deklarovat reference na tyto proměnné v jiných zdrojových souborech, které je používají. Tato technika usnadňuje hledání a v případě potřeby také aktualizace definic. Ze stejného důvodu jsou konstanty a makra často uspořádány do samostatných souborů zvaných „vložené soubory“ nebo „soubory hlaviček“, na které lze dle potřeby odkázat ve zdrojových souborech. Zobrazit *odkazu preprocesoru* informace o [makra](../preprocessor/macros-c-cpp.md) a [soubory k zahrnutí](../preprocessor/hash-include-directive-c-cpp.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Struktura programu](../c-language/program-structure.md)

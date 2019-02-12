@@ -6,12 +6,12 @@ helpviewer_keywords:
 - visibility
 - file scope [C++]
 ms.assetid: a019eb7c-66ed-46a7-bc9f-89a963930a56
-ms.openlocfilehash: 4010025a5a80fa513c8f86c41612350b2a23c15e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01b2bc8d75c3c65639a3ff0c57b1a368760eba53
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656726"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151283"
 ---
 # <a name="scope-and-visibility"></a>Rozsah a viditelnost
 
@@ -29,6 +29,6 @@ Rozsah prototypu funkce deklarátor nebo specifikátor typu identifikátoru s ro
 
 Příslušné deklarace pro zviditelnění proměnných v jiných zdrojových souborech jsou popsány v [třídy úložiště](../c-language/c-storage-classes.md). Nicméně, proměnné a funkce jsou deklarovány na vnější úrovni s **statické** – specifikátor třídy úložiště jsou viditelné pouze v rámci zdrojového souboru, ve kterém jsou definovány. Všechny ostatní funkce jsou viditelné globálně.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Doba platnosti, rozsah, viditelnost a propojení](../c-language/lifetime-scope-visibility-and-linkage.md)

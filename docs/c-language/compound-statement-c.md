@@ -5,12 +5,12 @@ helpviewer_keywords:
 - compound statements
 - statements, compound
 ms.assetid: 32d1bf86-cbbc-42a9-ba3a-1be1c6c7754c
-ms.openlocfilehash: dc4e13d82c03a30023f72759ecacb798aedec0ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42d4c1d21c3e98dfc0281a47a35e033852f8de18
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532298"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152154"
 ---
 # <a name="compound-statement-c"></a>Složený příkaz (C)
 
@@ -50,6 +50,6 @@ if ( i > 0 )
 
 V tomto příkladu Pokud `i` je větší než 0, všechny příkazy uvnitř složeného příkazu jsou provedeny v pořadí.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Příkazy](../c-language/statements-c.md)

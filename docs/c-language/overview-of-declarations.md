@@ -5,12 +5,12 @@ helpviewer_keywords:
 - declarations, about declarations
 - type qualifiers
 ms.assetid: fcd2364c-c2a5-4fbf-9027-19dac4144cb5
-ms.openlocfilehash: 4e6c166763afd18db79798024d8b2f159ffed76d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 439bc878bbcd1c9778fb74738cb3b32b908a5943
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582751"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148345"
 ---
 # <a name="overview-of-declarations"></a>Přehled deklarací
 
@@ -29,10 +29,10 @@ ms.locfileid: "50582751"
 &nbsp;&nbsp;&nbsp;&nbsp;*Kvalifikátor typu* *specifikátory deklarace*<sub>optimalizované</sub>
 
 *init-declarator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Init-declarator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Init-declarator-list* **,** *init-declarator*
 
-*Init-declarator*:<br/>
+*init-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Deklarátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarátor* **=** *inicializátor*
 
@@ -65,7 +65,7 @@ Specifikátory typu poskytnout určité informace o datových typech identifiká
 
 Existují dva *kvalifikátor typu* terminály: **const** a `volatile`. Kvalifikátory zadat další vlastnosti typů, které jsou relevantní pouze v případě, že objekty tohoto typu přístupu s využitím l hodnoty. Další informace o **const** a `volatile`, naleznete v tématu [kvalifikátory typu](../c-language/type-qualifiers.md). Definici l hodnoty naleznete v tématu [výrazy L-Value a R-Value](../c-language/l-value-and-r-value-expressions.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Souhrn syntaxe jazyka C](../c-language/c-language-syntax-summary.md)<br/>
 [Deklarace a typy](../c-language/declarations-and-types.md)<br/>

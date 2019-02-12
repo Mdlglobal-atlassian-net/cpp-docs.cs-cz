@@ -7,12 +7,12 @@ helpviewer_keywords:
 - declarations [C++], C
 - declarations [C++], types
 ms.assetid: 432a2286-cf42-42ce-8baf-c908ffb57ca8
-ms.openlocfilehash: b2caf3022f5a1b23d50d994c3408cf4024c69ea2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75ffbeda8b120b9a1bb9f1bb28c570695ed2c8c8
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607334"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150243"
 ---
 # <a name="declarations-and-types"></a>Deklarace a typy
 
@@ -40,6 +40,6 @@ Tento oddíl popisuje deklaraci a inicializaci proměnných, funkcí a typů. Ja
 
 - [Rozšířené paměťové třídy atributů](../c-language/c-extended-storage-class-attributes.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Referenční dokumentace jazyka C](../c-language/c-language-reference.md)

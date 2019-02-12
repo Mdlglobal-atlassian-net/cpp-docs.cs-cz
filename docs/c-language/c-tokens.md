@@ -5,12 +5,12 @@ helpviewer_keywords:
 - tokens
 - translation units
 ms.assetid: 05e5f6f1-b8ea-4f74-af17-c0b9b5dbd3b5
-ms.openlocfilehash: d56f43decef15f9f94049b345b5c12393cf771cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f92692fb19b0eeff2fe9af179fc8fe3fa6c2f7e
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50427388"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149723"
 ---
 # <a name="c-tokens"></a>Tokeny jazyka C
 
@@ -20,11 +20,11 @@ Ve zdrojovém programu jazyka C je „token“ základním prvkem rozpoznatelný
 
 *token*: *– klíčové slovo*
 
-*identifikátor*
+*identifier*
 
-*Konstanty*
+*constant*
 
-*řetězcový literál*
+*string-literal*
 
 *operator*
 
@@ -35,6 +35,6 @@ Ve zdrojovém programu jazyka C je „token“ základním prvkem rozpoznatelný
 
 Klíčová slova, identifikátory, konstanty, textové literály a operátory popsané v tomto oddíle jsou příklady tokenů. Interpunkční znaménka, např. hranaté závorky (**[] č.**), složené závorky (**{}**), závorek ( **()** ) a čárky (**,**) jsou také tokeny.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Elementy jazyka C](../c-language/elements-of-c.md)

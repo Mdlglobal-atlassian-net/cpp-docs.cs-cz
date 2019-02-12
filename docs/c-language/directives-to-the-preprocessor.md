@@ -2,12 +2,12 @@
 title: Direktivy pro preprocesor
 ms.date: 11/04/2016
 ms.assetid: adc6251e-cf6b-4508-bdbb-55f446c838d3
-ms.openlocfilehash: 0abc21f38f5776acd9167f0526160dc5e1bb8cbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 520d181c3a58ee2c626678a3afd9126f1ef183cc
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450045"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149034"
 ---
 # <a name="directives-to-the-preprocessor"></a>Direktivy pro preprocesor
 
@@ -24,6 +24,6 @@ Tento příkaz sděluje kompilátoru, že před kompilací je třeba všechny v�
 |`#elif`|`#error`|**#ifndef**|**#pragma**|
 |`#else`|`#if`|`#include`|`#undef`|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zdrojové soubory a zdrojové programy](../c-language/source-files-and-source-programs.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - union keyword [C]
 - aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
-ms.openlocfilehash: ebc7f6185c8115df6e6b77a034307f8998b1c2ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6816a6f63de262b927a3c5aeed8774ba29c2eaa
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530299"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151491"
 ---
 # <a name="initializing-aggregate-types"></a>Inicializace typů agregace
 
@@ -49,7 +49,7 @@ int x[ ] = { 0, 1, 2 }
 
 Pokud zadáte velikost a poskytnout chybný počet inicializátory, však kompilátor vygeneruje chybu.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Maximální velikost pole je definované **size_t**. Definovaný v souboru hlaviček STDDEF. H, **size_t** je `unsigned int` s rozsahem 0x00000000 k 0x7CFFFFFF.
 
@@ -150,6 +150,6 @@ union
 
 Proměnné sjednocení `y`, v tomto příkladu je inicializován. První prvek sjednocení je pole, takže inicializátoru je souhrnných inicializátorů. Seznam inicializátorů `{'1'}` přiřadí hodnoty na první řádek pole. Vzhledem k tomu, že v seznamu se zobrazí pouze jedna hodnota, elementu v prvním sloupci je inicializován na znak `1`, a zbývající dva prvky v řádku jsou ve výchozím nastavení inicializována na hodnotu 0. Podobně, první prvek druhého řádku `x` je inicializován na znak `4`, a zbývající dva prvky v řádku jsou inicializovány na hodnotu 0.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Inicializace](../c-language/initialization.md)

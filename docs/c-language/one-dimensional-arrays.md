@@ -10,12 +10,12 @@ helpviewer_keywords:
 - square brackets [ ], arrays
 - subscript expressions
 ms.assetid: e28536e5-3b77-46b5-97fd-9b938c771816
-ms.openlocfilehash: 2e1d168cd3b6f3a5ca29cf9e6d981430d5bf671a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd3b495483a460f01fe1951ee4c8b5ac3b447701
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506259"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147632"
 ---
 # <a name="one-dimensional-arrays"></a>Jednorozměrná pole
 
@@ -59,6 +59,6 @@ Předpokládejme například, identifikátor `line` odkazuje na pole `int` hodno
 
 Výraz dolního indexu `line[0]` představuje hodnotu elementu první řádek, od posun od adrese reprezentované výrazem `line` je 0. Obdobně výrazu, jako `line[5]` odkazuje na element pozice posun pět z řádku nebo šestého prvku v poli.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Operátor dolního indexu: []](../cpp/subscript-operator.md)

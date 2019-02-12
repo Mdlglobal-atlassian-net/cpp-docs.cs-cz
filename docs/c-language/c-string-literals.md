@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C++], string literals
 - literal strings, C
 ms.assetid: 4b05523e-49a2-4900-b21a-754350af3328
-ms.openlocfilehash: bd8b49645e34224cbea7e801f197bfbcbc012915
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31028b51b8010dd7e598ca5e635a35562379bf40
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635623"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152310"
 ---
 # <a name="c-string-literals"></a>Textové literály jazyka C
 
@@ -19,16 +19,16 @@ ms.locfileid: "50635623"
 
 ## <a name="syntax"></a>Syntaxe
 
-*řetězcový literál*:<br/>
+*string-literal*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**"** *s – znak sekvence*<sub>optimalizované</sub> **"**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**L"** *s – znak sekvence*<sub>optimalizované</sub> **"**
 
-*s – znak sekvence*:<br/>
+*s-char-sequence*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*s-char*
 
 &nbsp;&nbsp;&nbsp;&nbsp;*s – znak sekvence* *s-char*
 
-*s char*:<br/>
+*s-char*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Každý člen zdrojové znakové sady kromě dvojité uvozovky ("), zpětného lomítka (\\), nebo znak nového řádku<br/>
 
 &nbsp;&nbsp;&nbsp;&nbsp;*řídicí sekvence*
@@ -43,6 +43,6 @@ char *amessage = "This is a string literal.";
 
 Všechny kódy řídicí [řídicí sekvence](../c-language/escape-sequences.md) tabulky jsou platné u řetězcových literálů. K reprezentaci dvojité uvozovky v řetězcovém literálu, použijte sekvenci escape  **\\"**. Jednoduché uvozovky (**"**) můžou být vyjádřeny bez řídicí sekvence. Zpětné lomítko (**\\**) musí být následován se druhé zpětné lomítko (**\\\\**) Pokud je zobrazeno v rámci řetězce. Když se objeví zpětné lomítko na konci řádku, je vždy interpretován jako znak pro pokračování řádku.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Elementy jazyka C](../c-language/elements-of-c.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - character codes [C++], wide
 - character codes [C++], multibyte
 ms.assetid: 1943c469-200d-4724-b18f-781d70520f9e
-ms.openlocfilehash: 391a7680f2593b056d27c520e12c610ff8eec7fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d573fac938f5e4d62c99c8cd6e676b96123a0c4
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429835"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152011"
 ---
 # <a name="multibyte-and-wide-characters"></a>Vícebajtové a široké znaky
 
@@ -35,6 +35,6 @@ Vícebajtový znak je znak složený ze sekvencí jednoho nebo více bajtů. Ka�
 
 Specifikací pro široké znaky je specifikace Unicode. Mezi rutiny knihovny runtime pro převod mezi vícebajtovými a širokými znaky patří rutiny `mbstowcs`, `mbtowc`, `wcstombs` a `wctomb`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Identifikátory jazyka C](../c-language/c-identifiers.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - declaring arrays
 - arrays [C++], declaring
 ms.assetid: 5f958b97-cef0-4058-bbc6-37c460aaed9b
-ms.openlocfilehash: 43fd2829d8a2d9984a068d74b4e7972a9f1b116c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4bc75e86601da77758490544cc5b02c485dcee46
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449917"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147773"
 ---
 # <a name="array-declarations"></a>Deklarace pole
 
@@ -23,15 +23,15 @@ ms.locfileid: "50449917"
 &nbsp;&nbsp;&nbsp;&nbsp;*specifikátory deklarace* *init-declarator-list*<sub>optimalizované</sub> **;**
 
 *init-declarator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Init-declarator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Init-declarator-list***,***init-declarator*
 
-*Init-declarator*:<br/>
+*init-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Deklarátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarátor* **=** *inicializátor*
 
 *deklarátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ukazatel*<sub>optimalizované</sub> *direct-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
 *přímé declarator*: /\* deklarátorem funkce \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator***[***konstantní výraz*<sub>optimalizované</sub> **]** 
@@ -88,12 +88,12 @@ extern char *name[];
 
 Tento příkaz deklaruje typ a název pole ukazatelů na `char`. Skutečnou definici `name` dochází jinde.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Typ celého čísla potřebných k uložení maximální velikost pole je velikost **size_t**. Definovaný v souboru hlaviček STDDEF. H, **size_t** je `unsigned int` s rozsahem 0x00000000 k 0x7CFFFFFF.
 
 **Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Deklarátor a deklarace proměnné](../c-language/declarators-and-variable-declarations.md)

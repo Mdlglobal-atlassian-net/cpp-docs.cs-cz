@@ -12,12 +12,12 @@ helpviewer_keywords:
 - automatic storage class
 - types [C], initializing
 ms.assetid: 73c516f5-c3ad-4d56-ab3b-f2a82b621104
-ms.openlocfilehash: f991eff82e5b6919f7960513ae9bc502cad77069
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3cf7eddcf43a65a787de60c391863d6471be7bcf
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641087"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151140"
 ---
 # <a name="initializing-scalar-types"></a>Inicializace skalárních typů
 
@@ -34,15 +34,15 @@ Při inicializaci Skalární typy, hodnota *výrazu přiřazení* je přiřazen�
 &nbsp;&nbsp;&nbsp;&nbsp;*Kvalifikátor typu* *specifikátory deklarace*<sub>optimalizované</sub>
 
 *init-declarator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Init-declarator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Init-declarator-list* **,** *init-declarator*
 
-*Init-declarator*:<br/>
+*init-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Deklarátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarátor* **=** *inicializátor*  / \* pro skalární inicializace \*/
 
 *Inicializátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz přiřazení*
+&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*
 
 Můžete inicializovat proměnné libovolného typu, za předpokladu, že dodržují následující pravidla:
 
@@ -104,6 +104,6 @@ int function( void )
 
 Globální proměnná `GLOBAL` je deklarované na vnější úrovni, má globální životnost. Lokální proměnná `LOCAL` má **automaticky** třídu úložiště a má jenom adresy během spuštění funkce, ve kterém je deklarována. Proto se pokus o inicializaci **statické** proměnné ukazatele `lp` adresou `LOCAL` není povolená. **Statické** proměnné ukazatele `gp` mohou být inicializovány na adresu `GLOBAL` vzhledem k tomu, že tato adresa je vždy stejný. Obdobně `*rp` lze inicializovat, protože `rp` místní proměnnou, která může mít nekonstantním inicializátor. Pokaždé, když je blok proveden, `LOCAL` má novou adresu, která je poté přiřazen `rp`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Inicializace](../c-language/initialization.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - tags, structure tags
 - union keyword [C]
 ms.assetid: b4bda1d1-cb5e-4f60-ac2b-29af93d8a9a2
-ms.openlocfilehash: ebf1961d83d14bf95633d4248c2f970c54923274
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 76ad9b797a4f192e8f22f8c040f5a308371a461b
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51325988"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148410"
 ---
 # <a name="name-spaces"></a>Obory názvů
 
@@ -48,6 +48,6 @@ struct student {
 
 Když `student` se zobrazí po **struktura** – klíčové slovo, ji kompilátor rozpozná jako značku struktury. Když `student` se zobrazí po operátoru výběru členů (**->** nebo **.**), odkazuje název na člena struktury. V jiných kontextech odkazuje položka `student` na proměnnou struktury. Přetížení oboru názvů značek se však nedoporučuje, protože zakrývá význam.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Struktura programu](../c-language/program-structure.md)

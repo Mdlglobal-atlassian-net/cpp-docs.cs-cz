@@ -1,6 +1,6 @@
 ---
 title: Makra pro šablony zprostředkovatele OLE DB
-ms.date: 11/04/2016
+ms.date: 02/11/2019
 f1_keywords:
 - vc.templates.ole
 - BEGIN_PROPERTY_SET
@@ -51,12 +51,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: 8fbad23d49490f42416dd7e7234776ff1c5ac7bf
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: a2a5bf14da1a39439db67a4fb062fd06763754fc
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557048"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151114"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Makra pro šablony zprostředkovatele OLE DB
 
@@ -383,7 +383,7 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 *Pořadí*<br/>
 [in] Číslo sloupce. Pokud sloupec není sloupec záložky, číslo sloupce nesmí být 0.
 
-*Hodnota DbType*<br/>
+*dbtype*<br/>
 [in] Datový typ v [DBTYPE](https://docs.microsoft.com/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
 *Člen*<br/>
@@ -421,10 +421,10 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 *colSize*<br/>
 [in] Velikost sloupce.
 
-*Hodnota DbType*<br/>
+*dbtype*<br/>
 [in] Určuje datový typ hodnoty. Zobrazit `wType` popis v [DBBINDING struktury](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
-*Přesnost*<br/>
+*precision*<br/>
 [in] Určuje přesnost pro použití při získávání dat, pokud *dbType* DBTYPE_NUMERIC nebo DBTYPE_DECIMAL. Zobrazit `bPrecision` popis v [DBBINDING struktury](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
 *Škálování*<br/>
@@ -516,7 +516,7 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 *Pořadí*<br/>
 [in] Číslo sloupce. Pokud sloupec není sloupec záložky, číslo sloupce nesmí být 0.
 
-*Hodnota DbType*<br/>
+*dbtype*<br/>
 [in] Datový typ v [DBTYPE](https://docs.microsoft.com/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
 *Velikost*<br/>
@@ -583,9 +583,9 @@ Označuje konec mapování schématu.
 END_SCHEMA_MAP()
 ```
 
-#### <a name="see-also"></a>Viz také
+#### <a name="remarks"></a>Poznámky
 
-[IDBSchemaRowsetImpl – třída](../../data/oledb/idbschemarowsetimpl-class.md)
+Další informace najdete v tématu [IDBSchemaRowsetImpl – třída](../../data/oledb/idbschemarowsetimpl-class.md).
 
 ### <a name="schema_entry"></a> SCHEMA_ENTRY
 
@@ -603,7 +603,7 @@ SCHEMA_ENTRY(guid,
 *identifikátor GUID*<br/>
 Sadu řádků schématu identifikátoru GUID. Zobrazit [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) v *OLE DB referenční informace pro programátory* seznam sad řádků schématu a jejich identifikátory GUID.
 
-*RowsetClass*<br/>
+*rowsetClass*<br/>
 Třída, která bude vytvořena a představují sadu řádků schématu.
 
 #### <a name="remarks"></a>Poznámky
@@ -626,7 +626,7 @@ To `Execute` funkce provede naplnění dat v sadě řádků. Průvodce projektem
 
 Průvodce také přidá tři odpovídající položky v mapování schématu. Zobrazit [vytváření poskytovatele šablony technologie OLE DB](../../data/oledb/creating-an-ole-db-provider.md) Další informace o používání průvodce k vytvoření poskytovatele.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

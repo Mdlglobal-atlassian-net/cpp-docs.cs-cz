@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data binding [C++], operator precedence
 - operators [C++], precedence
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
-ms.openlocfilehash: 1b14f7a7d0c1d682c641ab441dc3e40c23688392
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88d0256e2ce948fbdfffb24037517690ef4b7cb7
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463255"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152492"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Přednost a pořadí vyhodnocení
 
@@ -24,8 +24,8 @@ Následující tabulka shrnuje prioritu a asociativitu (tedy pořadí, v němž 
 
 |Symbol <sup>1</sup>|Typ operace|Asociativita|
 |-------------|-----------------------|-------------------|
-|**\[ ] ( ) . ->**<br /><br />**++** **--** (přípona)|Výraz|Zleva doprava|
-**sizeof & \* + – ~!**<br /><br />**++--** (předpona)|Unární|Zprava doleva|
+|**\[ ] ( ) . ->**<br /><br />**++** **--** (postfix)|Výraz|Zleva doprava|
+**sizeof & \* + - ~ !**<br /><br />**++--** (předpona)|Unární|Zprava doleva|
 |*zaokrouhlovat*|Unární|Zprava doleva|
 |**\* / %**|Násobení|Zleva doprava|
 |**+ -**|Additive|Zleva doprava|
@@ -61,7 +61,7 @@ Následující seznam ukazuje, jak kompilátor automaticky sváže několik vzor
 
 |Výraz|Automatické vázání|
 |----------------|-----------------------|
-|& b &#124; &#124; c|(& b). &#124; &#124; c|
+|a & b &#124;&#124; c|(& b). &#124; &#124; c|
 |a = b &#124;&#124; c|a = (b &#124; &#124; c).|
 |q && r &#124;&#124; s--|(q & & r) &#124; &#124; s--|
 
@@ -75,12 +75,12 @@ Následující výraz není platný a vyvolá při kompilaci diagnostickou zprá
 
 |Neplatný výraz|Výchozí seskupení|
 |------------------------|----------------------|
-|p == 0? p += 1: p += 2|(p == 0? p += 1: p) += 2|
+|p == 0 ? p += 1: p += 2|( p == 0 ? p += 1 : p ) += 2|
 
 V tomto výrazu operátor rovnosti (**==**) má nejvyšší prioritu, takže `p == 0` seskupen jako operand. Operátor podmíněného výrazu (**?:**) má druhou nejvyšší prioritu. Jeho prvním operandem je výraz `p == 0`, jeho druhým operandem pak výraz `p += 1`. Za poslední operand v operátoru podmíněného výrazu je však považován výraz `p` místo výrazu `p += 2`, protože tento výskyt proměnné `p` je více svázán s operátorem podmíněného výrazu než s operátorem složeného přiřazení. Výraz `+= 2` nemá operand na levé straně, dojde tedy k chybě syntaxe. Chcete-li zabránit chybám tohoto typu a vytvářet čitelnější kód, měly by být použity závorky. Závorky by měly být použity například jako v ukázce níže, která předchozí příklad opravuje a ujasňuje:
 
 `( p == 0 ) ? ( p += 1 ) : ( p += 2 )`
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Operátory jazyka C](../c-language/c-operators.md)

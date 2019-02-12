@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - tokens, evaluating
 ms.assetid: 28870b62-dff6-4644-8b75-d58f340b48d2
-ms.openlocfilehash: c54b497464d68a9e6c6048a93119726e14ef4718
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15775ca9a7ada46aaf4e53ae952cd67e95bbf8d3
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482053"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152544"
 ---
 # <a name="evaluation-of-tokens"></a>Vyhodnocení tokenů
 
@@ -21,12 +21,12 @@ i+++j
 
 V tomto příkladu kompilátor nejprve ze tří znamének plus utvoří nejdelší možný operátor (`++`) a poté zpracuje zbývající znaménko plus jako operátor sčítání (`+`). Výraz je proto interpretován jako výraz `(i++) + (j)`, nikoli `(i) + (++j)`. V tomto a podobných případech se použitím prázdných znaků a závorek vyhněte víceznačnosti a zajistěte správné vyhodnocení výrazu.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Kompilátor jazyka C zpracovává znak CTRL+Z jako indikátor konce souboru. Veškerý text za znakem CTRL+Z je ignorován.
 
 **Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Tokeny jazyka C](../c-language/c-tokens.md)

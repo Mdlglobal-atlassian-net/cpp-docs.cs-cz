@@ -6,12 +6,12 @@ helpviewer_keywords:
 - typedef declarations
 - types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
-ms.openlocfilehash: 6493c5240ca66fc1f12c9617e05072f8399d4786
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4bf7bc82cdf792e5a23f6d5533cc4d800fe4252
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468897"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149619"
 ---
 # <a name="typedef-declarations"></a>Typedef – deklarace
 
@@ -29,20 +29,20 @@ Deklarace typedef je interpretován stejným způsobem jako proměnnou nebo dekl
 &nbsp;&nbsp;&nbsp;&nbsp;*Specifikátor typu specifikátory deklarace*<sub>optimalizované</sub> <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Kvalifikátor typu specifikátory deklarace*<sub>optimalizované</sub>
 
-*Storage-class-specifier*:<br/>
+*storage-class-specifier*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Definice TypeDef**
 
 *Specifikátor typu*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Typ void**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Char**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**krátké**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Long**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**plovoucí desetinnou čárkou**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Double**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**podepsané**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**bez znaménka**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct – nebo – sjednocení – specifikátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*enum – specifikátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Název TypeDef*
 
@@ -146,6 +146,6 @@ je ekvivalentem deklarace
 void box( int, int );
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Deklarace a typy](../c-language/declarations-and-types.md)

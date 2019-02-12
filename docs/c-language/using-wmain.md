@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - wmain function
 ms.assetid: d0300812-adc4-40c6-bba3-b2da25468c80
-ms.openlocfilehash: 65efacb76e80dedee13d8e1af017686075c1168e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d467d50a7188cd665f64de8b6f0ce6e6a37df752
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460590"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148488"
 ---
 # <a name="using-wmain"></a>Používání výrazu wmain
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 V programovacím modelu Unicode, můžete definovat širokoznaké verze **hlavní** funkce. Použití **wmain** místo **hlavní** Pokud chcete zapsat přenositelný kód, který splňuje Unicode programovacího modelu.
 
@@ -35,6 +35,6 @@ Další informace o prostředí MBCS naleznete v tématu [internacionalizace](..
 
 **Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [main – spuštění funkce a programu](../c-language/main-function-and-program-execution.md)

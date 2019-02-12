@@ -2,12 +2,12 @@
 title: Souhrn klíčových slov
 ms.date: 11/04/2016
 ms.assetid: 341d8297-03eb-4351-9ed0-138ec59b375c
-ms.openlocfilehash: 780cb80a3c311239eed825101bb1d12be0b58a56
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 9dc32aa735b6eb6e3525e2fff64b06ced474b6af
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51325900"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149905"
 ---
 # <a name="summary-of-keywords"></a>Souhrn klíčových slov
 
@@ -17,13 +17,13 @@ ms.locfileid: "51325900"
 |-|-|-|-|
 |**auto**|**double**|**int**|**struct**|
 |**break**|**else**|**long**|**switch**|
-|**case**|**enum**|**Registrace**|**Definice TypeDef**|
+|**case**|**enum**|**register**|**Definice TypeDef**|
 |**char**|**extern**|**return**|**sjednocení**|
 |**const**|**float**|**short**|**bez znaménka**|
 |**continue**|**for**|**podepsané**|**void**|
 |**default**|**goto**|**sizeof**|**volatile**|
 |**do**|**if**|**static**|**while**|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Gramatika slov](../c-language/lexical-grammar.md)

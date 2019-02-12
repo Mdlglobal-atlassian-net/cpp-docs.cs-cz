@@ -6,12 +6,12 @@ helpviewer_keywords:
 - union keyword [C], storage
 - union keyword [C]
 ms.assetid: b33d246a-8d20-41c4-89b2-ab05f1428792
-ms.openlocfilehash: 06444151a453017055667885304ecb59534f5774
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49b99dc17fd7bdddd8a47e3bfd5913a70a7631a7
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602225"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152817"
 ---
 # <a name="storage-of-unions"></a>Ukládání sjednocení
 
@@ -27,6 +27,6 @@ union         /* Defines a union named x */
 
 Členové `x` sjednocení jsou v pořadí podle své deklarace, ukazatel na `char` hodnotu, `char` hodnotu a pole **float** hodnoty. Úložiště přidělené prvku `x` je požadované místo na disku pro pole o 20 prvcích `f`, jelikož `f` je nejdelším členem sjednocení. Vzhledem k tomu, že ke sjednocení není přidružena žádná značka, jeho typ je nepojmenovaný nebo „anonymní“.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Deklarace sjednocení](../c-language/union-declarations.md)

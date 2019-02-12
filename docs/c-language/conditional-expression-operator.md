@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [C++], conditional
 - expressions [C++], conditional
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
-ms.openlocfilehash: b93e99aef4b7d8a1b20373fda1e4d9672b416b7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9dc93a47d36af92fe370e3f56f504682d49bd1dd
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506142"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150620"
 ---
 # <a name="conditional-expression-operator"></a>Operátor podmíněného výrazu
 
@@ -19,7 +19,7 @@ C má jeden Ternární operátor: operátor podmíněného výrazu (**?:**).
 
 ## <a name="syntax"></a>Syntaxe
 
-*podmíněného výrazu*:<br/>
+*conditional-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logický výraz OR*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*výraz logického OR***?**  *výraz***:***podmíněného výrazu*
 
@@ -68,6 +68,6 @@ int y;
 
 V tomto příkladu dvě funkce `f1` a `f2`a dvě proměnné, `x` a `y`, jsou deklarovány. Dále v programu, pokud dvě proměnné, které mají stejnou hodnotu, funkce `f1` je volána. V opačném případě `f2` je volána.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podmíněný operátor: ?:](../cpp/conditional-operator-q.md)

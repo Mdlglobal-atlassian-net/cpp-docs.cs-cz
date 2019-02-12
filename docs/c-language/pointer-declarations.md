@@ -7,12 +7,12 @@ helpviewer_keywords:
 - const keyword [C]
 - pointers, declarations
 ms.assetid: 8b3b7fc7-f44d-480d-b6f9-cebe4e5462a6
-ms.openlocfilehash: c09e73eec0f020ccc334d443248feb09631a0f7f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ee6e9e78f3793cd1912ece7f8627a4be68e929c
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432464"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151998"
 ---
 # <a name="pointer-declarations"></a>Deklarace ukazatelů
 
@@ -21,16 +21,16 @@ A *deklaraci ukazatele* názvů proměnné ukazatele a určuje typ objektu, na k
 ## <a name="syntax"></a>Syntaxe
 
 *deklarátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ukazatel*<sub>optimalizované</sub> *direct-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
-*přímé declarator*:<br/>
+*direct-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**(** *deklarátor* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **[** *konstantní výraz*<sub>optimalizované</sub> **]**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **(** *seznam parametrů typu* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **(** *seznam identifikátorů*<sub>optimalizované</sub> **)**
 
-*ukazatel*:<br/>
+*pointer*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *seznam typů kvalifikátor*<sub>optimalizované</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *seznam typů kvalifikátor*<sub>optimalizované</sub> *ukazatele*
 
@@ -114,6 +114,6 @@ struct id
 
 Proměnná *záznam* má typ struktury *id*. Všimněte si, že *pname* je deklarována jako ukazatel na jiný typ struktury s názvem *název*. Tato deklarace se může objevit před *název* je typ definován.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Deklarátor a deklarace proměnné](../c-language/declarators-and-variable-declarations.md)

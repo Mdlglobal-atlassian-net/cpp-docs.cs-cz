@@ -1,6 +1,6 @@
 ---
 title: Makra a globální funkce pro šablony příjemců OLE DB
-ms.date: 11/04/2016
+ms.date: 02/11/2019
 f1_keywords:
 - vc.templates.ole
 - ATL.AtlTraceErrorRecords
@@ -100,12 +100,12 @@ helpviewer_keywords:
 - END_PARAM_MAP macro
 - SET_PARAM_TYPE macro
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-ms.openlocfilehash: 4254c2637c4ed937a3196310ffa83c48504911af
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1826f674e219b850e62fdae07b3a97e8b8cf2d48
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557112"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148995"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Makra a globální funkce pro šablony příjemců OLE DB
 
@@ -198,11 +198,7 @@ inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);
 
 #### <a name="remarks"></a>Poznámky
 
-Pokud *hErr* není S_OK, `AtlTraceErrorRecords` Vypíše informace o záznamu chyby technologie OLE DB pro zařízení s výpisem paměti ( **ladění** karty v okně výstupu nebo souboru). Informace o záznamu chyby, který získáte od zprostředkovatele, obsahuje číslo řádku, zdroj, popis, soubor nápovědy, kontextu a identifikátor GUID pro každou položku záznamu chyby. `AtlTraceErrorRecords` Vypíše tyto informace pouze v sestaveních ladění. V sestaveních pro vydání je prázdný zástupnou proceduru, která je optimalizovaná navýšení kapacity.
-
-#### <a name="see-also"></a>Viz také
-
-[CDBErrorInfo – třída](../../data/oledb/cdberrorinfo-class.md)
+Pokud *hErr* není S_OK, `AtlTraceErrorRecords` Vypíše informace o záznamu chyby technologie OLE DB pro zařízení s výpisem paměti ( **ladění** karty v okně výstupu nebo souboru). Informace o záznamu chyby, který získáte od zprostředkovatele, obsahuje číslo řádku, zdroj, popis, soubor nápovědy, kontextu a identifikátor GUID pro každou položku záznamu chyby. `AtlTraceErrorRecords` Vypíše tyto informace pouze v sestaveních ladění. V sestaveních pro vydání je prázdný zástupnou proceduru, která je optimalizovaná navýšení kapacity. Další informace najdete v tématu [cdberrorinfo – třída](../../data/oledb/cdberrorinfo-class.md).
 
 ### <a name="begin_accessor"></a> BEGIN_ACCESSOR
 
@@ -456,7 +452,7 @@ BLOB_ENTRY_LENGTH_STATUS(
 *Délka*<br/>
 [out] \(Skutečné) délka v bajtech sloupci objektů BLOB.
 
-*Stav*<br/>
+*status*<br/>
 [out] Stav sloupce dat objektů BLOB.
 
 #### <a name="example"></a>Příklad
@@ -487,7 +483,7 @@ BLOB_ENTRY_STATUS(nOrdinal, IID, flags, data, status)
 *data*<br/>
 [in] Odpovídající datový člen v záznamu uživatele.
 
-*Stav*<br/>
+*status*<br/>
 [out] Stav pole objektů BLOB.
 
 #### <a name="example"></a>Příklad
@@ -576,7 +572,7 @@ BLOB_NAME_LENGTH_STATUS(pszName, IID, flags, data, length, status )
 *Délka*<br/>
 [out] \(Skutečné) délka v bajtech sloupci objektů BLOB.
 
-*Stav*<br/>
+*status*<br/>
 [out] Stav pole objektů BLOB.
 
 ### <a name="blob_name_status"></a> BLOB_NAME_STATUS
@@ -603,7 +599,7 @@ BLOB_NAME_STATUS(pszName, IID, flags, data, status )
 *data*<br/>
 [in] Odpovídající datový člen v záznamu uživatele.
 
-*Stav*<br/>
+*status*<br/>
 [out] Stav pole objektů BLOB.
 
 ### <a name="bookmark_entry"></a> BOOKMARK_ENTRY
@@ -669,10 +665,7 @@ END_COLUMN_MAP()
 };
 ```
 
-#### <a name="see-also"></a>Viz také
-
-[CBookmark – třída](../../data/oledb/cbookmark-class.md)<br/>
-[DBPROP_BOOKMARKS](https://docs.microsoft.com/previous-versions/windows/desktop/ms709728(v=vs.85))
+Další informace najdete v tématu [pomocí záložky](using-bookmarks.md) a [CBookmark – třída](../../data/oledb/cbookmark-class.md).
 
 ### <a name="column_entry"></a> COLUMN_ENTRY
 
@@ -743,7 +736,7 @@ Zobrazit [DBBINDING](https://docs.microsoft.com/previous-versions/windows/deskto
 *Délka*<br/>
 [in] Proměnná vázat délka sloupce.
 
-*Stav*<br/>
+*status*<br/>
 [in] Proměnná bylo vázané na sloupce stavu.
 
 #### <a name="remarks"></a>Poznámky
@@ -816,7 +809,7 @@ Zobrazit [DBBINDING](https://docs.microsoft.com/previous-versions/windows/deskto
 *Délka*<br/>
 [in] Proměnná vázat délka sloupce.
 
-*Stav*<br/>
+*status*<br/>
 [in] Proměnná bylo vázané na sloupce stavu.
 
 #### <a name="remarks"></a>Poznámky
@@ -933,7 +926,7 @@ Zobrazit [DBBINDING](https://docs.microsoft.com/previous-versions/windows/deskto
 *Délka*<br/>
 [in] Proměnná vázat délka sloupce.
 
-*Stav*<br/>
+*status*<br/>
 [in] Proměnná bylo vázané na sloupce stavu.
 
 #### <a name="remarks"></a>Poznámky
@@ -972,7 +965,7 @@ Zobrazit [DBBINDING](https://docs.microsoft.com/previous-versions/windows/deskto
 *data*<br/>
 [in] Odpovídající datový člen v záznamu uživatele.
 
-*Stav*<br/>
+*status*<br/>
 [in] Proměnná bylo vázané na sloupce stavu.
 
 #### <a name="remarks"></a>Poznámky
@@ -1005,7 +998,7 @@ Zobrazit [DBBINDING](https://docs.microsoft.com/previous-versions/windows/deskto
 *data*<br/>
 [in] Odpovídající datový člen v záznamu uživatele.
 
-*Stav*<br/>
+*status*<br/>
 [in] Proměnná bylo vázané na sloupce stavu.
 
 #### <a name="remarks"></a>Poznámky
@@ -1132,7 +1125,7 @@ COLUMN_NAME_EX(pszName, wType, nLength, nPrecision, nScale, data, length, status
 *Délka*<br/>
 [in] Proměnná vázat délka sloupce.
 
-*Stav*<br/>
+*status*<br/>
 [in] Proměnná bylo vázané na sloupce stavu.
 
 #### <a name="remarks"></a>Poznámky
@@ -1185,7 +1178,7 @@ COLUMN_NAME_LENGTH_STATUS(pszName, data, length, status )
 *Délka*<br/>
 [in] Proměnná vázat délka sloupce.
 
-*Stav*<br/>
+*status*<br/>
 [in] Proměnná bylo vázané na sloupce stavu.
 
 #### <a name="remarks"></a>Poznámky
@@ -1278,7 +1271,7 @@ COLUMN_NAME_PS_LENGTH_STATUS(pszName, nPrecision, nScale, data, length, status )
 *Délka*<br/>
 [in] Proměnná vázat délka sloupce.
 
-*Stav*<br/>
+*status*<br/>
 [in] Proměnná bylo vázané na sloupce stavu.
 
 #### <a name="remarks"></a>Poznámky
@@ -1309,7 +1302,7 @@ COLUMN_NAME_PS_STATUS(pszName, nPrecision, nScale, data, status )
 *data*<br/>
 [in] Odpovídající datový člen v záznamu uživatele.
 
-*Stav*<br/>
+*status*<br/>
 [in] Proměnná bylo vázané na sloupce stavu.
 
 #### <a name="remarks"></a>Poznámky
@@ -1334,7 +1327,7 @@ COLUMN_NAME_STATUS(pszName, data, status )
 *data*<br/>
 [in] Odpovídající datový člen v záznamu uživatele.
 
-*Stav*<br/>
+*status*<br/>
 [in] Proměnná bylo vázané na sloupce stavu.
 
 #### <a name="remarks"></a>Poznámky
@@ -1443,7 +1436,7 @@ COLUMN_NAME_TYPE_STATUS(pszName, wType, status, data)
 *wType*<br/>
 [in] Datový typ.
 
-*Stav*<br/>
+*status*<br/>
 [in] Proměnná bylo vázané na sloupce stavu.
 
 *data*<br/>
@@ -1469,7 +1462,7 @@ Používá se s jeden přistupující objekt pro sadu řádků. BEGIN_COLUMN_MAP
 
 #### <a name="example"></a>Příklad
 
-Zobrazit [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md).
+See [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md).
 
 ### <a name="define_command"></a> DEFINE_COMMAND
 
@@ -1579,7 +1572,7 @@ SET_PARAM_TYPE(type)
 
 #### <a name="parameters"></a>Parametry
 
-*Typ*<br/>
+*type*<br/>
 [in] Typ, který má nastavit pro parametr.
 
 #### <a name="remarks"></a>Poznámky
@@ -1640,7 +1633,7 @@ END_COLUMN_MAP()
 
 **Záhlaví:** také atldbcli.h
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Makra a globální funkce pro šablony příjemců OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)<br/>
 [OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

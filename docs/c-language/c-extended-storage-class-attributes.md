@@ -7,16 +7,16 @@ helpviewer_keywords:
 - extended storage-class attributes
 - storage class specifiers, C storage classes
 ms.assetid: 2580735c-f5bf-46ab-9468-0696893d82be
-ms.openlocfilehash: aa1f1b5d8fa62d12651c32724f06e8bd3f0ec53e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b0c8b60dab3229d5d5c162f7bafc959fa2558f0
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658273"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56146954"
 ---
 # <a name="c-extended-storage-class-attributes"></a>Rozšířené atributy třídy úložiště jazyka C
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Více aktuální informace o tomto tématu najdete v části [__declspec (referenční dokumentace jazyka C++)](../cpp/declspec.md).
 
@@ -26,17 +26,17 @@ Rozšířená syntaxe atributů pro určení informací o třídě úložiště 
 
 ## <a name="syntax"></a>Syntaxe
 
-*Storage-class-specifier*:<br/>
+*storage-class-specifier*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *extended-decl-modifier-seq* **)**  / \* specifické pro Microsoft \*/
 
-*Extended-decl-modifier-seq*:&nbsp; &nbsp; &nbsp; &nbsp; / \* specifické pro Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl modifikátor*<sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl-modifier-seq* *extended-decl – modifikátor*
+*extended-decl-modifier-seq*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Specifické pro Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
 
-*Extended-decl modifikátor*:&nbsp; &nbsp; &nbsp; &nbsp; / \* specifické pro Microsoft \*/<br/>
+*extended-decl-modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Specifické pro Microsoft \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**vlákno**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**DllImport**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**
 
 Modifikátory deklarace jsou odděleny prázdným znakem. Všimněte si, že *extended-decl-modifier-seq* může být prázdný; v takovém případě nemá atribut __declspec žádný vliv.
@@ -45,6 +45,6 @@ Atributy třídy úložiště thread, naked, dllimport a dllexport jsou vlastnos
 
 **Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Deklarace a typy](../c-language/declarations-and-types.md)

@@ -1,5 +1,5 @@
 ---
-title: __popcnt16 __popcnt, __popcnt64
+title: __popcnt16, __popcnt, __popcnt64
 ms.date: 11/04/2016
 f1_keywords:
 - __popcnt64
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - __popcnt64
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-ms.openlocfilehash: a0a5a51bfcb5265f7b415433c3f6b64423840ebe
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a6424f3414d9da17e52c0a9f78290497f5e5e01e
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522456"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56146889"
 ---
-# <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16 __popcnt, __popcnt64
+# <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
-Spočítá počet jednu službu bits (počet naplnění) v 16, 32 nebo 64bajtové číslo bez znaménka.
+Spočítá počet jednu službu bits (počet naplnění) v 16, 32 nebo 64-bit znaménka.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,7 +59,7 @@ Počet bitů, jeden v `value` parametru.
 
 ## <a name="remarks"></a>Poznámky
 
-Každá z těchto vnitřních objektů vygeneruje `popcnt` instrukce.  Velikost hodnoty, který `popcnt` instrukce vrátí je stejná jako velikost svého argumentu.  V 32bitovém režimu nejsou žádné 64-bit pro obecné účely registry, tedy ne 64-bit `popcnt`.
+Každá z těchto vnitřních objektů vygeneruje `popcnt` instrukce. V 32bitovém režimu nejsou žádné 64-bit pro obecné účely registry, tedy ne 64-bit `popcnt`.
 
 K určení hardwarovou podporu `popcnt` instrukce, volání `__cpuid` vnitřní s `InfoType=0x00000001` a zkontrolujte bit 23 `CPUInfo[2] (ECX)`. Tato verze je 1, pokud podporované instrukce a 0 jinak. Pokud jste spustili kód, který používá tuto vnitřní hardware, který není podporován `popcnt` instrukce, výsledky nepředvídatelné.
 
@@ -101,7 +101,7 @@ __popcnt(0xffffffff) = 32
 
 **Specifické pro END Microsoft**
 
-Copyright 2007 pokročilé zařízení Micro, Inc. Všechna práva vyhrazena. Reprodukovat se svolením rozšířené Micro zařízení, Inc.
+Copyright 2007 by Advanced Micro Devices, Inc. Všechna práva vyhrazena. Reprodukovat se svolením rozšířené Micro zařízení, Inc.
 
 ## <a name="see-also"></a>Viz také
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data type conversion [C++], signed and unsigned integers
 - type conversion [C++], signed and unsigned integers
 ms.assetid: 5eea32f8-8b14-413d-acac-c063b3d118d7
-ms.openlocfilehash: aec00ce21887759b2016523ff4044eb8389131fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d2f0ab43adf3cbad3d1ffa244551c67883c6606
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431717"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152778"
 ---
 # <a name="conversions-from-signed-integral-types"></a>Převody z podepsaných integrálních typů
 
@@ -35,7 +35,7 @@ Následující tabulka shrnuje převody z podepsaných integrálních typů. Tat
 
 |From|Chcete-li|Metoda|
 |----------|--------|------------|
-|**Char**1|**short**|Znak rozšíření|
+|**char**1|**short**|Znak rozšíření|
 |**char**|**long**|Znak rozšíření|
 |**char**|**unsigned char**|Zachovat vzor; bit vyššího řádu jako bit znaménka ztratí – funkce|
 |**char**|**short bez znaménka**|Rozšíření přihlašování do **krátký**; převod **krátký** k **unsigned short**|
@@ -62,12 +62,12 @@ Následující tabulka shrnuje převody z podepsaných integrálních typů. Tat
 
 1. Všechny **char** položky se předpokládá, že **char** ve výchozím nastavení je typ podepsaný.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Pro kompilátor jazyka C společnosti Microsoft 32-bit integer je ekvivalentní **dlouhé**. Převod **int** hodnotu pokračuje stejné jako v případě **dlouhé**.
 
 **Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Převody přiřazení](../c-language/assignment-conversions.md)

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - storing structures
 - packing structures
 ms.assetid: 60ff292f-2595-4f37-ae00-4c4b4f047196
-ms.openlocfilehash: 4dc04eda222b4fed4fb24f8d9ef138f9503093ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e15f39b5a7a78da117c3b8a551ebfba5e07c194
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460616"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150334"
 ---
 # <a name="storage-and-alignment-of-structures"></a>Uchovávání a zarovnání struktur
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Členy struktury jsou postupně uloženy v pořadí, ve kterém jsou deklarovány: první člen má nejnižší adresu paměti a poslední člen nejvyšší.
 
@@ -40,6 +40,6 @@ Bitová pole výchozí velikost **dlouhé** pro kompilátor Microsoft C. Členy 
 
 **Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Deklarace struktury](../c-language/structure-declarations.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - operators [C++], addition
 - additive operators
 ms.assetid: 7d54841e-436d-4ae8-9865-1ac1829e6f22
-ms.openlocfilehash: 78dc559a83626057603027e30742435b1128e31c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e2d802a77c56b8f458b614b29e86e2e1d30a55e
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557687"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151426"
 ---
 # <a name="using-the-additive-operators"></a>Používání operátorů sčítání
 
@@ -37,6 +37,6 @@ j = &x[i] - &x[i-2];
 
 V tomto příkladu je adresa třetího prvku pole `x` (určená pomocí `x[i-2]`) odečtena od adresy pátého prvku pole `x` (určené pomocí `x[i]`). Rozdíl je vydělen délkou z **float**; výsledkem je celočíselná hodnota 2.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Sčítací operátory jazyka C](../c-language/c-additive-operators.md)

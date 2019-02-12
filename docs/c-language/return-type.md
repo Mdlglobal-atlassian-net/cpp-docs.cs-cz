@@ -10,12 +10,12 @@ helpviewer_keywords:
 - return keyword [C++], function return types
 - functions [C++], return types
 ms.assetid: 3e5b8a97-b341-48c5-8be8-8986980ef586
-ms.openlocfilehash: 4a4f3392f340fbe3ef1f5cf0a22a1a55f98e9384
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f781e59672764dc518f3c6fad61d4021720362a
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497024"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148137"
 ---
 # <a name="return-type"></a>Návratový typ
 
@@ -36,7 +36,7 @@ Návratový typ funkce se zavádí velikost a typ hodnoty vrácené funkcí a od
 *Specifikátor typu*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Typ void**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Char**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**krátké**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__int8**  / \* specifické pro Microsoft \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__int16**  / \* specifické pro Microsoft \*/<br/>
@@ -47,7 +47,7 @@ Návratový typ funkce se zavádí velikost a typ hodnoty vrácené funkcí a od
 &nbsp;&nbsp;&nbsp;&nbsp;**Double**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**podepsané**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**bez znaménka**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct – nebo – sjednocení – specifikátor*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*enum – specifikátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Název TypeDef*
 
@@ -97,6 +97,6 @@ Tento příklad definuje funkci, která vrací ukazatel na pole znaků. Funkce p
 
 Není nutné deklarovat funkce s `int` návratový typ před voláním, i když prototypy doporučují tak, aby správný typ kontroly pro argumenty a návratové hodnoty je povolená.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Definice funkcí jazyka C](../c-language/c-function-definitions.md)

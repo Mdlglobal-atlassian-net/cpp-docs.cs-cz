@@ -2,12 +2,12 @@
 title: Ukončení znaků nového řádku
 ms.date: 11/04/2016
 ms.assetid: ab145180-a098-41b5-8db0-2520272964ba
-ms.openlocfilehash: 5eff71a0faa80b541245cc602549067722934031
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e600ad6a515965c6ce01280d555e7eab3134b8fd
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519766"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150802"
 ---
 # <a name="terminating-newline-characters"></a>Ukončení znaků nového řádku
 
@@ -15,6 +15,6 @@ ms.locfileid: "50519766"
 
 Funkce proudu rozpoznávají ukončovací znak nového řádku nebo ukončovací znak konce souboru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Funkce knihovny](../c-language/library-functions.md)

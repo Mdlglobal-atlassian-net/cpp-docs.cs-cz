@@ -9,12 +9,12 @@ helpviewer_keywords:
 - conversions [C++], arithmetic
 - arithmetic operators [C++], type conversions
 ms.assetid: bfa49803-0efd-45d0-b987-111412a140d7
-ms.openlocfilehash: a3a645009b9c848fc48f4dc49819ea474222b3fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 729e173c695db3b4970490e84bedfd441e6ff6d3
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540527"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150269"
 ---
 # <a name="usual-arithmetic-conversions"></a>Obvyklé aritmetické převody
 
@@ -58,6 +58,6 @@ dVal = ulVal + fVal; /* ulVal converted to float
                       */
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Operátory jazyka C](../c-language/c-operators.md)

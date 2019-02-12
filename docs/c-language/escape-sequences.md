@@ -22,7 +22,7 @@ helpviewer_keywords:
 - "newline character \n escape sequence"
 - nongraphic control characters
 - question mark, literal
-- "\nescape sequence"
+- "\n escape sequence"
 - "vertical tab \v escape sequence"
 - "\a escape sequence"
 - '? symbol'
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - "	 escape sequence"
 - backspace escape sequence
 ms.assetid: 5aef377f-a76c-4d5c-aa04-8308758ad6a8
-ms.openlocfilehash: 810d091b923bd976a4a8bbe6814e8ddc0b243bcd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9aeb8ca549cce8bddbf5d6ddadb6292c05f573d5
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431197"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151413"
 ---
 # <a name="escape-sequences"></a>Řídicí sekvence
 
@@ -64,7 +64,7 @@ Všimněte si, že otazníku předchází znak zpětného lomítka (**\\?**) ur�
 |**\x** *hh*|Znak ASCII v šestnáctkové soustavě|
 |**\x** *hhhh*|Znak Unicode v šestnáctkovém zápisu, pokud je tato řídicí sekvence použita v širokoznaké konstantě nebo literálu řetězce kódování Unicode.<br /><br /> Například `WCHAR f = L'\x4e00'` nebo `WCHAR b[] = L"The Chinese character for one is \x4e00"`.|
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Pokud zpětné lomítko předchází znaku, který není uveden v tabulce, kompilátor zpracovává nedefinovaný znak jako znak samotný. Například `\c` je považován za `c`.
 
@@ -79,6 +79,6 @@ Můžete také použít zpětné lomítko (**\\**) jako znak pro pokračování.
 ( (exp) ? (void) 0:_assert( #exp, __FILE__, __LINE__ ) )
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Konstanty znaků jazyka C](../c-language/c-character-constants.md)

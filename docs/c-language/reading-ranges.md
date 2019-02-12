@@ -2,12 +2,12 @@
 title: Čtení rozsahů
 ms.date: 11/04/2016
 ms.assetid: 99de29ce-ab14-46f4-97e1-2081fd996b53
-ms.openlocfilehash: b5c6a6baf43b8786fbd0301e4b89ea856d839606
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86bb24647084d8bdc452960bab631587c2413276
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604102"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150490"
 ---
 # <a name="reading-ranges"></a>Čtení rozsahů
 
@@ -21,6 +21,6 @@ fscanf( fileptr, "%[A-Z]", strptr);
 
 načte libovolný počet znaků v rozsahu A – Z do řetězce ke kterému `strptr` body.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Funkce knihovny](../c-language/library-functions.md)

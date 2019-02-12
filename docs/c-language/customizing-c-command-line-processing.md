@@ -12,12 +12,12 @@ helpviewer_keywords:
 - suppressing environment processing
 - _exec function
 ms.assetid: c20fa11d-b35b-4f3e-93b6-2cd5a1c3c993
-ms.openlocfilehash: 9f7bc78c20aee4b91bf00fefd2615ba1a6611010
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1abdb0c104755efc86543ac4773359078e855999
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623593"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147032"
 ---
 # <a name="customizing-c-command-line-processing"></a>Přizpůsobení zpracování příkazového řádku jazyka C
 
@@ -27,6 +27,6 @@ Podobně pokud nikdy přístup k tabulce prostředí skrze `envp` argument, mů�
 
 Pokud váš program provede volání **_spawn** nebo **_exec** řadu rutin v knihovny run-time jazyka C, by neměla potlačení rutiny zpracování prostředí, protože tato rutina slouží k předání prostředí z procesu trdliště novému procesu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [main – spuštění funkce a programu](../c-language/main-function-and-program-execution.md)

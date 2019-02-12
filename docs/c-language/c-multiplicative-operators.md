@@ -11,12 +11,12 @@ helpviewer_keywords:
 - slash (/) operator
 - multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
-ms.openlocfilehash: debda69d693286aef03363eafd450b5aa531e987
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fdf208ffba3e3d63d8672b84af8cf6168b34dc3f
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506922"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147748"
 ---
 # <a name="c-multiplicative-operators"></a>Multiplikativní operátory jazyka C
 
@@ -41,7 +41,7 @@ Multiplikativní operátory jazyka C jsou popsané níže:
 |**/**|Operátor dělení způsobí, že první operand k rozdělení po sekundách. Pokud jsou rozděleny dva celočíselné operandy a výsledek není typu integer, zkrátí se podle následujících pravidel:<br/><br/>-Není definováno podle standardu ANSI C výsledek dělení 0. Kompilátor Microsoft C generuje chybu v době kompilace nebo běhu.<br/><br/>-Pokud jsou oba operandy kladné nebo bez znaménka, výsledek je zkrácen na 0.<br/><br/>– Pokud některý operand je záporný, určuje, zda je největší celé číslo menší nebo rovna algebraických podíl výsledek operace, nebo je nejmenší celé číslo větší než nebo rovna hodnotě algebraických podíl je definován implementací. (Viz níže uvedené části specifické pro Microsoft.)|
 |**%**|Výsledek operátoru zbývající je zbytek po prvním operandem, je vyděleno hodnotou druhého. Při dělení je nepřesný, je výsledek určen následujícími pravidly:<br/><br/>– Pokud pravý operand je nula, výsledek není definován.<br/><br/>-Pokud jsou oba operandy kladné nebo bez znaménka, výsledek je kladný.<br/><br/>– Pokud některý operand je záporný a výsledkem je nepřesný, výsledek je definován implementací. (Viz níže uvedené části specifické pro Microsoft.)|
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 V oblasti, ve kterém některý operand je záporný je směr zkrácení směrem k 0.
 
@@ -78,7 +78,7 @@ n = i % j;
 
 Tento příkaz přiřadí `n` zbývající celé číslo, 1, 10, je vyděleno hodnotou 3.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Znaménko zbytek je stejný jako znaménko podíl. Příklad:
 
@@ -91,6 +91,6 @@ V obou případech `50` a `2` mají stejné znaménko.
 
 **Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Multiplikativní operátory a operátor numerického zbytku](../cpp/multiplicative-operators-and-the-modulus-operator.md)

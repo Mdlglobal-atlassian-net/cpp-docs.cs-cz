@@ -6,16 +6,16 @@ helpviewer_keywords:
 - dllimport attribute [C++], limitations and rules
 - dllexport attribute [C++]
 ms.assetid: 274b735f-ab9c-4b07-8d0e-fdb65d664634
-ms.openlocfilehash: 123ccf583fe5e07d9f2610ec621b48d8a8c39be8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc83a43fd09299710585fa104dbd4dc847036c68
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622025"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150555"
 ---
 # <a name="rules-and-limitations-for-dllimportdllexport"></a>Pravidla a omezení příkazů dllimport/dllexport
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 - Pokud deklarujete funkci bez **dllimport** nebo `dllexport` atribut, funkce není považováno za součást rozhraní DLL. Definice funkce proto musí být k dispozici v modulu nebo v jiném modulu stejného programu. Chcete-li funkce součástí rozhraní DLL, je třeba deklarovat definice funkce v modulu jako `dllexport`. V opačném případě je přiřazena chyba linkeru se vygeneruje, když je postavená klienta.
 
@@ -96,6 +96,6 @@ ms.locfileid: "50622025"
 
 **Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Import a export funkcí knihovny DLL](../c-language/dll-import-and-export-functions.md)

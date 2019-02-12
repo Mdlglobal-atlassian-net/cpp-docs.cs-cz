@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /* */ comment delimiters
 - comments
 ms.assetid: 0f5f2825-e673-49e7-8669-94e2f5294989
-ms.openlocfilehash: 4065ce6396b713decf4a246b54901d44fb21d2f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd2c08855bcc3ef3b4068f3841ce177d8162ff5b
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645016"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152726"
 ---
 # <a name="c-comments"></a>Komentáře v jazyce C
 
@@ -59,7 +59,7 @@ K této chybě dochází, protože kompilátor rozpozná první znak `*/` za slo
 
 Ačkoli lze komentáře použít k deaktivaci určitých řádků kódu za účelem testování, jsou užitečnou alternativou pro tento úkol direktivy preprocesoru `#if` a `#endif` a podmíněné kompilace. Další informace najdete v tématu [direktivy preprocesoru](../preprocessor/preprocessor-directives.md) v *odkazu preprocesoru*.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Kompilátor společnosti Microsoft podporuje také Jednořádkové komentáře, které předchází dvě lomítka (__//__). Je-li program kompilován s možností /Za (standard ANSI), vygenerují tyto komentáře chyby. Tyto komentáře nemohou přesahovat na druhý řádek.
 
@@ -80,6 +80,6 @@ Výchozí nastavení pro Microsoft C je, že jsou povolena rozšíření společ
 
 **Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Tokeny jazyka C](../c-language/c-tokens.md)

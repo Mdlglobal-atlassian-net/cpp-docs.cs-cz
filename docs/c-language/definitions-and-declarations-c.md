@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - export functions
 ms.assetid: d150395a-89d4-4298-9ac4-08f84fe1261c
-ms.openlocfilehash: 1ec42f17d22b24aac3d19a3b129babe723930ae7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8723c3f09a5e9a8eecf0e552c9f5a7fd9b7f6c68
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620230"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152362"
 ---
 # <a name="definitions-and-declarations-c"></a>Definice a deklarace (C)
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Rozhraní DLL odkazuje na všechny položky (funkce a data), které jsou známé být exportovány nějakým programem v systému. To znamená, že všechny položky, které jsou deklarovány jako **dllimport** nebo `dllexport`. Všechny deklarace, které jsou součástí rozhraní DLL musí určovat buď **dllimport** nebo `dllexport` atribut. Však můžete pouze zadat definici `dllexport` atribut. Následující definice funkce například vygeneruje chybu kompilátoru:
 
@@ -58,6 +58,6 @@ Dllimport int j;          /* a declaration. */
 
 **Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Import a export funkcí knihovny DLL](../c-language/dll-import-and-export-functions.md)

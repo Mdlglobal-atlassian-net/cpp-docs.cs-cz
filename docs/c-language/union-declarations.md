@@ -6,12 +6,12 @@ helpviewer_keywords:
 - union keyword [C], declarations
 - variant records
 ms.assetid: 978c6165-e0ae-4196-afa7-6d94e24f62f7
-ms.openlocfilehash: af51f184c199cc7f93f25f95fd4ef5c613e5f017
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dbc85a467161457641dd86acf5f3720bf4e14247
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524774"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149255"
 ---
 # <a name="union-declarations"></a>Deklarace sjednocení
 
@@ -19,11 +19,11 @@ ms.locfileid: "50524774"
 
 ## <a name="syntax"></a>Syntaxe
 
-*struct – nebo – sjednocení specifikátor*:<br/>
+*struct-or-union-specifier*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Struktura nebo sjednocení* *identifikátor*<sub>optimalizované</sub> **{** *struct-declaration-list* **}**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Struktura nebo sjednocení* *identifikátor*
 
-*Struktura nebo sjednocení*:<br/>
+*struct-or-union*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**– Struktura**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**sjednocení**
 
@@ -40,8 +40,8 @@ Sjednocení obsah je definován jako
 &nbsp;&nbsp;&nbsp;&nbsp;*Specifikátor typu* *specifikátor seznam kvalifikátorů-*<sub>optimalizované</sub> <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Kvalifikátor typu* *specifikátor seznam kvalifikátorů-*<sub>optimalizované</sub>
 
-*Struktura declarator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarátor – struktura*<br/>
+*struct-declarator-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Struktura declarator-list***,***deklarátor – struktura*
 
 Proměnná s **sjednocení** typ ukládá jedna z hodnot fronty definovaných podle tohoto typu. Deklarace struktury a sjednocení se řídí stejnými pravidly. Sjednocení může mít také bitová pole.
@@ -81,7 +81,7 @@ union               /* Defines a two-dimensional */
 
 `screen` Pole obsahuje 2 000 prvků. Každý prvek pole se jednotlivé sjednocení se dvěma členy: `window1` a `screenval`. `window1` Členů je struktura se dvěma členy bitových polí `icon` a `color`. `screenval` Člen je `int`. V daném okamžiku každý sjednocení prvek udržuje `int` reprezentována `screenval` nebo struktura reprezentována `window1`.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Vnořené sjednocení mohou být deklarovány anonymně, když jsou členy jiné struktury nebo sjednocení. Toto je příklad nameless sjednocení:
 
@@ -121,6 +121,6 @@ Zobrazit [členy struktury a sjednocení](../c-language/structure-and-union-memb
 
 **Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Deklarátor a deklarace proměnné](../c-language/declarators-and-variable-declarations.md)

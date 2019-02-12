@@ -16,12 +16,12 @@ helpviewer_keywords:
 - visibility, variables
 - static storage class specifiers
 ms.assetid: b76b623a-80ec-4d5d-859b-6cef422657ee
-ms.openlocfilehash: 35b8b3082841c14f1cb82778978a84c89a17618d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 941994f668fa035b569f9ccae2c301ebf42bcda6
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587873"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152076"
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>Specifikátory třídy úložiště pro deklarace na externí úrovni
 
@@ -125,6 +125,6 @@ Všechny tři funkce, `main`, `next` a `other`, provádějí stejný úkol: zvy�
 
 Nebyla-li proměnná `i` inicializována, měla by být automaticky nastavena na hodnotu 0. V tomto případě by byly vypsány hodnoty 1, 2 a 3. Zobrazit [inicializace](../c-language/initialization.md) informace o inicializaci proměnné.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy úložiště jazyka C](../c-language/c-storage-classes.md)

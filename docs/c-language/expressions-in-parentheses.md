@@ -7,12 +7,12 @@ helpviewer_keywords:
 - expressions [C++], evaluating
 - parentheses, expressions
 ms.assetid: b8636147-6982-408c-9e64-29e40678ee43
-ms.openlocfilehash: 0b58ed2483b404df957b8e9e95e41442403036c9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0105556530161991b46c5ee25cd73f2f995063f
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505544"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149346"
 ---
 # <a name="expressions-in-parentheses"></a>Výrazy v závorkách
 
@@ -39,6 +39,6 @@ Kompilátoru je umožněno vyhodnocení obou stran násobení v libovolném poř
 
 Výjimky vyplývající z vedlejších účinků jsou popsány v [vedlejší účinky](../c-language/side-effects.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Primární výrazy jazyka C](../c-language/c-primary-expressions.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - simple types, names
 - type names [C++], simple
 ms.assetid: 0d4b515a-4f68-4786-83cf-a5d43c7cb6f3
-ms.openlocfilehash: 778390702cf970fc7c7246402ff0c1396e055770
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4003d9427c160b0e1c725cdc591190bd9777b3de
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520702"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151667"
 ---
 # <a name="data-type-specifiers-and-equivalents"></a>Specifikátory a ekvivalenty datového typu
 
@@ -42,12 +42,12 @@ Tato kniha obecně namísto dlouhých tvarů používá tvary specifikátorů ty
 
 2 v 32bitových a 64bitových operačních systémech kompilátor Microsoft C mapuje **long double** na typ **double**.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Můžete zadat možnost kompilátoru /J lze změnit výchozí **char** z typu se znaménkem na typ bez znaménka. Pokud tato možnost je ve skutečnosti **char** stejný význam jako **unsigned char**, a je nutné použít **podepsané** – klíčové slovo pro deklaraci hodnoty znaku se znaménkem. Pokud **char** hodnotu explicitně deklarována se znaménkem, možnost /J ji neovlivní a hodnota je rozšířen o znaménko při rozšíření na **int** typu. **Char** rozšířené při rozšíření na nula je typ **int** typu.
 
 **Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Specifikátory typu jazyka C](../c-language/c-type-specifiers.md)

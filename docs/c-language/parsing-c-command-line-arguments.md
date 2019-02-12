@@ -8,16 +8,16 @@ helpviewer_keywords:
 - parsing, command-line arguments
 - startup code, parsing command-line arguments
 ms.assetid: ffce8037-2811-45c4-8db4-1ed787859c80
-ms.openlocfilehash: 8161d724dbd21297bb3beef2cf9406ddd2484ff1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da8a21ac9ff7ce4fd6bde4d2d1e50d8f30806b78
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522431"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151205"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analýza argumentů příkazového řádku jazyka C
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Spouštěcí kód Microsoft C používá při interpretaci argumentů z příkazového řádku operačního systému následující pravidla:
 
@@ -35,7 +35,7 @@ Spouštěcí kód Microsoft C používá při interpretaci argumentů z příkaz
 
 Tento seznam ukazuje výše uvedená pravidla zobrazením interpretovaného výsledku předaného do `argv` pro několik příkladů argumentů příkazového řádku. Výstup uvedený v druhém, třetím a čtvrtém sloupci je z aplikace ARGS.C, která následuje seznam.
 
-|Vstup příkazového řádku|argv [1]|argv [2]|argv [3]|
+|Vstup příkazového řádku|argv[1]|argv[2]|argv[3]|
 |-------------------------|---------------|---------------|---------------|
 |`"a b c" d e`|`a b c`|`d`|`e`|
 |`"ab\"c" "\\" d`|`ab"c`|`\`|`d`|
@@ -97,6 +97,6 @@ Environment variables:
 
 **Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [main – spuštění funkce a programu](../c-language/main-function-and-program-execution.md)

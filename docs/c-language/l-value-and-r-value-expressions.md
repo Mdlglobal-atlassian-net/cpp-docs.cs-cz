@@ -7,12 +7,12 @@ helpviewer_keywords:
 - R-value expressions
 - subscript expressions
 ms.assetid: b790303e-ec6f-4d0d-bc55-df42da267172
-ms.openlocfilehash: 5fe3297467705a9a54cf0ebc87e99801bf3a0fc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd5f702588a11b7841f77de539d113206833cde9
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549094"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150217"
 ---
 # <a name="l-value-and-r-value-expressions"></a>Výrazy hodnot L-Value a R-Value
 
@@ -38,7 +38,7 @@ Jakýkoli z těchto výrazů jazyka C může být výrazem l-hodnoty:
 
 Pojem „r-hodnota“ se někdy používá k popisu hodnoty výrazu a pro jeho odlišení od l-hodnoty. Všechny l-hodnoty jsou r-hodnotami, ale ne všechny r-hodnoty jsou l-hodnotami.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Jazyk Microsoft C zahrnuje rozšíření standardu ANSI C, které umožňuje přetypovat l-hodnoty pro použití jako l-hodnoty, pokud není velikost objektu zvětšena pomocí přetypování. (Viz [převody přetypování](../c-language/type-cast-conversions.md) Další informace.) Tuto funkci znázorňuje následující příklad:
 
@@ -55,6 +55,6 @@ Výchozí nastavení pro Microsoft C je, že jsou povolena rozšíření společ
 
 **Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Operandy a výrazy](../c-language/operands-and-expressions.md)

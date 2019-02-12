@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof operator
 ms.assetid: 70826d03-3451-41e4-bebb-a820ae66d53f
-ms.openlocfilehash: 0b5d25e0316c710ce758479ad9417c92201d929d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0bc0de5481cade10f89634d9e4ec78f4ec7b09f6
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577629"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149554"
 ---
 # <a name="sizeof-operator-c"></a>sizeof – operátor (C)
 
@@ -51,7 +51,7 @@ const int string_no = ( sizeof strings ) / ( sizeof strings[0] );
 
 V tomto příkladu je proměnná `strings` pole ukazatelů na typ `char`. Počet ukazatelů je počet prvků v poli, ale není zadán. Chcete-li vypočítat počet prvků v tomto poli, lze počet ukazatelů snadno určit pomocí operátoru `sizeof`. **Const** celočíselnou hodnotu `string_no` je inicializován na toto číslo. Protože se jedná **const** hodnotu, `string_no` nelze upravit.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Operátory jazyka C](c-operators.md)<br/>
 [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

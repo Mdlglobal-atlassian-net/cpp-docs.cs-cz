@@ -2,12 +2,12 @@
 title: Posuny doprava
 ms.date: 11/04/2016
 ms.assetid: c878e97d-ea3c-4c6b-90a8-b1b24b2d5b19
-ms.openlocfilehash: f39c1f2f49f5a8a1f3bb5eb3f21736eedf32077e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c34373f69a41ad65031753cd352098dce7e98ef4
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518206"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149476"
 ---
 # <a name="right-shifts"></a>Posuny doprava
 
@@ -19,6 +19,6 @@ Posuny doprava zachovává bit znaménka celočíselných typů se znaménkem. P
 
 Posune-li se celé číslo bez znaménka doprava, je nejvýznamnější bit vymazán. Například je-li 0xF000 bez znaménka, výsledek je 0x7800. Posun `unsigned` nebo kladné `int` doprava 32krát vytvoří 0x00000000.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Celá čísla](../c-language/integers.md)

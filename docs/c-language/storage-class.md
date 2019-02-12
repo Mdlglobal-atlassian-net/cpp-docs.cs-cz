@@ -10,12 +10,12 @@ helpviewer_keywords:
 - external linkage, storage-class specifiers
 - static storage class specifiers
 ms.assetid: 39a79ba6-edf5-42b6-8e45-f94227603dd6
-ms.openlocfilehash: 98e685556fe5dc874f2af818d8c86d0dcadefe29
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d5664634687c689316427c8652865ba9423e24f4
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575666"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147812"
 ---
 # <a name="storage-class"></a>Třída úložiště
 
@@ -45,7 +45,7 @@ Deklarace funkcí v oboru bloku se specifikátorem třídy úložiště jiným n
 
 Funkce s **statické** třídu úložiště je viditelná pouze ve zdrojovém souboru, ve kterém je definována. Všechny ostatní funkce s třídou úložiště `extern` zadanou explicitně či implicitně jsou viditelné ve všech zdrojových souborech programu. Pokud **statické** třídy úložiště se požaduje, musí být deklarován v prvním výskytu deklarace funkce (pokud existuje) a v její definici funkce.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Pokud jsou povolena rozšíření společnosti Microsoft, funkce původně deklarovaná bez třídy úložiště (nebo s `extern` třídy úložiště) dostane **statické** třída úložiště, pokud definice funkce umístěna ve stejném zdrojovém souboru a pokud definice explicitně určuje **statické** třídu úložiště.
 
@@ -53,6 +53,6 @@ Je-li program kompilován s možností kompilátoru /Ze, funkce deklarované uvn
 
 **Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Definice funkcí jazyka C](../c-language/c-function-definitions.md)

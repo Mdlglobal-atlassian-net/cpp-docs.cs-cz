@@ -9,18 +9,18 @@ helpviewer_keywords:
 - external linkage, function declarations
 - external linkage, storage-class specifiers
 ms.assetid: 801d7df2-efa9-4924-a725-274a5654cfd4
-ms.openlocfilehash: d38bb9350a59127dd6c224cef29b6197244a57c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69d6fa2b17523f2bb4068cd05a11265d91750021
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447057"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152258"
 ---
 # <a name="storage-class-specifiers-with-function-declarations"></a>Specifikátory třídy úložiště s deklaracemi funkce
 
 Můžete použít buď **statické** nebo `extern` specifikátor třídy úložiště v deklaracích funkcí. Funkce mají vždy globální životnost.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Deklarace funkce na vnitřní úrovni mají stejný význam jako deklarace funkce na vnější úrovni. To znamená, že funkce je viditelná z místa deklarace ve zbytku jednotky překladu i v případě, že je deklarována v místním oboru.
 
@@ -34,12 +34,12 @@ Pravidla viditelnosti pro funkce se mírně liší od pravidel pro proměnné, a
 
 - Deklarace funkce, které vynechávají specifikátor třídy úložiště, jsou ve výchozím nastavení deklarovány jako `extern`.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 Společnost Microsoft umožňuje předefinování `extern` identifikátor jako **statické**.
 
 **Specifické pro END Microsoft**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Třídy úložiště jazyka C](../c-language/c-storage-classes.md)
