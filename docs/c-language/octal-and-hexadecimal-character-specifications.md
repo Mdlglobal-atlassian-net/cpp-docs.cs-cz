@@ -5,12 +5,12 @@ helpviewer_keywords:
 - octal characters
 - hexadecimal characters
 ms.assetid: 9264f3ec-46b8-41a5-b21a-8f7ed0a11871
-ms.openlocfilehash: 3fccc6513f3507e4b1763336ac5ecbb78b31d847
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df4d0666a220961f64238bf95dca9e0a08d4dae6
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518622"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148930"
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>Specifikace osmičkových a šestnáctkových znaků
 
@@ -24,7 +24,7 @@ Podobně je třeba použít alespoň jednu číslici šestnáctkové řídicí s
 
 Hodnoty šestnáctkové nebo osmičkové řídicí sekvence musí být v rozsahu hodnot reprezentovatelných typem **unsigned char** pro znakovou konstantu a typem `wchar_t` pro konstantu širokého znaku. Zobrazit [vícebajtové a široké znaky](../c-language/multibyte-and-wide-characters.md) o konstanty širokého znaku.
 
-Na rozdíl od osmičkové řídicí konstanty není počet šestnáctkových číslic v řídicí sekvenci nijak omezen. Šestnáctková řídicí sekvence se ukončí na prvním znaku, který není šestnáctkovou číslicí. Protože šestnáctkové číslice používají písmena a **až f**, je nutné se ujistit, že řídicí sekvence končí zamýšlenou číslicí. Aby nedocházelo k záměně, lze znak šestnáctkové nebo osmičkové definice umístit do definice makra:
+Na rozdíl od osmičkové řídicí konstanty není počet šestnáctkových číslic v řídicí sekvenci nijak omezen. Šestnáctková řídicí sekvence se ukončí na prvním znaku, který není šestnáctkovou číslicí. Protože šestnáctkové číslice používají písmena **a** až **f**, je nutné se ujistit, že řídicí sekvence končí zamýšlenou číslicí. Aby nedocházelo k záměně, lze znak šestnáctkové nebo osmičkové definice umístit do definice makra:
 
 ```
 #define Bell '\x07'
@@ -37,6 +37,6 @@ U šestnáctkových hodnot je možné řetězec přerušit pro zřetelné zobraz
 "\xab" "c" /* two characters */
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Konstanty znaků jazyka C](../c-language/c-character-constants.md)
