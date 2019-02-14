@@ -36,13 +36,19 @@ helpviewer_keywords:
 - variables, dialog box control member variables
 - controls [C++], member variables
 - Dialog Editor [C++], defining member variables for controls
+- controls [C++], troubleshooting
+- Dialog Editor [C++], troubleshooting
+- dialog boxes [C++], troubleshooting
+- InitCommonControls
+- RichEdit 1.0 control
+- rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: b4edb5b7a51e4f6d368759ebc2e05a1cc585f19a
-ms.sourcegitcommit: 52c05e10b503e834c443ef11e7ca1987e332f876
+ms.openlocfilehash: 648ac3329409ba221881f75eaa51e1779091b0f0
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55742749"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264865"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>Přidání, úprava nebo odstranění ovládacích prvků
 
@@ -51,44 +57,6 @@ Použití **dialogové okno** editoru, můžete přidat, změnit velikost, uprav
 **Editoru dialogového okna** kartě se zobrazí v [okno nástrojů](/visualstudio/ide/reference/toolbox) když pracujete v **dialogové okno** editoru. Můžete také upravit **nástrojů** okno pro snadnější použití. Další informace najdete v tématu [používání sady nástrojů](/visualstudio/ide/using-the-toolbox) a [zobrazit nebo skrýt okno nástrojů](showing-or-hiding-the-dialog-editor-toolbar.md).
 
 Můžete použít nabídku **dialogové okno** editor rychle přidáte zaregistrované ovládacích prvků ActiveX do dialogového okna a můžete přidat ovládací prvky ActiveX **nástrojů** pro rychlý přístup.
-
-K dispozici ve standardní ovládací prvky **nástrojů** s výchozí události jsou:
-
-|Název ovládacího prvku|Výchozí událost|
-|---|---|
-|[Ovládací prvek tlačítko](../mfc/reference/cbutton-class.md)|BN_CLICKED|
-|[Ovládací prvek zaškrtávací políčko](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[Ovládací prvek pole se seznamem](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
-|[Ovládací prvek textové pole](../mfc/reference/cedit-class.md)|EN_CHANGE|
-|Skupinový rámeček|(Není k dispozici)|
-|[Ovládací prvek seznam](../mfc/reference/clistbox-class.md)|LBN_SELCHANGE|
-|[Ovládací prvek přepínač](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[Statický ovládací prvek textu](../mfc/reference/cstatic-class.md)|(Není k dispozici)|
-|[Ovládací prvek obrázek](../mfc/reference/cpictureholder-class.md)|(Není k dispozici)|
-|[Ovládací prvek RTF upravit 2.0](../mfc/using-cricheditctrl.md)|EN_CHANGE|
-|[Ovládací prvek posuvníku.](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
-
-Další informace o používání **RichEdit 1.0** ovládacím prvkem MFC naleznete v tématu [pomocí ovládacího prvku RichEdit 1.0 s MFC](../windows/using-the-richedit-1-0-control-with-mfc.md) a [příklady pro ovládací prvek upravit bohaté](../mfc/rich-edit-control-examples.md).
-
-[Běžných ovládacích prvků Windows](../mfc/controls-mfc.md) k dispozici v **nástrojů** poskytovat vylepšené možnosti v aplikaci. Mezi ně patří:
-
-|Název ovládacího prvku|Výchozí událost|
-|---|---|
-|[Ovládací prvek posuvníku](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
-|[Ovládací prvek typu číselník](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
-|[Ovládací prvek průběh](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
-|[Ovládací prvek výměně klíče](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
-|[Ovládací prvek seznamu](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
-|[Ovládací prvek stromu](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
-|[Ovládací prvek karty](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
-|[Animace ovládacího prvku](../mfc/using-an-animation-control.md)|ACN_START|
-|[Ovládací prvek pro výběr času data](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
-|[Ovládací prvek měsíční kalendář](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
-|[Ovládací prvek adresy IP](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
-|[Ovládacího prvku rozšířené pole se seznamem](../mfc/creating-an-extended-combo-box-control.md)||
-|[Vlastní ovládací prvek](custom-controls-in-the-dialog-editor.md)|TTN_GETDISPINFO|
-
-Další informace najdete v tématu [třídy ovládacích prvků](../mfc/control-classes.md), [třídy dialogových oken](../mfc/dialog-box-classes.md), a [styly posuvníku](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles).
 
 Informace o přidávání prostředků do spravovaných projektů naleznete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
 
@@ -239,14 +207,53 @@ Na **upravit** nabídce vyberte možnost **odstranit**.
    > [!TIP]
    > Při použití **dialogové okno** editoru v mnoha případech můžete kliknutím na tlačítko pravým tlačítkem myši zobrazit místní nabídku s často používanými příkazy.
 
+## <a name="known-issue"></a>Známý problém
+
+Po přidání běžného ovládacího prvku nebo ovládací prvek RTF do dialogového okna, nebude se zobrazovat při testování dialogových oken nebo dialogového okna, samotné se nezobrazí.
+
+Chcete-li zobrazit příklad problému:
+
+1. Vytvořte projekt Win32, změna nastavení aplikace, proto vytvořit aplikace Windows (ne konzolovou aplikaci).
+
+1. V [zobrazení prostředků](../windows/resource-view-window.md), dvakrát klikněte na soubor .rc.
+
+1. V části Možnosti dialogového okna, dvakrát klikněte **o** pole.
+
+1. Přidat **ovládací prvek adresy IP** do dialogového okna.
+
+1. Uložit a **sestavit vše znovu**.
+
+1. Spuštění programu.
+
+1. V dialogových oken **pomáhají** nabídky, klikněte na tlačítko **o** příkaz; žádné dialogové okno zobrazí okno.
+
+V současné době **dialogové okno** editor nepřidává automaticky kódu do projektu při přetažení následující běžné ovládací prvky nebo ovládací prvky na dialogové okno pro úpravy s formátováním. Ani sada Visual Studio poskytuje chybu nebo upozornění při výskytu tohoto problému. Pokud chcete vyřešit, přidejte kód pro ovládací prvek ručně.
+
+||||
+|-|-|-|
+|Ovládací prvek posuvníku|Ovládací prvek stromu|Výběr data a času|
+|Ovládací prvek typu číselník|Ovládací prvek karty|Měsíční kalendář|
+|Ovládací prvek průběh|Animace ovládacího prvku|Ovládací prvek adresy IP|
+|Klávesová zkratka|Ovládací prvek pro úpravy s formátováním|Rozšířené pole se seznamem|
+|Ovládací prvek seznamu|Ovládací prvek pro úpravy s formátováním 2.0|Vlastní ovládací prvek|
+
+Použití běžných ovládacích prvků v dialogovém okně, je třeba volat [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) nebo `AFXInitCommonControls` předtím, než vytvoříte dialogové okno.
+
+Chcete-li používat řízení RichEdit, musíte volat `LoadLibrary`. Další informace najdete v tématu [o bohaté upravit ovládací prvky](/windows/desktop/Controls/about-rich-edit-controls) v sadě Windows SDK a [– Přehled ovládacího prvku Rich upravit](../mfc/overview-of-the-rich-edit-control.md).
+
+> [!NOTE]
+> Použití ovládacího prvku RichEdit s knihovnou MFC, musíte nejprve volat [afxinitrichedit2 –](../mfc/reference/application-information-and-management.md#afxinitrichedit2) načíst ovládacího prvku RichEdit 2.0 (RICHED20. Knihovny DLL), nebo se telefonicky [afxinitrichedit –](../mfc/reference/application-information-and-management.md#afxinitrichedit) načíst starší ovládacího prvku RichEdit 1.0 (RICHED32. KNIHOVNY DLL).
+>
+> Můžete použít aktuální [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) třída s atributem starší ovládacího prvku RichEdit 1.0, ale `CRichEditCtrl` je určen pouze pro podporu ovládacího prvku RichEdit 2.0. Protože jsou podobné RichEdit 1.0 a RichEdit 2.0, většina metod bude fungovat. Mějte však na paměti, že existují určité rozdíly mezi 1.0 nebo 2.0 ovládací prvky, takže mohou některé metody nebudou správně fungovat nebo nepracuje vůbec.
+
 ## <a name="requirements"></a>Požadavky
 
 Win32
 
 ## <a name="see-also"></a>Viz také:
 
+[Editor dialogových oken](../windows/dialog-editor.md)<br/>
 [Ovládací prvky v dialogových oknech](controls-in-dialog-boxes.md)<br/>
-[Ovládací prvky dialogových oken a typy proměnných](../ide/dialog-box-controls-and-variable-types.md)<br/>
 [Soubory prostředků](../windows/resource-files-visual-studio.md)<br/>
 
 <!-- excluded links

@@ -8,15 +8,37 @@ helpviewer_keywords:
 - Dialog Editor [C++], creating dialog boxes
 - modal dialog boxes [C++], logon screens
 - logon screens
+- Test Dialog command
+- testing, dialog boxes
+- dialog boxes [C++], testing
+- dialog boxes [C++], size
+- dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: 928432000fb9a6347433b78b224e15f07ce810d2
-ms.sourcegitcommit: 52c05e10b503e834c443ef11e7ca1987e332f876
+ms.openlocfilehash: a3b8143d3a70906f910a445816a188913a593e5d
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55742645"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264813"
 ---
 # <a name="creating-a-dialog-box-c"></a>Vytvoření dialogového okna (C++)
+
+Umístění a velikosti dialogového okna C++ a umístění a velikost ovládacích prvků na ní, se měří v jednotkách dialogového okna. Hodnoty jednotlivých ovládacích prvků a dialogové okno se zobrazí v pravém dolním rohu sady Visual Studio se na stavovém řádku při výběru.
+
+Při návrhu dialogového okna, můžete také simulovat a testovat jeho chování za běhu bez kompilace programu. V tomto režimu můžete:
+
+- Zadejte text, vyberte ze seznamu pole se seznamem, zapnout nebo vypnout možnosti a volit příkazy.
+
+- Otestujte pořadí ovládacích prvků.
+
+- Otestujte seskupení ovládacích prvků, jako jsou přepínače a zaškrtávací políčka.
+
+- Otestujte klávesové zkratky pro ovládací prvky v dialogovém okně.
+
+   > [!NOTE]
+   > Připojení ke kódu dialogového okna pomocí průvodců nejsou zahrnuta v simulaci.
+
+Při testování dialogového okna se obvykle zobrazuje v umístění, které jsou relativní vůči hlavnímu oknu programu. Pokud jste nastavili v dialogovém okně **absolutní zarovnání** vlastnost **True**, zobrazí se dialogové okno v pozici, která je relativní vzhledem k levého horního rohu obrazovky.
 
 Informace o přidávání prostředků do spravovaných projektů naleznete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
 
@@ -52,14 +74,23 @@ Pokud chcete povolit testování tohoto druhu dialogového okna, test dialog box
 > [!NOTE]
 > Pro aplikace knihovny MFC, chcete-li vytvořit dialogové okno, které uživatelé nebudou moct zavřít, je nutné přepsat výchozí chování `OnOK` a `OnCancel` vzhledem k tomu, že i v případě, že odstraníte přidružené tlačítka, dialogové okno může stále vynechat stisknutím klávesy  **Zadejte** nebo **Esc**.
 
-Informace o tom, jak přidat prostředky do spravovaných projektů naleznete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index).
+## <a name="to-specify-the-location-and-size-of-a-dialog-box"></a>K určení umístění a velikosti dialogového okna
+
+Existují tři vlastnosti, které můžete nastavit [okno vlastností](/visualstudio/ide/reference/properties-window) k určení, kde se zobrazí dialogové okno na obrazovce. **Center** vlastnost je logická hodnota, pokud hodnotu nastavíte na **True**, dialogové okno se vždy zobrazí ve středu obrazovky. Pokud ji nastavíte na **False**, pak můžete nastavit **Pozice_x** a **Pozice_y** explicitně definované tam, kde na obrazovce se zobrazí dialogové okno Vlastnosti. Jsou vlastnosti pozici posunutí hodnoty v levém horním rohu oblasti zobrazení, která je definována jako `{X=0, Y=0}`. Pozice je taky založený na **absolutní zarovnání** vlastnost: Pokud **True**, souřadnice jsou relativní vzhledem k obrazovce; Pokud **False**, souřadnice jsou relativní vzhledem k dialogového okna okno vlastníka.
+
+## <a name="to-test-a-dialog-box"></a>Testování dialogového okna
+
+1. Když **dialogové okno** editor není aktivní okno na řádku nabídek, zvolte **formátu** > **testovací dialogové okno**.
+
+1. Chcete-li simulaci ukončit, stiskněte **Esc**, nebo prostě vybrat **Zavřít** tlačítko v dialogovém okně, kterou testujete.
 
 ## <a name="requirements"></a>Požadavky
 
 Win32
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Postupy: Vytvoření prostředku](../windows/how-to-create-a-resource.md)<br/>
 [Soubory prostředků](../windows/resource-files-visual-studio.md)<br/>
-[Editor dialogových oken](../windows/dialog-editor.md)
+[Editor dialogových oken](../windows/dialog-editor.md)<br/>
+[Ovládací prvky v dialogových oknech](../windows/controls-in-dialog-boxes.md)<br/>

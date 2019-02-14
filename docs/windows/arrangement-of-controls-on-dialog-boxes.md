@@ -3,6 +3,7 @@ title: Uspořádání ovládacích prvků v dialogových oknech (C++) | Dokument
 ms.date: 11/04/2016
 f1_keywords:
 - vc.editors.dialog.grouping
+- vc.editors.dialog.combo
 helpviewer_keywords:
 - controls [C++], positioning
 - dialog box controls [C++], placement
@@ -57,13 +58,34 @@ helpviewer_keywords:
 - Tabstop property for controls
 - controls [C++], focus
 - dialog box controls [C++], tab order
+- Dialog Editor [C++], selecting controls
+- dominant controls
+- dialog box controls [C++], selecting in editor
+- controls [C++], selecting
+- size, controls
+- controls [C++], dominant
+- controls [C++], removing from groups
+- Dialog Editor [C++], dominant control
+- Size to Content command
+- size, controls
+- text, autosizing controls to fit text
+- controls [C++], sizing
+- Make Same Size command
+- combo boxes, sizing
+- list controls [C++], scroll bar width
+- CListBox::SetHorizontalExtent
+- controls [C++], scroll bar
+- scroll bars [C++], displaying in controls
+- horizontal scroll bar width
+- CListBox class, scroll bar width
+- scroll bars [C++], width
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
-ms.openlocfilehash: 210fbf8e062b4dd8c469f9c40a015bbc19bc2843
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 99667898428fe9532d59277bfedafd24927304dc
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152739"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264878"
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes-c"></a>Uspořádání ovládacích prvků v dialogových oknech (C++)
 
@@ -116,7 +138,7 @@ Při vytváření dialogového okna, jsou k dispozici čtyři okraje. Okraje jso
 
 Značky v pravítka, která určují mezery v průvodci a ovládací prvky jsou definovány jednotky dialogu (dlu). DLU vychází z velikosti pole písmo dialogového okna, obvykle 8 bodu MS Shell Dlg. Vodorovné DLU je průměrná délka pole písmo dialogového okna dělený čtyři. Svislé DLU je průměrná výška písmo dělený osmidílné série.
 
-#### <a name="to-size-a-group-of-controls-with-guides"></a>Chcete-li velikost skupiny ovládacích prvků podle vodítka
+Chcete-li velikost skupiny ovládacích prvků podle vodítka:
 
 1. Přichytit k vodítko straně ovládacího prvku (nebo ovládací prvky).
 
@@ -126,7 +148,7 @@ Značky v pravítka, která určují mezery v průvodci a ovládací prvky jsou 
 
 1. Přesuňte buď Průvodce pro nastavení velikosti ovládacího prvku (nebo ovládací prvky).
 
-#### <a name="to-change-the-intervals-of-the-tick-marks"></a>Chcete-li změnit intervalech osové značky
+Chcete-li změnit intervalech osové značky:
 
 1. Z **formátu** nabídce zvolte **nastavení vodítek**.
 
@@ -136,32 +158,23 @@ Značky v pravítka, která určují mezery v průvodci a ovládací prvky jsou 
 
 Speciální klávesy ve spojení s myši můžete zakázat přichycení efekt vodítka. Použití **Alt** klíč zakáže přichycení efekty v průvodci vybrali. Přesunutí průvodce s **Shift** klíč zabraňuje přesunutí s příručkou Přichycený ovládací prvek.
 
-#### <a name="to-disable-the-snapping-effect-of-the-guides"></a>Chcete-li zakázat přichycení efekt vodítka
+- Zakázat přichycení efekt vodítka, přetáhněte ovládací prvek při podržení **Alt** klíč.
 
-Přetáhněte ovládací prvek při podržení **Alt** klíč.
+- Pokud chcete přesunout vodítka bez přesouvání Přichycený ovládací prvky, přetáhněte v Průvodci při podržení **Shift** klíč.
 
-#### <a name="to-move-guides-without-moving-the-snapped-controls"></a>Chcete-li přesunout vodítka bez přesouvání Přichycený ovládací prvky
-
-Přetáhněte vodítko při podržení **Shift** klíč.
-
-#### <a name="to-turn-off-the-guides"></a>Chcete-li vypnout vodítka
-
-1. Z **formátu** nabídce zvolte **nastavení vodítek**.
-
-1. V **nastavení vodítek** dialogovém okně **vodítka rozložení**vyberte **žádný**.
+- Chcete-li vypnout vodítka, z **formátu** nabídce zvolte **nastavení vodítek**. Pak v **nastavení vodítek** dialogovém okně **vodítka rozložení**vyberte **žádný**.
 
    > [!NOTE]
    > Můžete také dvakrát kliknout na panelu pravítko pro přístup k **nastavení vodítek** dialogové okno.
 
-\- nebo –
-
-Na **formátu** nabídce vyberte možnost **průvodce přepínací tlačítko**.
+> [!TIP]
+> Je zástupce vypnout vodítka na **formátu** nabídce vyberte možnost **průvodce přepínací tlačítko**.
 
 ### <a name="modify-the-layout-grid"></a>Změna mřížky rozložení
 
 Při uvádění nebo uspořádání ovládacích prvků v dialogovém okně, můžete pro přesnější umístění rozložení mřížky. Po zapnutí mřížky "se přichytil k" tečkované čáry mřížky jakoby zmagnetizovat zobrazí ovládací prvky. Můžete zapnout a vypnout tuto funkci "přichycení k mřížce" a změnit velikost buňky mřížky rozložení.
 
-#### <a name="to-turn-the-layout-grid-on-or-off"></a>K zapnutí nebo vypnutí mřížky rozložení
+Chcete-li mřížky rozložení zapnutí nebo vypnutí:
 
 1. Z **formátu** nabídce zvolte **nastavení vodítek**.
 
@@ -169,11 +182,120 @@ Při uvádění nebo uspořádání ovládacích prvků v dialogovém okně, mů
 
    Můžete řídit mřížky v jednotlivých **dialogové okno** oken editoru pomocí **Přepnout mřížku** tlačítko [nástrojů editoru dialogového okna](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
 
-#### <a name="to-change-the-size-of-the-layout-grid"></a>Chcete-li změnit velikost rozložení mřížky
+Chcete-li změnit velikost rozložení mřížky:
 
 1. Z **formátu** nabídce zvolte **nastavení vodítek**.
 
 1. V **nastavení vodítek** dialogového okna zadejte výšku a šířku v dlu buňky v mřížce. Minimální výšku nebo šířku je 4 dlu.
+
+## <a name="selecting-controls"></a>Výběr ovládacích prvků
+
+Vyberte ovládací prvky na velikost, zarovnání, přesunutí, kopírování, nebo je odstranit a dokončete operaci, kterou chcete. Ve většině případů je třeba vybrat více než jeden ovládací prvek při použití nástroje pro velikost a zarovnání na [nástrojů editoru dialogového okna](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+
+Při výběru ovládacího prvku, má šedé ohraničení kolem něj plný (aktivní) nebo prázdný (neaktivní) "úchyty," squares malý, který se zobrazí v ohraničení výběru. Když vyberete více ovládacích prvků, dominantního ovládacího prvku má solid úchyty a všechny ostatní vybrané ovládací prvky mají prázdný úchyty.
+
+Při nastavování velikosti nebo zarovnání více ovládacích prvků **dialogové okno** editor používá "dominantního ovládacího prvku" zjistit, jak se ostatní ovládací prvky velikosti nebo zarovnána. Ve výchozím nastavení dominantní ovládací prvek je první ovládací prvek.
+
+### <a name="to-select-multiple-controls"></a>Výběr více ovládacích prvků
+
+1. V [okno nástrojů](/visualstudio/ide/reference/toolbox), vyberte **ukazatel** nástroj.
+
+1. Svůj výběr použijte jednu z následujících kroků:
+
+   - Tažením nakreslete rámeček výběru okolo ovládací prvky, které chcete vybrat ve vašem dialogovém okně. Když uvolníte tlačítko myši, všechny řídí uvnitř a protínající se operátory jsou vybrané pole výběru.
+
+   - Podržte stisknutou klávesu **Shift** klíče a vyberte ovládací prvky, které chcete zahrnout do výběru.
+
+   - Podržte stisknutou klávesu **Ctrl** klíče a vyberte ovládací prvky, které chcete zahrnout do výběru.
+
+### <a name="to-remove-a-control-from-a-group-of-selected-controls-or-to-add-a-control-to-a-group-of-selected-controls"></a>Odebrat ovládací prvek ze skupiny z vybraných ovládacích prvků nebo přidání ovládacího prvku na skupinu vybraných ovládacích prvků
+
+Se skupinou vybraných ovládacích prvků, podržte stisknutou klávesu **Shift** klíče a vyberte ovládací prvek, který chcete odstranit nebo přidat do existujícího výběru.
+
+   > [!NOTE]
+   > Podržení **Ctrl** klíč a výběru ovládacího prvku Výběr způsobí, že, které řídí dominantního ovládacího prvku v tomto výběru.
+
+### <a name="to-specify-the-dominant-control"></a>K určení dominantního ovládacího prvku
+
+Podržte stisknutou klávesu **Ctrl** klíče a vyberte ovládací prvek, kterou chcete použít k ovlivnění velikosti či umístění jiných ovládacích prvků *první*.
+
+> [!NOTE]
+> Úchyty dominantního ovládacího prvku jsou pořádné popisovače podřízených ovládacích prvků, které jsou prázdné. Všechny další změny velikosti nebo zarovnání podle dominantního ovládacího prvku.
+
+### <a name="to-change-the-dominant-control"></a>Chcete-li změnit dominantního ovládacího prvku
+
+1. Zrušte aktuální výběr kliknutím mimo všechny aktuálně vybrané ovládací prvky.
+
+1. Opakujte předchozí postup nejprve výběr jiného ovládacího prvku.
+
+## <a name="sizing-controls"></a>Změna velikosti ovládacích prvků
+
+Použijte úchyty pro změnu velikosti ovládacího prvku. Pokud je ukazatel myši umístěn na úchyt pro změnu velikosti, změní tvar, který má označení směry, ve kterých můžete změnit velikost ovládacího prvku. Aktivní úchyty jsou pořádné; Pokud je dutý úchyt pro změnu velikosti, ovládací prvek nelze změnit velikost podél osy.
+
+Můžete také změnit velikost ovládacího prvku pomocí přichycení vodítka a okraje ovládacího prvku, nebo přesunutím jeden přichycené zobrazení ovládacího prvku a Průvodce mimo jiné.
+
+### <a name="to-size-an-individual-control"></a>Pro nastavení velikosti jednotlivé ovládací prvky
+
+1. Vyberte ovládací prvek.
+
+1. Přetažením úchytů změňte velikost ovládacího prvku:
+
+   - Úchyty pro změnu velikosti na začátku a konce změnit velikost vodorovně nebo svisle.
+
+   - Úchyty pro změnu velikosti v rozích změnit šířku a výšku.
+
+   > [!TIP]
+   > Můžete změnit velikost jednotky jeden dialogového okna ovládacího prvku (DLU) současně současným **Shift** klíče a pomocí **šipka vpravo** a **šipka dolů** klíče.
+
+### <a name="to-automatically-size-a-control-to-fit-the-text-within-it"></a>Chcete-li automaticky velikost ovládacího prvku podle textu v rámci něj
+
+Zvolte **velikost, aby se obsah** z **formátu** nabídku nebo klikněte pravým tlačítkem na ovládací prvek a vyberte **velikost obsahu** z místní nabídky.
+
+### <a name="to-make-controls-the-same-width-height-or-size"></a>Aby se řídí stejnou šířku, výšku ani velikost
+
+Změnit velikost skupiny ovládacích prvků na základě velikosti dominantního ovládacího prvku.
+
+1. Vyberte ovládací prvky, které chcete změnit velikost.
+
+   Ovládací prvek nejprve v řadě je dominantního ovládacího prvku. Konečné velikosti ovládacích prvků ve skupině závisí na velikosti dominantního ovládacího prvku.
+
+1. Z **formátu** nabídce zvolte **nastavit stejnou velikost**, klikněte na tlačítko **obě**, **výška**, nebo **šířka**.
+
+### <a name="to-set-the-size-of-the-combo-box-and-its-drop-down-list"></a>K nastavení velikosti pole se seznamem pole a jeho rozevíracího seznamu
+
+Při přidání do dialogových oken, můžete měnit velikost pole se seznamem. Můžete také určit velikost pole rozevíracího seznamu. Další informace najdete v tématu [přidání hodnot do ovládacího prvku pole se seznamem](../windows/adding-values-to-a-combo-box-control.md).
+
+#### <a name="to-size-a-combo-box"></a>Pro nastavení velikosti pole se seznamem
+
+1. Vyberte ovládací prvek pole se seznamem ve vašem dialogovém okně.
+
+   Na začátku jsou aktivní pouze vpravo a vlevo úchyty.
+
+1. Pomocí úchytů nastavte šířku pole se seznamem.
+
+Můžete také nastavit velikost svislé rozbalovaná část pole se seznamem.
+
+#### <a name="to-set-the-size-of-the-combo-box-drop-down-list"></a>Nastavení velikosti pole se seznamem pole rozevíracího seznamu
+
+1. Vyberte tlačítko se šipkou rozevíracího seznamu na pravé straně pole se seznamem.
+
+   ![Šipka na pole se seznamem v projektu knihovny MFC](../mfc/media/vccomboboxarrow.gif "vcComboBoxArrow")
+
+   Přehled ovládacího prvku změn zobrazíte velikost pole se seznamem s rozevíracího seznamu oblastí extended.
+
+1. Chcete-li změnit počáteční velikost oblasti rozevíracího seznamu použijte dolní úchyt pro změnu velikosti.
+
+   ![Pole se seznamem&#45;nastavení velikosti pole v projektu knihovny MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")
+
+1. Vyberte šipku rozevíracího seznamu zavřete rozevírací část pole se seznamem.
+
+### <a name="to-set-the-width-of-a-horizontal-scroll-bar-and-make-it-appear"></a>Nastavení šířky vodorovného posuvníku a usnadnit zobrazí
+
+Když přidáte seznam s vodorovný posuvník do dialogového okna pomocí tříd knihovny MFC, posuvník nezobrazí automaticky ve vaší aplikaci.
+
+Nastavte maximální šířku prvku nejširší voláním [CListBox::SetHorizontalExtent](../mfc/reference/clistbox-class.md#sethorizontalextent) ve vašem kódu.
+
+   Bez této sady hodnot posuvník nezobrazí, i když jsou položky v seznamu širší než pole.
 
 ## <a name="group-radio-buttons-on-a-dialog-box"></a>Skupiny přepínačů v dialogovém okně
 
@@ -208,29 +330,22 @@ Můžete mít více než jedné skupině přepínačů v dialogovém okně a ka�
 
 1. Nyní můžete upravit kódu k určení, jaké tlačítko přepínače by se měla zobrazit vybraný. Například `m_radioBox1 = 0;` vybere první přepínací tlačítko ve skupině.
 
-## <a name="align-groups-of-controls"></a>Zarovnání skupin ovládacích prvků
+## <a name="to-align-groups-of-controls"></a>Zarovnání skupin ovládacích prvků
 
-Následující postupy ukazují, jak Zarovnat ovládací prvky:
-
-### <a name="to-align-groups-of-controls"></a>Zarovnání skupin ovládacích prvků
-
-1. [Vyberte ovládací prvky](../windows/selecting-multiple-controls.md) chcete zarovnat. Vyberte ovládací prvek, který se má provádět dominantního ovládacího prvku nebo nastavit tak, aby se dominantního ovládacího prvku před provádění zarovnání nebo změny velikosti příkazu.
+1. Vyberte ovládací prvky, které chcete, aby bylo v souladu. Vyberte ovládací prvek, který se má provádět dominantního ovládacího prvku nebo nastavit tak, aby se dominantního ovládacího prvku před provádění zarovnání nebo změny velikosti příkazu.
 
    Konečná pozice skupiny ovládacích prvků, závisí na pozici dominantního ovládacího prvku. Další informace o výběru dominantního ovládacího prvku, naleznete v tématu [určení dominantního ovládacího prvku](../windows/specifying-the-dominant-control.md).
 
 1. Z **formátu** nabídce zvolte **zarovnat**a pak vyberte jednu z následujících zarovnání:
 
-   - `Lefts`: Zarovná vybrané ovládací prvky jejich levé strany.
-
-   - `Centers`: Zarovná vybrané ovládací prvky vodorovně jejich bodů System center.
-
-   - `Rights`: Zarovná vybrané ovládací prvky jejich pravé straně.
-
-   - `Tops`: Zarovná vybrané ovládací prvky jeho horní hrany.
-
-   - `Middles`: Zarovná vybrané ovládací prvky svisle podél jejich střední body.
-
-   - `Bottoms`: Zarovná vybrané ovládací prvky dolního okraje.
+   |Hodnota|Popis|
+   |-----|-----------|
+   |`Lefts`|Zarovná vybrané ovládací prvky jejich levé strany.|
+   |`Centers`|Zarovná vybrané ovládací prvky vodorovně jejich bodů System center.|
+   |`Rights`|Zarovná vybrané ovládací prvky jejich pravé straně.|
+   |`Tops`|Zarovná vybrané ovládací prvky jeho horní hrany.|
+   |`Middles`|Zarovná vybraných ovládacích prvků svisle podél jejich střední body.|
+   |`Bottoms`|Zarovná vybrané ovládací prvky dolního okraje.|
 
 ### <a name="to-even-the-spacing-between-controls"></a>Dodavatelské mezer mezi ovládacími prvky
 
@@ -265,55 +380,6 @@ Následující postupy ukazují, jak Zarovnat ovládací prvky:
    - `Bottom`: zarovná tlačítek podél dolního okraje dialogového okna.
 
        Pokud vyberete ovládací prvek než příkazové tlačítko, jeho pozice nemá vliv.
-
-## <a name="change-the-tab-order-of-controls"></a>Změna pořadí ovládacích prvků
-
-Pořadí, ve kterém je pořadí **kartu** klíč přesune zaměření pro vstup z jednoho ovládacího prvku v rámci dialogového okna. Obvykle pokračuje pořadí zleva doprava a shora dolů v dialogovém okně. Každý ovládací prvek má **Tabstop** vlastnost, která určuje, zda ovládací prvek nastaven vstupní fokus.
-
-### <a name="to-set-input-focus-for-a-control"></a>Chcete-li nastavit fokus vstupu pro ovládací prvek
-
-V [okno vlastností](/visualstudio/ide/reference/properties-window)vyberte **True** nebo **False** v **Tabstop** vlastnost.
-
-Dokonce i ovládací prvky, které nemají **Tabstop** nastavenou na **True** musí být součástí pořadí ovládacích prvků. Pořadí je důležité, například, když jste [definujte přístupové klíče (klávesových zkratek)](../windows/defining-mnemonics-access-keys.md) pro ovládací prvky, které nemají titulky. Statický text, který obsahuje přístupový klíč pro související ovládací prvek musí bezprostředně předcházet související ovládací prvek v pořadí.
-
-> [!NOTE]
-> Pokud vaše dialogové okno obsahuje překrývající se ovládací prvky, změna pořadí karet může změnit způsob, jakým se zobrazí ovládací prvky. Ovládací prvky, které jsou dále v pořadí karet se vždy zobrazují nad překrývající se ovládací prvky, které předcházet v pořadí.
-
-### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>Chcete-li zobrazit aktuální pořadí pro všechny ovládací prvky v dialogovém okně
-
-Na **formátu** nabídce vyberte možnost **pořadí**.
-
-\- nebo –
-
-- Stisknutím klávesy **Ctrl** + **D**.
-
-### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>Chcete-li změnit pořadí ovládacích prvků pro všechny ovládací prvky v dialogovém okně
-
-1. Na **formátu** nabídce vyberte možnost **pořadí**.
-
-   Řadu každý ovládací prvek v levém horním rohu se zobrazí místo něj v aktuální pořadí.
-
-1. Nastavení pořadí karet klikněte na každý prvek v pořadí, které chcete **kartu** klíč použít.
-
-1. Stisknutím klávesy **Enter** ukončíte **pořadí** režimu.
-
-   > [!TIP]
-   > Jakmile zadáte **pořadí** režimu, můžete stisknout **Esc** nebo **Enter** zakázat možnost změnit pořadí ovládacích prvků.
-
-### <a name="to-change-the-tab-order-for-two-or-more-controls"></a>Chcete-li změnit pořadí pro dva nebo více ovládacích prvků
-
-1. Z **formátu** nabídce zvolte **pořadí**.
-
-1. Zadejte, kde se začne změna v pořadí. Podržte stisknutou klávesu nejprve **Ctrl** klíče a vyberte ovládací prvek a pak vyberte ten, kde chcete začít změněné směr.
-
-   Například, pokud chcete změnit pořadí ovládacích prvků `7` prostřednictvím `9`, podržte stisknutou klávesu **Ctrl**, vyberte ovládací prvek `6` první.
-
-   > [!NOTE]
-   > Chcete-li nastavit konkrétní ovládací prvek na číslo `1` (první v pořadí), poklepejte na ovládací prvek.
-
-1. Verze **Ctrl** klíče a potom vyberte ovládací prvky v pořadí, které chcete **kartu** klíč dodržovat od tohoto okamžiku.
-
-1. Stisknutím klávesy **Enter** ukončíte **pořadí** režimu.
 
 Informace o přidávání prostředků do spravovaných projektů naleznete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
 

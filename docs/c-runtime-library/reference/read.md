@@ -1,6 +1,6 @@
 ---
 title: _read
-ms.date: 11/04/2016
+ms.date: 02/13/2019
 apiname:
 - _read
 apilocation:
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-ms.openlocfilehash: 8c43cbbc2681433bda02038ae73a827fad904835
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40f52ea37ae5419fe986aa505aad4fddfe8403ff
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658439"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264787"
 ---
 # <a name="read"></a>_read
 
@@ -41,36 +41,36 @@ Přečte data ze souboru.
 
 ```C
 int _read(
-   int fd,
-   void *buffer,
-   unsigned int count
+   int const fd,
+   void * const buffer,
+   unsigned const buffer_size
 );
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*FD*<br/>
+*fd*<br/>
 Popisovač souboru odkazující na otevřený soubor.
 
 *Vyrovnávací paměti*<br/>
 Umístění úložiště pro data.
 
-*Počet*<br/>
-Maximální počet bajtů.
+*buffer_size*<br/>
+Maximální počet bajtů ke čtení.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_získat** vrátí počet bajtů, přečtěte si, který může být menší než *počet* Pokud jsou kratší než *počet* bajtů ponechán v souboru nebo pokud byl soubor otevřen v textovém režimu, v takovém případě každý návrat na začátek řádku return-line kanál pár "\r\n" nahrazuje jeden znak odřádkování znakem '\n'. Pouze jeden znak odřádkování znak, který se počítá v návratové hodnotě. Pokud chcete nahrazení nemá vliv na ukazatel na soubor.
+**_získat** vrátí počet bajtů, přečtěte si, který může být menší než *buffer_size* Pokud jsou kratší než *buffer_size* left bajtů v souboru, nebo pokud byl soubor otevřen v textovém režimu. V textovém režimu, každý návrat na začátek řádku return-LF pár `\r\n` nahradí znak odřádkování jeden `\n`. Pouze jeden znak odřádkování znak, který se počítá v návratové hodnotě. Pokud chcete nahrazení nemá vliv na ukazatel na soubor.
 
 Pokud funkce se pokusí načíst na konci souboru, vrátí hodnotu 0. Pokud *fd* není platný soubor není otevřen pro čtení, nebo je soubor uzamčen, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a nastaví **errno** k **EBADF**.
 
-Pokud *vyrovnávací paměti* je **NULL**, je vyvolána obslužná rutina neplatného parametru. Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a **errno** je nastavena na **EINVAL**.
+Pokud *vyrovnávací paměti* je **NULL**, nebo pokud *buffer_size* > **INT_MAX**, je vyvolána obslužná rutina neplatného parametru. Pokud smí provádění pokračovat, vrátí funkce hodnotu -1 a **errno** je nastavena na **EINVAL**.
 
 Další informace o tomto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**_Read** funkce přečte maximálně *počet* bajtů do *vyrovnávací paměti* ze souboru spojené s *fd*. Operace čtení začíná na aktuální pozici ukazatele soubor přidružený k danému souboru. Po operaci čtení ukazatel na soubor odkazuje na další nepřečtené znak.
+**_Read** funkce přečte maximálně *buffer_size* bajtů do *vyrovnávací paměti* ze souboru spojené s *fd*. Operace čtení začíná na aktuální pozici ukazatele soubor přidružený k danému souboru. Po operaci čtení ukazatel na soubor odkazuje na další nepřečtené znak.
 
 Pokud soubor byl otevřen v textovém režimu, čtení skončí, když **_read** zaznamená znak CTRL + Z, která se používá jako indikátor konce souboru. Použití [_lseek –](lseek-lseeki64.md) zrušte indikátor konce souboru.
 
@@ -78,7 +78,7 @@ Pokud soubor byl otevřen v textovém režimu, čtení skončí, když **_read**
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_read**|\<IO.h >|
+|**_read**|\<io.h>|
 
 Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
@@ -106,18 +106,18 @@ char buffer[60000];
 
 int main( void )
 {
-   int fh;
-   unsigned int nbytes = 60000, bytesread;
+   int fh, bytesread;
+   unsigned int nbytes = 60000;
 
    /* Open file for input: */
-   if( _sopen_s( &fh, "crt_read.txt", _O_RDONLY, _SH_DENYNO, 0 ) )
+   if ( _sopen_s( &fh, "crt_read.txt", _O_RDONLY, _SH_DENYNO, 0 ))
    {
       perror( "open failed on input file" );
       exit( 1 );
    }
 
    /* Read in input: */
-   if( ( bytesread = _read( fh, buffer, nbytes ) ) <= 0 )
+   if (( bytesread = _read( fh, buffer, nbytes )) <= 0 )
       perror( "Problem reading file" );
    else
       printf( "Read %u bytes from file\n", bytesread );
