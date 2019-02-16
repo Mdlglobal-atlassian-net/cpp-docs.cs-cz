@@ -1,17 +1,17 @@
 ---
 title: Předdefinované symboly systému Win32
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 helpviewer_keywords:
 - Win32 [C++], predefined symbols
 - symbols [C++], Win32 predefined
 - Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-ms.openlocfilehash: 703e00ebcf50c987fe3a0a9399cd7497bb9c95f8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b282db2680b2459fdbece41d3c0e0d15f523e44
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434694"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320442"
 ---
 # <a name="win32-predefined-symbols"></a>Předdefinované symboly systému Win32
 
@@ -19,20 +19,20 @@ Tyto symboly jsou definovány v souborech hlaviček Win32 a podporují standardn
 
 |||
 |-|-|
-|IDABORT|Ovládacího prvku: Tlačítko Přerušit pole dialogového okna|
+|IDABORT|Ovládací prvek: Tlačítko zrušení dialogovém|
 |IDC_STATIC|Ovládací prvek: Statický text v dialogovém okně|
-|IDCANCEL|Ovládacího prvku: Tlačítko Storno pole dialogového okna|
-|IDD_ABOUTBOX|Dialogové okno: Produktu dialogové okno|
+|IDCANCEL|Ovládací prvek: Tlačítko Storno v dialogovém|
+|IDD_ABOUTBOX|Dialogové okno: Dialogové okno o produktu|
 |IDI_PROJECTNAME|Ikona: Aktuální ikony projektu|
 |IDI_SMALL|Ikona: Aktuální projekt malé ikony|
-|IDIGNORE|Ovládací prvek: Používá se ignorovat tlačítka v dialogových oknech|
-|IDM_ABOUT|Položka nabídky: Používá s nápovědou... O...|
+|IDIGNORE|Ovládací prvek: Použít s ignorovat tlačítka v dialogových oknech|
+|IDM_ABOUT|Položka nabídky: Použít s nápovědou... O...|
 |IDM_EXIT|Položka nabídky: Používá se soubor... Ukončení...|
 |IDNO|Ovládací prvek: Dialogové okno se neobjeví tlačítko|
-|IDOK|Ovládacího prvku: Tlačítko pole OK dialogového okna|
-|IDRETRY|Ovládacího prvku: Tlačítko Opakovat pole dialogového okna|
-|IDS_APP_TITLE|Řetězec: Název aktuální aplikace|
-|IDYES|Ovládací prvek: Dialogové okno Ano tlačítko.|
+|IDOK|Ovládací prvek: Tlačítko dialogovém OK|
+|IDRETRY|Ovládací prvek: Tlačítko Opakovat v dialogovém|
+|IDS_APP_TITLE|Řetězec: Aktuální název aplikace|
+|IDYES|Ovládací prvek: Tlačítko Ano dialogovém|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -41,4 +41,5 @@ Win32
 ## <a name="see-also"></a>Viz také
 
 [ID předdefinovaných symbolů](../windows/predefined-symbol-ids.md)<br/>
-[Symboly: Identifikátory prostředků](../windows/symbols-resource-identifiers.md)
+[Předdefinované symboly MFC](../windows/mfc-predefined-symbols.md)<br/>
+[Předdefinované symboly ATL](../windows/atl-predefined-symbols.md)<br/>

@@ -1,6 +1,6 @@
 ---
 title: Editor informací o verzi (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.version.F1
 - vc.editors.version
@@ -23,12 +23,12 @@ helpviewer_keywords:
 - GetFileVersionInfo
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-ms.openlocfilehash: 94afb429af6eb1b0d570a444f49145a31c2fec1f
-ms.sourcegitcommit: 52c05e10b503e834c443ef11e7ca1987e332f876
+ms.openlocfilehash: 8420feb6ddde116a24bee5333f4ef8f83ff4e0d4
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55742671"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320468"
 ---
 # <a name="version-information-editor-c"></a>Editor informací o verzi (C++)
 
@@ -39,29 +39,25 @@ Prostředku informací o verzi má horní bloku a nejméně jeden menší bloky:
 > [!NOTE]
 > Windows standard je jenom jedna verze prostředku s názvem VS_VERSION_INFO.
 
-Informace o přidávání prostředků do spravovaných projektů naleznete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
+## <a name="how-to"></a>Postupy
 
 **Informace o verzi** editor umožňuje:
 
-## <a name="to-edit-a-string-in-a-version-information-resource"></a>Úprava řetězce v prostředku informací o verzi
+### <a name="to-edit-a-string-in-a-version-information-resource"></a>Úprava řetězce v prostředku informací o verzi
 
 Vyberte položku jednou zvolit, pak znovu zahajte úprav. Provést změny přímo ve **informace o verzi** tabulky nebo [okno vlastností](/visualstudio/ide/reference/properties-window). Provedené změny se projeví na obou místech.
 
-   > [!NOTE]
-   > Při úpravě `FILEFLAGS` klíče v **informace o verzi** editoru, můžete si všimnout nelze nastavit **ladění**, **soukromého sestavení**, nebo **speciální Sestavení** vlastnosti (v **vlastnosti** okno) pro soubory .rc:
+Při úpravě `FILEFLAGS` klíče v **informace o verzi** editoru, můžete si všimnout nelze nastavit **ladění**, **soukromého sestavení**, nebo **speciální Sestavení** vlastnosti (v **vlastnosti** okno) pro soubory .rc:
 
-   - **Informace o verzi** editor sad **ladění** vlastnost s `#ifdef` ve skriptu prostředků na základě `_DEBUG` sestavení příznak.
+- **Informace o verzi** editor sad **ladění** vlastnost s `#ifdef` ve skriptu prostředků na základě `_DEBUG` sestavení příznak.
 
-   - Pokud `Private Build` klíč má **hodnotu** nastavit **informace o verzi** tabulce, odpovídající **soukromého sestavení** vlastnost (v **vlastnosti**  okno) pro `FILEFLAGS` klíč bude **True**. Pokud **hodnotu** je prázdné, bude vlastnost **False**. Podobně **speciální sestavení** klíč (v **informace o verzi** tabulky) se váže na **speciální sestavení** vlastnost `FILEFLAGS` klíč.
+- Pokud `Private Build` klíč má **hodnotu** nastavit **informace o verzi** tabulce, odpovídající **soukromého sestavení** vlastnost (v **vlastnosti**  okno) pro `FILEFLAGS` klíč bude **True**. Pokud **hodnotu** je prázdné, bude vlastnost **False**. Podobně **speciální sestavení** klíč (v **informace o verzi** tabulky) se váže na **speciální sestavení** vlastnost `FILEFLAGS` klíč.
 
 Informace o pořadí bloku řetězec můžete seřadit kliknutím na možnost **klíč** nebo **hodnotu** záhlaví sloupců. Tyto položky automaticky uspořádat informace do zvolené sekvenci.
 
-## <a name="to-add-version-information-for-another-language-new-version-info-block"></a>Chcete-li přidat informace o verzi pro jiný jazyk (novou verzi informačního bloku)
+### <a name="to-add-version-information-for-another-language-new-version-info-block"></a>Chcete-li přidat informace o verzi pro jiný jazyk (novou verzi informačního bloku)
 
 1. Otevřete poklepáním v prostředku informací o verzi [zobrazení prostředků](../windows/resource-view-window.md).
-
-   > [!NOTE]
-   > Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
 
 1. Klikněte pravým tlačítkem v tabulce informace o verzi a zvolte **novou verzi informačního bloku** z místní nabídky.
 
@@ -69,18 +65,15 @@ Informace o pořadí bloku řetězec můžete seřadit kliknutím na možnost **
 
 1. V **vlastnosti** okno, vyberte příslušný jazyk a znakové sady pro nový blok.
 
-## <a name="to-delete-a-version-information-block"></a>Odstranění bloku informací o verzi
+### <a name="to-delete-a-version-information-block"></a>Odstranění bloku informací o verzi
 
 1. Otevřete poklepáním na ikonu v prostředku informací o verzi [zobrazení prostředků](../windows/resource-view-window.md).
-
-   > [!NOTE]
-   > Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
 
 1. Klikněte pravým tlačítkem na záhlaví bloku, kterou chcete odstranit a pak zvolte **odstranit blok informací o verzi** z místní nabídky.
 
    Tento příkaz odstraní vybranou hlavičku a ponechá beze změny zbývající informace o verzi. Akci nelze vrátit zpět.
 
-## <a name="to-access-version-information-from-within-your-program"></a>Přístup k informacím o verzi z programu
+### <a name="to-access-version-information-from-within-your-program"></a>Přístup k informacím o verzi z programu
 
 Pokud chcete přístup k informacím o verzi z programu, použijte [GetFileVersionInfo](/windows/desktop/api/winver/nf-winver-getfileversioninfoa) funkce a [Funkce VerQueryValue](/windows/desktop/api/winver/nf-winver-verqueryvaluea) funkce.
 
@@ -91,7 +84,7 @@ Pokud chcete přístup k informacím o verzi z programu, použijte [GetFileVersi
 
 Win32
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Editory prostředků](../windows/resource-editors.md)<br/>
 [Nabídky a ostatní prostředky](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)<br/>

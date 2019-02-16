@@ -1,6 +1,6 @@
 ---
 title: Editor akcelerátorů (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.accelerator.F1
 - vc.editors.accelerator
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: 5ece5c7e85a3ef59b728474746e9553a751d43c6
-ms.sourcegitcommit: bec1480a03e7b4070b469a6c131a69f516bbac70
+ms.openlocfilehash: 90ef142336cf88c5e40f78f6cc651b2bb35a0f6c
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56226342"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320637"
 ---
 # <a name="accelerator-editor-c"></a>Editor akcelerátorů (C++)
 
@@ -55,8 +55,6 @@ Seznam předdefinovaných klávesové zkratky, naleznete v tématu [předdefinov
 
    > [!NOTE]
    > Windows neumožňuje vytvářet tabulky prázdný akcelerátoru. Pokud jste se žádné položky tabulky akcelerátorů, je odstraněn automaticky při ukládání tabulky.
-
-Informace o přidávání prostředků do spravovaných projektů naleznete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="accelerator-properties"></a>Vlastnosti akcelerátoru
 
@@ -123,9 +121,6 @@ Následují platné položky **klíč** vlastnost v tabulce akcelerátorů:
 V projektu v jazyce C++ můžete upravit přímo s místní úpravy. v tabulky akcelerátorů **akcelerátoru** editoru.
 
 Použití standardních stránkách vlastností najdete v níže uvedených postupech, ale úpravy na místě a metoda stránka Vlastnosti mít stejný výsledek. Změny provedené pomocí stránky vlastností nebo pomocí úpravy na místě se okamžitě projeví v tabulce akcelerátorů.
-
-> [!NOTE]
-> Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
 
 ### <a name="to-edit-in-an-accelerator-table"></a>Úprava v tabulce akcelerátorů
 
@@ -209,9 +204,7 @@ Potom můžete vyhledat v seznamu a vyhledejte položku.
 
 Win32
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Editory prostředků](../windows/resource-editors.md)
-
-[Úprava v tabulce akcelerátorů](../windows/editing-in-an-accelerator-table.md)<br/>
+[Editory prostředků](../windows/resource-editors.md)<br/>
 [Předdefinované klávesy akcelerátoru](../windows/predefined-accelerator-keys.md)<br/>

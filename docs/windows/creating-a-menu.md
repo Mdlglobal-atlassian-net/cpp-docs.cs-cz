@@ -23,13 +23,23 @@ helpviewer_keywords:
 - context menus [C++], connecting to applications
 - shortcut menus [C++], connecting to applications
 - pop-up menus
+- menu commands [C++], selecting
+- menus [C++], selecting
+- commands [C++], menu commands
+- commands [C++], copying on menus
+- menu items, moving
+- commands [C++], moving on menus
+- menu items, copying
+- menu items, deleting
+- commands [C++], deleting from menus
+- menus [C++], deleting
 ms.assetid: 66f94448-9b97-4b73-bf97-10d4bf87cc65
-ms.openlocfilehash: e3b3cc58b82f68c55ac98601fd11775422c901e5
-ms.sourcegitcommit: 5a7dbd640376e13379f5d5b2cf66c4842e5e737b
+ms.openlocfilehash: da5fc355ae11ee5efb1c58be9e33bd4fb8bff02d
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55905768"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320520"
 ---
 # <a name="creating-menus-c"></a>Vytváření nabídek (C++)
 
@@ -38,7 +48,7 @@ ms.locfileid: "55905768"
 
 Informace o přidávání prostředků do spravovaných projektů naleznete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
 
-## <a name="to-create-a-standard-menu"></a>Chcete-li vytvořit standardní nabídky
+## <a name="create-a-standard-menu"></a>Vytvořit standardní nabídku
 
 1. Z **zobrazení** nabídce vyberte možnost **zobrazení prostředků** a potom klikněte pravým tlačítkem na **nabídky** záhlaví a zvolte **přidat prostředek**. Zvolte **nabídky**.
 
@@ -59,7 +69,7 @@ Informace o přidávání prostředků do spravovaných projektů naleznete v t�
    > [!NOTE]
    > Chcete-li vytvořit jedné položky nabídky na řádku nabídek, nastavte **automaticky otevírané okno** vlastnost **False**.
 
-## <a name="to-create-a-submenu"></a>Vytvoření podnabídky
+## <a name="create-a-submenu"></a>Vytvoření podnabídky
 
 1. Vyberte příkaz nabídky, u kterého chcete vytvořit podnabídky.
 
@@ -75,7 +85,7 @@ Vyberte existující název nabídky a stiskněte klávesu **vložit** klíč. *
 
 Klikněte pravým tlačítkem na řádku nabídek a vyberte **vložit nový** z místní nabídky.
 
-## <a name="to-add-commands-to-a-menu"></a>Chcete-li přidat do nabídky příkazů
+## <a name="add-commands-to-a-menu"></a>Přidání příkazů do nabídky
 
 1. Vytvoření nabídky.
 
@@ -104,7 +114,7 @@ Klikněte pravým tlačítkem na řádku nabídek a vyberte **vložit nový** z 
 
    Nové položky políčko je zaškrtnuto, takže si můžete vytvořit další příkazy.
 
-## <a name="to-create-pop-up-menus"></a>Chcete-li vytvořit místní nabídky
+## <a name="create-pop-up-menus"></a>Vytvořit místní nabídky
 
 [Místní nabídky](../mfc/menus-mfc.md) zobrazení často používané příkazy. Můžou být závislá na kontextu do umístění ukazatele. Pomocí místní nabídky v aplikaci vyžaduje vytváření samotné nabídky a následným připojením ke kódu aplikace.
 
@@ -150,6 +160,52 @@ Klikněte pravým tlačítkem na nabídku a zvolte **zobrazit jako místní nab�
 
    > [!NOTE]
    > Chcete-li změnit zpět na zobrazení řádku nabídek klikněte na tlačítko **zobrazit jako místní nabídku** znovu (který odstraněn znak zaškrtnutí barvy a vrátí zobrazení řádku nabídek).
+
+## <a name="edit-multiple-menus-or-menu-commands"></a>Upravit více nabídek nebo příkazů nabídky
+
+### <a name="to-select-multiple-menu-commands"></a>Chcete-li vybrat více příkazů nabídky
+
+Můžete vybrat více názvy nabídek nebo příkazů nabídky ke spuštění hromadné operace, jako je například odstranění nebo změna vlastností.
+
+Když podržíte **Ctrl** klíče, vyberte možnost nabídky a podnabídky příkazy, které chcete.
+
+### <a name="to-move-and-copy-menus-and-menu-commands"></a>Pro přesun a kopírování nabídek a příkazů nabídky
+
+Mohou přesunout nebo kopírovat nabídek a příkazů nabídky pomocí přetahování myší metody nebo pomocí příkazů v místní nabídce (klikněte pravým tlačítkem na nabídky).
+
+#### <a name="to-move-or-copy-menus-or-menu-commands-using-the-drag-and-drop-method"></a>Chcete přesunout nebo kopírovat nabídek nebo příkazů nabídky pomocí přetahování myší – metoda
+
+1. Přetáhněte nebo zkopírujte položku, kterou chcete přejít na:
+
+   - Nové umístění v nabídce aktuální.
+
+   - Jiné nabídky. (Můžete přejít na jiné nabídky přetažením ukazatele myši nad nimi.)
+
+1. Příkaz nabídky vyřaďte, když se vykreslilo vodítko ukazatele zobrazuje umístění, které chcete.
+
+#### <a name="to-move-or-copy-menus-or-menu-commands-using-shortcut-menu-commands"></a>Chcete přesunout nebo kopírovat nabídek nebo příkazů nabídky pomocí místní nabídky příkazů
+
+1. Klikněte pravým tlačítkem na jeden nebo více nabídek nebo příkazů nabídky.
+
+1. V místní nabídce zvolte **Vyjmout** (k přesunutí) nebo **kopírování**.
+
+1. Pokud přesouváte položky na jiné nabídky prostředků nebo souboru skriptu prostředků [otevřete ho v jiném okně](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
+
+1. Vyberte nabídky nebo příkaz nabídky, že kterou chcete přesunout nebo kopírovat do umístění.
+
+1. V místní nabídce zvolte **vložit**. Položka přesunutý nebo zkopírovaný je umístěn před položku, kterou jste vybrali.
+
+   > [!NOTE]
+   > Můžete také přetáhnout, zkopírujte a vložte jiným nabídkám v jiných oknech nabídky.
+
+### <a name="to-delete-a-menu-or-menu-command"></a>Odstranění nabídky nebo příkazu nabídky
+
+1. Klikněte pravým tlačítkem na název nabídky nebo příkaz.
+
+1. Zvolte **odstranit** z místní nabídky.
+
+   > [!NOTE]
+   > Podobně můžete použít nabídku provádět další akce, jako je kopírování, vyjmutí, vložení, vložit nový, vložit oddělovač úprav ID zobrazení jako automaticky otevírané okno, zkontrolujte klávesových zkratek apod.
 
 ## <a name="requirements"></a>Požadavky
 

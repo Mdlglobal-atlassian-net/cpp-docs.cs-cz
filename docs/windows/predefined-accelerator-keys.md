@@ -1,6 +1,6 @@
 ---
 title: Klávesy akcelerátoru (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.accelerator
 helpviewer_keywords:
@@ -10,16 +10,14 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: 1e87d80b8995760eecda34334dab702480bd9669
-ms.sourcegitcommit: 5beace7dcc6bf0e8b8cc96a930e7424f9daa05cb
+ms.openlocfilehash: 6ef8f84564d6fd1957452971cb1e88dc99aa27e9
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55232120"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320507"
 ---
 # <a name="accelerator-keys-c"></a>Klávesy akcelerátoru (C++)
-
-Informace o přidávání prostředků do spravovaných projektů naleznete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.
 
 ## <a name="predefined-accelerator-keys"></a>Předdefinované klávesy akcelerátoru
 
@@ -79,7 +77,7 @@ Existuje mnoho z předdefinované klávesy akcelerátoru, které mohou být sou�
 |VK_XBUTTON1|Windows: Tlačítko myši x1|
 |VK_XBUTTON2|Windows: Tlačítko myši x2|
 
-## <a name="associating-an-accelerator-key-with-a-menu-item"></a>Přiřazení klíče akcelerátoru k položce nabídky
+## <a name="accelerator-key-association"></a>Přiřazení klíče akcelerátoru
 
 V mnoha případech má položku nabídky a kombinace kláves pro stejný příkaz programu. To provedete tak, že stejný identifikátor prostředku (ID) přiřadíte k položce nabídky a záznam v tabulce akcelerátorů vaší aplikace. Potom upravte položku nabídky titulek, aby se zobrazil název akcelerátoru. Další informace o položky nabídky a přístupové klávesy, naleznete v tématu [přiřazení položky nabídky ke klávese akcelerátoru](../windows/associating-a-menu-command-with-an-accelerator-key.md).
 
@@ -90,4 +88,3 @@ Win32
 ## <a name="see-also"></a>Viz také
 
 [Editor akcelerátorů](../windows/accelerator-editor.md)<br/>
-[Editory prostředků](../windows/resource-editors.md)

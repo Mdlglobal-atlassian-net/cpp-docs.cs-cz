@@ -1,6 +1,6 @@
 ---
 title: Editory prostředků (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vs.editors.resource
 - vc.resvw.resource.editors
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 43eab011cefed116723bd983b685c1c8c230326f
-ms.sourcegitcommit: bec1480a03e7b4070b469a6c131a69f516bbac70
+ms.openlocfilehash: aeeca87ceb5b2c5e54da7087b5020ccbc1c39039
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56226316"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320806"
 ---
 # <a name="resource-editors-c"></a>Editory prostředků (C++)
 
@@ -36,8 +36,6 @@ Otevře se editor odpovídající automaticky při vytvoření nebo otevření p
 
 > [!NOTE]
 > Protože spravované projekty nepoužívají soubory skriptu prostředků, je nutné otevřít prostředky z **Průzkumníka řešení**. Můžete použít [editor obrázků](../windows/image-editor-for-icons.md) a [binární editor](binary-editor.md) pro práci se soubory prostředků ve spravovaných projektech. Všechny spravované prostředky, které chcete upravit, musí být propojené prostředky. Editory prostředků Visual Studio nepodporují úpravy vložených prostředků.
-
-Informace o přidávání prostředků do spravovaných projektů naleznete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
 
 |Použití...|Chcete-li upravit...|
 |----------------|----------------|
@@ -51,7 +49,10 @@ Informace o přidávání prostředků do spravovaných projektů naleznete v t�
 |[Editor panelu nástrojů](../windows/toolbar-editor.md)|Prostředky panelu nástrojů v projektech Visual C++. Editor panelu nástrojů je součástí editoru obrázků.|
 |[Editor informací o verzi](../windows/version-information-editor.md)|Informace o verzi v projektech Visual C++.|
 
-## <a name="view-and-edit-resources-in-a-resource-editor"></a>Zobrazení a úprava prostředků v editoru prostředků
+> [!NOTE]
+> Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
+
+## <a name="view-and-edit-resources"></a>Zobrazení a úpravy prostředků
 
 Každý typ prostředku má **prostředků** editor specifické pro příslušný typ prostředku. Můžete změnit uspořádání, změňte velikost, přidat ovládací prvky a funkce nebo jinak upravit aspektů prostředku pomocí editoru přidružené. Můžete také upravit prostředek v [textový formát](../windows/how-to-open-a-resource-script-file-in-text-format.md) a [binární formát](../windows/opening-a-resource-for-binary-editing.md).
 
@@ -62,16 +63,13 @@ Prostředky můžete také upravit mimo projekt, naleznete v tématu [jak: Otev�
 > [!NOTE]
 > Vlastnosti prostředku [lze upravit pomocí okna vlastnosti](../windows/changing-the-properties-of-a-resource.md).
 
-Chcete-li upravit vlastnosti prostředku:
+### <a name="to-edit-the-properties-of-a-resource"></a>Postup úpravy vlastností prostředku
 
 1. V [zobrazení prostředků](../windows/resource-view-window.md), klikněte pravým tlačítkem na prostředku, kterou chcete upravit a zvolte **vlastnosti** z místní nabídky.
 
-   > [!NOTE]
-   > Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
-
 1. V [okno vlastností](/visualstudio/ide/reference/properties-window), změna vlastností prostředku.
 
-Vrátit zpět změny provedené na vlastnosti prostředku:
+### <a name="to-undo-a-change-made-to-the-properties-of-a-resource"></a>Vrátit zpět změny vlastností prostředku
 
 1. Ujistěte se, že váš prostředek má fokus **zobrazení prostředků**.
 
@@ -81,7 +79,7 @@ Vrátit zpět změny provedené na vlastnosti prostředku:
 
 Budete mít přístup k prostředkům Win32 v [zobrazení prostředků](../windows/resource-view-window.md) podokně.
 
-Chcete-li zobrazit prostředek systému Win32 v editoru prostředků:
+#### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>Chcete-li zobrazit prostředek systému Win32 v editoru prostředků
 
 1. Vyberte **zobrazení prostředků** z **zobrazení** nabídky.
 
@@ -89,37 +87,30 @@ Chcete-li zobrazit prostředek systému Win32 v editoru prostředků:
 
 1. Z **zobrazení prostředků**, rozbalte složku pro projekt, který obsahuje prostředky, které chcete zobrazit. Například pokud chcete zobrazit prostředku dialogového okna, rozbalte **dialogové okno** složky.
 
-   > [!NOTE]
-   > Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
-
 1. Dvakrát klikněte na prostředek, třeba **IDD_ABOUTBOX**.
 
    Prostředek se otevře ve vhodném editoru. Například pro prostředky dialogového okna, prostředek se otevře uvnitř **dialogové okno** editoru.
 
    Můžete také [zobrazit prostředky v souboru .rc (skript prostředků) bez nutnosti otevřít projekt](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
 
-Pokud chcete odstranit existující prostředek Win 32:
+#### <a name="to-delete-an-existing-win-32-resource"></a>Chcete-li odstranit existující prostředek Win 32
 
 1. V **zobrazení prostředků**, rozbalte uzel pro typ prostředku.
 
-2. Klikněte pravým tlačítkem na požadovaný prostředek odstranit a zvolit **odstranit** z místní nabídky.
+1. Klikněte pravým tlačítkem na požadovaný prostředek odstranit a zvolit **odstranit** z místní nabídky.
 
    > [!NOTE]
    > Můžete odstranit prostředků pomocí příkazu stejné místní nabídky v případě, že máte soubor .rc otevřený v okna dokumentu mimo projekt.
 
-### <a name="resources-in-managed-projects"></a>Prostředky ve spravovaných projektech
+### <a name="managed-project-resources"></a>Spravovaný projekt prostředků
 
 Protože spravovaných projektů nepoužívejte soubory skriptu prostředků, je nutné otevřít prostředky z **Průzkumníka řešení**. Můžete použít [editor obrázků](../windows/image-editor-for-icons.md) a [binární editor](binary-editor.md) pro práci se soubory prostředků ve spravovaných projektech. Všechny spravované prostředky, které chcete upravit, musí být propojené prostředky. Editory prostředků Visual Studio nepodporují úpravy vložených prostředků.
 
-Chcete-li zobrazit spravovaných prostředků v editoru prostředků:
-
-V **Průzkumníka řešení**, dvakrát klikněte na prostředek, třeba *Bitmap1.bmp*.
+- Chcete-li zobrazit spravovaného prostředku v editoru prostředků v **Průzkumníka řešení**, dvakrát klikněte na prostředek, třeba *Bitmap1.bmp*.
 
    Prostředek se otevře ve vhodném editoru.
 
-Pokud chcete odstranit existující spravovaný prostředek:
-
-V **Průzkumníka řešení**, klikněte pravým tlačítkem na požadovaný prostředek odstranit a zvolit **odstranit** z místní nabídky.
+- Odstranění existujícího spravovaného prostředku, v **Průzkumníka řešení**, klikněte pravým tlačítkem na požadovaný prostředek odstranit a zvolit **odstranit** z místní nabídky.
 
 ## <a name="preview-resources"></a>Náhled prostředků
 
@@ -132,12 +123,9 @@ Funkce visual ve verzi preview se nevztahuje na prostředky: Akcelerátor, Manif
 > [!NOTE]
 > Náhled prostředků vyžaduje Win32.
 
-Náhled zdroje:
+### <a name="to-preview-resources"></a>Náhled prostředků
 
 1. V [zobrazení prostředků](../windows/resource-view-window.md) nebo okno dokumentu, vyberte prostředek, třeba `IDD_ABOUTBOX`.
-
-   > [!NOTE]
-   > Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
 
 1. V [okno vlastností](/visualstudio/ide/reference/properties-window), vyberte **stránky vlastností** tlačítko.
 
@@ -150,9 +138,8 @@ Náhled zdroje:
 
 Žádná
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Práce se zdrojovými soubory](../windows/working-with-resource-files.md)<br/>
 [Soubory prostředků](../windows/resource-files-visual-studio.md)<br/>
-[Symboly: Identifikátory prostředků](../windows/symbols-resource-identifiers.md)<br/>
-[Nabídky a ostatní prostředky](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+[Identifikátory prostředků (symbolů)](../windows/symbols-resource-identifiers.md)<br/>

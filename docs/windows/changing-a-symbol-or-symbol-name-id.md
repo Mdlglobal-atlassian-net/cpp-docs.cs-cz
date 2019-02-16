@@ -1,6 +1,6 @@
 ---
 title: 'Postupy: Správa symbolů'
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.symbol.changing
 - vc.editors.symbol.restrictions.name
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 4bc0376b6b5ff402f0cc9f40093e000763ad6656
-ms.sourcegitcommit: bec1480a03e7b4070b469a6c131a69f516bbac70
+ms.openlocfilehash: 4f1c44e8fc2ae34ddcb65ec23ca8d98e11d50ec0
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56226368"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320585"
 ---
 # <a name="how-to-manage-symbols"></a>Postupy: Správa symbolů
 
@@ -49,8 +49,6 @@ Při vytváření nového prostředku nebo prostředku objektu vývojové prost�
 Pro symboly přidružený jeden prostředek, můžete použít také **vlastnosti** oknu změnit hodnotu symbolu. Můžete použít [symboly prostředků – dialogové okno](../windows/resource-symbols-dialog-box.md) ke změně hodnoty symbolů není aktuálně přiřazená k prostředku.
 
 Obvykle všechny symbol definice jsou uložené v `Resource.h`. Však může být nutné změnit to zahrnovat název souboru, což umožní, například pracovat s více než jeden soubor prostředků ve stejném adresáři.
-
-Informace o přidávání prostředků do spravovaných projektů naleznete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*.
 
 > [!NOTE]
 > Pokud váš projekt již neobsahuje soubor .rc, přečtěte si téma [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
@@ -142,7 +140,7 @@ Další informace o počet rozsahů, naleznete v tématu [TN023: Standardní pro
 
 Nová hodnota je uložena v hlavičkový soubor symbolů při příštím uložte projekt. Pouze název symbolu zůstává viditelná pole ID. rovnítko a hodnota nejsou zobrazeny po jste ověření.
 
-## <a name="change-or-delete-unassigned-symbols"></a>Změna nebo odstranění nepřiřazených symbolů
+## <a name="change-or-delete-symbols"></a>Změna nebo odstranění symbolů
 
 Během činnosti v [symboly prostředků – dialogové okno](../windows/resource-symbols-dialog-box.md), můžete upravit nebo odstranit existující symboly, které nejsou přiřazeny k prostředku nebo objekt.
 
@@ -162,7 +160,7 @@ V [symboly prostředků – dialogové okno](../windows/resource-symbols-dialog-
    > [!NOTE]
    > Před odstraněním nepoužívaných symbolů do souboru prostředků, ujistěte se, že se nepoužívá jako jinde v programu ani soubory prostředků zahrnuté v době kompilace.
 
-## <a name="include-shared-read-only-or-calculated-symbols"></a>Zahrnout sdílených (jen pro čtení) nebo vypočtených symbolů
+## <a name="include-symbols"></a>Zahrnout symboly
 
 Při prvním vývojové prostředí přečte soubor prostředků vytvořený v jiné aplikaci, označí všechny soubory zahrnuté záhlaví jen pro čtení. I když můžete použít [dialogové okno prostředek zahrnuje](../windows/resource-includes-dialog-box.md) přidat soubory hlaviček další symbolů jen pro čtení.
 
@@ -215,8 +213,8 @@ Prostředí se správně interpretovat tyto počítané symboly, pokud:
 
 Win32
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Symboly: Identifikátory prostředků](../windows/symbols-resource-identifiers.md)<br/>
+[Identifikátory prostředků (symbolů)](../windows/symbols-resource-identifiers.md)<br/>
+[Vytváření symbolů](../windows/creating-new-symbols.md)<br/>
 [ID předdefinovaných symbolů](../windows/predefined-symbol-ids.md)<br/>
-[Zobrazení symbolů prostředků](../windows/viewing-resource-symbols.md)<br/>

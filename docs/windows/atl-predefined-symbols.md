@@ -1,16 +1,16 @@
 ---
 title: Předdefinované symboly ATL
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 helpviewer_keywords:
 - symbols [C++], ATL predefined
 - ATL symbols
 ms.assetid: 60d8f4e6-6ed9-47f3-9051-e4bf34384456
-ms.openlocfilehash: 37d24dcfb65566b2b13c8b1ba8c826ec68271477
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb8b0db77b2add584e2fa8716a2d1821f5cae1fc
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654399"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320455"
 ---
 # <a name="atl-predefined-symbols"></a>Předdefinované symboly ATL
 
@@ -18,16 +18,16 @@ Tyto symboly jsou definovány v souborech hlaviček knihovny ATL, ale podporují
 
 |||
 |-|-|
-|IDABORT|Ovládacího prvku: Tlačítko Přerušit pole dialogového okna|
-|IDC_STATIC|Ovládacího prvku: Statický ovládací prvek|
-|IDCANCEL|Ovládacího prvku: Tlačítko Storno pole dialogového okna|
-|IDIGNORE|Ovládacího prvku: Tlačítko Ignorovat pole dialogového okna|
+|IDABORT|Ovládací prvek: Tlačítko zrušení dialogovém|
+|IDC_STATIC|Ovládací prvek: Statický ovládací prvek|
+|IDCANCEL|Ovládací prvek: Tlačítko Storno v dialogovém|
+|IDIGNORE|Ovládací prvek: Tlačítko Ignorovat dialogovém|
 |IDNO|Ovládací prvek: Dialogové okno se neobjeví tlačítko|
-|IDOK|Ovládacího prvku: Tlačítko pole OK dialogového okna|
-|IDR_ACCELERATOR1|Prostředků: Tabulky akcelerátoru|
-|IDRETRY|Ovládacího prvku: Tlačítko Opakovat pole dialogového okna|
-|IDS_PROJNAME|Řetězec: Název aktuální aplikace|
-|IDYES|Ovládací prvek: Dialogové okno Ano tlačítko.|
+|IDOK|Ovládací prvek: Tlačítko dialogovém OK|
+|IDR_ACCELERATOR1|prostředek: Tabulky akcelerátorů|
+|IDRETRY|Ovládací prvek: Tlačítko Opakovat v dialogovém|
+|IDS_PROJNAME|Řetězec: Aktuální název aplikace|
+|IDYES|Ovládací prvek: Tlačítko Ano dialogovém|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -36,4 +36,5 @@ ATL
 ## <a name="see-also"></a>Viz také
 
 [ID předdefinovaných symbolů](../windows/predefined-symbol-ids.md)<br/>
-[Symboly: Identifikátory prostředků](../windows/symbols-resource-identifiers.md)
+[Předdefinované symboly MFC](../windows/mfc-predefined-symbols.md)<br/>
+[Předdefinované symboly systému Win32](../windows/win32-predefined-symbols.md)<br/>

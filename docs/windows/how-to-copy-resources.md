@@ -1,6 +1,6 @@
 ---
 title: 'Postupy: Správa prostředků (C++)'
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.resvw.resource.copying
 - vs.resvw.resource.copying
@@ -30,18 +30,16 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: e8b976f974e397b8012ebf59ede08ee64f4f7191
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 1f176b3fa19374b402039ecca60e690ade5c0cef
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150789"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320624"
 ---
 # <a name="how-to-manage-resources-c"></a>Postupy: Správa prostředků (C++)
 
-Informace o přidávání prostředků do spravovaných projektů naleznete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
-
-## <a name="to-copy-resources"></a>Chcete-li kopírovat zdroje
+## <a name="copy-resources"></a>Kopírování prostředků
 
 Prostředky můžete zkopírovat z jednoho souboru do jiného beze změny nebo může změna jazyka nebo podmínky prostředku během kopírování ji.
 
@@ -77,7 +75,7 @@ Můžete použít metodu a přetažení mezi soubory .rc, které jsou otevřené
    > [!NOTE]
    > Aby nedocházelo ke konfliktům s názvy symbolů nebo hodnoty v existující soubor, Visual C++ změnit hodnotu symbolu přenesené prostředků nebo název symbolu a hodnota při kopírování do nového souboru.
 
-### <a name="to-change-the-language-or-condition-of-a-resource-while-copying"></a>Změna jazyka nebo podmínky prostředku během kopírování
+### <a name="change-the-language-or-condition-of-a-resource-while-copying"></a>Změna jazyka nebo podmínky prostředku během kopírování
 
 Při kopírování v prostředku, můžete změnit jeho vlastnost jazyka vlastnost podmínka nebo obojí.
 
@@ -91,23 +89,21 @@ Jazyk a podmínky prostředku jsou uvedeny v závorkách za názvem prostředku 
 IDD_AboutBox (Finnish - XX33)
 ```
 
-Kopírovat existující prostředek a změnit jeho jazyka nebo podmínky:
+#### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Kopírovat existující prostředek a změnit jeho jazyka nebo podmínky
 
 1. V souboru .rc nebo v [zobrazení prostředků](../windows/resource-view-window.md) okna, klikněte pravým tlačítkem na prostředek, které chcete kopírovat.
 
-1. Zvolte **vložit kopii** z místní nabídky.
-
-1. V **vložit kopii prostředku** dialogové okno:
+1. Zvolte **vložit kopii** z místní nabídky a nastavte následující:
 
    - Pro **jazyk** seznamu, vyberte jazyk.
 
    - V **podmínku** zadejte podmínku.
 
-## <a name="to-edit-managed-resource-files"></a>Úprava spravovaných zdrojových souborů
+## <a name="edit-resources"></a>Upravit prostředky
 
 Soubory spravovaného prostředku (RESX) jsou soubory formátu XML. Když přidáte spravovaný soubor prostředků do projektu z **přidat novou položku** dialogovém okně **editoru spravovaných prostředků** otevře ve výchozím nastavení.
 
-## <a name="to-import-and-export-resources"></a>Pro import a export prostředků
+## <a name="import-and-export-resources"></a>Import a Export prostředků
 
 Můžete importovat grafických prostředků (rastrové obrázky, ikony, kurzory a panely nástrojů), soubory HTML a vlastní prostředky pro použití v jazyce Visual C++. Stejné typy souborů, můžete exportovat z projektu Visual C++ do samostatných souborů, které lze použít mimo vývojové prostředí.
 
@@ -131,9 +127,7 @@ Můžete importovat grafických prostředků (rastrové obrázky, ikony, kurzory
 
 1. V **prostředků** zobrazení, klikněte pravým tlačítkem na prostředku, kterou chcete exportovat.
 
-1. Vyberte **exportovat** v místní nabídce.
-
-1. V **exportovat prostředky** dialogové okno pole názvu aktuálního souboru přijměte nebo zadejte nový.
+1. Vyberte **exportovat** v místní nabídce a následně přijímal aktuální název souboru nebo zadejte nový.
 
 1. Přejděte do složky, kam chcete uložit soubor a zvolte **exportovat**.
 
@@ -141,7 +135,8 @@ Můžete importovat grafických prostředků (rastrové obrázky, ikony, kurzory
 
 Win32
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Soubory prostředků](../windows/resource-files-visual-studio.md)<br/>
-[Editory prostředků](../windows/resource-editors.md)
+[Vytvoření prostředků](../windows/how-to-create-a-resource-script-file.md)<br/>
+[Zahrnutí prostředků v době kompilace](../windows/how-to-include-resources-at-compile-time.md)<br/>

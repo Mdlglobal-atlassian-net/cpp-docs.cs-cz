@@ -1,6 +1,6 @@
 ---
 title: Editor panelu nástrojů (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.toolbar.F1
 - vc.editors.toolbar
@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 61b4d3ba6fc70e78c6f794528822eb66fb94de7e
-ms.sourcegitcommit: 5a7dbd640376e13379f5d5b2cf66c4842e5e737b
+ms.openlocfilehash: 7ef08551960c9308a84b9838249a3d9ff4950d98
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55905781"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320611"
 ---
 # <a name="toolbar-editor-c"></a>Editor panelu nástrojů (C++)
 
@@ -66,23 +66,6 @@ ms.locfileid: "55905781"
 ![Toolbar Editor](../mfc/media/vctoolbareditor.gif "vcToolbarEditor") Toolbar Editor
 
 **Nástrojů** editoru je podobný **Image** editor ve funkcích. Položky nabídky, grafické nástroje a rastrový obrázek mřížky jsou stejná jako v **Image** editoru. Příkaz nabídky **Image** nabídky, aby bylo možné přepínat mezi **nástrojů** editoru a **Image** editoru. Další informace o používání **grafiky** nástrojů **barvy** palety, nebo **Image** nabídky, naleznete v tématu [Editor obrázků](../windows/image-editor-for-icons.md).
-
-Informace o přidávání prostředků do spravovaných projektů naleznete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
-
-S **nástrojů** editoru, můžete:
-
-## <a name="create-new-toolbars"></a>Vytváření nových panelů nástrojů
-
-1. V **prostředků** zobrazení, klikněte pravým tlačítkem na soubor .rc a pak zvolte **přidat prostředek** z místní nabídky. (Pokud máte existující nástrojů v souboru .rc, je můžete jednoduše kliknout pravým tlačítkem **nástrojů** a pak zvolte položku **vložit nástrojů** z místní nabídky.)
-
-   > [!NOTE]
-   > Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
-
-1. V **přidat prostředek** dialogu **nástrojů** v **typ prostředku** seznamu a pak zvolte **nový**.
-
-   Pokud symbol plus (**+**) se zobrazí vedle **nástrojů** typ prostředku, znamená to, že šablony nástrojů jsou k dispozici. Vyberte znaménko plus rozbalit seznam šablon, vyberte šablonu a zvolte **nový**.
-
-## <a name="convert-bitmaps-to-toolbar-resources"></a>Převádění bitmap na prostředky panelu nástrojů
 
 Můžete vytvořit nový panel nástrojů v projektu jazyka C++ převedením rastrový obrázek. Obrázek z rastrového obrázku se převede na obrázky tlačítek pro panel nástrojů. Obvykle rastrový obrázek obsahuje několik imagí tlačítko v jediné bitmapě pomocí jedné image pro každé tlačítko. Image může mít libovolnou velikost, protože výchozí hodnota je 16 pixelů na šířku a výšku obrázku. Můžete zadat velikost Image tlačítko **nový prostředek panelu nástrojů** dialogové okno při výběru **panelu nástrojů editoru** z **Image** nabídky v editoru obrázků.
 
@@ -97,7 +80,32 @@ Dialogové okno má následující vlastnosti:
 |**Šířka tlačítka**|Poskytuje prostor pro zadání šířku pro tlačítka panelu nástrojů, které při převádění z prostředku rastrového obrázku na prostředek panelu nástrojů. Image se ořízne na šířku a výšku zadán a barvy jsou upraveny pro použití standardních barev panelu nástrojů (16 barev).|
 |**Výška tlačítka**|Poskytuje prostor pro zadání výšku pro tlačítka panelu nástrojů, které při převádění z prostředku rastrového obrázku na prostředek panelu nástrojů. Image se ořízne na šířku a výšku zadán a barvy jsou upraveny pro použití standardních barev panelu nástrojů (16 barev).|
 
-### <a name="to-convert-bitmaps-to-a-toolbar"></a>Převod bitmap na panelu nástrojů
+Ve výchozím nastavení je na pravém konci panelu nástrojů zobrazí tlačítko Nový nebo prázdný. Toto tlačítko můžete přesunout začnete upravovat. Při vytváření nového tlačítka další prázdné tlačítko vpravo se zobrazí upravená tlačítka. Při ukládání panelu nástrojů tlačítko prázdné se neuloží.
+
+Vlastnosti tlačítka panelu nástrojů jsou:
+
+|Vlastnost|Popis|
+|--------------|-----------------|
+|**ID**|Definuje ID pro tlačítko. Rozevírací seznam obsahuje běžné **ID** názvy.|
+|**Šířka**|Nastavuje šířku tlačítka. doporučuje se 16 pixelů.|
+|**Výška**|Nastaví výšku tlačítka. Výška tlačítka změní výšku všechna tlačítka na panelu nástrojů. doporučuje se 15 pixelů.|
+|**Zeptat se**|Definuje zprávy zobrazí ve stavovém řádku. Přidání \n a název Přidá popis tlačítka na toto tlačítko panelu nástrojů. Další informace najdete v tématu [vytvoření popisu](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|
+
+**Šířka** a **výška** platí pro všechna tlačítka. Rastrový obrázek, který se používá k vytvoření panelu nástrojů má maximální šířku 2048. Takže pokud nastavíte šířku tlačítka na 512, můžete mít jenom čtyři tlačítka a nastavte šířku na 513 lze pouze máte tři tlačítka.
+
+## <a name="how-to"></a>Postupy
+
+**Nástrojů** editor umožňuje:
+
+### <a name="to-create-new-toolbars"></a>K vytvoření nových panelů nástrojů
+
+1. V **prostředků** zobrazení, klikněte pravým tlačítkem na soubor .rc a pak zvolte **přidat prostředek** z místní nabídky. (Pokud máte existující nástrojů v souboru .rc, je můžete jednoduše kliknout pravým tlačítkem **nástrojů** a pak zvolte položku **vložit nástrojů** z místní nabídky.)
+
+1. V **přidat prostředek** dialogu **nástrojů** v **typ prostředku** seznamu a pak zvolte **nový**.
+
+   Pokud symbol plus (**+**) se zobrazí vedle **nástrojů** typ prostředku, znamená to, že šablony nástrojů jsou k dispozici. Vyberte znaménko plus rozbalit seznam šablon, vyberte šablonu a zvolte **nový**.
+
+### <a name="to-convert-bitmaps-to-toolbar-resources"></a>Převod bitmap na prostředky panelu nástrojů
 
 1. Otevřete existující prostředek rastrového obrázku v [editor obrázků](../windows/image-editor-for-icons.md). (Pokud ještě rastrového obrázku není v souboru .rc, klikněte pravým tlačítkem na soubor .rc, zvolte **Import** z místní nabídky, přejděte na rastrový obrázek, které chcete přidat do souboru .rc a pak vyberte **otevřít**.)
 
@@ -112,31 +120,13 @@ Dialogové okno má následující vlastnosti:
 
 Identifikátory příkazů tlačítka na nový panel nástrojů můžete také změnit pomocí [okno vlastností](/visualstudio/ide/reference/properties-window).
 
-## <a name="create-move-and-edit-toolbar-buttons"></a>Vytváření, přesunutí a úprava tlačítek panelu nástrojů
+### <a name="to-create-move-and-edit-toolbar-buttons"></a>K vytváření, přesunutí a úprava tlačítek panelu nástrojů
 
-Můžete snadno vytvořit, přesunutí, kopírování a úprava tlačítek panelu nástrojů.
+Můžete snadno vytvořit, přesunutí, kopírování a úprava tlačítek panelu nástrojů:
 
-Ve výchozím nastavení je na pravém konci panelu nástrojů zobrazí tlačítko Nový nebo prázdný. Toto tlačítko můžete přesunout začnete upravovat. Při vytváření nového tlačítka další prázdné tlačítko vpravo se zobrazí upravená tlačítka. Při ukládání panelu nástrojů tlačítko prázdné se neuloží.
-
-Vlastnosti tlačítka panelu nástrojů jsou:
-
-|Vlastnost|Popis|
-|--------------|-----------------|
-|**ID**|Definuje ID pro tlačítko. Rozevírací seznam obsahuje běžné **ID** názvy.|
-|**Šířka**|Nastavuje šířku tlačítka. doporučuje se 16 pixelů.|
-|**Výška**|Nastaví výšku tlačítka. Výška tlačítka změní výšku všechna tlačítka na panelu nástrojů. doporučuje se 15 pixelů.|
-|**Zeptat se**|Definuje zprávy zobrazí ve stavovém řádku. Přidání \n a název Přidá popis tlačítka na toto tlačítko panelu nástrojů. Další informace najdete v tématu [vytvoření popisu](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|
-
-**Šířka** a **výška** platí pro všechna tlačítka. Rastrový obrázek, který se používá k vytvoření panelu nástrojů má maximální šířku 2048. Takže pokud nastavíte šířku tlačítka na 512, můžete mít jenom čtyři tlačítka a nastavte šířku na 513 lze pouze máte tři tlačítka.
-
-Zobrazte následující akce:
-
-### <a name="to-create-a-new-toolbar-button"></a>K vytvoření nového tlačítka panelu nástrojů
+#### <a name="to-create-a-new-toolbar-button"></a>K vytvoření nového tlačítka panelu nástrojů
 
 1. V [zobrazení prostředků](../windows/resource-view-window.md) rozbalte složku prostředků (například *Project1.rc*).
-
-   > [!NOTE]
-   > Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
 
 1. Rozbalte **nástrojů** a pak zvolte položku panelu nástrojů pro úpravy.
 
@@ -148,7 +138,7 @@ Zobrazte následující akce:
 
 Můžete také zkopírovat a vložit obrázek do nového tlačítka panelu nástrojů.
 
-### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Chcete-li přidat bitovou kopii na panelu nástrojů jako tlačítko
+#### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Chcete-li přidat bitovou kopii na panelu nástrojů jako tlačítko
 
 1. V [zobrazení prostředků](../windows/resource-view-window.md), otevřete poklepáním panelu nástrojů.
 
@@ -165,21 +155,21 @@ Můžete také zkopírovat a vložit obrázek do nového tlačítka panelu nást
 
    Obrázek se zobrazí na panelu nástrojů jako nového tlačítka.
 
-### <a name="to-move-a-toolbar-button"></a>Přesunutí tlačítka panelu nástrojů
+#### <a name="to-move-a-toolbar-button"></a>Přesunutí tlačítka panelu nástrojů
 
 V **panel nástrojů zobrazení** podokně přetáhněte tlačítko, které chcete přesunout do nového umístění na panelu nástrojů.
 
-### <a name="to-copy-buttons-from-a-toolbar"></a>Kopírování tlačítek z panelu nástrojů
+#### <a name="to-copy-buttons-from-a-toolbar"></a>Kopírování tlačítek z panelu nástrojů
 
 1. Podržte stisknutou klávesu **Ctrl** klíč.
 
 1. V **panel nástrojů zobrazení** podokně přetáhněte tlačítko buď nové místo na panelu nástrojů nebo do umístění na jiný panel nástrojů.
 
-### <a name="to-delete-a-toolbar-button"></a>Odstranění tlačítka panelu nástrojů
+#### <a name="to-delete-a-toolbar-button"></a>Odstranění tlačítka panelu nástrojů
 
 Tlačítko panelu nástrojů vyberte a přetáhněte ho z panelu nástrojů.
 
-### <a name="to-insert-or-remove-space-between-buttons-on-a-toolbar"></a>Vložit nebo odebrání mezer mezi tlačítky na panelu nástrojů
+#### <a name="to-insert-or-remove-space-between-buttons-on-a-toolbar"></a>Vložit nebo odebrání mezer mezi tlačítky na panelu nástrojů
 
 Obecně platí k vložení mezery mezi tlačítka, přetáhněte je od sebe na panelu nástrojů. Chcete-li odebrat místa, přetáhněte je směrem k sobě navzájem.
 
@@ -193,13 +183,13 @@ Obecně platí k vložení mezery mezi tlačítka, přetáhněte je od sebe na p
 > [!NOTE]
 > Pokud není žádný prostor vedle tlačítka, které jste přetažením směrem od a více než polovinu životnosti minulé vedle tlačítka, přetáhněte tlačítko **nástrojů** editor také vloží mezeru na opačnou stranu tlačítka, které jste přetažení.
 
-### <a name="to-change-the-properties-of-a-toolbar-button"></a>Chcete-li změnit vlastnosti tlačítka panelu nástrojů
+#### <a name="to-change-the-properties-of-a-toolbar-button"></a>Chcete-li změnit vlastnosti tlačítka panelu nástrojů
 
 1. V projektu jazyka C++ vyberte tlačítko panelu nástrojů.
 
 1. Zadejte nové ID v **ID** vlastnost [okno vlastností](/visualstudio/ide/reference/properties-window), nebo pomocí rozevíracího seznamu vyberte novou **ID**.
 
-### <a name="to-create-a-tool-tip-for-a-toolbar-button"></a>Vytvoření popisku tlačítka pro tlačítko toolbar
+#### <a name="to-create-a-tool-tip-for-a-toolbar-button"></a>Vytvoření popisku tlačítka pro tlačítko toolbar
 
 1. Vyberte tlačítko panelu nástrojů.
 
@@ -226,7 +216,7 @@ Pokud chcete tento efekt použití **nástrojů** editor, můžete nastavit **v�
 
 Knihovny MFC nebo ATL
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Editory prostředků](../windows/resource-editors.md)<br/>
 [Nabídky a ostatní prostředky](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)<br/>

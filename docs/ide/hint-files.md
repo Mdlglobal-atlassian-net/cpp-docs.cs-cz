@@ -11,18 +11,18 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: 0b3ca7c6b09d85cddb519242e63af0b8097e3fec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 44566408a3afcfee7a15299a5845b5af385aeef8
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558779"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320689"
 ---
 # <a name="hint-files"></a>Soubory pokynů
 
 A *informačního souboru* pomáhá sadě Visual Studio identifikátory Visual C++, jako jsou názvy funkcemi a makry interpretovat integrované vývojové prostředí (IDE). Při otevření projektu jazyka Visual C++, integrovaném vývojovém prostředí od *systém analýzy* analyzuje kód v každý zdrojový soubor v projektu a shromažďuje informace o každém identifikátoru. Rozhraní IDE použije tyto informace pro podporu funkcí, jako **zobrazení tříd** prohlížeče a **navigační panel**.
 
-Systém analýzy, která se používá v sadě Visual C++ 2010, rozumí syntaxe jazyka C/C++, ale můžete interpretuje výraz, který obsahuje makra. Příkaz může dojít k nesprávné interpretaci Pokud makro způsobí, že zdrojový kód není syntakticky správný, jak je uvedená. Může stát při kompilaci zdrojového kódu a preprocesorem syntakticky správný příkaz [– makro identifikátor](../preprocessor/hash-define-directive-c-cpp.md) s jeho definicí. Parsování systém funguje bez nutnosti sestavte projekt, protože používá soubory pokynů k interpretaci makra. Proto se procházení funkcí, jako **zobrazení tříd** je ihned k dispozici.
+Systém analýzy, která se používá v sadě Visual C++ 2010, rozumí syntaxe jazyka C/C++, ale můžete interpretuje výraz, který obsahuje makra. Příkaz může dojít k nesprávné interpretaci Pokud makro způsobí, že zdrojový kód není syntakticky správný, jak je uvedená. Příkaz se může stát syntakticky správný při kompilaci zdrojového kódu a nahradí preprocesor [identifikátor – makro](../preprocessor/hash-define-directive-c-cpp.md) s jeho definicí. Parsování systém funguje bez nutnosti sestavte projekt, protože používá soubory pokynů k interpretaci makra. Proto se procházení funkcí, jako **zobrazení tříd** je ihned k dispozici.
 
 Obsahuje uživatelsky přizpůsobitelnými informačního souboru *pomocné parametry*, které mají stejnou syntaxi jako definice maker jazyka C/C++. Visual C++ obsahuje integrovanou informačního souboru, který stačí pro většinu projektů, ale můžete vytvořit vlastní soubory pokynů k vylepšení způsobu, jakým Visual Studio zpracovává identifikátory.
 
@@ -123,7 +123,7 @@ V následující zdrojový kód, zadejte parametr `FormatWindowClassName()` funk
 static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
 ```
 
-**Strategie:** definice s hodnotou Null
+**Strategie:** Definice null
 
 Strategie v této situaci se zachází poznámky SAL, jako kdyby neexistovala. K tomuto účelu zadejte pokyn, jejichž náhradní řetězec má hodnotu null. V důsledku toho systém analýzy ignoruje poznámky a **zobrazení tříd** prohlížeče je nezobrazí. (Visual C++ obsahuje integrovanou informačního souboru, který skryje poznámky SAL.)
 
@@ -145,7 +145,7 @@ V následující zdrojový kód `START_NAMESPACE` – makro skryje levou složen
 #define START_NAMESPACE namespace MyProject {
 ```
 
-**Strategie:** přímé kopírování
+**Strategie:** Kopírování s přímým přístupem
 
 Pokud sémantiku makra jsou důležité pro uživatele z procházení, vytvoření pomocného parametru, který je stejný jako makra. Systém analýzy přeloží makra na definice v souboru nápovědy.
 
@@ -175,7 +175,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
    return( pMap ); }
 ```
 
-**Strategie:** identifikovat prvky mapy
+**Strategie:** Identifikace prvků mapy
 
 Zadejte pomocné parametry pro spuštění, střední (pokud existuje) a ukončení prvky objektu map. Použít náhradní řetězce speciální mapy, `@<`, `@=`, a `@>`. Další informace najdete v tématu `Syntax` v tomto tématu.
 
@@ -204,7 +204,7 @@ Obsahuje následující zdrojový kód `START_NAMESPACE` makro, které určuje z
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP
 ```
 
-**Strategie:** přímé kopírování
+**Strategie:** Kopírování s přímým přístupem
 
 Pokyny pro vytvoření `START_NAMESPACE` a `BEGIN_CATEGORY_MAP` makra a pak vytvořte nápovědu pro `NSandMAP` makro, které je stejný, jak je uvedeno výše pro zdrojový kód. Můžete také složené – makro se skládá pouze rušivé makra a prázdné znaky, můžete definovat pokyn, jejichž řetězci pro nahrazení je definice null.
 
@@ -226,7 +226,7 @@ Některé makra lze interpretovat analýzy systému, ale zdrojový kód je obtí
 #define STDMETHOD(methodName) HRESULT (STDMETHODCALLTYPE * methodName)
 ```
 
-**Strategie:** zjednodušení
+**Strategie:** Zjednodušení
 
 Vytvoření pomocného parametru, který zobrazuje jednodušší definici makra.
 

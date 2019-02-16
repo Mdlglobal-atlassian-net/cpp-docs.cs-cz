@@ -1,6 +1,6 @@
 ---
 title: Binární Editor (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.binary.F1
 - vc.editors.binary
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: 06c4a224b745f5aba8c9105d32489f8ca3109e1c
-ms.sourcegitcommit: b488462a6e035131121e6f32d8f3b108cc798b5e
+ms.openlocfilehash: 2a3ff3d89c809f57ea3ddbd70d5664fc8d13cec4
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55293595"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320819"
 ---
 # <a name="binary-editor-c"></a>Binární Editor (C++)
 
@@ -35,33 +35,33 @@ ms.locfileid: "55293595"
 
 Binární editor umožňuje upravovat libovolný prostředek na binární úrovni v šestnáctkovém formátu nebo ve formátu ASCII. Můžete také použít [najít – příkaz](/visualstudio/ide/reference/find-command) k vyhledání řetězce ASCII nebo šestnáctkové bajty. Měli byste použít **binární** editor jenom v případě, že potřebujete zobrazit nebo provést menší změny vlastní prostředky nebo typy prostředků nejsou podporovány prostředím Visual Studio.
 
-Otevřete **binární Editor**, zvolte nejprve **souboru** > **nový** > **souboru** v hlavní nabídce vyberte soubor, kterou chcete upravit a potom klikněte na rozevírací šipku vedle položky **otevřít** a tlačítko **otevřít v** > **binární Editor**.
+Otevřete **binární Editor**, zvolte nejprve **souboru** > **nový** > **souboru** v hlavní nabídce vyberte soubor, kterou chcete upravit a pak vyberte rozevírací šipku vedle položky **otevřít** a tlačítko **otevřít v** > **binární Editor**.
 
 > [!CAUTION]
 > Úprava prostředků jako dialogová okna, obrázky nebo nabídky pomocí binárního editoru není bezpečná. Nesprávné úpravy mohou prostředek poškodit a učinit jej nečitelným v jeho nativním editoru.
 
+![Binary Editor](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
+Binární Data pro dialogové okno se zobrazí v binárním editoru
+
+Jenom konkrétní hodnoty ASCII jsou reprezentovány v binárním editoru (0x20 prostřednictvím 0x7E). Rozšířené znaky zobrazují jako tečky v části hodnotu ASCII binární editor (pravý panel). "Tisknutelné" znaky jsou hodnoty ASCII 32 prostřednictvím 126.
+
 > [!TIP]
 > Při použití **binární** editoru v mnoha případech je můžete kliknout pravým tlačítkem na Zobrazit místní nabídku příkazů specifických pro prostředky. Dostupné příkazy závisí na položce, na kterou právě ukazuje kurzor. Například pokud klepnete na tlačítko při přejdete **binární** editor se zvolenými šestnáctkovými hodnotami, v místní nabídce se zobrazuje **Vyjmout**, **kopírování**, a **vložit**  příkazy.
 
-## <a name="binary-editor-how-to"></a>Postupy binární Editor
+## <a name="how-to"></a>Postupy
 
-S **binární** editoru, najdete v následujících akcí:
+**Binární** editor umožňuje:
 
-### <a name="to-open-a-resource-for-binary-editing"></a>Chcete-li otevřít prostředek pro binární úpravy
-
-#### <a name="to-open-a-windows-desktop-resource"></a>Chcete-li otevřít prostředek klasické pracovní plochy Windows
+### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>Chcete-li otevřít prostředek klasické pracovní plochy Windows pro binární úpravy
 
 1. V [zobrazení prostředků](../windows/resource-view-window.md), vyberte soubor konkrétní prostředek, který chcete upravit.
-
-   > [!NOTE]
-   > Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
 
 1. Klikněte pravým tlačítkem na zdroj a klikněte na tlačítko **Open binární Data** z místní nabídky.
 
    > [!NOTE]
    > Pokud používáte [zobrazení prostředků](../windows/resource-view-window.md) okno otevřít prostředek ve formátu, že Visual Studio nedokáže rozpoznat (například RCDATA nebo vlastní prostředek), prostředek se automaticky otevře v **binární** editoru.
 
-#### <a name="to-open-a-managed-resource"></a>Otevřete spravovaný prostředek
+### <a name="to-open-a-managed-resource-for-binary-editing"></a>Otevřete spravovaný prostředek pro binární úpravy
 
 1. V **Průzkumníka řešení**, vyberte soubor konkrétní prostředek, který chcete upravit.
 
@@ -72,15 +72,10 @@ S **binární** editoru, najdete v následujících akcí:
    > [!NOTE]
    > Můžete použít [editor obrázků](../windows/image-editor-for-icons.md) a [binární editor](binary-editor.md) pro práci se soubory prostředků ve spravovaných projektech. Všechny spravované prostředky, které chcete upravit, musí být propojené prostředky. Editory prostředků Visual Studio nepodporují úpravy vložených prostředků.
 
-![Binary Editor](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
-Binární Data pro dialogové okno se zobrazí v binárním editoru
-
-Jenom konkrétní hodnoty ASCII jsou reprezentovány v binárním editoru (0x20 prostřednictvím 0x7E). Rozšířené znaky zobrazují jako tečky v části hodnotu ASCII binární editor (pravý panel). "Tisknutelné" znaky jsou hodnoty ASCII 32 prostřednictvím 126.
-
 > [!NOTE]
 > Pokud chcete použít **binární** editor prostředku už upravována v jiném okně editoru nejprve zavřít ostatní okna editoru.
 
-### <a name="to-edit-a-resource-in-the-binary-editor"></a>Úprava prostředků v binárním editoru
+### <a name="to-edit-a-resource"></a>Chcete-li upravit prostředek
 
 1. Vyberte bajtů, které chcete upravit.
 
@@ -101,9 +96,7 @@ Můžete vyhledat řetězce ASCII nebo šestnáctkové bajty. Například pokud 
 
 1. V **najít** pole, vyberte předchozí hledaný řetězec z rozevíracího seznamu nebo zadejte data, které chcete najít.
 
-1. Vyberte některou z **najít** možnosti.
-
-1. Vyberte **najít další**.
+1. Vyberte některou z **najít** možnosti a vyberte **najít další**.
 
 ### <a name="to-create-a-new-custom-or-data-resource"></a>Chcete-li vytvořit nový vlastní nebo datový prostředek
 
@@ -129,12 +122,6 @@ Dalším způsobem, jak vytvořit vlastní prostředek se má importovat jako vl
 
 > [!NOTE]
 > Vytvoření nového vlastního prostředku nebo data prostředků vyžaduje Win32.
-
-## <a name="managed-resources"></a>Spravované prostředky
-
-Můžete použít [editor obrázků](../windows/image-editor-for-icons.md) a **binární** editor pro práci se soubory prostředků ve spravovaných projektech. Všechny spravované prostředky, které chcete upravit, musí být propojené prostředky. Editory prostředků Visual Studio nepodporují úpravy vložených prostředků.
-
-Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="requirements"></a>Požadavky
 

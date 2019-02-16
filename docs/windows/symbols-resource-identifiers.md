@@ -1,6 +1,6 @@
 ---
-title: 'Symboly: Identifikátory prostředků (C++)'
-ms.date: 11/04/2016
+title: Identifikátory prostředků (symbolů) (C++)
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.symbol.identifiers
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - symbols [C++], editing
 - resource editors [C++], resource symbols
 ms.assetid: 8fccc09a-0237-4a65-b9c4-57d60c59e324
-ms.openlocfilehash: abe6297d74df4941328d3e606fb3b0f646d36265
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7359fdfd1007cb49025908ffea51093622943052
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529997"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320494"
 ---
-# <a name="symbols-resource-identifiers-c"></a>Symboly: Identifikátory prostředků (C++)
+# <a name="resource-identifiers-symbols-c"></a>Identifikátory prostředků (symbolů) (C++)
 
 Symbol je identifikátor prostředku (ID), který se skládá ze dvou částí: textový řetězec (název symbolu) mapovat na celočíselnou hodnotu (hodnoty symbolů). Příklad:
 
@@ -36,27 +36,11 @@ Když vytvoříte nový prostředek nebo prostředek objektu [editory prostředk
 
 S růstem vaší aplikace v velikost i sofistikovanější postupy zločinců se počet zdrojů a symbolů. Sledování velký počet symbolů, které jsou rozmístěny v několika souborů. může být obtížné. [Symboly prostředků – dialogové okno](../windows/resource-symbols-dialog-box.md) zjednodušuje správu symbol tím, že nabízí centrální nástroj, pomocí kterého můžete:
 
-- [Zobrazení symbolů prostředků](../windows/viewing-resource-symbols.md)
+- [Vytváření symbolů](../windows/creating-new-symbols.md)
 
-- [Vytváření nových symbolů](../windows/creating-new-symbols.md)
-
-- [Změna nepřiřazených symbolů](../windows/changing-unassigned-symbols.md)
-
-- [Odstranění nepřiřazených symbolů](../windows/deleting-unassigned-symbols.md)
-
-- [Otevření editoru prostředků pro daný Symbol](../windows/opening-the-resource-editor-for-a-given-symbol.md)
-
-- [Změna symbolu nebo názvu symbolu (ID)](../windows/changing-a-symbol-or-symbol-name-id.md)
-
-- [Změna číselné hodnoty symbolu](../windows/changing-a-symbol-s-numeric-value.md)
-
-- [Změna názvů hlavičkových souborů symbolu](../windows/changing-the-names-of-symbol-header-files.md)
-
-- [Zahrnout sdílených (jen pro čtení) nebo vypočtených symbolů](../windows/including-shared-read-only-or-calculated-symbols.md)
+- [Správa symbolů](../windows/changing-a-symbol-or-symbol-name-id.md)
 
 - [Zobrazit ID předdefinovaných symbolů](../windows/predefined-symbol-ids.md)
-
-Informace o přidávání prostředků do spravovaných projektů, najdete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -64,6 +48,6 @@ Win32
 
 ## <a name="see-also"></a>Viz také
 
-[Postupy: Vyhledávání symbolů v prostředcích](../windows/how-to-search-for-symbols-in-resources.md)<br/>
+[Práce se zdrojovými soubory](../windows/working-with-resource-files.md)<br/>
+[Soubory prostředků](../windows/resource-files-visual-studio.md)<br/>
 [Editory prostředků](../windows/resource-editors.md)<br/>
-[Soubory prostředků](../windows/resource-files-visual-studio.md)
