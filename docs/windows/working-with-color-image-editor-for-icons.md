@@ -1,6 +1,6 @@
 ---
-title: Práce s barvou (editor obrázků pro ikony)
-ms.date: 11/04/2016
+title: 'Postupy: Pracovat s barvou'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.color
 - vc.editors.customcolorselector
@@ -62,14 +62,14 @@ helpviewer_keywords:
 - images [C++], colors
 - colors [C++], inverting
 ms.assetid: d34ff96f-241d-494f-abdd-13811ada8cd3
-ms.openlocfilehash: f2ac2cf7eaab0372b9cf349e1544fc5b3426dee6
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: e91767083f54df0b1b30833337cfed603dc331ff
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850364"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336641"
 ---
-# <a name="working-with-color-image-editor-for-icons"></a>Práce s barvou (editor obrázků pro ikony)
+# <a name="how-to-work-with-color"></a>Postupy: Pracovat s barvou
 
 **Editor obrázků** obsahuje řadu funkcí, které konkrétně zpracování a přizpůsobení barev. Můžete nastavit barvu popředí nebo pozadí, vyplnění ohraničené oblasti barvou nebo vybrat barvu na obrázku, který má použít jako aktuální barvu popředí nebo pozadí. Pomocí nástrojů v [panelu nástrojů editoru obrázků](../windows/toolbar-image-editor-for-icons.md) spolu s palety barev v **barvy** okno pro vytvoření bitové kopie.
 
@@ -83,147 +83,6 @@ Při práci s 256 barvami ikonu a obrázky kurzor **barvy** vlastnost v [okno vl
 Můžete také vytvořit Image true color. Však nejsou zobrazeny true color ukázky úplné paletě v **barvy** okno; zobrazí se pouze v oblasti indikátor barvy popředí nebo pozadí. True barvy se vytvoří s použitím [dialogové okno Výběr vlastních barev](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md).
 
 Můžete uložit vlastní barvy palety na disku a načítat je znovu podle potřeby. Palety barev, které jste naposledy použili je uložen v registru a automaticky načte při dalším spuštění sady Visual Studio.
-
-## <a name="select-foreground-or-background-colors"></a>Výběr barev popředí nebo pozadí
-
-S výjimkou **gumy**, nástroje na **Editor obrázků** draw nástrojů s aktuální barvu popředí nebo pozadí při stisknutí tlačítka myši doleva nebo doprava, v uvedeném pořadí.
-
-### <a name="to-select-a-foreground-color"></a>Vyberte barvu popředí
-
-Levé tlačítko myši, vyberte na požadovanou barvu **barvy** palety.
-
-### <a name="to-select-a-background-color"></a>Výběr barvy pozadí
-
-Pravé tlačítko myši, vyberte na požadovanou barvu **barvy** palety.
-
-## <a name="filling-a-bounded-area-of-an-image-with-a-color"></a>Vyplnění ohraničené oblasti obrázku barvou
-
-Editor obrázků poskytuje **vyplnit** nástroj pro naplnění všechny uzavřené oblast obrázku s aktuální vykreslení barvy nebo aktuální barvu pozadí.
-
-> [!TIP]
-> Popisy tlačítek se zobrazí při přejeďte kurzorem přes tlačítko panelu nástrojů. Tyto tipy mohou pomoci identifikovat funkce každé tlačítko.
-
-### <a name="to-use-the-fill-tool"></a>Použití nástroje výplně
-
-1. Na **Editor obrázků** nástrojů (nebo **Image** nabídce **nástroje** příkaz), vyberte **vyplnit** nástroj.
-
-1. V případě potřeby vyberte vykreslení barvy: V [barvy palety](../windows/colors-window-image-editor-for-icons.md), vyberte levé tlačítko myši pro výběr barev popředí nebo na tlačítko pravým tlačítkem myši a vyberte barvu pozadí.
-
-1. Přesunout **výplně** nástroj k oblasti, které chcete vyplnit.
-
-1. Vyberte tlačítko myši doleva nebo doprava naplnění barvu popředí nebo pozadí.
-
-## <a name="pick-up-a-color-from-an-image-to-use-elsewhere"></a>Výběr barvy z obrázku na jinde
-
-**Vyberte barvu**, nebo barva vyzvednutí, nástroj vytvoří libovolnou barvu na obrázku aktuální barvu popředí nebo pozadí, v závislosti na tom, zda stisknutím levé nebo pravé tlačítko myši. Chcete-li zrušit **vyberte barvu** nástroj, zvolte jiný nástroj.
-
-> [!TIP]
-> Popisy tlačítek se zobrazí při přejeďte kurzorem přes tlačítko panelu nástrojů. Tyto tipy mohou pomoci identifikovat funkce každé tlačítko.
-
-### <a name="to-pick-up-a-color"></a>Aby se získaly barvy
-
-1. Na **Editor obrázků** nástrojů (nebo z **Image** nabídce **nástroje** příkaz), vyberte **vyberte barvu** nástroj.
-
-1. Vyberte barvu, kterou chcete vybrat z této image.
-
-   > [!NOTE]
-   > Po výběru barvy, **Image** nástroj znovu aktivuje naposledy použité editoru.
-
-1. Kreslení pomocí levé tlačítko myši pro barvu popředí nebo pravé tlačítko myši pro barvu pozadí.
-
-## <a name="choose-a-transparent-or-opaque-background"></a>Zvolte průhledného nebo neprůhledného pozadí
-
-Při přesunutí nebo kopírování výběru z bitové kopie, žádné pixelech ve výběru, které odpovídají barvě pozadí jsou ve výchozím nastavení transparentní a že není skryl pixelů v cílovém umístění.
-
-Můžete přepnout z průhledné pozadí (výchozí) do neprůhledné pozadí a zpět. Při použití nástroje pro výběr, **průhledné pozadí** a **neprůhledné pozadí** možnosti se zobrazí **možnost** selektor na **Editor obrázků** nástrojů (jak je vidět níže).
-
-![Možnosti pozadí &#45; neprůhledné nebo průhledné](../windows/media/vcimageeditoropaqtranspback.gif "možnosti pozadí &#45; neprůhledné nebo průhledné")<br/>
-**Možnosti transparentní a neprůhledné** na **panelu nástrojů editoru obrázků**
-
-### <a name="to-switch-between-a-transparent-and-opaque-background"></a>Chcete-li přepnout mezi transparentní a neprůhledné pozadí
-
-V **Editor obrázků** nástrojů, vyberte **možnost** pro výběr a klikněte na tlačítko na pozadí odpovídající:
-
-   - `Opaque Background (O)`: Existující bitová kopie je skryté ve všech částech výběru.
-
-   - `Transparent Background (T)`: Existující obrázek ukazuje prostřednictvím částí výběru, které odpovídají barvě pozadí.
-
-   \- nebo –
-
-Na **Image** nabídky, zaškrtněte nebo zrušte **kreslení neprůhledných**.
-
-Při výběru je již platná, chcete-li změnit, které části obrázku je transparentní, můžete změnit barvu pozadí.
-
-## <a name="invert-the-colors-in-a-selection"></a>Invertování barev ve výběru
-
-**Image** editor poskytuje pohodlný způsob, jak Invertovat barvy ve vybrané části obrázku tak poznáte podle zobrazení obrázku s obráceným barvami.
-
-### <a name="to-invert-colors-in-the-current-selection"></a>K invertování barev v aktuálním výběru
-
-Na **Image** nabídce vyberte možnost **Invertovat barvy**.
-
-## <a name="customize-or-change-colors"></a>Přizpůsobení nebo změna barev
-
-**Image** editoru **barvy** otevření zobrazí standardní 16 barev palety. Zobrazené barvy můžete také vytvořit vlastní barvy. Pak můžete [uložit a načíst vlastní paletu barev](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).
-
-**Výběr vlastní barvy** dialogové okno umožňuje přizpůsobit barvy, můžete použít pro vaši image. Jsou zahrnuty následující vlastnosti:
-
-|Vlastnost|Popis|
-|--------------------------|--------------------------|
-|**Barevný přechod zobrazení**|Změní hodnoty vybraná barva. Umístěte na křížek na barvu, kterou chcete změnit. Potom přesuňte posuvník nahoru nebo dolů změnu světelnost nebo hodnoty RGB barvy.|
-|**Panel světelnost**|Nastaví světelnost pro barvu vyberte v **přechodu barevné zobrazení** pole. Vyberte a přetáhněte bílé šipka nahoru na panelu pro větší jas nebo méně. **Barva** zobrazí vámi zvolená barva a účinnosti světelnost nastavíte.|
-|**Barva**|Zobrazí seznam (hodnota barvy kolečko) odstín barvy, které definujete. Hodnoty v rozsahu od 0 do 240, kde 0 je červené, 60 je žlutý, je 120 zelená, 180 je azurová, 200 je purpurová a 240 je modrá.|
-|**HUE**|Zobrazí seznam (hodnota barvy kolečko) odstín barvy, které definujete. Hodnoty v rozsahu od 0 do 240, kde 0 je červené, 60 je žlutý, je 120 zelená, 180 je azurová, 200 je purpurová a 240 je modrá.|
-|**Po Ne**|Určuje hodnotu sytost barev, které definujete. Sytost je množství barvy v zadané odstín. Hodnoty v rozmezí 0 až 240.|
-|**Světelnost**|Zobrazí seznam světelnost (jas) barvy, které definujete. Hodnoty v rozmezí 0 až 240.|
-|**Červená**|Určuje červená barva, kterou definujete. Hodnoty v rozsahu od 0 do 255.|
-|**Zelená**|Určuje hodnotu zelenou barvu, kterou definujete. Hodnoty v rozsahu od 0 do 255.|
-|**Modrá**|Určuje modré hodnotu barvy, které definujete. Hodnoty v rozsahu od 0 do 255.|
-
-### <a name="to-change-colors-on-the-colors-palette"></a>Chcete-li změnit barvy palety barev
-
-1. Z **Image** nabídce zvolte **přizpůsobit barvy**.
-
-1. V **výběr vlastní barvy** dialogového okna, definovat barvu tak, že zadáte hodnoty vyjadřující příslušná textová pole nebo jejich výběr barvy v **přechodu barevné zobrazení** pole.
-
-1. Nastavte světelnost přesunutím posuvníku **světelnost** panelu.
-
-1. Jsou rozloženy mnoho vlastních barev. Pokud chcete plnou barvu nejblíže tónovaná barva, dvakrát klikněte **barva** pole.
-
-   Pokud se později rozhodnete, chcete, aby tónovaná barva, nastavte posuvník **světelnost** pruhu nebo přesunutí mezi vlasy v **přechodu barevné zobrazení** obnovíte rozklad pole.
-
-1. Vyberte **OK** přidáte novou barvu.
-
-## <a name="save-and-load-different-color-palettes"></a>Ukládání a načítání různých barevných palet
-
-Můžete uložit a načíst **barvy** paletu, která obsahuje vlastní barvy. (Ve výchozím nastavení, **barvy** palety naposledy použité se vyplní automaticky, když spustíte Visual Studio.)
-
-> [!TIP]
-> Protože **Image** editor neobsahuje žádný způsob, jak obnovit výchozí **barvy** palety, měli byste uložit výchozí **barvy** palety pod názvem, jako  *Standard.PAL* nebo *default.pal* tak, aby je snadno obnovit výchozí nastavení.
-
-Použít **načíst barvy palety** dialogové okno Načíst palet barev speciální pro použití v projektu jazyka C++. Jsou zahrnuty následující vlastnosti:
-
-|Vlastnost|Popis|
-|-----------------|-----------------|
-|**Oblast hledání**|Určuje umístění, ve které chcete najít soubor nebo složku. Vyberte šipku a vybrat jiné umístění nebo vyberte ikonu složky na panelu nástrojů pro posun úrovně výš.|
-|**Název souboru**|Poskytuje prostor pro zadání názvu souboru, který chcete otevřít. Pokud chcete rychle vyhledat soubor, který jste dříve otevřeli, vyberte název souboru v rozevíracím seznamu, pokud je k dispozici.<br/><br/>Pokud hledáte souboru, můžete použít hvězdičky (*) jako zástupné znaky. Například můžete zadat \*.\* zobrazíte seznam všech souborů. Můžete také zadat úplnou cestu k souboru, například C:\My Documents\MyColorPalette.pal nebo \\\NetworkServer\MyFolder\MyColorPalette.pal.|
-|**Soubory typu**|Seznam typů souborů, které se zobrazí. Paleta (* .pal) je výchozí typ souboru pro palet barev.|
-
-### <a name="to-save-a-custom-colors-palette"></a>Chcete-li uložit vlastní barvy palety
-
-1. Z **Image** nabídce zvolte **Uložit paletu**.
-
-1. Přejděte do adresáře, kam chcete uložit paletu a zadejte název pro paletě.
-
-1. Vyberte **Uložit**.
-
-### <a name="to-load-a-custom-colors-palette"></a>Načíst vlastní barvy palety
-
-1. Z **Image** nabídce zvolte **načíst paletu**.
-
-1. V **načíst barvy palety** dialogové okno, přejděte na správný adresář a vyberte paletu chcete načíst. **Barva** palety se uloží s příponou souboru .pal.
-
-## <a name="colors-window"></a>Okno Barvy
 
 **Barvy** okno má dvě části:
 
@@ -239,29 +98,146 @@ Použít **načíst barvy palety** dialogové okno Načíst palet barev speciál
 
 Můžete použít **barvy** okna [panelu nástrojů editoru obrázků](../windows/toolbar-image-editor-for-icons.md).
 
-### <a name="to-display-the-colors-window"></a>Chcete-li zobrazit okno barvy
+- Pro zobrazení **barvy** okna, klikněte pravým tlačítkem v **Editor obrázků** podokně a zvolte **zobrazit okno barev**, nebo vyberte **zobrazit okno barev**na [nabídka obrázku](../windows/image-menu-image-editor-for-icons.md).
 
-Klikněte pravým tlačítkem **Editor obrázků** podokně a zvolte **zobrazit okno barev** z místní nabídky.
+- Chcete-li skrýt **barvy** okna, Odepnout okno (Tato akce umožní okna automatické skrývání až nebude používán) nebo vyberte **Zavřít** tlačítko.
+
+**Barvy** otevření zobrazí standardní 16 barev palety. Zobrazené barvy můžete také vytvořit vlastní barvy. Pak můžete uložit a načíst vlastní paletu barev.
+
+**Výběr vlastní barvy** dialogové okno umožňuje přizpůsobit barvy, můžete použít pro vaši image. Jsou zahrnuty následující vlastnosti:
+
+|Vlastnost|Popis|
+|--------------------------|--------------------------|
+|**Barevný přechod zobrazení**|Změní hodnoty vybraná barva. Umístěte na křížek na barvu, kterou chcete změnit. Potom přesuňte posuvník nahoru nebo dolů změnu světelnost nebo hodnoty RGB barvy.|
+|**Panel světelnost**|Nastaví světelnost pro barvu vyberte v **přechodu barevné zobrazení** pole. Vyberte a přetáhněte bílé šipka nahoru na panelu pro větší jas nebo méně. **Barva** zobrazí vámi zvolená barva a účinnosti světelnost nastavíte.|
+|**Barva**|Zobrazí seznam (hodnota barvy kolečko) odstín barvy, které definujete. Hodnoty v rozsahu od 0 do 240, kde 0 je červené, 60 je žlutý, je 120 zelená, 180 je azurová, 200 je purpurová a 240 je modrá.|
+|**HUE**|Zobrazí seznam (hodnota barvy kolečko) odstín barvy, které definujete. Hodnoty v rozsahu od 0 do 240, kde 0 je červené, 60 je žlutý, je 120 zelená, 180 je azurová, 200 je purpurová a 240 je modrá.|
+|**Po Ne**|Určuje hodnotu sytost barev, které definujete. Sytost je množství barvy v zadané odstín. Hodnoty v rozmezí 0 až 240.|
+|**Světelnost**|Zobrazí seznam světelnost (jas) barvy, které definujete. Hodnoty v rozmezí 0 až 240.|
+|**Červená**|Určuje červená barva, kterou definujete. Hodnoty v rozsahu od 0 do 255.|
+|**Zelená**|Určuje hodnotu zelenou barvu, kterou definujete. Hodnoty v rozsahu od 0 do 255.|
+|**Modrá**|Určuje modré hodnotu barvy, které definujete. Hodnoty v rozsahu od 0 do 255.|
+
+Můžete uložit a načíst **barvy** paletu, která obsahuje vlastní barvy. (Ve výchozím nastavení, **barvy** palety naposledy použité se vyplní automaticky, když spustíte Visual Studio.)
+
+> [!TIP]
+> Protože **Image** editor neobsahuje žádný způsob, jak obnovit výchozí **barvy** palety, měli byste uložit výchozí **barvy** palety pod názvem, jako  *Standard.PAL* nebo *default.pal* tak, aby je snadno obnovit výchozí nastavení.
+
+Použít **načíst barvy palety** dialogové okno Načíst palet barev speciální pro použití v projektu jazyka C++. Jsou zahrnuty následující vlastnosti:
+
+|Vlastnost|Popis|
+|-----------------|-----------------|
+|**Oblast hledání**|Určuje umístění, ve které chcete najít soubor nebo složku. Vyberte šipku a vybrat jiné umístění nebo vyberte ikonu složky na panelu nástrojů pro posun úrovně výš.|
+|**Název souboru**|Poskytuje prostor pro zadání názvu souboru, který chcete otevřít. Pokud chcete rychle vyhledat soubor, který jste dříve otevřeli, vyberte název souboru v rozevíracím seznamu, pokud je k dispozici.<br/><br/>Pokud hledáte souboru, můžete použít hvězdičky (*) jako zástupné znaky. Například můžete zadat \*.\* zobrazíte seznam všech souborů. Můžete také zadat úplnou cestu k souboru, například C:\My Documents\MyColorPalette.pal nebo \\\NetworkServer\MyFolder\MyColorPalette.pal.|
+|**Soubory typu**|Seznam typů souborů, které se zobrazí. Paleta (* .pal) je výchozí typ souboru pro palet barev.|
+
+## <a name="how-to"></a>Postupy
+
+### <a name="to-select-foreground-or-background-colors"></a>Pro výběr barev popředí nebo pozadí
+
+S výjimkou **gumy**, nástroje na **Editor obrázků** draw nástrojů s aktuální barvu popředí nebo pozadí při stisknutí tlačítka myši doleva nebo doprava, v uvedeném pořadí.
+
+- Vyberte barvu popředí s levým tlačítkem myši, vyberte na požadovanou barvu **barvy** palety.
+
+- Vybrat barvu pozadí s pravým tlačítkem myši, vyberte na požadovanou barvu **barvy** palety.
+
+### <a name="to-fill-a-bounded-area-of-an-image-with-a-color"></a>Vyplnění ohraničené oblasti obrázku barvou
+
+Editor obrázků poskytuje **vyplnit** nástroj pro naplnění všechny uzavřené oblast obrázku s aktuální vykreslení barvy nebo aktuální barvu pozadí.
+
+> [!TIP]
+> Popisy tlačítek se zobrazí při přejeďte kurzorem přes tlačítko panelu nástrojů. Tyto tipy mohou pomoci identifikovat funkce každé tlačítko.
+
+### <a name="to-use-the-fill-tool"></a>Použití nástroje výplně
+
+1. Na **Editor obrázků** nástrojů (nebo použijte **Image** > **nástroje**), vyberte **vyplnit** nástroj.
+
+1. V případě potřeby vyberte vykreslení barvy: V [barvy palety](../windows/colors-window-image-editor-for-icons.md), vyberte levé tlačítko myši pro výběr barev popředí nebo na tlačítko pravým tlačítkem myši a vyberte barvu pozadí.
+
+1. Přesunout **výplně** nástroj k oblasti, které chcete vyplnit.
+
+1. Vyberte tlačítko myši doleva nebo doprava naplnění barvu popředí nebo pozadí.
+
+### <a name="to-pick-up-a-color-from-an-image-to-use-elsewhere"></a>Aby se získaly barvy z obrázku použít jinde
+
+**Vyberte barvu**, nebo barva vyzvednutí, nástroj vytvoří libovolnou barvu na obrázku aktuální barvu popředí nebo pozadí, v závislosti na tom, zda stisknutím levé nebo pravé tlačítko myši. Chcete-li zrušit **vyberte barvu** nástroj, zvolte jiný nástroj.
+
+> [!TIP]
+> Popisy tlačítek se zobrazí při přejeďte kurzorem přes tlačítko panelu nástrojů. Tyto tipy mohou pomoci identifikovat funkce každé tlačítko.
+
+#### <a name="to-pick-up-a-color"></a>Aby se získaly barvy
+
+1. Na **Editor obrázků** nástrojů (nebo z **Image** nabídce **nástroje** příkaz), vyberte **vyberte barvu** nástroj.
+
+1. Vyberte barvu, kterou chcete vybrat z této image.
+
+   > [!NOTE]
+   > Po výběru barvy, **Image** nástroj znovu aktivuje naposledy použité editoru.
+
+1. Kreslení pomocí levé tlačítko myši pro barvu popředí nebo pravé tlačítko myši pro barvu pozadí.
+
+### <a name="to-choose-the-background"></a>Chcete-li zvolit na pozadí
+
+Při přesunutí nebo kopírování výběru z bitové kopie, žádné pixelech ve výběru, které odpovídají barvě pozadí jsou ve výchozím nastavení transparentní a že není skryl pixelů v cílovém umístění.
+
+Můžete přepnout z průhledné pozadí (výchozí) do neprůhledné pozadí a zpět. Při použití nástroje pro výběr, **průhledné pozadí** a **neprůhledné pozadí** možnosti se zobrazí **možnost** selektor na **Editor obrázků** nástrojů (jak je vidět níže).
+
+![Možnosti pozadí &#45; neprůhledné nebo průhledné](../windows/media/vcimageeditoropaqtranspback.gif "možnosti pozadí &#45; neprůhledné nebo průhledné")<br/>
+**Možnosti transparentní a neprůhledné** na **panelu nástrojů editoru obrázků**
+
+#### <a name="to-switch-between-a-transparent-and-opaque-background"></a>Chcete-li přepnout mezi transparentní a neprůhledné pozadí
+
+V **Editor obrázků** nástrojů, vyberte **možnost** pro výběr a klikněte na tlačítko na pozadí odpovídající:
+
+- `Opaque Background (O)`: Existující bitová kopie je skryté ve všech částech výběru.
+
+- `Transparent Background (T)`: Existující obrázek ukazuje prostřednictvím částí výběru, které odpovídají barvě pozadí.
 
    \- nebo –
 
-Vyberte **zobrazit okno barev** na [nabídka obrázku](../windows/image-menu-image-editor-for-icons.md).
+Na **Image** nabídky, zaškrtněte nebo zrušte **kreslení neprůhledných**.
 
-### <a name="to-hide-the-colors-window"></a>Skrytí okna barvy
+Při výběru je již platná, chcete-li změnit, které části obrázku je transparentní, můžete změnit barvu pozadí.
 
-Odepnete okna. Tato akce umožní automaticky skrýt okno, pokud není používán.
+### <a name="to-invert-the-colors-in-a-selection"></a>K invertování barev ve výběru
 
-\- nebo –
+**Image** editor poskytuje pohodlný způsob, jak Invertovat barvy ve vybrané části obrázku tak poznáte podle zobrazení obrázku s obráceným barvami.
 
-Vyberte **Zavřít** tlačítko.
+K invertování barev v aktuálním výběru na **Image** nabídce vyberte možnost **Invertovat barvy**.
 
-Informace o přidávání prostředků do spravovaných projektů naleznete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
+### <a name="to-customize-or-change-colors-on-the-colors-palette"></a>K přizpůsobení nebo změna barev v paletě barvy
+
+1. Z **Image** nabídce zvolte **přizpůsobit barvy**.
+
+1. V **výběr vlastní barvy** dialogového okna, definovat barvu tak, že zadáte hodnoty vyjadřující příslušná textová pole nebo jejich výběr barvy v **přechodu barevné zobrazení** pole.
+
+1. Nastavte světelnost přesunutím posuvníku **světelnost** panelu.
+
+1. Jsou rozloženy mnoho vlastních barev. Pokud chcete plnou barvu nejblíže tónovaná barva, dvakrát klikněte **barva** pole.
+
+   Pokud se později rozhodnete, chcete, aby tónovaná barva, nastavte posuvník **světelnost** pruhu nebo přesunutí mezi vlasy v **přechodu barevné zobrazení** obnovíte rozklad pole.
+
+1. Vyberte **OK** přidáte novou barvu.
+
+### <a name="to-save-a-custom-colors-palette"></a>Chcete-li uložit vlastní barvy palety
+
+1. Z **Image** nabídce zvolte **Uložit paletu**.
+
+1. Přejděte do adresáře, kam chcete uložit paletu a zadejte název pro paletě.
+
+1. Vyberte **Uložit**.
+
+### <a name="to-load-a-custom-colors-palette"></a>Načíst vlastní barvy palety
+
+1. Z **Image** nabídce zvolte **načíst paletu**.
+
+1. V **načíst barvy palety** dialogové okno, přejděte na správný adresář a vyberte paletu chcete načíst. **Barva** palety se uloží s příponou souboru .pal.
 
 ## <a name="requirements"></a>Požadavky
 
 Žádná
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Vytvoření průhledných nebo obrácených oblastí v obrázcích zařízení](../windows/creating-transparent-or-inverse-regions-in-device-images.md)<br/>

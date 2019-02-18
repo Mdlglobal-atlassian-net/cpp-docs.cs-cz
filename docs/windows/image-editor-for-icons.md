@@ -1,6 +1,6 @@
 ---
-title: Editor obrázků pro ikony
-ms.date: 10/17/2018
+title: Editor obrázků pro ikony (C++)
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.cursor.F1
 - vc.editors.icon.F1
@@ -42,14 +42,14 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 48b363b7b9021042fe6242be70c74f0daeade0c2
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 782462a4aeba72252c4d6043bd192f6892a3966f
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320702"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336576"
 ---
-# <a name="image-editor-for-icons"></a>Editor obrázků pro ikony
+# <a name="image-editor-for-icons-c"></a>Editor obrázků pro ikony (C++)
 
 Když kliknete na soubor obrázku (třeba ICO, BMP, PNG) v Průzkumníku řešení, obraz se otevře v editoru obrázků stejně jako kód soubory otevřené v editoru kódu. Když je aktivní karta editoru obrázků, se zobrazí panely nástrojů s celou řadu nástrojů pro vytváření a úpravu obrázků. Spolu s rastrových obrázků, ikon a kurzorů můžete upravit obrázky ve formátu GIF nebo JPEG pomocí příkazů v **Image** nabídky a nástroje na **Editor obrázků** nástrojů.
 
@@ -232,13 +232,11 @@ Zdarma si můžete stáhnout **knihovna obrázků Visual Studio** obsahující m
 
 Můžete použít **Image** editoru a [binární editor](binary-editor.md) pro práci se soubory prostředků ve spravovaných projektech. Všechny spravované prostředky, které chcete upravit, musí být propojené prostředky. Editory prostředků Visual Studio nepodporují úpravy vložených prostředků.
 
-Informace o přidávání prostředků do spravovaných projektů naleznete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
-
 ## <a name="requirements"></a>Požadavky
 
 Žádná
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Editory prostředků](../windows/resource-editors.md)<br/>
 [Ikony](https://msdn.microsoft.com/library/windows/desktop/ms646973.aspx)

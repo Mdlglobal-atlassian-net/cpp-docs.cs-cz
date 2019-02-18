@@ -1,6 +1,6 @@
 ---
-title: Vytvoření ikony nebo jiného obrázku
-ms.date: 11/04/2016
+title: 'Postupy: Vytvoření ikony nebo jiného obrázku'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
@@ -87,14 +87,14 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 3ce4d10c9ab085973f1ab00dba205c22ff17f42f
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 69fffc71a7b5dfad12e70a9132fc61b11a0914cc
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320728"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336589"
 ---
-# <a name="creating-an-icon-or-other-image"></a>Vytvoření ikony nebo jiného obrázku
+# <a name="how-to-create-an-icon-or-other-image"></a>Postupy: Vytvoření ikony nebo jiného obrázku
 
 Můžete vytvořit novou bitovou kopii (rastrový obrázek, ikona, kurzoru nebo panelu nástrojů) a potom použít editor obrázků přizpůsobit její vzhled. Můžete také vytvořit nový rastrový obrázek vzorované po [šablony](../windows/how-to-use-resource-templates.md).
 
@@ -133,13 +133,9 @@ Když vytvoříte nové ikony nebo kurzoru prostředků **Image** editoru nejprv
 
 Při otevření prostředku ikony nebo kurzoru v [editor obrázků](../windows/image-editor-for-icons.md), image, většina úzce odpovídající aktuální zobrazovací zařízení se otevře ve výchozím nastavení.
 
-#### <a name="new-ltdevicegt-image-type-dialog-box"></a>Nové &lt;zařízení&gt; dialogové okno typ obrázku
-
 **Nový &lt;zařízení&gt; typ obrázku** dialogové okno umožňuje vytvořit nový obrázek zařízení zadaného typu. Otevřete **nový \<zařízení > obrázku** dialogu **nový typ obrázku** na **Image** nabídky. Jsou zahrnuty následující vlastnosti **cílový typ obrázku** a **vlastní**.
 
-##### <a name="target-image-type"></a>Cílový typ obrázku
-
-Seznam typů dostupné image. Vyberte typ obrázku, který chcete otevřít:
+**Cílový typ obrázku** image dostupných typů seznamů vlastností. Vyberte typ obrázku, který chcete otevřít:
 
 ||||
 |-|-|-|
@@ -153,9 +149,7 @@ Seznam typů dostupné image. Vyberte typ obrázku, který chcete otevřít:
 > [!NOTE]
 > V tomto seznamu se nezobrazí žádné existující Image.
 
-##### <a name="custom"></a>Vlastní
-
-Otevře **vlastní Image** dialogovému oknu, ve kterém můžete vytvořit novou bitovou kopii s vlastní velikost a počet barev.
+**Vlastní** vlastnost otevře **vlastní Image** dialogovému oknu, ve kterém můžete vytvořit novou bitovou kopii s vlastní velikost a počet barev.
 
 **Vlastní Image** dialogové okno umožňuje vytvořit novou bitovou kopii s vlastní velikost a počet barev. Jsou zahrnuty následující vlastnosti:
 
@@ -164,8 +158,6 @@ Otevře **vlastní Image** dialogovému oknu, ve kterém můžete vytvořit novo
 |**Šířka**|Poskytuje prostor pro zadání šířku vlastního obrázku v pixelech (1-512, limit 2048).|
 |**Výška**|Poskytuje prostor pro zadání výška vlastního obrázku v pixelech (1-512, limit 2048).|
 |**Barvy**|Poskytuje prostor můžete zvolit počet barev pro vlastní image: 2, 16 nebo 256.|
-
-#### <a name="open-ltdevicegt-image-dialog-box"></a>Otevřít &lt;zařízení&gt; dialogové okno Obrázek
 
 Použití **otevřete &lt;zařízení&gt; Image** dialogové okno otevřete obrázcích zařízení v projektech C++. Zobrazí seznam stávajících zařízení imagí v aktuální prostředek (bitové kopie, které jsou součástí aktuální prostředek). Je zahrnut následující vlastnost:
 
@@ -184,13 +176,13 @@ Použití **otevřete &lt;zařízení&gt; Image** dialogové okno otevřete obr�
 
    Pokud symbol plus (**+**) se zobrazí u typu prostředku bitové kopie v **vložit prostředků** dialogové okno, znamená to, že šablony nástrojů jsou k dispozici. Vyberte znaménko plus rozbalit seznam šablon, vyberte šablonu a zvolte **nový**.
 
-### <a name="add-an-image-for-a-different-display-device"></a>Přidání obrázku pro zařízení s jiným zobrazením
+### <a name="to-add-an-image-for-a-different-display-device"></a>Přidání obrázku pro zařízení s jiným zobrazením
 
 1. Na **Image** nabídce vyberte možnost **nový obrázek zařízení** (nebo klikněte pravým tlačítkem **Editor obrázků** podokně a zvolte **nový obrázek zařízení** z místní nabídka).
 
 1. Vyberte typ image, kterou chcete přidat. Můžete také vybrat **vlastní** vytváření ikony jejíž velikost není k dispozici ve výchozím seznamu.
 
-### <a name="copy-a-device-image"></a>Kopírování obrázku zařízení
+### <a name="to-copy-a-device-image"></a>Kopírování obrázku zařízení
 
 1. Na **Image** nabídce vyberte možnost **otevřít obraz zařízení** a pak vyberte bitovou kopii z aktuálního seznamu imagí. Například zvolte 32 × 32, 16 barev verzi ikonu.
 
@@ -200,14 +192,14 @@ Použití **otevřete &lt;zařízení&gt; Image** dialogové okno otevřete obr�
 
 1. Vložit obrázek ikony (**Ctrl**+**V**) z jednoho **Editor obrázků** okně do jiné. Pokud vkládáte větší velikost do menší velikost, můžete změnit velikost obrázku obslužné rutiny ikonu.
 
-### <a name="delete-a-device-image"></a>Odstranění obrázku zařízení
+### <a name="to-delete-a-device-image"></a>Odstranění obrázku zařízení
 
 Zatímco obrázek ikony se zobrazí v **Image** editoru, vyberte **odstranění obrázku zařízení** z **Image** nabídky. Když odstraníte poslední obrázek ikony v prostředku, prostředek se také odstraní.
 
    > [!NOTE]
    > Po stisknutí klávesy **Del** klíče, obrázky a barvy nakreslen na ikonu se odstraní, ale zůstane ikona; nyní ji můžete upravit. Pokud stisknete **Del** omylem, můžete stisknout **Ctrl**+**Z** vrátit zpět akce.
 
-### <a name="create-transparent-or-inverse-regions-in-device-images"></a>Vytvoření průhledných nebo obrácených oblastí v obrázcích zařízení
+### <a name="to-create-transparent-or-inverse-regions-in-device-images"></a>Vytvoření průhledných nebo obrácených oblastí v obrázcích zařízení
 
 V [editor obrázků](../windows/image-editor-for-icons.md), počáteční ikony nebo kurzoru bitová kopie má atribut transparentní. I když jsou obdélníkové obrázky ikon a kurzorů, mnoho nezobrazí, protože části obrázku jsou transparentní; základní image na obrazovce zobrazí prostřednictvím ikony nebo kurzoru. Při přetažení ikonu, části obrázku se může vyskytovat obrácenou barvu. Vytvoření tohoto efektu tak, že nastavíte barvu obrazovky a inverzní barvy v [okno barvy](../windows/colors-window-image-editor-for-icons.md).
 
@@ -344,13 +336,11 @@ Můžete otevřít ve formátu GIF nebo JPEG imagí v **Image** editoru a uložt
    > [!NOTE]
    > Všechny spravované prostředky, které chcete upravit, musí být propojené prostředky. Editory prostředků Visual Studio nepodporují úpravy vložených prostředků. Další informace najdete v tématu [Creating Resource Files](/dotnet/framework/resources/creating-resource-files-for-desktop-apps) v *rozhraní .NET Framework Developer's Guide*.
 
-Informace o přidávání prostředků do spravovaných projektů naleznete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
-
 ## <a name="requirements"></a>Požadavky
 
 Žádná
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Převádění bitmap na panely nástrojů](../windows/converting-bitmaps-to-toolbars.md)<br/>
 [Vytváření nových panelů nástrojů](../windows/creating-new-toolbars.md)<br/>

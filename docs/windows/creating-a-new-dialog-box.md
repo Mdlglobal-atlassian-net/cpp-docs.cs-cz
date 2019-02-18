@@ -1,6 +1,6 @@
 ---
-title: Vytvoření dialogového okna (C++)
-ms.date: 11/04/2016
+title: 'Postupy: Vytvoření dialogového okna (C++)'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog
 helpviewer_keywords:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: a3b8143d3a70906f910a445816a188913a593e5d
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: c757c82978a5107374e6de2f8cff24319ed64f9c
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264813"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336472"
 ---
-# <a name="creating-a-dialog-box-c"></a>Vytvoření dialogového okna (C++)
+# <a name="how-to-create-a-dialog-box-c"></a>Postupy: Vytvoření dialogového okna (C++)
 
 Umístění a velikosti dialogového okna C++ a umístění a velikost ovládacích prvků na ní, se měří v jednotkách dialogového okna. Hodnoty jednotlivých ovládacích prvků a dialogové okno se zobrazí v pravém dolním rohu sady Visual Studio se na stavovém řádku při výběru.
 
@@ -39,8 +39,6 @@ Při návrhu dialogového okna, můžete také simulovat a testovat jeho chován
    > Připojení ke kódu dialogového okna pomocí průvodců nejsou zahrnuta v simulaci.
 
 Při testování dialogového okna se obvykle zobrazuje v umístění, které jsou relativní vůči hlavnímu oknu programu. Pokud jste nastavili v dialogovém okně **absolutní zarovnání** vlastnost **True**, zobrazí se dialogové okno v pozici, která je relativní vzhledem k levého horního rohu obrazovky.
-
-Informace o přidávání prostředků do spravovaných projektů naleznete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="to-create-a-new-dialog-box"></a>K vytvoření nového dialogového okna
 
@@ -82,7 +80,7 @@ Existují tři vlastnosti, které můžete nastavit [okno vlastností](/visualst
 
 1. Když **dialogové okno** editor není aktivní okno na řádku nabídek, zvolte **formátu** > **testovací dialogové okno**.
 
-1. Chcete-li simulaci ukončit, stiskněte **Esc**, nebo prostě vybrat **Zavřít** tlačítko v dialogovém okně, kterou testujete.
+1. Chcete-li simulaci ukončit, stiskněte **Esc** nebo vyberte **Zavřít** tlačítko v dialogovém okně, kterou testujete.
 
 ## <a name="requirements"></a>Požadavky
 

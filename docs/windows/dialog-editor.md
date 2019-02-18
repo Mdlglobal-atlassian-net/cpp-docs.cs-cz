@@ -1,6 +1,6 @@
 ---
 title: Editor dialogových oken (C++)
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.dialog
 - vc.editors.dialog.F1
@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Dialog Editor [C++], switching between controls and code
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: 827a7610aa919d5349313346ac0bfa80bd0647b0
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: fef4a7f0d4c785a40ea946127d8e3c84c797e1aa
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264891"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336693"
 ---
 # <a name="dialog-editor-c"></a>Editor dialogových oken (C++)
 
@@ -38,28 +38,18 @@ Jedním z prvních kroků při vytváření nového dialogového okna (nebo ša
 
 Dialogové okno lze uložit jako šablonu, takže je možné jej znovu použít. Rovněž lze snadno přepínat mezi návrhem dialogového okna a editací kódu, který jej implementuje.
 
-V Editoru dialogového okna je rovněž možné upravovat vlastnosti jednoho nebo více ovládacích prvků. Můžete změnit pořadí ovládacích prvků, to znamená, když pořadí, ve kterém ovládací prvky získávají zaměřit **kartu** stisknutí klávesy, nebo lze definovat přístupovou klávesu (kombinaci kláves), který umožňuje uživatelům vybrat ovládací prvek pomocí klávesnice. Seznam přednastavených přístupových kláves naleznete v tématu [klávesy akcelerátoru pro Editor dialogového okna](../windows/accelerator-keys-for-the-dialog-editor.md).
+V Editoru dialogového okna je rovněž možné upravovat vlastnosti jednoho nebo více ovládacích prvků. Můžete změnit pořadí ovládacích prvků, to znamená, když pořadí, ve kterém ovládací prvky získávají zaměřit **kartu** stisknutí klávesy, nebo lze definovat přístupovou klávesu (kombinaci kláves), který umožňuje uživatelům vybrat ovládací prvek pomocí klávesnice.
 
 **Dialogové okno** editor také umožňuje použití vlastních ovládacích prvků, včetně ovládacích prvků ActiveX. Kromě toho můžete upravit [zobrazení formuláře](../mfc/reference/cformview-class.md), [zobrazení záznamů](../data/record-views-mfc-data-access.md), nebo [dialogové pruhy](../mfc/dialog-bars.md).
 
 Od verze Visual Studio 2015, můžete použít editor dialogového okna pro definování dynamického rozložení, které určují, jak ovládací prvky přesunutí a změna velikosti, když uživatel změní dialogové okno. Další informace najdete v tématu [dynamické rozložení](../mfc/dynamic-layout.md).
 
-- [Vytvoření nového dialogového okna](../windows/creating-a-new-dialog-box.md)
-
-- [Vytvoření dialogového okna, které uživatelé nemohou zavřít. za běhu](../windows/creating-a-dialog-box-that-users-cannot-exit.md)
+- [Postupy: Vytvoření dialogového okna](../windows/creating-a-new-dialog-box.md)
 
 - [Ovládací prvky v dialogových oknech](../windows/controls-in-dialog-boxes.md)
 
-- [Přidání obslužných rutin události pro ovládací prvky dialogového okna](../windows/adding-event-handlers-for-dialog-box-controls.md)
-
-- [Testování dialogového okna](../windows/testing-a-dialog-box.md)
-
-- [Řešení potíží s editorem dialogového okna](../windows/troubleshooting-the-dialog-editor.md)
-
    > [!TIP]
-   > Při použití **dialogové okno** editoru v mnoha případech můžete kliknutím na tlačítko pravým tlačítkem myši zobrazit místní nabídku s často používanými příkazy.
-
-Informace o přidávání prostředků do spravovaných projektů naleznete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
+   > Při použití **dialogové okno** editoru v mnoha případech můžete vybrat pravé tlačítko myši zobrazit místní nabídku s často používanými příkazy.
 
 ## <a name="dialog-editor-toolbar"></a>Panel nástrojů editoru dialogového okna
 
@@ -132,7 +122,7 @@ V následující tabulce jsou výchozí klávesy akcelerátoru pro editor dialog
 
 Win32
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Editory prostředků](../windows/resource-editors.md)<br/>
 [Soubory prostředků](../windows/resource-files-visual-studio.md)<br/>

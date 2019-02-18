@@ -1,6 +1,6 @@
 ---
-title: Úprava obrázku
-ms.date: 11/04/2016
+title: 'Postupy: Upravit obrázek'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.editing
 - vc.editors.image.editing
@@ -40,14 +40,14 @@ helpviewer_keywords:
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: 928a37d1b85378c3c50f41dba441259ace2d3af9
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 906244b692253a8423af55eb91d46622087713e3
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320676"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336525"
 ---
-# <a name="editing-an-image"></a>Úprava obrázku
+# <a name="how-to-edit-an-image"></a>Postupy: Upravit obrázek
 
 Nástroje pro výběr můžete použít k definování oblast bitovou kopii, kterou chcete vyjmout, kopírovat, zrušte, změna velikosti, Invertovat nebo přesunout. S **obdélníku výběru** nástroje můžete definovat a vyberte obdélníkovou oblast obrázku. S **Volný výběr** nástroj od ruky obrys oblasti, kterou chcete vybrat pro vyjmutí, kopírování nebo jiné operace můžete nakreslit.
 
@@ -56,9 +56,7 @@ Nástroje pro výběr můžete použít k definování oblast bitovou kopii, kte
 
 Můžete také vytvořit vlastní štětec z výběru. Další informace najdete v tématu [vytvoření vlastního štětce](../windows/creating-a-custom-brush-image-editor-for-icons.md).
 
-Informace o přidávání prostředků do spravovaných projektů naleznete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
-
-## <a name="selecting-an-image"></a>Výběr obrázku
+## <a name="select-an-image"></a>Vybrat obrázek
 
 1. Na **Editor obrázků** nástrojů (nebo z **Image** nabídce **nástroje** příkaz), zvolte chcete nástroj pro výběr.
 
@@ -72,7 +70,7 @@ Informace o přidávání prostředků do spravovaných projektů naleznete v t�
 
 1. Vyberte bitovou kopii mimo aktuální výběr. Ohraničení výběru změní fokus a zahrnuje celou image ještě jednou.
 
-## <a name="editing-parts-of-an-image"></a>Úprava částí obrázku
+## <a name="edit-parts-of-an-image"></a>Úprava částí obrázku
 
 Můžete provádět standardní operace úprav – vyjmutí, kopírování, vymazání a přesouvání – na [výběr](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), zda je výběr celého obrázku nebo jen jeho části. Protože **Image** editor používá **schránky Windows**, můžou přenášet imagí mezi **Image** editoru a dalšími aplikacemi pro Windows.
 
@@ -119,7 +117,7 @@ Z **upravit** nabídce zvolte **odstranit**.
 
 Další informace o vykreslování s výběrem, naleznete v tématu [vytvoření vlastního štětce](../windows/creating-a-custom-brush-image-editor-for-icons.md).
 
-## <a name="flipping-an-image"></a>Překlopení obrázku
+## <a name="flip-an-image"></a>Překlopení obrázku
 
 Můžete překlopit nebo otočení obrázku vytvořit zrcadlový obraz původní, zapněte image vzhůru nohama, nebo otočit o 90 stupňů na obrázku vpravo v čase.
 
@@ -132,7 +130,7 @@ Můžete překlopit nebo otočení obrázku vytvořit zrcadlový obraz původní
    > [!NOTE]
    > Můžete také použít [klávesy akcelerátoru (místní)](../windows/accelerator-keys-image-editor-for-icons.md) pro tyto příkazy nebo přístupu k příkazům v místní nabídce (kliknutím mimo bitové kopie v editoru obrázků).
 
-## <a name="resizing-an-image"></a>Změna velikosti obrázku
+## <a name="resize-an-image"></a>Změna velikosti obrázku
 
 Chování **Image** editoru při změně velikosti obrázku závisí na tom, jestli jste [vybrané](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) celého obrázku nebo jenom její část.
 
@@ -185,7 +183,7 @@ Za normálních okolností **Image** editoru ořízne nebo (zvětšit) zvětší
 
 1. Přetáhněte jednu z úchytů, dokud nebude výběr správné velikosti.
 
-## <a name="editing-an-image-outside-of-a-project"></a>Úprava obrázku mimo projekt
+## <a name="edit-an-image-outside-of-a-project"></a>Úprava obrázku mimo projekt
 
 Můžete otevřít a upravit obrázky ve vývojovém prostředí, stejně jako v jakékoli aplikaci grafiky. Obrázky, které při práci s nemusí být součástí projektu sady Visual Studio pro samostatné úpravy.
 
@@ -197,7 +195,7 @@ Můžete otevřít a upravit obrázky ve vývojovém prostředí, stejně jako v
 
 1. Najděte a otevřete image, kterou chcete upravit.
 
-## <a name="changing-image-properties"></a>Změna vlastností obrázku
+## <a name="change-image-properties"></a>Změna vlastností obrázku
 
 Můžete nastavit nebo upravit vlastnosti image pomocí [okno vlastností](/visualstudio/ide/reference/properties-window).
 

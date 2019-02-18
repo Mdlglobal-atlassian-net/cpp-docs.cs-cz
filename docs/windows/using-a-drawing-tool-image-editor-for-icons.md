@@ -1,6 +1,6 @@
 ---
-title: Používání nástroje kreslení
-ms.date: 11/04/2016
+title: 'Postupy: Použití nástroje kreslení'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.drawing
 helpviewer_keywords:
@@ -16,16 +16,18 @@ helpviewer_keywords:
 - graphics [C++], custom brushes
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-ms.openlocfilehash: 72224581e021a22b31ec5e6fa5940ff5a568a4e0
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 135509626e20044b0d4ec8e63d8916f4c537388e
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320546"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336550"
 ---
-# <a name="using-a-drawing-tool"></a>Používání nástroje kreslení
+# <a name="how-to-use-a-drawing-tool"></a>Postupy: Použití nástroje kreslení
 
 **Image** uživatele od ruky, vykreslování a mazání nástroje všechny fungují stejně jako editor: Vyberte nástroj a v případě potřeby [vyberte barvy popředí a pozadí](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) a možnosti velikosti a tvaru. Přesuňte ukazatel myši na obrázku a kliknutí nebo tažením nakreslete a vymazat.
+
+## <a name="drawing-tools"></a>Nástroje pro kreslení
 
 Když vyberete **gumy** nástroj, **štětce** nástroje, nebo **rozprašovač** nástroji pro výběr možnosti zobrazí možnosti tohoto nástroje.
 
@@ -34,7 +36,7 @@ Když vyberete **gumy** nástroj, **štětce** nástroje, nebo **rozprašovač**
 
 Můžete zvolit buď z nástrojů pro kreslení **Editor obrázků** nástrojů nebo **Image** nabídky.
 
-## <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Vyberte a použijte nástroj pro vykreslování na panelu nástrojů editoru obrázků
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Vyberte a použijte nástroj pro vykreslování na panelu nástrojů editoru obrázků
 
 1. Vyberte tlačítko na **Editor obrázků** nástrojů.
 
@@ -65,7 +67,7 @@ Můžete zvolit buď z nástrojů pro kreslení **Editor obrázků** nástrojů 
 
 1. Kaskádové podnabídce zvolte nástroj, který chcete použít.
 
-## <a name="drawing-lines-or-closed-figures"></a>Kreslení čar nebo uzavřených obrázků
+## <a name="lines-or-closed-figures"></a>Čar nebo uzavřených obrázků
 
 Editor obrázků nástrojů pro kreslení čar a uzavřených obrázků všechny fungují stejně jako: Umístěte kurzor na jednom místě a přetáhněte ji do jiného. Pro řádky jsou tyto body koncových bodů. Pro uzavřených obrázků jsou tyto body opačné rohů obdélníku ohraničující na obrázku.
 
@@ -97,7 +99,7 @@ Editor obrázků nástrojů pro kreslení čar a uzavřených obrázků všechny
 
 1. Přetažením ukazatele šikmo protilehlého rohu.
 
-## <a name="create-a-custom-brush"></a>Vytvoření vlastního štětce
+## <a name="custom-brushes"></a>Vlastní štětce
 
 Vlastní štětce je obdélníkovou část bitovou kopii, která sbírání a používat jako jeden z **Image** předem připravená štětce editoru. Všechny operace, které můžete provádět na výběr, můžete provádět na vlastní štětce.
 
@@ -105,11 +107,7 @@ Vlastní štětce je obdélníkovou část bitovou kopii, která sbírání a po
 
 1. [Vyberte část obrázku](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) , kterou chcete použít pro štětce.
 
-1. Podržení **Shift** klíče dolů, vyberte ve výběru a proveďte operaci přetažení přes obrázek.
-
-   \- nebo –
-
-1. Z **Image** nabídce zvolte **použít výběr jako štětce**.
+1. Uložení **Shift** klíče dolů, vyberte ve výběru a proveďte operaci přetažení přes obrázek. Nebo **Image** nabídce zvolte **použít výběr jako štětce**.
 
    Váš výběr se změní vlastní štětec, který distribuuje barev ve výběru mezi bitovou kopii. Zkopíruje výběr jsou ponechána na cestě přetahování. Tím pomaleji se při přetahování, jsou provedeny další kopie.
 
@@ -138,13 +136,11 @@ Stisknutím klávesy **znaménko Plus** (**+**) klíč na dvojnásobek velikosti
 
 Stisknutím klávesy **Esc** nebo zvolte jiný nástroj pro vykreslování.
 
-Informace o přidávání prostředků do spravovaných projektů naleznete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
-
 ## <a name="requirements"></a>Požadavky
 
 Žádná
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Úprava grafických prostředků](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>

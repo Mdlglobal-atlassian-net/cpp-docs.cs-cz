@@ -1,6 +1,6 @@
 ---
 title: Ovládací prvky v dialogových oknech (C++) | Dokumentace Microsoftu
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - Custom Control
 helpviewer_keywords:
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: 1f231a376b335d7fb711ef2039c13f49624e6bfb
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: 6360491ebb4478ee4ce22115eced7ed672866565
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264839"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336511"
 ---
 # <a name="controls-in-dialog-boxes-c"></a>Ovládací prvky v dialogových oknech (C++)
 
@@ -30,25 +30,11 @@ Při přidání ovládacího prvku do dialogového okna nebo jiného umístění
 
 Po přidání ovládacího prvku do dialogového okna, můžete změnit vlastnosti, jako je titulek v [okno vlastností](/visualstudio/ide/reference/properties-window). Můžete vybrat více ovládacích prvků a změňte jejich vlastnosti všechny najednou.
 
-- [Přidání, úprava nebo odstranění ovládacích prvků](adding-editing-or-deleting-controls.md)
+- [Postupy: Přidání, úpravě nebo odstranění ovládacích prvků](adding-editing-or-deleting-controls.md)
 
-- [Výběr ovládacích prvků](../windows/selecting-controls.md)
+- [Postupy: Uspořádání ovládacích prvků](../windows/arrangement-of-controls-on-dialog-boxes.md)
 
-- [Změna velikosti jednotlivých ovládacích prvků](../windows/sizing-individual-controls.md)
-
-- [Nastavení stejné šířky, výšky nebo velikosti ovládacích prvků](../windows/making-controls-the-same-width-height-or-size.md)
-
-- [Nastavení velikosti pole se seznamem a jeho rozevíracího seznamu](setting-the-size-of-the-combo-box-and-its-drop-down-list.md)
-
-- [Přidání hodnot do ovládacího prvku pole se seznamem](../windows/adding-values-to-a-combo-box-control.md)
-
-- [Nastavení šířky vodorovného posuvníku](../windows/setting-the-width-of-a-horizontal-scroll-bar.md)
-
-- [Uspořádání ovládacích prvků v dialogových oknech](../windows/arrangement-of-controls-on-dialog-boxes.md)
-
-- [Definice klávesových zkratek (přístupové klávesy)](../windows/defining-mnemonics-access-keys.md)
-
-- [Určení umístění a velikosti dialogového okna](../windows/specifying-the-location-and-size-of-a-dialog-box.md)
+- [Postupy: Definování řízení přístupu a hodnot](../windows/defining-mnemonics-access-keys.md)
 
 K dispozici ve standardní ovládací prvky **nástrojů** s výchozí události jsou:
 
@@ -110,8 +96,6 @@ Pro tyto ovládací prvky jste omezeni na:
 - Zadáním šestnáctkovou hodnotu 32-bit, který nastaví styl ovládacího prvku.
 
 - Nastavení rozšířené stylu.
-
-Informace o přidávání prostředků do spravovaných projektů naleznete v tématu [prostředky v desktopových aplikací](/dotnet/framework/resources/index) v *rozhraní .NET Framework Developer's Guide*. Informace o ručním přidání souborů prostředků do spravovaných projektů, přístupu k prostředkům, zobrazení statických prostředků a přiřazení řetězců prostředků k vlastnostem, naleznete v tématu [Creating Resource Files pro desktopových aplikací](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informace o globalizace a lokalizace prostředků do spravovaných aplikací najdete v tématu [Globalizing a lokalizace aplikací .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="requirements"></a>Požadavky
 
