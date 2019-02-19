@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-ms.openlocfilehash: 8d2e298a2e4c6eb16a1851b3a9ce7ddc886a76f2
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: 3b059db877d24f5e4414745ba6c2f9ee4f6591e7
+ms.sourcegitcommit: 7cd712176e5bc341b9d8f899d41ad49f02f85e5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678467"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56418715"
 ---
 # <a name="multiset-class"></a>multiset – třída
 
@@ -159,10 +159,10 @@ V C ++ 14 můžete povolit heterogenní vyhledávání tak, že zadáte `std::le
 |[const_reference](#const_reference)|Definice typu odkazu na **const** element uložené v `multiset` pro čtení a provádění **const** operace.|
 |[const_reverse_iterator](#const_reverse_iterator)|Definice typu pro obousměrný iterátor, který může číst jakýkoli **const** prvek `multiset`.|
 |[difference_type](#difference_type)|Definice typu celé číslo se znaménkem pro počet prvků objektu `multiset` v rozsahu mezi prvky, na které odkazují iterátory.|
-|[iterátor](#iterator)|Definice typu pro obousměrný iterátor, který může číst nebo upravovat libovolný prvek v `multiset`.|
+|[iterator](#iterator)|Definice typu pro obousměrný iterátor, který může číst nebo upravovat libovolný prvek v `multiset`.|
 |[key_compare](#key_compare)|Definice typu poskytující objekt funkce, který může porovnat dva klíče pro určení relativního pořadí dvou prvků v `multiset`.|
 |[key_type](#key_type)|Definice typu poskytující objekt funkce, který může porovnat dva klíče řazení pro určení relativního pořadí dvou prvků v `multiset`.|
-|[Ukazatel](#pointer)|Typedef pro ukazatel na prvek v `multiset`.|
+|[pointer](#pointer)|Typedef pro ukazatel na prvek v `multiset`.|
 |[Referenční dokumentace](#reference)|Definice typu odkazu na prvek uložený v `multiset`.|
 |[reverse_iterator](#reverse_iterator)|Definice typu pro obousměrný iterátor, který může číst nebo upravovat prvek v obráceném objektu `multiset`.|
 |[size_type](#size_type)|Typ celé číslo bez znaménka představující počet prvků v `multiset`.|
@@ -176,12 +176,12 @@ V C ++ 14 můžete povolit heterogenní vyhledávání tak, že zadáte `std::le
 |[začít](#begin)|Vrátí iterátor odkazující na první prvek `multiset`.|
 |[cbegin](#cbegin)|Vrátí konstantní iterátor adresující první prvek `multiset`.|
 |[cend](#cend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v `multiset`.|
-|[Vymazat](#clear)|Vymaže všechny prvky `multiset`.|
+|[clear](#clear)|Vymaže všechny prvky `multiset`.|
 |[Počet](#count)|Vrátí počet prvků v `multiset` jejichž klíč odpovídá klíči zadanému jako parametr.|
 |[crbegin](#crbegin)|Vrátí konstantní iterátor adresující první prvek v obráceném objektu set.|
-|[crend –](#crend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném objektu set.|
-|[emplace –](#emplace)|Vloží vytvořený prvek na místo do `multiset`.|
-|[emplace_hint –](#emplace_hint)|Vloží vytvořený prvek na místo do `multiset`, s náznakem umístění.|
+|[crend](#crend)|Vrátí konstantní iterátor adresující umístění následující po posledním prvku v obráceném objektu set.|
+|[emplace](#emplace)|Vloží vytvořený prvek na místo do `multiset`.|
+|[emplace_hint](#emplace_hint)|Vloží vytvořený prvek na místo do `multiset`, s náznakem umístění.|
 |[prázdný](#empty)|Testuje, zda `multiset` je prázdný.|
 |[ukončení](#end)|Vrátí iterátor odkazující na umístění za posledním prvkem v `multiset`.|
 |[equal_range](#equal_range)|Vrátí pár iterátorů. První iterátor v páru odkazuje na první prvek v `multiset` s klíčem, který je větší než zadaný klíč. Druhý iterátor v páru odkazuje na první prvek `multiset` s klíčem, který je roven nebo větší než tento klíč.|
@@ -192,11 +192,11 @@ V C ++ 14 můžete povolit heterogenní vyhledávání tak, že zadáte `std::le
 |[key_comp](#key_comp)|Poskytuje objekt funkce, který může porovnat dva klíče řazení pro určení relativního pořadí dvou prvků v `multiset`.|
 |[lower_bound –](#lower_bound)|Vrátí iterátor na první prvek v `multiset` s klíčem, který je roven nebo větší než zadaný klíč.|
 |[max_size](#max_size)|Vrátí maximální délku objektu `multiset`.|
-|[rbegin –](#rbegin)|Vrátí iterátor odkazující na první prvek v obráceném objektu `multiset`.|
+|[rbegin](#rbegin)|Vrátí iterátor odkazující na první prvek v obráceném objektu `multiset`.|
 |[rend –](#rend)|Vrátí iterátor odkazující na umístění následující po posledním prvku v obráceném objektu `multiset`.|
 |[Velikost](#size)|Vrátí počet prvků v `multiset`.|
-|[Prohození](#swap)|Vymění prvky dvou `multiset`s.|
-|[upper_bound –](#upper_bound)|Vrátí iterátor na první prvek v `multiset` s klíčem, který je větší než zadaný klíč.|
+|[swap](#swap)|Vymění prvky dvou `multiset`s.|
+|[upper_bound](#upper_bound)|Vrátí iterátor na první prvek v `multiset` s klíčem, který je větší než zadaný klíč.|
 |[value_comp](#value_comp)|Načte kopii objektu porovnání použitého pro seřazení hodnot prvků `multiset`.|
 
 ### <a name="operators"></a>Operátory
@@ -471,7 +471,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč prvky lze porovnat z multisady.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -865,7 +865,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč argumentu k porovnání s klíči řazení prvek z multiset vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -984,7 +984,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Hodnota klíče k porovnání s klíči řazení prvek z multiset vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1421,7 +1421,7 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč argumentu k porovnání s klíči řazení prvek z multiset vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1929,7 +1929,7 @@ int main() {
       cout << *ms1_Iter << " ";
    cout << "." << endl;
 
-   // rend can be used to terminate an interation
+   // rend can be used to terminate an iteration
    // through a multiset in a reverse order
    cout << "The reversed multiset is: ";
    for ( ms1_rIter = ms1.rbegin( ) ; ms1_rIter != ms1.rend( ); ms1_rIter++ )
@@ -2096,7 +2096,7 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Klíč argumentu k porovnání s klíči řazení prvek z multiset vyhledaly.
 
 ### <a name="return-value"></a>Návratová hodnota
