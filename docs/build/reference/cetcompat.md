@@ -1,17 +1,17 @@
 ---
 title: / CETCOMPAT (kompatibilní s implementační technologie struktury toku řízení)
-ms.date: 02/01/2019
+ms.date: 02/19/2019
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 3adb147804674b52a5d77030c48567ec04da6aa6
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 48eb1e2369e54d855bd19bb1d26ad057c903b9d0
+ms.sourcegitcommit: 7cd712176e5bc341b9d8f899d41ad49f02f85e5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703361"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56418689"
 ---
 # <a name="cetcompat-control-flow-enforcement-technology-compatible"></a>/ CETCOMPAT (kompatibilní s implementační technologie struktury toku řízení)
 
@@ -24,7 +24,7 @@ Určuje, jestli se má označit jako kompatibilní s tok řízení výkonu techn
 ## <a name="arguments"></a>Arguments
 
 **NE**<br/>
-Určuje, zda executalbe nemůže být označena jako kompatibilní s CET.
+Určuje, že spustitelný soubor by neměl být označen jako kompatibilní s CET.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -44,7 +44,7 @@ Technologie vynucení toku řízení (CET) je funkce procesoru počítače, kter
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-- Tato možnost nemá programový ekvivalent.
+Tato možnost nemá programový ekvivalent.
 
 ## <a name="see-also"></a>Viz také:
 
