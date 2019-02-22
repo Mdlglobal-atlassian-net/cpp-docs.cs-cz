@@ -1,6 +1,6 @@
 ---
 title: /Za, /Ze (Zakázat jazyková rozšíření)
-ms.date: 11/04/2016
+ms.date: 02/19/2019
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.DisableLanguageExtensions
 - /za
@@ -18,36 +18,34 @@ helpviewer_keywords:
 - Disable Language Extensions compiler option
 - Ze compiler option [C++]
 ms.assetid: 65e49258-7161-4289-a176-7c5c0656b1a2
-ms.openlocfilehash: a3d25f71739f9948f2c0237efbaeaf8fa89f2114
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d24affdf92222ac50ffe72b3a1606d3f7030de60
+ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549718"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676471"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za, /Ze (Zakázat jazyková rozšíření)
 
-**/Za** – možnost kompilátoru generuje chybu pro konstruktory jazyka, které nejsou kompatibilní s ANSI C89 nebo ISO C ++ 11. **/Ze** – možnost kompilátoru, která je ve výchozím, umožňuje rozšíření společnosti Microsoft.
+**/Za** – možnost kompilátoru zakáže a generuje chyby pro rozšíření Microsoft pro C, které nejsou kompatibilní s ANSI C90 C89/ISO. Zastaralá **/Ze** – možnost kompilátoru umožňuje rozšíření společnosti Microsoft. Ve výchozím nastavení jsou povolena rozšíření společnosti Microsoft.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-/Za
-/Ze
-```
+> **/Za**<br/>
+> **/Ze**
 
 ## <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  **/Ze** možnost je zastaralá, protože její chování je ve výchozím. Doporučujeme použít [/Zc (shoda)](../../build/reference/zc-conformance.md) – možnosti kompilátoru k ovládání funkcí na rozšíření konkrétní jazyk. Seznam možností kompilátoru zastaralé, najdete v článku **zastaralé a odebrat možnosti kompilátoru** tématu [možnosti kompilátoru seřazené podle kategorie](../../build/reference/compiler-options-listed-by-category.md).
+> Použití **/Za** Pokud kód je zkompilován jako C++ nedoporučuje. **/Ze** možnost je zastaralá, protože její chování je ve výchozím. Seznam zastaralých kompilátoru možnosti najdete v tématu [zastaralé funkce a možnosti kompilátoru odebrané](compiler-options-listed-by-category.md#deprecated-and-removed-compiler-options).
 
-Kompilátor Visual C++ nabízí celou řadu funkcí překračuje zadaný v standardy ANSI C89, ISO C99 nebo ISO C++. Tyto funkce se souhrnně označují jako rozšíření společnosti Microsoft pro C a C++. Tato rozšíření jsou k dispozici ve výchozím nastavení a není k dispozici při **/Za** je zadána možnost. Další informace o konkrétní rozšíření najdete v tématu [Extensions Microsoft pro C a C++](../../build/reference/microsoft-extensions-to-c-and-cpp.md).
+Kompilátor Microsoft C/C++ podporuje kompilaci kódu jazyka C dvěma způsoby:
 
-Doporučujeme zakázat jazyková rozšíření tak, že zadáte **/Za** Pokud plánujete přenést váš program do jiných prostředí. Když **/Za** není zadán, kompilátor zpracovává Rozšířená klíčová slova jako identifikátory jednoduché společnosti Microsoft, zakáže ostatní rozšíření společnosti Microsoft a automaticky definuje `__STDC__` předdefinované makro pro programy C.
+- Kompilátor používá režim kompilace jazyka C ve výchozím nastavení, pokud má zdrojový soubor *.c* rozšíření, nebo když [/Tc](tc-tp-tc-tp-specify-source-file-type.md) nebo [/TC](tc-tp-tc-tp-specify-source-file-type.md) je zadána možnost. Kompilátor jazyka C je C89/C90 kompilátoru, která ve výchozím nastavení, povolí rozšíření jazyka C společnosti Microsoft. Další informace o konkrétní rozšíření najdete v tématu [Extensions Microsoft pro C a C++](microsoft-extensions-to-c-and-cpp.md). Pokud obě kompilace jazyka C a **/Za** jsou zadána možnost, kompilátor jazyka C odpovídá striktně C89/C90 standardu. Kompilátor zpracovává Rozšířená klíčová slova jako identifikátory jednoduché společnosti Microsoft, zakáže ostatní rozšíření společnosti Microsoft a automaticky definuje [ \_ \_STDC\_ \_ ](../../preprocessor/predefined-macros.md) předdefinované makra pro programy C.
 
-Další možnosti kompilátoru použít s **/Za** může ovlivnit, jak kompilátor pak zajistí shoda se standardy.
+- Kompilátor může kompilaci kódu jazyka C v režimu kompilace jazyka C++. Toto chování je výchozí nastavení pro zdrojové soubory, které nemají *.c* rozšíření a kdy [/Tp](tc-tp-tc-tp-specify-source-file-type.md) nebo [/TP](tc-tp-tc-tp-specify-source-file-type.md) je zadána možnost. V režimu kompilace jazyka C++ kompilátor podporuje tyto části ISO C99 a C11 standardy, které byly zahrnuty do C++ standard. Téměř všechny kódu jazyka C je také platný kód jazyka C++. Malý počet klíčová slova jazyka C a konstrukce kódu není platný kód jazyka C++, nebo se interpretují odlišně v jazyce C++. Kompilátor se chová podle standardu v těchto případech C++. V režimu kompilace jazyka C++ **/Za** možnost může způsobit neočekávané chování a nedoporučuje se používat.
 
-Způsoby, jak určit nastavení chování konkrétní standardy-splňovala podmínky shody, najdete v článku [/Zc](../../build/reference/zc-conformance.md) – možnost kompilátoru.
+Další možnosti kompilátoru může ovlivnit, jak kompilátor pak zajistí shoda se standardy. Způsoby, jak určit konkrétní standard jazyka C a C++ chování nastavení, najdete v článku [/Zc](zc-conformance.md) – možnost kompilátoru. Další nastavení shody standard C++, naleznete v tématu [/ permissive-](permissive-standards-conformance.md) a [/std](std-specify-language-standard-version.md) – možnosti kompilátoru.
 
 Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete v tématu [nestandardní chování](../../cpp/nonstandard-behavior.md).
 
@@ -55,16 +53,18 @@ Další informace o problémech přizpůsobení v aplikaci Visual C++, naleznete
 
 1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [práce s vlastnostmi projektu](../../ide/working-with-project-properties.md).
 
-1. V navigačním podokně zvolte **vlastnosti konfigurace**, **C/C++**, **jazyka**.
+1. V navigačním podokně zvolte **vlastnosti konfigurace** > **C/C++** > **jazyka**.
 
 1. Upravit **zakázat jazyková rozšíření** vlastnost.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DisableLanguageExtensions%2A>.
+Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DisableLanguageExtensions%2A>.
 
 ## <a name="see-also"></a>Viz také
 
-[Možnosti kompilátoru](../../build/reference/compiler-options.md)<br/>
-[Nastavení možností kompilátoru](../../build/reference/setting-compiler-options.md)<br/>
-[/Zc (shoda)](../../build/reference/zc-conformance.md)
+[Možnosti kompilátoru](compiler-options.md)<br/>
+[Nastavení možností kompilátoru](setting-compiler-options.md)<br/>
+[/Zc (shoda)](zc-conformance.md)<br/>
+[/permissive- (shoda se standardy)](permissive-standards-conformance.md)<br/>
+[/std (určení standardní jazykové verze)](std-specify-language-standard-version.md)<br/>
