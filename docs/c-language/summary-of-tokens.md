@@ -42,7 +42,7 @@ ms.locfileid: "56149112"
 &nbsp;&nbsp;&nbsp;&nbsp;*pp-number* *nondigit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*číslo PP***e***přihlašování*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*číslo PP***E***přihlašování*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*číslo PP***.**
+&nbsp;&nbsp;&nbsp;&nbsp;*číslo PP* **.**
 
 ## <a name="see-also"></a>Viz také:
 

@@ -34,7 +34,7 @@ ms.locfileid: "56149255"
 Sjednocení obsah je definován jako
 
 *struct-declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátor qualifier-list* *struct-declarator-list***;**
+&nbsp;&nbsp;&nbsp;&nbsp;*specifikátor qualifier-list* *struct-declarator-list* **;** 
 
 *specifier-qualifier-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Specifikátor typu* *specifikátor seznam kvalifikátorů-*<sub>optimalizované</sub> <br/>
@@ -42,7 +42,7 @@ Sjednocení obsah je definován jako
 
 *struct-declarator-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Struktura declarator-list***,***deklarátor – struktura*
+&nbsp;&nbsp;&nbsp;&nbsp;*Struktura declarator-list* **,** *deklarátor – struktura*
 
 Proměnná s **sjednocení** typ ukládá jedna z hodnot fronty definovaných podle tohoto typu. Deklarace struktury a sjednocení se řídí stejnými pravidly. Sjednocení může mít také bitová pole.
 

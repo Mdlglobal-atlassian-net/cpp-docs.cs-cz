@@ -22,7 +22,7 @@ ms.locfileid: "56152752"
 &nbsp;&nbsp;&nbsp;&nbsp;*try-finally-statement*  / \* specifické pro Microsoft \*/
 
 *příkaz-skoku*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**příkaz goto***identifikátor***;**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**příkaz goto** *identifikátor* **;**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**pokračování**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Konec;**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Vrátí** *výraz*<sub>optimalizované</sub> **;**
@@ -44,23 +44,23 @@ ms.locfileid: "56152752"
 *příkaz iterace*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**zatímco (**  *výraz*  **)**  *– příkaz*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**proveďte***příkaz***během (***výraz***);**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**pro (***výraz*<sub>optimalizované</sub> **;** *výraz*<sub>optimalizované</sub> **;** *výraz*<sub>optimalizované</sub> **)** *– příkaz*
+&nbsp;&nbsp;&nbsp;&nbsp;**pro (** *výraz*<sub>optimalizované</sub> **;** *výraz*<sub>optimalizované</sub> **;** *výraz*<sub>optimalizované</sub> **)** *– příkaz*
 
 *příkaz výběru*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Pokud (***výraz***)***– příkaz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Pokud (***výraz***)***příkaz***else***– příkaz*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Přepnout (***výraz***)***– příkaz*
+&nbsp;&nbsp;&nbsp;&nbsp;**Pokud (** *výraz* **)** *– příkaz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Pokud (** *výraz* **)** *příkaz* **else** *– příkaz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Přepnout (** *výraz* **)** *– příkaz*
 
 *příkaz s popiskem*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor***:***– příkaz*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor* **:** *– příkaz*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**případ**  *konstantní výraz*  **:**  *– příkaz*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Výchozí:**  *– příkaz*
 
 *s výjimkou příkazu Try*: /\* specifické pro Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try***compound-statement* **__except (***výraz***)***compound-statement* 
+&nbsp;&nbsp;&nbsp;&nbsp;**__try** *compound-statement* **__except (** *výraz* **)** *compound-statement* 
 
 *try-finally-statement*: /\* specifické pro Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try***compound-statement* **__finally***compound-statement* 
+&nbsp;&nbsp;&nbsp;&nbsp;**__try** *compound-statement* **__finally** *compound-statement* 
 
 ## <a name="see-also"></a>Viz také:
 
