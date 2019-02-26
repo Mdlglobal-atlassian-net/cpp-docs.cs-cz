@@ -1,23 +1,22 @@
 ---
 title: Vylepšení shody C++
 ms.date: 10/31/2018
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: ad34e2721723e113417b45cf7c1da0da4575837f
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 855322f09c9c8f5292c6e299f946c3cec5d9949a
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694397"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809747"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159update159"></a>Vylepšení shody C++ v sadě Visual Studio 2017 verze 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158), [15.9](#update_159)
 
 Podporu pro generalizovaný specifikátor constexpr a NSDMI pro agregace je kompilátor jazyka Microsoft Visual C++ teď kompletní pro funkce přidané ve 14 standardu C ++. Mějte na paměti, že v kompilátoru stále chybí několik funkcí ze standardů C++11 a C++98. Zobrazit [shoda jazyka Visual C++](visual-cpp-language-conformance.md) pro tabulku, která se zobrazuje aktuální stav kompilátoru.
 
-## <a name="c11"></a>C ++ 11
+## <a name="c11"></a>C++11
 
 ### <a name="expression-sfinae-support-in-more-libraries"></a>Podpora sfinae u výrazů v další knihovny
 
@@ -33,7 +32,7 @@ Agregace je pole nebo třída s atributem žádný uživatelem zadaný konstrukt
 
 Výrazy deklarovat jako constexpr jsou teď povolené, pokud obsahují některé typy deklarací, a přepnete příkazy, příkazy cyklů a mutace objektů, jehož doba života začal v rámci výrazu vyhodnocení constexpr. Kromě toho již není požadavek constexpr nestatická členská funkce se implicitně const. Další informace najdete v tématu [uvolnit omezení ve funkcích constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html).
 
-## <a name="c17"></a>C ++ 17
+## <a name="c17"></a>C++17
 
 ### <a name="terse-staticassert"></a>Stručný static_assert
 
@@ -49,7 +48,7 @@ Založený na rozsahu pro smyčky už nevyžadují, aby begin() a end() vrací o
 
 ## <a name="improvements_153"></a> Vylepšení v sadě Visual Studio 2017 verze 15.3
 
-### <a name="constexpr-lambdas"></a>výrazy lambda constexpr.
+### <a name="constexpr-lambdas"></a>constexpr lambdas
 
 Může se teď dá výrazy lambda v konstantních výrazech. Další informace najdete v tématu [constexpr výrazy lambda v jazyce C++](cpp/lambda-expressions-constexpr.md).
 
@@ -127,7 +126,7 @@ V dřívějších verzích sady Visual Studio, kompilátor vždy přiřadil `con
 
 [P0358R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html) Nová formulace pro `std::not_fn` poskytuje podporu pro šíření kategorií hodnot v případě vyvolání obálky.
 
-### <a name="sharedptrt-sharedptrtn"></a>shared_ptr –\<T [] >, shared_ptr\<T [N] >
+### <a name="sharedptrt-sharedptrtn"></a>shared_ptr\<T[]>, shared_ptr\<T[N]>
 
 [P0414R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0414r2.html) slučování `shared_ptr` změní z Library Fundamentals do C ++ 17. [14]
 
@@ -790,7 +789,7 @@ void f()
 
 Výchozí argumenty nejsou povolené v členské funkce tříd šablon, kompilátor vygeneruje upozornění v části definice mimo řádek **/ permissive**a závažná chyba pod **/ permissive-**.
 
-V předchozích verzích sady Visual Studio následující chybně vytvořený kód může potenciálně způsobit selhání modulu runtime. Visual Studio 2017 verze 15.3 vytvoří upozornění C5034: "A\<T >:: f': definice mimo řádek člena šablony třídy nemůže mít výchozí argumenty:
+V předchozích verzích sady Visual Studio následující chybně vytvořený kód může potenciálně způsobit selhání modulu runtime. Visual Studio 2017 verze 15.3 vygeneruje upozornění C5034: "A\<T >:: f': definice mimo řádek člena šablony třídy nemůže mít výchozí argumenty:
 
 ```cpp
 template <typename T>
@@ -865,7 +864,7 @@ Toto upozornění je vypnuto ve výchozím nastavení v 15.3, ale na ve výchoz�
 
 ### <a name="decltype-and-calls-to-deleted-destructors"></a>klíčové slovo decltype a volání odstraněné destruktorů
 
-V předchozích verzích sady Visual Studio nenalezla kompilátor při volání odstraněné destruktor došlo k chybě v kontextu výraz přidružený k "decltype". V sadě Visual Studio 2017 verze 15.3, následující kód vytvoří "Chyba C2280:" A\<T >:: ~ A(void)': Pokus o odkazování na odstraněnou funkci ":
+V předchozích verzích sady Visual Studio nenalezla kompilátor při volání odstraněné destruktor došlo k chybě v kontextu výraz přidružený k "decltype". V sadě Visual Studio 2017 verze 15.3, následující kód vytvoří "Chyba C2280: "A\<T >:: ~ A(void)': Pokus o odkazování na odstraněnou funkci":
 
 ```cpp
 template<typename T>
@@ -888,7 +887,7 @@ void h()
 
 ### <a name="uninitialized-const-variables"></a>Neinicializované proměnné const
 
-Verze sady Visual Studio 2017 ve verzi RTW měl regrese, ve kterém kompilátor C++ by vystavovat Diagnostika Pokud proměnnou 'const' nebyl inicializován. Tento regresní chyba byla opravena v sadě Visual Studio 2017 verze 15.3. Následující kód vytvoří nyní "upozornění C4132: 'Value': je třeba inicializovat objekt const":
+Verze sady Visual Studio 2017 ve verzi RTW měl regrese, ve kterém kompilátor C++ by vystavovat Diagnostika Pokud proměnnou 'const' nebyl inicializován. Tento regresní chyba byla opravena v sadě Visual Studio 2017 verze 15.3. Následující kód vytvoří nyní "C4132 upozornění: 'Value': je třeba inicializovat objekt const ":
 
 ```cpp
 const int Value; //C4132
@@ -1677,7 +1676,7 @@ struct S : Base<T> {
 
 Chcete-li chybu opravit, změňte `return` příkazu `return this->base_value;`.
 
-**Poznámka:** v knihovně python Boost došlo po dlouhou dobu konkrétní MSVC alternativní řešení pro dopředné deklarace šablony v [unwind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp). V části [/ permissive-](build/reference/permissive-standards-conformance.md) režimu od verze Visual Studio 2017 verze 15.8 (_MSC_VER = 1915), a kompilátorem MSVC správně provede vyhledávání názvu závislého na argumentu (ADL) a je konzistentní s jinými kompilátory, vytváření tohoto řešení guard zbytečné. Aby bylo možné vyhnout se této chybě *C3861: 'unwind_type': identifikátor se nenašel*, naleznete v tématu [žádosti o přijetí změn 229](https://github.com/boostorg/python/pull/229) v úložišti Boostorg k aktualizaci souboru hlaviček. Máte už opravy [vcpkg](vcpkg.md) Boost balíčku, tak pokud získat nebo upgrade zdroje Boost z vcpkg pak nepotřebujete použít opravu samostatně.
+**Poznámka:** V knihovně python Boost došlo po dlouhou dobu konkrétní MSVC alternativní řešení pro dopředné deklarace šablony v [unwind_type.hpp](https://github.com/boostorg/python/blame/develop/include/boost/python/detail/unwind_type.hpp). V části [/ permissive-](build/reference/permissive-standards-conformance.md) režimu od verze Visual Studio 2017 verze 15.8 (_MSC_VER = 1915), a kompilátorem MSVC správně provede vyhledávání názvu závislého na argumentu (ADL) a je konzistentní s jinými kompilátory, vytváření tohoto řešení guard zbytečné. Aby bylo možné vyhnout se této chybě *C3861: 'unwind_type': identifikátor se nenašel*, naleznete v tématu [žádosti o přijetí změn 229](https://github.com/boostorg/python/pull/229) v úložišti Boostorg k aktualizaci souboru hlaviček. Máte už opravy [vcpkg](vcpkg.md) Boost balíčku, tak pokud získat nebo upgrade zdroje Boost z vcpkg pak nepotřebujete použít opravu samostatně.
 
 ### <a name="forward-declarations-and-definitions-in-namespace-std"></a>dál deklarace a definice v oboru názvů std
 
@@ -1685,7 +1684,7 @@ Standard jazyka C++ neumožňuje uživateli přidat dopředné deklarace nebo de
 
 Někdy v budoucnu Microsoft přesune umístění, kde jsou definovány některé typy STL. Pokud k tomu dojde, přeruší stávající kód, který přidá dopředné deklarace do oboru názvů `std`. Nová upozornění, C4643, pomáhá identifikovat problémy tyto zdroje. Upozornění je povolená v **/výchozí** režimu a je vypnuto ve výchozím nastavení. Bude to mít vliv programy, které jsou kompilovány pomocí **/Wall** nebo **/WX**.
 
-Následující kód teď vyvolá C4643: *předat dál deklarace 'vektorové' v oboru názvů std není povolen podle standardu jazyka C++*.
+Následující kód teď vyvolává C4643: *Předat dál deklarace 'vektorové' v oboru názvů std není povolen podle standardu jazyka C++*.
 
 ```cpp
 namespace std {
@@ -1865,9 +1864,9 @@ cl /EHsc /std:c++17 m.ixx /experimental:module
 cl /experimental:module /module:reference m.ifc main.cpp /std:c++14
 ```
 
-Kompilátor vyvolá C5050 u obou těchto případech: *upozornění C5050: jsem možné kompatibilní prostředí při importování modulu ': Neshoda verze jazyka C++.  Aktuální verze modulu "201402" "201703"*.
+Kompilátor vyvolá C5050 u obou těchto případech: *upozornění C5050: Teď je to možné kompatibilní prostředí při importování modulu ': Neshoda verze jazyka C++.  Aktuální verze modulu "201402" "201703"*.
 
-Kromě toho kompilátor vyvolá C7536 pokaždé, když se soubor .ifc bylo manipulováno. Záhlaví rozhraní modulu obsahuje SHA2 potvrzovaného obsahu pod ní. Při importu soubor .ifc mají hodnotu hash stejným způsobem a potom zkontrolován-the-hash zadaná v hlavičce; Pokud tyto neodpovídají žádné chyby vyvolané C7536: *ifc nepovedlo kontroly integrity.  Očekávaný SHA2: 66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6*.
+Kromě toho kompilátor vyvolá C7536 pokaždé, když se soubor .ifc bylo manipulováno. Záhlaví rozhraní modulu obsahuje SHA2 potvrzovaného obsahu pod ní. Při importu soubor .ifc mají hodnotu hash stejným způsobem a potom zkontrolován-the-hash zadaná v hlavičce; Pokud tyto neodpovídají žádné chyby vyvolané C7536: *ifc nepovedlo kontroly integrity.  Byl očekáván SHA2: '66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6'*.
 
 ### <a name="partial-ordering-involving-aliases-and-non-deduced-contexts"></a>Částečné řazení zahrnující aliasů a -odvodit kontextů
 

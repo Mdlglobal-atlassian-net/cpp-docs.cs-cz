@@ -3,16 +3,15 @@ title: vcpkg – Správce balíčků jazyka C++ A součásti pro Windows, Linux 
 description: vcpkg je Správce balíčků příkazového řádku, který výrazně zjednodušuje pořízení a instalaci všech knihoven C++ open source na Windows.
 author: mikeblome
 ms.author: mblome
-ms.date: 05/14/2018
-ms.technology:
-- cpp-ide
+ms.date: 02/22/2019
+ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 2f7dc6f1d9c78d894c5cf0e6ba20c8bdfc54e67a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: dc07086f271c9789629b335b58758b88e8e3d4e8
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518681"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809708"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Správce balíčků jazyka C++ pro Windows, Linux a MacOS
 
@@ -32,12 +31,12 @@ Pokud jste vytvořili klon vcpkg privátní knihovny v kolekci porty, můžete p
 
 ## <a name="installation"></a>Instalace
 
-Naklonujte úložiště vcpkg z Githubu: https://github.com/Microsoft/vcpkg. Můžete stáhnout do jakéhokoli umístění složky, kterému dáváte přednost.
+Naklonujte úložiště vcpkg z Githubu: [ https://github.com/Microsoft/vcpkg ](https://github.com/Microsoft/vcpkg). Můžete stáhnout do jakéhokoli umístění složky, kterému dáváte přednost.
 
 Zaváděcí nástroj spusťte v kořenové složce:
 
-- **Bootstrap vcpkg.bat** (Windows)
-- **./Bootstrap-vcpkg.SH** (Linux, MacOS)
+- **bootstrap-vcpkg.bat** (Windows)
+- **./bootstrap-vcpkg.sh** (Linux, MacOS)
 
 ## <a name="search-the-list-of-available-libraries"></a>Prohledejte seznam dostupných knihoven
 
@@ -211,10 +210,10 @@ Obsah instance vcpkg jsou:
 |---------|---------|
 |**vcpkg hledání [cesta]**|Vyhledat balíčky, které jsou k dispozici pro instalaci|
 |**vcpkg nainstalovat \<pkg >...**|Instalace balíčku|
-|**odebrat vcpkg \<pkg >...**|Odinstalovat balíček|
+|**vcpkg remove \<pkg>...**|Odinstalovat balíček|
 |**odebrat vcpkg – zastaralé**|Odinstalujte všechny zastaralé balíčky|
-|**vcpkg seznamu**|Výpis nainstalovaných balíčků|
-|**vcpkg aktualizace**|Zobrazit seznam balíčků pro aktualizaci|
+|**vcpkg list**|Výpis nainstalovaných balíčků|
+|**vcpkg update**|Zobrazit seznam balíčků pro aktualizaci|
 |**vcpkg upgradu**|Znovu sestavit všechny zastaralé balíčky|
 |**Hodnota hash vcpkg \<soubor > [alg]**|Konkrétní algoritmem hash souboru, výchozí SHA512|
 |**vcpkg integrovat instalace**|Zkontrolujte nainstalované balíčky k dispozici uživatelské úrovni. Vyžaduje oprávnění správce při prvním použití|
@@ -232,4 +231,4 @@ Obsah instance vcpkg jsou:
 |Možnost|Popis|
 |---------|---------|
 |**--trojici \<t >**|Zadejte trojici cílové architektury. (výchozí: `%VCPKG_DEFAULT_TRIPLET%`, viz také **vcpkg nápovědy trojici**)|
-|**--vcpkg kořenové \<cesta >**|Zadat kořenový adresář vcpkg (výchozí: `%VCPKG_ROOT%`)|
+|**--vcpkg-root \<path>**|Zadat kořenový adresář vcpkg (výchozí: `%VCPKG_ROOT%`)|

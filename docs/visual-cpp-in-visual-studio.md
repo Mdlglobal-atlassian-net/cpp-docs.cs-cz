@@ -2,18 +2,17 @@
 title: Visual C++ v sadě Visual Studio
 description: Visual C++ je název pro kompilátor C++ společnosti Microsoft, editor kódu a související nástroje v integrovaném vývojovém prostředí sady Visual Studio. Použití jazyka Visual C++ pro vývoj aplikací pro Windows, Linux, Android a iOS.
 ms.date: 09/26/2018
-ms.technology:
-- cpp-ide
+ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 0b5f263bb6716d4f66673257115d37cd17a59051
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 0dd7cc2aebb9ff0f95d11c839a104b94b3d37db6
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327184"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809645"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ v sadě Visual Studio
 
@@ -159,7 +158,7 @@ Programování pro modul Common Language Runtime (CLR).
 
 ## <a name="third-party-open-source-c-libraries"></a>Knihovny třetích stran opensourcového jazyka C++
 
-Napříč platformami **vcpkg** nástroj příkazového řádku výrazně zjednodušuje zjišťování a instalaci více než 900 open source knihoven jazyka C++. Zobrazit [vcpkg: Správce balíčků jazyka C++ pro Windows](vcpkg.md).
+Napříč platformami **vcpkg** nástroj příkazového řádku výrazně zjednodušuje zjišťování a instalaci více než 900 open source knihoven jazyka C++. See [vcpkg: Správce balíčků jazyka C++ pro Windows](vcpkg.md).
 
 ## <a name="feedback-and-community"></a>Názory a komunita
 
@@ -169,7 +168,7 @@ Naučíte se vytvářet zprávy o chybách efektivní proti sady nástrojů Visu
 [Blog týmu Visual C++](http://blogs.msdn.com/b/vcblog/)<br/>
 Další informace o nových funkcích a nejnovější informace od vývojářů [!INCLUDE[vcprvc](build/includes/vcprvc_md.md)].
 
-[Komunity vývojářů v sadě Visual Studio](https://developercommunity.visualstudio.com/)<br/>
+[Visual Studio Developer Community](https://developercommunity.visualstudio.com/)<br/>
 Zjistěte, jak získat nápovědu, oznamovat chyby a posílat návrhy na vylepšení pro sadu Visual Studio.
 
 ## <a name="see-also"></a>Viz také:

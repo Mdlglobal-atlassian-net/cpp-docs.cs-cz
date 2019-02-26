@@ -1,23 +1,22 @@
 ---
 title: Visual C++ – nápověda a komunita
 ms.date: 11/30/2017
-ms.technology:
-- cpp-ide
+ms.technology: cpp-ide
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 40983509aa9c97cbbd6b778282720c45416ec525
-ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
+ms.openlocfilehash: 8fdd48c026485e55db01f6f70b0dde3c1e68d847
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978254"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809669"
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ – nápověda a komunita
 
 Tady je způsob pro získání informací o tom, jak psát C++ kódu a použití nástroje pro vývoj sady Visual Studio.
 
-## <a name="samples"></a>Ukázky kódu
+## <a name="samples"></a>Ukázky
 
 |Název|Popis|
 |-----------|-----------------|

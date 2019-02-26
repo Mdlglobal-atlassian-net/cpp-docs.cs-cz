@@ -1,20 +1,19 @@
 ---
 title: Podporované platformy (Visual C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 helpviewer_keywords:
 - Visual C++, platforms supported
 - platforms [C++]
 ms.assetid: 0d893056-4008-411a-b3d1-5f57fd7da95c
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 5a077ae90078e4157c154cae2821e67642eff64a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8bd090acf94876ee7939b5d1d80613f688b89d7
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459433"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809630"
 ---
 # <a name="supported-platforms-visual-c"></a>Podporované platformy (Visual C++)
 
@@ -35,13 +34,13 @@ Aplikace vytvořené pomocí sady Visual Studio můžete zacílit na různé pla
 |iOS \*\*|X|X|X|
 |Linux \*\*\*|X|X|X|
 
-\* Můžete použít sadu nástrojů platformy Windows XP zahrnuty v sadě Visual Studio 2017, Visual Studio 2015, Visual Studio 2013 a Visual Studio 2012 Update 1 nebo novějším k sestavení projektů Windows XP a Windows Server 2003. Informace o tom, jak použít tuto sadu nástrojů platformy najdete v tématu [konfigurace aplikací pro Windows XP](build/configuring-programs-for-windows-xp.md). Další informace o změně sada nástrojů platformy najdete v tématu [postupy: Změna cílové architektury a sady nástrojů](build/how-to-modify-the-target-framework-and-platform-toolset.md).
+\* Můžete použít sadu nástrojů platformy Windows XP zahrnuty v sadě Visual Studio 2017, Visual Studio 2015, Visual Studio 2013 a Visual Studio 2012 Update 1 nebo novějším k sestavení projektů Windows XP a Windows Server 2003. Informace o tom, jak použít tuto sadu nástrojů platformy najdete v tématu [konfigurace aplikací pro Windows XP](build/configuring-programs-for-windows-xp.md). Další informace o změně sada nástrojů platformy najdete v tématu [jak: Změna cílové architektury a sady nástrojů](build/how-to-modify-the-target-framework-and-platform-toolset.md).
 
 \*\* Můžete nainstalovat **vývoj mobilních aplikací pomocí C++** úloh v instalačním programu sady Visual Studio 2017 (nebo volitelné **Visual C++ pro vývoj pro různé platformy mobilních aplikací** součásti v instalačním programu sady Visual Studio 2015) do cíl platformu iOS nebo Android. Pokyny najdete v tématu [instalaci Visual C++ pro vývoj mobilních řešení napříč platformami](/visualstudio/cross-platform/install-visual-cpp-for-cross-platform-mobile-development). K vytváření kódu s Iosem, musíte mít počítači Mac a splňovat další požadavky. Seznam požadavků a pokyny k instalaci najdete v tématu [instalace a konfigurace nástrojů pro vytváření pomocí iOS](/visualstudio/cross-platform/install-and-configure-tools-to-build-using-ios). Můžete vytvořit x86 nebo ARM kód tak, aby odpovídaly cílové hardwaru. Použití x86 konfigurací pro sestavení pro některá zařízení s Androidem, simulátoru iOS a Microsoft Visual Studio Emulator for Android. Konfigurace ARM použijte k sestavování pro zařízení s Iosem a většiny zařízení s Androidem.
 
 \*\*\* Můžete nainstalovat **vývoj pro Linux v C++** úloh v instalačním programu sady Visual Studio 2017 na cílové platformy Linux. Pokyny najdete v tématu [stažení, instalace a nastavení úloh Linux](linux/download-install-and-setup-the-linux-development-workload.md). Tato sada nástrojů zkompiluje spustitelný soubor na cílovém počítači, abyste mohli sestavit pro jakékoliv podporované architektuře.
 
-Informace o tom, jak nastavit konfiguraci cílové platformy naleznete v tématu [postupy: Konfigurace projekty Visual C++ pro cíl 64-Bit, x64 platformy](build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).
+Informace o tom, jak nastavit konfiguraci cílové platformy naleznete v tématu [jak: Konfigurace projektů Visual C++ pro cílení 64-Bit, x64 platformy](build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).
 
 ## <a name="see-also"></a>Viz také:
 
