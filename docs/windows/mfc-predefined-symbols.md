@@ -9,12 +9,12 @@ helpviewer_keywords:
 - databases [C++], MFC programming model
 - Windows programming MFC symbols [C++]
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-ms.openlocfilehash: 2f36f42ce24c2cdf1f3ac4c93248d430ec75f30a
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 329d56f4a8e0e9992cb78987c559f74c7349f681
+ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320858"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56954949"
 ---
 # <a name="mfc-predefined-symbols"></a>Předdefinované symboly MFC
 
@@ -23,12 +23,12 @@ Projekty MFC vždy zahrnovat několik hlavičkové soubory, které podporují wi
 ```cpp
 #include <afxwin.h>      //MFC core and standard components
 #include <afxext.h>      //MFC extensions
-#include <afxdisp.h      //MFC automation classes
+#include <afxdisp.h>      //MFC automation classes
 #include <afxdtctl.h>   //MFC support for Internet Explorer common controls
 #include <afxcmn.h>      //MFC support for Windows common controls.
 ```
 
-Soubory hlaviček zahrnují ID hodnoty symbolů pro běžné knihovny MFC hodnoty. Tyto symboly jsou k dispozici pouze při práci v projektu knihovny MFC. Předpona AFX_ následuje název předpony standardní symbolu.
+Soubory hlaviček zahrnují ID hodnoty symbolů pro běžné knihovny MFC hodnoty. Tyto symboly jsou k dispozici pouze při práci v projektu knihovny MFC. `AFX_` Předponou následuje název předpony standardní symbolu.
 
 |||
 |-|-|
@@ -211,7 +211,7 @@ Soubory hlaviček zahrnují ID hodnoty symbolů pro běžné knihovny MFC hodnot
 |AFX_IDS_UPDATING_ITEMS|AFX_IDS_USER_EXCEPTION|
 |AFX_IDS_VERB_EDIT|AFX_IDS_VERB_PROPERTIES|
 
-## <a name="mfc-database-programming-symbols"></a>programovací symboly databáze MFC
+## <a name="mfc-database-programming"></a>MFC databáze programování
 
 Symboly v této tabulce zobrazí jenom v projektu knihovny MFC při byla přidána podpora databáze. Podporují taky MFC připojení k SQL serverům a programování databáze.
 
@@ -232,9 +232,11 @@ Symboly v této tabulce zobrazí jenom v projektu knihovny MFC při byla přidá
 |AFX_IDP_SQL_SNAPSHOT_ NOT_SUPPORTED|AFX_IDP_SQL_SQL_CONFORMANCE|
 |AFX_IDP_SQL_SQL_NO_TOTAL|AFX_IDP_SQL_UPDATE_DELETE_FAILED|
 
-## <a name="mfc-windows-programming-symbols"></a>Programovací symboly MFC Windows
+## <a name="mfc-windows-programming"></a>MFC – programování Windows
 
-Tyto symboly jsou taky součástí soubory podpory knihovny MFC, ale podporují standardní funkce aplikace Windows a akce. Tyto symboly se používají s nabídkami. Pokud pracujete s nabídkami v **Editor nabídek**, tyto symboly se zobrazí v **okně s vlastnostmi** přidružené k běžné příkazy nabídky. Například pokud má vaše aplikace **souboru** nabídky s **ukončovací** příkazu, že bude spojená s symbol id_app_exit – příkaz v [okno vlastností](/visualstudio/ide/reference/properties-window).
+Tyto symboly jsou taky součástí soubory podpory knihovny MFC, ale podporují standardní funkce aplikace Windows a akce. Tyto symboly se používají s nabídkami.
+
+Pokud pracujete s nabídkami v **Editor nabídek**, tyto symboly se zobrazí v **okně s vlastnostmi** přidružené k běžné příkazy nabídky. Například pokud má vaše aplikace **souboru** nabídky s **ukončovací** příkazu, že bude spojená s symbol id_app_exit – příkaz v [okno vlastností](/visualstudio/ide/reference/properties-window).
 
 ||||
 |-|-|-|

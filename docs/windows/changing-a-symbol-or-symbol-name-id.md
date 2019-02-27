@@ -35,23 +35,23 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 4f1c44e8fc2ae34ddcb65ec23ca8d98e11d50ec0
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: d3c8a747c1e66490c333ff050c7bfa6e6f723a87
+ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320585"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56954897"
 ---
 # <a name="how-to-manage-symbols"></a>Postupy: Správa symbolů
 
-Při vytváření nového prostředku nebo prostředku objektu vývojové prostředí jí přiřadí výchozí název symbolu, například IDD_DIALOG1. Můžete použít [okno vlastností](/visualstudio/ide/reference/properties-window) Chcete-li změnit výchozí název symbolu nebo chcete změnit název žádný symbol už přidružené k prostředku.
+Při vytváření nového prostředku nebo prostředku objekt vývojové prostředí přiřadí ji výchozí název symbol, například `IDD_DIALOG1`. Můžete použít [okno vlastností](/visualstudio/ide/reference/properties-window) Chcete-li změnit výchozí název symbolu nebo chcete změnit název žádný symbol už přidružené k prostředku.
 
 Pro symboly přidružený jeden prostředek, můžete použít také **vlastnosti** oknu změnit hodnotu symbolu. Můžete použít [symboly prostředků – dialogové okno](../windows/resource-symbols-dialog-box.md) ke změně hodnoty symbolů není aktuálně přiřazená k prostředku.
 
 Obvykle všechny symbol definice jsou uložené v `Resource.h`. Však může být nutné změnit to zahrnovat název souboru, což umožní, například pracovat s více než jeden soubor prostředků ve stejném adresáři.
 
 > [!NOTE]
-> Pokud váš projekt již neobsahuje soubor .rc, přečtěte si téma [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
+> Pokud váš projekt již neobsahuje soubor .rc, přečtěte si téma [jak: Vytvoření prostředků](../windows/how-to-create-a-resource-script-file.md).
 
 ## <a name="symbol-name-restrictions"></a>Omezení názvu symbolu
 
@@ -67,14 +67,14 @@ Omezení pro názvy symbolů jsou následující:
 
 - Názvy symbolů se velká a malá písmena, ale je zachováno případ prvním definice symbolu. Hlavičkový soubor, který definuje symboly umožňuje kompilátoru/editor prostředků a programech C++ odkazovat prostředky definované v souboru prostředků. Pro dva názvy symbolů, která se liší pouze v případě, program jazyka C++ se zobrazí dva samostatné symboly, zatímco kompilátor/editor prostředků se zobrazí oba názvy jako odkazující na jeden jeden symbol.
 
-   > [!NOTE]
-   > Pokud není podle schématu název standardní symbol (ID*_[keyword]) uvedených níže, a být stejná jako klíčové slovo ví, kompilátor prostředků skriptu, došlo k pokusu o vytvoření souboru skriptu prostředků bude výsledkem chyba zdánlivě náhodný název symbolu se stane s generace, které je obtížné diagnostikovat. Chcete-li tomu zabránit, dodržovat standardní schéma pojmenování.
+> [!NOTE]
+> Pokud není podle schématu název standardní symbol (ID*_[keyword]) níže a váš název symbolu se stane se shodovat s klíčovým slovem ví, kompilátor prostředků skriptu, došlo k pokusu o vytvoření souboru skriptu prostředků bude výsledkem chyba zdánlivě náhodné generování To je obtížné diagnostikovat. Chcete-li tomu zabránit, dodržovat standardní schéma pojmenování.
 
-Názvy symbolů mají popisný předpony, které označují typ prostředku nebo objektů, které představují. Tyto předpony popisný začínat identifikátor kombinaci textu Třídy knihovny MFC (Microsoft Foundation) používá konvence pojmenování symbol je znázorněno v následující tabulce.
+Názvy symbolů mají popisný předpony, které označují typ prostředku nebo objektů, které představují. Tyto předpony popisný začínat identifikátor kombinaci textu Knihovny Microsoft Foundation Class (MFC) používá konvence pojmenování symbol je znázorněno v následující tabulce:
 
 |Kategorie|Předpona|Použití|
 |--------------|------------|---------|
-|Prostředky|IDR_ IDD_ IDC_ IDI_ IDB_|Akcelerátoru nebo nabídky (a související nebo vlastní prostředky) dialogové okno ikony rastrového obrázku kurzoru|
+|Prostředky|IDR_, IDD_, IDC_, IDI_, IDB_|Akcelerátoru nebo nabídku (a související nebo vlastní prostředky), dialogové okno, kurzor, ikony, bitmapy|
 |Položky nabídky|ID_|Položka nabídky|
 |Příkazy|ID_|Příkaz|
 |Ovládací prvky a podřízená okna|IDC_|Control|
@@ -89,11 +89,12 @@ Názvy symbolů mají popisný předpony, které označují typ prostředku nebo
 
    Pokud zadáte nový název symbolu, jí automaticky přiřazena hodnota.
 
-Můžete použít [symboly prostředků – dialogové okno](../windows/resource-symbols-dialog-box.md) změnit názvy symbolů není aktuálně přiřazená k prostředku.
+> [!NOTE]
+> Můžete použít [symboly prostředků – dialogové okno](../windows/resource-symbols-dialog-box.md) změnit názvy symbolů není aktuálně přiřazená k prostředku.
 
 ## <a name="symbol-value-restrictions"></a>Omezení hodnoty symbolu
 
-Symbol hodnota může být libovolné celé číslo vyjádřena v normálním způsobem pro # direktivy preprocesoru define. Tady jsou některé příklady hodnot symbolů:
+Symbol hodnota může být libovolné celé číslo vyjádřena v normálním způsobem pro `#define` direktivy preprocesoru. Tady jsou některé příklady hodnot symbolů:
 
 ```
 18
@@ -116,15 +117,13 @@ Tady jsou některá omezení hodnoty symbolu:
     #define IDC_MYEDIT  IDC_OTHEREDIT  //not supported
     ```
 
-- Makra preprocesoru nelze použít s argumenty jako definice hodnot. Příklad:
+- Makra preprocesoru nelze použít s argumenty jako definice hodnot. V následujícím příkladu není platný výraz bez ohledu na to, co `ID` vyhodnocen v době kompilace:
 
     ```cpp
     #define   IDD_ABOUT  ID(7) //not supported
     ```
 
-   není platný výraz bez ohledu na to, co `ID` vyhodnocen v době kompilace.
-
-- Vaše aplikace může mít existující soubor obsahující symboly definované s výrazy. Další informace o tom, jak zahrnout symboly jako jen pro čtení symbolů najdete v tématu [použití sdílených (jen pro čtení) nebo počítané symboly](../windows/including-shared-read-only-or-calculated-symbols.md).
+- Vaše aplikace může mít existující soubor obsahující symboly definované s výrazy.
 
 Další informace o počet rozsahů, naleznete v tématu [TN023: Standardní prostředky MFC](../mfc/tn023-standard-mfc-resources.md).
 
@@ -138,7 +137,7 @@ Další informace o počet rozsahů, naleznete v tématu [TN023: Standardní pro
     IDC_EDITNAME=5100
     ```
 
-Nová hodnota je uložena v hlavičkový soubor symbolů při příštím uložte projekt. Pouze název symbolu zůstává viditelná pole ID. rovnítko a hodnota nejsou zobrazeny po jste ověření.
+   Nová hodnota je uložena v hlavičkový soubor symbolů při příštím uložte projekt. Pouze název symbolu zůstává viditelná v poli ID a znaménko rovná se a hodnota nejsou zobrazeny po jste ověření.
 
 ## <a name="change-or-delete-symbols"></a>Změna nebo odstranění symbolů
 
@@ -151,14 +150,14 @@ Během činnosti v [symboly prostředků – dialogové okno](../windows/resourc
 1. Upravit vlastnosti name nebo value v polí zobrazených v symbolu **změnit Symbol** dialogové okno.
 
    > [!NOTE]
-   > Chcete-li změnit symbol, který *je* přiřazené k prostředku nebo k objektu, je nutné použít editor prostředků nebo **vlastnosti** okna.
+   > Chcete-li změnit symbol, který je přiřazen k prostředku nebo k objektu, je nutné použít editor prostředků nebo **vlastnosti** okna.
 
 ### <a name="to-delete-an-unassigned-unused-symbol"></a>Chcete-li odstranit symbol nepřiřazené (nepoužívané)
 
 V [symboly prostředků – dialogové okno](../windows/resource-symbols-dialog-box.md), vyberte symbol, který chcete odstranit a zvolte **odstranit**.
 
-   > [!NOTE]
-   > Před odstraněním nepoužívaných symbolů do souboru prostředků, ujistěte se, že se nepoužívá jako jinde v programu ani soubory prostředků zahrnuté v době kompilace.
+> [!NOTE]
+> Před odstraněním nepoužívaných symbolů do souboru prostředků, ujistěte se, že se nepoužívá jako jinde v programu ani soubory prostředků zahrnuté v době kompilace.
 
 ## <a name="include-symbols"></a>Zahrnout symboly
 
@@ -193,9 +192,9 @@ Prostředí se správně interpretovat tyto počítané symboly, pokud:
    Nevolejte soubor `Resource.h`, protože se běžně používá hlavičkový soubor symbolů hlavní název souboru.
 
    > [!NOTE]
-   > **Důležité** zadejte v poli direktivy symbolů jen pro čtení je součástí souboru prostředků přesně během psaní. Ujistěte se, jaký typ neobsahuje chyby syntaxe nebo kontrolu pravopisu.
+   > Co zadáte **měrnice souborů jen pro čtení** pole je součástí souboru prostředků přesně během psaní. Ujistěte se, jaký typ neobsahuje chyby syntaxe nebo kontrolu pravopisu.
 
-   Použití **měrnice souborů jen pro čtení** pole mají zahrnout soubory s pouze definice symbolů. Nezahrnují definice prostředků. v opačném případě duplicitní prostředek, který definice se vytvoří, když je soubor uložen.
+   Použití **měrnice souborů jen pro čtení** pole mají zahrnout soubory s pouze definice symbolů. Nezahrnují definicích prostředků, jinak duplicitní prostředek definice se vytvoří při uložení souboru.
 
 1. Umístění symbolů v souboru, který jste zadali.
 
@@ -215,6 +214,6 @@ Win32
 
 ## <a name="see-also"></a>Viz také
 
-[Identifikátory prostředků (symbolů)](../windows/symbols-resource-identifiers.md)<br/>
-[Vytváření symbolů](../windows/creating-new-symbols.md)<br/>
+[Identifikátory prostředků (symboly)](../windows/symbols-resource-identifiers.md)<br/>
+[Postupy: Vytváření symbolů](../windows/creating-new-symbols.md)<br/>
 [ID předdefinovaných symbolů](../windows/predefined-symbol-ids.md)<br/>

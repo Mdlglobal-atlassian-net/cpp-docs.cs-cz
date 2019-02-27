@@ -19,18 +19,18 @@ helpviewer_keywords:
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-ms.openlocfilehash: 01b810d162da4d59c2044fe02a1da5c0929d41b9
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 7dda3dc04b055226a0ae9788e6a98f6261256e7f
+ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320598"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56954884"
 ---
 # <a name="how-to-create-symbols-c"></a>Postupy: Vytvoření symboly (C++)
 
 Když začínáte nový projekt, možná bude vhodné ke zmapování názvy symbolů, které budete potřebovat ještě před vytvořením prostředků, které budete mít přiřazenou.
 
-**Symbolů prostředků** C++ dialogové okno umožňuje přidat nový prostředek symboly, symboly, které se zobrazí, nebo přejděte do umístění ve zdrojovém kódu, pokud symbol je používán změnit.
+**Symbolů prostředků** dialogové okno umožňuje přidat nový prostředek symboly, symboly, které se zobrazí, nebo přejděte do umístění ve zdrojovém kódu, pokud symbol je používán změnit.
 
 Dialogové okno obsahuje následující vlastnosti:
 
@@ -42,12 +42,12 @@ Dialogové okno obsahuje následující vlastnosti:
 |**Zobrazit jen pro čtení symbolů**|Pokud je vybráno, zobrazí prostředky jen pro čtení. Ve výchozím nastavení **Symbol prostředku** dialogové okno zobrazí jenom upravitelné prostředky v souboru skriptu prostředku, ale tato možnost aktivní, lze měnit prostředky se zobrazí tučným písmem a prostředky jen pro čtení se zobrazí ve formátu prostého textu.|
 |**Používá**|Zobrazí prostředek nebo prostředky pomocí symbolu vybrali v seznamu symboly. Přejděte do editoru pro daný prostředek vyberte prostředek v **používá** pole a tlačítko **zobrazit použití**.|
 |**Nové**|Otevře **nový Symbol** dialogové okno, které vám umožní definovat název a v případě potřeby, hodnotu pro nový identifikátor symbolické prostředků.|
-|**Změna**|Otevře **změnit Symbol** dialogové okno, které vám umožní změnit název nebo hodnotu symbolu. Pokud je symbol pro ovládací prvek nebo prostředek používá, symbol lze změnit pouze z editoru odpovídající prostředek. Další informace najdete v tématu [změna nepřiřazených symbolů](../windows/changing-unassigned-symbols.md).|
+|**Změna**|Otevře **změnit Symbol** dialogové okno, které vám umožní změnit název nebo hodnotu symbolu. Pokud je symbol pro ovládací prvek nebo prostředek používá, symbol lze změnit pouze z editoru odpovídající prostředek. Další informace najdete v tématu [spravovat symboly](../windows/changing-unassigned-symbols.md).|
 |**Použití zobrazení**|Otevře se na prostředek, který obsahuje symbol v editoru odpovídající prostředek.|
 
 ## <a name="create-symbols"></a>Vytváření symbolů
 
-### <a name="to-create-a-new-symbol"></a>Chcete-li vytvořit nový symbol
+Pokud chcete vytvořit nový symbol:
 
 1. V **symbolů prostředků** dialogového okna zvolte **nový**.
 
@@ -58,25 +58,23 @@ Dialogové okno obsahuje následující vlastnosti:
 1. Vyberte **OK** přidáte nový symbol do seznamu symbol.
 
 > [!NOTE]
-> Pokud zadáte název symbolu, který již existuje, zobrazí se okno se zprávou s informacemi o tom, že je již definován symbol s tímto názvem. Nejde definovat dvě nebo víc symbolů se stejným názvem, ale můžete definovat různé symbolů se stejnou číselnou hodnotu. Další informace najdete v tématu [omezení názvu symbolu](../windows/symbol-name-restrictions.md) a [omezení hodnoty symbolu](../windows/symbol-value-restrictions.md).
+> Pokud zadáte název symbolu, který již existuje, zobrazí se okno se zprávou s informacemi o tom, že je již definován symbol s tímto názvem. Nejde definovat dvě nebo víc symbolů se stejným názvem, ale můžete definovat různé symbolů se stejnou číselnou hodnotu.
 
-### <a name="to-view-resource-symbols"></a>K zobrazení symbolů prostředků
+Zobrazení symbolů prostředků:
 
 1. V [zobrazení prostředků](../windows/resource-view-window.md), klikněte pravým tlačítkem na soubor .rc.
 
    > [!NOTE]
-   > Pokud váš projekt již neobsahuje soubor .rc, najdete [vytváření nového souboru skriptu prostředků](../windows/how-to-create-a-resource-script-file.md).
+   > Pokud váš projekt již neobsahuje soubor .rc, najdete [jak: Vytvoření prostředků](../windows/how-to-create-a-resource-script-file.md).
 
 1. Vyberte **symbolů prostředků** z místní nabídky do zobrazení tabulky symbolů prostředků v **symbolů prostředků** dialogové okno.
 
    > [!NOTE]
    > Předdefinované symboly najdete **zobrazit jen pro čtení symbolů** zaškrtávací políčko.
 
-### <a name="to-open-the-resource-editor-for-a-given-symbol"></a>Chcete-li otevřít editor prostředků pro daný symbol
+Otevření editoru prostředků pro daný symbol:
 
 Při procházení symbolů v **symbolů prostředků**, můžete další informace o způsobu použití určitého symbolu. **Zobrazit použití** tlačítko poskytuje rychlý způsob, jak získat tyto informace.
-
-#### <a name="to-move-to-the-resource-editor-where-a-symbol-is-being-used"></a>Přejděte do editoru prostředků, ve kterém se používá symbol
 
 1. Vyberte symbol ve **název** pomocí boxingu **symbolů prostředků** dialogové okno.
 
@@ -92,6 +90,6 @@ Win32
 
 ## <a name="see-also"></a>Viz také
 
-[Identifikátory prostředků (symbolů)](../windows/symbols-resource-identifiers.md)<br/>
-[Správa symbolů](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
+[Identifikátory prostředků (symboly)](../windows/symbols-resource-identifiers.md)<br/>
+[Postupy: Správa symbolů](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
 [ID předdefinovaných symbolů](../windows/predefined-symbol-ids.md)<br/>
