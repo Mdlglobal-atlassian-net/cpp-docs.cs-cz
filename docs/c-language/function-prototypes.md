@@ -33,7 +33,7 @@ Deklarace funkce předchází definici funkce a určuje název, návratový typ,
 
 *init-declarator-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Init-declarator-list***,***init-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*Init-declarator-list* **,** *init-declarator*
 
 *init-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Deklarátor*<br/>
@@ -43,8 +43,8 @@ Deklarace funkce předchází definici funkce a určuje název, návratový typ,
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
 *přímé declarator*: /\* deklarátorem funkce \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator***(***seznam parametrů typu***)**   / \* deklarátor nový styl \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator***(***seznam identifikátorů*<sub>optimalizované</sub> **)**  / \* Obsolete – vizuální styl deklarátor \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **(** *seznam parametrů typu* **)**   / \* deklarátor nový styl \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **(** *seznam identifikátorů*<sub>optimalizované</sub> **)**  / \* Obsolete – vizuální styl deklarátor \*/
 
 Prototyp má stejný formulář jako definice funkce, s tím rozdílem, že je ukončeno prvkem středníkem hned za pravou závorku a proto nemá žádný text. V obou případech musíte návratový typ souhlasit s návratovým typem zadaným v definici funkce.
 

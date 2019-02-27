@@ -27,7 +27,7 @@ ms.locfileid: "56151491"
 
 *seznam inicializátorů*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Inicializátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*seznam inicializátorů***,***inicializátor*
+&nbsp;&nbsp;&nbsp;&nbsp;*seznam inicializátorů* **,** *inicializátor*
 
 *Seznam inicializátorů* je seznam inicializátorů oddělený čárkami. Každý inicializátor v seznamu je konstantní výraz nebo seznamem inicializátorů. Proto mohou být vnořené seznamy inicializátorů. Tento formulář je užitečné pro inicializace agregace členů agregační typ, jak ukazují příklady v této části. Ale pokud inicializátor pro automatickému identifikátoru je jediný výraz, se nemusí být konstantní výraz; pouze musí mít příslušného typu pro přiřazení k identifikátoru.
 

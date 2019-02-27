@@ -38,7 +38,7 @@ int main() {
 
 Výrazy dolního indexu se obecně používají k odkazování na prvky pole, ale index můžete použít na jakýkoli ukazatel. Bez ohledu pořadí hodnot, *výraz* musí být uzavřen v závorkách (**[] č.**).
 
-Výraz dolního indexu je vyhodnocován přidáním celočíselné hodnoty na hodnotu ukazatele a použití indirection – operátor (<strong>\**</strong>) na výsledek. (Viz [dereference a Address-of operátory](../c-language/indirection-and-address-of-operators.md) diskuzi o operátoru dereference.) V důsledku toho pro jednorozměrné pole, následující čtyři výrazy jsou ekvivalentní, za předpokladu, že `a` ukazatel a `b` je celé číslo:
+Výraz dolního indexu je vyhodnocován přidáním celočíselné hodnoty na hodnotu ukazatele a použití indirection – operátor (<strong>\*</strong>) na výsledek. (Viz [dereference a Address-of operátory](../c-language/indirection-and-address-of-operators.md) diskuzi o operátoru dereference.) V důsledku toho pro jednorozměrné pole, následující čtyři výrazy jsou ekvivalentní, za předpokladu, že `a` ukazatel a `b` je celé číslo:
 
 ```
 a[b]

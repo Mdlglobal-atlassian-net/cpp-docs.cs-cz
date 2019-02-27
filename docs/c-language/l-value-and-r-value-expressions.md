@@ -30,7 +30,7 @@ Jakýkoli z těchto výrazů jazyka C může být výrazem l-hodnoty:
 
 - Výraz výběru členů (**->** nebo **.**)
 
-- Unární indirection (<strong>\**</strong>) výraz, který není odkaz na pole
+- Unární indirection (<strong>\*</strong>) výraz, který není odkaz na pole
 
 - Výraz l-hodnoty v závorkách
 

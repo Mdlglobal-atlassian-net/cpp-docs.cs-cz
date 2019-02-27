@@ -26,10 +26,10 @@ ms.locfileid: "56151946"
 &nbsp;&nbsp;&nbsp;&nbsp;*příkaz-skoku*
 
 *příkaz-skoku*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**příkaz goto***identifikátor***;**
+&nbsp;&nbsp;&nbsp;&nbsp;**příkaz goto** *identifikátor* **;**
 
 *příkaz s popiskem*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor***:***– příkaz*
+&nbsp;&nbsp;&nbsp;&nbsp;*identifikátor* **:** *– příkaz*
 
 Příkaz Popisek má smysl pouze `goto` příkaz v libovolném kontextu, provádí se příkaz s popiskem bez ohledu na popisek.
 

@@ -50,9 +50,9 @@ Chcete-li deklarovat pole hodnot, ukazatele na hodnoty a funkce, která vrátí 
 *direct-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**(***deklarátor***)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator***[***konstantní výraz*<sub>optimalizované</sub> **]** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator***(***seznam parametrů typu***)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator***(***seznam identifikátorů*<sub>optimalizované</sub> **)**
+&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **[** *konstantní výraz*<sub>optimalizované</sub> **]** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **(** *seznam parametrů typu* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **(** *seznam identifikátorů*<sub>optimalizované</sub> **)**
 
 *pointer*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *seznam typů kvalifikátor*<sub>optimalizované</sub><br/>

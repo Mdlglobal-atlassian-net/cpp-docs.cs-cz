@@ -34,8 +34,8 @@ Argumenty jsou názvy hodnotu předanou funkci volání funkce. Parametry jsou h
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
 *přímé declarator*: /\* deklarátorem funkce \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator***(***seznam parametrů typu***)**  / \* deklarátor nový styl \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator***(***seznam identifikátorů*<sub>optimalizované</sub> **)**  / \* Obsolete – vizuální styl deklarátor \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **(** *seznam parametrů typu* **)**  / \* deklarátor nový styl \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **(** *seznam identifikátorů*<sub>optimalizované</sub> **)**  / \* Obsolete – vizuální styl deklarátor \*/
 
 *Seznam parametrů typu*: /\* seznam parametrů \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Seznam parametrů* <br/>
@@ -43,7 +43,7 @@ Argumenty jsou názvy hodnotu předanou funkci volání funkce. Parametry jsou h
 
 *Seznam parametrů*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarace parametru*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Seznam parametrů* **,***deklarace parametru*
+&nbsp;&nbsp;&nbsp;&nbsp;*Seznam parametrů* **,** *deklarace parametru*
 
 *deklarace parametru*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*specifikátory deklarace* *deklarátorů*<br/>
