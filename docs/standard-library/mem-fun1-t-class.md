@@ -1,21 +1,21 @@
 ---
 title: mem_fun1_t – třída
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::mem_fun1_t
+- functional/std::mem_fun1_t
 helpviewer_keywords:
 - mem_fun1_t class
 ms.assetid: 01a8c2c2-b2f7-4e3f-869c-5b5b9f06ea54
-ms.openlocfilehash: 9a1fe26e66eb2ad20e6889b95640fadd2b3c45a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42a6ee7c169d078e216b82365ab26d10838798c6
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613190"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006432"
 ---
 # <a name="memfun1t-class"></a>mem_fun1_t – třída
 
-Třída adaptéru umožňující `non_const` členskou funkci, která přijímá jeden argument, která se má volat jako objekt binární funkce při inicializaci s argumentem ukazatele.
+Třída adaptéru umožňující `non_const` členskou funkci, která přijímá jeden argument, která se má volat jako objekt binární funkce při inicializaci s argumentem ukazatele. Zastaralé v C ++ 11, v C ++ 17 odebrané.
 
 ## <a name="syntax"></a>Syntaxe
 

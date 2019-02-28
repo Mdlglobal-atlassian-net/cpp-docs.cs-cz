@@ -1,21 +1,22 @@
 ---
 title: '&lt;funkční&gt; funkce'
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
 - functional/std::bind
-- xfunctional/std::bind1st
-- xfunctional/std::bind2nd
-- xfunctional/std::bit_and
-- xfunctional/std::bit_not
-- xfunctional/std::bit_or
-- xfunctional/std::bit_xor
+- functional/std::bind1st
+- functional/std::bind2nd
+- functional/std::bit_and
+- functional/std::bit_not
+- functional/std::bit_or
+- functional/std::bit_xor
 - functional/std::cref
 - type_traits/std::cref
-- xfunctional/std::mem_fn
-- xfunctional/std::mem_fun_ref
-- xfunctional/std::not1
-- xfunctional/std::not2
-- xfunctional/std::ptr_fun
+- functional/std::mem_fn
+- functional/std::mem_fun_ref
+- functional/std::not1
+- functional/std::not2
+- functional/std::not_fn
+- functional/std::ptr_fun
 - functional/std::ref
 - functional/std::swap
 helpviewer_keywords:
@@ -28,25 +29,36 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: cd89386ff421c199705856b9cf5f6b58ff25f7f5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 559110361b9d3d8c66ff261860f8885ff56d44d5
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519695"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006723"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;funkční&gt; funkce
 
 ||||
 |-|-|-|
-|[Vytvoření vazby](#bind)|[bind1st –](#bind1st)|[bind2nd –](#bind2nd)|
-|[bit_and –](#bit_and)|[bit_not](#bit_not)|[bit_or](#bit_or)|
-|[bit_xor](#bit_xor)|[cref](#cref)|[mem_fn](#mem_fn)|
-|[mem_fun](#mem_fun)|[mem_fun_ref](#mem_fun_ref)|[not1 –](#not1)|
-|[not2 –](#not2)|[ptr_fun](#ptr_fun)|[ref](#ref)|
-|[Prohození](#swap)|
+| [Vytvoření vazby](#bind) | [bit_and](#bit_and) | [bit_not](#bit_not) |
+| [bit_or](#bit_or) | [bit_xor](#bit_xor) | [cref](#cref) |
+| [invoke](#invoke) | [mem_fn](#mem_fn) | [not_fn](#not_fn) |
+| [ref](#ref) | [swap](#swap) | |
 
-## <a name="bind"></a>  Vytvoření vazby
+Tyto funkce jsou zastaralé v C ++ 11 a v C ++ 17 odebrané:
+
+||||
+|-|-|-|
+| [bind1st](#bind1st) | [bind2nd](#bind2nd) | [mem_fun](#mem_fun) |
+| [mem_fun_ref](#mem_fun_ref) | [ptr_fun](#ptr_fun) | |
+
+Tyto funkce jsou zastaralé v C ++ 17:
+
+|||
+|-|-|
+| [not1 –](#not1) | [not2](#not2) |
+
+## <a name="bind"></a> Vytvoření vazby
 
 Naváže argumenty na volatelný objekt.
 
@@ -69,14 +81,14 @@ Typ n-té volání argument.
 *fn*<br/>
 Objekt k volání.
 
-*TN*<br/>
+*tN*<br/>
 Volání n-tý argument.
 
 ### <a name="remarks"></a>Poznámky
 
 Typy `Fty, T1, T2, ..., TN` musí být kopie constructible, a `INVOKE(fn, t1, ..., tN)` musí být platný výraz pro některé hodnoty `w1, w2, ..., wN`.
 
-První šablona funkce vrátí předávání volání obálky `g` typu slabé výsledku. Účinek `g(u1, u2, ..., uM)` je `INVOKE(f, v1, v2, ..., vN, ` [result_of –](../standard-library/result-of-class.md)`<Fty cv (V1, V2, ..., VN)>::type)`, kde `cv` je kvalifikátory cv z `g` a hodnoty a typy argumentů vázané `v1, v2, ..., vN` jsou určeny jako níže uvedené. Použijete ji k vytvoření vazby argumenty na volatelný objekt provádět se seznamem míru argument volatelný objekt.
+První šablona funkce vrátí předávání volání obálky `g` typu slabé výsledku. Účinek `g(u1, u2, ..., uM)` je `INVOKE(f, v1, v2, ..., vN, ` [invoke_result](../standard-library/invoke-result-class.md)`<Fty cv (V1, V2, ..., VN)>::type)`, kde `cv` je kvalifikátory cv z `g` a hodnoty a typy argumentů vázané `v1, v2, ..., vN` jsou určeny jak je uvedeno níže. Použijete ji k vytvoření vazby argumenty na volatelný objekt provádět se seznamem míru argument volatelný objekt.
 
 Druhá funkce šablony vrátí předávání volání obálky `g` s vnořený typ `result_type` , který je synonymum pro `Ret`. Účinek `g(u1, u2, ..., uM)` je `INVOKE(f, v1, v2, ..., vN, Ret)`, kde `cv` je kvalifikátory cv z `g` a hodnoty a typy argumentů vázané `v1, v2, ..., vN` je zjištěno, jak je uvedeno níže. Použijete ji k vytvoření vazby argumenty na volatelný objekt volatelný objekt s seznam přizpůsobených argumentů a zadaný návratový typ.
 
@@ -147,9 +159,9 @@ int main()
 3^2 == 9
 ```
 
-## <a name="bind1st"></a>  bind1st –
+## <a name="bind1st"></a> bind1st –
 
-Pomocná funkce šablony, která vytvoří adaptér pro převedení objektu binární funkce na objekt jednočlenné funkce pomocí vazby prvního argumentu binární funkce na zadanou hodnotu.
+Pomocná funkce šablony, která vytvoří adaptér pro převedení objektu binární funkce na objekt jednočlenné funkce pomocí vazby prvního argumentu binární funkce na zadanou hodnotu. Zastaralé v C ++ 11, v C ++ 17 odebrané.
 
 ```cpp
 template <class Operation, class Type>
@@ -241,9 +253,9 @@ The number of elements in v1 greater than 5 is: 4.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bind2nd"></a>  bind2nd –
+## <a name="bind2nd"></a> bind2nd –
 
-Pomocná funkce šablony, která vytvoří adaptér pro převedení objektu binární funkce na objekt jednočlenné funkce pomocí vazby druhého argumentu binární funkce na zadanou hodnotu.
+Pomocná funkce šablony, která vytvoří adaptér pro převedení objektu binární funkce na objekt jednočlenné funkce pomocí vazby druhého argumentu binární funkce na zadanou hodnotu. Zastaralé v C ++ 11, v C ++ 17 odebrané.
 
 ```cpp
 template <class Operation, class Type>
@@ -335,7 +347,7 @@ The number of elements in v1 greater than 15 is: 2.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bit_and"></a>  bit_and –
+## <a name="bit_and"></a> bit_and
 
 Předdefinovaný objekt funkce, který provádí logické bitové operace AND (binární `operator&`) na svých argumentů.
 
@@ -375,9 +387,9 @@ Výsledek `Left & Right`. Specializovaná šablona perfektní přesměrování v
 
 `bit_and` Funktor omezen na integrální typy pro základní typy dat, nebo do uživatelem definované typy tento binární soubor implementace `operator&`.
 
-## <a name="bit_not"></a>  bit_not –
+## <a name="bit_not"></a> bit_not
 
-Předdefinovaný objekt funkce, která provádí bitového doplňku (ne) operaci (unární `operator~`) na svůj argument.
+Předdefinovaný objekt funkce, která provádí bitového doplňku (ne) operaci (unární `operator~`) na svůj argument. Přidáno v C ++ 14.
 
 ```cpp
 template <class Type = void>
@@ -391,7 +403,7 @@ template <>
 struct bit_not<void>
 {
     template <class Type>
-    auto operator()(Type&& Right) const  ->  decltype(~std::forward<Type>(Right));
+    auto operator()(Type&& Right) const -> decltype(~std::forward<Type>(Right));
 };
 ```
 
@@ -411,7 +423,7 @@ Výsledek `~ Right`. Specializovaná šablona perfektní přesměrování výsle
 
 `bit_not` Funktor omezen na integrální typy pro základní typy dat, nebo do uživatelem definované typy tento binární soubor implementace `operator~`.
 
-## <a name="bit_or"></a>  bit_or –
+## <a name="bit_or"></a> bit_or
 
 Předdefinovaný objekt funkce, který provádí logické bitové operace OR (`operator|`) na svých argumentů.
 
@@ -429,7 +441,7 @@ struct bit_or<void>
 {
     template <class T, class U>
     auto operator()(T&& Left, U&& Right) const
-        ->  decltype(std::forward<T>(Left) | std::forward<U>(Right));
+        -> decltype(std::forward<T>(Left) | std::forward<U>(Right));
 };
 ```
 
@@ -451,7 +463,7 @@ Výsledek `Left | Right`. Specializovaná šablona perfektní přesměrování v
 
 `bit_or` Funktor omezen na integrální typy pro základní typy dat, nebo do uživatelem definované typy, které implementují `operator|`.
 
-## <a name="bit_xor"></a>  bit_xor –
+## <a name="bit_xor"></a> bit_xor
 
 Předdefinovaný objekt funkce, který provádí logické bitové operace XOR (binární `operator^`) na svých argumentů.
 
@@ -491,7 +503,7 @@ Výsledek `Left ^ Right`. Specializovaná šablona perfektní přesměrování v
 
 `bit_xor` Funktor omezen na integrální typy pro základní typy dat, nebo do uživatelem definované typy tento binární soubor implementace `operator^`.
 
-## <a name="cref"></a>  cref
+## <a name="cref"></a> cref
 
 Z argumentu vytvoří konstantní `reference_wrapper`.
 
@@ -547,7 +559,114 @@ cref(i) = 1
 cref(neg)(i) = -1
 ```
 
-## <a name="mem_fn"></a>  mem_fn
+## <a name="invoke"></a> vyvolání
+
+Vyvolá jakékoli volatelný objekt s danou argumenty. Přidáno v C ++ 17.
+
+```cpp
+template <class Callable, class... Args>
+invoke_result_t<Callable, Args...>
+    invoke(Callable&& fn, Args&&... args) noexcept(/* specification */);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Volatelný*<br/>
+Typ objektu určeného k volání.
+
+*Args*<br/>
+Typy argumentů volání.
+
+*fn*<br/>
+Objekt k volání.
+
+*argumenty*<br/>
+Argumenty volání.
+
+*Specifikace*<br/>
+**Noexcept** specifikace `std::is_nothrow_invocable_v<Callable, Args>)`.
+
+### <a name="remarks"></a>Poznámky
+
+Vyvolá volatelný objekt *fn* pomocí parametrů *args*. Efektivně `INVOKE(std::forward<Callable>(fn), std::forward<Args>(args)...)`, kde pseudofunkce `INVOKE(f, t1, t2, ..., tN)` znamená, že jeden z následujících akcí:
+
+- `(t1.*f)(t2, ..., tN)`, když je `f` ukazatel na členskou funkci třídy `T` a `t1` je objekt typu `T` nebo odkaz na objekt typu `T` nebo odkaz na objekt typu odvozeného z typu `T`. To znamená, že pokud `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` má hodnotu true.
+
+- `(t1.get().*f)(t2, ..., tN)` Když `f` je ukazatel na členskou funkci třídy `T` a `std::decay_t<decltype(t1)>` je specializací `std::reference_wrapper`.
+
+- `((*t1).*f)(t2, ..., tN)` Když `f` je ukazatel na členskou funkci třídy `T` a `t1` není jedním z předchozích typů.
+
+- `t1.*f`, když N == 1 a `f` je ukazatel na členská data třídy `T` a `t1` je objekt typu `T` nebo odkaz na objekt typu `T` nebo odkaz na objekt typu odvozeného z typu `T`.  To znamená, že pokud `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` má hodnotu true.
+
+- `t1.get().*f` Když N == 1 a `f` je ukazatel na členská data třídy `T` a `std::decay_t<decltype(t1)>` je specializací `std::reference_wrapper`.
+
+- `(*t1).*f` Když N == 1 a `f` je ukazatel na členská data třídy `T` a `t1` není jedním z předchozích typů.
+
+- `f(t1, t2, ..., tN)` ve všech ostatních případech.
+
+Informace o typ výsledku volatelného objektu, najdete v části [invoke_result](invoke-result-class.md). Predikáty na volatelný typech naleznete v tématu [is_invocable is_invocable_r, is_nothrow_invocable is_nothrow_invocable_r třídy](is-invocable-classes.md).
+
+### <a name="example"></a>Příklad
+
+```cpp
+// functional_invoke.cpp
+// compile using: cl /EHsc /std:c++17 functional_invoke.cpp
+#include <functional>
+#include <iostream>
+
+struct Demo
+{
+    int n_;
+
+    Demo(int const n) : n_{n} {}
+
+    void operator()(int const i, int const j) const
+    {
+        std::cout << "Demo operator( " << i << ", "
+            << j << " ) is " << i * j << std::endl;
+    }
+
+    void difference(int const i) const 
+    {
+        std::cout << "Demo.difference( " << i << " ) is "
+            << n_ - i << std::endl;
+    }
+};
+
+void divisible_by_3(int const i)
+{
+    std::cout << i;
+    (i % 3) ? std::cout << " isn't divisible by 3."
+        : std::cout << " is divisible by 3.";
+    std::cout << std::endl;
+}
+
+int main()
+{
+    // Invoke a function object (call operator).
+    Demo d{ 42 };
+    std::invoke( d, 3, -7 );
+
+    // Invoke a member function.
+    std::invoke(&Demo::difference, d, 29);
+
+    // Invoke a data member.
+    std::cout << "n_: " << std::invoke(&Demo::n_, d) << '\n';
+
+    // Invoke a stand-alone (free) function.
+    std::invoke( divisible_by_3, 42 );
+
+    // Invoke a lambda.
+    std::invoke( [](int const i){
+        std::cout << i; 
+        (i % 7) ? std::cout << " isn't divisible by 7."
+            : std::cout << " is divisible by 7.";
+        std::cout << std::endl;
+    }, 42 );
+}
+```
+
+## <a name="mem_fn"></a> mem_fn
 
 Vygeneruje jednoduchou obálku volání.
 
@@ -610,9 +729,9 @@ int main()
 3*2 == 6
 ```
 
-## <a name="mem_fun"></a>  mem_fun –
+## <a name="mem_fun"></a> mem_fun –
 
-Pomocné funkce šablony použité k vytvoření adaptérů objektu funkce pro členské funkce při inicializaci pomocí argumentů ukazatelů.
+Pomocné funkce šablony použité k vytvoření adaptérů objektu funkce pro členské funkce při inicializaci pomocí argumentů ukazatelů. Zastaralé v C ++ 11 nahrazený [mem_fn –](#mem_fn) a [svázat](#bind)a v C ++ 17 odebrané.
 
 ```cpp
 template <class Result, class Type>
@@ -697,9 +816,9 @@ int main( )
 }
 ```
 
-## <a name="mem_fun_ref"></a>  mem_fun_ref
+## <a name="mem_fun_ref"></a> mem_fun_ref
 
-Pomocné funkce šablony použité k vytvoření adaptérů objektu funkce pro členské funkce při inicializaci pomocí argumentů reference.
+Pomocné funkce šablony použité k vytvoření adaptérů objektu funkce pro členské funkce při inicializaci pomocí argumentů reference. Zastaralé v C ++ 11, v C ++ 17 odebrané.
 
 ```cpp
 template <class Result, class Type>
@@ -802,9 +921,9 @@ The original values stored in v2 are: 1 2 3 4 5 6 7 8 9 10 11 12 13
 With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13
 ```
 
-## <a name="not1"></a>  not1 –
+## <a name="not1"></a> not1 –
 
-Vrací doplněk jednočlenného predikátu.
+Vrací doplněk jednočlenného predikátu. Nepoužívané nahrazený [not_fn](#not_fn) v C ++ 17.
 
 ```cpp
 template <class UnaryPredicate>
@@ -874,9 +993,9 @@ The number of elements in v1 greater than 10 is: 5.
 The number of elements in v1 not greater than 10 is: 3.
 ```
 
-## <a name="not2"></a>  not2 –
+## <a name="not2"></a> not2 –
 
-Vrací doplněk binárního predikátu.
+Vrací doplněk binárního predikátu. Nepoužívané nahrazený [not_fn](#not_fn) v C ++ 17.
 
 ```cpp
 template <class BinaryPredicate>
@@ -950,9 +1069,109 @@ Sorted vector v1 = ( 41 6262 6262 6334 18467 19169 26500 )
 Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )
 ```
 
-## <a name="ptr_fun"></a>  ptr_fun –
+## <a name="not_fn"></a> not_fn
 
-Pomocné funkce šablony použité k převést na jednočlenné a binární funkce ukazatele a binárních přizpůsobitelných funkcí.
+`not_fn` Šablona funkce převezme volatelný objekt a vrátí volatelný objekt. Když vrácené volatelný objekt později vyvolání některé argumenty, předává je do původní volatelný objekt a logicky Neguje výsledek. Uchovává const kvalifikaci a hodnota kategorie chování zkomprimovaného volatelného objektu. `not_fn` Novinky v C ++ 17 a nahradí se zastaralou `std::not1`, `std::not2`, `std::unary_negate` a `std::binary_negate`.
+
+```cpp
+template <class Callable>
+/* unspecified */ not_fn(Callable&& func);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Func*<br/>
+Volatelný objekt použitý k vytvoření volání předávání obálky.
+
+### <a name="remarks"></a>Poznámky
+
+Funkce šablony vrátí ekvivalentní Obálka volání `return call_wrapper(std::forward<Callable>(func))` založené na této třídě pouze budeme:
+
+```cpp
+class call_wrapper
+{
+   using FD = decay_t<Callable>;
+   explicit call_wrapper(Callable&& func);
+
+public:
+   call_wrapper(call_wrapper&&) = default;
+   call_wrapper(call_wrapper const&) = default;
+
+   template<class... Args>
+     auto operator()(Args&&...) & -> decltype(!declval<invoke_result_t<FD&(Args...)>>());
+
+   template<class... Args>
+     auto operator()(Args&&...) const& -> decltype(!declval<invoke_result_t<FD const&(Args...)>>());
+
+   template<class... Args>
+     auto operator()(Args&&...) && -> decltype(!declval<invoke_result_t<FD(Args...)>>());
+
+   template<class... Args>
+     auto operator()(Args&&...) const&& -> decltype(!declval<invoke_result_t<FD const(Args...)>>());
+
+private:
+  FD fd;
+};
+```
+
+Explicitní konstruktor na volatelný objekt *func* vyžaduje typ `std::decay_t<Callable>` splňovat požadavky `MoveConstructible`, a `is_constructible_v<FD, Callable>` musí mít hodnotu true. Inicializuje zkomprimovaným volatelným objektům `fd` z `std::forward<Callable>(func)`a vyvolá žádné výjimce způsobené konstrukce `fd`.
+
+Obálka zpřístupňuje odlišené lvalue nebo kategorie odkazu r-hodnoty a const kvalifikace, jak je znázorněno zde, operátory volání
+
+```cpp
+template<class... Args> auto operator()(Args&&... args) & -> decltype(!declval<invoke_result_t<FD&(Args...)>>());
+template<class... Args> auto operator()(Args&&... args) const& -> decltype(!declval<invoke_result_t<FD const&(Args...)>>());
+template<class... Args> auto operator()(Args&&... args) && -> decltype(!declval<invoke_result_t<FD(Args...)>>());
+template<class... Args> auto operator()(Args&&... args) const&& -> decltype(!declval<invoke_result_t<FD const(Args...)>>());
+```
+
+První dvě jsou ekvivalentní `return !INVOKE(fd, std::forward<Args>(args)...)`, a další dva jsou ekvivalentní `return !INVOKE(std::move(fd), std::forward<Args>(args)...)`.
+
+### <a name="example"></a>Příklad
+
+```cpp
+// functional_not_fn_.cpp
+// compile with: /EHsc /std:c++17
+#include <vector>
+#include <algorithm>
+#include <functional>
+#include <iostream>
+
+int main()
+{
+    std::vector<int> v1 = { 99, 6264, 41, 18467, 6334, 26500, 19169 };
+    auto divisible_by_3 = [](int i){ return i % 3 == 0; };
+
+    std::cout << "Vector v1 = ( " ;
+    for (const auto& item : v1)
+    {
+        std::cout << item << " ";
+    }
+    std::cout << ")" << std::endl;
+
+    // Count the number of vector elements divisible by 3.
+    int divisible =
+        std::count_if(v1.begin(), v1.end(), divisible_by_3);
+    std::cout << "Elements divisible by three: "
+        << divisible << std::endl;
+
+    // Count the number of vector elements not divisible by 3.
+    int not_divisible =
+        std::count_if(v1.begin(), v1.end(), std::not_fn(divisible_by_3));
+    std::cout << "Elements not divisible by three: "
+        << not_divisible << std::endl;
+}
+```
+
+```Output
+Vector v1 = ( 99 6264 41 18467 6334 26500 19169 )
+Elements divisible by three: 2
+Elements not divisible by three: 5
+```
+
+## <a name="ptr_fun"></a> ptr_fun
+
+Pomocné funkce šablony použité k převést na jednočlenné a binární funkce ukazatele a binárních přizpůsobitelných funkcí. Zastaralé v C ++ 11, v C ++ 17 odebrané.
 
 ```cpp
 template <class Arg, class Result>
@@ -981,7 +1200,7 @@ Ukazatel na funkci je objekt funkce a může být předán s libovolným algorit
 
 [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]
 
-## <a name="ref"></a>  REF
+## <a name="ref"></a> REF
 
 Vytvoří `reference_wrapper` z argumentu.
 
@@ -1073,7 +1292,7 @@ tiger lion cougar
 tiger cougar
 ```
 
-## <a name="swap"></a>  Prohození
+## <a name="swap"></a> Prohození
 
 Prohodí dva `function` objekty.
 
@@ -1087,10 +1306,10 @@ void swap(function<Fty>& f1, function<Fty>& f2);
 *Fty*<br/>
 Typ řízený objekty funkce.
 
-*F1*<br/>
+*f1*<br/>
 První objekt funkce.
 
-*F2*<br/>
+*f2*<br/>
 Druhý objekt funkce.
 
 ### <a name="remarks"></a>Poznámky

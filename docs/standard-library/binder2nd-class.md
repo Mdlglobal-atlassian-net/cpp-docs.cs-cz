@@ -1,21 +1,21 @@
 ---
 title: binder2nd – třída
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::binder2nd
+- functional/std::binder2nd
 helpviewer_keywords:
 - binder2nd class
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
-ms.openlocfilehash: bb7b867be4ef7ff0f5bcd9ad54538bf449ccd071
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c1ed74da939c5f5cc83a2a109d32b43b5ac7f41
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464659"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006484"
 ---
 # <a name="binder2nd-class"></a>binder2nd – třída
 
-Třída šablony poskytující konstruktor, který převádí objekt binární funkce na objekt jednočlenné funkce navázáním druhého argumentu binární funkce na zadanou hodnotu.
+Třída šablony poskytující konstruktor, který převádí objekt binární funkce na objekt jednočlenné funkce navázáním druhého argumentu binární funkce na zadanou hodnotu. Zastaralé v C ++ 11, v C ++ 17 odebrané.
 
 ## <a name="syntax"></a>Syntaxe
 
