@@ -53,8 +53,8 @@ Prototyp parametry jsou:
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
 *přímé declarator*: /\* deklarátorem funkce \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator***(***seznam parametrů typu***)**  / \* deklarátor nový styl \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator***(***seznam identifikátorů*<sub>optimalizované</sub> **)**  / \* Obsolete – vizuální styl deklarátor \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **(** *seznam parametrů typu* **)**  / \* deklarátor nový styl \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **(** *seznam identifikátorů*<sub>optimalizované</sub> **)**  / \* Obsolete – vizuální styl deklarátor \*/
 
 Seznam parametrů v definici používá tuto syntaxi:
 
@@ -74,7 +74,7 @@ Seznam parametrů v definici funkce starého typu používá tuto syntaxi:
 
 *Seznam identifikátorů*: /\* používané funkce zastaralé definice a deklarace \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifikátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Seznam identifikátorů* **,***identifikátor*
+&nbsp;&nbsp;&nbsp;&nbsp;*Seznam identifikátorů* **,** *identifikátor*
 
 Syntaxe pro tělo funkce je:
 

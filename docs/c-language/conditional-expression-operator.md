@@ -21,7 +21,7 @@ C má jeden Ternární operátor: operátor podmíněného výrazu (**?:**).
 
 *conditional-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logický výraz OR*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*výraz logického OR***?**  *výraz***:***podmíněného výrazu*
+&nbsp;&nbsp;&nbsp;&nbsp;*výraz logického OR* **?**   *výraz* **:** *podmíněného výrazu*
 
 *Logického výrazu OR* musí mít typ integral, plovoucí nebo ukazatel. Vyhodnotí se z hlediska jeho ekvivalence na hodnotu 0. Následuje bod sekvence *logického výrazu OR*. Probíhá vyhodnocování operandů následujícím způsobem:
 

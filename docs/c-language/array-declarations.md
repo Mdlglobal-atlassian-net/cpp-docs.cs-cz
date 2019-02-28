@@ -24,7 +24,7 @@ ms.locfileid: "56147773"
 
 *init-declarator-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Init-declarator-list***,***init-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*Init-declarator-list* **,** *init-declarator*
 
 *init-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Deklarátor*<br/>
@@ -34,7 +34,7 @@ ms.locfileid: "56147773"
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
 *přímé declarator*: /\* deklarátorem funkce \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator***[***konstantní výraz*<sub>optimalizované</sub> **]** 
+&nbsp;&nbsp;&nbsp;&nbsp;*přímé declarator* **[** *konstantní výraz*<sub>optimalizované</sub> **]** 
 
 Protože *konstantního výrazu* je volitelný, má dvě různými formami syntaxe:
 
