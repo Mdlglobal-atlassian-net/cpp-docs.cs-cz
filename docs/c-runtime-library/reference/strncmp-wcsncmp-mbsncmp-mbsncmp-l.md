@@ -20,6 +20,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _ftcsnccmp
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - characters [C++], comparing
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
-ms.openlocfilehash: b8b5472289bacc940bb0cbea7876f246243660bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f022dec6c161814ade5c6be5aaccfcd239a4af4
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523761"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210910"
 ---
 # <a name="strncmp-wcsncmp-mbsncmp-mbsncmpl"></a>strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 
@@ -94,7 +95,7 @@ int _mbsncmp_l(
 
 ### <a name="parameters"></a>Parametry
 
-*řetězec1*, *řetězec2*<br/>
+*string1*, *string2*<br/>
 Řetězce k porovnání.
 
 *Počet*<br/>
@@ -129,8 +130,8 @@ Chování porovnání **_mbsncmp –** a **_mbsncmp_l –** je ovlivněna nastav
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsnccmp –**|**strncmp –**|**_mbsncmp**|**wcsncmp –**|
-|**_tcsncmp –**|**strncmp –**|**_mbsnbcmp**|**wcsncmp –**|
+|**_tcsnccmp**|**strncmp**|**_mbsncmp**|**wcsncmp**|
+|**_tcsncmp**|**strncmp**|**_mbsnbcmp**|**wcsncmp**|
 |**_tccmp**|Mapuje se na makro nebo vloženou funkci|**_mbsncmp**|Mapuje se na makro nebo vloženou funkci|
 |**Není k dispozici**|**Není k dispozici**|**_mbsncmp_l**|**Není k dispozici**|
 
@@ -138,9 +139,9 @@ Chování porovnání **_mbsncmp –** a **_mbsncmp_l –** je ovlivněna nastav
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strncmp –**|\<String.h >|
-|**wcsncmp –**|\<String.h > nebo \<wchar.h >|
-|**_mbsncmp –**, **_mbsncmp_l –**|\<Mbstring.h >|
+|**strncmp**|\<string.h>|
+|**wcsncmp**|\<String.h > nebo \<wchar.h >|
+|**_mbsncmp**, **_mbsncmp_l**|\<Mbstring.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

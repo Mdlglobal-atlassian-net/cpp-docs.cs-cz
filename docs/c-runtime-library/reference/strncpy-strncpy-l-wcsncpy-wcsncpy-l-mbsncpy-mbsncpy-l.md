@@ -21,6 +21,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _fstrncpy
@@ -61,12 +62,12 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: 5260d120fe1e5826bb4b9ebc8410a8bd1040ff3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04ca1f0b689e68008b3b5a57d01e626ee92a60b9
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507731"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210429"
 ---
 # <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 
@@ -189,8 +190,8 @@ V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají nověj
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsncpy –**|**strncpy**|**_mbsnbcpy**|**wcsncpy –**|
-|**_tcsncpy_l –**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
+|**_tcsncpy**|**strncpy**|**_mbsnbcpy**|**wcsncpy**|
+|**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
 
 > [!NOTE]
 > **_strncpy_l –** a **_wcsncpy_l –** mít žádnou závislost národního prostředí; jsou určeny pouze pro **_tcsncpy_l –** a nejsou určeny k přímému volání.
@@ -199,15 +200,15 @@ V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají nověj
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strncpy**|\<String.h >|
-|**wcsncpy –**|\<String.h > nebo \<wchar.h >|
-|**_mbsncpy –**, **_mbsncpy_l –**|\<Mbstring.h >|
+|**strncpy**|\<string.h>|
+|**wcsncpy**|\<String.h > nebo \<wchar.h >|
+|**_mbsncpy**, **_mbsncpy_l**|\<Mbstring.h >|
 
 Informace o kompatibilitě další platformy, najdete v části [kompatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje použití **strncpy –** a jak ho můžete chybná způsobit program chyby a problémy se zabezpečením. Kompilátor vygeneruje upozornění pro každé volání **strncpy –** podobný **crt_strncpy_x86.c(15): upozornění C4996: 'strncpy –': Tato funkce nebo proměnná může nebezpečné. Zvažte raději použití strncpy_s –. Pokud chcete zakázat vyřazení, použijte _CRT_SECURE_NO_WARNINGS. Najdete v online nápovědě pro podrobnosti.**
+Následující příklad ukazuje použití **strncpy –** a jak ho můžete chybná způsobit program chyby a problémy se zabezpečením. Kompilátor vygeneruje upozornění pro každé volání **strncpy –** podobný **crt_strncpy_x86.c(15): upozornění C4996: "strncpy –": Tato funkce nebo proměnná může nebezpečné. Zvažte raději použití strncpy_s –. Pokud chcete zakázat vyřazení, použijte _CRT_SECURE_NO_WARNINGS. Najdete v online nápovědě pro podrobnosti.**
 
 ```C
 // crt_strncpy_x86.c

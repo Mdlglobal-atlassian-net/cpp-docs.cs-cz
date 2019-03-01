@@ -21,6 +21,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _mbstrlen
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - strlen function
 - _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
-ms.openlocfilehash: a2ae174d81ea074f7200461c3f3622501dbc437b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a12c87f1cff14582e21fbb7d617100fc2853dab
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562068"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210858"
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen, wcslen –, _mbslen –, _mbslen_l –, _mbstrlen –, _mbstrlen_l –
 
@@ -109,9 +110,9 @@ Každá z těchto funkcí vrátí počet znaků v *str*, s výjimkou terminálu 
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcslen –**|**strlen –**|**strlen –**|**wcslen**|
-|**_tcsclen**|**strlen –**|**_mbslen**|**wcslen**|
-|**_tcsclen_l**|**strlen –**|**_mbslen_l**|**wcslen**|
+|**_tcslen**|**strlen**|**strlen**|**wcslen**|
+|**_tcsclen**|**strlen**|**_mbslen**|**wcslen**|
+|**_tcsclen_l**|**strlen**|**_mbslen_l**|**wcslen**|
 
 **_mbslen –** a **_mbslen_l –** vrátí počet vícebajtových znaků v řetězci vícebajtových znaků, ale nikoliv testovací platnost vícebajtového znaku. **_mbstrlen –** a **_mbstrlen_l –** testování platnost vícebajtového znaku zakončeného a rozpozná vícebajtové znakové sekvence. Pokud řetězec předaný **_mbstrlen –** nebo **_mbstrlen_l –** obsahuje platný vícebajtový znak pro znakovou stránku, vrátí funkce hodnotu -1 a nastaví **errno** k **EILSEQ**.
 
@@ -121,9 +122,9 @@ Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie 
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strlen –**|\<String.h >|
+|**strlen**|\<string.h>|
 |**wcslen**|\<String.h > nebo \<wchar.h >|
-|**_mbslen –**, **_mbslen_l –**|\<Mbstring.h >|
+|**_mbslen**, **_mbslen_l**|\<Mbstring.h >|
 |**_mbstrlen –**, **_mbstrlen_l –**|\<stdlib.h>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

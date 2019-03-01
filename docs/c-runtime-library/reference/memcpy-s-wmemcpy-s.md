@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - wmemcpy_s
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: e7d6cc7abdd5f343bf1482f534f5112eabbc96b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 802d75307096e649df15b1864b99699fba92a3a1
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607152"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210871"
 ---
 # <a name="memcpys-wmemcpys"></a>memcpy_s, wmemcpy_s
 
@@ -54,7 +55,7 @@ errno_t wmemcpy_s(
 
 ### <a name="parameters"></a>Parametry
 
-*cíl*<br/>
+*dest*<br/>
 Vyrovnávací paměť nového.
 
 *destSize*<br/>
@@ -72,11 +73,11 @@ Nula v případě úspěchu; Kód chyby při selhání.
 
 ### <a name="error-conditions"></a>Chybové podmínky
 
-|*cíl*|*destSize*|*src*|*Počet*|Návratová hodnota|Obsah *dest*|
+|*dest*|*destSize*|*src*|*Počet*|Návratová hodnota|Obsah *dest*|
 |------------|----------------|-----------|---|------------------|------------------------|
 |Všechny|Všechny|Všechny|0|0|Nezměněno|
-|**HODNOTU NULL**|Všechny|Všechny|nulová|**EINVAL**|Nezměněno|
-|Všechny|Všechny|**HODNOTU NULL**|nulová|**EINVAL**|*DEST* je vynulován|
+|**NULL**|Všechny|Všechny|nulová|**EINVAL**|Nezměněno|
+|Všechny|Všechny|**NULL**|nulová|**EINVAL**|*DEST* je vynulován|
 |Všechny|< *Počet*|Všechny|nulová|**ERANGE**|*DEST* je vynulován|
 
 ## <a name="remarks"></a>Poznámky

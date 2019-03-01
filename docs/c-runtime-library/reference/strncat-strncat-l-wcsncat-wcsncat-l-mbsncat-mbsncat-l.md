@@ -21,6 +21,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _tcsncat_l
@@ -57,12 +58,12 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: 6d44ec9f75ef1c6677c2f6053746592ba6e86382
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 477d80ec170463a2315e2e891998ed32d84c75dd
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574275"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210260"
 ---
 # <a name="strncat-strncatl-wcsncat-wcsncatl-mbsncat-mbsncatl"></a>strncat – _strncat_l, wcsncat –, _wcsncat_l, _mbsncat –, _mbsncat_l –
 
@@ -157,8 +158,8 @@ V jazyce C++ mají tyto funkce přetížení šablon. Další informace najdete 
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsncat –**|**strncat**|**_mbsnbcat**|**wcsncat –**|
-|**_tcsncat_l –**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
+|**_tcsncat**|**strncat**|**_mbsnbcat**|**wcsncat**|
+|**_tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
 
 > [!NOTE]
 > **_strncat_l** a **_wcsncat_l** mít žádnou závislost národního prostředí a neměly by být volány přímo. Jsou určeny pro interní použití rozhraním **_tcsncat_l –**.
@@ -167,8 +168,8 @@ V jazyce C++ mají tyto funkce přetížení šablon. Další informace najdete 
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strncat**|\<String.h >|
-|**wcsncat –**|\<String.h > nebo \<wchar.h >|
+|**strncat**|\<string.h>|
+|**wcsncat**|\<String.h > nebo \<wchar.h >|
 |**_mbsncat**|\<Mbstring.h >|
 |**_mbsncat_l**|\<Mbstring.h >|
 

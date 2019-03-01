@@ -15,6 +15,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - bsearch_s
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: cd621c1dae2cae847bbbf032dec7e6972c526203
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56c5fa45a9d8f9ac9b22474601934d3994da55e4
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430833"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210949"
 ---
 # <a name="bsearchs"></a>bsearch_s
 
@@ -48,7 +49,7 @@ void *bsearch_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Klíč*<br/>
+*key*<br/>
 Objekt pro hledání.
 
 *base*<br/>
@@ -63,7 +64,7 @@ Počet prvků.
 *compare*<br/>
 Funkce zpětného volání, která porovná dva elementy. První argument je *kontextu* ukazatele. Druhý argument je ukazatel *klíč* pro hledání. Třetí argument je ukazatel na prvek pole, která se má porovnat s *klíč*.
 
-*Kontext*<br/>
+*context*<br/>
 Ukazatel na objekt, který je přístupný ve funkci porovnání.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -76,11 +77,11 @@ Pokud neplatné parametry jsou předány funkci, je vyvolána obslužná rutina 
 
 |||||||
 |-|-|-|-|-|-|
-|*Klíč*|*base*|*compare*|*Číslo*|*Šířka*|**errno**|
-|**HODNOTU NULL**|Všechny|Všechny|Všechny|Všechny|**EINVAL**|
-|Všechny|**HODNOTU NULL**|Všechny|!= 0|Všechny|**EINVAL**|
+|*key*|*base*|*compare*|*Číslo*|*Šířka*|**errno**|
+|**NULL**|Všechny|Všechny|Všechny|Všechny|**EINVAL**|
+|Všechny|**NULL**|Všechny|!= 0|Všechny|**EINVAL**|
 |Všechny|Všechny|Všechny|Všechny|= 0|**EINVAL**|
-|Všechny|Všechny|**HODNOTU NULL**|Aplikace|Všechny|**EINVAL**|
+|Všechny|Všechny|**NULL**|Aplikace|Všechny|**EINVAL**|
 
 ## <a name="remarks"></a>Poznámky
 

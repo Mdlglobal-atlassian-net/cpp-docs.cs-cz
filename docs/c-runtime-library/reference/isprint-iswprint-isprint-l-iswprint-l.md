@@ -18,6 +18,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - iswprint
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - iswprint_l function
 - _isprint_l function
 ms.assetid: a8bbcdb0-e8d0-4d8c-ae4e-56d3bdee6ca3
-ms.openlocfilehash: 826bc825824054a5a6716f8074690f18a2c3f016
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aab604076f8a2e2eee0eefe20f08f46ae5388a34
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556400"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210117"
 ---
 # <a name="isprint-iswprint-isprintl-iswprintl"></a>isprint, iswprint, _isprint_l, _iswprint_l
 
@@ -83,15 +84,15 @@ Chování **isprint** a **_isprint_l –** není definováno, pokud *c* není ko
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_** **istprint –**|**isprint**|[_ismbcprint](ismbcgraph-functions.md)|**iswprint –**|
+|**_** **istprint**|**isprint**|[_ismbcprint](ismbcgraph-functions.md)|**iswprint**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**isprint**|\<ctype.h >|
-|**iswprint –**|\<ctype.h > nebo \<wchar.h >|
-|**_isprint_l**|\<ctype.h >|
+|**isprint**|\<ctype.h>|
+|**iswprint**|\<ctype.h > nebo \<wchar.h >|
+|**_isprint_l**|\<ctype.h>|
 |**_iswprint_l**|\<ctype.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

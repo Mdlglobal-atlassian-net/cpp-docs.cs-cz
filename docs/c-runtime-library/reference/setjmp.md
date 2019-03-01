@@ -14,6 +14,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - setjmp
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - current state
 - setjmp function
 ms.assetid: 684a8b27-e8eb-455b-b4a8-733ca1cbd7d2
-ms.openlocfilehash: 69af720c70393dbcad1e267b58e08876cdc2b77e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f1a2b71a7b8fc7603c36938879348dca16288e2
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575039"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210507"
 ---
 # <a name="setjmp"></a>setjmp
 
@@ -58,7 +59,7 @@ Volání **setjmp** uloží v aktuálním prostředí zásobníku *env*. Násled
 
 Není možné použít **setjmp** pro přechod z nativní do spravovaného kódu.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 V kódu C++ společnosti Microsoft na Windows **longjmp** používá stejnou sémantiku odvíjení zásobníku jako kód zpracování výjimek. Je bezpečné používat ve stejných míst, mohou být vyvolány výjimky jazyka C++. Toto použití však není přenosný a má určitá úskalí některé důležité. Podrobnosti najdete v tématu [longjmp](longjmp.md).
 

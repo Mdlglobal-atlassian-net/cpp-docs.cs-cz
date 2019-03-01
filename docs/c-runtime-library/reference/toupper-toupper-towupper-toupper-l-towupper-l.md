@@ -19,6 +19,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - towupper
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - characters, converting
 - toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
-ms.openlocfilehash: 7e0ae3f1c69b0e5f77ea2ed8141a93867fd43b33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6dd564a27ee7f3c2bb095564e5c9423249d6babc
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608872"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210611"
 ---
 # <a name="toupper-toupper-towupper-toupperl-towupperl"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
 
@@ -104,7 +105,7 @@ Aby **toupper** očekávané výsledky, [__isascii –](isascii-isascii-iswascii
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_totupper –**|**ToUpper**|**_mbctoupper –**|**towupper –**|
+|**_totupper**|**toupper**|**_mbctoupper**|**towupper**|
 |**_totupper_l**|**_toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 > [!NOTE]
@@ -114,9 +115,9 @@ Aby **toupper** očekávané výsledky, [__isascii –](isascii-isascii-iswascii
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**ToUpper**|\<ctype.h >|
-|**_toupper –**|\<ctype.h >|
-|**towupper –**|\<ctype.h > nebo \<wchar.h >|
+|**toupper**|\<ctype.h>|
+|**_toupper**|\<ctype.h>|
+|**towupper**|\<ctype.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

@@ -18,6 +18,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - iswspace
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - _istspace function
 - istspace function
 ms.assetid: b851e0c0-36bb-4dac-a1a3-533540939035
-ms.openlocfilehash: cd93b196c23be5e91852e8c02d75055c1051b912
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb3d18e5034be50d69531d2686b6c270ba55a1cb
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590449"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210208"
 ---
 # <a name="isspace-iswspace-isspacel-iswspacel"></a>isspace, iswspace, _isspace_l, _iswspace_l
 
@@ -83,15 +84,15 @@ Chování **isspace** a **_isspace_l –** není definováno, pokud *c* není ko
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_** **istspace –**|**isspace**|[_ismbcspace](ismbcgraph-functions.md)|**iswspace –**|
+|**_** **istspace –**|**isspace**|[_ismbcspace](ismbcgraph-functions.md)|**iswspace**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**isspace**|\<ctype.h >|
-|**iswspace –**|\<ctype.h > nebo \<wchar.h >|
-|**_isspace_l**|\<ctype.h >|
+|**isspace**|\<ctype.h>|
+|**iswspace**|\<ctype.h > nebo \<wchar.h >|
+|**_isspace_l**|\<ctype.h>|
 |**_iswspace_l**|\<ctype.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

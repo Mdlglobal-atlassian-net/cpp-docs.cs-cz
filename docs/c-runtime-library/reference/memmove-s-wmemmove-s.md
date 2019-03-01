@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - wmemmove_s
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: 7b60174c3a06e60301a3e9123434220227f4f426
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28d879a205790d1f132caca1022d0740e317c342
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561184"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210598"
 ---
 # <a name="memmoves-wmemmoves"></a>memmove_s, wmemmove_s
 
@@ -54,7 +55,7 @@ errno_t wmemmove_s(
 
 ### <a name="parameters"></a>Parametry
 
-*cíl*<br/>
+*dest*<br/>
 Cílový objekt.
 
 *numberOfElements*<br/>
@@ -72,10 +73,10 @@ Nula v případě úspěchu; při selhání kód chyby
 
 ### <a name="error-conditions"></a>Chybové podmínky
 
-|*cíl*|*numberOfElements*|*src*|Návratová hodnota|Obsah *dest*|
+|*dest*|*numberOfElements*|*src*|Návratová hodnota|Obsah *dest*|
 |------------|------------------------|-----------|------------------|------------------------|
-|**HODNOTU NULL**|Všechny|Všechny|**EINVAL**|Nezměněno|
-|Všechny|Všechny|**HODNOTU NULL**|**EINVAL**|Nezměněno|
+|**NULL**|Všechny|Všechny|**EINVAL**|Nezměněno|
+|Všechny|Všechny|**NULL**|**EINVAL**|Nezměněno|
 |Všechny|< *Počet*|Všechny|**ERANGE**|Nezměněno|
 
 ## <a name="remarks"></a>Poznámky
@@ -88,7 +89,7 @@ Pokud *dest* nebo, pokud *src* je ukazatel s hodnotou null, nebo pokud cílový 
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**memmove_s –**|\<String.h >|
+|**memmove_s**|\<string.h>|
 |**wmemmove_s**|\<wchar.h>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

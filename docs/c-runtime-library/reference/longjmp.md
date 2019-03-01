@@ -14,6 +14,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - longjmp
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - restoring stack environment and execution locale
 - longjmp function
 ms.assetid: 0e13670a-5130-45c1-ad69-6862505b7a2f
-ms.openlocfilehash: 56f050b5f59767fff04586d7d985cafe6d529b83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5189ff7cb850acd9c9a1280f47fc9a1270f8b68
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626704"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211001"
 ---
 # <a name="longjmp"></a>longjmp
 
@@ -55,7 +56,7 @@ Hodnota, která má být vrácen `setjmp` volání.
 
 Volání `setjmp` způsobí, že aktuální zásobník prostředí tak, aby měla uložit během *env*. Následné volání **longjmp** obnoví uložené prostředí a vrátí řízení bodu hned za odpovídající `setjmp` volání. Obnoví spuštění jako *hodnotu* měl pouze vrácené `setjmp` volání. Hodnot všech proměnných (s výjimkou proměnných registru), které jsou k dispozici do rutiny přijímají ovládacího prvku s hodnotami měli při **longjmp** byla volána. Hodnoty proměnné registru nepředvídatelné. Hodnota vrácená `setjmp` musí být nenulová. Pokud *hodnotu* je předán jako 0, je hodnota 1 nahrazena v aktuální návrat.
 
-**Specifické pro Microsoft**
+**Microsoft Specific**
 
 V kódu C++ společnosti Microsoft na Windows **longjmp** používá stejnou sémantiku odvíjení zásobníku jako kód zpracování výjimek. Je bezpečné používat ve stejných míst, mohou být vyvolány výjimky jazyka C++. Toto použití však není přenosný a má určitá úskalí některé důležité.
 

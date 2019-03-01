@@ -23,6 +23,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - wcsnlen
@@ -57,12 +58,12 @@ helpviewer_keywords:
 - string length
 - strnlen_l function
 ms.assetid: cc05ce1c-72ea-4ae4-a7e7-4464e56e5f80
-ms.openlocfilehash: f7f5050a0ab4ff0f35a28faf039688eedc2f3a8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 960d57ed8c2b1d1dbc6843932b8c76fef35c34a0
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602563"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210663"
 ---
 # <a name="strnlen-strnlens-wcsnlen-wcsnlens-mbsnlen-mbsnlenl-mbstrnlen-mbstrnlenl"></a>strnlen –, strnlen_s –, wcsnlen –, wcsnlen_s –, _mbsnlen –, _mbsnlen_l –, _mbstrnlen –, _mbstrnlen_l –
 
@@ -144,9 +145,9 @@ Každá z těchto funkcí vrátí počet znaků v *str*, bez ukončujícího zna
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsnlen –**|**strnlen –**|**strnlen –**|**wcsnlen –**|
-|**_tcscnlen –**|**strnlen –**|**_mbsnlen –**|**wcsnlen –**|
-|**_tcscnlen_l –**|**strnlen –**|**_mbsnlen_l**|**wcsnlen –**|
+|**_tcsnlen**|**strnlen**|**strnlen**|**wcsnlen**|
+|**_tcscnlen**|**strnlen**|**_mbsnlen**|**wcsnlen**|
+|**_tcscnlen_l**|**strnlen**|**_mbsnlen_l**|**wcsnlen**|
 
 **_mbsnlen –** a **_mbstrnlen –** vrátí počet vícebajtových znaků v řetězci vícebajtového znaku. **_mbsnlen –** rozpozná vícebajtové znakové sekvence podle vícebajtovou znakovou stránku, která je aktuálně používán nebo podle národního prostředí, které je předáno; netestuje platnost vícebajtového znaku. **_mbstrnlen –** ověřuje platnost vícebajtového znaku zakončeného a rozpozná vícebajtové znakové sekvence. Pokud řetězec, který je předán **_mbstrnlen –** obsahuje platný vícebajtový znak, **errno** je nastavena na **EILSEQ**.
 
@@ -156,10 +157,10 @@ Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie 
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strnlen –**, **strnlen_s –**|\<String.h >|
-|**wcsnlen –**, **wcsnlen_s –**|\<String.h > nebo \<wchar.h >|
-|**_mbsnlen –**, **_mbsnlen_l –**|\<Mbstring.h >|
-|**_mbstrnlen –**, **_mbstrnlen_l –**|\<stdlib.h>|
+|**strnlen**, **strnlen_s**|\<string.h>|
+|**wcsnlen**, **wcsnlen_s**|\<String.h > nebo \<wchar.h >|
+|**_mbsnlen**, **_mbsnlen_l**|\<Mbstring.h >|
+|**_mbstrnlen**, **_mbstrnlen_l**|\<stdlib.h>|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

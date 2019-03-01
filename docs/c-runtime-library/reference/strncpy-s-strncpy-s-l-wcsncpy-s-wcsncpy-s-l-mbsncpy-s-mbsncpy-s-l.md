@@ -21,6 +21,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _tcsncpy_s
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 8a6fc997ed874ba976e96f87df377e6fafd84a6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2372cab4cfb689aa52de81d9e15602f2478ddde7
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430066"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210819"
 ---
 # <a name="strncpys-strncpysl-wcsncpys-wcsncpysl-mbsncpys-mbsncpysl"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 
@@ -167,8 +168,8 @@ Nula v případě úspěchu, **STRUNCATE** Pokud došlo ke zkrácení, jinak kó
 
 |*strDest*|*numberOfElements*|*strSource*|Návratová hodnota|Obsah *strDest*|
 |---------------|------------------------|-----------------|------------------|---------------------------|
-|**HODNOTU NULL**|Všechny|Všechny|**EINVAL**|Nezměněno|
-|Všechny|Všechny|**HODNOTU NULL**|**EINVAL**|*strDest*[0] nastavit na hodnotu 0|
+|**NULL**|Všechny|Všechny|**EINVAL**|Nezměněno|
+|Všechny|Všechny|**NULL**|**EINVAL**|*strDest*[0] nastavit na hodnotu 0|
 |Všechny|0|Všechny|**EINVAL**|Nezměněno|
 |Není **NULL**|příliš malá|Všechny|**ERANGE**|*strDest*[0] nastavit na hodnotu 0|
 
@@ -213,7 +214,7 @@ Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť hodnotou 0xF
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsncpy_s**|**strncpy_s**|**_mbsnbcpy_s**|**wcsncpy_s**|
-|**_tcsncpy_s_l –**|**_strncpy_s_l**|**_mbsnbcpy_s_l**|**_wcsncpy_s_l**|
+|**_tcsncpy_s_l**|**_strncpy_s_l**|**_mbsnbcpy_s_l**|**_wcsncpy_s_l**|
 
 > [!NOTE]
 > **_strncpy_s_l –**, **_wcsncpy_s_l –** a **_mbsncpy_s_l** mít žádnou závislost národního prostředí, které jsou právě **_tcsncpy_s_l –** a nemají být volat přímo.
@@ -222,8 +223,8 @@ Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť hodnotou 0xF
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strncpy_s –**, **_strncpy_s_l –**|\<String.h >|
-|**wcsncpy_s –**, **_wcsncpy_s_l –**|\<String.h > nebo \<wchar.h >|
+|**strncpy_s**, **_strncpy_s_l**|\<string.h>|
+|**wcsncpy_s**, **_wcsncpy_s_l**|\<String.h > nebo \<wchar.h >|
 |**_mbsncpy_s**, **_mbsncpy_s_l**|\<Mbstring.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

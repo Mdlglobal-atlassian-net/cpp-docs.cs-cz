@@ -19,6 +19,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ntdll.dll
 - ucrtbase.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _stprintf_l
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - sprintf_l function
 - formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-ms.openlocfilehash: 875cd5eca56511c2b421584766584c0c974cd775
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: f32b1622539e73ab04c19d6d46ffdbc58b9961d6
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521866"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210845"
 ---
 # <a name="sprintf-sprintfl-swprintf-swprintfl-swprintfl"></a>sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 
@@ -115,7 +116,7 @@ Maximální počet znaků k uložení v kódování Unicode verze této funkce.
 *Formát*<br/>
 Řetězec řízení formátu
 
-*Argument*<br/>
+*argument*<br/>
 Nepovinné argumenty.
 
 *Národní prostředí*<br/>
@@ -146,15 +147,15 @@ V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají nověj
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_stprintf –**|**sprintf**|**sprintf**|**_swprintf**|
-|**_stprintf_l –**|**_sprintf_l**|**_sprintf_l**|**__swprintf_l**|
+|**_stprintf**|**sprintf**|**sprintf**|**_swprintf**|
+|**_stprintf_l**|**_sprintf_l**|**_sprintf_l**|**__swprintf_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**sprintf**, **_sprintf_l –**|\<stdio.h>|
-|**swprintf**, **_swprintf_l –**|\<stdio.h > nebo \<wchar.h >|
+|**sprintf**, **_sprintf_l**|\<stdio.h>|
+|**swprintf**, **_swprintf_l**|\<stdio.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

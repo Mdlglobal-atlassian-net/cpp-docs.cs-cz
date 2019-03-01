@@ -18,6 +18,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - iswxdigit
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - hexadecimal characters
 - iswxdigit function
 ms.assetid: c8bc5146-0b58-4e3f-bee3-f2318dd0f829
-ms.openlocfilehash: 1c7f70fedb19cca746ffb1e276c69b5fc98388b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29429aa636d3a06b0ee6ceddfcc8a91a7db0e009
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659703"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210468"
 ---
 # <a name="isxdigit-iswxdigit-isxdigitl-iswxdigitl"></a>isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
 
@@ -86,15 +87,15 @@ Chování **isxdigit** a **_isxdigit_l –** není definováno, pokud *c* není 
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_istxdigit –**|**isxdigit**|**isxdigit**|**iswxdigit**|
+|**_istxdigit**|**isxdigit**|**isxdigit**|**iswxdigit**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**isxdigit**|\<ctype.h >|
+|**isxdigit**|\<ctype.h>|
 |**iswxdigit**|\<ctype.h > nebo \<wchar.h >|
-|**_isxdigit_l**|\<ctype.h >|
+|**_isxdigit_l**|\<ctype.h>|
 |**_iswxdigit_l**|\<ctype.h > nebo \<wchar.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).

@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _wsplitpath_s
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: 5a6770b7f5f0f8ee82cf86757d14e03b33c1f5d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87af8bac525844c06fdfc16d7d13a06eef4d61ab
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602901"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210442"
 ---
 # <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
 
@@ -89,13 +90,13 @@ errno_t _wsplitpath_s(
 *Cesta*<br/>
 Úplná cesta.
 
-*Jednotky*<br/>
+*drive*<br/>
 Písmeno, za nímž následuje dvojtečka (**:**). Můžete předat **NULL** pro tento parametr, pokud není nutné písmeno jednotky.
 
 *driveNumberOfElements*<br/>
 Velikost *jednotky* vyrovnávací paměti ve znacích jednobajtové nebo široké. Pokud *jednotky* je **NULL**, tato hodnota musí být 0.
 
-*adresář*<br/>
+*dir*<br/>
 Cesta k adresáři, včetně koncového lomítka. Lomítka ( **/** ), zpětná lomítka ( **\\** ), nebo obě mohou být použity. Můžete předat **NULL** pro tento parametr, pokud není nutné cesta k adresáři.
 
 *dirNumberOfElements*<br/>
@@ -107,7 +108,7 @@ Základní název souboru (bez přípony). Můžete předat **NULL** pro tento p
 *nameNumberOfElements*<br/>
 Velikost *%{fname/* vyrovnávací paměti ve znacích jednobajtové nebo široké. Pokud *%{fname/* je **NULL**, tato hodnota musí být 0.
 
-*ext, přípona*<br/>
+*ext*<br/>
 Příponu názvu souboru, včetně počáteční období (**.**). Můžete předat **NULL** pro tento parametr, pokud není nutné příponu názvu souboru.
 
 *extNumberOfElements*<br/>

@@ -21,6 +21,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - strncat_s_l
@@ -47,12 +48,12 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-ms.openlocfilehash: bb188f9cb5ab5f6f1a8bb66575364b7a94fe6e22
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6651bb6ac405ed51945f021e8d1e19f1db05d5e7
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500747"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210936"
 ---
 # <a name="strncats-strncatsl-wcsncats-wcsncatsl-mbsncats-mbsncatsl"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 
@@ -170,7 +171,7 @@ Vrátí hodnotu 0, pokud je úspěšná, kód chyby při selhání.
 |*strDestination*|*numberOfElements*|*strSource*|Návratová hodnota|Obsah *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
 |**NULL** nebo neukončený|Všechny|Všechny|**EINVAL**|Nezměněno|
-|Všechny|Všechny|**HODNOTU NULL**|**EINVAL**|Nezměněno|
+|Všechny|Všechny|**NULL**|**EINVAL**|Nezměněno|
 |Všechny|0 nebo příliš malá|Všechny|**ERANGE**|Nezměněno|
 
 ## <a name="remarks"></a>Poznámky
@@ -217,8 +218,8 @@ Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť hodnotou 0xF
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsncat_s –**|**strncat_s**|**_mbsnbcat_s**|**wcsncat_s**|
-|**_tcsncat_s_l –**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
+|**_tcsncat_s**|**strncat_s**|**_mbsnbcat_s**|**wcsncat_s**|
+|**_tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
 
 **_strncat_s_l** a **_wcsncat_s_l** mít žádnou závislost národního prostředí; jsou poskytovány pouze pro **_tcsncat_s_l –**.
 
@@ -226,9 +227,9 @@ Ladicí verze těchto funkcí nejprve naplní vyrovnávací paměť hodnotou 0xF
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strncat_s**|\<String.h >|
+|**strncat_s**|\<string.h>|
 |**wcsncat_s**|\<String.h > nebo \<wchar.h >|
-|**_mbsncat_s –**, **_mbsncat_s_l –**|\<Mbstring.h >|
+|**_mbsncat_s**, **_mbsncat_s_l**|\<Mbstring.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

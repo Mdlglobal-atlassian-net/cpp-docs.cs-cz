@@ -24,6 +24,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _itoa_s
@@ -75,12 +76,12 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-ms.openlocfilehash: 47eb030790359f25a7df5275a247c071fb3d599f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e534a9010f3f39c517b7b0f2bf50041190caf7d8
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441702"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210351"
 ---
 # <a name="itoas-ltoas-ultoas-i64toas-ui64toas-itows--ltows--ultows-i64tows-ui64tows"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s,  _ltow_s,  _ultow_s, _i64tow_s, _ui64tow_s
 
@@ -149,9 +150,9 @@ Nula v případě úspěchu; Kód chyby při selhání. Pokud platí kterákoli 
 
 ### <a name="error-conditions"></a>Chybové podmínky
 
-|value|Vyrovnávací paměti|velikost|základ číselné soustavy|Vrátí|
+|value|Vyrovnávací paměti|velikost|radix|Vrátí|
 |-----------|------------|----------------------|-----------|------------|
-|Všechny|**HODNOTU NULL**|Všechny|Všechny|**EINVAL**|
+|Všechny|**NULL**|Všechny|Všechny|**EINVAL**|
 |Všechny|Všechny|<=0|Všechny|**EINVAL**|
 |Všechny|Všechny|< = delka výsledném řetězci vyžaduje|Všechny|**EINVAL**|
 |Všechny|Všechny|Všechny|*základ číselné soustavy* < 2 nebo *základ číselné soustavy* > 36|**EINVAL**|
@@ -174,18 +175,18 @@ Knihovna CRT zahrnuje praktické makra definují velikost vyrovnávací paměti 
 
 |Rutina Tchar.h|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_itot_s –**|**_itoa_s**|**_itoa_s**|**_itow_s**|
+|**_itot_s**|**_itoa_s**|**_itoa_s**|**_itow_s**|
 |**_ltot_s**|**_ltoa_s**|**_ltoa_s**|**_ltow_s**|
 |**_ultot_s**|**_ultoa_s**|**_ultoa_s**|**_ultow_s**|
-|**_i64tot_s –**|**_i64toa_s**|**_i64toa_s**|**_i64tow_s**|
-|**_ui64tot_s –**|**_ui64toa_s**|**_ui64toa_s**|**_ui64tow_s**|
+|**_i64tot_s**|**_i64toa_s**|**_i64toa_s**|**_i64tow_s**|
+|**_ui64tot_s**|**_ui64toa_s**|**_ui64toa_s**|**_ui64tow_s**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_itoa_s –**, **_ltoa_s –**, **_ultoa_s –**, **_i64toa_s –**, **_ui64toa_s –**|\<stdlib.h>|
-|**_itow_s –**, **_ltow_s –**, **_ultow_s –**, **_i64tow_s –**, **_ui64tow_s –**|\<stdlib.h > nebo \<wchar.h >|
+|**_itoa_s**, **_ltoa_s**, **_ultoa_s**, **_i64toa_s**, **_ui64toa_s**|\<stdlib.h>|
+|**_itow_s**, **_ltow_s**, **_ultow_s**, **_i64tow_s**, **_ui64tow_s**|\<stdlib.h > nebo \<wchar.h >|
 
 Tyto funkce jsou specifické pro společnost Microsoft. Další informace o kompatibilitě naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 

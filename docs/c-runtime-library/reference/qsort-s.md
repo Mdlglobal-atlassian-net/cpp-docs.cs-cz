@@ -15,6 +15,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - qsort_s
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - qsort_s function
 - sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
-ms.openlocfilehash: 1f0064fd9cf0a3c52456197568adf693fcdaa9a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3b8bbfeb8079322a174233f3d8048a6d1b51804
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581867"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210923"
 ---
 # <a name="qsorts"></a>qsort_s
 
@@ -61,7 +62,7 @@ Element velikost v bajtech.
 *compare*<br/>
 Funkce porovnání. První argument je *kontextu* ukazatele. Druhý argument je ukazatel *klíč* pro hledání. Třetí argument je ukazatel na prvek pole, která se má porovnat s *klíč*.
 
-*Kontext*<br/>
+*context*<br/>
 Ukazatel na kontext, který může být objekt, který *porovnání* rutina potřebuje přístup.
 
 ## <a name="remarks"></a>Poznámky
@@ -88,10 +89,10 @@ Pokud jsou předány neplatné parametry pro funkci, vyvolán obslužnou rutinu 
 
 |klíč|base|compare|počet|šířka|errno|
 |---------|----------|-------------|---------|-----------|-----------|
-|**HODNOTU NULL**|Všechny|Všechny|Všechny|Všechny|**EINVAL**|
-|Všechny|**HODNOTU NULL**|Všechny|!= 0|Všechny|**EINVAL**|
+|**NULL**|Všechny|Všechny|Všechny|Všechny|**EINVAL**|
+|Všechny|**NULL**|Všechny|!= 0|Všechny|**EINVAL**|
 |Všechny|Všechny|Všechny|Všechny|<= 0|**EINVAL**|
-|Všechny|Všechny|**HODNOTU NULL**|Všechny|Všechny|**EINVAL**|
+|Všechny|Všechny|**NULL**|Všechny|Všechny|**EINVAL**|
 
 **qsort_s –** má stejné chování jako **qsort –** , ale má *kontextu* parametr a sady **errno**. Předáním *kontextu* parametr, porovnání funkcí můžete použít ukazatelem na objekt pro přístup k objektu funkce nebo jiné informace není k dispozici prostřednictvím ukazatele prvek. Přidání *kontextu* parametr díky **qsort_s –** bezpečnější, protože *kontextu* je možné předejdete tak chybám vícenásobného přístupu zavedená pomocí statické proměnné sdílet informace, které jsou k dispozici na *porovnání* funkce.
 
@@ -103,7 +104,7 @@ Pokud jsou předány neplatné parametry pro funkci, vyvolán obslužnou rutinu 
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
-**Knihovny:** všechny verze [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md).
+**Knihovny:** Všechny verze [funkce knihovny CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 

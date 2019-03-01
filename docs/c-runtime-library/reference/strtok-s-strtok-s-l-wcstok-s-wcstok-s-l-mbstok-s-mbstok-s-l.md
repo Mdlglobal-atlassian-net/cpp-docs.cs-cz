@@ -21,6 +21,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _tcstok_s_l
@@ -47,12 +48,12 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-ms.openlocfilehash: a8b87e0b2d4ecf9dc6fb1b52f512406a6df0622c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 24a945742f3db82e41f662a337eef1f79ef13bd6
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517452"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210585"
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
@@ -112,7 +113,7 @@ unsigned char* _mbstok_s(
 *oddělovače*<br/>
 Sada oddělovacích znaků používat.
 
-*Kontext*<br/>
+*context*<br/>
 Používá k ukládání informací o poloze mezi voláními funkce.
 
 *Národní prostředí*<br/>
@@ -124,11 +125,11 @@ Vrací ukazatel na další token v parametru *str*. Vrátí **NULL** když nejso
 
 ### <a name="error-conditions"></a>Chybové podmínky
 
-|*str*|*oddělovače*|*Kontext*|Návratová hodnota|**errno**|
+|*str*|*oddělovače*|*context*|Návratová hodnota|**errno**|
 |----------------|------------------|---------------|------------------|-------------|
-|**HODNOTU NULL**|Všechny|ukazatel na ukazatel s hodnotou null|**HODNOTU NULL**|**EINVAL**|
-|Všechny|**HODNOTU NULL**|Všechny|**HODNOTU NULL**|**EINVAL**|
-|Všechny|Všechny|**HODNOTU NULL**|**HODNOTU NULL**|**EINVAL**|
+|**NULL**|Všechny|ukazatel na ukazatel s hodnotou null|**NULL**|**EINVAL**|
+|Všechny|**NULL**|Všechny|**NULL**|**EINVAL**|
+|Všechny|Všechny|**NULL**|**NULL**|**EINVAL**|
 
 Pokud *str* je **NULL** ale *kontextu* je ukazatel na platný ukazatel kontextu, se nezobrazí žádná chyba.
 
@@ -148,10 +149,10 @@ Výstupní hodnota je ovlivněna nastavením **LC_CTYPE** nastavením kategorie 
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strtok_s**|\<String.h >|
-|**_strtok_s_l**|\<String.h >|
-|**wcstok_s –**,<br />**_wcstok_s_l**|\<String.h > nebo \<wchar.h >|
-|**_mbstok_s –**,<br />**_mbstok_s_l**|\<Mbstring.h >|
+|**strtok_s**|\<string.h>|
+|**_strtok_s_l**|\<string.h>|
+|**wcstok_s**,<br />**_wcstok_s_l**|\<String.h > nebo \<wchar.h >|
+|**_mbstok_s**,<br />**_mbstok_s_l**|\<Mbstring.h >|
 
 Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-runtime-library/compatibility.md).
 
@@ -159,8 +160,8 @@ Další informace o kompatibilitě, naleznete v tématu [kompatibility](../../c-
 
 |Rutina TCHAR.H|\_Kódování UNICODE & \_znakové sady MBCS nedefinovaná.|\_Znakové sady MBCS definovaný|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcstok_s –**|**strtok_s**|**_mbstok_s**|**wcstok_s**|
-|**_tcstok_s_l –**|**_strtok_s_l**|**_mbstok_s_l**|**_wcstok_s_l**|
+|**_tcstok_s**|**strtok_s**|**_mbstok_s**|**wcstok_s**|
+|**_tcstok_s_l**|**_strtok_s_l**|**_mbstok_s_l**|**_wcstok_s_l**|
 
 ## <a name="example"></a>Příklad
 

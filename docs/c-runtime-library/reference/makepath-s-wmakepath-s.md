@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _wmakepath_s
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-ms.openlocfilehash: 6914299dd7ede97c9004dcc95e01b1a35188f5c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3536569fd3e77a353003e1372d5dc4ee6e4ee3fb
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471913"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210650"
 ---
 # <a name="makepaths-wmakepaths"></a>_makepath_s, _wmakepath_s
 
@@ -88,16 +89,16 @@ Velikost vyrovnávací paměti ve slovech.
 *sizeInBytes*<br/>
 Velikost vyrovnávací paměti v bajtech.
 
-*Jednotky*<br/>
+*drive*<br/>
 Obsahuje písmeno (A, B a tak dále) odpovídající na požadovaný disk a volitelné koncové dvojtečka. **_makepath_s –** vloží dvojtečka automaticky složenou cestu Pokud není nalezena. Pokud *jednotky* je **NULL** nebo odkazuje na prázdný řetězec, zobrazí se v složeného žádné písmeno jednotky *cesta* řetězec.
 
-*adresář*<br/>
+*dir*<br/>
 Obsahuje cestu adresáře, bez zahrnutí specifikátor jednotky nebo skutečného názvu souboru. Do adresy koncové lomítko je volitelný a lomítkem (/) ani zpětné lomítko (\\) nebo může být možné použít v jediném *dir* argument. Pokud žádného koncového lomítka (/ nebo \\) je zadán, je automaticky vložen. Pokud *dir* je **NULL** nebo odkazuje na prázdný řetězec, žádná cesta k adresáři se vloží do složeného *cesta* řetězec.
 
 *%{fname/*<br/>
 Obsahuje základní název souboru bez žádné přípony názvů souborů. Pokud *%{fname/* je **NULL** nebo odkazuje na prázdný řetězec, žádný název souboru se vloží do složeného *cesta* řetězec.
 
-*ext, přípona*<br/>
+*ext*<br/>
 Obsahuje skutečnou příponu souboru, s nebo bez úvodní tečky (.). **_makepath_s –** vloží období automaticky, pokud se nezobrazí v *ext*. Pokud *ext* je **NULL** nebo odkazuje na prázdný řetězec, bez přípony se vloží do složeného *cesta* řetězec.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -108,7 +109,7 @@ Nula v případě úspěchu; Kód chyby při selhání.
 
 |*Cesta*|*sizeInWords* / *sizeInBytes*|Vrátí|Obsah *cesta*|
 |------------|------------------------------------|------------|------------------------|
-|**HODNOTU NULL**|Všechny|**EINVAL**|Nezměněno|
+|**NULL**|Všechny|**EINVAL**|Nezměněno|
 |Všechny|<= 0|**EINVAL**|Nezměněno|
 
 Pokud dojde k některé z výše uvedených chybové stavy, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v [Parameter Validation](../../c-runtime-library/parameter-validation.md). Pokud smí provádění pokračovat, **errno** je nastavena na **EINVAL** a funkce vrátí **EINVAL**. **NULL** je povolený pro parametry *jednotky*, *%{fname/*, a *ext*. Informace o chování při tyto parametry jsou ukazatelé s hodnotou null nebo prázdné řetězce, naleznete v části poznámky.
