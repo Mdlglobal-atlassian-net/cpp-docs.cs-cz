@@ -18,6 +18,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _mbscat
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - appending strings
 - wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
-ms.openlocfilehash: b49e2e39fb0acd9128a52e83bf704567bb82d532
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 629b66a5c9dded3a910919f5e302a97c4f731240
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546387"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210403"
 ---
 # <a name="strcat-wcscat-mbscat"></a>strcat, wcscat, _mbscat
 
@@ -112,13 +113,13 @@ V jazyce C++ mají tyto funkce přetížení šablon, která vyvolávají nověj
 
 |Rutina TCHAR.H|_UNICODE a _MBCS nejsou definovány|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcscat –**|**strcat**|**_mbscat**|**wcscat**|
+|**_tcscat**|**strcat**|**_mbscat**|**wcscat**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strcat**|\<String.h >|
+|**strcat**|\<string.h>|
 |**wcscat**|\<String.h > nebo \<wchar.h >|
 |**_mbscat**|\<Mbstring.h >|
 
